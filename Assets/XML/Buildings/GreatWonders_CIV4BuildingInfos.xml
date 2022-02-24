@@ -6311,34 +6311,6 @@
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HIGH_WALLS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_BARRICADES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CEMENT_BARRIER</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_METAMATERIAL_WALL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SUPERSTRONG_ALLOY_WALL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_MEGASTRONG_ALLOY_WALL</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
 			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_EDINBURGH_CASTLE_2</ObsoletesToBuilding>
 			<iCost>1800</iCost>
@@ -8620,29 +8592,10 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_LARGE_ARCH_BRIDGE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SMALL_SUSPENSION_BRIDGE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_LARGE_SUSPENSION_BRIDGE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_TELEPORT_BOOTH</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
-				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
+				<BuildingType>BUILDING_LARGE_ARCH_BRIDGE</BuildingType>
+				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
+				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
@@ -11010,22 +10963,6 @@
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_GLASSSMITH</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_GLASS_FACTORY</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_MANUFACTURING_DISTRICT</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WALLS</BuildingType>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
@@ -11035,6 +10972,9 @@
 				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
 				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqBonuses>
+				<Bonus>BONUS_GLASSWARE</Bonus>
+			</PrereqBonuses>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<iCost>1566</iCost>
 			<BonusProductionModifiers>
@@ -21443,26 +21383,13 @@
 			<Civilopedia>TXT_KEY_BUILDING_WANG_ZHEN_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WATERWHEELS</PrereqTech>
 			<bRiver>1</bRiver>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_WATERMILL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_MODERN_MILL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOOD_MANUFACTURING_DISTRICT</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
+			<PrereqBonuses>
+				<Bonus>BONUS_TOOLS</Bonus>
+			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FORGE</BuildingType>
-				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_WATERMILL</BuildingType>
+				<BuildingType>BUILDING_MODERN_MILL</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_STEAM_POWER</ObsoleteTech>
 			<iCost>1680</iCost>

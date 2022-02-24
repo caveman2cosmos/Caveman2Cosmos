@@ -652,48 +652,44 @@ CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bP
 
 	foreach_(CvUnit* pLoopUnit, units())
 	{
-		if (!pLoopUnit->isDead())
+		if (pLoopUnit->isDead() || pBestUnit != NULL && isClearlySuperior(pBestUnit, pLoopUnit, pPlot))
 		{
-			if (pBestUnit != NULL && isClearlySuperior(pBestUnit, pLoopUnit, pPlot))
+			continue;
+		}
+		if (pLoopUnit->getDomainType() == DOMAIN_AIR ? pLoopUnit->canAirAttack() : (pLoopUnit->canAttack() && !(bNoBlitz && pLoopUnit->isBlitz() && pLoopUnit->isMadeAttack())))
+		{
+			if ((!pLoopUnit->AI_getHasAttacked() || bSuprise) && (bForce || pLoopUnit->canMove()))
 			{
-				continue;
-			}
-
-			if (pLoopUnit->getDomainType() == DOMAIN_AIR ? pLoopUnit->canAirAttack() : (pLoopUnit->canAttack() && !(bNoBlitz && pLoopUnit->isBlitz() && pLoopUnit->isMadeAttack())))
-			{
-				if ((!pLoopUnit->AI_getHasAttacked() || bSuprise) && (bForce || pLoopUnit->canMove()))
+				CvUnit* pBestDefender = NULL;
+				if (bForce || pLoopUnit->canEnterPlot(pPlot, moveCheckFlags, &pBestDefender))
 				{
-					CvUnit* pBestDefender = NULL;
-					if (bForce || pLoopUnit->canEnterPlot(pPlot, moveCheckFlags, &pBestDefender))
+					PROFILE("AI_getBestGroupAttacker.RegularAttackOdds");
+
+					const int iOdds = pBestDefender?
+						pLoopUnit->AI_attackOddsAtPlot(pPlot, (CvUnitAI*)pBestDefender)
+						:
+						pLoopUnit->AI_attackOdds(pPlot, bPotentialEnemy, 0, bAssassinate);
+
+					int iValue = iOdds;
+					FAssertMsg(iValue > 0, "iValue is expected to be greater than 0");
+
+					if (pLoopUnit->collateralDamage() > 0)
 					{
-						PROFILE("AI_getBestGroupAttacker.RegularAttackOdds");
+						const int iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(pLoopUnit) - 1), pLoopUnit->collateralDamageMaxUnits());
 
-						const int iOdds = pBestDefender?
-							pLoopUnit->AI_attackOddsAtPlot(pPlot, (CvUnitAI*)pBestDefender)
-							:
-							pLoopUnit->AI_attackOdds(pPlot, bPotentialEnemy, 0, bAssassinate);
-
-						int iValue = iOdds;
-						FAssertMsg(iValue > 0, "iValue is expected to be greater than 0");
-
-						if (pLoopUnit->collateralDamage() > 0)
+						if (iPossibleTargets > 0)
 						{
-							const int iPossibleTargets = std::min((pPlot->getNumVisiblePotentialEnemyDefenders(pLoopUnit) - 1), pLoopUnit->collateralDamageMaxUnits());
-
-							if (iPossibleTargets > 0)
-							{
-								iValue *= (100 + ((pLoopUnit->collateralDamage() * iPossibleTargets) / 5));
-								iValue /= 100;
-							}
+							iValue *= (100 + ((pLoopUnit->collateralDamage() * iPossibleTargets) / 5));
+							iValue /= 100;
 						}
+					}
 
-						// if non-human, prefer the last unit that has the best value (so as to avoid splitting the group)
-						if (iValue > iBestValue || (!bIsHuman && iValue > 0 && iValue == iBestValue))
-						{
-							iBestValue = iValue;
-							iBestOdds = iOdds;
-							pBestUnit = pLoopUnit;
-						}
+					// if non-human, prefer the last unit that has the best value (so as to avoid splitting the group)
+					if (iValue > iBestValue || (!bIsHuman && iValue > 0 && iValue == iBestValue))
+					{
+						iBestValue = iValue;
+						iBestOdds = iOdds;
+						pBestUnit = pLoopUnit;
 					}
 				}
 			}
