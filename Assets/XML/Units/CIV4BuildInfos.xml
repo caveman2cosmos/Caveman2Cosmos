@@ -4105,11 +4105,63 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildHamlet.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,10</Button>
 		</BuildInfo>
+		<!-- Cottage (kill) -> Cottage -->
+		<BuildInfo>
+			<Type>BUILD_COTTAGE_KILL</Type>
+			<Description>TXT_KEY_BUILD_COTTAGE</Description>
+			<PrereqTech>TECH_CARPENTRY</PrereqTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iTime>401</iTime>
+			<iCost>20</iCost>
+			<bKill>1</bKill>
+			<ImprovementType>IMPROVEMENT_COTTAGE</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_SWAMP</FeatureType>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_PEAT_BOG</FeatureType>
+					<PrereqTech>TECH_CANAL_SYSTEMS</PrereqTech>
+					<iTime>800</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>20</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_CACTUS</FeatureType>
+					<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
+					<iTime>300</iTime>
+					<iProduction>5</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+				<FeatureStruct>
+					<FeatureType>FEATURE_TAR_PIT</FeatureType>
+					<PrereqTech/>
+					<iTime>200</iTime>
+					<iProduction>0</iProduction>
+					<bRemove>0</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
+			<HotKey>KB_T</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>,Art/Interface/Buttons/Builds/BuildCottage.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,2,7</Button>
+		</BuildInfo>
 		<!-- Cottage -> Hamlet Era -->
 		<BuildInfo>
 			<Type>BUILD_COTTAGE</Type>
 			<Description>TXT_KEY_BUILD_COTTAGE</Description>
-			<PrereqTech>TECH_CARPENTRY</PrereqTech>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<iTime>400</iTime>
 			<iCost>20</iCost>
