@@ -892,6 +892,8 @@ public:
 	bool isValidByGameOption(const CvUnitCombatInfo& info) const;
 
 	void enforceOptionCompatibility(GameOptionTypes eOption);
+
+	bool isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner) const;
 };
 
 #define CURRENT_MAP GC.getGame().getCurrentMap()

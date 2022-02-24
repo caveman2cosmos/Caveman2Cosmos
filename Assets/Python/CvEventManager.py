@@ -954,17 +954,11 @@ class CvEventManager:
 					CyTeamL = GC.getTeam(iTeamL)
 
 				# Factor in winners handicap versus losers handicap
-				iHandicapFactor = 100
-				if CyPlayerW.isHuman():
-					if CyPlayerL.isHuman():
-						iHandicapFactorW = GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent()
-						iHandicapFactorL = GC.getHandicapInfo(CyPlayerL.getHandicapType()).getCivicUpkeepPercent()
-					else:
-						iHandicapFactorW = GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent()
-						iHandicapFactorL = 100
+				iHandicapFactor = 100 + 4 * (GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent() - GC.getHandicapInfo(CyPlayerL.getHandicapType()).getCivicUpkeepPercent())
+				if iHandicapFactor < 1: iHandicapFactor = 1
+				# Test variant, may be better.
+				iHandicapFactor2 = 1000 * GC.getHandicapInfo(CyPlayerL.getHandicapType()).getCivicUpkeepPercent() / GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent()
 
-					if iHandicapFactorW > iHandicapFactorL:
-						iHandicapFactor = 4 * (iHandicapFactorW - iHandicapFactorL + 100)
 				# Message
 				if iPlayerAct is None:
 					iPlayerAct = GAME.getActivePlayer()
@@ -1004,10 +998,12 @@ class CvEventManager:
 							)
 				# Marauder promo
 				if bMarauder:
-					iStolen = 100 * CyPlayerL.getGold() / (CyPlayerL.getNumUnits() + 1)
-					if iStolen > 1:
-						# intSqrt(intSqrt(x)) = x ** 0.25 = pow(x, 0.25)
-						iStolen = intSqrt(intSqrt(iStolen) * 1000) / iHandicapFactor
+					iStolen = CyPlayerL.getGold() / (CyPlayerL.getNumUnits() + 1)
+					if iStolen > 0:
+						iStolen = intSqrt(iStolen)
+						iStolen *= iHandicapFactor2
+						iStolen /= 1000
+
 					if iStolen > 0:
 						CyPlayerL.changeGold(-iStolen)
 						CyPlayerW.changeGold(iStolen)
@@ -2556,15 +2552,16 @@ class CvEventManager:
 				self.iArcologyCityID = -1
 
 
+	# This is before city has changed owner or been autorazed
 	def onCityAcquired(self, argsList):
-		iOwnerOld, iOwnerNew, CyCity, bConquest, bTrade = argsList
+		iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
 		iOldCityID = self.iOldCityID
-		iCityID = CyCity.getID()
+		iCityID = city.getID()
 		aWonderTuple = self.aWonderTuple
 		if bConquest:
 			if "HELSINKI" in aWonderTuple[0] and iOwnerNew == aWonderTuple[4][aWonderTuple[0].index("HELSINKI")]:
-				iX = CyCity.getX()
-				iY = CyCity.getY()
+				iX = city.getX()
+				iY = city.getY()
 				for x in xrange(iX - 1, iX + 2):
 					for y in xrange(iY - 1, iY + 2):
 						CyPlot = GC.getMap().plot(x, y)
@@ -2611,14 +2608,14 @@ class CvEventManager:
 
 
 	def onCityAcquiredAndKept(self, argsList):
-		iPlayer, CyCity = argsList
+		iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
 		# Messages - Wonder Captured
-		NumWonders = CyCity.getNumWorldWonders()
+		NumWonders = city.getNumWorldWonders()
 		if NumWonders:
-			if CyCity.isRevealed(GAME.getActiveTeam(), False):
+			if city.isRevealed(GAME.getActiveTeam(), False):
 				iActivePlayer = GAME.getActivePlayer()
 				if iActivePlayer > -1:
-					if iPlayer == iActivePlayer:
+					if iOwnerNew == iActivePlayer:
 						bActive = True
 						artPath = 'Art/Interface/Buttons/General/happy_person.dds'
 						eColor = ColorTypes(GC.getCOLOR_GREEN())
@@ -2627,11 +2624,11 @@ class CvEventManager:
 						artPath = 'Art/Interface/Buttons/General/warning_popup.dds'
 						eColor = -1
 
-					szPlayerName = GC.getPlayer(iPlayer).getName()
-					iX = CyCity.getX()
-					iY = CyCity.getY()
+					szPlayerName = GC.getPlayer(iOwnerNew).getName()
+					iX = city.getX()
+					iY = city.getY()
 					for iBuilding in xrange(GC.getNumBuildingInfos()):
-						if CyCity.getNumRealBuilding(iBuilding):
+						if city.getNumRealBuilding(iBuilding):
 							CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 							if CvBuildingInfo.getMaxGlobalInstances() == 1:
 

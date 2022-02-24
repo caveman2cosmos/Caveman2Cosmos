@@ -249,7 +249,6 @@ public:
 	void findNewCapital();
 	int getNumGovernmentCenters() const;
 
-	bool canRaze(CvCity* pCity) const;
 	void raze(CvCity* pCity);
 	void disband(CvCity* pCity);
 
@@ -817,7 +816,6 @@ public:
 	void setCurrentEra(EraTypes eNewValue);
 
 	int64_t getCulture() const;
-	void setCulture(int64_t iNewValue);
 	void changeCulture(int64_t iAddValue);
 
 	ReligionTypes getLastStateReligion() const;
@@ -1646,7 +1644,7 @@ public:
 
 	//virtual void AI_doCentralizedProduction() = 0;
 
-	virtual void AI_conquerCity(CvCity* pCity) = 0;
+	virtual void AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConquest, bool bTrade) = 0;
 	virtual int AI_foundValue(int iX, int iY, int iMinUnitRange = -1, bool bStartingLoc = false) const = 0;
 	virtual bool AI_isCommercePlot(const CvPlot* pPlot) const = 0;
 	virtual int AI_getPlotDanger(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const = 0;
@@ -2068,7 +2066,7 @@ public:
 	void changeLeaderHeadLevel(int iChange);
 
 	uint64_t getLeaderLevelupNextCultureTotal() const;
-	int64_t getLeaderLevelupCultureToEarn() const;
+	uint64_t getLeaderLevelupCultureToEarn() const;
 
 	bool canLeaderPromote() const;
 	void doPromoteLeader();
@@ -2362,6 +2360,8 @@ public:
 	int countAfflictedUnits(PromotionLineTypes eAfflictionLine);
 	void recalculateAfflictedUnitCount();
 #endif
+	virtual void AI_invalidateAttitudeCache(PlayerTypes ePlayer) = 0;
+	virtual void AI_setHasInquisitionTarget() = 0;
 };
 
 #endif

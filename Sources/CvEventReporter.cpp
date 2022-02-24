@@ -309,14 +309,14 @@ void CvEventReporter::cityRazed(CvCity* pCity, PlayerTypes ePlayer)
 	m_kStatistics.cityRazed(ePlayer);
 }
 
-void CvEventReporter::cityAcquired(PlayerTypes eOldOwner, PlayerTypes iPlayer, CvCity* pCity, bool bConquest, bool bTrade)
+void CvEventReporter::cityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade)
 {
-	m_kPythonEventMgr.reportCityAcquired(eOldOwner, iPlayer, pCity, bConquest, bTrade);
+	m_kPythonEventMgr.reportCityAcquired(eOldOwner, ePlayer, pCity, bConquest, bTrade);
 }
 
-void CvEventReporter::cityAcquiredAndKept(PlayerTypes iPlayer, CvCity* pCity)
+void CvEventReporter::cityAcquiredAndKept(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade)
 {
-	m_kPythonEventMgr.reportCityAcquiredAndKept(iPlayer, pCity);
+	m_kPythonEventMgr.reportCityAcquiredAndKept(eOldOwner, ePlayer, pCity, bConquest, bTrade);
 }
 
 void CvEventReporter::cityLost( CvCity *pCity)

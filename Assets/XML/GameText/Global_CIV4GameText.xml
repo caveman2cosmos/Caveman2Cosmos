@@ -13299,11 +13299,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CAPTURED_CITY</Tag>
-		<English>You have captured %s1_CityName!!!</English>
-		<French>Vous avez capturé %s1_CityName !</French>
-		<German>Ihr habt die Stadt %s1_CityName eingenommen!!!</German>
-		<Italian>Hai conquistato %s1_CityName!!!</Italian>
-		<Spanish>Habéis capturado %s1_CityName.</Spanish>
+		<English>You have captured %s1!</English>
+		<French>Vous avez capturé %s1 !</French>
+		<German>Ihr habt die Stadt %s1 eingenommen!</German>
+		<Italian>Hai conquistato %s1!</Italian>
+		<Spanish>Habéis capturado %s1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CENTERS_MAP</Tag>

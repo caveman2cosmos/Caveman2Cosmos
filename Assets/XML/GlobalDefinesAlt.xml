@@ -24,10 +24,6 @@
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>DCM_ATTACK_SUPPORT</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>DCM_OPP_FIRE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>

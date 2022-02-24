@@ -164,9 +164,9 @@ class AbstractCityAlertManager(AbstractStatefulAlert):
 		alert.init()
 
 	def onCityAcquiredAndKept(self, argsList):
-		iPlayer, city = argsList
-		if iPlayer == GAME.getActivePlayer():
-			self._resetCity(city)
+		#iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
+		if argsList[1] == GAME.getActivePlayer():
+			self._resetCity(argsList[2])
 
 	def onCityLost(self, argsList):
 		city = argsList[0]

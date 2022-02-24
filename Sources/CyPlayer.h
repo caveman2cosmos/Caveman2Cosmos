@@ -435,8 +435,6 @@ public:
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);
 
 	int64_t getCulture() const;
-	void setCulture(int64_t iNewValue);
-	void changeCulture(int64_t iAddValue);
 
 	CvProperties* getProperties() const;
 

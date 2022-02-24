@@ -1708,26 +1708,32 @@ void CvPlayerAI::AI_makeProductionDirty()
 	algo::for_each(cities(), CvCity::fn::AI_setChooseProductionDirty(true));
 }
 
-// BETTER_BTS_AI_MOD 07/05/10	jdog5000
 // War tactics AI
-void CvPlayerAI::AI_conquerCity(CvCity* pCity)
+void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConquest, bool bTrade)
 {
 	bool bRaze = false;
 
-	if (canRaze(pCity))
+	if ( // Can raze
+			!GC.getGame().isOption(GAMEOPTION_NO_CITY_RAZING)
+		&&	(
+				!pCity->isEverOwned(getID())
+			&&	!pCity->plot()->isCultureRangeCity(getID(), std::max(0, GC.getNumCultureLevelInfos() - 1))
+			||	pCity->calculateTeamCulturePercent(getTeam()) < GC.getDefineINT("RAZING_CULTURAL_PERCENT_THRESHOLD")
+		)
+	)
 	{
 		int iRazeValue = 0;
 		const int iCloseness = pCity->AI_playerCloseness(getID());
 
 		// Reasons to always raze
 		if (GC.getGame().culturalVictoryValid()
-		&& pCity->getCulture(pCity->getPreviousOwner()) > pCity->getCultureThreshold(GC.getGame().culturalVictoryCultureLevel())/2
+		&& pCity->getCulture(eOldOwner) > pCity->getCultureThreshold(GC.getGame().culturalVictoryCultureLevel())/2
 		&& GET_TEAM(getTeam()).AI_getEnemyPowerPercent(false) > 75)
 		{
 			int iHighCultureCount = 1;
-			foreach_(const CvCity* pLoopCity, GET_PLAYER(pCity->getPreviousOwner()).cities())
+			foreach_(const CvCity* pLoopCity, GET_PLAYER(eOldOwner).cities())
 			{
-				if (pLoopCity->getCulture(pCity->getPreviousOwner()) > pLoopCity->getCultureThreshold(GC.getGame().culturalVictoryCultureLevel())/2)
+				if (pLoopCity->getCulture(eOldOwner) > pLoopCity->getCultureThreshold(GC.getGame().culturalVictoryCultureLevel())/2)
 				{
 					iHighCultureCount++;
 					if (iHighCultureCount >= GC.getGame().culturalVictoryNumCultureCities())
@@ -1761,7 +1767,7 @@ void CvPlayerAI::AI_conquerCity(CvCity* pCity)
 			else if (isHominid())
 			{
 				if (!pCity->isHolyCity() && !pCity->hasActiveWorldWonder()
-				&& pCity->getPreviousOwner() != BARBARIAN_PLAYER && pCity->getPreviousOwner() != NEANDERTHAL_PLAYER
+				&& eOldOwner != BARBARIAN_PLAYER && eOldOwner != NEANDERTHAL_PLAYER
 				&& pCity->getOriginalOwner() != BARBARIAN_PLAYER && pCity->getOriginalOwner() != NEANDERTHAL_PLAYER)
 				{
 					iRazeValue += GC.getLeaderHeadInfo(getPersonalityType()).getRazeCityProb();
@@ -1771,7 +1777,7 @@ void CvPlayerAI::AI_conquerCity(CvCity* pCity)
 			else
 			{
 				const bool bFinancialTrouble = AI_isFinancialTrouble();
-				const bool bPrevOwnerBarb = (pCity->getPreviousOwner() == BARBARIAN_PLAYER || pCity->getPreviousOwner() == NEANDERTHAL_PLAYER);
+				const bool bPrevOwnerBarb = (eOldOwner == BARBARIAN_PLAYER || eOldOwner == NEANDERTHAL_PLAYER);
 				const bool bBarbCity = bPrevOwnerBarb && (pCity->getOriginalOwner() == BARBARIAN_PLAYER || pCity->getOriginalOwner() == NEANDERTHAL_PLAYER);
 
 				if (GET_TEAM(getTeam()).countNumCitiesByArea(pCity->area()) == 0)
@@ -1792,8 +1798,8 @@ void CvPlayerAI::AI_conquerCity(CvCity* pCity)
 						{// Raze if we might start incuring colony maintenance
 							iRazeValue = 100;
 						}
-						else if (pCity->getPreviousOwner() != NO_PLAYER && !bPrevOwnerBarb
-						&& GET_TEAM(GET_PLAYER(pCity->getPreviousOwner()).getTeam()).countNumCitiesByArea(pCity->area()) > 3)
+						else if (eOldOwner != NO_PLAYER && !bPrevOwnerBarb
+						&& GET_TEAM(GET_PLAYER(eOldOwner).getTeam()).countNumCitiesByArea(pCity->area()) > 3)
 						{
 							if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))
 							{
@@ -1921,10 +1927,10 @@ void CvPlayerAI::AI_conquerCity(CvCity* pCity)
 				}
 
 				// More inclined to raze if we're unlikely to hold it
-				if (GET_TEAM(getTeam()).getPower(false)*10 < GET_TEAM(GET_PLAYER(pCity->getPreviousOwner()).getTeam()).getPower(true)*8)
+				if (GET_TEAM(getTeam()).getPower(false)*10 < GET_TEAM(GET_PLAYER(eOldOwner).getTeam()).getPower(true)*8)
 				{
 					const int iTempValue = std::min(75,
-						(GET_TEAM(GET_PLAYER(pCity->getPreviousOwner()).getTeam()).getPower(true) - GET_TEAM(getTeam()).getPower(false))
+						(GET_TEAM(GET_PLAYER(eOldOwner).getTeam()).getPower(true) - GET_TEAM(getTeam()).getPower(false))
 						* 20 / std::max(100, GET_TEAM(getTeam()).getPower(false))
 					);
 					logBBAI("	  Low power, so boost raze odds by %d", iTempValue);
@@ -1958,7 +1964,7 @@ void CvPlayerAI::AI_conquerCity(CvCity* pCity)
 	}
 	else
 	{
-		CvEventReporter::getInstance().cityAcquiredAndKept(getID(), pCity);
+		CvEventReporter::getInstance().cityAcquiredAndKept(eOldOwner, getID(), pCity, bConquest, bTrade);
 	}
 }
 
@@ -26718,7 +26724,7 @@ void CvPlayerAI::AI_setHasInquisitionTarget()
 	PROFILE_FUNC();
 
 	m_bHasInquisitionTarget = false;
-	if(!(isInquisitionConditions()))
+	if(!isInquisitionConditions())
 	{
 		return;
 	}

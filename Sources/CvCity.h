@@ -502,7 +502,7 @@ public:
 	void setGameTurnAcquired(int iNewValue);
 
 	int getPopulation() const;
-	void setPopulation(int iNewValue);
+	void setPopulation(int iNewValue, bool bNormal = true);
 	void changePopulation(int iChange);
 
 	int getRealPopulation() const;
@@ -1232,8 +1232,6 @@ public:
 	void changeNoBonusCount(BonusTypes eBonus, int iChange);
 	int getNoBonusCount(BonusTypes eBonus) const;
 	bool isNoBonus(BonusTypes eBonus) const;
-
-	bool isAutoRaze() const;
 
 	DllExport int getMusicScriptId() const;
 	DllExport int getSoundscapeScriptId() const;

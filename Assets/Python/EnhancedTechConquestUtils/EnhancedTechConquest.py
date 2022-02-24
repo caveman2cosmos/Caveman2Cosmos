@@ -62,7 +62,7 @@ def loadConfigurationData():
 class EnhancedTechConquest:
 
 	def onCityAcquired(self, argsList):
-		iOwnerOld, iOwnerNew, CyCity, bConquest, bTrade = argsList
+		iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
 		if not bConquest: return
 
 		iBasePercent = g_iBasePercent
@@ -108,7 +108,7 @@ class EnhancedTechConquest:
 
 			iBasePercent += iTechsBehind
 			charBeaker = GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar()
-			iPopulation = CyCity.getPopulation() + 1
+			iPopulation = city.getPopulation()
 			fForce = (1 + iTechsBehind/10.0) * iPopulation / (CyPlayerO.getTotalPopulation() + iPopulation)
 
 			iMax = (iPopulation * iPopPercent)
@@ -141,9 +141,9 @@ class EnhancedTechConquest:
 			if iOwnerNew == GAME.getActivePlayer():
 
 				if iCount: # Inform the player they got some new technology points
-					szTxt = TRNSLTR.getText("TXT_KEY_ENHANCED_TECH_CONQUEST_SUCESS", ()) %(CyCity.getName(), szTxt)
+					szTxt = TRNSLTR.getText("TXT_KEY_ENHANCED_TECH_CONQUEST_SUCESS", ()) %(city.getName(), szTxt)
 				else: # Inform the player they didn't get any new technologies
-					szTxt = TRNSLTR.getText("TXT_KEY_ENHANCED_TECH_CONQUEST_FAIL", ()) + " %s" %(CyCity.getName())
+					szTxt = TRNSLTR.getText("TXT_KEY_ENHANCED_TECH_CONQUEST_FAIL", ()) + " %s" %(city.getName())
 
 				artPath = GC.getCivilizationInfo(CyPlayerO.getCivilizationType()).getButton()
-				CvUtil.sendMessage(szTxt, iOwnerNew, 20, artPath, ColorTypes(12), CyCity.getX(), CyCity.getY(), True, True)
+				CvUtil.sendMessage(szTxt, iOwnerNew, 20, artPath, ColorTypes(12), city.getX(), city.getY(), True, True)

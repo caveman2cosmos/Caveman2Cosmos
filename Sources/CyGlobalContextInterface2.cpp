@@ -15,7 +15,6 @@ void CyGlobalContextPythonInterface2(python::class_<CyGlobalContext>& x)
 		// global defines.xml
 		.def("isDCM_AIR_BOMBING", &CyGlobalContext::isDCM_AIR_BOMBING, "bool ()")
 		.def("isDCM_RANGE_BOMBARD", &CyGlobalContext::isDCM_RANGE_BOMBARD, "bool ()")
-		.def("isDCM_ATTACK_SUPPORT", &CyGlobalContext::isDCM_ATTACK_SUPPORT, "bool ()")
 		.def("isDCM_OPP_FIRE", &CyGlobalContext::isDCM_OPP_FIRE, "bool ()")
 		.def("isDCM_ACTIVE_DEFENSE", &CyGlobalContext::isDCM_ACTIVE_DEFENSE, "bool ()")
 		.def("isDCM_FIGHTER_ENGAGE", &CyGlobalContext::isDCM_FIGHTER_ENGAGE, "bool ()")

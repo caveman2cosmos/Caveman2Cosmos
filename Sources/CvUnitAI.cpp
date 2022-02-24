@@ -1758,7 +1758,7 @@ void CvUnitAI::AI_settleMove()
 	}
 
 	const int iDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 3);
-	SendLog("SettlerAI", CvWString::format(L"iDanger check %lld", iDanger));
+	SendLog("SettlerAI", CvWString::format(L"iDanger check %I64d", iDanger));
 	if (iDanger > 0)
 	{
 		if (!getGroup()->canDefend() && (plot()->getOwner() == getOwner() || iDanger > 2)
@@ -1768,7 +1768,7 @@ void CvUnitAI::AI_settleMove()
 			{
 				return;
 			}
-			SendLog("SettlerAI", CvWString::format(L"already in city %lld", iDanger));
+			SendLog("SettlerAI", CvWString::format(L"already in city %I64d", iDanger));
 			getGroup()->pushMission(MISSION_SKIP);
 		}
 	}
@@ -1816,7 +1816,7 @@ void CvUnitAI::AI_settleMove()
 	{
 		int iAreaBestFoundValue = 0;
 		int iOtherBestFoundValue = 0;
-		SendLog("SettlerAI", CvWString::format(L"Number of City Sites %WS %lld ID: %d X: %d Y: %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), GET_PLAYER(getOwner()).AI_getNumCitySites(), getID(), getX(), getY()));
+		SendLog("SettlerAI", CvWString::format(L"Number of City Sites %WS %I64d ID: %d X: %d Y: %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), GET_PLAYER(getOwner()).AI_getNumCitySites(), getID(), getX(), getY()));
 		for (int iI = 0; iI < GET_PLAYER(getOwner()).AI_getNumCitySites(); iI++)
 		{
 			CvPlot* pCitySitePlot = GET_PLAYER(getOwner()).AI_getCitySite(iI);
@@ -2409,7 +2409,7 @@ void CvUnitAI::AI_barbAttackMove()
 	{
 		return;
 	}
-	
+
 	const bool bRaging = GC.getGame().isOption(GAMEOPTION_RAGING_BARBARIANS);
 
 	if (bRaging || GC.getGame().getNumCivCities() > GC.getGame().countCivPlayersAlive() * 2)
@@ -15735,7 +15735,14 @@ bool CvUnitAI::AI_patrol(bool bIgnoreDanger)
 
 			if (isAnimal())
 			{
-				if (!pAdjacentPlot->isOwned())
+				if (GC.getGame().isOption(GAMEOPTION_DANGEROUS_WILDLIFE))
+				{
+					if (pAdjacentPlot->isVisibleEnemyUnit(this))
+					{
+						iValue += 5000;
+					}
+				}
+				else if (!pAdjacentPlot->isOwned())
 				{
 					iValue += 5000;
 
