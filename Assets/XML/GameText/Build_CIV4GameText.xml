@@ -220,6 +220,10 @@
 		<Russian>Ïîñòðîéêà [LINK=IMPROVEMENT_COTTAGE]äîìà[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_COTTAGE_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK] (Consumed)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_DESERT_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK]</French>

@@ -4108,7 +4108,7 @@
 		<!-- Cottage (kill) -> Cottage -->
 		<BuildInfo>
 			<Type>BUILD_COTTAGE_KILL</Type>
-			<Description>TXT_KEY_BUILD_COTTAGE</Description>
+			<Description>TXT_KEY_BUILD_COTTAGE_KILL</Description>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>401</iTime>
