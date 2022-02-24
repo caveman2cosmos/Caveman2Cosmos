@@ -358,6 +358,7 @@ public:
 	int m_iExtraWithdrawOnFeatureType;
 };
 
+// @SAVEBREAK Restructure/Rethink - Toffer
 class UnitCombatKeyedInfo
 {
 public:
@@ -435,6 +436,7 @@ public:
 	int	m_iExtraTrapAvoidanceUnitCombatType;
 	int	m_iExtraTrapTriggerUnitCombatType;
 };
+// SAVEBREAK@
 
 class CvUnit : public CvDLLEntity
 {

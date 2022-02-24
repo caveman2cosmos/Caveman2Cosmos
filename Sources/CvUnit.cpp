@@ -164,11 +164,11 @@ m_Properties(this)
 		g_paiTempAfflictionTurnTypeCount = new int[GC.getNumPromotionLineInfos()];
 		g_paiTempAfflictionHitCount = new int[GC.getNumPromotionInfos()];
 		g_paiTempAfflictionTolerance = new int[GC.getNumPromotionInfos()];
-		g_paiTempTrapImmunityUnitCombatCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempTargetUnitCombatCount = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraTrapDisableUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraTrapAvoidanceUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempExtraTrapTriggerUnitCombatType = new int[GC.getNumUnitCombatInfos()];
+		g_paiTempTrapImmunityUnitCombatCount = new int[GC.getNumUnitCombatInfos()]();
+		g_paiTempTargetUnitCombatCount = new int[GC.getNumUnitCombatInfos()]();
+		g_paiTempExtraTrapDisableUnitCombatType = new int[GC.getNumUnitCombatInfos()]();
+		g_paiTempExtraTrapAvoidanceUnitCombatType = new int[GC.getNumUnitCombatInfos()]();
+		g_paiTempExtraTrapTriggerUnitCombatType = new int[GC.getNumUnitCombatInfos()]();
 		g_paiTempAfflictionTypeTolerance = new int[GC.getNumPromotionLineInfos()];
 		g_paiTempFortitudeModifierTypeAmount = new int[GC.getNumPromotionInfos()];
 		g_paiTempFortitudeModifierAmount = new int[GC.getNumPromotionLineInfos()];
@@ -186,7 +186,7 @@ m_Properties(this)
 		g_paiTempExtraUnitCombatModifier = new int[GC.getNumUnitCombatInfos()];
 		g_pabTempHasPromotion = new bool[GC.getNumPromotionInfos()];
 		g_pabTempHasUnitCombat = new bool[GC.getNumUnitCombatInfos()];
-		g_paiTempOngoingTrainingCount = new int[GC.getNumUnitCombatInfos()];
+		g_paiTempOngoingTrainingCount = new int[GC.getNumUnitCombatInfos()]();
 		g_paiTempExtraFlankingStrengthbyUnitCombatType = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraWithdrawVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraPursuitVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
@@ -198,8 +198,8 @@ m_Properties(this)
 		g_paiTempExtraPrecisionVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraCriticalVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
 		g_paiTempExtraRoundStunVSUnitCombatType = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempHealUnitCombatTypeVolume = new int[GC.getNumUnitCombatInfos()];
-		g_paiTempHealUnitCombatTypeAdjacentVolume = new int[GC.getNumUnitCombatInfos()];
+		g_paiTempHealUnitCombatTypeVolume = new int[GC.getNumUnitCombatInfos()]();
+		g_paiTempHealUnitCombatTypeAdjacentVolume = new int[GC.getNumUnitCombatInfos()]();
 		g_paiTempHealAsDamage = new int[GC.getNumUnitCombatInfos()];
 
 		m_staticsInitialized = true;
@@ -22094,8 +22094,6 @@ bool CvUnit::potentialWarAction(const CvPlot* pPlot) const
 
 void CvUnit::read(FDataStreamBase* pStream)
 {
-	int iI;
-
 	// Init data before load
 	reset();
 
@@ -22251,7 +22249,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
 		g_pabTempHasPromotion[iI] = false;
 	}
@@ -22271,7 +22269,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	} while(iI != -1);
 
 
-	for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
 		if (g_pabTempHasPromotion[iI])
 		{
@@ -22351,7 +22349,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		g_paiTempExtraUnitCombatModifier[iI] = 0;
 	}
@@ -22370,7 +22368,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( g_paiTempExtraUnitCombatModifier[iI] != 0 )
 		{
@@ -22410,7 +22408,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraFortitude);
 
 	// Read compressed data format
-	for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
 		g_paiTempAfflictOnAttackCount[iI] = 0;
 		g_paiTempCureAfflictionCount[iI] = 0;
@@ -22443,7 +22441,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
 		if (
 		   0 != g_paiTempAfflictOnAttackCount[iI]
@@ -22573,64 +22571,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", dflIIUnit.iID, SAVE_VALUE_TYPE_INT);
 #endif // STRENGTH_IN_NUMBERS
 
-	// Read compressed data format
-	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		g_paiTempOngoingTrainingCount[iI] = 0;
-		g_paiTempHealUnitCombatTypeVolume[iI] = 0;
-		g_paiTempHealUnitCombatTypeAdjacentVolume[iI] = 0;
-		g_paiTempTrapImmunityUnitCombatCount[iI] = 0;
-		g_paiTempTargetUnitCombatCount[iI] = 0;
-		g_paiTempExtraTrapDisableUnitCombatType[iI] = 0;
-		g_paiTempExtraTrapAvoidanceUnitCombatType[iI] = 0;
-		g_paiTempExtraTrapTriggerUnitCombatType[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasUnitCombatInfo3");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_COMBATINFOS, iI, true);
-
-			if ( iNewIndex != NO_UNITCOMBAT )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempOngoingTrainingCount[iNewIndex], "ongoingTrainingCount");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempHealUnitCombatTypeVolume[iNewIndex], "healUnitCombatTypeVolume");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempHealUnitCombatTypeAdjacentVolume[iNewIndex], "healUnitCombatTypeAdjacentVolume");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTrapImmunityUnitCombatCount[iNewIndex], "trapImmunityUnitCombatCount");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTargetUnitCombatCount[iNewIndex], "targetUnitCombatCount");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTrapDisableUnitCombatType[iNewIndex], "extraTrapDisableUnitCombatType");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTrapAvoidanceUnitCombatType[iNewIndex], "extraTrapAvoidanceUnitCombatType");
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTrapTriggerUnitCombatType[iNewIndex], "extraTrapTriggerUnitCombatType");
-			}
-		}
-	} while(iI != -1);
-
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		if ( g_paiTempOngoingTrainingCount[iI] != 0
-			|| g_paiTempHealUnitCombatTypeVolume[iI] != 0
-			|| g_paiTempHealUnitCombatTypeAdjacentVolume[iI] != 0
-			|| g_paiTempTrapImmunityUnitCombatCount[iI] != 0
-			|| g_paiTempTargetUnitCombatCount[iI] != 0
-			|| g_paiTempExtraTrapDisableUnitCombatType[iI] != 0
-			|| g_paiTempExtraTrapAvoidanceUnitCombatType[iI] != 0
-			|| g_paiTempExtraTrapTriggerUnitCombatType[iI] != 0)
-		{
-			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
-
-			info->m_iOngoingTrainingCount = g_paiTempOngoingTrainingCount[iI];
-			info->m_iHealUnitCombatTypeVolume = g_paiTempHealUnitCombatTypeVolume[iI];
-			info->m_iHealUnitCombatTypeAdjacentVolume = g_paiTempHealUnitCombatTypeAdjacentVolume[iI];
-			info->m_iTrapImmunityUnitCombatCount = g_paiTempTrapImmunityUnitCombatCount[iI];
-			info->m_iTargetUnitCombatCount = g_paiTempTargetUnitCombatCount[iI];
-			info->m_iExtraTrapDisableUnitCombatType = g_paiTempExtraTrapDisableUnitCombatType[iI];
-			info->m_iExtraTrapAvoidanceUnitCombatType = g_paiTempExtraTrapAvoidanceUnitCombatType[iI];
-			info->m_iExtraTrapTriggerUnitCombatType = g_paiTempExtraTrapTriggerUnitCombatType[iI];
-		}
-	}
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraDodgeModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPrecisionModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPowerShots);
@@ -22646,7 +22586,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatPowerShots);
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
 		g_paiTempPromotionFreeCount[iI] = 0;
 	}
@@ -22665,7 +22605,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
 		if ( g_paiTempPromotionFreeCount[iI] != 0 )
 		{
@@ -22678,7 +22618,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCombatRepels);
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		g_paiTempExtraFlankingStrengthbyUnitCombatType[iI] = 0;
 	}
@@ -22697,7 +22637,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( g_paiTempExtraFlankingStrengthbyUnitCombatType[iI] != 0 )
 		{
@@ -22708,7 +22648,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	}
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		g_paiTempExtraWithdrawVSUnitCombatType[iI] = 0;
 	}
@@ -22727,7 +22667,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( g_paiTempExtraWithdrawVSUnitCombatType[iI] != 0 )
 		{
@@ -22738,7 +22678,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	}
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		g_paiTempExtraRepelVSUnitCombatType[iI] = 0;
 	}
@@ -22757,7 +22697,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( g_paiTempExtraRepelVSUnitCombatType[iI] != 0 )
 		{
@@ -22768,7 +22708,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	}
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		g_paiTempExtraKnockbackVSUnitCombatType[iI] = 0;
 	}
@@ -22787,7 +22727,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( g_paiTempExtraKnockbackVSUnitCombatType[iI] != 0 )
 		{
@@ -22798,7 +22738,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	}
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		g_paiTempExtraPunctureVSUnitCombatType[iI] = 0;
 	}
@@ -22817,7 +22757,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( g_paiTempExtraPunctureVSUnitCombatType[iI] != 0 )
 		{
@@ -22828,7 +22768,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	}
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		g_paiTempExtraArmorVSUnitCombatType[iI] = 0;
 	}
@@ -22847,7 +22787,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( g_paiTempExtraArmorVSUnitCombatType[iI] != 0 )
 		{
@@ -22858,7 +22798,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	}
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		g_paiTempExtraDodgeVSUnitCombatType[iI] = 0;
 	}
@@ -22877,7 +22817,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( g_paiTempExtraDodgeVSUnitCombatType[iI] != 0 )
 		{
@@ -22888,7 +22828,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	}
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		g_paiTempExtraPrecisionVSUnitCombatType[iI] = 0;
 	}
@@ -22907,7 +22847,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( g_paiTempExtraPrecisionVSUnitCombatType[iI] != 0 )
 		{
@@ -22918,7 +22858,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	}
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		g_paiTempExtraCriticalVSUnitCombatType[iI] = 0;
 	}
@@ -22937,7 +22877,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( g_paiTempExtraCriticalVSUnitCombatType[iI] != 0 )
 		{
@@ -22948,7 +22888,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	}
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		g_paiTempExtraRoundStunVSUnitCombatType[iI] = 0;
 	}
@@ -22967,7 +22907,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( g_paiTempExtraRoundStunVSUnitCombatType[iI] != 0 )
 		{
@@ -22981,7 +22921,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraPoisonProbabilityModifier);
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 	{
 		g_pabTempValidBuildUp[iI] = false;
 #ifdef OUTBREAKS_AND_AFFLICTIONS
@@ -23028,7 +22968,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 	{
 		bool	bNonDefaultValue =
 			g_pabTempValidBuildUp[iI]
@@ -23073,13 +23013,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraDefenseCombatModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iRetrainsAvailable);
 	//TB Combat Mods End  TB SubCombat Mods End
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 16.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: New Tag Definition                                                               **/
-/**  Notes: Adapted by Thunderbrd for C2C                                                           **/
-/*****************************************************************************************************/
+
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDefensiveVictoryMoveCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iFreeDropCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iOffensiveVictoryMoveCount);
@@ -23101,15 +23035,12 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iVictoryAdjacentHeal);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iVictoryStackHeal);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bSurvivor);
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 16.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCaptureProbabilityModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCaptureResistanceModifier);
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumBuildInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 	{
 		g_paiTempExtraBuildWorkPercent[iI] = 0;
 	}
@@ -23135,7 +23066,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraBreakdownDamage);
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		g_pabTempHasUnitCombat[iI] = false;
 	}
@@ -23154,7 +23085,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if (g_pabTempHasUnitCombat[iI])
 		{
@@ -23171,7 +23102,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraMaxHP);
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		g_paiTempExtraPursuitVSUnitCombatType[iI] = 0;
 	}
@@ -23190,7 +23121,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( g_paiTempExtraPursuitVSUnitCombatType[iI] != 0 )
 		{
@@ -23259,7 +23190,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iNoSelfHealCount);
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		g_paiTempHealAsDamage[iI] = 0;
 	}
@@ -23278,7 +23209,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	} while(iI != -1);
 
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( g_paiTempHealAsDamage[iI] != 0 )
 		{
@@ -23309,7 +23240,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpgradeAnywhereCount);
 
 	// Read compressed data format
-	for(iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
 	{
 		m_aiExtraVisibilityIntensity[iI] = 0;
 		m_aiExtraInvisibilityIntensity[iI] = 0;
@@ -23347,7 +23278,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	m_aExtraInvisibleTerrains.resize(iSize1);
 	if (iSize1 > 0)
 	{
-		for (iI = 0; iI < iSize1; iI++)
+		for (int iI = 0; iI < iSize1; iI++)
 		{
 			iType1 = 0;
 			iType2 = 0;
@@ -23366,7 +23297,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	m_aExtraInvisibleFeatures.resize(iSize2);
 	if (iSize2 > 0)
 	{
-		for (iI = 0; iI < iSize2; iI++)
+		for (int iI = 0; iI < iSize2; iI++)
 		{
 			iType1 = 0;
 			iType2 = 0;
@@ -23385,7 +23316,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	m_aExtraInvisibleImprovements.resize(iSize3);
 	if (iSize3 > 0)
 	{
-		for (iI = 0; iI < iSize3; iI++)
+		for (int iI = 0; iI < iSize3; iI++)
 		{
 			iType1 = 0;
 			iType2 = 0;
@@ -23404,7 +23335,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	m_aExtraVisibleTerrains.resize(iSize4);
 	if (iSize4 > 0)
 	{
-		for (iI = 0; iI < iSize4; iI++)
+		for (int iI = 0; iI < iSize4; iI++)
 		{
 			iType1 = 0;
 			iType2 = 0;
@@ -23423,7 +23354,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	m_aExtraVisibleFeatures.resize(iSize5);
 	if (iSize5 > 0)
 	{
-		for (iI = 0; iI < iSize5; iI++)
+		for (int iI = 0; iI < iSize5; iI++)
 		{
 			iType1 = 0;
 			iType2 = 0;
@@ -23442,7 +23373,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	m_aExtraVisibleImprovements.resize(iSize6);
 	if (iSize6 > 0)
 	{
-		for (iI = 0; iI < iSize6; iI++)
+		for (int iI = 0; iI < iSize6; iI++)
 		{
 			iType1 = 0;
 			iType2 = 0;
@@ -23461,7 +23392,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	m_aExtraVisibleTerrainRanges.resize(iSize7);
 	if (iSize7 > 0)
 	{
-		for (iI = 0; iI < iSize7; iI++)
+		for (int iI = 0; iI < iSize7; iI++)
 		{
 			iType1 = 0;
 			iType2 = 0;
@@ -23480,7 +23411,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	m_aExtraVisibleFeatureRanges.resize(iSize8);
 	if (iSize8 > 0)
 	{
-		for (iI = 0; iI < iSize8; iI++)
+		for (int iI = 0; iI < iSize8; iI++)
 		{
 			iType1 = 0;
 			iType2 = 0;
@@ -23499,7 +23430,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	m_aExtraVisibleImprovementRanges.resize(iSize9);
 	if (iSize9 > 0)
 	{
-		for (iI = 0; iI < iSize9; iI++)
+		for (int iI = 0; iI < iSize9; iI++)
 		{
 			iType1 = 0;
 			iType2 = 0;
@@ -23538,7 +23469,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iSize10, "m_aExtraAidChanges.size");
 	if (iSize10 > 0)
 	{
-		for (iI = 0; iI < iSize10; iI++)
+		for (int iI = 0; iI < iSize10; iI++)
 		{
 			iType1 = -1;
 			iType2 = 0;
@@ -23570,6 +23501,40 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeepMultiplierSM);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeep100);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iBuildUpTurns);
+
+	// Read compressed data format
+	for (int iI = GC.getNumUnitCombatInfos() - 1; iI > -1; iI--)
+	{
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempOngoingTrainingCount[iI], "ongoingTrainingCount");
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempHealUnitCombatTypeVolume[iI], "healUnitCombatTypeVolume");
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempHealUnitCombatTypeAdjacentVolume[iI], "healUnitCombatTypeAdjacentVolume");
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTrapImmunityUnitCombatCount[iI], "trapImmunityUnitCombatCount");
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempTargetUnitCombatCount[iI], "targetUnitCombatCount");
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTrapDisableUnitCombatType[iI], "extraTrapDisableUnitCombatType");
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTrapAvoidanceUnitCombatType[iI], "extraTrapAvoidanceUnitCombatType");
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraTrapTriggerUnitCombatType[iI], "extraTrapTriggerUnitCombatType");
+
+		if (g_paiTempOngoingTrainingCount[iI] != 0
+		||  g_paiTempHealUnitCombatTypeVolume[iI] != 0
+		||  g_paiTempHealUnitCombatTypeAdjacentVolume[iI] != 0
+		||  g_paiTempTrapImmunityUnitCombatCount[iI] != 0
+		||  g_paiTempTargetUnitCombatCount[iI] != 0
+		||  g_paiTempExtraTrapDisableUnitCombatType[iI] != 0
+		||  g_paiTempExtraTrapAvoidanceUnitCombatType[iI] != 0
+		||  g_paiTempExtraTrapTriggerUnitCombatType[iI] != 0)
+		{
+			UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo((UnitCombatTypes)iI);
+
+			info->m_iOngoingTrainingCount = g_paiTempOngoingTrainingCount[iI];
+			info->m_iHealUnitCombatTypeVolume = g_paiTempHealUnitCombatTypeVolume[iI];
+			info->m_iHealUnitCombatTypeAdjacentVolume = g_paiTempHealUnitCombatTypeAdjacentVolume[iI];
+			info->m_iTrapImmunityUnitCombatCount = g_paiTempTrapImmunityUnitCombatCount[iI];
+			info->m_iTargetUnitCombatCount = g_paiTempTargetUnitCombatCount[iI];
+			info->m_iExtraTrapDisableUnitCombatType = g_paiTempExtraTrapDisableUnitCombatType[iI];
+			info->m_iExtraTrapAvoidanceUnitCombatType = g_paiTempExtraTrapAvoidanceUnitCombatType[iI];
+			info->m_iExtraTrapTriggerUnitCombatType = g_paiTempExtraTrapTriggerUnitCombatType[iI];
+		}
+	}
 
 	//bool bWorker = false;
 	//WRAPPER_READ_DECORATED(wrapper, "CvUnit", &bWorker, "bWorker");
@@ -23619,7 +23584,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	//	Right now it's just characteristics that affect what a unit might
 	//	be able to move through that matter, so its unit class + certain promotions
 
-	for (iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
 		if (isHasPromotion((PromotionTypes)iI))
 		{
@@ -23638,7 +23603,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	}
 
-	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if (isHasUnitCombat((UnitCombatTypes)iI) && GC.getUnitCombatInfo((UnitCombatTypes)iI).changesMoveThroughPlots())
 		{
@@ -24427,6 +24392,20 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeepMultiplierSM);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeep100);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iBuildUpTurns);
+
+	//	Use condensed format now - only save non-default array elements
+	for(int iI = GC.getNumUnitCombatInfos() - 1; iI > -1; iI--)
+	{
+		const UnitCombatTypes eUnitTag = static_cast<UnitCombatTypes>(iI);
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getOngoingTrainingCount(eUnitTag), "ongoingTrainingCount");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getHealUnitCombatTypeTotal(eUnitTag), "healUnitCombatTypeVolume");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getHealUnitCombatTypeAdjacentTotal(eUnitTag), "healUnitCombatTypeAdjacentVolume");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getTrapImmunityUnitCombatCount(eUnitTag), "trapImmunityUnitCombatCount");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getTargetUnitCombatCount(eUnitTag), "targetUnitCombatCount");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTrapDisableUnitCombatType(eUnitTag), "extraTrapDisableUnitCombatType");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTrapAvoidanceUnitCombatType(eUnitTag), "extraTrapAvoidanceUnitCombatType");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTrapTriggerUnitCombatType(eUnitTag), "extraTrapTriggerUnitCombatType");
+	}
 
 	//WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isWorker(), "bWorker");
 
@@ -34307,7 +34286,7 @@ int CvUnit::worsenedProbabilitytoAfflict(PromotionLineTypes eAfflictionLine) con
 
 bool CvUnit::hasHealUnitCombat() const
 {
-	return (m_iHealUnitCombatCount > 0);
+	return m_iHealUnitCombatCount > 0;
 }
 
 int CvUnit:: getHealUnitCombatCount() const
