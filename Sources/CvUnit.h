@@ -358,14 +358,13 @@ public:
 	int m_iExtraWithdrawOnFeatureType;
 };
 
+// @SAVEBREAK Restructure/Rethink - Toffer
 class UnitCombatKeyedInfo
 {
 public:
 	UnitCombatKeyedInfo() :		m_bHasUnitCombat(false),
 								m_iExtraUnitCombatModifier(0),
-								m_iSubCombatTypeCount(0),
 								m_iOngoingTrainingCount(0),
-								m_iRemovesUnitCombatTypeCount(0),
 								m_iExtraFlankingStrengthbyUnitCombatType(0),
 								m_iExtraWithdrawVSUnitCombatType(0),
 								m_iExtraPursuitVSUnitCombatType(0),
@@ -392,9 +391,7 @@ public:
 	{
 		return (!m_bHasUnitCombat &&
 			m_iExtraUnitCombatModifier == 0 &&
-			m_iSubCombatTypeCount == 0 &&
 			m_iOngoingTrainingCount == 0 &&
-			m_iRemovesUnitCombatTypeCount == 0 &&
 			m_iExtraFlankingStrengthbyUnitCombatType == 0 &&
 			m_iExtraWithdrawVSUnitCombatType == 0 &&
 			m_iExtraPursuitVSUnitCombatType == 0 &&
@@ -418,9 +415,7 @@ public:
 
 	bool m_bHasUnitCombat;
 	int	m_iExtraUnitCombatModifier;
-	int m_iSubCombatTypeCount;
 	int m_iOngoingTrainingCount;
-	int m_iRemovesUnitCombatTypeCount;
 	int m_iExtraFlankingStrengthbyUnitCombatType;
 	int m_iExtraWithdrawVSUnitCombatType;
 	int m_iExtraPursuitVSUnitCombatType;
@@ -441,6 +436,7 @@ public:
 	int	m_iExtraTrapAvoidanceUnitCombatType;
 	int	m_iExtraTrapTriggerUnitCombatType;
 };
+// SAVEBREAK@
 
 class CvUnit : public CvDLLEntity
 {
@@ -918,9 +914,6 @@ public:
 	/*** Dexy - Surround and Destroy START ****/
 	int maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL, bool bSurroundedModifier = true) const;
 	int currCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL, bool bSurroundedModifier = true) const;
-	// OLD CODE
-	// int maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL) const;
-	// int currCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL) const;
 	/*** Dexy - Surround and Destroy  END  ****/
 	int currFirepower(const CvPlot* pPlot, const CvUnit* pAttacker) const;
 	int currEffectiveStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL) const;
@@ -1028,8 +1021,6 @@ public:
 	bool canAnimalIgnoresImprovements() const;
 	bool canAnimalIgnoresCities() const;
 	bool canOnslaught() const;
-	bool hasCombatType(UnitCombatTypes eCombatType) const;
-	bool hasSubCombatType(UnitCombatTypes eCombatType) const;
 	bool hasCureAfflictionType(PromotionLineTypes ePromotionLineType) const;
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	int fortitudeTotal() const;
@@ -1391,14 +1382,6 @@ public:
 	int getOnslaughtCount() const;
 	bool mayOnslaught() const;
 	void changeOnslaughtCount(int iChange);
-
-	int getSubCombatTypeCount(UnitCombatTypes eCombatType) const;
-	bool hasExtraSubCombatType(UnitCombatTypes eCombatType) const;
-	void changeSubCombatTypeCount(UnitCombatTypes eCombatType, int iChange);
-
-	int getRemovesUnitCombatTypeCount(UnitCombatTypes eCombatType) const;
-	bool hasRemovesUnitCombatType(UnitCombatTypes eCombatType) const;
-	void changeRemovesUnitCombatTypeCount(UnitCombatTypes eCombatType, int iChange);
 
 	int getCureAfflictionCount(PromotionLineTypes ePromotionLineType) const;
 	bool hasExtraCureAffliction(PromotionLineTypes ePromotionLineType) const;
@@ -3014,11 +2997,9 @@ private:
 	//ls612: Terrain Work Modifiers
 	static int* g_paiTempExtraBuildWorkPercent;
 	static int*	g_paiTempExtraUnitCombatModifier;
-	static bool*	g_pabTempHasPromotion;
-	static bool*	g_pabTempHasUnitCombat;
-	static int* g_paiTempSubCombatTypeCount;
+	static bool* g_pabTempHasPromotion;
+	static bool* g_pabTempHasUnitCombat;
 	static int* g_paiTempOngoingTrainingCount;
-	static int* g_paiTempRemovesUnitCombatTypeCount;
 	static int* g_paiTempExtraFlankingStrengthbyUnitCombatType;
 	static int* g_paiTempExtraWithdrawVSUnitCombatType;
 	static int* g_paiTempExtraPursuitVSUnitCombatType;

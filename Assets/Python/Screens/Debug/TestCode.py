@@ -3388,11 +3388,11 @@ class TestCode:
 
 			for iUnit in xrange(GC.getNumUnitInfos()):
 				CvUnitInfo = GC.getUnitInfo(iUnit)
-				if CvUnitInfo.hasBuild(BuildTypes(iBuild)): #Multiple Units can create same Build
+				if CvUnitInfo.hasBuild(BuildTypes(iBuild)) and self.HF.checkUnitTechRequirementLocation(CvUnitInfo)[2] != 0: #Multiple Units can create same Build
 					aUnitTechID.append(self.HF.checkUnitTechRequirementLocation(CvUnitInfo)[2]) #Tech ID
 					aUnitType.append(CvUnitInfo.getType())
 
-			if len(aUnitTechID) > 0 and iBuildTechID != 0 and min(aUnitTechID) != 0 and iBuildTechID < min(aUnitTechID): #Build tech position is equal to earliest Unit tech position
+			if len(aUnitTechID) > 0 and iBuildTechID != 0 and iBuildTechID < min(aUnitTechID): #Build tech position is equal to earliest Unit tech position
 				self.log(aUnitType[aUnitTechID.index(min(aUnitTechID))]+" and "+CvBuildInfo.getType()+" have different techs "+str(min(aUnitTechID))+"/"+str(iBuildTechID))
 
 	#Checks if improvement and build have same tech unlock

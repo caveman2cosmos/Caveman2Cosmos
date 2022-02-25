@@ -56,6 +56,7 @@
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
+				<BuildType>BUILD_COTTAGE_KILL</BuildType>
 				<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
 				<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 				<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
@@ -157,6 +158,7 @@
 				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 				<BuildType>BUILD_LUMBERJACK</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
+				<BuildType>BUILD_HAMLET</BuildType>
 				<BuildType>BUILD_MINE</BuildType>
 				<BuildType>BUILD_PATH</BuildType>
 				<BuildType>BUILD_STONE_WATCHTOWER</BuildType>

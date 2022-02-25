@@ -870,6 +870,7 @@
 				<!-- C2C_ERA_PREHISTORIC -->
 				<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
 				<BuildType>BUILD_BURN_VEGETATION</BuildType>
+				<BuildType>BUILD_COTTAGE_KILL</BuildType>
 				<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
 				<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 				<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
