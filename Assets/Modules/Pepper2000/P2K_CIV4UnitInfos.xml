@@ -278,7 +278,7 @@
 				<BuildingType>BUILDING_SPACE_STATION</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<iCost>1000</iCost>
+			<iCost>2435</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
@@ -374,7 +374,7 @@
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>1000</iCost>
+			<iCost>2540</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
@@ -476,7 +476,7 @@
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>1000</iCost>
+			<iCost>2645</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
