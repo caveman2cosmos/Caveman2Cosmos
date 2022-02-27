@@ -37,7 +37,7 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 		super(MoreCiv4lertsEvent, self).__init__(eventManager, *args, **kwargs)
 
 		eventManager.addEventHandler("BeginActivePlayerTurn", self.onBeginActivePlayerTurn)
-		eventManager.addEventHandler("cityAcquired", self.OnCityAcquired)
+		eventManager.addEventHandler("cityAcquiredAndKept", self.onCityAcquiredAndKept)
 		eventManager.addEventHandler("cityBuilt", self.OnCityBuilt)
 		eventManager.addEventHandler("cityRazed", self.OnCityRazed)
 		eventManager.addEventHandler("cityLost", self.OnCityLost)
@@ -72,12 +72,12 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 		iPlayer = GAME.getActivePlayer()
 		self.CheckForAlerts(iPlayer, True)
 
-	def OnCityAcquired(self, argsList):
-		owner, playerType, city, bConquest, bTrade = argsList
-		iPlayer = city.getOwner()
-		if not self.getCheckForDomVictory(): return
-		if iPlayer == GAME.getActivePlayer():
-			self.CheckForAlerts(iPlayer, False)
+	def onCityAcquiredAndKept(self, argsList):
+		#iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
+		if not self.getCheckForDomVictory():
+			return
+		if argsList[1] == GAME.getActivePlayer():
+			self.CheckForAlerts(argsList[1], False)
 
 	def OnCityBuilt(self, argsList):
 		CyCity = argsList[0]

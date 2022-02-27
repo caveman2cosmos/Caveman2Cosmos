@@ -66,7 +66,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
-			<iCost>325</iCost>
+			<iCost>773</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>15</iCombat>
@@ -151,7 +151,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
-			<iCost>325</iCost>
+			<iCost>773</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>15</iCombat>
@@ -233,7 +233,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
-			<iCost>270</iCost>
+			<iCost>773</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>12</iCombat>
@@ -309,6 +309,10 @@
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
+					<UnitAIType>UNITAI_COUNTER</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_RESERVE</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -330,7 +334,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
-			<iCost>430</iCost>
+			<iCost>773</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>11</iCombat>
@@ -416,7 +420,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
-			<iCost>270</iCost>
+			<iCost>773</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>15</iCombat>
@@ -513,7 +517,7 @@
 				<BonusType>BONUS_WHALE_OIL</BonusType>
 				<BonusType>BONUS_KEROSENE</BonusType>
 			</PrereqBonuses>
-			<iCost>325</iCost>
+			<iCost>773</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>13</iCombat>

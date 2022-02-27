@@ -3,7 +3,9 @@
 #ifndef CvInfoUtil_h__
 #define CvInfoUtil_h__
 
+#include "CvInfoClassTraits.h"
 #include "CvGameCoreDLL.h"
+#include "CvBuildingInfo.h"
 #include "CvGlobals.h"
 #include "CvPython.h"
 #include "CvXMLLoadUtility.h"
@@ -13,11 +15,14 @@
 struct WrappedVar;
 
 
-struct CvInfoUtil : bst::noncopyable
+struct CvInfoUtil
+	: private bst::noncopyable
 {
-	CvInfoUtil(CvInfoBase* info)
+	template <class CvInfoClass_T>
+	CvInfoUtil(const CvInfoClass_T* info)
+		: m_eInfoClass(InfoClassTraits<CvInfoClass_T>::InfoClassEnum)
 	{
-		info->getDataMembers(*this);
+		const_cast<CvInfoClass_T*>(info)->getDataMembers(*this);
 	}
 
 	~CvInfoUtil()
@@ -222,7 +227,7 @@ struct CvInfoUtil : bst::noncopyable
 			: WrappedVar(static_cast<void*>(&var), tag)
 		{}
 
-		void checkSum(uint32_t& iSum) const
+		void checkSum(uint32_t&) const
 		{
 		}
 
@@ -243,220 +248,6 @@ struct CvInfoUtil : bst::noncopyable
 	CvInfoUtil& add(CvString& var, const wchar_t* tag)
 	{
 		m_wrappedVars.push_back(new StringWrapper(var, tag));
-		return *this;
-	}
-
-	///===============
-	/// Array wrapper
-	///===============
-
-	template <typename T>
-	struct ArrayWrapper : WrappedVar
-	{
-		friend struct CvInfoUtil;
-
-	protected:
-		ArrayWrapper(T*& var, const wchar_t* tag, size_t size, T defaultValue)
-			: WrappedVar(static_cast<void*>(&var), tag)
-			, m_size(size)
-			, m_default(defaultValue)
-		{}
-
-		void initVar()
-		{
-			ref() = NULL;
-		}
-
-		void uninitVar()
-		{
-			SAFE_DELETE_ARRAY(ref());
-		}
-
-		void checkSum(uint32_t& iSum) const
-		{
-			CheckSum(iSum, ref(), m_size);
-		}
-
-		void readXml(CvXMLLoadUtility* pXML)
-		{
-			pXML->SetVariableListTagPair(&ref(), m_tag.c_str(), m_size, m_default);
-		}
-
-		void copyNonDefaults(const WrappedVar* source)
-		{
-			if (const T*& sourceArray = static_cast<const ArrayWrapper*>(source)->ref())
-			{
-				for (uint32_t i = 0; i < m_size; i++)
-				{
-					const T& sourceElement = sourceArray[i];
-					if (sourceElement != m_default)
-					{
-						T*& array = ref();
-						if (array == NULL)
-							CvXMLLoadUtility::InitList(&array, m_size, m_default);
-
-						T& element = array[i];
-						if (element == m_default)
-							element = sourceElement;
-					}
-				}
-			}
-		}
-
-		void sendVarToPython(const char* file) const
-		{
-			/*
-			if (const T*& array = ref())
-			{
-				PyObject* list = PyList_New(static_cast<int>(m_size));
-				FAssert(list != NULL);
-				for (uint32_t i = 0; i < m_size; i++)
-				{
-					PyObject* item = PyInt_FromLong(static_cast<long>(array[i]));
-					FAssert(item != NULL);
-					PyList_SetItem(list, i, item);
-				}
-				Cy::Args args = Cy::Args();
-				args.args().add(list);
-				Cy::call(file, "handleArray", args);
-
-				//Cy::call(file, "handleArray", Cy::Args()
-				//	<< Cy::Array<T>(array, m_size)
-				//);
-			}
-			*/
-		}
-
-		T*& ref()				{ return *static_cast<T**>(m_ptr); }
-		const T*& ref() const	{ return *static_cast<const T**>(m_ptr); }
-
-	private:
-		const size_t m_size;
-		const T m_default;
-	};
-
-	CvInfoUtil& add(int*& var, const wchar_t* tag, int size, int defaultValue = 0)
-	{
-		m_wrappedVars.push_back(new ArrayWrapper<int>(var, tag, size, defaultValue));
-		return *this;
-	}
-
-	///==================
-	/// 2D array wrapper
-	///==================
-
-	template <typename T>
-	struct DoubleArrayWrapper : WrappedVar
-	{
-		friend struct CvInfoUtil;
-
-	protected:
-		DoubleArrayWrapper(T** var, const wchar_t* tag, const wchar_t* firstChildTag, const wchar_t* secondChildTag, int size1, int size2, T defaultValue)
-			: WrappedVar(static_cast<void*>(&var), tag)
-			, m_size1(size1)
-			, m_size2(size2)
-			, m_default(defaultValue)
-			, m_firstChildTag(firstChildTag)
-			, m_secondChildTag(secondChildTag)
-		{}
-
-		void initVar()
-		{
-			ref() = NULL;
-		}
-
-		void uninitVar()
-		{
-			SAFE_DELETE_ARRAY2(ref(), m_size1);
-		}
-
-		void checkSum(uint32_t& iSum) const
-		{
-			if (const T**& ptrArray = ref())
-				for (int i = 0; i < m_size1; i++)
-					CheckSum(iSum, ptrArray[i], m_size2);
-		}
-
-		void readXml(CvXMLLoadUtility* pXML)
-		{
-			if (pXML->TryMoveToXmlFirstChild(m_tag.c_str()))
-			{
-				const int iNumChildren = pXML->GetXmlChildrenNumber();
-
-				if (pXML->TryMoveToXmlFirstChild())
-				{
-					T**& ptrArray = ref();
-
-					CvString szTextVal;
-					for (int i = 0; i < iNumChildren; i++)
-					{
-						pXML->GetChildXmlValByName(szTextVal, m_firstChildTag.c_str());
-						const int eType = pXML->GetInfoClass(szTextVal);
-						if (eType > -1)
-						{
-							if (ptrArray == NULL)
-								CvXMLLoadUtility::InitPointerList(&ptrArray, m_size1);
-
-							if (pXML->TryMoveToXmlFirstChild(m_secondChildTag.c_str()))
-							{
-								pXML->SetCommerce(&ptrArray[eType]);
-								pXML->MoveToXmlParent();
-							}
-						}
-						if (!pXML->TryMoveToXmlNextSibling())
-							break;
-					}
-					pXML->MoveToXmlParent();
-				}
-				pXML->MoveToXmlParent();
-			}
-		}
-
-		void copyNonDefaults(const WrappedVar* source)
-		{
-			if (const T**& sourcePtrArray = static_cast<const DoubleArrayWrapper*>(source)->ref())
-			{
-				for (int i = 0; i < m_size1; i++)
-				{
-					if (const T*& sourceInnerArray = sourcePtrArray[i])
-					{
-						for (int j = 0; j < m_size2; j++)
-						{
-							const T& sourceElement = sourceInnerArray[j];
-							if (sourceElement != m_default)
-							{
-								T**& ptrArray = ref();
-								if (ptrArray == NULL)
-									CvXMLLoadUtility::InitPointerList(&ptrArray, m_size1);
-
-								T*& InnerArray = ptrArray[i];
-								if (InnerArray == NULL)
-									CvXMLLoadUtility::InitList(&InnerArray, m_size2, m_default);
-
-								T& element = InnerArray[j];
-								if (element == m_default)
-									element = sourceElement;
-							}
-						}
-					}
-				}
-			}
-		}
-
-		T**& ref()				{ return *static_cast<T***>(m_ptr); }
-		const T**& ref() const	{ return *static_cast<const T***>(m_ptr); }
-
-	private:
-		const int m_size1;
-		const int m_size2;
-		const T m_default;
-		const std::wstring m_firstChildTag;
-		const std::wstring m_secondChildTag;
-	};
-
-	CvInfoUtil& add(int** var, const wchar_t* rootTag, const wchar_t* firstChildTag, const wchar_t* secondChildTag, int size1, int size2, int defaultValue = 0)
-	{
-		m_wrappedVars.push_back(new DoubleArrayWrapper<int>(var, rootTag, firstChildTag, secondChildTag, size1, size2, defaultValue));
 		return *this;
 	}
 
@@ -487,12 +278,12 @@ struct CvInfoUtil : bst::noncopyable
 		void copyNonDefaults(const WrappedVar* source)
 		{
 			foreach_(const T& element, static_cast<const VectorWrapper*>(source)->ref())
-				if (element > -1 && !algo::contains(ref(), element))
+				if (element > -1 && algo::none_of_equal(ref(), element))
 					ref().push_back(element);
 			algo::sort(ref());
 		}
 
-		void sendVarToPython(const char* file) const
+		void sendVarToPython(const char* /*file*/) const
 		{
 			//Cy::call(file, "handleVector", Cy::Args()
 			//	<< ref()
@@ -528,12 +319,12 @@ struct CvInfoUtil : bst::noncopyable
 			CheckSumC(iSum, ref());
 		}
 
-		void readXml(CvXMLLoadUtility* pXML)
+		virtual void readXml(CvXMLLoadUtility* pXML)
 		{
 			ref().read(pXML, m_tag.c_str());
 		}
 
-		void copyNonDefaults(const WrappedVar* source)
+		virtual void copyNonDefaults(const WrappedVar* source)
 		{
 			ref().copyNonDefaults(static_cast<const IDValueMapWrapper*>(source)->ref());
 		}
@@ -541,35 +332,24 @@ struct CvInfoUtil : bst::noncopyable
 		IDValueMap_T& ref() const { return *static_cast<IDValueMap_T*>(m_ptr); }
 	};
 
-	template <typename T1, typename T2, T2 default_>
-	CvInfoUtil& add(IDValueMap<T1, T2, default_>& map, const wchar_t* tag)
-	{
-		m_wrappedVars.push_back(new IDValueMapWrapper<IDValueMap<T1, T2, default_> >(map, tag));
-		return *this;
-	}
-
 	///============================================
 	/// IDValueMap with delayed resolution wrapper
 	///============================================
 
 	template <typename IDValueMap_T>
-	struct IDValueMapWithDelayedResolutionWrapper : WrappedVar
+	struct IDValueMapWithDelayedResolutionWrapper
+		: public IDValueMapWrapper<IDValueMap_T>
 	{
 		friend struct CvInfoUtil;
 
 	protected:
 		IDValueMapWithDelayedResolutionWrapper(IDValueMap_T& var, const wchar_t* tag)
-			: WrappedVar(static_cast<void*>(&var), tag)
+			: IDValueMapWrapper<IDValueMap_T>(var, tag)
 		{}
 
 		void uninitVar()
 		{
 			ref().removeDelayedResolution();
-		}
-
-		void checkSum(uint32_t& iSum) const
-		{
-			CheckSumC(iSum, ref());
 		}
 
 		void readXml(CvXMLLoadUtility* pXML)
@@ -582,13 +362,21 @@ struct CvInfoUtil : bst::noncopyable
 			ref().copyNonDefaultDelayedResolution(static_cast<const IDValueMapWithDelayedResolutionWrapper*>(source)->ref());
 		}
 
+		void checkSum(uint32_t& iSum) const
+		{
+			CheckSumC(iSum, ref());
+		}
+
 		IDValueMap_T& ref() const { return *static_cast<IDValueMap_T*>(m_ptr); }
 	};
 
-	template <typename T1, typename T2, T2 default_>
-	CvInfoUtil& addDelayedResolution(IDValueMap<T1, T2, default_>& map, const wchar_t* rootTag)
+	template <typename T1, int default_>
+	CvInfoUtil& add(IDValueMap<T1, int, default_>& map, const wchar_t* rootTag)
 	{
-		m_wrappedVars.push_back(new IDValueMapWithDelayedResolutionWrapper<IDValueMap<T1, T2, default_> >(map, rootTag));
+		if (GC.isDelayedResolutionRequired(m_eInfoClass, InfoClassTraits<T1>::InfoClassEnum))
+			m_wrappedVars.push_back(new IDValueMapWithDelayedResolutionWrapper<IDValueMap<T1, int, default_> >(map, rootTag));
+		else
+			m_wrappedVars.push_back(new IDValueMapWrapper<IDValueMap<T1, int, default_> >(map, rootTag));
 		return *this;
 	}
 
@@ -596,39 +384,27 @@ struct CvInfoUtil : bst::noncopyable
 	/// IDValueMap of paired arrays wrapper
 	///=====================================
 
-	template <typename IDValueMap_T>
+	template <typename IDValueMap_T, DelayedResolutionTypes delayedRes_>
 	struct IDValueMapOfPairedArrayWrapper : WrappedVar
 	{
 		friend struct CvInfoUtil;
 
 	protected:
-		IDValueMapOfPairedArrayWrapper(IDValueMap_T& var, const wchar_t* rootTag, const wchar_t* firstChildTag, const wchar_t* secondChildTag, int pairedArraySize)
+		IDValueMapOfPairedArrayWrapper(IDValueMap_T& var, const wchar_t* rootTag, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
 			: WrappedVar(static_cast<void*>(&var), rootTag)
-			, m_pairedArraySize(pairedArraySize)
 			, m_firstChildTag(firstChildTag)
 			, m_secondChildTag(secondChildTag)
 		{}
 
 		void uninitVar()
 		{
-			//foreach_(const IDValueMap_T::pair_t& pair, ref())
-			//{
-			//	SAFE_DELETE_ARRAY(pair.second);
-			//}
-		}
-
-		void checkSum(uint32_t& iSum) const
-		{
-			foreach_(const IDValueMap_T::pair_t& pair, ref())
-			{
-				CheckSum(iSum, pair.first);
-				CheckSum(iSum, pair.second, m_pairedArraySize);
-			}
+			if (delayedRes_ == USE_DELAYED_RESOLUTION)
+				ref().removeDelayedResolution();
 		}
 
 		void readXml(CvXMLLoadUtility* pXML)
 		{
-			ref().readPairedArrays(pXML, m_tag.c_str(), m_firstChildTag.c_str(), m_secondChildTag.c_str(), m_pairedArraySize);
+			ref()._readPairedArrays<delayedRes_>(pXML, m_tag.c_str(), m_firstChildTag.c_str(), m_secondChildTag.c_str());
 		}
 
 		void copyNonDefaults(const WrappedVar* source)
@@ -636,22 +412,25 @@ struct CvInfoUtil : bst::noncopyable
 			ref().copyNonDefaultPairedArrays(static_cast<const IDValueMapOfPairedArrayWrapper*>(source)->ref());
 		}
 
-		void sendVarToPython(const char* file)
+		void checkSum(uint32_t& iSum) const
 		{
+			CheckSumC(iSum, ref());
 		}
 
 		IDValueMap_T& ref() const { return *static_cast<IDValueMap_T*>(m_ptr); }
 
 	private:
-		const int m_pairedArraySize;
 		const std::wstring m_firstChildTag;
 		const std::wstring m_secondChildTag;
 	};
 
-	template <typename T1, typename T2, T2 default_>
-	CvInfoUtil& add(IDValueMap<T1, T2*, default_>& map, const wchar_t* rootTag, const wchar_t* firstChildTag, const wchar_t* secondChildTag, int pairedArraySize)
+	template <typename T1, size_t arraySize_, int default_>
+	CvInfoUtil& add(IDValueMap<T1, bst::array<int, arraySize_>, default_>& map, const wchar_t* rootTag, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
 	{
-		m_wrappedVars.push_back(new IDValueMapOfPairedArrayWrapper<IDValueMap<T1, T2*, default_> >(map, rootTag, firstChildTag, secondChildTag, pairedArraySize));
+		if (GC.isDelayedResolutionRequired(m_eInfoClass, InfoClassTraits<T1>::InfoClassEnum))
+			m_wrappedVars.push_back(new IDValueMapOfPairedArrayWrapper<IDValueMap<T1, bst::array<int, arraySize_>, default_>, USE_DELAYED_RESOLUTION>(map, rootTag, firstChildTag, secondChildTag));
+		else
+			m_wrappedVars.push_back(new IDValueMapOfPairedArrayWrapper<IDValueMap<T1, bst::array<int, arraySize_>, default_>, NO_DELAYED_RESOLUTION>(map, rootTag, firstChildTag, secondChildTag));
 		return *this;
 	}
 
@@ -661,7 +440,7 @@ struct CvInfoUtil : bst::noncopyable
 
 	static void publishPythonInterface()
 	{
-		python::class_<CvInfoUtil, boost::noncopyable>("CvInfoUtil", python::init<CvInfoBase*>())
+		python::class_<CvInfoUtil, boost::noncopyable>("CvInfoUtil", python::init<CvBuildingInfo*>())
 			.def("sendDataMembersToPython", &CvInfoUtil::sendDataMembersToPython)
 		;
 	}
@@ -677,6 +456,7 @@ private:
 	/// Wrapped pointers to the data members of an info object
 	///========================================================
 
+	const InfoClassTypes m_eInfoClass;
 	std::vector<WrappedVar*> m_wrappedVars;
 };
 

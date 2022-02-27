@@ -268,7 +268,7 @@ class Pedia:
 		import SevoPediaRoute
 		import PediaBuilding
 		import PediaPromotion
-		import SevoPediaUnitChart
+		import PediaUnitCombat
 		import PediaBonus
 		import PediaFeature
 		import PediaImprovement
@@ -287,7 +287,7 @@ class Pedia:
 		self.mapScreenFunctions = {
 			PEDIA_TECHS				: PediaTech.PediaTech(self, H_BOT_ROW),
 			PEDIA_UNITS_0			: PediaUnit.PediaUnit(self, H_BOT_ROW),
-			szCatUnitCombat			: SevoPediaUnitChart.SevoPediaUnitChart(self),
+			szCatUnitCombat			: PediaUnitCombat.PediaUnitCombat(self, H_BOT_ROW),
 			PEDIA_PROMOTIONS		: PediaPromotion.PediaPromotion(self, H_BOT_ROW),
 			PEDIA_BUILDINGS_0		: PediaBuilding.PediaBuilding(self, H_BOT_ROW),
 			szCatProjects			: PediaProject.PediaProject(self, H_BOT_ROW),
@@ -481,7 +481,7 @@ class Pedia:
 			iDefaultUnitAIType = CvUnitInfo.getDefaultUnitAIType()
 			aListAI = [UnitAITypes.UNITAI_MISSIONARY]
 			iCost = CvUnitInfo.getProductionCost()
-			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42): # 42 = UNITAI_SUBDUED_ANIMAL
+			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, UnitAITypes.UNITAI_SUBDUED_ANIMAL):
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[2]
 			elif (iDefaultUnitAIType in aListAI):
@@ -795,7 +795,7 @@ class Pedia:
 			iDefaultUnitAIType = CvUnitInfo.getDefaultUnitAIType()
 			aListAI = [UnitAITypes.UNITAI_MISSIONARY]
 			iCost = CvUnitInfo.getProductionCost()
-			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, 42): # 42 = UNITAI_SUBDUED_ANIMAL
+			if iDefaultUnitAIType in (UnitAITypes.UNITAI_ANIMAL, UnitAITypes.UNITAI_SUBDUED_ANIMAL):
 				if bAnimals:
 					bValid = True
 				else:
@@ -961,10 +961,12 @@ class Pedia:
 
 	def getBuildingType(self, CvBuildingInfo, iBuilding):
 		szStrat = CvBuildingInfo.getDescription()
-		iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
 
 		if GC.getInfoTypeForString("MAPCATEGORY_EARTH") not in CvBuildingInfo.getMapCategories():
 			return 7
+
+		iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
+
 		if iSpecialBuilding != -1:
 			if iSpecialBuilding == GC.getInfoTypeForString("SPECIALBUILDING_C2C_CULTURE"):
 				return 4
@@ -972,16 +974,16 @@ class Pedia:
 				return 2
 		if szStrat.find("Folklore -", 0, 10) + szStrat.find("Folklore (E) -", 0, 14) + szStrat.find("Folklore (T) -", 0, 14) + szStrat.find("Enclosure -", 0, 11) + szStrat.find("Remains -", 0, 9) != -5:
 			return 6
-		elif CvBuildingInfo.getReligionType() != -1 or CvBuildingInfo.getPrereqReligion() != -1:
+		if CvBuildingInfo.getReligionType() != -1 or CvBuildingInfo.getPrereqReligion() != -1:
 			return 5
-		elif CvBuildingInfo.getProductionCost() == -1 or CvBuildingInfo.isAutoBuild():
+		if CvBuildingInfo.getProductionCost() == -1 or CvBuildingInfo.isAutoBuild():
 			return 3
-		elif isWorldWonder(iBuilding):
+		if isWorldWonder(iBuilding):
 			return 1
-		elif isNationalWonder(iBuilding):
+		if isNationalWonder(iBuilding):
 			return 0
-		else:
-			return -1
+
+		return -1
 
 
 	def placeUnitTree(self):
@@ -1024,7 +1026,7 @@ class Pedia:
 	def placeUnitCombats(self):
 		print "Category: Unit Combat Types"
 		self.aList = self.getSortedList(GC.getNumUnitCombatInfos(), GC.getUnitCombatInfo)
-		self.placeItems(WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT_COMBAT, GC.getUnitCombatInfo)
+		self.placeItems("UnitCombats", GC.getUnitCombatInfo)
 
 
 	def placeProjects(self):
@@ -1258,10 +1260,12 @@ class Pedia:
 		iPedConcept = CivilopediaPageTypes.CIVILOPEDIA_PAGE_CONCEPT
 		iPedConcNew = CivilopediaPageTypes.CIVILOPEDIA_PAGE_CONCEPT_NEW
 		iWidDescrip = WidgetTypes.WIDGET_PEDIA_DESCRIPTION
-		iWidJuToLeader = WidgetTypes.WIDGET_PEDIA_JUMP_TO_LEADER
 		if widget == "Builds":
 			bOffset = True
 			widget = WidgetTypes.WIDGET_PEDIA_JUMP_TO_ROUTE
+		elif widget == "UnitCombats":
+			bOffset = True
+			widget = WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT
 		else:
 			bOffset = False
 		i = 0
@@ -1280,10 +1284,8 @@ class Pedia:
 				else:
 					data1 = item[1]
 
-				if widget == iWidJuToLeader:
-					data2 = -1
-				else:
-					data2 = 0
+				data2 = 0
+
 				szName = '<img=%s size=%d></img> %s' %(info(item[1]).getButton(), sIcon, szFont3 + item[0])
 			screen.appendListBoxStringNoUpdate(szItemList, szName, widget, data1, data2, 1<<0)
 			i += 1
@@ -1605,6 +1607,8 @@ class Pedia:
 					self.tooltip.handle(screen, GC.getBuildInfo(ID).getDescription())
 				elif "RELIGION" in szSplit:
 					self.tooltip.handle(screen, CyGameTextMgr().parseReligionInfo(ID, False))
+				elif "COMBAT" in szSplit:
+					self.tooltip.handle(screen, CyGameTextMgr().getUnitCombatHelp(ID, False))
 				elif "CONCEPT" in szSplit:
 					self.tooltip.handle(screen, GC.getConceptInfo(ID).getDescription())
 				elif "CONCEPT_NEW" in szSplit:
@@ -1616,7 +1620,7 @@ class Pedia:
 			bDown = self.InputData.isKeyDown(iData)
 			if bDown == "Unknown":
 				return
-			elif not bDown:
+			if not bDown:
 				self.fKeyTimer = 99999
 				self.bKeyPress = False
 				return
@@ -1639,7 +1643,7 @@ class Pedia:
 				self.back()
 			elif iData in (16, 103):
 				self.forward()
-			print "Timer started"
+
 			if self.bKeyPress:
 				self.fKeyTimer = 0.5
 			else:
@@ -1686,15 +1690,17 @@ class Pedia:
 						screen.show("IndexLetters")
 					self.bIndex = True
 					self.nIndexLists = self.pediaIndex.interfaceScreen()
+
 			elif szSplit[1] == "Header":
-				if szFlag == "MOUSE_RBUTTONUP":
+
+				if bAlt or bCtrl or bShift:
+					self.welcomeMessage(screen, "Credit")
+
+				elif szFlag == "MOUSE_RBUTTONUP":
 					import _misc
 					_misc.LaunchDefaultBrowser("https://forums.civfanatics.com/forums/civ4-caveman-2-cosmos.449/")
 				else:
-					if bAlt or bCtrl or bShift:
-						self.welcomeMessage(screen, "Credit")
-					else:
-						self.welcomeMessage(screen)
+					self.welcomeMessage(screen)
 
 		elif "JumpTo" in szSplit:
 			if "UNIT" in szSplit:
@@ -1731,6 +1737,8 @@ class Pedia:
 				self.pediaJump(self.PEDIA_SPECIAL, "Build", ID)
 			elif "RELIGION" in szSplit:
 				self.pediaJump(self.PEDIA_LEADERSHIP, "Religion", ID)
+			elif "COMBAT" in szSplit:
+				self.pediaJump(self.PEDIA_SPECIAL, "UnitCombat", ID)
 			elif "CONCEPT" in szSplit:
 				self.pediaJump(self.PEDIA_CONCEPTS, "", ID)
 			elif "CONCEPT_NEW" in szSplit:

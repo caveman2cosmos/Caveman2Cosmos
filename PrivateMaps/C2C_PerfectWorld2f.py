@@ -154,10 +154,9 @@
 ##
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
 
 from array import array
-from random import random,randint,seed, shuffle
+from random import random, randint, seed
 import math
 
 class MapConstants :
@@ -856,21 +855,8 @@ def DeleteFromList(theList,oldItem):
 		return
 
 def ShuffleList(theList):
-	if (mc.UsePythonRandom):
-		shuffled = list(theList)
-		shuffle(shuffled)
-		return shuffled
-	else:
-		preshuffle = list()
-		shuffled	 = list()
-		numElements = len(theList)
-		for i in range(numElements):
-			preshuffle.append(theList[i])
-		for i in range(numElements):
-				n = PRand.randint(0, len(preshuffle) - 1)
-				shuffled.append(preshuffle[n])
-				del preshuffle[n]
-		return shuffled
+	shufflePyList(theList, CyGame().getMapRand())
+	return theList
 
 def GetInfoType(string):
 	cgc = CyGlobalContext()
@@ -879,26 +865,6 @@ def GetInfoType(string):
 def GetDistance(x,y,dx,dy):
 		distance = math.sqrt(abs((float(x - dx) * float(x - dx)) + (float(y - dy) * float(y - dy))))
 		return distance
-
-def GetOppositeDirection(direction):
-		opposite = mc.L
-		if direction == mc.N:
-				opposite = mc.S
-		elif direction == mc.S:
-				opposite = mc.N
-		elif direction == mc.E:
-				opposite = mc.W
-		elif direction == mc.W:
-				opposite = mc.E
-		elif direction == mc.NW:
-				opposite = mc.SE
-		elif direction == mc.SE:
-				opposite = mc.NW
-		elif direction == mc.SW:
-				opposite = mc.NE
-		elif direction == mc.NE:
-				opposite = mc.SW
-		return opposite
 
 def GetXYFromDirection(x,y,direction):
 		xx = x
@@ -3524,10 +3490,10 @@ class RiverMap :
 										#never go straight when you have other choices
 										count = len(drainList)
 										if count == 3:
-												oppDir = GetOppositeDirection(nonDrainList[0])
-												for n in range(count):
-														if drainList[n] == oppDir:
-																del drainList[n]
+												oppDir = getOppositeDirection(nonDrainList[0])
+												for dirX in drainList:
+														if dirX == oppDir:
+																del dirX
 																break
 												count = len(drainList)
 
@@ -3773,13 +3739,6 @@ class RiverMap :
 						print lineString2
 				lineString1 = " "
 				print lineString1
-class EuropeMap :
-		def __init__(self):
-				return
-		def initialize(self):
-				self.europeMap = array('i')
-				for i in range(mc.width*mc.height):
-						self.europeMap.append(0)
 
 
 class BonusPlacer:
@@ -3788,15 +3747,15 @@ class BonusPlacer:
 
 
 	def AddBonuses(self):
-		gc = CyGlobalContext()
-		gameMap = CyMap()
-		gameMap.recalculateAreas()
+		GC = CyGlobalContext()
+		GC.getMap().recalculateAreas()
+
 		self.AssignBonusAreas()
-		numBonuses = gc.getNumBonusInfos()
+		numBonuses = GC.getNumBonusInfos()
 
 		orderSet = {}
 		for i in range(numBonuses):  #Check which placement orders are used, discard -1
-			bonusInfo = gc.getBonusInfo(self.bonusList[i].eBonus)
+			bonusInfo = GC.getBonusInfo(self.bonusList[i].eBonus)
 			porder = bonusInfo.getPlacementOrder()
 			if porder >= 0:
 				orderSet[porder] = 1
@@ -3811,7 +3770,7 @@ class BonusPlacer:
 		for order in porderList:
 			placementList = []
 			for i in range(numBonuses):
-				bonusInfo = gc.getBonusInfo(self.bonusList[i].eBonus)
+				bonusInfo = GC.getBonusInfo(self.bonusList[i].eBonus)
 				if bonusInfo.getPlacementOrder() == order:
 					for n in range(self.bonusList[i].desiredBonusCount):
 						placementList.append(self.bonusList[i].eBonus)
@@ -3835,7 +3794,7 @@ class BonusPlacer:
 		#now report resources that simply could not be placed
 		for i in range(numBonuses):
 			bonus = self.bonusList[i]
-			bonusInfo = gc.getBonusInfo(bonus.eBonus)
+			bonusInfo = GC.getBonusInfo(bonus.eBonus)
 			if bonus.currentBonusCount == 0 and bonus.desiredBonusCount > 0:
 				print "No room at all found for %(bt)s!!!" % {"bt":bonusInfo.getType()}
 			print "Placed %(cb)d, desired %(db)d for %(bt)s" % {"cb":bonus.currentBonusCount, "db":bonus.desiredBonusCount, "bt":bonusInfo.getType()}
@@ -4114,6 +4073,10 @@ class BonusPlacer:
 			if plot.isFlatlands():
 				if not bonusInfo.isFlatlands():
 					return False
+
+		if bonusInfo.isBonusCoastalOnly() and not plot.isCoastal():
+			return False
+
 		if bonusInfo.isNoRiverSide():
 			if plot.isRiverSide():
 				return False
@@ -5134,7 +5097,7 @@ hm = HeightMap()
 cm = ClimateMap()
 sm = SmallMaps()
 rm = RiverMap()
-em = EuropeMap()
+
 ###############################################################################
 #functions that civ is looking for
 ###############################################################################
@@ -5960,19 +5923,19 @@ def createIce():
 				iceChance *= .66
 
 def addBonuses():
-		bp.AddBonuses()
-		return
+	bp.AddBonuses()
 
 def assignStartingPlots():
-		spf.SetStartingPlots()
+	spf.SetStartingPlots()
 
 def beforeInit():
-		print "Initializing Custom Map Options"
-		mc.initialize()
-		mc.initInGameOptions()
+	print "Initializing Custom Map Options"
+	mc.initialize()
+	mc.initInGameOptions()
 
 def afterGeneration():
-		CvMapGeneratorUtil.placeC2CBonuses()
+	import CvMapGeneratorUtil
+	CvMapGeneratorUtil.placeC2CBonuses()
 
 ##mc.initialize()
 ##PRand.seed()

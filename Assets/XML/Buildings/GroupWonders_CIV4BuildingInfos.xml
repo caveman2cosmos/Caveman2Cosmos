@@ -1155,8 +1155,6 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_BONE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<bCenterInCity>1</bCenterInCity>
@@ -1270,8 +1268,6 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_STONE_TOOLS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1298,8 +1294,12 @@
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
-			<FreeBonus>BONUS_WINE_CHAMPAGNE</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_WINE_CHAMPAGNE</FreeBonus>
+					<iNumFreeBonuses>3</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -1445,7 +1445,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -1768,8 +1768,6 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_HIDE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1840,8 +1838,6 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_HIDE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1948,7 +1944,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -2440,7 +2436,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -2650,7 +2646,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -2830,7 +2826,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -3216,7 +3212,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
@@ -3306,8 +3302,12 @@
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
-			<FreeBonus>BONUS_WINE_VINTAGE_RED</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_WINE_VINTAGE_RED</FreeBonus>
+					<iNumFreeBonuses>3</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -3344,8 +3344,12 @@
 				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
-			<FreeBonus>BONUS_WINE_VINTAGE_WHITE</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_WINE_VINTAGE_WHITE</FreeBonus>
+					<iNumFreeBonuses>3</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>

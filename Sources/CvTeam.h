@@ -6,11 +6,12 @@
 #define CIV4_TEAM_H
 
 #include "CvGameObject.h"
+#include "CvProperties.h"
 
 class CvArea;
-class CvProperties;
 
-class CvTeam : bst::noncopyable
+class CvTeam
+	: private bst::noncopyable
 {
 public:
 	CvTeam();
@@ -29,7 +30,7 @@ public:
 	void addTeam(TeamTypes eTeam);
 	void shareItems(TeamTypes eTeam);
 	void shareCounters(TeamTypes eTeam);
-	//Team Project (5)
+
 	void processBuilding(BuildingTypes eBuilding, int iChange, bool bReligiouslyDisabling = false);
 
 	void doTurn();
@@ -41,7 +42,7 @@ public:
 	DllExport bool canDeclareWar(TeamTypes eTeam) const;
 
 	bool canEventuallyDeclareWar(TeamTypes eTeam) const;
-	void declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, bool bCancelPacts = true);
+	void declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan);
 
 	void makePeace(TeamTypes eTeam, bool bBumpUnits = true);
 	bool canContact(TeamTypes eTeam) const;
@@ -73,7 +74,7 @@ public:
 	int getAnyWarPlanCount(bool bIgnoreMinors) const;
 	int getChosenWarCount(bool bIgnoreMinors) const;
 	int getHasMetCivCount(bool bIgnoreMinors) const;
-	bool hasMetAnyCiv(bool bIgnoreMinors) const;
+	bool hasMetAnyCiv(bool bIgnoreMinors = true) const;
 	int getDefensivePactCount(TeamTypes eTeam = NO_TEAM) const;
 	int getVassalCount(TeamTypes eTeam = NO_TEAM) const;
 	bool isAVassal() const;
@@ -109,7 +110,6 @@ public:
 	bool isBonusObsolete(BonusTypes eBonus) const;
 
 	bool isHuman(const bool bCountDisabledHuman = false) const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isMinorCiv() const;
@@ -132,7 +132,7 @@ public:
 	void changeNumMembers(int iChange);
 
 	int getAliveCount() const;
-	int isAlive() const;
+	bool isAlive() const;
 	void changeAliveCount(int iChange);
 
 	int isEverAlive() const;

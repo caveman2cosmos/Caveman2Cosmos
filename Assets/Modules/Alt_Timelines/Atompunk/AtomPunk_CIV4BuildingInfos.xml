@@ -14,8 +14,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<VicinityBonus>BONUS_URANIUM</VicinityBonus>
-			<FreeBonus>BONUS_ATOMPUNK</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ATOMPUNK</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>8070</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -74,7 +78,6 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOOD_ATOM</Type>
@@ -120,42 +123,42 @@
 					<TechType>TECH_SUPERCONDUCTORS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_WIRELESS_ELECTRICITY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>900</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_LASER</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_MAGNETIC_LEVITATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_QUANTUM_TELEPORTATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_CONTROLLED_PLASMA</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -224,7 +227,6 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MID_CLASS_SKYPAD_APARTMENTS</Type>
@@ -304,7 +306,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
-				<iCommerce>-15000</iCommerce>
+				<iCommerce>-100</iCommerce>
 			</CommerceChanges>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -323,7 +325,6 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PUSHBUTTON_AUTOMAT</Type>
@@ -341,7 +342,7 @@
 			</PrereqBonuses>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iMaintenanceModifier>5</iMaintenanceModifier>
+			<iMaintenanceModifier>1</iMaintenanceModifier>
 			<iHealth>2</iHealth>
 			<iHappiness>1</iHappiness>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -654,7 +655,6 @@
 			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SMALL_REACTOR_FACTORY</Type>
@@ -681,7 +681,7 @@
 			</ConstructCondition>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iMaintenanceModifier>10</iMaintenanceModifier>
+			<iMaintenanceModifier>2</iMaintenanceModifier>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -737,29 +737,29 @@
 				<TechCommerceChange>
 					<TechType>TECH_LUNAR_EXPLORATION</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_SPACE_STATIONS</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_ROBOTICS</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_CLONING</TechType>
 					<CommercePercents>
-						<iCommercePercent>500</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -796,7 +796,7 @@
 			</ConstructCondition>
 			<iCost>1345</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iMaintenanceModifier>10</iMaintenanceModifier>
+			<iMaintenanceModifier>2</iMaintenanceModifier>
 			<iHappiness>2</iHappiness>
 			<iHealth>-1</iHealth>
 			<iTradeRoutes>2</iTradeRoutes>

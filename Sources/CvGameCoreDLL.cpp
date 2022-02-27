@@ -4,6 +4,10 @@
 #include "Interface/IServerUtils.h"
 #include <psapi.h>
 
+#ifdef USE_INTERNAL_PROFILER
+static CRITICAL_SECTION cSampleSection;
+#endif
+
 std::string modDir;
 
 // BUG - EXE/DLL Paths - start
@@ -36,7 +40,7 @@ bool runProcess(const std::string& exe, const std::string& workingDir)
 
 BOOL APIENTRY DllMain(HANDLE hModule,
 					  DWORD  ul_reason_for_call,
-					  LPVOID lpReserved)
+					  LPVOID /*lpReserved*/)
 {
 	switch( ul_reason_for_call ) {
 	case DLL_PROCESS_ATTACH:
@@ -45,6 +49,10 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 
 		// The DLL is being loaded into the virtual address space of the current process as a result of the process starting up
 		OutputDebugString("[C2C] DLL_PROCESS_ATTACH\n");
+
+#ifdef USE_INTERNAL_PROFILER
+		InitializeCriticalSectionAndSpinCount(&cSampleSection, 2000);
+#endif
 
 		// set timer precision
 		MMRESULT iTimeSet = timeBeginPeriod(1);		// set timeGetTime and sleep resolution to 1 ms, otherwise it's 10-16ms

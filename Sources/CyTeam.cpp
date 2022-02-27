@@ -168,11 +168,6 @@ bool CyTeam::isHuman() const
 	return m_pTeam->isHuman();
 }
 
-bool CyTeam::isBarbarian() const
-{
-	return m_pTeam->isBarbarian();
-}
-
 bool CyTeam::isNPC() const
 {
 	return m_pTeam->isNPC();
@@ -540,7 +535,7 @@ void CyTeam::changeExtraMoves(int /*DomainTypes*/ eIndex, int iChange)
 bool CyTeam::isHasMet(int /*TeamTypes*/ eIndex) const
 {
 	//Fuyu: Catching Civ4lerts mess-ups
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	if (eIndex < 0 || eIndex >= MAX_TEAMS)
 	{
 #ifdef _DEBUG

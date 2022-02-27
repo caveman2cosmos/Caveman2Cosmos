@@ -179,10 +179,6 @@
 	<ElementType name="bGraphicalOnly" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNational" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bGlobal" content="textOnly" dt:type="boolean"/>
-	<ElementType name="CreatingBuild"/>
-	<ElementType name="CreatingBuilds" content="eltOnly">
-		<element type="CreatingBuild" minOccurs="0" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="TerrainInfo" content="eltOnly">
 		<element type="Type"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE -->
@@ -286,6 +282,7 @@
 	<ElementType name="bAddsFreshWater" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoImprovement" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bNoBonus" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bVisibleAlways" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNukeImmune" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCountsAsPeak" content="textOnly" dt:type="boolean"/>
@@ -342,6 +339,7 @@
 		<element type="bImpassable" minOccurs="0"/>
 		<element type="bNoCity" minOccurs="0"/>
 		<element type="bNoImprovement" minOccurs="0"/>
+		<element type="bNoBonus" minOccurs="0"/>
 		<element type="bVisibleAlways" minOccurs="0"/>
 		<element type="bNukeImmune" minOccurs="0"/>
 		<element type="bCountsAsPeak" minOccurs="0"/>
@@ -627,7 +625,6 @@
 	<ElementType name="bPeakImprovement" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bWaterImprovement" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bGoody" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bPermanent" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iGoodyRange" content="textOnly" dt:type="int"/>
 	<!--Afforess-->
 	<ElementType name="bDepletedMine" content="textOnly" dt:type="boolean"/>
@@ -648,6 +645,11 @@
 	<ElementType name="iDefenseModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iPillageGold" content="textOnly" dt:type="int"/>
 	<ElementType name="bOutsideBorders" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bMilitaryStructure" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bPlacesBonus" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bPlacesFeature" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bPlacesTerrain" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bExtraterresial" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iAdvancedStartCost" content="textOnly" dt:type="int"/>
 	<ElementType name="iAdvancedStartRemoveCost" content="textOnly" dt:type="int"/>
 	<ElementType name="iTilesPerGoody" content="textOnly" dt:type="int"/>
@@ -680,13 +682,11 @@
 	<!-- Super forts C2C adaptation end -->
 	<ElementType name="ImprovementInfo" content="eltOnly">
 		<element type="Type"/>
-		<element type="CreatingBuilds" minOccurs="0"/>
 		<!-- XMLCOPY				02/20/2008			MRGENIE -->
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>
-
 		<element type="iForceInsertLocation" minOccurs="0"/>
 		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
@@ -716,7 +716,6 @@
 		<element type="bPeakImprovement" minOccurs="0"/>
 		<element type="bWaterImprovement" minOccurs="0"/>
 		<element type="bGoody" minOccurs="0"/>
-		<element type="bPermanent" minOccurs="0"/>
 		<element type="iAdvancedStartCost" minOccurs="0"/>
 		<element type="iTilesPerGoody" minOccurs="0"/>
 		<element type="iGoodyRange" minOccurs="0"/>
@@ -727,6 +726,11 @@
 		<element type="iHappiness" minOccurs="0"/>
 		<element type="iPillageGold" minOccurs="0"/>
 		<element type="bOutsideBorders" minOccurs="0"/>
+		<element type="bMilitaryStructure" minOccurs="0"/>
+		<element type="bPlacesBonus" minOccurs="0"/>
+		<element type="bPlacesFeature" minOccurs="0"/>
+		<element type="bPlacesTerrain" minOccurs="0"/>
+		<element type="bExtraterresial" minOccurs="0"/>
 		<element type="TerrainMakesValids" minOccurs="0"/>
 		<element type="FeatureMakesValids" minOccurs="0"/>
 		<element type="BonusTypeStructs" minOccurs="0" maxOccurs="*"/>

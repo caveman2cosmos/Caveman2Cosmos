@@ -13,8 +13,12 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeBonus>BONUS_CYBERPUNK</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CYBERPUNK</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>32730</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -159,7 +163,6 @@
 					<iAmountPerTurn>13</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INSECT_MANIPULATION_LAB</Type>

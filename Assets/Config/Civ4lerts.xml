@@ -77,6 +77,12 @@
 					label="Can Hurry w. Gold"
 					help="When checked, displays an alert once a city can hurry the item it's building with gold."/>
 
+			<option id="CompleteUnit" key="Unit" type="boolean" default="False" get="isCompleteUnitAlert"/>
+			<option id="CompleteBuilding" key="Building" type="boolean" default="False" get="isCompleteBuildingAlert"/>
+			<option id="CompleteProject" key="Project" type="boolean" default="True" get="isCompleteProjectAlert"/>
+			<option id="CompleteSpecial" key="Special" type="boolean" default="True" get="isCompleteSpecialAlert"/>
+			<option id="CompleteBegunOn" key="Begun On" type="boolean" default="True" get="showCompleteBegunOn"/>
+
 			<!-- Trade -->
 			<option id="GoldTrade" key="Gold Trade"
 					type="boolean" default="True" and="Enabled"

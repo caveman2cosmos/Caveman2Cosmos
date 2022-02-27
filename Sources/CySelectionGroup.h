@@ -27,8 +27,6 @@ public:
 	bool isWaiting() const;
 	bool isFull() const;
 	bool hasMoved() const;
-	bool canMoveInto(const CyPlot& kPlot, bool bAttack) const;
-	bool canMoveOrAttackInto(const CyPlot& kPlot, bool bDeclareWar) const;
 	bool canFight() const;
 	bool isInvisible(int /*TeamTypes*/ eTeam) const;
 

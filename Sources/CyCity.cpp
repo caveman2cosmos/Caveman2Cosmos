@@ -60,6 +60,11 @@ void CyCity::updateRevIndexAverage()
 	m_pCity->updateRevIndexAverage();
 }
 
+int CyCity::getRevIndexDistanceMod() const
+{
+	return m_pCity->getRevIndexDistanceMod();
+}
+
 int CyCity::getReinforcementCounter() const
 {
 	return m_pCity->getReinforcementCounter();
@@ -351,11 +356,6 @@ int /*ArtStyleTypes*/ CyCity::getArtStyleType() const
 bool CyCity::hasTrait(int /*TraitTypes*/ iTrait) const
 {
 	return m_pCity->hasTrait((TraitTypes) iTrait);
-}
-
-bool CyCity::isBarbarian() const
-{
-	return m_pCity->isBarbarian();
 }
 
 bool CyCity::isNPC() const
@@ -1004,9 +1004,9 @@ bool CyCity::isNeverLost() const
 	return m_pCity->isNeverLost();
 }
 
-void CyCity::setNeverLost(int iNewValue)
+void CyCity::setNeverLost(bool bNewValue)
 {
-	m_pCity->setNeverLost(iNewValue);
+	m_pCity->setNeverLost(bNewValue);
 }
 
 bool CyCity::isBombarded() const
@@ -1014,9 +1014,9 @@ bool CyCity::isBombarded() const
 	return m_pCity->isBombarded();
 }
 
-void CyCity::setBombarded(int iNewValue)
+void CyCity::setBombarded(bool bNewValue)
 {
-	m_pCity->setBombarded(iNewValue);
+	m_pCity->setBombarded(bNewValue);
 }
 
 bool CyCity::isDrafted() const
@@ -1024,9 +1024,9 @@ bool CyCity::isDrafted() const
 	return m_pCity->isDrafted();
 }
 
-void CyCity::setDrafted(int iNewValue)
+void CyCity::setDrafted(bool bNewValue)
 {
-	m_pCity->setDrafted(iNewValue);
+	m_pCity->setDrafted(bNewValue);
 }
 
 bool CyCity::isAirliftTargeted() const
@@ -1034,9 +1034,9 @@ bool CyCity::isAirliftTargeted() const
 	return m_pCity->isAirliftTargeted();
 }
 
-void CyCity::setAirliftTargeted(int iNewValue)
+void CyCity::setAirliftTargeted(bool bNewValue)
 {
-	m_pCity->setAirliftTargeted(iNewValue);
+	m_pCity->setAirliftTargeted(bNewValue);
 }
 
 bool CyCity::isCitizensAutomated() const
@@ -1056,7 +1056,7 @@ bool CyCity::isProductionAutomated() const
 
 void CyCity::setProductionAutomated(bool bNewValue)
 {
-	m_pCity->setProductionAutomated(bNewValue, false);
+	m_pCity->setProductionAutomated(bNewValue);
 }
 
 bool CyCity::isWallOverride() const

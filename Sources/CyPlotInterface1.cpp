@@ -46,7 +46,6 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("isAdjacentPlayer", &CyPlot::isAdjacentPlayer, "bool (int /*PlayerTypes*/ ePlayer, bool bLandOnly)")
 		.def("calculateCulturalOwner", &CyPlot::calculateCulturalOwner, "int ()")
 		.def("isOwned", &CyPlot::isOwned, "bool ()")
-		.def("isBarbarian", &CyPlot::isBarbarian, "bool ()")
 		.def("isNPC", &CyPlot::isNPC, "bool ()")
 		.def("isHominid", &CyPlot::isHominid, "bool ()")
 		.def("isVisible", &CyPlot::isVisible, "bool (int /*TeamTypes*/ eTeam, bool bDebug)")
@@ -144,8 +143,8 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("setRevealed", &CyPlot::setRevealed, "void (int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly, int /*TeamTypes*/ eFromTeam)")
 
 		.def("getInvisibleVisibilityCount", &CyPlot::getInvisibleVisibilityCount, "int (int (TeamTypes eTeam), int (InvisibleTypes) eInvisible)")
-		.def("isInvisibleVisible", &CyPlot::isInvisibleVisible, "int (int (TeamTypes eTeam), int (InvisibleTypes) eInvisible)")
-		.def("changeInvisibleVisibilityCount", &CyPlot::changeInvisibleVisibilityCount, "int (int (TeamTypes eTeam), int (InvisibleTypes) eInvisible, int iChange, int iIntensity)")
+		.def("isSpotterInSight", &CyPlot::isSpotterInSight, "int (int (TeamTypes eTeam), int (InvisibleTypes) eInvisible)")
+		.def("changeInvisibleVisibilityCount", &CyPlot::changeInvisibleVisibilityCount, "int (int iTeam, int iInvisible, int iChange)")
 
 		.def("units", &CyPlot::units)
 		.def("getNumUnits", &CyPlot::getNumUnits, "int ()")
@@ -159,6 +158,7 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("isInViewport", &CyPlot::isInViewport, "bool ()")
 		.def("cloneToViewport", &CyPlot::cloneToViewport, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
 
+		.def("adjacent", &CyPlot::adjacent)
 		.def("rect", &CyPlot::rect)
 	;
 }

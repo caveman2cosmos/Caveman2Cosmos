@@ -46,11 +46,8 @@ m_iObsoleteTech(NO_TECH),
 m_iPrereqAndTech(NO_TECH),
 m_iNoBonus(NO_BONUS),
 m_iPowerBonus(NO_BONUS),
-m_iFreeBonus(NO_BONUS),
-m_iNumFreeBonuses(0),
 m_iFreeBuilding(NO_BUILDING),
 m_iFreeAreaBuilding(NO_BUILDING),
-m_iFreePromotion(NO_PROMOTION),
 m_iCivicOption(NO_CIVICOPTION),
 m_iAIWeight(0),
 m_iProductionCost(-1),
@@ -201,8 +198,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_iPrereqVicinityBonus(NO_BONUS)
 ,m_iPrereqRawVicinityBonus(NO_BONUS)
 ,m_iPillageGoldModifier(0)
-,m_iFreePromotion_2(NO_PROMOTION)
-,m_iFreePromotion_3(NO_PROMOTION)
 ,m_iWorldTradeRoutes(0)
 ,m_iLineOfSight(0)
 ,m_iInflationModifier(0)
@@ -314,6 +309,8 @@ m_ppaiBonusYieldModifier(NULL)
 //------------------------------------------------------------------------------------------------------
 CvBuildingInfo::~CvBuildingInfo()
 {
+	CvInfoUtil(this).uninitDataMembers();
+
 	SAFE_DELETE_ARRAY(m_piVictoryThreshold);
 	SAFE_DELETE_ARRAY(m_piRiverPlotYieldChange);
 	SAFE_DELETE_ARRAY(m_piGlobalSeaPlotYieldChange);
@@ -410,8 +407,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	m_aGlobalBuildingProductionModifier.removeDelayedResolution();
 	m_aPrereqNumOfBuilding.removeDelayedResolution();
 	m_aGlobalBuildingCostModifier.removeDelayedResolution();
-
-	CvInfoUtil(this).uninitDataMembers();
 }
 
 bool CvBuildingInfo::isNoLimit() const
@@ -421,33 +416,13 @@ bool CvBuildingInfo::isNoLimit() const
 
 int CvBuildingInfo::getVictoryThreshold(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), i);
 	return m_piVictoryThreshold ? m_piVictoryThreshold[i] : 0;
-}
-
-BonusTypes CvBuildingInfo::getExtraFreeBonus(int i) const
-{
-	FASSERT_BOUNDS(0, (int)m_aExtraFreeBonuses.size(), i)
-	return m_aExtraFreeBonuses[i].first;
-}
-
-int CvBuildingInfo::getExtraFreeBonusNum(int i) const
-{
-	FASSERT_BOUNDS(0, (int)m_aExtraFreeBonuses.size(), i)
-	return m_aExtraFreeBonuses[i].second;
-}
-
-bool CvBuildingInfo::hasExtraFreeBonus(BonusTypes eBonus) const
-{
-	for(unsigned int i=0; i<m_aExtraFreeBonuses.size(); i++)
-		if (m_aExtraFreeBonuses[i].first == eBonus)
-			return true;
-	return false;
 }
 
 int CvBuildingInfo::getYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piYieldChange ? m_piYieldChange[i] : 0;
 }
 
@@ -458,7 +433,7 @@ int* CvBuildingInfo::getYieldChangeArray() const
 
 int CvBuildingInfo::getYieldPerPopChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piYieldPerPopChange ? m_piYieldPerPopChange[i] : 0;
 }
 
@@ -469,7 +444,7 @@ int* CvBuildingInfo::getYieldPerPopChangeArray() const
 
 int CvBuildingInfo::getYieldModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piYieldModifier ? m_piYieldModifier[i] : 0;
 }
 
@@ -480,7 +455,7 @@ int* CvBuildingInfo::getYieldModifierArray() const
 
 int CvBuildingInfo::getPowerYieldModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piPowerYieldModifier ? m_piPowerYieldModifier[i] : 0;
 }
 
@@ -491,7 +466,7 @@ int* CvBuildingInfo::getPowerYieldModifierArray() const
 
 int CvBuildingInfo::getAreaYieldModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piAreaYieldModifier ? m_piAreaYieldModifier[i] : 0;
 }
 
@@ -502,7 +477,7 @@ int* CvBuildingInfo::getAreaYieldModifierArray() const
 
 int CvBuildingInfo::getGlobalYieldModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piGlobalYieldModifier ? m_piGlobalYieldModifier[i] : 0;
 }
 
@@ -513,7 +488,7 @@ int* CvBuildingInfo::getGlobalYieldModifierArray() const
 
 int CvBuildingInfo::getRiverPlotYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piRiverPlotYieldChange ? m_piRiverPlotYieldChange[i] : 0;
 }
 
@@ -524,7 +499,7 @@ int* CvBuildingInfo::getRiverPlotYieldChangeArray() const
 
 int CvBuildingInfo::getGlobalSeaPlotYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
 	return m_piGlobalSeaPlotYieldChange ? m_piGlobalSeaPlotYieldChange[i] : 0;
 }
 
@@ -535,7 +510,7 @@ int* CvBuildingInfo::getGlobalSeaPlotYieldChangeArray() const
 
 int CvBuildingInfo::getCommerceChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piCommerceChange ? m_piCommerceChange[i] : 0;
 }
 
@@ -546,7 +521,7 @@ int* CvBuildingInfo::getCommerceChangeArray() const
 
 int CvBuildingInfo::getCommercePerPopChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piCommercePerPopChange ? m_piCommercePerPopChange[i] : 0;
 }
 
@@ -557,13 +532,13 @@ int* CvBuildingInfo::getCommercePerPopChangeArray() const
 
 int CvBuildingInfo::getCommerceChangeDoubleTime(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piCommerceChangeDoubleTime ? m_piCommerceChangeDoubleTime[i] : 0;
 }
 
 int CvBuildingInfo::getCommerceModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piCommerceModifier ? m_piCommerceModifier[i] : 0;
 }
 
@@ -574,7 +549,7 @@ int* CvBuildingInfo::getCommerceModifierArray() const
 
 int CvBuildingInfo::getGlobalCommerceModifier(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piGlobalCommerceModifier ? m_piGlobalCommerceModifier[i] : 0;
 }
 
@@ -585,7 +560,7 @@ int* CvBuildingInfo::getGlobalCommerceModifierArray() const
 
 int CvBuildingInfo::getSpecialistExtraCommerce(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piSpecialistExtraCommerce ? m_piSpecialistExtraCommerce[i] : 0;
 }
 
@@ -596,7 +571,7 @@ int* CvBuildingInfo::getSpecialistExtraCommerceArray() const
 
 int CvBuildingInfo::getStateReligionCommerce(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_piStateReligionCommerce ? m_piStateReligionCommerce[i] : 0;
 }
 
@@ -607,7 +582,7 @@ int* CvBuildingInfo::getStateReligionCommerceArray() const
 
 int CvBuildingInfo::getCommerceHappiness(int i) const
 {
-	FASSERT_BOUNDS(NO_COMMERCE, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(NO_COMMERCE, NUM_COMMERCE_TYPES, i);
 
 	if (i == NO_COMMERCE)
 	{
@@ -621,7 +596,7 @@ int CvBuildingInfo::getCommerceHappiness(int i) const
 
 int CvBuildingInfo::getSpecialistCount(int i) const
 {
-	FASSERT_BOUNDS(NO_SPECIALIST, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(NO_SPECIALIST, GC.getNumSpecialistInfos(), i);
 
 	if (i == NO_SPECIALIST)
 	{
@@ -632,7 +607,7 @@ int CvBuildingInfo::getSpecialistCount(int i) const
 
 int CvBuildingInfo::getFreeSpecialistCount(int i) const
 {
-	FASSERT_BOUNDS(NO_SPECIALIST, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(NO_SPECIALIST, GC.getNumSpecialistInfos(), i);
 
 	if (i == NO_SPECIALIST)
 	{
@@ -643,13 +618,13 @@ int CvBuildingInfo::getFreeSpecialistCount(int i) const
 
 int CvBuildingInfo::getBonusProductionModifier(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
 	return m_piBonusProductionModifier ? m_piBonusProductionModifier[i] : 0;
 }
 
 int CvBuildingInfo::getDomainFreeExperience(int i) const
 {
-	FASSERT_BOUNDS(NO_DOMAIN, NUM_DOMAIN_TYPES, i)
+	FASSERT_BOUNDS(NO_DOMAIN, NUM_DOMAIN_TYPES, i);
 
 	if (i == NO_DOMAIN)
 	{
@@ -660,7 +635,7 @@ int CvBuildingInfo::getDomainFreeExperience(int i) const
 
 int CvBuildingInfo::getDomainProductionModifier(int i) const
 {
-	FASSERT_BOUNDS(NO_DOMAIN, NUM_DOMAIN_TYPES, i)
+	FASSERT_BOUNDS(NO_DOMAIN, NUM_DOMAIN_TYPES, i);
 
 	if (i == NO_DOMAIN)
 	{
@@ -676,13 +651,13 @@ const std::vector<TechTypes>& CvBuildingInfo::getPrereqAndTechs() const
 
 int CvBuildingInfo::getFlavorValue(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i)
+	FASSERT_BOUNDS(0, GC.getNumFlavorTypes(), i);
 	return m_piFlavorValue ? m_piFlavorValue[i] : 0;
 }
 
 bool CvBuildingInfo::isCommerceFlexible(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, i);
 	return m_pbCommerceFlexible ? m_pbCommerceFlexible[i] : false;
 }
 
@@ -698,7 +673,7 @@ short CvBuildingInfo::getNumPrereqInCityBuildings() const
 
 bool CvBuildingInfo::isPrereqInCityBuilding(const int i) const
 {
-	return algo::contains(m_aiPrereqInCityBuildings, i);
+	return algo::any_of_equal(m_aiPrereqInCityBuildings, i);
 }
 
 
@@ -715,7 +690,7 @@ short CvBuildingInfo::getNumPrereqNotInCityBuildings() const
 
 int CvBuildingInfo::getSpecialistYieldChange(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
 	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
 
 	return (m_ppaiSpecialistYieldChange && m_ppaiSpecialistYieldChange[i]) ? m_ppaiSpecialistYieldChange[i][j] : 0;
@@ -723,94 +698,96 @@ int CvBuildingInfo::getSpecialistYieldChange(int i, int j) const
 
 int* CvBuildingInfo::getSpecialistYieldChangeArray(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
 	return m_ppaiSpecialistYieldChange[i];
 }
 
 int CvBuildingInfo::getSpecialistCommerceChange(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j);
 
 	return (m_ppaiSpecialistCommerceChange && m_ppaiSpecialistCommerceChange[i]) ? m_ppaiSpecialistCommerceChange[i][j] : 0;
 }
 
 int* CvBuildingInfo::getSpecialistCommerceChangeArray(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
 	return m_ppaiSpecialistCommerceChange[i];
 }
 
 //Team Project (1)
 int CvBuildingInfo::getLocalSpecialistYieldChange(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
 
 	return (m_ppaiLocalSpecialistYieldChange && m_ppaiLocalSpecialistYieldChange[i]) ? m_ppaiLocalSpecialistYieldChange[i][j] : 0;
 }
 
 int* CvBuildingInfo::getLocalSpecialistYieldChangeArray(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
 	return m_ppaiLocalSpecialistYieldChange[i];
 }
 
 int CvBuildingInfo::getLocalSpecialistCommerceChange(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j);
 
 	return (m_ppaiLocalSpecialistCommerceChange && m_ppaiLocalSpecialistCommerceChange[i]) ? m_ppaiLocalSpecialistCommerceChange[i][j] : 0;
 }
 
 int* CvBuildingInfo::getLocalSpecialistCommerceChangeArray(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), i);
 	return m_ppaiLocalSpecialistCommerceChange[i];
 }
 
 int CvBuildingInfo::getBonusYieldModifier(int i, int j) const
 {
-	FASSERT_BOUNDS(NO_BONUS, GC.getNumBonusInfos(), i)
+	FASSERT_BOUNDS(NO_BONUS, GC.getNumBonusInfos(), i);
 
 	if (i == NO_BONUS)
 	{
 		return m_ppaiBonusYieldModifier ? 1 : 0;
 	}
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
 	return (m_ppaiBonusYieldModifier && m_ppaiBonusYieldModifier[i]) ? m_ppaiBonusYieldModifier[i][j] : 0;
 }
 
 int* CvBuildingInfo::getBonusYieldModifierArray(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
 	return m_ppaiBonusYieldModifier == NULL ? NULL : m_ppaiBonusYieldModifier[i];
 }
 
-int CvBuildingInfo::getGlobalBuildingCommerceChange(int iBuilding, int iCommerce) const
+int CvBuildingInfo::getGlobalBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCommerce) const
 {
-	foreach_(const BuildingCommerceChange& pChange, m_aGlobalBuildingCommerceChanges)
+	foreach_(const BuildingCommerce& pair, m_aGlobalBuildingCommerceChanges)
 	{
-		if (pChange.eBuilding == (BuildingTypes)iBuilding && pChange.eCommerce == (CommerceTypes)iCommerce)
+		if (pair.first == eBuilding)
 		{
-			return pChange.iChange;
+			return pair.second[eCommerce];
 		}
 	}
-
 	return 0;
-}
-
-const std::vector<BuildingCommerceChange>& CvBuildingInfo::getGlobalBuildingCommerceChanges() const
-{
-	return m_aGlobalBuildingCommerceChanges;
 }
 
 const python::list CvBuildingInfo::cyGetGlobalBuildingCommerceChanges() const
 {
 	python::list pyList = python::list();
-	foreach_(const BuildingCommerceChange& pChange, m_aGlobalBuildingCommerceChanges)
-		pyList.append(pChange);
+
+	foreach_(const BuildingCommerce& pair, m_aGlobalBuildingCommerceChanges)
+	{
+		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
+		{
+			const int iValue = pair.second[i];
+			if (iValue != 0)
+				pyList.append(BuildingCommerceChange(pair.first, (CommerceTypes)i, iValue));
+		}
+	}
 	return pyList;
 }
 
@@ -850,7 +827,7 @@ const python::list CvBuildingInfo::cyGetTechCommerceChanges100() const
 {
 	python::list pyList = python::list();
 
-	foreach_(const TechArray& pChange, m_techCommerceChanges)
+	foreach_(const TechCommerceArray& pChange, m_techCommerceChanges)
 	{
 		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 		{
@@ -866,7 +843,7 @@ const python::list CvBuildingInfo::cyGetTechCommerceModifiers() const
 {
 	python::list pyList = python::list();
 
-	foreach_(const TechArray& pChange, m_techCommerceModifiers)
+	foreach_(const TechCommerceArray& pChange, m_techCommerceModifiers)
 	{
 		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
 		{
@@ -920,13 +897,8 @@ const python::list CvBuildingInfo::cyGetFreePromoTypes() const
 	return pyList;
 }
 
-const TCHAR* CvBuildingInfo::getButton() const
+const char* CvBuildingInfo::getButton() const
 {
-	const CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)	// MRGENIE: Catch non-existing tag
-	{
-		return NULL;
-	}
 	const CvArtInfoBuilding* pBuildingArtInfo = getArtInfo();
 	return pBuildingArtInfo ? pBuildingArtInfo->getButton() : NULL;
 }
@@ -938,7 +910,7 @@ const CvArtInfoBuilding* CvBuildingInfo::getArtInfo() const
 
 const CvArtInfoMovie* CvBuildingInfo::getMovieInfo() const
 {
-	const TCHAR* pcTag = getMovieDefineTag();
+	const char* pcTag = getMovieDefineTag();
 	if (NULL != pcTag && 0 != _tcscmp(pcTag, "") && 0 != _tcscmp(pcTag, "NONE"))
 	{
 		return ARTFILEMGR.getMovieArtInfo(pcTag);
@@ -949,7 +921,7 @@ const CvArtInfoMovie* CvBuildingInfo::getMovieInfo() const
 	}
 }
 
-const TCHAR* CvBuildingInfo::getMovie() const
+const char* CvBuildingInfo::getMovie() const
 {
 	const CvArtInfoMovie* pArt = getMovieInfo();
 	return pArt ? pArt->getPath() : NULL;
@@ -967,13 +939,13 @@ int CvBuildingInfo::getNoEntryDefenseLevel() const
 
 bool CvBuildingInfo::isPrereqOrCivics(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i);
 	return m_pbPrereqOrCivics ? m_pbPrereqOrCivics[i] : false;
 }
 
 bool CvBuildingInfo::isPrereqAndCivics(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumCivicInfos(), i);
 	return m_pbPrereqAndCivics ? m_pbPrereqAndCivics[i] : false;
 }
 
@@ -987,99 +959,99 @@ int CvBuildingInfo::isPrereqAndCivicsValuesVectorElement(int i) const		{return m
 
 bool CvBuildingInfo::isPrereqOrTerrain(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i);
 	return m_pbPrereqOrTerrain ? m_pbPrereqOrTerrain[i] : false;
 }
 
 bool CvBuildingInfo::isPrereqAndTerrain(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i);
 	return m_pbPrereqAndTerrain ? m_pbPrereqAndTerrain[i] : false;
 }
 
 bool CvBuildingInfo::isPrereqOrFeature(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
 	return m_pbPrereqOrFeature ? m_pbPrereqOrFeature[i] : false;
 }
 
 int CvBuildingInfo::getBonusDefenseChanges(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
 	return m_piBonusDefenseChanges ? m_piBonusDefenseChanges[i] : 0;
 }
 
 int CvBuildingInfo::getBonusCommerceModifier(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j);
 	return (m_ppaiBonusCommerceModifier && m_ppaiBonusCommerceModifier[i]) ? m_ppaiBonusCommerceModifier[i][j] : 0;
 }
 
 int* CvBuildingInfo::getBonusCommerceModifierArray(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
 	return m_ppaiBonusCommerceModifier[i];
 }
 
 int CvBuildingInfo::getBonusYieldChanges(int i, int j) const
 {
-	FASSERT_BOUNDS(NO_BONUS, GC.getNumBonusInfos(), i)
+	FASSERT_BOUNDS(NO_BONUS, GC.getNumBonusInfos(), i);
 
 	if (i == NO_BONUS)
 	{
 		return (m_ppaiBonusYieldChanges ? 1 : 0);
 	}
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
 	return (m_ppaiBonusYieldChanges && m_ppaiBonusYieldChanges[i]) ? m_ppaiBonusYieldChanges[i][j] : 0;
 }
 
 int* CvBuildingInfo::getBonusYieldChangesArray(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
 	return m_ppaiBonusYieldChanges[i];
 }
 
 int CvBuildingInfo::getBonusCommercePercentChanges(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, j);
 	return (m_ppaiBonusCommercePercentChanges && m_ppaiBonusCommercePercentChanges[i]) ? m_ppaiBonusCommercePercentChanges[i][j] : 0;
 }
 
 int* CvBuildingInfo::getBonusCommercePercentChangesArray(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
 	return m_ppaiBonusCommercePercentChanges[i];
 }
 
 int CvBuildingInfo::getVicinityBonusYieldChanges(int i, int j) const
 {
-	FASSERT_BOUNDS(NO_BONUS, GC.getNumBonusInfos(), i)
+	FASSERT_BOUNDS(NO_BONUS, GC.getNumBonusInfos(), i);
 
 	if (i == NO_BONUS)
 	{
 		return m_ppaiVicinityBonusYieldChanges ? 1 : 0;
 	}
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
 	return (m_ppaiVicinityBonusYieldChanges && m_ppaiVicinityBonusYieldChanges[i]) ? m_ppaiVicinityBonusYieldChanges[i][j] : 0;
 }
 
 int* CvBuildingInfo::getVicinityBonusYieldChangesArray(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
 	return m_ppaiVicinityBonusYieldChanges[i];
 }
 
 int CvBuildingInfo::getTechSpecialistChange(int i, int j) const
 {
-	FASSERT_BOUNDS(NO_TECH, GC.getNumTechInfos(), i)
+	FASSERT_BOUNDS(NO_TECH, GC.getNumTechInfos(), i);
 
 	if (i == NO_TECH)
 	{
 		return (m_ppaiTechSpecialistChange ? 1 : 0);
 	}
-	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), j)
+	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), j);
 	return (m_ppaiTechSpecialistChange && m_ppaiTechSpecialistChange[i]) ? m_ppaiTechSpecialistChange[i][j] : 0;
 }
 
@@ -1091,8 +1063,8 @@ int* CvBuildingInfo::getTechSpecialistChangeArray(int i) const
 
 int CvBuildingInfo::getImprovementYieldChanges(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i)
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+	FASSERT_BOUNDS(0, GC.getNumImprovementInfos(), i);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
 	return (m_ppiImprovementYieldChanges && m_ppiImprovementYieldChanges[i]) ? m_ppiImprovementYieldChanges[i][j] : 0;
 }
 
@@ -1267,7 +1239,7 @@ int CvBuildingInfo::getNumHealUnitCombatTypes() const
 
 const HealUnitCombat& CvBuildingInfo::getHealUnitCombatType(int iUnitCombat) const
 {
-	FASSERT_BOUNDS(0, getNumHealUnitCombatTypes(), iUnitCombat)
+	FASSERT_BOUNDS(0, getNumHealUnitCombatTypes(), iUnitCombat);
 	return m_aHealUnitCombatTypes[iUnitCombat];
 }
 
@@ -1315,7 +1287,7 @@ int CvBuildingInfo::getNumUnitCombatRetrainTypes() const
 bool CvBuildingInfo::isUnitCombatRetrainType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiUnitCombatRetrainTypes, i);
+	return algo::any_of_equal(m_aiUnitCombatRetrainTypes, i);
 }
 
 int CvBuildingInfo::getMayDamageAttackingUnitCombatType(int i) const
@@ -1331,7 +1303,7 @@ int CvBuildingInfo::getNumMayDamageAttackingUnitCombatTypes() const
 bool CvBuildingInfo::isMayDamageAttackingUnitCombatType(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), i);
-	return algo::contains(m_aiMayDamageAttackingUnitCombatTypes, i);
+	return algo::any_of_equal(m_aiMayDamageAttackingUnitCombatTypes, i);
 }
 
 int CvBuildingInfo::getNumUnitCombatRepelModifiers() const
@@ -1483,7 +1455,7 @@ int CvBuildingInfo::getTechHealth(TechTypes eTech) const
 
 bool CvBuildingInfo::isHurry(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumHurryInfos(), i)
+	FASSERT_BOUNDS(0, GC.getNumHurryInfos(), i);
 	return m_pabHurry ? m_pabHurry[i] : false;
 }
 //TB Combat Mods (Buildings) end
@@ -1500,24 +1472,6 @@ bool CvBuildingInfo::EnablesOtherBuildings() const
 	return m_bEnablesOtherBuildings;
 }
 
-bool CvBuildingInfo::isFreeBonusOfBuilding(BonusTypes eBonus) const
-{
-	if ( getFreeBonus() == eBonus )
-	{
-		return true;
-	}
-
-	for( int iJ = 0; iJ < getNumExtraFreeBonuses(); iJ++ )
-	{
-		if ( getExtraFreeBonus(iJ) == eBonus )
-		{
-			return true;
-		}
-	}
-
-	return false;
-}
-
 
 namespace CvBuildingInternal
 {
@@ -1530,14 +1484,9 @@ namespace CvBuildingInternal
 		query.id = eBuilding;
 		queries.push_back(query);
 		query.GOM = GOM_BONUS;
-		query.id = kBuilding.getFreeBonus();
-		if (query.id != NO_BONUS)
+		foreach_(const BonusModifier& kFreeBonus, kBuilding.getFreeBonuses())
 		{
-			queries.push_back(query);
-		}
-		for (int iJ = 0; iJ < kBuilding.getNumExtraFreeBonuses(); iJ++)
-		{
-			query.id = kBuilding.getExtraFreeBonus(iJ);
+			query.id = kFreeBonus.first;
 			queries.push_back(query);
 		}
 
@@ -1550,14 +1499,12 @@ namespace CvBuildingInternal
 			}
 		}
 
-		const BonusTypes eFreeBonus = (BonusTypes)kBuilding.getFreeBonus();
-
-		if (eFreeBonus != NO_BONUS)
+		foreach_(const BonusTypes eFreeBonus, kBuilding.getFreeBonuses() | map_keys)
 		{
 			foreach_(const CvBuildingInfo* loopBuilding, GC.getBuildingInfos())
 			{
 				if (loopBuilding->getPrereqAndBonus() == eFreeBonus
-				|| algo::contains(loopBuilding->getPrereqOrBonuses(), eFreeBonus))
+				|| algo::any_of_equal(loopBuilding->getPrereqOrBonuses(), eFreeBonus))
 				{
 					return true;
 				}
@@ -1575,14 +1522,9 @@ namespace CvBuildingInternal
 		query.id = eBuilding;
 		queries.push_back(query);
 		query.GOM = GOM_BONUS;
-		query.id = kBuilding.getFreeBonus();
-		if (query.id != NO_BONUS)
+		foreach_(const BonusModifier& kFreeBonus, kBuilding.getFreeBonuses())
 		{
-			queries.push_back(query);
-		}
-		for (int iJ = 0; iJ < kBuilding.getNumExtraFreeBonuses(); iJ++)
-		{
-			query.id = kBuilding.getExtraFreeBonus(iJ);
+			query.id = kFreeBonus.first;
 			queries.push_back(query);
 		}
 
@@ -1609,14 +1551,14 @@ namespace CvBuildingInternal
 				}
 			}
 
-			if (kUnit.getPrereqAndBonus() != NO_BONUS && kBuilding.isFreeBonusOfBuilding((BonusTypes)kUnit.getPrereqAndBonus()))
+			if (kBuilding.getFreeBonuses().hasValue((BonusTypes)kUnit.getPrereqAndBonus()))
 			{
 				return true;
 			}
 
-			foreach_(const BonusTypes eXtraFreeBonus, kUnit.getPrereqOrBonuses())
+			foreach_(const BonusTypes eBonus, kUnit.getPrereqOrBonuses())
 			{
-				if (kBuilding.isFreeBonusOfBuilding(eXtraFreeBonus))
+				if (kBuilding.getFreeBonuses().hasValue(eBonus))
 				{
 					return true;
 				}
@@ -1627,15 +1569,21 @@ namespace CvBuildingInternal
 }
 
 
-void CvBuildingInfo::doPostLoadCaching(BuildingTypes eThis)
+void CvBuildingInfo::doPostLoadCaching(uint32_t eThis)
 {
-	m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*this, eThis);
-	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, eThis);
-}
+	m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*this, (BuildingTypes)eThis);
+	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, (BuildingTypes)eThis);
 
+	if (getHolyCity() != NO_RELIGION)
+	{
+		GC.getReligionInfo((ReligionTypes)getReligionType()).addShrineBuilding((BuildingTypes)eThis);
+	}
+}
 
 void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 {
+	CvInfoUtil(this).checkSum(iSum);
+
 	CheckSum(iSum, IBuildingInfo_isNoLimit(m_hContext));
 	CheckSum(iSum, m_iVictoryPrereq);
 	CheckSum(iSum, m_iFreeStartEra);
@@ -1643,11 +1591,8 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iPrereqAndTech);
 	CheckSum(iSum, m_iNoBonus);
 	CheckSum(iSum, m_iPowerBonus);
-	CheckSum(iSum, m_iFreeBonus);
-	CheckSum(iSum, m_iNumFreeBonuses);
 	CheckSum(iSum, m_iFreeBuilding);
 	CheckSum(iSum, m_iFreeAreaBuilding);
-	CheckSum(iSum, m_iFreePromotion);
 	CheckSum(iSum, m_iCivicOption);
 	CheckSum(iSum, m_iAIWeight);
 	CheckSum(iSum, m_iProductionCost);
@@ -1837,8 +1782,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iPrereqVicinityBonus);
 	CheckSum(iSum, m_iPrereqRawVicinityBonus);
 	CheckSum(iSum, m_iPillageGoldModifier);
-	CheckSum(iSum, m_iFreePromotion_2);
-	CheckSum(iSum, m_iFreePromotion_3);
 	CheckSum(iSum, m_iWorldTradeRoutes);
 	CheckSum(iSum, m_iLineOfSight);
 	CheckSum(iSum, m_iInflationModifier);
@@ -1964,15 +1907,14 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iMaxPopAllowed);
 
 	//Structs
-	int iNumElements = m_aFreePromoTypes.size();
-	for (int i = 0; i < iNumElements; ++i)
+	foreach_(const FreePromoTypes& freePromotion, m_aFreePromoTypes)
 	{
-		CheckSum(iSum, m_aFreePromoTypes[i].ePromotion);
-		if (m_aFreePromoTypes[i].m_pExprFreePromotionCondition)
-			m_aFreePromoTypes[i].m_pExprFreePromotionCondition->getCheckSum(iSum);
+		CheckSum(iSum, freePromotion.ePromotion);
+		if (freePromotion.m_pExprFreePromotionCondition)
+			freePromotion.m_pExprFreePromotionCondition->getCheckSum(iSum);
 	}
 
-	iNumElements = m_aHealUnitCombatTypes.size();
+	int iNumElements = m_aHealUnitCombatTypes.size();
 	for (int i = 0; i < iNumElements; ++i)
 	{
 		CheckSum(iSum, m_aHealUnitCombatTypes[i].eUnitCombat);
@@ -2011,7 +1953,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aAfflictionOutbreakLevelChanges);
 	CheckSumC(iSum, m_aTechOutbreakLevelChanges);
 	CheckSumC(iSum, m_aiFreeTraitTypes);
-	CheckSumC(iSum, m_aExtraFreeBonuses);
+	CheckSumC(iSum, m_freeBonuses);
 	CheckSumC(iSum, m_aePrereqOrRawVicinityBonuses);
 	CheckSumC(iSum, m_aePrereqOrBonuses);
 	CheckSumC(iSum, m_aiPrereqInCityBuildings);
@@ -2027,13 +1969,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	//	m_pExprFreePromotionCondition->getCheckSum(iSum);
 	//TB Combat Mods (Buildings) end
 
-	foreach_(const BuildingCommerceChange& it, m_aGlobalBuildingCommerceChanges)
-	{
-		CheckSum(iSum, it.eBuilding);
-		CheckSum(iSum, it.eCommerce);
-		CheckSum(iSum, it.iChange);
-	}
-
 	CheckSum(iSum, m_iMaxGlobalInstances);
 	CheckSum(iSum, m_iMaxTeamInstances);
 	CheckSum(iSum, m_iMaxPlayerInstances);
@@ -2046,8 +1981,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_techCommerceModifiers);
 	CheckSumC(iSum, m_aTerrainYieldChanges);
 	CheckSumC(iSum, m_aPlotYieldChanges);
-
-	CvInfoUtil(const_cast<CvBuildingInfo*>(this)).checkSum(iSum);
 }
 
 void CvBuildingInfo::getDataMembers(CvInfoUtil& util)
@@ -2060,7 +1993,8 @@ void CvBuildingInfo::getDataMembers(CvInfoUtil& util)
 		.add(m_religionChange, L"ReligionChanges")
 		.add(m_prereqOrImprovement, L"PrereqOrImprovement")
 		.add(m_improvementFreeSpecialists, L"ImprovementFreeSpecialists")
-		//.add(m_aePrereqOrBonuses, L"PrereqBonuses")
+		.add(m_freeBonuses, L"ExtraFreeBonuses")
+		.add(m_aGlobalBuildingCommerceChanges, L"GlobalBuildingExtraCommerces", L"BuildingType", L"CommerceChanges")
 	;
 }
 
@@ -2075,6 +2009,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	{
 		return false;
 	}
+
+	CvInfoUtil(this).readXml(pXML);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"SpecialBuildingType");
 	m_eSpecialBuilding = static_cast<SpecialBuildingTypes>(pXML->GetInfoClass(szTextVal));
@@ -2147,34 +2083,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PowerBonus");
 	m_iPowerBonus = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeBonus");
-	m_iFreeBonus = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(&m_iNumFreeBonuses, L"iNumFreeBonuses");
-
-	if(pXML->TryMoveToXmlFirstChild(L"ExtraFreeBonuses"))
-	{
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"ExtraFreeBonus"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"FreeBonus");
-					BonusTypes eBonus = (BonusTypes) pXML->GetInfoClass(szTextVal);
-					int iNum;
-					pXML->GetChildXmlValByName(&iNum, L"iNumFreeBonuses");
-					m_aExtraFreeBonuses.push_back(std::pair<BonusTypes,int>(eBonus, iNum));
-				} while(pXML->TryMoveToXmlNextSibling());
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreePromotion");
-	m_iFreePromotion = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"CivicOption");
 	m_iCivicOption = pXML->GetInfoClass(szTextVal);
@@ -2700,7 +2608,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	pXML->SetVariableListTagPair(&m_piFlavorValue, L"Flavors", GC.getFlavorTypes(), GC.getNumFlavorTypes());
+	pXML->SetVariableListTagPair(&m_piFlavorValue, L"Flavors", GC.getNumFlavorTypes());
 
 	//pXML->GetOptionalChildXmlValByName(&m_iRevIdxLocal, L"iRevolutionIndexModifier");
 	pXML->GetOptionalChildXmlValByName(&m_bApplyFreePromotionOnMove, L"bApplyFreePromotionOnMove");
@@ -2732,12 +2640,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqCultureLevel");
 	m_iPrereqCultureLevel = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreePromotion_2");
-	m_iFreePromotion_2 = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreePromotion_3");
-	m_iFreePromotion_3 = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"VicinityBonus");
 	m_iPrereqVicinityBonus = pXML->GetInfoClass(szTextVal);
@@ -3155,6 +3057,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"PromotionType");
 					m_aFreePromoTypes[i].ePromotion = (PromotionTypes)pXML->GetInfoClass(szTextVal);
+					FAssert(m_aFreePromoTypes[i].ePromotion > -1);
 					if (pXML->TryMoveToXmlFirstChild(L"FreePromotionCondition"))
 					{
 						m_aFreePromoTypes[i].m_pExprFreePromotionCondition = BoolExpr::read(pXML);
@@ -3311,62 +3214,12 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aPrereqNumOfBuilding.readWithDelayedResolution(pXML, L"PrereqAmountBuildings");
 	m_aGlobalBuildingCostModifier.readWithDelayedResolution(pXML, L"GlobalBuildingCostModifiers");
 
-	m_techYieldChanges.readPairedArrays(pXML, L"TechYieldChanges", L"PrereqTech", L"TechYield", NUM_YIELD_TYPES);
-	m_techYieldModifiers.readPairedArrays(pXML, L"TechYieldModifiers", L"PrereqTech", L"TechYield", NUM_YIELD_TYPES);
-	m_techCommerceChanges.readPairedArrays(pXML, L"TechCommerceChanges", L"TechType", L"CommercePercents", NUM_COMMERCE_TYPES);
-	m_techCommerceModifiers.readPairedArrays(pXML, L"TechCommerceModifiers", L"PrereqTech", L"TechCommerce", NUM_COMMERCE_TYPES);
-	m_aTerrainYieldChanges.readPairedArrays(pXML, L"TerrainYieldChanges", L"TerrainType", L"YieldChanges", NUM_YIELD_TYPES);
-	m_aPlotYieldChanges.readPairedArrays(pXML, L"PlotYieldChanges", L"PlotType", L"Yields", NUM_YIELD_TYPES);
-
-	CvInfoUtil(this).readXml(pXML);
-
-	return true;
-}
-
-bool CvBuildingInfo::readPass2(CvXMLLoadUtility* pXML)
-{
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-
-	CvString szTextVal;
-
-	m_aGlobalBuildingCommerceChanges.clear();
-	if (pXML->TryMoveToXmlFirstChild(L"GlobalBuildingExtraCommerces"))
-	{
-		const int iNumChildren = pXML->GetXmlChildrenNumber();
-
-		if (0 < iNumChildren)
-		{
-			if (pXML->TryMoveToXmlFirstChild())
-			{
-				for (int j = 0; j < iNumChildren; ++j)
-				{
-					if (pXML->GetChildXmlVal(szTextVal))
-					{
-						BuildingCommerceChange kChange;
-						kChange.eBuilding = (BuildingTypes)pXML->GetInfoClass(szTextVal);
-						pXML->GetNextXmlVal(szTextVal);
-						kChange.eCommerce = (CommerceTypes)pXML->GetInfoClass(szTextVal);
-						pXML->GetNextXmlVal(&kChange.iChange);
-						m_aGlobalBuildingCommerceChanges.push_back(kChange);
-
-						pXML->MoveToXmlParent();
-					}
-
-					if (!pXML->TryMoveToXmlNextSibling())
-					{
-						break;
-					}
-				}
-
-				pXML->MoveToXmlParent();
-			}
-		}
-
-		pXML->MoveToXmlParent();
-	}
+	m_techYieldChanges.readPairedArrays(pXML, L"TechYieldChanges", L"PrereqTech", L"TechYield");
+	m_techYieldModifiers.readPairedArrays(pXML, L"TechYieldModifiers", L"PrereqTech", L"TechYield");
+	m_techCommerceChanges.readPairedArrays(pXML, L"TechCommerceChanges", L"TechType", L"CommercePercents");
+	m_techCommerceModifiers.readPairedArrays(pXML, L"TechCommerceModifiers", L"PrereqTech", L"TechCommerce");
+	m_aTerrainYieldChanges.readPairedArrays(pXML, L"TerrainYieldChanges", L"TerrainType", L"YieldChanges");
+	m_aPlotYieldChanges.readPairedArrays(pXML, L"PlotYieldChanges", L"PlotType", L"Yields");
 
 	return true;
 }
@@ -3411,9 +3264,9 @@ bool CvBuildingInfo::readPass3()
 		m_abPrereqAndCivicsforPass3.clear();
 	}
 
-	if (m_aszExtraXMLforPass3.size() < 1)
+	if (m_aszExtraXMLforPass3.empty())
 	{
-		FAssert(false);
+		FErrorMsg("error");
 		return false;
 	}
 	m_iGreatPeopleUnitType = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
@@ -3468,6 +3321,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	CvHotkeyInfo::copyNonDefaults(pClassInfo);
 
+	CvInfoUtil(this).copyNonDefaults(pClassInfo);
+
 	if (getSpecialBuilding() == iTextDefault) m_eSpecialBuilding = pClassInfo->getSpecialBuilding();
 	if (getAdvisorType() == iTextDefault) m_iAdvisorType = pClassInfo->getAdvisorType();
 
@@ -3497,19 +3352,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	if (getNoBonus() == iTextDefault) m_iNoBonus = pClassInfo->getNoBonus();
 	if (getPowerBonus() == iTextDefault) m_iPowerBonus = pClassInfo->getPowerBonus();
-	if (getFreeBonus() == iTextDefault) m_iFreeBonus = pClassInfo->getFreeBonus();
-	if (getNumFreeBonuses() == iDefault) m_iNumFreeBonuses = pClassInfo->getNumFreeBonuses();
-
-	if (m_aExtraFreeBonuses.empty())
-	{
-		int iNum = pClassInfo->getNumExtraFreeBonuses();
-		for (int i = 0; i < iNum; i++)
-		{
-			m_aExtraFreeBonuses.push_back(std::pair<BonusTypes,int>(pClassInfo->getExtraFreeBonus(i),pClassInfo->getExtraFreeBonusNum(i)));
-		}
-	}
-
-	if (getFreePromotion() == iTextDefault) m_iFreePromotion = pClassInfo->getFreePromotion();
 	if (getCivicOption() == iTextDefault) m_iCivicOption = pClassInfo->getCivicOption();
 	if (getGreatPeopleUnitType() == iTextDefault) m_iGreatPeopleUnitType = pClassInfo->getGreatPeopleUnitType();
 	if (getVoteSourceType() == iTextDefault) m_iVoteSourceType = pClassInfo->getVoteSourceType();
@@ -3941,8 +3783,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (isPrereqPower() == bDefault) m_bPrereqPower = pClassInfo->isPrereqPower();
 	if (getGlobalPopulationgrowthratepercentage() == iDefault) m_iGlobalPopulationgrowthratepercentage = pClassInfo->getGlobalPopulationgrowthratepercentage();
 	if (getPopulationgrowthratepercentage() == iDefault) m_iPopulationgrowthratepercentage = pClassInfo->getPopulationgrowthratepercentage();
-	if (getFreePromotion_2() == iTextDefault) m_iFreePromotion_2 = pClassInfo->getFreePromotion_2();
-	if (getFreePromotion_3() == iTextDefault) m_iFreePromotion_3 = pClassInfo->getFreePromotion_3();
 	if (getLineOfSight() == iDefault) m_iLineOfSight = pClassInfo->getLineOfSight();
 	if (getInflationModifier() == iDefault) m_iInflationModifier = pClassInfo->getInflationModifier();
 	if (getInvasionChance() == iDefault) m_iInvasionChance = pClassInfo->getInvasionChance();
@@ -4289,7 +4129,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	{
 		m_bDamageAttackerCapable = true;
 	}
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aFreePromoTypes, pClassInfo->m_aFreePromoTypes);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aFreePromoTypes, pClassInfo->getFreePromoTypes());
 	GC.copyNonDefaultDelayedResolutionVector(m_aiFreeTraitTypes, pClassInfo->m_aiFreeTraitTypes);
 	GC.copyNonDefaultDelayedResolutionVector(m_aiPrereqInCityBuildings, pClassInfo->m_aiPrereqInCityBuildings);
 	GC.copyNonDefaultDelayedResolutionVector(m_vPrereqNotInCityBuildings, pClassInfo->m_vPrereqNotInCityBuildings);
@@ -4408,12 +4248,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 			m_pabHurry[i] = pClassInfo->isHurry(i);
 		}
 	}
-
-	//if (!m_pExprFreePromotionCondition)
-	//{
-	//	m_pExprFreePromotionCondition = pClassInfo->m_pExprFreePromotionCondition;
-	//	pClassInfo->m_pExprFreePromotionCondition = NULL;
-	//}
 	//TB Combat Mods (Buildings) end
 
 	//Alberts2 PrereqBonuses
@@ -4458,47 +4292,9 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	m_techCommerceModifiers.copyNonDefaults(pClassInfo->getTechCommerceModifiers());
 	m_aTerrainYieldChanges.copyNonDefaults(pClassInfo->getTerrainYieldChanges());
 	m_aPlotYieldChanges.copyNonDefaults(pClassInfo->getPlotYieldChanges());
-
-	CvInfoUtil(this).copyNonDefaults(pClassInfo);
 }
 
-void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
-{
-	int iDefault = 0;
-	int iTextDefault = -1;
-	bool bNoDuplicate = true;
-
-	for (int j = 0; j < GC.getNumBuildingInfos(); j++)
-	{
-		foreach_(const BuildingCommerceChange& it, m_aGlobalBuildingCommerceChanges)
-		{
-			if (it.eBuilding == (BuildingTypes)j)
-			{
-				//obviously some modder already set this Building to some value
-				//we don't want to overwrite his settings with the older(assuming he added
-				//his tag on purpose)
-				bNoDuplicate = false;
-				break;
-			}
-		}
-		if (bNoDuplicate)
-		{
-			for (int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; iCommerce++)
-			{
-				if (pClassInfo->getGlobalBuildingCommerceChange(j, iCommerce) != 0)
-				{
-					BuildingCommerceChange kChange;
-					kChange.eBuilding = (BuildingTypes)j;
-					kChange.eCommerce = (CommerceTypes)iCommerce;
-					kChange.iChange = pClassInfo->getGlobalBuildingCommerceChange(j, iCommerce);
-					m_aGlobalBuildingCommerceChanges.push_back(kChange);
-				}
-			}
-		}
-	}
-}
-
-bool CvBuildingInfo::isNewCityFree(const CvGameObject* pObject)
+bool CvBuildingInfo::isNewCityFree(const CvGameObject* pObject) const
 {
 	return m_pExprNewCityFree && m_pExprNewCityFree->evaluate(pObject);
 }
@@ -4507,13 +4303,6 @@ const BoolExpr* CvBuildingInfo::getConstructCondition() const
 {
 	return m_pExprConstructCondition;
 }
-
-//TB Building Tags
-//const BoolExpr* CvBuildingInfo::getFreePromotionCondition()
-//{
-//	return m_pExprFreePromotionCondition;
-//}
-
 
 bool CvBuildingInfo::getNotShowInCity() const
 {
@@ -4527,7 +4316,7 @@ void CvBuildingInfo::setNotShowInCity()
 
 bool CvBuildingInfo::isPrereqOrBuilding(const int i) const
 {
-	return algo::contains(m_vPrereqOrBuilding, i);
+	return algo::any_of_equal(m_vPrereqOrBuilding, i);
 }
 
 int CvBuildingInfo::getPrereqOrBuilding(const int i) const
@@ -4550,7 +4339,7 @@ short CvBuildingInfo::getNumReplacementBuilding() const
 
 void CvBuildingInfo::setReplacedBuilding(const int i)
 {
-	if (!algo::contains(m_vReplacedBuilding, i))
+	if (algo::none_of_equal(m_vReplacedBuilding, i))
 	{
 		m_vReplacedBuilding.push_back(i);
 	}

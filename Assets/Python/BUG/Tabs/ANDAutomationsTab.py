@@ -173,7 +173,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 
 		bFirst = True
 
-		import CvUtil
+		import TextUtil
 		GC = CyGlobalContext()
 
 		if self.buildNames is None:
@@ -181,7 +181,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 			self.buildNames = [(0,0)] * iNumBuilds
 			# Strip the <link="IMPROVEMENT_FOOBAR"> and </link> pair from the description while retaining the bit between them
 			for iI in range(iNumBuilds):
-				szDescription = CvUtil.convertToAscii(GC.getBuildInfo(iI).getDescription())
+				szDescription = TextUtil.convertToAscii(GC.getBuildInfo(iI).getDescription())
 				szNewDescription = ""
 				iStartIndex = szDescription.rfind("<link")
 				iEndIndex = szDescription.rfind("'>") + 2
@@ -206,7 +206,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 					self.addSpacer(screen, left, "City Spacer")
 				bFirst = False
 
-				szCityName = CvUtil.convertToAscii(cityX.getName())
+				szCityName = TextUtil.convertToAscii(cityX.getName())
 
 				self.addLabel(screen, left, TRNSLTR.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", (szCityName,)), TRNSLTR.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", (szCityName,)), None, False, True)
 				col1, col2, col3, col4, col5 = self.addMultiColumnLayout(screen, left, 5, "Automate_Workers")
@@ -241,7 +241,7 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 
 				columnKey = (col1, col2, col3, col4, col5)[iCount % 5]
 
-				control = CvUtil.convertToAscii(szNameKey + CvBuildInfo.getDescription() + "Check")
+				control = TextUtil.convertToAscii(szNameKey + CvBuildInfo.getDescription() + "Check")
 				bEnabled = player.isAutomatedCanBuild(i)
 
 				szNewDescription = self.buildNames[i]

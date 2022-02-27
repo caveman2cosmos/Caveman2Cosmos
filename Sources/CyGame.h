@@ -27,9 +27,6 @@ public:
 	bool isMultiplayer() const;
 
 	void updateScore(bool bForce);
-	void cycleCities(bool bForward, bool bAdd);
-	void cycleSelectionGroups(bool bClear, bool bForward, bool bWorkers);
-	bool cyclePlotUnits(const CyPlot* pPlot, bool bForward, bool bAuto, int iCount);
 
 	void selectionListMove(const CyPlot* pPlot, bool bAlt, bool bShift, bool bCtrl);
 	void selectionListGameNetMessage(int eMessage, int iData2, int iData3, int iData4, int iFlags, bool bAlt, bool bShift);
@@ -60,7 +57,6 @@ public:
 	int countTotalCivPower() const;
 	int countTotalNukeUnits() const;
 	int countKnownTechNumTeams(TechTypes eTech) const;
-	int getNumFreeBonuses(BuildingTypes eBuilding) const;
 
 	int countReligionLevels(ReligionTypes eReligion) const;
 	int calculateReligionPercent(ReligionTypes eReligion) const;
@@ -239,7 +235,7 @@ public:
 	std::string getScriptData() const;
 	void setScriptData(std::string szNewValue);
 
-	void setName(TCHAR* szName);
+	void setName(const char* szName);
 	std::wstring getName() const;
 	int getIndexAfterLastDeal() const;
 	int getNumDeals() const;
@@ -247,9 +243,9 @@ public:
 	CyDeal* addDeal();
 	void deleteDeal(int iID);
 	CvRandom& getMapRand() const;
-	int getMapRandNum(int iNum, TCHAR* pszLog) const;
+	int getMapRandNum(int iNum, const char* pszLog) const;
 	CvRandom& getSorenRand() const;
-	int getSorenRandNum(int iNum, TCHAR* pszLog) const;
+	int getSorenRandNum(int iNum, const char* pszLog) const;
 	int calculateSyncChecksum() const;
 	int calculateOptionsChecksum() const;
 	bool GetWorldBuilderMode() const;				// remove once CvApp is exposed
@@ -280,7 +276,6 @@ public:
 	int getCultureThreshold(CultureLevelTypes eLevel) const;
 
 	void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield);
-	void changePlotExtraCost(int iX, int iY, int iExtraCost);
 
 	bool isCivEverActive(CivilizationTypes eCivilization) const;
 	bool isLeaderEverActive(LeaderHeadTypes eLeader) const;
@@ -298,7 +293,6 @@ public:
 
 	int getCutLosersCounter() const;
 	int getHighToLowCounter() const;
-	void setVictoryValid(int iVictory, bool bNewVal);
 
 	bool isModderGameOption(ModderGameOptionTypes eIndex) const;
 	int getModderGameOption(ModderGameOptionTypes eIndex) const;

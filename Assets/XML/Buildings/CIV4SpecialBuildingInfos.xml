@@ -165,8 +165,7 @@
 		<SpecialBuildingInfo>
 			<Type>SPECIALBUILDING_PUNK_NANO</Type>
 			<Description>TXT_KEY_SPECIALBUILDING_PUNK_NANO</Description>
-			<!-- Uncomment this when we get Nanopunk buildings -->
-			<!-- TechPrereq>TECH_NANOPUNK</TechPrereq -->
+			<TechPrereq>TECH_NANOPUNK</TechPrereq>
 			<bValid>1</bValid>
 			<Button>Art/Interface/Buttons/TechTree/nanopunk.dds</Button>
 		</SpecialBuildingInfo>

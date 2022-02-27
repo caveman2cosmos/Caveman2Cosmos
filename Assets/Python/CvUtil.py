@@ -39,50 +39,6 @@ FONT_CENTER_JUSTIFY=1<<2
 FONT_RIGHT_JUSTIFY=1<<1
 FONT_LEFT_JUSTIFY=1<<0
 
-# if the string is non unicode, convert it to unicode by decoding it using utf-8
-def convertToUnicode(s):
-	if isinstance(s, str):
-		return s.decode("iso8859")
-	return s
-
-# if the string is unicode, convert it to str by encoding it using utf-8
-def convertToStr(txt):
-	if isinstance(txt, unicode):
-		i = 0
-		length = len(txt)
-		while i < length:
-			ordinal = ord(txt[i])
-			if ordinal > 255:
-				txt = txt[:i] + '?' + txt[i+1:]
-			i += 1
-		 # Toffer - "iso8859" = "latin-1". Tried UTF-8 here, caused problem for german characters like "ß".
-		return txt.encode("iso8859")
-	return txt
-
-# Used to reduce text to ascii, exe enforce ascii in some cases.
-def convertToAscii(txt):
-	txt = convertToStr(txt)
-	# convert to ascii equivalent where possible.
-	accent = [
-		('à', 'a'), ('ä', 'a'), ('â', 'a'),
-		('é', 'e'), ('è', 'e'), ('ê', 'e'),
-		('ù', 'u'), ('û', 'u'), ('ü', 'u'),
-		('ô', 'o'), ('õ', 'o'), ('ö', 'o'),
-		('ç', 'c'), ('î', 'i'), ('ï', 'i'),
-		('ß', 'ss')
-	]
-	while accent:
-		a, b = accent.pop()
-		txt = txt.replace(a, b)
-	# get rid of any "above ascii ordinals" that may be left here.
-	i = 0
-	length = len(txt)
-	while i < length:
-		ordinal = ord(txt[i])
-		if ordinal > 128:
-			txt = txt[:i] + '?' + txt[i+1:]
-		i += 1
-	return txt
 
 class RedirectDebug:
 	"""Send Debug Messages to Civ Engine"""
@@ -110,22 +66,6 @@ def myExceptHook(type, value, tb):
 	import traceback # for error reporting
 	lines = traceback.format_exception(type, value, tb)
 	sys.stderr.write("\n".join(lines))
-
-def pyPrint(stuff):
-	sys.stdout.write('PY:' + stuff + "\n")
-
-def getOppositeCardinalDirection(dir):
-	return (dir + 2) % CardinalDirectionTypes.NUM_CARDINALDIRECTION_TYPES
-
-def shuffle(num, rand):
-	"returns a tuple of size num of shuffled numbers"
-	piShuffle = [0]*num
-	shuffleList(num, rand, piShuffle)	# implemented in C for speed
-	return piShuffle
-
-def spawnUnit(iUnit, pPlot, pPlayer):
-	pPlayer.initUnit(iUnit, pPlot.getX(), pPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-	return 1
 
 def combatDetailMessageBuilder(cdUnit, ePlayer, iChange):
 	if cdUnit.iExtraCombatPercent:
@@ -271,17 +211,6 @@ def combatMessageBuilder(cdAttacker, cdDefender, iCombatOdds):
 	combatDetailMessageBuilder(cdAttacker,cdDefender.eOwner,-1)
 	combatDetailMessageBuilder(cdDefender,cdDefender.eOwner,1)
 
-def stripLiterals(txt, literal):
-	# The literal argument can be: "font", "color", "link", etc. Caps lock does matter.
-	start = "<%s=" % literal
-	txt = txt.replace("</%s>" % literal, "")
-	i1 = txt.find(start)
-	if i1 > -1:
-		while i1 > -1:
-			i2 = txt.find(">", i1)
-			txt = txt[:i1] + txt[i2+1:]
-			i1 = txt.find(start)
-	return txt
 
 # Centralized function for displaying messages in the message box.
 def sendMessage(szTxt, iPlayer=None, iTime=16, szIcon=None, eColor=-1, iMapX=-1, iMapY=-1, bOffArrow=False, bOnArrow=False, eMsgType=0, szSound=None, bForce=True):

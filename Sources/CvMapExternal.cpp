@@ -14,13 +14,8 @@
 #include "CvTaggedSaveFormatWrapper.h"
 #include "CvViewport.h"
 
-CvMapExternal::CvMapExternal() : m_proxiedMap(NULL),
-								 m_bMapCoordinates(false)
-{
-}
-
-CvMapExternal::CvMapExternal(CvMapInterfaceBase* proxiedMap) : m_proxiedMap(proxiedMap),
-															   m_bMapCoordinates(false)
+CvMapExternal::CvMapExternal(CvMapInterfaceBase* proxiedMap)
+	: m_proxiedMap(proxiedMap)
 {
 }
 
@@ -152,7 +147,7 @@ WorldSizeTypes CvMapExternal::getWorldSize()
 
 CvPlot* CvMapExternal::plotByIndex(int iIndex) const
 {
-	FASSERT_BOUNDS(0, numPlots(), iIndex)
+	FASSERT_BOUNDS(0, numPlots(), iIndex);
 	CvPlot* result = m_proxiedMap->plotByIndex(iIndex);
 
 	if (result == NULL)
@@ -165,14 +160,7 @@ CvPlot* CvMapExternal::plotByIndex(int iIndex) const
 
 CvPlot* CvMapExternal::plot(int iX, int iY) const
 {
-	if (!m_bMapCoordinates)
-	{
-		return m_proxiedMap->getUnderlyingMap()->plot(iX, iY);
-	}
-	else
-	{
-		return m_proxiedMap->plot(iX, iY);
-	}
+	return m_proxiedMap->plot(iX, iY);
 }
 
 

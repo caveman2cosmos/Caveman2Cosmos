@@ -9,6 +9,8 @@
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvBonusInfo.h"
 #include "CvXMLLoadUtility.h"
 #include "BoolExpr.h"
 #include "IntExpr.h"
@@ -68,7 +70,7 @@ const BoolExpr* BoolExpr::read(CvXMLLoadUtility *pXML)
 {
 	// In general we assume no comments to simplify reading code
 
-	//TCHAR szTag[1024];
+	//char szTag[1024];
 	//if (!GETXML->GetLastLocatedNodeTagName(pXML->GetXML(), szTag))
 	//{
 	//	// No located node

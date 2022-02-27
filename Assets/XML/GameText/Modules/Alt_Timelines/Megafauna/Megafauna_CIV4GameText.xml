@@ -347,7 +347,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_POLICE_CAT_PEDIA</Tag>
-		<English>TBD</English>
+		<English>A F9 unit - cat version of police dog</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RHINO_TRAINER</Tag>
@@ -748,27 +748,6 @@
 		<Tag>TXT_KEY_UNIT_RHINO_SWORDSMAN_PEDIA</Tag>
 		<English>There is no evidence this unit was ever used. It is part of the [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Technologies that might have been.</English>
 		<Italian>Non c'è alcuna prova che quest'unità sia mai stata usata in battaglia. Fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_MAMMOTH</Tag>
-		<English>Subdued Mammoth</English>
-		<French>
-			<Text>Mammouth (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Gefangenes Mammut:Gefangenen Mammuts:Gefangenen Mammut:Gefangene Mammut:Gefangene Mammuts:Gefangenen Mammuts:Gefangenen Mammuts:Gefangenen Mammuts</Text>
-			<Gender>Neuter</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-		<Italian>
-			<Text>Mammut addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Poskromiony Mamut</Polish>
-		<Russian>Ìàìîíò (ðó÷í.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRAINEDCAT</Tag>

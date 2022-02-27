@@ -425,7 +425,6 @@
 	<ElementType name="MovieFile" content="textOnly"/>
 	<ElementType name="MovieSound" content="textOnly"/>
 	<ElementType name="Sound" content="textOnly"/>
-
 	<ElementType name="ReligionInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -456,7 +455,6 @@
 	<ElementType name="ReligionInfos" content="eltOnly">
 		<element type="ReligionInfo" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="BuildingType" content="textOnly"/>
 	<ElementType name="iNumBuildingNeeded" content="textOnly" dt:type="int"/>
 	<ElementType name="PrereqBuilding" content="eltOnly">
@@ -486,7 +484,6 @@
 	<ElementType name="iMilitaryProductionModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeXP" content="textOnly" dt:type="int"/>
 	<ElementType name="iSpread" content="textOnly" dt:type="int"/>
-
 	<ElementType name="CorporationInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -526,7 +523,6 @@
 	<ElementType name="CorporationInfos" content="eltOnly">
 		<element type="CorporationInfo" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="HintInfo" content="eltOnly">
 		<element type="Description"/>
 	</ElementType>
@@ -562,7 +558,6 @@
 	<ElementType name="iMinBarbarians" content="textOnly" dt:type="int"/>
 	<ElementType name="EraType" content="textOnly"/>
 	<ElementType name="NotEraType" content="textOnly"/>
-
 	<ElementType name="GoodyInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -596,7 +591,6 @@
 	<ElementType name="GoodyInfos" content="eltOnly">
 		<element type="GoodyInfo" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="Name" content="textOnly"/>
 	<ElementType name="iFreeWinsVsBarbs" content="textOnly" dt:type="int"/>
 	<ElementType name="iAnimalAttackProb" content="textOnly" dt:type="int"/>
@@ -611,8 +605,6 @@
 	<ElementType name="iAttitudeChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iNoTechTradeModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iTechTradeKnownModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnownedTilesPerGameAnimal" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnownedTilesPerBarbarianUnit" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnownedWaterTilesPerBarbarianUnit" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnownedTilesPerBarbarianCity" content="textOnly" dt:type="int"/>
 	<ElementType name="iBarbarianCityCreationTurnsElapsed" content="textOnly" dt:type="int"/>
@@ -624,7 +616,6 @@
 	<ElementType name="iStartingDefenseUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iStartingWorkerUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iStartingExploreUnits" content="textOnly" dt:type="int"/>
-	<ElementType name="iAIStartingUnitMultiplier" content="textOnly" dt:type="int"/>
 	<ElementType name="iAIStartingDefenseUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iAIStartingWorkerUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iAIStartingExploreUnits" content="textOnly" dt:type="int"/>
@@ -682,8 +673,6 @@
 		<element type="iAttitudeChange" minOccurs="0"/>
 		<element type="iNoTechTradeModifier" minOccurs="0"/>
 		<element type="iTechTradeKnownModifier" minOccurs="0"/>
-		<element type="iUnownedTilesPerGameAnimal" minOccurs="0"/>
-		<element type="iUnownedTilesPerBarbarianUnit" minOccurs="0"/>
 		<element type="iUnownedWaterTilesPerBarbarianUnit" minOccurs="0"/>
 		<element type="iUnownedTilesPerBarbarianCity" minOccurs="0"/>
 		<element type="iBarbarianCityCreationTurnsElapsed" minOccurs="0"/>
@@ -695,7 +684,6 @@
 		<element type="iStartingDefenseUnits" minOccurs="0"/>
 		<element type="iStartingWorkerUnits" minOccurs="0"/>
 		<element type="iStartingExploreUnits" minOccurs="0"/>
-		<element type="iAIStartingUnitMultiplier" minOccurs="0"/>
 		<element type="iAIStartingDefenseUnits" minOccurs="0"/>
 		<element type="iAIStartingWorkerUnits" minOccurs="0"/>
 		<element type="iAIStartingExploreUnits" minOccurs="0"/>
@@ -1006,6 +994,13 @@
 	<ElementType name="TradeYieldModifiers" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="BonusCommerceModifier" content="eltOnly">
+		<element type="BonusType"/>
+		<element type="CommerceModifiers"/>
+	</ElementType>
+	<ElementType name="BonusCommerceModifiers" content="eltOnly">
+		<element type="BonusCommerceModifier" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="iCommerce" content="textOnly" dt:type="int"/>
 	<ElementType name="CommerceModifiers" content="eltOnly">
 		<element type="iCommerce" minOccurs="0" maxOccurs="*"/>
@@ -1162,7 +1157,6 @@
 	<ElementType name="iAttitudeShareMod" content="textOnly" dt:type="int"/>
 	<ElementType name="iEnslavementChance" content="textOnly" dt:type="int"/>
 	<ElementType name="iFoodConsumptionPerPopulation" content="textOnly" dt:type="int"/>
-
 	<ElementType name="CivicInfo" content="eltOnly">
 		<element type="CivicOptionType" minOccurs="0"/>
 		<element type="Type"/>
@@ -1251,6 +1245,7 @@
 		<element type="TradeYieldModifiers" minOccurs="0"/>
 		<element type="CommerceModifiers" minOccurs="0"/>
 		<element type="CapitalCommerceModifiers" minOccurs="0"/>
+		<element type="BonusCommerceModifiers" minOccurs="0"/>
 		<element type="SpecialistExtraCommerces" minOccurs="0"/>
 		<element type="Hurrys" minOccurs="0"/>
 		<element type="SpecialBuildingNotRequireds" minOccurs="0"/>
@@ -1294,7 +1289,6 @@
 		<element type="bBansNonStateReligions" minOccurs="0"/>
 		<element type="PropertyManipulators" minOccurs="0"/>
 	</ElementType>
-
 	<ElementType name="iProductionModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="BuildingProductionModifier" content="eltOnly">
 		<element type="BuildingType"/>
@@ -1355,7 +1349,6 @@
 		<element type="CivicInfo" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="iEventChancePerTurn" content="textOnly" dt:type="int"/>
-
 	<ElementType name="GameSpeedInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -1371,12 +1364,10 @@
 	<ElementType name="GameSpeedInfos" content="eltOnly">
 		<element type="GameSpeedInfo" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="iBaseTime" content="textOnly" dt:type="int"/>
 	<ElementType name="iCityBonus" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitBonus" content="textOnly" dt:type="int"/>
 	<ElementType name="iFirstTurnMultiplier" content="textOnly" dt:type="int"/>
-
 	<ElementType name="TurnTimerInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -1647,7 +1638,6 @@
 	<ElementType name="iConstructPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iCreatePercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iBuildPercent" content="textOnly" dt:type="int"/>
-
 	<ElementType name="EraInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>

@@ -33,10 +33,6 @@
 					<Directory>NotSoGood</Directory>
 					<bLoad>1</bLoad>
 				</Module>
-				<Module> <!-- Events - some may be unfinished -->
-					<Directory>StrategyOnly</Directory>
-					<bLoad>1</bLoad>
-				</Module>
 				<Module> <!-- Only Locust swarms and building meltdown are usable in this -->
 					<Directory>Bad_Karma</Directory>
 					<bLoad>1</bLoad>

@@ -48,9 +48,9 @@
 //	adjacent coastal land should be considerd part of the set
 #define	MOVE_ALLOW_ADJACENT_COASTAL						(0x00020000)
 //	Top byte used to represent max path len
-#define	MOVE_MAX_PATHLEN_MASK							(0xFF000000)
-#define MOVE_MAX_PATHLEN_FROM_INFO(x)					((x) >> 24)
-#define MOVE_FLAGS_FROM_MAX_PATHLEN(x)					((x) << 24)
+//#define	MOVE_MAX_PATHLEN_MASK							(0xFF000000)
+//#define MOVE_MAX_PATHLEN_FROM_INFO(x)					((x) >> 24)
+//#define MOVE_FLAGS_FROM_MAX_PATHLEN(x)					((x) << 24)
 
 
 #define RANDPLOT_LAND									(0x00000001)
@@ -91,53 +91,44 @@
 #define MAX_TEAMS										(51)
 
 // Char Count limit for edit boxes
-#define PREFERRED_EDIT_CHAR_COUNT						(15)
+//#define PREFERRED_EDIT_CHAR_COUNT						(15)
 #define MAX_GAMENAME_CHAR_COUNT							(32)
 #define MAX_PLAYERINFO_CHAR_COUNT						(32)
 #define MAX_PLAYEREMAIL_CHAR_COUNT						(64)
 #define MAX_PASSWORD_CHAR_COUNT							(32)
-#define MAX_GSLOGIN_CHAR_COUNT							(17)
-#define MAX_GSEMAIL_CHAR_COUNT							(50)
-#define MAX_GSPASSWORD_CHAR_COUNT						(30)
-#define MAX_CHAT_CHAR_COUNT								(256)
-#define MAX_ADDRESS_CHAR_COUNT							(64)
+//#define MAX_GSLOGIN_CHAR_COUNT							(17)
+//#define MAX_GSEMAIL_CHAR_COUNT							(50)
+//#define MAX_GSPASSWORD_CHAR_COUNT						(30)
+//#define MAX_CHAT_CHAR_COUNT								(256)
+//#define MAX_ADDRESS_CHAR_COUNT							(64)
 
 #define INVALID_PLOT_COORD								(-(MAX_INT))	// don't use -1 since that is a valid wrap coordinate
 #define DIRECTION_RADIUS								(1)
 #define DIRECTION_DIAMETER								((DIRECTION_RADIUS * 2) + 1)
 
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//#define NUM_CITY_PLOTS								(21)
 #define NUM_CITY_PLOTS_1								(9)
 #define NUM_CITY_PLOTS_2								(21)
 #define NUM_CITY_PLOTS									(37)
 #define CITY_HOME_PLOT									(0)
-//#define CITY_PLOTS_RADIUS								(2)
+#define SKIP_CITY_HOME_PLOT								(1)
 #define CITY_PLOTS_RADIUS								(3)
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 #define CITY_PLOTS_DIAMETER								((CITY_PLOTS_RADIUS*2) + 1)
 
 #define GAME_NAME										("Game")
 
 #define LANDSCAPE_FOW_RESOLUTION						(4)
 
-#define Z_ORDER_LAYER									(-0.1f)
-#define Z_ORDER_LEVEL									(-0.3f)
+//#define Z_ORDER_LAYER									(-0.1f)
+//#define Z_ORDER_LEVEL									(-0.3f)
 
-#define CIV4_GUID										"civ4bts"
-#define CIV4_PRODUCT_ID									11081
-#define CIV4_NAMESPACE_ID								17
-#define CIV4_NAMESPACE_EXT								"-tk"
+//#define CIV4_GUID										"civ4bts"
+//#define CIV4_PRODUCT_ID									11081
+//#define CIV4_NAMESPACE_ID								17
+//#define CIV4_NAMESPACE_EXT								"-tk"
 
 #define MAP_TRANSFER_EXT								"_t"
 
-#define USER_CHANNEL_PREFIX								"#civ4buser!"
+//#define USER_CHANNEL_PREFIX								"#civ4buser!"
 
 #define SETCOLR											L"<color=%d,%d,%d,%d>"
 #define ENDCOLR											L"</color>"
@@ -153,19 +144,19 @@
 //#define CIV4_EXE_FILE									".\\Civ4BeyondSword_DEBUG.exe"
 //#define CIV4_DLL_FILE									".\\Assets\\CvGameCoreDLL_DEBUG.dll"
 //#else
-#define CIV4_EXE_FILE									".\\Civ4BeyondSword.exe"
-#define CIV4_DLL_FILE									".\\Assets\\CvGameCoreDLL.dll"
+//#define CIV4_EXE_FILE									".\\Civ4BeyondSword.exe"
+//#define CIV4_DLL_FILE									".\\Assets\\CvGameCoreDLL.dll"
 //#endif
 // End Version Verification files and folders
-#define CIV4_SHADERS									".\\Shaders\\FXO"
-#define CIV4_ASSETS_PYTHON								".\\Assets\\Python"
-#define CIV4_ASSETS_XML									".\\Assets\\XML"
+//#define CIV4_SHADERS									".\\Shaders\\FXO"
+//#define CIV4_ASSETS_PYTHON								".\\Assets\\Python"
+//#define CIV4_ASSETS_XML									".\\Assets\\XML"
 
-#define MAX_PLAYER_NAME_LEN								(64)
-#define MAX_VOTE_CHOICES								(8)
-#define VOTE_TIMEOUT									(600000)	// 10 minute vote timeout - temporary
+//#define MAX_PLAYER_NAME_LEN								(64)
+//#define MAX_VOTE_CHOICES								(8)
+//#define VOTE_TIMEOUT									(600000)	// 10 minute vote timeout - temporary
 
-#define ANIMATION_DEFAULT								(1)			// Default idle animation
+//#define ANIMATION_DEFAULT								(1)			// Default idle animation
 
 // python module names
 #define PYScreensModule									"CvScreensInterface"

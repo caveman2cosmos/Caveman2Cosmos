@@ -57,6 +57,8 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getSpaceProductionModifier", &CyPlayer::getSpaceProductionModifier, "int ()")
 
 		.def("getRevIdxNational", &CyPlayer::getRevIdxNational, "int ()")
+		.def("getRevIdxDistanceModifier", &CyPlayer::getRevIdxDistanceModifier, "int ()")
+
 		.def("canFoundReligion", &CyPlayer::canFoundReligion, "bool ()")
 
 		.def("getNumMilitaryUnits", &CyPlayer::getNumMilitaryUnits, "int ()")

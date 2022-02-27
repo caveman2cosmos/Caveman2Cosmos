@@ -8,6 +8,10 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvPropertyInteraction.h"
+#include "CvPropertyManipulators.h"
+#include "CvPropertyPropagator.h"
+#include "CvPropertySource.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 
@@ -34,7 +38,7 @@ int CvPropertyManipulators::getNumSources() const
 
 CvPropertySource* CvPropertyManipulators::getSource(int index) const
 {
-	FASSERT_BOUNDS(0, getNumSources(), index)
+	FASSERT_BOUNDS(0, getNumSources(), index);
 	return m_apSources[index];
 }
 
@@ -76,7 +80,7 @@ int CvPropertyManipulators::getNumInteractions() const
 /*
 CvPropertyInteraction* CvPropertyManipulators::getInteraction(int index) const
 {
-	FASSERT_BOUNDS(0, getNumInteractions(), index)
+	FASSERT_BOUNDS(0, getNumInteractions(), index);
 	return m_apInteractions[index];
 }
 */
@@ -106,7 +110,7 @@ int CvPropertyManipulators::getNumPropagators() const
 /*
 CvPropertyPropagator* CvPropertyManipulators::getPropagator(int index) const
 {
-	FASSERT_BOUNDS(0, getNumPropagators(), index)
+	FASSERT_BOUNDS(0, getNumPropagators(), index);
 	return m_apPropagators[index];
 }
 */

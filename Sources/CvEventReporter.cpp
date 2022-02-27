@@ -297,26 +297,26 @@ void CvEventReporter::gotoPlotSet(CvPlot *pPlot, PlayerTypes ePlayer)
 	m_kPythonEventMgr.reportGotoPlotSet(pPlot, ePlayer);
 }
 
-void CvEventReporter::cityBuilt( CvCity *pCity, CvUnit *pUnit )
+void CvEventReporter::cityBuilt(CvCity* pCity, CvUnit* pUnit)
 {
 	m_kPythonEventMgr.reportCityBuilt(pCity, pUnit);
 	m_kStatistics.cityBuilt(pCity);
 }
 
-void CvEventReporter::cityRazed( CvCity *pCity, PlayerTypes ePlayer )
+void CvEventReporter::cityRazed(CvCity* pCity, PlayerTypes ePlayer)
 {
 	m_kPythonEventMgr.reportCityRazed(pCity, ePlayer);
-	m_kStatistics.cityRazed(pCity, ePlayer);
+	m_kStatistics.cityRazed(ePlayer);
 }
 
-void CvEventReporter::cityAcquired(PlayerTypes eOldOwner, PlayerTypes iPlayer, CvCity* pCity, bool bConquest, bool bTrade)
+void CvEventReporter::cityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade)
 {
-	m_kPythonEventMgr.reportCityAcquired(eOldOwner, iPlayer, pCity, bConquest, bTrade);
+	m_kPythonEventMgr.reportCityAcquired(eOldOwner, ePlayer, pCity, bConquest, bTrade);
 }
 
-void CvEventReporter::cityAcquiredAndKept(PlayerTypes iPlayer, CvCity* pCity)
+void CvEventReporter::cityAcquiredAndKept(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade)
 {
-	m_kPythonEventMgr.reportCityAcquiredAndKept(iPlayer, pCity);
+	m_kPythonEventMgr.reportCityAcquiredAndKept(eOldOwner, ePlayer, pCity, bConquest, bTrade);
 }
 
 void CvEventReporter::cityLost( CvCity *pCity)

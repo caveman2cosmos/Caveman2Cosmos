@@ -99,7 +99,7 @@ public:
 	void setHappyHelp(CvWStringBuffer &szBuffer, CvCity& city);
 	bool setBuildingAdditionalHappinessHelp(CvWStringBuffer &szBuffer, CvCity& city, const CvWString& szStart, bool bStarted = false);
 	void setYieldChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piYieldChange, bool bPercent = false, bool bNewLine = true);
-	void setCommerceChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piCommerceChange, bool bPercent = false, bool bNewLine = true);
+	void listCommerceChange(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szEnd, const int* aList, bool bPercent = false);
 	void setYieldPerPopChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piYieldChange, bool bPercent = false, bool bNewLine = true);
 	void setCommerceTimes100ChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piCommerceChange, bool bNewLine = false, bool bStarted = false);
 	bool setResumableYieldChangeHelp(CvWStringBuffer &szBuffer, const CvWString& szStart, const CvWString& szSpace, const CvWString& szEnd, const int* piYieldChange, bool bPercent = false, bool bNewLine = true, bool bStarted = false, bool bPerPop = false);
@@ -116,7 +116,7 @@ public:
 	void setPromotionHelp(CvWStringBuffer &szBuffer, PromotionTypes ePromotion, bool bCivilopediaText = false);
 	void setBuildUpHelp(CvWStringBuffer &szBuffer, PromotionLineTypes ePromotionLine);
 	void setTraitHelp(CvWStringBuffer &szBuffer, TraitTypes eTrait);
-	void setUnitCombatHelp(CvWStringBuffer &szBuffer, UnitCombatTypes eUnitCombat, bool bCivilopediaText = false, bool bFromUnit = false);
+	void setUnitCombatHelp(CvWStringBuffer& szBuffer, UnitCombatTypes eUnitCombat, bool bCivilopediaText = false) const;
 	void setImprovementHelp(CvWStringBuffer &szBuffer, ImprovementTypes eImprovement, FeatureTypes eFeature = NO_FEATURE, bool bCivilopediaText = false);
 	void setRouteHelp(CvWStringBuffer &szBuffer, RouteTypes eRoute, bool bCivilopediaText = false);
 	void setTerrainHelp(CvWStringBuffer &szBuffer, TerrainTypes eTerrain, bool bCivilopediaText = false);
@@ -167,7 +167,7 @@ public:
 	void buildIrrigationString( CvWStringBuffer& szBuffer, TechTypes eTech, bool bList = false, bool bPlayerContext = false );
 	void buildIgnoreIrrigationString( CvWStringBuffer& szBuffer, TechTypes eTech, bool bList = false, bool bPlayerContext = false );
 	void buildWaterWorkString( CvWStringBuffer &szBuffer, TechTypes eTech, bool bList = false, bool bPlayerContext = false );
-	void buildImprovementString( CvWStringBuffer& szBuffer, TechTypes eTech, int iImprovement, bool bList = false, bool bPlayerContext = false );
+	void buildImprovementString(CvWStringBuffer& szBuffer, TechTypes eTech, BuildTypes eBuild, bool bList = false, bool bPlayerContext = false);
 	void buildDomainExtraMovesString( CvWStringBuffer& szBuffer, TechTypes eTech, int iCommerceType, bool bList = false, bool bPlayerContext = false );
 	void buildAdjustString( CvWStringBuffer& szBuffer, TechTypes eTech, int iCommerceType, bool bList = false, bool bPlayerContext = false );
 	void buildTerrainTradeString( CvWStringBuffer& szBuffer, TechTypes eTech, int iTerrainType, bool bList = false, bool bPlayerContext = false );
@@ -187,10 +187,10 @@ public:
 	bool buildProcessInfoString( CvWStringBuffer& szBuffer, TechTypes eTech, int iProcessType, bool bFirst, bool bList = false, bool bPlayerContext = false );
 	bool buildFoundReligionString( CvWStringBuffer& szBuffer, TechTypes eTech, int iReligionType, bool bFirst, bool bList = false, bool bPlayerContext = false );
 	bool buildFoundCorporationString( CvWStringBuffer& szBuffer, TechTypes eTech, int iCorporationType, bool bFirst, bool bList = false, bool bPlayerContext = false );
-	bool buildPromotionString( CvWStringBuffer& szBuffer, TechTypes eTech, int iPromotionType, bool bFirst, bool bList = false, bool bPlayerContext = false );
+	bool buildPromotionString(CvWStringBuffer& szBuffer, TechTypes eTech, int iPromotionType, bool bFirst, bool bList) const;
 	void buildHintsList(CvWStringBuffer& szBuffer);
 	void buildBuildingRequiresString(CvWStringBuffer& szBuffer, BuildingTypes eBuilding, bool bCivilopediaText, bool bTechChooserText, const CvCity* pCity);
-	void buildMaintenanceModifiersString(CvWStringBuffer& szBuffer, TechTypes eTech, bool bList = false, bool bPlayerContext = false );
+	void buildMaintenanceModifiersString(CvWStringBuffer& szBuffer, TechTypes eTech, bool bList);
 
 	DllExport void buildCityBillboardIconString( CvWStringBuffer& szBuffer, CvCity* pCity);
 	DllExport void buildCityBillboardCityNameString( CvWStringBuffer& szBuffer, CvCity* pCity);
@@ -259,6 +259,8 @@ public:
 	DllExport void getReligionDataForWB(bool bHolyCity, std::vector<CvWBData>& mapReligionData);
 	DllExport void getCorporationDataForWB(bool bHeadquarters, std::vector<CvWBData>& mapCorporationData);
 
+	void setFlagHelp(CvWStringBuffer& szBuffer);
+
 	// AIAndy: Game object relation texts
 	void getGameObjectName(CvWString& szString, GameObjectTypes eObject) const;
 	void buildGameObjectRelationString(CvWStringBuffer& szBuffer, GameObjectTypes eObject, RelationTypes eRelation, int iData) const;
@@ -269,8 +271,6 @@ private:
 
 	void setCityPlotYieldValueString(CvWStringBuffer& szString, CvCity* pCity, int iIndex, bool bAvoidGrowth, bool bIgnoreGrowth, bool bIgnoreFood = false) const;
 	void setYieldValueString(CvWStringBuffer& szString, int iValue, bool bActive = false, bool bMakeWhitespace = false) const;
-
-	void setFreePromoBuildingHelp(const PromotionTypes ePromo, CvWStringBuffer &szBuffer);
 };
 
 // Singleton Accessor

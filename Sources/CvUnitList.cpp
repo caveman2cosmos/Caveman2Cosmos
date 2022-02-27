@@ -110,7 +110,7 @@ int CvUnitList::getNumInGroup(int iGroup)
 	{
 		doGroup();
 	}
-	FASSERT_BOUNDS(0, (int)m_aaiGroupedUnitList.size(), iGroup)
+	FASSERT_BOUNDS(0, static_cast<int>(m_aaiGroupedUnitList.size()), iGroup);
 	return m_aaiGroupedUnitList[iGroup]->size();
 }
 
@@ -120,8 +120,8 @@ UnitTypes CvUnitList::getUnitType(int iGroup, int iPos)
 	{
 		doSort();
 	}
-	FASSERT_BOUNDS(0, getGroupNum(), iGroup)
-	FASSERT_BOUNDS(0, getNumInGroup(iGroup), iPos)
+	FASSERT_BOUNDS(0, getGroupNum(), iGroup);
+	FASSERT_BOUNDS(0, getNumInGroup(iGroup), iPos);
 	return (*m_aaiGroupedUnitList[iGroup])[iPos];
 }
 
@@ -190,7 +190,7 @@ int CvUnitList::getSelectionRow()
 
 	for (unsigned int i=0; i<m_aaiGroupedUnitList.size(); i++)
 	{
-		if (algo::contains(*m_aaiGroupedUnitList[i], m_eSelectedUnit))
+		if (algo::any_of_equal(*m_aaiGroupedUnitList[i], m_eSelectedUnit))
 			return i;
 	}
 

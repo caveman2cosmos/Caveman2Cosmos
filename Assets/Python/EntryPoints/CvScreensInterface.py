@@ -214,7 +214,10 @@ def pediaJumpToBuilding(argsList):
 	screenMap[PEDIA].pediaJump(-3, "", argsList[0])
 
 def pediaJumpToUnit(argsList):
-	screenMap[PEDIA].pediaJump(-2, "", argsList[0])
+	if argsList[0] > -1:
+		screenMap[PEDIA].pediaJump(-2, "", argsList[0])
+	else:
+		screenMap[PEDIA].pediaJump(10, "UnitCombat", argsList[0] + 100000)
 
 def pediaMain(argsList):
 	screenMap[PEDIA].pediaJump(-1, "", argsList[0])
@@ -257,9 +260,6 @@ def pediaJumpToCivic(argsList):
 
 def pediaJumpToReligion(argsList):
 	screenMap[PEDIA].pediaJump(9, "Religion", argsList[0])
-
-def pediaJumpToUnitChart(argsList):
-	screenMap[PEDIA].pediaJump(10, "UnitCombat", argsList[0])
 
 def pediaJumpToProject(argsList):
 	screenMap[PEDIA].pediaJump(10, "Project", argsList[0])
@@ -737,6 +737,8 @@ def lateInit():
 	screenMap[WB_INFO]			= WBInfoScreen.WBInfoScreen(worldBuilderScreen)
 	screenMap[WB_TRADE]			= WBTradeScreen.WBTradeScreen(worldBuilderScreen)
 
+	import CivicData
+	CivicData.initCivicData()
 
 
 def earlyInit():

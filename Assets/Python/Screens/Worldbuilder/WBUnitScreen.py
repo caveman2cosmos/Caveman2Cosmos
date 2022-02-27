@@ -597,43 +597,57 @@ class WBUnitScreen:
 			screen.setLabel("CargoSpaceHeader", "Background", "<font=3b>" + sText + "</font>", 1<<0, iX + 50, screen.getYResolution() - 41, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 			if pUnit.cargoSpace() > 0:
+				iCargoDomain = pUnit.domainCargo()
+				iSpecialCargo = pUnit.specialCargo()
+
 				for pUnitX in pPlot.units():
-					if pUnitX.getID() == pUnit.getID(): continue
-					if pUnit.domainCargo() > -1:
-						if pUnitX.getDomainType() != pUnit.domainCargo(): continue
-					if pUnit.specialCargo() > -1:
-						if pUnitX.getSpecialUnitType() != pUnit.specialCargo(): continue
+
+					if (pUnitX.getID() == pUnit.getID()
+					or iCargoDomain > -1 and pUnitX.getDomainType() != iCargoDomain
+					or iSpecialCargo > -1 and pUnitX.getSpecialUnitType() != iSpecialCargo
+					):
+						continue
+
 					iPlayerX = pUnitX.getOwner()
-					if iPlayerX != pUnit.getOwner(): continue
+					if iPlayerX != pUnit.getOwner():
+						continue
+
 					iRow = screen.appendTableRow("WBCargoUnits")
 					sText = pUnitX.getName()
-					if len(pUnitX.getNameNoDesc()):
+					if pUnitX.getNameNoDesc():
 						sText = pUnitX.getNameNoDesc()
 					sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
 					if pUnitX.isCargo():
 						sColor = CyTranslator().getText("[COLOR_YELLOW]", ())
-					if pUnitX.getTransportUnit().getID() == pUnit.getID():
+
+					transportUnit = pUnitX.getTransportUnit()
+					if transportUnit and transportUnit.getID() == pUnit.getID():
 						sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 					screen.setTableText("WBCargoUnits", 0, iRow, "<font=3>" + sColor + sText + "</font></color>", pUnitX.getButton(), WidgetTypes.WIDGET_PYTHON, 8300 + iPlayerX, pUnitX.getID(), 1<<0)
 		else:
 			for pUnitX in pPlot.units():
-				if pUnitX.getID() == pUnit.getID(): continue
-				if pUnitX.cargoSpace() < 1: continue
-				if pUnitX.domainCargo() > -1:
-					if pUnit.getDomainType() != pUnitX.domainCargo(): continue
-				if pUnitX.specialCargo() > -1:
-					if pUnit.getSpecialUnitType() != pUnitX.specialCargo(): continue
+				if (pUnitX.getID() == pUnit.getID()
+				or pUnitX.cargoSpace() < 1
+				or pUnitX.domainCargo() > -1 and pUnit.getDomainType() != pUnitX.domainCargo()
+				or pUnitX.specialCargo() > -1 and pUnit.getSpecialUnitType() != pUnitX.specialCargo()
+				):
+					continue
+
 				iPlayerX = pUnitX.getOwner()
-				if iPlayerX != pUnit.getOwner(): continue
+				if iPlayerX != pUnit.getOwner():
+					continue
+
 				iRow = screen.appendTableRow("WBCargoUnits")
 				sText = pUnitX.getName()
-				if len(pUnitX.getNameNoDesc()):
+				if pUnitX.getNameNoDesc():
 					sText = pUnitX.getNameNoDesc()
 				sText += " (" + str(pUnitX.getCargo()) + "/" + str(pUnitX.cargoSpace()) + ")"
 				sColor = CyTranslator().getText("[COLOR_YELLOW]", ())
 				if pUnitX.isFull():
 					sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
-				if pUnit.getTransportUnit().getID() == pUnitX.getID():
+
+				transportUnit = pUnit.getTransportUnit()
+				if transportUnit and transportUnit.getID() == pUnitX.getID():
 					sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 				screen.setTableText("WBCargoUnits", 0, iRow, "<font=3>" + sColor + sText + "</font></color>", pUnitX.getButton(), WidgetTypes.WIDGET_PYTHON, 8300 + iPlayerX, pUnitX.getID(), 1<<0)
 
@@ -771,16 +785,14 @@ class WBUnitScreen:
 			pUnitX = GC.getPlayer(iPlayerX).getUnit(inputClass.getData2())
 			if bCargo:
 				if pUnitX.getTransportUnit().getID() == pUnit.getID():
-					pUnitX.setTransportUnit(CyUnit())
-				else:
-					if not pUnit.isFull():
-						pUnitX.setTransportUnit(pUnit)
-			else:
-				if pUnit.getTransportUnit().getID() == pUnitX.getID():
-					pUnit.setTransportUnit(CyUnit())
-				else:
-					if not pUnitX.isFull():
-						pUnit.setTransportUnit(pUnitX)
+					pUnitX.setTransportUnit(pUnitX, False)
+				elif not pUnit.isFull():
+					pUnitX.setTransportUnit(pUnit, True)
+
+			elif pUnit.getTransportUnit().getID() == pUnitX.getID():
+				pUnit.setTransportUnit(pUnit, False)
+			elif not pUnitX.isFull():
+				pUnit.setTransportUnit(pUnitX, True)
 			self.interfaceScreen(pUnit)
 
 		elif sName == "PromotionReadyText":
@@ -969,7 +981,7 @@ class WBUnitScreen:
 			if iChangeType == 0:
 				loopUnit.setLevel(pUnit.getLevel())
 			elif iChangeType == 1:
-				loopUnit.setExperience(pUnit.getExperience(), -1)
+				loopUnit.setExperience(pUnit.getExperience())
 			elif iChangeType == 2:
 				loopUnit.setBaseCombatStr(pUnit.baseCombatStr())
 			elif iChangeType == 3:

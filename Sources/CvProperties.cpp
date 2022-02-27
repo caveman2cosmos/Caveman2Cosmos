@@ -57,25 +57,25 @@ CvProperties::CvProperties(CvPlot* pPlot)
 
 PropertyTypes CvProperties::getProperty(int index) const
 {
-	FASSERT_BOUNDS(0, (int)m_aiProperty.size(), index)
+	FASSERT_BOUNDS(0, (int)m_aiProperty.size(), index);
 	return m_aiProperty[index].prop;
 }
 
 int CvProperties::getValue(int index) const
 {
-	FASSERT_BOUNDS(0, (int)m_aiProperty.size(), index)
+	FASSERT_BOUNDS(0, (int)m_aiProperty.size(), index);
 	return m_aiProperty[index].value;
 }
 
 PropertyTypes CvProperties::getChangeProperty(int index) const
 {
-	FASSERT_BOUNDS(0, (int)m_aiPropertyChange.size(), index)
+	FASSERT_BOUNDS(0, (int)m_aiPropertyChange.size(), index);
 	return m_aiPropertyChange[index].prop;
 }
 
 int CvProperties::getChange(int index) const
 {
-	FASSERT_BOUNDS(0, (int)m_aiPropertyChange.size(), index)
+	FASSERT_BOUNDS(0, (int)m_aiPropertyChange.size(), index);
 	return m_aiPropertyChange[index].value;
 }
 
@@ -143,7 +143,7 @@ void CvProperties::setValue(int index, int iVal)
 	//CvString szBuffer;
 	//szBuffer.format("SetValue, index %i, iValue %i.", index, iVal);
 	//gDLL->logMsg("PropertyBuildingOOS.log", szBuffer.c_str(), false, false);
-	FASSERT_BOUNDS(0, (int)m_aiProperty.size(), index)
+	FASSERT_BOUNDS(0, (int)m_aiProperty.size(), index);
 	const int iOldVal = m_aiProperty[index].value;
 	if (iOldVal != iVal)
 	{
@@ -158,7 +158,7 @@ void CvProperties::setValue(int index, int iVal)
 
 void CvProperties::setChange(int index, int iVal)
 {
-	FASSERT_BOUNDS(0, (int)m_aiPropertyChange.size(), index)
+	FASSERT_BOUNDS(0, (int)m_aiPropertyChange.size(), index);
 	m_aiPropertyChange[index].value = iVal;
 }
 

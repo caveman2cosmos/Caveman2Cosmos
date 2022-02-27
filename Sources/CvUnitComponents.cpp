@@ -1,3 +1,5 @@
+#include "CvUnitComponents.h"
+#include "CvInfos.h"
 //------------------------------------------------------------------------------------------------------
 //  CLASS: UnitCompCommander
 //------------------------------------------------------------------------------------------------------
@@ -79,12 +81,12 @@ void UnitCompWorker::changeWorkModifier(const int iChange)
 bool UnitCompWorker::hasExtraBuild(const BuildTypes eBuild) const
 {
 	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild);
-	return algo::contains(m_extraBuilds, eBuild);
+	return algo::any_of_equal(m_extraBuilds, eBuild);
 }
 
 void UnitCompWorker::setExtraBuild(BuildTypes eBuild, bool bNewValue)
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild)
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild);
 
 	std::vector<BuildTypes>::iterator itr = find(m_extraBuilds.begin(), m_extraBuilds.end(), eBuild);
 
@@ -103,7 +105,7 @@ void UnitCompWorker::setExtraBuild(BuildTypes eBuild, bool bNewValue)
 
 void UnitCompWorker::changeExtraWorkModForBuild(const BuildTypes eBuild, const short iChange)
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild)
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild);
 	if (iChange == 0) return;
 
 	std::map<BuildTypes, short>::const_iterator itr = m_extraWorkModForBuild.find(eBuild);
@@ -124,7 +126,7 @@ void UnitCompWorker::changeExtraWorkModForBuild(const BuildTypes eBuild, const s
 
 int UnitCompWorker::getExtraWorkModForBuild(const BuildTypes eBuild) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild)
+	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild);
 	std::map<BuildTypes, short>::const_iterator itr = m_extraWorkModForBuild.find(eBuild);
 	return itr != m_extraWorkModForBuild.end() ? itr->second : 0;
 }

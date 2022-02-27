@@ -1,7 +1,7 @@
 
 from CvPythonExtensions import *
-import CvUtil #, BugUtil
-# globals
+import CvUtil#, BugUtil
+
 GC = CyGlobalContext()
 MAP = GC.getMap()
 GAME = GC.getGame()

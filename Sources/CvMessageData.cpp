@@ -1593,16 +1593,13 @@ void CvNetChooseBuildUp::Execute()
 {
 	if (m_ePlayer != NO_PLAYER)
 	{
-		CvUnit* pUnit = GET_PLAYER(m_ePlayer).getUnit(m_iID);
-		if (m_ePromotionLine == NO_PROMOTIONLINE)
+		if (m_ePromotionLine != NO_PROMOTIONLINE)
 		{
-			pUnit->getGroup()->clearMissionQueue();
-			pUnit->getGroup()->setActivityType(ACTIVITY_AWAKE);
+			GET_PLAYER(m_ePlayer).getUnit(m_iID)->setBuildUpType(m_ePromotionLine);
 		}
-		else
+		else if (GET_PLAYER(m_ePlayer).getUnit(m_iID)->isBuildUp())
 		{
-			pUnit->setBuildUpType(m_ePromotionLine);
-			pUnit->setBuildUp(true);
+			GET_PLAYER(m_ePlayer).getUnit(m_iID)->clearBuildups();
 		}
 	}
 }

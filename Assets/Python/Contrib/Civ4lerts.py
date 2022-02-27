@@ -94,11 +94,6 @@ class Civ4lerts:
 
 
 ## Displaying Alert Messages
-
-def addMessageAtPlot(iPlayer, message, icon, iX, iY):
-	"Displays an on-screen message with a popup icon that zooms to the given plot."
-	addMessage(iPlayer, message, icon, iX, iY, True, True)
-
 def addMessage(iPlayer, szTxt, icon=None, iX=-1, iY=-1, bOffArrow=False, bOnArrow=False):
 	"Displays an on-screen message."
 	"""
@@ -169,9 +164,9 @@ class AbstractCityAlertManager(AbstractStatefulAlert):
 		alert.init()
 
 	def onCityAcquiredAndKept(self, argsList):
-		iPlayer, city = argsList
-		if iPlayer == GAME.getActivePlayer():
-			self._resetCity(city)
+		#iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
+		if argsList[1] == GAME.getActivePlayer():
+			self._resetCity(argsList[2])
 
 	def onCityLost(self, argsList):
 		city = argsList[0]
@@ -301,7 +296,7 @@ class AbstractCityTestAlert(AbstractCityAlert):
 			if passed != willPass:
 				message, icon = self._getPendingAlertMessageIcon(city, willPass)
 		if message:
-			addMessageAtPlot(iPlayer, message, icon, city.getX(), city.getY())
+			addMessage(iPlayer, message, icon, city.getX(), city.getY(), True, True)
 
 	def _passedTest(self, cityId):
 		"Returns True if the city passed the test last turn."
@@ -354,14 +349,15 @@ class CityPendingGrowth(AbstractCityAlert):
 	def checkCity(self, cityId, city, iPlayer, player):
 		if Civ4lertsOpt.isShowCityPendingGrowthAlert():
 			if CityUtil.willGrowThisTurn(city):
-
-				message = TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_PENDING_GROWTH", (city.getName(), city.getPopulation() + 1))
-				addMessageAtPlot(iPlayer, message, "Art/Interface/Symbols/Food/food05.dds", city.getX(), city.getY())
-
+				addMessage(
+					iPlayer, TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_PENDING_GROWTH", (city.getName(), city.getPopulation() + 1)),
+					"Art/Interface/Symbols/Food/food05.dds", city.getX(), city.getY(), True, True
+				)
 			elif CityUtil.willShrinkThisTurn(city):
-
-				message = TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_PENDING_SHRINKAGE", (city.getName(), city.getPopulation() - 1))
-				addMessageAtPlot(iPlayer, message, "Art/Interface/Symbols/Food/food05.dds", city.getX(), city.getY())
+				addMessage(
+					iPlayer, TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_PENDING_SHRINKAGE", (city.getName(), city.getPopulation() - 1)),
+					"Art/Interface/Symbols/Food/food05.dds", city.getX(), city.getY(), True, True
+				)
 
 class CityGrowth(AbstractCityAlert):
 	"""
@@ -386,12 +382,15 @@ class CityGrowth(AbstractCityAlert):
 
 			if Civ4lertsOpt.isShowCityGrowthAlert():
 				if iPop > iOldPop:
-					message = TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_GROWTH", (city.getName(), iPop))
-					addMessageAtPlot(iPlayer, message, "Art/Interface/Symbols/Food/food05.dds", city.getX(), city.getY())
-
+					addMessage(
+						iPlayer, TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_GROWTH", (city.getName(), iPop)),
+						"Art/Interface/Symbols/Food/food05.dds", city.getX(), city.getY(), True, True
+					)
 				elif iPop < iOldPop and not bWhipOrDraft:
-					message = TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_SHRINKAGE", (city.getName(), iPop))
-					addMessageAtPlot(iPlayer, message, "Art/Interface/Symbols/Food/food05.dds", city.getX(), city.getY())
+					addMessage(
+						iPlayer, TRNSLTR.getText("TXT_KEY_CIV4LERTS_ON_CITY_SHRINKAGE", (city.getName(), iPop)),
+						"Art/Interface/Symbols/Food/food05.dds", city.getX(), city.getY(), True, True
+					)
 
 			self.populations[cityId] = iPop
 			self.CityWhipCounter[cityId] = iWhipCounter

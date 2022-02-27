@@ -35,11 +35,9 @@ class PediaPromotion:
 		CvThePromotionInfo = GC.getPromotionInfo(iThePromotion)
 		screen = self.main.screen()
 
-		iWidGen				= WidgetTypes.WIDGET_GENERAL
-		#iWidJuToPromo		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION
-		iWidJuToUnitCombat	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT_COMBAT
-		iPanelBlue50		= PanelStyles.PANEL_STYLE_BLUE50
-		iFontGame			= FontTypes.GAME_FONT
+		iWidGen			= WidgetTypes.WIDGET_GENERAL
+		iPanelBlue50	= PanelStyles.PANEL_STYLE_BLUE50
+		iFontGame		= FontTypes.GAME_FONT
 
 		enumGBS = self.main.enumGBS
 		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2 = self.main.aFontList
@@ -95,7 +93,7 @@ class PediaPromotion:
 		if iOr2 > -1:
 			aList1.append((GC.getPromotionInfo(iOr2).getButton(), "PROMO" + str(iOr2), szLogic))
 		aList2 = [] # Leads To
-		for iType in range(GC.getNumPromotionInfos()):
+		for iType in xrange(GC.getNumPromotionInfos()):
 			CvPromotionInfo = GC.getPromotionInfo(iType)
 			if iThePromotion in (CvPromotionInfo.getPrereqPromotion(), CvPromotionInfo.getPrereqOrPromotion1(), CvPromotionInfo.getPrereqOrPromotion2()):
 				aList2.append((CvPromotionInfo.getButton(), "PROMO" + str(iType)))
@@ -127,7 +125,7 @@ class PediaPromotion:
 				LeadsToPanel = aName()
 				screen.addPanel(LeadsToPanel, TRNSLTR.getText("TXT_KEY_PEDIA_LEADS_TO", ()), "", False, True, X_COL_1, Y_BOT_ROW, W_PEDIA_PAGE, H_BOT_ROW, iPanelBlue50)
 			if aList1:
-				for i in range(iListLength1):
+				for i in xrange(iListLength1):
 					BTN, szChild, szLogic = aList1[i]
 					if i != 0:
 						screen.attachLabel(RequirePanel, "", szLogic)
@@ -136,7 +134,7 @@ class PediaPromotion:
 					screen.attachLabel(RequirePanel, "", szBracketR)
 				aList1 = []
 			if aList2:
-				for i in range(iListLength2):
+				for i in xrange(iListLength2):
 					BTN, szChild = aList2[i]
 					screen.attachImageButton(LeadsToPanel, PF + szChild, BTN, enumGBS, iWidGen, 1, 1, False)
 				aList2 = []
@@ -150,11 +148,15 @@ class PediaPromotion:
 			screen.addPanel(aName(), "", "", True, False, X_COL_1, Y_MID_ROW, W_HALF_PP, H_MID_LEFT, iPanelBlue50)
 			screen.addMultilineText(aName(), szText, X_COL_1 + 4, Y_MID_ROW + 12, W_HALF_PP - 8, H_MID_LEFT - 20, iWidGen, 0, 0, 1<<0)
 
-		# Eligible Unit Combats
-		for iUnitCombat in range(GC.getNumUnitCombatInfos()):
-			if CvThePromotionInfo.isQualifiedUnitCombatType(iUnitCombat):
-				aList1.append(iUnitCombat)
-		if aList1:
+		# Unit Combats
+		for i in xrange(CvThePromotionInfo.getNumQualifiedUnitCombatTypes()):
+			aList1.append(CvThePromotionInfo.getQualifiedUnitCombatType(i))
+
+		for i in xrange(CvThePromotionInfo.getNumDisqualifiedUnitCombatTypes()):
+			aList2.append(CvThePromotionInfo.getDisqualifiedUnitCombatType(i))
+
+		if aList1 or aList2:
+			szChild = PF + "COMBAT"
 			if uFont3b == "<font=3b>":
 				sIcon = 32
 			elif uFont3b == "<font=2b>":
@@ -162,15 +164,34 @@ class PediaPromotion:
 			else:
 				sIcon = 24
 			dy = sIcon + 2
-			szText = TRNSLTR.getText("TXT_KEY_PEDIA_PROMOTION_UNITS", ())
-			screen.addPanel(aName(), szText, "", True, True, X_COL_2, Y_TOP_ROW + 2, W_HALF_PP, H_MID_RIGHT - 2, iPanelBlue50)
-			ScrollPanel = aName()
-			screen.addScrollPanel(ScrollPanel, szText, X_COL_2, Y_TOP_ROW + 26, W_HALF_PP + 4, H_MID_RIGHT - 52, iPanelBlue50)
-			screen.setStyle(ScrollPanel, "ScrollPanel_Alt_Style")
-			y = 0
-			for i in aList1:
-				CvUnitCombatInfo = GC.getUnitCombatInfo(i)
-				screen.addDDSGFCAt(aName(), ScrollPanel, CvUnitCombatInfo.getButton(), 0, y, sIcon, sIcon, iWidGen, 1, 1, False)
-				szText = "<color=230,230,0,255>" + uFont3b + CvUnitCombatInfo.getDescription()
-				screen.setTextAt(aName(), ScrollPanel, szText, 1<<0, sIcon + 4, y+6, 0, iFontGame, iWidJuToUnitCombat, i, 1)
+
+			n = 0
+			screen.addPanel(aName(), "", "", True, True, X_COL_2, Y_TOP_ROW + 2, W_HALF_PP, H_MID_RIGHT - 2, iPanelBlue50)
+			ScrlPnl = aName()
+			screen.addScrollPanel(ScrlPnl, "", X_COL_2, Y_TOP_ROW + 8, W_HALF_PP, H_MID_RIGHT - 38, iPanelBlue50)
+			screen.setStyle(ScrlPnl, "ScrollPanel_Alt_Style")
+			y = -4
+			if aList1:
+				screen.setTextAt(aName(), ScrlPnl, uFont3b + TRNSLTR.getText("TXT_KEY_VALID_FOR", ()), 1<<0, 0, y, 0, iFontGame, iWidGen, 1, 2)
+				y += 4 + dy
+				for iType in aList1:
+					CvUnitCombatInfo = GC.getUnitCombatInfo(iType)
+					screen.addDDSGFCAt(szChild + str(iType) + "|" + str(n), ScrlPnl, CvUnitCombatInfo.getButton(), 0, y, sIcon, sIcon, iWidGen, 1, 2, False)
+					n += 1
+					szText = "<color=230,230,0,255>" + uFont2b + CvUnitCombatInfo.getDescription()
+					screen.setTextAt(szChild + str(iType) + "|" + str(n), ScrlPnl, szText, 1<<0, sIcon + 4, y+6, 0, iFontGame, iWidGen, 1, 2)
+					n += 1
+					y += dy
 				y += dy
+
+			if aList2:
+				screen.setTextAt(aName(), ScrlPnl, uFont3b + TRNSLTR.getText("TXT_KEY_VALID_FOR_NOT", ()), 1<<0, 0, y, 0, iFontGame, iWidGen, 1, 2)
+				y += 4 + dy
+				for iType in aList2:
+					CvUnitCombatInfo = GC.getUnitCombatInfo(iType)
+					screen.addDDSGFCAt(szChild + str(iType) + "|" + str(n), ScrlPnl, CvUnitCombatInfo.getButton(), 0, y, sIcon, sIcon, iWidGen, 1, 2, False)
+					n += 1
+					szText = "<color=255,80,80,255>" + uFont2b + CvUnitCombatInfo.getDescription()
+					screen.setTextAt(szChild + str(iType) + "|" + str(n), ScrlPnl, szText, 1<<0, sIcon + 4, y+6, 0, iFontGame, iWidGen, 1, 2)
+					n += 1
+					y += dy

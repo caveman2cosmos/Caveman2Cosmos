@@ -32,9 +32,7 @@ public:
 	CvRandom& getCyASyncRand() const;
 	CyTeam* getCyTeam(TeamTypes eTeam) const;
 
-	int getInfoTypeForString(const char* szInfoType) const;
-	int getInfoTypeForStringWithHiddenAssert(const char* szInfoType) const;
-	int getTypesEnum(const char* szType) const;
+	int getInfoTypeForString(const char* szInfoType, bool bHideAssert = false) const;
 
 	const CvMapInfo& getMapInfo(MapTypes eMap) const;
 	const CvEffectInfo* getEffectInfo(int i) const;
@@ -107,24 +105,15 @@ public:
 	const CvPlayerOptionInfo& getPlayerOptionInfo(int i) const;
 	const CvGraphicOptionInfo& getGraphicOptionInfo(int i) const;
 
-	// ArtInfos
-	const CvArtInfoInterface* getInterfaceArtInfo(int i) const;
-	const CvArtInfoMovie* getMovieArtInfo(int i) const;
-	const CvArtInfoMisc* getMiscArtInfo(int i) const;
-	const CvArtInfoUnit* getUnitArtInfo(int i) const;
-	const CvArtInfoBuilding* getBuildingArtInfo(int i) const;
-	const CvArtInfoCivilization* getCivilizationArtInfo(int i) const;
-	const CvArtInfoBonus* getBonusArtInfo(int i) const;
-	const CvArtInfoImprovement* getImprovementArtInfo(int i) const;
-
 	const char* getArtStyleTypes(int i) const { return GC.getArtStyleTypes((ArtStyleTypes) i); }
-	const char* getFlavorTypes(int i) const { return GC.getFlavorTypes((FlavorTypes) i); }
-	const char* getDiplomacyPowerTypes(int i) const { return GC.getDiplomacyPowerTypes((DiplomacyPowerTypes) i); }
+
+	int getMapBonus(int i) const { return GC.getMapBonus(i); }
+	int getNumMapBonuses() const { return GC.getNumMapBonuses(); }
 
 	int getNumEffectInfos() const { return GC.getNumEffectInfos(); }
 	int getNumTerrainInfos() const { return GC.getNumTerrainInfos(); }
 	int getNumSpecialBuildingInfos() const { return GC.getNumSpecialBuildingInfos(); }
-	int getNumBonusInfos() const { return GC.getNumBonusInfos(); };
+	int getNumBonusInfos() const { return GC.getNumBonusInfos(); }
 	int getNumPlayableCivilizationInfos() const { return GC.getNumPlayableCivilizationInfos(); }
 	int getNumCivilizatonInfos() const { return GC.getNumCivilizationInfos(); }
 	int getNumLeaderHeadInfos() const { return GC.getNumLeaderHeadInfos(); }
@@ -181,11 +170,6 @@ public:
 	int getNumPropertyInfos() const { return GC.getNumPropertyInfos(); }
 	int getNumPlayerColorInfos() const { return GC.getNumPlayerColorInfos(); }
 
-	int getNumAnimationOperatorTypes() const { return GC.getNumAnimationOperatorTypes(); }
-	int getNumArtStyleTypes() const { return GC.getNumArtStyleTypes(); }
-	int getNumFlavorTypes() const { return GC.getNumFlavorTypes(); }
-	int getNumFootstepAudioTypes() const { return GC.getNumFootstepAudioTypes(); }
-
 	//////////////////////
 	// Globals Defines
 	//////////////////////
@@ -198,7 +182,6 @@ public:
 
 	bool isDCM_AIR_BOMBING() const { return GC.isDCM_AIR_BOMBING(); }
 	bool isDCM_RANGE_BOMBARD() const { return GC.isDCM_RANGE_BOMBARD(); }
-	bool isDCM_ATTACK_SUPPORT() const { return GC.isDCM_ATTACK_SUPPORT(); }
 	bool isDCM_OPP_FIRE() const { return GC.isDCM_OPP_FIRE(); }
 	bool isDCM_ACTIVE_DEFENSE() const { return GC.isDCM_ACTIVE_DEFENSE(); }
 	bool isDCM_FIGHTER_ENGAGE() const { return GC.isDCM_FIGHTER_ENGAGE(); }

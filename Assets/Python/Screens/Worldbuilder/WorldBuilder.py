@@ -989,10 +989,8 @@ class WorldBuilder:
 		elif self.iPlayerAddMode == "Bonus":
 			iY = 25
 			lItems = []
-			for i in xrange(GC.getNumBonusInfos()):
-				CvBonusInfo = GC.getBonusInfo(i)
-				if CvBonusInfo.getPlacementOrder() > -1:
-					lItems.append([CvBonusInfo.getDescription(), i])
+			for i in xrange(GC.getNumMapBonuses()):
+				lItems.append([GC.getBonusInfo(GC.getMapBonus(i)).getDescription(), i])
 			lItems.sort()
 
 			iHeight = min(len(lItems) * 24 + 2, self.yRes - iY)
@@ -1125,10 +1123,10 @@ class WorldBuilder:
 			if bReveal or (not pPlot.isVisible(self.m_iCurrentTeam, False)):
 				pPlot.setRevealed(self.m_iCurrentTeam, bReveal, False, -1)
 		elif bReveal:
-			if pPlot.isInvisibleVisible(self.m_iCurrentTeam, iType): return
+			if pPlot.isSpotterInSight(self.m_iCurrentTeam, iType): return
 			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, 1)
 		else:
-			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, - pPlot.getInvisibleVisibilityCount(self.m_iCurrentTeam, iType))
+			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, -pPlot.getInvisibleVisibilityCount(self.m_iCurrentTeam, iType))
 
 	def showRevealed(self, pPlot):
 		if self.iPlayerAddMode == "RevealPlot":
@@ -1241,7 +1239,7 @@ class WorldBuilder:
 						pNewUnit = pPlayer.initUnit(loopUnit.getUnitType(), self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 						pNewUnit.setName(loopUnit.getNameNoDesc())
 						pNewUnit.setLevel(loopUnit.getLevel())
-						pNewUnit.setExperience(loopUnit.getExperience(), -1)
+						pNewUnit.setExperience(loopUnit.getExperience())
 						pNewUnit.setBaseCombatStr(loopUnit.baseCombatStr())
 						for iPromotion in xrange(GC.getNumPromotionInfos()):
 							pNewUnit.setHasPromotion(iPromotion, loopUnit.isHasPromotion(iPromotion))
@@ -1329,11 +1327,15 @@ class WorldBuilder:
 		pNewCity.setOverflowProduction(pOldCity.getOverflowProduction())
 		pNewCity.setPlundered(pOldCity.isPlundered())
 		pNewCity.setProduction(pOldCity.getProduction())
-		pNewCity.setProductionAutomated(pOldCity.isProductionAutomated())
 		pNewCity.setScriptData(pOldCity.getScriptData())
 		pNewCity.setWallOverride(pOldCity.isWallOverride())
 
-	def rightMouseDown (self):
+		if pOldCity.isProductionAutomated():
+			# Can only be true for human player, it is false by default and false for all AI.
+			pNewCity.setProductionAutomated(True)
+
+
+	def rightMouseDown(self):
 
 		if self.iPlayerAddMode in self.RevealMode:
 			if not self.m_pCurrentPlot.isNone():

@@ -54,7 +54,6 @@
 			<!-- These only count for human players -->
 			<iAnimalAttackProb>40</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>8</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>60</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>180</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>60</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>40</iBarbarianCityCreationTurnsElapsed>
@@ -313,7 +312,6 @@
 			<!-- These only count for human players -->
 			<iAnimalAttackProb>45</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>7</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>55</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>165</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>55</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>39</iBarbarianCityCreationTurnsElapsed>
@@ -599,7 +597,6 @@
 			<!-- These only count for human players -->
 			<iAnimalAttackProb>50</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>6</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>50</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>150</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>50</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>38</iBarbarianCityCreationTurnsElapsed>
@@ -872,7 +869,6 @@
 			<!-- These only count for human players -->
 			<iAnimalAttackProb>55</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>5</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>45</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>135</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>45</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>37</iBarbarianCityCreationTurnsElapsed>
@@ -1174,7 +1170,6 @@
 			<!-- These only count for human players -->
 			<iAnimalAttackProb>60</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>4</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>40</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>120</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>40</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>36</iBarbarianCityCreationTurnsElapsed>
@@ -1485,7 +1480,6 @@
 			<!-- These only count for human players -->
 			<iAnimalAttackProb>65</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>3</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>35</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>105</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>35</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>35</iBarbarianCityCreationTurnsElapsed>
@@ -1806,7 +1800,6 @@
 			<!-- These only count for human players -->
 			<iAnimalAttackProb>70</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>2</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>30</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>90</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>30</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>34</iBarbarianCityCreationTurnsElapsed>
@@ -2159,7 +2152,6 @@
 			<!-- These only count for human players -->
 			<iAnimalAttackProb>75</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>1</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>25</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>75</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>25</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>33</iBarbarianCityCreationTurnsElapsed>
@@ -2502,7 +2494,6 @@
 			<iTechTradeKnownModifier>50</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iAnimalAttackProb>80</iAnimalAttackProb>
-			<iUnownedTilesPerBarbarianUnit>20</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>60</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>20</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>32</iBarbarianCityCreationTurnsElapsed>
@@ -2510,7 +2501,6 @@
 			<iBarbarianDefenders>8</iBarbarianDefenders>
 			<iAIAnimalBonus>-50</iAIAnimalBonus>
 			<iAIBarbarianBonus>-50</iAIBarbarianBonus>
-			<iAIStartingUnitMultiplier>2</iAIStartingUnitMultiplier>
 			<iAIStartingDefenseUnits>5</iAIStartingDefenseUnits>
 			<iAIStartingExploreUnits>2</iAIStartingExploreUnits>
 			<iAIStartingWorkerUnits>1</iAIStartingWorkerUnits>
@@ -2872,7 +2862,6 @@
 			<iTechTradeKnownModifier>70</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iAnimalAttackProb>90</iAnimalAttackProb>
-			<iUnownedTilesPerBarbarianUnit>10</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>30</iBarbarianCityCreationTurnsElapsed>
@@ -2880,7 +2869,6 @@
 			<iBarbarianDefenders>10</iBarbarianDefenders>
 			<iAIAnimalBonus>-70</iAIAnimalBonus>
 			<iAIBarbarianBonus>-70</iAIBarbarianBonus>
-			<iAIStartingUnitMultiplier>2</iAIStartingUnitMultiplier>
 			<iAIStartingDefenseUnits>7</iAIStartingDefenseUnits>
 			<iAIStartingExploreUnits>3</iAIStartingExploreUnits>
 			<iAIStartingWorkerUnits>2</iAIStartingWorkerUnits>

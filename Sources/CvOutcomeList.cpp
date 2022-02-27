@@ -9,6 +9,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
 #include "CvOutcome.h"
 #include "CvOutcomeList.h"
 #include "CvPlot.h"
@@ -21,9 +22,9 @@ CvOutcomeList::~CvOutcomeList()
 	clear();
 }
 
-CvOutcome* CvOutcomeList::getOutcome(int index) const
+const CvOutcome* CvOutcomeList::getOutcome(int index) const
 {
-	FASSERT_BOUNDS(0, getNumOutcomes(), index)
+	FASSERT_BOUNDS(0, getNumOutcomes(), index);
 	return m_aOutcome[index];
 }
 
@@ -35,8 +36,6 @@ int CvOutcomeList::getNumOutcomes() const
 bool CvOutcomeList::isPossible(const CvUnit &kUnit) const
 {
 	const int iNum = getNumOutcomes();
-	if (iNum <= 0)
-		return false;
 
 	for (int i=0; i<iNum; i++)
 	{
@@ -52,8 +51,6 @@ bool CvOutcomeList::isPossible(const CvUnit &kUnit) const
 bool CvOutcomeList::isPossibleSomewhere(const CvUnit &kUnit) const
 {
 	const int iNum = getNumOutcomes();
-	if (iNum <= 0)
-		return false;
 
 	for (int i=0; i<iNum; i++)
 	{
@@ -69,8 +66,6 @@ bool CvOutcomeList::isPossibleSomewhere(const CvUnit &kUnit) const
 bool CvOutcomeList::isPossibleInPlot(const CvUnit &kUnit, const CvPlot& kPlot, bool bForTrade) const
 {
 	const int iNum = getNumOutcomes();
-	if (iNum <= 0)
-		return false;
 
 	for (int i=0; i<iNum; i++)
 	{
@@ -109,28 +104,28 @@ void insertReplaceOutcomesRecursive(std::set<OutcomeTypes>& aeReplacedOutcomes, 
 	}
 }
 
-bool CvOutcomeList::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitTypes eDefeatedUnitType)
+bool CvOutcomeList::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitTypes eDefeatedUnitType) const
 {
 	PROFILE_FUNC();
 
-	std::vector<std::pair<CvOutcome*, int> > apOutcome;
+	std::vector<std::pair<const CvOutcome*, int> > apOutcome;
 	std::set<OutcomeTypes> aeReplacedOutcomes;
 	int iChanceSum = 0;
 	for (int i=0; i<getNumOutcomes(); i++)
 	{
-		CvOutcome* pOutcome = getOutcome(i);
+		const CvOutcome* pOutcome = getOutcome(i);
 		if (pOutcome->isPossible(kUnit))
 		{
 			const int iChance = pOutcome->getChance(kUnit);
 			iChanceSum += iChance;
-			apOutcome.push_back(std::pair<CvOutcome*,int>(pOutcome, iChance));
+			apOutcome.push_back(std::make_pair(pOutcome, iChance));
 			insertReplaceOutcomesRecursive(aeReplacedOutcomes, pOutcome->getType());
 		}
 	}
 
 	for (int i=(int)apOutcome.size()-1; i>=0; i--)
 	{
-		if (aeReplacedOutcomes.find(apOutcome[i].first->getType()) != aeReplacedOutcomes.end())
+		if (algo::any_of_equal(aeReplacedOutcomes, apOutcome[i].first->getType()))
 		{
 			iChanceSum -= apOutcome[i].second;
 			apOutcome.erase(apOutcome.begin()+i);
@@ -168,24 +163,24 @@ bool CvOutcomeList::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, Unit
 
 int CvOutcomeList::AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade) const
 {
-	std::vector<std::pair<CvOutcome*, int> > apOutcome;
+	std::vector<std::pair<const CvOutcome*, int> > apOutcome;
 	std::set<OutcomeTypes> aeReplacedOutcomes;
 	int iChanceSum = 0;
 	for (int i=0; i<getNumOutcomes(); i++)
 	{
-		CvOutcome* pOutcome = getOutcome(i);
+		const CvOutcome* pOutcome = getOutcome(i);
 		if (pOutcome->isPossibleInPlot(kUnit, kPlot, bForTrade))
 		{
 			const int iChance = pOutcome->getChance(kUnit);
 			iChanceSum += iChance;
-			apOutcome.push_back(std::pair<CvOutcome*,int>(pOutcome, iChance));
+			apOutcome.push_back(std::make_pair(pOutcome, iChance));
 			insertReplaceOutcomesRecursive(aeReplacedOutcomes, pOutcome->getType());
 		}
 	}
 
 	for (int i=(int)apOutcome.size()-1; i>=0; i--)
 	{
-		if (aeReplacedOutcomes.find(apOutcome[i].first->getType()) != aeReplacedOutcomes.end())
+		if (algo::any_of_equal(aeReplacedOutcomes, apOutcome[i].first->getType()))
 		{
 			iChanceSum -= apOutcome[i].second;
 			apOutcome.erase(apOutcome.begin()+i);
@@ -219,13 +214,13 @@ bool CvOutcomeList::read(CvXMLLoadUtility* pXML, const wchar_t* szTagName)
 	{
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"Outcome"))
 			{
 				do
 				{
-					m_aOutcome.push_back(new CvOutcome());
-					m_aOutcome[m_aOutcome.size()-1]->read(pXML);
+					CvOutcome* pOutcome = new CvOutcome();
+					pOutcome->read(pXML);
+					m_aOutcome.push_back(pOutcome);
 				} while(pXML->TryMoveToXmlNextSibling());
 			}
 			pXML->MoveToXmlParent();
@@ -271,14 +266,14 @@ void CvOutcomeList::buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& 
 		{
 			const int iChance = pOutcome->getChance(kUnit);
 			iChanceSum += iChance;
-			apOutcome.push_back(std::pair<const CvOutcome*,int>(pOutcome, iChance));
+			apOutcome.push_back(std::make_pair(pOutcome, iChance));
 			insertReplaceOutcomesRecursive(aeReplacedOutcomes, pOutcome->getType());
 		}
 	}
 
 	for (int i=(int)apOutcome.size()-1; i>=0; i--)
 	{
-		if (aeReplacedOutcomes.find(apOutcome[i].first->getType()) != aeReplacedOutcomes.end())
+		if (algo::any_of_equal(aeReplacedOutcomes, apOutcome[i].first->getType()))
 		{
 			iChanceSum -= apOutcome[i].second;
 			apOutcome.erase(apOutcome.begin()+i);
@@ -319,7 +314,7 @@ void CvOutcomeListMerged::addOutcomeList(const CvOutcomeList* pList)
 		// just copy all outcomes and store the outcome types in the set
 		for (int i=0; i < pList->getNumOutcomes(); i++)
 		{
-			CvOutcome* pOutcome = pList->getOutcome(i);
+			const CvOutcome* pOutcome = pList->getOutcome(i);
 			m_aOutcome.push_back(pOutcome);
 			m_setTypes.insert(pOutcome->getType());
 		}
@@ -329,7 +324,7 @@ void CvOutcomeListMerged::addOutcomeList(const CvOutcomeList* pList)
 		// add all outcomes of the other list which use outcome types that we have not seen yet
 		for (int i=0; i < pList->getNumOutcomes(); i++)
 		{
-			CvOutcome* pOutcome = pList->getOutcome(i);
+			const CvOutcome* pOutcome = pList->getOutcome(i);
 			if (m_setTypes.count(pOutcome->getType()) == 0)
 			{
 				m_aOutcome.push_back(pOutcome);

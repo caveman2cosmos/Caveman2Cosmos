@@ -44,9 +44,12 @@
 				<Bonus>BONUS_HUMAN_MOD_LUNARIS</Bonus>
 				<Bonus>BONUS_HUMAN_MOD_MARTIAN</Bonus>
 			</PrereqBonuses>
-			<FreeBonus>BONUS_HUMAN_MOD_ALIEN_HYBRID</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_ALIEN_HYBRID</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -83,9 +86,12 @@
 				<BuildingType>BUILDING_QUANTUM_GRAVITY_SUPERCOMPUTER</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_ARCHAILECT</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_ARCHAILECT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -157,14 +163,16 @@
 			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
 			<iCost>5250</iCost>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-25</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CAPTURED_ASTEROID</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
@@ -203,9 +211,11 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CAPTURED_ASTEROID</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_IRON_ORE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_IRON_ORE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_TIN_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -259,11 +269,13 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ASTEROID_MINE</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_PLATINUM_ORE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_GOLD_ORE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_PLATINUM_ORE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 				<ExtraFreeBonus>
@@ -288,9 +300,12 @@
 			<PrereqTech>TECH_ATEMPORAL_BEINGS</PrereqTech>
 			<iCost>53910</iCost>
 			<Bonus>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_ATEMPORAL</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_ATEMPORAL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ATLAST_SPACE_TELESCOPE</Type>
@@ -341,7 +356,7 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
 			<iHappiness>-1</iHappiness>
 			<PrereqInCityBuildings>
@@ -455,7 +470,6 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -490,7 +504,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_ECOLOGICAL_ENGINEERING</TechType>
 					<CommercePercents>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -515,9 +529,12 @@
 			<iCost>10110</iCost>
 			<FreeBuilding>BUILDING_APPLIED_PSYCHOLOGY_LAB</FreeBuilding>
 			<Bonus>BONUS_HUMAN_MOD_DESIGNER_BABIES</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COLD_TOLERANCE</Type>
@@ -534,9 +551,12 @@
 			<PrereqTech>TECH_THERMAL_NEGATION</PrereqTech>
 			<iCost>13310</iCost>
 			<Bonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_COLD_TOLERANCE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_COLD_TOLERANCE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COLLECTIVE_CONSCIOUSNESS</Type>
@@ -560,9 +580,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_HUMAN_MOD_ENLIGHTENED</Bonus>
 			</PrereqBonuses>
-			<FreeBonus>BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -584,7 +607,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSAL_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -641,8 +663,10 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CAPTURED_ASTEROID</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
@@ -670,7 +694,6 @@
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
 				<iCommerce>50</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -723,9 +746,12 @@
 			<PrereqTech>TECH_GENE_JURISPRUDENCE</PrereqTech>
 			<iCost>7050</iCost>
 			<Bonus>BONUS_HUMAN_MOD_GENE_EDITING</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_DESIGNER_BABIES</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_DESIGNER_BABIES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIGITAL_IDENTITY</Type>
@@ -746,9 +772,12 @@
 				<BuildingType>BUILDING_VIRTUAL_WORLD</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -775,9 +804,12 @@
 				<BuildingType>BUILDING_EXOCORTEX_NETWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<Bonus>BONUS_CELLPHONES</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -798,9 +830,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Bonus>
 			</PrereqBonuses>
-			<FreeBonus>BONUS_HUMAN_MOD_ENLIGHTENED</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_ENLIGHTENED</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EUROPA_PROBE</Type>
@@ -872,7 +907,7 @@
 			<PrereqTech>TECH_3D_PROJECTIONS</PrereqTech>
 			<iCost>141330</iCost>
 			<YieldChanges>
-				<iYield>5</iYield>
+				<iYield>7</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
@@ -909,7 +944,6 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -969,9 +1003,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_STEM_CELL_LAB</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_HUMAN_MOD_GENE_EDITING</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_GENE_EDITING</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -989,9 +1026,12 @@
 			<PrereqTech>TECH_HUMAN_TRANSMUTATION</PrereqTech>
 			<iCost>12810</iCost>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_GILLS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_GILLS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HEAT_TOLERANCE</Type>
@@ -1008,9 +1048,12 @@
 			<PrereqTech>TECH_THERMAL_NEGATION</PrereqTech>
 			<iCost>13310</iCost>
 			<Bonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_HEAT_TOLERANCE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_HEAT_TOLERANCE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HELIUM_3_IMPORTER</Type>
@@ -1030,7 +1073,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1063,9 +1105,12 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<FreeBonus>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HYPERSPACE_CONSTRUCTION_FIRM</Type>
@@ -1133,9 +1178,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</Bonus>
 			</PrereqBonuses>
-			<FreeBonus>BONUS_HUMAN_MOD_IMMORTAL</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_IMMORTAL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INDEFINITE_LIFESPAN</Type>
@@ -1156,9 +1204,12 @@
 				<BuildingType>BUILDING_NANOMORPHIC_REPLICATOR</BuildingType>
 			</PrereqOrBuildings>
 			<Bonus>BONUS_HUMAN_MOD_ENLIGHTENED</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1178,14 +1229,18 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_INTERSTELLAR_BROADCAST_NODE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_NANOMORPHISM</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_INFORMATION_BASED</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_INFORMATION_BASED</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_CAPITOL</Type>
@@ -1212,7 +1267,6 @@
 				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INTERPLANETARY_RAIL</Type>
@@ -1345,8 +1399,10 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_JPL</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
@@ -1378,9 +1434,12 @@
 			<PrereqTech>TECH_ARTIFICIAL_EVOLUTION</PrereqTech>
 			<iCost>10910</iCost>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_LUNARIS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_LUNARIS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_OUTPOST</Type>
@@ -1491,7 +1550,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1543,9 +1601,12 @@
 			<PrereqTech>TECH_ARTIFICIAL_EVOLUTION</PrereqTech>
 			<iCost>10910</iCost>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_MARTIAN</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_MARTIAN</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1578,9 +1639,12 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<FreeBonus>BONUS_HUMAN_MOD_METAPHYSICAL</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_METAPHYSICAL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MICROSATELLITE_CONSTELLATION</Type>
@@ -1608,7 +1672,7 @@
 			</PrereqOrBuildings>
 			<iCost>3245</iCost>
 			<CommerceChanges>
-				<iCommerce>-200</iCommerce>
+				<iCommerce>-25</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -1716,8 +1780,12 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_STARPORT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBonus>BONUS_MITHRIL</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MITHRIL</FreeBonus>
+					<iNumFreeBonuses>3</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1739,8 +1807,12 @@
 				<iCommerce>-10</iCommerce>
 				<iCommerce>40</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_MOON_ROCKS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MOON_ROCKS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NANOMORPHISM</Type>
@@ -1773,9 +1845,12 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<FreeBonus>BONUS_HUMAN_MOD_NANOMORPHISM</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_NANOMORPHISM</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NANOSATELLITE_CONSTELLATION</Type>
@@ -1832,8 +1907,10 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_IMMATERIAL_CITY</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
@@ -1912,8 +1989,10 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PLANETARIUM</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
@@ -1938,9 +2017,12 @@
 			<PrereqTech>TECH_SPATIAL_TRANSCENDENCE</PrereqTech>
 			<iCost>52110</iCost>
 			<Bonus>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_NONSPATIAL</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_NONSPATIAL</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NOVEL_SENSES</Type>
@@ -1960,9 +2042,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_NEUROIMPLANTS</Bonus>
 			</PrereqBonuses>
-			<FreeBonus>BONUS_HUMAN_MOD_NOVEL_SENSES</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_NOVEL_SENSES</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_DRYDOCK</Type>
@@ -2137,11 +2222,7 @@
 			<iCost>6490</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<CommerceChanges>
-				<iCommerce>-1000</iCommerce>
-			</CommerceChanges>
 			<FreeBuilding>BUILDING_SAFETY_ORBITAL_PRISON</FreeBuilding>
-			<iAIWeight>10</iAIWeight>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_PRISON</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ORBITAL_PRISON</MovieDefineTag>
@@ -2161,13 +2242,9 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
 			<iCost>23510</iCost>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PROJECT_GEMINI</Type>
@@ -2222,13 +2299,17 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ROCKET_FUEL_REFINERY</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -2250,9 +2331,12 @@
 			<PrereqTech>TECH_LUMINAL_BEINGS</PrereqTech>
 			<iCost>39510</iCost>
 			<Bonus>BONUS_HUMAN_MOD_INFORMATION_BASED</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_PURE_ENERGY</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_PURE_ENERGY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RADIATION_TOLERANCE</Type>
@@ -2269,9 +2353,12 @@
 			<PrereqTech>TECH_NANOSHIELDING</PrereqTech>
 			<iCost>13810</iCost>
 			<Bonus>BONUS_HUMAN_MOD_HEAT_TOLERANCE</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_RADIATION_TOLERANCE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_RADIATION_TOLERANCE</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROBOTIC_BODY</Type>
@@ -2294,9 +2381,12 @@
 				<BuildingType>BUILDING_ANIMA_CHAMBER</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_ROBOTIC_BODY</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2315,7 +2405,7 @@
 			<PrereqTech>TECH_GALACTIC_FEDERATION</PrereqTech>
 			<iCost>25310</iCost>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-25</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -2378,7 +2468,7 @@
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
 			<iCost>4010</iCost>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-25</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -2492,7 +2582,6 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2547,7 +2636,7 @@
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
 			<iCost>4010</iCost>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-25</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<PrereqOrBuildings>
@@ -2619,8 +2708,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_COMMERCIAL_SATELLITES</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -2671,9 +2761,12 @@
 				<BuildingType>BUILDING_OPTRONIC_SUPERCOMPUTER</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_HUMAN_MOD_INFORMATION_BASED</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_TRANSAPIENT</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_TRANSAPIENT</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2731,7 +2824,6 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iAIWeight>1</iAIWeight>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2794,8 +2886,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PLANETARIUM</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
@@ -2827,9 +2922,12 @@
 			<PrereqTech>TECH_HUMAN_TRANSMUTATION</PrereqTech>
 			<iCost>12810</iCost>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_WINGS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_WINGS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WMAP</Type>
@@ -2853,8 +2951,10 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PHYSICS_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
@@ -2944,14 +3044,18 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<Bonus>BONUS_HUMAN_MOD_NOVEL_SENSES</Bonus>
-			<FreeBonus>BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iAIWeight>1</iAIWeight>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZERO_G_SPORTS_ARENA</Type>

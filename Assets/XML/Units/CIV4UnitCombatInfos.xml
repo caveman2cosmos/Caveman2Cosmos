@@ -978,15 +978,27 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>4</iIntensity>
+					<iIntensity>6</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>4</iIntensity>
+					<iIntensity>-5</iIntensity>
 				</VisibilityIntensityChangeType>
 			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>12</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-4</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/size_fine.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -1002,15 +1014,27 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>3</iIntensity>
+					<iIntensity>4</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>3</iIntensity>
+					<iIntensity>-3</iIntensity>
 				</VisibilityIntensityChangeType>
 			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>6</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-3</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/size_diminutive.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -1032,9 +1056,21 @@
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>2</iIntensity>
+					<iIntensity>-2</iIntensity>
 				</VisibilityIntensityChangeType>
 			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>4</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-2</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/size_tiny.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -1056,9 +1092,21 @@
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>1</iIntensity>
+					<iIntensity>-1</iIntensity>
 				</VisibilityIntensityChangeType>
 			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-1</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/size_small.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -1083,13 +1131,25 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>-1</iIntensity>
+					<iIntensity>-2</iIntensity>
 				</InvisibilityIntensityChangeType>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<iIntensity>-1</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/size_large.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -1105,13 +1165,25 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>-2</iIntensity>
+					<iIntensity>-5</iIntensity>
 				</InvisibilityIntensityChangeType>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<iIntensity>-2</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-2</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/size_huge.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -1127,13 +1199,25 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>-3</iIntensity>
+					<iIntensity>-10</iIntensity>
 				</InvisibilityIntensityChangeType>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<iIntensity>-3</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-3</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>3</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/size_gargantuan.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -1149,13 +1233,25 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>-4</iIntensity>
+					<iIntensity>-20</iIntensity>
 				</InvisibilityIntensityChangeType>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<iIntensity>-4</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-5</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>5</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/size_colossal.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5680,9 +5776,21 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>4</iIntensity>
+					<iIntensity>8</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-1</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-1</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/group_solo.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5697,9 +5805,15 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>3</iIntensity>
+					<iIntensity>6</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-1</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/group_party.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5714,7 +5828,7 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>2</iIntensity>
+					<iIntensity>4</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/group_squad.dds</Button>
@@ -5731,9 +5845,15 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>1</iIntensity>
+					<iIntensity>2</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/group_company.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5743,12 +5863,18 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
-			<InvisibilityIntensityChangeTypes>
-				<InvisibilityIntensityChangeType>
-					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
-					<iIntensity>-1</iIntensity>
-				</InvisibilityIntensityChangeType>
-			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/group_battalion.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5763,13 +5889,31 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>-1</iIntensity>
+					<iIntensity>-2</iIntensity>
 				</InvisibilityIntensityChangeType>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<iIntensity>-2</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/group_forces.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5784,13 +5928,31 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>-2</iIntensity>
+					<iIntensity>-3</iIntensity>
 				</InvisibilityIntensityChangeType>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<iIntensity>-3</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/group_clan.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5805,13 +5967,31 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>-3</iIntensity>
+					<iIntensity>-4</iIntensity>
 				</InvisibilityIntensityChangeType>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<iIntensity>-4</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/group_horde.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5826,13 +6006,31 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>-4</iIntensity>
+					<iIntensity>-5</iIntensity>
 				</InvisibilityIntensityChangeType>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<iIntensity>-5</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/group_multitude.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5847,13 +6045,31 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>-5</iIntensity>
+					<iIntensity>-6</iIntensity>
 				</InvisibilityIntensityChangeType>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<iIntensity>-6</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>3</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/group_millions.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5868,13 +6084,31 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>-6</iIntensity>
+					<iIntensity>-7</iIntensity>
 				</InvisibilityIntensityChangeType>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<iIntensity>-7</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>3</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>3</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/group_billions.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5889,13 +6123,31 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>-7</iIntensity>
+					<iIntensity>-8</iIntensity>
 				</InvisibilityIntensityChangeType>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
 					<iIntensity>-8</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>3</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>3</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>3</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/group_trillions.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -5910,9 +6162,31 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>-8</iIntensity>
+					<iIntensity>-9</iIntensity>
+				</InvisibilityIntensityChangeType>
+				<InvisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>-9</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>4</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>3</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>3</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/group_countless.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -6174,6 +6448,12 @@
 			<iExperiencePercent>150</iExperiencePercent>
 			<iQualityBase>0</iQualityBase>
 			<iUpkeepModifier>-200</iUpkeepModifier>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-4</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_incapable.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -6182,69 +6462,6 @@
 			<iExperiencePercent>120</iExperiencePercent>
 			<iQualityBase>1</iQualityBase>
 			<iUpkeepModifier>-140</iUpkeepModifier>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</OnGameOptions>
-			<VisibilityIntensitySameTileChangeTypes>
-				<VisibilityIntensitySameTileChangeType>
-					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>1</iIntensity>
-				</VisibilityIntensitySameTileChangeType>
-			</VisibilityIntensitySameTileChangeTypes>
-			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_pathetic.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_QUALITY_INFERIOR</Type>
-			<Description>TXT_KEY_UNITCOMBAT_QUALITY_INFERIOR</Description>
-			<iExperiencePercent>90</iExperiencePercent>
-			<iQualityBase>2</iQualityBase>
-			<iUpkeepModifier>-90</iUpkeepModifier>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</OnGameOptions>
-			<VisibilityIntensityChangeTypes>
-				<VisibilityIntensityChangeType>
-					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>1</iIntensity>
-				</VisibilityIntensityChangeType>
-			</VisibilityIntensityChangeTypes>
-			<VisibilityIntensitySameTileChangeTypes>
-				<VisibilityIntensitySameTileChangeType>
-					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>1</iIntensity>
-				</VisibilityIntensitySameTileChangeType>
-			</VisibilityIntensitySameTileChangeTypes>
-			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_inferior.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_QUALITY_POOR</Type>
-			<Description>TXT_KEY_UNITCOMBAT_QUALITY_POOR</Description>
-			<iExperiencePercent>60</iExperiencePercent>
-			<iQualityBase>3</iQualityBase>
-			<iUpkeepModifier>-50</iUpkeepModifier>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</OnGameOptions>
-			<VisibilityIntensityChangeTypes>
-				<VisibilityIntensityChangeType>
-					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>2</iIntensity>
-				</VisibilityIntensityChangeType>
-			</VisibilityIntensityChangeTypes>
-			<VisibilityIntensitySameTileChangeTypes>
-				<VisibilityIntensitySameTileChangeType>
-					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>1</iIntensity>
-				</VisibilityIntensitySameTileChangeType>
-			</VisibilityIntensitySameTileChangeTypes>
-			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_poor.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_QUALITY_MEDIOCRE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_QUALITY_MEDIOCRE</Description>
-			<iExperiencePercent>30</iExperiencePercent>
-			<iQualityBase>4</iQualityBase>
-			<iUpkeepModifier>-20</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6260,35 +6477,20 @@
 					<iIntensity>1</iIntensity>
 				</VisibilityIntensitySameTileChangeType>
 			</VisibilityIntensitySameTileChangeTypes>
-			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_mediocre.dds</Button>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-3</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
+			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_pathetic.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_QUALITY_STANDARD</Type>
-			<Description>TXT_KEY_UNITCOMBAT_QUALITY_STANDARD</Description>
-			<iQualityBase>5</iQualityBase>
-			<OnGameOptions>
-				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
-			</OnGameOptions>
-			<VisibilityIntensityChangeTypes>
-				<VisibilityIntensityChangeType>
-					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>4</iIntensity>
-				</VisibilityIntensityChangeType>
-			</VisibilityIntensityChangeTypes>
-			<VisibilityIntensitySameTileChangeTypes>
-				<VisibilityIntensitySameTileChangeType>
-					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>2</iIntensity>
-				</VisibilityIntensitySameTileChangeType>
-			</VisibilityIntensitySameTileChangeTypes>
-			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_standard.dds</Button>
-		</UnitCombatInfo>
-		<UnitCombatInfo>
-			<Type>UNITCOMBAT_QUALITY_SUPERIOR</Type>
-			<Description>TXT_KEY_UNITCOMBAT_QUALITY_SUPERIOR</Description>
-			<iExperiencePercent>-30</iExperiencePercent>
-			<iQualityBase>6</iQualityBase>
-			<iUpkeepModifier>20</iUpkeepModifier>
+			<Type>UNITCOMBAT_QUALITY_INFERIOR</Type>
+			<Description>TXT_KEY_UNITCOMBAT_QUALITY_INFERIOR</Description>
+			<iExperiencePercent>90</iExperiencePercent>
+			<iQualityBase>2</iQualityBase>
+			<iUpkeepModifier>-90</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6301,17 +6503,23 @@
 			<VisibilityIntensitySameTileChangeTypes>
 				<VisibilityIntensitySameTileChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>2</iIntensity>
+					<iIntensity>1</iIntensity>
 				</VisibilityIntensitySameTileChangeType>
 			</VisibilityIntensitySameTileChangeTypes>
-			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_superior.dds</Button>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-3</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
+			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_inferior.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_QUALITY_EXCEPTIONAL</Type>
-			<Description>TXT_KEY_UNITCOMBAT_QUALITY_EXCEPTIONAL</Description>
-			<iExperiencePercent>-60</iExperiencePercent>
-			<iQualityBase>7</iQualityBase>
-			<iUpkeepModifier>50</iUpkeepModifier>
+			<Type>UNITCOMBAT_QUALITY_POOR</Type>
+			<Description>TXT_KEY_UNITCOMBAT_QUALITY_POOR</Description>
+			<iExperiencePercent>60</iExperiencePercent>
+			<iQualityBase>3</iQualityBase>
+			<iUpkeepModifier>-50</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6327,14 +6535,20 @@
 					<iIntensity>2</iIntensity>
 				</VisibilityIntensitySameTileChangeType>
 			</VisibilityIntensitySameTileChangeTypes>
-			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_exceptional.dds</Button>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-2</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
+			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_poor.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_QUALITY_ELITE</Type>
-			<Description>TXT_KEY_UNITCOMBAT_QUALITY_ELITE</Description>
-			<iExperiencePercent>-90</iExperiencePercent>
-			<iQualityBase>8</iQualityBase>
-			<iUpkeepModifier>90</iUpkeepModifier>
+			<Type>UNITCOMBAT_QUALITY_MEDIOCRE</Type>
+			<Description>TXT_KEY_UNITCOMBAT_QUALITY_MEDIOCRE</Description>
+			<iExperiencePercent>30</iExperiencePercent>
+			<iQualityBase>4</iQualityBase>
+			<iUpkeepModifier>-20</iUpkeepModifier>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6350,14 +6564,18 @@
 					<iIntensity>2</iIntensity>
 				</VisibilityIntensitySameTileChangeType>
 			</VisibilityIntensitySameTileChangeTypes>
-			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_elite.dds</Button>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-2</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
+			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_mediocre.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_QUALITY_EPIC</Type>
-			<Description>TXT_KEY_UNITCOMBAT_QUALITY_EPIC</Description>
-			<iExperiencePercent>-120</iExperiencePercent>
-			<iQualityBase>9</iQualityBase>
-			<iUpkeepModifier>140</iUpkeepModifier>
+			<Type>UNITCOMBAT_QUALITY_STANDARD</Type>
+			<Description>TXT_KEY_UNITCOMBAT_QUALITY_STANDARD</Description>
+			<iQualityBase>5</iQualityBase>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -6373,6 +6591,110 @@
 					<iIntensity>2</iIntensity>
 				</VisibilityIntensitySameTileChangeType>
 			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-1</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
+			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_standard.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_QUALITY_SUPERIOR</Type>
+			<Description>TXT_KEY_UNITCOMBAT_QUALITY_SUPERIOR</Description>
+			<iExperiencePercent>-30</iExperiencePercent>
+			<iQualityBase>6</iQualityBase>
+			<iUpkeepModifier>20</iUpkeepModifier>
+			<OnGameOptions>
+				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+			</OnGameOptions>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>9</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-1</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
+			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_superior.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_QUALITY_EXCEPTIONAL</Type>
+			<Description>TXT_KEY_UNITCOMBAT_QUALITY_EXCEPTIONAL</Description>
+			<iExperiencePercent>-60</iExperiencePercent>
+			<iQualityBase>7</iQualityBase>
+			<iUpkeepModifier>50</iUpkeepModifier>
+			<OnGameOptions>
+				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+			</OnGameOptions>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>10</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_exceptional.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_QUALITY_ELITE</Type>
+			<Description>TXT_KEY_UNITCOMBAT_QUALITY_ELITE</Description>
+			<iExperiencePercent>-90</iExperiencePercent>
+			<iQualityBase>8</iQualityBase>
+			<iUpkeepModifier>90</iUpkeepModifier>
+			<OnGameOptions>
+				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+			</OnGameOptions>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>2</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>11</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
+			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_elite.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_QUALITY_EPIC</Type>
+			<Description>TXT_KEY_UNITCOMBAT_QUALITY_EPIC</Description>
+			<iExperiencePercent>-120</iExperiencePercent>
+			<iQualityBase>9</iQualityBase>
+			<iUpkeepModifier>140</iUpkeepModifier>
+			<OnGameOptions>
+				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
+			</OnGameOptions>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>12</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_epic.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -6387,15 +6709,15 @@
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>9</iIntensity>
+					<iIntensity>13</iIntensity>
 				</VisibilityIntensityChangeType>
 			</VisibilityIntensityChangeTypes>
-			<VisibilityIntensitySameTileChangeTypes>
-				<VisibilityIntensitySameTileChangeType>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>2</iIntensity>
-				</VisibilityIntensitySameTileChangeType>
-			</VisibilityIntensitySameTileChangeTypes>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/combat_quality_divine.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -7111,15 +7433,27 @@
 			<InvisibilityIntensityChangeTypes>
 				<InvisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>6</iIntensity>
+					<iIntensity>20</iIntensity>
 				</InvisibilityIntensityChangeType>
 			</InvisibilityIntensityChangeTypes>
 			<VisibilityIntensityChangeTypes>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
-					<iIntensity>6</iIntensity>
+					<iIntensity>-8</iIntensity>
 				</VisibilityIntensityChangeType>
 			</VisibilityIntensityChangeTypes>
+			<VisibilityIntensitySameTileChangeTypes>
+				<VisibilityIntensitySameTileChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>26</iIntensity>
+				</VisibilityIntensitySameTileChangeType>
+			</VisibilityIntensitySameTileChangeTypes>
+			<VisibilityIntensityRangeChangeTypes>
+				<VisibilityIntensityRangeChangeType>
+					<InvisibleType>INVISIBLE_SIZE</InvisibleType>
+					<iIntensity>-5</iIntensity>
+				</VisibilityIntensityRangeChangeType>
+			</VisibilityIntensityRangeChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/size_fine.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -7145,6 +7479,21 @@
 			<Description>TXT_KEY_UNITCOMBAT_RELIGION_BAHAI</Description>
 			<ReligionType>RELIGION_BAHAI</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_bahai.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_PACIFIST</Type>
+			<Description>TXT_KEY_UNITCOMBAT_PACIFIST</Description>
+			<bCannotMergeSplit>1</bCannotMergeSplit>
+			<Button>Art/Interface/Buttons/Units/Categories/Pacifist.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_EXILE</Type>
+			<Description>TXT_KEY_UNIT_EXILE</Description>
+			<iExcileChange>1</iExcileChange>
+			<iBarbCoExistChange>1</iBarbCoExistChange>
+			<bIgnoreZoneofControlAdd>1</bIgnoreZoneofControlAdd>
+			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
+			<Button>Art/Interface/Buttons/Units/Categories/Exile.dds</Button>
 		</UnitCombatInfo>
 	</UnitCombatInfos>
 </Civ4UnitCombatInfos>

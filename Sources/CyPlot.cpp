@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
 #include "CvMap.h"
 #include "CvPlot.h"
 #include "CyArea.h"
@@ -133,11 +134,6 @@ int /*PlayerTypes*/ CyPlot::calculateCulturalOwner() const
 bool CyPlot::isOwned() const
 {
 	return m_pPlot ? m_pPlot->isOwned() : false;
-}
-
-bool CyPlot::isBarbarian() const
-{
-	return m_pPlot ? m_pPlot->isBarbarian() : false;
 }
 
 bool CyPlot::isNPC() const
@@ -411,26 +407,6 @@ void CyPlot::setOwnershipDuration(int iNewValue)
 	if (m_pPlot) m_pPlot->setOwnershipDuration(iNewValue);
 }
 
-void CyPlot::changeOwnershipDuration(int iChange)
-{
-	if (m_pPlot) m_pPlot->changeOwnershipDuration(iChange);
-}
-
-int CyPlot::getImprovementDuration() const
-{
-	return m_pPlot ? m_pPlot->getImprovementDuration() : -1;
-}
-
-void CyPlot::setImprovementDuration(int iNewValue)
-{
-	if (m_pPlot) m_pPlot->setImprovementDuration(iNewValue);
-}
-
-void CyPlot::changeImprovementDuration(int iChange)
-{
-	if (m_pPlot) m_pPlot->changeImprovementDuration(iChange);
-}
-
 int /*BonusTypes*/ CyPlot::getBonusType(int /*TeamTypes*/ eTeam) const
 {
 	return m_pPlot ? m_pPlot->getBonusType((TeamTypes)eTeam) : -1;
@@ -568,14 +544,14 @@ int CyPlot::getInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*Invisible
 	return m_pPlot ? m_pPlot->getInvisibleVisibilityCount((TeamTypes) eTeam, (InvisibleTypes) eInvisible) : -1;
 }
 
-bool CyPlot::isInvisibleVisible(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible) const
+bool CyPlot::isSpotterInSight(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible) const
 {
-	return m_pPlot ? m_pPlot->isInvisibleVisible((TeamTypes) eTeam, (InvisibleTypes) eInvisible) : -1;
+	return m_pPlot ? m_pPlot->isSpotterInSight((TeamTypes) eTeam, (InvisibleTypes) eInvisible) : false;
 }
 
-void CyPlot::changeInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible, int iChange, int iIntensity)
+void CyPlot::changeInvisibleVisibilityCount(int iTeam, int iInvisible, int iChange)
 {
-	if (m_pPlot) m_pPlot->changeInvisibleVisibilityCount((TeamTypes) eTeam, (InvisibleTypes) eInvisible, iChange, iIntensity);
+	if (m_pPlot) m_pPlot->changeInvisibleVisibilityCount((TeamTypes) iTeam, (InvisibleTypes) iInvisible, iChange);
 }
 
 python::list CyPlot::units() const
@@ -625,6 +601,20 @@ bool CyPlot::isInViewport() const
 CyPlot* CyPlot::cloneToViewport() const
 {
 	return new CyPlot(m_pPlot, true);
+}
+
+python::list CyPlot::adjacent() const
+{
+	python::list list = python::list();
+
+	if (m_pPlot)
+	{
+		foreach_(CvPlot* plot, m_pPlot->adjacent())
+		{
+			list.append(CyPlot(plot));
+		}
+	}
+	return list;
 }
 
 python::list CyPlot::rect(int halfWid, int halfHgt) const

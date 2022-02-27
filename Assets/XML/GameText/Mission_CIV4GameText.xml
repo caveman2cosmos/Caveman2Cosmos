@@ -23,7 +23,7 @@
 		<English>Select an air unit that can airbomb, select the airbomb defense mission, then click on the target city to reduce defense, or target improvement to destroy it.</English>
 		<French>Sélectionnez une unité aérienne capable de bombarder, puis la mission de bombardement de défenses. Cliquez ensuite sur la cible pour réduire son pourcentage de défense ou ciblez une amélioration de terrain pour la détruire.</French>
 		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, aktivieren Sie die Mission "Luftbombardierung Verteidigungen" und klicken Sie dann auf die Zielstadt, um deren Verteidigung zu schwächen, oder auf eine Modernisierung, um diese zu zerstören.</German>
-		<Italian>Seleziona un'unità aerea in grado di bombardare, quindi "Bombarda difese" e poi clicca sulla città bersaglio per ridurne le difese, oppure sul miglioramento bersaglio per distruggerlo.</Italian>
+		<Italian>Seleziona un'unità aerea, clicca su "Bombarda difese" e poi clicca su una città per abbatterne le difese oppure su un'infrastruttura per distruggerla.</Italian>
 		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardear defensas" y haz clic en la ciudad objetivo (para reducir su defensa) o en la mejora objetivo (para destruirla).</Spanish>
 		<Polish>Wybierz jednostkę powietrzną, która może wykonać bombardowanie, wybierz misję bombardowania umocnień, a następnie kliknij na mieście aby zredukować jego obronę lub na udoskonaleniu aby je zniszczyć.</Polish>
 		<Russian>Выберите воздушный юнит, который может осуществлять бомбардировку, поручите ему бомбардировку укреплений, а затем щелкните либо город, чтобы уменьшить его показатель защиты, либо объект, чтобы уничтожить его.</Russian>
@@ -43,7 +43,7 @@
 		<English>Select an air unit that can airbomb, select the airbomb building mission, then click on the target city to attempt to destroy one civil building.</English>
 		<French>Sélectionnez une unité aérienne capable de bombarder, puis la mission de bombardement de bâtiments civils. Cliquez ensuite sur la cible pour tenter de détruire un bâtiment civil.</French>
 		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, wählen Sie die Mission "Luftbombardierung Gebäude" und klicken Sie dann auf die Zielstadt, um zu versuchen, dort ein ziviles Gebäude zu zerstören.</German>
-		<Italian>Seleziona un'unità aerea in grado di bombardare, quindi "Bombarda edifici", poi clicca sulla città bersaglio per cercare di distruggere un edificio civile.</Italian>
+		<Italian>Seleziona un'unità aerea, clicca su "Bombarda edifici" e poi clicca su una città per cercare di distruggere un edificio civile.</Italian>
 		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardear edificios" y haz clic en la ciudad objetivo para intentar destruir un edificio civil.</Spanish>
 		<Polish>Wybierz jednostkę powietrzną, która może wykonać bombardowanie, wybierz misję bombardowania budynku, a następnie kliknij na mieście aby zniszczyć w nim jeden budynek cywilny.</Polish>
 		<Russian>Выберите воздушный юнит, который может осуществлять бомбардировку, поручите ему бомбардировку зданий, а затем щелкните город, в котором нужно уничтожить здание мирного назначения.</Russian>
@@ -63,7 +63,7 @@
 		<English>Select an air unit that can airbomb, select the airbomb production mission, then click on the target city to attempt to destroy one factory.</English>
 		<French>Sélectionnez une unité aérienne capable de bombarder, puis la mission de bombardement d'infrastructure de production. Cliquez ensuite sur la cible pour tenter de détruire une usine.</French>
 		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, aktivieren Sie die Mission "Luftbombardierung Produktion" und klicken Sie dann auf die Zielstadt, um zu versuchen, dort eine Fabrik zu zerstören.</German>
-		<Italian>Seleziona un'unità aerea in grado di bombardare, quindi "Bombarda produzione", poi clicca sulla città bersaglio per cercare di distruggere una fabbrica.</Italian>
+		<Italian>Seleziona un'unità aerea, clicca su "Bombarda fabbriche" e poi clicca su una città per cercare di distruggere una fabbrica.</Italian>
 		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardear fábricas" y haz clic en la ciudad objetivo para intentar destruir una fábrica.</Spanish>
 		<Polish>Wybierz jednostkę powietrzną, która może wykonać bombardowanie, wybierz misję bombardowania fabryki, a następnie kliknij na mieście aby zniszczyć w nim jeden budynek produkcyjny.</Polish>
 		<Russian>Выберите воздушный юнит, который может осуществлять бомбардировку, поручите ему бомбардировку заводов, а затем щелкните город, в котором нужно уничтожить производственную структуру.</Russian>
@@ -83,7 +83,7 @@
 		<English>Select an air unit that can airbomb, select the port airbomb mission, then click on the target city to damage and attempt to sink a ship.</English>
 		<French>Sélectionnez une unité aérienne capable de bombarder, puis la mission de bombardement du port. Cliquez ensuite sur la ville ciblée et essayer de couler un navire.</French>
 		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, aktivieren Sie die Mission "Luftbombardierung Häfen" und klicken Sie dann auf die Zielstadt, um zu versuchen, dort ein Schiff zu beschädigen oder zu versenken.</German>
-		<Italian>Seleziona un'unità aerea in grado di bombardare, quindi "Bombarda porto", poi clicca sulla città bersaglio per cercare di danneggiare o affondare una nave.</Italian>
+		<Italian>Seleziona un'unità aerea, clicca su "Bombarda porto" e poi clicca su una città per cercare di danneggiare o affondare una nave.</Italian>
 		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardear puerto" y haz clic en la ciudad objetivo para intentar dañar o hundir un navío.</Spanish>
 		<Polish>Wybierz jednostkę powietrzną, która może wykonać bombardowanie, wybierz misję bombardowania portu, a następnie kliknij na mieście aby uszkodzić lub zatopić znajdujący się w nim statek.</Polish>
 		<Russian>Выберите воздушный юнит, который может осуществлять бомбардировку, поручите ему бомбардировку портов, а затем щелкните город, в порту которого стоит корабль.</Russian>
@@ -103,7 +103,7 @@
 		<English>Select an air unit that can airbomb, select the strategic airbomb mission, then click on the target city to damage the current production project.</English>
 		<French>Sélectionnez une unité aérienne capable de bombarder, puis la mission de bombardement stratégique. Cliquez ensuite sur la ville ciblée pour tenter de détruire son projet de construction actuel.</French>
 		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, aktivieren Sie die Mission "Strategische Luftbombardierung" und klicken Sie dann auf die Zielstadt, um zu versuchen, dort die aktuelle Produktion zu zerstören.</German>
-		<Italian>Seleziona un'unità aerea in grado di bombardare, quindi "Bombardamento strategico", poi clicca sulla città bersaglio per danneggiare la produzione in corso.</Italian>
+		<Italian>Seleziona un'unità aerea, clicca su "Bombardamento strategico" e poi clicca su una città per cercare di danneggiarne la produzione corrente.</Italian>
 		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardeo estratégico" y haz clic en la ciudad objetivo para dañar la producción en curso.</Spanish>
 		<Polish>Wybierz jednostkę powietrzną, która może wykonać bombardowanie, wybierz misję bombardowania strategicznego, a następnie kliknij na mieście aby uszkodzić jego aktualną produkcję.</Polish>
 		<Russian>Выберите воздушный юнит, который может осуществлять бомбардировку, поручите ему бомбардировку стратегических целей и щелкните город, в котором создается важный объект.</Russian>
@@ -113,7 +113,7 @@
 		<English>Destroys city fortifications and tile improvements.</English>
 		<French>Détruire les fortifications de la ville et les aménagements des cases.</French>
 		<German>Zerstören Sie Befestigungen und Modernisierungen.</German>
-		<Italian>Distrugge le fortificazioni delle città e i miglioramenti delle caselle.</Italian>
+		<Italian>Distrugge le fortificazioni della città e le infrastrutture adiacenti.</Italian>
 		<Spanish>Destruye fortificaciones de ciudades y mejoras de casillas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -129,19 +129,21 @@
 		<English>Airlifts the unit to another city.</English>
 		<French>Transport aérien de l'unité vers une autre ville.</French>
 		<German>Fliegen Sie die Einheit in eine andere Stadt.</German>
-		<Italian>L'unità viene trasportata in aereo verso un'altra città.</Italian>
+		<Italian>Trasporta un'unità verso un'altra città per via aerea.</Italian>
 		<Spanish>Para aerotransportar a la unidad a otra ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_AMBUSH</Tag>
 		<English>Ambush enemy Units on the same tile!</English>
 		<French>Tendre une Embuscade aux ennemis sur la même case!</French>
+		<Italian>Tendi un'imboscata alle unità nemiche sulla stessa casella!</Italian>
 		<Russian>Устройте засаду вражеским отрядам на этой клетке!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_AMBUSH_HELP</Tag>
-		<English>Attacks best defender of enemy target(s) on same plot. WARNING:You should only have one unit selected at a time for this or else it will always choose the first available unit to attack with and will not show an accurate odds assessment.</English>
+		<English>Attacks best defender of enemy target(s) on same plot. WARNING: You should only have one unit selected at a time for this or else it will always choose the first available unit to attack with and will not show an accurate odds assessment.</English>
 		<French>Attaque le meilleur défenseur ennemi sur la même case. ATTENTION: Action à exécuter avec une seule unité sélectionnée. Sinon le combat sera lancé avec la première unité dans la liste!</French>
+		<Italian>Attacca l'unità nemica con la migliore difesa sulla stessa casella. ATTENZIONE: seleziona solo un'unità alla volta per questa azione oppure il sistema sceglierà la prima unità disponibile per attaccare (quindi le statistiche sulla probabilità di riuscita potrebbero essere falsate).</Italian>
 		<Russian>Атакует лучшего защитника среди вражеской цели(ей) на той же клетке. ВНИМАНИЕ: для этого нужно выбирать лишь один отряд за раз, иначе он всегда будет выбирать первый доступный отряд для атаки и покажет точную оценку шансов.</Russian>
 	</TEXT>
 	<TEXT>
@@ -149,7 +151,7 @@
 		<English>Assassinate Unit</English>
 		<French>Assassiner Unité</French>
 		<German>Einheit ermorden</German>
-		<Italian>Assassinio</Italian>
+		<Italian>Assassinare un unità</Italian>
 		<Spanish>Asesinar unidad</Spanish>
 		<Polish>Skrytobójstwo</Polish>
 		<Russian>Отравить отряд</Russian>
@@ -158,12 +160,14 @@
 		<Tag>TXT_KEY_MISSION_ASSASSINATE</Tag>
 		<English>Assassinate enemy Units on the same tile!</English>
 		<French>Assassiner une unité ennemie de la même case!</French>
+		<Italian>Uccidi unità nemiche sulla stessa casella!</Italian>
 		<Russian>Убейте вражеские юниты на этой клетке!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ASSASSINATE_HELP</Tag>
-		<English>Attacks best defender of enemy target(s)(among unit types that this unit will target first in a stack) on same plot. Works inside a city. WARNING: You should only have one unit selected for this action.</English>
+		<English>Attacks best defender of enemy target(s), among unit types that this unit will target first in a stack, on same plot. Works inside a city. WARNING: You should only have one unit selected for this action.</English>
 		<French>Attaque le meilleur défenseur de la cible ennemie présente sur la même case. Utilisable dans une ville. ATTENTION: ne sélectionner qu'une seule unité pour cette action.</French>
+		<Italian>Attacca l'unità nemica con la migliore difesa sulla stessa casella, tra i tipi di unità che questa unità può attaccare per prima. Funziona all'interno di una città. ATTENZIONE: seleziona solo un'unità alla volta per questa azione.</Italian>
 		<Russian>Атакует лучшего защитника среди вражеской цели(ей) (из числа однородных с ним отрядов в стеке) на той же клетке. Работает внутри города. ВНИМАНИЕ: для этого действия у вас должен быть выбран лишь один отряд.</Russian>
 	</TEXT>
 	<TEXT>
@@ -399,20 +403,6 @@
 		<Spanish>Hace que el gran personaje descubra automáticamente una tecnología, consumiéndose en el proceso.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_ESCAPE</Tag>
-		<English>Plan Escape Routes</English>
-		<French>Prévoir des échapatoires</French>
-		<Polish>Plan dróg ucieczek</Polish>
-		<Russian>Составить схему эвакуации</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_ESCAPE_HELP</Tag>
-		<English>The unit maps out its surroundings and forms plans for escape in case it comes under attack. A unit gets a 4%% bonus to its Withdrawal Probability for each turn it is Planning Escape Routes, to a maximum bonus of 20%%.</English>
-		<French>L'unité cartographie ses environs et prépare des plans d'évasion en cas d'attaque. Une unité obtient un bonus de 4%% au chances de retraite pour chaque tour dépensé, avec un bonus maximum de 20%%.</French>
-		<Polish>Jednostka sprawdza okoliczny teren i opracowuje plany alternatywnej ucieczki. Jednostka otrzymuje bonus 4% do szansy na Ucieczkę z pola bitwy (max 20%)</Polish>
-		<Russian>Подразделение составляет карту окрестностей и планы отступления в случае нападения. Отряд получает бонус 4%% к вероятности отступить за каждый ход, а с планированием путей эвакуации обретается максимальный бонус в 20%%.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_ESPIONAGE_SLEEP</Tag>
 		<English>Gather Intel</English>
 		<French>Récolte d'Infos</French>
@@ -431,20 +421,6 @@
 		<Spanish>Esta unidad recopilará información y no se activará hasta que alcance la máxima bonificación por espionaje.</Spanish>
 		<Polish>Jednostka będzie zbierać dane i nie obudzi się dopóki nie zbierze kompletnych danych(maksymalnego bonusu do szpiegostwa).</Polish>
 		<Russian>Этот юнит соберет сведения и не проснется, пока не достигает максимального бонуса шпионажа</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_ESTABLISH</Tag>
-		<English>Establish Base of Operations</English>
-		<French>Établir une Base d'Opérations</French>
-		<Polish>Utwórz Bazę Operacji</Polish>
-		<Russian>Создать базу операций</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_ESTABLISH_HELP</Tag>
-		<English>The unit establishes a base of operations for healing and repair support. A unit that heals gets a 2%% bonus to any type of healing support abilities it already has for each turn it is Establishing Operations, to a maximum bonus of 10%%.</English>
-		<Polish>Jednostka utworzyła bazę operacyjna dla wsparcia medycznego i naprawczego. Za każdą turę przebywania w bazie, jednostka dostaje bonus 2% do leczenia/naprawy (max 10%).</Polish>
-		<French>L'unité établit une base d'opérations pour le soutien de guérison et de réparation. Une unité qui soigne obtient un bonus de 2%% pour tout type de capacités de soutien de guérison qu'elle a déjà pour chaque tour où elle établit des opérations, jusqu'à un bonus maximum de 10%%.</French>
-		<Russian>Подразделение создает базу для операций по лечению и восстановлению. Исцеляющий отряд получает бонус 2%% на каждый ход к любому типу навыков исцеления, уже изученным им, а также операции по установлению, с максимальным бонусом в 10%%.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_FENGAGE</Tag>
@@ -1189,7 +1165,7 @@
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_DISTANT_COSMOS</Tag>
 		<English>Transfer unit to Distant Cosmos</English>
 	</TEXT>
-<TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_EARTH</Tag>
 		<English>Transfer unit to Earth</English>
 	</TEXT>
@@ -1249,4 +1225,4 @@
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_VIRGO_SUPERCLUSTER</Tag>
 		<English>Transfer unit to Virgo Superscluster</English>
 	</TEXT>
-	</Civ4GameText>
+</Civ4GameText>

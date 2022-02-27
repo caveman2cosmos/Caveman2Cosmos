@@ -50,7 +50,6 @@ void CyTeamPythonInterface()
 		.def("hasHeadquarters", &CyTeam::hasHeadquarters, "bool (int (CorporationTypes) eCorporation) - does this team have eCorporation's headquarters?")
 
 		.def("isHuman", &CyTeam::isHuman, "bool () - is human team?")
-		.def("isBarbarian", &CyTeam::isBarbarian, "bool () - is barbarian team?")
 		.def("isNPC", &CyTeam::isNPC, "bool () - is NPC team?")
 		.def("isHominid", &CyTeam::isNPC, "bool () - is Hominid team?")
 		.def("isMinorCiv", &CyTeam::isMinorCiv)

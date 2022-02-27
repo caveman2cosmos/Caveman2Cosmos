@@ -55,7 +55,6 @@ public:
 	bool isAdjacentPlayer(int /*PlayerTypes*/ ePlayer, bool bLandOnly) const;
 	int /*PlayerTypes*/ calculateCulturalOwner() const;
 	bool isOwned() const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isVisible(int /*TeamTypes*/ eTeam, bool bDebug) const;
@@ -90,11 +89,6 @@ public:
 	int getOwnershipDuration() const;
 	bool isOwnershipScore() const;
 	void setOwnershipDuration(int iNewValue);
-	void changeOwnershipDuration(int iChange);
-
-	int getImprovementDuration() const;
-	void setImprovementDuration(int iNewValue);
-	void changeImprovementDuration(int iChange);
 
 	int getUpgradeTimeLeft(int /*ImprovementTypes*/ eImprovement, int /*PlayerTypes*/ ePlayer) const;
 	void changeImprovementUpgradeProgress(int iChange);
@@ -160,8 +154,8 @@ public:
 	void setRevealed(int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly, int /*TeamTypes*/ eFromTeam);
 
 	int getInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible) const;
-	bool isInvisibleVisible(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible) const;
-	void changeInvisibleVisibilityCount(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible, int iChange, int iIntensity);
+	bool isSpotterInSight(int /*TeamTypes*/ eTeam, int /*InvisibleTypes*/ eInvisible) const;
+	void changeInvisibleVisibilityCount(int iTeam, int iInvisible, int iChange);
 
 	python::list units() const;
 	int getNumUnits() const;
@@ -176,6 +170,7 @@ public:
 	bool isInViewport() const;
 	CyPlot* cloneToViewport() const;
 
+	python::list adjacent() const;
 	python::list rect(int halfWid, int halfHgt) const;
 
 private:

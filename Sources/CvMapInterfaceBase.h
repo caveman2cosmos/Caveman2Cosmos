@@ -12,10 +12,9 @@
 //-----------------------------------------------------------------------------
 //
 
-#include "CvPlot.h"
-
 class CvCity;
 class CvMapExternal;
+class CvPlot;
 
 //
 // holds initialization info
@@ -38,7 +37,7 @@ struct CvMapInitData
 //
 // CvMapInterfaceBase
 //
-class CvMapInterfaceBase : bst::noncopyable
+class CvMapInterfaceBase
 {
 public:
 	CvMapInterfaceBase();

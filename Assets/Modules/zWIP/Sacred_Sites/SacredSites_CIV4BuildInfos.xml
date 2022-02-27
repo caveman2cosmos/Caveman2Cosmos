@@ -7,8 +7,8 @@
 			<Description>TXT_KEY_BUILD_MESOAMERICAN_TEMPLE</Description>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iTime>400</iTime>
-			<iCost>100</iCost>
-			<bKill>1</bKill>
+			<iCost>50</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MESOAMERICAN_TEMPLE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
@@ -18,7 +18,6 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CITY_RUINS</FeatureType>
@@ -46,7 +45,7 @@
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
-			<bKill>1</bKill>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_STONE_CIRCLE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
@@ -56,7 +55,6 @@
 					<iTime>400</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_MANGROVE</FeatureType>
@@ -64,7 +62,6 @@
 					<iTime>400</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -72,7 +69,6 @@
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
@@ -80,7 +76,6 @@
 					<iTime>300</iTime>
 					<iProduction>40</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_BAMBOO</FeatureType>
@@ -88,7 +83,6 @@
 					<iTime>300</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -96,7 +90,6 @@
 					<iTime>200</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
@@ -104,7 +97,6 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CITY_RUINS</FeatureType>
@@ -145,7 +137,7 @@
 			<Description>TXT_KEY_BUILD_ASIAN_TEMPLE</Description>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iTime>400</iTime>
-			<iCost>150</iCost>
+			<iCost>100</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_ASIAN_TEMPLE</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -159,8 +151,8 @@
 			<Description>TXT_KEY_BUILD_PYRAMIDS</Description>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iTime>500</iTime>
-			<iCost>100</iCost>
-			<bKill>1</bKill>
+			<iCost>50</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_PYRAMIDS</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
@@ -170,7 +162,6 @@
 					<iTime>400</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_MANGROVE</FeatureType>
@@ -178,7 +169,6 @@
 					<iTime>400</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -186,7 +176,6 @@
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -194,7 +183,6 @@
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
@@ -202,7 +190,6 @@
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -238,7 +225,6 @@
 					<iTime>300</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CACTUS</FeatureType>
@@ -253,7 +239,6 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -434,7 +419,7 @@
 			<Description>TXT_KEY_BUILD_ZIGGURAT</Description>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<iTime>400</iTime>
-			<iCost>200</iCost>
+			<iCost>150</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_ZIGGURAT</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -445,7 +430,6 @@
 					<iTime>400</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_MANGROVE</FeatureType>
@@ -453,7 +437,6 @@
 					<iTime>400</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -461,7 +444,6 @@
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -469,7 +451,6 @@
 					<iTime>300</iTime>
 					<iProduction>30</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
@@ -477,7 +458,6 @@
 					<iTime>500</iTime>
 					<iProduction>60</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -513,7 +493,6 @@
 					<iTime>300</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CACTUS</FeatureType>
@@ -528,7 +507,6 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>

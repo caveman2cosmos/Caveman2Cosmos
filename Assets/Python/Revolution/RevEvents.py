@@ -80,8 +80,6 @@ def init(newCustomEM, RevOptHandle):
 
 	customEM.setPopupHandler( RevDefs.assimilationPopup, ["assimilationPopup", assimilateHandler, blankHandler] )
 
-	RevUtils.initCivicsList()
-
 
 def removeEventHandlers():
 	print "Removing event handlers from RevEvents"
@@ -397,41 +395,39 @@ def onCityBuilt( argsList ):
 				print "[REV] New rebel city %s given rebel religion" % city.getName()
 			city.setHasReligion(relID, True, False, False)
 
-def onCityAcquired( argsList ):
-	owner,playerType,pCity,bConquest,bTrade = argsList
+def onCityAcquired(argsList):
+	iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
 
 	checkRebelBonuses( argsList )
 	updateRevolutionIndices( argsList )
 
 	# Init city script data (unit spawn counter, rebel player)
-	iRevCiv = RevData.getCityVal(pCity, 'RevolutionCiv')
-	RevData.initCity(pCity)
-	RevData.setCityVal( pCity, 'RevolutionCiv', iRevCiv )
+	iRevCiv = RevData.getCityVal(city, 'RevolutionCiv')
+	RevData.initCity(city)
+	RevData.setCityVal(city, 'RevolutionCiv', iRevCiv)
 
-	iTurns = pCity.getOccupationTimer()
-	pCity.setRevolutionCounter( max([int(1.5*iTurns),3]) )
+	iTurns = city.getOccupationTimer()
+	city.setRevolutionCounter( max([int(1.5*iTurns),3]) )
 
 
 def checkRebelBonuses(argsList):
 	# Give bonuses to a rebel player who successfully captures one of their rebellious cities
-	owner, playerType, pCity, bConquest, bTrade = argsList
+	iOwnerOld, iOwnerNew, pCity, bConquest, bTrade = argsList
 
-	newOwnerID = pCity.getOwner()
-	newOwner = GC.getPlayer(newOwnerID)
+	newOwner = GC.getPlayer(iOwnerNew)
 	newOwnerCiv = newOwner.getCivilizationType()
-	oldOwnerID = pCity.getPreviousOwner()
 	orgOwnerID = pCity.getOriginalOwner()
 
 	# TODO: Handle case where city is acquired by disorganized rebels
-	if newOwnerID == GC.getBARBARIAN_PLAYER() and pCity.getRevolutionCounter() > 0:
+	if iOwnerNew == GC.getBARBARIAN_PLAYER() and pCity.getRevolutionCounter() > 0:
 		print "[REV] City %s captured by barb rebels!" % pCity.getName()
-		oldOwner = GC.getPlayer(oldOwnerID)
+		oldOwner = GC.getPlayer(iOwnerOld)
 
-		if not oldOwnerID == orgOwnerID:
+		if not iOwnerOld == orgOwnerID:
 			orgOwner = GC.getPlayer(orgOwnerID)
 
 		if pCity.countTotalCultureTimes100() > 100*100:
-			if not oldOwnerID == pCity.findHighestCulture():
+			if not iOwnerOld == pCity.findHighestCulture():
 				cultOwner = GC.getPlayer(pCity.findHighestCulture())
 
 	elif newOwnerCiv == RevData.getCityVal(pCity, 'RevolutionCiv'):
@@ -441,7 +437,7 @@ def checkRebelBonuses(argsList):
 			print "[REV] Rebellious pCity %s is captured by rebel identity %s (%d)!!!" %(pCity.getName(), newOwner.getCivilizationDescription(0), newOwnerCiv)
 
 			newOwnerTeam = GC.getTeam(newOwner.getTeam())
-			oldOwner = GC.getPlayer(oldOwnerID)
+			oldOwner = GC.getPlayer(iOwnerOld)
 			oldOwnerTeam = GC.getTeam(oldOwner.getTeam())
 			if oldOwnerTeam.isAVassal():
 				for teamID in xrange(MAX_PC_TEAMS):
@@ -467,21 +463,21 @@ def checkRebelBonuses(argsList):
 				sound = "AS2D_CITY_REVOLT"
 				eMsgType = InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT
 				iMsgTime = GC.getEVENT_MESSAGE_TIME()
-				CvUtil.sendMessage(szTxt, newOwnerID, iMsgTime, icon, ColorTypes(8), ix, iy, True, True, eMsgType, sound, False)
+				CvUtil.sendMessage(szTxt, iOwnerNew, iMsgTime, icon, ColorTypes(8), ix, iy, True, True, eMsgType, sound, False)
 
 				szTxt = TRNSLTR.getText("TXT_KEY_REV_MESS_REBEL_CONTROL",())%(newOwner.getCivilizationDescription(0),pCity.getName())
-				CvUtil.sendMessage(szTxt, oldOwnerID, iMsgTime, None, ColorTypes(7), eMsgType=eMsgType, bForce=False)
+				CvUtil.sendMessage(szTxt, iOwnerOld, iMsgTime, None, ColorTypes(7), eMsgType=eMsgType, bForce=False)
 
 				# Gold
 				iGold = GAME.getSorenRandNum(min([80,8*pCity.getPopulation()]), 'Rev') + 8
 				szTxt = TRNSLTR.getText("TXT_KEY_REV_MESS_YOUR_CAPTURE_GOLD",()) %(pCity.getName(),iGold)
-				CvUtil.sendMessage(szTxt, newOwnerID, iMsgTime, icon, ColorTypes(8), ix, iy, False, False, eMsgType, sound, False)
+				CvUtil.sendMessage(szTxt, iOwnerNew, iMsgTime, icon, ColorTypes(8), ix, iy, False, False, eMsgType, sound, False)
 				newOwner.changeGold(iGold)
 
 				# Culture
-				newCulVal = int( revCultureModifier*max([pCity.getCulture(oldOwnerID),pCity.countTotalCultureTimes100()/200]) )
-				newPlotVal = int( revCultureModifier*max([pCity.plot().getCulture(oldOwnerID),pCity.plot().countTotalCulture()/2]) )
-				RevUtils.giveCityCulture( pCity, newOwnerID, newCulVal, newPlotVal)
+				newCulVal = int( revCultureModifier*max([pCity.getCulture(iOwnerOld),pCity.countTotalCultureTimes100()/200]) )
+				newPlotVal = int( revCultureModifier*max([pCity.plot().getCulture(iOwnerOld),pCity.plot().countTotalCulture()/2]) )
+				RevUtils.giveCityCulture( pCity, iOwnerNew, newCulVal, newPlotVal)
 
 				# Extra units
 				if iWorker != -1:
@@ -534,14 +530,14 @@ def checkRebelBonuses(argsList):
 						if not newOwner.getCitiesLost():
 							# By verifying they've never lost a city, gaurantee it doesn't happen multiple times
 							szTxt = TRNSLTR.getText("TXT_KEY_REV_MESS_GOLDEN_AGE",())
-							CvUtil.sendMessage(szTxt, newOwnerID, iMsgTime, icon, ColorTypes(8), ix, iy, False, False, eMsgType, sound, False)
+							CvUtil.sendMessage(szTxt, iOwnerNew, iMsgTime, icon, ColorTypes(8), ix, iy, False, False, eMsgType, sound, False)
 							newOwner.changeGoldenAgeTurns( int(1.5*GAME.goldenAgeLength()) )
 
 			else: # Conqueror not considered a rebel, fewer benefits
 				# Culture
-				newCulVal = int(revCultureModifier*max([pCity.getCulture(oldOwnerID)/2,pCity.countTotalCultureTimes100()/400]))
-				newPlotVal = int(revCultureModifier*max([pCity.plot().getCulture(oldOwnerID)/2,pCity.plot().countTotalCulture()/4]))
-				RevUtils.giveCityCulture(pCity, newOwnerID, newCulVal, newPlotVal)
+				newCulVal = int(revCultureModifier*max([pCity.getCulture(iOwnerOld)/2,pCity.countTotalCultureTimes100()/400]))
+				newPlotVal = int(revCultureModifier*max([pCity.plot().getCulture(iOwnerOld)/2,pCity.plot().countTotalCulture()/4]))
+				RevUtils.giveCityCulture(pCity, iOwnerNew, newCulVal, newPlotVal)
 
 				# Change city disorder timer to favor new player
 				iTurns = pCity.getOccupationTimer()
@@ -555,70 +551,65 @@ def checkRebelBonuses(argsList):
 			for unit in newUnitList:
 				if unit.canFight():
 					iDamage = 20 + GAME.getSorenRandNum(20,'Rev - Injure unit')
-					unit.setDamage(iDamage, oldOwnerID)
+					unit.setDamage(iDamage, iOwnerOld)
 
 		else: # City once rebelled as this civ type, but not currently rebellious
 			if LOG_DEBUG:
 				print "[REV] %s, captured by former rebel identity: %s (%d)!"%(pCity.getName(),newOwner.getCivilizationDescription(0),newOwnerCiv)
-			newCulVal = int( revCultureModifier*max([pCity.getCulture(oldOwnerID)/2,pCity.countTotalCultureTimes100()/400]) )
-			newPlotVal = int( revCultureModifier*max([pCity.plot().getCulture(oldOwnerID)/2,pCity.plot().countTotalCulture()/4]) )
-			RevUtils.giveCityCulture( pCity, newOwnerID, newCulVal, newPlotVal)
+			newCulVal = int( revCultureModifier*max([pCity.getCulture(iOwnerOld)/2,pCity.countTotalCultureTimes100()/400]) )
+			newPlotVal = int( revCultureModifier*max([pCity.plot().getCulture(iOwnerOld)/2,pCity.plot().countTotalCulture()/4]) )
+			RevUtils.giveCityCulture( pCity, iOwnerNew, newCulVal, newPlotVal)
 
 			iTurns = pCity.getOccupationTimer()
 			iTurns = iTurns/2 + 1
 			pCity.setOccupationTimer(iTurns)
 
-def updateRevolutionIndices( argsList ) :
-	owner,playerType,pCity,bConquest,bTrade = argsList
+def updateRevolutionIndices(argsList):
+	iOwnerOld, iOwnerNew, pCity, bConquest, bTrade = argsList
 
-	newOwnerID = pCity.getOwner()
-	newOwner = GC.getPlayer(newOwnerID)
-	newOwnerCiv = newOwner.getCivilizationType()
-	oldOwnerID = pCity.getPreviousOwner()
-	orgOwnerID = pCity.getOriginalOwner()
+	newOwner = GC.getPlayer(iOwnerNew)
 
-	if( newOwner.isNPC() ) :
-		return
+	if newOwner.isNPC(): return
 
 	newRevIdx = 400
 	changeRevIdx = -40
 
-	if( bConquest ) :
+	if bConquest:
 		# Occupied cities also rack up rev points each turn
 		newRevIdx += pCity.getRevolutionIndex()/4
 		newRevIdx = min( [newRevIdx, 600] )
 
-		if( pCity.plot().calculateCulturePercent( newOwnerID ) > 90 ) :
+		if pCity.plot().calculateCulturePercent( iOwnerNew ) > 90:
 			changeRevIdx -= 75
 			newRevIdx -= 100
-		elif( pCity.plot().calculateCulturePercent( newOwnerID ) > 40 ) :
+		elif pCity.plot().calculateCulturePercent( iOwnerNew ) > 40:
 			changeRevIdx -= 35
 			newRevIdx -= 60
-		elif( pCity.plot().calculateCulturePercent( newOwnerID ) > 20 ) :
+		elif pCity.plot().calculateCulturePercent( iOwnerNew ) > 20:
 			changeRevIdx -= 30
 
-	elif( bTrade ) :
+	elif bTrade:
 		newRevIdx += pCity.getRevolutionIndex()/3
 		newRevIdx = min( [newRevIdx, 650] )
 
-		if( pCity.plot().calculateCulturePercent( newOwnerID ) > 90 ) :
+		if pCity.plot().calculateCulturePercent( iOwnerNew ) > 90:
 			newRevIdx -= 50
 
-	else :
+	else:
 		# Probably cultural conversion
 		newRevIdx -= 100
-		if( pCity.plot().calculateCulturePercent( newOwnerID ) > 50 ) :
+		if pCity.plot().calculateCulturePercent( iOwnerNew ) > 50:
 			changeRevIdx -= 25
 
 
-	if( newOwner.isRebel() and newOwnerCiv == RevData.getCityVal(pCity, 'RevolutionCiv') ) :
+	if newOwner.isRebel() and newOwner.getCivilizationType() == RevData.getCityVal(pCity, 'RevolutionCiv'):
 		changeRevIdx -= 50
 		newRevIdx -= 200
-	elif( newOwnerID == pCity.getOriginalOwner() ) :
+	elif iOwnerNew == pCity.getOriginalOwner():
 		changeRevIdx -= 25
 		newRevIdx -= 100
 
-	if( pCity.getHighestPopulation() < 6 ) :
+	if pCity.getHighestPopulation() < 6:
 		changeRevIdx += 20
 		newRevIdx -= 50
 
@@ -643,20 +634,9 @@ def updateRevolutionIndices( argsList ) :
 	RevData.updateCityVal( pCity, 'RevIdxHistory', RevDefs.initRevIdxHistory() )
 
 	if newOwner.isRebel():
-		if newOwner.getNumCities() > 1 and RevData.revObjectGetVal(newOwner, 'CapitalName') == CvUtil.convertToStr(pCity.getName()):
-			# Rebel has captured their instigator city, make this their capital
-			print "[REV] Rebel %s have captured their instigator city, %s!  Moving capital." %(newOwner.getCivilizationDescription(0), pCity.getName())
-			if newOwner.isHuman():
-				# TODO: support this with a popup question
-				pass
-			else:
-				eCapitalBuilding = GC.getInfoTypeForString(RevDefs.sXMLPalace)
-				oldCapital = newOwner.getCapitalCity()
-				oldCapital.setNumRealBuilding(eCapitalBuilding, 0)
-				pCity.setNumRealBuilding(eCapitalBuilding, 1)
 
 		# Ripple effects through other rebellious cities
-		for cityX in GC.getPlayer(oldOwnerID).cities():
+		for cityX in GC.getPlayer(iOwnerOld).cities():
 			reinfCount = cityX.getReinforcementCounter()
 			if reinfCount > 2 and RevData.getCityVal(cityX, 'RevolutionCiv') == newOwner.getCivilizationType():
 				if reinfCount < 5:

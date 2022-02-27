@@ -11,8 +11,7 @@
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-#include "CvInfoUtil.h"
-#include "CvPython.h"
+#include "CvInfos.h"
 #include "IDValuemap.h"
 #include "IDValuemap.h"
 #include "Interface/IBuildingInfo.h"
@@ -20,13 +19,12 @@
 class BoolExpr;
 class CvArtInfoBuilding;
 class CvArtInfoMovie;
-class CvHotkeyInfo;
-class CvProperties;
-class CvPropertyManipulators;
 class CvXMLLoadUtility;
-//struct CvInfoUtil;
+struct CvInfoUtil;
 
-class CvBuildingInfo : public CvHotkeyInfo
+class CvBuildingInfo
+	: public CvHotkeyInfo
+	, private bst::noncopyable
 {
 public:
 	CvBuildingInfo();
@@ -85,12 +83,8 @@ public:
 	int getPrereqAndTech() const					{ return m_iPrereqAndTech; }
 	int getNoBonus() const							{ return m_iNoBonus; }
 	int getPowerBonus() const						{ return m_iPowerBonus; }
-	int getFreeBonus() const						{ return m_iFreeBonus; }
-	int getNumFreeBonuses() const					{ return m_iNumFreeBonuses; }
-	int getNumExtraFreeBonuses() const				{ return m_aExtraFreeBonuses.size(); }
 	BuildingTypes getFreeBuilding() const			{ return m_iFreeBuilding; }
 	BuildingTypes getFreeAreaBuilding() const		{ return m_iFreeAreaBuilding; }
-	int getFreePromotion() const					{ return m_iFreePromotion; }
 	int getCivicOption() const						{ return m_iCivicOption; }
 	int getAIWeight() const							{ return m_iAIWeight; }
 	int getProductionCost() const					{ return m_iProductionCost; }
@@ -179,8 +173,6 @@ public:
 	void setMissionType(int iNewType)				{ m_iMissionType = iNewType; }
 	int getVoteSourceType() const					{ return m_iVoteSourceType; }
 	int getDCMAirbombMission() const				{ return m_iDCMAirbombMission; }
-	int getFreePromotion_2() const					{ return m_iFreePromotion_2; }
-	int getFreePromotion_3() const					{ return m_iFreePromotion_3; }
 	int getPrereqVicinityBonus() const				{ return m_iPrereqVicinityBonus; }
 	int getPrereqRawVicinityBonus() const			{ return m_iPrereqRawVicinityBonus; }
 	int getGlobalPopulationgrowthratepercentage() const { return m_iGlobalPopulationgrowthratepercentage; }
@@ -243,11 +235,11 @@ public:
 	PropertyTypes getPropertySpawnProperty() const;
 	PromotionLineTypes getPromotionLineType() const;
 
-	const TCHAR* getConstructSound() const			{ return m_szConstructSound; }
-	const TCHAR* getArtDefineTag() const			{ return m_szArtDefineTag; }
-	const TCHAR* getMovieDefineTag() const			{ return m_szMovieDefineTag; }
-	const TCHAR* getButton() const;
-	const TCHAR* getMovie() const;
+	const char* getConstructSound() const			{ return m_szConstructSound; }
+	const char* getArtDefineTag() const				{ return m_szArtDefineTag; }
+	const char* getMovieDefineTag() const			{ return m_szMovieDefineTag; }
+	const char* getButton() const;
+	const char* getMovie() const;
 	const CvArtInfoBuilding* getArtInfo() const;
 	const CvArtInfoMovie* getMovieInfo() const;
 
@@ -327,33 +319,31 @@ public:
 	int getBonusYieldModifier(int i, int j) const;
 	int* getBonusYieldModifierArray(int i) const;
 
-	int getGlobalBuildingCommerceChange(int iBuilding, int iCommerce) const;
-	const std::vector<BuildingCommerceChange>& getGlobalBuildingCommerceChanges() const;
+	int getGlobalBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCommerce) const;
+	const IDValueMap<BuildingTypes, CommerceArray>& getGlobalBuildingCommerceChanges() const { return m_aGlobalBuildingCommerceChanges; }
 	const python::list cyGetGlobalBuildingCommerceChanges() const;
 
 	const IDValueMap<UnitTypes, int>& getUnitProductionModifiers() const { return m_aUnitProductionModifier; }
 
-	const IDValueMap<TechTypes, int*>& getTechYieldChanges100() const { return m_techYieldChanges; }
+	const IDValueMap<TechTypes, YieldArray>& getTechYieldChanges100() const { return m_techYieldChanges; }
 	const python::list cyGetTechYieldChanges100() const;
 
-	const IDValueMap<TechTypes, int*>& getTechYieldModifiers() const { return m_techYieldModifiers; }
+	const IDValueMap<TechTypes, YieldArray>& getTechYieldModifiers() const { return m_techYieldModifiers; }
 	const python::list cyGetTechYieldModifiers() const;
 
-	const IDValueMap<TechTypes, int*>& getTechCommerceChanges100() const { return m_techCommerceChanges; }
+	const IDValueMap<TechTypes, CommerceArray>& getTechCommerceChanges100() const { return m_techCommerceChanges; }
 	const python::list cyGetTechCommerceChanges100() const;
 
-	const IDValueMap<TechTypes, int*>& getTechCommerceModifiers() const { return m_techCommerceModifiers; }
+	const IDValueMap<TechTypes, CommerceArray>& getTechCommerceModifiers() const { return m_techCommerceModifiers; }
 	const python::list cyGetTechCommerceModifiers() const;
 
-	const IDValueMap<TerrainTypes, int*>& getTerrainYieldChanges() const { return m_aTerrainYieldChanges; }
+	const IDValueMap<TerrainTypes, YieldArray>& getTerrainYieldChanges() const { return m_aTerrainYieldChanges; }
 	const python::list cyGetTerrainYieldChanges() const;
 
-	const IDValueMap<PlotTypes, int*>& getPlotYieldChanges() const { return m_aPlotYieldChanges; }
+	const IDValueMap<PlotTypes, YieldArray>& getPlotYieldChanges() const { return m_aPlotYieldChanges; }
 	const python::list cyGetPlotYieldChanges() const;
 
-	BonusTypes getExtraFreeBonus(int i) const;
-	int getExtraFreeBonusNum(int i) const;
-	bool hasExtraFreeBonus(BonusTypes eBonus) const;
+	const IDValueMap<BonusTypes, int>& getFreeBonuses() const { return m_freeBonuses; }
 
 	bool isPrereqOrCivics(int iCivic) const;
 	bool isPrereqAndCivics(int iCivic) const;
@@ -441,11 +431,11 @@ public:
 
 	int getLocalSpecialistYieldChange(int i, int j) const;
 	int* getLocalSpecialistYieldChangeArray(int i) const;
-	bool isAnyLocalSpecialistYieldChanges() const { return m_ppaiLocalSpecialistYieldChange; }
+	bool isAnyLocalSpecialistYieldChanges() const { return m_ppaiLocalSpecialistYieldChange != NULL; }
 
 	int getLocalSpecialistCommerceChange(int i, int j) const;
 	int* getLocalSpecialistCommerceChangeArray(int i) const;
-	bool isAnyLocalSpecialistCommerceChanges() const { return m_ppaiLocalSpecialistCommerceChange; }
+	bool isAnyLocalSpecialistCommerceChanges() const { return m_ppaiLocalSpecialistCommerceChange != NULL; }
 
 	bool isHurry(int i) const;
 
@@ -487,9 +477,7 @@ public:
 	int getTechHealth(TechTypes eTech) const;
 	const IDValueMap<TechTypes, int>& getTechHealthChanges() const { return m_aTechHealthChanges; }
 
-	bool isFreeBonusOfBuilding(BonusTypes eBonus) const;
-
-	bool isNewCityFree(const CvGameObject* pObject);
+	bool isNewCityFree(const CvGameObject* pObject) const;
 
 	const BoolExpr* getConstructCondition() const;
 
@@ -504,12 +492,10 @@ public:
 
 	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
 	bool readPass3();
 	void copyNonDefaults(CvBuildingInfo* pClassInfo);
-	void copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 	void getCheckSum(uint32_t& iSum) const;
-	void doPostLoadCaching(BuildingTypes eThis);
+	void doPostLoadCaching(uint32_t eThis);
 
 private:
 	void setNotShowInCity();
@@ -555,8 +541,6 @@ private:
 	bool m_bEnablesOtherBuildings;
 	bool m_bEnablesUnits;
 
-	int m_iFreePromotion_2;
-	int m_iFreePromotion_3;
 	int m_iPrereqVicinityBonus;
 	int m_iPrereqRawVicinityBonus;
 	int m_iGlobalPopulationgrowthratepercentage;
@@ -587,11 +571,8 @@ private:
 	int m_iPrereqAndTech;
 	int m_iNoBonus;
 	int m_iPowerBonus;
-	int m_iFreeBonus;
-	int m_iNumFreeBonuses;
 	BuildingTypes m_iFreeBuilding;
 	BuildingTypes m_iFreeAreaBuilding;
-	int m_iFreePromotion;
 	int m_iCivicOption;
 	int m_iAIWeight;
 	int m_iProductionCost;
@@ -721,7 +702,6 @@ private:
 	UnitTypes m_ePropertySpawnUnit;
 	PropertyTypes m_ePropertySpawnProperty;
 	PromotionLineTypes m_ePromotionLineType;
-	//TechTypes m_eFreeSpecialTech;
 
 	CvString m_szConstructSound;
 	CvString m_szArtDefineTag;
@@ -776,7 +756,6 @@ private:
 	std::vector<BonusTypes> m_piPrereqOrVicinityBonuses;
 	std::vector<BonusTypes> m_aePrereqOrRawVicinityBonuses;
 	std::vector<TechTypes> m_piPrereqAndTechs;
-	//std::vector<int> m_aiFreePromoTypes;
 	std::vector<int> m_aiUnitCombatRetrainTypes;
 	std::vector<int> m_aiMayDamageAttackingUnitCombatTypes;
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
@@ -793,7 +772,6 @@ private:
 	std::vector<HealUnitCombat> m_aHealUnitCombatTypes;
 	std::vector<BonusAidModifiers> m_aBonusAidModifiers;
 	std::vector<AidRateChanges> m_aAidRateChanges;
-	std::vector<BuildingCommerceChange> m_aGlobalBuildingCommerceChanges;
 	UnitCombatModifierArray m_aUnitCombatRepelModifiers;
 	UnitCombatModifierArray m_aUnitCombatRepelAgainstModifiers;
 	UnitCombatModifierArray m_aUnitCombatDefenseAgainstModifiers;
@@ -815,14 +793,14 @@ private:
 	IDValueMap<UnitCombatTypes, int> m_aUnitCombatExtraStrength;
 	IDValueMap<UnitCombatTypes, int> m_aUnitCombatFreeExperience;
 	IDValueMap<UnitTypes, int> m_aUnitProductionModifier;
-	std::vector<std::pair<BonusTypes, int> > m_aExtraFreeBonuses;
-
-	IDValueMap<TechTypes, int*> m_techYieldChanges;
-	IDValueMap<TechTypes, int*> m_techYieldModifiers;
-	IDValueMap<TechTypes, int*> m_techCommerceChanges;
-	IDValueMap<TechTypes, int*> m_techCommerceModifiers;
-	IDValueMap<TerrainTypes, int*> m_aTerrainYieldChanges;
-	IDValueMap<PlotTypes, int*> m_aPlotYieldChanges;
+	IDValueMap<BonusTypes, int> m_freeBonuses;
+	IDValueMap<BuildingTypes, CommerceArray> m_aGlobalBuildingCommerceChanges;
+	IDValueMap<TechTypes, YieldArray> m_techYieldChanges;
+	IDValueMap<TechTypes, YieldArray> m_techYieldModifiers;
+	IDValueMap<TechTypes, CommerceArray> m_techCommerceChanges;
+	IDValueMap<TechTypes, CommerceArray> m_techCommerceModifiers;
+	IDValueMap<TerrainTypes, YieldArray> m_aTerrainYieldChanges;
+	IDValueMap<PlotTypes, YieldArray> m_aPlotYieldChanges;
 
 	CvPropertyManipulators m_PropertyManipulators;
 
@@ -835,7 +813,6 @@ private:
 
 	const BoolExpr* m_pExprNewCityFree;
 	const BoolExpr* m_pExprConstructCondition;
-	//const BoolExpr* m_pExprFreePromotionCondition;
 
 	hIBuildingInfo_t m_hContext;
 };

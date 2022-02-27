@@ -295,7 +295,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_BREAKTHROUGH_1</Tag>
 		<English>%s1_civ_adjective researchers are rumored to have made a technological breakthrough, rapidly advancing their progress.</English>
 		<French>Des chercheurs %s1:3_civ_adjective auraient fait une avancée technologique et cette dernière aurait accéléré leurs recherches.</French>
-		<German>%s1:3_civ_adjective Forscher sollen einen technologischen Durchbruch erzielt haben und rasante Fortschritte machen.</German>
+		<German>Die %[s1_civ_adjective]en Forscher sollen einen technologischen Durchbruch erzielt haben und rasante Fortschritte machen.</German>
 		<Italian>Pare che i ricercatori %s1_civ_adjective abbiano fatto un'importante scoperta tecnologica, velocizzando il loro progresso.</Italian>
 		<Spanish>Se rumorea que los investigadores %s1:3_civ_adjective han conseguido un adelanto tecnológico que les hará avanzar rápidamente.</Spanish>
 	</TEXT>
@@ -303,7 +303,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_BREAKTHROUGH_2</Tag>
 		<English>Discoveries made by the %s1_civ_adjective Empire have boosted progress on their current research project.</English>
 		<French>Des découvertes effectuées par l'empire %s1:1_civ_adjective ont accéléré les recherches sur le projet qui les occupe actuellement.</French>
-		<German>Die im %s1:2_civ_adjective Reich gewonnenen Erkenntnisse haben ihr aktuelles Forschungsprojekt bedeutend vorangebracht.</German>
+		<German>Die im %[s1_civ_adjective]en Reich gewonnenen Erkenntnisse haben ihr aktuelles Forschungsprojekt bedeutend vorangebracht.</German>
 		<Italian>Le scoperte fatte dall'impero %s1_civ_adjective hanno velocizzato il progresso del loro attuale progetto di ricerca.</Italian>
 		<Spanish>Los descubrimientos realizados por el imperio %s1:1_civ_adjective han impulsado sus avances en el actual proyecto de investigación.</Spanish>
 	</TEXT>
@@ -440,6 +440,20 @@
 		<Russian>Исследователи, %s1_civ_adjective - обнаружили ценные артефакты, спрятанные в руинах рядом с городом %s2_city.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_CIVIL_WAR</Tag>
+		<English>A civil war erupted within the %s1_civ_adjective Empire! Combats are raging near the city of %s2_city.</English>
+		<French>Une guerre civile a éclaté au sein de l'Empire %s1_civ_adjective, des combats font rage autour de la ville de %s2_city.</French>
+		<Italian>È scoppiata una guerra civile nell'Impero %s1_civ_adjective! I combattimenti infuriano vicino alla città di %s2_city.</Italian>
+		<Russian>Ãðàæäàíñêàÿ âîéíà ðàçðàçèëàñü â ñòðàíå %s1_civ_adjective, áîè èäóò ïðîòèâ ïîâñòàíöåâ â %s2_city.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_CIVIL_WAR_PLAYER</Tag>
+		<English>Riots are breaking out in one of your cities! A new leader has arisen, and his only goal is to free the people from your cruel leadership. %s2_city is now rebelling and fighting under a new flag.</English>
+		<French>Des émeutes éclatent dans une de vos villes! Un nouveau chef est apparu et son seul objectif est de libérer le peuple de votre leadership cruel. La ville de %s2_city s'est rebellée et maintenant se bat sous un nouveau drapeau.</French>
+		<Italian>Sono scoppiati disordini in una delle tue città! Un nuovo capo si è palesato e il suo unico obiettivo è liberare le persone dalla tua crudele leadership. La città di %s2_city si è ribellata e ora combatte sotto una nuova bandiera.</Italian>
+		<Russian>Ïðîèñõîäÿò ìÿòåæè â îäíîì èç âàøèõ ãîðîäîâ! Ó ñìóòüÿíîâ ïîÿâèëñÿ íîâûé ïðåäâîäèòåëü, è åãî åäèíñòâåííàÿ öåëü - îñâîáîäèòü íàðîä îò äåñïîòè÷íîãî ðóêîâîäñòâà. %s2_city òåïåðü âîññòàë è áîðåòñÿ ïîä íîâûì çíàìåíåì.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CIV_GAME</Tag>
 		<English>The %s1_civ_adjective game designers have developed a new game of Civilization.</English>
 		<French>Les développeurs de jeux vidéos %s1:3_civ_adjective ont créé une nouvelle version de Civilization.</French>
@@ -456,6 +470,13 @@
 		<German>%s1:3_civ Gelehrte haben erfolgreich die gesamte mündliche Tradition und alle Geschichten zu einer neuen Literatursammlung zusammengefasst und so die Quest "Klassische Literatur" erfüllt!</German>
 		<Italian>Gli studiosi %s1_civ sono riusciti a registrare tutte le tradizioni orali e le storia in una nuova raccolta di letteratura, completando così l'impresa della Letteratura classica!</Italian>
 		<Spanish>Eruditos del %s1_civ han logrado registrar todas sus tradiciones y relatos de transmisión oral en un nuevo compendio literario, ¡por lo que se ha cumplido la misión Literatura clásica!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_CLAY</Tag>
+		<English>%s1_civ_adjective potters are now using quality clay.</English>
+		<French>Les potiers %s1_civ_adjective utilisent de l'argile de très bonne qualité.</French>
+		<Polish>Garncarze z %s1_civ_adjective uzywaja od teraz wysokiej jakosci gline.</Polish>
+		<Russian>%s1_civ_adjective ãîí÷àðû îòíûíå èñïîëüçóþò áîëåå êà÷åñòâåííóþ ãëèíó.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CLUNKER_COAL</Tag>
@@ -1387,6 +1408,15 @@
 		<Spanish>Un alegre matrimonio en la tradición %s3:2_religion_adjective ha forjado nuevos vínculos entre los pueblos %s1:1_civ_adjective y %s4:1_civ_adjective, que adoran a la nueva pareja y están encantados con el comportamiento de la familia de la otra nación.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_KNOWLEDGE_INHERITANCE_1</Tag>
+		<English>An old shaman from the %s1_civ_adjective tribe has reached an understanding of the changing reality. His new ideas will help their tribe to develop faster.</English>
+		<French>Un vieux shaman de la tribu %s1_civ_adjective a réussi à comprendre la réalité de certains changements. Ses nouvelles idées aident la tribu à se développer plus vite.</French>
+		<Italian>Un vecchio sciamano della tribù %s1_civ_adjective ha raggiunto la comprensione della realtà in cambiamento. Le sue nuove idee aiuteranno la tribù a svilupparsi più velocemente.</Italian>
+		<Spanish>Un viejo chamán de la tribu %s1_civ_adjective ha alcanzado un grado de comprensión de la realidad cambiante sin parangón. Sus nuevas ideas guiarán a la tribu a un mejor desarrollo.</Spanish>
+		<Polish>Stary szaman z plemienia %s1_civ_adjective zrozumial zmieniajaca sie rzeczywistosc. Jego nowa wiedza przyda sie plemieniu w rozwoju.</Polish>
+		<Russian>Ñòàðûé øàìàí èç ïëåìåíè %s1_civ_adjective äîñòèã ïîíèìàíèÿ ìåíÿþùåéñÿ ðåàëüíîñòè. Åãî íîâûå èäåè è ïîìîæåò åãî ïëåìåíè äëÿ óñêîðåííîãî ðàçâèòèÿ.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LABORATORY</Tag>
 		<English>A scientific breakthrough at the laboratory in %s2_city is credited in part to the free flow of ideas and information nurtured by the %s1_civ_adjective government.</English>
 		<French>Une découverte scientifique au laboratoire de la ville : %s2_city est en partie attribuée au flot d'idées et d'informations encouragées par le gouvernement %s1_civ_adjective.</French>
@@ -1868,6 +1898,13 @@
 		<German>Die Bibliothek in der %s1:2_civ_adjective Stadt %s2_city hat dank der Großzügigkeit einer wohlhabenden Familie wertvolle Schriften erhalten.</German>
 		<Italian>La biblioteca nella città %s1_civ_adjective di %s2_city ha ricevuto una serie di scritti rari grazie alla generosità di una famiglia facoltosa.</Italian>
 		<Spanish>La biblioteca de la ciudad %s1:2_civ_adjective de %s2_city ha recibido gran cantidad de valiosos manuscritos gracias a la generosidad de una familia acaudalada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_PEAT</Tag>
+		<English>%s1_civ_adjective locals are now using peat as fuel.</English>
+		<French>Des ouvriers %s1_civ_adjective utilisent à présent la tourbe comme combustible.</French>
+		<Polish>Tubylcy z %s1_civ_adjective uzywaja od teraz torfu jako opalu.</Polish>
+		<Russian>%s1_civ_adjective ìåñòíûå æèòåëè ñåé÷àñ èñïîëüçóþò òîðô â êà÷åñòâå òîïëèâà..</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PERSONAL_COMPUTERS</Tag>
@@ -2514,6 +2551,14 @@
 		<German>Ein mehr als fünfzehn Meter hoher Tsunami ist über die %s1:3_civ_adjective Stadt %s2_city hinweggerollt und hat ein in der Weltgeschichte unübertroffenes Ausmaß an Verwüstungen angerichtet.</German>
 		<Italian>Uno tsunami di oltre quindici metri ha investito la città %s1_civ_adjective di %s2_city. La distruzione è senza precedenti storici.</Italian>
 		<Spanish>Un "tsunami" de más de quince metros de altura ha anegado la ciudad %s1:2_civ_adjective de %s2_city, y ha provocado una destrucción sin precedentes en los anales mundiales.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_TUSK</Tag>
+		<English>%s1_civ_adjective whalers are now hunting narwhals.</English>
+		<French>Les baleiniers %s1_civ_adjective chassent des narvals.</French>
+		<Italian>Le baleniere %s1_civ_adjective danno la caccia ai narvali.</Italian>
+		<Polish>Wielorybnicy z %s1_civ_adjective poluja od teraz na narwale.</Polish>
+		<Russian>Ó %s1_civ_adjective êèòîáîåâ îòêðûëñÿ ñåçîí ïðîìûñëà íàðâàëîâ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_UFO</Tag>
@@ -4165,6 +4210,13 @@
 		<Russian>[ICON_BULLET]%d1 [ICON_UNHAPPY] в %s2</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENT_CIVIL_WAR</Tag>
+		<English>Bring me his head on a pole, crush this city, I am the ruler here.</English>
+		<French>Apportez-moi sa tête sur un pique, rasez la ville, je suis le chef ici.</French>
+		<Italian>Portatemi la sua testa su un palo e distruggete la città: sono IO che comando.</Italian>
+		<Russian>Ïðèíåñèòå ìíå åãî ãîëîâó íà ïèêå, ñîêðóøèòå ýòîò ãîðîä, èáî ÿ ïðàâëþ çäåñü.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_CIV_GAME_1</Tag>
 		<English>Send congratulations to the developers. Our people should enjoy this game.</English>
 		<French>Envoyez nos félicitations aux développeurs. Notre bon peuple devrait apprecier ce jeu.</French>
@@ -4241,6 +4293,13 @@
 		<German>[PARAGRAPH:1]Um diese Quest abzuschließen, müssen Sie %d1 [COLOR_BUILDING_TEXT]Bibliotheken[COLOR_REVERT] in Ihren Städten bauen. [PARAGRAPH:1]Sie erhalten eine zusätzliche Belohnung, wenn Sie bei Erfüllung der Quest die [COLOR_BUILDING_TEXT]Große Bibliothek[COLOR_REVERT] kontrollieren.[PARAGRAPH:1]Sie scheitern, wenn eine andere Zivilisation die Quest vor Ihnen abschließt oder wenn Sie die Renaissance erreichen, ohne die Bedingungen erfüllt zu haben.</German>
 		<Italian>[PARAGRAPH:1]Per completare l'impresa devi costruire %d1 [COLOR_BUILDING_TEXT]Biblioteche[COLOR_REVERT] nelle tue città.[PARAGRAPH:1]Se controlli la [COLOR_BUILDING_TEXT]Grande Biblioteca[COLOR_REVERT] ti verrà data un'ulteriore ricompensa, se e quando completerai l'impresa.[PARAGRAPH:1]Fallirai nell'impresa se un'altra civiltà la completa per prima, o se raggiungerai il Rinascimento senza aver soddisfatto le condizioni.</Italian>
 		<Spanish>[PARAGRAPH:1]Para completar esta misión, debéis construir %d1 [COLOR_BUILDING_TEXT]Bibliotecas[COLOR_REVERT] en vuestras diversas ciudades.[PARAGRAPH:1]Será posible elegir una opción de recompensa adicional si se ostenta el control de la [COLOR_BUILDING_TEXT]Gran Biblioteca[COLOR_REVERT] siempre y cuando esta misión se haya cumplido satisfactoriamente.[PARAGRAPH:1]Esta misión fracasará si una civilización rival la cumple antes o si se alcanza la era del Renacimiento sin haber cumplido las condiciones.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_CLAY_1</Tag>
+		<English>This is a high quality clay. We should use it in our potter's shop.</English>
+		<French>Cet argile est de très bonne qualité. Nous l'utiliserons pour nos poteries.</French>
+		<Polish>To jest glina wysokiej jakosci. Przyda sie naszemu garncarzowi.</Polish>
+		<Russian>Ýòà ãëèíà îêàçàëàñü âûñøåé ïðîáû. Íàì ñòîèò åå ïîñòàâëÿòü â íàøè ëàâêè êåðàìè÷åñêèõ èçäåëèé.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CLUNKER_COAL_1</Tag>
@@ -7302,6 +7361,24 @@
 		<Spanish>Un matrimonio %s5:1_religion_adjective entre una de nuestras familias y otra %s1:2_civ_adjective ha sido honrado con una fiesta nacional, incluyendo regalos de bodas increíbles y generosas donaciones a nuestras instituciones religiosas. Nuestro pueblo está emocionado con ese gesto.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENT_KNOWLEDGE_INHERITANCE_1</Tag>
+		<English>A thinker? Let's see what interesting ideas he has.</English>
+		<French>Un penseur? Voyons quelles idées intéressantes il a.</French>
+		<Italian>Un pensatore? Vediamo quali idee interessanti ha.</Italian>
+		<Spanish>¿Un pensador? Veamos qué ideas interesantes tiene.</Spanish>
+		<Polish>Mysliciel? Zobaczmy jakie interesujace idee glosi.</Polish>
+		<Russian>Ìûñëèòåëü? Äàâàéòå ïîñìîòðèì, êàêèå èíòåðåñíûå èäåè ó íåãî åñòü.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_KNOWLEDGE_INHERITANCE_2</Tag>
+		<English>Just what we needed. Let him tell the entire tribe his ideas and make sure they pass from generation to generation.</English>
+		<French>Juste ce dont nous avions besoins. Demandez-lui de propager ses idées à toute la tribu, qu'elles se transmettent de génération en génération.</French>
+		<Italian>Proprio ciò di cui avevamo bisogno. Lasciategli insegnare le sue idee a tutta la tribù e fate in modo che passino di generazione in generazione.</Italian>
+		<Spanish>Justo lo que necesitábamos. Dejemos que le cuente a toda la tribu sus ideas, y asegúraos de que pasen de generación en generación.</Spanish>
+		<Polish>Tego potrzebowalismy. Przekazmy calemu plemienu jego idee i upewnijmy sie, ze beda przekazywane z pokolenia na pokolenie.</Polish>
+		<Russian>Ìû â ýòîì î÷åíü íóæäàåìñÿ. Ïóñòü îí ðàññêàæåò âñåìó ïëåìåíè ñâîè èäåè è óáåäèòñÿ, ÷òî îíè ïåðåäàäóòñÿ èç ïîêîëåíèÿ â ïîêîëåíèå.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_LABORATORY_1</Tag>
 		<English>This should speed our current research.</English>
 		<French>Cela devrait accélérer nos recherches actuelles.</French>
@@ -8509,6 +8586,13 @@
 		<Spanish>Financiad la ampliación de la biblioteca para incluir una nueva ala que acoja todos estos valiosos manuscritos.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENT_PEAT_1</Tag>
+		<English>This is a high quality peat. It will boost our production.</English>
+		<French>Cette tourbe fera un très bon combustible et augmentera notre production.</French>
+		<Polish>To jest wysokoiej jakosci torf! Wzmocni nasza produkcje.</Polish>
+		<Russian>Ýòî òîðô âûñøåé ïðîáû. Îí áóäåò ñòèìóëèðîâàòü íàøå ïðîèçâîäñòâî.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_PESTILENCE_1</Tag>
 		<English>That's horrible.</English>
 		<French>C'est affreux.</French>
@@ -9111,6 +9195,46 @@
 		<Spanish>Que partan equipos de emergencia a arreglar los daños, sin reparar en gastos.</Spanish>
 		<Polish>Wyślemy ekipę robotników w celu naprawienia poniesionych szkód, bez względu na koszty.</Polish>
 		<Russian>Отправьте ремонтные бригады для устранения ущерба, не взирая на стоимость работ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SCHOLARS</Tag>
+		<English>There has been a recent surge of promising young scholars wishing to study science, magic, and the arcane. %s2_city's current facilities will be overcrowded with activity and suffer material shortages. Additional funding will be needed to expand and accommodate everyone.</English>
+		<French>Il ya eu une récente flambée de jeunes chercheurs prometteurs qui souhaitent étudier les sciences, la magie et les arcanes. Les installations actuelles de %s2_city seront surpeuplées avec toute cette activité et risque de souffrir de pénurie de matériaux. Des fonds supplémentaires seront nécessaires pour développer et accueillir tout le monde.</French>
+		<German>Kürzlich gab es einen Anstieg an vielversprechenden jungen Gelehrten, die sich für Forschung oder magische Studien einschreiben wollen. Die derzeitigen Einrichtungen von %s2_city werden bald überfüllt sein und einen Mangel an Lehrmaterial haben. Zusätzliche Gelder sind für eine Erweiterung und Unterbringung aller Interessenten nötig.</German>
+		<Polish>Ostatnimi czasy wielokrotnie wzrostla liczba studentów i mlodych uczonych chcacyc rozpoczac nauke, poznawanie magii i tajnych sztuk w miescie %s2_city. Obecne budynki uczelni i jej wyposazenie jest niewystarczajace. Dodatkowe pieniadze beda potrzebne by zagospodarowac wszystkich chetnych studentów.</Polish>
+		<Russian>Â ïîñëåäíåå âðåìÿ íàáëþäàåòñÿ èññëåäîâàòåëüñêèé áóì ñðåäè þíûõ ñòóäèîçóñîâ, æåëàþùèõ çàíèìàòüñÿ íàóêîé, ìàãèåé è ñîêðîâåííîãî. Òåêóùèå çàâåäåíèÿ â %s2_city ïåðåæèâàþò ðàñöâåò ñâîåé äåÿòåëüíîñòè, íî èñïûòûâàþò íåõâàòêó ñðåäñòâ. Äîïîëíèòåëüíûå ñðåäñòâà áóäóò íåîáõîäèìû äëÿ ðàñøèðåíèÿ è ïîñòóïëåíèÿ â øêîëû âñåõ æåëàþùèõ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SCHOLARS_1</Tag>
+		<English>We cannot afford it.</English>
+		<French>Nous ne pouvons pas nous le permettre.</French>
+		<German>Nein. Das können wir uns nicht leisten.</German>
+		<Polish>Nie stac nas na to.</Polish>
+		<Russian>Ìû íå ìîæåì ñåáå ýòî ïîçâîëèòü.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SCHOLARS_2</Tag>
+		<English>Scholarly study is the foundation of advancement! Expand our libraries.</English>
+		<French>L'Etude des connaissances est le fondement du développement! Développez nos Bibliothèques.</French>
+		<German>Wissenschaftliche Studien sind das Fundament unseres Fortschritts. Baut die Biobliotheken aus!</German>
+		<Polish>Uczelnie to podstawa naszego rozwoju naukowego. Rozbudujcie biblioteki.</Polish>
+		<Russian>Íàó÷íûå èññëåäîâàíèÿ - ýòî îñíîâà ïðîãðåññà! Îòêðûòü äâåðè âñåì æåëàþùèì â íàøè áèáëèîòåêè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SCHOLARS_3</Tag>
+		<English>Sounds like good news. Build them a Apothecary Guild.</English>
+		<French>De bonnes nouvelles. Construisez leur une Guilde des Apothicaires.</French>
+		<German>Klingt nach guten Nachrichten. Errichtet einen Apothecary Zirkel.</German>
+		<Polish>Swietnie. Zalózcie im Gildie Aptekarzy.</Polish>
+		<Russian>Çâó÷èò çàìàí÷èâî. Âûäåëèòå äåíüãè íà îòêðûòèå Ãèëüäèè Ìàãîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_SCHOLARS_4</Tag>
+		<English>Scholarly societies are for the weak. Press these foolish youths into our army.</English>
+		<French>Les sociétés savantes sont pour les faibles. Envoyez ces jeunes fous dans notre armée.</French>
+		<German>Wissenschaft ist etwas für Schwächlinge. Sie wissen nicht wohin? Teilt sie unserer Armee zu!</German>
+		<Polish>Bractwa studentów sa dla mieczaków. Wcielic wszystkich studentów do armii!</Polish>
+		<Russian>Ýòè âñå àêàäåìèè äëÿ ñëþíòÿåâ è ñëàáàêîâ. Çàáðåéòå ýòèõ ãëóïûõ þíöîâ â ðÿäû íàøåé àðìèè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SEA_TURTLES_1</Tag>
@@ -10621,6 +10745,13 @@
 		<Spanish>¡Felicidades! Se han cumplido los objetivos de los eruditos, que ahora disponen de [COLOR_BUILDING_TEXT]Bibliotecas[COLOR_REVERT] en las que guardar sus obras de nueva creación. Elegid una de las recompensas que vuestro nuevo tesoro de la literatura escrita puede ofreceros.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_CLAY_1</Tag>
+		<English>Farmers have figured out how to harvest the abundant supply of clay close to the riverbed.</English>
+		<French>Des paysans ont mis à jour une source abondante d'argile près du lit de la rivière.</French>
+		<Polish>Rolnicy odkryli jak wydobywac wysokiej jakosci gline z pobliskiego brzego rzeki.</Polish>
+		<Russian>Êðåñòüÿíå ïðèäóìàëè, êàê ñîáèðàòü áîãàòûå çàïàñû ãëèíû âáëèçè ðóñëà ðåêè.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_CLUNKER_COAL_1</Tag>
 		<English>Most of the coal being mined from one of our sites is thick with rock, shale, and other impurities. We are stuck with a source of clunker coal!</English>
 		<French>La majeure partie du charbon extrait de l'un de nos sites est chargé d'argile, de cailloux et autres impuretés. Nous ne savons pas quoi faire de ce charbon impur !</French>
@@ -11588,6 +11719,15 @@
 		<Spanish>Uno de nuestros magnates ha pedido en matrimonio a la heredera de una familia industrial %s1:2_civ_adjective. La boda, que se celebrará según el rito %s4:1_religion_adjective, se espera para este mismo año.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_KNOWLEDGE_INHERITANCE_1</Tag>
+		<English>An old shaman from our tribe seems to have reached an understanding of the changing reality. He says he has new ideas that can help the tribe develop faster.</English>
+		<French>Un vieux shaman votre tribu a réussi à comprendre la réalité de certains changements. Ses nouvelles idées aident la tribu à se développer plus vite.</French>
+		<Italian>Un vecchio sciamano della nostra tribù sembra aver raggiunto una comprensione della realtà in cambiamento. Dice di avere nuove idee che possono aiutare la tribù a svilupparsi più velocemente.</Italian>
+		<Spanish>Un viejo chamán de nuestra tribu parece haber alcanzado un grado de comprensión de la realidad cambiante sin parangón. Asimismo, dice tener nuevas ideas que ayudarán a la tribu desarrollarse más rápido.</Spanish>
+		<Polish>Stary szaman z naszego plemienia zrozumial zmieniajaca sie rzeczywistosc. Jego nowa wiedza przyda sie plemieniu w rozwoju.</Polish>
+		<Russian>Ñòàðûé øàìàí èç íàøåãî ïëåìåíè, ïîõîæå, äîñòèã ïîíèìàíèÿ ìåíÿþùåéñÿ ðåàëüíîñòè. Îí ãîâîðèò, ÷òî åñòü íîâûå èäåè, êîòîðûå ìîãóò ïîìî÷ü íàøåìó ïëåìåíè ðàçâèâàòüñÿ áûñòðåå.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_LABORATORY_1</Tag>
 		<English>A scientific breakthrough has occurred at the Laboratory in %s2_city.</English>
 		<French>Une découverte scientifique a eu lieu au laboratoire de la ville : %s2_city.</French>
@@ -11982,6 +12122,13 @@
 		<German>Eine wohlhabende Familie aus %s2_city hat diverse verloren geglaubte Schriften in ihren Kellergewölben entdeckt und beschlossen, sie der Bibliothek zu stiften.</German>
 		<Italian>Una ricca famiglia di %s2_city ha scoperto una raccolta di scritti rari e perduti in una delle proprie camere blindate. Ha deciso di devolverli alla biblioteca.</Italian>
 		<Spanish>Una acaudalada familia de %s2_city ha descubierto en una de sus cámaras acorazadas una colección de raros manuscritos que se creían perdidos, y ha decidido donar los documentos a la biblioteca.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_PEAT_1</Tag>
+		<English>Locals have figured out how to harvest the abundant supply of peat in the surrounding bogs and swamps.</English>
+		<French>Nos ouvriers ont trouvé comment utiliser une source de tourbe de nos marais.</French>
+		<Polish>Tubylcy wymyslili jak szybko wydobywac duze ilosci torfu z pobliskich bagien.</Polish>
+		<Russian>Ìåñòíûå æèòåëè ïðèäóìàëè, êàê ñîáðàòü îáèëüíûé çàïàñ òîðôà â îêðåñòíûõ áîëîòàõ è òîïÿõ.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_PERSONAL_COMPUTERS_1</Tag>
@@ -12555,6 +12702,13 @@
 		<Spanish>Una pared de agua de gran altura ha caído sin mediar aviso sobre %s2_city. ¡El "tsunami" ha causado una destrucción sin precedentes!</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_TUSK_1</Tag>
+		<English>Whalers have figured out the migration cycles of the narwhal. They have begun to hunt the male narwhals, in a way that does not endanger the long term survival of the creatures.</English>
+		<French>Les baleiniers ont compris le cycle de migration des narvals de la région. Ils chassent les plus gros males, pour récupérer leurs défenses sans compromettre la survie de ces créatures.</French>
+		<Polish>Wielorybnicy poznali cykle migracyjne narwali i rozpoczeli polowania na samce tych wielkich ssaków tak by nie zmniejszyc populacji w dluzszym okresie czasu.</Polish>
+		<Russian>Êèòîáîè âìåøàëèñü â öèêëû ìèãðàöèè íàðâàëîâ. Îíè íà÷àëè îõîòèòüñÿ íà ñàìöîâ íàðâàëîâ, òàêèì îáðàçîì, ÷òîáû íå ïîñòàâèòü ïîä óãðîçó äîëãîñðî÷íîå âûæèâàíèå ýòèõ ñóùåñòâ.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_UFO_1</Tag>
 		<English>News report about UFOs near the %s2_city has attracted lots of unwanted attention to our Secret Army Base. Tourists, foreign agents and news reporters are rushing to the site with their cameras as they're trying to get see what we are hiding in our base. What should we do now?</English>
 		<French>Des Informations concernant des Ovnis près de %s2_city ont attiré une attention non souhaité sur notre base secrète militaire. Touristes, agents étranger et journalistes se ruent vers le site avec leurs appareils photos, essayant de voir ce qu'il se passe dans notre base. Que devons-nous faire maintenant?</French>
@@ -12589,6 +12743,7 @@
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Tag>
 		<English>A volcano has erupted at a site we long regarded as safe, even though traces of volcanic activity long ago could be found. While this caused widespread destruction, the surrounding soil has improved tremendously.</English>
 		<French>L'éruption d'un volcan a eu lieu sur un site que l'on pensait sûr, même si de l'activité volcanique avait déjà été recensée à cet emplacement. Malgré les destructions occasionnées par cette catastrophe, le sol de la région en est amélioré.</French>
+		<German>Ein Vulkan ist in einem Gebiet ausgebrochen, das bei unseren Wissenschaftlern bisher als sicher galt, obwohl durchaus Spuren von vulkanischen Aktivitäten vor vielen tausend Jahren dort zu finden waren. Durch den Ausbruch kam es zu großflächigen Zerstörungen im Umfeld, aber auch zu einer erstaunlichen Steigerung der Bodenqualität.</German>
 		<Polish>Wulkan eksplodował w miejscu, które uważaliśmy za bezpieczne. Chociaż wulkan zniszczył wszystko w pobliżu, przy okazji wulkan użyźnił ziemię na terenach wokół.</Polish>
 		<Russian>На месте, которое мы давно считали безопасным, случилось извержение вулкана, хотя следы вулканической активности давно могли быть найдены. Хотя это вызвало повсеместное разрушение, окружающая почва стала значительно плодороднее.</Russian>
 	</TEXT>
@@ -12773,6 +12928,13 @@
 		<Spanish>[ICON_BULLET]Han quedado destruidos en torno a %d1 edificios en %s2_city.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENT_TUSK_1</Tag>
+		<English>We can sell the precious tusk for additional profit.</English>
+		<French>Nous pouvons vendre les précieuses défenses pour un bon prix.</French>
+		<Polish>Mozemy sprzedwac cenne kly z niezlym zyskiem!</Polish>
+		<Russian>Ìû ìîæåì ïðîäàòü äðàãîöåííûå áèâíè è ïîëó÷àòü äîïîëíèòåëüíóþ ïðèáûëü.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_UFO_1</Tag>
 		<English>Interrogate and shoot anyone who wanders inside our base area. In public release fake reports how these people got killed while wandering in weapon testing range. It should keep the public away from the area and our secret projects will be kept in secret.</English>
 		<French>Interrogez et tirez sur tous ceux qui s'aventurent à l'intérieur de notre base. Publiquement, ces personnes auront été tuées en se promenant sur un champ de mines. Cela devrait dissuader les curieux et garder nos projets secrets.</French>
@@ -12953,6 +13115,7 @@
 		<Tag>TXT_KEY_EVENT_VOLCANO_ERUPTION_1</Tag>
 		<English>A volcano eruption has destroyed much of its vicinity!</English>
 		<French>Une éruption volcanique a causé beaucoup de dégâts à sa périphérie!</French>
+		<German>Die Rekultivierung des Gebiets sollte jetzt unsere vorrangige Aufgabe sein.</German>
 		<Polish>Wulkaniczna erupcja niszczy okolicę.</Polish>
 		<Russian>Извержение вулкана разрушило большую часть его окрестностей!</Russian>
 	</TEXT>
@@ -12960,6 +13123,7 @@
 		<Tag>TXT_KEY_EVENT_VOLCANO_ERUPTION_1_HELP</Tag>
 		<English>Surrounding improvements are lost, units caught in the eruption may be displaced and damaged or killed. The surrounding tiles gain 1 [ICON_FOOD] if an earlier eruption did not already do this.</English>
 		<French>Les aménagements aux alentours sont perdus, les unités prises dans l'éruption sont blessées ou mortes. Certaines ont pu fuir. Les cases environnantes obtiennent +1 [ICON_FOOD] si une éruption précédente n'a pas déjà procuré ce bonus.</French>
+		<German>Verlust von Landschaftsausbauten und Verlust oder Beschädigung von Einheiten in der Nähe der Eruption, +1 [ICON_FOOD] auf umliegenden Feldern (nur einmalig pro Feld möglich)</German>
 		<Polish>Okoliczne ulepszenia terenu są stracone, jednostki będące w pobliżu mogły zostać zabite bądź uszkodzone. Urodzajny pył wulkaniczny osiada na okolicznych terenach dodając +1 do produkcji [ICON_FOOD] (pod warunkiem, że już wcześniej ten bonus nie został dodany)</Polish>
 		<Russian>Ближайшие улучшения потеряны, отряды, оказавшиеся недалеко от эпицентра извержения, могут быть перемещены, ранены или убиты. Окружающие клетки получают +1 [ICON_FOOD], если более раннее извержение еще не сделало этого.</Russian>
 	</TEXT>
@@ -12995,6 +13159,7 @@
 		<Tag>TXT_KEY_EVENT_VOLCANO_TRIGGER_ACTIVE</Tag>
 		<English>A volcano that has been erupting regularly in recent history is erupting again. Structures on its slopes are being destroyed.</English>
 		<French>Un volcan qui a une activité régulière depuis des années est à nouveau en éruption. les aménagements sur ses pentes sont détruits.</French>
+		<German>Ein aktiver, berüchtigter Vulkan ist erneut ausgebrochen, wodurch es zu immensen Schäden im umliegenden Gebiet kam.</German>
 		<Polish>Wulkan znany z tego, że regularnie wybuchał, eksplodował ponownie niszcząc wszystkie budynki na swoich stokach.</Polish>
 		<Russian>Вулкан, извергавшийся регулярно в прошлом, снова пробудился. Сооружения на его склонах были уничтожены.</Russian>
 	</TEXT>
@@ -13682,5 +13847,28 @@
 		<German>Die %s1:2_civ_adjective Investitionen auf dem Gebiet des Gartenbaus haben sich ausgezahlt! In %s2_city wächst ein neuer Industriezweig heran und steigert die Gesundheit sowie die wissenschaftliche Forschung.</German>
 		<Italian>Gli investimenti %s1_civ_adjective nell'orticultura stanno dando frutti! A %s2_city prospera una nuova industria minore, che incrementa salute e ricerca.</Italian>
 		<Spanish>Las inversiones %s1:4_civ_adjective en horticultura han valido la pena. Una nueva industria menor está prosperando en %s2_city, lo que impulsa la salud y la investigación.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_CLAY_1</Tag>
+		<English>Clay</English>
+		<French>Argile</French>
+		<Italian>Argilla</Italian>
+		<Polish>Glina</Polish>
+		<Russian>ãëèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_PEAT_1</Tag>
+		<English>Peat</English>
+		<French>Tourbe</French>
+		<Italian>Torba</Italian>
+		<Polish>Torf</Polish>
+		<Russian>òîðô</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SIGN_EVENT_TUSK_1</Tag>
+		<English>narwhal tusk</English>
+		<French>défense de narval</French>
+		<Polish>Kiel Narwala</Polish>
+		<Russian>áèâíè íàðâàëà</Russian>
 	</TEXT>
 </Civ4GameText>

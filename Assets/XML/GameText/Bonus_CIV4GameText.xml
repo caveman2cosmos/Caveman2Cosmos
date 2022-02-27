@@ -1026,6 +1026,11 @@
 		<Tag>TXT_KEY_BONUS_BONE</Tag>
 		<English>Bone</English>
 		<French>Os</French>
+		<German>
+			<Text>Knochen:Knochen:Knochen:Knochen</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Osso</Italian>
 		<Polish>Kości</Polish>
 		<Russian>Êîñòè</Russian>
@@ -1033,6 +1038,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BONE_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Bone[COLOR_REVERT] is a material used by the first hunter-gatherers to produce tools or weapons. The first traces of bone tools date back to the advent of Homo sapiens, but traces of bone tools produced by Homo neanderthalensis have also been found.</English>
+		<German>[COLOR_HIGHLIGHT_TEXT]Knochen[COLOR_REVERT] von toten Tieren zählen neben Holz und Stein zu den ältesten Werkstoffen der Menschheit. Aus Knochen ließen sich Werkzeuge und Geräte herstellen, mit denen wieder andere Werkstoffe bearbeitet werden konnten, so z.B. Nadeln und Ahlen. Schmuckperlen, Kämme und Haarnadeln wurden noch bis ins Mittelalter aus Knochen angefertigt. Beim Aushöhlen gelangte man auch an das Knochenmark, das lange Zeit eine wertvolle Nahrungsquelle war. Knochen zählen auch zu den ältesten bekannten Beschreibstoffen, denn in China wurden Schulterblätter bereits in der Steinzeit mit Orakelgesuchen beschrieben.</German>
 		<Italian>L'[COLOR_HIGHLIGHT_TEXT]osso[COLOR_REVERT] è un materiale utilizzato dalle prime società di cacciatori-raccoglitori per produrre utensili o armi. Le prime tracce di attrezzi in osso risalgono all'avvento dell'Homo sapiens, ma sono state trovate tracce di utensili in osso prodotti anche dall'Homo neanderthalensis.</Italian>
 		<Russian>Костяные орудия были задокументированы археологами с момента появления Homo sapiens, а также известны из контекстов Homo neanderthalensis или даже раньше. Кость - повсеместный материал в обществах охотников-собирателей, даже когда другие материалы для инструментов не были дефицитом или недоступны.</Russian>
 	</TEXT>
@@ -1155,6 +1161,11 @@
 		<Tag>TXT_KEY_BONUS_BUGS</Tag>
 		<English>Bugs</English>
 		<French>Insectes</French>
+		<German>
+			<Text>Insekten:Insekten:Insekten:Insekten</Text>
+			<Gender>Neuter</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Insetti</Italian>
 		<Polish>Robaki</Polish>
 		<Russian>Æóêè</Russian>
@@ -1162,6 +1173,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BUGS_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Bug[COLOR_REVERT] is a collective name for an order of animals comprising some 50,000 to 80,000 species such as the cicadas, aphids, plant-hoppers, leaf-hoppers, and shield bugs. They range in size from 1 mm (0.04 in) to around 15 cm (6 in), and share a common arrangement of sucking mouthparts. Most feed on plants, using their sucking and piercing mouthparts to extract plant sap. Some are parasitic, while others are predators that feed on other insects or small invertebrates. Some species are significant agricultural pests, damaging crops or being the vectors of serious viral diseases. Other species have been used for biological control of insect pests.</English>
+		<German>Die [COLOR_HIGHLIGHT_TEXT]Insekten[COLOR_REVERT] (Insecta) sind die artenreichste Klasse im gesamten Tierreich. Mehr als 60% aller wissenschaftlich beschriebenen Tierarten sind Insekten. Sie verfügen über ein Exoskelett aus Sklerotin und Chitin, das deutlich sichtbar in drei Teile (Kopf, Brust und Hinterleib) unterteilt ist, und genau drei Beinpaare. Insekten sind für frühe und naturnahe Kulturen eine gute Eiweißquelle, denn ihre Körper bestehen zu großen Teilen aus Proteinen. Sie sind arm an Kohlenhydraten, aber ihr Energiewert ist mit dem von Vogel- oder Säugetierfleisch vergleichbar. Aktuell werden über 2000 Insektenarten als essbar eingestuft. Am häufigsten werden Käfer, Hautflügler wie Ameisen, Bienen oder Wespen, Heuschrecken und Schmetterlinge verzehrt. Verschiedene Insektenarten haben auch andere Nutzen für den Menschen und werden deshalb gezielt gezüchtet, so z.B. Honigbiene, Seidenspinnerraupe, Schlupfwespe (zur Schädlingsbekämpfung) und Schildlaus (zur Gewinnung von Farbstoffen und Lacken). Heute werden viele Insekten pharmazeutisch genutzt und in der Kriminalistik spielen die abgelegten Larven bestimmter Fliegen und Käfer eine wichtige Rolle.</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Insetto[COLOR_REVERT] è un nome collettivo per un ordine di animali che comprende fra le 50.000 e le 80.000 specie animali, fra cui cicale, afidi, cavallette, cavallette e insetti scudo. Le dimensioni variano da 1 mm a circa 15 cm e condividono una disposizione comune di boccagli succhianti. La maggior parte si nutre di piante, usando i loro boccagli per estrarre linfa vegetale. Alcuni sono parassiti, mentre altri sono predatori che si nutrono di altri insetti o piccoli invertebrati. Alcune specie sono considerate dei parassiti in ambito agricolo, danneggiando colture o essendo vettori di gravi malattie virali. Altre specie sono state utilizzate per il controllo biologico dei parassiti.</Italian>
 		<Russian>Жуки - самая разнообразная и важная группа животных на суше. Из всех таксономических групп насекомые имеют больше видов, чем всех остальные наземные животные вместе взятые. Они имеют размер от 1 мм (0,04 дюйма) до примерно 15 см и имеют типичный для них грызущий ротовой аппарат. Большинство из них питаются растениями, используя свой сосущий и грызущий ротовой аппарат для извлечения сока растений и клетчатки. Некоторые из них паразиты, а другие - хищники, питающиеся другими насекомыми или мелкими беспозвоночными. Некоторые виды являются серьезными сельскохозяйственными вредителями, повреждают посевы или являются переносчиками серьезных вирусных заболеваний. Другие виды использовались для биологической борьбы с насекомыми-вредителями.</Russian>
 	</TEXT>
@@ -1373,6 +1385,11 @@
 		<Tag>TXT_KEY_BONUS_CARCASS</Tag>
 		<English>Carcass</English>
 		<French>Carcasse</French>
+		<German>
+			<Text>Kadaver:Kadaver:Kadavern:Kadaver</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Carcasse</Italian>
 		<Polish>Tusza</Polish>
 		<Russian>Òóøè</Russian>
@@ -1380,6 +1397,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARCASS_PEDIA</Tag>
 		<English>A [COLOR_HIGHLIGHT_TEXT]carcass[COLOR_REVERT] is the body of a dead animal. If it is in a state of putrefaction, it is called carrion.</English>
+		<German>Unter [COLOR_HIGHLIGHT_TEXT]Kadavern[COLOR_REVERT] versteht man tote Tierkörper, die noch nicht zu verwesen begonnen haben. In diesem Stadium sind sie für die meisten Tiere und auch für den Menschen noch verzehrbar. Spätestens wenn die bakterielle Fäulnis einsetzt und entsprechende Giftstoffe produziert werden, die das Fleisch ungenießbar machen, spricht man von Aas. Die beiden Begriffe werden im Deutschen aber inzwischen außer in Fachkreisen weitgehend synonym verwendet.</German>
 		<Italian>Una [COLOR_HIGHLIGHT_TEXT]carcassa[COLOR_REVERT] è il corpo di un animale morto. Qualora si trovi in stato di putrefazione, viene detto carogna.</Italian>
 		<Russian>Ðàçäåëàííàÿ äè÷ü.</Russian>
 	</TEXT>
@@ -2171,7 +2189,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CRYSTALPUNK_PEDIA</Tag>
-		<English>TBD</English>
+		<English>After passing the "big, shiny and sciencey!" period, a highly developed civilization can enter a stage where technology continues to advance, but becomes a lot sleeker and subtler. At the same time, society gets epic. Jumpsuits will start being replaced by togas, robes and such garments, bustling mega-cities by brilliant arcologies. There will be crystals. Lots and lots of crystals. This world of tomorrow may end up looking much like Ancient Greece or Rome (the theme-park Cecil B. de Mille version at least) while still enjoying ultratech comforts. </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CRYSTAL_GLASSWARE</Tag>
@@ -2223,7 +2241,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CYBERPUNK_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Cyberpunk is a subgenre of science fiction in a dystopian futuristic setting that tends to focus on a "combination of lowlife and high tech", featuring futuristic technological and scientific achievements, such as artificial intelligence and cybernetics, juxtaposed with societal collapse or decay. Much of cyberpunk is rooted in the New Wave science fiction movement of the 1960s and 1970s, when writers like Philip K. Dick, Michael Moorcock, Roger Zelazny, John Brunner, J. G. Ballard, Philip José Farmer and Harlan Ellison examined the impact of drug culture, technology, and the sexual revolution while avoiding the utopian tendencies of earlier science fiction. Comics exploring cyberpunk themes began appearing as early as Judge Dredd, first published in 1977. Released in 1984, William Gibson's influential debut novel Neuromancer helped solidify cyberpunk as a genre, drawing influence from punk subculture and early hacker culture. Other influential cyberpunk writers included Bruce Sterling and Rudy Rucker. The Japanese cyberpunk subgenre began in 1982 with the debut of Katsuhiro Otomo's manga series Akira, with its 1988 anime film adaptation (also directed by Otomo) later popularizing the subgenre.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CZECH</Tag>
@@ -2586,6 +2604,11 @@
 		<Tag>TXT_KEY_BONUS_EGGS</Tag>
 		<English>Eggs</English>
 		<French>Œufs</French>
+		<German>
+			<Text>Eier:Eier:Eiern:Eier</Text>
+			<Gender>Neuter</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Uova</Italian>
 		<Polish>Jajka</Polish>
 		<Russian>ßéöà</Russian>
@@ -2593,6 +2616,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_EGGS_PEDIA</Tag>
 		<English>An [COLOR_HIGHLIGHT_TEXT]egg[COLOR_REVERT] is a female germ cell, consisting essentially of shell, yolk and egg white. Throughout history, it has also become a food that can be consumed directly or as an ingredient in many cuisines around the world. The most used is the chicken egg, but the eggs of other birds, fishes, turtles, mollusks, insects, etc. are also consumed.</English>
+		<German>Ein Großteil der Tiere (z.B. Fische, Amphibien, Reptilien, Vögel und selbst einige wenige Säugetiere) legt [COLOR_HIGHLIGHT_TEXT]Eier[COLOR_REVERT]. Diese bestehen aus der weiblichen Keimzelle, Nährstoffen für die Entwicklung des Embryos und einer schützenden Hülle. Da Eier über einen hohen Nährwert verfügen, sind sie eine begehrte Nahrungsquelle, die sowohl von vielen Tierarten als auch vom Menschen genutzt wird. Am häufigsten wird weltweit das Hühnerei für Speisen (z.B. Kuchen, Gebäck, Nudeln) verwendet. Heutzutage sind Eier neben der Ernährung auch für die Herstellung von Vakzinen wichtig, 90% des weltweiten Grippeimpfstoffs wird mit Hilfe von Eiern produziert.</German>
 		<Italian>Un [COLOR_HIGHLIGHT_TEXT]uovo[COLOR_REVERT] è una cellula germinale femminile, costituita essenzialmente da guscio, tuorlo e albume. Lungo la storia, è diventato anche un alimento consumabile direttamente o come ingrediente in numerosi piatti delle cucine di tutto il mondo. Il più utilizzato è l'uovo di gallina, ma si consumano anche le uova di altri volatili, di pesci, di tartarughe, di molluschi, di insetti, eccetera.</Italian>
 		<Russian>ßéöà ó ñàìîê ìíîãèõ âèäîâ, âêëþ÷àÿ ïòèö, ðåïòèëèé, àìôèáèé è ðûá, âåðîÿòíî, ñëóæèëè ïèùåé äëÿ ÷åëîâå÷åñòâà íà ïðîòÿæåíèè òûñÿ÷åëåòèé.</Russian>
 	</TEXT>
@@ -5144,7 +5168,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MACHU_PICCHU_PLANS_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Machu Picchu is a 15th-century Inca citadel located in the Eastern Cordillera of southern Peru on a 2,430-meter (7,970 ft) mountain ridge. It is located in the Machupicchu District within Urubamba Province above the Sacred Valley, which is 80 kilometers (50 mi) northwest of Cuzco. The Urubamba River flows past it, cutting through the Cordillera and creating a canyon with a tropical mountain climate. For most speakers of English or Spanish, the first 'c' in Picchu is silent. The Incas, in contrast with the Mayans, had no written language, and no European visited the site until the 19th century, so far as is known. There are, therefore, no written records of the site while it was in use. The names of the buildings, their supposed uses, and their inhabitants are all the product of modern archeologists, on the basis of physical evidence, including tombs at the site. </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MADAN</Tag>
@@ -5210,6 +5234,11 @@
 		<Tag>TXT_KEY_BONUS_MAMMOTH</Tag>
 		<English>Mammoth</English>
 		<French>Mammouth</French>
+		<German>
+			<Text>Mammuts:Mammuts:Mammuts:Mammuts</Text>
+			<Gender>Neuter</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Mammut</Italian>
 		<Spanish>Mamuts</Spanish>
 		<Polish>Mamuty</Polish>
@@ -5218,6 +5247,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAMMOTH_PEDIA</Tag>
 		<English>A mammoth is any species of the extinct genus Mammuthus. These proboscideans are members of Elephantidae, the family of elephants and mammoths, and close relatives of modern elephants. They were often equipped with long curved tusks and, in northern species, a covering of long hair. They lived from the Pliocene Epoch from around 4.8 million years ago, into the Holocene at about 4,500 years ago. The largest known species, Songhua River mammoth (Mammuthus sungari), reached heights of at least 5 metres (16 ft) at the shoulder. Mammoths would probably normally weigh in the region of 6 to 8 tons, but exceptionally large males may have exceeded 12 tons. However, most species of mammoth were only about as large as a modern Asian elephant. Fossils of species of dwarf mammoth have been found on the Californian Channel Islands (Mammuthus exilis) and the Mediterranean island of Sardinia (Mammuthus lamarmorae). There was also a race of dwarf woolly mammoths on Wrangel Island, north of Siberia, within the Arctic Circle.</English>
+		<German>[COLOR_HIGHLIGHT_TEXT]Mammuts[COLOR_REVERT] sind eine ausgestorbene Gattung aus der Familie der Elefanten, von denen sich die meisten Arten durch eine gewaltige Körpergröße auszeichneten. Die frühen Menschen kamen hauptsächlich mit dem Wollhaarmammut in Kontakt, das sie bejagten oder zumindest schlachteten. Neben dem Fleisch wurden wie beim Elefanten auch Knochen und Elfenbein der Tiere verarbeitet. Mammutknochenhäuser wurden z.B. bei Ausgrabungen an verschiedenen Stellen in der Ukraine entdeckt.</German>
 		<Russian>Мамонт - это любой вид вымершего рода Mammuthus. Эти хоботки являются членами Elephantidae, семейства слонов и мамонтов, а также близкими родственниками современных слонов. Они часто были оснащены длинными изогнутыми бивнями, а у северных видов - покровом из длинной шерсти. Они жили с эпохи плиоцена, примерно 4,8 миллиона лет назад, в голоцен, примерно 4500 лет назад. Слово мамонт происходит от русского Mamont, вероятно, в свою очередь, из вогульского (мансийского) языка, mang ont, что означает «земляной рог».[PARAGRAPH:2]Как и их современный родственник слон (азиатский или африканский), мамонты были довольно большими; в английском языке существительное «мамонт» стало прилагательным, означающим «большой» или «массивный». Самый крупный из известных видов, мамонт реки Сунгари (Mammuthus sungari), достигал высоты не менее 5 метров (16 футов) в плече. Мамонты, вероятно, обычно весили бы от 6 до 8 тонн, но исключительно крупные самцы могли превышать 12 тонн. Однако большинство видов мамонтов были размером с современного азиатского слона. Окаменелости карликовых мамонтов были найдены на Калифорнийских Нормандских островах (Mammuthus exilis) и на средиземноморском острове Сардиния (Mammuthus lamarmorae). Также была раса карликовых шерстистых мамонтов на острове Врангеля, к северу от Сибири, за Полярным кругом.[PARAGRAPH:2]Бивень мамонта длиной 11 футов (3,4 м) был обнаружен к северу от Линкольна, штат Иллинойс, в 2005 году.[PARAGRAPH:2]Основываясь на исследованиях их близких родственников, современных слонов, у мамонтов, вероятно, был период беременности 22 месяца, в результате чего родился единственный мамонтенок. Их социальная структура, вероятно, была такой же, как у африканских и азиатских слонов, с самками, живущими в стадах, возглавляемых матриархом, в то время как быки жили уединенно или образовывали свободные группы после половой зрелости.</Russian>
 	</TEXT>
 	<TEXT>
@@ -5935,6 +5965,14 @@
 		<Russian>Эти структуры могут динамически настраиваться на молекулярном уровне. Они идеально подходят для быстрого строительства космических мест обитания.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_NANOPUNK</Tag>
+		<English>Nanopunk</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_NANOPUNK_PEDIA</Tag>
+		<English>Nanopunk refers to an emerging subgenre of science fiction that is still very much in its infancy in comparison to its ancestor-genre, cyberpunk, and some of its other derivatives. The genre is especially similar to biopunk, but describes a world where nanites and bio-nanotechnologies are widely in use and nanotechnologies are the predominant technological forces in society. Currently the genre is mainly concerned with the artistic, psychological, and societal impact of nanotechnology, rather than aspects of the technology which itself is still in its infancy. Unlike cyberpunk, which can be distinguished by a gritty and low-life yet technologically advanced character, nanopunk can have a darker dystopian character that might examine potential risks by nanotechnology as well as a more optimistic outlook that might emphasize potential uses of nanotechnology.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOTRUSSES</Tag>
 		<English>Nanotrusses</English>
 		<Italian>Nanotralicci</Italian>
@@ -6418,19 +6456,6 @@
 		<Russian>Страусиные перья - одна из причин разведения страусов. Как правило, у страуса беловатые шея, голова и нижняя часть тела с толстым покровом черных или темно-коричневых перьев, венчающих всю спину. Перья самок почти однородно коричневые, а у самцов тело черное с белыми перьями на крыльях и хвосте. Страусиные перья, особенно длинные из птичьего хвоста и крыльев, были популярны на протяжении веков, в основном для шляп. Сегодня их мягкость делает их полезными для удаления пыли и очистки хрупких деталей машин.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_OSTRICH_LEATHER</Tag>
-		<English>Ostrich Leather</English>
-		<French>Cuir d'autruches</French>
-		<Italian>Pelli di struzzo</Italian>
-		<Russian>Òîíêàÿ êîæà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_OSTRICH_LEATHER_PEDIA</Tag>
-		<English>Ostrich leather is a tanned skin distinctively recognized for its pattern of bumps or vacant quill follicles, ranged across a smooth field in varying densities. Its production process is intricate, specialised and expensive. Although the first commercial farming began in South Africa in mid-19th century, by 1920s the industry was already collapsed because of a drop in demand. Other products were marketed, with each success battered by world events and droughts until 21st century, when ostrich skin is globally seen as a luxury item in high-end demand.</English>
-		<Italian>La pelle di struzzo è una pelle conciata riconoscibile per il particolare modello di protuberanze o follicoli di penna vuoti, che si estende su un campo liscio a varie densità. Il suo processo di produzione è complesso, specializzato e costoso. Sebbene le prime iniziative commerciali iniziarono in Sudafrica a metà del XIX secolo, negli anni venti del XX secolo l'industria era già crollata a causa di un calo della domanda. La commercializzazione ha continuato ad avere un andamento discontinuo fino al XXI secolo, quando la pelle di struzzo è stata considerata a livello globale come un oggetto di lusso di fascia alta.</Italian>
-		<Russian>Кожа страуса является конечным продуктом выделки шкурок, взятых из африканских страусов, выращиваемых ради их перьев, кожи и мяса. Кожа эта имеет отличительные для своего узора бугорки или свободное перо фолликул и варьируется через ровные поля в разной плотности. Она требует сложный, специализированный и дорогой производственный процесс, что делает его дорогостоящим и красивым.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_OTTOMAN</Tag>
 		<English>Ottoman</English>
 		<French>Ottomane</French>
@@ -6538,6 +6563,11 @@
 		<Tag>TXT_KEY_BONUS_PARROTS</Tag>
 		<English>Parrots</English>
 		<French>Perroquets</French>
+		<German>
+			<Text>Papageien:Papageien:Papageien:Papageien</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Pappagalli</Italian>
 		<Spanish>Loros</Spanish>
 		<Polish>Papugi</Polish>
@@ -6546,6 +6576,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PARROTS_PEDIA</Tag>
 		<English>In ancient times and currently parrot feathers have been used in ceremonies, and for decoration. In Polynesian legend as current in the Marquesas Islands, the hero Laka/Aka is mentioned as having undertaken a long and dangerous voyage to Aotona in what are now the Cook Islands, to obtain the highly prized feathers of a red parrot as gifts for his son and daughter. On the voyage a hundred out of his 140 rowers died of hunger on their way, but the survivors reached Aotona and captured enough parrots to fill 140 bags with their feathers. Parrots have also been considered sacred. The Moche people of ancient Peru worshipped birds and often depicted parrots in their art.</English>
+		<German>[COLOR_HIGHLIGHT_TEXT]Papageien[COLOR_REVERT] haben die Menschen mit ihrer Schönheit, ihrer Intelligenz und Gelehrigkeit schon seit Urzeiten fasziniert. Bei den frühen Menschen waren vor allem die bunten Federn gefragt. Man verwendete sie als Körperschmuck und zur Dekoration, aber auch für verschiedene Zeremonien. Seit der Antike sind einige Papageienarten als Haustiere in Europa belegt. Im Mittelalter waren sie als Luxustiere bei Hofe begehrt. Nach der Entdeckung Amerikas 1492 gelangten immer mehr Papageien nach Europa. Heute werden rund 50 Millionen Papageien gehalten, die aber in der Regel aus kommerzieller Zucht stammen. Der Import von Wildfängen ist aufgrund des Artenschutzes verboten, da etwa 50 Prozent aller Papageienarten inzwischen als bedroht eingestuft werden.</German>
 		<Russian>В древности и в настоящее время перья попугаев использовались в церемониях и для украшения. В полинезийской легенде, распространенной на Маркизских островах, герой Лака/Ака упоминается как совершивший долгое и опасное путешествие в Аотону на территории нынешних Островов Кука, чтобы получить ценные перья красного попугая в качестве подарка своему сыну и дочери. Во время плавания сто из 140 гребцов умерли от голода по пути, но оставшиеся в живых достигли Аотоны и поймали достаточно попугаев, чтобы наполнить их перьями 140 мешков. Попугаи также считались священными. Племя моче в древнем Перу поклонялось птицам и часто изображало попугаев в предметах своего искусства.</Russian>
 	</TEXT>
 	<TEXT>
@@ -7125,6 +7156,11 @@
 		<Tag>TXT_KEY_BONUS_POULTRY</Tag>
 		<English>Poultry</English>
 		<French>Volaille</French>
+		<German>
+			<Text>Geflügel:Geflügels:Geflügel:Geflügel</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
+		</German>
 		<Italian>Pollame</Italian>
 		<Spanish>Aves de corral</Spanish>
 		<Polish>Drób</Polish>
@@ -7133,6 +7169,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POULTRY_PEDIA</Tag>
 		<English>Poultry are domesticated birds kept by humans for the eggs they produce, their meat, their feathers, or sometimes as pets. These birds are most typically members of the superorder Galloanserae (fowl), especially the order Galliformes (which includes chickens, quails and turkeys) and the family Anatidae, in order Anseriformes, commonly known as "waterfowl" and including domestic ducks and domestic geese. Poultry also includes other birds that are killed for their meat, such as the young of pigeons (known as squabs) but does not include similar wild birds hunted for sport or food and known as game. The word "poultry" comes from the French/Norman word poule, itself derived from the Latin word pullus, which means small animal.</English>
+		<German>Als [COLOR_HIGHLIGHT_TEXT]Geflügel[COLOR_REVERT] bezeichnet man alle Vogelarten, die als Nutz- oder Haustiere gezüchtet werden. Da alle diese Vogelarten zunächst als Nahrung gejagt wurden, ist Geflügel grundsätzlich zum Verzehr geeignet. Zu Geflügel zählen Hühner, Puten, Gänse, Enten, Tauben und diverse Wildvogelarten wie Wachteln, Fasane, Reb-, Perl- und Birkhühner und sogar Strauße. Neben dem Fleisch werden besonders von Hühnern, Wachteln und Straußen auch die Eier verwertet. Hühnereier dienen heutzutage auch zur Gewinnung von Impfstoffen.</German>
 		<Polish>Drób - zbiorcze określenie udomowionych ptaków hodowanych ze względu na mięso, jaja, pierze oraz w celach dekoracyjnych. Do drobiu zalicza się między innymi kury, gęsi, indyki, kaczki, gołębie i perliczki. Do drobiu w sensie kulinarnym zaliczane bywają też potrawy z dzikich ptaków.</Polish>
 		<Russian>Домашняя птица - это птицы, которых люди содержат из-за яиц, которые они производят, мяса, перьев или иногда в качестве комнатных питомцев. Эти птицы чаще всего являются членами надотряда Galloanserae (домашняя птица), особенно отряда Galliformes (который включает кур, перепелов и индюков) и семейства Anatidae, отряда Anseriformes, широко известного как «водоплавающие птицы», включая домашних уток и домашних гусей. К домашней птице также относятся другие птицы, которых убивают ради мяса, например, молодняк голубей (известный как косяк), но не включает подобных диких птиц, на которых охотятся для спорта или еды и известные как дичь. Английское слово «poultry» происходит от франко-нормандского слова poule, которое происходит от латинского слова pullus, что означает маленькое животное.</Russian>
 	</TEXT>
@@ -7382,6 +7419,11 @@
 		<Tag>TXT_KEY_BONUS_RABBIT</Tag>
 		<English>Rabbit</English>
 		<French>Lapin</French>
+		<German>
+			<Text>Kaninchen:Kaninchen:Kaninchen:Kaninchen</Text>
+			<Gender>Neuter</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Coniglio</Italian>
 		<Spanish>Conejos</Spanish>
 		<Polish>Króliki</Polish>
@@ -7390,6 +7432,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RABBIT_PEDIA</Tag>
 		<English>A rabbit is a small mammal, found in several parts of the world. There are currently 305 known domestic breeds; the non-domesticated rabbits, known as hares, are generally larger and have more elongated ears and larger and longer hind legs. Domestication started during the Middle Ages, when rabbits were kept as livestock for their meat and fur, generating an increasingly wider selection. Many of these breeds were, starting with 19th century, also kept as pets. Rabbits are also often used as a symbol of fertility or rebirth in religion, and of vulnerability, sympathy and innocence in folklore and modern children's stories.</English>
+		<German>Bei [COLOR_HIGHLIGHT_TEXT]Kaninchen[COLOR_REVERT] handelt es sich um spezielle, meist kleinere Vertreter der Familie der Hasen, die sich durch kürzere Ohren und weniger starke Hinterläufe auszeichnen. Sie wurden schon von den frühen Menschen wegen ihres schmackhaften Fleischs und ihres Fells gejagt. Seit antiker Zeit ist eine Zucht von Kaninchen zur Mast belegt, heutzutage werden Rassekaninchen aber auch zu Schauzwecken gezüchtet.</German>
 		<Italian>Un coniglio è un piccolo mammifero, presenti in diverse parti del mondo. Attualmente ci sono 305 razze domestiche conosciute; le specie non addomesticate, note come lepri, sono generalmente più grandi e hanno orecchie più allungate e zampe posteriori più grandi e più lunghe. L'addomesticamento è iniziato durante il Medioevo, quando i conigli venivano allevati per la loro carne e la loro pelliccia, generando una selezione sempre più ampia. Molte di queste razze, a partire dal XIX secolo, iniziarono a essere allevate anche come animali domestici. I conigli sono spesso usati anche come simbolo di fertilità o rinascita nella religione e di vulnerabilità, simpatia e innocenza nel folklore e nelle moderne storie per bambini.</Italian>
 		<Russian>«Кролики - это не только ценный мех, но и три-четыре килограмма диетического, легко усваиваемого мяса» - Советский плакат.[PARAGRAPH:2]Кролики - это мелкие млекопитающие семейства Leporidae отряда Lagomorpha, обитающие в нескольких частях мира. В семействе кроликов восемь различных родов, включая европейского кролика (Oryctolagus cuniculus), кроликов с хвостом (род Sylvilagus; 13 видов) и кролика Амами (Pentalagus Furnessi, находящийся под угрозой исчезновения вид на Амами-О-шима, Япония). Существует множество других видов кроликов, и они, наряду с пищухами и зайцами, составляют отряд зайцеобразных.</Russian>
 	</TEXT>
@@ -7929,7 +7972,11 @@
 		<Tag>TXT_KEY_BONUS_SEA_LION_AND_SEAL</Tag>
 		<English>Sea Lion and Seal</English>
 		<French>Lion de mer et phoque</French>
-		<German>Seelöwen und Robben</German>
+		<German>
+			<Text>Robben:Robben:Robben:Robben</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Leoni marini e foche</Italian>
 		<Spanish>Focas y leones marinos</Spanish>
 		<Polish>Lew morski i foka</Polish>
@@ -7938,6 +7985,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SEA_LION_AND_SEAL_PEDIA</Tag>
 		<English>Sea lions and fur seals constitute the Otariidae family, collectively known as eared seals. The major distinction between them is the presence of a thick underfur layer in the latter. Otariids have proportionately large foreflippers and pectoral muscles, and have the ability to turn their hind limbs forward and walk on all fours, making them far more maneuverable on land. They are generally considered to be less adapted to an aquatic lifestyle than true seals; however, they can attain higher bursts of speed and have greater maneuverability in the water. They were, and still are, hunted for their skins, their meat and also their blubber, used to make seal oil.</English>
+		<German>Obwohl die Gattung der [COLOR_HIGHLIGHT_TEXT]Robben[COLOR_REVERT] eigentlich wesentlich mehr Arten umfasst, sind hier besonders die Pelzrobben wie Seelöwen und Seebären gemeint. Menschliche Jäger schätzen bereits seit der Steinzeit ihr Fleisch und das sehr gut wärmeisolierende Fell dieser Tiere. Außerdem wurde früher aus der mehrere Zentimeter dicken Fettschicht von Robben, die Blubber genannt wird, Tran gewonnen.[NEWLINE]Da Kleidung aus Robbenfell begehrt war, wurden Pelzrobben im 19. Jahrhundert so exzessiv bejagt, dass viele Seebärenarten beinahe ausgerottet wurden. Inzwischen konnten sich die Bestände durch eine strengere Gesetzgebung in vielen Staaten zum Glück wieder erholen.</German>
 		<Italian>I leoni marini e le foche costituiscono la famiglia delle Otariidae. La principale distinzione tra loro è la presenza di uno spesso strato di lanugine sotto la pelliccia nelle foche. Gli otariidi hanno proporzionalmente grandi pinne e muscoli pettorali e hanno la capacità di girare in avanti gli arti posteriori e camminare a quattro zampe, caratteristica che gli permette di camminare meglio sulla terraferma. Sono generalmente considerati meno adattati a uno stile di vita acquatico; tuttavia, possono raggiungere picchi di velocità più elevati e avere una maggiore manovrabilità in acqua. Erano, e sono tuttora, cacciati per le loro pelli, la loro carne e anche il loro grasso, usati per produrre olio di foca.</Italian>
 		<Russian>Морские львы и морские котики составляют семейство Otariidae, известное как ушастые тюлени. Основное различие между ними - наличие у последних толстого подшерстка. У отариидов пропорционально большие передние ласты и грудные мышцы, а также способность поворачивать задние конечности вперед и ходить на четвереньках, что делает их гораздо более маневренными на суше. Обычно считается, что они менее приспособлены к водному образу жизни, чем настоящие тюлени; тем не менее, они могут развивать более высокие скорости и маневренность в воде. На них охотились и продолжают охотиться из-за кожи, мяса, а также жира, из которого делают тюленьий жир.</Russian>
 	</TEXT>
@@ -8327,7 +8375,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SPACEPUNK_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Space is big. Really, really big. So big in fact, that most of it can't even be seen from the Earth. So what exactly is out there? This trope is what happens when writers try to answer that question. A galaxy far, far away is a setting for a story which is so far away from Earth, that the very fact of its distance lends an air of credibility to even the most fantastic of plots. After all, no one really knows what's out there in the vastness of space. There may be elements we've never heard of. The laws of physics may not work the same way. There may be space gods, ancient civilizations, Rubber-Forehead Aliens, all kinds of Applied Phlebotinum. Just about anything is fair game, because no one can prove that a given aspect of the story is impossible. People have set their fantasy stories "far far away" for as long as they've been telling stories, but how far qualifies as "far away" changes as Technology Marches On. Once upon a time this might have been "about 30 miles south of the village", but as humans were able to travel further and faster, the plausibility of a troll living just over the mountain became less believable, so storytellers began conjuring up distant continents and Lost Worlds that explorers had yet to discover. When Earth was mostly mapped, writers began looking to Mars, Venus and the Moon, and once we were able to get a good look at those, they started setting stories in distant, unknowable space. </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SPANISH</Tag>
@@ -8411,7 +8459,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STARPUNK_PEDIA</Tag>
-		<English>TBD</English>
+		<English>You know the type. Sooner or later one shows up on every Space Opera or Wagon Train to the Stars. They're the alien being that can do anything with the wave of a hand (or tentacle, or tendril of energy). Sometimes they're hostile, sometimes they're benevolent, sometimes above it all or just... different, but regardless they can really cramp the style of a young, expanding race looking to make a name for itself on the galactic scene. Usually, though, they tend to just be omnipotent jackasses, looking for a cheap laugh. More often than not, they tend to be egotistical and haughty, thinking little of humans and "lesser beings". Sometimes you can exploit their sense of honor or fair play, or their desire for solitude, to make them go away. Or maybe you just have to wait for their parents to come and take them home. Unfortunately, you can't always get rid of them — just ask Jean-Luc Picard (and don't even get his colleague Capt. Janeway started). </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STEAMPUNK</Tag>
@@ -8420,7 +8468,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STEAMPUNK_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Steampunk is a subgenre of science fiction that incorporates retrofuturistic technology and aesthetics inspired by 19th-century industrial steam-powered machinery. Steampunk works are often set in an alternative history of the Victorian era or the American "Wild West", where steam power remains in mainstream use, or in a fantasy world that similarly employs steam power. Steampunk most recognizably features anachronistic technologies or retrofuturistic inventions as people in the 19th century might have envisioned them — distinguishing it from Neo-Victorianism — and is likewise rooted in the era's perspective on fashion, culture, architectural style, and art. Such technologies may include fictional machines like those found in the works of H. G. Wells and Jules Verne. Other examples of steampunk contain alternative-history-style presentations of such technology as steam cannons, lighter-than-air airships, analog computers, or such digital mechanical computers as Charles Babbage's Analytical Engine.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STEEL_INGOTS</Tag>
@@ -9545,7 +9593,11 @@
 		<Tag>TXT_KEY_BONUS_WALRUS</Tag>
 		<English>Walrus</English>
 		<French>Morse</French>
-		<German>Walross</German>
+		<German>
+			<Text>Walrosse:Walrosse:Walrossen:Walrosse</Text>
+			<Gender>Neuter</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Tricheco</Italian>
 		<Spanish>Morsas</Spanish>
 		<Polish>Morsy</Polish>
@@ -9554,6 +9606,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WALRUS_PEDIA</Tag>
 		<English>The walrus (Odobenus rosmarus) is a large flippered marine mammal with a discontinuous distribution about the North Pole in the Arctic Ocean and subarctic seas of the Northern Hemisphere. The walrus is the only living species in the family Odobenidae and genus Odobenus. This species is subdivided into two subspecies: the Atlantic walrus (O. r. rosmarus) which lives in the Atlantic Ocean and the Pacific walrus (O. r. divergens) which lives in the Pacific Ocean.</English>
+		<German>Das [COLOR_HIGHLIGHT_TEXT]Walross[COLOR_REVERT] hat für den Menschen schon immer eine bedeutende Rolle gespielt. Die arktischen Völker verwendeten praktisch alle Körperteile eines erlegten Walrosses, sei es als Nahrung oder als Material zum Heizen (Tran), zum Hüttenbau (Knochen und Stoßzähne) oder zur Herstellung von Booten und Kleidung (Haut).[NEWLINE]Durch skrupellose intensive Bejagung mit modernen Waffen zur Gewinnung des Elfenbeins, aber auch durch die Verschmutzung des Lebensraums insbesondere durch Ölunglücke wurden die Populationen stark dezimiert. Nachdem vor allem die USA und Russland eine Reihe von Schutzmaßnahmen starteten, hat sich der Bestand aber wieder etwas erholt.</German>
 		<Polish>Mors (łac. Odobenus rosmarus) - gatunek dużego drapieżnego ssaka morskiego, jedyny współcześnie żyjący przedstawiciel dawniej licznej w gatunki rodziny morsowatych (Odobenidae) i jedyny gatunek z rodzaju Odobenus. Mors pełnił ważną rolę w życiu mieszkańców Arktyki, którzy polowali na niego dla mięsa, skór, tłuszczu, kłów i kości.</Polish>
 		<Russian>В настоящее время представляет колонии тюленей, морских львов и моржей. К сожалению, система размещения ресурсов Civ IV не позволяет ограничиваться прибрежными участками.</Russian>
 	</TEXT>
@@ -9814,7 +9867,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_XENOFLORA_PEDIA</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Xenoflora[COLOR_REVERT] is a term to define plant life that originated in a planet other than Earth. It is distinct from lifeforms that are engineered by humans and living off Earth.</English>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Xenofauna[COLOR_REVERT] è un termine utilizzato per definire le piante che si sono originate su un pianeta diverso dalla Terra. Non vi rientrano quelle che sono state create dagli esseri umani e che vivono al di fuori della Terra.</Italian>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Xenoflora[COLOR_REVERT] è un termine utilizzato per definire le piante che si sono originate su un pianeta diverso dalla Terra. Non vi rientrano quelle che sono state create dagli esseri umani e che vivono al di fuori della Terra.</Italian>
 		<Russian>Êñåíîôëîðà - ýòî ðàñòèòåëüíàÿ æèçíü, âîçíèêøàÿ íà ïëàíåòå, îòëè÷íîé îò Çåìëè. Îí îòëè÷àåòñÿ îò æèçíåííûõ ôîðì, ñîçäàííûõ ëþäüìè è æèâóùèõ çà ïðåäåëàìè Çåìëè.</Russian>
 	</TEXT>
 	<TEXT>

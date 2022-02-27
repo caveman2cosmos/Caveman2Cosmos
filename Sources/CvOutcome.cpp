@@ -10,6 +10,7 @@
 #include "CvCity.h"
 #include "CvCityAI.h"
 #include "CvGlobals.h"
+#include "CvBonusInfo.h"
 #include "CvInfos.h"
 #include "CvMap.h"
 #include "CvOutcome.h"
@@ -23,6 +24,7 @@
 #include "CyUnit.h"
 #include "CyPlot.h"
 #include "CheckSum.h"
+#include "CvGameAI.h"
 #include "IntExpr.h"
 
 CvOutcome::CvOutcome(): m_eUnitType(NO_UNIT),
@@ -88,7 +90,7 @@ CvOutcome::~CvOutcome()
 
 int CvOutcome::getYield(YieldTypes eYield, const CvUnit& kUnit) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield)
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, eYield);
 
 	if (m_aiYield[eYield])
 	{
@@ -102,7 +104,7 @@ int CvOutcome::getYield(YieldTypes eYield, const CvUnit& kUnit) const
 
 int CvOutcome::getCommerce(CommerceTypes eCommerce, const CvUnit& kUnit) const
 {
-	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce)
+	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eCommerce);
 
 	if (m_aiCommerce[eCommerce])
 	{
@@ -407,40 +409,34 @@ bool CvOutcome::isPossible(const CvUnit& kUnit) const
 			return false;
 		}
 	}
+	else if (GET_PLAYER(ePlotOwner).isNPC())
+	{
+		if (!kInfo.getBarbarianTerritory())
+		{
+			return false;
+		}
+	}
 	else
 	{
-		if (GET_PLAYER(ePlotOwner).isBarbarian())
+		const TeamTypes ePlotOwnerTeam = GET_PLAYER(ePlotOwner).getTeam();
+		const CvTeam& kPlotOwnerTeam = GET_TEAM(ePlotOwnerTeam);
+		if (kOwnerTeam.isAtWar(ePlotOwnerTeam))
 		{
-			if (!kInfo.getBarbarianTerritory())
+			if (!kInfo.getHostileTerritory())
 			{
 				return false;
 			}
 		}
-		else
+		else if ((eOwnerTeam == ePlotOwnerTeam) || (kPlotOwnerTeam.isVassal(eOwnerTeam)))
 		{
-			const TeamTypes ePlotOwnerTeam = GET_PLAYER(ePlotOwner).getTeam();
-			const CvTeam& kPlotOwnerTeam = GET_TEAM(ePlotOwnerTeam);
-			if (kOwnerTeam.isAtWar(ePlotOwnerTeam))
+			if (!kInfo.getFriendlyTerritory())
 			{
-				if (!kInfo.getHostileTerritory())
-				{
-					return false;
-				}
+				return false;
 			}
-			else if ((eOwnerTeam == ePlotOwnerTeam) || (kPlotOwnerTeam.isVassal(eOwnerTeam)))
-			{
-				if (!kInfo.getFriendlyTerritory())
-				{
-					return false;
-				}
-			}
-			else
-			{
-				if (!kInfo.getNeutralTerritory())
-				{
-					return false;
-				}
-			}
+		}
+		else if (!kInfo.getNeutralTerritory())
+		{
+			return false;
 		}
 	}
 
@@ -734,39 +730,36 @@ bool CvOutcome::isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool 
 			return false;
 		}
 	}
+	else if (GET_PLAYER(ePlotOwner).isNPC())
+	{
+		if (!kInfo.getBarbarianTerritory())
+		{
+			return false;
+		}
+	}
 	else
 	{
-		if (GET_PLAYER(ePlotOwner).isBarbarian())
+		const TeamTypes ePlotOwnerTeam = GET_PLAYER(ePlotOwner).getTeam();
+		const CvTeam& kPlotOwnerTeam = GET_TEAM(ePlotOwnerTeam);
+		if (kOwnerTeam.isAtWar(ePlotOwnerTeam))
 		{
-			if (!kInfo.getBarbarianTerritory())
+			if (!kInfo.getHostileTerritory())
+			{
+				return false;
+			}
+		}
+		else if ((eOwnerTeam == ePlotOwnerTeam) || (kPlotOwnerTeam.isVassal(eOwnerTeam)))
+		{
+			if (!kInfo.getFriendlyTerritory())
 			{
 				return false;
 			}
 		}
 		else
 		{
-			const TeamTypes ePlotOwnerTeam = GET_PLAYER(ePlotOwner).getTeam();
-			const CvTeam& kPlotOwnerTeam = GET_TEAM(ePlotOwnerTeam);
-			if (kOwnerTeam.isAtWar(ePlotOwnerTeam))
+			if (!kInfo.getNeutralTerritory())
 			{
-				if (!kInfo.getHostileTerritory())
-				{
-					return false;
-				}
-			}
-			else if ((eOwnerTeam == ePlotOwnerTeam) || (kPlotOwnerTeam.isVassal(eOwnerTeam)))
-			{
-				if (!kInfo.getFriendlyTerritory())
-				{
-					return false;
-				}
-			}
-			else
-			{
-				if (!kInfo.getNeutralTerritory())
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 	}

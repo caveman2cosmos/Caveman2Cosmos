@@ -157,6 +157,10 @@
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ASSAULT_SEA</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -2184,7 +2188,6 @@
 			</BonusProductionModifiers>
 			<iBombardRate>7</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>1</iAsset>
@@ -3160,7 +3163,6 @@
 			</UnitCombatMods>
 			<iBombardRate>18</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_SEAPLANE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_SEAPLANE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -3267,7 +3269,6 @@
 			</UnitCombatMods>
 			<iBombardRate>20</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_SEAPLANE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_SEAPLANE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -3523,7 +3524,6 @@
 			</UnitCombatMods>
 			<iBombardRate>30</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>3</iCargo>
 			<iAsset>6</iAsset>
@@ -3632,7 +3632,6 @@
 			</UnitCombatMods>
 			<iBombardRate>22</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>4</iCargo>
 			<iAsset>4</iAsset>
@@ -3767,7 +3766,6 @@
 			</UnitCombatMods>
 			<iBombardRate>30</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>6</iCargo>
 			<iAsset>4</iAsset>
@@ -4210,7 +4208,6 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>1</iAsset>
@@ -5475,7 +5472,7 @@
 				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
-			<iCost>1290</iCost>
+			<iCost>1287</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>6</iMoves>
@@ -5501,7 +5498,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -5649,7 +5645,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -5797,7 +5792,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>5</iCargo>
 			<iAsset>4</iAsset>
@@ -5948,7 +5942,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>3</iCargo>
 			<iAsset>4</iAsset>
@@ -6110,7 +6103,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -6262,7 +6254,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>5</iCargo>
 			<iAsset>4</iAsset>
@@ -6332,7 +6323,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
-			<iCost>1300</iCost>
+			<iCost>1237</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -6449,7 +6440,7 @@
 				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
-			<iCost>1660</iCost>
+			<iCost>1600</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -6566,7 +6557,7 @@
 				<BonusType>BONUS_STEEL_WARES</BonusType>
 				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			</PrereqBonuses>
-			<iCost>1920</iCost>
+			<iCost>1843</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>6</iMoves>
@@ -6686,7 +6677,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-			<iCost>7100</iCost>
+			<iCost>6818</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>8</iMoves>
@@ -7581,6 +7572,10 @@
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
+					<UnitAIType>UNITAI_RESERVE_SEA</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_PIRATE_SEA</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -8109,6 +8104,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WOODEN_SHIPS</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_PLUS_SHIELD</SubCombatType>
@@ -8277,6 +8273,10 @@
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_MERCHANT</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -8300,7 +8300,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>95</iCost>
+			<iCost>133</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -8428,7 +8428,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>250</iCost>
+			<iCost>308</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -8518,7 +8518,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>300</iCost>
+			<iCost>372</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>4</iMoves>
@@ -8605,7 +8605,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>620</iCost>
+			<iCost>773</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -8693,7 +8693,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>740</iCost>
+			<iCost>923</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -8768,6 +8768,10 @@
 				<UnitType>UNIT_HOSPITAL_SHIP_2</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_HEALER</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
 				<UnitAI>
 					<UnitAIType>UNITAI_HEALER_SEA</UnitAIType>
 					<bUnitAI>1</bUnitAI>

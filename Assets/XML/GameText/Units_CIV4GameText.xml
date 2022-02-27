@@ -1,12 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_HURRY_PRODUCTION</Tag>
-		<English>Hurry Production (with overflow)</English>
-		<French>Accélérer la Production (avec gaspillage)</French>
-		<Russian>Ускорить производство (с избытком)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_HURRY_PRODUCTION_CARAVAN</Tag>
 		<English>Hurry Production (with overflow)</English>
 		<French>Accélérer la Production (avec gaspillage)</French>
@@ -20,10 +14,6 @@
 		<Italian>L'attuale produzione cittadina è stata affrettata dalla tua unità.</Italian>
 		<Polish>Obecna produkcja w mieście została przyspieszona przez jednostk.</Polish>
 		<Russian>Текущее производство в городе было ускорено караваном.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_HURRY_PRODUCTION_MESSAGE</Tag>
-		<English>Current city production has been hurried</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITGROUPER_AUTO_PROMOTION_GROUPING</Tag>
@@ -2329,7 +2319,7 @@
 		<Tag>TXT_KEY_UNITHELP_WILL_RECEIVE_FREE_EXPERIENCE</Tag>
 		<English>[COLOR_YELLOW]Free Starting Experience:[COLOR_REVERT]</English>
 		<French>[COLOR_YELLOW]Expérience de départ:[COLOR_REVERT]</French>
-		<German>[COLOR_YELLOW]Freie Erfahrungspunkte zu Beginn:[COLOR_REVERT]</German>
+		<German>[COLOR_YELLOW]freie Erfahrungspunkte zu Beginn:[COLOR_REVERT]</German>
 		<Italian>[COLOR_YELLOW]XP iniziale gratis:[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_YELLOW]Experiencia gratuita:[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YELLOW]Darmowe Doświadczenie:[COLOR_REVERT]</Polish>
@@ -2524,7 +2514,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ADVENTURER_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Adventurers are ready for every situation</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ADZE_WARRIOR</Tag>
@@ -5018,7 +5008,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLIMP_PEDIA</Tag>
-		<English>TBD</English>
+		<English>A blimp, or non-rigid airship, is an airship (dirigible) without an internal structural framework or a keel. Unlike semi-rigid and rigid airships (e.g. Zeppelins), blimps rely on the pressure of the lifting gas (usually helium, rather than hydrogen) inside the envelope and the strength of the envelope itself to maintain their shape. </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BLOOD_WARRIOR</Tag>
@@ -5149,7 +5139,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BOOBY</Tag>
-		<English>Blue-Footed Booby</English>
+		<English>Blue-footed Booby</English>
 		<French>Fou à pieds bleus</French>
 		<Polish>Głuptak Niebieskonogi</Polish>
 		<Russian>Îëóøà</Russian>
@@ -6294,7 +6284,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHEROKEE_RIFLEMAN_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Cherooke unique unit</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHEYENNE_RIDER</Tag>
@@ -6586,7 +6576,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLUBMAN_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Early meele unit</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COBRA</Tag>
@@ -7667,7 +7657,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DROPSHIP_PEDIA</Tag>
-		<English>TBD</English>
+		<English>A shuttlecraft, also known as a shuttle spacecraft, shuttle ship, drop shuttle, drop spacecraft, or dropship, is a type of spacecraft described in theory and science fiction. Serving the same purpose as a ship's tender, it is a smaller vessel that is launched from a mother ship, and has the ability to transport people or cargo between ships, or to and from a planet's surface without being damaged or destroyed. It has a secondary purpose as an evacuation ship if the mother ship is destroyed. While the Space Shuttle was envisioned to make this type of craft a reality and reduce the cost of going into space, it ultimately failed in its goal and expendable launch systems remained a more cost-effective option.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DR_PEDIA</Tag>
@@ -9570,7 +9560,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUTURE_ARMOR_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Advanced tank</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FYRDMAN</Tag>
@@ -20733,7 +20723,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACE_SAM_INFANTRY_PEDIA</Tag>
-		<English>TBD</English>
+		<English>SAM infantry, that uses EMP as weapon</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPANISH_CONQUISTADOR</Tag>
@@ -21365,244 +21355,6 @@
 		<Polish>Samolot myśliwsko-bombowy (myśliwiec bombardujący lub myśliwsko-szturmowy) to rodzaj samolotu wojskowego łączący cechy samolotów myśliwskich i bombowych. Obecnie są częściowo wypierane są przez myśliwce wielozadaniowe. Samoloty myśliwsko-bombowe różniły się konstrukcyjnie tylko w niewielkim stopniu, lub nie różniły się w ogóle od standardowych myśliwców wyposażonych w zaczepy bombowe, natomiast ich podział był oparty w głównej mierze na przeznaczeniu. Pod tym kątem też szkolono ich załogi. Na ogół były to jednosilnikowe jednomiejscowe samoloty napędzane silnikiem śmigłowym, uzbrojone w karabiny maszynowe lub działka lotnicze, rzadziej dwusilnikowe wielomiejscowe. Po zrzuceniu bomb, samolot myśliwsko-bombowy stawał się "czystym" myśliwcem, mogącym skutecznie odpierać ataki innych samolotów. Przez to, że standardowe myśliwce, zwłaszcza końcowego okresu wojny, często korzystały z możliwości zabierania bomb, nawet o stosunkowo sporym ładunku (jak np. P-47 Thunderbolt i Supermarine Spitfire), rozgraniczenie między myśliwcami i myśliwco-bombowcami jest nieprecyzyjne i w dużym stopniu zatarte. Od lat 80. i 90. XX wieku osobne kategorie samolotów myśliwsko-bombowych, bombowców taktycznych i samolotów myśliwskich zaczęły być ponownie zastępowane przez jedną kategorię myśliwców wielozadaniowych, posiadających na skutek rozwoju techniki rozbudowane elektroniczne systemy kierowania uzbrojeniem zarówno przeciw celom powietrznym, jak i naziemnym oraz odpowiednio duży udźwig i gamę uzbrojenia. Przeznaczenie myśliwców wielozadaniowych obecnie zależne jest głównie od zestawu podwieszonego uzbrojenia, ewentualnie podwieszonej specjalistycznej aparatury kierowania uzbrojeniem. Z drugiej strony, wyodrębiła się kategoria wysoce wyspecjalizowanych samolotów myśliwsko-bombowych przeznaczonych do dokonywania precyzyjnych uderzeń na obiekty na tyłach wroga (ang. interdictor), zwykle dwumiejscowych, posiadających bogate wyposażenie elektroniczne i pilotażowe oraz wysokie osiągi, jak F-15E Strike Eagle czy Tornado IDS. Niektóre myśliwco-bombowce okresu po II wojnie światowej: Su-7, Su-17 (Su-20, Su-22), MiG-23 (wersje MiG-23B/BN), MiG-27</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANGREY</Tag>
-		<English>Subdued African Grey Parrot</English>
-		<French>Perroquet gris d'Afrique (App.)</French>
-		<Polish>Poskromiona Papuga Żako</Polish>
-		<Russian>Àôð. ïîïóãàé (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICAN_PENGUIN</Tag>
-		<English>Subdued African Penguin</English>
-		<French>Pingouin d'Afrique (App.)</French>
-		<German>
-			<Text>Gefangener Brillenpinguin:Gefangenen Brillenpinguins:Gefangenen Brillenpinguin:Gefangenen Brillenpinguin:Gefangene Brillenpinguine:Gefangenen Brillenpinguine:Gefangenen Brillenpinguinen:Gefangenen Brillenpinguine</Text>
-			<Gender>Male</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-		<Polish>Poskromiony Pingwin Przylądkowy</Polish>
-		<Russian>Àôð. ïèíãâèí (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_ASIANBEAR</Tag>
-		<English>Subdued Moon Bear</English>
-		<French>Ours Lune (App.)</French>
-		<Italian>
-			<Text>Orso luna addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Poskromiony Niedźwiedź Himalajski</Polish>
-		<Russian>Áåëîãðóäûé ìåäâåäü (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BARNOWL</Tag>
-		<English>Subdued Barn Owl</English>
-		<French>
-			<Text>Chouette effraie (App.)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Gefangene Schleiereule:Gefangenen Schleiereule:Gefangenen Schleiereule:Gefangene Schleiereule:Gefangene Schleiereulen:Gefangenen Schleiereulen:Gefangenen Schleiereulen:Gefangenen Schleiereulen</Text>
-			<Gender>Female</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-		<Polish>Poskromiona Płomykówka Zwyczajna</Polish>
-		<Russian>Ñèïóõà (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BARREDOWL</Tag>
-		<English>Subdued Barred Owl</English>
-		<French>
-			<Text>Chouette rayée(App.)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Poskromiony Puszczyk</Polish>
-		<Russian>Ñû÷ (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BLACKBEAR</Tag>
-		<English>Subdued Black Bear</English>
-		<French>Ours noir (App.)</French>
-		<Italian>
-			<Text>Orso nero addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Poskromiony Baribal</Polish>
-		<Russian>×åðíûé ìåäâåäü (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BOOBY</Tag>
-		<English>Subdued Blue-footed Booby</English>
-		<French>Fou à pieds bleus (App.)</French>
-		<Polish>Poskromiony Głuptak Niebieskonogi</Polish>
-		<Russian>Îëóøà (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BROWN_BEAR</Tag>
-		<English>Subdued Brown Bear</English>
-		<French>Ours brun (App.)</French>
-		<Italian>
-			<Text>Orso addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Poskromiony Niedźwiedź Brunatny</Polish>
-		<Russian>Áóðûé ìåäâåäü (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_CAVE_BEAR</Tag>
-		<English>Subdued Cave Bear</English>
-		<French>Ours des cavernes (App.)</French>
-		<Italian>
-			<Text>Orso delle caverne addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Poskromiony Niedźwiedź Jaskiniowy</Polish>
-		<Russian>Ïåùåðíûé ìåäâåäü (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_PENGUIN</Tag>
-		<English>Subdued Galapagos Penguin</English>
-		<French>Pingouin des Galapagos (App.)</French>
-		<Polish>Poskromiony Pingwin Równikowy</Polish>
-		<Russian>Î÷êîâûé ïèíãâèí (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GRIZZLY</Tag>
-		<English>Subdued Grizzly</English>
-		<French>Grizzly (App.)</French>
-		<Italian>
-			<Text>Grizzly addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Poskromiony Grizzly</Polish>
-		<Russian>Ãðèçëè (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_HARPYEAGLE</Tag>
-		<English>Subdued Harpy Eagle</English>
-		<French>
-			<Text>Harpie féroce (App.)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Polish>Poskromiona Harpia Wielka</Polish>
-		<Russian>Ãàðïèÿ (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_PANDA_BEAR</Tag>
-		<English>Subdued Giant Panda</English>
-		<French>Panda Géant (App.)</French>
-		<Italian>
-			<Text>Panda gigante addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Poskromiona Panda Wielka</Polish>
-		<Russian>Ãèãàíòñêàÿ ïàíäà (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_PARROT</Tag>
-		<English>Subdued Parrot</English>
-		<French>Perroquet (App.)</French>
-		<Polish>Poskromiona Papuga</Polish>
-		<Russian>Ïîïóãàé (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_POLARBEAR</Tag>
-		<English>Subdued Polarbear</English>
-		<French>Ours polaire (App.)</French>
-		<Italian>
-			<Text>Orso polare addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Poskromiony Niedźwiedź Polarny</Polish>
-		<Russian>Áåëûé ìåäâåäü (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_RAVEN</Tag>
-		<English>Subdued Raven</English>
-		<French>Corbeau (App.)</French>
-		<Polish>Poskromiona Wrona</Polish>
-		<Russian>Âîðîí (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_RAZORBILL</Tag>
-		<English>Subdued Razorbill</English>
-		<French>Pingouin torda (App.)</French>
-		<Polish>Poskromiona Alka</Polish>
-		<Russian>Ãàãàðêà (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_REDPANDA</Tag>
-		<English>Subdued Red Panda</English>
-		<French>Panda roux (App.)</French>
-		<Italian>
-			<Text>Panda rosso addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Poskromiona Panda Czerwona</Polish>
-		<Russian>Êðàñíàÿ ïàíäà (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SEAEAGLE</Tag>
-		<English>Subdued Steller's Sea Eagle</English>
-		<French>Pigargue empereur (App.)</French>
-		<Polish>Poskromiony Bielik Olbrzymi</Polish>
-		<Russian>Îðëàí (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SECRETARYBIRD</Tag>
-		<English>Subdued Secretary Bird</English>
-		<French>Messager sagittaire (App.)</French>
-		<Polish>Poskromiony Sekretarz</Polish>
-		<Russian>Ïòèöà-ñåêðåòàðü (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SLOTHBEAR</Tag>
-		<English>Subdued Sloth Bear</English>
-		<French>Ours lippu (App.)</French>
-		<Italian>
-			<Text>Orso pigro addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Poskromiony Wargacz</Polish>
-		<Russian>Ãóáà÷ (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SPECTACLEDBEAR</Tag>
-		<English>Subdued Spectacled Bear</English>
-		<French>Ours à lunettes (App.)</French>
-		<Italian>
-			<Text>Orso giocoliere addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Poskromiony Niedźwiedź Andyjski</Polish>
-		<Russian>Î÷êîâûé ìåäâåäü (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SUNBEAR</Tag>
-		<English>Subdued Sun Bear</English>
-		<French>Ours malais (App.)</French>
-		<Italian>
-			<Text>Orso sole addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Poskromiony Niedźwiedź Malajski</Polish>
-		<Russian>Ìàëàéñêèé ìåäâåäü (ðó÷í.)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBMARINE</Tag>
 		<English>Submarine</English>
 		<French>Sous-marin</French>
@@ -21996,83 +21748,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TAIYIN_PEDIA</Tag>
 		<English>There are some correspondences or putative borrowings between the Yamana and Selknam mythologies. The hummingbird was an animal revered by the Yamanas, and the Taiyin creation myth explaining the creation of the archipelago's water system, the culture hero "Taiyin" is portrayed in the guise of a hummingbird. A Yamana myth, "The egoist fox", features a hummingbird as a helper and has some similarities to the Taiyin-myth of the Selk'nam. Similar remarks apply to the myth about the big albatross: it shares identical variants for both tribes.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_ASIANBEAR</Tag>
-		<English>Tamed Moon Bear</English>
-		<French>Ours Lune (dompté)</French>
-		<Polish>Ujarzmiony Niedźwiedź Himalajski</Polish>
-		<Russian>Áåëîãðóäûé ìåäâåäü (äîì.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_BLACKBEAR</Tag>
-		<English>Tamed Black Bear</English>
-		<French>Ours Noir (dompté)</French>
-		<Polish>Ujarzmiony Niedźwiedź Czarny</Polish>
-		<Russian>×åðíûé ìåäâåäü (äîì.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_BROWN_BEAR</Tag>
-		<English>Tamed Brown Bear</English>
-		<French>Ours brun (dompté)</French>
-		<Polish>Ujarzmiony Niedźwiedź Brunatny</Polish>
-		<Russian>Áóðûé ìåäâåäü (äîì.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_CAVE_BEAR</Tag>
-		<English>Tamed Cave Bear</English>
-		<French>Ours des cavernes (dompté)</French>
-		<Polish>Ujarzmiony Niedźwiedź Jaskiniowy</Polish>
-		<Russian>Ïåùåðíûé ìåäâåäü (äîì.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_GRIZZLY</Tag>
-		<English>Tamed Grizzly</English>
-		<French>Grizzly (dompté)</French>
-		<Polish>Ujarzmiony Grizzly</Polish>
-		<Russian>Ãðèçëè (äîì.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_PANDA_BEAR</Tag>
-		<English>Tamed Giant Panda</English>
-		<French>Panda Géant (dompté)</French>
-		<Polish>Ujarzmiony Panda Olbrzymia</Polish>
-		<Russian>Ãèãàíòñêàÿ ïàíäà (äîì.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_POLARBEAR</Tag>
-		<English>Tamed Polarbear</English>
-		<French>Ours polaire (dompté)</French>
-		<Polish>Ujarzmiony Niedźwiedź Polarny</Polish>
-		<Russian>Áåëûé ìåäâåäü (äîì.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_REDPANDA</Tag>
-		<English>Tamed Red Panda</English>
-		<French>Panda roux (dompté)</French>
-		<Polish>Ujarzmiony Czerwona Panda</Polish>
-		<Russian>Êðàñíàÿ ïàíäà (äîì.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_SLOTHBEAR</Tag>
-		<English>Tamed Sloth Bear</English>
-		<French>Ours lippu (dompté)</French>
-		<Polish>Ujarzmiony Wargacz</Polish>
-		<Russian>Ãóáà÷ (äîì.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_SPECTACLEDBEAR</Tag>
-		<English>Tamed Spectacled Bear</English>
-		<French>Ours à lunettes (dompté)</French>
-		<Polish>Ujarzmiony Niedźwiedź Andyjski</Polish>
-		<Russian>Î÷êîâûé ìåäâåäü (äîì.)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TAMED_SUNBEAR</Tag>
-		<English>Tamed Sun Bear</English>
-		<French>Ours malais (dompté)</French>
-		<Polish>Ujarzmiony Niedźwiedź Malajski</Polish>
-		<Russian>Ìàëàéñêèé ìåäâåäü (äîì.)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TANK</Tag>

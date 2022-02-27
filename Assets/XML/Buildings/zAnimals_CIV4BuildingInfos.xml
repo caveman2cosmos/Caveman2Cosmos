@@ -10,12 +10,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
-				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_CHEMISTRY_LAB</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -25,14 +19,12 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_POISON</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -83,7 +75,6 @@
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>176</iCost>
 			<iAsset>4</iAsset>
-			<iAIWeight>1</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -234,7 +225,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -291,7 +282,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -348,7 +339,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -376,7 +367,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BIRD_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
@@ -395,7 +386,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -430,11 +421,9 @@
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_BISON</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<FreeBonus>BONUS_BISON</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -508,8 +497,6 @@
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_CARCASS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
@@ -590,10 +577,6 @@
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_CAMEL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -715,7 +698,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -780,7 +763,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -923,10 +906,8 @@
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
 			<YieldChanges>
-				<iYield>2</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_FISH</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAsset>3</iAsset>
 			<Flavors>
 				<Flavor>
@@ -951,11 +932,9 @@
 				<iYield>2</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_COW</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<FreeBonus>BONUS_COW</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1000,10 +979,14 @@
 			</PrereqInCityBuildings>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>4</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_CRAB</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CRAB</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -1060,11 +1043,9 @@
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_DEER</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<FreeBonus>BONUS_DEER</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1158,11 +1139,9 @@
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_DONKEY</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<FreeBonus>BONUS_DONKEY</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1249,7 +1228,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1300,15 +1279,9 @@
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_ELEPHANTS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_IVORY</FreeBonus>
+					<FreeBonus>BONUS_ELEPHANTS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1341,8 +1314,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EXOTIC_HERBIVORE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
@@ -1389,17 +1362,16 @@
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
-			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
+			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
+			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
+				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_FEATHERS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -1437,8 +1409,6 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_FISH</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -1458,7 +1428,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_FUR_FARM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
-			<iMinLatitude>-30</iMinLatitude>
 			<iMaxLatitude>60</iMaxLatitude>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
@@ -1467,8 +1436,12 @@
 				<iCommerce>2</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_BEAVERS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_BEAVERS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -1513,7 +1486,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1565,12 +1538,6 @@
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
@@ -1596,8 +1563,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOVENORS_MENAGERIE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOVENORS_MENAGERIE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
@@ -1639,8 +1606,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOVENORS_PETS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOVENORS_PETS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GOVERNOR_PETS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOVERNOR_PETS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
@@ -1692,7 +1659,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1774,11 +1741,9 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HORSE_HERD</ArtDefineTag>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
-			<FreeBonus>BONUS_HORSE</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<FreeBonus>BONUS_HORSE</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1812,11 +1777,9 @@
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_LLAMA</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<FreeBonus>BONUS_LLAMA</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -1918,7 +1881,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2139,7 +2102,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2200,6 +2163,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DONKEY_FARM</BuildingType>
 				<BuildingType>BUILDING_DONKEY_HERD</BuildingType>
+				<BuildingType>BUILDING_DONKEY_NATIONAL</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
@@ -2210,7 +2174,6 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MUSKOX_HERD</Type>
@@ -2219,8 +2182,6 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MUSKOX_HERD</ArtDefineTag>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
-			<FreeBonus>BONUS_CARCASS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>
@@ -2325,7 +2286,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2390,7 +2351,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2448,14 +2409,14 @@
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
+				<iCommerce>5</iCommerce>
 			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2536,11 +2497,9 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PIG_HERD</ArtDefineTag>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
-			<FreeBonus>BONUS_PIG</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<FreeBonus>BONUS_PIG</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -2571,10 +2530,6 @@
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_EGGS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
 					<FreeBonus>BONUS_POULTRY</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
@@ -2598,7 +2553,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PRIMATE_CAGE</Type>
 			<Description>TXT_KEY_BUILDING_PRIMATE_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PRIMATE_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -2628,7 +2583,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2660,7 +2615,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2707,20 +2662,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RATITE_HERD</ArtDefineTag>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_EGGS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FEATHERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
@@ -2740,15 +2681,10 @@
 		<BuildingInfo>
 			<Type>BUILDING_REPTILE_CAGE</Type>
 			<Description>TXT_KEY_BUILDING_REPTILE_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REPTILE_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<ObsoleteTech>TECH_ARTIFICIAL_LIFE</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_RE_PET_SHOP</ObsoletesToBuilding>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2764,8 +2700,6 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
-			<FreeBonus>BONUS_LIZARDS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
@@ -2777,7 +2711,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2785,7 +2719,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_RODENT_CAGE</Type>
 			<Description>TXT_KEY_BUILDING_RODENT_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBAVOURS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_RODENT_CAGE</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -2815,7 +2749,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2827,10 +2761,6 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ROO_HERD</ArtDefineTag>
 			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_KANGAROO</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -2880,7 +2810,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -3013,11 +2943,9 @@
 				<iYield>1</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<FreeBonus>BONUS_SHEEP</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
+					<FreeBonus>BONUS_SHEEP</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -3089,19 +3017,11 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_POISON_CRAFTING</PrereqTech>
-			<ObsoleteTech>TECH_NOVUS_CHEMISTRY</ObsoleteTech>
-			<ReplacementBuildings>
-				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
-				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
-			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_CHEMISTRY_LAB</ObsoletesToBuilding>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_POISON</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -3143,7 +3063,7 @@
 					<TechType>TECH_BIOLOGY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -3416,7 +3336,7 @@
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>

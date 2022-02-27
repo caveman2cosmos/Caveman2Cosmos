@@ -854,10 +854,6 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CLOCKPUNK_AIRPORT</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SHOOTING_CLUB</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -1316,10 +1312,6 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TRAINING_DOJO</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CLOCKPUNK_AIRPORT</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1966,10 +1958,6 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CLOCKPUNK_AIRPORT</BuildingType>
-					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SHOOTING_CLUB</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -2426,10 +2414,6 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_TRAINING_DOJO</BuildingType>
-					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CLOCKPUNK_AIRPORT</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -12561,18 +12545,6 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CHIMERA_SURGERY_CLINIC</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -12748,10 +12720,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -14181,18 +14149,6 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CHIMERA_SURGERY_CLINIC</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -14368,10 +14324,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -15497,18 +15449,6 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CHIMERA_SURGERY_CLINIC</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -15684,10 +15624,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -16559,18 +16495,6 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ANIMAL_DESIGNER</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CHIMERA_SURGERY_CLINIC</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -16746,10 +16670,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -32043,7 +31963,6 @@
 			<iWarWearinessAccumulationModifier>20</iWarWearinessAccumulationModifier>
 			<iCivicAnarchyTimeModifier>50</iCivicAnarchyTimeModifier>
 			<iCorporationMaintenanceModifier>-20</iCorporationMaintenanceModifier>
-			<iTradeRoutes>1</iTradeRoutes>
 			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PropertyManipulators>
@@ -32339,7 +32258,6 @@
 			<iWarWearinessAccumulationModifier>10</iWarWearinessAccumulationModifier>
 			<iCivicAnarchyTimeModifier>25</iCivicAnarchyTimeModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
-			<iTradeRoutes>1</iTradeRoutes>
 			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PropertyManipulators>

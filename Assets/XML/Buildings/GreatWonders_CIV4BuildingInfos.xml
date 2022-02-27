@@ -218,7 +218,7 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>10</iYield>
-				<iYield>1</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -333,8 +333,6 @@
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -677,13 +675,15 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<FreeSpecialistCounts>
@@ -751,14 +751,14 @@
 					<TechType>TECH_EXOPLANET_DISCOVERY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_IMAGINARY_PHYSICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -1259,8 +1259,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -1849,8 +1850,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BANK</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PropertyManipulators>
@@ -1984,13 +1986,19 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_NATIONAL_EPIC</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<LocalSpecialistCommerceChanges>
@@ -2113,8 +2121,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MANOR</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<SpecialistCounts>
@@ -2210,70 +2221,70 @@
 					<TechType>TECH_EARLY_COMPUTING</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_TELEVISION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_LASER</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_COMPUTER_SCIENCE</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_MICROPROCESSOR</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_RADIO_ASTRONOMY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_COMPUTER_NETWORKS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_ELECTRONICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_SOLAR_POWER</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_COMMUNICATION_NETWORKS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>200</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -2478,7 +2489,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>2</iYield>
+				<iYield>5</iYield>
 				<iYield>5</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
@@ -2631,9 +2642,6 @@
 			</CommerceChangeDoubleTimes>
 			<CommerceModifiers>
 				<iCommerce>12</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -2854,7 +2862,7 @@
 				<iCommerce>15</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>3</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -3041,8 +3049,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
 			</CommerceModifiers>
-			<FreeBonus>BONUS_HIT_MUSICALS</FreeBonus>
-			<iNumFreeBonuses>6</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HIT_MUSICALS</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iAsset>18</iAsset>
@@ -3346,13 +3358,19 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TUMULUS</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GlobalBuildingProductionModifiers>
@@ -3408,33 +3426,51 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_VR_THEATER</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_COMMUNICATION_TOWER</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqNotInCityBuildings>
@@ -3658,12 +3694,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_BUDDHISM</ReligionType>
@@ -3791,7 +3821,7 @@
 			</PrereqInCityBuildings>
 			<iCost>8460</iCost>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-35</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<SpecialistCounts>
@@ -3845,13 +3875,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CONFUCIAN_TEMPLE</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_CONFUCIAN_TEMPLE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<SpecialistCounts>
@@ -4406,23 +4434,35 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_FIRE_BRIGADE</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>4</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>4</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_FIRE_STATION</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>4</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>4</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_FIRE_DOCK</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>4</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>4</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_FIRE_HANGER</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>4</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>4</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PropertyManipulators>
@@ -4544,13 +4584,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 				<iCommerce>12</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 				<iCommerce>2</iCommerce>
-				<iCommerce>0</iCommerce>
 			</GlobalCommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -4866,7 +4904,6 @@
 			</PropertyManipulators>
 			<iAsset>10</iAsset>
 			<iPower>10</iPower>
-			<iAIWeight>10</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -4904,8 +4941,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_CRYSTALPUNK</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CRYSTALPUNK</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRYSTAL_ISLAND</Type>
@@ -5160,35 +5201,35 @@
 					<TechType>TECH_AUTONOMOUS_VEHICLES</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_COMPUTER_NETWORKS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_DISASTER_ROBOTS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_MILITARY_ROBOTICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_BRAIN_MACHINE_INTERFACE</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -5315,8 +5356,6 @@
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -5412,8 +5451,10 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PALEONTOLOGY_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>10</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>10</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqOrFeature>
@@ -5748,8 +5789,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_CETACEA_SAPIENS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CETACEA_SAPIENS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
@@ -5791,15 +5836,9 @@
 			</CommerceChangeDoubleTimes>
 			<CommerceModifiers>
 				<iCommerce>12</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</GlobalCommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -6115,7 +6154,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -6123,7 +6162,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -6131,7 +6170,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -6139,7 +6178,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -6147,7 +6186,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -6155,7 +6194,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -6220,28 +6259,33 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_STRATOSPHERIC_TOWER</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -6267,34 +6311,6 @@
 				<BuildingType>BUILDING_STAR_FORT</BuildingType>
 				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HIGH_WALLS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_BARRICADES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CEMENT_BARRIER</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_METAMATERIAL_WALL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SUPERSTRONG_ALLOY_WALL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_MEGASTRONG_ALLOY_WALL</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
 			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_EDINBURGH_CASTLE_2</ObsoletesToBuilding>
 			<iCost>1800</iCost>
@@ -6470,7 +6486,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_TOURISM</TechType>
 					<CommercePercents>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -6743,8 +6759,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_CARVED_EMU_EGGS</FreeBonus>
-			<iNumFreeBonuses>6</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CARVED_EMU_EGGS</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
@@ -6846,12 +6866,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_HELLENISM</ReligionType>
@@ -6982,8 +6996,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ASTROBIOLOGY_LAB</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
@@ -7030,8 +7047,10 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_OBSERVATORY</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -7139,18 +7158,27 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BUDDHIST_TEMPLE</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>6</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>6</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CONFUCIAN_TEMPLE</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>6</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>6</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TAOIST_TEMPLE</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>6</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>6</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<SpecialistCounts>
@@ -7290,13 +7318,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-				<iCommerce>0</iCommerce>
 			</GlobalCommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -7519,7 +7545,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -7527,7 +7553,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -7535,7 +7561,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -7543,7 +7569,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -7551,7 +7577,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -7559,7 +7585,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>400</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -7817,42 +7843,42 @@
 					<PrereqTech>TECH_RENEWABLE_ENERGY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>800</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>800</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_COMPOSITES</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>700</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>800</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_NANOTECHNOLOGY</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>800</iYield>
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_SOLAR_POWER</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>300</iYield>
+						<iYield>700</iYield>
 					</TechYield>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -8001,9 +8027,6 @@
 			<PrereqTech>TECH_PLANETARY_DEFENSES</PrereqTech>
 			<iCost>41430</iCost>
 			<iUnitUpgradePriceModifier>-5</iUnitUpgradePriceModifier>
-			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
-			</CommerceChanges>
 			<iGlobalHealth>1</iGlobalHealth>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ADVANCED_SHIELDING</BuildingType>
@@ -8039,7 +8062,7 @@
 				<iCommerce>7</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>2</iYield>
+				<iYield>5</iYield>
 			</YieldChanges>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
@@ -8194,38 +8217,50 @@
 			</PrereqAmountBuildings>
 			<iCost>13830</iCost>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PROTEIN_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_DNA_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ANIMAL_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MICROBIOLOGY_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<SpecialistCounts>
@@ -8331,13 +8366,19 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ART_GALLERY</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>4</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>4</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ART_PATRONAGE</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>4</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>4</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PropertyManipulators>
@@ -8551,29 +8592,10 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_LARGE_ARCH_BRIDGE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SMALL_SUSPENSION_BRIDGE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_LARGE_SUSPENSION_BRIDGE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_TELEPORT_BOOTH</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
-				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
+				<BuildingType>BUILDING_LARGE_ARCH_BRIDGE</BuildingType>
+				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
+				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
@@ -8808,7 +8830,7 @@
 			</PrereqInCityBuildings>
 			<iCost>4800</iCost>
 			<CommerceChanges>
-				<iCommerce>-20</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -8874,9 +8896,6 @@
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iCost>12030</iCost>
-			<CommerceChanges>
-				<iCommerce>-10</iCommerce>
-			</CommerceChanges>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SPY</SpecialistType>
@@ -9180,7 +9199,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -9261,7 +9279,6 @@
 				<iCommerce>12</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -9678,12 +9695,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
@@ -9806,8 +9817,12 @@
 			</PrereqOrBuildings>
 			<iCost>1008</iCost>
 			<iHappiness>1</iHappiness>
-			<FreeBonus>BONUS_FAKE_GEMS</FreeBonus>
-			<iNumFreeBonuses>6</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FAKE_GEMS</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -9935,8 +9950,6 @@
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ConstructSound>AS2D_BUILD_VOODOO</ConstructSound>
 			<Flavors>
@@ -10424,13 +10437,15 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_HOCKEY_RINK</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ATHLETIC_MEGACOMPLEX</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<bPrereqPower>1</bPrereqPower>
@@ -10458,8 +10473,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
 			</CommerceModifiers>
-			<FreeBonus>BONUS_HIT_MOVIES</FreeBonus>
-			<iNumFreeBonuses>6</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HIT_MOVIES</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<FreeSpecialistCounts>
 				<FreeSpecialistCount>
 					<SpecialistType>SPECIALIST_CELEBRITY</SpecialistType>
@@ -10865,18 +10884,21 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_URBAN_HIGH_SPEED_RAIL</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>6</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>6</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>4</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>4</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqOrBuildings>
@@ -10903,8 +10925,10 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>1</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -10939,22 +10963,6 @@
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_GLASSSMITH</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_GLASS_FACTORY</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_MANUFACTURING_DISTRICT</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WALLS</BuildingType>
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
@@ -10964,6 +10972,9 @@
 				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
 				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</PrereqOrBuildings>
+			<PrereqBonuses>
+				<Bonus>BONUS_GLASSWARE</Bonus>
+			</PrereqBonuses>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<iCost>1566</iCost>
 			<BonusProductionModifiers>
@@ -11103,8 +11114,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_JADE_DEATH_MASKS</FreeBonus>
-			<iNumFreeBonuses>6</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_JADE_DEATH_MASKS</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
@@ -11352,8 +11367,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ANIMAL_RACETRACK</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<UnitProductionModifiers>
@@ -11868,7 +11884,6 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_LASCAUX_EFFECT</BuildingType>
 				<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
 				<BuildingType>BUILDING_FRESCO</BuildingType>
 			</PrereqOrBuildings>
@@ -12018,8 +12033,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CASINO</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqNotInCityBuildings>
@@ -12065,23 +12081,19 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_HINDU_TEMPLE</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_HINDU_TEMPLE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_BUDDHIST_TEMPLE</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BUDDHIST_TEMPLE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<SpecialistCounts>
@@ -12185,19 +12197,19 @@
 			<iCost>35430</iCost>
 			<YieldChanges>
 				<iYield>20</iYield>
-				<iYield>0</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_GRAVITY_TRAIN</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>7</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>7</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_VACTRAIN_TERMINAL</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>7</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>7</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqOrBuildings>
@@ -12612,8 +12624,12 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
-			<FreeBonus>BONUS_MACHU_PICCHU_PLANS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MACHU_PICCHU_PLANS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
@@ -12742,48 +12758,53 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_AD_AGENCY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_AD_AGENCY</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BAZAAR</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>1</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_GROCER</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>1</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MARKET</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>1</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_SUPERMARKET</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>4</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>4</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PropertyManipulators>
@@ -13092,7 +13113,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -13100,7 +13121,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -13108,7 +13129,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -13116,7 +13137,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -13124,7 +13145,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -13132,7 +13153,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -13443,7 +13464,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -13656,14 +13676,14 @@
 					<TechType>TECH_MODERN_PHYSICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_ORGANIC_CHEMISTRY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>500</iCommercePercent>
+						<iCommercePercent>600</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -13735,8 +13755,12 @@
 			</PrereqOrBuildings>
 			<iCost>2550</iCost>
 			<iHappiness>1</iHappiness>
-			<FreeBonus>BONUS_MING_VASE</FreeBonus>
-			<iNumFreeBonuses>6</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_MING_VASE</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -13876,8 +13900,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CASINO</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>4</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>4</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqNotInCityBuildings>
@@ -13921,8 +13948,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TIME_MACHINE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -14094,8 +14122,12 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<iCost>2640</iCost>
-			<FreeBonus>BONUS_CRYSTAL_GLASSWARE</FreeBonus>
-			<iNumFreeBonuses>6</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CRYSTAL_GLASSWARE</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14211,12 +14243,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_BUDDHISM</ReligionType>
@@ -14289,8 +14315,12 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeBonus>BONUS_GEOGLYPH_PLANS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_GEOGLYPH_PLANS</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -14484,12 +14514,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_HELLENISM</ReligionType>
@@ -14564,8 +14588,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MEGATOWER_HOLOGRAM_ADVERTISING</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<FreeSpecialistCounts>
@@ -14680,7 +14705,7 @@
 			<ObsoleteTech>TECH_QUANTUM_PHYSICS</ObsoleteTech>
 			<iCost>3090</iCost>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-50</iCommerce>
 				<iCommerce>25</iCommerce>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
@@ -14883,8 +14908,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_NOK_SCULPTURES</FreeBonus>
-			<iNumFreeBonuses>6</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_NOK_SCULPTURES</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iAsset>10</iAsset>
@@ -14964,8 +14993,11 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MANOR</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<SpecialistCounts>
@@ -15275,25 +15307,28 @@
 			<PrereqTech>TECH_ATOMIC_SCALE_ENGINEERING</PrereqTech>
 			<iCost>54630</iCost>
 			<YieldChanges>
-				<iYield>5</iYield>
+				<iYield>6</iYield>
 				<iYield>20</iYield>
 			</YieldChanges>
 			<FreeBuilding>BUILDING_LOFSTROM_LOOP</FreeBuilding>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_LOFSTROM_LOOP</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_SPACE_CITY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_STRATOSPHERIC_MAGLEV</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -15339,8 +15374,12 @@
 				<BuildingType>BUILDING_SPACE_WAREHOUSE</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
 			</PrereqOrBuildings>
-			<FreeBonus>BONUS_ORICHALCUM</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_ORICHALCUM</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15393,13 +15432,21 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_RAILROAD_STATION</BuildingType>
-					<CommerceType>COMMERCE_ESPIONAGE</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
-					<CommerceType>COMMERCE_ESPIONAGE</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 		</BuildingInfo>
@@ -15553,23 +15600,29 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PTERADACTYL_BREEDER</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_RAPTOR_BREEDER</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TREX_BREEDER</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TRILOBITE_BREEDER</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PropertyManipulators>
@@ -15606,8 +15659,10 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ENERGY_ISLAND</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>1</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>1</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
@@ -16622,18 +16677,22 @@
 			</PrereqAmountBuildings>
 			<iCost>13830</iCost>
 			<CommerceChanges>
-				<iCommerce>-50</iCommerce>
+				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PROTEIN_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<iGlobalHealth>2</iGlobalHealth>
@@ -16691,7 +16750,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -16762,13 +16820,11 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
-				<iCommerce>0</iCommerce>
 			</GlobalCommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -16846,8 +16902,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_RED_AND_BLACK_CERAMICS</FreeBonus>
-			<iNumFreeBonuses>6</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_RED_AND_BLACK_CERAMICS</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
@@ -16933,8 +16993,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_RIVERROUGE</MovieDefineTag>
 			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<FreeBonus>BONUS_AUTOMOBILES</FreeBonus>
-			<iNumFreeBonuses>10</iNumFreeBonuses>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bRiver>1</bRiver>
@@ -17034,8 +17092,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
-			<FreeBonus>BONUS_HIT_SINGLES</FreeBonus>
-			<iNumFreeBonuses>6</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HIT_SINGLES</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
 					<SpecialistType>SPECIALIST_CELEBRITY</SpecialistType>
@@ -17095,23 +17157,25 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MUSEUM</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
-				</BuildingExtraCommerce>
-				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MUSEUM</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>3</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ARCHAEOLOGY_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ANTHROPOLOGY_LAB</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PropertyManipulators>
@@ -17521,33 +17585,51 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BAZAAR</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_GROCER</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MARKET</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_SUPERMARKET</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
-					<CommerceType>COMMERCE_CULTURE</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqNotInCityBuildings>
@@ -17583,8 +17665,9 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PLANETARIUM</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
@@ -17662,13 +17745,17 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TUMULUS</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PropertyManipulators>
@@ -17868,7 +17955,7 @@
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>5</iYield>
 				<iYield>5</iYield>
 				<iYield>10</iYield>
 			</YieldChanges>
@@ -18345,7 +18432,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -18353,7 +18440,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -18361,7 +18448,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -18369,7 +18456,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>200</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -18377,7 +18464,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -18385,7 +18472,7 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>300</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -18533,7 +18620,7 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<CommerceChanges>
-				<iCommerce>-100</iCommerce>
+				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -18580,7 +18667,6 @@
 				<iCommerce>2</iCommerce>
 				<iCommerce>12</iCommerce>
 				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -18669,8 +18755,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_SPACEPUNK</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_SPACEPUNK</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPACE_ELEVATOR</Type>
@@ -18763,18 +18853,21 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_JET_AIRCRAFT_FACTORY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_AIRCRAFT_FACTORY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>3</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>3</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>6</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>6</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<FreeSpecialistCounts>
@@ -18876,300 +18969,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
 			</CommerceChanges>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ALMONDS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_APPLE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BANANA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BARLEY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BEAVERS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BISON</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CAMEL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CLAM</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COCA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COCOA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COCONUT</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COFFEE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CORN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COTTON</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COW</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CRAB</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DATES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DEER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DONKEY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_ELEPHANTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FIG</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FISH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FLAX</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GRAPES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GUAVAS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GUINEA_PIGS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HEMP</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HENNA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HORSE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_INCENSE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_INDIGO</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_KANGAROO</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_KAVA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LEMONS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LLAMA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LOBSTER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MAMMOTH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MANGO</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MELONS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MUREX</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MUSHROOMS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OLIVES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OPIUM</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PAPAYA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PAPYRUS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PARROTS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PEARLS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PEYOTE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PIG</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PISTACHIO</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POMEGRANATE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POTATOES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POULTRY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PRICKLY_PEAR</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PRIME_TIMBER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PUMPKIN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_RABBIT</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_RESIN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_RICE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_RUBBER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SEA_LION_AND_SEAL</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SHEEP</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SHRIMP</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SILK</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SPICES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SQUASH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SUGAR</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TEA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TOBACCO</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_VANILLA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WALRUS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WHALE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WHEAT</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iAsset>10</iAsset>
@@ -19201,28 +19000,28 @@
 					<TechType>TECH_IMAGINARY_PHYSICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_QUANTUM_TELEPORTATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_SUPERSTRING_THEORY</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_UNIFICATION_PHYSICS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>300</iCommercePercent>
+						<iCommercePercent>1000</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -19300,8 +19099,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_STARPUNK</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_STARPUNK</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STARTRAM</Type>
@@ -19465,8 +19268,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_FINE_STONEWARE</FreeBonus>
-			<iNumFreeBonuses>6</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_FINE_STONEWARE</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
@@ -19615,16 +19422,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<CommerceChangeDoubleTimes>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-			</CommerceChangeDoubleTimes>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -19680,8 +19481,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_HAWAIIAN_SURFBOARDS</FreeBonus>
-			<iNumFreeBonuses>6</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_HAWAIIAN_SURFBOARDS</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
@@ -19777,8 +19582,6 @@
 					<bPrereqTerrain>1</bPrereqTerrain>
 				</PrereqTerrain>
 			</PrereqOrTerrain>
-			<FreeBonus>BONUS_ALMONDS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iHurryAngerModifier>-50</iHurryAngerModifier>
@@ -19801,184 +19604,6 @@
 					</YieldChanges>
 				</SpecialistYieldChange>
 			</SpecialistYieldChanges>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_APPLE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BANANA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_BARLEY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COCA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COCOA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COCONUT</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COFFEE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CORN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_COTTON</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_DATES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FIG</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_FLAX</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GRAPES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_GUAVAS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HEMP</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_HENNA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_INCENSE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_INDIGO</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_KAVA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_LEMONS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MANGO</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_MELONS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OLIVES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_OPIUM</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PAPAYA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PAPYRUS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PEYOTE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PISTACHIO</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POMEGRANATE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_POTATOES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PRICKLY_PEAR</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PRIME_TIMBER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_PUMPKIN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_RESIN</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_RICE</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_RUBBER</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SILK</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SPICES</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SQUASH</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_SUGAR</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TEA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_TOBACCO</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_VANILLA</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_WHEAT</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SYDNEY_OPERA_HOUSE</Type>
@@ -20164,7 +19789,7 @@
 				<iCommerce>50</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>1</iYield>
+				<iYield>6</iYield>
 				<iYield>6</iYield>
 			</YieldChanges>
 			<GlobalBuildingProductionModifiers>
@@ -20399,8 +20024,12 @@
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1296</iCost>
-			<FreeBonus>BONUS_TERRA_SIGILLATA</FreeBonus>
-			<iNumFreeBonuses>6</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_TERRA_SIGILLATA</FreeBonus>
+					<iNumFreeBonuses>6</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -20885,13 +20514,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</GlobalCommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -21070,33 +20696,39 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BAZAAR</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_GROCER</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_MARKET</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_SUPERMARKET</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqNotInCityBuildings>
@@ -21293,7 +20925,7 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>3</iYield>
+				<iYield>5</iYield>
 				<iYield>5</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
@@ -21751,26 +21383,13 @@
 			<Civilopedia>TXT_KEY_BUILDING_WANG_ZHEN_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WATERWHEELS</PrereqTech>
 			<bRiver>1</bRiver>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_WATERMILL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_MODERN_MILL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOOD_MANUFACTURING_DISTRICT</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
+			<PrereqBonuses>
+				<Bonus>BONUS_TOOLS</Bonus>
+			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FORGE</BuildingType>
-				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_WATERMILL</BuildingType>
+				<BuildingType>BUILDING_MODERN_MILL</BuildingType>
+				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_STEAM_POWER</ObsoleteTech>
 			<iCost>1680</iCost>
@@ -21854,13 +21473,15 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ART_GALLERY</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ART_PATRONAGE</BuildingType>
-					<CommerceType>COMMERCE_GOLD</CommerceType>
-					<iExtraCommerce>2</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>2</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<GlobalBuildingProductionModifiers>
@@ -22053,8 +21674,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_WILLOWRUN</MovieDefineTag>
 			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
-			<FreeBonus>BONUS_AIRCRAFT</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -22259,8 +21878,6 @@
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<iCost>7080</iCost>
-			<FreeBonus>BONUS_GOLD_INGOTS</FreeBonus>
-			<iNumFreeBonuses>3</iNumFreeBonuses>
 			<CommerceChanges>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
@@ -22321,7 +21938,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
@@ -22398,23 +22014,31 @@
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ZOO</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_AQUARIUM</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_STATE_PARK</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_COASTAL_PRESERVE</BuildingType>
-					<CommerceType>COMMERCE_RESEARCH</CommerceType>
-					<iExtraCommerce>5</iExtraCommerce>
+					<CommerceChanges>
+						<iCommerce>0</iCommerce>
+						<iCommerce>5</iCommerce>
+					</CommerceChanges>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<SpecialistCounts>
@@ -22448,7 +22072,7 @@
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
 			<YieldChanges>
-				<iYield>3</iYield>
+				<iYield>5</iYield>
 				<iYield>5</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>

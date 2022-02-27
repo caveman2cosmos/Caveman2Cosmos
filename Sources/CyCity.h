@@ -34,6 +34,8 @@ public:
 	void setRevIndexAverage(int iNewValue);
 	void updateRevIndexAverage();
 
+	int getRevIndexDistanceMod() const;
+
 	int getRevolutionCounter() const;
 	void setRevolutionCounter(int iNewValue);
 	void changeRevolutionCounter(int iChange);
@@ -103,7 +105,6 @@ public:
 	int /*ArtStyleTypes*/ getArtStyleType() const;
 
 	bool hasTrait(int /*TraitTypes*/ iTrait) const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isHuman() const;
@@ -246,14 +247,14 @@ public:
 	void setOccupationTimer(int iNewValue);
 	void changeOccupationTimer(int iChange);
 	bool isNeverLost() const;
-	void setNeverLost(int iNewValue);
+	void setNeverLost(bool bNewValue);
 
 	bool isBombarded() const;
-	void setBombarded(int iNewValue);
+	void setBombarded(bool bNewValue);
 	bool isDrafted() const;
-	void setDrafted(int iNewValue);
+	void setDrafted(bool bNewValue);
 	bool isAirliftTargeted() const;
-	void setAirliftTargeted(int iNewValue);
+	void setAirliftTargeted(bool bNewValue);
 	bool isCitizensAutomated() const;
 	void setCitizensAutomated(bool bNewValue);
 	bool isProductionAutomated() const;

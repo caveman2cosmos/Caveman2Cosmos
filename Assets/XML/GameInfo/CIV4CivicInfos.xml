@@ -92,28 +92,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<bUpgradeAnywhere>0</bUpgradeAnywhere>
-			<bAllowInquisitions>0</bAllowInquisitions>
-			<bDisallowInquisitions>0</bDisallowInquisitions>
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>5</iRevIdxNational>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>100</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -226,28 +204,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<bUpgradeAnywhere>0</bUpgradeAnywhere>
-			<bAllowInquisitions>0</bAllowInquisitions>
-			<bDisallowInquisitions>0</bDisallowInquisitions>
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>4</iRevIdxNational>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>50</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -2285,9 +2241,6 @@
 				<iCommerce>-2</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
-			<!-- Revolution Mod Start -->
-			<iRevIdxNational>1</iRevIdxNational>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>10</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>-10</iNationalCaptureResistanceModifier>
 			<Button>art/Interface/buttons/civics/sparth/rule_obedience.dds</Button>
@@ -2474,8 +2427,8 @@
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-			<iDistanceMaintenanceModifier>5</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>5</iNumCitiesMaintenanceModifier>
+			<iDistanceMaintenanceModifier>2</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>3</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>1</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>2</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
@@ -2512,7 +2465,11 @@
 				<iYield>2</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
-			<TradeYieldModifiers/>
+			<TradeYieldModifiers>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
+			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -2520,10 +2477,10 @@
 				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
@@ -2576,7 +2533,7 @@
 			<iDomesticGreatGeneralRateModifier>5</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>5</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>5</iNumCitiesMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>4</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>3</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>3</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
@@ -3789,7 +3746,7 @@
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+					<BuildingType>BUILDING_MATERIALIZATION_COMPLEX</BuildingType>
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -3799,7 +3756,7 @@
 					<iHealthChange>-4</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+					<BuildingType>BUILDING_MATERIALIZATION_COMPLEX</BuildingType>
 					<iHealthChange>-4</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -4142,25 +4099,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>1</iRevIdxLocal>
-			<iRevIdxNational>1</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0.4</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
@@ -5421,25 +5359,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>1</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>25</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -5549,6 +5468,7 @@
 				<iCommerce>-3</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CapitalCommerceModifiers>
+			<BonusCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
@@ -5557,25 +5477,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>2</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>-1</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>-20</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -5718,25 +5619,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>1</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>20</iRevIdxDistanceModifier>
-			<fRevViolentMod>-1</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>30</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -7281,25 +7163,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -7420,25 +7283,6 @@
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>5</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -7686,26 +7530,6 @@
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<bAllowInquisitions>0</bAllowInquisitions>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>3</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>1</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>25</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>.5</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>.7</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>-3</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -8957,9 +8781,6 @@
 				<iCommerce>-5</iCommerce>
 				<iCommerce>-3</iCommerce>
 			</CapitalCommerceModifiers>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>4</iRevIdxLocal>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>10</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>-10</iNationalCaptureResistanceModifier>
 			<iPopulationgrowthratepercentage>33</iPopulationgrowthratepercentage>
@@ -9151,25 +8972,6 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 			</ImprovementYieldChanges>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>3</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>-10</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -11206,25 +11008,6 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 			</ImprovementYieldChanges>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>1</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>-1</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -11342,25 +11125,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>-1</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -11445,25 +11209,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>-1</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -12910,25 +12655,6 @@
 			</BuildingHealthChanges>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>2</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0.5</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors>
@@ -14731,25 +14457,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<WeLoveTheKing/>
 			<iInflation>0</iInflation>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -16166,25 +15873,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>1</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<UnitProductionModifiers>
@@ -17364,25 +17052,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
@@ -18795,25 +18464,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<Flavors>
@@ -18956,25 +18606,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<Flavors/>
@@ -19957,25 +19588,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>1</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>30</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
@@ -20884,25 +20496,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<iPopulationgrowthratepercentage>50</iPopulationgrowthratepercentage>
@@ -21972,25 +21565,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<iPopulationgrowthratepercentage>25</iPopulationgrowthratepercentage>
@@ -22108,25 +21682,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<TerrainYieldChanges>

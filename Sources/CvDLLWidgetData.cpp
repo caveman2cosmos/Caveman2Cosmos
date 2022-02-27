@@ -2,6 +2,7 @@
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
 #include "CvImprovementInfo.h"
+#include "CvBonusInfo.h"
 #include "CvCity.h"
 #include "CvDeal.h"
 #include "CvDLLWidgetData.h"
@@ -17,6 +18,9 @@
 #include "CvPython.h"
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 CvDLLWidgetData* CvDLLWidgetData::m_pInst = NULL;
 
@@ -31,11 +35,7 @@ CvDLLWidgetData& CvDLLWidgetData::getInstance()
 
 void CvDLLWidgetData::freeInstance()
 {
-	if (m_pInst != NULL)
-	{
-		delete m_pInst;
-		m_pInst = NULL;
-	}
+	SAFE_DELETE(m_pInst);
 }
 
 void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &widgetDataStruct)
@@ -43,13 +43,7 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 	switch (widgetDataStruct.m_eWidgetType)
 	{
 	case WIDGET_PLOT_LIST:
-		parsePlotListHelp(widgetDataStruct, szBuffer);
-		break;
-
 	case WIDGET_PLOT_LIST_SHIFT:
-		szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CTRL_SHIFT", (GC.getMAX_PLOT_LIST_SIZE() - 1)));
-		break;
-
 	case WIDGET_CITY_SCROLL:
 		break;
 
@@ -203,10 +197,6 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		parseAutomateCitizensHelp(widgetDataStruct, szBuffer);
 		break;
 
-	case WIDGET_AUTOMATE_PRODUCTION:
-		parseAutomateProductionHelp(widgetDataStruct, szBuffer);
-		break;
-
 	case WIDGET_EMPHASIZE:
 		parseEmphasizeHelp(widgetDataStruct, szBuffer);
 		break;
@@ -241,10 +231,6 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 
 	case WIDGET_UNIT_MODEL:
 		parseUnitModelHelp(widgetDataStruct, szBuffer);
-		break;
-
-	case WIDGET_FLAG:
-		parseFlagHelp(widgetDataStruct, szBuffer);
 		break;
 
 	case WIDGET_HELP_MAINTENANCE:
@@ -546,10 +532,6 @@ void CvDLLWidgetData::parseHelp(CvWStringBuffer &szBuffer, CvWidgetDataStruct &w
 		parseEventHelp(widgetDataStruct, szBuffer);
 		break;
 
-	case WIDGET_PEDIA_JUMP_TO_UNIT_COMBAT:
-		parseUnitCombatHelp(widgetDataStruct, szBuffer, true);
-		break;
-
 	case WIDGET_PEDIA_JUMP_TO_IMPROVEMENT:
 		parseImprovementHelp(widgetDataStruct, szBuffer);
 		break;
@@ -674,22 +656,13 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 	{
 
 	case WIDGET_PLOT_LIST:
-		doPlotList(widgetDataStruct);
-		break;
-
 	case WIDGET_PLOT_LIST_SHIFT:
-		gDLL->getInterfaceIFace()->changePlotListColumn(widgetDataStruct.m_iData1 * (gDLL->ctrlKey() ? (GC.getMAX_PLOT_LIST_SIZE() - 1) : 1));
 		break;
 
 	case WIDGET_CITY_SCROLL:
-		if ( widgetDataStruct.m_iData1 > 0 )
-		{
+		if (widgetDataStruct.m_iData1 > 0)
 			GC.getGame().doControl(CONTROL_NEXTCITY);
-		}
-		else
-		{
-			GC.getGame().doControl(CONTROL_PREVCITY);
-		}
+		else GC.getGame().doControl(CONTROL_PREVCITY);
 		break;
 
 	case WIDGET_LIBERATE_CITY:
@@ -820,10 +793,6 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 		doAutomateCitizens();
 		break;
 
-	case WIDGET_AUTOMATE_PRODUCTION:
-		doAutomateProduction();
-		break;
-
 	case WIDGET_EMPHASIZE:
 		doEmphasize(widgetDataStruct);
 		break;
@@ -862,10 +831,6 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 
 	case WIDGET_UNIT_MODEL:
 		doUnitModel();
-		break;
-
-	case WIDGET_FLAG:
-		doFlag();
 		break;
 
 	case WIDGET_HELP_SELECTED:
@@ -907,10 +872,6 @@ bool CvDLLWidgetData::executeAction( CvWidgetDataStruct &widgetDataStruct )
 
 	case WIDGET_PEDIA_JUMP_TO_PROMOTION:
 		doPediaPromotionJump(widgetDataStruct);
-		break;
-
-	case WIDGET_PEDIA_JUMP_TO_UNIT_COMBAT:
-		doPediaUnitCombatJump(widgetDataStruct);
 		break;
 
 	case WIDGET_PEDIA_JUMP_TO_IMPROVEMENT:
@@ -1100,7 +1061,6 @@ bool CvDLLWidgetData::isLink(const CvWidgetDataStruct &widgetDataStruct) const
 	case WIDGET_PEDIA_JUMP_TO_DERIVED_TECH:
 	case WIDGET_PEDIA_JUMP_TO_BUILDING:
 	case WIDGET_PEDIA_JUMP_TO_UNIT:
-	case WIDGET_PEDIA_JUMP_TO_UNIT_COMBAT:
 	case WIDGET_PEDIA_JUMP_TO_TRAIT:
 	case WIDGET_PEDIA_JUMP_TO_PROMOTION:
 	case WIDGET_PEDIA_JUMP_TO_BONUS:
@@ -1139,32 +1099,6 @@ bool CvDLLWidgetData::isLink(const CvWidgetDataStruct &widgetDataStruct) const
 		break;
 	}
 	return (bLink);
-}
-
-
-void CvDLLWidgetData::doPlotList(CvWidgetDataStruct &widgetDataStruct)
-{
-	PROFILE_FUNC();
-
-	int iUnitIndex = widgetDataStruct.m_iData1 + gDLL->getInterfaceIFace()->getPlotListColumn() - gDLL->getInterfaceIFace()->getPlotListOffset();
-
-	CvPlot* selectionPlot = gDLL->getInterfaceIFace()->getSelectionPlot();
-	CvUnit* pUnit = gDLL->getInterfaceIFace()->getInterfacePlotUnit(selectionPlot, iUnitIndex);
-
-	if (pUnit != NULL)
-	{
-		if (pUnit->getOwner() == GC.getGame().getActivePlayer())
-		{
-			bool bWasCityScreenUp = gDLL->getInterfaceIFace()->isCityScreenUp();
-
-			gDLL->getInterfaceIFace()->selectGroup(pUnit, gDLL->shiftKey(), gDLL->ctrlKey(), gDLL->altKey());
-
-			if (bWasCityScreenUp)
-			{
-				gDLL->getInterfaceIFace()->lookAtSelectionPlot();
-			}
-		}
-	}
 }
 
 
@@ -1500,16 +1434,6 @@ void CvDLLWidgetData::doAutomateCitizens()
 	}
 }
 
-void CvDLLWidgetData::doAutomateProduction()
-{
-	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
-
-	if (pHeadSelectedCity != NULL)
-	{
-		GC.getGame().selectedCitiesGameNetMessage(GAMEMESSAGE_DO_TASK, TASK_SET_AUTOMATED_PRODUCTION, -1, -1, !pHeadSelectedCity->isProductionAutomated(), gDLL->altKey(), gDLL->shiftKey(), gDLL->ctrlKey());
-	}
-}
-
 void CvDLLWidgetData::doEmphasize(CvWidgetDataStruct &widgetDataStruct)
 {
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
@@ -1647,11 +1571,6 @@ void CvDLLWidgetData::doUnitModel()
 }
 
 
-void CvDLLWidgetData::doFlag()
-{
-	GC.getGame().doControl(CONTROL_SELECTCAPITAL);
-}
-
 void CvDLLWidgetData::doSelected(CvWidgetDataStruct &widgetDataStruct)
 {
 	if (gDLL->getInterfaceIFace()->getHeadSelectedCity() != NULL)
@@ -1752,11 +1671,6 @@ void CvDLLWidgetData::doPediaPromotionJump(CvWidgetDataStruct &widgetDataStruct)
 	Cy::call(PYScreensModule, "pediaJumpToPromotion", Cy::Args(widgetDataStruct.m_iData1));
 }
 
-void CvDLLWidgetData::doPediaUnitCombatJump(CvWidgetDataStruct &widgetDataStruct)
-{
-	Cy::call(PYScreensModule, "pediaJumpToUnitChart", Cy::Args(widgetDataStruct.m_iData1));
-}
-
 void CvDLLWidgetData::doPediaImprovementJump(CvWidgetDataStruct &widgetDataStruct, bool bData2)
 {
 	Cy::call(PYScreensModule, "pediaJumpToImprovement", Cy::Args(bData2? widgetDataStruct.m_iData2 : widgetDataStruct.m_iData1));
@@ -1792,7 +1706,7 @@ void CvDLLWidgetData::doPediaBuildJump(CvWidgetDataStruct &widgetDataStruct)
 	const BuildTypes eBuild = (BuildTypes)widgetDataStruct.m_iData2;
 	if (NO_BUILD != eBuild)
 	{
-		const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+		const ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
 		if (NO_IMPROVEMENT != eImprovement)
 		{
 			Cy::call(PYScreensModule, "pediaJumpToImprovement", Cy::Args(eImprovement));
@@ -1855,10 +1769,10 @@ void CvDLLWidgetData::parsePlotListHelp(CvWidgetDataStruct &widgetDataStruct, Cv
 {
 	PROFILE_FUNC();
 
-	int iUnitIndex = widgetDataStruct.m_iData1 + gDLL->getInterfaceIFace()->getPlotListColumn() - gDLL->getInterfaceIFace()->getPlotListOffset();
+	const int iUnitIndex = widgetDataStruct.m_iData1 + gDLL->getInterfaceIFace()->getPlotListColumn() - gDLL->getInterfaceIFace()->getPlotListOffset();
 
 	CvPlot *selectionPlot = gDLL->getInterfaceIFace()->getSelectionPlot();
-	CvUnit* pUnit = gDLL->getInterfaceIFace()->getInterfacePlotUnit(selectionPlot, iUnitIndex);
+	const CvUnit* pUnit = gDLL->getInterfaceIFace()->getInterfacePlotUnit(selectionPlot, iUnitIndex);
 
 	if (pUnit != NULL)
 	{
@@ -2655,7 +2569,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				{
 					if (pSelectedUnit->canGreatWork(pMissionPlot))
 					{
-						szBuffer.append(CvWString::format(L"%s+%d%c", NEWLINE, pSelectedUnit->getGreatWorkCulture(pMissionPlot), GC.getCommerceInfo(COMMERCE_CULTURE).getChar()));
+						szBuffer.append(CvWString::format(L"%s+%d%c", NEWLINE, pSelectedUnit->getGreatWorkCulture(), GC.getCommerceInfo(COMMERCE_CULTURE).getChar()));
 						break;
 					}
 				}
@@ -2675,7 +2589,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						{
 							if (pSelectedUnit->canEspionage(pMissionPlot))
 							{
-								szBuffer.append(CvWString::format(L"%s+%d%c", NEWLINE, pSelectedUnit->getEspionagePoints(pMissionPlot), GC.getCommerceInfo(COMMERCE_ESPIONAGE).getChar()));
+								szBuffer.append(CvWString::format(L"%s+%d%c", NEWLINE, pSelectedUnit->getEspionagePoints(), GC.getCommerceInfo(COMMERCE_ESPIONAGE).getChar()));
 								break;
 							}
 						}
@@ -2749,7 +2663,9 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			{
 				BuildTypes eBuild = ((BuildTypes)(GC.getActionInfo(widgetDataStruct.m_iData1).getMissionData()));
 				FAssert(eBuild != NO_BUILD);
-				ImprovementTypes eImprovement = ((ImprovementTypes)(GC.getBuildInfo(eBuild).getImprovement()));
+				ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
+				const CvImprovementInfo* improvement = eImprovement != NO_IMPROVEMENT ? &GC.getImprovementInfo(eImprovement) : NULL;
+				CvTeam& team = GET_TEAM(pHeadSelectedUnit->getTeam());
 				RouteTypes eRoute = ((RouteTypes)(GC.getBuildInfo(eBuild).getRoute()));
 
 				BonusTypes ePlotBonus = pMissionPlot->getBonusType(pHeadSelectedUnit->getTeam());
@@ -2823,7 +2739,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 
 				if (eImprovement != NO_IMPROVEMENT)
 				{
-					int iHappy = GC.getImprovementInfo(eImprovement).getHappiness();
+					int iHappy = improvement->getHappiness();
 					if (iHappy != 0)
 					{
 						szBuffer.append(CvWString::format(L", +%d%c", abs(iHappy), (iHappy > 0 ? gDLL->getSymbolID(HAPPY_CHAR) : gDLL->getSymbolID(UNHAPPY_CHAR))));
@@ -2838,7 +2754,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					{
 						if (pMissionPlot->getTeam() != pHeadSelectedUnit->getTeam())
 						{
-							if (GC.getImprovementInfo(eImprovement).isOutsideBorders())
+							if (improvement->isOutsideBorders())
 							{
 								if (pMissionPlot->getTeam() != NO_TEAM)
 								{
@@ -2853,43 +2769,35 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							}
 						}
 
-						if ((ePlotBonus == NO_BONUS) || !(GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(ePlotBonus)))
+						if ((ePlotBonus == NO_BONUS || !improvement->isImprovementBonusTrade(ePlotBonus))
+						&& !team.isIrrigation() && !team.isIgnoreIrrigation()
+						&& improvement->isRequiresIrrigation() && !pMissionPlot->isIrrigationAvailable())
 						{
-							if (!(GET_TEAM(pHeadSelectedUnit->getTeam()).isIrrigation()) && !(GET_TEAM(pHeadSelectedUnit->getTeam()).isIgnoreIrrigation()))
+							for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 							{
-								if (GC.getImprovementInfo(eImprovement).isRequiresIrrigation() && !(pMissionPlot->isIrrigationAvailable()))
+								if (GC.getTechInfo((TechTypes)iI).isIrrigation())
 								{
-									for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-									{
-										if (GC.getTechInfo((TechTypes)iI).isIrrigation())
-										{
-											szBuffer.append(NEWLINE);
-											szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", CvWString(GC.getTechInfo((TechTypes)iI).getType()).GetCString(), GC.getTechInfo((TechTypes)iI).getTextKeyWide()));
-											break;
-										}
-									}
+									szBuffer.append(NEWLINE);
+									szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", CvWString(GC.getTechInfo((TechTypes)iI).getType()).GetCString(), GC.getTechInfo((TechTypes)iI).getTextKeyWide()));
+									break;
 								}
 							}
 						}
 					}
-					if (!GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getTechPrereq()))
+					if (!team.isHasTech(GC.getBuildInfo(eBuild).getTechPrereq()))
 					{
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_REQUIRES_STRING", CvWString(GC.getTechInfo(GC.getBuildInfo(eBuild).getTechPrereq()).getType()).c_str(), GC.getTechInfo(GC.getBuildInfo(eBuild).getTechPrereq()).getTextKeyWide()));
 					}
 
-					if (GC.getBuildInfo(eBuild).getObsoleteTech() != NO_TECH)
+					if (GC.getBuildInfo(eBuild).getObsoleteTech() != NO_TECH && team.isHasTech(GC.getBuildInfo(eBuild).getObsoleteTech()))
 					{
-						if (GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getObsoleteTech()))
-						{
-							szBuffer.append(NEWLINE);
-							szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_OBSOLETE_WITH", CvWString(GC.getTechInfo(GC.getBuildInfo(eBuild).getObsoleteTech()).getType()).GetCString(), GC.getTechInfo(GC.getBuildInfo(eBuild).getObsoleteTech()).getTextKeyWide()));
-						}
+						szBuffer.append(NEWLINE);
+						szBuffer.append(gDLL->getText("TXT_KEY_BUILDINGHELP_OBSOLETE_WITH", CvWString(GC.getTechInfo(GC.getBuildInfo(eBuild).getObsoleteTech()).getType()).GetCString(), GC.getTechInfo(GC.getBuildInfo(eBuild).getObsoleteTech()).getTextKeyWide()));
 					}
 
-					for (int i = 0; i < GC.getBuildInfo(eBuild).getNumPrereqBonusTypes(); i++)
+					foreach_(const BonusTypes prereqBonus, GC.getBuildInfo(eBuild).getPrereqBonuses())
 					{
-						BonusTypes prereqBonus = ((BonusTypes)GC.getBuildInfo(eBuild).getPrereqBonusType(i));
 						if (!(pMissionPlot->isAdjacentPlotGroupConnectedBonus(pHeadSelectedUnit->getOwner(), prereqBonus)))
 						{
 							szBuffer.append(NEWLINE);
@@ -2947,16 +2855,15 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 						// Check feature prereqs against current plot
 						if (ePlotFeature != NO_FEATURE)
 						{
-							featureTechRequired = (TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature);
+							featureTechRequired = GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature);
 							if (featureTechRequired != NO_TECH)
 							{
 								// If the plot feature requires a different tech than the base tile itself AND we don't have that tech
-								if (GC.getBuildInfo(eBuild).getTechPrereq() != GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)
-									&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(ePlotFeature)))
+								if (GC.getBuildInfo(eBuild).getTechPrereq() != featureTechRequired && !team.isHasTech(featureTechRequired))
 								{
 									// If the base never obsoletes OR we don't have the tech which obsoletes it
 									if (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
-										|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getObsoleteTech()))
+									|| !team.isHasTech(GC.getBuildInfo(eBuild).getObsoleteTech()))
 									{
 										szBuffer.append(NEWLINE);
 
@@ -2978,23 +2885,23 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							}
 						}
 						// Check terrain prereqs against current plot
-						for (int iI = 0; iI < GC.getBuildInfo(eBuild).getNumTerrainStructs(); iI++)
+						foreach_(const TerrainStructs& kTerrainStruct, GC.getBuildInfo(eBuild).getTerrainStructs())
 						{
-							const TerrainTypes eTerrain = GC.getBuildInfo(eBuild).getTerrainStruct(iI).eTerrain;
+							const TerrainTypes eTerrain = kTerrainStruct.eTerrain;
 							if (eTerrain == pMissionPlot->getTerrainType()
 								|| eTerrain == GC.getTERRAIN_PEAK() && pMissionPlot->isAsPeak()
 								|| eTerrain == GC.getTERRAIN_HILL() && pMissionPlot->isHills())
 							{
-								const TechTypes terrainTechRequired = GC.getBuildInfo(eBuild).getTerrainStruct(iI).ePrereqTech;
+								const TechTypes terrainTechRequired = kTerrainStruct.ePrereqTech;
 
 								// If there is a tech required to build on the terrain that differs from the base tech prereq and feature prereq,
 								// we don't have that tech, and the build doesn't obsolete OR we don't have the obsolete tech:
 								if (terrainTechRequired != NO_TECH
 									&& terrainTechRequired != featureTechRequired
 									&& terrainTechRequired != GC.getBuildInfo(eBuild).getTechPrereq()
-									&& !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(terrainTechRequired)
+									&& !team.isHasTech(terrainTechRequired)
 									&& (GC.getBuildInfo(eBuild).getObsoleteTech() == NO_TECH
-										|| !GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech(GC.getBuildInfo(eBuild).getObsoleteTech())))
+										|| !team.isHasTech(GC.getBuildInfo(eBuild).getObsoleteTech())))
 								{
 									szBuffer.append(NEWLINE);
 									// If the terrain blocks the improvement from ever being constructable or not, different messages
@@ -3018,8 +2925,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 				}
 
-				if (eImprovement != NO_IMPROVEMENT
-				&&  pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
+				if (eImprovement != NO_IMPROVEMENT && pMissionPlot->getImprovementType() != NO_IMPROVEMENT)
 				{
 					// Assuming FeatureChange and TerrainChange won't remove improvement (though they may remove prereqs...)
 					if (!bIsFeatureChange && !bIsTerrainChange)
@@ -3190,9 +3096,9 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				{
 					if (ePlotBonus != NO_BONUS)
 					{
-						if (!GET_TEAM(pHeadSelectedUnit->getTeam()).isBonusObsolete(ePlotBonus))
+						if (!team.isBonusObsolete(ePlotBonus))
 						{
-							if (GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(ePlotBonus))
+							if (improvement->isImprovementBonusTrade(ePlotBonus))
 							{
 								szBuffer.append(NEWLINE);
 								szBuffer.append(gDLL->getText("TXT_KEY_ACTION_PROVIDES_BONUS", GC.getBonusInfo(ePlotBonus).getTextKeyWide()));
@@ -3212,28 +3118,26 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					else
 					{
 						int iLast = 0;
-
-						FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvDLLWidgetData::parseActionHelp");
-						for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
+						for (int iI = GC.getNumMapBonuses() - 1; iI > -1; iI--)
 						{
-							if (GET_TEAM(pHeadSelectedUnit->getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes) iI).getTechReveal())))
+							const BonusTypes eBonus = GC.getMapBonus(iI);
+
+							if (improvement->getImprovementBonusDiscoverRand(eBonus) > 0
+							&& team.isHasTech((TechTypes)GC.getBonusInfo(eBonus).getTechReveal()))
 							{
-								if (GC.getImprovementInfo(eImprovement).getImprovementBonusDiscoverRand(iI) > 0)
-								{
-									CvWString szFirstBuffer;
-									szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_ACTION_CHANCE_DISCOVER").c_str());
-									CvWString szTempBuffer;
-									szTempBuffer.Format(L"%c", GC.getBonusInfo((BonusTypes)iI).getChar());
-									setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", (GC.getImprovementInfo(eImprovement).getImprovementBonusDiscoverRand(iI) != iLast));
-									iLast = GC.getImprovementInfo(eImprovement).getImprovementBonusDiscoverRand(iI);
-								}
+								CvWString szFirstBuffer;
+								szFirstBuffer.Format(L"%s%s", NEWLINE, gDLL->getText("TXT_KEY_ACTION_CHANCE_DISCOVER").c_str());
+								CvWString szTempBuffer;
+								szTempBuffer.Format(L"%c", GC.getBonusInfo(eBonus).getChar());
+								setListHelp(szBuffer, szFirstBuffer, szTempBuffer, L", ", improvement->getImprovementBonusDiscoverRand(eBonus) != iLast);
+								iLast = improvement->getImprovementBonusDiscoverRand(eBonus);
 							}
 						}
 					}
 
 					if (!(pMissionPlot->isIrrigationAvailable()))
 					{
-						GAMETEXT.setYieldChangeHelp(szBuffer, gDLL->getText("TXT_KEY_ACTION_IRRIGATED").c_str(), L": ", L"", GC.getImprovementInfo(eImprovement).getIrrigatedYieldChangeArray());
+						GAMETEXT.setYieldChangeHelp(szBuffer, gDLL->getText("TXT_KEY_ACTION_IRRIGATED").c_str(), L": ", L"", improvement->getIrrigatedYieldChangeArray());
 					}
 
 					if (eRoute == NO_ROUTE)
@@ -3243,25 +3147,25 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 							if (pMissionPlot->getRouteType() != ((RouteTypes)iI))
 							{
 								GAMETEXT.setYieldChangeHelp(szBuffer, GC.getRouteInfo((RouteTypes)iI).getDescription(),
-									L": ", L"", GC.getImprovementInfo(eImprovement).getRouteYieldChangesArray((RouteTypes)iI));
+									L": ", L"", improvement->getRouteYieldChangesArray((RouteTypes)iI));
 							}
 						}
 					}
 
-					if (GC.getImprovementInfo(eImprovement).getDefenseModifier() != 0)
+					if (improvement->getDefenseModifier() != 0)
 					{
 						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_DEFENSE_MODIFIER", (GC.getImprovementInfo(eImprovement).getDefenseModifier() - pMissionPlot->getDefenseDamage())));
+						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_DEFENSE_MODIFIER", improvement->getDefenseModifier() - pMissionPlot->getDefenseDamage()));
 					}
 
-					if (GET_TEAM(pHeadSelectedUnit->getTeam()).getImprovementUpgrade(eImprovement) != NO_IMPROVEMENT)
+					if (team.getImprovementUpgrade(eImprovement) != NO_IMPROVEMENT)
 					{
 						const int iTurns = pMissionPlot->getUpgradeTimeLeft(eImprovement, pHeadSelectedUnit->getOwner());
 
 						szBuffer.append(NEWLINE);
 						szBuffer.append(gDLL->getText("TXT_KEY_ACTION_BECOMES_IMP",
-							CvWString(GC.getImprovementInfo(GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getType()).GetCString(),
-							GC.getImprovementInfo(GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getTextKeyWide(),
+							CvWString(GC.getImprovementInfo(improvement->getImprovementUpgrade()).getType()).GetCString(),
+							GC.getImprovementInfo(improvement->getImprovementUpgrade()).getTextKeyWide(),
 							iTurns));
 					}
 				}
@@ -3293,7 +3197,7 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 					}
 
 					// TODO Fix, make separate func
-					int iMovementCost = GC.getRouteInfo(eRoute).getMovementCost() + GET_TEAM(pHeadSelectedUnit->getTeam()).getRouteChange(eRoute);
+					int iMovementCost = GC.getRouteInfo(eRoute).getMovementCost() + team.getRouteChange(eRoute);
 					int iFlatMovementCost = GC.getRouteInfo(eRoute).getFlatMovementCost();
 
 					int iMoves = 0;
@@ -3378,10 +3282,8 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				}
 			}
 			// BUG - Fortify/Sleep All Action - start
-			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_FORTIFY ||
-				//GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_ESCAPE ||
-				//GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_ESTABLISH ||
-				GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_SLEEP)
+			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_FORTIFY
+			|| GC.getActionInfo(widgetDataStruct.m_iData1).getMissionType() == MISSION_SLEEP)
 			{
 				szBuffer.append(gDLL->getText("TXT_KEY_SAME_UNITS_TYPE"));
 			}
@@ -4696,20 +4598,6 @@ void CvDLLWidgetData::parseAutomateCitizensHelp(CvWidgetDataStruct &widgetDataSt
 }
 
 
-void CvDLLWidgetData::parseAutomateProductionHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
-
-	if (pHeadSelectedCity != NULL)
-	{
-		if (pHeadSelectedCity->isProductionAutomated())
-		{
-			szBuffer.assign(gDLL->getText("TXT_KEY_MISC_OFF_PROD_AUTO"));
-		}
-		else szBuffer.assign(gDLL->getText("TXT_KEY_MISC_ON_PROD_AUTO"));
-	}
-}
-
 void CvDLLWidgetData::parseEmphasizeHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
 	szBuffer.clear();
@@ -5109,56 +4997,6 @@ void CvDLLWidgetData::parseUnitModelHelp(CvWidgetDataStruct &widgetDataStruct, C
 	{
 		GAMETEXT.setUnitHelp(szBuffer, pHeadSelectedUnit);
 	}
-}
-
-
-void CvDLLWidgetData::parseFlagHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
-{
-
-/************************************************************************************************/
-/* Afforess: Rise of Mankind                    6/15/10                               	         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	// Show the active player's civ's current name when mousing over flag
-	CvWString szTempBuffer;
-	szTempBuffer.Format(SETCOLR L"%s" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GET_PLAYER(GC.getGame().getActivePlayer()).getCivilizationDescription());
-	szBuffer.append(szTempBuffer);
-	szBuffer.append(NEWLINE);
-
-	// BTS Version
-	float fVersion = GC.getDefineINT("CIV4_VERSION") / 100.0f;
-	szTempBuffer.Format(SETCOLR L"Beyond the Sword %0.2f" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), fVersion);
-	szBuffer.append(szTempBuffer);
-	szTempBuffer.Format(NEWLINE SETCOLR L"Caveman2Cosmos %S" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), GC.getDefineSTRING("C2C_VERSION"));
-	szBuffer.append(szTempBuffer);
-	CvWString szBULLETICON;
-	szBULLETICON.Format(NEWLINE L"%c", gDLL->getSymbolID(BULLET_CHAR));
-	szBuffer.append(szBULLETICON);
-	// BUG DLL version
-	szTempBuffer.Format(SETCOLR L"%s %s [Build %s]" ENDCOLR, TEXT_COLOR("COLOR_WHITE"), BUG_DLL_NAME, BUG_DLL_VERSION, BUG_DLL_BUILD);
-	szBuffer.append(szTempBuffer);
-
-// BUG - Version Info - end
-	if (GET_PLAYER(GC.getGame().getActivePlayer()).isModderOption(MODDEROPTION_SHOW_TRAITS_FLAG) || GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS))
-	{
-		// separator line
-		szBuffer.append(NEWLINE L"==============================" NEWLINE);
-		szBuffer.append(NEWLINE);
-		GAMETEXT.parsePlayerTraits(szBuffer, GET_PLAYER(GC.getGame().getActivePlayer()).getID());
-	}
-
-	// Player properties
-	szBuffer.append(NEWLINE L"==============================" NEWLINE);
-	GET_PLAYER(GC.getGame().getActivePlayer()).getProperties()->buildDisplayString(szBuffer);
-	szBuffer.append(NEWLINE L"==============================" NEWLINE);
-	GET_TEAM(GC.getGame().getActiveTeam()).getProperties()->buildDisplayString(szBuffer);
-	szBuffer.append(NEWLINE L"==============================" NEWLINE);
-	GC.getGame().getProperties()->buildDisplayString(szBuffer);
-
-/************************************************************************************************/
-/* Afforess                                    END                                              */
-/************************************************************************************************/
 }
 
 
@@ -5691,7 +5529,7 @@ void CvDLLWidgetData::parseWaterWorkHelp(CvWidgetDataStruct &widgetDataStruct, C
 
 void CvDLLWidgetData::parseBuildHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-	GAMETEXT.buildImprovementString(szBuffer, ((TechTypes)(widgetDataStruct.m_iData1)), widgetDataStruct.m_iData2);
+	GAMETEXT.buildImprovementString(szBuffer, (TechTypes)widgetDataStruct.m_iData1, (BuildTypes)widgetDataStruct.m_iData2);
 }
 
 void CvDLLWidgetData::parseDomainExtraMovesHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
@@ -5920,14 +5758,6 @@ void CvDLLWidgetData::parseEventHelp(CvWidgetDataStruct &widgetDataStruct, CvWSt
 	GAMETEXT.setEventHelp(szBuffer, (EventTypes)widgetDataStruct.m_iData1, widgetDataStruct.m_iData2, GC.getGame().getActivePlayer());
 }
 
-void CvDLLWidgetData::parseUnitCombatHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer, bool bCivilopediaText)
-{
-	if (widgetDataStruct.m_iData2 != 0)
-	{
-		GAMETEXT.setUnitCombatHelp(szBuffer, (UnitCombatTypes)widgetDataStruct.m_iData1, bCivilopediaText);
-	}
-}
-
 void CvDLLWidgetData::parseImprovementHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
 	if (widgetDataStruct.m_iData2 != 0 && widgetDataStruct.m_bOption)
@@ -5966,7 +5796,7 @@ void CvDLLWidgetData::parseCivilizationHelp(CvWidgetDataStruct &widgetDataStruct
 
 void CvDLLWidgetData::parseLeaderHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-	if (widgetDataStruct.m_iData2 != -1)
+	if (widgetDataStruct.m_iData2 != 0)
 	{
 		GAMETEXT.parseLeaderTraits(szBuffer, (LeaderHeadTypes)widgetDataStruct.m_iData1, (CivilizationTypes)widgetDataStruct.m_iData2);
 	}

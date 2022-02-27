@@ -2,6 +2,7 @@
 from CvPythonExtensions import *
 import CvScreensInterface as UP
 import HandleInputUtil
+import CivicData
 
 # globals
 GC = CyGlobalContext()
@@ -39,22 +40,15 @@ class CvCivicsScreen:
 		self.CyPlayer = CyPlayer = GC.getPlayer(iPlayer)
 		self.bCanRevolution = iPlayer == self.iPlayerAct and CyPlayer.canRevolution()
 
-		civicListPerOption = []
 		current = []
 		origina = []
 		for iCat in xrange(GC.getNumCivicOptionInfos()):
-			civicListPerOption.append([])
 			iCivic = CyPlayer.getCivics(iCat)
 			current.append(iCivic)
 			origina.append(iCivic)
 
-		for iCivicX in xrange(GC.getNumCivicInfos()):
-			CvCivicInfoX = GC.getCivicInfo(iCivicX)
-			iCivicOption = CvCivicInfoX.getCivicOptionType()
-			civicListPerOption[iCivicOption].append((CvCivicInfoX, iCivicX))
 		self.currentCivics = current
 		self.originalCivics = origina
-		self.civicListPerOption = civicListPerOption
 		self.iCivicDisplayed = -1
 
 
@@ -202,7 +196,6 @@ class CvCivicsScreen:
 
 		iSize = self.iSize
 
-		civicListPerOption = self.civicListPerOption
 		currentCivics = self.currentCivics
 
 		eWidGen = WidgetTypes.WIDGET_GENERAL
@@ -224,9 +217,9 @@ class CvCivicsScreen:
 		dy = dx
 		iOff = 3*xRes/7
 		iCivicOption = 0
-		for civicList in civicListPerOption:
+		for civics in CivicData.civicLists:
 			aCoordList.append([])
-			w = len(civicList)*dx + 28
+			w = len(civics)*dx + 28
 			if w < wScroll:
 				x = (wScroll - w) / 2
 			else: x = 0
@@ -243,10 +236,10 @@ class CvCivicsScreen:
 			screen.attachPanelAt(ScPnl, self.getNextWidget(), "", "", True, True, ePnlOut, x, y, w, dy, eWidGen, 1, 1)
 			x += 16
 			y += 8
-			for CvCivicInfoX, iCivicX in civicList:
+			for civicX, iCivicX in civics:
 				Img = "WID|CIVIC%d" % iCivicX
 				if bDebug or CyPlayer.canDoCivics(iCivicX):
-					BTN = CvCivicInfoX.getButton()
+					BTN = civicX.getButton()
 				else: BTN = CANCEL
 				aCoordList[iCivicOption].append((x, y))
 				screen.setImageButtonAt(Img, ScPnl, BTN, x, y, iSize, iSize, eWidGen, 1, 1)
@@ -271,7 +264,6 @@ class CvCivicsScreen:
 
 		iSize = self.iSize/2
 
-		civicListPerOption = self.civicListPerOption
 		currentCivics = self.currentCivics
 
 		eWidGen = WidgetTypes.WIDGET_GENERAL
@@ -299,8 +291,8 @@ class CvCivicsScreen:
 		y = -2
 		iOff = 3*xRes/7
 		iCivicOption = 0
-		for civicList in civicListPerOption:
-			h = 56 + len(civicList)*dy
+		for civics in CivicData.civicLists:
+			h = 56 + len(civics)*dy
 
 			screen.attachPanelAt(ScPnl, self.getNextWidget(), "", "", True, True, ePnlMain, 0, y, 404, h, eWidGen, 1, 1)
 			# Header
@@ -309,10 +301,10 @@ class CvCivicsScreen:
 			screen.setLabelAt(self.getNextWidget(), ScPnl, szTxt, 1<<0, 10, y, 0, eFontGame, eWidGen, 1, 1)
 			y += 32
 			# Build row
-			for CvCivicInfoX, iCivicX in civicList:
+			for civicX, iCivicX in civics:
 				Txt = "WID|CIVIC|TEXT%d" % iCivicX
 				if bDebug or CyPlayer.canDoCivics(iCivicX):
-					BTN = CvCivicInfoX.getButton()
+					BTN = civicX.getButton()
 				else: BTN = CANCEL
 				screen.addDDSGFCAt("", ScPnl, BTN, 8, y, iSize, iSize, eWidGen, 1, 1, False)
 
@@ -320,7 +312,7 @@ class CvCivicsScreen:
 					szTxt = "<color=255,255,0>" + uFont3b
 				else: szTxt = uFont3
 
-				szTxt += CvCivicInfoX.getDescription()
+				szTxt += civicX.getDescription()
 				screen.setTextAt(Txt, ScPnl, szTxt, 1<<0, dy, 2 + y, 0, eFontGame, eWidGen, 0, 0)
 				y += dy
 			y += dy
@@ -335,8 +327,8 @@ class CvCivicsScreen:
 			szTxt += info.getCivilopedia()
 		else:
 			iCivicOption = 0
-			for civicList in self.civicListPerOption:
-				for _, iCivicX in civicList:
+			for civics in CivicData.civicLists:
+				for _, iCivicX in civics:
 					if iCivicX == iCivic:
 						iCivic = self.originalCivics[iCivicOption]
 						info = GC.getCivicInfo(iCivic)
@@ -351,9 +343,9 @@ class CvCivicsScreen:
 
 	def selectCivic(self, screen, iCivic):
 		iCivicOption = 0
-		for civicList in self.civicListPerOption:
+		for civics in CivicData.civicLists:
 			iCount = 0
-			for _, iCivicX in civicList:
+			for _, iCivicX in civics:
 				if iCivicX == iCivic:
 					iCivicY = self.currentCivics[iCivicOption]
 					if self.iType:
@@ -548,5 +540,5 @@ class CvCivicsScreen:
 		del self.InputData, self.nWidgetCount, self.CyPlayer, self.iPlayer, self.iPlayerAct, \
 			self.xRes, self.yRes, self.xMid, self.iSize, self.aFontList, \
 			self.H_EDGE, self.Y_STAT_BAR, self.Y_MID_STAT_BAR, self.iCivicDisplayed, \
-			self.civicListPerOption, self.currentCivics, self.originalCivics, self.aCoordList, \
+			self.currentCivics, self.originalCivics, self.aCoordList, \
 			self.bDebug, self.bCanRevolution, self.HILITE, self.CANCEL, self.ScPnl

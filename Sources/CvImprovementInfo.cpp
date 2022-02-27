@@ -1,7 +1,12 @@
-#include "CvImprovementInfo.h"
-
-#include "CvXMLLoadUtility.h"
 #include "CvArtFileMgr.h"
+#include "CvDefines.h"
+#include "CvImprovementInfo.h"
+#include "CvInfoUtil.h"
+#include "CvXMLLoadUtility.h"
+#include "CheckSum.h"
+#include "BoolExpr.h"
+//#include "IntExpr.h"
+#include "IDValueMap.h"
 
 CvImprovementInfo::CvImprovementInfo() :
 	m_iAdvancedStartCost(100),
@@ -28,7 +33,7 @@ CvImprovementInfo::CvImprovementInfo() :
 	m_bIsUniversalTradeBonusProvider(false),
 	m_bIsZOCSource(false),
 	// Super forts C2C adaptation end
-	m_bActsAsCity(true),
+	m_bActsAsCity(false),
 	m_bHillsMakesValid(false),
 	m_bFreshWaterMakesValid(false),
 	m_bRiverSideMakesValid(false),
@@ -41,8 +46,12 @@ CvImprovementInfo::CvImprovementInfo() :
 	m_bPeakImprovement(false),
 	m_bWaterImprovement(false),
 	m_bGoody(false),
-	m_bPermanent(false),
 	m_bOutsideBorders(false),
+	m_bMilitaryStructure(false),
+	m_bPlacesBonus(false),
+	m_bPlacesFeature(false),
+	m_bPlacesTerrain(false),
+	m_bExtraterresial(false),
 	m_iWorldSoundscapeScriptId(0),
 	m_piPrereqNatureYield(NULL),
 	m_piYieldChange(NULL),
@@ -69,6 +78,7 @@ CvImprovementInfo::CvImprovementInfo() :
 	//,m_iHighestCost(0)
 	, m_iBonusChange(NO_BONUS)
 {
+	CvInfoUtil(this).initDataMembers();
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -80,6 +90,8 @@ CvImprovementInfo::CvImprovementInfo() :
 //------------------------------------------------------------------------------------------------------
 CvImprovementInfo::~CvImprovementInfo()
 {
+	CvInfoUtil(this).uninitDataMembers();
+
 	SAFE_DELETE_ARRAY(m_piPrereqNatureYield);
 	SAFE_DELETE_ARRAY(m_piYieldChange);
 	SAFE_DELETE_ARRAY(m_piRiverSideYieldChange);
@@ -93,7 +105,6 @@ CvImprovementInfo::~CvImprovementInfo()
 	GC.removeDelayedResolution((int*)&m_iImprovementPillage);
 	GC.removeDelayedResolution((int*)&m_iImprovementUpgrade);
 	GC.removeDelayedResolution((int*)&m_iBonusChange);
-	GC.removeDelayedResolutionVector(m_improvementBuildTypes);
 	GC.removeDelayedResolutionVector(m_aiAlternativeImprovementUpgradeTypes);
 	GC.removeDelayedResolutionVector(m_aiFeatureChangeTypes);
 }
@@ -148,11 +159,6 @@ bool CvImprovementInfo::isOutsideBorders() const
 	return m_bOutsideBorders;
 }
 
-BuildTypes CvImprovementInfo::getImprovementBuildType(int iIndex) const
-{
-	return m_improvementBuildTypes[iIndex];
-}
-
 // Super Forts begin *XML*
 int CvImprovementInfo::getCulture() const
 {
@@ -188,19 +194,11 @@ bool CvImprovementInfo::isUpgradeRequiresFortify() const
 {
 	return m_bUpgradeRequiresFortify;
 }
-// Super Forts end
-// Super forts C2C adaptation
-bool CvImprovementInfo::isUniversalTradeBonusProvider() const
-{
-	return m_bIsUniversalTradeBonusProvider;
-}
 
 bool CvImprovementInfo::isZOCSource() const
 {
 	return m_bIsZOCSource;
 }
-
-// Super forts C2C adaptation end
 
 bool CvImprovementInfo::isActsAsCity() const
 {
@@ -267,12 +265,7 @@ bool CvImprovementInfo::isGoody() const
 	return m_bGoody;
 }
 
-bool CvImprovementInfo::isPermanent() const
-{
-	return m_bPermanent;
-}
-
-const TCHAR* CvImprovementInfo::getArtDefineTag() const
+const char* CvImprovementInfo::getArtDefineTag() const
 {
 	return m_szArtDefineTag;
 }
@@ -286,19 +279,14 @@ int CvImprovementInfo::getWorldSoundscapeScriptId() const
 
 int CvImprovementInfo::getPrereqNatureYield(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
-		return m_piPrereqNatureYield ? m_piPrereqNatureYield[i] : 0;
-}
-
-int* CvImprovementInfo::getPrereqNatureYieldArray() const
-{
-	return m_piPrereqNatureYield;
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
+	return m_piPrereqNatureYield ? m_piPrereqNatureYield[i] : 0;
 }
 
 int CvImprovementInfo::getYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
-		return m_piYieldChange ? m_piYieldChange[i] : 0;
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
+	return m_piYieldChange ? m_piYieldChange[i] : 0;
 }
 
 int* CvImprovementInfo::getYieldChangeArray() const
@@ -308,8 +296,8 @@ int* CvImprovementInfo::getYieldChangeArray() const
 
 int CvImprovementInfo::getRiverSideYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
-		return m_piRiverSideYieldChange ? m_piRiverSideYieldChange[i] : 0;
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
+	return m_piRiverSideYieldChange ? m_piRiverSideYieldChange[i] : 0;
 }
 
 int* CvImprovementInfo::getRiverSideYieldChangeArray() const
@@ -319,8 +307,8 @@ int* CvImprovementInfo::getRiverSideYieldChangeArray() const
 
 int CvImprovementInfo::getIrrigatedYieldChange(int i) const
 {
-	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i)
-		return m_piIrrigatedChange ? m_piIrrigatedChange[i] : 0;
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, i);
+	return m_piIrrigatedChange ? m_piIrrigatedChange[i] : 0;
 }
 
 int* CvImprovementInfo::getIrrigatedYieldChangeArray() const
@@ -330,21 +318,21 @@ int* CvImprovementInfo::getIrrigatedYieldChangeArray() const
 
 bool CvImprovementInfo::getTerrainMakesValid(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i)
-		return m_pbTerrainMakesValid ? m_pbTerrainMakesValid[i] : false;
+	FASSERT_BOUNDS(0, GC.getNumTerrainInfos(), i);
+	return m_pbTerrainMakesValid ? m_pbTerrainMakesValid[i] : false;
 }
 
 bool CvImprovementInfo::getFeatureMakesValid(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i)
-		return m_pbFeatureMakesValid ? m_pbFeatureMakesValid[i] : false;
+	FASSERT_BOUNDS(0, GC.getNumFeatureInfos(), i);
+	return m_pbFeatureMakesValid ? m_pbFeatureMakesValid[i] : false;
 }
 
 int CvImprovementInfo::getTechYieldChanges(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumTechInfos(), i)
-		FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
-		return (m_ppiTechYieldChanges && m_ppiTechYieldChanges[i]) ? m_ppiTechYieldChanges[i][j] : 0;
+	FASSERT_BOUNDS(0, GC.getNumTechInfos(), i);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
+	return (m_ppiTechYieldChanges && m_ppiTechYieldChanges[i]) ? m_ppiTechYieldChanges[i][j] : 0;
 }
 
 int* CvImprovementInfo::getTechYieldChangesArray(int i) const
@@ -354,9 +342,9 @@ int* CvImprovementInfo::getTechYieldChangesArray(int i) const
 
 int CvImprovementInfo::getRouteYieldChanges(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumRouteInfos(), i)
-		FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
-		return (m_ppiRouteYieldChanges && m_ppiRouteYieldChanges[i]) ? m_ppiRouteYieldChanges[i][j] : 0;
+	FASSERT_BOUNDS(0, GC.getNumRouteInfos(), i);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
+	return (m_ppiRouteYieldChanges && m_ppiRouteYieldChanges[i]) ? m_ppiRouteYieldChanges[i][j] : 0;
 }
 
 int* CvImprovementInfo::getRouteYieldChangesArray(int i) const
@@ -366,55 +354,42 @@ int* CvImprovementInfo::getRouteYieldChangesArray(int i) const
 
 int CvImprovementInfo::getImprovementBonusYield(int i, int j) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
-		FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
-		return m_paImprovementBonus[i].m_piYieldChange ? m_paImprovementBonus[i].getYieldChange(j) : 0;
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
+	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
+	return m_paImprovementBonus[i].m_piYieldChange ? m_paImprovementBonus[i].getYieldChange(j) : 0;
 }
 
 bool CvImprovementInfo::isImprovementBonusMakesValid(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
-		return m_paImprovementBonus[i].m_bBonusMakesValid;
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
+	return m_paImprovementBonus[i].m_bBonusMakesValid;
 }
 
 bool CvImprovementInfo::isImprovementObsoleteBonusMakesValid(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
-		return m_paImprovementBonus[i].m_bObsoleteBonusMakesValid;
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
+	return m_paImprovementBonus[i].m_bObsoleteBonusMakesValid;
 }
 
-bool CvImprovementInfo::isImprovementBonusTrade(int i) const
+bool CvImprovementInfo::isImprovementBonusTrade(int iBonus) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
-		// Super forts C2C adaptation
-		return m_bIsUniversalTradeBonusProvider || m_paImprovementBonus[i].m_bBonusTrade;
-	// Super forts C2C adaptation end
+	if (iBonus < 0)
+	{
+		return m_bIsUniversalTradeBonusProvider;
+	}
+	return m_bIsUniversalTradeBonusProvider || m_paImprovementBonus[iBonus].m_bBonusTrade;
 }
 
 int CvImprovementInfo::getImprovementBonusDiscoverRand(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
-		return m_paImprovementBonus[i].m_iDiscoverRand;
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
+	return m_paImprovementBonus[i].m_iDiscoverRand;
 }
 
-const TCHAR* CvImprovementInfo::getButton() const
+const char* CvImprovementInfo::getButton() const
 {
-	/************************************************************************************************/
-	/* XMLCOPY								 10/25/07								MRGENIE	  */
-	/*																							  */
-	/* Catch non-existing tag																	   */
-	/************************************************************************************************/
-	const CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)
-	{
-		return NULL;
-	}
 	const CvArtInfoImprovement* pImprovementArtInfo = getArtInfo();
-	if (pImprovementArtInfo != NULL)
-	{
-		return pImprovementArtInfo->getButton();
-	}
-	return NULL;
+	return pImprovementArtInfo ? pImprovementArtInfo->getButton() : NULL;
 }
 
 const CvArtInfoImprovement* CvImprovementInfo::getArtInfo() const
@@ -422,12 +397,12 @@ const CvArtInfoImprovement* CvImprovementInfo::getArtInfo() const
 	return ARTFILEMGR.getImprovementArtInfo(getArtDefineTag());
 }
 
-const TCHAR* CvArtInfoImprovement::getShaderNIF() const
+const char* CvArtInfoImprovement::getShaderNIF() const
 {
 	return m_szShaderNIF;
 }
 
-void CvArtInfoImprovement::setShaderNIF(const TCHAR* szDesc)
+void CvArtInfoImprovement::setShaderNIF(const char* szDesc)
 {
 	m_szShaderNIF = szDesc;
 }
@@ -445,14 +420,14 @@ int CvImprovementInfo::getHealthPercent() const
 
 int CvImprovementInfo::getImprovementBonusDepletionRand(int i) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i)
-		return m_paImprovementBonus[i].m_iDepletionRand;
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), i);
+	return m_paImprovementBonus[i].m_iDepletionRand;
 }
 
 //int CvImprovementInfo::getTraitYieldChanges(int i, int j) const
 //{
-//	FASSERT_BOUNDS(0, GC.getNumTraitInfos(), i)
-//	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j)
+//	FASSERT_BOUNDS(0, GC.getNumTraitInfos(), i);
+//	FASSERT_BOUNDS(0, NUM_YIELD_TYPES, j);
 //	return (m_ppiTraitYieldChanges && m_ppiTraitYieldChanges[i]) ? m_ppiTraitYieldChanges[i][j] : 0;
 //}
 
@@ -498,7 +473,7 @@ int CvImprovementInfo::getNumAlternativeImprovementUpgradeTypes() const
 
 bool CvImprovementInfo::isAlternativeImprovementUpgradeType(int i) const
 {
-	return algo::contains(m_aiAlternativeImprovementUpgradeTypes, i);
+	return algo::any_of_equal(m_aiAlternativeImprovementUpgradeTypes, i);
 }
 
 int CvImprovementInfo::getFeatureChangeType(int i) const
@@ -513,7 +488,7 @@ int CvImprovementInfo::getNumFeatureChangeTypes() const
 
 bool CvImprovementInfo::isFeatureChangeType(int i) const
 {
-	return algo::contains(m_aiFeatureChangeTypes, i);
+	return algo::any_of_equal(m_aiFeatureChangeTypes, i);
 }
 
 //Post Load functions
@@ -523,7 +498,7 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 //	int iHighestCost = 0;
 //	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 //	{
-//		if (GC.getBuildInfo((BuildTypes)iI).getImprovement() != NO_IMPROVEMENT && GC.getBuildInfo((BuildTypes)iI).getImprovement() == GC.getInfoTypeForString(m_szType))
+//		if (GC.getBuildInfo((BuildTypes)iI).getImprovement() == GC.getInfoTypeForString(m_szType))
 //		{
 //			if (GC.getBuildInfo((BuildTypes)iI).getCost() > iHighestCost)
 //			{
@@ -540,8 +515,18 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 //	return m_iHighestCost;
 //}
 
+void CvImprovementInfo::getDataMembers(CvInfoUtil& util)
+{
+	util
+		//.addEnum(m_iObsoleteTech, L"ObsoleteTech")
+		//.add(m_piBonusHealthChanges, L"BonusHealthChanges")
+	;
+}
+
 void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 {
+	CvInfoUtil(this).checkSum(iSum);
+
 	CheckSum(iSum, m_iAdvancedStartCost);
 
 	CheckSum(iSum, m_iTilesPerGoody);
@@ -582,10 +567,13 @@ void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bPeakImprovement);
 	CheckSum(iSum, m_bWaterImprovement);
 	CheckSum(iSum, m_bGoody);
-	CheckSum(iSum, m_bPermanent);
 	CheckSum(iSum, m_bOutsideBorders);
+	CheckSum(iSum, m_bMilitaryStructure);
+	CheckSum(iSum, m_bPlacesBonus);
+	CheckSum(iSum, m_bPlacesFeature);
+	CheckSum(iSum, m_bPlacesTerrain);
+	CheckSum(iSum, m_bExtraterresial);
 	CheckSumC(iSum, m_aeMapCategoryTypes);
-	CheckSumC(iSum, m_improvementBuildTypes);
 
 	// Arrays
 
@@ -648,6 +636,8 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 	}
 
+	CvInfoUtil(this).readXml(pXML);
+
 	int iIndex, j, iNumSibs;
 
 	pXML->GetOptionalChildXmlValByName(m_szArtDefineTag, L"ArtDefineTag");
@@ -697,7 +687,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->GetOptionalChildXmlValByName(&m_iAdvancedStartCost, L"iAdvancedStartCost", 100);
-	pXML->GetOptionalChildXmlValByName(&m_bActsAsCity, L"bActsAsCity", true);
+	pXML->GetOptionalChildXmlValByName(&m_bActsAsCity, L"bActsAsCity");
 	pXML->GetOptionalChildXmlValByName(&m_bHillsMakesValid, L"bHillsMakesValid");
 	pXML->GetOptionalChildXmlValByName(&m_bFreshWaterMakesValid, L"bFreshWaterMakesValid");
 	pXML->GetOptionalChildXmlValByName(&m_bRiverSideMakesValid, L"bRiverSideMakesValid");
@@ -710,7 +700,6 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bPeakImprovement, L"bPeakImprovement");
 	pXML->GetOptionalChildXmlValByName(&m_bWaterImprovement, L"bWaterImprovement");
 	pXML->GetOptionalChildXmlValByName(&m_bGoody, L"bGoody");
-	pXML->GetOptionalChildXmlValByName(&m_bPermanent, L"bPermanent");
 	pXML->GetOptionalChildXmlValByName(&m_iTilesPerGoody, L"iTilesPerGoody");
 	pXML->GetOptionalChildXmlValByName(&m_iGoodyUniqueRange, L"iGoodyRange");
 	pXML->GetOptionalChildXmlValByName(&m_iFeatureGrowthProbability, L"iFeatureGrowth");
@@ -720,6 +709,11 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iHappiness, L"iHappiness");
 	pXML->GetOptionalChildXmlValByName(&m_iPillageGold, L"iPillageGold");
 	pXML->GetOptionalChildXmlValByName(&m_bOutsideBorders, L"bOutsideBorders");
+	pXML->GetOptionalChildXmlValByName(&m_bMilitaryStructure, L"bMilitaryStructure");
+	pXML->GetOptionalChildXmlValByName(&m_bPlacesBonus, L"bPlacesBonus");
+	pXML->GetOptionalChildXmlValByName(&m_bPlacesFeature, L"bPlacesFeature");
+	pXML->GetOptionalChildXmlValByName(&m_bPlacesTerrain, L"bPlacesTerrain");
+	pXML->GetOptionalChildXmlValByName(&m_bExtraterresial, L"bExtraterresial");
 	// Super Forts begin *XML*
 	pXML->GetOptionalChildXmlValByName(&m_iCulture, L"iCulture");
 	pXML->GetOptionalChildXmlValByName(&m_iCultureRange, L"iCultureRange");
@@ -751,7 +745,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	// initialize the boolean list to the correct size and all the booleans to false
-	FAssertMsg((GC.getNumTechInfos() > 0) && (NUM_YIELD_TYPES) > 0, "either the number of tech infos is zero or less or the number of yield types is zero or less");
+	FAssertMsg(GC.getNumTechInfos() > 0, "the number of tech infos is zero or less");
 	if (pXML->TryMoveToXmlFirstChild(L"TechYieldChanges"))
 	{
 		iNumSibs = pXML->GetXmlChildrenNumber();
@@ -791,16 +785,13 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
-	pXML->SetOptionalVectorWithDelayedResolution(m_improvementBuildTypes, L"CreatingBuilds");
-
 	// initialize the boolean list to the correct size and all the booleans to false
-	FAssertMsg((GC.getNumRouteInfos() > 0) && (NUM_YIELD_TYPES) > 0, "either the number of route infos is zero or less or the number of yield types is zero or less");
+	FAssertMsg(GC.getNumRouteInfos() > 0, "the number of route infos is zero or less");
 	if (pXML->TryMoveToXmlFirstChild(L"RouteYieldChanges"))
 	{
 		iNumSibs = pXML->GetXmlChildrenNumber();
 		if (pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (0 < iNumSibs)
 			{
 				pXML->Init2DList(&m_ppiRouteYieldChanges, GC.getNumRouteInfos(), NUM_YIELD_TYPES);
@@ -912,15 +903,16 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 
 void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
+	const int iDefault = 0;
+	const int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
+	const CvString cDefault = CvString::format("").GetCString();
 
 	if (getArtDefineTag() == cDefault) m_szArtDefineTag = pClassInfo->getArtDefineTag();
 
 	CvInfoBase::copyNonDefaults(pClassInfo);
+
+	CvInfoUtil(this).copyNonDefaults(pClassInfo);
 
 	for (int i = 0; i < NUM_YIELD_TYPES; i++)
 	{
@@ -975,10 +967,10 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	if (getUniqueRange() == iDefault) m_iUniqueRange = pClassInfo->getUniqueRange();
 	if (isBombardable() == bDefault) m_bBombardable = pClassInfo->isBombardable();
 	if (isUpgradeRequiresFortify() == bDefault) m_bUpgradeRequiresFortify = pClassInfo->isUpgradeRequiresFortify();
-	if (isUniversalTradeBonusProvider() == bDefault) m_bIsUniversalTradeBonusProvider = pClassInfo->isUniversalTradeBonusProvider();
+	if (m_bIsUniversalTradeBonusProvider == bDefault) m_bIsUniversalTradeBonusProvider = pClassInfo->isImprovementBonusTrade();
 	if (isZOCSource() == bDefault) m_bIsZOCSource = pClassInfo->isZOCSource();
 	// Super forts C2C adaptation end
-	if (isActsAsCity()) m_bActsAsCity = pClassInfo->isActsAsCity();
+	if (m_bActsAsCity == bDefault) m_bActsAsCity = pClassInfo->isActsAsCity();
 	if (isHillsMakesValid() == bDefault) m_bHillsMakesValid = pClassInfo->isHillsMakesValid();
 	if (isFreshWaterMakesValid() == bDefault) m_bFreshWaterMakesValid = pClassInfo->isFreshWaterMakesValid();
 	if (isRiverSideMakesValid() == bDefault) m_bRiverSideMakesValid = pClassInfo->isRiverSideMakesValid();
@@ -991,9 +983,12 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	if (isPeakImprovement() == bDefault) m_bPeakImprovement = pClassInfo->isPeakImprovement();
 	if (isWaterImprovement() == bDefault) m_bWaterImprovement = pClassInfo->isWaterImprovement();
 	if (isGoody() == bDefault) m_bGoody = pClassInfo->isGoody();
-	if (isPermanent() == bDefault) m_bPermanent = pClassInfo->isPermanent();
 	if (isOutsideBorders() == bDefault) m_bOutsideBorders = pClassInfo->isOutsideBorders();
-	GC.copyNonDefaultDelayedResolutionVector(m_improvementBuildTypes, pClassInfo->getBuildTypes());
+	if (m_bMilitaryStructure == bDefault) m_bMilitaryStructure = pClassInfo->isMilitaryStructure();
+	if (m_bPlacesBonus == bDefault) m_bPlacesBonus = pClassInfo->isPlacesBonus();
+	if (m_bPlacesFeature == bDefault) m_bPlacesFeature = pClassInfo->isPlacesFeature();
+	if (m_bPlacesTerrain == bDefault) m_bPlacesTerrain = pClassInfo->isPlacesTerrain();
+	if (m_bExtraterresial == bDefault) m_bExtraterresial = pClassInfo->isExtraterresial();
 
 	for (int i = 0; i < GC.getNumTerrainInfos(); i++)
 	{
@@ -1136,4 +1131,15 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiFeatureChangeTypes, pClassInfo->m_aiFeatureChangeTypes);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aeMapCategoryTypes, pClassInfo->getMapCategories());
+}
+
+void CvImprovementInfo::doPostLoadCaching(uint32_t eThis)
+{
+	for (int i = 0, num = GC.getNumBuildInfos(); i < num; i++)
+	{
+		if (GC.getBuildInfo((BuildTypes)i).getImprovement() == eThis)
+		{
+			m_improvementBuildTypes.push_back((BuildTypes)i);
+		}
+	}
 }

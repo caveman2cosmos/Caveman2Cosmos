@@ -103,6 +103,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_OBSOLETE_WITH_TO</Tag>
 		<English>[SPACE](Turns into [LINK=%s1]%s2[\LINK])</English>
+		<German>[SPACE](wird dann zu [LINK=%s1]%s2[\LINK])</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_PROVIDES</Tag>
@@ -165,7 +166,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_WITH_BONUS</Tag>
 		<English>[SPACE]with [LINK=%s1_BonusType]%s2_Bonus[\LINK]</English>
 		<French>[SPACE]avec : [LINK=%s1_BonusType]%s2_Bonus[\LINK]</French>
-		<German>[SPACE]mit [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
+		<German>[SPACE]durch [LINK=%s1_BonusType]%s2_Bonus[\LINK]</German>
 		<Italian>[SPACE]con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Italian>
 		<Spanish>[SPACE]con [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Spanish>
 		<Russian>[SPACE]с [LINK=%s1_BonusType]%s2_Bonus[\LINK]</Russian>
@@ -525,6 +526,51 @@
 		<Tag>TXT_KEY_MISC_YOUR_CRIMINAL_CAUGHT</Tag>
 		<English>Your %s1_UnitName was thwarted and is now on the run from the law!</English>
 		<French>Votre %s1_UnitName a été contrecarré et est maintenant en fuite pour échapper aux autorités!</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_BUG</Tag>
+		<English>BUG Options:</English>
+		<French>Options 'BUG':</French>
+		<German>BUG-Optionen:</German>
+		<Italian>Opzioni di BUG:</Italian>
+		<Spanish>Opciones de BUG:</Spanish>
+		<Polish>Opcje 'BUG':</Polish>
+		<Russian>Îïöèè BUG:</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_DCM</Tag>
+		<English>DCM Options:</English>
+		<French>Options DCM:</French>
+		<German>DCM-Optionen:</German>
+		<Italian>Opzioni "DCM":</Italian>
+		<Spanish>Opciones de DCM:</Spanish>
+		<Polish>Opcje DCM:</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_GAME_REV</Tag>
+		<English>Game Options:</English>
+		<French>Options du Jeu:</French>
+		<Spanish>Opciones de juego:</Spanish>
+		<Polish>Opcje Gry:</Polish>
+		<Russian>Îïöèè Revolution:</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_IDW</Tag>
+		<English>IDW Options:</English>
+		<French>Options IDW:</French>
+		<German>IDW-Optionen:</German>
+		<Italian>Opzioni "IDW":</Italian>
+		<Spanish>Opciones de IDW:</Spanish>
+		<Polish>Opcje IDW:</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OPTIONS_SS</Tag>
+		<English>Super Spies Options:</English>
+		<French>Options 'Super Spies':</French>
+		<German>Superspion-Optionen:</German>
+		<Italian>Opzioni "Super Spie":</Italian>
+		<Spanish>Opciones de Super Spies:</Spanish>
+		<Polish>Opcje Super Szpiegów:</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PER_POP</Tag>

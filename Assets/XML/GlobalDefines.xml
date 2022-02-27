@@ -109,7 +109,7 @@
 		<DefineTextVal>FEATURE_FALLOUT</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>CAPITAL_BUILDING</DefineName><!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
+		<DefineName>CAPITAL_BUILDING</DefineName> <!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
 		<DefineTextVal>BUILDING_PALACE</DefineTextVal>
 	</Define>
 	<Define>
@@ -1512,10 +1512,6 @@
 	<Define>
 		<DefineName>FOW_MINIMAP_WAS_VISIBLE_COLOR</DefineName>
 		<fDefineFloatVal>0.43</fDefineFloatVal>
-	</Define>
-	<Define>
-		<DefineName>CITY_SCREEN_FOG_ENABLED</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>AI_CAN_DISBAND_UNITS</DefineName>

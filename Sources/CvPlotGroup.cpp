@@ -473,7 +473,7 @@ void CvPlotGroup::setID(int iID)
 
 int CvPlotGroup::getNumBonuses(const BonusTypes eBonus) const
 {
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus);
 	return (m_paiNumBonuses == NULL ? 0 : m_paiNumBonuses[eBonus]);
 }
 
@@ -488,11 +488,11 @@ void CvPlotGroup::changeNumBonuses(const BonusTypes eBonus, const int iChange)
 {
 	PROFILE_FUNC();
 
-	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus)
+	FASSERT_BOUNDS(0, GC.getNumBonusInfos(), eBonus);
 
 	if (iChange != 0)
 	{
-		if ( m_paiNumBonuses == NULL )
+		if (m_paiNumBonuses == NULL)
 		{
 			m_paiNumBonuses = new int[GC.getNumBonusInfos()];
 			memset(m_paiNumBonuses, 0, sizeof(int)*GC.getNumBonusInfos());
@@ -650,7 +650,6 @@ int CvPlotGroup::getNumCities()
 
 void CvPlotGroup::read(FDataStreamBase* pStream)
 {
-
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);

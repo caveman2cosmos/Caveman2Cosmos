@@ -146,6 +146,7 @@
 		<English>Mt. %s1</English>
 		<French>Pic %s1</French>
 		<German>Großer %s1</German>
+		<Italian>Monte %s1</Italian>
 		<Spanish>Monte %s1</Spanish>
 		<Polish>Góra %s1</Polish>
 		<Russian>ãîð. %s1</Russian>
@@ -155,7 +156,7 @@
 		<English>%s1 Mountain</English>
 		<French>Montagne %s1</French>
 		<German>%s1-Berg</German>
-		<Italian>Montagna %s1</Italian>
+		<Italian>Monte %s1</Italian>
 		<Spanish>Montaña %s1</Spanish>
 		<Polish>Góra %s1</Polish>
 		<Russian>%s1 ãîðà</Russian>
@@ -165,7 +166,7 @@
 		<English>apple trees</English>
 		<French>pommiers</French>
 		<German>Apfelbäume</German>
-		<Italian>Meli</Italian>
+		<Italian>meli</Italian>
 		<Spanish>manzanos</Spanish>
 		<Polish>jabłonie</Polish>
 		<Russian>ÿáëî÷íûå äåðåâüÿ</Russian>
@@ -175,7 +176,7 @@
 		<English>banana blight</English>
 		<French>plaie à la banane</French>
 		<German>Bananen-F#228;ule</German>
-		<Italian>Virus della banana</Italian>
+		<Italian>virus della banana</Italian>
 		<Spanish>plaga de plátanos</Spanish>
 		<Polish>bananowa zaraza</Polish>
 	</TEXT>
@@ -184,7 +185,7 @@
 		<English>black pearls</English>
 		<French>perles noires</French>
 		<German>schwarze Perlen</German>
-		<Italian>Perle nere</Italian>
+		<Italian>perle nere</Italian>
 		<Spanish>perlas negras</Spanish>
 		<Polish>czarne perły</Polish>
 		<Russian>÷åðíûé æåì÷óã</Russian>
@@ -204,7 +205,7 @@
 		<English>cotton irrigation</English>
 		<French>irrigation cotonnière</French>
 		<German>Baumwollbew#228;sserung</German>
-		<Italian>Irrigazione del cotone</Italian>
+		<Italian>irrigazione del cotone</Italian>
 		<Spanish>irrigación del algodón</Spanish>
 		<Polish>irygacja bawełny</Polish>
 	</TEXT>
@@ -213,7 +214,7 @@
 		<English>local legend</English>
 		<French>légende locale</French>
 		<German>örtliche Legende</German>
-		<Italian>Leggenda locale</Italian>
+		<Italian>leggenda locale</Italian>
 		<Spanish>leyenda local</Spanish>
 		<Polish>lokalna legenda</Polish>
 		<Russian>ìåñòíàÿ ëåãåíäà</Russian>
@@ -223,7 +224,7 @@
 		<English>great beast</English>
 		<French>Enorme animal</French>
 		<German>riesiges Tier</German>
-		<Italian>Grande animale</Italian>
+		<Italian>grande animale</Italian>
 		<Spanish>gran bestia</Spanish>
 		<Polish>wielka bestia</Polish>
 		<Russian>îãðîìíûé çâåðü</Russian>
@@ -233,7 +234,7 @@
 		<English>hardy crops</English>
 		<French>récoltes robustes</French>
 		<German>z#228;hes Getreide</German>
-		<Italian>Colture robuste</Italian>
+		<Italian>colture robuste</Italian>
 		<Spanish>cosechas robustas</Spanish>
 		<Polish>wytrzymałe uprawy</Polish>
 	</TEXT>
@@ -242,7 +243,7 @@
 		<English>medicine</English>
 		<French>médicament</French>
 		<German>Medizin</German>
-		<Italian>Medicine</Italian>
+		<Italian>medicine</Italian>
 		<Spanish>medicina</Spanish>
 		<Polish>medycyna</Polish>
 		<Russian>ëåêàðñòâî</Russian>
@@ -252,7 +253,7 @@
 		<English>medicine</English>
 		<French>médicament</French>
 		<German>Medizin</German>
-		<Italian>Medicine</Italian>
+		<Italian>medicine</Italian>
 		<Spanish>medicina</Spanish>
 		<Polish>medycyna</Polish>
 		<Russian>ëåêàðñòâî</Russian>
@@ -261,7 +262,7 @@
 		<Tag>TXT_KEY_SIGN_EVENT_JADE_1</Tag>
 		<English>jade</English>
 		<German>Jade</German>
-		<Italian>Giada</Italian>
+		<Italian>giada</Italian>
 		<Polish>nefryt</Polish>
 		<Russian>íåôðèò</Russian>
 	</TEXT>
@@ -270,7 +271,7 @@
 		<English>local mills</English>
 		<French>moulins locaux</French>
 		<German>lokale Mühlen</German>
-		<Italian>Mulini locali</Italian>
+		<Italian>mulini locali</Italian>
 		<Spanish>molinos locales</Spanish>
 		<Polish>lokalne młyny</Polish>
 	</TEXT>
@@ -279,7 +280,7 @@
 		<English>over fishing</English>
 		<French>surpêche</French>
 		<German>über die Fischerei</German>
-		<Italian>Sovrasfruttamento delle risorse ittiche</Italian>
+		<Italian>sovrasfruttamento delle risorse ittiche</Italian>
 		<Spanish>sobre pesca</Spanish>
 		<Polish>przełowienia</Polish>
 	</TEXT>
@@ -288,7 +289,7 @@
 		<English>parrots</English>
 		<French>perroquets</French>
 		<German>Papageien</German>
-		<Italian>Pappagalli</Italian>
+		<Italian>pappagalli</Italian>
 		<Spanish>loros</Spanish>
 		<Polish>papugi</Polish>
 		<Russian>ïîïóãàè</Russian>
@@ -298,7 +299,7 @@
 		<English>prairie dogs</English>
 		<French>chiens de prairie</French>
 		<German>Präriehunde</German>
-		<Italian>Cani della prateria</Italian>
+		<Italian>cani della prateria</Italian>
 		<Spanish>perros de las praderas</Spanish>
 		<Polish>pieski preriowe</Polish>
 		<Russian>ëóãîâûå ñîáà÷êè</Russian>
@@ -308,7 +309,7 @@
 		<English>prime timber</English>
 		<French>bois primitif</French>
 		<German>erstklassiges Bauholz</German>
-		<Italian>Legno pregiato</Italian>
+		<Italian>legno pregiato</Italian>
 		<Spanish>madera de calidad</Spanish>
 		<Polish>pierwszorzędne drewno</Polish>
 	</TEXT>
@@ -317,7 +318,7 @@
 		<English>resort town</English>
 		<French>ville de tourisme</French>
 		<German>Ferienort-Stadt</German>
-		<Italian>Paese turistico</Italian>
+		<Italian>destinazione turistica</Italian>
 		<Spanish>zona turística</Spanish>
 		<Polish>miejscowość wypoczynkowa</Polish>
 	</TEXT>
@@ -326,7 +327,7 @@
 		<English>saltpeter</English>
 		<French>salpêtre</French>
 		<German>Salpeter</German>
-		<Italian>Salnitro</Italian>
+		<Italian>salnitro</Italian>
 		<Spanish>salitre</Spanish>
 		<Polish>saletra</Polish>
 		<Russian>ñåëèòðà</Russian>
@@ -336,7 +337,7 @@
 		<English>salt mine</English>
 		<French>mine de sel</French>
 		<German>Salzmine</German>
-		<Italian>Miniera di sale</Italian>
+		<Italian>miniera di sale</Italian>
 		<Spanish>mina de sal</Spanish>
 		<Polish>kopalnia soli</Polish>
 	</TEXT>
@@ -345,7 +346,7 @@
 		<English>sea turtles</English>
 		<French>tortues de mer</French>
 		<German>Meeresschildkröten</German>
-		<Italian>Testuggini</Italian>
+		<Italian>tartaruga di mare</Italian>
 		<Spanish>tortugas marinas</Spanish>
 		<Polish>żółwie morskie</Polish>
 	</TEXT>
@@ -354,7 +355,7 @@
 		<English>impurities</English>
 		<French>impuretés</French>
 		<German>Verunreinigungen</German>
-		<Italian>Impurezze</Italian>
+		<Italian>impurità</Italian>
 		<Spanish>impurezas</Spanish>
 		<Polish>zanieczyszczenia</Polish>
 		<Russian>ïðèìåñè</Russian>
@@ -364,7 +365,7 @@
 		<English>Tin</English>
 		<French>étain</French>
 		<German>Zinn</German>
-		<Italian>Stagno</Italian>
+		<Italian>stagno</Italian>
 		<Spanish>estaño</Spanish>
 		<Polish>Cyna</Polish>
 		<Russian>îëîâî</Russian>
@@ -374,7 +375,7 @@
 		<English>truffles</English>
 		<French>truffes</French>
 		<German>Trüffel</German>
-		<Italian>Tartufi</Italian>
+		<Italian>tartufi</Italian>
 		<Spanish>trufas</Spanish>
 		<Polish>trufle</Polish>
 		<Russian>òðþôåëè</Russian>
@@ -384,7 +385,7 @@
 		<English>Waters of Life</English>
 		<French>Eaux de Vie</French>
 		<German>Wasser des Lebens</German>
-		<Italian>Acque della vita</Italian>
+		<Italian>Acqua della vita</Italian>
 		<Spanish>Aguas de la Vida</Spanish>
 		<Polish>Woda Życia</Polish>
 		<Russian>æèâàÿ âîäà</Russian>

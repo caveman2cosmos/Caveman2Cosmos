@@ -192,11 +192,18 @@
     <ClCompile Include="..\boost_test\test.cpp" />
     <ClCompile Include="CvAllocator.cpp" />
     <ClCompile Include="CvAllocator.h" />
+    <ClCompile Include="CvBonusInfo.cpp" />
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
+    <ClCompile Include="CvSettlerAI.cpp" />
+    <ClCompile Include="CvValueService.cpp" />
+    <ClCompile Include="CvWorkerAI.cpp" />
+    <ClCompile Include="CvWorkerService.cpp" />
     <ClCompile Include="CyPlayerInterface3.cpp" />
     <ClCompile Include="CvImprovementInfo.cpp" />
     <ClCompile Include="logging.cpp" />
+    <ClCompile Include="OutputRatios.cpp" />
+    <ClCompile Include="PlotInfo.cpp" />
     <ClCompile Include="Win32.cpp" />
     <ClCompile Include="StackWalker.cpp" />
     <ClCompile Include="_precompile.cpp" />
@@ -279,6 +286,7 @@
     <ClCompile Include="CvUnitGrouping.cpp" />
     <ClCompile Include="CvUnitInfo.cpp" />
     <ClCompile Include="CvUnitList.cpp" />
+    <ClCompile Include="CvUnitSelectionCriteria.cpp" />
     <ClCompile Include="CvUnitSort.cpp" />
     <ClCompile Include="CvViewport.cpp" />
     <ClCompile Include="CvXMLLoadUtility.cpp" />
@@ -352,10 +360,17 @@
     <ClInclude Include="copy_iterator.h" />
     <ClInclude Include="CvPlotPaging.h" />
     <ClInclude Include="CvPython.h" />
+    <ClInclude Include="CvSettlerAI.h" />
+    <ClInclude Include="CvValueService.h" />
+    <ClInclude Include="CvWorkerAI.h" />
+    <ClInclude Include="CvWorkerService.h" />
     <ClInclude Include="EnumFlags.h" />
+    <ClInclude Include="enum_iterator.h" />
     <ClInclude Include="flatten_range.h" />
     <ClInclude Include="GlobalDefines.h" />
+    <ClInclude Include="GroupingParams.h" />
     <ClInclude Include="hash.h" />
+    <ClInclude Include="CvBonusInfo.h" />
     <ClInclude Include="idinfo_iterator_base.h" />
     <ClInclude Include="CvMapExternal.h" />
     <ClInclude Include="CvMapInterfaceBase.h" />
@@ -403,6 +418,8 @@
     <ClInclude Include="logging.h" />
     <ClInclude Include="NiPoint.h" />
     <ClInclude Include="nullptr_t.h" />
+    <ClInclude Include="OutputRatios.h" />
+    <ClInclude Include="PlotInfo.h" />
     <ClInclude Include="scoring.h" />
     <ClInclude Include="StackWalker.h" />
     <ClInclude Include="Stopwatch.h" />
@@ -463,6 +480,7 @@
     <ClInclude Include="CvUnitFilters.h" />
     <ClInclude Include="CvUnitGrouping.h" />
     <ClInclude Include="CvUnitList.h" />
+    <ClInclude Include="CvUnitSelectionCriteria.h" />
     <ClInclude Include="CvUnitSort.h" />
     <ClInclude Include="CvXMLLoadUtility.h" />
     <ClInclude Include="CvXMLLoadUtilityModTools.h" />
@@ -509,6 +527,7 @@
     <ClCompile Include="$(SolutionDir)\Interface\IBuildingInfo.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".editorconfig" />
     <None Include="cpp.hint" />
     <None Include="CvGameCoreDLL.def" />
     <None Include="fbuild.bff" />

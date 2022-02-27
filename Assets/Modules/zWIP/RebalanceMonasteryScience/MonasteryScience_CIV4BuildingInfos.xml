@@ -9,8 +9,6 @@
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>-100</iCommercePercent>
-						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>0</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -20,8 +18,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -29,8 +25,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -40,8 +34,6 @@
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
@@ -49,8 +41,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-2</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -58,8 +48,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-2</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -72,8 +60,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -81,8 +67,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -95,8 +79,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -104,8 +86,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -118,8 +98,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -127,8 +105,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -141,8 +117,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -150,8 +124,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -164,8 +136,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -173,8 +143,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -187,8 +155,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -196,8 +162,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -210,8 +174,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -219,8 +181,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -233,8 +193,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -242,8 +200,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -256,8 +212,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -265,8 +219,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -279,8 +231,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -288,8 +238,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -302,8 +250,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -311,8 +257,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -325,8 +269,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -334,8 +276,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -348,8 +288,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -357,8 +295,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -370,18 +306,12 @@
 					<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
 					<TechCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_MOLECULAR_BIOLOGY</PrereqTech>
 					<TechCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -391,7 +321,6 @@
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
@@ -399,8 +328,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -408,8 +335,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -422,8 +347,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -431,8 +354,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
@@ -445,8 +366,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-3</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 				<TechCommerceModifier>
@@ -454,8 +373,6 @@
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>-5</iCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>0</iCommerce>
 					</TechCommerce>
 				</TechCommerceModifier>
 			</TechCommerceModifiers>

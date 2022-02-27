@@ -2,9 +2,13 @@
 #include "CvBuildingInfo.h"
 #include "CvBugOptions.h"
 #include "CvCity.h"
+#include "CvGame.h"
 #include "CvGameTextMgr.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
+#include "CvBonusInfo.h"
 #include "CvInfos.h"
+#include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvMessageControl.h"
 #include "CvPlayerAI.h"
@@ -14,8 +18,10 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvDLLEngineIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
-#include "CvImprovementInfo.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 
 void CvGame::updateColoredPlots()
 {
@@ -263,7 +269,7 @@ void CvGame::updateColoredPlots()
 									if (eBestBuild != NO_BUILD)
 									{
 										const CvBuildInfo& kBestBuild = GC.getBuildInfo(eBestBuild);
-										eBestImprovement = (ImprovementTypes)kBestBuild.getImprovement();
+										eBestImprovement = kBestBuild.getImprovement();
 										eBestRoute = (RouteTypes)kBestBuild.getRoute();
 
 										if (ePlotFeature != NO_FEATURE && kBestBuild.isFeatureRemove(ePlotFeature))
@@ -656,18 +662,23 @@ void CvGame::updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwi
 		return;
 	}
 
-	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+	const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
-	if ((pHeadSelectedUnit == NULL) || (!bForceAcceptCurrent && !(pHeadSelectedUnit->getGroup()->readyToSelect(true))))
+	if (pHeadSelectedUnit == NULL || !bForceAcceptCurrent && !pHeadSelectedUnit->getGroup()->readyToSelect(true))
 	{
-		if ((gDLL->getInterfaceIFace()->getOriginalPlot() == NULL) || !(cyclePlotUnits(gDLL->getInterfaceIFace()->getOriginalPlot(), true, true, gDLL->getInterfaceIFace()->getOriginalPlotCount())))
 		{
-			if ((gDLL->getInterfaceIFace()->getSelectionPlot() == NULL) || !(cyclePlotUnits(gDLL->getInterfaceIFace()->getSelectionPlot(), true, true)))
+			const CvPlot* originalPlot = gDLL->getInterfaceIFace()->getOriginalPlot();
+
+			if (originalPlot == NULL || !nextPlotUnit(originalPlot, true, true, gDLL->getInterfaceIFace()->getOriginalPlotCount()))
 			{
-				cycleSelectionGroupsInternal(true, true, false, bSetCamera, bAllowViewportSwitch);
+				const CvPlot* selectionPlot = gDLL->getInterfaceIFace()->getSelectionPlot();
+
+				if (selectionPlot == NULL || !nextPlotUnit(selectionPlot, true, true))
+				{
+					cycleSelectionGroupsInternal(true, true, false, bSetCamera, bAllowViewportSwitch);
+				}
 			}
 		}
-
 		pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 		if (pHeadSelectedUnit != NULL && !pHeadSelectedUnit->getGroup()->readyToSelect())
@@ -847,7 +858,7 @@ void CvGame::cycleCities(bool bForward, bool bAdd) const
 
 			gDLL->getInterfaceIFace()->lookAtSelectionPlot();
 		}
-		else GC.getCurrentViewport()->bringIntoView(pSelectCity->getX(), pSelectCity->getY(), NULL, true, true, gDLL->getInterfaceIFace()->isCityScreenUp(), true, bAdd);
+		else GC.getCurrentViewport()->bringIntoView(pSelectCity->getX(), pSelectCity->getY(), NULL, true, gDLL->getInterfaceIFace()->isCityScreenUp(), true, bAdd);
 	}
 }
 
@@ -879,7 +890,7 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 	}
 	else
 	{
-		CvPlot* pPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
+		const CvPlot* pPlot = gDLL->getInterfaceIFace()->getLookAtPlot();
 		pNextSelectionGroup = GC.getMap().findSelectionGroupInternal(((pPlot != NULL) ? pPlot->getX() : 0), ((pPlot != NULL) ? pPlot->getY() : 0), getActivePlayer(), true, bWorkers, bAllowViewportSwitch);
 	}
 
@@ -888,14 +899,7 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 		if (!GC.getCurrentViewport()->isInViewport(pNextSelectionGroup->getX(), pNextSelectionGroup->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
 		{
 			// Switch viewport
-			CvUnit*	pSelectionUnit = pNextSelectionGroup->getHeadUnit();
-
-			GC.getCurrentViewport()->bringIntoView(
-				pNextSelectionGroup->getX(),
-				pNextSelectionGroup->getY(),
-				pSelectionUnit,
-				bSetCamera && (pCycleUnit != pSelectionUnit || pCycleUnit != NULL && pCycleUnit->getGroup()->readyToSelect())
-			);
+			GC.getCurrentViewport()->bringIntoView(pNextSelectionGroup->getX(), pNextSelectionGroup->getY(), pNextSelectionGroup->getHeadUnit());
 			return;
 		}
 		// If we switched viewport then the asynchronous viewport switching will also handle the unit selection
@@ -918,7 +922,7 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 
 
 // Returns true if unit was cycled...
-bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
+bool CvGame::nextPlotUnit(const CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
 {
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit = NULL;
@@ -1020,9 +1024,15 @@ bool CvGame::cyclePlotUnits(CvPlot* pPlot, bool bForward, bool bAuto, int iCount
 			}
 		}
 	}
-
 	return false;
 }
+
+/*DllExport*/ bool CvGame::cyclePlotUnits(const CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
+{
+	OutputDebugString("exe is cycling units on plot ctrl+MouseWheelRoll\n");
+	return nextPlotUnit(pPlot, bForward, bAuto, iCount);
+}
+
 
 bool CvGame::selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift) const
 {
@@ -1176,7 +1186,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 			{
 				CvMessageControl::getInstance().sendAutoMission(pHeadSelectedUnit->getID());
 			}
-			else if (bAlt && (iData2 == MISSION_FORTIFY || iData2 == MISSION_SLEEP || /*iData2 == MISSION_ESTABLISH || iData2 == MISSION_ESCAPE ||*/ iData2 == MISSION_BUILDUP || iData2 == MISSION_AUTO_BUILDUP))
+			else if (bAlt && (iData2 == MISSION_FORTIFY || iData2 == MISSION_SLEEP || iData2 == MISSION_BUILDUP || iData2 == MISSION_AUTO_BUILDUP))
 			{
 				const UnitTypes eUnit = pHeadSelectedUnit->getUnitType();
 
@@ -1223,7 +1233,7 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 			}
 			break;
 		}
-		default: FAssert(false);
+		default: FErrorMsg("error");
 	}
 }
 
@@ -1257,7 +1267,7 @@ void CvGame::selectedCitiesGameNetMessage(int eMessage, int iData2, int iData3, 
 				break;
 
 			default:
-				FAssert(false);
+				FErrorMsg("error");
 				break;
 			}
 		}
@@ -1590,7 +1600,7 @@ static void selectClosestCity(bool bAdd)
 		}
 		else
 		{
-			GC.getCurrentViewport()->bringIntoView(pSelectCity->getX(), pSelectCity->getY(), NULL, true, true, !bAdd, true, bAdd);
+			GC.getCurrentViewport()->bringIntoView(pSelectCity->getX(), pSelectCity->getY(), NULL, true, !bAdd, true, bAdd);
 		}
 	}
 }
@@ -1598,54 +1608,47 @@ static void selectClosestCity(bool bAdd)
 
 void CvGame::doControl(ControlTypes eControl)
 {
-	CvPopupInfo* pInfo;
-	CvCity* pCapitalCity;
-	CvUnit* pHeadSelectedUnit;
-	CvUnit* pUnit;
-	CvPlot* pPlot;
-
 	if (!canDoControl(eControl))
 	{
 		return;
 	}
-
 	switch (eControl)
 	{
-	case CONTROL_CENTERONSELECTION:
-		pPlot = gDLL->getInterfaceIFace()->getSelectionPlot();
-		if ( pPlot != NULL )
+		case CONTROL_CENTERONSELECTION:
 		{
-			if ( !pPlot->isInViewport(GC.getViewportCenteringBorder()) )
+			CvPlot* pPlot = gDLL->getInterfaceIFace()->getSelectionPlot();
+			if (pPlot != NULL)
 			{
-				GC.getCurrentViewport()->bringIntoView(pPlot->getX(), pPlot->getY(), gDLL->getInterfaceIFace()->getHeadSelectedUnit(), true, true);
+				if (!pPlot->isInViewport(GC.getViewportCenteringBorder()))
+				{
+					GC.getCurrentViewport()->bringIntoView(pPlot->getX(), pPlot->getY(), gDLL->getInterfaceIFace()->getHeadSelectedUnit(), true);
+				}
+				else gDLL->getInterfaceIFace()->lookAtSelectionPlot();
 			}
-			else
+			break;
+		}
+		case CONTROL_SELECTYUNITTYPE:
+		{
+			CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+			if (pHeadSelectedUnit != NULL)
 			{
-				gDLL->getInterfaceIFace()->lookAtSelectionPlot();
+				gDLL->getInterfaceIFace()->selectGroup(pHeadSelectedUnit, false, true, false);
 			}
+			break;
 		}
-		break;
-
-	case CONTROL_SELECTYUNITTYPE:
-		pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
-		if (pHeadSelectedUnit != NULL)
+		case CONTROL_SELECTYUNITALL:
 		{
-			gDLL->getInterfaceIFace()->selectGroup(pHeadSelectedUnit, false, true, false);
+			CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+			if (pHeadSelectedUnit != NULL)
+			{
+				gDLL->getInterfaceIFace()->selectGroup(pHeadSelectedUnit, false, false, true);
+			}
+			break;
 		}
-		break;
-
-	case CONTROL_SELECTYUNITALL:
-		pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
-		if (pHeadSelectedUnit != NULL)
-		{
-			gDLL->getInterfaceIFace()->selectGroup(pHeadSelectedUnit, false, false, true);
-		}
-		break;
-
-	case CONTROL_SELECT_HEALTHY:
+		case CONTROL_SELECT_HEALTHY:
 		{
 			CvUnit* pGroupHead = NULL;
-			pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+			CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 			gDLL->getInterfaceIFace()->clearSelectionList();
 			if (pHeadSelectedUnit != NULL)
 			{
@@ -1655,210 +1658,228 @@ void CvGame::doControl(ControlTypes eControl)
 				gDLL->getInterfaceIFace()->selectionListPreChange();
 				for (int iI = 0; iI < (int) plotUnits.size(); iI++)
 				{
-					pUnit = plotUnits[iI];
+					CvUnit* pUnit = plotUnits[iI];
 
-					if (pUnit->getOwner() == getActivePlayer())
+					if (pUnit->getOwner() == getActivePlayer()
+					&& (!isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || getTurnSlice() - pUnit->getLastMoveTurn() > GC.getDefineINT("MIN_TIMER_UNIT_DOUBLE_MOVES"))
+					&& pUnit->isHurt())
 					{
-						if (!isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || getTurnSlice() - pUnit->getLastMoveTurn() > GC.getDefineINT("MIN_TIMER_UNIT_DOUBLE_MOVES"))
+						if (pGroupHead != NULL)
 						{
-							if (pUnit->isHurt())
-							{
-								if (pGroupHead != NULL)
-								{
-									CvMessageControl::getInstance().sendJoinGroup(pUnit->getID(), pGroupHead->getID());
-								}
-								else
-								{
-									pGroupHead = pUnit;
-								}
-
-								gDLL->getInterfaceIFace()->insertIntoSelectionList(pUnit, false, false, true, true, true);
-							}
+							CvMessageControl::getInstance().sendJoinGroup(pUnit->getID(), pGroupHead->getID());
 						}
+						else pGroupHead = pUnit;
+
+						gDLL->getInterfaceIFace()->insertIntoSelectionList(pUnit, false, false, true, true, true);
 					}
 				}
-
 				gDLL->getInterfaceIFace()->selectionListPostChange();
 			}
+			break;
 		}
-		break;
-
-	case CONTROL_SELECTCITY:
-		if (gDLL->getInterfaceIFace()->isCityScreenUp())
+		case CONTROL_SELECTCITY:
 		{
-			cycleCities();
-		}
-		else
-		{
-			selectClosestCity(false);
-			//gDLL->getInterfaceIFace()->selectLookAtCity();
-		}
-		break;
-
-	case CONTROL_SELECTCAPITAL:
-		pCapitalCity = GET_PLAYER(getActivePlayer()).getCapitalCity();
-		if (pCapitalCity != NULL)
-		{
-			if (GC.getCurrentViewport()->isInViewport(pCapitalCity->getX(), pCapitalCity->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
+			if (gDLL->getInterfaceIFace()->isCityScreenUp())
 			{
-				gDLL->getInterfaceIFace()->selectCity(pCapitalCity);
+				cycleCities();
 			}
 			else
 			{
-				GC.getCurrentViewport()->bringIntoView(pCapitalCity->getX(), pCapitalCity->getY(), NULL, true, true, gDLL->getInterfaceIFace()->isCityScreenUp());
+				selectClosestCity(false);
+				//gDLL->getInterfaceIFace()->selectLookAtCity();
 			}
+			break;
 		}
-		break;
-
-	case CONTROL_NEXTCITY:
-		if (gDLL->getInterfaceIFace()->isCitySelection())
+		case CONTROL_SELECTCAPITAL:
 		{
-			cycleCities(true, !(gDLL->getInterfaceIFace()->isCityScreenUp()));
+			CvCity* pCapitalCity = GET_PLAYER(getActivePlayer()).getCapitalCity();
+			if (pCapitalCity != NULL)
+			{
+				if (GC.getCurrentViewport()->isInViewport(pCapitalCity->getX(), pCapitalCity->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
+				{
+					gDLL->getInterfaceIFace()->selectCity(pCapitalCity);
+				}
+				else
+				{
+					GC.getCurrentViewport()->bringIntoView(pCapitalCity->getX(), pCapitalCity->getY(), NULL, true, gDLL->getInterfaceIFace()->isCityScreenUp());
+				}
+			}
+			break;
 		}
-		else
+		case CONTROL_NEXTCITY:
 		{
-			selectClosestCity(!gDLL->getInterfaceIFace()->isCityScreenUp());
-			//gDLL->getInterfaceIFace()->selectLookAtCity(true);
+			if (gDLL->getInterfaceIFace()->isCitySelection())
+			{
+				cycleCities(true, !(gDLL->getInterfaceIFace()->isCityScreenUp()));
+			}
+			else
+			{
+				selectClosestCity(!gDLL->getInterfaceIFace()->isCityScreenUp());
+				//gDLL->getInterfaceIFace()->selectLookAtCity(true);
+			}
+			break;
 		}
-		break;
-
-	case CONTROL_PREVCITY:
-		if (gDLL->getInterfaceIFace()->isCitySelection())
+		case CONTROL_PREVCITY:
 		{
-			cycleCities(false, !(gDLL->getInterfaceIFace()->isCityScreenUp()));
+			if (gDLL->getInterfaceIFace()->isCitySelection())
+			{
+				cycleCities(false, !(gDLL->getInterfaceIFace()->isCityScreenUp()));
+			}
+			else
+			{
+				selectClosestCity(!gDLL->getInterfaceIFace()->isCityScreenUp());
+				//gDLL->getInterfaceIFace()->selectLookAtCity(true);
+			}
+			break;
 		}
-		else
+		case CONTROL_NEXTUNIT:
 		{
-			selectClosestCity(!gDLL->getInterfaceIFace()->isCityScreenUp());
-			//gDLL->getInterfaceIFace()->selectLookAtCity(true);
+			const CvPlot* pPlot = gDLL->getInterfaceIFace()->getSelectionPlot();
+			if (pPlot != NULL)
+			{
+				nextPlotUnit(pPlot);
+			}
+			break;
 		}
-		break;
-
-	case CONTROL_NEXTUNIT:
-		pPlot = gDLL->getInterfaceIFace()->getSelectionPlot();
-		if (pPlot != NULL)
+		case CONTROL_PREVUNIT:
 		{
-			cyclePlotUnits(pPlot);
+			const CvPlot* pPlot = gDLL->getInterfaceIFace()->getSelectionPlot();
+			if (pPlot != NULL)
+			{
+				nextPlotUnit(pPlot, false);
+			}
+			break;
 		}
-		break;
-
-	case CONTROL_PREVUNIT:
-		pPlot = gDLL->getInterfaceIFace()->getSelectionPlot();
-		if (pPlot != NULL)
+		case CONTROL_CYCLEUNIT:
+		case CONTROL_CYCLEUNIT_ALT:
 		{
-			cyclePlotUnits(pPlot, false);
+			cycleSelectionGroups(true);
+			break;
 		}
-		break;
-
-	case CONTROL_CYCLEUNIT:
-	case CONTROL_CYCLEUNIT_ALT:
-		cycleSelectionGroups(true);
-		break;
-
-	case CONTROL_CYCLEWORKER:
-		cycleSelectionGroups(true, true, true);
-		break;
-
-	case CONTROL_LASTUNIT:
-		pUnit = gDLL->getInterfaceIFace()->getLastSelectedUnit();
-
-		if (pUnit != NULL)
+		case CONTROL_CYCLEWORKER:
 		{
-			gDLL->getInterfaceIFace()->selectUnit(pUnit, true);
-			gDLL->getInterfaceIFace()->lookAtSelectionPlot();
+			cycleSelectionGroups(true, true, true);
+			break;
 		}
-		else
+		case CONTROL_LASTUNIT:
 		{
-			cycleSelectionGroups(true, false);
+			CvUnit* pUnit = gDLL->getInterfaceIFace()->getLastSelectedUnit();
+
+			if (pUnit != NULL)
+			{
+				gDLL->getInterfaceIFace()->selectUnit(pUnit, true);
+				gDLL->getInterfaceIFace()->lookAtSelectionPlot();
+			}
+			else
+			{
+				cycleSelectionGroups(true, false);
+			}
+
+			gDLL->getInterfaceIFace()->setLastSelectedUnit(NULL);
+			break;
 		}
-
-		gDLL->getInterfaceIFace()->setLastSelectedUnit(NULL);
-		break;
-
-	case CONTROL_ENDTURN:
-	case CONTROL_ENDTURN_ALT:
-		if (gDLL->getInterfaceIFace()->isEndTurnMessage())
+		case CONTROL_ENDTURN:
+		case CONTROL_ENDTURN_ALT:
+		{
+			if (gDLL->getInterfaceIFace()->isEndTurnMessage())
+			{
+				CvMessageControl::getInstance().sendTurnComplete();
+			}
+			break;
+		}
+		case CONTROL_FORCEENDTURN:
 		{
 			CvMessageControl::getInstance().sendTurnComplete();
+			break;
 		}
-		break;
-
-	case CONTROL_FORCEENDTURN:
-		CvMessageControl::getInstance().sendTurnComplete();
-		break;
-
-	case CONTROL_AUTOMOVES:
-		CvMessageControl::getInstance().sendAutoMoves();
-		break;
-
-	case CONTROL_PING:
-		gDLL->getInterfaceIFace()->setInterfaceMode(INTERFACEMODE_PING);
-		break;
-
-	case CONTROL_SIGN:
-		gDLL->getInterfaceIFace()->setInterfaceMode(INTERFACEMODE_SIGN);
-		break;
-
-	case CONTROL_GRID:
-		gDLL->getEngineIFace()->SetGridMode(!(gDLL->getEngineIFace()->GetGridMode()));
-		break;
-
-	case CONTROL_YIELDS:
-		gDLL->getInterfaceIFace()->toggleYieldVisibleMode();
-		break;
-
-	case CONTROL_RESOURCE_ALL:
-		GC.setResourceLayer(!GC.getResourceLayer());
-		//gDLL->getEngineIFace()->toggleResourceLayer();
-		break;
-
-	case CONTROL_UNIT_ICONS:
-		gDLL->getEngineIFace()->toggleUnitLayer();
-		break;
-
-	case CONTROL_GLOBELAYER:
-		gDLL->getEngineIFace()->toggleGlobeview();
-		break;
-
-	case CONTROL_LOAD_GAME:
-		gDLL->LoadGame();
-		break;
-
-	case CONTROL_OPTIONS_SCREEN:
-		Cy::call("CvScreensInterface", "showOptionsScreen");
-		break;
-
-	case CONTROL_RETIRE:
-		if (!isGameMultiPlayer() || countHumanPlayersAlive() == 1)
+		case CONTROL_AUTOMOVES:
 		{
-			if (gDLL->GetAutorun())
+			CvMessageControl::getInstance().sendAutoMoves();
+			break;
+		}
+		case CONTROL_PING:
+		{
+			gDLL->getInterfaceIFace()->setInterfaceMode(INTERFACEMODE_PING);
+			break;
+		}
+		case CONTROL_SIGN:
+		{
+			gDLL->getInterfaceIFace()->setInterfaceMode(INTERFACEMODE_SIGN);
+			break;
+		}
+		case CONTROL_GRID:
+		{
+			gDLL->getEngineIFace()->SetGridMode(!(gDLL->getEngineIFace()->GetGridMode()));
+			break;
+		}
+		case CONTROL_YIELDS:
+		{
+			gDLL->getInterfaceIFace()->toggleYieldVisibleMode();
+			break;
+		}
+		case CONTROL_RESOURCE_ALL:
+		{
+			GC.setResourceLayer(!GC.getResourceLayer());
+			//gDLL->getEngineIFace()->toggleResourceLayer();
+			break;
+		}
+		case CONTROL_UNIT_ICONS:
+		{
+			gDLL->getEngineIFace()->toggleUnitLayer();
+			break;
+		}
+		case CONTROL_GLOBELAYER:
+		{
+			gDLL->getEngineIFace()->toggleGlobeview();
+			break;
+		}
+		case CONTROL_LOAD_GAME:
+		{
+			gDLL->LoadGame();
+			break;
+		}
+		case CONTROL_OPTIONS_SCREEN:
+		{
+			Cy::call("CvScreensInterface", "showOptionsScreen");
+			break;
+		}
+		case CONTROL_RETIRE:
+		{
+			if (!isGameMultiPlayer() || countHumanPlayersAlive() == 1)
 			{
-				GC.getInitCore().setSlotStatus(getActivePlayer(), SS_COMPUTER);
+				if (gDLL->GetAutorun())
+				{
+					GC.getInitCore().setSlotStatus(getActivePlayer(), SS_COMPUTER);
+				}
+				else
+				{
+					setGameState(GAMESTATE_OVER);
+					gDLL->getInterfaceIFace()->setDirty(Soundtrack_DIRTY_BIT, true);
+				}
+			}
+			else if (isNetworkMultiPlayer())
+			{
+				gDLL->sendMPRetire();
+				gDLL->getInterfaceIFace()->exitingToMainMenu();
 			}
 			else
 			{
-				setGameState(GAMESTATE_OVER);
-				gDLL->getInterfaceIFace()->setDirty(Soundtrack_DIRTY_BIT, true);
+				gDLL->handleRetirement(getActivePlayer());
 			}
+			break;
 		}
-		else if (isNetworkMultiPlayer())
+		case CONTROL_SAVE_GROUP:
 		{
-			gDLL->sendMPRetire();
-			gDLL->getInterfaceIFace()->exitingToMainMenu();
+			gDLL->SaveGame(SAVEGAME_GROUP);
+			break;
 		}
-		else
+		case CONTROL_SAVE_NORMAL:
 		{
-			gDLL->handleRetirement(getActivePlayer());
-		}
-		break;
-
-	case CONTROL_SAVE_GROUP:
-		gDLL->SaveGame(SAVEGAME_GROUP);
-		break;
-
-	case CONTROL_SAVE_NORMAL:
-		{
-			if (!GC.getDefineINT("ALWAYS_USE_MAX_COMPAT_SAVES"))
+			if (GC.getDefineINT("ALWAYS_USE_MAX_COMPAT_SAVES"))
+			{
+				gDLL->SaveGame(SAVEGAME_NORMAL);
+			}
+			else
 			{
 				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_GET_SAVE_FORMAT);
 				if (NULL != pInfo)
@@ -1866,201 +1887,224 @@ void CvGame::doControl(ControlTypes eControl)
 					gDLL->getInterfaceIFace()->addPopup(pInfo, NO_PLAYER, true, true);
 				}
 			}
-			else
+
+			break;
+		}
+		case CONTROL_QUICK_SAVE:
+		{
+			if (!(isNetworkMultiPlayer()))	// SP only!
 			{
-				gDLL->SaveGame(SAVEGAME_NORMAL);
+				gDLL->QuickSave();
 			}
+			break;
 		}
-		break;
-
-	case CONTROL_QUICK_SAVE:
-		if (!(isNetworkMultiPlayer()))	// SP only!
+		case CONTROL_QUICK_LOAD:
 		{
-			gDLL->QuickSave();
+			if (!(isNetworkMultiPlayer()))	// SP only!
+			{
+				gDLL->QuickLoad();
+			}
+			break;
 		}
-		break;
-
-	case CONTROL_QUICK_LOAD:
-		if (!(isNetworkMultiPlayer()))	// SP only!
+		case CONTROL_ORTHO_CAMERA:
 		{
-			gDLL->QuickLoad();
+			gDLL->getEngineIFace()->SetOrthoCamera(!(gDLL->getEngineIFace()->GetOrthoCamera()));
+			break;
 		}
-		break;
-
-	case CONTROL_ORTHO_CAMERA:
-		gDLL->getEngineIFace()->SetOrthoCamera(!(gDLL->getEngineIFace()->GetOrthoCamera()));
-		break;
-
-	case CONTROL_CYCLE_CAMERA_FLYING_MODES:
-		gDLL->getEngineIFace()->CycleFlyingMode(1);
-		break;
-
-	case CONTROL_ISOMETRIC_CAMERA_LEFT:
-		gDLL->getEngineIFace()->MoveBaseTurnLeft();
-		break;
-
-	case CONTROL_ISOMETRIC_CAMERA_RIGHT:
-		gDLL->getEngineIFace()->MoveBaseTurnRight();
-		break;
-
-	case CONTROL_FLYING_CAMERA:
-		gDLL->getEngineIFace()->SetFlying(!(gDLL->getEngineIFace()->GetFlying()));
-		break;
-
-	case CONTROL_MOUSE_FLYING_CAMERA:
-		gDLL->getEngineIFace()->SetMouseFlying(!(gDLL->getEngineIFace()->GetMouseFlying()));
-		break;
-
-	case CONTROL_TOP_DOWN_CAMERA:
-		gDLL->getEngineIFace()->SetSatelliteMode(!(gDLL->getEngineIFace()->GetSatelliteMode()));
-		break;
-
-	case CONTROL_CIVILOPEDIA:
-		GC.setIsInPedia(true);
-		Cy::call(PYScreensModule, "pediaShow");
-		break;
-
-	case CONTROL_RELIGION_SCREEN:
-		Cy::call(PYScreensModule, "showReligionScreen");
-		break;
-
-	case CONTROL_CORPORATION_SCREEN:
-		Cy::call(PYScreensModule, "showCorporationScreen");
-		break;
-
-	case CONTROL_CIVICS_SCREEN:
-		Cy::call(PYScreensModule, "showCivicsScreen");
-		break;
-
-	case CONTROL_FOREIGN_SCREEN:
+		case CONTROL_CYCLE_CAMERA_FLYING_MODES:
+		{
+			gDLL->getEngineIFace()->CycleFlyingMode(1);
+			break;
+		}
+		case CONTROL_ISOMETRIC_CAMERA_LEFT:
+		{
+			gDLL->getEngineIFace()->MoveBaseTurnLeft();
+			break;
+		}
+		case CONTROL_ISOMETRIC_CAMERA_RIGHT:
+		{
+			gDLL->getEngineIFace()->MoveBaseTurnRight();
+			break;
+		}
+		case CONTROL_FLYING_CAMERA:
+		{
+			gDLL->getEngineIFace()->SetFlying(!(gDLL->getEngineIFace()->GetFlying()));
+			break;
+		}
+		case CONTROL_MOUSE_FLYING_CAMERA:
+		{
+			gDLL->getEngineIFace()->SetMouseFlying(!(gDLL->getEngineIFace()->GetMouseFlying()));
+			break;
+		}
+		case CONTROL_TOP_DOWN_CAMERA:
+		{
+			gDLL->getEngineIFace()->SetSatelliteMode(!(gDLL->getEngineIFace()->GetSatelliteMode()));
+			break;
+		}
+		case CONTROL_CIVILOPEDIA:
+		{
+			GC.setIsInPedia(true);
+			Cy::call(PYScreensModule, "pediaShow");
+			break;
+		}
+		case CONTROL_RELIGION_SCREEN:
+		{
+			Cy::call(PYScreensModule, "showReligionScreen");
+			break;
+		}
+		case CONTROL_CORPORATION_SCREEN:
+		{
+			Cy::call(PYScreensModule, "showCorporationScreen");
+			break;
+		}
+		case CONTROL_CIVICS_SCREEN:
+		{
+			Cy::call(PYScreensModule, "showCivicsScreen");
+			break;
+		}
+		case CONTROL_FOREIGN_SCREEN:
 		{
 			Cy::call(PYScreensModule, "showForeignAdvisorScreen", Cy::Args() << -1);
+			break;
 		}
-		break;
-
-	case CONTROL_FINANCIAL_SCREEN:
-		Cy::call(PYScreensModule, "showFinanceAdvisor");
-		break;
-
-	case CONTROL_MILITARY_SCREEN:
-		if ( GC.viewportsEnabled() )
+		case CONTROL_FINANCIAL_SCREEN:
 		{
-			GC.getCurrentViewport()->setActionState(VIEWPORT_ACTION_STATE_LAUNCH_MILITARY_ADVISOR, true);
+			Cy::call(PYScreensModule, "showFinanceAdvisor");
+			break;
 		}
-		else
+		case CONTROL_MILITARY_SCREEN:
 		{
-			Cy::call(PYScreensModule, "showMilitaryAdvisor");
+			if (GC.viewportsEnabled())
+			{
+				GC.getCurrentViewport()->setActionState(VIEWPORT_ACTION_STATE_LAUNCH_MILITARY_ADVISOR, true);
+			}
+			else Cy::call(PYScreensModule, "showMilitaryAdvisor");
+
+			break;
 		}
-		break;
-
-	case CONTROL_TECH_CHOOSER:
-		Cy::call(PYScreensModule, "showTechChooser");
-		break;
-
-	case CONTROL_TURN_LOG:
-		if (!gDLL->GetWorldBuilderMode() || gDLL->getInterfaceIFace()->isInAdvancedStart())
+		case CONTROL_TECH_CHOOSER:
 		{
-			gDLL->getInterfaceIFace()->toggleTurnLog();
+			Cy::call(PYScreensModule, "showTechChooser");
+			break;
 		}
-		break;
-
-	case CONTROL_CHAT_ALL:
-		if (!gDLL->GetWorldBuilderMode() || gDLL->getInterfaceIFace()->isInAdvancedStart())
+		case CONTROL_TURN_LOG:
 		{
-			gDLL->getInterfaceIFace()->showTurnLog(CHATTARGET_ALL);
+			if (!gDLL->GetWorldBuilderMode() || gDLL->getInterfaceIFace()->isInAdvancedStart())
+			{
+				gDLL->getInterfaceIFace()->toggleTurnLog();
+			}
+			break;
 		}
-		break;
-
-	case CONTROL_CHAT_TEAM:
-		if (!gDLL->GetWorldBuilderMode() || gDLL->getInterfaceIFace()->isInAdvancedStart())
+		case CONTROL_CHAT_ALL:
 		{
-			gDLL->getInterfaceIFace()->showTurnLog(CHATTARGET_TEAM);
+			if (!gDLL->GetWorldBuilderMode() || gDLL->getInterfaceIFace()->isInAdvancedStart())
+			{
+				gDLL->getInterfaceIFace()->showTurnLog(CHATTARGET_ALL);
+			}
+			break;
 		}
-		break;
-
-	case CONTROL_DOMESTIC_SCREEN:
+		case CONTROL_CHAT_TEAM:
+		{
+			if (!gDLL->GetWorldBuilderMode() || gDLL->getInterfaceIFace()->isInAdvancedStart())
+			{
+				gDLL->getInterfaceIFace()->showTurnLog(CHATTARGET_TEAM);
+			}
+			break;
+		}
+		case CONTROL_DOMESTIC_SCREEN:
 		{
 			Cy::call(PYScreensModule, "showDomesticAdvisor", Cy::Args() << -1);
+			break;
 		}
-		break;
-
-	case CONTROL_VICTORY_SCREEN:
-		Cy::call(PYScreensModule, "showVictoryScreen");
-		break;
-
-	case CONTROL_INFO:
-		Cy::call(PYScreensModule, "showInfoScreen", Cy::Args() << -1 << (getGameState() == GAMESTATE_ON ? 0 : 1));
-		break;
-
-	case CONTROL_GLOBE_VIEW:
-		gDLL->getEngineIFace()->toggleGlobeview();
-		break;
-
-	case CONTROL_DETAILS:
-		gDLL->getInterfaceIFace()->showDetails();
-		break;
-
-	case CONTROL_ADMIN_DETAILS:
-		if (GC.getInitCore().getAdminPassword().empty())
+		case CONTROL_VICTORY_SCREEN:
 		{
-			gDLL->getInterfaceIFace()->showAdminDetails();
+			Cy::call(PYScreensModule, "showVictoryScreen");
+			break;
 		}
-		else
+		case CONTROL_INFO:
 		{
-			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_ADMIN_PASSWORD);
-			if (NULL != pInfo)
+			Cy::call(PYScreensModule, "showInfoScreen", Cy::Args() << -1 << (getGameState() == GAMESTATE_ON ? 0 : 1));
+			break;
+		}
+		case CONTROL_GLOBE_VIEW:
+		{
+			gDLL->getEngineIFace()->toggleGlobeview();
+			break;
+		}
+		case CONTROL_DETAILS:
+		{
+			gDLL->getInterfaceIFace()->showDetails();
+			break;
+		}
+		case CONTROL_ADMIN_DETAILS:
+		{
+			if (GC.getInitCore().getAdminPassword().empty())
 			{
-				pInfo->setData1((int)CONTROL_ADMIN_DETAILS);
-				gDLL->getInterfaceIFace()->addPopup(pInfo, NO_PLAYER, true);
+				gDLL->getInterfaceIFace()->showAdminDetails();
 			}
-		}
-		break;
-
-	case CONTROL_HALL_OF_FAME:
-		Cy::call(PYScreensModule, "showHallOfFame", Cy::Args() << true);
-		break;
-
-	case CONTROL_WORLD_BUILDER:
-		if (GC.getInitCore().getAdminPassword().empty())
-		{
-			gDLL->getInterfaceIFace()->setWorldBuilder(!gDLL->GetWorldBuilderMode());
-		}
-		else
-		{
-			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_ADMIN_PASSWORD);
-			if (NULL != pInfo)
+			else
 			{
-				pInfo->setData1((int)CONTROL_WORLD_BUILDER);
-				gDLL->getInterfaceIFace()->addPopup(pInfo, NO_PLAYER, true);
+				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_ADMIN_PASSWORD);
+				if (NULL != pInfo)
+				{
+					pInfo->setData1((int)CONTROL_ADMIN_DETAILS);
+					gDLL->getInterfaceIFace()->addPopup(pInfo, NO_PLAYER, true);
+				}
 			}
+			break;
 		}
-		break;
-
-	case CONTROL_ESPIONAGE_SCREEN:
-		Cy::call(PYScreensModule, "showEspionageAdvisor");
-		break;
-
-	case CONTROL_FREE_COLONY:
+		case CONTROL_HALL_OF_FAME:
 		{
-			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_FREE_COLONY);
-			if (pInfo)
+			Cy::call(PYScreensModule, "showHallOfFame", Cy::Args() << true);
+			break;
+		}
+		case CONTROL_WORLD_BUILDER:
+		{
+			if (GC.getInitCore().getAdminPassword().empty())
+			{
+				gDLL->getInterfaceIFace()->setWorldBuilder(!gDLL->GetWorldBuilderMode());
+			}
+			else
+			{
+				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_ADMIN_PASSWORD);
+				if (NULL != pInfo)
+				{
+					pInfo->setData1((int)CONTROL_WORLD_BUILDER);
+					gDLL->getInterfaceIFace()->addPopup(pInfo, NO_PLAYER, true);
+				}
+			}
+			break;
+		}
+		case CONTROL_ESPIONAGE_SCREEN:
+		{
+			Cy::call(PYScreensModule, "showEspionageAdvisor");
+			break;
+		}
+		case CONTROL_FREE_COLONY:
+		{
+			{
+				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_FREE_COLONY);
+				if (pInfo)
+				{
+					gDLL->getInterfaceIFace()->addPopup(pInfo);
+				}
+			}
+			break;
+		}
+		case CONTROL_DIPLOMACY:
+		{
+			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_DIPLOMACY);
+			if (NULL != pInfo)
 			{
 				gDLL->getInterfaceIFace()->addPopup(pInfo);
 			}
+			break;
 		}
-		break;
-
-	case CONTROL_DIPLOMACY:
-		pInfo = new CvPopupInfo(BUTTONPOPUP_DIPLOMACY);
-		if (NULL != pInfo)
+		default:
 		{
-			gDLL->getInterfaceIFace()->addPopup(pInfo);
+			FErrorMsg("eControl did not match any valid options");
+			break;
 		}
-		break;
-
-	default:
-		FErrorMsg("eControl did not match any valid options");
-		break;
 	}
 }
 
@@ -2121,11 +2165,11 @@ void CvGame::startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>&
 		{
 			bUnits = true;
 
-			if (pLoopUnit->canFortify(pPlot))
+			if (pLoopUnit->canFortify())
 			{
 				bFortifyUnit = true;
 			}
-			else if (pLoopUnit->canSleep(pPlot))
+			else if (pLoopUnit->canSleep())
 			{
 				bSleepUnit = true;
 			}
@@ -2380,7 +2424,7 @@ void CvGame::applyFlyoutMenu(const CvFlyoutMenuData& kItem)
 		}
 		default:
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 	}
@@ -2540,8 +2584,8 @@ CivilopediaWidgetShowTypes CvGame::getWidgetShow(BonusTypes eBonus) const
 	const CvBonusInfo& bonus = GC.getBonusInfo(eBonus);
 
 	// Don't show the widget if it's an abstract bonus that doesn't belong on the map.
-	// Hit singles, movies, musicals, in our case
-	if (bonus.getPlacementOrder() < 1)
+	//	I.e. Manufactured bonuses, cultures and such.
+	if (bonus.getPlacementOrder() < 0)
 	{
 		return CIVILOPEDIA_WIDGET_SHOW_NONE;
 	}
@@ -2666,7 +2710,7 @@ void CvGame::initSelection() const
 
 	if (pSelectionUnit != NULL)
 	{
-		GC.getCurrentViewport()->bringIntoView(pSelectionUnit->getX(), pSelectionUnit->getY(), pSelectionUnit, true);
+		GC.getCurrentViewport()->bringIntoView(pSelectionUnit->getX(), pSelectionUnit->getY(), pSelectionUnit);
 	}
 }
 

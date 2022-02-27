@@ -53,7 +53,6 @@ public:
 	bool hasTrait(int /*TraitTypes*/ iIndex) const;
 	bool isHuman() const;
 	bool isHumanDisabled() const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	std::wstring getName() const;
@@ -113,7 +112,6 @@ public:
 	int getBuildingProductionNeeded(int /*BuildingTypes*/ iIndex) const;
 	int getProjectProductionNeeded(int /*ProjectTypes*/ iIndex) const;
 
-	bool canBuild(const CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra, bool bTestVisible) const;
 	int /*RouteTypes*/ getBestRoute(const CyPlot* pPlot) const;
 
 	int calculateTotalYield(int /*YieldTypes*/ eYield) const;
@@ -220,6 +218,8 @@ public:
 	bool isNonStateReligionCommerce() const;
 
 	int getRevIdxNational() const;
+	int getRevIdxDistanceModifier() const;
+
 	bool canFoundReligion() const;
 
 	int getNumMilitaryUnits() const;
@@ -435,8 +435,6 @@ public:
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);
 
 	int64_t getCulture() const;
-	void setCulture(int64_t iNewValue);
-	void changeCulture(int64_t iAddValue);
 
 	CvProperties* getProperties() const;
 

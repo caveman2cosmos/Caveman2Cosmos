@@ -31,19 +31,19 @@
 	<!-- Dexy - Surround and Destroy -->
 	<Define>
 		<DefineName>SAD_FACTOR_1</DefineName>
-		<fDefineFloatVal>6.0</fDefineFloatVal>
+		<iDefineIntVal>6</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SAD_FACTOR_2</DefineName>
-		<fDefineFloatVal>10.0</fDefineFloatVal>
+		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SAD_FACTOR_3</DefineName>
-		<fDefineFloatVal>15.0</fDefineFloatVal>
+		<iDefineIntVal>15</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SAD_FACTOR_4</DefineName>
-		<fDefineFloatVal>20.0</fDefineFloatVal>
+		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>SAD_MAX_MODIFIER</DefineName>
@@ -325,6 +325,6 @@ The Great Wall is always dynamic if viewports are enabled regardless of this set
 	</Define>
 	<Define>
 		<DefineName>C2C_VERSION</DefineName>
-		<DefineTextVal>v41.2</DefineTextVal>
+		<DefineTextVal>v42.0.BETA</DefineTextVal>
 	</Define>
 </Civ4Defines>

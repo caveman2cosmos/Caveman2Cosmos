@@ -543,12 +543,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_EXCILE_ADD</Tag>
-		<English>[ICON_BULLET]Adds a reason for the unit to be considered an Excile.</English>
+		<English>[ICON_BULLET]Adds a reason for the unit to be considered an Exile.</English>
 		<French>[ICON_BULLET]Ajoute la possibilité pour l'unité d'être considérée en exil.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_EXCILE_REMOVE</Tag>
-		<English>[ICON_BULLET]Removes a reason for the unit to be considered an Excile.</English>
+		<English>[ICON_BULLET]Removes a reason for the unit to be considered an Exile.</English>
 		<French>[ICON_BULLET]Enlève la possibilité pour l'unité d'être considérée en exil.</French>
 	</TEXT>
 	<TEXT>
@@ -2125,20 +2125,6 @@
 		<English>Each Round spent building up Field Veterinarian improves the unit's [COLOR_HIGHLIGHT_TEXT]Animal Healing Ability[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
 		<French>A chaque tour la Spécialisation Vétérinaire de campagne augmente [COLOR_HIGHLIGHT_TEXT]la capacité de soins des Animaux[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
 		<German>Die Ausbildung als Feldveterinär steigert die Fähigkeit der Einheit, [COLOR_HIGHLIGHT_TEXT]Tiere zu heilen[COLOR_REVERT].</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FORTIFY</Tag>
-		<English>Build Up (Fortifications) Promotion Line</English>
-		<French>Spécialisation Fortifications</French>
-		<German>(Training) Befestigung</German>
-		<Polish>Linia Promocji: Koncentracja (Fortyfikacje)</Polish>
-		<Russian>Ôîðòèôèêàöèÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FORTIFY_HELP</Tag>
-		<English>Each Round spent building up Fortifications improves the unit's [COLOR_HIGHLIGHT_TEXT]Combat Modifier[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
-		<French>A chaque tour la Spécialisation Fortifications augmente [COLOR_HIGHLIGHT_TEXT]la valeur de défense[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
-		<German>Das Befestigungstraining erhöht jede Runde die [COLOR_HIGHLIGHT_TEXT]Verteidigung[COLOR_REVERT] der Einheit um 5% (maximal 25%).</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_HEALTH_CARE</Tag>
@@ -5608,46 +5594,6 @@
 		<German>(Training) Feldveterinär V</German>
 		<Polish>Koncentracja (Weterynarz Polowy) V</Polish>
 		<Russian>Ïîëåâîé âåòåðèíàð V</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY1</Tag>
-		<English>Build Up (Fortifications) I</English>
-		<French>Retranchement (Fortifications) I</French>
-		<German>(Training) Befestigung I</German>
-		<Polish>Koncentracja (Fortyfikacje) I</Polish>
-		<Russian>Ôîðòèôèêàöèÿ I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY2</Tag>
-		<English>Build Up (Fortifications) II</English>
-		<French>Retranchement (Fortifications) II</French>
-		<German>(Training) Befestigung II</German>
-		<Polish>Koncentracja (Fortyfikacje) II</Polish>
-		<Russian>Ôîðòèôèêàöèÿ II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY3</Tag>
-		<English>Build Up (Fortifications) III</English>
-		<French>Retranchement (Fortifications) III</French>
-		<German>(Training) Befestigung III</German>
-		<Polish>Koncentracja (Fortyfikacje) III</Polish>
-		<Russian>Ôîðòèôèêàöèÿ III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY4</Tag>
-		<English>Build Up (Fortifications) IV</English>
-		<French>Retranchement (Fortifications) IV</French>
-		<German>(Training) Befestigung IV</German>
-		<Polish>Koncentracja (Fortyfikacje) IV</Polish>
-		<Russian>Ôîðòèôèêàöèÿ IV</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY5</Tag>
-		<English>Build Up (Fortifications) V</English>
-		<French>Retranchement (Fortifications) V</French>
-		<German>(Training) Befestigung V</German>
-		<Polish>Koncentracja (Fortyfikacje) V</Polish>
-		<Russian>Ôîðòèôèêàöèÿ V</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_HEALTH_CARE1</Tag>
@@ -10855,12 +10801,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MARAUDER_HELP</Tag>
-		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_GOLD] Reserves on Combat Victory</English>
-		<French>[ICON_BULLET]Pille 4% de la réserve d'[ICON_GOLD] en cas de Victoire au Combat</French>
-		<German>[ICON_BULLET]erbeutet 4% des gegnerischen [ICON_GOLD] bei einem Sieg im Kampf</German>
-		<Italian>[ICON_BULLET]Ruba 4% delle riserve nemiche di [ICON_GOLD] quando vince una battaglia</Italian>
-		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_GOLD]</Polish>
-		<Russian>[ICON_BULLET]Êðàäåò 4% [ICON_GOLD] èç çàïàñîâ ïðîòèâíèêà</Russian>
+		<English>[ICON_BULLET]Plunders Enemy [ICON_GOLD] Reserves on Combat Victory. Amount plundered is based on how much [ICON_GOLD] per unit the victim have. The difficulty level of both you and the victim affects the result.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MARCH</Tag>
@@ -16017,5 +15958,17 @@
 		<Tag>TXT_KEY_PROMOTION_ZEN</Tag>
 		<English>Zen</English>
 		<Russian>Äçýí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_TRESPASS</Tag>
+		<English>Trespass Status</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_TRESPASS_OFF</Tag>
+		<English>Remove Trespass</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_TRESPASS_ON</Tag>
+		<English>Trespass</English>
 	</TEXT>
 </Civ4GameText>

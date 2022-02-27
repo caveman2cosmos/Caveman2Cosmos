@@ -32,22 +32,41 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_PANTHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>
 			<iCombat>3</iCombat>
@@ -103,22 +122,41 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_LION</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -170,19 +208,36 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_CAMEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_CAMEL_HERD</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -246,37 +301,39 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_LLAMA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_LLAMA_HERD</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_LLAMA_HERD</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_LLAMA_FARM</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INDUSTRIAL_FARMING</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
 			<PrereqAndBuildings>
+				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
@@ -336,37 +393,39 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_DONKEY</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_DONKEY_HERD</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
-				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_DONKEY_BREEDER</BuildingType>
+				<BuildingType>BUILDING_DONKEY_HERD</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_DONKEY_FARM</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INDUSTRIAL_FARMING</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
 			<PrereqAndBuildings>
+				<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
@@ -456,6 +515,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_HORSE</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
@@ -463,14 +538,16 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_HORSE_HERD</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
-				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_HORSE_BREEDER</BuildingType>
+				<BuildingType>BUILDING_HORSE_HERD</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
+				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -567,36 +644,39 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_BISON</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_BISON_HERD</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INDUSTRIAL_FARMING</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
@@ -660,36 +740,39 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_BUFFALO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BUFFALO_HERD</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_BUFFALO_HERD</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INDUSTRIAL_FARMING</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<BonusType>BONUS_BISON</BonusType>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
@@ -752,19 +835,38 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_CATTLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_COW_HERD</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_COW_HERD</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -827,19 +929,38 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_MUSKOX</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_MUSKOX_HERD</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
+				<BuildingType>BUILDING_MUSKOX_CAMP</BuildingType>
+				<BuildingType>BUILDING_MUSKOX_HERD</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -897,17 +1018,34 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_AARDVARK</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_WORKERS</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -915,7 +1053,7 @@
 				<BuildingType>BUILDING_FOLKLORE_AARDVARK</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>1</iCombat>
@@ -966,18 +1104,37 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_BOAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_PIG_HERD</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_BOAR_CAMP</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
+				<BuildingType>BUILDING_PIG_HERD</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -1039,6 +1196,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_AMPHIBIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_DARTFROG_PEDIA</Civilopedia>
@@ -1047,20 +1220,19 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_AMPHIBIAN_POND</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_AMPHIBIAN_POND</BuildingType>
-				<BuildingType>BUILDING_CHEMISTRY_LAB</BuildingType>
-				<BuildingType>BUILDING_CHEMICALS_DISTRICT</BuildingType>
-			</PrereqOrBuildings>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_BIOLOGY</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>387</iCost>
 			<iMoves>1</iMoves>
 			<iXPValueAttack>2</iXPValueAttack>
 			<iXPValueDefense>1</iXPValueDefense>
@@ -1109,6 +1281,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_ASIANBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASIANBEAR_PEDIA</Civilopedia>
@@ -1116,13 +1304,14 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -1130,7 +1319,7 @@
 				<BuildingType>BUILDING_FOLKLORE_ASIANBEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1179,6 +1368,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_BROWN_BEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BROWN_BEAR_PEDIA</Civilopedia>
@@ -1188,13 +1393,13 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -1202,7 +1407,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BROWN_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -1251,6 +1456,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_BLACKBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BLACKBEAR_PEDIA</Civilopedia>
@@ -1259,13 +1480,13 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -1273,7 +1494,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BLACK_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -1322,6 +1543,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_CAVE_BEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAVE_BEAR_PEDIA</Civilopedia>
@@ -1330,13 +1567,14 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_CAVE_BEAR_REMAINS</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -1344,7 +1582,7 @@
 				<BuildingType>BUILDING_FOLKLORE_CAVE_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
@@ -1393,6 +1631,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_GRIZZLY</Description>
 			<Civilopedia>TXT_KEY_UNIT_GRIZZLY_PEDIA</Civilopedia>
@@ -1401,13 +1655,14 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -1415,7 +1670,7 @@
 				<BuildingType>BUILDING_FOLKLORE_GRIZZLY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -1460,6 +1715,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_PANDA_BEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_PANDA_BEAR_PEDIA</Civilopedia>
@@ -1468,13 +1739,13 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -1482,7 +1753,7 @@
 				<BuildingType>BUILDING_FOLKLORE_PANDA_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -1531,6 +1802,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_POLARBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_POLAR_BEAR_PEDIA</Civilopedia>
@@ -1539,12 +1826,14 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -1552,7 +1841,7 @@
 				<BuildingType>BUILDING_FOLKLORE_POLAR_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
@@ -1597,6 +1886,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_REDPANDA</Description>
 			<Civilopedia>TXT_KEY_UNIT_REDPANDA_PEDIA</Civilopedia>
@@ -1605,13 +1910,13 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_RACCOON_TRAPS</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -1619,7 +1924,7 @@
 				<BuildingType>BUILDING_FOLKLORE_REDPANDA</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>1</iCombat>
@@ -1669,6 +1974,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_SLOTHBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SLOTHBEAR_PEDIA</Civilopedia>
@@ -1677,13 +1998,14 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -1691,7 +2013,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SLOTH_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -1740,6 +2062,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_SPECTACLEDBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SPECTACLEDBEAR_PEDIA</Civilopedia>
@@ -1748,13 +2086,13 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -1762,7 +2100,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SPECTACLED_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -1813,6 +2151,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_SUNBEAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SUNBEAR_PEDIA</Civilopedia>
@@ -1821,13 +2175,13 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -1835,7 +2189,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SUN_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -1886,19 +2240,38 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_ELEPHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_ELEPHANT_HERD</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_ELEPHANT_CAMP</BuildingType>
+				<BuildingType>BUILDING_ELEPHANT_HERD</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -1959,20 +2332,36 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_GIRAFFE</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
@@ -2032,17 +2421,36 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_HIPPO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_HIPPO_CAMP</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2101,18 +2509,43 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_WOLF</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<Buildings>
-				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
-				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
-				<BuildingType>BUILDING_WAR_DOGS</BuildingType>
+				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GUARD_DOG</BuildingType>
+				<BuildingType>BUILDING_HERDING_DOGS</BuildingType>
+				<BuildingType>BUILDING_HUNTING_DOGS</BuildingType>
 				<BuildingType>BUILDING_POLICE_DOG</BuildingType>
+				<BuildingType>BUILDING_SLED_DOGS</BuildingType>
+				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_WAR_DOGS</BuildingType>
+				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2131,7 +2564,7 @@
 				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>7</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -2181,17 +2614,36 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_BLACK_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
+				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2251,17 +2703,36 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_INDIAN_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
+				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2321,17 +2792,36 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_JAVA_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
+				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2391,17 +2881,36 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_WHITE_RHINO</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
+				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2460,17 +2969,34 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_BAIRDS_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2478,7 +3004,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BAIRDS_TAPIR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -2528,17 +3054,34 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_BRAZILIAN_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2546,7 +3089,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BRAZILIAN_TAPIR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -2596,17 +3139,34 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_MALAYAN_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2614,7 +3174,7 @@
 				<BuildingType>BUILDING_FOLKLORE_MALAYAN_TAPIR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -2664,17 +3224,34 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_MOUNTAIN_TAPIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -2682,7 +3259,7 @@
 				<BuildingType>BUILDING_FOLKLORE_MOUNTAIN_TAPIR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>133</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -2731,39 +3308,45 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_LIZARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_LIZARD_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_REPTILE_CAGE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_RE_PET_SHOP</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_KOMODO_DRAGON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_NILE_MONITOR</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>105</iCost>
+			<iCost>133</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -2814,6 +3397,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_SNAKE</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_SNAKE_PEDIA</Civilopedia>
@@ -2822,34 +3421,22 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 				<BuildingType>BUILDING_SNAKE_CHARMER</BuildingType>
 				<BuildingType>BUILDING_SNAKE_PIT</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SNAKE_CHARMER</BuildingType>
-			</PrereqOrBuildings>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_REPTILE_CAGE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_RE_PET_SHOP</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<iCost>90</iCost>
+			<iCost>133</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
 			<iXPValueAttack>2</iXPValueAttack>
@@ -2897,24 +3484,42 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_DONKEY_PAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_DONKEY_HERD</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
-				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_DONKEY_BREEDER</BuildingType>
+				<BuildingType>BUILDING_DONKEY_HERD</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DONKEY_BREEDER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_DONKEY_NATIONAL</BuildingType>
 			</PrereqOrBuildings>
 			<BonusType>BONUS_DONKEY</BonusType>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
@@ -2922,7 +3527,7 @@
 				<UnitType>UNIT_TAMED_DONKEY</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SPECIALIZATION</ObsoleteTech>
-			<iCost>60</iCost>
+			<iCost>100</iCost>
 			<iMoves>2</iMoves>
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>25</iEarlyWithdraw>
@@ -2997,19 +3602,37 @@
 			</MapCategoryTypes>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<Description>TXT_KEY_UNIT_TAMED_HORSE_PAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_UNIT_TAMED_ANIMALS_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_HORSE_HERD</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_ZOO</BuildingType>
-				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_HORSE_BREEDER</BuildingType>
+				<BuildingType>BUILDING_HORSE_HERD</BuildingType>
+				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
+				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_FOLKLORE_HORSE</BuildingType>
@@ -3025,7 +3648,7 @@
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SPECIALIZATION</ObsoleteTech>
 			<BonusType>BONUS_HORSE</BonusType>
-			<iCost>60</iCost>
+			<iCost>100</iCost>
 			<iMoves>3</iMoves>
 			<iWithdrawalProb>60</iWithdrawalProb>
 			<iEarlyWithdraw>25</iEarlyWithdraw>
@@ -3103,6 +3726,22 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </UnitAIs>
+            <NotUnitAIs>
+                <UnitAI>
+                    <UnitAIType>UNITAI_WORKER</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+                <UnitAI>
+                    <UnitAIType>UNITAI_EXPLORE</UnitAIType>
+                    <bUnitAI>1</bUnitAI>
+                </UnitAI>
+            </NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_TAMED_WOLF_PAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_TAMED_ANIMAL_PEDIA</Civilopedia>
@@ -3110,13 +3749,21 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<Buildings>
-				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
-				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
-				<BuildingType>BUILDING_WAR_DOGS</BuildingType>
+				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GUARD_DOG</BuildingType>
+				<BuildingType>BUILDING_HERDING_DOGS</BuildingType>
+				<BuildingType>BUILDING_HUNTING_DOGS</BuildingType>
 				<BuildingType>BUILDING_POLICE_DOG</BuildingType>
+				<BuildingType>BUILDING_SLED_DOGS</BuildingType>
+				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_WAR_DOGS</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
+				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
@@ -3138,7 +3785,7 @@
 				<UnitType>UNIT_TAMED_WOLF</UnitType>
 			</UnitUpgrades>
 			<ObsoleteTech>TECH_SPECIALIZATION</ObsoleteTech>
-			<iCost>60</iCost>
+			<iCost>100</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>7</iCombat>
 			<iXPValueAttack>6</iXPValueAttack>
