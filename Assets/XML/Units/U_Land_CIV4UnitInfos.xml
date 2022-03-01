@@ -35501,7 +35501,6 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -35563,7 +35562,6 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -35621,7 +35619,6 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -35693,7 +35690,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>16</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>90</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -35812,7 +35808,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>16</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>120</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>4</iXPValueAttack>
@@ -35927,7 +35922,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>16</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>160</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>4</iXPValueAttack>
