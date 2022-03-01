@@ -9,7 +9,7 @@
 		<BuildInfo>
 			<Type>BUILD_LUNAR_PATH</Type>
 			<Description>TXT_KEY_BUILD_LUNAR_PATH</Description>
-			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<ObsoleteTech>TECH_SUPERSONIC_RAILS</ObsoleteTech>
 			<iTime>600</iTime>
 			<iCost>20</iCost>
@@ -1406,7 +1406,7 @@
 			<Type>BUILD_LUNAR_MINING_OUTPOST</Type>
 			<Description>TXT_KEY_BUILD_LUNAR_MINING_OUTPOST</Description>
 			<Help/>
-			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<iTime>2000</iTime>
 			<iCost>700</iCost>

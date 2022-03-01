@@ -113,7 +113,7 @@ class TestCode:
 					if GC.getTechInfo(GC.getInfoTypeForString(aRequirementTechList[i])).getGridX() == iBaseTechLoc:
 						aReqColumnTechIDList.append(aRequirementTechIDList[i])
 						aReqColumnTechList.append(aRequirementTechList[i])
-			if len(aRequirementTechLocList) > 0 and min(aRequirementTechLocList) > iBaseTechLoc:
+			if len(aRequirementTechLocList) > 0 and min(aRequirementTechLocList) > iBaseTechLoc and CvBuildingInfo.getType().find("_PROVIDER") == -1: #Bonus provider autobuild has no tech req intentionally, so we don't have to remember to adjust for bonus tech reveal.
 				self.log(CvBuildingInfo.getType()+" is unlocked before its earliest OR building requirements "+str(aRequirementTechList)+" "+str(aBaseTechList)+" requirement/base column "+str(min(aRequirementTechLocList))+" / "+str(iBaseTechLoc))
 			if len(aRequirementTechLocList) > 0 and min(aRequirementTechLocList) == iBaseTechLoc:
 				for i in xrange(len(aReqColumnTechIDList)):
@@ -2090,7 +2090,7 @@ class TestCode:
 			iTechLoc = self.HF.checkBuildingTechRequirements(CvBuildingInfo)[0]
 
 			#<ExtraFreeBonuses>
-			if CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1 and iTechLoc != 0: #Ignore producers without tech requirements - those are subdued animal rewards most commonly
+			if CvBuildingInfo.getType().find("_NATURAL_WONDER_") == -1:
 				for iBonus, iNumFree in CvBuildingInfo.getFreeBonuses():
 					if aBonusList[iBonus] == -1:
 						aBonusList[iBonus] = iTechLoc
@@ -2100,7 +2100,7 @@ class TestCode:
 		for iBonus in xrange(len(aBonusList)):
 			iBonusTechLoc = self.HF.checkBonusTechRequirementLocation(GC.getBonusInfo(iBonus))[2]
 			if aBonusList[iBonus] != -1 and GC.getBonusInfo(iBonus).getTechCityTrade() != -1 and not GC.getBonusInfo(iBonus).getConstAppearance() > 0:
-				if aBonusList[iBonus] - iBonusTechLoc != 0:
+				if aBonusList[iBonus] > iBonusTechLoc: #As concurrent manufacturers are thing of past, they are allowed to have no tech requirement.
 					self.log(GC.getBonusInfo(iBonus).getType()+" "+str(iBonusTechLoc)+" Earliest bonus producer located at: "+str(aBonusList[iBonus]))
 
 	#Building requirement extra requirements
@@ -3388,11 +3388,11 @@ class TestCode:
 
 			for iUnit in xrange(GC.getNumUnitInfos()):
 				CvUnitInfo = GC.getUnitInfo(iUnit)
-				if CvUnitInfo.hasBuild(BuildTypes(iBuild)): #Multiple Units can create same Build
+				if CvUnitInfo.hasBuild(BuildTypes(iBuild)) and self.HF.checkUnitTechRequirementLocation(CvUnitInfo)[2] != 0: #Multiple Units can create same Build
 					aUnitTechID.append(self.HF.checkUnitTechRequirementLocation(CvUnitInfo)[2]) #Tech ID
 					aUnitType.append(CvUnitInfo.getType())
 
-			if len(aUnitTechID) > 0 and iBuildTechID != 0 and min(aUnitTechID) != 0 and iBuildTechID < min(aUnitTechID): #Build tech position is equal to earliest Unit tech position
+			if len(aUnitTechID) > 0 and iBuildTechID != 0 and iBuildTechID < min(aUnitTechID): #Build tech position is equal to earliest Unit tech position
 				self.log(aUnitType[aUnitTechID.index(min(aUnitTechID))]+" and "+CvBuildInfo.getType()+" have different techs "+str(min(aUnitTechID))+"/"+str(iBuildTechID))
 
 	#Checks if improvement and build have same tech unlock

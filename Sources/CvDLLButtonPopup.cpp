@@ -1407,8 +1407,6 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 	}
 
 	// === UNITS =========================================================
-	//TB SubCombat Mod Footnote:
-	// This following section is the only place in the dll files that references getUnitCombatType that has not been updated for SubCombats as I'm not sure where it displays nor how to best frame it yet.
 	{
 		// Add the 5 strongest military units
 		std::vector<UnitBuildItem> units;

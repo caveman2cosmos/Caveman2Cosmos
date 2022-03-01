@@ -124,7 +124,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PARADISE_GARDEN</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>177930</iCost>
+			<iCost>167130</iCost>
 			<iGlobalPopulationChange>-30</iGlobalPopulationChange>
 			<VictoryPrereq>VICTORY_SCIENTIFIC</VictoryPrereq>
 			<VictoryThresholds>
@@ -2186,7 +2186,7 @@
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>
-			<iCost>2625</iCost>
+			<iCost>3245</iCost>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -3007,18 +3007,12 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_ALUMINUM_WARES</Bonus>
 			</PrereqBonuses>
-			<PrereqAmountBuildings>
-				<PrereqBuilding>
-					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
-					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuilding>
-			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
 			</PrereqOrBuildings>
-			<iCost>2985</iCost>
+			<iCost>3245</iCost>
 			<iHealth>5</iHealth>
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
@@ -3101,6 +3095,7 @@
 			</CommerceChanges>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<bOrbital>1</bOrbital>
+			<bPrereqPower>1</bPrereqPower>
 			<iAsset>12</iAsset>
 			<iPower>5</iPower>
 			<Flavors>
