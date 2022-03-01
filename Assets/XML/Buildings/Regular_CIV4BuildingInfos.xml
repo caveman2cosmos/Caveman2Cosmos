@@ -4002,6 +4002,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_PRESERVE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_PRESERVE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_PLANETARY_ECONOMICS</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
