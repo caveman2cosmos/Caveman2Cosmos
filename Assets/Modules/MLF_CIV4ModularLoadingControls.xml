@@ -17,9 +17,9 @@
 					<Directory>Cultures</Directory>
 					<bLoad>1</bLoad>
 				</Module>
-				<Module> <!-- Pepper Space Program, disabled by default as AI can't go to space -->
+				<Module> <!-- Pepper Space Program -->
 					<Directory>Pepper2000</Directory>
-					<bLoad>0</bLoad>
+					<bLoad>1</bLoad>
 				</Module>
 				<Module> <!-- Pepper Space Program - units converted to support MultiMaps -->
 					<Directory>P2K_Multimaps_Test</Directory>
