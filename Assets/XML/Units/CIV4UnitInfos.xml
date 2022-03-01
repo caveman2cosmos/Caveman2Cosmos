@@ -740,7 +740,7 @@ Base XP gained when defending
 			<iAdvancedStartCost>1000</iAdvancedStartCost>
 			<iBaseUpkeep>26</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>20</iNukeRange>
+			<iNukeRange>3</iNukeRange>
 			<iEvasionProbability>50</iEvasionProbability>
 			<iAsset>5</iAsset>
 			<iPower>60</iPower>
