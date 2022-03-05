@@ -168,11 +168,6 @@ bool CyTeam::isHuman() const
 	return m_pTeam->isHuman();
 }
 
-bool CyTeam::isBarbarian() const
-{
-	return m_pTeam->isBarbarian();
-}
-
 bool CyTeam::isNPC() const
 {
 	return m_pTeam->isNPC();

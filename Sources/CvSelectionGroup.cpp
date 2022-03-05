@@ -1048,15 +1048,15 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 			break;
 
 		case MISSION_BUILD:
-
-			FAssertMsg((BuildTypes)iData1 < GC.getNumBuildInfos(), "Invalid Build");
+		{
+			FASSERT_BOUNDS(0, GC.getNumBuildInfos(), iData1);
 
 			if (pLoopUnit->canBuild(pPlot, (BuildTypes)iData1, bTestVisible && !GET_PLAYER(pLoopUnit->getOwner()).isModderOption(MODDEROPTION_HIDE_UNAVAILBLE_BUILDS)))
 			{
 				return true;
 			}
 			break;
-
+		}
 		case MISSION_LEAD:
 			if (pLoopUnit->canLead(pPlot, iData1))
 			{
@@ -2755,7 +2755,7 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 			break;
 
 		case INTERFACEMODE_NUKE:
-			if (pLoopUnit->canNuke(pLoopUnit->plot()) && pLoopUnit->canMove())
+			if (pLoopUnit->canNuke() && pLoopUnit->canMove())
 			{
 				return true;
 			}
@@ -2921,14 +2921,14 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 			break;
 
 		case INTERFACEMODE_AIRSTRIKE:
-			if (pLoopUnit != NULL && pLoopUnit->canMoveInto(pPlot, MoveCheck::Attack))
+			if (pLoopUnit != NULL && pLoopUnit->canEnterPlot(pPlot, MoveCheck::Attack))
 			{
 				return true;
 			}
 			break;
 
 		case INTERFACEMODE_REBASE:
-			if (pLoopUnit != NULL && pLoopUnit->canMoveInto(pPlot))
+			if (pLoopUnit != NULL && pLoopUnit->canEnterPlot(pPlot))
 			{
 				return true;
 			}
@@ -3088,7 +3088,7 @@ bool CvSelectionGroup::isFull() const
 			iCargoCount++;
 		}
 
-		if (pLoopUnit->specialCargo() != NO_SPECIALUNIT)
+		if (pLoopUnit->getSpecialCargo() != NO_SPECIALUNIT)
 		{
 			iSpecialCargoCount++;
 		}
@@ -3178,38 +3178,32 @@ bool CvSelectionGroup::canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool b
 		&& algo::all_of(units(), bind(&CvUnit::canEnterArea, _1, eTeam, pArea, bIgnoreRightOfPassage));
 }
 
-bool CvSelectionGroup::canMoveInto(const CvPlot* pPlot, bool bAttack) const
+bool CvSelectionGroup::canEnterPlot(const CvPlot* pPlot, bool bAttack) const
 {
-	return canMoveIntoWithWar(pPlot, bAttack);
+	return getNumUnits() > 0 && algo::any_of(units(), bind(&CvUnit::canEnterPlot, _1, pPlot, bAttack ? MoveCheck::Attack : MoveCheck::None, nullptr));
+}
+/*DllExport*/ bool CvSelectionGroup::canMoveInto(CvPlot* pPlot, bool bAttack)
+{
+	OutputDebugString("exe is asking if group can move into a plot\n");
+	return canEnterPlot(pPlot, bAttack);
 }
 
-bool CvSelectionGroup::canMoveIntoWithWar(const CvPlot* pPlot, bool bAttack) const
+bool CvSelectionGroup::canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWar) const
 {
-	return getNumUnits() > 0
-		&& algo::any_of(units(), bind(&CvUnit::canMoveInto, _1, pPlot, bAttack ? MoveCheck::Attack : MoveCheck::None, nullptr));
-}
-
-bool CvSelectionGroup::canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar) const
-{
-	bool bTryCanAttackUnits = true;
-
-	do
+	foreach_(const CvUnit* unitX, units())
 	{
-		foreach_(const CvUnit* pLoopUnit, units())
+		if (unitX->canEnterOrAttackPlot(pPlot, bDeclareWar))
 		{
-			if ( (!bTryCanAttackUnits || pLoopUnit->canAttack()) && pLoopUnit->canMoveOrAttackInto(pPlot, bDeclareWar))
-			{
-				return true;
-			}
+			return true;
 		}
-
-		bTryCanAttackUnits = !bTryCanAttackUnits;
-	} while(!bTryCanAttackUnits);
-
-
+	}
 	return false;
 }
-
+/*DllExport*/ bool CvSelectionGroup::canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar)
+{
+	OutputDebugString("exe is asking if group can move into or attack a plot\n");
+	return canEnterOrAttackPlot(pPlot, bDeclareWar);
+}
 
 bool CvSelectionGroup::canMoveThrough(const CvPlot* pPlot, bool bDeclareWar) const
 {
@@ -3777,36 +3771,9 @@ bool CvSelectionGroup::groupDeclareWar(const CvPlot* pPlot, bool bForce)
 	return (iNumUnits != getNumUnits());
 }
 
-namespace {
-	bool performSupport(CvPlot* from, CvPlot* to, PlayerTypes fromPlayer, TeamTypes toTeam)
-	{
-		bool performedAttack = false;
-		foreach_(CvUnit* pLoopUnit, from->units())
-		{
-			if ((toTeam == NO_TEAM || GET_TEAM(pLoopUnit->getTeam()).isAtWar(toTeam)) &&
-				(fromPlayer == NO_PLAYER || pLoopUnit->getOwner() == fromPlayer))
-			{
-				if (pLoopUnit->canBombardAtRanged(from, to->getX(), to->getY()))
-				{
-					if (pLoopUnit->bombardRanged(to->getX(), to->getY(), true))
-					{
-						performedAttack = true;
-					}
-				}
-				else if (pLoopUnit->getDomainType() == DOMAIN_AIR && !pLoopUnit->isSuicide())
-				{
-					pLoopUnit->updateAirStrike(to, false, true);//airStrike(plot()))
-				}
-				pLoopUnit->setMadeAttack(false);
-			}
-		}
-		return performedAttack;
-	}
-}
-
 
 // Returns true if attack was made...
-bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting, bool bStealth)
+bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting)
 {
 	PROFILE_FUNC();
 
@@ -3822,16 +3789,16 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 	// CvSelectionGroup has a valid plot, but units don't always
 
-	bool bStack = (isHuman() && ((getDomainType() == DOMAIN_AIR) || GET_PLAYER(getOwner()).isOption(PLAYEROPTION_STACK_ATTACK)));
+	bool bStack = isHuman() && (getDomainType() == DOMAIN_AIR || GET_PLAYER(getOwner()).isOption(PLAYEROPTION_STACK_ATTACK));
 
 	bool bAttack = false;
 	bFailedAlreadyFighting = false;
-	bool bStealthDefense = bStealth;
+	bool bStealthDefense = false;
 	bool bAffixFirstAttacker = false;
 	bool bAffixFirstDefender = false;
 
 	if (getNumUnits() > 0 && (getDomainType() == DOMAIN_AIR || stepDistance(getX(), getY(), pDestPlot->getX(), pDestPlot->getY()) <= 1)
-	&& ((iFlags & MOVE_DIRECT_ATTACK) || getDomainType() == DOMAIN_AIR || (iFlags & MOVE_THROUGH_ENEMY) || bStealth || generatePath(plot(), pDestPlot, iFlags) && getPathFirstPlot() == pDestPlot))
+	&& ((iFlags & MOVE_DIRECT_ATTACK) || getDomainType() == DOMAIN_AIR || (iFlags & MOVE_THROUGH_ENEMY) || generatePath(plot(), pDestPlot, iFlags) && getPathFirstPlot() == pDestPlot))
 	{
 		int iAttackOdds = 0;
 		CvUnit* pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, true, iAttackOdds, bStealthDefense, false, 0, false, bStealthDefense);
@@ -3863,7 +3830,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 			}
 // BUG - Safe Move - end
 
-			bool bNoBlitz = (!pBestAttackUnit->isBlitz() && pBestAttackUnit->isMadeAttack() && !bStealth);
+			bool bNoBlitz = (!pBestAttackUnit->isBlitz() && pBestAttackUnit->isMadeAttack());
 
 			if (groupDeclareWar(pDestPlot))
 			{
@@ -3875,28 +3842,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 				return false;
 			}
 
-			// RevolutionDCM - attack support
-			if (GC.isDCM_ATTACK_SUPPORT())
-			{
-				if (pDestPlot->getNumUnits() > 0 && !bStealth)
-				{
-					performSupport(pDestPlot, plot(), NO_PLAYER, getTeam());
-				}
-				else
-				{
-					return bAttack;
-				}
-				if (plot()->getNumUnits() > 0 && !bStealth)
-				{
-					performSupport(plot(), pDestPlot, getOwner(), NO_TEAM);
-				}
-				else
-				{
-					return bAttack;
-				}
-			}
-			// RevolutionDCM - attack support end
-
+			bool bStealth = false;
 			bool bBombardExhausted = false;
 			bool bLoopStealthDefense = false;
 			while (true)
@@ -3914,33 +3860,26 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 				{
 					pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, bLoopStealthDefense, bNoBlitz, 0, false, bStealth);
 				}
-				if (pBestAttackUnit == NULL/* || !pBestAttackUnit->canMoveInto(pDestPlot, true, false, false, false, false, false, 0, false, false, bStealthDefense)*/)//TB: I realize this was probably placed here for a reason, BUT, that reason may have been negated at a point by a later debug effort AND if it is NOT necessary then it is a major waste of processing time.  groupStackAttack has been getting away without it.
+				if (pBestAttackUnit == NULL)
 				{
 					break;
 				}
-				else
-				{
-					// if there are no defenders, do not attack
-					if (!bAffixFirstAttacker && !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
-					{
-						if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
-						{
-							pDestPlot->revealBestStealthDefender(pBestAttackUnit);
-							bStealth = true;
-						}
-					}
-					if (!bAffixFirstDefender)
-					{
-						pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, true);
-					}
-					bAffixFirstAttacker = false;
-					bAffixFirstDefender = false;
-				}
 
-				//if (!pBestAttackUnit->canMoveInto(pDestPlot, true, false, false, false, false, false, 0, false, false, bStealthDefense))
-				//{
-				//	break;
-				//}//TB again, not sure this is necessary
+				// if there are no defenders, do not attack
+				if (!bAffixFirstAttacker && !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
+				{
+					if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
+					{
+						pDestPlot->revealBestStealthDefender(pBestAttackUnit);
+						bStealth = true;
+					}
+				}
+				if (!bAffixFirstDefender)
+				{
+					pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, true);
+				}
+				bAffixFirstAttacker = false;
+				bAffixFirstDefender = false;
 
 				if (iAttackOdds < 68 && !isHuman() && !bStealth)
 				{
@@ -3948,7 +3887,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 					{
 						CvUnit* pBestSacrifice = AI_getBestGroupSacrifice(pDestPlot, false, bNoBlitz);
 						if (pBestSacrifice != NULL
-							&& pBestSacrifice->canMoveInto(pDestPlot, MoveCheck::Attack | (bStealthDefense? MoveCheck::Suprise : MoveCheck::None)))
+							&& pBestSacrifice->canEnterPlot(pDestPlot, MoveCheck::Attack | (bStealthDefense? MoveCheck::Suprise : MoveCheck::None)))
 						{
 							pBestAttackUnit = pBestSacrifice;
 						}
@@ -3979,6 +3918,10 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 					{
 						bFailedAlreadyFighting = true;
 					}
+					else if (!pBestDefender)
+					{
+						break;
+					}
 					else
 					{
 						//TB: This is a fix for (standard bts) stack attack.
@@ -3988,16 +3931,9 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 						{
 							iPlus++;
 						}
-						bool bMore = pDestPlot->getNumVisiblePotentialEnemyDefenders(pBestAttackUnit) + iPlus > 1;
-						bool bQuick = (bStack || bMore || bLoopStealthDefense);
-						if (pBestDefender)
-						{
-							pBestAttackUnit->attack(pDestPlot, bQuick, bLoopStealthDefense);
-						}
-						else
-						{
-							break;
-						}
+						const bool bMore = pDestPlot->getNumVisiblePotentialEnemyDefenders(pBestAttackUnit) + iPlus > 1;
+						const bool bQuick = (bStack || bMore || bLoopStealthDefense);
+						pBestAttackUnit->attack(pDestPlot, bQuick, bLoopStealthDefense);
 					}
 				}
 				else if (pBestDefender)
@@ -4026,7 +3962,6 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 					{
 						AI_queueGroupAttack(iX, iY);
 					}
-
 					break;
 				}
 			}
@@ -4067,25 +4002,31 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 // BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 		// don't move if bSentryAlert set to true above
-		if ((!bSentryAlert && pLoopUnit->canMove() && ((bCombat && (!(pLoopUnit->isNoCapture()) || !(pPlot->isEnemyCity(*pLoopUnit)))) ? pLoopUnit->canMoveOrAttackInto(pPlot) : pLoopUnit->canMoveInto(pPlot))) || (pLoopUnit == pCombatUnit))
+		if ((!bSentryAlert && pLoopUnit->canMove() && ((bCombat && (!(pLoopUnit->isNoCapture()) || !(pPlot->isEnemyCity(*pLoopUnit)))) ? pLoopUnit->canEnterOrAttackPlot(pPlot) : pLoopUnit->canEnterPlot(pPlot))) || (pLoopUnit == pCombatUnit))
 #else
 		//TBNote: Need to make this an option perhaps.  Groups probably shouldn't be automatically splitting up to continue the planned move, particularly for human players.
 		//Would check if the whole group can move into the plot first.  This warrants more study before acting on this.
-		if ((pLoopUnit->canMove()
-			&& ((bCombat
-				&& (!pLoopUnit->isNoCapture() || !pPlot->isEnemyCity(*pLoopUnit)))
-				? pLoopUnit->canMoveOrAttackInto(pPlot)
-				: pLoopUnit->canMoveInto(pPlot)))
-			|| pLoopUnit == pCombatUnit)
+		if (
+			pLoopUnit->canMove()
+		&&	(
+				bCombat && (!pLoopUnit->isNoCapture() || !pPlot->isEnemyCity(*pLoopUnit))
+				?
+				pLoopUnit->canEnterOrAttackPlot(pPlot)
+				:
+				pLoopUnit->canEnterPlot(pPlot)
+			)
+		||	pLoopUnit == pCombatUnit)
 #endif
 // BUG - Sentry Actions - end
 		{
-			pLoopUnit->move(pPlot, true);//next statement perhaps should be an if is dead kind of protection against reporting the move elsewhere//TBFIXHERE
+			pLoopUnit->move(pPlot, true);
+			//next statement perhaps should be an if is dead kind of protection against reporting the move elsewhere//TBFIXHERE
 			if (pLoopUnit->isDead())
 			{
-				pLoopUnit->joinGroup(NULL,true);
+				// Toffer - Shouldn't this be handled when pLoopUnit actually dies in the above pLoopUnit->move(pPlot, true);
+				//	rather than after it has died here below.
+				pLoopUnit->joinGroup(NULL, true);
 				pLoopUnit->finishMoves();
-				continue;
 			}
 		}
 		else
@@ -4168,7 +4109,7 @@ bool CvSelectionGroup::groupPathTo(int iX, int iY, int iFlags)
 
 	if (getDomainType() == DOMAIN_AIR)
 	{
-		if (!canMoveInto(pDestPlot) && !canMoveInto(pDestPlot, MoveCheck::Attack))
+		if (!canEnterPlot(pDestPlot) && !canEnterPlot(pDestPlot, MoveCheck::Attack))
 		{
 			return false;
 		}
@@ -4187,7 +4128,7 @@ bool CvSelectionGroup::groupPathTo(int iX, int iY, int iFlags)
 		//	If the first plot IS the destination it's possible that generatePath
 		//	can suceed, but the group cannot actually move there because the move
 		//	would require an attack
-		if (!canMoveInto(pPathPlot))
+		if (!canEnterPlot(pPathPlot))
 		{
 			return false;
 		}
@@ -4408,15 +4349,8 @@ void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup
 			return;
 		}
 
-		int iCargoSpaceAvailable = 0;
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-		{
-			iCargoSpaceAvailable = pTransportUnit->SMcargoSpaceAvailable(pHeadUnit->getSpecialUnitType(), pHeadUnit->getDomainType());
-		}
-		else
-		{
-			iCargoSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pHeadUnit->getSpecialUnitType(), pHeadUnit->getDomainType());
-		}
+		const int iCargoSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pHeadUnit->getSpecialUnitType(), pHeadUnit->getDomainType());
+
 		// if no space at all, give up
 		if (iCargoSpaceAvailable < 1)
 		{
@@ -4475,24 +4409,21 @@ void CvSelectionGroup::setTransportUnit(CvUnit* pTransportUnit, CvSelectionGroup
 			// if there is room, load the unit
 			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 			{
-				if (pTransportUnit->SMcargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) >= pLoopUnit->SMCargoVolume())
+				if (pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) >= pLoopUnit->SMCargoVolume())
 				{
 					pLoopUnit->setTransportUnit(pTransportUnit);
 				}
 				// We should continue on the loop because another unit might be able to fit
 				// todo: Should we perhaps consider all unit volumes before we start the loop? Perhaps do a packing algorithm to get the most in?
 			}
+			else if (pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) > 0)
+			{
+				pLoopUnit->setTransportUnit(pTransportUnit);
+			}
 			else
 			{
-				if (pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()))
-				{
-					pLoopUnit->setTransportUnit(pTransportUnit);
-				}
-				else
-				{
-					// If there is no room and we aren't using size matters then we may aswell abort the rest of the loop as no more units will fit
-					break;
-				}
+				// If there is no room and we aren't using size matters then we may aswell abort the rest of the loop as no more units will fit
+				break;
 			}
 		}
 	}
@@ -4523,15 +4454,8 @@ void CvSelectionGroup::setRemoteTransportUnit(CvUnit* pTransportUnit)
 		}
 		FAssertMsg(pHeadUnit != NULL, "non-zero group without head unit");
 
-		int iCargoSpaceAvailable = 0;
-		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-		{
-			iCargoSpaceAvailable = pTransportUnit->SMcargoSpaceAvailable(pHeadUnit->getSpecialUnitType(), pHeadUnit->getDomainType());
-		}
-		else
-		{
-			iCargoSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pHeadUnit->getSpecialUnitType(), pHeadUnit->getDomainType());
-		}
+		const int iCargoSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pHeadUnit->getSpecialUnitType(), pHeadUnit->getDomainType());
+
 		// if no space at all, give up
 		if (iCargoSpaceAvailable < 1)
 		{
@@ -4583,14 +4507,14 @@ void CvSelectionGroup::setRemoteTransportUnit(CvUnit* pTransportUnit)
 			{
 				if (pLoopUnit->getTransportUnit() != pTransportUnit && pLoopUnit->getOwner() == pTransportUnit->getOwner())
 				{
-					bool bSpaceAvailable = 0;
-					if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+					bool bSpaceAvailable = false;
+					if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 					{
-						bSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType());
+						bSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) > pLoopUnit->SMCargoVolume();
 					}
 					else
 					{
-						bSpaceAvailable = (pTransportUnit->SMcargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) > pLoopUnit->SMCargoVolume());
+						bSpaceAvailable = pTransportUnit->cargoSpaceAvailable(pLoopUnit->getSpecialUnitType(), pLoopUnit->getDomainType()) > 0;
 					}
 					if (bSpaceAvailable)
 					{
@@ -4681,7 +4605,7 @@ bool CvSelectionGroup::groupAmphibMove(CvPlot* pPlot, int iFlags)
 	// BBAI TODO: Bombard with warships if invading
 	foreach_(const CvUnit* unit, units())
 	{
-		if (!unit->hasCargo() || unit->domainCargo() != DOMAIN_LAND)
+		if (!unit->hasCargo() || unit->getDomainCargo() != DOMAIN_LAND)
 		{
 			continue;
 		}
@@ -5317,7 +5241,7 @@ bool CvSelectionGroup::canPathDirectlyToInternal(const CvPlot* pFromPlot, const 
 		if ( stepDistance(pAdjacentPlot->getX(), pAdjacentPlot->getY(), pToPlot->getX(), pToPlot->getY()) <
 			 stepDistance(pFromPlot->getX(), pFromPlot->getY(), pToPlot->getX(), pToPlot->getY()) )
 		{
-			if (canMoveInto(pAdjacentPlot, (pAdjacentPlot == pToPlot)))
+			if (canEnterPlot(pAdjacentPlot, (pAdjacentPlot == pToPlot)))
 			{
 				return pAdjacentPlot == pToPlot || canPathDirectlyToInternal(pAdjacentPlot, pToPlot, movesRemainingAfterMovingTo(movesRemaining, pFromPlot, pAdjacentPlot));
 			}
@@ -6247,22 +6171,6 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 						return true;
 					}
 
-					// RevolutionDCM - attack support
-					if (GC.isDCM_ATTACK_SUPPORT())
-					{
-						if (pDestPlot->getNumUnits() < 1 || bStealth)
-						{
-							return bAttack;
-						}
-						bAction = performSupport(pDestPlot, pOrigPlot, NO_PLAYER, getTeam());
-
-						if (pOrigPlot->getNumUnits() < 1 || bStealth)
-						{
-							return bAttack;
-						}
-						bAction = performSupport(pOrigPlot, pDestPlot, getOwner(), NO_TEAM);
-					}
-					// RevolutionDCM - attack support end
 					bool bBombardExhausted = false;
 					while (true)
 					{
@@ -6578,20 +6486,17 @@ int CvSelectionGroup::getCargoSpace() const
 {
 	FAssert(getNumUnits() > 0);
 
-	const bSizeMatters = GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS);
 	const UnitAITypes eUnitAI = getHeadUnitAI();
-
 	int iCargoCount = 0;
 
 	// first pass, count but ignore special cargo units
-	foreach_(const CvUnit* pLoopUnit, units())
+	foreach_(const CvUnit* unitX, units())
 	{
-		if (pLoopUnit->AI_getUnitAIType() == eUnitAI && (pLoopUnit->cargoSpace() > 0 || pLoopUnit->SMcargoSpace() > 0))
+		if (unitX->AI_getUnitAIType() == eUnitAI)
 		{
-			iCargoCount += bSizeMatters ? pLoopUnit->SMcargoSpace() : pLoopUnit->cargoSpace();
+			iCargoCount += unitX->cargoSpace();
 		}
 	}
-
 	return iCargoCount;
 }
 
@@ -6599,21 +6504,17 @@ int CvSelectionGroup::getCargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, Dom
 {
 	FAssert(getNumUnits() > 0);
 
-	const bSizeMatters = GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS);
 	const UnitAITypes eUnitAI = getHeadUnitAI();
-
 	int iCargoCount = 0;
 
 	// first pass, count but ignore special cargo units
-	for (unit_iterator unitItr = beginUnits(); unitItr != endUnits(); ++unitItr)
+	foreach_(const CvUnit* unitX, units())
 	{
-		const CvUnit* pLoopUnit = *unitItr;
-		if (pLoopUnit->AI_getUnitAIType() == eUnitAI)
+		if (unitX->AI_getUnitAIType() == eUnitAI)
 		{
-			iCargoCount += bSizeMatters ? pLoopUnit->SMcargoSpaceAvailable(eSpecialCargo, eDomainCargo) : pLoopUnit->cargoSpaceAvailable(eSpecialCargo, eDomainCargo);
+			iCargoCount += unitX->cargoSpaceAvailable(eSpecialCargo, eDomainCargo);
 		}
 	}
-
 	return iCargoCount;
 }
 

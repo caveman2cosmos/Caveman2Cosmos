@@ -1,6 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CACOPHONY</Tag>
+		<English>Shock and Awe - Cacophony</English>
+		<French>Choc et stupeur - Cacophonie</French>
+		<Italian>Shock e stupore - Cacofonia</Italian>
+		<Russian>Øîê è òðåïåò - êàêîôîíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_HAKA</Tag>
+		<English>Shock and Awe - Haka</English>
+		<French>Choc et stupeur - Haka</French>
+		<Italian>Shock e stupore - Haka</Italian>
+		<Russian>Øîê è òðåïåò - Õàêà</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HUNTING_SIGHT</Tag>
 		<English>Hunting Sight</English>
 		<French>Oeil du chasseur I</French>
@@ -17,5 +31,12 @@
 		<Italian>Occhio del cacciatore II</Italian>
 		<Polish>Wzrok Łowcy II</Polish>
 		<Russian>Ïðèöåë II</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_WAR_CRY</Tag>
+		<English>Shock and Awe - War Cry</English>
+		<French>Choc et stupeur - Cri de guerre</French>
+		<Italian>Shock e stupore - Urlo di guerra</Italian>
+		<Russian>Øîê è òðåïåò - Áîåâîé êëè÷</Russian>
 	</TEXT>
 </Civ4GameText>

@@ -49,7 +49,8 @@ typedef std::vector< std::pair<UnitTypes, PromotionTypes> > UnitPromotionArray;
 typedef std::vector< std::pair<CivilizationTypes, LeaderHeadTypes> > CivLeaderArray;
 typedef std::vector<TechTypes> techPath;
 
-class CvPlayer : bst::noncopyable
+class CvPlayer
+	: private bst::noncopyable
 {
 public:
 	CvPlayer();
@@ -248,7 +249,6 @@ public:
 	void findNewCapital();
 	int getNumGovernmentCenters() const;
 
-	bool canRaze(CvCity* pCity) const;
 	void raze(CvCity* pCity);
 	void disband(CvCity* pCity);
 
@@ -282,7 +282,7 @@ public:
 	void processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pArea, bool bReligiouslyDisabling = false);
 
 	int getBuildCost(const CvPlot* pPlot, BuildTypes eBuild) const;
-	bool canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra = false, bool bTestVisible = false, bool bIncludePythonOverrides = true) const;
+	bool canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestVisible = false, bool bIncludePythonOverrides = true) const;
 
 	RouteTypes getBestRoute(const CvPlot* pPlot = NULL, bool bConnect = true, const CvUnit* pBuilder = NULL) const;
 
@@ -307,8 +307,11 @@ public:
 	int getInflationMod10000() const;
 	int64_t getInflationCost() const;
 	int64_t getFinalExpense() const;
-	short getProfitMargin(int &iTotalCommerce, int64_t &iNetIncome, int64_t &iNetExpenses, int iExtraExpense=0, int iExtraExpenseMod=0) const;
+	short getProfitMargin(int64_t &iNetExpenses, int iExtraExpense=0, int iExtraExpenseMod=0) const;
 	short getProfitMargin(int iExtraExpense=0, int iExtraExpenseMod=0) const;
+	void cacheKeyFinanceNumbers();
+	int64_t getMinTaxIncome() const;
+	int64_t getMaxTaxIncome() const;
 
 	int64_t calculateBaseNetGold() const;
 	int calculateBaseNetResearch(TechTypes eTech = NO_TECH) const;
@@ -577,6 +580,7 @@ public:
 	int64_t getUnitUpkeepMilitary100() const;
 	int64_t getUnitUpkeepMilitary() const;
 	int64_t getUnitUpkeepMilitaryNet() const;
+	int64_t getUnitUpkeepNet(const bool bMilitary, const int iUnitUpkeep = MAX_INT) const;
 	int64_t calcFinalUnitUpkeep(const bool bReal=true);
 	int64_t getFinalUnitUpkeep() const;
 	int getFinalUnitUpkeepChange(const int iExtra, const bool bMilitary);
@@ -812,7 +816,6 @@ public:
 	void setCurrentEra(EraTypes eNewValue);
 
 	int64_t getCulture() const;
-	void setCulture(int64_t iNewValue);
 	void changeCulture(int64_t iAddValue);
 
 	ReligionTypes getLastStateReligion() const;
@@ -1316,7 +1319,6 @@ public:
 	int getCivicHappiness() const;
 	void changeCivicHappiness(int iChange);
 
-	/*bool hasFixedBorders();*/
 	bool hasEnemyDefenderUnit(const CvPlot* pPlot) const;
 
 	CvCity* getBestHQCity(CorporationTypes eCorporation) const;
@@ -1398,7 +1400,7 @@ public:
 
 	void setHandicap(int iNewVal);
 
-	bool canBuild(const CvPlot* pPlot, ImprovementTypes eImprovement, bool bTestEra, bool bTestVisible) const;
+	bool canBuild(const CvPlot* pPlot, ImprovementTypes eImprovement, bool bTestVisible) const;
 
 	int getModderOption(ModderOptionTypes eIndex) const;
 	bool isModderOption(ModderOptionTypes eIndex) const;
@@ -1642,7 +1644,7 @@ public:
 
 	//virtual void AI_doCentralizedProduction() = 0;
 
-	virtual void AI_conquerCity(CvCity* pCity) = 0;
+	virtual void AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConquest, bool bTrade) = 0;
 	virtual int AI_foundValue(int iX, int iY, int iMinUnitRange = -1, bool bStartingLoc = false) const = 0;
 	virtual bool AI_isCommercePlot(const CvPlot* pPlot) const = 0;
 	virtual int AI_getPlotDanger(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const = 0;
@@ -1999,12 +2001,11 @@ protected:
 
 	int calculatePlotRouteYieldDifference(const CvPlot* pPlot, const RouteTypes eRoute, YieldTypes eYield) const;
 	RouteTypes getBestRouteInternal(const CvPlot* pPlot, bool bConnect, const CvUnit* pBuilder, BuildTypes* eBestRouteBuild = NULL) const;
-	bool canBuildPlotTechPrereq(const CvPlot* pPlot, BuildTypes eRouteBuild, bool bTestEra = false, bool bTestVisible = false) const;
 	bool isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvPlot* pPlot, const CvUnit* pBuilder) const;
 
 	void verifyGoldCommercePercent();
 
-	void processCivics(CivicTypes eCivic, int iChange, bool bLimited = false);
+	void processCivics(const CivicTypes eCivic, const int iChange, const bool bLimited = false);
 
 	// for serialization
 	virtual void read(FDataStreamBase* pStream);
@@ -2065,7 +2066,7 @@ public:
 	void changeLeaderHeadLevel(int iChange);
 
 	uint64_t getLeaderLevelupNextCultureTotal() const;
-	int64_t getLeaderLevelupCultureToEarn() const;
+	uint64_t getLeaderLevelupCultureToEarn() const;
 
 	bool canLeaderPromote() const;
 	void doPromoteLeader();
@@ -2343,6 +2344,9 @@ private:
 
 	static bool m_staticsInitialized;
 
+	int64_t m_iMinTaxIncome;
+	int64_t m_iMaxTaxIncome;
+
 protected:
 	void constructTechPathSet(TechTypes eTech, std::vector<techPath*>& pathSet, techPath& rootPath) const;
 	void clearCanConstructCache(BuildingTypes building, bool bIncludeCities = false) const;
@@ -2356,6 +2360,8 @@ public:
 	int countAfflictedUnits(PromotionLineTypes eAfflictionLine);
 	void recalculateAfflictedUnitCount();
 #endif
+	virtual void AI_invalidateAttitudeCache(PlayerTypes ePlayer) = 0;
+	virtual void AI_setHasInquisitionTarget() = 0;
 };
 
 #endif

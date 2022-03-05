@@ -7,7 +7,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ABORIGINE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AINU</Type>
@@ -15,7 +14,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_AINU</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AKA</Type>
@@ -23,7 +21,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_AKA</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AKKADIAN</Type>
@@ -31,7 +28,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_AKKADIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AMERICAN</Type>
@@ -39,7 +35,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_AMERICAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ANASAZI</Type>
@@ -47,7 +42,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ANASAZI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_APACHE</Type>
@@ -55,7 +49,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_APACHE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ARABIAN</Type>
@@ -63,7 +56,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ARABIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ARAWAK</Type>
@@ -71,7 +63,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ARAWAK</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ARGENTINIAN</Type>
@@ -79,7 +70,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ARGENTINIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ARMENIAN</Type>
@@ -87,7 +77,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ARMENIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ASHANTI</Type>
@@ -95,7 +84,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ASHANTI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ASSYRIAN</Type>
@@ -103,7 +91,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ASSYRIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ATHENIAN</Type>
@@ -111,7 +98,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ATHENIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AUSTRALIAN</Type>
@@ -119,7 +105,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_AUSTRALIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AUSTRIAN</Type>
@@ -127,7 +112,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_AUSTRIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AYMARA</Type>
@@ -135,7 +119,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_AYMARA</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AZTEC</Type>
@@ -143,7 +126,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_AZTEC</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BABYLONIAN</Type>
@@ -151,7 +133,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BABYLONIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BANDANESE</Type>
@@ -159,7 +140,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BANDANESE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BASQUE</Type>
@@ -167,7 +147,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BASQUE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BELGIAN</Type>
@@ -175,7 +154,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BELGIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BENGALI</Type>
@@ -183,7 +161,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BENGALI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BENINESE</Type>
@@ -191,7 +168,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BENINESE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BERBER</Type>
@@ -199,7 +175,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BERBER</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BLACKFOOT</Type>
@@ -207,7 +182,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BLACKFOOT</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BRAZILIAN</Type>
@@ -215,7 +189,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BRAZILIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BULGARIAN</Type>
@@ -223,7 +196,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BULGARIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BURMESE</Type>
@@ -231,7 +203,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BURMESE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BYZANTINE</Type>
@@ -239,7 +210,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_BYZANTINE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CALIFORNIAN</Type>
@@ -247,7 +217,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CALIFORNIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CANADIAN</Type>
@@ -255,7 +224,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CANADIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CANTONESE</Type>
@@ -263,7 +231,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CANTONESE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CARIB</Type>
@@ -271,7 +238,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CARIB</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CARTHAGINIAN</Type>
@@ -279,7 +245,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CARTHAGINIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CELTIC</Type>
@@ -287,7 +252,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CELTIC</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CEYLONESE</Type>
@@ -295,7 +259,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CEYLONESE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHAM</Type>
@@ -303,7 +266,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CHAM</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHEROKEE</Type>
@@ -311,7 +273,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CHEROKEE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHEYENNE</Type>
@@ -319,7 +280,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CHEYENNE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHINESE</Type>
@@ -327,7 +287,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CHINESE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHIPPEWA</Type>
@@ -335,7 +294,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CHIPPEWA</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHOLA</Type>
@@ -343,7 +301,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CHOLA</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHUMASH</Type>
@@ -351,7 +308,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CHUMASH</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_COLOMBIAN</Type>
@@ -359,7 +315,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_COLOMBIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_COMANCHE</Type>
@@ -367,7 +322,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_COMANCHE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CONFEDERATE</Type>
@@ -375,7 +329,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CONFEDERATE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CREE</Type>
@@ -383,7 +336,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CREE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CROATIAN</Type>
@@ -391,7 +343,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CROATIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CUBAN</Type>
@@ -399,7 +350,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CUBAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DAHOMEY</Type>
@@ -407,7 +357,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DAHOMEY</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DENE</Type>
@@ -415,7 +364,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DENE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DANISH</Type>
@@ -423,7 +371,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DANISH</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DUTCH</Type>
@@ -431,7 +378,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DUTCH</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DZUNGAR</Type>
@@ -439,7 +385,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_DZUNGAR</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_EGYPTIAN</Type>
@@ -447,7 +392,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_EGYPTIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ENGLISH</Type>
@@ -455,7 +399,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ENGLISH</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_EPIROTE</Type>
@@ -463,7 +406,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_EPIROTE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ETHIOPIAN</Type>
@@ -471,7 +413,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ETHIOPIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FIJIAN</Type>
@@ -479,7 +420,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FIJIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FINNISH</Type>
@@ -487,7 +427,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FINNISH</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FRANKISH</Type>
@@ -495,7 +434,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FRANKISH</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FRENCH</Type>
@@ -503,7 +441,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FRENCH</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FULANI</Type>
@@ -511,7 +448,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_FULANI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GERMAN</Type>
@@ -519,7 +455,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GERMAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GHANAIAN</Type>
@@ -527,7 +462,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GHANAIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GOTH</Type>
@@ -535,7 +469,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GOTH</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GREEK</Type>
@@ -543,7 +476,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_GREEK</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ROMANI</Type>
@@ -551,7 +483,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ROMANI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HAIDA</Type>
@@ -559,7 +490,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HAIDA</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HAITIAN</Type>
@@ -567,7 +497,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HAITIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HAUSA</Type>
@@ -575,7 +504,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HAUSA</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HAWAIIAN</Type>
@@ -583,7 +511,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HAWAIIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HERERO</Type>
@@ -591,7 +518,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HERERO</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HITTITE</Type>
@@ -599,7 +525,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HITTITE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HOLY_ROMAN</Type>
@@ -607,7 +532,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HOLY_ROMAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HOPI</Type>
@@ -615,7 +539,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HOPI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUASTEC</Type>
@@ -623,7 +546,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUASTEC</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUN</Type>
@@ -631,7 +553,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUNGARIAN</Type>
@@ -639,7 +560,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HUNGARIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HURON</Type>
@@ -647,7 +567,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_HURON</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ICELANDIC</Type>
@@ -655,7 +574,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ICELANDIC</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_INCAN</Type>
@@ -663,7 +581,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_INCAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_INDIAN</Type>
@@ -671,7 +588,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_INDIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_INDONESIAN</Type>
@@ -679,7 +595,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_INDONESIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_INUIT</Type>
@@ -687,7 +602,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_INUIT</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_IRISH</Type>
@@ -695,7 +609,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_IRISH</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_IROQUOIS</Type>
@@ -703,7 +616,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_IROQUOIS</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ISRAELI</Type>
@@ -711,7 +623,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ISRAELI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ITALIAN</Type>
@@ -719,7 +630,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ITALIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_JAMAICAN</Type>
@@ -727,7 +637,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_JAMAICAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_JAPANESE</Type>
@@ -735,7 +644,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_JAPANESE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_JIVARO</Type>
@@ -743,7 +651,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_JIVARO</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_JOMON</Type>
@@ -751,7 +658,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_JOMON</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_JORDANIAN</Type>
@@ -759,7 +665,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_JORDANIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_JOSEON</Type>
@@ -767,7 +672,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_JOSEON</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KANEM_BORNU</Type>
@@ -775,7 +679,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_KANEM_BORNU</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KHMER</Type>
@@ -783,7 +686,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_KHMER</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KLAMATH</Type>
@@ -791,7 +693,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_KLAMATH</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KONGOLESE</Type>
@@ -799,7 +700,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_KONGOLESE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KONJAN</Type>
@@ -807,7 +707,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_KONJAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KOREAN</Type>
@@ -815,7 +714,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_KOREAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LIANGZHU</Type>
@@ -823,7 +721,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_LIANGZHU</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LUBA</Type>
@@ -831,7 +728,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_LUBA</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LYDIAN</Type>
@@ -839,7 +735,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_LYDIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MACEDONIAN</Type>
@@ -847,7 +742,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MACEDONIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MADAN</Type>
@@ -855,7 +749,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MADAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MALAYSIAN</Type>
@@ -863,7 +756,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MALAYSIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MALINESE</Type>
@@ -871,7 +763,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MALINESE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MANCHURIAN</Type>
@@ -879,7 +770,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MANCHURIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MAORI</Type>
@@ -887,7 +777,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MAORI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MAPUCHE</Type>
@@ -895,7 +784,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MAPUCHE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MASAI</Type>
@@ -903,7 +791,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MASAI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MASSAGETAE</Type>
@@ -911,7 +798,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MASSAGETAE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MAYAN</Type>
@@ -919,7 +805,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MAYAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MERINA</Type>
@@ -927,7 +812,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MERINA</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MEXICAN</Type>
@@ -935,7 +819,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MEXICAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MINOAN</Type>
@@ -943,7 +826,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MINOAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MISSISSIPPIAN</Type>
@@ -951,7 +833,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MISSISSIPPIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MIXTEC</Type>
@@ -959,7 +840,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MIXTEC</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MOCHE</Type>
@@ -967,7 +847,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MOCHE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MONGOLIAN</Type>
@@ -975,7 +854,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MONGOLIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MOROCCAN</Type>
@@ -983,7 +861,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MOROCCAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MUGHAL</Type>
@@ -991,7 +868,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MUGHAL</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MUTAPA</Type>
@@ -999,7 +875,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MUTAPA</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NAMA</Type>
@@ -1007,7 +882,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NAMA</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NAVAJO</Type>
@@ -1015,7 +889,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NAVAJO</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NAZCA</Type>
@@ -1023,7 +896,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NAZCA</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NEPALESE</Type>
@@ -1031,7 +903,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NEPALESE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NEW_ZEALANDER</Type>
@@ -1039,7 +910,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NEW_ZEALANDER</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NOK</Type>
@@ -1047,7 +917,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NOK</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NOOTKA</Type>
@@ -1055,7 +924,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NOOTKA</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NORWEGIAN</Type>
@@ -1063,7 +931,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NORWEGIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NUBIAN</Type>
@@ -1071,7 +938,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_NUBIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_OLMEC</Type>
@@ -1079,7 +945,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_OLMEC</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_OTTOMAN</Type>
@@ -1087,7 +952,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_OTTOMAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PAKISTANI</Type>
@@ -1095,7 +959,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PAKISTANI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PAPUAN</Type>
@@ -1103,7 +966,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PAPUAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PARTHIAN</Type>
@@ -1111,7 +973,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PARTHIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PERSIAN</Type>
@@ -1119,7 +980,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PERSIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PHOENICIAN</Type>
@@ -1127,7 +987,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PHOENICIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PICTISH</Type>
@@ -1135,7 +994,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PICTISH</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PIMA</Type>
@@ -1143,7 +1001,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PIMA</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_POLISH</Type>
@@ -1151,7 +1008,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_POLISH</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_POLYNESIAN</Type>
@@ -1159,7 +1015,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_POLYNESIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PORTUGUESE</Type>
@@ -1167,7 +1022,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PORTUGUESE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PRUSSIAN</Type>
@@ -1175,7 +1029,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_PRUSSIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QIANG</Type>
@@ -1183,7 +1036,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_QIANG</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QUECHUA</Type>
@@ -1191,7 +1043,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_QUECHUA</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_RAPA_NUI</Type>
@@ -1199,7 +1050,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_RAPA_NUI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_RHODESIAN</Type>
@@ -1207,7 +1057,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_RHODESIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ROMAN</Type>
@@ -1215,7 +1064,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ROMAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ROXOLANI</Type>
@@ -1223,7 +1071,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ROXOLANI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_RUSSIAN</Type>
@@ -1231,7 +1078,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_RUSSIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SAMI</Type>
@@ -1239,7 +1085,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SAMI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SAMOAN</Type>
@@ -1247,7 +1092,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SAMOAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SASSANIAN</Type>
@@ -1255,7 +1099,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SASSANIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SAXON</Type>
@@ -1263,7 +1106,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SAXON</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SCOTTISH</Type>
@@ -1271,7 +1113,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SCOTTISH</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SCYTHIAN</Type>
@@ -1279,7 +1120,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SCYTHIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SEMINOLE</Type>
@@ -1287,7 +1127,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SEMINOLE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SHANG</Type>
@@ -1295,7 +1134,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SHANG</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SIAMESE</Type>
@@ -1303,7 +1141,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SIAMESE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SIBERIAN</Type>
@@ -1311,7 +1148,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SIBERIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SIOUX</Type>
@@ -1319,7 +1155,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SIOUX</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SLOVAKIAN</Type>
@@ -1327,7 +1162,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SLOVAKIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SOMALI</Type>
@@ -1335,7 +1169,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SOMALI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SONGHAI</Type>
@@ -1343,7 +1176,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SONGHAI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SOUTH_AFRICAN</Type>
@@ -1351,7 +1183,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SOUTH_AFRICAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SOVIET</Type>
@@ -1359,7 +1190,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SOVIET</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SPANISH</Type>
@@ -1367,7 +1197,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SPANISH</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SPARTAN</Type>
@@ -1375,7 +1204,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SPARTAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SUMERIAN</Type>
@@ -1383,7 +1211,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SUMERIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SWAHILI</Type>
@@ -1391,7 +1218,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SWAHILI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SWAZI</Type>
@@ -1399,7 +1225,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SWAZI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SWISS</Type>
@@ -1407,7 +1232,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SWISS</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SYRIAN</Type>
@@ -1415,7 +1239,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_SYRIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TAHITIAN</Type>
@@ -1423,7 +1246,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TAHITIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TAIWANESE</Type>
@@ -1431,7 +1253,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TAIWANESE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TAMIL</Type>
@@ -1439,7 +1260,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TAMIL</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TARASCAN</Type>
@@ -1447,7 +1267,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TARASCAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TEXAN</Type>
@@ -1455,7 +1274,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TEXAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_THAI</Type>
@@ -1463,7 +1281,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_THAI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TIBETAN</Type>
@@ -1471,7 +1288,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TIBETAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TIMURID</Type>
@@ -1479,7 +1295,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TIMURID</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TLATILCO</Type>
@@ -1487,7 +1302,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TLATILCO</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TLAXCALTEC</Type>
@@ -1495,7 +1309,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TLAXCALTEC</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TOLTEC</Type>
@@ -1503,7 +1316,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TOLTEC</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TONGAN</Type>
@@ -1511,7 +1323,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TONGAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TROJAN</Type>
@@ -1519,7 +1330,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TROJAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TUAREG</Type>
@@ -1527,7 +1337,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TUAREG</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TUPI</Type>
@@ -1535,7 +1344,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TUPI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TURKMEN</Type>
@@ -1543,7 +1351,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_TURKMEN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_UIGHUR</Type>
@@ -1551,7 +1358,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_UIGHUR</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_VENEZUELAN</Type>
@@ -1559,7 +1365,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_VENEZUELAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_VENETIAN</Type>
@@ -1567,7 +1372,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_VENETIAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_VIETNAMESE</Type>
@@ -1575,7 +1379,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_VIETNAMESE</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_VIKING</Type>
@@ -1583,7 +1386,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_VIKING</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WAYANA</Type>
@@ -1591,7 +1393,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_WAYANA</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WELSH</Type>
@@ -1599,7 +1400,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_WELSH</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_XIONGNU</Type>
@@ -1607,7 +1407,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_XIONGNU</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_YAGHAN</Type>
@@ -1615,7 +1414,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_YAGHAN</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_YAMATO</Type>
@@ -1623,7 +1421,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_YAMATO</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_YANOMAMI</Type>
@@ -1631,7 +1428,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_YANOMAMI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_YEMENI</Type>
@@ -1639,7 +1435,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_YEMENI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ZAPOTEC</Type>
@@ -1647,7 +1442,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ZAPOTEC</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ZULU</Type>
@@ -1655,7 +1449,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ZULU</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ZUNI</Type>
@@ -1663,7 +1456,6 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ZUNI</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ABBASID</Type>
@@ -1673,7 +1465,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ABBASID</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ADENAN</Type>
@@ -1683,7 +1474,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ADENAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AFGHAN</Type>
@@ -1693,7 +1483,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_AFGHAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AKSUMITE</Type>
@@ -1703,7 +1492,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_AKSUMITE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ALACALUFE</Type>
@@ -1713,7 +1501,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ALACALUFE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ALBANIAN</Type>
@@ -1723,7 +1510,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ALBANIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ALEMANNIC</Type>
@@ -1733,7 +1519,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ALEMANNIC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ALGERIAN</Type>
@@ -1743,7 +1528,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ALGERIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AMIS</Type>
@@ -1753,7 +1537,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_AMIS</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ANDAMANESE</Type>
@@ -1763,7 +1546,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ANDAMANESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ANGOLAN</Type>
@@ -1773,7 +1555,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ANGOLAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ARAGONESE</Type>
@@ -1783,7 +1564,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ARAGONESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AVARIC</Type>
@@ -1793,7 +1573,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_AVARIC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ARVERNIAN</Type>
@@ -1803,7 +1582,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ARVERNIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AZANDE</Type>
@@ -1813,7 +1591,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_AZANDE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BAHRAINI</Type>
@@ -1823,7 +1600,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BAHRAINI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BACTRIC</Type>
@@ -1833,7 +1609,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BACTRIC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BANGLADESHI</Type>
@@ -1843,7 +1618,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BANGLADESHI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BASHKIR</Type>
@@ -1853,7 +1627,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BASHKIR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BATAVIAN</Type>
@@ -1863,7 +1636,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BATAVIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BATEK</Type>
@@ -1873,7 +1645,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BATEK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BAVARIAN</Type>
@@ -1883,7 +1654,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BAVARIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BEDOUIN</Type>
@@ -1893,7 +1663,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BEDOUIN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BELIZEAN</Type>
@@ -1903,7 +1672,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BELIZEAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BOLIVIAN</Type>
@@ -1913,7 +1681,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BOLIVIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BRETON</Type>
@@ -1923,7 +1690,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BRETON</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BRITON</Type>
@@ -1933,7 +1699,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BRITON</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_BURGUNDIAN</Type>
@@ -1943,7 +1708,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_BURGUNDIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CAMBEBA</Type>
@@ -1953,7 +1717,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CAMBEBA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CANARI</Type>
@@ -1963,7 +1726,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CANARI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CAPAYAN</Type>
@@ -1973,7 +1735,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CAPAYAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CARAL_SUPE</Type>
@@ -1983,7 +1744,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CARAL_SUPE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CATALONIAN</Type>
@@ -1993,7 +1753,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CATALONIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CELTIBERIAN</Type>
@@ -2003,7 +1762,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CELTIBERIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHACHAPOYA</Type>
@@ -2013,7 +1771,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHACHAPOYA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHAVIN</Type>
@@ -2023,7 +1780,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHAVIN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHECHEN</Type>
@@ -2033,7 +1789,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHECHEN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHILEAN</Type>
@@ -2043,7 +1798,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHILEAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHIMU</Type>
@@ -2053,7 +1807,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHIMU</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KHWARAZMIAN</Type>
@@ -2063,7 +1816,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KHWARAZMIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CZECH</Type>
@@ -2073,7 +1825,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CZECH</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DACIAN</Type>
@@ -2083,7 +1834,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_DACIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DAYAK</Type>
@@ -2093,7 +1843,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_DAYAK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DRAVIDIAN</Type>
@@ -2103,7 +1852,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_DRAVIDIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ECUADORIAN</Type>
@@ -2113,7 +1861,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ECUADORIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ESTONIAN</Type>
@@ -2123,7 +1870,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ESTONIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ETRUSCAN</Type>
@@ -2133,7 +1879,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ETRUSCAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FATIMID</Type>
@@ -2143,7 +1888,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FATIMID</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FLEMISH</Type>
@@ -2153,7 +1897,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FLEMISH</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FUEGIAN</Type>
@@ -2163,7 +1906,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FUEGIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FURAWI</Type>
@@ -2173,7 +1915,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FURAWI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GALATIAN</Type>
@@ -2183,7 +1924,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GALATIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GAUCHO</Type>
@@ -2193,7 +1933,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GAUCHO</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GEORGIAN</Type>
@@ -2203,7 +1942,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GEORGIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GHURID</Type>
@@ -2213,7 +1951,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GHURID</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GOKTURK</Type>
@@ -2223,7 +1960,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GOKTURK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KIPCHAK</Type>
@@ -2233,7 +1969,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KIPCHAK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CHAMORRAN</Type>
@@ -2243,7 +1978,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_CHAMORRAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GUANCHES</Type>
@@ -2253,7 +1987,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GUANCHES</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GUARANI</Type>
@@ -2263,7 +1996,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GUARANI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GUATEMALAN</Type>
@@ -2273,7 +2005,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GUATEMALAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GUYANESE</Type>
@@ -2283,7 +2014,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_GUYANESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HELVETIAN</Type>
@@ -2293,7 +2023,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HELVETIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HEMUDU</Type>
@@ -2303,7 +2032,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HEMUDU</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HIMYARITE</Type>
@@ -2313,7 +2041,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HIMYARITE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HONGKONGER</Type>
@@ -2323,7 +2050,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HONGKONGER</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HOPEWELL</Type>
@@ -2333,7 +2059,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HOPEWELL</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HURRIANS</Type>
@@ -2343,7 +2068,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HURRIANS</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HYKSOSI</Type>
@@ -2353,7 +2077,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HYKSOSI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ILLYRIAN</Type>
@@ -2363,7 +2086,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ILLYRIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ILOCANO</Type>
@@ -2373,7 +2095,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ILOCANO</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_INDUS</Type>
@@ -2383,7 +2104,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_INDUS</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_IRANIAN</Type>
@@ -2393,7 +2113,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_IRANIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_IRAQI</Type>
@@ -2403,7 +2122,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_IRAQI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_JAVANESE</Type>
@@ -2413,7 +2131,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_JAVANESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_JUTE</Type>
@@ -2423,7 +2140,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_JUTE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KENYAN</Type>
@@ -2433,7 +2149,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KENYAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KAZAKH</Type>
@@ -2443,7 +2158,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KAZAKH</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KHAZAR</Type>
@@ -2453,7 +2167,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KHAZAR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KHITAN</Type>
@@ -2463,7 +2176,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KHITAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KILLKE</Type>
@@ -2473,7 +2185,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KILLKE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KITARAN</Type>
@@ -2483,7 +2194,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KITARAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KOGI</Type>
@@ -2493,7 +2203,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KOGI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KURDISH</Type>
@@ -2503,7 +2212,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KURDISH</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KUSHITE</Type>
@@ -2513,7 +2221,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KUSHITE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KUSHAN</Type>
@@ -2523,7 +2230,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KUSHAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_KUWAITI</Type>
@@ -2533,7 +2239,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_KUWAITI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LATVIAN</Type>
@@ -2543,7 +2248,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LATVIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LA_PLATAN</Type>
@@ -2553,7 +2257,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LA_PLATAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LEBANESE</Type>
@@ -2563,7 +2266,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LEBANESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LIBYAN</Type>
@@ -2573,7 +2275,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LIBYAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LITHUANIAN</Type>
@@ -2583,7 +2284,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LITHUANIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LONGOBARDIAN</Type>
@@ -2593,7 +2293,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LONGOBARDIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LULE</Type>
@@ -2603,7 +2302,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LULE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LUNDA</Type>
@@ -2613,7 +2311,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LUNDA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LUSITANIAN</Type>
@@ -2623,7 +2320,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_LUSITANIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MALAGASY</Type>
@@ -2633,7 +2329,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MALAGASY</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MAMELUK</Type>
@@ -2643,7 +2338,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MAMELUK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MANI</Type>
@@ -2653,7 +2347,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MANI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MEDIAN</Type>
@@ -2663,7 +2356,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MEDIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MELANESIAN</Type>
@@ -2673,7 +2365,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MELANESIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MICRONESIAN</Type>
@@ -2683,7 +2374,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MICRONESIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MING</Type>
@@ -2693,7 +2383,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MING</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MITANNI</Type>
@@ -2703,7 +2392,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MITANNI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MOCOVI</Type>
@@ -2713,7 +2401,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MOCOVI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MOHAWK</Type>
@@ -2723,7 +2410,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MOHAWK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MOLLO</Type>
@@ -2733,7 +2419,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MOLLO</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MUISCA</Type>
@@ -2743,7 +2428,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MUISCA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MARIC</Type>
@@ -2753,7 +2437,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_MARIC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NABATEANS</Type>
@@ -2763,7 +2446,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NABATEANS</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NAHUA</Type>
@@ -2773,7 +2455,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NAHUA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NIGERIAN</Type>
@@ -2783,7 +2464,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NIGERIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NOONGAR</Type>
@@ -2793,7 +2473,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NOONGAR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NORMAN</Type>
@@ -2803,7 +2482,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NORMAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_NUMIDIAN</Type>
@@ -2813,7 +2491,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_NUMIDIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ODAWA</Type>
@@ -2823,7 +2500,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ODAWA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_OMANI</Type>
@@ -2833,7 +2509,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_OMANI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_OPHIR</Type>
@@ -2843,7 +2518,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_OPHIR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ORANG_ASLI</Type>
@@ -2853,7 +2527,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ORANG_ASLI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PAIUTE</Type>
@@ -2863,7 +2536,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PAIUTE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PALESTINIAN</Type>
@@ -2873,7 +2545,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PALESTINIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PANAMAN</Type>
@@ -2883,7 +2554,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PANAMAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PARAGUAYAN</Type>
@@ -2893,7 +2563,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PARAGUAYAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PASHTUN</Type>
@@ -2903,7 +2572,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PASHTUN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PERUVIAN</Type>
@@ -2913,7 +2581,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PERUVIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FILIPINO</Type>
@@ -2923,7 +2590,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_FILIPINO</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PHILISTINE</Type>
@@ -2933,7 +2599,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PHILISTINE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PILAGA</Type>
@@ -2943,7 +2608,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PILAGA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_POVERTY_POINT</Type>
@@ -2953,7 +2617,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_POVERTY_POINT</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_POYA</Type>
@@ -2963,7 +2626,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_POYA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PUELCHE</Type>
@@ -2973,7 +2635,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PUELCHE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_PUNTIC</Type>
@@ -2983,7 +2644,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_PUNTIC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QIN</Type>
@@ -2993,7 +2653,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_QIN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QING</Type>
@@ -3003,7 +2662,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_QING</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QUEBECKER</Type>
@@ -3013,7 +2671,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_QUEBECKER</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QUERANDI</Type>
@@ -3023,7 +2680,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_QUERANDI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_QULLA</Type>
@@ -3033,7 +2689,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_QULLA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_RED_OCHER</Type>
@@ -3043,7 +2698,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_RED_OCHER</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SABBATEAN</Type>
@@ -3053,7 +2707,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SABBATEAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SAFAVID</Type>
@@ -3063,7 +2716,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SAFAVID</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SAFFARID</Type>
@@ -3073,7 +2725,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SAFFARID</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SAKA</Type>
@@ -3083,7 +2734,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SAKA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SARMATIAN</Type>
@@ -3093,7 +2743,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SARMATIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SELJUK</Type>
@@ -3103,7 +2752,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SELJUK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SEMANG</Type>
@@ -3113,7 +2761,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SEMANG</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SENEGALI</Type>
@@ -3123,7 +2770,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SENEGALI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SENNAR</Type>
@@ -3133,7 +2779,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SENNAR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SERBIAN</Type>
@@ -3143,7 +2788,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SERBIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SICAN</Type>
@@ -3153,7 +2797,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SICAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SICILIAN</Type>
@@ -3163,7 +2806,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SICILIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SINTASHTA</Type>
@@ -3173,7 +2815,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SINTASHTA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SLOVENIAN</Type>
@@ -3183,7 +2824,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SLOVENIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SUDANESE</Type>
@@ -3193,7 +2833,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SUDANESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SUNDANESE</Type>
@@ -3203,7 +2842,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SUNDANESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SURINAMESE</Type>
@@ -3213,7 +2851,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SURINAMESE</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SWEDISH</Type>
@@ -3223,7 +2860,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SWEDISH</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TAGALOG</Type>
@@ -3233,7 +2869,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TAGALOG</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TAIRONA</Type>
@@ -3243,7 +2878,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TAIRONA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TAJIK</Type>
@@ -3253,7 +2887,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TAJIK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TANG</Type>
@@ -3263,7 +2896,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TANG</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TANZANIAN</Type>
@@ -3273,7 +2905,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TANZANIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TASMANIAN</Type>
@@ -3283,7 +2914,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TASMANIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TATAR</Type>
@@ -3293,7 +2923,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TATAR</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_THRACIAN</Type>
@@ -3303,7 +2932,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_THRACIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_THREE_KINGDOMS</Type>
@@ -3313,7 +2941,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_THREE_KINGDOMS</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TIWI</Type>
@@ -3323,7 +2950,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TIWI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TOBA</Type>
@@ -3333,7 +2959,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TOBA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TOTONAC</Type>
@@ -3343,7 +2968,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TOTONAC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TRANSOXANIAN</Type>
@@ -3353,7 +2977,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TRANSOXANIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TUCANO</Type>
@@ -3363,7 +2986,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TUCANO</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TUNGUS</Type>
@@ -3373,7 +2995,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TUNGUS</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TUNISIAN</Type>
@@ -3383,7 +3004,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TUNISIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TURKISH</Type>
@@ -3393,7 +3013,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_TURKISH</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_UKRAINIAN</Type>
@@ -3403,7 +3022,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_UKRAINIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_URUGUAYAN</Type>
@@ -3413,7 +3031,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_URUGUAYAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_UZBEK</Type>
@@ -3423,7 +3040,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_UZBEK</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_VALDIVIAN</Type>
@@ -3433,7 +3049,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_VALDIVIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_VANUATUAN</Type>
@@ -3443,7 +3058,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_VANUATUAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_VANDAL</Type>
@@ -3453,7 +3067,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_VANDAL</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SAUDI</Type>
@@ -3463,7 +3076,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_SAUDI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WALLACHIAN</Type>
@@ -3473,7 +3085,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_WALLACHIAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WARAY</Type>
@@ -3483,7 +3094,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_WARAY</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WARI</Type>
@@ -3493,7 +3103,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_WARI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WAYUU</Type>
@@ -3503,7 +3112,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_WAYUU</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_XIA</Type>
@@ -3513,7 +3121,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_XIA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_XIANBEI</Type>
@@ -3523,7 +3130,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_XIANBEI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_YAGUA</Type>
@@ -3533,7 +3139,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_YAGUA</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_YOLNGU</Type>
@@ -3543,7 +3148,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_YOLNGU</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ZANZIBARI</Type>
@@ -3553,7 +3157,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ZANZIBARI</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ZENU</Type>
@@ -3563,7 +3166,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ZENU</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_ZIMBABWEAN</Type>
@@ -3573,7 +3175,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_ZIMBABWEAN</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	</BonusInfos>
 </Civ4BonusInfos>

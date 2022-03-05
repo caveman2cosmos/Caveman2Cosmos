@@ -258,11 +258,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_CATHERINE</Tag>
-		<English>
-			<Text>Catherine</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Catherine</English>
 		<German>
 			<Text>Katharina</Text>
 			<Gender>Female</Gender>
@@ -513,11 +509,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ELIZABETH</Tag>
-		<English>
-			<Text>Elizabeth</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Elizabeth</English>
 		<German>Elisabeth</German>
 		<Italian>
 			<Text>Elisabetta</Text>
@@ -747,11 +739,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_HATSHEPSUT</Tag>
-		<English>
-			<Text>Hatshepsut</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Hatshepsut</English>
 		<French>
 			<Text>Hatchepsout</Text>
 			<Gender>Female</Gender>
@@ -804,11 +792,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_ISABELLA</Tag>
-		<English>
-			<Text>Isabella</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Isabella</English>
 		<French>
 			<Text>Isabelle</Text>
 			<Gender>Female</Gender>
@@ -1007,30 +991,25 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEVEL_PROGRESS_1</Tag>
-		<English>National Culture Earned: %d1_Culture</English>
-		<French>Culture Nationale Obtenue: %d1_Culture</French>
-		<German>Bisheriger Kulturzuwachs: %d1_Culture</German>
-		<Italian>Cultura nazionale ottenuta: %d1_Culture</Italian>
-		<Polish>Zdobyta Kultura Narodowa: %d1_Culture</Polish>
-		<Russian>Накоплено Национальной культуры: %d1_Culture</Russian>
+		<English>National Culture[NEWLINE][ICON_BULLET]%s1[ICON_CULTURE]</English>
+		<French>Culture Nationale Obtenue: %s1</French>
+		<German>Bisheriger Kulturzuwachs: %s1</German>
+		<Italian>Cultura nazionale ottenuta: %s1</Italian>
+		<Polish>Zdobyta Kultura Narodowa: %s1</Polish>
+		<Russian>Накоплено Национальной культуры: %s1</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEVEL_PROGRESS_2</Tag>
-		<English>Culture Volume to Achieve Next Level: %d1_Culture</English>
-		<French>Volume de Culture pour le Niveau suivant: %d1_Culture</French>
-		<German>Benötigte Kultur für die nächste Stufe: %d1_Culture</German>
-		<Italian>Cultura da ottenere per raggiungere il prossimo livello: %d1_Culture</Italian>
-		<Polish>Potrzebna Kultura do Następnego Poziomu: %d1_Culture</Polish>
-		<Russian>Уров. культуры для достижения след. уровня: %d1_Culture</Russian>
+		<English>[ICON_BULLET]%s1[ICON_CULTURE] (Level %d2)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LEVEL_PROGRESS_3</Tag>
-		<English>Still Requires: %d1_Culture to Select a New Trait</English>
-		<French>Requiert: %d1_Culture pour Choisir un nouveau Trait</French>
-		<German>Bis zur Auswahl einer neuen Eigenschaft [NUM1:wird:werden] noch %d1_Culture [ICON_CULTURE] benötigt.</German>
-		<Italian>Richiede %d1_Culture per selezionare un nuovo tratto</Italian>
-		<Polish>Wymaga: %d1_Culture do Wyboru Nowej Cechy</Polish>
-		<Russian>Требуется еще: %d1_Culture до выбора новой черты</Russian>
+		<English>[ICON_BULLET]%s1[ICON_CULTURE] (Remaining)</English>
+		<French>Requiert: %s1 pour Choisir un nouveau Trait</French>
+		<German>Bis zur Auswahl einer neuen Eigenschaft [NUM1:wird:werden] noch %s1 [ICON_CULTURE] benötigt.</German>
+		<Italian>Richiede %s1 per selezionare un nuovo tratto</Italian>
+		<Polish>Wymaga: %s1 do Wyboru Nowej Cechy</Polish>
+		<Russian>Требуется еще: %s1 до выбора новой черты</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_LINCOLN</Tag>
@@ -1801,11 +1780,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_VICTORIA</Tag>
-		<English>
-			<Text>Victoria</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Victoria</English>
 		<German>Viktoria</German>
 		<Italian>
 			<Text>Vittoria</Text>

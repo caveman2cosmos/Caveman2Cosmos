@@ -822,7 +822,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_HABITATION_COMPLEX_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Lunar equivalent of suburbs</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_MINE</Tag>
@@ -1169,18 +1169,6 @@
 		<English>Capture an asteroid</English>
 		<French>Capturer un astéroïde</French>
 		<Russian>Çàõâàò àñòåðîèäà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Tag>
-		<English>Become Bulldozer</English>
-		<French>Convertir en Bulldozer</French>
-		<Russian>Ñáîðêà Êîìáàéíà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Tag>
-		<English>Transforms the Construction Ship into a Bulldozer to connect resources to your city on the moon.</English>
-		<French>Transforme le Vaisseau Spatial en Bulldozer pour connecter des ressources à votre ville sur la lune.</French>
-		<Russian>Ïðåâðàùàåò êîðàáëü ñíàáæåíèÿ â áóëüäîçåð, ÷òîáû ñîåäèíèòü ìåñòîðîæäåíèÿ ðåñóðñîâ ñ âàøèì ãîðîäîì èëè êîëîíèåé íà Ëóíå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_ANCIENT_CIVILIZATION</Tag>
@@ -1626,66 +1614,6 @@
 		<Russian>Àíàëèç äàííûõ ìèññèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_UPGRADE_CISLUNAR_SETTLER</Tag>
-		<English>Upgrade to Cislunar Settler</English>
-		<French>Colon Upgrade to Cislunar</French>
-		<Russian>Óëó÷. äî ëóí. ïîñåëåíöà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_UPGRADE_CISLUNAR_SETTLER_HELP</Tag>
-		<English>Upgrade to a Cislunar Settler</English>
-		<French>Colon Upgrade to a Cislunar</French>
-		<Russian>Óëó÷øèòü äî ëóííîãî ïîñåëåíöà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_UPGRADE_LUNAR_SETTLER</Tag>
-		<English>Upgrade to Lunar Settler</English>
-		<French>Colon Upgrade to Lunar</French>
-		<Russian>Óëó÷. äî ëóí. êîëîíèñòà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_UPGRADE_LUNAR_SETTLER_HELP</Tag>
-		<English>Upgrade to a Lunar Settler</English>
-		<French>Colon Upgrade to a Lunar</French>
-		<Russian>Óëó÷øèòü äî ëóííîãî êîëîíèñòà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_UPGRADE_PLANET_SETTLER</Tag>
-		<English>Upgrade to Planetary Settler</English>
-		<French>Colon Upgrade to Planetary</French>
-		<Russian>Óëó÷. äî ïëàíåò. êîëîíèñòà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_UPGRADE_PLANET_SETTLER_HELP</Tag>
-		<English>Upgrade to a Planetary Settler</English>
-		<French>Colon Upgrade to a Planetary</French>
-		<Russian>Óëó÷øåíèå äî ïëàíåòàðíîãî êîëîíèñòà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_UPGRADE_SS2</Tag>
-		<English>Upgrade Space Station to Level 2</English>
-		<French>Upgrade Station spatiale to Level 2</French>
-		<Russian>Óñîâ. êîñì. ñòàíöèþ (óð.2)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_UPGRADE_SS2_HELP</Tag>
-		<English>Upgrade the Space Station</English>
-		<French>Upgrade the Station spatiale</French>
-		<Russian>Óñîâåðø. êîñì. ñòàíöèþ </Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_UPGRADE_SS3</Tag>
-		<English>Upgrade Space Station to Level 3</English>
-		<French>Upgrade Station spatiale to Level 3</French>
-		<Russian>Óñîâ. êîñì. ñòàíöèþ (óð.3)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_UPGRADE_SS3_HELP</Tag>
-		<English>Upgrade the Space Station</English>
-		<French>Upgrade the Station spatiale</French>
-		<Russian>Óñîâåðø. êîñì. ñòàíöèþ </Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_CAPTURE_ASTEROID</Tag>
 		<English>Do Research Mission</English>
 		<French>Faire une Mission de Recherche</French>
@@ -2022,78 +1950,6 @@
 		<Russian>Àíàëèç çàâåðøåí!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_CISLUNAR_SETTLER</Tag>
-		<English>Found a City</English>
-		<French>Fonder une Ville</French>
-		<Russian>Ñòðîèòü ãîðîä</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_CISLUNAR_SETTLER_MESSAGE</Tag>
-		<English>Ready to Colonize!</English>
-		<French>Prêt à Coloniser !</French>
-		<Russian>Ãîòîâû ê êîëîíèçàöèè!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_LUNAR_SETTLER</Tag>
-		<English>Found a City</English>
-		<French>Fonder une Ville</French>
-		<Russian>Ñòðîèòü ãîðîä</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_LUNAR_SETTLER_MESSAGE</Tag>
-		<English>Ready to Colonize!</English>
-		<French>Prêt à Coloniser !</French>
-		<Russian>Ãîòîâû ê êîëîíèçàöèè!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_PLANET_SETTLER</Tag>
-		<English>Found a City</English>
-		<French>Fonder une Ville</French>
-		<Russian>Ñòðîèòü ãîðîä</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_PLANET_SETTLER_MESSAGE</Tag>
-		<English>Ready to Colonize!</English>
-		<French>Prêt à Coloniser !</French>
-		<Russian>Ãîòîâû ê êîëîíèçàöèè!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_SS2</Tag>
-		<English>Upgrade Space Station</English>
-		<French>Upgrade Station spatiale</French>
-		<Russian>Óëó÷ø. êîñì. ñòàíöèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_SS2_MESSAGE</Tag>
-		<English>Mission Successful!</English>
-		<French>Mission Réussie !</French>
-		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_SS3</Tag>
-		<English>Upgrade Space Station</English>
-		<French>Upgrade Station spatiale</French>
-		<Russian>Óëó÷ø. êîñì. ñòàíöèè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_SS3_MESSAGE</Tag>
-		<English>Mission Successful!</English>
-		<French>Mission Réussie !</French>
-		<Russian>Ìèññèÿ âûïîëíåíà!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER</Tag>
-		<English>Will transform the Construction Ship into a Bulldozer.</English>
-		<French>Va Transformer le Vaisseau Spatial en Bulldozer.</French>
-		<Russian>Ïðåâðàòèò êîðàáëü ñíàáæåíèÿ â êîìáàéí.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER_MESSAGE</Tag>
-		<English>Your Construction Ship was transformed into a Bulldozer.</English>
-		<French>Votre Vaisseau Spatial a été transformé en Bulldozer.</French>
-		<Russian>Ïðåâðàòèò êîðàáëü ñíàáæåíèÿ â êîìáàéí.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_PLANET_SETTLER</Tag>
 		<English>Found a City</English>
 		<French>Fonder une Ville</French>
@@ -2315,7 +2171,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Tag>
-		<English>Space worker used to build earliest improvements on Moon, Mars and Venus.[NEWLINE]It also can be transformed to [LINK=UNIT_LUNAR_BULLDOZER]Lunar Bulldozer[\LINK] at [LINK=TECH_LUNAR_BASES]Lunar Bases[\LINK] to build lunar mines and route.</English>
+		<English>Space worker used to build earliest improvements on Moon, Mars and Venus. [LINK=UNIT_LUNAR_BULLDOZER]Lunar Bulldozer[\LINK] at [LINK=TECH_LUNAR_COLONIZATION]Lunar Colonization[\LINK] is early unit dedicated to resource extraction.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORKER</Tag>
@@ -2445,7 +2301,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Tag>
-		<English>This heavy, commercially-developed rocket is an upgrade to your old space shuttles.[NEWLINE]Upgrades to a Cislunar, Lunar, Planetary settler on Space Station Lv. 3 at [LINK=TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS]Advanced Environmental Systems[\LINK], [LINK=TECH_LUNAR_COLONIZATION]Lunar Colonization[\LINK], [LINK=TECH_PLANETARY_COLONIZATION]Planetary Colonization[\LINK] respectively</English>
+		<English>This heavy, commercially-developed rocket is an upgrade to your old space shuttles.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW</Tag>
@@ -2669,7 +2525,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNARSETTLER_HELP</Tag>
-		<English>[ICON_BULLET]Can build cities on the Moon [NEWLINE]Can settle only on [LINK=IMPROVEMENT_LUNAR_OUTPOST]Lunar Oupost[\LINK] and [LINK=IMPROVEMENT_LUNAR_HABITATION_COMPLEX]Lunar Habitation Complex[\LINK] improvements.</English>
+		<English>[ICON_BULLET]Can build cities on the Moon.</English>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Ïîäñêàçêà: [COLOR_REVERT]Ìîæåò ñòðîèòü ãîðîäà íà ëóííîé ïîâåðõíîñòè</Russian>
 	</TEXT>
 	<TEXT>

@@ -247,8 +247,6 @@
 			<StateReligionCommerces>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
 			</StateReligionCommerces>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -694,7 +692,6 @@
 			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
 			<FreeBuilding>BUILDING_CARPOOL_EFFECT</FreeBuilding>
-			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CARPOOL</ArtDefineTag>
@@ -1216,7 +1213,6 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1345</iCost>
 			<FreeBuilding>BUILDING_CLEANAIR_ACT_EFFECT</FreeBuilding>
-			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CLEANAIR_ACT</ArtDefineTag>
@@ -1260,7 +1256,6 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1345</iCost>
 			<FreeBuilding>BUILDING_CLEANWATER_ACT_EFFECT</FreeBuilding>
-			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CLEANWATER_ACT</ArtDefineTag>
@@ -2970,7 +2965,7 @@
 			<iHappiness>-2</iHappiness>
 			<YieldChanges>
 				<iYield>0</iYield>
-				<iYield>1</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -3283,7 +3278,6 @@
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>-3</iCommerce>
-				<iCommerce>0</iCommerce>
 			</CommerceModifiers>
 			<iInsidiousness>20</iInsidiousness>
 			<UnitCombatFreeExperiences>
@@ -5012,12 +5006,16 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WELFARE_OFFICE</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqAndCivics>
+			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_SOCIALIZED</CivicOption>
 					<bPrereqCivic>1</bPrereqCivic>
 				</PrereqCivic>
-			</PrereqAndCivics>
+				<PrereqCivic>
+					<CivicOption>CIVIC_ECO_FRIENDLY</CivicOption>
+					<bPrereqCivic>1</bPrereqCivic>
+				</PrereqCivic>
+			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 			<iInsidiousness>1</iInsidiousness>
 			<iHappiness>-1</iHappiness>
@@ -5458,7 +5456,6 @@
 			<YieldModifiers>
 				<iYield>-2</iYield>
 				<iYield>-3</iYield>
-				<iYield>0</iYield>
 			</YieldModifiers>
 			<PropertyManipulators>
 				<PropertySource>
@@ -5485,7 +5482,6 @@
 			<YieldModifiers>
 				<iYield>-1</iYield>
 				<iYield>-2</iYield>
-				<iYield>0</iYield>
 			</YieldModifiers>
 			<BonusHealthChanges>
 				<BonusHealthChange>
@@ -5679,40 +5675,40 @@
 				<TechCommerceChange>
 					<TechType>TECH_WEARABLE_COMPUTERS</TechType>
 					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_DIGITIZATION</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_CYBERWARFARE</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_AUTOMATED_TRAFFIC</TechType>
 					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>900</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_WAR_SIMULATIONS</TechType>
 					<CommercePercents>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
 					<TechType>TECH_ONLINE_COMMUNITY</TechType>
 					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>800</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -5809,9 +5805,9 @@
 			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
 			<iHappinessPercentPerPopulation>5</iHappinessPercentPerPopulation>
 			<YieldChanges>
-				<iYield>2</iYield>
-				<iYield>2</iYield>
-				<iYield>2</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
+				<iYield>3</iYield>
 			</YieldChanges>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -5867,11 +5863,7 @@
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>1345</iCost>
-			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
-			</CommerceChanges>
 			<FreeBuilding>BUILDING_EMISSION_ACT_EFFECT</FreeBuilding>
-			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_EMISSION_ACT</ArtDefineTag>
@@ -6517,198 +6509,20 @@
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS10</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS10</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>-5</iYield>
-				<iYield>-5</iYield>
-			</YieldModifiers>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
-			</CommerceChanges>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
-			</CommerceModifiers>
-			<iFreeSpecialist>-1</iFreeSpecialist>
-			<iGreatPeopleRateModifier>-19</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>-1</iGreatGeneralRateModifier>
-			<iWarWearinessModifier>-10</iWarWearinessModifier>
-			<iTradeRouteModifier>-10</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>-10</iPopulationgrowthratepercentage>
-			<Properties>
-				<Property>
-					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>5</iPropertyValue>
-				</Property>
-			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<iConquestProb>100</iConquestProb>
-			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS11</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS11</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>-5</iYield>
-				<iYield>-5</iYield>
-			</YieldModifiers>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-6</iCommerce>
-			</CommerceChanges>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
-			</CommerceModifiers>
-			<iGreatPeopleRateModifier>-21</iGreatPeopleRateModifier>
-			<iWarWearinessModifier>-12</iWarWearinessModifier>
-			<iTradeRouteModifier>-11</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>-10</iPopulationgrowthratepercentage>
-			<Properties>
-				<Property>
-					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>6</iPropertyValue>
-				</Property>
-			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>11</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>11</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<iConquestProb>100</iConquestProb>
-			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS12</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS12</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_COSMIC_LIFESTYLE</PrereqTech>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>-5</iYield>
-				<iYield>-5</iYield>
-			</YieldModifiers>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-6</iCommerce>
-			</CommerceChanges>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
-			</CommerceModifiers>
-			<iFreeSpecialist>-1</iFreeSpecialist>
-			<iGreatPeopleRateModifier>-25</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>-1</iGreatGeneralRateModifier>
-			<iWarWearinessModifier>-15</iWarWearinessModifier>
-			<iTradeRouteModifier>-12</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>-10</iPopulationgrowthratepercentage>
-			<Properties>
-				<Property>
-					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>6</iPropertyValue>
-				</Property>
-			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>12</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>12</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<iConquestProb>100</iConquestProb>
-			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS13</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS13</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_TRANSCENDENT_LIFESTYLE</PrereqTech>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>-5</iYield>
-				<iYield>-5</iYield>
-			</YieldModifiers>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-7</iCommerce>
-			</CommerceChanges>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
-			</CommerceModifiers>
-			<iGreatPeopleRateModifier>-30</iGreatPeopleRateModifier>
-			<iWarWearinessModifier>-20</iWarWearinessModifier>
-			<iTradeRouteModifier>-13</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>-10</iPopulationgrowthratepercentage>
-			<Properties>
-				<Property>
-					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>7</iPropertyValue>
-				</Property>
-			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>13</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>13</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<iConquestProb>100</iConquestProb>
-			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_MINUS2</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS3</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS4</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS2</Type>
@@ -6720,44 +6534,57 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>-5</iYield>
-				<iYield>-5</iYield>
+				<iYield>-10</iYield>
+				<iYield>-10</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-1</iCommerce>
+				<iCommerce>-2</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-10</iCommerce>
 			</CommerceModifiers>
 			<iFreeSpecialist>-1</iFreeSpecialist>
-			<iGreatPeopleRateModifier>-3</iGreatPeopleRateModifier>
+			<iGreatPeopleRateModifier>-4</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>-1</iGreatGeneralRateModifier>
-			<iWarWearinessModifier>-1</iWarWearinessModifier>
-			<iTradeRouteModifier>-2</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>-10</iPopulationgrowthratepercentage>
+			<iWarWearinessModifier>-2</iWarWearinessModifier>
+			<iTradeRouteModifier>-3</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>-20</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>1</iPropertyValue>
+					<iPropertyValue>2</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>2</iAmountPerTurn>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_MINUS3</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS4</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS3</Type>
@@ -6769,42 +6596,56 @@
 			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>-5</iYield>
-				<iYield>-5</iYield>
+				<iYield>-15</iYield>
+				<iYield>-15</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>-4</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-15</iCommerce>
 			</CommerceModifiers>
-			<iGreatPeopleRateModifier>-5</iGreatPeopleRateModifier>
-			<iWarWearinessModifier>-2</iWarWearinessModifier>
-			<iTradeRouteModifier>-3</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>-10</iPopulationgrowthratepercentage>
+			<iFreeSpecialist>-1</iFreeSpecialist>
+			<iGreatPeopleRateModifier>-9</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>-1</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>-4</iWarWearinessModifier>
+			<iTradeRouteModifier>-6</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>-30</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>2</iPropertyValue>
+					<iPropertyValue>4</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
+					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>3</iAmountPerTurn>
+					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_MINUS4</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS4</Type>
@@ -6816,44 +6657,55 @@
 			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>-5</iYield>
-				<iYield>-5</iYield>
+				<iYield>-20</iYield>
+				<iYield>-20</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-2</iCommerce>
+				<iCommerce>-6</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-20</iCommerce>
 			</CommerceModifiers>
-			<iFreeSpecialist>-1</iFreeSpecialist>
-			<iGreatPeopleRateModifier>-7</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>-1</iGreatGeneralRateModifier>
-			<iWarWearinessModifier>-2</iWarWearinessModifier>
-			<iTradeRouteModifier>-4</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>-10</iPopulationgrowthratepercentage>
+			<iFreeSpecialist>-2</iFreeSpecialist>
+			<iGreatPeopleRateModifier>-16</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>-2</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>-6</iWarWearinessModifier>
+			<iTradeRouteModifier>-10</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>-40</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>2</iPropertyValue>
+					<iPropertyValue>6</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>4</iAmountPerTurn>
+					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>4</iAmountPerTurn>
+					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_MINUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS5</Type>
@@ -6865,42 +6717,54 @@
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>-5</iYield>
-				<iYield>-5</iYield>
+				<iYield>-25</iYield>
+				<iYield>-25</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-3</iCommerce>
+				<iCommerce>-9</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-25</iCommerce>
 			</CommerceModifiers>
-			<iGreatPeopleRateModifier>-9</iGreatPeopleRateModifier>
-			<iWarWearinessModifier>-4</iWarWearinessModifier>
-			<iTradeRouteModifier>-5</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>-10</iPopulationgrowthratepercentage>
+			<iFreeSpecialist>-2</iFreeSpecialist>
+			<iGreatPeopleRateModifier>-25</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>-2</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>-10</iWarWearinessModifier>
+			<iTradeRouteModifier>-15</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>-50</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>3</iPropertyValue>
+					<iPropertyValue>9</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>15</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>5</iAmountPerTurn>
+					<iAmountPerTurn>15</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_MINUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS6</Type>
@@ -6912,44 +6776,53 @@
 			<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>-5</iYield>
-				<iYield>-5</iYield>
+				<iYield>-30</iYield>
+				<iYield>-30</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-3</iCommerce>
+				<iCommerce>-12</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-30</iCommerce>
 			</CommerceModifiers>
-			<iFreeSpecialist>-1</iFreeSpecialist>
-			<iGreatPeopleRateModifier>-11</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>-1</iGreatGeneralRateModifier>
-			<iWarWearinessModifier>-6</iWarWearinessModifier>
-			<iTradeRouteModifier>-6</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>-10</iPopulationgrowthratepercentage>
+			<iFreeSpecialist>-3</iFreeSpecialist>
+			<iGreatPeopleRateModifier>-36</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>-3</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>-16</iWarWearinessModifier>
+			<iTradeRouteModifier>-21</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>-60</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>3</iPropertyValue>
+					<iPropertyValue>12</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>6</iAmountPerTurn>
+					<iAmountPerTurn>21</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>6</iAmountPerTurn>
+					<iAmountPerTurn>21</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_MINUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS7</Type>
@@ -6961,42 +6834,52 @@
 			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>-5</iYield>
-				<iYield>-5</iYield>
+				<iYield>-35</iYield>
+				<iYield>-35</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-4</iCommerce>
+				<iCommerce>-16</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-35</iCommerce>
 			</CommerceModifiers>
-			<iGreatPeopleRateModifier>-13</iGreatPeopleRateModifier>
-			<iWarWearinessModifier>-7</iWarWearinessModifier>
-			<iTradeRouteModifier>-7</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>-10</iPopulationgrowthratepercentage>
+			<iFreeSpecialist>-3</iFreeSpecialist>
+			<iGreatPeopleRateModifier>-49</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>-3</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>-23</iWarWearinessModifier>
+			<iTradeRouteModifier>-28</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>-70</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>4</iPropertyValue>
+					<iPropertyValue>16</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>7</iAmountPerTurn>
+					<iAmountPerTurn>28</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>7</iAmountPerTurn>
+					<iAmountPerTurn>28</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS8</Type>
@@ -7008,44 +6891,51 @@
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>-5</iYield>
-				<iYield>-5</iYield>
+				<iYield>-40</iYield>
+				<iYield>-40</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-4</iCommerce>
+				<iCommerce>-20</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-40</iCommerce>
 			</CommerceModifiers>
-			<iFreeSpecialist>-1</iFreeSpecialist>
-			<iGreatPeopleRateModifier>-15</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>-1</iGreatGeneralRateModifier>
-			<iWarWearinessModifier>-8</iWarWearinessModifier>
-			<iTradeRouteModifier>-8</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>-10</iPopulationgrowthratepercentage>
+			<iFreeSpecialist>-4</iFreeSpecialist>
+			<iGreatPeopleRateModifier>-64</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>-4</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>-31</iWarWearinessModifier>
+			<iTradeRouteModifier>-36</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>-80</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>4</iPropertyValue>
+					<iPropertyValue>20</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>8</iAmountPerTurn>
+					<iAmountPerTurn>36</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>8</iAmountPerTurn>
+					<iAmountPerTurn>36</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_MINUS9</Type>
@@ -7057,37 +6947,253 @@
 			<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>-5</iYield>
-				<iYield>-5</iYield>
+				<iYield>-45</iYield>
+				<iYield>-45</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-25</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>-5</iCommerce>
+				<iCommerce>-45</iCommerce>
 			</CommerceModifiers>
-			<iGreatPeopleRateModifier>-17</iGreatPeopleRateModifier>
-			<iWarWearinessModifier>-9</iWarWearinessModifier>
-			<iTradeRouteModifier>-9</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>-10</iPopulationgrowthratepercentage>
+			<iFreeSpecialist>-4</iFreeSpecialist>
+			<iGreatPeopleRateModifier>-81</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>-4</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>-40</iWarWearinessModifier>
+			<iTradeRouteModifier>-45</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>-90</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>5</iPropertyValue>
+					<iPropertyValue>25</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>9</iAmountPerTurn>
+					<iAmountPerTurn>45</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>9</iAmountPerTurn>
+					<iAmountPerTurn>45</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_MINUS10</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_MINUS10</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>-50</iYield>
+				<iYield>-50</iYield>
+			</YieldModifiers>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>-30</iCommerce>
+			</CommerceChanges>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>-50</iCommerce>
+			</CommerceModifiers>
+			<iFreeSpecialist>-5</iFreeSpecialist>
+			<iGreatPeopleRateModifier>-100</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>-5</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>-50</iWarWearinessModifier>
+			<iTradeRouteModifier>-55</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>-100</iPopulationgrowthratepercentage>
+			<Properties>
+				<Property>
+					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
+					<iPropertyValue>30</iPropertyValue>
+				</Property>
+			</Properties>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>55</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>55</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_MINUS11</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_MINUS11</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>-55</iYield>
+				<iYield>-55</iYield>
+			</YieldModifiers>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>-36</iCommerce>
+			</CommerceChanges>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>-55</iCommerce>
+			</CommerceModifiers>
+			<iFreeSpecialist>-5</iFreeSpecialist>
+			<iGreatPeopleRateModifier>-121</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>-5</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>-62</iWarWearinessModifier>
+			<iTradeRouteModifier>-66</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>-110</iPopulationgrowthratepercentage>
+			<Properties>
+				<Property>
+					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
+					<iPropertyValue>36</iPropertyValue>
+				</Property>
+			</Properties>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>66</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>66</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_MINUS12</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_MINUS12</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqTech>TECH_COSMIC_LIFESTYLE</PrereqTech>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>-60</iYield>
+				<iYield>-60</iYield>
+			</YieldModifiers>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>-42</iCommerce>
+			</CommerceChanges>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>-60</iCommerce>
+			</CommerceModifiers>
+			<iFreeSpecialist>-6</iFreeSpecialist>
+			<iGreatPeopleRateModifier>-146</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>-6</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>-77</iWarWearinessModifier>
+			<iTradeRouteModifier>-78</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>-120</iPopulationgrowthratepercentage>
+			<Properties>
+				<Property>
+					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
+					<iPropertyValue>42</iPropertyValue>
+				</Property>
+			</Properties>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>78</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>78</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_MINUS13</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_MINUS13</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqTech>TECH_TRANSCENDENT_LIFESTYLE</PrereqTech>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>-65</iYield>
+				<iYield>-65</iYield>
+			</YieldModifiers>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>-49</iCommerce>
+			</CommerceChanges>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>-65</iCommerce>
+			</CommerceModifiers>
+			<iFreeSpecialist>-6</iFreeSpecialist>
+			<iGreatPeopleRateModifier>-176</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>-6</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>-97</iWarWearinessModifier>
+			<iTradeRouteModifier>-91</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>-130</iPopulationgrowthratepercentage>
+			<Properties>
+				<Property>
+					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
+					<iPropertyValue>49</iPropertyValue>
+				</Property>
+			</Properties>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>91</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>91</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
@@ -7108,66 +7214,20 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS10</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS10</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PALACE</BuildingType>
-			</PrereqInCityBuildings>
-			<iAnarchyModifier>-5</iAnarchyModifier>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS11</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS11</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PALACE</BuildingType>
-			</PrereqInCityBuildings>
-			<iAnarchyModifier>-5</iAnarchyModifier>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS12</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS12</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PALACE</BuildingType>
-			</PrereqInCityBuildings>
-			<iAnarchyModifier>-5</iAnarchyModifier>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS13</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS13</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PALACE</BuildingType>
-			</PrereqInCityBuildings>
-			<iAnarchyModifier>-5</iAnarchyModifier>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_MINUS2</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS3</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS4</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS2</Type>
@@ -7179,10 +7239,23 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>-5</iAnarchyModifier>
+			<iAnarchyModifier>-10</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_MINUS3</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS4</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS3</Type>
@@ -7194,10 +7267,22 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>-5</iAnarchyModifier>
+			<iAnarchyModifier>-15</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_MINUS4</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS4</Type>
@@ -7209,10 +7294,21 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>-5</iAnarchyModifier>
+			<iAnarchyModifier>-20</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_MINUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS5</Type>
@@ -7224,10 +7320,20 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>-5</iAnarchyModifier>
+			<iAnarchyModifier>-25</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_MINUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS6</Type>
@@ -7239,10 +7345,19 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>-5</iAnarchyModifier>
+			<iAnarchyModifier>-30</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_MINUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS7</Type>
@@ -7254,10 +7369,18 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>-5</iAnarchyModifier>
+			<iAnarchyModifier>-35</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS8</Type>
@@ -7269,10 +7392,17 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>-5</iAnarchyModifier>
+			<iAnarchyModifier>-40</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_MINUS9</Type>
@@ -7284,7 +7414,85 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>-5</iAnarchyModifier>
+			<iAnarchyModifier>-45</iAnarchyModifier>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_NAT_MINUS10</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS10</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
+			<iAnarchyModifier>-50</iAnarchyModifier>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_NAT_MINUS11</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS11</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
+			<iAnarchyModifier>-55</iAnarchyModifier>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_NAT_MINUS12</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS12</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
+			<iAnarchyModifier>-60</iAnarchyModifier>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_NAT_MINUS13</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS13</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
+			<iAnarchyModifier>-65</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
@@ -7303,70 +7511,20 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS10</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS10</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PALACE</BuildingType>
-			</PrereqInCityBuildings>
-			<iAnarchyModifier>5</iAnarchyModifier>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS11</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS11</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PALACE</BuildingType>
-			</PrereqInCityBuildings>
-			<iAnarchyModifier>5</iAnarchyModifier>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS12</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS12</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_COSMIC_LIFESTYLE</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PALACE</BuildingType>
-			</PrereqInCityBuildings>
-			<iAnarchyModifier>5</iAnarchyModifier>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS13</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS13</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_TRANSCENDENT_LIFESTYLE</PrereqTech>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PALACE</BuildingType>
-			</PrereqInCityBuildings>
-			<iAnarchyModifier>5</iAnarchyModifier>
-			<bNukeImmune>1</bNukeImmune>
-			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_PLUS2</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS3</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS4</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS2</Type>
@@ -7375,14 +7533,26 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>5</iAnarchyModifier>
+			<iAnarchyModifier>10</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_PLUS3</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS4</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS3</Type>
@@ -7391,14 +7561,25 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>5</iAnarchyModifier>
+			<iAnarchyModifier>15</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_PLUS4</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS4</Type>
@@ -7407,14 +7588,24 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS4</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>5</iAnarchyModifier>
+			<iAnarchyModifier>20</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_PLUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS5</Type>
@@ -7423,14 +7614,23 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS5</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>5</iAnarchyModifier>
+			<iAnarchyModifier>25</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_PLUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS6</Type>
@@ -7439,14 +7639,22 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS6</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>5</iAnarchyModifier>
+			<iAnarchyModifier>30</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS7</Type>
@@ -7455,14 +7663,21 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS7</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>5</iAnarchyModifier>
+			<iAnarchyModifier>35</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS8</Type>
@@ -7471,14 +7686,20 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS8</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>5</iAnarchyModifier>
+			<iAnarchyModifier>40</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_NAT_PLUS9</Type>
@@ -7487,11 +7708,88 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS9</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<iAnarchyModifier>5</iAnarchyModifier>
+			<iAnarchyModifier>45</iAnarchyModifier>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_NAT_PLUS10</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS10</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
+			<iAnarchyModifier>50</iAnarchyModifier>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_NAT_PLUS11</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS11</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
+			<iAnarchyModifier>55</iAnarchyModifier>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_NAT_PLUS12</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS12</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
+			<iAnarchyModifier>60</iAnarchyModifier>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_NAT_PLUS13</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS13</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+			</PrereqInCityBuildings>
+			<iAnarchyModifier>65</iAnarchyModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
@@ -7541,198 +7839,20 @@
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS10</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS10</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
-			</YieldModifiers>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
-			</CommerceChanges>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
-			</CommerceModifiers>
-			<iFreeSpecialist>1</iFreeSpecialist>
-			<iGreatPeopleRateModifier>19</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>1</iGreatGeneralRateModifier>
-			<iWarWearinessModifier>10</iWarWearinessModifier>
-			<iTradeRouteModifier>10</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
-			<Properties>
-				<Property>
-					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>-5</iPropertyValue>
-				</Property>
-			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-10</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-10</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<iConquestProb>100</iConquestProb>
-			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS11</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS11</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
-			</YieldModifiers>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>6</iCommerce>
-			</CommerceChanges>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
-			</CommerceModifiers>
-			<iGreatPeopleRateModifier>21</iGreatPeopleRateModifier>
-			<iWarWearinessModifier>12</iWarWearinessModifier>
-			<iTradeRouteModifier>11</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
-			<Properties>
-				<Property>
-					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>-6</iPropertyValue>
-				</Property>
-			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-11</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-11</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<iConquestProb>100</iConquestProb>
-			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS12</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS12</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_COSMIC_LIFESTYLE</PrereqTech>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
-			</YieldModifiers>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>6</iCommerce>
-			</CommerceChanges>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
-			</CommerceModifiers>
-			<iFreeSpecialist>1</iFreeSpecialist>
-			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>1</iGreatGeneralRateModifier>
-			<iWarWearinessModifier>15</iWarWearinessModifier>
-			<iTradeRouteModifier>12</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
-			<Properties>
-				<Property>
-					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>-6</iPropertyValue>
-				</Property>
-			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-12</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-12</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<iConquestProb>100</iConquestProb>
-			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS13</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS13</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
-			<PrereqTech>TECH_TRANSCENDENT_LIFESTYLE</PrereqTech>
-			<YieldModifiers>
-				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
-			</YieldModifiers>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>7</iCommerce>
-			</CommerceChanges>
-			<CommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
-			</CommerceModifiers>
-			<iGreatPeopleRateModifier>30</iGreatPeopleRateModifier>
-			<iWarWearinessModifier>20</iWarWearinessModifier>
-			<iTradeRouteModifier>13</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
-			<Properties>
-				<Property>
-					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>-7</iPropertyValue>
-				</Property>
-			</Properties>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-13</iAmountPerTurn>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-13</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
-			<iConquestProb>100</iConquestProb>
-			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_PLUS2</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS3</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS4</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS2</Type>
@@ -7744,44 +7864,57 @@
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>10</iYield>
+				<iYield>10</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>10</iCommerce>
 			</CommerceModifiers>
 			<iFreeSpecialist>1</iFreeSpecialist>
-			<iGreatPeopleRateModifier>3</iGreatPeopleRateModifier>
+			<iGreatPeopleRateModifier>4</iGreatPeopleRateModifier>
 			<iGreatGeneralRateModifier>1</iGreatGeneralRateModifier>
-			<iWarWearinessModifier>1</iWarWearinessModifier>
-			<iTradeRouteModifier>2</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
+			<iWarWearinessModifier>2</iWarWearinessModifier>
+			<iTradeRouteModifier>3</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>20</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>-1</iPropertyValue>
+					<iPropertyValue>-2</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-2</iAmountPerTurn>
+					<iAmountPerTurn>-3</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-2</iAmountPerTurn>
+					<iAmountPerTurn>-3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_PLUS3</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS4</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS3</Type>
@@ -7793,42 +7926,56 @@
 			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>15</iYield>
+				<iYield>15</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>4</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>15</iCommerce>
 			</CommerceModifiers>
-			<iGreatPeopleRateModifier>5</iGreatPeopleRateModifier>
-			<iWarWearinessModifier>2</iWarWearinessModifier>
-			<iTradeRouteModifier>3</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
+			<iFreeSpecialist>1</iFreeSpecialist>
+			<iGreatPeopleRateModifier>9</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>1</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>4</iWarWearinessModifier>
+			<iTradeRouteModifier>6</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>30</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>-2</iPropertyValue>
+					<iPropertyValue>-4</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-3</iAmountPerTurn>
+					<iAmountPerTurn>-6</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-3</iAmountPerTurn>
+					<iAmountPerTurn>-6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_PLUS4</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS4</Type>
@@ -7840,44 +7987,55 @@
 			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>20</iYield>
+				<iYield>20</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
+				<iCommerce>6</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>20</iCommerce>
 			</CommerceModifiers>
-			<iFreeSpecialist>1</iFreeSpecialist>
-			<iGreatPeopleRateModifier>7</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>1</iGreatGeneralRateModifier>
-			<iWarWearinessModifier>2</iWarWearinessModifier>
-			<iTradeRouteModifier>4</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
+			<iFreeSpecialist>2</iFreeSpecialist>
+			<iGreatPeopleRateModifier>16</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>2</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>6</iWarWearinessModifier>
+			<iTradeRouteModifier>10</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>40</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>-2</iPropertyValue>
+					<iPropertyValue>-6</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-4</iAmountPerTurn>
+					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-4</iAmountPerTurn>
+					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_PLUS5</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS5</Type>
@@ -7889,42 +8047,54 @@
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>25</iYield>
+				<iYield>25</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>3</iCommerce>
+				<iCommerce>9</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
-			<iGreatPeopleRateModifier>9</iGreatPeopleRateModifier>
-			<iWarWearinessModifier>4</iWarWearinessModifier>
-			<iTradeRouteModifier>5</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
+			<iFreeSpecialist>2</iFreeSpecialist>
+			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>2</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>10</iWarWearinessModifier>
+			<iTradeRouteModifier>15</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>50</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>-3</iPropertyValue>
+					<iPropertyValue>-9</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-5</iAmountPerTurn>
+					<iAmountPerTurn>-15</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-5</iAmountPerTurn>
+					<iAmountPerTurn>-15</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_PLUS6</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS6</Type>
@@ -7936,44 +8106,53 @@
 			<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>30</iYield>
+				<iYield>30</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>3</iCommerce>
+				<iCommerce>12</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>30</iCommerce>
 			</CommerceModifiers>
-			<iFreeSpecialist>1</iFreeSpecialist>
-			<iGreatPeopleRateModifier>11</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>1</iGreatGeneralRateModifier>
-			<iWarWearinessModifier>6</iWarWearinessModifier>
-			<iTradeRouteModifier>6</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
+			<iFreeSpecialist>3</iFreeSpecialist>
+			<iGreatPeopleRateModifier>36</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>3</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>16</iWarWearinessModifier>
+			<iTradeRouteModifier>21</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>60</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>-3</iPropertyValue>
+					<iPropertyValue>-12</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-6</iAmountPerTurn>
+					<iAmountPerTurn>-21</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-6</iAmountPerTurn>
+					<iAmountPerTurn>-21</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS7</Type>
@@ -7985,42 +8164,52 @@
 			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>35</iYield>
+				<iYield>35</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
+				<iCommerce>16</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>35</iCommerce>
 			</CommerceModifiers>
-			<iGreatPeopleRateModifier>13</iGreatPeopleRateModifier>
-			<iWarWearinessModifier>7</iWarWearinessModifier>
-			<iTradeRouteModifier>7</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
+			<iFreeSpecialist>3</iFreeSpecialist>
+			<iGreatPeopleRateModifier>49</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>3</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>23</iWarWearinessModifier>
+			<iTradeRouteModifier>28</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>70</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>-4</iPropertyValue>
+					<iPropertyValue>-16</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-7</iAmountPerTurn>
+					<iAmountPerTurn>-28</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-7</iAmountPerTurn>
+					<iAmountPerTurn>-28</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS8</Type>
@@ -8032,44 +8221,51 @@
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>40</iYield>
+				<iYield>40</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>4</iCommerce>
+				<iCommerce>20</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>40</iCommerce>
 			</CommerceModifiers>
-			<iFreeSpecialist>1</iFreeSpecialist>
-			<iGreatPeopleRateModifier>15</iGreatPeopleRateModifier>
-			<iGreatGeneralRateModifier>1</iGreatGeneralRateModifier>
-			<iWarWearinessModifier>8</iWarWearinessModifier>
-			<iTradeRouteModifier>8</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
+			<iFreeSpecialist>4</iFreeSpecialist>
+			<iGreatPeopleRateModifier>64</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>4</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>31</iWarWearinessModifier>
+			<iTradeRouteModifier>36</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>80</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>-4</iPropertyValue>
+					<iPropertyValue>-20</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-8</iAmountPerTurn>
+					<iAmountPerTurn>-36</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-8</iAmountPerTurn>
+					<iAmountPerTurn>-36</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EQ_PLUS9</Type>
@@ -8081,37 +8277,253 @@
 			<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
-				<iYield>5</iYield>
-				<iYield>5</iYield>
+				<iYield>45</iYield>
+				<iYield>45</iYield>
 			</YieldModifiers>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>25</iCommerce>
 			</CommerceChanges>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
+				<iCommerce>45</iCommerce>
 			</CommerceModifiers>
-			<iGreatPeopleRateModifier>17</iGreatPeopleRateModifier>
-			<iWarWearinessModifier>9</iWarWearinessModifier>
-			<iTradeRouteModifier>9</iTradeRouteModifier>
-			<iPopulationgrowthratepercentage>10</iPopulationgrowthratepercentage>
+			<iFreeSpecialist>4</iFreeSpecialist>
+			<iGreatPeopleRateModifier>81</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>4</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>40</iWarWearinessModifier>
+			<iTradeRouteModifier>45</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>90</iPopulationgrowthratepercentage>
 			<Properties>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
-					<iPropertyValue>-5</iPropertyValue>
+					<iPropertyValue>-25</iPropertyValue>
 				</Property>
 			</Properties>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>-9</iAmountPerTurn>
+					<iAmountPerTurn>-45</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_DISEASE</PropertyType>
-					<iAmountPerTurn>-9</iAmountPerTurn>
+					<iAmountPerTurn>-45</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_PLUS10</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_PLUS10</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>50</iYield>
+				<iYield>50</iYield>
+			</YieldModifiers>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>30</iCommerce>
+			</CommerceChanges>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>50</iCommerce>
+			</CommerceModifiers>
+			<iFreeSpecialist>5</iFreeSpecialist>
+			<iGreatPeopleRateModifier>100</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>5</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>50</iWarWearinessModifier>
+			<iTradeRouteModifier>55</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>100</iPopulationgrowthratepercentage>
+			<Properties>
+				<Property>
+					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
+					<iPropertyValue>-30</iPropertyValue>
+				</Property>
+			</Properties>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-55</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-55</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_PLUS11</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_PLUS11</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>55</iYield>
+				<iYield>55</iYield>
+			</YieldModifiers>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>36</iCommerce>
+			</CommerceChanges>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>55</iCommerce>
+			</CommerceModifiers>
+			<iFreeSpecialist>5</iFreeSpecialist>
+			<iGreatPeopleRateModifier>121</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>5</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>62</iWarWearinessModifier>
+			<iTradeRouteModifier>66</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>110</iPopulationgrowthratepercentage>
+			<Properties>
+				<Property>
+					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
+					<iPropertyValue>-36</iPropertyValue>
+				</Property>
+			</Properties>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-66</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-66</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
+				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_PLUS12</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_PLUS12</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqTech>TECH_COSMIC_LIFESTYLE</PrereqTech>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>60</iYield>
+				<iYield>60</iYield>
+			</YieldModifiers>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>42</iCommerce>
+			</CommerceChanges>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>60</iCommerce>
+			</CommerceModifiers>
+			<iFreeSpecialist>6</iFreeSpecialist>
+			<iGreatPeopleRateModifier>146</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>6</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>77</iWarWearinessModifier>
+			<iTradeRouteModifier>78</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>120</iPopulationgrowthratepercentage>
+			<Properties>
+				<Property>
+					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
+					<iPropertyValue>-42</iPropertyValue>
+				</Property>
+			</Properties>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-78</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-78</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+			</ReplacementBuildings>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EQ_PLUS13</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EQ_PLUS13</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
+			<PrereqTech>TECH_TRANSCENDENT_LIFESTYLE</PrereqTech>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>65</iYield>
+				<iYield>65</iYield>
+			</YieldModifiers>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>49</iCommerce>
+			</CommerceChanges>
+			<CommerceModifiers>
+				<iCommerce>0</iCommerce>
+				<iCommerce>65</iCommerce>
+			</CommerceModifiers>
+			<iFreeSpecialist>6</iFreeSpecialist>
+			<iGreatPeopleRateModifier>176</iGreatPeopleRateModifier>
+			<iGreatGeneralRateModifier>6</iGreatGeneralRateModifier>
+			<iWarWearinessModifier>97</iWarWearinessModifier>
+			<iTradeRouteModifier>91</iTradeRouteModifier>
+			<iPopulationgrowthratepercentage>130</iPopulationgrowthratepercentage>
+			<Properties>
+				<Property>
+					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
+					<iPropertyValue>-49</iPropertyValue>
+				</Property>
+			</Properties>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<iAmountPerTurn>-91</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-91</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iConquestProb>100</iConquestProb>
@@ -8150,30 +8562,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_FERTILTY_DANCE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CHILDBIRTH_HUT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_ANCIENT_CUSTOMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CHILDCAREHUT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_DAYCARE_CENTER</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
@@ -8222,9 +8610,6 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>800</iCost>
-			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
-			</CommerceChanges>
 			<PropertiesAllCities>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -8232,7 +8617,6 @@
 				</Property>
 			</PropertiesAllCities>
 			<iAsset>10</iAsset>
-			<iAIWeight>1</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -10374,6 +10758,21 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_CLASSICAL</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
+				<!--
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				-->
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_CLASSICAL</Type>
@@ -10391,7 +10790,7 @@
 					<iAmountPerTurn>
 						<Mult>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-1</Constant>
+							<Constant>-2</Constant>
 						</Mult>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -10400,6 +10799,20 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
+				<!--
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				-->
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_MEDIEVAL</Type>
@@ -10417,7 +10830,7 @@
 					<iAmountPerTurn>
 						<Mult>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-1</Constant>
+							<Constant>-3</Constant>
 						</Mult>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -10426,6 +10839,19 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
+				<!--
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				-->
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_RENAISSANCE</Type>
@@ -10443,7 +10869,7 @@
 					<iAmountPerTurn>
 						<Mult>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-1</Constant>
+							<Constant>-4</Constant>
 						</Mult>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -10452,8 +10878,19 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</BuildingType>
+				<!--
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+				-->
+			</ReplacementBuildings>
 		</BuildingInfo>
-		<!--
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_INDUSTRIAL</Type>
 			<MapCategoryTypes>
@@ -10470,7 +10907,7 @@
 					<iAmountPerTurn>
 						<Mult>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-1</Constant>
+							<Constant>-5</Constant>
 						</Mult>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -10479,7 +10916,19 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<!--
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_MODERN</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+			</ReplacementBuildings>
+			-->
 		</BuildingInfo>
+		<!--
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_MODERN</Type>
 			<MapCategoryTypes>
@@ -10496,7 +10945,7 @@
 					<iAmountPerTurn>
 						<Mult>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-1</Constant>
+							<Constant>-6</Constant>
 						</Mult>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -10505,6 +10954,14 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_INFORMATION</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_INFORMATION</Type>
@@ -10522,7 +10979,7 @@
 					<iAmountPerTurn>
 						<Mult>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-1</Constant>
+							<Constant>-7</Constant>
 						</Mult>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -10531,6 +10988,13 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_NANOTECH</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_NANOTECH</Type>
@@ -10548,7 +11012,7 @@
 					<iAmountPerTurn>
 						<Mult>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-1</Constant>
+							<Constant>-8</Constant>
 						</Mult>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -10557,6 +11021,12 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_TRANSHUMAN</Type>
@@ -10574,7 +11044,7 @@
 					<iAmountPerTurn>
 						<Mult>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-1</Constant>
+							<Constant>-9</Constant>
 						</Mult>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -10583,6 +11053,11 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_GALACTIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_GALACTIC</Type>
@@ -10600,7 +11075,7 @@
 					<iAmountPerTurn>
 						<Mult>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-1</Constant>
+							<Constant>-10</Constant>
 						</Mult>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -10609,6 +11084,10 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_COSMIC</BuildingType>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_COSMIC</Type>
@@ -10626,7 +11105,7 @@
 					<iAmountPerTurn>
 						<Mult>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-1</Constant>
+							<Constant>-11</Constant>
 						</Mult>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -10635,6 +11114,9 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
+			<ReplacementBuildings>
+				<BuildingType>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</BuildingType>
+			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_KNOWLEDGE_BASE_TRANSCENDENT</Type>
@@ -10652,7 +11134,7 @@
 					<iAmountPerTurn>
 						<Mult>
 							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
-							<Constant>-1</Constant>
+							<Constant>-12</Constant>
 						</Mult>
 					</iAmountPerTurn>
 				</PropertySource>
@@ -11370,7 +11852,6 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1685</iCost>
 			<FreeBuilding>BUILDING_SMOKING_PROHIBITION</FreeBuilding>
-			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMOKING_PROHIBITION</ArtDefineTag>
@@ -11472,7 +11953,6 @@
 			<iCost>800</iCost>
 			<FreeBuilding>BUILDING_GOOD_NEIGHBORHOOD_WATCH</FreeBuilding>
 			<iAsset>1</iAsset>
-			<iAIWeight>1</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
@@ -13464,7 +13944,6 @@
 			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
 			<FreeBuilding>BUILDING_SHUTTLE_SERVICE_EFFECT</FreeBuilding>
-			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SHUTTLE_SERVICE</ArtDefineTag>
@@ -14201,9 +14680,6 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1080</iCost>
-			<CommerceChanges>
-				<iCommerce>-5</iCommerce>
-			</CommerceChanges>
 			<PropertiesAllCities>
 				<Property>
 					<PropertyType>PROPERTY_FLAMMABILITY</PropertyType>
@@ -14211,7 +14687,6 @@
 				</Property>
 			</PropertiesAllCities>
 			<iAsset>10</iAsset>
-			<iAIWeight>1</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -14298,7 +14773,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -14307,7 +14782,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>500</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 				<TechCommerceChange>
@@ -14316,7 +14791,7 @@
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
 						<iCommercePercent>0</iCommercePercent>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -14647,7 +15122,6 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1475</iCost>
 			<FreeBuilding>BUILDING_TIRE_RECYCLE_EFFECT</FreeBuilding>
-			<iAIWeight>1</iAIWeight>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TIRE_RECYCLE</ArtDefineTag>
@@ -16146,7 +16620,6 @@
 			<iCost>870</iCost>
 			<FreeBuilding>BUILDING_GOOD_YOUTH_CURFEW</FreeBuilding>
 			<iAsset>1</iAsset>
-			<iAIWeight>1</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>

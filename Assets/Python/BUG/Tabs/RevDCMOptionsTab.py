@@ -24,7 +24,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 		column = self.addOneColumnLayout(screen, panel)
 		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
 
-		if not GAME.isGameMultiPlayer():
+		if not GAME.isNetworkMultiPlayer():
 			self.addLabel(screen, left, "RevDCM__RevDCMInterface", TRNSLTR.getText("TXT_KEY_REVDCMTAB_INTERFACE_OPTIONS", ()))
 			col1, col2 = self.addMultiColumnLayout(screen, right, 2, "interfaceOptions")
 			self.addCheckbox(screen, col1, "RevDCM__RevDCMHiddenAttitude")
@@ -38,9 +38,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 			col1, col2 = self.addMultiColumnLayout(screen, right, 2, "DCM_Siege_Events")
 			self.addCheckbox(screen, col1, "RevDCM__DCM_RANGE_BOMBARD")
 			self.addCheckbox(screen, col2, "RevDCM__DCM_OPP_FIRE")
-			self.addLabel(screen, left, "RevDCM__RevDCM_general", TRNSLTR.getText("TXT_KEY_REVDCMTAB_BATTLE_OPTIONS", ()))
-			col1, col2 = self.addMultiColumnLayout(screen, right, 2, "DCM_Events")
-			self.addCheckbox(screen, col2, "RevDCM__DCM_ATTACK_SUPPORT")
+
 			self.addLabel(screen, left, "RevDCM__RevDCM_air", TRNSLTR.getText("TXT_KEY_REVDCMTAB_AIRFORCE_OPTIONS", ()))
 			col1, col2, col3 = self.addMultiColumnLayout(screen, right, 3, "DCM_Air_Events")
 			self.addCheckbox(screen, col1, "RevDCM__DCM_ACTIVE_DEFENSE")
@@ -254,7 +252,3 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 		else:
 			self.addLabel(screen, left, "RevDCM_network_game", TRNSLTR.getText("TXT_KEY_MULTIPLAYER_GAME_DETECTED", ()))
 			self.addLabel(screen, right, "RevDCM_network_game1", TRNSLTR.getText("TXT_KEY_MULTIPLAYER_GAME_DETECTED_DESCRIPTION", ()))
-
-		#On screen information
-		self.addLabel(screen, left, "RevDCM_info", TRNSLTR.getText("TXT_KEY_REVDCM_NOTES", ()))
-		self.addLabel(screen, right, "RevolutionDCMHelp", TRNSLTR.getText("TXT_KEY_REVDCM_TAB_HELP", ()))

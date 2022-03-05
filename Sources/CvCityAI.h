@@ -130,7 +130,7 @@ public:
 	// Can a building be reasonably hurried by any method?
 	bool AI_canRushBuildingConstruction(BuildingTypes building) const;
 
-	int AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags = 0, bool bForTech = false);
+	int AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags = 0, bool bForTech = false, bool bDebug = false);
 	int AI_buildingValueThreshold(BuildingTypes eBuilding, int iFocusFlags = 0, int iThreshold = 0, bool bMaximizeFlaggedValue = false, bool bIgnoreCanConstruct = false);
 	int AI_buildingValueThresholdOriginal(BuildingTypes eBuilding, int iFocusFlags = 0, int iThreshold = 0, bool bMaximizeFlaggedValue = false, bool bIgnoreCanBuildReplacement = false, bool bForTech = false);
 	int AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding, int iFocusFlags = 0, int iThreshold = 0, bool bMaximizeFlaggedValue = false, bool bIgnoreCanBuildReplacement = false, bool bForTech = false);
@@ -141,7 +141,6 @@ public:
 
 	ProcessTypes AI_bestProcess(CommerceTypes eCommerceType = NO_COMMERCE, int64_t* commerceWeights = NULL) const;
 	int64_t AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType = NO_COMMERCE, int64_t* commerceWeights = NULL) const;
-	bool AI_finalProcessSelection();
 
 	int AI_neededSeaWorkers() const;
 
@@ -356,7 +355,7 @@ protected:
 	int AI_getPlotMagicValue(const CvPlot* pPlot, bool bHealthy, bool bWorkerOptimization = false) const;
 	int AI_countGoodTiles(bool bHealthy, bool bUnworkedOnly, int iThreshold = 50, bool bWorkerOptimization = false) const;
 	int AI_countGoodSpecialists(bool bHealthy) const;
-	//int AI_calculateTargetCulturePerTurn() const;
+	int AI_calculateTargetCulturePerTurn() const;
 
 	void AI_stealPlots();
 

@@ -79,6 +79,7 @@ using bst::bind;
 #include <boost/python/tuple.hpp>
 #include <boost/python/class.hpp>
 #include <boost/python/object.hpp>
+#include <boost/python/overloads.hpp>
 #include <boost/python/def.hpp>
 #include <boost/python/enum.hpp>
 #include <boost/python/manage_new_object.hpp>
@@ -211,7 +212,7 @@ struct ECacheAccess
 		ReadWrite = Read | Write
 	};
 };
-DECLARE_FLAGS(ECacheAccess::flags);
+int DECLARE_FLAGS(ECacheAccess::flags);
 
 //
 // Feature macros
@@ -308,6 +309,7 @@ const std::string getModDir();
 // Our code
 //
 #include "logging.h"
+#include "enum_iterator.h"
 #include "algorithm2.h"
 #include "scoring.h"
 #include "FAssert.h"

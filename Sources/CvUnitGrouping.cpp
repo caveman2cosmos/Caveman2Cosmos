@@ -10,6 +10,7 @@
 #include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvPlayer.h"
+#include "CvInfos.h"
 
 int UnitGroupingBase::getGroup(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {

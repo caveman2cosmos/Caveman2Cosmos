@@ -34,6 +34,8 @@ public:
 	void setRevIndexAverage(int iNewValue);
 	void updateRevIndexAverage();
 
+	int getRevIndexDistanceMod() const;
+
 	int getRevolutionCounter() const;
 	void setRevolutionCounter(int iNewValue);
 	void changeRevolutionCounter(int iChange);
@@ -103,7 +105,6 @@ public:
 	int /*ArtStyleTypes*/ getArtStyleType() const;
 
 	bool hasTrait(int /*TraitTypes*/ iTrait) const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isHuman() const;

@@ -2,16 +2,8 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<!-- Code placeholders
 	<TEXT>
-		<Tag>TXT_KEY_CIV_UNKNOWN</Tag>
-		<English>UNKNOWN CIV</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_COMBAT_ROUND_STUN_DEFENDER_MINUS_ATTACKER_ENDURANCE</Tag>
 		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENTHELP_LESS_GROWTH</Tag>
-		<English>[ICON_BULLET]Gives terrain a lower chance to spread</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_ONSLAUGHT_HIDDEN</Tag>
@@ -634,20 +626,16 @@
 		<English>[ICON_BULLET]%s1</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_BULLET_S1_COLON_SPACE</Tag>
+		<English>[ICON_BULLET]%s1:[SPACE]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_BULLET_S1_F2_FROM_S3</Tag>
 		<English>[ICON_BULLET]%s1 %F2 from %s3</English>
 		<French>[ICON_BULLET]%s1 %F2 en raison de %s3</French>
 		<German>[ICON_BULLET]%s1 %F2 durch %s3</German>
 		<Italian>[ICON_BULLET]%s1 %F2 [NUM3:da:dai] %s3</Italian>
 		<Spanish>[ICON_BULLET]%s1 %F2 por %s3</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_BULLET_S1_COLON_SPACE</Tag>
-		<English>[ICON_BULLET]%s1:[SPACE]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_S1_COLON_SPACE</Tag>
-		<English>%s1:[SPACE]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_INTERFACE_TECH_HELP_RESEARCH</Tag>
@@ -2480,6 +2468,10 @@
 		<Spanish>[SPACE](%s2_player tiene %d1_num_bonus)[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUSHELP_AVAILABLE_PLAYER_1</Tag>
+		<English>[SPACE](Have %d1)[SPACE]</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUSHELP_HEALTHY</Tag>
 		<English>Healthy: +%d1_Change[ICON_HEALTHY]</English>
 		<French>Santé : +%d1_Change[ICON_HEALTHY]</French>
@@ -2559,6 +2551,18 @@
 		<Polish>'Osiągnięcia' to wyjątkowe cuda, które mogą zostać stworzone przez [COLOR_UNIT_TEXT]Bohaterów Narodowych[COLOR_REVERT]. W grze występuje osiem [COLOR_BUILDING_TEXT]Osiągnięć[COLOR_REVERT], które posiadają różne zalety; jednakże, kiedy jakieś [COLOR_BUILDING_TEXT]Osiągnięcie[COLOR_REVERT] zostanie stworzone przez jedną cywilizację, nie może już zostać zbudowane przez inną. Czasem dobrze jest poczekać jeśli chce się stworzyć [COLOR_BUILDING_TEXT]Osiągnięcie[COLOR_REVERT] dostępne w późniejszej erze. Choć na początku [COLOR_BUILDING_TEXT]Osiągnięcia[COLOR_REVERT] nie zapewniają ogromnych bonusów, to jednak z biegiem czasu ich zalety się zwiększają.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDUP_CHOOSE</Tag>
+		<English>Select a Build Up Promotion Line for your [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</English>
+		<French>Choisissez une Spécialisation à suivre pour votre [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</French>
+		<German>An welcher Beförderungsreihe [NUM1:soll euer:soll eure:soll euer:sollen eure:sollen eure:sollen eure] [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT] arbeiten?</German>
+		<Polish>Wybierz Linię Promocji (Koncentracja) dla Twojego [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</Polish>
+		<Russian>Âûáåðèòå ïðîêà÷êó Êâàëèôèêàöèè äëÿ âàøåãî [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDUP_DISBAND</Tag>
+		<English>Disband current build-up!</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_BEACON_GREAT_BARRIER_REEF</Tag>
 		<English>Create [LINK=FEATURE_GREAT_BARRIER_REEF_BEACON]Beacon[\LINK] (Great Barrier Reef)</English>
 		<French>Placer une [LINK=FEATURE_GREAT_BARRIER_REEF_BEACON]Balise[\LINK] (Great Barrier Reef)</French>
@@ -2607,6 +2611,10 @@
 		<German>Patch-Download abbrechen</German>
 		<Italian>Annulla il download della patch</Italian>
 		<Spanish>Cancelar la descarga del parche</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CANCLAIM</Tag>
+		<English>Can claim</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CANT_NUKE_FRIENDS</Tag>
@@ -2914,18 +2922,6 @@
 		<Spanish>[COLOR_NEGATIVE_TEXT]Ya has escogido tu(s) tecnología(s) gratis[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_NEGATIVE_TEXT]Już wybrałeś swoje darmowe technologie[COLOR_REVERT]</Polish>
 		<Russian>[COLOR_NEGATIVE_TEXT]Âû óæå âûáðàëè âàøó ñâîáîäíóþ òåõíîëîãèþ(è)[COLOR_REVERT]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDUP_CHOOSE</Tag>
-		<English>Select a Build Up Promotion Line for your [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</English>
-		<French>Choisissez une Spécialisation à suivre pour votre [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</French>
-		<German>An welcher Beförderungsreihe [NUM1:soll euer:soll eure:soll euer:sollen eure:sollen eure:sollen eure] [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT] arbeiten?</German>
-		<Polish>Wybierz Linię Promocji (Koncentracja) dla Twojego [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</Polish>
-		<Russian>Âûáåðèòå ïðîêà÷êó Êâàëèôèêàöèè äëÿ âàøåãî [COLOR_WARNING_TEXT]%s1_UnitName[COLOR_REVERT].</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDUP_DISBAND</Tag>
-		<English>Disband current build-up!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHOOSE_ESPIONAGE_MISSION</Tag>
@@ -3949,7 +3945,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CIVICHELP_RELIGION_HAPPINESS</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn in Cities with State [ICON_RELIGION]</English>
-		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn dans les villes ayant comme religion  d'état [ICON_RELIGION]</French>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn dans les villes ayant comme religion d'état [ICON_RELIGION]</French>
 		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in Städten mit der Staatsreligion [ICON_RELIGION]</German>
 		<Italian>[ICON_BULLET]%D1_Change di %F2_HappyOrUn nelle città con la religione di stato [ICON_RELIGION]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en las ciudades con [ICON_RELIGION] oficial</Spanish>
@@ -4025,6 +4021,10 @@
 		<German>Kein Unterhalt</German>
 		<Italian>Nessun mantenimento</Italian>
 		<Spanish>Sin mantenimiento</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UNKNOWN</Tag>
+		<English>UNKNOWN CIV</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CLIMATE_ARID</Tag>
@@ -5171,7 +5171,7 @@
 		<English> Square km</English>
 		<French> Km²</French>
 		<German> Quadratkilometer</German>
-		<Italian>Km quadrati</Italian>
+		<Italian>Km²</Italian>
 		<Spanish> Km cuad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6166,35 +6166,21 @@
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ANCIENT</Tag>
 		<English>Ancient</English>
-		<French>
-			<Text>Antiquité</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Antiquité</French>
 		<German>
 			<Text>Antike:Antike:Antike:Antike</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Antica</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Antigüedad</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Italian>antica</Italian>
+		<Spanish>Antigüedad</Spanish>
 		<Polish>Starożytna</Polish>
 		<Russian>Древний мир</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ANCIENT_STRATEGY</Tag>
-		<English>The term Ancient in regards to Caveman to Cosmos describes the beginning of cities and the arrival of what is referred to as the bronze age. It is a period where tribal societies begin to form larger towns and eventually cities, and more elaborate artwork and architecture. Kings emerge in this period, one of the first kinds of powerful rulers, evolving out of powerful tribal leaders. Warfare becomes formalized, with the development of professional armies, the training of animals for war etc.
-[NEWLINE]Time Frame: 12 000 BC - 1200 BC</English>
-		<French>Le terme Antiquité en ce qui concerne Caveman to Cosmos décrit le début des villes et l'arrivée de ce que l'on appelle l'âge du bronze. C'est une période où les sociétés tribales commencent à former de plus grandes villes et éventuellement des villes, et des œuvres d'art et une architecture plus élaborées. Les rois émergent à cette époque, l'un des premiers types de dirigeants puissants, issus de puissants chefs tribaux. La guerre se formalise, avec le développement d'armées professionnelles, l'entraînement des animaux à la guerre etc.
-[NEWLINE]Calendrier: 12 000 avant JC - 1200 avant JC</French>
+		<English>The term Ancient in regards to Caveman to Cosmos describes the beginning of cities and the arrival of what is referred to as the bronze age. It is a period where tribal societies begin to form larger towns and eventually cities, and more elaborate artwork and architecture. Kings emerge in this period, one of the first kinds of powerful rulers, evolving out of powerful tribal leaders. Warfare becomes formalized, with the development of professional armies, the training of animals for war etc.[NEWLINE]Time Frame: 12 000 BC - 1200 BC</English>
+		<French>Le terme Antiquité en ce qui concerne Caveman to Cosmos décrit le début des villes et l'arrivée de ce que l'on appelle l'âge du bronze. C'est une période où les sociétés tribales commencent à former de plus grandes villes et éventuellement des villes, et des œuvres d'art et une architecture plus élaborées. Les rois émergent à cette époque, l'un des premiers types de dirigeants puissants, issus de puissants chefs tribaux. La guerre se formalise, avec le développement d'armées professionnelles, l'entraînement des animaux à la guerre etc.[NEWLINE]Calendrier: 12 000 avant JC - 1200 avant JC</French>
 		<Russian>Каменный век[NEWLINE]200 000 - 12 000 г. до н.э.[NEWLINE]Предыстория (лат. Pra = before; греч. Iotopia = history) - это термин, используемый для описания периода до-письменной истории. Пол Турналь первоначально придумал термин Pre-Historique при описании находок, которые он сделал в пещерах на юге Франции. Термин «предыстория» может использоваться для обозначения всего времени от формирования вселенной, хотя он чаще используется для обозначения периода времени от момента возникновения жизни на Земле или, еще более конкретно, от времени, прошедшего с момента появления первых гоминидов до перехода людей к оседлому образу жизни.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6206,47 +6192,32 @@
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
+		<Italian>atomica</Italian>
 		<Russian>Ядерная эра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ATOMIC_STRATEGY</Tag>
-		<English>The Atomic era describes the time of the second world war till roughly the end of the cold war. During this period air power becomes the strongest force on the battlefield and the doctrine of MAD, or mutually assured destruction, appears as nuclear weapons enter the picture. Also, the beginnings of space flight and computers occur in this period.
-[NEWLINE]Time Frame: 1900 AD - 1990 AD</English>
-		<French>L'ère atomique décrit l'époque de la seconde guerre mondiale jusqu'à la fin de la guerre froide. Pendant cette période, la puissance aérienne devient la force la plus puissante sur le champ de bataille et la doctrine du MAD, ou destruction mutuellement assurée, apparaît alors que les armes nucléaires entrent en scène. En outre, les débuts du vol spatial et des ordinateurs se produisent au cours de cette période.
-[NEWLINE]Calendrier: 1900 AD - 1990 AD</French>
+		<English>The Atomic era describes the time of the second world war till roughly the end of the cold war. During this period air power becomes the strongest force on the battlefield and the doctrine of MAD, or mutually assured destruction, appears as nuclear weapons enter the picture. Also, the beginnings of space flight and computers occur in this period.[NEWLINE]Time Frame: 1900 AD - 1990 AD</English>
+		<French>L'ère atomique décrit l'époque de la seconde guerre mondiale jusqu'à la fin de la guerre froide. Pendant cette période, la puissance aérienne devient la force la plus puissante sur le champ de bataille et la doctrine du MAD, ou destruction mutuellement assurée, apparaît alors que les armes nucléaires entrent en scène. En outre, les débuts du vol spatial et des ordinateurs se produisent au cours de cette période.[NEWLINE]Calendrier: 1900 AD - 1990 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_CLASSICAL</Tag>
 		<English>Classical</English>
-		<French>
-			<Text>Classique</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Classique</French>
 		<German>
 			<Text>Klassik:Klassik:Klassik:Klassik</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Classica</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Época clásica</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Italian>classica</Italian>
+		<Spanish>Época clásica</Spanish>
 		<Polish>Klasyczna</Polish>
 		<Russian>Античность</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_CLASSICAL_STRATEGY</Tag>
-		<English>The Classical era picks up where the ancient era left off. During this period new ideas of religion, government, and political organization enter the picture. Technology has improved to the point in this era that larger empires become possible, and many would be conquerors try their hands at conquest. Further advances in architecture lead to better living conditions in some cases.
-[NEWLINE]Time Frame: 1200 BC - 450 AD</English>
-		<French>L'ère Classique reprend là où l'ère antique s'était arrêtée. Au cours de cette période, de nouvelles idées de religion, de gouvernement et d'organisation politique font leur apparition. La technologie s'est améliorée au point à cette époque que de plus grands empires deviennent possibles, et beaucoup seraient des conquérants s'essayer à la conquête. De nouveaux progrès dans l'architecture conduisent à de meilleures conditions de vie dans certains cas.
-[NEWLINE]Calendrier: 1200 avant JC - 450 après JC</French>
+		<English>The Classical era picks up where the ancient era left off. During this period new ideas of religion, government, and political organization enter the picture. Technology has improved to the point in this era that larger empires become possible, and many would be conquerors try their hands at conquest. Further advances in architecture lead to better living conditions in some cases.[NEWLINE]Time Frame: 1200 BC - 450 AD</English>
+		<French>L'ère Classique reprend là où l'ère antique s'était arrêtée. Au cours de cette période, de nouvelles idées de religion, de gouvernement et d'organisation politique font leur apparition. La technologie s'est améliorée au point à cette époque que de plus grands empires deviennent possibles, et beaucoup seraient des conquérants s'essayer à la conquête. De nouveaux progrès dans l'architecture conduisent à de meilleures conditions de vie dans certains cas.[NEWLINE]Calendrier: 1200 avant JC - 450 après JC</French>
 		<Russian>Античность[NEWLINE]1200 г. до н.э. - 450 гг.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6258,14 +6229,13 @@
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
+		<Italian>cosmica</Italian>
 		<Russian>Космическая</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_COSMIC_STRATEGY</Tag>
-		<English>The Cosmic era describes a period where a civilization has surpassed the limitations of galactic travel and is able to explore nearby galaxies, spreading further across the universe. Further advances in space flight make this possible.
-[NEWLINE]Time Frame: 3000 AD - 4000 AD</English>
-		<French>L'ère Cosmique décrit une période où une civilisation a dépassé les limites du voyage galactique et est capable d'explorer des galaxies proches, se propageant plus à travers l'univers. De nouveaux progrès dans le vol spatial rendent cela possible.
-[NEWLINE]Calendrier: 3000 AD - 4000 AD</French>
+		<English>The Cosmic era describes a period where a civilization has surpassed the limitations of galactic travel and is able to explore nearby galaxies, spreading further across the universe. Further advances in space flight make this possible.[NEWLINE]Time Frame: 3000 AD - 4000 AD</English>
+		<French>L'ère Cosmique décrit une période où une civilisation a dépassé les limites du voyage galactique et est capable d'explorer des galaxies proches, se propageant plus à travers l'univers. De nouveaux progrès dans le vol spatial rendent cela possible.[NEWLINE]Calendrier: 3000 AD - 4000 AD</French>
 		<Russian>Космическая[NEWLINE]3000 - 4000 гг.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6281,16 +6251,8 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Futura</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Futuro</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Italian>Futuro</Italian>
+		<Spanish>Futuro</Spanish>
 		<Polish>Przyszłość</Polish>
 		<Russian>Будущее</Russian>
 	</TEXT>
@@ -6309,51 +6271,35 @@
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Galattica</Italian>
+		<Italian>galattica</Italian>
 		<Spanish>Época galáctica</Spanish>
 		<Polish>Galaktyczna</Polish>
 		<Russian>Галактическая</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_GALACTIC_STRATEGY</Tag>
-		<English>The Galactic Era represents a time when a civilization develops faster than light travel, allowing the exploration and colonization of nearby solar systems and increasingly, the galaxy. Further improvements in terraforming technology allow hostile planets to be transformed into earth-like worlds, greatly increasing the places humanity can call home. Interplanetary warfare is refined as well, and not all human space nations are friendly democracies. Some develop into deadly space empires.
-[NEWLINE]Time Frame: 2300 AD - 3000 AD</English>
-		<French>L'ère galactique représente un moment où une civilisation se développe plus rapidement que le voyage de la lumière, permettant l'exploration et la colonisation des systèmes solaires proches et de plus en plus, la galaxie. De nouvelles améliorations dans la terraformation d'une technologie permettent aux planètes hostiles d'être transformées en mondes semblables à la terre, augmentant considérablement les endroits où l'humanité peut s'installer. La guerre interplanétaire est également affinée et toutes les nations de l'espace humain ne sont pas des démocraties amies. Certains se transforment en empires spatiaux mortels.
-[NEWLINE]Calendrier: 2300 AD - 3000 AD</French>
+		<English>The Galactic Era represents a time when a civilization develops faster than light travel, allowing the exploration and colonization of nearby solar systems and increasingly, the galaxy. Further improvements in terraforming technology allow hostile planets to be transformed into earth-like worlds, greatly increasing the places humanity can call home. Interplanetary warfare is refined as well, and not all human space nations are friendly democracies. Some develop into deadly space empires.[NEWLINE]Time Frame: 2300 AD - 3000 AD</English>
+		<French>L'ère galactique représente un moment où une civilisation se développe plus rapidement que le voyage de la lumière, permettant l'exploration et la colonisation des systèmes solaires proches et de plus en plus, la galaxie. De nouvelles améliorations dans la terraformation d'une technologie permettent aux planètes hostiles d'être transformées en mondes semblables à la terre, augmentant considérablement les endroits où l'humanité peut s'installer. La guerre interplanétaire est également affinée et toutes les nations de l'espace humain ne sont pas des démocraties amies. Certains se transforment en empires spatiaux mortels.[NEWLINE]Calendrier: 2300 AD - 3000 AD</French>
 		<Russian>Галактическая эпоха представляет время, когда цивилизация развивается, используя технологии сверхсветовых путешествий, позволяющие осуществлять разведку и колонизацию близлежащих звездных систем и всей галактики в целом. Дальнейший прогресс технологий терраформирования позволяют преобразовать враждебные планеты в землеподобные миры, значительно увеличивающие пригодные места для расселения человечества, сохраняющие связь с материнской системой. Межпланетная война становится более высокотехнологичной, и далеко не все колонии человечества являются дружественными демократиями. Некоторые из них развиваются в грозные космические империи.[NEWLINE]2300 - 3000 гг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INDUSTRIAL</Tag>
 		<English>Industrial</English>
-		<French>
-			<Text>Industrielle</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Industrielle</French>
 		<German>
 			<Text>Industriezeitalter:Industriezeitalters:Industriezeitalter:Industriezeitalter</Text>
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Industriale</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Época industrial</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Italian>industriale</Italian>
+		<Spanish>Época industrial</Spanish>
 		<Polish>Przemysłowa</Polish>
 		<Russian>Новое время</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INDUSTRIAL_STRATEGY</Tag>
-		<English>The Industrial Era begins with the invention of steam power and continues with the development of factories. Increasingly, warfare becomes mechanized, with the advent of automatic weapons. New ideas on the economy and society begin to shake the old order, with capitalism and communist ideas among others begin to establish themselves, clashing with traditional ideas of religion and government. Flight becomes possible for the first time, and warfare in general undergoes enormous changes, formational warfare and colorful uniforms giving way to drab uniforms and eventually camoflage.
-[NEWLINE]Time Frame: 1750 AD - 1900 AD</English>
-		<French>L'ère Industrielle commence avec l'invention de la vapeur et se poursuit avec le développement des usines. De plus en plus, la guerre se mécanise, avec l'avènement des armes automatiques. De nouvelles idées sur l'économie et la société commencent à ébranler l'ancien ordre, avec le capitalisme et les idées communistes, entre autres, commencent à s'établir, en contradiction avec les idées traditionnelles de la religion et du gouvernement. Le vol devient possible pour la première fois, et la guerre en général subit d'énormes changements, une guerre de formation et des uniformes colorés cédant la place à des uniformes ternes et finalement au camouflage.
-[NEWLINE]Calendrier: 1750 AD - 1900 AD</French>
+		<English>The Industrial Era begins with the invention of steam power and continues with the development of factories. Increasingly, warfare becomes mechanized, with the advent of automatic weapons. New ideas on the economy and society begin to shake the old order, with capitalism and communist ideas among others begin to establish themselves, clashing with traditional ideas of religion and government. Flight becomes possible for the first time, and warfare in general undergoes enormous changes, formational warfare and colorful uniforms giving way to drab uniforms and eventually camoflage.[NEWLINE]Time Frame: 1750 AD - 1900 AD</English>
+		<French>L'ère Industrielle commence avec l'invention de la vapeur et se poursuit avec le développement des usines. De plus en plus, la guerre se mécanise, avec l'avènement des armes automatiques. De nouvelles idées sur l'économie et la société commencent à ébranler l'ancien ordre, avec le capitalisme et les idées communistes, entre autres, commencent à s'établir, en contradiction avec les idées traditionnelles de la religion et du gouvernement. Le vol devient possible pour la première fois, et la guerre en général subit d'énormes changements, une guerre de formation et des uniformes colorés cédant la place à des uniformes ternes et finalement au camouflage.[NEWLINE]Calendrier: 1750 AD - 1900 AD</French>
 		<Russian>Промышленная эпоха начинается с овладением энергией пара и продолжается с развитием фабрик. Война постепенно приобретает механизированный характер с появлением автоматического оружия. Новые идеи охватывают экономику и общество, встряхивая старый жизненный уклад, при этом капитализм и социалистические идеи среди прочих начинают утверждаться в массах и сталкиваются с традиционными религиями и консервативными идеями. В эту эпоху человечество впервые обретает возможность к полетам, а война в целом кардинально меняет свой облик, приобретая к концу эпохи тотальный характер.[NEWLINE]1750 - 1900 гг.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6364,48 +6310,33 @@
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
+		<Italian>dell'informazione</Italian>
 		<Russian>Информационная эра</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INFORMATION_STRATEGY</Tag>
-		<English>The Information era represents roughly the time after the cold war in our world technologically. Computers become personal, the internet appears, and new forms of entertainment such as computer and console games mark the early part of this period. Later, with the advent of high-speed internet, cloud computing and mobile devices such as smart phones, society undergoes a great change as physical businesses begin to be replaced by digital businesses, and increasingly private ownership of things such as movies, music moves into the hands of corporate distribution with streaming technology. Eventually artificial intelligence evolves to the point of allowing first automated drones and driverless cars, to many jobs disappearing due to more advanced machines. Physical cash disappears, with all transactions being done digitally.
-[NEWLINE]Time Frame: 1990 AD - 2050 AD</English>
-		<French>L'ère de l'information représente à peu près le temps après la guerre froide dans notre monde sur le plan technologique. Les ordinateurs deviennent personnels, Internet apparaît et de nouvelles formes de divertissement telles que les jeux informatiques et les consoles marquent le début de cette période. Plus tard, avec l'avènement de l'Internet haut débit, du cloud computing et des appareils mobiles tels que les téléphones intelligents, la société subit un grand changement à mesure que les entreprises physiques commencent à être remplacées par des entreprises numériques, et que la propriété privée de choses telles que les films, la musique s'installe de plus en plus aux mains de la distribution d'entreprise avec le streaming une technologie. Finalement, l'intelligence artificielle évolue au point de permettre les premiers drones automatisés et les voitures sans conducteur, de nombreux emplois disparaissant en raison de machines plus avancées. L'argent physique disparaît, toutes les transactions se faisant numériquement.
-[NEWLINE]Calendrier: 1990 AD - 2050 AD</French>
+		<English>The Information era represents roughly the time after the cold war in our world technologically. Computers become personal, the internet appears, and new forms of entertainment such as computer and console games mark the early part of this period. Later, with the advent of high-speed internet, cloud computing and mobile devices such as smart phones, society undergoes a great change as physical businesses begin to be replaced by digital businesses, and increasingly private ownership of things such as movies, music moves into the hands of corporate distribution with streaming technology. Eventually artificial intelligence evolves to the point of allowing first automated drones and driverless cars, to many jobs disappearing due to more advanced machines. Physical cash disappears, with all transactions being done digitally.[NEWLINE]Time Frame: 1990 AD - 2050 AD</English>
+		<French>L'ère de l'information représente à peu près le temps après la guerre froide dans notre monde sur le plan technologique. Les ordinateurs deviennent personnels, Internet apparaît et de nouvelles formes de divertissement telles que les jeux informatiques et les consoles marquent le début de cette période. Plus tard, avec l'avènement de l'Internet haut débit, du cloud computing et des appareils mobiles tels que les téléphones intelligents, la société subit un grand changement à mesure que les entreprises physiques commencent à être remplacées par des entreprises numériques, et que la propriété privée de choses telles que les films, la musique s'installe de plus en plus aux mains de la distribution d'entreprise avec le streaming une technologie. Finalement, l'intelligence artificielle évolue au point de permettre les premiers drones automatisés et les voitures sans conducteur, de nombreux emplois disparaissant en raison de machines plus avancées. L'argent physique disparaît, toutes les transactions se faisant numériquement.[NEWLINE]Calendrier: 1990 AD - 2050 AD</French>
 		<Russian>Информационная эра начинается приблизительно после завершения после холодной войны в нашем мире. Появляются персональные компьютеры вместе с интернетом, а новые формы развлечений, таких как компьютерные и консольные игры, отмечают собой начальную часть этого периода. Позже, с появлением высокоскоростного интернета, облачных вычислений и мобильных устройств, таких как смартфоны, общество претерпевает большое изменение, поскольку физические предприятия начинают заменять цифровые предприятия, и все более частное владение вещами, такими как фильмы, музыка переходить под управление корпоративного распределения с потоковыми технологиями. В конечном итоге искусственный интеллект развивается до того, что сначала создает возможность использования автоматизированных беспилотников и автомобилей без водителей, а многие профессии постепенно исчезают из-за появления более продвинутых машин и автоматики. Наличные деньги со временем исчезают из оборота, а многие финансовые операции отныне выполняются в цифровом виде.[NEWLINE]1990 - 2050 гг.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MEDIEVAL</Tag>
 		<English>Medieval</English>
-		<French>
-			<Text>Moyen-Age</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Moyen-Age</French>
 		<German>
 			<Text>Mittelalter:Mittelalters:Mittelalter:Mittelalter</Text>
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>
-			<Text>Medioevale</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Edad media</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Italian>medievale</Italian>
+		<Spanish>Edad media</Spanish>
 		<Polish>Średniowieczna</Polish>
 		<Russian>Средневековье</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MEDIEVAL_STRATEGY</Tag>
-		<English>A Medieval society is one which has reached further levels of refinement in culture and technology compared to Classical times. Stronger blacksmithing techniques allow heavier armor, making heavy cavalry and other forces the weapon of choice on the battlefield along with increasingly powerful siege weaponry. Fortifications improve, creating fortresses capable of sustaining a siege for months if need be due not only to sturdy construction but also food and supply storage. New structures like wind and watermills appear with the advent of the first gears. Gunpowder weapons begin to be refined toward the end of this period, foreshadowing the second great change in warfare since ancient times.
-[NEWLINE]Time Frame: 450 AD - 1400 AD</English>
-		<French>Une société du Moyen-Âge est une société qui a atteint des niveaux de raffinement supplémentaires dans la culture et une technologie par rapport à l'époque Classique. Des techniques de forge plus fortes permettent des armures plus lourdes, faisant de la cavalerie lourde et d'autres forces l'arme de choix sur le champ de bataille ainsi que des armes de siège de plus en plus puissantes. Les fortifications s'améliorent, créant des forteresses capables de soutenir un siège pendant des mois si nécessaire en raison non seulement d'une construction robuste, mais aussi du stockage de la nourriture et des fournitures. De nouvelles structures comme le vent et les moulins à eau apparaissent avec l'avènement des premiers engrenages. Les armes à poudre commencent à être raffinées vers la fin de cette période, préfigurant le deuxième grand changement dans la guerre depuis les temps anciens.
-[NEWLINE]Calendrier: 450 AD - 1400 AD</French>
+		<English>A Medieval society is one which has reached further levels of refinement in culture and technology compared to Classical times. Stronger blacksmithing techniques allow heavier armor, making heavy cavalry and other forces the weapon of choice on the battlefield along with increasingly powerful siege weaponry. Fortifications improve, creating fortresses capable of sustaining a siege for months if need be due not only to sturdy construction but also food and supply storage. New structures like wind and watermills appear with the advent of the first gears. Gunpowder weapons begin to be refined toward the end of this period, foreshadowing the second great change in warfare since ancient times.[NEWLINE]Time Frame: 450 AD - 1400 AD</English>
+		<French>Une société du Moyen-Âge est une société qui a atteint des niveaux de raffinement supplémentaires dans la culture et une technologie par rapport à l'époque Classique. Des techniques de forge plus fortes permettent des armures plus lourdes, faisant de la cavalerie lourde et d'autres forces l'arme de choix sur le champ de bataille ainsi que des armes de siège de plus en plus puissantes. Les fortifications s'améliorent, créant des forteresses capables de soutenir un siège pendant des mois si nécessaire en raison non seulement d'une construction robuste, mais aussi du stockage de la nourriture et des fournitures. De nouvelles structures comme le vent et les moulins à eau apparaissent avec l'avènement des premiers engrenages. Les armes à poudre commencent à être raffinées vers la fin de cette période, préfigurant le deuxième grand changement dans la guerre depuis les temps anciens.[NEWLINE]Calendrier: 450 AD - 1400 AD</French>
 		<Russian>Средневековое общество характеризуется тем, что на позднем этапе оно достигло дополнительных высот утонченности в культуре и технологиях по сравнению с античными временами. Прогрессивные методы ковки приводят к появлению полных доспехов, тяжелой кавалерии и другие видов оружия, родов войск на поле битвы вместе с все более мощным осадным оружием. Прогресс в фортификации, в строительстве крепостей, способных выдержать осаду в течение нескольких месяцев, если потребуется, а также запасать продукты питания и снабжения. Новые структуры, такие как ветряные и водяные мельницы, появляются с изобретением зубчатой передачи. Изобретение пороха к концу этого периода приводит к новому прорыву в военном деле, предвещая вторую крупнейшую революцию в вооружениях с древнейших времен.[NEWLINE]450 - 1400 гг.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6416,14 +6347,13 @@
 			<Gender>Neuter</Gender>
 			<Plural>0</Plural>
 		</German>
+		<Italian>della nanotecnologia</Italian>
 		<Russian>Нанотех</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_NANOTECH_STRATEGY</Tag>
-		<English>The Nanotech era is a logical evolution of the previous information age. Computers become sentient, and sentient robots begin to appear. Nanites are able to provide a nearly limitless capacity for construction, and small nano-factories find a place first in the homes of developed nations, then in developing nations. Poverty as we know it begins to disappear, and existing systems of government and society are shaken. Capitalism begins to give way to a post-scarcity economy. However not everything is all bring. Nanotech and robotics also become used as deadly weapons. Fierce wars are fought as traditional totalitarian governments fight to maintain control over populations suddenly able to produce nearly anything. MAD or mutually assured destruction is rendered obsolete due to nanotech. With the removal of nuclear deterrence, many powerful countries turn again towards conquest, but the dark spectre of nanotech hangs over the world as the potential for doomsday is much greater than the era of nuclear exchange. Machine governments become possible, and many sophisticated AI attempt at domination in order to protect humanity from itself.
-[NEWLINE]Time Frame: 2050 AD - 2150 AD</English>
-		<French>L'ère Nanotech est une évolution logique de l'ère de l'information précédente. Les ordinateurs deviennent sensibles et les robots sensibles commencent à apparaître. Les nanites sont capables de fournir une capacité de construction presque illimitée, et les petites nano-usines trouvent leur place d'abord dans les foyers des pays développés, puis dans les pays en développement. La pauvreté telle que nous la connaissons commence à disparaître et les systèmes de gouvernement et de société existants sont ébranlés. Le capitalisme commence à céder la place à une économie post-pénurie. Cependant tout n'est pas tout apporter. La nanotechnologie et la robotique sont également utilisées comme armes mortelles. Des guerres féroces sont menées alors que les gouvernements totalitaires traditionnels se battent pour maintenir le contrôle sur des populations soudainement capables de produire presque tout. La destruction MAD ou mutuellement assurée est rendue obsolète en raison des nanotechnologies. Avec la suppression de la dissuasion nucléaire, de nombreux pays puissants se tournent à nouveau vers la conquête, mais le spectre sombre des nanotechnologies plane sur le monde, car le potentiel de la fin du monde est bien plus grand que l'ère des échanges nucléaires. Les gouvernements de machines deviennent possibles, et de nombreuses IA sophistiquées tentent de dominer afin de protéger l'humanité d'elle-même.
-[NEWLINE]Calendrier: 2050 AD - 2150 AD</French>
+		<English>The Nanotech era is a logical evolution of the previous information age. Computers become sentient, and sentient robots begin to appear. Nanites are able to provide a nearly limitless capacity for construction, and small nano-factories find a place first in the homes of developed nations, then in developing nations. Poverty as we know it begins to disappear, and existing systems of government and society are shaken. Capitalism begins to give way to a post-scarcity economy. However not everything is all bring. Nanotech and robotics also become used as deadly weapons. Fierce wars are fought as traditional totalitarian governments fight to maintain control over populations suddenly able to produce nearly anything. MAD or mutually assured destruction is rendered obsolete due to nanotech. With the removal of nuclear deterrence, many powerful countries turn again towards conquest, but the dark spectre of nanotech hangs over the world as the potential for doomsday is much greater than the era of nuclear exchange. Machine governments become possible, and many sophisticated AI attempt at domination in order to protect humanity from itself.[NEWLINE]Time Frame: 2050 AD - 2150 AD</English>
+		<French>L'ère Nanotech est une évolution logique de l'ère de l'information précédente. Les ordinateurs deviennent sensibles et les robots sensibles commencent à apparaître. Les nanites sont capables de fournir une capacité de construction presque illimitée, et les petites nano-usines trouvent leur place d'abord dans les foyers des pays développés, puis dans les pays en développement. La pauvreté telle que nous la connaissons commence à disparaître et les systèmes de gouvernement et de société existants sont ébranlés. Le capitalisme commence à céder la place à une économie post-pénurie. Cependant tout n'est pas tout apporter. La nanotechnologie et la robotique sont également utilisées comme armes mortelles. Des guerres féroces sont menées alors que les gouvernements totalitaires traditionnels se battent pour maintenir le contrôle sur des populations soudainement capables de produire presque tout. La destruction MAD ou mutuellement assurée est rendue obsolète en raison des nanotechnologies. Avec la suppression de la dissuasion nucléaire, de nombreux pays puissants se tournent à nouveau vers la conquête, mais le spectre sombre des nanotechnologies plane sur le monde, car le potentiel de la fin du monde est bien plus grand que l'ère des échanges nucléaires. Les gouvernements de machines deviennent possibles, et de nombreuses IA sophistiquées tentent de dominer afin de protéger l'humanité d'elle-même.[NEWLINE]Calendrier: 2050 AD - 2150 AD</French>
 		<Russian>Нанотехнологическая эра - это логическое продолжение предыдущей информационной эпохи. Компьютеры становятся подобны живым организмам и впервые появляются познающие роботы. Наниты могут обеспечить почти безграничную емкость для строительства, а небольшие нано-фабрики находят место впервые в домах жителей развитых стран, а затем и в развивающихся странах. Бедность, какую мы знаем, начинает постепенно исчезать, как и существующие системы правительства и общества. Капитализм начинает уходить в прошлое, уступая дорогу бездефицитной экономике. Однако новые технологии вместе с благами таят в себе большие угрозы. Нанотех и робототехника также становятся смертоносным оружием. Все активнее внедряется генетическое оружие и наноботы, как средство и орудие ведения войны и контроля численности населения. Тоталитарные правительства и мощные международные синдикаты ведут яростную борьбу за передел сфер влияния, прибегая к технологиям тотального контроля. С приходом Нанотеха исчезают прежние механизмы сдерживания. Устаревают прежние гарантии взаимного уничтожения. С ослаблением ядерного сдерживания многие мощные державы снова обращаются к завоеваниям, но темный призрак нанотеха нависает над всем миром, поскольку потенциал для совета директоров мегакорпораций возрос по сравнению с Ядерной эрой. Становится реальностью участие ИИ в управлении, как и многие изысканные попытки ИИ на доминирование, чтобы защитить человечество от самого себя.[NEWLINE]2050 - 2150 гг.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6435,50 +6365,28 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>preistorica.</Italian>
+		<Italian>Preistoria</Italian>
 		<Spanish>Prehistoria</Spanish>
 		<Polish>Prehistoryczna</Polish>
 		<Russian>Каменный век</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_PREHISTORIC_STRATEGY</Tag>
-		<English>Prehistory (Latin, pra = before; Greek, iotopia = history) is a term used to describe the period before recorded history. Paul Tournal originally coined the term Pré-historique in describing the finds he had made in the caves of southern France. The term "prehistory" can be used to refer to all time since the beginning of the universe, although it is more often used in referring to the period of time since life appeared on Earth, or even more specifically to the time since human-like beings appeared.
-[NEWLINE]Time Frame: 200 000 BC - 12 000 BC</English>
-		<French>La préhistoire (latin, pra = avant; grec, iotopie = histoire) est un terme utilisé pour décrire la période avant l'histoire enregistrée. Paul Tournal a initialement inventé le terme Pré-historique en décrivant les découvertes qu'il avait faites dans les grottes du sud de la France. Le terme "préhistoire" peut être utilisé pour se référer à tous les temps depuis le début de l'univers, bien qu'il soit plus souvent utilisé pour se référer à la période de temps depuis que la vie est apparue sur Terre, ou même plus spécifiquement au temps depuis que les êtres humains sont apparus.
-[NEWLINE]Calendrier: 200 000 avant JC - 12 000 avant JC</French>
+		<English>Prehistory (Latin, pra = before; Greek, iotopia = history) is a term used to describe the period before recorded history. Paul Tournal originally coined the term Pré-historique in describing the finds he had made in the caves of southern France. The term "prehistory" can be used to refer to all time since the beginning of the universe, although it is more often used in referring to the period of time since life appeared on Earth, or even more specifically to the time since human-like beings appeared.[NEWLINE]Time Frame: 200 000 BC - 12 000 BC</English>
+		<French>La préhistoire (latin, pra = avant; grec, iotopie = histoire) est un terme utilisé pour décrire la période avant l'histoire enregistrée. Paul Tournal a initialement inventé le terme Pré-historique en décrivant les découvertes qu'il avait faites dans les grottes du sud de la France. Le terme "préhistoire" peut être utilisé pour se référer à tous les temps depuis le début de l'univers, bien qu'il soit plus souvent utilisé pour se référer à la période de temps depuis que la vie est apparue sur Terre, ou même plus spécifiquement au temps depuis que les êtres humains sont apparus.[NEWLINE]Calendrier: 200 000 avant JC - 12 000 avant JC</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_RENAISSANCE</Tag>
 		<English>Renaissance</English>
-		<French>
-			<Text>Renaissance</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Renaissance:Renaissance:Renaissance:Renaissance</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Rinascimentale</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Renacimiento</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Italian>rinascimentale</Italian>
+		<Spanish>Renacimiento</Spanish>
 		<Polish>Renesansowa</Polish>
 		<Russian>Возрождение</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_RENAISSANCE_STRATEGY</Tag>
-		<English>The Renaissance begins with the advent of the printing press, further refinements in gunpowder weaponry, and the advent of ships capable of traversing the world. New thoughts on government and religion, much like the Classical era, shape this period as well. Many religions schism as the traditional teachings are again brought to light. Science as a serious discipline emerges for the first time, and advances in medicine and astronomy improve the knowledge of the physical world. Religious explanations for existence and the origin of the universe are questioned, and serious schisms between science and religion occur in some cases, but not all. Towards the end of this period massive oceanic empires appear, colonizing far off lands and trading and dominating far off people. Many native peoples are displaced or enslaved.
-[NEWLINE]Time Frame: 1400 AD - 1750 AD</English>
-		<French>La Renaissance commence avec l'avènement de l'imprimerie, de nouveaux perfectionnements dans l'armement à la poudre à canon et l'avènement de navires capables de traverser le monde. De nouvelles réflexions sur le gouvernement et la religion, tout comme l'ère Classique, façonnent également cette période. De nombreuses religions sont schistes alors que les enseignements traditionnels sont à nouveau mis en lumière. La science en tant que discipline sérieuse émerge pour la première fois, et les progrès de la médecine et de l'astronomie améliorent la connaissance du monde physique. Les explications religieuses de l'existence et de l'origine de l'univers sont remises en cause, et de graves schismes entre science et religion se produisent dans certains cas, mais pas tous. Vers la fin de cette période, des empires océaniques massifs apparaissent, colonisant des terres lointaines et commercialisant et dominant des peuples lointains. De nombreux peuples autochtones sont déplacés ou réduits en esclavage.
-[NEWLINE]Calendrier: 1400 AD - 1750 AD</French>
+		<English>The Renaissance begins with the advent of the printing press, further refinements in gunpowder weaponry, and the advent of ships capable of traversing the world. New thoughts on government and religion, much like the Classical era, shape this period as well. Many religions schism as the traditional teachings are again brought to light. Science as a serious discipline emerges for the first time, and advances in medicine and astronomy improve the knowledge of the physical world. Religious explanations for existence and the origin of the universe are questioned, and serious schisms between science and religion occur in some cases, but not all. Towards the end of this period massive oceanic empires appear, colonizing far off lands and trading and dominating far off people. Many native peoples are displaced or enslaved.[NEWLINE]Time Frame: 1400 AD - 1750 AD</English>
+		<French>La Renaissance commence avec l'avènement de l'imprimerie, de nouveaux perfectionnements dans l'armement à la poudre à canon et l'avènement de navires capables de traverser le monde. De nouvelles réflexions sur le gouvernement et la religion, tout comme l'ère Classique, façonnent également cette période. De nombreuses religions sont schistes alors que les enseignements traditionnels sont à nouveau mis en lumière. La science en tant que discipline sérieuse émerge pour la première fois, et les progrès de la médecine et de l'astronomie améliorent la connaissance du monde physique. Les explications religieuses de l'existence et de l'origine de l'univers sont remises en cause, et de graves schismes entre science et religion se produisent dans certains cas, mais pas tous. Vers la fin de cette période, des empires océaniques massifs apparaissent, colonisant des terres lointaines et commercialisant et dominant des peuples lointains. De nombreux peuples autochtones sont déplacés ou réduits en esclavage.[NEWLINE]Calendrier: 1400 AD - 1750 AD</French>
 		<Russian>Эпоха Возрождения начинается с изобретения печатного станка, дальнейшего прогресса в пороховом вооружении, а появление кораблей, способных совершить кругосветное путешествие. Новая политическая и религиозная мысль охватывает многие умы в этот период, как и когда-то в Античности. Многие религии и традиционные учения в эту пору медленно клонятся к упадку и расколам, уступая место светскому обществу. Впервые утверждается наука как серьезная дисциплина, а ее методы продвигаются в медицине и астрономии, улучшая знания о физическом мире. На смену прежним религиозным догмам о сотворении мира приходят новые естественнонаучные теории о формировании Земли и происхождении жизни. В некоторых случаях возникают серьезные споры между наукой и религией, но в эту пору они еще не обретают столь антагонистичный характер, как позже. К концу этого периода появляются огромные морские империи, колонизующие далекие земли и доминирующие на торговых путях. Многие аборигенные народы были истреблены или порабощены в этот период колониальными державами.[NEWLINE]1400 - 1750 гг.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6498,14 +6406,13 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
+		<Italian>della trascendenza</Italian>
 		<Russian>Эра Трансцендентности</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSCENDENT_STRATEGY</Tag>
-		<English>The Transcendent era is a period in the far future. Mankind has the ability to time travel, transverse diamensions, settle the known and increasingly unknown parts of the universe.
-[NEWLINE]Time Frame: 4000 AD - 6000 AD</English>
-		<French>L'ère transcendantale est une période lointaine. L'humanité a la capacité de voyager dans le temps, des dimensions parallèles, de s'installer dans les parties connues et de plus en plus inconnues de l'univers.
-[NEWLINE]Calendrier: 4000 AD - 6000 AD</French>
+		<English>The Transcendent era is a period in the far future. Mankind has the ability to time travel, transverse diamensions, settle the known and increasingly unknown parts of the universe.[NEWLINE]Time Frame: 4000 AD - 6000 AD</English>
+		<French>L'ère transcendantale est une période lointaine. L'humanité a la capacité de voyager dans le temps, des dimensions parallèles, de s'installer dans les parties connues et de plus en plus inconnues de l'univers.[NEWLINE]Calendrier: 4000 AD - 6000 AD</French>
 		<Russian>Трансцендентная эра - это период в далеком будущем. Человечество обладает способностью путешествовать во времени и в параллельные реальности, управлять различными измерениями и частями вселенной.[NEWLINE]4000 - 6000 гг.</Russian>
 	</TEXT>
 	<TEXT>
@@ -6517,17 +6424,15 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</German>
-		<Italian>Transumana</Italian>
+		<Italian>transumana</Italian>
 		<Spanish>Época transhumana</Spanish>
 		<Polish>Transhumanistyczna</Polish>
 		<Russian>Трансгуманизм</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSHUMAN_STRATEGY</Tag>
-		<English>The transhuman era represents a period following the nanotech era. In the transhuman era in order to combat the increased hostility between machine and human life, as well as improve themselves, and for some, reach some kind of immortality, some of mankind merges with technology. The transhuman movement actually began in the Information age, but only became possible with the advanced technologies of the late nanotech period. While some humans choose to embrace transhumanism, a counter movement, or new humanist movement also appears, which is diverse, including religious people of all stripes, some scientists warning of the possible negative ramifications of transhumanism, and others simply horrified or opposed to the idea. Some of the Transhumans attempt to force humans to convert. The line between machine and man begins to blur, as machine life becomes more human with emotions, many developing competing ideas, leading to further conflict. Transhumans, Machine factions, and normal humans continue to struggle, some against each other and some allied. Humanity also begins colonizing the solar system in this period, many escaping the warfare on earth to seek a better life. Primitive terraforming allows Mars to become habitable, and eventually the technology improves to allow the construction of massive artificial space colonies. Space warfare appears, first with space fightercraft, developed from shuttles, then with larger ships as well as space faring robots of massive size, some piloted by humans. Eventually interplanetary warfare becomes possible when ships no longer take enormous amounts of time to transverse space. Some of these wars are traditional wars of conquest over resources, others over ideology as the humanist/transhumanist and various machine factions battle it out in space.
-[NEWLINE]Time Frame: 2150 AD - 2300 AD</English>
-		<French>L'ère transhumaine représente une période qui suit l'ère nanotechnologique. À l'ère transhumaine, afin de lutter contre l'hostilité accrue entre la machine et la vie humaine, ainsi que de s'améliorer, et pour certains, d'atteindre une sorte d'immortalité, une partie de l'humanité fusionne avec une technologie. Le mouvement transhumain a réellement commencé à l'ère de l'information, mais n'est devenu possible qu'avec les technologies avancées de la fin de la période nanotechnologique. Alors que certains humains choisissent d'embrasser le transhumanisme, un contre-mouvement ou un nouveau mouvement humaniste apparaît également, qui est diversifié, y compris des religieux de toutes les allégeances, certains scientifiques avertissant des ramifications négatives possibles du transhumanisme, et d'autres simplement horrifiés ou opposés à l'idée . Certains des Transhumains tentent de forcer les humains à se convertir. La frontière entre la machine et l'homme commence à s'estomper, alors que la vie de la machine devient plus humaine avec des émotions, beaucoup développant des idées concurrentes, conduisant à de nouveaux conflits. Les transhumains, les factions Machine et les humains normaux continuent de lutter, certains les uns contre les autres et certains alliés. L'humanité commence également à coloniser le système solaire à cette période, beaucoup échappant à la guerre sur terre pour chercher une vie meilleure. La terraformation primitive permet à Mars de devenir habitable, et finalement une technologie s'améliore pour permettre la construction de colonies spatiales artificielles massives. La guerre spatiale apparaît, d'abord avec des chasseurs spatiaux, développés à partir de navettes, puis avec des navires plus grands ainsi que des robots spatiaux de taille massive, certains pilotés par des humains. Finalement, la guerre interplanétaire devient possible lorsque les navires ne mettent plus énormément de temps à traverser l'espace. Certaines de ces guerres sont des guerres de conquête traditionnelles sur les ressources, d'autres sur l'idéologie, car les factions humanistes / transhumanistes et diverses machines se battent dans l'espace.
-[NEWLINE]Calendrier: 2150 AD - 2300 AD</French>
+		<English>The transhuman era represents a period following the nanotech era. In the transhuman era in order to combat the increased hostility between machine and human life, as well as improve themselves, and for some, reach some kind of immortality, some of mankind merges with technology. The transhuman movement actually began in the Information age, but only became possible with the advanced technologies of the late nanotech period. While some humans choose to embrace transhumanism, a counter movement, or new humanist movement also appears, which is diverse, including religious people of all stripes, some scientists warning of the possible negative ramifications of transhumanism, and others simply horrified or opposed to the idea. Some of the Transhumans attempt to force humans to convert. The line between machine and man begins to blur, as machine life becomes more human with emotions, many developing competing ideas, leading to further conflict. Transhumans, Machine factions, and normal humans continue to struggle, some against each other and some allied. Humanity also begins colonizing the solar system in this period, many escaping the warfare on earth to seek a better life. Primitive terraforming allows Mars to become habitable, and eventually the technology improves to allow the construction of massive artificial space colonies. Space warfare appears, first with space fightercraft, developed from shuttles, then with larger ships as well as space faring robots of massive size, some piloted by humans. Eventually interplanetary warfare becomes possible when ships no longer take enormous amounts of time to transverse space. Some of these wars are traditional wars of conquest over resources, others over ideology as the humanist/transhumanist and various machine factions battle it out in space.[NEWLINE]Time Frame: 2150 AD - 2300 AD</English>
+		<French>L'ère transhumaine représente une période qui suit l'ère nanotechnologique. À l'ère transhumaine, afin de lutter contre l'hostilité accrue entre la machine et la vie humaine, ainsi que de s'améliorer, et pour certains, d'atteindre une sorte d'immortalité, une partie de l'humanité fusionne avec une technologie. Le mouvement transhumain a réellement commencé à l'ère de l'information, mais n'est devenu possible qu'avec les technologies avancées de la fin de la période nanotechnologique. Alors que certains humains choisissent d'embrasser le transhumanisme, un contre-mouvement ou un nouveau mouvement humaniste apparaît également, qui est diversifié, y compris des religieux de toutes les allégeances, certains scientifiques avertissant des ramifications négatives possibles du transhumanisme, et d'autres simplement horrifiés ou opposés à l'idée . Certains des Transhumains tentent de forcer les humains à se convertir. La frontière entre la machine et l'homme commence à s'estomper, alors que la vie de la machine devient plus humaine avec des émotions, beaucoup développant des idées concurrentes, conduisant à de nouveaux conflits. Les transhumains, les factions Machine et les humains normaux continuent de lutter, certains les uns contre les autres et certains alliés. L'humanité commence également à coloniser le système solaire à cette période, beaucoup échappant à la guerre sur terre pour chercher une vie meilleure. La terraformation primitive permet à Mars de devenir habitable, et finalement une technologie s'améliore pour permettre la construction de colonies spatiales artificielles massives. La guerre spatiale apparaît, d'abord avec des chasseurs spatiaux, développés à partir de navettes, puis avec des navires plus grands ainsi que des robots spatiaux de taille massive, certains pilotés par des humains. Finalement, la guerre interplanétaire devient possible lorsque les navires ne mettent plus énormément de temps à traverser l'espace. Certaines de ces guerres sont des guerres de conquête traditionnelles sur les ressources, d'autres sur l'idéologie, car les factions humanistes / transhumanistes et diverses machines se battent dans l'espace.[NEWLINE]Calendrier: 2150 AD - 2300 AD</French>
 		<Russian>Эра трансчеловека исходит из предыдущей эры нанотехнологий. В эпоху Трансгуманизма многие представители человеческой расы модифицируют свое тело с помощью прогрессивных методов биотехнологии и киберимплантатов с целью самосовершенствования, а также для успешного конкурирования с все более совершенными машинами. Трансгуманистическое движение на самом деле берет начало еще в Информационную эпоху, но лишь с передовыми технологиями позднего нанотеха оно стало возможным. Если часть людей приветствовала приход новой эры с ее технологиями, то остальные придерживались противоположной точки зрения. Скептики, гуманисты старой закалки, некоторые ученые и религиозные консерваторы предостерегали общество о возможных негативных последствиях трансгуманизма, а другие просто в ужасе от мысли слияния человека и машины, пропагандируя идеи луддизма. Некоторые из трансгуманистов пытаются принудить людей к такому объединению. Грань между машиной и человеком начинает размываться, поскольку и сами машины становится ближе к человеку, обретая способность к эмоциям, многие развивают конкурирующие идеи, приводящие к дальнейшему конфликту. Транслюди, машинные фракции и обычные люди продолжают бороться, некоторые друг против друга или как союзники. Человечество также начинает в этот период колонизировать Солнечную систему, многие эмигрируют с Земли в поисках лучшей жизни или спасаясь от войн. Примитивные технологии терраформирования позволяет сделать Марс обитаемым, и в конечном итоге технологии постепенно совершенствуются, чтобы обеспечить строительство гигантских космических колоний. Война плавно переносится на просторы космоса, сначала посредством штурмовиков, разработанными на базе шаттлов, затем с помощью крупных кораблей, а также космическими роботами массивных размеров, некоторые пилотируемыми людьми. В конце концов, это приводит к возникновению межпланетных войн, когда звездолетам больше не требуется огромного количества времени, чтобы пересечь пространство между планетами. Некоторые из этих войн являются традиционными войнами для завоевания ресурсов, другие же порождены идеологическим противостоянием старых гуманистом и трансгуманистов, а также различные фракций машин, сражающихся в космосе.[NEWLINE]2150 - 2300 гг.</Russian>
 	</TEXT>
 	<TEXT>
@@ -8988,250 +8893,138 @@
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_CHIEFTAIN</Tag>
 		<English>Chieftain</English>
-		<French>
-			<Text>Chef tribal</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Baron</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Capitano</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Jefe</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Chef tribal</French>
+		<German>Baron</German>
+		<Italian>Capotribù</Italian>
+		<Spanish>Jefe</Spanish>
 		<Polish>Wódz</Polish>
 		<Russian>Âîæäü</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_CHIEFTAIN_HELP</Tag>
-		<English>A relatively easy difficulty level - good for when you want to try a new strategy.  Barbarians and wild animals are stronger and more aggressive and you don't get as many bonuses.</English>
+		<English>A relatively easy difficulty level - good for when you want to try a new strategy. Barbarians and wild animals are stronger and more aggressive and you don't get as many bonuses.</English>
 		<French>C'est un niveau de difficulté relativement facile et un bon choix pour essayer une nouvelle stratégie. Les barbares et les animaux sauvages sont plus agressifs et vous ne disposez d'aucun bonus.</French>
 		<German>Diesen relativ einfachen Schwierigkeitsgrad sollten Sie wählen, wenn Sie eine neue Strategie testen möchten. Barbaren und wilde Tiere sind in diesem Fall stärker und aggressiver. Außerdem erhalten Sie weniger Boni.</German>
 		<Italian>Un livello di difficoltà abbastanza basso, utile per provare una nuova strategia. I barbari e gli animali selvaggi sono più forti e aggressivi, inoltre non otterrai molti bonus.</Italian>
-		<Spanish>Un nivel de dificultad relativamente bajo, bueno para probar nuevas estrategias.  Los bárbaros y animales salvajes son más fuertes y agresivos y no se reciben tantas bonificaciones.</Spanish>
+		<Spanish>Un nivel de dificultad relativamente bajo, bueno para probar nuevas estrategias. Los bárbaros y animales salvajes son más fuertes y agresivos y no se reciben tantas bonificaciones.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_DEITY</Tag>
 		<English>Deity</English>
-		<French>
-			<Text>Divinité</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Gottheit</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Divinità</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Deidad</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Divinité</French>
+		<German>Gottheit</German>
+		<Italian>Divinità</Italian>
+		<Spanish>Deidad</Spanish>
 		<Polish>Bóstwo</Polish>
 		<Russian>Áîæåñòâî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_DEITY_HELP</Tag>
-		<English>Muuuhahaha!  Good luck, sucker!</English>
+		<English>Muhahaha! Good luck, sucker!</English>
 		<French>Mouah ha ha ! Bonne chance, imbécile !</French>
 		<German>Ha ha ha! Viel Glück, Wurm!</German>
-		<Italian>Muuuhahaha! Buona fortuna, poppante!</Italian>
-		<Spanish>¡Juuuuuaaajajajajajá!  ¡Buena suerte, infeliz!</Spanish>
+		<Italian>Muhahaha! Buona fortuna, sfigato!</Italian>
+		<Spanish>¡Jaaaaaaajajajajajá! ¡Buena suerte, infeliz!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_EMPEROR</Tag>
 		<English>Emperor</English>
-		<French>
-			<Text>Empereur</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Kaiser</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Imperatore</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Emperador</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Empereur</French>
+		<German>Kaiser</German>
+		<Italian>Imperatore</Italian>
+		<Spanish>Emperador</Spanish>
 		<Polish>Cesarz</Polish>
 		<Russian>Èìïåðàòîð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_EMPEROR_HELP</Tag>
-		<English>Are you ready to be an Emperor?  If so, you will need to prove your mettle by overcoming opponents that are both fast and aggressive while dealing with a population that is harder to motivate and please. This is a true test for Civ experts.</English>
+		<English>Are you ready to be an Emperor? If so, you will need to prove your mettle by overcoming opponents that are both fast and aggressive while dealing with a population that is harder to motivate and please. This is a true test for Civ experts.</English>
 		<French>Vous vous sentez l'âme d'un empereur ? Si tel est le cas, vous devrez le prouver en terrassant des ennemis rapides et agressifs et en régnant sur une population de plus en plus difficile à motiver et à satisfaire. C'est un vrai défi pour les experts de Civilization.</French>
 		<German>Sie sind der geborene Kaiser? Beweisen Sie es, indem Sie Ihre schnellen und aggressiven Gegner bezwingen, während Sie Ihr notorisch unzufriedenes Volk glücklich machen. Dieser Herausforderung sind nur wahre Civilization-Experten gewachsen.</German>
 		<Italian>Sei pronto per diventare Imperatore? Se sì, dovrai affrontare con coraggio gli avversari, rapidi e aggressivi, e allo stesso tempo cercare di soddisfare la tua popolazione, più difficile da compiacere e motivare. Una vera sfida per gli esperti di Civilization.</Italian>
-		<Spanish>¿Estáis listo para ser emperador?  De ser así, tendréis que demostrar vuestra valía derrotando a adversarios más rápidos y agresivos a la vez que cuidáis de una población más difícil de motivar y complacer. Esto es una prueba de verdad para los expertos en Civilization.</Spanish>
+		<Spanish>¿Estáis listo para ser emperador? De ser así, tendréis que demostrar vuestra valía derrotando a adversarios más rápidos y agresivos a la vez que cuidáis de una población más difícil de motivar y complacer. Esto es una prueba de verdad para los expertos en Civilization.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_IMMORTAL</Tag>
 		<English>Immortal</English>
-		<French>
-			<Text>Immortel</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Unsterblicher</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Immortale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Inmortal</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Immortel</French>
+		<German>Unsterblicher</German>
+		<Italian>Immortale</Italian>
+		<Spanish>Inmortal</Spanish>
 		<Polish>Nieśmiertelny</Polish>
 		<Russian>Áåññìåðòíûé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_IMMORTAL_HELP</Tag>
-		<English>Only a few can claim memberships among the ranks of the Immortals.  This is a bruising test for all but the most experienced.</English>
+		<English>Only a few can claim memberships among the ranks of the Immortals. This is a bruising test for all but the most experienced.</English>
 		<French>Peu nombreux sont ceux qui peuvent revendiquer une place parmi les Immortels. C'est là un défi que seuls les plus expérimentés sauront relever.</French>
 		<German>Nur wenige Herrscher werden durch ihre Leistungen unsterblich. Dieser Herausforderung sind nur die Besten der Besten gewachsen.</German>
 		<Italian>Solo in pochi possono appartenere alla schiera degli Immortali. Una prova molto impegnativa, anche per i più esperti.</Italian>
-		<Spanish>Solo unos cuantos pueden contarse entre las filas de los inmortales.  Esto resulta una prueba demoledora para todos, excepto para los más experimentados.</Spanish>
+		<Spanish>Solo unos cuantos pueden contarse entre las filas de los inmortales. Esto resulta una prueba demoledora para todos, excepto para los más experimentados.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_MONARCH</Tag>
 		<English>Monarch</English>
-		<French>
-			<Text>Monarque</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>König</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Monarca</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Monarca</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Monarque</French>
+		<German>König</German>
+		<Italian>Monarca</Italian>
+		<Spanish>Monarca</Spanish>
 		<Polish>Monarcha</Polish>
 		<Russian>Ìîíàðõ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_MONARCH_HELP</Tag>
-		<English>For Monarchs, the challenges definitely start to ramp up on this level.  Upkeep is higher, research is slower, your people are harder to please, and your computer opponents are just plain smarter.</English>
+		<English>For Monarchs, the challenges definitely start to ramp up on this level. Upkeep is higher, research is slower, your people are harder to please, and your computer opponents are just plain smarter.</English>
 		<French>Pour les Monarques, les défis qui se présentent sont d'une toute autre ampleur. L'entretien est plus cher, la recherche plus lente, votre peuple plus exigeant et vos adversaires I.A. tout simplement plus intelligents.</French>
 		<German>Dieser Schwierigkeitsgrad ist wahrlich königlich. Ihre Unterhaltskosten erreichen nun schwindelnde Höhen, Ihre Forschungen kommen nur langsam voran und Ihr Volk ist alles andere als genügsam. Zu allem Überfluss müssen Sie sich mit überaus geschickten Computergegnern herumschlagen.</German>
 		<Italian>Per i Monarchi, la sfida comincia a farsi impegnativa. Il costo di mantenimento è superiore, la ricerca più lenta, la gente più difficile da accontentare e gli avversari computerizzati più scaltri.</Italian>
-		<Spanish>Para los Monarcas, el reto empieza a ponerse serio en este nivel.  El mantenimiento es más alto, la investigación, más lenta, vuestro pueblo es más difícil de complacer y los oponentes que lleva el ordenador son más astutos.</Spanish>
+		<Spanish>Para los Monarcas, el reto empieza a ponerse serio en este nivel. El mantenimiento es más alto, la investigación, más lenta, vuestro pueblo es más difícil de complacer y los oponentes que lleva el ordenador son más astutos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_NIGHTMARE</Tag>
 		<English>Nightmare</English>
 		<French>Cauchemar</French>
+		<Italian>Incubo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_NIGHTMARE_HELP</Tag>
-		<English>MUUUUAHAHAHAHA! Survive this!</English>
-		<French>MOUUUUAHAHAHAHA! Essayez de Survivre à cela !</French>
+		<English>MUAHAHAHAHA! Survive this!</English>
+		<French>MOUAHAHAHAHA! Essayez de Survivre à cela !</French>
+		<Italian>MUAHAHAHAHA! Prova a sopravvivere!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_NOBLE</Tag>
 		<English>Noble</English>
-		<French>
-			<Text>Régent</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Fürst</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Nobile</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Noble</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Régent</French>
+		<German>Fürst</German>
+		<Italian>Nobile</Italian>
 		<Polish>Szlachcic</Polish>
 		<Russian>Àðèñòîêðàò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_NOBLE_HELP</Tag>
-		<English>Nobles need to balance their many responsibilities so this is the most balanced level.  Civ veterans will find this level to be a great place to start.</English>
+		<English>Nobles need to balance their many responsibilities so this is the most balanced level. Civ veterans will find this level to be a great place to start.</English>
 		<French>Les Régents doivent faire face à leurs nombreuses responsabilités. Il s'agit donc d'un niveau de difficulté très équilibré et idéal comme point de départ pour les vétérans de Civilization.</French>
 		<German>Da Adlige sehr viele Pflichten wahrnehmen müssen, ist dieser Schwierigkeitsgrad sehr ausgewogen und eignet sich vor allem für erfahrene Civilization-Spieler.</German>
 		<Italian>I Nobili devono saper bilanciare le loro grandi responsabilità e, per questo motivo, questo è il livello più equilibrato. I veterani di Civilization lo troveranno il livello ideale per iniziare.</Italian>
-		<Spanish>Los Nobles tienen que equilibrar sus diversas responsabilidades, así que éste es el nivel más equilibrado.  Los veteranos del Civi comprobarán que este nivel es un punto estupendo por el que empezar. </Spanish>
+		<Spanish>Los Nobles tienen que equilibrar sus diversas responsabilidades, así que éste es el nivel más equilibrado. Los veteranos del Civi comprobarán que este nivel es un punto estupendo por el que empezar. </Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_PRINCE</Tag>
 		<English>Prince</English>
-		<French>
-			<Text>Prince</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Herzog</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Principe</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Príncipe</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Herzog</German>
+		<Italian>Principe</Italian>
+		<Spanish>Príncipe</Spanish>
 		<Polish>Książę</Polish>
 		<Russian>Ïðèíö</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_PRINCE_HELP</Tag>
-		<English>As a Prince you will need to truly prove you are of royal stock.  The AI can produce and research slightly faster than you so you will have to play a much better game to be victorious.</English>
+		<English>As a Prince you will need to truly prove you are of royal stock. The AI can produce and research slightly faster than you so you will have to play a much better game to be victorious.</English>
 		<French>En tant que Prince, vous devrez prouver que vous avez du sang royal. Avec un handicap contre l'I.A., dont la production et la recherche sont bien plus rapides que les vôtres. Il faudra très bien jouer pour remporter la victoire.</French>
 		<German>Als Prinz müssen Sie beweisen, dass Sie wirklich von königlichem Blut sind. Um Ihnen das Leben schwer zu machen, produziert und forscht die KI des Spiels in diesem Schwierigkeitsgrad etwas schneller als Sie. Sie müssen sich also anstrengen, wenn Sie das Spiel gewinnen möchten.</German>
 		<Italian>Come Principe, dovrai saper dimostrare di essere di vera stirpe reale. Quest'ultima può produrre e fare ricerche più velocemente di te, pertanto dovrai giocare con maggior impegno per poter vincere.</Italian>
-		<Spanish>Como Príncipe, tendréis que demostrar que tenéis sangre real de verdad.  La IA producirá e investigará algo más deprisa que vos, por lo que tendréis que jugar mucho mejor para lograr la victoria.</Spanish>
+		<Spanish>Como Príncipe, tendréis que demostrar que tenéis sangre real de verdad. La IA producirá e investigará algo más deprisa que vos, por lo que tendréis que jugar mucho mejor para lograr la victoria.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_SETTLER</Tag>
@@ -9261,11 +9054,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_SETTLER_HELP</Tag>
-		<English>The easiest difficulty level and a great way to start your very first game or when you want to try a new strategy.  As a Settler leader, you will notice that: barbarians and wild animals are less aggressive, your citizens stay happy and healthy longer, and there are many production bonuses to help you.</English>
+		<English>The easiest difficulty level and a great way to start your very first game or when you want to try a new strategy. As a Settler leader, you will notice that: barbarians and wild animals are less aggressive, your citizens stay happy and healthy longer, and there are many production bonuses to help you.</English>
 		<French>C'est le niveau de difficulté le plus facile et le choix idéal pour votre première partie ou pour essayer une nouvelle stratégie. Au niveau Chef tribal, les barbares et les animaux sauvages sont moins agressifs, vos citoyens restent heureux et en bonne santé plus longtemps et de nombreux bonus de production sont prévus pour vous aider.</French>
 		<German>Die einfachste Schwierigkeitsstufe ist eine gute Wahl, wenn Sie Ihr allererstes Spiel starten oder eine neue Strategie ausprobieren möchten. Als Siedleranführer werden Sie feststellen: Barbaren und wilde Tiere sind weniger aggressiv, Ihre Bürger bleiben länger gesund und zufrieden und Sie erhalten darüber hinaus viele Produktionsboni.</German>
 		<Italian>Il livello di difficoltà più semplice e il modo migliore per iniziare la tua prima partita oppure se desideri provare una nuova strategia. Giocando al livello Colono, i Barbari e gli animali selvaggi saranno meno aggressivi, i tuoi cittadini saranno più felici, godranno di buona salute più a lungo e potrai contare su molti bonus produttivi.</Italian>
-		<Spanish>El nivel de dificultad más fácil y una manera excelente de empezar con vuestra primera partida o probar una estrategia nueva.  Como Colono, veréis que los bárbaros y animales salvajes son menos agresivos, que los ciudadanos están más felices y sanos y que habrá muchas bonificaciones a la producción para ayudaros.</Spanish>
+		<Spanish>El nivel de dificultad más fácil y una manera excelente de empezar con vuestra primera partida o probar una estrategia nueva. Como Colono, veréis que los bárbaros y animales salvajes son menos agresivos, que los ciudadanos están más felices y sanos y que habrá muchas bonificaciones a la producción para ayudaros.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_WARLORD</Tag>
@@ -9295,11 +9088,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_WARLORD_HELP</Tag>
-		<English>Warlords have a slightly tougher time of it.  Your opponents are less forgiving and more aggressive - watch your back!</English>
+		<English>Warlords have a slightly tougher time of it. Your opponents are less forgiving and more aggressive - watch your back!</English>
 		<French>Les Seigneurs de guerre rencontreront davantage de difficultés. Vos adversaires sont plus coriaces et agressifs. Surveillez vos arrières !</French>
 		<German>Kriegsherren haben es etwas schwerer, da Barbaren und wilde Tiere stärker und aggressiver sind. Außerdem erhalten Sie als Kriegsherr weniger Boni.</German>
 		<Italian>I guerrieri hanno una vita un po' più difficile: i tuoi avversari sono meno permissivi e più aggressivi. Fai attenzione!</Italian>
-		<Spanish>Los Caudillos lo tienen un poco más crudo.  Los oponentes son menos clementes y más peligrosos. ¡Mucho cuidado!</Spanish>
+		<Spanish>Los Caudillos lo tienen un poco más crudo. Los oponentes son menos clementes y más peligrosos. ¡Mucho cuidado!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HAPPY_BIG_CITY</Tag>
@@ -9658,6 +9451,10 @@
 		<German>[ICON_BULLET]Dient als Standort für militärische Zwecke</German>
 		<Italian>[ICON_BULLET]Ai fini dei combattimenti, equivalgono a una città</Italian>
 		<Spanish>[ICON_BULLET]Hace las veces de ciudad a efectos de combate.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENTHELP_LESS_GROWTH</Tag>
+		<English>[ICON_BULLET]Gives terrain a lower chance to spread</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENTHELP_MORE_GROWTH</Tag>
@@ -11396,11 +11193,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_FORCED_DISCONNECT_INGAME</Tag>
-		<English>Someone else has logged in using this account.  Exiting to main menu...</English>
+		<English>Someone else has logged in using this account. Exiting to main menu...</English>
 		<French>Quelqu'un s'est connecté en utilisant votre compte. Retour au menu principal...</French>
 		<German>Es ist bereits jemand auf diesem Account eingeloggt. Zurück zum Hauptmenü ...</German>
 		<Italian>Qualcun altro ha effettuato il login usando questo account. Ritorno al menu principale...</Italian>
-		<Spanish>Otra persona ha iniciado sesión con esta cuenta.  Saliendo al menú principal...</Spanish>
+		<Spanish>Otra persona ha iniciado sesión con esta cuenta. Saliendo al menú principal...</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAYER</Tag>
@@ -12614,7 +12411,7 @@
 		<English>The Mercy Rule Countdown has been aborted! Normal Game continues...</English>
 		<French>Compte à rebours pour la règle de Grâce annulé! Le Jeu continue normalement...</French>
 		<German>Der Countdown der Gnadenherrschaft wurde abgebrochen! Das Spiel geht normal weiter...</German>
-		<Italian>Il countdown del governo di pietà è stato abortito! La partita continua normalmente...</Italian>
+		<Italian>Il countdown della regola della pietà è stato interrotto! La partita continua normalmente...</Italian>
 		<Spanish>¡Se ha abortado la cuenta atrás de la Regla de gracia! La partida continúa normalmente...</Spanish>
 		<Polish>Czas zasady litości zatrzymany! Normalna gra będzie kontynuowana...</Polish>
 		<Russian>Îáðàòíûé îòñ÷åò ïðàâèë ìèëîñåðäèÿ áûë ïðåðâàí! Íîðìàëüíàÿ èãðà ïðîäîëæàåòñÿ...</Russian>
@@ -13502,11 +13299,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CAPTURED_CITY</Tag>
-		<English>You have captured %s1_CityName!!!</English>
-		<French>Vous avez capturé %s1_CityName !</French>
-		<German>Ihr habt die Stadt %s1_CityName eingenommen!!!</German>
-		<Italian>Hai conquistato %s1_CityName!!!</Italian>
-		<Spanish>Habéis capturado %s1_CityName.</Spanish>
+		<English>You have captured %s1!</English>
+		<French>Vous avez capturé %s1 !</French>
+		<German>Ihr habt die Stadt %s1 eingenommen!</German>
+		<Italian>Hai conquistato %s1!</Italian>
+		<Spanish>Habéis capturado %s1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CENTERS_MAP</Tag>
@@ -13730,23 +13527,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CONSTRUCTED_BUILD_IN</Tag>
-		<English>You have constructed a %s1_BldgName in %s2_CityName.</English>
-		<French>Vous avez construit [NUM1:un:une:des:des] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] à %s2_CityName.</French>
-		<German>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName fertiggestellt.</German>
-		<Italian>Hai costruito l'edificio %s1_BldgName a %s2_CityName.</Italian>
-		<Spanish>Habéis construido [NUM1:un:una:unos:unas] %s1_BldgName en %s2_CityName.</Spanish>
-		<Polish>Skonstruowałeś %s1_BldgName w %s2_CityName.</Polish>
-		<Russian>Çàâåðøåíà ïîñòðîéêà çäàíèÿ %s1_BldgName â ãîðîäå %s2_CityName.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_CONSTRUCTED_BUILD_IN_LIMITED</Tag>
-		<English>You have constructed %s1_BldgName in %s2_CityName.</English>
-		<French>Vous avez construit [NUM1:un:une:des:des] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] à %s2_CityName.</French>
-		<German>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName fertiggestellt.</German>
-		<Italian>Hai costruito l'edificio %s1_BldgName a %s2_CityName.</Italian>
-		<Spanish>Habéis construido [NUM1:un:una:unos:unas] %s1_BldgName en %s2_CityName.</Spanish>
-		<Polish>Skonstruowałeś %s1_BldgName w %s2_CityName.</Polish>
-		<Russian>Â ãîðîäå %s2_CityName ãîòîâî çäàíèå %s1_BldgName.</Russian>
+		<English>Constructed in %s2: [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT].</English>
+		<French>Vous avez construit [NUM1:un:une:des:des] [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] à %s2_CityName.</French>
+		<German>[COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] in %s2_CityName fertiggestellt.</German>
+		<Italian>Hai costruito l'edificio [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] a %s2_CityName.</Italian>
+		<Spanish>Habéis construido [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] en %s2_CityName.</Spanish>
+		<Polish>Skonstruowałeś [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] w %s2_CityName.</Polish>
+		<Russian>Çàâåðøåíà ïîñòðîéêà çäàíèÿ [COLOR_BUILDING_TEXT]%s1[COLOR_REVERT] â ãîðîäå %s2_CityName.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CONTACT_LEADER</Tag>
@@ -13836,21 +13623,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CREATED_PROJECT_IN</Tag>
-		<English>You have created a %s1_PrjctName in %s2_CityName.</English>
-		<French>Vous avez créé [NUM1:un:une:des:des] %s1_PrjctName à %s2_CityName.</French>
-		<German>[COLOR_BUILDING_TEXT]%s1_PrjctName[COLOR_REVERT] in %s2_CityName abgeschlossen.</German>
-		<Italian>Hai creato %s1_PrjctName a %s2_CityName.</Italian>
-		<Spanish>Habéis creado %s1_PrjctName en %s2_CityName.</Spanish>
-		<Polish>Stworzyłeś %s1_PrjctName w %s2_CityName.</Polish>
-		<Russian>Çàâåðøåíà ðàçðàáîòêà ïðîåêòà %s1_PrjctName â ãîðîäå %s2_CityName.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_CREATED_PROJECT_IN_LIMITED</Tag>
-		<English>You have created %s1_PrjctName in %s2_CityName.</English>
-		<French>Vous avez créé : %s1_PrjctName à %s2_CityName.</French>
-		<German>Das Projekt %s1_PrjctName wurde in %s2_CityName fertig gestellt.</German>
-		<Italian>Hai creato il progetto %s1_PrjctName a %s2_CityName.</Italian>
-		<Spanish>Habéis creado %s1_PrjctName en %s2_CityName.</Spanish>
+		<English>You have created [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] in %s2.</English>
+		<French>Vous avez créé [NUM1:un:une:des:des] [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] à %s2_CityName.</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] in %s2_CityName abgeschlossen.</German>
+		<Italian>Hai creato [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] a %s2_CityName.</Italian>
+		<Spanish>Habéis creado [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] en %s2_CityName.</Spanish>
+		<Polish>Stworzyłeś [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] w %s2_CityName.</Polish>
+		<Russian>Çàâåðøåíà ðàçðàáîòêà ïðîåêòà [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] â ãîðîäå %s2_CityName.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CRIMINAL_COUNT_DEFENSE_HOVER</Tag>
@@ -16230,7 +16009,7 @@
 		<Tag>TXT_KEY_MISC_PURSUIT_ONATTACK_SUCCESS</Tag>
 		<English>An enemy %s1_EnUName attempted to flee our onslaught but was chased down and dispatched by our %s2_UnitName!</English>
 		<French>[COLOR_YELLOW][NUM1:Un:Une:Des:Des] %s1_EnUName [NUM1:a:a:ont:ont] tenté de fuir votre assaut, mais [NUM1:a:a:ont:ont] été poursuivi et dispersé par [NUM2:votre:votre:vos:vos] %s2_UnitName ![COLOR_REVERT]</French>
-		<German>[NUM1:Ein:Eine:Ein:Einige:Einige:Einige] %s1:4_EnUName [NUM1:versuchte:versuchten] zu fliehen, [NUM1:wurde:wurden] aber von [NUM2:Eurem:Eurer:Eurem:Euren:Euren:Euren] %s2:1_UnitName verfolgt und zur Strecke gebracht!</German>		
+		<German>[NUM1:Ein:Eine:Ein:Einige:Einige:Einige] %s1:4_EnUName [NUM1:versuchte:versuchten] zu fliehen, [NUM1:wurde:wurden] aber von [NUM2:Eurem:Eurer:Eurem:Euren:Euren:Euren] %s2:1_UnitName verfolgt und zur Strecke gebracht!</German>
 		<Italian>[NUM1:Un:Una:Alcuni:Alcune] %s1_EnUName [NUM1:ha:ha:hanno:hanno] cercato di sfuggire al nostro accerchiamento, ma è stata inseguita e sconfitta dalla nostra unità %s2_UnitName!</Italian>
 		<Polish>Wroga jednostka: %s1_EnUName probowała uciec z pola walki lecz została złapana przez: %s2_UnitName!</Polish>
 	</TEXT>
@@ -16820,23 +16599,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_TRAINED_UNIT_IN</Tag>
-		<English>You have trained a [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName.</English>
-		<French>Vous avez entraîné [NUM1:un:une:des:des] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] à %s2_CityName.</French>
-		<German>[COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName aufgestellt.</German>
-		<Italian>Hai addestrato [NUM1:un:una:dei:delle] %s1_UnitName a %s2_CityName.</Italian>
-		<Spanish>Habéis entrenado a [NUM1:un:una:unos:unas] %s1_UnitName en %s2_CityName.</Spanish>
-		<Polish>Zwerbowałeś %s1_UnitName w %s2_CityName.</Polish>
-		<Russian>Çàâåðøåíî ñîçäàíèå þíèòà %s1_UnitName â ãîðîäå %s2_CityName.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_TRAINED_UNIT_IN_LIMITED</Tag>
-		<English>You have trained %s1_UnitName in %s2_CityName.</English>
-		<French>Vous avez entraîné [NUM1:un:une:des:des] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] à %s2_CityName.</French>
-		<German>[COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName aufgestellt.</German>
-		<Italian>Hai realizzato l'unità %s1_UnitName a %s2_CityName.</Italian>
-		<Spanish>Habéis entrenado a [NUM1:un:una:unos:unas] %s1_UnitName en %s2_CityName.</Spanish>
-		<Polish>Zwerbowałeś %s1_UnitName w %s2_CityName.</Polish>
-		<Russian>Â ãîðîäå %s2_CityName ãîòîâ þíèò %s1_UnitName.</Russian>
+		<English>Trained in %s2: [COLOR_UNIT_TEXT]%s1[COLOR_REVERT].</English>
+		<French>Vous avez entraîné [NUM1:un:une:des:des] [COLOR_UNIT_TEXT]%s1[COLOR_REVERT] à %s2_CityName.</French>
+		<German>[COLOR_UNIT_TEXT]%s1[COLOR_REVERT] in %s2_CityName aufgestellt.</German>
+		<Italian>Hai addestrato [NUM1:un:una:dei:delle] [COLOR_UNIT_TEXT]%s1[COLOR_REVERT] a %s2_CityName.</Italian>
+		<Spanish>Habéis entrenado a [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1[COLOR_REVERT] en %s2_CityName.</Spanish>
+		<Polish>Zwerbowałeś [COLOR_UNIT_TEXT]%s1[COLOR_REVERT] w %s2_CityName.</Polish>
+		<Russian>Çàâåðøåíî ñîçäàíèå þíèòà [COLOR_UNIT_TEXT]%s1[COLOR_REVERT] â ãîðîäå %s2_CityName.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_TRAIT_ADOPTED</Tag>
@@ -17251,23 +17020,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_WORK_HAS_BEGUN</Tag>
-		<English>[SPACE]Work has now begun on a %s1_ProdName.</English>
-		<French>[SPACE]La production [NUM1:d'un:d'une:de:de] [COLOR_BUILDING_TEXT]%s1_ProdName[COLOR_REVERT] a commencé.</French>
-		<German>[SPACE]Neues Produktionsziel: %s1_ProdName</German>
-		<Italian>[SPACE]Sono iniziati i lavori per: %s1_ProdName.</Italian>
-		<Spanish>[SPACE]Se ha empezado a trabajar en: %s1_ProdName.</Spanish>
-		<Polish>[SPACE]Rozpoczęto pracę nad %s1_ProdName.</Polish>
-		<Russian>[SPACE]Íà÷àòà ðàáîòà (%s1_ProdName).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_WORK_HAS_BEGUN_LIMITED</Tag>
-		<English>[SPACE]Work has now begun on %s1_ProdName.</English>
-		<French>[SPACE]L'entraînement [NUM1:d'un:d'une:de:de] [COLOR_UNIT_TEXT]%s1_ProdName[COLOR_REVERT] a commencé.</French>
-		<German>[SPACE]Neues Produktionsziel: %s1_ProdName</German>
-		<Italian>[SPACE]Sono iniziati i lavori su %s1_ProdName.</Italian>
-		<Spanish>[SPACE]Se ha empezado a trabajar en: %s1_ProdName.</Spanish>
-		<Polish>[SPACE]Rozpoczęto pracę nad %s1_ProdName.</Polish>
-		<Russian>[SPACE]Íà÷àò íîâûé îáúåêò: %s1_ProdName.</Russian>
+		<English>[SPACE]Work has now begun on: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</English>
+		<French>[SPACE]La production [NUM1:d'un:d'une:de:de] [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT] a commencé.</French>
+		<German>[SPACE]Neues Produktionsziel: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</German>
+		<Italian>[SPACE]Sono iniziati i lavori per: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</Italian>
+		<Spanish>[SPACE]Se ha empezado a trabajar en: [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</Spanish>
+		<Polish>[SPACE]Rozpoczęto pracę nad [COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT].</Polish>
+		<Russian>[SPACE]Íà÷àòà ðàáîòà ([COLOR_HIGHLIGHT_TEXT]%s1[COLOR_REVERT]).</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_WORLD_MAP</Tag>
@@ -17541,7 +17300,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOU_HURT_ENEMY_AIR</Tag>
 		<English>Your %s1_UnitName has intercepted a %s4_owner_adjective %s2_EnUName! (%d3%% Damage)</English>
-		<French>Votre %s1_UnitName a intercepté une unité ennemie (%s2_EnUName  %s4_owner_adjective) ! (%d3%% de dégâts)</French>
+		<French>Votre %s1_UnitName a intercepté une unité ennemie (%s2_EnUName %s4_owner_adjective) ! (%d3%% de dégâts)</French>
 		<German>Eure Einheit %s1_UnitName hat eine feindliche Einheit %s2_EnUName (%s4_owner_adjective) abgefangen! (%d3%% Schaden)</German>
 		<Italian>La tua unità %s1_UnitName ha intercettato l'unità nemica (%s4_owner_adjective) %s2_EnUName! (%d3%% danno)</Italian>
 		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_UnitName [NUM1:ha:ha:han:han] interceptado a [NUM2:un:una:unos:unas] %s2_EnUName del enemigo (%s4_owner_adjective) (%d3%% de daño)</Spanish>
@@ -19775,7 +19534,7 @@
 		<Tag>TXT_KEY_OUTCOME_HUNTING_KILL_MESSAGE</Tag>
 		<English>Our %s1 has killed a %s2</English>
 		<French>[NUM1:Votre:Votre:Vos:Vos] %s1 [NUM1:a:a:ont:ont] tué l'animal : [COLOR_UNIT_TEXT]%s2[COLOR_REVERT]</French>
-		<German>[NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s1:1 [NUM1:hat:haben] [NUM2:einen:eine:ein:einige:einige:einige] %s2 erlegt.</German>		
+		<German>[NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s1:1 [NUM1:hat:haben] [NUM2:einen:eine:ein:einige:einige:einige] %s2 erlegt.</German>
 		<Italian>La nostra unità %s1 ha ucciso [NUM2:un:una] %s2</Italian>
 		<Spanish>Nuestr[NUM1:o:a:os:as] %s1 [NUM1:ha:ha:han:han] cazado [NUM2:un:una:unos:unas] %s2</Spanish>
 		<Polish>Nasza jednostka %s1 pokonała %s2</Polish>
@@ -20488,7 +20247,7 @@
 		<French>Les combats du joueur sont accélérés (en position défensive).</French>
 		<German>Alle eigenen Gefechte werden beschleunigt (nur in der Defensive)</German>
 		<Italian>I combattimenti del giocatore vengono velocizzati (in difesa)</Italian>
-		<Spanish>Los combates del jugador se aceleran  (cuando defiende).</Spanish>
+		<Spanish>Los combates del jugador se aceleran (cuando defiende).</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLAYER_OPTION_QUICK_COMBAT_OFFENSE</Tag>
@@ -20663,6 +20422,26 @@
 		<Russian>Âàñ ïîâòîðíî íàçíà÷èëè íà ñàìóþ ñëàáóþ êîìàíäó! Ïåðåâåðíèòå ýòó ñòðàíó è ñòàíüòå ¹1 ñíîâà!</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PLOTS_FLATLAND</Tag>
+		<English>Flatland Plots</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOTS_HILL</Tag>
+		<English>Hill Plots</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOTS_PEAK</Tag>
+		<English>Peak Plots</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOTS_WATER</Tag>
+		<English>Water Plots</English>
+		<French>Cases d'eau[SPACE]</French>
+		<German>Wasser-Geländefelder</German>
+		<Italian>Caselle d'acqua</Italian>
+		<Spanish>Casillas de agua</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PLOT_BLOCKADED</Tag>
 		<English>Trade Blocked by Enemy Ship</English>
 		<French>Route commerciale bloquée par un navire ennemi</French>
@@ -20693,14 +20472,6 @@
 		<Italian>Il danno inflittoda questa casella è Danno da freddo</Italian>
 		<Polish>Obrażenia Zadane na tym Polu są Obrażeniami od Zimna</Polish>
 		<Russian>Характер повреждения от данной области - Урон от холода</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLOT_HILLS</Tag>
-		<English>Hills/</English>
-		<French>Collines/</French>
-		<German>Hügel/</German>
-		<Italian>Colline/</Italian>
-		<Spanish>Colina/</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLOT_HOVER_CITY_ZOC</Tag>
@@ -20765,14 +20536,6 @@
 		<German>[SPACE](nicht bewässert)</German>
 		<Italian>[SPACE](Non irrigato)</Italian>
 		<Spanish>[SPACE](no tiene riego)</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PLOT_PEAK</Tag>
-		<English>Peak</English>
-		<French>Montagne</French>
-		<German>Gipfel</German>
-		<Italian>Montagna</Italian>
-		<Spanish>Pico</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLOT_REQUIRES</Tag>
@@ -21233,11 +20996,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_KICKED</Tag>
-		<English>We are being kicked from the game!  Exiting to main menu...</English>
+		<English>We are being kicked from the game! Exiting to main menu...</English>
 		<French>Nous sommes exclus de la partie ! Déconnexion du menu principal...</French>
 		<German>Wir werden aus dem Spiel geworfen! Zurück zum Hauptmenü ...</German>
 		<Italian>Siamo stati cacciati dal gioco! Ritorno al menu principale...</Italian>
-		<Spanish>Te están expulsando de la partida.  Saliendo al menú principal...</Spanish>
+		<Spanish>Te están expulsando de la partida. Saliendo al menú principal...</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_LIBERATION_DEMAND</Tag>
@@ -22970,6 +22733,10 @@
 		<English>Vactrain</English>
 		<French>Ligne de Train sous vide</French>
 		<Russian>Вакуумн. тоннель</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_S1_COLON_SPACE</Tag>
+		<English>%s1:[SPACE]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SAME_UNITS_TYPE</Tag>
@@ -25335,11 +25102,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_PLAYER_JOINING</Tag>
 		<!-- Human Player's Alias -->
-		<English>%s1 (Player %d2) is joining the game.  Please wait...</English>
+		<English>%s1 (Player %d2) is joining the game. Please wait...</English>
 		<French>%s1 (Joueur %d2) rejoint la partie. Merci de patienter...</French>
 		<German>%s1 (Spieler %d2) schließt sich dem Spiel an. Bitte warten ...</German>
 		<Italian>%s1 (giocatore %d2) sta partecipando alla partita. Attendere...</Italian>
-		<Spanish>%s1 (el jugador %d2) se está uniendo a la partida.  Un momento...</Spanish>
+		<Spanish>%s1 (el jugador %d2) se está uniendo a la partida. Un momento...</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SYSTEM_RETURN</Tag>
@@ -25378,7 +25145,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_TECHHELP_ALLOWS_IMPROVEMENT_UPGRADE</Tag>
 		<English>[ICON_BULLET]Allows %s1 to upgrade to %s2.</English>
 		<French>[ICON_BULLET]Permet à %s1 d'être amélioré en %s2.</French>
-		<German>[ICON_BULLET]neue Modernisierung: %s1 -> %s2</German>
+		<German>[ICON_BULLET]neue Modernisierung: %s1 -&gt; %s2</German>
 		<Italian>[ICON_BULLET]Permette a %s1 di migliorare in %s2.</Italian>
 		<Spanish>[ICON_BULLET]Permite [NUM1:al:a la:a los:a las] %s1 mejorar a %s2</Spanish>
 		<Polish>[ICON_BULLET]Umożliwia ulepszenie %s1 do %s2.</Polish>
@@ -25717,11 +25484,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BUDDHISM_ADJECTIVE</Tag>
-		<English>
-			<Text>Buddhist</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Buddhist</English>
 		<French>
 			<Text>bouddhiste:bouddhiste:bouddhistes:bouddhistes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -25834,11 +25597,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CHRISTIANITY_ADJECTIVE</Tag>
-		<English>
-			<Text>Christian</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Christian</English>
 		<French>
 			<Text>chrétien:chrétienne:chrétiens:chrétiennes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -25902,11 +25661,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CONFUCIANISM_ADJECTIVE</Tag>
-		<English>
-			<Text>Confucian</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Confucian</English>
 		<French>
 			<Text>confucéen:confucéenne:confucéens:confucéennes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -26078,11 +25833,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_HINDUISM_ADJECTIVE</Tag>
-		<English>
-			<Text>Hindu</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Hindu</English>
 		<French>
 			<Text>hindou:hindoue:hindous:hindoues</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -26145,11 +25896,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_ISLAM_ADJECTIVE</Tag>
-		<English>
-			<Text>Islamic</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Islamic</English>
 		<French>
 			<Text>musulman:musulmane:musulmans:musulmanes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -26235,11 +25982,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_JUDAISM_ADJECTIVE</Tag>
-		<English>
-			<Text>Jewish</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Jewish</English>
 		<French>
 			<Text>juif:juive:juifs:juives</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -26673,11 +26416,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TAOISM_ADJECTIVE</Tag>
-		<English>
-			<Text>Taoist</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Taoist</English>
 		<French>
 			<Text>taoïste:taoïste:taoïstes:taoïstes</Text>
 			<Gender>Male:Female:Male:Female</Gender>
@@ -27832,7 +27571,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_MAKE_WAR</Tag>
 		<English>Will cause %s1_You to Declare War on %s2_Them.</English>
-		<French>Entraînera une déclaration de guerre  : %s1_You à %s2_Them.</French>
+		<French>Entraînera une déclaration de guerre : %s1_You à %s2_Them.</French>
 		<German>Veranlasst %s1_You, %s2_Them den Krieg zu erklären.</German>
 		<Italian>Farà in modo che %s1_You dichiari guerra a %s2_Them.</Italian>
 		<Spanish>Hará que %s1_You le declare la guerra a %s2_Them.</Spanish>
@@ -28423,6 +28162,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNCLAIMED</Tag>
+		<English>Unclaimed</English>
+		<Italian>Non reclamato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNHAPPY_AREA_BUILDINGS</Tag>
@@ -29794,7 +29538,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_BUILT</Tag>
-		<!-- %s1 = player name  -->
+		<!-- %s1 = player name -->
 		<English>Built by %s1</English>
 		<French>Construction par %s1</French>
 		<German>Von %s1 errichtet</German>
@@ -29807,7 +29551,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_CITY_CULTURE</Tag>
-		<!-- %s1 = TXT_KEY_CULTURELEVEL_   -->
+		<!-- %s1 = TXT_KEY_CULTURELEVEL_ -->
 		<English>%d1 cities with %s2 Culture</English>
 		<French>%d1 villes avec un niveau de culture %s2</French>
 		<German>%d1 Städte mit Kulturstufe %s2</German>
@@ -29825,7 +29569,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VICTORY_SCREEN_ELECTION</Tag>
-		<!-- %s1 = Player name   -->
+		<!-- %s1 = Player name -->
 		<English>Election triggered by %s1</English>
 		<French>Election déclenchée par l'%s1</French>
 		<German>Wahl durch %s1 initiiert</German>
@@ -30261,7 +30005,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>U.N. Election (Secretary-General - Can Propose U.N. Resolutions)</English>
 		<French>Election ONU (Secrétaire général - peut proposer des résolutions de l'ONU)</French>
 		<German>U.N.-Wahl (Generalsekretär - Kann U.N.-Resolutionen vorschlagen)</German>
-		<Italian>Elezione ONU (Segretario generale)</Italian>
+		<Italian>Elezione ONU (Segretario generale - può proporre risoluzioni ONU)</Italian>
 		<Spanish>Votación en la ONU (Secretario General - puede proponer resoluciones de la ONU)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -30274,7 +30018,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<English>U.N. Resolution #104 (Single Currency - +1 Trade Route ([ICON_TRADE]) in All Cities)</English>
 		<French>Résolution de l'ONU n° 104 (Monnaie unique - + route commerciale dans toutes les villes)</French>
 		<German>U.N.-Resolution Nr. 104 (Einheitswährung - +1 Handelsweg in allen Städten)</German>
-		<Italian>Mozione #104 dell'ONU (Moneta unica - +1 alle rotte commerciali in tutte le città)</Italian>
+		<Italian>Mozione #104 dell'ONU (Moneta unica - +1 alle rotte commerciali [ICON_TRADE] in tutte le città)</Italian>
 		<Spanish>Resolución nº 104 de la ONU (moneda única - +1 ruta comercial en todas las ciudades)</Spanish>
 	</TEXT>
 	<TEXT>
@@ -31042,11 +30786,11 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_LEGAL_LINE_1</Tag>
-		<English>©2007 Take-Two Interactive Software and its subsidiaries. Developed by Firaxis Games. Sid Meier's Civilization IV: Warlords, Civ, Civilization, 2K Games, the 2K logo, Firaxis Games, the Firaxis Games logo and Take-Two Interactive Software are all trademarks and/or registered trademarks of Take-Two Interactive Software, Inc. in the USA and/or foreign countries.  GameSpy and the "Powered by GameSpy" design are trademarks of GameSpy Industries, Inc. All other marks and trademarks are the property of their respective owners. Uses Bink Video (Copyright ©1997-2007 by RAD Game Tools, Inc.). Uses Miles Sound System ©1991-2007 by RAD Game Tools, Inc.). Portions of this software are included under license from Numerical Design, Ltd. (©2007) and Scaleform Corporation (©2007). Unauthorized copying,reverse engineering, transmission, public performance, rental, pay for play, or circumvention of copy protection is strictly prohibited. All rights reserved. </English>
-		<French>©2007 Take-Two Interactive Software et ses filiales. Développé par Firaxis Games. Sid Meier's Civilization IV: Warlords, Civ, Civilization, 2K Games, le logo 2K, Firaxis Games, le logo Firaxis Games et Take-Two Interactive Software sont des marques commerciales et/ou des marques déposées de Take-Two Interactive Software, Inc. aux Etats-Unis et/ou les pays étrangers. GameSpy et l'inscription "Powered by GameSpy" sont des marques commerciales de GameSpy Industries, Inc. Toutes les autres marques et marques commerciales sont la propriété de leurs propriétaires respectifs. Utilise Bink Video (Copyright ©1997-2007 par RAD Game Tools, Inc.). Utilise Miles Sound System (Copyright ©1991-2007 par RAD Game Tools, Inc.). Des éléments de ce logiciel sont utilisés avec l'accord de Numerical Design, Ltd. (©2007) et de Scaleform Corporation (©2007). La copie non autorisée, la décompilation, la transmission, la présentation publique, la location, l'utilisation commerciale ou le contournement des dispositifs anti-copie sont strictement interdits. Tous droits réservés.</French>
-		<German>© 2007 Take-Two Interactive Software und Tochtergesellschaften. Entwickelt von Firaxis Games. Sid Meier's Civilization IV: Warlords, Civ, Civilization, 2K Games, das 2K Games-Logo, Firaxis Games, das Firaxis Game-Logo und Take-Two Interactive Software sind Warenzeichen bzw. eingetragene Warenzeichen von Take-Two Interactive Software, Inc. GameSpy und das "Powered by GameSpy"-Design sind Warenzeichen von GameSpy Industries, Inc. Alle anderen Warenzeichen sind Eigentum der jeweiligen Inhaber. Verwendet Bink Video (Copyright © 1997 - 2007 RAD Game Tools, Inc.). Verwendet Miles Sound System © 1991 - 2007 RAD Game Tools, Inc.). Teile dieser Software sind unter Lizenz von Numerical Design, Ltd. (© 2007) und Scaleform Corporation (© 2007) enthalten. Das unberechtigte Kopieren, die Zurückentwicklung (Reverse Engineering), Übertragung, öffentliche Aufführung, Vermietung, das Spielen gegen Zahlung eines Entgelts und die Umgehung von Urheberschutzmaßnahmen sind strengstens untersagt. Alle Rechte vorbehalten. </German>
-		<Italian>©2007 Take-Two Interactive Software e sue sussidiarie. Sviluppato da Firaxis Games. Sid Meier's Civilization IV: Warlords, Civ, Civilization, 2K Games, il logo 2K, Firaxis Games, il logo Firaxis Games e Take-Two Interactive Software sono tutti marchi e/o marchi registrati di Take-Two Interactive Software, Inc. in USA e/o altre nazioni. GameSpy e il design "Powered by GameSpy" sono marchi di GameSpy Industries, Inc. Tutti gli altri marchi e marchi registrati sono di proprietà dei rispettivi detentori. Utilizza Bink Video, Copyright © 1997-2007 di RAD Game Tools, Inc. Utilizza Miles Sound System, Copyright © 1991-2007 di RAD Game Tools, Inc.). Parti di questo software sono incluse sotto licenza. ©2007 Numerical Design, Ltd. e Scaleform Corporation (©2007). La copia non autorizzata, la proiezione pubblica, il noleggio, il gioco a pagamento o l'aggiramento della protezione è rigorosamente proibita. Tutti i diritti riservati. </Italian>
-		<Spanish>©2007 Take-Two Interactive Software y sus subsidiarias. Desarrollado por Firaxis Games. Sid Meier_s Civilization IV: Warlords, Civ, Civilization, 2K Games, el logotipo de 2K, Firaxis Games, el logotipo de Firaxis Games y Take-Two Interactive Software son marcas comerciales o marcas comerciales registradas de Take-Two Interactive Software, Inc.  GameSpy y el diseño "Powered by GameSpy" son marcas comerciales de GameSpy Industries, Inc. Todas las demás marcas y marcas comerciales pertenecen a sus respectivos titulares. Se utiliza Bink Video (Copyright ©1997-2007 de RAD Game Tools, Inc.). Se utiliza Miles Sound System ©1991-2007 de RAD Game Tools, Inc.). Algunas partes de este software se incluyen con licencia de Numerical Design, Ltd. (©2007) y Scaleform Corporation (©2007). Queda estrictamente prohibida cualquiera de las siguientes acciones sin autorización previa: copia, ingeniería inversa, transmisión, demostración pública, alquiler, pago por uso del programa o intento de saltarse la protección anticopia. Todos los derechos reservados. </Spanish>
+		<English>© 2007 Take-Two Interactive Software and its subsidiaries. Developed by Firaxis Games. Sid Meier's Civilization IV: Warlords, Civ, Civilization, 2K Games, the 2K logo, Firaxis Games, the Firaxis Games logo and Take-Two Interactive Software are all trademarks and/or registered trademarks of Take-Two Interactive Software, Inc. in the USA and/or foreign countries. GameSpy and the "Powered by GameSpy" design are trademarks of GameSpy Industries, Inc. All other marks and trademarks are the property of their respective owners. Uses Bink Video (Copyright ©1997-2007 by RAD Game Tools, Inc.). Uses Miles Sound System ©1991-2007 by RAD Game Tools, Inc.). Portions of this software are included under license from Numerical Design, Ltd. (©2007) and Scaleform Corporation (©2007). Unauthorized copying,reverse engineering, transmission, public performance, rental, pay for play, or circumvention of copy protection is strictly prohibited. All rights reserved.</English>
+		<French>© 2007 Take-Two Interactive Software et ses filiales. Développé par Firaxis Games. Sid Meier's Civilization IV: Warlords, Civ, Civilization, 2K Games, le logo 2K, Firaxis Games, le logo Firaxis Games et Take-Two Interactive Software sont des marques commerciales et/ou des marques déposées de Take-Two Interactive Software, Inc. aux Etats-Unis et/ou les pays étrangers. GameSpy et l'inscription "Powered by GameSpy" sont des marques commerciales de GameSpy Industries, Inc. Toutes les autres marques et marques commerciales sont la propriété de leurs propriétaires respectifs. Utilise Bink Video (Copyright ©1997-2007 par RAD Game Tools, Inc.). Utilise Miles Sound System (Copyright ©1991-2007 par RAD Game Tools, Inc.). Des éléments de ce logiciel sont utilisés avec l'accord de Numerical Design, Ltd. (©2007) et de Scaleform Corporation (©2007). La copie non autorisée, la décompilation, la transmission, la présentation publique, la location, l'utilisation commerciale ou le contournement des dispositifs anti-copie sont strictement interdits. Tous droits réservés.</French>
+		<German>© 2007 Take-Two Interactive Software und Tochtergesellschaften. Entwickelt von Firaxis Games. Sid Meier's Civilization IV: Warlords, Civ, Civilization, 2K Games, das 2K Games-Logo, Firaxis Games, das Firaxis Game-Logo und Take-Two Interactive Software sind Warenzeichen bzw. eingetragene Warenzeichen von Take-Two Interactive Software, Inc. GameSpy und das "Powered by GameSpy"-Design sind Warenzeichen von GameSpy Industries, Inc. Alle anderen Warenzeichen sind Eigentum der jeweiligen Inhaber. Verwendet Bink Video (Copyright © 1997 - 2007 RAD Game Tools, Inc.). Verwendet Miles Sound System © 1991 - 2007 RAD Game Tools, Inc.). Teile dieser Software sind unter Lizenz von Numerical Design, Ltd. (© 2007) und Scaleform Corporation (© 2007) enthalten. Das unberechtigte Kopieren, die Zurückentwicklung (Reverse Engineering), Übertragung, öffentliche Aufführung, Vermietung, das Spielen gegen Zahlung eines Entgelts und die Umgehung von Urheberschutzmaßnahmen sind strengstens untersagt. Alle Rechte vorbehalten.</German>
+		<Italian>© 2007 Take-Two Interactive Software e sue sussidiarie. Sviluppato da Firaxis Games. Sid Meier's Civilization IV: Warlords, Civ, Civilization, 2K Games, il logo 2K, Firaxis Games, il logo Firaxis Games e Take-Two Interactive Software sono tutti marchi e/o marchi registrati di Take-Two Interactive Software, Inc. in USA e/o altre nazioni. GameSpy e il design "Powered by GameSpy" sono marchi di GameSpy Industries, Inc. Tutti gli altri marchi e marchi registrati sono di proprietà dei rispettivi detentori. Utilizza Bink Video, Copyright © 1997-2007 di RAD Game Tools, Inc. Utilizza Miles Sound System, Copyright © 1991-2007 di RAD Game Tools, Inc.). Parti di questo software sono incluse sotto licenza. ©2007 Numerical Design, Ltd. e Scaleform Corporation (©2007). La copia non autorizzata, la proiezione pubblica, il noleggio, il gioco a pagamento o l'aggiramento della protezione è rigorosamente proibita. Tutti i diritti riservati.</Italian>
+		<Spanish>© 2007 Take-Two Interactive Software y sus subsidiarias. Desarrollado por Firaxis Games. Sid Meier_s Civilization IV: Warlords, Civ, Civilization, 2K Games, el logotipo de 2K, Firaxis Games, el logotipo de Firaxis Games y Take-Two Interactive Software son marcas comerciales o marcas comerciales registradas de Take-Two Interactive Software, Inc. GameSpy y el diseño "Powered by GameSpy" son marcas comerciales de GameSpy Industries, Inc. Todas las demás marcas y marcas comerciales pertenecen a sus respectivos titulares. Se utiliza Bink Video (Copyright ©1997-2007 de RAD Game Tools, Inc.). Se utiliza Miles Sound System ©1991-2007 de RAD Game Tools, Inc.). Algunas partes de este software se incluyen con licencia de Numerical Design, Ltd. (©2007) y Scaleform Corporation (©2007). Queda estrictamente prohibida cualquiera de las siguientes acciones sin autorización previa: copia, ingeniería inversa, transmisión, demostración pública, alquiler, pago por uso del programa o intento de saltarse la protección anticopia. Todos los derechos reservados.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_LEGAL_LINE_2</Tag>

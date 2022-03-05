@@ -37,21 +37,6 @@ void CyGame::updateScore(bool bForce)
 	m_pGame.updateScore(bForce);
 }
 
-void CyGame::cycleCities(bool bForward, bool bAdd)
-{
-	m_pGame.cycleCities(bForward, bAdd);
-}
-
-void CyGame::cycleSelectionGroups(bool bClear, bool bForward, bool bWorkers)
-{
-	m_pGame.cycleSelectionGroups(bClear, bForward, bWorkers);
-}
-
-bool CyGame::cyclePlotUnits(const CyPlot* pPlot, bool bForward, bool bAuto, int iCount)
-{
-	return m_pGame.cyclePlotUnits(pPlot->getPlot(), bForward, bAuto, iCount);
-}
-
 void CyGame::selectionListMove(const CyPlot* pPlot, bool bAlt, bool bShift, bool bCtrl)
 {
 	GC.getGame().selectionListMove(pPlot->getPlot(), bAlt, bShift, bCtrl);
@@ -165,11 +150,6 @@ int CyGame::countTotalNukeUnits() const
 int CyGame::countKnownTechNumTeams(TechTypes eTech) const
 {
 	return m_pGame.countKnownTechNumTeams(eTech);
-}
-
-int CyGame::getNumFreeBonuses(BuildingTypes eBuilding) const
-{
-	return m_pGame.getNumFreeBonuses(eBuilding);
 }
 
 int CyGame::countReligionLevels(ReligionTypes eReligion) const
@@ -1043,7 +1023,7 @@ void CyGame::addReplayMessage(ReplayMessageTypes eType, PlayerTypes ePlayer, std
 
 bool CyGame::hasSkippedSaveChecksum() const
 {
-	return m_pGame.hasSkippedSaveChecksum();
+	return gDLL->hasSkippedSaveChecksum();
 }
 
 void CyGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive)
@@ -1138,11 +1118,6 @@ int CyGame::getCutLosersCounter() const
 int CyGame::getHighToLowCounter() const
 {
 	return m_pGame.getHighToLowCounter();
-}
-
-void CyGame::setVictoryValid(int iVictory, bool bNewVal)
-{
-	m_pGame.setVictoryValid((VictoryTypes)iVictory, bNewVal);
 }
 
 bool CyGame::isModderGameOption(ModderGameOptionTypes eIndex) const

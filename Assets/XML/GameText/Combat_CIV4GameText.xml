@@ -938,6 +938,16 @@
 		<Russian>Ñàëàìàíäðû</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_ANIMAL</Tag>
+		<English>Animals</English>
+		<French>Unités animales</French>
+		<German>Tiereinheiten</German>
+		<Italian>Animali</Italian>
+		<Spanish>Animales</Spanish>
+		<Polish>Zwierzęta</Polish>
+		<Russian>Æèâîòíûå</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_ANIMAL_AMPHIBIAN</Tag>
 		<English>Animal (Amphibian)</English>
 		<French>
@@ -8906,6 +8916,15 @@
 		<Russian>Õîâåðêðàôòû</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_HUNTER</Tag>
+		<English>Hunters</English>
+		<French>Chasseurs</French>
+		<Italian>Cacciatori</Italian>
+		<German>Jäger</German>
+		<Polish>Łowcy</Polish>
+		<Russian>Îõîòíèêè</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_IDEA</Tag>
 		<English>Idea</English>
 		<French>
@@ -9959,6 +9978,10 @@
 		<Russian>Ðàêåòîïëàíû</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_PACIFIST</Tag>
+		<English>Pacifist</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_PIRATE</Tag>
 		<English>Pirate Ships</English>
 		<French>Navires Pirates</French>
@@ -10869,6 +10892,46 @@
 		</Spanish>
 		<Polish>Bandyta</Polish>
 		<Russian>Áàíäû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_SEA_ANIMAL</Tag>
+		<English>Sea Animals</English>
+		<French>Unités animales marines</French>
+		<German>Meerestiereinheiten</German>
+		<Italian>Animali marini</Italian>
+		<Spanish>Animales</Spanish>
+		<Polish>Zwierzęta Morskie</Polish>
+		<Russian>Ðûáû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_SEA_ANIMAL_TALES</Tag>
+		<English>Sea Animals (Tales)</English>
+		<French>Animaux marins (Histoires)</French>
+		<German>Meerestiereinheiten (Geschichten)</German>
+		<Italian>Animali marini (Storie)</Italian>
+		<Spanish>Sea Animales</Spanish>
+		<Polish>Zwierzęta Morskie (Opowieści)</Polish>
+		<Russian>Ñêàçû î ðûáàõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_SEA_LARGE</Tag>
+		<English>Sea Animals (Large)</English>
+		<French>Grands animaux marins</French>
+		<German>Große Meerestiereinheiten</German>
+		<Italian>Animali marini (Grandi)</Italian>
+		<Spanish>Sea Animales</Spanish>
+		<Polish>Zwierzęta Morskie (Wielkie)</Polish>
+		<Russian>Ìåëêèå ðûáû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_SEA_SMALL</Tag>
+		<English>Sea Animals (Small)</English>
+		<French>Petits animaux marins</French>
+		<German>Kleine Meerestiereinheiten</German>
+		<Italian>Animali marini (Piccoli)</Italian>
+		<Spanish>Sea Animales</Spanish>
+		<Polish>Zwierzęta Morskie (Małe)</Polish>
+		<Russian>Áîëüøèå ðûáû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_SEA_WORKER</Tag>
@@ -15126,6 +15189,15 @@
 		</Spanish>
 		<Polish>Styl (W.Wręcz B.Boczna Dwureczny z Tarczą)</Polish>
 		<Russian>Ñòèëü(H2H Sidearm Two-Hand w/Shield)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITCOMBAT_WHALE</Tag>
+		<English>Whale</English>
+		<French>Baleine</French>
+		<Italian>Balene</Italian>
+		<German>Wal</German>
+		<Polish>Wieloryb</Polish>
+		<Russian>Êèòû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_WHEELED</Tag>

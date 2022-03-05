@@ -40,23 +40,27 @@ struct IDValueMap
 
 	void readPairedArrays(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
 	{
+		_readPairedArrays<NO_DELAYED_RESOLUTION>(pXML, szRootTagName, firstChildTag, secondChildTag);
+	}
+
+	template <DelayedResolutionTypes delayedRes_>
+	void _readPairedArrays(CvXMLLoadUtility* pXML, const wchar_t* szRootTagName, const wchar_t* firstChildTag, const wchar_t* secondChildTag)
+	{
+		FAssert(m_map.empty());
+
 		if (pXML->TryMoveToXmlFirstChild(szRootTagName))
 		{
-			const int iNumChildren = pXML->GetXmlChildrenNumber();
+			const int iNumSibs = pXML->GetXmlChildrenNumber();
 
 			if (pXML->TryMoveToXmlFirstChild())
 			{
-				for (int j = 0; j < iNumChildren; ++j)
+				m_map.resize(iNumSibs);
+
+				foreach_(value_type& pair, m_map)
 				{
-					CvString szTextVal;
-					pXML->GetChildXmlValByName(szTextVal, firstChildTag);
-					value_type pair = value_type();
-					pair.first = static_cast<ID_>(GC.getInfoTypeForString(szTextVal));
-					if (pair.first > -1)
-					{
-						pXML->set(pair.second, secondChildTag);
-						m_map.push_back(pair);
-					}
+					CvXMLLoadUtility::SetOptionalInfoType<delayedRes_>(pXML, pair.first, firstChildTag);
+					pXML->set(pair.second, secondChildTag);
+
 					if (!pXML->TryMoveToXmlNextSibling())
 						break;
 				}
@@ -79,7 +83,7 @@ struct IDValueMap
 					{
 						CvString szTextVal;
 						pXML->GetXmlVal(szTextVal);
-						int value = defaultValue;
+						Value_ value = defaultValue;
 						pXML->GetNextXmlVal(&value);
 						m_map.push_back(std::make_pair(static_cast<ID_>(GC.getOrCreateInfoTypeForString(szTextVal)), value));
 						pXML->MoveToXmlParent();
@@ -186,12 +190,9 @@ struct IDValueMap
 		return defaultValue;
 	}
 
-	bool hasValue(ID_ type) const
+	bool hasValue(ID_ id) const
 	{
-		foreach_(const value_type& pair, m_map)
-			if (pair.first == type)
-				return true;
-		return false;
+		return algo::any_of_equal(m_map | map_keys, id);
 	}
 
 	bool empty() const
@@ -245,7 +246,7 @@ void publishIDValueMapPythonInterface()
 }
 
 
-typedef std::pair<BonusTypes, int> BonusModifier2;
+typedef std::pair<BonusTypes, int> BonusModifier;
 typedef std::pair<BuildingTypes, int> BuildingModifier2;
 typedef std::pair<BuildTypes, int> BuildModifier2;
 typedef std::pair<DomainTypes, int> DomainModifier2;
@@ -256,6 +257,7 @@ typedef std::pair<TechTypes, int> TechModifier;
 typedef std::pair<UnitTypes, int> UnitModifier2;
 typedef std::pair<UnitCombatTypes, int> UnitCombatModifier2;
 
+typedef std::pair<BuildingTypes, CommerceArray> BuildingCommerce;
 typedef std::pair<TechTypes, CommerceArray> TechCommerceArray;
 typedef std::pair<TechTypes, YieldArray> TechArray;
 typedef std::pair<TerrainTypes, YieldArray> TerrainArray;

@@ -157,6 +157,10 @@
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_ASSAULT_SEA</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -2184,7 +2188,6 @@
 			</BonusProductionModifiers>
 			<iBombardRate>7</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>1</iAsset>
@@ -3160,7 +3163,6 @@
 			</UnitCombatMods>
 			<iBombardRate>18</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_SEAPLANE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_SEAPLANE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -3267,7 +3269,6 @@
 			</UnitCombatMods>
 			<iBombardRate>20</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_SEAPLANE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_SEAPLANE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -3523,7 +3524,6 @@
 			</UnitCombatMods>
 			<iBombardRate>30</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>3</iCargo>
 			<iAsset>6</iAsset>
@@ -3632,7 +3632,6 @@
 			</UnitCombatMods>
 			<iBombardRate>22</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>4</iCargo>
 			<iAsset>4</iAsset>
@@ -3767,7 +3766,6 @@
 			</UnitCombatMods>
 			<iBombardRate>30</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>6</iCargo>
 			<iAsset>4</iAsset>
@@ -4210,7 +4208,6 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>1</iAsset>
@@ -5501,7 +5498,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -5649,7 +5645,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -5797,7 +5792,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>5</iCargo>
 			<iAsset>4</iAsset>
@@ -5948,7 +5942,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>3</iCargo>
 			<iAsset>4</iAsset>
@@ -6110,7 +6103,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -6262,7 +6254,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>5</iCargo>
 			<iAsset>4</iAsset>
@@ -7581,6 +7572,10 @@
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
+					<UnitAIType>UNITAI_RESERVE_SEA</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_PIRATE_SEA</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -8109,6 +8104,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WOODEN_SHIPS</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_PLUS_SHIELD</SubCombatType>
@@ -8276,6 +8272,10 @@
 				<UnitType>UNIT_CARRACK_MERCHANT</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
 				<UnitAI>
 					<UnitAIType>UNITAI_MERCHANT</UnitAIType>
 					<bUnitAI>1</bUnitAI>
@@ -8768,6 +8768,10 @@
 				<UnitType>UNIT_HOSPITAL_SHIP_2</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_HEALER</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
 				<UnitAI>
 					<UnitAIType>UNITAI_HEALER_SEA</UnitAIType>
 					<bUnitAI>1</bUnitAI>

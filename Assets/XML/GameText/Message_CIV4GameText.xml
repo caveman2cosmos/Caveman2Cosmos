@@ -5,6 +5,7 @@
 		<Tag>TXT_KEY_MSG_BIODOME</Tag>
 		<English>[COLOR_SELECTED_TEXT]A baby [COLOR_UNIT_TEXT]%s1[COLOR_SELECTED_TEXT] has been born in the [COLOR_HIGHLIGHT_TEXT]Biodome[COLOR_SELECTED_TEXT]! Ooh it looks cute![COLOR_REVERT]</English>
 		<French>[COLOR_SELECTED_TEXT]Un bébé [COLOR_UNIT_TEXT]%s1[COLOR_SELECTED_TEXT] est né dans le [COLOR_HIGHLIGHT_TEXT]Biodome[COLOR_SELECTED_TEXT]! Oh, comme il est mignon![COLOR_REVERT]</French>
+		<Italian>[COLOR_SELECTED_TEXT]Un mini [COLOR_UNIT_TEXT]%s1[COLOR_SELECTED_TEXT] è nato nel [COLOR_HIGHLIGHT_TEXT]Biodome[COLOR_SELECTED_TEXT]! Com'è piccolo![COLOR_REVERT]</Italian>
 		<Polish>[COLOR_SELECTED_TEXT]Maly [COLOR_UNIT_TEXT]%s1[COLOR_SELECTED_TEXT] urodzil sie w [COLOR_HIGHLIGHT_TEXT]Biodomie[COLOR_SELECTED_TEXT]! O, jaki slodziak![COLOR_REVERT]</Polish>
 		<Russian>[COLOR_SELECTED_TEXT]Детеныш [COLOR_UNIT_TEXT]%s1[COLOR_SELECTED_TEXT] только что родился в питомнике в [COLOR_HIGHLIGHT_TEXT]Биодоме[COLOR_SELECTED_TEXT]! Ой, какой же он милашка![COLOR_REVERT]</Russian>
 	</TEXT>

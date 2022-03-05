@@ -745,16 +745,6 @@
 		<Russian>Рыболовное судно - это лодка или корабль, используемые для ловли рыбы в море, на озере или реке. Многие виды судов используются для коммерческого, кустарного и любительского рыболовства.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_FISHING_CAMP</Tag>
-		<English>Fishing Camp</English>
-		<Russian>Ðûáàöêèé ëàãåðü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_FISHING_CAMP_PEDIA</Tag>
-		<English>Fishing Camp is place, where fishers, explorers and prospectors work hard to find new animals, plants and minerals. Eventually they move away and let citizens work here.</English>
-		<Russian>Рыболовецкий лагерь - место, где рыбаки, путешественники и старатели упорно трудятся ради добычи морского зверя, рыбы, растений и минералов. В конце концов, они уезжают и позволяют вашим гражданам здесь работать.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FOREST_PRESERVE</Tag>
 		<English>Forest Preserve</English>
 		<French>
@@ -1925,22 +1915,6 @@
 		<Russian>Лагерь свежевания обеспечивает ваш народ дополнительной пищей на ранних стадиях игры. Если он построен на животном ресурсе (например, на [COLOR_HIGHLIGHT_TEXT]коровах[COLOR_REVERT]) он также предоставит этот ресурс в город.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP</Tag>
-		<English>Seasonal Camp</English>
-		<German>
-			<Text>Lager</Text>
-			<Gender>Neuter</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Russian>Ñåçîííûé ëàãåðü</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP_PEDIA</Tag>
-		<English>Seasonal Camp is place, where scouts, explorers and prospectors work hard to find new animals, plants and minerals. Eventually they move away and let citizens work here.</English>
-		<German>Von einem [COLOR_BUILDING_TEXT]Lager[COLOR_REVERT] aus machen sich Späher, Forscher und Wissenschaftler auf die Suche nach Tieren, Pflanzen und Mineralien. Irgendwann ziehen sie fort und überlassen den Bürgern der Stadt das Gelände.</German>
-		<Russian>Сезонный лагерь - место, где разведчики, исследователи и следопыты упорно трудятся ради добычи ценных растений, дичи и минералов. В конце концов, они уезжают и позволяют гражданам здесь работать.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SEA_MILL</Tag>
 		<English>Sea Mill</English>
 		<French>Moulin à eau</French>
@@ -2210,7 +2184,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_TIDAL_HARNESS_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Tidal power or tidal energy is harnessed by converting energy from tides into useful forms of power, mainly electricity using various methods. Although not yet widely used, tidal energy has the potential for future electricity generation. Tides are more predictable than the wind and the sun. Among sources of renewable energy, tidal energy has traditionally suffered from relatively high cost and limited availability of sites with sufficiently high tidal ranges or flow velocities, thus constricting its total availability. However, many recent technological developments and improvements, both in design (e.g. dynamic tidal power, tidal lagoons) and turbine technology (e.g. new axial turbines, cross flow turbines), indicate that the total availability of tidal power may be much higher than previously assumed and that economic and environmental costs may be brought down to competitive levels. </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_TOWN</Tag>

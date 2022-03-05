@@ -9,7 +9,7 @@
 		<RouteInfo>
 			<Type>ROUTE_LUNAR_PATH</Type>
 			<Description>TXT_KEY_ROUTE_LUNAR_PATH</Description>
-			<iValue>10</iValue>
+			<iValue>1</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iMovement>100</iMovement>
 			<iFlatMovement>100</iFlatMovement>
@@ -22,7 +22,7 @@
 		<RouteInfo>
 			<Type>ROUTE_ORBITAL_TRAJECTORY</Type>
 			<Description>TXT_KEY_ROUTE_ORBITAL_TRAJECTORY</Description>
-			<iValue>11</iValue>
+			<iValue>1</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iMovement>100</iMovement>
 			<iFlatMovement>100</iFlatMovement>
@@ -39,7 +39,7 @@
 		<RouteInfo>
 			<Type>ROUTE_PLANETARY_MAGLEV</Type>
 			<Description>TXT_KEY_ROUTE_PLANETARY_MAGLEV</Description>
-			<iValue>12</iValue>
+			<iValue>2</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iMovement>50</iMovement>
 			<iFlatMovement>50</iFlatMovement>
@@ -55,7 +55,7 @@
 		<RouteInfo>
 			<Type>ROUTE_SOLAR_TRAJECTORY</Type>
 			<Description>TXT_KEY_ROUTE_SOLAR_TRAJECTORY</Description>
-			<iValue>13</iValue>
+			<iValue>2</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iMovement>50</iMovement>
 			<iFlatMovement>50</iFlatMovement>
@@ -72,7 +72,7 @@
 		<RouteInfo>
 			<Type>ROUTE_WORMHOLE</Type>
 			<Description>TXT_KEY_ROUTE_WORMHOLE</Description>
-			<iValue>14</iValue>
+			<iValue>3</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iMovement>25</iMovement>
 			<iFlatMovement>25</iFlatMovement>
@@ -89,10 +89,10 @@
 		<RouteInfo>
 			<Type>ROUTE_MEGAWORMHOLE</Type>
 			<Description>TXT_KEY_ROUTE_MEGAWORMHOLE</Description>
-			<iValue>15</iValue>
+			<iValue>4</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iMovement>25</iMovement>
-			<iFlatMovement>25</iFlatMovement>
+			<iMovement>15</iMovement>
+			<iFlatMovement>15</iFlatMovement>
 			<BonusType>NONE</BonusType>
 			<PrereqOrBonuses/>
 			<Yields>
@@ -106,10 +106,10 @@
 		<RouteInfo>
 			<Type>ROUTE_COMPACT_WORMHOLE</Type>
 			<Description>TXT_KEY_ROUTE_COMPACT_WORMHOLE</Description>
-			<iValue>16</iValue>
+			<iValue>4</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iMovement>25</iMovement>
-			<iFlatMovement>25</iFlatMovement>
+			<iMovement>15</iMovement>
+			<iFlatMovement>15</iFlatMovement>
 			<BonusType>NONE</BonusType>
 			<PrereqOrBonuses/>
 			<Yields>
@@ -123,7 +123,7 @@
 		<RouteInfo>
 			<Type>ROUTE_HYPERLANE</Type>
 			<Description>TXT_KEY_ROUTE_HYPERLANE</Description>
-			<iValue>17</iValue>
+			<iValue>5</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iMovement>10</iMovement>
 			<iFlatMovement>10</iFlatMovement>
@@ -140,7 +140,7 @@
 		<RouteInfo>
 			<Type>ROUTE_ASPATIAL_ROUTE</Type>
 			<Description>TXT_KEY_ROUTE_ASPATIAL_ROUTE</Description>
-			<iValue>18</iValue>
+			<iValue>6</iValue>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iMovement>5</iMovement>
 			<iFlatMovement>5</iFlatMovement>

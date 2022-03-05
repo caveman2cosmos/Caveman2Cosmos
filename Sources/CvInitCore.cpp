@@ -36,7 +36,7 @@ CvInitCore::CvInitCore()
 	OutputDebugString("Calling constructor for InitCore: Start\n");
 
 	// Moved to Init as the number is no more predetermined
-	//m_abOptions = new bool[NUM_GAMEOPTION_TYPES];
+	//m_abOptions = new bool[GC.getNumGameOptionInfos()];
 	m_abOptions = NULL;
 	m_abMPOptions = new bool[NUM_MPOPTION_TYPES];
 	m_abForceControls = new bool[NUM_FORCECONTROL_TYPES];
@@ -128,7 +128,7 @@ void CvInitCore::init(GameMode eMode)
 	OutputDebugString("Initialize InitCore: Start\n");
 
 	if (m_abOptions == NULL)
-		m_abOptions = new bool[NUM_GAMEOPTION_TYPES];
+		m_abOptions = new bool[GC.getNumGameOptionInfos()];
 	//--------------------------------
 	// Init saved data
 	reset(eMode);
@@ -168,7 +168,7 @@ void CvInitCore::reset(GameMode eMode)
 
 void CvInitCore::setDefaults()
 {
-	for (int i = 0; i < NUM_GAMEOPTION_TYPES; ++i)
+	for (int i = 0; i < GC.getNumGameOptionInfos(); ++i)
 	{
 		//	Allow the DLL to run against older assets that define fewer options, leaving
 		//	more recent ones turned off by default always
@@ -586,7 +586,7 @@ void CvInitCore::resetGame()
 
 	// Standard game options
 	int i;
-	for (i = 0; i < NUM_GAMEOPTION_TYPES; ++i)
+	for (i = 0; i < GC.getNumGameOptionInfos(); ++i)
 	{
 		m_abOptions[i] = false;
 	}
@@ -666,7 +666,7 @@ void CvInitCore::resetGame(CvInitCore * pSource, bool bClear, bool bSaveGameType
 
 		// Standard game options
 		int i;
-		for (i = 0; i < NUM_GAMEOPTION_TYPES; ++i)
+		for (i = 0; i < GC.getNumGameOptionInfos(); ++i)
 		{
 			setOption((GameOptionTypes)i, pSource->getOption((GameOptionTypes)i));
 		}
@@ -1124,7 +1124,7 @@ void CvInitCore::setVictory(VictoryTypes eVictoryID, bool bVictory)
 
 bool CvInitCore::getOption(GameOptionTypes eIndex) const
 {
-	const int numGameOptionTypes = NUM_GAMEOPTION_TYPES;
+	const int numGameOptionTypes = GC.getNumGameOptionInfos();
 	FASSERT_BOUNDS(0, numGameOptionTypes, eIndex);
 	FAssertMsg(m_abOptions != NULL, "Access to unconstructed game option array");
 	if ( m_abOptions != NULL && checkBounds(eIndex, 0, numGameOptionTypes) )
@@ -1136,8 +1136,8 @@ bool CvInitCore::getOption(GameOptionTypes eIndex) const
 
 void CvInitCore::setOption(GameOptionTypes eIndex, bool bOption)
 {
-	FASSERT_BOUNDS(0, NUM_GAMEOPTION_TYPES, eIndex);
-	if ( checkBounds(eIndex, 0, NUM_GAMEOPTION_TYPES) )
+	FASSERT_BOUNDS(0, GC.getNumGameOptionInfos(), eIndex);
+	if (checkBounds(eIndex, 0, GC.getNumGameOptionInfos()))
 	{
 		m_abOptions[eIndex] = bOption;
 	}
@@ -1739,7 +1739,10 @@ void CvInitCore::read(FDataStreamBase* pStream)
 	{
 		// read and ignore number of game options as it's only for external tools
 		int iNumGameOptions = 0;
+		// @SAVEBREAK DELETE
 		WRAPPER_READ_DECORATED(wrapper, "CvInitCore", &iNumGameOptions, "NUM_GAMEOPTION_TYPES");
+		// SAVEBREAK@
+		WRAPPER_READ_DECORATED(wrapper, "CvInitCore", &iNumGameOptions, "GC.getNumGameOptionInfos()");
 	}
 // BUG - Save Format - end
 
@@ -1751,7 +1754,7 @@ void CvInitCore::read(FDataStreamBase* pStream)
 	// Set options to default values to handle cases of loading games that pre-dated an added otpion
 	setDefaults();
 
-	WRAPPER_READ_CLASS_ARRAY_ALLOW_MISSING(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_GAMEOPTIONS, NUM_GAMEOPTION_TYPES, m_abOptions);
+	WRAPPER_READ_CLASS_ARRAY_ALLOW_MISSING(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_GAMEOPTIONS, GC.getNumGameOptionInfos(), m_abOptions);
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
@@ -1977,10 +1980,10 @@ void CvInitCore::write(FDataStreamBase* pStream)
 
 // BUG - Save Format - start
 	// write out the number of game options for the external parser tool
-	WRAPPER_WRITE(wrapper, "CvInitCore", NUM_GAMEOPTION_TYPES);
+	WRAPPER_WRITE(wrapper, "CvInitCore", GC.getNumGameOptionInfos());
 // BUG - Save Format - end
 
-	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_GAMEOPTIONS, NUM_GAMEOPTION_TYPES, m_abOptions);
+	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_GAMEOPTIONS, GC.getNumGameOptionInfos(), m_abOptions);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_MPOPTIONS, NUM_MPOPTION_TYPES, m_abMPOptions);
 
 	WRAPPER_WRITE(wrapper, "CvInitCore", m_bStatReporting);
@@ -2094,11 +2097,8 @@ void CvInitCore::setPathNames()
 }
 // BUG - EXE/DLL Paths - end
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
+// Afforess - 01/12/10
 void CvInitCore::reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID)
 {
 	if ( checkBounds(eOldID, 0, MAX_PC_PLAYERS) && checkBounds(eNewID, 0, MAX_PC_PLAYERS) )
@@ -2169,46 +2169,7 @@ void CvInitCore::reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID)
 		}
 	}
 }
-
-void CvInitCore::checkInitialCivics()
-{
-	for (int iI = 0; iI < GC.getNumCivilizationInfos(); iI++)
-	{
-		for (int iJ = 0; iJ < GC.getNumCivicOptionInfos(); iJ++)
-		{
-			//No Initial Civic Found
-			const CivicTypes eCivic = (CivicTypes)GC.getCivilizationInfo((CivilizationTypes)iI).getCivilizationInitialCivics(iJ);
-
-			if (eCivic == NO_CIVIC || GC.getCivicInfo(eCivic).getCivicOptionType() != iJ)
-			{
-				bool bFound = false;
-				for (int iK = 0; iK < GC.getNumCivicInfos(); iK++)
-				{
-					if (GC.getCivicInfo((CivicTypes)iK).getCivicOptionType() == iJ)
-					{
-						if (GC.getCivicInfo((CivicTypes)iK).getTechPrereq() == NO_TECH)
-						{
-							bFound = true;
-							break;
-						}
-					}
-				}
-				if (bFound)
-				{
-					GC.getCivilizationInfo((CivilizationTypes)iI).setCivilizationInitialCivics(iJ, iK);
-				}
-				else
-				{
-					//Should not get here, having no initial civic is very bad
-					FErrorMsg("Error, No Valid Civic Was Found!");
-				}
-			}
-		}
-	}
-}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+// ! Afforess
 
 unsigned int CvInitCore::getAssetCheckSum() const
 {

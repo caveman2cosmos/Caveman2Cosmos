@@ -472,8 +472,6 @@
 	<ElementType name="iPopulationgrowthratepercentage" content="textOnly" dt:type="int"/>
 	<ElementType name="iGlobalPopulationgrowthratepercentage" content="textOnly" dt:type="int"/>
 	<ElementType name="iWorldTradeRoutes" content="textOnly" dt:type="int"/>
-	<ElementType name="FreePromotion_2" content="textOnly"/>
-	<ElementType name="FreePromotion_3" content="textOnly"/>
 	<ElementType name="PrereqGameOption" content="textOnly"/>
 	<ElementType name="NotGameOption" content="textOnly"/>
 	<ElementType name="bApplyFreePromotionOnMove" content="textOnly" dt:type="boolean"/>
@@ -784,9 +782,7 @@
 		<element type="EnabledCivilizationTypes" minOccurs="0"/>
 		<element type="NoBonus" minOccurs="0"/>
 		<element type="PowerBonus" minOccurs="0"/>
-		<element type="FreeBonus" minOccurs="0"/>
 		<element type="ExtraFreeBonuses" minOccurs="0"/>
-		<element type="iNumFreeBonuses" minOccurs="0"/>
 		<element type="FreeBuilding" minOccurs="0"/>
 		<element type="FreeAreaBuilding" minOccurs="0"/>
 		<element type="FreePromotion" minOccurs="0"/>
@@ -903,8 +899,6 @@
 		<element type="iPopulationgrowthratepercentage" minOccurs="0"/>
 		<element type="iGlobalPopulationgrowthratepercentage" minOccurs="0"/>
 		<element type="iWorldTradeRoutes" minOccurs="0"/>
-		<element type="FreePromotion_2" minOccurs="0"/>
-		<element type="FreePromotion_3" minOccurs="0"/>
 		<element type="PrereqGameOption" minOccurs="0"/>
 		<element type="NotGameOption" minOccurs="0"/>
 		<element type="bApplyFreePromotionOnMove" minOccurs="0"/>
@@ -1278,12 +1272,9 @@
 	<ElementType name="BonusDefenseChanges" content="eltOnly">
 		<element type="BonusDefenseChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="CommerceType" content="textOnly"/>
-	<ElementType name="iExtraCommerce" content="textOnly" dt:type="int"/>
 	<ElementType name="BuildingExtraCommerce" content="eltOnly">
 		<element type="BuildingType"/>
-		<element type="CommerceType"/>
-		<element type="iExtraCommerce"/>
+		<element type="CommerceChanges"/>
 	</ElementType>
 	<ElementType name="GlobalBuildingExtraCommerces" content="eltOnly">
 		<element type="BuildingExtraCommerce" minOccurs="0" maxOccurs="*"/>

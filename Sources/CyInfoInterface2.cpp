@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvInfos.h"
 #include "CvImprovementInfo.h"
+#include "CvBonusInfo.h"
 //
 // Python interface for info classes (formerly structs)
 // These are simple enough to be exposed directly - no wrappers
@@ -10,10 +11,10 @@ void CyInfoPythonInterface2()
 {
 	OutputDebugString("Python Extension Module - CyInfoPythonInterface2\n");
 
-	python::class_<CvRouteModelInfo, python::bases<CvInfoBase> >("CvRouteModelInfo", python::no_init)
+	python::class_<CvRouteModelInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvRouteModelInfo", python::no_init)
 	;
 
-	python::class_<CvCivilizationInfo, python::bases<CvInfoBase> >("CvCivilizationInfo", python::no_init)
+	python::class_<CvCivilizationInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvCivilizationInfo", python::no_init)
 
 		.def("getArtStyleType", &CvCivilizationInfo::getArtStyleType, "int ()")
 		.def("getNumCityNames", &CvCivilizationInfo::getNumCityNames, "int ()")
@@ -38,7 +39,7 @@ void CyInfoPythonInterface2()
 		.def("getCityNames", &CvCivilizationInfo::getCityNames, "string (int i)")
 	;
 
-	python::class_<CvVictoryInfo, python::bases<CvInfoBase> >("CvVictoryInfo", python::no_init)
+	python::class_<CvVictoryInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvVictoryInfo", python::no_init)
 
 		.def("getLandPercent", &CvVictoryInfo::getLandPercent, "int ()")
 		.def("getMinLandPercent", &CvVictoryInfo::getMinLandPercent, "int ()")
@@ -57,7 +58,7 @@ void CyInfoPythonInterface2()
 		.def("getMovie", &CvVictoryInfo::getMovie, "string ()")
 	;
 
-	python::class_<CvHurryInfo, python::bases<CvInfoBase> >("CvHurryInfo", python::no_init)
+	python::class_<CvHurryInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvHurryInfo", python::no_init)
 
 		.def("getGoldPerProduction", &CvHurryInfo::getGoldPerProduction, "int ()")
 		.def("getProductionPerPopulation", &CvHurryInfo::getProductionPerPopulation, "int ()")
@@ -65,7 +66,7 @@ void CyInfoPythonInterface2()
 		.def("isAnger", &CvHurryInfo::isAnger, "bool ()")
 	;
 
-	python::class_<CvHandicapInfo, python::bases<CvInfoBase> >("CvHandicapInfo", python::no_init)
+	python::class_<CvHandicapInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvHandicapInfo", python::no_init)
 
 		.def("getStartingGold", &CvHandicapInfo::getStartingGold, "int ()")
 		.def("getTrainPercent", &CvHandicapInfo::getTrainPercent, "int ()")
@@ -84,7 +85,7 @@ void CyInfoPythonInterface2()
 		.def("getRevolutionIndexPercent", &CvHandicapInfo::getRevolutionIndexPercent, "int ()")
 	;
 
-	python::class_<CvGameSpeedInfo, python::bases<CvInfoBase> >("CvGameSpeedInfo", python::no_init)
+	python::class_<CvGameSpeedInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvGameSpeedInfo", python::no_init)
 
 		.def("getSpeedPercent", &CvGameSpeedInfo::getSpeedPercent, "int ()")
 		.def("getHammerCostPercent", &CvGameSpeedInfo::getHammerCostPercent, "int ()")
@@ -94,11 +95,11 @@ void CyInfoPythonInterface2()
 		.def("getDateIncrement", &CvGameSpeedInfo::getDateIncrement, python::return_value_policy<python::reference_existing_object>(), "CvDateIncrement ()")
 	;
 
-	python::class_<CvTurnTimerInfo, python::bases<CvInfoBase> >("CvTurnTimerInfo", python::no_init)
+	python::class_<CvTurnTimerInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvTurnTimerInfo", python::no_init)
 
 	;
 
-	python::class_<CvBuildInfo, python::bases<CvInfoBase> >("CvBuildInfo", python::no_init)
+	python::class_<CvBuildInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvBuildInfo", python::no_init)
 
 		.def("getTime", &CvBuildInfo::getTime, "int ()")
 		.def("getCost", &CvBuildInfo::getCost, "int ()")
@@ -118,7 +119,7 @@ void CyInfoPythonInterface2()
 		.def("isFeatureRemove", &CvBuildInfo::isFeatureRemove, "bool (int i)")
 	;
 
-	python::class_<CvGoodyInfo, python::bases<CvInfoBase> >("CvGoodyInfo", python::no_init)
+	python::class_<CvGoodyInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvGoodyInfo", python::no_init)
 
 		.def("getGold", &CvGoodyInfo::getGold, "int ()")
 		.def("getExperience", &CvGoodyInfo::getExperience, "int ()")
@@ -128,7 +129,7 @@ void CyInfoPythonInterface2()
 		.def("getSound", &CvGoodyInfo::getSound, "string ()")
 	;
 
-	python::class_<CvRouteInfo, python::bases<CvInfoBase> >("CvRouteInfo", python::no_init)
+	python::class_<CvRouteInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvRouteInfo", python::no_init)
 
 		.def("getValue", &CvRouteInfo::getValue, "int ()")
 		.def("getMovementCost", &CvRouteInfo::getMovementCost, "int ()")
@@ -141,11 +142,11 @@ void CyInfoPythonInterface2()
 		.def("getPrereqOrBonuses", &CvRouteInfo::getPrereqOrBonuses, python::return_value_policy<python::reference_existing_object>())
 	;
 
-	python::class_<CvImprovementBonusInfo, python::bases<CvInfoBase> >("CvImprovementBonusInfo", python::no_init)
+	python::class_<CvImprovementBonusInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvImprovementBonusInfo", python::no_init)
 		.def("getYieldChange", &CvImprovementBonusInfo::getYieldChange, "int (int i)")
 	;
 
-	python::class_<CvImprovementInfo, python::bases<CvInfoBase> >("CvImprovementInfo", python::no_init)
+	python::class_<CvImprovementInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvImprovementInfo", python::no_init)
 
 		.def("getTilesPerGoody", &CvImprovementInfo::getTilesPerGoody, "int ()")
 		.def("getGoodyUniqueRange", &CvImprovementInfo::getGoodyUniqueRange, "int ()")
@@ -170,7 +171,6 @@ void CyInfoPythonInterface2()
 		.def("isPeakImprovement", &CvImprovementInfo::isPeakImprovement, "bool ()")
 		.def("isWaterImprovement", &CvImprovementInfo::isWaterImprovement, "bool ()")
 		.def("isGoody", &CvImprovementInfo::isGoody, "bool ()")
-		.def("isPermanent", &CvImprovementInfo::isPermanent, "bool ()")
 		.def("isOutsideBorders", &CvImprovementInfo::isOutsideBorders, "bool ()")
 		.def("getArtDefineTag", &CvImprovementInfo::getArtDefineTag, "string ()")
 
@@ -188,17 +188,17 @@ void CyInfoPythonInterface2()
 		.def("getImprovementBonusYield", &CvImprovementInfo::getImprovementBonusYield, "int (int i, int j)")
 		.def("isImprovementBonusMakesValid", &CvImprovementInfo::isImprovementBonusMakesValid, "bool (int i)")
 		.def("isImprovementBonusTrade", &CvImprovementInfo::isImprovementBonusTrade, "bool (int i)")
+		.def("getImprovementBonusDiscoverRand", &CvImprovementInfo::getImprovementBonusDiscoverRand, "int (int i)")
 
 		.def("getTechYieldChanges", &CvImprovementInfo::getTechYieldChanges, "int (int i, int j)")
 		.def("getRouteYieldChanges", &CvImprovementInfo::getRouteYieldChanges, "int (int i, int j)")
 	;
 
-	python::class_<CvBonusClassInfo, python::bases<CvInfoBase> >("CvBonusClassInfo", python::no_init)
-
+	python::class_<CvBonusClassInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvBonusClassInfo", python::no_init)
 		.def("getUniqueRange", &CvBonusClassInfo::getUniqueRange)
 	;
 
-	python::class_<CvBonusInfo, python::bases<CvInfoBase> >("CvBonusInfo", python::no_init)
+	python::class_<CvBonusInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvBonusInfo", python::no_init)
 
 		.def("getChar", &CvBonusInfo::getChar, "int ()")
 		.def("getTechReveal", &CvBonusInfo::getTechReveal, "int ()")
@@ -243,7 +243,7 @@ void CyInfoPythonInterface2()
 		.def("getButton", &CvBonusInfo::getButton, "string ()")
 	;
 
-	python::class_<CvFeatureInfo, python::bases<CvInfoBase> >("CvFeatureInfo", python::no_init)
+	python::class_<CvFeatureInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvFeatureInfo", python::no_init)
 
 		.def("getMovementCost", &CvFeatureInfo::getMovementCost, "int ()")
 		.def("getAppearanceProbability", &CvFeatureInfo::getAppearanceProbability, "int ()")
@@ -259,7 +259,6 @@ void CyInfoPythonInterface2()
 		.def("isRequiresRiver", &CvFeatureInfo::isRequiresRiver, "bool ()")
 		.def("isImpassable", &CvFeatureInfo::isImpassable, "bool ()")
 		.def("isNoCity", &CvFeatureInfo::isNoCity, "bool ()")
-		.def("isNoImprovement", &CvFeatureInfo::isNoImprovement, "bool ()")
 		.def("isNukeImmune", &CvFeatureInfo::isNukeImmune, "bool ()")
 
 		// Arrays
@@ -269,7 +268,7 @@ void CyInfoPythonInterface2()
 		.def("isTerrain", &CvFeatureInfo::isTerrain, "bool (int i)")
 	;
 
-	python::class_<CvCommerceInfo, python::bases<CvInfoBase> >("CvCommerceInfo", python::no_init)
+	python::class_<CvCommerceInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvCommerceInfo", python::no_init)
 		.def("getChar", &CvCommerceInfo::getChar, "int ()")
 	;
 }

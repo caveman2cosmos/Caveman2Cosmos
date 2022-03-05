@@ -7,7 +7,8 @@
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_GENMODS</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_CETACEA_SAPIENS</ArtDefineTag>
-			<iPlacementOrder>-1</iPlacementOrder>
+			<TechReveal>TECH_SPECIES_UPLIFTING</TechReveal>
+			<TechCityTrade>TECH_SPECIES_UPLIFTING</TechCityTrade>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Type>
@@ -17,7 +18,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</ArtDefineTag>
 			<TechReveal>TECH_ONLINE_COMMUNITY</TechReveal>
 			<TechCityTrade>TECH_ONLINE_COMMUNITY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Type>
@@ -27,7 +27,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_DIGITAL_IDENTITY</ArtDefineTag>
 			<TechReveal>TECH_VIRTUAL_SOCIETY</TechReveal>
 			<TechCityTrade>TECH_VIRTUAL_SOCIETY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_GENE_EDITING</Type>
@@ -37,7 +36,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_GENE_EDITING</ArtDefineTag>
 			<TechReveal>TECH_GENE_ENHANCEMENT</TechReveal>
 			<TechCityTrade>TECH_GENE_ENHANCEMENT</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_DESIGNER_BABIES</Type>
@@ -47,7 +45,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_DESIGNER_BABIES</ArtDefineTag>
 			<TechReveal>TECH_GENE_JURISPRUDENCE</TechReveal>
 			<TechCityTrade>TECH_GENE_JURISPRUDENCE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Type>
@@ -57,7 +54,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</ArtDefineTag>
 			<TechReveal>TECH_NEURON_ENGINEERING</TechReveal>
 			<TechCityTrade>TECH_NEURON_ENGINEERING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_ENLIGHTENED</Type>
@@ -67,7 +63,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ENLIGHTENED</ArtDefineTag>
 			<TechReveal>TECH_UTOPIA_DESTINY</TechReveal>
 			<TechCityTrade>TECH_UTOPIA_DESTINY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_NOVEL_SENSES</Type>
@@ -77,7 +72,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_NOVEL_SENSES</ArtDefineTag>
 			<TechReveal>TECH_SYNTHETIC_SYNESTHESIA</TechReveal>
 			<TechCityTrade>TECH_SYNTHETIC_SYNESTHESIA</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_LUNARIS</Type>
@@ -87,7 +81,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_LUNARIS</ArtDefineTag>
 			<TechReveal>TECH_ARTIFICIAL_EVOLUTION</TechReveal>
 			<TechCityTrade>TECH_ARTIFICIAL_EVOLUTION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_MARTIAN</Type>
@@ -97,7 +90,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_MARTIAN</ArtDefineTag>
 			<TechReveal>TECH_ARTIFICIAL_EVOLUTION</TechReveal>
 			<TechCityTrade>TECH_ARTIFICIAL_EVOLUTION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</Type>
@@ -107,7 +99,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</ArtDefineTag>
 			<TechReveal>TECH_TRANSHUMANISM</TechReveal>
 			<TechCityTrade>TECH_TRANSHUMANISM</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</Type>
@@ -117,7 +108,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</ArtDefineTag>
 			<TechReveal>TECH_TRANSHUMANISM</TechReveal>
 			<TechCityTrade>TECH_TRANSHUMANISM</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_ROBOTIC_BODY</Type>
@@ -127,7 +117,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ROBOTIC_BODY</ArtDefineTag>
 			<TechReveal>TECH_COMPREHENSIVE_CYBERNETICS</TechReveal>
 			<TechCityTrade>TECH_COMPREHENSIVE_CYBERNETICS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_WINGS</Type>
@@ -137,7 +126,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_WINGS</ArtDefineTag>
 			<TechReveal>TECH_HUMAN_TRANSMUTATION</TechReveal>
 			<TechCityTrade>TECH_HUMAN_TRANSMUTATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_GILLS</Type>
@@ -147,7 +135,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_GILLS</ArtDefineTag>
 			<TechReveal>TECH_HUMAN_TRANSMUTATION</TechReveal>
 			<TechCityTrade>TECH_HUMAN_TRANSMUTATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_HEAT_TOLERANCE</Type>
@@ -157,7 +144,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_HEAT_TOLERANCE</ArtDefineTag>
 			<TechReveal>TECH_THERMAL_NEGATION</TechReveal>
 			<TechCityTrade>TECH_THERMAL_NEGATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_COLD_TOLERANCE</Type>
@@ -167,7 +153,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_COLD_TOLERANCE</ArtDefineTag>
 			<TechReveal>TECH_THERMAL_NEGATION</TechReveal>
 			<TechCityTrade>TECH_THERMAL_NEGATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_RADIATION_TOLERANCE</Type>
@@ -177,7 +162,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_RADIATION_TOLERANCE</ArtDefineTag>
 			<TechReveal>TECH_NANOSHIELDING</TechReveal>
 			<TechCityTrade>TECH_NANOSHIELDING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</Type>
@@ -187,7 +171,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</ArtDefineTag>
 			<TechReveal>TECH_SENTIENT_EARTH</TechReveal>
 			<TechCityTrade>TECH_SENTIENT_EARTH</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_NANOMORPHISM</Type>
@@ -197,7 +180,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_NANOMORPHISM</ArtDefineTag>
 			<TechReveal>TECH_NANOMORPHIC_TROIDS</TechReveal>
 			<TechCityTrade>TECH_NANOMORPHIC_TROIDS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_INFORMATION_BASED</Type>
@@ -207,7 +189,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_INFORMATION_BASED</ArtDefineTag>
 			<TechReveal>TECH_POSTHUMANISM</TechReveal>
 			<TechCityTrade>TECH_POSTHUMANISM</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_TRANSAPIENT</Type>
@@ -217,7 +198,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_TRANSAPIENT</ArtDefineTag>
 			<TechReveal>TECH_STELLAR_COMPUTING</TechReveal>
 			<TechCityTrade>TECH_STELLAR_COMPUTING</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_ALIEN_HYBRID</Type>
@@ -227,7 +207,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ALIEN_HYBRID</ArtDefineTag>
 			<TechReveal>TECH_SPECIES_AMALGAMATION</TechReveal>
 			<TechCityTrade>TECH_SPECIES_AMALGAMATION</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_IMMORTAL</Type>
@@ -237,7 +216,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_IMMORTAL</ArtDefineTag>
 			<TechReveal>TECH_IMMORTALITY</TechReveal>
 			<TechCityTrade>TECH_IMMORTALITY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_PURE_ENERGY</Type>
@@ -247,7 +225,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_PURE_ENERGY</ArtDefineTag>
 			<TechReveal>TECH_LUMINAL_BEINGS</TechReveal>
 			<TechCityTrade>TECH_LUMINAL_BEINGS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Type>
@@ -257,7 +234,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</ArtDefineTag>
 			<TechReveal>TECH_TRANSVERSE_EUCLIDEAN_GEOMETRY</TechReveal>
 			<TechCityTrade>TECH_TRANSVERSE_EUCLIDEAN_GEOMETRY</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_ARCHAILECT</Type>
@@ -267,7 +243,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ARCHAILECT</ArtDefineTag>
 			<TechReveal>TECH_HYPERINTELLIGENCE</TechReveal>
 			<TechCityTrade>TECH_HYPERINTELLIGENCE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_ATEMPORAL</Type>
@@ -277,7 +252,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_ATEMPORAL</ArtDefineTag>
 			<TechReveal>TECH_ATEMPORAL_BEINGS</TechReveal>
 			<TechCityTrade>TECH_ATEMPORAL_BEINGS</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_NONSPATIAL</Type>
@@ -287,7 +261,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_NONSPATIAL</ArtDefineTag>
 			<TechReveal>TECH_SPATIAL_TRANSCENDENCE</TechReveal>
 			<TechCityTrade>TECH_SPATIAL_TRANSCENDENCE</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HUMAN_MOD_METAPHYSICAL</Type>
@@ -297,7 +270,6 @@
 			<ArtDefineTag>ART_DEF_BONUS_HUMAN_MOD_METAPHYSICAL</ArtDefineTag>
 			<TechReveal>TECH_ARCHETYPAL_VECTOR_SPACES</TechReveal>
 			<TechCityTrade>TECH_ARCHETYPAL_VECTOR_SPACES</TechCityTrade>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	</BonusInfos>
 </Civ4BonusInfos>

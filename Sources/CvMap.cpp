@@ -254,7 +254,7 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 
 	if (GC.getNumBonusInfos())
 	{
-		FAssertMsg((0 < GC.getNumBonusInfos()), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvMap::reset");
+		FAssertMsg(0 < GC.getNumBonusInfos(), "GC.getNumBonusInfos() is not greater than zero but an array is being allocated in CvMap::reset");
 		FAssertMsg(m_paiNumBonus==NULL, "mem leak m_paiNumBonus");
 		m_paiNumBonus = new int[GC.getNumBonusInfos()];
 		FAssertMsg(m_paiNumBonusOnLand==NULL, "mem leak m_paiNumBonusOnLand");
@@ -1476,7 +1476,7 @@ void CvMap::deleteViewport(int iIndex)
 
 CvViewport* CvMap::getCurrentViewport() const
 {
-	FASSERT_BOUNDS(0, m_viewports.size(), m_iCurrentViewportIndex);
+	FASSERT_BOUNDS(0, (int)m_viewports.size(), m_iCurrentViewportIndex);
 	return m_viewports[m_iCurrentViewportIndex];
 }
 

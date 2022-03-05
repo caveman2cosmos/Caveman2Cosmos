@@ -305,3 +305,10 @@ std::wstring CyGameTextMgr::getDefenseHelp(CyCity *pCity)
 	GAMETEXT.getDefenseHelp(szBuffer, *pCity->getCity());
 	return szBuffer.getCString();
 }
+
+std::wstring CyGameTextMgr::getFlagHelp()
+{
+	CvWStringBuffer szBuffer;
+	GAMETEXT.setFlagHelp(szBuffer);
+	return szBuffer.getCString();
+}

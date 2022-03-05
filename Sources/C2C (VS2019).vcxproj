@@ -192,6 +192,7 @@
     <ClCompile Include="..\boost_test\test.cpp" />
     <ClCompile Include="CvAllocator.cpp" />
     <ClCompile Include="CvAllocator.h" />
+    <ClCompile Include="CvBonusInfo.cpp" />
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
     <ClCompile Include="CvSettlerAI.cpp" />
@@ -362,10 +363,12 @@
     <ClInclude Include="CvWorkerAI.h" />
     <ClInclude Include="CvWorkerService.h" />
     <ClInclude Include="EnumFlags.h" />
+    <ClInclude Include="enum_iterator.h" />
     <ClInclude Include="flatten_range.h" />
     <ClInclude Include="GlobalDefines.h" />
     <ClInclude Include="GroupingParams.h" />
     <ClInclude Include="hash.h" />
+    <ClInclude Include="CvBonusInfo.h" />
     <ClInclude Include="idinfo_iterator_base.h" />
     <ClInclude Include="CvMapExternal.h" />
     <ClInclude Include="CvMapInterfaceBase.h" />

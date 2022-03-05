@@ -358,14 +358,13 @@ public:
 	int m_iExtraWithdrawOnFeatureType;
 };
 
+// @SAVEBREAK Restructure/Rethink - Toffer
 class UnitCombatKeyedInfo
 {
 public:
 	UnitCombatKeyedInfo() :		m_bHasUnitCombat(false),
 								m_iExtraUnitCombatModifier(0),
-								m_iSubCombatTypeCount(0),
 								m_iOngoingTrainingCount(0),
-								m_iRemovesUnitCombatTypeCount(0),
 								m_iExtraFlankingStrengthbyUnitCombatType(0),
 								m_iExtraWithdrawVSUnitCombatType(0),
 								m_iExtraPursuitVSUnitCombatType(0),
@@ -392,9 +391,7 @@ public:
 	{
 		return (!m_bHasUnitCombat &&
 			m_iExtraUnitCombatModifier == 0 &&
-			m_iSubCombatTypeCount == 0 &&
 			m_iOngoingTrainingCount == 0 &&
-			m_iRemovesUnitCombatTypeCount == 0 &&
 			m_iExtraFlankingStrengthbyUnitCombatType == 0 &&
 			m_iExtraWithdrawVSUnitCombatType == 0 &&
 			m_iExtraPursuitVSUnitCombatType == 0 &&
@@ -418,9 +415,7 @@ public:
 
 	bool m_bHasUnitCombat;
 	int	m_iExtraUnitCombatModifier;
-	int m_iSubCombatTypeCount;
 	int m_iOngoingTrainingCount;
-	int m_iRemovesUnitCombatTypeCount;
 	int m_iExtraFlankingStrengthbyUnitCombatType;
 	int m_iExtraWithdrawVSUnitCombatType;
 	int m_iExtraPursuitVSUnitCombatType;
@@ -441,6 +436,7 @@ public:
 	int	m_iExtraTrapAvoidanceUnitCombatType;
 	int	m_iExtraTrapTriggerUnitCombatType;
 };
+// SAVEBREAK@
 
 class CvUnit : public CvDLLEntity
 {
@@ -567,22 +563,9 @@ public:
 	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;
 	TeamTypes getDeclareWarMove(const CvPlot* pPlot) const;
 
+	bool canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags = MoveCheck::None, CvUnit** ppDefender = nullptr) const;
 
-	bool canMoveInto(const CvPlot* pPlot, MoveCheck::flags flags = MoveCheck::None, CvUnit** ppDefender = nullptr) const;
-	// Deprecated - use method above
-	//bool canMoveInto(const CvPlot* pPlot,
-	//	bool bAttack = false,
-	//	bool bDeclareWar = false,
-	//	bool bIgnoreLoad = false,
-	//	bool bIgnoreTileLimit = false,
-	//	bool bIgnoreLocation = false,
-	//	bool bIgnoreAttack = false,
-	//	CvUnit** pDefender = NULL,
-	//	bool bCheckForBest = false,
-	//	bool bAssassinate = false,
-	//	bool bSuprise = false) const;
-
-	bool canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar = false) const;
+	bool canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	void attack(CvPlot* pPlot, bool bQuick, bool bStealth = false, bool bNoCache = false);
 	void attackForDamage(CvUnit *pDefender, int attackerDamageChange, int defenderDamageChange);
@@ -626,8 +609,6 @@ public:
 
 	int interceptionChance(const CvPlot* pPlot) const;
 
-	int getRandomMinExperienceTimes100() const;
-
 	//Great Commanders... By KillmePlease
 
 	//for combat units:
@@ -653,11 +634,15 @@ public:
 	PlayerTypes getOriginalOwner() const;
 
 	int getExperience100() const;
-	void setExperience100(int iNewValue, int iMax = -1);
+	void setExperience100(int iNewValue);
 	void changeExperience100(int iChange, int iMax = -1, bool bFromCombat = false, bool bInBorders = false, bool bUpdateGlobal = false);
 
 	void doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdDefenderDetails, const CvPlot* pPlot, bool bAttackerHasLostNoHP, bool bAttackerWithdrawn, int iAttackerInitialDamage, int iWinningOdds, int iInitialAttXP, int iInitialAttGGXP, int iDefenderInitialDamage, int iInitialDefXP, int iInitialDefGGXP, bool &bAttackerPromoted, bool &bDefenderPromoted, int iNonLethalAttackWinChance, int iNonLethalDefenseWinChance, int iDefenderFirstStrikes, int iAttackerFirstStrikes);
-	void doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerInitialDamage, int iWinningOdds, int iDefenderInitialDamage, int iInitialAttXP, int iInitialDefXP, int iInitialAttGGXP, int iInitialDefGGXP, bool bPromotion, bool bDefPromotion);
+
+	void doDynamicXP(CvUnit* pDefender, const CvPlot* pPlot, int iAttackerInitialDamage, int iWinningOdds, int iDefenderInitialDamage, bool bPromotion = false, bool bDefPromotion = false);
+	void applyDynamicXP(const int iExperience, const bool bHomeTerritory, int iMaxTotalXP);
+	int getVanquishDynamicXP(const int iLoseOdds, const int iInitialDamage, const int iMaxXP) const;
+	int getEngagementDynamicXP(const CvUnit* enemy, const int iLoseOdds, const int iInitialDamageEnemy, const int iInitialDamage, const int iMaxXP) const;
 
 	void changeTerrainProtected(TerrainTypes eIndex, int iNewValue);
 	bool isTerrainProtected(TerrainTypes eIndex) const;
@@ -722,7 +707,7 @@ public:
 	bool airlift(int iX, int iY);
 
 	bool isNukeVictim(const CvPlot* pPlot, TeamTypes eTeam) const;
-	bool canNuke(const CvPlot* pPlot) const;
+	bool canNuke() const;
 	bool canNukeAt(const CvPlot* pPlot, int iX, int iY) const;
 	bool nuke(int iX, int iY, bool bTrap = false);
 
@@ -863,7 +848,6 @@ public:
 
 	int flavorValue(FlavorTypes eFlavor) const;
 
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isHuman() const;
@@ -930,9 +914,6 @@ public:
 	/*** Dexy - Surround and Destroy START ****/
 	int maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL, bool bSurroundedModifier = true) const;
 	int currCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL, bool bSurroundedModifier = true) const;
-	// OLD CODE
-	// int maxCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL) const;
-	// int currCombatStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL) const;
 	/*** Dexy - Surround and Destroy  END  ****/
 	int currFirepower(const CvPlot* pPlot, const CvUnit* pAttacker) const;
 	int currEffectiveStr(const CvPlot* pPlot, const CvUnit* pAttacker, CombatDetails* pCombatDetails = NULL) const;
@@ -1040,8 +1021,6 @@ public:
 	bool canAnimalIgnoresImprovements() const;
 	bool canAnimalIgnoresCities() const;
 	bool canOnslaught() const;
-	bool hasCombatType(UnitCombatTypes eCombatType) const;
-	bool hasSubCombatType(UnitCombatTypes eCombatType) const;
 	bool hasCureAfflictionType(PromotionLineTypes ePromotionLineType) const;
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	int fortitudeTotal() const;
@@ -1079,15 +1058,10 @@ public:
 	int unitCombatModifier(UnitCombatTypes eUnitCombat) const;
 	int domainModifier(DomainTypes eDomain) const;
 
-	SpecialUnitTypes specialCargo() const;
-	SpecialUnitTypes SMspecialCargo() const;
-	SpecialUnitTypes SMnotSpecialCargo() const;
-	DomainTypes domainCargo() const;
 	int cargoSpace() const;
 	void changeCargoSpace(int iChange);
 	bool isFull() const;
 	int cargoSpaceAvailable(SpecialUnitTypes eSpecialCargo = NO_SPECIALUNIT, DomainTypes eDomainCargo = NO_DOMAIN) const;
-	int SMcargoSpaceAvailable(SpecialUnitTypes eSpecialCargo = NO_SPECIALUNIT, DomainTypes eDomainCargo = NO_DOMAIN) const;
 	bool hasCargo() const;
 	bool canCargoAllMove() const;
 	bool canCargoEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage) const;
@@ -1142,7 +1116,7 @@ public:
 	void finishMoves();
 
 	int getExperience() const;
-	void setExperience(int iNewValue, int iMax = -1);
+	void setExperience(int iNewValue);
 	void changeExperience(int iChange, int iMax = -1, bool bFromCombat = false, bool bInBorders = false, bool bUpdateGlobal = false);
 
 	int getLevel() const;
@@ -1366,7 +1340,6 @@ public:
 	void changeIgnoreNoEntryLevelCount(int iChange);
 
 	int getIgnoreZoneofControlCount() const;
-	void setIgnoreZoneofControlCount(int iChange);
 	void changeIgnoreZoneofControlCount(int iChange);
 
 	int getFliesToMoveCount() const;
@@ -1404,20 +1377,11 @@ public:
 	void setSMStrength ();
 
 	int getAnimalIgnoresBordersCount() const;
-	bool mayAnimalIgnoresBorders() const;
 	void changeAnimalIgnoresBordersCount(int iChange);
 
 	int getOnslaughtCount() const;
 	bool mayOnslaught() const;
 	void changeOnslaughtCount(int iChange);
-
-	int getSubCombatTypeCount(UnitCombatTypes eCombatType) const;
-	bool hasExtraSubCombatType(UnitCombatTypes eCombatType) const;
-	void changeSubCombatTypeCount(UnitCombatTypes eCombatType, int iChange);
-
-	int getRemovesUnitCombatTypeCount(UnitCombatTypes eCombatType) const;
-	bool hasRemovesUnitCombatType(UnitCombatTypes eCombatType) const;
-	void changeRemovesUnitCombatTypeCount(UnitCombatTypes eCombatType, int iChange);
 
 	int getCureAfflictionCount(PromotionLineTypes ePromotionLineType) const;
 	bool hasExtraCureAffliction(PromotionLineTypes ePromotionLineType) const;
@@ -1754,6 +1718,7 @@ public:
 	PlayerTypes m_eOriginalOwner;
 
 	bool isWorker() const;
+	CvCity* getWorkerAssignedCity() const;
 
 protected:
 	int m_iDCMBombRange;
@@ -2613,12 +2578,10 @@ public:
 	SpecialUnitTypes getSpecialCargo() const;
 	void setNewSpecialCargo(SpecialUnitTypes eSpecialUnit);
 	SpecialUnitTypes getSMSpecialCargo() const;
-	void setNewSMSpecialCargo(SpecialUnitTypes eSpecialUnit);
 	SpecialUnitTypes getSMNotSpecialCargo() const;
 	void setNewSMNotSpecialCargo(SpecialUnitTypes eSpecialUnit);
 
 	void changeSMCargoSpace(int iChange);
-	int SMcargoSpace() const;
 	int SMcargoSpaceFilter() const;
 	int SMcargoCapacityPreCheck() const;
 	int getSMCargoCapacity() const;
@@ -3034,11 +2997,9 @@ private:
 	//ls612: Terrain Work Modifiers
 	static int* g_paiTempExtraBuildWorkPercent;
 	static int*	g_paiTempExtraUnitCombatModifier;
-	static bool*	g_pabTempHasPromotion;
-	static bool*	g_pabTempHasUnitCombat;
-	static int* g_paiTempSubCombatTypeCount;
+	static bool* g_pabTempHasPromotion;
+	static bool* g_pabTempHasUnitCombat;
 	static int* g_paiTempOngoingTrainingCount;
-	static int* g_paiTempRemovesUnitCombatTypeCount;
 	static int* g_paiTempExtraFlankingStrengthbyUnitCombatType;
 	static int* g_paiTempExtraWithdrawVSUnitCombatType;
 	static int* g_paiTempExtraPursuitVSUnitCombatType;

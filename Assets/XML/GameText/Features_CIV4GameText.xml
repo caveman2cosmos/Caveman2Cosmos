@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_FEATUREHELP_NO_BONUS</Tag>
+		<English>[NEWLINE][ICON_BULLET]No bonus on plots with this feature.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FEATUREHELP_NO_IMPROVEMENT</Tag>
 		<English>[NEWLINE][ICON_BULLET]Cannot build any improvements on this terrain</English>
 		<French>[NEWLINE][ICON_BULLET]Impossible de construire d'aménagements sur ce terrain</French>

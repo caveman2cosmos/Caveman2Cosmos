@@ -88,6 +88,7 @@ enum DirectionTypes
 	DIRECTION_WEST_MASK = 1 << DIRECTION_WEST,
 	DIRECTION_NORTHWEST_MASK = 1 << DIRECTION_NORTHWEST,
 };
+typedef fixed_enum_range<DirectionTypes, int, DIRECTION_NORTH, NUM_DIRECTION_TYPES> DirectionTypesRange;
 
 enum CardinalDirectionTypes
 {
@@ -100,6 +101,8 @@ enum CardinalDirectionTypes
 
 	NUM_CARDINALDIRECTION_TYPES
 };
+typedef fixed_enum_range<CardinalDirectionTypes, int, CARDINALDIRECTION_NORTH, NUM_CARDINALDIRECTION_TYPES> CardinalDirectionTypesRange;
+
 
 enum RotationTypes
 {
@@ -114,6 +117,8 @@ enum RotationTypes
 	ROTATE_180CW_MASK	= 1 << ROTATE_180CW,
 	ROTATE_270CW_MASK	= 1 << ROTATE_270CW,
 };
+typedef fixed_enum_range<RotationTypes, int, ROTATE_NONE, NUM_ROTATION_TYPES> RotationTypesRange;
+
 
 // camera wrap helper
 enum WrapDirection
@@ -403,7 +408,7 @@ enum WidgetTypes
 	WIDGET_LAUNCH_VICTORY,
 	WIDGET_CONVERT,
 	WIDGET_AUTOMATE_CITIZENS,
-	WIDGET_AUTOMATE_PRODUCTION,
+	WIDGET_UNUSED_32,
 	WIDGET_EMPHASIZE,
 	WIDGET_DIPLOMACY_RESPONSE,
 	WIDGET_GENERAL,
@@ -428,7 +433,7 @@ enum WidgetTypes
 	WIDGET_WB_REGENERATE_MAP,
 	WIDGET_TRADE_ITEM,
 	WIDGET_UNIT_MODEL,
-	WIDGET_FLAG,
+	WIDGET_UNUSED_57, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
 	WIDGET_POPUP_QUEUE,
 
 	//	This is meant for python buttons, it will call python functions for display and execution
@@ -882,8 +887,6 @@ enum GameOptionTypes
 	GAMEOPTION_ADVANCED_ROUTES
 };
 
-#define NUM_GAMEOPTION_TYPES GC.getNumGameOptionInfos()
-
 enum MultiplayerOptionTypes
 {
 	NO_MPOPTION = -1,
@@ -1176,11 +1179,17 @@ enum TeamTypes
 {
 	NO_TEAM = -1,
 };
+typedef fixed_enum_range<TeamTypes, int, 0, MAX_TEAMS> TeamTypesRange;
+typedef fixed_enum_range<TeamTypes, int, 0, MAX_PC_TEAMS> TeamTypesPCRange;
+typedef fixed_enum_range<TeamTypes, int, NPC1_TEAM, MAX_TEAMS> TeamTypesNPCRange;
 
 enum PlayerTypes
 {
 	NO_PLAYER = -1,
 };
+typedef fixed_enum_range<PlayerTypes, int, 0, MAX_PLAYERS> PlayerTypesRange;
+typedef fixed_enum_range<PlayerTypes, int, 0, MAX_PC_PLAYERS> PlayerTypesPCRange;
+typedef fixed_enum_range<PlayerTypes, int, NPC1_PLAYER, MAX_PLAYERS> PlayerTypesNPCRange;
 
 enum TraitTypes
 {
@@ -3118,6 +3127,8 @@ enum GlobeLayerResourceOptionTypes
 	SHOW_RESOURCES_GROWTH,
 	SHOW_RESOURCES_PRODUCTION,
 	SHOW_RESOURCES_MISC,
+	SHOW_RESOURCES_UNCLAIMED,
+	SHOW_RESOURCES_CANCLAIM,
 
 	NUM_RESOURCE_OPTION_TYPES
 };
@@ -3366,119 +3377,6 @@ enum PropertyPropagatorTypes
 	NUM_PROPERTYPROPAGATORS
 };
 
-enum InfoClassTypes
-{
-	NO_INFO_CLASS = -1,
-
-	BUILDING_INFO,
-	UNIT_INFO,
-	BONUS_INFO,
-	PROJECT_INFO,
-	SPECIALIST_INFO,
-	IMPROVEMENT_INFO,
-	RELIGION_INFO,
-	PROMOTION_INFO,
-	CORPORATION_INFO,
-	TECH_INFO,
-	CIVIC_INFO,
-	VOTE_INFO,
-	VOTE_SOURCE_INFO,
-	SPECIAL_UNIT_INFO,
-	SPECIAL_BUILDING_INFO,
-	UPKEEP_INFO,
-	HURRY_INFO,
-	FEATURE_INFO,
-	CIVIC_OPTION_INFO,
-	BUILD_INFO,
-	TERRAIN_INFO,
-	ROUTE_INFO,
-	VICTORY_INFO,
-	LEADERHEAD_INFO,
-	CIVILIZATION_INFO,
-	GAME_OPTION_INFO,
-	MP_OPTION_INFO,
-	UNIT_AI_INFO,
-	EVENT_INFO,
-	EVENT_TRIGGER_INFO,
-	GAME_SPEED_INFO,
-	PROPERTy_INFO,
-	PROMOTION_LINE_INFO,
-	TRAIT_INFO,
-	INVISIBLE_INFO,
-	MAPCATEGORy_INFO,
-	IDEACLASS_INFO,
-	IDEA_INFO,
-	MISSION_INFO,
-	YIELD_INFO,
-	COMMERCE_INFO,
-	DOMAIN_INFO,
-	MAP_INFO,
-	CONCEPT_INFO,
-	NEW_CONCEPT_INFO,
-	CITY_TAB_INFO,
-	CALENDAR_INFO,
-	SEASON_INFO,
-	MONTH_INFO,
-	DENIAL_INFO,
-	ATTITUDE_INFO,
-	MEMORY_INFO,
-	INTERFACE_MODE_INFO,
-	WORLD_INFO,
-	CLIMATE_INFO,
-	SEA_LEVEL_INFO,
-	COLOR_INFO,
-	PLAYER_COLOR_INFO,
-	ADVISOR_INFO,
-	RIVER_INFO,
-	RIVER_MODEL_INFO,
-	WATER_PLANE_INFO,
-	TERRAIN_PLANE_INFO,
-	CAMERA_OVERLAY_INFO,
-	ANIMATION_PATH_INFO,
-	ANIMATION_CATEGORY_INFO,
-	ENTITY_EVENT_INFO,
-	EFFECT_INFO,
-	ATTACHABLE_INFO,
-	CAMERA_INFO,
-	UNIT_FORMATION_INFO,
-	LANDSCAPE_INFO,
-	BONUS_CLASS_INFO,
-	CURSOR_INFO,
-	THRONE_ROOM_INFO,
-	THRONE_ROOM_STYLE_INFO,
-	THRONE_ROOM_CAMERA_INFO,
-	SLIDE_SHOW_INFO,
-	SLIDE_SHOW_RANDOM_INFO,
-	WORLD_PICKER_INFO,
-	SPACE_SHIP_INFO,
-	SPAWN_INFO,
-	ROUTE_MODEL_INFO,
-	GOODY_INFO,
-	HANDICAP_INFO,
-	TURN_TIMER_INFO,
-	PROCESS_INFO,
-	ACTION_INFO,
-	CONTROL_INFOS,
-	COMMAND_INFO,
-	AUTOMATE_INFO,
-	DIPLOMACY_INFO,
-	ERA_INFO,
-	EMPHASIZE_INFO,
-	CULTURE_LEVEL_INFO,
-	FORCE_CONTROL_INFO,
-	PLAYER_OPTION_INFO,
-	GRAPHIC_OPTION_INFO,
-	ESPIONAGE_MISSION_INFO,
-	UNIT_ART_STYLE_TYPE_INFO,
-	MAIN_MENU_INFO,
-	OUTCOME_INFO,
-	UNIT_COMBAT_INFO,
-	MOD_LOAD_CONTROL_INFO,
-	HINT_INFO,
-
-	NUM_INFO_CLASSES
-};
-
 enum RiverModelTypes { };
 enum WaterPlaneTypes { };
 enum TerrainPlaneTypes { };
@@ -3496,5 +3394,17 @@ enum DiplomacyTypes { };
 enum MainMenuTypes { };
 enum ModLoadControlTypes { };
 enum HintTypes { };
+enum AssetArtTypes { };
+enum MiscArtTypes { };
+enum UnitArtTypes { };
+enum BuildingArtTypes { };
+enum CivilizationArtTypes { };
+enum LeaderHeadArtTypes { };
+enum BonusArtTypes { };
+enum ImprovementArtTypes { };
+enum TerrainArtTypes { };
+enum FeatureArtTypes { };
+enum MovieArtTypes { };
+enum InterfaceArtTypes { };
 
 #endif	// CVENUMS_h

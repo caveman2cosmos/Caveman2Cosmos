@@ -43,11 +43,8 @@ m_iObsoleteTech(NO_TECH),
 m_iPrereqAndTech(NO_TECH),
 m_iNoBonus(NO_BONUS),
 m_iPowerBonus(NO_BONUS),
-m_iFreeBonus(NO_BONUS),
-m_iNumFreeBonuses(0),
 m_iFreeBuilding(NO_BUILDING),
 m_iFreeAreaBuilding(NO_BUILDING),
-m_iFreePromotion(NO_PROMOTION),
 m_iCivicOption(NO_CIVICOPTION),
 m_iAIWeight(0),
 m_iProductionCost(-1),
@@ -198,8 +195,6 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_iPrereqVicinityBonus(NO_BONUS)
 ,m_iPrereqRawVicinityBonus(NO_BONUS)
 ,m_iPillageGoldModifier(0)
-,m_iFreePromotion_2(NO_PROMOTION)
-,m_iFreePromotion_3(NO_PROMOTION)
 ,m_iWorldTradeRoutes(0)
 ,m_iLineOfSight(0)
 ,m_iInflationModifier(0)
@@ -310,6 +305,8 @@ m_ppaiBonusYieldModifier(NULL)
 //------------------------------------------------------------------------------------------------------
 CvBuildingInfo::~CvBuildingInfo()
 {
+	CvInfoUtil(this).uninitDataMembers();
+
 	SAFE_DELETE_ARRAY(m_piVictoryThreshold);
 	SAFE_DELETE_ARRAY(m_piRiverPlotYieldChange);
 	SAFE_DELETE_ARRAY(m_piGlobalSeaPlotYieldChange);
@@ -406,34 +403,12 @@ CvBuildingInfo::~CvBuildingInfo()
 	m_aGlobalBuildingProductionModifier.removeDelayedResolution();
 	m_aPrereqNumOfBuilding.removeDelayedResolution();
 	m_aGlobalBuildingCostModifier.removeDelayedResolution();
-
-	CvInfoUtil(this).uninitDataMembers();
 }
 
 int CvBuildingInfo::getVictoryThreshold(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumVictoryInfos(), i);
 	return m_piVictoryThreshold ? m_piVictoryThreshold[i] : 0;
-}
-
-BonusTypes CvBuildingInfo::getExtraFreeBonus(int i) const
-{
-	FASSERT_BOUNDS(0, m_aExtraFreeBonuses.size(), i);
-	return m_aExtraFreeBonuses[i].first;
-}
-
-int CvBuildingInfo::getExtraFreeBonusNum(int i) const
-{
-	FASSERT_BOUNDS(0, m_aExtraFreeBonuses.size(), i);
-	return m_aExtraFreeBonuses[i].second;
-}
-
-bool CvBuildingInfo::hasExtraFreeBonus(BonusTypes eBonus) const
-{
-	for(unsigned int i=0; i<m_aExtraFreeBonuses.size(); i++)
-		if (m_aExtraFreeBonuses[i].first == eBonus)
-			return true;
-	return false;
 }
 
 int CvBuildingInfo::getYieldChange(int i) const
@@ -779,29 +754,31 @@ int* CvBuildingInfo::getBonusYieldModifierArray(int i) const
 	return m_ppaiBonusYieldModifier == NULL ? NULL : m_ppaiBonusYieldModifier[i];
 }
 
-int CvBuildingInfo::getGlobalBuildingCommerceChange(int iBuilding, int iCommerce) const
+int CvBuildingInfo::getGlobalBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCommerce) const
 {
-	foreach_(const BuildingCommerceChange& pChange, m_aGlobalBuildingCommerceChanges)
+	foreach_(const BuildingCommerce& pair, m_aGlobalBuildingCommerceChanges)
 	{
-		if (pChange.eBuilding == (BuildingTypes)iBuilding && pChange.eCommerce == (CommerceTypes)iCommerce)
+		if (pair.first == eBuilding)
 		{
-			return pChange.iChange;
+			return pair.second[eCommerce];
 		}
 	}
-
 	return 0;
-}
-
-const std::vector<BuildingCommerceChange>& CvBuildingInfo::getGlobalBuildingCommerceChanges() const
-{
-	return m_aGlobalBuildingCommerceChanges;
 }
 
 const python::list CvBuildingInfo::cyGetGlobalBuildingCommerceChanges() const
 {
 	python::list pyList = python::list();
-	foreach_(const BuildingCommerceChange& pChange, m_aGlobalBuildingCommerceChanges)
-		pyList.append(pChange);
+
+	foreach_(const BuildingCommerce& pair, m_aGlobalBuildingCommerceChanges)
+	{
+		for (int i = 0; i < NUM_COMMERCE_TYPES; i++)
+		{
+			const int iValue = pair.second[i];
+			if (iValue != 0)
+				pyList.append(BuildingCommerceChange(pair.first, (CommerceTypes)i, iValue));
+		}
+	}
 	return pyList;
 }
 
@@ -913,11 +890,6 @@ const python::list CvBuildingInfo::cyGetFreePromoTypes() const
 
 const char* CvBuildingInfo::getButton() const
 {
-	const CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)	// MRGENIE: Catch non-existing tag
-	{
-		return NULL;
-	}
 	const CvArtInfoBuilding* pBuildingArtInfo = getArtInfo();
 	return pBuildingArtInfo ? pBuildingArtInfo->getButton() : NULL;
 }
@@ -1491,24 +1463,6 @@ bool CvBuildingInfo::EnablesOtherBuildings() const
 	return m_bEnablesOtherBuildings;
 }
 
-bool CvBuildingInfo::isFreeBonusOfBuilding(BonusTypes eBonus) const
-{
-	if ( getFreeBonus() == eBonus )
-	{
-		return true;
-	}
-
-	for( int iJ = 0; iJ < getNumExtraFreeBonuses(); iJ++ )
-	{
-		if ( getExtraFreeBonus(iJ) == eBonus )
-		{
-			return true;
-		}
-	}
-
-	return false;
-}
-
 
 namespace CvBuildingInternal
 {
@@ -1521,14 +1475,9 @@ namespace CvBuildingInternal
 		query.id = eBuilding;
 		queries.push_back(query);
 		query.GOM = GOM_BONUS;
-		query.id = kBuilding.getFreeBonus();
-		if (query.id != NO_BONUS)
+		foreach_(const BonusModifier& kFreeBonus, kBuilding.getFreeBonuses())
 		{
-			queries.push_back(query);
-		}
-		for (int iJ = 0; iJ < kBuilding.getNumExtraFreeBonuses(); iJ++)
-		{
-			query.id = kBuilding.getExtraFreeBonus(iJ);
+			query.id = kFreeBonus.first;
 			queries.push_back(query);
 		}
 
@@ -1541,9 +1490,7 @@ namespace CvBuildingInternal
 			}
 		}
 
-		const BonusTypes eFreeBonus = (BonusTypes)kBuilding.getFreeBonus();
-
-		if (eFreeBonus != NO_BONUS)
+		foreach_(const BonusTypes eFreeBonus, kBuilding.getFreeBonuses() | map_keys)
 		{
 			foreach_(const CvBuildingInfo* loopBuilding, GC.getBuildingInfos())
 			{
@@ -1566,14 +1513,9 @@ namespace CvBuildingInternal
 		query.id = eBuilding;
 		queries.push_back(query);
 		query.GOM = GOM_BONUS;
-		query.id = kBuilding.getFreeBonus();
-		if (query.id != NO_BONUS)
+		foreach_(const BonusModifier& kFreeBonus, kBuilding.getFreeBonuses())
 		{
-			queries.push_back(query);
-		}
-		for (int iJ = 0; iJ < kBuilding.getNumExtraFreeBonuses(); iJ++)
-		{
-			query.id = kBuilding.getExtraFreeBonus(iJ);
+			query.id = kFreeBonus.first;
 			queries.push_back(query);
 		}
 
@@ -1600,14 +1542,14 @@ namespace CvBuildingInternal
 				}
 			}
 
-			if (kUnit.getPrereqAndBonus() != NO_BONUS && kBuilding.isFreeBonusOfBuilding((BonusTypes)kUnit.getPrereqAndBonus()))
+			if (kBuilding.getFreeBonuses().hasValue((BonusTypes)kUnit.getPrereqAndBonus()))
 			{
 				return true;
 			}
 
-			foreach_(const BonusTypes eXtraFreeBonus, kUnit.getPrereqOrBonuses())
+			foreach_(const BonusTypes eBonus, kUnit.getPrereqOrBonuses())
 			{
-				if (kBuilding.isFreeBonusOfBuilding(eXtraFreeBonus))
+				if (kBuilding.getFreeBonuses().hasValue(eBonus))
 				{
 					return true;
 				}
@@ -1622,11 +1564,17 @@ void CvBuildingInfo::doPostLoadCaching(uint32_t eThis)
 {
 	m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*this, (BuildingTypes)eThis);
 	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, (BuildingTypes)eThis);
-}
 
+	if (getHolyCity() != NO_RELIGION)
+	{
+		GC.getReligionInfo((ReligionTypes)getReligionType()).addShrineBuilding((BuildingTypes)eThis);
+	}
+}
 
 void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 {
+	CvInfoUtil(this).checkSum(iSum);
+
 	CheckSum(iSum, m_bNoLimit);
 	CheckSum(iSum, m_iVictoryPrereq);
 	CheckSum(iSum, m_iFreeStartEra);
@@ -1634,11 +1582,8 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iPrereqAndTech);
 	CheckSum(iSum, m_iNoBonus);
 	CheckSum(iSum, m_iPowerBonus);
-	CheckSum(iSum, m_iFreeBonus);
-	CheckSum(iSum, m_iNumFreeBonuses);
 	CheckSum(iSum, m_iFreeBuilding);
 	CheckSum(iSum, m_iFreeAreaBuilding);
-	CheckSum(iSum, m_iFreePromotion);
 	CheckSum(iSum, m_iCivicOption);
 	CheckSum(iSum, m_iAIWeight);
 	CheckSum(iSum, m_iProductionCost);
@@ -1828,8 +1773,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iPrereqVicinityBonus);
 	CheckSum(iSum, m_iPrereqRawVicinityBonus);
 	CheckSum(iSum, m_iPillageGoldModifier);
-	CheckSum(iSum, m_iFreePromotion_2);
-	CheckSum(iSum, m_iFreePromotion_3);
 	CheckSum(iSum, m_iWorldTradeRoutes);
 	CheckSum(iSum, m_iLineOfSight);
 	CheckSum(iSum, m_iInflationModifier);
@@ -1955,15 +1898,14 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iMaxPopAllowed);
 
 	//Structs
-	int iNumElements = m_aFreePromoTypes.size();
-	for (int i = 0; i < iNumElements; ++i)
+	foreach_(const FreePromoTypes& freePromotion, m_aFreePromoTypes)
 	{
-		CheckSum(iSum, m_aFreePromoTypes[i].ePromotion);
-		if (m_aFreePromoTypes[i].m_pExprFreePromotionCondition)
-			m_aFreePromoTypes[i].m_pExprFreePromotionCondition->getCheckSum(iSum);
+		CheckSum(iSum, freePromotion.ePromotion);
+		if (freePromotion.m_pExprFreePromotionCondition)
+			freePromotion.m_pExprFreePromotionCondition->getCheckSum(iSum);
 	}
 
-	iNumElements = m_aHealUnitCombatTypes.size();
+	int iNumElements = m_aHealUnitCombatTypes.size();
 	for (int i = 0; i < iNumElements; ++i)
 	{
 		CheckSum(iSum, m_aHealUnitCombatTypes[i].eUnitCombat);
@@ -2002,7 +1944,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aAfflictionOutbreakLevelChanges);
 	CheckSumC(iSum, m_aTechOutbreakLevelChanges);
 	CheckSumC(iSum, m_aiFreeTraitTypes);
-	CheckSumC(iSum, m_aExtraFreeBonuses);
+	CheckSumC(iSum, m_freeBonuses);
 	CheckSumC(iSum, m_aePrereqOrRawVicinityBonuses);
 	CheckSumC(iSum, m_aePrereqOrBonuses);
 	CheckSumC(iSum, m_aiPrereqInCityBuildings);
@@ -2018,13 +1960,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	//	m_pExprFreePromotionCondition->getCheckSum(iSum);
 	//TB Combat Mods (Buildings) end
 
-	foreach_(const BuildingCommerceChange& it, m_aGlobalBuildingCommerceChanges)
-	{
-		CheckSum(iSum, it.eBuilding);
-		CheckSum(iSum, it.eCommerce);
-		CheckSum(iSum, it.iChange);
-	}
-
 	CheckSum(iSum, m_iMaxGlobalInstances);
 	CheckSum(iSum, m_iMaxTeamInstances);
 	CheckSum(iSum, m_iMaxPlayerInstances);
@@ -2037,8 +1972,6 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_techCommerceModifiers);
 	CheckSumC(iSum, m_aTerrainYieldChanges);
 	CheckSumC(iSum, m_aPlotYieldChanges);
-
-	CvInfoUtil(const_cast<CvBuildingInfo*>(this)).checkSum(iSum);
 }
 
 void CvBuildingInfo::getDataMembers(CvInfoUtil& util)
@@ -2051,7 +1984,8 @@ void CvBuildingInfo::getDataMembers(CvInfoUtil& util)
 		.add(m_religionChange, L"ReligionChanges")
 		.add(m_prereqOrImprovement, L"PrereqOrImprovement")
 		.add(m_improvementFreeSpecialists, L"ImprovementFreeSpecialists")
-		//.add(m_aePrereqOrBonuses, L"PrereqBonuses")
+		.add(m_freeBonuses, L"ExtraFreeBonuses")
+		.add(m_aGlobalBuildingCommerceChanges, L"GlobalBuildingExtraCommerces", L"BuildingType", L"CommerceChanges")
 	;
 }
 
@@ -2066,6 +2000,8 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	{
 		return false;
 	}
+
+	CvInfoUtil(this).readXml(pXML);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"SpecialBuildingType");
 	m_eSpecialBuilding = static_cast<SpecialBuildingTypes>(pXML->GetInfoClass(szTextVal));
@@ -2136,34 +2072,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PowerBonus");
 	m_iPowerBonus = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreeBonus");
-	m_iFreeBonus = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(&m_iNumFreeBonuses, L"iNumFreeBonuses");
-
-	if(pXML->TryMoveToXmlFirstChild(L"ExtraFreeBonuses"))
-	{
-		if(pXML->TryMoveToXmlFirstChild())
-		{
-			if (pXML->TryMoveToXmlFirstOfSiblings(L"ExtraFreeBonus"))
-			{
-				do
-				{
-					pXML->GetChildXmlValByName(szTextVal, L"FreeBonus");
-					BonusTypes eBonus = (BonusTypes) pXML->GetInfoClass(szTextVal);
-					int iNum;
-					pXML->GetChildXmlValByName(&iNum, L"iNumFreeBonuses");
-					m_aExtraFreeBonuses.push_back(std::pair<BonusTypes,int>(eBonus, iNum));
-				} while(pXML->TryMoveToXmlNextSibling());
-			}
-			pXML->MoveToXmlParent();
-		}
-		pXML->MoveToXmlParent();
-	}
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreePromotion");
-	m_iFreePromotion = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"CivicOption");
 	m_iCivicOption = pXML->GetInfoClass(szTextVal);
@@ -2722,12 +2630,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqCultureLevel");
 	m_iPrereqCultureLevel = pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreePromotion_2");
-	m_iFreePromotion_2 = pXML->GetInfoClass(szTextVal);
-
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"FreePromotion_3");
-	m_iFreePromotion_3 = pXML->GetInfoClass(szTextVal);
-
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"VicinityBonus");
 	m_iPrereqVicinityBonus = pXML->GetInfoClass(szTextVal);
 
@@ -3144,6 +3046,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 				{
 					pXML->GetChildXmlValByName(szTextVal, L"PromotionType");
 					m_aFreePromoTypes[i].ePromotion = (PromotionTypes)pXML->GetInfoClass(szTextVal);
+					FAssert(m_aFreePromoTypes[i].ePromotion > -1);
 					if (pXML->TryMoveToXmlFirstChild(L"FreePromotionCondition"))
 					{
 						m_aFreePromoTypes[i].m_pExprFreePromotionCondition = BoolExpr::read(pXML);
@@ -3307,56 +3210,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	m_aTerrainYieldChanges.readPairedArrays(pXML, L"TerrainYieldChanges", L"TerrainType", L"YieldChanges");
 	m_aPlotYieldChanges.readPairedArrays(pXML, L"PlotYieldChanges", L"PlotType", L"Yields");
 
-	CvInfoUtil(this).readXml(pXML);
-
-	return true;
-}
-
-bool CvBuildingInfo::readPass2(CvXMLLoadUtility* pXML)
-{
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-
-	CvString szTextVal;
-
-	m_aGlobalBuildingCommerceChanges.clear();
-	if (pXML->TryMoveToXmlFirstChild(L"GlobalBuildingExtraCommerces"))
-	{
-		const int iNumChildren = pXML->GetXmlChildrenNumber();
-
-		if (0 < iNumChildren)
-		{
-			if (pXML->TryMoveToXmlFirstChild())
-			{
-				for (int j = 0; j < iNumChildren; ++j)
-				{
-					if (pXML->GetChildXmlVal(szTextVal))
-					{
-						BuildingCommerceChange kChange;
-						kChange.eBuilding = (BuildingTypes)pXML->GetInfoClass(szTextVal);
-						pXML->GetNextXmlVal(szTextVal);
-						kChange.eCommerce = (CommerceTypes)pXML->GetInfoClass(szTextVal);
-						pXML->GetNextXmlVal(&kChange.iChange);
-						m_aGlobalBuildingCommerceChanges.push_back(kChange);
-
-						pXML->MoveToXmlParent();
-					}
-
-					if (!pXML->TryMoveToXmlNextSibling())
-					{
-						break;
-					}
-				}
-
-				pXML->MoveToXmlParent();
-			}
-		}
-
-		pXML->MoveToXmlParent();
-	}
-
 	return true;
 }
 
@@ -3457,6 +3310,8 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	CvHotkeyInfo::copyNonDefaults(pClassInfo);
 
+	CvInfoUtil(this).copyNonDefaults(pClassInfo);
+
 	if (getSpecialBuilding() == iTextDefault) m_eSpecialBuilding = pClassInfo->getSpecialBuilding();
 	if (getAdvisorType() == iTextDefault) m_iAdvisorType = pClassInfo->getAdvisorType();
 
@@ -3485,19 +3340,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 
 	if (getNoBonus() == iTextDefault) m_iNoBonus = pClassInfo->getNoBonus();
 	if (getPowerBonus() == iTextDefault) m_iPowerBonus = pClassInfo->getPowerBonus();
-	if (getFreeBonus() == iTextDefault) m_iFreeBonus = pClassInfo->getFreeBonus();
-	if (getNumFreeBonuses() == iDefault) m_iNumFreeBonuses = pClassInfo->getNumFreeBonuses();
-
-	if (m_aExtraFreeBonuses.empty())
-	{
-		int iNum = pClassInfo->getNumExtraFreeBonuses();
-		for (int i = 0; i < iNum; i++)
-		{
-			m_aExtraFreeBonuses.push_back(std::pair<BonusTypes,int>(pClassInfo->getExtraFreeBonus(i),pClassInfo->getExtraFreeBonusNum(i)));
-		}
-	}
-
-	if (getFreePromotion() == iTextDefault) m_iFreePromotion = pClassInfo->getFreePromotion();
 	if (getCivicOption() == iTextDefault) m_iCivicOption = pClassInfo->getCivicOption();
 	if (getGreatPeopleUnitType() == iTextDefault) m_iGreatPeopleUnitType = pClassInfo->getGreatPeopleUnitType();
 	if (getVoteSourceType() == iTextDefault) m_iVoteSourceType = pClassInfo->getVoteSourceType();
@@ -3929,8 +3771,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	if (isPrereqPower() == bDefault) m_bPrereqPower = pClassInfo->isPrereqPower();
 	if (getGlobalPopulationgrowthratepercentage() == iDefault) m_iGlobalPopulationgrowthratepercentage = pClassInfo->getGlobalPopulationgrowthratepercentage();
 	if (getPopulationgrowthratepercentage() == iDefault) m_iPopulationgrowthratepercentage = pClassInfo->getPopulationgrowthratepercentage();
-	if (getFreePromotion_2() == iTextDefault) m_iFreePromotion_2 = pClassInfo->getFreePromotion_2();
-	if (getFreePromotion_3() == iTextDefault) m_iFreePromotion_3 = pClassInfo->getFreePromotion_3();
 	if (getLineOfSight() == iDefault) m_iLineOfSight = pClassInfo->getLineOfSight();
 	if (getInflationModifier() == iDefault) m_iInflationModifier = pClassInfo->getInflationModifier();
 	if (getInvasionChance() == iDefault) m_iInvasionChance = pClassInfo->getInvasionChance();
@@ -4277,7 +4117,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	{
 		m_bDamageAttackerCapable = true;
 	}
-	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aFreePromoTypes, pClassInfo->m_aFreePromoTypes);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aFreePromoTypes, pClassInfo->getFreePromoTypes());
 	GC.copyNonDefaultDelayedResolutionVector(m_aiFreeTraitTypes, pClassInfo->m_aiFreeTraitTypes);
 	GC.copyNonDefaultDelayedResolutionVector(m_aiPrereqInCityBuildings, pClassInfo->m_aiPrereqInCityBuildings);
 	GC.copyNonDefaultDelayedResolutionVector(m_vPrereqNotInCityBuildings, pClassInfo->m_vPrereqNotInCityBuildings);
@@ -4396,12 +4236,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 			m_pabHurry[i] = pClassInfo->isHurry(i);
 		}
 	}
-
-	//if (!m_pExprFreePromotionCondition)
-	//{
-	//	m_pExprFreePromotionCondition = pClassInfo->m_pExprFreePromotionCondition;
-	//	pClassInfo->m_pExprFreePromotionCondition = NULL;
-	//}
 	//TB Combat Mods (Buildings) end
 
 	//Alberts2 PrereqBonuses
@@ -4446,43 +4280,6 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	m_techCommerceModifiers.copyNonDefaults(pClassInfo->getTechCommerceModifiers());
 	m_aTerrainYieldChanges.copyNonDefaults(pClassInfo->getTerrainYieldChanges());
 	m_aPlotYieldChanges.copyNonDefaults(pClassInfo->getPlotYieldChanges());
-
-	CvInfoUtil(this).copyNonDefaults(pClassInfo);
-}
-
-void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
-{
-	int iDefault = 0;
-	bool bNoDuplicate = true;
-
-	for (int j = 0; j < GC.getNumBuildingInfos(); j++)
-	{
-		foreach_(const BuildingCommerceChange& it, m_aGlobalBuildingCommerceChanges)
-		{
-			if (it.eBuilding == (BuildingTypes)j)
-			{
-				//obviously some modder already set this Building to some value
-				//we don't want to overwrite his settings with the older(assuming he added
-				//his tag on purpose)
-				bNoDuplicate = false;
-				break;
-			}
-		}
-		if (bNoDuplicate)
-		{
-			for (int iCommerce = 0; iCommerce < NUM_COMMERCE_TYPES; iCommerce++)
-			{
-				if (pClassInfo->getGlobalBuildingCommerceChange(j, iCommerce) != 0)
-				{
-					BuildingCommerceChange kChange;
-					kChange.eBuilding = (BuildingTypes)j;
-					kChange.eCommerce = (CommerceTypes)iCommerce;
-					kChange.iChange = pClassInfo->getGlobalBuildingCommerceChange(j, iCommerce);
-					m_aGlobalBuildingCommerceChanges.push_back(kChange);
-				}
-			}
-		}
-	}
 }
 
 bool CvBuildingInfo::isNewCityFree(const CvGameObject* pObject) const
@@ -4494,13 +4291,6 @@ const BoolExpr* CvBuildingInfo::getConstructCondition() const
 {
 	return m_pExprConstructCondition;
 }
-
-//TB Building Tags
-//const BoolExpr* CvBuildingInfo::getFreePromotionCondition()
-//{
-//	return m_pExprFreePromotionCondition;
-//}
-
 
 bool CvBuildingInfo::getNotShowInCity() const
 {

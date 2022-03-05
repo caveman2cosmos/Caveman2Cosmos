@@ -50,7 +50,8 @@ struct StackCompare
 };
 DECLARE_FLAGS(StackCompare::flags);
 
-class CvSelectionGroup : bst::noncopyable
+class CvSelectionGroup
+	: private bst::noncopyable
 {
 
 public:
@@ -108,13 +109,16 @@ public:
 	int getCargo(bool bVolume = false) const;
 
 	DllExport bool canAllMove() const;
-	DllExport bool canMoveInto(const CvPlot* pPlot, bool bAttack = false) const;
-	DllExport bool canMoveOrAttackInto(const CvPlot* pPlot, bool bDeclareWar = false) const;
+	DllExport bool canMoveInto(CvPlot* pPlot, bool bAttack = false);
+	DllExport bool canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar = false);
+	bool canEnterPlot(const CvPlot* pPlot, bool bAttack = false) const;
+	bool canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWar = false) const;
+
 	bool canAnyMove(bool bValidate = false) /* not const - Can set ACTIVITY_SLEEP if bValidate is true */;
 	bool hasMoved() const;
 	bool canEnterTerritory(TeamTypes eTeam, bool bIgnoreRightOfPassage = false) const;
 	bool canEnterArea(TeamTypes eTeam, const CvArea* pArea, bool bIgnoreRightOfPassage = false) const;
-	bool canMoveIntoWithWar(const CvPlot* pPlot, bool bAttack) const;
+
 	bool canMoveThrough(const CvPlot* pPlot, bool bDeclareWar = false) const;
 	bool canFight() const;
 	bool canDefend() const;
@@ -162,7 +166,7 @@ public:
 	bool canIgnoreZoneofControl() const;
 
 	bool groupDeclareWar(const CvPlot* pPlot, bool bForce = false);
-	bool groupAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting, bool bStealth = false);
+	bool groupAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting);
 	void groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUnit = NULL, bool bEndMove = false);
 	bool groupPathTo(int iX, int iY, int iFlags);
 	bool groupRoadTo(int iX, int iY, int iFlags);

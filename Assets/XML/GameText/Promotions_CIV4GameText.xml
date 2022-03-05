@@ -543,12 +543,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_EXCILE_ADD</Tag>
-		<English>[ICON_BULLET]Adds a reason for the unit to be considered an Excile.</English>
+		<English>[ICON_BULLET]Adds a reason for the unit to be considered an Exile.</English>
 		<French>[ICON_BULLET]Ajoute la possibilité pour l'unité d'être considérée en exil.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_EXCILE_REMOVE</Tag>
-		<English>[ICON_BULLET]Removes a reason for the unit to be considered an Excile.</English>
+		<English>[ICON_BULLET]Removes a reason for the unit to be considered an Exile.</English>
 		<French>[ICON_BULLET]Enlève la possibilité pour l'unité d'être considérée en exil.</French>
 	</TEXT>
 	<TEXT>
@@ -10801,12 +10801,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MARAUDER_HELP</Tag>
-		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_GOLD] Reserves on Combat Victory</English>
-		<French>[ICON_BULLET]Pille 4% de la réserve d'[ICON_GOLD] en cas de Victoire au Combat</French>
-		<German>[ICON_BULLET]erbeutet 4% des gegnerischen [ICON_GOLD] bei einem Sieg im Kampf</German>
-		<Italian>[ICON_BULLET]Ruba 4% delle riserve nemiche di [ICON_GOLD] quando vince una battaglia</Italian>
-		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_GOLD]</Polish>
-		<Russian>[ICON_BULLET]Êðàäåò 4% [ICON_GOLD] èç çàïàñîâ ïðîòèâíèêà</Russian>
+		<English>[ICON_BULLET]Plunders Enemy [ICON_GOLD] Reserves on Combat Victory. Amount plundered is based on how much [ICON_GOLD] per unit the victim have. The difficulty level of both you and the victim affects the result.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MARCH</Tag>
@@ -15963,5 +15958,17 @@
 		<Tag>TXT_KEY_PROMOTION_ZEN</Tag>
 		<English>Zen</English>
 		<Russian>Äçýí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_TRESPASS</Tag>
+		<English>Trespass Status</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_TRESPASS_OFF</Tag>
+		<English>Remove Trespass</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_TRESPASS_ON</Tag>
+		<English>Trespass</English>
 	</TEXT>
 </Civ4GameText>

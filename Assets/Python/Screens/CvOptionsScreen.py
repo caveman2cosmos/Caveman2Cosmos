@@ -314,7 +314,7 @@ class CvOptionsScreen:
 		tab.attachSpacer("LangHBox")
 
 		aszDropdownElements = ()
-		for i in range(CvGameText().getNumLanguages()):
+		for i in range(CvGameText.getNumLanguages()):
 			szKey = "TXT_KEY_LANGUAGE_%d" % i
 			aszDropdownElements = aszDropdownElements + (localText.getText(szKey, ()),)
 

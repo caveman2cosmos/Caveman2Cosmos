@@ -38,7 +38,6 @@
 			</PrereqInCityBuildings>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLOCKPUNK_AIRPORT</Type>
@@ -97,8 +96,12 @@
 			</MapCategoryTypes>
 			<VicinityBonus>BONUS_SULPHUR</VicinityBonus>
 			<bNukeImmune>1</bNukeImmune>
-			<FreeBonus>BONUS_CLOCKPUNK</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_CLOCKPUNK</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>2280</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAsset>5</iAsset>
@@ -155,7 +158,6 @@
 				<BuildingType>BUILDING_ENGINEERING_SCHOOL</BuildingType>
 			</PrereqInCityBuildings>
 			<iAsset>2</iAsset>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORCHESTRION_THEATER</Type>
@@ -177,7 +179,7 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>770</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iMaintenanceModifier>5</iMaintenanceModifier>
+			<iMaintenanceModifier>2</iMaintenanceModifier>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -199,7 +201,6 @@
 			</PrereqInCityBuildings>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STEPRECKONER_MANUFACTORY</Type>

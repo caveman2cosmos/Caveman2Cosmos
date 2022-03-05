@@ -3,6 +3,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvBonusInfo.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
@@ -337,18 +338,15 @@ AreaAITypes CvTeamAI::AI_calculateAreaAIType(const CvArea* pArea, const bool bPr
 	{
 		if (pArea->getNumCities() - pArea->getCitiesPerPlayer(BARBARIAN_PLAYER) == 0)
 		{
-			return AREAAI_ASSAULT;
+			return AREAAI_ASSAULT; // Toffer - Basically means that it should naval invade
 		}
-		if (
-		(
-			countNumAIUnitsByArea(pArea, UNITAI_ATTACK) +
-			countNumAIUnitsByArea(pArea, UNITAI_ATTACK_CITY) +
-			countNumAIUnitsByArea(pArea, UNITAI_PILLAGE) +
-			countNumAIUnitsByArea(pArea, UNITAI_ATTACK_AIR)
-		)
-		> 1 + AI_countMilitaryWeight(pArea) * 20 / 100)
+		if (  countNumAIUnitsByArea(pArea, UNITAI_ATTACK)
+			+ countNumAIUnitsByArea(pArea, UNITAI_ATTACK_CITY)
+			+ countNumAIUnitsByArea(pArea, UNITAI_PILLAGE)
+			>
+			2 * AI_countMilitaryWeight(pArea))
 		{
-			return AREAAI_OFFENSIVE; // XXX does this ever happen?
+			return AREAAI_OFFENSIVE;
 		}
 		return AREAAI_MASSING;
 	}
@@ -1376,83 +1374,85 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 	{
 		return itr->second;
 	}
-	PROFILE("CvTeamAI::AI_techTradeVal.CacheMiss");
-
-	if (gPlayerLogLevel > 2)
 	{
-		logBBAI(
-			"Calculate trade value for tech %S by team %d for team %d",
-			GC.getTechInfo(eTech).getDescription(), (int)eTeam, getID()
-		);
-		logBBAI("Currently have cached values for:");
-		for( itr = m_tradeTechValueCache.begin(); itr != m_tradeTechValueCache.end(); ++itr)
+		PROFILE("CvTeamAI::AI_techTradeVal.CacheMiss");
+
+		if (gPlayerLogLevel > 2)
 		{
-			int iTech = itr->first/MAX_TEAMS;
-			int iTeam = itr->first%MAX_TEAMS;
-
-			logBBAI("\t%d (%S) for team %d", iTech, GC.getTechInfo((TechTypes)iTech).getDescription(), iTeam);
-		}
-	}
-	std::vector<int> paiBonusClassRevealed(GC.getNumBonusClassInfos(), 0);
-	std::vector<int> paiBonusClassUnrevealed(GC.getNumBonusClassInfos(), 0);
-	std::vector<int> paiBonusClassHave(GC.getNumBonusClassInfos(), 0);
-
-	CvPlayerAI& teamLeader = GET_PLAYER(getLeaderID());
-
-	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
-	{
-		const TechTypes eRevealTech = (TechTypes)GC.getBonusInfo((BonusTypes)iI).getTechReveal();
-		if (eRevealTech != NO_TECH)
-		{
-			const BonusClassTypes eBonusClass = (BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType();
-			if (isHasTech(eRevealTech))
+			logBBAI(
+				"Calculate trade value for tech %S by team %d for team %d",
+				GC.getTechInfo(eTech).getDescription(), (int)eTeam, getID()
+			);
+			logBBAI("Currently have cached values for:");
+			for( itr = m_tradeTechValueCache.begin(); itr != m_tradeTechValueCache.end(); ++itr)
 			{
-				paiBonusClassRevealed[eBonusClass]++;
-			}
-			else paiBonusClassUnrevealed[eBonusClass]++;
+				int iTech = itr->first/MAX_TEAMS;
+				int iTeam = itr->first%MAX_TEAMS;
 
-			if (teamLeader.getNumAvailableBonuses((BonusTypes)iI) > 0
-			||  teamLeader.countOwnedBonuses((BonusTypes)iI) > 0)
-			{
-				paiBonusClassHave[eBonusClass]++;
+				logBBAI("\t%d (%S) for team %d", iTech, GC.getTechInfo((TechTypes)iTech).getDescription(), iTeam);
 			}
 		}
-	}
-	const bool bAsync = (teamLeader.isHuman() || GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHuman());
+		std::vector<int> paiBonusClassRevealed(GC.getNumBonusClassInfos(), 0);
+		std::vector<int> paiBonusClassUnrevealed(GC.getNumBonusClassInfos(), 0);
+		std::vector<int> paiBonusClassHave(GC.getNumBonusClassInfos(), 0);
 
-	const float iOurActualTechValue = (float)teamLeader.AI_TechValueCached(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave, true);
-	const float iAverageTechValue = (float)teamLeader.AI_averageCurrentTechValue(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		CvPlayerAI& teamLeader = GET_PLAYER(getLeaderID());
 
-	// Multiply the base cost by a squashing function of relative goodness of the proposed tech and an average one from what we can currently research
-	const float boost = (iOurActualTechValue - iAverageTechValue) / (iOurActualTechValue + iAverageTechValue);
-	const float sigma = 1.0f / (1.0f + exp(-boost));
-
-	int iCost = std::max(1, getResearchCost(eTech) - getResearchProgress(eTech));
-	iCost = (int)(iCost * (sigma * sigma * 3 + 0.25f));
-
-	int iValue = iCost * 3/2;
-
-	int iKnownCount = 0;
-	int iPossibleKnownCount = 0;
-
-	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-	{
-		if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID() && isHasMet((TeamTypes)iI))
+		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
 		{
-			if (GET_TEAM((TeamTypes)iI).isHasTech(eTech))
+			const TechTypes eRevealTech = (TechTypes)GC.getBonusInfo((BonusTypes)iI).getTechReveal();
+			if (eRevealTech != NO_TECH)
 			{
-				iKnownCount++;
+				const BonusClassTypes eBonusClass = (BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType();
+				if (isHasTech(eRevealTech))
+				{
+					paiBonusClassRevealed[eBonusClass]++;
+				}
+				else paiBonusClassUnrevealed[eBonusClass]++;
+
+				if (teamLeader.getNumAvailableBonuses((BonusTypes)iI) > 0
+				||  teamLeader.countOwnedBonuses((BonusTypes)iI) > 0)
+				{
+					paiBonusClassHave[eBonusClass]++;
+				}
 			}
-			iPossibleKnownCount++;
 		}
+		const bool bAsync = (teamLeader.isHuman() || GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHuman());
+
+		const float iOurActualTechValue = (float)teamLeader.AI_TechValueCached(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave, true);
+		const float iAverageTechValue = (float)teamLeader.AI_averageCurrentTechValue(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+
+		// Multiply the base cost by a squashing function of relative goodness of the proposed tech and an average one from what we can currently research
+		const float boost = (iOurActualTechValue - iAverageTechValue) / (iOurActualTechValue + iAverageTechValue);
+		const float sigma = 1.0f / (1.0f + exp(-boost));
+
+		int iCost = std::max(1, getResearchCost(eTech) - getResearchProgress(eTech));
+		iCost = (int)(iCost * (sigma * sigma * 3 + 0.25f));
+
+		int iValue = iCost * 3/2;
+
+		int iKnownCount = 0;
+		int iPossibleKnownCount = 0;
+
+		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+		{
+			if (GET_TEAM((TeamTypes)iI).isAlive() && iI != getID() && isHasMet((TeamTypes)iI))
+			{
+				if (GET_TEAM((TeamTypes)iI).isHasTech(eTech))
+				{
+					iKnownCount++;
+				}
+				iPossibleKnownCount++;
+			}
+		}
+		iValue += iCost * (iPossibleKnownCount - iKnownCount) / (2*iPossibleKnownCount);
+
+		iValue = getModifiedIntValue(iValue, GC.getTechInfo(eTech).getAITradeModifier());
+
+		m_tradeTechValueCache[iCacheIndex] = iValue;
+
+		return iValue;
 	}
-	iValue += iCost * (iPossibleKnownCount - iKnownCount) / (2*iPossibleKnownCount);
-
-	iValue = getModifiedIntValue(iValue, GC.getTechInfo(eTech).getAITradeModifier());
-
-	m_tradeTechValueCache[iCacheIndex] = iValue;
-
-	return iValue;
 }
 
 

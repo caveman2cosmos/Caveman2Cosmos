@@ -136,11 +136,6 @@ bool CyPlot::isOwned() const
 	return m_pPlot ? m_pPlot->isOwned() : false;
 }
 
-bool CyPlot::isBarbarian() const
-{
-	return m_pPlot ? m_pPlot->isBarbarian() : false;
-}
-
 bool CyPlot::isNPC() const
 {
 	return m_pPlot ? m_pPlot->isNPC() : false;
@@ -412,26 +407,6 @@ void CyPlot::setOwnershipDuration(int iNewValue)
 	if (m_pPlot) m_pPlot->setOwnershipDuration(iNewValue);
 }
 
-void CyPlot::changeOwnershipDuration(int iChange)
-{
-	if (m_pPlot) m_pPlot->changeOwnershipDuration(iChange);
-}
-
-int CyPlot::getImprovementDuration() const
-{
-	return m_pPlot ? m_pPlot->getImprovementDuration() : -1;
-}
-
-void CyPlot::setImprovementDuration(int iNewValue)
-{
-	if (m_pPlot) m_pPlot->setImprovementDuration(iNewValue);
-}
-
-void CyPlot::changeImprovementDuration(int iChange)
-{
-	if (m_pPlot) m_pPlot->changeImprovementDuration(iChange);
-}
-
 int /*BonusTypes*/ CyPlot::getBonusType(int /*TeamTypes*/ eTeam) const
 {
 	return m_pPlot ? m_pPlot->getBonusType((TeamTypes)eTeam) : -1;
@@ -626,6 +601,20 @@ bool CyPlot::isInViewport() const
 CyPlot* CyPlot::cloneToViewport() const
 {
 	return new CyPlot(m_pPlot, true);
+}
+
+python::list CyPlot::adjacent() const
+{
+	python::list list = python::list();
+
+	if (m_pPlot)
+	{
+		foreach_(CvPlot* plot, m_pPlot->adjacent())
+		{
+			list.append(CyPlot(plot));
+		}
+	}
+	return list;
 }
 
 python::list CyPlot::rect(int halfWid, int halfHgt) const

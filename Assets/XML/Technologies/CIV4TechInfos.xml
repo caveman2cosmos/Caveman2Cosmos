@@ -3,16 +3,6 @@
 	Techs are to be sorted by grid position; first x, then y.
 	FLAVOR_MILITARY higher than 3 makes the AI refuse to trade away the tech if it is gearing for war,
 	no tech brokering option limits this refusal only to teams it is specifically planning war against.
-Current techs which are not in this file:-
-	( X, Y ) TECH_Z
-	Modules\Alt_Timelines
-	( 049, 01 ) TECH_CLOCKPUNK
-	( 063, 13 ) TECH_STEAMPUNK
-	( 075, 17 ) TECH_DIESELPUNK
-	( 080, 13 ) TECH_ATOMPUNK
-	( 102, 11 ) TECH_NANOPUNK
-	( 103, 11 ) TECH_BIOPUNK
-	( 113, 07 ) TECH_CYBERPUNK
 -->
 <Civ4TechInfos xmlns="x-schema:../Schema/C2C_CIV4TechnologiesSchema.xml">
 	<TechInfos>
@@ -4743,7 +4733,7 @@ Current techs which are not in this file:-
 			<Civilopedia>TXT_KEY_TECH_MESOPOTAMISM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<bGlobal>1</bGlobal>
-			<iCost>110</iCost>
+			<iCost>126</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<OrPreReqs>
 				<PrereqTech>TECH_POLYTHEISM</PrereqTech>
@@ -5152,7 +5142,7 @@ Current techs which are not in this file:-
 			<Description>TXT_KEY_TECH_KEMETISM</Description>
 			<Civilopedia>TXT_KEY_TECH_KEMETISM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<iCost>309</iCost>
+			<iCost>144</iCost>
 			<bGlobal>1</bGlobal>
 			<Era>C2C_ERA_ANCIENT</Era>
 			<iAsset>8</iAsset>
@@ -11639,7 +11629,52 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_COAL_MINING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/coalmining.dds</Button>
 		</TechInfo>
-		<!-- (049, 01) TECH_CLOCKPUNK -->
+		<TechInfo>
+			<Type>TECH_CLOCKPUNK</Type>
+			<Description>TXT_KEY_TECH_CLOCKPUNK</Description>
+			<Civilopedia>TXT_KEY_TECH_CLOCKPUNK_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<iCost>1960</iCost>
+			<Era>C2C_ERA_MEDIEVAL</Era>
+			<iAsset>24</iAsset>
+			<iPower>8</iPower>
+			<bTrade>1</bTrade>
+			<iGridX>49</iGridX>
+			<iGridY>1</iGridY>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>6</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+			</Flavors>
+			<OrPreReqs>
+				<PrereqTech>TECH_CHIVALRY</PrereqTech>
+			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_OPTICS</PrereqTech>
+				<PrereqTech>TECH_CLOCKWORKS</PrereqTech>
+			</AndPreReqs>
+			<Quote>TXT_KEY_TECH_CLOCKPUNK_QUOTE</Quote>
+			<Sound>AS2D_TECH_CLOCKPUNK</Sound>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Button>Art/Interface/Buttons/TechTree/clockpunk.dds</Button>
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_TOURNAMENTS</Type>
 			<Description>TXT_KEY_TECH_TOURNAMENTS</Description>
@@ -14698,7 +14733,50 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_FOOD_PRESERVATION</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Foodp.dds</Button>
 		</TechInfo>
-		<!-- (063, 13) TECH_STEAMPUNK -->
+		<TechInfo>
+			<Type>TECH_STEAMPUNK</Type>
+			<Description>TXT_KEY_TECH_STEAMPUNK</Description>
+			<Civilopedia>TXT_KEY_TECH_STEAMPUNK_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<iCost>5460</iCost>
+			<Era>C2C_ERA_INDUSTRIAL</Era>
+			<iGridX>63</iGridX>
+			<iGridY>13</iGridY>
+			<bTrade>1</bTrade>
+			<iAsset>40</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>8</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>8</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>8</iFlavor>
+				</Flavor>
+			</Flavors>
+			<OrPreReqs>
+				<PrereqTech>TECH_STEAM_POWER</PrereqTech>
+			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
+			</AndPreReqs>
+			<Quote>TXT_KEY_TECH_STEAMPUNK_QUOTE</Quote>
+			<Sound>AS2D_TECH_STEAMPUNK</Sound>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Button>Art/Interface/Buttons/TechTree/steampunk.dds</Button>
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_SCREW_PROPELLER</Type>
 			<Description>TXT_KEY_TECH_SCREW_PROPELLER</Description>
@@ -18089,7 +18167,52 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_ELECTRONICS</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/electronics.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,3,6</Button>
 		</TechInfo>
-		<!-- (075, 17) TECH_DIESELPUNK -->
+		<TechInfo>
+			<Type>TECH_DIESELPUNK</Type>
+			<Description>TXT_KEY_TECH_DIESELPUNK</Description>
+			<Civilopedia>TXT_KEY_TECH_DIESELPUNK_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<Quote>TXT_KEY_TECH_DIESELPUNK_QUOTE</Quote>
+			<Sound>AS2D_TECH_DIESELPUNK</Sound>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Button>Art/Interface/Buttons/TechTree/dieselpunk.dds</Button>
+			<iCost>10744</iCost>
+			<Era>C2C_ERA_ATOMIC</Era>
+			<OrPreReqs>
+				<PrereqTech>TECH_SUBMARINE_WARFARE</PrereqTech>
+			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_ARMORED_VEHICLES</PrereqTech>
+			</AndPreReqs>
+			<iAsset>40</iAsset>
+			<iPower>6</iPower>
+			<iGridX>75</iGridX>
+			<iGridY>17</iGridY>
+			<bTrade>1</bTrade>
+			<iAITradeModifier>10</iAITradeModifier>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>9</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>7</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+			</Flavors>
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_AMPHIBIOUS_WARFARE</Type>
 			<Description>TXT_KEY_TECH_AMPHIBIOUS_WARFARE</Description>
@@ -19541,7 +19664,45 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_ADVANCED_ROCKETRY</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Advanced_Rocketry.dds,Art/Interface/Buttons/RoM_Techtree_Atlas2.dds,8,3</Button>
 		</TechInfo>
-		<!-- (080, 13) TECH_ATOMPUNK -->
+		<TechInfo>
+			<Type>TECH_ATOMPUNK</Type>
+			<Description>TXT_KEY_TECH_ATOMPUNK</Description>
+			<Civilopedia>TXT_KEY_TECH_ATOMPUNK_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<Quote>TXT_KEY_TECH_ATOMPUNK_QUOTE</Quote>
+			<Sound>AS2D_TECH_ATOMPUNK</Sound>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Button>Art/Interface/Buttons/TechTree/retrospace.dds</Button>
+			<iCost>13181</iCost>
+			<Era>C2C_ERA_ATOMIC</Era>
+			<OrPreReqs>
+				<PrereqTech>TECH_NUCLEAR_POWER</PrereqTech>
+			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_ROCKETRY</PrereqTech>
+				<PrereqTech>TECH_POP_ART</PrereqTech>
+			</AndPreReqs>
+			<iAsset>48</iAsset>
+			<iPower>10</iPower>
+			<iGridX>80</iGridX>
+			<iGridY>13</iGridY>
+			<bTrade>1</bTrade>
+			<iAITradeModifier>10</iAITradeModifier>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>8</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>6</iFlavor>
+				</Flavor>
+			</Flavors>
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_DEEP_SEA_EXPLORATION</Type>
 			<Description>TXT_KEY_TECH_DEEP_SEA_EXPLORATION</Description>
@@ -24960,7 +25121,52 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_AUGMENTED_CONSUMABLES</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/augmentconsumables.dds</Button>
 		</TechInfo>
-		<!-- (102, 11) TECH_NANOPUNK -->
+		<TechInfo>
+			<Type>TECH_NANOPUNK</Type>
+			<Description>TXT_KEY_TECH_NANOPUNK</Description>
+			<Civilopedia>TXT_KEY_TECH_NANOPUNK_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<Quote>TXT_KEY_TECH_NANOPUNK_QUOTE</Quote>
+			<Sound>AS2D_TECH_NANOPUNK</Sound>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Button>Art/Interface/Buttons/TechTree/nanopunk.dds</Button>
+			<iCost>38858</iCost>
+			<Era>C2C_ERA_NANOTECH</Era>
+			<OrPreReqs>
+				<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
+			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_MASS_SURVEILLANCE</PrereqTech>
+				<PrereqTech>TECH_HYPERSONIC_FLIGHT</PrereqTech>
+			</AndPreReqs>
+			<iAsset>48</iAsset>
+			<iPower>4</iPower>
+			<iGridX>102</iGridX>
+			<iGridY>11</iGridY>
+			<bTrade>1</bTrade>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_ACOUSTIC_WEAPONRY</Type>
 			<Description>TXT_KEY_TECH_ACOUSTIC_WEAPONRY</Description>
@@ -25330,7 +25536,40 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_PLASTIC_ELECTRONICS</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/wearable_computer.dds</Button>
 		</TechInfo>
-		<!-- (103, 11) TECH_BIOPUNK -->
+		<TechInfo>
+			<Type>TECH_BIOPUNK</Type>
+			<Description>TXT_KEY_TECH_BIOPUNK</Description>
+			<Civilopedia>TXT_KEY_TECH_BIOPUNK_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<Quote>TXT_KEY_TECH_BIOPUNK_QUOTE</Quote>
+			<Sound>AS2D_TECH_BIOPUNK</Sound>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Button>Art/Interface/Buttons/TechTree/biopunk.dds</Button>
+			<iCost>40165</iCost>
+			<Era>C2C_ERA_NANOTECH</Era>
+			<OrPreReqs>
+				<PrereqTech>TECH_AUGMENTED_CONSUMABLES</PrereqTech>
+			</OrPreReqs>
+			<AndPreReqs>
+				<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>
+			</AndPreReqs>
+			<iAsset>48</iAsset>
+			<iPower>6</iPower>
+			<iGridX>103</iGridX>
+			<iGridY>11</iGridY>
+			<bTrade>1</bTrade>
+			<iAITradeModifier>10</iAITradeModifier>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>8</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_INTERNAL_SHOCKWAVE_ENGINE</Type>
 			<Description>TXT_KEY_TECH_INTERNAL_SHOCKWAVE_ENGINE</Description>
@@ -28313,7 +28552,37 @@ Current techs which are not in this file:-
 			<SoundMP>AS2D_TECH_SYNERGETICS</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/synergetics.dds</Button>
 		</TechInfo>
-		<!-- (113, 07) TECH_CYBERPUNK -->
+		<TechInfo>
+			<Type>TECH_CYBERPUNK</Type>
+			<Description>TXT_KEY_TECH_CYBERPUNK</Description>
+			<Civilopedia>TXT_KEY_TECH_CYBERPUNK_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<Quote>TXT_KEY_TECH_CYBERPUNK_QUOTE</Quote>
+			<Sound>AS2D_TECH_CYBERPUNK2</Sound>
+			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
+			<Button>Art/Interface/Buttons/TechTree/cyberpunk.dds</Button>
+			<iCost>67710</iCost>
+			<Era>C2C_ERA_TRANSHUMAN</Era>
+			<OrPreReqs>
+				<PrereqTech>TECH_SIMULATED_REALITY</PrereqTech>
+			</OrPreReqs>
+			<iAsset>50</iAsset>
+			<iPower>10</iPower>
+			<iGridX>113</iGridX>
+			<iGridY>7</iGridY>
+			<bTrade>1</bTrade>
+			<iAITradeModifier>10</iAITradeModifier>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>8</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_SMART_DUST</Type>
 			<Description>TXT_KEY_TECH_SMART_DUST</Description>

@@ -8,13 +8,11 @@
 #include "CvMap.h"
 #include "CvGlobals.h"
 
-class CvInfoBase;
 class CvCity;
-//class CvMap;
 class CvPathGeneratorBase;
+class CvRandom;
 class CvSelectionGroup;
 class CvUnit;
-class CvRandom;
 class FAStarNode;
 class FAStar;
 
@@ -198,7 +196,6 @@ CvPlot* plotCity(int iX, int iY, int iIndex);
 int plotCityXY(int iDX, int iDY);
 int plotCityXY(const CvCity* pCity, const CvPlot* pPlot);
 
-CardinalDirectionTypes getOppositeCardinalDirection(CardinalDirectionTypes eDir);
 DirectionTypes cardinalDirectionToDirection(CardinalDirectionTypes eCard);
 DllExport bool isCardinalDirection(DirectionTypes eDirection);
 DirectionTypes estimateDirection(int iDX, int iDY);
@@ -365,6 +362,7 @@ bool isPickableName(const char* szName);
 
 DllExport int* shuffle(int iNum, CvRandom& rand);
 void shuffleArray(int* piShuffle, int iNum, CvRandom& rand);
+void shuffle(int* piShuffle, int iNum, CvRandom& rand);
 
 int getTurnMonthForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);
 int getTurnYearForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);

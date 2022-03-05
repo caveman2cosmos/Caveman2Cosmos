@@ -8,13 +8,9 @@
 #
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
-#from CvMapGeneratorUtil import FractalWorld
-from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
-#from CvMapGeneratorUtil import BonusBalancer
+import CvMapGeneratorUtil as MGU
 
-#balancer = BonusBalancer()
+balancer = MGU.BonusBalancer()
 
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_CUSTOM_CONTINENTS_DESCR"
@@ -97,18 +93,16 @@ def getWrapY():
 	return (map.getCustomMapOption(1) == 2)
 
 def normalizeAddExtras():
-	if (CyMap().getCustomMapOption(2) == 1):
+	if CyMap().getCustomMapOption(2) == 1:
 		balancer.normalizeAddExtras()
 	CyPythonMgr().allowDefaultImpl()	# do the rest of the usual normalizeStartingPlots stuff, don't overrride
 
 def addBonusType(argsList):
 	[iBonusType] = argsList
-	gc = CyGlobalContext()
-	type_string = gc.getBonusInfo(iBonusType).getType()
+	type_string = CyGlobalContext().getBonusInfo(iBonusType).getType()
 
-	if (CyMap().getCustomMapOption(2) == 1):
-		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
-			return None # don't place any of this bonus randomly
+	if CyMap().getCustomMapOption(2) == 1 and type_string in balancer.resourcesToBalance:
+		return None # don't place any of this bonus randomly
 
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
@@ -810,7 +804,7 @@ def beforeGeneration():
 	cont_data = templates[(iNumConts, templateID)]
 	#print cont_data
 
-class CCMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
+class CCMultilayeredFractal(MGU.MultilayeredFractal):
 	def generatePlotsByRegion(self):
 		# Sirian's MultilayeredFractal class, controlling function.
 		# You -MUST- customize this function for each use of the class.
@@ -965,13 +959,13 @@ def generatePlotTypes():
 
 def generateTerrainTypes():
 	NiTextOut("Generating Terrain (Python Custom Continents) ...")
-	terraingen = TerrainGenerator()
+	terraingen = MGU.TerrainGenerator()
 	terrainTypes = terraingen.generateTerrain()
 	return terrainTypes
 
 def addFeatures():
 	NiTextOut("Adding Features (Python Custom Continents) ...")
-	featuregen = FeatureGenerator()
+	featuregen = MGU.FeatureGenerator()
 	featuregen.addFeatures()
 	return 0
 
@@ -1056,7 +1050,7 @@ def findStartingPlot(argsList):
 			return true
 		return false
 
-	return CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
+	return MGU.findStartingPlot(playerID, isValid)
 
 def normalizeStartingPlotLocations():
 	# Unless "One Per Team", use default.
@@ -1064,8 +1058,6 @@ def normalizeStartingPlotLocations():
 	numTeams = CyGlobalContext().getGame().countCivTeamsAlive()
 	if userInputContinents != 1 or numTeams > 6:
 		CyPythonMgr().allowDefaultImpl()
-		return
-	return None
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses()
+	MGU.placeC2CBonuses()

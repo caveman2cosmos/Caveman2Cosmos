@@ -10,7 +10,8 @@
 
 class CvArea;
 
-class CvTeam : bst::noncopyable
+class CvTeam
+	: private bst::noncopyable
 {
 public:
 	CvTeam();
@@ -73,7 +74,7 @@ public:
 	int getAnyWarPlanCount(bool bIgnoreMinors) const;
 	int getChosenWarCount(bool bIgnoreMinors) const;
 	int getHasMetCivCount(bool bIgnoreMinors) const;
-	bool hasMetAnyCiv(bool bIgnoreMinors) const;
+	bool hasMetAnyCiv(bool bIgnoreMinors = true) const;
 	int getDefensivePactCount(TeamTypes eTeam = NO_TEAM) const;
 	int getVassalCount(TeamTypes eTeam = NO_TEAM) const;
 	bool isAVassal() const;
@@ -109,7 +110,6 @@ public:
 	bool isBonusObsolete(BonusTypes eBonus) const;
 
 	bool isHuman(const bool bCountDisabledHuman = false) const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isMinorCiv() const;

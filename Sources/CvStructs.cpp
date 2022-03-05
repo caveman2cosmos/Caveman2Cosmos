@@ -16,6 +16,8 @@
 #include "CvGlobals.h"
 #include "CvMap.h"
 #include "CvPlot.h"
+#include "CvOutcomeMission.h"
+#include "CvInfos.h"
 
 XYCoords::XYCoords(int x, int y)
 	: iX(x)
@@ -154,13 +156,13 @@ void VoteSelectionData::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "VoteSelectionData", iId);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "VoteSelectionData", REMAPPED_CLASS_TYPE_VOTE_SOURCES, eVoteSource);
 	WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", aVoteOptions.size(),"aVoteOption.size");
-	for (std::vector<VoteSelectionSubData>::iterator it = aVoteOptions.begin(); it != aVoteOptions.end(); ++it)
+	foreach_(const VoteSelectionSubData& data, aVoteOptions)
 	{
-		WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "VoteSelectionData", REMAPPED_CLASS_TYPE_VOTES, (*it).eVote, "voteOption.eVote");
-		WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", (*it).ePlayer, "voteOption.ePlayer");
-		WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", (*it).iCityId, "voteOption.iCityId");
-		WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", (*it).eOtherPlayer, "voteOption.eOtherPlayer");
-		WRAPPER_WRITE_STRING_DECORATED(wrapper, "VoteSelectionData", (*it).szText, "voteOption.szText");
+		WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "VoteSelectionData", REMAPPED_CLASS_TYPE_VOTES, data.eVote, "voteOption.eVote");
+		WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", data.ePlayer, "voteOption.ePlayer");
+		WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", data.iCityId, "voteOption.iCityId");
+		WRAPPER_WRITE_DECORATED(wrapper, "VoteSelectionData", data.eOtherPlayer, "voteOption.eOtherPlayer");
+		WRAPPER_WRITE_STRING_DECORATED(wrapper, "VoteSelectionData", data.szText, "voteOption.szText");
 	}
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
@@ -627,13 +629,13 @@ void CvBattleDefinition::clearBattleRounds()
 
 CvBattleRound &CvBattleDefinition::getBattleRound(int index)
 {
-	FASSERT_BOUNDS(0, m_aBattleRounds.size(), index);
+	FASSERT_BOUNDS(0, (int)m_aBattleRounds.size(), index);
 	return m_aBattleRounds[index];
 }
 
 const CvBattleRound &CvBattleDefinition::getBattleRound(int index) const
 {
-	FASSERT_BOUNDS(0, m_aBattleRounds.size(), index);
+	FASSERT_BOUNDS(0, (int)m_aBattleRounds.size(), index);
 	return m_aBattleRounds[index];
 }
 
@@ -711,7 +713,7 @@ PBGameSetupData::PBGameSetupData()
 	, iNumVictories(0)
 	, abVictories(NULL)
 {
-	for (int i = 0; i < NUM_GAMEOPTION_TYPES; i++)
+	for (int i = 0; i < GC.getNumGameOptionInfos(); i++)
 	{
 		abOptions.push_back(false);
 	}

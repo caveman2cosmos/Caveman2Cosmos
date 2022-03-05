@@ -7480,5 +7480,20 @@
 			<ReligionType>RELIGION_BAHAI</ReligionType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/religion_bahai.dds</Button>
 		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_PACIFIST</Type>
+			<Description>TXT_KEY_UNITCOMBAT_PACIFIST</Description>
+			<bCannotMergeSplit>1</bCannotMergeSplit>
+			<Button>Art/Interface/Buttons/Units/Categories/Pacifist.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_EXILE</Type>
+			<Description>TXT_KEY_UNIT_EXILE</Description>
+			<iExcileChange>1</iExcileChange>
+			<iBarbCoExistChange>1</iBarbCoExistChange>
+			<bIgnoreZoneofControlAdd>1</bIgnoreZoneofControlAdd>
+			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>
+			<Button>Art/Interface/Buttons/Units/Categories/Exile.dds</Button>
+		</UnitCombatInfo>
 	</UnitCombatInfos>
 </Civ4UnitCombatInfos>

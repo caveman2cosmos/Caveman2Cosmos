@@ -138,7 +138,7 @@ class RevolutionInit:
 		revComponentsText = (
 			"<color=250,170,0,255><font=4b>Caveman2Cosmos<font=2b><color=255,255,0>\n"
 			+ TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_INIT_POPUP",())
-			+ sectionFormat + TRNSLTR.getText("TXT_KEY_OPTIONS_GAME",())
+			+ sectionFormat + TRNSLTR.getText("TXT_KEY_OPTIONS_GAME_REV",())
 		)
 		temp = ""
 		for iI in range(GC.getNumGameOptionInfos()):
@@ -191,9 +191,6 @@ class RevolutionInit:
 
 		# DCM
 		revComponentsText += sectionFormat + TRNSLTR.getText("TXT_KEY_OPTIONS_DCM",())
-
-		if RevDCMOpt.isDCM_ATTACK_SUPPORT():
-			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__DCM_ATTACK_SUPPORT_TEXT",())
 
 		if RevDCMOpt.isDCM_RANGE_BOMBARD():
 			temp += szNewLineTab + TRNSLTR.getText("TXT_KEY_BUG_OPT_REVDCM__DCM_RANGE_BOMBARD_TEXT",())

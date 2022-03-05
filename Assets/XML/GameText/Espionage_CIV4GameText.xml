@@ -85,26 +85,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_CULTURE</Tag>
 		<English>Espionage</English>
-		<French>
-			<Text>Espionnage</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Spionage</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Spionaggio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Espionaje</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Espionnage</French>
+		<German>Spionage</German>
+		<Italian>Spionaggio</Italian>
+		<Spanish>Espionaje</Spanish>
 	</TEXT>
 		<TEXT>
 		<Tag>TXT_KEY_ESPIONAGE_DESTROY_BUILDING</Tag>

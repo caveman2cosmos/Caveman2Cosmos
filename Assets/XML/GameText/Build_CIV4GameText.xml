@@ -220,6 +220,10 @@
 		<Russian>Ïîñòðîéêà [LINK=IMPROVEMENT_COTTAGE]äîìà[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_COTTAGE_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK] (Consumed)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_DESERT_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK]</French>
@@ -303,16 +307,6 @@
 		<German>[LINK=IMPROVEMENT_FISHING_BOATS]Fischerboote[\LINK] bauen</German>
 		<Italian>Construire dei [LINK=IMPROVEMENT_FISHING_BOATS]pescherecci[\LINK]</Italian>
 		<Spanish>Crear [LINK=IMPROVEMENT_FISHING_BOATS]barcos pesqueros[\LINK]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_FISHING_CAMP</Tag>
-		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK]</English>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FISHING_CAMP]Ðûáàöêèé ëàãåðü[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_FISHING_CAMP_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK] (Consumed)</English>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FISHING_CAMP]Ðûáàöêèé ëàãåðü[\LINK] (Ñîáèðàòåëü)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FOREST_PRESERVE</Tag>
@@ -855,18 +849,6 @@
 		<German>[LINK=FEATURE_FALLOUT]Fallout-Entfernung[\LINK]</German>
 		<Italian>Bonificare le [LINK=FEATURE_FALLOUT]scorie radioattive[\LINK]</Italian>
 		<Spanish>Descontaminar [LINK=FEATURE_FALLOUT]lluvia radiactiva[\LINK]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP</Tag>
-		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK]</English>
-		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen[\LINK] </German>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEASONAL_CAMP]Ñåçîííûé ëàãåðü[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK] (Consumed)</English>
-		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen (Verschleiß)[\LINK]</German>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEASONAL_CAMP]Ñåçîííûé ëàãåðü[\LINK] (Ñîáèðàòåëü)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEA_MILL</Tag>

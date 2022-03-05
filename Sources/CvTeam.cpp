@@ -3,6 +3,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvBonusInfo.h"
 #include "CvCity.h"
 #include "CvDeal.h"
 #include "CvDiploParameters.h"
@@ -1231,7 +1232,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan)
 				kLoopDeal.kill();
 			}
 		}
-		const bool bInFull = (!teamFoe.isNPC() || teamFoe.isBarbarian()) && (!isNPC() || isBarbarian());
+		const bool bInFull = (!teamFoe.isNPC() || teamFoe.isHominid()) && (!isNPC() || isHominid());
 
 		if (bInFull)
 		{
@@ -2708,11 +2709,6 @@ bool CvTeam::isHuman(const bool bCountDisabledHuman) const
 		}
 	}
 	return false;
-}
-
-bool CvTeam::isBarbarian() const
-{
-	return getID() == BARBARIAN_TEAM;
 }
 
 bool CvTeam::isNPC() const
@@ -6292,11 +6288,7 @@ void CvTeam::verifySpyUnitsValidPlot()
 			}
 		}
 	}
-
-	for (uint32_t i = 0; i < aUnits.size(); i++)
-	{
-		aUnits[i]->jumpToNearestValidPlot();
-	}
+	algo::for_each(aUnits, bind(&CvUnit::jumpToNearestValidPlot, _1, true));
 }
 
 
@@ -6326,13 +6318,11 @@ void CvTeam::setForceRevealedBonus(BonusTypes eBonus, bool bRevealed)
 	}
 	else
 	{
-		std::vector<BonusTypes>::iterator it;
-
-		for (it = m_aeRevealedBonuses.begin(); it != m_aeRevealedBonuses.end(); ++it)
+		foreach_(BonusTypes& eRevealedBonus, m_aeRevealedBonuses)
 		{
-			if (*it == eBonus)
+			if (eRevealedBonus == eBonus)
 			{
-				m_aeRevealedBonuses.erase(it);
+				m_aeRevealedBonuses.erase(&eRevealedBonus);
 				break;
 			}
 		}
@@ -6762,9 +6752,9 @@ void CvTeam::write(FDataStreamBase* pStream)
 	}
 
 	WRAPPER_WRITE_DECORATED(wrapper, "CvTeam", m_aeRevealedBonuses.size(), "iSize" );
-	for (std::vector<BonusTypes>::iterator it = m_aeRevealedBonuses.begin(); it != m_aeRevealedBonuses.end(); ++it)
+	foreach_(const BonusTypes eBonus, m_aeRevealedBonuses)
 	{
-		WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BONUSES, *it, "eBonus");
+		WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BONUSES, eBonus, "eBonus");
 	}
 
 	WRAPPER_WRITE(wrapper, "CvTeam", m_iCanPassPeaksCount);

@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
 #include "CvImprovementInfo.h"
+#include "CvBonusInfo.h"
 #include "CvInfos.h"
 #include "CvRandom.h"
 #include "CyGame.h"
@@ -37,6 +38,9 @@ void CyGlobalContextPythonInterface1(python::class_<CyGlobalContext>& x)
 
 		.def("getNumBonusInfos", &CyGlobalContext::getNumBonusInfos, "() - Total Bonus Infos XML\\Terrain\\CIV4BonusInfos.xml")
 		.def("getBonusInfo", &CyGlobalContext::getBonusInfo, python::return_value_policy<python::reference_existing_object>(), "(BonusID) - CvInfo for BonusID")
+
+		.def("getNumMapBonuses", &CyGlobalContext::getNumMapBonuses, "() - Total map Bonuses")
+		.def("getMapBonus", &CyGlobalContext::getMapBonus, "(mapBonusIndex) - BonusType for mapBonusIndex")
 
 		.def("getNumFeatureInfos", &CyGlobalContext::getNumFeatureInfos, "() - Total Feature Infos XML\\Terrain\\CIV4FeatureInfos.xml")
 		.def("getFeatureInfo", &CyGlobalContext::getFeatureInfo, python::return_value_policy<python::reference_existing_object>(), "(FeatureID) - CvInfo for FeatureID")

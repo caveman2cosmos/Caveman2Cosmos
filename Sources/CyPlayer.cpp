@@ -159,11 +159,6 @@ bool CyPlayer::isHumanDisabled() const
 	return m_pPlayer->isHumanDisabled();
 }
 
-bool CyPlayer::isBarbarian() const
-{
-	return m_pPlayer->isBarbarian();
-}
-
 bool CyPlayer::isNPC() const
 {
 	return m_pPlayer->isNPC();
@@ -402,11 +397,6 @@ int CyPlayer::getBuildingProductionNeeded(int /*BuildingTypes*/ iIndex) const
 int CyPlayer::getProjectProductionNeeded(int /*ProjectTypes*/ iIndex) const
 {
 	return m_pPlayer->getProductionNeeded((ProjectTypes)iIndex);
-}
-
-bool CyPlayer::canBuild(const CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra, bool bTestVisible) const
-{
-	return m_pPlayer->canBuild(pPlot->getPlot(), (BuildTypes)eBuild, bTestEra, bTestVisible);
 }
 
 int /*RouteTypes*/ CyPlayer::getBestRoute(const CyPlot* pPlot) const
@@ -829,6 +819,11 @@ bool CyPlayer::isNonStateReligionCommerce() const
 int CyPlayer::getRevIdxNational() const
 {
 	return m_pPlayer->getRevIdxNational();
+}
+
+int CyPlayer::getRevIdxDistanceModifier() const
+{
+	return m_pPlayer->getRevIdxDistanceModifier();
 }
 
 bool CyPlayer::canFoundReligion() const
@@ -1747,16 +1742,6 @@ void CyPlayer::setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue)
 int64_t CyPlayer::getCulture() const
 {
 	return m_pPlayer->getCulture();
-}
-
-void CyPlayer::setCulture(int64_t iNewValue)
-{
-	m_pPlayer->setCulture(iNewValue);
-}
-
-void CyPlayer::changeCulture(int64_t iAddValue)
-{
-	m_pPlayer->changeCulture(iAddValue);
 }
 
 CvProperties* CyPlayer::getProperties() const

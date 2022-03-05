@@ -37,10 +37,9 @@ CvReplayInfo::CvReplayInfo()
 
 CvReplayInfo::~CvReplayInfo()
 {
-	//ReplayMessageList::const_iterator it;
-	for (uint i = 0; i < m_listReplayMessages.size(); i++)
+	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
-		SAFE_DELETE(m_listReplayMessages[i]);
+		SAFE_DELETE(pMessage);
 	}
 	SAFE_DELETE(m_pcMinimapPixels);
 }
@@ -75,7 +74,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 		m_eGameSpeed = game.getGameSpeedType();
 
 		m_listGameOptions.clear();
-		for (int i = 0; i < NUM_GAMEOPTION_TYPES; i++)
+		for (int i = 0; i < GC.getNumGameOptionInfos(); i++)
 		{
 			const GameOptionTypes eOption = (GameOptionTypes)i;
 			if (game.isOption(eOption))
@@ -87,7 +86,7 @@ void CvReplayInfo::createInfo(PlayerTypes ePlayer)
 		m_listVictoryTypes.clear();
 		for (int i = 0; i < GC.getNumVictoryInfos(); i++)
 		{
-			VictoryTypes eVictory = (VictoryTypes)i;
+			const VictoryTypes eVictory = (VictoryTypes)i;
 			if (game.isVictoryValid(eVictory))
 			{
 				m_listVictoryTypes.push_back(eVictory);
@@ -335,10 +334,7 @@ void CvReplayInfo::clearReplayMessageMap()
 {
 	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
-		if (NULL != pMessage)
-		{
-			delete pMessage;
-		}
+		SAFE_DELETE(pMessage);
 	}
 	m_listReplayMessages.clear();
 }
@@ -707,12 +703,11 @@ void CvReplayInfo::write(FDataStreamBase& stream)
 	}
 	stream.Write((int)m_eVictoryType);
 	stream.Write((int)m_listReplayMessages.size());
-	//ReplayMessageList::const_iterator it;
-	for (uint i = 0; i < m_listReplayMessages.size(); i++)
+	foreach_(const CvReplayMessage* pMessage, m_listReplayMessages)
 	{
-		if (NULL != m_listReplayMessages[i])
+		if (pMessage != NULL)
 		{
-			m_listReplayMessages[i]->write(stream);
+			pMessage->write(stream);
 		}
 	}
 	stream.Write(m_iInitialTurn);

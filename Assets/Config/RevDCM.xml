@@ -37,11 +37,6 @@
 				<change module="RevDCM" function="changedDCM_FIGHTER_ENGAGE"/>
 			</option>
 		</section>
-		<section id="RevDCM_battle">
-			<option id="DCM_ATTACK_SUPPORT" key="DCM_ATTACK_SUPPORT" type="boolean" default="False" get="isDCM_ATTACK_SUPPORT" set="setDCM_ATTACK_SUPPORT">
-				<change module="RevDCM" function="changedDCM_ATTACK_SUPPORT"/>
-			</option>
-		</section>
 		<section id="RevDCMIDW">
 			<option id="IDW_ENABLED" key="IDW_ENABLED" type="boolean" default="True" get="isIDW_ENABLED" set="setIDW_ENABLED">
 				<change module="RevDCM" function="changedIDW_ENABLED"/>

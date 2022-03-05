@@ -28,7 +28,8 @@ class CvUnitCombatInfo;
 
 typedef std::vector<const CvReplayMessage*> ReplayMessageList;
 
-class CvGame : bst::noncopyable
+class CvGame
+	: private bst::noncopyable
 {
 public:
 
@@ -96,6 +97,7 @@ public:
 
 	DllExport void cycleCities(bool bForward = true, bool bAdd = false) const;
 	void cycleSelectionGroups(bool bClear, bool bForward = true, bool bWorkers = false) const;
+	bool nextPlotUnit(const CvPlot* pPlot, bool bForward = true, bool bAuto = false, int iCount = -1) const;
 	DllExport bool cyclePlotUnits(const CvPlot* pPlot, bool bForward = true, bool bAuto = false, int iCount = -1) const;
 	DllExport bool selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift) const;
 
@@ -151,7 +153,6 @@ public:
 	int countTotalCivPower() const;
 	int countTotalNukeUnits() const;
 	int countKnownTechNumTeams(TechTypes eTech) const;
-	int getNumFreeBonuses(BuildingTypes eBuilding) const;
 
 	int countReligionLevels(ReligionTypes eReligion) const;
 	int calculateReligionPercent(ReligionTypes eReligion) const;
@@ -618,8 +619,6 @@ public:
 	DllExport void setReplayInfo(CvReplayInfo* pReplay);
 	void saveReplay(PlayerTypes ePlayer);
 
-	bool hasSkippedSaveChecksum() const;
-
 	void logNetMsgData(char* format, ...);
 
 	void addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive = true);
@@ -628,10 +627,6 @@ public:
 	bool testVictory(VictoryTypes eVictory, TeamTypes eTeam, bool* pbEndScore = NULL); //removed const
 
 	bool isCompetingCorporation(CorporationTypes eCorporation1, CorporationTypes eCorporation2) const;
-
-	int getShrineBuildingCount(ReligionTypes eReligion = NO_RELIGION);
-	BuildingTypes getShrineBuilding(int eIndex, ReligionTypes eReligion = NO_RELIGION);
-	void changeShrineBuilding(BuildingTypes eBuilding, ReligionTypes eReligion, bool bRemove = false);
 
 	bool culturalVictoryValid() const;
 	int culturalVictoryNumCultureCities() const;
@@ -825,11 +820,6 @@ protected:
 	stdext::hash_map<VoteSourceTypes, ReligionTypes> m_mapVoteSourceReligions;
 	std::vector<EventTriggerTypes> m_aeInactiveTriggers;
 
-	// CACHE: cache frequently used values
-	int		m_iShrineBuildingCount;
-	int*	m_aiShrineBuilding;
-	int*	m_aiShrineReligion;
-
 	int		m_iNumCultureVictoryCities;
 	int		m_eCultureVictoryCultureLevel;
 
@@ -902,6 +892,8 @@ public:
 	bool isValidByGameOption(const CvUnitCombatInfo& info) const;
 
 	void enforceOptionCompatibility(GameOptionTypes eOption);
+
+	bool isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner) const;
 };
 
 #define CURRENT_MAP GC.getGame().getCurrentMap()

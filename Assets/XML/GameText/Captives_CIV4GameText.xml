@@ -4,7 +4,7 @@
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_ARCHER</Tag>
 		<English>Upgrade a Captive to an Archer.</English>
 		<French>Convertir le Prisonnier en Archer.</French>
-		<Italian>Trasforma il prigioniero in un Arciere.</Italian>
+		<Italian>Converti il tuo prigioniero in un arciere.</Italian>
 		<Polish>Ulepsz Jeńca do Łucznika.</Polish>
 		<Russian>Óëó÷øèòü ïëåííèêà äî Ëó÷íèêà.</Russian>
 	</TEXT>
@@ -12,7 +12,7 @@
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_AXEMAN</Tag>
 		<English>Upgrade a Captive to an Axeman.</English>
 		<French>Convertir le Prisonnier en Guerrier avec hache.</French>
-		<Italian>Trasforma il prigioniero in un Guerriero con ascia.</Italian>
+		<Italian>Converti il tuo prigioniero in un guerriero con ascia.</Italian>
 		<Polish>Ulepsz Jeńca do Topornika.</Polish>
 		<Russian>Óëó÷øèòü ïëåííèêà äî Ñåêèðîíîñöà.</Russian>
 	</TEXT>
@@ -29,7 +29,7 @@
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_IMMIGRANT</Tag>
 		<English>Upgrade to Immigrant.</English>
 		<French>Convertir en Immigrant</French>
-		<Italian>Trasforma in Immigrato.</Italian>
+		<Italian>Converti in immigrato.</Italian>
 		<Polish>Ulepsz do Immigranta.</Polish>
 		<Russian>Óëó÷øèòü äî Èììèãðàíòà.</Russian>
 	</TEXT>
@@ -51,7 +51,7 @@
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_WARRIOR</Tag>
 		<English>Upgrade a Captive to a Neanderthal Warrior.</English>
 		<French>Convertir le Prisonnier en Guerrier Néanderthal.</French>
-		<Italian>Trasforma il prigioniero in un Guerriero Neanderthal.</Italian>
+		<Italian>Converti il tuo prigioniero in guerriero Neanderthal.</Italian>
 		<Polish>Ulepsz Jeńca do Wojownika Neandertalczyków.</Polish>
 		<Russian>Óëó÷øèòü ïëåííèêà äî âîèíà-íåàíäåðòàëüöà.</Russian>
 	</TEXT>
@@ -59,7 +59,7 @@
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SETTLER</Tag>
 		<English>Upgrade to Settler.</English>
 		<French>Convertir en Colon</French>
-		<Italian>Trasforma in Colono.</Italian>
+		<Italian>Converti in colono.</Italian>
 		<Polish>Ulepsz do Osadnika.</Polish>
 		<Russian>Óëó÷øèòü äî Ïîñåëåíöà.</Russian>
 	</TEXT>
@@ -67,7 +67,7 @@
 		<Tag>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_SPEARMAN</Tag>
 		<English>Upgrade a Captive to a Spearman.</English>
 		<French>Convertir le Prisonnier en Guerrier avec lance.</French>
-		<Italian>Trasforma il prigioniero in un Guerriero con lancia.</Italian>
+		<Italian>Converti il tuo prigioniero in un guerriero con lancia.</Italian>
 		<Polish>Ulepsz Jeńca do Włócznika.</Polish>
 		<Russian>Óëó÷øèòü ïëåííèêà äî Êîïüåíîñöà.</Russian>
 	</TEXT>
@@ -76,7 +76,7 @@
 		<English>Upgrade a Captive to a Stone Thrower.</English>
 		<French>Convertir le Prisonnier en Lanceur de pierres.</French>
 		<German>Bilde einen Gefangenen zum Steinewerfer aus</German>
-		<Italian>Trasforma il prigioniero in un Lanciatore di pietre.</Italian>
+		<Italian>Converti il tuo prigioniero in un lanciatore di pietre.</Italian>
 		<Polish>Ulepsz Jeńca do Kamieniarza.</Polish>
 		<Russian>Óëó÷øèòü ïëåííèêà äî Ïðàùíèêà.</Russian>
 	</TEXT>
@@ -85,7 +85,7 @@
 		<English>Upgrade a Captive to worker.</English>
 		<French>Convertir en Ouvrier</French>
 		<German>Bilde einen Gefangenen zu einem beliebigen Arbeitstrupp aus</German>
-		<Italian>Trasforma il prigioniero in un Operaio.</Italian>
+		<Italian>Converti il tuo prigioniero in un'unità da lavoro.</Italian>
 		<Polish>Ulepsz Jeńca do Robotnika.</Polish>
 		<Russian>Óëó÷øèòü äî ðàáîòíèêà.</Russian>
 	</TEXT>
@@ -265,7 +265,7 @@
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_ARCHER</Tag>
 		<English>Upgrade to Archer.</English>
 		<French>Convertir en Archer.</French>
-		<Italian>Trasforma in un Arciere.</Italian>
+		<Italian>Converti in arciere.</Italian>
 		<Polish>Ulepsz do Łucznika.</Polish>
 		<Russian>Óëó÷øèòü äî Ëó÷íèêà.</Russian>
 	</TEXT>
@@ -281,7 +281,7 @@
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_AXEMAN</Tag>
 		<English>Upgrade to Axeman.</English>
 		<French>Convertir en Guerrier avec hache.</French>
-		<Italian>Trasforma in un Guerriero con ascia.</Italian>
+		<Italian>Converti in un guerriero con ascia.</Italian>
 		<Polish>Ulepsz do Topornika.</Polish>
 		<Russian>Óëó÷øèòü äî Ñåêèðîíîñöà.</Russian>
 	</TEXT>
@@ -298,7 +298,7 @@
 		<English>Upgrade to Gatherer.</English>
 		<French>Convertir le prisonnier en Cueilleuse.</French>
 		<German>Ausbildung zum Sammler.</German>
-		<Italian>Trasforma in Raccoglitore.</Italian>
+		<Italian>Converti in raccoglitore.</Italian>
 		<Polish>Ulepsz do Zbieracza.</Polish>
 		<Russian>Óëó÷øèòü äî ñîáèðàòåëÿ.</Russian>
 	</TEXT>
@@ -307,7 +307,7 @@
 		<English>Your Captive has been upgraded to a Gatherer.</English>
 		<French>Votre Prisonnier a été converti en Cueilleuse</French>
 		<German>Der Gefangene wurde zum Sammler ausgebildet.</German>
-		<Italian>Il tuo prigioniero è diventato un Raccoglitore.</Italian>
+		<Italian>Converti il tuo prigioniero in un raccoglitore.</Italian>
 		<Polish>Twój jeniec został ulepszony do Zbieracza.</Polish>
 		<Russian>Âàø ïëåííûé áûë óëó÷øåí äî ñîáèðàòåëÿ.</Russian>
 	</TEXT>
@@ -315,7 +315,7 @@
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_IMMIGRANT</Tag>
 		<English>Upgrade a Captive to an Immigrant.</English>
 		<French>Convertir le prisonnier en Immigrant.</French>
-		<Italian>Trasforma il prigioniero in un Immigrato.</Italian>
+		<Italian>Converti il tuo prigioniero in un immigrante.</Italian>
 		<Polish>Ulepsz Jeńca do Immigranta.</Polish>
 		<Russian>Óëó÷øèòü ïëåííèêà äî Èììèãðàíòà.</Russian>
 	</TEXT>
@@ -359,7 +359,7 @@
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_NEANDERTHAL_WARRIOR</Tag>
 		<English>Upgrade to Neanderthal Warrior.</English>
 		<French>Convertir en Guerrier Néanderthal.</French>
-		<Italian>Trasforma in Guerriero Neanderthal.</Italian>
+		<Italian>Converti in guerriero Neanderthal.</Italian>
 		<Polish>Ulepsz do Wojownika Neandertalczyków.</Polish>
 		<Russian>Óëó÷øèòü äî âîèíà-íåàíäåðòàëüöà.</Russian>
 	</TEXT>
@@ -375,7 +375,7 @@
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_SETTLER</Tag>
 		<English>Upgrade a Captive to a Settler.</English>
 		<French>Convertir le prisonnier en Colon.</French>
-		<Italian>Trasforma in un Colono.</Italian>
+		<Italian>Converti il tuo prigioniero in un colono.</Italian>
 		<Polish>Ulepsz Jeńca do Osadnika.</Polish>
 		<Russian>Óëó÷øèòü ïëåííèêà äî Ïîñåëåíöà.</Russian>
 	</TEXT>
@@ -391,7 +391,7 @@
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_SPEARMAN</Tag>
 		<English>Upgrade to Spearman.</English>
 		<French>Convertir en Guerrier avec lance.</French>
-		<Italian>Trasforma in Guerriero con lancia.</Italian>
+		<Italian>Converti in guerriero con lancia.</Italian>
 		<Polish>Ulepsz do Włócznika.</Polish>
 		<Russian>Óëó÷øèòü äî Êîïüåíîñöà.</Russian>
 	</TEXT>
@@ -408,7 +408,7 @@
 		<English>Upgrade to Stone Thrower.</English>
 		<French>Convertir en Lanceur de pierres.</French>
 		<German>Ausbildung zum Steinewerfer</German>
-		<Italian>Trasforma in Lanciatore di pietre.</Italian>
+		<Italian>Converti in lanciatore di pietre.</Italian>
 		<Polish>Ulepsz do Kamieniarza.</Polish>
 		<Russian>Óëó÷øèòü äî Ïðàùíèêà.</Russian>
 	</TEXT>
@@ -425,7 +425,7 @@
 		<Tag>TXT_KEY_OUTCOME_UPGRADE_TO_WORKER</Tag>
 		<English>Upgrade to Worker.</English>
 		<French>Convertir le prisonnier en Ouvrier</French>
-		<Italian>Trasforma in Operaio.</Italian>
+		<Italian>Converti in lavoratore.</Italian>
 		<Polish>Ulepsz do Robotnika.</Polish>
 		<Russian>Óëó÷øèòü äî Ðàáî÷åãî.</Russian>
 	</TEXT>
@@ -441,11 +441,7 @@
 		<Tag>TXT_KEY_UNIT_CAPTIVE_CIVILIAN</Tag>
 		<English>Captive - Civilian</English>
 		<French>Prisonnier - Civil</French>
-		<Italian>
-			<Text>Prigioniero - Civile</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Prigioniero - Civile</Italian>
 		<Russian>Ïëåííèê</Russian>
 	</TEXT>
 	<TEXT>
@@ -466,29 +462,21 @@
 		<Tag>TXT_KEY_UNIT_CAPTIVE_IMMIGRANT</Tag>
 		<English>Captive - Immigrant</English>
 		<French>Prisonnier - Immigrant</French>
-		<Italian>
-			<Text>Prigioniero - Immigrato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Prigioniero - Immigrato</Italian>
 		<Russian>Ïëåííûé èììèãðàíò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_MILITARY</Tag>
 		<English>Captive - Military</English>
 		<French>Prisonnier - Militaire</French>
-		<Italian>
-			<Text>Prigioniero - Militare</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Prigioniero - Militare</Italian>
 		<Russian>Ïëåííûé ñîëäàò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAPTIVE_MILITARY_HELP</Tag>
-		<English>[ICON_BULLET] Upgrade to Military or Worker unit. Force build [COLOR_UNIT_TEXT]Building[COLOR_REVERT]. Sacrifice or join city.</English>
-		<French>[ICON_BULLET] Peut être converti en unité militaire ou ouvrière. Peut construire de manière forcée un [COLOR_UNIT_TEXT]aménagement[COLOR_REVERT] ou [COLOR_UNIT_TEXT]Bâtiment[COLOR_REVERT]. Peut être Sacrifié ou rejoindre une ville.</French>
-		<Italian>[ICON_BULLET] Può essere trasformato in un'unità militare o in un Operaio. Può essere costretto a realizzare [COLOR_UNIT_TEXT]Edifici[COLOR_REVERT]. Può essere sacrificato o essere aggiunto a una città.</Italian>
+		<English>[ICON_BULLET]Upgrade to Military or Worker unit. Force build [COLOR_UNIT_TEXT]Building[COLOR_REVERT]. Sacrifice or join city.</English>
+		<French>[ICON_BULLET]Peut être converti en unité militaire ou ouvrière. Peut construire de manière forcée un [COLOR_UNIT_TEXT]aménagement[COLOR_REVERT] ou [COLOR_UNIT_TEXT]Bâtiment[COLOR_REVERT]. Peut être Sacrifié ou rejoindre une ville.</French>
+		<Italian>Può essere convertito in un lavoratore o in un'unità militare. Può essere costretto a realizzare [COLOR_UNIT_TEXT]edifici[COLOR_REVERT]. Può essere sacrificato o essere aggiunto alla città.</Italian>
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Подсказка: [COLOR_REVERT]может быть переобучен в военный или рабочий отряд. Может ускорить строительство [COLOR_UNIT_TEXT]Улучшений[COLOR_REVERT] или [COLOR_UNIT_TEXT]Зданий[COLOR_REVERT]. Их можно принести в жертву или подселить в городе.</Russian>
 	</TEXT>
 	<TEXT>
@@ -513,18 +501,14 @@
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE</Tag>
 		<English>Captive - Freed Slave</English>
 		<French>Prisonnier - Esclave libéré</French>
-		<Italian>
-			<Text>Prigioniero - Schiavo liberato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
+		<Italian>Prigioniero - Schiavo liberato</Italian>
 		<Russian>Ïëåííûé ðàáîòíèê</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE_HELP</Tag>
-		<English>[ICON_BULLET] May be set free (join your city population as food) or upgraded to workers.</English>
-		<French>[ICON_BULLET] Peut être libéré (rejoint votre ville sous forme de réserve de nourriture) ou amélioré en ouvriers.</French>
-		<Italian>[ICON_BULLET] Può essere liberato (aggiunge un bonus una tantum di cibo) o essere trasformato in lavoratore.</Italian>
+		<English>[ICON_BULLET]May be set free (join your city population as food) or upgraded to workers.</English>
+		<French>[ICON_BULLET]Peut être libéré (rejoint votre ville sous forme de réserve de nourriture) ou amélioré en ouvriers.</French>
+		<Italian>Può essere liberato (che equivale ad aggiungere cibo una-tantum alla tua città) o essere convertito in lavoratore.</Italian>
 		<Russian>Ìîæåò áûòü îñâîáîæäåí (ïðèðîñò íàñåëåíèÿ ãîðîäà) ëèáî óëó÷øåí äî ðàáî÷åãî.</Russian>
 	</TEXT>
 	<TEXT>

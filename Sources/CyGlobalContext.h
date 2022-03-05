@@ -32,8 +32,7 @@ public:
 	CvRandom& getCyASyncRand() const;
 	CyTeam* getCyTeam(TeamTypes eTeam) const;
 
-	int getInfoTypeForString(const char* szInfoType) const;
-	int getInfoTypeForStringWithHiddenAssert(const char* szInfoType) const;
+	int getInfoTypeForString(const char* szInfoType, bool bHideAssert = false) const;
 
 	const CvMapInfo& getMapInfo(MapTypes eMap) const;
 	const CvEffectInfo* getEffectInfo(int i) const;
@@ -108,10 +107,13 @@ public:
 
 	const char* getArtStyleTypes(int i) const { return GC.getArtStyleTypes((ArtStyleTypes) i); }
 
+	int getMapBonus(int i) const { return GC.getMapBonus(i); }
+	int getNumMapBonuses() const { return GC.getNumMapBonuses(); }
+
 	int getNumEffectInfos() const { return GC.getNumEffectInfos(); }
 	int getNumTerrainInfos() const { return GC.getNumTerrainInfos(); }
 	int getNumSpecialBuildingInfos() const { return GC.getNumSpecialBuildingInfos(); }
-	int getNumBonusInfos() const { return GC.getNumBonusInfos(); };
+	int getNumBonusInfos() const { return GC.getNumBonusInfos(); }
 	int getNumPlayableCivilizationInfos() const { return GC.getNumPlayableCivilizationInfos(); }
 	int getNumCivilizatonInfos() const { return GC.getNumCivilizationInfos(); }
 	int getNumLeaderHeadInfos() const { return GC.getNumLeaderHeadInfos(); }
@@ -180,7 +182,6 @@ public:
 
 	bool isDCM_AIR_BOMBING() const { return GC.isDCM_AIR_BOMBING(); }
 	bool isDCM_RANGE_BOMBARD() const { return GC.isDCM_RANGE_BOMBARD(); }
-	bool isDCM_ATTACK_SUPPORT() const { return GC.isDCM_ATTACK_SUPPORT(); }
 	bool isDCM_OPP_FIRE() const { return GC.isDCM_OPP_FIRE(); }
 	bool isDCM_ACTIVE_DEFENSE() const { return GC.isDCM_ACTIVE_DEFENSE(); }
 	bool isDCM_FIGHTER_ENGAGE() const { return GC.isDCM_FIGHTER_ENGAGE(); }

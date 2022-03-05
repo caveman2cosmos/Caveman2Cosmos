@@ -2,11 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AUTOMATION_CLOCK</Tag>
-		<English>
-			<Text>Automation Clock</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Automation Clock</English>
 		<French>
 			<Text>Horloge automatique</Text>
 			<Gender>Male</Gender>
@@ -32,11 +28,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT</Tag>
-		<English>
-			<Text>Ornithopter Aerie</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Ornithopter Aerie</English>
 		<French>
 			<Text>Aire d'ornithoptères</Text>
 			<Gender>Male</Gender>
@@ -77,11 +69,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CLOCKWORK_WORKSHOP</Tag>
-		<English>
-			<Text>Clockwork Workshop</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Clockwork Workshop</English>
 		<French>
 			<Text>Atelier d'horlogerie</Text>
 			<Gender>Male</Gender>
@@ -107,11 +95,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCHESTRION_THEATER</Tag>
-		<English>
-			<Text>Orchestrion Theater</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Orchestrion Theater</English>
 		<French>
 			<Text>Théâtre d'orchestrion</Text>
 			<Gender>Male</Gender>
@@ -137,11 +121,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_STEPRECKONER_MANUFACTORY</Tag>
-		<English>
-			<Text>Step Reckoner Manufacture</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Step Reckoner Manufacture</English>
 		<French>
 			<Text>Usine de calculateurs mécaniques</Text>
 			<Gender>Male</Gender>
@@ -187,11 +167,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLOCKWORK_GOLEM</Tag>
-		<English>
-			<Text>Clockwork Golem</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Clockwork Golem</English>
 		<French>
 			<Text>Golem mécanique</Text>
 			<Gender>Male</Gender>
@@ -217,11 +193,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAVINCI_TANK</Tag>
-		<English>
-			<Text>Da Vinci Tank</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Da Vinci Tank</English>
 		<French>
 			<Text>Char d'assaut Da Vinci</Text>
 			<Gender>Male</Gender>
@@ -247,11 +219,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORNITHOPTER</Tag>
-		<English>
-			<Text>Ornithopter</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Ornithopter</English>
 		<French>
 			<Text>Ornithoptère</Text>
 			<Gender>Male</Gender>
@@ -277,11 +245,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REPEATING_CROSSBOWMAN</Tag>
-		<English>
-			<Text>Repeating Crossbowman</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Repeating Crossbowman</English>
 		<French>
 			<Text>Guerrier avec arbalète à répétition</Text>
 			<Gender>Male</Gender>
@@ -307,11 +271,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEPHYR</Tag>
-		<English>
-			<Text>Zephyr</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</English>
+		<English>Zephyr</English>
 		<Italian>
 			<Text>Zefiro</Text>
 			<Gender>Male</Gender>

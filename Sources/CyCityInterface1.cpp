@@ -70,7 +70,6 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("getArtStyleType", &CyCity::getArtStyleType, "int /*ArtStyleTypes*/ ()")
 
 		.def("hasTrait", &CyCity::hasTrait, "bool (TraitID) - does owner have TraitID?")
-		.def("isBarbarian", &CyCity::isBarbarian, "bool () - is owner a barbarian?")
 		.def("isNPC", &CyCity::isNPC, "bool () - is owner an NPC?")
 		.def("isHominid", &CyCity::isHominid, "bool () - is owner an Hominid?")
 		.def("isHuman", &CyCity::isHuman, "bool () - is owner human?")

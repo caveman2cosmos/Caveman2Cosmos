@@ -197,9 +197,6 @@ class CvGameUtils:
 		if CyCity.getNumActiveBuilding(self.iNationalMint):
 			gold *= 10
 
-		if (iOwnerNew == GAME.getActivePlayer()):
-			CvUtil.sendMessage(CyTranslator().getText("TXT_KEY_MISC_PILLAGED_CITY_CAPTURED", (int(gold), CyCity.getName())), iOwnerNew, 10, '', ColorTypes(10))
-
 		return int(gold)
 
 	def getWidgetHelp(self, argsList):
@@ -320,7 +317,7 @@ class CvGameUtils:
 				elif iData2 == 2:
 					return CyTranslator().getText("TXT_KEY_WB_WAIT",())
 			elif iData1 == 6785:
-				return CyGameTextMgr().getProjectHelp(iData2, False, CyCity())
+				return CyGameTextMgr().getProjectHelp(iData2, False, None)
 			elif iData1 == 6787:
 				return GC.getProcessInfo(iData2).getDescription()
 			elif iData1 == 6788:

@@ -436,7 +436,7 @@
 				<TechCommerceChange>
 					<TechType>TECH_TOURISM</TechType>
 					<CommercePercents>
-						<iCommercePercent>100</iCommercePercent>
+						<iCommercePercent>700</iCommercePercent>
 					</CommercePercents>
 				</TechCommerceChange>
 			</TechCommerceChanges>
@@ -507,7 +507,6 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
@@ -721,7 +720,6 @@
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
-				<iYield>0</iYield>
 			</YieldChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
@@ -817,15 +815,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeBonus>BONUS_MAMMOTH</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
-					<FreeBonus>BONUS_CARCASS</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_IVORY</FreeBonus>
+					<FreeBonus>BONUS_MAMMOTH</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
@@ -863,14 +855,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeBonus>BONUS_CARCASS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<ExtraFreeBonuses>
-				<ExtraFreeBonus>
-					<FreeBonus>BONUS_IVORY</FreeBonus>
-					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>
-			</ExtraFreeBonuses>
 			<Bonus>BONUS_MAMMOTH</Bonus>
 			<iCost>624</iCost>
 			<iMinLatitude>40</iMinLatitude>
@@ -882,15 +866,15 @@
 				<iYield>0</iYield>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<TechYieldModifiers>
-				<TechYieldModifier>
+			<TechYieldChanges>
+				<TechYieldChange>
 					<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
-						<iYield>5</iYield>
+						<iYield>500</iYield>
 					</TechYield>
-				</TechYieldModifier>
-			</TechYieldModifiers>
+				</TechYieldChange>
+			</TechYieldChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<Flavors>
 				<Flavor>
@@ -1186,8 +1170,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeBonus>BONUS_CARCASS</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ReplacementBuildings>

@@ -7,6 +7,7 @@
 // Python wrapper functions for DLL
 //
 
+class CvRandom;
 class CyCity;
 class CyPlot;
 class CyUnit;
@@ -64,5 +65,7 @@ int cyCalculateExperience(int iLevel, int /*PlayerTypes*/ ePlayer);
 int cyCalculateLevel(int iExperience, int /*PlayerTypes*/ ePlayer);
 
 int64_t cyIntSqrt64(uint64_t iValue);
+
+void cyShufflePyList(python::list& pyList, CvRandom& rand);
 
 #endif	// CyGameCoreUtils_h

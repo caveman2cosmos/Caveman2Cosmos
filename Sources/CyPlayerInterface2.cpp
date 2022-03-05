@@ -73,8 +73,6 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 		.def("getBestUnitType", &CyPlayer::getBestUnitType, "int (int /*UnitAITypes*/ eUnitAI)")
 
 		.def("getCulture", &CyPlayer::getCulture, "int ()")
-		.def("setCulture", &CyPlayer::setCulture, "void (int)")
-		.def("changeCulture", &CyPlayer::changeCulture, "void (int)")
 
 		.def("getBuildingListFilterActive", &CyPlayer::getBuildingListFilterActive, "bool (int)")
 		.def("setBuildingListFilterActive", &CyPlayer::setBuildingListFilterActive, "void (int,bool)")

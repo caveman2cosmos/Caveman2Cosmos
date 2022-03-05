@@ -91,76 +91,6 @@
 			<Button>Art/interface/buttons/improvements/space_station_3.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_UPGRADE_SS2</Type>
-			<Description>TXT_KEY_MISSION_UPGRADE_SS2</Description>
-			<Help>TXT_KEY_MISSION_UPGRADE_SS2_HELP</Help>
-			<Waypoint>NONE</Waypoint>
-			<HotKey>KB_B</HotKey>
-			<EntityEventType>NONE</EntityEventType>
-			<iTime>0</iTime>
-			<bTarget>0</bTarget>
-			<bBuild>0</bBuild>
-			<bSound>0</bSound>
-			<bVisible>1</bVisible>
-			<Button>Art/interface/buttons/improvements/space_station_2.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
-			<Type>MISSION_UPGRADE_SS3</Type>
-			<Description>TXT_KEY_MISSION_UPGRADE_SS3</Description>
-			<Help>TXT_KEY_MISSION_UPGRADE_SS3_HELP</Help>
-			<Waypoint>NONE</Waypoint>
-			<HotKey>KB_B</HotKey>
-			<EntityEventType>NONE</EntityEventType>
-			<iTime>0</iTime>
-			<bTarget>0</bTarget>
-			<bBuild>0</bBuild>
-			<bSound>0</bSound>
-			<bVisible>1</bVisible>
-			<Button>Art/interface/buttons/improvements/space_station_3.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
-			<Type>MISSION_UPGRADE_CISLUNAR_SETTLER</Type>
-			<Description>TXT_KEY_MISSION_UPGRADE_CISLUNAR_SETTLER</Description>
-			<Help>TXT_KEY_MISSION_UPGRADE_CISLUNAR_SETTLER_HELP</Help>
-			<Waypoint>NONE</Waypoint>
-			<HotKey>KB_B</HotKey>
-			<EntityEventType>NONE</EntityEventType>
-			<iTime>0</iTime>
-			<bTarget>0</bTarget>
-			<bBuild>0</bBuild>
-			<bSound>0</bSound>
-			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/Units/sparth/spacecraft_settler.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
-			<Type>MISSION_UPGRADE_LUNAR_SETTLER</Type>
-			<Description>TXT_KEY_MISSION_UPGRADE_LUNAR_SETTLER</Description>
-			<Help>TXT_KEY_MISSION_UPGRADE_LUNAR_SETTLER_HELP</Help>
-			<Waypoint>NONE</Waypoint>
-			<HotKey>KB_B</HotKey>
-			<EntityEventType>NONE</EntityEventType>
-			<iTime>0</iTime>
-			<bTarget>0</bTarget>
-			<bBuild>0</bBuild>
-			<bSound>0</bSound>
-			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/Units/sparth/spacecraft_settler.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
-			<Type>MISSION_UPGRADE_PLANET_SETTLER</Type>
-			<Description>TXT_KEY_MISSION_UPGRADE_PLANET_SETTLER</Description>
-			<Help>TXT_KEY_MISSION_UPGRADE_PLANET_SETTLER_HELP</Help>
-			<Waypoint>NONE</Waypoint>
-			<HotKey>KB_B</HotKey>
-			<EntityEventType>NONE</EntityEventType>
-			<iTime>0</iTime>
-			<bTarget>0</bTarget>
-			<bBuild>0</bBuild>
-			<bSound>0</bSound>
-			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/Units/sparth/spacecraft_settler.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
 			<Type>MISSION_EXPLORE_MOON_SURFACE</Type>
 			<Description>TXT_KEY_MISSION_EXPLORE_MOON_SURFACE</Description>
 			<Help>TXT_KEY_MISSION_EXPLORE_MOON_SURFACE_HELP</Help>
@@ -619,19 +549,6 @@
 			<bSound>0</bSound>
 			<bVisible>1</bVisible>
 			<Button>art/interface/buttons/units/captured_asteroid.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
-			<Type>MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Type>
-			<Description>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</Description>
-			<Help>TXT_KEY_MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER_HELP</Help>
-			<Waypoint>NONE</Waypoint>
-			<EntityEventType>NONE</EntityEventType>
-			<iTime>0</iTime>
-			<bTarget>0</bTarget>
-			<bBuild>0</bBuild>
-			<bSound>0</bSound>
-			<bVisible>1</bVisible>
-			<Button>Art/Interface/Buttons/Units/sparth/bulldozer.dds</Button>
 		</MissionInfo>
 	</MissionInfos>
 </Civ4MissionInfos>

@@ -126,14 +126,12 @@
 	<ElementType name="EntityEvent" content="textOnly"/>
 	<ElementType name="iProduction" content="textOnly" dt:type="int"/>
 	<ElementType name="bRemove" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bCanRemoveWithNoProductionGain" content="textOnly" dt:type="boolean"/>
 	<ElementType name="FeatureStruct" content="eltOnly">
 		<element type="FeatureType"/>
 		<element type="PrereqTech"/>
 		<element type="iTime"/>
 		<element type="iProduction"/>
 		<element type="bRemove" minOccurs="0"/>
-		<element type="bCanRemoveWithNoProductionGain" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="FeatureStructs" content="eltOnly">
 		<element type="FeatureStruct" minOccurs="0" maxOccurs="*"/>
@@ -1634,12 +1632,9 @@
 	<ElementType name="DomainCargoChange" content="textOnly"/>
 	<ElementType name="SpecialCargoChange" content="textOnly"/>
 	<ElementType name="SpecialCargoPrereq" content="textOnly"/>
-	<ElementType name="SMSpecialCargoChange" content="textOnly"/>
-	<ElementType name="SMSpecialCargoPrereq" content="textOnly"/>
 	<ElementType name="SMNotSpecialCargoChange" content="textOnly"/>
 	<ElementType name="SMNotSpecialCargoPrereq" content="textOnly"/>
 	<ElementType name="bCargoPrereq" content="textOnly" dt:type="boolean"/>
-	<ElementType name="SMSpecialCargo" content="textOnly"/>
 	<ElementType name="SMNotSpecialCargo" content="textOnly"/>
 	<ElementType name="DomainCargo" content="textOnly"/>
 	<ElementType name="iCargo" content="textOnly" dt:type="int"/>
@@ -2076,7 +2071,6 @@
 		<element type="iBombRate" minOccurs="0"/>
 		<element type="iBombardRate" minOccurs="0"/>
 		<element type="SpecialCargo" minOccurs="0"/>
-		<element type="SMSpecialCargo" minOccurs="0"/>
 		<element type="SMNotSpecialCargo" minOccurs="0"/>
 		<element type="DomainCargo" minOccurs="0"/>
 		<element type="iCargo" minOccurs="0"/>
@@ -2534,8 +2528,6 @@
 		<element type="DomainCargoChange" minOccurs="0"/>
 		<element type="SpecialCargoChange" minOccurs="0"/>
 		<element type="SpecialCargoPrereq" minOccurs="0"/>
-		<element type="SMSpecialCargoChange" minOccurs="0"/>
-		<element type="SMSpecialCargoPrereq" minOccurs="0"/>
 		<element type="SMNotSpecialCargoPrereq" minOccurs="0"/>
 		<element type="bCargoPrereq" minOccurs="0"/>
 		<element type="iCargoChange" minOccurs="0"/>

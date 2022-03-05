@@ -131,7 +131,8 @@ struct ECvPlotGraphics
 };
 DECLARE_FLAGS(ECvPlotGraphics::type);
 
-class CvPlot : bst::noncopyable
+class CvPlot
+	: private bst::noncopyable
 {
 friend CvPathPlotInfoStore;
 public:
@@ -179,7 +180,8 @@ public:
 
 	void doTurn();
 
-	void doImprovement();
+	bool doBonusDiscovery();
+	void doBonusDepletion();
 
 	void updateCulture(bool bBumpUnits, bool bUpdatePlotGroups);
 
@@ -207,6 +209,7 @@ public:
 	bool isPlotGroupConnectedBonus(PlayerTypes ePlayer, BonusTypes eBonus) const;
 	bool isAdjacentPlotGroupConnectedBonus(PlayerTypes ePlayer, BonusTypes eBonus) const;
 	void updatePlotGroupBonus(bool bAdd);
+	bool isBonusExtracted(const TeamTypes eTeamPerspective = NO_TEAM) const;
 
 	bool isAdjacentToArea(int iAreaID) const;
 	bool isAdjacentToArea(const CvArea* pArea) const;
@@ -334,11 +337,7 @@ public:
 	void setClaimingOwner(PlayerTypes eNewValue);
 
 	bool isActsAsCity() const;
-	bool isCanMoveLandUnits() const;
 	bool isCanMoveSeaUnits() const;
-	bool isCanMoveAllUnits() const;
-	bool isCanUseRouteLandUnits() const;
-	bool isCanUseRouteSeaUnits() const;
 	bool isSeaTunnel() const;
 	int getRevoltProtection() const;
 	int getAverageEnemyStrength(TeamTypes eTeam) const;
@@ -391,6 +390,7 @@ protected:
 
 public:
 	PlayerTypes calculateCulturalOwner() const;
+	PlayerTypes getPlayerWithTerritorySurroundingThisPlotCardinally() const;
 
 	void plotAction(PlotUnitFunc func, int iData1 = -1, int iData2 = -1, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM);
 	int plotCount(ConstPlotUnitFunc funcA, int iData1A = -1, int iData2A = -1, const CvUnit* pUnit = NULL, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, ConstPlotUnitFunc funcB = NULL, int iData1B = -1, int iData2B = -1, int iRange = 0) const;
@@ -399,7 +399,6 @@ public:
 	int plotStrengthTimes100(UnitValueFlags eFlags, ConstPlotUnitFunc funcA, int iData1A = -1, int iData2A = -1, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, ConstPlotUnitFunc funcB = NULL, int iData1B = -1, int iData2B = -1, int iRange = 0) const;
 
 	bool isOwned() const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isRevealedBarbarian() const;
@@ -605,11 +604,6 @@ public:
 	int getOwnershipDuration() const;
 	bool isOwnershipScore() const;
 	void setOwnershipDuration(int iNewValue);
-	void changeOwnershipDuration(int iChange);
-
-	int getImprovementDuration() const;
-	void setImprovementDuration(int iNewValue);
-	void changeImprovementDuration(int iChange);
 
 	int getImprovementUpgradeProgress() const;
 	int getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlayer) const;
@@ -923,7 +917,6 @@ protected:
 	mutable CvArea *m_pPlotArea;
 	short m_iFeatureVariety;
 	short m_iOwnershipDuration;
-	short m_iImprovementDuration;
 	short m_iUpgradeProgress;
 	short m_iForceUnownedTimer;
 	short m_iCityRadiusCount;

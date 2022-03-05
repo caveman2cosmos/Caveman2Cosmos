@@ -46,7 +46,6 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("isAdjacentPlayer", &CyPlot::isAdjacentPlayer, "bool (int /*PlayerTypes*/ ePlayer, bool bLandOnly)")
 		.def("calculateCulturalOwner", &CyPlot::calculateCulturalOwner, "int ()")
 		.def("isOwned", &CyPlot::isOwned, "bool ()")
-		.def("isBarbarian", &CyPlot::isBarbarian, "bool ()")
 		.def("isNPC", &CyPlot::isNPC, "bool ()")
 		.def("isHominid", &CyPlot::isHominid, "bool ()")
 		.def("isVisible", &CyPlot::isVisible, "bool (int /*TeamTypes*/ eTeam, bool bDebug)")
@@ -159,6 +158,7 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("isInViewport", &CyPlot::isInViewport, "bool ()")
 		.def("cloneToViewport", &CyPlot::cloneToViewport, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
 
+		.def("adjacent", &CyPlot::adjacent)
 		.def("rect", &CyPlot::rect)
 	;
 }

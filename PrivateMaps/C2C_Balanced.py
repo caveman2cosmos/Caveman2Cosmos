@@ -8,11 +8,9 @@
 #
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
-from CvMapGeneratorUtil import HintedWorld
-from CvMapGeneratorUtil import BonusBalancer
+import CvMapGeneratorUtil as MGU
 
-balancer = BonusBalancer()
+balancer = MGU.BonusBalancer()
 
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_BALANCED_DESCR"
@@ -66,7 +64,7 @@ def getBottomLatitude():
 def generatePlotTypes():
 	NiTextOut("Setting Plot Types (Python Balanced) ...")
 	global hinted_world
-	hinted_world = HintedWorld(16,8)
+	hinted_world = MGU.HintedWorld(16,8)
 
 	mapRand = CyGlobalContext().getGame().getMapRand()
 
@@ -85,10 +83,10 @@ def generatePlotTypes():
 
 # subclass TerrainGenerator to eliminate arctic, equatorial latitudes
 
-class BTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
+class BTerrainGenerator(MGU.TerrainGenerator):
 	def getLatitudeAtPlot(self, iX, iY):
 		"returns 0.0 for tropical, up to 1.0 for polar"
-		lat = CvMapGeneratorUtil.TerrainGenerator.getLatitudeAtPlot(self, iX, iY) 	# range [0,1]
+		lat = MGU.TerrainGenerator.getLatitudeAtPlot(self, iX, iY) 	# range [0,1]
 		lat = 0.05 + 0.75*lat				# range [0.05, 0.75]
 		return lat
 
@@ -100,10 +98,10 @@ def generateTerrainTypes():
 
 # subclass FeatureGenerator to eliminate arctic, equatorial latitudes
 
-class BFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
+class BFeatureGenerator(MGU.FeatureGenerator):
 	def getLatitudeAtPlot(self, iX, iY):
 		"returns 0.0 for tropical, up to 1.0 for polar"
-		lat = CvMapGeneratorUtil.FeatureGenerator.getLatitudeAtPlot(self, iX, iY) 	# range [0,1]
+		lat = MGU.FeatureGenerator.getLatitudeAtPlot(self, iX, iY) 	# range [0,1]
 		lat = 0.05 + 0.75*lat				# range [0.05, 0.75]
 		return lat
 
@@ -118,10 +116,7 @@ def normalizeAddExtras():
 	CyPythonMgr().allowDefaultImpl()	# do the rest of the usual normalizeStartingPlots stuff, don't overrride
 
 def addBonusType(argsList):
-	[iBonusType] = argsList
-
-	if (not balancer.isSkipBonus(iBonusType)):
-		CyPythonMgr().allowDefaultImpl()
+	CyPythonMgr().allowDefaultImpl()
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses()
+	MGU.placeC2CBonuses()

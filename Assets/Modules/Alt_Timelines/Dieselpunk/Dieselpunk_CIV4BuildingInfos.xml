@@ -46,7 +46,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DIESELPUNK_EMBASSY</Type>
@@ -61,8 +60,12 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<VicinityBonus>BONUS_OIL</VicinityBonus>
-			<FreeBonus>BONUS_DIESELPUNK</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_DIESELPUNK</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>6480</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -178,7 +181,6 @@
 			</PropertyManipulators>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RADIOPLEX</Type>
@@ -247,8 +249,12 @@
 				<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</ObsoletesToBuilding>
-			<FreeBonus>BONUS_THEREMIN</FreeBonus>
-			<iNumFreeBonuses>1</iNumFreeBonuses>
+			<ExtraFreeBonuses>
+				<ExtraFreeBonus>
+					<FreeBonus>BONUS_THEREMIN</FreeBonus>
+					<iNumFreeBonuses>1</iNumFreeBonuses>
+				</ExtraFreeBonus>
+			</ExtraFreeBonuses>
 			<iCost>1080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iHealth>-1</iHealth>

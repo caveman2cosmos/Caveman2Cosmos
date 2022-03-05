@@ -18,6 +18,7 @@
 
 #include "CvGlobals.h"
 #include "FVariableSystem.h"
+#include "CvGameCoreDll.h"
 
 class CvGameText;
 class CvCacheObject;
@@ -129,29 +130,49 @@ public:
 	// TO DO - unsafe
 	bool GetOptionalChildXmlValByName(wchar_t* pszVal, const wchar_t* szName, wchar_t* pszDefault = NULL);
 
-	template <typename T>
-	void GetOptionalTypeEnum(T& pVal, const wchar_t* szName)
+	template <typename Enum_t>
+	void GetOptionalTypeEnum(Enum_t& val, const wchar_t* szName)
 	{
-		if (TryMoveToXmlFirstChild(szName))
-		{
-			CvString szTextVal;
-			GetXmlVal(szTextVal);
-			pVal = static_cast<T>(GC.getInfoTypeForString(szTextVal));
-			MoveToXmlParent();
-		}
+		SetOptionalInfoType<NO_DELAYED_RESOLUTION>(this, val, szName);
 	}
 
-	template <typename T>
-	void GetOptionalTypeEnumWithDelayedResolution(T& pVal, const wchar_t* szName)
+	template <typename Enum_t>
+	void GetOptionalTypeEnumWithDelayedResolution(Enum_t& val, const wchar_t* szName)
 	{
-		if (TryMoveToXmlFirstChild(szName))
-		{
-			CvString szTextVal;
-			GetXmlVal(szTextVal);
-			GC.addDelayedResolution((int*)&pVal, szTextVal);
-			MoveToXmlParent();
-		}
+		SetOptionalInfoType<USE_DELAYED_RESOLUTION>(this, val, szName);
 	}
+
+	template <DelayedResolutionTypes = NO_DELAYED_RESOLUTION>
+	struct SetOptionalInfoType
+	{
+		template <typename Enum_t>
+		SetOptionalInfoType(CvXMLLoadUtility* pXml, Enum_t& val, const wchar_t* tag)
+		{
+			if (pXml->TryMoveToXmlFirstChild(tag))
+			{
+				CvString szTextVal;
+				pXml->GetXmlVal(szTextVal);
+				val = static_cast<Enum_t>(GC.getInfoTypeForString(szTextVal));
+				pXml->MoveToXmlParent();
+			}
+		}
+	};
+
+	template <>
+	struct SetOptionalInfoType<USE_DELAYED_RESOLUTION>
+	{
+		template <typename Enum_t>
+		SetOptionalInfoType(CvXMLLoadUtility* pXml, Enum_t& val, const  wchar_t* tag)
+		{
+			if (pXml->TryMoveToXmlFirstChild(tag))
+			{
+				CvString szTextVal;
+				pXml->GetXmlVal(szTextVal);
+				GC.addDelayedResolution(reinterpret_cast<int*>(&val), szTextVal);
+				pXml->MoveToXmlParent();
+			}
+		}
+	};
 
 	// overloaded function that gets the child value of the tag with szName if there is only one child
 	// value of that name
@@ -514,7 +535,7 @@ public:
 	int SetCommerce(T** ppiCommerce);
 
 	// allocate and set the feature struct variables for the CvBuildInfo class
-	void SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTime, int** ppiFeatureProduction, bool** ppbFeatureRemove, bool** ppbNoTechCanRemoveWithNoProductionGain);
+	void SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTime, int** ppiFeatureProduction, bool** ppbFeatureRemove);
 
 	// loads the improvement bonuses from the xml file
 	void SetImprovementBonuses(CvImprovementBonusInfo** ppImprovementBonus);
