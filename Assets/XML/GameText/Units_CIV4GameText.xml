@@ -20207,7 +20207,11 @@
 		<Tag>TXT_KEY_UNIT_SIBERIANTIGER</Tag>
 		<English>Siberian Tiger</English>
 		<French>Tigre de Sibérie</French>
-		<German>Sibirischer Tiger</German>
+		<German>
+			<Text>Sibirischer Tiger:Sibirischen Tigers:Sibirischen Tiger:Sibirischen Tiger:Sibirische Tiger:Sibirischen Tiger:Sibirischen Tigern:Sibirischen Tiger</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Tigre siberiana</Italian>
 		<Spanish>
 			<Text>Tigre siberiano</Text>

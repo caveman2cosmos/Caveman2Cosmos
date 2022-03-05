@@ -3768,6 +3768,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_SIBERIANTIGER</Tag>
 		<English>Subdued Siberian Tiger</English>
 		<French>Tigre de Sibérie (App.)</French>
+		<German>
+			<Text>Gefangener Sibirischer Tiger:Gefangenen Sibirischen Tigers:Gefangenen Sibirischen Tiger:Gefangenen Sibirischen Tiger:Gefangene Sibirische Tiger:Gefangenen Sibirischen Tiger:Gefangenen Sibirischen Tigern:Gefangenen Sibirischen Tiger</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Tigre siberiana addomesticata</Text>
 			<Gender>Female</Gender>

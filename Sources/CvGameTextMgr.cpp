@@ -7233,18 +7233,22 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 
 						if (iView & getBugOptionINT("ACO__ShowTotalDefenseModifier", 2, "ACO_SHOW_TOTAL_DEFENSE_MODIFIER"))
 						{
-							//szString.append(L' ');//XXX
-							if (pDefender->maxCombatStr(pPlot, pAttacker) > pDefender->baseCombatStr() * 100) // modifier is positive
-							{
-								szTempBuffer.Format(SETCOLR L"%d%%" ENDCOLR,
-									TEXT_COLOR("COLOR_NEGATIVE_TEXT"), (((pDefender->maxCombatStr(pPlot, pAttacker))) / pDefender->baseCombatStr()) - 100);
-							}
-							else   // modifier is negative
-							{
-								szTempBuffer.Format(SETCOLR L"%d%%" ENDCOLR,
-									TEXT_COLOR("COLOR_POSITIVE_TEXT"), (100 - ((pDefender->baseCombatStr() * 100) / (pDefender->maxCombatStr(pPlot, pAttacker)))));
-							}
+							const int iMaxCombatStr = pDefender->maxCombatStr(pPlot, pAttacker);
 
+							if (iMaxCombatStr > pDefender->baseCombatStr() * 100) // modifier is positive
+							{
+								szTempBuffer.Format(
+									SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT"),
+									iMaxCombatStr / pDefender->baseCombatStr() - 100
+								);
+							}
+							else if (iMaxCombatStr != 0) // modifier is negative
+							{
+								szTempBuffer.Format(
+									SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_POSITIVE_TEXT"),
+									100 - pDefender->baseCombatStr() * 100 / iMaxCombatStr
+								);
+							}
 							szString.append(gDLL->getText("TXT_ACO_TOTALDEFENSEMODIFIER"));
 							szString.append(szTempBuffer.GetCString());
 						}
