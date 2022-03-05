@@ -2309,7 +2309,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	);
 	const int iX = pOldCity->getX();
 	const int iY = pOldCity->getY();
-	const wchar_t* cityName = pOldCity->getNameKey();
+	const CvWString cityName = pOldCity->getNameKey();
 
 	int iCaptureGold = 0;
 
@@ -2328,7 +2328,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		{
 			AddDLLMessage(
 				eNewOwner, true, GC.getEVENT_MESSAGE_TIME(),
-				gDLL->getText("TXT_KEY_MISC_PILLAGED_CITY_RAZED", iCaptureGold, cityName),
+				gDLL->getText("TXT_KEY_MISC_PILLAGED_CITY_RAZED", iCaptureGold, cityName.GetCString()),
 				"AS2D_CITYRAZE", MESSAGE_TYPE_MAJOR_EVENT,
 				ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(),
 				GC.getCOLOR_GREEN(), iX, iY, true, true
@@ -2351,7 +2351,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				{
 					AddDLLMessage(
 						eNewOwner, true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_PILLAGED_CITY_CAPTURED", iCaptureGold, cityName),
+						gDLL->getText("TXT_KEY_MISC_PILLAGED_CITY_CAPTURED", iCaptureGold, cityName.GetCString()),
 						"AS2D_CITYRAZE", MESSAGE_TYPE_MAJOR_EVENT,
 						ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(),
 						GC.getCOLOR_GREEN(), iX, iY, true, true
@@ -2361,7 +2361,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				{
 					AddDLLMessage(
 						eNewOwner, true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_CAPTURED_CITY", cityName),
+						gDLL->getText("TXT_KEY_MISC_CAPTURED_CITY", cityName.GetCString()),
 						"AS2D_CITYCAPTURE", MESSAGE_TYPE_MAJOR_EVENT,
 						ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(),
 						GC.getCOLOR_GREEN(), iX, iY, true, true
