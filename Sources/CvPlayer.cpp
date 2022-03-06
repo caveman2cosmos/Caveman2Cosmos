@@ -6079,16 +6079,16 @@ void CvPlayer::raze(CvCity* pCity)
 }
 
 
-void CvPlayer::disband(CvCity* pCity)
+void CvPlayer::disband(CvCity* city)
 {
-	if (getNumCities() == 1)
+	CvPlayer& owner = GET_PLAYER(city->getOwner());
+
+	if (owner.getNumCities() == 1)
 	{
-		setFoundedFirstCity(false);
+		owner.setFoundedFirstCity(false);
 	}
-
-	GC.getGame().addDestroyedCityName(pCity->getName());
-
-	pCity->kill(true);
+	GC.getGame().addDestroyedCityName(city->getName());
+	city->kill(true);
 }
 
 
