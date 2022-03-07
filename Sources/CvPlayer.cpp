@@ -2335,7 +2335,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			);
 		}
 		if (eOriginalOwner == eOldOwner
-		|| GC.getGame().isOption(GAMEOPTION_BARBARIAN_CIV) && pOldCity->isCapital() && eOriginalOwner == GC.getBARBARIAN_PLAYER())
+		|| GC.getGame().isOption(GAMEOPTION_BARBARIAN_CIV) && pOldCity->isCapital() && eOriginalOwner == BARBARIAN_PLAYER)
 		{
 			oldOwner.changeCitiesLost(1);
 		}
@@ -2512,7 +2512,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		}
 
 		if (eOriginalOwner == eOldOwner
-		|| GC.getGame().isOption(GAMEOPTION_BARBARIAN_CIV) && pOldCity->isCapital() && eOriginalOwner == GC.getBARBARIAN_PLAYER())
+		|| GC.getGame().isOption(GAMEOPTION_BARBARIAN_CIV) && pOldCity->isCapital() && eOriginalOwner == BARBARIAN_PLAYER)
 		{
 			oldOwner.changeCitiesLost(1);
 		}
@@ -2703,7 +2703,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			{
 				GC.getGame().setHolyCity((ReligionTypes)iI, pNewCity, false);
 
-				for (int iJ = 0; iJ < GC.getMAX_PC_PLAYERS(); iJ++)
+				for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 				{
 					if (GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iI).getStateReligion() == (ReligionTypes)iI)
 					{
@@ -7754,20 +7754,20 @@ bool CvPlayer::isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvP
 {
 	// Player in general; have tech reqs and not obsolete?
 	if (pPlot == NULL)
-    {
-        if (!GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eRouteBuild).getTechPrereq())
-        || GC.getBuildInfo(eRouteBuild).getObsoleteTech() != NO_TECH
-        && GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eRouteBuild).getObsoleteTech()))
-        {
-            return false;
-        }
-    }
-    else if (pPlot->getRouteType() != eRoute && !canBuild(pPlot, eRouteBuild))
-    {
-        return false;
-    }
+	{
+		if (!GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eRouteBuild).getTechPrereq())
+		|| GC.getBuildInfo(eRouteBuild).getObsoleteTech() != NO_TECH
+		&& GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eRouteBuild).getObsoleteTech()))
+		{
+			return false;
+		}
+	}
+	else if (pPlot->getRouteType() != eRoute && !canBuild(pPlot, eRouteBuild))
+	{
+		return false;
+	}
 	// unit specific query; Cv::Unit canBuild is big func...
-    return pBuilder == NULL || pBuilder->canBuild(pPlot,eRouteBuild);
+	return pBuilder == NULL || pBuilder->canBuild(pPlot,eRouteBuild);
 }
 
 // bConnect = true when looking in general regardless of plot; finding best available route in theory, on city center, etc
@@ -13397,7 +13397,7 @@ void CvPlayer::changeSpecialistExtraCommerce(CommerceTypes eIndex, int iChange)
 
 int CvPlayer::getCommerceFlexibleCount(CommerceTypes eIndex) const
 {
-  	return m_aiCommerceFlexibleCount[eIndex];
+	return m_aiCommerceFlexibleCount[eIndex];
 }
 
 
@@ -13791,7 +13791,7 @@ void CvPlayer::recalculateUnitCounts()
 {
 	PROFILE_FUNC();
 
-    // @SAVEBREAK REPLACE - Toffer
+	// @SAVEBREAK REPLACE - Toffer
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		foreach_(CvUnit* unit, units())
@@ -13813,13 +13813,13 @@ void CvPlayer::recalculateUnitCounts()
 			unit->area()->changePower(getID(), unit->getPowerValueTotal());
 		}
 	}
-    /* REPLACE WITH
+	/* REPLACE WITH
 	foreach_(CvUnit* unit, units())
 	{
 		unit->recalculateUnitUpkeep();
 		unit->area()->changePower(getID(), unit->getPowerValueTotal());
 	}
-    // SAVEBREAK@ */
+	// SAVEBREAK@ */
 }
 
 void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
@@ -28199,9 +28199,9 @@ void CvPlayer::clearModifierTotals()
 	setExtraCityDefense(0);
 	setTraitExtraCityDefense(0);
 
-    // @SAVEBREAK DELETE - Toffer
+	// @SAVEBREAK DELETE - Toffer
 	m_unitCountSM.clear();
-    // SAVEBREAK@ */
+	// SAVEBREAK@ */
 	m_bonusMintedPercent.clear();
 	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();
