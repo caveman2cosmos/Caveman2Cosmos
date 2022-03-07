@@ -39,6 +39,7 @@ public:
 	int getPower(bool bIncludeVassals) const;
 	int64_t getTotalVictoryScore() const;
 
+	bool isAtWar(bool bCountMinors) const;
 	int getAtWarCount(bool bIgnoreMinors) const;
 	int getHasMetCivCount(bool bIgnoreMinors) const;
 	bool isAVassal() const;

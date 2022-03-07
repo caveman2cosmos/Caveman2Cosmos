@@ -30,6 +30,7 @@ void CyTeamPythonInterface()
 
 		.def("getTotalVictoryScore", &CyTeam::getTotalVictoryScore, "int ()")
 
+		.def("isAtWar", &CyTeam::isAtWar, "bool (bool bCountMinors)")
 		.def("getAtWarCount", &CyTeam::getAtWarCount, "int (bool bIgnoreMinors)")
 		.def("getHasMetCivCount", &CyTeam::getHasMetCivCount, "int (bool bIgnoreMinors)")
 		.def("isAVassal", &CyTeam::isAVassal, "bool ()")

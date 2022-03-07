@@ -398,7 +398,7 @@ def cityAdvise(CyCity, iPlayer):
 				if (iTurn + 36) % 40 == iTurnFounded % 40:
 
 					CyArea = CyCity.area()
-					if not CyPlayer.AI_totalAreaUnitAIs(CyArea, UnitAITypes.UNITAI_MISSIONARY) and not GC.getTeam(CyPlayer.getTeam()).getAtWarCount(True):
+					if not CyPlayer.AI_totalAreaUnitAIs(CyArea, UnitAITypes.UNITAI_MISSIONARY) and not GC.getTeam(CyPlayer.getTeam()).isAtWar(False):
 
 						eStateReligion = CyPlayer.getStateReligion()
 

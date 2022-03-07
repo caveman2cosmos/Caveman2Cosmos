@@ -117,7 +117,7 @@ def onEndGameTurn(argsList):
 	for i in xrange(MAX_PC_PLAYERS):
 		playerI = GC.getPlayer(i)
 		if playerI.isRebel():
-			if not GC.getTeam(playerI.getTeam()).getAtWarCount(True):
+			if not GC.getTeam(playerI.getTeam()).isAtWar(False):
 				playerI.setIsRebel(False)
 				if LOG_DEBUG:
 					print "[REV] %s (Player %d) is no longer a rebel due to no wars"%(playerI.getCivilizationDescription(0), i)
@@ -792,7 +792,7 @@ def removeFloatingRebellions():
 
 		print "[REV] Player %d (%s) is a homeless rebel"%(iPlayerX, playerX.getCivilizationDescription(0))
 
-		if not GC.getTeam(playerX.getTeam()).getAtWarCount(True):
+		if not GC.getTeam(playerX.getTeam()).isAtWar(False):
 			print "[REV] Rebel player %d has lost their cause, terminating rebel" % iPlayerX
 			playerX.killUnits()
 

@@ -103,6 +103,11 @@ int CyTeam::getAtWarCount(bool bIgnoreMinors) const
 	return m_pTeam->getAtWarCount(bIgnoreMinors);
 }
 
+bool CyTeam::isAtWar(bool bCountMinors) const
+{
+	return m_pTeam->isAtWar(bCountMinors);
+}
+
 int CyTeam::getHasMetCivCount(bool bIgnoreMinors) const
 {
 	return m_pTeam->getHasMetCivCount(bIgnoreMinors);

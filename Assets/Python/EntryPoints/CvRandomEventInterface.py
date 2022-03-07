@@ -374,7 +374,7 @@ def canTriggerBabyBoom(argsList):
   player = GC.getPlayer(data.ePlayer)
   team = GC.getTeam(player.getTeam())
 
-  if team.getAtWarCount(True) > 0:
+  if team.isAtWar(False):
     return False
 
   for iLoopTeam in xrange(GC.getMAX_PC_TEAMS()):
@@ -844,36 +844,26 @@ def getHelpGreatDepression(argsList):
 ######## CHAMPION ###########
 
 def canTriggerChampion(argsList):
-	data = argsList[0]
-	if GC.getTeam(GC.getPlayer(data.ePlayer).getTeam()).getAtWarCount(True) > 0:
-		return False
-	return True
+	return !GC.getTeam(GC.getPlayer(argsList[0].ePlayer).getTeam()).isAtWar(False)
 
 def canTriggerChampionUnit(argsList):
-  eTrigger = argsList[0]
-  ePlayer = argsList[1]
-  iUnit = argsList[2]
+	unit = GC.getPlayer(argsList[1]).getUnit(argsList[2])
 
-  unit = GC.getPlayer(ePlayer).getUnit(iUnit)
+	if not unit or not unit.canFight():
+		return False
 
-  if unit is None:
-    return False
+	if unit.getDamage() > 0 or unit.getLevel() < 5:
+		return False
 
-  if unit.getDamage() > 0:
-    return False
+	if unit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_LEADERSHIP")):
+		return False
 
-  if unit.getExperience() < 5:
-    return False
+	return True
 
-  if unit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_LEADERSHIP")):
-    return False
-
-  return True
 
 def applyChampion(argsList):
 	data = argsList[1]
-	unit = GC.getPlayer(data.ePlayer).getUnit(data.iUnitId)
-	unit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_LEADERSHIP"), True)
+	GC.getPlayer(data.ePlayer).getUnit(data.iUnitId).setHasPromotion(GC.getInfoTypeForString("PROMOTION_LEADERSHIP"), True)
 
 def getHelpChampion(argsList):
 	data = argsList[1]

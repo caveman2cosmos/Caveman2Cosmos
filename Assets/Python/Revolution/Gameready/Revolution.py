@@ -1738,7 +1738,7 @@ class Revolution:
 			iThresholdPercent += ((4 - iPlayerRank) * 5)
 
 		iNumWars = pTeam.getAtWarCount(True)
-		if( iNumWars > 0 ) :
+		if iNumWars > 0:
 			iThresholdPercent -= (10 + 2*min([iNumWars, 5])) # Afforess - must be inclosed in outer paren, fixes bug
 
 		if( pPlayer.isCurrentResearchRepeat() ) :
@@ -2171,7 +2171,7 @@ class Revolution:
 					+ '\n\n' + TRNSLTR.getText("TXT_KEY_REV_WARN_CIV_WIDE",()) + '\n'
 					+ self.updateCivStability(GAME.getGameTurn(), pPlayer.getID(), bIsRevWatch = True) + '\n\n'
 				)
-				if pTeam.getAtWarCount(True) > 0:
+				if pTeam.isAtWar(False):
 					bodStr += TRNSLTR.getText("TXT_KEY_REV_WARN_WARS",())
 				else:
 					bodStr += TRNSLTR.getText("TXT_KEY_REV_WARN_GLORY",()) + '  '
@@ -6067,7 +6067,7 @@ class Revolution:
 					espPoints /= 2
 				pRevTeam.changeCounterespionageTurnsLeftAgainstTeam(pTeam.getID(), 10)
 				pRevTeam.changeEspionagePointsAgainstTeam(pTeam.getID(), espPoints)
-				pTeam.changeEspionagePointsAgainstTeam(pRevTeam.getID(), espPoints/(3 + pTeam.getAtWarCount(True)))
+				pTeam.changeEspionagePointsAgainstTeam(pRevTeam.getID(), espPoints / (3 + pTeam.getAtWarCount(True)))
 				if self.LOG_DEBUG:
 					print "[REV] Revolt: Giving rebels %d espionage points against motherland" % espPoints
 				if not pRevTeam.isAlive():
