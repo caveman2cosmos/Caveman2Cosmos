@@ -496,7 +496,7 @@ def canTriggerBrothersInNeed(argsList):
 
   for iTeam in xrange(GC.getMAX_PC_TEAMS()):
     if iTeam != player.getTeam() and iTeam != otherPlayer.getTeam() and GC.getTeam(iTeam).isAlive():
-      if GC.getTeam(iTeam).isAtWar(otherPlayer.getTeam()) and not GC.getTeam(iTeam).isAtWar(player.getTeam()):
+      if GC.getTeam(iTeam).isAtWarWith(otherPlayer.getTeam()) and not GC.getTeam(iTeam).isAtWarWith(player.getTeam()):
         return True
 
   return False
@@ -2285,7 +2285,7 @@ def expireCrusade1(argsList):
 	if player.getStateReligion() != data.eReligion:
 		return True
 
-	if not GC.getTeam(player.getTeam()).isAtWar(GC.getPlayer(data.eOtherPlayer).getTeam()):
+	if not GC.getTeam(player.getTeam()).isAtWarWith(GC.getPlayer(data.eOtherPlayer).getTeam()):
 		return True
 
 	return False

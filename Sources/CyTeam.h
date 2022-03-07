@@ -142,7 +142,7 @@ public:
 	void changeExtraMoves(int /*DomainTypes*/ eIndex, int iChange);
 
 	bool isHasMet(int /*TeamTypes*/ eIndex) const;
-	bool isAtWar(int /*TeamTypes*/ eIndex) const;
+	bool isAtWarWith(int /*TeamTypes*/ eIndex) const;
 	bool isPermanentWarPeace(int /*TeamTypes*/ eIndex) const;
 	void setPermanentWarPeace(int /*TeamTypes*/ eIndex, bool bNewValue);
 

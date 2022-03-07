@@ -255,7 +255,7 @@ def cityAdvise(CyCity, iPlayer):
 					CyPlayerX = GC.getPlayer(iPlayerX)
 
 					if GC.getTeam(CyPlayer.getTeam()).isHasMet(CyPlayerX.getTeam()):
-						if not GC.getTeam(CyPlayerX.getTeam()).isAtWar(GAME.getActiveTeam()):
+						if not GC.getTeam(CyPlayerX.getTeam()).isAtWarWith(GAME.getActiveTeam()):
 							popupInfo = CyPopupInfo()
 							popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON)
 							popupInfo.setData1(iCityID)

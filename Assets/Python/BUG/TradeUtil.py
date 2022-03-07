@@ -108,7 +108,7 @@ def canTrade(playerX, playerY):
 		return True
 
 	CyTeamX = GC.getTeam(iTeamX)
-	if not CyTeamX.isHasMet(iTeamY) or CyTeamX.isAtWar(iTeamY):
+	if not CyTeamX.isHasMet(iTeamY) or CyTeamX.isAtWarWith(iTeamY):
 		return False
 
 	bHumanX = playerX.isHuman()
@@ -233,7 +233,7 @@ def getPeaceTradePartners(playerOrID):
 	"""
 	Returns a list of CyPlayers that can sign a peace treaty with <player>.
 	"""
-	return getTradePartnersByTeam(playerOrID, lambda fromTeam, toTeam: toTeam.isAtWar(fromTeam.getID()))
+	return getTradePartnersByTeam(playerOrID, lambda fromTeam, toTeam: toTeam.isAtWarWith(fromTeam.getID()))
 
 def getVassalTradePartners(playerOrID):
 	"""
@@ -257,7 +257,7 @@ def canAcceptVassal(masterTeam, vassalTeam, bAtWar):
 		return False
 	if masterTeam.isAVassal() or vassalTeam.isAVassal():
 		return False
-	if masterTeam.isAtWar(vassalTeam.getID()) != bAtWar:
+	if masterTeam.isAtWarWith(vassalTeam.getID()) != bAtWar:
 		return False
 	# master must possess tech
 	return masterTeam.isVassalStateTrading()

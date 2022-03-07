@@ -261,7 +261,7 @@ class CvDiplomacy:
 			CyTeamAct = GC.getTeam(iTeamAct)
 			for iPlayerX in range(GC.getMAX_PC_PLAYERS()):
 				CyPlayerX = GC.getPlayer(iPlayerX)
-				if CyPlayerX.isAlive() and CyTeamAct.isAtWar(CyPlayerX.getTeam()):
+				if CyPlayerX.isAlive() and CyTeamAct.isAtWarWith(CyPlayerX.getTeam()):
 					for CyCity in CyPlayerX.cities():
 						if CyCity.isRevealed(iTeamAct, False):
 							self.addUserComment("USER_DIPLOCOMMENT_TARGET_CITY", iPlayerX, CyCity.getID(), CyCity.getNameKey())

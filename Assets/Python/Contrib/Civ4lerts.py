@@ -804,7 +804,7 @@ class RefusesToTalk(AbstractStatefulAlert):
 			if not CyPlayerX.isAlive() or CyPlayerX.isHuman() or CyPlayerX.isMinorCiv(): continue
 
 			iTeamX = CyPlayerX.getTeam()
-			if iTeamX == iTeam or not CyTeam.isHasMet(iTeamX) or CyTeam.isAtWar(iTeamX): continue
+			if iTeamX == iTeam or not CyTeam.isHasMet(iTeamX) or CyTeam.isAtWarWith(iTeamX): continue
 
 			if not CyPlayerX.AI_isWillingToTalk(iPlayer):
 				aSet.add(CyPlayerX.getID())

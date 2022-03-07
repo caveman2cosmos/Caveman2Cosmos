@@ -547,7 +547,7 @@ bool CyTeam::isHasMet(int /*TeamTypes*/ eIndex) const
 	return m_pTeam->isHasMet((TeamTypes)eIndex);
 }
 
-bool CyTeam::isAtWar(int /*TeamTypes*/ iIndex) const
+bool CyTeam::isAtWarWith(int /*TeamTypes*/ iIndex) const
 {
 	return iIndex != NO_TEAM ? m_pTeam->isAtWar((TeamTypes)iIndex) : false;
 }

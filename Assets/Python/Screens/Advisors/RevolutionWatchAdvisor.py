@@ -1174,7 +1174,7 @@ class RevolutionWatchAdvisor:
 		team = gc.getTeam(gc.getGame().getActiveTeam())
 
 		for iTeamX in range(gc.getMAX_TEAMS()):
-			if team.isAtWar(iTeamX):
+			if team.isAtWarWith(iTeamX):
 				if city.isVisible(iTeamX, False):
 					return self.angryIcon
 		return ""
