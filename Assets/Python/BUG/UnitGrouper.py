@@ -220,7 +220,7 @@ class LocationGrouping(Grouping):
 					return (self.TEAM_CITY,)
 				else:
 					return (self.TEAM_TERRITORY,)
-			elif team.isAtWar(ownerTeamId):
+			elif team.isAtWarWith(ownerTeamId):
 				return (self.ENEMY_TERRITORY,)
 			else:
 				if plot.isCity():

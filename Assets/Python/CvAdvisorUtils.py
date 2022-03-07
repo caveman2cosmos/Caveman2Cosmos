@@ -255,7 +255,7 @@ def cityAdvise(CyCity, iPlayer):
 					CyPlayerX = GC.getPlayer(iPlayerX)
 
 					if GC.getTeam(CyPlayer.getTeam()).isHasMet(CyPlayerX.getTeam()):
-						if not GC.getTeam(CyPlayerX.getTeam()).isAtWar(GAME.getActiveTeam()):
+						if not GC.getTeam(CyPlayerX.getTeam()).isAtWarWith(GAME.getActiveTeam()):
 							popupInfo = CyPopupInfo()
 							popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON)
 							popupInfo.setData1(iCityID)
@@ -398,7 +398,7 @@ def cityAdvise(CyCity, iPlayer):
 				if (iTurn + 36) % 40 == iTurnFounded % 40:
 
 					CyArea = CyCity.area()
-					if not CyPlayer.AI_totalAreaUnitAIs(CyArea, UnitAITypes.UNITAI_MISSIONARY) and not GC.getTeam(CyPlayer.getTeam()).getAtWarCount(True):
+					if not CyPlayer.AI_totalAreaUnitAIs(CyArea, UnitAITypes.UNITAI_MISSIONARY) and not GC.getTeam(CyPlayer.getTeam()).isAtWar(False):
 
 						eStateReligion = CyPlayer.getStateReligion()
 

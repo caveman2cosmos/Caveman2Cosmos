@@ -529,7 +529,7 @@ class CvDomesticAdvisor:
 		CyTeam = GC.getTeam(iTeam)
 
 		for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
-			if iTeamX != iTeam and CyTeam.isAtWar(iTeamX) and CyCity.isVisible(iTeamX, False):
+			if iTeamX != iTeam and CyTeam.isAtWarWith(iTeamX) and CyCity.isVisible(iTeamX, False):
 				return unichr(8867)
 		return ""
 

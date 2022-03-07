@@ -39,6 +39,7 @@ public:
 	int getPower(bool bIncludeVassals) const;
 	int64_t getTotalVictoryScore() const;
 
+	bool isAtWar(bool bCountMinors) const;
 	int getAtWarCount(bool bIgnoreMinors) const;
 	int getHasMetCivCount(bool bIgnoreMinors) const;
 	bool isAVassal() const;
@@ -142,7 +143,7 @@ public:
 	void changeExtraMoves(int /*DomainTypes*/ eIndex, int iChange);
 
 	bool isHasMet(int /*TeamTypes*/ eIndex) const;
-	bool isAtWar(int /*TeamTypes*/ eIndex) const;
+	bool isAtWarWith(int /*TeamTypes*/ eIndex) const;
 	bool isPermanentWarPeace(int /*TeamTypes*/ eIndex) const;
 	void setPermanentWarPeace(int /*TeamTypes*/ eIndex, bool bNewValue);
 
