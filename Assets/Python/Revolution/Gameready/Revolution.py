@@ -2008,7 +2008,7 @@ class Revolution:
 
 	def checkForRevolution(self, iGameTurn, iPlayer):
 
-		if iPlayer > 39:
+		if iPlayer >= GC.getMAX_PC_PLAYERS():
 			raise "NPC does not revolt!"
 
 		pPlayer = GC.getPlayer(iPlayer)

@@ -1049,7 +1049,7 @@ def assimilateHandler(iPlayerID, netUserData, popupReturn):
 # Small revolts are short duration disorder striking a city, shutting down production and culture, etc.
 def doSmallRevolts(iPlayer, CyPlayer):
 
-	if iPlayer > 39:
+	if iPlayer >= GC.getMAX_PC_PLAYERS():
 		raise "NPC does not revolt!"
 
 	for city in CyPlayer.cities():
