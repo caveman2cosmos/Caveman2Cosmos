@@ -219,13 +219,14 @@ def endTurnFeats(iPlayer):
 							szBonusList += TRNSLTR.getText("TXT_KEY_OR", ())
 
 					szFounder = GC.getUnitInfo(item[2]).getTextKey()
+					szCorporation = GC.getCorporationInfo(item[0]).getTextKey()
 
 					if not GAME.isNetworkMultiPlayer() and iPlayer == GAME.getActivePlayer() and CyPlayer.isOption(PlayerOptionTypes.PLAYEROPTION_ADVISOR_POPUPS):
 						popupInfo = CyPopupInfo()
 						popupInfo.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON)
 						popupInfo.setData1(FeatTypes.FEAT_CORPORATION_ENABLED)
 						popupInfo.setData2(CyCity0.getID())
-						popupInfo.setText(TRNSLTR.getText("TXT_KEY_FEAT_CORPORATION_ENABLED", (item[0], szFounder, szBonusList)))
+						popupInfo.setText(TRNSLTR.getText("TXT_KEY_FEAT_CORPORATION_ENABLED", (szCorporation, szFounder, szBonusList)))
 						popupInfo.setOnClickedPythonCallback("featAccomplishedOnClickedCallback")
 						popupInfo.setOnFocusPythonCallback("featAccomplishedOnFocusCallback")
 						popupInfo.addPythonButton(TRNSLTR.getText("TXT_KEY_FEAT_ACCOMPLISHED_OK", ()), "")

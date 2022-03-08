@@ -844,7 +844,7 @@ def getHelpGreatDepression(argsList):
 ######## CHAMPION ###########
 
 def canTriggerChampion(argsList):
-	return !GC.getTeam(GC.getPlayer(argsList[0].ePlayer).getTeam()).isAtWar(False)
+	return not GC.getTeam(GC.getPlayer(argsList[0].ePlayer).getTeam()).isAtWar(False)
 
 def canTriggerChampionUnit(argsList):
 	unit = GC.getPlayer(argsList[1]).getUnit(argsList[2])
