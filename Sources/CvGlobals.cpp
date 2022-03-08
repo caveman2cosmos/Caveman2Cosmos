@@ -1738,6 +1738,18 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_CAPTIVE_UPGRADE_TO_NEANDERTHAL_TRACKER);
 }
 
+#define	REGISTER_NPC(x)	setInfoTypeFromString(#x,x)
+
+void cvInternalGlobals::registerNPCPlayers()
+{
+	REGISTER_NPC(BEAST_PLAYER);
+	REGISTER_NPC(PREDATOR_PLAYER);
+	REGISTER_NPC(PREY_PLAYER);
+	REGISTER_NPC(INSECT_PLAYER);
+	REGISTER_NPC(NEANDERTHAL_PLAYER);
+	REGISTER_NPC(BARBARIAN_PLAYER);
+}
+
 CvInfoBase& cvInternalGlobals::getAttitudeInfo(AttitudeTypes eAttitudeNum) const
 {
 	FASSERT_BOUNDS(0, NUM_ATTITUDE_TYPES, eAttitudeNum);
