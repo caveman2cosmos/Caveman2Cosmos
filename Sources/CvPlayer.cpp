@@ -2309,7 +2309,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	);
 	const int iX = pOldCity->getX();
 	const int iY = pOldCity->getY();
-	const wchar_t* cityName = pOldCity->getNameKey();
+	const CvWString cityName = pOldCity->getNameKey();
 
 	int iCaptureGold = 0;
 
@@ -2328,14 +2328,14 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		{
 			AddDLLMessage(
 				eNewOwner, true, GC.getEVENT_MESSAGE_TIME(),
-				gDLL->getText("TXT_KEY_MISC_PILLAGED_CITY_RAZED", iCaptureGold, cityName),
+				gDLL->getText("TXT_KEY_MISC_PILLAGED_CITY_RAZED", iCaptureGold, cityName.GetCString()),
 				"AS2D_CITYRAZE", MESSAGE_TYPE_MAJOR_EVENT,
 				ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(),
 				GC.getCOLOR_GREEN(), iX, iY, true, true
 			);
 		}
 		if (eOriginalOwner == eOldOwner
-		|| GC.getGame().isOption(GAMEOPTION_BARBARIAN_CIV) && pOldCity->isCapital() && eOriginalOwner == GC.getBARBARIAN_PLAYER())
+		|| GC.getGame().isOption(GAMEOPTION_BARBARIAN_CIV) && pOldCity->isCapital() && eOriginalOwner == BARBARIAN_PLAYER)
 		{
 			oldOwner.changeCitiesLost(1);
 		}
@@ -2351,7 +2351,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				{
 					AddDLLMessage(
 						eNewOwner, true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_PILLAGED_CITY_CAPTURED", iCaptureGold, cityName),
+						gDLL->getText("TXT_KEY_MISC_PILLAGED_CITY_CAPTURED", iCaptureGold, cityName.GetCString()),
 						"AS2D_CITYRAZE", MESSAGE_TYPE_MAJOR_EVENT,
 						ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(),
 						GC.getCOLOR_GREEN(), iX, iY, true, true
@@ -2361,7 +2361,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				{
 					AddDLLMessage(
 						eNewOwner, true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_CAPTURED_CITY", cityName),
+						gDLL->getText("TXT_KEY_MISC_CAPTURED_CITY", cityName.GetCString()),
 						"AS2D_CITYCAPTURE", MESSAGE_TYPE_MAJOR_EVENT,
 						ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(),
 						GC.getCOLOR_GREEN(), iX, iY, true, true
@@ -2512,7 +2512,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		}
 
 		if (eOriginalOwner == eOldOwner
-		|| GC.getGame().isOption(GAMEOPTION_BARBARIAN_CIV) && pOldCity->isCapital() && eOriginalOwner == GC.getBARBARIAN_PLAYER())
+		|| GC.getGame().isOption(GAMEOPTION_BARBARIAN_CIV) && pOldCity->isCapital() && eOriginalOwner == BARBARIAN_PLAYER)
 		{
 			oldOwner.changeCitiesLost(1);
 		}
@@ -2703,7 +2703,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			{
 				GC.getGame().setHolyCity((ReligionTypes)iI, pNewCity, false);
 
-				for (int iJ = 0; iJ < GC.getMAX_PC_PLAYERS(); iJ++)
+				for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 				{
 					if (GET_PLAYER((PlayerTypes)iJ).isAlive() && GET_PLAYER((PlayerTypes)iI).getStateReligion() == (ReligionTypes)iI)
 					{
@@ -6079,16 +6079,16 @@ void CvPlayer::raze(CvCity* pCity)
 }
 
 
-void CvPlayer::disband(CvCity* pCity)
+void CvPlayer::disband(CvCity* city)
 {
-	if (getNumCities() == 1)
+	CvPlayer& owner = GET_PLAYER(city->getOwner());
+
+	if (owner.getNumCities() == 1)
 	{
-		setFoundedFirstCity(false);
+		owner.setFoundedFirstCity(false);
 	}
-
-	GC.getGame().addDestroyedCityName(pCity->getName());
-
-	pCity->kill(true);
+	GC.getGame().addDestroyedCityName(city->getName());
+	city->kill(true);
 }
 
 
@@ -7754,20 +7754,20 @@ bool CvPlayer::isRouteValid(RouteTypes eRoute, BuildTypes eRouteBuild, const CvP
 {
 	// Player in general; have tech reqs and not obsolete?
 	if (pPlot == NULL)
-    {
-        if (!GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eRouteBuild).getTechPrereq())
-        || GC.getBuildInfo(eRouteBuild).getObsoleteTech() != NO_TECH
-        && GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eRouteBuild).getObsoleteTech()))
-        {
-            return false;
-        }
-    }
-    else if (pPlot->getRouteType() != eRoute && !canBuild(pPlot, eRouteBuild))
-    {
-        return false;
-    }
+	{
+		if (!GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eRouteBuild).getTechPrereq())
+		|| GC.getBuildInfo(eRouteBuild).getObsoleteTech() != NO_TECH
+		&& GET_TEAM(getTeam()).isHasTech(GC.getBuildInfo(eRouteBuild).getObsoleteTech()))
+		{
+			return false;
+		}
+	}
+	else if (pPlot->getRouteType() != eRoute && !canBuild(pPlot, eRouteBuild))
+	{
+		return false;
+	}
 	// unit specific query; Cv::Unit canBuild is big func...
-    return pBuilder == NULL || pBuilder->canBuild(pPlot,eRouteBuild);
+	return pBuilder == NULL || pBuilder->canBuild(pPlot,eRouteBuild);
 }
 
 // bConnect = true when looking in general regardless of plot; finding best available route in theory, on city center, etc
@@ -13397,7 +13397,7 @@ void CvPlayer::changeSpecialistExtraCommerce(CommerceTypes eIndex, int iChange)
 
 int CvPlayer::getCommerceFlexibleCount(CommerceTypes eIndex) const
 {
-  	return m_aiCommerceFlexibleCount[eIndex];
+	return m_aiCommerceFlexibleCount[eIndex];
 }
 
 
@@ -13791,7 +13791,7 @@ void CvPlayer::recalculateUnitCounts()
 {
 	PROFILE_FUNC();
 
-    // @SAVEBREAK REPLACE - Toffer
+	// @SAVEBREAK REPLACE - Toffer
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		foreach_(CvUnit* unit, units())
@@ -13813,13 +13813,13 @@ void CvPlayer::recalculateUnitCounts()
 			unit->area()->changePower(getID(), unit->getPowerValueTotal());
 		}
 	}
-    /* REPLACE WITH
+	/* REPLACE WITH
 	foreach_(CvUnit* unit, units())
 	{
 		unit->recalculateUnitUpkeep();
 		unit->area()->changePower(getID(), unit->getPowerValueTotal());
 	}
-    // SAVEBREAK@ */
+	// SAVEBREAK@ */
 }
 
 void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
@@ -28199,9 +28199,9 @@ void CvPlayer::clearModifierTotals()
 	setExtraCityDefense(0);
 	setTraitExtraCityDefense(0);
 
-    // @SAVEBREAK DELETE - Toffer
+	// @SAVEBREAK DELETE - Toffer
 	m_unitCountSM.clear();
-    // SAVEBREAK@ */
+	// SAVEBREAK@ */
 	m_bonusMintedPercent.clear();
 	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();

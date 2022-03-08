@@ -230,9 +230,7 @@
 				<BonusType>BONUS_GOLD_ORE</BonusType>
 				<BonusType>BONUS_SILVER_ORE</BonusType>
 				<BonusType>BONUS_PEARLS</BonusType>
-				<BonusType>BONUS_DIAMOND</BonusType>
-				<BonusType>BONUS_RUBIES</BonusType>
-				<BonusType>BONUS_SAPPHIRES</BonusType>
+				<BonusType>BONUS_GEMSTONE</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>
@@ -375,6 +373,7 @@
 				<BonusType>BONUS_SHEEP</BonusType>
 				<BonusType>BONUS_POTATOES</BonusType>
 				<BonusType>BONUS_WHEAT</BonusType>
+				<BonusType>BONUS_SALT</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>
@@ -676,6 +675,7 @@
 				<BonusType>BONUS_SUGAR</BonusType>
 				<BonusType>BONUS_SPICES</BonusType>
 				<BonusType>BONUS_TEA</BonusType>
+				<BonusType>BONUS_SALT</BonusType>
 			</PrereqBonuses>
 			<HeadquarterCommerces>
 				<iHeadquarterCommerce>4</iHeadquarterCommerce>

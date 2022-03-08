@@ -3831,6 +3831,10 @@
 		<Polish>Człowiek neandertalski, neandertalczyk - wymarły przedstawiciel rodzaju Homo (człowiek), znany z plejstocenu (ok. 400 000 do ok. 24 500 lat temu), w zależności od autorów klasyfikowany jako podgatunekczłowieka rozumnego - Homo sapiens neanderthalensis - lub odrębny od niego gatunek - Homo neanderthalensis.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_HELP</Tag>
+		<English>WARNING: This world wonder gives you Neanderthal units, but you can't build criminal units in Prehistoric era</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_X_NEPALESE</Tag>
 		<English>Culture (Nepalese)</English>
 		<French>

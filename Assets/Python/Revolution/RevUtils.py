@@ -188,7 +188,7 @@ def getSpawnablePlots( iPlotX, iPlotY, pSpawnPlayer, bLand = True, bIncludePlot 
 			# When iSpawnPlotOwner > -1, plot owner must be either iSpawnPlotOwner, iBasePlotOwner, or no one
 			if (iSpawnPlotOwner < 0 or pPlot.getOwner() in (iSpawnPlotOwner, iBasePlotOwner, -1)
 			or
-				bAtWarPlots and GC.getTeam(pSpawnPlayer.getTeam()).isAtWar(GC.getPlayer(pPlot.getOwner()).getTeam())
+				bAtWarPlots and GC.getTeam(pSpawnPlayer.getTeam()).isAtWarWith(GC.getPlayer(pPlot.getOwner()).getTeam())
 			or
 				bOpenBordersPlots and GC.getTeam(pSpawnPlayer.getTeam()).isOpenBorders(GC.getPlayer(pPlot.getOwner()).getTeam())
 			):
@@ -204,7 +204,7 @@ def getEnemyUnits( iPlotX, iPlotY, iEnemyOfPlayer, domain = -1, bOnlyMilitary = 
 
 	for pUnit in GC.getMap().plot(iPlotX,iPlotY).units():
 		pUnitTeam = GC.getTeam( pUnit.getTeam() )
-		if( pEnemyOfTeam.isAtWar(pUnit.getTeam()) ) :
+		if( pEnemyOfTeam.isAtWarWith(pUnit.getTeam()) ) :
 			if( domain < 0 or pUnit.getDomainType() == domain ) :
 				if( not bOnlyMilitary or pUnit.canFight() ) :
 					enemyUnits.append( pUnit )
@@ -387,7 +387,7 @@ def computeWarOdds(CyPlayerA, CyPlayerB, CyArea, allowAttackerVassal=True, allow
 		if iTeamA == iTeamB:
 			return [-50, CyTeamA, CyTeamB]
 
-		if CyTeamA.isAtWar(iTeamB):
+		if CyTeamA.isAtWarWith(iTeamB):
 			return [100, CyTeamA, CyTeamB]
 
 		warOdds = 0

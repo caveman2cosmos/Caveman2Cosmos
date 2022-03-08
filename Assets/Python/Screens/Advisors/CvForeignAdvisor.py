@@ -421,7 +421,7 @@ class CvForeignAdvisor:
 					szName = self.getNextWidget()
 					screen.addLineGFC(DrawCtrl, szName, int(fX0), int(fY0), int(fX1), int(fY1), aColMap["CYAN"])
 				elif CyTeamY.isHasMet(iTeamX):
-					if CyTeamY.isAtWar(iTeamX):
+					if CyTeamY.isAtWarWith(iTeamX):
 						szName = self.getNextWidget()
 						screen.addLineGFC(DrawCtrl, szName, int(fX0), int(fY0), int(fX1), int(fY1), aColMap["RED"])
 					else:
@@ -502,7 +502,7 @@ class CvForeignAdvisor:
 
 				iOff = 14
 				szTxt = aSmileyList[CyPlayerY.AI_getAttitude(iPlayerX)]
-				if CyTeamX.isAtWar(iTeamY):
+				if CyTeamX.isAtWarWith(iTeamY):
 					szTxt += self.charWar
 					iOff -= 10
 					if not (CyPlayerY.isHuman() or CyPlayerY.AI_isWillingToTalk(iPlayerX)):

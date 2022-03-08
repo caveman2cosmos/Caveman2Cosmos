@@ -30,6 +30,7 @@ void CyTeamPythonInterface()
 
 		.def("getTotalVictoryScore", &CyTeam::getTotalVictoryScore, "int ()")
 
+		.def("isAtWar", &CyTeam::isAtWar, "bool (bool bCountMinors)")
 		.def("getAtWarCount", &CyTeam::getAtWarCount, "int (bool bIgnoreMinors)")
 		.def("getHasMetCivCount", &CyTeam::getHasMetCivCount, "int (bool bIgnoreMinors)")
 		.def("isAVassal", &CyTeam::isAVassal, "bool ()")
@@ -131,7 +132,7 @@ void CyTeamPythonInterface()
 		.def("changeExtraMoves", &CyTeam::changeExtraMoves, "void (int /*DomainTypes*/ eIndex, int iChange)")
 
 		.def("isHasMet", &CyTeam::isHasMet, "bool (int /*TeamTypes*/ eIndex)")
-		.def("isAtWar", &CyTeam::isAtWar, "bool (int /*TeamTypes*/ eIndex)")
+		.def("isAtWarWith", &CyTeam::isAtWarWith, "bool (int /*TeamTypes*/ eIndex)")
 		.def("isPermanentWarPeace", &CyTeam::isPermanentWarPeace, "bool (int /*TeamTypes*/ eIndex)")
 		.def("setPermanentWarPeace", &CyTeam::setPermanentWarPeace, "void (int /*TeamTypes*/ eIndex, bool bNewValue)")
 		.def("isOpenBorders", &CyTeam::isOpenBorders, "bool (TeamTypes)")

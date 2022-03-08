@@ -1228,6 +1228,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<bAutoBuild>1</bAutoBuild>
+			<bPrereqPower>1</bPrereqPower>
 			<ArtDefineTag>ART_DEF_BUILDING_PLASTIC_PROVIDER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1478,6 +1479,7 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<bAutoBuild>1</bAutoBuild>
+			<bPrereqPower>1</bPrereqPower>
 			<ArtDefineTag>ART_DEF_BUILDING_SMART_MEDICINE_PROVIDER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>

@@ -374,7 +374,7 @@ def canTriggerBabyBoom(argsList):
   player = GC.getPlayer(data.ePlayer)
   team = GC.getTeam(player.getTeam())
 
-  if team.getAtWarCount(True) > 0:
+  if team.isAtWar(False):
     return False
 
   for iLoopTeam in xrange(GC.getMAX_PC_TEAMS()):
@@ -496,7 +496,7 @@ def canTriggerBrothersInNeed(argsList):
 
   for iTeam in xrange(GC.getMAX_PC_TEAMS()):
     if iTeam != player.getTeam() and iTeam != otherPlayer.getTeam() and GC.getTeam(iTeam).isAlive():
-      if GC.getTeam(iTeam).isAtWar(otherPlayer.getTeam()) and not GC.getTeam(iTeam).isAtWar(player.getTeam()):
+      if GC.getTeam(iTeam).isAtWarWith(otherPlayer.getTeam()) and not GC.getTeam(iTeam).isAtWarWith(player.getTeam()):
         return True
 
   return False
@@ -844,36 +844,26 @@ def getHelpGreatDepression(argsList):
 ######## CHAMPION ###########
 
 def canTriggerChampion(argsList):
-	data = argsList[0]
-	if GC.getTeam(GC.getPlayer(data.ePlayer).getTeam()).getAtWarCount(True) > 0:
-		return False
-	return True
+	return !GC.getTeam(GC.getPlayer(argsList[0].ePlayer).getTeam()).isAtWar(False)
 
 def canTriggerChampionUnit(argsList):
-  eTrigger = argsList[0]
-  ePlayer = argsList[1]
-  iUnit = argsList[2]
+	unit = GC.getPlayer(argsList[1]).getUnit(argsList[2])
 
-  unit = GC.getPlayer(ePlayer).getUnit(iUnit)
+	if not unit or not unit.canFight():
+		return False
 
-  if unit is None:
-    return False
+	if unit.getDamage() > 0 or unit.getLevel() < 5:
+		return False
 
-  if unit.getDamage() > 0:
-    return False
+	if unit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_LEADERSHIP")):
+		return False
 
-  if unit.getExperience() < 5:
-    return False
+	return True
 
-  if unit.isHasPromotion(GC.getInfoTypeForString("PROMOTION_LEADERSHIP")):
-    return False
-
-  return True
 
 def applyChampion(argsList):
 	data = argsList[1]
-	unit = GC.getPlayer(data.ePlayer).getUnit(data.iUnitId)
-	unit.setHasPromotion(GC.getInfoTypeForString("PROMOTION_LEADERSHIP"), True)
+	GC.getPlayer(data.ePlayer).getUnit(data.iUnitId).setHasPromotion(GC.getInfoTypeForString("PROMOTION_LEADERSHIP"), True)
 
 def getHelpChampion(argsList):
 	data = argsList[1]
@@ -2285,7 +2275,7 @@ def expireCrusade1(argsList):
 	if player.getStateReligion() != data.eReligion:
 		return True
 
-	if not GC.getTeam(player.getTeam()).isAtWar(GC.getPlayer(data.eOtherPlayer).getTeam()):
+	if not GC.getTeam(player.getTeam()).isAtWarWith(GC.getPlayer(data.eOtherPlayer).getTeam()):
 		return True
 
 	return False
