@@ -9929,7 +9929,7 @@ bool CvUnit::canStealPlans(const CvPlot* pPlot, bool bTestVisible) const
 		return false;
 	}
 
-	if (pPlot->getTeam() == getTeam())
+	if (pPlot->getTeam() == getTeam() || pPlot->isNPC())
 	{
 		return false;
 	}
