@@ -196,12 +196,12 @@ public:
 	bool isSS_BRIBE() const { return GC.isSS_BRIBE(); }
 	bool isSS_ASSASSINATE() const { return GC.isSS_ASSASSINATE(); }
 
-	int getMAX_PC_PLAYERS() const { return GC.getMAX_PC_PLAYERS(); }
-	int getMAX_PLAYERS() const { return GC.getMAX_PLAYERS(); }
-	int getMAX_PC_TEAMS() const { return GC.getMAX_PC_TEAMS(); }
-	int getMAX_TEAMS() const { return GC.getMAX_TEAMS(); }
-	int getBARBARIAN_PLAYER() const { return GC.getBARBARIAN_PLAYER(); }
-	int getBARBARIAN_TEAM() const { return GC.getBARBARIAN_TEAM(); }
+	int getMAX_PC_PLAYERS() const { return MAX_PC_PLAYERS; }
+	int getMAX_PLAYERS() const { return MAX_PLAYERS; }
+	int getMAX_PC_TEAMS() const { return MAX_PC_TEAMS; }
+	int getMAX_TEAMS() const { return MAX_TEAMS; }
+	int getBARBARIAN_PLAYER() const { return BARBARIAN_PLAYER; }
+	int getBARBARIAN_TEAM() const { return BARBARIAN_TEAM; }
 
 	int getNUM_CITY_PLOTS() const { return NUM_CITY_PLOTS; }
 
