@@ -4,7 +4,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_NATIVE</Type>
 			<UnitType>UNIT_LOCUST</UnitType>
-			<PlayerType>43</PlayerType>
+			<PlayerType>INSECT_PLAYER</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>600</iTurns>
 			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
@@ -24,7 +24,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_LARGE_NATIVE</Type>
 			<UnitType>UNIT_LOCUST_LARGE_SWARM</UnitType>
-			<PlayerType>43</PlayerType>
+			<PlayerType>INSECT_PLAYER</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>800</iTurns>
 			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
@@ -44,7 +44,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_HUGE_NATIVE</Type>
 			<UnitType>UNIT_LOCUST_HUGE_SWARM</UnitType>
-			<PlayerType>43</PlayerType>
+			<PlayerType>INSECT_PLAYER</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>1200</iTurns>
 			<iMinAreaPlotsPerPlayerUnit>10</iMinAreaPlotsPerPlayerUnit>
