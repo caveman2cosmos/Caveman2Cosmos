@@ -7422,7 +7422,7 @@ bool CvSpawnInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"ObsoleteTech");
 	m_eObsoleteTechType = (TechTypes) pXML->GetInfoClass(szTextVal);
 
-	pXML->GetOptionalChildXmlValByName(&m_iPlayerType, L"PlayerType");
+	pXML->GetOptionalTypeEnum(m_iPlayerType, L"PlayerType");
 
 	pXML->GetOptionalChildXmlValByName(&m_iTurns, L"iTurns");
 	pXML->GetOptionalChildXmlValByName(&m_iGlobalTurns, L"iGlobalTurns", -1);

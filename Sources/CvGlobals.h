@@ -516,6 +516,7 @@ public:
 	void registerPropertyInteractions();
 	void registerPropertyPropagators();
 	void registerMissions();
+	void registerNPCPlayers();
 
 	CvInfoBase& getAttitudeInfo(AttitudeTypes eAttitudeNum) const;
 
