@@ -29986,7 +29986,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_RELIGIOUS_VICTORY</Tag>
-		<English>Religious Leader (Diplomatic Victory)</English>
+		<English>Religious Leader (Diplomatic Victory if Mastery victory is off)</English>
 		<French>Chef religieux (Victoire diplomatique)</French>
 		<German>Religiöser Führer (Diplomatischer Sieg)</German>
 		<Italian>Leader religioso (Vittoria diplomatica)</Italian>
@@ -30052,7 +30052,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_VICTORY</Tag>
-		<English>U.N. Election (Diplomatic Victory)</English>
+		<English>U.N. Election (Diplomatic Victory if Mastery victory is off)</English>
 		<French>Election ONU (Victoire diplomatique)</French>
 		<German>U.N.-Wahl (Diplomatischer Sieg)</German>
 		<Italian>Elezione ONU (Vittoria diplomatica)</Italian>

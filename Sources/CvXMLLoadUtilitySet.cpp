@@ -779,6 +779,8 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 {
 	OutputDebugString("Loading PreMenu Infos: Start\n");
 
+	GC.registerNPCPlayers();
+
 	//ReplacementStep: search down here for 'InfoReplacements()'
 	if (!CreateFXml())
 	{
