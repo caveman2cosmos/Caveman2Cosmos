@@ -14631,7 +14631,6 @@
 				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
 				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
 				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-				<BuildType>BUILD_SALT_GATHERER</BuildType>
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
@@ -16821,7 +16820,6 @@
 				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
 				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
 				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-				<BuildType>BUILD_SALT_GATHERER</BuildType>
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
@@ -21792,7 +21790,6 @@
 				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
 				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
 				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-				<BuildType>BUILD_SALT_GATHERER</BuildType>
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
@@ -23615,7 +23612,6 @@
 				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
 				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
 				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-				<BuildType>BUILD_SALT_GATHERER</BuildType>
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
@@ -40346,7 +40342,6 @@
 				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
 				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
 				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-				<BuildType>BUILD_SALT_GATHERER</BuildType>
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
@@ -41083,7 +41078,6 @@
 				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
 				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
 				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-				<BuildType>BUILD_SALT_GATHERER</BuildType>
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->

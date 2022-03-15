@@ -780,14 +780,6 @@
 		<Russian>Ñòðîèòü [LINK=ROUTE_ROAD]Äîðîãà[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SALT_GATHERER</Tag>
-		<English>Build [LINK=IMPROVEMENT_SALT_GATHERER]Salt Gatherer[\LINK]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_SALT_GATHERER_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_SALT_GATHERER]Salt Gatherer[\LINK] (Consumed)</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_SANITIZE</Tag>
 		<English>Remove [LINK=FEATURE_INFECTIOUS_SMOG]Biological Contamination[\LINK]</English>
 	</TEXT>

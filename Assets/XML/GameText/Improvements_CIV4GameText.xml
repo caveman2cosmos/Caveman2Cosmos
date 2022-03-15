@@ -1791,19 +1791,6 @@
 		<Russian>Åñëè îêðåñòíîñòè ãîðîäà êðàéíå áåäíû áîóñíûìè ðåñóðñàìè è ïðèíîñÿò ìàëî äîõîäà, òî ïîñòðîéêà Ìîàè, Ãåîãëèôà, Êàìåííîãî êðóãà, Ìåçîàìåðèêàíñêîãî õðàìà, Àçèàòñêîãî õðàìà, Çèêêóðàòà èëè Ïèðàìèä â çàâèñèìîñòè ðåãèîíàëüíîé êóëüòóðû ðåøèò ýòó ïðîáëåìó. Ýòè ñâÿòûíè áóäóò ãåíåðèðîâàòü äîõîäû îò êîììåðöèè è êóëüòóðó â îêðåñòíîñòÿõ, âêëþ÷àÿ îñîáûå çäàíèÿ â áëèæàéøèõ ãîðîäàõ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_SALT_GATHERER</Tag>
-		<English>Salt Gatherer</English>
-		<French>Récolteur de Sel</French>
-		<Polish>Zbieracz Soli</Polish>
-		<Russian>Ñîëÿíîé êàðüåð</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_SALT_MINE_PEDIA</Tag>
-		<English>New ideas from the Shire book "The Salt Industry" by Andrew and Annelise Fielding.</English>
-		<Polish>Kopalnia soli - kopalnia eksploatująca złoże solne typowymi wyrobiskami górniczymi (głębinowymi) w odróżnieniu od kopalni solankowej.</Polish>
-		<Russian>Новые идеи из книги Шира «Соляная промышленность» Эндрю и Аннелиз Филдинг.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SANITIZE_PEDIA</Tag>
 		<English>Sanitizes an ocean or coast plot of its infection, restoring it to perfect health.</English>
 		<French>Assainit une case d'océan ou de côtes de ces infections, lui restaurant des conditions sanitaires parfaites.</French>

@@ -1426,39 +1426,6 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/fossil_dig_site.dds</Button>
 		</BuildInfo>
-		<!-- Salt Gatherer* (No Kill) -> Quarry (Information Lifestyle Obsolete) -->
-		<BuildInfo>
-			<Type>BUILD_SALT_GATHERER</Type>
-			<Description>TXT_KEY_BUILD_SALT_GATHERER</Description>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<!-- In atomic era, modern windmill and solar panels work on plain Salt Flats terrain, both better than this -->
-			<ObsoleteTech>TECH_INFORMATION_LIFESTYLE</ObsoleteTech>
-			<iTime>200</iTime>
-			<iCost>3</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_S</HotKey>
-			<bShiftDown>1</bShiftDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
-		</BuildInfo>
-		<!-- Salt Gatherer* (Kill) -> Quarry -->
-		<BuildInfo>
-			<Type>BUILD_SALT_GATHERER_KILL</Type>
-			<Description>TXT_KEY_BUILD_SALT_GATHERER_KILL</Description>
-			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
-			<iTime>200</iTime>
-			<iCost>1</iCost>
-			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_S</HotKey>
-			<bShiftDown>1</bShiftDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/Button_StoneToolsWorkshop.dds</Button>
-		</BuildInfo>
 		<!-- INCIDENTIAL MAPBONUS-EXPLOITING -->
 		<!-- Vertical Farm | End -->
 		<BuildInfo>

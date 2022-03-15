@@ -26639,14 +26639,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -26845,10 +26837,6 @@
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -26948,14 +26936,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_HYDRO_DAM</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -27604,14 +27584,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -27742,10 +27714,6 @@
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -27801,14 +27769,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_LUMBERMILL</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -29182,14 +29142,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -29388,10 +29340,6 @@
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -29491,14 +29439,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_HYDRO_DAM</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -30148,14 +30088,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -30286,10 +30218,6 @@
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -30345,14 +30273,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_LUMBERMILL</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>

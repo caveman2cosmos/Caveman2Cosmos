@@ -879,7 +879,6 @@
 				<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 				<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
 				<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
-				<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
 				<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
 				<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
 				<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
