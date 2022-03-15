@@ -1969,30 +1969,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_SHAFT_MINE_PEDIA</Tag>
 		<English>Shaft mining or shaft sinking refers to the method of excavating a vertical or near-vertical tunnel from the top down, where there is initially no access to the bottom. Shaft sinking refers to the general activity, however shallow shafts, typically sunk for civil engineering projects differ greatly in execution method from deep shafts, typically sunk for mining projects. When the top of the excavation is the ground surface, it is referred to as a shaft; when the top of the excavation is underground, it is called a winze or a sub-shaft. Small shafts may be excavated upwards from within an existing mine as long as there is access at the bottom, in which case they are called Raises.</English>
 		<Russian>Глубокая шахта или скважина относится к методу выемки породы в вертикальном туннеле сверху вниз, где изначально нет доступа к жиле. Опускание ствола относится к основной деятельности, однако мелкие отводы, обычно затопленные для проектов гражданского строительства, значительно отличаются по способу выполнения от глубоких стволов, обычно затопляемых для добычи полезных ископаемых. Когда вершина раскопок выходит на поверхность земли, она называется шахтой; когда же она находится под землей, ее называют штольней или вспомогательным штреком. Небольшие шахты могут быть выкопаны повверх из существующей шахты, если есть доступ к породе, и в этом случае они называются штольнями.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_SILK_FARM</Tag>
-		<English>Silk Farm</English>
-		<French>
-			<Text>Culture de Vers à Soie</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Seidenfarm</German>
-		<Italian>Coltura di bachi da seta</Italian>
-		<Spanish>
-			<Text>Cultivo de seda</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Farma Jedwabiu</Polish>
-		<Russian>Øåëêîâàÿ ôåðìà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_SILK_FARM_PEDIA</Tag>
-		<English>Sericulture, or silk farming, is the rearing of silkworms for the production of silk. Although there are several commercial species of silkworms, Bombyx mori is the most widely used and intensively studied silkworm. Silk was first produced in China as early as the Neolithic period. Sericulture has become an important cottage industries in countries such as Brazil, China, France, India, Italy, Japan, Korea, and Russia. Today, China and India are the two main producers, with more than 60% of the world's annual production.</English>
-		<Russian>Шелководство или шелкопрядение - это выращивание шелкопряда для производства шелка. Хотя существует несколько промысловых видов тутового шелкопряда, Bombyx mori является наиболее широко используемым и интенсивно изучаемым шелкопрядом. Шелк впервые начали производить в Китае еще в период неолита. Шелководство стало важным надомным производством в таких странах, как Бразилия, Китай, Франция, Индия, Италия, Япония, Корея и Россия. Сегодня Китай и Индия являются двумя основными производителями, на долю которых приходится более 60% годового производства в мире.</Russian>
-	</TEXT>
+	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SOLAR_PANELS</Tag>
 		<English>Solar Panels</English>

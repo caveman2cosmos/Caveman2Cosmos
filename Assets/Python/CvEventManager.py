@@ -1573,7 +1573,7 @@ class CvEventManager:
 			CyPlot0 = CyPlot1 = CyPlayer.getCapitalCity().plot()
 
 			iSilk = GC.getInfoTypeForString("BONUS_SILK")
-			iSilkFarm = GC.getInfoTypeForString("IMPROVEMENT_SILK_FARM")
+			iSilkFarm = GC.getInfoTypeForString("IMPROVEMENT_PLANTATION")
 			iTrail = GC.getInfoTypeForString("ROUTE_TRAIL")
 			iPath = GC.getInfoTypeForString("ROUTE_PATH")
 			iRoute = GC.getInfoTypeForString("ROUTE_ROAD")

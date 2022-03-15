@@ -6246,7 +6246,7 @@
 		<EventInfo>
 			<Type>EVENT_SILKWORM_GOING_EXTINCT_2</Type>
 			<Description>TXT_KEY_EVENT_SILKWORM_GOING_EXTINCT_2</Description>
-			<ImprovementType>IMPROVEMENT_SILK_FARM</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
 			<iImprovementChange>-1</iImprovementChange>
 			<BonusType>BONUS_SILK</BonusType>
 			<iBonusChange>-1</iBonusChange>

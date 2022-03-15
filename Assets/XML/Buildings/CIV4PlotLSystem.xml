@@ -7590,7 +7590,7 @@
 		<!-- Silk crops -->
 		<ArtRef Name="art:silk_crop">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Silk/Silk_LSystem.nif::2x2_01_Silk_Normal</Attribute>
-			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:0</Attribute>
 			<Attribute Class="Scalar">bCutTrees:1</Attribute>
@@ -7601,7 +7601,7 @@
 		</ArtRef>
 		<ArtRef Name="art:silk_crop">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Silk/Silk_LSystem.nif::2x2_01_Silk_Worked</Attribute>
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:0</Attribute>
 			<Attribute Class="Scalar">bCutTrees:1</Attribute>
@@ -7611,7 +7611,7 @@
 		</ArtRef>
 		<ArtRef Name="art:silk_crop">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Silk/Silk_LSystem.nif::2x2_01_Silk_NotWorked</Attribute>
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:0</Attribute>
 			<Attribute Class="Scalar">bCutTrees:1</Attribute>
@@ -7622,7 +7622,7 @@
 		<!-- Silk improvements -->
 		<ArtRef Name="art:SILK_PLANTATION_RACK">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Silk/Silk_LSystem.nif::1x3_01_Rack_NotWorked</Attribute>
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">bImprovementWorkedOnly:0</Attribute>
@@ -7630,7 +7630,7 @@
 		</ArtRef>
 		<ArtRef Name="art:SILK_PLANTATION_RACK">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Silk/Silk_LSystem.nif::1x3_01_Rack_Worked</Attribute>
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">bImprovementWorkedOnly:1</Attribute>
@@ -8591,7 +8591,7 @@
 		<!-- Silk -->
 		<ArtRef Name="art:silk_crop">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Silk/Silk_LSystem.nif::2x2_01_Silk_Normal</Attribute>
-			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:0</Attribute>
 			<Attribute Class="Scalar">bCutTrees:1</Attribute>
@@ -8599,9 +8599,9 @@
 			<Attribute Class="Scalar">szBatchGroup:silk_crop</Attribute>
 			<Scale>0.8</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Ancient Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8618,9 +8618,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Modern Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8636,9 +8636,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Unworked Ancient Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8655,9 +8655,9 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Unworked Modern Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8681,9 +8681,9 @@
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
 		</ArtRef>
 		<!-- Afro Silk Plantation -->
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Early Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8700,9 +8700,9 @@
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Renaissance Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8719,9 +8719,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.23</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Early Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8738,9 +8738,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Renaissance Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8758,9 +8758,9 @@
 			<Scale>0.23</Scale>
 		</ArtRef>
 		<!-- Khmer Silk Plantation -->
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Renaissance Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8777,9 +8777,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.23</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Renaissance Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8797,9 +8797,9 @@
 			<Scale>0.23</Scale>
 		</ArtRef>
 		<!-- Mediterranean Silk Plantation -->
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Early Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8816,9 +8816,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.44</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Renaissance Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8835,9 +8835,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Early Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8854,9 +8854,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.44</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Renaissance Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8874,9 +8874,9 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<!-- Meso Silk Plantation -->
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Early Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8893,9 +8893,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Renaissance Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8912,9 +8912,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Early Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8931,9 +8931,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Renaissance Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8951,9 +8951,9 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<!-- Middle East Silk Plantation -->
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Early Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8970,9 +8970,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.26</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Renaissance Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -8989,9 +8989,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Early Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9008,9 +9008,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.26</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Renaissance Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9028,9 +9028,9 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<!-- Native Silk Plantation -->
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Early Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9047,9 +9047,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Medieval Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9066,9 +9066,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Early Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9085,9 +9085,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Medieval Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9105,9 +9105,9 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<!-- Inca Silk Plantation -->
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Early Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9124,9 +9124,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Early Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9179,9 +9179,9 @@
 			<Scale>0.25</Scale>
 		</ArtRef>
 		<!-- European Silk Plantation -->
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Early Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9198,9 +9198,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Medieval Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9217,9 +9217,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Industrial Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9236,9 +9236,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Industrial Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9255,9 +9255,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.26</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Early Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9274,9 +9274,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Medieval Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9293,9 +9293,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Industrial Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9312,9 +9312,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Industrial Unworked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9332,9 +9332,9 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<!-- Norse/Russian Silk Plantation -->
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Early Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9351,9 +9351,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.26</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Renaissance Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9370,9 +9370,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- Renaissance Worked Silk Plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9389,9 +9389,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.26</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- early unworked silk plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9408,9 +9408,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.26</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- renaissance unworked silk plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -9427,9 +9427,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
+		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
 			<!-- renaissance unworked silk plantation -->
-			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
 			<Attribute Class="Scalar">szExtra:art:SILK_PLANTATION_SPINNER</Attribute>
@@ -16314,7 +16314,7 @@
 		<To Name="BLeaf_4x2"/>
 	</LProduction>
 	<LProduction From="Node_4x2" Name="P4x2_B">
-		<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
+		<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 		<Attribute Class="Bonus">BONUS_SILK</Attribute>
 		<Attribute Class="RegionTest">0</Attribute>
 		<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>

@@ -881,16 +881,6 @@
 		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_SHAFT_MINE]Ãëóáîêàÿ øàõòà[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SILK_FARM</Tag>
-		<English>Build [LINK=IMPROVEMENT_SILK_FARM]Silk Farm[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_SILK_FARM]Culture de Soie[\LINK]</French>
-		<German>Errichte eine [LINK=IMPROVEMENT_SILK_FARM]Seidenfarm[\LINK]</German>
-		<Italian>Costruisci una [LINK=IMPROVEMENT_SILK_FARM]Coltura di bachi da seta[\LINK]</Italian>
-		<Spanish>Plantar un [LINK=IMPROVEMENT_SILK_FARM]Cultivo de seda[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_SILK_FARM]Farmę Jedwabiu[\LINK]</Polish>
-		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_SILK_FARM]Øåëêîâàÿ ôåðìà[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_SOLAR_PANELS</Tag>
 		<English>Build [LINK=IMPROVEMENT_SOLAR_PANELS]Solar Panels[\LINK]</English>
 		<French>Construire des [LINK=IMPROVEMENT_SOLAR_PANELS]Panneaux Solaires[\LINK]</French>

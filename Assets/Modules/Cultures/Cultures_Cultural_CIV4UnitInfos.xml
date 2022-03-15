@@ -14639,7 +14639,6 @@
 				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
-				<BuildType>BUILD_SILK_FARM</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
 				<BuildType>BUILD_FARM</BuildType>
@@ -16832,7 +16831,6 @@
 				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
-				<BuildType>BUILD_SILK_FARM</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
 				<BuildType>BUILD_FARM</BuildType>
@@ -21807,7 +21805,6 @@
 				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
-				<BuildType>BUILD_SILK_FARM</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
 				<BuildType>BUILD_FARM</BuildType>
@@ -23634,7 +23631,6 @@
 				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
-				<BuildType>BUILD_SILK_FARM</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
 				<BuildType>BUILD_FARM</BuildType>
@@ -40369,7 +40365,6 @@
 				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
-				<BuildType>BUILD_SILK_FARM</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
 				<BuildType>BUILD_FARM</BuildType>
@@ -41110,7 +41105,6 @@
 				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
-				<BuildType>BUILD_SILK_FARM</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
 				<BuildType>BUILD_FARM</BuildType>

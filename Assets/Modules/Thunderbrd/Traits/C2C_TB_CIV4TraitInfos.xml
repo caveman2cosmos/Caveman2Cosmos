@@ -31672,14 +31672,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SILK_FARM</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_GEOGLYPH</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -31841,10 +31833,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VILLAGE</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SILK_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -32071,14 +32059,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SILK_FARM</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_GEOGLYPH</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -32176,10 +32156,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VILLAGE</BuildType>
-					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SILK_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -32822,14 +32798,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SILK_FARM</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_GEOGLYPH</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -32991,10 +32959,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VILLAGE</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SILK_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -33216,14 +33180,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_SILK_FARM</ImprovementType>
-					<YieldChanges>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_GEOGLYPH</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
@@ -33321,10 +33277,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VILLAGE</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SILK_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -43249,10 +43201,6 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SILK_FARM</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ELECTRUMSMITH</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -44051,10 +43999,6 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MARKET</BuildingType>
-					<iBuildingProductionModifier>25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SILK_FARM</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -45165,10 +45109,6 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SILK_FARM</BuildingType>
-					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_ELECTRUMSMITH</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
@@ -45962,10 +45902,6 @@
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
 					<BuildingType>BUILDING_MARKET</BuildingType>
-					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SILK_FARM</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>

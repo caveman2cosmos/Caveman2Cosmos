@@ -1734,6 +1734,16 @@
 						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SILK</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>3</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<ImprovementPillage>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
@@ -2010,7 +2020,6 @@
 			<ImprovementUpgrade>IMPROVEMENT_PLANTATION</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_LUMBERJACK</ImprovementType>
-				<ImprovementType>IMPROVEMENT_SILK_FARM</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
 		</ImprovementInfo>
 		<!-- Plant Gathering Camp-> Plant Picking Camp -->
@@ -2287,87 +2296,7 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
-		</ImprovementInfo>
-		<!-- Silk Farm -> Vertical Farm -->
-		<ImprovementInfo>
-			<Type>IMPROVEMENT_SILK_FARM</Type>
-			<Description>TXT_KEY_IMPROVEMENT_SILK_FARM</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_SILK_FARM_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANTATION</ArtDefineTag>
-			<PrereqTech>TECH_SERICULTURE</PrereqTech>
-			<YieldChanges>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
-			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iAirBombDefense>5</iAirBombDefense>
-			<iPillageGold>10</iPillageGold>
-			<iUpgradeTime>10</iUpgradeTime>
-			<BonusTypeStructs>
-				<BonusTypeStruct>
-					<BonusType>BONUS_SILK</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-			</BonusTypeStructs>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_CURRENCY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_MERCANTILISM</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_ZOOLOGY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_PLASTIC_ELECTRONICS</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
-			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
-		</ImprovementInfo>
+		</ImprovementInfo>		
 		<!-- Geothermal Factory | Independent -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_GEOTHERMAL_FACTORY</Type>

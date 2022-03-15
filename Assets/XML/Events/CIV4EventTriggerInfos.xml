@@ -1582,7 +1582,7 @@
 				<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_FORT</ImprovementType>
 				<ImprovementType>IMPROVEMENT_ORCHARD</ImprovementType>
-				<ImprovementType>IMPROVEMENT_SILK_FARM</ImprovementType>
+				<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
 				<ImprovementType>IMPROVEMENT_HYBRID_FOREST</ImprovementType>
 				<ImprovementType>IMPROVEMENT_TREEFARM</ImprovementType>
 				<ImprovementType>IMPROVEMENT_GROUNDWATER_WELL</ImprovementType>
@@ -4253,7 +4253,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_SILK_FARM</ImprovementType>
+				<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
 			</ImprovementsRequired>
 			<BonusesRequired>
 				<BonusType>BONUS_SILK</BonusType>
@@ -9686,7 +9686,7 @@
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<bOwnPlot>1</bOwnPlot>
 			<ImprovementsRequired>
-				<ImprovementType>IMPROVEMENT_SILK_FARM</ImprovementType>
+				<ImprovementType>IMPROVEMENT_PLANTATION</ImprovementType>
 			</ImprovementsRequired>
 			<BonusesRequired>
 				<BonusType>BONUS_SILK</BonusType>
