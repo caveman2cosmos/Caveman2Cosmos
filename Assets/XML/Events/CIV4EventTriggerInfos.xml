@@ -1572,7 +1572,7 @@
 				<ImprovementType>IMPROVEMENT_WORKSHOP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
 				<ImprovementType>IMPROVEMENT_HYDROCARBON_WELL</ImprovementType>
-				<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
+				<ImprovementType>IMPROVEMENT_ORCHARD</ImprovementType>
 				<ImprovementType>IMPROVEMENT_MINE</ImprovementType>
 				<ImprovementType>IMPROVEMENT_CORE_MINE</ImprovementType>
 				<ImprovementType>IMPROVEMENT_SHAFT_MINE</ImprovementType>

@@ -509,7 +509,6 @@
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
-				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
 				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->

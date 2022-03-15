@@ -876,7 +876,6 @@
 				<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
 				<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
 				<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
-				<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
 				<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
 				<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
 				<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>

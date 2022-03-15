@@ -14611,7 +14611,6 @@
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
 				<BuildType>BUILD_EARLY_QUARRY</BuildType>
 				<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-				<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 				<BuildType>BUILD_HUNTING_CAMP</BuildType>
@@ -14638,7 +14637,6 @@
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
-				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
 				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
@@ -16829,7 +16827,6 @@
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
-				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
 				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
@@ -21775,7 +21772,6 @@
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
 				<BuildType>BUILD_EARLY_QUARRY</BuildType>
 				<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-				<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 				<BuildType>BUILD_HUNTING_CAMP</BuildType>
@@ -21802,7 +21798,6 @@
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
-				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
 				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
@@ -23600,7 +23595,6 @@
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
 				<BuildType>BUILD_EARLY_QUARRY</BuildType>
 				<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-				<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 				<BuildType>BUILD_HUNTING_CAMP</BuildType>
@@ -23627,7 +23621,6 @@
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
-				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
 				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
@@ -40333,7 +40326,6 @@
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
 				<BuildType>BUILD_EARLY_QUARRY</BuildType>
 				<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-				<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 				<BuildType>BUILD_HUNTING_CAMP</BuildType>
@@ -40360,7 +40352,6 @@
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
-				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
 				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
@@ -41072,7 +41063,6 @@
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
 				<BuildType>BUILD_EARLY_QUARRY</BuildType>
 				<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-				<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
 				<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
 				<BuildType>BUILD_HUNTING_CAMP</BuildType>
@@ -41099,7 +41089,6 @@
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
-				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
 				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->

@@ -857,81 +857,8 @@
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
-		</ImprovementInfo>
-		<!-- Winery -> Vertical Farm -->
-		<ImprovementInfo>
-			<Type>IMPROVEMENT_WINERY</Type>
-			<Description>TXT_KEY_IMPROVEMENT_WINERY</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_WINERY_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_WINERY</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
-			<PrereqTech>TECH_FERMENTATION</PrereqTech>
-			<iAdvancedStartCost>30</iAdvancedStartCost>
-			<iUpgradeTime>15</iUpgradeTime>
-			<iAirBombDefense>5</iAirBombDefense>
-			<iPillageGold>40</iPillageGold>
-			<BonusTypeStructs>
-				<BonusTypeStruct>
-					<BonusType>BONUS_GRAPES</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>3</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-			</BonusTypeStructs>
-			<ImprovementPillage>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_TRADE</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_CURRENCY</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_AGRICULTURAL_ENGINEERING</PrereqTech>
-					<TechYields>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
-		</ImprovementInfo>
-		<!-- Fruit Picker -> Winery -->
+		</ImprovementInfo>		
+		<!-- Fruit Picker -> Orchard -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_FRUIT_PICKING_CAMP</Type>
 			<Description>TXT_KEY_IMPROVEMENT_FRUIT_PICKING_CAMP</Description>
@@ -1104,6 +1031,16 @@
 						<iYieldChange>2</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_GRAPES</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>2</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<ImprovementPillage>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_ORCHARD</ImprovementUpgrade>
@@ -1245,6 +1182,14 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_MUSHROOMS</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_GRAPES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -1441,6 +1386,16 @@
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_GRAPES</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>2</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>3</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<ImprovementPillage>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
@@ -1480,74 +1435,6 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 					<TechYields>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
-		</ImprovementInfo>
-		<!-- Grape Picker -> Orchard -->
-		<ImprovementInfo>
-			<Type>IMPROVEMENT_GRAPE_PICKING_CAMP</Type>
-			<Description>TXT_KEY_IMPROVEMENT_GRAPE_PICKING_CAMP</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_GRAPE_PICKING_CAMP</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<iUpgradeTime>10</iUpgradeTime>
-			<iPillageGold>20</iPillageGold>
-			<BonusTypeStructs>
-				<BonusTypeStruct>
-					<BonusType>BONUS_GRAPES</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>2</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-			</BonusTypeStructs>
-			<ImprovementPillage>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementPillage>
-			<ImprovementUpgrade>IMPROVEMENT_WINERY</ImprovementUpgrade>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-					<TechYields>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
-		</ImprovementInfo>
-		<!-- Grape Gathering Camp -> Grape Picker -->
-		<ImprovementInfo>
-			<Type>IMPROVEMENT_GRAPE_GATHERING_CAMP</Type>
-			<Description>TXT_KEY_IMPROVEMENT_GRAPE_GATHERING_CAMP</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_FRUIT_GATHERING_CAMP_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_GRAPE_GATHERING_CAMP</ArtDefineTag>
-			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<iUpgradeTime>5</iUpgradeTime>
-			<iPillageGold>7</iPillageGold>
-			<BonusTypeStructs>
-				<BonusTypeStruct>
-					<BonusType>BONUS_GRAPES</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>1</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementUpgrade>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_BARTER</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
@@ -3001,7 +2888,7 @@
 			</YieldChanges>
 			<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_FARM</ImprovementPillage>
-			<!-- Other improvements also can upgrade to Vertical Farm: Orchard, Pasture, Plantation, Winery -->
+			<!-- Other improvements also can upgrade to Vertical Farm: Orchard, Pasture, Plantation -->
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bCarriesIrrigation>1</bCarriesIrrigation>

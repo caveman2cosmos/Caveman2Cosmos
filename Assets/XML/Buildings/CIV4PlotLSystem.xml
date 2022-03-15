@@ -11828,8 +11828,8 @@
 	<LNode Name="BLeaf_4x3">
 		<Width>6</Width>
 		<Height>6</Height>
-		<ArtRef Name="goal:IMPROVEMENT_WINERY">
-			<Attribute Class="Improvement">IMPROVEMENT_WINERY</Attribute>
+		<ArtRef Name="goal:IMPROVEMENT_ORCHARD">
+			<Attribute Class="Improvement">IMPROVEMENT_ORCHARD</Attribute>
 			<Attribute Class="Scalar">iCropArea:50</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
@@ -16188,7 +16188,7 @@
 		</To>
 	</LProduction>
 	<LProduction From="Node_6x6">
-		<Attribute Class="Improvement">IMPROVEMENT_WINERY</Attribute>
+		<Attribute Class="Improvement">IMPROVEMENT_ORCHARD</Attribute>
 		<Attribute Class="Bonus">BONUS_GRAPES</Attribute>
 		<Attribute Class="Scalar">bGoalOnly:1</Attribute>
 		<To Name="BLeaf_4x3"/>
@@ -16197,7 +16197,7 @@
 		</To>
 	</LProduction>
 	<LProduction From="Node_6x6">
-		<Attribute Class="Improvement">IMPROVEMENT_WINERY</Attribute>
+		<Attribute Class="Improvement">IMPROVEMENT_ORCHARD</Attribute>
 		<Attribute Class="Bonus">BONUS_GRAPES</Attribute>
 		<Attribute Class="Scalar">bGoalOnly:1</Attribute>
 		<To Name="BLeaf_4x3">
@@ -16322,7 +16322,7 @@
 		<To Name="GLeaf_4x2"/>
 	</LProduction>
 	<LProduction From="Node_4x2" Name="P4x2_C">
-		<Attribute Class="Improvement">IMPROVEMENT_WINERY</Attribute>
+		<Attribute Class="Improvement">IMPROVEMENT_ORCHARD</Attribute>
 		<Attribute Class="Bonus">BONUS_GRAPES</Attribute>
 		<Attribute Class="RegionTest">0</Attribute>
 		<To Name="BLeaf_4x2"/>
@@ -16382,7 +16382,7 @@
 		<To Name="BLeaf_3x2"/>
 	</LProduction>
 	<LProduction From="Node_3x2">
-		<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_FARM,!IMPROVEMENT_VERTICAL_FARM,!IMPROVEMENT_WINERY,!IMPROVEMENT_PLANTATION</Attribute>
+		<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_FARM,!IMPROVEMENT_VERTICAL_FARM,!IMPROVEMENT_ORCHARD,!IMPROVEMENT_PLANTATION</Attribute>
 		<Attribute Class="RegionTest">0</Attribute>
 		<To Name="Node_2x1">
 			<Translate>-1,0</Translate>
@@ -16394,7 +16394,7 @@
 	</LProduction>
 	<LProduction From="Node_3x2">
 		<Attribute Class="RegionTest">0</Attribute>
-		<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_FARM,!IMPROVEMENT_VERTICAL_FARM,!IMPROVEMENT_WINERY,!IMPROVEMENT_PLANTATION</Attribute>
+		<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_FARM,!IMPROVEMENT_VERTICAL_FARM,!IMPROVEMENT_ORCHARD,!IMPROVEMENT_PLANTATION</Attribute>
 		<To Name="Node_2x2">
 			<Translate>-0.5,0</Translate>
 		</To>
@@ -16415,7 +16415,7 @@
 		<To Name="BLeaf_2x2"/>
 	</LProduction>
 	<LProduction From="Node_2x2">
-		<Attribute Class="Improvement">IMPROVEMENT_ALL,!IMPROVEMENT_COTTAGE,!IMPROVEMENT_HAMLET,!IMPROVEMENT_VILLAGE,!IMPROVEMENT_TOWN,!IMPROVEMENT_WINERY</Attribute>
+		<Attribute Class="Improvement">IMPROVEMENT_ALL,!IMPROVEMENT_COTTAGE,!IMPROVEMENT_HAMLET,!IMPROVEMENT_VILLAGE,!IMPROVEMENT_TOWN,!IMPROVEMENT_ORCHARD</Attribute>
 		<To Name="GLeaf_2x2">
 			<Translate>0,0</Translate>
 			<Rotate>90</Rotate>

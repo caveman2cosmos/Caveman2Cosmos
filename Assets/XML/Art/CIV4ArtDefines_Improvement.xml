@@ -200,15 +200,6 @@
 			<Button>,Art/Interface/Buttons/Builds/BuildOffshorePlatform.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,4,9</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_WINERY</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/Winery/Winery.nif</NIF>
-			<KFM>Art/Structures/Improvements/Winery/Winery.kfm</KFM>
-			<Button>,Art/Interface/Buttons/Builds/BuildWinery.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,8</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_COTTAGE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
@@ -551,24 +542,6 @@
 			<NIF>Art/Structures/Improvements/SeedGatherer/camp_fx.nif</NIF>
 			<KFM>Art/Structures/Improvements/SeedGatherer/Camp.kfm</KFM>
 			<Button>Art/Interface/Buttons/Builds/picker_genericfruit.dds</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_GRAPE_GATHERING_CAMP</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>0.6</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/SeedGatherer/camp_fx.nif</NIF>
-			<KFM>Art/Structures/Improvements/SeedGatherer/Camp.kfm</KFM>
-			<Button>Art/Interface/Buttons/Builds/gatherer_grape.dds</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_GRAPE_PICKING_CAMP</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>0.6</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/SeedGatherer/camp_fx.nif</NIF>
-			<KFM>Art/Structures/Improvements/SeedGatherer/Camp.kfm</KFM>
-			<Button>Art/Interface/Buttons/Builds/picker_grape.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_WOOD_GATHERER</Type>

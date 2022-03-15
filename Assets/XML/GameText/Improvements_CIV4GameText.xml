@@ -991,42 +991,6 @@
 		<Russian>Íåîáèòàåìûå îñòðîâà - ýòî ìîðñêèå ýêâèâàëåíòû âàðâàðñêèõ äåðåâåíü. Îíè âñòðå÷àþòñÿ òîëüêî îêîëî ïîáåðåæèé.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_GRAPE_GATHERING_CAMP</Tag>
-		<English>Grape Gathering Camp</English>
-		<French>Camp de Récolte de Raisin</French>
-		<German>
-			<Text>Traubensammler</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>Campo di raccolta di uva</Italian>
-		<Spanish>
-			<Text>Campo de cultivo de uvas</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Szałas Zbieraczy Winogron</Polish>
-		<Russian>Ñáîð âèíîãðàäà</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_GRAPE_PICKING_CAMP</Tag>
-		<English>Grape Picking Camp</English>
-		<French>Camp de Cueillette de Raisins</French>
-		<German>
-			<Text>Traubenleser</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>Campo di coltivazione di uva</Italian>
-		<Spanish>
-			<Text>Campamento de recolección de uvas</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Obóz Zbieraczy Winogron</Polish>
-		<Russian>Îáðàáîòêà âèíîãðàäà</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GROUNDWATER_WELL</Tag>
 		<English>Groundwater Well</English>
 		<French>Puits Souterrain</French>
@@ -2382,39 +2346,7 @@
 		<Polish>Wiatrak - budowla drewniana, niekiedy murowana, wyposażona w skrzydła poruszane siłą wiatru i napędzające urządzenia. Jest najstarszym silnikiem wiatrowym - przetwarza energię wiatru na energię kinetyczną wruchu obrotowym. Jest poprzednikiem turbiny wiatrowej, którą czasami również nazywa się wiatrakiem.</Polish>
 		<Russian>* Âåòðÿíàÿ ìåëüíèöà: âñå öèâèëèçàöèè
 Âåòðÿíàÿ ìåëüíèöà - ìàøèíà, êîòîðàÿ ïðåîáðàçóåò ýíåðãèþ âåòðà âî âðàùàòåëüíóþ ýíåðãèþ ïîñðåäñòâîì ëîïàñòåé, íàçûâàåìûõ êðûëüÿìè.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_WINERY</Tag>
-		<English>Winery</English>
-		<French>
-			<Text>Exploitation vinicole</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Weingut</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Azienda vinicola:Aziende vinicole</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Viñedo:Viñedos</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Winnica</Polish>
-		<Russian>Âèíîêóðíÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_WINERY_PEDIA</Tag>
-		<English>A winery is a building or property that produces wine, or a business involved in the production of wine, such as a wine company. Some wine companies own many wineries. Besides wine making equipment, larger wineries may also feature warehouses, bottling lines, laboratories, and large expanses of tanks known as tank farms. The oldest winery in the world found to date is a 6,000 year old winery in the Areni region of Armenia, which is still a wine making region today.</English>
-		<Russian>* Âèíîäåëüíÿ: âñå öèâèëèçàöèè
-Âèíîäåëüíÿ - çäàíèå èëè èìåíèå, êîòîðîå ïðîèçâîäèò âèíî, èëè áèçíåñ, âîâëå÷åííûé â ïðîèçâîäñòâî âèíà, òèïà âèííîé êîìïàíèè. Íåêîòîðûå âèííûå êîìïàíèè èìåþò ìíîãî âèííûõ çàâîäîâ. Ïîìèìî âèíîäåëü÷åñêîãî îáîðóäîâàíèÿ, áîëüøèå âèííûå çàâîäû ìîãóò òàêæå îòëè÷àòüñÿ ñêëàäàìè, ëèíèÿìè áóòûëî÷íîãî ðîçëèâà, ëàáîðàòîðèÿìè, è áîëüøèìè ïðîòÿæåíèÿìè ðåçåðâóàðîâ, èçâåñòíûõ êàê ôåðìû ðåçåðâóàðîâ. Ñàìûé ñòàðûé âèííûé çàâîä â ìèðå, íàéäåííûé äî íàñòîÿùåãî âðåìåíè - 6 000-ëåòíèé âèííûé çàâîä â îáëàñòè Àðíè Àðìåíèè, êîòîðàÿ ñåãîäíÿ âñå åùå ÿâëÿåòñÿ âèíîäåëü÷åñêîé îáëàñòüþ. - Wikipedia</Russian>
-	</TEXT>
+	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WOODEN_PALISADE</Tag>
 		<English>Wooden Palisade</English>

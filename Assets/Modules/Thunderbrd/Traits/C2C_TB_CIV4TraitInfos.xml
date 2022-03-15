@@ -33887,14 +33887,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_GROUNDWATER_WELL</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
@@ -33911,14 +33903,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
@@ -33928,14 +33912,6 @@
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -34065,23 +34041,11 @@
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -34115,15 +34079,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINERY</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -34132,10 +34088,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -34484,14 +34436,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_GROUNDWATER_WELL</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
@@ -34508,14 +34452,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
@@ -34525,14 +34461,6 @@
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -34662,23 +34590,11 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -34712,15 +34628,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINERY</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -34729,10 +34637,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -35015,14 +34919,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_GROUNDWATER_WELL</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
@@ -35039,14 +34935,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
@@ -35056,14 +34944,6 @@
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -35193,23 +35073,11 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -35243,15 +35111,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINERY</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -35260,10 +35120,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -35495,14 +35351,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_GROUNDWATER_WELL</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
@@ -35519,14 +35367,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
@@ -35536,14 +35376,6 @@
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 						<iYield>0</iYield>
@@ -35673,23 +35505,11 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -35723,15 +35543,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINERY</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -35740,10 +35552,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -35987,14 +35795,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_GROUNDWATER_WELL</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
@@ -36011,14 +35811,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
@@ -36028,14 +35820,6 @@
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -36165,23 +35949,11 @@
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -36215,15 +35987,7 @@
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINERY</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -36232,10 +35996,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -36558,14 +36318,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_GROUNDWATER_WELL</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
@@ -36582,14 +36334,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
@@ -36599,14 +36343,6 @@
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -36736,23 +36472,11 @@
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -36786,15 +36510,7 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINERY</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -36803,10 +36519,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -37058,14 +36770,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_GROUNDWATER_WELL</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
@@ -37082,14 +36786,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
@@ -37099,14 +36795,6 @@
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -37236,23 +36924,11 @@
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -37286,15 +36962,7 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINERY</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -37303,10 +36971,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -37515,14 +37179,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_GROUNDWATER_WELL</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
@@ -37539,14 +37195,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
@@ -37556,14 +37204,6 @@
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
 						<iYield>0</iYield>
@@ -37693,23 +37333,11 @@
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
-					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FRUIT_PICKING_CAMP</ImprovementType>
-					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
@@ -37743,15 +37371,7 @@
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_WINERY</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -37760,10 +37380,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>

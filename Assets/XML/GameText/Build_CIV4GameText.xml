@@ -385,23 +385,6 @@
 		<Russian>Ïîñòðîèòü [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Ãåîòåðìàëüíàÿ ôàáðèêà[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Grape Gathering Camp[\LINK] (Consumed)</English>
-		<French>Installer un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Camp de récolte de Raisins[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Trauben sammeln[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]campo di raccolta di uva[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Campo de cultivo de uvas[\LINK]</Spanish>
-		<Polish>Zbuduj [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Szałas Zbieraczy Winogron[\LINK]</Polish>
-		<Russian>Ñîçäàòü [LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Ëàãåðü ñáîðà âèíîãðàäà[\LINK] (Ñîáèðàòåëü)</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_GRAPE_PICKING_CAMP</Tag>
-		<English>Build [LINK=IMPROVEMENT_GRAPE_PICKING_CAMP]Grape Picking Camp[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_GRAPE_PICKING_CAMP]Camp de vendanges[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Trauben lesen[\LINK]</German>
-		<Russian>Строить [LINK=IMPROVEMENT_GRAPE_PICKING_CAMP]Сбор винограда[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAVITY_TRAIN</Tag>
 		<English>Make [LINK=ROUTE_GRAVITY_TRAIN]Gravity Train[\LINK]</English>
 		<French>Construire [LINK=ROUTE_GRAVITY_TRAIN]Train à Gravité[\LINK]</French>
@@ -1129,12 +1112,6 @@
 		<English>Build [LINK=IMPROVEMENT_WINDMILL]Windmill[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_WINDMILL]Moulin à vent[\LINK]</French>
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WINDMILL]Âåòðÿíóþ ìåëüíèöó[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_WINERY</Tag>
-		<English>Build [LINK=IMPROVEMENT_WINERY]Winery[\LINK]</English>
-		<French>Construire un [LINK=IMPROVEMENT_WINERY]Vignoble[\LINK]</French>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_WINERY]Âèíîêóðíþ[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_WOODEN_PALISADE</Tag>

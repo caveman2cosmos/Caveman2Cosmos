@@ -1077,12 +1077,12 @@ def doWiningMonks2(argsList):
   plot = GC.getMap().plot(data.iPlotX, data.iPlotY)
 
   if not plot.isNone():
-    plot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_WINERY"))
+    plot.setImprovementType(GC.getInfoTypeForString("IMPROVEMENT_ORCHARD"))
 
   return 1
 
 def getHelpWiningMonks2(argsList):
-	iImp = GC.getInfoTypeForString("IMPROVEMENT_WINERY")
+	iImp = GC.getInfoTypeForString("IMPROVEMENT_ORCHARD")
 	return TRNSLTR.getText("TXT_KEY_EVENT_IMPROVEMENT_GROWTH", (GC.getImprovementInfo(iImp).getTextKey(), ))
 
 

@@ -1927,7 +1927,7 @@ class CvEventManager:
 			B = GC.getInfoTypeForString('IMPROVEMENT_VERTICAL_FARM')
 			C = GC.getInfoTypeForString('IMPROVEMENT_WINDMILL')
 			D = GC.getInfoTypeForString('IMPROVEMENT_PLANTATION')
-			E = GC.getInfoTypeForString('IMPROVEMENT_WINERY')
+			E = GC.getInfoTypeForString('IMPROVEMENT_ORCHARD')
 			F = GC.getInfoTypeForString('IMPROVEMENT_COTTAGE')
 			G = GC.getInfoTypeForString('IMPROVEMENT_HAMLET')
 			H = GC.getInfoTypeForString('IMPROVEMENT_VILLAGE')
