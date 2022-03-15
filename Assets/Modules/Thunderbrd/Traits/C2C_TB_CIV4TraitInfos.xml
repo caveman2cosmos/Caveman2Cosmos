@@ -33959,14 +33959,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
@@ -34101,10 +34093,6 @@
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -34156,14 +34144,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_ORCHARD</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -34576,14 +34556,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
@@ -34718,10 +34690,6 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -34773,14 +34741,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_ORCHARD</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -35127,14 +35087,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
@@ -35269,10 +35221,6 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -35324,14 +35272,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_ORCHARD</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -35627,14 +35567,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<YieldChanges>
-						<iYield>1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
@@ -35769,10 +35701,6 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -35824,14 +35752,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_ORCHARD</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -36139,14 +36059,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
@@ -36281,10 +36193,6 @@
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -36336,14 +36244,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_ORCHARD</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -36730,14 +36630,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
@@ -36872,10 +36764,6 @@
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -36927,14 +36815,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_ORCHARD</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -37250,14 +37130,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
@@ -37392,10 +37264,6 @@
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -37447,14 +37315,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_ORCHARD</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -37727,14 +37587,6 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<YieldChanges>
-						<iYield>-1</iYield>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-					</YieldChanges>
-				</ImprovementYieldChange>
-				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<YieldChanges>
 						<iYield>-1</iYield>
@@ -37869,10 +37721,6 @@
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
-					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
-				</ImprovementUpgradeModifierType>
-				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_FARM</ImprovementType>
 					<iImprovementUpgradeModifier>-50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
@@ -37924,14 +37772,6 @@
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_ORCHARD</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
-					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
-				</BuildWorkerSpeedModifierType>
-				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>

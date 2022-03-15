@@ -1521,35 +1521,7 @@
 		<Tag>TXT_KEY_IMPROVEMENT_MOUNTAIN_MINE_PEDIA</Tag>
 		<English>Mountaintop removal mining, also known as mountaintop mining, is a form of surface mining that involves the mining of the summit or summit ridge of a mountain. Coal seams are extracted from a mountain by removing the land, or overburden, above the seams. The MTR process involves the removal of coal seams by first fully removing the overburden laying atop them, exposing the seams from above. This method differs from more traditional underground mining, where typically a narrow shaft is dug which allows miners to collect seams using various underground methods, while leaving the vast majority of the overburden undisturbed. The overburden from MTR is either placed back on the ridge, attempting to reflect the approximate original contour of the mountain, and/or it is moved into neighboring valleys.</English>
 		<Russian>Горные разработки представляет собой форму добычи на поверхности, включающую в себя освоение вершины или гребня горы. Угольные пласты извлекаются из гор путем удаления грунта или покрывающих пород над пластами. Процесс MTR включает удаление угольных пластов, сначала полностью удаляя покрывающую толщу, лежащую на них, обнажая пласты сверху. Этот метод отличается от более традиционных подземных горных работ, когда обычно выкапывается узкая шахта, что позволяет горнякам собирать пласты, используя различные подземные методы, при этом подавляющая часть вскрытых пород остается нетронутой. Покрывающая порода от MTR либо помещается обратно на гребень, пытаясь отразить приблизительный исходный контур горы, либо перемещается в соседние долины.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER</Tag>
-		<English>Mushroom Gatherer</English>
-		<French>
-			<Text>Champignonnière</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Pilzsammler</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</German>
-		<Italian>Funghi raccoglitori</Italian>
-		<Spanish>
-			<Text>Recolector de setas</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Chata Zbieracza Grzybów</Polish>
-		<Russian>Ãðèáíèê</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER_PEDIA</Tag>
-		<English>Mushroom hunting, mushrooming, mushroom picking, mushroom foraging, and similar terms describe the activity of gathering mushrooms in the wild, typically for eating. This is popular in most of Europe, including the Nordic, Baltic, and Slavic countries and the Mediterranean Basin, as well as in Australia, Japan, Korea, Canada, the Indian subcontinent, and the northwestern, northeastern, Midwestern and Appalachian United States.</English>
-		<German>Das Sammeln von Pilzen ist eine beliebte Freizeitbeschäftigung in nahezu allen Teilen der Welt. [COLOR_BUILDING_TEXT]Pilzsammler[COLOR_REVERT] gehen auf die Suche nach essbaren Wildpilzen, normalerweise um diese zu verzehren oder zu verkaufen. Sie müssen dabei allerdings größte Sorgfalt walten lassen, um nicht durch versehentlich geerntete Giftpilze eine Pilzvergiftung zu riskieren. Da es teils ähnlich aussehende Speise- und Giftpilze gibt und manche Pilze erst nach entsprechender Zubereitung genießbar werden, sind botanische Kenntnisse dringend erforderlich und jeder Sammler sollte nur die Pilze verwenden, die er zweifelsfrei identifizieren kann.</German>
-		<Russian>Охота за грибами, сбор грибов и аналогичные термины описывают деятельность по собирательсттву грибов на дикой природе, чаще всего для употребления в пищу. Она весьма популярна в большинстве стран Европы, включая Северные, Балтийские и Славянские страны и Средиземноморский бассейн, а также в Австралии, Японии, Корее, Канаде, Индийском субконтиненте, а также на северо-западе, северо-востоке, Среднем Западе и Аппалачах США.</Russian>
-	</TEXT>
+	</TEXT>	
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_NATURE_PRESERVE</Tag>
 		<English>Nature Preserve</English>

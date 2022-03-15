@@ -1096,6 +1096,14 @@
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MUSHROOMS</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>2</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<ImprovementPillage>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_ORCHARD</ImprovementUpgrade>
@@ -1229,6 +1237,14 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_GUAVAS</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MUSHROOMS</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
@@ -1411,6 +1427,16 @@
 					<bBonusTrade>1</bBonusTrade>
 					<YieldChanges>
 						<iYieldChange>3</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MUSHROOMS</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<YieldChanges>
+						<iYieldChange>2</iYieldChange>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
 					</YieldChanges>
@@ -1743,7 +1769,7 @@
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>3</iYieldChange>
 					</YieldChanges>
-				</BonusTypeStruct>
+				</BonusTypeStruct>				
 			</BonusTypeStructs>
 			<ImprovementPillage>IMPROVEMENT_PLANT_PICKING_CAMP</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
@@ -2238,60 +2264,6 @@
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-			</TechYieldChanges>
-		</ImprovementInfo>
-		<!-- Mushroom Gatherer -> Vertical Farm -->
-		<!-- Kill Switchpoint: Sedentary Lifestyle -->
-		<ImprovementInfo>
-			<Type>IMPROVEMENT_MUSHROOM_GATHERER</Type>
-			<Description>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER</Description>
-			<Civilopedia>TXT_KEY_IMPROVEMENT_MUSHROOM_GATHERER_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_MUSHROOM_GATHERING_CAMP</ArtDefineTag>
-			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<iUpgradeTime>20</iUpgradeTime>
-			<iPillageGold>7</iPillageGold>
-			<BonusTypeStructs>
-				<BonusTypeStruct>
-					<BonusType>BONUS_MUSHROOMS</BonusType>
-					<bBonusMakesValid>1</bBonusMakesValid>
-					<bBonusTrade>1</bBonusTrade>
-					<YieldChanges>
-						<iYieldChange>2</iYieldChange>
-						<iYieldChange>0</iYieldChange>
-						<iYieldChange>1</iYieldChange>
-					</YieldChanges>
-				</BonusTypeStruct>
-			</BonusTypeStructs>
-			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
-			<TechYieldChanges>
-				<TechYieldChange>
-					<PrereqTech>TECH_BARTER</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_AGRICULTURE</PrereqTech>
-					<TechYields>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_TRADE</PrereqTech>
-					<TechYields>
-						<iYield>0</iYield>
-						<iYield>0</iYield>
-						<iYield>1</iYield>
-					</TechYields>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_FUNGICULTURE</PrereqTech>
-					<TechYields>
 						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
@@ -3029,7 +3001,7 @@
 			</YieldChanges>
 			<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
 			<ImprovementPillage>IMPROVEMENT_FARM</ImprovementPillage>
-			<!-- Other improvements also can upgrade to Vertical Farm: Mushroom Gatherer, Orchard, Pasture, Plantation, Silk Farm, Winery -->
+			<!-- Other improvements also can upgrade to Vertical Farm: Orchard, Pasture, Plantation, Winery -->
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bCarriesIrrigation>1</bCarriesIrrigation>

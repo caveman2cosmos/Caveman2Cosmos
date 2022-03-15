@@ -62,7 +62,6 @@
 				<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
 				<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
 				<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
-				<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
 				<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
 				<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
 				<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
@@ -172,7 +171,6 @@
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
@@ -298,7 +296,6 @@
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
@@ -458,7 +455,6 @@
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
@@ -630,7 +626,6 @@
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
@@ -807,7 +802,6 @@
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
@@ -969,7 +963,6 @@
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
@@ -1141,7 +1134,6 @@
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
@@ -1294,7 +1286,6 @@
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
@@ -1542,7 +1533,6 @@
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
@@ -1693,7 +1683,6 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
@@ -1817,7 +1806,6 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>
@@ -2778,7 +2766,6 @@
 				<BuildType>BUILD_THATCH_CUTTER</BuildType>
 				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 				<BuildType>BUILD_ORCHARD</BuildType>
 				<BuildType>BUILD_PASTURE</BuildType>
 				<BuildType>BUILD_WINERY</BuildType>

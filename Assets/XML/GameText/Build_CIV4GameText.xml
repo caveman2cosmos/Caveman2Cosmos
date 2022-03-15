@@ -646,26 +646,6 @@
 		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_MOUNTAIN_MINE]Ðóäíèê[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_MUSHROOM_GATHERER</Tag>
-		<English>Build [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Mushroom Gatherer[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Champignonnière[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Pilze sammeln[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Funghi raccoglitori[\LINK]</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Recolector de setas[\LINK]</Spanish>
-		<Polish>Zbudu [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Obóz Zbieraczy Grzybów[\LINK]</Polish>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Ñáîð ãðèáîâ[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_MUSHROOM_GATHERER_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Mushroom Gatherer[\LINK] (Consumed)</English>
-		<French>Construire une [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Champignonnière[\LINK] (Détruit)</French>
-		<German>[LINK=IMPROVEMENT_MUSHROOM_GATHERER]Pilze sammeln[\LINK] (Verschleiß)</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Funghi raccoglitori[\LINK] (Consumed)</Italian>
-		<Spanish>Construir un [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Recolector de setas[\LINK] (Consumed)</Spanish>
-		<Polish>Zbudu [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Obóz Zbieraczy Grzybów[\LINK] (Consumed)</Polish>
-		<Russian>Строить [LINK=IMPROVEMENT_MUSHROOM_GATHERER]Сбор грибов[\LINK] (Собиратель)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_NATURE_PRESERVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_NATURE_PRESERVE]Nature Preserve[\LINK]</English>
 		<French>Construire une [LINK=IMPROVEMENT_NATURE_PRESERVE]Réserve naturelle[\LINK]</French>

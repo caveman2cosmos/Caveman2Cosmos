@@ -535,15 +535,6 @@
 			<Button>Art/Interface/Buttons/Builds/picker_genericplant.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_MUSHROOM_GATHERING_CAMP</Type>
-			<bExtraAnimations>0</bExtraAnimations>
-			<fScale>0.6</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/SeedGatherer/camp_fx.nif</NIF>
-			<KFM>Art/Structures/Improvements/SeedGatherer/Camp.kfm</KFM>
-			<Button>Art/Interface/Buttons/Builds/gatherer_mushroom.dds</Button>
-		</ImprovementArtInfo>
-		<ImprovementArtInfo>
 			<Type>ART_DEF_IMPROVEMENT_FRUIT_GATHERING_CAMP</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.6</fScale>
