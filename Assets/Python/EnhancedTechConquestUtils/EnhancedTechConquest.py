@@ -37,9 +37,21 @@ def loadConfigurationData():
 	Config.read(path)
 
 	if Config:
-		g_bCheckPrereq = Config.getboolean("Enhanced Tech Conquest", "Check Prereq")
-		g_iBasePercent = Config.getint("Enhanced Tech Conquest", "Base Percent")
-		g_iPopPercent = Config.getint("Enhanced Tech Conquest", "Population Percent")
+		g_bCheckPrereq = Config.get("Enhanced Tech Conquest", "Check Prereq")
+		if g_bCheckPrereq in ("False", "false", "0"):
+			g_bCheckPrereq = False
+		else:
+			g_bCheckPrereq = True
+		g_iBasePercent = Config.get("Enhanced Tech Conquest", "Base Percent")
+		if g_iBasePercent.isdigit():
+			g_iBasePercent = int(g_iBasePercent)
+		else:
+			g_iBasePercent = 0
+		g_iPopPercent = Config.get("Enhanced Tech Conquest", "Population Percent")
+		if g_iPopPercent.isdigit():
+			g_iPopPercent = int(g_iPopPercent)
+		else:
+			g_iPopPercent = 2
 
 	sprint  = "Enhanced Tech Conquest:\n"
 	sprint += "\tTechnology Transfer Ignore Prereq = %s\n" %str(g_bCheckPrereq)
