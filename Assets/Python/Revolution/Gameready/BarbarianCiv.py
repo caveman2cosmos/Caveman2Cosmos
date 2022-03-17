@@ -26,7 +26,6 @@ class BarbarianCiv:
 		self.customEM = customEM
 		self.BARBARIAN_PLAYER = GC.getBARBARIAN_PLAYER()
 		self.MAX_PC_PLAYERS = GC.getMAX_PC_PLAYERS()
-		self.NUM_UNIT_AND_TECH_PREREQS = GC.getDefineINT("NUM_UNIT_AND_TECH_PREREQS")
 
 		self.customEM.addEventHandler("BeginGameTurn", self.onBeginGameTurn)
 
@@ -64,7 +63,7 @@ class BarbarianCiv:
 		# Increase odds per barb city within reason.
 		fMod *= iNumCities ** .5
 		# Gamespeed factor
-		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
+		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
 		iRange = 16*iFactorGS
 		iEra = GAME.getCurrentEra()
 
@@ -144,6 +143,7 @@ class BarbarianCiv:
 			iPlayer, CyPlayer = aList
 			iCivType = CyPlayer.getCivilizationType()
 			if not bNewWorld:
+				CyTeam = GC.getTeam(CyPlayer.getTeam())
 				for iTech in xrange(iNumTechs):
 					if CyTeam.isHasTech(iTech):
 						techsOwned.append(iTech)
@@ -197,11 +197,8 @@ class BarbarianCiv:
 		bLeadAnyCiv = GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV)
 		leaders = []
 		for iLeader in xrange(GC.getNumLeaderHeadInfos()):
-			if iLeader in aList: continue
-			if bLeadAnyCiv:
-				if not GC.getLeaderHeadInfo(iLeader).isNPC(): continue
-			elif not GC.getCivilizationInfo(iCivType).isLeaders(iLeader): continue
-			leaders.append(iLeader)
+			if iLeader not in aList and not GC.getLeaderHeadInfo(iLeader).isNPC() and (bLeadAnyCiv or GC.getCivilizationInfo(iCivType).isLeaders(iLeader)):
+				leaders.append(iLeader)
 
 		if not leaders:
 			print "[ERROR] Unexpected lack of possible leaders." + POST_FIX
@@ -255,6 +252,7 @@ class BarbarianCiv:
 		else:
 			iNumTeams = GAME.countCivTeamsAlive()
 			iTechFrac = self.RevOpt.getBarbTechPercent()
+			if iTechFrac < 1: iTechFrac = 1
 			for iTech in xrange(iNumTechs):
 				if iTech in techsOwned:
 					CyTeam.setHasTech(iTech, True, iPlayer, False, False)
@@ -467,9 +465,8 @@ class BarbarianCiv:
 			iTech = CvUnitInfo.getPrereqAndTech()
 			if iTech > -1 and not CyTeam.isHasTech(iTech):
 				continue
-			for i in range(self.NUM_UNIT_AND_TECH_PREREQS):
-				iTech = CvUnitInfo.getPrereqAndTechs(i)
-				if iTech > -1 and not CyTeam.isHasTech(iTech):
+			for iTech in CvUnitInfo.getPrereqAndTechs():
+				if not CyTeam.isHasTech(iTech):
 					break
 			else:
 				aList.append(iUnit); break
@@ -603,7 +600,7 @@ class BarbarianCiv:
 		odds += 4*CyPlayer.getWondersScore() # 20 points per wonder, see getWonderScore in CvGameCoreUtils.cpp.
 		if odds < 512: return
 
-		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
+		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
 		if not GAME.getSorenRandNum(40*iFactorGS + odds, 'minor2major') < odds: return
 
 		iX = CyCity1.getX(); iY = CyCity1.getY()
@@ -638,8 +635,8 @@ class BarbarianCiv:
 			iNumBarbDefenders = GC.getHandicapInfo(GAME.getHandicapType()).getBarbarianInitialDefenders()
 			fMilitaryMod = self.RevOpt.getMilitaryStrength()
 
-			# Pickup nearby barb cities
-			iMaxDistance = (5 + 3*bNewWorld) * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers()
+			# Pickup nearby barb cities, search a 4x area if in new world.
+			iMaxDistance = (iHighestEra + 10) * (1 + 3*bNewWorld) * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers() / 8
 			CyPlayerBarb = GC.getPlayer(iPlayerBarb)
 			aList = ()
 			for cityX in CyPlayerBarb.cities():

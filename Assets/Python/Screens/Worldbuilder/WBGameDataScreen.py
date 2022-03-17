@@ -61,7 +61,7 @@ class WBGameDataScreen:
 		self.aWidgetBucket.append("topBar")
 		self.aWidgetBucket.append(botBar)
 
-		screen.setText("ExitSubScreen", "", font4b + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()), 1<<1, xRes - 16, 0, 0, eFontGame, eWidGen, 1, 2)
+		screen.setText("ExitSubScreen", "", font4b + TRNSLTR.getText("TXT_WORD_EXIT", ()), 1<<1, xRes - 16, 0, 0, eFontGame, eWidGen, 1, 2)
 		self.aWidgetBucket.append("ExitSubScreen")
 
 		wDDB = 256
@@ -541,8 +541,8 @@ class WBGameDataScreen:
 	def closeEditBox(self, screen, bOk):
 		if bOk:
 			self.szScriptData = screen.getEditBoxString("ScriptEditBox")
-			import CvUtil
-			self.GAME.setScriptData(CvUtil.convertToStr(self.szScriptData))
+			import TextUtil
+			self.GAME.setScriptData(TextUtil.convertToStr(self.szScriptData))
 		screen.hide("ScriptEditBG")
 		screen.hide("ScriptEditBox")
 		screen.hide("ScriptEditHeader")

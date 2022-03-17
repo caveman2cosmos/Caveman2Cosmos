@@ -3,6 +3,9 @@
 #ifndef CvDLLSymbolIFaceBase_h
 #define CvDLLSymbolIFaceBase_h
 
+#include "CvDLLUtilityIFaceBase.h"
+#include "CvGlobals.h"
+
 //
 // abstract interface for CvSymbol functions used by DLL
 //
@@ -26,7 +29,7 @@ public:
 	virtual void Hide(CvSymbol*, bool bHide) = 0;
 	virtual bool IsHidden(CvSymbol*) = 0;
 	virtual void updatePosition(CvSymbol*) = 0;
-	virtual int getID(CvSymbol*) = 0;	
+	virtual int getID(CvSymbol*) = 0;
 	virtual SymbolTypes getSymbol(CvSymbol* pSym) = 0;
 	virtual void setTypeYield(CvSymbol *, int iType, int count) =0;
 };

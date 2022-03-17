@@ -261,15 +261,12 @@
 IsStandAlone = False
 if __name__ != "__main__":
     from CvPythonExtensions import *
-    import CvUtil
     import CvMapGeneratorUtil
 
 from array import array
 from random import random,randint,seed
 import math
 import sys
-import time
-import os
 
 # Options
 OPTION_MapSeed = 10
@@ -1436,25 +1433,6 @@ def AngleDifference(a1,a2):
     while(diff > 180.0):
         diff -= 360.0
     return diff
-def AppendUnique(theList,newItem):
-    if IsInList(theList,newItem) == False:
-        theList.append(newItem)
-    return
-
-def IsInList(theList,newItem):
-    itemFound = False
-    for item in theList:
-        if item == newItem:
-            itemFound = True
-            break
-    return itemFound
-
-def DeleteFromList(theList,oldItem):
-    for n in range(len(theList)):
-        if theList[n] == oldItem:
-            del theList[n]
-            break
-    return
 
 def ShuffleList(theList):
         preshuffle = list()
@@ -1475,26 +1453,6 @@ def GetInfoType(string):
 def GetDistance(x,y,dx,dy):
     distance = math.sqrt(abs((float(x - dx) * float(x - dx)) + (float(y - dy) * float(y - dy))))
     return distance
-
-def GetOppositeDirection(direction):
-    opposite = mc.L
-    if direction == mc.N:
-        opposite = mc.S
-    elif direction == mc.S:
-        opposite = mc.N
-    elif direction == mc.E:
-        opposite = mc.W
-    elif direction == mc.W:
-        opposite = mc.E
-    elif direction == mc.NW:
-        opposite = mc.SE
-    elif direction == mc.SE:
-        opposite = mc.NW
-    elif direction == mc.SW:
-        opposite = mc.NE
-    elif direction == mc.NE:
-        opposite = mc.SW
-    return opposite
 
 def GetXYFromDirection(x,y,direction):
     xx = x
@@ -3919,11 +3877,11 @@ class Areamap :
                 if xRightExtreme >= seg.xRight + landOffset:
                     if debugReport:
                         print "finished with line"
-                    break; #past the end of the parent line and this line ends
+                    break #past the end of the parent line and this line ends
             elif lineFound == False and xRightExtreme >= seg.xRight + landOffset:
                 if debugReport:
                     print "no additional lines found"
-                break; #past the end of the parent line and no line found
+                break #past the end of the parent line and no line found
             else:
                 continue #keep looking for more line segments
         if lineFound == True: #still a line needing to be put on stack
@@ -4037,7 +3995,7 @@ class RiverMap :
         for y in range(mc.height):
             for x in range(mc.width):
                 i = GetIndex(x,y)
-                maxHeight = 0.0;
+                maxHeight = 0.0
                 for yy in range(y,y-2,-1):
                     for xx in range(x,x+2):
                         ii = GetIndex(xx,yy)
@@ -4093,10 +4051,10 @@ class RiverMap :
                     #never go straight when you have other choices
                     count = len(drainList)
                     if count == 3:
-                        oppDir = GetOppositeDirection(nonDrainList[0])
-                        for n in range(count):
-                            if drainList[n] == oppDir:
-                                del drainList[n]
+                        oppDir = getOppositeDirection(nonDrainList[0])
+                        for dirX in drainList:
+                            if dirX == oppDir:
+                                del dirX
                                 break
                         count = len(drainList)
 
@@ -4110,7 +4068,7 @@ class RiverMap :
         for y in range(mc.height):
             for x in range(mc.width):
                 i = GetIndex(x,y)
-                avg = 0.0;
+                avg = 0.0
                 for yy in range(y,y-2,-1):
                     for xx in range(x,x+2):
                         ii = GetIndex(xx,yy)
@@ -4508,8 +4466,8 @@ class BonusPlacer :
 
     def AssignBonusAreas(self):
         gc = CyGlobalContext()
-        self.areas = CvMapGeneratorUtil.getAreas()
         gameMap = CyMap()
+        self.areas = gameMap.areas()
         self.bonusList = list()
         #Create and shuffle the bonus list and keep tally on
         #one-area bonuses and find the smallest min area requirement
@@ -4805,7 +4763,7 @@ class StartingPlotFinder :
             gameMap = CyMap()
             iPlayers = gc.getGame().countCivPlayersEverAlive()
             gameMap.recalculateAreas()
-            areas = CvMapGeneratorUtil.getAreas()
+            areas = gameMap.areas()
 
             #get old/new world status
             areaOldWorld = self.setupOldWorldAreaList()
@@ -4952,7 +4910,7 @@ class StartingPlotFinder :
         gameMap = CyMap()
         #get official areas and make corresponding lists that determines old
         #world vs. new and also the pre-settled value.
-        areas = CvMapGeneratorUtil.getAreas()
+        areas = gameMap.areas()
         areaOldWorld = list()
 
         print "number of map areas = %d" % len(areas)
@@ -5080,16 +5038,13 @@ class StartingPlotFinder :
                     featureInfo = gc.getFeatureInfo(featureEnum)
                     if debugOut: print "Removing feature %(s)s" % {"s":featureInfo.getType()}
                     impCommerce -= (featureInfo.getYieldChange(YieldTypes.YIELD_COMMERCE) + \
-                    featureInfo.getRiverYieldChange(YieldTypes.YIELD_COMMERCE) + \
-                    featureInfo.getHillsYieldChange(YieldTypes.YIELD_COMMERCE))
+                    featureInfo.getRiverYieldChange(YieldTypes.YIELD_COMMERCE))
 
                     impFood -= (featureInfo.getYieldChange(YieldTypes.YIELD_FOOD) + \
-                    featureInfo.getRiverYieldChange(YieldTypes.YIELD_FOOD) + \
-                    featureInfo.getHillsYieldChange(YieldTypes.YIELD_FOOD))
+                    featureInfo.getRiverYieldChange(YieldTypes.YIELD_FOOD))
 
                     impProduction -= (featureInfo.getYieldChange(YieldTypes.YIELD_PRODUCTION) + \
-                    featureInfo.getRiverYieldChange(YieldTypes.YIELD_PRODUCTION) + \
-                    featureInfo.getHillsYieldChange(YieldTypes.YIELD_PRODUCTION))
+                    featureInfo.getRiverYieldChange(YieldTypes.YIELD_PRODUCTION))
 
                 imp = Improvement(impEnum,impFood,impProduction,impCommerce,0)
                 improvementList.append(imp)
@@ -5656,12 +5611,12 @@ class StartPlot :
         self.vacant = True
         self.owner = None
         self.avgDistance = 0
-        return
+
     def isCoast(self):
         gameMap = CyMap()
         plot = gameMap.plot(self.x,self.y)
         waterArea = plot.waterArea()
-        if waterArea.isNone() == True or waterArea.isLake() == True:
+        if waterArea is None or waterArea.isLake():
             return False
         return True
 
@@ -6639,7 +6594,6 @@ def afterGeneration():
 
 if __name__ == "__main__":
     IsStandAlone = True
-    import sys
     mc.UsePythonRandom = True
     try:
         arg1 = sys.argv[1]

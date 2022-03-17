@@ -31,7 +31,7 @@ public:
 
 	int AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy, bool bForce = false, bool* bWin = NULL, int iTheshold = -1) const;
 	CvUnit* AI_getBestGroupAttacker(const CvPlot* pPlot, bool bPotentialEnemy, int& iUnitOdds, bool bForce = false, bool bNoBlitz = false, CvUnit** pDefender = NULL, bool bAssassinate = false, bool bSuprise = false) const;
-	CvUnit* AI_getBestGroupSacrifice(const CvPlot* pPlot, bool bPotentialEnemy, bool bForce = false, bool bNoBlitz = false, bool bSuprise = false) const;
+	CvUnit* AI_getBestGroupSacrifice(const CvPlot* pPlot, bool bForce, bool bNoBlitz) const;
 
 	int AI_compareStacks(const CvPlot* pPlot, StackCompare::flags flags = StackCompare::None, int iRange = 0) const; // override
 	int AI_sumStrength(const CvPlot* pAttackedPlot = NULL, DomainTypes eDomainType = NO_DOMAIN, StackCompare::flags flags = StackCompare::None) const;
@@ -46,7 +46,7 @@ public:
 
 	bool AI_isForceSeparate() const;
 	void AI_makeForceSeparate();
-	
+
 	bool AI_isCityGarrison(const CvCity* pCity) const;
 	void AI_setAsGarrison(const CvCity* pCity);
 
@@ -60,7 +60,7 @@ public:
 	virtual int AI_getGenericValueTimes100(UnitValueFlags eFlags) const;
 
 	CvUnit* AI_getMissionAIUnit() const;
-	
+
 	bool AI_isFull() const;
 
 	void read(FDataStreamBase* pStream);

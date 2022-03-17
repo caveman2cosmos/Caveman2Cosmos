@@ -3,12 +3,35 @@
 	<UnitCombatInfos>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_SUBDUED</Type>
+			<Description>TXT_KEY_UNITCOMBAT_SUBDUED</Description>
+			<bCannotMergeSplit>1</bCannotMergeSplit>
+			<Button>Art/Interface/Buttons/units/sparth/categories/subdued.dds</Button>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_RECORD_TALE</MissionType>
 					<ActionOutcomes>
 						<Outcome>
 							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL</OutcomeType>
+							<iChance>100</iChance>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>1</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>1</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_STORY</OutcomeType>
 							<iChance>100</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
@@ -68,6 +91,26 @@
 							</Commerces>
 						</Outcome>
 						<Outcome>
+							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_FRESCO</OutcomeType>
+							<iChance>100</iChance>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>4</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+						</Outcome>
+						<Outcome>
 							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_SCRIBE</OutcomeType>
 							<iChance>100</iChance>
 							<Commerces>
@@ -83,7 +126,7 @@
 										<ID>ADAPT_UNIT_YIELD</ID>
 										<Constant>6</Constant>
 									</Adapt>
-									</iCommerce>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
@@ -152,6 +195,26 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>1</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_STORY</OutcomeType>
+							<iChance>100</iChance>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>1</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
 										<Constant>2</Constant>
 									</Adapt>
 								</iCommerce>
@@ -160,6 +223,46 @@
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_ORAL_CAVE</OutcomeType>
+							<iChance>100</iChance>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_LASCAUX</OutcomeType>
+							<iChance>100</iChance>
+							<Commerces>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_ANIMAL_RECORD_TALE_FRESCO</OutcomeType>
 							<iChance>100</iChance>
 							<Commerces>
 								<iCommerce>0</iCommerce>
@@ -194,7 +297,7 @@
 										<ID>ADAPT_UNIT_YIELD</ID>
 										<Constant>10</Constant>
 									</Adapt>
-									</iCommerce>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
 							</Commerces>
 						</Outcome>
@@ -245,6 +348,38 @@
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_MAMMAL_URSINE</Type>
+			<Description>TXT_KEY_UNITCOMBAT_MAMMAL_URSINE</Description>
+			<iPursuitChange>10</iPursuitChange>
+			<FeatureAttacks>
+				<FeatureAttack>
+					<FeatureType>FEATURE_CAVES</FeatureType>
+					<iFeatureAttack>10</iFeatureAttack>
+				</FeatureAttack>
+			</FeatureAttacks>
+			<FeatureDefenses>
+				<FeatureDefense>
+					<FeatureType>FEATURE_CAVES</FeatureType>
+					<iFeatureDefense>20</iFeatureDefense>
+				</FeatureDefense>
+			</FeatureDefenses>
+			<InvisibleFeatureChanges>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_CAVES</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+				<InvisibleFeatureChange>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
+					<iIntensity>1</iIntensity>
+				</InvisibleFeatureChange>
+			</InvisibleFeatureChanges>
+			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_ANIMAL_COMBAT</MissionType>
@@ -294,16 +429,53 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_ANIMAL_COMBAT3</OutcomeType>
 							<iChance>100</iChance>
-							<Yields>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-							</Yields>
 							<Commerces>
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
 										<Constant>4</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+							<iHappinessTimer>5</iHappinessTimer>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_ANIMAL_COMBAT4</OutcomeType>
+							<iChance>100</iChance>
+							<Commerces>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+							<iHappinessTimer>5</iHappinessTimer>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_ANIMAL_COMBAT5</OutcomeType>
+							<iChance>100</iChance>
+							<Commerces>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -323,6 +495,8 @@
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_MAMMAL_RHINO</Type>
+			<Description>TXT_KEY_UNITCOMBAT_MAMMAL_RHINO</Description>
+			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_ANIMAL_COMBAT</MissionType>
@@ -330,15 +504,20 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_ANIMAL_COMBAT1</OutcomeType>
 							<iChance>100</iChance>
-							<Yields>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-							</Yields>
 							<Commerces>
-								<iCommerce>1</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>1</Constant>
+									</Adapt>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
-								<iCommerce>5</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
 							</Commerces>
 							<iHappinessTimer>5</iHappinessTimer>
@@ -346,15 +525,20 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_ANIMAL_COMBAT2</OutcomeType>
 							<iChance>100</iChance>
-							<Yields>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-							</Yields>
 							<Commerces>
-								<iCommerce>2</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>2</Constant>
+									</Adapt>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
-								<iCommerce>5</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
 							</Commerces>
 							<iHappinessTimer>5</iHappinessTimer>
@@ -362,15 +546,62 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_ANIMAL_COMBAT3</OutcomeType>
 							<iChance>100</iChance>
-							<Yields>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-								<iYield>0</iYield>
-							</Yields>
 							<Commerces>
-								<iCommerce>4</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>4</Constant>
+									</Adapt>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
-								<iCommerce>5</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+							<iHappinessTimer>5</iHappinessTimer>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_ANIMAL_COMBAT4</OutcomeType>
+							<iChance>100</iChance>
+							<Commerces>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+							</Commerces>
+							<iHappinessTimer>5</iHappinessTimer>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_ANIMAL_COMBAT5</OutcomeType>
+							<iChance>100</iChance>
+							<Commerces>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_UNIT_YIELD</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
 								<iCommerce>0</iCommerce>
 							</Commerces>
 							<iHappinessTimer>5</iHappinessTimer>
@@ -393,90 +624,6 @@
 			<Type>UNITCOMBAT_WHALE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_WHALE</Description>
 			<Button>Art/Interface/Buttons/units/sparth/categories/whales.dds</Button>
-<!--
-			<Actions>
-				<Action>
-					<MissionType>MISSION_ANIMAL_STUDY</MissionType>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_ANIMAL_STUDY_PETS</OutcomeType>
-							<iChance>100</iChance>
-							<Commerces>
-								<iCommerce>0</iCommerce>
-								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>1</Constant>
-									</Adapt>
-								</iCommerce>
-								<iCommerce>0</iCommerce>
-								<iCommerce>0</iCommerce>
-							</Commerces>
-						</Outcome>
-						<Outcome>
-							<OutcomeType>OUTCOME_ANIMAL_STUDY_MENAGERIE</OutcomeType>
-							<iChance>100</iChance>
-							<Commerces>
-								<iCommerce>0</iCommerce>
-								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>5</Constant>
-									</Adapt>
-								</iCommerce>
-								<iCommerce>0</iCommerce>
-								<iCommerce>0</iCommerce>
-							</Commerces>
-						</Outcome>
-						<Outcome>
-							<OutcomeType>OUTCOME_ANIMAL_STUDY_AQUARIUM</OutcomeType>
-							<iChance>100</iChance>
-							<Commerces>
-								<iCommerce>0</iCommerce>
-								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>7</Constant>
-									</Adapt>
-								</iCommerce>
-								<iCommerce>0</iCommerce>
-								<iCommerce>0</iCommerce>
-							</Commerces>
-						</Outcome>
-						<Outcome>
-							<OutcomeType>OUTCOME_ANIMAL_STUDY_MARINE_INST</OutcomeType>
-							<iChance>100</iChance>
-							<Commerces>
-								<iCommerce>0</iCommerce>
-								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>10</Constant>
-									</Adapt>
-								</iCommerce>
-								<iCommerce>0</iCommerce>
-								<iCommerce>0</iCommerce>
-							</Commerces>
-						</Outcome>
-						<Outcome>
-							<OutcomeType>OUTCOME_ANIMAL_STUDY_WHALE</OutcomeType>
-							<iChance>100</iChance>
-							<Commerces>
-								<iCommerce>0</iCommerce>
-								<iCommerce>
-									<Adapt>
-										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>15</Constant>
-									</Adapt>
-								</iCommerce>
-								<iCommerce>0</iCommerce>
-								<iCommerce>0</iCommerce>
-							</Commerces>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-			</Actions>
--->
 		</UnitCombatInfo>
 	</UnitCombatInfos>
 </Civ4UnitCombatInfos>

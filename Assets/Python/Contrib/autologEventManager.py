@@ -4,13 +4,9 @@
 ## Modified from autolog by eotinb
 ## autolog's event handler
 ## by eotinb
-##
-## TODO:
-## - Use onPlayerChangeStateReligion event
 
 from CvPythonExtensions import *
 import CvUtil
-import Popup as PyPopup
 import autolog
 import time
 import BugCore
@@ -91,15 +87,15 @@ class autologEventManager:
 		eventManager.Events.update(moreEvents)
 
 	def __OPEN_LOG_EVENT_IDBegin(self, argsList):
-		popup = PyPopup.PyPopup(OPEN_LOG_EVENT_ID, EventContextTypes.EVENTCONTEXT_SELF)
+		popup = CyPopup(OPEN_LOG_EVENT_ID, EventContextTypes.EVENTCONTEXT_SELF, True)
 
-		if (AutologOpt.isUseDefaultFileName()):
-			popup.setHeaderString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_POPUP_QUESTION"))
-			popup.setBodyString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_POPUP_ANSWERS"))
+		if AutologOpt.isUseDefaultFileName():
+			popup.setHeaderString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_POPUP_QUESTION"), 1<<2)
+			popup.setBodyString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_POPUP_ANSWERS"), 1<<0)
 		else:
-			popup.setHeaderString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_ENTER_LOG_NAME"))
-			popup.createEditBox(AutologOpt.getFileName())
-			popup.setEditBoxMaxCharCount( 30 )
+			popup.setHeaderString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_ENTER_LOG_NAME"), 1<<2)
+			popup.createEditBox(AutologOpt.getFileName(), 0)
+			popup.setEditBoxMaxCharCount(30, 32, 0)
 
 		popup.addButton(BugUtil.getPlainText("TXT_KEY_MAIN_MENU_OK"))
 		popup.addButton(BugUtil.getPlainText("TXT_KEY_SCREEN_CANCEL"))
@@ -116,9 +112,9 @@ class autologEventManager:
 
 	def __CUSTOM_ENTRY_EVENT_IDBegin(self, argsList):
 		if isLoggingOn():
-			popup = PyPopup.PyPopup(CUSTOM_ENTRY_EVENT_ID, EventContextTypes.EVENTCONTEXT_SELF)
-			popup.setHeaderString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_CUSTOM_ENTRY"))
-			popup.createEditBox("")
+			popup = CyPopup(CUSTOM_ENTRY_EVENT_ID, EventContextTypes.EVENTCONTEXT_SELF, True)
+			popup.setHeaderString(BugUtil.getPlainText("TXT_KEY_AUTOLOG_CUSTOM_ENTRY"), 1<<2)
+			popup.createEditBox("", 0)
 			popup.addButton(BugUtil.getPlainText("TXT_KEY_MAIN_MENU_OK"))
 			popup.addButton(BugUtil.getPlainText("TXT_KEY_SCREEN_CANCEL"))
 			popup.launch(False, PopupStates.POPUPSTATE_IMMEDIATE)
@@ -237,7 +233,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 
 	def onKbdEvent(self, argsList):
 		eventType,key,mx,my,px,py = argsList
-		if ( eventType == self.eventMgr.EventKeyDown ):
+		if eventType == 6:
 			theKey=int(key)
 			'Check if ALT + E was hit == echoes to text log and in-game log'
 			if (theKey == int(InputTypes.KB_E)
@@ -343,9 +339,9 @@ class AutoLogEvent(AbstractAutoLogEvent):
 				year = TRNSLTR.getText("TXT_KEY_TIME_AD", (year,))
 
 			if iMaxTurns:
-				sTurn = "%i/%i" %(GAME.getElapsedGameTurns() + 1 + AutologOpt.get4000BCTurn(), iMaxTurns)
+				sTurn = "%i/%i" %(GAME.getElapsedGameTurns() + 1 + AutologOpt.getStartDateTurn(), iMaxTurns)
 			else:
-				sTurn = "%i" % GAME.getElapsedGameTurns() + 1 + AutologOpt.get4000BCTurn()
+				sTurn = "%i" % GAME.getElapsedGameTurns() + 1 + AutologOpt.getStartDateTurn()
 
 			Logger.writeLog_pending_flush()
 			Logger.writeLog_pending("")
@@ -473,7 +469,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 		iPlayerW = CyUnitW.getOwner()
 
 		if iActivePlayer in (iPlayerW, CyUnitL.getOwner()):
-			fHealthW = CyUnitW.baseCombatStr() * CyUnitW.currHitPoints() / float(CyUnitW.maxHitPoints())
+			fHealthW = CyUnitW.baseCombatStr() * CyUnitW.getHP() / float(CyUnitW.getMaxHP())
 			zsBattleLocn = self.getUnitLocation(CyUnitW)
 
 			if iPlayerW == iActivePlayer:
@@ -542,9 +538,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 		self.cdDefender = None
 
 	def getUnitLocation(self, CyUnit):
-		X = CyUnit.getX()
-		Y = CyUnit.getY()
-		CyPlot = CyMap().plot(X, Y)
+		CyPlot = CyUnit.plot()
 		iOwner = CyPlot.getOwner()
 		if iOwner > -1:
 			szText = TRNSLTR.getText("TXT_KEY_AUTOLOG_IN_TERRITORY", (GC.getPlayer(iOwner).getCivilizationAdjective(0),))
@@ -557,19 +551,15 @@ class AutoLogEvent(AbstractAutoLogEvent):
 		else:
 			szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_ON_THE_HIGH_SEAS")
 
-		for x in xrange(X-1, X+2):
-			for y in xrange(Y-1, Y+2):
-				CyPlot = CyMap().plot(x, y)
-				if CyPlot.isCity():
-					CyCity = CyPlot.getPlotCity()
-					return TRNSLTR.getText("TXT_KEY_AUTOLOG_IN_TERRITORY_AT", (szText, CyCity.getName()))
+		for plotX in CyPlot.rect(1, 1):
+			if plotX.isCity():
+				CyCity = plotX.getPlotCity()
+				return TRNSLTR.getText("TXT_KEY_AUTOLOG_IN_TERRITORY_AT", (szText, CyCity.getName()))
 
-		for x in xrange(X-4, X+5, 1):
-			for y in xrange(Y-4, Y+5, 1):
-				CyPlot = CyMap().plot(x, y)
-				if CyPlot.isCity():
-					CyCity = CyPlot.getPlotCity()
-					return TRNSLTR.getText("TXT_KEY_AUTOLOG_IN_TERRITORY_NEAR", (szText, CyCity.getName()))
+		for plotX in CyPlot.rect(4, 4):
+			if plotX.isCity():
+				CyCity = plotX.getPlotCity()
+				return TRNSLTR.getText("TXT_KEY_AUTOLOG_IN_TERRITORY_NEAR", (szText, CyCity.getName()))
 
 		return szText
 
@@ -999,12 +989,10 @@ class AutoLogEvent(AbstractAutoLogEvent):
 		if CyMap().plot(iX, iY).getOwner() == GAME.getActivePlayer():
 			message = TRNSLTR.getText("TXT_KEY_AUTOLOG_IMPROVEMENT_BUILT", (GC.getImprovementInfo(iImprovement).getDescription(),))
 			zsLocn = ""
-			for x in xrange(iX-2, iX+3):
-				for y in xrange(iY-2, iY+3):
-					CyPlot = CyMap().plot(x, y)
-					if CyPlot.isCity():
-						CyCity = CyPlot.getPlotCity()
-						zsLocn = TRNSLTR.getText("TXT_KEY_AUTOLOG_NEAR", (CyCity.getName(),))
+			for CyPlot in CyMap().plot(iX, iY).rect(2, 2):
+				if CyPlot.isCity():
+					CyCity = CyPlot.getPlotCity()
+					zsLocn = TRNSLTR.getText("TXT_KEY_AUTOLOG_NEAR", (CyCity.getName(),))
 
 			message += zsLocn
 			Logger.writeLog(message, vColor="RoyalBlue")
@@ -1019,12 +1007,10 @@ class AutoLogEvent(AbstractAutoLogEvent):
 		if CyMap().plot(iX, iY).getOwner() == GAME.getActivePlayer():
 			message = TRNSLTR.getText("TXT_KEY_AUTOLOG_IMPROVEMENT_DESTROYED", (GC.getImprovementInfo(iImprovement).getDescription(),))
 			zsLocn = ""
-			for x in xrange(iX-2, iX+3):
-				for y in xrange(iY-2, iY+3):
-					CyPlot = CyMap().plot(x, y)
-					if CyPlot.isCity():
-						CyCity = CyPlot.getPlotCity()
-						zsLocn = TRNSLTR.getText("TXT_KEY_AUTOLOG_NEAR", (CyCity.getName(),))
+			for CyPlot in CyMap().plot(iX, iY).rect(2, 2):
+				if CyPlot.isCity():
+					CyCity = CyPlot.getPlotCity()
+					zsLocn = TRNSLTR.getText("TXT_KEY_AUTOLOG_NEAR", (CyCity.getName(),))
 
 			message += zsLocn
 			Logger.writeLog(message, vColor="RoyalBlue")
@@ -1032,9 +1018,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 	def onUnitPillage(self, argsList):
 		if not AutologOpt.isLogPillage(): return
 		CyUnit, iImprovement, iRoute, iPlayer = argsList
-		X = CyUnit.getX()
-		Y = CyUnit.getY()
-		CyPlot = CyMap().plot(X, Y)
+		CyPlot = CyUnit.plot()
 		iActivePlayer = GAME.getActivePlayer()
 
 		if CyPlot.getOwner() == iActivePlayer or CyUnit.getOwner() == iActivePlayer:
@@ -1045,12 +1029,10 @@ class AutoLogEvent(AbstractAutoLogEvent):
 			else:
 				message = BugUtil.getPlainText("TXT_KEY_AUTOLOG_IMPROVEMENT_UNKNOWN")
 			szText = ""
-			for x in xrange(X-2, X+3):
-				for y in xrange(Y-2, Y+3):
-					CyPlot = CyMap().plot(x, y)
-					if CyPlot.isCity():
-						CyCity = CyPlot.getPlotCity()
-						szText = TRNSLTR.getText("TXT_KEY_AUTOLOG_NEAR", (CyCity.getName(),))
+			for plotX in CyPlot.rect(2, 2):
+				if plotX.isCity():
+					CyCity = plotX.getPlotCity()
+					szText = TRNSLTR.getText("TXT_KEY_AUTOLOG_NEAR", (CyCity.getName(),))
 
 			message += szText
 

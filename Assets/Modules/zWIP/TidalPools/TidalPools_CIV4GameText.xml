@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TIDAL_POOLS</Tag>
+		<English>Tidal Pools</English>
+		<Russian>Рукотворная заводь</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_TIDAL_POOLS_PEDIA</Tag>
+		<English>Seeing the value of tide pools in catching fish and crabs, early people made artificial ones to improve their haul.</English>
+		<Russian>Видя значение приливов в ловле рыбы и крабов, первобытные люди сделали искусственные затоны, чтобы увеличить свой улов.</Russian>
+	</TEXT>
+</Civ4GameText>

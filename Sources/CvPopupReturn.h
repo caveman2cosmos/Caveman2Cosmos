@@ -48,7 +48,7 @@ return m_aiSelectedRadioButton.size();
 }
 
 //	Will set the bitfield for checkboxes
-void setCheckboxBitfield( int iValue, int iGroup = 0 )								
+void setCheckboxBitfield( int iValue, int iGroup = 0 )
 {
 //m_aiBitField, iGroup, iValue );
 CvPopup_SetAtGrow(m_aiBitField, iGroup, iValue);
@@ -74,10 +74,10 @@ CvPopup_SetAtGrow(m_aszEditBoxString, iGroup, szValue);
 }
 
 //	Will get the selected editbox string
-const wchar_t* getEditBoxString( int iGroup = 0 ) const														
+const wchar_t* getEditBoxString( int iGroup = 0 ) const
 {
 //		return ((uint)iGroup<m_aszEditBoxString.size()) ? m_aszEditBoxString[iGroup] : NULL;
-if ((uint)iGroup<m_aszEditBoxString.size()) 
+if ((uint)iGroup<m_aszEditBoxString.size())
 return m_aszEditBoxString[iGroup];
 return NULL;
 }
@@ -114,7 +114,7 @@ CvPopup_SetAtGrow(m_aiPulldownID, iGroup, iValue );
 }
 
 //	Will get the selected pulldown value
-int getSelectedPullDownValue( int iGroup = 0 ) const														
+int getSelectedPullDownValue( int iGroup = 0 ) const
 {
 return m_aiPulldownID[iGroup];
 }
@@ -132,7 +132,7 @@ CvPopup_SetAtGrow(m_aiListBoxID, iGroup, iValue );
 }
 
 //	Will get the selected listbox value
-int getSelectedListBoxValue( int iGroup = 0 ) const															
+int getSelectedListBoxValue( int iGroup = 0 ) const
 {
 return ((uint)iGroup<m_aiListBoxID.size()) ? m_aiListBoxID[iGroup] : -1;
 }
@@ -150,7 +150,7 @@ CvPopup_SetAtGrow( m_aiSpinBoxID, iIndex, iValue );
 }
 
 //	Will get the current spinbox value
-int getCurrentSpinBoxValue( int iIndex = 0 ) const															
+int getCurrentSpinBoxValue( int iIndex = 0 ) const
 {
 return ((uint)iIndex<m_aiSpinBoxID.size()) ? m_aiSpinBoxID[iIndex] : -1;
 }
@@ -168,7 +168,7 @@ CvPopup_SetAtGrow(m_aiButtonID, iGroup, iValue );
 }
 
 //	Will get the button ID
-int getButtonClicked( int iGroup = 0 ) const																
+int getButtonClicked( int iGroup = 0 ) const
 {
 return m_aiButtonID[iGroup];
 }

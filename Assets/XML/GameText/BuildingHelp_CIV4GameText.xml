@@ -1,0 +1,1608 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_ADJUST_COMM_RATE</Tag>
+		<English>[ICON_BULLET]Can Adjust %F1_CmrcIcon Rate</English>
+		<French>[ICON_BULLET]Peut modifier le taux de commerce de %F1_CmrcIcon</French>
+		<German>[ICON_BULLET]Kann %F1_CmrcIcon-Rate anpassen</German>
+		<Italian>[ICON_BULLET]Può regolare il ritmo del %F1_CmrcIcon</Italian>
+		<Spanish>[ICON_BULLET]Puede ajustar el ritmo de %F1_CmrcIcon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_AFFLICTION_OUTBREAK_LEVEL_CHANGE</Tag>
+		<English>[ICON_BULLET]Adjusts the base outbreak threshold of %s1_Affliction by %d2_Amount.</English>
+		<French>[ICON_BULLET]Modifie les chances d'épidémie de %s1_Affliction de %d2_Amount.</French>
+		<Italian>[ICON_BULLET]Modifica le chance di un'epidemia di %s1_Affliction del %d2_Amount.</Italian>
+		<Polish>[ICON_BULLET]Reguluje szanse na wybuch: %s1_Affliction o %d2_Amount.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_AID_RATE</Tag>
+		<English>[ICON_BULLET]%D1_Amount Aid in Overcoming %s2_Type Afflictions within the City</English>
+		<French>[ICON_BULLET]%D1_Amount d'aide pour surmonter les afflications de type %s2_Type au sein de la ville</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_AIRLIFT</Tag>
+		<English>[ICON_BULLET]Can Airlift %d1_Num Land [NUM1:Unit:Units] per Turn</English>
+		<French>[ICON_BULLET]Peut convoyer %d1_Num [NUM1:unité terrestre:unités terrestres] par voie aérienne par tour</French>
+		<German>[ICON_BULLET]Kann pro Runde %d1_Num [NUM1:Bodeneinheit:Bodeneinheiten] per Lufttransport befördern</German>
+		<Italian>[ICON_BULLET]Permette il trasporto aereo di %d1_Num unità [NUM1:terrestre:terrestri] per turno</Italian>
+		<Spanish>[ICON_BULLET]Puede aerotransportar %d1_Num [NUM1:unidad terrestre:unidades terrestres] por turno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_AIR_DAMAGE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Damage from [LINK=CONCEPT_AIR_UNITS]Air Units[\LINK]</English>
+		<French>[ICON_BULLET]Dégâts par les [LINK=CONCEPT_AIR_UNITS]unités aériennes[\LINK] %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Schaden durch [LINK=CONCEPT_AIR_UNITS]Lufteinheiten[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% danno dalle [LINK=CONCEPT_AIR_UNITS]unità aeree[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al daño por [LINK=CONCEPT_AIR_UNITS]unidades aéreas[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_AIR_UNIT_CAPACITY</Tag>
+		<English>[ICON_BULLET]%D1 [LINK=CONCEPT_AIR_UNITS]Air Unit[\LINK] Capacity</English>
+		<French>[ICON_BULLET]%D1 Capacité des [LINK=CONCEPT_AIR_UNITS]unités aériennes[\LINK]</French>
+		<German>[ICON_BULLET]%D1 Kapazität für [LINK=CONCEPT_AIR_UNITS]Lufteinheiten[\LINK]</German>
+		<Italian>[ICON_BULLET]Spazio di carico [LINK=CONCEPT_AIR_UNITS]unità aerea[\LINK] %D1</Italian>
+		<Spanish>[ICON_BULLET]%D1 de Capacidad de la [LINK=CONCEPT_AIR_UNITS]Unidad aérea[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_ALL_CITIES</Tag>
+		<English>[SPACE]All Cities</English>
+		<French>[SPACE]Toutes les villes</French>
+		<German>[SPACE]Alle Städte</German>
+		<Italian>[SPACE]Tutte le città</Italian>
+		<Spanish>[SPACE]Todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_ALL_CITIES_THIS_CONTINENT</Tag>
+		<English>[SPACE]All Cities This Continent</English>
+		<French>[SPACE]Toutes les villes sur ce continent</French>
+		<German>[SPACE]Alle Städte auf diesem Kontinent</German>
+		<Italian>[SPACE]Tutte le città in questo continente</Italian>
+		<Spanish>[SPACE]Todas las ciudades de este continente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_ALL_TRADE</Tag>
+		<English>[ICON_BULLET] Opens trade routes to all other players</English>
+		<French>[ICON_BULLET] Ouvre les routes commerciales à tous les autres joueurs</French>
+		<German>[ICON_BULLET] Öffnet Handelsrouten mit allen anderen Spielern</German>
+		<Italian>[ICON_BULLET] Apre le rotte commerciali con tutti i giocatori</Italian>
+		<Spanish>[ICON_BULLET] Abre rutas comerciales con todos los demás jugadores</Spanish>
+		<Polish>[ICON_BULLET] Otwiera szlaki handlowe u wszystkich innych graczy</Polish>
+		<Russian>[ICON_BULLET] Îòêðûâàåò òîðãîâûå ìàðøðóòû äëÿ âñåõ äðóãèõ èãðîêîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_ANARCHY_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Anarchy Length</English>
+		<French>[ICON_BULLET]Durée de l'anarchie %D1_Mod%%</French>
+		<German>[ICON_BULLET]Dauer von Unruhen: %D1_Mod%%</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% durata dell'anarchia</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la duración de la anarquía</Spanish>
+		<Russian>[ICON_BULLET]%D1_Mod%% длительности анархии</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_ANARCHY_TIMER_MOD</Tag>
+		<English>[ICON_BULLET]%D1%% Wait Between Civics or State Religion changes</English>
+		<French>[ICON_BULLET]%D1%% d'attente entre les changements de doctrine ou de religion d'état</French>
+		<German>[ICON_BULLET]Wartezeit bei Änderungen von Staatsform oder Staatsreligion: %D1%%</German>
+		<Italian>[ICON_BULLET]%D1%% di attesa al cambiamento di forma di governo o religione di stato</Italian>
+		<Spanish>[ICON_BULLET]%D1%% de espera entre los cambios de principios o de religión oficial</Spanish>
+		<Russian>[ICON_BULLET]Äëèòåëüíîñòü ñìåíû ïàðàäèãìû èëè ãîñóäàðñòâåííîé ðåëèãèè: %D1%%</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_AUTO_BUILD</Tag>
+		<English>This building is automatically built by your citizens when its requirements are met</English>
+		<French>Ce bâtiment est construit automatiquement par vos citoyens, lorsque les éléments requis sont disponibles</French>
+		<German>[ICON_BULLET]erscheint und verschwindet automatisch, wenn die Bedingungen dafür erfüllt sind.</German>
+		<Italian>Questo edificio viene costruito automaticamente dai tuoi cittadini quando tutti i prerequisiti sono soddisfatti</Italian>
+		<Spanish>Este edificio será automáticamente construido por tus ciudadanos cuando se cumplan todos sus requisitos</Spanish>
+		<Polish>Ten budynek zostanie wzniesiony przez mieszkańców miasta gdy wymagania zostaną spełnione</Polish>
+		<Russian>Ýòî çäàíèå ñòðîèòñÿ àâòîìàòè÷åñêè âàøèìè ãðàæäàíàìè ïðè âûïîëíåíèè âñåõ íåîáõîäèìûõ óñëîâèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_BIRTH_RATE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% [ICON_GREATPEOPLE] Birth Rate</English>
+		<French>[ICON_BULLET]Taux de natalité [ICON_GREATPEOPLE] %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Geburtenrate [ICON_GREATPEOPLE]</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% [ICON_GREATPEOPLE] tasso di natalità</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la tasa de natalidad de [ICON_GREATPEOPLE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_BIRTH_RATE_MOD_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% [ICON_GREATPEOPLE] Birth Rate in All Cities</English>
+		<French>[ICON_BULLET]Natalité dans toutes les villes [ICON_GREATPEOPLE] %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Geburtenrate [ICON_GREATPEOPLE] in allen Städten</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% [ICON_GREATPEOPLE] tasso di natalità in tutte le città</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la tasa de natalidad de [ICON_GREATPEOPLE] en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_BOMBARD_DEFENSE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Less Damage to Defenses (Not vs. high explosives)</English>
+		<French>[ICON_BULLET]%D1_Mod%% de Protection des Bombardements (Sauf contre les Unités possédant des explosifs)</French>
+		<German>[ICON_BULLET]%D1_Mod%% Verteidigungsschäden durch Bombardierungen (außer gegen Sprengstoffeinheiten)</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% di protezione dal bombardamento (eccetto vs. unità con esplosivi)</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% de daño a la defensa contra el bombardeo (excepto contra unidades con explosivos)</Spanish>
+		<Polish>[ICON_BULLET]%D1_Mod%% obrażeń od bombardowania obrony miasta (nie działa przeciwko jednostkom z eksplodującymi pociskami)</Polish>
+		<Russian>[ICON_BULLET]%D1_Mod%% ê ïîâðåæäåíèÿì óêðåïëåíèé ïðè áîìáàðäèðîâêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_BONUS_AID_MODIFIER</Tag>
+		<English>[ICON_BULLET]Access to %s1_Bonus offers a +%d2 Aid Bonus to help Overcome %s2_Property Afflictions from this building.</English>
+		<French>[ICON_BULLET]L'Accès à %s1_Bonus offre un Bonus de +%d2 en santé pour surmonter les afflictions de type %s2_Property de ce bâtiment.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_BONUS_DEFENSE_CHANGE</Tag>
+		<English>% City Defense with access to[SPACE]</English>
+		<French>% Défense de Ville avec accès à[SPACE]</French>
+		<German>% Stadtverteidigung mit Zugang zu[SPACE]</German>
+		<Italian>% Difesa cittadina con accesso a[SPACE]</Italian>
+		<Spanish>% de bonificación defensiva con acceso a[SPACE]</Spanish>
+		<Polish>% Obrona miasta z dostępem do[SPACE]</Polish>
+		<Russian>%[SPACE]Ãîðîäñêàÿ çàùèòà ñ äîñòóïîì ê[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_BORDER_OBSTACLE</Tag>
+		<English>[ICON_BULLET]Prevents Barbarians from Entering Borders on Continent</English>
+		<French>[ICON_BULLET]Empêche les Barbares de franchir les frontières du continent</French>
+		<German>[ICON_BULLET]Hindert Barbaren an der Überquerung der kontinentalen Grenzen</German>
+		<Italian>[ICON_BULLET]Impedisce ai barbari di superare i confini sul continente</Italian>
+		<Spanish>[ICON_BULLET]Impide que los bárbaros traspasen las fronteras del continente.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_BUILDS_FASTER_DOMAIN</Tag>
+		<English>[ICON_BULLET]Builds %s1_UnitName %D2_Mod%% Faster</English>
+		<French>[ICON_BULLET]Vitesse de production de "%s1_UnitName" : %D2_Mod%%</French>
+		<German>[ICON_BULLET]Errichtet die Einheit %s1_UnitName %D2_Mod%% schneller</German>
+		<Italian>[ICON_BULLET]Costruisce %s1_UnitName %D2_Mod%% più velocemente</Italian>
+		<Spanish>[ICON_BULLET]Construye %s1:2_UnitName un %D2_Mod%% más rápido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_CAPITAL</Tag>
+		<English>[ICON_BULLET]Makes this City the Capital</English>
+		<French>[ICON_BULLET]Fait de cette ville la capitale</French>
+		<German>[ICON_BULLET]macht diese Stadt zur Hauptstadt</German>
+		<Italian>[ICON_BULLET]Rende capitale questa città</Italian>
+		<Spanish>[ICON_BULLET]Convierte esta ciudad en la capital</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_CENTERS_MAP</Tag>
+		<English>[ICON_BULLET]Centers [LINK=CONCEPT_MAPS]World Map[\LINK]</English>
+		<French>[ICON_BULLET]Centre la [LINK=CONCEPT_MAPS]carte du monde[\LINK]</French>
+		<German>[ICON_BULLET]Zentriert die [LINK=CONCEPT_MAPS]Weltkarte[\LINK]</German>
+		<Italian>[ICON_BULLET]Centra la [LINK=CONCEPT_MAPS]mappa[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]Centra el [LINK=CONCEPT_MAPS]mapamundi[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_CITY_FAST_GROWTH_SPEED</Tag>
+		<English>[ICON_BULLET]City Require %d1%% Less [ICON_FOOD] to Grow</English>
+		<French>[ICON_BULLET]Les Villes ont besoin de %d1%% [ICON_FOOD] en moins pour croître</French>
+		<German>[ICON_BULLET]Städte benötigen %d1%% weniger [ICON_FOOD] um zu wachsen</German>
+		<Italian>[ICON_BULLET]Le città richiedono %d1%% in meno di [ICON_FOOD] per crescere</Italian>
+		<Spanish>[ICON_BULLET]Las ciudades requieren un %d1%% menos de [ICON_FOOD] para crecer</Spanish>
+		<Polish>[ICON_BULLET]Miasta wymagają %d1%% mniej [ICON_FOOD] do wzrostu</Polish>
+		<Russian>[ICON_BULLET]Ãîðîäà òðåáóþò íà %d1%% ìåíüøå [ICON_FOOD] äëÿ ðîñòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_CITY_SLOW_GROWTH_SPEED</Tag>
+		<English>[ICON_BULLET]City Require %d1%% More [ICON_FOOD] to Grow</English>
+		<French>[ICON_BULLET]Les Villes ont besoin de %d1%% [ICON_FOOD] supplémentaire pour croître</French>
+		<German>[ICON_BULLET]Städte benötigen %d1%% mehr [ICON_FOOD] um zu wachsen</German>
+		<Italian>[ICON_BULLET]Le città richiedono %d1%% in più di [ICON_FOOD] per crescere</Italian>
+		<Spanish>[ICON_BULLET]Las ciudades requieren un %d1%% más de [ICON_FOOD] para crecer</Spanish>
+		<Polish>[ICON_BULLET]Miasta wymagają %d1%% więcej [ICON_FOOD] do wzrostu</Polish>
+		<Russian>[ICON_BULLET]Ãîðîäà òðåáóþò íà %d1%% áîëüøå [ICON_FOOD] äëÿ ðîñòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_CIVIC_HEALTH_HAPPINESS_CHANGE</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrHealth with[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrHealth avec [SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrHealth mit[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HappyOrHealth con[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrHealth con[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_COASTAL_TRADE_ROUTES</Tag>
+		<English>[ICON_BULLET]%D1_Change Trade Routes in All Coastal Cities</English>
+		<French>[ICON_BULLET]%D1_Change Routes commerciales dans toutes les villes côtières</French>
+		<German>[ICON_BULLET]%D1_Change Handelswege in allen Küstenstädten</German>
+		<Italian>[ICON_BULLET]%D1_Change rotte commerciali in tutte le città costiere</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change rutas comerciales en todas las ciudades costeras</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DAMAGES_ENEMY_UNITS</Tag>
+		<English>[ICON_BULLET]Adjacent Enemy units will receive %d1% damage per turn.</English>
+		<French>[ICON_BULLET]Les Unités ennemies adjacentes vont recevoir %d1% de dommages par tour.</French>
+		<German>[ICON_BULLET]Feindliche Einheiten auf Nachbarfeldern werden %d1% Schaden pro Runde nehmen.</German>
+		<Italian>[ICON_BULLET]Le unità nemiche adiacenti riceveranno %d1% danni ogni turno.</Italian>
+		<Spanish>[ICON_BULLET]Las unidades enemigas adyacentes recibirán un %d1% de daño por turno</Spanish>
+		<Polish>[ICON_BULLET]Pobliskie wrogie jednostki otrzymają %d1% obrażeń na turę.</Polish>
+		<Russian>[ICON_BULLET]Ñìåæíûå âðàæåñêèå îòðÿäû ïîëó÷àò %d1% óðîíà â õîä.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DAMAGE_ALL_ATTACKER</Tag>
+		<English>[ICON_BULLET]May damage any unit as it attacks the city. %d1_Chance%% Chance to deal %d2_Damage%% Damage. (Chance modified by attacker's Dodge. Damage modified by attacker's Armor.)</English>
+		<French>[ICON_BULLET]Peut endommager toutes les unités lorsqu'elles attaquent la ville. %d1_Chance%% de Chances d'infliger %d2_Damage%% de Dégâts. (Pourcentage modifié par l'Esquive et les dégâts par l'Armure de l'Attaquant.)</French>
+		<Italian>[ICON_BULLET]Può danneggiare qualsiasi unità che attacca la città. %d1_Chance%% di chance di infliggere %d2_Damage%% di danni. (Chance modificate dalla Schivata degli attaccanti, Danno modificato dall'Armatura degli attaccanti.)</Italian>
+		<Polish>[ICON_BULLET]Może zadać obrażenia każdej jednostce przy ataku na miasto. %d2_Chance%% Szans do zadania: %d3_Damage%% Obrażeń. (Szansa modyfikowana przez Unik atakującego. Obrażenia nie są modyfikowane przez pancerz atakującego.)</Polish>
+		<Russian>[ICON_BULLET]Может нанести урон любому отряду, когда он атакует город. %d1_Chance%% шанса нанести %d2_Damage%% урона. (Шанс зависит от уровня уклонения атакующего. Конечный урон НЕ зависит от защиты атакующего.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DAMAGE_ALL_ATTACKER_ARMOR_EXEMPT</Tag>
+		<English>[ICON_BULLET]May damage any unit as it attacks the city. %d1_Chance%% Chance to deal %d2_Damage%% Damage. (Chance modified by attacker's Dodge. Damage NOT modified by attacker's Armor.)</English>
+		<French>[ICON_BULLET]Peut endommager toutes les unités lorsqu'elles attaquent la ville. %d1_Chance%% de Chances d'infliger %d2_Damage%% de Dégâts. (Pourcentage modifié par l'Esquive, mais pas par l'Armure de l'Attaquant.)</French>
+		<Italian>[ICON_BULLET]Può danneggiare qualsiasi unità che attacca la città. %d1_Chance%% di chance di infliggere %d2_Damage%% di danni. (Chance modificate dalla Schivata degli attaccanti, Danno NON modificato dall'Armatura degli attaccanti.)</Italian>
+		<Polish>[ICON_BULLET]Może zadać obrażenia każdej jednostce przy ataku na miasto. %d2_Chance%% Szans do zadania: %d3_Damage%% Obrażeń. (Szansa modyfikowana przez Unik atakującego. Obrażenia nie są modyfikowane przez pancerz atakującego.)</Polish>
+		<Russian>[ICON_BULLET]Может нанести урон любому отряду, когда он атакует город. %d1_Chance%% шанса нанести %d2_Damage%% урона. (Шанс зависит от уровня уклонения атакующего. Конечный урон НЕ зависит от защиты атакующего.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DAMAGE_ATTACKER_END</Tag>
+		<English>type units as they attack the city. %d1_Chance%% Chance to deal %d2_Damage%% Damage. (Chance modified by attacker's Dodge. Damage modified by attacker's Armor.)</English>
+		<French>lorsqu'elles attaquent la ville. %d1_Chance%% de Chances d'infliger %d2_Damage%% Dégâts. (Pourcentage modifié par l'Esquive et les dégâts par l'Armure de l'Attaquant.)</French>
+		<Italian>che attaccano la città. %d1_Chance%% di chance di infliggere %d2_Damage%% di danni. (Chance modificate dalla Schivata degli attaccanti, Danno modificato dall'Armatura degli attaccanti.)</Italian>
+		<Polish>rodzaj jednostek jakie szturmują miasto. %d1_Chance%% Chance to deal %d2_Damage%% Obrażenia. (Szansa modyfikowana przez Uniki Atakującego. Obrażenia modyfikowane przez Pancerz Atakującego.)</Polish>
+		<Russian> когда они нападают на город. %d1_Chance%% шанса нанести %d2_Damage%% урона. (Шанс зависит от уровня уклонения атакующего. Конечный урон НЕ зависит от защиты атакующего.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DAMAGE_ATTACKER_END_ARMOR_EXEMPT</Tag>
+		<English>type units as they attack the city. %d1_Chance%% Chance to deal %d2_Damage%% Damage. (Chance modified by attacker's Dodge. Damage NOT modified by attacker's Armor.)</English>
+		<French>lorsqu'elles attaquent la ville. %d1_Chance%% de Chances d'infliger %d2_Damage%% Dégâts. (Pourcentage modifié par l'Esquive, mais pas par l'Armure de l'Attaquant.)</French>
+		<Italian>che attaccano la città. %d1_Chance%% di chance di infliggere %d2_Damage%% di danni. (Chance modificate dalla Schivata degli attaccanti, Danno NON modificato dall'Armatura degli attaccanti.)</Italian>
+		<Polish>rodzaj jednostek jakie szturmują miasto. %d1_Chance%% Chance to deal %d2_Damage%% Obrażenia. (Szansa modyfikowana przez Uniki Atakującego. Obrażenia NIE modyfikowane przez Pancerz Atakującego.)</Polish>
+		<Russian> когда они нападают на город. %d1_Chance%% шанса нанести %d2_Damage%% урона. (Шанс зависит от уровня уклонения атакующего. Конечный урон НЕ зависит от защиты атакующего.)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DAMAGE_ATTACKER_MIDDLE</Tag>
+		<English>, %s1_UnitCombat</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DAMAGE_ATTACKER_START</Tag>
+		<English>[ICON_BULLET]May damage %s1_UnitCombat</English>
+		<French>[ICON_BULLET]Peut endommager les unités de type %s1_UnitCombat</French>
+		<Italian>[ICON_BULLET]Può danneggiare %s1_UnitCombat</Italian>
+		<Polish>[ICON_BULLET]Może zranić %s1_UnitCombat</Polish>
+		<Russian>[ICON_BULLET]Может нанести урон %s1_UnitCombat</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DECREASES_LINE_OF_SIGHT</Tag>
+		<English>[ICON_BULLET]Decreases City Line-Of-Sight</English>
+		<French>[ICON_BULLET]Diminue la ligne de vue de la ville</French>
+		<German>[ICON_BULLET]Reduziert die Sichtweite der Stadt</German>
+		<Italian>[ICON_BULLET]Diminuisce il raggio di vista della città.</Italian>
+		<Spanish>[ICON_BULLET]Disminuye la línea de visión de la ciudad</Spanish>
+		<Polish>[ICON_BULLET]Zmniejsza zasięg miasta</Polish>
+		<Russian>[ICON_BULLET]Óìåíüøàåò ãîðîäñêîé óãîë îáçîðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DEFENSE_MOD</Tag>
+		<English>[ICON_BULLET]%d1_Mod%% Defense (Not vs. high explosives)</English>
+		<French>[ICON_BULLET]%d1_Mod%% de Défense (Sauf contre les Unités possédant des explosifs)</French>
+		<German>[ICON_BULLET]%d1_Mod%% Verteidigung (außer gegen Sprengstoffeinheiten)</German>
+		<Italian>[ICON_BULLET]%d1_Mod%% alla difesa (eccetto vs. unità con esplosivi)</Italian>
+		<Spanish>[ICON_BULLET]%d1_Mod%% a la defensa (excepto contra unidades con explosivos)</Spanish>
+		<Polish>[ICON_BULLET]%d1_Mod%% do obrony (nie działa przeciwko jednostkom z eksplodującymi pociskami)</Polish>
+		<Russian>[ICON_BULLET]%d1_Mod%% ê îáîðîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DEFENSE_MOD_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%d1_Mod%% Defense in All Cities</English>
+		<French>[ICON_BULLET]%d1_Mod%% en défense dans toutes les villes</French>
+		<German>[ICON_BULLET]%d1_Mod%% Verteidigung in allen Städten</German>
+		<Italian>[ICON_BULLET]%d1_Mod%% alla difesa in tutte le città</Italian>
+		<Spanish>[ICON_BULLET]%d1_Mod%% a la defensa en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DEFENSE_RECOVERY_SPEED_MODIFIER_NEGATIVE</Tag>
+		<English>[ICON_BULLET]Building recovers its own defensive values %d1%% slower.</English>
+		<French>[ICON_BULLET]Le bâtiment récupère sa propre valeur défensive %d1%% plus lentement.</French>
+		<Italian>[ICON_BULLET]L'edificio riottiene il proprio valore difensivo %d1%% più lentamente.</Italian>
+		<Polish>[ICON_BULLET]Budynki odzyskują wartości obronne: %d1%% wolniej.</Polish>
+		<Russian>[ICON_BULLET]Здание на %d1%% медленнее восстанавливает свои показатели защиты.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DEFENSE_RECOVERY_SPEED_MODIFIER_POSITIVE</Tag>
+		<English>[ICON_BULLET]Building recovers its own defensive values %d1%% faster.</English>
+		<French>[ICON_BULLET]Le bâtiment récupère sa propre valeur défensive %d1%% plus vite.</French>
+		<Italian>[ICON_BULLET]L'edificio riottiene il proprio valore difensivo %d1%% più velocemente.</Italian>
+		<Polish>[ICON_BULLET]Budynki odzyskują wartości obronne: %d1%% szybciej.</Polish>
+		<Russian>[ICON_BULLET]Здание на %d1%% быстрее восстанавливает свои показатели защиты.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DIPLO_VOTE</Tag>
+		<English>[ICON_BULLET]Triggers %s1 Global Elections</English>
+		<French>[ICON_BULLET]Déclenche %s1 élections mondiales</French>
+		<German>[ICON_BULLET]Löst globale Wahlen aus (%s1).</German>
+		<Italian>[ICON_BULLET]Attiva le %s1 Elezioni globali</Italian>
+		<Spanish>[ICON_BULLET]Activa el sufragio mundial (%s1).</Spanish>
+		<Polish>[ICON_BULLET]Umożliwia %s1 wybory światowe</Polish>
+		<Russian>[ICON_BULLET]Ïðèâîäèò ê âûáîðàì â %s1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DISEASE_TYPE</Tag>
+		<English>[ICON_BULLET]This is a disease which equates to the %s1_Affliction Unit Affliction.</English>
+		<French>[ICON_BULLET]Cette maladie est équivalente à l'affection: %s1_Affliction des unités.</French>
+		<Italian>[ICON_BULLET]Questa malattia equivale per l'unità all'afflizione %s1_Affliction.</Italian>
+		<Polish>[ICON_BULLET]Choroba która działa tak samo jak dolegliwość jednostki: %s1_Affliction</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DISTANCE_MAINT</Tag>
+		<English>[ICON_BULLET]No Maintenance Costs from Distance to Palace</English>
+		<French>[ICON_BULLET]Pas de coût d'entretien lié à la distance du Palais</French>
+		<Italian>[ICON_BULLET]Nessun costo di mantenimento derivante dalla distanza dal palazzo</Italian>
+		<Spanish>[ICON_BULLET]Sin coste de mantenimiento por distancia con la capital</Spanish>
+		<Polish>[ICON_BULLET]Brak kosztów utrzymania za odległość od pałacu</Polish>
+		<Russian>[ICON_BULLET]Íåò çàòðàòû íà îáñëóæèâàíèå îò ðàññòîÿíèÿ äî äâîðöà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_DISTANCE_MAINT_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Distance to Palace</English>
+		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien lié à la distance du Palais</French>
+		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento derivanti dalla distanza dal palazzo</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento por distancia con la capital</Spanish>
+		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania za odległość od pałacu</Polish>
+		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå îò ðàññòîÿíèÿ äî äâîðöà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_ELECTION_ELIGIBILITY</Tag>
+		<English>[ICON_BULLET]Guarantees Eligibility for Diplomatic Votes</English>
+		<French>[ICON_BULLET]Garantit l'éligibilité pour les votes diplomatiques</French>
+		<German>[ICON_BULLET]Garantiert Berechtigung für diplomatische Wahlen</German>
+		<Italian>[ICON_BULLET]Garantisce l'idoneità per i voti diplomatici</Italian>
+		<Spanish>[ICON_BULLET]Garantiza la validez de los votos diplomáticos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_ENABLES_CIVICS</Tag>
+		<!-- %s1_Name = TXT_KEY_CIVICOPTION_ -->
+		<English>[ICON_BULLET]Enables all [COLOR_HIGHLIGHT_TEXT]%s1_Name[COLOR_REVERT] Civics</English>
+		<French>[ICON_BULLET]Permet toutes les doctrines de %s1_Name</French>
+		<German>[ICON_BULLET]Ermöglicht alle %s1_Name staatsformen</German>
+		<Italian>[ICON_BULLET]Permette tutte [COLOR_HIGHLIGHT_TEXT]%s1_Name[COLOR_REVERT]</Italian>
+		<Spanish>[ICON_BULLET]Permite todos los principios de [COLOR_HIGHLIGHT_TEXT]%s1_Name[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_ENEMY_WAR_WEAR</Tag>
+		<English>[ICON_BULLET]Enemies suffer %D1_percent%% War [ICON_UNHAPPY]</English>
+		<French>[ICON_BULLET]Les Ennemis souffrent de %D1_percent%% [ICON_UNHAPPY] lié à la guerre</French>
+		<German>[ICON_BULLET]%D1_percent%% Kriegsmüdigkeit [ICON_UNHAPPY] für alle Gegner</German>
+		<Russian>[ICON_BULLET]%D1_percent%% [ICON_UNHAPPY] всем враждебным цивилизациям из-за войны</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_ESPIONAGE_DEFENSE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Defense against Espionage</English>
+		<French>[ICON_BULLET]Protection contre l'espionnage %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Verteidigung gegen Spionage</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% in difesa contro lo spionaggio</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la defensa contra el espionaje</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_EXPANDS_WORKABLE_RADIUS</Tag>
+		<English>[ICON_BULLET]Expands the Workable Radius of the City to %d1</English>
+		<French>[ICON_BULLET]Augmente la zone d'activité de la ville à %d1</French>
+		<German>[ICON_BULLET]Erweitert den Stadtradius um %d1</German>
+		<Italian>[ICON_BULLET]Espande il raggio lavorabile della città a %d1</Italian>
+		<Spanish>[ICON_BULLET]Aumenta el radio de acción de la ciudad a %d1</Spanish>
+		<Polish>[ICON_BULLET]Rozszerza zasięg miasta o %d1</Polish>
+		<Russian>[ICON_BULLET]Ðàñøèðÿåò Îñóùåñòâèìûé Ðàäèóñ Ãîðîäà ê %d1</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FLANK_SUPPORT_PERCENT_MODIFIER</Tag>
+		<English>[ICON_BULLET]+%d1_Amount%% Support Strength from any Flank Support Unit aiding in city defense.</English>
+		<French>[ICON_BULLET]+%d1_Amount%% de Puissance en soutien, pour les unités de contournement participant à la défense de la ville.</French>
+		<Italian>[ICON_BULLET]+%d1_Amount%% di Supporto ad ogni unità dei fianchi che partecipa alla difesa cittadina.</Italian>
+		<Polish>[ICON_BULLET]+%d1_Amount%% do Siły Wspomagania z jakiejkolwiek jednostki Skrzydłowej broniącej miasta.</Polish>
+		<Russian>[ICON_BULLET]+%d1_Amount%% к фланговой поддержке любому отряду, участвующему в обороне города.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FOREIGN_TRADE_ROUTE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Foreign Trade Route Yield</English>
+		<French>[ICON_BULLET]Production de la route commerciale étrangère %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Gewinn auf interkontinentalen Außenhandelswegen</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% al rendimento delle rotte commerciali straniere</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al rendimiento de las rutas comerciales internacionales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_IN_AREA</Tag>
+		<English>Provides a free [COLOR_BUILDING_TEXT][LINK=%s1_BuildingType]%s2_BuildingName[\LINK][COLOR_REVERT] in every city on the same continent.</English>
+		<French>Fournit un [COLOR_BUILDING_TEXT][LINK=%s1_BuildingType]%s2_BuildingName[\LINK][COLOR_REVERT] gratuit dans chaque ville du continent.</French>
+		<Italian>Fornisce un [COLOR_BUILDING_TEXT][LINK=%s1_BuildingType]%s2_BuildingName[\LINK][COLOR_REVERT] gratuito in ogni città sullo stesso continente.</Italian>
+		<Spanish>[ICON_BULLET]Proporciona [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT][LINK=%s1_BuildingType]%s2_BuildingName[\LINK][COLOR_REVERT] gratis en todas las ciudades del mismo continente</Spanish>
+		<Polish>[ICON_BULLET]Dostarcza darmowy [COLOR_BUILDING_TEXT][LINK=%s1_BuildingType]%s2_BuildingName[\LINK][COLOR_REVERT] w każdym mieście na tym samym kontynencie.</Polish>
+		<Russian>Дает бесплатно [COLOR_BUILDING_TEXT][LINK=%s1_BuildingType]%s2_BuildingName[\LINK][COLOR_REVERT] в каждом городе на одном материке.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION</Tag>
+		<English>[NEWLINE][ICON_BULLET]Free [COLOR_CYAN][LINK=%s1]%s2[\LINK][COLOR_REVERT] promotion for[SPACE]</English>
+		<German>[NEWLINE][ICON_BULLET]freie Beförderung [COLOR_HIGHLIGHT_TEXT][LINK=%s1]%s2[\LINK][COLOR_REVERT]</German>
+		<Russian>[ICON_BULLET]Äàåò îòðÿäó %s1_Promotion åñëè âûïîëíåíû âñå íóæíûå òðåáîâàíèÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_PROMO_CONDITION_ADDON</Tag>
+		<English>[SPACE]new units that are[SPACE]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_SPECIALISTS</Tag>
+		<English>[ICON_BULLET]%D1_Change Free Specialists</English>
+		<French>[ICON_BULLET]%D1_Change spécialistes gratuits</French>
+		<German>[ICON_BULLET]%D1_Change freie Spezialisten</German>
+		<Italian>[ICON_BULLET]%D1_Change specialisti gratuiti</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change especialistas gratis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_SPECIALISTS_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Change Free Specialists in All Cities</English>
+		<French>[ICON_BULLET]%D1_Change spécialistes gratuits dans toutes les villes</French>
+		<German>[ICON_BULLET]%D1_Change freie Spezialisten in allen Städten</German>
+		<Italian>[ICON_BULLET]%D1_Change specialisti gratuiti in tutt le città</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change especialistas gratis en todas las ciudades </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_SPECIALISTS_CONT</Tag>
+		<English>[ICON_BULLET]%D1_Change Free Specialists in All Cities on this Continent</English>
+		<French>[ICON_BULLET]%D1_Change spécialiste gratuit dans toutes les villes sur ce continent</French>
+		<German>[ICON_BULLET]%D1_Change freie(n) Spezialisten in allen Städten dieses Kontinents</German>
+		<Italian>[ICON_BULLET]%D1_Change specialisti gratuiti in tutte le città di questo continente.</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change especialistas gratis en todas las ciudades de este continente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_SPECIAL_TECH</Tag>
+		<English>[ICON_BULLET]Free [COLOR_BUILDING_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_BUILDING_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT] gratuit</French>
+		<German>[ICON_BULLET]Freie Technologie: [COLOR_BUILDING_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</German>
+		<Italian>[ICON_BULLET][COLOR_BUILDING_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT] gratis</Italian>
+		<Spanish>[ICON_BULLET][COLOR_BUILDING_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT] gratis</Spanish>
+		<Polish>[ICON_BULLET]Darmowy [COLOR_BUILDING_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Polish>
+		<Russian>[ICON_BULLET]Áåñïëàòíî [COLOR_BUILDING_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_START_ERA</Tag>
+		<English>[ICON_BULLET]Available for free on %s1_EraName and later starts</English>
+		<French>[ICON_BULLET]Disponible gratuitement à l'époque "%s1_EraName" et pour les débuts de partie plus tardifs</French>
+		<German>[ICON_BULLET]frei verfügbar im Zeitalter %s1_EraName und später</German>
+		<Italian>[ICON_BULLET]Disponibile gratuitamente al raggiungimento di %s1_EraName</Italian>
+		<Spanish>[ICON_BULLET]Disponible gratis a partir [NUM1:del:de la:de los:de las] %s1_EraName e inicios posteriores</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_TECH</Tag>
+		<English>[ICON_BULLET]1 Free Technology</English>
+		<French>[ICON_BULLET]1 technologie gratuite</French>
+		<German>[ICON_BULLET]1 freie Technologie</German>
+		<Italian>[ICON_BULLET]1 tecnologia gratuita</Italian>
+		<Spanish>[ICON_BULLET]1 tecnología gratis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_TECHS</Tag>
+		<English>[ICON_BULLET]%d1_Num Free Technologies</English>
+		<French>[ICON_BULLET]%d1_Num technologies gratuites</French>
+		<German>[ICON_BULLET]%d1_Num freie Technologien</German>
+		<Italian>[ICON_BULLET]%d1_Num tecnologie gratuite</Italian>
+		<Spanish>[ICON_BULLET]%d1_Num tecnologías gratis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_TRAIT</Tag>
+		<English>[ICON_BULLET]As long as this building is active, its owning player gains the %s1_Trait Trait.</English>
+		<French>[ICON_BULLET]Tant que ce bâtiment est actif, le joueur le possédant gagne le trait %s1_Trait.</French>
+		<Russian>[ICON_BULLET]Пока это здание активно, его владелец сохраняет черту %s1_Trait.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_XP</Tag>
+		<English>[ICON_BULLET]New %s1_UnitName Receive %D2_Change Experience Points</English>
+		<French>[ICON_BULLET]Les nouvelles unités (%s1_UnitName) reçoivent %D2_Change EXP</French>
+		<German>[ICON_BULLET]Neue %s1_UnitName erhalten %D2_Change Erfahrungspunkte</German>
+		<Italian>[ICON_BULLET]Le nuove %s1:2_UnitName ricevono %D2_Change [NUM1:punto esperienza:punti esperienza]</Italian>
+		<Spanish>[ICON_BULLET]Cada %s1_UnitName [NUM1:nuevo:nueva:nuevos:nuevas] [NUM1:recibe:recibe:reciben:reciben] %D2_Change [NUM1:punto de experiencia:puntos de experiencia]</Spanish>
+		<Polish>[ICON_BULLET]New %s1_UnitName otrzymuje %D2_Change punkty XP</Polish>
+		<Russian>[ICON_BULLET]%D2_Change îïûòà (íîâûå %s1_UnitName)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_XP_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]New Units Receive %D1_Change Experience Points in All Cities</English>
+		<French>[ICON_BULLET]Les nouvelles unités bénéficient de %D1_Change EXP dans toutes les villes</French>
+		<German>[ICON_BULLET]Neue Einheiten erhalten %D1_Change Erfahrungspunkte in allen Städten</German>
+		<Italian>[ICON_BULLET]Le nuove unità %D1_Change ricevono punti esperienza in tutte le città</Italian>
+		<Spanish>[ICON_BULLET]Las nuevas unidades reciben %D1_Change [NUM1:punto de experiencia:puntos de experiencia] en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FREE_XP_UNITS</Tag>
+		<English>[ICON_BULLET]New Units Receive %D1_Change Experience Points</English>
+		<French>[ICON_BULLET]Les nouvelles unités bénéficient de %D1_Change EXP</French>
+		<German>[ICON_BULLET]Neue Einheiten erhalten %D1_Change Erfahrungspunkte</German>
+		<Italian>[ICON_BULLET]Le nuove unità ricevono %D1_Change punti esperienza</Italian>
+		<Spanish>[ICON_BULLET]Las nuevas unidades reciben %D1_Change [NUM1:punto de experiencia:puntos de experiencia]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FROM_ALL_REL_BUILDINGS</Tag>
+		<English>[SPACE]from All %F1_RelIcon Buildings</English>
+		<French>[SPACE]de tous les bâtiments liés à : %F1_RelIcon</French>
+		<German>[SPACE]von allen %F1_RelIcon-Gebäuden</German>
+		<Italian>[SPACE]da tutti gli edifici %F1_RelIcon</Italian>
+		<Spanish>[SPACE]de todos los edificios del %F1_RelIcon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FROM_SPECIALIST</Tag>
+		<English>[SPACE]from Local [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT]</English>
+		<French>[SPACE]de tous les [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT] locaux</French>
+		<German>[SPACE]per Local [LINK=%s1_SpclstType]%s2:2_SpclstName[\LINK]</German>
+		<Italian>[SPACE]da tutti i [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2:2_SpclstName[\LINK][COLOR_REVERT] locali</Italian>
+		<Spanish>[SPACE]por Local [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT]</Spanish>
+		<Polish>[SPACE]z Lokalnych [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT]</Polish>
+		<Russian>[SPACE]îò ìåñòíîãî [COLOR_UNIT_TEXT][LINK=%s1_SpclstType]%s2_SpclstName[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FRONT_SUPPORT_PERCENT_MODIFIER</Tag>
+		<English>[ICON_BULLET]+%d1_Amount%% Support Strength from any Front Support Unit aiding in city defense.</English>
+		<French>[ICON_BULLET]+%d1_Amount%% de Puissance en soutien, des unités de Combat rapproché participant à la défense de la ville.</French>
+		<Italian>[ICON_BULLET]+%d1_Amount%% di Supporto ad ogni unità del fronte che partecipa alla difesa cittadina.</Italian>
+		<Polish>[ICON_BULLET]+%d1_Amount%% do Siły Wspomagania z jakiejkolwiek jednostki broniącej miasta.</Polish>
+		<Russian>[ICON_BULLET]+%d1_Amount%% íàäáàâêè ê Ñèëå ëþáîìó èç ïåðâûõ çàùèòíèêîâ ïðè îáîðîíå ãîðîäà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_FULL_HEAL_UNITS</Tag>
+		<English>[ICON_BULLET]Each turn, %d1 unit(s) will be healed to full health.</English>
+		<French>[ICON_BULLET]Chaque Tour, %d1 unité(s) seront entièrement soignées.</French>
+		<German>[ICON_BULLET]%d1 Einheit(en) werden pro Runde vollständig geheilt.</German>
+		<Italian>[ICON_BULLET]Ogni turno, %d1 unità verrà completamente guarita.</Italian>
+		<Spanish>[ICON_BULLET]Cada turno se curará completamente a %d1 [NUM1:unidad:unidades]</Spanish>
+		<Polish>[ICON_BULLET]W każdej turze, %d1 jednostka\ki zostaną uleczone w pełni.</Polish>
+		<Russian>[ICON_BULLET]Êàæäûé õîä, %d1 îòðÿä(û) áóäåò èçëå÷åí äî ïîëíîãî çäîðîâüÿ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_GENERAL_RATE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Great General Emergence</English>
+		<French>[ICON_BULLET]Emergence d'un Général illustre %D1_Mod%%</French>
+		<German>[NEWLINE][SPACE][SPACE][ICON_BULLET]%D1%% Produktion Großer Generäle</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% comparsa di un Grande Generale</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la aparición de Gran general</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_GIVEN_FREE_AREA</Tag>
+		<English>[ICON_BULLET]Building Given for Free in same continent By[SPACE]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL</Tag>
+		<English>[SPACE]in all cities</English>
+		<French>[SPACE]Dans toutes les Villes</French>
+		<German>[SPACE]in allen Städten</German>
+		<Italian>[SPACE]in tutte le città</Italian>
+		<Spanish>[SPACE]en todas las ciudades</Spanish>
+		<Polish>[SPACE]we wszystkich miastach</Polish>
+		<Russian>[SPACE]Âî âñåõ ãîðîäàõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_BUILDINGCOST_MOD</Tag>
+		<English>[NEWLINE][ICON_BULLET]National %d1%% cost modifier:[SPACE]</English>
+		<German>[NEWLINE][ICON_BULLET]global %d1%% Kosten für:[SPACE]</German>
+		<Russian>[NEWLINE][ICON_BULLET]Национал. %d1%% модиф. цены:[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_MAINT</Tag>
+		<English>[ICON_BULLET]No maintenance costs in all cities</English>
+		<French>[ICON_BULLET]Pas de coût d'entretien dans toutes les Villes</French>
+		<Italian>[ICON_BULLET]Nessun costo di mantenimento, in nessuna città</Italian>
+		<Spanish>[ICON_BULLET]Sin coste de mantenimiento en ninguna ciudad</Spanish>
+		<Polish>[ICON_BULLET]Brak kosztów utrzymania we wszystkich miastach</Polish>
+		<Russian>[ICON_BULLET]Íåò çàòðàò íà îáñëóæèâàíèå âî âñåõ ãîðîäàõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_MAINT_MOD</Tag>
+		<English>[ICON_BULLET]%D1_MOD%% Maintenance Costs in All Cities</English>
+		<French>[ICON_BULLET]%D1_MOD%% de coûts d'entretien dans toutes les Villes</French>
+		<Italian>[ICON_BULLET]%D1_MOD%% costi di mantenimento in tutte le città</Italian>
+		<Spanish>[ICON_BULLET]%D1_MOD%% al coste de mantenimiento en todas las ciudades</Spanish>
+		<Polish>[ICON_BULLET]%D1_MOD%% do kosztów utrzymania we wszystkich miastach</Polish>
+		<Russian>[ICON_BULLET]%D1_MOD%% Çàòðàòû íà îáñëóæèâàíèå âî âñåõ ãîðîäàõ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL_POP</Tag>
+		<English>[ICON_BULLET]%D1_Change Population in All Cities</English>
+		<French>[ICON_BULLET]%D1_Change Population dans toutes les villes</French>
+		<German>[ICON_BULLET]%D1_Change Bevölkerung in allen Städten</German>
+		<Italian>[ICON_BULLET]%D1_Change di popolazione in tutte le città</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change de población en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_GOLDENAGE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Golden Age Length</English>
+		<French>[ICON_BULLET]Longueur de l'âge d'or %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Dauer des Goldenen Zeitalters</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% di lunghezza dell'Età dell'Oro</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la duración de la edad de oro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_GOLDEN_AGE</Tag>
+		<English>[ICON_BULLET]Starts a Golden Age</English>
+		<French>[ICON_BULLET]Déclenche un âge d'or</French>
+		<German>[ICON_BULLET]Beginnt ein Goldenes Zeitalter</German>
+		<Italian>[ICON_BULLET]Avvia l'Età dell'Oro</Italian>
+		<Spanish>[ICON_BULLET]Inicia una edad de oro</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_GROUPING_SINGLE</Tag>
+		<English>None</English>
+		<French>Aucun</French>
+		<German>Keine</German>
+		<Italian>Nessuno</Italian>
+		<Spanish>Ninguno</Spanish>
+		<Polish>Brak</Polish>
+		<Russian>Íåò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_GROUPING_WONDER_TYPE</Tag>
+		<English>Wonders</English>
+		<French>Merveilles</French>
+		<German>Wunder</German>
+		<Italian>Meraviglie</Italian>
+		<Spanish>Maravillas</Spanish>
+		<Polish>Cuda</Polish>
+		<Russian>×óäåñà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_GROUP_WONDER_ALLOWED</Tag>
+		<English>[ICON_BULLET]Group Wonder of %s1_Special (%d2_Num Allowed)</English>
+		<French>[ICON_BULLET]Groupe de Merveilles de %s1_Special (%d2_Num autorisé)</French>
+		<German>[ICON_BULLET]Gruppenwunder "%s1_Special" (%[d2_Num]x möglich)</German>
+		<Russian>[ICON_BULLET]Групповые Чудеса %s1_Special (доступно: %d2_Num)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_GROUP_WONDER_LEFT</Tag>
+		<English>[SPACE](Group Wonder of %s1_Special: %d2_Num Left)</English>
+		<French>[SPACE](Groupe de Merveilles de %s1_Special: %d2_Num restant(s))</French>
+		<German>[SPACE](Gruppenwunder "%s1_Special": %d2_Num übrig)</German>
+		<Russian>[SPACE](Групповые Чудеса: %s1_Special (осталось: %d2_Num)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_HAPPINESS_CHANGE</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappOrUn from all[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappOrUn en raison de:[SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappOrUn von allen[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HappOrUn da[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change%F2_HappOrUn por cada[SPACE]</Spanish>
+		<Polish>[ICON_BULLET]%D1_Change%F2_HappOrUn od wszystkich[SPACE]</Polish>
+		<Russian>[ICON_BULLET]%D1_Change%F2_HappOrUn:[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_HAPPINESS_TRAIT</Tag>
+		<English>[ICON_BULLET]%D1_change[ICON_HAPPY] for %s2_trait leaders</English>
+		<French>[ICON_BULLET]%D1_change[ICON_HAPPY] pour les dirigeants avec le trait %s2_trait</French>
+		<German>[ICON_BULLET]%D1_change[ICON_HAPPY] für Staatsoberhäupter mit dem Charakterzug: %s2:2_trait</German>
+		<Italian>[ICON_BULLET]%D1_change[ICON_HAPPY] con un leader %s2_trait</Italian>
+		<Spanish>[ICON_BULLET]%D1_change [ICON_HAPPY] con líder %s2:1_trait</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_HAPPY_CHANGE_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn in All Cities</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn dans toutes les villes</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in allen Städten</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HappyOrUn in tutte le città</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_HAPPY_CHANGE_CONT</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn in All Cities on this Continent</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn dans toutes les villes sur ce continent</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn in allen Städten dieses Kontinents</German>
+		<Italian>[ICON_BULLET]%D1_Change %F2_HappyOrUn in tutte le città di questo continente</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn en todas las ciudades de este continente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_HEALTH_CHANGE_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUn in All Cities</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUn dans toutes les villes</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HealthOrUn in allen Städten</German>
+		<Italian>[ICON_BULLET]%D1_Change%F2_HealthOrUn in tutte le città</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HealthOrUn en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_HEALTH_CHANGE_CONT</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HealthOrUn in All Cities on this Continent</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HealthOrUn dans toutes les villes sur ce continent</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HealthOrUn in allen Städten dieses Kontinents</German>
+		<Italian>[ICON_BULLET]%D1_Change %F2_HealthOrUn in tutte le città di questo continente</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HealthOrUn en todas las ciudades de este continente</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_HEALTH_HAPPINESS_CHANGE</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrHealth from[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrHealth en raison de [SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrHealth durch[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change %F2_HappyOrHealth da[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrHealth por[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_HEAL_MOD</Tag>
+		<English>[ICON_BULLET]Heals Units Extra %d1_Mod%% Damage/Turn</English>
+		<French>[ICON_BULLET]Soigne les unités de %d1_Mod%% de dégâts/tour</French>
+		<German>[ICON_BULLET]Heilt zusätzlich %d1_Mod%% Schaden/Runde bei Einheiten</German>
+		<Italian>[ICON_BULLET]Cura le unità del %d1_Mod%% di danno extra per turno.</Italian>
+		<Spanish>[ICON_BULLET]Cura a las unidades un %d1_Mod%% de daño extra por turno</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_HEAL_UNITCOMBAT_MOD</Tag>
+		<English>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%%/Turn</English>
+		<French>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%%/Tour</French>
+		<Polish>[ICON_BULLET]Wspomaga leczenie %s1_UNITCOMBAT Units %D2_Mod%% Obrażeń na turę.</Polish>
+		<Russian>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%%/Ход</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_HURRY_ANGER_MOD</Tag>
+		<English>[ICON_BULLET]%D1_percent%% Anger Duration from Sacrificing Population</English>
+		<French>[ICON_BULLET]Durée de colère après avoir un sacrifice de population%D1_percent%%</French>
+		<German>[ICON_BULLET]%D1_percent%% Unmutsdauer durch Bevölkerungseinbußen</German>
+		<Italian>[ICON_BULLET]%D1_percent%% di durata del malcontento per aver sacrificato la popolazione</Italian>
+		<Spanish>[ICON_BULLET]%D1_percent%% a la duración del hastío por sacrificar población</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_HURRY_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Hurry Production Cost</English>
+		<French>[ICON_BULLET]Coût de l'accélération de la production %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Kosten für beschleunigte Produktion</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% costo per accelerare la produzione</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de acelerar la producción</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_IMPROVEMENT_FREE_SPECIALISTS</Tag>
+		<English>[ICON_BULLET]%D1_Change Free [NUM1:Specialist:Specialists] per[SPACE]</English>
+		<French>[ICON_BULLET]%D1_Change [NUM1:Spécialiste gratuit:Spécialistes gratuits] par[SPACE]</French>
+		<German>[ICON_BULLET]%D1_Change [NUM1:freier Spezialist:freie Spezialisten] pro[SPACE]</German>
+		<Italian>[ICON_BULLET]%D1_Change [NUM1:specialista:specialisti] gratis per[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change [NUM1:especialista gratis:especialistas gratis] por[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_INCREASES_LINE_OF_SIGHT</Tag>
+		<English>[ICON_BULLET]Increases City Line-Of-Sight</English>
+		<French>[ICON_BULLET]Augmente la Ligne de Vue de la ville</French>
+		<German>[ICON_BULLET]Erhöht die Sichtweite der Stadt</German>
+		<Italian>[ICON_BULLET]Aumenta il raggio di vista della città.</Italian>
+		<Spanish>[ICON_BULLET]Aumenta la línea de visión de la ciudad</Spanish>
+		<Polish>[ICON_BULLET]Zwiększa pole widzenia miasta</Polish>
+		<Russian>[ICON_BULLET]Óâåëè÷èâàåò ãîðîäñêîé óãîë îáçîðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_INSIDIOUSNESS</Tag>
+		<English>[ICON_BULLET]Increases local Insidiousness by %s1_amount%% (Helps Criminals avoid discovery)</English>
+		<French>[ICON_BULLET]Donne à toutes les unités criminelles produites dans la ville %s1_amount%% d'Incidiosité.</French>
+		<Russian>[ICON_BULLET]Увеличивает уровень беззакония в городе на %s1_amount%% (помогает преступникам избежать раскрытия)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_INVASION</Tag>
+		<English>[ICON_BULLET]%d1% Chance Per turn that adjacent enemy units will discover a secret passage into the city</English>
+		<French>[ICON_BULLET]%d1% de probabilité par tour, que les unités ennemies découvrent un passage vers la ville</French>
+		<German>[ICON_BULLET]%d1% Wahrscheinlichkeit pro Runde, dass eine benachbarte feindliche Einheit einen Geheimgang ins Innere der Stadt entdeckt</German>
+		<Italian>[ICON_BULLET]%d1% di Chance ogni turno che le unità nemiche adiacenti scoprano un passaggio segreto verso la città</Italian>
+		<Spanish>[ICON_BULLET]%d1% de probabilidad por turno de que las unidades enemigas descubran un pasaje secreto hacia la ciudad</Spanish>
+		<Polish>[ICON_BULLET]%d1% szansy na każdą turę że wróg odkryje tajemne przejście do Twojego miasta</Polish>
+		<Russian>[ICON_BULLET]%d1% Øàíñ, ÷òî ñìåæíûå âðàæåñêèå îòðÿäû îáíàðóæàò òàéíûé õîä â ãîðîä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_INVESTIGATION</Tag>
+		<English>[ICON_BULLET]Increases local Investigation by %s1_amount%% (Helps Law Enforcement catch Criminals)</English>
+		<French>[ICON_BULLET]Donne à toutes les unités produites dans la ville %s1_amount%% d'Investigation.</French>
+		<Russian>[ICON_BULLET]Увеличивает эффективность местного розыска на %s1_amount%% (помогает правоохранителям поймать преступников)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_IN_CITY</Tag>
+		<English>[SPACE]in the city.</English>
+		<French>[SPACE]dans la ville.</French>
+		<German>[SPACE]in der Stadt.</German>
+		<Italian>[SPACE]nella città.</Italian>
+		<Spanish>[SPACE]en la ciudad</Spanish>
+		<Polish>[SPACE]w mieście.</Polish>
+		<Russian>[SPACE]Â ãîðîäå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_LESS_WORLD_TRADE</Tag>
+		<English>[ICON_BULLET] -%d1 Trade Routes in the World</English>
+		<French>[ICON_BULLET] -%d1 routes commerciales dans le Monde</French>
+		<German>[ICON_BULLET] -%d1 Handelsrouten weltweit</German>
+		<Italian>[ICON_BULLET] -%d1 rotte commerciali in tutto il mondo</Italian>
+		<Spanish>[ICON_BULLET] -%d1 rutas comerciales en el mundo</Spanish>
+		<Polish>[ICON_BULLET] -%d1 do szlaków handlowych na świecie</Polish>
+		<Russian>[ICON_BULLET] -%d1 Òîðãîâûå ìàðøðóòû â ìèðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_LONG_RANGE_SUPPORT_PERCENT_MODIFIER</Tag>
+		<English>[ICON_BULLET]+%d1_Amount%% Support Strength from any Long Range Support Unit aiding in city defense.</English>
+		<French>[ICON_BULLET]+%d1_Amount%% de Puissance en soutien, des unités de longue portée participant à la défense de la ville.</French>
+		<Italian>[ICON_BULLET]+%d1_Amount%% di Supporto ad ogni unità da supporto a lungo raggio che partecipa alla difesa cittadina.</Italian>
+		<Polish>[ICON_BULLET]+%d1_Amount%% do Siły Wspomagania z jakiejkolwiek jednostki Strzelniczej broniącej miasta.</Polish>
+		<Russian>[ICON_BULLET]+%d1_Amount%% к модификатору Силы любому дальнобойному отряду при защите города.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_MAINTENANCE</Tag>
+		<English>[ICON_BULLET]-%s1 [ICON_GOLD] for building maintenance</English>
+		<French>[ICON_BULLET]-%s1 [ICON_GOLD] Entretien de Bâtiments</French>
+		<Italian>[ICON_BULLET]-%s1 [ICON_GOLD] per il mantenimento dell'edificio</Italian>
+		<Spanish>[ICON_BULLET]-%s1[ICON_GOLD] para mantenimiento del edificio</Spanish>
+		<Polish>[ICON_BULLET]-%s1 [ICON_GOLD] do utrzymania budynku</Polish>
+		<Russian>[ICON_BULLET]-%s1 [ICON_GOLD] на обслуживание зданий</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_MAINT_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Maintenance[\LINK]</English>
+		<French>[ICON_BULLET][LINK=CONCEPT_MAINTENANCE]Entretien[\LINK] %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% [LINK=CONCEPT_MAINTENANCE]Unterhalt[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% di [LINK=CONCEPT_MAINTENANCE]mantenimento[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al [LINK=CONCEPT_MAINTENANCE]mantenimiento[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_MAX_POPULATION_ALLOWED</Tag>
+		<English>[ICON_BULLET]Sets base Maximum Population at %d1_amount if the city doesn't already possess a greater base value.</English>
+		<French>[ICON_BULLET]Défini une valeur de base pour le Maximum de Population à %d1_amount, si la ville n'a pas encore de valeur de base supérieure.</French>
+		<Polish>[ICON_BULLET]Ustawia maksymalną populację na %d1_amount jeśli miasto już nie posiada większej populacji.</Polish>
+		<Russian>[ICON_BULLET]Устанавливает максимальный лимит населения до %d1_amount если город еще не превысил это базовое значение.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_MAX_POPULATION_CHANGE</Tag>
+		<English>[ICON_BULLET]Adjusts Maximum Population by %D1_amount.</English>
+		<French>[ICON_BULLET]Ajuste le Maximum de Population de %D1_amount.</French>
+		<Polish>[ICON_BULLET]Dostosowuje Maksymalna Populację by %D1_amount.</Polish>
+		<Russian>[ICON_BULLET]Отрегулирует максимальную численность населения до %D1_amount.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_MAX_START_ERA</Tag>
+		<!-- %s1_Name = TXT_KET_ERA_ -->
+		<English>[ICON_BULLET]Can only be Built on %s1_Name and Earlier Starts</English>
+		<French>[ICON_BULLET]Construction uniquement possible à l'époque "%s1_Name" et pour les débuts de partie plus précoces</French>
+		<German>[ICON_BULLET]Kann nur im Zeitalter %s1_Name und früher errichtet werden</German>
+		<Italian>[ICON_BULLET]Può essere costruito soltanto durante l'era %s1_Name o prima</Italian>
+		<Spanish>[ICON_BULLET]Solo se puede construir en [NUM1:el:la:los:las] %s1_Name e inicios anteriores</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_MEDIUM_RANGE_SUPPORT_PERCENT_MODIFIER</Tag>
+		<English>[ICON_BULLET]+%d1_Amount%% Support Strength from any Medium Range Support Unit aiding in city defense.</English>
+		<French>[ICON_BULLET]+%d1_Amount%% de Puissance en soutien, des unités de moyenne portée participant à la défense de la ville.</French>
+		<Italian>[ICON_BULLET]+%d1_Amount%% di Supporto ad ogni unità da supporto a medio raggio che partecipa alla difesa cittadina.</Italian>
+		<Polish>[ICON_BULLET]+%d1_Amount%% do Siły Wspomagania z jakiejkolwiek jednostki Strzelniczej broniącej miasta.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_MILITARY_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Military Unit Production</English>
+		<French>[ICON_BULLET]Production d'unités militaires %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Produktion von Militäreinheiten</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% di produzione nelle unità militari</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la producción de unidades militares</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_MORE_WORLD_TRADE</Tag>
+		<English>[ICON_BULLET] +%d1 Trade Routes in the World</English>
+		<French>[ICON_BULLET] +%d1 routes commerciales dans le Monde</French>
+		<German>[ICON_BULLET] +%d1 Handelsrouten weltweit</German>
+		<Italian>[ICON_BULLET] +%d1 rotte commerciali in tutto il Mondo</Italian>
+		<Spanish>[ICON_BULLET] +%d1 rutas comerciales en el mundo</Spanish>
+		<Polish>[ICON_BULLET] +%d1 do szlaków handlowych na świecie</Polish>
+		<Russian>[ICON_BULLET] +%d1 Òîðãîâûå ìàðøðóòû â ìèðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NATIONAL_WONDERS_PER_CITY</Tag>
+		<English>[COLOR_WARNING_TEXT]Can only Construct %d1_Num National Wonders per City[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Construction de merveilles nationales limitée à %d1_Num par ville[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann nur %d1_Num [NUM1:Nationales:Nationale] Wunder pro Stadt errichten[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Puoi costruire soltanto %d1_Num Meraviglie Nazionali per città[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla nacional:maravillas nacionales] por ciudad[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NATIONAL_WONDER_ALLOWED</Tag>
+		<English>[ICON_BULLET]National Wonder (%d1_Num Allowed)</English>
+		<French>[ICON_BULLET]Merveille nationale (limite : %d1_Num)</French>
+		<German>[ICON_BULLET]Nationales Wunder (%d1_Num zulässig)</German>
+		<Italian>[ICON_BULLET]Meraviglia Nazionale (%d1_Num [NUM1:permessa:permesse])</Italian>
+		<Spanish>[ICON_BULLET]Maravilla nacional (%d1_Num [NUM1:permitida:permitidas])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NATIONAL_WONDER_LEFT</Tag>
+		<English>[SPACE](National Wonder: %d1_Num Left)</English>
+		<French>[SPACE](Merveille nationale : reste %d1_Num)</French>
+		<German>[SPACE](Nationales Wunder: %d1_Num übrig)</German>
+		<Italian>[SPACE](Meraviglia Nazionale: %d1_Num [NUM1:rimasta:rimaste])</Italian>
+		<Spanish>[SPACE](Maravilla nacional: %d1_Num [NUM1:restante:restantes])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD</Tag>
+		<English>[ICON_BULLET]May be needed to Build[SPACE]</English>
+		<German>[ICON_BULLET]optional erforderlich zum Bau von:[SPACE]</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_BUILD_ANYWHERE</Tag>
+		<English>[ICON_BULLET]Needed to Build anywhere in empire:[SPACE]</English>
+		<German>[ICON_BULLET]ermöglicht im gesamten Reich den Bau von:[SPACE]</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NEEDED_TO_TRAIN</Tag>
+		<English>[ICON_BULLET]May be needed to Train[SPACE]</English>
+		<German>[ICON_BULLET]optional erforderlich für die Ausbildung von:[SPACE]</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NOT_REQUIRED_TO_BUILD</Tag>
+		<English>[COLOR_WARNING_TEXT]Can Not be Built in the Same City as[SPACE][COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Ne peut être construit dans la même Ville que[SPACE][COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]kann nicht in derselben Stadt gebaut werden wie[SPACE][COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]non può essere costruito nella stessa città di[SPACE][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]No puede ser construido en la misma ciudad que[SPACE][COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Nie można zbudować w tym samym mieście co[SPACE][COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Íå ìîæåò áûòü ïîñòðîåí â òîì æå ñàìîì ãîðîäå êàê è[SPACE][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NO_ENTRY</Tag>
+		<English>[ICON_BULLET]Enemy Units will not be able to invade the city until the defenses have fallen to %d1%</English>
+		<French>[ICON_BULLET]Les unités ennemies ne pourront pas envahir la ville tant que les défenses seront supérieures à %d1%</French>
+		<German>[ICON_BULLET]Feindliche Einheiten können erst dann in die Stadt eindringen, wenn ihre Verteidigung auf %d1% gefallen ist.</German>
+		<Italian>[ICON_BULLET]I nemici non potranno attaccare la città finché le difese non saranno sotto %d1%</Italian>
+		<Spanish>[ICON_BULLET]Las unidades enemigas no podrán atacar la ciudad hasta que las defensas no caigan al %d1%</Spanish>
+		<Polish>[ICON_BULLET]Jednostki wroga nie będą mogły zaatakować miasta dopóki obrona nie spadnie do poziomu %d1%</Polish>
+		<Russian>[ICON_BULLET]Îòðÿäû âðàãà íå áóäóò â ñîñòîÿíèè âòîðãíóòüñÿ â ãîðîä äî îáîðîíîñïîñîáíîñòè %d1%</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NO_MAINT_NUM_CITIES</Tag>
+		<English>[ICON_BULLET]No Maintenance Costs from Number of Cities</English>
+		<French>[ICON_BULLET]Pas de coût d'entretien lié au nombre de Villes</French>
+		<Italian>[ICON_BULLET]Nessun costo di mantenimento dal numero di città</Italian>
+		<Spanish>[ICON_BULLET]Sin coste de mantenimiento por número de ciudades</Spanish>
+		<Polish>[ICON_BULLET]Brak kosztów utrzymania za ilość miast</Polish>
+		<Russian>[ICON_BULLET]Íåò çàòðàò íà îáñëóæèâàíèå îò ÷èñëà ãîðîäîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NO_MAINT_NUM_CITIES_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs from Number of Cities</English>
+		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien lié au nombre de Villes</French>
+		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento dal numero di città</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento por número de ciudades</Spanish>
+		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania za ilość miast</Polish>
+		<Russian>[ICON_BULLET]%D1_Mod%% çàòðàòû íà îáñëóæèâàíèå îò ÷èñëà ãîðîäîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NO_UNHAPPY</Tag>
+		<English>[ICON_BULLET]No [ICON_UNHAPPY] in this City</English>
+		<French>[ICON_BULLET]Pas de [ICON_UNHAPPY] dans cette ville</French>
+		<German>[ICON_BULLET]Keine [ICON_UNHAPPY] in dieser Stadt</German>
+		<Italian>[ICON_BULLET]Nessuno [ICON_UNHAPPY] in questa città</Italian>
+		<Spanish>[ICON_BULLET]En esta ciudad no hay [ICON_UNHAPPY]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NO_UNHEALTHY_BUILDINGS</Tag>
+		<English>[ICON_BULLET]No [ICON_UNHEALTHY] from Buildings</English>
+		<French>[ICON_BULLET]Pas de [ICON_UNHEALTHY] à cause des bâtiments</French>
+		<German>[ICON_BULLET]Nicht [ICON_UNHEALTHY] durch Gebäude</German>
+		<Italian>[ICON_BULLET]Nessun [ICON_UNHEALTHY] dagli edifici</Italian>
+		<Spanish>[ICON_BULLET]No hay [ICON_UNHEALTHY] por edificios</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NO_UNHEALTHY_POP</Tag>
+		<English>[ICON_BULLET]No [ICON_UNHEALTHY] from Population</English>
+		<French>[ICON_BULLET]Pas de [ICON_UNHEALTHY] à cause de la population</French>
+		<German>[ICON_BULLET]Nicht [ICON_UNHEALTHY] durch Bevölkerung</German>
+		<Italian>[ICON_BULLET]Nessun [ICON_UNHEALTHY] tra la popolazione</Italian>
+		<Spanish>[ICON_BULLET]No hay [ICON_UNHEALTHY] por población</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NUKE_DAMAGE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Damage from [LINK=CONCEPT_NUKES]Nukes[\LINK]</English>
+		<French>[ICON_BULLET]Dégâts par les [LINK=CONCEPT_NUKES]armes nucléaires[\LINK] %D1_Mod%% </French>
+		<German>[ICON_BULLET]%D1_Mod%% Schaden durch [LINK=CONCEPT_NUKES]Atomraketen[\LINK]</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% danno dalle [LINK=CONCEPT_NUKES]bombe atomiche[\LINK]</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al daño por [LINK=CONCEPT_NUKES]armas nucleares[\LINK]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_NUM_TURNS</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]%d1_Num Turns[COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]%d1_Num tours[COLOR_REVERT]</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]%d1_Num Runden[COLOR_REVERT]</German>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turni][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_HIGHLIGHT_TEXT]%d1_Num [NUM1:turno:turnos][COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_OCCUPATION_TIME</Tag>
+		<English>[ICON_BULLET]Citizens Will Rebel against enemy captors %d1% longer</English>
+		<French>[ICON_BULLET]Les Citoyens se rebellent contre l'envahisseur %d1% plus longtemps</French>
+		<German>[ICON_BULLET]Bürger werden gegen feindliche Besatzer %d1% länger revoltieren</German>
+		<Italian>[ICON_BULLET]I cittadini si ribelleranno contro gli invasori nemici %d1% più a lungo</Italian>
+		<Spanish>[ICON_BULLET]Los ciudadanos se rebelarán contra los conquistadores enemigos un %d1% más de tiempo</Spanish>
+		<Polish>[ICON_BULLET]Mieszkańcy będą się buntować wobec wrogich zdobywców %d1% dłużej</Polish>
+		<Russian>[ICON_BULLET]Ãðàæäàíå áóäóò áóíòîâàòü ïðîòèâ âðàæåñêèõ îêêóïàíòîâ %d1% äîëüøå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_ONE_TIME_POPULATION_LOSS</Tag>
+		<English>[ICON_BULLET]When the city gets this building, for the first time ONLY, it loses %d1_amount population.</English>
+		<French>[ICON_BULLET]Lorsque la ville obtient ce bâtiment, pour la première fois SEULEMENT, elle perd %d1_amount population.</French>
+		<Russian>[ICON_BULLET]Когда в городе ВПЕРВЫЕ возводится это здание, он теряет %d1_amount населения.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_PER_CITY_WITH</Tag>
+		<English>[SPACE]per City with %F1_RelIcon</English>
+		<French>[SPACE]par ville avec : %F1_RelIcon</French>
+		<German>[SPACE]pro Stadt mit der Religion %F1_RelIcon</German>
+		<Italian>[SPACE]per una città con %F1_RelIcon</Italian>
+		<Spanish>[SPACE]por cada ciudad con %F1_RelIcon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_PER_LEVEL</Tag>
+		<English>[ICON_BULLET]+1%F1_HappyOrUn per %d2_Percent%% %F3_CommIcon Rate</English>
+		<French>[ICON_BULLET]+1%F1_HappyOrUn par %d2_Percent%% de %F3_CommIcon</French>
+		<German>[ICON_BULLET]+1%F1_HappyOrUn je %d2_Percent%% %F3_CommIcon-Rate</German>
+		<Italian>[ICON_BULLET]+1%F1_HappyOrUn per %d2_Percent%% al ritmo %F3_CommIcon</Italian>
+		<Spanish>[ICON_BULLET]+1 %F1_HappyOrUn por cada %d2_Percent%% de ritmo de %F3_CommIcon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_PER_SPECIALIST_ALL_CITIES</Tag>
+		<English>[SPACE]per Specialist in All Cities</English>
+		<French>[SPACE]par spécialiste dans toutes les villes</French>
+		<German>[SPACE]pro Spezialist in allen Städten</German>
+		<Italian>[SPACE]per specialista in tutte le città</Italian>
+		<Spanish>[SPACE]por cada especialista en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_POPULATION_CHANGE</Tag>
+		<English>[ICON_BULLET]When the city gets this building, its population adjusts by %d1_amount.</English>
+		<French>[ICON_BULLET]Lorsque la ville obtient ce bâtiment, sa population s'ajuste de %d1_amount.</French>
+		<Russian>[ICON_BULLET]Когда в городе возводится это здание, его население сводится к %d1_amount.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_POPULATION_EMPLOYED</Tag>
+		<English>[ICON_BULLET]Employs %d1 Citizens.</English>
+		<French>[ICON_BULLET]Emploie %d1 Citoyens.</French>
+		<German>[ICON_BULLET]Beschäftigt %d1 Bürger.</German>
+		<Italian>[ICON_BULLET]Impiega %d1 cittadini.</Italian>
+		<Spanish>[ICON_BULLET]Emplea %d1 [NUM1:ciudadano:ciudadanos]</Spanish>
+		<Polish>[ICON_BULLET]Zatrudnia %d1 Obywateli.</Polish>
+		<Russian>[ICON_BULLET]Íàíèìàåò %d1 Ãðàæäàí.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_PROPERTY_SPAWN_BARB</Tag>
+		<English>[ICON_BULLET]Can spawn a barbarian %s1_Unit.</English>
+		<French>[ICON_BULLET]Peut faire appaître un %s1_Unit barbare.</French>
+		<Russian>[ICON_BULLET]Может породить варварский отряд %s1_Unit.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_PROPERTY_SPAWN_FRIENDLY</Tag>
+		<English>[ICON_BULLET]Can spawn a friendly %s1_Unit.</English>
+		<French>[ICON_BULLET]Peut faire apparaître un %s1_Unit amical.</French>
+		<Russian>[ICON_BULLET]Может породить дружественный отряд %s1_Unit.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_PROTECTS_CULTURE</Tag>
+		<English>[ICON_BULLET]Nearby Battles will not affect Culture</English>
+		<French>[ICON_BULLET]Les Batailles aux alentours n'affecteront pas la culture</French>
+		<German>[ICON_BULLET]Nahe Schlachten beeinflussen die Kultur nicht</German>
+		<Italian>[ICON_BULLET]Le battaglie vicine non influenzeranno la cultura</Italian>
+		<Spanish>[ICON_BULLET]Las batallas cercanas no influirán en la cultura</Spanish>
+		<Polish>[ICON_BULLET]Pobliskie bitwy nie będą miały wpływu na Kulturę</Polish>
+		<Russian>[ICON_BULLET]Ñîñåäíèå ñðàæåíèÿ íå áóäåò çàòðàãèâàòü êóëüòóðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_PROVIDES_POWER</Tag>
+		<English>[ICON_BULLET]Provides Power ([ICON_POWER])</English>
+		<French>[ICON_BULLET]Fournit de l'électricité ([ICON_POWER])</French>
+		<German>[ICON_BULLET]Liefert Energie ([ICON_POWER])</German>
+		<Italian>[ICON_BULLET]Fornisce energia([ICON_POWER])</Italian>
+		<Spanish>[ICON_BULLET]Proporciona energía ([ICON_POWER])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_PROVIDES_WATER</Tag>
+		<English>[ICON_BULLET]Provides Fresh Water[SPACE]</English>
+		<French>[ICON_BULLET]Procure de l'Eau fraîche[SPACE]</French>
+		<German>[ICON_BULLET]liefert Frischwasser[SPACE]</German>
+		<Italian>[ICON_BULLET]Fornisce acqua fresca[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Proporciona agua dulce[SPACE]</Spanish>
+		<Polish>[ICON_BULLET]Dostarcza świeżej wody[SPACE]</Polish>
+		<Russian>[ICON_BULLET]Îáåñïå÷èâàåò ïðåñíóþ âîäó[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REDUCES_MAINTENANCE</Tag>
+		<English>[ICON_BULLET]Reduces [LINK=CONCEPT_MAINTENANCE]Maintenance[\LINK] in Nearby Cities</English>
+		<French>[ICON_BULLET]Réduit le coût [LINK=CONCEPT_MAINTENANCE]d'entretien[\LINK] des villes voisines</French>
+		<German>[ICON_BULLET]reduziert [LINK=CONCEPT_MAINTENANCE]laufende Kosten[\LINK] nahe gelegener Städte</German>
+		<Italian>[ICON_BULLET]Riduce il [LINK=CONCEPT_MAINTENANCE]mantenimento[\LINK] nelle città vicine</Italian>
+		<Spanish>[ICON_BULLET]Reduce el [LINK=CONCEPT_MAINTENANCE]mantenimiento[\LINK] de las ciudades cercanas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_RELIGION_HAPPINESS</Tag>
+		<English>[ICON_BULLET]%D1_Change%F2_HappyOrUn if %F3_RelIcon is State [ICON_RELIGION]</English>
+		<French>[ICON_BULLET]%D1_Change%F2_HappyOrUn si la [ICON_RELIGION] d'état est : %F3_RelIcon</French>
+		<German>[ICON_BULLET]%D1_Change%F2_HappyOrUn, wenn die Religion %F3_RelIcon die [ICON_RELIGION] des Staates ist</German>
+		<Italian>[ICON_BULLET]%D1_Change %F2_HappyOrUn se %F3_RelIcon è la [ICON_RELIGION] di stato</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change %F2_HappyOrUn si el %F3_RelIcon es la [ICON_RELIGION] oficial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REPLACED_BY_BUILDING</Tag>
+		<English>[COLOR_WARNING_TEXT]Replaces[COLOR_REVERT][SPACE]</English>
+		<French>[COLOR_WARNING_TEXT]Remplace[COLOR_REVERT][SPACE]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]ersetzt[COLOR_REVERT][SPACE]</German>
+		<Italian>[COLOR_WARNING_TEXT]Sostituisce[COLOR_REVERT][SPACE]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Reemplaza[COLOR_REVERT][SPACE]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Zastępuje:[COLOR_REVERT][SPACE]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Çàìåíÿåò[COLOR_REVERT][SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRED_TO_BUILD</Tag>
+		<English>[ICON_BULLET]Required to Build[SPACE]</English>
+		<French>[ICON_BULLET]Requis pour construire :[SPACE]</French>
+		<German>[ICON_BULLET]erforderlich zum Bau von:[SPACE]</German>
+		<Italian>[ICON_BULLET]Necessario per costruire[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Se requiere para construir[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRED_TO_TRAIN</Tag>
+		<English>[ICON_BULLET]Required to Train[SPACE]</English>
+		<French>[ICON_BULLET]Requis pour entraîner :[SPACE]</French>
+		<German>[ICON_BULLET]erforderlich für die Ausbildung von:[SPACE]</German>
+		<Italian>[ICON_BULLET]Necessario per addestrare[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Se requiere para entrenar[SPACE]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_ACTIVE_CIVICS</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires Civics to be Active[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert une doctrine spécifique[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erfordert eine bestimmte Gesellschaftsform[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede che sia attiva una certa Forma di governo[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere el principio para estar activo[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Wymaga aktywnych Doktryn[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Òðåáóåò ïàðàäèãìó[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_ACTIVE_CIVICS_MET</Tag>
+		<English>[COLOR_POSITIVE_TEXT]Requires Civics to be Active[COLOR_REVERT]</English>
+		<French>[COLOR_POSITIVE_TEXT]Requiert une doctrine spécifique[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_POSITIVE_TEXT]erfordert eine bestimmte Gesellschaftsform[COLOR_REVERT]</German>
+		<Italian>[COLOR_POSITIVE_TEXT]Richiede una certa forma di governo[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_POSITIVE_TEXT]Requiere el principio para estar activo[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_POSITIVE_TEXT]Wymaga doktryny do działania[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_POSITIVE_TEXT]Òðåáóåò ïàðàäèãìó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_ANY_BUILDING</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires Anyone to have constructed %s1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert la construction de %s1[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]%s1 muss bereits von irgendjemandem gebaut worden sein.[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede che un giocatore abbia costruito %s1[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere que se haya construido %s1[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Wymagane by ktokolwiek zbudował: %s1[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Òðåáóåò, ÷òîáû êòî-íèáóäü ïîñòðîèë %s1[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_COAST</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires Coast[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert une zone côtière[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]benötigt Küstenzugang[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede costa[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere Costa[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Wymaga dostępu do wybrzeża[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Òðåáóåò ïîáåðåæüå[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_CULTURE</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires a Culture Level of %s1 or better[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un Niveau Culturel de %s1 ou mieux[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Benötigt eine Kulturstufe von %s1 oder höher[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede un livello culturale %s1 o migliore[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere un nivel cultural %s1 o mejor[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Wymaga poziomu kulturowego: %s1 lub wyższego[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Òðåáóåò óðîâíÿ êóëüòóðû %s1 èëè ëó÷øå[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_FRESH_WATER</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires Fresh water[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert de l'eau douce[COLOR_REVERT]</French>
+		<Italian>[COLOR_WARNING_TEXT]Richiede acqua dolce[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere agua dulce[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Wymaga dostępu do świeżej wody[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Òðåáóåò íàëè÷èå Ïðåñíîé âîäû[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_LIST</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires[SPACE][COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert :[SPACE][COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Benötigt[SPACE][COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede[SPACE][COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere[SPACE][COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_NUM_CITIES</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires at least %d1_Num Cities[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert au moins %d1_Num villes[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Erfordert mindestens %d1_Num Städte[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede almeno %d1_Num città[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere al menos %d1_Num [NUM1:ciudad:ciudades][COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_NUM_TEAMS</Tag>
+		<English>[ICON_BULLET]Requires at least %d1_Num Teams</English>
+		<French>[ICON_BULLET]Requiert au moins %d1_Num équipes</French>
+		<German>[ICON_BULLET]Erfordert mindestens %d1_Num Teams</German>
+		<Italian>[ICON_BULLET]Richiede almeno %d1_Num [NUM1:squadra:squadre]</Italian>
+		<Spanish>[ICON_BULLET]Requiere al menos %d1_Num [NUM1:equipo:equipos]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_POPULATION</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires City Size of at least %d1[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert une Ville avec une population de %d1 minimum[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]erforderliche Mindestgröße der Stadt: %d1[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede una dimensione minima della città di %d1[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere un tamaño de ciudad de al menos %d1[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Wymaga co najmniej wielkości miasta: %d1[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Òðåáóåòñÿ, ïî êðàéíåé ìåðå, ãîðîä ðàçìåðîì %d1 [COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_POWER</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires Access to Power[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert de l'Electricité[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Benötigt Zugang zu Energie[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]richiede elettricità[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere energía[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Wymaga dostępu do energi[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Òðåáóåò ïðèíÿòèÿ[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_RIVER</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires River Access[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un accès à une rivière[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Benötigt Flusszugang[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede accesso al fiume[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere acceso a un río[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Wymaga dostępu do rzeki[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Òðåáóåò äîñòóïà ê ðåêå[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_RIVER_OR_COAST</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires River or Coastal Access[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert un accès à une Rivière ou une zone côtière[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Benötigt Fluss- oder Küstenzugang[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede accesso a un fiume o alla costa[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere acceso a un río o a una costa[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Wymaga dostępu do rzeki lub wybrzeża[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Òðåáóåò ðå÷íîãî èëè ïðèáðåæíîãî äîñòóïà[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_UNIT_LEVEL</Tag>
+		<English>[COLOR_WARNING_TEXT]Requires a Unit of Level %d1_Num Experience[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Requiert une unité de niveau d'EXP %d1_Num[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Erfordert eine Einheit mit Erfahrungsstufe %d1_Num[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Richiede un'unità di livello d'esperienza %d1_Num[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Requiere una unidad de nivel %d1_Num de experiencia[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_VICTORY</Tag>
+		<!-- %s1_Name = TXT_KEY_VICTORY_ -->
+		<English>[ICON_BULLET]%s1_Name Victory must be Enabled</English>
+		<French>[ICON_BULLET]Requiert une victoire de type "%s1_Name"</French>
+		<German>[ICON_BULLET]Erfordert Siegvariante %s1_Name</German>
+		<Italian>[ICON_BULLET]Richiede la vittoria %s1_Name</Italian>
+		<Spanish>[ICON_BULLET]Requiere una victoria %s1_Name</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_REQUIRES_WARTIME</Tag>
+		<English>[COLOR_WARNING_TEXT]Can only be built and operated during Wartime[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Peut uniquement être construit et utilisé en temps de guerre[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann nur in Kriegszeiten gebaut und benutzt werden[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Può essere costruito ed usato solo in guerra[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Solo puede ser construido y usado en tiempos de guerra[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_WARNING_TEXT]Może zostać zbudowany i używany tylko w czasie wojny[COLOR_REVERT]</Polish>
+		<Russian>[COLOR_WARNING_TEXT]Ìîæåò òîëüêî ñòðîèòüñÿ è óïðàâëÿòüñÿ âî âðåìÿ Âîåííîãî âðåìåíè[COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_RIVER_PLOTS</Tag>
+		<English>River Tiles</English>
+		<French>Cases rivières</French>
+		<German>Fluss-Geländefelder</German>
+		<Italian>Caselle di fiume</Italian>
+		<Spanish>Casillas de río</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_SHORT_RANGE_SUPPORT_PERCENT_MODIFIER</Tag>
+		<English>[ICON_BULLET]+%d1_Amount%% Support Strength from any Short Range Support Unit aiding in city defense.</English>
+		<French>[ICON_BULLET]+%d1_Amount%% de Puissance en soutien, des unités de courte portée participant à la défense de la ville.</French>
+		<Italian>[ICON_BULLET]+%d1_Amount%% di Supporto ad ogni unità da supporto a corto raggio che partecipa alla difesa cittadina.</Italian>
+		<Polish>[ICON_BULLET]+%d1_Amount%% do Siły Wspomagania z jakiejkolwiek jednostki Strzelniczej broniącej miasta.</Polish>
+		<Russian>[ICON_BULLET]+%d1_Amount%% к Силе любому отряду ближнего боя, помогающего в защите города.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_SORT_CRIME</Tag>
+		<English>Crime</English>
+		<German>Kriminalität</German>
+		<Italian>Crimine</Italian>
+		<Spanish>Crimen</Spanish>
+		<Polish>Przestępczość</Polish>
+		<Russian>Ïðåñò.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_SORT_GOLD</Tag>
+		<English>Gold</English>
+		<French>Or</French>
+		<Italian>Oro</Italian>
+		<Spanish>Oro</Spanish>
+		<Polish>Złoto</Polish>
+		<Russian>Çîëîòî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_SORT_HAPPINESS</Tag>
+		<English>Happiness</English>
+		<French>Bonheur</French>
+		<German>Zufriedenheit</German>
+		<Italian>Felicità</Italian>
+		<Spanish>Felicidad</Spanish>
+		<Polish>Szczęście</Polish>
+		<Russian>Íàñòðîåíèÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_SORT_HEALTH</Tag>
+		<English>Health</English>
+		<French>Santé</French>
+		<German>Gesundheit</German>
+		<Italian>Salute</Italian>
+		<Spanish>Salud</Spanish>
+		<Polish>Zdrowie</Polish>
+		<Russian>Çäîðîâüå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_SORT_SCIENCE</Tag>
+		<English>Science</English>
+		<German>Wissenschaft</German>
+		<Italian>Scienza</Italian>
+		<Spanish>Ciencia</Spanish>
+		<Polish>Nauka</Polish>
+		<Russian>Íàóêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_SPACESHIP_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Spaceship Production</English>
+		<French>[ICON_BULLET]Production de vaisseau spatial %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Raumschiffproduktion</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% sulla produzione dell'astronave</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la producción de naves espaciales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_SPACESHIP_MOD_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Spaceship Production in All Cities</English>
+		<French>[ICON_BULLET]Production de vaisseau spatial dans toutes les villes %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Raumschiffproduktion in allen Städten</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% sulla produzione dell'astronave in tutte le città</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la producción de naves espaciales en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_SPREADS_RELIGION</Tag>
+		<English>[ICON_BULLET]%F1 spread change: %D2</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_STATE_REL_BUILDINGS</Tag>
+		<English>[SPACE]from All State [ICON_RELIGION] Buildings</English>
+		<French>[SPACE]de tous les bâtiments liés à une [ICON_RELIGION] d'état</French>
+		<German>[SPACE]von allen Gebäuden der Staatsreligion [ICON_RELIGION]</German>
+		<Italian>[SPACE]da tutti gli edifici della [ICON_RELIGION] ufficiale</Italian>
+		<Spanish>[SPACE]de todos los edificios de la [ICON_RELIGION] oficial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_STORES_FOOD</Tag>
+		<English>[ICON_BULLET]Stores %d1_Mod%% of [ICON_FOOD] after Growth</English>
+		<French>[ICON_BULLET]Stocke %d1_Mod%% de [ICON_FOOD] après la croissance</French>
+		<German>[ICON_BULLET]speichert %d1_Mod%% [ICON_FOOD] nach einem Stadtwachstum</German>
+		<Italian>[ICON_BULLET]Immagazzina %d1_Mod%% di [ICON_FOOD] dopo la crescita</Italian>
+		<Spanish>[ICON_BULLET]Almacena el %d1_Mod%% de los [ICON_FOOD] tras el crecimiento</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_TEAM_WONDERS_PER_CITY</Tag>
+		<English>[COLOR_WARNING_TEXT]Can only Construct %d1_Num Team Wonders per City[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Construction de merveilles d'équipe limitée à %d1_Num par ville[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann nur %d1_Num Teamwunder pro Stadt errichten[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Puoi costruire soltanto %d1_Num Meraviglie di Squadra per città[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla de equipo:maravillas de equipo] por ciudad[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_TEAM_WONDER_ALLOWED</Tag>
+		<English>[ICON_BULLET]Team Wonder (%d1_Num Allowed)</English>
+		<French>[ICON_BULLET]Merveille d'équipe (limite : %d1_Num)</French>
+		<German>[ICON_BULLET]Teamwunder (%d1_Num zulässig)</German>
+		<Italian>[ICON_BULLET]Meraviglia di squadra (%d1_Num [NUM1:permessa:permesse])</Italian>
+		<Spanish>[ICON_BULLET]Maravilla de equipo (%d1_Num [NUM1:permitida:permitidas])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_TEAM_WONDER_LEFT</Tag>
+		<English>[SPACE](Team Wonder: %d1_Num Left)</English>
+		<French>[SPACE](Merveille d'équipe : reste %d1_Num)</French>
+		<German>[SPACE](Teamwunder: %d1_Num übrig)</German>
+		<Italian>[SPACE](Meraviglia di squadra: %d1_Num [NUM1:rimasta:rimaste])</Italian>
+		<Spanish>[SPACE](Maravilla de equipo: %d1_Num [NUM1:restante:restantes])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_TECH_OUTBREAK_LEVEL_CHANGE</Tag>
+		<English>[ICON_BULLET]Discovering %s1_Tech reduces the outbreak threshold and increases recovery threshold by %d2_Amount.</English>
+		<French>[ICON_BULLET]La découverte de: %s1_Tech réduit les chances d'épidémies et augmente les guérison de %d2_Amount.</French>
+		<Italian>[ICON_BULLET]La tecnologia %s1_Tech riduce le probabilità di un'epidemia e incrementa il recupero di %d2_Amount.</Italian>
+		<Polish>[ICON_BULLET]Odkrycie %s1_Tech redukuje szanse na wybuch i zwiększa szybkość regeneracji o %d2_Amount.</Polish>
+		<Russian>[ICON_BULLET]Открытие %s1_Tech снижает порог вспышки и увеличивает порог восстановления на %d2_Amount.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_TRADE_COMMUNICABILITY_ADDED</Tag>
+		<English>[ICON_BULLET]Cities trading with this one are +%D1_Amount%% more likely to catch this disease.</English>
+		<French>[ICON_BULLET]Les autres Villes commerçant avec cette ville ont +%D1_Amount%% de chances de contracter cette maladie.</French>
+		<Italian>[ICON_BULLET]Le città che commerciano con questa città hanno +%D1_Amount%% di probabilità in più di contrarre questa malattia.</Italian>
+		<Polish>[ICON_BULLET]Miasta handlujące z tym miastem: +%D1_Amount%% więcej szansy na przejęcie tej Choroby.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_TRADE_COMMUNICABILITY_REDUCED</Tag>
+		<English>[ICON_BULLET]Cities trading with this one are %D1_Amount%% less likely to catch this disease.</English>
+		<French>[ICON_BULLET]Les autres Villes commerçant avec cette ville ont %D1_Amount%% moins de chances de contracter cette maladie.</French>
+		<Italian>[ICON_BULLET]Le città che commerciano con questa città hanno +%D1_Amount%% di probabilità in meno di contrarre questa malattia.</Italian>
+		<Polish>[ICON_BULLET]Miasta handlujące z tym miastem: +%D1_Amount%% mniej szansy na przejęcie tej Choroby.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_TRADE_ROUTES</Tag>
+		<English>[ICON_BULLET]%D1_Change Trade Routes</English>
+		<French>[ICON_BULLET]%D1_Change Routes commerciales</French>
+		<German>[ICON_BULLET]%D1_Change Handelswege</German>
+		<Italian>[ICON_BULLET]%D1_Change rotte commerciali</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change rutas comerciales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_TRADE_ROUTES_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Change Trade Routes in All Cities</English>
+		<French>[ICON_BULLET]%D1_Change Routes commerciales dans toutes les villes</French>
+		<German>[ICON_BULLET]%D1_Change Handelswege in allen Städten</German>
+		<Italian>[ICON_BULLET]%D1_Change rotte commerciali in tutte le città</Italian>
+		<Spanish>[ICON_BULLET]%D1_Change rutas comerciales en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_TRADE_ROUTE_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Trade Route Yield</English>
+		<French>[ICON_BULLET]Production de la route commerciale %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Erträge durch Handelswege</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% al rendimento della rotta commerciale</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al rendimiento de la ruta comercial</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_TURN_CITIZENS_INTO_NO_BULLET</Tag>
+		<English>Can turn %d1_Num Citizens into [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpecType]%s3_SpecName[\LINK][COLOR_REVERT]</English>
+		<French>Peut transformer %d1_Num citoyens en [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpecType]%s3_SpecName[\LINK][COLOR_REVERT]</French>
+		<German>Kann %d1_Num Bürger in Spezialisten des Typs [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpecType]%s3_SpecName[\LINK][COLOR_REVERT] verwandeln</German>
+		<Italian>Può trasformare %d1_Num cittadini in [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpecType]%s3_SpecName[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>Puede convertir a %d1_Num ciudadanos en [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpecType]%s3_SpecName[\LINK][COLOR_REVERT]</Spanish>
+		<Polish>Możesz zamienić %d1_Num obywateli do [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpecType]%s3_SpecName[\LINK][COLOR_REVERT]</Polish>
+		<Russian>Ìîæåò ñäåëàòü %d1_Num ãîðîæàíèí â [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpecType]%s3_SpecName[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_TURN_CITIZEN_INTO_NO_BULLET</Tag>
+		<English>Can turn 1 Citizen into [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</English>
+		<French>Peut transformer un citoyen en [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</French>
+		<German>Kann 1 Bürger in einen Spezialisten des Typs [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT] verwandeln</German>
+		<Italian>Può trasformare un cittadino in [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Italian>
+		<Spanish>Puede convertir a un ciudadano en [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Spanish>
+		<Polish>Możesz zamienić jednego obywatela do [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Polish>
+		<Russian>Ìîæåò ñäåëàòü 1 ãîðîæàíèíà â [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_UNITCOMBAT_EXTRA_STRENGTH</Tag>
+		<English>% Strength to defending[SPACE]</English>
+		<French>% Force défensive[SPACE]</French>
+		<German>% Verteidigungsstärke[SPACE]</German>
+		<Italian>% Forza difensiva[SPACE]</Italian>
+		<Spanish>% de fuerza defensiva[SPACE]</Spanish>
+		<Polish>% do siły obrony dla[SPACE]</Polish>
+		<Russian>%[SPACE]Ñèëà â çàùèòå[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_UNIT_COMBAT_DEFENSE_AGAINST_MODIFIER</Tag>
+		<English>[ICON_BULLET]Units defending the city gain a %D1_Amount%% Combat Modifier against attacking %s2_Unit_Combat.</English>
+		<French>[ICON_BULLET]Les Unités défendant la ville gagnent un bonus de %D1_Amount%% contre des attaquants %s2_Unit_Combat.</French>
+		<Italian>[ICON_BULLET]Le unità che difendono una città ottengono %D1_Amount%% al combattimento contro %s2_Unit_Combat.</Italian>
+		<Polish>[ICON_BULLET]Jednostki broniące miasta otrzymują %D1_Amount%% dodatkowej wartości walki przeciwko atakującym jednostkom: %s2_Unit_Combat.</Polish>
+		<Russian>[ICON_BULLET]Îòðÿäû, îáîðîíÿþùèå ãîðîä, ïîëó÷àþò ìîäèôèêàòîð áîÿ %D1_Amount%% ïðîòèâ àòàêè %s2_Unit_Combat.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_UNIT_COMBAT_ONGOING_TRAINING_DURATION</Tag>
+		<English>[ICON_BULLET]Adds One Experience Point to the least trained %s1_UnitCombat Unit present in the city every %d1_Amount rounds.</English>
+		<French>[ICON_BULLET]Ajoute un point d'EXP à l'unité %s1_UnitCombat la moins entraînée présente dans la ville, tous les %d1_Amount rounds.</French>
+		<Italian>[ICON_BULLET]Aggiunge un punto esperienza all'unità addestrata di tipo %s1_UnitCombat presente in città ogni %d1_Amount turni.</Italian>
+		<Polish>[ICON_BULLET]Dodaje jeden punkt doświadczenia do szkolonych jednostek: %s1_UnitCombat w mieście w każdej turze przez %d1_Amount tur.</Polish>
+		<Russian>[ICON_BULLET]Äîáàâëÿåò îäíî î÷êî îïûòà äëÿ íàèìåíåå îáó÷åííîãî îòðÿäà %s1_UnitCombat íàõîäÿùåãîñÿ â ãîðîäå %d1_Amount õîäîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_UNIT_COMBAT_PROD_NEGATIVE_MODIFIER</Tag>
+		<English>[ICON_BULLET]Builds %s1_Unit_Combat %d2_Amount%% Slower</English>
+		<French>[ICON_BULLET]Construit %s1_Unit_Combat %d2_Amount%% fois plus lentement</French>
+		<Italian>[ICON_BULLET]Costruisce %s1_Unit_Combat %d2_Amount%% più lentamente</Italian>
+		<Polish>[ICON_BULLET]Buduje %s1_Unit_Combat o %d2_Amount%% Wolniej</Polish>
+		<Russian>[ICON_BULLET]Äàåò ìåäëåííûé ïðèðîñò %s1_Unit_Combat %d2_Amount%%</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_UNIT_COMBAT_PROD_POSITIVE_MODIFIER</Tag>
+		<English>[ICON_BULLET]Builds %s1_Unit_Combat %d2_Amount%% Faster</English>
+		<French>[ICON_BULLET]Construit %s1_Unit_Combat %d2_Amount%% fois plus rapidement</French>
+		<Italian>[ICON_BULLET]Costruisce %s1_Unit_Combat %d2_Amount%% più velocemente</Italian>
+		<Polish>[ICON_BULLET]Buduje: %s1_Unit_Combat o: %d2_Amount%% Szybciej</Polish>
+		<Russian>[ICON_BULLET]Äàåò áûñòðûé ïðèðîñò %s1_Unit_Combat %d2_Amount%%</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_UNIT_COMBAT_REPEL_AGAINST_MODIFIER</Tag>
+		<English>[ICON_BULLET]Units defending the city gain %D1_Amount%% additional Repel value against attacking %s2_Unit_Combat.</English>
+		<French>[ICON_BULLET]Les Unités défendant la ville gagnent un bonus de %D1_Amount%% en expulsion contre des attaquants %s2_Unit_Combat.</French>
+		<Italian>[ICON_BULLET]Le unità che difendono una città ottengono %D1_Amount%% al valore di Respinta contro %s2_Unit_Combat.</Italian>
+		<Polish>[ICON_BULLET]Jednostki broniące miasta otrzymują %D1_Amount%% dodatkowej wartości odepchnięcia przeciwko atakującym jednostkom: %s2_Unit_Combat.</Polish>
+		<Russian>[ICON_BULLET]Îòðÿäû, îáîðîíÿþùèå ãîðîä, ïîëó÷àþò äîï. áîíóñ %D1_Amount%% ê ñîïðîòèâëåíèþ îò àòàêè %s2_Unit_Combat.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_UNIT_COMBAT_REPEL_MODIFIER</Tag>
+		<English>[ICON_BULLET]%d1_Amount%% additional Repel value to local defending %s2_Unit_Combat.</English>
+		<French>[ICON_BULLET]%d1_Amount%% de Répulsion supplémentaire à l'unité %s2_Unit_Combat se défendant.</French>
+		<Italian>[ICON_BULLET]%d1_Amount%% di Respinta supplementare a %s2_Unit_Combat che difendono.</Italian>
+		<Polish>[ICON_BULLET]%d1_Amount%% dodatkowej wartości na odepchnięcie do lokalnie broniących jednostek: %s2_Unit_Combat.</Polish>
+		<Russian>[ICON_BULLET]%d1_Amount%% ê ñîïðîòèâëåíèþ îò àòàêè %s2_Unit_Combat.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_UNIT_UPGRADE_COST_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% [ICON_GOLD] to Upgrade Units</English>
+		<French>[ICON_BULLET]%D1_Mod%% [ICON_GOLD][COLOR_REVERT] pour améliorer les Unités</French>
+		<German>[ICON_BULLET]%D1_Mod%% [ICON_GOLD] um Einheiten zu modernisieren</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% [ICON_GOLD] per Aggiornare la/le Unità</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%%[ICON_GOLD] para mejorar unidades</Spanish>
+		<Polish>[ICON_BULLET]%D1_Mod%% [ICON_GOLD] do ulepszenia jednostek</Polish>
+		<Russian>[ICON_BULLET]%D1_Mod%% [ICON_GOLD] äëÿ óëó÷øåíèÿ þíèòîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_WAR_WEAR_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% War [ICON_UNHAPPY]</English>
+		<French>[ICON_BULLET][ICON_UNHAPPY] dû à la guerre %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% [ICON_UNHAPPY] wegen Krieg</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% [ICON_UNHAPPY] per la guerra</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al [ICON_UNHAPPY] bélico</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_WAR_WEAR_MOD_ALL_CITIES</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% War [ICON_UNHAPPY] in All Cities</English>
+		<French>[ICON_BULLET][ICON_UNHAPPY] dû à la guerre dans toutes les villes %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% [ICON_UNHAPPY] wegen Krieg in allen Städten</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% [ICON_UNHAPPY] per la guerra in tutte le città</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% al [ICON_UNHAPPY] bélico en todas las ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_WATER_PLOTS_ALL_CITIES</Tag>
+		<English>All Cities Water Tiles</English>
+		<French>Toutes les cases d'eau des villes[SPACE]</French>
+		<German>Alle Städte auf Wasser-Geländefeldern</German>
+		<Italian>Caselle d'acqua di tutte le città</Italian>
+		<Spanish>Todas las casillas de agua de ciudades</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_WITH_POWER</Tag>
+		<English>[SPACE]with Power ([ICON_POWER])</English>
+		<French>[SPACE]avec électricité ([ICON_POWER])</French>
+		<German>[SPACE]mit Energie ([ICON_POWER])</German>
+		<Italian>[SPACE]con l'energia ([ICON_POWER])</Italian>
+		<Spanish>[SPACE]con energía ([ICON_POWER])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_WORKER_MOD</Tag>
+		<English>[ICON_BULLET]Workers Build Improvements %D1_Mod%% Faster</English>
+		<French>[ICON_BULLET]Vitesse de construction des aménagements : %D1_Mod%%</French>
+		<German>[ICON_BULLET]Bautrupps errichten Modernisierungen %D1_Mod%% schneller</German>
+		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Mod%% più rapidamente</Italian>
+		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Mod%% más rápido</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDERS_PER_CITY</Tag>
+		<English>[COLOR_WARNING_TEXT]Can only Construct %d1_Num World Wonders per City[COLOR_REVERT]</English>
+		<French>[COLOR_WARNING_TEXT]Construction de merveilles mondiales limitée à %d1_Num par ville[COLOR_REVERT]</French>
+		<German>[COLOR_WARNING_TEXT]Kann nur %d1_Num Weltwunder pro Stadt errichten[COLOR_REVERT]</German>
+		<Italian>[COLOR_WARNING_TEXT]Puoi costruire soltanto %d1_Num Grandi Meraviglie per città[COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla del mundo:maravillas del mundo] por ciudad[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDER_ALLOWED</Tag>
+		<English>[ICON_BULLET]World Wonder (%d1_Num Allowed)</English>
+		<French>[ICON_BULLET]Merveille mondiale (limite : %d1_Num)</French>
+		<German>[ICON_BULLET]Weltwunder (%d1_Num zulässig)</German>
+		<Italian>[ICON_BULLET]Grande Meraviglia (%d1_Num [NUM1:permessa:permesse])</Italian>
+		<Spanish>[ICON_BULLET]Maravilla del mundo (%d1_Num [NUM1:permitida:permitidas])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDER_LEFT</Tag>
+		<English>[SPACE](World Wonder: %d1_Num Left)</English>
+		<French>[SPACE](Merveille mondiale : reste %d1_Num)</French>
+		<German>[SPACE](Weltwunder: %d1_Num übrig)</German>
+		<Italian>[SPACE](Grande Meraviglia: %d1_Num [NUM1:rimasta:rimaste])</Italian>
+		<Spanish>[SPACE](Maravilla del mundo: %d1_Num [NUM1:restante:restantes])</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDINGHELP_ZONE_OF_CONTROL</Tag>
+		<English>[ICON_BULLET]Exerts a Zone Of Control on all adjacent tiles</English>
+		<French>[ICON_BULLET]Exerce un Contrôle sur les cases adjacentes.</French>
+		<German>[ICON_BULLET]Errichtet eine Kontrollzone über alle angrenzenden Felder</German>
+		<Italian>[ICON_BULLET]Stabilisce una zona di controllo su tutte le caselle adiacenti</Italian>
+		<Spanish>[ICON_BULLET]Ejerce una Zona de control en las casillas adyacentes</Spanish>
+		<Polish>[ICON_BULLET]Tworzy strefę kontroli która zmusza wrogie jednostki do ataku lub odwrotu.</Polish>
+		<Russian>[ICON_BULLET]Ïðîÿâëÿåò Çîíó Êîíòðîëÿ íàä âñåìè ñìåæíûìè êëåòêàìè</Russian>
+	</TEXT>
+</Civ4GameText>

@@ -46,6 +46,7 @@
 	<ElementType name="TargetCondition"/>
 	<ElementType name="AttributeType" content="textOnly"/>
 	<ElementType name="iAmountPerTurn"/>
+	<ElementType name="iSpeedPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iGrowthPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iInhibitionPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iDistance" content="textOnly" dt:type="int"/>
@@ -108,7 +109,6 @@
 	<!--Textual References-->
 	<ElementType name="GenericCategory" content="textOnly"/>
 	<!--Integers-->
-	<ElementType name="iTraitGainPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iNationalCaptureProbabilityModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iNationalCaptureResistanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iInsidiousness" content="textOnly" dt:type="int"/>
@@ -594,19 +594,10 @@
 	<ElementType name="Name" content="textOnly"/>
 	<ElementType name="iFreeWinsVsBarbs" content="textOnly" dt:type="int"/>
 	<ElementType name="iAnimalAttackProb" content="textOnly" dt:type="int"/>
-	<ElementType name="iStartingLocPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iFreeUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnitUpkeepPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxColonyMaintenance" content="textOnly" dt:type="int"/>
 	<ElementType name="iCivicUpkeepPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iFeatureProductionPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnitDiscoverPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnitHurryPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnitTradePercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnitGreatWorkPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iGoldenAgePercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iHurryPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iHurryConscriptAngerPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iInflationPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iRevolutionIndexPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iHealthBonus" content="textOnly" dt:type="int"/>
@@ -614,8 +605,6 @@
 	<ElementType name="iAttitudeChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iNoTechTradeModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iTechTradeKnownModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnownedTilesPerGameAnimal" content="textOnly" dt:type="int"/>
-	<ElementType name="iUnownedTilesPerBarbarianUnit" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnownedWaterTilesPerBarbarianUnit" content="textOnly" dt:type="int"/>
 	<ElementType name="iUnownedTilesPerBarbarianCity" content="textOnly" dt:type="int"/>
 	<ElementType name="iBarbarianCityCreationTurnsElapsed" content="textOnly" dt:type="int"/>
@@ -627,7 +616,6 @@
 	<ElementType name="iStartingDefenseUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iStartingWorkerUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iStartingExploreUnits" content="textOnly" dt:type="int"/>
-	<ElementType name="iAIStartingUnitMultiplier" content="textOnly" dt:type="int"/>
 	<ElementType name="iAIStartingDefenseUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iAIStartingWorkerUnits" content="textOnly" dt:type="int"/>
 	<ElementType name="iAIStartingExploreUnits" content="textOnly" dt:type="int"/>
@@ -666,7 +654,6 @@
 		<element type="Help" minOccurs="0"/>
 		<element type="iFreeWinsVsBarbs" minOccurs="0"/>
 		<element type="iAnimalAttackProb" minOccurs="0"/>
-		<element type="iStartingLocPercent" minOccurs="0"/>
 		<element type="iAdvancedStartPointsMod" minOccurs="0"/>
 		<element type="iGold" minOccurs="0"/>
 		<element type="iUnitUpkeepPercent" minOccurs="0"/>
@@ -686,8 +673,6 @@
 		<element type="iAttitudeChange" minOccurs="0"/>
 		<element type="iNoTechTradeModifier" minOccurs="0"/>
 		<element type="iTechTradeKnownModifier" minOccurs="0"/>
-		<element type="iUnownedTilesPerGameAnimal" minOccurs="0"/>
-		<element type="iUnownedTilesPerBarbarianUnit" minOccurs="0"/>
 		<element type="iUnownedWaterTilesPerBarbarianUnit" minOccurs="0"/>
 		<element type="iUnownedTilesPerBarbarianCity" minOccurs="0"/>
 		<element type="iBarbarianCityCreationTurnsElapsed" minOccurs="0"/>
@@ -699,7 +684,6 @@
 		<element type="iStartingDefenseUnits" minOccurs="0"/>
 		<element type="iStartingWorkerUnits" minOccurs="0"/>
 		<element type="iStartingExploreUnits" minOccurs="0"/>
-		<element type="iAIStartingUnitMultiplier" minOccurs="0"/>
 		<element type="iAIStartingDefenseUnits" minOccurs="0"/>
 		<element type="iAIStartingWorkerUnits" minOccurs="0"/>
 		<element type="iAIStartingExploreUnits" minOccurs="0"/>
@@ -977,7 +961,6 @@
 	<ElementType name="iPopulationgrowthratepercentage" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoCapitalUnhappiness" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iTaxRateUnhappiness" content="textOnly" dt:type="int"/>
-	<ElementType name="iRealCorporationMaintenanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iInflation" content="textOnly" dt:type="int"/>
 	<ElementType name="bChooseCurrency" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iHurryCostModifier" content="textOnly" dt:type="int"/>
@@ -988,7 +971,6 @@
 	<ElementType name="iCityOverLimitUnhappy" content="textOnly" dt:type="int"/>
 	<ElementType name="iForeignerUnhappyPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoLandmarkAnger" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bEnablesMADNukes" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iFreeSpecialist" content="textOnly" dt:type="int"/>
 	<ElementType name="bNoForeignTrade" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoCorporations" content="textOnly" dt:type="boolean"/>
@@ -1011,6 +993,13 @@
 	</ElementType>
 	<ElementType name="TradeYieldModifiers" content="eltOnly">
 		<element type="iYield" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="BonusCommerceModifier" content="eltOnly">
+		<element type="BonusType"/>
+		<element type="CommerceModifiers"/>
+	</ElementType>
+	<ElementType name="BonusCommerceModifiers" content="eltOnly">
+		<element type="BonusCommerceModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="iCommerce" content="textOnly" dt:type="int"/>
 	<ElementType name="CommerceModifiers" content="eltOnly">
@@ -1231,14 +1220,12 @@
 		<element type="bAllowSlaves" minOccurs="0"/>
 		<element type="iFreedomFighterChange" minOccurs="0"/>
 		<element type="bFreedomFighter" minOccurs="0"/>
-		<element type="iRealCorporationMaintenanceModifier" minOccurs="0"/>
 		<element type="iInflation" minOccurs="0"/>
 		<element type="bChooseCurrency" minOccurs="0"/>
 		<element type="iHurryCostModifier" minOccurs="0"/>
 		<element type="iHurryInflationModifier" minOccurs="0"/>
 		<element type="iSharedCivicTradeRouteModifier" minOccurs="0"/>
 		<element type="FreeSpecialistCounts" minOccurs="0"/>
-		<element type="bEnablesMADNukes" minOccurs="0"/>
 		<element type="iWarWearinessModifier" minOccurs="0"/>
 		<element type="iFreeSpecialist" minOccurs="0"/>
 		<element type="iTradeRoutes" minOccurs="0"/>
@@ -1258,6 +1245,7 @@
 		<element type="TradeYieldModifiers" minOccurs="0"/>
 		<element type="CommerceModifiers" minOccurs="0"/>
 		<element type="CapitalCommerceModifiers" minOccurs="0"/>
+		<element type="BonusCommerceModifiers" minOccurs="0"/>
 		<element type="SpecialistExtraCommerces" minOccurs="0"/>
 		<element type="Hurrys" minOccurs="0"/>
 		<element type="SpecialBuildingNotRequireds" minOccurs="0"/>
@@ -1360,17 +1348,7 @@
 	<ElementType name="CivicInfos" content="eltOnly">
 		<element type="CivicInfo" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="iTrainPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iConstructPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iCreatePercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iBuildPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iImprovementPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iGreatPeoplePercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iCulturePercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iAnarchyPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="iEventChancePerTurn" content="textOnly" dt:type="int"/>
-	<ElementType name="iBarbPercent" content="textOnly" dt:type="int"/>
-	<ElementType name="iOccupationTurnsPopulationPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="GameSpeedInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -1380,28 +1358,7 @@
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
-		<element type="iGrowthPercent" minOccurs="0"/>
-		<element type="iTrainPercent" minOccurs="0"/>
-		<element type="iConstructPercent" minOccurs="0"/>
-		<element type="iCreatePercent" minOccurs="0"/>
-		<element type="iResearchPercent" minOccurs="0"/>
-		<element type="iBuildPercent" minOccurs="0"/>
-		<element type="iImprovementPercent" minOccurs="0"/>
-		<element type="iGreatPeoplePercent" minOccurs="0"/>
-		<element type="iCulturePercent" minOccurs="0"/>
-		<element type="iAnarchyPercent" minOccurs="0"/>
-		<element type="iBarbPercent" minOccurs="0"/>
-		<element type="iFeatureProductionPercent" minOccurs="0"/>
-		<element type="iUnitDiscoverPercent" minOccurs="0"/>
-		<element type="iUnitHurryPercent" minOccurs="0"/>
-		<element type="iUnitTradePercent" minOccurs="0"/>
-		<element type="iUnitGreatWorkPercent" minOccurs="0"/>
-		<element type="iGoldenAgePercent" minOccurs="0"/>
-		<element type="iHurryPercent" minOccurs="0"/>
-		<element type="iHurryConscriptAngerPercent" minOccurs="0"/>
-		<element type="iOccupationTurnsPopulationPercent" minOccurs="0"/>
-		<element type="iVictoryDelayPercent" minOccurs="0"/>
-		<element type="iTraitGainPercent" minOccurs="0"/>
+		<element type="iSpeedPercent" minOccurs="0"/>
 		<element type="GameTurnInfos" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="GameSpeedInfos" content="eltOnly">
@@ -1673,6 +1630,14 @@
 	<ElementType name="AudioUnitVictoryScript" content="textOnly"/>
 	<ElementType name="AudioUnitDefeatScript" content="textOnly"/>
 	<ElementType name="iAdvancedStartPoints" content="textOnly" dt:type="int"/>
+	<ElementType name="iAnarchyPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iGreatPeoplePercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iCulturePercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iImprovementPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iTrainPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iConstructPercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iCreatePercent" content="textOnly" dt:type="int"/>
+	<ElementType name="iBuildPercent" content="textOnly" dt:type="int"/>
 	<ElementType name="EraInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>

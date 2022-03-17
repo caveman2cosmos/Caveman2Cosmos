@@ -5,124 +5,24 @@
 #ifndef CIV4_CITY_H
 #define CIV4_CITY_H
 
-//#include "CvDLLEntity.h"
 #include "LinkedList.h"
+#include "CvDLLEntity.h"
+#include "CvGameObject.h"
+#include "CvProperties.h"
 #include "CvBuildingList.h"
 #include "CvUnitList.h"
-#include "CvGameObject.h"
 
 class CvArea;
 class CvArtInfoBuilding;
-class CvDLLEntity;
 class CvPlot;
 class CvPlotGroup;
-
-//	KOSHLING - Cache yield values where possible
-#define YIELD_VALUE_CACHING
-
-//	Enable canTrain results to be cached within a (caller)defined scope
-#define CAN_TRAIN_CACHING
+class CvUnit;
+class CvUnitSelectionCriteria;
 
 // BUG - start
 void addGoodOrBad(int iValue, int& iGood, int& iBad);
 void subtractGoodOrBad(int iValue, int& iGood, int& iBad);
 // BUG - end
-
-//	Unit ordering criteria
-class CvUnitSelectionCriteria
-{
-public:
-	CvUnitSelectionCriteria()
-	:
-		m_eUnitAI(NO_UNITAI),
-		m_eIgnoreAdvisor(NO_ADVISOR),
-		m_eHealUnitCombat(NO_UNITCOMBAT),
-		m_eProperty(NO_PROPERTY),
-		m_eVisibility(NO_INVISIBLE),
-		m_bIgnoreNotUnitAIs(false),
-		m_bIgnoreGrowth(false),
-		m_bPropertyBeneficial(true),
-		m_bNoNegativeProperties(false),
-		m_bIsHealer(false),
-		m_bIsCommander(false)
-	{ }
-
-	CvString getDescription()
-	{
-		if (m_eProperty != NO_PROPERTY)
-		{
-			return (
-				CvString::format(
-					"Property %s for %S",
-					m_bPropertyBeneficial ? "improver" : "worsener",
-					GC.getPropertyInfo(m_eProperty).getDescription()
-				)
-			);
-		}
-		return CvString("");
-	}
-
-#define PROPERTY_MASK 0x0F
-#define ADVISOR_MASK 0x07
-
-	int getHash() const
-	{
-		int	iResult = (m_eUnitAI << 16);
-
-		if ( m_eProperty != NO_PROPERTY )
-		{
-			iResult |= 0x8000;
-			iResult |= (m_eProperty & PROPERTY_MASK) << 11;
-			if ( !m_bPropertyBeneficial )
-			{
-				iResult |= 0x400;
-			}
-		}
-		if ( m_bIgnoreNotUnitAIs )
-		{
-			iResult |= 0x200;
-		}
-		if ( m_bIgnoreGrowth )
-		{
-			iResult |= 0x100;
-		}
-		iResult |= (m_eIgnoreAdvisor & ADVISOR_MASK) << 5;
-		if ( m_bIsHealer )
-		{
-			iResult |= 0x10;
-		}
-		if ( m_bIsCommander )
-		{
-			iResult |= 0x8;
-		}
-
-		return iResult;
-	}
-
-	UnitAITypes		m_eUnitAI;
-	AdvisorTypes	m_eIgnoreAdvisor;
-	UnitCombatTypes	m_eHealUnitCombat;
-	PropertyTypes	m_eProperty;
-	InvisibleTypes	m_eVisibility;
-	bool			m_bIgnoreNotUnitAIs;
-	bool			m_bIgnoreGrowth;
-	bool			m_bPropertyBeneficial;
-	bool			m_bNoNegativeProperties;
-	bool			m_bIsHealer;
-	bool			m_bIsCommander;
-
-	CvUnitSelectionCriteria& UnitAI(UnitAITypes UnitAI) { m_eUnitAI = UnitAI; return *this; }
-	CvUnitSelectionCriteria& IgnoreAdvisor(AdvisorTypes IgnoreAdvisor) { m_eIgnoreAdvisor = IgnoreAdvisor; return *this; }
-	CvUnitSelectionCriteria& HealUnitCombat(UnitCombatTypes HealUnitCombat) { m_eHealUnitCombat = HealUnitCombat; return *this; }
-	CvUnitSelectionCriteria& Property(PropertyTypes Property) { m_eProperty = Property; return *this; }
-	CvUnitSelectionCriteria& Visibility(InvisibleTypes Visibility) { m_eVisibility = Visibility; return *this; }
-	CvUnitSelectionCriteria& IgnoreNotUnitAIs(bool IgnoreNotUnitAIs) { m_bIgnoreNotUnitAIs = IgnoreNotUnitAIs; return *this; }
-	CvUnitSelectionCriteria& IgnoreGrowth(bool IgnoreGrowth) { m_bIgnoreGrowth = IgnoreGrowth; return *this; }
-	CvUnitSelectionCriteria& PropertyBeneficial(bool PropertyBeneficial) { m_bPropertyBeneficial = PropertyBeneficial; return *this; }
-	CvUnitSelectionCriteria& NoNegativeProperties(bool NoNegativeProperties) { m_bNoNegativeProperties = NoNegativeProperties; return *this; }
-	CvUnitSelectionCriteria& IsHealer(bool IsHealer) { m_bIsHealer = IsHealer; return *this; }
-	CvUnitSelectionCriteria& IsCommander(bool IsCommander) { m_bIsCommander = IsCommander; return *this; }
-};
 
 struct ProductionCalc
 {
@@ -137,12 +37,13 @@ struct ProductionCalc
 DECLARE_FLAGS(ProductionCalc::flags);
 
 
-class CvCity : public CvDLLEntity
+class CvCity
+	: public CvDLLEntity
+	, private bst::noncopyable // disable copy: we have owned pointers so we can't use the default copy implementation
 {
 public:
 	CvCity();
 	virtual ~CvCity();
-
 
 	void init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, bool bUpdatePlotGroups);
 	void uninit();
@@ -153,9 +54,6 @@ public:
 	const CvGameObjectCity* getGameObject() const { return &m_GameObject; }
 
 private:
-	// disable copy: we have owned pointers so we can't use the default copy implementation
-	CvCity(const CvCity&);
-	CvCity& operator=(const CvCity&);
 	bool canHurryInternal(const HurryTypes eHurry) const;
 
 protected:
@@ -174,6 +72,9 @@ public:
 	void setRevIndexAverage( int iNewValue );
 	void updateRevIndexAverage( );
 
+	int getRevIndexDistanceMod() const { return m_iRevIndexDistanceMod; }
+	void changeRevIndexDistanceMod(const int iChange);
+
 	int getRevolutionCounter() const;
 	void setRevolutionCounter( int iNewValue );
 	void changeRevolutionCounter( int iChange );
@@ -189,6 +90,7 @@ public:
 
 	void doTurn();
 	void doAutobuild();
+	void checkPropertyBuildings();
 
 	bool isCitySelected() const;
 	DllExport bool canBeSelected() const;
@@ -210,8 +112,8 @@ public:
 	struct city_plot_iterator_base :
 		public bst::iterator_facade<city_plot_iterator_base<Value_>, Value_*, bst::forward_traversal_tag, Value_*>
 	{
-		city_plot_iterator_base() : m_centerX(-1), m_centerY(-1), m_curr(nullptr), m_idx(0) {}
-		explicit city_plot_iterator_base(int centerX, int centerY) : m_centerX(centerX), m_centerY(centerY), m_curr(nullptr), m_idx(0)
+		city_plot_iterator_base() : m_centerX(-1), m_centerY(-1), m_curr(nullptr), m_idx(0), m_numPlots(0) {}
+		explicit city_plot_iterator_base(int centerX, int centerY, int numPlots, int idx) : m_centerX(centerX), m_centerY(centerY), m_numPlots(numPlots), m_curr(nullptr), m_idx(idx)
 		{
 			increment();
 		}
@@ -221,7 +123,7 @@ public:
 		void increment()
 		{
 			m_curr = nullptr;
-			while (m_curr == nullptr && m_idx < NUM_CITY_PLOTS)
+			while (m_curr == nullptr && m_idx < m_numPlots/*NUM_CITY_PLOTS*/)
 			{
 				m_curr = plotCity(m_centerX, m_centerY, m_idx);
 				++m_idx;
@@ -237,18 +139,20 @@ public:
 
 		Value_* dereference() const { return m_curr; }
 
-		int m_centerX;
-		int m_centerY;
+		const int m_centerX;
+		const int m_centerY;
+		const int m_numPlots;
 		Value_* m_curr;
 		int m_idx;
 	};
 	typedef city_plot_iterator_base<CvPlot> city_plot_iterator;
 
-	city_plot_iterator beginPlots() const { return city_plot_iterator(getX(), getY()); }
+	city_plot_iterator beginPlots(int numPlots, bool skipCityHomePlot) const { return city_plot_iterator(getX(), getY(), numPlots, skipCityHomePlot); }
 	city_plot_iterator endPlots() const { return city_plot_iterator(); }
 
 	typedef bst::iterator_range<city_plot_iterator> city_plot_range;
-	city_plot_range plots() const { return city_plot_range(beginPlots(), endPlots()); }
+ 	city_plot_range plots(int numPlots, bool skipCityHomePlot = false) const { return city_plot_range(beginPlots(numPlots, skipCityHomePlot), endPlots()); }
+	city_plot_range plots(bool skipCityHomePlot = false) const { return city_plot_range(beginPlots(getNumCityPlots(), skipCityHomePlot), endPlots()); }
 
 	int getCityPlotIndex(const CvPlot* pPlot) const;
 	// Prefer to use plots() range instead of this for loops, searching etc.
@@ -268,7 +172,6 @@ public:
 	int findCommerceRateRank(CommerceTypes eCommerce) const;
 
 	bool isSupersedingUnitAvailable(UnitTypes eUnit) const;
-	bool isPlotTrainable(UnitTypes eUnit, bool bContinue, bool bTestVisible) const;
 
 	UnitTypes allUpgradesAvailable(UnitTypes eUnit, int iUpgradeCount = 0) const;
 	bool isWorldWondersMaxed() const;
@@ -290,7 +193,7 @@ public:
 	void NoteBuildingNoLongerConstructable(BuildingTypes eBuilding) const;
 
 	bool canCreate(ProjectTypes eProject, bool bContinue = false, bool bTestVisible = false) const;
-	bool canMaintain(ProcessTypes eProcess, bool bContinue = false) const;
+	bool canMaintain(ProcessTypes eProcess) const;
 
 	int getFoodTurnsLeft() const;
 	bool isProduction() const;
@@ -350,16 +253,10 @@ public:
 	int getProductionModifier(BuildingTypes eBuilding) const;
 	int getProductionModifier(ProjectTypes eProject) const;
 
-//	int getOverflowProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, int iDiff, int iModifiedProduction) const;
-//	int getProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, bool bFoodProduction, bool bOverflow) const;
-
-	int getOverflowProductionDifference() const;
-	// int getProductionDifference(int iProductionNeeded, int iProduction, int iProductionModifier, bool bFoodProduction, bool bOverflow, bool bYield = true) const;
-	int getProductionPerTurn(int iProductionModifier, ProductionCalc::flags flags) const;
+	int getProductionPerTurn(ProductionCalc::flags flags) const;
 
 	int getProductionDifference(const OrderData& orderData, ProductionCalc::flags flags) const;
 	int getCurrentProductionDifference(ProductionCalc::flags flags) const;
-	int getExtraProductionDifference(int iExtra) const;
 
 	bool canHurry(const HurryTypes eHurry, const bool bTestVisible = false) const;
 	int64_t getHurryGold(const HurryTypes eHurry, int iHurryCost = -1) const;
@@ -377,7 +274,7 @@ public:
 
 	int getBonusHealth(BonusTypes eBonus) const;
 	int getBonusHappiness(BonusTypes eBonus) const;
-	int getBonusPower(BonusTypes eBonus, bool bDirty) const;
+	int getBonusPower(BonusTypes eBonus) const;
 	int getBonusYieldRateModifier(YieldTypes eIndex, BonusTypes eBonus) const;
 	void processBonus(BonusTypes eBonus, int iChange);
 
@@ -394,7 +291,6 @@ public:
 	DllExport float getBuildingVisibilityPriority(BuildingTypes eBuilding) const;
 
 	bool hasTrait(TraitTypes eTrait) const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isHuman() const;
@@ -420,7 +316,7 @@ public:
 	int getAngerPercent(const int iExtra = 0) const;
 
 	int getRevRequestPercentAnger(int iExtra = 0) const;
-	int getRevIndexPercentAnger(int iExtra = 0) const;
+	int getRevIndexPercentAnger() const;
 	int getRevSuccessHappiness() const;
 
 	int getLargestCityHappiness() const;
@@ -454,8 +350,8 @@ public:
 	int growthThreshold(const int iPopChange = 0) const;
 
 	int productionLeft() const;
-	int hurryCost(bool bExtra) const;
-	int getHurryCostModifier(bool bIgnoreNew = false) const;
+	int hurryCost() const;
+	int getHurryCostModifier() const;
 	int hurryPopulation(HurryTypes eHurry) const;
 	int hurryProduction(HurryTypes eHurry) const;
 	int flatHurryAngerLength() const;
@@ -476,11 +372,12 @@ public:
 
 	int getNumActiveWorldWonders() const;
 
-
 	bool processGreatWall(bool bIn, bool bForce = false, bool bSeeded = true);
 
 	int getReligionCount() const;
 	int getCorporationCount() const;
+
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	//TB Combat Mods (Buildings) begin
 	int getUnitAidPresent(PropertyTypes eProperty) const;
 	int getCityAidTotal(PromotionLineTypes ePromotionLineType) const;
@@ -509,7 +406,6 @@ public:
 	void setCurrentOvercomeChange(PromotionLineTypes ePromotionLine, int iChange);
 
 	int getTotalTechOutbreakLevelChange(BuildingTypes eBuilding) const;
-	int getPropertyValue(PropertyTypes eProperty);
 	int getOutbreakChangesTotal(BuildingTypes eAfflictionBuilding, PromotionLineTypes eAfflictionLine) const;
 	int getOvercomeChangesTotal(BuildingTypes eAfflictionBuilding, PromotionLineTypes eAfflictionLine) const;
 	int getUnitCommunicability(PromotionLineTypes eAfflictionLine) const;
@@ -518,6 +414,13 @@ public:
 	int getTotalCommunicableExposure(PromotionLineTypes eAfflictionLine) const;
 	void doOutbreakCheck(PromotionLineTypes eAfflictionLine);
 	void doOvercomeCheck(PromotionLineTypes eAfflictionLine);
+	int getPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction) const;
+	void changePromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iChange);
+	void setPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iValue);
+
+	int getPropertyValue(PropertyTypes eProperty) const;
+#endif // OUTBREAKS_AND_AFFLICTIONS
+
 	int getUnitCombatProductionModifier(UnitCombatTypes eIndex) const;
 	void changeUnitCombatProductionModifier(UnitCombatTypes eIndex, int iChange);
 	int getUnitCombatRepelModifierTotal(UnitCombatTypes eIndex) const;
@@ -526,10 +429,6 @@ public:
 	void changeUnitCombatRepelAgainstModifierTotal(UnitCombatTypes eIndex, int iChange);
 	int getUnitCombatDefenseAgainstModifierTotal(UnitCombatTypes eIndex) const;
 	void changeUnitCombatDefenseAgainstModifierTotal(UnitCombatTypes eIndex, int iChange);
-
-	int getPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction) const;
-	void changePromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iChange);
-	void setPromotionLineAfflictionAttackCommunicability(PromotionLineTypes eAffliction, int iValue);
 
 #ifdef STRENGTH_IN_NUMBERS
 	int getTotalFrontSupportPercentModifier() const;
@@ -542,7 +441,7 @@ public:
 	void changeTotalLongRangeSupportPercentModifier(int iChange);
 	int getTotalFlankSupportPercentModifier() const;
 	void changeTotalFlankSupportPercentModifier(int iChange);
-#endif
+#endif // STRENGTH_IN_NUMBERS
 
 	int getUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex) const;
 	void changeUnitCombatOngoingTrainingTimeCount(UnitCombatTypes eIndex, int iChange);
@@ -557,7 +456,7 @@ public:
 
 	//TB Combat Mods (Buildings) end
 	//TB Traits begin
-	int getModifiedBaseYieldRate(YieldTypes eIndex) const;
+	int getBaseYieldRate(YieldTypes eIndex) const;
 	//TB Traits end
 	bool isQuarantined() const;
 	int getQuarantinedCount() const;
@@ -603,7 +502,7 @@ public:
 	void setGameTurnAcquired(int iNewValue);
 
 	int getPopulation() const;
-	void setPopulation(int iNewValue);
+	void setPopulation(int iNewValue, bool bNormal = true);
 	void changePopulation(int iChange);
 
 	int getRealPopulation() const;
@@ -631,9 +530,9 @@ public:
 	CvProperties* getProperties();
 	const CvProperties* getPropertiesConst() const;
 
-	int getAdditionalGreatPeopleRateByBuilding(BuildingTypes eBuilding);
-	int getAdditionalBaseGreatPeopleRateByBuilding(BuildingTypes eBuilding);
-	int getAdditionalGreatPeopleRateModifierByBuilding(BuildingTypes eBuilding);
+	int getAdditionalGreatPeopleRateByBuilding(BuildingTypes eBuilding) const;
+	int getAdditionalBaseGreatPeopleRateByBuilding(BuildingTypes eBuilding) const;
+	int getAdditionalGreatPeopleRateModifierByBuilding(BuildingTypes eBuilding) const;
 
 	int getAdditionalGreatPeopleRateBySpecialist(SpecialistTypes eSpecialist, int iChange) const;
 	int getAdditionalBaseGreatPeopleRateBySpecialist(SpecialistTypes eSpecialist, int iChange) const;
@@ -726,10 +625,6 @@ public:
 	void changeBuildingGoodHealth(int iChange);
 	void changeBuildingBadHealth(int iChange);
 
-	int getPowerGoodHealth() const;
-	int getPowerBadHealth() const;
-	void updatePowerHealth();
-
 	int getBonusGoodHealth() const;
 	int getBonusBadHealth() const;
 	void changeBonusGoodHealth(int iChange);
@@ -755,15 +650,15 @@ public:
 	int getAdditionalHealthByPlayerNoUnhealthyPopulation(int iExtraPop = 0, int iIgnoreNoUnhealthyPopulationCount = 0) const;
 	int getAdditionalHealthByPlayerBuildingOnlyHealthy(int iIgnoreBuildingOnlyHealthyCount = 0) const;
 
-	int getAdditionalHappinessByBuilding(BuildingTypes eBuilding);
-	int getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad, int& iAngryPop);
+	int getAdditionalHappinessByBuilding(BuildingTypes eBuilding) const;
+	int getAdditionalHappinessByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad, int& iAngryPop) const;
 
 	int getExtraBuildingGoodHealth() const;
 	int getExtraBuildingBadHealth() const;
 	void updateExtraBuildingHealth(bool bLimited = false);
 
-	int getAdditionalHealthByBuilding(BuildingTypes eBuilding);
-	int getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad, int& iSpoiledFood, int& iStarvation);
+	int getAdditionalHealthByBuilding(BuildingTypes eBuilding) const;
+	int getAdditionalHealthByBuilding(BuildingTypes eBuilding, int& iGood, int& iBad, int& iSpoiledFood, int& iStarvation) const;
 
 	int getFeatureGoodHappiness() const;
 	int getFeatureBadHappiness() const;
@@ -827,9 +722,11 @@ public:
 	int getMaxFoodKeptPercent() const;
 	void changeMaxFoodKeptPercent(int iChange, bool bAdd);
 
+	int getMaxProductionOverflow() const;
+
 	int getOverflowProduction() const;
 	void setOverflowProduction(int iNewValue);
-	void changeOverflowProduction(int iChange, int iProductionModifier);
+	void changeOverflowProduction(int iChange);
 
 	int getFeatureProduction() const;
 	void setFeatureProduction(int iNewValue);
@@ -885,9 +782,7 @@ public:
 	int getPowerCount() const;
 	bool isPower() const;
 	bool isAreaCleanPower() const;
-	int getDirtyPowerCount() const;
-	bool isDirtyPower() const;
-	void changePowerCount(int iChange, bool bDirty);
+	void changePowerCount(int iChange);
 
 	int getDefenseDamage() const;
 	void changeDefenseDamage(int iChange);
@@ -913,10 +808,6 @@ public:
 	int getCitySizeBoost() const;
 	void setCitySizeBoost(int iBoost);
 
-	int getMADIncoming() const;
-	void setMADIncoming(int iValue);
-	void changeMADIncoming(int iValue);
-
 	bool isNeverLost() const;
 	void setNeverLost(bool bNewValue);
 
@@ -936,7 +827,7 @@ public:
 	void setCitizensAutomated(bool bNewValue);
 
 	bool isProductionAutomated() const;
-	void setProductionAutomated(bool bNewValue, bool bClear);
+	void setProductionAutomated(bool bNewValue);
 
 	/* allows you to programatically specify a cities walls rather than having them be generated automagically */
 	DllExport bool isWallOverride() const;
@@ -966,26 +857,47 @@ public:
 	void setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups);
 	void updateCultureLevel(bool bUpdatePlotGroups);
 
-	int getSeaPlotYield(YieldTypes eIndex) const;
-	void changeSeaPlotYield(YieldTypes eIndex, int iChange);
-
 	int getRiverPlotYield(YieldTypes eIndex) const;
 	void changeRiverPlotYield(YieldTypes eIndex, int iChange);
 
-	int getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false);
-	int getAdditionalBaseYieldRateByBuilding(YieldTypes eIndex, BuildingTypes eBuilding);
-	int getAdditionalYieldRateModifierByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false) const;
+	int getTerrainYieldChange(const TerrainTypes eTerrain, const YieldTypes eYield) const;
+	void changeTerrainYieldChanges(const TerrainTypes eTerrain, const YieldArray& yields);
 
-	int getAdditionalYieldBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;
-	int getAdditionalBaseYieldRateBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;
+	int getPlotYieldChange(const PlotTypes ePlot, const YieldTypes eYield) const;
+	void changePlotYieldChanges(const PlotTypes ePlot, const YieldArray& yields);
 
-	int getBaseYieldRate(YieldTypes eIndex) const;
+	int getYieldChangeAt(const CvPlot* pPlot, const YieldTypes eYield) const;
+
+	int getBaseYieldRateFromBuilding100(const YieldTypes eIndex, const BuildingTypes eBuilding) const;
+	int getAdditionalYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false) const;
+	int getAdditionalExtraYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding) const;
+	int getAdditionalBaseYieldByBuilding(YieldTypes eIndex, BuildingTypes eBuilding) const;
+	int getAdditionalBaseYieldModifierByBuilding(YieldTypes eIndex, BuildingTypes eBuilding, bool bFilter = false) const;
+
+	int getYieldBySpecialist(YieldTypes eIndex, SpecialistTypes eSpecialist) const;
+
+	int getPlotYield(YieldTypes eIndex) const;
 	int getBaseYieldRateModifier(YieldTypes eIndex, int iExtra = 0) const;
-	int getYieldRate(YieldTypes eIndex) const;
-	void setBaseYieldRate(YieldTypes eIndex, int iNewValue);
-	void changeBaseYieldRate(YieldTypes eIndex, int iChange);
+	int getYieldRate(const YieldTypes eYield) const;
+	int getYieldRate100(const YieldTypes eYield) const;
+	void changePlotYield(YieldTypes eIndex, int iChange);
 
-	int popYield(YieldTypes eIndex) const;
+	// Toffer - ToDo - Change all extra yields to be cached with two decimal accuracy.
+	int getExtraYield(YieldTypes eYield) const;
+	int getExtraYield100(YieldTypes eYield) const;
+	void changeExtraYield(YieldTypes eYield, int iChange);
+	// ! Toffer
+	void changeBuildingExtraYield100(YieldTypes eYield, int iChange);
+	int getBuildingExtraYield100(YieldTypes eYield) const;
+
+	void changeBuildingYieldModifier(YieldTypes eYield, int iChange);
+	int getBuildingYieldModifier(YieldTypes eYield) const;
+
+	void changeBuildingCommerceModifier(CommerceTypes eIndex, int iChange);
+	int getBuildingCommerceModifier(CommerceTypes eIndex) const;
+
+	void onYieldChange();
+
 	int getBaseYieldPerPopRate(YieldTypes eIndex) const;
 	void setBaseYieldPerPopRate(YieldTypes eIndex, int iNewValue);
 	void changeBaseYieldPerPopRate(YieldTypes eIndex, int iChange);
@@ -1025,9 +937,11 @@ public:
 
 	int getCommerceRate(CommerceTypes eIndex) const;
 	int getCommerceRateTimes100(CommerceTypes eIndex) const;
-	int getCommerceFromPercent(CommerceTypes eIndex, int iYieldRate) const;
+	int getCommerceFromPercent(CommerceTypes eIndex) const;
 	int getBaseCommerceRate(CommerceTypes eIndex) const;
 	int getBaseCommerceRateTimes100(CommerceTypes eIndex) const;
+	int getBaseCommerceRateExtra(CommerceTypes eIndex) const;
+	int getCommerceRateAtSliderPercent(CommerceTypes eIndex, int iSliderPercent) const;
 	int getTotalCommerceRateModifier(CommerceTypes eIndex) const;
 	void setCommerceModifierDirty(CommerceTypes eCommerce);
 	void setCommerceDirty(CommerceTypes eCommerce = NO_COMMERCE);
@@ -1037,13 +951,11 @@ public:
 	void changeProductionToCommerceModifier(CommerceTypes eIndex, int iChange);
 
 	int getBuildingCommerce(CommerceTypes eIndex) const;
-	int getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
-	int getOrbitalBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
-	int getAdditionalCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding);
-	int getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding);
-	int getAdditionalBaseCommerceRateByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding);
-	int getAdditionalBaseCommerceRateByBuildingTimes100(CommerceTypes eIndex, BuildingTypes eBuilding);
-	int getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding);
+	int getBuildingCommerce100(CommerceTypes eIndex) const;
+	int getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding, const bool bFull = false) const;
+	int getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
+	int getBaseCommerceRateFromBuilding100(CommerceTypes eIndex, BuildingTypes eBuilding) const;
+	int getAdditionalCommerceRateModifierByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 	void updateBuildingCommerce();
 
 	int getSpecialistCommerce(CommerceTypes eIndex) const;
@@ -1074,6 +986,9 @@ public:
 	int getCommerceHappinessByType(CommerceTypes eIndex) const;
 	int getCommerceHappiness() const;
 	void changeCommerceHappinessPer(CommerceTypes eIndex, int iChange);
+
+	void changeCommercePerPopFromBuildings(const CommerceTypes eIndex, const int iChange);
+	int getCommercePerPopFromBuildings(const CommerceTypes eIndex) const;
 
 	int getDomainFreeExperience(DomainTypes eIndex) const;
 	void changeDomainFreeExperience(DomainTypes eIndex, int iChange);
@@ -1179,6 +1094,7 @@ public:
 	void changeSpecialistCount(SpecialistTypes eIndex, int iChange);
 	void alterSpecialistCount(SpecialistTypes eIndex, int iChange);
 
+	int getMaxSpecialistCount() const;
 	int getMaxSpecialistCount(SpecialistTypes eIndex) const;
 	bool isSpecialistValid(SpecialistTypes eIndex, int iExtra = 0) const;
 	void changeMaxSpecialistCount(SpecialistTypes eIndex, int iChange);
@@ -1186,7 +1102,6 @@ public:
 	int getForceSpecialistCount(SpecialistTypes eIndex) const;
 	bool isSpecialistForced() const;
 	void setForceSpecialistCount(SpecialistTypes eIndex, int iNewValue);
-	void changeForceSpecialistCount(SpecialistTypes eIndex, int iChange);
 
 	int getFreeSpecialistCount(SpecialistTypes eIndex) const;
 	void setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue);
@@ -1252,6 +1167,7 @@ public:
 	int getTradeRoutes() const;
 	void clearTradeRoutes();
 	void updateTradeRoutes();
+	void resizeTradeRouteVector();
 
 	void clearOrderQueue();
 	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce = false, CvPlot* deliveryDestination = NULL, UnitAITypes contractedAIType = NO_UNITAI, uint8_t contractFlags = 0);
@@ -1277,12 +1193,12 @@ public:
 	// Fill the kEffectNames array with references to effects in the CIV4EffectInfos.xml to have a
 	// city play a given set of effects. This is called whenever the interface updates the city billboard
 	// or when the zoom level changes
-	DllExport void getVisibleEffects(ZoomLevelTypes eCurrentZoom, std::vector<const TCHAR*>& kEffectNames);
+	DllExport void getVisibleEffects(ZoomLevelTypes eCurrentZoom, std::vector<const char*>& kEffectNames);
 
 
 	// Billboard appearance controls
 	DllExport void getCityBillboardSizeIconColors(NiColorA& kDotColor, NiColorA& kTextColor) const;
-	DllExport const TCHAR* getCityBillboardProductionIcon() const;
+	DllExport const char* getCityBillboardProductionIcon() const;
 	DllExport bool getFoodBarPercentages(std::vector<float>& afPercentages) const;
 	DllExport bool getProductionBarPercentages(std::vector<float>& afPercentages) const;
 	DllExport NiColorA getBarBackgroundColor() const;
@@ -1316,8 +1232,6 @@ public:
 	void changeNoBonusCount(BonusTypes eBonus, int iChange);
 	int getNoBonusCount(BonusTypes eBonus) const;
 	bool isNoBonus(BonusTypes eBonus) const;
-
-	bool isAutoRaze() const;
 
 	DllExport int getMusicScriptId() const;
 	DllExport int getSoundscapeScriptId() const;
@@ -1369,27 +1283,17 @@ public:
 	bool isProductionWonder() const;
 	void updateYieldRate(BuildingTypes eBuilding, YieldTypes eYield, int iChange);
 	void updateMaxSpecialistCount(BuildingTypes eBuilding, SpecialistTypes eSpecialist, int iChange);
-	void updateCommerceModifierByBuilding(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange);
-	void updateCommerceRateByBuilding(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange);
-	void updateYieldModifierByBuilding(BuildingTypes eBuilding, YieldTypes eYield, int iChange);
 	//int getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const;
 	//void changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange);
 	int calculateBonusDefense() const;
 
 	void setCivilizationType(int iCiv);
 
-	int getBuildingCommerceModifier(BuildingTypes eBuilding, CommerceTypes eCommerce) const;
-	int getBuildingYieldModifier(BuildingTypes eBuilding, YieldTypes eYield) const;
-
-	int calculateBuildingCommerceModifier(CommerceTypes eCommerce) const;
-	int calculateBuildingYieldModifier(YieldTypes eYield) const;
 	int getRevTrend() const;
 	bool isInquisitionConditions() const;
 	int calculateCorporationHealth() const;
 	int calculateCorporationHappiness() const;
-	int getExtraYieldTurns() const;
-	void changeExtraYieldTurns (int iChange);
-	void setExtraYieldTurns(int iNewVal);
+
 	BuildTypes findChopBuild(FeatureTypes eFeature) const;
 	CultureLevelTypes getOccupationCultureLevel() const;
 	void setOccupationCultureLevel(CultureLevelTypes eNewValue);
@@ -1445,14 +1349,8 @@ public:
 	int getNumUnitFullHeal() const;
 	void changeNumUnitFullHeal(int iChange);
 
-	int getCommerceAttacks(CommerceTypes eIndex) const;
-	void changeCommerceAttacks(CommerceTypes eIndex, int iChange);
-	int getMaxCommerceAttacks(CommerceTypes eIndex) const;
-	void changeMaxCommerceAttacks(CommerceTypes eIndex, int iChange);
-
 	void doAttack();
 	void doHeal();
-	void decayCommerce();
 
 	void doCorporation();
 	int getCorporationInfluence(CorporationTypes eCorporation) const;
@@ -1476,13 +1374,13 @@ public:
 	int getMinimumDefenseLevel() const;
 	void setMinimumDefenseLevel(int iNewValue);
 
-	SpecialistTypes getBestSpecialist(int iExtra);
+	SpecialistTypes getBestSpecialist(int iExtra) const;
 
 	int getNumPopulationEmployed() const;
 	void setNumPopulationEmployed(int iNewValue);
 	void changeNumPopulationEmployed(int iNewValue);
 
-	void removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeopleRate, int& iHappiness, int& iHealthiness, int*& aiYields, int*& aiCommerces);
+	void removeWorstCitizenActualEffects(int iNumCitizens, int& iGreatPeopleRate, int& iHappiness, int& iHealthiness, int*& aiYields, int*& aiCommerces) const;
 
 	void changeHealthPercentPerPopulation(int iChange);
 	int calculatePopulationHealth() const;
@@ -1496,13 +1394,21 @@ public:
 	int getBonusCommercePercentChanges(CommerceTypes eIndex, BuildingTypes eBuilding) const;
 	void changeBonusCommercePercentChanges(CommerceTypes eIndex, int iChange);
 
+	void changeBuildingCommerceTechChange(CommerceTypes eIndex, int iChange);
+	int getBuildingCommerceTechChange(CommerceTypes eIndex) const;
+	int getBuildingCommerceTechChange(CommerceTypes eIndex, TechTypes eTech) const;
+	int getBuildingCommerceTechModifier(CommerceTypes eYield, TechTypes eTech) const;
+
+	int getBuildingYieldTechChange(YieldTypes eYield, TechTypes eTech) const;
+	int getBuildingYieldTechModifier(YieldTypes eYield, TechTypes eTech) const;
+
 	bool isAutomatedCanBuild(BuildTypes eBuild) const;
 	void setAutomatedCanBuild(BuildTypes eBuild, bool bNewValue);
 
 	virtual bool AI_isEmphasizeAvoidAngryCitizens() const = 0;
 	virtual bool AI_isEmphasizeAvoidUnhealthyCitizens() const = 0;
 
-	virtual int AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false) = 0;
+	virtual int AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false) const = 0;
 
 	virtual int AI_getMilitaryProductionRateRank() const = 0;
 	virtual int AI_getNavalMilitaryProductionRateRank() const = 0;
@@ -1526,7 +1432,7 @@ public:
 	virtual void AI_assignWorkingPlots() = 0;
 	virtual void AI_updateAssignWork() = 0;
 	virtual bool AI_avoidGrowth() = 0;
-	virtual int AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove) = 0;
+	virtual int AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove) const = 0;
 	virtual void AI_chooseProduction() = 0;
 	//	KOSHLING - initialisation called on every city prior to performing unit mission allocation logic
 	//	This allows caches that will remian valid for the procesign of teh current turn's units to be cleared
@@ -1541,18 +1447,18 @@ public:
 	// Represents a building with associated score as measured by the AI
 	struct ScoredBuilding
 	{
-		ScoredBuilding(BuildingTypes building = NO_BUILDING, int score = -1) : building(building), score(score) {}
+		ScoredBuilding(BuildingTypes building = NO_BUILDING, int64_t score = -1) : building(building), score(score) {}
 		bool operator<(const ScoredBuilding& other) const { return score < other.score; }
 
 		BuildingTypes building;
-		int score;
+		int64_t score;
 
 		// Get some interesting stats about a set of scored buildings
-		static void averageMinMax(const std::vector<ScoredBuilding>& scores, float& averageScore, int& minScore, int& maxScore)
+		static void averageMinMax(const std::vector<ScoredBuilding>& scores, float& averageScore, int64_t& minScore, int64_t& maxScore)
 		{
 			averageScore = 0;
-			minScore = MAX_INT;
-			maxScore = -MAX_INT;
+			minScore = LLONG_MAX;
+			maxScore = LLONG_MIN;
 			foreach_(const ScoredBuilding& itr, scores)
 			{
 				averageScore = averageScore + itr.score / scores.size();
@@ -1563,8 +1469,8 @@ public:
 	};
 
 	// Evaluate a predefined list of buildings based on the specified criteria, returning a sorted list of the buildings and their scores
-	virtual bool AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& scoredBuildings, const std::vector<BuildingTypes>& possibleBuildings, int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false, PropertyTypes eProperty = NO_PROPERTY) = 0;
-	virtual int AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags = 0, bool bForTech = false) = 0;
+	virtual bool AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& scoredBuildings, const std::vector<BuildingTypes>& possibleBuildings, int iFocusFlags, int iMaxTurns, int iMinThreshold, bool bAsync, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false, PropertyTypes eProperty = NO_PROPERTY) = 0;
+	virtual int AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags = 0, bool bForTech = false, bool bDebug = false) = 0;
 	virtual int AI_projectValue(ProjectTypes eProject) const = 0;
 	virtual int AI_neededSeaWorkers() const = 0;
 	virtual bool AI_isDefended(int iExtra = 0, bool bAllowAnyDefenders = true) = 0;
@@ -1590,10 +1496,10 @@ public:
 	virtual int AI_getBestBuildValue(int iIndex) const = 0;
 	virtual void AI_markBestBuildValuesStale() = 0;
 
-	virtual int AI_getTargetSize() = 0;
+	virtual int AI_getTargetSize() const = 0;
 	virtual int AI_getGoodTileCount() const = 0;
-	virtual int AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange) = 0;
-	virtual void AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange ) = 0;
+	virtual int AI_getImprovementValue(const CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange) const = 0;
+	virtual void AI_getYieldMultipliers(int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange) const = 0;
 
 	virtual int AI_totalBestBuildValue(const CvArea* pArea) const = 0;
 	virtual int AI_countBestBuilds(const CvArea* pArea) const = 0;
@@ -1712,8 +1618,6 @@ protected:
 	int m_iFeatureBadHealth;
 	int m_iBuildingGoodHealth;
 	int m_iBuildingBadHealth;
-	int m_iPowerGoodHealth;
-	int m_iPowerBadHealth;
 	int m_iBonusGoodHealth;
 	int m_iBonusBadHealth;
 	int m_iHurryAngerTimer;
@@ -1747,7 +1651,6 @@ protected:
 	int m_iOverflowProduction;
 	int m_iFeatureProduction;
 
-	int m_iLostProductionBase;
 	int m_iSpecialistGoodHealth;
 	int m_iSpecialistBadHealth;
 	int m_iSpecialistHappiness;
@@ -1761,7 +1664,6 @@ protected:
 
 	bool m_bBuiltFoodProducedUnit;
 	bool m_bResetTechs;
-	int m_iExtraYieldTurns;
 	int m_iLineOfSight;
 	int m_iLandmarkAngerTimer;
 	int m_iInvasionChance;
@@ -1784,6 +1686,8 @@ protected:
 
 	int* m_aiBonusCommerceRateModifier;
 	int* m_aiBonusCommercePercentChanges;
+	int* m_aiBuildingCommerceTechChange;
+
 	mutable int* m_cachedPropertyNeeds;
 	bool* m_pabHadVicinityBonus;
 	bool* m_pabHadRawVicinityBonus;
@@ -1794,12 +1698,7 @@ protected:
 
 	bool* m_pabReligiouslyDisabledBuilding;
 	int* m_paiUnitCombatExtraStrength;
-	int* m_aiCommerceAttacks;
-	int* m_aiMaxCommerceAttacks;
 	bool* m_pabAutomatedCanBuild;
-
-	std::vector<BuildingCommerceModifier> m_aBuildingCommerceModifier;
-	std::vector<BuildingYieldModifier> m_aBuildingYieldModifier;
 
 	std::vector<PropertySpawns> m_aPropertySpawns;
 
@@ -1809,6 +1708,9 @@ protected:
 	std::map<short, int> m_bonusDefenseChanges;
 	std::map<short, int> m_buildingProductionMod;
 	std::map<short, int> m_unitProductionMod;
+
+	std::map<short, YieldArray> m_terrainYieldChanges;
+	std::map<short, YieldArray> m_plotYieldChanges;
 
 	CultureLevelTypes m_eOccupationCultureLevel;
 
@@ -1827,7 +1729,6 @@ protected:
 	int m_iNukeModifier;
 	int m_iFreeSpecialist;
 	int m_iPowerCount;
-	int m_iDirtyPowerCount;
 	int m_iDefenseDamage;
 	int m_iLastDefenseDamage;
 	int m_iOccupationTimer;
@@ -1839,9 +1740,7 @@ protected:
 	int m_iSpecialistInvestigation;
 	// Mutable as its used in caching
 	mutable int m_icachedPropertyNeedsTurn;
-	// < M.A.D. Nukes Start >
-	int m_iMADIncoming;
-	// < M.A.D. Nukes Start >
+
 	int m_iQuarantinedCount;
 
 	bool m_bNeverLost;
@@ -1866,6 +1765,7 @@ protected:
 	int m_iRevolutionIndex;
 	int m_iLocalRevIndex;
 	int m_iRevIndexAverage;
+	int m_iRevIndexDistanceMod;
 	int m_iRevolutionCounter;
 	int m_iReinforcementCounter;
 
@@ -1921,9 +1821,12 @@ protected:
 	int m_iExtraInsidiousness;
 	int m_iExtraInvestigation;
 
-	int* m_aiSeaPlotYield;
 	int* m_aiRiverPlotYield;
 	int* m_aiBaseYieldRate;
+	int* m_buildingExtraYield100;
+	int* m_buildingYieldMod;
+	int* m_buildingCommerceMod;
+	int* m_aiExtraYield;
 	int* m_aiBaseYieldPerPopRate;
 	int* m_aiYieldRateModifier;
 	int* m_aiPowerYieldRateModifier;
@@ -1941,6 +1844,7 @@ protected:
 	int* m_aiCorporationCommerce;
 	int* m_aiCommerceRateModifier;
 	int* m_aiCommerceHappinessPer;
+	int* m_commercePerPopFromBuildings;
 	int* m_aiDomainFreeExperience;
 	int* m_aiDomainProductionModifier;
 	int* m_aiCulture;
@@ -2030,23 +1934,21 @@ protected:
 	bool doCheckProduction();
 	void doPromotion();
 
-	int getExtraProductionDifference(int iExtra, UnitTypes eUnit) const;
-	int getExtraProductionDifference(int iExtra, BuildingTypes eBuilding) const;
-	int getExtraProductionDifference(int iExtra, ProjectTypes eProject) const;
-	int getExtraProductionDifference(int iExtra, int iModifier) const;
-	int getHurryCostModifier(UnitTypes eUnit, bool bIgnoreNew) const;
-	int getHurryCostModifier(BuildingTypes eBuilding, bool bIgnoreNew) const;
-	int getHurryCostModifier(int iBaseModifier, int iProduction, bool bIgnoreNew) const;
-	int getHurryCost(bool bExtra, UnitTypes eUnit, bool bIgnoreNew) const;
-	int getHurryCost(bool bExtra, BuildingTypes eBuilding, bool bIgnoreNew) const;
-	int getHurryCost(bool bExtra, int iProductionLeft, int iHurryModifier, int iModifier) const;
+	int getHurryCostModifier(UnitTypes eUnit) const;
+	int getHurryCostModifier(BuildingTypes eBuilding) const;
+	int getHurryCostModifier(int iBaseModifier, int iExtraMod) const;
+	int getHurryCost(UnitTypes eUnit) const;
+	int getHurryCost(BuildingTypes eBuilding) const;
+	int getHurryCost(int iProductionLeft, int iHurryModifier) const;
 	int getHurryPopulation(HurryTypes eHurry, int iHurryCost) const;
-	bool canHurryUnit(HurryTypes eHurry, UnitTypes eUnit, bool bIgnoreNew) const;
-	bool canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding, bool bIgnoreNew) const;
+	bool canHurryUnit(HurryTypes eHurry, UnitTypes eUnit) const;
+	bool canHurryBuilding(HurryTypes eHurry, BuildingTypes eBuilding) const;
 	void recalculateMaxFoodKeptPercent();
 	void recalculatePopulationgrowthratepercentage();
 	virtual bool AI_addBestCitizen(bool bWorkers, bool bSpecialists, int* piBestPlot = NULL, SpecialistTypes* peBestSpecialist = NULL) = 0;
 	virtual bool AI_removeWorstCitizen(SpecialistTypes eIgnoreSpecialist = NO_SPECIALIST) = 0;
+
+	bool isPlotTrainable(UnitTypes eUnit, bool bTestVisible) const;
 
 	//TB Building tags
 	void setExtraLocalCaptureProbabilityModifier(int iValue);
@@ -2098,7 +2000,7 @@ public:
 	int getPrioritorizedSpecialist() const;
 	void setPrioritorizedSpecialist(SpecialistTypes eSpecialist);
 
-	bool isSpecialistBanned(SpecialistTypes eSpecialist);
+	bool isSpecialistBanned(SpecialistTypes eSpecialist) const;
 	void banSpecialist(SpecialistTypes eSpecialist);
 	void removeSpecialistBan(SpecialistTypes eSpecialist);
 
@@ -2116,15 +2018,10 @@ public:
 #endif
 #endif
 
-	//	Koshling - add cache of trainability of units which will be
-	//	populated prior to calculating the city's build choices and
-	//	then invalidated so it is only used within that scope
-#ifdef CAN_TRAIN_CACHING
 public:
-//Team Project (3)
 	int getExtraLocalCaptureProbabilityModifier() const;
 	int getExtraLocalCaptureResistanceModifier() const;
-//Team Project (1)
+
 	void updateTechHappinessandHealth();
 
 	int getExtraLocalDynamicDefense() const;
@@ -2195,7 +2092,6 @@ private:
 	mutable stdext::hash_map<UnitTypes,UnitTypes> m_eCachedAllUpgradesResultsRoot;
 	mutable bool m_canTrainCachePopulated;
 	mutable bool m_canTrainCacheDirty;
-	mutable int m_cachedBuildingYieldModifers[NUM_YIELD_TYPES];
 	bool m_bPlotWorkingMasked;
 	mutable int m_totalCommerceRateModifier[NUM_COMMERCE_TYPES];
 
@@ -2209,6 +2105,10 @@ private:
 	mutable std::map<int,bool>*	m_bCanConstruct;
 
 
+	//	Koshling - add cache of trainability of units which will be
+	//	populated prior to calculating the city's build choices and
+	//	then invalidated so it is only used within that scope
+#ifdef CAN_TRAIN_CACHING
 public:
 	void populateCanTrainCache(bool bUnconditional = true) const;
 	void clearCanTrainCache() const;
@@ -2228,13 +2128,13 @@ public:
 		DECLARE_MAP_FUNCTOR(CvCity, void, clearCanTrainCache);
 		DECLARE_MAP_FUNCTOR(CvCity, void, checkReligiousDisablingAllBuildings);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateTechHappinessandHealth);
-		DECLARE_MAP_FUNCTOR(CvCity, void, updatePowerHealth);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateExtraSpecialistYield);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateExtraSpecialistCommerce);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateReligionCommerce);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateBuildingCommerce);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateCorporation);
 		DECLARE_MAP_FUNCTOR(CvCity, void, updateYield);
+		DECLARE_MAP_FUNCTOR(CvCity, void, onYieldChange);
 		DECLARE_MAP_FUNCTOR(CvCity, void, clearTradeRoutes);
 		DECLARE_MAP_FUNCTOR(CvCity, void, setBuildingListInvalid);
 		DECLARE_MAP_FUNCTOR(CvCity, void, clearModifierTotals);
@@ -2272,7 +2172,6 @@ public:
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeAreaBuildingCount, BuildingTypes, int);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeFreeSpecialistCount, SpecialistTypes, int);
 		DECLARE_MAP_FUNCTOR_2(CvCity, void, processVoteSourceBonus, VoteSourceTypes, bool);
-		DECLARE_MAP_FUNCTOR_2(CvCity, void, changeBaseYieldRate, YieldTypes, int);
 
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isCapital);
 		DECLARE_MAP_FUNCTOR_CONST(CvCity, bool, isNoUnhappiness);
@@ -2305,8 +2204,8 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getCommerceRateTimes100, CommerceTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getBaseCommerceRateTimes100, CommerceTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getCultureTimes100, PlayerTypes);
-		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getYieldRate, YieldTypes);
-		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getModifiedBaseYieldRate, YieldTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getYieldRate100, YieldTypes);
+		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, int, getBaseYieldRate, YieldTypes);
 		DECLARE_MAP_FUNCTOR_CONST_1(CvCity, const CvPlotGroup*, plotGroup, PlayerTypes);
 
 		DECLARE_MAP_FUNCTOR_CONST_2(CvCity, bool, isRevealed, TeamTypes, bool);

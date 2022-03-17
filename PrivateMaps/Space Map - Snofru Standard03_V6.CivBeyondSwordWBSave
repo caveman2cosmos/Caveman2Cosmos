@@ -88093,7 +88093,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=37
-	BonusType=BONUS_PEYOTE					   
+	BonusType=BONUS_PEYOTE
 	FeatureType=FEATURE_CAVES, FeatureVariety=0
 	TerrainType=TERRAIN_DUNES
 	PlotType=2

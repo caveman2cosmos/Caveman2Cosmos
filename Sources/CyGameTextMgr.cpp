@@ -1,6 +1,6 @@
 //
-// Python wrapper class for CyGameTextMgr 
-// 
+// Python wrapper class for CyGameTextMgr
+//
 #include "CvGameCoreDLL.h"
 #include "CvGameTextMgr.h"
 #include "CyCity.h"
@@ -8,7 +8,7 @@
 #include "CyGameTextMgr.h"
 #include "CyUnit.h"
 
-CyGameTextMgr::CyGameTextMgr() : 
+CyGameTextMgr::CyGameTextMgr() :
 m_pGameTextMgr(NULL)
 {
 	m_pGameTextMgr = &CvGameTextMgr::GetInstance();
@@ -101,6 +101,13 @@ std::wstring CyGameTextMgr::getPromotionHelp(int iPromotion, bool bCivilopediaTe
 {
 	CvWStringBuffer szBuffer;
 	GAMETEXT.setPromotionHelp(szBuffer, (PromotionTypes)iPromotion, bCivilopediaText);
+	return szBuffer.getCString();
+}
+
+std::wstring CyGameTextMgr::getUnitCombatHelp(int iUnitCombat, bool bCivilopediaText)
+{
+	CvWStringBuffer szBuffer;
+	GAMETEXT.setUnitCombatHelp(szBuffer, (UnitCombatTypes)iUnitCombat, bCivilopediaText);
 	return szBuffer.getCString();
 }
 
@@ -296,5 +303,12 @@ std::wstring CyGameTextMgr::getDefenseHelp(CyCity *pCity)
 {
 	CvWStringBuffer szBuffer;
 	GAMETEXT.getDefenseHelp(szBuffer, *pCity->getCity());
+	return szBuffer.getCString();
+}
+
+std::wstring CyGameTextMgr::getFlagHelp()
+{
+	CvWStringBuffer szBuffer;
+	GAMETEXT.setFlagHelp(szBuffer);
 	return szBuffer.getCString();
 }

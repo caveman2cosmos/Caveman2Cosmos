@@ -3,9 +3,10 @@
 #ifndef CvContractBroker_h__
 #define CvContractBroker_h__
 
+#include "CvUnitSelectionCriteria.h"
+
 class CvCity;
 class CvUnit;
-class CvUnitSelectionCriteria;
 
 //	Define this to have cities advertise units needs and tender for the business of building them
 #define	USE_UNIT_TENDERING
@@ -118,7 +119,7 @@ public:
 	int		numRequestsOutstanding(UnitAITypes eUnitAI, bool bAtCityOnly = true, const CvPlot* pPlot = NULL) const;
 	//	Make a contract
 	//	This will attempt to make the best contracts between currently
-	//	advertising units and work, then search the resulting set for the work 
+	//	advertising units and work, then search the resulting set for the work
 	//	of the requested unit
 	//	returns true if a contract is made along with the details of what to do
 	bool	makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*& pJoinUnit, bool bThisPlotOnly);

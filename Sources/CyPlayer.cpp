@@ -7,6 +7,8 @@
 #include "CvPopupInfo.h"
 #include "CvSelectionGroup.h"
 #include "CvUnit.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyPlayer.h"
@@ -15,7 +17,7 @@
 #include "CyUnit.h"
 
 //
-// Python wrapper class for CvPlayer 
+// Python wrapper class for CvPlayer
 //
 
 CyPlayer::CyPlayer() : m_pPlayer(NULL) {}
@@ -98,7 +100,7 @@ CyPlot* CyPlayer::findStartingPlot(bool bRandomize) const
 	return new CyPlot(m_pPlayer->findStartingPlot(bRandomize));
 }
 
-CyCity* CyPlayer::initCity(int x, int y) 
+CyCity* CyPlayer::initCity(int x, int y)
 {
 	return new CyCity(m_pPlayer->initCity(x, y, true, true));
 }
@@ -133,7 +135,8 @@ CyUnit* CyPlayer::initUnit(int /*UnitTypes*/ iIndex, int iX, int iY, UnitAITypes
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
-	return new CyUnit(m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark")));
+	CvUnit* unit = m_pPlayer->initUnit((UnitTypes) iIndex, iX, iY, eUnitAI, eFacingDirection, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+	return unit ? new CyUnit(unit) : NULL;
 }
 
 void CyPlayer::killUnits()
@@ -154,11 +157,6 @@ bool CyPlayer::isHuman() const
 bool CyPlayer::isHumanDisabled() const
 {
 	return m_pPlayer->isHumanDisabled();
-}
-
-bool CyPlayer::isBarbarian() const
-{
-	return m_pPlayer->isBarbarian();
 }
 
 bool CyPlayer::isNPC() const
@@ -291,6 +289,11 @@ bool CyPlayer::hasBuilding(int /*BuildingTypes*/ eBuilding) const
 	return m_pPlayer->hasBuilding((BuildingTypes) eBuilding);
 }
 
+int CyPlayer::getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes ePrereqBuilding, int iExtra) const
+{
+	return m_pPlayer->getBuildingPrereqBuilding(eBuilding, ePrereqBuilding, iExtra);
+}
+
 int CyPlayer::countNumCitiesConnectedToCapital() const
 {
 	return m_pPlayer->countNumCitiesConnectedToCapital();
@@ -361,7 +364,7 @@ bool CyPlayer::canFound(int iX, int iY) const
 	return m_pPlayer->canFound(iX, iY);
 }
 
-void CyPlayer::found(int x, int y) 
+void CyPlayer::found(int x, int y)
 {
 	m_pPlayer->found(x,y);
 }
@@ -381,11 +384,6 @@ bool CyPlayer::canCreate(int /*ProjectTypes*/ eProject, bool bContinue, bool bTe
 	return m_pPlayer->canCreate((ProjectTypes)eProject, bContinue, bTestVisible);
 }
 
-bool CyPlayer::canMaintain(int /*ProcessTypes*/ eProcess, bool bContinue) const
-{
-	return m_pPlayer->canMaintain((ProcessTypes)eProcess, bContinue);
-}
-
 int CyPlayer::getUnitProductionNeeded(int /*UnitTypes*/ iIndex) const
 {
 	return m_pPlayer->getProductionNeeded((UnitTypes) iIndex);
@@ -399,11 +397,6 @@ int CyPlayer::getBuildingProductionNeeded(int /*BuildingTypes*/ iIndex) const
 int CyPlayer::getProjectProductionNeeded(int /*ProjectTypes*/ iIndex) const
 {
 	return m_pPlayer->getProductionNeeded((ProjectTypes)iIndex);
-}
-
-bool CyPlayer::canBuild(const CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra, bool bTestVisible) const
-{
-	return m_pPlayer->canBuild(pPlot->getPlot(), (BuildTypes)eBuild, bTestEra, bTestVisible);
 }
 
 int /*RouteTypes*/ CyPlayer::getBestRoute(const CyPlot* pPlot) const
@@ -526,9 +519,9 @@ bool CyPlayer::canDoCivics(int /*CivicTypes*/ eCivic) const
 	return m_pPlayer->canDoCivics((CivicTypes)eCivic);
 }
 
-bool CyPlayer::canRevolution(int /*CivicTypes*/ paeNewCivics) const
+bool CyPlayer::canRevolution() const
 {
-	return m_pPlayer->canRevolution((CivicTypes*)paeNewCivics);
+	return m_pPlayer->canRevolution(NULL);
 }
 
 bool CyPlayer::canChangeReligion() const
@@ -561,14 +554,11 @@ bool CyPlayer::hasHeadquarters(int /*CorporationTypes*/ eCorporation) const
 	return m_pPlayer->hasHeadquarters((CorporationTypes)eCorporation);
 }
 
-int CyPlayer::getCivicAnarchyLength(boost::python::list& /*CivicTypes**/ paeNewCivics) const
+int CyPlayer::getCivicAnarchyLength(const python::list& /*CivicTypes*/ lNewCivics) const
 {
-	int* pCivics = NULL;
-	gDLL->getPythonIFace()->putSeqInArray(paeNewCivics.ptr() /*src*/, &pCivics /*dst*/);
-
-	const int iRet = m_pPlayer->getCivicAnarchyLength((CivicTypes*)pCivics);
-	delete [] pCivics;
-	return iRet;
+	std::vector<CivicTypes> v;
+	python::container_utils::extend_container(v, lNewCivics);
+	return m_pPlayer->getCivicAnarchyLength(&v[0]);
 }
 
 int CyPlayer::getReligionAnarchyLength() const
@@ -831,6 +821,11 @@ int CyPlayer::getRevIdxNational() const
 	return m_pPlayer->getRevIdxNational();
 }
 
+int CyPlayer::getRevIdxDistanceModifier() const
+{
+	return m_pPlayer->getRevIdxDistanceModifier();
+}
+
 bool CyPlayer::canFoundReligion() const
 {
 	return m_pPlayer->canFoundReligion();
@@ -1046,11 +1041,6 @@ void CyPlayer::changeTechScore(int iChange)
 	m_pPlayer->changeTechScore(iChange);
 }
 
-bool CyPlayer::isMADNukesEnabled() const
-{
-	return m_pPlayer->isEnabledMAD();
-}
-
 bool CyPlayer::isStrike() const
 {
 	return m_pPlayer->isStrike();
@@ -1134,11 +1124,6 @@ int CyPlayer::getPlayerTextColorB() const
 int CyPlayer::getPlayerTextColorA() const
 {
 	return m_pPlayer->getPlayerTextColorA();
-}
-
-int CyPlayer::getSeaPlotYield(YieldTypes eIndex) const
-{
-	return m_pPlayer->getSeaPlotYield(eIndex);
 }
 
 int CyPlayer::getYieldRateModifier(YieldTypes eIndex) const
@@ -1341,13 +1326,9 @@ int CyPlayer::getSingleCivicUpkeep(int /*CivicTypes*/ eCivic, bool bIgnoreAnarch
 	return m_pPlayer->getSingleCivicUpkeep((CivicTypes) eCivic, bIgnoreAnarchy);
 }
 
-int CyPlayer::getCivicUpkeep(boost::python::list& /*CivicTypes*/ paiCivics, bool bIgnoreAnarchy) const
+int CyPlayer::getCivicUpkeep(bool bIgnoreAnarchy) const
 {
-	int* pCivics = NULL;
-	gDLL->getPythonIFace()->putSeqInArray(paiCivics.ptr() /*src*/, &pCivics /*dst*/);
-	int iRet = m_pPlayer->getCivicUpkeep((CivicTypes*)pCivics, bIgnoreAnarchy);
-	delete [] pCivics;
-	return iRet;
+	return m_pPlayer->getCivicUpkeep(bIgnoreAnarchy);
 }
 
 void CyPlayer::setCivics(int /*CivicOptionTypes*/ eIndex, int /*CivicTypes*/ eNewValue)
@@ -1444,7 +1425,8 @@ int CyPlayer::getNumCities() const
 
 CyCity* CyPlayer::getCity(int iID) const
 {
-	return new CyCity(m_pPlayer->getCity(iID));
+	CvCity* city = m_pPlayer->getCity(iID);
+	return city ? new CyCity(city) : NULL;
 }
 
 python::list CyPlayer::units() const
@@ -1486,7 +1468,8 @@ int CyPlayer::getNumUnits() const
 
 CyUnit* CyPlayer::getUnit(int iID) const
 {
-	return new CyUnit(m_pPlayer->getUnit(iID));
+	CvUnit* unit = m_pPlayer->getUnit(iID);
+	return unit ? new CyUnit(unit) : NULL;
 }
 
 python::list CyPlayer::groups() const
@@ -1739,12 +1722,11 @@ void CyPlayer::setModderOption(int /*ModderOptionTypes*/ eIndex, int iNewValue)
 	m_pPlayer->setModderOption((ModderOptionTypes)eIndex, iNewValue);
 }
 
-void CyPlayer::doRevolution(boost::python::list& /*CivicTypes**/ paeNewCivics, bool bForce)
+void CyPlayer::doRevolution(const python::list& /*CivicTypes*/ lNewCivics, bool bForce)
 {
-	int* pCivics = NULL;
-	gDLL->getPythonIFace()->putSeqInArray(paeNewCivics.ptr() /*src*/, &pCivics /*dst*/);
-	m_pPlayer->revolution((CivicTypes*)pCivics, bForce);
-	delete [] pCivics;
+	std::vector<CivicTypes> v;
+	python::container_utils::extend_container(v, lNewCivics);
+	m_pPlayer->revolution(&v[0], bForce);
 }
 
 bool CyPlayer::isAutomatedCanBuild(int /*BuildTypes*/ eIndex) const
@@ -1760,16 +1742,6 @@ void CyPlayer::setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue)
 int64_t CyPlayer::getCulture() const
 {
 	return m_pPlayer->getCulture();
-}
-
-void CyPlayer::setCulture(int64_t iNewValue)
-{
-	m_pPlayer->setCulture(iNewValue);
-}
-
-void CyPlayer::changeCulture(int64_t iAddValue)
-{
-	m_pPlayer->changeCulture(iAddValue);
 }
 
 CvProperties* CyPlayer::getProperties() const

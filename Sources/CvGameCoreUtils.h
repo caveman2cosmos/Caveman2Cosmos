@@ -8,15 +8,11 @@
 #include "CvMap.h"
 #include "CvGlobals.h"
 
-class CvInfoBase;
-class CvInternalGlobals;
 class CvCity;
-//class CvMap;
 class CvPathGeneratorBase;
-class CvPlot;
+class CvRandom;
 class CvSelectionGroup;
 class CvUnit;
-class CvRandom;
 class FAStarNode;
 class FAStar;
 
@@ -200,7 +196,6 @@ CvPlot* plotCity(int iX, int iY, int iIndex);
 int plotCityXY(int iDX, int iDY);
 int plotCityXY(const CvCity* pCity, const CvPlot* pPlot);
 
-CardinalDirectionTypes getOppositeCardinalDirection(CardinalDirectionTypes eDir);
 DirectionTypes cardinalDirectionToDirection(CardinalDirectionTypes eCard);
 DllExport bool isCardinalDirection(DirectionTypes eDirection);
 DirectionTypes estimateDirection(int iDX, int iDY);
@@ -214,7 +209,6 @@ DllExport CvCity* getCity(IDInfo city);
 DllExport CvUnit* getUnit(IDInfo unit);
 
 bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit);
-bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader);
 
 int getTechScore(TechTypes eTech);
 int getWonderScore(BuildingTypes eWonder);
@@ -323,7 +317,9 @@ bool PUF_isAvailableUnitAITypeGroupie(const CvUnit* pUnit, int iData1, int iData
 bool PUF_isUnitAITypeGroupie(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
 bool PUF_isFiniteRangeAndNotJustProduced(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
 bool PUF_isMissionary(const CvUnit* pUnit, int /*ReligionTypes*/ iData1, int /*PlayerTypes*/ iData2, const CvUnit* pThis = NULL);
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 bool PUF_isAfflicted(const CvUnit* pUnit, int /*PromotionLineTypes*/ iData1, int iData2, const CvUnit* pThis = NULL);
+#endif
 bool PUF_isTunneledEnemy( const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
 bool PUF_isNonTunneledEnemy(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis = NULL);
 
@@ -362,10 +358,11 @@ bool NewPathTurnEndValidityCheckRequired(const CvSelectionGroup* pGroup, int iFl
 
 int baseYieldToSymbol(int iNumYieldTypes, int iYieldStack);
 
-bool isPickableName(const TCHAR* szName);
+bool isPickableName(const char* szName);
 
 DllExport int* shuffle(int iNum, CvRandom& rand);
 void shuffleArray(int* piShuffle, int iNum, CvRandom& rand);
+void shuffle(int* piShuffle, int iNum, CvRandom& rand);
 
 int getTurnMonthForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);
 int getTurnYearForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);
@@ -386,9 +383,31 @@ bool isAdjacentDirection(DirectionTypes eFacingDirection, DirectionTypes eOtherD
 //	Koshling - abstract treaty length from the define int to allow scaling
 int getTreatyLength();
 
-void AddDLLMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, LPCTSTR pszSound = NULL,
+void AddDLLMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, const char* pszSound = NULL,
 		InterfaceMessageTypes eType = MESSAGE_TYPE_INFO, LPCSTR pszIcon = NULL, ColorTypes eFlashColor = NO_COLOR,
 		int iFlashX = -1, int iFlashY = -1, bool bShowOffScreenArrows = false, bool bShowOnScreenArrows = false);
+
+template <class T1, class T2>
+bool isMapCategory(const T1& source1, const T2& source2)
+{
+	const std::vector<MapCategoryTypes>& mapCategories1 = source1.getMapCategories();
+	if (mapCategories1.empty())
+	{
+		return true;
+	}
+	const std::vector<MapCategoryTypes>& mapCategories2 = source2.getMapCategories();
+	if (mapCategories2.empty())
+	{
+		return true;
+	}
+	foreach_(const MapCategoryTypes eMapCategory, mapCategories1)
+	{
+		if (algo::any_of_equal(mapCategories2, eMapCategory))
+			return true;
+	}
+	return false;
+}
+
 
 //	Koshling - better checksum algorithm that can be used when reasonably high quality
 //	hashes are needed
@@ -406,4 +425,7 @@ protected:
 	DWORD sum;
 };
 
+// Toffer
+void makeValueString(CvWString& szValue, const int iValue, const bool bWholeNumberCutDecimals = false, int iNumDecimals = 2);
+// ! Toffer
 #endif

@@ -8,14 +8,9 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
-import CvMapGeneratorUtil
-from CvMapGeneratorUtil import FractalWorld
-from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
-#from CvMapGeneratorUtil import BonusBalancer
+import CvMapGeneratorUtil as MGU
 
-#balancer = BonusBalancer()
+balancer = MGU.BonusBalancer()
 
 '''
 This map script type added by popular demand.
@@ -26,7 +21,7 @@ The function is very similar to what "random" map type would provide in Civ3.
 
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_SHUFFLE_DESCR"
-	
+
 def isAdvancedMap():
 	"This map should show up in simple mode"
 	return 0
@@ -53,7 +48,7 @@ def getNumCustomMapOptionValues(argsList):
 		1:	2
 		}
 	return option_values[iOption]
-	
+
 def getCustomMapOptionDescAt(argsList):
 	[iOption, iSelection] = argsList
 	selection_names = {
@@ -69,7 +64,7 @@ def getCustomMapOptionDescAt(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(selection_names[iOption][iSelection], ()))
 	return translated_text
-	
+
 def getCustomMapOptionDefault(argsList):
 	[iOption] = argsList
 	option_defaults = {
@@ -89,53 +84,50 @@ def isRandomCustomMapOption(argsList):
 def getWrapX():
 	map = CyMap()
 	return (map.getCustomMapOption(0) == 1 or map.getCustomMapOption(0) == 2)
-	
+
 def getWrapY():
 	map = CyMap()
 	return (map.getCustomMapOption(0) == 2)
 
 def normalizeAddExtras():
-	if (CyMap().getCustomMapOption(1) == 1):
+	if CyMap().getCustomMapOption(1) == 1:
 		balancer.normalizeAddExtras()
 	CyPythonMgr().allowDefaultImpl()	# do the rest of the usual normalizeStartingPlots stuff, don't overrride
 
 def addBonusType(argsList):
 	[iBonusType] = argsList
-	gc = CyGlobalContext()
-	type_string = gc.getBonusInfo(iBonusType).getType()
 
-	if (CyMap().getCustomMapOption(1) == 1):
-		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
-			return None # don't place any of this bonus randomly
-		
+	if CyMap().getCustomMapOption(1) == 1 and CyGlobalContext().getBonusInfo(iBonusType).getType() in balancer.resourcesToBalance:
+		return None # don't place any of this bonus randomly
+
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
 def generatePlotTypes():
 	NiTextOut("Setting Plot Types (Python Shuffle) ...")
 	gc = CyGlobalContext()
 	dice = gc.getGame().getMapRand()
-	fractal_world = FractalWorld()
+	fractal_world = MGU.FractalWorld()
 	grainRoll = 1 + dice.get(8, "Fractal Grain - Shuffle PYTHON")
 	if grainRoll > 5: grainRoll -= 5
 	if grainRoll == 2:
 		fractal_world.initFractal(polar = True)
 		return fractal_world.generatePlotTypes(water_percent=75)
-	else:
-		if grainRoll == 5: grainRoll -= 3
-		fractal_world.initFractal(continent_grain = grainRoll, rift_grain = -1, has_center_rift = False, polar = True)
-		return fractal_world.generatePlotTypes()
+
+	if grainRoll == 5: grainRoll -= 3
+	fractal_world.initFractal(continent_grain = grainRoll, rift_grain = -1, has_center_rift = False, polar = True)
+	return fractal_world.generatePlotTypes()
 
 def generateTerrainTypes():
 	NiTextOut("Generating Terrain (Python Shuffle) ...")
-	terraingen = TerrainGenerator()
+	terraingen = MGU.TerrainGenerator()
 	terrainTypes = terraingen.generateTerrain()
 	return terrainTypes
 
 def addFeatures():
 	NiTextOut("Adding Features (Python Shuffle) ...")
-	featuregen = FeatureGenerator()
+	featuregen = MGU.FeatureGenerator()
 	featuregen.addFeatures()
 	return 0
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses()
+	MGU.placeC2CBonuses()

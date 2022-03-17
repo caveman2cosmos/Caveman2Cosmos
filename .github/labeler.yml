@@ -11,14 +11,15 @@ xml:
   - Assets/*.xml
 
 text:
-  - Assets/XML/Text/**/*
-  - Assets/XML/Text/*
+  - Assets/XML/GameText/**/*
+  - Assets/XML/GameText/*
   - Assets/Modules/**/*Text*.xml
   - Assets/Modules/*Text*.xml
 
 python:
   - Assets/Python/**/*
   - Assets/Python/*
+  - PrivateMaps/*.py
 
 art:
   - UnpackedArt/**/*
@@ -31,4 +32,3 @@ art:
 audio:
   - Assets/Sounds/**/*
   - Assets/Sounds/*
-

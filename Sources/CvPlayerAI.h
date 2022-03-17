@@ -58,9 +58,9 @@ public:
 		{
 			currentUseCounter = 0;
 
-			for(int i = 0; i < PLOT_DANGER_CACHE_SIZE; i++)
+			foreach_(plotDangerCacheEntry& entry, entries)
 			{
-				entries[i].iLastUseCount = 0;
+				entry.iLastUseCount = 0;
 			}
 		}
 	}
@@ -81,7 +81,7 @@ public:
 	// inlined for performance reasons
 	static CvPlayerAI& getPlayer(PlayerTypes ePlayer)
 	{
-		FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer)
+		FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
 		return m_aPlayers[ePlayer];
 	}
 
@@ -118,7 +118,7 @@ public:
 
 	void AI_doCentralizedProduction();
 
-	void AI_conquerCity(CvCity* pCity);
+	void AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConquest, bool bTrade);
 
 	bool AI_acceptUnit(const CvUnit* pUnit) const;
 
@@ -147,7 +147,7 @@ public:
 	int AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool bTestMoves) const;
 	//int AI_getUnitDanger(CvUnit* pUnit, int iRange = -1, bool bTestMoves = true, bool bAnyDanger = true) const;
 
-	int AI_getWaterDanger(const CvPlot* pPlot, int iRange, bool bTestMoves = true) const;
+	int AI_getWaterDanger(const CvPlot* pPlot, int iRange) const;
 	int AI_countNumLocalNavy(const CvPlot* pPlot, int iRange) const;
 
 	bool AI_avoidScience() const;
@@ -217,9 +217,10 @@ public:
 	bool AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeData>* pTheirList, const CLinkList<TradeData>* pOurList, CLinkList<TradeData>* pTheirInventory, CLinkList<TradeData>* pOurInventory, CLinkList<TradeData>* pTheirCounter, CLinkList<TradeData>* pOurCounter) const;
 
 	int AI_maxGoldTrade(PlayerTypes ePlayer) const;
-
 	int AI_maxGoldPerTurnTrade(PlayerTypes ePlayer) const;
-	int AI_goldPerTurnTradeVal(int iGoldPerTurn) const;
+
+	int AI_getGoldValue(const int iGold) const;
+	int AI_getGoldFromValue(const int iValue) const;
 
 	int AI_bonusVal(BonusTypes eBonus, int iChange = 1, bool bForTrade = false) const;
 	int AI_baseBonusVal(BonusTypes eBonus, bool bForTrade = false) const;
@@ -269,7 +270,7 @@ public:
 	int AI_plotTargetMissionAIsInternal(const CvPlot* pPlot, MissionAITypes eMissionAI, int iRange = 0, int* piClosest = NULL) const;
 	int AI_plotTargetMissionAIsInternalinCargoVolume(const CvPlot* pPlot, MissionAITypes eMissionAI, int iRange = 0, int* piClosest = NULL) const;
 	int AI_plotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const;
-	int AI_plotTargetMissionAIsinCargoVolume(CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const;
+	int AI_plotTargetMissionAIsinCargoVolume(const CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const;
 	void AI_noteMissionAITargetCountChange(MissionAITypes eMissionAI, const CvPlot* pPlot, int iChange, const CvPlot* pUnitPlot, int iVolume);
 	int AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
 	int AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes* aeMissionAI, int iMissionAICount, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
@@ -480,7 +481,9 @@ public:
 
 	int AI_workerTradeVal(const CvUnit* pUnit) const;
 	int AI_militaryUnitTradeVal(const CvUnit* pUnit) const;
-	int AI_corporationTradeVal(CorporationTypes eCorporation, PlayerTypes ePlayer) const;
+private:
+	int AI_corporationTradeVal(CorporationTypes eCorporation) const;
+public:
 	int AI_pledgeVoteTradeVal(const VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const;
 	int AI_secretaryGeneralTradeVal(VoteSourceTypes eVoteSource, PlayerTypes ePlayer) const;
 
@@ -596,7 +599,6 @@ protected:
 
 	void AI_doCounter();
 	void AI_doMilitary();
-	void AI_doResearch();
 public:
 	void AI_doCivics();
 protected:
@@ -608,7 +610,7 @@ protected:
 	void AI_doSplit();
 	void AI_doCheckFinancialTrouble();
 
-	bool AI_disbandUnit(int iExpThreshold, bool bObsolete);
+	bool AI_disbandUnit(int iExpThreshold);
 
 	int AI_getStrategyHash() const;
 	void AI_calculateAverages() const;

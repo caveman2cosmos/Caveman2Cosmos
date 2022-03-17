@@ -10,8 +10,6 @@ import WBPlayerUnits
 import WBReligionScreen
 import WBCorporationScreen
 import WBInfoScreen
-import WorldBuilder
-import Popup
 GC = CyGlobalContext()
 
 iChange = 1
@@ -38,7 +36,7 @@ class WBCityEditScreen:
 		screen.addPanel( "MainBG", u"", u"", True, False, -10, -10, screen.getXResolution() + 20, screen.getYResolution() + 20, PanelStyles.PANEL_STYLE_MAIN )
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
-		screen.setText("WBCityEditExit", "Background", "<font=4>" + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
+		screen.setText("WBCityEditExit", "Background", "<font=4>" + CyTranslator().getText("TXT_WORD_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
 		sText = "<font=3b>%s, X: %d, Y: %d</font>" %(CyTranslator().getText("TXT_KEY_WB_LATITUDE",(pCity.plot().getLatitude(),)), pCity.getX(), pCity.getY())
 
 		sText = u"<font=3b>%s ID: %d, %s: %d</font>" %(CyTranslator().getText("TXT_WORD_CITY", ()), pCity.getID(), CyTranslator().getText("TXT_KEY_WB_AREA_ID", ()), pPlot.getArea())
@@ -92,7 +90,7 @@ class WBCityEditScreen:
 		screen.addDropDownBoxGFC("CurrentPage", 20, screen.getYResolution() - 42, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY_DATA", ()), 0, 0, True)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY_DATA2", ()), 1, 1, False)
-		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ()), 2, 2, False)
+		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_BUILDINGS", ()), 2, 2, False)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_PLAYER_DATA", ()), 3, 3, False)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_TEAM_DATA", ()), 4, 4, False)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_RELIGION", ()), 8, 8, False)
@@ -168,15 +166,6 @@ class WBCityEditScreen:
 		screen.setLabel("CityChangeCultureText", "Background", sText, 1<<0, iX + 50, iY + 1, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		iY += 30
-		for i in xrange(YieldTypes.NUM_YIELD_TYPES):
-			iYield = pCity.getBaseYieldRate(YieldTypes(i))
-			screen.setButtonGFC("BaseYieldPlus" + str(i), "", "", iX, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1030, i, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
-			screen.setButtonGFC("BaseYieldMinus" + str(i), "", "", iX + 25, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1031, i, ButtonStyles.BUTTON_STYLE_CITY_MINUS)
-			sText = CyTranslator().getText("TXT_KEY_WB_BASE_YIELD", (GC.getYieldInfo(i).getDescription(), iYield,))
-			sText = u"%s%c" %(sText, GC.getYieldInfo(i).getChar())
-			screen.setLabel("BaseYieldText" + str(i), "Background", "<font=3>" + sText + "</font>", 1<<0, iX + 50, iY + 1, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-			iY += 30
-
 		screen.setButtonGFC("CityFoodPlus", "", "", iX, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1030, -1, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
 		screen.setButtonGFC("CityFoodMinus", "", "", iX + 25, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1031, -1, ButtonStyles.BUTTON_STYLE_CITY_MINUS)
 		sText = u"<font=3>%s: %d/%d%c</font>" %(CyTranslator().getText("TXT_WORD_FOOD",()), pCity.getFood(), pCity.growthThreshold(), GC.getYieldInfo(YieldTypes.YIELD_FOOD).getChar())
@@ -341,7 +330,7 @@ class WBCityEditScreen:
 				iRow += 1
 
 		for i in xrange(GC.getNumProcessInfos()):
-			if pCity.canMaintain(i, True):
+			if pCity.canMaintain(i):
 				if iRow > iMaxRow:
 					screen.appendTableRow("WBCityProduction")
 					iMaxRow = iRow
@@ -406,14 +395,6 @@ class WBCityEditScreen:
 			iIndex = screen.getSelectedPullDownID("CityOwner")
 			GC.getPlayer(screen.getPullDownData("CityOwner", iIndex)).acquireCity(pCity, False, True)
 			self.interfaceScreen(pPlot.getPlotCity())
-
-		elif inputClass.getFunctionName().find("BaseYield") > -1:
-			iYield = YieldTypes(inputClass.getData2())
-			if inputClass.getData1() == 1030:
-				pCity.changeBaseYieldRate(iYield, iChange)
-			elif inputClass.getData1() == 1031:
-				pCity.changeBaseYieldRate(iYield, - min(iChange, pCity.getBaseYieldRate(iYield)))
-			self.placeStats()
 
 		elif inputClass.getFunctionName().find("CityPopulation") > -1:
 			if inputClass.getData1() == 1030:
@@ -534,12 +515,11 @@ class WBCityEditScreen:
 			self.placeProduction()
 
 		elif inputClass.getFunctionName().find("CityEditScriptData") > -1:
-			popup = Popup.PyPopup(2222, EventContextTypes.EVENTCONTEXT_ALL)
-			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_SCRIPT", ()))
+			popup = CyPopup(2222, EventContextTypes.EVENTCONTEXT_ALL, True)
+			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_SCRIPT", ()), 1<<2)
 			popup.setUserData((pCity.getOwner(), pCity.getID()))
-			popup.createEditBox(pCity.getScriptData())
-			popup.launch()
-			return
+			popup.createEditBox(pCity.getScriptData(), 0)
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 		elif inputClass.getFunctionName() == "Commands":
 			iIndex = screen.getPullDownData("Commands", screen.getSelectedPullDownID("Commands"))

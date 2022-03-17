@@ -84,7 +84,7 @@
 #  - print stats of mod and map
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
+import CvMapGeneratorUtil as MGU
 
 ##################################################################################
 ## MapScriptTools Interface by Temudjin
@@ -1163,7 +1163,7 @@ class ClimateGenerator:
 		self.Lush = 11
 		self.Muddy = 12
 		self.Marsh = 13
-		
+
 		self.terrains[self.Desert] = gc.getInfoTypeForString("TERRAIN_DESERT")
 		self.terrains[self.SaltFlats] = gc.getInfoTypeForString("TERRAIN_SALT_FLATS")
 		self.terrains[self.Dunes] = gc.getInfoTypeForString("TERRAIN_DUNES")
@@ -1287,14 +1287,14 @@ class ClimateGenerator:
 		self.getTemperateTerrain(climate, latitude, moisture)
 		self.getTropicalTerrain(climate, latitude, moisture)
 		self.getEquatorialTerrain(climate, latitude, moisture)
-		
+
 		maxC = 0
 		maxCId = 0
 		for i in range(14):
 			if climate[i] > maxC:
 				maxC = climate[i]
 				maxCId = i
-		
+
 		if maxCId == self.Plains:
 			#print "Plains moisture: %f" % moisture
 			if moisture < 0.5:
@@ -1321,8 +1321,8 @@ class ClimateGenerator:
 					maxCId = self.Dunes
 				elif roll > 5:
 					maxCId = self.Scrub
-				
-				
+
+
 		return self.terrains[maxCId]
 
 	def blowWinds(self):
@@ -2067,7 +2067,7 @@ def findStartingPlot(argsList):
 	allOnBest = userInputLandmass == 7 # "Terra"
 	isolatedStarts = userInputLandmass == 4 # "Islands"
 
-	areas = CvMapGeneratorUtil.getAreas()
+	areas = MAP.areas()
 	areaValue = {}
 	for area in areas:
 		if area.isWater(): continue
@@ -2124,7 +2124,7 @@ def findStartingPlot(argsList):
 				return okLandPlots(x,y,10) and okMapEdge(x,y,3)
 			#-----
 
-		findstart = CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
+		findstart = MGU.findStartingPlot(playerID, isValid)
 		if playerID == iCurrentPlayer:
 			iResult = findstart
 
@@ -2137,14 +2137,14 @@ def findStartingPlot(argsList):
 	return iResult
 
 
-class MediterraneanFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
+class MediterraneanFeatureGenerator(MGU.FeatureGenerator):
 	def getLatitudeAtPlot(self, iX, iY):
 		"returns 0.0 for tropical, up to 1.0 for polar"
 		# 25/90 to 65/90:
 		lat = 5/float(18) + 4*(self.iGridH - iY)/float(9*self.iGridH)
 		return lat
 
-class NoIceFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
+class NoIceFeatureGenerator(MGU.FeatureGenerator):
 	def addIceAtPlot(self, pPlot, iX, iY, lat):
 		return
 
@@ -2158,7 +2158,7 @@ def addFeatures2():
 		featuregen.addFeatures()
 		return 0
 	else:
-		featuregen = CvMapGeneratorUtil.FeatureGenerator()
+		featuregen = MGU.FeatureGenerator()
 		featuregen.addFeatures()
 		return 0
 
@@ -2186,5 +2186,5 @@ def normalizeRemovePeaks():
 	CyPythonMgr().allowDefaultImpl()
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses()
+	MGU.placeC2CBonuses()
 

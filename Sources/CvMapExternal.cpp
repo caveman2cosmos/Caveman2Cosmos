@@ -7,19 +7,15 @@
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGlobals.h"
+#include "CvInitCore.h"
 #include "CvMap.h"
 #include "CvMapExternal.h"
 #include "CvPlot.h"
 #include "CvTaggedSaveFormatWrapper.h"
 #include "CvViewport.h"
 
-CvMapExternal::CvMapExternal() : m_proxiedMap(NULL),
-								 m_bMapCoordinates(false)
-{
-}
-
-CvMapExternal::CvMapExternal(CvMapInterfaceBase* proxiedMap) : m_proxiedMap(proxiedMap),
-															   m_bMapCoordinates(false)
+CvMapExternal::CvMapExternal(CvMapInterfaceBase* proxiedMap)
+	: m_proxiedMap(proxiedMap)
 {
 }
 
@@ -28,28 +24,19 @@ CvMapExternal::~CvMapExternal()
 {
 }
 
-// FUNCTION: init()
-// Initializes the map.
-// Parameters:
-//	pInitInfo					- Optional init structure (used for WB load)
-// Returns:
-//	nothing.
+
 void CvMapExternal::init(CvMapInitData* pInitInfo/*=NULL*/)
 {
 	m_proxiedMap->init(pInitInfo);
 }
 
-// FUNCTION: reset()
-// Initializes data members that are serialized.
+
 void CvMapExternal::reset(CvMapInitData* pInitInfo)
 {
 	m_proxiedMap->reset(pInitInfo);
 }
 
 
-//////////////////////////////////////
-// graphical only setup
-//////////////////////////////////////
 void CvMapExternal::setupGraphical()
 {
 	m_proxiedMap->setupGraphical();
@@ -90,6 +77,7 @@ void CvMapExternal::updateCenterUnit()
 {
 	m_proxiedMap->updateCenterUnit();
 }
+
 
 CvCity* CvMapExternal::findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, bool bSameArea, bool bCoastalOnly, TeamTypes eTeamAtWarWith, DirectionTypes eDirection, CvCity* pSkipCity)
 {
@@ -153,13 +141,13 @@ bool CvMapExternal::isWrap()
 
 WorldSizeTypes CvMapExternal::getWorldSize()
 {
-	return m_proxiedMap->getWorldSize();
+	return GC.getInitCore().getWorldSize();
 }
 
 
 CvPlot* CvMapExternal::plotByIndex(int iIndex) const
 {
-	FASSERT_BOUNDS(0, numPlots(), iIndex)
+	FASSERT_BOUNDS(0, numPlots(), iIndex);
 	CvPlot* result = m_proxiedMap->plotByIndex(iIndex);
 
 	if (result == NULL)
@@ -171,15 +159,8 @@ CvPlot* CvMapExternal::plotByIndex(int iIndex) const
 
 
 CvPlot* CvMapExternal::plot(int iX, int iY) const
-{	
-	if (!m_bMapCoordinates)
-	{
-		return m_proxiedMap->getUnderlyingMap()->plot(iX, iY);
-	}
-	else
-	{
-		return m_proxiedMap->plot(iX, iY);
-	}
+{
+	return m_proxiedMap->plot(iX, iY);
 }
 
 

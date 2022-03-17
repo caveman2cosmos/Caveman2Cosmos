@@ -2,11 +2,6 @@
 <!-- Global Defines -->
 <Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">
 	<Define>
-		<!-- Breaks saves. End of turn crashes. Needs more modding. -->
-		<DefineName>ENABLE_MULTI_MAPS</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>ENABLE_VIEWPORTS</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>

@@ -52,10 +52,8 @@
 			<iNoTechTradeModifier>150</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>-99</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>10</iStartingLocPercent>
 			<iAnimalAttackProb>40</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>8</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>60</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>180</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>60</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>40</iBarbarianCityCreationTurnsElapsed>
@@ -219,7 +217,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<GoodyType>GOODY_GATHERER</GoodyType>
 				<GoodyType>GOODY_WORKER</GoodyType>
@@ -228,7 +226,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -312,10 +310,8 @@
 			<iNoTechTradeModifier>100</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>-66</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>20</iStartingLocPercent>
 			<iAnimalAttackProb>45</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>7</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>55</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>165</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>55</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>39</iBarbarianCityCreationTurnsElapsed>
@@ -513,7 +509,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<GoodyType>GOODY_GATHERER</GoodyType>
 				<GoodyType>GOODY_WORKER</GoodyType>
@@ -522,7 +518,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -599,10 +595,8 @@
 			<iNoTechTradeModifier>50</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>-33</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>30</iStartingLocPercent>
 			<iAnimalAttackProb>50</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>6</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>50</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>150</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>50</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>38</iBarbarianCityCreationTurnsElapsed>
@@ -801,7 +795,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -873,10 +867,8 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>40</iStartingLocPercent>
 			<iAnimalAttackProb>55</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>5</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>45</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>135</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>45</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>37</iBarbarianCityCreationTurnsElapsed>
@@ -1107,7 +1099,7 @@
 				<GoodyType>GOODY_MULE_WORKER</GoodyType>
 				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
 				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
+				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
 				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -1176,10 +1168,8 @@
 			<iNoTechTradeModifier>-10</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>10</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>50</iStartingLocPercent>
 			<iAnimalAttackProb>60</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>4</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>40</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>120</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>40</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>36</iBarbarianCityCreationTurnsElapsed>
@@ -1488,10 +1478,8 @@
 			<iNoTechTradeModifier>-20</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>20</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>60</iStartingLocPercent>
 			<iAnimalAttackProb>65</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>3</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>35</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>105</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>35</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>35</iBarbarianCityCreationTurnsElapsed>
@@ -1810,10 +1798,8 @@
 			<iNoTechTradeModifier>-30</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>30</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>70</iStartingLocPercent>
 			<iAnimalAttackProb>70</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>2</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>30</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>90</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>30</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>34</iBarbarianCityCreationTurnsElapsed>
@@ -2164,10 +2150,8 @@
 			<iNoTechTradeModifier>-40</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>40</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>80</iStartingLocPercent>
 			<iAnimalAttackProb>75</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>1</iFreeWinsVsBarbs>
-			<iUnownedTilesPerBarbarianUnit>25</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>75</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>25</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>33</iBarbarianCityCreationTurnsElapsed>
@@ -2509,9 +2493,7 @@
 			<iNoTechTradeModifier>-50</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>50</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>90</iStartingLocPercent>
 			<iAnimalAttackProb>80</iAnimalAttackProb>
-			<iUnownedTilesPerBarbarianUnit>20</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>60</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>20</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>32</iBarbarianCityCreationTurnsElapsed>
@@ -2519,7 +2501,6 @@
 			<iBarbarianDefenders>8</iBarbarianDefenders>
 			<iAIAnimalBonus>-50</iAIAnimalBonus>
 			<iAIBarbarianBonus>-50</iAIBarbarianBonus>
-			<iAIStartingUnitMultiplier>2</iAIStartingUnitMultiplier>
 			<iAIStartingDefenseUnits>5</iAIStartingDefenseUnits>
 			<iAIStartingExploreUnits>2</iAIStartingExploreUnits>
 			<iAIStartingWorkerUnits>1</iAIStartingWorkerUnits>
@@ -2880,9 +2861,7 @@
 			<iNoTechTradeModifier>-70</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>70</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
-			<iStartingLocPercent>100</iStartingLocPercent>
 			<iAnimalAttackProb>90</iAnimalAttackProb>
-			<iUnownedTilesPerBarbarianUnit>10</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
 			<iBarbarianCityCreationTurnsElapsed>30</iBarbarianCityCreationTurnsElapsed>
@@ -2890,7 +2869,6 @@
 			<iBarbarianDefenders>10</iBarbarianDefenders>
 			<iAIAnimalBonus>-70</iAIAnimalBonus>
 			<iAIBarbarianBonus>-70</iAIBarbarianBonus>
-			<iAIStartingUnitMultiplier>2</iAIStartingUnitMultiplier>
 			<iAIStartingDefenseUnits>7</iAIStartingDefenseUnits>
 			<iAIStartingExploreUnits>3</iAIStartingExploreUnits>
 			<iAIStartingWorkerUnits>2</iAIStartingWorkerUnits>

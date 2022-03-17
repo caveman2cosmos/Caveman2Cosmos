@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Basic Infos -->
+<Civ4CityTabInfos xmlns="x-schema:../Schema/C2C_CIV4BasicInfoSchema.xml">
+	<CityTabInfos>
+		<CityTabInfo>
+			<Type>CITYTAB_UNITS</Type>
+			<Description>TXT_KEY_CONCEPT_UNITS</Description>
+			<Button>,Art/Interface/Buttons/CityTabs/Units.dds,Art/Interface/Buttons/CityTab_CityScreen_MiniMap_AdvisorTab_Atlas.dds,2,1</Button>
+		</CityTabInfo>
+		<CityTabInfo>
+			<Type>CITYTAB_BUILDINGS</Type>
+			<Description>TXT_KEY_WB_BUILDINGS</Description>
+			<Button>,Art/Interface/Buttons/CityTabs/Buildings.dds,Art/Interface/Buttons/CityTab_CityScreen_MiniMap_AdvisorTab_Atlas.dds,1,1</Button>
+		</CityTabInfo>
+		<CityTabInfo>
+			<Type>CITYTAB_WONDERS</Type>
+			<Description>TXT_KEY_CONCEPT_WONDERS</Description>
+			<Button>,Art/Interface/Buttons/CityTabs/Wonders.dds,Art/Interface/Buttons/CityTab_CityScreen_MiniMap_AdvisorTab_Atlas.dds,3,1</Button>
+		</CityTabInfo>
+	</CityTabInfos>
+</Civ4CityTabInfos>

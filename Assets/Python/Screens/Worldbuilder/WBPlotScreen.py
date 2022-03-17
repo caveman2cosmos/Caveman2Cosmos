@@ -7,7 +7,6 @@ import WBUnitScreen
 import WBPlayerScreen
 import WBTeamScreen
 import WBInfoScreen
-import Popup
 
 GC = CyGlobalContext()
 
@@ -36,7 +35,7 @@ class WBPlotScreen:
 		screen.addPanel( "MainBG", u"", u"", True, False, -10, -10, screen.getXResolution() + 20, screen.getYResolution() + 20, PanelStyles.PANEL_STYLE_MAIN )
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
-		screen.setText("PlotExit", "Background", "<font=4>" + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
+		screen.setText("PlotExit", "Background", "<font=4>" + CyTranslator().getText("TXT_WORD_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
 
 		iX = 10
 		iY = 50
@@ -745,11 +744,11 @@ class WBPlotScreen:
 			self.placeRoutes()
 
 		elif inputClass.getFunctionName() == "PlotEditScriptData":
-			popup = Popup.PyPopup(5555, EventContextTypes.EVENTCONTEXT_ALL)
-			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_SCRIPT", ()))
+			popup = CyPopup(5555, EventContextTypes.EVENTCONTEXT_ALL, True)
+			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_SCRIPT", ()), 1<<2)
 			popup.setUserData((pPlot.getX(), pPlot.getY()))
-			popup.createEditBox(pPlot.getScriptData())
-			popup.launch()
+			popup.createEditBox(pPlot.getScriptData(), 0)
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 		elif inputClass.getFunctionName() == "EditLandMark":
 			iIndex = -1
@@ -763,11 +762,11 @@ class WBPlotScreen:
 					sText = pSign.getCaption()
 					break
 
-			popup = Popup.PyPopup(5009, EventContextTypes.EVENTCONTEXT_ALL)
-			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_LANDMARKS", ()))
+			popup = CyPopup(5009, EventContextTypes.EVENTCONTEXT_ALL, True)
+			popup.setHeaderString(CyTranslator().getText("TXT_KEY_WB_LANDMARKS", ()), 1<<2)
 			popup.setUserData((pPlot.getX(), pPlot.getY(), iCulturePlayer, iIndex))
-			popup.createEditBox(sText)
-			popup.launch()
+			popup.createEditBox(sText, 0)
+			popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 		elif inputClass.getFunctionName() == "SensibilityCheck":
 			bSensibility = not bSensibility

@@ -7,16 +7,9 @@
 #	Copyright (c) 2005 Firaxis Games, Inc. All rights reserved.
 #-----------------------------------------------------------------------------
 #
-
 from CvPythonExtensions import *
-import CvUtil
-import CvMapGeneratorUtil
-from CvMapGeneratorUtil import FractalWorld
-from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
-#from CvMapGeneratorUtil import BonusBalancer
+import CvMapGeneratorUtil as MGU
 
-#balancer = BonusBalancer()
 
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_ARCHIPELAGO_DESCR"
@@ -99,21 +92,18 @@ def getWrapY():
 
 def normalizeAddExtras():
 	if (CyMap().getCustomMapOption(2) == 1):
-		balancer.normalizeAddExtras()
+		MGU.BonusBalancer().normalizeAddExtras()
 	CyPythonMgr().allowDefaultImpl()	# do the rest of the usual normalizeStartingPlots stuff, don't overrride
 
 def addBonusType(argsList):
 	[iBonusType] = argsList
-	gc = CyGlobalContext()
-	type_string = gc.getBonusInfo(iBonusType).getType()
 
-	if (CyMap().getCustomMapOption(2) == 1):
-		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
-			return None # don't place any of this bonus randomly
+	if CyMap().getCustomMapOption(2) == 1 and CyGlobalContext().getBonusInfo(iBonusType).getType() in MGU.BonusBalancer().resourcesToBalance:
+		return None # don't place any of this bonus randomly
 
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
-class ArchipelagoFractalWorld(CvMapGeneratorUtil.FractalWorld):
+class ArchipelagoFractalWorld(MGU.FractalWorld):
 	def checkForOverrideDefaultUserInputVariances(self):
 		# Overriding peak value to counterbalance not having any peaks along the coasts.
 		extraPeaks = 1 + CyMap().getCustomMapOption(0)
@@ -124,7 +114,6 @@ class ArchipelagoFractalWorld(CvMapGeneratorUtil.FractalWorld):
 
 def generatePlotTypes():
 	"Generates a very grainy world so we get lots of islands."
-	gc = CyGlobalContext()
 	map = CyMap()
 	fractal_world = ArchipelagoFractalWorld()
 	NiTextOut("Setting Plot Types (Python Archipelago) ...")
@@ -146,7 +135,7 @@ def generatePlotTypes():
 
 def generateTerrainTypes():
 	NiTextOut("Generating Terrain (Python Archipelago) ...")
-	terraingen = TerrainGenerator()
+	terraingen = MGU.TerrainGenerator()
 	terrainTypes = terraingen.generateTerrain()
 	return terrainTypes
 
@@ -164,7 +153,7 @@ def addFeatures():
 
 	# Now add Features.
 	NiTextOut("Adding Features (Python Archipelago) ...")
-	featuregen = FeatureGenerator()
+	featuregen = MGU.FeatureGenerator()
 	featuregen.addFeatures()
 	return 0
 
@@ -439,7 +428,7 @@ def assignStartingPlots():
 	# Obtain player numbers. (Account for possibility of Open slots!)
 	player_list = []
 	for plrCheckLoop in range(18):
-		if CyGlobalContext().getPlayer(plrCheckLoop).isEverAlive():
+		if gc.getPlayer(plrCheckLoop).isEverAlive():
 			player_list.append(plrCheckLoop)
 	#print "***"
 	#print "Player ID#s", player_list
@@ -456,15 +445,12 @@ def assignStartingPlots():
 
 	# Find the oceans. We want all civs to start along the coast of a salt water body.
 	oceans = []
-	for i in range(map.getIndexAfterLastArea()):
-		area = map.getArea(i)
-		if not area.isNone():
-			if area.isWater() and not area.isLake():
-				oceans.append(area)
+	for area in map.areas():
+		if area.isWater() and not area.isLake():
+			oceans.append(area)
 	#print("Oceans: ", oceans)
 
 	# Now assign the start plots!
-	plot_assignments = {}
 	min_dist = []
 	# Loop through players/regions.
 	for assignLoop in range(iPlayers):
@@ -552,9 +538,6 @@ def assignStartingPlots():
 					return
 			else: break # This player has been assigned a start plot.
 
-	#print plot_assignments
-	#print "..."
-
 	# Successfully assigned start plots, continue back to C++
 	return None
 
@@ -569,14 +552,10 @@ def findStartingPlot(argsList):
 		return
 
 	# Identify the best land area available to this player.
-	global areas
-	global area_values
-	global iBestArea
-	gc = CyGlobalContext()
-	map = CyMap()
+	global areas, area_values, iBestArea
 	iBestValue = 0
 	iBestArea = -1
-	areas = CvMapGeneratorUtil.getAreas()
+	areas = map.areas()
 
 	for area in areas:
 		if area.isWater(): continue # Don't want to start "in the drink"!
@@ -595,17 +574,14 @@ def findStartingPlot(argsList):
 		global iBestArea
 		pPlot = CyMap().plot(x, y)
 		if pPlot.getArea() != iBestArea:
-			return false
+			return False
 		pWaterArea = pPlot.waterArea()
-		if (pWaterArea.isNone()):
-			return false
-		return not pWaterArea.isLake()
+		return pWaterArea is not None and not pWaterArea.isLake()
 
-	return CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
+	return MGU.findStartingPlot(playerID, isValid)
 
 def normalizeRemovePeaks():
 	return None
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses()
-	
+	MGU.placeC2CBonuses()

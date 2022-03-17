@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_MAMMOTH_GRAVEYARD</Tag>
+		<English>Mammoth Graveyard</English>
+		<Italian>Cimitero dei mammut</Italian>
+		<Russian>Êëàäáèùå ìàìîíòîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_MAMMOTH_GRAVEYARD_PEDIA</Tag>
+		<English>When mammoths go extinct in the wild their map bonus is replaced by a graveyard. This may be their bones, or fossils or frozen mammoths.</English>
+		<Russian>Когда мамонты вымирают в дикой природе, их бонусные ресурсы на карте заменяется кладбищами. Это могут быть их кости, или окаменелости, или замороженные туши мамонтов.</Russian>
+	</TEXT>
+</Civ4GameText>

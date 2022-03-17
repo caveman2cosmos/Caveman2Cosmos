@@ -400,10 +400,10 @@ def handleAutomatedBuildCheckboxClicked(argsList):
 	iPlayer = CyGame().getActivePlayer()
 	CyPlayer = GC.getPlayer(iPlayer)
 
-	import CvUtil
+	import TextUtil
 	iNumBuildInfos = GC.getNumBuildInfos()
 	for CyCity in CyPlayer.cities():
-		if szName.rfind(CvUtil.convertToAscii(CyCity.getName())) > -1:
+		if szName.rfind(TextUtil.convertToAscii(CyCity.getName())) > -1:
 			iCityID = CyCity.getID()
 			for k in range(iNumBuildInfos):
 				if szName.rfind(GC.getBuildInfo(k).getDescription()) > -1:

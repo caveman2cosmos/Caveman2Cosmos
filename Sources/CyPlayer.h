@@ -53,7 +53,6 @@ public:
 	bool hasTrait(int /*TraitTypes*/ iIndex) const;
 	bool isHuman() const;
 	bool isHumanDisabled() const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	std::wstring getName() const;
@@ -87,6 +86,7 @@ public:
 	int countOwnedBonuses(int /*BonusTypes*/ eBonus) const;
 	int countNumBuildings(int /*BuildingTypes*/ eBuilding) const;
 	bool hasBuilding(int /*BuildingTypes*/ eBuilding) const;
+	int getBuildingPrereqBuilding(BuildingTypes eBuilding, BuildingTypes ePrereqBuilding, int iExtra) const;
 	int countNumCitiesConnectedToCapital() const;
 
 	bool canContact(int /*PlayerTypes*/ ePlayer) const;
@@ -108,12 +108,10 @@ public:
 	bool canTrain(int /*UnitTypes*/ eUnit, bool bContinue, bool bTestVisible) const;
 	bool canConstruct(int /*BuildingTypes*/eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost) const;
 	bool canCreate(int /*ProjectTypes*/ eProject, bool bContinue, bool bTestVisible) const;
-	bool canMaintain(int /*ProcessTypes*/ eProcess, bool bContinue) const;
 	int getUnitProductionNeeded(int /*UnitTypes*/ iIndex) const;
 	int getBuildingProductionNeeded(int /*BuildingTypes*/ iIndex) const;
 	int getProjectProductionNeeded(int /*ProjectTypes*/ iIndex) const;
 
-	bool canBuild(const CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra, bool bTestVisible) const;
 	int /*RouteTypes*/ getBestRoute(const CyPlot* pPlot) const;
 
 	int calculateTotalYield(int /*YieldTypes*/ eYield) const;
@@ -145,7 +143,7 @@ public:
 
 	bool isCivic(int /*CivicTypes*/ eCivic) const;
 	bool canDoCivics(int /*CivicTypes*/ eCivic) const;
-	bool canRevolution(int /*CivicTypes**/ paeNewCivics) const;
+	bool canRevolution() const;
 
 	bool canChangeReligion() const;
 	bool canConvert(int /*ReligionTypes*/ iIndex) const;
@@ -153,7 +151,7 @@ public:
 	bool hasHolyCity(int /*ReligionTypes*/ eReligion) const;
 	int countHolyCities() const;
 
-	int getCivicAnarchyLength(boost::python::list& /*CivicTypes**/ paeNewCivics) const;
+	int getCivicAnarchyLength(const python::list& /*CivicTypes*/ lNewCivics) const;
 	int getReligionAnarchyLength() const;
 
 	bool hasHeadquarters(int /*CorporationTypes*/ eCorporation) const;
@@ -220,6 +218,8 @@ public:
 	bool isNonStateReligionCommerce() const;
 
 	int getRevIdxNational() const;
+	int getRevIdxDistanceModifier() const;
+
 	bool canFoundReligion() const;
 
 	int getNumMilitaryUnits() const;
@@ -277,8 +277,6 @@ public:
 
 	bool isStrike() const;
 
-	bool isMADNukesEnabled() const;
-
 	int getID() const;
 	int /* HandicapTypes */ getHandicapType() const;
 	int /* CivilizationTypes */ getCivilizationType() const;
@@ -299,7 +297,6 @@ public:
 	int getPlayerTextColorB() const;
 	int getPlayerTextColorA() const;
 
-	int getSeaPlotYield(YieldTypes eIndex) const;
 	int getYieldRateModifier(YieldTypes eIndex) const;
 	int getCommercePercent(int /*CommerceTypes*/ eIndex) const;
 	void changeCommercePercent(CommerceTypes eIndex, int iChange);
@@ -343,7 +340,7 @@ public:
 	bool isResearchingTech(int /*TechTypes*/ iIndex) const;
 	int /*CivicTypes*/ getCivics(int /*CivicOptionTypes*/ iIndex) const;
 	int getSingleCivicUpkeep(int /*CivicTypes*/ eCivic, bool bIgnoreAnarchy) const;
-	int getCivicUpkeep(boost::python::list&  /*CivicTypes*/ paiCivics, bool bIgnoreAnarchy) const;
+	int getCivicUpkeep(bool bIgnoreAnarchy) const;
 	void setCivics(int /*CivicOptionTypes*/ eIndex, int /*CivicTypes*/ eNewValue);
 
 	int getCombatExperience() const;
@@ -432,14 +429,12 @@ public:
 
 	void setModderOption(int /*ModderOptionTypes*/ eIndex, int iNewValue);
 
-	void doRevolution(boost::python::list& /*CivicTypes**/ paeNewCivics, bool bForce);
+	void doRevolution(const python::list& /*CivicTypes*/ lNewCivics, bool bForce);
 
 	bool isAutomatedCanBuild(int /*BuildTypes*/ eIndex) const;
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);
 
 	int64_t getCulture() const;
-	void setCulture(int64_t iNewValue);
-	void changeCulture(int64_t iAddValue);
 
 	CvProperties* getProperties() const;
 

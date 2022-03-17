@@ -1903,7 +1903,7 @@
 			</AudioRunSounds>
 			<SelectionSound>AS3D_UN_OCEAN_END1</SelectionSound>
 			<ActionSound>AS3D_UN_OCEAN_END1</ActionSound>
-		</UnitArtInfo>		
+		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_CARROBALLISTA</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/carrobalista.dds</Button>
@@ -11604,23 +11604,6 @@
 			</AudioRunSounds>
 			<SelectionSound>AS3D_UN_SUBMARINE_FORT</SelectionSound>
 			<ActionSound>AS3D_UN_SUBMARINE_FORT</ActionSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_URBAN_HORSEMAN</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/urban_horseman.dds</Button>
-			<fScale>0.42</fScale>
-			<fInterfaceScale>0.95</fInterfaceScale>
-			<NIF>Art/Units/apocalyspe/UrbanHorseman/persianimmortal_fx.nif</NIF>
-			<KFM>Art/Units/Unique/Persia/Immortal/PersianImmortal.kfm</KFM>
-			<SHADERNIF>Art/Units/apocalyspe/UrbanHorseman/persianimmortal_fx.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_V1</Type>
@@ -59147,279 +59130,6 @@
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
-		<!-- CONFEDERACY -->
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_ARCHER_CONFEDERACY</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/archer.dds</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>art/units/confederate_sparth/archer/archer.nif</NIF>
-			<KFM>Art/Units/archer/archer.kfm</KFM>
-			<SHADERNIF>art/units/confederate_sparth/archer/archer.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>0.85</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bActAsRanged>1</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_CANNON_CONFEDERACY</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/cannon.dds</Button>
-			<fScale>0.43</fScale>
-			<fInterfaceScale>1.1</fInterfaceScale>
-			<NIF>art/units/confederate_sparth/cannon/cannon_fx.nif</NIF>
-			<KFM>Art/Units/cannon/Cannon.kfm</KFM>
-			<SHADERNIF>art/units/confederate_sparth/cannon/cannon_fx.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/CannonShadow.nif</ShadowNIF>
-				<ShadowAttachNode/>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<TrailDefinition>
-				<Texture>Art/Shared/wheeltread.dds</Texture>
-				<fWidth>1.0</fWidth>
-				<fLength>180.0</fLength>
-				<fTaper>0.0</fTaper>
-				<fFadeStartTime>0.2</fFadeStartTime>
-				<fFadeFalloff>0.35</fFadeFalloff>
-			</TrailDefinition>
-			<fBattleDistance>0.5</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bActAsRanged>1</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<AudioRunSounds>
-				<AudioRunTypeLoop>LOOPSTEP_WHEELS</AudioRunTypeLoop>
-				<AudioRunTypeEnd>ENDSTEP_WHEELS</AudioRunTypeEnd>
-			</AudioRunSounds>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_CAVALRY_CONFEDERACY</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/cavalry.dds</Button>
-			<fScale>0.42</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>art/units/confederate_sparth/cavalry/cavalry_fx.nif</NIF>
-			<KFM>Art/Units/cavalry/cavalry.kfm</KFM>
-			<SHADERNIF>art/units/confederate_sparth/cavalry/cavalry_fx.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
-				<ShadowAttachNode>HorseBip Spine1</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bActAsRanged>1</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_CHARIOT_CONFEDERACY</Type>
-			<Button>,Art/Interface/Buttons/Units/Chariot.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,5,7</Button>
-			<fScale>0.4</fScale>
-			<fInterfaceScale>0.9</fInterfaceScale>
-			<NIF>art/units/confederate_sparth/chariot/chariot.nif</NIF>
-			<KFM>Art/Units/Unique/Egypt/WarChariot/EgyptianWarChariot.kfm</KFM>
-			<SHADERNIF>art/units/confederate_sparth/chariot/chariot.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/ChariotShadow.nif</ShadowNIF>
-				<ShadowAttachNode>Chariot_Chariot</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<TrailDefinition>
-				<Texture>Art/Shared/wheeltread.dds</Texture>
-				<fWidth>0.9</fWidth>
-				<fLength>180.0</fLength>
-				<fTaper>0.0</fTaper>
-				<fFadeStartTime>0.2</fFadeStartTime>
-				<fFadeFalloff>0.35</fFadeFalloff>
-			</TrailDefinition>
-			<fBattleDistance>0.20</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bSmoothMove>1</bSmoothMove>
-			<fAngleInterpRate>360.0</fAngleInterpRate>
-			<fExchangeAngle>-30.0</fExchangeAngle>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<AudioRunSounds>
-				<AudioRunTypeLoop>LOOPSTEP_WHEELS</AudioRunTypeLoop>
-				<AudioRunTypeEnd>ENDSTEP_WHEELS</AudioRunTypeEnd>
-			</AudioRunSounds>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_CROSSBOWMAN_CONFEDERACY</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/crossbowman.dds</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>art/units/confederate_sparth/crossbowman/crossbowman.nif</NIF>
-			<KFM>Art/Units/Crossbowman/Crossbowman.kfm</KFM>
-			<SHADERNIF>art/units/confederate_sparth/crossbowman/crossbowman.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bActAsRanged>1</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_HEAVY_SWORDSMAN_CONFEDERACY</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/heavy_swordsman.dds</Button>
-			<fScale>0.42</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>art/units/confederate_sparth/heavy_swordsman/maceman.nif</NIF>
-			<KFM>Art/Units/Maceman_European/Swordsman.kfm</KFM>
-			<SHADERNIF>art/units/confederate_sparth/heavy_swordsman/maceman.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_INFANTRY_CONFEDERACY</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/infantry.dds</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>art/units/confederate_sparth/infantry/infantry_fx.nif</NIF>
-			<KFM>Art/Units/Infantry/Infantry.kfm</KFM>
-			<SHADERNIF>art/units/confederate_sparth/infantry/infantry_fx.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>0.9</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.05</fRangedDeathTime>
-			<bActAsRanged>1</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_KNIGHT_CONFEDERACY</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/knight.dds</Button>
-			<fScale>0.42</fScale>
-			<fInterfaceScale>0.9</fInterfaceScale>
-			<NIF>art/units/confederate_sparth/knight/heavycavalry.nif</NIF>
-			<KFM>Art/Units/Charlemagne_HeavyCavalry/HeavyCavalry.kfm</KFM>
-			<SHADERNIF>art/units/confederate_sparth/knight/heavycavalry.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_LONGBOWMAN_CONFEDERACY</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/longbowman.dds</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>art/units/confederate_sparth/longbowman/longbowman.nif</NIF>
-			<KFM>Art/Units/longbowman/longbowman.kfm</KFM>
-			<SHADERNIF>art/units/confederate_sparth/longbowman/longbowman.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bActAsRanged>1</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_MOUNTED_INFANTRY_CONFEDERACY</Type>
-			<Button>,Art/Interface/Buttons/Units/Conquistador.dds,Art/Interface/Buttons/Charlemagne_Atlas.dds,3,1</Button>
-			<fScale>0.42</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>art/units/confederate_sparth/mounted_infantry/horseman.nif</NIF>
-			<KFM>Art/Units/HorseArcher/HorseArcher.kfm</KFM>
-			<SHADERNIF>art/units/confederate_sparth/mounted_infantry/horseman.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/HorseShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bActAsRanged>1</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_PIKEMAN_CONFEDERACY</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/pikeman.dds</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>art/units/confederate_sparth/pikeman/pikeman.nif</NIF>
-			<KFM>Art/Units/Pikeman/Pikeman.kfm</KFM>
-			<SHADERNIF>art/units/confederate_sparth/pikeman/pikeman.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_RIFLEMAN_CONFEDERACY</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/rifleman.dds</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>art/units/confederate_sparth/rifleman/confederate_rifleman_fx.nif</NIF>
-			<KFM>Art/Units/Infantry/Infantry.kfm</KFM>
-			<SHADERNIF>art/units/confederate_sparth/rifleman/confederate_rifleman_fx.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_SPEARMAN_CONFEDERACY</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/spearman.dds</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>art/units/confederate_sparth/spearman/lightspearman.nif</NIF>
-			<KFM>Art/Units/Charlemagne_LightSpearman/LightSpearman.kfm</KFM>
-			<SHADERNIF>art/units/confederate_sparth/spearman/lightspearman.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_SWORDSMAN_CONFEDERACY</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/swordsman.dds</Button>
-			<fScale>0.44</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>art/units/confederate_sparth/swordsman/swordsman.nif</NIF>
-			<KFM>Art/Units/Charlemagne_HeavySwordsman/HeavySwordsman.kfm</KFM>
-			<SHADERNIF>art/units/confederate_sparth/swordsman/swordsman.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-		</UnitArtInfo>
 		<!-- CARTHAGE -->
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AT_INFANTRY_CARTHAGE</Type>
@@ -74307,8 +74017,6 @@
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<SelectionSound>AS3D_UN_FEMALE_SELECTION_VOX</SelectionSound>
-			<ActionSound>AS3D_UN_FEMALE_ACTION_VOX</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_HEALER</Type>
@@ -74369,8 +74077,6 @@
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<SelectionSound>AS3D_UN_FEMALE_SELECTION_VOX</SelectionSound>
-			<ActionSound>AS3D_UN_FEMALE_ACTION_VOX</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_SURGEON</Type>
@@ -85707,6 +85413,551 @@
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_ANDEAN_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_andean.dds</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/Andean/hindu_missionary_FX.nif</NIF>
+			<KFM>Art/Units/Missionary/Hindu/Hindu_Missionary.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Andean/hindu_missionary_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_ASATRU_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_asatru.dds</Button>
+			<fScale>0.42</fScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/Asatru/missionary_general.nif</NIF>
+			<KFM>Art/Units/Missionary_General/Missionary_General.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Asatru/missionary_general.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_NORDIC_MISSIONARY</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_LOKI</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/loki_fist.dds</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Loki/khorneberserkeraxe_fx.nif</NIF>
+			<KFM>Art/Units/Viking_Berserker/Berserker.kfm</KFM>
+			<SHADERNIF>Art/Units/Loki/khorneberserkeraxe_fx.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_BAHAI_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_bahai.dds</Button>
+			<fScale>0.42</fScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/Bahai/Missionary_General_FX.nif</NIF>
+			<KFM>Art/Units/Missionary_General/Missionary_General.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Bahai/Missionary_General_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_CANAANITE_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_canaanism.dds</Button>
+			<fScale>0.42</fScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/canaanite/Missionary_General_FX.nif</NIF>
+			<KFM>Art/Units/Missionary_General/Missionary_General.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/canaanite/Missionary_General_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_MISSIONARY_CAODAI</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_caodai.dds</Button>
+			<fScale>0.44</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<NIF>Art/Units/Missionary/Taoist/TaoistMissionary.nif</NIF>
+			<KFM>Art/Units/Missionary/Taoist/TaoistMissionary.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Taoist/TaoistMissionary_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>0.85</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_DRUID_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_druid.dds</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/Druid/Missionary_General_FX.nif</NIF>
+			<KFM>Art/Units/Missionary_General/Missionary_General.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Druid/Missionary_General_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>SND_UNIT_BUILD_DRUID_MISSIONARY</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_JAINISM_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_jainism.dds</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/Jainism/hindu_missionary_FX.nif</NIF>
+			<KFM>Art/Units/Missionary/Hindu/Hindu_Missionary.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Jainism/hindu_missionary_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_MESO_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_mesopotamian.dds</Button>
+			<fScale>0.42</fScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/Mesopotamian/Missionary_General_FX.nif</NIF>
+			<KFM>Art/Units/Missionary_General/Missionary_General.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Mesopotamian/Missionary_General_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_MORMON_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_mormon.dds</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/Mormon/hindu_missionary_FX.nif</NIF>
+			<KFM>Art/Units/Missionary/Hindu/Hindu_Missionary.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Mormon/hindu_missionary_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_MORMON_MISSIONARY</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_NGAI_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_ngaiism.dds</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/Ngai/hindu_missionary_FX.nif</NIF>
+			<KFM>Art/Units/Missionary/Hindu/Hindu_Missionary.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Ngai/hindu_missionary_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_NGAI_MISSIONARY</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_RODNOVERY_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_rodnovery.dds</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/Rodnovery/SlavicPolishSwordsmanwCape.nif</NIF>
+			<KFM>Art/Units/Unique_Sumeria_Vulture/Unique_Sumerian_Vulture.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Rodnovery/SlavicPolishSwordsmanwCape.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_RODNOVERY_MISSIONARY</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_SCIENTOLOGY_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_scientology.dds</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/Scientology/Spy.nif</NIF>
+			<KFM>Art/Units/Spy/Spy.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Scientology/Spy.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_SHAMAN_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_shaman.dds</Button>
+			<fScale>0.42</fScale>
+			<fInterfaceScale>0.97</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/Shaman/Missionary_General_FX.nif</NIF>
+			<KFM>Art/Units/Missionary_General/Missionary_General.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Shaman/Missionary_General_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_SHAMAN_MISSIONARY</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_SHINTO_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_shinto.dds</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/Shinto/confucian_missionary_FX.nif</NIF>
+			<KFM>Art/Units/Missionary/Confucian/Confucian_missionary.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Shinto/confucian_missionary_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>SND_BUILD_SHINTO_MISSIONARY</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_SIKHISM_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_sikh.dds</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/Sikh/islamic_missionary_fx.nif</NIF>
+			<KFM>Art/Units/Missionary/Islamic/Islamic_missionary.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Sikh/islamic_missionary_fx.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<!-- EgyptMyth -->
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_RA_FIST</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/ra_fist.dds</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/egyptian_sparth/heavy_swordsman/horusknight_fx.nif</NIF>
+			<KFM>Art/Units/Unique/Roman/Praetorian/Praetorian.kfm</KFM>
+			<SHADERNIF>Art/Units/egyptian_sparth/heavy_swordsman/horusknight_fx.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_RA_KNIGHT</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/ra_knight.dds</Button>
+			<fScale>0.42</fScale>
+			<fInterfaceScale>0.9</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Egyptian_Sparth/Heavy_Cavalry/Anubisknightarmor_fx.nif</NIF>
+			<KFM>Art/Units/Unique/Persia/Immortal/PersianImmortal.kfm</KFM>
+			<SHADERNIF>Art/Units/Egyptian_Sparth/Heavy_Cavalry/Anubisknightarmor_fx.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_TENGRI_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_tengri.dds</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/units/Missionary/Tengri/nordic_shaman.nif</NIF>
+			<KFM>Art/units/Missionary/Tengri/nordic_shaman.kfm</KFM>
+			<SHADERNIF>Art/units/Missionary/Tengri/nordic_shaman.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_SIBERIAN_MISSIONARY</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_HELLSMOUTH_DOG</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/hellsmouth_dog.dds</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Voodoo_Dog/wolf_fx.nif</NIF>
+			<KFM>Art/Units/wolf/wolf.kfm</KFM>
+			<SHADERNIF>Art/Units/Voodoo_Dog/wolf_fx.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_UNDEAD_WORKER</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/entranced_worker.dds</Button>
+			<fScale>0.34</fScale>
+			<fInterfaceScale>1.1</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Voodoo_Worker/Zombie_fx.nif</NIF>
+			<KFM>Art/Units/Worker/Worker.kfm</KFM>
+			<SHADERNIF>Art/Units/Voodoo_Worker/Zombie_fx.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>0.9</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_VOODOO_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_voodoo.dds</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/Voodoo/greatprophet_FX.nif</NIF>
+			<KFM>Art/Units/GreatPeople/Prophet/GreatProphet.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Voodoo/greatprophet_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_VOODOO_MISSIONARY</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
+		</UnitArtInfo>
+		<UnitArtInfo>
+			<Type>ART_DEF_UNIT_YORUBA_MISSIONARY</Type>
+			<Button>Art/Interface/Buttons/Units/sparth/missionary_yoruba.dds</Button>
+			<fScale>0.46</fScale>
+			<fInterfaceScale>1.0</fInterfaceScale>
+			<bActAsLand>0</bActAsLand>
+			<bActAsAir>0</bActAsAir>
+			<NIF>Art/Units/Missionary/Yoruba/buddhist_missionary_FX.nif</NIF>
+			<KFM>Art/Units/Missionary/Buddhist/Buddhist_missionary.kfm</KFM>
+			<SHADERNIF>Art/Units/Missionary/Yoruba/buddhist_missionary_FX.nif</SHADERNIF>
+			<ShadowDef>
+				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>
+				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
+				<fShadowScale>1.0</fShadowScale>
+			</ShadowDef>
+			<fBattleDistance>0.35</fBattleDistance>
+			<fRangedDeathTime>0.31</fRangedDeathTime>
+			<bActAsRanged>0</bActAsRanged>
+			<TrainSound>AS2D_UNIT_BUILD_YORUBA_MISSIONARY</TrainSound>
+			<AudioRunSounds>
+				<AudioRunTypeLoop />
+				<AudioRunTypeEnd />
+			</AudioRunSounds>
 		</UnitArtInfo>
 	</UnitArtInfos>
 </Civ4ArtDefines>

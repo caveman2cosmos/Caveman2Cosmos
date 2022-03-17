@@ -3,17 +3,16 @@
 //
 //  FILE:    CvInfoWater.cpp
 //
-//  AUTHOR:	
-//					
-//					
+//  AUTHOR:
 //
-//  PURPOSE: The base class for all info classes to inherit from.  
+//
+//
+//  PURPOSE: The base class for all info classes to inherit from.
 //
 //------------------------------------------------------------------------------------------------
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvInfos.h"
 #include "CvInfoWater.h"
 #include "CvXMLLoadUtility.h"
 
@@ -28,7 +27,7 @@
 //  PURPOSE :   Default constructor
 //
 //------------------------------------------------------------------------------------------------------
-CvWaterPlaneInfo::CvWaterPlaneInfo() 
+CvWaterPlaneInfo::CvWaterPlaneInfo()
 	: m_fMaterialAlpha(0.0f)
 	, m_BaseTextureScale(0.0f)
 	, m_fURate(0.0f)
@@ -71,12 +70,12 @@ NiColor	CvWaterPlaneInfo::getMaterialEmmisive() const// The water plane's materi
 	return m_kMaterialEmmisive;
 }
 //------------------------------------------------------------------------------------------------------
-const TCHAR * CvWaterPlaneInfo::getBaseTexture() const
+const char* CvWaterPlaneInfo::getBaseTexture() const
 {
 	return m_szBaseTexture;
 }
 //------------------------------------------------------------------------------------------------------
-const TCHAR * CvWaterPlaneInfo::getTransitionTexture() const
+const char* CvWaterPlaneInfo::getTransitionTexture() const
 {
 	return m_szTransitionTexture;
 }
@@ -154,17 +153,12 @@ bool CvWaterPlaneInfo::read(CvXMLLoadUtility* pXML)
 			pXML->GetChildXmlValByName( szTextVal, L"TextureFile");
 			m_szTransitionTexture = szTextVal;
 		}
-		
+
 		pXML->MoveToXmlParent();
 	}
 
 	pXML->MoveToXmlParent();
 	return true;
-}
-
-void CvWaterPlaneInfo::copyNonDefaults(CvWaterPlaneInfo* pClassInfo)
-{
-	// This is a bogus CopyNonDefault. Modders/Users should set the XML completely with all tags
 }
 
 //======================================================================================================
@@ -224,7 +218,7 @@ float CvTerrainPlaneInfo::getCloseAlpha() const		// The water plane's material a
 	return m_fCloseAlpha;
 }
 //------------------------------------------------------------------------------------------------------
-const TCHAR * CvTerrainPlaneInfo::getBaseTexture() const
+const char* CvTerrainPlaneInfo::getBaseTexture() const
 {
 	return m_szBaseTexture;
 }
@@ -295,15 +289,11 @@ bool CvTerrainPlaneInfo::read(CvXMLLoadUtility* pXML)
 	return true;
 }
 
-void CvTerrainPlaneInfo::copyNonDefaults(CvTerrainPlaneInfo* pClassInfo)
+void CvTerrainPlaneInfo::copyNonDefaults(const CvTerrainPlaneInfo* pClassInfo)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	int iAudioDefault = -1;  //all audio is default -1	
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
+	const float fDefault = 0.0f;
+	const CvString cDefault = CvString::format("").GetCString();
 
 	CvInfoBase::copyNonDefaults(pClassInfo);
 
@@ -359,7 +349,7 @@ bool CvCameraOverlayInfo::isVisible() const
 	return m_bVisible;
 }
 //------------------------------------------------------------------------------------------------------
-const TCHAR * CvCameraOverlayInfo::getBaseTexture() const
+const char* CvCameraOverlayInfo::getBaseTexture() const
 {
 	return m_szBaseTexture;
 }
@@ -376,7 +366,7 @@ bool CvCameraOverlayInfo::read(CvXMLLoadUtility* pXML)
 		return false;
 
 	pXML->GetChildXmlValByName( &m_bVisible, L"bVisible");
-	
+
 	pXML->GetChildXmlValByName( szTextVal, L"TextureFile");
 	m_szBaseTexture = szTextVal;
 
@@ -394,15 +384,10 @@ bool CvCameraOverlayInfo::read(CvXMLLoadUtility* pXML)
 	return true;
 }
 
-void CvCameraOverlayInfo::copyNonDefaults(CvCameraOverlayInfo* pClassInfo)
+void CvCameraOverlayInfo::copyNonDefaults(const CvCameraOverlayInfo* pClassInfo)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	int iAudioDefault = -1;  //all audio is default -1	
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const bool bDefault = false;
+	const CvString cDefault = CvString::format("").GetCString();
 
 	CvInfoBase::copyNonDefaults(pClassInfo);
 
@@ -412,5 +397,5 @@ void CvCameraOverlayInfo::copyNonDefaults(CvCameraOverlayInfo* pClassInfo)
 	if ( getCameraOverlayType() == CAMERA_OVERLAY_DECAL )
 	{
 		m_eCameraOverlayType = pClassInfo->getCameraOverlayType();
-	}	
+	}
 }

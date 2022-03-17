@@ -29,8 +29,8 @@
 		<VictoryInfo>
 			<Type>VICTORY_CULTURAL</Type>
 			<Description>TXT_KEY_VICTORY_CULTURAL</Description>
-			<CityCulture>CULTURELEVEL_PHENOMENAL</CityCulture>
-			<iNumCultureCities>3</iNumCultureCities>
+			<CityCulture>CULTURELEVEL_MONUMENTAL</CityCulture>
+			<iNumCultureCities>10</iNumCultureCities>
 			<VictoryMovie>ART_DEF_MOVIE_VICTORY_CULTURAL</VictoryMovie>
 		</VictoryInfo>
 		<VictoryInfo>

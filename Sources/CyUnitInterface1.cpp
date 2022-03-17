@@ -14,9 +14,6 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 	OutputDebugString("Python Extension Module - CyUnitPythonInterface1\n");
 
 	x
-		.def("getMADTargetPlot", &CyUnit::getMADTargetPlot, python::return_value_policy<python::manage_new_object>(), "CyPlot* ()")
-
-		.def("isNone", &CyUnit::isNone, "bool () - Is this a valid unit instance?")
 		.def("convert", &CyUnit::convert, "void (CyUnit* pUnit, bool bKillOriginal)")
 		.def("kill", &CyUnit::kill, "void (bool bDelay, int /*PlayerTypes*/ ePlayer)")
 		.def("NotifyEntity", &CyUnit::NotifyEntity, "void (int EntityEventType)")
@@ -25,7 +22,7 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 
 		.def("doCommand", &CyUnit::doCommand, "void (eCommand, iData1, iData2) - force the unit to perform eCommand")
 
-		.def("canMoveInto", &CyUnit::canMoveInto, "bool (CyPlot* pPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad)")
+		.def("canEnterPlot", &CyUnit::canEnterPlot, "bool (CyPlot* pPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad)")
 		.def("canHeal", &CyUnit::canHeal, "bool (CyPlot* pPlot)")
 		.def("canFound", &CyUnit::canFound, "bool (CyPlot* pPlot, bool bTestVisible)")
 		.def("canConstruct", &CyUnit::canConstruct, "bool (CyPlot* pPlot, int (BuildingTypes) eBuilding)")
@@ -38,7 +35,6 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("getGreatWorkCulture", &CyUnit::getGreatWorkCulture, "int (CyPlot* pPlot)")
 		.def("getEspionagePoints", &CyUnit::getEspionagePoints, "int (CyPlot* pPlot)")
 
-		.def("canBuild", &CyUnit::canBuild, "bool (CyPlot* pPlot, int (BuildTypes) eBuild, bool bTestVisible)")
 		.def("canUpgrade", &CyUnit::canUpgrade, "bool (int /*UnitTypes*/ eUnit, bool bTestVisible)")
 
 		.def("getHandicapType", &CyUnit::getHandicapType, "int ()")
@@ -48,7 +44,6 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("getUnitCombatType", &CyUnit::getUnitCombatType, "int ()")
 		.def("getDomainType", &CyUnit::getDomainType, "int ()")
 
-		.def("isBarbarian", &CyUnit::isBarbarian, "bool ()")
 		.def("isNPC", &CyUnit::isNPC, "bool ()")
 		.def("isHominid", &CyUnit::isHominid, "bool ()")
 		.def("isHuman", &CyUnit::isHuman, "bool ()")
@@ -66,8 +61,8 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 
 		.def("isGoldenAge", &CyUnit::isGoldenAge, "bool ()")
 		.def("isFighting", &CyUnit::isFighting, "bool ()")
-		.def("maxHitPoints", &CyUnit::maxHitPoints, "int ()")
-		.def("currHitPoints", &CyUnit::currHitPoints, "int ()")
+		.def("getMaxHP", &CyUnit::getMaxHP, "int ()")
+		.def("getHP", &CyUnit::getHP, "int ()")
 		.def("isHurt", &CyUnit::isHurt, "bool ()")
 		.def("isDead", &CyUnit::isDead, "bool ()")
 		.def("setBaseCombatStr", &CyUnit::setBaseCombatStr, "void (int)")
@@ -86,7 +81,7 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("isFortifyable", &CyUnit::isFortifyable, "bool ()")
 		//TB Combat Mods begin
 		//TB Combat Mods end
-		.def("experienceNeeded", &CyUnit::experienceNeeded, "int ()") 
+		.def("experienceNeeded", &CyUnit::experienceNeeded, "int ()")
 
 		.def("isInvisible", &CyUnit::isInvisible, "bool (int (TeamTypes) eTeam, bool bDebug)")
 		.def("isNukeImmune", &CyUnit::isNukeImmune, "bool ()")
@@ -96,10 +91,10 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		//TB Combat Mods End
 
 
-		.def("bombardRate", &CyUnit::bombardRate, "int ()") 
+		.def("bombardRate", &CyUnit::bombardRate, "int ()")
 
-		.def("specialCargo", &CyUnit::specialCargo, "int ()") 
-		.def("domainCargo", &CyUnit::domainCargo, "int ()") 
+		.def("specialCargo", &CyUnit::getSpecialCargo, "int ()")
+		.def("domainCargo", &CyUnit::getDomainCargo, "int ()")
 		.def("cargoSpace", &CyUnit::cargoSpace, "int ()")
 		.def("changeCargoSpace", &CyUnit::changeCargoSpace, "void (int)")
 		.def("isFull", &CyUnit::isFull, "bool ()")

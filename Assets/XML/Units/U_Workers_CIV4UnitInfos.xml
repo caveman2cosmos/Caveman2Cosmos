@@ -6,7 +6,7 @@
 	- This whole effort might be obsoleted if Flabbert gets a converted database structure working, but oh well.
 -->
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
-    <UnitInfos>
+	<UnitInfos>
 		<!-- ::::LAND:::: -->
 		<!-- Gatherer -->
 		<UnitInfo>
@@ -14,6 +14,7 @@
 			<Capture>UNIT_GATHERER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -25,7 +26,6 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<Description>TXT_KEY_UNIT_GATHERER</Description>
 			<Civilopedia>TXT_KEY_UNIT_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GATHERER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<UnitAIs>
@@ -43,100 +43,37 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_WORKER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_PREHISTORIC -->
-				<Build>
-					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TRAIL</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOOD_GATHERER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BURN_VEGETATION</BuildType>
+				<!-- Obsolete in: C2C_ERA_ANCIENT -->
+				<BuildType>BUILD_COTTAGE_KILL</BuildType>
+				<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
+				<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
+				<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
+				<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
+				<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
+				<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
+				<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
+				<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
+				<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
+				<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
+				<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
+				<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
+				<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
+				<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
+				<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
+				<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
+				<BuildType>BUILD_WOOD_GATHERER_KILL</BuildType>
 			</Builds>
 			<iCost>12</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -162,6 +99,7 @@
 			<Capture>UNIT_WORKER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -177,7 +115,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -198,164 +135,57 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
+				<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TRAIL</BuildType>
+				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
-				<Build>
-					<BuildType>BUILD_EARLY_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_EARLY_QUARRY</BuildType>
+				<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEED_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
+				<BuildType>BUILD_HUNTING_CAMP</BuildType>
+				<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_SEED_CAMP</BuildType>
+				<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_COTTAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERJACK</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COTTAGE</BuildType>
+				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_LUMBERJACK</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PATH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HAMLET</BuildType>
+				<BuildType>BUILD_MINE</BuildType>
+				<BuildType>BUILD_PATH</BuildType>
+				<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+				<BuildType>BUILD_TAR_GATHERER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_THATCH_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DESERT_CAMP</BuildType>
+				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
+				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
+				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
+				<BuildType>BUILD_SALT_GATHERER</BuildType>
+				<BuildType>BUILD_THATCH_CUTTER</BuildType>
+				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ORCHARD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SILK_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+				<BuildType>BUILD_ORCHARD</BuildType>
+				<BuildType>BUILD_PASTURE</BuildType>
+				<BuildType>BUILD_SILK_FARM</BuildType>
+				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
-				<Build>
-					<BuildType>BUILD_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_GEOGLYPH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 			</Builds>
-			<ForceObsoleteTech>TECH_NITROGLYCERIN</ForceObsoleteTech>
+			<ObsoleteTech>TECH_NITROGLYCERIN</ObsoleteTech>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iCost>90</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
@@ -400,6 +230,7 @@
 			<Capture>UNIT_WORKANIMAL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
@@ -417,7 +248,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKANIMAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKANIMAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -433,296 +263,104 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
+				<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TRAIL</BuildType>
+				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
-				<Build>
-					<BuildType>BUILD_EARLY_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_EARLY_QUARRY</BuildType>
+				<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEED_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
+				<BuildType>BUILD_HUNTING_CAMP</BuildType>
+				<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_SEED_CAMP</BuildType>
+				<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_COTTAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERJACK</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COTTAGE</BuildType>
+				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_LUMBERJACK</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PATH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MINE</BuildType>
+				<BuildType>BUILD_PATH</BuildType>
+				<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+				<BuildType>BUILD_TAR_GATHERER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_THATCH_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DESERT_CAMP</BuildType>
+				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
+				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
+				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
+				<BuildType>BUILD_SALT_GATHERER</BuildType>
+				<BuildType>BUILD_THATCH_CUTTER</BuildType>
+				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ORCHARD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SILK_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+				<BuildType>BUILD_ORCHARD</BuildType>
+				<BuildType>BUILD_PASTURE</BuildType>
+				<BuildType>BUILD_SILK_FARM</BuildType>
+				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
-				<Build>
-					<BuildType>BUILD_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_GEOGLYPH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_RENAISSANCE -->
-				<Build>
-					<BuildType>BUILD_HAMLET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_FORT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_PAVED_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WATERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PAVED_ROAD</BuildType>
+				<BuildType>BUILD_WATERMILL</BuildType>
+				<BuildType>BUILD_WORKSHOP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PEAT_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DRAIN_SWAMP</BuildType>
+				<BuildType>BUILD_LUMBERMILL</BuildType>
+				<BuildType>BUILD_PEAT_CUTTER</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_PLANTATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLANTATION</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ROAD</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_VILLAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_VILLAGE</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_WINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_WINDMILL</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_YOUNG_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_RENAISSANCE -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_TOWN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TOWN</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SHAFT_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
+				<BuildType>BUILD_SHAFT_MINE</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
+				<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RAILROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_FACTORY</BuildType>
+				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDRO_DAM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RADIO_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURBS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
+				<BuildType>BUILD_HYDRO_DAM</BuildType>
+				<BuildType>BUILD_RADIO_TOWER</BuildType>
+				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
-			<ForceObsoleteTech>TECH_LOGISTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<BonusType>BONUS_DOG</BonusType>
 			<iCost>120</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
@@ -753,6 +391,7 @@
 			<Capture>UNIT_WORKBUFFALO</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
@@ -770,7 +409,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKBUFFALO</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKBUFFALO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -786,299 +424,107 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
+				<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TRAIL</BuildType>
+				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
-				<Build>
-					<BuildType>BUILD_EARLY_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_EARLY_QUARRY</BuildType>
+				<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEED_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
+				<BuildType>BUILD_HUNTING_CAMP</BuildType>
+				<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_SEED_CAMP</BuildType>
+				<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_COTTAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERJACK</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COTTAGE</BuildType>
+				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_LUMBERJACK</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PATH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MINE</BuildType>
+				<BuildType>BUILD_PATH</BuildType>
+				<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+				<BuildType>BUILD_TAR_GATHERER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_THATCH_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DESERT_CAMP</BuildType>
+				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
+				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
+				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
+				<BuildType>BUILD_SALT_GATHERER</BuildType>
+				<BuildType>BUILD_THATCH_CUTTER</BuildType>
+				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ORCHARD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SILK_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+				<BuildType>BUILD_ORCHARD</BuildType>
+				<BuildType>BUILD_PASTURE</BuildType>
+				<BuildType>BUILD_SILK_FARM</BuildType>
+				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
-				<Build>
-					<BuildType>BUILD_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_GEOGLYPH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_RENAISSANCE -->
-				<Build>
-					<BuildType>BUILD_HAMLET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_FORT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_PAVED_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WATERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PAVED_ROAD</BuildType>
+				<BuildType>BUILD_WATERMILL</BuildType>
+				<BuildType>BUILD_WORKSHOP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PEAT_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DRAIN_SWAMP</BuildType>
+				<BuildType>BUILD_LUMBERMILL</BuildType>
+				<BuildType>BUILD_PEAT_CUTTER</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_PLANTATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLANTATION</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ROAD</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_VILLAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_VILLAGE</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_WINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_WINDMILL</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_YOUNG_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_RENAISSANCE -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_TOWN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TOWN</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SHAFT_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
+				<BuildType>BUILD_SHAFT_MINE</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
+				<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RAILROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_FACTORY</BuildType>
+				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDRO_DAM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RADIO_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURBS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
+				<BuildType>BUILD_HYDRO_DAM</BuildType>
+				<BuildType>BUILD_RADIO_TOWER</BuildType>
+				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BUFFALO_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
-			<ForceObsoleteTech>TECH_LOGISTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<iCost>150</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -1118,6 +564,7 @@
 			<Capture>UNIT_WORKMULE</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
@@ -1135,7 +582,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKMULE</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKMULE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -1151,300 +597,112 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
+				<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TRAIL</BuildType>
+				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
-				<Build>
-					<BuildType>BUILD_EARLY_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_EARLY_QUARRY</BuildType>
+				<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEED_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
+				<BuildType>BUILD_HUNTING_CAMP</BuildType>
+				<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_SEED_CAMP</BuildType>
+				<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_COTTAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERJACK</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COTTAGE</BuildType>
+				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_LUMBERJACK</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PATH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MINE</BuildType>
+				<BuildType>BUILD_PATH</BuildType>
+				<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+				<BuildType>BUILD_TAR_GATHERER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_THATCH_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DESERT_CAMP</BuildType>
+				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
+				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
+				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
+				<BuildType>BUILD_SALT_GATHERER</BuildType>
+				<BuildType>BUILD_THATCH_CUTTER</BuildType>
+				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ORCHARD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SILK_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+				<BuildType>BUILD_ORCHARD</BuildType>
+				<BuildType>BUILD_PASTURE</BuildType>
+				<BuildType>BUILD_SILK_FARM</BuildType>
+				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
-				<Build>
-					<BuildType>BUILD_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_GEOGLYPH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_RENAISSANCE -->
-				<Build>
-					<BuildType>BUILD_HAMLET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_FORT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_PAVED_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WATERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PAVED_ROAD</BuildType>
+				<BuildType>BUILD_WATERMILL</BuildType>
+				<BuildType>BUILD_WORKSHOP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PEAT_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DRAIN_SWAMP</BuildType>
+				<BuildType>BUILD_LUMBERMILL</BuildType>
+				<BuildType>BUILD_PEAT_CUTTER</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_PLANTATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLANTATION</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ROAD</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_VILLAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_VILLAGE</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_WINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_WINDMILL</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_YOUNG_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_RENAISSANCE -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_TOWN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TOWN</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SHAFT_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
+				<BuildType>BUILD_SHAFT_MINE</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
+				<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RAILROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_FACTORY</BuildType>
+				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDRO_DAM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RADIO_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURBS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
+				<BuildType>BUILD_HYDRO_DAM</BuildType>
+				<BuildType>BUILD_RADIO_TOWER</BuildType>
+				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
-			<ForceObsoleteTech>TECH_LOGISTICS</ForceObsoleteTech>
-			<BonusType>BONUS_DONKEY</BonusType>
+			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
+			<PrereqBonuses>
+				<BonusType>BONUS_DONKEY</BonusType>
+				<BonusType>BONUS_HORSE</BonusType>
+			</PrereqBonuses>
 			<iCost>150</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -1484,6 +742,7 @@
 			<Capture>UNIT_WORKELEPHANT</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
@@ -1501,7 +760,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKELEPHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKELEPHANT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -1517,299 +775,107 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
+				<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TRAIL</BuildType>
+				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
-				<Build>
-					<BuildType>BUILD_EARLY_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_EARLY_QUARRY</BuildType>
+				<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEED_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
+				<BuildType>BUILD_HUNTING_CAMP</BuildType>
+				<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_SEED_CAMP</BuildType>
+				<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_COTTAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERJACK</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COTTAGE</BuildType>
+				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_LUMBERJACK</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PATH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MINE</BuildType>
+				<BuildType>BUILD_PATH</BuildType>
+				<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+				<BuildType>BUILD_TAR_GATHERER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_THATCH_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DESERT_CAMP</BuildType>
+				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
+				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
+				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
+				<BuildType>BUILD_SALT_GATHERER</BuildType>
+				<BuildType>BUILD_THATCH_CUTTER</BuildType>
+				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ORCHARD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SILK_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+				<BuildType>BUILD_ORCHARD</BuildType>
+				<BuildType>BUILD_PASTURE</BuildType>
+				<BuildType>BUILD_SILK_FARM</BuildType>
+				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
-				<Build>
-					<BuildType>BUILD_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_GEOGLYPH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_RENAISSANCE -->
-				<Build>
-					<BuildType>BUILD_HAMLET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_FORT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_PAVED_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WATERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PAVED_ROAD</BuildType>
+				<BuildType>BUILD_WATERMILL</BuildType>
+				<BuildType>BUILD_WORKSHOP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PEAT_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DRAIN_SWAMP</BuildType>
+				<BuildType>BUILD_LUMBERMILL</BuildType>
+				<BuildType>BUILD_PEAT_CUTTER</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_PLANTATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLANTATION</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ROAD</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_VILLAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_VILLAGE</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_WINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_WINDMILL</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_YOUNG_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_RENAISSANCE -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_TOWN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TOWN</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SHAFT_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
+				<BuildType>BUILD_SHAFT_MINE</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
+				<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RAILROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_FACTORY</BuildType>
+				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDRO_DAM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RADIO_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURBS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
+				<BuildType>BUILD_HYDRO_DAM</BuildType>
+				<BuildType>BUILD_RADIO_TOWER</BuildType>
+				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
-			<ForceObsoleteTech>TECH_LOGISTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<iCost>150</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -1839,6 +905,7 @@
 			<Capture>UNIT_WORKLLAMA</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
@@ -1856,7 +923,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKLLAMA</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKLLAMA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -1872,299 +938,107 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
+				<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TRAIL</BuildType>
+				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
-				<Build>
-					<BuildType>BUILD_EARLY_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_EARLY_QUARRY</BuildType>
+				<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEED_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
+				<BuildType>BUILD_HUNTING_CAMP</BuildType>
+				<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_SEED_CAMP</BuildType>
+				<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_COTTAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERJACK</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COTTAGE</BuildType>
+				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_LUMBERJACK</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PATH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MINE</BuildType>
+				<BuildType>BUILD_PATH</BuildType>
+				<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+				<BuildType>BUILD_TAR_GATHERER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_THATCH_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DESERT_CAMP</BuildType>
+				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
+				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
+				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
+				<BuildType>BUILD_SALT_GATHERER</BuildType>
+				<BuildType>BUILD_THATCH_CUTTER</BuildType>
+				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ORCHARD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SILK_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+				<BuildType>BUILD_ORCHARD</BuildType>
+				<BuildType>BUILD_PASTURE</BuildType>
+				<BuildType>BUILD_SILK_FARM</BuildType>
+				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
-				<Build>
-					<BuildType>BUILD_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_GEOGLYPH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_RENAISSANCE -->
-				<Build>
-					<BuildType>BUILD_HAMLET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_FORT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_PAVED_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WATERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PAVED_ROAD</BuildType>
+				<BuildType>BUILD_WATERMILL</BuildType>
+				<BuildType>BUILD_WORKSHOP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PEAT_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DRAIN_SWAMP</BuildType>
+				<BuildType>BUILD_LUMBERMILL</BuildType>
+				<BuildType>BUILD_PEAT_CUTTER</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_PLANTATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLANTATION</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ROAD</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_VILLAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_VILLAGE</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_WINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_WINDMILL</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_YOUNG_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_RENAISSANCE -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_TOWN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TOWN</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SHAFT_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
+				<BuildType>BUILD_SHAFT_MINE</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
+				<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RAILROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_FACTORY</BuildType>
+				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDRO_DAM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RADIO_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURBS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
+				<BuildType>BUILD_HYDRO_DAM</BuildType>
+				<BuildType>BUILD_RADIO_TOWER</BuildType>
+				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
-			<ForceObsoleteTech>TECH_LOGISTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<iCost>150</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -2204,6 +1078,7 @@
 			<Capture>UNIT_WORKCAMEL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
@@ -2221,7 +1096,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKCAMEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKCAMEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -2237,299 +1111,107 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
+				<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_PALISADE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TRAIL</BuildType>
+				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_ANCIENT -->
-				<Build>
-					<BuildType>BUILD_EARLY_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_EARLY_QUARRY</BuildType>
+				<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEED_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
+				<BuildType>BUILD_HUNTING_CAMP</BuildType>
+				<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_SEED_CAMP</BuildType>
+				<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_COTTAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERJACK</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COTTAGE</BuildType>
+				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_LUMBERJACK</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PATH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MINE</BuildType>
+				<BuildType>BUILD_PATH</BuildType>
+				<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+				<BuildType>BUILD_TAR_GATHERER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_THATCH_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DESERT_CAMP</BuildType>
+				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
+				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
+				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
+				<BuildType>BUILD_SALT_GATHERER</BuildType>
+				<BuildType>BUILD_THATCH_CUTTER</BuildType>
+				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ORCHARD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SILK_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+				<BuildType>BUILD_ORCHARD</BuildType>
+				<BuildType>BUILD_PASTURE</BuildType>
+				<BuildType>BUILD_SILK_FARM</BuildType>
+				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
-				<Build>
-					<BuildType>BUILD_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_GEOGLYPH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_RENAISSANCE -->
-				<Build>
-					<BuildType>BUILD_HAMLET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HAMLET</BuildType>
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_FORT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_PAVED_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WATERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PAVED_ROAD</BuildType>
+				<BuildType>BUILD_WATERMILL</BuildType>
+				<BuildType>BUILD_WORKSHOP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PEAT_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DRAIN_SWAMP</BuildType>
+				<BuildType>BUILD_LUMBERMILL</BuildType>
+				<BuildType>BUILD_PEAT_CUTTER</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_PLANTATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLANTATION</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ROAD</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_VILLAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_VILLAGE</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_WINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_WINDMILL</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_YOUNG_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_RENAISSANCE -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_TOWN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TOWN</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SHAFT_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
+				<BuildType>BUILD_SHAFT_MINE</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
+				<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RAILROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_FACTORY</BuildType>
+				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDRO_DAM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RADIO_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURBS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
+				<BuildType>BUILD_HYDRO_DAM</BuildType>
+				<BuildType>BUILD_RADIO_TOWER</BuildType>
+				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
-			<ForceObsoleteTech>TECH_LOGISTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
 			<iCost>150</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -2569,6 +1251,7 @@
 			<Capture>UNIT_WORKER_INDUSTRIAL</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
@@ -2587,7 +1270,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKER_INDUSTRIAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_INDUSTRIAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -2603,295 +1285,104 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PATH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MINE</BuildType>
+				<BuildType>BUILD_PATH</BuildType>
+				<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+				<BuildType>BUILD_TAR_GATHERER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_THATCH_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DESERT_CAMP</BuildType>
+				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
+				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
+				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
+				<BuildType>BUILD_SALT_GATHERER</BuildType>
+				<BuildType>BUILD_THATCH_CUTTER</BuildType>
+				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ORCHARD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SILK_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+				<BuildType>BUILD_ORCHARD</BuildType>
+				<BuildType>BUILD_PASTURE</BuildType>
+				<BuildType>BUILD_SILK_FARM</BuildType>
+				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
-				<Build>
-					<BuildType>BUILD_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_GEOGLYPH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_FORT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FORT</BuildType>
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_PAVED_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WATERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PAVED_ROAD</BuildType>
+				<BuildType>BUILD_WATERMILL</BuildType>
+				<BuildType>BUILD_WORKSHOP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PEAT_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DRAIN_SWAMP</BuildType>
+				<BuildType>BUILD_LUMBERMILL</BuildType>
+				<BuildType>BUILD_PEAT_CUTTER</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_PLANTATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLANTATION</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ROAD</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_VILLAGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_VILLAGE</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_WINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_WINDMILL</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_YOUNG_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_RENAISSANCE -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_TOWN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TOWN</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SHAFT_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
+				<BuildType>BUILD_SHAFT_MINE</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
+				<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RAILROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_FACTORY</BuildType>
+				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDRO_DAM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RADIO_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURBS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
+				<BuildType>BUILD_HYDRO_DAM</BuildType>
+				<BuildType>BUILD_RADIO_TOWER</BuildType>
+				<BuildType>BUILD_SUBURBS</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ATOMIC -->
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_HIGHWAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HIGHWAY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
-				<Build>
-					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TREEFARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
+				<BuildType>BUILD_TREEFARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_MODERN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MODERN_MINE</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GROUNDWATER_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GROW_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NATURE_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_SAVANNA</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RADAR_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SCRUB_FALLOUT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_PANELS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
+				<BuildType>BUILD_GROUNDWATER_WELL</BuildType>
+				<BuildType>BUILD_GROW_FOREST</BuildType>
+				<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
+				<BuildType>BUILD_MODERN_WINDMILL</BuildType>
+				<BuildType>BUILD_NATURE_PRESERVE</BuildType>
+				<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+				<BuildType>BUILD_PLANT_JUNGLE</BuildType>
+				<BuildType>BUILD_PLANT_SAVANNA</BuildType>
+				<BuildType>BUILD_RADAR_TOWER</BuildType>
+				<BuildType>BUILD_SCRUB_FALLOUT</BuildType>
+				<BuildType>BUILD_SOLAR_PANELS</BuildType>
+				<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 			</Builds>
 			<PrereqTech>TECH_NITROGLYCERIN</PrereqTech>
-			<ForceObsoleteTech>TECH_MAINSTREAM_CLONING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
 			<iCost>600</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -2944,7 +1435,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BULLDOZER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -2961,61 +1451,31 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
-				<Build>
-					<BuildType>BUILD_PATH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PATH</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ROAD</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_RENAISSANCE -->
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ATOMIC -->
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_SCRUB_FALLOUT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_SCRUB_FALLOUT</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INFORMATION -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RECLAIM_LAND</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SANITIZE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
+				<BuildType>BUILD_RECLAIM_LAND</BuildType>
+				<BuildType>BUILD_SANITIZE</BuildType>
 			</Builds>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<ForceObsoleteTech>TECH_MAINSTREAM_CLONING</ForceObsoleteTech>
+			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_BIOFUEL</BonusType>
@@ -3046,6 +1506,7 @@
 			<Capture>UNIT_WORKER_MODERN</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -3063,7 +1524,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKER_MODERN</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -3079,307 +1539,110 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BURN_VEGETATION</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SALT_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_THATCH_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DESERT_CAMP</BuildType>
+				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
+				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
+				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
+				<BuildType>BUILD_SALT_GATHERER</BuildType>
+				<BuildType>BUILD_THATCH_CUTTER</BuildType>
+				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ORCHARD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SILK_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+				<BuildType>BUILD_ORCHARD</BuildType>
+				<BuildType>BUILD_PASTURE</BuildType>
+				<BuildType>BUILD_SILK_FARM</BuildType>
+				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
-				<Build>
-					<BuildType>BUILD_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_GEOGLYPH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<BuildType>BUILD_MACHU_PICCHU</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_PAVED_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WATERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WORKSHOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PAVED_ROAD</BuildType>
+				<BuildType>BUILD_WATERMILL</BuildType>
+				<BuildType>BUILD_WORKSHOP</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PEAT_CUTTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_DRAIN_SWAMP</BuildType>
+				<BuildType>BUILD_LUMBERMILL</BuildType>
+				<BuildType>BUILD_PEAT_CUTTER</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_PLANTATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLANTATION</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ROAD</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_WINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_WINDMILL</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_YOUNG_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_RENAISSANCE -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_TOWN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TOWN</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SHAFT_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
+				<BuildType>BUILD_SHAFT_MINE</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
+				<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
 				<!-- Obsolete in: C2C_ERA_ATOMIC -->
-				<Build>
-					<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RAILROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_FACTORY</BuildType>
+				<BuildType>BUILD_RAILROAD</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDRO_DAM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RADIO_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURBS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
+				<BuildType>BUILD_HYDRO_DAM</BuildType>
+				<BuildType>BUILD_RADIO_TOWER</BuildType>
+				<BuildType>BUILD_SUBURBS</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ATOMIC -->
 				<!-- Obsolete in: C2C_ERA_INFORMATION -->
-				<Build>
-					<BuildType>BUILD_SCRUB_FALLOUT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_SCRUB_FALLOUT</BuildType>
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_HIGHWAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HIGHWAY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
-				<Build>
-					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TREEFARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
+				<BuildType>BUILD_TREEFARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_MODERN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MODERN_MINE</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GROUNDWATER_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GROW_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NATURE_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_SAVANNA</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RADAR_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_PANELS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
+				<BuildType>BUILD_GROUNDWATER_WELL</BuildType>
+				<BuildType>BUILD_GROW_FOREST</BuildType>
+				<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
+				<BuildType>BUILD_MODERN_WINDMILL</BuildType>
+				<BuildType>BUILD_NATURE_PRESERVE</BuildType>
+				<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+				<BuildType>BUILD_PLANT_JUNGLE</BuildType>
+				<BuildType>BUILD_PLANT_SAVANNA</BuildType>
+				<BuildType>BUILD_RADAR_TOWER</BuildType>
+				<BuildType>BUILD_SOLAR_PANELS</BuildType>
+				<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INFORMATION -->
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_MAGLEV</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MAGLEV</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COMMAND_CENTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RECLAIM_LAND</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SANITIZE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
+				<BuildType>BUILD_COMMAND_CENTER</BuildType>
+				<BuildType>BUILD_RECLAIM_LAND</BuildType>
+				<BuildType>BUILD_SANITIZE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_NANOTECH -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_HYBRID_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VACTRAIN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VERTICAL_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HYBRID_FOREST</BuildType>
+				<BuildType>BUILD_VACTRAIN</BuildType>
+				<BuildType>BUILD_VERTICAL_FARM</BuildType>
 			</Builds>
 			<PrereqTech>TECH_LOGISTICS</PrereqTech>
-			<ForceObsoleteTech>TECH_PERSONAL_ROBOTS</ForceObsoleteTech>
-			<iCost>650</iCost>
+			<ObsoleteTech>TECH_PERSONAL_ROBOTS</ObsoleteTech>
+			<iCost>848</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>350</iWorkRate>
@@ -3407,6 +1670,7 @@
 			<Special>SPECIALUNIT_TROOP</Special>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CLONES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
@@ -3423,7 +1687,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CLONES</Description>
 			<Civilopedia>TXT_KEY_UNIT_CLONES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CLONES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -3439,206 +1702,77 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ORCHARD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SILK_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+				<BuildType>BUILD_ORCHARD</BuildType>
+				<BuildType>BUILD_PASTURE</BuildType>
+				<BuildType>BUILD_SILK_FARM</BuildType>
+				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
-				<Build>
-					<BuildType>BUILD_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_GEOGLYPH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_GEOGLYPH</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_PLANTATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLANTATION</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ROAD</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_YOUNG_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_RENAISSANCE -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
+				<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDRO_DAM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RADIO_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURBS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
+				<BuildType>BUILD_HYDRO_DAM</BuildType>
+				<BuildType>BUILD_RADIO_TOWER</BuildType>
+				<BuildType>BUILD_SUBURBS</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ATOMIC -->
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_HIGHWAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HIGHWAY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
-				<Build>
-					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TREEFARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
+				<BuildType>BUILD_TREEFARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_MODERN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MODERN_MINE</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GROUNDWATER_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GROW_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NATURE_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_SAVANNA</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RADAR_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_PANELS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
+				<BuildType>BUILD_GROUNDWATER_WELL</BuildType>
+				<BuildType>BUILD_GROW_FOREST</BuildType>
+				<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
+				<BuildType>BUILD_MODERN_WINDMILL</BuildType>
+				<BuildType>BUILD_NATURE_PRESERVE</BuildType>
+				<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+				<BuildType>BUILD_PLANT_JUNGLE</BuildType>
+				<BuildType>BUILD_PLANT_SAVANNA</BuildType>
+				<BuildType>BUILD_RADAR_TOWER</BuildType>
+				<BuildType>BUILD_SOLAR_PANELS</BuildType>
+				<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INFORMATION -->
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_MAGLEV</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MAGLEV</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COMMAND_CENTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RECLAIM_LAND</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SANITIZE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
+				<BuildType>BUILD_COMMAND_CENTER</BuildType>
+				<BuildType>BUILD_RECLAIM_LAND</BuildType>
+				<BuildType>BUILD_SANITIZE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_NANOTECH -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_HYBRID_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VACTRAIN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VERTICAL_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HYBRID_FOREST</BuildType>
+				<BuildType>BUILD_VACTRAIN</BuildType>
+				<BuildType>BUILD_VERTICAL_FARM</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CLONING_LABORATORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>
-			<ForceObsoleteTech>TECH_TRANSHUMAN_LIFESTYLE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_TRANSHUMAN_LIFESTYLE</ObsoleteTech>
 			<iCost>2800</iCost>
 			<iAdvancedStartCost>80</iAdvancedStartCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
@@ -3664,6 +1798,7 @@
 			<Capture>UNIT_WORKER_ANDROID</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -3680,7 +1815,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKER_ANDROID</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_ANDROID_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bWorkerTrade>1</bWorkerTrade>
@@ -3693,255 +1827,91 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ORCHARD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SILK_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WINERY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+				<BuildType>BUILD_ORCHARD</BuildType>
+				<BuildType>BUILD_PASTURE</BuildType>
+				<BuildType>BUILD_SILK_FARM</BuildType>
+				<BuildType>BUILD_WINERY</BuildType>
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
-				<Build>
-					<BuildType>BUILD_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_QUARRY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_QUARRY</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_GEOGLYPH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_GEOGLYPH</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
 				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_PLANTATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLANTATION</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ROAD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ROAD</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_YOUNG_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_RENAISSANCE -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
+				<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYDRO_DAM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RADIO_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURBS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
+				<BuildType>BUILD_HYDRO_DAM</BuildType>
+				<BuildType>BUILD_RADIO_TOWER</BuildType>
+				<BuildType>BUILD_SUBURBS</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ATOMIC -->
 				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
-				<Build>
-					<BuildType>BUILD_TREEFARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_TREEFARM</BuildType>
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_MODERN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MODERN_MINE</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GROUNDWATER_WELL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GROW_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NATURE_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_SAVANNA</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RADAR_TOWER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_PANELS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
+				<BuildType>BUILD_GROUNDWATER_WELL</BuildType>
+				<BuildType>BUILD_GROW_FOREST</BuildType>
+				<BuildType>BUILD_MANUFACTURING_COMPLEX</BuildType>
+				<BuildType>BUILD_MODERN_WINDMILL</BuildType>
+				<BuildType>BUILD_NATURE_PRESERVE</BuildType>
+				<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+				<BuildType>BUILD_PLANT_JUNGLE</BuildType>
+				<BuildType>BUILD_PLANT_SAVANNA</BuildType>
+				<BuildType>BUILD_RADAR_TOWER</BuildType>
+				<BuildType>BUILD_SOLAR_PANELS</BuildType>
+				<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INFORMATION -->
 				<!-- Obsolete in: C2C_ERA_GALACTIC -->
-				<Build>
-					<BuildType>BUILD_MAGLEV</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MAGLEV</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COMMAND_CENTER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_RECLAIM_LAND</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SANITIZE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_CLEAR_FALLOUT_FAST</BuildType>
+				<BuildType>BUILD_COMMAND_CENTER</BuildType>
+				<BuildType>BUILD_RECLAIM_LAND</BuildType>
+				<BuildType>BUILD_SANITIZE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_NANOTECH -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_HYBRID_FOREST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VACTRAIN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VERTICAL_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HYBRID_FOREST</BuildType>
+				<BuildType>BUILD_VACTRAIN</BuildType>
+				<BuildType>BUILD_VERTICAL_FARM</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_TRANSHUMAN -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_CORE_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAVITY_TRAIN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_DESERT</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_DUNES</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_GRASS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_LUSH</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_MUDDY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_PERMAFROST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_PLAINS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_ROCKY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_SCRUB</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_TUNDRA</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_CORE_MINE</BuildType>
+				<BuildType>BUILD_GRAVITY_TRAIN</BuildType>
+				<BuildType>BUILD_TERRAFORM_DESERT</BuildType>
+				<BuildType>BUILD_TERRAFORM_DUNES</BuildType>
+				<BuildType>BUILD_TERRAFORM_GRASS</BuildType>
+				<BuildType>BUILD_TERRAFORM_LUSH</BuildType>
+				<BuildType>BUILD_TERRAFORM_MUDDY</BuildType>
+				<BuildType>BUILD_TERRAFORM_PERMAFROST</BuildType>
+				<BuildType>BUILD_TERRAFORM_PLAINS</BuildType>
+				<BuildType>BUILD_TERRAFORM_ROCKY</BuildType>
+				<BuildType>BUILD_TERRAFORM_SCRUB</BuildType>
+				<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
+				<BuildType>BUILD_TERRAFORM_TUNDRA</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_GALACTIC -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_JUMPLANE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_JUMPLANE</BuildType>
 			</Builds>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANDROID_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_PERSONAL_ROBOTS</PrereqTech>
 			<iCost>3500</iCost>
 			<iBaseUpkeep>7</iBaseUpkeep>
@@ -3962,7 +1932,6 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
-
 		<!-- ::::NAVAL:::: -->
 		<!-- Workboat (Prehistoric) -->
 		<UnitInfo>
@@ -3970,6 +1939,7 @@
 			<Capture>UNIT_WORKBOAT</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
@@ -3986,7 +1956,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKBOAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKBOAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4025,36 +1994,18 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_WHALING_BOATS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_WHALING_BOATS</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FISHING_BOATS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FISHING_BOATS</BuildType>
+				<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_BEACON_CORAL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BEACON_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BEACON_CORAL</BuildType>
+				<BuildType>BUILD_BEACON_REEF</BuildType>
+				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 			</Builds>
 			<PrereqTech>TECH_FISHING</PrereqTech>
-			<iCost>48</iCost>
+			<iCost>61</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iWorkRate>100</iWorkRate>
@@ -4096,6 +2047,7 @@
 			<Capture>UNIT_WORKBOAT_CLASSIC</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
@@ -4112,7 +2064,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKBOAT_CLASSIC</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKBOAT_CLASSIC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4148,50 +2099,27 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_WHALING_BOATS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_WHALING_BOATS</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FISHING_BOATS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FISHING_BOATS</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_BEACON_CORAL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BEACON_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BEACON_CORAL</BuildType>
+				<BuildType>BUILD_BEACON_REEF</BuildType>
+				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_HARVEST_KELP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HARVEST_KELP</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SAILING</PrereqTech>
-			<iCost>60</iCost>
+			<iCost>100</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iWorkRate>150</iWorkRate>
@@ -4259,6 +2187,7 @@
 			<Capture>UNIT_WORKBOAT_MIDDLE</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
@@ -4275,7 +2204,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKBOAT_MIDDLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKBOAT_MIDDLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4311,55 +2239,28 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_WHALING_BOATS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_WHALING_BOATS</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FISHING_BOATS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FISHING_BOATS</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_BEACON_CORAL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BEACON_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BEACON_CORAL</BuildType>
+				<BuildType>BUILD_BEACON_REEF</BuildType>
+				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_HARVEST_KELP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HARVEST_KELP</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
-				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_FISHING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WHALING_SHIPS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
+				<BuildType>BUILD_WHALING_SHIPS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_RUDDER</PrereqTech>
-			<iCost>132</iCost>
+			<iCost>233</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>3</iMoves>
 			<iWorkRate>200</iWorkRate>
@@ -4427,6 +2328,7 @@
 			<Capture>UNIT_WORKBOAT_MODERN</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
@@ -4443,7 +2345,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKBOAT_MODERN</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKBOAT_MODERN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4481,68 +2382,31 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FISHING_BOATS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FISHING_BOATS</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_HARVEST_KELP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HARVEST_KELP</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
-				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_FISHING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WHALING_SHIPS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
+				<BuildType>BUILD_WHALING_SHIPS</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_BREAK_ICE_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TUNNEL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BREAK_ICE_KILL</BuildType>
+				<BuildType>BUILD_TUNNEL</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ATOMIC -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_MARINE_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEA_MILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TIDAL_HARNESS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MARINE_PRESERVE</BuildType>
+				<BuildType>BUILD_SEA_MILL</BuildType>
+				<BuildType>BUILD_TIDAL_HARNESS</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INFORMATION -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_SANITIZE_WATER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_SANITIZE_WATER</BuildType>
 			</Builds>
 			<PrereqTech>TECH_SCREW_PROPELLER</PrereqTech>
-			<iCost>396</iCost>
+			<iCost>492</iCost>
 			<iBaseUpkeep>4</iBaseUpkeep>
 			<iMoves>4</iMoves>
 			<iWorkRate>300</iWorkRate>
@@ -4567,6 +2431,7 @@
 			<Capture>UNIT_CONSTRUCT_SHIP</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
@@ -4583,7 +2448,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CONSTRUCT_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CONSTRUCT_SHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4618,80 +2482,37 @@
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FISHING_BOATS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FISHING_BOATS</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_HARVEST_KELP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HARVEST_KELP</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
-				<!-- Obsolete in: C2C_ERA_NANOTECH -->
-				<Build>
-					<BuildType>BUILD_FISHING_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WHALING_SHIPS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_LIGHTHOUSE_CORAL</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_REEF</BuildType>
+				<BuildType>BUILD_LIGHTHOUSE_GREAT_BARRIER_REEF</BuildType>
+				<BuildType>BUILD_WHALING_SHIPS</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_BREAK_ICE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TUNNEL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BREAK_ICE</BuildType>
+				<BuildType>BUILD_TUNNEL</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ATOMIC -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_MARINE_PRESERVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEA_MILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TIDAL_HARNESS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MARINE_PRESERVE</BuildType>
+				<BuildType>BUILD_SEA_MILL</BuildType>
+				<BuildType>BUILD_TIDAL_HARNESS</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_INFORMATION -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_SANITIZE_WATER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_SANITIZE_WATER</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_NANOTECH -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_AQUATIC_ANTI_AIR_DEFENSE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_AQUATIC_ANTI_AIR_DEFENSE</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_TRANSHUMAN -->
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_AQUATIC_FORCEFIELD</BuildType>
 			</Builds>
 			<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
-			<iCost>1200</iCost>
+			<iCost>1729</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>6</iMoves>
 			<iWorkRate>500</iWorkRate>
@@ -4715,6 +2536,7 @@
 			<Type>UNIT_OFFSHORE_PLATFORM</Type>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
@@ -4732,7 +2554,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_OFFSHORE_PLATFORM</Description>
 			<Civilopedia>TXT_KEY_UNIT_OFFSHORE_PLATFORM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OFFSHORE_PLATFORM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4746,10 +2567,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_OFFSHORE_PLATFORM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_OFFSHORE_PLATFORM</BuildType>
 			</Builds>
 			<PrereqTech>TECH_PLASTICS</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
@@ -4776,6 +2594,7 @@
 			<Type>UNIT_EXTRACTION_FACILITY</Type>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
@@ -4793,7 +2612,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EXTRACTION_FACILITY</Description>
 			<Civilopedia>TXT_KEY_UNIT_EXTRACTION_FACILITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_EXTRACTION_FACILITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4807,10 +2625,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_EXTRACTION_FACILITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_EXTRACTION_FACILITY</BuildType>
 			</Builds>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
 			<BonusType>BONUS_NANOTUBES</BonusType>
@@ -4843,6 +2658,7 @@
 			<Type>UNIT_SUBMERGED_TOWN_PLATFORM</Type>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
@@ -4860,7 +2676,6 @@
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBMERGED_TOWN_PLATFORM</Description>
 			<Civilopedia>TXT_KEY_UNIT_SUBMERGED_TOWN_PLATFORM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SUBMERGED_TOWN_PLATFORM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4874,14 +2689,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_SUBMERGED_TOWN</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<!-- <Build>
-					<BuildType>BUILD_SUBMERGED_TOWN_DEEP</BuildType>
-					<bBuild>1</bBuild>
-				</Build> -->
+				<BuildType>BUILD_SUBMERGED_TOWN</BuildType>
 			</Builds>
 			<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 			<BonusType>BONUS_NANOTUBES</BonusType>
@@ -4909,5 +2717,162 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
-    </UnitInfos>
+		<UnitInfo>
+			<Type>UNIT_UNDEAD_WORKER</Type>
+			<Capture>UNIT_WORKER</Capture>
+			<Combat>UNITCOMBAT_WORKER</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_PATHETIC</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_COMPANY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_UNDEAD_WORKER</Description>
+			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
+			<bFood>1</bFood>
+			<UnitUpgrades>
+				<UnitType>UNIT_WORKER_INDUSTRIAL</UnitType>
+			</UnitUpgrades>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_WORKER</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<Builds>
+				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
+				<!-- Obsolete in: C2C_ERA_ANCIENT -->
+				<BuildType>BUILD_FORTIFIED_CAVE</BuildType>
+				<BuildType>BUILD_WOODEN_WATCHTOWER</BuildType>
+				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
+				<BuildType>BUILD_TRAIL</BuildType>
+				<BuildType>BUILD_WOODEN_PALISADE</BuildType>
+				<!-- Obsolete in: C2C_ERA_INFORMATION -->
+				<BuildType>BUILD_BURN_VEGETATION</BuildType>
+				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
+				<!-- Obsolete in: C2C_ERA_ANCIENT -->
+				<BuildType>BUILD_EARLY_QUARRY</BuildType>
+				<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_GRAPE_PICKING_CAMP</BuildType>
+				<!-- Obsolete in: C2C_ERA_CLASSICAL -->
+				<BuildType>BUILD_FORTIFIED_CAVE_WITH_CACHE</BuildType>
+				<BuildType>BUILD_HUNTING_CAMP</BuildType>
+				<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
+				<BuildType>BUILD_SEED_CAMP</BuildType>
+				<BuildType>BUILD_STONE_TOOLS_WORKSHOP</BuildType>
+				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
+				<BuildType>BUILD_COTTAGE</BuildType>
+				<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_LUMBERJACK</BuildType>
+				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
+				<BuildType>BUILD_MINE</BuildType>
+				<BuildType>BUILD_PATH</BuildType>
+				<BuildType>BUILD_STONE_WATCHTOWER</BuildType>
+				<BuildType>BUILD_TAR_GATHERER</BuildType>
+				<!-- Obsolete in: C2C_ERA_INFORMATION -->
+				<BuildType>BUILD_DESERT_CAMP</BuildType>
+				<BuildType>BUILD_HUNTING_PRESERVE</BuildType>
+				<BuildType>BUILD_JUNGLE_CAMP</BuildType>
+				<BuildType>BUILD_REMOVE_VEGETATION</BuildType>
+				<BuildType>BUILD_SALT_GATHERER</BuildType>
+				<BuildType>BUILD_THATCH_CUTTER</BuildType>
+				<BuildType>BUILD_WETLANDS_CAMP</BuildType>
+				<!-- Obsolete in: C2C_ERA_NANOTECH -->
+				<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
+				<BuildType>BUILD_ORCHARD</BuildType>
+				<BuildType>BUILD_PASTURE</BuildType>
+				<BuildType>BUILD_SILK_FARM</BuildType>
+				<BuildType>BUILD_WINERY</BuildType>
+				<!-- Obsolete in: C2C_ERA_TRANSHUMAN -->
+				<BuildType>BUILD_FARM</BuildType>
+				<!-- Obsolete in: C2C_ERA_GALACTIC -->
+				<BuildType>BUILD_QUARRY</BuildType>
+				<!-- Obsolete in: C2C_ERA_FUTURE -->
+				<BuildType>BUILD_GEOGLYPH</BuildType>
+				<!-- BUILDS REQUIRING: C2C_ERA_CLASSICAL -->
+				<!-- Obsolete in: C2C_ERA_RENAISSANCE -->
+				<BuildType>BUILD_HAMLET</BuildType>
+				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
+				<BuildType>BUILD_FORT</BuildType>
+				<!-- Obsolete in: C2C_ERA_ATOMIC -->
+				<BuildType>BUILD_PAVED_ROAD</BuildType>
+				<BuildType>BUILD_WATERMILL</BuildType>
+				<BuildType>BUILD_WORKSHOP</BuildType>
+				<!-- Obsolete in: C2C_ERA_INFORMATION -->
+				<BuildType>BUILD_DRAIN_SWAMP</BuildType>
+				<BuildType>BUILD_LUMBERMILL</BuildType>
+				<BuildType>BUILD_PEAT_CUTTER</BuildType>
+				<!-- Obsolete in: C2C_ERA_NANOTECH -->
+				<BuildType>BUILD_PLANTATION</BuildType>
+				<!-- Obsolete in: C2C_ERA_FUTURE -->
+				<BuildType>BUILD_ROAD</BuildType>
+				<!-- BUILDS REQUIRING: C2C_ERA_MEDIEVAL -->
+				<!-- Obsolete in: C2C_ERA_INDUSTRIAL -->
+				<BuildType>BUILD_VILLAGE</BuildType>
+				<!-- Obsolete in: C2C_ERA_INFORMATION -->
+				<BuildType>BUILD_WINDMILL</BuildType>
+				<!-- Obsolete in: C2C_ERA_FUTURE -->
+				<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
+				<BuildType>BUILD_YOUNG_FOREST</BuildType>
+				<!-- BUILDS REQUIRING: C2C_ERA_RENAISSANCE -->
+				<!-- Obsolete in: C2C_ERA_ATOMIC -->
+				<BuildType>BUILD_TOWN</BuildType>
+				<!-- Obsolete in: C2C_ERA_INFORMATION -->
+				<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
+				<BuildType>BUILD_SHAFT_MINE</BuildType>
+				<!-- Obsolete in: C2C_ERA_FUTURE -->
+				<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
+				<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
+				<!-- BUILDS REQUIRING: C2C_ERA_INDUSTRIAL -->
+				<!-- Obsolete in: C2C_ERA_ATOMIC -->
+				<BuildType>BUILD_STEEL_WATCHTOWER</BuildType>
+				<!-- Obsolete in: C2C_ERA_INFORMATION -->
+				<BuildType>BUILD_COMMAND_BUNKER</BuildType>
+				<BuildType>BUILD_FACTORY</BuildType>
+				<BuildType>BUILD_RAILROAD</BuildType>
+				<!-- Obsolete in: C2C_ERA_FUTURE -->
+				<BuildType>BUILD_FOREST_PRESERVE</BuildType>
+				<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
+				<BuildType>BUILD_HYDRO_DAM</BuildType>
+				<BuildType>BUILD_RADIO_TOWER</BuildType>
+				<BuildType>BUILD_SUBURBS</BuildType>
+			</Builds>
+			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
+			<ReligionType>RELIGION_VOODOO</ReligionType>
+			<StateReligion>RELIGION_VOODOO</StateReligion>
+			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_VOODOO_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
+			<iCost>250</iCost>
+			<iBaseUpkeep>1</iBaseUpkeep>
+			<iMoves>2</iMoves>
+			<iWorkRate>150</iWorkRate>
+			<iAsset>3</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>2</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>2</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>2</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_UNDEAD_WORKER</EarlyArtDefineTag>
+					<LateArtDefineTag>ART_DEF_UNIT_UNDEAD_WORKER</LateArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+		</UnitInfo>
+	</UnitInfos>
 </Civ4UnitInfos>

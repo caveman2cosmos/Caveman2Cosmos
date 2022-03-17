@@ -22,7 +22,7 @@ class CvCity;
 class CvUnit;
 class CvPlot;
 
-class CvDLLEntity : bst::noncopyable
+class CvDLLEntity
 {
 public:
 	CvDLLEntity();
@@ -45,7 +45,7 @@ public:
 	void destroyEntity();
 
 	DllExport bool IsSelected() const;
-	void PlayAnimation(AnimationTypes eAnim, float fSpeed = 1.0f, bool bQueue = false, int iLayer = 0, 
+	void PlayAnimation(AnimationTypes eAnim, float fSpeed = 1.0f, bool bQueue = false, int iLayer = 0,
 		float fStartPct = 0.0f, float fEndPct = 1.0f);
 	void StopAnimation(AnimationTypes eAnim);
 	void MoveTo( const CvPlot * pkPlot );

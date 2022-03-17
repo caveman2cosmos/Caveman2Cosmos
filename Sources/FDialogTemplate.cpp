@@ -177,10 +177,10 @@ void CDialogTemplate::AppendString(LPCSTR string)
 {
 	int length = MultiByteToWideChar(CP_ACP, 0, string, -1, NULL, 0);
 
-	WCHAR* wideString = (WCHAR*)malloc(sizeof(WCHAR) * length);
+	wchar_t* wideString = (wchar_t*)malloc(sizeof(wchar_t) * length);
 	MultiByteToWideChar(CP_ACP, 0, string, -1, wideString, length);
 
-	AppendData(wideString, length * sizeof(WCHAR));
+	AppendData(wideString, length * sizeof(wchar_t));
 	free(wideString);
 }
 

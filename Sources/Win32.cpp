@@ -89,7 +89,7 @@ bool Win32::isFocused()
 	{
 		return NULL;
 	}
-	return std::find(args.handles.begin(), args.handles.end(), GetFocus()) != args.handles.end();
+	return algo::any_of_equal(args.handles, GetFocus());
 }
 
 POINT Win32::getCursorPos()

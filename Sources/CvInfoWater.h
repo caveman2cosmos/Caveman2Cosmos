@@ -6,7 +6,7 @@
 //  FILE:    CvInfosWater.h
 //
 //  AUTHOR:	tomw
-//					
+//
 //
 //  PURPOSE: All Civ4 info classes and the base class for them
 //
@@ -18,17 +18,21 @@
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
-class CvInfoBase;
+#include "CvInfos.h"
+#include "NiPoint.h"
+
 class CvXMLLoadUtility;
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
 //  class : CvWaterPlaneInfo
 //
-//  DESC:   
+//  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvWaterPlaneInfo : public CvInfoBase
+class CvWaterPlaneInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -43,12 +47,11 @@ public:
 	DllExport float getTextureScaling() const;				// The water plane's texture scale
 	DllExport float getTextureScrollRateU() const;			// The water plane's texture scroll rate in U
 	DllExport float getTextureScrollRateV() const;			// The water plane's texture scroll rate in V
-	DllExport const TCHAR * getBaseTexture() const;
+	DllExport const char* getBaseTexture() const;
 
-	DllExport const TCHAR *getTransitionTexture() const;
+	DllExport const char* getTransitionTexture() const;
 
 	bool read(CvXMLLoadUtility*);
-	void copyNonDefaults(CvWaterPlaneInfo* pClassInfo);
 
 protected:
 
@@ -70,10 +73,12 @@ protected:
 //
 //  class : CvTerrainPlaneInfo
 //
-//  DESC:   
+//  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvTerrainPlaneInfo : public CvInfoBase
+class CvTerrainPlaneInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -91,10 +96,10 @@ public:
 	DllExport float getTextureScrollRateV() const;			// The terrain plane's texture scroll rate in V
 	DllExport float getZHeight() const;						// The terrain plane's z height in world units
 	DllExport FogTypes getFogType() const;
-	DllExport const TCHAR * getBaseTexture() const;
+	DllExport const char* getBaseTexture() const;
 
 	bool read(CvXMLLoadUtility*);
-	void copyNonDefaults(CvTerrainPlaneInfo* pClassInfo);
+	void copyNonDefaults(const CvTerrainPlaneInfo* pClassInfo);
 
 protected:
 
@@ -118,10 +123,12 @@ protected:
 //
 //  class : CvTerrainPlaneInfo
 //
-//  DESC:   
+//  DESC:
 //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCameraOverlayInfo : public CvInfoBase
+class CvCameraOverlayInfo
+	: public CvInfoBase
+	, private bst::noncopyable
 {
 public:
 
@@ -130,10 +137,10 @@ public:
 
 	DllExport bool isVisible() const;				// The terrain plane's material alpha
 	DllExport CameraOverlayTypes getCameraOverlayType() const;
-	DllExport const TCHAR * getBaseTexture() const;
+	DllExport const char* getBaseTexture() const;
 
 	bool read(CvXMLLoadUtility*);
-	void copyNonDefaults(CvCameraOverlayInfo* pClassInfo);
+	void copyNonDefaults(const CvCameraOverlayInfo* pClassInfo);
 
 protected:
 

@@ -13,17 +13,11 @@ void CyMessageControl::sendDoTask(int iCity, int eTask, int iData1, int iData2, 
 	CvMessageControl::getInstance().sendDoTask(iCity, (TaskTypes) eTask, iData1, iData2, bOption, bAlt, bShift, bCtrl);
 }
 
-void CyMessageControl::sendUpdateCivics(boost::python::list& iCivics)
+void CyMessageControl::sendUpdateCivics(const python::list& lCivics)
 {
-	int *PYiCivics = NULL;		//	do not delete this memory
-	gDLL->getPythonIFace()->putSeqInArray(iCivics.ptr(), &PYiCivics);
-	std::vector<CivicTypes> aiCivics;
-	for (int i = 0; i < GC.getNumCivicOptionInfos(); ++i)
-	{
-		aiCivics.push_back((CivicTypes) PYiCivics[i]);
-	}
-	CvMessageControl::getInstance().sendUpdateCivics(aiCivics);
-	delete[] PYiCivics;
+	std::vector<CivicTypes> v;
+	python::container_utils::extend_container(v, lCivics);
+	CvMessageControl::getInstance().sendUpdateCivics(v);
 }
 
 void CyMessageControl::sendEmpireSplit(int /*PlayerTypes*/ ePlayer, int iAreaId)

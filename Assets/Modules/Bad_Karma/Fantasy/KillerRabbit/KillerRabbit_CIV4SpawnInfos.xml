@@ -4,7 +4,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_KILLERRABBIT_BASE</Type>
 			<UnitType>UNIT_KILLERRABBIT</UnitType>
-			<PlayerType>41</PlayerType>
+			<PlayerType>PREDATOR_PLAYER</PlayerType>
 			<iTurns>100</iTurns>
 			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>

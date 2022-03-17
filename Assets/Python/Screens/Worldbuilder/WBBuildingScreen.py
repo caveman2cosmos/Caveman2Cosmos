@@ -41,12 +41,12 @@ class WBBuildingScreen:
 		screen.addPanel("MainBG", u"", u"", True, False, -10, -10, screen.getXResolution() + 20, screen.getYResolution() + 20, PanelStyles.PANEL_STYLE_MAIN )
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
-		screen.setLabel("BuildingHeader", "Background", u"<font=4b>" + CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ()) + "</font>", 1<<2, screen.getXResolution() * 5/8 - 10, screen.getYResolution()/2, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setLabel("BuildingHeader", "Background", u"<font=4b>" + CyTranslator().getText("TXT_KEY_WB_BUILDINGS", ()) + "</font>", 1<<2, screen.getXResolution() * 5/8 - 10, screen.getYResolution()/2, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		screen.setLabel("WonderHeader", "Background", u"<font=4b>" + CyTranslator().getText("TXT_KEY_CONCEPT_WONDERS", ()) + "</font>", 1<<2, screen.getXResolution() * 5/8 - 10, 20, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		sText = CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=3b>" + CyTranslator().getText("TXT_KEY_WB_GRANT_AVAILABLE", ()) + "</color></font>"
 		screen.setText("BuildingAvailable", "Background", sText, 1<<2, screen.getXResolution() * 5/8 - 10, screen.getYResolution()/2 + 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		screen.setText("WonderAvailable", "Background", sText, 1<<2, screen.getXResolution() * 5/8 - 10, 50, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		screen.setText("WBBuildingExit", "Background", "<font=4>" + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
+		screen.setText("WBBuildingExit", "Background", "<font=4>" + CyTranslator().getText("TXT_WORD_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
 
 		iWidth = screen.getXResolution()/4 - 40
 
@@ -68,7 +68,7 @@ class WBBuildingScreen:
 		screen.addDropDownBoxGFC("CurrentPage", 20, screen.getYResolution() - 42, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY_DATA", ()), 0, 0, False)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY_DATA2", ()), 1, 1, False)
-		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ()), 2, 2, True)
+		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_BUILDINGS", ()), 2, 2, True)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_PLAYER_DATA", ()), 3, 3, False)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_TEAM_DATA", ()), 4, 4, False)
 		screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_RELIGION", ()), 8, 8, False)
@@ -197,7 +197,7 @@ class WBBuildingScreen:
 		iHeight = iMaxRows * 24 + 2
 		screen.addTableControlGFC("WBWonders", nColumns, screen.getXResolution()/4, self.iTable_Y, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD )
 		for i in xrange(nColumns):
-			screen.setTableColumnHeader( "WBWonders", i, "", iWidth/nColumns)		
+			screen.setTableColumnHeader( "WBWonders", i, "", iWidth/nColumns)
 
 		nRows = (len(lWonders) + nColumns - 1) / nColumns
 		for i in xrange(nRows):

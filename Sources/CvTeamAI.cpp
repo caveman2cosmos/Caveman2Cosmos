@@ -3,6 +3,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
 #include "CvBuildingInfo.h"
+#include "CvBonusInfo.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
@@ -31,10 +32,10 @@ void CvTeamAI::freeStatics()
 	SAFE_DELETE_ARRAY(m_aTeams);
 }
 
-// inlined for performance reasons
-DllExport CvTeamAI& CvTeamAI::getTeamNonInl(TeamTypes eTeam)
+CvTeamAI& CvTeamAI::getTeam(TeamTypes eTeam)
 {
-	return getTeam(eTeam);
+	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
+	return m_aTeams[eTeam];
 }
 
 
@@ -337,18 +338,15 @@ AreaAITypes CvTeamAI::AI_calculateAreaAIType(const CvArea* pArea, const bool bPr
 	{
 		if (pArea->getNumCities() - pArea->getCitiesPerPlayer(BARBARIAN_PLAYER) == 0)
 		{
-			return AREAAI_ASSAULT;
+			return AREAAI_ASSAULT; // Toffer - Basically means that it should naval invade
 		}
-		if (
-		(
-			countNumAIUnitsByArea(pArea, UNITAI_ATTACK) +
-			countNumAIUnitsByArea(pArea, UNITAI_ATTACK_CITY) +
-			countNumAIUnitsByArea(pArea, UNITAI_PILLAGE) +
-			countNumAIUnitsByArea(pArea, UNITAI_ATTACK_AIR)
-		)
-		> 1 + AI_countMilitaryWeight(pArea) * 20 / 100)
+		if (  countNumAIUnitsByArea(pArea, UNITAI_ATTACK)
+			+ countNumAIUnitsByArea(pArea, UNITAI_ATTACK_CITY)
+			+ countNumAIUnitsByArea(pArea, UNITAI_PILLAGE)
+			>
+			2 * AI_countMilitaryWeight(pArea))
 		{
-			return AREAAI_OFFENSIVE; // XXX does this ever happen?
+			return AREAAI_OFFENSIVE;
 		}
 		return AREAAI_MASSING;
 	}
@@ -1032,7 +1030,7 @@ int CvTeamAI::AI_startWarVal(TeamTypes eTeam) const
 		iValue *= 1;
 		break;
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
@@ -1350,7 +1348,7 @@ int CvTeamAI::AI_getBarbarianCivWarVal(TeamTypes eTeam, int iMaxDistance) const
 		}
 		default:
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 	}
@@ -1361,7 +1359,6 @@ int CvTeamAI::AI_getBarbarianCivWarVal(TeamTypes eTeam, int iMaxDistance) const
 int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 {
 	PROFILE_FUNC();
-
 	FAssert(eTeam != getID());
 	FAssertMsg(!isHasTech(eTech), "Buying a tech one already own has no value");
 
@@ -1369,24 +1366,14 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 	{
 		m_tradeTechValueCache.clear();
 		m_tradeTechValuesCachedTurn = GC.getGame().getGameTurn();
-		//logBBAI("Flush trade value cache for team %d", getID());
 	}
-
-	int iCacheIndex = eTech * MAX_TEAMS + getID();
+	const int iCacheIndex = eTech * MAX_TEAMS + getID();
 
 	stdext::hash_map<int,int>::const_iterator itr = m_tradeTechValueCache.find(iCacheIndex);
 	if (itr != m_tradeTechValueCache.end())
 	{
-		/*
-		logBBAI(
-			"Found cached trade value for tech %S by team %d for team %d",
-			GC.getTechInfo(eTech).getDescription(), (int)eTeam, getID()
-		);
-		*/
 		return itr->second;
 	}
-
-	int iValue;
 	{
 		PROFILE("CvTeamAI::AI_techTradeVal.CacheMiss");
 
@@ -1430,21 +1417,19 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 				}
 			}
 		}
-
 		const bool bAsync = (teamLeader.isHuman() || GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHuman());
 
-		const int iOurActualTechValue = teamLeader.AI_TechValueCached(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave, true);
-		const int iAverageTechValue = teamLeader.AI_averageCurrentTechValue(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		const float iOurActualTechValue = (float)teamLeader.AI_TechValueCached(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave, true);
+		const float iAverageTechValue = (float)teamLeader.AI_averageCurrentTechValue(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
 
-		//	Multiply the base cost by a squashing function of relative goodness of the proposed tech and an average one
-		//	from what we can currently research
-		const float boost = ((float)iOurActualTechValue-(float)iAverageTechValue)/((float)iOurActualTechValue+(float)iAverageTechValue);
-		const float sigma = 1.0f/(1.0f+exp(-boost));
+		// Multiply the base cost by a squashing function of relative goodness of the proposed tech and an average one from what we can currently research
+		const float boost = (iOurActualTechValue - iAverageTechValue) / (iOurActualTechValue + iAverageTechValue);
+		const float sigma = 1.0f / (1.0f + exp(-boost));
 
-		int iCost = std::max(1, (getResearchCost(eTech) - getResearchProgress(eTech)));
-		iCost = (int)((float)iCost*(sigma*sigma*3 + 0.25f));
+		int iCost = std::max(1, getResearchCost(eTech) - getResearchProgress(eTech));
+		iCost = (int)(iCost * (sigma * sigma * 3 + 0.25f));
 
-		iValue = iCost * 3/2;
+		int iValue = iCost * 3/2;
 
 		int iKnownCount = 0;
 		int iPossibleKnownCount = 0;
@@ -1460,15 +1445,14 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 				iPossibleKnownCount++;
 			}
 		}
-
 		iValue += iCost * (iPossibleKnownCount - iKnownCount) / (2*iPossibleKnownCount);
 
-		iValue *= std::max(0, 100 + GC.getTechInfo(eTech).getAITradeModifier());
-		iValue /= 100;
+		iValue = getModifiedIntValue(iValue, GC.getTechInfo(eTech).getAITradeModifier());
 
 		m_tradeTechValueCache[iCacheIndex] = iValue;
+
+		return iValue;
 	}
-	return iValue;
 }
 
 
@@ -1504,7 +1488,7 @@ DenialTypes CvTeamAI::AI_techTrade(const TechTypes eTech, const TeamTypes eTeam)
 	const CvGame& game = GC.getGame();
 	const bool bTechBrokering = !game.isOption(GAMEOPTION_NO_TECH_BROKERING);
 
-	// Afforess - Don't Sell Military Secrets when gearing for war 
+	// Afforess - Don't Sell Military Secrets when gearing for war
 	if (getAnyWarPlanCount(true) > 0 && GC.getTechInfo(eTech).getFlavorValue(GC.getInfoTypeForString("FLAVOR_MILITARY")) > 3
 	// Only worry about the receiving team if there is no tech brokering.
 	&& (bTechBrokering || AI_getWarPlan(eTeam) != NO_WARPLAN))
@@ -1522,7 +1506,7 @@ DenialTypes CvTeamAI::AI_techTrade(const TechTypes eTech, const TeamTypes eTeam)
 			{
 				int iNoTechTradeThreshold = AI_noTechTradeThreshold();
 
-				iNoTechTradeThreshold *= GC.getGameSpeedInfo(game.getGameSpeedType()).getResearchPercent();
+				iNoTechTradeThreshold *= GC.getGameSpeedInfo(game.getGameSpeedType()).getSpeedPercent();
 				iNoTechTradeThreshold /= 100;
 
 				iNoTechTradeThreshold *= std::max(0, 100 + GC.getHandicapInfo(GET_TEAM(eTeam).getHandicapType()).getNoTechTradeModifier());
@@ -2263,7 +2247,7 @@ bool CvTeamAI::AI_acceptSurrender(TeamTypes eSurrenderTeam) const
 				if (!bValuable)
 				{
 					// Valuable terrain bonuses
-					foreach_(const CvPlot* loopPlot, pLoopCity->plots())
+					foreach_(const CvPlot* loopPlot, pLoopCity->plots(NUM_CITY_PLOTS))
 					{
 						const BonusTypes eBonus = loopPlot->getNonObsoleteBonusType(getID());
 
@@ -2603,7 +2587,7 @@ int CvTeamAI::AI_makePeaceTradeVal(TeamTypes ePeaceTeam, TeamTypes eTeam) const
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
@@ -2697,7 +2681,7 @@ int CvTeamAI::AI_declareWarTradeVal(TeamTypes eWarTeam, TeamTypes eTeam) const
 		break;
 
 	default:
-		FAssert(false);
+		FErrorMsg("error");
 		break;
 	}
 
@@ -2747,7 +2731,7 @@ int CvTeamAI::AI_declareWarTradeVal(TeamTypes eWarTeam, TeamTypes eTeam) const
 			break;
 
 		default:
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 		iValue /= 100;
@@ -3046,7 +3030,7 @@ void CvTeamAI::AI_updateWorstEnemy()
 		if (teamX.isAlive() && iI != getID() && !teamX.isVassal(getID()) && isHasMet(eTeamX)
 		&& AI_getAttitude(eTeamX) < (bRuthless ? ATTITUDE_FRIENDLY : ATTITUDE_CAUTIOUS))
 		{
-			const int iValue = 
+			const int iValue =
 			(
 				AI_getAttitudeVal(eTeamX) +
 				// Our Worst enemy isn't just the person we hate the most,
@@ -3066,16 +3050,16 @@ void CvTeamAI::AI_updateWorstEnemy()
 
 int CvTeamAI::AI_getWarPlanStateCounter(TeamTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	return m_aiWarPlanStateCounter[eIndex];
 }
 
 
 void CvTeamAI::AI_setWarPlanStateCounter(TeamTypes eIndex, int iNewValue)
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	m_aiWarPlanStateCounter[eIndex] = iNewValue;
-	FASSERT_NOT_NEGATIVE(AI_getWarPlanStateCounter(eIndex))
+	FASSERT_NOT_NEGATIVE(AI_getWarPlanStateCounter(eIndex));
 }
 
 
@@ -3087,21 +3071,21 @@ void CvTeamAI::AI_changeWarPlanStateCounter(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getAtWarCounter(TeamTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	return m_aiAtWarCounter[eIndex];
 }
 
 
 void CvTeamAI::AI_setAtWarCounter(TeamTypes eIndex, int iNewValue)
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 
 	//	Koshling - trying to increment your own atWar (with self) counter should never
 	//	happen, but as a fallback we trap it here
 	if ( iNewValue == 0 || eIndex != getID() )
 	{
 		m_aiAtWarCounter[eIndex] = iNewValue;
-		FASSERT_NOT_NEGATIVE(AI_getAtWarCounter(eIndex))
+		FASSERT_NOT_NEGATIVE(AI_getAtWarCounter(eIndex));
 	}
 	else
 	{
@@ -3118,16 +3102,16 @@ void CvTeamAI::AI_changeAtWarCounter(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getAtPeaceCounter(TeamTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	return m_aiAtPeaceCounter[eIndex];
 }
 
 
 void CvTeamAI::AI_setAtPeaceCounter(TeamTypes eIndex, int iNewValue)
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	m_aiAtPeaceCounter[eIndex] = iNewValue;
-	FASSERT_NOT_NEGATIVE(AI_getAtPeaceCounter(eIndex))
+	FASSERT_NOT_NEGATIVE(AI_getAtPeaceCounter(eIndex));
 }
 
 
@@ -3139,16 +3123,16 @@ void CvTeamAI::AI_changeAtPeaceCounter(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getHasMetCounter(TeamTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	return m_aiHasMetCounter[eIndex];
 }
 
 
 void CvTeamAI::AI_setHasMetCounter(TeamTypes eIndex, int iNewValue)
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	m_aiHasMetCounter[eIndex] = iNewValue;
-	FASSERT_NOT_NEGATIVE(AI_getHasMetCounter(eIndex))
+	FASSERT_NOT_NEGATIVE(AI_getHasMetCounter(eIndex));
 }
 
 
@@ -3160,16 +3144,16 @@ void CvTeamAI::AI_changeHasMetCounter(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getOpenBordersCounter(TeamTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	return m_aiOpenBordersCounter[eIndex];
 }
 
 
 void CvTeamAI::AI_setOpenBordersCounter(TeamTypes eIndex, int iNewValue)
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	m_aiOpenBordersCounter[eIndex] = iNewValue;
-	FASSERT_NOT_NEGATIVE(AI_getOpenBordersCounter(eIndex))
+	FASSERT_NOT_NEGATIVE(AI_getOpenBordersCounter(eIndex));
 }
 
 
@@ -3181,16 +3165,16 @@ void CvTeamAI::AI_changeOpenBordersCounter(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getDefensivePactCounter(TeamTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	return m_aiDefensivePactCounter[eIndex];
 }
 
 
 void CvTeamAI::AI_setDefensivePactCounter(TeamTypes eIndex, int iNewValue)
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	m_aiDefensivePactCounter[eIndex] = iNewValue;
-	FASSERT_NOT_NEGATIVE(AI_getDefensivePactCounter(eIndex))
+	FASSERT_NOT_NEGATIVE(AI_getDefensivePactCounter(eIndex));
 }
 
 
@@ -3202,16 +3186,16 @@ void CvTeamAI::AI_changeDefensivePactCounter(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getShareWarCounter(TeamTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	return m_aiShareWarCounter[eIndex];
 }
 
 
 void CvTeamAI::AI_setShareWarCounter(TeamTypes eIndex, int iNewValue)
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	m_aiShareWarCounter[eIndex] = iNewValue;
-	FASSERT_NOT_NEGATIVE(AI_getShareWarCounter(eIndex))
+	FASSERT_NOT_NEGATIVE(AI_getShareWarCounter(eIndex));
 }
 
 
@@ -3223,14 +3207,14 @@ void CvTeamAI::AI_changeShareWarCounter(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getWarSuccess(TeamTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	return m_aiWarSuccess[eIndex];
 }
 
 
 void CvTeamAI::AI_setWarSuccess(TeamTypes eIndex, int iNewValue)
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 
 	if (m_aiWarSuccess[eIndex] != iNewValue)
 	{
@@ -3240,8 +3224,6 @@ void CvTeamAI::AI_setWarSuccess(TeamTypes eIndex, int iNewValue)
 
 			if (playerA.isAliveAndTeam(getID()))
 			{
-				const TeamTypes eTeamA = playerA.getTeam();
-
 				for (int iB = 0; iB < MAX_PC_PLAYERS; iB++)
 				{
 					if (GET_PLAYER((PlayerTypes)iB).isAliveAndTeam(eIndex))
@@ -3253,7 +3235,7 @@ void CvTeamAI::AI_setWarSuccess(TeamTypes eIndex, int iNewValue)
 			}
 		}
 		m_aiWarSuccess[eIndex] = iNewValue;
-		FASSERT_NOT_NEGATIVE(AI_getWarSuccess(eIndex))
+		FASSERT_NOT_NEGATIVE(AI_getWarSuccess(eIndex));
 	}
 }
 
@@ -3282,16 +3264,16 @@ void CvTeamAI::AI_changeWarSuccess(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getEnemyPeacetimeTradeValue(TeamTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	return m_aiEnemyPeacetimeTradeValue[eIndex];
 }
 
 
 void CvTeamAI::AI_setEnemyPeacetimeTradeValue(TeamTypes eIndex, int iNewValue)
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	m_aiEnemyPeacetimeTradeValue[eIndex] = iNewValue;
-	FASSERT_NOT_NEGATIVE(AI_getEnemyPeacetimeTradeValue(eIndex))
+	FASSERT_NOT_NEGATIVE(AI_getEnemyPeacetimeTradeValue(eIndex));
 }
 
 
@@ -3303,16 +3285,16 @@ void CvTeamAI::AI_changeEnemyPeacetimeTradeValue(TeamTypes eIndex, int iChange)
 
 int CvTeamAI::AI_getEnemyPeacetimeGrantValue(TeamTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	return m_aiEnemyPeacetimeGrantValue[eIndex];
 }
 
 
 void CvTeamAI::AI_setEnemyPeacetimeGrantValue(TeamTypes eIndex, int iNewValue)
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	m_aiEnemyPeacetimeGrantValue[eIndex] = iNewValue;
-	FASSERT_NOT_NEGATIVE(AI_getEnemyPeacetimeGrantValue(eIndex))
+	FASSERT_NOT_NEGATIVE(AI_getEnemyPeacetimeGrantValue(eIndex));
 }
 
 
@@ -3324,7 +3306,7 @@ void CvTeamAI::AI_changeEnemyPeacetimeGrantValue(TeamTypes eIndex, int iChange)
 
 WarPlanTypes CvTeamAI::AI_getWarPlan(TeamTypes eIndex) const
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 	FAssert(eIndex != getID() || m_aeWarPlan[eIndex] == NO_WARPLAN);
 	return m_aeWarPlan[eIndex];
 }
@@ -3365,7 +3347,7 @@ bool CvTeamAI::AI_isSneakAttackReady(TeamTypes eIndex) const
 
 void CvTeamAI::AI_setWarPlan(TeamTypes eIndex, WarPlanTypes eNewValue, bool bWar, bool bInFull)
 {
-	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex)
+	FASSERT_BOUNDS(0, MAX_TEAMS, eIndex);
 
 	if (AI_getWarPlan(eIndex) != eNewValue && (bWar || !isAtWar(eIndex)))
 	{
@@ -3474,9 +3456,6 @@ void CvTeamAI::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvTeamAI", &m_iLimitedWarPowerRatio);
 	WRAPPER_READ(wrapper, "CvTeamAI", &m_iDogpileWarRand);
 	WRAPPER_READ(wrapper, "CvTeamAI", &m_iMakePeaceRand);
-
-	int iID = getID();
-
 	WRAPPER_READ_OBJECT_END(wrapper);
 
 /* Needed if getMaxCivPlayers return MAX_PC_PLAYERS, now it returns MAX_PLAYERS-1.
@@ -3972,13 +3951,13 @@ void CvTeamAI::AI_doWar()
 			iTimeModifier /= iThreshold;
 		}
 
-		iTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+		iTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 		iTimeModifier /= 150;
-		FASSERT_NOT_NEGATIVE(iTimeModifier)
+		FASSERT_NOT_NEGATIVE(iTimeModifier);
 	}
 
 	int iAbandonTimeModifier = 100;
-	iAbandonTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+	iAbandonTimeModifier *= 50 + GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
 	iAbandonTimeModifier /= 150;
 
 	//Afforess - abandon plans more quickly in financial distress
@@ -4194,7 +4173,7 @@ void CvTeamAI::AI_doWar()
 				FAssert(!GET_TEAM((TeamTypes)iI).isMinorCiv());
 
 				if (isAtWar((TeamTypes)iI) && AI_isChosenWar((TeamTypes)iI)
-				&& AI_getAtWarCounter((TeamTypes)iI) > std::max(10, 14 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent()/100))
+				&& AI_getAtWarCounter((TeamTypes)iI) > std::max(10, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() * 14/100))
 				{
 					// If nothing is happening in war
 					if (AI_getWarSuccess((TeamTypes)iI) + GET_TEAM((TeamTypes)iI).AI_getWarSuccess(getID()) < 2*GC.getWAR_SUCCESS_ATTACKING()
@@ -4233,7 +4212,7 @@ void CvTeamAI::AI_doWar()
 					}
 
 					// Fought to a long draw
-					if (AI_getAtWarCounter((TeamTypes)iI) > ((((AI_getWarPlan((TeamTypes)iI) == WARPLAN_TOTAL) ? 40 : 30) * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent())/100) )
+					if (AI_getAtWarCounter((TeamTypes)iI) > (AI_getWarPlan((TeamTypes)iI) == WARPLAN_TOTAL ? 40 : 30) * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100)
 					{
 						int iOurValue = AI_endWarVal((TeamTypes)iI);
 						int iTheirValue = GET_TEAM((TeamTypes)iI).AI_endWarVal(getID());
@@ -4602,7 +4581,7 @@ int CvTeamAI::AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		UnitTypes eLoopUnit = (UnitTypes)iI;
+		const UnitTypes eLoopUnit = (UnitTypes)iI;
 
 		if (isTechRequiredForUnit((eTech), eLoopUnit))
 		{
@@ -4729,7 +4708,7 @@ int CvTeamAI::AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const
 					break;
 
 				default:
-					FAssert(false);//This assert was thrown - audit to see what AI may be missing from the above.
+					FErrorMsg("error"); // This assert was thrown - audit to see what AI may be missing from the above.
 					break;
 				}
 

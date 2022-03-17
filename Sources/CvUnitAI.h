@@ -6,6 +6,7 @@
 #define CIV4_UNIT_AI_H
 
 #include "CvUnit.h"
+#include "GroupingParams.h"
 
 typedef enum
 {
@@ -28,9 +29,12 @@ public:
 	CvUnitAI(bool bIsDummy = false);
 	virtual ~CvUnitAI();
 
+	CvUnitAI& operator=(const CvUnitAI& other);
+
 	void AI_init(UnitAITypes eUnitAI, int iBirthmark);
 	void AI_uninit();
 	void AI_reset(UnitAITypes eUnitAI = NO_UNITAI, bool bConstructorCall = false);
+	void SendLog(CvWString function, CvWString message);
 
 	bool AI_update();
 	bool AI_follow();
@@ -66,6 +70,7 @@ public:
 	bool AI_isAwaitingContract() const;
 	bool AI_isCityGarrison(const CvCity* pCity) const;
 	void AI_setAsGarrison(const CvCity* pCity = NULL);
+	int AI_searchRange(int iRange = 1) const;
 
 	BuildingTypes getIntendedConstructBuilding() const { return m_eIntendedConstructBuilding; };
 
@@ -102,8 +107,12 @@ protected:
 	void doUnitAIMove();
 
 	void AI_animalMove();
+	bool AI_SettleFirstCity();
 	void AI_settleMove();
 	int AI_minSettlerDefense() const;
+	bool IsAbroad();
+	int GetNumberOfUnitsInGroup();
+	bool AI_upgradeWorker();
 	void AI_workerMove();
 	void AI_barbAttackMove();
 	void AI_attackMove();
@@ -158,62 +167,13 @@ protected:
 	void AI_SeeInvisibleMove();
 	void AI_SeeInvisibleSeaMove();
 	void AI_EscortMove();
-
+	bool AI_retreatIfCantDefend();
 	void AI_networkAutomated();
 	void AI_cityAutomated();
 
 	int AI_promotionValue(PromotionTypes ePromotion) const;
 
 	bool AI_shadow(UnitAITypes eUnitAI, int iMax = -1, int iMaxRatio = -1, bool bWithCargoOnly = true, bool bOutsideCityOnly = false, int iMaxPath = MAX_INT);
-
-	struct GroupingParams
-	{
-		GroupingParams()
-			: eUnitAI(NO_UNITAI)
-			, iMaxGroup(-1)
-			, iMaxOwnUnitAI(-1)
-			, iMinUnitAI(-1)
-			, bIgnoreFaster(false)
-			, bIgnoreOwnUnitType(false)
-			, bStackOfDoom(false)
-			, bBiggerGroupOnly(false)
-			, bMergeWholeGroup(false)
-			, iMaxPath(MAX_INT)
-			, bAllowRegrouping(false)
-			, bWithCargoOnly(false)
-			, bInCityOnly(false)
-			, eIgnoreMissionAIType(NO_MISSIONAI)
-		{}
-		GroupingParams& withUnitAI(UnitAITypes unitAI) { eUnitAI = unitAI; return *this; }
-		GroupingParams& maxGroupSize(int maxGroup) { iMaxGroup = maxGroup; return *this; }
-		GroupingParams& maxOwnUnitAI(int maxOwnUnitAI) { iMaxOwnUnitAI = maxOwnUnitAI; return *this; }
-		GroupingParams& minUnitAI(int minUnitAI) { iMinUnitAI = minUnitAI; return *this; }
-		GroupingParams& ignoreFaster(bool state = true) { bIgnoreFaster = state; return *this; }
-		GroupingParams& ignoreOwnUnitType(bool state = true) { bIgnoreOwnUnitType = state; return *this; }
-		GroupingParams& biggerGroupOnly(bool state = true) { bBiggerGroupOnly = state; return *this; }
-		GroupingParams& mergeWholeGroup(bool state = true) { bBiggerGroupOnly = state; return *this; }
-		GroupingParams& stackOfDoom(bool state = true) { bStackOfDoom = state; return *this; }
-		GroupingParams& maxPathTurns(int maxPath) { iMaxPath = maxPath; return *this; }
-		GroupingParams& allowRegrouping(bool state = true) { bAllowRegrouping = state; return *this; }
-		GroupingParams& withCargoOnly(bool state = true) { bWithCargoOnly = state; return *this; }
-		GroupingParams& inCityOnly(bool state = true) { bInCityOnly = state; return *this; }
-		GroupingParams& ignoreMissionAIType(MissionAITypes ignoreMissionAIType) { eIgnoreMissionAIType = ignoreMissionAIType; return *this; }
-
-		UnitAITypes eUnitAI;
-		int iMaxGroup;
-		int iMaxOwnUnitAI;
-		int iMinUnitAI;
-		bool bIgnoreFaster;
-		bool bIgnoreOwnUnitType;
-		bool bStackOfDoom;
-		bool bBiggerGroupOnly;
-		bool bMergeWholeGroup;
-		int iMaxPath;
-		bool bAllowRegrouping;
-		bool bWithCargoOnly;
-		bool bInCityOnly;
-		MissionAITypes eIgnoreMissionAIType;
-	};
 
 
 	// Returns true if a group was joined or a mission was pushed...
@@ -233,15 +193,15 @@ protected:
 	// Super Forts end
 	bool AI_guardCitySite();
 	bool AI_guardSpy(int iRandomPercent);
-	bool AI_destroySpy();
-	bool AI_sabotageSpy();
-	bool AI_pickupTargetSpy();
+
 	bool AI_chokeDefend();
 	bool AI_heal(int iDamagePercent = 0, int iMaxPath = MAX_INT);
 	bool AI_afterAttack();
 	/*TB Prophet Mod begin*/
 	bool AI_foundReligion();
+#ifdef OUTBREAKS_AND_AFFLICTIONS
 	bool AI_cureAffliction(PromotionLineTypes eAfflictionLine);
+#endif
 	/*TB Prophet Mod end*/
 	bool AI_goldenAge();
 	bool AI_spreadReligion();
@@ -276,6 +236,7 @@ protected:
 	bool AI_patrol(bool bIgnoreDanger = false);
 	bool AI_defend();
 	bool AI_safety(int iRange = 1);
+	bool AI_reachHome(const bool bMockRun = false) const;
 	bool AI_hide();
 	bool AI_goody(int iRange);
 
@@ -384,7 +345,6 @@ protected:
 	int AI_nukeValue(const CvCity* pCity) const;
 	bool AI_canPillage(const CvPlot& kPlot) const;
 
-	int AI_searchRange(int iRange) const;
 	bool AI_plotValid(const CvPlot* pPlot) const;
 
 	int AI_finalOddsThreshold(const CvPlot* pPlot, int iOddsThreshold) const;
@@ -473,7 +433,9 @@ public:
 	bool AI_arrest();
 	bool AI_ambush(int iOddsThreshold, bool bAssassinationOnly = false);
 
-	bool AI_activateStatus(bool bChange, bool bStack, PromotionTypes eStatus, CvUnit* pUnit = NULL);
+private:
+	bool AI_activateStatus(bool bStack, PromotionTypes eStatus, CvUnit* pUnit);
+public:
 	bool AI_selectStatus(bool bStack, CvUnit* pUnit = NULL);
 	bool AI_groupSelectStatus();
 

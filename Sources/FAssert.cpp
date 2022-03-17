@@ -76,7 +76,7 @@ namespace detail
 			sprintf(title, "Assert Failed: %s", moduleName);
 			SetWindowText(hDlg, title);
 
-			sprintf(g_AssertText, 
+			sprintf(g_AssertText,
 				"ASSERT FAILED\r\n"
 				LINE_SEP2
 				"File:        %s\r\n"
@@ -208,7 +208,7 @@ namespace detail
 				{
 					std::string fileName(entry.lineFileName);
 					std::string fileNameLwr(fileName);
-					std::transform(fileNameLwr.begin(), fileNameLwr.end(), fileNameLwr.begin(), ::tolower);
+					algo::transform(fileNameLwr, fileNameLwr.begin(), ::tolower);
 					size_t offs = fileNameLwr.find("caveman2cosmos");
 					if (offs != std::string::npos)
 					{
@@ -222,7 +222,7 @@ namespace detail
 					m_buffer << entry.undFullName;
 				else if (entry.name[0] != 0)
 					m_buffer << entry.name;
-				else 
+				else
 					m_buffer << "(function-name not available)";
 			}
 		}
@@ -247,13 +247,13 @@ bool FAssertDlg( const char* szExpr, const char* szMsg, const char* szFile, unsi
 	std::string dllTrace = detail::getDLLTrace();
 
 #ifdef FASSERT_LOGGING
-	logging::logMsg("Asserts.log", "%s %s (%d): %s,  %s\n%s\n%s", 
-		szFile ? szFile : "", 
+	logging::logMsg("Asserts.log", "%s %s (%d): %s,  %s\n%s\n%s",
+		szFile ? szFile : "",
 		szFunction ? szFunction : "",
-		line, 
-		szExpr ? szExpr : "", 
-		szMsg ? szMsg : "", 
-		pyTrace.c_str(), 
+		line,
+		szExpr ? szExpr : "",
+		szMsg ? szMsg : "",
+		pyTrace.c_str(),
 		dllTrace.c_str()
 	);
 

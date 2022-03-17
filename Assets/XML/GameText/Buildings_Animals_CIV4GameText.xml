@@ -1,0 +1,3092 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_AMPHIBIAN_POND</Tag>
+		<English>Enclosure - Amphibian Pond</English>
+		<French>Enclos - Mare à amphibiens</French>
+		<Italian>Stagno per anfibi</Italian>
+		<Polish>Klatka - Płazy</Polish>
+		<Russian>Çàòîí äëÿ àìôèáèé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_BREEDER_PEDIA</Tag>
+		<English>The Animal Breeder allows the building of some herds of animals for settling in other cities. Some can upgrade to combat units.</English>
+		<French>Le centre de gestion des troupeaux permet la migration de troupeau pour s'établir dans d'autres villes. Certaines unités peuvent être améliorés en unités combattantes.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_CORAL</Tag>
+		<English>Autobuild - Presence of Coral</English>
+		<German>
+			<Text>Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Presenza di corallo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_EARTH</Tag>
+		<English>Autobuild - Presence of Earth</English>
+		<German>
+			<Text>Präsenz der Erde:Präsenz der Erde:Präsenz der Erde:Präsenz der Erde</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Presenza della Terra</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FALL</Tag>
+		<English>Autobuild - Presence of Crater</English>
+		<German>
+			<Text>Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Presenza di un cratere</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FIRE</Tag>
+		<English>Autobuild - Presence of Fire</English>
+		<German>
+			<Text>Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Presenza del Fuoco</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_METAL</Tag>
+		<English>Autobuild - Presence of Metal</English>
+		<German>
+			<Text>Präsenz von Metall:Präsenz von Metall:Präsenz von Metall:Präsenz von Metall</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Presenza di metallo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OASIS</Tag>
+		<English>Autobuild - Presence of Oasis</English>
+		<German>
+			<Text>Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Presenza di un'oasi</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Tag>
+		<English>[COLOR_BUILDING_TEXT]Folklore Presence autobuildings[COLOR_REVERT] require some points of interest on map. Its purpose is having folklore related to features to be able to spread to all cities.</English>
+		<German>Es gibt verschiedene Präsenz-Effekte, die durch spezielle Geländemerkmale in der Umgebung deiner Städte automatisch aktiviert werden. Sie sind der Ursprung einer Reihe von Mythen, Sagen und Legenden, die im Spiel durch Folkloreeffekte repräsentiert werden.</German>
+		<Italian>Gli [COLOR_BUILDING_TEXT]pseudoedifici folklore[COLOR_REVERT] si attivano automaticamente in base alle caratteristiche del terreno intorno alle tue città. Sono l'origine di una serie di miti, saghe e leggende, che poi si diffondono in tutte le città.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OUTCROP</Tag>
+		<English>Autobuild - Presence of Landform</English>
+		<German>
+			<Text>Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Presenza di un rilievo</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REEF</Tag>
+		<English>Autobuild - Presence of Reef</English>
+		<German>
+			<Text>Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Presenza di una barriera corallina</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE</Tag>
+		<English>Autobuild - Folklore Requirement</English>
+		<German>
+			<Text>Folklore-Grundlagen:Folklore-Grundlagen:Folklore-Grundlagen:Folklore-Grundlagen</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Requisito per il folklore</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE_PEDIA</Tag>
+		<English>[COLOR_BUILDING_TEXT]Folklore Requirements[COLOR_REVERT] autobuilding gives Language tech requirement for Folklore.[NEWLINE]In this way this tech doesn't have list of more than 200 Folklore pseudobuildings. Try catching all Folklore buildings!</English>
+		<German>Die [COLOR_BUILDING_TEXT]Folklore-Grundlagen[COLOR_REVERT] sind ein automatischer Effekt, der die Voraussetzung für verschiedene Folkloreeffekte legt. Diese mehr als 200 Pseudogebäude können mit dem Entdecken spezieller Tiere und Landschaftseigenarten errichtet werden. Versucht doch einmal, alle Folklore-"Gebäude" zu errichten!</German>
+		<Italian>Gli [COLOR_BUILDING_TEXT]pseudoedifici folklore[COLOR_REVERT] richiedono la lingua parlata come prerequisito per il Folklore.[NEWLINE]Ci sono oltre 200 pseudoedifici che possono essere costruiti, scoprendo animali o luoghi. Prova a costruirli tutti!</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_SEA</Tag>
+		<English>Autobuild - Presence of Sea</English>
+		<German>
+			<Text>Präsenz der See:Präsenz der See:Präsenz der See:Präsenz der See</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Presenza di un mare</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_VOLCANO</Tag>
+		<English>Autobuild - Presence of Volcano</English>
+		<German>
+			<Text>Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Presenza di un vulcano</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_COMPLEX</Tag>
+		<English>Animal Tamer Complex</English>
+		<French>Centre de Dressage d'animaux</French>
+		<Polish>Kompleks Tresury Zwierząt</Polish>
+		<Russian>Äðåññ. êîìïëåêñ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TAMER_PEDIA</Tag>
+		<English>Animal taming is not domestication. Tamed animals can be further trained.</English>
+		<Polish>Oswajanie zwierząt to nie udamawianie. Oswojone zwierzęta mogą być później tresowane.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM</Tag>
+		<English>Military Standard (Animal mascot)</English>
+		<French>Mascotte de L'Armée de Terre</French>
+		<Italian>Mascotte dell'esercito (animale)</Italian>
+		<Polish>Sztandar Wojskowy (Zwierzęca Maskotka)</Polish>
+		<Russian>Çâåðèíûé òîòåì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS</Tag>
+		<English>Military Standard (Canines)</English>
+		<French>Standards Militaires (Canins)</French>
+		<Italian>Mascotte dell'esercito (canide)</Italian>
+		<Polish>Sztandar Wojskowy (Wilki)</Polish>
+		<Russian>Òîòåì «Ñîáàêà»</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS_HELP</Tag>
+		<English>[ICON_BULLET]Build Canine buildings and units faster in this city.</English>
+		<French>[ICON_BULLET]Construit les bâtiments et unités canines plus vite dans cette Ville.</French>
+		<Italian>Questo edificio ti permette di addestrare le unità canine più velocemente.</Italian>
+		<Polish>Szybciej buduj jedn. psów i budynki z nimi związane.</Polish>
+		<Russian>Àâòîìàòè÷åñêè ñòðîèò âñå çäàíèÿ ñâÿçàííûå ñ ñîáàêàìè, óñêîðÿÿ èõ îáó÷åíèå â äàííîì ãîðîäå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Tag>
+		<English>The tradition of having a mascot or flag/standard that identifies the people in a military unit.</English>
+		<Italian>La tradizione di avere una mascotte o una bandiera che identifica le persone che fanno parte di un'unità militare.</Italian>
+		<Polish>Tradycja posiadania maskotki lub sztandaru, który identyfikuje ludzi w jednostce wojskowej.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS</Tag>
+		<English>Military Standard (Workers)</English>
+		<French>Standards Militaires (Ouvriers)</French>
+		<Italian>Mascotte dei lavoratori</Italian>
+		<Polish>Sztandar Wojskowy (Robotnicy)</Polish>
+		<Russian>Òîòåì «Ðàáîòíèê»</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS_HELP</Tag>
+		<English>[ICON_BULLET]Build Worker units faster in this city.</English>
+		<French>[ICON_BULLET]Les unités ouvriers sont entraînées plus vite dans cette ville</French>
+		<Italian>Costruisce le unità di lavoratori più velocemente in questa città.</Italian>
+		<Russian>Óñêîðÿåò îáó÷åíèå ðàáîòíèêîâ â ýòîì ãîðîäå.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BAD_BOY_CAGE</Tag>
+		<English>Enclosure - Bad Boys</English>
+		<French>Enclos - Animaux nuisibles</French>
+		<Italian>Gabbia dei parassiti</Italian>
+		<Polish>Klatka - Groźne Zwierzęta</Polish>
+		<Russian>Êëåòêè ñ õèùíèêàìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BEAR_CAGE</Tag>
+		<English>Enclosure - Bear</English>
+		<French>Enclos - Ours</French>
+		<Italian>Gabbia degli orsi</Italian>
+		<Polish>Klatka - Niedźwiedź</Polish>
+		<Russian>Êëåòêè ñ ìåäâåäÿìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIG_CAT_CAGE</Tag>
+		<English>Enclosure - Big Cat</English>
+		<French>Enclos - Félins</French>
+		<Italian>Gabbia dei grossi felini</Italian>
+		<Polish>Klatka - Wielki kot</Polish>
+		<Russian>Êëåòêè ñ êîøà÷üèìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_CAGE</Tag>
+		<English>Enclosure - Bird</English>
+		<French>Enclos - Oiseaux</French>
+		<Italian>Gabbia degli uccelli</Italian>
+		<Polish>Klatka - Ptaki</Polish>
+		<Russian>Êëåòêè ñ ïòèöàìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_DANCE</Tag>
+		<English>Unit Reward - Dance (Bird)</English>
+		<French>Danse des Oiseaux</French>
+		<Italian>Danza degli uccelli</Italian>
+		<Russian>Òàíåö ïòèöû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BIRD_DANCE_PEDIA</Tag>
+		<English>Some birds are said to dance and these dances inspired early human dances. Recent studies indicate that humans, parrots and elephants are the only creatures that really dance!</English>
+		<French>Certains oiseaux danseraient et ces danses ont inspiré les premières danses humaines. Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
+		<Russian>Ãîâîðÿò, ÷òî íåêîòîðûå ïòèöû òàíöóþò, è ýòè òàíöû âäîõíîâèëè ðàííèå ÷åëîâå÷åñêèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BISON_HERD</Tag>
+		<English>Herd (Bison)</English>
+		<French>Troupeau de Bisons</French>
+		<Italian>Mandria di bisonti</Italian>
+		<Polish>Stado - Bizony</Polish>
+		<Russian>Ñòàäî áèçîíîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BISON_HERD_PEDIA</Tag>
+		<English>Represent the Bison of North America, Water Buffalo of South East Asia and all herbivore herds of Africa.</English>
+		<Italian>Comprende il bisonte del Nordamerica, il bufalo d'acqua e tutti i branchi di erbivori dell'Africa.</Italian>
+		<Polish>Żubry zamieszkują środowiska leśne, te nie są jednak optymalne, ponieważ zimą nie dostarczają wystarczającej ilości pożywienia dla tak dużego roślinożercy, większość populacji jest w czasie cięższych zim dokarmianych przez człowieka, ponieważ brak lub niedostateczne dokarmianie powoduje, że zwierzęta te migrują na tereny otwarte, powodując szkody w uprawach rolniczych. W ramach polsko-niemieckich badań składu izotopowego kości (zawartości stabilnych izotopów węgla i azotu) najstarszych w Europie zachowanych kości żubra Bison bonasus potwierdzono, że w czasach prehistorycznych żubry preferowały tereny otwarte, a ich dieta miała mieszany charakter i zawierała porosty, trawy i pędy drzew oraz krzewów.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BOXING_KANGAROO</Tag>
+		<English>Unit Reward - Carnival (Boxing Kangaroo)</English>
+		<French>Kangourou Boxeur</French>
+		<Italian>Fiera del canguro combattente</Italian>
+		<Polish>Mit Kangura</Polish>
+		<Russian>Áîêñèðóþùèé êåíãóðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BOXING_KANGAROO_PEDIA</Tag>
+		<English>The idea of a boxing kangaroo originates from the animal's defensive behavior, in which it will use its smaller forelegs (its arms) to hold an attacker in place while using the claws on its larger hind legs to try to kick, slash or disembowel them. This stance gives the impression that the kangaroo appears to be boxing with its attacker. The image of the boxing kangaroo has been known since at least 1891, when a cartoon titled "Jack, the fighting Kangaroo with Professor Lendermann" appeared in the magazine Melbourne Punch. In the late 19th century, outback travelling shows featured kangaroos wearing boxing gloves fighting against men.[4] Das Boxende Känguruh, an 1895 German silent film directed by Max Skladanowsky, and an English silent film produced by Birt Acres in 1896 also both featured kangaroos boxing against men, while the American animated shorts The Boxing Kangaroo (1920), Mickey's Kangaroo (1935) and Pop 'Im Pop! (1949) helped establish the concept of a boxing kangaroo as a popular culture cliché. The 1978 Hollywood movie Matilda, which starred Elliott Gould and Robert Mitchum, featured a boxing kangaroo that was exploited for prize fighting.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUFFALO_HERD</Tag>
+		<English>Herd (Buffalo)</English>
+		<French>Troupeau de Buffles</French>
+		<Italian>Mandria di bufali</Italian>
+		<Polish>Stado - Bawołów</Polish>
+		<Russian>Ñòàäî áóéâîëîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUFFALO_HERD_PEDIA</Tag>
+		<English>Only domesticated buffalos can build the Herd - Buffalo; provides a resource of buffalos.</English>
+		<Italian>Solo i bufali addomesticati possono costruire una Mandria di bufali; fornisce una risorsa di bufali.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUFFALO_TRAINER</Tag>
+		<English>Animal Trainer (Buffalo)</English>
+		<French>Dresseur de Buffles</French>
+		<Italian>Addestratore di bufali</Italian>
+		<Polish>Treser Bawołów</Polish>
+		<Russian>Äðåññ. áóéâîëîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_BUFFALO_TRAINER_PEDIA</Tag>
+		<English>The Buffalo Trainer is required to build Buffalo Worker.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CAMEL_HERD</Tag>
+		<English>Herd (Camel)</English>
+		<French>Troupeau de Chameaux</French>
+		<Italian>Branco di cammelli</Italian>
+		<Polish>Stado - Wielbłądy</Polish>
+		<Russian>Ñòàäî âåðáëþäîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CAMEL_HERD_PEDIA</Tag>
+		<English>Only domesticated camels can build the Herd - Camels; provides a resource of camels.</English>
+		<Italian>Solo i cammelli addomesticati possono costruire un branco di cammelli; fornisce una risorsa di cammelli.</Italian>
+		<Polish>Wielbłąd (Camelus) rodzaj dużych ssaków z rodziny wielbłądowatych. Fizjologicznie przystosowane do życia w warunkach suchego i gorącego klimatu, są w wielu krajach wykorzystywane jako zwierzęta użytkowe.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CARNIVAL</Tag>
+		<English>Carnival</English>
+		<French>Carnaval</French>
+		<German>Jahrmarkt</German>
+		<Italian>Fiera</Italian>
+		<Polish>Karnawał</Polish>
+		<Russian>Êàðíàâàë</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CARNIVAL_PEDIA</Tag>
+		<English>The Carnival is a decent provider of culture and happiness for the city in which it is built. If you bring captured wolves, lions, or tigers to the city and add them to the Carnival, it can generate more culture and happiness than most wonders. The Subdue Animal promotion, available only to recon units after Animal Husbandry is researched, will allow you to capture these beasts if you beat them in combat.</English>
+		<French>Le Carnaval est un fournisseur décent de culture et de bonheur pour la ville dans laquelle il est construit. Si vous amené des loups, panthères, lions et tigres dans la ville et que vous les ajoutez au Carnaval, il générera plus de culture et de bonheur que bien des merveilles. La promotion Assujettir Animal, accessible seulement aux unités de reconnaissances après que la technologie Elevage est découverte, vous permettra de capturer ces bêtes si vous les battez en combat.</French>
+		<German>Der Jahrmarkt ist ein guter Versorger für Kultur und Zufriedenheit für die Stadt, in der er gebaut wird. Wenn man gefangene Wölfe, Panther, Löwen oder Tiger in die Stadt und zum Jahrmarkt bringt, kann dieser mehr Kultur und Zufriedenheit produzieren als die meisten Wunder. Die Beförderung "Tierbändigung", welche nur für Aufklärungseinheiten und erst ab der Technologie "Viehhaltung" verfügbar ist, erlaubt, diese Tiere einzufangen, wenn man sie im Kampf besiegt.</German>
+		<Italian>Una fiera fornisce una buona dose di cultura e felicità nella città in cui è costruita. Portando i lupi, i leoni o le tigri che hai addomesticato nelle città in cui hai costruito la fiera, puoi potenziarla in modo che generi più cultura e felicità di gran parte delle meraviglie. La linea di promozioni "Cacciatore" ti permetterà di catturare più facilmente le bestie in combattimento.</Italian>
+		<Polish>Karnawał, zapusty okres zimowych balów, maskarad, pochodów i zabaw. Rozpoczyna się najczęściej w dniu Trzech Króli, a kończy we wtorek przed Zrodą Popielcową, która oznacza początek wielkiego postu i oczekiwania na Wielkanoc.</Polish>
+		<Russian>Êàðíàâàë ÿâëÿåòñÿ äîñòîéíûì èñòî÷íèêîì êóëüòóðû è ñ÷àñòüÿ äëÿ ãîðîäà, â êîòîðîì îí ïîñòðîåí. Åñëè âû ïðèâåçåòå â ãîðîä çàõâà÷åííûõ âîëêîâ, ëüâîâ èëè òèãðîâ è äîáàâèòå èõ â êàðíàâàë, ýòî ìîæåò ïðèíåñòè áîëüøå êóëüòóðû è ñ÷àñòüÿ, ÷åì áîëüøèíñòâî ÷óäåñ. Äåéñòâèå «Ïðèðó÷èòü æèâîòíîå», äîñòóïíîå òîëüêî ðàçâåäûâàòåëüíûì ïîäðàçäåëåíèÿì ïîñëå èññëåäîâàíèÿ æèâîòíîâîäñòâà, ïîçâîëèò âàì ïîéìàòü ýòèõ çâåðåé, åñëè âû ïîáåäèòå èõ â áîþ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CAVE_LION_REMAINS</Tag>
+		<English>Remains - Cave Lion</English>
+		<French>Restes de Lion des cavernes</French>
+		<German>
+			<Text>Überreste eines Höhlenlöwen:Überreste eines Höhlenlöwen:Überresten eines Höhlenlöwen:Überreste eines Höhlenlöwen</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Resti di leone delle caverne</Italian>
+		<Russian>Ïàìÿòü î ïåù. ëüâå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CEPHALOPOD_INSTITUTE</Tag>
+		<English>Unit Reward - Center for Cephalopod Studies</English>
+		<French>Centre d'étude des Céphalopodes</French>
+		<Italian>Centro per gli studi sui cefalopodi</Italian>
+		<Polish>Centrum Badań Głowonogów</Polish>
+		<Russian>Öåíòð èçó÷. êàëüìàðîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CEPHALOPOD_INSTITUTE_PEDIA</Tag>
+		<English>A center specialized in the study of cephalopods. The cephalopods (Cephalopoda, from the Greek kephale, head and pous, podos, foot) are exclusively marine molluscs, among the most evolved, with a shell reduced internally or completely absent, purely nectonic (like cuttlefish and squid) or benthic (like the octopus and baby octopus). They developed in a great multitude of forms during the Mesozoic, colonizing practically all marine environments with the nautiloid, ammonoid and belemnoid groups, the last two totally extinct. Recent hypotheses consider cephalopods derived directly from monoplacophores with a more pronounced spiraling shell; it is supposed that the apical region of the viscera sac of these molluscs withdrew from time to time and the mantle that covered them formed a successive series of internal calcareous septa, delimiting cavities filled with gas. This produced an ever greater lightness, a characteristic that allowed them to acquire a neutral buoyancy in order to move in the liquid with less effort. During these early evolutionary stages, the cephalopods acquired speed and predation ability, developing a head with prehensile lobes, derived from simple tentacles of ancestral monoplacophores. The dimensions are very variable, from a few millimeters to several meters in the case of the giant squid, which is the second largest mollusk, as well as being the second largest animal among all current invertebrates. In size it is surpassed only by the colossal squid, Mesonychoteuthis hamiltoni, which can have a coat almost twice as long as its own. Some extinct cephalopods, such as the Cretaceous vampiromorph Tusoteuthis and the Ordovician nautiloid Cameroceras, could reach even larger sizes.</English>
+		<Italian>Un centro specializzato nello studio dei cefalopodi. I cefalopodi (Cephalopoda, dal greco kephale, testa e pous, podos, piede) sono molluschi esclusivamente marini, tra i più evoluti, con conchiglia ridotta internamente o del tutto assente, prettamente nectonici (come le seppie e i calamari) o bentonici (come il polpo e il moscardino). Si svilupparono in una grande moltitudine di forme durante il Mesozoico, colonizzando praticamente tutti gli ambienti marini con i gruppi dei nautiloidi, ammonoidea e belemnoidi, gli ultimi due totalmente estinti. Ipotesi recenti considerano i cefalopodi derivati direttamente da monoplacofori con conchiglia a spiralizzazione più accentuata; si suppone che la regione apicale del sacco dei visceri di questi molluschi si ritirasse di tanto in tanto e il mantello che li ricopriva formasse una serie successiva di setti calcarei interni, delimitando cavità ripiene di gas. Ciò produsse una sempre maggiore leggerezza, caratteristica questa che permise loro di acquisire un galleggiamento neutro per potersi spostare nel liquido con minor sforzo. Durante questi primi stadi evolutivi, i cefalopodi acquisirono velocità e capacità di predazione, sviluppando un capo dotato di lobi prensili, derivati da tentacoli semplici di monoplacofori ancestrali. Le dimensioni sono molto variabili, da pochi millimetri a vari metri nel caso del calamaro gigante, che è il secondo mollusco più grande, oltre ad essere anche il secondo animale più grande tra tutti gli invertebrati attuali. Nelle dimensioni è superato solamente dal calamaro colossale, Mesonychoteuthis hamiltoni, che può avere un mantello lungo quasi il doppio del suo. Alcuni cefalopodi estinti, come il vampiromorfo cretaceo Tusoteuthis ed il nautiloide ordoviciano Cameroceras potevano raggiungere dimensioni perfino più grandi.</Italian>
+		<Polish>Sieci na ryby były konstruowane przez bogatych by dostarczać im ciągle świeżych i egzotycznych gatunków ryb na ich wykwintne uczty.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CETAEA_INSTITUTE</Tag>
+		<English>Unit Reward - Center for Whale Studies</English>
+		<French>Centre d'étude des Baleines</French>
+		<Italian>Centro per gli studi sulle balene</Italian>
+		<Polish>Centrum Badań Wielorybów</Polish>
+		<Russian>Öåíòð èçó÷. êèòîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CETAEA_INSTITUTE_PEDIA</Tag>
+		<English>A center specialized in the study of cetaceans. Cetaceans are an order of euplacentate mammals, fully adapted to aquatic life. The cetacean name derives from the Greek and means whale or sea monster; it was introduced by Aristotle to designate aquatic animals with lung respiration. They have a fusiform body, similar to that of fish, which ensures them greater hydrodynamics. The forelimbs are modified into fins; the hind limbs as such are absent; only a few small vestigial bones remain, hidden inside the body, and not connected to the spine due to the absence of the pelvis. The caudal fin is arranged horizontally and divided into two lobes. They are generally hairless and are thermally insulated by a thick layer of fat. The order Cetacea includes about 85 species, almost all of which are marine except for 5 species of freshwater dolphins. The species are divided into two suborders: Mysticeti and Odontoceti. There is a third suborder, Archaeoceti, to which only extinct species belong. Among the mysticetes there are animals commonly called whales, the largest known in the world: in particular, the blue whale is the largest animal existing on Earth today. Among the odontoceti, however, there are dolphins and killer whales, often reared and trained in dolphinaria.</English>
+		<Italian>Un centro specializzato nello studio dei cetacei. I Cetacei sono un ordine di mammiferi euplacentati, completamente adattatisi alla vita acquatica. Il nome cetaceo deriva dal greco e significa balena o mostro marino; fu introdotto da Aristotele per designare gli animali acquatici dotati di respirazione polmonare. Presentano un corpo fusiforme, simile a quello dei pesci, che assicura loro una maggiore idrodinamicità. Gli arti anteriori sono modificati in pinne; gli arti posteriori come tali sono assenti; rimangono solo alcune piccole ossa vestigiali, nascoste dentro al corpo, e non collegate alla spina dorsale per l'assenza del bacino. La pinna caudale è disposta orizzontalmente e divisa in due lobi. Sono generalmente privi di peli e sono isolati termicamente da uno spesso strato di grasso. L'ordine Cetacea comprende circa 85 specie, quasi tutte marine tranne 5 specie di delfini di acqua dolce. Le specie sono suddivise in due sottordini: Mysticeti ed Odontoceti. Esiste un terzo sottordine, Archaeoceti, cui appartengono solo specie estinte. Tra i misticeti si trovano gli animali comunemente chiamati balene, i più grandi conosciuti al mondo: in particolare la balenottera azzurra è il più grande animale oggi esistente sulla Terra. Tra gli odontoceti, invece, si trovano delfini e orche, spesso allevati e addestrati nei delfinari.</Italian>
+		<Polish>Instytut Morski jednostka naukowo-badawcza. Placówka wykonuje prace naukowe, badawcze i wdrożeniowe: m.in. zajmuje się modernizacją i eksploatacją portów, oceanografią operacyjną, czy problematyką zagospodarowania regionu nadmorskiego. Misją Instytutu jest dbałość o zachowanie wartości morza i zrównoważony rozwój polskiej gospodarki morskiej. Instytut opracowuje studia wykonalności i eksperyzy oraz udziela konsultacji w zakresie: hydrotechniki morskiej, geotechniki, oceanografii operacyjnej, ochrony środowiska (badania chemiczne i biologiczne), transportu, logistyki, zagospodarowania przestrzennego regionu nadmorskiego, modernizacji i eksploatacji portów, żeglugi śródlądowej, turystyki, bezpieczeństwa przeciwpowodziowego, elektroniki morskiej, a także tworzenia baz danych i monitoringu zjawisk ciągłych.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_COASTAL_FISH_FARM</Tag>
+		<English>Unit Reward - Coastal Fish Farm</English>
+		<French>Ferme à Poissons du Littoral</French>
+		<Italian>Allevamento costiero di pesci</Italian>
+		<Polish>Farma Ryb Przybrzeżnych</Polish>
+		<Russian>Ðûáíàÿ ôåðìà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_COASTAL_FISH_FARM_PEDIA</Tag>
+		<English>Sustainable fishery</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_COW_HERD</Tag>
+		<English>Herd (Cow)</English>
+		<French>Troupeau de Vaches</French>
+		<Italian>Mandria di bovini</Italian>
+		<Polish>Stado - Krowy</Polish>
+		<Russian>Ñòàäî êîðîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_COW_HERD_PEDIA</Tag>
+		<English>Only domesticated cattle can build the Herd - Bovines; provides a resource of cattle.</English>
+		<Italian>Solo i bovini addomesticati possono costruire una Mandria di bovini; fornisce una risorsa di bovini.</Italian>
+		<Polish>Bydło domowe (Bos taurus) gatunek zwierząt z rodziny wołowatych, rzędu parzystokopytnych. Gatunek ten pochodzi od tura wielkiego i tura krótkorogiego.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CRAB_NETS</Tag>
+		<English>Unit Reward - Crab Nets</English>
+		<French>Pièges à Crabes</French>
+		<Italian>Reti per granchi</Italian>
+		<Polish>Sieci na kraby</Polish>
+		<Russian>Ñåòè íà êðàáîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CRAB_NETS_PEDIA</Tag>
+		<English>Crabs (Brachyura, from the Greek short abdomen / tail) a group [a] of short-legged crustaceans from the order Decapoda. Crabs are the most numerous (10,500 species have been described) group of tenths, in which the first pair of crotch legs developed into claws. The size of the body is very varied, with a leg span from a few millimeters (Pinnotheres pisum) to almost 4 m (Japanese Pacific crab).</English>
+		<Polish>Kraby (Brachyura, z języka greckiego krótki odwłok/ogon) grupa[a] krótkoodwłokowych skorupiaków z rzędu dziesięcionogów (Decapoda). Kraby są najliczniejszą (opisano 10 500 gatunków) grupą dziesięcionogów, u której pierwsza para odnóży krocznych przekształciła się w szczypce. Wielkość ciała bardzo zróżnicowana, o rozpiętości odnóży od kilku milimetrów (Pinnotheres pisum) do prawie 4 m (japoński krab pacyficzny).</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DANCING_BEAR</Tag>
+		<English>Unit Reward - Carnival (Dancing Bear)</English>
+		<French>Carnaval - Ours Dansant</French>
+		<German>Jahrmarkt - Tanzbär</German>
+		<Italian>Fiera dell'Orso ballerino</Italian>
+		<Spanish>Carnival - Oso Pisador</Spanish>
+		<Polish>Karnawał - Tańczący Niedźwiedź</Polish>
+		<Russian>Òàíöóþùèé ìåäâåäü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DANCING_BEAR_PEDIA</Tag>
+		<English>The Dancing Bear is a popular source of amusement for the people of Erebus, be they Veil Ritualists or Order Acolytes. Dancing Bears can't be built, a wild Bear must be captured, taken to a city, and turned into a Dancing Bear. A Carnival is not needed to build the dancing bear, and in fact they dislike the competition.</English>
+		<French>L'Ours Dansant est une source d'amusement populaire pour les gens d'Erebus, aussi bien les vils ritualistes du Voile que les austères acolytes de l'Ordre. Les Ours Dansants ne peuvent être construit, un Ours sauvage doit être capturé, amené dans une ville et transformé en Ours Dansant. Un Carnaval n'est pas nécessaire pour construire un Ours Dansant, et en réalité ils n'aiment pas la compétition.</French>
+		<German>Der Tanzende Bär ist eine beliebte Unterhaltungsquelle für die Menschen von Erebus, böse Ritualisten des Schleiers oder Akolyten der Weisung. Tanzende Bären können nicht gebaut werden. Ein wilder Bär muss eingefangen und in eine Stadt transportiert, und in einen Tanzenden Bären verwandelt werden. Ein Jahrmarkt wird für einen Tanzenden Bären nicht benütigt. Genau genommen mögen die Bären den Jahrmarkt nicht besonders.</German>
+		<Italian>L'Orso ballerino è una fonte popolare di divertimento per il popolo di Erebus, siano essi i Ritualisti di Veil o gli Accoliti dell'Ordine. Gli orsi danzanti non possono essere costruiti: un orso selvatico deve essere catturato, portato in una città e trasformato in un orso ballerino. Una fiera non è necessaria per costruire un'orso ballerino - in effetti, a loro non piace la concorrenza.</Italian>
+		<Spanish>El Oso Pisador es una fuente popular de entretenimiento para la gente de Erebus, ya sean ritualistal del Velo malvados o acólitos del Orden. El Oso Pisador no puede ser construido; hay que capturar un Oso Salvaje, llevarlo a una ciudad y convertirlo en un Oso Pisador. No es necesario tener un Carnaval para construir el Oso Pisador, y de hecho no les gusta la competencia.</Spanish>
+		<Polish>Tańczący Niedźwiedź to popularnia rozrywka na miejskich targach lub karnawałach.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DEER_HERD</Tag>
+		<English>Herd (Deer)</English>
+		<French>Troupeau de Cerfs</French>
+		<Italian>Branco di cervi</Italian>
+		<Polish>Stado - Jelenie</Polish>
+		<Russian>Ñòàäî îëåíåé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DEER_HERD_PEDIA</Tag>
+		<English>The history of deer breeding goes back millennia. Though the precise date is in dispute, humans could have domesticated the deer as far back as approximately 4500 BCE. However, evidence of planned breeding has a more blurry history.[PARAGRAPH:2]One of the earliest people known to document the breedings of their deers were the Bedouin of the Middle East, the breeders of the Arabian deer. While it is difficult to determine how far back the Bedouin passed on pedigree information via an oral tradition, there were written pedigrees of Arabian deers by A.D. 1330. The Akhal-Teke of West-Central Asia is another breed with roots in ancient times that was also bred specifically for war and racing. The nomads of the Mongolian steppes bred deers for several thousand years as well.[PARAGRAPH:2]The types of deers bred varied with culture and with the times. The uses to which a deer was put also determined its qualities, including smooth amblers for riding, fast deers for carrying messengers, heavy deers for plowing and pulling heavy wagons, ponies for hauling cars of ore from mines, packdeers, carriage deers and many others.</English>
+		<Italian>La storia dell'allevamento dei cervi risale a migliaia di anni fa. Anche se la data precisa è in discussione, gli esseri umani potrebbero avere addomesticato il cervo nel lontano 4500 a.C.; tuttavia, le prove di un allevamento più intensivo sono molto rare.[PARAGRAPH:2]Uno dei primi popoli noti per aver documentato l'allevamento dei loro cervi sono stati i beduini del Medio Oriente, gli allevatori dell cervo arabo. Anche se è difficile determinare per quanto tempo i beduini abbiano tramandato informazioni sull'allevamento attraverso una tradizione orale, ci sono state documentazioni scritte riguardo cervi arabi sin dal 1330 d.C.. Gli Akhal-Teke dell'Asia centro-occidentale sono un'altra razza con radici antiche che è stata allevata appositamente per la guerra e la corsa. I nomadi delle steppe mongole allevarono i cervi per diverse migliaia di anni.[PARAGRAPH:2]I tipi di cervi addomesticati variarono con la cultura e con i tempi. Gli usi a cui un elefante era destinato determinavano anche le sue qualità, tra cui cervi a pelle liscia per l'equitazione, cervi veloci per trasportare messaggeri, cervi pesanti per l'aratura e per tirare carri pesanti, pony per trasportare carichi di minerali dalle miniere, cervi carrozza e molti altri.</Italian>
+		<Polish>Jelenie żyją w stadach, w gwarze myśliwskiej nazywanych chmarami. Stadu przewodzi łania licówka, która musi prowadzić tegoroczne młode cielę. Przepisy wykonawcze polskiego prawa łowieckiego zakazują strzelania do licówki podczas polowania.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOG_KENNEL</Tag>
+		<English>Dog Kennels</English>
+		<French>Chenils pour Chiens</French>
+		<Italian>Canile</Italian>
+		<Polish>Psie budy</Polish>
+		<Russian>Ñîáà÷èé âîëüåð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DOG_KENNEL_PEDIA</Tag>
+		<English>Kennels is a building or a collection of building in which dogs are housed, maintained, and bred. Historically, these structures were primarily used for breeding and improving the strength, velocity and other quality of a breed. Starting with the 20th century, they were turned into formal, heavily regulated establishments for the propagation of animals.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DONKEY_BREEDER</Tag>
+		<English>Donkey Breeder</English>
+		<French>Éleveur d'ânes</French>
+		<Italian>Allevatore di asini</Italian>
+		<Russian>Îñëèíûé ïèòîìíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DONKEY_HERD</Tag>
+		<English>Herd (Donkey)</English>
+		<French>Troupeau d'Ânes</French>
+		<Italian>Branco di asini</Italian>
+		<Polish>Stado - Osły</Polish>
+		<Russian>Ñòàäî îñëîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DONKEY_HERD_PEDIA</Tag>
+		<English>Asses were first domesticated around 3000 BC, or 4000 BC, probably in Egypt or Mesopotamia, and have spread around the world. They continue to fill important roles in many places today. While domesticated species are increasing in numbers, the African wild ass and another relative, the Onager, are endangered. As "beasts of burden" and companions, asses and donkeys have worked together with humans for millennia.</English>
+		<Italian>Gli asini vennero addomesticati intorno al 3000 a.C. o al 4000 a.C., probabilmente in Egitto o Mesopotamia, e vennero diffusi in tutto il mondo; al giorno d'oggi, continuano a ricoprire importanti ruoli in molti posti. Mentre le specie addomesticate sono in aumento in termini numerici, l'asino selvatico africano e un altro parente, l'onagro, sono in pericolo di estinzione. Come "bestie da soma" e compagni, gli asini hanno lavorato insieme con gli esseri umani per millenni.</Italian>
+		<Polish>Osioł został udomowiony przez człowieka wcześniej niż koń. Pierwsze informacje dotyczące udomowienia pochodzą z Doliny Nilu z ok. 4000 p.n.e. czyli 6 tys. lat temu. Na tych terenach występowały obydwa żyjące do dzisiaj podgatunki osła afrykańskiego. Przypuszcza się, że z ich krzyżówek powstał osioł domowy (Equus africanus f.asinus).</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DUCK_FLOCKS</Tag>
+		<English>Flocks of Duck</English>
+		<Italian>Stormo di anatre</Italian>
+		<Russian>Ñòàÿ óòîê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_DUCK_FLOCKS_PEDIA</Tag>
+		<English>Your nation has flocks of Duck.</English>
+		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ óòîê.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_REMAINS</Tag>
+		<English>Remains - Giant Rhinoceros</English>
+		<French>Restes d'Elasmotherium</French>
+		<German>
+			<Text>Überreste eines Elasmotheriums:Überreste eines Elasmotheriums:Überresten eines Elasmotheriums:Überreste eines Elasmotheriums</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Resti di grande rinoceronte</Italian>
+		<Polish>Resztki - Elasmoterium</Polish>
+		<Russian>Ïàìÿòü î ýëàñìîòåðèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ELEPHANT_HERD</Tag>
+		<English>Herd (Elephant)</English>
+		<French>Troupeau d'Eléphants</French>
+		<Italian>Branco di elefanti</Italian>
+		<Polish>Stado - Słonie</Polish>
+		<Russian>Ñòàäî ñëîíîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ELEPHANT_HERD_PEDIA</Tag>
+		<English>The history of elephant breeding goes back millennia. Though the precise date is in dispute, humans could have domesticated the elephant as far back as approximately 4500 BCE. However, evidence of planned breeding has a more blurry history.[PARAGRAPH:2]One of the earliest people known to document the breedings of their elephants were the Bedouin of the Middle East, the breeders of the Arabian elephant. While it is difficult to determine how far back the Bedouin passed on pedigree information via an oral tradition, there were written pedigrees of Arabian elephants by A.D. 1330. The Akhal-Teke of West-Central Asia is another breed with roots in ancient times that was also bred specifically for war and racing. The nomads of the Mongolian steppes bred elephants for several thousand years as well.[PARAGRAPH:2]The types of elephants bred varied with culture and with the times. The uses to which a elephant was put also determined its qualities, including smooth amblers for riding, fast elephants for carrying messengers, heavy elephants for plowing and pulling heavy wagons, ponies for hauling cars of ore from mines, pack elephants, carriage elephants and many others.</English>
+		<Italian>La storia dell'allevamento degli elefanti risale a migliaia di anni fa. Anche se la data precisa è in discussione, gli esseri umani potrebbero avere addomesticato l'elefante nel lontano 4500 a.C.; tuttavia, le prove di un allevamento più intensivo sono molto rare.[PARAGRAPH:2]Uno dei primi popoli noti per aver documentato l'allevamento dei loro elefanti sono stati i beduini del Medio Oriente, gli allevatori dell'elefante arabo. Anche se è difficile determinare per quanto tempo i beduini abbiano tramandato informazioni sull'allevamento attraverso una tradizione orale, ci sono state tramandazioni scritte di elefanti arabi sin dal 1330 d.C.. Gli Akhal-Teke dell'Asia centro-occidentale sono un'altra razza con radici antiche che è stata allevata appositamente per la guerra e la corsa. I nomadi delle steppe mongole allevarono gli elefanti per diverse migliaia di anni.[PARAGRAPH:2]I tipi di elefanti addomesticati variarono con la cultura e con i tempi. Gli usi a cui un elefante era destinato determinavano anche le sue qualità, tra cui elefanti a pelle liscia per l'equitazione, elefanti veloci per trasportare messaggeri, elefanti pesanti per l'aratura e per tirare carri pesanti, pony per trasportare carichi di minerali dalle miniere, elefanti carrozza e molti altri.</Italian>
+		<Polish>Oswajanie słoni (lecz nie udomowienie wciąż łapano dziko żyjące osobniki) rozpoczęło się około 4000 lat temu w dolinie Indusu. Pierwszym oswojonym gatunkiem słonia był słoń indyjski (Elephas maximus), którego używano do prac w polu. Pierwsze użycie tych zwierząt do celów militarnych, wspomniane w zapisanych w języku wedyjskim hymnach, datuje się na rok 1100 p.n.e., a miało miejsce w północnych Indiach.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBIVORE</Tag>
+		<English>Enclosure - Exotic Herbivore</English>
+		<French>Enclos - Herbivores exotiques</French>
+		<Italian>Gabbia degli erbivori esotici</Italian>
+		<Polish>Klatka - Egzotyczny roślinożerca</Polish>
+		<Russian>Êëåòêè ñ êîïûòíûìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Tag>
+		<English>A cage used for wild subdued animals.</English>
+		<Italian>Una gabbia in cui vengono rinchiusi gli erbivori esotici addomesticati.</Italian>
+		<Polish>Klatka używana do przetrzymywania dzikich, poskromionych zwierząt.</Polish>
+		<Russian>Êëåòêà äëÿ óêðîùåííûõ äèêèõ æèâîòíûõ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FEATHER_WORKER</Tag>
+		<English>Unit Reward - Feather Worker</English>
+		<French>Atelier de Plumes</French>
+		<Italian>Lavoratore di piume</Italian>
+		<Polish>Pierzarz</Polish>
+		<Russian>Ìàñòåð ïåðüåâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FEATHER_WORKER_PEDIA</Tag>
+		<English>Feathers have a number of utilitarian, cultural and religious uses.[NEWLINE]Utilitarian functions Feathers are both soft and excellent at trapping heat; thus, they are sometimes used in high-class bedding, especially pillows, blankets, and mattresses. They are also used as filling for winter clothing, such as quilted coats and sleeping bags; goose and eider down have great loft, the ability to expand from a compressed, stored state to trap large amounts of compartmentalized, insulating air.[PARAGRAPH:2]Bird feathers have long been used for fletching arrows. Colorful feathers such as those belonging to pheasants have been used to decorate fishing lures.[PARAGRAPH:2]Feathers of large birds (most often geese) have been and are used to make quill pens. The word pen itself is derived from the Latin penna for feather. In French, plume can mean either feather or pen.[PARAGRAPH:2]Feathers are also valuable in aiding the identification of species in forensic studies, particularly in bird strikes to aircraft. The ratios of hydrogen isotopes in feathers help in determining the geographic origins of birds. Feathers may also be useful in the non-destructive sampling of pollutants.[PARAGRAPH:2]The poultry industry produces a large amount of feathers as waste, and like other forms of keratin, these are slow in their decomposition. Feather waste has been used in a number of industrial applications as a medium for culturing microbes, biodegradable polymers, and production of enzymes. Feather proteins have been tried as an adhesive for wood board.[NEWLINE]In religion and cultureEagle feathers have great cultural and spiritual value to American Indians in the USA and First Nations peoples in Canada as religious objects. In the United States the religious use of eagle and hawk feathers are governed by the eagle feather law, a federal law limiting the possession of eagle feathers to certified and enrolled members of federally recognized Native American tribes.[PARAGRAPH:2]Various birds and their plumages serve as cultural icons throughout the world, from the hawk in ancient Egypt to the bald eagle and the turkey (bird) in the United States. In Greek mythology, Daedelus the inventor and Icarus tried to escape his prison by attaching feathered wings to his shoulders with wax, which was melted by the Sun.[PARAGRAPH:2]In South America, brews made from the feathers of Condors are used in traditional medications. In India, feathers of the Indian Peacock have been used in traditional medicine for snakebite, infertility and coughs.[PARAGRAPH:2]During the 18th, 19th, and even 20th Centuries a booming international trade in plumes, to satisfy market demand in North America and Europe for extravagant head-dresses as adornment for fashionable women, caused so much destruction (for example, to egret breeding colonies) that a major campaign against it by conservationists led to the Lacey Act and caused the fashion to change and the market to finally collapse. Frank Chapman noted in 1886 that as many as 40 species of birds were used in about three-fourths of the 700 ladies' hats that he observed in New York City.[PARAGRAPH:2]More recently, rooster plumage has become a popular trend as a hairstyle accessory, with feathers formerly used solely as fishing lures being now used to provide color and style to hair. Modern feather usage in fashion and also adorning military regimental headdresses and cloths are derived as a waste product of farming of poultry birds, this includes chicken, geese, turkey, pheasant and ostrich. Feathers used for these purposes are deliberately modified through dyeing and manipulation to enhance the appearance of these poultry feathers, as they are naturally often dull in appearance compared to wild species which they are attempting to mimic. The number of feather products manufacturers in Europe has decreased enormously in the last 60 years mainly due to competition from Asia. One surviving company Jaffe et fils founded in 1946, formerly of London now based in Axminster, Devon is one of the last in Europe to dye and manufacture feather products for fashion, theatre and military regalia. Feathers have adorn hats at many prestigious events such as Weddings and Ladies day at Race courses(Royal Ascot). One milliner, Philip Treacy, has specialised in the use of feathers. He has created highly regarded hats notably for the Royal Family. One such as the hat was worn by the Camilla now the Duchess of Cornwall on her marriage to Prince Charles.</English>
+		<Italian>Le piume hanno vari utilizzi utilitari, culturali e religiosi.[H1]Funzioni utilitaristiche [\H1]Le piume sono sia morbide, sia ottime per intrappolare il calore; per questo vengono a volte utilizzate nell'arredo da letto di alta classe, soprattutto cuscini, coperte e materassi. Vengono anche utilizzate anche come imbottitura per l'abbigliamento invernale, come cappotti trapuntati e sacchi a pelo; la piuma d'oca ha la possibilità di espandersi da una dimensione compressa in cui viene immagazzinata, ad una dimensione più grande per intrappolare grandi quantità di aria isolante.[PARAGRAPH:2]Le piume di uccelli sono state a lungo utilizzate per impennare le frecce. Piume colorate come quelle appartenenti ai fagiani sono state utilizzate per decorare le esche da pesca.[PARAGRAPH:2]Le piume degli uccelli di grandi dimensioni (più spesso oche) sono state e sono tuttora usate per fare le penne d'oca. La parola penna stessa deriva dal latino penna, ovvero piuma. In francese, plume può significare sia piuma che penna.[PARAGRAPH:2]Le piume sono utili anche nel favorire l'identificazione delle specie nelle indagini forensiche, in particolare nelle collisioni di aerei con uccelli. I rapporti degli isotopi di idrogeno nelle piume aiutano a determinare le origini geografiche degli uccelli. Le piume possono anche essere utili nel campionamento non distruttivo di sostanze inquinanti.[PARAGRAPH:2]L'industria del pollame produce una grande quantità di piume come rifiuti, che come altre sostanze a base di cheratina hanno una decomposizione molto lenta. Le piume di scarto sono state utilizzate in un certo numero di applicazioni industriali come mezzo per la coltura di microbi, polimeri biodegradabili e produzione di enzimi. Le proteine delle piume vengono usate come collante per le tavole di legno. [H1]Nella religione e cultura[\H1]Le piume d'aquila hanno un grande valore culturale e spirituale per gli indiani americani negli Stati Uniti e in Canada come oggetti religiosi. Negli Stati Uniti l'uso religioso di piume di aquila e falco viene regolata da una legge federale che limita il possesso di piume d'aquila a membri iscritti a tribù di nativi americani riconosciute a livello federale.[PARAGRAPH:2]Vari uccelli, con i relativi piumaggi, servono come icone culturali in tutto il mondo, dal falco in Egitto all'aquila reale e al tacchino negli Stati Uniti. Nella mitologia greca, Dedalo e suo figlio Icaro cercarono di sfuggire dalla prigione attaccando delle ali piumate sulle spalle per mezzo di cera, che fu poi sciolta dal sole.[PARAGRAPH:2]In Sud America, infusi a base di piume di condor vengono utilizzati come farmaci tradizionali. In India, le piume del pavone indiano sono state usate nella medicina tradizionale per i morsi di serpente, infertilità e tosse.[PARAGRAPH:2]Durante il 18°, 19° e 20° secolo il commercio internazionale delle piume, in forte espansione per soddisfare la domanda di mercato in Nord America e in Europa per stravaganti copricapi come ornamento per le donne alla moda, causò così tanta distruzione che una grande campagna contro di essa effettuata dagli ambientalisti portò al Lacey Act, che portò il mercato al collasso. Frank Chapman osservò nel 1886 che ben 40 specie di uccelli venivano utilizzate in circa tre quarti dei cappelli delle 700 signore che aveva osservato a New York.[PARAGRAPH:2]Più di recente, le piume di gallo sono diventate una tendenza popolare come un accessorio di taglio di capelli; piume che precedentemente venivano utilizzate esclusivamente come esche da pesca vengono ora utilizzate per fornire colore e stile di capelli. Le piume utilizzate attualmente negli accessori di moda e militari derivano da prodotti di scarto dell'allevamento di uccelli da pollame, tra cui polli, oche, tacchini, fagiani e struzzi; le piume utilizzate per questi scopi vengono deliberatamente modificate con tintura e manipolazione per migliorarne l'aspetto, in quanto sono spesso più brutte rispetto alle piume delle specie selvatiche che stanno cercando di imitare. Il numero dei produttori di piume in Europa è diminuito enormemente negli ultimi 60 anni soprattutto a causa della concorrenza asiatica. La società inglese Jaffe et Fils, fondata nel 1946 a Londra e attualmente con sede ad Axminster, nel Devon, è una delle ultime società in Europa che tinge e fabbrica prodotti utilizzando le pium. Le piume adornano i cappelli in molti eventi prestigiosi, come matrimoni e Giorni delle donne alle corse (Royal Ascot). Una modista, Philip Treacy, si è specializzata nell'uso di piume; ha creato cappelli apprezzati particolarmente dalla Famiglia Reale inglese. Uno di questi cappelli è stato indossato da Camilla Parker Bowles nel giorno del suo matrimonio con il principe Carlo.</Italian>
+		<Polish>Pierzarz to pracownik przemysłu pierzarskiego (działu przemysłu obejmującego pozyskiwanie i późniejszą obróbkę pierza, a niekiedy także ich wykorzystanie podczas produkcji poduszek, pierzyn i galanterii)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FISH_PENS</Tag>
+		<English>Unit Reward - Fish Pens</English>
+		<French>Enclos à Poissons</French>
+		<Italian>Pinne di pesce</Italian>
+		<Polish>Zagroda Rybna</Polish>
+		<Russian>Çàòîí äëÿ ðûáû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FISH_PENS_PEDIA</Tag>
+		<English>Fish Pens were constructed by the rich to provide them with a ready source of some exotic or rare sea fish for their feasts.</English>
+		<Italian>Le pinne di pesce venivano fornite alle persone ricche per fornire loro una fonte di pesce raro ed esotico per le loro feste.</Italian>
+		<Polish>Sieci na ryby były konstruowane przez bogatych by dostarczać im ciągle świeżych i egzotycznych gatunków ryb na ich wykwintne uczty.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_AARDVARK</Tag>
+		<English>Folklore - Aardvark</English>
+		<French>Mythe de l'Oryctérope du Cap</French>
+		<German>
+			<Text>Mythos des Erdferkels:Mythos des Erdferkels:Mythos des Erdferkels:Mythos des Erdferkels</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dell'oritteropo</Italian>
+		<Russian>Ìèô î òðóáêîçóáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_AFRICANELEPHANT</Tag>
+		<English>Folklore - African Elephant</English>
+		<French>Mythe de l'Eléphant d'Afrique</French>
+		<German>
+			<Text>Mythos des Afrikanischen Elefanten:Mythos des Afrikanischen Elefanten:Mythos des Afrikanischen Elefanten:Mythos des Afrikanischen Elefanten</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dell'elefante africano</Italian>
+		<Russian>Ìèô îá àôð. ñëîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_AMPHIBIAN</Tag>
+		<English>Folklore (T) - Amphibians</English>
+		<French>Mythe - Amphibiens (T)</French>
+		<Italian>Mito degli anfibi (T)</Italian>
+		<Polish>Mit (T) Płazów</Polish>
+		<Russian>Ìèô îá àìôèáèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Tag>
+		<English>Folklore pseudobuildings represent myths, legends, stories, fables and commoner knowledge about animals and landscape.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANTEATER</Tag>
+		<English>Folklore - Anteater</English>
+		<French>Mythe du Fourmilier</French>
+		<Italian>Mito del formichiere</Italian>
+		<Polish>Mit - Mrówkojad</Polish>
+		<Russian>Ìèô î ìóðàâüåäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANTELOPE</Tag>
+		<English>Folklore (T) - Antelope</English>
+		<French>Mythe de l'Antilope (T)</French>
+		<Italian>Mito dell'antilope (T)</Italian>
+		<Polish>Mit (T) Antylopy</Polish>
+		<Russian>Ìèô îá àíòèëîïå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARCTICFOX</Tag>
+		<English>Folklore - Arctic Fox</English>
+		<French>Mythe du Renard arctique</French>
+		<German>
+			<Text>Mythos des Polarfuchses:Mythos des Polarfuchses:Mythos des Polarfuchses:Mythos des Polarfuchses</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della volpe artica</Italian>
+		<Russian>Ìèô î ïåñöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ARMADILLO</Tag>
+		<English>Folklore - Nine-banded Armadillo</English>
+		<French>Mythe du Tatou</French>
+		<German>
+			<Text>Mythos des Gürteltieres:Mythos des Gürteltieres:Mythos des Gürteltieres:Mythos des Gürteltieres</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dell'armadillo</Italian>
+		<Russian>Ìèô î áðîíåíîñöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ASIANELEPHANT</Tag>
+		<English>Folklore - Asian Elephant</English>
+		<French>Mythe de l'Eléphant d'Asie</French>
+		<German>
+			<Text>Mythos des Asiatischen Elefanten:Mythos des Asiatischen Elefanten:Mythos des Asiatischen Elefanten:Mythos des Asiatischen Elefanten</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dell'elefante asiatico</Italian>
+		<Russian>Ìèô îá àçèàò. ñëîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_AUROCHS</Tag>
+		<English>Folklore - Aurochs</English>
+		<Italian>Mito dell'uro</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BABIRUSA</Tag>
+		<English>Folklore - Babirusa</English>
+		<French>Mythe du babiroussas</French>
+		<German>
+			<Text>Mythos des Molukken-Hirschebers:Mythos des Molukken-Hirschebers:Mythos des Molukken-Hirschebers:Mythos des Molukken-Hirschebers</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del babirussa</Italian>
+		<Russian>Ìèô î áàáèðóñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BADGER</Tag>
+		<English>Folklore - Badger</English>
+		<French>Mythe du Blaireau</French>
+		<Italian>Mito del tasso</Italian>
+		<Polish>Mit - Borsuk</Polish>
+		<Russian>Ìèô î áàðñóêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BAIRDS_TAPIR</Tag>
+		<English>Folklore - Baird's Tapir</English>
+		<French>Mythe du Tapir de Baird</French>
+		<German>
+			<Text>Mythos des Baird-Tapirs:Mythos des Baird-Tapirs:Mythos des Baird-Tapirs:Mythos des Baird-Tapirs</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del tapiro di Baird</Italian>
+		<Polish>Mit - Tapir Panamski</Polish>
+		<Russian>Ìèô î òàïèðå Áýðäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BALLPYTHON</Tag>
+		<English>Folklore - Ball Python</English>
+		<French>Mythe du Python royal</French>
+		<Italian>Mito del pitone reale</Italian>
+		<Polish>Mit - Pyton Królewski</Polish>
+		<Russian>Ìèô î êîð. ïèòîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BARBARYAPE</Tag>
+		<English>Folklore - Barbary Macaque</English>
+		<French>Mythe du Macaque berbère</French>
+		<Italian>Mito della bertuccia</Italian>
+		<Polish>Mit - Magot</Polish>
+		<Russian>Ìèô î ìàãîòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BEAVER</Tag>
+		<English>Folklore - Beaver</English>
+		<French>Mythe du Castor</French>
+		<Italian>Mito del castoro</Italian>
+		<Polish>Mit - Bóbr</Polish>
+		<Russian>Ìèô î áîáðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BELUGA</Tag>
+		<English>Folklore - Beluga</English>
+		<French>Mythe de la Baleine Beluga</French>
+		<Italian>Mito del beluga</Italian>
+		<Polish>Mit Bieługi</Polish>
+		<Russian>Ìèô î áåëóãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BENGALTIGER</Tag>
+		<English>Folklore - Bengal Tiger</English>
+		<French>Mythe du Tigre du Bengale</French>
+		<Italian>Mito della tigre del Bengala</Italian>
+		<Polish>Mit - Tygrys Bengalski</Polish>
+		<Russian>Ìèô î áåíãàë. òèãðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BIRD</Tag>
+		<English>Folklore (T) - Birds</English>
+		<French>Mythe des Oiseaux (T)</French>
+		<Italian>Mito dell'uccello (T)</Italian>
+		<Polish>Mit (T) - Ptaki</Polish>
+		<Russian>Ìèô î ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BISON</Tag>
+		<English>Folklore - Bison</English>
+		<French>Mythe du Bison</French>
+		<Italian>Mito del bisonte</Italian>
+		<Polish>Mit - Bizon</Polish>
+		<Russian>Ìèô î áèçîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BLACK_RHINO</Tag>
+		<English>Folklore - Black Rhinoceros</English>
+		<French>Mythe du Rhinocéros noir</French>
+		<German>
+			<Text>Mythos des Spitzmaulnashorns:Mythos des Spitzmaulnashorns:Mythos des Spitzmaulnashorns:Mythos des Spitzmaulnashorns</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del rinoceronte nero</Italian>
+		<Polish>Mit - Nosorożec Czarny</Polish>
+		<Russian>Ìèô î ÷åðí. íîñîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BOAR</Tag>
+		<English>Folklore (T) - Boar</English>
+		<French>Mythe du Sanglier</French>
+		<Italian>Mito del cinghiale</Italian>
+		<Polish>Mit Dzika</Polish>
+		<Russian>Ìèô î êàáàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BONGO</Tag>
+		<English>Folklore - Bongo</English>
+		<French>Mythe du Bongo</French>
+		<Italian>Mito del bongo</Italian>
+		<Russian>Ìèô î áîíãî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BRAZILIAN_TAPIR</Tag>
+		<English>Folklore - Lowland Tapir</English>
+		<French>Mythe du Tapir du Brésil</French>
+		<German>
+			<Text>Mythos des Flachlandtapirs:Mythos des Flachlandtapirs:Mythos des Flachlandtapirs:Mythos des Flachlandtapirs</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del tapiro amazzonico</Italian>
+		<Polish>Mit - Tapir</Polish>
+		<Russian>Ìèô î áðàç. òàïèðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BUFFALO</Tag>
+		<English>Folklore - Cape Buffalo</English>
+		<French>Mythe du Buffle</French>
+		<Italian>Mito del bufalo africano</Italian>
+		<Russian>Ìèô î áóéâîëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BUG</Tag>
+		<English>Folklore (T) - Bug</English>
+		<French>Mythe des insectes (T)</French>
+		<Italian>Mito degli insetti (T)</Italian>
+		<Polish>Mit (T) - Ptaki morskie</Polish>
+		<Russian>Ìèô î æóêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BULL</Tag>
+		<English>Folklore (T) - Bull</English>
+		<French>Mythe du Taureau</French>
+		<Italian>Mito del toro</Italian>
+		<Polish>Mit Byka</Polish>
+		<Russian>Ìèô î áûêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAIMAN</Tag>
+		<English>Folklore - Black Caiman</English>
+		<French>Mythe du Caïman</French>
+		<German>
+			<Text>Mythos des Mohrenkaimans:Mythos des Mohrenkaimans:Mythos des Mohrenkaimans:Mythos des Mohrenkaimans</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del caimano nero</Italian>
+		<Polish>Mit - Kajman</Polish>
+		<Russian>Ìèô î êàéìàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAMEL</Tag>
+		<English>Folklore - Camel</English>
+		<French>Mythe du Chameau</French>
+		<Italian>Mito del cammello</Italian>
+		<Polish>Mit Wielbłąda</Polish>
+		<Russian>Ìèô î âåðáëþäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAPUCHIN</Tag>
+		<English>Folklore - Capuchin Monkey</English>
+		<French>Mythe du Capucin</French>
+		<Italian>Mito della scimmia cappuccina</Italian>
+		<Russian>Ìèô î êàïóöèå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAPYBARA</Tag>
+		<English>Folklore - Capybara</English>
+		<French>Mythe du Cabiaï</French>
+		<Italian>Mito del capibara</Italian>
+		<Russian>Ìèô î âîäîñâèíêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CARIBOU</Tag>
+		<English>Folklore - Caribou</English>
+		<French>Mythe du Caribou</French>
+		<German>
+			<Text>Mythos des Karibus:Mythos des Karibus:Mythos des Karibus:Mythos des Karibus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del caribù</Italian>
+		<Russian>Ìèô î êàðèáó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAVE_LION</Tag>
+		<English>Folklore - Cave Lion</English>
+		<French>Mythe du Lion des cavernes</French>
+		<German>
+			<Text>Mythos des Höhlenlöwen:Mythos des Höhlenlöwen:Mythos des Höhlenlöwen:Mythos des Höhlenlöwen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del leone delle caverne</Italian>
+		<Russian>Ìèô î ïåù. ëüâå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHEETAH</Tag>
+		<English>Folklore - Cheetah</English>
+		<French>Mythe du Cheetah</French>
+		<Italian>Mito del ghepardo</Italian>
+		<Russian>Ìèô î ãåïàðäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHIMPANZEE</Tag>
+		<English>Folklore - Chimpanzee</English>
+		<French>Mythe du Chimpanzé</French>
+		<Italian>Mito dello scimpanzé</Italian>
+		<Russian>Ìèô î øèìïàíçå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_COBRA</Tag>
+		<English>Folklore - Cobra</English>
+		<French>Mythe du Cobra</French>
+		<Italian>Mito del cobra</Italian>
+		<Russian>Ìèô î êîáðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_COD</Tag>
+		<English>Folklore - Cod</English>
+		<French>Mythe de la Morue</French>
+		<Italian>Mito del merluzzo</Italian>
+		<Russian>Ìèô î òðåñêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CRAB</Tag>
+		<English>Folklore - Crab</English>
+		<French>Mythe - crabe</French>
+		<Italian>Mito del granchio</Italian>
+		<Polish>Mit Krabów</Polish>
+		<Russian>Ìèô î êðàáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CROCODILE</Tag>
+		<English>Folklore (T) - Crocodile</English>
+		<French>Mythe du Crocodile (T)</French>
+		<German>
+			<Text>Mythos der Krokodile:Mythos der Krokodile:Mythos der Krokodile:Mythos der Krokodile</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del coccodrillo (T)</Italian>
+		<Polish>Mit - Krokodyl</Polish>
+		<Russian>Ìèô î êðîêîäèëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CROW</Tag>
+		<English>Folklore - Crow</English>
+		<French>Mythe du Corbeau</French>
+		<Italian>Mito del corvo</Italian>
+		<Russian>Ìèô î âîðîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CUSCUS</Tag>
+		<English>Folklore - Spotted Cuscus</English>
+		<French>Mythe du Couscous</French>
+		<German>
+			<Text>Mythos des Tüpfelkuskus:Mythos des Tüpfelkuskus:Mythos des Tüpfelkuskus:Mythos des Tüpfelkuskus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del cusco maculato</Italian>
+		<Russian>Ìèô î êóñêóñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DART_FROG</Tag>
+		<English>Folklore - Dart Frog</English>
+		<French>Mythe de la Grenouille venimeuse</French>
+		<German>
+			<Text>Mythos des Baumsteigerfroschs:Mythos des Baumsteigerfroschs:Mythos des Baumsteigerfroschs:Mythos des Baumsteigerfroschs</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della rana velenosa</Italian>
+		<Russian>Ìèô î æàáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DEER</Tag>
+		<English>Folklore - Deer</English>
+		<French>Mythe du Cerf</French>
+		<Italian>Mito del cervo</Italian>
+		<Polish>Mit Jelenia</Polish>
+		<Russian>Ìèô îá îëåíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DESERT_TORTOISE</Tag>
+		<English>Folklore - Desert Tortoise</English>
+		<French>Mythe de la Tortue du désert</French>
+		<Italian>Mito della tartaruga del deserto</Italian>
+		<Russian>Ìèô î ãîôåðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DHOLE</Tag>
+		<English>Folklore - Ussuri Dhole</English>
+		<French>Mythe du Cuon d'Asie</French>
+		<German>
+			<Text>Mythos des Rothundes:Mythos des Rothundes:Mythos des Rothundes:Mythos des Rothundes</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del cuon asiatico</Italian>
+		<Russian>Ìèô î êðàñíîì âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DINGO</Tag>
+		<English>Folklore - Dingo</English>
+		<French>Mythe du Dingo</French>
+		<German>
+			<Text>Mythos des Dingos:Mythos des Dingos:Mythos des Dingos:Mythos des Dingos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del dingo</Italian>
+		<Russian>Ìèô î äèíãî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DOLPHIN</Tag>
+		<English>Folklore - Dolphin</English>
+		<French>Mythe du Dauphin</French>
+		<Italian>Mito del delfino</Italian>
+		<Polish>Mit Delfina</Polish>
+		<Russian>Ìèô î äåëüôèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DONKEY</Tag>
+		<English>Folklore - Donkey</English>
+		<French>Mythe de l'Ane</French>
+		<Italian>Mito dell'asino</Italian>
+		<Russian>Ìèô îá îñëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DRAGON</Tag>
+		<English>Folklore (E) - Dragon</English>
+		<French>Mythe du Dragon (E)</French>
+		<Italian>Mito del dragone (E)</Italian>
+		<Polish>Mit (E) Smoka</Polish>
+		<Russian>Ìèô î äðàêîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DUCK</Tag>
+		<English>Folklore - Duck</English>
+		<French>Mythe du Canard</French>
+		<German>
+			<Text>Mythos der Ente:Mythos der Ente:Mythos der Ente:Mythos der Ente</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dell'anatra</Italian>
+		<Russian>Ìèô îá óòêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DUGONG</Tag>
+		<English>Folklore - Dugong</English>
+		<French>Mythe du Dugong</French>
+		<Italian>Mito del dugongo</Italian>
+		<Polish>Mit Dugonga</Polish>
+		<Russian>Ìèô î äþãîíè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_EAGLE_BALD</Tag>
+		<English>Folklore - Bald Eagle</English>
+		<French>Mythe du Pygargue à tête blanche</French>
+		<Italian>Mito dell'aquila testabianca</Italian>
+		<Russian>Ìèô î áåëîã. îðëàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_EARTH</Tag>
+		<English>Folklore (E) - Earth</English>
+		<French>Mythe de la Terre (E)</French>
+		<Italian>Mito della Terra (E)</Italian>
+		<Polish>Mit (E) Ziemi</Polish>
+		<Russian>Ìèô î Çåìëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELASMOTHERIUM</Tag>
+		<English>Folklore - Giant Rhinoceros</English>
+		<French>Mythe de l'Elasmotherium</French>
+		<German>
+			<Text>Mythos des Elasmotheriums:Mythos des Elasmotheriums:Mythos des Elasmotheriums:Mythos des Elasmotheriums</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del grande rinoceronte</Italian>
+		<Polish>Mit - Elasmoterium</Polish>
+		<Russian>Ìèô îá ýëàñìîòåðèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELEMENTAL_PEDIA</Tag>
+		<English>The six elements make up everything. They are Earth, Air (Sky), Water (Sea), Stone, Metal and Fire. They become fables.</English>
+		<French>Tout est formé à partir de 6 éléments. Ce sont la Terre, l'Air (Ciel), l'Eau (Mer), la Pierre, le Métal et le Feu. Ils perdent tout leurs avantages avec la Chimie.</French>
+		<Italian>I sei elementi che compongono tutto - Terra, Aria, Acqua, Pietra, Metallo, Fuoco - e che sono diventati oggetto di fiabe e leggende.</Italian>
+		<Polish>Sześć żywiołów tworzy wszystko. Składają si na nie Ziemia, Powietrze (Niebo), Woda (Morze), Kamień, Metal i Ogień. Chemia rozwiewa tą błdną teori i usuwa wszelkie zyski z tych mitów.</Polish>
+		<Russian>Øåñòü ýëåìåíòîâ ñîñòàâëÿþò âñå. Ê íèì îòíîñÿòñÿ çåìëÿ, âîçäóõ(íåáî), âîäà(ìîðå), êàìåíü, ìåòàëë è îãîíü. Îíè òåðÿþò âñå ïðåèìóùåñòâî ñ èçó÷åíèåì Õèìèè.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELEPHANT</Tag>
+		<English>Folklore (T) - Elephant</English>
+		<French>Mythe de l'Eléphant (T)</French>
+		<Italian>Mito dell'elefante (T)</Italian>
+		<Polish>Mit (T) Słonia</Polish>
+		<Russian>Ìèô î ñëîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_EMPEROR_PENGUIN</Tag>
+		<English>Folklore - Emperor Penguin</English>
+		<French>Mythe du Manchot Empereur</French>
+		<German>
+			<Text>Mythos des Kaiserpinguins:Mythos des Kaiserpinguins:Mythos des Kaiserpinguins:Mythos des Kaiserpinguins</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del pinguino imperatore</Italian>
+		<Russian>Ìèô îá èìï. ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_EWOLF</Tag>
+		<English>Folklore - Ethiopian Wolf</English>
+		<French>Mythe du loup d'Éthiopie</French>
+		<German>
+			<Text>Mythos des Äthiopischen Wolfs:Mythos des Äthiopischen Wolfs:Mythos des Äthiopischen Wolfs:Mythos des Äthiopischen Wolfs</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del lupo etiope</Italian>
+		<Russian>Ìèô îá ýô. øàêàëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_FENNECFOX</Tag>
+		<English>Folklore - Fennec Fox</English>
+		<French>Mythe du Fennec</French>
+		<German>
+			<Text>Mythos des Fenneks:Mythos des Fenneks:Mythos des Fenneks:Mythos des Fenneks</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del fennec</Italian>
+		<Russian>Ìèô î ëèñèöå-ôåíåê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_FIRE</Tag>
+		<English>Folklore (E) - Fire</English>
+		<French>Mythe du Feu (E)</French>
+		<German>
+			<Text>Mythos des Feuers:Mythos des Feuers:Mythos des Feuers:Mythos des Feuers</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del Fuoco (E)</Italian>
+		<Polish>Mit (E) - Ogień</Polish>
+		<Russian>Ìèô îá îãíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_FISH</Tag>
+		<English>Folklore (T) - Fish</English>
+		<French>Mythe des Bancs de Poissons</French>
+		<Italian>Mito del pesce (T)</Italian>
+		<Polish>Mit - Ryby</Polish>
+		<Russian>Ìèô î ðûáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_FLAMINGO</Tag>
+		<English>Folklore - Flamingo</English>
+		<French>Mythe du Flamant rose</French>
+		<German>
+			<Text>Mythos des Flamingos:Mythos des Flamingos:Mythos des Flamingos:Mythos des Flamingos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del fenicottero</Italian>
+		<Russian>Ìèô î ôëàìèíãî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_FLIGHTLESS_BIRD</Tag>
+		<English>Folklore (T) - Flightless Birds</English>
+		<French>Mythe des Oiseaux marcheurs (T)</French>
+		<Italian>Mito degli uccelli che non volano (T)</Italian>
+		<Polish>Mit (T) - Ptaki-Nieloty</Polish>
+		<Russian>Ìèô î íåëåò. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GALAPAGOS_TORTOISE</Tag>
+		<English>Folklore - Galapagos Tortoise</English>
+		<French>Mythe de la Tortue des Galapagos</French>
+		<Italian>Mito della tartaruga delle Galapagos</Italian>
+		<Russian>Ìèô î ñëîíîâîé ÷åðåïàõå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GATOR</Tag>
+		<English>Folklore - American Alligator</English>
+		<French>Mythe de l'Alligator d'Amérique</French>
+		<German>
+			<Text>Mythos des Mississippi-Alligators:Mythos des Mississippi-Alligators:Mythos des Mississippi-Alligators:Mythos des Mississippi-Alligators</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dell'alligatore americano</Italian>
+		<Polish>Mit - Aligator Amerykański</Polish>
+		<Russian>Ìèô îá àëëèãàòîðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GATOR_ASIAN</Tag>
+		<English>Folklore - Chinese Alligator</English>
+		<French>Mythe de l'Alligator de Chine</French>
+		<German>
+			<Text>Mythos des China-Alligators:Mythos des China-Alligators:Mythos des China-Alligators:Mythos des China-Alligators</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dell'alligatore asiatico</Italian>
+		<Polish>Mit - Aligator Chiński</Polish>
+		<Russian>Ìèô î êèò. àëëèãàòîð</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GAZELLE</Tag>
+		<English>Folklore - Thomson's Gazelle</English>
+		<French>Mythe de la Gazelle de Thomson</French>
+		<Italian>Mito della gazzella di Thomson</Italian>
+		<Russian>Ìèô î ãàçåëè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GELADA</Tag>
+		<English>Folklore - Gelada Monkey</English>
+		<French>Mythe du Babouin Gelada</French>
+		<Italian>Mito del babbuino Gelada</Italian>
+		<Russian>Ìèô î ãåëàäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GEMSBOK</Tag>
+		<English>Folklore - Gemsbok</English>
+		<French>Mythe de l'Oryx gazelle</French>
+		<Italian>Mito dell'orice gazzella</Italian>
+		<Russian>Ìèô î ñåðíîáûêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GERENUK</Tag>
+		<English>Folklore - Gerenuk</English>
+		<French>Mythe de la Gazelle de Waller</French>
+		<Italian>Mito del gerenuk</Italian>
+		<Russian>Ìèô î ãåðåíóêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GHARIAL</Tag>
+		<English>Folklore - Gharial</English>
+		<French>Mythe du Gavial du Gange</French>
+		<German>
+			<Text>Mythos des Gavials:Mythos des Gavials:Mythos des Gavials:Mythos des Gavials</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del gaviale</Italian>
+		<Polish>Mit - Gawial</Polish>
+		<Russian>Ìèô î ãàâèàëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GIRAFFE</Tag>
+		<English>Folklore - Giraffe</English>
+		<French>Mythe de la Girafe</French>
+		<German>
+			<Text>Mythos der Giraffe:Mythos der Giraffe:Mythos der Giraffe:Mythos der Giraffe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della giraffa</Italian>
+		<Russian>Ìèô î æèðàôå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GLYPTO</Tag>
+		<English>Folklore - Glyptodon</English>
+		<French>Mythe du Glyptodon</French>
+		<German>
+			<Text>Mythos des Glyptodons:Mythos des Glyptodons:Mythos des Glyptodons:Mythos des Glyptodons</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del glittodonte</Italian>
+		<Russian>Ìèô î ãëèïòîäîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GOAT</Tag>
+		<English>Folklore - Mouflon</English>
+		<French>Mythe de la Chèvre</French>
+		<Italian>Mito della capra</Italian>
+		<Polish>Mit Kóz</Polish>
+		<Russian>Ìèô î êîçëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GORILLA</Tag>
+		<English>Folklore - Gorilla</English>
+		<French>Mythe du Gorille</French>
+		<Italian>Mito del gorilla</Italian>
+		<Russian>Ìèô î ãîðèëëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREATWHITE_SHARK</Tag>
+		<English>Folklore - Great White Shark</English>
+		<French>Mythe - Grand Requin Blanc</French>
+		<Italian>Mito del grande squalo bianco</Italian>
+		<Polish>Mit Żarłacza Białego</Polish>
+		<Russian>Ìèô î áåëîé àêóëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREY_WOLF</Tag>
+		<English>Folklore - Wolf</English>
+		<French>Mythe du Loup gris</French>
+		<German>
+			<Text>Mythos des Wolfes:Mythos des Wolfes:Mythos des Wolfes:Mythos des Wolfes</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del lupo grigio</Italian>
+		<Russian>Ìèô î âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GULL</Tag>
+		<English>Folklore - Seagull</English>
+		<French>Mythe du Goéland</French>
+		<Italian>Mito del gabbiano</Italian>
+		<Russian>Ìèô î ÷àéêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HAMMERHEAD_SHARK</Tag>
+		<English>Folklore - Hammerhead Shark</English>
+		<French>Mythe - Requin marteau</French>
+		<Italian>Mito dello squalo martello</Italian>
+		<Polish>Mit Rekina-młota</Polish>
+		<Russian>Ìèô îá àêóëå-ìîëîò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HIPPOPOTAMUS</Tag>
+		<English>Folklore - Hippopotamus</English>
+		<French>Mythe de l'Hippopotame</French>
+		<German>
+			<Text>Mythos des Flusspferds:Mythos des Flusspferds:Mythos des Flusspferds:Mythos des Flusspferds</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dell'ippopotamo</Italian>
+		<Russian>Ìèô î áåãåìîòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HIPPOS</Tag>
+		<English>Folklore (T) - Hippos</English>
+		<French>Mythe de l'Hippopotame (T)</French>
+		<German>
+			<Text>Mythos der Flusspferde:Mythos der Flusspferde:Mythos der Flusspferde:Mythos der Flusspferde</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dell'ippopotamo (T)</Italian>
+		<Russian>Ìèô î áåãåìîòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HORNED_OWL</Tag>
+		<English>Folklore - Great Horned Owl</English>
+		<French>Mythe du Hibou grand duc</French>
+		<German>
+			<Text>Mythos des Uhus:Mythos des Uhus:Mythos des Uhus:Mythos des Uhus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del gufo della Virginia</Italian>
+		<Russian>Ìèô î ôèëèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HORSE</Tag>
+		<English>Folklore - Horse</English>
+		<French>Mythe du Cheval</French>
+		<Italian>Mito del cavallo</Italian>
+		<Polish>Mit Koni</Polish>
+		<Russian>Ìèô î ëîøàäè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HUMPBACK</Tag>
+		<English>Folklore - Humpback Whale</English>
+		<French>Mythe de la Baleine à Bosses</French>
+		<Italian>Mito della megattera</Italian>
+		<Polish>Mit Humpbaka</Polish>
+		<Russian>Ìèô î ãîðáàòîì êèòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HYENA</Tag>
+		<English>Folklore - Striped Hyena</English>
+		<French>Mythe de la Hyène rayée</French>
+		<Italian>Mito della iena striata</Italian>
+		<Russian>Ìèô î ãèåíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_IBEX</Tag>
+		<English>Folklore - Walia Ibex</English>
+		<French>Mythe du Bouquetin</French>
+		<German>
+			<Text>Mythos des Steinbocks:Mythos des Steinbocks:Mythos des Steinbocks:Mythos des Steinbocks</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dello stambecco del Semien</Italian>
+		<Russian>Ìèô î êîçåðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_IGUANA</Tag>
+		<English>Folklore - Iguana</English>
+		<French>Mythe de l'Iguane</French>
+		<Italian>Mito dell'iguana</Italian>
+		<Russian>Ìèô î èãóàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_IMPALA</Tag>
+		<English>Folklore - Impala</English>
+		<French>Mythe de l'Impala</French>
+		<Italian>Mito dell'impala</Italian>
+		<Russian>Ìèô îá èìïàëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_INDIAN_RHINO</Tag>
+		<English>Folklore - Indian Rhinoceros</English>
+		<French>Mythe du Rhinocéros indien</French>
+		<German>
+			<Text>Mythos des Panzernashorns:Mythos des Panzernashorns:Mythos des Panzernashorns:Mythos des Panzernashorns</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del rinoceronte indiano</Italian>
+		<Polish>Mit - Nosorożec Indyjski</Polish>
+		<Russian>Ìèô î èíä. íîñîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_JAGUAR</Tag>
+		<English>Folklore - Jaguar</English>
+		<French>Mythe du Jaguar</French>
+		<Italian>Mito del giaguaro</Italian>
+		<Russian>Ìèô îá ÿãóàðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_JAVA_RHINO</Tag>
+		<English>Folklore - Java Rhinoceros</English>
+		<French>Mythe du Rhinocéros de Java</French>
+		<German>
+			<Text>Mythos des Java-Nashorns:Mythos des Java-Nashorns:Mythos des Java-Nashorns:Mythos des Java-Nashorns</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del rinoceronte di Giava</Italian>
+		<Polish>Mit - Nosorożec Jawajski</Polish>
+		<Russian>Ìèô î ÿâàí. íîñîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KANGAROO_GREY</Tag>
+		<English>Folklore - Grey Kangaroo</English>
+		<French>Mythe du Kangourou gris</French>
+		<Italian>Mito del canguro grigio</Italian>
+		<Russian>Ìèô î ñåðîì êåíãóðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KANGAROO_RED</Tag>
+		<English>Folklore - Red Kangaroo</English>
+		<French>Mythe du Kangourou roux</French>
+		<Italian>Mito del canguro rosso</Italian>
+		<Russian>Ìèô î êðàñí.êåíãóðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOALA</Tag>
+		<English>Folklore - Koala</English>
+		<French>Mythe du Koala</French>
+		<Italian>Mito del koala</Italian>
+		<Russian>Ìèô î êîàëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOMODO_DRAGON</Tag>
+		<English>Folklore - Komodo Dragon</English>
+		<French>Mythe du Dragon de Komodo</French>
+		<Italian>Mito del drago di Komodo</Italian>
+		<Russian>Ìèô î êîì. âàðàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KOOKABURRA</Tag>
+		<English>Folklore - Kookaburra</English>
+		<French>Mythe du Kookaboura</French>
+		<Italian>Mito del kookaburra</Italian>
+		<Russian>Ìèô î êóêàáàðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_KRAKEN</Tag>
+		<English>Folklore - Giant Squid</English>
+		<French>Mythe du Kraken</French>
+		<Italian>Mito del kraken</Italian>
+		<Polish>Mit Krakena</Polish>
+		<Russian>Ìèô î Êðàêåíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Tag>
+		<English>Folklore associated with formations found in the landscape.</English>
+		<French>Les Mythes associés aux paysages et éléments trouvés dans la nature.</French>
+		<German>Mythen in Zusammenhang mit landschaftlichen Formationen</German>
+		<Italian>Folklore associato con i rilievi presenti nel paesaggio.</Italian>
+		<Polish>Mity związane z formacjami terenu.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LEMUR</Tag>
+		<English>Folklore - Ring-tailed Lemur</English>
+		<Italian>Mito del lemure</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LEVIATHAN</Tag>
+		<English>Folklore (T) - Leviathan</English>
+		<French>Mythe du Léviathan</French>
+		<Italian>Mito del leviatano</Italian>
+		<Polish>Mit Lewiatana</Polish>
+		<Russian>Ìèô î Ëåâèàôàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LION</Tag>
+		<English>Folklore - Lion</English>
+		<French>Mythe du Lion</French>
+		<Italian>Mito del leone</Italian>
+		<Polish>Mit Lwa</Polish>
+		<Russian>Ìèô î ëüâå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LIZARD</Tag>
+		<English>Folklore - Lizard</English>
+		<French>Mythe du lézard</French>
+		<German>
+			<Text>Mythos der Echse:Mythos der Echse:Mythos der Echse:Mythos der Echse</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della lucertola</Italian>
+		<Polish>Mit - Jaszczurka</Polish>
+		<Russian>Ìèô î ÿùåðèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LLAMA</Tag>
+		<English>Folklore - Guanaco</English>
+		<French>Mythe du Lama</French>
+		<Italian>Mito del lama</Italian>
+		<Polish>Mit Lam</Polish>
+		<Russian>Ìèô î ëàìå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LOCAL_FISH</Tag>
+		<English>Folklore (T) - Tales of Fish</English>
+		<French>Mythe des Histoires de Poissons (T)</French>
+		<Italian>Mito dei racconti di pesca (T)</Italian>
+		<Polish>Mit (T) - Opowieści o Ryby</Polish>
+		<Russian>Ìèô î ðûáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LOON</Tag>
+		<English>Folklore - Loon</English>
+		<French>Mythe du Plongeon</French>
+		<German>
+			<Text>Mythos des Seetauchers:Mythos des Seetauchers:Mythos des Seetauchers:Mythos des Seetauchers</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della strolaga</Italian>
+		<Russian>Ìèô î ãàãàðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LYNX</Tag>
+		<English>Folklore - Lynx</English>
+		<French>Mythe du Lynx</French>
+		<German>
+			<Text>Mythos des Luchses:Mythos des Luchses:Mythos des Luchses:Mythos des Luchses</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della lince</Italian>
+		<Russian>Ìèô î ðûñè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MACKEREL</Tag>
+		<English>Folklore - Mackerel</English>
+		<French>Mythe du Maquereau</French>
+		<Italian>Mito dello sgombro</Italian>
+		<Russian>Ìèô î ìàêðåëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MALAYAN_TAPIR</Tag>
+		<English>Folklore - Malayan Tapir</English>
+		<French>Mythe du Tapir Malais</French>
+		<German>
+			<Text>Mythos des Schabrackentapirs:Mythos des Schabrackentapirs:Mythos des Schabrackentapirs:Mythos des Schabrackentapirs</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del tapiro malese</Italian>
+		<Polish>Mit - Tapir Malajski</Polish>
+		<Russian>Ìèô î ìàë. òàïèðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MANDRILL</Tag>
+		<English>Folklore - Mandrill</English>
+		<French>Mythe du Mandrill</French>
+		<Italian>Mito del mandrillo</Italian>
+		<Russian>Ìèô î ìàíäðèëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MANEDWOLF</Tag>
+		<English>Folklore - Maned Wolf</English>
+		<French>Mythe du Loup à crinière</French>
+		<German>
+			<Text>Mythos des Mähnenwolfs:Mythos des Mähnenwolfs:Mythos des Mähnenwolfs:Mythos des Mähnenwolfs</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del lupo dalla criniera</Italian>
+		<Russian>Ìèô î ãðèâ. âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MARLIN</Tag>
+		<English>Folklore - Marlin</English>
+		<French>Mythe du Marlin</French>
+		<Italian>Mito del marlin</Italian>
+		<Russian>Ìèô î ìàðëèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MARSUPIAL</Tag>
+		<English>Folklore (T) - Marsupial</English>
+		<French>Mythe du Marsupial (T)</French>
+		<Italian>Mito dei marsupiali (T)</Italian>
+		<Polish>Mit (T) Torbacza</Polish>
+		<Russian>Ìèô î ñóì÷àòîì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MERMAID</Tag>
+		<English>Folklore (E) - Mermaid</English>
+		<French>Mythe des Sirènes (E)</French>
+		<Italian>Mito delle sirene (E)</Italian>
+		<Polish>Mit (E) Syreny</Polish>
+		<Russian>Ìèô î ðóñàëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_METAL</Tag>
+		<English>Folklore (E) - Metal</English>
+		<French>Mythe du Métal (E)</French>
+		<German>
+			<Text>Mythos des Metalls:Mythos des Metalls:Mythos des Metalls:Mythos des Metalls</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del Metallo (E)</Italian>
+		<Polish>Mit (E) - Metal</Polish>
+		<Russian>Ìèô î ìåòàëëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MINKIE_WHALE</Tag>
+		<English>Folklore Minke Whale</English>
+		<French>Mythe du Rorqual</French>
+		<Italian>Mito della balenottera minore</Italian>
+		<Polish>Mit Płetwala</Polish>
+		<Russian>Ìèô î ïîëîñàòèêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MONOTREMES</Tag>
+		<English>Folklore (T) - Monotremes</English>
+		<French>Mythe de l'Échidné (T)</French>
+		<German>
+			<Text>Mythos der Kloakentiere:Mythos der Kloakentiere:Mythos der Kloakentiere:Mythos der Kloakentiere</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dei monotremi (T)</Italian>
+		<Russian>Ìèô î åõèäíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MOOSE</Tag>
+		<English>Folklore - Moose</English>
+		<French>Mythe de l'Elan</French>
+		<German>
+			<Text>Mythos des Elchs:Mythos des Elchs:Mythos des Elchs:Mythos des Elchs</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dell'alce</Italian>
+		<Russian>Ìèô î ëîñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MOUNTAIN_TAPIR</Tag>
+		<English>Folklore - Mountain Tapir</English>
+		<French>Mythe du Tapir des Montagnes</French>
+		<German>
+			<Text>Mythos des Bergtapirs:Mythos des Bergtapirs:Mythos des Bergtapirs:Mythos des Bergtapirs</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del tapiro delle Ande</Italian>
+		<Polish>Mit - Tapir Górski</Polish>
+		<Russian>Ìèô î ãîðíîì òàïèðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MUSKOX</Tag>
+		<English>Folklore - Muskox</English>
+		<French>Mythe du Bœuf musqué</French>
+		<German>
+			<Text>Mythos des Moschusochsen:Mythos des Moschusochsen:Mythos des Moschusochsen:Mythos des Moschusochsen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del bue muschiato</Italian>
+		<Russian>Ìèô îá îâöåáûêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_NARWHAL</Tag>
+		<English>Folklore - Narwhal</English>
+		<French>Mythe du Narval</French>
+		<Italian>Mito del narvalo</Italian>
+		<Polish>Mit Narwala</Polish>
+		<Russian>Ìèô î íàðâàëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_NEW_W_MONKEY</Tag>
+		<English>Folklore (T) - New World Monkeys</English>
+		<Italian>Mito delle scimmie del Nuovo Mondo (T)</Italian>
+		<Russian>Ìèô îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_NILECROC</Tag>
+		<English>Folklore - Nile Crocodile</English>
+		<French>Mythe du Crocodile du Nil</French>
+		<German>
+			<Text>Mythos des Nilkrokodils:Mythos des Nilkrokodils:Mythos des Nilkrokodils:Mythos des Nilkrokodils</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del coccodrillo del Nilo</Italian>
+		<Polish>Mit - Krokodyl Nilowy</Polish>
+		<Russian>Ìèô î íèë. êðîêîäèëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_NILE_MONITOR</Tag>
+		<English>Folklore - Nile Monitor</English>
+		<French>Mythe du Varan du Nil</French>
+		<Italian>Mito del varano del Nilo</Italian>
+		<Russian>Ìèô î íèë. âàðàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_NUMBAT</Tag>
+		<English>Folklore - Numbat</English>
+		<French>Mythe du Numbat</French>
+		<German>
+			<Text>Mythos des Numbats:Mythos des Numbats:Mythos des Numbats:Mythos des Numbats</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del numbat</Italian>
+		<Russian>Ìèô î ñóì÷. ìóðàâüåäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OKAPI</Tag>
+		<English>Folklore - Okapi</English>
+		<French>Mythe de l'Okapi</French>
+		<Italian>Mito dell'okapi</Italian>
+		<Russian>Ìèô îá îêàïè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OLD_MAN</Tag>
+		<English>Folklore (T) - Old Man of the Forest</English>
+		<French>Mythe de l'Ancien de la Forêt (T)</French>
+		<Italian>Mito del Vecchio della foresta (T)</Italian>
+		<Polish>Mit (T) Starego człowieka z lasu</Polish>
+		<Russian>Ìèô î ëåøåì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OLD_W_MONKEY</Tag>
+		<English>Folklore (T) - Old World Monkeys</English>
+		<Italian>Mito delle scimmie del Vecchio Mondo (T)</Italian>
+		<Russian>Ìèô îá îáåçüÿíàõ Ñòàðîãî Ñâåòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OPOSSUM</Tag>
+		<English>Folklore - Opossum</English>
+		<French>Mythe de l'Opossum</French>
+		<German>
+			<Text>Mythos des Opposums:Mythos des Opposums:Mythos des Opposums:Mythos des Opposums</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dell'opossum</Italian>
+		<Russian>Ìèô îá îïîññóìå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ORANGUTAN</Tag>
+		<English>Folklore - Orangutan</English>
+		<French>Mythe de l'Orang-outan</French>
+		<Italian>Mito dell'orangutan</Italian>
+		<Russian>Ìèô îá îðàíãóòàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ORCA</Tag>
+		<English>Folklore - Orca</English>
+		<French>Mythe de l'Orque</French>
+		<Italian>Mito dell'orca</Italian>
+		<Polish>Mit Orki</Polish>
+		<Russian>Ìèô î êàñàòêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OWL</Tag>
+		<English>Folklore (T) - Owls</English>
+		<French>Mythe des Chouettes (T)</French>
+		<Italian>Mito degli strigiformi (T)</Italian>
+		<Polish>Folklore (T) - Sowy</Polish>
+		<Russian>Ìèô î ñîâå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_OXPECKER</Tag>
+		<English>Folklore - Oxpecker</English>
+		<French>Mythe du Pique-bœufs</French>
+		<Italian>Mito della bufaga</Italian>
+		<Russian>Ìèô î âîëîêëþå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_BIRD</Tag>
+		<English>Folklore - Paleolithic Birds</English>
+		<French>Mythe des oiseaux du paléolithique</French>
+		<German>
+			<Text>Mythos der Urvögel:Mythos der Urvögel:Mythos der Urvögel:Mythos der Urvögel</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Mito dell'uccello paleolitico</Italian>
+		<Polish>Mit - Ptaki Kopalne</Polish>
+		<Russian>Ìèô î äðåâíåé ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_CAT</Tag>
+		<English>Folklore - Paleolithic Cat</English>
+		<French>Mythe du Félin Paléolithique</French>
+		<Italian>Mito del felino paleolitico</Italian>
+		<Polish>Mit Lew Jaskiniowy</Polish>
+		<Russian>Ìèô î äðåâíåé êîøêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_DOG</Tag>
+		<English>Folklore - Dire Wolf</English>
+		<French>Mythe du Loup sinistre</French>
+		<German>
+			<Text>Mythos des Canis dirus:Mythos des Canis dirus:Mythos des Canis dirus:Mythos des Canis dirus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del lupo paleolitico</Italian>
+		<Russian>Ìèô î ëþòîâîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</Tag>
+		<English>Folklore - Ground Sloth</English>
+		<French>Mythe du Xénarthre</French>
+		<German>
+			<Text>Mythos des Megatheriums:Mythos des Megatheriums:Mythos des Megatheriums:Mythos des Megatheriums</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del bradipo paleolitico</Italian>
+		<Russian>Ìèô î ãèã. ëåíèâöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</Tag>
+		<English>Folklore - Mammoth</English>
+		<French>Mythe du Mammouth</French>
+		<Italian>Mito del mammut</Italian>
+		<Polish>Mit Mamutów</Polish>
+		<Russian>Ìèô î ìàìîíòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_MARSUPIAL</Tag>
+		<English>Folklore - Paleolithic Marsupial</English>
+		<French>Mythe du Marsupial Paléolithique</French>
+		<Italian>Mito del marsupiale paleolitico</Italian>
+		<Polish>Mit Paleolitycznych Torbaczy</Polish>
+		<Russian>Ìèô î äðåâ. ñóì÷àòîì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PANTHER</Tag>
+		<English>Folklore - Panther</English>
+		<French>Mythe de la Panthère</French>
+		<German>
+			<Text>Mythos des Panthers:Mythos des Panthers:Mythos des Panthers:Mythos des Panthers</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della pantera</Italian>
+		<Russian>Ìèô î ïàíòåðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PEACOCK</Tag>
+		<English>Folklore - Peacock</English>
+		<French>Mythe du Paon</French>
+		<Italian>Mito del pavone</Italian>
+		<Russian>Ìèô î ïàâëèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PENGUIN</Tag>
+		<English>Folklore (T) - Penguin</English>
+		<French>Mythe du Pingouin (T)</French>
+		<Italian>Mito del pinguino (T)</Italian>
+		<Russian>Ìèô î ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PHEASANT</Tag>
+		<English>Folklore - Pheasant</English>
+		<French>Mythe du Faisan</French>
+		<German>
+			<Text>Mythos des Fasans:Mythos des Fasans:Mythos des Fasans:Mythos des Fasans</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del fagiano</Italian>
+		<Russian>Ìèô î ôàçàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PHOENIX</Tag>
+		<English>Folklore (E) - Phoenix</English>
+		<French>Mythe du Phoenix (E)</French>
+		<Italian>Mito della fenice (E)</Italian>
+		<Polish>Mit (E) Feniksa</Polish>
+		<Russian>Ìèô î Ôåíèêñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PIGEON</Tag>
+		<English>Folklore - Pigeon</English>
+		<French>Mythe du Pigeon</French>
+		<German>
+			<Text>Mythos der Taube:Mythos der Taube:Mythos der Taube:Mythos der Taube</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del piccione</Italian>
+		<Russian>Ìèô î ãîëóáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PLATYPUS</Tag>
+		<English>Folklore - Platypus</English>
+		<French>Mythe de l'Ornithorynque</French>
+		<German>
+			<Text>Mythos des Schnabeltiers:Mythos des Schnabeltiers:Mythos des Schnabeltiers:Mythos des Schnabeltiers</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dell'ornitorinco</Italian>
+		<Russian>Ìèô îá óòêîíîñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_POSSUM</Tag>
+		<English>Folklore - Brushtail Possum</English>
+		<French>Mythe du Phalanger commun</French>
+		<German>
+			<Text>Mythos des Kusus:Mythos des Kusus:Mythos des Kusus:Mythos des Kusus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del tricosuro volpino</Italian>
+		<Russian>Ìèô î ïîññóìå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PROCOPTODON</Tag>
+		<English>Folklore - Procoptodon</English>
+		<French>Mythe du Procoptodon</French>
+		<Italian>Mito del procoptodonte</Italian>
+		<Russian>Ìèô î ïðîêîïòîäîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PUFFADDER</Tag>
+		<English>Folklore - Puff Adder</English>
+		<French>Mythe de la Vipère heurtante</French>
+		<Italian>Mito della vipera soffiante</Italian>
+		<Russian>Ìèô î øóì. ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PYGMYHIPPO</Tag>
+		<English>Folklore - Pygmy Hippo</English>
+		<French>Mythe de l'Hippopotame nain</French>
+		<German>
+			<Text>Mythos des Zwergflusspferdes:Mythos des Zwergflusspferdes:Mythos des Zwergflusspferdes:Mythos des Zwergflusspferdes</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dell'ippopotamo pigmeo</Italian>
+		<Russian>Ìèô î êàðë. áåãåìîòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_QUOLL</Tag>
+		<English>Folklore - Quoll</English>
+		<French>Mythe du Chat marsupial</French>
+		<Italian>Mito del quoll</Italian>
+		<Russian>Ìèô î ñóì÷.êóíèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RACCOON</Tag>
+		<English>Folklore - Raccoon</English>
+		<French>Mythe du Raton-Laveur</French>
+		<German>
+			<Text>Mythos des Waschbären:Mythos des Waschbären:Mythos des Waschbären:Mythos des Waschbären</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del procione</Italian>
+		<Russian>Ìèô î åíîòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAPTOR</Tag>
+		<English>Folklore (T) - Raptors</English>
+		<French>Mythe des Rapaces (T)</French>
+		<Italian>Mito dei rapaci (T)</Italian>
+		<Polish>Mit (T) - Ptaki drapieżne</Polish>
+		<Russian>Ìèô î õèùí. ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RATEL</Tag>
+		<English>Folklore - Ratel</English>
+		<French>Mythe du Ratel</French>
+		<Italian>Mito del tasso del miele</Italian>
+		<Russian>Ìèô î ìåäîåäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAY</Tag>
+		<English>Folklore (T) - Ray</English>
+		<French>Mythe - la Raie (T)</French>
+		<Italian>Mito della razza (T)</Italian>
+		<Polish>Mit (T) Manty</Polish>
+		<Russian>Ìèô î ñêàòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAY_EAGLE</Tag>
+		<English>Folklore - Eagle Ray</English>
+		<French>Mythe de l'Aigle de mer</French>
+		<Italian>Mito della razza aquila</Italian>
+		<Russian>Ìèô îá îðë. ñêàòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAY_MANTA</Tag>
+		<English>Folklore - Manta Ray</English>
+		<French>Mythe de la Raie manta</French>
+		<Italian>Mito della manta</Italian>
+		<Russian>Ìèô î ìàíòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_REDFOX</Tag>
+		<English>Folklore - Red Fox</English>
+		<French>Mythe du Renard Roux</French>
+		<German>
+			<Text>Mythos des Rotfuchses:Mythos des Rotfuchses:Mythos des Rotfuchses:Mythos des Rotfuchses</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della volpe rossa</Italian>
+		<Russian>Ìèô î ëèñèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_REEF_SHARK</Tag>
+		<English>Folklore - Reef Shark</English>
+		<French>Mythe - Requin des récifs</French>
+		<Italian>Mito dello squalo della barriera corallina</Italian>
+		<Polish>Mit Rekina Rafowego</Polish>
+		<Russian>Ìèô î ðèô. àêóëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_REPTILE</Tag>
+		<English>Folklore (T) - Reptile</English>
+		<French>Mythe - Reptiles (T)</French>
+		<Italian>Mito dei rettili (T)</Italian>
+		<Polish>Mit (T) Gadów</Polish>
+		<Russian>Ìèô î ðåïòèëèè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RHINO_TAXONOMY</Tag>
+		<English>Folklore (T) - Rhinoceroses</English>
+		<French>Mythe du Rhinocéros (T)</French>
+		<German>
+			<Text>Mythos der Nashörner:Mythos der Nashörner:Mythos der Nashörner:Mythos der Nashörner</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito dei rinoceronti (T)</Italian>
+		<Polish>Mit (T) - Rhinoceroses</Polish>
+		<Russian>Ìèô î íîñîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RIVER_CROC</Tag>
+		<English>Folklore - Crocodile (Small)</English>
+		<French>Mythe du Crocodile de rivière (petit)</French>
+		<German>
+			<Text>Mythos des kleinen Krokodils:Mythos des kleinen Krokodils:Mythos des kleinen Krokodils:Mythos des kleinen Krokodils</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del coccodrillo di fiume (piccolo)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RIVER_CROC_LARGE</Tag>
+		<English>Folklore - Crocodile (Large)</English>
+		<French>Mythe du Crocodile de rivière (grand)</French>
+		<German>
+			<Text>Mythos des großen Krokodils:Mythos des großen Krokodils:Mythos des großen Krokodils:Mythos des großen Krokodils</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del coccodrillo di fiume (grande)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</Tag>
+		<English>Folklore - Rockhopper Penguin</English>
+		<French>Mythe du Gorfou sauteur</French>
+		<German>
+			<Text>Mythos des Felsenpinguins:Mythos des Felsenpinguins:Mythos des Felsenpinguins:Mythos des Felsenpinguins</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del pinguino saltarocce</Italian>
+		<Russian>Ìèô î ñêàë. ïèíãâèíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RODENT</Tag>
+		<English>Folklore (T) - Rodent</English>
+		<French>Mythe des Rongeurs (T)</French>
+		<Italian>Mito dei roditori (T)</Italian>
+		<Polish>Mit (T) - Gryzonie</Polish>
+		<Russian>Ìèô î ãðûçóíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SABRETOOTH</Tag>
+		<English>Folklore - Sabretooth</English>
+		<French>Mythe du Tigre à dents de sabre</French>
+		<German>
+			<Text>Mythos des Säbelzahntigers:Mythos des Säbelzahntigers:Mythos des Säbelzahntigers:Mythos des Säbelzahntigers</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della tigre dai denti a sciabola</Italian>
+		<Polish>Mit - Tygrys Szablozębny</Polish>
+		<Russian>Ìèô î ñàáë. òèãðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SAIGA</Tag>
+		<English>Folklore - Saiga Antelope</English>
+		<French>Mythe de l'Antilope Saiga</French>
+		<German>
+			<Text>Mythos der Saiga:Mythos der Saiga:Mythos der Saiga:Mythos der Saiga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della saiga</Italian>
+		<Russian>Ìèô î ñàéãàêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROC</Tag>
+		<English>Folklore - Saltwater Crocodile (Small)</English>
+		<French>Mythe du Crocodile de mer (petit)</French>
+		<German>
+			<Text>Mythos des kleinen Salzwasserkrokodils:Mythos des kleinen Salzwasserkrokodils:Mythos des kleinen Salzwasserkrokodils:Mythos des kleinen Salzwasserkrokodils</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del coccodrillo di mare (piccolo)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROC_LARGE</Tag>
+		<English>Folklore - Saltwater Crocodile (Large)</English>
+		<French>Mythe du Crocodile de mer (grand)</French>
+		<German>
+			<Text>Mythos des großen Salzwasserkrokodils:Mythos des großen Salzwasserkrokodils:Mythos des großen Salzwasserkrokodils:Mythos des großen Salzwasserkrokodils</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del coccodrillo di mare (grande)</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SCAVENGER</Tag>
+		<English>Folklore (T) - Scavenger</English>
+		<French>Mythe du Mendiant (T)</French>
+		<Italian>Mito dell'animale spazzino (T)</Italian>
+		<Polish>Mit (T) Padlinożerców</Polish>
+		<Russian>Ìèô î ñòåðâÿòíèêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA</Tag>
+		<English>Folklore (E) - Sea</English>
+		<French>Mythe de la Mer (E)</French>
+		<Italian>Mito del mare (E)</Italian>
+		<Polish>Mit (E) Morza</Polish>
+		<Russian>Ìèô î ìîðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEALION</Tag>
+		<English>Folklore - Sea Lion</English>
+		<French>Mythe du Lion des mers</French>
+		<German>
+			<Text>Mythos des Seelöwen:Mythos des Seelöwen:Mythos des Seelöwen:Mythos des Seelöwen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del leone di mare</Italian>
+		<Russian>Ìèô î ìîðñêîì ëüâå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEATURTLE</Tag>
+		<English>Folklore - Sea Turtle</English>
+		<French>Mythe de la Tortue de mer</French>
+		<Italian>Mito della tartaruga di mare</Italian>
+		<Polish>Mit Żółwia Morskiego</Polish>
+		<Russian>Ìèô î ìîð. ÷åðåïàõå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA_BIRD</Tag>
+		<English>Folklore (T) - Sea Birds</English>
+		<French>Mythe des Oiseaux marins (T)</French>
+		<Italian>Mito degli uccelli marini (T)</Italian>
+		<Polish>Mit (T) - Ptaki morskie</Polish>
+		<Russian>Ìèô î ìîðñêîé ïòèöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA_OTTER</Tag>
+		<English>Folklore - Sea Otter</English>
+		<French>Mythe de la Loutre de mer</French>
+		<German>
+			<Text>Mythos des Seeotters:Mythos des Seeotters:Mythos des Seeotters:Mythos des Seeotters</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della lontra di mare</Italian>
+		<Russian>Ìèô î êàëàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SHARK</Tag>
+		<English>Folklore (T) - Sharks</English>
+		<French>Histoires de Requins (T)</French>
+		<Italian>Mito degli squali (T)</Italian>
+		<Polish>Mit (T) Opowieśći o rekinach</Polish>
+		<Russian>Ìèô îá àêóëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SIBERIAN_TIGER</Tag>
+		<English>Folklore - Siberian Tiger</English>
+		<French>Mythe du Tigre de Sibérie</French>
+		<German>
+			<Text>Mythos des Sibirischen Tigers:Mythos des Sibirischen Tigers:Mythos des Sibirischen Tigers:Mythos des Sibirischen Tigers</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della tigre siberiana</Italian>
+		<Russian>Ìèô î ñèá. òèãðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SKUNK</Tag>
+		<English>Folklore - Skunk</English>
+		<French>Mythe de la Moufette</French>
+		<German>
+			<Text>Mythos des Stinktiers:Mythos des Stinktiers:Mythos des Stinktiers:Mythos des Stinktiers</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della puzzola</Italian>
+		<Russian>Ìèô î ñêóíñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SKY</Tag>
+		<English>Folklore (E) - Sky</English>
+		<French>Mythe du Ciel (E)</French>
+		<Italian>Mito del cielo (E)</Italian>
+		<Polish>Mit Nieba</Polish>
+		<Russian>Ìèô î íåáå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SNAKES</Tag>
+		<English>Folklore (T) - Snakes</English>
+		<French>Mythe des Serpents (T)</French>
+		<Italian>Mito dei serpenti (T)</Italian>
+		<Russian>Ìèô î çìåå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SNOW_LEOPARD</Tag>
+		<English>Folklore - Snow Leopard</English>
+		<French>Mythe du Léopard des neiges</French>
+		<German>
+			<Text>Mythos des Schneeleoparden:Mythos des Schneeleoparden:Mythos des Schneeleoparden:Mythos des Schneeleoparden</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del leopardo delle nevi</Italian>
+		<Russian>Ìèô î ñíåæíîì áàðñå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SPOTTED_CAT</Tag>
+		<English>Folklore (T) - Spotted Cat</English>
+		<French>Mythe du Chat moucheté (T)</French>
+		<Italian>Mito del felino maculato (T)</Italian>
+		<Polish>Mit Plamistego Kota</Polish>
+		<Russian>Ìèô î ëåîïàðäå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_STONE</Tag>
+		<English>Folklore (E) - Stone</English>
+		<French>Mythe de la Pierre (E)</French>
+		<German>
+			<Text>Mythos des Steins:Mythos des Steins:Mythos des Steins:Mythos des Steins</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della Pietra (E)</Italian>
+		<Polish>Mit (E) - Kamień</Polish>
+		<Russian>Ìèô î êàìíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SWINE</Tag>
+		<English>Folklore - Swine</English>
+		<Italian>Mito del maiale</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TAPIR</Tag>
+		<English>Folklore (T) - Tapir</English>
+		<French>Mythe du Tapir (T)</French>
+		<German>
+			<Text>Mythos der Tapire:Mythos der Tapire:Mythos der Tapire:Mythos der Tapire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del tapiro (T)</Italian>
+		<Polish>Mit (T) - Tapir</Polish>
+		<Russian>Ìèô î òàïèðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TARANTULA</Tag>
+		<English>Folklore - Desert Tarantula</English>
+		<French>Mythe de la Tarentule du désert</French>
+		<German>
+			<Text>Mythos der Wüstenvogelspinne:Mythos der Wüstenvogelspinne:Mythos der Wüstenvogelspinne:Mythos der Wüstenvogelspinne</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della tarantola del deserto</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TARANTULA_JUNGLE</Tag>
+		<English>Folklore - Jungle Tarantula</English>
+		<French>Mythe de la Tarentule de la jungle</French>
+		<German>
+			<Text>Mythos der Dschungelvogelspinne:Mythos der Dschungelvogelspinne:Mythos der Dschungelvogelspinne:Mythos der Dschungelvogelspinne</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della tarantola della giungla</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TASMANIANDEVIL</Tag>
+		<English>Folklore - Tasmanian Devil</English>
+		<Italian>Mito del diavoletto della Tasmania</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TERN</Tag>
+		<English>Folklore - Arctic Tern</English>
+		<French>Mythe du Sterne Arctique</French>
+		<German>
+			<Text>Mythos der Küstenseeschwalbe:Mythos der Küstenseeschwalbe:Mythos der Küstenseeschwalbe:Mythos der Küstenseeschwalbe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della sterna artica</Italian>
+		<Russian>Ìèô î ïîë. êðà÷êå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_THYLACINE</Tag>
+		<English>Folklore - Thylacine</English>
+		<French>Mythe du Thylacine</French>
+		<German>
+			<Text>Mythos des Beutelwolfs:Mythos des Beutelwolfs:Mythos des Beutelwolfs:Mythos des Beutelwolfs</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del tilacino</Italian>
+		<Russian>Ìèô î ñóì÷. âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TIGER</Tag>
+		<English>Folklore (T) - Tiger</English>
+		<French>Mythe du Tigre (T)</French>
+		<Italian>Mito della tigre (T)</Italian>
+		<Polish>Mit (T) Tygrysa</Polish>
+		<Russian>Ìèô î òèãðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TOUCAN</Tag>
+		<English>Folklore - Toucan</English>
+		<French>Mythe du Toucan</French>
+		<German>
+			<Text>Mythos des Tukans:Mythos des Tukans:Mythos des Tukans:Mythos des Tukans</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del tucano</Italian>
+		<Russian>Ìèô î òóêàíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TREESLOTH</Tag>
+		<English>Folklore - Three-toed Sloth</English>
+		<French>Mythe du paresseux</French>
+		<German>
+			<Text>Mythos des Dreifinger-Faultiers:Mythos des Dreifinger-Faultiers:Mythos des Dreifinger-Faultiers:Mythos des Dreifinger-Faultiers</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del bradipo tridattilo</Italian>
+		<Russian>Ìèô î ëåíèâöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TUNA</Tag>
+		<English>Folklore - Tuna</English>
+		<French>Mythe - Thon</French>
+		<Italian>Mito del tonno</Italian>
+		<Polish>Mit Tuńczyka</Polish>
+		<Russian>Ìèô î òóíöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TURKEY</Tag>
+		<English>Folklore - Wild Turkey</English>
+		<French>Mythe de la Dinde</French>
+		<German>
+			<Text>Mythos des Truthuhns:Mythos des Truthuhns:Mythos des Truthuhns:Mythos des Truthuhns</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del tacchino</Italian>
+		<Russian>Ìèô îá èíäåéêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_UNICORN</Tag>
+		<English>Folklore (E) - Unicorn</English>
+		<French>Mythe de la Licorne (E)</French>
+		<Italian>Mito dell'unicorno (E)</Italian>
+		<Polish>Mit Jednorożca</Polish>
+		<Russian>Ìèô îá åäèíîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_VIPER</Tag>
+		<English>Folklore - Viper</English>
+		<French>Mythe de la Vipère</French>
+		<German>
+			<Text>Mythos des Geiers:Mythos des Geiers:Mythos des Geiers:Mythos des Geiers</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della vipera</Italian>
+		<Russian>Ìèô î ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_VIPER_CHAIN</Tag>
+		<English>Folklore - Chain Viper</English>
+		<French>Mythe de la Vipère de Russell</French>
+		<Italian>Mito della vipera di Russell</Italian>
+		<Russian>Ìèô î ãàäþêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_VULTURE</Tag>
+		<English>Folklore - Vulture</English>
+		<French>Mythe du Vautour</French>
+		<Italian>Mito dell'avvoltoio</Italian>
+		<Russian>Ìèô î ãðèôå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALLABY</Tag>
+		<English>Folklore - Ring-tailed Wallaby</English>
+		<Italian>Mito del wallaby delle rocce</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALLAROO</Tag>
+		<English>Folklore - Wallaroo</English>
+		<French>Mythe du Wallaroo</French>
+		<Italian>Mito del wallaroo</Italian>
+		<Russian>Ìèô î êåíãóðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WALRUS</Tag>
+		<English>Folklore - Walrus</English>
+		<French>Mythe du Morse</French>
+		<Italian>Mito del tricheco</Italian>
+		<Polish>Mit Morsa</Polish>
+		<Russian>Ìèô î ìîðæå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WARTHOG</Tag>
+		<English>Folklore - Warthog</English>
+		<French>Mythe du Phacochère</French>
+		<Italian>Mito del facocero</Italian>
+		<Polish>Mit - Guziec</Polish>
+		<Russian>Ìèô î áîðîäàâî÷íèêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WEASEL</Tag>
+		<English>Folklore (T) - Weasel</English>
+		<French>Mythe de la belette (T)</French>
+		<Italian>Mito della donnola (T)</Italian>
+		<Polish>Mit (T) Łasicy</Polish>
+		<Russian>Ìèô î õîðüêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WHALESHARK</Tag>
+		<English>Folklore - Whale Shark</English>
+		<French>Mythe - Requin-baleine</French>
+		<Italian>Mito dello squalo balena</Italian>
+		<Polish>Mit Rekina Wielorybiego</Polish>
+		<Russian>Ìèô î êèò. àêóëå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WHITE_RHINO</Tag>
+		<English>Folklore - White Rhinoceros</English>
+		<French>Mythe du Rhinocéros blanc</French>
+		<German>
+			<Text>Mythos des Breitmaulnashorns:Mythos des Breitmaulnashorns:Mythos des Breitmaulnashorns:Mythos des Breitmaulnashorns</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del rinoceronte bianco</Italian>
+		<Polish>Mit - Nosorożec Biały</Polish>
+		<Russian>Ìèô î áåë. íîñîðîãå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILDBOAR</Tag>
+		<English>Folklore - Wild Boar</English>
+		<Italian>Mito del cinghiale selvatico</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILDEBEEST</Tag>
+		<English>Folklore - Wildebeest</English>
+		<French>Mythe du Gnou</French>
+		<Italian>Mito dello gnu</Italian>
+		<Russian>Ìèô î ãíó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLF</Tag>
+		<English>Folklore (T) - Wolf</English>
+		<French>Mythe des Loups (T)</French>
+		<Italian>Mito del lupo (T)</Italian>
+		<Polish>Mit (T) - Wilk</Polish>
+		<Russian>Ìèô î âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLVERINE</Tag>
+		<English>Folklore - Wolverine</English>
+		<French>Mythe du Carcajou</French>
+		<German>
+			<Text>Mythos des Vielfraßes:Mythos des Vielfraßes:Mythos des Vielfraßes:Mythos des Vielfraßes</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del ghiottone</Italian>
+		<Russian>Ìèô î ðîñîìàõå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOMBAT</Tag>
+		<English>Folklore - Wombat</English>
+		<French>Mythe du Wombat</French>
+		<German>
+			<Text>Mythos des Wombats:Mythos des Wombats:Mythos des Wombats:Mythos des Wombats</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito del vombato</Italian>
+		<Russian>Ìèô î âîìáàòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ZEBRA</Tag>
+		<English>Folklore - Zebra</English>
+		<French>Mythe du Zèbre</French>
+		<German>
+			<Text>Mythos des Zebras:Mythos des Zebras:Mythos des Zebras:Mythos des Zebras</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>Mito della zebra</Italian>
+		<Russian>Ìèô î çåáðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOX_DANCE</Tag>
+		<English>Unit Reward - Dance (Fox)</English>
+		<French>Danse du Renard</French>
+		<Italian>Danza della volpe</Italian>
+		<Russian>Òàíåö ëèñû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FOX_DANCE_PEDIA</Tag>
+		<English>Young foxes practicing their mouse hunting moves look like they are dancing for the sheer joy of it. This is said to have inspired early human dances. Recent studies indicate that humans, parrots and elephants are the only creatures that really dance!</English>
+		<French>Les jeunes renards qui pratiquent leurs mouvements de chasse à la souris ont l'air de danser pour la joie. On dit que cela a inspiré les premières danses humaines. Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
+		<Russian>Þíûå ëèñÿòà, îáó÷àþùèåñÿ âî âðåìÿ îõîòû íà ìûøåé, âûãëÿäÿò òàê, áóäòî òàíöóþò îò ðàäîñòè. Ýòî, êàê ãîâîðÿò, âäîõíîâèëî ïåðâîáûòíûõ ëþäåé íà ñâîè äðåâíåéøèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FUR_FARM</Tag>
+		<English>Unit Reward - Fur Farm</English>
+		<French>Ferme de Fourrures</French>
+		<Italian>Allevamento di animali da pelliccia</Italian>
+		<Polish>Ferma Futer</Polish>
+		<Russian>Ìåõîâàÿ ôåðìà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FUR_FARM_PEDIA</Tag>
+		<English>Fur farming is the practice of breeding or raising certain types of animals for their fur. This became possible in the 1860's.</English>
+		<Italian>L'allevamento di animali da pelliccia è la pratica di incrociare e allevare certi tipi di animali principalmente per ottenere la loro pelliccia. Quest'attività divenne possibile negli anni sessanta del XIX secolo.</Italian>
+		<Polish>Można spotkać się z poglądem, że hodowla norek i innych stworzeń na futro wiąże się z niehumanitarnym traktowaniem zwierząt. Szczególnie dobrze jest to udokumentowane w krajach Trzeciego Zwiata. Jednak raport dotyczący sytuacji wielkopolskich ferm futrzarskich autorstwa Najwyższej Izby Kontroli z 2011 roku, wskazuje że "w 87% tych ferm nie przestrzegano wymagań ochrony środowiska, w 48% działalność hodowlana prowadzona była w obiektach nielegalnie wybudowanych lub użytkowanych, a w 35% niezgodnie z przepisami weterynaryjnymi." Aktywiści pro-zwierzęcy twierdzą iż fermy hodowlane są przyczyną skażenia środowiska licznymi związkami takimi jak siarkowodór, amoniak, mocznik, fosfor czy azot, które nie są odpowiednio utylizowane.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GLYPTO_REMAINS</Tag>
+		<English>Remains - Glyptodon</English>
+		<French>Restes de Glyptodon</French>
+		<German>
+			<Text>Überreste eines Glyptodons:Überreste eines Glyptodons:Überresten eines Glyptodons:Überreste eines Glyptodons</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Resti di glittodonte</Italian>
+		<Russian>Ïàìÿòü î ãëèïòîäîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOAT_HERD</Tag>
+		<English>Herd (Goat)</English>
+		<French>Troupeau de Chèvres</French>
+		<Italian>Branco di capre</Italian>
+		<Polish>Efekt Mitu - Koza</Polish>
+		<Russian>Ñòàäî êîçëîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOAT_HERD_PEDIA</Tag>
+		<English>The domestic goat (Capra aegagrus hircus) is a subspecies of goat domesticated from the wild goat of southwest Asia and Eastern Europe. The goat is a member of the Bovidae family and is closely related to the sheep as both are in the goat-antelope subfamily Caprinae. There are over three hundred distinct breeds of goat.[PARAGRAPH:2]Goats are one of the oldest domesticated species. Goats have been used for their milk, meat, hair, and skins over much of the world. In the twentieth century they also gained in popularity as pets.[PARAGRAPH:2]Female goats are referred to as does or nannies, intact males as bucks or billies; their offspring are kids. Note that many goat breeders prefer the terms "buck" and "doe" to "billy" and "nanny". Castrated males are wethers. Goat meat from younger animals is called kid or cabrito, and from older animals is sometimes called chevon, or in some areas "mutton".</English>
+		<Italian>La capra domestica (Capra aegagrus hircus) è una sottospecie di capra addomesticata dalla capra selvatica dall'Asia sud-occidentale e dell'Europa orientale. La capra è un membro della famiglia dei bovidi ed è strettamente correlata alle pecore in quanto entrambi appartengono alla sottofamiglia Caprinae. Ci sono oltre trecento razze distinte di capra.[PARAGRAPH:2]Le capre sono una delle più antiche specie domestiche. Le capre sono state utilizzate per il loro latte, carne, capelli e pelle su gran parte del mondo. Nel XX secolo, hanno anche guadagnato in popolarità come animali da compagnia.</Italian>
+		<Polish>Badania genetyczne współczesnych kóz ujawniają, że chociaż zostały one oswojone równolegle w kilku częściach świata to geny tych pionierów zmieszały się w całej populacji. Pewnie wynika to z tego, że kozy są doskonałymi towarzyszami podróży nie przeszkadzają im ciężkie warunki środowiskowe i nie mają wygórowanych wymagań pokarmowych. Dużym plusem owych zwierząt były ich małe wymiary ułatwiające sprzedaż kóz pomiędzy sąsiadującymi nawet w dużych odległościach osadami. W starożytności podawano całkiem słuszny przykład popierający tę tezę "posiadanie czterech kóz daje ci większy zasięg w handlu i mniejsze ryzyko niż posiadanie jednej krowy". Bez tych zwierząt migracje plemion ludzkich mogłyby wyglądać zupełnie inaczej, gdyż przybycie koczowniczych pasterzy zapewne mobilizowało miejscową ludność do udomowiania także innych ras zwierząt.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE</Tag>
+		<English>Unit Reward - Governor's Menagerie</English>
+		<French>Ménagerie du Gouverneur</French>
+		<Italian>Serraglio del governatore</Italian>
+		<Polish>Menażeria Gubernatora</Polish>
+		<Russian>Ãîðîäñêîé çâåðèíåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE_PEDIA</Tag>
+		<English>If one wild animal is a status symbol, what's better than having many to boost your standing among your fellows and foreigners alike?</English>
+		<Italian>Se un animale selvatico è uno status symbol, cosa c'è di meglio di averne molti per aumentare il tuo stato sociale tra i tuoi sudditi e gli stranieri?</Italian>
+		<Polish>Jeśli jedno zwierzę to za mało to dlaczego nie stworzyć całej menażerii?</Polish>
+		<Russian>Åñëè îäíî äèêîå æèâîòíîå ÿâëÿåòñÿ ñèìâîëîì ñòàòóñà, ÷òî ëó÷øå, ÷åì ìíîãèå, ïîâûñèòü âàøó ðåïóòàöèþ ñðåäè âàøèõ ñîïëåìåííèêîâ è èíîñòðàíöåâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOVERNOR_PETS</Tag>
+		<English>Unit Reward - Governor's Pets</English>
+		<French>Animaux du Gouverneurs</French>
+		<Italian>Animali del governatore</Italian>
+		<Polish>Maskotka Gubernatora</Polish>
+		<Russian>Ãîðîäñêîé ïèòîìíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GOVERNOR_PETS_PEDIA</Tag>
+		<English>As a status symbol a live wild, dangerous, large or exotic animal is a boon for any leader.</English>
+		<Italian>Come status symbol, un animale selvatico pericoloso, grande o esotico è una manna per qualsiasi leader.</Italian>
+		<Polish>Jako symbol statusu, dziko żyjące zwierzęta, wielkie lub egzotyczne zwierzęta są ozdobą każdej kolekcji nowoczesnego przywódcy.</Polish>
+		<Russian>Â êà÷åñòâå ñèìâîëà èëè ñòàòóñà äèêîå, îïàñíîå, êðóïíîå èëè ýêçîòè÷åñêîå æèâîòíîå ÿâëÿåòñÿ áëàãîì äëÿ ëþáîãî ëèäåðà.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAKA</Tag>
+		<English>Dance - Haka</English>
+		<French>Danse - Haka</French>
+		<Italian>Haka</Italian>
+		<Russian>Òàíåö Õàêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAKA_PEDIA</Tag>
+		<English>The haka is a ceremonial dance or challenge in Polynesian culture. It is a posture dance performed by a group, with vigorous movements and stamping of the feet with rhythmically shouted accompaniment.</English>
+		<French>Le haka est une danse de cérémonie ou un défi dans la culture polynésienne. C'est une danse de posture exécutée par un groupe, avec des mouvements vigoureux et un estampage des pieds avec un accompagnement rythmé.</French>
+		<Russian>Õàêà - ýòî öåðåìîíèàëüíûé òàíåö èëè âûçîâ â ïîëèíåçèéñêîé êóëüòóðå. Ýòî òàíåö îñàíêè, èñïîëíÿåìûé ãðóïïîé, ñ ýíåðãè÷íûìè äâèæåíèÿìè è òîïîòîì íîã ñ ðèòìè÷íî-êðè÷àùèì ñîïðîâîæäåíèåì.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAWKING</Tag>
+		<English>Unit Reward - Hawking Hut</English>
+		<French>Cabane du Fauconnier</French>
+		<Italian>Capanna del falconiere</Italian>
+		<Polish>Chata Sokolnika</Polish>
+		<Russian>Ñîêîëèíàÿ îõîòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HAWKING_PEDIA</Tag>
+		<English>Hawking is the practice of hunting with a trained falconry bird. Falconry is "the taking of wild quarry in its natural state and habitat by means of a trained raptor". There are two traditional terms used to describe a person involved in falconry: a falconer flies a falcon; an austringer (German origin) flies a hawk (Accipiter and some buteos and similar) or an eagle (Aquila or similar). In modern falconry the Red-tailed Hawk (Buteo jamaicensis) and the Harris hawk are often used. The words "hawking" and "hawker" have become used so much to mean petty traveling traders, that the terms "falconer" and "falconry" now apply to all use of trained birds of prey to catch game. In early English falconry literature, the word "falcon" referred to a female falcon only, while the word "hawk" or "hawke" referred to a female hawk. A male hawk or falcon was referred to as a "tiercel" (sometimes spelled "tercel") as it was roughly one third less than the female in size. Many contemporary practitioners still use these words in their original meaning.</English>
+		<Italian>La falconeria è la pratica della caccia con un falco addestrato. La falconeria è "la cattura di prede selvatiche nel suo stato naturale e habitat per mezzo di un rapace addestrato". Ci sono due termini tradizionali usati per descrivere una persona coinvolta nella falconeria: un falconiere fa volare un falco, un austringer (di origine tedesca) fa volare un falco (Accipiter e alcune poiane e simili) o un'aquila. Nella falconeria moderna vengono spesso utilizzati il falco dalla coda rossa (Buteo jamaicensis) e il falco Harris. Le parole "Falconiere" e "Venditore ambulante" sono diventate usate così tanto da definire meschini i commercianti che viaggiano, tanto che i termini "falconiere" e "falconeria" ora si applicano a tutti gli usi di uccelli rapaci addestrati a catturare selvaggina. Nell'antica letteratura inglese riguardante la falconeria, la parola "falcon" si riferiva solo a un falcone femmina, mentre le parole "hawk" o "hawke" indicavano un falco femmina. Un falco o falcone maschio veniva chiamato "tiercel" (a volte scritto "tercel") dato che aveva una taglia circa un terzo in meno rispetto alla femmina. Molti praticanti contemporanei utilizzano ancora queste parole nel loro significato originale.</Italian>
+		<Polish>Początki sokolnictwa sięgają początków ludzkiej cywilizacji i zamierzchłych czasów, kiedy to nawet u prymitywnych ludów, a zwłaszcza nomadów wiodących koczowniczy tryb życia, stało ono na bardzo wysokim poziomie. Było podstawą ich egzystencji obok zbieractwa i myślistwa. Zwiadczą o tym m.in. motywy na starożytnych malowidłach. Myśliwego z ptakiem na pięści, przedstawiają też datowane na 1500 lat p.n.e rzeźby, znalezione w Turcji.Płaskorzeźba z czasów Sargona II (722-705 p.n.e) myśliwy z orłem, potwierdza, że ten sposób polowania znali Asyryjczycy</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HORSE_BREEDER</Tag>
+		<English>Horse Breeder</English>
+		<French>Éleveur de chevaux</French>
+		<Italian>Allevatore di cavalli</Italian>
+		<Russian>Ëîøàäèíûé ïèòîìíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HORSE_HERD</Tag>
+		<English>Herd (Horse)</English>
+		<French>Troupeau de Chevaux</French>
+		<Italian>Mandria di cavalli</Italian>
+		<Polish>Stado - Konie</Polish>
+		<Russian>Òàáóí ëîøàäåé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HORSE_HERD_PEDIA</Tag>
+		<English>The history of horse breeding goes back millennia. Though the precise date is in dispute, humans could have domesticated the horse as far back as approximately 4500 BCE. However, evidence of planned breeding has a more blurry history.[PARAGRAPH:2]One of the earliest people known to document the breedings of their horses were the Bedouin of the Middle East, the breeders of the Arabian horse. While it is difficult to determine how far back the Bedouin passed on pedigree information via an oral tradition, there were written pedigrees of Arabian horses by A.D. 1330. The Akhal-Teke of West-Central Asia is another breed with roots in ancient times that was also bred specifically for war and racing. The nomads of the Mongolian steppes bred horses for several thousand years as well.[PARAGRAPH:2]The types of horses bred varied with culture and with the times. The uses to which a horse was put also determined its qualities, including smooth amblers for riding, fast horses for carrying messengers, heavy horses for plowing and pulling heavy wagons, ponies for hauling cars of ore from mines, packhorses, carriage horses and many others.</English>
+		<Italian>La storia dell'allevamento dei cavalli risale a migliaia di anni fa. Anche se la data precisa è in discussione, gli esseri umani potrebbero avere addomesticato i cavalli nel lontano 4500 a.C.; tuttavia, le prove di un allevamento più intensivo sono molto rare.[PARAGRAPH:2]Uno dei primi popoli noti per aver documentato l'allevamento dei loro cavalli sono stati i beduini del Medio Oriente, gli allevatori del cavallo arabo. Anche se è difficile determinare per quanto tempo i beduini abbiano tramandato informazioni sull'allevamento attraverso una tradizione orale, ci sono state documentazioni scritte riguardo cavalli arabi sin dal 1330 d.C.. Gli Akhal-Teke dell'Asia centro-occidentale sono un'altra razza con radici antiche che è stata allevata appositamente per la guerra e la corsa. I nomadi delle steppe mongole allevarono i cavalli per diverse migliaia di anni.[PARAGRAPH:2]I tipi di cavalli addomesticati variarono con la cultura e con i tempi. Gli usi a cui un elefante era destinato determinavano anche le sue qualità, tra cui cavalli a pelle liscia per l'equitazione, cavalli veloci per trasportare messaggeri, cavalli pesanti per l'aratura e per tirare carri pesanti, pony per trasportare carichi di minerali dalle miniere, cavalli per carrozze e molti altri.</Italian>
+		<Polish>Zwinia domowa pochodzi od dzika, którego udomowienie nastąpiło przed ok. 7 tys. lat w Azji, a następnie w Europie. Według innych badaczy domestykacja tego gatunku nastąpiła znacznie wcześniej - już 12 700 - 13 000 lat p.n.e., a miało to miejsce w dorzeczu Eufratu i Tygrysu (późniejsza Mezopotamia).</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LLAMA_HERD</Tag>
+		<English>Herd (Llama)</English>
+		<French>Troupeau de Lama</French>
+		<Italian>Branco di lama</Italian>
+		<Polish>Stado - Lam</Polish>
+		<Russian>Ñòàäî ëàì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_LLAMA_HERD_PEDIA</Tag>
+		<English>The domestication of the lama took place around 4,000,000 BC. in the Andean basin, probably near Lake Titicaca. In pre-Inca times, representatives of the Mochica culture placed the remains of llamas in their graves, and also presented them on their pottery. Llamas and alpacas were the staple animal in the Inca State as food, fuel, fiber for clothing, as pack animals. They were also used in religious ceremonies as sacrificial animals. After the Inca conquest by the conquistadors, the importance of the llamas declined significantly, as the conquistadors brought their own pack animals. Despite this, llamas and alpacas remained important animals in South America, mainly in highland areas. South American countries at the beginning of the 20th century introduced a ban on the export of these animals. This ban was finally lifted for llamas and alpacas in the 1980s.</English>
+		<Polish>Udomowienie lamy miało miejsce około 4000 5000 lat p.n.e. na terenach andyjskiej puny, prawdopodobnie w okolicach jeziora Titicaca. W czasach przedinkaskich, przedstawiciele kultury Mochica umieszczali szczątki lam w grobach, przedstawiali je także na swojej ceramice. Lamy i alpaki były podstawowym zwierzęciem w Państwie Inków, jako żywność, źródło paliwa, włókien na ubrania, jako zwierzęta juczne. Były także wykorzystywane w ceremoniach religijnych, jako zwierzęta ofiarne. Po podboju Państwa Inków przez konkwistadorów znaczenie lam znacznie spadło, gdyż konkwistadorzy sprowadzili własne zwierzęta juczne. Mimo tego lamy i alpaki pozostały ważnymi zwierzętami w Ameryce Południowej, głównie na terenach wysokogórskich. Państwa południowoamerykańskie na początku XX wieku wprowadziły zakaz eksportu tych zwierząt. Zakaz ten został ostatecznie zniesiony dla lam i alpak w latach 80. XX wieku.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE</Tag>
+		<English>Unit Reward - Marine Institute</English>
+		<French>Institut de la Mer</French>
+		<Italian>Istituto marino</Italian>
+		<Polish>Instytut Morski</Polish>
+		<Russian>Ìîðñêîé èíñòèòóò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MARINE_INSTITUTE_PEDIA</Tag>
+		<English>The Marine Institute (Foras na Mara) is a State agency in Ireland that provides government, public agencies and the maritime industry with a range of scientific, advisory and economic development services, aiming to inform policy-making, regulation and the sustainable management and growth of the country’s marine resources. Founded in 1991 on foot of a 1974 report, the Institute undertakes, coordinates and promotes marine research and development, which is essential to achieving a sustainable ocean economy, protecting ecosystems and inspiring a shared understanding of the ocean. The agency is governed by a ministerially-appointed board and has a professional staff, a headquarters near Galway, an office in Dublin, and two research vessels.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MARSUPIAL_CAGE</Tag>
+		<English>Enclosure - Marsupial</English>
+		<French>Enclos - Marsupiaux</French>
+		<Italian>Gabbia dei marsupiali</Italian>
+		<Polish>Klatka - Torbacze</Polish>
+		<Russian>Êëåòêè ñ ñóì÷àòûìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER</Tag>
+		<English>Unit Reward - Master Hunter</English>
+		<French>Cabane du Maître chasseur</French>
+		<Italian>Mastro cacciatore</Italian>
+		<Polish>Wybitny Łowca</Polish>
+		<Russian>Õèæèíà îõîòíèêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER_PEDIA</Tag>
+		<English>«I fletch arrows, as hunters feast on game. I sharpen blades as the rangers trades the secrets of the wilds, of topography and the enemies movements. I brew poison as the assassins discuss their cleanest kills with grim smiles. Why do I toil away, you ask, serving the brave brothers and deadly sisters of the lodge, not to mention their pets? Because one day, one day soon, I will be one of them.» --Locke Thorne, Scout</English>
+		<French>«Je tire des flèches, alors que les chasseurs se régalent de gibier. J'affûte les lames pendant que les rangers troquent les secrets de la nature, de la topographie et des mouvements des ennemis. Je prépare du poison pendant que les assassins discutent de leurs meurtres les plus purs avec des sourires sinistres. Pourquoi est-ce que je travaille dur, demandez-vous, au service des braves frères et sœurs mortelles de la loge, sans parler de leurs animaux de compagnie? Parce qu'un jour, un jour bientôt, je serai l'un d'entre eux.» -- Locke Thorne, Scout</French>
+		<German>«Ich bewege Pfeile, während Jäger sich am Wild erfreuen. Ich schärfe die Klingen, während die Waldläufer die Geheimnisse der Wildnis, der Topographie und der Bewegungen des Feindes tauschen. Ich braue Gift, während die Attentäter ihre grimmigsten Tötungen mit grimmigem Lächeln besprechen. Warum arbeite ich mich ab, fragst du und diene den tapferen Brüdern und tödlichen Schwestern der Lodge, ganz zu schweigen von ihren Haustieren? Denn eines Tages, eines Tages werde ich einer von ihnen sein.» -- Locke Thorne, Pfadfinder</German>
+		<Italian>«Io costruisco le frecce, mentre i cacciatori banchettano con la selvaggina. Io affilo le spade, mentre i ranger commerciano i segreti della natura, della topografia e dei movimenti dei nemici. Io fermento il veleno mentre gli assassini discutono le loro uccisioni più pulite con sorrisi torvi. Perché lavoro duramente, chiedete, servendo i fratelli coraggiosi e le sorelle mortali, per non accennare ai loro animali domestici? Poiché un giorno, presto, io sarò uno di loro.» -- Locke Thorne, esploratore</Italian>
+		<Spanish>«Hago flechas, mientras los cazadores se deleitan con la caza. Afilo las espadas, mientras los guardabosques intercambian los secretos de la naturaleza, la topografía y los movimientos de los enemigos. Revuelvo el veneno mientras los asesinos discuten sus asesinatos más limpios con sonrisas sombrías. ¿Por qué trabajo duro, preguntas, sirviendo a hermanos valientes y hermanas mortales, sin mencionar a sus mascotas? Porque algún día pronto seré uno de ellos.» -- Locke Thorne, explorador</Spanish>
+		<Polish>Łowy polowanie było jedną z najważniejszych czynności pierwotnych ludzi przez wiele tysiącleci. Nie było wówczas pojęcia "własności" i zwierzyna była niczyja. Polowania były głównym źródłem utrzymania i przeżycia ludzi oprócz pożywienia pozyskiwano w ten sposób skóry na okrycia, a kości i rogi na proste narzędzia. Na przestrzeni wieków, w wyniku zachodzących zmian cywilizacyjnych jak i społecznych, z powodu trzebienia puszcz, rozwoju rolnictwa, polowania przestały być głównym zajęciem człowieka, a stały się okazją do wykazania swojej siły, zręczności i męstwa w bezpośrednich spotkaniach z dzikim zwierzem. Poczynając od ok. X w. łowy zaczęły być w coraz większym stopniu przywilejem ludzi "dobrze urodzonych", cesarzy, królów, duchowieństwa i rycerstwa. Łowy stały się również głównym źródłem zaopatrzenia wojsk podczas wypraw wojennych.</Polish>
+		<Russian>«ß ìåòàþ ñòðåëû, êàê îõîòíèêè íàñëàæäàþòñÿ ïîéìàííîé äè÷üþ. ß òî÷ó ëåçâèÿ, ïîêà ñëåäîïûòû îáìåíèâàþòñÿ òàéíàìè äèêîé ïðèðîäû, òîïîãðàôèè è ïåðåìåùåíèé âðàãîâ. ß çàâàðèâàþ ÿä, êîãäà àññàñèíû îáñóæäàþò ñâîè ÷èñòåéøèå óáèéñòâà ñ ìðà÷íûìè óëûáêàìè. Âû áóäåòå ñïðàøèâàòü, ñëóæèòå ëè âû õðàáðûì ñîáðàòüÿì è ñìåðòåëüíûì ñåñòðàì ïî ëîæå, íå ãîâîðÿ óæå î èõ äîìàøíèõ æèâîòíûõ? Èáî îäíàæäû ñêîðî ÿ áóäó îäíèì èç íèõ.» - Ëîêê Òîðí, ðàçâåä÷èê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MASTER_SEA_HUNTER</Tag>
+		<English>Unit Reward - Master Sea Hunter</English>
+		<French>Maître Chasseur des mers</French>
+		<Italian>Mastro pescatore</Italian>
+		<Polish>Wybitny Morski Łowca</Polish>
+		<Russian>Øêîëà ðûáàëêè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MASTER_SEA_HUNTER_PEDIA</Tag>
+		<English>Hunting is the practice of killing or trapping any animal, or pursuing it with the intent of doing so. Hunting wildlife or feral animals is most commonly done by humans for food, recreation, or trade. In present-day use, lawful hunting is distinguished from poaching, which is the illegal killing, trapping or capture of the hunted species. The species that are hunted are referred to as game and are usually mammals and birds.</English>
+		<Italian>Un mastro pescatore rappresenta le conoscenze che la tua gente ha riguardo ai pesci.</Italian>
+		<Polish>Rybak osoba trudniąca się rybołówstwem, utrzymująca się z połowu ryb i innych owoców morza (frutti di mare) krewetek, małży itp. Słowem tym współcześnie określa się zarówno osoby wykonujące ten zawód w pojedynkę (na morzu rzadko) lub w niewielkich, kilkuosobowych zespołach, pływających na kilkutonowych kutrach (rybactwo), jak również marynarzy wielkich jednostek oceanicznych (rybołówstwo przemysłowe). Na potrzeby rybactwa śródlądowego, na rzekach i jeziorach rybacy na ogół posługują się niewielkimi łodziami, kutry morskie są zazwyczaj większe i dysponują mocniejszymi silnikami.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MULE_TRAINER</Tag>
+		<English>Animal Trainer (Donkey)</English>
+		<French>Elevage de Mules</French>
+		<Italian>Addestratore di muli</Italian>
+		<Polish>Treser Mułów</Polish>
+		<Russian>Äðåññ. ìóëîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MULE_TRAINER_PEDIA</Tag>
+		<English>The Mule Trainer is required to build Mule units.</English>
+		<Italian>L'addestratore di muli è necessario per addestrare le unità di muli.</Italian>
+		<Polish>Muł mieszaniec międzygatunkowy klaczy konia domowego z ogierem osła, najbardziej znana hybryda. Najczęściej bezpłodny, tylko ok. 5% mulic jest płodnych. Zewnętrznie jest bardziej podobny do konia. Charakteryzuje się dużą głową, długimi uszami oraz krótką szyją ze stojącą grzywą i typowo końskim ogonem z długimi włosami. W kłębie osiąga wysokość do 180 cm.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MUSKOX_HERD</Tag>
+		<English>Herd (Muskox)</English>
+		<French>Troupeau de Bœufs musqués</French>
+		<Italian>Branco di buoi muschiati</Italian>
+		<Polish>Stado - Woły Piżmowe</Polish>
+		<Russian>Ñòàäî îâöåáûêîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MUSKOX_HERD_PEDIA</Tag>
+		<English>A herd of Muskoxes.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM</Tag>
+		<English>Unit Reward - Naval Standard (Animal mascot)</English>
+		<French>Mascotte de la Marine</French>
+		<Italian>Mascotte della marina</Italian>
+		<Polish>Bandera (Zwierzęca Maskotka)</Polish>
+		<Russian>Ìîðñêîé øòàíäàðò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM_PEDIA</Tag>
+		<English>The mascot of a ship.</English>
+		<Italian>La mascotte di una nave.</Italian>
+		<Polish>Maskotka statku.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_NOCTURNAL_CAGE</Tag>
+		<English>Enclosure - Nocturnal</English>
+		<French>Enclos - Animaux Nocturnes</French>
+		<Italian>Gabbia degli animali notturni</Italian>
+		<Polish>Klatka - Zwierzęta Nocne</Polish>
+		<Russian>Êëåòêè ñ íî÷íûìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_DOG_REMAINS</Tag>
+		<English>Remains - Dire Wolf</English>
+		<French>Restes de Loup sinistre</French>
+		<German>
+			<Text>Überreste eines Canis dirus:Überreste eines Canis dirus:Überresten eines Canis dirus:Überreste eines Canis dirus</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Resti di lupo paleolitico</Italian>
+		<Russian>Ïàìÿòü î ëþòîâîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</Tag>
+		<English>Remains - Ground Sloth</English>
+		<French>Restes de Xénarthre</French>
+		<German>
+			<Text>Überreste eines Megatheriums:Überreste eines Megatheriums:Überresten eines Megatheriums:Überreste eines Megatheriums</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Resti di bradipo paleolitico</Italian>
+		<Russian>Ïàìÿòü î ãèã. ëåíèâöå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</Tag>
+		<English>Remains - Mammoth</English>
+		<French>Restes de Mammouths</French>
+		<Italian>Resti di mammut</Italian>
+		<Russian>Ïàìÿòü î ìàìîíòå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS</Tag>
+		<English>Flocks of Peacock</English>
+		<Italian>Branco di fagiani</Italian>
+		<Russian>Ñòàÿ ïàâëèíîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PEACOCK_FLOCKS_PEDIA</Tag>
+		<English>Your nation has flocks of Peacocks.</English>
+		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ ïàâëèíîâ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PIG_HERD</Tag>
+		<English>Herd (Pig)</English>
+		<French>Troupeau de Cochons</French>
+		<Italian>Branco di maiali</Italian>
+		<Polish>Stado - Świnie</Polish>
+		<Russian>Ñòàäî ñâèíåé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PIG_HERD_PEDIA</Tag>
+		<English>Pigs were originally wild boars in Europe and Asia that were first tamed to be domestic animals about 10000 years ago. There are many different kinds of pig. Some pigs have a pink skin but there are brown, white and black skinned pigs too. Some pigs have patterns or spots. Something in skin called pigment makes the colour and it's different for different pig breeds. There are about 73 different breeds of pig.</English>
+		<Italian>I maiali erano originariamente cinghiali selvatici in Europa e in Asia, addomesticati circa 10000 anni fa. Ci sono molti tipi diversi di maiali: alcuni maiali hanno una pelle di colore rosa, ma ci sono anche maiali con pelle marrone, bianca e nera. Alcuni maiali hanno strisce o macchie. Qualcosa nella pelle chiamato pigmento è responsabile del colore, ed è diverso nelle diverse razze suine. Ci sono circa 73 diverse razze di maiali.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_POULTRY_HERD</Tag>
+		<English>Herd (Poultry)</English>
+		<French>Troupeau de Volailles</French>
+		<Italian>Branco di pollame</Italian>
+		<Polish>Stado - Drobiu</Polish>
+		<Russian>Ñòàÿ ïòèö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_POULTRY_HERD_PEDIA</Tag>
+		<English>A poultry herd.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PRIMATE_CAGE</Tag>
+		<English>Enclosure - Primate</English>
+		<French>Enclos - Primates</French>
+		<Italian>Gabbia dei primati</Italian>
+		<Polish>Klatka - Małpa</Polish>
+		<Russian>Êëåòêè ñ ïðèìàòàìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_PROCOPTODON_REMAINS</Tag>
+		<English>Remains - Procoptodon</English>
+		<French>Remains - Procoptodon</French>
+		<Italian>Resti di procoptodonte</Italian>
+		<Russian>Ïàìÿòü î ïðîêîïòîäîíå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RATITE_HERD</Tag>
+		<English>Herd (Ratite)</English>
+		<French>Troupeau d'Autruches</French>
+		<Italian>Branco di ratiti</Italian>
+		<Polish>Stado - Strusi</Polish>
+		<Russian>Ñòàÿ ñòðàóñîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RATITE_HERD_PEDIA</Tag>
+		<English>A ratite is any of a diverse group of large, flightless birds of Gondwanan origin, most of them now extinct. There is still some controversy regarding the systematics involved. Some sources state that Ratites are synonymous with Struthioiniformes, while other sources state that Ratites are the same group, only that the order Struthioniformes contains only the Ostrich and possibly the Elephant Bird. Unlike other flightless birds, the ratites have no keel on their sternum hence the name from the Latin ratis (for raft). Without this to anchor their wing muscles, they could not fly even if they were to develop suitable wings.[PARAGRAPH:2]Most parts of the former Gondwana have ratites, or did have until the fairly recent past. Their closest living relatives are the tinamous of South America.[PARAGRAPH:2]Some taxonomical systems consider the various families of ratites to be orders, but the system used here uses the order "Struthioniformes" to refer to all ratites. The African Ostrich is the largest living ratite. A large member of this species can be nearly 2.8 metres (9.2 ft) tall, weigh as much as 156 kilograms (340 lb), and can outrun a horse.[PARAGRAPH:2]Of the living species, the Australian emu is next in height, reaching up to 1.9 metres (6.2 ft) tall and about 50 kilograms (110 lb). Like the ostrich, it is a fast-running, powerful bird of the open plains and woodlands.[PARAGRAPH:2]Also native to Australia and the islands to the north are the three species of cassowary. Shorter than an emu, but heavier and solidly built, cassowaries prefer thickly vegetated tropical forest. They can be very dangerous when surprised or cornered because of their razor sharp talons. In New Guinea, cassowary eggs are brought back to villages and the chicks raised for eating as a much-prized delicacy, despite (or perhaps because of) the risk they pose to life and limb. They reach up to 1.7 metres (5.6 ft) tall and weigh as much as 59 kilograms (130 lb)[PARAGRAPH:2]South America has two species of rhea, large fast-running birds of the Pampas. The larger American rhea grows to about 1.4 metres (4.6 ft) tall and usually weighs 15 to 40 kilograms (3388 lb).[PARAGRAPH:2]The smallest ratites are the five species of kiwi from New Zealand. Kiwi are chicken-sized, shy, and nocturnal. They nest in deep burrows and use a highly developed sense of smell to find small insects and grubs in the soil. Kiwi are notable for laying eggs that are very large in relation to their body size. A kiwi egg may equal 15 to 20 percent of the body mass of a female kiwi. The smallest species of kiwi is the Little Spotted Kiwi, at 0.9 to 1.9 kilograms (2.04.2 lb) and 35 to 45 centimetres (1418 in).</English>
+		<Italian>I ratiti sono una famiglia di uccelli, che comprende i Paleognati, che non volano. Il termine "Ratiti" viene dal latino "ratis" ("zattera"), poiché questi uccelli hanno lo sterno piatto invece che carenato. La loro distribuzione è australe di origine gondwaniana. Tranne il kiwi sono tutti di taglia grande e sono onnivori. Hanno prole precoce e le femmine covano nella stessa buca a turno; la cova è effettuata anche dal maschio. I ratiti più importanti sono gli struzzi africani, i nandù, i casuari, i kiwi e i moa (attualmente estinti).</Italian>
+		<Polish>Struś syryjski od dawna zajmuje znaczące miejsce w kulturze regionu. Dorosły struś z jedenastoma młodymi został przedstawiony na słynnym prehistorycznym "Graffiti Rock I" (rysunki wyryte na skale datowane na 20001000 p.n.e. odkryte w pobliżu Rijad). W Mezopotamii, był wykorzystywany jako zwierzę ofiarne i przedstawiany na dziełach sztuki, malowany na kubkach i innych przedmiotach wykonanych ze strusich jaj, sprzedawanych aż po Etrurię w okresie nowoasyryjskim. W epoce ekspansji islamu struś syryjski reprezentował bogactwo i elegancję. Polowanie na strusie stało się popularną rozrywką dla bogaczy i szlachty (jeśli zabito strusia w odpowiedni sposób, jego mięso uznawane było przez muzułmanów za halaal). Jaja, pióra i skóry były szeroko wykorzystywane w rękodziele. Zarówno produkty otrzymane ze strusi jak i żywe ptaki były eksportowane aż do Chin.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_REPTILE_CAGE</Tag>
+		<English>Enclosure - Reptile</English>
+		<French>Enclos - Reptiles</French>
+		<Italian>Gabbia dei rettili</Italian>
+		<Polish>Klatka - Gady</Polish>
+		<Russian>Òåððàðèóì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RODENT_CAGE</Tag>
+		<English>Enclosure - Rodent</English>
+		<French>Enclos - Rongeurs</French>
+		<Italian>Gabbia dei roditori</Italian>
+		<Polish>Klatka - Gryzonie</Polish>
+		<Russian>Êëåòêè ñ ãðûçóíàìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROO_HERD</Tag>
+		<English>Herd (Kangaroo)</English>
+		<French>Troupeau de Kangourou</French>
+		<Italian>Branco di canguri</Italian>
+		<Polish>Stado - Kangurów</Polish>
+		<Russian>Ñòàäî êåíãóðó</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ROO_HERD_PEDIA</Tag>
+		<English>A kangoroo herd.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SABRETOOTH_REMAINS</Tag>
+		<English>Remains - Sabretooth</English>
+		<French>Restes de Tigre à dents de sabre</French>
+		<German>
+			<Text>Überreste eines Säbelzahntigers:Überreste eines Säbelzahntigers:Überresten eines Säbelzahntigers:Überreste eines Säbelzahntigers</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Resti di tigre dai denti a sciabola</Italian>
+		<Polish>Resztki - Tygrys Szablozębny</Polish>
+		<Russian>Ïàìÿòü î ñàáë. òèãðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE</Tag>
+		<English>Unit Reward - Center for Shark Studies</English>
+		<French>Centre d'étude des Requins</French>
+		<Italian>Centro per gli studi sugli squali</Italian>
+		<Polish>Centrum Badań Rekinów</Polish>
+		<Russian>Öåíòð èçó÷. àêóë</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE_PEDIA</Tag>
+		<English>Until recently only a few benthic species of shark, such as hornsharks, leopard sharks, catsharks, and zebra sharks had survived in aquarium conditions for up to a year or more. This gave rise to the belief that sharks, as well as being difficult to capture and transport, were difficult to care for. A better knowledge of sharks has led to more species (including the large pelagic sharks) being able to be kept for far longer. At the same time, transportation techniques have improved and long distance movement of sharks is becoming easier. One shark that never had been successfully held in captivity for long was the great white. But in September 2004 the Monterey Bay Aquarium successfully kept a young female great white shark for 198 days before releasing her back into the wild.</English>
+		<Italian>Fino ad oggi poche specie di squali sono in grado di sopravvivere più di un anno in cattività. Questo ha portato a credere che gli squali, oltre a essere difficili da catturare e da trasportare, fossero anche difficili da mantenere. Recenti studi sugli squali hanno però permesso di mantenere in buone condizioni un maggior numero di specie di squali. Allo stesso tempo, le tecniche di trasporto sono migliorate e il movimento a lunga distanza di squali sta diventando più facile. Uno squalo che non era mai stato tenuto con successo in cattività per lungo tempo è stato il grande squalo bianco. Ma nel settembre 2004 il Monterey Bay Aquarium ha tenuto con successo una giovane femmina di squalo bianco per 198 giorni prima di rilasciarla di nuovo in libertà.</Italian>
+		<Polish>Instytut Morski jednostka naukowo-badawcza. Placówka wykonuje prace naukowe, badawcze i wdrożeniowe: m.in. zajmuje się modernizacją i eksploatacją portów, oceanografią operacyjną, czy problematyką zagospodarowania regionu nadmorskiego. Misją Instytutu jest dbałość o zachowanie wartości morza i zrównoważony rozwój polskiej gospodarki morskiej. Instytut opracowuje studia wykonalności i eksperyzy oraz udziela konsultacji w zakresie: hydrotechniki morskiej, geotechniki, oceanografii operacyjnej, ochrony środowiska (badania chemiczne i biologiczne), transportu, logistyki, zagospodarowania przestrzennego regionu nadmorskiego, modernizacji i eksploatacji portów, żeglugi śródlądowej, turystyki, bezpieczeństwa przeciwpowodziowego, elektroniki morskiej, a także tworzenia baz danych i monitoringu zjawisk ciągłych.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SEAL_CAGE</Tag>
+		<English>Enclosure - Seal</English>
+		<French>Enclos - Phoques</French>
+		<Italian>Gabbia delle foche</Italian>
+		<Polish>Klatka - Foka</Polish>
+		<Russian>Êëåòêè ñ òþëåíÿìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHEEP_HERD</Tag>
+		<English>Herd (Sheep)</English>
+		<French>Troupeau de Moutons</French>
+		<Italian>Gregge di pecore</Italian>
+		<Russian>Îòàðà îâåö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SHEEP_HERD_PEDIA</Tag>
+		<English>A sheep herd.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER</Tag>
+		<English>Unit Reward - Snake Charmer</English>
+		<French>Charmeur de Serpents</French>
+		<Italian>Incantatore di serpenti</Italian>
+		<Polish>Zaklinacz Węży</Polish>
+		<Russian>Çàêëèíàòåëü çìåé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SNAKE_CHARMER_PEDIA</Tag>
+		<English>The earliest evidence for snake charming comes from Ancient Egyptian sources. Charmers there mainly acted as magicians and healers. As literate and high-status men, part of their studies involved learning the various types of snake, the gods to whom they were sacred, and how to treat those who were bitten by the reptiles. Entertainment was also part of their repertoire, and they knew how to handle the animals and charm them for their patrons.[PARAGRAPH:2]One of the earliest records of snake charming appears in the Bible in Psalm (58:3-5): "The wicked turn aside from birth; liars go astray as soon as they are born. Their venom is like that of a snake, like a deaf serpent that does not hear, that does not respond to the magicians, or to a skilled snake-charmer." Snakes have long been popular subjects of Hindu art.[PARAGRAPH:2]Snake charming as it exists today probably originated in India. Hinduism has long held serpents to be sacred; the animals are related to the Nagas, and many gods are pictured under the protection of the cobra. Indians thus considered snake charmers to be holy men who were influenced by the gods.</English>
+		<Italian>Le prime prove dell'esistenza degli incantatori di serpenti provengono da fonti egiziane antiche; qui gli incantatori agivano principalmente come maghi e guaritori. Come uomini colti e di alto rango, una parte dei loro studi consisteva nell'imparare i vari tipi di serpenti, gli dei a cui erano sacri e come trattare coloro che erano stati morsi dai rettili. Anche l'intrattenimento era parte del loro repertorio, e sapevano come gestire ed incantare gli animali.[PARAGRAPH:2]Uno dei più antichi documenti di serpenti incantati appare nella Bibbia nel Salmo (58:3-5): "i malvagi si allontanano dalla nascita; i bugiardi vanno fuori strada, non appena nascono. Il loro veleno è come quello di un serpente, come un serpente sordo che non sente, che non risponde ai maghi o ad un esperto incantatore di serpenti". I serpenti sono stati a lungo soggetti popolari nell'arte indù.[PARAGRAPH:2]Gli incantatori di serpenti attuali probabilmente ebbero origine in India. L'induismo ha da sempre ritenuto i serpenti sacri; gli animali sono legati ai Naga, e molti dei sono raffigurati sotto la protezione del cobra. Gli indiani quindi consideravano gli incantatori di serpenti essere uomini santi che venivano influenzati dagli dei.</Italian>
+		<Polish>Zaklinanie węży to jedna z najstarszych rozrywek towarzyszących człowiekowi.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SNAKE_PIT</Tag>
+		<English>Unit Reward - Snake Pit</English>
+		<French>Fosse à Serpents</French>
+		<Italian>Fossa dei serpenti</Italian>
+		<Polish>Dół z wężami</Polish>
+		<Russian>ßìà ñî çìåÿìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SNAKE_PIT_PEDIA</Tag>
+		<English>[COLOR_BUILDING_TEXT]Snake Pits[COLOR_REVERT] are places of horror, torture and even death in European legends and fairy tales. The Viking warlord Ragnar Lodbrok is said to have been thrown into a snake pit and died there, after his army had been defeated in battle by King Aelle II of Northumbria. An older legend recorded in Atlakvioa and Oddrunargratr tells that Attila the Hun murdered Gunnarr, the King of Burgundy, in a snake pit. In a medieval German poem, Dietrich von Bern is thrown into a snake pit by the giant Sigenot - he is protected by a magical jewel that had been given to him earlier by a dwarf.[PARAGRAPH:2]Nothing however supports the assumption, that snake pits were ever actually maintained or used for torture or execution. The necessary effort and the risks would have been far too big for something the effect of which could hardly been foreseen or controlled with sufficient precision.</English>
+		<Italian>Le [COLOR_BUILDING_TEXT]Fosse dei serpenti[COLOR_REVERT] sono descritti nelle leggende europee come posti di orrore, tortura e perfino morte. Si dice che il guerriero vichingo Ragnar Lodbrok sia stato gettato in una fossa piena di serpenti e sia morto lì, dopo che il suo esercito era stato sconfitto in battaglia da Re Aelle II di Northumbria. Un'antica leggenda tramandata a Atlakviða e Oddrúnargrátr narra che Attila uccise Gunnarr, Re di Burgundia, gettandolo in una fossa piena di serpenti velenosi. In un poema medievale tedesco, Dietrich von Bern viene gettato in una fossa piena di serpenti dal gigante Sigenot - anche se è protetto da un gioiello magico che gli era appena stato donato da un nano.[PARAGRAPH:2]Nulla invece sostiene l'ipotesi che le fosse di serpenti siano state effettivamente mantenute o utilizzate per torture o esecuzioni. Lo sforzo necessario e il rischio sarebbero stati troppo grandi per qualcosa il cui effetto sarebbe stato difficilmente previsto o controllato con sufficiente precisione.</Italian>
+		<Polish>[COLOR_BUILDING_TEXT]Dół z wężami[COLOR_REVERT] to miejsce do którego wrzuca się skazańców na tortury i śmierć przez pokąsanie przez węże i żmije.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_THYLACINE_REMAINS</Tag>
+		<English>Remains - Thylacine</English>
+		<French>Restes de Thylacine</French>
+		<German>
+			<Text>Überreste eines Beutelwolfs:Überreste eines Beutelwolfs:Überresten eines Beutelwolfs:Überreste eines Beutelwolfs</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
+		<Italian>Resti di tilacino</Italian>
+		<Russian>Ïàìÿòü î ñóì÷. âîëêå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER</Tag>
+		<English>Unit Reward - Shell Worker's Hut</English>
+		<French>Cabane du sculpteur de carapaces</French>
+		<Italian>Capanna dell'intagliatore di conchiglie</Italian>
+		<Polish>Chata Rzeźbiarza Muszli</Polish>
+		<Russian>Ëîâåö óñòðèö</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER_PEDIA</Tag>
+		<English>Tortoiseshell or tortoise shell is a material produced mainly from the shell of the hawksbill turtle, an endangered species. It was widely used in the 1960s and 1970s in the manufacture of items such as combs, sunglasses, guitar picks and knitting needles. In 1973, the trade of tortoiseshell worldwide was banned under CITES (the Convention on International Trade in Endangered Species).[PARAGRAPH:2]Tortoiseshell was attractive to manufacturers and consumers because of its beautiful appearance and its durability, and its organic warmth against the skin. It was used in guitar picks because it can be easily shaped, has excellent bending properties, and is very durable. Tortoiseshell picks could sometimes be used for years. Piqué-work, jewelry made from tortoiseshell inlaid with precious metals in patterns or pictures, was made during the Victorian Era and was highly prized.[PARAGRAPH:2]There have been a number of faux tortoiseshell materials developed since the 1970s, most of which mimic the appearance of tortoiseshell. Tortex is a material that was created to replace tortoiseshell guitar picks and has been widely accepted as a suitable substitute.</English>
+		<Italian>Un guscio di testuggine è un materiale prodotto principalmente dal guscio della tartaruga embricata, una specie in via di estinzione. È stato ampiamente utilizzato negli anni 60 e 70 per la fabbricazione di articoli come pettini, occhiali da sole, plettri e aghi per lavoro a maglia. Nel 1973, il commercio di tartaruga in tutto il mondo è stato vietato dalla CITES (Convenzione sul commercio internazionale delle specie minacciate di estinzione).[PARAGRAPH:2]Il guscio di testuggine era attraente per i produttori ed i consumatori a causa della sua bella apparenza e la sua durata, e il suo calore organica contro la pelle. Veniva utilizzata nei plettri perché poteva essere facilmente modellata, ha eccellenti proprietà di curvatura, ed è molto resistente. I gusci di tartaruga potrebbero talvolta essere utilizzati per anni. Durante l'era vittoriana venivano realizzati gioielli di tartaruga intarsiati con metalli preziosi nei modelli, ed erano molto apprezzati.[PARAGRAPH:2]Ci sono stati un certo numero di materiali eco-tartaruga sviluppato dal 1970, la maggior parte dei quali imitavano l'aspetto della tartaruga. Il Tortex è un materiale creato per sostituire i plettri di tartaruga ed è stato ampiamente accettato come un sostituto adatto.</Italian>
+		<Polish>Skorupy żółwi od dawien dawna były wykorzystywane do produkcji ozdób i prostych narzędzi na całym świecie.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRADITION_HUNTER</Tag>
+		<English>Tradition - Hunter</English>
+		<French>Tradition - Chasseur</French>
+		<Italian>Tradizione della caccia</Italian>
+		<Polish>Tradycja - Łowcy</Polish>
+		<Russian>Ñîþç îõîòíèêîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRADITION_NAVAL_TOTEM</Tag>
+		<English>Tradition - Naval Mascot</English>
+		<French>Tradition - Mascotte Navale</French>
+		<Italian>Tradizione - Mascotte della marina</Italian>
+		<Polish>Tradycja - Bandera (Maskotka)</Polish>
+		<Russian>Òðàäèöèè øòàíäàðòîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRADITION_SEA_HUNTING</Tag>
+		<English>Tradition - Sea Hunting</English>
+		<French>Tradition - Chasse en mer</French>
+		<Italian>Tradizione della pesca</Italian>
+		<Polish>Tradycja - Polowania na morzu</Polish>
+		<Russian>Òðàäèöèè ðûáàëêè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRADITION_TOTEM</Tag>
+		<English>Tradition - Military Standard (Mascot)</English>
+		<French>Tradition - Standard militaire (Mascotte)</French>
+		<Italian>Tradizione - Stendardo militare (Mascotte)</Italian>
+		<Polish>Tradycja - Sztandar Wojskowy (Maskotka)</Polish>
+		<Russian>Òðàäèöèè òîòåìîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL</Tag>
+		<English>Unit Reward - Carnival (Trained Seal)</English>
+		<French>Phoques dressés</French>
+		<Italian>Fiera delle foche ammaestrate</Italian>
+		<Polish>Tresowana Foka</Polish>
+		<Russian>Äðåññ. òþëåíåé</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL_PEDIA</Tag>
+		<English>A carnival of seals trained for entertainment.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS</Tag>
+		<English>Flocks of Turkey</English>
+		<Italian>Branco di tacchini</Italian>
+		<Russian>Ñòàÿ èíäååê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Tag>
+		<English>Your nation has flocks of Turkey.</English>
+		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ èíäååê.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WALRUS_CAGE</Tag>
+		<English>Enclosure - Walrus</English>
+		<French>Enclos - Morses</French>
+		<Italian>Gabbia dei trichechi</Italian>
+		<Polish>Klatka - Mors</Polish>
+		<Russian>Êëåòêè ñ ìîðæàìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Tag>
+		<English>A cage used for wild subdued animals.</English>
+		<Italian>Una gabbia in cui vengono rinchiusi gli animali selvaggi addomesticati.</Italian>
+		<Polish>Klatka używana do przetrzymywania dzikich, poskromionych zwierząt.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WOLF_CAGE</Tag>
+		<English>Enclosure - Wolf</English>
+		<French>Enclos - Loups</French>
+		<Italian>Gabbia dei lupi</Italian>
+		<Polish>Klatka - Wilk</Polish>
+		<Russian>Êëåòêè ñ âîëêàìè</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP</Tag>
+		<English>Unit Reward - Wonders of the Deep</English>
+		<French>Merveilles des profondeurs</French>
+		<Italian>Meraviglie degli abissi</Italian>
+		<Polish>Cuda Głębin</Polish>
+		<Russian>×óäåñà ãëóáèí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WONDERS_OF_THE_DEEP_PEDIA</Tag>
+		<English>Wonders of the deep represent the knowledge of your people about sea animals.</English>
+		<Italian>Le meraviglie degli abissi rappresentano la conoscenza che la tua gente ha degli animali marini.</Italian>
+		<Polish>Cuda Głębin reprezentują wiedzę jaką Twoi ludzi posiadają o zwierzętach morskich.</Polish>
+		<Russian>×óäåñà Ãëóáèí ïðåäñòàâëÿþò çíàíèÿ âàøåìó íàðîäó î ìîðñêèõ îáèòàòåëÿõ.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ZEBRA_HERD_PEDIA</Tag>
+		<English>A zebra herd.</English>
+	</TEXT>
+</Civ4GameText>

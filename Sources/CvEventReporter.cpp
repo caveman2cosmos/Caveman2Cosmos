@@ -133,7 +133,7 @@ bool CvEventReporter::kbdEvent(int evt, int key, int iCursorX, int iCursorY)
 void CvEventReporter::genericEvent(const char* szEventName, void *pyArgs)
 {
 	m_kPythonEventMgr.reportGenericEvent(szEventName, pyArgs);
-	
+
 }
 
 void CvEventReporter::newGame()
@@ -167,7 +167,7 @@ void CvEventReporter::init()
 
 void CvEventReporter::update(float fDeltaTime)
 {
-	m_kPythonEventMgr.reportUpdate(fDeltaTime);
+	// Toffer - Called by exe every frame, might be useful.
 }
 
 void CvEventReporter::unInit()
@@ -297,26 +297,26 @@ void CvEventReporter::gotoPlotSet(CvPlot *pPlot, PlayerTypes ePlayer)
 	m_kPythonEventMgr.reportGotoPlotSet(pPlot, ePlayer);
 }
 
-void CvEventReporter::cityBuilt( CvCity *pCity, CvUnit *pUnit )
+void CvEventReporter::cityBuilt(CvCity* pCity, CvUnit* pUnit)
 {
 	m_kPythonEventMgr.reportCityBuilt(pCity, pUnit);
 	m_kStatistics.cityBuilt(pCity);
 }
 
-void CvEventReporter::cityRazed( CvCity *pCity, PlayerTypes ePlayer )
+void CvEventReporter::cityRazed(CvCity* pCity, PlayerTypes ePlayer)
 {
 	m_kPythonEventMgr.reportCityRazed(pCity, ePlayer);
-	m_kStatistics.cityRazed(pCity, ePlayer);
+	m_kStatistics.cityRazed(ePlayer);
 }
 
-void CvEventReporter::cityAcquired(PlayerTypes eOldOwner, PlayerTypes iPlayer, CvCity* pCity, bool bConquest, bool bTrade)
+void CvEventReporter::cityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade)
 {
-	m_kPythonEventMgr.reportCityAcquired(eOldOwner, iPlayer, pCity, bConquest, bTrade);
+	m_kPythonEventMgr.reportCityAcquired(eOldOwner, ePlayer, pCity, bConquest, bTrade);
 }
 
-void CvEventReporter::cityAcquiredAndKept(PlayerTypes iPlayer, CvCity* pCity)
+void CvEventReporter::cityAcquiredAndKept(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade)
 {
-	m_kPythonEventMgr.reportCityAcquiredAndKept(iPlayer, pCity);
+	m_kPythonEventMgr.reportCityAcquiredAndKept(eOldOwner, ePlayer, pCity, bConquest, bTrade);
 }
 
 void CvEventReporter::cityLost( CvCity *pCity)
@@ -381,11 +381,6 @@ void CvEventReporter::selectionGroupPushMission(CvSelectionGroup* pSelectionGrou
 void CvEventReporter::unitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot)
 {
 	m_kPythonEventMgr.reportUnitMove(pPlot, pUnit, pOldPlot);
-}
-
-void CvEventReporter::unitSetXY(CvPlot* pPlot, CvUnit* pUnit)
-{
-	m_kPythonEventMgr.reportUnitSetXY(pPlot, pUnit);
 }
 
 void CvEventReporter::unitCreated(CvUnit *pUnit)
@@ -557,13 +552,6 @@ void CvEventReporter::playerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPl
 {
 	m_kPythonEventMgr.reportPlayerGoldTrade(eFromPlayer, eToPlayer, iAmount);
 }
-
-// BUG - Revolution Event - start
-void CvEventReporter::playerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics)
-{
-	m_kPythonEventMgr.reportPlayerRevolution(ePlayerID, iAnarchyLength, paeOldCivics, paeNewCivics);
-}
-// BUG - Revolution Event - end
 
 void CvEventReporter::chat(CvWString szString)
 {

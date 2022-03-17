@@ -154,7 +154,7 @@ class CvWonderMovieScreen:
 				return 1
 		return 0
 
-	def update(self, fDelta): 
+	def update(self, fDelta):
 		if self.bTimer:
 			self.fTime -= fDelta
 			if self.fTime < 0:
@@ -163,4 +163,3 @@ class CvWonderMovieScreen:
 
 	def onClose(self):
 		del self.screenId, self.iMovieType, self.iWonderId, self.fTime, self.bTimer, self.iInfoPanel
-import HandleInputUtil

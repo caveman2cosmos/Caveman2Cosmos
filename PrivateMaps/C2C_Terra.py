@@ -8,9 +8,9 @@
 #
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
+import CvMapGeneratorUtil as MGU
 
-balancer = CvMapGeneratorUtil.BonusBalancer()
+balancer = MGU.BonusBalancer()
 
 '''
 MULTILAYERED FRACTAL NOTES
@@ -28,8 +28,8 @@ TERRA NOTES
 Terra turns out to be our largest size map. This is the only map script
 in the original release of Civ4 where the grids are this large!
 
-This script is also the one that got me started in to map scripting. I had 
-this idea early in the development cycle and just kept pestering until Soren 
+This script is also the one that got me started in to map scripting. I had
+this idea early in the development cycle and just kept pestering until Soren
 turned me loose on it, finally. Once I got going, I just kept on going!
 
 - Bob Thomas   September 20, 2005
@@ -111,13 +111,10 @@ def normalizeAddExtras():
 
 def addBonusType(argsList):
 	[iBonusType] = argsList
-	gc = CyGlobalContext()
-	type_string = gc.getBonusInfo(iBonusType).getType()
 
-	if (CyMap().getCustomMapOption(1) == 1):
-		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
-			return None # don't place any of this bonus randomly
-		
+	if CyMap().getCustomMapOption(1) == 1 and CyGlobalContext().getBonusInfo(iBonusType).getType() in balancer.resourcesToBalance:
+		return None # don't place any of this bonus randomly
+
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
 def getGridSize(argsList):
@@ -153,9 +150,9 @@ def findStartingPlot(argsList):
 
 		return True
 
-	return CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
+	return MGU.findStartingPlot(playerID, isValid)
 
-class TerraMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
+class TerraMultilayeredFractal(MGU.MultilayeredFractal):
 	# Subclass. Only the controlling function overridden in this case.
 	def generatePlotsByRegion(self):
 		# Sirian's MultilayeredFractal class, controlling function.
@@ -540,14 +537,14 @@ def generatePlotTypes():
 
 def generateTerrainTypes():
 	NiTextOut("Generating Terrain (Python Terra) ...")
-	terraingen = CvMapGeneratorUtil.TerrainGenerator()
+	terraingen = MGU.TerrainGenerator()
 	terrainTypes = terraingen.generateTerrain()
 	return terrainTypes
 
 def addFeatures():
 	NiTextOut("Adding Features (Python Terra) ...")
-	featuregen = CvMapGeneratorUtil.FeatureGenerator()
+	featuregen = MGU.FeatureGenerator()
 	featuregen.addFeatures()
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses()
+	MGU.placeC2CBonuses()

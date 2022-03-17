@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
 <!-- Be careful of changing their orders, some code reference them by index number
-
  Find new colours at https://www.december.com/html/spec/colorper.html.
 -->
 <Civ4ColorVals xmlns="x-schema:../Schema/C2C_CIV4InterfaceSchema.xml">
@@ -759,7 +758,7 @@
 			<fBlue>.15</fBlue>
 			<fAlpha>1</fAlpha>
 		</ColorVal>
-<!-- Unused
+		<!-- Unused
 		<ColorVal>
 			<Type>COLOR_GOLDENROD</Type>
 			<fRed>.85</fRed>
@@ -802,6 +801,41 @@
 			<fGreen>.59</fGreen>
 			<fBlue>.48</fBlue>
 			<fAlpha>1</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_PLAYER_ISRAEL</Type>
+			<fRed>0.25</fRed>
+			<fGreen>0.41</fGreen>
+			<fBlue>0.90</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_PLAYER_ISRAEL_TEXT</Type>
+			<fRed>0.71</fRed>
+			<fGreen>0.49</fGreen>
+			<fBlue>0.78</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_BROWNNEANDERTHAL1</Type>
+			<fRed>0.70</fRed>
+			<fGreen>0.05</fGreen>
+			<fBlue>0.10</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_BROWNNEANDERTHAL2</Type>
+			<fRed>0.95</fRed>
+			<fGreen>0.97</fGreen>
+			<fBlue>0.30</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_GREEN_LIGHT</Type>
+			<fRed>.56</fRed>
+			<fGreen>1</fGreen>
+			<fBlue>.28</fBlue>
+			<fAlpha>1.00</fAlpha>
 		</ColorVal>
 	</ColorVals>
 </Civ4ColorVals>

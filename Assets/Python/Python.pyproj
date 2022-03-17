@@ -1,0 +1,304 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>17044446-585f-4e8c-afa6-0b4b7101bbfb</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>PythonApplication1</Name>
+    <RootNamespace>PythonApplication1</RootNamespace>
+    <IsWindowsApplication>False</IsWindowsApplication>
+    <InterpreterId>Global|PythonCore|2.7</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Afforess\ANewDawnSettings.py" />
+    <Compile Include="Afforess\AutomatedSettings.py" />
+    <Compile Include="Afforess\DiplomacySettings.py" />
+    <Compile Include="BUG\AttitudeUtil.py" />
+    <Compile Include="BUG\BugConfig.py" />
+    <Compile Include="BUG\BugConfigTracker.py" />
+    <Compile Include="BUG\BugCore.py" />
+    <Compile Include="BUG\BugData.py" />
+    <Compile Include="BUG\BugEventManager.py" />
+    <Compile Include="BUG\BugFile.py" />
+    <Compile Include="BUG\BugGameUtils.py" />
+    <Compile Include="BUG\BugInit.py" />
+    <Compile Include="BUG\BugOptions.py" />
+    <Compile Include="BUG\BugOptionsScreen.py" />
+    <Compile Include="BUG\BugOptionsTab.py" />
+    <Compile Include="BUG\BugScreen.py" />
+    <Compile Include="BUG\BugTypes.py" />
+    <Compile Include="BUG\BugUtil.py" />
+    <Compile Include="BUG\CityUtil.py" />
+    <Compile Include="BUG\ColorUtil.py" />
+    <Compile Include="BUG\configobj.py" />
+    <Compile Include="BUG\DealUtil.py" />
+    <Compile Include="BUG\DiplomacyUtil.py" />
+    <Compile Include="BUG\GPUtil.py" />
+    <Compile Include="BUG\InputUtil.py" />
+    <Compile Include="BUG\RawYields.py" />
+    <Compile Include="BUG\Scoreboard.py" />
+    <Compile Include="BUG\Tabs\ANDAutomationsTab.py" />
+    <Compile Include="BUG\Tabs\ANDDiplomacyTab.py" />
+    <Compile Include="BUG\Tabs\BugACOOptionsTab.py" />
+    <Compile Include="BUG\Tabs\BugAdvisorOptionsTab.py" />
+    <Compile Include="BUG\Tabs\BugAlertsOptionsTab.py" />
+    <Compile Include="BUG\Tabs\BugAutologOptionsTab.py" />
+    <Compile Include="BUG\Tabs\BugCityScreenOptionsTab.py" />
+    <Compile Include="BUG\Tabs\BugConfigTrackerTab.py" />
+    <Compile Include="BUG\Tabs\BugCreditsOptionsTab.py" />
+    <Compile Include="BUG\Tabs\BugGeneralOptionsTab.py" />
+    <Compile Include="BUG\Tabs\BugMapOptionsTab.py" />
+    <Compile Include="BUG\Tabs\BugNJAGCOptionsTab.py" />
+    <Compile Include="BUG\Tabs\BugScoreOptionsTab.py" />
+    <Compile Include="BUG\Tabs\BugSystemOptionsTab.py" />
+    <Compile Include="BUG\Tabs\BugUnitNameOptionsTab.py" />
+    <Compile Include="BUG\Tabs\RevDCMOptionsTab.py" />
+    <Compile Include="BUG\Tabs\RoMOptionsTab.py" />
+    <Compile Include="BUG\TradeUtil.py" />
+    <Compile Include="BUG\TraitUtil.py" />
+    <Compile Include="BUG\UnitGrouper.py" />
+    <Compile Include="BUG\WidgetUtil.py" />
+    <Compile Include="Contrib\AbandonCityEventManager.py" />
+    <Compile Include="Contrib\autolog.py" />
+    <Compile Include="Contrib\autologEventManager.py" />
+    <Compile Include="Contrib\AutoSave.py" />
+    <Compile Include="Contrib\Civ4lerts.py" />
+    <Compile Include="Contrib\CvStrategyOverlay.py" />
+    <Compile Include="Contrib\DynamicCivNames.py" />
+    <Compile Include="Contrib\EventSigns.py" />
+    <Compile Include="Contrib\MoreCiv4lerts.py" />
+    <Compile Include="Contrib\ParallelMaps.py" />
+    <Compile Include="Contrib\Pedia\Index_Pedia.py" />
+    <Compile Include="Contrib\Pedia\Pedia.py" />
+    <Compile Include="Contrib\Pedia\PediaBonus.py" />
+    <Compile Include="Contrib\Pedia\PediaBuild.py" />
+    <Compile Include="Contrib\Pedia\PediaBuilding.py" />
+    <Compile Include="Contrib\Pedia\PediaCivic.py" />
+    <Compile Include="Contrib\Pedia\PediaCivilization.py" />
+    <Compile Include="Contrib\Pedia\PediaCorporation.py" />
+    <Compile Include="Contrib\Pedia\PediaEra.py" />
+    <Compile Include="Contrib\Pedia\PediaFeature.py" />
+    <Compile Include="Contrib\Pedia\PediaImprovement.py" />
+    <Compile Include="Contrib\Pedia\PediaLeader.py" />
+    <Compile Include="Contrib\Pedia\PediaProject.py" />
+    <Compile Include="Contrib\Pedia\PediaPromotion.py" />
+    <Compile Include="Contrib\Pedia\PediaTech.py" />
+    <Compile Include="Contrib\Pedia\PediaTerrain.py" />
+    <Compile Include="Contrib\Pedia\PediaTrait.py" />
+    <Compile Include="Contrib\Pedia\PediaUnit.py" />
+    <Compile Include="Contrib\PythonToolTip.py" />
+    <Compile Include="Contrib\RandomNameUtils.py" />
+    <Compile Include="Contrib\ReminderEventManager.py" />
+    <Compile Include="Contrib\RevDCM.py" />
+    <Compile Include="Contrib\RevDCMReligionControl.py" />
+    <Compile Include="Contrib\Roman.py" />
+    <Compile Include="Contrib\SdToolKit.py" />
+    <Compile Include="Contrib\Sevopedia\SevoPediaReligion.py" />
+    <Compile Include="Contrib\Sevopedia\SevoPediaRoute.py" />
+    <Compile Include="Contrib\Sevopedia\SevoPediaSpecialist.py" />
+    <Compile Include="Contrib\Sevopedia\SevoPediaUnitChart.py" />
+    <Compile Include="Contrib\StatusDump.py" />
+    <Compile Include="Contrib\StatusDumpEventManager.py" />
+    <Compile Include="Contrib\TechWindow.py" />
+    <Compile Include="Contrib\TechWindowWide.py" />
+    <Compile Include="Contrib\UnitNameEventManager.py" />
+    <Compile Include="Contrib\UnitUpgradesGraph.py" />
+    <Compile Include="Contrib\WoodlandCycle.py" />
+    <Compile Include="CvAdvisorUtils.py" />
+    <Compile Include="CvConfigParser.py" />
+    <Compile Include="CvDiplomacy.py" />
+    <Compile Include="CvEventManager.py" />
+    <Compile Include="CvGameUtils.py" />
+    <Compile Include="CvMapGeneratorUtil.py" />
+    <Compile Include="CvUtil.py" />
+    <Compile Include="DancingHoskuld\BarbarianDiplomacy.py" />
+    <Compile Include="DancingHoskuld\CaptureSlaves.py" />
+    <Compile Include="DancingHoskuld\InitMilitaryPromos.py" />
+    <Compile Include="DancingHoskuld\Partisan.py" />
+    <Compile Include="DataStorage\ScreenResolution.py" />
+    <Compile Include="DataStorage\SystemPaths.py" />
+    <Compile Include="EnhancedTechConquestUtils\CvEnhancedTechConquestEventManager.py" />
+    <Compile Include="EnhancedTechConquestUtils\EnhancedTechConquest.py" />
+    <Compile Include="EntryPoints\BUG_OptionsCB_IF.py" />
+    <Compile Include="EntryPoints\CvAppInterface.py" />
+    <Compile Include="EntryPoints\CvCultureLinkInterface.py" />
+    <Compile Include="EntryPoints\CvDiplomacyInterface.py" />
+    <Compile Include="EntryPoints\CvEventInterface.py" />
+    <Compile Include="EntryPoints\CvGameInterface.py" />
+    <Compile Include="EntryPoints\CvInfoUtilInterface.py" />
+    <Compile Include="EntryPoints\CvOptionsScreenCallbackInterface.py" />
+    <Compile Include="EntryPoints\CvOutcomeInterface.py" />
+    <Compile Include="EntryPoints\CvRandomEventInterface.py" />
+    <Compile Include="EntryPoints\CvScreensInterface.py" />
+    <Compile Include="EntryPoints\CvTranslator.py" />
+    <Compile Include="EntryPoints\CvWBInterface.py" />
+    <Compile Include="EntryPoints\InputData.py" />
+    <Compile Include="EntryPoints\PbMain.py" />
+    <Compile Include="MapScriptTools.py" />
+    <Compile Include="OOSLogger.py" />
+    <Compile Include="PitBoss\PbAdmin.py" />
+    <Compile Include="PitBoss\PbWizard.py" />
+    <Compile Include="Platyping\NaturalWonders.py" />
+    <Compile Include="Platyping\NaturalWonder_EM.py" />
+    <Compile Include="pyWB\CvWBDesc.py" />
+    <Compile Include="Revolution\Development\ChangePlayer.py" />
+    <Compile Include="Revolution\Gameready\AIAutoPlay.py" />
+    <Compile Include="Revolution\Gameready\BarbarianCiv.py" />
+    <Compile Include="Revolution\Gameready\Revolution.py" />
+    <Compile Include="Revolution\RebelTypes.py" />
+    <Compile Include="Revolution\RevBuildingsUtils.py" />
+    <Compile Include="Revolution\RevCivicsUtils.py" />
+    <Compile Include="Revolution\RevData.py" />
+    <Compile Include="Revolution\RevDefs.py" />
+    <Compile Include="Revolution\RevEvents.py" />
+    <Compile Include="Revolution\RevInstances.py" />
+    <Compile Include="Revolution\RevolutionInit.py" />
+    <Compile Include="Revolution\RevTraitsUtils.py" />
+    <Compile Include="Revolution\RevUtils.py" />
+    <Compile Include="Revolution\TextUtils.py" />
+    <Compile Include="ScreenInput.py" />
+    <Compile Include="Screens\Advisors\CvCivicsScreen.py" />
+    <Compile Include="Screens\Advisors\CvCorporationScreen.py" />
+    <Compile Include="Screens\Advisors\CvDomesticAdvisor.py" />
+    <Compile Include="Screens\Advisors\CvEspionageAdvisor.py" />
+    <Compile Include="Screens\Advisors\CvFinanceAdvisor.py" />
+    <Compile Include="Screens\Advisors\CvForeignAdvisor.py" />
+    <Compile Include="Screens\Advisors\CvMilitaryAdvisor.py" />
+    <Compile Include="Screens\Advisors\CvReligionScreen.py" />
+    <Compile Include="Screens\Advisors\CvTechChooser.py" />
+    <Compile Include="Screens\Advisors\RevolutionWatchAdvisor.py" />
+    <Compile Include="Screens\BuildListScreen.py" />
+    <Compile Include="Screens\CvDanQuayle.py" />
+    <Compile Include="Screens\CvDawnOfMan.py" />
+    <Compile Include="Screens\CvDotMapOverlayScreen.py" />
+    <Compile Include="Screens\CvEraMovieScreen.py" />
+    <Compile Include="Screens\CvGFCScreen.py" />
+    <Compile Include="Screens\CvHallOfFameScreen.py" />
+    <Compile Include="Screens\CvInfoScreen.py" />
+    <Compile Include="Screens\CvIntroMovieScreen.py" />
+    <Compile Include="Screens\CvMainInterface.py" />
+    <Compile Include="Screens\CvOptionsScreen.py" />
+    <Compile Include="Screens\CvReplayScreen.py" />
+    <Compile Include="Screens\CvScreenEnums.py" />
+    <Compile Include="Screens\CvSpaceShipScreen.py" />
+    <Compile Include="Screens\CvTopCivs.py" />
+    <Compile Include="Screens\CvUNVictoryScreen.py" />
+    <Compile Include="Screens\CvVictoryMovieScreen.py" />
+    <Compile Include="Screens\CvVictoryScreen.py" />
+    <Compile Include="Screens\CvWonderMovieScreen.py" />
+    <Compile Include="Screens\Debug\CvDebugInfoScreen.py" />
+    <Compile Include="Screens\Debug\DebugScreen.py" />
+    <Compile Include="Screens\Debug\HelperFunctions.py" />
+    <Compile Include="Screens\Debug\TestCode.py" />
+    <Compile Include="Screens\EventTriggerScreen.py" />
+    <Compile Include="Screens\ExtensionScreens\CityOptions.py" />
+    <Compile Include="Screens\Forgetful.py" />
+    <Compile Include="Screens\IconGrid.py" />
+    <Compile Include="Screens\IconGrid_BUG.py" />
+    <Compile Include="Screens\Pedia\Index_Pedia.py" />
+    <Compile Include="Screens\Pedia\Pedia.py" />
+    <Compile Include="Screens\Pedia\PediaBonus.py" />
+    <Compile Include="Screens\Pedia\PediaBuild.py" />
+    <Compile Include="Screens\Pedia\PediaBuilding.py" />
+    <Compile Include="Screens\Pedia\PediaCivic.py" />
+    <Compile Include="Screens\Pedia\PediaCivilization.py" />
+    <Compile Include="Screens\Pedia\PediaCorporation.py" />
+    <Compile Include="Screens\Pedia\PediaEra.py" />
+    <Compile Include="Screens\Pedia\PediaFeature.py" />
+    <Compile Include="Screens\Pedia\PediaImprovement.py" />
+    <Compile Include="Screens\Pedia\PediaLeader.py" />
+    <Compile Include="Screens\Pedia\PediaProject.py" />
+    <Compile Include="Screens\Pedia\PediaPromotion.py" />
+    <Compile Include="Screens\Pedia\PediaReligion.py" />
+    <Compile Include="Screens\Pedia\PediaTech.py" />
+    <Compile Include="Screens\Pedia\PediaTerrain.py" />
+    <Compile Include="Screens\Pedia\PediaTrait.py" />
+    <Compile Include="Screens\Pedia\PediaUnit.py" />
+    <Compile Include="Screens\Pedia\PediaUnitCombat.py" />
+    <Compile Include="Screens\Sevopedia\SevoPediaRoute.py" />
+    <Compile Include="Screens\Sevopedia\SevoPediaSpecialist.py" />
+    <Compile Include="Screens\SimpleScreens\CvAdvancedStartScreen.py" />
+    <Compile Include="Screens\SimpleScreens\GameFontScreen.py" />
+    <Compile Include="Screens\SimpleScreens\TimeKeeper.py" />
+    <Compile Include="Screens\Worldbuilder\WBBuildingScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBCityDataScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBCityEditScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBCorporationScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBDiplomacyScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBEventScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBGameDataScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBInfoScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBPlayerScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBPlayerUnits.py" />
+    <Compile Include="Screens\Worldbuilder\WBPlotScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBProjectScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBPromotionScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBReligionScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBTeamScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBTechScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBTradeScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WBUnitScreen.py" />
+    <Compile Include="Screens\Worldbuilder\WorldBuilder.py" />
+    <Compile Include="Smeagolheart\StarSigns.py" />
+    <Compile Include="Sparth\GreatPersonBornDisplay.py" />
+    <Compile Include="Utilities\DebugUtils.py" />
+    <Compile Include="Utilities\HandleInputUtil.py" />
+    <Compile Include="Utilities\StackBarUtil.py" />
+    <Compile Include="Utilities\TextUtil.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Afforess\" />
+    <Folder Include="BUG\" />
+    <Folder Include="BUG\Tabs\" />
+    <Folder Include="Contrib\" />
+    <Folder Include="Contrib\Pedia\" />
+    <Folder Include="Contrib\Sevopedia\" />
+    <Folder Include="DancingHoskuld\" />
+    <Folder Include="DataStorage\" />
+    <Folder Include="EnhancedTechConquestUtils\" />
+    <Folder Include="EntryPoints\" />
+    <Folder Include="PitBoss\" />
+    <Folder Include="Platyping\" />
+    <Folder Include="pyWB\" />
+    <Folder Include="Revolution\" />
+    <Folder Include="Revolution\Development\" />
+    <Folder Include="Revolution\Gameready\" />
+    <Folder Include="Screens\" />
+    <Folder Include="Screens\Advisors\" />
+    <Folder Include="Screens\Debug\" />
+    <Folder Include="Screens\ExtensionScreens\" />
+    <Folder Include="Screens\Pedia\" />
+    <Folder Include="Screens\Sevopedia\" />
+    <Folder Include="Screens\SimpleScreens\" />
+    <Folder Include="Screens\Worldbuilder\" />
+    <Folder Include="Smeagolheart\" />
+    <Folder Include="Sparth\" />
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|2.7" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

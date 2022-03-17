@@ -9,9 +9,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvGameObject.h"
 #include "CvGlobals.h"
-#include "CvOutcomeList.h"
 #include "CvOutcomeMission.h"
-#include "CvProperties.h"
 #include "CvPlayerAI.h"
 #include "CvUnit.h"
 #include "CvXMLLoadUtility.h"
@@ -36,7 +34,7 @@ CvOutcomeMission::~CvOutcomeMission()
 	SAFE_DELETE(m_pUnitCondition);
 }
 
-//IntExpr* CvOutcomeMission::getCost()
+//const IntExpr* CvOutcomeMission::getCost() const
 //{
 //	return m_iCost;
 //}
@@ -108,7 +106,7 @@ bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 			}
 			else
 			{
-				pUnit->getGameObject()->foreach(m_ePayerType, bst::bind(callSetPayer, _1, &pPayer));
+				pUnit->getGameObject()->foreach(m_ePayerType, bind(callSetPayer, _1, &pPayer));
 			}
 
 			if (!pPayer)
@@ -126,7 +124,7 @@ bool CvOutcomeMission::isPossible(const CvUnit* pUnit, bool bTestVisible) const
 	return true;
 }
 
-void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUnit)
+void CvOutcomeMission::buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit* pUnit) const
 {
 	if (!m_PropertyCost.isEmpty())
 	{
@@ -134,10 +132,10 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 		szBuffer.append(L"Cost: ");
 		m_PropertyCost.buildCompactChangesString(szBuffer);
 	}
-	
+
 	if (m_iCost)
 	{
-		if (m_iCost->evaluate(pUnit->getGameObject())!=0)
+		if (m_iCost->evaluate(pUnit->getGameObject()) != 0)
 		{	/*GC.getGame().getGameObject()->adaptValueToGame(m_iID, m_pExpr->evaluate(GC.getGame().getGameObject())*/
 			CvWString szTempBuffer;
 
@@ -174,7 +172,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 	m_OutcomeList.buildDisplayString(szBuffer, *pUnit);
 }
 
-void CvOutcomeMission::execute(CvUnit* pUnit)
+void CvOutcomeMission::execute(CvUnit* pUnit) const
 {
 	if (m_iCost)
 	{
@@ -192,7 +190,7 @@ void CvOutcomeMission::execute(CvUnit* pUnit)
 		}
 		else
 		{
-			pUnit->getGameObject()->foreach(m_ePayerType, bst::bind(callSetPayer, _1, &pPayer));
+			pUnit->getGameObject()->foreach(m_ePayerType, bind(callSetPayer, _1, &pPayer));
 		}
 
 		if (pPayer)
@@ -267,7 +265,7 @@ void CvOutcomeMission::copyNonDefaults(CvOutcomeMission* pOutcomeMission)
 		m_pUnitCondition = pOutcomeMission->m_pUnitCondition;
 		pOutcomeMission->m_pUnitCondition = NULL;
 	}
-	
+
 	if (!m_iCost)
 	{
 		m_iCost = pOutcomeMission->m_iCost;
@@ -275,7 +273,7 @@ void CvOutcomeMission::copyNonDefaults(CvOutcomeMission* pOutcomeMission)
 	}
 }
 
-void CvOutcomeMission::getCheckSum(unsigned int &iSum) const
+void CvOutcomeMission::getCheckSum(uint32_t& iSum) const
 {
 	CheckSum(iSum, m_eMission);
 	CheckSum(iSum, m_bKill);

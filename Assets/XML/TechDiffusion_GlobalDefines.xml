@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- -->
 <!-- Tech Diffusion: Plain BTS includes an adjustment to research rate based on how many civs you have met which already know a tech.
-     Tech Diffusion modifies this to take into account relationships, so tech diffuses fastest through open borders.
-     In addition, it enables a kind of tech welfare to keep the civs who are far behind technologically relevant. -->
+	Tech Diffusion modifies this to take into account relationships, so tech diffuses fastest through open borders.
+	In addition, it enables a kind of tech welfare to keep the civs who are far behind technologically relevant. -->
 <!-- by jdog5000 -->
-<!-- -->
 <Civ4Defines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Schema\Caveman2Cosmos.xsd">
 	<Define>
 		<DefineName>TECH_DIFFUSION_ENABLE</DefineName>
@@ -21,7 +19,7 @@
 		<iDefineIntVal>90</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Tech Diffusion: Power of tech welfare assitance.  BBAI default: 30, for plain BTS: 0 -->
+		<!-- Tech Diffusion: Power of tech welfare assitance. BBAI default: 30, for plain BTS: 0 -->
 		<DefineName>TECH_DIFFUSION_WELFARE_MODIFIER</DefineName>
 		<iDefineIntVal>50</iDefineIntVal>
 	</Define>

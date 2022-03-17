@@ -1065,10 +1065,6 @@
 			<Path>Art/Interface/Globeview/ReligionLayer.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
-			<Type>INTERFACE_GLOBELAYER_PLOTDEBUG</Type>
-			<Path>Art/Interface/Globeview/PlotDebugLayer.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
 			<Type>INTERFACE_GLOBELAYER_STRATEGY</Type>
 			<Path>Art/Interface/Globeview/StrategyLayer.dds</Path>
 		</InterfaceArtInfo>
@@ -1480,15 +1476,13 @@
 			<Path>Art/BUG/Projects_On.dds</Path>
 		</InterfaceArtInfo>
 		<!-- BUG - Wonders Tab - end -->
-		<!-- BUG - Main Interface - BUG Options Screen - Start -->
 		<InterfaceArtInfo>
 			<Type>BUG_OPTIONS_SCREEN_BUTTON</Type>
 			<Path>Art/BUG/BUGMantis.dds</Path>
 		</InterfaceArtInfo>
-		<!-- BUG - Main Interface - BUG Options Screen - end -->
 		<InterfaceArtInfo>
-			<Type>MAD_NUKES_MANAGER_BACKGROUND</Type>
-			<Path>Art/Interface/Screens/MADNukesManagerBackground.dds</Path>
+			<Type>INTERFACE_DEBUG_SCREEN_BUTTON</Type>
+			<Path>Art/Interface/Buttons/General/Gear.dds</Path>
 		</InterfaceArtInfo>
 		<InterfaceArtInfo>
 			<Type>QUESTION_MARK</Type>
@@ -1538,30 +1532,6 @@
 			<Type>ART_DEF_BACKGROUND_DOCTOR</Type>
 			<Path>Art/interface/great_people/bg_doctor.dds</Path>
 		</InterfaceArtInfo>
-		<!--InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_DAVE_TOSCHI</Type>
-			<Path>Art/interface/great_people/Dave_Toschi.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_ISIDOR_EINSTEIN</Type>
-			<Path>Art/interface/great_people/Isidor_Einstein.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_JOHNNY_BRODERICK</Type>
-			<Path>Art/interface/great_people/Johnny_Broderick.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_MOE_W_SMITH</Type>
-			<Path>Art/interface/great_people/Moe_W_Smith.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_WILLIAM_J_BURNS</Type>
-			<Path>Art/interface/great_people/William_J_Burns.dds</Path>
-		</InterfaceArtInfo>
-		<InterfaceArtInfo>
-			<Type>ART_DEF_GP_DETECTIVE_WILLIAM_J_FLYNN</Type>
-			<Path>Art/interface/great_people/William_J_Flynn.dds</Path>
-		</InterfaceArtInfo-->
 		<InterfaceArtInfo>
 			<Type>ART_DEF_GREAT_PERSON_ABBA</Type>
 			<Path>Art/interface/great_people/abba.dds</Path>

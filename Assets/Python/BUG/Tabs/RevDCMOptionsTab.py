@@ -18,18 +18,17 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 		GC = CyGlobalContext()
 		GAME = GC.getGame()
 		TRNSLTR = CyTranslator()
-		bDebug = GAME.isDebugMode()
-		bCheat = GAME.cheatCodesEnabled()
 
-		tab = self.createTab(screen)
+		self.createTab(screen)
 		panel = self.createMainPanel(screen)
 		column = self.addOneColumnLayout(screen, panel)
 		left, right = self.addTwoColumnLayout(screen, column, "Options", False)
 
-		if not GAME.isGameMultiPlayer():
+		if not GAME.isNetworkMultiPlayer():
 			self.addLabel(screen, left, "RevDCM__RevDCMInterface", TRNSLTR.getText("TXT_KEY_REVDCMTAB_INTERFACE_OPTIONS", ()))
 			col1, col2 = self.addMultiColumnLayout(screen, right, 2, "interfaceOptions")
 			self.addCheckbox(screen, col1, "RevDCM__RevDCMHiddenAttitude")
+			self.addCheckbox(screen, col2, "RevDCM__DYNAMIC_CIV_NAMES")
 
 			screen.attachHSeparator(left, left + "SepInterface1")
 			screen.attachHSeparator(right, right + "SepInterface2")
@@ -39,9 +38,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 			col1, col2 = self.addMultiColumnLayout(screen, right, 2, "DCM_Siege_Events")
 			self.addCheckbox(screen, col1, "RevDCM__DCM_RANGE_BOMBARD")
 			self.addCheckbox(screen, col2, "RevDCM__DCM_OPP_FIRE")
-			self.addLabel(screen, left, "RevDCM__RevDCM_general", TRNSLTR.getText("TXT_KEY_REVDCMTAB_BATTLE_OPTIONS", ()))
-			col1, col2 = self.addMultiColumnLayout(screen, right, 2, "DCM_Events")
-			self.addCheckbox(screen, col2, "RevDCM__DCM_ATTACK_SUPPORT")
+
 			self.addLabel(screen, left, "RevDCM__RevDCM_air", TRNSLTR.getText("TXT_KEY_REVDCMTAB_AIRFORCE_OPTIONS", ()))
 			col1, col2, col3 = self.addMultiColumnLayout(screen, right, 3, "DCM_Air_Events")
 			self.addCheckbox(screen, col1, "RevDCM__DCM_ACTIVE_DEFENSE")
@@ -91,14 +88,15 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 
 			#Config
-			if bDebug or bCheat:
+			import DebugUtils
+			bDebug = DebugUtils.isAnyDebugMode()
+			if bDebug:
 				self.addLabel(screen, left, "Revolution__RevConfig", "RevConfig:")
 				col1, col2 = self.addMultiColumnLayout(screen, right, 2, "Misc Settings")
 				self.addCheckbox(screen, col1, "Revolution__ActivePopup")
 
 				screen.attachHSeparator(left, left + "SepRevConfig1")
 				screen.attachHSeparator(right, right + "SepRevConfig2")
-
 
 			#Barbarian Civ
 			#Standard Options
@@ -131,7 +129,7 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 				screen.attachHSeparator(right, right + "SepDebugBarbCiv2")
 
 			#Debug Options
-			if bDebug or bCheat:
+			if bDebug:
 
 				#Revolutions
 				if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
@@ -254,7 +252,3 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 		else:
 			self.addLabel(screen, left, "RevDCM_network_game", TRNSLTR.getText("TXT_KEY_MULTIPLAYER_GAME_DETECTED", ()))
 			self.addLabel(screen, right, "RevDCM_network_game1", TRNSLTR.getText("TXT_KEY_MULTIPLAYER_GAME_DETECTED_DESCRIPTION", ()))
-
-		#On screen information
-		self.addLabel(screen, left, "RevDCM_info", TRNSLTR.getText("TXT_KEY_REVDCM_NOTES", ()))
-		self.addLabel(screen, right, "RevolutionDCMHelp", TRNSLTR.getText("TXT_KEY_REVDCM_TAB_HELP", ()))

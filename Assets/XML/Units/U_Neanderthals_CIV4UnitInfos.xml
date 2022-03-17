@@ -26,7 +26,6 @@
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_NEANDERTHAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NEANDERTHAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -52,9 +51,10 @@
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
+				<UnitType>UNIT_NEANDERTHAL_WOODEN_SPEARMAN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>15</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>19</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -89,7 +89,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR</Description>
 			<Civilopedia>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NEANDERTHAL_WARRIOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -127,9 +126,10 @@
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
-				<UnitType>UNIT_SPEARMAN</UnitType>
+				<UnitType>UNIT_NEANDERTHAL_STONE_AGE_AXEMAN</UnitType>
+				<UnitType>UNIT_NEANDERTHAL_STONE_MACEMAN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iCost>33</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -164,7 +164,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_BRUTE</Description>
 			<Civilopedia>TXT_KEY_UNIT_BRUTE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BRUTE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -213,9 +212,9 @@
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
-				<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
+				<UnitType>UNIT_NEANDERTHAL</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iCost>5</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -260,7 +259,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_THROWER</Description>
 			<Civilopedia>TXT_KEY_UNIT_STONE_THROWER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_THROWER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_THROWING</Combat>
 			<SubCombatTypes>
@@ -314,8 +312,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_SLINGER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>8</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>6</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>2</iCombat>
@@ -371,7 +369,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_SLINGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SLINGER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SLINGER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Domain>DOMAIN_LAND</Domain>
 			<Combat>UNITCOMBAT_THROWING</Combat>
@@ -420,8 +417,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_ARCHER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>46</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>37</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -478,7 +475,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WATCHER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WATCHER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WATCHER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Domain>DOMAIN_LAND</Domain>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
@@ -548,12 +544,19 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOOKOUT_POST</BuildingType>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
+				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
+				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
+				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
+				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
+				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_ENFORCER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>36</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>25</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -607,7 +610,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_ENFORCER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ENFORCERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ENFORCERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Domain>DOMAIN_LAND</Domain>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
@@ -679,12 +681,18 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
 				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
+				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
+				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
+				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
+				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
+				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
+				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_TOWN_WATCHMEN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>80</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>62</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -738,7 +746,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WANDERER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WANDERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WANDERER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
@@ -792,8 +799,8 @@
 				<UnitType>UNIT_NEANDERTHAL_SCOUT</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_CHASER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_PERSISTENCE_HUNTING</ForceObsoleteTech>
-			<iCost>16</iCost>
+			<ObsoleteTech>TECH_PERSISTENCE_HUNTING</ObsoleteTech>
+			<iCost>12</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>2</iCombat>
@@ -830,10 +837,10 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_GATHERER</Description>
 			<Civilopedia>TXT_KEY_UNIT_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GATHERER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
@@ -860,95 +867,32 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_WORKER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<Builds>
 				<!-- C2C_ERA_PREHISTORIC -->
-				<Build>
-					<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WOOD_GATHERER_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ABATIS_THORN_HEDGE_KILL</BuildType>
+				<BuildType>BUILD_BURN_VEGETATION</BuildType>
+				<BuildType>BUILD_COTTAGE_KILL</BuildType>
+				<BuildType>BUILD_DESERT_CAMP_KILL</BuildType>
+				<BuildType>BUILD_FORTIFIED_CAVE_KILL</BuildType>
+				<BuildType>BUILD_FRUIT_GATHERING_CAMP_KILL</BuildType>
+				<BuildType>BUILD_GRAPE_GATHERING_CAMP_KILL</BuildType>
+				<BuildType>BUILD_JUNGLE_CAMP_KILL</BuildType>
+				<BuildType>BUILD_MUSHROOM_GATHERER_KILL</BuildType>
+				<BuildType>BUILD_NOMADIC_HERD_KILL</BuildType>
+				<BuildType>BUILD_PLANT_GATHERING_CAMP_KILL</BuildType>
+				<BuildType>BUILD_SALT_GATHERER_KILL</BuildType>
+				<BuildType>BUILD_SCAVENGING_CAMP_KILL</BuildType>
+				<BuildType>BUILD_SEED_CAMP_KILL</BuildType>
+				<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
+				<BuildType>BUILD_TAR_GATHERER_KILL</BuildType>
+				<BuildType>BUILD_TRAIL</BuildType>
+				<BuildType>BUILD_WETLANDS_CAMP_KILL</BuildType>
+				<BuildType>BUILD_WOODEN_PALISADE_KILL</BuildType>
+				<BuildType>BUILD_WOODEN_WATCHTOWER_KILL</BuildType>
+				<BuildType>BUILD_WOOD_GATHERER_KILL</BuildType>
 			</Builds>
-			<iCost>24</iCost>
+			<iCost>18</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iWorkRate>125</iWorkRate>
@@ -979,7 +923,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WISE_WOMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_WISE_WOMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WISE_WOMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
@@ -1018,8 +961,11 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_WILD_HERBS</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_WILD_HERBS</BuildingType>
+				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_HEALER</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_SHEPHERD</UnitType>
@@ -1027,8 +973,8 @@
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_HEALER</UnitType>
 			</SupersedingUnits>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>36</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>25</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iXPValueDefense>2</iXPValueDefense>
 			<iBaseUpkeep>2</iBaseUpkeep>
@@ -1091,7 +1037,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_HEALER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HEALER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HEALER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
@@ -1130,13 +1075,19 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_HEALERHUT</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HEALERHUT</BuildingType>
+				<BuildingType>BUILDING_DOCTOR</BuildingType>
+				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MEDICINE_MAN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>90</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>62</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -1199,7 +1150,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_SHEPHERD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SHEPHERD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SHEPHERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_HEALTH_CARE</Combat>
 			<SubCombatTypes>
@@ -1258,8 +1208,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_VET</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>129</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>107</iCost>
 			<iHurryCostModifier>25</iHurryCostModifier>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -1321,7 +1271,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRAINED_DOG</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARDOG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TRAINEDDOG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -1376,12 +1325,15 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
+				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARDOG</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iCost>92</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -1425,7 +1377,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRIBAL_GUARDIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRIBAL_GUARDIAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TRIBAL_GUARDIAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Domain>DOMAIN_IMMOBILE</Domain>
 			<Combat>UNITCOMBAT_LAW_ENFORCEMENT</Combat>
@@ -1460,6 +1411,7 @@
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
+			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_ENFORCERS</UnitType>
 			</UnitUpgrades>
@@ -1498,7 +1450,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_KAYAK</Description>
 			<Civilopedia>TXT_KEY_UNIT_KAYAK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KAYAK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
@@ -1560,8 +1511,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_OUTRIGGER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>135</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>92</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -1618,7 +1569,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WAR_CANOE</Description>
 			<Civilopedia>TXT_KEY_UNIT_WAR_CANOE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WAR_CANOE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
@@ -1672,8 +1622,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_WARGALLEY</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>154</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>107</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -1727,7 +1677,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_CANOE</Description>
 			<Civilopedia>TXT_KEY_UNIT_CANOE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CANOE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
@@ -1751,6 +1700,10 @@
 			<Domain>DOMAIN_SEA</Domain>
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
 				<UnitAI>
 					<UnitAIType>UNITAI_ASSAULT_SEA</UnitAIType>
 					<bUnitAI>1</bUnitAI>
@@ -1783,8 +1736,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_GALLEY</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>134</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>92</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -1840,7 +1793,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_RAFT</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAFT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RAFT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
@@ -1917,8 +1869,8 @@
 				<UnitType>UNIT_NEANDERTHAL_CANOE</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_WAR_CANOE</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>100</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>70</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -1962,10 +1914,10 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WORKBOAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKBOAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
@@ -2014,42 +1966,23 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_WORKBOAT_CLASSIC</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iCost>96</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
 			<iWorkRate>200</iWorkRate>
 			<Builds>
 				<!-- BUILDS REQUIRING: C2C_ERA_PREHISTORIC -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_WHALING_BOATS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_WHALING_BOATS</BuildType>
 				<!-- Obsolete in: C2C_ERA_FUTURE -->
-				<Build>
-					<BuildType>BUILD_FISHING_BOATS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FISHING_CAMP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_FISHING_BOATS</BuildType>
+				<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 				<!-- BUILDS REQUIRING: C2C_ERA_ANCIENT -->
 				<!-- Obsolete in: C2C_ERA_MEDIEVAL -->
-				<Build>
-					<BuildType>BUILD_BEACON_CORAL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BEACON_REEF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_BEACON_CORAL</BuildType>
+				<BuildType>BUILD_BEACON_REEF</BuildType>
+				<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
 			</Builds>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
@@ -2098,7 +2031,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_LOG_RAM</Description>
 			<Civilopedia>TXT_KEY_UNIT_LOG_RAM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LOG_RAM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_SIEGE</Combat>
 			<SubCombatTypes>
@@ -2146,13 +2078,16 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
+				<BuildingType>BUILDING_AGROFOREST</BuildingType>
+			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_BATTERING_RAM</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>165</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>107</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>3</iCombat>
@@ -2204,7 +2139,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_ELEPHANT_RIDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_ELEPHANT_RIDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ELEPHANT_RIDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
@@ -2267,8 +2201,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_WAR_ELEPHANT</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<iCost>190</iCost>
+			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
+			<iCost>122</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>9</iCombat>
@@ -2328,7 +2262,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_SPEARMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_SPEARMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OBSIDIAN_SPEARMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -2378,8 +2311,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_SPEARMAN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>104</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>92</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -2430,7 +2363,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_STONE_SPEARMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_SPEARMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -2480,8 +2412,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_SPEARMAN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>78</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>70</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -2536,7 +2468,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_WOODEN_SPEARMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_WOODEN_SPEARMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WOODEN_SPEARMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -2589,8 +2520,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>70</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>62</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>4</iCombat>
@@ -2636,7 +2567,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_SWORDSMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_SWORDSMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OBSIDIAN_SWORDSMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -2691,8 +2621,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_LIGHT_SWORDSMAN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>120</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>92</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>7</iCombat>
@@ -2736,7 +2666,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_AXEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_AXEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OBSIDIAN_AXEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -2791,8 +2720,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_AXEMAN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>110</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>92</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -2842,7 +2771,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_AGE_AXEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_STONE_AXEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_AXEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -2896,8 +2824,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_AXEMAN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>84</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>70</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -2951,7 +2879,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_OBSIDIAN_MACEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_OBSIDIAN_MACEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OBSIDIAN_MACEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -3002,8 +2929,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_EARLY_MACEMAN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>110</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>92</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>6</iCombat>
@@ -3053,7 +2980,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_MACEMAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_STONE_MACEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_MACEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -3108,8 +3034,8 @@
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_MACEMAN</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_OBSIDIAN_SWORDSMAN</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>75</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>62</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>5</iCombat>
@@ -3164,7 +3090,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_HUNTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HUNTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HUNTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -3232,8 +3157,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_RANGER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>125</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>92</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>5</iCombat>
@@ -3270,7 +3195,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRACKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HUNTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HUNTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -3322,8 +3246,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_HUNTER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
-			<iCost>77</iCost>
+			<ObsoleteTech>TECH_HUNTING</ObsoleteTech>
+			<iCost>56</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>4</iCombat>
@@ -3370,7 +3294,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_CHASER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHASER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHASER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
 			<SubCombatTypes>
@@ -3415,8 +3338,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_TRACKER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
-			<iCost>43</iCost>
+			<ObsoleteTech>TECH_TRACKING</ObsoleteTech>
+			<iCost>31</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>2</iCombat>
@@ -3453,7 +3376,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_SCOUT</Description>
 			<Civilopedia>TXT_KEY_UNIT_SCOUT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SCOUT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
@@ -3514,8 +3436,8 @@
 			<UnitUpgrades>
 				<UnitType>UNIT_GUIDE</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
-			<iCost>30</iCost>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iCost>25</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
 			<iCombat>4</iCombat>
@@ -3544,7 +3466,7 @@
 			<Capture>UNIT_CAPTIVE_NEANDERTHAL</Capture>
 			<Combat>UNITCOMBAT_CAPTIVE</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_NEANDERTHAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3556,116 +3478,19 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
+			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
 			<Description>TXT_KEY_UNIT_CAPTIVE_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAPTIVE_MILITARY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CAPTIVE_MILITARY_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_CAPTIVE_MILITARY_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<Builds>
-				<Build>
-					<BuildType>BUILD_TRAIL_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PATH_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FARM_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MINE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_QUARRY_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PASTURE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_CAMP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HUNTING_PRESERVE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COTTAGE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HAMLET_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VILLAGE_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TOWN_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUBURBS_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_VEGETATION_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DRAIN_SWAMP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORMATION_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BURN_VEGETATION_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JUNGLE_CAMP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUMBERJACK_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_FRUIT_PICKING_CAMP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PLANT_PICKING_CAMP_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_THATCH_CUTTER_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PEAT_CUTTER_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MUSHROOM_GATHERER_SLAVE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-			</Builds>
 			<Buildings>
 				<BuildingType>BUILDING_WV_SLAVERY</BuildingType>
 				<BuildingType>BUILDING_SLAVE_MARKET</BuildingType>
@@ -3683,8 +3508,6 @@
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<bNoRevealMap>1</bNoRevealMap>
-			<iWorkRate>350</iWorkRate>
 			<iBaseHurry>20</iBaseHurry>
 			<iHurryMultiplier>2</iHurryMultiplier>
 			<iAsset>1</iAsset>
@@ -3886,9 +3709,51 @@
 								</iYield>
 							</Yields>
 						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT1</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>4</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
+						<Outcome>
+							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST_REPLACEMENT2</OutcomeType>
+							<iChance>100</iChance>
+							<PlotCondition>
+								<Is>TAG_OWNED</Is>
+							</PlotCondition>
+							<Yields>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iYield>
+								<iYield>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>4</Constant>
+									</Adapt>
+								</iYield>
+							</Yields>
+						</Outcome>
 					</ActionOutcomes>
 				</Action>
 			</Actions>
 		</UnitInfo>
-    </UnitInfos>
+	</UnitInfos>
 </Civ4UnitInfos>

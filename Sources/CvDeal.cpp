@@ -2,6 +2,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvBonusInfo.h"
 #include "CvDeal.h"
 #include "CvEventReporter.h"
 #include "CvGameAI.h"
@@ -1165,7 +1166,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 		}
 		case TRADE_FREE_TRADE_ZONE:
 		{
-			if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY) && GC.getGame().isOption(GAMEOPTION_ADVANCED_ECONOMY))
+			if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 			{
 				if (trade.m_iData == 0)
 				{
@@ -1214,7 +1215,7 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 		}
 		default:
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 	}
@@ -1360,7 +1361,7 @@ void CvDeal::endTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eToP
 		}
 		default:
 		{
-			FAssert(false);
+			FErrorMsg("error");
 			break;
 		}
 	}
@@ -1394,21 +1395,19 @@ void CvDeal::startTeamTrade(TradeableItems eItem, TeamTypes eFromTeam, TeamTypes
 
 void CvDeal::endTeamTrade(TradeableItems eItem, TeamTypes eFromTeam, TeamTypes eToTeam)
 {
-	CvDeal* pLoopDeal;
-	int iLoop;
 	CLLNode<TradeData>* pNode;
 
-	for (pLoopDeal = GC.getGame().firstDeal(&iLoop); pLoopDeal != NULL; pLoopDeal = GC.getGame().nextDeal(&iLoop))
+	foreach_(CvDeal& kLoopDeal, GC.getGame().deals())
 	{
-		if (pLoopDeal != this)
+		if (&kLoopDeal != this)
 		{
 			bool bValid = true;
 
-			if (GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == eFromTeam
-			&&  GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == eToTeam
-			&& pLoopDeal->getFirstTrades())
+			if (GET_PLAYER(kLoopDeal.getFirstPlayer()).getTeam() == eFromTeam
+			&&  GET_PLAYER(kLoopDeal.getSecondPlayer()).getTeam() == eToTeam
+			&& kLoopDeal.getFirstTrades())
 			{
-				for (pNode = pLoopDeal->getFirstTrades()->head(); pNode; pNode = pLoopDeal->getFirstTrades()->next(pNode))
+				for (pNode = kLoopDeal.getFirstTrades()->head(); pNode; pNode = kLoopDeal.getFirstTrades()->next(pNode))
 				{
 					if (pNode->m_data.m_eItemType == eItem)
 					{
@@ -1418,11 +1417,11 @@ void CvDeal::endTeamTrade(TradeableItems eItem, TeamTypes eFromTeam, TeamTypes e
 				}
 			}
 			if (bValid
-			&& GET_PLAYER(pLoopDeal->getFirstPlayer()).getTeam() == eToTeam
-			&& GET_PLAYER(pLoopDeal->getSecondPlayer()).getTeam() == eFromTeam
-			&& pLoopDeal->getSecondTrades())
+			&& GET_PLAYER(kLoopDeal.getFirstPlayer()).getTeam() == eToTeam
+			&& GET_PLAYER(kLoopDeal.getSecondPlayer()).getTeam() == eFromTeam
+			&& kLoopDeal.getSecondTrades())
 			{
-				for (pNode = pLoopDeal->getSecondTrades()->head(); pNode; pNode = pLoopDeal->getSecondTrades()->next(pNode))
+				for (pNode = kLoopDeal.getSecondTrades()->head(); pNode; pNode = kLoopDeal.getSecondTrades()->next(pNode))
 				{
 					if (pNode->m_data.m_eItemType == eItem)
 					{
@@ -1433,7 +1432,7 @@ void CvDeal::endTeamTrade(TradeableItems eItem, TeamTypes eFromTeam, TeamTypes e
 			}
 			if (!bValid)
 			{
-				pLoopDeal->kill(false);
+				kLoopDeal.kill(false);
 			}
 		}
 	}
@@ -1446,7 +1445,7 @@ bool CvDeal::isCancelable(PlayerTypes eByPlayer, CvWString* pszReason)
 		return false;
 	}
 
-	int iTurns = turnsToCancel(eByPlayer);
+	const int iTurns = turnsToCancel();
 	if (pszReason)
 	{
 		if (iTurns > 0)
@@ -1458,7 +1457,7 @@ bool CvDeal::isCancelable(PlayerTypes eByPlayer, CvWString* pszReason)
 	return (iTurns <= 0);
 }
 
-int CvDeal::turnsToCancel(PlayerTypes eByPlayer)
+int CvDeal::turnsToCancel() const
 {
 	return (getInitialGameTurn() + getTreatyLength() - GC.getGame().getGameTurn());
 }
@@ -1598,7 +1597,7 @@ bool CvDeal::isSingleOption(TradeableItems eItem)
 }
 
 
-bool CvDeal::isEmbassy()
+bool CvDeal::isEmbassy() const
 {
 	CLLNode<TradeData>* pNode;
 

@@ -15,6 +15,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getOrderQueueLength", &CyCity::getOrderQueueLength, "void ()")
 		.def("getOrderFromQueue", &CyCity::getOrderFromQueue, python::return_value_policy<python::return_by_value>(), "OrderData* (int iIndex)")  // only use local
 
+		.def("AI_isEmphasizeSpecialist", &CyCity::AI_isEmphasizeSpecialist, "bool (int /*SpecialistTypes*/ eIndex)")
 		.def("AI_isEmphasize", &CyCity::AI_isEmphasize, "bool (int iEmphasizeType)")
 		.def("AI_countBestBuilds", &CyCity::AI_countBestBuilds, "int (CyArea* pArea)")
 		.def("AI_cityValue", &CyCity::AI_cityValue, "int ()")
@@ -33,7 +34,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 
 		.def("getLiberationPlayer", &CyCity::getLiberationPlayer, "int ()")
 		//.def("liberate", &CyCity::liberate, "void ()")
-		
+
 // BUG - Fractional Trade Routes - start
 #ifdef _MOD_FRACTRADE
 		.def("calculateTradeProfitTimes100", &CyCity::calculateTradeProfitTimes100, "int (CyCity) - returns the unrounded trade profit created by CyCity")
@@ -74,7 +75,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getName", &CyCity::getName, "string () - city name")
 		.def("getNameForm", &CyCity::getNameForm, "string () - city name")
 		.def("getNameKey", &CyCity::getNameKey, "string () - city name")
-		.def("setName", &CyCity::setName, "void (TCHAR szNewValue, bool bFound) - sets the name to szNewValue")
+		.def("setName", &CyCity::setName, "void (const char* szNewValue, bool bFound) - sets the name to szNewValue")
 		.def("isNoBonus", &CyCity::isNoBonus, "bool (int eIndex)")
 		.def("changeNoBonusCount", &CyCity::changeNoBonusCount, "void (int eIndex, int iChange)")
 		.def("getFreeBonus", &CyCity::getFreeBonus, "int (int eIndex)")
@@ -136,6 +137,8 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("setRevIndexAverage", &CyCity::setRevIndexAverage, "void (int iNewValue)" )
 		.def("updateRevIndexAverage", &CyCity::updateRevIndexAverage, "void ( )" )
 
+		.def("getRevIndexDistanceMod", &CyCity::getRevIndexDistanceMod, "int ()" )
+
 		.def("getRevolutionCounter", &CyCity::getRevolutionCounter, "int ()")
 		.def("setRevolutionCounter", &CyCity::setRevolutionCounter, "void ( int iNewValue )")
 		.def("changeRevolutionCounter", &CyCity::changeRevolutionCounter, "void ( int iChange )" )
@@ -189,12 +192,14 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("setWeLoveTheKingDay", &CyCity::setWeLoveTheKingDay, "void (bool bWeLoveTheKingDay)")
 		.def("calculateCorporateTaxes", &CyCity::calculateCorporateTaxes, "int ()")
 		.def("getBonusCommerceRateModifier", &CyCity::getBonusCommerceRateModifier, "int (int /*CommerceTypes*/)")
-		.def("changePowerCount", &CyCity::changePowerCount, "void (int iChange, bool bDirty)")
+		.def("changePowerCount", &CyCity::changePowerCount, "void (int iChange)")
 
 		.def("changeEventAnger", &CyCity::changeEventAnger, "void (int iChange)")
 		.def("getNumPopulationEmployed", &CyCity::getNumPopulationEmployed, "int ()")
 
 		.def("getBonusCommercePercentChanges", &CyCity::getBonusCommercePercentChanges, "int (eCommerce, eBuilding)")
+		.def("getBaseYieldRateFromBuilding100", &CyCity::getBaseYieldRateFromBuilding100, "int (iYield, iBuilding)")
+
 		.def("isAutomatedCanBuild", &CyCity::isAutomatedCanBuild, "bool ()")
 		.def("setAutomatedCanBuild", &CyCity::setAutomatedCanBuild, "void ()")
 
