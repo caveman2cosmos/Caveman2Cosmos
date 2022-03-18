@@ -82,19 +82,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SACRIFICE_CAPTIVE</Tag>
-		<English>Sacrifice a captive for Culture, Happiness and maybe a small golden age.</English>
-		<French>Sacrifier un prisonnier pour de la culture, du Bonheur</French>
-		<Italian>Sacrifica un prigioniero per ottenere cultura, felicità e una piccola età dell'oro.</Italian>
-		<Polish>Złóż w jeńców w ofierze. Kultura, Szczeście wzrosnie w tym mieście, istnieje także szansa na Złotą Erę!</Polish>
-		<Russian>Ïðèíîøåíèå ïëåííèêà â æåðòâó áîãàì äëÿ êóëüòóðû, ñ÷àñòëèâûõ ëèö è êðàòêîâðåìåííîãî Çîëîòîãî Âåêà.</Russian>
+		<English>Sacrifice a captive for Culture, Happiness.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SACRIFICE_CAPTIVE_HELP</Tag>
-		<English>Increases the culture and happiness of the city. Unit is consumed. It may cause a golden age.</English>
-		<French>Augmente le bonheur de la ville. L'unité est détruite. Peut déclencher l'Age d'or.</French>
-		<Italian>Incrementa la cultura e la felicità di una città. L'unità viene consumata. Potrebbe generare una piccola età dell'oro.</Italian>
-		<Polish>Zwiększa Kultura i Szczęście w mieście. Istnieje szansa na Złotą Erę. Jednostka zostaje usunięta.</Polish>
-		<Russian>Ïîâûøàåò êóëüòóðó è ñ÷àñòüå â ãîðîäå. Îòðÿä èñ÷åçàåò. Âîçìîæåí çàïóñê Çîëîòîãî Âåêà.</Russian>
+		<English>Increases the culture and happiness of the city. Unit is consumed.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MSG_NO_HUMAN_SACRIFICE</Tag>
