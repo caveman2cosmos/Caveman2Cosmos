@@ -29739,7 +29739,7 @@ uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 		iY--;
 		iY = std::max(1, iY);
 	}
-	return iPromoThreshold * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 25;	
+	return iPromoThreshold * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 25;
 }
 
 uint64_t CvPlayer::getLeaderLevelupCultureToEarn() const
