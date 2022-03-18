@@ -29723,12 +29723,12 @@ uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 {
 	uint64_t iPromoThreshold = 1000;
 	uint64_t iX = 1000;
-	int iY = 10;
+	int iY = 10 * GC.getNEXT_TRAIT_CULTURE_REQ_PERCENT() / 100;
 
 	if (GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS))
 	{
 		iX = 10;
-		iY = 8;
+		iY = 8 * GC.getNEXT_TRAIT_CULTURE_REQ_PERCENT() / 100;
 	}
 	const int iIteratorA = getLeaderHeadLevel() + 1;
 	for (int x = 0; x < iIteratorA; x++)
@@ -29739,8 +29739,7 @@ uint64_t CvPlayer::getLeaderLevelupNextCultureTotal() const
 		iY--;
 		iY = std::max(1, iY);
 	}
-	return (iPromoThreshold * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 25)
-		* GC.getNEXT_TRAIT_CULTURE_REQ_PERCENT() / 100;
+	return iPromoThreshold * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 25;	
 }
 
 uint64_t CvPlayer::getLeaderLevelupCultureToEarn() const
