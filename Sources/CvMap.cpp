@@ -434,14 +434,12 @@ void CvMap::updateFlagSymbolsInternal(bool bForce)
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
+	foreach_(CvPlot& plotX, plots())
 	{
-		CvPlot* pLoopPlot = plotByIndex(iI);
-
-		if (bForce || pLoopPlot->isFlagDirty())
+		if (bForce || plotX.isFlagDirty())
 		{
-			pLoopPlot->updateFlagSymbol();
-			pLoopPlot->setFlagDirty(false);
+			plotX.updateFlagSymbol();
+			plotX.setFlagDirty(false);
 		}
 	}
 }

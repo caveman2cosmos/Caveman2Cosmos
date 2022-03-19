@@ -201,6 +201,11 @@ public:
 
 	CvPlot* pointToPlot(float fX, float fY) const;
 
+	const std::pair<CvPlot*, CvPlot*> plots() const
+	{
+		return std::make_pair(&m_pMapPlots[0], &m_pMapPlots[numPlots()]);
+	}
+
 	int getIndexAfterLastArea() const;
 	int getNumAreas() const;
 	int getNumLandAreas() const;
