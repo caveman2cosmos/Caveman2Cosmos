@@ -2138,6 +2138,7 @@ public:
 	static bool isRealEntity(const CvEntity* entity);
 
 	std::map<UnitCombatTypes, UnitCombatKeyedInfo>&  getUnitCombatKeyedInfo() const;
+	const std::map<PromotionTypes, PromotionKeyedInfo>& getPromotionKeyedInfo() const;
 	std::map<PromotionLineTypes, PromotionLineKeyedInfo>&  getPromotionLineKeyedInfo() const;
 
 private:
