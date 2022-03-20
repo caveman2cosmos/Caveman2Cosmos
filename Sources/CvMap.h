@@ -231,6 +231,8 @@ public:
 	void invalidateIsActivePlayerNoDangerCache();
 	void invalidateIsTeamBorderCache(TeamTypes eTeam);
 
+	const std::pair<CvPlot*, CvPlot*> plots() const;
+
 	// Serialization:
 	 virtual void read(FDataStreamBase* pStream);
 	 virtual void write(FDataStreamBase* pStream);
