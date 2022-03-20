@@ -1195,6 +1195,12 @@ void CvMap::invalidateIsTeamBorderCache(TeamTypes eTeam)
 /************************************************************************************************/
 
 
+const std::pair<CvPlot*, CvPlot*> CvMap::plots() const
+{
+	return std::make_pair(&m_pMapPlots[0], &m_pMapPlots[numPlots()]);
+}
+
+
 //
 // read object from a stream
 // used during load
