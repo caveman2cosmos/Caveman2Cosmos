@@ -2856,11 +2856,11 @@ bool CvXMLLoadUtility::LoadGraphicOptions()
 // Main control of the MLF feature
 void CvXMLLoadUtility::ModularLoadingControlXML()
 {
-	CvXMLLoadUtilitySetMod::setModLoadControlDirArray(LoadModLoadControlInfo(GC.m_paModLoadControls, "CIV4ModularLoadingControls", L"Type"));
+	CvXMLLoadUtilitySetMod::setModLoadControlDirArray(LoadModLoadControlInfo(GC.m_paModLoadControls, "CIV4ModularLoadingControls"));
 }
 
 // In the next 2 methods we load the MLF classes
-bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<CvModLoadControlInfo*>& aInfos, const char* szFileRoot, const wchar_t* szXmlPath)
+bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<CvModLoadControlInfo*>& aInfos, const char* szFileRoot)
 {
 	GC.addToInfosVectors(&aInfos, InfoClassTraits<CvModLoadControlInfo>::InfoClassEnum);
 	DEBUG_LOG("MLF.log", "Entering MLF");
@@ -2893,7 +2893,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<CvModLoadControlInfo*>
 		return false;
 	}
 
-	if (!SetModLoadControlInfo(aInfos, szXmlPath, szConfigString, szDirDepth, m_iDirDepth))
+	if (!SetModLoadControlInfo(aInfos, L"Type", szConfigString, szDirDepth, m_iDirDepth))
 	{
 		DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" set by you could not be found, please check your XML settings!", szModDirectory.c_str(), szFileRoot);
 		return false;
@@ -2934,7 +2934,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<CvModLoadControlInfo*>
 								else
 								{
 									szDirDepth = CvString::format("%s\\", szModDirectory.c_str());
-									SetModLoadControlInfo(aInfos, szXmlPath, szConfigString.c_str(), szDirDepth.c_str(), m_iDirDepth);
+									SetModLoadControlInfo(aInfos, L"Type", szConfigString.c_str(), szDirDepth.c_str(), m_iDirDepth);
 									bContinue = true; //found a new MLF in a subdir, continue the loop
 								}
 							}
