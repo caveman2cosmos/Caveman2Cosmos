@@ -2860,10 +2860,9 @@ void CvXMLLoadUtility::ModularLoadingControlXML()
 }
 
 // In the next 2 methods we load the MLF classes
-template <class T>
-bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const char* szFileRoot, const wchar_t* szXmlPath)
+bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<CvModLoadControlInfo*>& aInfos, const char* szFileRoot, const wchar_t* szXmlPath)
 {
-	GC.addToInfosVectors(&aInfos, InfoClassTraits<T>::InfoClassEnum);
+	GC.addToInfosVectors(&aInfos, InfoClassTraits<CvModLoadControlInfo>::InfoClassEnum);
 	DEBUG_LOG("MLF.log", "Entering MLF");
 	DEBUG_LOG("XmlCheckDoubleTypes.log", "\nEntering: MLF_CIV4ModularLoadingControls\n");
 
@@ -2958,8 +2957,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 	return true;
 }
 
-template <class T>
-bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wchar_t* szTagName, CvString szConfigString, CvString szDirDepth, int iDirDepth)
+bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<CvModLoadControlInfo*>& aInfos, const wchar_t* szTagName, CvString szConfigString, CvString szDirDepth, int iDirDepth)
 {
 	OutputDebugString("Setting Mod Control Infos\n");
 
@@ -2972,7 +2970,7 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 			GetChildXmlValByName(szCandidateConfig, szTagName);
 			if (szCandidateConfig == szConfigString)
 			{
-				std::auto_ptr<T> pClassInfo(new T);
+				std::auto_ptr<CvModLoadControlInfo> pClassInfo(new CvModLoadControlInfo);
 
 				if (!pClassInfo->read(this, szDirDepth, iDirDepth))
 				{
