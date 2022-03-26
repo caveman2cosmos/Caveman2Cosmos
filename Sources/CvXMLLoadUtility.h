@@ -751,10 +751,8 @@ private:
 	//Main control of the MLF feature
 	void ModularLoadingControlXML();
 	// In the next 2 methods we load the MLF classes
-	template <class T>
-	bool LoadModLoadControlInfo(std::vector<T*>& aInfos, const char* szFileRoot, const wchar_t* szXmlPath);
-	template <class T>
-	bool SetModLoadControlInfo(std::vector<T*>& aInfos, const wchar_t* szTagName, CvString szConfigString, CvString szDirDepth = "Modules\\", int iDirDepth = 0);
+	bool LoadModLoadControlInfo(std::vector<CvModLoadControlInfo*>& aInfos);
+	bool SetModLoadControlInfo(std::vector<CvModLoadControlInfo*>& aInfos, const wchar_t* szTagName, CvString szConfigString, CvString szDirDepth = "Modules\\", int iDirDepth = 0);
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
