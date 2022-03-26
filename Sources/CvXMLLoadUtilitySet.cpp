@@ -2856,11 +2856,11 @@ bool CvXMLLoadUtility::LoadGraphicOptions()
 // Main control of the MLF feature
 void CvXMLLoadUtility::ModularLoadingControlXML()
 {
-	CvXMLLoadUtilitySetMod::setModLoadControlDirArray(LoadModLoadControlInfo(GC.m_paModLoadControls, "CIV4ModularLoadingControls"));
+	CvXMLLoadUtilitySetMod::setModLoadControlDirArray(LoadModLoadControlInfo(GC.m_paModLoadControls));
 }
 
 // In the next 2 methods we load the MLF classes
-bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<CvModLoadControlInfo*>& aInfos, const char* szFileRoot)
+bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<CvModLoadControlInfo*>& aInfos)
 {
 	GC.addToInfosVectors(&aInfos, InfoClassTraits<CvModLoadControlInfo>::InfoClassEnum);
 	DEBUG_LOG("MLF.log", "Entering MLF");
@@ -2873,7 +2873,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<CvModLoadControlInfo*>
 	std::string szModDirectory = "modules";
 	std::string szConfigString;
 
-	if (!LoadCivXml(CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot)))
+	if (!LoadCivXml(CvString::format("%s\\MLF_CIV4ModularLoadingControls.xml", szModDirectory.c_str())))
 	{
 		return false;
 	}
@@ -2883,19 +2883,19 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<CvModLoadControlInfo*>
 
 		if (szConfigString == "NONE")
 		{
-			DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" was set to \"NONE\", you will continue loading the regular Firaxian method", szModDirectory.c_str(), szFileRoot);
+			DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_CIV4ModularLoadingControls.xml\" was set to \"NONE\", you will continue loading the regular Firaxian method", szModDirectory.c_str());
 			return false;   // abort without enumerating anything
 		}
 	}
 	else
 	{
-		DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" couldn't be found, you will continue loading using the regular Firaxian method", szModDirectory.c_str(), szFileRoot);
+		DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_CIV4ModularLoadingControls.xml\" couldn't be found, you will continue loading using the regular Firaxian method", szModDirectory.c_str());
 		return false;
 	}
 
 	if (!SetModLoadControlInfo(aInfos, L"Type", szConfigString, szDirDepth, m_iDirDepth))
 	{
-		DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" set by you could not be found, please check your XML settings!", szModDirectory.c_str(), szFileRoot);
+		DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_CIV4ModularLoadingControls.xml\" set by you could not be found, please check your XML settings!", szModDirectory.c_str());
 		return false;
 	}
 
@@ -2920,8 +2920,8 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<CvModLoadControlInfo*>
 						szModDirectory = GC.getModLoadControlInfos(iInfos).getModuleFolder(i);
 
 						// Check if this Modulefolder is parent to a child MLF
-						if (CvXMLLoadUtilityModTools::isModularArt(CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot))
-						&& LoadCivXml(CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot)))
+						if (CvXMLLoadUtilityModTools::isModularArt(CvString::format("%s\\MLF_CIV4ModularLoadingControls.xml", szModDirectory.c_str()))
+						&& LoadCivXml(CvString::format("%s\\MLF_CIV4ModularLoadingControls.xml", szModDirectory.c_str())))
 						{
 							if (TryMoveToXmlFirstMatchingElement(L"/Civ4ModularLoadControls/DefaultConfiguration"))
 							{
@@ -2929,7 +2929,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<CvModLoadControlInfo*>
 
 								if (szConfigString == "NONE")
 								{
-									DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" was set to \"NONE\", settings in this file will be disregarded", szModDirectory.c_str(), szFileRoot);
+									DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_CIV4ModularLoadingControls.xml\" was set to \"NONE\", settings in this file will be disregarded", szModDirectory.c_str());
 								}
 								else
 								{
