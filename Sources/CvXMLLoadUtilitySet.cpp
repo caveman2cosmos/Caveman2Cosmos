@@ -2856,14 +2856,13 @@ bool CvXMLLoadUtility::LoadGraphicOptions()
 // Main control of the MLF feature
 void CvXMLLoadUtility::ModularLoadingControlXML()
 {
-	CvXMLLoadUtilitySetMod::setModLoadControlDirArray(LoadModLoadControlInfo(GC.m_paModLoadControls, "CIV4ModularLoadingControls", L"Type"));
+	CvXMLLoadUtilitySetMod::setModLoadControlDirArray(LoadModLoadControlInfo(GC.m_paModLoadControls));
 }
 
 // In the next 2 methods we load the MLF classes
-template <class T>
-bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const char* szFileRoot, const wchar_t* szXmlPath)
+bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<CvModLoadControlInfo*>& aInfos)
 {
-	GC.addToInfosVectors(&aInfos, InfoClassTraits<T>::InfoClassEnum);
+	GC.addToInfosVectors(&aInfos, InfoClassTraits<CvModLoadControlInfo>::InfoClassEnum);
 	DEBUG_LOG("MLF.log", "Entering MLF");
 	DEBUG_LOG("XmlCheckDoubleTypes.log", "\nEntering: MLF_CIV4ModularLoadingControls\n");
 
@@ -2874,79 +2873,69 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 	std::string szModDirectory = "modules";
 	std::string szConfigString;
 
-	if (!LoadCivXml(CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot)))
+	if (!LoadCivXml(CvString::format("%s\\MLF_CIV4ModularLoadingControls.xml", szModDirectory.c_str())))
 	{
 		return false;
 	}
+	if (TryMoveToXmlFirstMatchingElement(L"/Civ4ModularLoadControls/DefaultConfiguration"))
+	{
+		GetXmlVal(szConfigString, "NONE");
+
+		if (szConfigString == "NONE")
+		{
+			DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_CIV4ModularLoadingControls.xml\" was set to \"NONE\", you will continue loading the regular Firaxian method", szModDirectory.c_str());
+			return false;   // abort without enumerating anything
+		}
+	}
 	else
 	{
-		if ( TryMoveToXmlFirstMatchingElement(L"/Civ4ModularLoadControls/DefaultConfiguration"))
+		DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_CIV4ModularLoadingControls.xml\" couldn't be found, you will continue loading using the regular Firaxian method", szModDirectory.c_str());
+		return false;
+	}
+
+	if (!SetModLoadControlInfo(aInfos, L"Type", szConfigString, szDirDepth, m_iDirDepth))
+	{
+		DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_CIV4ModularLoadingControls.xml\" set by you could not be found, please check your XML settings!", szModDirectory.c_str());
+		return false;
+	}
+
+	// We want a top to bottom control mechanism. If in any new level there wasn't found a
+	// new MLF we don't want to loop further downwards into the directory hyrarchy
+	while (bContinue)
+	{
+		m_iDirDepth++;
+		bContinue = false;	// we want to stop the while loop, unless a new MLF will be found
+		// loop through all MLF's so far loaded
+		for (int iInfos = 0; iInfos < GC.getNumModLoadControlInfos(); iInfos++)
 		{
-			// call the function that sets the FXml pointer to the first non-comment child of
-			// the current tag and gets the value of that new node
-
-			GetXmlVal(szConfigString, "NONE");
-
-			if (szConfigString == "NONE")
+			// only loop through files in the actual depth
+			if (GC.getModLoadControlInfos(iInfos).getDirDepth() + 1 == m_iDirDepth)
 			{
-				DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" was set to \"NONE\", you will continue loading the regular Firaxian method", szModDirectory.c_str(), szFileRoot);
-				return false;   // abort without enumerating anything
-			}
-		}
-		else
-		{
-			DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" couldn't be found, you will continue loading using the regular Firaxian method", szModDirectory.c_str(), szFileRoot);
-			return false;
-		}
-
-		if (!SetModLoadControlInfo(aInfos, szXmlPath, szConfigString, szDirDepth, m_iDirDepth))
-		{
-			DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" set by you could not be found, please check your XML settings!", szModDirectory.c_str(), szFileRoot);
-			return false;
-		}
-
-		//	We want a top to bottom control mechanism. If in any new level there wasn't found a
-		//	new MLF we don't want to loop further downwards into the directory hyrarchy
-		while (bContinue)
-		{
-			m_iDirDepth++;
-			bContinue = false;	//we want to stop the while loop, unless a new MLF will be found
-			//loop through all MLF's so far loaded
-			for ( int iInfos = 0; iInfos < GC.getNumModLoadControlInfos(); iInfos++)
-			{
-				//only loop through files in the actual depth
-				if (GC.getModLoadControlInfos(iInfos).getDirDepth() + 1 == m_iDirDepth)
+				// loop through the modules of each MLF
+				for (int i = 0; i < GC.getModLoadControlInfos(iInfos).getNumModules(); i++)
 				{
-					//loop through the modules of each MLF
-					for ( int i = 0; i < GC.getModLoadControlInfos(iInfos).getNumModules(); i++ )
+					if (GC.getModLoadControlInfos(iInfos).isLoad(i))
 					{
-						if ( GC.getModLoadControlInfos(iInfos).isLoad(i) )
+						// each new loop we load the previous dir, and check if a MLF file exist on a lower level
+						szModDirectory = GC.getModLoadControlInfos(iInfos).getModuleFolder(i);
+
+						// Check if this Modulefolder is parent to a child MLF
+						if (CvXMLLoadUtilityModTools::isModularArt(CvString::format("%s\\MLF_CIV4ModularLoadingControls.xml", szModDirectory.c_str()))
+						&& LoadCivXml(CvString::format("%s\\MLF_CIV4ModularLoadingControls.xml", szModDirectory.c_str())))
 						{
-
-							//each new loop we load the previous dir, and check if a MLF file exist on a lower level
-							szModDirectory = GC.getModLoadControlInfos(iInfos).getModuleFolder(i);
-
-							//Check if this Modulefolder is parent to a child MLF
-							if (CvXMLLoadUtilityModTools::isModularArt(CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot))
-							&& LoadCivXml(CvString::format("%s\\MLF_%s.xml", szModDirectory.c_str(), szFileRoot)))
+							if (TryMoveToXmlFirstMatchingElement(L"/Civ4ModularLoadControls/DefaultConfiguration"))
 							{
-								if ( TryMoveToXmlFirstMatchingElement(L"/Civ4ModularLoadControls/DefaultConfiguration"))
+								GetXmlVal(szConfigString, "NONE");
+
+								if (szConfigString == "NONE")
 								{
-									// call the function that sets the FXml pointer to the first non-comment child of
-									// the current tag and gets the value of that new node
-
-									GetXmlVal(szConfigString, "NONE");
-
-									if (szConfigString == "NONE")
-									{
-										DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_%s.xml\" was set to \"NONE\", settings in this file will be disregarded", szModDirectory.c_str(), szFileRoot);
-									}
-									else
-									{
-										szDirDepth = CvString::format("%s\\", szModDirectory.c_str());
-										SetModLoadControlInfo(aInfos, szXmlPath, szConfigString.c_str(), szDirDepth.c_str(), m_iDirDepth);
-										bContinue = true; //found a new MLF in a subdir, continue the loop
-									}
+									DEBUG_LOG("MLF.log", "The default configuration in \"%s\\MLF_CIV4ModularLoadingControls.xml\" was set to \"NONE\", settings in this file will be disregarded", szModDirectory.c_str());
+								}
+								else
+								{
+									szDirDepth = CvString::format("%s\\", szModDirectory.c_str());
+									SetModLoadControlInfo(aInfos, L"Type", szConfigString.c_str(), szDirDepth.c_str(), m_iDirDepth);
+									bContinue = true; //found a new MLF in a subdir, continue the loop
 								}
 							}
 						}
@@ -2958,8 +2947,7 @@ bool CvXMLLoadUtility::LoadModLoadControlInfo(std::vector<T*>& aInfos, const cha
 	return true;
 }
 
-template <class T>
-bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wchar_t* szTagName, CvString szConfigString, CvString szDirDepth, int iDirDepth)
+bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<CvModLoadControlInfo*>& aInfos, const wchar_t* szTagName, CvString szConfigString, CvString szDirDepth, int iDirDepth)
 {
 	OutputDebugString("Setting Mod Control Infos\n");
 
@@ -2972,7 +2960,7 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 			GetChildXmlValByName(szCandidateConfig, szTagName);
 			if (szCandidateConfig == szConfigString)
 			{
-				std::auto_ptr<T> pClassInfo(new T);
+				std::auto_ptr<CvModLoadControlInfo> pClassInfo(new CvModLoadControlInfo);
 
 				if (!pClassInfo->read(this, szDirDepth, iDirDepth))
 				{
