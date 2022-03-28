@@ -6917,7 +6917,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__NOPRODUCTIONPOPUP_HOVER</Tag>
-		<English>Zooms the city when the production queue is empty instead of opening a popup (best combined with the minimize popups option).</English>
+		<English>Zooms the city when the production queue is empty instead of opening a popup (best combined with the minimize popups option). The popup shows limited selection of units and buildings for performance reasons.</English>
 		<French>Affiche automatiquement l'écran de ville lorsqu'il n'y a plus de constructions dans la liste, plutôt que d'afficher l'information sous forme de popup (à combiner avec l'option popus minimisés).</French>
 		<German>Das Spiel wechselt automatisch in den Stadtbildschirm, wenn die Bauliste leer ist, anstatt ein Popup-Fenster einzublenden (funktioniert am besten in Verbindung mit der Option Popups minimieren).</German>
 		<Italian>Zoomma sulla città quando la coda di protezione è vuota invece di aprire un popup (meglio se combinato con l'opzione minimizza popup).</Italian>
