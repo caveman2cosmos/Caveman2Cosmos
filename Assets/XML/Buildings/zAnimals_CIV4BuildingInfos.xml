@@ -367,7 +367,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BIRD_CAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORES_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
