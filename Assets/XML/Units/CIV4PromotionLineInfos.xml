@@ -509,6 +509,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_DREADNOUGHT</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 				<DomainType>DOMAIN_AIR</DomainType>
