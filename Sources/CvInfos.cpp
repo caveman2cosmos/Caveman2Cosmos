@@ -13042,6 +13042,7 @@ m_bTech(false),
 m_bBad(false),
 m_bNaval(false)
 {
+	CvInfoUtil(this).initDataMembers();
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -13053,6 +13054,7 @@ m_bNaval(false)
 //------------------------------------------------------------------------------------------------------
 CvGoodyInfo::~CvGoodyInfo()
 {
+	CvInfoUtil(this).uninitDataMembers();
 }
 
 int CvGoodyInfo::getGold() const
@@ -13155,6 +13157,13 @@ const char* CvGoodyInfo::getSound() const
 	return m_szSound;
 }
 
+void CvGoodyInfo::getDataMembers(CvInfoUtil& util)
+{
+	util
+		.add(m_iMaxBarbarians, L"MaxBarbarians")
+	;
+}
+
 bool CvGoodyInfo::read(CvXMLLoadUtility* pXML)
 {
 	CvString szTextVal;
@@ -13162,6 +13171,8 @@ bool CvGoodyInfo::read(CvXMLLoadUtility* pXML)
 	{
 		return false;
 	}
+
+	CvInfoUtil(this).readXml(pXML);
 
 	pXML->GetOptionalChildXmlValByName(m_szSound, L"Sound");
 	pXML->GetOptionalChildXmlValByName(&m_iGold, L"iGold");
@@ -13199,12 +13210,14 @@ bool CvGoodyInfo::read(CvXMLLoadUtility* pXML)
 
 void CvGoodyInfo::copyNonDefaults(const CvGoodyInfo* pClassInfo)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	CvString cDefault = CvString::format("").GetCString();
+	const bool bDefault = false;
+	const int iDefault = 0;
+	const int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
+	const CvString cDefault = CvString::format("").GetCString();
 
 	CvInfoBase::copyNonDefaults(pClassInfo);
+
+	CvInfoUtil(this).copyNonDefaults(pClassInfo);
 
 	if (getSound() == cDefault) m_szSound = pClassInfo->getSound();
 	if (getGold() == iDefault) m_iGold = pClassInfo->getGold();
@@ -13231,6 +13244,8 @@ void CvGoodyInfo::copyNonDefaults(const CvGoodyInfo* pClassInfo)
 
 void CvGoodyInfo::getCheckSum(uint32_t& iSum) const
 {
+	CvInfoUtil(this).checkSum(iSum);
+
 	CheckSum(iSum, m_iGold);
 	CheckSum(iSum, m_iGoldRand1);
 	CheckSum(iSum, m_iGoldRand2);

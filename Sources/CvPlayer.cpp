@@ -6228,15 +6228,14 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 
 	if (iRange > 0)
 	{
-		CvPlot* pBestPlot = NULL;
+		const CvPlot* pBestPlot = NULL;
 		const int iOffset = GC.getGoodyInfo(eGoody).getMapOffset();
 
 		if (iOffset > 0)
 		{
 			int iBestValue = 0;
-			pBestPlot = NULL;
 
-			foreach_(CvPlot* pLoopPlot, pPlot->rect(iOffset, iOffset)
+			foreach_(const CvPlot* pLoopPlot, pPlot->rect(iOffset, iOffset)
 			| filtered(!CvPlot::fn::isRevealed(getTeam(), false)))
 			{
 				int iValue = (1 + GC.getGame().getSorenRandNum(10000, "Goody Map"));
@@ -6296,7 +6295,7 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 				}
 			}
 		}
-		FAssertMsg(eBestTech != NO_TECH, "BestTech is not assigned a valid value");
+		FASSERT_BOUNDS(0, GC.getNumTechInfos(), eBestTech);
 
 		GET_TEAM(getTeam()).setHasTech(eBestTech, true, getID(), true, true);
 
@@ -6330,11 +6329,16 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 							(pLoopPlot->isWater() ? UNITAI_ATTACK_SEA : UNITAI_ATTACK), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 						iBarbCount++;
 
-						if (iPass > 1 && iBarbCount == GC.getGoodyInfo(eGoody).getMinBarbarians())
+						if (iPass > 1 && iBarbCount == GC.getGoodyInfo(eGoody).getMinBarbarians()
+						|| iBarbCount >= GC.getGoodyInfo(eGoody).getMaxBarbarians())
 						{
 							break;
 						}
 					}
+				}
+				if (iBarbCount >= GC.getGoodyInfo(eGoody).getMaxBarbarians())
+				{
+					break;
 				}
 			}
 			else
