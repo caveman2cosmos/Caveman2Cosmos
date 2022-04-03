@@ -897,21 +897,22 @@ class WBUnitScreen:
 			pUnitX.changeCargoSpace(Info.getCargoSpace() - pUnitX.cargoSpace())
 			pUnitX.setScriptData("")
 			return 2
-		elif iIndex == 2:
+		if iIndex == 2:
 			self.WB.iPlayerAddMode = "MoveUnits"
 			self.WB.lMoveUnit.append([pUnitX.getOwner(), pUnitX.getID()])
 			return 0
-		elif iIndex == 3:
-			for i in xrange(iChange + 1):
+		if iIndex == 3:
+			iRange = iChange
+			if iRange > 10: iRange = 10 # sanity control
+			for i in xrange(iRange):
 				pNewUnit = GC.getPlayer(pUnitX.getOwner()).initUnit(pUnitX.getUnitType(), pUnitX.getX(), pUnitX.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-				pNewUnit.convert(pUnitX)
+				pNewUnit.convert(pUnitX, False)
 				pNewUnit.setBaseCombatStr(pUnitX.baseCombatStr())
 				pNewUnit.changeCargoSpace(pUnitX.cargoSpace() - pNewUnit.cargoSpace())
 				pNewUnit.setImmobileTimer(pUnitX.getImmobileTimer())
 				pNewUnit.setScriptData(pUnitX.getScriptData())
-			pUnitX.kill(False, -1)
 			return 1
-		elif iIndex == 4:
+		if iIndex == 4:
 			pUnitX.kill(False, -1)
 			if pPlot.getNumUnits() > 0:
 				return 1
@@ -948,7 +949,7 @@ class WBUnitScreen:
 
 	def changeOwner(self, iPlayer):
 		pNewUnit = GC.getPlayer(iPlayer).initUnit(pUnit.getUnitType(), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-		pNewUnit.convert(pUnit)
+		pNewUnit.convert(pUnit, True)
 		pNewUnit.setBaseCombatStr(pUnit.baseCombatStr())
 		pNewUnit.changeCargoSpace(pUnit.cargoSpace() - pNewUnit.cargoSpace())
 		pNewUnit.setImmobileTimer(pUnit.getImmobileTimer())
@@ -959,7 +960,7 @@ class WBUnitScreen:
 	def changeUnitType(self, pUnit, iUnitType, bUnitType):
 		if bUnitType:
 			pNewUnit = GC.getPlayer(pUnit.getOwner()).initUnit(iUnitType, pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-			pNewUnit.convert(pUnit)
+			pNewUnit.convert(pUnit, True)
 			pNewUnit.setScriptData("PlatyUnit" + pUnit.getScriptData())
 			pUnit.kill(False, -1)
 			for pUnitX in pPlot.units():
