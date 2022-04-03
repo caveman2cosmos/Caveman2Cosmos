@@ -5195,35 +5195,15 @@
 			<iDefenseCombatModifierChange>-25</iDefenseCombatModifierChange>
 			<UnitCombats>
 				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
+					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
+					<UnitCombatType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_HITECH</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_WHEELED</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
+					<UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 				<UnitCombat>
@@ -5259,6 +5239,9 @@
 					<bUnitCombat>1</bUnitCombat>
 				</UnitCombat>
 			</UnitCombats>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<Button>,Art/Interface/Buttons/Promotions/Fanatic.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,1,5</Button>
 			<iCaptureProbabilityModifierChange>-10</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>15</iCaptureResistanceModifierChange>

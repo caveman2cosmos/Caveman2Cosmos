@@ -1086,5 +1086,8 @@
 		<HintInfo>
 			<Description>TXT_KEY_C2C_HINT_50</Description>
 		</HintInfo>
+		<HintInfo>
+			<Description>TXT_KEY_C2C_HINT_51</Description>
+		</HintInfo>
 	</HintInfos>
 </Civ4Hints>
