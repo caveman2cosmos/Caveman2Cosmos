@@ -882,12 +882,20 @@
 		<English>Astrological Influence of Aquarius</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS_SHORT</Tag>
+		<English>Aquarius</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS_PEDIA</Tag>
 		<English>Astrological Influence of Aquarius trait is only available with the Astrological Influence of Aquarius Group Wonder. All Wooden Ships receive the Influence of Saturn promotion, giving bonus to Strength and Visibility during the Classical Era.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES</Tag>
 		<English>Astrological Influence of Aries</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES_SHORT</Tag>
+		<English>Aries</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_ARIES_PEDIA</Tag>
@@ -898,12 +906,20 @@
 		<English>Astrological Influence of Cancer</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CANCER_SHORT</Tag>
+		<English>Cancer</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CANCER_PEDIA</Tag>
 		<English>Astrological Influence of Cancer trait is only available with the Astrological Influence of Cancer Group Wonder. All Heal People units receive the Influence of the Moon promotion, giving bonus to numbers heal and Disease Control during the Classical Era.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</Tag>
 		<English>Astrological Influence of Capricorn</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN_SHORT</Tag>
+		<English>Capricorn</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN_PEDIA</Tag>
@@ -914,12 +930,20 @@
 		<English>Astrological Influence of Gemini</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI_SHORT</Tag>
+		<English>Gemini</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_GEMINI_PEDIA</Tag>
 		<English>Astrological Influence of Gemini trait is only available with the Astrological Influence of Gemini Group Wonder. All Siege units receive the Influence of Mercury promotion, giving bonus to Strength and Accuracy during the Classical Era.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO</Tag>
 		<English>Astrological Influence of Leo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO_SHORT</Tag>
+		<English>Leo</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LEO_PEDIA</Tag>
@@ -930,12 +954,20 @@
 		<English>Astrological Influence of Libra</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA_SHORT</Tag>
+		<English>Libra</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_LIBRA_PEDIA</Tag>
 		<English>Astrological Influence of Libra trait is only available with the Astrological Influence of Libra Group Wonder. All Archery and Throwing units receive the Influence of Venus promotion, giving bonus to Strength and City Defense during the Classical Era.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES</Tag>
 		<English>Astrological Influence of Pisces</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES_SHORT</Tag>
+		<English>Pisces</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_PISCES_PEDIA</Tag>
@@ -946,12 +978,20 @@
 		<English>Astrological Influence of Sagittarius</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS_SHORT</Tag>
+		<English>Sagittarius</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS_PEDIA</Tag>
 		<English>Astrological Influence of Sagittarius trait is only available with the Astrological Influence of Sagittarius Group Wonder. All Mounted units receive the Influence of Jupiter promotion, giving bonus to Strength and Withdrawal during the Classical Era.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</Tag>
 		<English>Astrological Influence of Scorpio</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO_SHORT</Tag>
+		<English>Scorpio</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_SCORPIO_PEDIA</Tag>
@@ -962,12 +1002,20 @@
 		<English>Astrological Influence of Taurus</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS_SHORT</Tag>
+		<English>Taurus</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_TAURUS_PEDIA</Tag>
 		<English>Astrological Influence of Taurus trait is only available with the Astrological Influence of Taurus Group Wonder. All Archery and Throwing units receive the Influence of Venus promotion, giving bonus to Strength and City Defense during the Classical Era.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO</Tag>
 		<English>Astrological Influence of Virgo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO_SHORT</Tag>
+		<English>Virgo</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ASTROLOGICAL_INFLUENCE_OF_VIRGO_PEDIA</Tag>

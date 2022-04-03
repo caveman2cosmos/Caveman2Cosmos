@@ -3080,8 +3080,14 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					bool bFirst = true;
 					for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
 					{
-						const int iSpotIntensity = pUnit->visibilityIntensityTotal((InvisibleTypes)iJ);
-						if (iSpotIntensity > 0 || GC.getInvisibleInfo((InvisibleTypes) iJ).isIntrinsic())
+						const InvisibleTypes eTypeX = static_cast<InvisibleTypes>(iJ);
+
+						if (GC.getInvisibleInfo(eTypeX).isIntrinsic() && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+						{
+							continue;
+						}
+						const int iSpotIntensity = pUnit->visibilityIntensityTotal(eTypeX);
+						if (iSpotIntensity > 0 || GC.getInvisibleInfo(eTypeX).isIntrinsic())
 						{
 							if (bFirst)
 							{
@@ -3093,7 +3099,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 							{
 								szString.append(L", ");
 							}
-							szString.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo((InvisibleTypes) iJ).getChar()));
+							szString.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo(eTypeX).getChar()));
 						}
 					}
 					bFirst = true;
@@ -9010,7 +9016,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			{
 				const InvisibleTypes eTypeX = static_cast<InvisibleTypes>(iJ);
 
-				if (!pPlot->isSpotterInSight(eActiveTeam, eTypeX))
+				if (!pPlot->isSpotterInSight(eActiveTeam, eTypeX)
+				|| GC.getInvisibleInfo(eTypeX).isIntrinsic() && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 				{
 					continue;
 				}

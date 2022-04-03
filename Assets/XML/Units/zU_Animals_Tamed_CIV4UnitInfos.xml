@@ -4,7 +4,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_PANTHER</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -94,7 +93,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_LION</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -183,7 +181,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_CAMEL</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -277,7 +274,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_LLAMA</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -370,7 +366,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_DONKEY</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -491,7 +486,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_HORSE</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -616,7 +610,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_BISON</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -714,7 +707,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_BUFFALO</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -808,7 +800,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_CATTLE</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -904,7 +895,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_MUSKOX</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -997,7 +987,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_AARDVARK</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1078,7 +1067,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_BOAR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1174,7 +1162,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_AMPHIBIAN</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2215,7 +2202,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_ELEPHANT</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2308,7 +2294,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_GIRAFFE</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2394,7 +2379,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_HIPPO</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2590,7 +2574,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_BLACK_RHINO</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2679,7 +2662,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_INDIAN_RHINO</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2768,7 +2750,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_JAVA_RHINO</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2857,7 +2838,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_WHITE_RHINO</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2946,7 +2926,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_BAIRDS_TAPIR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3031,7 +3010,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_BRAZILIAN_TAPIR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3116,7 +3094,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_MALAYAN_TAPIR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3201,7 +3178,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_MOUNTAIN_TAPIR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3286,7 +3262,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_LIZARD</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3371,7 +3346,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_SNAKE</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3461,7 +3435,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_DONKEY_PAIR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -3577,7 +3550,6 @@
 		<UnitInfo>
 			<Type>UNIT_TAMED_HORSE_PAIR</Type>
 			<iMaxPlayerInstances>15</iMaxPlayerInstances>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>

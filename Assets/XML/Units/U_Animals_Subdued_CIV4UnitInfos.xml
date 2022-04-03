@@ -2295,7 +2295,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_BRAZILIAN_TAPIR</Type>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_BRAZILIAN_TAPIR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
@@ -2524,7 +2523,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_CAIMAN</Type>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_CAIMAN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
@@ -6413,7 +6411,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_GATOR</Type>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_GATOR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
@@ -6586,7 +6583,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_GATOR_ASIAN</Type>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_GATOR_ASIAN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
@@ -7214,7 +7210,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_GHARIAL</Type>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_GHARIAL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
@@ -10824,7 +10819,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_LIZARD</Type>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_LIZARD</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
@@ -11448,7 +11442,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_MALAYAN_TAPIR</Type>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_MALAYAN_TAPIR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
@@ -12691,7 +12684,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_MOUNTAIN_TAPIR</Type>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_MOUNTAIN_TAPIR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
@@ -12983,7 +12975,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_NILECROC</Type>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_NILECROC</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
@@ -16389,7 +16380,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_RIVER_CROC_LARGE</Type>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_RIVER_CROC_LARGE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
@@ -16562,7 +16552,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_RIVER_CROC_SMALL</Type>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_RIVER_CROC_SMALL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
@@ -18910,7 +18899,6 @@
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_TAPIR</Type>
-			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_SUBDUED_TAPIR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
