@@ -1458,7 +1458,7 @@ void CvUnit::convert(CvUnit* pUnit, const bool bKillOriginal)
 void CvUnit::kill(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 {
 	// If it's already dead (but delayed death in process) don't try to re-kill it.
-	if (m_bDeathDelay)
+	if (bDelay && m_bDeathDelay)
 	{
 		return;
 	}
@@ -1580,34 +1580,33 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 			startDelayedDeath();
 			return;
 		}
-
-		if (isCanRespawn())
 		{
 			const CvCity* pCapitalCity = owner.getCapitalCity();
-			if ( pCapitalCity != NULL && pCapitalCity->plot() != plot())
+			if (pCapitalCity != NULL)
 			{
-				//GC.getGame().logOOSSpecial(14, getID(), pCapitalCity->getX(), pCapitalCity->getY());
-				setXY(pCapitalCity->getX(), pCapitalCity->getY(), false, false, false);
-				setDamage(getMaxHP() * 9/10);
-				changeOneUpCount(-1);
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_BATTLEFIELD_EVAC", getNameKey());
-				AddDLLMessage(eOwner, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY());
-				m_bDeathDelay = false;
-				return;
+				if (isCanRespawn() && pCapitalCity->plot() != plot())
+				{
+					//GC.getGame().logOOSSpecial(14, getID(), pCapitalCity->getX(), pCapitalCity->getY());
+					setXY(pCapitalCity->getX(), pCapitalCity->getY(), false, false, false);
+					setDamage(getMaxHP() * 9/10);
+					changeOneUpCount(-1);
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_BATTLEFIELD_EVAC", getNameKey());
+					AddDLLMessage(eOwner, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY());
+					m_bDeathDelay = false;
+					return;
+				}
+				if (isSurvivor())
+				{
+					setDamage(getMaxHP() - std::max(1,(getSurvivorChance() / 1000)));
+					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_IS_HARDCORE", getNameKey());
+					AddDLLMessage(eOwner, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY());
+					m_bDeathDelay = false;
+					//	Only applies to THIS combat - it might be attacked again the same turn
+					setSurvivor(false);
+					return;
+				}
 			}
 		}
-
-		if (isSurvivor())
-		{
-			setDamage(getMaxHP() - std::max(1,(getSurvivorChance() / 1000)));
-			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_IS_HARDCORE", getNameKey());
-			AddDLLMessage(eOwner, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY());
-			m_bDeathDelay = false;
-			//	Only applies to THIS combat - it might be attacked again the same turn
-			setSurvivor(false);
-			return;
-		}
-
 		if (isMadeAttack() && nukeRange() != -1)
 		{
 			CvPlot* pTarget = getAttackPlot();

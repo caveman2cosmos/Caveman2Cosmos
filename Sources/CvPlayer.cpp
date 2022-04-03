@@ -11886,9 +11886,9 @@ void CvPlayer::setAlive(bool bNewValue)
 		else
 		{
 			clearResearchQueue();
-			killUnits();
-			killCities();
 			killAllDeals();
+			killCities();
+			killUnits();
 
 			clearTileCulture();
 			if (!GC.getGame().isOption(GAMEOPTION_REVOLUTION))
