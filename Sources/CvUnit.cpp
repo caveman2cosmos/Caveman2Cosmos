@@ -1469,13 +1469,10 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 {
 	PROFILE_FUNC();
 
-	CvWString szBuffer;
-
 	if (m_combatResult.bDeathMessaged)
 	{
 		bMessaged = true;
 	}
-
 	const PlayerTypes eOwner = getOwner();
 	CvPlayerAI& owner = GET_PLAYER(eOwner);
 
@@ -1483,98 +1480,114 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 	if (pPlot != NULL)
 	{
-		std::vector<IDInfo> oldUnits;
-
-		oldUnits.clear();
-		CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-
-		while (pUnitNode != NULL)
+		if (!isDelayedDeath())
 		{
-			oldUnits.push_back(pUnitNode->m_data);
-			pUnitNode = pPlot->nextUnitNode(pUnitNode);
-		}
+			std::vector<IDInfo> oldUnits;
 
-		for (uint i = 0; i < oldUnits.size(); i++)
-		{
-			CvUnit* pLoopUnit = ::getUnit(oldUnits[i]);
+			oldUnits.clear();
+			CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
 
-			if (pLoopUnit != NULL && pLoopUnit->getTransportUnit() == this)
+			while (pUnitNode != NULL)
 			{
-				//save old units because kill will clear the static list
-				std::vector<IDInfo> tempUnits = oldUnits;
+				oldUnits.push_back(pUnitNode->m_data);
+				pUnitNode = pPlot->nextUnitNode(pUnitNode);
+			}
 
-				if (pPlot->isValidDomainForLocation(*pLoopUnit))
+			for (uint i = 0; i < oldUnits.size(); i++)
+			{
+				CvUnit* pLoopUnit = ::getUnit(oldUnits[i]);
+
+				if (pLoopUnit != NULL && pLoopUnit->getTransportUnit() == this)
 				{
-					pLoopUnit->setCapturingPlayer(NO_PLAYER);
-					pLoopUnit->setCapturingUnit(this);
-				}
+					//save old units because kill will clear the static list
+					std::vector<IDInfo> tempUnits = oldUnits;
 
-				bool bSurvived = false;
-				CvPlot* pRescuePlot = NULL;
-
-				if (GC.getDefineINT("WAR_PRIZES") && pPlot->isWater())
-				{
-					foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
+					if (pPlot->isValidDomainForLocation(*pLoopUnit))
 					{
-						if (!pAdjacentPlot->isWater() && !pAdjacentPlot->isVisibleEnemyUnit(pLoopUnit))
+						pLoopUnit->setCapturingPlayer(NO_PLAYER);
+						pLoopUnit->setCapturingUnit(this);
+					}
+
+					bool bSurvived = false;
+					CvPlot* pRescuePlot = NULL;
+
+					if (GC.getDefineINT("WAR_PRIZES") && pPlot->isWater())
+					{
+						foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
 						{
-							pRescuePlot = pAdjacentPlot;
-							if (GC.getGame().getSorenRandNum(10, "Unit Survives Drowning") <= 2)
+							if (!pAdjacentPlot->isWater() && !pAdjacentPlot->isVisibleEnemyUnit(pLoopUnit))
 							{
-								bSurvived = true;
+								pRescuePlot = pAdjacentPlot;
+								if (GC.getGame().getSorenRandNum(10, "Unit Survives Drowning") <= 2)
+								{
+									bSurvived = true;
+								}
+								break;
 							}
-							break;
+						}
+					}
+					if (bSurvived)
+					{
+						FAssertMsg(pRescuePlot != NULL, "pRescuePlot is expected to be a valid plot!");
+						pLoopUnit->setDamage(GC.getGame().getSorenRandNum(pLoopUnit->getHP(), "Survival Damage"), NO_PLAYER);
+						pLoopUnit->move(pRescuePlot, false);
+						AddDLLMessage(
+							pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText("TXT_KEY_MISC_UNIT_SURVIVED_TRANSPORT_SINKING", pLoopUnit->getNameKey(), getNameKey()),
+							NULL, MESSAGE_TYPE_MINOR_EVENT
+						);
+					}
+					else
+					{
+						AddDLLMessage(
+							eOwner, true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText("TXT_KEY_MISC_UNIT_DROWNED", pLoopUnit->getNameKey()),
+							GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
+							MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+						);
+						bMessaged = true;
+						pLoopUnit->kill(false, ePlayer, bMessaged);
+
+						oldUnits = tempUnits;
+					}
+				}
+			}
+
+			if (ePlayer != NO_PLAYER)
+			{
+				CvEventReporter::getInstance().unitKilled(this, ePlayer);
+
+				if (NO_UNIT != getLeaderUnitType() || GC.getUnitInfo(getUnitType()).getMaxGlobalInstances() == 1)
+				{
+					for (int iI = 0; !bMessaged && iI < MAX_PC_PLAYERS; iI++)
+					{
+						if (GET_PLAYER((PlayerTypes)iI).isAlive())
+						{
+							AddDLLMessage(
+								eOwner, true, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText("TXT_KEY_MISC_GENERAL_KILLED", getNameKey()),
+								GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
+								MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_RED(), getX(), getY()
+							);
+							bMessaged = true;
 						}
 					}
 				}
-				if (bSurvived)
-				{
-					FAssertMsg(pRescuePlot != NULL, "pRescuePlot is expected to be a valid plot!");
-					pLoopUnit->setDamage(GC.getGame().getSorenRandNum(pLoopUnit->getHP(), "Survival Damage"), NO_PLAYER);
-					pLoopUnit->move(pRescuePlot, false);
-
-					szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_SURVIVED_TRANSPORT_SINKING", pLoopUnit->getNameKey(), getNameKey());
-					AddDLLMessage(pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT);
-				}
-				else
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_DROWNED", pLoopUnit->getNameKey());
-					AddDLLMessage(eOwner, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-					bMessaged = true;
-					pLoopUnit->kill(false, ePlayer, bMessaged);
-
-					oldUnits = tempUnits;
-				}
 			}
-		}
-
-		if (ePlayer != NO_PLAYER)
-		{
-			CvEventReporter::getInstance().unitKilled(this, ePlayer);
-
-			if (NO_UNIT != getLeaderUnitType() || GC.getUnitInfo(getUnitType()).getMaxGlobalInstances() == 1)
+			/* This is interrupting other messages and not coming up when it should be anyhow.
+			if (!bMessaged)
 			{
-				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
-				{
-					if (GET_PLAYER((PlayerTypes)iI).isAlive() && !bMessaged)
-					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_GENERAL_KILLED", getNameKey());
-						AddDLLMessage(eOwner, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_RED(), getX(), getY());
-						bMessaged = true;
-					}
-				}
+				AddDLLMessage(
+					eOwner, true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_UNIT_DEATH", getNameKey()),
+					GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
+					MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+				);
+				m_combatResult.bDeathMessaged = false;
+				bMessaged = true;
 			}
+			*/
 		}
-		/* This is interrupting other messages and not coming up when it should be anyhow.
-		if (!bMessaged)
-		{
-
-			szBuffer = gDLL->getText("TXT_KEY_MISC_UNIT_DEATH", getNameKey());
-			AddDLLMessage(eOwner, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(), MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY());
-			m_combatResult.bDeathMessaged = false;
-			bMessaged = true;
-		}
-		*/
 		if (bDelay)
 		{
 			startDelayedDeath();
@@ -1590,16 +1603,22 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 					setXY(pCapitalCity->getX(), pCapitalCity->getY(), false, false, false);
 					setDamage(getMaxHP() * 9/10);
 					changeOneUpCount(-1);
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_BATTLEFIELD_EVAC", getNameKey());
-					AddDLLMessage(eOwner, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY());
+					AddDLLMessage(
+						eOwner, true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_BATTLEFIELD_EVAC", getNameKey()),
+						"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY()
+					);
 					m_bDeathDelay = false;
 					return;
 				}
 				if (isSurvivor())
 				{
 					setDamage(getMaxHP() - std::max(1,(getSurvivorChance() / 1000)));
-					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_IS_HARDCORE", getNameKey());
-					AddDLLMessage(eOwner, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY());
+					AddDLLMessage(
+						eOwner, true, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_IS_HARDCORE", getNameKey()),
+						"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), getX(), getY()
+					);
 					m_bDeathDelay = false;
 					//	Only applies to THIS combat - it might be attacked again the same turn
 					setSurvivor(false);
@@ -1715,10 +1734,11 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 				{
 					pkCapturedUnit->doHNCapture();
 				}
-
-				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_CAPTURED_UNIT", GC.getUnitInfo(eCaptureUnitType).getTextKeyWide());
-				AddDLLMessage(eCapturingPlayer, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, pkCapturedUnit->getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY());
-
+				AddDLLMessage(
+					eCapturingPlayer, true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_YOU_CAPTURED_UNIT", GC.getUnitInfo(eCaptureUnitType).getTextKeyWide()),
+					"AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, pkCapturedUnit->getButton(), GC.getCOLOR_GREEN(), pPlot->getX(), pPlot->getY()
+				);
 				// Add a captured mission
 				addMission(CvMissionDefinition(MISSION_CAPTURED, pPlot, pkCapturedUnit));
 
