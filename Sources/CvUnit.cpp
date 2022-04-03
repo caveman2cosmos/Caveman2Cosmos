@@ -37917,6 +37917,11 @@ int CvUnit::extraAidChange(PropertyTypes eProperty) const
 bool CvUnit::isNegatesInvisible(InvisibleTypes eInvisible) const
 {
 	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), eInvisible);
+
+	if (GC.getInvisibleInfo(eInvisible).isIntrinsic() && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+	{
+		return true;
+	}
 	return (getNegatesInvisibleCount(eInvisible) > 0 || isRevealed());
 }
 int CvUnit::getNegatesInvisibleCount(InvisibleTypes eInvisible) const
