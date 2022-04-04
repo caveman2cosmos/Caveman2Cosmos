@@ -1450,7 +1450,7 @@ void CvUnit::convert(CvUnit* pUnit, const bool bKillOriginal)
 	if (bKillOriginal)
 	{
 		pUnit->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
-		pUnit->kill(false, NO_PLAYER, false);
+		pUnit->kill(true, NO_PLAYER, false);
 	}
 }
 
