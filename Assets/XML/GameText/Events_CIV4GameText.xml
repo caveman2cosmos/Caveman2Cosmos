@@ -1638,6 +1638,14 @@
 		<Russian>В городе %s2_city сформирован новый торговый флот.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_MERCHANTFLEET3</Tag>
+		<English>A new merchant fleet has formed in the %s1_civ_adjective city of %s2</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_MERCHANTFLEET3_1</Tag>
+		<English>A new merchant fleet has formed in %s2_city.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_METAL_DECKS_1</Tag>
 		<English>The %s1_civ_adjective Empire has halted production of aircraft carriers with wooden decks. Their decks are now made of steel.</English>
 		<French>L'Empire %s1_civ_adjective a suspendu la production de porte-avions avec ponts en bois. Leurs ponts sont à présent en acier.</French>
@@ -1921,6 +1929,34 @@
 		<German>Auf %s1:2_civ_adjective Äckern ist die Pest ausgebrochen.</German>
 		<Italian>La pestilenza ha colpito i territori agricoli %s1_civ_adjective.</Italian>
 		<Spanish>Una plaga ha asolado las tierras de cultivo %s1:4_civ_adjective.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_PIRATE_INVASION</Tag>
+		<English>Pirates have been spotted off the %s1_civ_adjective coast near %s2_city.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_PIRATE_INVASION_1</Tag>
+		<English>Pirates have been sailing near our borders recently, stealing and killing as they go.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_PIRATE_MAP</Tag>
+		<English>A %s1_civ_adjective fisherman has found a pirate map near %s2_city.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_PIRATE_MAP_1</Tag>
+		<English>A fisherman from the city of %s2_city has found a old pirate map.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_PIRATE_NAVY</Tag>
+		<English>A famous pirate has offered his services to the %s1_civ_adjective Navy.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_PIRATE_NAVY_1</Tag>
+		<English>A famous pirate has offered to join our navy.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_EVENTTRIGGER_PIRATE_NAVY_2</Tag>
+		<English>A renowned pirate decided to work for our sea forces.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_POISON_ARROWS_1</Tag>
