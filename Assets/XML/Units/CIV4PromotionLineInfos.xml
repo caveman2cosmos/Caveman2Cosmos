@@ -286,6 +286,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_ROBOT</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_BIOLOGICAL</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_FIELD</Type>

@@ -6294,6 +6294,13 @@ bool CvUnitInfo::setQualifiedPromotionType(const int iPromo, std::vector<int>& c
 		{
 			return true;
 		}
+		for (int iI = 0; iI < promo.getNumDisqualifiedUnitCombatTypes(); iI++)
+		{
+			if (hasUnitCombat((UnitCombatTypes)promo.getDisqualifiedUnitCombatType(iI)))
+			{
+				return false;
+			}
+		}
 		for (int iI = 0; iI < promo.getNumQualifiedUnitCombatTypes(); iI++)
 		{
 			if (hasUnitCombat((UnitCombatTypes)promo.getQualifiedUnitCombatType(iI)))
