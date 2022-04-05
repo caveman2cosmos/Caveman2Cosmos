@@ -924,6 +924,7 @@
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_ANIMAL_DRAWN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_ASSISTED_MAMMOTH</SubCombatType>
