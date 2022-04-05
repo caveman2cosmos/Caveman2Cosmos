@@ -391,6 +391,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_NOMAD</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_WHEELED</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_DEVOTION_PROMOTION</Type>
