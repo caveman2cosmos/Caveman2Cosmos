@@ -9,6 +9,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
@@ -257,6 +258,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -351,6 +353,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -463,6 +466,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -592,6 +596,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -760,6 +765,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NUCLEAR_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -870,6 +876,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ANTIMATTER_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -994,6 +1001,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -1169,6 +1177,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -1329,6 +1338,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -2921,6 +2931,7 @@
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2989,6 +3000,7 @@
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3051,6 +3063,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3110,6 +3123,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3254,6 +3268,7 @@
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -3308,6 +3323,7 @@
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -3366,6 +3382,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3521,6 +3538,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3722,6 +3740,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3920,6 +3939,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -4226,6 +4246,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -4369,6 +4390,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -4448,6 +4470,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -4627,6 +4650,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -4824,6 +4848,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NUCLEAR_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -5071,6 +5096,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ANTIMATTER_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -5368,6 +5394,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -5683,6 +5710,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -5999,6 +6027,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6158,6 +6187,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6335,6 +6365,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6652,6 +6683,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6808,6 +6840,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6998,6 +7031,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7712,6 +7746,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7943,6 +7978,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8151,6 +8187,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8375,6 +8412,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8486,6 +8524,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8630,6 +8669,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8813,6 +8853,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9002,6 +9043,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9191,6 +9233,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NUCLEAR_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9314,6 +9357,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9391,6 +9435,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9465,6 +9510,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9541,6 +9587,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9619,6 +9666,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9697,6 +9745,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9774,6 +9823,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9853,6 +9903,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9927,6 +9978,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9998,6 +10050,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -10072,6 +10125,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -10146,6 +10200,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -10220,6 +10275,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -10293,6 +10349,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -10366,6 +10423,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -10440,6 +10498,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -10513,6 +10572,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -10586,6 +10646,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -10660,6 +10721,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -10733,6 +10795,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -10806,6 +10869,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -10880,6 +10944,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -10954,6 +11019,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -11029,6 +11095,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -11104,6 +11171,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -11175,6 +11243,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -11246,6 +11315,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -11317,6 +11387,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -11388,6 +11459,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -11459,6 +11531,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -11530,6 +11603,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -11601,6 +11675,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -11672,6 +11747,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -11796,6 +11872,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRACKED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_VEHICULAR</SubCombatType>
@@ -11860,6 +11937,7 @@
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
