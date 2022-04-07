@@ -2154,7 +2154,7 @@ m_iCombatModifierPerVolumeMoreChange(0),
 m_iCombatModifierPerVolumeLessChange(0),
 m_iSelfHealModifier(0),
 m_iNumHealSupport(0),
-m_iExcileChange(0),
+m_iExileChange(0),
 m_iPassageChange(0),
 m_iNoNonOwnedCityEntryChange(0),
 m_iBarbCoExistChange(0),
@@ -3269,9 +3269,9 @@ int CvPromotionInfo::getNumHealSupport() const
 	return m_iNumHealSupport;
 }
 
-int CvPromotionInfo::getExcileChange() const
+int CvPromotionInfo::getExileChange() const
 {
-	return m_iExcileChange;
+	return m_iExileChange;
 }
 
 int CvPromotionInfo::getPassageChange() const
@@ -4984,7 +4984,7 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCombatModifierPerVolumeLessChange, L"iCombatModifierPerVolumeLessChange");
 	pXML->GetOptionalChildXmlValByName(&m_iSelfHealModifier, L"iSelfHealModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iNumHealSupport, L"iNumHealSupport");
-	pXML->GetOptionalChildXmlValByName(&m_iExcileChange, L"iExcileChange");
+	pXML->GetOptionalChildXmlValByName(&m_iExileChange, L"iExileChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPassageChange, L"iPassageChange");
 	pXML->GetOptionalChildXmlValByName(&m_iNoNonOwnedCityEntryChange, L"iNoNonOwnedCityEntryChange");
 	pXML->GetOptionalChildXmlValByName(&m_iBarbCoExistChange, L"iBarbCoExistChange");
@@ -5776,7 +5776,7 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 	if (m_iCombatModifierPerVolumeLessChange == iDefault) m_iCombatModifierPerVolumeLessChange = pClassInfo->m_iCombatModifierPerVolumeLessChange;
 	if (getSelfHealModifier() == iDefault) m_iSelfHealModifier = pClassInfo->getSelfHealModifier();
 	if (getNumHealSupport() == iDefault) m_iNumHealSupport = pClassInfo->getNumHealSupport();
-	if (getExcileChange() == iDefault) m_iExcileChange = pClassInfo->getExcileChange();
+	if (getExileChange() == iDefault) m_iExileChange = pClassInfo->getExileChange();
 	if (getPassageChange() == iDefault) m_iPassageChange = pClassInfo->getPassageChange();
 	if (getNoNonOwnedCityEntryChange() == iDefault) m_iNoNonOwnedCityEntryChange = pClassInfo->getNoNonOwnedCityEntryChange();
 	if (getBarbCoExistChange() == iDefault) m_iBarbCoExistChange = pClassInfo->getBarbCoExistChange();
@@ -6471,7 +6471,7 @@ void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iCombatModifierPerVolumeLessChange);
 	CheckSum(iSum, m_iSelfHealModifier);
 	CheckSum(iSum, m_iNumHealSupport);
-	CheckSum(iSum, m_iExcileChange);
+	CheckSum(iSum, m_iExileChange);
 	CheckSum(iSum, m_iPassageChange);
 	CheckSum(iSum, m_iNoNonOwnedCityEntryChange);
 	CheckSum(iSum, m_iBarbCoExistChange);
@@ -31936,7 +31936,7 @@ CvUnitCombatInfo::CvUnitCombatInfo()
 	, m_iCombatModifierPerVolumeLessChange(0)
 	, m_iSelfHealModifier(0)
 	, m_iNumHealSupport(0)
-	, m_iExcileChange(0)
+	, m_iExileChange(0)
 	, m_iPassageChange(0)
 	, m_iNoNonOwnedCityEntryChange(0)
 	, m_iBarbCoExistChange(0)
@@ -32766,9 +32766,9 @@ int CvUnitCombatInfo::getNumHealSupport() const
 	return m_iNumHealSupport;
 }
 
-int CvUnitCombatInfo::getExcileChange() const
+int CvUnitCombatInfo::getExileChange() const
 {
-	return m_iExcileChange;
+	return m_iExileChange;
 }
 
 int CvUnitCombatInfo::getPassageChange() const
@@ -33924,7 +33924,7 @@ bool CvUnitCombatInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iCombatModifierPerVolumeLessChange, L"iCombatModifierPerVolumeLessChange");
 	pXML->GetOptionalChildXmlValByName(&m_iSelfHealModifier, L"iSelfHealModifier");
 	pXML->GetOptionalChildXmlValByName(&m_iNumHealSupport, L"iNumHealSupport");
-	pXML->GetOptionalChildXmlValByName(&m_iExcileChange, L"iExcileChange");
+	pXML->GetOptionalChildXmlValByName(&m_iExileChange, L"iExileChange");
 	pXML->GetOptionalChildXmlValByName(&m_iPassageChange, L"iPassageChange");
 	pXML->GetOptionalChildXmlValByName(&m_iNoNonOwnedCityEntryChange, L"iNoNonOwnedCityEntryChange");
 	pXML->GetOptionalChildXmlValByName(&m_iBarbCoExistChange, L"iBarbCoExistChange");
@@ -35135,7 +35135,7 @@ void CvUnitCombatInfo::copyNonDefaults(CvUnitCombatInfo* pClassInfo)
 	if (m_iCombatModifierPerVolumeLessChange == iDefault) m_iCombatModifierPerVolumeLessChange = pClassInfo->m_iCombatModifierPerVolumeLessChange;
 	if (getSelfHealModifier() == iDefault) m_iSelfHealModifier = pClassInfo->getSelfHealModifier();
 	if (getNumHealSupport() == iDefault) m_iNumHealSupport = pClassInfo->getNumHealSupport();
-	if (getExcileChange() == iDefault) m_iExcileChange = pClassInfo->getExcileChange();
+	if (getExileChange() == iDefault) m_iExileChange = pClassInfo->getExileChange();
 	if (getPassageChange() == iDefault) m_iPassageChange = pClassInfo->getPassageChange();
 	if (getNoNonOwnedCityEntryChange() == iDefault) m_iNoNonOwnedCityEntryChange = pClassInfo->getNoNonOwnedCityEntryChange();
 	if (getBarbCoExistChange() == iDefault) m_iBarbCoExistChange = pClassInfo->getBarbCoExistChange();
@@ -35748,7 +35748,7 @@ void CvUnitCombatInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iCombatModifierPerVolumeLessChange);
 	CheckSum(iSum, m_iSelfHealModifier);
 	CheckSum(iSum, m_iNumHealSupport);
-	CheckSum(iSum, m_iExcileChange);
+	CheckSum(iSum, m_iExileChange);
 	CheckSum(iSum, m_iPassageChange);
 	CheckSum(iSum, m_iNoNonOwnedCityEntryChange);
 	CheckSum(iSum, m_iBarbCoExistChange);

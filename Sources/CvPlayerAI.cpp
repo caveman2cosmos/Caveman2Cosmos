@@ -27750,12 +27750,12 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	}
 	iValue += iTemp;
 
-	iTemp = kPromotion.getExcileChange();
+	iTemp = kPromotion.getExileChange();
 	if (iTemp < 0)
 	{
 		if (pUnit != NULL)
 		{
-			if (pUnit->isExcile())
+			if (pUnit->isExile())
 			{
 				iValue += 25;
 			}
@@ -27765,7 +27765,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 	{
 		if (pUnit != NULL)
 		{
-			if (!pUnit->isExcile())
+			if (!pUnit->isExile())
 			{
 				iValue -= 25;
 			}

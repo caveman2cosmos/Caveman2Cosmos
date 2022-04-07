@@ -7489,7 +7489,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_EXILE</Type>
 			<Description>TXT_KEY_UNIT_EXILE</Description>
-			<iExcileChange>1</iExcileChange>
+			<iExileChange>1</iExileChange>
 			<iBarbCoExistChange>1</iBarbCoExistChange>
 			<bIgnoreZoneofControlAdd>1</bIgnoreZoneofControlAdd>
 			<iChanceFirstStrikesChange>1</iChanceFirstStrikesChange>

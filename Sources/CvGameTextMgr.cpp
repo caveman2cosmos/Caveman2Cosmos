@@ -2590,10 +2590,10 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				szString.append(gDLL->getText("TXT_KEY_UPGRADE_ANYWHERE"));
 			}
 
-			if (pUnit->isExcile())
+			if (pUnit->isExile())
 			{
 				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_EXCILE"));
+				szString.append(gDLL->getText("TXT_KEY_EXILE"));
 			}
 
 			if (pUnit->isPassage())
@@ -12986,7 +12986,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 
 	int	iGetControlPoints = 0;
 	int	iGetCommandRange = 0;
-	int	iExcileChange = 0;
+	int	iExileChange = 0;
 	int	iPassageChange = 0;
 	int	iNoNonOwnedCityEntryChange = 0;
 	int	iBarbCoExistChange = 0;
@@ -13129,7 +13129,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 
 		iGetControlPoints += promoX.getControlPoints();
 		iGetCommandRange += promoX.getCommandRange();
-		iExcileChange += promoX.getExcileChange();
+		iExileChange += promoX.getExileChange();
 		iPassageChange += promoX.getPassageChange();
 		iNoNonOwnedCityEntryChange += promoX.getNoNonOwnedCityEntryChange();
 		iBarbCoExistChange += promoX.getBarbCoExistChange();
@@ -13310,15 +13310,15 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		szBuffer.append(pcNewline);
 		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_COMMAND_RANGE", iGetCommandRange));
 	}
-	if (iExcileChange > 0)
+	if (iExileChange > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EXCILE_ADD"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EXILE_ADD"));
 	}
-	if (iExcileChange < 0)
+	if (iExileChange < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EXCILE_REMOVE"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EXILE_REMOVE"));
 	}
 	if (iPassageChange > 0)
 	{
@@ -19208,10 +19208,10 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_HIDDEN_NATIONALITY"));
 		}
 
-		if (kUnit.isExcile())
+		if (kUnit.isExile())
 		{
 			szBuffer.append(NEWLINE);
-			szBuffer.append(gDLL->getText("TXT_KEY_EXCILE"));
+			szBuffer.append(gDLL->getText("TXT_KEY_EXILE"));
 		}
 
 		if (kUnit.isPassage())
@@ -27629,15 +27629,15 @@ void CvGameTextMgr::setUnitCombatHelp(CvWStringBuffer& szBuffer, UnitCombatTypes
 		szBuffer.append(info.getDescription());
 	}
 
-	if (info.getExcileChange() > 0)
+	if (info.getExileChange() > 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EXCILE_ADD"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EXILE_ADD"));
 	}
-	if (info.getExcileChange() < 0)
+	if (info.getExileChange() < 0)
 	{
 		szBuffer.append(NEWLINE);
-		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EXCILE_REMOVE"));
+		szBuffer.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_EXILE_REMOVE"));
 	}
 
 	if (info.getPassageChange() > 0)
