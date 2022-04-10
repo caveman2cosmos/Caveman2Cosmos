@@ -263,10 +263,10 @@ class WBTechScreen:
 						txt = self.positive
 					else: txt = self.negative
 					txt += "<font=3b>" + self.sAllPlayers
-					STR = "BTN|AllPlayers0"
-					screen.hide(STR)
-					screen.modifyString(STR, txt, 0)
-					screen.show(STR)
+					text = "BTN|AllPlayers0"
+					screen.hide(text)
+					screen.modifyString(text, txt, 0)
+					screen.show(text)
 
 				elif TYPE == "NoNPC":
 					self.bNoNPC = not self.bNoNPC
@@ -274,10 +274,10 @@ class WBTechScreen:
 						txt = self.positive
 					else: txt = self.negative
 					txt += "<font=3b>" + self.sNotNPC
-					STR = "BTN|NoNPC0"
-					screen.hide(STR)
-					screen.modifyString(STR, txt, 0)
-					screen.show(STR)
+					text = "BTN|NoNPC0"
+					screen.hide(text)
+					screen.modifyString(text, txt, 0)
+					screen.show(text)
 
 			elif inputClass.iData1 == 999:
 				if szFlag == "MOUSE_RBUTTONUP":

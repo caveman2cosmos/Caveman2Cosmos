@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
-		<!-- Subdued Units -->
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_AARDVARK</Type>
 			<Capture>UNIT_SUBDUED_AARDVARK</Capture>
@@ -1335,6 +1334,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>			
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1364,7 +1427,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -4067,6 +4130,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>			
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4094,7 +4221,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -4324,6 +4451,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4347,7 +4538,7 @@
 				<BuildingType>BUILDING_CRAB_NETS</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -4908,6 +5099,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4936,7 +5191,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -5198,6 +5453,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5221,7 +5540,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -7391,6 +7710,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7419,7 +7802,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -7847,6 +8230,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7876,7 +8323,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -8257,6 +8704,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8286,7 +8797,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -9436,6 +9947,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9465,7 +10040,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -11393,6 +11968,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11420,7 +12059,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -12027,6 +12666,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12053,7 +12756,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -12084,7 +12787,71 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
-			<MapCategoryTypes>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
+			<MapCategoryTypes>			
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
@@ -12110,7 +12877,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -12141,6 +12908,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12170,7 +13001,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -12922,6 +13753,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12953,7 +13848,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -13437,6 +14332,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13466,7 +14425,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -15166,6 +16125,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15192,7 +16215,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -15860,6 +16883,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15889,7 +16976,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -17134,6 +18221,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17165,7 +18316,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -17308,7 +18459,71 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
-			<MapCategoryTypes>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
+			<MapCategoryTypes>			
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
@@ -17338,7 +18553,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -17601,6 +18816,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17629,7 +18908,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -17660,6 +18939,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17688,7 +19031,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -17719,6 +19062,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17746,7 +19153,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -19477,6 +20884,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -19504,7 +20975,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -20063,6 +21534,70 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20093,7 +21628,7 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>3</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -20517,6 +22052,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20538,7 +22137,7 @@
 				<BuildingType>BUILDING_FOLKLORE_LEVIATHAN</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -20561,6 +22160,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20581,7 +22244,7 @@
 				<BuildingType>BUILDING_FOLKLORE_COD</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -20604,6 +22267,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20624,7 +22351,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -20645,8 +22372,72 @@
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
-			</SubCombatTypes>
+			</SubCombatTypes>			
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20667,7 +22458,7 @@
 				<BuildingType>BUILDING_FOLKLORE_DOLPHIN</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -20690,6 +22481,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20709,7 +22564,7 @@
 				<BuildingType>BUILDING_FOLKLORE_DUGONG</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -20732,6 +22587,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20752,7 +22671,7 @@
 				<BuildingType>BUILDING_FOLKLORE_KRAKEN</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -20775,6 +22694,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20796,7 +22779,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SHARK</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -20819,6 +22802,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20840,7 +22887,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SHARK</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -20863,6 +22910,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20884,7 +22995,7 @@
 				<BuildingType>BUILDING_FOLKLORE_LEVIATHAN</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -20908,6 +23019,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20928,7 +23103,7 @@
 				<BuildingType>BUILDING_FOLKLORE_MACKEREL</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1</fMaxSpeed>
@@ -20950,6 +23125,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20971,7 +23210,7 @@
 				<BuildingType>BUILDING_FOLKLORE_RAY</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1</fMaxSpeed>
@@ -20993,6 +23232,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21013,7 +23316,7 @@
 				<BuildingType>BUILDING_FOLKLORE_MARLIN</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -21036,6 +23339,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21057,7 +23424,7 @@
 				<BuildingType>BUILDING_FOLKLORE_LEVIATHAN</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1</fMaxSpeed>
@@ -21079,6 +23446,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21101,7 +23532,7 @@
 				<BuildingType>BUILDING_FOLKLORE_LEVIATHAN</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -21124,6 +23555,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21145,7 +23640,7 @@
 				<BuildingType>BUILDING_FOLKLORE_LEVIATHAN</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -21168,6 +23663,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21189,7 +23748,7 @@
 				<BuildingType>BUILDING_FOLKLORE_RAY</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -21212,6 +23771,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21233,7 +23856,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SHARK</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -21256,6 +23879,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21276,7 +23963,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROC_LARGE</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -21299,6 +23986,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21319,7 +24070,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROC</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -21342,6 +24093,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21362,7 +24177,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SEATURTLE</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -21385,6 +24200,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21404,7 +24283,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -21427,6 +24306,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21447,7 +24390,7 @@
 				<BuildingType>BUILDING_FOLKLORE_TUNA</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -21470,6 +24413,70 @@
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+			</TerrainImpassableTypes>
+			<TerrainPassableTechs>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<PassableTech>TECH_SEAFARING</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PassableTech>TECH_ASTRONOMY</PassableTech>
+				</TerrainPassableTech>
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -21493,7 +24500,7 @@
 				<BuildingType>BUILDING_FOLKLORE_LEVIATHAN</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
-			<iMoves>5</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
