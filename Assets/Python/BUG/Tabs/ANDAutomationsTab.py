@@ -201,14 +201,16 @@ class ANDAutomationsTab(BugOptionsTab.BugOptionsTab):
 		TRNSLTR = CyTranslator()
 		iNumBuilds = GC.getNumBuildInfos()
 		if self.ANewDawnOpt.isShowCityAutomations():
+			n = -1
 			for cityX in player.cities():
 				if not bFirst:
 					self.addSpacer(screen, left, "City Spacer")
 				bFirst = False
 
 				szCityName = TextUtil.convertToAscii(cityX.getName())
+				n += 1
+				self.addLabel(screen, left, szCityName + str(n), TRNSLTR.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", (szCityName,)), None, False, True)
 
-				self.addLabel(screen, left, TRNSLTR.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", (szCityName,)), TRNSLTR.getText("TXT_KEY_AUTOMATED_WORKERS_CAN_BUILD_CITY", (szCityName,)), None, False, True)
 				col1, col2, col3, col4, col5 = self.addMultiColumnLayout(screen, left, 5, "Automate_Workers")
 
 				iCount = 0
