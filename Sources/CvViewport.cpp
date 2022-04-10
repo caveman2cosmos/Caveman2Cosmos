@@ -77,7 +77,7 @@ void CvViewport::resizeForMap()
 		//	Force-load the main interface BUG module so we can get at the viewport BUG settings
 		Cy::call("CvAppInterface", "initBUG");
 	}
-
+#ifdef OLD_CODE
 	m_iXSize = GC.getENABLE_VIEWPORTS() ? GC.getVIEWPORT_SIZE_X() : m_pMap->getGridWidth();
 	m_iYSize = GC.getENABLE_VIEWPORTS() ? GC.getVIEWPORT_SIZE_Y() : m_pMap->getGridHeight();
 
@@ -91,6 +91,34 @@ void CvViewport::resizeForMap()
 	{
 		m_iYSize = m_pMap->getGridHeight();
 	}
+#else
+	if (GC.getENABLE_VIEWPORTS())
+	{
+		m_iXSize = GC.getVIEWPORT_SIZE_X();
+		m_iYSize = GC.getVIEWPORT_SIZE_Y();
+/*
+		// For now we don't allow maps smaller than the viewport size
+		if (m_iXSize > m_pMap->getGridWidth())
+		{
+			m_iXSize = m_pMap->getGridWidth();
+		}
+		if (m_iYSize > m_pMap->getGridHeight())
+		{
+			m_iYSize = m_pMap->getGridHeight();
+		}
+*/
+	}
+	else if (m_pMap->getType() == MAP_EARTH)
+	{
+		m_iXSize = m_pMap->getGridWidth();
+		m_iYSize = m_pMap->getGridHeight();
+	}
+	else
+	{
+		m_iXSize = GC.getMapByIndex(MAP_EARTH).getGridWidth();
+		m_iYSize = GC.getMapByIndex(MAP_EARTH).getGridHeight();
+	}
+#endif
 }
 
 void CvViewport::bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity)
