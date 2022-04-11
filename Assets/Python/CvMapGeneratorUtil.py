@@ -484,17 +484,17 @@ def printMap(data, w, h, markerx=-1, markery=-1):
 	hrange = range(h)
 	hrange.reverse()
 	for y in hrange:
-		str = "|"
+		txt = "|"
 		for x in range(w):
 			val = data[y*w + x]
 			if (x,y) == (markerx, markery):
-				str += "O"
+				txt += "O"
 			elif val != 0:
-				str += "X"
+				txt += "X"
 			else:
-				str += " "
-		str += "|"
-		print str
+				txt += " "
+		txt += "|"
+		print txt
 	print "-"*(w+2)
 
 '''

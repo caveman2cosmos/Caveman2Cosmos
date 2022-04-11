@@ -1967,7 +1967,6 @@ class ClimateMap3:
 		incX	 = 0
 		incY	 = 0
 		geoIndex = 0
-		str = ""
 		for zone in range(6):
 			topY		= em.GetYFromZone(zone, True)
 			bottomY = em.GetYFromZone(zone, False)
