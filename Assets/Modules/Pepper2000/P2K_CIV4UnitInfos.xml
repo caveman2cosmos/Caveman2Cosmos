@@ -39,7 +39,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CONSTRUCTION_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<UnitAIs>
 				<UnitAI>
@@ -61,11 +60,11 @@
 				<BuildType>BUILD_MARTIAN_MINE</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>3131</iCost>
+			<iCost>2435</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
