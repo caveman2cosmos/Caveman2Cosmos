@@ -22,10 +22,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_CHAIR_ELECTION</Tag>
-		<English>As Chair of the Congress of Vienna, you can choose a Congress Act to put forward for a global vote (you have %d1_MyNum Votes).</English>
-		<French>En tant que Porte parole du Congrès de Vienne, vous pouvez choisir un Acte du Congrès, qui sera soumis au vote (vous avez %d1_MyNum Votes).</French>
-		<Italian>Come Portavoce del Congresso di Vienna, puoi scegliere un Atto da sottoporre a votazione (hai %d1_MyNum voti a disposizione).</Italian>
-		<Russian>Как председатель Венского конгресса, вы вправе предложить Акт Конгресса для вынесения его на всеобщее голосование (у вас есть %d1_MyNum голосов).</Russian>
+		<English>As Chair of the Congress of Vienna, you can choose a Congress Act to put forward for a global vote.</English>
+		<French>En tant que Porte parole du Congrès de Vienne, vous pouvez choisir un Acte du Congrès, qui sera soumis au vote.</French>
+		<Italian>Come Portavoce del Congresso di Vienna, puoi scegliere un Atto da sottoporre a votazione.</Italian>
+		<Russian>Как председатель Венского конгресса, вы вправе предложить Акт Конгресса для вынесения его на всеобщее голосование.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_CHOOSE_ELECTION</Tag>

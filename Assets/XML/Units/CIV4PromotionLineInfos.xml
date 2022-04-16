@@ -93,6 +93,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_ASSAULT_MECH</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_STRIKE_TEAM</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_FLANKING</Type>
@@ -109,6 +112,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_ASSAULT_MECH</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_AIR</DomainType>
 			</NotOnDomainTypes>
@@ -131,6 +137,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -154,6 +163,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -177,6 +189,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -200,6 +215,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -215,6 +233,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_HITECH</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -231,6 +252,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_ROBOT</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_HELICOPTER</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 			</NotOnDomainTypes>
@@ -272,6 +296,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_ASSAULT_MECH</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_DREADNOUGHT</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 			</NotOnDomainTypes>
@@ -286,6 +313,10 @@
 				<UnitCombatPrereqType>UNITCOMBAT_ROBOT</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_BIOLOGICAL</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_FIELD</Type>
@@ -371,6 +402,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_DREADNOUGHT</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 			</NotOnDomainTypes>
@@ -388,6 +422,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_HELICOPTER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_DREADNOUGHT</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 			</NotOnDomainTypes>
@@ -415,6 +452,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_ANIMAL</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_STRIKE_TEAM</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -436,6 +476,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_HUNTER</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_RECON</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -458,6 +501,7 @@
 				<NotOnUnitCombatType>UNITCOMBAT_CRIMINAL</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_STRIKE_TEAM</NotOnUnitCombatType>
 				<NotOnUnitCombatType>UNITCOMBAT_RUFFIAN</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
@@ -509,6 +553,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_DREADNOUGHT</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_LAW_ENFORCEMENT</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -555,6 +602,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_CLONES</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_ASSAULT_MECH</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -641,6 +691,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_GUN</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_INTERCEPTION</Type>
@@ -782,6 +835,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_WHEELED</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_TRACKED</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 				<DomainType>DOMAIN_AIR</DomainType>
@@ -801,6 +857,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_SUBMARINE</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_NUCLEAR_SHIPS</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_AIR</DomainType>
 			</NotOnDomainTypes>
@@ -818,6 +877,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_ASSAULT_MECH</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_DREADNOUGHT</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_AIR</DomainType>
 			</NotOnDomainTypes>
@@ -1489,6 +1551,9 @@
 				<UnitCombatPrereqType>UNITCOMBAT_FELINE</UnitCombatPrereqType>
 				<UnitCombatPrereqType>UNITCOMBAT_MAMMAL_URSINE</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
+			<NotOnUnitCombatTypes>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
+			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_CHASE</Type>
@@ -1642,6 +1707,7 @@
 			</UnitCombatPrereqTypes>
 			<NotOnUnitCombatTypes>
 				<NotOnUnitCombatType>UNITCOMBAT_ANIMAL</NotOnUnitCombatType>
+				<NotOnUnitCombatType>UNITCOMBAT_PACIFIST</NotOnUnitCombatType>
 			</NotOnUnitCombatTypes>
 		</PromotionLineInfo>
 		<PromotionLineInfo>

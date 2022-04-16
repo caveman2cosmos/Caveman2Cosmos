@@ -14,6 +14,7 @@
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_EPIC</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
@@ -78,6 +79,7 @@
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
@@ -144,6 +146,7 @@
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
@@ -217,6 +220,7 @@
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
@@ -292,6 +296,7 @@
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_POOR</SubCombatType>
@@ -367,6 +372,7 @@
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_POOR</SubCombatType>
@@ -42352,8 +42358,8 @@
 			<Capture>UNIT_WORKER</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_POOR</SubCombatType>
@@ -46040,7 +46046,6 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE</OutcomeType>
 							<iChance>100</iChance>
-							<PythonCallback>doSacrificeCaptive</PythonCallback>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
@@ -46060,7 +46065,6 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_ALTER_I</OutcomeType>
 							<iChance>100</iChance>
-							<PythonCallback>doSacrificeCaptive</PythonCallback>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
@@ -46080,7 +46084,6 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_ALTER_II</OutcomeType>
 							<iChance>100</iChance>
-							<PythonCallback>doSacrificeCaptive</PythonCallback>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
@@ -46100,7 +46103,6 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_DRUID</OutcomeType>
 							<iChance>100</iChance>
-							<PythonCallback>doSacrificeCaptive</PythonCallback>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
@@ -46123,7 +46125,6 @@
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
-							<PythonCallback>doSacrificeCaptive</PythonCallback>
 							<Commerces>
 								<iCommerce>0</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -46140,7 +46141,6 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_DRUID_ALTER_II</OutcomeType>
 							<iChance>100</iChance>
-							<PythonCallback>doSacrificeCaptive</PythonCallback>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
@@ -46160,7 +46160,6 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_MESOAMERICAN</OutcomeType>
 							<iChance>100</iChance>
-							<PythonCallback>doSacrificeCaptive</PythonCallback>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
@@ -46180,7 +46179,6 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_MESOAMERICAN_ALTER_I</OutcomeType>
 							<iChance>100</iChance>
-							<PythonCallback>doSacrificeCaptive</PythonCallback>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
@@ -46200,7 +46198,6 @@
 						<Outcome>
 							<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_MESOAMERICAN_ALTER_II</OutcomeType>
 							<iChance>100</iChance>
-							<PythonCallback>doSacrificeCaptive</PythonCallback>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
@@ -46465,6 +46462,7 @@
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>

@@ -117,7 +117,7 @@ def onEndGameTurn(argsList):
 	for i in xrange(MAX_PC_PLAYERS):
 		playerI = GC.getPlayer(i)
 		if playerI.isRebel():
-			if not GC.getTeam(playerI.getTeam()).getAtWarCount(True):
+			if not GC.getTeam(playerI.getTeam()).isAtWar(False):
 				playerI.setIsRebel(False)
 				if LOG_DEBUG:
 					print "[REV] %s (Player %d) is no longer a rebel due to no wars"%(playerI.getCivilizationDescription(0), i)
@@ -192,7 +192,7 @@ def onSetPlayerAlive(argsList):
 				if LOG_DEBUG:
 					print "[REV] The dying %s are the rebel type for %s"%(pPlayer.getCivilizationDescription(0), pCity.getName())
 
-				if GC.getTeam(pPlayer.getTeam()).isAtWar(pCity.getTeam()):
+				if GC.getTeam(pPlayer.getTeam()).isAtWarWith(pCity.getTeam()):
 					revIdx = pCity.getRevolutionIndex()
 					localIdx = pCity.getLocalRevIndex()
 					revCnt = pCity.getNumRevolts(iPlayerX)
@@ -254,7 +254,7 @@ def onSetPlayerAlive(argsList):
 	pTeam = GC.getTeam(pPlayer.getTeam())
 	if endWarsOnDeath and (pTeam.getNumMembers() == 1 or not pTeam.isAlive()):
 		for idx in xrange(MAX_PC_TEAMS):
-			if idx != pTeam.getID() and not GC.getTeam(idx).isMinorCiv() and pTeam.isAtWar(idx):
+			if idx != pTeam.getID() and not GC.getTeam(idx).isMinorCiv() and pTeam.isAtWarWith(idx):
 				pTeam.makePeace(idx)
 
 	if pPlayer.isMinorCiv():
@@ -763,7 +763,7 @@ def updateAttitudeExtras( bVerbose = False ) :
 					print "[REV] Extra Attitude for %s of %s now %d"%(playerI.getCivilizationDescription(0),playerJ.getCivilizationDescription(0),playerI.AI_getAttitudeExtra(j))
 			elif( attEx < 0 and GAME.getSorenRandNum(100,'Rev: Attitude') < -attEx*20 ) :
 				teamI = GC.getTeam( playerI.getTeam() )
-				if( not teamI.isAtWar( playerJ.getTeam() ) ) :
+				if( not teamI.isAtWarWith( playerJ.getTeam() ) ) :
 					playerI.AI_changeAttitudeExtra(j, -(attEx/10))
 					if LOG_DEBUG and bVerbose:
 						print "[REV] Extra Attitude for %s of %s now %d"%(playerI.getCivilizationDescription(0),playerJ.getCivilizationDescription(0),playerI.AI_getAttitudeExtra(j))
@@ -792,7 +792,7 @@ def removeFloatingRebellions():
 
 		print "[REV] Player %d (%s) is a homeless rebel"%(iPlayerX, playerX.getCivilizationDescription(0))
 
-		if not GC.getTeam(playerX.getTeam()).getAtWarCount(True):
+		if not GC.getTeam(playerX.getTeam()).isAtWar(False):
 			print "[REV] Rebel player %d has lost their cause, terminating rebel" % iPlayerX
 			playerX.killUnits()
 
@@ -847,7 +847,7 @@ def checkForAssimilation():
 
 		if iPlayerML != None:
 			CyPlayerML = GC.getPlayer(iPlayerML)
-			bWarSeparatist = CyTeamX.isAtWar(CyPlayerML.getTeam())
+			bWarSeparatist = CyTeamX.isAtWarWith(CyPlayerML.getTeam())
 			if bWarSeparatist:
 				revTurn = RevData.revObjectGetVal(CyPlayerX, 'RevolutionTurn')
 				if revTurn != None and iTurn - revTurn < 40:
@@ -1049,7 +1049,7 @@ def assimilateHandler(iPlayerID, netUserData, popupReturn):
 # Small revolts are short duration disorder striking a city, shutting down production and culture, etc.
 def doSmallRevolts(iPlayer, CyPlayer):
 
-	if iPlayer > 39:
+	if iPlayer >= GC.getMAX_PC_PLAYERS():
 		raise "NPC does not revolt!"
 
 	for city in CyPlayer.cities():

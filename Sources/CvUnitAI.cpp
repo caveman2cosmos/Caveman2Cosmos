@@ -2046,15 +2046,28 @@ void CvUnitAI::AI_workerMove()
 	// If worker (or captive) is not defended, and is outside own borders.
 	if (bAbroad)
 	{
-		if (!getGroup()->canDefend() && AI_workerNeedsDefender(plot()))
+		if (getGroup()->canDefend())
+		{
+			if (!isHuman() && AI_workerReleaseDefenderIfNotNeeded())
+			{
+				OutputDebugString(CvString::format("%S (%d) AI_workerReleaseDefenderIfNotNeeded 1 (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
+
+				if (AI_reachHome())
+				{
+					OutputDebugString(CvString::format("%S (%d) AI_reachHome 1 true (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
+					return;
+				}
+			}
+		}
+		else if (AI_workerNeedsDefender(plot()))
 		{
 			// If I can reach safety on my own this turn then don't bother other units with our escape.
 			if (AI_reachHome())
 			{
-				OutputDebugString(CvString::format("%S (%d) AI_reachHome true (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
+				OutputDebugString(CvString::format("%S (%d) AI_reachHome 2 true (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
 				return;
 			}
-			OutputDebugString(CvString::format("%S (%d) AI_reachHome false (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
+			OutputDebugString(CvString::format("%S (%d) AI_reachHome 2 false (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
 			// Look for a local group we can join to be safe!
 			// We do want to take control (otherwise other unit decides where this worker goes, and can go further away)
 			AI_setLeaderPriority(LEADER_PRIORITY_MAX);
@@ -2083,16 +2096,12 @@ void CvUnitAI::AI_workerMove()
 				return;
 			}
 		}
-		else if (!isHuman() && AI_workerReleaseDefenderIfNotNeeded())
-		{
-			OutputDebugString(CvString::format("%S (%d) AI_workerReleaseDefenderIfNotNeeded 1 (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
-			return;
-		}
 		// Toffer - After reaching this point the worker will always start making route from here to friendly territory... May be better things to do elsewhere.
 		//	Should check if improving this neutal plot is worthwhile and if not just start going to a more worthwhile plot/job.
 	}
 	else if (!isHuman() && AI_workerReleaseDefenderIfNotNeeded())
 	{
+		OutputDebugString(CvString::format("%S (%d) AI_workerReleaseDefenderIfNotNeeded 2 (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
 		return;
 	}
 	//ls612: Combat Worker Danger Evaluation
@@ -15987,7 +15996,7 @@ bool CvUnitAI::AI_safety(int iRange)
 					//GC.getGame().logOOSSpecial(26, pLoopPlot->getX(), pLoopPlot->getY(), getID());
 					int iPathTurns = 0;
 					if ((!pLoopPlot->isVisible(getTeam(), false) || !pLoopPlot->isVisibleEnemyUnit(this))
-						&& generatePath(pLoopPlot, ((iPass > 0) ? MOVE_IGNORE_DANGER : 0), true, &iPathTurns, iRange))
+					&& generatePath(pLoopPlot, (iPass > 0) ? MOVE_IGNORE_DANGER : 0, true, &iPathTurns, iRange))
 					{
 						//GC.getGame().logOOSSpecial(27, iPass, iPathTurns, iRange);
 						//GC.getGame().logOOSSpecial(28, iPass, iPathTurns, iRange);
@@ -16100,7 +16109,7 @@ bool CvUnitAI::AI_reachHome(const bool bMockRun) const
 {
 	PROFILE_FUNC();
 
-	OutputDebugString(CvString::format("%S (%d) AI_reachHome (%d,%d)...\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
+	OutputDebugString(CvString::format("%S (%d) AI_reachHome (%d,%d)...%d\n", getDescription().c_str(), m_iID, m_iX, m_iY, (int)bMockRun).c_str());
 
 	if (bMockRun && plot()->getOwner() == getOwner())
 	{
@@ -16147,10 +16156,10 @@ bool CvUnitAI::AI_reachHome(const bool bMockRun) const
 
 		if (iValue > iBestValue)
 		{
+			if (bMockRun) return true;
+
 			iBestValue = iValue;
 			pBestPlot = plotX;
-
-			if (bMockRun) return true;
 		}
 	}
 	if (pBestPlot != NULL)
@@ -22483,7 +22492,7 @@ bool CvUnitAI::AI_workerNeedsDefender(const CvPlot* pPlot) const
 
 bool CvUnitAI::AI_workerReleaseDefenderIfNotNeeded() const
 {
-	if (isNPC())
+	if (isNPC() || getGroup()->getNumUnits() < 2)
 	{
 		// NPC rarely has anything better to do with military unit than be a hinder against other players capturing workers from them.
 		// NPC always return false on AI_workerNeedsDefender, so may get stuck in an infinite loop of grouping/ungrouping with defenders.
@@ -22501,13 +22510,14 @@ bool CvUnitAI::AI_workerReleaseDefenderIfNotNeeded() const
 		{
 			if (gUnitLogLevel >= 3)
 			{
-				logBBAI("	Worker for player %d (%S) at (%d,%d) releasing escort",
-						getOwner(),
-						GET_PLAYER(getOwner()).getCivilizationDescription(0),
-						getX(),
-						getY());
+				logBBAI(
+					"	Worker for player %d (%S) at (%d,%d) releasing escort",
+					getOwner(),
+					GET_PLAYER(getOwner()).getCivilizationDescription(0),
+					getX(),
+					getY()
+				);
 			}
-
 			getGroup()->AI_makeForceSeparate();
 
 			return true;
@@ -28921,11 +28931,11 @@ int	CvUnitAI::AI_genericUnitValueTimes100(UnitValueFlags eFlags) const
 	{
 		int	iResult = 100 * baseCombatStrNonGranular();
 
-		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+		foreach_(const STD_PAIR(PromotionTypes, PromotionKeyedInfo)& keyedInfo, getPromotionKeyedInfo())
 		{
-			if (isHasPromotion((PromotionTypes)iI))
+			if (keyedInfo.second.m_bHasPromotion)
 			{
-				const CvPromotionInfo& kPromotion = GC.getPromotionInfo((PromotionTypes)iI);
+				const CvPromotionInfo& kPromotion = GC.getPromotionInfo(keyedInfo.first);
 				bool bPromotionHasAccountedValue = false;
 
 				//	Generic strength multiplier

@@ -4316,7 +4316,7 @@ class CvMainInterface:
 							continue
 						bTeamAlive = CyTeam.isAlive()
 						bTeamAliveDoOnce = True
-						bTeamAtWarWithYou = CyTeam.isAtWar(iTeamAct)
+						bTeamAtWarWithYou = CyTeam.isAtWarWith(iTeamAct)
 						j = self.iMaxPcPlayers - 1
 						while (j > -1):
 							iPlayer = GAME.getRankPlayer(j)
@@ -4552,7 +4552,7 @@ class CvMainInterface:
 											TD.ItemType = TradeableItems.TRADE_WAR
 											for iTeamX in xrange(MAX_PC_TEAMS):
 												if iTeamX in (iTeamAct, iTeam): continue
-												if CyTeam.isAtWar(iTeamX) or not CyTeamAct.isHasMet(iTeamX) or not CyTeam.isHasMet(iTeamX):
+												if CyTeam.isAtWarWith(iTeamX) or not CyTeamAct.isHasMet(iTeamX) or not CyTeam.isHasMet(iTeamX):
 													continue
 												TD.iData = iTeamX
 												if CyPlayer.canTradeItem(iPlayerAct, TD, False):

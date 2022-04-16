@@ -3080,8 +3080,14 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					bool bFirst = true;
 					for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
 					{
-						const int iSpotIntensity = pUnit->visibilityIntensityTotal((InvisibleTypes)iJ);
-						if (iSpotIntensity > 0 || GC.getInvisibleInfo((InvisibleTypes) iJ).isIntrinsic())
+						const InvisibleTypes eTypeX = static_cast<InvisibleTypes>(iJ);
+
+						if (GC.getInvisibleInfo(eTypeX).isIntrinsic() && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+						{
+							continue;
+						}
+						const int iSpotIntensity = pUnit->visibilityIntensityTotal(eTypeX);
+						if (iSpotIntensity > 0 || GC.getInvisibleInfo(eTypeX).isIntrinsic())
 						{
 							if (bFirst)
 							{
@@ -3093,7 +3099,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 							{
 								szString.append(L", ");
 							}
-							szString.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo((InvisibleTypes) iJ).getChar()));
+							szString.append(CvWString::format(L"%d%c", iSpotIntensity, GC.getInvisibleInfo(eTypeX).getChar()));
 						}
 					}
 					bFirst = true;
@@ -7233,18 +7239,22 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 
 						if (iView & getBugOptionINT("ACO__ShowTotalDefenseModifier", 2, "ACO_SHOW_TOTAL_DEFENSE_MODIFIER"))
 						{
-							//szString.append(L' ');//XXX
-							if (pDefender->maxCombatStr(pPlot, pAttacker) > pDefender->baseCombatStr() * 100) // modifier is positive
-							{
-								szTempBuffer.Format(SETCOLR L"%d%%" ENDCOLR,
-									TEXT_COLOR("COLOR_NEGATIVE_TEXT"), (((pDefender->maxCombatStr(pPlot, pAttacker))) / pDefender->baseCombatStr()) - 100);
-							}
-							else   // modifier is negative
-							{
-								szTempBuffer.Format(SETCOLR L"%d%%" ENDCOLR,
-									TEXT_COLOR("COLOR_POSITIVE_TEXT"), (100 - ((pDefender->baseCombatStr() * 100) / (pDefender->maxCombatStr(pPlot, pAttacker)))));
-							}
+							const int iMaxCombatStr = pDefender->maxCombatStr(pPlot, pAttacker);
 
+							if (iMaxCombatStr > pDefender->baseCombatStr() * 100) // modifier is positive
+							{
+								szTempBuffer.Format(
+									SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT"),
+									iMaxCombatStr / pDefender->baseCombatStr() - 100
+								);
+							}
+							else if (iMaxCombatStr != 0) // modifier is negative
+							{
+								szTempBuffer.Format(
+									SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_POSITIVE_TEXT"),
+									100 - pDefender->baseCombatStr() * 100 / iMaxCombatStr
+								);
+							}
 							szString.append(gDLL->getText("TXT_ACO_TOTALDEFENSEMODIFIER"));
 							szString.append(szTempBuffer.GetCString());
 						}
@@ -9006,7 +9016,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			{
 				const InvisibleTypes eTypeX = static_cast<InvisibleTypes>(iJ);
 
-				if (!pPlot->isSpotterInSight(eActiveTeam, eTypeX))
+				if (!pPlot->isSpotterInSight(eActiveTeam, eTypeX)
+				|| GC.getInvisibleInfo(eTypeX).isIntrinsic() && !GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 				{
 					continue;
 				}

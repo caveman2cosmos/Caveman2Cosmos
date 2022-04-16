@@ -918,7 +918,7 @@
 	</Define>
 	<Define>
 		<DefineName>TECH_COST_MODIFIER</DefineName>
-		<iDefineIntVal>600</iDefineIntVal>
+		<iDefineIntVal>500</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MAXED_UNIT_GOLD_PERCENT</DefineName>
@@ -1731,5 +1731,11 @@
 	<Define>
 		<DefineName>ESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT</DefineName>
 		<iDefineIntVal>25</iDefineIntVal>
+	</Define>
+	<!-- A way to directly change scaling of national culture requirement to achieve next level -->
+	<!-- 100 is default, 50 would be requirement for next level growing 2x slower, meaning more traits gained in same time frame. -->
+	<Define>
+		<DefineName>NEXT_TRAIT_CULTURE_REQ_PERCENT</DefineName>
+		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 </Civ4Defines>

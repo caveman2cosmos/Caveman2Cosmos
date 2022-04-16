@@ -11946,9 +11946,10 @@ int CvCity::getCommerceFromPercent(CommerceTypes eIndex) const
 
 	if (eIndex == COMMERCE_GOLD)
 	{
-		return (
+		return std::max(
+			0,
 			(
-				iYieldRate
+				iYieldRate * 100
 				- iYieldRate * GET_PLAYER(getOwner()).getCommercePercent(COMMERCE_RESEARCH)
 				- iYieldRate * GET_PLAYER(getOwner()).getCommercePercent(COMMERCE_CULTURE)
 				- iYieldRate * GET_PLAYER(getOwner()).getCommercePercent(COMMERCE_ESPIONAGE)

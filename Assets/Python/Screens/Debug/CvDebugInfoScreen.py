@@ -123,7 +123,7 @@ class CvDebugInfoScreen(CvGFCScreen.CvGFCScreen):
 					if pTeamX.isHasMet(y):
 
 						# if at peace
-						if not pTeamX.isAtWar(y):
+						if not pTeamX.isAtWarWith(y):
 
 							# if defensive pact
 							if pTeamX.isDefensivePact(y):

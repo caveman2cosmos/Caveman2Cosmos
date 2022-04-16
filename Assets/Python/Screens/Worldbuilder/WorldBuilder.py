@@ -1140,7 +1140,7 @@ class WorldBuilder:
 				CyEngine().fillAreaBorderPlotAlt(pPlot.getX(), pPlot.getY(), AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS, "COLOR_BLUE", 1.0)
 		elif self.iPlayerAddMode == "Blockade":
 			if pPlot.isTradeNetwork(self.m_iCurrentTeam): return
-			if GC.getTeam(self.m_iCurrentTeam).isAtWar(pPlot.getTeam()): return
+			if GC.getTeam(self.m_iCurrentTeam).isAtWarWith(pPlot.getTeam()): return
 			if pPlot.isTradeNetworkImpassable(self.m_iCurrentTeam): return
 			if not pPlot.isOwned() and not pPlot.isRevealed(self.m_iCurrentTeam, False): return
 			if not pPlot.isBonusNetwork(self.m_iCurrentTeam): return

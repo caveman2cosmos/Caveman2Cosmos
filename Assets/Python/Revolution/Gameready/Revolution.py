@@ -605,7 +605,7 @@ class Revolution:
 
 		pRevTeam = GC.getTeam(pRevPlayer.getTeam())
 
-		if not pRevTeam.isAtWar(owner.getTeam()):
+		if not pRevTeam.isAtWarWith(owner.getTeam()):
 			return # Revolt has ended
 
 		# City must still be rebellious
@@ -777,7 +777,7 @@ class Revolution:
 			if ownerID == iPlayer:
 				mess = TRNSLTR.getText("TXT_KEY_REV_MESS_REINFORCEMENTS",()) + " %s!"%(pCity.getName())
 				CyInterface().addMessage(iPlayer, True, GC.getEVENT_MESSAGE_TIME(), mess, "AS2D_CITY_REVOLT", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, CyArtFileMgr().getInterfaceArtInfo("INTERFACE_RESISTANCE").getPath(), ColorTypes(7), ix, iy, True, True)
-			elif pRevTeam.isAtWar(GC.getPlayer(iPlayer).getTeam()) and pRevPlayer.canContact(iPlayer):
+			elif pRevTeam.isAtWarWith(GC.getPlayer(iPlayer).getTeam()) and pRevPlayer.canContact(iPlayer):
 				mess = TRNSLTR.getText("TXT_KEY_REV_MESS_REINFORCEMENTS",()) + " %s!"%(pCity.getName())
 				CyInterface().addMessage(iPlayer, False, GC.getEVENT_MESSAGE_TIME(), mess, None, InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, None, ColorTypes(7), -1, -1, False, False)
 			elif iRevPlayer == iPlayer:
@@ -1051,7 +1051,7 @@ class Revolution:
 				maxCultPlayer = iPlayer
 
 			# TODO: does this work with minor civs?
-			bWarWithMaxCult  = pTeam.isAtWar(GC.getPlayer(maxCultPlayer).getTeam())
+			bWarWithMaxCult  = pTeam.isAtWarWith(GC.getPlayer(maxCultPlayer).getTeam())
 			bMaxCultIsVassal = GC.getTeam(GC.getPlayer(maxCultPlayer).getTeam()).isVassal(pTeam.getID())
 
 
@@ -1738,7 +1738,7 @@ class Revolution:
 			iThresholdPercent += ((4 - iPlayerRank) * 5)
 
 		iNumWars = pTeam.getAtWarCount(True)
-		if( iNumWars > 0 ) :
+		if iNumWars > 0:
 			iThresholdPercent -= (10 + 2*min([iNumWars, 5])) # Afforess - must be inclosed in outer paren, fixes bug
 
 		if( pPlayer.isCurrentResearchRepeat() ) :
@@ -2008,7 +2008,7 @@ class Revolution:
 
 	def checkForRevolution(self, iGameTurn, iPlayer):
 
-		if iPlayer > 39:
+		if iPlayer >= GC.getMAX_PC_PLAYERS():
 			raise "NPC does not revolt!"
 
 		pPlayer = GC.getPlayer(iPlayer)
@@ -2171,7 +2171,7 @@ class Revolution:
 					+ '\n\n' + TRNSLTR.getText("TXT_KEY_REV_WARN_CIV_WIDE",()) + '\n'
 					+ self.updateCivStability(GAME.getGameTurn(), pPlayer.getID(), bIsRevWatch = True) + '\n\n'
 				)
-				if pTeam.getAtWarCount(True) > 0:
+				if pTeam.isAtWar(False):
 					bodStr += TRNSLTR.getText("TXT_KEY_REV_WARN_WARS",())
 				else:
 					bodStr += TRNSLTR.getText("TXT_KEY_REV_WARN_GLORY",()) + '  '
@@ -2287,7 +2287,7 @@ class Revolution:
 						playerI = GC.getPlayer( i )
 						if( playerI.isAlive() and playerI.getCivilizationType() == revCivType ) :
 							if( playerI.isRebel() and GC.getTeam(playerI.getTeam()).isRebelAgainst(pTeam.getID()) ) :
-								if( pTeam.isAtWar(playerI.getTeam()) ) :
+								if( pTeam.isAtWarWith(playerI.getTeam()) ) :
 									pRevPlayer = playerI
 									break
 
@@ -2415,10 +2415,10 @@ class Revolution:
 							if handoverCities:
 
 								if self.LOG_DEBUG:
-									str = "[REV] Revolt: Offering peace in exchange for handover of: "
+									txt = "[REV] Revolt: Offering peace in exchange for handover of: "
 									for pCity in handoverCities:
-										str += "%s, "%pCity.getName()
-									print str
+										txt += pCity.getName() + ", "
+									print txt
 
 								# Determine strength of rebellion
 								bIsJoinWar = False
@@ -2501,7 +2501,7 @@ class Revolution:
 				if( bPeaceful ) :
 
 					if( cultPlayer.isAlive() and not cultPlayer.isMinorCiv() ) :
-						if( pTeam.isAtWar(cultTeam.getID()) ) :
+						if( pTeam.isAtWarWith(cultTeam.getID()) ) :
 							if self.LOG_DEBUG: print "[REV] Revolt: Owner at war with city's cultural civ"
 							if( pTeam.canChangeWarPeace(cultTeam.getID()) ) :
 								if self.LOG_DEBUG: print "[REV] Revolt: Ask for end to hostilities"
@@ -3212,15 +3212,15 @@ class Revolution:
 							return
 
 					# Sufferage or representation
-					[demoLevel,optionType] = RevUtils.getDemocracyLevel(pPlayer)
-					[newDemoLevel,newCivic] = RevUtils.getBestDemocracyLevel(pPlayer, optionType )
-					if( demoLevel < 0 and newDemoLevel > 0 and not newCivic == None ) :
+					[demoLevel, optionType] = RevUtils.getDemocracyLevel(pPlayer)
+					[newDemoLevel, newCivic] = RevUtils.getBestDemocracyLevel(pPlayer, optionType)
+					if demoLevel < 0 and newDemoLevel > 0 and not newCivic is None:
 
 							bodStr += ' ' + TRNSLTR.getText("TXT_KEY_REV_CAP_VOTE_REQUEST",())
-							if( newDemoLevel > 9 ) :
+							if newDemoLevel > 9:
 								if self.LOG_DEBUG: print "[REV] Revolt: Asking change to universal sufferage, " + str(newCivic)
 								bodStr += "  " + TRNSLTR.getText("TXT_KEY_REV_CAP_VOTE_US",()) + " %s!"%(GC.getCivicInfo(newCivic).getDescription())
-							else :
+							else:
 								if self.LOG_DEBUG: print "[REV] Revolt: Asking change to representation, " + str(newCivic)
 								bodStr += "  " + TRNSLTR.getText("TXT_KEY_REV_CAP_VOTE_CRIES",()) + " %s!' "%(GC.getCivicInfo(newCivic).getDescription()) +TRNSLTR.getText("TXT_KEY_REV_CAP_VOTE_MARCH",())
 
@@ -3576,7 +3576,7 @@ class Revolution:
 				if cultPlayer.getID() == iParentPlayer or cultPlayer.isNPC() or cultPlayer.isMinorCiv():
 					cultPlayer = None
 
-				elif bJoinCultureWar and ownerTeam.isAtWar(cultPlayer.getID()) and cultPlayer.isAlive():
+				elif bJoinCultureWar and ownerTeam.isAtWarWith(cultPlayer.getID()) and cultPlayer.isAlive():
 					# If at war with significant culture, join them
 					if self.LOG_DEBUG: print "[REV] Revolt: Owner at war with dominant culture player " + cultPlayer.getCivilizationDescription(0)
 					pRevPlayer = cultPlayer
@@ -3593,7 +3593,7 @@ class Revolution:
 							playerI = GC.getPlayer(i)
 							if (
 								playerI.isAlive() and playerI.getCivilizationType() == revCivType
-							and ownerTeam.isAtWar(playerI.getTeam()) and ownerTeam.isHasMet(playerI.getTeam())
+							and ownerTeam.isAtWarWith(playerI.getTeam()) and ownerTeam.isHasMet(playerI.getTeam())
 							and RevUtils.getNumDefendersNearPlot(pCity.getX(), pCity.getY(), i, iRange = 5, bIncludePlot = True, bIncludeCities = True)
 							):
 								pRevPlayer = playerI
@@ -3628,7 +3628,7 @@ class Revolution:
 							if( playerI.getCivilizationType() == RevData.getCityVal(pCity, 'RevolutionCiv') ) :
 								if self.LOG_DEBUG: print "[REV] Revolt: Homeless rebel (type) %s in area" % playerI.getCivilizationDescription(0)
 								rebelIDList.append(i)
-							elif( teamI.isAtWar(ownerTeam.getID()) ) :
+							elif( teamI.isAtWarWith(ownerTeam.getID()) ) :
 								if self.LOG_DEBUG: print "[REV] Revolt: Homeless rebel (at war) %s in area" % playerI.getCivilizationDescription(0)
 								rebelIDList.append(i)
 							elif( relations == AttitudeTypes.ATTITUDE_FURIOUS or relations == AttitudeTypes.ATTITUDE_ANNOYED ) :
@@ -3644,7 +3644,7 @@ class Revolution:
 									if (self.LOG_DEBUG):
 										print "[REV] Revolt: Young rebel (type) %s in area" % playerI.getCivilizationDescription(0)
 									rebelIDList.append(i)
-								elif (teamI.isAtWar(ownerTeam.getID())):
+								elif (teamI.isAtWarWith(ownerTeam.getID())):
 									if (self.LOG_DEBUG):
 										print "[REV] Revolt: Young rebel (at war) %s in area"% playerI.getCivilizationDescription(0)
 									rebelIDList.append(i)
@@ -4367,7 +4367,7 @@ class Revolution:
 			area = cityList[0].area()
 
 			if( numRevCities > pPlayer.getNumCities()/2 ) :
-				if( not pRevPlayer == None and pTeam.isAtWar(pRevPlayer.getTeam()) ) :
+				if( not pRevPlayer == None and pTeam.isAtWarWith(pRevPlayer.getTeam()) ) :
 					if( area.getPower(pRevPlayer.getID()) > 1.5*area.getPower(pPlayer.getID()) and bOfferPeace ) :
 						iOdds = 30
 					elif( area.getPower(pRevPlayer.getID()) < area.getPower(pPlayer.getID())/2 ) :
@@ -4392,13 +4392,13 @@ class Revolution:
 					else :
 						iOdds -= 0
 				if( not joinPlayer == None ) :
-					if( pTeam.isAtWar(joinPlayer.getTeam()) ) :
+					if( pTeam.isAtWarWith(joinPlayer.getTeam()) ) :
 						if( bPeaceful ) :
 							iOdds = 0
 						else :
 							iOdds -= 20
 			elif( numRevCities < pPlayer.getNumCities()/4 ) :
-				if( not pRevPlayer == None and pTeam.isAtWar(pRevPlayer.getTeam()) ) :
+				if( not pRevPlayer == None and pTeam.isAtWarWith(pRevPlayer.getTeam()) ) :
 					if( area.getPower(pRevPlayer.getID()) > area.getPower(pPlayer.getID()) ) :
 						iOdds = 10
 						if( bOfferPeace ) :
@@ -4429,7 +4429,7 @@ class Revolution:
 					else :
 						iOdds -= 20
 				if( not joinPlayer == None ) :
-					if( pTeam.isAtWar(joinPlayer.getTeam()) ) :
+					if( pTeam.isAtWarWith(joinPlayer.getTeam()) ) :
 						if( bPeaceful ) :
 							iOdds -= 40
 						else :
@@ -4443,7 +4443,7 @@ class Revolution:
 					iOdds += 10
 
 			else :
-				if( not pRevPlayer == None and pTeam.isAtWar(pRevPlayer.getTeam()) ) :
+				if( not pRevPlayer == None and pTeam.isAtWarWith(pRevPlayer.getTeam()) ) :
 					iOdds = -10
 				else :
 					iOdds = 25
@@ -4465,7 +4465,7 @@ class Revolution:
 					else :
 						iOdds -= 10
 				if( not joinPlayer == None ) :
-					if( pTeam.isAtWar(joinPlayer.getTeam()) ) :
+					if( pTeam.isAtWarWith(joinPlayer.getTeam()) ) :
 						if( bPeaceful ) :
 							iOdds -= 30
 						else :
@@ -4997,7 +4997,7 @@ class Revolution:
 						# Check if joinPlayer would like to declare war on player
 						[warOdds,attackerTeam,victimTeam] = RevUtils.computeWarOdds( joinPlayer, pPlayer, cityList[0].area(), False, allowBreakVassal = self.bAllowBreakVassal )
 						# TODO: Find way to support human selecting war in this case
-						if( attackerTeam.isHuman() and not attackerTeam.isAtWar(victimTeam.getID()) ) :
+						if( attackerTeam.isHuman() and not attackerTeam.isAtWarWith(victimTeam.getID()) ) :
 							warOdds = 0
 
 						if self.LOG_DEBUG: print "[REV] Revolt: War odds are " + str(warOdds)
@@ -5114,16 +5114,16 @@ class Revolution:
 						pRevTeam.meet(pPlayer.getTeam(),False)
 
 						if( not pRevTeam.isAlive() ) :
-							if( pRevTeam.isAtWar(pPlayer.getTeam()) ) :
+							if( pRevTeam.isAtWarWith(pPlayer.getTeam()) ) :
 								if self.LOG_DEBUG: print "[REV] Revolt: Reincarnated %s ending war with %s"%(pRevPlayer.getCivilizationDescription(0),pPlayer.getCivilizationDescription(0))
 								pRevTeam.makePeace( pPlayer.getTeam() )
 
 							pRevTeam.signOpenBorders(pPlayer.getTeam())
 
-						if( pRevTeam.isAtWar(pPlayer.getTeam()) and revData.dict.get( 'bOfferPeace', False ) ) :
+						if( pRevTeam.isAtWarWith(pPlayer.getTeam()) and revData.dict.get( 'bOfferPeace', False ) ) :
 							pRevTeam.makePeace( pPlayer.getTeam() )
 
-						if( pRevTeam.isAtWar(pPlayer.getTeam()) ) :
+						if( pRevTeam.isAtWarWith(pPlayer.getTeam()) ) :
 							pRevPlayer.AI_changeMemoryCount(pPlayer.getID(), MemoryTypes.MEMORY_LIBERATED_CITIES, 1)
 						else :
 							pRevPlayer.AI_changeAttitudeExtra( pPlayer.getID(), 6 + len(cityList)/2 )
@@ -5204,7 +5204,7 @@ class Revolution:
 						if self.LOG_DEBUG: print "[REV] Revolt: Acquiring %s, pop %d"%(pCity.getName(),pCity.getPopulation())
 						# Move units out of city?  Handled by trade style
 
-						if( pRevTeam.isAtWar(pPlayer.getTeam()) and iNumPlayerCities > len(cityList) ) :
+						if( pRevTeam.isAtWarWith(pPlayer.getTeam()) and iNumPlayerCities > len(cityList) ) :
 							if self.LOG_DEBUG: print "[REV] Revolt: Moving owner's units"
 							RevUtils.clearOutCity( pCity, pPlayer, pRevPlayer )
 
@@ -5287,7 +5287,7 @@ class Revolution:
 							# Extra units for first two cities
 							#pRevPlayer.initUnit( iAttack, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
 							pRevPlayer.initUnit( iAttack, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
-						elif( GC.getTeam(pPlayer.getTeam()).isAtWar(pRevPlayer.getTeam()) ) :
+						elif( GC.getTeam(pPlayer.getTeam()).isAtWarWith(pRevPlayer.getTeam()) ) :
 							pRevPlayer.initUnit( iBestDefender, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
 							#pRevPlayer.initUnit( iBestDefender, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
 
@@ -5392,7 +5392,7 @@ class Revolution:
 						for pCity in cityList :
 
 							# Move units out of city
-							if( pRevTeam.isAtWar(pPlayer.getTeam()) and iNumPlayerCities > len(cityList) ) :
+							if( pRevTeam.isAtWarWith(pPlayer.getTeam()) and iNumPlayerCities > len(cityList) ) :
 								if self.LOG_DEBUG: print "[REV] Revolt: Moving owner's units"
 								RevUtils.clearOutCity( pCity, pPlayer, pRevPlayer )
 
@@ -5455,7 +5455,7 @@ class Revolution:
 								joinPlayer.initUnit( iAttack, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
 								joinPlayer.initUnit( iAttack, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
 
-							elif( GC.getTeam(pPlayer.getTeam()).isAtWar(joinPlayer.getTeam()) ) :
+							elif( GC.getTeam(pPlayer.getTeam()).isAtWarWith(joinPlayer.getTeam()) ) :
 								joinPlayer.initUnit( iBestDefender, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH )
 								#joinPlayer.initUnit( iBestDefender, ix, iy, UnitAITypes.NO_UNITAI )
 
@@ -5504,7 +5504,7 @@ class Revolution:
 						# Check if joinPlayer would like to declare war on player
 						[warOdds,attackerTeam,victimTeam] = RevUtils.computeWarOdds( joinPlayer, pPlayer, cityList[0].area(), allowBreakVassal = self.bAllowBreakVassal )
 						# TODO: provide support for human war selection
-						if( attackerTeam.isHuman() and not attackerTeam.isAtWar(victimTeam.getID()) ) :
+						if( attackerTeam.isHuman() and not attackerTeam.isAtWarWith(victimTeam.getID()) ) :
 							warOdds = 0
 
 						if self.LOG_DEBUG: print "[REV] Revolt: War odds are " + str(warOdds)
@@ -5527,7 +5527,7 @@ class Revolution:
 						else :
 							# Check if pPlayer wants to declare war on joinPlayer
 							[warOdds,attackerTeam,victimTeam] = RevUtils.computeWarOdds( pPlayer, joinPlayer, cityList[0].area(), allowBreakVassal = self.bAllowBreakVassal )
-							if( attackerTeam.isHuman() and not attackerTeam.isAtWar(victimTeam.getID()) ) :
+							if( attackerTeam.isHuman() and not attackerTeam.isAtWarWith(victimTeam.getID()) ) :
 								warOdds = 0
 
 							if( warOdds > 25 and warOdds > GAME.getSorenRandNum(100,'Revolution: war') ) :
@@ -5711,7 +5711,7 @@ class Revolution:
 
 			for pCity in cityList:
 				# Move units out of city
-				if pJoinTeam.isAtWar(pPlayer.getTeam()) and iNumPlayerCities > len(cityList):
+				if pJoinTeam.isAtWarWith(pPlayer.getTeam()) and iNumPlayerCities > len(cityList):
 					if self.LOG_DEBUG:
 						print "[REV] Revolt: Moving owner's units"
 					RevUtils.clearOutCity(pCity, pPlayer, joinPlayer)
@@ -5766,7 +5766,7 @@ class Revolution:
 					if iAttack > -1:
 						joinPlayer.initUnit(iAttack, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 						joinPlayer.initUnit(iAttack, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-				elif iBestDefender > -1 and GC.getTeam(pPlayer.getTeam()).isAtWar(joinPlayer.getTeam()):
+				elif iBestDefender > -1 and GC.getTeam(pPlayer.getTeam()).isAtWarWith(joinPlayer.getTeam()):
 					joinPlayer.initUnit(iBestDefender, ix, iy, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 
 				RevData.updateCityVal(pCity, 'RevolutionCiv', joinPlayer.getCivilizationType())
@@ -5830,7 +5830,7 @@ class Revolution:
 					unit.setDamage( iDamage, pRevPlayer.getID() )
 
 		# pRevTeam = GC.getTeam( pRevPlayer.getTeam() )
-		# if( not pRevTeam.isAtWar(pPlayer.getTeam()) ) :
+		# if( not pRevTeam.isAtWarWith(pPlayer.getTeam()) ) :
 			# pRevTeam.declareWar( pPlayer.getTeam(), True, WarPlanTypes.NO_WARPLAN )
 			# if self.LOG_DEBUG: print "[REV] Revolt: The %s revolutionaries declare war on the %s!"%(pRevPlayer.getCivilizationAdjective(0),pPlayer.getCivilizationDescription(0))
 
@@ -6039,7 +6039,7 @@ class Revolution:
 		if not bIsBarbRev:
 
 			pRevTeam = GC.getTeam(pRevPlayer.getTeam())
-			if not pRevTeam.isAtWar(pPlayer.getTeam()):
+			if not pRevTeam.isAtWarWith(pPlayer.getTeam()):
 				pRevTeam.declareWar(pPlayer.getTeam(), True, WarPlanTypes.WARPLAN_TOTAL)
 				if self.LOG_DEBUG:
 					print "[REV] Revolt: The %s revolutionaries declare war and start a revolution against the %s!"%(pRevPlayer.getCivilizationAdjective(0),pPlayer.getCivilizationDescription(0))
@@ -6067,14 +6067,14 @@ class Revolution:
 					espPoints /= 2
 				pRevTeam.changeCounterespionageTurnsLeftAgainstTeam(pTeam.getID(), 10)
 				pRevTeam.changeEspionagePointsAgainstTeam(pTeam.getID(), espPoints)
-				pTeam.changeEspionagePointsAgainstTeam(pRevTeam.getID(), espPoints/(3 + pTeam.getAtWarCount(True)))
+				pTeam.changeEspionagePointsAgainstTeam(pRevTeam.getID(), espPoints / (3 + pTeam.getAtWarCount(True)))
 				if self.LOG_DEBUG:
 					print "[REV] Revolt: Giving rebels %d espionage points against motherland" % espPoints
 				if not pRevTeam.isAlive():
 					for k in xrange(GC.getMAX_PC_TEAMS()):
 						if GC.getTeam(k) == None:
 							continue
-						if pRevTeam.isAtWar(k) and not GC.getTeam(k).isMinorCiv():
+						if pRevTeam.isAtWarWith(k) and not GC.getTeam(k).isMinorCiv():
 							pRevTeam.changeEspionagePointsAgainstTeam(k, GAME.getSorenRandNum(espPoints/2,'Revolt: esp') )
 							GC.getTeam(k).changeEspionagePointsAgainstTeam(pRevTeam.getID(), GAME.getSorenRandNum(espPoints/5, 'Revolt: esp'))
 
@@ -6096,7 +6096,7 @@ class Revolution:
 					if kPlayer == None:
 						continue
 					if pTeam.isHasMet(k) and not k == pRevPlayer.getTeam() and not k == pTeam.getID():
-						if pTeam.isAtWar(k):
+						if pTeam.isAtWarWith(k):
 							pRevTeam.meet(k, False)
 							pRevPlayer.AI_changeAttitudeExtra(kTeam.getLeaderID(), 2)
 							kPlayer.AI_changeAttitudeExtra(pRevPlayer.getID(), 2)

@@ -1208,11 +1208,6 @@ class FloatMap:
 		return pressure
 
 
-	def ApplyFunction(self, func):
-		for i in range(self.length):
-			self.data[i] = func(self.data[i])
-
-
 	def GetAverageInHex(self, x, y, radius):
 		list = pb.getCirclePoints(x, y, radius)
 		avg = 0.0
@@ -1259,12 +1254,6 @@ class FloatMap:
 				dataCopy[i] = self.GetStdDevInHex(x, y, radius)
 		self.data = dataCopy
 
-
-	def IsOnMap(self, x, y):
-		i = self.GetIndex(x, y)
-		if i == -1:
-			return False
-		return True
 
 	def DumpToDebug(self):
 		for i in range(self.length):
@@ -1978,7 +1967,6 @@ class ClimateMap3:
 		incX	 = 0
 		incY	 = 0
 		geoIndex = 0
-		str = ""
 		for zone in range(6):
 			topY		= em.GetYFromZone(zone, True)
 			bottomY = em.GetYFromZone(zone, False)
@@ -2601,27 +2589,6 @@ def AngleDifference(a1, a2):
 	while(diff > 180.0):
 		diff -= 360.0
 	return diff
-
-
-def AppendUnique(theList, newItem):
-	if IsInList(theList,newItem) == False:
-		theList.append(newItem)
-
-
-def IsInList(theList, newItem):
-	itemFound = False
-	for item in theList:
-		if item == newItem:
-			itemFound = True
-			break
-	return itemFound
-
-
-def DeleteFromList(theList, oldItem):
-	for n in range(len(theList)):
-		if theList[n] == oldItem:
-			del theList[n]
-			break
 
 
 def GetInfoType(string):

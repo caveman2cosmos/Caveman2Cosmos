@@ -10241,11 +10241,11 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_MERCHANTFLEET2</Type>
 			<WorldNewsTexts>
-				<Text>A new merchant fleet has formed in the %s1_civ_adjective city of %s2</Text>
+				<Text>TXT_KEY_EVENTTRIGGER_MERCHANTFLEET3</Text>
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>A new merchant fleet has formed in %s2_city.</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_MERCHANTFLEET3_1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -10948,11 +10948,11 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_PIRATE_INVASION</Type>
 			<WorldNewsTexts>
-				<Text>Pirates have been spotted off the %s1_civ_adjective coast near %s2_city .</Text>
+				<Text>TXT_KEY_EVENTTRIGGER_PIRATE_INVASION</Text>
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>Pirates have been sailing near our borders recently, stealing and killing as they go.</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PIRATE_INVASION_1</Text>
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -10997,47 +10997,47 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_PIRATE_MAP</Type>
 			<WorldNewsTexts>
-				<Text>A %s1_civ_adjective fisherman has found a pirate map near %s2_city.</Text>
+				<Text>TXT_KEY_EVENTTRIGGER_PIRATE_MAP</Text>
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>A fisherman from the city of %s2_city has found a pirate map.</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PIRATE_MAP_1</Text>
 					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PIRATE_MAP_1</Text>
 					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PIRATE_MAP_1</Text>
 					<Era>C2C_ERA_ATOMIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PIRATE_MAP_1</Text>
 					<Era>C2C_ERA_INFORMATION</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PIRATE_MAP_1</Text>
 					<Era>C2C_ERA_NANOTECH</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PIRATE_MAP_1</Text>
 					<Era>C2C_ERA_TRANSHUMAN</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PIRATE_MAP_1</Text>
 					<Era>C2C_ERA_GALACTIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PIRATE_MAP_1</Text>
 					<Era>C2C_ERA_COSMIC</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PIRATE_MAP_1</Text>
 					<Era>C2C_ERA_TRANSCENDENT</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>A fisherman from the city of %s2_city has found a old pirate map.</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PIRATE_MAP_1</Text>
 					<Era>C2C_ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
@@ -11057,15 +11057,15 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_PIRATE_NAVY</Type>
 			<WorldNewsTexts>
-				<Text>A famous pirate has offered his services to the %s1_civ_adjective Navy.</Text>
+				<Text>TXT_KEY_EVENTTRIGGER_PIRATE_NAVY</Text>
 			</WorldNewsTexts>
 			<TriggerTexts>
 				<TriggerText>
-					<Text>A famous pirate has offered to join our navy.</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PIRATE_NAVY_1</Text>
 					<Era>C2C_ERA_RENAISSANCE</Era>
 				</TriggerText>
 				<TriggerText>
-					<Text>A renowned pirate decided to work for our sea forces.</Text>
+					<Text>TXT_KEY_EVENTTRIGGER_PIRATE_NAVY_2</Text>
 					<Era>C2C_ERA_INDUSTRIAL</Era>
 				</TriggerText>
 			</TriggerTexts>

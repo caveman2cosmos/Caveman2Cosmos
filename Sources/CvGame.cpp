@@ -5153,7 +5153,7 @@ void CvGame::makeReligionFounded(ReligionTypes eIndex, PlayerTypes ePlayer)
 		CvEventReporter::getInstance().religionFounded(eIndex, ePlayer);
 
 		// Sanguo Mod Performance, added by poyuzhe 07.26.09
-		for (int iI = 0; iI < GC.getMAX_PLAYERS(); iI++)
+		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getStateReligion() == eIndex)
 			{
@@ -6755,7 +6755,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 	if (bBarbCiv)
 	{
 		int iOwnedPlots = 0;
-		for (int iI = 0; iI < GC.getMAX_PLAYERS(); iI++)
+		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			iOwnedPlots += GET_PLAYER((PlayerTypes)iI).getTotalLand();
 		}

@@ -684,6 +684,10 @@
 		<Russian>C2C: Ñóäüè ìîãóò èçäàâàòü îñîáûå äåêðåòû. Ýôôåêòû îò íèõ ìîãóò áûòü î÷åíü ìîùíûìè.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_C2C_HINT_51</Tag>
+		<English>C2C: City production popup now shows only few buildings and units for performance reasons. Click on Examine City to see all buildings and units you can build. Alternatively you can disable this popup in BUG settings - Caveman2Cosmos tab, and select No Production Popup.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_C2C_HINT_6</Tag>
 		<English>C2C: The Prehistoric Era is a new era that comes before the Ancient Era. It represents human history before agriculture and a more sedentary lifestyle.</English>
 		<French>C2C: L'ère préhistorique est une nouvelle ère qui vient avant l'ère antique. Elle représente l'histoire humaine avant l'agriculture et un mode de vie plus sédentaire.</French>

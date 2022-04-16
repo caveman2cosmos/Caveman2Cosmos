@@ -1106,7 +1106,7 @@ class CvEventManager:
 							if not CyTeamW:
 								iTeamW = CyPlayerW.getTeam()
 								CyTeamW = GC.getTeam(iTeamW)
-							if CyTeamW.isAtWar(GC.getPlayer(CyCity.getOwner()).getTeam()) and not CyPlotL.getNumVisibleEnemyDefenders(CyUnitW):
+							if CyTeamW.isAtWarWith(GC.getPlayer(CyCity.getOwner()).getTeam()) and not CyPlotL.getNumVisibleEnemyDefenders(CyUnitW):
 								CyCity.setHasReligion(iReligion, True, True, True)
 
 
@@ -2531,7 +2531,7 @@ class CvEventManager:
 		if iPlayerHC not in (-1, iPlayer):
 			CyPlayerHC = GC.getPlayer(iPlayerHC)
 			if not CyPlayerHC.isNPC() and CyPlayerHC.getNumCities() > 0:
-				if GC.getTeam(CyPlayerHC.getTeam()).isAtWar(GC.getPlayer(iPlayer).getTeam()):
+				if GC.getTeam(CyPlayerHC.getTeam()).isAtWarWith(GC.getPlayer(iPlayer).getTeam()):
 					TRIGGER = GC.getInfoTypeForString('EVENTTRIGGER_PARTISANS')
 					triggerData = CyPlayerHC.initTriggeredData(TRIGGER, true, -1, CyCity.getX(), CyCity.getY(), iPlayer, iCityID, -1, -1, -1, -1)
 		# Ruin Arcology.
