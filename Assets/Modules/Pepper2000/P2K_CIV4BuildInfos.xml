@@ -1328,8 +1328,8 @@
 			<Type>BUILD_LUNAR_BASE</Type>
 			<Description>TXT_KEY_BUILD_LUNAR_BASE</Description>
 			<Help/>
-			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
-			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
+			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
+			<ObsoleteTech>TECH_PLANETARY_MANUFACTURING</ObsoleteTech>
 			<iTime>1000</iTime>
 			<iCost>700</iCost>
 			<bKill>0</bKill>
@@ -1348,8 +1348,8 @@
 			<Type>BUILD_LUNAR_OUTPOST</Type>
 			<Description>TXT_KEY_BUILD_LUNAR_OUTPOST</Description>
 			<Help/>
-			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
+			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<ObsoleteTech>TECH_PLANETARY_MANUFACTURING</ObsoleteTech>
 			<iTime>1000</iTime>
 			<iCost>1500</iCost>
 			<bKill>0</bKill>
@@ -1368,7 +1368,7 @@
 			<Type>BUILD_LUNAR_HABITATION_COMPLEX</Type>
 			<Description>TXT_KEY_BUILD_LUNAR_HABITATION_COMPLEX</Description>
 			<Help/>
-			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			<iTime>1000</iTime>
 			<iCost>3000</iCost>
 			<bKill>0</bKill>

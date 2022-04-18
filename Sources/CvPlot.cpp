@@ -9935,10 +9935,10 @@ void CvPlot::setSpotIntensity(TeamTypes eTeam, InvisibleTypes eInvisible, int iU
 		&& getPlotTeamVisibilityIntensity(iI).eTeam == eTeam
 		&& getPlotTeamVisibilityIntensity(iI).iUnitID == iUnitID)
 		{
-
 			if (bRelevant)
 			{
 				getPlotTeamVisibilityIntensity(iI).iIntensity = iIntensity;
+				bRelevant = false;
 			}
 			else
 			{
@@ -9946,7 +9946,6 @@ void CvPlot::setSpotIntensity(TeamTypes eTeam, InvisibleTypes eInvisible, int iU
 
 				m_aPlotTeamVisibilityIntensity.erase(m_aPlotTeamVisibilityIntensity.begin()+iI);
 			}
-			bRelevant = false;
 			break;
 		}
 	}
@@ -9978,15 +9977,17 @@ PlotTeamVisibilityIntensity& CvPlot::getPlotTeamVisibilityIntensity(int iIndex)
 
 int CvPlot::getHighestPlotTeamVisibilityIntensity(InvisibleTypes eInvisibility, TeamTypes eTeam) const
 {
+	int iHighest = 0;
 	for (int iI = 0; iI < getNumPlotTeamVisibilityIntensity(); iI++)
 	{
 		if (m_aPlotTeamVisibilityIntensity[iI].eInvisibility == eInvisibility
-		&&  m_aPlotTeamVisibilityIntensity[iI].eTeam == eTeam)
+		&&  m_aPlotTeamVisibilityIntensity[iI].eTeam == eTeam
+		&&  m_aPlotTeamVisibilityIntensity[iI].iIntensity > iHighest)
 		{
-			return m_aPlotTeamVisibilityIntensity[iI].iIntensity;
+			iHighest = m_aPlotTeamVisibilityIntensity[iI].iIntensity;
 		}
 	}
-	return 0;
+	return iHighest;
 }
 
 int CvPlot::getNumUnits() const
