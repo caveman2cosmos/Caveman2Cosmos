@@ -262,7 +262,7 @@ private:
 	void		WriteObjectDelimiter(const char* name, int& idHint, int& idSeq, bool bStart);
 	void		WriteClassMappingTable(RemappedClassType classType);
 	void		WriteClassMappingTables();
-	bool		Expect(const char* name, int& idHint, int& idSeq, SaveValueType type);
+	bool		Expect(const char* name, SaveValueType type);
 	void		SkipElement();
 	void		ConsumeBytes(int numBytes);
 	void		ReadDictionaryElement();

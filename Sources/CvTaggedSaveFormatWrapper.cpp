@@ -2286,7 +2286,7 @@ CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq,
 	{
 		DEBUG_TRACE2("Read string, name %s\n", name)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_STRING) )
+		if (Expect(name, SAVE_VALUE_TYPE_STRING))
 		{
 			*szName = m_stream->ReadString();
 		}
@@ -2308,7 +2308,7 @@ CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq,
 	{
 		DEBUG_TRACE2("Read string, name %s\n", name)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_WSTRING) )
+		if (Expect(name, SAVE_VALUE_TYPE_WSTRING))
 		{
 			*szName = m_stream->ReadWideString();
 		}
@@ -2331,7 +2331,7 @@ CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq,
 	{
 		DEBUG_TRACE2("Read string, name %s\n", name)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_STD_STRING) )
+		if (Expect(name, SAVE_VALUE_TYPE_STD_STRING))
 		{
 			m_stream->ReadString(szName);
 		}
@@ -2354,7 +2354,7 @@ CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq,
 	{
 		DEBUG_TRACE2("Read string, name %s\n", name)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_STD_WSTRING) )
+		if (Expect(name, SAVE_VALUE_TYPE_STD_WSTRING))
 		{
 			m_stream->ReadString(szName);
 		}
@@ -2387,7 +2387,7 @@ CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq,
 	{
 		DEBUG_TRACE3("Read string array, name %s, count=%d\n", name, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_STRING_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_STRING_ARRAY))
 		{
 			int numStrings;
 
@@ -2419,7 +2419,7 @@ CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq,
 	{
 		DEBUG_TRACE3("Read wstring array, name %s, count=%d\n", name, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_WSTRING_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_WSTRING_ARRAY))
 		{
 			int numStrings;
 
@@ -2451,7 +2451,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, char 
 	{
 		DEBUG_TRACE2("Read char, name %s\n", name)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CHAR) )
+		if (Expect(name, SAVE_VALUE_TYPE_CHAR))
 		{
 			m_stream->Read(pChar);
 		}
@@ -2474,7 +2474,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint8
 	{
 		DEBUG_TRACE2("Read byte, name %s\n", name)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_BYTE) )
+		if (Expect(name, SAVE_VALUE_TYPE_BYTE))
 		{
 			m_stream->Read(pByte);
 		}
@@ -2497,7 +2497,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 	{
 		DEBUG_TRACE3("Read char array, name %s, count=%d\n", name, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CHAR_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_CHAR_ARRAY))
 		{
 			int num;
 
@@ -2529,7 +2529,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 	{
 		DEBUG_TRACE3("Read byte array, name %s, count=%d\n", name, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_BYTE_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_BYTE_ARRAY))
 		{
 			int num;
 
@@ -2561,7 +2561,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, bool 
 	{
 		DEBUG_TRACE2("Read bool, name %s\n", name)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_BOOL) )
+		if (Expect(name, SAVE_VALUE_TYPE_BOOL))
 		{
 			m_stream->Read(pBool);
 		}
@@ -2584,7 +2584,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 	{
 		DEBUG_TRACE3("Read bool array, name %s, count=%d\n", name, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_BOOL_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_BOOL_ARRAY))
 		{
 			int num;
 
@@ -2627,7 +2627,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, short
 	{
 		DEBUG_TRACE2("Read short, name %s\n", name)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_SHORT) )
+		if (Expect(name, SAVE_VALUE_TYPE_SHORT))
 		{
 			m_stream->Read(s);
 		}
@@ -2650,7 +2650,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint1
 	{
 		DEBUG_TRACE2("Read unsigned short, name %s\n", name)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_SHORT) )
+		if (Expect(name, SAVE_VALUE_TYPE_UNSIGNED_SHORT))
 		{
 			m_stream->Read(s);
 		}
@@ -2673,7 +2673,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 	{
 		DEBUG_TRACE3("Read short array, name %s, count=%d\n", name, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_SHORT_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_SHORT_ARRAY))
 		{
 			int num;
 
@@ -2705,7 +2705,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 	{
 		DEBUG_TRACE3("Read unsigned short array, name %s, count=%d\n", name, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_SHORT_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_UNSIGNED_SHORT_ARRAY))
 		{
 			int num;
 
@@ -2737,7 +2737,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int* 
 	{
 		DEBUG_TRACE2("Read int, name %s\n", name)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_INT) )
+		if (Expect(name, SAVE_VALUE_TYPE_INT))
 		{
 			m_stream->Read(i);
 		}
@@ -2760,7 +2760,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint3
 	{
 		DEBUG_TRACE2("Read unsigned int, name %s\n", name)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_INT) )
+		if (Expect(name, SAVE_VALUE_TYPE_UNSIGNED_INT))
 		{
 			m_stream->Read(i);
 		}
@@ -2783,7 +2783,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 	{
 		DEBUG_TRACE3("Read int array, name %s, count=%d\n", name, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_INT_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_INT_ARRAY))
 		{
 			int num;
 
@@ -2817,7 +2817,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 	{
 		DEBUG_TRACE3("Read unsigned int array, name %s, count=%d\n", name, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_INT_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_UNSIGNED_INT_ARRAY))
 		{
 			int num;
 
@@ -2848,7 +2848,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, long*
 	{
 		DEBUG_TRACE2("Read long, name %s\n", name)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_LONG) )
+		if (Expect(name, SAVE_VALUE_TYPE_LONG))
 		{
 			m_stream->Read(l);
 		}
@@ -2871,7 +2871,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, unsig
 	{
 		DEBUG_TRACE2("Read unsigned long, name %s\n", name)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_LONG) )
+		if (Expect(name, SAVE_VALUE_TYPE_UNSIGNED_LONG))
 		{
 			m_stream->Read(l);
 		}
@@ -2894,7 +2894,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 	{
 		DEBUG_TRACE3("Read long array, name %s, count=%d\n", name, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_LONG_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_LONG_ARRAY))
 		{
 			int num;
 
@@ -2926,7 +2926,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 	{
 		DEBUG_TRACE3("Read unsigned long array, name %s, count=%d\n", name, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_UNSIGNED_LONG_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_UNSIGNED_LONG_ARRAY))
 		{
 			int num;
 
@@ -2959,7 +2959,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, float
 	{
 		DEBUG_TRACE2("Read float, name %s\n", name)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_FLOAT) )
+		if (Expect(name, SAVE_VALUE_TYPE_FLOAT))
 		{
 			m_stream->Read(value);
 		}
@@ -2982,7 +2982,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 	{
 		DEBUG_TRACE3("Read float array, name %s, count=%d\n", name, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_FLOAT_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_FLOAT_ARRAY))
 		{
 			int num;
 
@@ -3015,7 +3015,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, doubl
 	{
 		DEBUG_TRACE2("Read double, name %s\n", name)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_DOUBLE) )
+		if (Expect(name, SAVE_VALUE_TYPE_DOUBLE))
 		{
 			m_stream->Read(value);
 		}
@@ -3038,7 +3038,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 	{
 		DEBUG_TRACE3("Read double array, name %s, count=%d\n", name, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_DOUBLE_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_DOUBLE_ARRAY))
 		{
 			int num;
 
@@ -3071,7 +3071,7 @@ CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, int& idHint, int& idS
 	{
 		DEBUG_TRACE3("Read class enum, name %s, classType=%d\n", name, classType)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_ENUM) )
+		if (Expect(name, SAVE_VALUE_TYPE_CLASS_ENUM))
 		{
 			value_class_enum	entry;
 
@@ -3106,7 +3106,7 @@ CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, int& idHint, int& idS
 	{
 		DEBUG_TRACE3("Read class enum, name %s, classType=%d\n", name, classType)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_ENUM) )
+		if (Expect(name, SAVE_VALUE_TYPE_CLASS_ENUM))
 		{
 			value_class_enum entry;
 
@@ -3145,7 +3145,7 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 	{
 		DEBUG_TRACE4("Read class array, name %s, classType=%d, count=%d\n", name, classType, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_INT_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_CLASS_INT_ARRAY))
 		{
 			value_entry_class_int_array	entry;
 
@@ -3192,7 +3192,7 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 				}
 			}
 		}
-		else if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_INT_ARRAY) )
+		else if (Expect(name, SAVE_VALUE_TYPE_INT_ARRAY))
 		{
 			int num;
 
@@ -3223,7 +3223,7 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 	{
 		DEBUG_TRACE4("Read class array, name %s, classType=%d, count=%d\n", name, classType, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_BOOL_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_CLASS_BOOL_ARRAY))
 		{
 			value_entry_class_bool_array	entry;
 
@@ -3269,7 +3269,7 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 				}
 			}
 		}
-		else if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_BOOL_ARRAY) )
+		else if (Expect(name, SAVE_VALUE_TYPE_BOOL_ARRAY))
 		{
 			int num;
 
@@ -3301,7 +3301,7 @@ CvTaggedSaveFormatWrapper::ReadClassArrayOfClassEnum(const char* name, int& idHi
 	{
 		DEBUG_TRACE4("Read class array, name %s, classType=%d, count=%d\n", name, valueClassType, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_BOOL_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_CLASS_BOOL_ARRAY))
 		{
 			value_entry_class_class_array	entry;
 
@@ -3356,7 +3356,7 @@ CvTaggedSaveFormatWrapper::ReadClassEnumArray(const char* name, int& idHint, int
 	{
 		DEBUG_TRACE4("Read class enum array, name %s, classType=%d, count=%d\n", name, classType, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_ENUM_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_CLASS_ENUM_ARRAY))
 		{
 			value_class_enum_array entry;
 
@@ -3400,7 +3400,7 @@ CvTaggedSaveFormatWrapper::ReadClassEnumArray(const char* name, int& idHint, int
 	{
 		DEBUG_TRACE4("Read class enum array, name %s, classType=%d, count=%d\n", name, classType, count)
 
-		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_ENUM_ARRAY) )
+		if (Expect(name, SAVE_VALUE_TYPE_CLASS_ENUM_ARRAY))
 		{
 			value_class_enum_array	entry;
 
@@ -3446,7 +3446,7 @@ CvTaggedSaveFormatWrapper::ReadStartObject(const char* name, int& idHint, int& i
 
 		OutputDebugString(CvString::format("ReadStartObject for %s, depth now %d\n", name, m_nestingDepth).c_str());
 
-		Expect(name, idHint, idSeq, (SaveValueType)SAVE_ELEMENT_ID_OBJECT_DELIMITER);
+		Expect(name, (SaveValueType)SAVE_ELEMENT_ID_OBJECT_DELIMITER);
 	}
 }
 
@@ -3468,7 +3468,7 @@ CvTaggedSaveFormatWrapper::ReadEndObject()
 		//OutputDebugString(CvString::format("ReadStartEnd, depth now %d\n", m_nestingDepth).c_str());
 
 		//	Consume until the stream also exits this object
-		while( !Expect(NULL, dummy, dummy, (SaveValueType)SAVE_ELEMENT_ID_OBJECT_DELIMITER) )
+		while (!Expect(NULL, (SaveValueType)SAVE_ELEMENT_ID_OBJECT_DELIMITER))
 		{
 			SkipElement();
 		}
@@ -3483,7 +3483,7 @@ CvTaggedSaveFormatWrapper::ReadEndObject()
 //		3) An object start delimiter is the next thing in the stream - same as case (2)
 //		4) An object end delimiter is the next thing in the stream - error incompatible save
 bool
-CvTaggedSaveFormatWrapper::Expect(const char* name, int& idHint, int& idSeq, SaveValueType type)
+CvTaggedSaveFormatWrapper::Expect(const char* name, SaveValueType type)
 {
 	PROFILE_FUNC();
 
@@ -3603,7 +3603,7 @@ CvTaggedSaveFormatWrapper::SkipElement(const char* name, int& idHint, int& idSeq
 
 	if ( m_useTaggedFormat )
 	{
-		if ( Expect(name, idHint, idSeq, saveType) )
+		if (Expect(name, saveType))
 		{
 			SkipElement();
 		}
