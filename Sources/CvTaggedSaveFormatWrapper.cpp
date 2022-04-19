@@ -2597,9 +2597,9 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 				//	Also allow less, throwing the extra away - use this option CAREFULLY!
 				if ( bAllowTruncation )
 				{
-					bool*	tempBuffer = new bool[num-count];
+					bst::scoped_array<bool> tempBuffer(new bool[num-count]);
 
-					m_stream->Read(num-count, tempBuffer);
+					m_stream->Read(num-count, tempBuffer.get());
 				}
 				else
 				{
@@ -3453,8 +3453,6 @@ CvTaggedSaveFormatWrapper::ReadStartObject(const char* name, int& idHint, int& i
 void
 CvTaggedSaveFormatWrapper::ReadEndObject()
 {
-	int dummy;
-
 	PROFILE_FUNC();
 
 	FAssert(m_stream != NULL);
