@@ -727,14 +727,12 @@ def cityAdvise(CyCity, iPlayer):
 							for entry in CvBuildingInfoX.getPlotYieldChange():
 								if entry.iType == PlotTypes.PLOT_OCEAN and entry.iIndex == YieldTypes.YIELD_FOOD:
 									iValue = entry.iValue
+									if iValue > iBestValue and CyCity.canConstruct(iBuildingX, False, False, False):
+										iBestValue = iValue
+										iBestBuilding = iBuildingX
+										CvBuildingInfo = CvBuildingInfoX
+									break
 
-							if iValue <= iBestValue: continue
-
-							if CyCity.canConstruct(iBuildingX, False, False, False):
-
-								iBestValue = iValue
-								iBestBuilding = iBuildingX
-								CvBuildingInfo = CvBuildingInfoX
 
 						if CvBuildingInfo:
 							popupInfo = CyPopupInfo()
