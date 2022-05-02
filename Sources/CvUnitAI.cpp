@@ -2142,12 +2142,6 @@ void CvUnitAI::AI_workerMove()
 		return;
 	}
 
-	// find bonuses within 2 moves to improve
-	if (CvWorkerService::ImproveBonus(this, 2))
-	{
-		return;
-	}
-
 	bool bCanRoute = canBuildRoute();
 	// Workboats don't build Sea Tunnels over Resources
 	if (bCanRoute && !bAbroad && getDomainType() != DOMAIN_SEA)
@@ -2169,6 +2163,12 @@ void CvUnitAI::AI_workerMove()
 	int iBestBonusValue = 0;
 
 	if (bCanRoute && !isNPC() && AI_connectCity())
+	{
+		return;
+	}
+
+	// find bonuses within 2 moves to improve
+	if (CvWorkerService::ImproveBonus(this, 2))
 	{
 		return;
 	}
