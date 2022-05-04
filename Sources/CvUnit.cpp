@@ -6009,7 +6009,7 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 		return false;
 	}
 
-	if (!isMapCategory(*pPlot, *m_pUnitInfo))
+	if (m_pUnitInfo != NULL && !isMapCategory(*pPlot, *m_pUnitInfo))
 	{
 		return false;
 	}
@@ -7530,7 +7530,7 @@ bool CvUnit::canUnload() const
 		}
 	}
 
-	if (!isMapCategory(kPlot, *m_pUnitInfo))
+	if (m_pUnitInfo != NULL && !isMapCategory(kPlot, *m_pUnitInfo))
 	{
 		return false;
 	}
@@ -19997,7 +19997,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		return false;
 	}
 	const CvPlot* pPlot = plot();
-	if (!isMapCategory(*pPlot, promo) || !isMapCategory(*m_pUnitInfo, promo))
+	if ((m_pUnitInfo != NULL && pPlot != NULL) && (!isMapCategory(*pPlot, promo) || !isMapCategory(*m_pUnitInfo, promo)))
 	{
 		return false;
 	}
