@@ -6009,7 +6009,7 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 		return false;
 	}
 
-	if (!isMapCategory(*pPlot, *m_pUnitInfo))
+	if (m_pUnitInfo != NULL && !isMapCategory(*pPlot, *m_pUnitInfo))
 	{
 		return false;
 	}
@@ -7530,7 +7530,7 @@ bool CvUnit::canUnload() const
 		}
 	}
 
-	if (!isMapCategory(kPlot, *m_pUnitInfo))
+	if (m_pUnitInfo != NULL && !isMapCategory(kPlot, *m_pUnitInfo))
 	{
 		return false;
 	}
@@ -19997,7 +19997,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		return false;
 	}
 	const CvPlot* pPlot = plot();
-	if (!isMapCategory(*pPlot, promo) || !isMapCategory(*m_pUnitInfo, promo))
+	if ((m_pUnitInfo != NULL && pPlot != NULL) && (!isMapCategory(*pPlot, promo) || !isMapCategory(*m_pUnitInfo, promo)))
 	{
 		return false;
 	}
@@ -32253,65 +32253,70 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 	{
 		bool bValid = true;
 		{
-			const TerrainTypes eTerrain = plot()->getTerrainType();
+			if (plot() != NULL)
+			{
 
-			for (int iI = 0; iI < promo.getNumPrereqTerrainTypes(); iI++)
-			{
-				const TerrainTypes ePrereqTerrain = (TerrainTypes)promo.getPrereqTerrainType(iI);
-				if (ePrereqTerrain != NO_TERRAIN)
+
+				const TerrainTypes eTerrain = plot()->getTerrainType();
+
+				for (int iI = 0; iI < promo.getNumPrereqTerrainTypes(); iI++)
 				{
-					bValid = false;
-					if (ePrereqTerrain == GC.getTERRAIN_PEAK())
+					const TerrainTypes ePrereqTerrain = (TerrainTypes)promo.getPrereqTerrainType(iI);
+					if (ePrereqTerrain != NO_TERRAIN)
 					{
-						if (plot()->isAsPeak())
+						bValid = false;
+						if (ePrereqTerrain == GC.getTERRAIN_PEAK())
+						{
+							if (plot()->isAsPeak())
+							{
+								bValid = true;
+								break;
+							}
+						}
+						else if (ePrereqTerrain == GC.getTERRAIN_HILL())
+						{
+							if (plot()->isHills())
+							{
+								bValid = true;
+								break;
+							}
+						}
+						else if (ePrereqTerrain == eTerrain)
 						{
 							bValid = true;
 							break;
 						}
 					}
-					else if (ePrereqTerrain == GC.getTERRAIN_HILL())
+				}
+				if (!bValid)
+				{
+					if (bMessageOnFalse)
 					{
-						if (plot()->isHills())
+						if (bPromo && !bIsFreePromotion)
 						{
-							bValid = true;
-							break;
+							AddDLLMessage(
+								getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText(
+									"TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_CAN_RETRAIN",
+									getNameKey(), promo.getDescription()
+								),
+								"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
+							);
+						}
+						else
+						{
+							AddDLLMessage(
+								getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText(
+									"TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_NO_RETRAIN",
+									getNameKey(), promo.getDescription()
+								),
+								"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+							);
 						}
 					}
-					else if (ePrereqTerrain == eTerrain)
-					{
-						bValid = true;
-						break;
-					}
+					return false;
 				}
-			}
-			if (!bValid)
-			{
-				if (bMessageOnFalse)
-				{
-					if (bPromo && !bIsFreePromotion)
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_CAN_RETRAIN",
-								getNameKey(), promo.getDescription()
-							),
-							"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_NO_RETRAIN",
-								getNameKey(), promo.getDescription()
-							),
-							"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
-						);
-					}
-				}
-				return false;
 			}
 		}
 		{
