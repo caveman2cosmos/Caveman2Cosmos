@@ -2318,7 +2318,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		iCaptureGold = Cy::call<int>(PYGameModule, "doCityCaptureGold", Cy::Args() << pOldCity << eNewOwner);
 		changeGold(iCaptureGold);
 	}
-	CvEventReporter::getInstance().cityAcquired(eOldOwner, eNewOwner, pOldCity, bConquest, bTrade);
+	//CvEventReporter::getInstance().cityAcquired(eOldOwner, eNewOwner, pOldCity, bConquest, bTrade);
 
 	// We can skip a lot if city is just to be razed right away.
 	const bool bAutoRaze = bConquest && !bRecapture && GC.getGame().isAutoRaze(const_cast<CvCity*>(pOldCity), eNewOwner);
@@ -2798,6 +2798,8 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		{
 			logBBAI("  Player %d (%S) acquires city %S bConq %d bTrade %d", eNewOwner, getCivilizationDescription(0), pNewCity->getName(0).GetCString(), bConquest, bTrade );
 		}
+
+		CvEventReporter::getInstance().cityAcquired(eOldOwner, eNewOwner, pOldCity, bConquest, bTrade);
 
 		if (!bHuman)
 		{
