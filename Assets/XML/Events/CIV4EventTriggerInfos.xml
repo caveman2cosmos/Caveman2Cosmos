@@ -5222,6 +5222,7 @@
 				<Event>EVENT_PARTISANS_1</Event>
 				<Event>EVENT_PARTISANS_2</Event>
 			</Events>
+			<bPickCity>1</bPickCity>
 			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>

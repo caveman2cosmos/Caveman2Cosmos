@@ -167,6 +167,7 @@ CvCity::CvCity()
 
 	m_deferringBonusProcessingCount = 0;
 	m_paiStartDeferredSectionNumBonuses = NULL;
+	m_bMarkedForDestruction = false;
 
 	reset(0, NO_PLAYER, 0, 0, true);
 }

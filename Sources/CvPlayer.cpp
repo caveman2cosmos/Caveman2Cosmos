@@ -2289,6 +2289,8 @@ CvCity* CvPlayer::initCity(int iX, int iY, bool bBumpUnits, bool bUpdatePlotGrou
 void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool bUpdatePlotGroups)
 {
 	PROFILE_FUNC();
+	if (pOldCity->isMarkedForDestruction()) return;
+	pOldCity->markForDestruction();
 
 	const PlayerTypes eNewOwner = getID();
 	const PlayerTypes eOldOwner = pOldCity->getOwner();
@@ -2318,10 +2320,11 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		iCaptureGold = Cy::call<int>(PYGameModule, "doCityCaptureGold", Cy::Args() << pOldCity << eNewOwner);
 		changeGold(iCaptureGold);
 	}
-	CvEventReporter::getInstance().cityAcquired(eOldOwner, eNewOwner, pOldCity, bConquest, bTrade);
-
 	// We can skip a lot if city is just to be razed right away.
 	const bool bAutoRaze = bConquest && !bRecapture && GC.getGame().isAutoRaze(const_cast<CvCity*>(pOldCity), eNewOwner);
+
+	CvEventReporter::getInstance().cityAcquired(eOldOwner, eNewOwner, pOldCity, bConquest, bTrade, bAutoRaze);
+
 	if (bAutoRaze)
 	{
 		if (bHuman && iCaptureGold > 0)
@@ -21497,16 +21500,17 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 
 	if (kTrigger.getNumWorldNews() > 0)
 	{
-		int iText = GC.getGame().getSorenRandNum(kTrigger.getNumWorldNews(), "Trigger World News choice");
-
-		pTriggerData->m_szGlobalText = gDLL->getText(kTrigger.getWorldNews(iText).GetCString(),
-			getCivilizationAdjectiveKey(),
-			NULL != pCity ? pCity->getNameKey() : L"",
-			pTriggerData->m_eReligion != NO_RELIGION ? GC.getReligionInfo(pTriggerData->m_eReligion).getAdjectiveKey() : L"",
-			eOtherPlayer != NO_PLAYER ? GET_PLAYER(eOtherPlayer).getCivilizationAdjectiveKey() : L"",
-			NULL != pOtherPlayerCity ? pOtherPlayerCity->getNameKey() : L"",
-			pTriggerData->m_eCorporation != NO_CORPORATION ? GC.getCorporationInfo(pTriggerData->m_eCorporation).getTextKeyWide() : L""
-			);
+		pTriggerData->m_szGlobalText = (
+			gDLL->getText(
+				kTrigger.getWorldNews(GC.getGame().getSorenRandNum(kTrigger.getNumWorldNews(), "Trigger World News choice")).GetCString(),
+				getCivilizationAdjectiveKey(),
+				NULL != pCity ? pCity->getNameKey() : L"",
+				pTriggerData->m_eReligion != NO_RELIGION ? GC.getReligionInfo(pTriggerData->m_eReligion).getAdjectiveKey() : L"",
+				eOtherPlayer != NO_PLAYER ? GET_PLAYER(eOtherPlayer).getCivilizationAdjectiveKey() : L"",
+				NULL != pOtherPlayerCity ? pOtherPlayerCity->getNameKey() : L"",
+				pTriggerData->m_eCorporation != NO_CORPORATION ? GC.getCorporationInfo(pTriggerData->m_eCorporation).getTextKeyWide() : L""
+			)
+		);
 	}
 	else
 	{

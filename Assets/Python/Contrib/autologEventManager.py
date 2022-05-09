@@ -925,7 +925,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 
 	def onCityAcquired(self, argsList):
 		if AutologOpt.isLogCityOwner():
-			iOwnerOld, iOwnerNew, CyCity, bConquest, bTrade = argsList
+			iOwnerOld, iOwnerNew, CyCity, bConquest, bTrade, bAutoRaze = argsList
 			if iOwnerNew == GAME.getActivePlayer():
 				szCity = CyCity.getName()
 				szCiv = GC.getPlayer(iOwnerOld).getName()
@@ -935,6 +935,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 					message = TRNSLTR.getText("TXT_KEY_AUTOLOG_CITY_TRADED", (szCity, szCiv))
 				else:
 					message = TRNSLTR.getText("TXT_KEY_AUTOLOG_CITY_FLIPPED", (szCity, szCiv))
+				# ToDo - Add a TXT_KEY_AUTOLOG_CITY_AUTORAZED log here
 
 				Logger.writeLog(message, vColor="RoyalBlue")
 

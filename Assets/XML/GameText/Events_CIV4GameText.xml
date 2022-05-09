@@ -1508,11 +1508,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LOOTERS</Tag>
-		<English>The %s4_civ_adjective city of %s5_city is suffering civil unrest. Riots and looting have broken out.</English>
-		<French>La ville %s4:2_civ_adjective de %s5_city est en plein chaos. Des émeutes et des pillages ont eu lieu un peu partout.</French>
-		<German>In der %s4:2_civ_adjective Stadt %s5_city herrschen Unruhen. Es gibt Plünderungen und Tumulte.</German>
-		<Italian>Nella città %s4_civ_adjective di %s5_city ci sono disordini civili. Sono scoppiati tumulti e saccheggi.</Italian>
-		<Spanish>La ciudad %s4:2_civ_adjective de %s5_city sufre agitación civil. Han estallado los disturbios y el pillaje.</Spanish>
+		<English>The %s4_civ_adjective city of %s2_city is suffering civil unrest. Riots and looting have broken out.</English>
+		<French>La ville %s4:2_civ_adjective de %s2_city est en plein chaos. Des émeutes et des pillages ont eu lieu un peu partout.</French>
+		<German>In der %s4:2_civ_adjective Stadt %s2_city herrschen Unruhen. Es gibt Plünderungen und Tumulte.</German>
+		<Italian>Nella città %s4_civ_adjective di %s2_city ci sono disordini civili. Sono scoppiati tumulti e saccheggi.</Italian>
+		<Spanish>La ciudad %s4:2_civ_adjective de %s2_city sufre agitación civil. Han estallado los disturbios y el pillaje.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LOST_AT_SEA</Tag>
@@ -1875,11 +1875,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PARTISANS</Tag>
-		<English>The %s1_civ_adjective people from the city of %s5_city have seen their homes burned! They are rising up against the wicked %s4_civ_adjective invaders, forming Partisan units to join the resistance as militia fighters!</English>
-		<French>Les habitations du peuple %s1_civ_adjective de la ville : %s5_city ont été brûlées ! Le peuple s'élève contre les fourbes envahisseurs %s4:2_civ_adjective et forment des unités de Partisans pour rejoindre la résistance en tant que miliciens !</French>
-		<German>Die Häuser des %s1:2_civ_adjective Volkes aus der Stadt %s5_city wurden vor ihren Augen verbrannt! Sie beginnen einen Aufstand gegen die niederträchtigen %s4:2_civ_adjective Angreifer und bilden Partisanengruppen, um den Widerstand als Milizkämpfer zu unterstützen!</German>
-		<Italian>La popolazione %s1_civ_adjective della città di %s5_city ha visto bruciare le proprie case! Si sta sollevando contro i malvagi invasori %s4_civ_adjective, formando unità partigiane per combattere per la resistenza!</Italian>
-		<Spanish>¡Los %s1:3_civ_adjective de la ciudad de %s5_city han visto arder sus casas! ¡Se están levantando contra los malvados invasores %s4:3_civ_adjective, formando unidades de partisanos que se unen a la resistencia como milicianos!</Spanish>
+		<English>The %s1_civ_adjective people from the city of %s2_city have seen their homes burned! They are rising up against the wicked %s4_civ_adjective invaders, forming Partisan units to join the resistance as militia fighters!</English>
+		<French>Les habitations du peuple %s1_civ_adjective de la ville : %s2_city ont été brûlées ! Le peuple s'élève contre les fourbes envahisseurs %s4:2_civ_adjective et forment des unités de Partisans pour rejoindre la résistance en tant que miliciens !</French>
+		<German>Die Häuser des %s1:2_civ_adjective Volkes aus der Stadt %s2_city wurden vor ihren Augen verbrannt! Sie beginnen einen Aufstand gegen die niederträchtigen %s4:2_civ_adjective Angreifer und bilden Partisanengruppen, um den Widerstand als Milizkämpfer zu unterstützen!</German>
+		<Italian>La popolazione %s1_civ_adjective della città di %s2_city ha visto bruciare le proprie case! Si sta sollevando contro i malvagi invasori %s4_civ_adjective, formando unità partigiane per combattere per la resistenza!</Italian>
+		<Spanish>¡Los %s1:3_civ_adjective de la ciudad de %s2_city han visto arder sus casas! ¡Se están levantando contra los malvados invasores %s4:3_civ_adjective, formando unidades de partisanos que se unen a la resistencia como milicianos!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PASTURE_BUILT</Tag>
