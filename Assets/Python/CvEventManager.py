@@ -2554,7 +2554,7 @@ class CvEventManager:
 
 	# This is before city has changed owner or been autorazed
 	def onCityAcquired(self, argsList):
-		iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
+		iOwnerOld, iOwnerNew, city, bConquest, bTrade, bAutoRaze = argsList
 		iOldCityID = self.iOldCityID
 		iCityID = city.getID()
 		aWonderTuple = self.aWonderTuple
