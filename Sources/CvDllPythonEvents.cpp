@@ -666,7 +666,7 @@ void CvDllPythonEvents::reportCityRazed( CvCity *pCity, PlayerTypes ePlayer )
 	postEvent(eventData, "cityRazed");
 }
 
-void CvDllPythonEvents::reportCityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* city, bool bConquest, bool bTrade)
+void CvDllPythonEvents::reportCityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* city, bool bConquest, bool bTrade, bool bAutoRaze)
 {
 	EventArgs eventData;
 	eventData
@@ -675,7 +675,8 @@ void CvDllPythonEvents::reportCityAcquired(PlayerTypes eOldOwner, PlayerTypes eP
 		.arg("ePlayer", ePlayer)
 		.arg("city", city)
 		.arg("bConquest", bConquest)
-		.arg("bTrade", bTrade);
+		.arg("bTrade", bTrade)
+		.arg("bAutoRaze", bAutoRaze);
 	postEvent(eventData, "cityAcquired");
 }
 

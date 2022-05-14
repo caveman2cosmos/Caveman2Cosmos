@@ -1584,6 +1584,9 @@ public:
 
 	bool isDirectAttackable() const;
 
+	void markForDestruction() { m_bMarkedForDestruction = true; }
+	bool isMarkedForDestruction() const { return m_bMarkedForDestruction; }
+
 protected:
 
 	int m_iID;
@@ -1959,6 +1962,9 @@ protected:
 
 	short m_iZoCCount;
 	void changeZoCCount(short iChange);
+
+	bool m_bMarkedForDestruction;
+
 public:
 	int getTechSpecialistHappinessTypes(TechTypes eTech, SpecialistTypes eSpecialist) const;
 
