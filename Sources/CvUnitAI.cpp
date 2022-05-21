@@ -6730,18 +6730,14 @@ void CvUnitAI::AI_engineerMove()
 	return;
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  04/25/10								jdog5000	  */
-/*																							  */
-/* Espionage AI																				 */
-/************************************************************************************************/
+
 void CvUnitAI::AI_spyMove()
 {
 	PROFILE_FUNC();
 
 	CvTeamAI& kTeam = GET_TEAM(getTeam());
 	int iEspionageChance = 0;
-	if (plot()->isOwned() && (plot()->getTeam() != getTeam()))
+	if (plot()->isOwned() && plot()->getTeam() != getTeam())
 	{
 		switch (GET_PLAYER(getOwner()).AI_getAttitude(plot()->getOwner()))
 		{
@@ -6754,11 +6750,11 @@ void CvUnitAI::AI_spyMove()
 			break;
 
 		case ATTITUDE_CAUTIOUS:
-			iEspionageChance = (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 30 : 10);
+			iEspionageChance = 20;
 			break;
 
 		case ATTITUDE_PLEASED:
-			iEspionageChance = (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 20 : 0);
+			iEspionageChance = 7;
 			break;
 
 		case ATTITUDE_FRIENDLY:
@@ -6767,17 +6763,22 @@ void CvUnitAI::AI_spyMove()
 
 		default:
 			FErrorMsg("error");
-			break;
 		}
 
-		WarPlanTypes eWarPlan = kTeam.AI_getWarPlan(plot()->getTeam());
-		if (eWarPlan != NO_WARPLAN)
+		const WarPlanTypes eWarPlan = kTeam.AI_getWarPlan(plot()->getTeam());
+
+		switch (eWarPlan)
 		{
-			if (eWarPlan == WARPLAN_LIMITED)
+			case WARPLAN_LIMITED:
+			case WARPLAN_TOTAL:
 			{
 				iEspionageChance += 50;
 			}
-			else
+			case NO_WARPLAN:
+			{
+				break;
+			}
+			default:
 			{
 				iEspionageChance += 20;
 			}
@@ -6838,7 +6839,7 @@ void CvUnitAI::AI_spyMove()
 				}
 			}
 		}
-		else if (GC.getGame().getSorenRandNum(100, "AI Spy Espionage") < iEspionageChance)
+		else if (iEspionageChance > 99 || GC.getGame().getSorenRandNum(100, "AI Spy Espionage") < iEspionageChance)
 		{
 			// This applies only when not in an enemy city, so for destroying improvements
 			if (AI_espionageSpy())
@@ -6868,12 +6869,9 @@ void CvUnitAI::AI_spyMove()
 				return;
 			}
 		}
-		else
+		else if (AI_cityOffenseSpy(10))
 		{
-			if (AI_cityOffenseSpy(10))
-			{
-				return;
-			}
+			return;
 		}
 	}
 
@@ -6919,9 +6917,7 @@ void CvUnitAI::AI_spyMove()
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												   */
-/************************************************************************************************/
+
 
 void CvUnitAI::AI_ICBMMove()
 {
