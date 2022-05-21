@@ -5221,7 +5221,6 @@ class Revolution:
 
 #***********************************
 						# Acquire city
-						#joinPlayer.acquireCity( pCity, False, True )
 
 						if self.LOG_DEBUG: print "[REV] Revolt: Population of %s before is %d"%(pCity.getName(),pCity.getPopulation())
 						if self.LOG_DEBUG: print "[REV] Revolt: Check city culture is %d, at %d, %d"%(pCity.getCulture(pPlayer.getID()), pCity.getX(),pCity.getY())
@@ -5404,7 +5403,6 @@ class Revolution:
 
 #***********************************
 							# Acquire city
-							#joinPlayer.acquireCity( pCity, False, True )
 
 							if self.LOG_DEBUG: print "[REV] Revolt: Population of %s before is %d"%(pCity.getName(),pCity.getPopulation())
 							if self.LOG_DEBUG: print "[REV] Revolt: Check city culture is %d, at %d, %d"%(pCity.getCulture(pPlayer.getID()), pCity.getX(),pCity.getY())

@@ -3042,9 +3042,6 @@
 			<Type>EVENT_PARTISANS_1</Type>
 			<Description>TXT_KEY_EVENT_PARTISANS_1</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_PARTISANS_OTHER_1</OtherPlayerPopup>
-			<PythonCallback>applyPartisans1</PythonCallback>
-			<PythonCanDo>canApplyPartisans1</PythonCanDo>
-			<PythonHelp>getHelpPartisans1</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -3052,11 +3049,8 @@
 			<Type>EVENT_PARTISANS_2</Type>
 			<Description>TXT_KEY_EVENT_PARTISANS_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_PARTISANS_OTHER_2</OtherPlayerPopup>
-			<PythonCallback>applyPartisans2</PythonCallback>
-			<PythonCanDo>canApplyPartisans2</PythonCanDo>
-			<PythonHelp>getHelpPartisans2</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>600</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_NEW_DYNASTY_1</Type>
