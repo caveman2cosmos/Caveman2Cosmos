@@ -393,7 +393,7 @@ class WBCityEditScreen:
 
 		elif inputClass.getFunctionName() == "CityOwner":
 			iIndex = screen.getSelectedPullDownID("CityOwner")
-			GC.getPlayer(screen.getPullDownData("CityOwner", iIndex)).acquireCity(pCity, False, True)
+			GC.getPlayer(screen.getPullDownData("CityOwner", iIndex)).acquireCity(pCity, False, False)
 			self.interfaceScreen(pPlot.getPlotCity())
 
 		elif inputClass.getFunctionName().find("CityPopulation") > -1:

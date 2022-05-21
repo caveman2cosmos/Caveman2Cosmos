@@ -11551,14 +11551,25 @@ void CvGame::enforceOptionCompatibility(GameOptionTypes eOption)
 }
 
 
-bool CvGame::isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner) const
+bool CvGame::isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner, bool bConquest, bool bTrade, bool bRecapture) const
 {
-	if (isOption(GAMEOPTION_BARBARIANS_ALWAYS_RAZE)
-	&& (eNewOwner == BARBARIAN_PLAYER || eNewOwner == NEANDERTHAL_PLAYER)
-	//Insectoids always raze
-	|| eNewOwner == INSECT_PLAYER)
+	if (eNewOwner == BARBARIAN_PLAYER || eNewOwner == NEANDERTHAL_PLAYER)
+	{
+		if (bConquest && isOption(GAMEOPTION_BARBARIANS_ALWAYS_RAZE))
+		{
+			return true;
+		}
+	}
+	else if (eNewOwner == INSECT_PLAYER // Insectoids always raze
+	// GAMEOPTION_ALWAYS_RAZE_CITIES doesn't affect barb/neander players due to the existence of the GAMEOPTION_BARBARIANS_ALWAYS_RAZE option.
+	|| (bConquest || bTrade) && isOption(GAMEOPTION_ALWAYS_RAZE_CITIES))
 	{
 		return true;
+	}
+
+	if (bTrade || bConquest && bRecapture)
+	{
+		return false;
 	}
 	if (isOption(GAMEOPTION_NO_CITY_RAZING))
 	{

@@ -1038,6 +1038,7 @@
 				<UnitCombatPrereqType>UNITCOMBAT_SEA_ANIMAL</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
+		<!--
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_LEVIATHAN</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_LEVIATHAN</Description>
@@ -1046,6 +1047,7 @@
 				<UnitCombatPrereqType>UNITCOMBAT_SEA_ANIMAL</UnitCombatPrereqType>
 			</UnitCombatPrereqTypes>
 		</PromotionLineInfo>
+		-->
 		<PromotionLineInfo>
 			<Type>PROMOTIONLINE_BARD</Type>
 			<Description>TXT_KEY_PROMOTIONLINE_BARD</Description>
