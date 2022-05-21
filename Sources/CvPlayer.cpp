@@ -2320,8 +2320,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		iCaptureGold = Cy::call<int>(PYGameModule, "doCityCaptureGold", Cy::Args() << pOldCity << eNewOwner);
 		changeGold(iCaptureGold);
 	}
+
 	// We can skip a lot if city is just to be razed right away.
-	const bool bAutoRaze = bConquest && !bRecapture && GC.getGame().isAutoRaze(const_cast<CvCity*>(pOldCity), eNewOwner);
+	const bool bAutoRaze = GC.getGame().isAutoRaze(const_cast<CvCity*>(pOldCity), eNewOwner, bConquest, bTrade, bRecapture);
 
 	CvEventReporter::getInstance().cityAcquired(eOldOwner, eNewOwner, pOldCity, bConquest, bTrade, bAutoRaze);
 
@@ -2623,9 +2624,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 		if (bTrade)
 		{
-			algo::for_each(pCityPlot->rect(1, 1),
-				bind(&CvPlot::setCulture, _1, eOldOwner, 0, false, false)
-			);
+			algo::for_each(pCityPlot->rect(1, 1), bind(&CvPlot::setCulture, _1, eOldOwner, 0, false, false));
 		}
 		pNewCity = initCity(pCityPlot->getX(), pCityPlot->getY(), !bConquest, false);
 
@@ -23615,7 +23614,7 @@ bool CvPlayer::splitEmpire(int iAreaId)
 			const int iCulture = pLoopCity->getCultureTimes100(getID());
 			const CvPlot* pPlot = pLoopCity->plot();
 
-			GET_PLAYER(eNewPlayer).acquireCity(pLoopCity, false, true, false);
+			GET_PLAYER(eNewPlayer).acquireCity(pLoopCity, false, false, false);
 
 			if (NULL != pPlot)
 			{
