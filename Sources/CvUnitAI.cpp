@@ -25292,7 +25292,6 @@ bool CvUnitAI::AI_cityOffenseSpy(const int iMaxPath, const CvCity* pSkipCity)
 	const CvArea* pArea = area();
 
 	const bool bValid = team.getBestKnownTechScorePercent() < 85;
-	const int iTreshold = bValid ? 1 : (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 51 : 1);
 
 	CvReachablePlotSet plotSet(getGroup(), 0, MAX_INT);
 	const CvPlot* pBestPlot = NULL;
@@ -25305,7 +25304,7 @@ bool CvUnitAI::AI_cityOffenseSpy(const int iMaxPath, const CvCity* pSkipCity)
 		{
 			// Only move to cities where we will run missions
 			if (bValid || team.AI_getWarPlan(playerX.getTeam()) != NO_WARPLAN
-			|| player.AI_getAttitudeWeight((PlayerTypes)iI) < iTreshold)
+			|| player.AI_getAttitudeWeight((PlayerTypes)iI) < 51)
 			{
 				foreach_(const CvCity * cityX, playerX.cities())
 				{
@@ -25359,20 +25358,18 @@ bool CvUnitAI::AI_bonusOffenseSpy(int iRange)
 
 	foreach_(const CvPlot * pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
-		if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
+		if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS
+		&& pLoopPlot->isOwned() && pLoopPlot->getTeam() != getTeam())
 		{
-			if (pLoopPlot->isOwned() && pLoopPlot->getTeam() != getTeam())
+			// Only move to plots where we will run missions
+			if (GET_PLAYER(getOwner()).AI_getAttitudeWeight(pLoopPlot->getOwner()) < 51
+			|| GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN)
 			{
-				// Only move to plots where we will run missions
-				if (GET_PLAYER(getOwner()).AI_getAttitudeWeight(pLoopPlot->getOwner()) < (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 51 : 1)
-					|| GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN)
+				const int iValue = AI_getEspionageTargetValue(pLoopPlot, iRange, iBestValue);
+				if (iValue > iBestValue)
 				{
-					const int iValue = AI_getEspionageTargetValue(pLoopPlot, iRange, iBestValue);
-					if (iValue > iBestValue)
-					{
-						iBestValue = iValue;
-						pBestPlot = pLoopPlot;
-					}
+					iBestValue = iValue;
+					pBestPlot = pLoopPlot;
 				}
 			}
 		}
