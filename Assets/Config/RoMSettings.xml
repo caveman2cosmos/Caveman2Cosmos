@@ -165,7 +165,6 @@ values="Current Color|Black|Blue|Brown|Cyan|Dark Blue|Dark Cyan|Dark Green|Dark 
 			<option id="NoAutoCorporationFounding" key="NoAutoCorporationFounding" type="boolean" default="False" get="isNoAutoCorporationFounding" set="setNoAutoCorporationFounding">
 				<change module="ANewDawnSettings" function="changedNoAutoCorporationFounding"/>
 			</option>
-			<option id="NoProductionPopup" key="NoProductionPopup" type="boolean" default="False"/>
 
 			<option id="InfrastructureIgnoresImprovements" key="InfrastructureIgnoresImprovements" type="boolean" default="False" get="isInfrastructureIgnoresImprovements" set="setInfrastructureIgnoresImprovements">
 				<change module="ANewDawnSettings" function="changedInfrastructureIgnoresImprovements"/>

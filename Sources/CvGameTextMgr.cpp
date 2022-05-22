@@ -384,85 +384,29 @@ void CvGameTextMgr::setNetStats(CvWString& szString, PlayerTypes ePlayer)
 
 void CvGameTextMgr::setMinimizePopupHelp(CvWString& szString, const CvPopupInfo & info)
 {
-	CvCity* pCity;
-	UnitTypes eTrainUnit;
-	BuildingTypes eConstructBuilding;
-	ProjectTypes eCreateProject;
-	ReligionTypes eReligion;
-	CivicTypes eCivic;
-
 	switch (info.getButtonPopupType())
 	{
-	case BUTTONPOPUP_CHOOSEPRODUCTION:
-		pCity = GET_PLAYER(GC.getGame().getActivePlayer()).getCity(info.getData1());
-		if (pCity != NULL)
+		case BUTTONPOPUP_CHANGERELIGION:
 		{
-			eTrainUnit = NO_UNIT;
-			eConstructBuilding = NO_BUILDING;
-			eCreateProject = NO_PROJECT;
-
-			switch (info.getData2())
-			{
-			case (ORDER_TRAIN):
-				eTrainUnit = (UnitTypes)info.getData3();
-				break;
-			case (ORDER_CONSTRUCT):
-				eConstructBuilding = (BuildingTypes)info.getData3();
-				break;
-			case (ORDER_CREATE):
-				eCreateProject = (ProjectTypes)info.getData3();
-				break;
-			default:
-				break;
-			}
-
-			if (eTrainUnit != NO_UNIT)
-			{
-				szString += gDLL->getText("TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_UNIT", GC.getUnitInfo(eTrainUnit).getTextKeyWide(), pCity->getNameKey());
-			}
-			else if (eConstructBuilding != NO_BUILDING)
-			{
-				szString += gDLL->getText("TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_BUILDING", GC.getBuildingInfo(eConstructBuilding).getTextKeyWide(), pCity->getNameKey());
-			}
-			else if (eCreateProject != NO_PROJECT)
-			{
-				szString += gDLL->getText("TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_PROJECT", GC.getProjectInfo(eCreateProject).getTextKeyWide(), pCity->getNameKey());
-			}
-			else
-			{
-				szString += gDLL->getText("TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION", pCity->getNameKey());
-			}
+			szString += gDLL->getText("TXT_KEY_MINIMIZED_CHANGE_RELIGION", GC.getReligionInfo((ReligionTypes)info.getData1()).getTextKeyWide());
+			break;
 		}
-		break;
-
-	case BUTTONPOPUP_CHANGERELIGION:
-		eReligion = ((ReligionTypes)(info.getData1()));
-		if (eReligion != NO_RELIGION)
+		case BUTTONPOPUP_CHOOSETECH:
 		{
-			szString += gDLL->getText("TXT_KEY_MINIMIZED_CHANGE_RELIGION", GC.getReligionInfo(eReligion).getTextKeyWide());
-		}
-		break;
+			if (info.getData1() > 0)
+				szString += gDLL->getText("TXT_KEY_MINIMIZED_CHOOSE_TECH_FREE");
+			else szString += gDLL->getText("TXT_KEY_MINIMIZED_CHOOSE_TECH");
 
-	case BUTTONPOPUP_CHOOSETECH:
-		if (info.getData1() > 0)
-		{
-			szString += gDLL->getText("TXT_KEY_MINIMIZED_CHOOSE_TECH_FREE");
+			break;
 		}
-		else
+		case BUTTONPOPUP_CHANGECIVIC:
 		{
-			szString += gDLL->getText("TXT_KEY_MINIMIZED_CHOOSE_TECH");
+			szString += gDLL->getText("TXT_KEY_MINIMIZED_CHANGE_CIVIC", GC.getCivicInfo((CivicTypes)info.getData2()).getTextKeyWide());
+			break;
 		}
-		break;
-
-	case BUTTONPOPUP_CHANGECIVIC:
-		eCivic = ((CivicTypes)(info.getData2()));
-		if (eCivic != NO_CIVIC)
-		{
-			szString += gDLL->getText("TXT_KEY_MINIMIZED_CHANGE_CIVIC", GC.getCivicInfo(eCivic).getTextKeyWide());
-		}
-		break;
 	}
 }
+
 
 void CvGameTextMgr::setEspionageMissionHelp(CvWStringBuffer &szBuffer, const CvUnit* pUnit)
 {

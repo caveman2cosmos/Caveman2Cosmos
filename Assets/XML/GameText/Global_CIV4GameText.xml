@@ -12465,38 +12465,6 @@
 		<Spanish>Ya podéis adoptar el [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT] como religión oficial...</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION</Tag>
-		<English>Choose production in %s1_City...</English>
-		<French>Choix de la production de %s1_City...</French>
-		<German>Wählt die Produktion in %s1_City ...</German>
-		<Italian>Scegli la produzione a %s1_City...</Italian>
-		<Spanish>Elegid la producción de %s1_City...</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_BUILDING</Tag>
-		<English>You have constructed a building ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) in %s2_City...</English>
-		<French>Vous avez construit un bâtiment ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) à %s2_City...</French>
-		<German>Ihr habt ein Gebäude ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) in %s2_City errichtet ...</German>
-		<Italian>Hai costruito l'edificio ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) a %s2_City...</Italian>
-		<Spanish>Habéis construido [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT] en %s2_City...</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_PROJECT</Tag>
-		<English>You have created a project ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) in %s2_City...</English>
-		<French>Vous avez créé un projet ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) à %s2_City...</French>
-		<German>Ihr habt ein Projekt ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) in %s2_City erschaffen ...</German>
-		<Italian>Hai creato il progetto ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) a %s2_City...</Italian>
-		<Spanish>Habéis creado [COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT] en %s2_City...</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_UNIT</Tag>
-		<English>You have trained a unit ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) in %s2_City...</English>
-		<French>Vous avez entraîné une nouvelle unité ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) à %s2_City...</French>
-		<German>Ihr habt eine Einheit ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) in %s2_City ausgebildet ...</German>
-		<Italian>Hai addestrato l'unità ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) a %s2_City...</Italian>
-		<Spanish>Habéis entrenado a [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT] en %s2_City...</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MINIMIZED_CHOOSE_TECH</Tag>
 		<English>Choose a new technology to research...</English>
 		<French>Choisissez une nouvelle technologie à rechercher...</French>

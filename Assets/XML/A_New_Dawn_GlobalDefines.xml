@@ -256,10 +256,6 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>ZOOM_CITY_FOR_PRODUCTION_POPUP</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<!-- Use the following to determine what building art is displayed on cities.
 It is a bitmask of flags which may be added together:
 	1	= Wonders
