@@ -1457,6 +1457,7 @@ class CvMainInterface:
 				screen.hide("CityTab0")
 				screen.hide("CityTab1")
 				screen.hide("CityTab2")
+				screen.hide("CityTab3")
 				# Completely rebuilt every time they are needed.
 				screen.deleteWidget("CT|UnitGrouping")
 				screen.deleteWidget("CT|UnitSorting")
@@ -1555,6 +1556,7 @@ class CvMainInterface:
 				screen.show("CityTab0")
 				screen.show("CityTab1")
 				screen.show("CityTab2")
+				screen.show("CityTab3")
 				screen.show("ProcessPanel")
 				screen.show("ScrollPanelBL")
 				screen.show("Conscript")
@@ -1656,6 +1658,7 @@ class CvMainInterface:
 				screen.hide("CityTab0")
 				screen.hide("CityTab1")
 				screen.hide("CityTab2")
+				screen.hide("CityTab3")
 				screen.hide("ProcessPanel")
 				screen.hide("ScrollPanelBL")
 			screen.hide("InterfaceLeftBackgroundWidget")
@@ -3369,21 +3372,24 @@ class CvMainInterface:
 		aList = [
 			"CityUnit.dds",
 			"CityBuilding.dds",
-			"CityWonder.dds"
+			"CityWonder.dds",
+			"CityAdmin.dds"
 		]
 		x = self.xMidL
-		for i in xrange(3):
+		for i in xrange(4):
 			ID = str(i)
 			Btn = "CityTab" + ID
 			Img = "CityTab|Img" + ID
 			screen.setImageButton(Btn, "", x, y, iSize, iSize, eWidGen, 0, 0)
-			screen.setStyle(Btn, "GFC_Control_EtchedButton_Style")
+			if i == 3:
+				screen.setStyle(Btn, "SF_CtrlTheme_Civ4_Control_DarkMarbleButton_Style")
+			else: screen.setStyle(Btn, "GFC_Control_EtchedButton_Style")
 			artPath = szPath + aList[i]
 			screen.addDDSGFCAt(Img, Btn, artPath, 4, 4, dA, dA, eWidGen, 0, 0, True)
 			screen.setHitTest(Img, HitTestTypes.HITTEST_NOHIT)
 			x += dx + 2
 
-		w = self.xMidR - x - 16
+		w = self.xMidR - x - 14
 		Pnl = "ProcessPanel"
 		screen.addScrollPanel(Pnl, "", x, y-8, w, iSize-6, PanelStyles.PANEL_STYLE_EMPTY)
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
@@ -3394,6 +3400,7 @@ class CvMainInterface:
 				Btn = "WID|PROCESS|CityWork" + str(i)
 				screen.setImageButtonAt(Btn, Pnl, BTN, x, 0, iSize, iSize, eWidGen, 1, 1)
 				x += dx
+
 		# Build Lists
 		y += dx + 2
 		w = self.xMidR - self.xMidL - 16
