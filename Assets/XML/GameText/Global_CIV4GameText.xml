@@ -16776,14 +16776,6 @@
 		<Russian>%s1_Name не может завершить %s2_Build, потому что для этого требуется принести в жертву отряд стандартного размера группы этого типа.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_UNIT_DEATH</Tag>
-		<English>Your %s1_unit has Perished</English>
-		<French>Votre %s1_unit a péri</French>
-		<Italian>La tua unità %s1_unit è morta</Italian>
-		<Polish>Twoja jednostka: %s1_unit zginęła</Polish>
-		<Russian>Ваш %s1_unit ïîãèáëî</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_UNIT_DISBANDED_NO_MONEY</Tag>
 		<English>%s1_UnitName was disbanded because of a lack of funds!</English>
 		<French>%s1_UnitName : unité dissoute par manque de fonds !</French>
