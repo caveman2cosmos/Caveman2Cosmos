@@ -378,11 +378,6 @@ void CvEventReporter::selectionGroupPushMission(CvSelectionGroup* pSelectionGrou
 	m_kPythonEventMgr.reportSelectionGroupPushMission(pSelectionGroup, eMission);
 }
 
-void CvEventReporter::unitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot)
-{
-	m_kPythonEventMgr.reportUnitMove(pPlot, pUnit, pOldPlot);
-}
-
 void CvEventReporter::unitCreated(CvUnit *pUnit)
 {
 	m_kPythonEventMgr.reportUnitCreated(pUnit);
