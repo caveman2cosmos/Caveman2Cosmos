@@ -6730,18 +6730,14 @@ void CvUnitAI::AI_engineerMove()
 	return;
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  04/25/10								jdog5000	  */
-/*																							  */
-/* Espionage AI																				 */
-/************************************************************************************************/
+
 void CvUnitAI::AI_spyMove()
 {
 	PROFILE_FUNC();
 
 	CvTeamAI& kTeam = GET_TEAM(getTeam());
 	int iEspionageChance = 0;
-	if (plot()->isOwned() && (plot()->getTeam() != getTeam()))
+	if (plot()->isOwned() && plot()->getTeam() != getTeam())
 	{
 		switch (GET_PLAYER(getOwner()).AI_getAttitude(plot()->getOwner()))
 		{
@@ -6754,11 +6750,11 @@ void CvUnitAI::AI_spyMove()
 			break;
 
 		case ATTITUDE_CAUTIOUS:
-			iEspionageChance = (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 30 : 10);
+			iEspionageChance = 20;
 			break;
 
 		case ATTITUDE_PLEASED:
-			iEspionageChance = (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 20 : 0);
+			iEspionageChance = 7;
 			break;
 
 		case ATTITUDE_FRIENDLY:
@@ -6767,17 +6763,22 @@ void CvUnitAI::AI_spyMove()
 
 		default:
 			FErrorMsg("error");
-			break;
 		}
 
-		WarPlanTypes eWarPlan = kTeam.AI_getWarPlan(plot()->getTeam());
-		if (eWarPlan != NO_WARPLAN)
+		const WarPlanTypes eWarPlan = kTeam.AI_getWarPlan(plot()->getTeam());
+
+		switch (eWarPlan)
 		{
-			if (eWarPlan == WARPLAN_LIMITED)
+			case WARPLAN_LIMITED:
+			case WARPLAN_TOTAL:
 			{
 				iEspionageChance += 50;
 			}
-			else
+			case NO_WARPLAN:
+			{
+				break;
+			}
+			default:
 			{
 				iEspionageChance += 20;
 			}
@@ -6838,7 +6839,7 @@ void CvUnitAI::AI_spyMove()
 				}
 			}
 		}
-		else if (GC.getGame().getSorenRandNum(100, "AI Spy Espionage") < iEspionageChance)
+		else if (iEspionageChance > 99 || GC.getGame().getSorenRandNum(100, "AI Spy Espionage") < iEspionageChance)
 		{
 			// This applies only when not in an enemy city, so for destroying improvements
 			if (AI_espionageSpy())
@@ -6868,12 +6869,9 @@ void CvUnitAI::AI_spyMove()
 				return;
 			}
 		}
-		else
+		else if (AI_cityOffenseSpy(10))
 		{
-			if (AI_cityOffenseSpy(10))
-			{
-				return;
-			}
+			return;
 		}
 	}
 
@@ -6919,9 +6917,7 @@ void CvUnitAI::AI_spyMove()
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												   */
-/************************************************************************************************/
+
 
 void CvUnitAI::AI_ICBMMove()
 {
@@ -25296,7 +25292,6 @@ bool CvUnitAI::AI_cityOffenseSpy(const int iMaxPath, const CvCity* pSkipCity)
 	const CvArea* pArea = area();
 
 	const bool bValid = team.getBestKnownTechScorePercent() < 85;
-	const int iTreshold = bValid ? 1 : (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 51 : 1);
 
 	CvReachablePlotSet plotSet(getGroup(), 0, MAX_INT);
 	const CvPlot* pBestPlot = NULL;
@@ -25309,7 +25304,7 @@ bool CvUnitAI::AI_cityOffenseSpy(const int iMaxPath, const CvCity* pSkipCity)
 		{
 			// Only move to cities where we will run missions
 			if (bValid || team.AI_getWarPlan(playerX.getTeam()) != NO_WARPLAN
-			|| player.AI_getAttitudeWeight((PlayerTypes)iI) < iTreshold)
+			|| player.AI_getAttitudeWeight((PlayerTypes)iI) < 51)
 			{
 				foreach_(const CvCity * cityX, playerX.cities())
 				{
@@ -25363,20 +25358,18 @@ bool CvUnitAI::AI_bonusOffenseSpy(int iRange)
 
 	foreach_(const CvPlot * pLoopPlot, plot()->rect(iSearchRange, iSearchRange))
 	{
-		if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS)
+		if (pLoopPlot->getBonusType(getTeam()) != NO_BONUS
+		&& pLoopPlot->isOwned() && pLoopPlot->getTeam() != getTeam())
 		{
-			if (pLoopPlot->isOwned() && pLoopPlot->getTeam() != getTeam())
+			// Only move to plots where we will run missions
+			if (GET_PLAYER(getOwner()).AI_getAttitudeWeight(pLoopPlot->getOwner()) < 51
+			|| GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN)
 			{
-				// Only move to plots where we will run missions
-				if (GET_PLAYER(getOwner()).AI_getAttitudeWeight(pLoopPlot->getOwner()) < (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? 51 : 1)
-					|| GET_TEAM(getTeam()).AI_getWarPlan(pLoopPlot->getTeam()) != NO_WARPLAN)
+				const int iValue = AI_getEspionageTargetValue(pLoopPlot, iRange, iBestValue);
+				if (iValue > iBestValue)
 				{
-					const int iValue = AI_getEspionageTargetValue(pLoopPlot, iRange, iBestValue);
-					if (iValue > iBestValue)
-					{
-						iBestValue = iValue;
-						pBestPlot = pLoopPlot;
-					}
+					iBestValue = iValue;
+					pBestPlot = pLoopPlot;
 				}
 			}
 		}

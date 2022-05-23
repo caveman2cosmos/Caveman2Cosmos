@@ -893,7 +893,7 @@ public:
 
 	void enforceOptionCompatibility(GameOptionTypes eOption);
 
-	bool isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner) const;
+	bool isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner, bool bConquest, bool bTrade, bool bRecapture) const;
 };
 
 #define CURRENT_MAP GC.getGame().getCurrentMap()
