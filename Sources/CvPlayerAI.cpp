@@ -875,7 +875,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 						if (unitX->getExperience() <= iCityExp)
 						{
 							unitX->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
-							unitX->kill(false);
+							unitX->kill(true);
 							bKilled = true;
 							pLastUpgradePlot = NULL;
 						}

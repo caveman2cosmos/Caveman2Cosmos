@@ -4006,8 +4006,7 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 #else
 		//TBNote: Need to make this an option perhaps.  Groups probably shouldn't be automatically splitting up to continue the planned move, particularly for human players.
 		//Would check if the whole group can move into the plot first.  This warrants more study before acting on this.
-		if (
-			pLoopUnit->canMove()
+		if (pLoopUnit->canMove()
 		&&	(
 				bCombat && (!pLoopUnit->isNoCapture() || !pPlot->isEnemyCity(*pLoopUnit))
 				?
@@ -4020,24 +4019,13 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 // BUG - Sentry Actions - end
 		{
 			pLoopUnit->move(pPlot, true);
-			//next statement perhaps should be an if is dead kind of protection against reporting the move elsewhere//TBFIXHERE
-			if (pLoopUnit->isDead())
-			{
-				// Toffer - Shouldn't this be handled when pLoopUnit actually dies in the above pLoopUnit->move(pPlot, true);
-				//	rather than after it has died here below.
-				pLoopUnit->joinGroup(NULL, true);
-				pLoopUnit->finishMoves();
-			}
 		}
 		else
 		{
 			pLoopUnit->joinGroup(NULL, true);
 			pLoopUnit->ExecuteMove(((float)(GC.getMissionInfo(MISSION_MOVE_TO).getTime() * gDLL->getMillisecsPerTurn())) / 1000.0f, false);
-/************************************************************************************************/
-/* Afforess	                  Start		 07/31/10                                               */
-/*                                                                                              */
-/* Units Seem to be getting stuck here                                                          */
-/************************************************************************************************/
+
+			// Afforess - Units Seem to be getting stuck here
 			if (GC.iStuckUnitID != pLoopUnit->getID())
 			{
 				GC.iStuckUnitID = pLoopUnit->getID();
@@ -4062,18 +4050,13 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 					pLoopUnit->finishMoves();
 				}
 			}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 		}
 	}
-
 	pStartPlot->enableCenterUnitRecalc(true);
 	pPlot->enableCenterUnitRecalc(true);
 
 	//execute move
-	if(bEndMove || !canAllMove())
+	if (bEndMove || !canAllMove())
 	{
 		foreach_(CvUnit* pLoopUnit, units())
 		{
@@ -4081,7 +4064,6 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 			pLoopUnit->ExecuteMove(((float)(GC.getMissionInfo(MISSION_MOVE_TO).getTime() * gDLL->getMillisecsPerTurn())) / 1000.0f, false);
 		}
 	}
-
 	m_bIsMidMove = false;
 }
 
