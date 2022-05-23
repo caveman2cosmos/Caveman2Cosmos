@@ -1450,7 +1450,7 @@ void CvUnit::convert(CvUnit* pUnit, const bool bKillOriginal)
 	if (bKillOriginal)
 	{
 		pUnit->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
-		pUnit->kill(true, NO_PLAYER, false);
+		pUnit->kill(true);
 	}
 }
 
@@ -1509,35 +1509,34 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 					}
 
 					bool bSurvived = false;
-					CvPlot* pRescuePlot = NULL;
 
-					if (GC.getDefineINT("WAR_PRIZES") && pPlot->isWater())
+					if (GC.getDefineINT("WAR_PRIZES") && GC.getGame().getSorenRandNum(10, "Unit Survives Drowning") == 0)
 					{
+						std::vector<CvPlot*> validPlots;
+
 						foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
 						{
-							if (!pAdjacentPlot->isWater() && !pAdjacentPlot->isVisibleEnemyUnit(pLoopUnit))
+							if (pLoopUnit->canMoveThrough(pAdjacentPlot, false))
 							{
-								pRescuePlot = pAdjacentPlot;
-								if (GC.getGame().getSorenRandNum(10, "Unit Survives Drowning") <= 2)
-								{
-									bSurvived = true;
-								}
-								break;
+								validPlots.push_back(pAdjacentPlot);
+								bSurvived = true;
 							}
 						}
+						if (bSurvived)
+						{
+							CvPlot* rescuePlot = validPlots[GC.getGame().getSorenRandNum(validPlots.size(), "Event pick plot")];
+
+							FAssertMsg(rescuePlot != NULL, "rescuePlot is expected to be a valid plot!");
+							pLoopUnit->setXY(rescuePlot->getX(), rescuePlot->getY());
+							pLoopUnit->setDamage(GC.getGame().getSorenRandNum(pLoopUnit->getHP(), "Survival Damage"), NO_PLAYER);
+							AddDLLMessage(
+								pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText("TXT_KEY_MISC_UNIT_SURVIVED_TRANSPORT_SINKING", pLoopUnit->getNameKey(), getNameKey()),
+								NULL, MESSAGE_TYPE_MINOR_EVENT
+							);
+						}
 					}
-					if (bSurvived)
-					{
-						FAssertMsg(pRescuePlot != NULL, "pRescuePlot is expected to be a valid plot!");
-						pLoopUnit->setDamage(GC.getGame().getSorenRandNum(pLoopUnit->getHP(), "Survival Damage"), NO_PLAYER);
-						pLoopUnit->move(pRescuePlot, false);
-						AddDLLMessage(
-							pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_UNIT_SURVIVED_TRANSPORT_SINKING", pLoopUnit->getNameKey(), getNameKey()),
-							NULL, MESSAGE_TYPE_MINOR_EVENT
-						);
-					}
-					else
+					if (!bSurvived)
 					{
 						AddDLLMessage(
 							eOwner, true, GC.getEVENT_MESSAGE_TIME(),
@@ -6707,8 +6706,14 @@ void CvUnit::move(CvPlot* pPlot, bool bShow)
 	setXY(pPlot->getX(), pPlot->getY(), true, true, bShow && pPlot->isVisibleToWatchingHuman(), bShow);
 
 	//TBFIXHERE it's very possible for the unit to be dead from this point and there are further move aspects taking place that would make little sense if unit is dead.
-	if (isDead()) return;
-
+	if (isDead())
+	{
+		// Toffer - Shouldn't this be handled when pLoopUnit actually dies in the above pLoopUnit->move(pPlot, true);
+		//	rather than after it has died here below.
+		joinGroup(NULL, true);
+		finishMoves();
+		return;
+	}
 	const FeatureTypes featureType = pPlot->getFeatureType();
 	if (featureType != NO_FEATURE)
 	{
@@ -6726,7 +6731,6 @@ void CvUnit::move(CvPlot* pPlot, bool bShow)
 			gDLL->getInterfaceIFace()->playGeneralSound("AS3D_UN_BIRDS_SCATTER", pPlot->getPoint());
 		}
 	}
-	CvEventReporter::getInstance().unitMove(pPlot, this, pOldPlot);
 }
 
 // false if unit is killed
