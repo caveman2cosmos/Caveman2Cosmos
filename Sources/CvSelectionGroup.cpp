@@ -2632,15 +2632,15 @@ bool CvSelectionGroup::canDoCommand(CommandTypes eCommand, int iData1, int iData
 
 bool CvSelectionGroup::canEverDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible, bool bUseCache) const
 {
-	if(eCommand == COMMAND_LOAD)
+	if (eCommand == COMMAND_LOAD)
 	{
 		return algo::any_of(plot()->units(), !CvUnit::fn::isFull());
 	}
-	else if(eCommand == COMMAND_UNLOAD)
+	if (eCommand == COMMAND_UNLOAD)
 	{
 		return algo::any_of(units(), CvUnit::fn::isCargo());
 	}
-	else if(eCommand == COMMAND_UPGRADE && bUseCache)
+	if (eCommand == COMMAND_UPGRADE && bUseCache)
 	{
 		//see if any of the different units can upgrade to this unit type
 		for(int i=0;i<(int)m_aDifferentUnitCache.size();i++)
@@ -2649,10 +2649,8 @@ bool CvSelectionGroup::canEverDoCommand(CommandTypes eCommand, int iData1, int i
 			if(unit->canDoCommand(eCommand, iData1, iData2, bTestVisible, false))
 				return true;
 		}
-
 		return false;
 	}
-
 	return true;
 }
 

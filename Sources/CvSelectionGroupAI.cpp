@@ -150,64 +150,11 @@ bool CvSelectionGroupAI::AI_update()
 
 	FAssert(!GET_PLAYER(getOwner()).isAutoMoves() || isHuman());
 
-	int iTempHack = 0; // XXX
 	bool bDead = false;
 	bool bFailedAlreadyFighting = false;
 
 	while (m_bGroupAttack && !bFailedAlreadyFighting || readyToMove())
 	{
-		iTempHack++;
-		if (iTempHack > 90 && iTempHack < 100)
-		{
-			FErrorMsg("error");
-			CvUnit* pHeadUnit = getHeadUnit();
-			if (NULL != pHeadUnit)
-			{
-				//if (GC.getLogging())
-				//{
-					int iPass = iTempHack - 90;
-					char szOut[1024];
-					CvWString szTempString;
-					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
-					sprintf
-					(
-						szOut, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n",
-						iPass, pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
-						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString()
-					);
-					gDLL->messageControlLog(szOut);
-				//}
-			}
-		}
-		if (iTempHack >= 100)
-		{
-			FErrorMsg("error");
-			CvUnit* pHeadUnit = getHeadUnit();
-			if (NULL != pHeadUnit)
-			{
-				if (GC.getLogging())
-				{
-					char szOut[1024];
-					CvWString szTempString;
-					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
-					sprintf
-					(
-						szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n",
-						pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
-						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString()
-					);
-					gDLL->messageControlLog(szOut);
-				}
-				pHeadUnit->finishMoves();
-			}
-			else if (readyToMove())
-			{
-				splitGroup(1);
-				break;
-			}
-			break;
-		}
-
 		// if we want to force the group to attack, force another attack
 		if (m_bGroupAttack)
 		{
@@ -215,8 +162,7 @@ bool CvSelectionGroupAI::AI_update()
 
 			groupAttack(m_iGroupAttackX, m_iGroupAttackY, MOVE_DIRECT_ATTACK, bFailedAlreadyFighting);
 		}
-		// else pick AI action
-		else
+		else // pick AI action
 		{
 			CvUnit* pHeadUnit = getHeadUnit();
 
@@ -224,7 +170,6 @@ bool CvSelectionGroupAI::AI_update()
 			{
 				break;
 			}
-
 			resetPath();
 
 			if (pHeadUnit->AI_update())

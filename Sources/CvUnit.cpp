@@ -1480,53 +1480,60 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 	if (pPlot != NULL)
 	{
-		foreach_(CvUnit* unitX, pPlot->units())
+		if (hasCargo())
 		{
-			if (unitX->getTransportUnit() == this && !unitX->isDelayedDeath())
+			foreach_(CvUnit* unitX, pPlot->units())
 			{
-				if (pPlot->isValidDomainForLocation(*unitX))
+				if (unitX->getTransportUnit() == this && !unitX->isDelayedDeath())
 				{
-					unitX->setCapturingPlayer(NO_PLAYER);
-					unitX->setCapturingUnit(this);
-				}
-				bool bSurvived = false;
-
-				if (GC.getDefineINT("WAR_PRIZES") && GC.getGame().getSorenRandNum(10, "Unit Survives Drowning") == 0)
-				{
-					std::vector<CvPlot*> validPlots;
-
-					foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
+					if (pPlot->isValidDomainForLocation(*unitX))
 					{
-						if (unitX->canMoveThrough(pAdjacentPlot, false))
+						unitX->setCapturingPlayer(NO_PLAYER);
+						unitX->setCapturingUnit(this);
+					}
+					bool bSurvived = false;
+
+					if (GC.getDefineINT("WAR_PRIZES") && GC.getGame().getSorenRandNum(10, "Unit Survives Drowning") == 0)
+					{
+						std::vector<CvPlot*> validPlots;
+
+						foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
 						{
-							validPlots.push_back(pAdjacentPlot);
-							bSurvived = true;
+							if (unitX->canMoveThrough(pAdjacentPlot, false))
+							{
+								validPlots.push_back(pAdjacentPlot);
+								bSurvived = true;
+							}
+						}
+						if (bSurvived)
+						{
+							CvPlot* rescuePlot = validPlots[GC.getGame().getSorenRandNum(validPlots.size(), "Event pick plot")];
+
+							FAssertMsg(rescuePlot != NULL, "rescuePlot is expected to be a valid plot!");
+							unitX->setXY(rescuePlot->getX(), rescuePlot->getY());
+							unitX->setDamage(GC.getGame().getSorenRandNum(unitX->getHP(), "Survival Damage"), NO_PLAYER);
+							AddDLLMessage(
+								unitX->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText("TXT_KEY_MISC_UNIT_SURVIVED_TRANSPORT_SINKING", unitX->getNameKey(), getNameKey()),
+								NULL, MESSAGE_TYPE_MINOR_EVENT
+							);
 						}
 					}
-					if (bSurvived)
+					if (!bSurvived)
 					{
-						CvPlot* rescuePlot = validPlots[GC.getGame().getSorenRandNum(validPlots.size(), "Event pick plot")];
-
-						FAssertMsg(rescuePlot != NULL, "rescuePlot is expected to be a valid plot!");
-						unitX->setXY(rescuePlot->getX(), rescuePlot->getY());
-						unitX->setDamage(GC.getGame().getSorenRandNum(unitX->getHP(), "Survival Damage"), NO_PLAYER);
 						AddDLLMessage(
-							unitX->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_UNIT_SURVIVED_TRANSPORT_SINKING", unitX->getNameKey(), getNameKey()),
-							NULL, MESSAGE_TYPE_MINOR_EVENT
+							eOwner, true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText("TXT_KEY_MISC_UNIT_DROWNED", unitX->getNameKey()),
+							GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
+							MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
 						);
+						bMessaged = true;
+						if (bDelay)
+						{
+							unitX->unload();
+						}
+						unitX->kill(bDelay, ePlayer, bMessaged);
 					}
-				}
-				if (!bSurvived)
-				{
-					AddDLLMessage(
-						eOwner, true, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText("TXT_KEY_MISC_UNIT_DROWNED", unitX->getNameKey()),
-						GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
-						MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
-					);
-					bMessaged = true;
-					unitX->kill(bDelay, ePlayer, bMessaged);
 				}
 			}
 		}
@@ -7562,11 +7569,7 @@ void CvUnit::unload()
 
 bool CvUnit::canUnloadAll() const
 {
-	if (!hasCargo())
-	{
-		return false;
-	}
-	return true;
+	return hasCargo();
 }
 
 
