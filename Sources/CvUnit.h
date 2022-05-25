@@ -1509,7 +1509,6 @@ public:
 	void testPromotionReady();
 
 	bool isDelayedDeath() const;
-	void startDelayedDeath();
 	bool doDelayedDeath();
 
 	bool isCombatFocus() const;

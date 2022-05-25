@@ -19649,31 +19649,44 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 			FAssert(m_pTempUnit != NULL);
 		}
-
-		foreach_(CvUnit* plotlessUnit, plotlessUnits)
 		{
-			if (plotlessUnit != m_pTempUnit)
+			int iCount = 0;
+			foreach_(CvUnit* plotlessUnit, plotlessUnits)
 			{
-				plotlessUnit->kill(false);
-			}
-		}
-
-		// Handle dead units that somehow get into saves!
-		foreach_(CvUnit* pLoopUnit, units())
-		{
-			if (pLoopUnit->plot() == NULL)
-			{
-				CvSelectionGroup* pGroup = pLoopUnit->getGroup();
-				pLoopUnit->joinGroup(NULL, false, false);
-
-				deleteUnit(pLoopUnit->getID());
-				if (pGroup->getNumUnits() == 0)
+				if (plotlessUnit != m_pTempUnit)
 				{
-					pGroup->kill();
+					plotlessUnit->kill(true);
+					iCount++;
 				}
 			}
+			FAssertMsg(iCount == 0, CvString::format("%d plotless units somehow got into the save!", iCount).c_str());
 		}
+		{
+			// Handle units with invalid plots that somehow get into saves!
+			const int iMaxX = GC.getMap().getGridWidth();
+			const int iMaxY = GC.getMap().getGridHeight();
+			int iCount = 0;
+			foreach_(CvUnit* unitX, units())
+			{
+				if (unitX == m_pTempUnit)
+				{
+					continue;
+				}
+				if (unitX->plot() == NULL || unitX->getX() < 0 || unitX->getX() >= iMaxX || unitX->getY() < 0 || unitX->getY() >= iMaxY)
+				{
+					CvSelectionGroup* pGroup = unitX->getGroup();
+					unitX->joinGroup(NULL, false, false);
 
+					deleteUnit(unitX->getID());
+					iCount++;
+					if (pGroup->getNumUnits() == 0)
+					{
+						pGroup->kill();
+					}
+				}
+			}
+			FAssertMsg(iCount == 0, CvString::format("%d dead/plotless units somehow got into the save!", iCount).c_str());
+		}
 		CLLNode<int>* pCurrUnitNode;
 		CLLNode<int>* pNextUnitNode;
 		pCurrUnitNode = headGroupCycleNode();
@@ -19692,7 +19705,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					deleteSelectionGroup(pCurrUnitNode->m_data);
 				}
 			}
-
 			pCurrUnitNode = pNextUnitNode;
 		}
 		//TB Combat Mod begin
