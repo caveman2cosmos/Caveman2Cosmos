@@ -1524,11 +1524,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LOOTERS</Tag>
-		<English>The %s4_civ_adjective city of %s5_city is suffering civil unrest. Riots and looting have broken out.</English>
-		<French>La ville %s4:2_civ_adjective de %s5_city est en plein chaos. Des émeutes et des pillages ont eu lieu un peu partout.</French>
-		<German>In der %s4:2_civ_adjective Stadt %s5_city herrschen Unruhen. Es gibt Plünderungen und Tumulte.</German>
-		<Italian>La città %s4_civ_adjective di %s5_city è preda di disordini: sono scoppiati tumulti e saccheggi.</Italian>
-		<Spanish>La ciudad %s4:2_civ_adjective de %s5_city sufre agitación civil. Han estallado los disturbios y el pillaje.</Spanish>
+		<English>The %s4_civ_adjective city of %s2_city is suffering civil unrest. Riots and looting have broken out.</English>
+		<French>La ville %s4:2_civ_adjective de %s2_city est en plein chaos. Des émeutes et des pillages ont eu lieu un peu partout.</French>
+		<German>In der %s4:2_civ_adjective Stadt %s2_city herrschen Unruhen. Es gibt Plünderungen und Tumulte.</German>
+		<Italian>La città %s4_civ_adjective di %s2_city è preda di disordini: sono scoppiati tumulti e saccheggi.</Italian>
+		<Spanish>La ciudad %s4:2_civ_adjective de %s2_city sufre agitación civil. Han estallado los disturbios y el pillaje.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LOST_AT_SEA</Tag>
