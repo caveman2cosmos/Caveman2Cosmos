@@ -61,7 +61,7 @@ public:
 
 	void reportCityBuilt(CvCity *pCity, CvUnit *pUnit = NULL);
 	void reportCityRazed(CvCity *pCity, PlayerTypes ePlayer);
-	void reportCityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* city, bool bConquest, bool bTrade);
+	void reportCityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* city, bool bConquest, bool bTrade, bool bAutoRaze);
 	void reportCityAcquiredAndKept(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* city, bool bConquest, bool bTrade);
 	void reportCityLost(CvCity *pCity);
 	void reportCultureExpansion(CvCity *pCity, PlayerTypes ePlayer);

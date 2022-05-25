@@ -87,7 +87,6 @@ class CvEventManager:
 			'cityRename'				: self.onCityRename,
 #			'cityHurry'					: self.onCityHurry,
 #			'selectionGroupPushMission'	: self.onSelectionGroupPushMission,
-#			'unitMove'					: self.onUnitMove,
 			'unitCreated'				: self.onUnitCreated,
 			'unitBuilt'					: self.onUnitBuilt,
 			'unitKilled'				: self.onUnitKilled,
@@ -1968,10 +1967,6 @@ class CvEventManager:
 	'''
 	def onSelectionGroupPushMission(self, argsList): # AI never trigger this.
 		iPlayer, iMission, iNumUnits, lUnitIDs = argsList
-
-
-	def onUnitMove(self, argsList):
-		pPlot, pUnit, pOldPlot = argsList
 	'''
 
 
@@ -2530,10 +2525,70 @@ class CvEventManager:
 		iPlayerHC = CyCity.findHighestCulture()
 		if iPlayerHC not in (-1, iPlayer):
 			CyPlayerHC = GC.getPlayer(iPlayerHC)
-			if not CyPlayerHC.isNPC() and CyPlayerHC.getNumCities() > 0:
-				if GC.getTeam(CyPlayerHC.getTeam()).isAtWarWith(GC.getPlayer(iPlayer).getTeam()):
-					TRIGGER = GC.getInfoTypeForString('EVENTTRIGGER_PARTISANS')
-					triggerData = CyPlayerHC.initTriggeredData(TRIGGER, true, -1, CyCity.getX(), CyCity.getY(), iPlayer, iCityID, -1, -1, -1, -1)
+			if CyPlayerHC.getNumCities() > 1 or iPlayerHC != CyCity.getOwner() and CyPlayerHC.getNumCities() > 0:
+
+				iNumCultureLevels = GC.getNumCultureLevelInfos()
+				iGamespeedType = GAME.getGameSpeedType()
+				iCulture = CyCity.getCulture(iPlayerHC)
+				for i in xrange(iNumCultureLevels):
+					iCultureLevel = iNumCultureLevels - i - 1
+					if iCulture >= GC.getCultureLevelInfo(iCultureLevel).getSpeedThreshold(iGamespeedType):
+						bAtCapital = True
+						iNumUnits = iCultureLevel * 3/4
+
+						if GC.getTeam(CyPlayerHC.getTeam()).isAtWarWith(GC.getPlayer(iPlayer).getTeam()):
+
+							iX = CyCity.getX()
+							iY = CyCity.getY()
+							listPlots = []
+							for i in xrange(3):
+								for j in xrange(3):
+									plotX = GC.getMap().plot(iX + i - 1, iY + j - 1)
+									if plotX and not (plotX.isVisibleEnemyUnit(iPlayerHC) or plotX.isWater() or plotX.isImpassable() or plotX.isCity()):
+										listPlots.append(plotX)
+
+							if listPlots:
+								bAtCapital = False
+								iUnit = CyCity.getConscriptUnit()
+								for i in xrange(iNumUnits):
+									iPlot = GAME.getSorenRandNum(len(listPlots), "Partisan event placement")
+									CyPlayerHC.initUnit(iUnit, listPlots[iPlot].getX(), listPlots[iPlot].getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+
+								unitInfo = GC.getUnitInfo(iUnit)
+								CvUtil.sendMessage(
+									TRNSLTR.getText("TXT_KEY_EVENT_PARTISANS_1", (iNumUnits, unitInfo.getTextKey(), CyCity.getName())),
+									iPlayerHC, 10, unitInfo.getButton(), ColorTypes(13), iX, iY, True, True, bForce=False
+								)
+								CvUtil.sendMessage(
+									TRNSLTR.getText("TXT_KEY_EVENT_PARTISANS_OTHER_1", (CyPlayerHC.getCivilizationAdjectiveKey(), CyCity.getName(), iNumUnits, unitInfo.getTextKey())),
+									iPlayer, 10, unitInfo.getButton(), ColorTypes(44), iX, iY, True, True
+								)
+
+						if bAtCapital and not CyPlayerHC.isNPC():
+
+							capital = CyPlayerHC.getCapitalCity()
+							iUnit = capital.getConscriptUnit()
+							iNumUnits = (iNumUnits + 1) / 2
+							iX = capital.getX(); iY = capital.getY()
+							for i in xrange(iNumUnits):
+								CyPlayerHC.initUnit(iUnit, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+
+							unitInfo = GC.getUnitInfo(iUnit)
+							CvUtil.sendMessage(
+								TRNSLTR.getText("TXT_KEY_EVENT_PARTISANS_2", (iNumUnits, unitInfo.getTextKey(), CyCity.getName())), iPlayerHC, 10,
+								unitInfo.getButton(), ColorTypes(13), iX, iY, True, True, bForce=False
+							)
+							if not capital.isRevealed(iPlayer, False):
+								iX = CyCity.getX(); iY = CyCity.getY()
+
+							CvUtil.sendMessage(
+								TRNSLTR.getText("TXT_KEY_EVENT_PARTISANS_OTHER_2", (CyPlayerHC.getCivilizationAdjectiveKey(), CyCity.getName(), iNumUnits, unitInfo.getTextKey())),
+								iPlayer, 10, unitInfo.getButton(), ColorTypes(44), iX, iY, True, True
+							)
+						break
+					elif iCultureLevel == 2:
+						break
+
 		# Ruin Arcology.
 		mapBuildingType = self.mapBuildingType
 		if CyCity.getNumRealBuilding(mapBuildingType["ARCOLOGY"]) or CyCity.getNumRealBuilding(mapBuildingType["ARCOLOGY_SHIELDING"]) or CyCity.getNumRealBuilding(mapBuildingType["ADVANCED_SHIELDING"]):
@@ -2554,7 +2609,7 @@ class CvEventManager:
 
 	# This is before city has changed owner or been autorazed
 	def onCityAcquired(self, argsList):
-		iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
+		iOwnerOld, iOwnerNew, city, bConquest, bTrade, bAutoRaze = argsList
 		iOldCityID = self.iOldCityID
 		iCityID = city.getID()
 		aWonderTuple = self.aWonderTuple

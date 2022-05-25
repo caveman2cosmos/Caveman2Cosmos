@@ -2289,6 +2289,8 @@ CvCity* CvPlayer::initCity(int iX, int iY, bool bBumpUnits, bool bUpdatePlotGrou
 void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool bUpdatePlotGroups)
 {
 	PROFILE_FUNC();
+	if (pOldCity->isMarkedForDestruction()) return;
+	pOldCity->markForDestruction();
 
 	const PlayerTypes eNewOwner = getID();
 	const PlayerTypes eOldOwner = pOldCity->getOwner();
@@ -2318,10 +2320,12 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 		iCaptureGold = Cy::call<int>(PYGameModule, "doCityCaptureGold", Cy::Args() << pOldCity << eNewOwner);
 		changeGold(iCaptureGold);
 	}
-	CvEventReporter::getInstance().cityAcquired(eOldOwner, eNewOwner, pOldCity, bConquest, bTrade);
 
 	// We can skip a lot if city is just to be razed right away.
-	const bool bAutoRaze = bConquest && !bRecapture && GC.getGame().isAutoRaze(const_cast<CvCity*>(pOldCity), eNewOwner);
+	const bool bAutoRaze = GC.getGame().isAutoRaze(const_cast<CvCity*>(pOldCity), eNewOwner, bConquest, bTrade, bRecapture);
+
+	CvEventReporter::getInstance().cityAcquired(eOldOwner, eNewOwner, pOldCity, bConquest, bTrade, bAutoRaze);
+
 	if (bAutoRaze)
 	{
 		if (bHuman && iCaptureGold > 0)
@@ -2620,9 +2624,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 		if (bTrade)
 		{
-			algo::for_each(pCityPlot->rect(1, 1),
-				bind(&CvPlot::setCulture, _1, eOldOwner, 0, false, false)
-			);
+			algo::for_each(pCityPlot->rect(1, 1), bind(&CvPlot::setCulture, _1, eOldOwner, 0, false, false));
 		}
 		pNewCity = initCity(pCityPlot->getX(), pCityPlot->getY(), !bConquest, false);
 
@@ -19647,31 +19649,44 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 			FAssert(m_pTempUnit != NULL);
 		}
-
-		foreach_(CvUnit* plotlessUnit, plotlessUnits)
 		{
-			if (plotlessUnit != m_pTempUnit)
+			int iCount = 0;
+			foreach_(CvUnit* plotlessUnit, plotlessUnits)
 			{
-				plotlessUnit->kill(false);
-			}
-		}
-
-		// Handle dead units that somehow get into saves!
-		foreach_(CvUnit* pLoopUnit, units())
-		{
-			if (pLoopUnit->plot() == NULL)
-			{
-				CvSelectionGroup* pGroup = pLoopUnit->getGroup();
-				pLoopUnit->joinGroup(NULL, false, false);
-
-				deleteUnit(pLoopUnit->getID());
-				if (pGroup->getNumUnits() == 0)
+				if (plotlessUnit != m_pTempUnit)
 				{
-					pGroup->kill();
+					plotlessUnit->kill(true);
+					iCount++;
 				}
 			}
+			FAssertMsg(iCount == 0, CvString::format("%d plotless units somehow got into the save!", iCount).c_str());
 		}
+		{
+			// Handle units with invalid plots that somehow get into saves!
+			const int iMaxX = GC.getMap().getGridWidth();
+			const int iMaxY = GC.getMap().getGridHeight();
+			int iCount = 0;
+			foreach_(CvUnit* unitX, units())
+			{
+				if (unitX == m_pTempUnit)
+				{
+					continue;
+				}
+				if (unitX->plot() == NULL || unitX->getX() < 0 || unitX->getX() >= iMaxX || unitX->getY() < 0 || unitX->getY() >= iMaxY)
+				{
+					CvSelectionGroup* pGroup = unitX->getGroup();
+					unitX->joinGroup(NULL, false, false);
 
+					deleteUnit(unitX->getID());
+					iCount++;
+					if (pGroup->getNumUnits() == 0)
+					{
+						pGroup->kill();
+					}
+				}
+			}
+			FAssertMsg(iCount == 0, CvString::format("%d dead/plotless units somehow got into the save!", iCount).c_str());
+		}
 		CLLNode<int>* pCurrUnitNode;
 		CLLNode<int>* pNextUnitNode;
 		pCurrUnitNode = headGroupCycleNode();
@@ -19690,7 +19705,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 					deleteSelectionGroup(pCurrUnitNode->m_data);
 				}
 			}
-
 			pCurrUnitNode = pNextUnitNode;
 		}
 		//TB Combat Mod begin
@@ -21497,16 +21511,17 @@ EventTriggeredData* CvPlayer::initTriggeredData(EventTriggerTypes eEventTrigger,
 
 	if (kTrigger.getNumWorldNews() > 0)
 	{
-		int iText = GC.getGame().getSorenRandNum(kTrigger.getNumWorldNews(), "Trigger World News choice");
-
-		pTriggerData->m_szGlobalText = gDLL->getText(kTrigger.getWorldNews(iText).GetCString(),
-			getCivilizationAdjectiveKey(),
-			NULL != pCity ? pCity->getNameKey() : L"",
-			pTriggerData->m_eReligion != NO_RELIGION ? GC.getReligionInfo(pTriggerData->m_eReligion).getAdjectiveKey() : L"",
-			eOtherPlayer != NO_PLAYER ? GET_PLAYER(eOtherPlayer).getCivilizationAdjectiveKey() : L"",
-			NULL != pOtherPlayerCity ? pOtherPlayerCity->getNameKey() : L"",
-			pTriggerData->m_eCorporation != NO_CORPORATION ? GC.getCorporationInfo(pTriggerData->m_eCorporation).getTextKeyWide() : L""
-			);
+		pTriggerData->m_szGlobalText = (
+			gDLL->getText(
+				kTrigger.getWorldNews(GC.getGame().getSorenRandNum(kTrigger.getNumWorldNews(), "Trigger World News choice")).GetCString(),
+				getCivilizationAdjectiveKey(),
+				NULL != pCity ? pCity->getNameKey() : L"",
+				pTriggerData->m_eReligion != NO_RELIGION ? GC.getReligionInfo(pTriggerData->m_eReligion).getAdjectiveKey() : L"",
+				eOtherPlayer != NO_PLAYER ? GET_PLAYER(eOtherPlayer).getCivilizationAdjectiveKey() : L"",
+				NULL != pOtherPlayerCity ? pOtherPlayerCity->getNameKey() : L"",
+				pTriggerData->m_eCorporation != NO_CORPORATION ? GC.getCorporationInfo(pTriggerData->m_eCorporation).getTextKeyWide() : L""
+			)
+		);
 	}
 	else
 	{
@@ -23611,7 +23626,7 @@ bool CvPlayer::splitEmpire(int iAreaId)
 			const int iCulture = pLoopCity->getCultureTimes100(getID());
 			const CvPlot* pPlot = pLoopCity->plot();
 
-			GET_PLAYER(eNewPlayer).acquireCity(pLoopCity, false, true, false);
+			GET_PLAYER(eNewPlayer).acquireCity(pLoopCity, false, false, false);
 
 			if (NULL != pPlot)
 			{

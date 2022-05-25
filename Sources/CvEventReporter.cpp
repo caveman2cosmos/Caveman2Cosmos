@@ -309,9 +309,9 @@ void CvEventReporter::cityRazed(CvCity* pCity, PlayerTypes ePlayer)
 	m_kStatistics.cityRazed(ePlayer);
 }
 
-void CvEventReporter::cityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade)
+void CvEventReporter::cityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade, bool bAutoRaze)
 {
-	m_kPythonEventMgr.reportCityAcquired(eOldOwner, ePlayer, pCity, bConquest, bTrade);
+	m_kPythonEventMgr.reportCityAcquired(eOldOwner, ePlayer, pCity, bConquest, bTrade, bAutoRaze);
 }
 
 void CvEventReporter::cityAcquiredAndKept(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade)
@@ -376,11 +376,6 @@ void CvEventReporter::cityHurry(CvCity* pCity, HurryTypes eHurry)
 void CvEventReporter::selectionGroupPushMission(CvSelectionGroup* pSelectionGroup, MissionTypes eMission)
 {
 	m_kPythonEventMgr.reportSelectionGroupPushMission(pSelectionGroup, eMission);
-}
-
-void CvEventReporter::unitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot)
-{
-	m_kPythonEventMgr.reportUnitMove(pPlot, pUnit, pOldPlot);
 }
 
 void CvEventReporter::unitCreated(CvUnit *pUnit)

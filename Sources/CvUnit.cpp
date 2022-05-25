@@ -1450,7 +1450,7 @@ void CvUnit::convert(CvUnit* pUnit, const bool bKillOriginal)
 	if (bKillOriginal)
 	{
 		pUnit->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
-		pUnit->kill(true, NO_PLAYER, false);
+		pUnit->kill(true);
 	}
 }
 
@@ -1480,117 +1480,89 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 	if (pPlot != NULL)
 	{
-		if (!isDelayedDeath())
+		if (hasCargo())
 		{
-			std::vector<IDInfo> oldUnits;
-
-			oldUnits.clear();
-			CLLNode<IDInfo>* pUnitNode = pPlot->headUnitNode();
-
-			while (pUnitNode != NULL)
+			foreach_(CvUnit* unitX, pPlot->units())
 			{
-				oldUnits.push_back(pUnitNode->m_data);
-				pUnitNode = pPlot->nextUnitNode(pUnitNode);
-			}
-
-			for (uint i = 0; i < oldUnits.size(); i++)
-			{
-				CvUnit* pLoopUnit = ::getUnit(oldUnits[i]);
-
-				if (pLoopUnit != NULL && pLoopUnit->getTransportUnit() == this)
+				if (unitX->getTransportUnit() == this && !unitX->isDelayedDeath())
 				{
-					//save old units because kill will clear the static list
-					std::vector<IDInfo> tempUnits = oldUnits;
-
-					if (pPlot->isValidDomainForLocation(*pLoopUnit))
+					if (pPlot->isValidDomainForLocation(*unitX))
 					{
-						pLoopUnit->setCapturingPlayer(NO_PLAYER);
-						pLoopUnit->setCapturingUnit(this);
+						unitX->setCapturingPlayer(NO_PLAYER);
+						unitX->setCapturingUnit(this);
 					}
-
 					bool bSurvived = false;
-					CvPlot* pRescuePlot = NULL;
 
-					if (GC.getDefineINT("WAR_PRIZES") && pPlot->isWater())
+					if (GC.getDefineINT("WAR_PRIZES") && GC.getGame().getSorenRandNum(10, "Unit Survives Drowning") == 0)
 					{
+						std::vector<CvPlot*> validPlots;
+
 						foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
 						{
-							if (!pAdjacentPlot->isWater() && !pAdjacentPlot->isVisibleEnemyUnit(pLoopUnit))
+							if (unitX->canMoveThrough(pAdjacentPlot, false))
 							{
-								pRescuePlot = pAdjacentPlot;
-								if (GC.getGame().getSorenRandNum(10, "Unit Survives Drowning") <= 2)
-								{
-									bSurvived = true;
-								}
-								break;
+								validPlots.push_back(pAdjacentPlot);
+								bSurvived = true;
 							}
 						}
+						if (bSurvived)
+						{
+							CvPlot* rescuePlot = validPlots[GC.getGame().getSorenRandNum(validPlots.size(), "Event pick plot")];
+
+							FAssertMsg(rescuePlot != NULL, "rescuePlot is expected to be a valid plot!");
+							unitX->setXY(rescuePlot->getX(), rescuePlot->getY());
+							unitX->setDamage(GC.getGame().getSorenRandNum(unitX->getHP(), "Survival Damage"), NO_PLAYER);
+							AddDLLMessage(
+								unitX->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText("TXT_KEY_MISC_UNIT_SURVIVED_TRANSPORT_SINKING", unitX->getNameKey(), getNameKey()),
+								NULL, MESSAGE_TYPE_MINOR_EVENT
+							);
+						}
 					}
-					if (bSurvived)
-					{
-						FAssertMsg(pRescuePlot != NULL, "pRescuePlot is expected to be a valid plot!");
-						pLoopUnit->setDamage(GC.getGame().getSorenRandNum(pLoopUnit->getHP(), "Survival Damage"), NO_PLAYER);
-						pLoopUnit->move(pRescuePlot, false);
-						AddDLLMessage(
-							pLoopUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_UNIT_SURVIVED_TRANSPORT_SINKING", pLoopUnit->getNameKey(), getNameKey()),
-							NULL, MESSAGE_TYPE_MINOR_EVENT
-						);
-					}
-					else
+					if (!bSurvived)
 					{
 						AddDLLMessage(
 							eOwner, true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_UNIT_DROWNED", pLoopUnit->getNameKey()),
+							gDLL->getText("TXT_KEY_MISC_UNIT_DROWNED", unitX->getNameKey()),
 							GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
 							MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
 						);
 						bMessaged = true;
-						pLoopUnit->kill(false, ePlayer, bMessaged);
-
-						oldUnits = tempUnits;
-					}
-				}
-			}
-
-			if (ePlayer != NO_PLAYER)
-			{
-				CvEventReporter::getInstance().unitKilled(this, ePlayer);
-
-				if (NO_UNIT != getLeaderUnitType() || GC.getUnitInfo(getUnitType()).getMaxGlobalInstances() == 1)
-				{
-					for (int iI = 0; !bMessaged && iI < MAX_PC_PLAYERS; iI++)
-					{
-						if (GET_PLAYER((PlayerTypes)iI).isAlive())
+						if (bDelay)
 						{
-							AddDLLMessage(
-								eOwner, true, GC.getEVENT_MESSAGE_TIME(),
-								gDLL->getText("TXT_KEY_MISC_GENERAL_KILLED", getNameKey()),
-								GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
-								MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_RED(), getX(), getY()
-							);
-							bMessaged = true;
+							unitX->unload();
 						}
+						unitX->kill(bDelay, ePlayer, bMessaged);
 					}
 				}
 			}
-			/* This is interrupting other messages and not coming up when it should be anyhow.
-			if (!bMessaged)
-			{
-				AddDLLMessage(
-					eOwner, true, GC.getEVENT_MESSAGE_TIME(),
-					gDLL->getText("TXT_KEY_MISC_UNIT_DEATH", getNameKey()),
-					GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
-					MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
-				);
-				m_combatResult.bDeathMessaged = false;
-				bMessaged = true;
-			}
-			*/
 		}
+
+		if (ePlayer != NO_PLAYER)
+		{
+			CvEventReporter::getInstance().unitKilled(this, ePlayer);
+
+			if (NO_UNIT != getLeaderUnitType() || GC.getUnitInfo(getUnitType()).getMaxGlobalInstances() == 1)
+			{
+				for (int iI = 0; !bMessaged && iI < MAX_PC_PLAYERS; iI++)
+				{
+					if (GET_PLAYER((PlayerTypes)iI).isAlive())
+					{
+						AddDLLMessage(
+							eOwner, true, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText("TXT_KEY_MISC_GENERAL_KILLED", getNameKey()),
+							GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
+							MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_RED(), getX(), getY()
+						);
+						bMessaged = true;
+					}
+				}
+			}
+		}
+
 		if (bDelay)
 		{
-			startDelayedDeath();
+			m_bDeathDelay = true;
 			return;
 		}
 		{
@@ -6009,7 +5981,7 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 		return false;
 	}
 
-	if (!isMapCategory(*pPlot, *m_pUnitInfo))
+	if (m_pUnitInfo != NULL && !isMapCategory(*pPlot, *m_pUnitInfo))
 	{
 		return false;
 	}
@@ -6707,8 +6679,14 @@ void CvUnit::move(CvPlot* pPlot, bool bShow)
 	setXY(pPlot->getX(), pPlot->getY(), true, true, bShow && pPlot->isVisibleToWatchingHuman(), bShow);
 
 	//TBFIXHERE it's very possible for the unit to be dead from this point and there are further move aspects taking place that would make little sense if unit is dead.
-	if (isDead()) return;
-
+	if (isDead())
+	{
+		// Toffer - Shouldn't this be handled when pLoopUnit actually dies in the above pLoopUnit->move(pPlot, true);
+		//	rather than after it has died here below.
+		joinGroup(NULL, true);
+		finishMoves();
+		return;
+	}
 	const FeatureTypes featureType = pPlot->getFeatureType();
 	if (featureType != NO_FEATURE)
 	{
@@ -6726,7 +6704,6 @@ void CvUnit::move(CvPlot* pPlot, bool bShow)
 			gDLL->getInterfaceIFace()->playGeneralSound("AS3D_UN_BIRDS_SCATTER", pPlot->getPoint());
 		}
 	}
-	CvEventReporter::getInstance().unitMove(pPlot, this, pOldPlot);
 }
 
 // false if unit is killed
@@ -7530,7 +7507,7 @@ bool CvUnit::canUnload() const
 		}
 	}
 
-	if (!isMapCategory(kPlot, *m_pUnitInfo))
+	if (m_pUnitInfo != NULL && !isMapCategory(kPlot, *m_pUnitInfo))
 	{
 		return false;
 	}
@@ -7592,11 +7569,7 @@ void CvUnit::unload()
 
 bool CvUnit::canUnloadAll() const
 {
-	if (!hasCargo())
-	{
-		return false;
-	}
-	return true;
+	return hasCargo();
 }
 
 
@@ -19095,12 +19068,6 @@ bool CvUnit::isDelayedDeath() const
 }
 
 
-void CvUnit::startDelayedDeath()
-{
-	m_bDeathDelay = true;
-}
-
-
 // Returns true if killed...
 bool CvUnit::doDelayedDeath()
 {
@@ -19997,7 +19964,7 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 		return false;
 	}
 	const CvPlot* pPlot = plot();
-	if (!isMapCategory(*pPlot, promo) || !isMapCategory(*m_pUnitInfo, promo))
+	if ((m_pUnitInfo != NULL && pPlot != NULL) && (!isMapCategory(*pPlot, promo) || !isMapCategory(*m_pUnitInfo, promo)))
 	{
 		return false;
 	}
@@ -22241,12 +22208,12 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eOwner);
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eCapturingPlayer);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_UNITS, (int*)&m_eUnitType);
+	bool bKill = false;
 	if (NO_UNIT == m_eUnitType)
 	{
 		// Assets must have removed this type (which will have been flagged in a queued error message).
 		// Just give it a valid type and mark it to be killed.
 		m_eUnitType = (UnitTypes)0;
-		m_bDeathDelay = true;
 		// Unit type 0 was never initialized, so we need to add its unit count before it dies.
 		GET_PLAYER(getOwner()).changeUnitCount(m_eUnitType, 1);
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
@@ -22255,6 +22222,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 		{
 			GET_PLAYER(getOwner()).changeUnitCountSM(m_eUnitType, intPow(3, GC.getUnitInfo(m_eUnitType).getBaseGroupRank() - 1));
 		}
+		bKill = true;
 	}
 	m_pUnitInfo = &GC.getUnitInfo(m_eUnitType);
 	m_movementCharacteristicsHash = m_pUnitInfo->getZobristValue();
@@ -23635,6 +23603,11 @@ void CvUnit::read(FDataStreamBase* pStream)
 		}
 	}
 	establishBuildups();
+	if (bKill)
+	{
+		kill(false);
+		FErrorMsg("Unit Asset removed, killing unit.");
+	}
 }
 
 
@@ -32253,65 +32226,70 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 	{
 		bool bValid = true;
 		{
-			const TerrainTypes eTerrain = plot()->getTerrainType();
+			if (plot() != NULL)
+			{
 
-			for (int iI = 0; iI < promo.getNumPrereqTerrainTypes(); iI++)
-			{
-				const TerrainTypes ePrereqTerrain = (TerrainTypes)promo.getPrereqTerrainType(iI);
-				if (ePrereqTerrain != NO_TERRAIN)
+
+				const TerrainTypes eTerrain = plot()->getTerrainType();
+
+				for (int iI = 0; iI < promo.getNumPrereqTerrainTypes(); iI++)
 				{
-					bValid = false;
-					if (ePrereqTerrain == GC.getTERRAIN_PEAK())
+					const TerrainTypes ePrereqTerrain = (TerrainTypes)promo.getPrereqTerrainType(iI);
+					if (ePrereqTerrain != NO_TERRAIN)
 					{
-						if (plot()->isAsPeak())
+						bValid = false;
+						if (ePrereqTerrain == GC.getTERRAIN_PEAK())
+						{
+							if (plot()->isAsPeak())
+							{
+								bValid = true;
+								break;
+							}
+						}
+						else if (ePrereqTerrain == GC.getTERRAIN_HILL())
+						{
+							if (plot()->isHills())
+							{
+								bValid = true;
+								break;
+							}
+						}
+						else if (ePrereqTerrain == eTerrain)
 						{
 							bValid = true;
 							break;
 						}
 					}
-					else if (ePrereqTerrain == GC.getTERRAIN_HILL())
+				}
+				if (!bValid)
+				{
+					if (bMessageOnFalse)
 					{
-						if (plot()->isHills())
+						if (bPromo && !bIsFreePromotion)
 						{
-							bValid = true;
-							break;
+							AddDLLMessage(
+								getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText(
+									"TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_CAN_RETRAIN",
+									getNameKey(), promo.getDescription()
+								),
+								"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
+							);
+						}
+						else
+						{
+							AddDLLMessage(
+								getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText(
+									"TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_NO_RETRAIN",
+									getNameKey(), promo.getDescription()
+								),
+								"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+							);
 						}
 					}
-					else if (ePrereqTerrain == eTerrain)
-					{
-						bValid = true;
-						break;
-					}
+					return false;
 				}
-			}
-			if (!bValid)
-			{
-				if (bMessageOnFalse)
-				{
-					if (bPromo && !bIsFreePromotion)
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_CAN_RETRAIN",
-								getNameKey(), promo.getDescription()
-							),
-							"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_GREEN(), getX(), getY()
-						);
-					}
-					else
-					{
-						AddDLLMessage(
-							getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText(
-								"TXT_KEY_MISC_OBSOLETED_PROMOTION_TERRAIN_NO_RETRAIN",
-								getNameKey(), promo.getDescription()
-							),
-							"AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
-						);
-					}
-				}
-				return false;
 			}
 		}
 		{
