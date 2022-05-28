@@ -7963,985 +7963,988 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	const TeamTypes ePlotTeam = pPlot->getTeam();
 	const CvTeamAI* plotTeam = ePlotTeam > -1 ? &GET_TEAM(ePlotTeam) : NULL;
 
-	if (bCtrl && bDebug)
+	if (bDebug)
 	{
-		if (pPlot->getOwner() != NO_PLAYER)
+		if (bCtrl)
 		{
-			const int iPlotDanger = GET_PLAYER(pPlot->getOwner()).AI_getPlotDanger(pPlot, 2);
-			if (iPlotDanger > 0)
+			if (pPlot->getOwner() != NO_PLAYER)
 			{
-				szString.append(CvWString::format(L"\nPlot Danger = %d", iPlotDanger));
-			}
-		}
-
-		CvCity* pPlotCity = pPlot->getPlotCity();
-		if (pPlotCity != NULL)
-		{
-			const PlayerTypes ePlayer = pPlot->getOwner();
-			const CvPlayerAI& pPlayer = GET_PLAYER(ePlayer);
-
-			szString.append(CvWString::format(L"\n\nRevIndex:%d, ", pPlotCity->getRevolutionIndex()));
-			szString.append(CvWString::format(L"Avg:%d, ", pPlotCity->getRevIndexAverage()));
-			szString.append(CvWString::format(L"Local:%d, ", pPlotCity->getLocalRevIndex()));
-			szString.append(CvWString::format(L"Reinf:%d", pPlotCity->getReinforcementCounter()));
-			szString.append(CvWString::format(L"\nRevIdxAnger:%d, ", pPlotCity->getRevIndexPercentAnger()));
-			szString.append(CvWString::format(L"ReqAnger:%d, ", pPlotCity->getRevRequestPercentAnger()));
-			szString.append(CvWString::format(L"RevSucHappy:%d\n", pPlotCity->getRevSuccessHappiness()));
-
-			const int iCityDefenders = pPlot->plotCount(PUF_canDefendGroupHead, -1, -1, NULL, ePlayer, NO_TEAM, PUF_isCityAIType);
-			const int iAttackGroups = pPlot->plotCount(PUF_isUnitAIType, UNITAI_ATTACK, -1, NULL, ePlayer);
-			szString.append(CvWString::format(L"\nDefenders [D+A]/N ([%d + %d] / %d)", iCityDefenders, iAttackGroups, pPlotCity->AI_neededDefenders()));
-
-			szString.append(CvWString::format(L"\nFloating Defenders H/N (%d / %d)",
-				pPlayer.AI_getTotalFloatingDefenders(pPlotCity->area()), pPlayer.AI_getTotalFloatingDefendersNeeded(pPlotCity->area())));
-
-			szString.append(CvWString::format(L"\nAir Defenders H/N (%d / %d)",
-				pPlotCity->plot()->plotCount(PUF_canAirDefend, -1, -1, NULL, pPlotCity->getOwner(), NO_TEAM, PUF_isDomainType, DOMAIN_AIR), pPlotCity->AI_neededAirDefenders()));
-
-			szString.append(CvWString::format(L"\nThreat C/P (%d / %d)", pPlotCity->AI_cityThreat(), pPlayer.AI_getTotalAreaCityThreat(pPlotCity->area())));
-
-			bool bFirst = true;
-			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
-			{
-				if (iI == ePlayer) continue;
-
-				if (!GET_PLAYER((PlayerTypes)iI).isAlive()) continue;
-
-				const TeamTypes eTeamX = GET_PLAYER((PlayerTypes)iI).getTeam();
-
-				if (pPlotCity->isCapital())
+				const int iPlotDanger = GET_PLAYER(pPlot->getOwner()).AI_getPlotDanger(pPlot, 2);
+				if (iPlotDanger > 0)
 				{
-					const int iPlayerCloseness = pPlayer.AI_playerCloseness((PlayerTypes)iI, DEFAULT_PLAYER_CLOSENESS);
-
-					if (plotTeam->isHasMet(eTeamX) || iPlayerCloseness != 0)
-					{
-						if (bFirst)
-						{
-							bFirst = false;
-
-							szString.append(CvWString::format(L"\n\nCloseness + War: (in %d wars)", plotTeam->getAtWarCount(true)));
-						}
-						szString.append(CvWString::format(L"\n%s(%d) : %d ", GET_PLAYER((PlayerTypes)iI).getName(), DEFAULT_PLAYER_CLOSENESS,
-							pPlotCity->AI_playerCloseness((PlayerTypes)iI, DEFAULT_PLAYER_CLOSENESS)));
-
-						szString.append(CvWString::format(L" [%d, ", iPlayerCloseness));
-
-						if (ePlotTeam != eTeamX)
-						{
-							szString.append(CvWString::format(L"%d]", plotTeam->AI_teamCloseness(eTeamX, DEFAULT_PLAYER_CLOSENESS)));
-
-							if (plotTeam->isHasMet(eTeamX) && plotTeam->AI_getAttitude(eTeamX) != ATTITUDE_FRIENDLY)
-							{
-								const int iStartWarVal = plotTeam->AI_startWarVal(eTeamX);
-
-								if (plotTeam->isAtWar(eTeamX))
-								{
-									szString.append(CvWString::format(L"\n   At War:   "));
-								}
-								else if (plotTeam->AI_getWarPlan(eTeamX) != NO_WARPLAN)
-								{
-									szString.append(CvWString::format(L"\n   Plan. War:"));
-								}
-								else if (!plotTeam->canDeclareWar(eTeamX))
-								{
-									szString.append(CvWString::format(L"\n   Can't War:"));
-								}
-								else
-								{
-									szString.append(CvWString::format(L"\n   No War:   "));
-								}
-
-								if (iStartWarVal > 1200)
-								{
-									szString.append(CvWString::format(SETCOLR L" %d" ENDCOLR, TEXT_COLOR("COLOR_RED"), iStartWarVal));
-								}
-								else if (iStartWarVal > 600)
-								{
-									szString.append(CvWString::format(SETCOLR L" %d" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), iStartWarVal));
-								}
-								else
-								{
-									szString.append(CvWString::format(L" %d", iStartWarVal));
-								}
-								szString.append(CvWString::format(L" (%d", plotTeam->AI_calculatePlotWarValue(eTeamX)));
-								szString.append(CvWString::format(L", %d", plotTeam->AI_calculateBonusWarValue(eTeamX)));
-								szString.append(CvWString::format(L", %d", plotTeam->AI_calculateCapitalProximity(eTeamX)));
-								szString.append(CvWString::format(L", %4s", GC.getAttitudeInfo(plotTeam->AI_getAttitude(eTeamX)).getDescription(0)));
-								szString.append(CvWString::format(L", %d%%)", 100-plotTeam->AI_noWarAttitudeProb(plotTeam->AI_getAttitude(eTeamX))));
-							}
-						}
-						else
-						{
-							szString.append(CvWString::format(L"-]"));
-						}
-					}
-				}
-				else
-				{
-					const int iCloseness = pPlotCity->AI_playerCloseness((PlayerTypes)iI, DEFAULT_PLAYER_CLOSENESS);
-					if (iCloseness != 0)
-					{
-						if (bFirst)
-						{
-							bFirst = false;
-
-							szString.append(CvWString::format(L"\n\nCloseness:"));
-						}
-						szString.append(CvWString::format(L"\n%s(%d) : %d ", GET_PLAYER((PlayerTypes)iI).getName(), DEFAULT_PLAYER_CLOSENESS, iCloseness));
-						szString.append(CvWString::format(L" [%d, ", pPlayer.AI_playerCloseness((PlayerTypes)iI, DEFAULT_PLAYER_CLOSENESS)));
-
-						ePlotTeam != eTeamX ?
-							szString.append(CvWString::format(L"%d]", plotTeam->AI_teamCloseness(eTeamX, DEFAULT_PLAYER_CLOSENESS)))
-							:
-							szString.append(CvWString::format(L"-]"));
-					}
+					szString.append(CvWString::format(L"\nPlot Danger = %d", iPlotDanger));
 				}
 			}
-			szString.append(CvWString::format(L"\n\nWorkers H/N (%d , %d)", pPlotCity->AI_getWorkersHave(), pPlotCity->AI_getWorkersNeeded()));
-			szString.append(CvWString::format(L"\n\nWorkboats Needed = %d", pPlotCity->AI_neededSeaWorkers()));
 
-			int iAreaSiteBestValue = 0;
-			const int iNumAreaCitySites = pPlayer.AI_getNumAreaCitySites(pPlot->getArea(), iAreaSiteBestValue);
-			int iOtherSiteBestValue = 0;
-			const int iNumOtherCitySites = pPlot->waterArea() == NULL ? 0 : pPlayer.AI_getNumAdjacentAreaCitySites(pPlot->waterArea()->getID(), pPlot->getArea(), iOtherSiteBestValue);
-
-			szString.append(CvWString::format(L"\n\nArea Sites = %d (%d)", iNumAreaCitySites, iAreaSiteBestValue));
-			szString.append(CvWString::format(L"\nOther Sites = %d (%d)", iNumOtherCitySites, iOtherSiteBestValue));
-		}
-		else if (pPlot->getOwner() != NO_PLAYER)
-		{
-			if (bShift && !bAlt && pPlot->headUnitNode() == NULL)
+			CvCity* pPlotCity = pPlot->getPlotCity();
+			if (pPlotCity != NULL)
 			{
-				const int iBonusClasses = GC.getNumBonusClassInfos();
-				std::vector<int> paiBonusClassRevealed(iBonusClasses, 0);
-				std::vector<int> paiBonusClassUnrevealed(iBonusClasses, 0);
-				std::vector<int> paiBonusClassHave(iBonusClasses, 0);
+				const PlayerTypes ePlayer = pPlot->getOwner();
+				const CvPlayerAI& pPlayer = GET_PLAYER(ePlayer);
 
-				for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
-				{
-					if (GC.getBonusInfo((BonusTypes)iI).getTechReveal() != NO_TECH)
-					{
-						if (plotTeam->isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iI).getTechReveal()))
-						{
-							paiBonusClassRevealed[(BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType()]++;
-						}
-						else
-						{
-							paiBonusClassUnrevealed[(BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType()]++;
-						}
+				szString.append(CvWString::format(L"\n\nRevIndex:%d, ", pPlotCity->getRevolutionIndex()));
+				szString.append(CvWString::format(L"Avg:%d, ", pPlotCity->getRevIndexAverage()));
+				szString.append(CvWString::format(L"Local:%d, ", pPlotCity->getLocalRevIndex()));
+				szString.append(CvWString::format(L"Reinf:%d", pPlotCity->getReinforcementCounter()));
+				szString.append(CvWString::format(L"\nRevIdxAnger:%d, ", pPlotCity->getRevIndexPercentAnger()));
+				szString.append(CvWString::format(L"ReqAnger:%d, ", pPlotCity->getRevRequestPercentAnger()));
+				szString.append(CvWString::format(L"RevSucHappy:%d\n", pPlotCity->getRevSuccessHappiness()));
 
-						if (GET_PLAYER(pPlot->getOwner()).getNumAvailableBonuses((BonusTypes)iI) > 0)
-						{
-							paiBonusClassHave[(BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType()]++;
-						}
-						else if (GET_PLAYER(pPlot->getOwner()).countOwnedBonuses((BonusTypes)iI) > 0)
-						{
-							paiBonusClassHave[(BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType()]++;
-						}
-					}
-				}
+				const int iCityDefenders = pPlot->plotCount(PUF_canDefendGroupHead, -1, -1, NULL, ePlayer, NO_TEAM, PUF_isCityAIType);
+				const int iAttackGroups = pPlot->plotCount(PUF_isUnitAIType, UNITAI_ATTACK, -1, NULL, ePlayer);
+				szString.append(CvWString::format(L"\nDefenders [D+A]/N ([%d + %d] / %d)", iCityDefenders, iAttackGroups, pPlotCity->AI_neededDefenders()));
+
+				szString.append(CvWString::format(L"\nFloating Defenders H/N (%d / %d)",
+					pPlayer.AI_getTotalFloatingDefenders(pPlotCity->area()), pPlayer.AI_getTotalFloatingDefendersNeeded(pPlotCity->area())));
+
+				szString.append(CvWString::format(L"\nAir Defenders H/N (%d / %d)",
+					pPlotCity->plot()->plotCount(PUF_canAirDefend, -1, -1, NULL, pPlotCity->getOwner(), NO_TEAM, PUF_isDomainType, DOMAIN_AIR), pPlotCity->AI_neededAirDefenders()));
+
+				szString.append(CvWString::format(L"\nThreat C/P (%d / %d)", pPlotCity->AI_cityThreat(), pPlayer.AI_getTotalAreaCityThreat(pPlotCity->area())));
+
 				bool bFirst = true;
-				for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
-					if (GC.getTechInfo((TechTypes)iI).getEra() <= GET_PLAYER(pPlot->getOwner()).getCurrentEra() + 1)
-					{
-						const int iPathLength = GET_PLAYER(pPlot->getOwner()).findPathLength(((TechTypes)iI), false);
+					if (iI == ePlayer) continue;
 
-						if (iPathLength <= 3 && !plotTeam->isHasTech((TechTypes)iI))
+					if (!GET_PLAYER((PlayerTypes)iI).isAlive()) continue;
+
+					const TeamTypes eTeamX = GET_PLAYER((PlayerTypes)iI).getTeam();
+
+					if (pPlotCity->isCapital())
+					{
+						const int iPlayerCloseness = pPlayer.AI_playerCloseness((PlayerTypes)iI, DEFAULT_PLAYER_CLOSENESS);
+
+						if (plotTeam->isHasMet(eTeamX) || iPlayerCloseness != 0)
 						{
 							if (bFirst)
 							{
-								szString.append(CvWString::format(L"Name (TreePathLength) = Value (building, unit)"));
 								bFirst = false;
+
+								szString.append(CvWString::format(L"\n\nCloseness + War: (in %d wars)", plotTeam->getAtWarCount(true)));
 							}
-							bool bDummy;
-							szString.append(CvWString::format(L"\n%s (%d) = %d (bld:%d, unt:%d)", GC.getTechInfo((TechTypes)iI).getDescription(), iPathLength,
-								GET_PLAYER(pPlot->getOwner()).AI_techValue((TechTypes)iI, 1, false, false, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave),
-								GET_PLAYER(pPlot->getOwner()).AI_techBuildingValue((TechTypes)iI, 1, bDummy),
-								GET_PLAYER(pPlot->getOwner()).AI_techUnitValue((TechTypes)iI, 1, bDummy)));
+							szString.append(CvWString::format(L"\n%s(%d) : %d ", GET_PLAYER((PlayerTypes)iI).getName(), DEFAULT_PLAYER_CLOSENESS,
+								pPlotCity->AI_playerCloseness((PlayerTypes)iI, DEFAULT_PLAYER_CLOSENESS)));
+
+							szString.append(CvWString::format(L" [%d, ", iPlayerCloseness));
+
+							if (ePlotTeam != eTeamX)
+							{
+								szString.append(CvWString::format(L"%d]", plotTeam->AI_teamCloseness(eTeamX, DEFAULT_PLAYER_CLOSENESS)));
+
+								if (plotTeam->isHasMet(eTeamX) && plotTeam->AI_getAttitude(eTeamX) != ATTITUDE_FRIENDLY)
+								{
+									const int iStartWarVal = plotTeam->AI_startWarVal(eTeamX);
+
+									if (plotTeam->isAtWar(eTeamX))
+									{
+										szString.append(CvWString::format(L"\n   At War:   "));
+									}
+									else if (plotTeam->AI_getWarPlan(eTeamX) != NO_WARPLAN)
+									{
+										szString.append(CvWString::format(L"\n   Plan. War:"));
+									}
+									else if (!plotTeam->canDeclareWar(eTeamX))
+									{
+										szString.append(CvWString::format(L"\n   Can't War:"));
+									}
+									else
+									{
+										szString.append(CvWString::format(L"\n   No War:   "));
+									}
+
+									if (iStartWarVal > 1200)
+									{
+										szString.append(CvWString::format(SETCOLR L" %d" ENDCOLR, TEXT_COLOR("COLOR_RED"), iStartWarVal));
+									}
+									else if (iStartWarVal > 600)
+									{
+										szString.append(CvWString::format(SETCOLR L" %d" ENDCOLR, TEXT_COLOR("COLOR_YELLOW"), iStartWarVal));
+									}
+									else
+									{
+										szString.append(CvWString::format(L" %d", iStartWarVal));
+									}
+									szString.append(CvWString::format(L" (%d", plotTeam->AI_calculatePlotWarValue(eTeamX)));
+									szString.append(CvWString::format(L", %d", plotTeam->AI_calculateBonusWarValue(eTeamX)));
+									szString.append(CvWString::format(L", %d", plotTeam->AI_calculateCapitalProximity(eTeamX)));
+									szString.append(CvWString::format(L", %4s", GC.getAttitudeInfo(plotTeam->AI_getAttitude(eTeamX)).getDescription(0)));
+									szString.append(CvWString::format(L", %d%%)", 100-plotTeam->AI_noWarAttitudeProb(plotTeam->AI_getAttitude(eTeamX))));
+								}
+							}
+							else
+							{
+								szString.append(CvWString::format(L"-]"));
+							}
 						}
 					}
-				}
-			}
-			else if (bAlt && !bShift)
-			{
-				if (pPlot->isHasPathToEnemyCity(ePlotTeam))
-				{
-					szString.append(CvWString::format(L"\nCan reach an enemy city\n\n"));
-				}
-				else
-				{
-					szString.append(CvWString::format(L"\nNo reachable enemy cities\n\n"));
-				}
-				for (int iI = 0; iI < MAX_PLAYERS; iI++)
-				{
-					if (GET_PLAYER((PlayerTypes)iI).isAlive())
+					else
 					{
-						if (pPlot->isHasPathToPlayerCity(ePlotTeam, (PlayerTypes) iI))
+						const int iCloseness = pPlotCity->AI_playerCloseness((PlayerTypes)iI, DEFAULT_PLAYER_CLOSENESS);
+						if (iCloseness != 0)
 						{
-							szString.append(CvWString::format(SETCOLR L"Can reach %s city" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), GET_PLAYER((PlayerTypes)iI).getName()));
+							if (bFirst)
+							{
+								bFirst = false;
+
+								szString.append(CvWString::format(L"\n\nCloseness:"));
+							}
+							szString.append(CvWString::format(L"\n%s(%d) : %d ", GET_PLAYER((PlayerTypes)iI).getName(), DEFAULT_PLAYER_CLOSENESS, iCloseness));
+							szString.append(CvWString::format(L" [%d, ", pPlayer.AI_playerCloseness((PlayerTypes)iI, DEFAULT_PLAYER_CLOSENESS)));
+
+							ePlotTeam != eTeamX ?
+								szString.append(CvWString::format(L"%d]", plotTeam->AI_teamCloseness(eTeamX, DEFAULT_PLAYER_CLOSENESS)))
+								:
+								szString.append(CvWString::format(L"-]"));
 						}
-						else
+					}
+				}
+				szString.append(CvWString::format(L"\n\nWorkers H/N (%d , %d)", pPlotCity->AI_getWorkersHave(), pPlotCity->AI_getWorkersNeeded()));
+				szString.append(CvWString::format(L"\n\nWorkboats Needed = %d", pPlotCity->AI_neededSeaWorkers()));
+
+				int iAreaSiteBestValue = 0;
+				const int iNumAreaCitySites = pPlayer.AI_getNumAreaCitySites(pPlot->getArea(), iAreaSiteBestValue);
+				int iOtherSiteBestValue = 0;
+				const int iNumOtherCitySites = pPlot->waterArea() == NULL ? 0 : pPlayer.AI_getNumAdjacentAreaCitySites(pPlot->waterArea()->getID(), pPlot->getArea(), iOtherSiteBestValue);
+
+				szString.append(CvWString::format(L"\n\nArea Sites = %d (%d)", iNumAreaCitySites, iAreaSiteBestValue));
+				szString.append(CvWString::format(L"\nOther Sites = %d (%d)", iNumOtherCitySites, iOtherSiteBestValue));
+			}
+			else if (pPlot->getOwner() != NO_PLAYER)
+			{
+				if (bShift && !bAlt && pPlot->headUnitNode() == NULL)
+				{
+					const int iBonusClasses = GC.getNumBonusClassInfos();
+					std::vector<int> paiBonusClassRevealed(iBonusClasses, 0);
+					std::vector<int> paiBonusClassUnrevealed(iBonusClasses, 0);
+					std::vector<int> paiBonusClassHave(iBonusClasses, 0);
+
+					for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
+					{
+						if (GC.getBonusInfo((BonusTypes)iI).getTechReveal() != NO_TECH)
 						{
-							szString.append(CvWString::format(SETCOLR L"Cannot reach any %s city" ENDCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT"), GET_PLAYER((PlayerTypes)iI).getName()));
+							if (plotTeam->isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iI).getTechReveal()))
+							{
+								paiBonusClassRevealed[(BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType()]++;
+							}
+							else
+							{
+								paiBonusClassUnrevealed[(BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType()]++;
+							}
+
+							if (GET_PLAYER(pPlot->getOwner()).getNumAvailableBonuses((BonusTypes)iI) > 0)
+							{
+								paiBonusClassHave[(BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType()]++;
+							}
+							else if (GET_PLAYER(pPlot->getOwner()).countOwnedBonuses((BonusTypes)iI) > 0)
+							{
+								paiBonusClassHave[(BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType()]++;
+							}
+						}
+					}
+					bool bFirst = true;
+					for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+					{
+						if (GC.getTechInfo((TechTypes)iI).getEra() <= GET_PLAYER(pPlot->getOwner()).getCurrentEra() + 1)
+						{
+							const int iPathLength = GET_PLAYER(pPlot->getOwner()).findPathLength(((TechTypes)iI), false);
+
+							if (iPathLength <= 3 && !plotTeam->isHasTech((TechTypes)iI))
+							{
+								if (bFirst)
+								{
+									szString.append(CvWString::format(L"Name (TreePathLength) = Value (building, unit)"));
+									bFirst = false;
+								}
+								bool bDummy;
+								szString.append(CvWString::format(L"\n%s (%d) = %d (bld:%d, unt:%d)", GC.getTechInfo((TechTypes)iI).getDescription(), iPathLength,
+									GET_PLAYER(pPlot->getOwner()).AI_techValue((TechTypes)iI, 1, false, false, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave),
+									GET_PLAYER(pPlot->getOwner()).AI_techBuildingValue((TechTypes)iI, 1, bDummy),
+									GET_PLAYER(pPlot->getOwner()).AI_techUnitValue((TechTypes)iI, 1, bDummy)));
+							}
+						}
+					}
+				}
+				else if (bAlt && !bShift)
+				{
+					if (pPlot->isHasPathToEnemyCity(ePlotTeam))
+					{
+						szString.append(CvWString::format(L"\nCan reach an enemy city\n\n"));
+					}
+					else
+					{
+						szString.append(CvWString::format(L"\nNo reachable enemy cities\n\n"));
+					}
+					for (int iI = 0; iI < MAX_PLAYERS; iI++)
+					{
+						if (GET_PLAYER((PlayerTypes)iI).isAlive())
+						{
+							if (pPlot->isHasPathToPlayerCity(ePlotTeam, (PlayerTypes) iI))
+							{
+								szString.append(CvWString::format(SETCOLR L"Can reach %s city" ENDCOLR, TEXT_COLOR("COLOR_GREEN"), GET_PLAYER((PlayerTypes)iI).getName()));
+							}
+							else
+							{
+								szString.append(CvWString::format(SETCOLR L"Cannot reach any %s city" ENDCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT"), GET_PLAYER((PlayerTypes)iI).getName()));
+							}
+
+							if (plotTeam->isAtWar(GET_PLAYER((PlayerTypes)iI).getTeam()))
+							{
+								szString.append(CvWString::format(L" (enemy)"));
+							}
+							szString.append(CvWString::format(L"\n"));
 						}
 
-						if (plotTeam->isAtWar(GET_PLAYER((PlayerTypes)iI).getTeam()))
+					}
+				}
+				else if (bShift && bAlt)
+				{
+					szString.append(CvWString::format(SETCOLR L"\nStrategic values:" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT")));
+					szString.append(CvWString::format(L"choke: %d, canal:%d", pPlot->getChokeValue(), pPlot->getCanalValue()));
+					szString.append(NEWLINE);
+
+					bool bFirst = true;
+					for (int iI = 0; iI < MAX_PLAYERS; iI++)
+					{
+						const PlayerTypes ePlayer = (PlayerTypes)iI;
+						const CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
+
+						if (kPlayer.isAlive())
 						{
-							szString.append(CvWString::format(L" (enemy)"));
+							int iActualFoundValue = pPlot->getFoundValue(ePlayer);
+							int iCalcFoundValue = kPlayer.AI_foundValue(pPlot->getX(), pPlot->getY(), -1, false);
+							int iStartingFoundValue = kPlayer.AI_foundValue(pPlot->getX(), pPlot->getY(), -1, true);
+							int iBestAreaFoundValue = pPlot->area()->getBestFoundValue(ePlayer);
+							int iCitySiteBestValue;
+							int iNumAreaCitySites = kPlayer.AI_getNumAreaCitySites(pPlot->getArea(), iCitySiteBestValue);
+
+							if ((iActualFoundValue > 0 || iCalcFoundValue > 0 || iStartingFoundValue > 0)
+								|| ((pPlot->getOwner() == iI) && (iBestAreaFoundValue > 0)))
+							{
+								if (bFirst)
+								{
+									szString.append(CvWString::format(SETCOLR L"\nFound Values:" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT")));
+									bFirst = false;
+								}
+
+								szString.append(NEWLINE);
+
+								bool bIsRevealed = pPlot->isRevealed(kPlayer.getTeam(), false);
+
+								szString.append(CvWString::format(SETCOLR, TEXT_COLOR(bIsRevealed ? (((iActualFoundValue > 0) && (iActualFoundValue == iBestAreaFoundValue)) ? "COLOR_UNIT_TEXT" : "COLOR_ALT_HIGHLIGHT_TEXT") : "COLOR_HIGHLIGHT_TEXT")));
+
+								if (!bIsRevealed)
+								{
+									szString.append(CvWString::format(L"("));
+								}
+
+								szString.append(CvWString::format(L"%s: %d", kPlayer.getName(), iActualFoundValue));
+
+								if (!bIsRevealed)
+								{
+									szString.append(CvWString::format(L")"));
+								}
+
+								szString.append(CvWString::format(ENDCOLR));
+
+								if (iCalcFoundValue > 0 || iStartingFoundValue > 0)
+								{
+									szTempBuffer.Format(L" (%d,%ds)", iCalcFoundValue, iStartingFoundValue);
+									szString.append(szTempBuffer);
+								}
+
+								int iDeadlockCount = kPlayer.AI_countDeadlockedBonuses(pPlot);
+								if (iDeadlockCount > 0)
+								{
+									szTempBuffer.Format(L", " SETCOLR L"d=%d" ENDCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT"), iDeadlockCount);
+									szString.append(szTempBuffer);
+								}
+
+								if (kPlayer.AI_isPlotCitySite(pPlot))
+								{
+									szTempBuffer.Format(L", " SETCOLR L"X" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT"));
+									szString.append(szTempBuffer);
+								}
+
+								if ((iBestAreaFoundValue > 0) || (iNumAreaCitySites > 0))
+								{
+									int iBestFoundValue = kPlayer.findBestFoundValue();
+
+									szTempBuffer.Format(L"\n  Area Best = %d, Best = %d, Sites = %d", iBestAreaFoundValue, iBestFoundValue, iNumAreaCitySites);
+									szString.append(szTempBuffer);
+								}
+							}
 						}
-						szString.append(CvWString::format(L"\n"));
+					}
+				}
+				else if( pPlot->headUnitNode() == NULL )
+				{
+					std::vector<UnitAITypes> vecUnitAIs;
+
+					if( pPlot->getFeatureType() != NO_FEATURE )
+					{
+						szString.append(CvWString::format(L"Defense unit AIs:\n"));
+						vecUnitAIs.push_back(UNITAI_CITY_DEFENSE);
+						vecUnitAIs.push_back(UNITAI_COUNTER);
+						vecUnitAIs.push_back(UNITAI_CITY_COUNTER);
+					}
+					else
+					{
+						szString.append(CvWString::format(L"Attack unit AIs:\n"));
+						vecUnitAIs.push_back(UNITAI_ATTACK);
+						vecUnitAIs.push_back(UNITAI_ATTACK_CITY);
+						vecUnitAIs.push_back(UNITAI_COUNTER);
 					}
 
+					const CvCity* pCloseCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), pPlot->getOwner(), NO_TEAM, true);
+
+					if( pCloseCity != NULL )
+					{
+						foreach_(const UnitAITypes unitAI, vecUnitAIs)
+						{
+							CvWString szTempString;
+							getUnitAIString(szTempString, unitAI);
+							szString.append(CvWString::format(L"\n  %s  ", szTempString.GetCString()));
+							for (int iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
+							{
+								if (pCloseCity->canTrain((UnitTypes)iJ))
+								{
+									const int iValue = GET_PLAYER(pPlot->getOwner()).AI_unitValue((UnitTypes)iJ, unitAI, pPlot->area());
+									if (iValue > 0)
+									{
+										szString.append(CvWString::format(L"\n %s = %d", GC.getUnitInfo((UnitTypes)iJ).getDescription(), iValue));
+									}
+								}
+							}
+						}
+					}
 				}
 			}
-			else if (bShift && bAlt)
+			if (bShift && bAlt)
 			{
 				szString.append(CvWString::format(SETCOLR L"\nStrategic values:" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT")));
-				szString.append(CvWString::format(L"choke: %d, canal:%d", pPlot->getChokeValue(), pPlot->getCanalValue()));
+				szString.append(CvWString::format(L" choke=%d, canal=%d", pPlot->getChokeValue(), pPlot->getCanalValue()));
 				szString.append(NEWLINE);
 
-				bool bFirst = true;
-				for (int iI = 0; iI < MAX_PLAYERS; iI++)
+				for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
 				{
-					const PlayerTypes ePlayer = (PlayerTypes)iI;
-					const CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
-
-					if (kPlayer.isAlive())
+					InvisibleTypes eInvisible = (InvisibleTypes)iJ;
+					for (int iK = 0; iK < MAX_TEAMS; iK++)
 					{
-						int iActualFoundValue = pPlot->getFoundValue(ePlayer);
-						int iCalcFoundValue = kPlayer.AI_foundValue(pPlot->getX(), pPlot->getY(), -1, false);
-						int iStartingFoundValue = kPlayer.AI_foundValue(pPlot->getX(), pPlot->getY(), -1, true);
-						int iBestAreaFoundValue = pPlot->area()->getBestFoundValue(ePlayer);
-						int iCitySiteBestValue;
-						int iNumAreaCitySites = kPlayer.AI_getNumAreaCitySites(pPlot->getArea(), iCitySiteBestValue);
-
-						if ((iActualFoundValue > 0 || iCalcFoundValue > 0 || iStartingFoundValue > 0)
-							|| ((pPlot->getOwner() == iI) && (iBestAreaFoundValue > 0)))
+						TeamTypes eTeam = (TeamTypes)iK;
+						const int iSpotIntensity = pPlot->getHighestPlotTeamVisibilityIntensity(eInvisible, eTeam);
+						if (iSpotIntensity != 0)
 						{
-							if (bFirst)
-							{
-								szString.append(CvWString::format(SETCOLR L"\nFound Values:" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT")));
-								bFirst = false;
-							}
-
+							szString.append(CvWString::format(L"InvisibleType: %s, TeamID:%d, Int:%d", GC.getInvisibleInfo(eInvisible).getTextKeyWide(), iK, iSpotIntensity));
 							szString.append(NEWLINE);
-
-							bool bIsRevealed = pPlot->isRevealed(kPlayer.getTeam(), false);
-
-							szString.append(CvWString::format(SETCOLR, TEXT_COLOR(bIsRevealed ? (((iActualFoundValue > 0) && (iActualFoundValue == iBestAreaFoundValue)) ? "COLOR_UNIT_TEXT" : "COLOR_ALT_HIGHLIGHT_TEXT") : "COLOR_HIGHLIGHT_TEXT")));
-
-							if (!bIsRevealed)
-							{
-								szString.append(CvWString::format(L"("));
-							}
-
-							szString.append(CvWString::format(L"%s: %d", kPlayer.getName(), iActualFoundValue));
-
-							if (!bIsRevealed)
-							{
-								szString.append(CvWString::format(L")"));
-							}
-
-							szString.append(CvWString::format(ENDCOLR));
-
-							if (iCalcFoundValue > 0 || iStartingFoundValue > 0)
-							{
-								szTempBuffer.Format(L" (%d,%ds)", iCalcFoundValue, iStartingFoundValue);
-								szString.append(szTempBuffer);
-							}
-
-							int iDeadlockCount = kPlayer.AI_countDeadlockedBonuses(pPlot);
-							if (iDeadlockCount > 0)
-							{
-								szTempBuffer.Format(L", " SETCOLR L"d=%d" ENDCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT"), iDeadlockCount);
-								szString.append(szTempBuffer);
-							}
-
-							if (kPlayer.AI_isPlotCitySite(pPlot))
-							{
-								szTempBuffer.Format(L", " SETCOLR L"X" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT"));
-								szString.append(szTempBuffer);
-							}
-
-							if ((iBestAreaFoundValue > 0) || (iNumAreaCitySites > 0))
-							{
-								int iBestFoundValue = kPlayer.findBestFoundValue();
-
-								szTempBuffer.Format(L"\n  Area Best = %d, Best = %d, Sites = %d", iBestAreaFoundValue, iBestFoundValue, iNumAreaCitySites);
-								szString.append(szTempBuffer);
-							}
 						}
 					}
 				}
-			}
-			else if( pPlot->headUnitNode() == NULL )
-			{
-				std::vector<UnitAITypes> vecUnitAIs;
-
-				if( pPlot->getFeatureType() != NO_FEATURE )
-				{
-					szString.append(CvWString::format(L"Defense unit AIs:\n"));
-					vecUnitAIs.push_back(UNITAI_CITY_DEFENSE);
-					vecUnitAIs.push_back(UNITAI_COUNTER);
-					vecUnitAIs.push_back(UNITAI_CITY_COUNTER);
-				}
-				else
-				{
-					szString.append(CvWString::format(L"Attack unit AIs:\n"));
-					vecUnitAIs.push_back(UNITAI_ATTACK);
-					vecUnitAIs.push_back(UNITAI_ATTACK_CITY);
-					vecUnitAIs.push_back(UNITAI_COUNTER);
-				}
-
-				const CvCity* pCloseCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), pPlot->getOwner(), NO_TEAM, true);
-
-				if( pCloseCity != NULL )
-				{
-					foreach_(const UnitAITypes unitAI, vecUnitAIs)
-					{
-						CvWString szTempString;
-						getUnitAIString(szTempString, unitAI);
-						szString.append(CvWString::format(L"\n  %s  ", szTempString.GetCString()));
-						for (int iJ = 0; iJ < GC.getNumUnitInfos(); iJ++)
-						{
-							if (pCloseCity->canTrain((UnitTypes)iJ))
-							{
-								const int iValue = GET_PLAYER(pPlot->getOwner()).AI_unitValue((UnitTypes)iJ, unitAI, pPlot->area());
-								if (iValue > 0)
-								{
-									szString.append(CvWString::format(L"\n %s = %d", GC.getUnitInfo((UnitTypes)iJ).getDescription(), iValue));
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		if (bShift && bAlt)
-		{
-			szString.append(CvWString::format(SETCOLR L"\nStrategic values:" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT")));
-			szString.append(CvWString::format(L" choke=%d, canal=%d", pPlot->getChokeValue(), pPlot->getCanalValue()));
-			szString.append(NEWLINE);
-
-			for (int iJ = 0; iJ < GC.getNumInvisibleInfos(); iJ++)
-			{
-				InvisibleTypes eInvisible = (InvisibleTypes)iJ;
-				for (int iK = 0; iK < MAX_TEAMS; iK++)
-				{
-					TeamTypes eTeam = (TeamTypes)iK;
-					const int iSpotIntensity = pPlot->getHighestPlotTeamVisibilityIntensity(eInvisible, eTeam);
-					if (iSpotIntensity != 0)
-					{
-						szString.append(CvWString::format(L"InvisibleType: %s, TeamID:%d, Int:%d", GC.getInvisibleInfo(eInvisible).getTextKeyWide(), iK, iSpotIntensity));
-						szString.append(NEWLINE);
-					}
-				}
-			}
-			szString.append(CvWString::format(L"X %d, Y %d", pPlot->getX(), pPlot->getY()));
-			szString.append(NEWLINE);
-		}
-		return;
-	}
-	else if (bShift && !bAlt && bDebug)
-	{
-		szString.append(CvWString::format(L"\n%s - Lat %d, Long %d",
-			GC.getTerrainInfo(pPlot->getTerrainType()).getDescription(), pPlot->getLatitude(), pPlot->getLongitude()));
-
-		szString.append(CvWString::format(L"\nX %d, Y %d, Area %d", pPlot->getX(), pPlot->getY(), pPlot->getArea()));
-
-		if (pPlot->getPlotGroup(GC.getGame().getActivePlayer()) != NULL)
-		{
-			szString.append(CvWString::format(L", plot group %d", pPlot->getPlotGroup(GC.getGame().getActivePlayer())->getID()));
-		}
-		CvCity* pWorkingCity = pPlot->getWorkingCity();
-
-		if (bDebug && pWorkingCity == NULL && pPlot->getOwner() != NO_PLAYER)
-		{
-			const int iCulture = GC.getInfoTypeForString("BONUSCLASS_CULTURE");
-			const int iProduce = GC.getInfoTypeForString("BONUSCLASS_MANUFACTURED");
-			const int iGenmod = GC.getInfoTypeForString("BONUSCLASS_GENMODS");
-			const int iWonder = GC.getInfoTypeForString("BONUSCLASS_WONDER");
-			bool bFirst = true;
-			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
-			{
-				if (pPlot->isPlotGroupConnectedBonus(pPlot->getOwner(), ((BonusTypes)iI))
-				&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iCulture
-				&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iProduce
-				&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iGenmod
-				&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iWonder)
-				{
-					if (bFirst)
-					{
-						szString.append(CvWString::format(L"\nAI Bonus Value: %s=%d",
-							GC.getBonusInfo((BonusTypes)iI).getDescription(), GET_PLAYER(pPlot->getOwner()).AI_bonusVal((BonusTypes)iI)));
-						bFirst = false;
-					}
-					else
-					{
-						szString.append(CvWString::format(L", %s=%d",
-							GC.getBonusInfo((BonusTypes)iI).getDescription(), GET_PLAYER(pPlot->getOwner()).AI_bonusVal((BonusTypes)iI)));
-					}
-				}
-			}
-		}
-		bool bNS = true;
-		if (pPlot->getRiverNSDirection() == CARDINALDIRECTION_NORTH)
-		{
-			szString.append(L"\nRiver Flow: N");
-		}
-		else if (pPlot->getRiverNSDirection() == CARDINALDIRECTION_SOUTH)
-		{
-			szString.append(L"\nRiver Flow: S");
-		}
-		else bNS = false;
-
-		if (pPlot->getRiverWEDirection() == CARDINALDIRECTION_WEST)
-		{
-			if (bNS) szString.append(L"W");
-			else szString.append(L"\nRiver Flow: W");
-		}
-		else if (pPlot->getRiverWEDirection() == CARDINALDIRECTION_EAST)
-		{
-			if (bNS) szString.append(L"E");
-			else szString.append(L"\nRiver Flow: E");
-		}
-
-		if (pPlot->getRouteType() != NO_ROUTE)
-		{
-			szString.append(CvWString::format(L"\nRoute: %s", GC.getRouteInfo(pPlot->getRouteType()).getDescription()));
-
-			if (pPlot->getRouteSymbol() != NULL)
-			{
-				szString.append(CvWString::format(L", Connections: %i", gDLL->getRouteIFace()->getConnectionMask(pPlot->getRouteSymbol())));
-			}
-		}
-		else if (pPlot->getRouteSymbol() != NULL)
-		{ // Don't think this can happen, but we probably want to know about it if it does.
-			szString.append(CvWString::format(L"\nConnection: %i", gDLL->getRouteIFace()->getConnectionMask(pPlot->getRouteSymbol())));
-		}
-
-		for (int iI = 0; iI < MAX_PLAYERS; iI++)
-		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive() && pPlot->getDangerCount((PlayerTypes)iI) > 0)
-			{
-				szTempBuffer.Format(L"\n%s Danger: %d", GET_PLAYER((PlayerTypes)iI).getName(), pPlot->getDangerCount((PlayerTypes)iI));
-				szString.append(szTempBuffer);
-			}
-		}
-		PlayerTypes eActivePlayer = GC.getGame().getActivePlayer();
-		int iActualFoundValue = pPlot->getFoundValue(eActivePlayer);
-		int iCalcFoundValue = GET_PLAYER(eActivePlayer).AI_foundValue(pPlot->getX(), pPlot->getY(), -1, false);
-		int iStartingFoundValue = GET_PLAYER(eActivePlayer).AI_foundValue(pPlot->getX(), pPlot->getY(), -1, true);
-
-		szTempBuffer.Format(L"\nFound Value: %d, (%d, %d)", iActualFoundValue, iCalcFoundValue, iStartingFoundValue);
-		szString.append(szTempBuffer);
-
-		CvCity* pCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), pPlot->getOwner(), NO_TEAM, false);
-		if (pCity != NULL)
-		{
-			int iFoodMultiplier = 0;
-			int iProductionMultiplier = 0;
-			int iCommerceMultiplier = 0;
-			int iDesiredFoodChange = 0;
-			pCity->AI_getYieldMultipliers(iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange );
-
-			szString.append(CvWString::format(L"\n\n%s yield multipliers:\n  * Food %d, Prod %d, Com %d\n  * Desired Food Change %d",
-				pCity->getName().c_str(), iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange));
-
-			if (pPlot->isImprovementUpgradable())
-			{
-				const ImprovementTypes eImprovement = pPlot->getImprovementType();
-				szString.append(CvWString::format(L"\nCurrent improvement value: %d\n",
-					pCity->AI_getImprovementValue(pPlot, eImprovement, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange)));
-
-				ImprovementTypes eUpgrade = GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
-				bool bValid = pPlot->canHaveImprovement(eUpgrade, pCity->getTeam(), false, true);
-
-				szString.append(CvWString::format(L"AI improvement upgrade values:\nMain: %s%s = %d", GC.getImprovementInfo(eUpgrade).getDescription(), bValid ? L"" : L" (False)",
-					pCity->AI_getImprovementValue(pPlot, eUpgrade, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange)));
-
-				for (int iI = 0; iI < GC.getImprovementInfo(eImprovement).getNumAlternativeImprovementUpgradeTypes(); ++iI)
-				{
-					eUpgrade = (ImprovementTypes)GC.getImprovementInfo(eImprovement).getAlternativeImprovementUpgradeType(iI);
-					bool bValid = pPlot->canHaveImprovement(eUpgrade, pCity->getTeam(), false, true);
-					szString.append(CvWString::format(L"\n  * %s%s = %d", GC.getImprovementInfo(eUpgrade).getDescription(), bValid ? L"" : L" (False)",
-						pCity->AI_getImprovementValue(pPlot, eUpgrade, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange)));
-				}
-			}
-			if (NULL != pWorkingCity)
-			{
+				szString.append(CvWString::format(L"X %d, Y %d", pPlot->getX(), pPlot->getY()));
 				szString.append(NEWLINE);
-				szTempBuffer.Format(L"\nTarget pop: %d, (%d good tiles)", pWorkingCity->AI_getTargetSize(), pWorkingCity->AI_getGoodTileCount() );
-				szString.append(szTempBuffer);
+			}
+			return;
+		}
+		else if (bShift && !bAlt)
+		{
+			szString.append(CvWString::format(L"\n%s - Lat %d, Long %d",
+				GC.getTerrainInfo(pPlot->getTerrainType()).getDescription(), pPlot->getLatitude(), pPlot->getLongitude()));
 
-				const int iPlotIndex = pWorkingCity->getCityPlotIndex(pPlot);
-				const BuildTypes eBestBuild = pWorkingCity->AI_getBestBuild(iPlotIndex);
+			szString.append(CvWString::format(L"\nX %d, Y %d, Area %d", pPlot->getX(), pPlot->getY(), pPlot->getArea()));
 
-				if (NO_BUILD != eBestBuild)
+			if (pPlot->getPlotGroup(GC.getGame().getActivePlayer()) != NULL)
+			{
+				szString.append(CvWString::format(L", plot group %d", pPlot->getPlotGroup(GC.getGame().getActivePlayer())->getID()));
+			}
+			CvCity* pWorkingCity = pPlot->getWorkingCity();
+
+			if (bDebug && pWorkingCity == NULL && pPlot->getOwner() != NO_PLAYER)
+			{
+				const int iCulture = GC.getInfoTypeForString("BONUSCLASS_CULTURE");
+				const int iProduce = GC.getInfoTypeForString("BONUSCLASS_MANUFACTURED");
+				const int iGenmod = GC.getInfoTypeForString("BONUSCLASS_GENMODS");
+				const int iWonder = GC.getInfoTypeForString("BONUSCLASS_WONDER");
+				bool bFirst = true;
+				for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 				{
-					szString.append(CvWString::format(L"\nBest Build: %s (%d)", GC.getBuildInfo(eBestBuild).getDescription(), pWorkingCity->AI_getBestBuildValue(iPlotIndex)));
+					if (pPlot->isPlotGroupConnectedBonus(pPlot->getOwner(), ((BonusTypes)iI))
+					&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iCulture
+					&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iProduce
+					&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iGenmod
+					&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iWonder)
+					{
+						if (bFirst)
+						{
+							szString.append(CvWString::format(L"\nAI Bonus Value: %s=%d",
+								GC.getBonusInfo((BonusTypes)iI).getDescription(), GET_PLAYER(pPlot->getOwner()).AI_bonusVal((BonusTypes)iI)));
+							bFirst = false;
+						}
+						else
+						{
+							szString.append(CvWString::format(L", %s=%d",
+								GC.getBonusInfo((BonusTypes)iI).getDescription(), GET_PLAYER(pPlot->getOwner()).AI_bonusVal((BonusTypes)iI)));
+						}
+					}
 				}
 			}
-		}
-		szTempBuffer.Format(L"\nStack Str: land=%d(%d), sea=%d(%d), air=%d(%d)",
-			pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_LAND, StrengthFlags::None),
-			pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_LAND, StrengthFlags::DefensiveBonuses),
-			pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_SEA, StrengthFlags::None),
-			pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_SEA, StrengthFlags::DefensiveBonuses),
-			pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_AIR, StrengthFlags::None),
-			pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_AIR, StrengthFlags::DefensiveBonuses));
-		szString.append(szTempBuffer);
-	}
-	else if (!bShift && bAlt && bDebug)
-	{
-		if (pPlot->isOwned())
-		{
-			szTempBuffer.Format(L"\nThis player has %d area cities", pPlot->area()->getCitiesPerPlayer(pPlot->getOwner()));
-			szString.append(szTempBuffer);
-			for (int iI = 0; iI < GC.getNumReligionInfos(); ++iI)
+			bool bNS = true;
+			if (pPlot->getRiverNSDirection() == CARDINALDIRECTION_NORTH)
 			{
-				int iNeededMissionaries = GET_PLAYER(pPlot->getOwner()).AI_neededMissionaries(pPlot->area(), ((ReligionTypes)iI));
-				if (iNeededMissionaries > 0)
+				szString.append(L"\nRiver Flow: N");
+			}
+			else if (pPlot->getRiverNSDirection() == CARDINALDIRECTION_SOUTH)
+			{
+				szString.append(L"\nRiver Flow: S");
+			}
+			else bNS = false;
+
+			if (pPlot->getRiverWEDirection() == CARDINALDIRECTION_WEST)
+			{
+				if (bNS) szString.append(L"W");
+				else szString.append(L"\nRiver Flow: W");
+			}
+			else if (pPlot->getRiverWEDirection() == CARDINALDIRECTION_EAST)
+			{
+				if (bNS) szString.append(L"E");
+				else szString.append(L"\nRiver Flow: E");
+			}
+
+			if (pPlot->getRouteType() != NO_ROUTE)
+			{
+				szString.append(CvWString::format(L"\nRoute: %s", GC.getRouteInfo(pPlot->getRouteType()).getDescription()));
+
+				if (pPlot->getRouteSymbol() != NULL)
 				{
-					szTempBuffer.Format(L"\nNeeded %c missionaries = %d", GC.getReligionInfo((ReligionTypes)iI).getChar(), iNeededMissionaries);
+					szString.append(CvWString::format(L", Connections: %i", gDLL->getRouteIFace()->getConnectionMask(pPlot->getRouteSymbol())));
+				}
+			}
+			else if (pPlot->getRouteSymbol() != NULL)
+			{ // Don't think this can happen, but we probably want to know about it if it does.
+				szString.append(CvWString::format(L"\nConnection: %i", gDLL->getRouteIFace()->getConnectionMask(pPlot->getRouteSymbol())));
+			}
+
+			for (int iI = 0; iI < MAX_PLAYERS; iI++)
+			{
+				if (GET_PLAYER((PlayerTypes)iI).isAlive() && pPlot->getDangerCount((PlayerTypes)iI) > 0)
+				{
+					szTempBuffer.Format(L"\n%s Danger: %d", GET_PLAYER((PlayerTypes)iI).getName(), pPlot->getDangerCount((PlayerTypes)iI));
 					szString.append(szTempBuffer);
 				}
 			}
+			PlayerTypes eActivePlayer = GC.getGame().getActivePlayer();
+			int iActualFoundValue = pPlot->getFoundValue(eActivePlayer);
+			int iCalcFoundValue = GET_PLAYER(eActivePlayer).AI_foundValue(pPlot->getX(), pPlot->getY(), -1, false);
+			int iStartingFoundValue = GET_PLAYER(eActivePlayer).AI_foundValue(pPlot->getX(), pPlot->getY(), -1, true);
 
-			int iNeededExplorers = GET_PLAYER(pPlot->getOwner()).AI_neededExplorers(pPlot->area());
-			int iHasExplorers = GET_PLAYER(pPlot->getOwner()).AI_totalAreaUnitAIs(pPlot->area(), UNITAI_EXPLORE);
-			if (iNeededExplorers > 0)
-			{
-				szTempBuffer.Format(L"\nNeeded explorers = %d (has %d)", iNeededExplorers, iHasExplorers);
-				szString.append(szTempBuffer);
-			}
+			szTempBuffer.Format(L"\nFound Value: %d, (%d, %d)", iActualFoundValue, iCalcFoundValue, iStartingFoundValue);
+			szString.append(szTempBuffer);
 
-			int iNeededHunters = GET_PLAYER(pPlot->getOwner()).AI_neededHunters(pPlot->area());
-			int iHasHunters = GET_PLAYER(pPlot->getOwner()).AI_totalAreaUnitAIs(pPlot->area(), UNITAI_HUNTER);
-			if (iNeededHunters > 0)
-			{
-				szTempBuffer.Format(L"\nNeeded hunters = %d (has %d)", iNeededHunters, iHasHunters);
-				szString.append(szTempBuffer);
-			}
-
-			int iOurDefense = GET_PLAYER(pPlot->getOwner()).AI_getOurPlotStrength(pPlot, 0, true, false);
-			int iEnemyOffense = GET_PLAYER(pPlot->getOwner()).AI_getEnemyPlotStrength(pPlot, 2, false, false);
-			if (iEnemyOffense > 0)
-			{
-				szString.append(CvWString::format(SETCOLR L"\nDanger: %.2f (%d/%d)" ENDCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT"),
-					(iEnemyOffense * 1.0f) / std::max(1, iOurDefense), iEnemyOffense, iOurDefense));
-			}
-
-			CvCity* pCity = pPlot->getPlotCity();
+			CvCity* pCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), pPlot->getOwner(), NO_TEAM, false);
 			if (pCity != NULL)
 			{
-				szTempBuffer.Format(L"\n\nCulture Pressure Value = %d", pCity->AI_calculateCulturePressure());
-				szString.append(szTempBuffer);
+				int iFoodMultiplier = 0;
+				int iProductionMultiplier = 0;
+				int iCommerceMultiplier = 0;
+				int iDesiredFoodChange = 0;
+				pCity->AI_getYieldMultipliers(iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange );
 
-				szTempBuffer.Format(L"\nWater World Percent = %d", pCity->AI_calculateWaterWorldPercent());
-				szString.append(szTempBuffer);
+				szString.append(CvWString::format(L"\n\n%s yield multipliers:\n  * Food %d, Prod %d, Com %d\n  * Desired Food Change %d",
+					pCity->getName().c_str(), iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange));
 
-				const CvPlayerAI& kPlayer = GET_PLAYER(pCity->getOwner());
-				const int64_t iUnitUpkeep = kPlayer.getFinalUnitUpkeep();
-				int64_t iTotalCosts = kPlayer.calculatePreInflatedCosts();
-				int64_t iUnitCostPercentage = iUnitUpkeep * 100 / std::max<int64_t>(1, iTotalCosts);
-				szString.append(CvWString::format(L"\nUnit cost percentage: %I64d (%I64d / %I64d)", iUnitCostPercentage, iUnitUpkeep, iTotalCosts));
+				if (pPlot->isImprovementUpgradable())
+				{
+					const ImprovementTypes eImprovement = pPlot->getImprovementType();
+					szString.append(CvWString::format(L"\nCurrent improvement value: %d\n",
+						pCity->AI_getImprovementValue(pPlot, eImprovement, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange)));
 
-				szString.append(CvWString::format(L"\nUpgrade all units: %d gold", kPlayer.AI_goldToUpgradeAllUnits()));
+					ImprovementTypes eUpgrade = GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
+					bool bValid = pPlot->canHaveImprovement(eUpgrade, pCity->getTeam(), false, true);
 
-				szString.append(CvWString::format(L"\n\nRanks:"));
-				szString.append(CvWString::format(L"\nPopulation:%d", pCity->findPopulationRank()));
+					szString.append(CvWString::format(L"AI improvement upgrade values:\nMain: %s%s = %d", GC.getImprovementInfo(eUpgrade).getDescription(), bValid ? L"" : L" (False)",
+						pCity->AI_getImprovementValue(pPlot, eUpgrade, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange)));
 
-				szString.append(CvWString::format(L"\nFood:%d(%d), ", pCity->findYieldRateRank(YIELD_FOOD), pCity->findBaseYieldRateRank(YIELD_FOOD)));
-				szString.append(CvWString::format(L"Prod:%d(%d), ", pCity->findYieldRateRank(YIELD_PRODUCTION), pCity->findBaseYieldRateRank(YIELD_PRODUCTION)));
-				szString.append(CvWString::format(L"Commerce:%d(%d)", pCity->findYieldRateRank(YIELD_COMMERCE), pCity->findBaseYieldRateRank(YIELD_COMMERCE)));
+					for (int iI = 0; iI < GC.getImprovementInfo(eImprovement).getNumAlternativeImprovementUpgradeTypes(); ++iI)
+					{
+						eUpgrade = (ImprovementTypes)GC.getImprovementInfo(eImprovement).getAlternativeImprovementUpgradeType(iI);
+						bool bValid = pPlot->canHaveImprovement(eUpgrade, pCity->getTeam(), false, true);
+						szString.append(CvWString::format(L"\n  * %s%s = %d", GC.getImprovementInfo(eUpgrade).getDescription(), bValid ? L"" : L" (False)",
+							pCity->AI_getImprovementValue(pPlot, eUpgrade, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange)));
+					}
+				}
+				if (NULL != pWorkingCity)
+				{
+					szString.append(NEWLINE);
+					szTempBuffer.Format(L"\nTarget pop: %d, (%d good tiles)", pWorkingCity->AI_getTargetSize(), pWorkingCity->AI_getGoodTileCount() );
+					szString.append(szTempBuffer);
 
-				szString.append(CvWString::format(L"\nGold:%d, ", pCity->findCommerceRateRank(COMMERCE_GOLD)));
-				szString.append(CvWString::format(L"Research:%d, ", pCity->findCommerceRateRank(COMMERCE_RESEARCH)));
-				szString.append(CvWString::format(L"Culture:%d", pCity->findCommerceRateRank(COMMERCE_CULTURE)));
+					const int iPlotIndex = pWorkingCity->getCityPlotIndex(pPlot);
+					const BuildTypes eBestBuild = pWorkingCity->AI_getBestBuild(iPlotIndex);
 
-				szString.append(CvWString::format(L"\nMilitary Rank:%d", pCity->AI_getMilitaryProductionRateRank()));
-				if (pCity->AI_isMilitaryProductionCity())
-					szString.append(CvWString::format(L"\nIs Military Production City"));
-				szString.append(CvWString::format(L"\nNaval Military Rank:%d", pCity->AI_getNavalMilitaryProductionRateRank()));
-				if (pCity->AI_isNavalMilitaryProductionCity())
-					szString.append(CvWString::format(L"\nIs Naval Military Production City"));
+					if (NO_BUILD != eBestBuild)
+					{
+						szString.append(CvWString::format(L"\nBest Build: %s (%d)", GC.getBuildInfo(eBestBuild).getDescription(), pWorkingCity->AI_getBestBuildValue(iPlotIndex)));
+					}
+				}
 			}
-			szString.append(NEWLINE);
-
-			szTempBuffer.Format(L"Stability Index: %d, Trend: %d",GET_PLAYER(pPlot->getOwner()).getStabilityIndex(),GET_PLAYER(pPlot->getOwner()).getStabilityIndex()-GET_PLAYER(pPlot->getOwner()).getStabilityIndexAverage());
+			szTempBuffer.Format(L"\nStack Str: land=%d(%d), sea=%d(%d), air=%d(%d)",
+				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_LAND, StrengthFlags::None),
+				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_LAND, StrengthFlags::DefensiveBonuses),
+				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_SEA, StrengthFlags::None),
+				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_SEA, StrengthFlags::DefensiveBonuses),
+				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_AIR, StrengthFlags::None),
+				pPlot->AI_sumStrength(NO_PLAYER, NO_PLAYER, DOMAIN_AIR, StrengthFlags::DefensiveBonuses));
 			szString.append(szTempBuffer);
-			szString.append(NEWLINE);
-
-			//AI strategies
-			if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_DAGGER))
+		}
+		else if (!bShift && bAlt)
+		{
+			if (pPlot->isOwned())
 			{
-				szTempBuffer.Format(L"Dagger, ");
+				szTempBuffer.Format(L"\nThis player has %d area cities", pPlot->area()->getCitiesPerPlayer(pPlot->getOwner()));
 				szString.append(szTempBuffer);
-			}
-			if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_CRUSH))
-			{
-				szTempBuffer.Format(L"Crush, ");
-				szString.append(szTempBuffer);
-			}
-			if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_ALERT1))
-			{
-				szTempBuffer.Format(L"Alert1, ");
-				szString.append(szTempBuffer);
-			}
-			if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_ALERT2))
-			{
-				szTempBuffer.Format(L"Alert2, ");
-				szString.append(szTempBuffer);
-			}
-			if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_TURTLE))
-			{
-				szTempBuffer.Format(L"Turtle, ");
-				szString.append(szTempBuffer);
-			}
-			if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_LAST_STAND))
-			{
-				szTempBuffer.Format(L"LastStand, ");
-				szString.append(szTempBuffer);
-			}
-			if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_FINAL_WAR))
-			{
-				szTempBuffer.Format(L"FinalWar, ");
-				szString.append(szTempBuffer);
-			}
-			if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS))
-			{
-				szTempBuffer.Format(L"GetBetterUnits, ");
-				szString.append(szTempBuffer);
-			}
-			if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_FASTMOVERS))
-			{
-				szTempBuffer.Format(L"FastMovers, ");
-				szString.append(szTempBuffer);
-			}
-			if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_LAND_BLITZ))
-			{
-				szTempBuffer.Format(L"LandBlitz, ");
-				szString.append(szTempBuffer);
-			}
-			if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_AIR_BLITZ))
-			{
-				szTempBuffer.Format(L"AirBlitz, ");
-				szString.append(szTempBuffer);
-			}
- 			if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_OWABWNW))
-			{
-				szTempBuffer.Format(L"OWABWNW, ");
-				szString.append(szTempBuffer);
-			}
-			if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_PRODUCTION))
-			{
-				szTempBuffer.Format(L"Production, ");
-
-				szString.append(szTempBuffer);
-			}
-			if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_MISSIONARY))
-			{
-				szTempBuffer.Format(L"Missionary, ");
-				szString.append(szTempBuffer);
-			}
-			if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_BIG_ESPIONAGE))
-			{
-				szTempBuffer.Format(L"BigEspionage, ");
-				szString.append(szTempBuffer);
-			}
-
-			//Area battle plans.
-			if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_OFFENSIVE)
-			{
-				szTempBuffer.Format(L"\n Area AI = OFFENSIVE");
-			}
-			else if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_DEFENSIVE)
-			{
-				szTempBuffer.Format(L"\n Area AI = DEFENSIVE");
-			}
-			else if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_MASSING)
-			{
-				szTempBuffer.Format(L"\n Area AI = MASSING");
-			}
-			else if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_ASSAULT)
-			{
-				szTempBuffer.Format(L"\n Area AI = ASSAULT");
-			}
-			else if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_ASSAULT_MASSING)
-			{
-				szTempBuffer.Format(L"\n Area AI = ASSAULT_MASSING");
-			}
-			else if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_NEUTRAL)
-			{
-				szTempBuffer.Format(L"\n Area AI = NEUTRAL");
-			}
-
-			szString.append(szTempBuffer);
-			{
-				const int iNumRealWars = plotTeam->getAtWarCount(true);
-				if (iNumRealWars != 0)
+				for (int iI = 0; iI < GC.getNumReligionInfos(); ++iI)
 				{
-					szString.append(CvWString::format(L"\n\nNum Wars: %d + %d minor", iNumRealWars, plotTeam->getAtWarCount(false) - iNumRealWars));
-				}
-			}
-			szString.append(CvWString::format(L"\nWarplans:"));
-
-			for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
-			{
-				const TeamTypes eTeamX = static_cast<TeamTypes>(iI);
-				const CvTeam& teamX = GET_TEAM(eTeamX);
-
-				if (teamX.isAlive())
-				{
-					if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_ATTACKED)
+					int iNeededMissionaries = GET_PLAYER(pPlot->getOwner()).AI_neededMissionaries(pPlot->area(), ((ReligionTypes)iI));
+					if (iNeededMissionaries > 0)
 					{
-						szString.append(CvWString::format(L"\n%s: ATTACKED", teamX.getName().c_str()));
-					}
-					else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_ATTACKED_RECENT)
-					{
-						szString.append(CvWString::format(L"\n%s: ATTACKED_RECENT", teamX.getName().c_str()));
-					}
-					else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_PREPARING_LIMITED)
-					{
-						szString.append(CvWString::format(L"\n%s: PREP_LIM", teamX.getName().c_str()));
-					}
-					else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_PREPARING_TOTAL)
-					{
-						szString.append(CvWString::format(L"\n%s: PREP_TOTAL", teamX.getName().c_str()));
-					}
-					else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_LIMITED)
-					{
-						szString.append(CvWString::format(L"\n%s: LIMITED", teamX.getName().c_str()));
-					}
-					else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_TOTAL)
-					{
-						szString.append(CvWString::format(L"\n%s: TOTAL", teamX.getName().c_str()));
-					}
-					else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_DOGPILE)
-					{
-						szString.append(CvWString::format(L"\n%s: DOGPILE", teamX.getName().c_str()));
-					}
-					else if (plotTeam->AI_getWarPlan(eTeamX) == NO_WARPLAN && plotTeam->isAtWar(eTeamX))
-					{
-						szString.append(CvWString::format(SETCOLR L"\n%s: NO_WARPLAN!" ENDCOLR, TEXT_COLOR("COLOR_WARNING_TEXT"), teamX.getName().c_str()));
+						szTempBuffer.Format(L"\nNeeded %c missionaries = %d", GC.getReligionInfo((ReligionTypes)iI).getChar(), iNeededMissionaries);
+						szString.append(szTempBuffer);
 					}
 				}
 
-				if (ePlotTeam != eTeamX && (plotTeam->isMinorCiv() || plotTeam->isNPC()) && !plotTeam->isAtWar(eTeamX))
+				int iNeededExplorers = GET_PLAYER(pPlot->getOwner()).AI_neededExplorers(pPlot->area());
+				int iHasExplorers = GET_PLAYER(pPlot->getOwner()).AI_totalAreaUnitAIs(pPlot->area(), UNITAI_EXPLORE);
+				if (iNeededExplorers > 0)
 				{
-					szString.append(CvWString::format(SETCOLR L"\n%s: minor/npc not at war!" ENDCOLR, TEXT_COLOR("COLOR_WARNING_TEXT"), teamX.getName().c_str()));
+					szTempBuffer.Format(L"\nNeeded explorers = %d (has %d)", iNeededExplorers, iHasExplorers);
+					szString.append(szTempBuffer);
 				}
-			}
 
-			CvCity* pTargetCity = pPlot->area()->getTargetCity(pPlot->getOwner());
-			if( pTargetCity )
-			{
-				szString.append(CvWString::format(L"\nTarget City: %s", pTargetCity->getName().c_str()));
-			}
-			else
-			{
-				szString.append(CvWString::format(L"\nTarget City: None"));
+				int iNeededHunters = GET_PLAYER(pPlot->getOwner()).AI_neededHunters(pPlot->area());
+				int iHasHunters = GET_PLAYER(pPlot->getOwner()).AI_totalAreaUnitAIs(pPlot->area(), UNITAI_HUNTER);
+				if (iNeededHunters > 0)
+				{
+					szTempBuffer.Format(L"\nNeeded hunters = %d (has %d)", iNeededHunters, iHasHunters);
+					szString.append(szTempBuffer);
+				}
+
+				int iOurDefense = GET_PLAYER(pPlot->getOwner()).AI_getOurPlotStrength(pPlot, 0, true, false);
+				int iEnemyOffense = GET_PLAYER(pPlot->getOwner()).AI_getEnemyPlotStrength(pPlot, 2, false, false);
+				if (iEnemyOffense > 0)
+				{
+					szString.append(CvWString::format(SETCOLR L"\nDanger: %.2f (%d/%d)" ENDCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT"),
+						(iEnemyOffense * 1.0f) / std::max(1, iOurDefense), iEnemyOffense, iOurDefense));
+				}
+
+				CvCity* pCity = pPlot->getPlotCity();
+				if (pCity != NULL)
+				{
+					szTempBuffer.Format(L"\n\nCulture Pressure Value = %d", pCity->AI_calculateCulturePressure());
+					szString.append(szTempBuffer);
+
+					szTempBuffer.Format(L"\nWater World Percent = %d", pCity->AI_calculateWaterWorldPercent());
+					szString.append(szTempBuffer);
+
+					const CvPlayerAI& kPlayer = GET_PLAYER(pCity->getOwner());
+					const int64_t iUnitUpkeep = kPlayer.getFinalUnitUpkeep();
+					int64_t iTotalCosts = kPlayer.calculatePreInflatedCosts();
+					int64_t iUnitCostPercentage = iUnitUpkeep * 100 / std::max<int64_t>(1, iTotalCosts);
+					szString.append(CvWString::format(L"\nUnit cost percentage: %I64d (%I64d / %I64d)", iUnitCostPercentage, iUnitUpkeep, iTotalCosts));
+
+					szString.append(CvWString::format(L"\nUpgrade all units: %d gold", kPlayer.AI_goldToUpgradeAllUnits()));
+
+					szString.append(CvWString::format(L"\n\nRanks:"));
+					szString.append(CvWString::format(L"\nPopulation:%d", pCity->findPopulationRank()));
+
+					szString.append(CvWString::format(L"\nFood:%d(%d), ", pCity->findYieldRateRank(YIELD_FOOD), pCity->findBaseYieldRateRank(YIELD_FOOD)));
+					szString.append(CvWString::format(L"Prod:%d(%d), ", pCity->findYieldRateRank(YIELD_PRODUCTION), pCity->findBaseYieldRateRank(YIELD_PRODUCTION)));
+					szString.append(CvWString::format(L"Commerce:%d(%d)", pCity->findYieldRateRank(YIELD_COMMERCE), pCity->findBaseYieldRateRank(YIELD_COMMERCE)));
+
+					szString.append(CvWString::format(L"\nGold:%d, ", pCity->findCommerceRateRank(COMMERCE_GOLD)));
+					szString.append(CvWString::format(L"Research:%d, ", pCity->findCommerceRateRank(COMMERCE_RESEARCH)));
+					szString.append(CvWString::format(L"Culture:%d", pCity->findCommerceRateRank(COMMERCE_CULTURE)));
+
+					szString.append(CvWString::format(L"\nMilitary Rank:%d", pCity->AI_getMilitaryProductionRateRank()));
+					if (pCity->AI_isMilitaryProductionCity())
+						szString.append(CvWString::format(L"\nIs Military Production City"));
+					szString.append(CvWString::format(L"\nNaval Military Rank:%d", pCity->AI_getNavalMilitaryProductionRateRank()));
+					if (pCity->AI_isNavalMilitaryProductionCity())
+						szString.append(CvWString::format(L"\nIs Naval Military Production City"));
+				}
+				szString.append(NEWLINE);
+
+				szTempBuffer.Format(L"Stability Index: %d, Trend: %d",GET_PLAYER(pPlot->getOwner()).getStabilityIndex(),GET_PLAYER(pPlot->getOwner()).getStabilityIndex()-GET_PLAYER(pPlot->getOwner()).getStabilityIndexAverage());
+				szString.append(szTempBuffer);
+				szString.append(NEWLINE);
+
+				//AI strategies
+				if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_DAGGER))
+				{
+					szTempBuffer.Format(L"Dagger, ");
+					szString.append(szTempBuffer);
+				}
+				if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_CRUSH))
+				{
+					szTempBuffer.Format(L"Crush, ");
+					szString.append(szTempBuffer);
+				}
+				if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_ALERT1))
+				{
+					szTempBuffer.Format(L"Alert1, ");
+					szString.append(szTempBuffer);
+				}
+				if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_ALERT2))
+				{
+					szTempBuffer.Format(L"Alert2, ");
+					szString.append(szTempBuffer);
+				}
+				if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_TURTLE))
+				{
+					szTempBuffer.Format(L"Turtle, ");
+					szString.append(szTempBuffer);
+				}
+				if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_LAST_STAND))
+				{
+					szTempBuffer.Format(L"LastStand, ");
+					szString.append(szTempBuffer);
+				}
+				if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_FINAL_WAR))
+				{
+					szTempBuffer.Format(L"FinalWar, ");
+					szString.append(szTempBuffer);
+				}
+				if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_GET_BETTER_UNITS))
+				{
+					szTempBuffer.Format(L"GetBetterUnits, ");
+					szString.append(szTempBuffer);
+				}
+				if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_FASTMOVERS))
+				{
+					szTempBuffer.Format(L"FastMovers, ");
+					szString.append(szTempBuffer);
+				}
+				if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_LAND_BLITZ))
+				{
+					szTempBuffer.Format(L"LandBlitz, ");
+					szString.append(szTempBuffer);
+				}
+				if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_AIR_BLITZ))
+				{
+					szTempBuffer.Format(L"AirBlitz, ");
+					szString.append(szTempBuffer);
+				}
+				if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_OWABWNW))
+				{
+					szTempBuffer.Format(L"OWABWNW, ");
+					szString.append(szTempBuffer);
+				}
+				if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_PRODUCTION))
+				{
+					szTempBuffer.Format(L"Production, ");
+
+					szString.append(szTempBuffer);
+				}
+				if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_MISSIONARY))
+				{
+					szTempBuffer.Format(L"Missionary, ");
+					szString.append(szTempBuffer);
+				}
+				if (GET_PLAYER(pPlot->getOwner()).AI_isDoStrategy(AI_STRATEGY_BIG_ESPIONAGE))
+				{
+					szTempBuffer.Format(L"BigEspionage, ");
+					szString.append(szTempBuffer);
+				}
+
+				//Area battle plans.
+				if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_OFFENSIVE)
+				{
+					szTempBuffer.Format(L"\n Area AI = OFFENSIVE");
+				}
+				else if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_DEFENSIVE)
+				{
+					szTempBuffer.Format(L"\n Area AI = DEFENSIVE");
+				}
+				else if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_MASSING)
+				{
+					szTempBuffer.Format(L"\n Area AI = MASSING");
+				}
+				else if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_ASSAULT)
+				{
+					szTempBuffer.Format(L"\n Area AI = ASSAULT");
+				}
+				else if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_ASSAULT_MASSING)
+				{
+					szTempBuffer.Format(L"\n Area AI = ASSAULT_MASSING");
+				}
+				else if (pPlot->area()->getAreaAIType(ePlotTeam) == AREAAI_NEUTRAL)
+				{
+					szTempBuffer.Format(L"\n Area AI = NEUTRAL");
+				}
+
+				szString.append(szTempBuffer);
+				{
+					const int iNumRealWars = plotTeam->getAtWarCount(true);
+					if (iNumRealWars != 0)
+					{
+						szString.append(CvWString::format(L"\n\nNum Wars: %d + %d minor", iNumRealWars, plotTeam->getAtWarCount(false) - iNumRealWars));
+					}
+				}
+				szString.append(CvWString::format(L"\nWarplans:"));
+
+				for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
+				{
+					const TeamTypes eTeamX = static_cast<TeamTypes>(iI);
+					const CvTeam& teamX = GET_TEAM(eTeamX);
+
+					if (teamX.isAlive())
+					{
+						if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_ATTACKED)
+						{
+							szString.append(CvWString::format(L"\n%s: ATTACKED", teamX.getName().c_str()));
+						}
+						else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_ATTACKED_RECENT)
+						{
+							szString.append(CvWString::format(L"\n%s: ATTACKED_RECENT", teamX.getName().c_str()));
+						}
+						else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_PREPARING_LIMITED)
+						{
+							szString.append(CvWString::format(L"\n%s: PREP_LIM", teamX.getName().c_str()));
+						}
+						else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_PREPARING_TOTAL)
+						{
+							szString.append(CvWString::format(L"\n%s: PREP_TOTAL", teamX.getName().c_str()));
+						}
+						else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_LIMITED)
+						{
+							szString.append(CvWString::format(L"\n%s: LIMITED", teamX.getName().c_str()));
+						}
+						else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_TOTAL)
+						{
+							szString.append(CvWString::format(L"\n%s: TOTAL", teamX.getName().c_str()));
+						}
+						else if (plotTeam->AI_getWarPlan(eTeamX) == WARPLAN_DOGPILE)
+						{
+							szString.append(CvWString::format(L"\n%s: DOGPILE", teamX.getName().c_str()));
+						}
+						else if (plotTeam->AI_getWarPlan(eTeamX) == NO_WARPLAN && plotTeam->isAtWar(eTeamX))
+						{
+							szString.append(CvWString::format(SETCOLR L"\n%s: NO_WARPLAN!" ENDCOLR, TEXT_COLOR("COLOR_WARNING_TEXT"), teamX.getName().c_str()));
+						}
+					}
+
+					if (ePlotTeam != eTeamX && (plotTeam->isMinorCiv() || plotTeam->isNPC()) && !plotTeam->isAtWar(eTeamX))
+					{
+						szString.append(CvWString::format(SETCOLR L"\n%s: minor/npc not at war!" ENDCOLR, TEXT_COLOR("COLOR_WARNING_TEXT"), teamX.getName().c_str()));
+					}
+				}
+
+				CvCity* pTargetCity = pPlot->area()->getTargetCity(pPlot->getOwner());
+				if( pTargetCity )
+				{
+					szString.append(CvWString::format(L"\nTarget City: %s", pTargetCity->getName().c_str()));
+				}
+				else
+				{
+					szString.append(CvWString::format(L"\nTarget City: None"));
+				}
 			}
 		}
-	}
-	else if (bShift && bAlt && bDebug)
-	{
-		CvCity*	pCity = pPlot->getWorkingCity();
-		if (pCity != NULL)
+		else if (bShift && bAlt)
 		{
-			// some functions we want to call are not in CvCity, worse some are protected, so made us a friend
-			CvCityAI* pCityAI = static_cast<CvCityAI*>(pCity);
-
-			bool bAvoidGrowth = pCity->AI_avoidGrowth();
-			bool bIgnoreGrowth = pCityAI->AI_ignoreGrowth();
-
-			// if we over the city, then do an array of all the plots
-			if (pPlot->getPlotCity() != NULL)
+			CvCity*	pCity = pPlot->getWorkingCity();
+			if (pCity != NULL)
 			{
-				szTempBuffer.Format(L"Max culture level = %d ", pCity->getMaxCultureLevelAmongPlayers());
-				szString.append(szTempBuffer);
-				szString.append(NEWLINE);
-				szTempBuffer.Format(L"Occupation culture level = %d ", pCity->getOccupationCultureLevel());
-				szString.append(szTempBuffer);
-				szString.append(NEWLINE);
+				// some functions we want to call are not in CvCity, worse some are protected, so made us a friend
+				CvCityAI* pCityAI = static_cast<CvCityAI*>(pCity);
 
-				// check avoid growth
-				if (bAvoidGrowth || bIgnoreGrowth)
+				bool bAvoidGrowth = pCity->AI_avoidGrowth();
+				bool bIgnoreGrowth = pCityAI->AI_ignoreGrowth();
+
+				// if we over the city, then do an array of all the plots
+				if (pPlot->getPlotCity() != NULL)
 				{
-					// red color
-					szString.append(CvWString::format(SETCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT")));
+					szTempBuffer.Format(L"Max culture level = %d ", pCity->getMaxCultureLevelAmongPlayers());
+					szString.append(szTempBuffer);
+					szString.append(NEWLINE);
+					szTempBuffer.Format(L"Occupation culture level = %d ", pCity->getOccupationCultureLevel());
+					szString.append(szTempBuffer);
+					szString.append(NEWLINE);
 
-					if (bAvoidGrowth)
+					// check avoid growth
+					if (bAvoidGrowth || bIgnoreGrowth)
 					{
-						szString.append(CvWString::format(L"AvoidGrowth"));
+						// red color
+						szString.append(CvWString::format(SETCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT")));
+
+						if (bAvoidGrowth)
+						{
+							szString.append(CvWString::format(L"AvoidGrowth"));
+
+							if (bIgnoreGrowth)
+								szString.append(CvWString::format(L", "));
+						}
 
 						if (bIgnoreGrowth)
-							szString.append(CvWString::format(L", "));
-					}
-
-					if (bIgnoreGrowth)
-						szString.append(CvWString::format(L"IgnoreGrowth"));
-
-					// end color
-					szString.append(CvWString::format( ENDCOLR L"\n" ));
-				}
-
-				// if control key is down, ignore food
-				bool bIgnoreFood = gDLL->ctrlKey();
-
-				// line one is: blank, 20, 9, 10, blank
-				setCityPlotYieldValueString(szString, pCity, -1, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 20, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 9, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 10, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				szString.append(L"\n");
-
-				// line two is: 19, 8, 1, 2, 11
-				setCityPlotYieldValueString(szString, pCity, 19, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 8, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 1, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 2, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 11, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				szString.append(L"\n");
-
-				// line three is: 18, 7, 0, 3, 12
-				setCityPlotYieldValueString(szString, pCity, 18, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 7, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 0, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 3, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 12, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				szString.append(L"\n");
-
-				// line four is: 17, 6, 5, 4, 13
-				setCityPlotYieldValueString(szString, pCity, 17, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 6, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 5, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 4, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 13, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				szString.append(L"\n");
-
-				// line five is: blank, 16, 15, 14, blank
-				setCityPlotYieldValueString(szString, pCity, -1, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 16, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 15, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-				setCityPlotYieldValueString(szString, pCity, 14, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
-
-				// show specialist values too
-				for (int iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
-				{
-					int iMaxThisSpecialist = pCity->getMaxSpecialistCount((SpecialistTypes) iI);
-					int iSpecialistCount = pCity->getSpecialistCount((SpecialistTypes) iI);
-					bool bUsingSpecialist = (iSpecialistCount > 0);
-					bool bIsDefaultSpecialist = (iI == GC.getDefineINT("DEFAULT_SPECIALIST"));
-
-					// can this city have any of this specialist?
-					if (iMaxThisSpecialist > 0 || bIsDefaultSpecialist)
-					{
-						// start color
-						if (pCity->getForceSpecialistCount((SpecialistTypes) iI) > 0)
-							szString.append(CvWString::format(L"\n" SETCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT")));
-						else if (bUsingSpecialist)
-							szString.append(CvWString::format(L"\n" SETCOLR, TEXT_COLOR("COLOR_ALT_HIGHLIGHT_TEXT")));
-						else
-							szString.append(CvWString::format(L"\n" SETCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT")));
-
-						// add name
-						szString.append(GC.getSpecialistInfo((SpecialistTypes) iI).getDescription());
+							szString.append(CvWString::format(L"IgnoreGrowth"));
 
 						// end color
-						szString.append(CvWString::format( ENDCOLR ));
+						szString.append(CvWString::format( ENDCOLR L"\n" ));
+					}
 
-						// add usage
-						szString.append(CvWString::format(L": (%d/%d) ", iSpecialistCount, iMaxThisSpecialist));
+					// if control key is down, ignore food
+					bool bIgnoreFood = gDLL->ctrlKey();
 
-						// add value
-						int iValue = pCityAI->AI_specialistValue(((SpecialistTypes) iI), bAvoidGrowth, /*bRemove*/ bUsingSpecialist);
-						setYieldValueString(szString, iValue, /*bActive*/ bUsingSpecialist);
+					// line one is: blank, 20, 9, 10, blank
+					setCityPlotYieldValueString(szString, pCity, -1, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 20, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 9, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 10, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					szString.append(L"\n");
+
+					// line two is: 19, 8, 1, 2, 11
+					setCityPlotYieldValueString(szString, pCity, 19, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 8, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 1, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 2, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 11, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					szString.append(L"\n");
+
+					// line three is: 18, 7, 0, 3, 12
+					setCityPlotYieldValueString(szString, pCity, 18, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 7, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 0, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 3, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 12, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					szString.append(L"\n");
+
+					// line four is: 17, 6, 5, 4, 13
+					setCityPlotYieldValueString(szString, pCity, 17, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 6, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 5, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 4, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 13, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					szString.append(L"\n");
+
+					// line five is: blank, 16, 15, 14, blank
+					setCityPlotYieldValueString(szString, pCity, -1, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 16, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 15, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+					setCityPlotYieldValueString(szString, pCity, 14, bAvoidGrowth, bIgnoreGrowth, bIgnoreFood);
+
+					// show specialist values too
+					for (int iI = 0; iI < GC.getNumSpecialistInfos(); ++iI)
+					{
+						int iMaxThisSpecialist = pCity->getMaxSpecialistCount((SpecialistTypes) iI);
+						int iSpecialistCount = pCity->getSpecialistCount((SpecialistTypes) iI);
+						bool bUsingSpecialist = (iSpecialistCount > 0);
+						bool bIsDefaultSpecialist = (iI == GC.getDefineINT("DEFAULT_SPECIALIST"));
+
+						// can this city have any of this specialist?
+						if (iMaxThisSpecialist > 0 || bIsDefaultSpecialist)
+						{
+							// start color
+							if (pCity->getForceSpecialistCount((SpecialistTypes) iI) > 0)
+								szString.append(CvWString::format(L"\n" SETCOLR, TEXT_COLOR("COLOR_NEGATIVE_TEXT")));
+							else if (bUsingSpecialist)
+								szString.append(CvWString::format(L"\n" SETCOLR, TEXT_COLOR("COLOR_ALT_HIGHLIGHT_TEXT")));
+							else
+								szString.append(CvWString::format(L"\n" SETCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT")));
+
+							// add name
+							szString.append(GC.getSpecialistInfo((SpecialistTypes) iI).getDescription());
+
+							// end color
+							szString.append(CvWString::format( ENDCOLR ));
+
+							// add usage
+							szString.append(CvWString::format(L": (%d/%d) ", iSpecialistCount, iMaxThisSpecialist));
+
+							// add value
+							int iValue = pCityAI->AI_specialistValue(((SpecialistTypes) iI), bAvoidGrowth, /*bRemove*/ bUsingSpecialist);
+							setYieldValueString(szString, iValue, /*bActive*/ bUsingSpecialist);
+						}
+					}
+					int iFood = GET_PLAYER(pCity->getOwner()).AI_averageYieldMultiplier(YIELD_FOOD);
+					int iHammer = GET_PLAYER(pCity->getOwner()).AI_averageYieldMultiplier(YIELD_PRODUCTION);
+					int iCommerce = GET_PLAYER(pCity->getOwner()).AI_averageYieldMultiplier(YIELD_COMMERCE);
+
+					szString.append(CvWString::format(L"\nPlayer avg:	   (f%d, h%d, c%d)", iFood, iHammer, iCommerce));
+
+					iFood = pCity->AI_yieldMultiplier(YIELD_FOOD);
+					iHammer = pCity->AI_yieldMultiplier(YIELD_PRODUCTION);
+					iCommerce = pCity->AI_yieldMultiplier(YIELD_COMMERCE);
+
+					szString.append(CvWString::format(L"\nCity yield mults: (f%d, h%d, c%d)", iFood, iHammer, iCommerce));
+
+					iFood = pCityAI->AI_specialYieldMultiplier(YIELD_FOOD);
+					iHammer = pCityAI->AI_specialYieldMultiplier(YIELD_PRODUCTION);
+					iCommerce = pCityAI->AI_specialYieldMultiplier(YIELD_COMMERCE);
+
+					szString.append(CvWString::format(L"\nCity spec mults:  (f%d, h%d, c%d)", iFood, iHammer, iCommerce));
+
+					szString.append(CvWString::format(L"\nExchange"));
+					for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
+					{
+						iCommerce = GET_PLAYER(pCity->getOwner()).AI_averageCommerceExchange((CommerceTypes)iI);
+						szTempBuffer.Format(L", %d%c", iCommerce, GC.getCommerceInfo((CommerceTypes) iI).getChar());
+						szString.append(szTempBuffer);
+					}
+
+					szString.append(CvWString::format(L"\nAvg mults"));
+					for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
+					{
+						iCommerce = GET_PLAYER(pCity->getOwner()).AI_averageCommerceMultiplier((CommerceTypes)iI);
+						szTempBuffer.Format(L", %d%c", iCommerce, GC.getCommerceInfo((CommerceTypes) iI).getChar());
+						szString.append(szTempBuffer);
+					}
+
+					if (GET_PLAYER(pCity->getOwner()).AI_isFinancialTrouble())
+					{
+						szTempBuffer.Format(L"$$$!!!");
+						szString.append(szTempBuffer);
 					}
 				}
-				int iFood = GET_PLAYER(pCity->getOwner()).AI_averageYieldMultiplier(YIELD_FOOD);
-				int iHammer = GET_PLAYER(pCity->getOwner()).AI_averageYieldMultiplier(YIELD_PRODUCTION);
-				int iCommerce = GET_PLAYER(pCity->getOwner()).AI_averageYieldMultiplier(YIELD_COMMERCE);
-
-				szString.append(CvWString::format(L"\nPlayer avg:	   (f%d, h%d, c%d)", iFood, iHammer, iCommerce));
-
-				iFood = pCity->AI_yieldMultiplier(YIELD_FOOD);
-				iHammer = pCity->AI_yieldMultiplier(YIELD_PRODUCTION);
-				iCommerce = pCity->AI_yieldMultiplier(YIELD_COMMERCE);
-
-				szString.append(CvWString::format(L"\nCity yield mults: (f%d, h%d, c%d)", iFood, iHammer, iCommerce));
-
-				iFood = pCityAI->AI_specialYieldMultiplier(YIELD_FOOD);
-				iHammer = pCityAI->AI_specialYieldMultiplier(YIELD_PRODUCTION);
-				iCommerce = pCityAI->AI_specialYieldMultiplier(YIELD_COMMERCE);
-
-				szString.append(CvWString::format(L"\nCity spec mults:  (f%d, h%d, c%d)", iFood, iHammer, iCommerce));
-
-				szString.append(CvWString::format(L"\nExchange"));
-				for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
-				{
-					iCommerce = GET_PLAYER(pCity->getOwner()).AI_averageCommerceExchange((CommerceTypes)iI);
-					szTempBuffer.Format(L", %d%c", iCommerce, GC.getCommerceInfo((CommerceTypes) iI).getChar());
-					szString.append(szTempBuffer);
-				}
-
-				szString.append(CvWString::format(L"\nAvg mults"));
-				for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
-				{
-					iCommerce = GET_PLAYER(pCity->getOwner()).AI_averageCommerceMultiplier((CommerceTypes)iI);
-					szTempBuffer.Format(L", %d%c", iCommerce, GC.getCommerceInfo((CommerceTypes) iI).getChar());
-					szString.append(szTempBuffer);
-				}
-
-				if (GET_PLAYER(pCity->getOwner()).AI_isFinancialTrouble())
-				{
-					szTempBuffer.Format(L"$$$!!!");
-					szString.append(szTempBuffer);
-				}
-			}
-			else
-			{
-				bool bWorkingPlot = pCity->isWorkingPlot(pPlot);
-
-				if (bWorkingPlot)
-					szTempBuffer.Format( SETCOLR L"%s is working" ENDCOLR, TEXT_COLOR("COLOR_ALT_HIGHLIGHT_TEXT"), pCity->getName().GetCString());
 				else
-					szTempBuffer.Format( SETCOLR L"%s not working" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), pCity->getName().GetCString());
-				szString.append(szTempBuffer);
-
-				int iValue = pCityAI->AI_plotValue(pPlot, bAvoidGrowth, /*bRemove*/ bWorkingPlot, /*bIgnoreFood*/ false, bIgnoreGrowth);
-				int iJuggleValue = pCityAI->AI_plotValue(pPlot, bAvoidGrowth, /*bRemove*/ bWorkingPlot, false, bIgnoreGrowth, true);
-				int iMagicValue = pCityAI->AI_getPlotMagicValue(pPlot, pCityAI->healthRate() == 0);
-
-				szTempBuffer.Format(L"\nvalue = %d\njuggle value = %d\nmagic value = %d", iValue, iJuggleValue, iMagicValue);
-				szString.append(szTempBuffer);
-			}
-		}
-
-		// calc some bonus info
-		if (bDebug)
-			eBonus = pPlot->getBonusType();
-		else eBonus = pPlot->getBonusType(eActiveTeam);
-
-		if (eBonus != NO_BONUS)
-		{
-			szString.append(CvWString::format(L"\n%s values:", GC.getBonusInfo(eBonus).getDescription()));
-
-			for (int iPlayerIndex = 0; iPlayerIndex < MAX_PLAYERS; iPlayerIndex++)
-			{
-				CvPlayerAI& kLoopPlayer = GET_PLAYER((PlayerTypes) iPlayerIndex);
-				if (kLoopPlayer.isAlive())
 				{
-					BonusTypes eNonObsBonus = pPlot->getNonObsoleteBonusType(kLoopPlayer.getTeam());
-					if (eNonObsBonus != NO_BONUS)
-					{
-						szString.append(CvWString::format(L"\n %s: %d", kLoopPlayer.getName(), kLoopPlayer.AI_bonusVal(eNonObsBonus)));
-					}
+					bool bWorkingPlot = pCity->isWorkingPlot(pPlot);
+
+					if (bWorkingPlot)
+						szTempBuffer.Format( SETCOLR L"%s is working" ENDCOLR, TEXT_COLOR("COLOR_ALT_HIGHLIGHT_TEXT"), pCity->getName().GetCString());
 					else
+						szTempBuffer.Format( SETCOLR L"%s not working" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), pCity->getName().GetCString());
+					szString.append(szTempBuffer);
+
+					int iValue = pCityAI->AI_plotValue(pPlot, bAvoidGrowth, /*bRemove*/ bWorkingPlot, /*bIgnoreFood*/ false, bIgnoreGrowth);
+					int iJuggleValue = pCityAI->AI_plotValue(pPlot, bAvoidGrowth, /*bRemove*/ bWorkingPlot, false, bIgnoreGrowth, true);
+					int iMagicValue = pCityAI->AI_getPlotMagicValue(pPlot, pCityAI->healthRate() == 0);
+
+					szTempBuffer.Format(L"\nvalue = %d\njuggle value = %d\nmagic value = %d", iValue, iJuggleValue, iMagicValue);
+					szString.append(szTempBuffer);
+				}
+			}
+
+			// calc some bonus info
+			if (bDebug)
+				eBonus = pPlot->getBonusType();
+			else eBonus = pPlot->getBonusType(eActiveTeam);
+
+			if (eBonus != NO_BONUS)
+			{
+				szString.append(CvWString::format(L"\n%s values:", GC.getBonusInfo(eBonus).getDescription()));
+
+				for (int iPlayerIndex = 0; iPlayerIndex < MAX_PLAYERS; iPlayerIndex++)
+				{
+					CvPlayerAI& kLoopPlayer = GET_PLAYER((PlayerTypes) iPlayerIndex);
+					if (kLoopPlayer.isAlive())
 					{
-						szString.append(CvWString::format(L"\n %s: unknown (%d)", kLoopPlayer.getName(), kLoopPlayer.AI_bonusVal(eBonus)));
+						BonusTypes eNonObsBonus = pPlot->getNonObsoleteBonusType(kLoopPlayer.getTeam());
+						if (eNonObsBonus != NO_BONUS)
+						{
+							szString.append(CvWString::format(L"\n %s: %d", kLoopPlayer.getName(), kLoopPlayer.AI_bonusVal(eNonObsBonus)));
+						}
+						else
+						{
+							szString.append(CvWString::format(L"\n %s: unknown (%d)", kLoopPlayer.getName(), kLoopPlayer.AI_bonusVal(eBonus)));
+						}
 					}
 				}
 			}

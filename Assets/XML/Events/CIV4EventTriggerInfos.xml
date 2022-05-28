@@ -5205,6 +5205,7 @@
 			<bPickCity>1</bPickCity>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
+			<!-- @SAVEBREAK - Delete -->
 			<Type>EVENTTRIGGER_PARTISANS</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_PARTISANS</Text>
@@ -5216,13 +5217,11 @@
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Partisans.dds</EventArt>
-			<iWeight>-2</iWeight>
-			<Civic>CIVIC_EGALITARIAN</Civic>
+			<iWeight>-1</iWeight>
 			<Events>
 				<Event>EVENT_PARTISANS_1</Event>
 				<Event>EVENT_PARTISANS_2</Event>
 			</Events>
-			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_NEW_DYNASTY</Type>

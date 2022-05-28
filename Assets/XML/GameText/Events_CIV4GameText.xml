@@ -1508,11 +1508,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LOOTERS</Tag>
-		<English>The %s4_civ_adjective city of %s5_city is suffering civil unrest. Riots and looting have broken out.</English>
-		<French>La ville %s4:2_civ_adjective de %s5_city est en plein chaos. Des émeutes et des pillages ont eu lieu un peu partout.</French>
-		<German>In der %s4:2_civ_adjective Stadt %s5_city herrschen Unruhen. Es gibt Plünderungen und Tumulte.</German>
-		<Italian>Nella città %s4_civ_adjective di %s5_city ci sono disordini civili. Sono scoppiati tumulti e saccheggi.</Italian>
-		<Spanish>La ciudad %s4:2_civ_adjective de %s5_city sufre agitación civil. Han estallado los disturbios y el pillaje.</Spanish>
+		<English>The %s4_civ_adjective city of %s2_city is suffering civil unrest. Riots and looting have broken out.</English>
+		<French>La ville %s4:2_civ_adjective de %s2_city est en plein chaos. Des émeutes et des pillages ont eu lieu un peu partout.</French>
+		<German>In der %s4:2_civ_adjective Stadt %s2_city herrschen Unruhen. Es gibt Plünderungen und Tumulte.</German>
+		<Italian>Nella città %s4_civ_adjective di %s2_city ci sono disordini civili. Sono scoppiati tumulti e saccheggi.</Italian>
+		<Spanish>La ciudad %s4:2_civ_adjective de %s2_city sufre agitación civil. Han estallado los disturbios y el pillaje.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LOST_AT_SEA</Tag>
@@ -1875,11 +1875,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PARTISANS</Tag>
-		<English>The %s1_civ_adjective people from the city of %s5_city have seen their homes burned! They are rising up against the wicked %s4_civ_adjective invaders, forming Partisan units to join the resistance as militia fighters!</English>
-		<French>Les habitations du peuple %s1_civ_adjective de la ville : %s5_city ont été brûlées ! Le peuple s'élève contre les fourbes envahisseurs %s4:2_civ_adjective et forment des unités de Partisans pour rejoindre la résistance en tant que miliciens !</French>
-		<German>Die Häuser des %s1:2_civ_adjective Volkes aus der Stadt %s5_city wurden vor ihren Augen verbrannt! Sie beginnen einen Aufstand gegen die niederträchtigen %s4:2_civ_adjective Angreifer und bilden Partisanengruppen, um den Widerstand als Milizkämpfer zu unterstützen!</German>
-		<Italian>La popolazione %s1_civ_adjective della città di %s5_city ha visto bruciare le proprie case! Si sta sollevando contro i malvagi invasori %s4_civ_adjective, formando unità partigiane per combattere per la resistenza!</Italian>
-		<Spanish>¡Los %s1:3_civ_adjective de la ciudad de %s5_city han visto arder sus casas! ¡Se están levantando contra los malvados invasores %s4:3_civ_adjective, formando unidades de partisanos que se unen a la resistencia como milicianos!</Spanish>
+		<English>The %s1_civ_adjective people from the city of %s2_city have seen their homes burned! They are rising up against the wicked %s4_civ_adjective invaders, forming Partisan units to join the resistance as militia fighters!</English>
+		<French>Les habitations du peuple %s1_civ_adjective de la ville : %s2_city ont été brûlées ! Le peuple s'élève contre les fourbes envahisseurs %s4:2_civ_adjective et forment des unités de Partisans pour rejoindre la résistance en tant que miliciens !</French>
+		<German>Die Häuser des %s1:2_civ_adjective Volkes aus der Stadt %s2_city wurden vor ihren Augen verbrannt! Sie beginnen einen Aufstand gegen die niederträchtigen %s4:2_civ_adjective Angreifer und bilden Partisanengruppen, um den Widerstand als Milizkämpfer zu unterstützen!</German>
+		<Italian>La popolazione %s1_civ_adjective della città di %s2_city ha visto bruciare le proprie case! Si sta sollevando contro i malvagi invasori %s4_civ_adjective, formando unità partigiane per combattere per la resistenza!</Italian>
+		<Spanish>¡Los %s1:3_civ_adjective de la ciudad de %s2_city han visto arder sus casas! ¡Se están levantando contra los malvados invasores %s4:3_civ_adjective, formando unidades de partisanos que se unen a la resistencia como milicianos!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PASTURE_BUILT</Tag>
@@ -8539,51 +8539,19 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PARTISANS_1</Tag>
-		<English>Send word to the new partisan units to continue the fight near their destroyed homes.</English>
-		<French>Envoyer un message aux nouvelles unités de partisans pour qu'ils continuent le combat près de leurs habitations détruites.</French>
-		<German>Teilt den neuen Partisanen-Einheiten mit, dass sie den Kampf in der Nähe ihrer zerstörten Häuser fortsetzen sollen.</German>
-		<Italian>Invita le unità partigiane a continuare la lotta vicino alle proprie case distrutte.</Italian>
-		<Spanish>Que se avise a las nuevas unidades de partisanos para que continúen la lucha cerca de sus casas destruidas.</Spanish>
+		<English>Partisans (%d1 %s2) from %s3 are taking to the surrounding countryside to resist the invaders.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PARTISANS_2</Tag>
-		<English>Although we will lose up to half their number to exhaustion, desertion and willful refusal to leave the area, we must convince these units to retreat. Have them march to our capital city, where they will reform into units.</English>
-		<French>Nous devons convaincre ces unités de battre en retraite, même si la moitié de notre armée risque de périr de fatigue, de déserter ou de refuser de quitter la zone. Qu'ils se retirent à la capitale, où ils reformeront leurs unités.</French>
-		<German>Obwohl wir nahezu die Hälfte aufgrund von Erschöpfung, Fahnenflucht und vorsätzlicher Weigerung, das Gebiet zu verlassen, verlieren werden, müssen wir diese Einheiten zum Rückzug überreden. Sie sollen zu unserer Hauptstadt marschieren und neue Einheiten bilden.</German>
-		<Italian>Anche se ne perderemo metà per stanchezza, diserzione e rifiuto volontario di muoversi dalla zona, dobbiamo convincere queste unità a ritirarsi. Falle marciare verso la nostra capitale, dove potranno riorganizzarsi.</Italian>
-		<Spanish>Aunque perderemos hasta la mitad de ellos por agotamiento y deserción, o por negarse a salir voluntariamente de la zona, debemos convencer a estas unidades de que se retiren. Que marchen hacia nuestra capital, donde serán formados como unidades.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_PARTISANS_HELP_1</Tag>
-		<English>Receive %d1 [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] [NUM1:unit:units] near the ruins of the city.</English>
-		<French>Recevoir %d1[NUM1:unité:unités] [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] près des ruines de la ville.</French>
-		<German>Ihr erhaltet %d1 [NUM1:Einheit:Einheiten] [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] nahe den Trümmern der Stadt.</German>
-		<Italian>Ricevi %d1 [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] [NUM1:unità:unità] presso le rovine della città.</Italian>
-		<Spanish>Recibir %d1 [NUM1:unidad:unidades] de [COLOR_UNIT_TEXT]%s2:2_unit[COLOR_REVERT] cerca de las ruinas de la ciudad.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_PARTISANS_HELP_2</Tag>
-		<English>Receive %d1 [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] [NUM1:unit:units] in our capital city of %s3_city.</English>
-		<French>Recevoir %d1 [NUM1:unité:unités] [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] dans notre capitale : %s3_city.</French>
-		<German>Ihr erhaltet %d1 [NUM1:Einheit:Einheiten] [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] in unserer Hauptstadt %s3_city.</German>
-		<Italian>Ricevi %d1 [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] [NUM1:unità:unità] nella nostra capitale %s3_city.</Italian>
-		<Spanish>Recibir %d1 [NUM2:unidad:unidades] de [COLOR_UNIT_TEXT]%s2:2_unit[COLOR_REVERT] en vuestra capital, %s3_city.</Spanish>
+		<English>Partisans (%d1 %s2) from %s3 have appeared at our capital.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PARTISANS_OTHER_1</Tag>
-		<English>%s1_civ_adjective citizens from the city we just razed are taking to the surrounding countryside to form Partisan resistance units!</English>
-		<French>Les citoyens %s1:2_civ_adjective de la ville que nous venons de raser forment des unités de résistance partisane dans la campagne environnante !</French>
-		<German>%s1:3_civ_adjective Bewohner aus der Stadt, die wir gerade zerstört haben, flüchten in die umliegenden Gebiete, um für den Widerstand Partisanen-Einheiten zu bilden!</German>
-		<Italian>I cittadini %s1_civ_adjective della città che abbiamo appena razziato stanno fuggendo nelle campagne, per formare unità partigiane per la resistenza!</Italian>
-		<Spanish>¡Ciudadanos %s1:3_civ_adjective de la ciudad que acabamos de arrasar están tomando la campiña de los alrededores para crear unidades de resistencia formadas por partisanos!</Spanish>
+		<English>%s1 citizens from %s2 that we razed are taking to the surrounding countryside to form %d3 Partisan %s4 units!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PARTISANS_OTHER_2</Tag>
-		<English>%s1_civ_adjective citizens from the city we just razed are fleeing toward their capital and are expected to form Partisan resistance units there!</English>
-		<French>Les citoyens %s1:2_civ_adjective de la ville que nous venons de raser fuient vers leur capitale et espèrent former des unités de résistance partisane là-bas !</French>
-		<German>%s1:3_civ_adjective Bewohner aus der Stadt, die wir gerade zerstört haben, fliehen zu ihrer Hauptstadt und werden dort wahrscheinlich Partisanen-Einheiten für den Widerstand bilden!</German>
-		<Italian>I cittadini %s1_civ_adjective della città che abbiamo appena razziato stanno fuggendo verso la propria capitale, dove crediamo formeranno unità partigiane!</Italian>
-		<Spanish>¡Ciudadanos %s1:3_civ_adjective de la ciudad que acabamos de arrasar huyen hacia su capital, donde se espera que creen unidades de resistencia formadas por partisanos!</Spanish>
+		<English>%s1 citizens from %s2 that we just razed are fleeing toward their capital and are expected to form %d3 Partisan %s4 units there!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_PASTURE_BUILT</Tag>

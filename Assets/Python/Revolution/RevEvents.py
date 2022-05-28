@@ -396,12 +396,13 @@ def onCityBuilt( argsList ):
 			city.setHasReligion(relID, True, False, False)
 
 def onCityAcquired(argsList):
-	iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
+	#iOwnerOld, iOwnerNew, city, bConquest, bTrade, bAutoRaze = argsList
 
 	checkRebelBonuses( argsList )
 	updateRevolutionIndices( argsList )
 
 	# Init city script data (unit spawn counter, rebel player)
+	city = argsList[2]
 	iRevCiv = RevData.getCityVal(city, 'RevolutionCiv')
 	RevData.initCity(city)
 	RevData.setCityVal(city, 'RevolutionCiv', iRevCiv)
@@ -412,7 +413,7 @@ def onCityAcquired(argsList):
 
 def checkRebelBonuses(argsList):
 	# Give bonuses to a rebel player who successfully captures one of their rebellious cities
-	iOwnerOld, iOwnerNew, pCity, bConquest, bTrade = argsList
+	iOwnerOld, iOwnerNew, pCity, bConquest, bTrade, bAutoRaze = argsList
 
 	newOwner = GC.getPlayer(iOwnerNew)
 	newOwnerCiv = newOwner.getCivilizationType()
@@ -421,14 +422,15 @@ def checkRebelBonuses(argsList):
 	# TODO: Handle case where city is acquired by disorganized rebels
 	if iOwnerNew == GC.getBARBARIAN_PLAYER() and pCity.getRevolutionCounter() > 0:
 		print "[REV] City %s captured by barb rebels!" % pCity.getName()
+		'''
 		oldOwner = GC.getPlayer(iOwnerOld)
 
-		if not iOwnerOld == orgOwnerID:
+		if iOwnerOld != orgOwnerID:
 			orgOwner = GC.getPlayer(orgOwnerID)
 
-		if pCity.countTotalCultureTimes100() > 100*100:
-			if not iOwnerOld == pCity.findHighestCulture():
-				cultOwner = GC.getPlayer(pCity.findHighestCulture())
+		if pCity.countTotalCultureTimes100() > 10000 and iOwnerOld != pCity.findHighestCulture():
+			cultOwner = GC.getPlayer(pCity.findHighestCulture())
+		'''
 
 	elif newOwnerCiv == RevData.getCityVal(pCity, 'RevolutionCiv'):
 
@@ -564,8 +566,9 @@ def checkRebelBonuses(argsList):
 			iTurns = iTurns/2 + 1
 			pCity.setOccupationTimer(iTurns)
 
+
 def updateRevolutionIndices(argsList):
-	iOwnerOld, iOwnerNew, pCity, bConquest, bTrade = argsList
+	iOwnerOld, iOwnerNew, pCity, bConquest, bTrade, bAutoRaze = argsList
 
 	newOwner = GC.getPlayer(iOwnerNew)
 
