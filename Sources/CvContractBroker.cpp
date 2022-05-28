@@ -1,6 +1,7 @@
 // unitAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvCity.h"
 #include "CvContractBroker.h"
 #include "CvGameAI.h"

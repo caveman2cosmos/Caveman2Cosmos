@@ -134,6 +134,8 @@ namespace python = boost::python;
 #include <set>
 #include <fstream>
 #include <queue>
+#include <rpc.h>
+#include <rpcndr.h>
 
 //
 // Google sparsehash

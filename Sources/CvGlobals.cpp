@@ -27,6 +27,7 @@
 #include "FVariableSystem.h"
 #include <time.h>
 #include <sstream>
+#include "rpc_client.h"
 
 static char gVersionString[1024] = { 0 };
 
@@ -54,6 +55,16 @@ void deleteInfoArray(std::vector<CvInfoBase*>* array)
 	}
 
 	array->clear();
+}
+
+void* __RPC_USER midl_user_allocate(size_t size)
+{
+    return malloc(size);
+}
+
+void __RPC_USER midl_user_free(void* p)
+{
+    free(p);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -434,6 +445,8 @@ void cvInternalGlobals::init()
 	m_bResourceLayerOn = false;
 
 	OutputDebugString("Initializing Internal Globals: End\n");
+
+	rpc::client::init();
 }
 
 namespace

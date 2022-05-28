@@ -67,6 +67,7 @@ Settings
                     + ' user32.lib' 
                     + ' psapi.lib' 
                     + ' advapi32.lib'
+                    + ' rpcrt4.lib'
 .LIBS               = '$PROJECT_LIBS$ $GLOBAL_LIBS$'
 
 // ### Base configs ###

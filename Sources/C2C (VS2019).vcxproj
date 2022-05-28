@@ -351,6 +351,8 @@
     <ClCompile Include="FDataIOStream.cpp" />
     <ClCompile Include="FDialogTemplate.cpp" />
     <ClCompile Include="IntExpr.cpp" />
+    <ClCompile Include="$(SolutionDir)\Interface\IServerUtils_c.c" />
+    <ClCompile Include="$(SolutionDir)\Interface\IBuildingInfo_c.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm2.h" />
@@ -522,6 +524,7 @@
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Win32.h" />
+    <ClCompile Include="$(SolutionDir)\Interface\IBuildingInfo.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".editorconfig" />
@@ -540,6 +543,12 @@
   <ItemGroup>
     <Natvis Include="C2C.natvis" />
     <Natvis Include="std.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(SolutionDir)\Interface\Interface.vcxproj">
+      <Project>{6536EBEC-014E-4D6B-97BE-223137694CA8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

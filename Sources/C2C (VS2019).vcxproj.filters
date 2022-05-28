@@ -519,6 +519,14 @@
     <ClCompile Include="CvBuildingInfo.cpp">
       <Filter>Source Files\InfoClasses</Filter>
     </ClCompile>
+    <ClCompile Include="$(SolutionDir)\Interface\IServerUtils_c.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)\Interface\IBuildingInfo_c.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(SolutionDir)\Server\CvGameCoreServer.cpp">
+      <Filter>Source Files</Filter>
     <ClCompile Include="PlotInfo.cpp">
       <Filter>Source Files\Structs</Filter>
     </ClCompile>

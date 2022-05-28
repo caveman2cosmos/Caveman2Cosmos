@@ -7,6 +7,7 @@
 #include "CvEventReporter.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvImprovementInfo.h"
 #include "CvInitCore.h"
 #include "CvInfos.h"
 #include "CvImprovementInfo.h"

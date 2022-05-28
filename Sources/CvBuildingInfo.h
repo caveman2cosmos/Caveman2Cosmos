@@ -13,6 +13,8 @@
 
 #include "CvInfos.h"
 #include "IDValuemap.h"
+#include "IDValuemap.h"
+#include "Interface/IBuildingInfo.h"
 
 class BoolExpr;
 class CvArtInfoBuilding;
@@ -38,7 +40,7 @@ public:
 	bool isRequiresActiveCivics() const				{ return m_bRequiresActiveCivics; }
 	bool isZoneOfControl() const					{ return m_bZoneOfControl; }
 	bool isProtectedCulture() const					{ return m_bProtectedCulture; }
-	bool isNoLimit() const							{ return m_bNoLimit; }
+	bool isNoLimit() const;
 	bool isTeamShare() const						{ return m_bTeamShare; }
 	bool isAutoBuild() const						{ return m_bAutoBuild; }
 	bool isWater() const							{ return m_bWater; }
@@ -498,7 +500,6 @@ public:
 private:
 	void setNotShowInCity();
 
-	bool m_bNoLimit;
 	bool m_bNotShowInCity;
 	bool m_bPrereqPower;
 	bool m_bApplyFreePromotionOnMove;
@@ -812,6 +813,8 @@ private:
 
 	const BoolExpr* m_pExprNewCityFree;
 	const BoolExpr* m_pExprConstructCondition;
+
+	hIBuildingInfo_t m_hContext;
 };
 
 #endif
