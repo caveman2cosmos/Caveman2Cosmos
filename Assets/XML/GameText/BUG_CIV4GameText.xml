@@ -4618,24 +4618,6 @@
 		<Russian>Ñîäåðæàíèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__CDAZOOMCITYDETAILS_HOVER</Tag>
-		<English>When checked, the Zoom to City button includes detailed information about the city as when hovering over a city bar on the map.</English>
-		<French>Lorsque activé, Les Infos du bouton de Zoom sur la ville inclut les informations détaillées concernant celle-ci, de la même manière que l'infobulle de la ville sur la carte.</French>
-		<German>Zeigt im Tooltip der Schaltfläche "Zur Stadt zoomen" dieselben ausführlichen Informationen an, wie wenn der Mauszeiger über einen Stadtbalken auf der Karte bewegt würde</German>
-		<Italian>Quando è selezionato, il testo a comparsa del Bottone di Zoom Cittadino nella schermata del 'Consigliere Interno' include informazioni dettagliate sulla Città, come quelle visualizzate quando si posiziona il cursore sulla Barra Cittadina sulla mappa.</Italian>
-		<Spanish>Cuando se activa, el botón 'Detalles de la ciudad' incluye información detallada sobre la ciudad, como cuando se pasa el ratón por encima de la barra de ciudad en el mapa.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, êíîïêà ïåðåéòè ê ãîðîäó âêëþ÷àåò òàêóþ æå ïîäðîáíóþ èíôîðìàöèþ î ãîðîäå êàê êîãäà ïåðåìåùàåòåñü íàä ïîëîñêîé ãîðîäà íà êàðòå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__CDAZOOMCITYDETAILS_TEXT</Tag>
-		<English>Zoom to City Details</English>
-		<French>Zoom des Détails de Ville</French>
-		<German>Zur Stadt zoomen</German>
-		<Italian>Bottone di Zoom Cittadino</Italian>
-		<Spanish>Botón de 'Detalles de la ciudad'</Spanish>
-		<Russian>Ïîäðîáíîñòè ïåðåéòè ê ãîðîäó</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__CONSCRIPTLIMIT_HOVER</Tag>
 		<English>When checked, displays the number of units you can draft this turn and whether the city has already drafted in the Draft button hover.</English>
 		<French>Lorsque activé, affiche le nombre d'unité qu'il est possible de recruter pour ce tour, et si la ville a déjà procédé à un recrutement.</French>

@@ -1163,18 +1163,14 @@ struct ProjectBuildItem
 	bool operator<(const ProjectBuildItem& other) const { return turns < other.turns; }
 };
 
+// Toffer - Pseudo popup, i.e. hijacking the popup system.
 bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
-	CvCity* pCity = GET_PLAYER(GC.getGame().getActivePlayer()).getCity(info.getData1());
-
-	FAssertMsg(pCity->getOwner() == GC.getGame().getActivePlayer(), "City must belong to Active Player");
-
 	if (GC.getGame().getGameState() != GAMESTATE_OVER)
 	{
-		const PlayerTypes ePlayer = GC.getGame().getActivePlayer();
-		CvCity* pCity = GET_PLAYER(ePlayer).getCity(info.getData1());
+		CvCity* pCity = GET_PLAYER(GC.getGame().getActivePlayer()).getCity(info.getData1());
 
-		if (pCity && pCity->getOwner() == ePlayer && !pCity->isProduction())
+		if (!pCity->isProduction())
 		{
 			switch (info.getData2())
 			{
@@ -1201,7 +1197,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		}
 	}
 	return false;
-
+	/*
 	// This popup might be called to suggest a specific thing that the player should do, as opposed to just
 	// indicating that a build queue is empty. In this case the thing to build is determined below
 	UnitTypes eTrainUnit = NO_UNIT;
@@ -1270,21 +1266,6 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 		szArtFilename = ARTFILEMGR.getInterfaceArtInfo("INTERFACE_POPUPBUTTON_PRODUCTION")->getPath();
 	}
 
-	gDLL->getInterfaceIFace()->popupSetHeaderString(pPopup, szPopupHeader, DLL_FONT_LEFT_JUSTIFY);
-
-	int iExamineCityID = std::max(0, GC.getNumUnitInfos());
-	iExamineCityID = std::max(iExamineCityID, GC.getNumBuildingInfos());
-	iExamineCityID = std::max(iExamineCityID, GC.getNumProjectInfos());
-	iExamineCityID = std::max(iExamineCityID, GC.getNumProcessInfos());
-
-	if (getBugOptionBOOL("MiscHover__CDAZoomCityDetails", true, "BUG_CDA_ZOOM_CITY_DETAILS"))
-	{
-		gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_EXAMINE_CITY").c_str(), ARTFILEMGR.getInterfaceArtInfo("INTERFACE_BUTTONS_CITYSELECTION")->getPath(), iExamineCityID, WIDGET_ZOOM_CITY, GC.getGame().getActivePlayer(), info.getData1(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
-	}
-	else
-	{
-		gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_POPUP_EXAMINE_CITY").c_str(), ARTFILEMGR.getInterfaceArtInfo("INTERFACE_BUTTONS_CITYSELECTION")->getPath(), iExamineCityID, WIDGET_GENERAL, -1, -1, true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
-	}
 	ProjectTypes eProductionProject = pCity->getProductionProject();
 	ProcessTypes eProductionProcess = pCity->getProductionProcess();
 
@@ -1476,6 +1457,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_MINIMIZED, 252);
 
 	return true;
+	*/
 }
 
 bool CvDLLButtonPopup::launchChangeReligionPopup(CvPopup* pPopup, CvPopupInfo &info)
