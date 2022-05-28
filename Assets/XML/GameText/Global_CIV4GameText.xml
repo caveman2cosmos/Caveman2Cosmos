@@ -21068,19 +21068,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_RECOMMENDED</Tag>
-		<English>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Recommended (%s3_AdvsrName)[COLOR_REVERT]</English>
+		<English>%s1_ProdName (%d2 Turns) - [COLOR_HIGHLIGHT_TEXT]%s3_Advisor[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Conseil (%s3_AdvsrName) :[COLOR_REVERT] %s1_ProdName (%d2_NumTurns) </French>
 		<German>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]empfohlen (%s3_AdvsrName)[COLOR_REVERT]</German>
 		<Italian>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Consigliato (%s3_AdvsrName)[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT](%s3_AdvsrName) Se recomienda crear:[COLOR_REVERT] %s1_ProdName (%d2_NumTurns [NUM2:turno:turnos])</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_RECOMMENDED_NO_ADV</Tag>
-		<English>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Recommended[COLOR_REVERT]</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Conseil :[COLOR_REVERT] %s1_ProdName (%d2_NumTurns) </French>
-		<German>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]empfohlen[COLOR_REVERT]</German>
-		<Italian>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Consigliato[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_HIGHLIGHT_TEXT]Se recomienda crear:[COLOR_REVERT] %s1_ProdName (%d2_NumTurns [NUM2:turno:turnos])</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_RECOMMENDED_NO_ADV_OR_TURNS</Tag>
@@ -21304,6 +21296,10 @@
 		<Spanish>Poder</Spanish>
 		<Polish>Siła</Polish>
 		<Russian>Ìîãóùåñòâî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PREVIOUS_OUTPUT</Tag>
+		<English>Previous Output</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_CONVERTS</Tag>

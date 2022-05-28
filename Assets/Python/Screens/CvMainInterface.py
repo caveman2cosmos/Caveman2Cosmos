@@ -1418,36 +1418,32 @@ class CvMainInterface:
 		CyPlayerAct = self.CyPlayer
 
 		# Check City Selection
-		CyCity = CyIF.getHeadSelectedCity()
-		InCity = self.InCity
-		AtUnit = self.AtUnit
-		if CyCity:
-			iCityID = CyCity.getID()
-			if not InCity or iCityID != InCity.iCityID:
+		city = CyIF.getHeadSelectedCity()
+		InCityPre = self.InCity
+		AtUnitPre = self.AtUnit
+		if city:
+			iCityID = city.getID()
+			if not InCityPre or iCityID != InCityPre.iCityID:
 				print "City selected"
 				self.bFreshQueue = False
 				self.cleanPlotList(screen)
 				self.bCityChange = True
 				self.bBuildWorkQueue = True
-				if InCity:
-					bFirst = False
-				else:
-					self.bInverseShiftQueue = MainOpt.isInverseShiftForQueueing()
-					if AtUnit:
-						screen.hide("UnitButtons")
-					bFirst = True
 
-				if bFirst:
+				self.InCity = City(city, iCityID)
+
+				if not InCityPre:
+					self.bInverseShiftQueue = MainOpt.isInverseShiftForQueueing()
+					if AtUnitPre:
+						screen.hide("UnitButtons")
 					screen.show("Conscript")
 					screen.show("AutomateCitizens")
 					screen.show("CS|AutomateProduction0")
-
-				self.InCity = InCity = City(CyCity, iCityID)
-				if InCity.iPlayer == self.iPlayer or self.bDebugMode:
-					self.buildCitySelectionUI(screen, bFirst, CyCity)
+					if self.InCity.iPlayer == self.iPlayer or self.bDebugMode:
+						self.buildCitySelectionUI(screen, True, city)
 
 		else: # No City Selected
-			if InCity:
+			if InCityPre:
 				print "City deselected"
 				self.cleanPlotList(screen)
 				# Remove potential Help Text
@@ -1476,7 +1472,7 @@ class CvMainInterface:
 					screen.deleteWidget("ProductionText")
 					screen.deleteWidget("CS|ProdYield0")
 					screen.deleteWidget("TradeRouteTable")
-					for i, entry in enumerate(InCity.listBonus):
+					for i, entry in enumerate(InCityPre.listBonus):
 						if entry:
 							screen.deleteWidget("BonusListTable" + str(i))
 					screen.deleteWidget("BldgListTable")
@@ -1485,16 +1481,16 @@ class CvMainInterface:
 				if iTab > -1:
 					self.exitCityTab(screen)
 				self.InCity = None
-				if AtUnit:
+				if AtUnitPre:
 					screen.show("UnitButtons")
 
 			CyUnit = CyIF.getHeadSelectedUnit()
 			if CyUnit:
 				print "Unit Selected"
 				iUnitID = CyUnit.getID()
-				if not AtUnit or iUnitID != AtUnit.iUnitID:
-					self.AtUnit = AtUnit = Unit(CyUnit, iUnitID)
-			elif AtUnit:
+				if not AtUnitPre or iUnitID != AtUnitPre.iUnitID:
+					self.AtUnit = Unit(CyUnit, iUnitID)
+			elif AtUnitPre:
 				print "Unit deselected"
 				self.AtUnit = None
 				screen.deleteWidget("UnitButtons")
@@ -1510,7 +1506,7 @@ class CvMainInterface:
 				# Initialize City Screen
 				CyIF.clearSelectedCities() # Hack, the map camera FoV inside city screen is stuck at the current value.
 				self.setFieldofView(50)
-				CyIF.selectCity(CyCity, False) # \Hack, City FoV is set and we can enter the city now.
+				CyIF.selectCity(city, False) # \Hack, City FoV is set and we can enter the city now.
 				self.evalIFT(screen, IFT, bCityScreen, CyPlayerAct)
 				self.bCityEnter = True
 				self.bUpdateCityTab = True
@@ -3443,6 +3439,9 @@ class CvMainInterface:
 		screen.hide("CT|UnitSorting")
 		screen.hide("CT|BuildingSorting")
 
+		if self.iCityTab == CITYTAB_ADMIN and self.iCityTab != iTab:
+			screen.deleteWidget("CT|AdminLastOutput")
+
 		self.iCityTab = iTab
 		xRes = self.xRes
 		a4thX = xRes/4
@@ -3458,7 +3457,7 @@ class CvMainInterface:
 		screen.setStyle(ID, "Panel_City_Title_Style")
 
 		if iTab == CITYTAB_ADMIN:
-			screen.setLabelAt(ID + "Text", ID, "<font=4><color=120,120,120,255>" + TRNSLTR.getText("TXT_KEY_BUG_OPTLABEL_ROMSETTINGS__CITYMANAGEMENT", ()), 1<<2, (halfX - 8) / 2, 0, 0, FontTypes.GAME_FONT, eWidGen, 1, 1)
+			screen.setLabelAt(ID + "Text", ID, "<font=4><color=100,100,120,255>" + TRNSLTR.getText("TXT_KEY_BUG_OPTLABEL_ROMSETTINGS__CITYMANAGEMENT", ()), 1<<2, (halfX - 8) / 2, 2, 0, FontTypes.GAME_FONT, eWidGen, 1, 1)
 
 		elif iTab == CITYTAB_UNIT:
 			self.fillUnitCityTabHeader(screen)
@@ -3590,7 +3589,13 @@ class CvMainInterface:
 		screen.show("CT|BuildingSorting")
 
 
-	def updateCityTab(self, screen, iTab, x=-1, y=166, w=-1, h=-1):
+	def updateCityTab(self, screen, iTab, x=-1, y0=166, w=-1, h=-1):
+
+		eWidGen = WidgetTypes.WIDGET_GENERAL
+		InCity = self.InCity
+		city = InCity.CyCity
+		iSize = CityOpt.getBuildIconSize()
+
 		if -1 in (x, w, h):
 			if self.bCityScreen:
 				xRes = self.xRes
@@ -3601,40 +3606,109 @@ class CvMainInterface:
 			else:
 				x = self.xMidL
 				w = self.xMidR - x
-			h = self.yBotBar - y - 10
-		eWidGen = WidgetTypes.WIDGET_GENERAL
+			h = self.yBotBar - y0 - 10
+
+		y = 0
+
+		if iTab == CITYTAB_ADMIN:
+			team = InCity.CyTeam
+			eFontGame = FontTypes.GAME_FONT
+			ePanelBlack	= PanelStyles.PANEL_STYLE_MAIN_BLACK25
+			y2 = y0 + 30
+			h2 = h - 30
+			w2 = w/2
+			x2 = x + w2
+			w3 = w2 - 20
+
+			PnlLeft = "CT|AdminLastOutput"
+			PnlRight = "CityTabScrPnl"
+			ROW = "CT|AdminEntry"
+
+			screen.setLabelAt("", "CityTabWindow", "<font=3b>" + TRNSLTR.getText("TXT_KEY_PREVIOUS_OUTPUT", ()), 1<<0, 12, 8, 0, eFontGame, eWidGen, 1, 2)
+			screen.setLabelAt("", "CityTabWindow", "<font=3b>" + TRNSLTR.getText("TXT_WORD_RECOMMENDATIONS", ()), 1<<0, w/2 + 8, 8, 0, eFontGame, eWidGen, 1, 2)
+
+			screen.addScrollPanel(PnlLeft, "", x, y2, w2, h2, PanelStyles.PANEL_STYLE_MAIN)
+			screen.setStyle(PnlLeft, "ScrollPanel_Alt_Style")
+			screen.addScrollPanel(PnlRight, "", x2, y2, w2, h2, PanelStyles.PANEL_STYLE_MAIN)
+			screen.setStyle(PnlRight, "ScrollPanel_Alt_Style")
+
+			screen.attachPanelAt(PnlLeft, "PreviousOutput", "", "", True, False, ePanelBlack, 4, y - 4, w3, h2, eWidGen, 1, 1)
+
+			n = 0
+			iBestUnit = city.AI_bestUnit()
+			if iBestUnit > -1:
+				szRow = str(n)
+				screen.attachPanelAt(PnlRight, ROW + szRow, "", "", True, False, ePanelBlack, 0, y - 4, w3, iSize + 2, eWidGen, 1, 1)
+				unitInfo = GC.getUnitInfo(iBestUnit)
+				szUnitName = unitInfo.getDescription()
+				iAdvisor = unitInfo.getAdvisorType()
+				if iAdvisor > -1:
+					szTxt = "<font=3>" + TRNSLTR.getText("TXT_KEY_POPUP_RECOMMENDED", (szUnitName, city.getUnitProductionTurnsLeft(iBestUnit, 0), GC.getAdvisorInfo(iAdvisor).getDescription()))
+				else:
+					szTxt = "<font=3>" + TRNSLTR.getText("TXT_KEY_POPUP_RECOMMENDED", (szUnitName, city.getUnitProductionTurnsLeft(iBestUnit, 0), GC.getUnitCombatInfo(unitInfo.getUnitCombatType()).getDescription()))
+
+				PF = "WID|UNIT|CityWork%d"
+				screen.setImageButtonAt((PF % iBestUnit) + "|img" + szRow, PnlRight, unitInfo.getButton(), -2, y, iSize, iSize, eWidGen, 1, 2)
+				screen.setTextAt((PF % iBestUnit) + "|" + szRow, PnlRight, szTxt, 1<<0, iSize + 4, y + iSize/3, 0, eFontGame, eWidGen, 1, 2)
+				n += 1
+				y += iSize + 4
+
+			iBestUnit = city.AI_bestUnitAI(UnitAITypes.UNITAI_WORKER)
+			if iBestUnit > -1 and not self.isUnitMaxedOut(iBestUnit, InCity):
+				szRow = str(n)
+				screen.attachPanelAt(PnlRight, ROW + szRow, "", "", True, False, ePanelBlack, 0, y - 4, w3, iSize + 2, eWidGen, 1, 1)
+				unitInfo = GC.getUnitInfo(iBestUnit)
+				szTxt = "<font=3>" + TRNSLTR.getText("TXT_KEY_POPUP_RECOMMENDED", (unitInfo.getDescription(), city.getUnitProductionTurnsLeft(iBestUnit, 0), "TXT_KEY_UNIT_WORKER"))
+
+				PF = "WID|UNIT|CityWork%d"
+				screen.setImageButtonAt((PF % iBestUnit) + "|img" + szRow, PnlRight, unitInfo.getButton(), -2, y, iSize, iSize, eWidGen, 1, 2)
+				screen.setTextAt((PF % iBestUnit) + "|" + szRow, PnlRight, szTxt, 1<<0, iSize + 4, y + iSize/3, 0, eFontGame, eWidGen, 1, 2)
+				n += 1
+				y += iSize + 4
+
+			iBestUnit = city.AI_bestUnitAI(UnitAITypes.UNITAI_SETTLE)
+			if iBestUnit > -1 and not self.isUnitMaxedOut(iBestUnit, InCity):
+				szRow = str(n)
+				screen.attachPanelAt(PnlRight, ROW + szRow, "", "", True, False, ePanelBlack, 0, y - 4, w3, iSize + 2, eWidGen, 1, 1)
+				unitInfo = GC.getUnitInfo(iBestUnit)
+				szTxt = "<font=3>" + TRNSLTR.getText("TXT_KEY_POPUP_RECOMMENDED", (unitInfo.getDescription(), city.getUnitProductionTurnsLeft(iBestUnit, 0), "TXT_KEY_UNIT_SETTLER"))
+
+				PF = "WID|UNIT|CityWork%d"
+				screen.setImageButtonAt((PF % iBestUnit) + "|img" + szRow, PnlRight, unitInfo.getButton(), -2, y, iSize, iSize, eWidGen, 1, 2)
+				screen.setTextAt((PF % iBestUnit) + "|" + szRow, PnlRight, szTxt, 1<<0, iSize + 4, y + iSize/3, 0, eFontGame, eWidGen, 1, 2)
+				n += 1
+				y += iSize + 4
+			return
+
 		Pnl = "CityTabScrPnl"
-		screen.addScrollPanel(Pnl, "", x, y, w, h, PanelStyles.PANEL_STYLE_MAIN)
+		screen.addScrollPanel(Pnl, "", x, y0, w, h, PanelStyles.PANEL_STYLE_MAIN)
 		screen.setStyle(Pnl, "ScrollPanel_Alt_Style")
-		InCity = self.InCity
-		CyCity = InCity.CyCity
-		if InCity.WorkQueue and not CyCity.getProduction():
+
+		if InCity.WorkQueue and not city.getProduction():
 			self.bFreshQueue = False
 		else: self.bFreshQueue = True
+
 		iPlayer = InCity.iPlayer
 		iPlayerAct = self.iPlayer
-		iSize = CityOpt.getBuildIconSize()
 		dx = iSize + 4
 		iBtnPerRow = (w - 16) / dx
 		xStart = x = (w - 16) % (dx * iBtnPerRow) / 2
-		y = 4
 
-		if iTab == CITYTAB_ADMIN: pass
-		elif iTab == CITYTAB_UNIT:
-			CyCity.setUnitListInvalid()
-			iGroups = CyCity.getUnitListGroupNum()
+		if iTab == CITYTAB_UNIT:
+			city.setUnitListInvalid()
+			iGroups = city.getUnitListGroupNum()
 			PF = "WID|UNIT|CityWork%d"
 			for iGroup in xrange(iGroups):
 				aList = []
 				iCount = 0
-				iNumInGroup = CyCity.getUnitListNumInGroup(iGroup)
+				iNumInGroup = city.getUnitListNumInGroup(iGroup)
 				if not iNumInGroup:
 					continue
 				for i in xrange(iNumInGroup):
-					iType = CyCity.getUnitListType(iGroup, i)
+					iType = city.getUnitListType(iGroup, i)
 					BTN = GC.getUnitInfo(iType).getButton()
 					Img = PF % iType
-					if not CyCity.canTrain(iType, False, False, False, False):
+					if not city.canTrain(iType, False, False, False, False):
 						aList.append([Img, iType, BTN])
 					else:
 						if iCount == iBtnPerRow:
@@ -3656,21 +3730,21 @@ class CvMainInterface:
 				x = xStart
 				y += dx
 		elif iTab == CITYTAB_BUILDING:
-			if not CyCity.getBuildingListGroupNum(): return
-			iNumInGroup = CyCity.getBuildingListNumInGroup(0)
+			if not city.getBuildingListGroupNum(): return
+			iNumInGroup = city.getBuildingListNumInGroup(0)
 			if not iNumInGroup: return
 			PF = "WID|BUILDING|CityWork%d"
 			aList = []
 			iCount = 0
 			i = 0
 			while i < iNumInGroup:
-				iType = CyCity.getBuildingListType(0, i)
+				iType = city.getBuildingListType(0, i)
 				if isLimitedWonder(iType):
 					break
 				i += 1
 				BTN = GC.getBuildingInfo(iType).getButton()
 				Img = PF % iType
-				if not CyCity.canConstruct(iType, False, False, False) or iPlayer != iPlayerAct:
+				if not city.canConstruct(iType, False, False, False) or iPlayer != iPlayerAct:
 					aList.append([Img, iType, BTN])
 				else:
 					if iCount == iBtnPerRow:
@@ -3696,15 +3770,15 @@ class CvMainInterface:
 			aList1 = []
 			aList2 = []
 			aList3 = []
-			iGroupNum = CyCity.getBuildingListGroupNum()
+			iGroupNum = city.getBuildingListGroupNum()
 			iGroup = 0
 			while iGroup < iGroupNum:
-				iNumInGroup = CyCity.getBuildingListNumInGroup(iGroup)
+				iNumInGroup = city.getBuildingListNumInGroup(iGroup)
 				if not iNumInGroup:
 					iGroup += 1
 					continue
 				for i in xrange(iNumInGroup):
-					iType = CyCity.getBuildingListType(iGroup, i)
+					iType = city.getBuildingListType(iGroup, i)
 
 					if not isLimitedWonder(iType):
 						break
@@ -3730,7 +3804,7 @@ class CvMainInterface:
 				for iType in aListX:
 					BTN = GC.getBuildingInfo(iType).getButton()
 					Img = PF % iType
-					if not CyCity.canConstruct(iType, False, False, False) or iPlayer != iPlayerAct:
+					if not city.canConstruct(iType, False, False, False) or iPlayer != iPlayerAct:
 						aList.append([Img, iType, BTN])
 					else:
 						if iCount == iBtnPerRow:
@@ -3756,7 +3830,7 @@ class CvMainInterface:
 
 			# Projects
 			for iType in xrange(self.iNumProjectInfos):
-				if CyCity.canCreate(iType, True, False):
+				if city.canCreate(iType, True, False):
 					if iCount == iBtnPerRow:
 						x = xStart
 						y += dx
@@ -3777,7 +3851,7 @@ class CvMainInterface:
 			for iType in aList0:
 				BTN = GC.getBuildingInfo(iType).getButton()
 				Img = PF % iType
-				if not CyCity.canConstruct(iType, False, False, False) or iPlayer != iPlayerAct:
+				if not city.canConstruct(iType, False, False, False) or iPlayer != iPlayerAct:
 					aList.append([Img, iType, BTN])
 				else:
 					if iCount == iBtnPerRow:
@@ -3798,12 +3872,20 @@ class CvMainInterface:
 				x += dx
 				iCount += 1
 
+	def isUnitMaxedOut(self, iType, InCity, iExtra=0):
+		return (
+			GAME.isUnitMaxedOut(iType, InCity.CyTeam.getUnitMaking(iType) + iExtra)
+			or InCity.CyTeam.isUnitMaxedOut(iType, InCity.CyTeam.getUnitMaking(iType) + iExtra)
+			or InCity.CyPlayer.isUnitMaxedOut(iType, InCity.CyPlayer.getUnitMaking(iType) + iExtra)
+		)
 
 	def exitCityTab(self, screen):
 		screen.deleteWidget("CityTab|BG0")
 		screen.deleteWidget("CityTabWindow")
 		screen.deleteWidget("CityTabHeader")
 		screen.deleteWidget("CityTabScrPnl")
+		if self.iCityTab == CITYTAB_ADMIN:
+			screen.deleteWidget("CT|AdminLastOutput")
 		screen.deleteWidget("CT|Options0")
 		screen.deleteWidget("ScrlPnlFilters")
 		screen.hide("CT|UnitGrouping")
@@ -5483,14 +5565,11 @@ class CvMainInterface:
 							if bAlt:
 								szTxt = "*"
 							szTxt += GC.getUnitInfo(iType).getDescription()
-							CyPlayer = InCity.CyPlayer
-							CyTeam = InCity.CyTeam
-							iTeamMaking = CyTeam.getUnitMaking(iType) + 1
-							if (GAME.isUnitMaxedOut(iType, iTeamMaking) or
-								CyTeam.isUnitMaxedOut(iType, iTeamMaking) or
-								CyPlayer.isUnitMaxedOut(iType, CyPlayer.getUnitMaking(iType) + 1)
-							):
-								screen.enable(NAME + str(iType), False)
+							if self.isUnitMaxedOut(iType, InCity, 1):
+								if self.iCityTab == CITYTAB_ADMIN:
+									self.bUpdateCityTab = True
+								else:
+									screen.enable(NAME + str(iType), False)
 
 						elif TYPE == "BUILDING":
 							iOrder = OrderTypes.ORDER_CONSTRUCT
@@ -5540,7 +5619,7 @@ class CvMainInterface:
 							if InCity.WorkQueue:
 								if self.bFreshQueue:
 									screen.show(InCity.WorkQueue[0][0] + "CityWork" + str(InCity.WorkQueue[0][1]))
-								elif self.iCityTab > CITYTAB_ADMIN:
+								elif self.iCityTab > -1:
 									self.bUpdateCityTab = True
 								screen.deleteWidget(ROW + InCity.WorkQueue[0][2])
 								self.InCity.WorkQueue[0] = [szName, iType, szRow]
@@ -5565,15 +5644,8 @@ class CvMainInterface:
 						iTab = self.iCityTab
 						# Check if the work selection needs a refresh.
 						if TYPE == "UNIT":
-							if iTab == CITYTAB_UNIT:
-								CyPlayer = InCity.CyPlayer
-								CyTeam = InCity.CyTeam
-								iTeamMaking = CyTeam.getUnitMaking(iType)
-								if (
-									GAME.isUnitMaxedOut(iType, iTeamMaking)
-								or	CyTeam.isUnitMaxedOut(iType, iTeamMaking)
-								or	CyPlayer.isUnitMaxedOut(iType, CyPlayer.getUnitMaking(iType))
-								): self.bUpdateCityTab = True
+							if iTab in (CITYTAB_ADMIN, CITYTAB_UNIT) and self.isUnitMaxedOut(iType, InCity):
+								self.bUpdateCityTab = True
 
 						elif TYPE == "BUILDING":
 							if iTab in (CITYTAB_BUILDING, CITYTAB_WONDER):

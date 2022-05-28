@@ -377,6 +377,13 @@ const CvColorInfo* CyGlobalContext::getColorInfo(int i) const
 	return (i>=0 && i<GC.getNumColorInfos()) ? &GC.getColorInfo((ColorTypes)i) : NULL;
 }
 
+
+const CvAdvisorInfo* CyGlobalContext::getAdvisorInfo(int i) const
+{
+	return (i>=0 && i<GC.getNumAdvisorInfos()) ? &GC.getAdvisorInfo((AdvisorTypes)i) : NULL;
+}
+
+
 const CvPropertyInfo* CyGlobalContext::getPropertyInfo(int i) const
 {
 	return (i>=0 && i<GC.getNumPropertyInfos()) ? &GC.getPropertyInfo((PropertyTypes)i) : NULL;

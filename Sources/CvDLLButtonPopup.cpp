@@ -1200,24 +1200,6 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 	/*
 	// This popup might be called to suggest a specific thing that the player should do, as opposed to just
 	// indicating that a build queue is empty. In this case the thing to build is determined below
-	UnitTypes eTrainUnit = NO_UNIT;
-	BuildingTypes eConstructBuilding = NO_BUILDING;
-	ProjectTypes eCreateProject = NO_PROJECT;
-	switch (info.getData2())
-	{
-	case (ORDER_TRAIN):
-		eTrainUnit = (UnitTypes)info.getData3();
-		break;
-	case (ORDER_CONSTRUCT):
-		eConstructBuilding = (BuildingTypes)info.getData3();
-		break;
-	case (ORDER_CREATE):
-		eCreateProject = (ProjectTypes)info.getData3();
-		break;
-	default:
-		break;
-	}
-	bool bFinish = info.getOption1();
 
 	CvWString szPopupHeader;
 	CvString szArtFilename;
@@ -1268,83 +1250,6 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 
 	ProjectTypes eProductionProject = pCity->getProductionProject();
 	ProcessTypes eProductionProcess = pCity->getProductionProcess();
-
-	// If we aren't already suggesting a unit to the player then get one from the advisers
-	int iDummyValue;
-	const UnitTypes eProductionUnit = pCity->AI_bestUnit(iDummyValue, -1, NULL, true, NULL, false, false, NULL);
-
-	if (eProductionUnit != NO_UNIT)
-	{
-		const AdvisorTypes eUnitAdvisor = (AdvisorTypes)GC.getUnitInfo(eProductionUnit).getAdvisorType();
-		if (eUnitAdvisor != NO_ADVISOR)
-		{
-			gDLL->getInterfaceIFace()->popupAddGenericButton(
-				pPopup,
-				gDLL->getText(
-					"TXT_KEY_POPUP_RECOMMENDED", GC.getUnitInfo(eProductionUnit).getTextKeyWide(),
-					pCity->getProductionTurnsLeft(eProductionUnit, 0), GC.getAdvisorInfo(eUnitAdvisor).getTextKeyWide()
-				),
-				GET_PLAYER(pCity->getOwner()).getUnitButton(eProductionUnit), eProductionUnit, WIDGET_TRAIN,
-				eProductionUnit, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY
-			);
-		}
-		else // just in case we have units with no defined advisor type.
-		{
-			gDLL->getInterfaceIFace()->popupAddGenericButton(
-				pPopup,
-				gDLL->getText(
-					"TXT_KEY_POPUP_RECOMMENDED_NO_ADV",
-					GC.getUnitInfo(eProductionUnit).getTextKeyWide(), pCity->getProductionTurnsLeft(eProductionUnit, 0)
-				),
-				GET_PLAYER(pCity->getOwner()).getUnitButton(eProductionUnit), eProductionUnit, WIDGET_TRAIN,
-				eProductionUnit, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY
-			);
-		}
-	}
-
-	// === BUILDINGS =========================================================
-	std::vector<BuildingTypes> possibleBuildings;
-	for (int idx = 0; idx < GC.getNumBuildingInfos(); idx++)
-	{
-		const BuildingTypes building = static_cast<BuildingTypes>(idx);
-
-		// Make sure to exclude Palace from the recommended list (it is the only one with isCaptial)!
-		if (pCity->canConstruct(building) && !GC.getBuildingInfo(building).isCapital())
-		{
-			possibleBuildings.push_back(building);
-		}
-	}
-
-	std::vector<CvCity::ScoredBuilding> bestBuildings;
-	if (pCity->AI_scoreBuildingsFromListThreshold(bestBuildings, possibleBuildings, 0, 50, 0, true))
-	{
-		// Work out statistics about the spread of the building scores so we can see if any are highly recommended
-		float average;
-		int64_t minScore, maxScore;
-		CvCity::ScoredBuilding::averageMinMax(bestBuildings, average, minScore, maxScore);
-
-		bestBuildings.resize(std::min<int>(5, bestBuildings.size()));
-
-		const float cutOff = average + (maxScore - average) * 0.75f;
-		for(size_t idx = 0; idx < bestBuildings.size(); ++idx)
-		{
-			const BuildingTypes building = bestBuildings[idx].building;
-			const AdvisorTypes advisor = (AdvisorTypes)GC.getBuildingInfo(building).getAdvisorType();
-			if (bestBuildings[idx].score > cutOff && advisor != NO_ADVISOR)
-			{
-				const int iTurns = pCity->getProductionTurnsLeft(building, 0);
-				const CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED", GC.getBuildingInfo(building).getTextKeyWide(), iTurns, GC.getAdvisorInfo(advisor).getTextKeyWide());
-				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuildingText, GC.getBuildingInfo(building).getButton(), building, WIDGET_CONSTRUCT, building, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
-			}
-			else
-			{
-				const int iTurns = pCity->getProductionTurnsLeft(building, 0);
-				const CvWString szBuildingText = gDLL->getText("TXT_KEY_POPUP_RECOMMENDED_NO_ADV", GC.getBuildingInfo(building).getTextKeyWide(), iTurns);
-				// CvWString szBuildingText = CvWString::format(L"%s (%d)", GC.getBuildingInfo(building).getDescription(), iTurns);
-				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuildingText, GC.getBuildingInfo(building).getButton(), building, WIDGET_CONSTRUCT, building, pCity->getID(), true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
-			}
-		}
-	}
 
 	if (eProductionProject != NO_PROJECT)
 	{
