@@ -1828,12 +1828,11 @@ bool CyCity::isEventOccured(int eEvent) const
 int CyCity::AI_bestUnit() const
 {
 	int iDummyValue;
-	return m_pCity->AI_bestUnit(iDummyValue, -1, NULL, true, NULL, false, false, NULL);
+	return m_pCity->AI_bestUnit(iDummyValue, -1, NULL, true, NULL, true, false, NULL);
 }
 
 int CyCity::AI_bestUnitAI(UnitAITypes eUnitAITypes) const
 {
 	int iDummyValue;
-	//CvUnitSelectionCriteria criteria = ;
 	return m_pCity->AI_bestUnitAI(eUnitAITypes, iDummyValue, true, true, &CvUnitSelectionCriteria().IgnoreGrowth(true));
 }

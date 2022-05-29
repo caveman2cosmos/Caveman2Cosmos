@@ -18,6 +18,7 @@ class CvPlot;
 class CvPlotGroup;
 class CvUnit;
 class CvUnitSelectionCriteria;
+class CityOutputHistory;
 
 // BUG - start
 void addGoodOrBad(int iValue, int& iGood, int& iBad);
@@ -58,6 +59,7 @@ private:
 
 protected:
 	CvGameObjectCity m_GameObject;
+	CityOutputHistory* m_outputHistory;
 
 public:
 	int getRevolutionIndex() const;

@@ -32,6 +32,63 @@
 //Disable this passed in initialization list warning, as it is only stored in the constructor of CvBuildingList and not used
 #pragma warning( disable : 4355 )
 
+// Helper class
+class CityOutputHistory
+{
+public:
+	CityOutputHistory()
+	{
+		// ToDo - Make the magic number 3 into a global define perhaps?
+		recentOutputTurn = new int[3]();
+
+		for (int i = 0; i < 3; i++)
+		{
+			recentOutputHistory.push_back(new std::vector< std::pair<OrderTypes, int> >);
+		}
+	}
+	~CityOutputHistory()
+	{
+		SAFE_DELETE_ARRAY(recentOutputTurn);
+		recentOutputHistory.clear();
+	}
+	void addToHistory(OrderTypes eOrder, int iType, int iForceList=-1)
+	{
+		if (iForceList > -1) // Used when reading saves.
+		{
+			recentOutputHistory[iForceList]->push_back(std::make_pair(eOrder, iType));
+			return;
+		}
+		const int iTurn = GC.getGame().getGameTurn();
+
+		if (iTurn != recentOutputTurn[0])
+		{
+			// Iterate history
+			for (int i = 2; i > 0; i--)
+			{
+				recentOutputHistory[i] = recentOutputHistory[i-1];
+				recentOutputTurn[i] = recentOutputTurn[i-1];
+			}
+			recentOutputHistory[0] = new std::vector< std::pair<OrderTypes, int> >;
+			recentOutputTurn[0] = iTurn;
+		}
+		recentOutputHistory[0]->push_back(std::make_pair(eOrder, iType));
+	}
+	void setRecentOutputTurn(const int iTurn, const int iElement) const
+	{
+		if (iElement >= 3) return;
+
+		recentOutputTurn[iElement] = iTurn;
+	}
+	int getRecentOutputTurn(const int iTurn) const
+	{
+		return recentOutputTurn[range(iTurn, 0, 2)];
+	}
+
+private:
+	int* recentOutputTurn;
+	std::vector< std::vector< std::pair<OrderTypes, int> >* > recentOutputHistory;
+};
+
 // Public Functions...
 
 CvCity::CvCity()
@@ -225,6 +282,8 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiBonusCommerceRateModifier);
 	SAFE_DELETE_ARRAY(m_aiBonusCommercePercentChanges);
 	SAFE_DELETE_ARRAY(m_aiBuildingCommerceTechChange);
+
+	SAFE_DELETE(m_outputHistory);
 }
 
 
@@ -1044,6 +1103,8 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 
 	m_bIsGreatWallSeed = false;
 	m_deferringBonusProcessingCount = 0;
+
+	m_outputHistory = new CityOutputHistory();
 }
 
 
@@ -15590,24 +15651,18 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 	if (!bAppend || getOrderQueueLength() == 1)
 	{
 		// If the head order is a build list, resolve it
-		if (eOrder == ORDER_LIST)
-		{
-			if (!pushFirstValidBuildListOrder(iData1))
-			{
-				// pop the list if there is nothing to construct on it any more
-				popOrder(0);
-			}
-			else
-			{
-				if (!bSave)
-				{
-					popOrder(1);
-				}
-			}
-		}
-		else
+		if (eOrder != ORDER_LIST)
 		{
 			startHeadOrder();
+		}
+		else if (!pushFirstValidBuildListOrder(iData1))
+		{
+			// pop the list if there is nothing to construct on it any more
+			popOrder(0);
+		}
+		else if (!bSave)
+		{
+			popOrder(1);
 		}
 	}
 
@@ -15824,9 +15879,8 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 
 			}
 		}
+		break;
 	}
-	break;
-
 	case ORDER_CONSTRUCT:
 	{
 		eConstructBuilding = order.getBuildingType();
@@ -15898,6 +15952,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 		break;
 	}
 	case ORDER_CREATE:
+	{
 		eCreateProject = order.getProjectType();
 
 		GET_TEAM(getTeam()).changeProjectMaking(eCreateProject, -1);
@@ -15975,7 +16030,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 			m_iGoldFromLostProduction = m_iLostProductionModified * GC.getMAXED_PROJECT_GOLD_PERCENT() / 100;
 		}
 		break;
-
+	}
 	case ORDER_MAINTAIN:
 	case ORDER_LIST:
 		break;
@@ -16032,6 +16087,25 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 
 	if (bFinish)
 	{
+		switch (order.eOrderType)
+		{
+			case ORDER_TRAIN:
+			{
+				m_outputHistory->addToHistory(ORDER_TRAIN, (int)order.getUnitType());
+				break;
+			}
+			case ORDER_CONSTRUCT:
+			{
+				m_outputHistory->addToHistory(ORDER_CONSTRUCT, (int)order.getBuildingType());
+				break;
+			}
+			case ORDER_CREATE:
+			{
+				m_outputHistory->addToHistory(ORDER_CREATE, (int)order.getProjectType());
+				break;
+			}
+			default: FErrorMsg("Can Occur?");
+		}
 		const char* szIcon = NULL;
 		wchar_t szBuffer[1024];
 		char szSound[1024];
