@@ -225,9 +225,9 @@ bool CvSelectionGroupAI::AI_update()
 			}
 			resetPath();
 
-			if (pHeadUnit->AI_update())
+			if (!pHeadUnit->AI_update())
 			{
-				// AI_update returns true when we should abort the loop and wait until next slice
+				// AI_update returns false when we should abort the loop and wait until next slice
 				break;
 			}
 		}
