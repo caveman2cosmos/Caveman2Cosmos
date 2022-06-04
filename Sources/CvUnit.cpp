@@ -35938,44 +35938,27 @@ void CvUnit::setExtraBombardRate(int iChange)
 // The call that plugs into the rest of the code (final value) - this can be plugged into the existing final - or even be renamed to the existing final (though experience has shown me this causes me tremendous confusion!)
 int CvUnit::getBombardRate() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
-	// if the current final result of the SMM multiplicative mechanism is nothing but an empty shell
-	// then this is the first time it's being run so we take from the base value to start.
-	// Either that or the base is 0 anyhow.
-	|| getSMBombardRate() == 0)
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		return std::max(0, getSMBombardRateTotalBase());
+		return m_iSMBombardRate;
 	}
-	return std::max(0, getSMBombardRate());
+	return getBombardRateBase();
 }
 
 // The total before the Size Matters multiplicative method adjusts for the final value.
-int CvUnit::getSMBombardRateTotalBase() const
+int CvUnit::getBombardRateBase() const
 {
-	// If there is a flat base not defined on the unit itself then it needs to plug in here.
-	// The following lines can vary depending on if you want an approaching 0 return, diminishing return, max or whatever
-	// size matters most won't need a diminishing return and in fact would be harmed by it as it needs true values to work with
-	// In THIS case, units can easily have NO bombard rate (there's a check above to make sure it's not less than 0 as that would be an odd situation.)
-	// If this value starts going less than 0 then perhaps a min needs to be established.
-	return m_pUnitInfo->getBombardRate() + getExtraBombardRate();
-}
-
-int CvUnit::getSMBombardRate() const//The final result of the Multiplicative adjustment
-{
-	return m_iSMBombardRate;//A separate (likely new) data storage to track the multiplicated value.
+	return std::max(0, m_pUnitInfo->getBombardRate() + getExtraBombardRate());
 }
 
 ////The active call to establish the current proper adjusted value.
 ////This is the core multiplicative method being utilized.
 void CvUnit::setSMBombardRate()
 {
-	m_iSMBombardRate = applySMRank(getSMBombardRateTotalBase(),
-		getSizeMattersOffsetValue(),
-		GC.getSIZE_MATTERS_MOST_MULTIPLIER());
+	m_iSMBombardRate = applySMRank(getBombardRateBase(), getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 
 	// optional but most of these should be above or equal to 0.
 	FASSERT_NOT_NEGATIVE(m_iSMBombardRate);
-	m_iSMBombardRate = std::max(0, m_iSMBombardRate);
 }
 
 

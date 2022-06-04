@@ -481,7 +481,7 @@ void CvSelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2
 {
 	if ( eMission == MISSION_SKIP && eMissionAI == NO_MISSIONAI)
 	{
-		//	No longer targeting any mission - make sure we don't keep reciord of the fact that we were previously
+		//	No longer targeting any mission - make sure we don't keep record of the fact that we were previously
 		((CvSelectionGroupAI*)this)->AI_setMissionAI(NO_MISSIONAI,NULL,NULL);
 	}
 	pushMissionInternal(eMission, iData1, iData2, iFlags, bAppend, bManual, eMissionAI, pMissionAIPlot, pMissionAIUnit);
@@ -3934,13 +3934,12 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 						pBestAttackUnit->attack(pDestPlot, bQuick, bLoopStealthDefense);
 					}
 				}
-				else if (pBestDefender)
-				{
-					pBestAttackUnit->attack(pDestPlot, false, bLoopStealthDefense);
-					break;
-				}
 				else
 				{
+					if (pBestDefender)
+					{
+						pBestAttackUnit->attack(pDestPlot, false, bLoopStealthDefense);
+					}
 					break;
 				}
 				// Afforess 6/20/11
@@ -6130,12 +6129,9 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 						}
 					}
 
-					if (isHuman())
+					if (isHuman() && !isLastPathPlotVisible() && getDomainType() != DOMAIN_AIR)
 					{
-						if (!(isLastPathPlotVisible()) && (getDomainType() != DOMAIN_AIR))
-						{
-							return false;
-						}
+						return false;
 					}
 
 					CvUnit* pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, bStealth);
@@ -6206,7 +6202,6 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 										}
 									}
 								}
-
 								bBombardExhausted = !bFoundBombard;
 
 								continue;
@@ -6223,7 +6218,6 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 							{
 								AI_queueGroupAttack(iX, iY);
 							}
-
 							break;
 						}
 					}

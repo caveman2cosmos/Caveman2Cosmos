@@ -227,196 +227,200 @@ bool CvUnitAI::AI_update()
 	{
 		return false;
 	}
+
 	if (getGroup()->isAutomated())
 	{
 		switch (getGroup()->getAutomateType())  // NOLINT(clang-diagnostic-switch-enum)
 		{
-		case AUTOMATE_BUILD:
-		{
-			if (AI_getUnitAIType() == UNITAI_WORKER)
+			case AUTOMATE_BUILD:
 			{
-				AI_workerMove();
-			}
-			else if (AI_getUnitAIType() == UNITAI_WORKER_SEA)
-			{
-				AI_workerSeaMove();
-			}
-			else
-			{
-				FErrorMsg("error");
-			}
-			break;
-		}
-		case AUTOMATE_NETWORK:
-			AI_networkAutomated();
-			// XXX else wake up???
-			break;
-		case AUTOMATE_CITY:
-			AI_cityAutomated();
-			// XXX else wake up???
-			break;
-		case AUTOMATE_EXPLORE:
-		{
-			switch (getDomainType())
-			{
-			case DOMAIN_SEA:
-			{
-				AI_exploreSeaMove();
-				break;
-			}
-			case DOMAIN_AIR:
-			{
-				// if we are cargo (on a carrier), hold if the carrier is not done moving yet
-				const CvUnit* pTransportUnit = getTransportUnit();
-				if (pTransportUnit != NULL
-				&& pTransportUnit->isAutomated()
-				&& pTransportUnit->canMove()
-				&& pTransportUnit->getGroup()->getActivityType() != ACTIVITY_HOLD)
+				if (AI_getUnitAIType() == UNITAI_WORKER)
 				{
-					getGroup()->pushMission(MISSION_SKIP);
-					break;
+					AI_workerMove();
 				}
-				AI_exploreAirMove(); // Have air units explore like AI units do
-				break;
-			}
-			case DOMAIN_LAND:
-			{
-				AI_exploreMove();
-				break;
-			}
-			case NO_DOMAIN:
-			case DOMAIN_IMMOBILE:
-			case NUM_DOMAIN_TYPES:
-			default:
-			{
-				FErrorMsg("error");
-				break;
-			}
-			}
-			// if we have air cargo (we are a carrier), and are done moving, explore with the aircraft as well
-			if (hasCargo() && getDomainCargo() == DOMAIN_AIR
-			&& (!canMove() || getGroup()->getActivityType() == ACTIVITY_HOLD))
-			{
-				std::vector<CvUnit*> aCargoUnits;
-				getCargoUnits(aCargoUnits);
-				if (!aCargoUnits.empty())
+				else if (AI_getUnitAIType() == UNITAI_WORKER_SEA)
 				{
-					validateCargoUnits();
+					AI_workerSeaMove();
 				}
-				foreach_(const CvUnit * pCargoUnit, aCargoUnits)
+				else FErrorMsg("error");
+
+				break;
+			}
+			case AUTOMATE_NETWORK:
+			{
+				AI_networkAutomated();
+				break;
+			}
+			case AUTOMATE_CITY:
+			{
+				AI_cityAutomated();
+				break;
+			}
+			case AUTOMATE_EXPLORE:
+			{
+				switch (getDomainType())
 				{
-					FAssert(isAutomated())
+					case DOMAIN_SEA:
+					{
+						AI_exploreSeaMove();
+						break;
+					}
+					case DOMAIN_AIR:
+					{
+						// if we are cargo (on a carrier), hold if the carrier is not done moving yet
+						const CvUnit* pTransportUnit = getTransportUnit();
+						if (pTransportUnit != NULL
+						&& pTransportUnit->isAutomated()
+						&& pTransportUnit->canMove()
+						&& pTransportUnit->getGroup()->getActivityType() != ACTIVITY_HOLD)
+						{
+							getGroup()->pushMission(MISSION_SKIP);
+							break;
+						}
+						AI_exploreAirMove(); // Have air units explore like AI units do
+						break;
+					}
+					case DOMAIN_LAND:
+					{
+						AI_exploreMove();
+						break;
+					}
+					default: FErrorMsg("error");
+				}
+				// if we have air cargo (we are a carrier), and are done moving, explore with the aircraft as well
+				if (hasCargo() && getDomainCargo() == DOMAIN_AIR
+				&& (!canMove() || getGroup()->getActivityType() == ACTIVITY_HOLD))
+				{
+					std::vector<CvUnit*> aCargoUnits;
+					getCargoUnits(aCargoUnits);
+					if (!aCargoUnits.empty())
+					{
+						validateCargoUnits();
+					}
+					foreach_(const CvUnit * pCargoUnit, aCargoUnits)
+					{
+						FAssert(isAutomated())
 
 						if (pCargoUnit->getDomainType() == DOMAIN_AIR && pCargoUnit->canMove())
 						{
 							pCargoUnit->getGroup()->setAutomateType(AUTOMATE_EXPLORE);
 							pCargoUnit->getGroup()->setActivityType(ACTIVITY_AWAKE);
 						}
+					}
 				}
-			}
-			break;
-		}
-		case AUTOMATE_RELIGION:
-		{
-			if (AI_getUnitAIType() == UNITAI_MISSIONARY)
-			{
-				AI_missionaryMove();
-			}
-			else if (getGroup()->hasUnitOfAI(UNITAI_MISSIONARY))
-			{
-				CvSelectionGroup* pGroup = getGroup();
-				joinGroup(NULL);
-				joinGroup(pGroup);
-				getGroup()->setAutomateType(AUTOMATE_RELIGION);
-			}
-			else
-			{
-				getGroup()->setAutomateType(NO_AUTOMATE);
-			}
-			break;
-		}
-		case AUTOMATE_PILLAGE:
-			AI_AutomatedpillageMove();
-			break;
-		case AUTOMATE_HUNT:
-			AI_SearchAndDestroyMove();
-			break;
-		case AUTOMATE_CITY_DEFENSE:
-			AI_cityDefense();
-			break;
-		case AUTOMATE_BORDER_PATROL:
-			AI_borderPatrol();
-			break;
-		case AUTOMATE_PIRATE:
-			AI_pirateSeaMove();
-			break;
-		case AUTOMATE_HURRY:
-			AI_merchantMove();
-			break;
-			//Yes, these automations do the same thing, but they act differently for different units.
-		case AUTOMATE_AIRSTRIKE:
-		case AUTOMATE_AIRBOMB:
-			AI_autoAirStrike();
-			break;
-		case AUTOMATE_AIR_RECON:
-			AI_exploreAirMove();
-			break;
-		case AUTOMATE_UPGRADING:
-		case AUTOMATE_CANCEL_UPGRADING:
-		case AUTOMATE_PROMOTIONS:
-		case AUTOMATE_CANCEL_PROMOTIONS:
-			FErrorMsg("SelectionGroup Should Not be Using These Automations!")
 				break;
-		case AUTOMATE_SHADOW:
-		{
-			// If we've lost the unit we're shadowing,
-			// not sure how this can happen but empirically it's been seen,
-			// then lose the automation.
-			if (getShadowUnit() == NULL)
-			{
-				getGroup()->setAutomateType(NO_AUTOMATE);
 			}
-			else
+			case AUTOMATE_RELIGION:
 			{
-				AI_shadowMove();
+				if (AI_getUnitAIType() == UNITAI_MISSIONARY)
+				{
+					AI_missionaryMove();
+				}
+				else if (getGroup()->hasUnitOfAI(UNITAI_MISSIONARY))
+				{
+					CvSelectionGroup* pGroup = getGroup();
+					joinGroup(NULL);
+					joinGroup(pGroup);
+					getGroup()->setAutomateType(AUTOMATE_RELIGION);
+				}
+				else
+				{
+					getGroup()->setAutomateType(NO_AUTOMATE);
+				}
+				break;
 			}
-			break;
-		}
-		default:
-		{
-			FErrorMsg("error");
-			break;
-		}
+			case AUTOMATE_PILLAGE:
+			{
+				AI_AutomatedpillageMove();
+				break;
+			}
+			case AUTOMATE_HUNT:
+			{
+				AI_SearchAndDestroyMove();
+				break;
+			}
+			case AUTOMATE_CITY_DEFENSE:
+			{
+				AI_cityDefense();
+				break;
+			}
+			case AUTOMATE_BORDER_PATROL:
+			{
+				AI_borderPatrol();
+				break;
+			}
+			case AUTOMATE_PIRATE:
+			{
+				AI_pirateSeaMove();
+				break;
+			}
+			case AUTOMATE_HURRY:
+			{
+				AI_merchantMove();
+				break;
+			}
+			//Yes, these automations do the same thing, but they act differently for different units.
+			case AUTOMATE_AIRSTRIKE:
+			case AUTOMATE_AIRBOMB:
+			{
+				AI_autoAirStrike();
+				break;
+			}
+			case AUTOMATE_AIR_RECON:
+			{
+				AI_exploreAirMove();
+				break;
+			}
+			case AUTOMATE_UPGRADING:
+			case AUTOMATE_CANCEL_UPGRADING:
+			case AUTOMATE_PROMOTIONS:
+			case AUTOMATE_CANCEL_PROMOTIONS:
+			{
+				FErrorMsg("SelectionGroup Should Not be Using These Automations!");
+				break;
+			}
+			case AUTOMATE_SHADOW:
+			{
+				// If we've lost the unit we're shadowing,
+				// not sure how this can happen but empirically it's been seen,
+				// then lose the automation.
+				if (getShadowUnit() == NULL)
+				{
+					getGroup()->setAutomateType(NO_AUTOMATE);
+				}
+				else
+				{
+					AI_shadowMove();
+				}
+				break;
+			}
+			default: FErrorMsg("error");
 		}
 		// if no longer automated, then we want to bail
 		return !isDelayedDeath() && !getGroup()->isAutomated();
 	}
+
+	// No confirmed garrison city until we reaffirm it with another set
+	m_iAffirmedGarrisonCity = -1;
+
+	if (isNPC())
+	{
+		PROFILE("CvUnitAI::AI_Update.NPC");
+
+		doUnitAIMove();
+	}
 	else
 	{
-		// No confirmed garrison city until we reaffirm it with another set
-		m_iAffirmedGarrisonCity = -1;
+		PROFILE("CvUnitAI::AI_Update.civ");
 
-		if (isNPC())
-		{
-			PROFILE("CvUnitAI::AI_Update.NPC");
+		doUnitAIMove();
+	}
 
-			doUnitAIMove();
-		}
-		else
-		{
-			PROFILE("CvUnitAI::AI_Update.civ");
-
-			doUnitAIMove();
-		}
-
-		if (NULL != getGroup() && !isDelayedDeath()
-		&& m_iGarrisonCity != -1 && m_iAffirmedGarrisonCity == -1)
-		{
-			// This group has done something else (presumably of higher priority)
-			//	so should no longer be considered part of the city's garrison
-			AI_setAsGarrison();
-			//TB DEBUG NOTE: Unit must have been dying after taking its move?
-		}
+	if (NULL != getGroup() && !isDelayedDeath() && m_iGarrisonCity != -1 && m_iAffirmedGarrisonCity == -1)
+	{
+		// This group has done something else (presumably of higher priority)
+		//	so should no longer be considered part of the city's garrison
+		AI_setAsGarrison();
 	}
 
 #ifdef _DEBUG
@@ -3053,11 +3057,6 @@ void CvUnitAI::AI_attackCityMove()
 		if (AI_heal())
 		{
 			return;
-		}
-
-		if (bIgnoreFaster)
-		{
-			// BBAI TODO: split out slow units ... will need to test to make sure this doesn't cause loops
 		}
 
 		if (plot()->getOwnershipDuration() <= 1)
@@ -25621,12 +25620,8 @@ bool CvUnitAI::AI_moveToStagingCity()
 			getGroup()->pushMission(MISSION_SKIP);
 			return true;
 		}
-		else
-		{
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0, false, false, MISSIONAI_GROUP, pBestCity->plot());
-		}
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0, false, false, MISSIONAI_GROUP, pBestCity->plot());
 	}
-
 	return false;
 }
 
@@ -28307,12 +28302,8 @@ bool	CvUnitAI::AI_moveToBorders()
 		{
 			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY());
 		}
-		else
-		{
-			return getGroup()->pushMissionInternal(MISSION_SKIP);
-		}
+		return getGroup()->pushMissionInternal(MISSION_SKIP);
 	}
-
 	return false;
 }
 
@@ -28385,12 +28376,8 @@ bool CvUnitAI::AI_patrolBorders()
 			FAssert(!atPlot(pBestPlot));
 			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY());
 		}
-		else
-		{
-			return getGroup()->pushMissionInternal(MISSION_SKIP);
-		}
+		return getGroup()->pushMissionInternal(MISSION_SKIP);
 	}
-
 	return false;
 }
 
@@ -28480,13 +28467,10 @@ void CvUnitAI::AI_autoAirStrike()
 	CvArea* pArea = area();
 
 	//Heal
-	if (getDamage() > 0)
+	if (getDamage() > 0 && 100 * getHP() / getMaxHP() < 50)
 	{
-		if (100 * getHP() / getMaxHP() < 50)
-		{
-			getGroup()->pushMission(MISSION_SKIP);
-			return;
-		}
+		getGroup()->pushMission(MISSION_SKIP);
+		return;
 	}
 
 	// Attack the invaders!
