@@ -22156,7 +22156,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 
 bool CvUnitAI::AI_isAwaitingContract() const
 {
-	return (m_contractsLastEstablishedTurn == GC.getGame().getGameTurn() && 
+	return (m_contractsLastEstablishedTurn == GC.getGame().getGameTurn() &&
 			(m_contractualState == CONTRACTUAL_STATE_AWAITING_ANSWER || m_contractualState == CONTRACTUAL_STATE_AWAITING_WORK));
 }
 
