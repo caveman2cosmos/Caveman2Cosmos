@@ -96,7 +96,7 @@ void CvViewport::resizeForMap()
 void CvViewport::bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity)
 {
 	m_pLookatPlot = m_pMap->plot(iX, iY);
-	if ( pSelectionUnit != NULL && !pSelectionUnit->isDead() && !pSelectionUnit->isDelayedDeath() )
+	if (pSelectionUnit != NULL && !pSelectionUnit->isDead())
 	{
 		m_preservedHeadSelectedUnitId = pSelectionUnit->getIDInfo();
 	}
@@ -366,7 +366,7 @@ void CvViewport::processActionState()
 	case VIEWPORT_ACTION_STATE_BRING_INTO_VIEW_COMPLETE:
 		{
 			CvUnit* pUnit = ::getUnit(m_preservedHeadSelectedUnitId);
-			if ( pUnit != NULL && !pUnit->isDead() && !pUnit->isDelayedDeath() && pUnit->plot()->isInViewport())
+			if (pUnit != NULL && !pUnit->isDead() && pUnit->plot()->isInViewport())
 			{
 				gDLL->getInterfaceIFace()->selectUnit(pUnit, true, true);
 			}

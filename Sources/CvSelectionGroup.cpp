@@ -5474,7 +5474,7 @@ void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 	// this means that if a new unit is going to become the head, change its AI to match, if possible
 	// AI_setUnitAIType removes the unit from the current group (at least currently), so we have to be careful in the loop here
 	// so, loop until we have not changed unit AIs
-	bool bChangedUnitAI;
+	bool bChangedUnitAI = true;
 	do
 	{
 		bChangedUnitAI = false;
@@ -5485,7 +5485,6 @@ void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 		while (pUnitNode != NULL && !bChangedUnitAI)
 		{
 			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-			//pUnitNode = nextUnitNode(pUnitNode);
 
 			if (pLoopUnit != NULL)
 			{
@@ -5510,6 +5509,7 @@ void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 				if (pLoopUnit->canJoinGroup(pLoopUnit->plot(), pSelectionGroup))
 				{
 					pLoopUnit->joinGroup(pSelectionGroup);
+					pSelectionGroup->clearMissionQueue();
 					pUnitNode = headUnitNode();
 				}
 				else

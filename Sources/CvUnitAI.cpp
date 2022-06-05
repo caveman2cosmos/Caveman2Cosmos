@@ -10519,7 +10519,7 @@ void CvUnitAI::AI_healerMove()
 			return;
 		}
 
-		if (processContracts(0))
+		if (processContracts())
 		{
 			return;
 		}
@@ -10612,7 +10612,7 @@ void CvUnitAI::AI_healerSeaMove()
 			return;
 		}
 
-		if (processContracts(0))
+		if (processContracts())
 		{
 			return;
 		}
@@ -10700,7 +10700,7 @@ void CvUnitAI::AI_propertyControlMove()
 		return;
 	}
 
-	if (processContracts(0))
+	if (processContracts())
 	{
 		return;
 	}
@@ -10889,7 +10889,7 @@ void CvUnitAI::AI_InvestigatorMove()
 		return;
 	}
 
-	if (processContracts(0))
+	if (processContracts())
 	{
 		return;
 	}
@@ -11119,7 +11119,7 @@ void CvUnitAI::AI_SeeInvisibleMove()
 		return;
 	}
 
-	if (processContracts(0))
+	if (processContracts())
 	{
 		return;
 	}
@@ -11189,7 +11189,7 @@ void CvUnitAI::AI_SeeInvisibleSeaMove()
 		return;
 	}
 
-	if (processContracts(0))
+	if (processContracts())
 	{
 		return;
 	}
@@ -11234,7 +11234,7 @@ void CvUnitAI::AI_EscortMove()
 		return;
 	}
 
-	if (processContracts(0))
+	if (processContracts())
 	{
 		return;
 	}
@@ -11471,14 +11471,11 @@ bool CvUnitAI::AI_group(const GroupingParams& params)
 			}
 			return true;
 		}
-		else
-		{
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO_UNIT, pBestUnit->getOwner(), pBestUnit->getID(), bCanDefend ? 0 : (MOVE_RECONSIDER_ON_LEAVING_OWNED | MOVE_OUR_TERRITORY | MOVE_WITH_CAUTION), false, false, MISSIONAI_GROUP, NULL, pBestUnit);
-		}
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO_UNIT, pBestUnit->getOwner(), pBestUnit->getID(), bCanDefend ? 0 : (MOVE_RECONSIDER_ON_LEAVING_OWNED | MOVE_OUR_TERRITORY | MOVE_WITH_CAUTION), false, false, MISSIONAI_GROUP, NULL, pBestUnit);
 	}
-
 	return false;
 }
+
 
 bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBiggerOnly, bool bAllowRegrouping, bool bIgnoreFaster)
 {
@@ -22270,7 +22267,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 
 bool CvUnitAI::AI_isAwaitingContract() const
 {
-	return (m_contractsLastEstablishedTurn == GC.getGame().getGameTurn() &&
+	return (m_contractsLastEstablishedTurn == GC.getGame().getGameTurn() && 
 			(m_contractualState == CONTRACTUAL_STATE_AWAITING_ANSWER || m_contractualState == CONTRACTUAL_STATE_AWAITING_WORK));
 }
 
@@ -22305,13 +22302,13 @@ bool CvUnitAI::processContracts(int iMinPriority)
 		}
 	}
 	//TB OOS fix: Giving these a default seems to repair numerous OOS errors
-	int		iAtX = INVALID_PLOT_COORD;
-	int		iAtY = INVALID_PLOT_COORD;
+	int iAtX = INVALID_PLOT_COORD;
+	int iAtY = INVALID_PLOT_COORD;
 	CvUnit* pJoinUnit = NULL;
 
 	if (GET_PLAYER(getOwner()).getContractBroker().makeContract(this, iAtX, iAtY, pJoinUnit, !bContractAlreadyEstablished))
 	{
-		//	Work found
+		// Work found
 		if (gUnitLogLevel >= 3)
 		{
 			logBBAI("	Unit %S (%d) for player %d (%S) at (%d,%d) found work at (%d,%d) [to join %d]\n",
@@ -22426,7 +22423,8 @@ bool CvUnitAI::processContracts(int iMinPriority)
 
 		return true;
 	}
-	else if (bContractAlreadyEstablished)
+
+	if (bContractAlreadyEstablished)
 	{
 		m_contractualState = CONTRACTUAL_STATE_NO_WORK_FOUND;
 
@@ -22441,10 +22439,8 @@ bool CvUnitAI::processContracts(int iMinPriority)
 					getX(),
 					getY());
 		}
-
 		return false;
 	}
-
 	return true;
 }
 
@@ -27761,18 +27757,20 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		}
 	}
 
-	// if is Master Type
-	bool bReadytoHunt =
+	bool bReadytoHunt = (
 		isHuman()
 		|| AI_getUnitAIType() != UNITAI_HUNTER
 		|| qualityRank() > 7
 		// Escorts only count if we aren't currently cargo..
-		|| (!isCargo() &&
-			(getGroup()->countNumUnitAIType(UNITAI_HUNTER_ESCORT) > 0
-				|| GET_PLAYER(getOwner()).getBestUnitType(UNITAI_HUNTER_ESCORT) == NO_UNIT)
-		);
+		|| !isCargo()
+		&& (
+				getGroup()->countNumUnitAIType(UNITAI_HUNTER_ESCORT) > 0
+				||
+				GET_PLAYER(getOwner()).getBestUnitType(UNITAI_HUNTER_ESCORT) == NO_UNIT
+		)
+	);
 
-	//	Get the proper accompaniment
+	// Get the proper accompaniment
 	if (!bReadytoHunt && !isCargo())
 	{
 		if (plot() != NULL && !plot()->isCity(false, getTeam()))
@@ -27787,16 +27785,20 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		{
 			if (m_contractsLastEstablishedTurn != GC.getGame().getGameTurn())
 			{
+				m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
+				m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
+
 				const int priority = HIGHEST_PRIORITY_ESCORT_PRIORITY;
-				GET_PLAYER(getOwner()).getContractBroker().advertiseWork(priority,
+
+				GET_PLAYER(getOwner()).getContractBroker().advertiseWork
+				(
+					priority,
 					NO_UNITCAPABILITIES,
 					getX(),
 					getY(),
 					this,
-					UNITAI_HUNTER_ESCORT);
-
-				m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
-				m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
+					UNITAI_HUNTER_ESCORT
+				);
 
 				if (gUnitLogLevel > 2)
 				{
@@ -27805,9 +27807,9 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 			}
 			getGroup()->pushMission(MISSION_SKIP);
 			return;
-
 		}
-		else if (plot() != NULL && !plot()->isCity(false, getTeam()))
+
+		if (plot() != NULL && !plot()->isCity(false, getTeam()))
 		{
 			if (AI_moveIntoNearestOwnedCity())
 			{
@@ -30087,12 +30089,8 @@ bool CvUnitAI::AI_ambush(int iOddsThreshold, bool bAssassinationOnly)
 		{
 			return getGroup()->pushMissionInternal(MISSION_ASSASSINATE, pPlot->getX(), pPlot->getY());
 		}
-		else
-		{
-			return getGroup()->pushMissionInternal(MISSION_AMBUSH, pPlot->getX(), pPlot->getY());
-		}
+		return getGroup()->pushMissionInternal(MISSION_AMBUSH, pPlot->getX(), pPlot->getY());
 	}
-
 	return false;
 }
 
@@ -30129,52 +30127,41 @@ bool CvUnitAI::AI_activateStatus(bool bStack, PromotionTypes eStatus, CvUnit* pU
 
 bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 {
-	int iValue = 0;
+	if (bStack)
+	{
+		if (getGroup() == NULL)
+		{
+			return false;
+		}
+	}
+	else if (pUnit == NULL)
+	{
+		return false;
+	}
 	int iBestValue = 0;
 	int iWorstValue = 0;
-	int iTemp = 0;
-	int iStatus = 0;
-	PromotionTypes eStatus = NO_PROMOTION;
 	PromotionTypes eBestStatus = NO_PROMOTION;
 	PromotionTypes eWorstStatus = NO_PROMOTION;
-	PromotionTypes eRemoveStatus = NO_PROMOTION;
-	MissionAITypes eMissionAI = NO_MISSIONAI;
-	UnitAITypes eUnitAI = AI_getUnitAIType();
-	if (!bStack)
-	{
-		eUnitAI = pUnit->AI_getUnitAIType();
-	}
-
-	if (getGroup() != NULL)
-	{
-		eMissionAI = getGroup()->AI_getMissionAIType();
-	}
-	else if (bStack)
-	{
-		return false;
-	}
-
-	if (!bStack && pUnit == NULL)
-	{
-		return false;
-	}
+	const MissionAITypes eMissionAI = getGroup() ? getGroup()->AI_getMissionAIType() : NO_MISSIONAI;
+	const UnitAITypes eUnitAI = bStack ? AI_getUnitAIType() : pUnit->AI_getUnitAIType();
 
 	const PromotionLineTypes promotionLineStandout = GC.getPROMOTIONLINE_STANDOUT();
 
 	for (int iI = 0; iI < GC.getGame().getNumStatusPromotions(); iI++)
 	{
-		iValue = 0;
-		iStatus = GC.getGame().getStatusPromotion(iI);
-		eStatus = (PromotionTypes)iStatus;
+		int iValue = 0;
+		const int iStatus = GC.getGame().getStatusPromotion(iI);
+		const PromotionTypes eStatus = (PromotionTypes)iStatus;
 		const CvPromotionInfo& kPromotion = GC.getPromotionInfo(eStatus);
+		PromotionTypes eRemoveStatus = NO_PROMOTION;
+
 		for (int iJ = 0; iJ < GC.getGame().getNumStatusPromotions(); iJ++)
 		{
-			if (kPromotion.getPromotionLine() == GC.getPromotionInfo((PromotionTypes)GC.getGame().getStatusPromotion(iJ)).getPromotionLine())
+			if (kPromotion.getPromotionLine() == GC.getPromotionInfo((PromotionTypes)GC.getGame().getStatusPromotion(iJ)).getPromotionLine()
+			&& GC.getPromotionInfo((PromotionTypes)GC.getGame().getStatusPromotion(iJ)).getLinePriority() == 1)
 			{
-				if (GC.getPromotionInfo((PromotionTypes)GC.getGame().getStatusPromotion(iJ)).getLinePriority() == 1)
-				{
-					eRemoveStatus = (PromotionTypes)GC.getGame().getStatusPromotion(iJ);
-				}
+				eRemoveStatus = (PromotionTypes)GC.getGame().getStatusPromotion(iJ);
+				break;
 			}
 		}
 		if (kPromotion.getLinePriority() != 1)
@@ -30185,7 +30172,7 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 				{
 					//Keep things as thin as possible here - program in as new statuses are introduced
 					//Stay the Hand
-					iTemp = kPromotion.getDefenseOnlyChange();
+					int iTemp = kPromotion.getDefenseOnlyChange();
 					if (iTemp != 0)
 					{
 						if (eMissionAI == MISSIONAI_SPREAD ||
@@ -30364,12 +30351,10 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 					iValue += iTemp;
 
 				}
-				if (iValue < 0)
+				// If any can remove
+				if (iValue < 0 && !getGroup()->canDoCommand(COMMAND_STATUS, (int)eRemoveStatus, 0, false, false, false))
 				{
-					if (!getGroup()->canDoCommand(COMMAND_STATUS, (int)eRemoveStatus, 0, false, false, false/*if any can remove*/))
-					{
-						iValue = 0;
-					}
+					iValue = 0;
 				}
 			}
 			else
@@ -30381,7 +30366,7 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 					//Standout
 					if (pUnit->hasInvisibleAbility())
 					{
-						iTemp = 0;
+						int iTemp = 0;
 						//only care about the NegatesInvisibilityTypes which have an actual effect
 						for (int iN = 0; iN < kPromotion.getNumNegatesInvisibilityTypes(); iN++)
 						{
@@ -30478,7 +30463,7 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 
 					//Enhanced March
 					//Moves
-					iTemp = kPromotion.getMovesChange();
+					int iTemp = kPromotion.getMovesChange();
 					if (iTemp != 0)
 					{
 						if ((eMissionAI == MISSIONAI_SPREAD ||
@@ -30532,12 +30517,10 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 					iTemp /= 10;
 					iValue += iTemp;
 				}
-				if (iValue < 0)
+
+				if (iValue < 0 && !pUnit->canDoCommand(COMMAND_STATUS, (int)eRemoveStatus, 0))
 				{
-					if (!pUnit->canDoCommand(COMMAND_STATUS, (int)eRemoveStatus, 0))
-					{
-						iValue = 0;
-					}
+					iValue = 0;
 				}
 			}
 		}
@@ -30552,18 +30535,19 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 			eWorstStatus = eRemoveStatus;
 		}
 	}
-	int iCompare = iBestValue - iWorstValue;
+	const int iCompare = iBestValue - iWorstValue;
+
 	if (iCompare < 0 && eWorstStatus != NO_PROMOTION)
 	{
-		return (AI_activateStatus(bStack, eWorstStatus, pUnit) && !GC.getPromotionInfo(eWorstStatus).isQuick());
+		return AI_activateStatus(bStack, eWorstStatus, pUnit) && !GC.getPromotionInfo(eWorstStatus).isQuick();
 		//setWorstStatus
 	}
-	else if (iCompare > 0 && eBestStatus != NO_PROMOTION && !isHasPromotion(eBestStatus))
+
+	if (iCompare > 0 && eBestStatus != NO_PROMOTION && !isHasPromotion(eBestStatus))
 	{
-		return (AI_activateStatus(bStack, eBestStatus, pUnit) && !GC.getPromotionInfo(eBestStatus).isQuick());
+		return AI_activateStatus(bStack, eBestStatus, pUnit) && !GC.getPromotionInfo(eBestStatus).isQuick();
 		//setBestStatus
 	}
-	//else
 	return false;
 }
 
