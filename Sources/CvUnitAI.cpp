@@ -27785,9 +27785,6 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		{
 			if (m_contractsLastEstablishedTurn != GC.getGame().getGameTurn())
 			{
-				m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
-				m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
-
 				const int priority = HIGHEST_PRIORITY_ESCORT_PRIORITY;
 
 				GET_PLAYER(getOwner()).getContractBroker().advertiseWork
@@ -27799,6 +27796,8 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 					this,
 					UNITAI_HUNTER_ESCORT
 				);
+				m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
+				m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
 
 				if (gUnitLogLevel > 2)
 				{
