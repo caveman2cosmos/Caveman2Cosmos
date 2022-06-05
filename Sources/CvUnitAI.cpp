@@ -22287,18 +22287,16 @@ bool CvUnitAI::processContracts(int iMinPriority)
 		}
 		else
 		{
-			if (!getGroup()->pushMissionInternal(MISSION_MOVE_TO, iAtX, iAtY, MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS, false, false, (pJoinUnit == NULL ? MISSIONAI_CONTRACT : MISSIONAI_CONTRACT_UNIT), pTargetPlot))
+			if (!getGroup()->pushMissionInternal(MISSION_MOVE_TO, pTargetPlot->getX(), pTargetPlot->getY(), MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS, false, false, (pJoinUnit == NULL ? MISSIONAI_CONTRACT : MISSIONAI_CONTRACT_UNIT), pTargetPlot))
 			{
 				if (gUnitLogLevel >= 3)
 				{
 					logBBAI("	...unexpectedly unable to enact the work!");
 				}
-
 				//	Handle as if we found no work this turn since we cannot safely path to it
 				m_contractualState = CONTRACTUAL_STATE_NO_WORK_FOUND;
 				return false;
 			}
-
 			//	We only reset the contract establishment if we actively move to
 			//	fulfill it.  This is so that:
 			//	1)	In the move case, if the move doesn't use up all our movement allowance we can
@@ -22309,7 +22307,6 @@ bool CvUnitAI::processContracts(int iMinPriority)
 			m_contractsLastEstablishedTurn = -1;
 			m_contractualState = CONTRACTUAL_STATE_NONE;
 		}
-
 		return true;
 	}
 
