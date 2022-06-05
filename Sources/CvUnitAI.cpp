@@ -22156,7 +22156,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 
 bool CvUnitAI::AI_isAwaitingContract() const
 {
-	return (m_contractsLastEstablishedTurn == GC.getGame().getGameTurn() && 
+	return (m_contractsLastEstablishedTurn == GC.getGame().getGameTurn() &&
 			(m_contractualState == CONTRACTUAL_STATE_AWAITING_ANSWER || m_contractualState == CONTRACTUAL_STATE_AWAITING_WORK));
 }
 
@@ -22207,8 +22207,8 @@ bool CvUnitAI::processContracts(int iMinPriority)
 					GET_PLAYER(getOwner()).getCivilizationDescription(0),
 					getX(),
 					getY(),
-					iAtX,
-					iAtY,
+					(pJoinUnit == NULL ? iAtX : pJoinUnit->getX()),
+					(pJoinUnit == NULL ? iAtY : pJoinUnit->getY()),
 					(pJoinUnit == NULL ? -1 : pJoinUnit->getID()));
 		}
 
@@ -22245,7 +22245,6 @@ bool CvUnitAI::processContracts(int iMinPriority)
 				joinGroup(NULL);
 			}
 		}
-
 		//	Try to enact the contracted work
 		CvPlot* pTargetPlot;
 
@@ -22304,8 +22303,7 @@ bool CvUnitAI::processContracts(int iMinPriority)
 			//	2)	In the non-move case we retain the knowledge that we've already looked and not found
 			//		anything in particular to do - this prevents other units grouping with us and setting us back
 			//		awake
-			m_contractsLastEstablishedTurn = -1;
-			m_contractualState = CONTRACTUAL_STATE_NONE;
+			contractFulfilled();
 		}
 		return true;
 	}
