@@ -157,7 +157,7 @@ bool CvSelectionGroupAI::AI_update()
 	while (m_bGroupAttack && !bFailedAlreadyFighting || readyToMove())
 	{
 		iTempHack++;
-		if (iTempHack > 90 && iTempHack < 100)
+		if (iTempHack > 45 && iTempHack < 50)
 		{
 			CvUnit* pHeadUnit = getHeadUnit();
 			if (NULL != pHeadUnit)
@@ -178,7 +178,7 @@ bool CvSelectionGroupAI::AI_update()
 			}
 			else FErrorMsg("error");
 		}
-		else if (iTempHack >= 100)
+		else if (iTempHack >= 50)
 		{
 			CvUnit* pHeadUnit = getHeadUnit();
 			if (NULL != pHeadUnit)
@@ -225,9 +225,9 @@ bool CvSelectionGroupAI::AI_update()
 			}
 			resetPath();
 
-			if (!pHeadUnit->AI_update())
+			if (pHeadUnit->AI_update())
 			{
-				// AI_update returns false when we should abort the loop and wait until next slice
+				// AI_update returns true when we should abort the loop and wait until next slice
 				break;
 			}
 		}
@@ -276,11 +276,7 @@ bool CvSelectionGroupAI::AI_update()
 		{
 			pushMission(MISSION_SKIP);
 		}
-
-		// AI should never put units to sleep, how does this ever happen?
-		//FAssert( getHeadUnit()->isCargo() || getActivityType() != ACTIVITY_SLEEP );
 	}
-
 	return !bDead && (isBusy() || isCargoBusy());
 }
 
