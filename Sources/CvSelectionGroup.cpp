@@ -5509,7 +5509,6 @@ void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 				if (pLoopUnit->canJoinGroup(pLoopUnit->plot(), pSelectionGroup))
 				{
 					pLoopUnit->joinGroup(pSelectionGroup);
-					pSelectionGroup->clearMissionQueue();
 					pUnitNode = headUnitNode();
 				}
 				else

@@ -1711,6 +1711,7 @@ public:
 	virtual void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd) = 0;
 	virtual bool isWaitingOnUnitAI(int iIndex) const = 0;
 	virtual bool isWaitingOnUnitAIAny() const = 0;
+	virtual bool processContracts(int iMinPriority = 0) = 0;
 
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
 

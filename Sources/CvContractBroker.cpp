@@ -802,8 +802,7 @@ void CvContractBroker::postProcessUnitsLookingForWork()
 
 		if (unitX)
 		{
-			unitX->getGroup()->setForceUpdate(true);
-			unitX->getGroup()->AI_update();
+			unitX->getGroup()->getHeadUnit()->processContracts();
 		}
 	}
 }
