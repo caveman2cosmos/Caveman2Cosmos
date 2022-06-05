@@ -755,7 +755,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	{
 		foreach_(CvUnit * unitX, units())
 		{
-			if (unitX->isDead() || unitX->isDelayedDeath())
+			if (unitX->isDead())
 			{
 				continue;
 			}
@@ -12963,11 +12963,7 @@ void CvPlayerAI::AI_noteMissionAITargetCountChange(MissionAITypes eMissionAI, co
 	}
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  04/03/10								jdog5000	  */
-/*																							  */
-/* General AI																				   */
-/************************************************************************************************/
+
 int CvPlayerAI::AI_cityTargetUnitsByPath(const CvCity* pCity, const CvSelectionGroup* pSkipSelectionGroup, int iMaxPathTurns) const
 {
 	PROFILE_FUNC();
@@ -13025,13 +13021,10 @@ int CvPlayerAI::AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes* aeM
 
 	foreach_(CvSelectionGroup * group, groups())
 	{
-		if (group == pSkipSelectionGroup
-			|| group->AI_getMissionAIUnit() != pUnit)
+		if (group == pSkipSelectionGroup || group->AI_getMissionAIUnit() != pUnit)
 		{
 			continue;
 		}
-
-
 		int iPathTurns = MAX_INT;
 
 		if (iMaxPathTurns >= 0 && pUnit->plot() != NULL && group->plot() != NULL)
@@ -13068,12 +13061,9 @@ int CvPlayerAI::AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes* aeM
 			}
 		}
 	}
-
 	return iCount;
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
+
 
 int CvPlayerAI::AI_enemyTargetMissionAIs(MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup) const
 {

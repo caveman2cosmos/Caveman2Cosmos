@@ -150,11 +150,64 @@ bool CvSelectionGroupAI::AI_update()
 
 	FAssert(!GET_PLAYER(getOwner()).isAutoMoves() || isHuman());
 
+	int iTempHack = 0; // XXX
 	bool bDead = false;
 	bool bFailedAlreadyFighting = false;
 
 	while (m_bGroupAttack && !bFailedAlreadyFighting || readyToMove())
 	{
+		iTempHack++;
+		if (iTempHack > 45 && iTempHack < 50)
+		{
+			CvUnit* pHeadUnit = getHeadUnit();
+			if (NULL != pHeadUnit)
+			{
+				int iPass = iTempHack - 90;
+				char szOut[1024];
+				CvWString szTempString;
+				getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+				sprintf
+				(
+					szOut, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n",
+					iPass, pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+					pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString()
+				);
+				gDLL->messageControlLog(szOut);
+
+				FErrorMsg(szOut);
+			}
+			else FErrorMsg("error");
+		}
+		else if (iTempHack >= 50)
+		{
+			CvUnit* pHeadUnit = getHeadUnit();
+			if (NULL != pHeadUnit)
+			{
+				char szOut[1024];
+				CvWString szTempString;
+				getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+				sprintf
+				(
+					szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n",
+					pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+					pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString()
+				);
+				gDLL->messageControlLog(szOut);
+
+				FErrorMsg(szOut);
+
+				pHeadUnit->finishMoves();
+			}
+			else if (readyToMove())
+			{
+				FErrorMsg("splitting group");
+				splitGroup(1);
+				break;
+			}
+			else FErrorMsg("error");
+
+			break;
+		}
 		// if we want to force the group to attack, force another attack
 		if (m_bGroupAttack)
 		{
@@ -223,11 +276,7 @@ bool CvSelectionGroupAI::AI_update()
 		{
 			pushMission(MISSION_SKIP);
 		}
-
-		// AI should never put units to sleep, how does this ever happen?
-		//FAssert( getHeadUnit()->isCargo() || getActivityType() != ACTIVITY_SLEEP );
 	}
-
 	return !bDead && (isBusy() || isCargoBusy());
 }
 

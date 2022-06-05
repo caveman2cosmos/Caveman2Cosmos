@@ -2638,8 +2638,7 @@ public:
 	void changeExtraBombardRate(int iChange);
 	void setExtraBombardRate(int iChange);
 	int getBombardRate() const;
-	int getSMBombardRateTotalBase() const;
-	int getSMBombardRate() const;
+	int getBombardRateBase() const;
 	void setSMBombardRate();
 
 	int getAirBombCurrRate() const;

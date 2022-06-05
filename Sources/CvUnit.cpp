@@ -6489,7 +6489,7 @@ void CvUnit::attack(CvPlot* pPlot, bool bQuick, bool bStealth, bool bNoCache)
 	//TB Combat Mods begin
 	pPlot->doPreAttackTraps(this);
 
-	if (!isDead() && !isDelayedDeath())
+	if (!isDead())
 	{
 		if (!pPlot->hasDefender(false, NO_PLAYER, getOwner(), this, true, false, false, true) && pPlot->hasStealthDefender(this))
 		{
@@ -12964,7 +12964,7 @@ bool CvUnit::isHurt() const
 
 bool CvUnit::isDead() const
 {
-	return (getDamage() >= getMaxHP());
+	return isDelayedDeath() || (getDamage() >= getMaxHP());
 }
 
 
@@ -14351,7 +14351,7 @@ bool CvUnit::isFortifyable() const
 
 bool CvUnit::isBuildUpable() const
 {
-	if (isDelayedDeath() || isDead())
+	if (isDead())
 	{
 		return false;
 	}
@@ -15785,10 +15785,8 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 				OutputDebugString(CvString::format("%S (%d) CvUnit::setXY (%d,%d)\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
 				foreach_(CvUnit* unitX, pNewPlot->units_safe())
 				{
-					//OutputDebugString(CvString::format("DEAD=%d - DD=%d - CvUnit::setXY...unitX\n", (int)unitX->isDead(), (int)unitX->isDelayedDeath()).c_str());
-					if (unitX->isDead() || unitX->isDelayedDeath())
-						continue; // isDead() happens for cargo on non-debug dll, while isDelayedDeath() happens for cargo on the debug dll.
-					//OutputDebugString(CvString::format("CvUnit::setXY...unitX=%S\n", unitX->getDescription().c_str()).c_str());
+					if (unitX->isDead())
+						continue;
 
 					if ((isEnemy(unitX->getTeam(), pNewPlot) || unitX->isEnemy(getTeam())) && !unitX->canCoexistWithAttacker(*this))
 					{
@@ -19072,7 +19070,7 @@ bool CvUnit::isDelayedDeath() const
 bool CvUnit::doDelayedDeath()
 {
 	// Koshling - added 'isDead' check to clean up units with 100% damage that have somehow been left behind
-	if ((m_bDeathDelay || isDead()) && !isFighting())
+	if (isDead() && !isFighting())
 	{
 		killUnconditional(false, NO_PLAYER, true);
 		return true;
@@ -21934,7 +21932,7 @@ void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, 
 
 			// When promotions are being removed as part of killing a unit we dont want to add any more or invoke obsoletion checks,
 			//	which results in lots of extra processing, and can also generate retrain messages for the dying units!
-			if (!isDead() && !isDelayedDeath() && !bDying)
+			if (!isDead() && !bDying)
 			{
 				checkPromotionObsoletion();
 				checkFreetoCombatClass();
@@ -35111,7 +35109,6 @@ bool CvUnit::canMerge(bool bAutocheck) const
 		|| isFighting()
 		|| isCargo()
 		|| hasCargo()
-		|| isDelayedDeath()
 		|| isSpy()
 		|| hasMoved()
 		|| groupRank() >= eraGroupMergeLimit()
@@ -35145,7 +35142,6 @@ bool CvUnit::canMerge(bool bAutocheck) const
 			&& !pLoopUnit->isFighting()
 			&& !pLoopUnit->isCargo()
 			&& !pLoopUnit->hasCargo()
-			&& !pLoopUnit->isDelayedDeath()
 			&& !pLoopUnit->isSpy()
 			&& !pLoopUnit->hasMoved()
 			&& pLoopUnit->baseWorkRate() < 1
@@ -35196,7 +35192,7 @@ bool CvUnit::canSplit() const
 		return false;
 	}
 
-	if (isHurt() || isDead() || isFighting() || isCargo() || hasCargo() || isDelayedDeath() || isSpy() || hasMoved() || isInhibitSplit() )
+	if (isHurt() || isDead() || isFighting() || isCargo() || hasCargo() || isSpy() || hasMoved() || isInhibitSplit() )
 	{
 		return false;
 	}
@@ -35277,7 +35273,6 @@ void CvUnit::doMerge()
 				&& !pLoopUnit->isFighting()
 				&& !pLoopUnit->isCargo()
 				&& !pLoopUnit->hasCargo()
-				&& !pLoopUnit->isDelayedDeath()
 				&& !pLoopUnit->isSpy()
 				&& !pLoopUnit->hasMoved()
 				)
@@ -35938,44 +35933,27 @@ void CvUnit::setExtraBombardRate(int iChange)
 // The call that plugs into the rest of the code (final value) - this can be plugged into the existing final - or even be renamed to the existing final (though experience has shown me this causes me tremendous confusion!)
 int CvUnit::getBombardRate() const
 {
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
-	// if the current final result of the SMM multiplicative mechanism is nothing but an empty shell
-	// then this is the first time it's being run so we take from the base value to start.
-	// Either that or the base is 0 anyhow.
-	|| getSMBombardRate() == 0)
+	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
-		return std::max(0, getSMBombardRateTotalBase());
+		return m_iSMBombardRate;
 	}
-	return std::max(0, getSMBombardRate());
+	return getBombardRateBase();
 }
 
 // The total before the Size Matters multiplicative method adjusts for the final value.
-int CvUnit::getSMBombardRateTotalBase() const
+int CvUnit::getBombardRateBase() const
 {
-	// If there is a flat base not defined on the unit itself then it needs to plug in here.
-	// The following lines can vary depending on if you want an approaching 0 return, diminishing return, max or whatever
-	// size matters most won't need a diminishing return and in fact would be harmed by it as it needs true values to work with
-	// In THIS case, units can easily have NO bombard rate (there's a check above to make sure it's not less than 0 as that would be an odd situation.)
-	// If this value starts going less than 0 then perhaps a min needs to be established.
-	return m_pUnitInfo->getBombardRate() + getExtraBombardRate();
-}
-
-int CvUnit::getSMBombardRate() const//The final result of the Multiplicative adjustment
-{
-	return m_iSMBombardRate;//A separate (likely new) data storage to track the multiplicated value.
+	return std::max(0, m_pUnitInfo->getBombardRate() + getExtraBombardRate());
 }
 
 ////The active call to establish the current proper adjusted value.
 ////This is the core multiplicative method being utilized.
 void CvUnit::setSMBombardRate()
 {
-	m_iSMBombardRate = applySMRank(getSMBombardRateTotalBase(),
-		getSizeMattersOffsetValue(),
-		GC.getSIZE_MATTERS_MOST_MULTIPLIER());
+	m_iSMBombardRate = applySMRank(getBombardRateBase(), getSizeMattersOffsetValue(), GC.getSIZE_MATTERS_MOST_MULTIPLIER());
 
 	// optional but most of these should be above or equal to 0.
 	FASSERT_NOT_NEGATIVE(m_iSMBombardRate);
-	m_iSMBombardRate = std::max(0, m_iSMBombardRate);
 }
 
 
@@ -38089,7 +38067,7 @@ bool CvUnit::canArrest() const
 			return false;
 		}
 		const CvPlot* pPlot = plot();
-		if (canMove() && canAttack() && !isDead() && !isFighting() && !isCargo() && !isDelayedDeath() && getGroup()->getNumUnits() == 1)
+		if (canMove() && canAttack() && !isDead() && !isFighting() && !isCargo() && getGroup()->getNumUnits() == 1)
 		{
 			if (pPlot != NULL)
 			{
@@ -38131,7 +38109,7 @@ void CvUnit::doArrest()
 				{
 					if (GET_PLAYER(pLoopUnit->getOwner()).getArrestingUnit() != pLoopUnit->getID())
 					{
-						if (!pLoopUnit->isInvisible(GET_PLAYER(getOwner()).getTeam(), false) && !pLoopUnit->isDead() && !pLoopUnit->isFighting() && !pLoopUnit->isDelayedDeath() && !pLoopUnit->isSpy())
+						if (!pLoopUnit->isInvisible(GET_PLAYER(getOwner()).getTeam(), false) && !pLoopUnit->isDead() && !pLoopUnit->isFighting() && !pLoopUnit->isSpy())
 						{
 							const int iOdds = getCombatOdds(this, pLoopUnit);
 							if (iOdds > 50 && iOdds > iBestOdds)

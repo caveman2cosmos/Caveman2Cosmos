@@ -124,6 +124,7 @@ public:
 	//	returns true if a contract is made along with the details of what to do
 	bool	makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*& pJoinUnit, bool bThisPlotOnly);
 	void	finalizeTenderContracts();
+	void postProcessUnitsLookingForWork();
 
 private:
 	const workRequest*	findWorkRequest(int iWorkRequestId) const;

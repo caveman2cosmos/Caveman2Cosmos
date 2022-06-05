@@ -7115,6 +7115,7 @@ void CvGame::updateMoves()
 				if (!player.isAutoMoves())
 				{
 					player.AI_unitUpdate();
+					player.getContractBroker().postProcessUnitsLookingForWork();
 
 					if (!player.hasBusyUnit() && !player.hasReadyUnit(true))
 					{

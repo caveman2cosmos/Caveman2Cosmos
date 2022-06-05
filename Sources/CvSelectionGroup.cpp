@@ -481,7 +481,7 @@ void CvSelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2
 {
 	if ( eMission == MISSION_SKIP && eMissionAI == NO_MISSIONAI)
 	{
-		//	No longer targeting any mission - make sure we don't keep reciord of the fact that we were previously
+		//	No longer targeting any mission - make sure we don't keep record of the fact that we were previously
 		((CvSelectionGroupAI*)this)->AI_setMissionAI(NO_MISSIONAI,NULL,NULL);
 	}
 	pushMissionInternal(eMission, iData1, iData2, iFlags, bAppend, bManual, eMissionAI, pMissionAIPlot, pMissionAIUnit);
@@ -3934,13 +3934,12 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 						pBestAttackUnit->attack(pDestPlot, bQuick, bLoopStealthDefense);
 					}
 				}
-				else if (pBestDefender)
-				{
-					pBestAttackUnit->attack(pDestPlot, false, bLoopStealthDefense);
-					break;
-				}
 				else
 				{
+					if (pBestDefender)
+					{
+						pBestAttackUnit->attack(pDestPlot, false, bLoopStealthDefense);
+					}
 					break;
 				}
 				// Afforess 6/20/11
@@ -5475,7 +5474,7 @@ void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 	// this means that if a new unit is going to become the head, change its AI to match, if possible
 	// AI_setUnitAIType removes the unit from the current group (at least currently), so we have to be careful in the loop here
 	// so, loop until we have not changed unit AIs
-	bool bChangedUnitAI;
+	bool bChangedUnitAI = true;
 	do
 	{
 		bChangedUnitAI = false;
@@ -5486,7 +5485,6 @@ void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 		while (pUnitNode != NULL && !bChangedUnitAI)
 		{
 			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-			//pUnitNode = nextUnitNode(pUnitNode);
 
 			if (pLoopUnit != NULL)
 			{
@@ -5511,6 +5509,7 @@ void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 				if (pLoopUnit->canJoinGroup(pLoopUnit->plot(), pSelectionGroup))
 				{
 					pLoopUnit->joinGroup(pSelectionGroup);
+					pSelectionGroup->clearMissionQueue();
 					pUnitNode = headUnitNode();
 				}
 				else
@@ -6130,12 +6129,9 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 						}
 					}
 
-					if (isHuman())
+					if (isHuman() && !isLastPathPlotVisible() && getDomainType() != DOMAIN_AIR)
 					{
-						if (!(isLastPathPlotVisible()) && (getDomainType() != DOMAIN_AIR))
-						{
-							return false;
-						}
+						return false;
 					}
 
 					CvUnit* pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, bStealth);
@@ -6206,7 +6202,6 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 										}
 									}
 								}
-
 								bBombardExhausted = !bFoundBombard;
 
 								continue;
@@ -6223,7 +6218,6 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 							{
 								AI_queueGroupAttack(iX, iY);
 							}
-
 							break;
 						}
 					}

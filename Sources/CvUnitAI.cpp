@@ -227,196 +227,200 @@ bool CvUnitAI::AI_update()
 	{
 		return false;
 	}
+
 	if (getGroup()->isAutomated())
 	{
 		switch (getGroup()->getAutomateType())  // NOLINT(clang-diagnostic-switch-enum)
 		{
-		case AUTOMATE_BUILD:
-		{
-			if (AI_getUnitAIType() == UNITAI_WORKER)
+			case AUTOMATE_BUILD:
 			{
-				AI_workerMove();
-			}
-			else if (AI_getUnitAIType() == UNITAI_WORKER_SEA)
-			{
-				AI_workerSeaMove();
-			}
-			else
-			{
-				FErrorMsg("error");
-			}
-			break;
-		}
-		case AUTOMATE_NETWORK:
-			AI_networkAutomated();
-			// XXX else wake up???
-			break;
-		case AUTOMATE_CITY:
-			AI_cityAutomated();
-			// XXX else wake up???
-			break;
-		case AUTOMATE_EXPLORE:
-		{
-			switch (getDomainType())
-			{
-			case DOMAIN_SEA:
-			{
-				AI_exploreSeaMove();
-				break;
-			}
-			case DOMAIN_AIR:
-			{
-				// if we are cargo (on a carrier), hold if the carrier is not done moving yet
-				const CvUnit* pTransportUnit = getTransportUnit();
-				if (pTransportUnit != NULL
-				&& pTransportUnit->isAutomated()
-				&& pTransportUnit->canMove()
-				&& pTransportUnit->getGroup()->getActivityType() != ACTIVITY_HOLD)
+				if (AI_getUnitAIType() == UNITAI_WORKER)
 				{
-					getGroup()->pushMission(MISSION_SKIP);
-					break;
+					AI_workerMove();
 				}
-				AI_exploreAirMove(); // Have air units explore like AI units do
-				break;
-			}
-			case DOMAIN_LAND:
-			{
-				AI_exploreMove();
-				break;
-			}
-			case NO_DOMAIN:
-			case DOMAIN_IMMOBILE:
-			case NUM_DOMAIN_TYPES:
-			default:
-			{
-				FErrorMsg("error");
-				break;
-			}
-			}
-			// if we have air cargo (we are a carrier), and are done moving, explore with the aircraft as well
-			if (hasCargo() && getDomainCargo() == DOMAIN_AIR
-			&& (!canMove() || getGroup()->getActivityType() == ACTIVITY_HOLD))
-			{
-				std::vector<CvUnit*> aCargoUnits;
-				getCargoUnits(aCargoUnits);
-				if (!aCargoUnits.empty())
+				else if (AI_getUnitAIType() == UNITAI_WORKER_SEA)
 				{
-					validateCargoUnits();
+					AI_workerSeaMove();
 				}
-				foreach_(const CvUnit * pCargoUnit, aCargoUnits)
+				else FErrorMsg("error");
+
+				break;
+			}
+			case AUTOMATE_NETWORK:
+			{
+				AI_networkAutomated();
+				break;
+			}
+			case AUTOMATE_CITY:
+			{
+				AI_cityAutomated();
+				break;
+			}
+			case AUTOMATE_EXPLORE:
+			{
+				switch (getDomainType())
 				{
-					FAssert(isAutomated())
+					case DOMAIN_SEA:
+					{
+						AI_exploreSeaMove();
+						break;
+					}
+					case DOMAIN_AIR:
+					{
+						// if we are cargo (on a carrier), hold if the carrier is not done moving yet
+						const CvUnit* pTransportUnit = getTransportUnit();
+						if (pTransportUnit != NULL
+						&& pTransportUnit->isAutomated()
+						&& pTransportUnit->canMove()
+						&& pTransportUnit->getGroup()->getActivityType() != ACTIVITY_HOLD)
+						{
+							getGroup()->pushMission(MISSION_SKIP);
+							break;
+						}
+						AI_exploreAirMove(); // Have air units explore like AI units do
+						break;
+					}
+					case DOMAIN_LAND:
+					{
+						AI_exploreMove();
+						break;
+					}
+					default: FErrorMsg("error");
+				}
+				// if we have air cargo (we are a carrier), and are done moving, explore with the aircraft as well
+				if (hasCargo() && getDomainCargo() == DOMAIN_AIR
+				&& (!canMove() || getGroup()->getActivityType() == ACTIVITY_HOLD))
+				{
+					std::vector<CvUnit*> aCargoUnits;
+					getCargoUnits(aCargoUnits);
+					if (!aCargoUnits.empty())
+					{
+						validateCargoUnits();
+					}
+					foreach_(const CvUnit * pCargoUnit, aCargoUnits)
+					{
+						FAssert(isAutomated())
 
 						if (pCargoUnit->getDomainType() == DOMAIN_AIR && pCargoUnit->canMove())
 						{
 							pCargoUnit->getGroup()->setAutomateType(AUTOMATE_EXPLORE);
 							pCargoUnit->getGroup()->setActivityType(ACTIVITY_AWAKE);
 						}
+					}
 				}
-			}
-			break;
-		}
-		case AUTOMATE_RELIGION:
-		{
-			if (AI_getUnitAIType() == UNITAI_MISSIONARY)
-			{
-				AI_missionaryMove();
-			}
-			else if (getGroup()->hasUnitOfAI(UNITAI_MISSIONARY))
-			{
-				CvSelectionGroup* pGroup = getGroup();
-				joinGroup(NULL);
-				joinGroup(pGroup);
-				getGroup()->setAutomateType(AUTOMATE_RELIGION);
-			}
-			else
-			{
-				getGroup()->setAutomateType(NO_AUTOMATE);
-			}
-			break;
-		}
-		case AUTOMATE_PILLAGE:
-			AI_AutomatedpillageMove();
-			break;
-		case AUTOMATE_HUNT:
-			AI_SearchAndDestroyMove();
-			break;
-		case AUTOMATE_CITY_DEFENSE:
-			AI_cityDefense();
-			break;
-		case AUTOMATE_BORDER_PATROL:
-			AI_borderPatrol();
-			break;
-		case AUTOMATE_PIRATE:
-			AI_pirateSeaMove();
-			break;
-		case AUTOMATE_HURRY:
-			AI_merchantMove();
-			break;
-			//Yes, these automations do the same thing, but they act differently for different units.
-		case AUTOMATE_AIRSTRIKE:
-		case AUTOMATE_AIRBOMB:
-			AI_autoAirStrike();
-			break;
-		case AUTOMATE_AIR_RECON:
-			AI_exploreAirMove();
-			break;
-		case AUTOMATE_UPGRADING:
-		case AUTOMATE_CANCEL_UPGRADING:
-		case AUTOMATE_PROMOTIONS:
-		case AUTOMATE_CANCEL_PROMOTIONS:
-			FErrorMsg("SelectionGroup Should Not be Using These Automations!")
 				break;
-		case AUTOMATE_SHADOW:
-		{
-			// If we've lost the unit we're shadowing,
-			// not sure how this can happen but empirically it's been seen,
-			// then lose the automation.
-			if (getShadowUnit() == NULL)
-			{
-				getGroup()->setAutomateType(NO_AUTOMATE);
 			}
-			else
+			case AUTOMATE_RELIGION:
 			{
-				AI_shadowMove();
+				if (AI_getUnitAIType() == UNITAI_MISSIONARY)
+				{
+					AI_missionaryMove();
+				}
+				else if (getGroup()->hasUnitOfAI(UNITAI_MISSIONARY))
+				{
+					CvSelectionGroup* pGroup = getGroup();
+					joinGroup(NULL);
+					joinGroup(pGroup);
+					getGroup()->setAutomateType(AUTOMATE_RELIGION);
+				}
+				else
+				{
+					getGroup()->setAutomateType(NO_AUTOMATE);
+				}
+				break;
 			}
-			break;
-		}
-		default:
-		{
-			FErrorMsg("error");
-			break;
-		}
+			case AUTOMATE_PILLAGE:
+			{
+				AI_AutomatedpillageMove();
+				break;
+			}
+			case AUTOMATE_HUNT:
+			{
+				AI_SearchAndDestroyMove();
+				break;
+			}
+			case AUTOMATE_CITY_DEFENSE:
+			{
+				AI_cityDefense();
+				break;
+			}
+			case AUTOMATE_BORDER_PATROL:
+			{
+				AI_borderPatrol();
+				break;
+			}
+			case AUTOMATE_PIRATE:
+			{
+				AI_pirateSeaMove();
+				break;
+			}
+			case AUTOMATE_HURRY:
+			{
+				AI_merchantMove();
+				break;
+			}
+			//Yes, these automations do the same thing, but they act differently for different units.
+			case AUTOMATE_AIRSTRIKE:
+			case AUTOMATE_AIRBOMB:
+			{
+				AI_autoAirStrike();
+				break;
+			}
+			case AUTOMATE_AIR_RECON:
+			{
+				AI_exploreAirMove();
+				break;
+			}
+			case AUTOMATE_UPGRADING:
+			case AUTOMATE_CANCEL_UPGRADING:
+			case AUTOMATE_PROMOTIONS:
+			case AUTOMATE_CANCEL_PROMOTIONS:
+			{
+				FErrorMsg("SelectionGroup Should Not be Using These Automations!");
+				break;
+			}
+			case AUTOMATE_SHADOW:
+			{
+				// If we've lost the unit we're shadowing,
+				// not sure how this can happen but empirically it's been seen,
+				// then lose the automation.
+				if (getShadowUnit() == NULL)
+				{
+					getGroup()->setAutomateType(NO_AUTOMATE);
+				}
+				else
+				{
+					AI_shadowMove();
+				}
+				break;
+			}
+			default: FErrorMsg("error");
 		}
 		// if no longer automated, then we want to bail
 		return !isDelayedDeath() && !getGroup()->isAutomated();
 	}
+
+	// No confirmed garrison city until we reaffirm it with another set
+	m_iAffirmedGarrisonCity = -1;
+
+	if (isNPC())
+	{
+		PROFILE("CvUnitAI::AI_Update.NPC");
+
+		doUnitAIMove();
+	}
 	else
 	{
-		// No confirmed garrison city until we reaffirm it with another set
-		m_iAffirmedGarrisonCity = -1;
+		PROFILE("CvUnitAI::AI_Update.civ");
 
-		if (isNPC())
-		{
-			PROFILE("CvUnitAI::AI_Update.NPC");
+		doUnitAIMove();
+	}
 
-			doUnitAIMove();
-		}
-		else
-		{
-			PROFILE("CvUnitAI::AI_Update.civ");
-
-			doUnitAIMove();
-		}
-
-		if (NULL != getGroup() && !isDelayedDeath()
-		&& m_iGarrisonCity != -1 && m_iAffirmedGarrisonCity == -1)
-		{
-			// This group has done something else (presumably of higher priority)
-			//	so should no longer be considered part of the city's garrison
-			AI_setAsGarrison();
-			//TB DEBUG NOTE: Unit must have been dying after taking its move?
-		}
+	if (NULL != getGroup() && !isDelayedDeath() && m_iGarrisonCity != -1 && m_iAffirmedGarrisonCity == -1)
+	{
+		// This group has done something else (presumably of higher priority)
+		//	so should no longer be considered part of the city's garrison
+		AI_setAsGarrison();
 	}
 
 #ifdef _DEBUG
@@ -3053,11 +3057,6 @@ void CvUnitAI::AI_attackCityMove()
 		if (AI_heal())
 		{
 			return;
-		}
-
-		if (bIgnoreFaster)
-		{
-			// BBAI TODO: split out slow units ... will need to test to make sure this doesn't cause loops
 		}
 
 		if (plot()->getOwnershipDuration() <= 1)
@@ -10520,7 +10519,7 @@ void CvUnitAI::AI_healerMove()
 			return;
 		}
 
-		if (processContracts(0))
+		if (processContracts())
 		{
 			return;
 		}
@@ -10613,7 +10612,7 @@ void CvUnitAI::AI_healerSeaMove()
 			return;
 		}
 
-		if (processContracts(0))
+		if (processContracts())
 		{
 			return;
 		}
@@ -10701,7 +10700,7 @@ void CvUnitAI::AI_propertyControlMove()
 		return;
 	}
 
-	if (processContracts(0))
+	if (processContracts())
 	{
 		return;
 	}
@@ -10890,7 +10889,7 @@ void CvUnitAI::AI_InvestigatorMove()
 		return;
 	}
 
-	if (processContracts(0))
+	if (processContracts())
 	{
 		return;
 	}
@@ -11120,7 +11119,7 @@ void CvUnitAI::AI_SeeInvisibleMove()
 		return;
 	}
 
-	if (processContracts(0))
+	if (processContracts())
 	{
 		return;
 	}
@@ -11190,7 +11189,7 @@ void CvUnitAI::AI_SeeInvisibleSeaMove()
 		return;
 	}
 
-	if (processContracts(0))
+	if (processContracts())
 	{
 		return;
 	}
@@ -11235,7 +11234,7 @@ void CvUnitAI::AI_EscortMove()
 		return;
 	}
 
-	if (processContracts(0))
+	if (processContracts())
 	{
 		return;
 	}
@@ -11472,14 +11471,11 @@ bool CvUnitAI::AI_group(const GroupingParams& params)
 			}
 			return true;
 		}
-		else
-		{
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO_UNIT, pBestUnit->getOwner(), pBestUnit->getID(), bCanDefend ? 0 : (MOVE_RECONSIDER_ON_LEAVING_OWNED | MOVE_OUR_TERRITORY | MOVE_WITH_CAUTION), false, false, MISSIONAI_GROUP, NULL, pBestUnit);
-		}
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO_UNIT, pBestUnit->getOwner(), pBestUnit->getID(), bCanDefend ? 0 : (MOVE_RECONSIDER_ON_LEAVING_OWNED | MOVE_OUR_TERRITORY | MOVE_WITH_CAUTION), false, false, MISSIONAI_GROUP, NULL, pBestUnit);
 	}
-
 	return false;
 }
+
 
 bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBiggerOnly, bool bAllowRegrouping, bool bIgnoreFaster)
 {
@@ -22271,7 +22267,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 
 bool CvUnitAI::AI_isAwaitingContract() const
 {
-	return (m_contractsLastEstablishedTurn == GC.getGame().getGameTurn() &&
+	return (m_contractsLastEstablishedTurn == GC.getGame().getGameTurn() && 
 			(m_contractualState == CONTRACTUAL_STATE_AWAITING_ANSWER || m_contractualState == CONTRACTUAL_STATE_AWAITING_WORK));
 }
 
@@ -22306,13 +22302,13 @@ bool CvUnitAI::processContracts(int iMinPriority)
 		}
 	}
 	//TB OOS fix: Giving these a default seems to repair numerous OOS errors
-	int		iAtX = INVALID_PLOT_COORD;
-	int		iAtY = INVALID_PLOT_COORD;
+	int iAtX = INVALID_PLOT_COORD;
+	int iAtY = INVALID_PLOT_COORD;
 	CvUnit* pJoinUnit = NULL;
 
 	if (GET_PLAYER(getOwner()).getContractBroker().makeContract(this, iAtX, iAtY, pJoinUnit, !bContractAlreadyEstablished))
 	{
-		//	Work found
+		// Work found
 		if (gUnitLogLevel >= 3)
 		{
 			logBBAI("	Unit %S (%d) for player %d (%S) at (%d,%d) found work at (%d,%d) [to join %d]\n",
@@ -22427,7 +22423,8 @@ bool CvUnitAI::processContracts(int iMinPriority)
 
 		return true;
 	}
-	else if (bContractAlreadyEstablished)
+
+	if (bContractAlreadyEstablished)
 	{
 		m_contractualState = CONTRACTUAL_STATE_NO_WORK_FOUND;
 
@@ -22442,10 +22439,8 @@ bool CvUnitAI::processContracts(int iMinPriority)
 					getX(),
 					getY());
 		}
-
 		return false;
 	}
-
 	return true;
 }
 
@@ -25621,12 +25616,8 @@ bool CvUnitAI::AI_moveToStagingCity()
 			getGroup()->pushMission(MISSION_SKIP);
 			return true;
 		}
-		else
-		{
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0, false, false, MISSIONAI_GROUP, pBestCity->plot());
-		}
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0, false, false, MISSIONAI_GROUP, pBestCity->plot());
 	}
-
 	return false;
 }
 
@@ -27766,18 +27757,20 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		}
 	}
 
-	// if is Master Type
-	bool bReadytoHunt =
+	bool bReadytoHunt = (
 		isHuman()
 		|| AI_getUnitAIType() != UNITAI_HUNTER
 		|| qualityRank() > 7
 		// Escorts only count if we aren't currently cargo..
-		|| (!isCargo() &&
-			(getGroup()->countNumUnitAIType(UNITAI_HUNTER_ESCORT) > 0
-				|| GET_PLAYER(getOwner()).getBestUnitType(UNITAI_HUNTER_ESCORT) == NO_UNIT)
-		);
+		|| !isCargo()
+		&& (
+				getGroup()->countNumUnitAIType(UNITAI_HUNTER_ESCORT) > 0
+				||
+				GET_PLAYER(getOwner()).getBestUnitType(UNITAI_HUNTER_ESCORT) == NO_UNIT
+		)
+	);
 
-	//	Get the proper accompaniment
+	// Get the proper accompaniment
 	if (!bReadytoHunt && !isCargo())
 	{
 		if (plot() != NULL && !plot()->isCity(false, getTeam()))
@@ -27792,16 +27785,20 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 		{
 			if (m_contractsLastEstablishedTurn != GC.getGame().getGameTurn())
 			{
+				m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
+				m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
+
 				const int priority = HIGHEST_PRIORITY_ESCORT_PRIORITY;
-				GET_PLAYER(getOwner()).getContractBroker().advertiseWork(priority,
+
+				GET_PLAYER(getOwner()).getContractBroker().advertiseWork
+				(
+					priority,
 					NO_UNITCAPABILITIES,
 					getX(),
 					getY(),
 					this,
-					UNITAI_HUNTER_ESCORT);
-
-				m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
-				m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
+					UNITAI_HUNTER_ESCORT
+				);
 
 				if (gUnitLogLevel > 2)
 				{
@@ -27810,9 +27807,9 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 			}
 			getGroup()->pushMission(MISSION_SKIP);
 			return;
-
 		}
-		else if (plot() != NULL && !plot()->isCity(false, getTeam()))
+
+		if (plot() != NULL && !plot()->isCity(false, getTeam()))
 		{
 			if (AI_moveIntoNearestOwnedCity())
 			{
@@ -28307,12 +28304,8 @@ bool	CvUnitAI::AI_moveToBorders()
 		{
 			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, endTurnPlot->getX(), endTurnPlot->getY());
 		}
-		else
-		{
-			return getGroup()->pushMissionInternal(MISSION_SKIP);
-		}
+		return getGroup()->pushMissionInternal(MISSION_SKIP);
 	}
-
 	return false;
 }
 
@@ -28385,12 +28378,8 @@ bool CvUnitAI::AI_patrolBorders()
 			FAssert(!atPlot(pBestPlot));
 			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY());
 		}
-		else
-		{
-			return getGroup()->pushMissionInternal(MISSION_SKIP);
-		}
+		return getGroup()->pushMissionInternal(MISSION_SKIP);
 	}
-
 	return false;
 }
 
@@ -28480,13 +28469,10 @@ void CvUnitAI::AI_autoAirStrike()
 	CvArea* pArea = area();
 
 	//Heal
-	if (getDamage() > 0)
+	if (getDamage() > 0 && 100 * getHP() / getMaxHP() < 50)
 	{
-		if (100 * getHP() / getMaxHP() < 50)
-		{
-			getGroup()->pushMission(MISSION_SKIP);
-			return;
-		}
+		getGroup()->pushMission(MISSION_SKIP);
+		return;
 	}
 
 	// Attack the invaders!
@@ -30103,12 +30089,8 @@ bool CvUnitAI::AI_ambush(int iOddsThreshold, bool bAssassinationOnly)
 		{
 			return getGroup()->pushMissionInternal(MISSION_ASSASSINATE, pPlot->getX(), pPlot->getY());
 		}
-		else
-		{
-			return getGroup()->pushMissionInternal(MISSION_AMBUSH, pPlot->getX(), pPlot->getY());
-		}
+		return getGroup()->pushMissionInternal(MISSION_AMBUSH, pPlot->getX(), pPlot->getY());
 	}
-
 	return false;
 }
 
@@ -30145,52 +30127,41 @@ bool CvUnitAI::AI_activateStatus(bool bStack, PromotionTypes eStatus, CvUnit* pU
 
 bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 {
-	int iValue = 0;
+	if (bStack)
+	{
+		if (getGroup() == NULL)
+		{
+			return false;
+		}
+	}
+	else if (pUnit == NULL)
+	{
+		return false;
+	}
 	int iBestValue = 0;
 	int iWorstValue = 0;
-	int iTemp = 0;
-	int iStatus = 0;
-	PromotionTypes eStatus = NO_PROMOTION;
 	PromotionTypes eBestStatus = NO_PROMOTION;
 	PromotionTypes eWorstStatus = NO_PROMOTION;
-	PromotionTypes eRemoveStatus = NO_PROMOTION;
-	MissionAITypes eMissionAI = NO_MISSIONAI;
-	UnitAITypes eUnitAI = AI_getUnitAIType();
-	if (!bStack)
-	{
-		eUnitAI = pUnit->AI_getUnitAIType();
-	}
-
-	if (getGroup() != NULL)
-	{
-		eMissionAI = getGroup()->AI_getMissionAIType();
-	}
-	else if (bStack)
-	{
-		return false;
-	}
-
-	if (!bStack && pUnit == NULL)
-	{
-		return false;
-	}
+	const MissionAITypes eMissionAI = getGroup() ? getGroup()->AI_getMissionAIType() : NO_MISSIONAI;
+	const UnitAITypes eUnitAI = bStack ? AI_getUnitAIType() : pUnit->AI_getUnitAIType();
 
 	const PromotionLineTypes promotionLineStandout = GC.getPROMOTIONLINE_STANDOUT();
 
 	for (int iI = 0; iI < GC.getGame().getNumStatusPromotions(); iI++)
 	{
-		iValue = 0;
-		iStatus = GC.getGame().getStatusPromotion(iI);
-		eStatus = (PromotionTypes)iStatus;
+		int iValue = 0;
+		const int iStatus = GC.getGame().getStatusPromotion(iI);
+		const PromotionTypes eStatus = (PromotionTypes)iStatus;
 		const CvPromotionInfo& kPromotion = GC.getPromotionInfo(eStatus);
+		PromotionTypes eRemoveStatus = NO_PROMOTION;
+
 		for (int iJ = 0; iJ < GC.getGame().getNumStatusPromotions(); iJ++)
 		{
-			if (kPromotion.getPromotionLine() == GC.getPromotionInfo((PromotionTypes)GC.getGame().getStatusPromotion(iJ)).getPromotionLine())
+			if (kPromotion.getPromotionLine() == GC.getPromotionInfo((PromotionTypes)GC.getGame().getStatusPromotion(iJ)).getPromotionLine()
+			&& GC.getPromotionInfo((PromotionTypes)GC.getGame().getStatusPromotion(iJ)).getLinePriority() == 1)
 			{
-				if (GC.getPromotionInfo((PromotionTypes)GC.getGame().getStatusPromotion(iJ)).getLinePriority() == 1)
-				{
-					eRemoveStatus = (PromotionTypes)GC.getGame().getStatusPromotion(iJ);
-				}
+				eRemoveStatus = (PromotionTypes)GC.getGame().getStatusPromotion(iJ);
+				break;
 			}
 		}
 		if (kPromotion.getLinePriority() != 1)
@@ -30201,7 +30172,7 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 				{
 					//Keep things as thin as possible here - program in as new statuses are introduced
 					//Stay the Hand
-					iTemp = kPromotion.getDefenseOnlyChange();
+					int iTemp = kPromotion.getDefenseOnlyChange();
 					if (iTemp != 0)
 					{
 						if (eMissionAI == MISSIONAI_SPREAD ||
@@ -30380,12 +30351,10 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 					iValue += iTemp;
 
 				}
-				if (iValue < 0)
+				// If any can remove
+				if (iValue < 0 && !getGroup()->canDoCommand(COMMAND_STATUS, (int)eRemoveStatus, 0, false, false, false))
 				{
-					if (!getGroup()->canDoCommand(COMMAND_STATUS, (int)eRemoveStatus, 0, false, false, false/*if any can remove*/))
-					{
-						iValue = 0;
-					}
+					iValue = 0;
 				}
 			}
 			else
@@ -30397,7 +30366,7 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 					//Standout
 					if (pUnit->hasInvisibleAbility())
 					{
-						iTemp = 0;
+						int iTemp = 0;
 						//only care about the NegatesInvisibilityTypes which have an actual effect
 						for (int iN = 0; iN < kPromotion.getNumNegatesInvisibilityTypes(); iN++)
 						{
@@ -30494,7 +30463,7 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 
 					//Enhanced March
 					//Moves
-					iTemp = kPromotion.getMovesChange();
+					int iTemp = kPromotion.getMovesChange();
 					if (iTemp != 0)
 					{
 						if ((eMissionAI == MISSIONAI_SPREAD ||
@@ -30548,12 +30517,10 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 					iTemp /= 10;
 					iValue += iTemp;
 				}
-				if (iValue < 0)
+
+				if (iValue < 0 && !pUnit->canDoCommand(COMMAND_STATUS, (int)eRemoveStatus, 0))
 				{
-					if (!pUnit->canDoCommand(COMMAND_STATUS, (int)eRemoveStatus, 0))
-					{
-						iValue = 0;
-					}
+					iValue = 0;
 				}
 			}
 		}
@@ -30568,18 +30535,19 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 			eWorstStatus = eRemoveStatus;
 		}
 	}
-	int iCompare = iBestValue - iWorstValue;
+	const int iCompare = iBestValue - iWorstValue;
+
 	if (iCompare < 0 && eWorstStatus != NO_PROMOTION)
 	{
-		return (AI_activateStatus(bStack, eWorstStatus, pUnit) && !GC.getPromotionInfo(eWorstStatus).isQuick());
+		return AI_activateStatus(bStack, eWorstStatus, pUnit) && !GC.getPromotionInfo(eWorstStatus).isQuick();
 		//setWorstStatus
 	}
-	else if (iCompare > 0 && eBestStatus != NO_PROMOTION && !isHasPromotion(eBestStatus))
+
+	if (iCompare > 0 && eBestStatus != NO_PROMOTION && !isHasPromotion(eBestStatus))
 	{
-		return (AI_activateStatus(bStack, eBestStatus, pUnit) && !GC.getPromotionInfo(eBestStatus).isQuick());
+		return AI_activateStatus(bStack, eBestStatus, pUnit) && !GC.getPromotionInfo(eBestStatus).isQuick();
 		//setBestStatus
 	}
-	//else
 	return false;
 }
 
