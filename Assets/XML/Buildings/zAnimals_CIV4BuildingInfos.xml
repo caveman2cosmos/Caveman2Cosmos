@@ -3699,22 +3699,16 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_TERRAIN</GOMType>
-						<ID>TERRAIN_PEAK</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_TERRAIN</GOMType>
-						<ID>TERRAIN_HILL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_CAVES</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
+			<PrereqOrTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_HILL</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_PEAK</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+			</PrereqOrTerrain>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
