@@ -857,12 +857,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>12</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>

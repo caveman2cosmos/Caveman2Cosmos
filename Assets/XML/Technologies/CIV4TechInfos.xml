@@ -36824,40 +36824,6 @@
 			<bRepeat>1</bRepeat>
 			<iGridX>160</iGridX>
 			<iGridY>9</iGridY>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<OrPreReqs>
 				<PrereqTech>TECH_SIMULATION_AWARENESS</PrereqTech>
 			</OrPreReqs>
