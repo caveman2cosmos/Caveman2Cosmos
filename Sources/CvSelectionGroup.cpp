@@ -749,7 +749,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 // BUG - Sentry Actions - end
 
 		case MISSION_MOVE_TO:
-			if (!(pPlot->at(iData1, iData2)))
+			if (!pPlot->at(iData1, iData2))
 			{
 				return true;
 			}
@@ -2875,118 +2875,73 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
+		FAssertMsg(pLoopUnit != NULL, "TestAssert, if this never happen then remove the following if statement");
+
+		if (pLoopUnit == NULL) return false;
+
 		switch (eInterfaceMode)
 		{
-		case INTERFACEMODE_AIRLIFT:
-			if (pLoopUnit != NULL && pLoopUnit->canAirliftAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRLIFT:
 			{
-				return true;
+				return pLoopUnit->canAirliftAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_NUKE:
-			if (pLoopUnit != NULL && pLoopUnit->canNukeAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_NUKE:
 			{
-				return true;
+				return pLoopUnit->canNukeAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-		case INTERFACEMODE_RECON:
-			if (pLoopUnit != NULL && pLoopUnit->canReconAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_RECON:
 			{
-				return true;
+				return pLoopUnit->canReconAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_PARADROP:
-			if (pLoopUnit != NULL && pLoopUnit->canParadropAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_PARADROP:
 			{
-				return true;
+				return pLoopUnit->canParadropAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB:
-			if (pLoopUnit != NULL && pLoopUnit->canAirBombAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB:
 			{
-				return true;
+				return pLoopUnit->canAirBombAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_RANGE_ATTACK:
-			if (pLoopUnit != NULL && pLoopUnit->canRangeStrikeAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_RANGE_ATTACK:
 			{
-				return true;
+				return pLoopUnit->canRangeStrikeAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRSTRIKE:
-			if (pLoopUnit != NULL && pLoopUnit->canEnterPlot(pPlot, MoveCheck::Attack))
+			case INTERFACEMODE_AIRSTRIKE:
 			{
-				return true;
+				return pLoopUnit->canEnterPlot(pPlot, MoveCheck::Attack);
 			}
-			break;
-
-		case INTERFACEMODE_REBASE:
-			if (pLoopUnit != NULL && pLoopUnit->canEnterPlot(pPlot))
+			case INTERFACEMODE_REBASE:
 			{
-				return true;
+				return pLoopUnit->canEnterPlot(pPlot);
 			}
-			break;
-
-		// Dale - AB: Bombing
-		case INTERFACEMODE_AIRBOMB1:
-			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb1At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB1:
 			{
-				return true;
+				return GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb1At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB2:
-			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb2At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB2:
 			{
-				return true;
+				return GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb2At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB3:
-			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb3At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB3:
 			{
-				return true;
+				return GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb3At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB4:
-			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb4At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB4:
 			{
-				return true;
+				return GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb4At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB5:
-			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb5At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB5:
 			{
-				return true;
+				return GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb5At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		// Dale - RB: Field Bombard
-		case INTERFACEMODE_BOMBARD:
-			if (pLoopUnit != NULL && GC.isDCM_RANGE_BOMBARD() && pLoopUnit->canBombardAtRanged(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_BOMBARD:
 			{
-				return true;
+				return GC.isDCM_RANGE_BOMBARD() && pLoopUnit->canBombardAtRanged(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		// Dale - FE: Fighters
-		case INTERFACEMODE_FENGAGE:
-			if (pLoopUnit != NULL && GC.isDCM_FIGHTER_ENGAGE() && pLoopUnit->canFEngageAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_FENGAGE:
 			{
-				return true;
+				return GC.isDCM_FIGHTER_ENGAGE() && pLoopUnit->canFEngageAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-		// ! Dale
-
-		case INTERFACEMODE_SHADOW_UNIT:
-			if (pLoopUnit != NULL)
+			case INTERFACEMODE_SHADOW_UNIT:
 			{
 				foreach_(CvUnit* pLoopUnit, pPlot->units())
 				{
@@ -2995,12 +2950,9 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 						return true;
 					}
 				}
+				return false;
 			}
-			break;
-
-		default:
-			return true;
-			break;
+			default: return true;
 		}
 	}
 	return false;
