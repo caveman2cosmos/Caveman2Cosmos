@@ -247,51 +247,50 @@ void CvContractBroker::finalizeTenderContracts()
 {
 	PROFILE_FUNC();
 
-	std::map<int,int>	tenderAllocations;
+	std::map<int,int> tenderAllocations;
 
 	for (int iI = 0; iI < (int)m_workRequests.size(); iI++)
 	{
-		if ( !m_workRequests[iI].bFulfilled )
+		if (!m_workRequests[iI].bFulfilled)
 		{
 			int iBestValue = 0;
-			//TB OOS Debug: from here we were not given a beginning definition
 			int iBestCityTenderKey = 0;
-			int iValue = 0;
-			UnitTypes eUnit = NO_UNIT;
-			//to here
 			UnitTypes eBestUnit = NO_UNIT;
 			UnitAITypes eBestAIType = NO_UNITAI;
 			CvCity*	pBestCity = NULL;
-			CvPlot* pDestPlot = GC.getMap().plot(m_workRequests[iI].iAtX, m_workRequests[iI].iAtY);
 
-			if( gCityLogLevel >= 3 )
+			const CvUnit* pTargetUnit = findUnit(m_workRequests[iI].iUnitId);
+			CvPlot* pDestPlot;
+
+			if (pTargetUnit != NULL)
 			{
-				CvString	unitAIType;
+				pDestPlot = pTargetUnit->plot();
+			}
+			else
+			{
+				pDestPlot = GC.getMap().plot(m_workRequests[iI].iAtX, m_workRequests[iI].iAtY);
+			}
 
-				if ( m_workRequests[iI].eAIType == NO_UNITAI )
-				{
-					unitAIType = "NO_UNITAI";
-				}
-				else
-				{
-					unitAIType = GC.getUnitAIInfo(m_workRequests[iI].eAIType).getType();
-				}
+			if (gCityLogLevel >= 3)
+			{
+				CvString unitAIType = m_workRequests[iI].eAIType == NO_UNITAI ? "NO_UNITAI" : GC.getUnitAIInfo(m_workRequests[iI].eAIType).getType();
 
 				CvString szCriteriaDescription = m_workRequests[iI].criteria.getDescription();
 
-				if ( !szCriteriaDescription.empty() )
+				if (!szCriteriaDescription.empty())
 				{
 					szCriteriaDescription.Format(" (%s)", szCriteriaDescription.c_str());
 				}
-
-				logBBAI("      Processing bids for tender for unitAI %s at (%d,%d) with priority %d%s",
-						unitAIType.c_str(),
-						m_workRequests[iI].iAtX, m_workRequests[iI].iAtY,
-						m_workRequests[iI].iPriority,
-						szCriteriaDescription.c_str());
+				logBBAI(
+					"      Processing bids for tender for unitAI %s at (%d,%d) with priority %d%s",
+					unitAIType.c_str(),
+					m_workRequests[iI].iAtX, m_workRequests[iI].iAtY,
+					m_workRequests[iI].iPriority,
+					szCriteriaDescription.c_str()
+				);
 			}
 
-			for(unsigned int iJ = 0; iJ < m_advertisingTenders.size(); iJ++)
+			for (unsigned int iJ = 0; iJ < m_advertisingTenders.size(); iJ++)
 			{
 				if ( m_advertisingTenders[iJ].iMinPriority <= m_workRequests[iI].iPriority )
 				{
@@ -325,12 +324,13 @@ void CvContractBroker::finalizeTenderContracts()
 
 							FASSERT_NOT_NEGATIVE(iTendersAlreadyInProcess);
 
-							if ( iTendersAlreadyInProcess <= 0 )
+							if (iTendersAlreadyInProcess <= 0)
 							{
-//TB OOS Debug: Undefined variable being called as a pointer in a later function call
+								int iValue = 0;
+								UnitTypes eUnit = NO_UNIT;
 								UnitAITypes eAIType = NO_UNITAI;
 
-								if ( m_workRequests[iI].eAIType == NO_UNITAI)
+								if (m_workRequests[iI].eAIType == NO_UNITAI)
 								{
 									UnitAITypes*	pUnitAIs = NULL;
 									int				iNumAIs = -1;
@@ -359,99 +359,76 @@ void CvContractBroker::finalizeTenderContracts()
 										pUnitAIs = workerAIs;
 										iNumAIs = sizeof(workerAIs)/sizeof(UnitAITypes);
 									}
-
 									eUnit = pCity->AI_bestUnit(iValue, iNumAIs, pUnitAIs, false, &eAIType, false, true, &m_workRequests[iI].criteria);
 								}
 								else
 								{
 									eAIType = m_workRequests[iI].eAIType;
-									if ( pCity->area() != pDestPlot->area() && !IS_NAVAL_AITYPE(eAIType) && !IS_AIR_AITYPE(eAIType) )
+
+									if (pCity->area() != pDestPlot->area() && !IS_NAVAL_AITYPE(eAIType) && !IS_AIR_AITYPE(eAIType))
 									{
 										continue;
 									}
-
 									eUnit = pCity->AI_bestUnitAI(eAIType, iValue, false, false, &m_workRequests[iI].criteria);
 								}
-								if ( eUnit != NO_UNIT )
+								if (eUnit != NO_UNIT)
 								{
-									//	Adjust value for production time and distance
-									int iTurns;
 									int iBaseValue = iValue;
 
-									if ( (pCity->isProduction() && pCity->getOrderData(0).eOrderType == ORDER_TRAIN) )
-									{
-										iTurns = pCity->getTotalProductionQueueTurnsLeft() + pCity->getProductionTurnsLeft(eUnit, 1);
-									}
-									else
-									{
-										iTurns = pCity->getProductionTurnsLeft(eUnit, 1);
-									}
+									// Adjust value for production time and distance
+									const int iTurns =
+									(
+										pCity->isProduction() && pCity->getOrderData(0).eOrderType == ORDER_TRAIN
+										?
+										pCity->getTotalProductionQueueTurnsLeft() + pCity->getProductionTurnsLeft(eUnit, 1)
+										:
+										pCity->getProductionTurnsLeft(eUnit, 1)
+									);
+									iValue *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent();
+									iValue /= iTurns;
 
-									//	Decrease the value 10% per (standard speed) turn
-									iValue *= 100 - 10 * std::min(iTurns * 100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent(), 10);
-									iValue /= 100;
-
-									if ( iValue > 0 )
+									if (CvSelectionGroup::getPathGenerator()->generatePathForHypotheticalUnit(pCity->plot(), pDestPlot, m_eOwner, eUnit, MOVE_NO_ENEMY_TERRITORY, m_workRequests[iI].iMaxPath))
 									{
-										//	Decrease by 5% per turn of separation from destination
-										//int iDistance = GC.getMap().calculatePathDistance(pCity->plot(),pDestPlot);
-										int iMaxPath = m_workRequests[iI].iMaxPath;
-										int iMaxWinPath = std::max(0,20 - (20*iBestValue)/iValue);
+										const int iDistance = CvSelectionGroup::getPathGenerator()->getLastPath().length();
+										iValue /= (1 + iDistance);
 
-										if ( iMaxPath > iMaxWinPath )
+										if (gCityLogLevel >= 3)
 										{
-											iMaxPath = iMaxWinPath;
+											logBBAI(
+												"      City %S could supply unit %S with base value %d, depreciated value (after %d turn production at distance %d) to %d",
+												pCity->getName().GetCString(),
+												GC.getUnitInfo(eUnit).getDescription(),
+												iBaseValue,
+												iTurns,
+												iDistance,
+												iValue
+											);
 										}
-
-										if ( CvSelectionGroup::getPathGenerator()->generatePathForHypotheticalUnit(pCity->plot(), pDestPlot, m_eOwner, eUnit, MOVE_NO_ENEMY_TERRITORY, iMaxPath == MAX_INT ? 19 : iMaxPath) )
+										if (iValue > iBestValue)
 										{
-											int iDistance = CvSelectionGroup::getPathGenerator()->getLastPath().length();
-											iValue *= 100 - 5*std::min(20, iDistance);
-											iValue /= 100;
-
-											if( gCityLogLevel >= 3 )
-											{
-												logBBAI("      City %S could supply unit %S with base value %d, depreciated value (after %d turn production at distance %d) to %d",
-														pCity->getName().GetCString(),
-														GC.getUnitInfo(eUnit).getDescription(),
-														iBaseValue,
-														iTurns,
-														iDistance,
-														iValue);
-											}
-
-											if ( iValue > iBestValue )
-											{
-												iBestValue = iValue;
-												iBestCityTenderKey = iTenderAllocationKey;
-												eBestUnit = eUnit;
-												eBestAIType = eAIType;
-												pBestCity = pCity;
-											}
+											iBestValue = iValue;
+											iBestCityTenderKey = iTenderAllocationKey;
+											eBestUnit = eUnit;
+											eBestAIType = eAIType;
+											pBestCity = pCity;
 										}
 									}
 								}
-								else
+								else if (gCityLogLevel >= 3)
 								{
-									if( gCityLogLevel >= 3 )
-									{
-										logBBAI("      City %S has no suitable units to offer",
-												pCity->getName().GetCString());
-									}
+									logBBAI("      City %S has no suitable units to offer", pCity->getName().GetCString());
 								}
 							}
-							else
+							else // Already being built
 							{
-								//	Already being built
 								m_workRequests[iI].bFulfilled = true;
 								eBestUnit = NO_UNIT;
 
 								tenderAllocations[iTenderAllocationKey] = tenderAllocations[iTenderAllocationKey] + 1;
 
-								if( gCityLogLevel >= 3 )
+								if (gCityLogLevel >= 3)
 								{
-									logBBAI("      City %S is already building a unit",
-											pCity->getName().GetCString());
+									logBBAI("      City %S is already building a unit", pCity->getName().GetCString());
 								}
 								break;
 							}
@@ -460,23 +437,13 @@ void CvContractBroker::finalizeTenderContracts()
 				}
 			}
 
-			if ( eBestUnit != NO_UNIT)
+			if (eBestUnit != NO_UNIT)
 			{
-				if( gCityLogLevel >= 2 )
+				if (gCityLogLevel >= 2)
 				{
-					CvString	unitAIType;
+					CvString unitAIType = m_workRequests[iI].eAIType == NO_UNITAI ? "NO_UNITAI" : GC.getUnitAIInfo(m_workRequests[iI].eAIType).getType();
 
-					if ( m_workRequests[iI].eAIType == NO_UNITAI )
-					{
-						unitAIType = "NO_UNITAI";
-					}
-					else
-					{
-						CvInfoBase& AIType = GC.getUnitAIInfo(m_workRequests[iI].eAIType);
-						unitAIType = AIType.getType();
-					}
-
-					if ( pBestCity != NULL )
+					if (pBestCity != NULL)
 					{
 						logBBAI("      City %S wins business for unitAI build %s (training %S)",
 								pBestCity->getName().GetCString(),
@@ -489,26 +456,21 @@ void CvContractBroker::finalizeTenderContracts()
 								unitAIType.c_str(),
 								GC.getUnitInfo(eBestUnit).getDescription());
 					}
-
 				}
-
 				m_workRequests[iI].bFulfilled = true;
 				tenderAllocations[iBestCityTenderKey] = tenderAllocations[iBestCityTenderKey] + 1;
 
-				//	Queue up the build.  Add to queue head if the current build is not a unit (implies
-				//	a local build below the priority of work the city tendered for)
-				bool bAppend = (pBestCity->isProduction() && pBestCity->getOrderData(0).eOrderType == ORDER_TRAIN);
+				// Queue up the build. Add to queue head if the current build is not a unit,
+				//	implies a local build below the priority of work the city tendered for.
+				const bool bAppend = (pBestCity->isProduction() && pBestCity->getOrderData(0).eOrderType == ORDER_TRAIN);
 
-				pBestCity->pushOrder(ORDER_TRAIN,
-									 eBestUnit,
-									 eBestAIType,
-									 false,
-									 !bAppend,
-									 bAppend,
-									 false,
-									 pDestPlot,
-									 m_workRequests[iI].eAIType,
-									 (m_workRequests[iI].iUnitId == -1 ? 0 : AUX_CONTRACT_FLAG_IS_UNIT_CONTRACT));
+				pBestCity->pushOrder(
+					ORDER_TRAIN,
+					eBestUnit, eBestAIType,
+					false, !bAppend, bAppend, false,
+					pDestPlot, m_workRequests[iI].eAIType,
+					(m_workRequests[iI].iUnitId == -1 ? 0 : AUX_CONTRACT_FLAG_IS_UNIT_CONTRACT)
+				);
 			}
 		}
 	}
@@ -538,7 +500,6 @@ void CvContractBroker::finalizeTenderContracts()
 				iEmployedUnits++;
 			}
 		}
-
 		logBBAI("%d out of %d contracts satisfied, %d unit employed, %d left without work", iSatisfiedContracts, m_workRequests.size(), iEmployedUnits, iIdleUnits);
 	}
 }
@@ -723,11 +684,21 @@ advertisingUnit* CvContractBroker::findBestUnit(const workRequest& request, bool
 
 				if (iValue > iBestValue)
 				{
-					const CvPlot* pTargetPlot = GC.getMap().plot(request.iAtX, request.iAtY);
-					int iPathTurns = 0;
-					int iMaxPathTurns = std::min((request.iPriority > LOW_PRIORITY_ESCORT_PRIORITY ? MAX_INT : 10), (iBestValue == 0 ? MAX_INT : iValue / iBestValue));
+					const CvUnit* pTargetUnit = findUnit(request.iUnitId);
+					CvPlot* pTargetPlot;
 
-					if ( request.iMaxPath < iMaxPathTurns )
+					if (pTargetUnit != NULL)
+					{
+						pTargetPlot = pTargetUnit->plot();
+					}
+					else
+					{
+						pTargetPlot = GC.getMap().plot(request.iAtX, request.iAtY);
+					}
+					int iPathTurns = 0;
+					int iMaxPathTurns = std::min((request.iPriority > LOW_PRIORITY_ESCORT_PRIORITY ? MAX_INT : 10), (iBestValue < 1 ? MAX_INT : 5 * iValue / iBestValue));
+
+					if (request.iMaxPath < iMaxPathTurns)
 					{
 						iMaxPathTurns = request.iMaxPath;
 					}

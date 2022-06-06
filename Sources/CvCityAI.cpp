@@ -1867,10 +1867,10 @@ void CvCityAI::AI_chooseProduction()
 	//Koshling - made having at least 1 hunter a much higher priority
 	int iNeededExplorers = player.AI_neededExplorers(pArea);
 	int iNeededHunters = player.AI_neededHunters(pArea);
-	int iExplorerDeficitPercent = (iNeededExplorers == 0) ? 0 : ((iNeededExplorers - player.AI_totalAreaUnitAIs(pArea, UNITAI_EXPLORE)) * 100) / iNeededExplorers;
-	int iHunterDeficitPercent = (iNeededHunters == 0) ? 0 : ((iNeededHunters - player.AI_totalAreaUnitAIs(pArea, UNITAI_HUNTER)) * 100) / iNeededHunters;
+	int iExplorerDeficitPercent = (iNeededExplorers == 0) ? 0 : (iNeededExplorers - player.AI_totalAreaUnitAIs(pArea, UNITAI_EXPLORE)) * 100 / iNeededExplorers;
+	int iHunterDeficitPercent = (iNeededHunters == 0) ? 0 : (iNeededHunters - player.AI_totalAreaUnitAIs(pArea, UNITAI_HUNTER)) * 100 / iNeededHunters;
 
-	if (!bInhibitUnits && iNeededHunters > 0 && iHunterDeficitPercent == 100)
+	if (!bInhibitUnits && iHunterDeficitPercent > 80)
 	{
 		if (isCapital() && AI_chooseExperienceBuilding(UNITAI_HUNTER, 4))
 		{
@@ -1900,7 +1900,7 @@ void CvCityAI::AI_chooseProduction()
 	m_iTempBuildPriority--;
 
 	//Koshling - increase priority of hunetrs up to half what we would ideally want
-	if (iNeededHunters > 0 && iHunterDeficitPercent > 50)
+	if (iNeededHunters > 0 && iHunterDeficitPercent > 30)
 	{
 		if (isCapital() && AI_chooseExperienceBuilding(UNITAI_HUNTER, 4))
 		{
@@ -2439,11 +2439,6 @@ void CvCityAI::AI_chooseProduction()
 
 		if ((bMassing || !bLandWar) && !bDanger && !bFinancialTrouble)
 		{
-			// Normalize them by the ideally needed numbers,
-			// which are not limited by our number of cities and reflect the geography only
-			iExplorerDeficitPercent *= player.AI_neededExplorers(pArea, true);
-			iHunterDeficitPercent *= player.AI_neededHunters(pArea, true);
-
 			if (iExplorerDeficitPercent >= iHunterDeficitPercent && iExplorerDeficitPercent > 0)
 			{
 				//	If we are just pumping out explorer units and having them die fast
@@ -8640,8 +8635,7 @@ bool CvCityAI::AI_chooseUnit(const char* reason, UnitAITypes eUnitAI, int iOdds,
 					NULL,
 					eUnitAI,
 					iUnitStrength,
-					criteria,
-					MAX_INT);
+					criteria);
 
 				m_bRequestedUnit = true;
 

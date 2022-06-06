@@ -251,8 +251,8 @@ public:
 	int AI_totalWaterAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const;
 	int AI_countCargoSpace(UnitAITypes eUnitAI) const;
 
-	int AI_neededExplorers(const CvArea* pArea, bool bIdeal = false) const;
-	int AI_neededHunters(const CvArea* pArea, bool bIdeal = false) const;
+	int AI_neededExplorers(const CvArea* pArea) const;
+	int AI_neededHunters(const CvArea* pArea) const;
 	int AI_neededWorkers(const CvArea* pArea) const;
 	int AI_neededMissionaries(const CvArea* pArea, ReligionTypes eReligion) const;
 	int AI_neededExecutives(const CvArea* pArea, CorporationTypes eCorporation) const;

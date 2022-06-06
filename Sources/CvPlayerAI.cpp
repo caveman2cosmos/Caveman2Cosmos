@@ -11454,30 +11454,37 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			break;
 
 		case UNITAI_EXPLORE:
-			iValue += kUnitInfo.getMoves() * kUnitInfo.getMoves() * (100 + iCombatValue / 4);
+		{
+			iValue += kUnitInfo.getMoves() * kUnitInfo.getMoves() * (100 + iCombatValue) / 4;
 			if (kUnitInfo.isNoBadGoodies())
 			{
-				iValue *= 3;
-				iValue /= 2;
+				iValue *= 2;
 			}
 			//need to add vision and terrain factors here.
 			break;
-
+		}
 		case UNITAI_HUNTER:
-		case UNITAI_HUNTER_ESCORT:
-			iValue += ((iCombatValue * 2) / (kUnitInfo.isOnlyDefensive() ? 2 : 1));
+		{
+			iValue += iCombatValue * 2 / (kUnitInfo.isOnlyDefensive() ? 2 : 1);
 			//TB Combat Mods Begin
-			iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
-			iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 200);
+			iValue += iCombatValue * kUnitInfo.getPursuit() / 100;
+			iValue += iCombatValue * kUnitInfo.getUnyielding() / 200;
 #ifdef BATTLEWORN
-			iValue += ((iCombatValue * kUnitInfo.getWithdrawAdjperAtt()) / 100);
+			iValue += iCombatValue * kUnitInfo.getWithdrawAdjperAtt() / 100;
 #endif
 			//TB Combat Mods End
-			iValue *= (100 + kUnitInfo.getMoves() * 30);
-			iValue *= (100 + kUnitInfo.getAnimalCombatModifier());
+			iValue *= 100 + kUnitInfo.getMoves() * 25;
+			iValue *= 100 + kUnitInfo.getAnimalCombatModifier() * 2;
 			iValue /= 10000;
 			break;
-
+		}
+		case UNITAI_HUNTER_ESCORT:
+		{
+			iValue += iCombatValue;
+			iValue *= 100 + kUnitInfo.getMoves() * 25;
+			iValue /= 100;
+			break;
+		}
 		case UNITAI_MISSIONARY:
 			iValue += (kUnitInfo.getMoves() * 100);
 			if (getStateReligion() != NO_RELIGION)
@@ -11868,22 +11875,20 @@ int CvPlayerAI::AI_countCargoSpace(UnitAITypes eUnitAI) const
 }
 
 
-int CvPlayerAI::AI_neededExplorers(const CvArea* pArea, bool bIdeal) const
+int CvPlayerAI::AI_neededExplorers(const CvArea* pArea) const
 {
 	FAssert(pArea != NULL);
-	int iNeeded = 0;
-
-	if (pArea->isWater())
-	{
-		iNeeded = std::min(iNeeded + (pArea->getNumUnrevealedTiles(getTeam()) / 400), bIdeal ? 5 : std::max(2, ((getNumCities() / 2) + 1)));
-	}
-	else
-	{
-		//	Koshling - modified explorer AI to keep 'exploring' already revealed neutral territory as lower priority than
-		//	revealing new tiles so as to keep up neutral area patrols for animal hunting and general intelligence gathering
-		//	Note - we cap the number of explorers we ideally need at 5, so returns diminish fast
-		iNeeded = std::min(((pArea->getNumUnownedTiles() + 4) * pArea->getNumUnrevealedTiles(getTeam())) / 500, bIdeal ? 5 : std::max(3, ((getNumCities() / 3) + 2)));
-	}
+	int iNeeded = (
+		std::min(
+			(100 + pArea->getNumTiles())
+			*
+			(1 + pArea->getNumUnrevealedTiles(getTeam()) + pArea->getNumUnownedTiles())
+			/
+			(100 * pArea->getNumTiles()),
+			// Limit the need for very big land based on empire size.
+			std::max(5, 3 + getNumCities() / 3)
+		)
+	);
 
 	if (0 == iNeeded && GC.getGame().countCivTeamsAlive() - 1 > GET_TEAM(getTeam()).getHasMetCivCount(true))
 	{
@@ -11910,40 +11915,25 @@ int CvPlayerAI::AI_neededExplorers(const CvArea* pArea, bool bIdeal) const
 			}
 		}
 	}
-
 	return iNeeded;
 }
 
-int CvPlayerAI::AI_neededHunters(const CvArea* pArea, bool bIdeal) const
+int CvPlayerAI::AI_neededHunters(const CvArea* pArea) const
 {
 	FAssert(pArea != NULL);
-	int iNeeded = 1;
 
 	if (pArea->isWater())
 	{
-		iNeeded = 0;	//	Hunter AI currently only operates on land
+		return 0; // Hunter AI currently only operates on land
 	}
-	else
-	{
-		//	Note - we do not cap the number of ideally needed hunters at all, but we
-		//	only consider (an approximation of) the part of the landmass that is revealed to us
-		const int iCityCountCap = std::max(3, (getNumCities() / 3) + 2);
-		iNeeded = std::min((pArea->getNumUnownedTiles() + 150) / 200, bIdeal ? MAX_INT : iCityCountCap);
-
-		if (bIdeal && iNeeded > iCityCountCap)
-		{
-			//	Normalize for percentage revealed
-			iNeeded *= pArea->getNumRevealedTiles(getTeam());
-			iNeeded /= pArea->getNumTiles();
-
-			if (iNeeded < iCityCountCap)
-			{
-				iNeeded = iCityCountCap;
-			}
-		}
-	}
-
-	return iNeeded;
+	const int iLandOfInterest = (
+		GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT)
+		?
+		pArea->getNumUnownedTiles()
+		:
+		pArea->getNumTiles()
+	);
+	return std::min(iLandOfInterest / 50, 3 + pArea->getNumUnownedTiles() / 50 + getNumCities() / 2);
 }
 
 
