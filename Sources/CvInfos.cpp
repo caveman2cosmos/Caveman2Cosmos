@@ -2214,6 +2214,8 @@ m_bRemoveAfterSet(false),
 m_bQuick(false)
 //TB Combat Mods End
 {
+	CvInfoUtil(this).initDataMembers();
+
 	m_zobristValue = GC.getGame().getSorenRand().getInt();
 }
 
@@ -2227,6 +2229,8 @@ m_bQuick(false)
 
 CvPromotionInfo::~CvPromotionInfo()
 {
+	CvInfoUtil(this).uninitDataMembers();
+
 	SAFE_DELETE_ARRAY(m_piTerrainAttackPercent);
 	SAFE_DELETE_ARRAY(m_piTerrainDefensePercent);
 	SAFE_DELETE_ARRAY(m_piFeatureAttackPercent);
@@ -4760,9 +4764,20 @@ bool CvPromotionInfo::hasNegativeEffects() const
 		getHiddenNationalityChange() != 0;
 }
 
+void CvPromotionInfo::getDataMembers(CvInfoUtil& util)
+{
+	util
+		//.addEnum(m_iPrereqPromotion, L"PromotionPrereq")
+		//.addEnum(m_iPrereqOrPromotion1, L"PromotionPrereqOr1")
+		//.addEnum(m_iPrereqOrPromotion2, L"PromotionPrereqOr2")
+	;
+}
+
 bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 {
 	OutputDebugString("Reading PromotionInfo");
+
+	CvInfoUtil(this).readXml(pXML);
 
 	CvString szTextVal;
 	CvString szTextVal2;
@@ -5472,6 +5487,8 @@ bool CvPromotionInfo::readPass2(CvXMLLoadUtility* pXML)
 void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 {
 	CvHotkeyInfo::copyNonDefaults(pClassInfo);
+
+	CvInfoUtil(this).copyNonDefaults(pClassInfo);
 
 	bool bDefault = false;
 	int iDefault = 0;
@@ -6290,6 +6307,8 @@ void CvPromotionInfo::copyNonDefaultsReadPass2(CvPromotionInfo* pClassInfo, CvXM
 
 void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
 {
+	CvInfoUtil(this).checkSum(iSum);
+
 	CheckSum(iSum, m_iPrereqPromotion);
 	CheckSum(iSum, m_iPrereqOrPromotion1);
 	CheckSum(iSum, m_iPrereqOrPromotion2);

@@ -1085,6 +1085,7 @@ protected:
 	int m_iIgnoreTerrainDamage;
 	int m_zobristValue;
 public:
+	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvPromotionInfo* pClassInfo);
