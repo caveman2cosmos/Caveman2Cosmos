@@ -25,15 +25,6 @@ def initBUG():
 	import BugInit
 	BugInit.init()
 
-	GC = CyGlobalContext()
-	for i in xrange(GC.getNumBuildingInfos()):
-		CvBuildingInfo = GC.getBuildingInfo(i)
-		if CvBuildingInfo.getProductionCost() < 1:
-			for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
-				if CvBuildingInfo.getFlavorValue(iFlavor) != 0:
-					print CvBuildingInfo.getType() + " was assigned " + sFlavorType + " and can't be obtained by conventional means"
-					break
-
 # don't make this an event - Moose
 def init():
 	import sys

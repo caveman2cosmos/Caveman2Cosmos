@@ -69,7 +69,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.countUnlockedObsoletedBuildings, "Building - list unlocks/obsoletions", "List how many buildings got unlocked/obsoleted")
 		self.main.addTestCode(screen, self.countBonusProducers, "Building - list amount of bonus providers", "List how many buildings provide bonuses")
 		self.main.addTestCode(screen, self.checkTaxonomyBuildings, "Building - list potential Taxonomy requirements", "List taxonomy buildings, that doesn't have all potential base folklore requirements")
-		self.main.addTestCode(screen, self.listFlavors, "General - list and check flavors", "List flavors of traits, buildings, techs, civics, religions, units and report if conventionally unobtainable entry has flavor")
+		self.main.addTestCode(screen, self.listFlavors, "General - list and check flavors", "List flavors of traits, buildings, techs, civics, religions, units and report if conventionally unobtainable entry has flavor. Items with flavors can be viewed in CSV as table.")
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
@@ -3728,43 +3728,70 @@ class TestCode:
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 
-			#We need to expose to python amount of possible flavors, and their types.
-			for iFlavor in xrange(7):
-				if CvBuildingInfo.getProductionCost() < 1 and CvBuildingInfo.getFlavorValue(iFlavor) != 0:
-					self.log(CvBuildingInfo.getType()+" has assigned flavor and can't be obtained by conventional means")
-					break
+			if CvBuildingInfo.getProductionCost() < 1:
+				for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+					if CvBuildingInfo.getFlavorValue(iFlavor) != 0:
+						self.log(CvBuildingInfo.getType()+" was assigned "+sFlavorType+" and can't be obtained by conventional means")
+						break
 
 			if CvBuildingInfo.getProductionCost() > 0:
-				self.log(CvBuildingInfo.getType())
+				sBuffer = CvBuildingInfo.getType()
+				for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+					if CvBuildingInfo.getFlavorValue(iFlavor) != 0:
+						sBuffer += ","+sFlavorType+","+str(CvBuildingInfo.getFlavorValue(iFlavor))
+				if sBuffer.find(",") != -1:
+					self.log(sBuffer)
 
 		for iCivic in xrange(GC.getNumCivicInfos()):
 			CvCivicInfo = GC.getCivicInfo(iCivic)
 
-			self.log(CvCivicInfo.getType())
+			sBuffer = CvCivicInfo.getType()
+			for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+				if CvCivicInfo.getFlavorValue(iFlavor) != 0:
+					sBuffer += ","+sFlavorType+","+str(CvCivicInfo.getFlavorValue(iFlavor))
+			if sBuffer.find(",") != -1:
+				self.log(sBuffer)
 
 		for iTech in xrange(GC.getNumTechInfos()):
 			CvTechInfo = GC.getTechInfo(iTech)
 
-			for iFlavor in xrange(7):
-				if CvTechInfo.getFlavorValue(iFlavor) != 0 and (CvTechInfo.getResearchCost() < 1 or CvTechInfo.isRepeat() or CvTechInfo.isDisable()):
-					self.log(CvTechInfo.getType()+" has assigned flavor and can't be obtained by conventional means")
-					break
+			if CvTechInfo.getResearchCost() < 1 or CvTechInfo.isRepeat() or CvTechInfo.isDisable():
+				for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+					if CvTechInfo.getFlavorValue(iFlavor) != 0:
+						self.log(CvTechInfo.getType()+" was assigned "+sFlavorType+" and can't be obtained by conventional means")
+						break
 
 			if CvTechInfo.getResearchCost() > 0 and not CvTechInfo.isRepeat() and not CvTechInfo.isDisable():
-				self.log(CvTechInfo.getType())
+				sBuffer = CvTechInfo.getType()
+				for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+					if CvTechInfo.getFlavorValue(iFlavor) != 0:
+						sBuffer += ","+sFlavorType+","+str(CvTechInfo.getFlavorValue(iFlavor))
+				if sBuffer.find(",") != -1:
+					self.log(sBuffer)
 
 		for iUnit in xrange(GC.getNumUnitInfos()):
 			CvUnitInfo = GC.getUnitInfo(iUnit)
 
-			for iFlavor in xrange(7):
-				if CvUnitInfo.getProductionCost() < 1 and CvUnitInfo.getFlavorValue(iFlavor) != 0:
-					self.log(CvUnitInfo.getType()+" has assigned flavor and can't be obtained by conventional means")
-					break
+			if CvUnitInfo.getProductionCost() < 1:
+				for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+					if CvUnitInfo.getFlavorValue(iFlavor) != 0:
+						self.log(CvUnitInfo.getType()+" was assigned "+sFlavorType+" and can't be obtained by conventional means")
+						break
 
 			if CvUnitInfo.getProductionCost() > 0:
-				self.log(CvUnitInfo.getType())
+				sBuffer = CvUnitInfo.getType()
+				for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+					if CvUnitInfo.getFlavorValue(iFlavor) != 0:
+						sBuffer += ","+sFlavorType+","+str(CvUnitInfo.getFlavorValue(iFlavor))
+				if sBuffer.find(",") != -1:
+					self.log(sBuffer)
 
 		for iReligion in xrange(GC.getNumReligionInfos()):
 			CvReligionInfo = GC.getReligionInfo(iReligion)
 
-			self.log(CvReligionInfo.getType())
+			sBuffer = CvReligionInfo.getType()
+			for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+				if CvReligionInfo.getFlavorValue(iFlavor) != 0:
+					sBuffer += ","+sFlavorType+","+str(CvReligionInfo.getFlavorValue(iFlavor))
+			if sBuffer.find(",") != -1:
+				self.log(sBuffer)
