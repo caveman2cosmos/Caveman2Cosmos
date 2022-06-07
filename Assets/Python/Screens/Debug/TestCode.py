@@ -69,6 +69,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.countUnlockedObsoletedBuildings, "Building - list unlocks/obsoletions", "List how many buildings got unlocked/obsoleted")
 		self.main.addTestCode(screen, self.countBonusProducers, "Building - list amount of bonus providers", "List how many buildings provide bonuses")
 		self.main.addTestCode(screen, self.checkTaxonomyBuildings, "Building - list potential Taxonomy requirements", "List taxonomy buildings, that doesn't have all potential base folklore requirements")
+		self.main.addTestCode(screen, self.listFlavors, "General - list and check flavors", "List flavors of traits, buildings, techs, civics, religions, units and report if conventionally unobtainable entry has flavor")
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
@@ -3721,3 +3722,49 @@ class TestCode:
 							if CvUnitBuilding.getSpecialBuildingType() != GC.getInfoTypeForString("SPECIALBUILDING_FOLKLORE_TAXONOMY") and CvUnitBuilding.getSpecialBuildingType() != GC.getInfoTypeForString("SPECIALBUILDING_FOLKLORE_EXPLORATION") and CvUnitBuilding.getType().find("BUILDING_FOLKLORE") != -1:
 								if not CvBuildingInfo.isPrereqInCityBuilding(CvUnitInfo.getBuildings(k)) and not CvBuildingInfo.isPrereqOrBuilding(CvUnitInfo.getBuildings(k)):
 									self.log(CvBuildingInfo.getType()+" could have as req: "+CvUnitBuilding.getType())
+
+	#List entries using flavor types and alert if unobtainable conventionally stuff have flavors.
+	def listFlavors(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+
+			#We need to expose to python amount of possible flavors, and their types.
+			for iFlavor in xrange(7):
+				if CvBuildingInfo.getProductionCost() < 1 and CvBuildingInfo.getFlavorValue(iFlavor) != 0:
+					self.log(CvBuildingInfo.getType()+" has assigned flavor and can't be obtained by conventional means")
+					break
+
+			if CvBuildingInfo.getProductionCost() > 0:
+				self.log(CvBuildingInfo.getType())
+
+		for iCivic in xrange(GC.getNumCivicInfos()):
+			CvCivicInfo = GC.getCivicInfo(iCivic)
+
+			self.log(CvCivicInfo.getType())
+
+		for iTech in xrange(GC.getNumTechInfos()):
+			CvTechInfo = GC.getTechInfo(iTech)
+
+			for iFlavor in xrange(7):
+				if CvTechInfo.getFlavorValue(iFlavor) != 0 and (CvTechInfo.getResearchCost() < 1 or CvTechInfo.isRepeat() or CvTechInfo.isDisable()):
+					self.log(CvTechInfo.getType()+" has assigned flavor and can't be obtained by conventional means")
+					break
+
+			if CvTechInfo.getResearchCost() > 0 and not CvTechInfo.isRepeat() and not CvTechInfo.isDisable():
+				self.log(CvTechInfo.getType())
+
+		for iUnit in xrange(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(iUnit)
+
+			for iFlavor in xrange(7):
+				if CvUnitInfo.getProductionCost() < 1 and CvUnitInfo.getFlavorValue(iFlavor) != 0:
+					self.log(CvUnitInfo.getType()+" has assigned flavor and can't be obtained by conventional means")
+					break
+
+			if CvUnitInfo.getProductionCost() > 0:
+				self.log(CvUnitInfo.getType())
+
+		for iReligion in xrange(GC.getNumReligionInfos()):
+			CvReligionInfo = GC.getReligionInfo(iReligion)
+
+			self.log(CvReligionInfo.getType())
