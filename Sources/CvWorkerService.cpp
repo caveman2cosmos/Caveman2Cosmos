@@ -51,8 +51,10 @@ bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
 
 		CvPlot* loopedPlot = itr.plot();
 		const PlayerTypes plotOwner = loopedPlot->getOwner();
-		//const ImprovementTypes currentImprovementOnPlot = loopedPlot->getImprovementType();
-		//const CvImprovementInfo* currentImprovementInfo = currentImprovementOnPlot != NO_IMPROVEMENT ? &GC.getImprovementInfo(currentImprovementOnPlot) : NULL;
+		const ImprovementTypes currentImprovementOnPlot = loopedPlot->getImprovementType();
+		// const CvImprovementInfo* currentImprovementInfo = currentImprovementOnPlot != NO_IMPROVEMENT ? &GC.getImprovementInfo(currentImprovementOnPlot) : NULL;
+
+		if (currentImprovementOnPlot != NO_IMPROVEMENT) continue;
 
 		if (unitOwner != plotOwner && plotOwner != NO_PLAYER) continue;
 
