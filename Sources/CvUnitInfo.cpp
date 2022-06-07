@@ -6285,9 +6285,9 @@ bool CvUnitInfo::setQualifiedPromotionType(const int iPromo, std::vector<int>& c
 
 	const CvPromotionInfo& promo = GC.getPromotionInfo(static_cast<PromotionTypes>(iPromo));
 
-	if (setQualifiedPromotionType(promo.getPrereqPromotion(), checklist)
-	&& (setQualifiedPromotionType(promo.getPrereqOrPromotion1(), checklist)
-	||  setQualifiedPromotionType(promo.getPrereqOrPromotion2(), checklist)))
+	if (setQualifiedPromotionType((int)promo.getPrereqPromotion(), checklist)
+	&& (setQualifiedPromotionType((int)promo.getPrereqOrPromotion1(), checklist)
+	||  setQualifiedPromotionType((int)promo.getPrereqOrPromotion2(), checklist)))
 	{
 		// There is a theoretical possibility that this promo got qualified in any of the three above recursion calls..
 		if (isQualifiedPromotionType(iPromo))

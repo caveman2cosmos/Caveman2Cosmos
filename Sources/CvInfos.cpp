@@ -1976,9 +1976,6 @@ void CvTechInfo::getCheckSum(uint32_t& iSum) const
 //------------------------------------------------------------------------------------------------------
 CvPromotionInfo::CvPromotionInfo() :
 m_iLayerAnimationPath(ANIMATIONPATH_NONE),
-m_iPrereqPromotion(NO_PROMOTION),
-m_iPrereqOrPromotion1(NO_PROMOTION),
-m_iPrereqOrPromotion2(NO_PROMOTION),
 m_iTechPrereq(NO_TECH),
 m_iMinEraType(NO_ERA),
 m_iMaxEraType(NO_ERA),
@@ -2252,21 +2249,6 @@ CvPromotionInfo::~CvPromotionInfo()
 int CvPromotionInfo::getLayerAnimationPath() const
 {
 	return m_iLayerAnimationPath;
-}
-
-int CvPromotionInfo::getPrereqPromotion() const
-{
-	return m_iPrereqPromotion;
-}
-
-int CvPromotionInfo::getPrereqOrPromotion1() const
-{
-	return m_iPrereqOrPromotion1;
-}
-
-int CvPromotionInfo::getPrereqOrPromotion2() const
-{
-	return m_iPrereqOrPromotion2;
 }
 
 TechTypes CvPromotionInfo::getTechPrereq() const
@@ -4767,9 +4749,9 @@ bool CvPromotionInfo::hasNegativeEffects() const
 void CvPromotionInfo::getDataMembers(CvInfoUtil& util)
 {
 	util
-		//.addEnum(m_iPrereqPromotion, L"PromotionPrereq")
-		//.addEnum(m_iPrereqOrPromotion1, L"PromotionPrereqOr1")
-		//.addEnum(m_iPrereqOrPromotion2, L"PromotionPrereqOr2")
+		.addEnum(m_iPrereqPromotion, L"PromotionPrereq")
+		.addEnum(m_iPrereqOrPromotion1, L"PromotionPrereqOr1")
+		.addEnum(m_iPrereqOrPromotion2, L"PromotionPrereqOr2")
 	;
 }
 
@@ -5462,24 +5444,6 @@ bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 	}
 		//TB Combat Mod End
 	//pXML->SetOptionalVectorWithDelayedResolution(PromotionOverwrites, L"PromotionOverwrites");
-
-	return true;
-}
-
-bool CvPromotionInfo::readPass2(CvXMLLoadUtility* pXML)
-{
-	CvString szTextVal;
-
-	if (!CvHotkeyInfo::read(pXML))
-	{
-		return false;
-	}
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"PromotionPrereq");
-	m_iPrereqPromotion = GC.getInfoTypeForString(szTextVal);
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"PromotionPrereqOr1");
-	m_iPrereqOrPromotion1 = GC.getInfoTypeForString(szTextVal);
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"PromotionPrereqOr2");
-	m_iPrereqOrPromotion2 = GC.getInfoTypeForString(szTextVal);
 
 	return true;
 }
@@ -6275,11 +6239,6 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 	}
 	//TB Combat Mods End  TB SubCombat Mods end
 
-	// Readpass2 stuff
-	if (getPrereqPromotion() == iTextDefault) m_iPrereqPromotion = pClassInfo->getPrereqPromotion();
-	if (getPrereqOrPromotion1() == iTextDefault) m_iPrereqOrPromotion1 = pClassInfo->getPrereqOrPromotion1();
-	if (getPrereqOrPromotion2() == iTextDefault) m_iPrereqOrPromotion2 = pClassInfo->getPrereqOrPromotion2();
-
 	if (isCanMovePeaks() == bDefault) m_bCanMovePeaks = pClassInfo->isCanMovePeaks();
 	//	Koshling - enhanced mountaineering mode to differentiate between ability to move through
 	//	mountains, and ability to lead a stack through mountains
@@ -6296,22 +6255,10 @@ void CvPromotionInfo::copyNonDefaults(const CvPromotionInfo* pClassInfo)
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators);
 }
 
-void CvPromotionInfo::copyNonDefaultsReadPass2(CvPromotionInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver)
-{
-	const int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-
-	if (bOver || getPrereqPromotion() == iTextDefault) m_iPrereqPromotion = pClassInfo->getPrereqPromotion();
-	if (bOver || getPrereqOrPromotion1() == iTextDefault) m_iPrereqOrPromotion1 = pClassInfo->getPrereqOrPromotion1();
-	if (bOver || getPrereqOrPromotion2() == iTextDefault) m_iPrereqOrPromotion2 = pClassInfo->getPrereqOrPromotion2();
-}
-
 void CvPromotionInfo::getCheckSum(uint32_t& iSum) const
 {
 	CvInfoUtil(this).checkSum(iSum);
 
-	CheckSum(iSum, m_iPrereqPromotion);
-	CheckSum(iSum, m_iPrereqOrPromotion1);
-	CheckSum(iSum, m_iPrereqOrPromotion2);
 	CheckSum(iSum, m_iTechPrereq);
 	CheckSum(iSum, m_iStateReligionPrereq);
 	CheckSum(iSum, m_iMinEraType);
