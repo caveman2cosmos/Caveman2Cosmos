@@ -14298,12 +14298,6 @@
 				</TechSpecialistChange>
 			</TechSpecialistChanges>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SPY_NETWORK</ArtDefineTag>

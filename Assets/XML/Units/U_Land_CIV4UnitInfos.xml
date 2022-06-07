@@ -38205,12 +38205,6 @@
 				<BuildingType>BUILDING_SPY_TRAINING_FACILITY</BuildingType>
 				<BuildingType>BUILDING_SCOTLAND_YARD</BuildingType>
 			</Buildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<iEspionagePoints>3000</iEspionagePoints>
@@ -43378,12 +43372,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_SCOTLAND_YARD</BuildingType>
 			</Buildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>

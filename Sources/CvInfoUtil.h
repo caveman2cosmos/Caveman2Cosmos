@@ -160,7 +160,7 @@ struct CvInfoUtil
 	/// Enum wrapper
 	///==============
 
-	template <typename Enum_t>
+	template <typename Enum_t, DelayedResolutionTypes delayedResolutionOption>
 	struct EnumWrapper : WrappedVar
 	{
 		friend struct CvInfoUtil;
@@ -182,18 +182,15 @@ struct CvInfoUtil
 
 		void readXml(CvXMLLoadUtility* pXML)
 		{
-			if (pXML->TryMoveToXmlFirstChild(m_tag.c_str()))
-			{
-				CvString szTextVal;
-				pXML->GetXmlVal(szTextVal);
-				ref() = static_cast<Enum_t>(GC.getInfoTypeForString(szTextVal));
-				pXML->MoveToXmlParent();
-			}
+			CvXMLLoadUtility::SetOptionalInfoType<delayedResolutionOption>(pXML, ref(), m_tag.c_str());
 		}
 
 		void copyNonDefaults(const WrappedVar* source)
 		{
-			if (ref() == -1)
+			if (delayedResolutionOption == USE_DELAYED_RESOLUTION)
+				GC.copyNonDefaultDelayedResolution(reinterpret_cast<int*>(&ref()), reinterpret_cast<int*>(&(static_cast<const EnumWrapper*>(source)->ref())));
+
+			else if (ref() == -1)
 				ref() = static_cast<const EnumWrapper*>(source)->ref();
 		}
 
@@ -210,7 +207,10 @@ struct CvInfoUtil
 	template <typename Enum_t>
 	CvInfoUtil& addEnum(Enum_t& var, const wchar_t* tag)
 	{
-		m_wrappedVars.push_back(new EnumWrapper<Enum_t>(var, tag));
+		if (GC.isDelayedResolutionRequired(m_eInfoClass, InfoClassTraits<Enum_t>::InfoClassEnum))
+			m_wrappedVars.push_back(new EnumWrapper<Enum_t, USE_DELAYED_RESOLUTION>(var, tag));
+		else
+			m_wrappedVars.push_back(new EnumWrapper<Enum_t, NO_DELAYED_RESOLUTION>(var, tag));
 		return *this;
 	}
 
