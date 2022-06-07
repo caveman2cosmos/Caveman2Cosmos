@@ -1711,6 +1711,7 @@ public:
 	virtual void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd) = 0;
 	virtual bool isWaitingOnUnitAI(int iIndex) const = 0;
 	virtual bool isWaitingOnUnitAIAny() const = 0;
+	virtual bool processContracts(int iMinPriority = 0) = 0;
 
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
 
@@ -2638,8 +2639,7 @@ public:
 	void changeExtraBombardRate(int iChange);
 	void setExtraBombardRate(int iChange);
 	int getBombardRate() const;
-	int getSMBombardRateTotalBase() const;
-	int getSMBombardRate() const;
+	int getBombardRateBase() const;
 	void setSMBombardRate();
 
 	int getAirBombCurrRate() const;

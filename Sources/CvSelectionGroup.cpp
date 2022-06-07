@@ -481,7 +481,7 @@ void CvSelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2
 {
 	if ( eMission == MISSION_SKIP && eMissionAI == NO_MISSIONAI)
 	{
-		//	No longer targeting any mission - make sure we don't keep reciord of the fact that we were previously
+		//	No longer targeting any mission - make sure we don't keep record of the fact that we were previously
 		((CvSelectionGroupAI*)this)->AI_setMissionAI(NO_MISSIONAI,NULL,NULL);
 	}
 	pushMissionInternal(eMission, iData1, iData2, iFlags, bAppend, bManual, eMissionAI, pMissionAIPlot, pMissionAIUnit);
@@ -749,7 +749,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 // BUG - Sentry Actions - end
 
 		case MISSION_MOVE_TO:
-			if (!(pPlot->at(iData1, iData2)))
+			if (!pPlot->at(iData1, iData2))
 			{
 				return true;
 			}
@@ -2632,15 +2632,15 @@ bool CvSelectionGroup::canDoCommand(CommandTypes eCommand, int iData1, int iData
 
 bool CvSelectionGroup::canEverDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible, bool bUseCache) const
 {
-	if(eCommand == COMMAND_LOAD)
+	if (eCommand == COMMAND_LOAD)
 	{
 		return algo::any_of(plot()->units(), !CvUnit::fn::isFull());
 	}
-	else if(eCommand == COMMAND_UNLOAD)
+	if (eCommand == COMMAND_UNLOAD)
 	{
 		return algo::any_of(units(), CvUnit::fn::isCargo());
 	}
-	else if(eCommand == COMMAND_UPGRADE && bUseCache)
+	if (eCommand == COMMAND_UPGRADE && bUseCache)
 	{
 		//see if any of the different units can upgrade to this unit type
 		for(int i=0;i<(int)m_aDifferentUnitCache.size();i++)
@@ -2649,10 +2649,8 @@ bool CvSelectionGroup::canEverDoCommand(CommandTypes eCommand, int iData1, int i
 			if(unit->canDoCommand(eCommand, iData1, iData2, bTestVisible, false))
 				return true;
 		}
-
 		return false;
 	}
-
 	return true;
 }
 
@@ -2877,118 +2875,73 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
+		FAssertMsg(pLoopUnit != NULL, "TestAssert, if this never happen then remove the following if statement");
+
+		if (pLoopUnit == NULL) return false;
+
 		switch (eInterfaceMode)
 		{
-		case INTERFACEMODE_AIRLIFT:
-			if (pLoopUnit != NULL && pLoopUnit->canAirliftAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRLIFT:
 			{
-				return true;
+				return pLoopUnit->canAirliftAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_NUKE:
-			if (pLoopUnit != NULL && pLoopUnit->canNukeAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_NUKE:
 			{
-				return true;
+				return pLoopUnit->canNukeAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-		case INTERFACEMODE_RECON:
-			if (pLoopUnit != NULL && pLoopUnit->canReconAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_RECON:
 			{
-				return true;
+				return pLoopUnit->canReconAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_PARADROP:
-			if (pLoopUnit != NULL && pLoopUnit->canParadropAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_PARADROP:
 			{
-				return true;
+				return pLoopUnit->canParadropAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB:
-			if (pLoopUnit != NULL && pLoopUnit->canAirBombAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB:
 			{
-				return true;
+				return pLoopUnit->canAirBombAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_RANGE_ATTACK:
-			if (pLoopUnit != NULL && pLoopUnit->canRangeStrikeAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_RANGE_ATTACK:
 			{
-				return true;
+				return pLoopUnit->canRangeStrikeAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRSTRIKE:
-			if (pLoopUnit != NULL && pLoopUnit->canEnterPlot(pPlot, MoveCheck::Attack))
+			case INTERFACEMODE_AIRSTRIKE:
 			{
-				return true;
+				return pLoopUnit->canEnterPlot(pPlot, MoveCheck::Attack);
 			}
-			break;
-
-		case INTERFACEMODE_REBASE:
-			if (pLoopUnit != NULL && pLoopUnit->canEnterPlot(pPlot))
+			case INTERFACEMODE_REBASE:
 			{
-				return true;
+				return pLoopUnit->canEnterPlot(pPlot);
 			}
-			break;
-
-		// Dale - AB: Bombing
-		case INTERFACEMODE_AIRBOMB1:
-			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb1At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB1:
 			{
-				return true;
+				return GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb1At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB2:
-			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb2At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB2:
 			{
-				return true;
+				return GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb2At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB3:
-			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb3At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB3:
 			{
-				return true;
+				return GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb3At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB4:
-			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb4At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB4:
 			{
-				return true;
+				return GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb4At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB5:
-			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb5At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB5:
 			{
-				return true;
+				return GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb5At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		// Dale - RB: Field Bombard
-		case INTERFACEMODE_BOMBARD:
-			if (pLoopUnit != NULL && GC.isDCM_RANGE_BOMBARD() && pLoopUnit->canBombardAtRanged(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_BOMBARD:
 			{
-				return true;
+				return GC.isDCM_RANGE_BOMBARD() && pLoopUnit->canBombardAtRanged(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		// Dale - FE: Fighters
-		case INTERFACEMODE_FENGAGE:
-			if (pLoopUnit != NULL && GC.isDCM_FIGHTER_ENGAGE() && pLoopUnit->canFEngageAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_FENGAGE:
 			{
-				return true;
+				return GC.isDCM_FIGHTER_ENGAGE() && pLoopUnit->canFEngageAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-		// ! Dale
-
-		case INTERFACEMODE_SHADOW_UNIT:
-			if (pLoopUnit != NULL)
+			case INTERFACEMODE_SHADOW_UNIT:
 			{
 				foreach_(CvUnit* pLoopUnit, pPlot->units())
 				{
@@ -2997,12 +2950,9 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 						return true;
 					}
 				}
+				return false;
 			}
-			break;
-
-		default:
-			return true;
-			break;
+			default: return true;
 		}
 	}
 	return false;
@@ -3936,13 +3886,12 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 						pBestAttackUnit->attack(pDestPlot, bQuick, bLoopStealthDefense);
 					}
 				}
-				else if (pBestDefender)
-				{
-					pBestAttackUnit->attack(pDestPlot, false, bLoopStealthDefense);
-					break;
-				}
 				else
 				{
+					if (pBestDefender)
+					{
+						pBestAttackUnit->attack(pDestPlot, false, bLoopStealthDefense);
+					}
 					break;
 				}
 				// Afforess 6/20/11
@@ -5477,7 +5426,7 @@ void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 	// this means that if a new unit is going to become the head, change its AI to match, if possible
 	// AI_setUnitAIType removes the unit from the current group (at least currently), so we have to be careful in the loop here
 	// so, loop until we have not changed unit AIs
-	bool bChangedUnitAI;
+	bool bChangedUnitAI = true;
 	do
 	{
 		bChangedUnitAI = false;
@@ -5488,7 +5437,6 @@ void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 		while (pUnitNode != NULL && !bChangedUnitAI)
 		{
 			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-			//pUnitNode = nextUnitNode(pUnitNode);
 
 			if (pLoopUnit != NULL)
 			{
@@ -6132,12 +6080,9 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 						}
 					}
 
-					if (isHuman())
+					if (isHuman() && !isLastPathPlotVisible() && getDomainType() != DOMAIN_AIR)
 					{
-						if (!(isLastPathPlotVisible()) && (getDomainType() != DOMAIN_AIR))
-						{
-							return false;
-						}
+						return false;
 					}
 
 					CvUnit* pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, bStealth);
@@ -6208,7 +6153,6 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 										}
 									}
 								}
-
 								bBombardExhausted = !bFoundBombard;
 
 								continue;
@@ -6225,7 +6169,6 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 							{
 								AI_queueGroupAttack(iX, iY);
 							}
-
 							break;
 						}
 					}

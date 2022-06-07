@@ -157,57 +157,57 @@ bool CvSelectionGroupAI::AI_update()
 	while (m_bGroupAttack && !bFailedAlreadyFighting || readyToMove())
 	{
 		iTempHack++;
-		if (iTempHack > 90 && iTempHack < 100)
+		if (iTempHack > 45 && iTempHack < 50)
 		{
-			FErrorMsg("error");
 			CvUnit* pHeadUnit = getHeadUnit();
 			if (NULL != pHeadUnit)
 			{
-				//if (GC.getLogging())
-				//{
-					int iPass = iTempHack - 90;
-					char szOut[1024];
-					CvWString szTempString;
-					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
-					sprintf
-					(
-						szOut, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n",
-						iPass, pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
-						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString()
-					);
-					gDLL->messageControlLog(szOut);
-				//}
+				int iPass = iTempHack - 90;
+				char szOut[1024];
+				CvWString szTempString;
+				getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+				sprintf
+				(
+					szOut, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n",
+					iPass, pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+					pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString()
+				);
+				gDLL->messageControlLog(szOut);
+
+				FErrorMsg(szOut);
 			}
+			else FErrorMsg("error");
 		}
-		if (iTempHack >= 100)
+		else if (iTempHack >= 50)
 		{
-			FErrorMsg("error");
 			CvUnit* pHeadUnit = getHeadUnit();
 			if (NULL != pHeadUnit)
 			{
-				if (GC.getLogging())
-				{
-					char szOut[1024];
-					CvWString szTempString;
-					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
-					sprintf
-					(
-						szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n",
-						pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
-						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString()
-					);
-					gDLL->messageControlLog(szOut);
-				}
+				char szOut[1024];
+				CvWString szTempString;
+				getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+				sprintf
+				(
+					szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n",
+					pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+					pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString()
+				);
+				gDLL->messageControlLog(szOut);
+
+				FErrorMsg(szOut);
+
 				pHeadUnit->finishMoves();
 			}
 			else if (readyToMove())
 			{
+				FErrorMsg("splitting group");
 				splitGroup(1);
 				break;
 			}
+			else FErrorMsg("error");
+
 			break;
 		}
-
 		// if we want to force the group to attack, force another attack
 		if (m_bGroupAttack)
 		{
@@ -215,8 +215,7 @@ bool CvSelectionGroupAI::AI_update()
 
 			groupAttack(m_iGroupAttackX, m_iGroupAttackY, MOVE_DIRECT_ATTACK, bFailedAlreadyFighting);
 		}
-		// else pick AI action
-		else
+		else // pick AI action
 		{
 			CvUnit* pHeadUnit = getHeadUnit();
 
@@ -224,7 +223,6 @@ bool CvSelectionGroupAI::AI_update()
 			{
 				break;
 			}
-
 			resetPath();
 
 			if (pHeadUnit->AI_update())
@@ -278,11 +276,7 @@ bool CvSelectionGroupAI::AI_update()
 		{
 			pushMission(MISSION_SKIP);
 		}
-
-		// AI should never put units to sleep, how does this ever happen?
-		//FAssert( getHeadUnit()->isCargo() || getActivityType() != ACTIVITY_SLEEP );
 	}
-
 	return !bDead && (isBusy() || isCargoBusy());
 }
 

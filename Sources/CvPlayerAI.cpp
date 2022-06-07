@@ -755,85 +755,85 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	{
 		foreach_(CvUnit * unitX, units())
 		{
-			if (unitX->isDead() || unitX->isDelayedDeath())
+			if (unitX->isDead())
 			{
 				continue;
 			}
-			CvPlot* unitPlot = unitX->plot();
-			bool bNoDisband = false;
-			bool bValid = false;
-
-			//	Koshling - never upgrade workers or subdued animals here as they typically have outcome
-			//	missions and construction capabilities that must be evaluated comparatively.  The UnitAI
-			//	processing for these AI types handles upgrade explicitly
+			// Koshling - never upgrade workers or subdued animals here as they typically have outcome
+			//	missions and construction capabilities that must be evaluated comparatively.
+			//	The UnitAI processing for these AI types handles upgrade explicitly.
 			switch (unitX->AI_getUnitAIType())
 			{
-			case UNITAI_SUBDUED_ANIMAL:
-			case UNITAI_WORKER:
-				continue;
-			default:
-				break;
+				case UNITAI_SUBDUED_ANIMAL:
+				case UNITAI_WORKER:
+					continue;
+				default: break;
 			}
+			CvPlot* unitPlot = unitX->plot();
+			bool bNoDisband = getGold() > iTargetGold;
+			bool bValid = false;
 
 			switch (iPass)
 			{
-			case 0:
-			{
-				// BBAI note:  Effectively only for galleys, triremes, and ironclads -
-				//		Unit types which are limited in what terrain they can operate.
-				if (AI_unitImpassableCount(unitX->getUnitType()) > 0)
+				case 0:
 				{
-					bValid = true;
-				}
-				break;
-			}
-			case 1:
-			{
-				if (unitPlot->isCity())
-				{
-					if (unitPlot->getBestDefender(getID()) == unitX)
+					// BBAI note:  Effectively only for galleys, triremes, and ironclads -
+					//		Unit types which are limited in what terrain they can operate.
+					if (AI_unitImpassableCount(unitX->getUnitType()) > 0)
 					{
-						bNoDisband = true;
 						bValid = true;
-						pLastUpgradePlot = unitPlot;
 					}
-
-					// try to upgrade units which are in danger... but don't get obsessed
-					if (!bValid && (pLastUpgradePlot != unitPlot) && ((AI_getAnyPlotDanger(unitPlot, 1, false))))
+					break;
+				}
+				case 1:
+				{
+					if (unitPlot->isCity())
 					{
-						bNoDisband = true;
-						bValid = true;
-						pLastUpgradePlot = unitPlot;
+						if (unitPlot->getBestDefender(getID()) == unitX)
+						{
+							bNoDisband = true;
+							bValid = true;
+							pLastUpgradePlot = unitPlot;
+						}
+
+						// try to upgrade units which are in danger... but don't get obsessed
+						if (!bValid && (pLastUpgradePlot != unitPlot) && ((AI_getAnyPlotDanger(unitPlot, 1, false))))
+						{
+							bNoDisband = true;
+							bValid = true;
+							pLastUpgradePlot = unitPlot;
+						}
 					}
+					break;
 				}
-				break;
-			}
-			case 2:
-			{
-				bUnderBudget = (iStartingGold - getGold()) < iUpgradeBudget;
-
-				// Only normal transports
-				if ((unitX->cargoSpace() > 0) && (unitX->getSpecialCargo() == NO_SPECIALUNIT))
+				case 2:
 				{
-					bValid = (bAnyWar || bUnderBudget);
-				}
-				// Also upgrade escort ships
-				if (unitX->AI_getUnitAIType() == UNITAI_ESCORT_SEA)
-				{
-					bValid = (bAnyWar || bUnderBudget);
-				}
-				break;
-			}
-			case 3:
-			{
-				bUnderBudget = (iStartingGold - getGold()) < iUpgradeBudget;
+					bUnderBudget = (iStartingGold - getGold()) < iUpgradeBudget;
 
-				bValid = (bAnyWar || bUnderBudget);
-				break;
-			}
-			default:
-				FErrorMsg("error");
-				break;
+					// Only normal transports
+					if ((unitX->cargoSpace() > 0) && (unitX->getSpecialCargo() == NO_SPECIALUNIT))
+					{
+						bValid = (bAnyWar || bUnderBudget);
+					}
+					// Also upgrade escort ships
+					if (unitX->AI_getUnitAIType() == UNITAI_ESCORT_SEA)
+					{
+						bValid = (bAnyWar || bUnderBudget);
+					}
+					break;
+				}
+				case 3:
+				{
+					bUnderBudget = (iStartingGold - getGold()) < iUpgradeBudget;
+
+					bValid = (bAnyWar || bUnderBudget);
+					break;
+				}
+				default:
+				{
+					FErrorMsg("error");
+					break;
+				}
 			}
 
 			if (!bValid)
@@ -874,18 +874,19 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 						}
 						if (unitX->getExperience() <= iCityExp)
 						{
+							if (unitX->hasCargo())
+							{
+								unitX->unloadAll();
+							}
 							unitX->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
 							unitX->kill(true);
-							bKilled = true;
 							pLastUpgradePlot = NULL;
+							continue;
 						}
 					}
 				}
 			}
-			if (!bKilled)
-			{
-				unitX->AI_upgrade(); // CAN DELETE UNIT!!!
-			}
+			unitX->AI_upgrade(); // CAN DELETE UNIT!!!
 		}
 	}
 	if (isNPC())
@@ -11453,30 +11454,37 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			break;
 
 		case UNITAI_EXPLORE:
-			iValue += kUnitInfo.getMoves() * kUnitInfo.getMoves() * (100 + iCombatValue / 4);
+		{
+			iValue += kUnitInfo.getMoves() * kUnitInfo.getMoves() * (100 + iCombatValue) / 4;
 			if (kUnitInfo.isNoBadGoodies())
 			{
-				iValue *= 3;
-				iValue /= 2;
+				iValue *= 2;
 			}
 			//need to add vision and terrain factors here.
 			break;
-
+		}
 		case UNITAI_HUNTER:
-		case UNITAI_HUNTER_ESCORT:
-			iValue += ((iCombatValue * 2) / (kUnitInfo.isOnlyDefensive() ? 2 : 1));
+		{
+			iValue += iCombatValue * 2 / (kUnitInfo.isOnlyDefensive() ? 2 : 1);
 			//TB Combat Mods Begin
-			iValue += ((iCombatValue * kUnitInfo.getPursuit()) / 100);
-			iValue += ((iCombatValue * kUnitInfo.getUnyielding()) / 200);
+			iValue += iCombatValue * kUnitInfo.getPursuit() / 100;
+			iValue += iCombatValue * kUnitInfo.getUnyielding() / 200;
 #ifdef BATTLEWORN
-			iValue += ((iCombatValue * kUnitInfo.getWithdrawAdjperAtt()) / 100);
+			iValue += iCombatValue * kUnitInfo.getWithdrawAdjperAtt() / 100;
 #endif
 			//TB Combat Mods End
-			iValue *= (100 + kUnitInfo.getMoves() * 30);
-			iValue *= (100 + kUnitInfo.getAnimalCombatModifier());
+			iValue *= 100 + kUnitInfo.getMoves() * 25;
+			iValue *= 100 + kUnitInfo.getAnimalCombatModifier() * 2;
 			iValue /= 10000;
 			break;
-
+		}
+		case UNITAI_HUNTER_ESCORT:
+		{
+			iValue += iCombatValue;
+			iValue *= 100 + kUnitInfo.getMoves() * 25;
+			iValue /= 100;
+			break;
+		}
 		case UNITAI_MISSIONARY:
 			iValue += (kUnitInfo.getMoves() * 100);
 			if (getStateReligion() != NO_RELIGION)
@@ -11867,22 +11875,20 @@ int CvPlayerAI::AI_countCargoSpace(UnitAITypes eUnitAI) const
 }
 
 
-int CvPlayerAI::AI_neededExplorers(const CvArea* pArea, bool bIdeal) const
+int CvPlayerAI::AI_neededExplorers(const CvArea* pArea) const
 {
 	FAssert(pArea != NULL);
-	int iNeeded = 0;
-
-	if (pArea->isWater())
-	{
-		iNeeded = std::min(iNeeded + (pArea->getNumUnrevealedTiles(getTeam()) / 400), bIdeal ? 5 : std::max(2, ((getNumCities() / 2) + 1)));
-	}
-	else
-	{
-		//	Koshling - modified explorer AI to keep 'exploring' already revealed neutral territory as lower priority than
-		//	revealing new tiles so as to keep up neutral area patrols for animal hunting and general intelligence gathering
-		//	Note - we cap the number of explorers we ideally need at 5, so returns diminish fast
-		iNeeded = std::min(((pArea->getNumUnownedTiles() + 4) * pArea->getNumUnrevealedTiles(getTeam())) / 500, bIdeal ? 5 : std::max(3, ((getNumCities() / 3) + 2)));
-	}
+	int iNeeded = (
+		std::min(
+			(100 + pArea->getNumTiles())
+			*
+			(1 + pArea->getNumUnrevealedTiles(getTeam()) + pArea->getNumUnownedTiles())
+			/
+			(100 * pArea->getNumTiles()),
+			// Limit the need for very big land based on empire size.
+			std::max(5, 3 + getNumCities() / 3)
+		)
+	);
 
 	if (0 == iNeeded && GC.getGame().countCivTeamsAlive() - 1 > GET_TEAM(getTeam()).getHasMetCivCount(true))
 	{
@@ -11909,40 +11915,25 @@ int CvPlayerAI::AI_neededExplorers(const CvArea* pArea, bool bIdeal) const
 			}
 		}
 	}
-
 	return iNeeded;
 }
 
-int CvPlayerAI::AI_neededHunters(const CvArea* pArea, bool bIdeal) const
+int CvPlayerAI::AI_neededHunters(const CvArea* pArea) const
 {
 	FAssert(pArea != NULL);
-	int iNeeded = 1;
 
 	if (pArea->isWater())
 	{
-		iNeeded = 0;	//	Hunter AI currently only operates on land
+		return 0; // Hunter AI currently only operates on land
 	}
-	else
-	{
-		//	Note - we do not cap the number of ideally needed hunters at all, but we
-		//	only consider (an approximation of) the part of the landmass that is revealed to us
-		const int iCityCountCap = std::max(3, (getNumCities() / 3) + 2);
-		iNeeded = std::min((pArea->getNumUnownedTiles() + 150) / 200, bIdeal ? MAX_INT : iCityCountCap);
-
-		if (bIdeal && iNeeded > iCityCountCap)
-		{
-			//	Normalize for percentage revealed
-			iNeeded *= pArea->getNumRevealedTiles(getTeam());
-			iNeeded /= pArea->getNumTiles();
-
-			if (iNeeded < iCityCountCap)
-			{
-				iNeeded = iCityCountCap;
-			}
-		}
-	}
-
-	return iNeeded;
+	const int iLandOfInterest = (
+		GC.getGame().isOption(GAMEOPTION_ANIMALS_STAY_OUT)
+		?
+		pArea->getNumUnownedTiles()
+		:
+		pArea->getNumTiles()
+	);
+	return std::min(iLandOfInterest / 50, 3 + pArea->getNumUnownedTiles() / 50 + getNumCities() / 2);
 }
 
 
@@ -12962,11 +12953,7 @@ void CvPlayerAI::AI_noteMissionAITargetCountChange(MissionAITypes eMissionAI, co
 	}
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  04/03/10								jdog5000	  */
-/*																							  */
-/* General AI																				   */
-/************************************************************************************************/
+
 int CvPlayerAI::AI_cityTargetUnitsByPath(const CvCity* pCity, const CvSelectionGroup* pSkipSelectionGroup, int iMaxPathTurns) const
 {
 	PROFILE_FUNC();
@@ -13024,13 +13011,10 @@ int CvPlayerAI::AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes* aeM
 
 	foreach_(CvSelectionGroup * group, groups())
 	{
-		if (group == pSkipSelectionGroup
-			|| group->AI_getMissionAIUnit() != pUnit)
+		if (group == pSkipSelectionGroup || group->AI_getMissionAIUnit() != pUnit)
 		{
 			continue;
 		}
-
-
 		int iPathTurns = MAX_INT;
 
 		if (iMaxPathTurns >= 0 && pUnit->plot() != NULL && group->plot() != NULL)
@@ -13067,12 +13051,9 @@ int CvPlayerAI::AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes* aeM
 			}
 		}
 	}
-
 	return iCount;
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
+
 
 int CvPlayerAI::AI_enemyTargetMissionAIs(MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup) const
 {

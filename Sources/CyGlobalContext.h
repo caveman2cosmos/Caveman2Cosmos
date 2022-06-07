@@ -34,6 +34,10 @@ public:
 
 	int getInfoTypeForString(const char* szInfoType, bool bHideAssert = false) const;
 
+	int getNumFlavorTypes() const;
+	const char* getFlavorType(FlavorTypes e) const;
+	const python::list getFlavorTypes() const;
+
 	const CvMapInfo& getMapInfo(MapTypes eMap) const;
 	const CvEffectInfo* getEffectInfo(int i) const;
 	const CvTerrainInfo* getTerrainInfo(int i) const;

@@ -29,20 +29,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_POND</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -113,12 +99,6 @@
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
 		</BuildingInfo>
@@ -161,12 +141,6 @@
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
 		</BuildingInfo>
@@ -192,12 +166,6 @@
 				</UnitCombatProdModifier>
 			</UnitCombatProdModifiers>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
 		</BuildingInfo>
@@ -230,20 +198,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_BAD_BOY_CAGE</ArtDefineTag>
 		</BuildingInfo>
@@ -287,20 +241,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_CAVEBEAR_CAGE</ArtDefineTag>
 		</BuildingInfo>
@@ -344,20 +284,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_LION_CAGE</ArtDefineTag>
 		</BuildingInfo>
@@ -391,20 +317,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_BIRD_CAGE</ArtDefineTag>
 		</BuildingInfo>
@@ -434,20 +346,6 @@
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_BISON_HERD</ArtDefineTag>
 		</BuildingInfo>
@@ -471,16 +369,6 @@
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_BOXING_KANGAROO</ArtDefineTag>
 		</BuildingInfo>
@@ -504,16 +392,6 @@
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_BUFFALO_HERD</ArtDefineTag>
 		</BuildingInfo>
@@ -587,20 +465,6 @@
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_CAMEL_HERD</ArtDefineTag>
 		</BuildingInfo>
@@ -722,16 +586,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_CAVE_BEAR_REMAINS</ArtDefineTag>
@@ -787,16 +641,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_CAVE_LION</ArtDefineTag>
@@ -837,12 +681,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-			</Flavors>
 			<ArtDefineTag>ART_DEF_BUILDING_CEPHALOPOD_INSTITUTE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -881,12 +719,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-			</Flavors>
 			<ArtDefineTag>ART_DEF_BUILDING_CETAEA_INSTITUTE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -909,12 +741,6 @@
 				<iYield>4</iYield>
 			</YieldChanges>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_COASTAL_FISH_FARM</ArtDefineTag>
 		</BuildingInfo>
@@ -945,16 +771,6 @@
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_COW_HERD</ArtDefineTag>
 		</BuildingInfo>
@@ -988,12 +804,6 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_CRAB_NETS</ArtDefineTag>
 		</BuildingInfo>
@@ -1017,16 +827,6 @@
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_DANCING_BEAR</ArtDefineTag>
 		</BuildingInfo>
@@ -1056,20 +856,6 @@
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_DEER_HERD</ArtDefineTag>
 		</BuildingInfo>
@@ -1152,16 +938,6 @@
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_DONKEY_HERD</ArtDefineTag>
 		</BuildingInfo>
@@ -1189,12 +965,6 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
@@ -1252,16 +1022,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_ELASMOTHERIUM_REMAINS</ArtDefineTag>
@@ -1292,20 +1052,6 @@
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_ELEPHANT_HERD</ArtDefineTag>
 		</BuildingInfo>
@@ -1338,16 +1084,6 @@
 				</TechCommerceModifier>
 			</TechCommerceModifiers>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_EXOTIC_HERBAVOURS</ArtDefineTag>
 		</BuildingInfo>
@@ -1373,16 +1109,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>20</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_FEATHER_WORKER</ArtDefineTag>
 		</BuildingInfo>
@@ -1410,12 +1136,6 @@
 				<iYield>1</iYield>
 			</YieldChanges>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_FISH_PENS</ArtDefineTag>
 		</BuildingInfo>
@@ -1443,20 +1163,6 @@
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<ArtDefineTag>ART_DEF_BUILDING_FUR_FARM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1510,16 +1216,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_GLYPTO</ArtDefineTag>
@@ -1545,16 +1241,6 @@
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_GOAT_HERD</ArtDefineTag>
 		</BuildingInfo>
@@ -1583,16 +1269,6 @@
 			</CommerceChanges>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_GOVENORS_MENAGERIE</ArtDefineTag>
 		</BuildingInfo>
@@ -1619,16 +1295,6 @@
 			</CommerceChanges>
 			<iRevIdxLocal>-2</iRevIdxLocal>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_GOVENORS_PETS</ArtDefineTag>
 		</BuildingInfo>
@@ -1683,16 +1349,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_HAAST_EAGLE_REMAINS</ArtDefineTag>
@@ -1722,16 +1378,6 @@
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<ArtDefineTag>ART_DEF_BUILDING_HAWKING_HUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1790,16 +1436,6 @@
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_LLAMA_HERD</ArtDefineTag>
 		</BuildingInfo>
@@ -1830,12 +1466,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<ArtDefineTag>ART_DEF_BUILDING_MARINE_INSTITUTE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1870,12 +1500,6 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
@@ -1939,16 +1563,6 @@
 			</BonusHappinessChanges>
 			<iAsset>1</iAsset>
 			<iPower>4</iPower>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2014,16 +1628,6 @@
 			</BonusHappinessChanges>
 			<iAsset>1</iAsset>
 			<iPower>4</iPower>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2064,16 +1668,6 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOA_REMAINS</Type>
@@ -2126,16 +1720,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_MOA_REMAINS</ArtDefineTag>
@@ -2224,12 +1808,6 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NOCTURNAL_CAGE</Type>
@@ -2252,12 +1830,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqInCityBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PALEOLITHIC_DOG_REMAINS</Type>
@@ -2310,16 +1882,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_DOG_REMAINS</ArtDefineTag>
@@ -2375,16 +1937,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</ArtDefineTag>
@@ -2440,16 +1992,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</ArtDefineTag>
@@ -2478,12 +2020,6 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
@@ -2572,12 +2108,6 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
@@ -2639,16 +2169,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROCOPTODON_REMAINS</ArtDefineTag>
@@ -2700,12 +2220,6 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
@@ -2738,12 +2252,6 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<TechType>TECH_SCIENTIFIC_METHOD</TechType>
@@ -2834,16 +2342,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_SABRETOOTH</ArtDefineTag>
@@ -2875,12 +2373,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARINE_INSTITUTE</BuildingType>
 			</PrereqInCityBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-			</Flavors>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CEPHALOPOD_INSTITUTE</BuildingType>
 				<BuildingType>BUILDING_CETAEA_INSTITUTE</BuildingType>
@@ -2922,12 +2414,6 @@
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHEEP_HERD</Type>
@@ -2989,16 +2475,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_SNAKE_CHARMER</ArtDefineTag>
 		</BuildingInfo>
@@ -3023,16 +2499,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_SNAKE_PIT</ArtDefineTag>
 		</BuildingInfo>
@@ -3087,16 +2553,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_THYLACINE</ArtDefineTag>
@@ -3118,16 +2574,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<ArtDefineTag>ART_DEF_BUILDING_TORTOISE_SHELL_WORKER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3230,12 +2676,6 @@
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_TRAINED_SEAL</ArtDefineTag>
 		</BuildingInfo>
@@ -3263,12 +2703,6 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
@@ -3304,12 +2738,6 @@
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WOLF_CAGE</Type>
@@ -3351,20 +2779,6 @@
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>25</iConquestProb>
 			<ArtDefineTag>ART_DEF_BUILDING_WOLF_PEN</ArtDefineTag>
 		</BuildingInfo>
@@ -3388,16 +2802,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_WONDERS_OF_THE_DEEP</ArtDefineTag>
@@ -3699,22 +3103,16 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_TERRAIN</GOMType>
-						<ID>TERRAIN_PEAK</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_TERRAIN</GOMType>
-						<ID>TERRAIN_HILL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_FEATURE</GOMType>
-						<ID>FEATURE_CAVES</ID>
-					</Has>
-				</Or>
-			</ConstructCondition>
+			<PrereqOrTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_HILL</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+				<PrereqTerrain>
+					<TerrainType>TERRAIN_PEAK</TerrainType>
+					<bPrereqTerrain>1</bPrereqTerrain>
+				</PrereqTerrain>
+			</PrereqOrTerrain>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
