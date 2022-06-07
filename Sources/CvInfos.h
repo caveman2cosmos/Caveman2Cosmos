@@ -566,9 +566,9 @@ public:
 	virtual ~CvPromotionInfo();
 
 	int getLayerAnimationPath() const;
-	int getPrereqPromotion() const;
-	int getPrereqOrPromotion1() const;
-	int getPrereqOrPromotion2() const;
+	PromotionTypes getPrereqPromotion() const { return m_iPrereqPromotion; }
+	PromotionTypes getPrereqOrPromotion1() const { return m_iPrereqOrPromotion1; }
+	PromotionTypes getPrereqOrPromotion2() const { return m_iPrereqOrPromotion2; }
 
 	TechTypes getTechPrereq() const;
 	int getMinEraType() const;
@@ -1085,10 +1085,9 @@ protected:
 	int m_iIgnoreTerrainDamage;
 	int m_zobristValue;
 public:
+	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvPromotionInfo* pClassInfo);
-	void copyNonDefaultsReadPass2(CvPromotionInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 
 private:
 	CvPropertyManipulators m_PropertyManipulators;
@@ -1097,9 +1096,9 @@ private:
 
 protected:
 	int m_iLayerAnimationPath;
-	int m_iPrereqPromotion;
-	int m_iPrereqOrPromotion1;
-	int m_iPrereqOrPromotion2;
+	PromotionTypes m_iPrereqPromotion;
+	PromotionTypes m_iPrereqOrPromotion1;
+	PromotionTypes m_iPrereqOrPromotion2;
 
 	TechTypes m_iTechPrereq;
 	int m_iStateReligionPrereq;
