@@ -19969,14 +19969,14 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	//TB Combat Mods Begin
 	if (!bForFree || bForBuildUp)
 	{
-		const PromotionTypes ePromotionPrerequisite = (PromotionTypes)promo.getPrereqPromotion();
+		const PromotionTypes ePromotionPrerequisite = promo.getPrereqPromotion();
 
 		if (ePromotionPrerequisite != NO_PROMOTION && !isHasPromotion(ePromotionPrerequisite))
 		{
 			return false;
 		}
-		const PromotionTypes ePromotionPrerequisite1 = (PromotionTypes)promo.getPrereqOrPromotion1();
-		const PromotionTypes ePromotionPrerequisite2 = (PromotionTypes)promo.getPrereqOrPromotion2();
+		const PromotionTypes ePromotionPrerequisite1 = promo.getPrereqOrPromotion1();
+		const PromotionTypes ePromotionPrerequisite2 = promo.getPrereqOrPromotion2();
 
 		if ((ePromotionPrerequisite1 != NO_PROMOTION || ePromotionPrerequisite2 != NO_PROMOTION)
 		&&  (ePromotionPrerequisite1 == NO_PROMOTION || !isHasPromotion(ePromotionPrerequisite1))
@@ -32468,9 +32468,9 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 		if (!bAfflict)
 #endif
 		{
-			const PromotionTypes ePromotionPrerequisite = (PromotionTypes)promo.getPrereqPromotion();
-			const PromotionTypes ePromotionPrerequisite1 = (PromotionTypes)promo.getPrereqOrPromotion1();
-			const PromotionTypes ePromotionPrerequisite2 = (PromotionTypes)promo.getPrereqOrPromotion2();
+			const PromotionTypes ePromotionPrerequisite = promo.getPrereqPromotion();
+			const PromotionTypes ePromotionPrerequisite1 = promo.getPrereqOrPromotion1();
+			const PromotionTypes ePromotionPrerequisite2 = promo.getPrereqOrPromotion2();
 
 			if (ePromotionPrerequisite != NO_PROMOTION && !isHasPromotion(ePromotionPrerequisite)
 			|| (ePromotionPrerequisite1 != NO_PROMOTION || ePromotionPrerequisite2 != NO_PROMOTION)
@@ -32749,7 +32749,7 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 	}
 
 	{
-		const PromotionTypes ePromotionPrerequisite = (PromotionTypes)equipment.getPrereqPromotion();
+		const PromotionTypes ePromotionPrerequisite = equipment.getPrereqPromotion();
 
 		if (ePromotionPrerequisite != NO_PROMOTION && !isHasPromotion(ePromotionPrerequisite))
 		{
@@ -32757,8 +32757,8 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 		}
 	}
 	{
-		const PromotionTypes ePromotionPrerequisite1 = (PromotionTypes)equipment.getPrereqOrPromotion1();
-		const PromotionTypes ePromotionPrerequisite2 = (PromotionTypes)equipment.getPrereqOrPromotion2();
+		const PromotionTypes ePromotionPrerequisite1 = equipment.getPrereqOrPromotion1();
+		const PromotionTypes ePromotionPrerequisite2 = equipment.getPrereqOrPromotion2();
 
 		if ((ePromotionPrerequisite1 != NO_PROMOTION || ePromotionPrerequisite2 != NO_PROMOTION)
 		&&  (ePromotionPrerequisite1 == NO_PROMOTION || !isHasPromotion(ePromotionPrerequisite1))
