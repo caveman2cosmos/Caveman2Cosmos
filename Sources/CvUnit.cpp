@@ -1495,9 +1495,9 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 					if (GC.getDefineINT("WAR_PRIZES") && GC.getGame().getSorenRandNum(10, "Unit Survives Drowning") == 0)
 					{
-						std::vector<CvPlot*> validPlots;
+						std::vector<const CvPlot*> validPlots;
 
-						foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
+						foreach_(const CvPlot* pAdjacentPlot, plot()->adjacent())
 						{
 							if (unitX->canMoveThrough(pAdjacentPlot, false))
 							{
@@ -1507,7 +1507,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 						}
 						if (bSurvived)
 						{
-							CvPlot* rescuePlot = validPlots[GC.getGame().getSorenRandNum(validPlots.size(), "Event pick plot")];
+							const CvPlot* rescuePlot = validPlots[GC.getGame().getSorenRandNum(validPlots.size(), "Event pick plot")];
 
 							FAssertMsg(rescuePlot != NULL, "rescuePlot is expected to be a valid plot!");
 							unitX->setXY(rescuePlot->getX(), rescuePlot->getY());
@@ -1691,8 +1691,8 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 		CvEventReporter::getInstance().unitLost(this);
 
-		PlayerTypes eCapturingPlayer = getCapturingPlayer();
-		UnitTypes eCaptureUnitType = getCaptureUnitType();
+		const PlayerTypes eCapturingPlayer = getCapturingPlayer();
+		const UnitTypes eCaptureUnitType = getCaptureUnitType();
 
 		if (eCapturingPlayer != NO_PLAYER && eCaptureUnitType != NO_UNIT && !GET_PLAYER(eCapturingPlayer).isNPC())
 		{
@@ -12354,7 +12354,7 @@ SpecialUnitTypes CvUnit::getSpecialUnitType() const
 
 UnitTypes CvUnit::getCaptureUnitType() const
 {
-	return (UnitTypes) m_pUnitInfo->getUnitCaptureType();
+	return m_pUnitInfo->getUnitCaptureType();
 }
 
 

@@ -1713,7 +1713,7 @@ public:
 	int getAssetValue() const;
 	int getPowerValue() const;
 	int getSpecialUnitType() const;
-	int getUnitCaptureType() const;
+	UnitTypes getUnitCaptureType() const { return m_eUnitCaptureType; }
 	int getUnitCombatType() const;
 	DomainTypes getDomainType() const;
 	UnitAITypes getDefaultUnitAIType() const;
@@ -2344,7 +2344,7 @@ private:
 	int m_iAssetValue;
 	int m_iPowerValue;
 	int m_iSpecialUnitType;
-	int m_iUnitCaptureType;
+	UnitTypes m_eUnitCaptureType;
 	int m_iUnitCombatType;
 	DomainTypes m_iDomainType;
 	UnitAITypes m_iDefaultUnitAIType;

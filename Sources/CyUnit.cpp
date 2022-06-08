@@ -117,7 +117,7 @@ int /*SpecialUnitTypes*/ CyUnit::getSpecialUnitType() const
 	return m_pUnit->getSpecialUnitType();
 }
 
-int /*UnitTypes*/ CyUnit::getCaptureUnitType() const
+UnitTypes CyUnit::getCaptureUnitType() const
 {
 	return m_pUnit->getCaptureUnitType();
 }

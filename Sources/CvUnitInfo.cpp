@@ -100,7 +100,6 @@ m_iBaseUpkeep(0),
 m_iAssetValue(0),
 m_iPowerValue(0),
 m_iSpecialUnitType(NO_SPECIALUNIT),
-m_iUnitCaptureType(NO_UNIT),
 m_iUnitCombatType(NO_UNITCOMBAT),
 m_iDomainType(NO_DOMAIN),
 m_iDefaultUnitAIType(NO_UNITAI),
@@ -787,11 +786,6 @@ int CvUnitInfo::getPowerValue() const
 int CvUnitInfo::getSpecialUnitType() const
 {
 	return m_iSpecialUnitType;
-}
-
-int CvUnitInfo::getUnitCaptureType() const
-{
-	return m_iUnitCaptureType;
 }
 
 int CvUnitInfo::getUnitCombatType() const
@@ -3582,8 +3576,7 @@ bool CvUnitInfo::isAidChange(int iProperty) const
 void CvUnitInfo::getDataMembers(CvInfoUtil& util)
 {
 	util
-		//.addEnum(m_iObsoleteTech, L"ObsoleteTech")
-		//.add(m_piBonusHealthChanges, L"BonusHealthChanges")
+		.addEnum(m_eUnitCaptureType, L"Capture")
 	;
 }
 
@@ -3659,7 +3652,6 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iAssetValue);
 	CheckSum(iSum, m_iPowerValue);
 	CheckSum(iSum, m_iSpecialUnitType);
-	CheckSum(iSum, m_iUnitCaptureType);
 	CheckSum(iSum, m_iUnitCombatType);
 	CheckSum(iSum, m_iDomainType);
 	CheckSum(iSum, m_iDefaultUnitAIType);
@@ -5046,7 +5038,6 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_bUnlimitedException == false) m_bUnlimitedException = pClassInfo->isUnlimitedException();
 	if ( m_iInstanceCostModifier == 0) m_iInstanceCostModifier = pClassInfo->getInstanceCostModifier();
 	if ( m_iSpecialUnitType == iTextDefault )	m_iSpecialUnitType = pClassInfo->getSpecialUnitType();
-	if ( m_iUnitCaptureType == iTextDefault )	m_iUnitCaptureType = pClassInfo->getUnitCaptureType();
 	if ( m_iUnitCombatType == iTextDefault )	m_iUnitCombatType = pClassInfo->getUnitCombatType();
 	if ( m_iDomainType == iTextDefault )	m_iDomainType = pClassInfo->getDomainType();
 	if ( m_iDefaultUnitAIType == UNITAI_UNKNOWN )	m_iDefaultUnitAIType = pClassInfo->getDefaultUnitAIType();
@@ -5911,10 +5902,6 @@ bool CvUnitInfo::readPass2(CvXMLLoadUtility* pXML)
 	{
 		return false;
 	}
-	CvString szTextVal;
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"Capture");
-	m_iUnitCaptureType = pXML->GetInfoClass(szTextVal);
-
 	pXML->SetVariableListTagPair(&m_piFlankingStrikeUnit, L"FlankingStrikes", GC.getNumUnitInfos(), -1);
 	pXML->SetVariableListTagPair(&m_piUnitAttackModifier, L"UnitAttackMods", GC.getNumUnitInfos());
 	pXML->SetVariableListTagPair(&m_piUnitDefenseModifier, L"UnitDefenseMods", GC.getNumUnitInfos());
@@ -5973,12 +5960,6 @@ void CvUnitInfo::copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtili
 		}
 	}
 	else if (bOver) SAFE_DELETE_ARRAY(m_piUnitDefenseModifier);
-
-
-	if (bOver || m_iUnitCaptureType == -1 && pClassInfo->getUnitCaptureType() != -1)
-	{
-		m_iUnitCaptureType = pClassInfo->getUnitCaptureType();
-	}
 }
 
 bool CvUnitInfo::readPass3()
