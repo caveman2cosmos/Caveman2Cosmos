@@ -1946,11 +1946,6 @@ void CvUnitAI::AI_settleMove()
 					m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
 					return;
 				}
-				else // No units were available to escort us.  Let the city know that building some might be a good idea
-				{
-					SendLog("SettlerAI", "no unit available for escort, requesting more");
-					plot()->getPlotCity()->AI_noteUnitEscortNeeded();
-				}
 			}
 		}
 

@@ -8023,23 +8023,21 @@ int CvPlot::getFoundValue(PlayerTypes eIndex)
 {
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 
-	if (NULL == m_aiFoundValue || (!isRevealed(GET_PLAYER(eIndex).getTeam(), false) && GET_PLAYER(eIndex).getNumCities() > 0))
+	if (NULL == m_aiFoundValue || !isRevealed(GET_PLAYER(eIndex).getTeam(), false) && GET_PLAYER(eIndex).getNumCities() > 0)
 	{
 		return 0;
 	}
 
-	//	Note - m_aiFoundValue is scaled by a factor of 10 to prevent wrapping since it's
-	//	only a short (extra policing is present on the set)
+	// Note - m_aiFoundValue is scaled by a factor of 10 to prevent wrapping since it's only a short (extra policing is present on the set)
 	if (m_aiFoundValue[eIndex] == INVALID_FOUND_VALUE)
 	{
-		setFoundValue(eIndex,GET_PLAYER(eIndex).AI_foundValue(getX(), getY(), -1, true));
+		setFoundValue(eIndex, GET_PLAYER(eIndex).AI_foundValue(getX(), getY(), -1, true));
 
 		if (area()->hasBestFoundValue(eIndex) && (int) m_aiFoundValue[eIndex] > area()->getBestFoundValue(eIndex))
 		{
 			area()->setBestFoundValue(eIndex, m_aiFoundValue[eIndex]);
 		}
 	}
-
 	return m_aiFoundValue[eIndex];
 }
 

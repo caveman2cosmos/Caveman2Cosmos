@@ -25944,6 +25944,8 @@ bool CvUnit::isAlwaysHostile(const CvPlot* pPlot) const
 
 bool CvUnit::verifyStackValid()
 {
+	if (isDead()) return true;
+
 	const CvPlot* pPlot = plot();
 	if (canCoexistAlwaysOnPlot(*pPlot))
 	{

@@ -427,7 +427,7 @@ public:
 
 	void AI_recalculateFoundValues(int iX, int iY, int iInnerRadius, int iOuterRadius) const;
 
-	int AI_bestCityValue(const CvPlot* pPlot, int iFoundValue) const;
+	int AI_getCitySitePriorityFactor(const CvPlot* pPlot) const;
 	void AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) const;
 	void calculateCitySites() const;
 
