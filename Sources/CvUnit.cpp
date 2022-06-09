@@ -1495,9 +1495,9 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 					if (GC.getDefineINT("WAR_PRIZES") && GC.getGame().getSorenRandNum(10, "Unit Survives Drowning") == 0)
 					{
-						std::vector<CvPlot*> validPlots;
+						std::vector<const CvPlot*> validPlots;
 
-						foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
+						foreach_(const CvPlot* pAdjacentPlot, plot()->adjacent())
 						{
 							if (unitX->canMoveThrough(pAdjacentPlot, false))
 							{
@@ -1507,7 +1507,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 						}
 						if (bSurvived)
 						{
-							CvPlot* rescuePlot = validPlots[GC.getGame().getSorenRandNum(validPlots.size(), "Event pick plot")];
+							const CvPlot* rescuePlot = validPlots[GC.getGame().getSorenRandNum(validPlots.size(), "Event pick plot")];
 
 							FAssertMsg(rescuePlot != NULL, "rescuePlot is expected to be a valid plot!");
 							unitX->setXY(rescuePlot->getX(), rescuePlot->getY());
@@ -1691,8 +1691,8 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 		CvEventReporter::getInstance().unitLost(this);
 
-		PlayerTypes eCapturingPlayer = getCapturingPlayer();
-		UnitTypes eCaptureUnitType = getCaptureUnitType();
+		const PlayerTypes eCapturingPlayer = getCapturingPlayer();
+		const UnitTypes eCaptureUnitType = getCaptureUnitType();
 
 		if (eCapturingPlayer != NO_PLAYER && eCaptureUnitType != NO_UNIT && !GET_PLAYER(eCapturingPlayer).isNPC())
 		{
@@ -12354,7 +12354,7 @@ SpecialUnitTypes CvUnit::getSpecialUnitType() const
 
 UnitTypes CvUnit::getCaptureUnitType() const
 {
-	return (UnitTypes) m_pUnitInfo->getUnitCaptureType();
+	return m_pUnitInfo->getUnitCaptureType();
 }
 
 
@@ -15221,7 +15221,7 @@ int CvUnit::featureDefenseModifier(FeatureTypes eFeature) const
 int CvUnit::unitAttackModifier(UnitTypes eUnit) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
-	return m_pUnitInfo->getUnitAttackModifier(eUnit);
+	return m_pUnitInfo->getUnitAttackModifiers().getValue(eUnit);
 }
 
 
@@ -15232,7 +15232,7 @@ int CvUnit::unitDefenseModifier(UnitTypes eUnit) const
 		return 0;
 	}
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
-	return m_pUnitInfo->getUnitDefenseModifier(eUnit);
+	return m_pUnitInfo->getUnitDefenseModifiers().getValue(eUnit);
 }
 
 
@@ -19969,14 +19969,14 @@ bool CvUnit::canAcquirePromotion(PromotionTypes ePromotion, bool bIgnoreHas, boo
 	//TB Combat Mods Begin
 	if (!bForFree || bForBuildUp)
 	{
-		const PromotionTypes ePromotionPrerequisite = (PromotionTypes)promo.getPrereqPromotion();
+		const PromotionTypes ePromotionPrerequisite = promo.getPrereqPromotion();
 
 		if (ePromotionPrerequisite != NO_PROMOTION && !isHasPromotion(ePromotionPrerequisite))
 		{
 			return false;
 		}
-		const PromotionTypes ePromotionPrerequisite1 = (PromotionTypes)promo.getPrereqOrPromotion1();
-		const PromotionTypes ePromotionPrerequisite2 = (PromotionTypes)promo.getPrereqOrPromotion2();
+		const PromotionTypes ePromotionPrerequisite1 = promo.getPrereqOrPromotion1();
+		const PromotionTypes ePromotionPrerequisite2 = promo.getPrereqOrPromotion2();
 
 		if ((ePromotionPrerequisite1 != NO_PROMOTION || ePromotionPrerequisite2 != NO_PROMOTION)
 		&&  (ePromotionPrerequisite1 == NO_PROMOTION || !isHasPromotion(ePromotionPrerequisite1))
@@ -24790,7 +24790,7 @@ void CvUnit::flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, in
 		if (pLoopUnit != pSkipUnit && !pLoopUnit->isDead() && isEnemy(pLoopUnit->getTeam(), pPlot, pLoopUnit)
 		&& !pLoopUnit->isInvisible(getTeam(), false) && pLoopUnit->canDefend())
 		{
-			int iFlankingStrength = m_pUnitInfo->getFlankingStrikeUnit(pLoopUnit->getUnitType());
+			int iFlankingStrength = m_pUnitInfo->getFlankingStrikeUnits().getValue(pLoopUnit->getUnitType());
 
 			for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 			{
@@ -25944,6 +25944,8 @@ bool CvUnit::isAlwaysHostile(const CvPlot* pPlot) const
 
 bool CvUnit::verifyStackValid()
 {
+	if (isDead()) return true;
+
 	const CvPlot* pPlot = plot();
 	if (canCoexistAlwaysOnPlot(*pPlot))
 	{
@@ -32468,9 +32470,9 @@ bool CvUnit::canKeepPromotion(PromotionTypes ePromotion, bool bAssertFree, bool 
 		if (!bAfflict)
 #endif
 		{
-			const PromotionTypes ePromotionPrerequisite = (PromotionTypes)promo.getPrereqPromotion();
-			const PromotionTypes ePromotionPrerequisite1 = (PromotionTypes)promo.getPrereqOrPromotion1();
-			const PromotionTypes ePromotionPrerequisite2 = (PromotionTypes)promo.getPrereqOrPromotion2();
+			const PromotionTypes ePromotionPrerequisite = promo.getPrereqPromotion();
+			const PromotionTypes ePromotionPrerequisite1 = promo.getPrereqOrPromotion1();
+			const PromotionTypes ePromotionPrerequisite2 = promo.getPrereqOrPromotion2();
 
 			if (ePromotionPrerequisite != NO_PROMOTION && !isHasPromotion(ePromotionPrerequisite)
 			|| (ePromotionPrerequisite1 != NO_PROMOTION || ePromotionPrerequisite2 != NO_PROMOTION)
@@ -32749,7 +32751,7 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 	}
 
 	{
-		const PromotionTypes ePromotionPrerequisite = (PromotionTypes)equipment.getPrereqPromotion();
+		const PromotionTypes ePromotionPrerequisite = equipment.getPrereqPromotion();
 
 		if (ePromotionPrerequisite != NO_PROMOTION && !isHasPromotion(ePromotionPrerequisite))
 		{
@@ -32757,8 +32759,8 @@ bool CvUnit::canSwitchEquipment(PromotionTypes eEquipment) const
 		}
 	}
 	{
-		const PromotionTypes ePromotionPrerequisite1 = (PromotionTypes)equipment.getPrereqOrPromotion1();
-		const PromotionTypes ePromotionPrerequisite2 = (PromotionTypes)equipment.getPrereqOrPromotion2();
+		const PromotionTypes ePromotionPrerequisite1 = equipment.getPrereqOrPromotion1();
+		const PromotionTypes ePromotionPrerequisite2 = equipment.getPrereqOrPromotion2();
 
 		if ((ePromotionPrerequisite1 != NO_PROMOTION || ePromotionPrerequisite2 != NO_PROMOTION)
 		&&  (ePromotionPrerequisite1 == NO_PROMOTION || !isHasPromotion(ePromotionPrerequisite1))

@@ -1437,7 +1437,6 @@ public:
 	//	KOSHLING - initialisation called on every city prior to performing unit mission allocation logic
 	//	This allows caches that will remian valid for the procesign of teh current turn's units to be cleared
 	virtual void AI_preUnitTurn() = 0;
-	virtual void AI_noteUnitEscortNeeded() = 0;
 	virtual void AI_trained(UnitTypes eUnitType, UnitAITypes eUnitAIType) = 0;
 	virtual UnitTypes AI_bestUnit(int& iBestValue, int iNumSelectableTypes = -1, UnitAITypes* pSelectableTypes = NULL, bool bAsync = false, UnitAITypes* peBestUnitAI = NULL, bool bNoRand = false, bool bNoWeighting = false, const CvUnitSelectionCriteria* criteria = NULL) = 0;
 	virtual UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync = false, bool bNoRand = false, const CvUnitSelectionCriteria* criteria = NULL) = 0;

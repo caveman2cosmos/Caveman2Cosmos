@@ -30,12 +30,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>6</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -136,12 +130,6 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<GlobalReligionCommerce>RELIGION_ANDEANISM</GlobalReligionCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
@@ -218,12 +206,6 @@
 					<iExperience>5</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BAHAI_SHRINE</Type>
@@ -270,12 +252,6 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BELIEF_KARMA</Type>
@@ -379,12 +355,6 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
@@ -453,12 +423,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_BLOOD_DANCE</ArtDefineTag>
 		</BuildingInfo>
@@ -531,16 +495,6 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<GlobalReligionCommerce>RELIGION_BUDDHISM</GlobalReligionCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -589,12 +543,6 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_CANAANITE</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CANNIBALISM</Type>
@@ -664,12 +612,6 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARPOOL</Type>
@@ -801,16 +743,6 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<GlobalReligionCommerce>RELIGION_CHRISTIANITY</GlobalReligionCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1390,20 +1322,6 @@
 			</FreePromoTypes>
 			<GlobalReligionCommerce>RELIGION_CONFUCIANISM</GlobalReligionCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1443,12 +1361,6 @@
 			<FoundsCorporation>CORPORATION_1</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_1</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1490,12 +1402,6 @@
 			<FoundsCorporation>CORPORATION_2</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_2</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1534,12 +1440,6 @@
 			<FoundsCorporation>CORPORATION_3</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_3</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1578,12 +1478,6 @@
 			<FoundsCorporation>CORPORATION_4</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_4</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1622,12 +1516,6 @@
 			<FoundsCorporation>CORPORATION_5</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_5</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1666,12 +1554,6 @@
 			<FoundsCorporation>CORPORATION_6</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_6</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1710,12 +1592,6 @@
 			<FoundsCorporation>CORPORATION_7</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_7</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1754,16 +1630,6 @@
 			<FoundsCorporation>CORPORATION_ADVENTURE</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_ADVENTURE</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>6</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1802,16 +1668,6 @@
 			<FoundsCorporation>CORPORATION_BULLSEYE</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_BULLSEYE</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1850,16 +1706,6 @@
 			<FoundsCorporation>CORPORATION_BURGERWORLD</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_BURGERWORLD</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>6</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1898,12 +1744,6 @@
 			<FoundsCorporation>CORPORATION_EMPCLOTH</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_EMPCLOTH</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1942,16 +1782,6 @@
 			<FoundsCorporation>CORPORATION_EWTRADE</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_EWTRADE</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1990,12 +1820,6 @@
 			<FoundsCorporation>CORPORATION_FASHION</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_FASHION</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2034,16 +1858,6 @@
 			<FoundsCorporation>CORPORATION_MALLWART</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_MALLWART</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2078,12 +1892,6 @@
 			<FoundsCorporation>CORPORATION_MAPSTER</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_MAPSTER</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2122,16 +1930,6 @@
 			<FoundsCorporation>CORPORATION_MCDOWELLS</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_MCDOWELLS</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>6</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2170,12 +1968,6 @@
 			<FoundsCorporation>CORPORATION_MILEHIGH</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_MILEHIGH</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2214,16 +2006,6 @@
 			<FoundsCorporation>CORPORATION_MOBBY</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_MOBBY</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2262,12 +2044,6 @@
 			<FoundsCorporation>CORPORATION_MOONBEAN</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_MOONBEAN</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2307,16 +2083,6 @@
 			<FoundsCorporation>CORPORATION_RED</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_RED</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>6</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2348,16 +2114,6 @@
 			<FoundsCorporation>CORPORATION_SAFARI</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_SAFARI</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2386,20 +2142,6 @@
 			<FoundsCorporation>CORPORATION_ULTSOLDIER</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_ULTSOLDIER</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2438,12 +2180,6 @@
 			<FoundsCorporation>CORPORATION_WONKA</FoundsCorporation>
 			<GlobalCorporationCommerce>CORPORATION_WONKA</GlobalCorporationCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -5653,12 +5389,6 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_DRUID</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EFFECT_GPS</Type>
@@ -5777,16 +5507,6 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<GlobalReligionCommerce>RELIGION_KEMETISM</GlobalReligionCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_EGYPT_MYTH_SHRINE</ArtDefineTag>
@@ -8581,16 +8301,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_FERTILTY_DANCE</ArtDefineTag>
 		</BuildingInfo>
@@ -8667,12 +8377,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRE_DANCE</ArtDefineTag>
 		</BuildingInfo>
@@ -8701,12 +8405,6 @@
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
@@ -9035,16 +8733,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>5</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_HEALTH_SPA</ArtDefineTag>
 		</BuildingInfo>
@@ -9123,16 +8811,6 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<GlobalReligionCommerce>RELIGION_HINDUISM</GlobalReligionCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -10609,16 +10287,6 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<GlobalReligionCommerce>RELIGION_ISLAM</GlobalReligionCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -10666,12 +10334,6 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JEWISH_SHRINE</Type>
@@ -10713,20 +10375,6 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<GlobalReligionCommerce>RELIGION_JUDAISM</GlobalReligionCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -11443,16 +11091,6 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<GlobalReligionCommerce>RELIGION_NAGHUALISM</GlobalReligionCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_MESOAMERICAN_SHRINE</ArtDefineTag>
@@ -11489,12 +11127,6 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<ConstructSound>AS2D_BUILD_MESOPOTAMIAN</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MILITARY_ACADEMY</Type>
@@ -11523,12 +11155,6 @@
 			</PropertyManipulators>
 			<iAsset>6</iAsset>
 			<iPower>6</iPower>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>80</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -11585,16 +11211,6 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_MOON_DANCE</ArtDefineTag>
 		</BuildingInfo>
@@ -11640,12 +11256,6 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_MORMON</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MUD_HUT</Type>
@@ -11922,16 +11532,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_NATURE_DANCE</ArtDefineTag>
 		</BuildingInfo>
@@ -12003,12 +11603,6 @@
 				</ReligionChange>
 			</ReligionChanges>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_OLD_CITY_WALLS</Type>
@@ -13490,12 +13084,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_RAIN_DANCE</ArtDefineTag>
 		</BuildingInfo>
@@ -13541,12 +13129,6 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_RODNOVERY</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROUTE_66_TERMINUS</Type>
@@ -13735,12 +13317,6 @@
 				</ReligionChange>
 			</ReligionChanges>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SCOTLAND_YARD</Type>
@@ -13781,16 +13357,6 @@
 			</PropertyManipulators>
 			<iAsset>10</iAsset>
 			<iPower>5</iPower>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -13872,12 +13438,6 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_SHAMAN</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHINTO_SHRINE</Type>
@@ -13916,12 +13476,6 @@
 				</ReligionChange>
 			</ReligionChanges>
 			<ConstructSound>SND_BUILD_SHINTO</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SHUTTLE_SERVICE</Type>
@@ -14024,12 +13578,6 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVERY</Type>
@@ -14298,16 +13846,6 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_MARKET</ArtDefineTag>
 		</BuildingInfo>
@@ -14340,16 +13878,6 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_COMMERCE</ArtDefineTag>
 		</BuildingInfo>
@@ -14404,20 +13932,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</ArtDefineTag>
 		</BuildingInfo>
@@ -14466,16 +13980,6 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</ArtDefineTag>
 		</BuildingInfo>
@@ -14506,16 +14010,6 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_FOOD</ArtDefineTag>
 		</BuildingInfo>
@@ -14554,16 +14048,6 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_MILITARY</ArtDefineTag>
 		</BuildingInfo>
@@ -14600,12 +14084,6 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_PRODUCTION</ArtDefineTag>
 		</BuildingInfo>
@@ -14651,16 +14129,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>2</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_SANITATION</ArtDefineTag>
 		</BuildingInfo>
@@ -14830,12 +14298,6 @@
 				</TechSpecialistChange>
 			</TechSpecialistChanges>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_SPY_NETWORK</ArtDefineTag>
@@ -14879,20 +14341,6 @@
 			<GlobalReligionCommerce>RELIGION_HELLENISM</GlobalReligionCommerce>
 			<iAsset>8</iAsset>
 			<iPower>4</iPower>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>6</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
@@ -15006,16 +14454,6 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<GlobalReligionCommerce>RELIGION_TAOISM</GlobalReligionCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -15052,12 +14490,6 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<ConstructSound>AS2D_BUILD_SIBERIAN</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIPI</Type>
@@ -15621,12 +15053,6 @@
 			</CommerceChangeDoubleTimes>
 			<FreeBuilding>BUILDING_TRADITION_ARCHERY_EFFECT</FreeBuilding>
 			<iAsset>4</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_ARCHERY_EFFECT</ArtDefineTag>
@@ -15676,12 +15102,6 @@
 			</GlobalCommerceModifiers>
 			<FreeBuilding>BUILDING_TRADITION_ASTHETIC_APPRECIATION_EFFECT</FreeBuilding>
 			<iAsset>6</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_ASTHETIC_APPRECIATION</ArtDefineTag>
@@ -15741,12 +15161,6 @@
 			</CommerceChangeDoubleTimes>
 			<FreeBuilding>BUILDING_TRADITION_WORK_ETHIC_EFFECT</FreeBuilding>
 			<iAsset>6</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_SSTAR</ArtDefineTag>
@@ -15927,16 +15341,6 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iGlobalPopulationChange>1</iGlobalPopulationChange>
 			<iAsset>10</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -16285,12 +15689,6 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_VOODOO</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WAR_DANCE</Type>
@@ -16320,16 +15718,6 @@
 				</FreePromoType>
 			</FreePromoTypes>
 			<iAsset>1</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_WAR_DANCE</ArtDefineTag>
 		</BuildingInfo>
@@ -16398,16 +15786,6 @@
 				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
@@ -16431,16 +15809,6 @@
 				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
 			</ReplacementBuildings>
 			<FreeBuilding>BUILDING_HUMAN_SACRIFICE</FreeBuilding>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_WV_HUMAN_SACRIFICE</ArtDefineTag>
@@ -16545,16 +15913,6 @@
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<iAsset>3</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_WV_SLAVERY</ArtDefineTag>
@@ -16595,12 +15953,6 @@
 				</ReligionChange>
 			</ReligionChanges>
 			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_YOUTH_CURFEW</Type>
@@ -16722,16 +16074,6 @@
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<GlobalReligionCommerce>RELIGION_ZOROASTRIANISM</GlobalReligionCommerce>
 			<iAsset>8</iAsset>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>8</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_ZOROASTRIAN_SHRINE</ArtDefineTag>

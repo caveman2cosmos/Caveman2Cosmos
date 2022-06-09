@@ -1295,7 +1295,7 @@ public:
 	int getHurryInflationModifier() const;
 	void changeHurryInflationModifier(int iChange);
 
-	int getCityLimit() const;
+	int getCityLimit() const { return m_iCityLimit; }
 	void changeCityLimit(int iChange);
 
 	int getCityOverLimitUnhappy() const;
@@ -1484,7 +1484,7 @@ public:
 	void setUnitListSelected(UnitTypes eUnit);
 	UnitTypes getUnitListSelected();
 	void processNewRoutes();
-	inline int	getZobristValue() const { return m_zobristValue; }
+	inline int getZobristValue() const { return m_zobristValue; }
 
 	inline bool getTurnHadUIInteraction() const { return m_turnHadUIInteraction; }
 	inline void setTurnHadUIInteraction(bool newVal) { m_turnHadUIInteraction = newVal; }

@@ -175,7 +175,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iBaseUpkeep>4</iBaseUpkeep>
-			<iMoves>1</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>7</iGroupSize>
@@ -34260,16 +34260,6 @@
 				<BuildingType>BUILDING_TREASURY</BuildingType>
 				<BuildingType>BUILDING_MUSEUM</BuildingType>
 			</Buildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -36313,12 +36303,6 @@
 				<BuildingType>BUILDING_NATIONAL_BELIEF_RESURRECTION</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_BELIEF_REINCARNATION</BuildingType>
 			</Buildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -36638,12 +36622,6 @@
 				<BuildingType>BUILDING_CORPORATION_RED_HQ</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ASTHETIC_APPRECIATION</BuildingType>
 			</Buildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -36903,12 +36881,6 @@
 				<BuildingType>BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</BuildingType>
 				<BuildingType>BUILDING_ACADEMY</BuildingType>
 			</Buildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -37133,12 +37105,6 @@
 				<BuildingType>BUILDING_CORPORATION_MOONBEAN_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_WONKA_HQ</BuildingType>
 			</Buildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -37359,12 +37325,6 @@
 				<BuildingType>BUILDING_CORPORATION_MILEHIGH_HQ</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</BuildingType>
 			</Buildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -37734,12 +37694,6 @@
 				<BuildingType>BUILDING_CORPORATION_SAFARI_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_ULTSOLDIER_HQ</BuildingType>
 			</Buildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -37925,12 +37879,6 @@
 				<BuildingType>BUILDING_CORPORATION_SAFARI_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_ULTSOLDIER_HQ</BuildingType>
 			</Buildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -38102,20 +38050,6 @@
 			</UnitAIs>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>6</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<GreatPeoples>
 				<GreatPeople>
@@ -38271,12 +38205,6 @@
 				<BuildingType>BUILDING_SPY_TRAINING_FACILITY</BuildingType>
 				<BuildingType>BUILDING_SCOTLAND_YARD</BuildingType>
 			</Buildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
 			<iEspionagePoints>3000</iEspionagePoints>
@@ -42286,12 +42214,6 @@
 				<BuildingType>BUILDING_HEALTH_SPA</BuildingType>
 				<BuildingType>BUILDING_UNIVERSAL_HEALTH_CARE</BuildingType>
 			</Buildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -43342,12 +43264,6 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -43456,12 +43372,6 @@
 			<Buildings>
 				<BuildingType>BUILDING_SCOTLAND_YARD</BuildingType>
 			</Buildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -47268,12 +47178,6 @@
 					<bGreatPeople>1</bGreatPeople>
 				</GreatPeople>
 			</GreatPeoples>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>

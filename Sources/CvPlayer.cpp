@@ -27961,10 +27961,6 @@ void CvPlayer::changeCityOverLimitUnhappy(int iChange)
 	m_iCityOverLimitUnhappy += iChange;
 }
 
-int CvPlayer::getCityLimit() const {
-	return m_iCityLimit;
-}
-
 void CvPlayer::changeCityLimit(int iChange)
 {
 	m_iCityLimit += iChange;

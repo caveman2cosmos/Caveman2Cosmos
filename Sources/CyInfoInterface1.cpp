@@ -330,6 +330,7 @@ void CyInfoPythonInterface1()
 
 		.def("isSpecialistValid", &CvCivicInfo::isSpecialistValid, "bool (int i)")
 		.def("getImprovementYieldChanges", &CvCivicInfo::getImprovementYieldChanges, "int (int i, int j)")
+		.def("getFlavorValue", &CvCivicInfo::getFlavorValue, "int (int i)")
 		;
 
 	python::class_<CvBuildingInfo, python::bases<CvInfoBase, CvScalableInfo>, boost::noncopyable>("CvBuildingInfo", python::no_init)

@@ -96,6 +96,7 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<FeatureTypes>();
 	registerAllowPyIntAsType<TerrainTypes>();
 	registerAllowPyIntAsType<PromotionTypes>();
+	registerAllowPyIntAsType<FlavorTypes>();
 
 	publishPythonVectorInterface<std::vector<BonusTypes>, CovertToInteger>();
 	publishPythonVectorInterface<std::vector<ImprovementTypes>, CovertToInteger>();

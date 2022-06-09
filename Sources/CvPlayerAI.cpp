@@ -893,12 +893,12 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	{
 		return;
 	}
-	if (gPlayerLogLevel > 2)
+	if (gPlayerLogLevel > 2 && iStartingGold - getGold() > 0)
 	{
-		if (iStartingGold - getGold() > 0)
-		{
-			logBBAI("	%S spends %d on unit upgrades out of budget of %d, %d effective gold remaining", getCivilizationDescription(0), iStartingGold - getGold(), iUpgradeBudget, getGold());
-		}
+		logBBAI(
+			"	%S spends %d on unit upgrades out of budget of %d, %d effective gold remaining",
+			getCivilizationDescription(0), iStartingGold - getGold(), iUpgradeBudget, getGold()
+		);
 	}
 	AI_doSplit();
 }
@@ -1264,51 +1264,39 @@ void CvPlayerAI::AI_updateFoundValues(bool bClear, const CvArea* area) const
 			}
 		}
 		algo::for_each(GC.getMap().areas(), CvArea::fn::setBestFoundValue(getID(), -1));
+		return;
 	}
-	else
+	std::vector<CvArea*> aUncalculatedAreas;
+
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		std::vector<CvArea*> aUncalculatedAreas;
+		CvPlot* plotX = GC.getMap().plotByIndex(iI);
+		CvArea* areaX = plotX->area();
 
-		//logBBAI("Player %d (%S) Update Found Values ...", getID(), getCivilizationDescription(0));
-
-		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+		if ((area == NULL || areaX == area) && (bSetup || plotX->isRevealed(getTeam(), false)))
 		{
-			CvPlot* plotX = GC.getMap().plotByIndex(iI);
-			CvArea* areaX = plotX->area();
+			bool bNeedsCalculating = false;
 
-			if ((area == NULL || areaX == area) && (bSetup || plotX->isRevealed(getTeam(), false)))
+			if (!areaX->hasBestFoundValue(getID()))
 			{
-				bool bNeedsCalculating = false;
+				bNeedsCalculating = true;
+				areaX->setBestFoundValue(getID(), 0);
+				aUncalculatedAreas.push_back(areaX);
+			}
+			else if (algo::any_of_equal(aUncalculatedAreas, areaX))
+			{
+				bNeedsCalculating = true;
+			}
 
-				if (areaX->hasBestFoundValue(getID()))
+			if (bNeedsCalculating)
+			{
+				const int iValue = AI_foundValue(plotX->getX(), plotX->getY());
+
+				plotX->setFoundValue(getID(), iValue);
+
+				if (iValue > areaX->getBestFoundValue(getID()))
 				{
-					if (algo::any_of_equal(aUncalculatedAreas, areaX))
-					{
-						bNeedsCalculating = true;
-					}
-				}
-				else
-				{
-					bNeedsCalculating = true;
-					areaX->setBestFoundValue(getID(), 0);
-					aUncalculatedAreas.push_back(areaX);
-				}
-
-				if (bNeedsCalculating)
-				{
-					const int iValue = AI_foundValue(plotX->getX(), plotX->getY());
-
-					plotX->setFoundValue(getID(), iValue);
-
-					//if (iValue > 1)
-					//{
-					//	logBBAI("  City found value at (%d, %d) is %d", plotX->getX(), plotX->getY(), iValue);
-					//}
-
-					if (iValue > areaX->getBestFoundValue(getID()))
-					{
-						areaX->setBestFoundValue(getID(), iValue);
-					}
+					areaX->setBestFoundValue(getID(), iValue);
 				}
 			}
 		}
@@ -1732,15 +1720,15 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 		&& GET_TEAM(getTeam()).AI_getEnemyPowerPercent(false) > 75)
 		{
 			int iHighCultureCount = 1;
-			foreach_(const CvCity * pLoopCity, GET_PLAYER(eOldOwner).cities())
+			foreach_(const CvCity * cityX, GET_PLAYER(eOldOwner).cities())
 			{
-				if (pLoopCity->getCulture(eOldOwner) > pLoopCity->getCultureThreshold(GC.getGame().culturalVictoryCultureLevel()) / 2)
+				if (cityX->getCulture(eOldOwner) > cityX->getCultureThreshold(GC.getGame().culturalVictoryCultureLevel()) / 2)
 				{
 					iHighCultureCount++;
 					if (iHighCultureCount >= GC.getGame().culturalVictoryNumCultureCities())
 					{
 						//Raze city enemy needs for cultural victory unless we greatly over power them
-						logBBAI("  Razing enemy cultural victory city");
+						OutputDebugString("  Razing enemy cultural victory city");
 						bRaze = true;
 					}
 				}
@@ -1752,7 +1740,7 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 			// Reasons to not raze
 			if (getNumCities() <= 1 || getNumCities() < 5 && iCloseness > 0)
 			{
-				if (gPlayerLogLevel >= 1)
+				if (gPlayerLogLevel > 0)
 				{
 					logBBAI("	Player %d (%S) decides not to raze %S because they have few cities", getID(), getCivilizationDescription(0), pCity->getName().GetCString());
 				}
@@ -1760,7 +1748,7 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 			else if (AI_isDoVictoryStrategy(AI_VICTORY_DOMINATION3) && GET_TEAM(getTeam()).AI_isPrimaryArea(pCity->area()))
 			{
 				// Do not raze, going for domination
-				if (gPlayerLogLevel >= 1)
+				if (gPlayerLogLevel > 0)
 				{
 					logBBAI("	Player %d (%S) decides not to raze %S because they're going for domination", getID(), getCivilizationDescription(0), pCity->getName().GetCString());
 				}
@@ -1856,7 +1844,7 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 								iRazeValue *= (100 - (GC.getTraitInfo((TraitTypes)iI).getUpkeepModifier()));
 								iRazeValue /= 100;
 
-								if (gPlayerLogLevel >= 1 && GC.getTraitInfo((TraitTypes)iI).getUpkeepModifier() > 0)
+								if (gPlayerLogLevel > 0 && GC.getTraitInfo((TraitTypes)iI).getUpkeepModifier() > 0)
 								{
 									logBBAI("	  Reduction for upkeep modifier %d", GC.getTraitInfo((TraitTypes)iI).getUpkeepModifier());
 								}
@@ -1879,7 +1867,7 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 						{
 							iRazeValue -= 50;
 
-							if (gPlayerLogLevel >= 1)
+							if (gPlayerLogLevel > 0)
 							{
 								logBBAI("	  Reduction for state religion with shrine");
 							}
@@ -1888,7 +1876,7 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 						{
 							iRazeValue -= 10;
 
-							if (gPlayerLogLevel >= 1)
+							if (gPlayerLogLevel > 0)
 							{
 								logBBAI("	  Reduction for state religion");
 							}
@@ -1901,7 +1889,8 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 				{
 					if (pCity->isHolyCity((ReligionTypes)iI))
 					{
-						logBBAI("	  Reduction for holy city");
+						OutputDebugString("	  Reduction for holy city");
+
 						if (getStateReligion() == iI)
 						{
 							iRazeValue -= 150;
@@ -2574,7 +2563,7 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 		{
 			iTakenTiles++;
 		}
-		else if (pLoopPlot->isCityRadius() || abCitySiteRadius[iI])
+		else if (pLoopPlot->isPlayerCityRadius(getID()) || abCitySiteRadius[iI])
 		{
 			iTakenTiles++;
 
@@ -4710,8 +4699,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("\tMisc value: %d",
-				iValue);
+		logBBAI("\tMisc value: %d", iValue);
 	}
 
 	int iTempValue = 0;
@@ -4733,8 +4721,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("\tCorporation value: %d",
-				iTempValue / 1000);
+		logBBAI("\tCorporation value: %d", iTempValue / 1000);
 	}
 
 	iTempValue = 0;
@@ -4859,8 +4846,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 	if (gPlayerLogLevel > 2)
 	{
-		logBBAI("\tTile improvement value: %d",
-				iTileImprovementValue);
+		logBBAI("\tTile improvement value: %d", iTileImprovementValue);
 	}
 
 	//ls612: Tech Commerce Modifiers
@@ -10382,8 +10368,8 @@ int CvPlayerAI::AI_unitPropertyValue(UnitTypes eUnit, PropertyTypes eProperty) c
 int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, const CvUnitSelectionCriteria* criteria) const
 {
 	PROFILE_FUNC();
-	FAssertMsg(eUnit != NO_UNIT, "Unit is not assigned a valid value");
-	FAssertMsg(eUnitAI != NO_UNITAI, "UnitAI is not assigned a valid value");
+	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
+	FASSERT_BOUNDS(0, NUM_UNITAI_TYPES, eUnitAI);
 
 	const CvUnitInfo& kUnitInfo = GC.getUnitInfo(eUnit);
 
@@ -10523,9 +10509,9 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				bValid = true;
 				break;
 			}
-			for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
+			foreach_(const STD_PAIR(UnitTypes, int)& modifier, kUnitInfo.getUnitAttackModifiers())
 			{
-				if (kUnitInfo.getUnitAttackModifier(iI) > 0)
+				if (modifier.second > 0)
 				{
 					bValid = true;
 					break;
@@ -10624,9 +10610,9 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				break;
 			}
 
-			for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
+			foreach_(const STD_PAIR(UnitTypes, int)& modifier, kUnitInfo.getUnitDefenseModifiers())
 			{
-				if (kUnitInfo.getUnitDefenseModifier(iI) > 0)
+				if (modifier.second > 0)
 				{
 					bValid = true;
 					break;
@@ -11254,10 +11240,10 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				break;
 			}
 			iValue += (iCombatValue / 2);
-			for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
+			foreach_(const STD_PAIR(UnitTypes, int)& modifier, kUnitInfo.getUnitAttackModifiers())
 			{
-				iValue += ((iCombatValue * kUnitInfo.getUnitAttackModifier(iI) * AI_getUnitWeight((UnitTypes)iI)) / 7500);
-				iValue += ((iCombatValue * (kUnitInfo.isTargetUnit(iI) ? 50 : 0)) / 100);
+				iValue += ((iCombatValue * modifier.second * AI_getUnitWeight(modifier.first)) / 7500);
+				iValue += ((iCombatValue * (kUnitInfo.isTargetUnit(modifier.first) ? 50 : 0)) / 100);
 			}
 			for (iI = 0; iI < numUnitCombatInfos; iI++)
 			{
@@ -11426,10 +11412,10 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			iValue += (iCombatValue / 2);
 			iValue += ((iCombatValue * kUnitInfo.getCityDefenseModifier()) / 100);
 			iValue /= (kUnitInfo.isOnlyDefensive() ? 2 : 1);
-			for (iI = 0; iI < GC.getNumUnitInfos(); iI++)
+			foreach_(const STD_PAIR(UnitTypes, int)& modifier, kUnitInfo.getUnitAttackModifiers())
 			{
-				iValue += ((iCombatValue * kUnitInfo.getUnitAttackModifier(iI) * AI_getUnitWeight((UnitTypes)iI)) / 10000);
-				iValue += ((iCombatValue * (kUnitInfo.isDefendAgainstUnit(iI) ? 50 : 0)) / 100);
+				iValue += ((iCombatValue * modifier.second * AI_getUnitWeight(modifier.first)) / 10000);
+				iValue += ((iCombatValue * (kUnitInfo.isDefendAgainstUnit(modifier.first) ? 50 : 0)) / 100);
 			}
 			for (iI = 0; iI < numUnitCombatInfos; iI++)
 			{
@@ -25206,73 +25192,74 @@ void CvPlayerAI::AI_recalculateFoundValues(int iX, int iY, int iInnerRadius, int
 
 int CvPlayerAI::AI_getMinFoundValue() const
 {
-	int iValue = 600;
-	const int iNetCommerce = 1 + getCommerceRate(COMMERCE_GOLD) + getCommerceRate(COMMERCE_RESEARCH) + std::max(0, getGoldPerTurn());
-
-	const int64_t iNetExpenses = getFinalExpense() + std::max(0, -getGoldPerTurn());
-
-	iValue *= iNetCommerce;
-	iValue /= static_cast<int>(std::max<int64_t>(std::max(1, iNetCommerce / 4), iNetCommerce - iNetExpenses));
+	int iValue = 4000 / (1 + getProfitMargin() * getProfitMargin());
 
 	if (GET_TEAM(getTeam()).getAnyWarPlanCount(1) > 0)
 	{
 		iValue *= 2;
 	}
-
 	return iValue;
 }
 
-int CvPlayerAI::AI_bestCityValue(const CvPlot* pPlot, int iFoundValue) const
+// returns value between 1 to 10 based on how much potential land can be gained.
+int CvPlayerAI::AI_getCitySitePriorityFactor(const CvPlot* pPlot) const
 {
-	return iFoundValue * std::min(NUM_CITY_PLOTS * 2, pPlot->area()->getNumUnownedTiles());
+	int iPriorityCount = 1;
+	const int iX = pPlot->getX();
+	const int iY = pPlot->getY();
+
+	// Toffer - No reason to check more than pPlot and the 8 surrounding plots.
+	for (int iI = 0; iI < NUM_CITY_PLOTS_1; iI++)
+	{
+		CvPlot* plotX = plotCity(iX, iY, iI);
+
+		if (plotX && (plotX->getTeam() != getTeam() || !plotX->isPlayerCityRadius(getID())))
+		{
+			iPriorityCount++;
+		}
+	}
+	return iPriorityCount;
 }
 
 void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) const
 {
-	logBBAI("Player %d (%S) begin Update City Sites ...", getID(), getCivilizationDescription(0));
+	logBBAI("Player %d (%S) begin Update City Sites (min. value: %d)...", getID(), getCivilizationDescription(0), iMinFoundValueThreshold);
 
-	int iPass = 0;
-	while (iPass < iMaxSites)
+	for (int iI = 0; iI < iMaxSites; iI++)
 	{
 		//Add a city to the list.
 		int iBestFoundValue = 0;
 		CvPlot* pBestFoundPlot = NULL;
 
-		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+		for (int iPlot = 0; iPlot < GC.getMap().numPlots(); iPlot++)
 		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-			if (pLoopPlot->isRevealed(getTeam(), false))
-			{
-				int iValue = pLoopPlot->getFoundValue(getID());
-				if (iValue > iMinFoundValueThreshold)
-				{
-					if (!AI_isPlotCitySite(pLoopPlot))
-					{
-						iValue = AI_bestCityValue(pLoopPlot, iValue);
+			CvPlot* plotX = GC.getMap().plotByIndex(iPlot);
 
-						if (iValue > iBestFoundValue)
-						{
-							iBestFoundValue = iValue;
-							pBestFoundPlot = pLoopPlot;
-							logBBAI("  City found value at (%d, %d) is %d", pLoopPlot->getX(), pLoopPlot->getY(), iValue);
-						}
+			if (plotX->isRevealed(getTeam(), false) && !AI_isPlotCitySite(plotX))
+			{
+				const int iFoundValue = plotX->getFoundValue(getID());
+
+				if (iFoundValue > iMinFoundValueThreshold)
+				{
+					const int iValue = iFoundValue * AI_getCitySitePriorityFactor(plotX);
+
+					if (iValue > iBestFoundValue)
+					{
+						iBestFoundValue = iValue;
+						pBestFoundPlot = plotX;
+						logBBAI("  Potential best city site (%d, %d) found value is %d (player modified value to %d)", plotX->getX(), plotX->getY(), iFoundValue, iValue);
 					}
 				}
 			}
 		}
-		if (pBestFoundPlot != NULL)
-		{
-			logBBAI("	Found City Site at (%d, %d)", pBestFoundPlot->getX(), pBestFoundPlot->getY());
-			m_aiAICitySites.push_back(GC.getMap().plotNum(pBestFoundPlot->getX(), pBestFoundPlot->getY()));
-			AI_recalculateFoundValues(pBestFoundPlot->getX(), pBestFoundPlot->getY(), CITY_PLOTS_RADIUS, 2 * CITY_PLOTS_RADIUS);
-		}
-		else
+		if (pBestFoundPlot == NULL)
 		{
 			break;
 		}
-		iPass++;
+		logBBAI("	Found City Site at (%d, %d)", pBestFoundPlot->getX(), pBestFoundPlot->getY());
+		m_aiAICitySites.push_back(GC.getMap().plotNum(pBestFoundPlot->getX(), pBestFoundPlot->getY()));
+		AI_recalculateFoundValues(pBestFoundPlot->getX(), pBestFoundPlot->getY(), CITY_PLOTS_RADIUS, 2 * CITY_PLOTS_RADIUS);
 	}
-
 	logBBAI("Player %d (%S) end Update City Sites", getID(), getCivilizationDescription(0));
 }
 
@@ -25333,8 +25320,22 @@ int CvPlayerAI::AI_getNumAreaCitySites(int iAreaID, int& iBestValue) const
 		if (pCitySitePlot->getArea() == iAreaID)
 		{
 			iCount++;
-			iBestValue = std::max(iBestValue, pCitySitePlot->getFoundValue(getID()));
+			const int iValue = pCitySitePlot->getFoundValue(getID());
+
+			if (gPlayerLogLevel > 2)
+			{
+				logBBAI("Player %d (%S) - City Site %d (%d, %d) has a value of %d", getID(), getCivilizationDescription(0), iCount, pCitySitePlot->getX(), pCitySitePlot->getY(), iValue);
+			}
+
+			if (iValue > iBestValue)
+			{
+				iBestValue = iValue;
+			}
 		}
+	}
+	if (gPlayerLogLevel > 1)
+	{
+		logBBAI("Player %d (%S) have %d City Sites, best value is %d", getID(), getCivilizationDescription(0), iCount, iBestValue);
 	}
 	return iCount;
 }
@@ -26950,7 +26951,7 @@ UnitTypes CvPlayerAI::bestBuildableUnitForAIType(DomainTypes eDomain, UnitAIType
 {
 	PROFILE_FUNC();
 
-	//	What is the best unit we can produce of this unitAI type
+	// What is the best unit we can produce of this unitAI type
 	CvCity* pCapitalCity = getCapitalCity();
 
 	// Handle capital-less civs (aka barbs) by just using an arbitrary city
@@ -26965,18 +26966,19 @@ UnitTypes CvPlayerAI::bestBuildableUnitForAIType(DomainTypes eDomain, UnitAIType
 	}
 	switch (eDomain)
 	{
-	case NO_DOMAIN:
-	{
-		const UnitTypes eBestUnit = pCapitalCity->AI_bestUnitAI(eUnitAIType, iDummy, false, true, criteria);
-		if (eBestUnit != NO_UNIT || pCapitalCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
+		case NO_DOMAIN:
 		{
-			return eBestUnit;
+			const UnitTypes eBestUnit = pCapitalCity->AI_bestUnitAI(eUnitAIType, iDummy, false, true, criteria);
+
+			if (eBestUnit != NO_UNIT || pCapitalCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize()))
+			{
+				return eBestUnit;
+			}
+			// Drop through and check coastal
 		}
-		// Drop through and check coastal
-	}
-	case DOMAIN_SEA:
-	{
-		CvCity* pCoastalCity =
+		case DOMAIN_SEA:
+		{
+			CvCity* pCoastalCity =
 			(
 				pCapitalCity->isCoastal(GC.getWorldInfo(GC.getMap().getWorldSize()).getOceanMinAreaSize())
 				?
@@ -26984,17 +26986,17 @@ UnitTypes CvPlayerAI::bestBuildableUnitForAIType(DomainTypes eDomain, UnitAIType
 				:
 				findBestCoastalCity()
 			);
-		if (pCoastalCity != NULL)
-		{
-			return pCoastalCity->AI_bestUnitAI(eUnitAIType, iDummy, false, true, criteria);
+			if (pCoastalCity != NULL)
+			{
+				return pCoastalCity->AI_bestUnitAI(eUnitAIType, iDummy, false, true, criteria);
+			}
+			break;
 		}
-		break;
-	}
-	case DOMAIN_LAND:
-	case DOMAIN_AIR:
-	{
-		return pCapitalCity->AI_bestUnitAI(eUnitAIType, iDummy, false, true, criteria);
-	}
+		case DOMAIN_LAND:
+		case DOMAIN_AIR:
+		{
+			return pCapitalCity->AI_bestUnitAI(eUnitAIType, iDummy, false, true, criteria);
+		}
 	}
 	return NO_UNIT;
 }

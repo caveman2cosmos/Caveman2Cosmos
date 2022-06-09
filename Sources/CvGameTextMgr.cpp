@@ -1049,57 +1049,38 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 			}
 
 			bFirst = true;
-			for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
+			foreach_(const STD_PAIR(UnitTypes, int)& modifier, pUnit->getUnitInfo().getUnitAttackModifiers())
 			{
-				if (pUnit->getUnitInfo().getUnitAttackModifier(iI) == GC.getUnitInfo(pUnit->getUnitType()).getUnitDefenseModifier(iI))
+				if (!bFirst)
 				{
-					if (pUnit->getUnitInfo().getUnitAttackModifier(iI) != 0)
-					{
-						if (!bFirst)
-						{
-							szString.append(gDLL->getText("TXT_KEY_COMMA"));
-						}
-						if (bFirst)
-						{
-							szString.append(NEWLINE);
-							bFirst = false;
-						}
-						szString.append(gDLL->getText("TXT_KEY_UNITHELP_MOD_VS_TYPE", pUnit->getUnitInfo().getUnitAttackModifier(iI),
-							CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getTextKeyWide()));
-					}
+					szString.append(gDLL->getText("TXT_KEY_COMMA"));
 				}
 				else
 				{
-					if (pUnit->getUnitInfo().getUnitAttackModifier(iI) != 0)
-					{
-						if (!bFirst)
-						{
-							szString.append(gDLL->getText("TXT_KEY_COMMA"));
-						}
-						if (bFirst)
-						{
-							szString.append(NEWLINE);
-							bFirst = false;
-						}
-						szString.append(gDLL->getText("TXT_KEY_UNITHELP_ATTACK_MOD_VS_CLASS", pUnit->getUnitInfo().getUnitAttackModifier(iI),
-							CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getTextKeyWide()));
-					}
-
-					if (pUnit->getUnitInfo().getUnitDefenseModifier(iI) != 0)
-					{
-						if (!bFirst)
-						{
-							szString.append(gDLL->getText("TXT_KEY_COMMA"));
-						}
-						if (bFirst)
-						{
-							szString.append(NEWLINE);
-							bFirst = false;
-						}
-						szString.append(gDLL->getText("TXT_KEY_UNITHELP_DEFENSE_MOD_VS_CLASS", pUnit->getUnitInfo().getUnitDefenseModifier(iI),
-							CvWString(GC.getUnitInfo((UnitTypes) iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes) iI).getTextKeyWide()));
-					}
+					szString.append(NEWLINE);
+					bFirst = false;
 				}
+
+				szString.append(
+					gDLL->getText(
+						modifier.second == pUnit->getUnitInfo().getUnitDefenseModifiers().getValue(modifier.first) ? "TXT_KEY_UNITHELP_MOD_VS_TYPE" : "TXT_KEY_UNITHELP_ATTACK_MOD_VS_CLASS",
+						modifier.second, CvWString(GC.getUnitInfo(modifier.first).getType()).c_str(), GC.getUnitInfo(modifier.first).getTextKeyWide()
+					)
+				);
+			}
+			foreach_(const STD_PAIR(UnitTypes, int)& modifier, pUnit->getUnitInfo().getUnitDefenseModifiers())
+			{
+				if (!bFirst)
+				{
+					szString.append(gDLL->getText("TXT_KEY_COMMA"));
+				}
+				else
+				{
+					szString.append(NEWLINE);
+					bFirst = false;
+				}
+				szString.append(gDLL->getText("TXT_KEY_UNITHELP_DEFENSE_MOD_VS_CLASS", modifier.second,
+					CvWString(GC.getUnitInfo(modifier.first).getType()).c_str(), GC.getUnitInfo(modifier.first).getTextKeyWide()));
 			}
 
 			bFirst = true;
@@ -1707,11 +1688,9 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 
 			//Flanking
 			bFirst = true;
-			int iFlank = 0;
-			for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
+			foreach_(const STD_PAIR(UnitTypes, int)& modifier, pUnit->getUnitInfo().getFlankingStrikeUnits())
 			{
-				iFlank = pUnit->getUnitInfo().getFlankingStrikeUnit(iI);
-				if (iFlank > 0)
+				if (modifier.second > 0)
 				{
 					if (bFirst)
 					{
@@ -1723,11 +1702,11 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 						szString.append(L", ");
 					}
 
-					szString.append(gDLL->getText("TXT_KEY_UNITHELP_COMBAT_FLANKING_STRIKES", iFlank, GC.getUnitInfo((UnitTypes)iI).getDescription()));
+					szString.append(gDLL->getText("TXT_KEY_UNITHELP_COMBAT_FLANKING_STRIKES", modifier.second, GC.getUnitInfo(modifier.first).getDescription()));
 				}
 			}
 
-			iFlank = 0;
+			int iFlank = 0;
 			for (iI = 0; iI < GC.getNumUnitCombatInfos(); ++iI)
 			{
 				iFlank = pUnit->flankingStrengthbyUnitCombatTotal((UnitCombatTypes)iI);
@@ -17713,61 +17692,39 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 		}
 
 		bFirst = true;
-		for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
+		foreach_(const STD_PAIR(UnitTypes, int)& modifier, kUnit.getUnitAttackModifiers())
 		{
-			if (kUnit.getUnitAttackModifier(iI) == kUnit.getUnitDefenseModifier(iI))
+			if (!bFirst)
 			{
-				if (kUnit.getUnitAttackModifier(iI) != 0)
-				{
-					if (!bFirst)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
-					}
-					if (bFirst)
-					{
-						szBuffer.append(NEWLINE);
-						bFirst = false;
-					}
-					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_MOD_VS_TYPE", kUnit.getUnitAttackModifier(iI),
-						CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getTextKeyWide()));
-				}
+				szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
 			}
 			else
 			{
-				if (kUnit.getUnitAttackModifier(iI) != 0)
-				{
-					if (!bFirst)
-					{
-						szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
-					}
-					if (bFirst)
-					{
-						szBuffer.append(NEWLINE);
-						bFirst = false;
-					}
-					szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_ATTACK_MOD_VS_CLASS", kUnit.getUnitAttackModifier(iI),
-						CvWString(GC.getUnitInfo((UnitTypes)iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes)iI).getTextKeyWide()));
-				}
+				szBuffer.append(NEWLINE);
+				bFirst = false;
 			}
+			szBuffer.append(
+				gDLL->getText(
+					modifier.second == kUnit.getUnitDefenseModifiers().getValue(modifier.first) ? "TXT_KEY_UNITHELP_MOD_VS_TYPE" : "TXT_KEY_UNITHELP_ATTACK_MOD_VS_CLASS",
+					modifier.second, CvWString(GC.getUnitInfo(modifier.first).getType()).c_str(), GC.getUnitInfo(modifier.first).getTextKeyWide()
+				)
+			);
 		}
 
 		bFirst = true;
-		for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
+		foreach_(const STD_PAIR(UnitTypes, int)& modifier, kUnit.getUnitDefenseModifiers())
 		{
-			if (kUnit.getUnitDefenseModifier(iI) != 0)
+			if (!bFirst)
 			{
-				if (!bFirst)
-				{
-					szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
-				}
-				if (bFirst)
-				{
-					szBuffer.append(NEWLINE);
-					bFirst = false;
-				}
-				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_DEFENSE_MOD_VS_CLASS", kUnit.getUnitDefenseModifier(iI),
-					CvWString(GC.getUnitInfo((UnitTypes) iI).getType()).GetCString(), GC.getUnitInfo((UnitTypes) iI).getTextKeyWide()));
+				szBuffer.append(gDLL->getText("TXT_KEY_COMMA"));
 			}
+			else
+			{
+				szBuffer.append(NEWLINE);
+				bFirst = false;
+			}
+			szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_DEFENSE_MOD_VS_CLASS", modifier.second,
+				CvWString(GC.getUnitInfo(modifier.first).getType()).c_str(), GC.getUnitInfo(modifier.first).getTextKeyWide()));
 		}
 
 		bFirst = true;
@@ -18214,10 +18171,9 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 
 		//Flanking
 		bFirst = true;
-		for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
+		foreach_(const STD_PAIR(UnitTypes, int)& modifier, kUnit.getFlankingStrikeUnits())
 		{
-			int iFlank = kUnit.getFlankingStrikeUnit(iI);
-			if (iFlank > 0)
+			if (modifier.second > 0)
 			{
 				if (bFirst)
 				{
@@ -18228,7 +18184,7 @@ void CvGameTextMgr::setBasicUnitHelpWithCity(CvWStringBuffer &szBuffer, UnitType
 				{
 					szBuffer.append(L", ");
 				}
-				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_COMBAT_FLANKING_STRIKES", iFlank, GC.getUnitInfo((UnitTypes)iI).getDescription()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_COMBAT_FLANKING_STRIKES", modifier.second, GC.getUnitInfo(modifier.first).getDescription()));
 			}
 		}
 
