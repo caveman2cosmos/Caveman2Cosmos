@@ -1495,9 +1495,9 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 					if (GC.getDefineINT("WAR_PRIZES") && GC.getGame().getSorenRandNum(10, "Unit Survives Drowning") == 0)
 					{
-						std::vector<CvPlot*> validPlots;
+						std::vector<const CvPlot*> validPlots;
 
-						foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
+						foreach_(const CvPlot* pAdjacentPlot, plot()->adjacent())
 						{
 							if (unitX->canMoveThrough(pAdjacentPlot, false))
 							{
@@ -1507,7 +1507,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 						}
 						if (bSurvived)
 						{
-							CvPlot* rescuePlot = validPlots[GC.getGame().getSorenRandNum(validPlots.size(), "Event pick plot")];
+							const CvPlot* rescuePlot = validPlots[GC.getGame().getSorenRandNum(validPlots.size(), "Event pick plot")];
 
 							FAssertMsg(rescuePlot != NULL, "rescuePlot is expected to be a valid plot!");
 							unitX->setXY(rescuePlot->getX(), rescuePlot->getY());
@@ -1691,8 +1691,8 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 		CvEventReporter::getInstance().unitLost(this);
 
-		PlayerTypes eCapturingPlayer = getCapturingPlayer();
-		UnitTypes eCaptureUnitType = getCaptureUnitType();
+		const PlayerTypes eCapturingPlayer = getCapturingPlayer();
+		const UnitTypes eCaptureUnitType = getCaptureUnitType();
 
 		if (eCapturingPlayer != NO_PLAYER && eCaptureUnitType != NO_UNIT && !GET_PLAYER(eCapturingPlayer).isNPC())
 		{
@@ -12354,7 +12354,7 @@ SpecialUnitTypes CvUnit::getSpecialUnitType() const
 
 UnitTypes CvUnit::getCaptureUnitType() const
 {
-	return (UnitTypes) m_pUnitInfo->getUnitCaptureType();
+	return m_pUnitInfo->getUnitCaptureType();
 }
 
 
@@ -15221,7 +15221,7 @@ int CvUnit::featureDefenseModifier(FeatureTypes eFeature) const
 int CvUnit::unitAttackModifier(UnitTypes eUnit) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
-	return m_pUnitInfo->getUnitAttackModifier(eUnit);
+	return m_pUnitInfo->getUnitAttackModifiers().getValue(eUnit);
 }
 
 
@@ -15232,7 +15232,7 @@ int CvUnit::unitDefenseModifier(UnitTypes eUnit) const
 		return 0;
 	}
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
-	return m_pUnitInfo->getUnitDefenseModifier(eUnit);
+	return m_pUnitInfo->getUnitDefenseModifiers().getValue(eUnit);
 }
 
 
@@ -24790,7 +24790,7 @@ void CvUnit::flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, in
 		if (pLoopUnit != pSkipUnit && !pLoopUnit->isDead() && isEnemy(pLoopUnit->getTeam(), pPlot, pLoopUnit)
 		&& !pLoopUnit->isInvisible(getTeam(), false) && pLoopUnit->canDefend())
 		{
-			int iFlankingStrength = m_pUnitInfo->getFlankingStrikeUnit(pLoopUnit->getUnitType());
+			int iFlankingStrength = m_pUnitInfo->getFlankingStrikeUnits().getValue(pLoopUnit->getUnitType());
 
 			for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 			{
