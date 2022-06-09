@@ -3843,7 +3843,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 		// BBAI NOTE: This is where small city worker and settler production is blocked
 		// TB Interpret Note: bGrowMore must be FALSE for cities to queue settlers!
 		// This was basically saying that if the city has more population than improved tiles then it won't build settlers!
-		bGrowMore = AI_countGoodTiles(true, false, 100) > getPopulation();
+		bGrowMore = getPopulation() < player.getTotalPopulation() / player.getNumCities() && AI_countGoodTiles(true, false, 100) > getPopulation();
 
 		if (gPlayerLogLevel > 2)
 		{
