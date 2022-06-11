@@ -3400,22 +3400,24 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 			// BUG - Delete All Action - start
 			else if (GC.getActionInfo(widgetDataStruct.m_iData1).getCommandType() == COMMAND_DELETE)
 			{
-				const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
-
-				if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE)
-				//units have to be inside cultural borders
-				&& pHeadSelectedUnit->plot()->getOwner() == pHeadSelectedUnit->getOwner())
+				if (GC.getGame().isOption(GAMEOPTION_DOWNSIZING_IS_PROFITABLE))
 				{
-					int iGold = 0;
+					const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
-					foreach_(const CvUnit* pSelectedUnit, gDLL->getInterfaceIFace()->getSelectionList()->units())
+					//units have to be inside cultural borders
+					if (pHeadSelectedUnit->plot()->getOwner() == pHeadSelectedUnit->getOwner())
 					{
-						iGold += pSelectedUnit->calculateScrapValue();
-					}
-					if (iGold != 0)
-					{
-						szBuffer.append(NEWLINE);
-						szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOLD_FOR_DISBANDING", iGold));
+						int iGold = 0;
+
+						foreach_(const CvUnit* pSelectedUnit, gDLL->getInterfaceIFace()->getSelectionList()->units())
+						{
+							iGold += pSelectedUnit->calculateScrapValue();
+						}
+						if (iGold != 0)
+						{
+							szBuffer.append(NEWLINE);
+							szBuffer.append(gDLL->getText("TXT_KEY_MISC_GOLD_FOR_DISBANDING", iGold));
+						}
 					}
 				}
 			}

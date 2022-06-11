@@ -1484,57 +1484,66 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		{
 			foreach_(CvUnit* unitX, pPlot->units())
 			{
-				if (unitX->getTransportUnit() == this && !unitX->isDelayedDeath())
+				if (unitX == this || unitX->getTransportUnit() != this)
 				{
-					if (pPlot->isValidDomainForLocation(*unitX))
-					{
-						unitX->setCapturingPlayer(NO_PLAYER);
-						unitX->setCapturingUnit(this);
-					}
+					continue;
+				}
+				if (unitX->isDelayedDeath())
+				{
+					// Should mean that we are on the second kill pass of transporting unit (this),
+					// i.e. this cargo unit (unitX) already failed to survive on the first kill pass where bDelay=True.
+					FAssertMsg(!bDelay, "bDelay should in theory always be false here... I think");
+					unitX->kill(bDelay, NO_PLAYER, true);
+					continue;
+				}
+
+				/* Toffer ToDo - revise
+				if (getCaptureUnitType() != NO_UNIT && getCapturingPlayer() != NO_PLAYER
+				&& unitX->getCaptureUnitType() != NO_UNIT && !GET_PLAYER(getCapturingPlayer()).isNPC()
+				&& GC.getGame().getSorenRandNum(2, "50% prefer safe capture over deadly escape.") == 0)
+				{
+					unitX->setCapturingPlayer(getCapturingPlayer());
+					unitX->setCapturingUnit(getCapturingUnit());
+					unitX->kill(bDelay, ePlayer, bMessaged);
+					continue;
+				}
+				*/
+				if (GC.getGame().getSorenRandNum(pPlot->isWater() ? 5 : 2, "Unit Survives Drowning") == 0)
+				{
 					bool bSurvived = false;
+					std::vector<const CvPlot*> validPlots;
 
-					if (GC.getDefineINT("WAR_PRIZES") && GC.getGame().getSorenRandNum(10, "Unit Survives Drowning") == 0)
+					foreach_(const CvPlot* pAdjacentPlot, plot()->adjacent())
 					{
-						std::vector<const CvPlot*> validPlots;
-
-						foreach_(const CvPlot* pAdjacentPlot, plot()->adjacent())
+						if (unitX->canMoveThrough(pAdjacentPlot, false))
 						{
-							if (unitX->canMoveThrough(pAdjacentPlot, false))
-							{
-								validPlots.push_back(pAdjacentPlot);
-								bSurvived = true;
-							}
-						}
-						if (bSurvived)
-						{
-							const CvPlot* rescuePlot = validPlots[GC.getGame().getSorenRandNum(validPlots.size(), "Event pick plot")];
-
-							FAssertMsg(rescuePlot != NULL, "rescuePlot is expected to be a valid plot!");
-							unitX->setXY(rescuePlot->getX(), rescuePlot->getY());
-							unitX->setDamage(GC.getGame().getSorenRandNum(unitX->getHP(), "Survival Damage"), NO_PLAYER);
-							AddDLLMessage(
-								unitX->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-								gDLL->getText("TXT_KEY_MISC_UNIT_SURVIVED_TRANSPORT_SINKING", unitX->getNameKey(), getNameKey()),
-								NULL, MESSAGE_TYPE_MINOR_EVENT
-							);
+							validPlots.push_back(pAdjacentPlot);
+							bSurvived = true;
 						}
 					}
-					if (!bSurvived)
+					if (bSurvived)
 					{
+						const CvPlot* rescuePlot = validPlots[GC.getGame().getSorenRandNum(validPlots.size(), "Event pick plot")];
+
+						FAssertMsg(rescuePlot != NULL, "rescuePlot is expected to be a valid plot!");
+						unitX->setXY(rescuePlot->getX(), rescuePlot->getY());
+						unitX->setDamage(GC.getGame().getSorenRandNum(std::min(unitX->getMaxHP() * 2/3, unitX->getHP()), "Survival Damage"), NO_PLAYER);
 						AddDLLMessage(
-							eOwner, true, GC.getEVENT_MESSAGE_TIME(),
-							gDLL->getText("TXT_KEY_MISC_UNIT_DROWNED", unitX->getNameKey()),
-							GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
-							MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+							unitX->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText("TXT_KEY_MISC_UNIT_SURVIVED_TRANSPORT_SINKING", unitX->getNameKey(), getNameKey()),
+							NULL, MESSAGE_TYPE_MINOR_EVENT
 						);
-						bMessaged = true;
-						if (bDelay)
-						{
-							unitX->unload();
-						}
-						unitX->kill(bDelay, ePlayer, bMessaged);
+						continue;
 					}
 				}
+				AddDLLMessage(
+					eOwner, true, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText("TXT_KEY_MISC_UNIT_DROWNED", unitX->getNameKey()),
+					GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
+					MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
+				);
+				bMessaged = true;
+				unitX->kill(bDelay, ePlayer, bMessaged);
 			}
 		}
 
@@ -4364,7 +4373,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			}
 
 			CvEventReporter::getInstance().combatResult(this, pDefender);
-			//CvUnitInfo* pDefenderUnitInfo = &(pDefender->getUnitInfo());
 			PlayerTypes eDefenderUnitPlayer = pDefender->getOwner();
 			UnitTypes eDefenderUnitType = pDefender->getUnitType();
 
@@ -12012,12 +12020,7 @@ bool CvUnit::upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit) const
 
 bool CvUnit::canUpgrade(UnitTypes eUnit, bool bTestVisible) const
 {
-	if (eUnit == NO_UNIT)
-	{
-		return false;
-	}
-
-	if (!isReadyForUpgrade())
+	if (eUnit == NO_UNIT || !isReadyForUpgrade())
 	{
 		return false;
 	}
@@ -12054,15 +12057,7 @@ bool CvUnit::canUpgrade(UnitTypes eUnit, bool bTestVisible) const
 
 bool CvUnit::isReadyForUpgrade() const
 {
-	if (!canMove())
-	{
-		return false;
-	}
-	if (plot()->getTeam() != getTeam() && !isUpgradeAnywhere() && !GET_PLAYER(getOwner()).isUpgradeAnywhere())
-	{
-		return false;
-	}
-	return true;
+	return canMove() && (plot()->getTeam() == getTeam() || isUpgradeAnywhere() || GET_PLAYER(getOwner()).isUpgradeAnywhere());
 }
 
 // has upgrade is used to determine if an upgrade is possible,
@@ -19431,23 +19426,17 @@ void CvUnit::setTransportUnit(CvUnit* pTransportUnit)
 			m_transportUnit.reset();
 
 			getGroup()->setActivityType(ACTIVITY_AWAKE);
-/************************************************************************************************/
-/* Afforess	                  Start		 09/01/10                                               */
-/*                                                                                              */
-/*  After a Barb Transport is done, set it to attack AI                                         */
-/************************************************************************************************/
+
+			// After a Barb Transport is done, set it to attack AI
 			if (pOldTransportUnit != NULL && !pOldTransportUnit->hasCargo())
 			{
-				if (pOldTransportUnit->getDomainType() == DOMAIN_SEA && pOldTransportUnit->getOwner() == BARBARIAN_PLAYER)
+				if (pOldTransportUnit->getDomainType() == DOMAIN_SEA && pOldTransportUnit->isHominid())
 				{
 					pOldTransportUnit->AI_setUnitAIType(UNITAI_ATTACK_SEA);
 				}
 			}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
-			//	Koshling - have the AI prioritize regrouping with other units when unloaded
+			// Koshling - have the AI prioritize regrouping with other units when unloaded
 			getGroup()->AI_setMissionAI(MISSIONAI_REGROUP, NULL, NULL);
 		}
 
