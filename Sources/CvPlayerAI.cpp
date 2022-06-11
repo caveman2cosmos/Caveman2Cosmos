@@ -635,8 +635,6 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 		foreach_(CvUnit * unit, units_safe() | filtered(CvUnit::fn::isPromotionReady()))
 		{
 			unit->AI_promote();
-			// Upgrade replaces the original unit with a new one, so old unit must be killed
-			unit->doDelayedDeath();
 		}
 	}
 
@@ -727,22 +725,22 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 		return;
 	}
 
-	const bool bAnyWar = (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0);
+	const bool bAnyWar = GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0;
 	const int64_t iStartingGold = getGold();
 	const int iTargetGold = AI_goldTarget();
-	int64_t iUpgradeBudget = (AI_goldToUpgradeAllUnits() / (bAnyWar ? 1 : 2));
+	int64_t iUpgradeBudget = AI_goldToUpgradeAllUnits() / (bAnyWar ? 1 : 2);
 
 	iUpgradeBudget = std::min<int64_t>(iUpgradeBudget, (iStartingGold - iTargetGold < iUpgradeBudget) ? (iStartingGold - iTargetGold) : iStartingGold / 2);
 	iUpgradeBudget = std::max<int64_t>(0, iUpgradeBudget);
 
-	if (gPlayerLogLevel > 2)
-	{
-		logBBAI("	%S calculates upgrade budget of %d from %d current gold, %d target", getCivilizationDescription(0), iUpgradeBudget, iStartingGold, iTargetGold);
-	}
-
 	if (AI_isFinancialTrouble())
 	{
 		iUpgradeBudget /= 3;
+	}
+
+	if (gPlayerLogLevel > 2)
+	{
+		logBBAI("	%S calculates upgrade budget of %I64d from %I64d current gold, %d target", getCivilizationDescription(0), iUpgradeBudget, iStartingGold, iTargetGold);
 	}
 
 	// Always willing to upgrade 1 unit if we have the money
@@ -896,7 +894,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	if (gPlayerLogLevel > 2 && iStartingGold - getGold() > 0)
 	{
 		logBBAI(
-			"	%S spends %d on unit upgrades out of budget of %d, %d effective gold remaining",
+			"	%S spends %I64d on unit upgrades out of budget of %I64d, %I64d effective gold remaining",
 			getCivilizationDescription(0), iStartingGold - getGold(), iUpgradeBudget, getGold()
 		);
 	}
@@ -10893,19 +10891,13 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				iValue = 0;
 				break;
 			}
-			/************************************************************************************************/
-			/* BETTER_BTS_AI_MOD					  06/12/09								jdog5000	  */
-			/*																							  */
-			/* Unit AI																					  */
-			/************************************************************************************************/
+
 			iFastMoverMultiplier = AI_isDoStrategy(AI_STRATEGY_FASTMOVERS) ? 3 : 1;
 
 			iValue += iCombatValue;
-			iValue += ((iCombatValue * (kUnitInfo.getMoves() - 1) * iFastMoverMultiplier) / 3); // K-Mod put in -1 !
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					   END												  */
-	/************************************************************************************************/
+			iValue += ((iCombatValue * (kUnitInfo.getMoves() - 1) * iFastMoverMultiplier) / 3);
 			iValue += ((iCombatValue * kUnitInfo.getWithdrawalProbability()) / 100);
+
 			if (kUnitInfo.getCombatLimit() < 100)
 			{
 				iValue -= (iCombatValue * (125 - kUnitInfo.getCombatLimit())) / 100;
@@ -11422,12 +11414,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 				iValue += ((iCombatValue * kUnitInfo.getUnitCombatModifier(iI) * AI_getUnitCombatWeight((UnitCombatTypes)iI)) / 10000);
 				iValue += ((iCombatValue * (kUnitInfo.getDefenderUnitCombat(iI) ? 50 : 0)) / 100);
 			}
-			/************************************************************************************************/
-			/* BETTER_BTS_AI_MOD					  03/20/10								jdog5000	  */
-			/*																							  */
-			/* War strategy AI																			  */
-			/************************************************************************************************/
-					//iValue += (kUnitInfo.getInterceptionProbability() * 3);
+
 			if (kUnitInfo.getInterceptionProbability() > 0)
 			{
 				int iTempValue = kUnitInfo.getInterceptionProbability();
@@ -11488,15 +11475,8 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					break;
 				}
 			}
-			/************************************************************************************************/
-			/* BETTER_BTS_AI_MOD					  03/08/10								jdog5000	  */
-			/*																							  */
-			/* Victory Strategy AI																		  */
-			/************************************************************************************************/
+
 			if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2))
-				/************************************************************************************************/
-				/* BETTER_BTS_AI_MOD					   END												  */
-				/************************************************************************************************/
 			{
 				int iTempValue = 0;
 				for (iI = 0; iI < GC.getNumReligionInfos(); iI++)
@@ -11515,19 +11495,11 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 					if (kUnitInfo.getCorporationSpreads(iI) > 0)
 					{
 						iValue += (5 * kUnitInfo.getCorporationSpreads(iI)) / 2;
-						/************************************************************************************************/
-						/* UNOFFICIAL_PATCH					   06/03/09								jdog5000	  */
-						/*																							  */
-						/* Bugfix																						 */
-						/************************************************************************************************/
-											// Fix potential crash, probably would only happen in mods
+
 						if (pArea != NULL)
 						{
 							iValue += 300 / std::max(1, pArea->countHasCorporation((CorporationTypes)iI, getID()));
 						}
-						/************************************************************************************************/
-						/* UNOFFICIAL_PATCH						END												  */
-						/************************************************************************************************/
 					}
 				}
 			}
@@ -11566,6 +11538,7 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			break;
 
 		case UNITAI_ESCORT_SEA:
+		{
 			iValue += iCombatValue;
 			iValue += iCombatValue * kUnitInfo.getMoves();
 			iValue += kUnitInfo.getInterceptionProbability() * 3;
@@ -11573,21 +11546,13 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			{
 				iValue += 200;
 			}
-			/************************************************************************************************/
-			/* UNOFFICIAL_PATCH					   06/03/09								jdog5000	  */
-			/*																							  */
-			/* General AI																				   */
-			/************************************************************************************************/
-					// Boats which can't be seen don't play defense, don't make good escorts
+			// Boats which can't be seen don't play defense, don't make good escorts
 			if (kUnitInfo.getInvisibleType() != NO_INVISIBLE)
 			{
 				iValue /= 2;
 			}
-			/************************************************************************************************/
-			/* UNOFFICIAL_PATCH						END												  */
-			/************************************************************************************************/
 			break;
-
+		}
 		case UNITAI_EXPLORE_SEA:
 		{
 			int iExploreValue = 100;
@@ -11614,21 +11579,14 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 		case UNITAI_SETTLER_SEA:
 		case UNITAI_MISSIONARY_SEA:
 		case UNITAI_SPY_SEA:
+		{
 			iValue += (iCombatValue / 2);
 			iValue += (kUnitInfo.getMoves() * 200);
 			iValue += (kUnitInfo.getCargoSpace() * 300);
-			/************************************************************************************************/
-			/* BETTER_BTS_AI_MOD					  05/18/09								jdog5000	  */
-			/*																							  */
-			/* City AI																					  */
-			/************************************************************************************************/
-					// Never build galley transports when ocean faring ones exist (issue mainly for Carracks)
+			// Never build galley transports when ocean faring ones exist (issue mainly for Carracks)
 			iValue /= (1 + AI_unitImpassableCount(eUnit));
-			/************************************************************************************************/
-			/* BETTER_BTS_AI_MOD					   END												  */
-			/************************************************************************************************/
 			break;
-
+		}
 		case UNITAI_CARRIER_SEA:
 			iValue += iCombatValue;
 			iValue += (kUnitInfo.getMoves() * 50);
