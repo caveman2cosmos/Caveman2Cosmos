@@ -214,16 +214,10 @@ void CvCityAI::AI_preUnitTurn()
 	PROFILE_FUNC();
 
 	m_neededDefenders = -1;
-	m_requestedEscorts = 0;
 
 	m_iCityThreat = -1;
 
 	m_bestUnits.clear();
-}
-
-void CvCityAI::AI_noteUnitEscortNeeded()
-{
-	m_requestedEscorts++;
 }
 
 void CvCityAI::AI_trained(UnitTypes eUnitType, UnitAITypes eUnitAIType)
@@ -940,34 +934,41 @@ void CvCityAI::AI_chooseProduction()
 	}
 
 	int iMaxSettlers = 0;
-	if (!bFinancialTrouble && player.bestBuildableUnitForAIType(NO_DOMAIN, UNITAI_SETTLE) != NO_UNIT)
-	{
-		iMaxSettlers = std::min((player.getNumCities() + 1) / 2, iNumAreaCitySites + iNumWaterAreaCitySites);
-		if (bLandWar || bAssault)
-		{
-			iMaxSettlers = (iMaxSettlers + 2) / 3;
-		}
 
-		if (player.getCityLimit() > 0)
+	if (!bFinancialTrouble)
+	{
+		CvUnitSelectionCriteria	criteria;
+		criteria.m_bIgnoreGrowth = true;
+
+		if (player.bestBuildableUnitForAIType(NO_DOMAIN, UNITAI_SETTLE, &criteria) != NO_UNIT)
 		{
-			if (player.getCityOverLimitUnhappy() > 0)
+			iMaxSettlers = std::min((player.getNumCities() + 1) / 2, iNumAreaCitySites + iNumWaterAreaCitySites);
+
+			if (bLandWar || bAssault)
 			{
-				//	Soft limit.  If we already have unhappy cities don't create
-				//	settlers that will increase overall unhappiness as they found
-				//	new cities
-				if (player.AI_getOverallHappyness() < 0)
+				iMaxSettlers = (iMaxSettlers + 2) / 3;
+			}
+
+			if (player.getCityLimit() > 0)
+			{
+				if (player.getCityOverLimitUnhappy() < 1)
 				{
+					//	Hard limit - don't stockpile more than 2 settlers
+					iMaxSettlers = std::min(iMaxSettlers, player.getCityLimit() - player.getNumCities() + 2);
+				}
+				else if (player.AI_getOverallHappyness() < 0)
+				{
+					// Soft limit - If we already have unhappy cities don't create settlers that
+					//	will increase overall unhappiness as they found new cities.
 					iMaxSettlers = std::min(iMaxSettlers, std::max(0, player.getCityLimit() - player.getNumCities()));
 				}
 			}
-			else
-			{
-				//	Hard limit - don't stockpile more than 2 settlers
-				iMaxSettlers = std::min(iMaxSettlers, player.getCityLimit() - player.getNumCities() + 2);
-			}
 		}
 	}
-
+	if (gCityLogLevel > 2)
+	{
+		logBBAI("Player %d (%S) - %S - iNumSettlers=%d; iMaxSettlers=%d", getOwner(), player.getCivilizationDescription(0), getName().GetCString(), iNumSettlers, iMaxSettlers);
+	}
 	int iEconomyFlags = 0;
 	int iEconomyFlagBits = 0;
 
@@ -1515,60 +1516,6 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-#if 0
-	//minimal defense.
-	if (!bInhibitUnits && (iPlotCityDefenderCount <= iPlotSettlerCount || m_requestedEscorts > 0))
-	{
-		const UnitAITypes bestAIType = (m_requestedEscorts > 0 ? UNITAI_CITY_COUNTER : UNITAI_CITY_DEFENSE);
-
-		if (gCityLogLevel >= 2)
-		{
-			logBBAI("      City %S needs escort for existing settler", getName().GetCString());
-		}
-		if (AI_chooseUnit("settler escort", bestAIType))
-		{
-			// BBAI TODO: Does this work right after settler is built???
-			return;
-		}
-
-		if (iNumCitiesInArea <= 3
-			&& AI_chooseUnit("settler escort low area count (accept any)", bestAIType, -1, true))
-		{
-			// Yes it probably works but it should never happen in the first place
-			return;
-		}
-
-		if (iPlotCityDefenderCount + iPlotOtherCityAICount <= iPlotSettlerCount)
-		{
-			if (AI_chooseUnit("settler escort (city defense)", UNITAI_CITY_DEFENSE))
-			{
-				return;
-			}
-
-			if (AI_chooseUnit("settler escort (attack)", UNITAI_ATTACK))
-			{
-				return;
-			}
-
-			if (AI_chooseUnit("settler escort (city counter)", UNITAI_CITY_COUNTER))
-			{
-				return;
-			}
-
-			if (AI_chooseUnit("settler escort (special)", UNITAI_CITY_SPECIAL))
-			{
-				return;
-			}
-
-			if (AI_chooseUnit("settler escort (reserve)", UNITAI_RESERVE))
-			{
-				return;
-			}
-
-		}
-	}
-#endif
-
 	// emergency property control (bad property > 20% through op range - choose unit to deal if possible)
 	if (AI_choosePropertyControlUnit(20))
 	{
@@ -1742,7 +1689,7 @@ void CvCityAI::AI_chooseProduction()
 
 	if (iMaxSettlers > 0 && !bInhibitUnits && !(bDefenseWar && iWarSuccessRatio < -50))
 	{
-		if ((iAreaBestFoundValue > iMinFoundValue) || (iWaterAreaBestFoundValue > iMinFoundValue))
+		if (iAreaBestFoundValue > iMinFoundValue || iWaterAreaBestFoundValue > iMinFoundValue)
 		{
 			// BBAI TODO: Needs logic to check for early settler builds, settler builds in small cities, whether settler sea exists for water area sites?
 			if (pWaterArea != NULL)
@@ -1786,62 +1733,57 @@ void CvCityAI::AI_chooseProduction()
 				}
 			}
 
-			if (iPlotSettlerCount == 0)
+			if (iPlotSettlerCount == 0 && iNumSettlers < iMaxSettlers)
 			{
-				if ((iNumSettlers < iMaxSettlers))
+				// Workers first if in financial trouble
+				if (!bDanger && iExistingWorkers < (2 * iNeededWorkersInArea + 2) / 3 && iWorkersNeeded > 0
+				&& (getPopulation() > 1 || GC.getGame().getGameTurn() - getGameTurnAcquired() > 15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 100))
 				{
-					if (GC.getGame().getSorenRandNum(2, "settler training decision") < (bLandWar ? 1 : 2))
+					if (!bChooseWorker && AI_chooseUnit("worker needed 2", UNITAI_WORKER))
 					{
-						/* financial trouble: 2/3; */
-						if (!bDanger && bFinancialTrouble && iExistingWorkers < (2 * iNeededWorkersInArea + 2) / 3 && iWorkersNeeded > 0
-						&& (getPopulation() > 1 || GC.getGame().getGameTurn() - getGameTurnAcquired() > 15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 100))
-						{
-							if (!bChooseWorker && AI_chooseUnit("worker needed 2", UNITAI_WORKER))
-							{
-								return;
-							}
-							bChooseWorker = true;
-						}
-						// City Defenders - 24.07.2010 - Fuyu
-						if ((player.getNumMilitaryUnits() <= (player.getNumCities() + iNumSettlers + 1))
-							//Fuyu: in the beginning, don't count on other cities to build the escorts
-							|| (player.getNumCities() <= 7 && iNumCitiesInArea <= 3 && (plot()->plotCount(PUF_canDefendGroupHead, -1, -1, NULL, getOwner(), NO_TEAM, PUF_isCityAIType) <= 1)))
-						{
-							if (AI_chooseUnit("extra quick defender", UNITAI_CITY_DEFENSE))
-							{
-								return;
-							}
-							//Fuyu bIgnoreNotUnitAIs
-							if (iNumCitiesInArea <= 3)
-							{
-								CvUnitSelectionCriteria criteria;
+						return;
+					}
+					bChooseWorker = true;
+				}
+				// City Defenders - 24.07.2010 - Fuyu
+				if (player.getNumMilitaryUnits() <= 1 + player.getNumCities() + iNumSettlers
+				//Fuyu: in the beginning, don't count on other cities to build the escorts
+				|| player.getNumCities() <= 7 && iNumCitiesInArea <= 3
+				&& plot()->plotCount(PUF_canDefendGroupHead, -1, -1, NULL, getOwner(), NO_TEAM, PUF_isCityAIType) <= 1)
+				{
+					if (AI_chooseUnit("extra quick defender", UNITAI_CITY_DEFENSE))
+					{
+						return;
+					}
+					//Fuyu bIgnoreNotUnitAIs
+					if (iNumCitiesInArea <= 3)
+					{
+						CvUnitSelectionCriteria criteria;
 
-								criteria.m_bIgnoreNotUnitAIs = true;
-								if (AI_chooseUnit("extra quick defender (any unit)", UNITAI_CITY_DEFENSE, -1, -1, -1, &criteria))
-								{
-									return;
-								}
-							}
-
-							if (AI_chooseUnit("extra quick defender", UNITAI_CITY_COUNTER))
-							{
-								return;
-							}
-							if (AI_chooseUnit("extra quick defender", UNITAI_CITY_SPECIAL))
-							{
-								return;
-							}
-
-							if (AI_chooseUnit("extra quick defender", UNITAI_RESERVE))
-							{
-								return;
-							}
-						}
-						if (AI_chooseUnit("settler needed", UNITAI_SETTLE))
+						criteria.m_bIgnoreNotUnitAIs = true;
+						if (AI_chooseUnit("extra quick defender (any unit)", UNITAI_CITY_DEFENSE, -1, -1, -1, &criteria))
 						{
 							return;
 						}
 					}
+
+					if (AI_chooseUnit("extra quick defender", UNITAI_CITY_COUNTER))
+					{
+						return;
+					}
+					if (AI_chooseUnit("extra quick defender", UNITAI_CITY_SPECIAL))
+					{
+						return;
+					}
+
+					if (AI_chooseUnit("extra quick defender", UNITAI_RESERVE))
+					{
+						return;
+					}
+				}
+				if (AI_chooseUnit("settler needed", UNITAI_SETTLE))
+				{
+					return;
 				}
 			}
 		}
@@ -3256,19 +3198,13 @@ void CvCityAI::AI_chooseProduction()
 		}
 	}
 
-	if (!bInhibitUnits && bLandWar && !bDanger)
+	if (!bInhibitUnits && bLandWar && !bDanger && iNumSettlers < iMaxSettlers && !bFinancialTrouble)
 	{
-		if (iNumSettlers < iMaxSettlers)
+		if (iAreaBestFoundValue > iMinFoundValue)
 		{
-			if (!bFinancialTrouble)
+			if (AI_chooseUnit("optional settlers", UNITAI_SETTLE))
 			{
-				if (iAreaBestFoundValue > iMinFoundValue)
-				{
-					if (AI_chooseUnit("optional settlers", UNITAI_SETTLE))
-					{
-						return;
-					}
-				}
+				return;
 			}
 		}
 	}
@@ -3899,61 +3835,41 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 	{
 		FAssert(tempCriteria.m_eUnitAI == eUnitAI);
 	}
+	CvPlayerAI& player = GET_PLAYER(getOwner());
 
 	bool bGrowMore = false;
-	if (!tempCriteria.m_bIgnoreGrowth && foodDifference(true, true) > 0)
+	if (!tempCriteria.m_bIgnoreGrowth && foodDifference(true, true) > 0 && angryPopulation(1) < 1)
 	{
 		// BBAI NOTE: This is where small city worker and settler production is blocked
 		// TB Interpret Note: bGrowMore must be FALSE for cities to queue settlers!
 		// This was basically saying that if the city has more population than improved tiles then it won't build settlers!
-		if (GET_PLAYER(getOwner()).getNumCities() <= 2 || isHominid())
-		{
-			bGrowMore = (eUnitAI != UNITAI_WORKER || GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_WORKER) > 0)
-				&& getPopulation() < 3 && AI_countGoodTiles(true, false, 100) >= getPopulation();
-		}
-		else
-		{
-			bGrowMore = getPopulation() < 3 || AI_countGoodTiles(true, false, 100) >= getPopulation();
-		}
+		bGrowMore = getPopulation() < player.getTotalPopulation() / player.getNumCities() && AI_countGoodTiles(true, false, 100) > getPopulation();
 
-		if (bGrowMore)
+		if (gPlayerLogLevel > 2)
 		{
-			if (angryPopulation(1) > 0)
-			{
-				bGrowMore = false;
-			}
-		}
-		else if (getPopulation() < 6 && AI_countGoodTiles(true, false, 80) >= getPopulation()
-			&& getFood() - getFoodKept() / 2 >= growthThreshold() / 2 && angryPopulation(1) == 0 && healthRate(false, 1) == 0)
-		{
-			bGrowMore = true;
+			logBBAI("bGrowMore (%d) - AI_countGoodTiles(true, false, 100) > %d (getPopulation())", int(bGrowMore), getPopulation());
 		}
 	}
 
 	//	Check the cache
-	bool bHasCachedValue = false;
 	int cacheKey = tempCriteria.getHash();
 	std::map<int, UnitValueInfo>::const_iterator itr = m_bestUnits.find(cacheKey);
 
 	if (itr != m_bestUnits.end())
 	{
-		//	Have to recheck canTrain as we may hit a unit limit mid-turn
+		// Have to recheck canTrain as we may hit a unit limit mid-turn
 		if ((itr->second.eUnit == NO_UNIT || !bGrowMore || !isFoodProduction(itr->second.eUnit))
-			&& AI_meetsUnitSelectionCriteria(itr->second.eUnit, &tempCriteria) && canTrain(itr->second.eUnit))
+		&& AI_meetsUnitSelectionCriteria(itr->second.eUnit, &tempCriteria) && canTrain(itr->second.eUnit))
 		{
 			iBestValue = itr->second.iValue;
 			eBestUnit = itr->second.eUnit;
-			bHasCachedValue = true;
-		}
-	}
 
-	if (bHasCachedValue)
-	{
-		if (UNITAI_CITY_DEFENSE == eUnitAI && eBestUnit == NO_UNIT && (criteria == NULL || criteria->m_eProperty == NO_PROPERTY))
-		{
-			OutputDebugString("No buildable defender!!\n");
+			if (UNITAI_CITY_DEFENSE == eUnitAI && eBestUnit == NO_UNIT && (criteria == NULL || criteria->m_eProperty == NO_PROPERTY))
+			{
+				OutputDebugString("No buildable defender!!\n");
+			}
+			return eBestUnit;
 		}
-		return eBestUnit;
 	}
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
@@ -3971,7 +3887,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 		{
 			continue;
 		}
-		int iValue = GET_PLAYER(getOwner()).AI_unitValue(eLoopUnit, eUnitAI, area(), &tempCriteria);
+		int iValue = player.AI_unitValue(eLoopUnit, eUnitAI, area(), &tempCriteria);
 
 		if (iValue > 0)
 		{
@@ -4203,7 +4119,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 					iValue += (AI_buildingValue(eFreeBuilding, iFocusFlags) * (player.getNumCities() - player.getBuildingCountPlusMaking(eBuilding)));
 				}
 
-				if (gCityLogLevel > 3)
+				if (gCityLogLevel > 2)
 				{
 					logBBAI("City %S base value for %S (flags %08lx)=%I64d", getName().GetCString(), buildingInfo.getDescription(), iFocusFlags, iValue);
 				}
@@ -4223,7 +4139,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 
 							iValue -= AI_buildingValueThreshold(eBuildingX, iFocusFlags, iMinThreshold, bMaximizeFlaggedValue, true);
 
-							if (gCityLogLevel > 3)
+							if (gCityLogLevel > 2)
 							{
 								logBBAI("    replaces %S - reduce value to %I64d", GC.getBuildingInfo(eBuildingX).getDescription(), iValue);
 							}
@@ -4270,7 +4186,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 						// We only value the unlocked building at 1/2 rate
 						iValue += AI_buildingValueThreshold((BuildingTypes)iI, iFocusFlags, 0, false, true) / 2;
 
-						if (gCityLogLevel > 3)
+						if (gCityLogLevel > 2)
 						{
 							logBBAI("    enables %S - increase value to %I64d", GC.getBuildingInfo((BuildingTypes)iI).getDescription(), iValue);
 						}
@@ -4295,7 +4211,7 @@ bool CvCityAI::AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& s
 				iValue += (AI_buildingValue(eFreeAreaBuilding, iFocusFlags) * weighting) / 100;
 			}
 
-			if (gCityLogLevel > 3)
+			if (gCityLogLevel > 2)
 			{
 				logBBAI("    final value %I64d", iValue);
 			}
@@ -10787,48 +10703,29 @@ int CvCityAI::AI_calculateWaterWorldPercent() const
 	return std::max(1, iWaterPercent);
 }
 
-//Please note, takes the yield multiplied by 100
-int CvCityAI::AI_getYieldMagicValue(const int* piYieldsTimes100, bool bHealthy) const
-{
-	FAssert(piYieldsTimes100 != NULL);
 
-	const int iPopEats = 100 * (GC.getFOOD_CONSUMPTION_PER_POPULATION() + !bHealthy);
-	return (
-		(
-			piYieldsTimes100[YIELD_FOOD] * 100
-			+
-			piYieldsTimes100[YIELD_PRODUCTION] * 55
-			+
-			piYieldsTimes100[YIELD_COMMERCE] * 40
-			-
-			iPopEats * 102
-			)
-		/ 100
-		);
-}
-
-//The magic value is basically "Look at this plot, is it worth working"
-//-50 or lower means the plot is worthless in a "workers kill yourself" kind of way.
-//-50 to -1 means the plot isn't worth growing to work - might be okay with emphasize though.
-//Between 0 and 50 means it is marginal.
-//50-100 means it's okay.
-//Above 100 means it's definitely decent - seriously question ever not working it.
-//This function deliberately doesn't use emphasize settings.
+// The magic value is basically "Look at this plot, is it worth working"
+//	Less than -50 means the plot is worthless in a "workers kill yourself" kind of way.
+//	-50 to -1 means the plot isn't worth growing to work - might be okay with emphasize though.
+//	0 to 50 means it is marginal.
+//	50 to 100 means it's okay.
+//	Above 100 means it's definitely decent - seriously question ever not working it.
+//	This function deliberately doesn't use emphasize settings.
 int CvCityAI::AI_getPlotMagicValue(const CvPlot* pPlot, bool bHealthy, bool bWorkerOptimization) const
 {
 	FAssert(pPlot != NULL);
 
-	int aiYields[NUM_YIELD_TYPES];
+	int yields100[NUM_YIELD_TYPES];
 
 	for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 	{
-		if ((bWorkerOptimization) && (pPlot->getWorkingCity() == this) && (AI_getBestBuild(getCityPlotIndex(pPlot)) != NO_BUILD))
+		if (bWorkerOptimization && pPlot->getWorkingCity() == this && AI_getBestBuild(getCityPlotIndex(pPlot)) != NO_BUILD)
 		{
-			aiYields[iI] = pPlot->getYieldWithBuild(AI_getBestBuild(getCityPlotIndex(pPlot)), (YieldTypes)iI, true);
+			yields100[iI] = pPlot->getYieldWithBuild(AI_getBestBuild(getCityPlotIndex(pPlot)), (YieldTypes)iI, true) * 100;
 		}
 		else
 		{
-			aiYields[iI] = pPlot->getYield((YieldTypes)iI) * 100;
+			yields100[iI] = pPlot->getYield((YieldTypes)iI) * 100;
 		}
 	}
 	const ImprovementTypes eCurrentImprovement = pPlot->getImprovementType();
@@ -10841,18 +10738,43 @@ int CvCityAI::AI_getPlotMagicValue(const CvPlot* pPlot, bool bHealthy, bool bWor
 		{
 			for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 			{
-				aiYields[iI] += (
+				yields100[iI] += (
 					(
 						100 * pPlot->calculateImprovementYieldChange(eFinalImprovement, (YieldTypes)iI, getOwner())
 						-
 						100 * pPlot->calculateImprovementYieldChange(eCurrentImprovement, (YieldTypes)iI, getOwner())
-						)
+					)
 					/ 2
-					);
+				);
 			}
 		}
 	}
-	return AI_getYieldMagicValue(aiYields, bHealthy);
+	const int iReductant = (
+		100 *
+		std::min(
+			getFoodConsumedPerPopulation100(!bHealthy),
+			2 *
+			std::max(
+				std::max(
+					yields100[YIELD_FOOD],
+					yields100[YIELD_PRODUCTION]
+				),
+				yields100[YIELD_COMMERCE]
+			)
+		)
+	);
+	return (
+		(
+			yields100[YIELD_FOOD] * 125
+			+
+			yields100[YIELD_PRODUCTION] * 75
+			+
+			yields100[YIELD_COMMERCE] * 50
+			-
+			iReductant
+		)
+		/ 1000
+	);
 }
 
 // Useful for deciding whether or not to grow... or whether the city needs terrain improvement.
@@ -10860,11 +10782,11 @@ int CvCityAI::AI_getPlotMagicValue(const CvPlot* pPlot, bool bHealthy, bool bWor
 int CvCityAI::AI_countGoodTiles(bool bHealthy, bool bUnworkedOnly, int iThreshold, bool bWorkerOptimization) const
 {
 	int iCount = 0;
-	foreach_(const CvPlot * pLoopPlot, plots(true))
+	foreach_(const CvPlot * plotX, plots(true))
 	{
-		if (pLoopPlot->getWorkingCity() == this
-			&& (!bUnworkedOnly || !pLoopPlot->isBeingWorked())
-			&& AI_getPlotMagicValue(pLoopPlot, bHealthy) > iThreshold)
+		if (plotX->getWorkingCity() == this
+		&& (!bUnworkedOnly || !plotX->isBeingWorked())
+		&& AI_getPlotMagicValue(plotX, bHealthy) > iThreshold)
 		{
 			iCount++;
 		}

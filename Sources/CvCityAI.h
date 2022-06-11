@@ -114,7 +114,6 @@ public:
 	//	This allows caches that will remain valid for the processing of the current turn's units to be cleared
 	virtual void AI_preUnitTurn();
 
-	virtual void AI_noteUnitEscortNeeded();
 	virtual void AI_trained(UnitTypes eUnitType, UnitAITypes eUnitAIType);
 
 	void AI_chooseProduction();
@@ -351,7 +350,6 @@ protected:
 
 	void AI_buildGovernorChooseProduction();
 
-	int AI_getYieldMagicValue(const int* piYieldsTimes100, bool bHealthy) const;
 	int AI_getPlotMagicValue(const CvPlot* pPlot, bool bHealthy, bool bWorkerOptimization = false) const;
 	int AI_countGoodTiles(bool bHealthy, bool bUnworkedOnly, int iThreshold = 50, bool bWorkerOptimization = false) const;
 	int AI_countGoodSpecialists(bool bHealthy) const;
@@ -424,7 +422,6 @@ private:
 
 	int m_neededDefenders;	//	Cached at the start of unit mission calculations each turn
 	int m_neededDefendersVicinity;
-	int m_requestedEscorts;
 
 	int m_iCityThreat;
 	int m_iCityThreatModifier;

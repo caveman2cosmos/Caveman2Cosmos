@@ -1713,7 +1713,7 @@ public:
 	int getAssetValue() const;
 	int getPowerValue() const;
 	int getSpecialUnitType() const;
-	int getUnitCaptureType() const;
+	UnitTypes getUnitCaptureType() const { return m_eUnitCaptureType; }
 	int getUnitCombatType() const;
 	DomainTypes getDomainType() const;
 	UnitAITypes getDefaultUnitAIType() const;
@@ -2186,8 +2186,8 @@ public:
 	int getTerrainDefenseModifier(int i) const;
 	int getFeatureAttackModifier(int i) const;
 	int getFeatureDefenseModifier(int i) const;
-	int getUnitAttackModifier(int i) const;
-	int getUnitDefenseModifier(int i) const;
+	const IDValueMap<UnitTypes, int>& getUnitAttackModifiers() const { return m_piUnitAttackModifier; }
+	const IDValueMap<UnitTypes, int>& getUnitDefenseModifiers() const { return m_piUnitDefenseModifier; }
 	int getUnitCombatModifier(int i) const;
 	int getUnitCombatCollateralImmune(int i) const;
 	int getDomainModifier(int i) const;
@@ -2197,7 +2197,7 @@ public:
 	int getCorporationSpreads(int i) const;
 	int getTerrainPassableTech(int i) const;
 	int getFeaturePassableTech(int i) const;
-	int getFlankingStrikeUnit(int i) const;
+	const IDValueMap<UnitTypes, int, -1>& getFlankingStrikeUnits() const { return m_piFlankingStrikeUnit; }
 
 	bool isPrereqOrCivics(int i) const;
 
@@ -2270,10 +2270,8 @@ public:
 
 	void getDataMembers(CvInfoUtil& util);
 	bool read(CvXMLLoadUtility* pXML);
-	bool readPass2(CvXMLLoadUtility* pXML);
 	bool readPass3();
 	void copyNonDefaults(CvUnitInfo* pClassInfo);
-	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML, bool bOver = false);
 	void getCheckSum(uint32_t& iSum) const;
 	void doPostLoadCaching(uint32_t eThis);
 
@@ -2344,7 +2342,7 @@ private:
 	int m_iAssetValue;
 	int m_iPowerValue;
 	int m_iSpecialUnitType;
-	int m_iUnitCaptureType;
+	UnitTypes m_eUnitCaptureType;
 	int m_iUnitCombatType;
 	DomainTypes m_iDomainType;
 	UnitAITypes m_iDefaultUnitAIType;
@@ -2435,8 +2433,8 @@ private:
 	int* m_piTerrainDefenseModifier;
 	int* m_piFeatureAttackModifier;
 	int* m_piFeatureDefenseModifier;
-	int* m_piUnitAttackModifier;
-	int* m_piUnitDefenseModifier;
+	IDValueMap<UnitTypes, int> m_piUnitAttackModifier;
+	IDValueMap<UnitTypes, int> m_piUnitDefenseModifier;
 	int* m_piUnitCombatModifier;
 	int* m_piUnitCombatCollateralImmune;
 	int* m_piDomainModifier;
@@ -2446,7 +2444,7 @@ private:
 	int* m_piCorporationSpreads;
 	int* m_piTerrainPassableTech;
 	int* m_piFeaturePassableTech;
-	int* m_piFlankingStrikeUnit;
+	IDValueMap<UnitTypes, int, -1> m_piFlankingStrikeUnit;
 
 	bool* m_pbPrereqOrCivics;
 
