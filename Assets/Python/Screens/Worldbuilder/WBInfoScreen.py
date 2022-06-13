@@ -1,7 +1,6 @@
 from CvPythonExtensions import *
 import CvScreenEnums
 import WBPlotScreen
-import WBUnitScreen
 import WBCityEditScreen
 import WBPromotionScreen
 import WBPlayerScreen
@@ -524,7 +523,7 @@ class WBInfoScreen:
 			if iMode == 0:
 				pUnit = GC.getPlayer(lSelectedItem[0]).getUnit(lSelectedItem[1])
 				if pUnit:
-					WBUnitScreen.WBUnitScreen(self.WB).interfaceScreen(pUnit)
+					self.WB.goToSubScreen("UnitScreen", [pUnit])
 			elif iMode == 1:
 				pUnit = GC.getPlayer(lSelectedItem[0]).getUnit(lSelectedItem[1])
 				if pUnit:

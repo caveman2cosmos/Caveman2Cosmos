@@ -15276,7 +15276,7 @@ int CvUnit::cargoSpace() const
 	{
 		iCargoCapacity += GET_PLAYER(getOwner()).getNationalMissileCargoSpaceChange();
 	}
-	return iCargoCapacity;
+	return std::max(0, iCargoCapacity);
 }
 
 void CvUnit::changeCargoSpace(int iChange)
@@ -15284,7 +15284,6 @@ void CvUnit::changeCargoSpace(int iChange)
 	if (iChange != 0)
 	{
 		m_iCargoCapacity += iChange;
-		FASSERT_NOT_NEGATIVE(m_iCargoCapacity);
 		setInfoBarDirty(true);
 	}
 }
