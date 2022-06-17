@@ -8498,11 +8498,7 @@ bool CvPlayer::isNoResearchAvailable() const
 
 int CvPlayer::getResearchTurnsLeft(TechTypes eTech, bool bOverflow) const
 {
-	int iTurnsLeft = getResearchTurnsLeftTimes100(eTech, bOverflow);
-
-	iTurnsLeft = (iTurnsLeft + 99) / 100; // round up
-
-	return std::max(1, iTurnsLeft);
+	return std::max(1, (getResearchTurnsLeftTimes100(eTech, bOverflow) + 99) / 100); // round up
 }
 
 int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) const

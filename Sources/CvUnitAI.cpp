@@ -5582,7 +5582,7 @@ void CvUnitAI::AI_prophetMove()
 	}
 	/*TB Prophet Mod end*/
 
-	if (AI_discover(true, true))
+	if (AI_discover(true))
 	{
 		return;
 	}
@@ -5670,7 +5670,7 @@ void CvUnitAI::AI_artistMove()
 		return;
 	}
 
-	if (AI_discover(true, true))
+	if (AI_discover(true))
 	{
 		return;
 	}
@@ -5721,11 +5721,6 @@ void CvUnitAI::AI_artistMove()
 		return;
 	}
 
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  09/18/09								jdog5000	  */
-	/*																							  */
-	/* Unit AI																					  */
-	/************************************************************************************************/
 	if (getGroup()->isStranded())
 	{
 		if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, -1, -1, -1, MOVE_NO_ENEMY_TERRITORY, 1))
@@ -5733,9 +5728,6 @@ void CvUnitAI::AI_artistMove()
 			return;
 		}
 	}
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					   END												  */
-	/************************************************************************************************/
 
 	if (AI_safety())
 	{
@@ -5756,7 +5748,7 @@ void CvUnitAI::AI_scientistMove()
 		return;
 	}
 
-	if (AI_discover(true, true))
+	if (AI_discover(true))
 	{
 		return;
 	}
@@ -6351,7 +6343,7 @@ void CvUnitAI::AI_merchantMove()
 		return;
 	}
 
-	if (AI_discover(true, true))
+	if (AI_discover(true))
 	{
 		return;
 	}
@@ -6581,7 +6573,7 @@ void CvUnitAI::AI_engineerMove()
 		return;
 	}
 
-	if (AI_discover(true, true))
+	if (AI_discover(true))
 	{
 		return;
 	}
@@ -13827,62 +13819,62 @@ bool CvUnitAI::AI_spreadCorporationAirlift()
 	return false;
 }
 
+
 // Returns true if a mission was pushed...
-bool CvUnitAI::AI_discover(bool bThisTurnOnly, bool bFirstResearchOnly)
+bool CvUnitAI::AI_discover(const bool bFirstResearchOnly)
 {
-	if (canDiscover())
+	if (!canDiscover())
 	{
-		TechTypes eDiscoverTech = getDiscoveryTech();
-		bool bIsFirstTech = (GET_PLAYER(getOwner()).AI_isFirstTech(eDiscoverTech));
+		return false;
+	}
+	const TechTypes eTech = getDiscoveryTech();
+	const bool bIsFirstTech = GET_PLAYER(getOwner()).AI_isFirstTech(eTech);
 
-		if (bFirstResearchOnly && !bIsFirstTech)
+	if (bFirstResearchOnly && !bIsFirstTech)
+	{
+		return false;
+	}
+	const int iPercentWasted = 100 * GET_TEAM(getTeam()).getResearchProgress(eTech) / GET_TEAM(getTeam()).getResearchCost(eTech);
+
+	FAssert(iPercentWasted >= 0 && iPercentWasted <= 100);
+
+	if (bIsFirstTech)
+	{
+		if (getDiscoverResearch(eTech) >= GET_TEAM(getTeam()).getResearchLeft(eTech))
+		{
+			if (iPercentWasted <= 30 || bFirstResearchOnly && iPercentWasted <= 50)
+			{
+				getGroup()->pushMission(MISSION_DISCOVER);
+				return true;
+			}
+		}
+		else if (bFirstResearchOnly)
 		{
 			return false;
 		}
+	}
+	// Unit cannot finish the tech this turn, so why not speed it up some?
+	if (getDiscoverResearch(eTech) <= GET_TEAM(getTeam()).getResearchLeft(eTech))
+	{
+		getGroup()->pushMission(MISSION_DISCOVER);
+		return true;
+	}
+	// Unit can finish the tech this turn.
 
-		int iPercentWasted = (100 - ((getDiscoverResearch(eDiscoverTech) * 100) / getDiscoverResearch(NO_TECH)));
-		FAssert(((iPercentWasted >= 0) && (iPercentWasted <= 100)));
-
-
-		if (getDiscoverResearch(eDiscoverTech) >= GET_TEAM(getTeam()).getResearchLeft(eDiscoverTech))
-		{
-			if ((iPercentWasted < 51) && bFirstResearchOnly && bIsFirstTech)
-			{
-				getGroup()->pushMission(MISSION_DISCOVER);
-				return true;
-			}
-
-			if (iPercentWasted < (bIsFirstTech ? 31 : 11))
-			{
-				//I need a good way to assess if the tech is actually valuable...
-				//but don't have one.
-				getGroup()->pushMission(MISSION_DISCOVER);
-				return true;
-			}
-		}
-		else if (bThisTurnOnly)
-		{
-			return false;
-		}
-
-		if (iPercentWasted <= 11)
-		{
-			if (GET_PLAYER(getOwner()).getCurrentResearch() == eDiscoverTech)
-			{
-				getGroup()->pushMission(MISSION_DISCOVER);
-				return true;
-			}
-		}
+	if (GET_PLAYER(getOwner()).getResearchTurnsLeft(eTech, true)
+	<= std::max(1, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100))
+	{
+		return false;
+	}
+	// Takes some time to invent, allow some wastage.
+	if (iPercentWasted <= 5 || iPercentWasted <= 15 && GET_PLAYER(getOwner()).getCurrentResearch() == eTech)
+	{
+		getGroup()->pushMission(MISSION_DISCOVER);
+		return true;
 	}
 	return false;
 }
 
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD & RevDCM					 09/03/10						jdog5000	  */
-/*																				phungus420	*/
-/* Great People AI, Unit AI																	 */
-/************************************************************************************************/
 
 namespace {
 	// Helper function to determine if a unit looks legendaryish
@@ -13963,9 +13955,6 @@ bool CvUnitAI::AI_leadLegend()
 	return false;
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)

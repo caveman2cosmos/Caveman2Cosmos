@@ -694,13 +694,16 @@ CvPlot* CvSelectionGroup::lastMissionPlot() const
 		case MISSION_ESPIONAGE_SLEEP:
 		case MISSION_SHADOW:
 		case MISSION_GREAT_COMMANDER:
-		case MISSION_WAIT_FOR_TECH:
 		//TB Combat Mods (Cure) begin
 		case MISSION_CURE:
 		case MISSION_AMBUSH:
 		case MISSION_ASSASSINATE:
 			break;
-
+		case MISSION_WAIT_FOR_TECH:
+		{
+			FErrorMsg("last mission plot MISSION_WAIT_FOR_TECH part 2");
+			break;
+		}
 		default:
 			// AIAndy: Assumed to be an outcome mission
 			// FErrorMsg("error");
@@ -1436,13 +1439,17 @@ bool CvSelectionGroup::startMission()
 		case MISSION_GREAT_COMMANDER:
 			break;
 		case MISSION_ESPIONAGE_SLEEP:
-		case MISSION_WAIT_FOR_TECH:
 		case MISSION_AMBUSH:
 		case MISSION_ASSASSINATE:
 			bDelete = true;
 			break;
 		case MISSION_SHADOW:
 			break;
+		case MISSION_WAIT_FOR_TECH:
+		{
+			FErrorMsg("start mission MISSION_WAIT_FOR_TECH");
+			break;
+		}
 
 		default:
 			// AIAndy: Assumed to be an outcome mission
@@ -2331,13 +2338,15 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		case MISSION_ESPIONAGE_SLEEP:
 		case MISSION_GREAT_COMMANDER:
 		case MISSION_SHADOW:
-		case MISSION_WAIT_FOR_TECH:
 		case MISSION_AMBUSH:
 		case MISSION_ASSASSINATE:
 			break;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+		case MISSION_WAIT_FOR_TECH:
+		{
+			FErrorMsg("Continue MISSION_WAIT_FOR_TECH");
+			break;
+		}
 		default:
 			// AIAndy: Assumed to be an outcome mission
 			// FErrorMsg("error");
@@ -2459,17 +2468,20 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			case MISSION_INQUISITION:
 			case MISSION_CLAIM_TERRITORY:
 			case MISSION_GREAT_COMMANDER:
-				bDone = true;
-				break;
-			case MISSION_ESPIONAGE_SLEEP:
-				break;
 			case MISSION_SHADOW:
-			case MISSION_WAIT_FOR_TECH:
 			case MISSION_AMBUSH:
 			case MISSION_ASSASSINATE:
 				bDone = true;
 				break;
+			case MISSION_ESPIONAGE_SLEEP:
+				break;
 
+			case MISSION_WAIT_FOR_TECH:
+			{
+				bDone = true;
+				FErrorMsg("Continue MISSION_WAIT_FOR_TECH part 2");
+				break;
+			}
 			default:
 				// AIAndy: Assumed to be an outcome mission
 				// FErrorMsg("error");

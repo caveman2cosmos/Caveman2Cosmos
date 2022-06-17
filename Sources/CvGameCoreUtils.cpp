@@ -1246,13 +1246,17 @@ namespace {
 }
 #endif // DISCOVERY_TECH_CACHE
 
-TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
+void clearDiscoveryTechCache()
+{
+	g_discoveryTechCache.clear();
+}
+TechTypes getDiscoveryTech(const UnitTypes eUnit, const PlayerTypes ePlayer)
 {
 	PROFILE_FUNC();
 	FEnsureMsg(ePlayer != NO_PLAYER, "Player must be valid for this function");
 
 #ifdef DISCOVERY_TECH_CACHE
-	if ( g_cachedTurn != GC.getGame().getGameTurn() )
+	if (g_cachedTurn != GC.getGame().getGameTurn())
 	{
 		g_discoveryTechCache.clear();
 		g_cachedTurn = GC.getGame().getGameTurn();
@@ -1268,20 +1272,19 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 	if ( itr == g_discoveryTechCache[ePlayer].end() )
 #endif // DISCOVERY_TECH_CACHE
 	{
-		const CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
-		const CvTeam& kTeam = GET_TEAM(kPlayer.getTeam());
+		CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
 
 		int iBestValue = 0;
 
-		std::vector<int> paiBonusClassRevealed(GC.getNumBonusClassInfos());
-		std::vector<int> paiBonusClassUnrevealed(GC.getNumBonusClassInfos());
-		std::vector<int> paiBonusClassHave(GC.getNumBonusClassInfos());
-
-		bool bBonusArrayCalculated = false;
-
+		// Toffer - ToDo - Rather than cache g_discoveryTechCache,
+		//	we should just cache the tech indexes of those few techs that can be researched at the moment by each team;
+		//	as the below "researchable techs by team" loops are used in many places in our code.
+		//	One vector (with TechTypes or int elements) per team, is probably best.
+		// Such a cache would be refreshed each time a tech is discovered by a team,
+		//	and it would be a very small cache that could be looped readily without performance concerns.
 		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
-			if (GET_PLAYER(ePlayer).canResearch((TechTypes)iI))
+			if (kPlayer.canResearch((TechTypes)iI))
 			{
 				int iValue = 0;
 
@@ -1290,49 +1293,15 @@ TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer)
 					iValue += (GC.getTechInfo((TechTypes) iI).getFlavorValue(iJ) * GC.getUnitInfo(eUnit).getFlavorValue(iJ));
 				}
 
-				//	Note we check for a value > 1 not > 0 here since thetech evaluator alwasy gives a minimum valu of 1 even if it cannot
-				//	see a 'real' value.  I didn't not want to disturb that arrangement in writing this code
-				if (iValue > iBestValue)
+				if (iValue > 0)
 				{
-					if ( !bBonusArrayCalculated )
-					{
-						bBonusArrayCalculated = true;
+					iValue *= 10;
+					iValue += kPlayer.AI_TechValueCached((TechTypes)iI, kPlayer.isHuman());
 
-						std::fill(paiBonusClassRevealed.begin(), paiBonusClassRevealed.end(), 0);
-						std::fill(paiBonusClassUnrevealed.begin(), paiBonusClassUnrevealed.end(), 0);
-						std::fill(paiBonusClassHave.begin(), paiBonusClassHave.end(), 0);
-
-						for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
-						{
-							const TechTypes eRevealTech = (TechTypes)GC.getBonusInfo((BonusTypes)iJ).getTechReveal();
-							const BonusClassTypes eBonusClass = (BonusClassTypes)GC.getBonusInfo((BonusTypes)iJ).getBonusClassType();
-							if (eRevealTech != NO_TECH)
-							{
-								if (kTeam.isHasTech(eRevealTech))
-								{
-									paiBonusClassRevealed[eBonusClass]++;
-								}
-								else
-								{
-									paiBonusClassUnrevealed[eBonusClass]++;
-								}
-
-								if (kPlayer.getNumAvailableBonuses((BonusTypes)iJ) > 0)
-								{
-									paiBonusClassHave[eBonusClass]++;
-								}
-								else if (kPlayer.countOwnedBonuses((BonusTypes)iJ) > 0)
-								{
-									paiBonusClassHave[eBonusClass]++;
-								}
-							}
-						}
-					}
-
-					if (kPlayer.AI_techValue((TechTypes)iI, 1, true, kPlayer.isHuman(), paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave) > 1)
+					if (iValue > iBestValue)
 					{
 						iBestValue = iValue;
-						eBestTech = ((TechTypes)iI);
+						eBestTech = (TechTypes)iI;
 					}
 				}
 			}

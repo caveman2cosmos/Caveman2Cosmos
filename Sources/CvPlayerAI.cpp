@@ -29,16 +29,8 @@
 #include "CvDLLUtilityIFaceBase.h"
 #include "FAStarNode.h"
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  08/21/09								jdog5000	  */
-/*																							  */
-/* Efficiency																				   */
-/************************************************************************************************/
 // Plot danger cache
 //#define DANGER_RANGE						(4)
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
 #define GREATER_FOUND_RANGE			(5)
 #define CIVIC_CHANGE_DELAY			(25)
@@ -130,17 +122,12 @@ CvPlayerAI::CvPlayerAI()
 	//Afforess
 	m_aiCivicValueCache = NULL;
 
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  09/03/09					   poyuzhe & jdog5000	 */
-	/*																							  */
-	/* Efficiency																				   */
-	/************************************************************************************************/
-		// From Sanguo Mod Performance, ie the CAR Mod
-		// Attitude cache
 	m_aiAttitudeCache = new int[MAX_PLAYERS];
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					   END												  */
-	/************************************************************************************************/
+
+	// Toffer - Transient Caches
+	m_bonusClassRevealed = new int[GC.getNumBonusClassInfos()];
+	m_bonusClassUnrevealed = new int[GC.getNumBonusClassInfos()];
+	m_bonusClassHave = new int[GC.getNumBonusClassInfos()];
 
 	AI_reset(true);
 }
@@ -168,6 +155,10 @@ CvPlayerAI::~CvPlayerAI()
 	SAFE_DELETE_ARRAY(m_aiAverageCommerceExchange);
 	SAFE_DELETE_ARRAY(m_aiCloseBordersAttitudeCache);
 	SAFE_DELETE_ARRAY(m_aiAttitudeCache);
+	// Toffer - Transient Caches
+	SAFE_DELETE_ARRAY(m_bonusClassRevealed);
+	SAFE_DELETE_ARRAY(m_bonusClassUnrevealed);
+	SAFE_DELETE_ARRAY(m_bonusClassHave);
 }
 
 
@@ -221,11 +212,6 @@ void CvPlayerAI::AI_reset(bool bConstructor)
 	m_eBestResearchTarget = NO_TECH;
 	m_cachedTechValues.clear();
 
-	/************************************************************************************************/
-	/* CHANGE_PLAYER						 06/08/09								 jdog5000	  */
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
 	if (bConstructor || getNumUnits() == 0)
 	{
 		for (int iI = 0; iI < NUM_UNITAI_TYPES; iI++)
@@ -234,9 +220,6 @@ void CvPlayerAI::AI_reset(bool bConstructor)
 			m_aiNumAIUnits[iI] = 0;
 		}
 	}
-	/************************************************************************************************/
-	/* CHANGE_PLAYER						   END												  */
-	/************************************************************************************************/
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
@@ -296,18 +279,11 @@ void CvPlayerAI::AI_reset(bool bConstructor)
 
 	m_iStrategyHash = 0;
 	m_iStrategyHashCacheTurn = -1;
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  03/18/10								jdog5000	  */
-	/*																							  */
-	/* Victory Strategy AI																		  */
-	/************************************************************************************************/
+
 	m_iStrategyRand = 0;
 
 	m_iVictoryStrategyHash = 0;
 	m_iVictoryStrategyHashCacheTurn = -1;
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					   END												  */
-	/************************************************************************************************/
 
 	m_bWasFinancialTrouble = false;
 	m_iTurnLastProductionDirty = -1;
@@ -364,26 +340,16 @@ void CvPlayerAI::AI_reset(bool bConstructor)
 		{
 			GET_PLAYER((PlayerTypes)iI).m_aiCloseBordersAttitudeCache[getID()] = 0;
 		}
-
-		/************************************************************************************************/
-		/* BETTER_BTS_AI_MOD					  09/03/09					   poyuzhe & jdog5000	 */
-		/*																							  */
-		/* Efficiency																				   */
-		/************************************************************************************************/
-				// From Sanguo Mod Performance, ie the CAR Mod
-				// Attitude cache
 		m_aiAttitudeCache[iI] = MAX_INT;
 
 		if (!bConstructor && getID() != NO_PLAYER)
 		{
 			GET_PLAYER((PlayerTypes)iI).m_aiAttitudeCache[getID()] = MAX_INT;
 		}
-		/************************************************************************************************/
-		/* BETTER_BTS_AI_MOD					   END												  */
-		/************************************************************************************************/
 	}
-
 	m_missionTargetCache.clear();
+
+	m_iBonusClassTallyCachedTurn = -1;
 }
 
 
@@ -4080,7 +4046,7 @@ int CvPlayerAI::AI_goldTarget() const
 	return iGold + AI_getExtraGoldTarget();
 }
 
-TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAsync, TechTypes eIgnoreTech, AdvisorTypes eIgnoreAdvisor) const
+TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAsync, TechTypes eIgnoreTech, AdvisorTypes eIgnoreAdvisor)
 {
 	PROFILE("CvPlayerAI::AI_bestTech");
 	logBBAI("Begin best tech evaluation...");
@@ -4137,42 +4103,12 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 	}
 	// ! Afforess
 
-	std::vector<int> paiBonusClassRevealed(GC.getNumBonusClassInfos(), 0);
-	std::vector<int> paiBonusClassUnrevealed(GC.getNumBonusClassInfos(), 0);
-	std::vector<int> paiBonusClassHave(GC.getNumBonusClassInfos(), 0);
-
-	for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
-	{
-		const TechTypes eRevealTech = (TechTypes)GC.getBonusInfo((BonusTypes)iI).getTechReveal();
-		if (eRevealTech != NO_TECH)
-		{
-			const BonusClassTypes eBonusClass = (BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType();
-			if (kTeam.isHasTech(eRevealTech))
-			{
-				paiBonusClassRevealed[eBonusClass]++;
-			}
-			else
-			{
-				paiBonusClassUnrevealed[eBonusClass]++;
-			}
-
-			if (getNumAvailableBonuses((BonusTypes)iI) > 0)
-			{
-				paiBonusClassHave[eBonusClass]++;
-			}
-			else if (countOwnedBonuses((BonusTypes)iI) > 0)
-			{
-				paiBonusClassHave[eBonusClass]++;
-			}
-		}
-	}
-
 	//	If we had already decided to beeline previously, stick with it
 	if (m_eBestResearchTarget != NO_TECH && iMaxPathLength > 1)
 	{
 		if (canEverResearch(m_eBestResearchTarget) && !kTeam.isHasTech(m_eBestResearchTarget))
 		{
-			techPath* path = findBestPath(m_eBestResearchTarget, iValue, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+			techPath* path = findBestPath(m_eBestResearchTarget, iValue, bIgnoreCost, bAsync);
 
 			eFirstTech = findStartTech(path);
 
@@ -4221,7 +4157,7 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 					}
 					else if (iPathLength > iMaxPathLength && iPathLength <= iMaxPathLength * 7)
 					{
-						const int iTempValue = AI_TechValueCached(eTechX, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+						const int iTempValue = AI_TechValueCached(eTechX, bAsync);
 
 						bValid = iTempValue * 100 / GC.getTechInfo(eTechX).getResearchCost() > iBestValue;
 
@@ -4232,14 +4168,7 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 
 					if (bValid)
 					{
-
-						techPath* path = findBestPath(eTechX, iValue, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
-						//iValue = AI_techValue( eTechX, iPathLength, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave );
-
-						/*if( gPlayerLogLevel >= 3 )
-						{
-							logBBAI("	  Player %d (%S) consider tech %S with value %d", getID(), getCivilizationDescription(0), GC.getTechInfo(eTechX).getDescription(), iValue );
-						}*/
+						techPath* path = findBestPath(eTechX, iValue, bIgnoreCost, bAsync);
 
 						if (iValue > iBestValue)
 						{
@@ -4302,7 +4231,7 @@ struct TechResearchDist
 
 //	Calculate an estimate of the value of the average tech amongst those we could currently research
 //	for performance reasons we just sample rather than measuring all possibilities
-int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave) const
+int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync)
 {
 	const size_t MAX_SAMPLE_SIZE = 4;
 	const CvTeamAI& team = GET_TEAM(getTeam());
@@ -4323,7 +4252,7 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, c
 	// We couldn't find any techs to sample so return early
 	if (researchCosts.empty())
 	{
-		return AI_TechValueCached(eRelativeTo, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		return AI_TechValueCached(eRelativeTo, bAsync);
 	}
 	// Sort for closest first
 	algo::sort(researchCosts);
@@ -4333,7 +4262,7 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, c
 	int iDivisor = 1;
 	foreach_(const TechResearchDist & itr, researchCosts)
 	{
-		const int iValue = AI_TechValueCached(itr.tech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		const int iValue = AI_TechValueCached(itr.tech, bAsync);
 
 		while (MAX_INT - iTotal < iValue / iDivisor)
 		{
@@ -4347,7 +4276,7 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, c
 	return (iTotal / researchCosts.size()) * iDivisor;
 }
 
-int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave, bool considerFollowOns) const
+int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, bool considerFollowOns)
 {
 	PROFILE_FUNC();
 
@@ -4366,7 +4295,7 @@ int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, const std::vect
 					GC.getTechInfo(eTech).getDescription());
 		}
 
-		iValue = AI_techValue(eTech, findPathLength(eTech, false), true, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		iValue = AI_techValue(eTech, findPathLength(eTech, false), true, bAsync);
 
 		if (!bAsync)
 		{
@@ -4422,7 +4351,7 @@ int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, const std::vect
 
 				iTotalWeight += iANDPercentage + iORPercentage;
 
-				iValue += (iANDPercentage + iORPercentage) * AI_TechValueCached((TechTypes)iJ, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave) / 100;
+				iValue += (iANDPercentage + iORPercentage) * AI_TechValueCached((TechTypes)iJ, bAsync) / 100;
 			}
 		}
 
@@ -4443,7 +4372,7 @@ int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, const std::vect
 	return iValue;
 }
 
-int	 CvPlayerAI::techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave) const
+int CvPlayerAI::techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync)
 {
 	int	iCost = 0;
 	int	iValue = 0;
@@ -4453,7 +4382,7 @@ int	 CvPlayerAI::techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool 
 	foreach_(const TechTypes & loopTech, *path)
 	{
 		int iTempCost = std::max(1, GET_TEAM(getTeam()).getResearchCost(eTech) - GET_TEAM(getTeam()).getResearchProgress(eTech));
-		int iTempValue = AI_TechValueCached(loopTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		int iTempValue = AI_TechValueCached(loopTech, bAsync);
 
 		logBBAI("	tech %S: cost %d, value %d", GC.getTechInfo(loopTech).getDescription(), iTempCost, iTempValue);
 
@@ -4486,7 +4415,7 @@ int	 CvPlayerAI::techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool 
 	}
 }
 
-techPath* CvPlayerAI::findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave) const
+techPath* CvPlayerAI::findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync)
 {
 	PROFILE_FUNC();
 
@@ -4503,7 +4432,7 @@ techPath* CvPlayerAI::findBestPath(TechTypes eTech, int& valuePerUnitCost, bool 
 
 	foreach_(techPath * path, possiblePaths)
 	{
-		const int iValue = techPathValuePerUnitCost(path, eTech, bIgnoreCost, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		const int iValue = techPathValuePerUnitCost(path, eTech, bIgnoreCost, bAsync);
 		logBBAI("  Evaluated tech path value leading to %S as %d", GC.getTechInfo(eTech).getDescription(), iValue);
 		if (iValue >= iBestValue)
 		{
@@ -4537,11 +4466,52 @@ TechTypes CvPlayerAI::findStartTech(techPath* path) const
 	return NO_TECH;
 }
 
-int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave) const
+
+void CvPlayerAI::resetBonusClassTallyCache(const int iTurn, const bool bFull)
+{
+	if (m_iBonusClassTallyCachedTurn != iTurn)
+	{
+		if (bFull)
+		{
+			for (int iI = GC.getNumBonusClassInfos() - 1; iI > -1; iI--)
+			{
+				m_bonusClassRevealed[iI] = 0;
+				m_bonusClassUnrevealed[iI] = 0;
+				m_bonusClassHave[iI] = 0;
+			}
+			const CvTeam& team = GET_TEAM(getTeam());
+
+			for (int iI = GC.getNumBonusInfos() - 1; iI > -1; iI--)
+			{
+				const CvBonusInfo& bonus = GC.getBonusInfo((BonusTypes)iI);
+				if (bonus.getTechReveal() != NO_TECH)
+				{
+					if (team.isHasTech((TechTypes)bonus.getTechReveal()))
+					{
+						m_bonusClassRevealed[bonus.getBonusClassType()]++;
+					}
+					else m_bonusClassUnrevealed[bonus.getBonusClassType()]++;
+
+
+					if (getNumAvailableBonuses((BonusTypes)iI) > 0 || countOwnedBonuses((BonusTypes)iI) > 0)
+					{
+						m_bonusClassHave[bonus.getBonusClassType()]++;
+					}
+				}
+			}
+		}
+		m_iBonusClassTallyCachedTurn = iTurn;
+	}
+}
+
+int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost, bool bAsync)
 {
 	PROFILE_FUNC();
 
+	resetBonusClassTallyCache(GC.getGame().getGameTurn());
+
 	const CvTechInfo& kTech = GC.getTechInfo(eTech);
+	const CvTeam& kTeam = GET_TEAM(getTeam());
 
 	if (gPlayerLogLevel > 2)
 	{
@@ -4549,9 +4519,6 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 	}
 	CvCity* pCapitalCity = getCapitalCity();
 
-	const CvTeam& kTeam = GET_TEAM(getTeam());
-
-	//bool bWarPlan = (kTeam.getAnyWarPlanCount(true) > 0);
 	bool bCapitalAlone = (GC.getGame().getElapsedGameTurns() > 0) ? AI_isCapitalAreaAlone() : false;
 	bool bFinancialTrouble = AI_isFinancialTrouble();
 	bool bAdvancedStart = getAdvancedStartPoints() >= 0;
@@ -4561,7 +4528,6 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 	int iConnectedForeignCities = countPotentialForeignTradeCitiesConnected();
 
 	const int iCityCount = getNumCities();
-	//int iTeamCityCount = kTeam.getNumCities();
 
 	int iValue = 0;
 
@@ -4872,7 +4838,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 			if (eImprovement != NO_IMPROVEMENT)
 			{
 				//	If it's an upgradable improvement
-				eImprovement = GET_TEAM(getTeam()).finalImprovementUpgrade(eImprovement);
+				eImprovement = kTeam.finalImprovementUpgrade(eImprovement);
 			}
 			else
 			{
@@ -4897,7 +4863,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 					iImprovementValue += (kImprovement.getTerrainMakesValid(iK) ? 50 : 0);
 
 					//Desert has negative defense // Toffer - Not very well defined then...
-					if (GC.getTerrainInfo((TerrainTypes)iK).getDefenseModifier() < 0 && GET_TEAM(getTeam()).isCanFarmDesert())
+					if (GC.getTerrainInfo((TerrainTypes)iK).getDefenseModifier() < 0 && kTeam.isCanFarmDesert())
 					{
 						iImprovementValue += 50;
 					}
@@ -5061,10 +5027,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 		{
 			iBuildValue += 100;
 
-			/********************************************************************************/
-			/* 	Tech Value for Feature Remove		05.08.2010				Fuyu			*/
-			/********************************************************************************/
-						//Fuyu: bonus for early worker logic
+			//Fuyu - Tech Value for Feature Remove - bonus for early worker logic
 			if ((GC.getFeatureInfo(FeatureTypes(iJ)).getHealthPercent() < 0) ||
 				((GC.getFeatureInfo(FeatureTypes(iJ)).getYieldChange(YIELD_FOOD) + GC.getFeatureInfo(FeatureTypes(iJ)).getYieldChange(YIELD_PRODUCTION) + GC.getFeatureInfo(FeatureTypes(iJ)).getYieldChange(YIELD_COMMERCE)) < 0))
 			{
@@ -5085,9 +5048,6 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 			{
 				iBuildValue += 5 * countCityFeatures((FeatureTypes)iJ);
 			}
-			/********************************************************************************/
-			/* 	Tech Value for Feature Remove								END 			*/
-			/********************************************************************************/
 		}
 	}
 	iValue += iBuildValue;
@@ -5108,7 +5068,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 			iRevealValue += (AI_bonusVal((BonusTypes)iJ) * 50);
 
 			BonusClassTypes eBonusClass = (BonusClassTypes)GC.getBonusInfo((BonusTypes)iJ).getBonusClassType();
-			int iBonusClassTotal = (paiBonusClassRevealed[eBonusClass] + paiBonusClassUnrevealed[eBonusClass]);
+			int iBonusClassTotal = (m_bonusClassRevealed[eBonusClass] + m_bonusClassUnrevealed[eBonusClass]);
 
 			//iMultiplier is basically a desperation value
 			//it gets larger as the AI runs out of options
@@ -5118,12 +5078,12 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 			int iMultiplier = 0;
 			if (iBonusClassTotal > 0)
 			{
-				iMultiplier = (paiBonusClassRevealed[eBonusClass] - paiBonusClassHave[eBonusClass]);
+				iMultiplier = (m_bonusClassRevealed[eBonusClass] - m_bonusClassHave[eBonusClass]);
 				iMultiplier *= 100;
 				iMultiplier /= iBonusClassTotal;
 
-				iMultiplier *= (paiBonusClassRevealed[eBonusClass] + 1);
-				iMultiplier /= ((paiBonusClassHave[eBonusClass] * iBonusClassTotal) + 1);
+				iMultiplier *= (m_bonusClassRevealed[eBonusClass] + 1);
+				iMultiplier /= ((m_bonusClassHave[eBonusClass] * iBonusClassTotal) + 1);
 			}
 
 			iMultiplier *= std::min(3, getNumCities());
@@ -5134,14 +5094,14 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 			// K-Mod
 			// If we don't yet have the 'enable' tech, reduce the value of the reveal.
-			if (GC.getBonusInfo((BonusTypes)iJ).getTechCityTrade() != eTech && !GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes)iJ).getTechCityTrade())))
+			if (GC.getBonusInfo((BonusTypes)iJ).getTechCityTrade() != eTech && !kTeam.isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes)iJ).getTechCityTrade())))
 				iRevealValue /= 3;
 			// K-Mod end
 
 			iBonusRevealValue += iRevealValue;
 		}
 		// K-Mod: Value for enabling resources that are already revealed
-		else if (GC.getBonusInfo((BonusTypes)iJ).getTechCityTrade() == eTech && GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes)iJ).getTechReveal())))
+		else if (GC.getBonusInfo((BonusTypes)iJ).getTechCityTrade() == eTech && kTeam.isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes)iJ).getTechReveal())))
 		{
 			int iOwned = countOwnedBonuses((BonusTypes)iJ);
 			if (iOwned > 0)
@@ -5532,7 +5492,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 			{
 				if (GET_TEAM((TeamTypes)iTeam).isAlive())
 				{
-					if (GET_TEAM(getTeam()).isHasMet((TeamTypes)iTeam) && GET_TEAM((TeamTypes)iTeam).isHasTech(eTech))
+					if (kTeam.isHasMet((TeamTypes)iTeam) && GET_TEAM((TeamTypes)iTeam).isHasTech(eTech))
 					{
 						iKnownCount++;
 					}
@@ -5564,7 +5524,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 	return iValue;
 }
 
-int CvPlayerAI::AI_techBuildingValue(TechTypes eTech, int iPathLength, bool& bEnablesWonder) const
+int CvPlayerAI::AI_techBuildingValue(TechTypes eTech, int iPathLength, bool& bEnablesWonder)
 {
 	PROFILE_FUNC();
 
@@ -5942,9 +5902,8 @@ int CvPlayerAI::AI_techBuildingValue(TechTypes eTech, int iPathLength, bool& bEn
 }
 
 
-int CvPlayerAI::AI_techUnitValue(TechTypes eTech, int iPathLength, bool& bEnablesUnitWonder) const
+int CvPlayerAI::AI_techUnitValue(TechTypes eTech, int iPathLength, bool& bEnablesUnitWonder)
 {
-
 	const bool bWarPlan =
 		(
 			GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0
@@ -36912,7 +36871,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 	return iValue;
 }
 
-TechTypes CvPlayerAI::AI_bestReligiousTech(int iMaxPathLength, TechTypes eIgnoreTech, AdvisorTypes eIgnoreAdvisor) const
+TechTypes CvPlayerAI::AI_bestReligiousTech(int iMaxPathLength, TechTypes eIgnoreTech, AdvisorTypes eIgnoreAdvisor)
 {
 	PROFILE("CvPlayerAI::AI_bestReligiousTech");
 
