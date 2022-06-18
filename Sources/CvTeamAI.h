@@ -63,7 +63,7 @@ public:
 	int AI_minorKeepWarVal(TeamTypes eTeam) const;
 	int AI_getBarbarianCivWarVal(TeamTypes eTeam, int iMaxDistance = 10) const;
 
-	int AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const;
+	int AI_techTradeVal(TechTypes eTech, TeamTypes eTeam);
 	DenialTypes AI_techTrade(const TechTypes eTech, const TeamTypes eTeam) const;
 
 	int AI_mapTradeVal(TeamTypes eTeam) const;

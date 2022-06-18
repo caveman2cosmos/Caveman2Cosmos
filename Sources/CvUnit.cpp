@@ -771,7 +771,6 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_bHasAnyInvisibility = false;
 	m_bRevealed = false;
 	m_shadowUnit.reset();
-	m_eDesiredDiscoveryTech = NO_TECH;
 
 	m_eOwner = eOwner;
 	m_eCapturingPlayer = NO_PLAYER;
@@ -1129,7 +1128,6 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 	m_bHasAnyInvisibility = other.m_bHasAnyInvisibility;
 	m_bRevealed = other.m_bRevealed;
 	m_shadowUnit = other.m_shadowUnit;
-	m_eDesiredDiscoveryTech = other.m_eDesiredDiscoveryTech;
 	m_eOwner = other.m_eOwner;
 	m_eCapturingPlayer = other.m_eCapturingPlayer;
 	m_eUnitType = other.m_eUnitType;
@@ -1863,13 +1861,6 @@ void CvUnit::doTurn()
 	{
 		getGroup()->setActivityType(ACTIVITY_AWAKE);
 		m_iSleepTimer = 0;
-	}
-
-	if (getDesiredDiscoveryTech() != NO_TECH && canDiscover() && getDesiredDiscoveryTech() == getDiscoveryTech())
-	{
-		getGroup()->setActivityType(ACTIVITY_AWAKE);
-		setDesiredDiscoveryTech(NO_TECH);
-		discover();
 	}
 
 	changeImmobileTimer(-1);
@@ -10551,61 +10542,61 @@ TechTypes CvUnit::getDiscoveryTech() const
 }
 
 
-int CvUnit::getDiscoverResearch(TechTypes eTech) const
+int CvUnit::getDiscoverResearch(const TechTypes eTech) const
 {
-	int iResearch = m_pUnitInfo->getBaseDiscover() + m_pUnitInfo->getDiscoverMultiplier() * GET_TEAM(getTeam()).getTotalPopulation();
+	int iResearch = (
+		m_pUnitInfo->getBaseDiscover() + 
+		m_pUnitInfo->getDiscoverMultiplier() * GET_TEAM(getTeam()).getTotalPopulation()
+	);
+	if (iResearch > 0)
+	{
+		iResearch *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+		iResearch /= 100;
 
-	iResearch *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-	iResearch /= 100;
-
-    if (eTech != NO_TECH)
-    {
-        iResearch = std::min(GET_TEAM(getTeam()).getResearchLeft(eTech), iResearch);
-    }
-	return std::max(0, iResearch);
+		if (eTech != NO_TECH)
+		{
+			return std::min(GET_TEAM(getTeam()).getResearchLeft(eTech), iResearch);
+		}
+		return iResearch;
+	}
+	return 0;
 }
 
 
 bool CvUnit::canDiscover() const
 {
-	const TechTypes eTech = getDiscoveryTech();
-
-	if (eTech == NO_TECH)
-	{
-		return false;
-	}
-
-	if (getDiscoverResearch(eTech) == 0)
-	{
-		return false;
-	}
-
 	if (isDelayedDeath())
 	{
 		return false;
 	}
-
+	if (getDiscoverResearch() == 0)
+	{
+		return false;
+	}
+	if (getDiscoveryTech() == NO_TECH)
+	{
+		return false;
+	}
 	return true;
 }
 
 
-bool CvUnit::discover()
+bool CvUnit::discover(TechTypes eTech)
 {
 	if (!canDiscover())
 	{
 		return false;
 	}
-
-	const TechTypes eDiscoveryTech = getDiscoveryTech();
-	FAssertMsg(eDiscoveryTech != NO_TECH, "DiscoveryTech is not assigned a valid value");
-
-	GET_TEAM(getTeam()).changeResearchProgress(eDiscoveryTech, getDiscoverResearch(eDiscoveryTech), getOwner());
+	if (eTech == NO_TECH)
+	{
+		eTech = getDiscoveryTech();
+	}
+	GET_TEAM(getTeam()).changeResearchProgress(eTech, getDiscoverResearch(eTech), getOwner());
 
 	if (plot()->isActiveVisible(false))
 	{
 		NotifyEntity(MISSION_DISCOVER);
 	}
-
 	kill(true, NO_PLAYER, true);
 
 	return true;
@@ -12088,7 +12079,7 @@ CvCity* CvUnit::getUpgradeCity(bool bSearch) const
 	PROFILE_FUNC();
 
 	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
-	UnitAITypes eUnitAI = AI_getUnitAIType();
+	const UnitAITypes eUnitAI = AI_getUnitAIType();
 	CvArea* pArea = area();
 
 	const int iCurrentValue = kPlayer.AI_unitValue(getUnitType(), eUnitAI, pArea);
@@ -12096,34 +12087,31 @@ CvCity* CvUnit::getUpgradeCity(bool bSearch) const
 	int iBestSearchValue = MAX_INT;
 	CvCity* pBestUpgradeCity = NULL;
 
-	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	foreach_(int iUnitX, GC.getUnitInfo(m_eUnitType).getUnitUpgradeChain())
 	{
-		const UnitTypes eUnitX = static_cast<UnitTypes>(iI);
-		if (upgradeAvailable(m_eUnitType, eUnitX) && kPlayer.canTrain(eUnitX))
-		{
-			int iNewValue = kPlayer.AI_unitValue(eUnitX, eUnitAI, pArea);
-			if (iNewValue > iCurrentValue)
-			{
-				int iSearchValue;
-				CvCity* pUpgradeCity = getUpgradeCity(eUnitX, bSearch, &iSearchValue);
-				if (pUpgradeCity != NULL)
-				{
-					// if not searching or close enough, then this match will do
-					if (!bSearch || iSearchValue < 16)
-					{
-						return pUpgradeCity;
-					}
+		const UnitTypes eUnitX = (UnitTypes)iUnitX;
 
-					if (iSearchValue < iBestSearchValue)
-					{
-						iBestSearchValue = iSearchValue;
-						pBestUpgradeCity = pUpgradeCity;
-					}
+		if (upgradeAvailable(m_eUnitType, eUnitX) && kPlayer.canTrain(eUnitX)
+		&& kPlayer.AI_unitValue(eUnitX, eUnitAI, pArea) > iCurrentValue)
+		{
+			int iSearchValue;
+			CvCity* pUpgradeCity = getUpgradeCity(eUnitX, bSearch, &iSearchValue);
+			if (pUpgradeCity != NULL)
+			{
+				// if not searching or close enough, then this match will do
+				if (!bSearch || iSearchValue < 16)
+				{
+					return pUpgradeCity;
+				}
+
+				if (iSearchValue < iBestSearchValue)
+				{
+					iBestSearchValue = iSearchValue;
+					pBestUpgradeCity = pUpgradeCity;
 				}
 			}
 		}
 	}
-
 	return pBestUpgradeCity;
 }
 
@@ -15276,7 +15264,7 @@ int CvUnit::cargoSpace() const
 	{
 		iCargoCapacity += GET_PLAYER(getOwner()).getNationalMissileCargoSpaceChange();
 	}
-	return iCargoCapacity;
+	return std::max(0, iCargoCapacity);
 }
 
 void CvUnit::changeCargoSpace(int iChange)
@@ -15284,7 +15272,6 @@ void CvUnit::changeCargoSpace(int iChange)
 	if (iChange != 0)
 	{
 		m_iCargoCapacity += iChange;
-		FASSERT_NOT_NEGATIVE(m_iCargoCapacity);
 		setInfoBarDirty(true);
 	}
 }
@@ -22143,7 +22130,10 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_shadowUnit.eOwner);
 	WRAPPER_READ(wrapper, "CvUnit", &m_shadowUnit.iID);
-	WRAPPER_READ_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TECHS, (int*)&m_eDesiredDiscoveryTech);
+
+	// @SAVEBREAK DELETE - Toffer
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)m_eDesiredDiscoveryTech, SAVE_VALUE_ANY);
+	// SAVEBREAK@
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iImmuneToFirstStrikesCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraVisibilityRange);
@@ -23659,7 +23649,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_shadowUnit.eOwner);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_shadowUnit.iID);
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_TECHS, m_eDesiredDiscoveryTech);
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iImmuneToFirstStrikesCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraVisibilityRange);
@@ -29524,19 +29513,7 @@ void CvUnit::setShadowUnit(const CvUnit* pUnit)
 }
 
 
-void CvUnit::setDesiredDiscoveryTech(TechTypes eTech)
-{
-	m_eDesiredDiscoveryTech = eTech;
-
-	getGroup()->setActivityType(ACTIVITY_SLEEP);
-}
-
-TechTypes CvUnit::getDesiredDiscoveryTech() const
-{
-	return m_eDesiredDiscoveryTech;
-}
-
-void CvUnit::waitForTech(int iFlag, int eTech)
+void CvUnit::waitForTech(int iFlag, int iTech)
 {
 	if (iFlag != GC.getNumTechInfos())
 	{
@@ -29546,10 +29523,7 @@ void CvUnit::waitForTech(int iFlag, int eTech)
 			gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
 		}
 	}
-	else
-	{
-		setDesiredDiscoveryTech((TechTypes)eTech);
-	}
+	else discover((TechTypes)iTech);
 }
 
 CvProperties* CvUnit::getProperties()

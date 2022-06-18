@@ -15,7 +15,6 @@ import CvAdvisorUtils
 import DebugUtils
 import SdToolKit as SDTK
 
-import WBUnitScreen
 import WBPlayerScreen
 import WBPlotScreen
 
@@ -2865,9 +2864,6 @@ class CvEventManager:
 		unit = GC.getPlayer(userData[0]).getUnit(userData[1])
 		newName = popupReturn.getEditBoxString(0)
 		unit.setName(newName)
-		if GAME.GetWorldBuilderMode():
-			WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).placeStats()
-			WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).placeCurrentUnit()
 
 	def __eventWBPlayerScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getPlayer(userData[0]).setScriptData(TextUtil.convertToStr(popupReturn.getEditBoxString(0)))
@@ -2882,7 +2878,6 @@ class CvEventManager:
 
 	def __eventWBUnitScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getPlayer(userData[0]).getUnit(userData[1]).setScriptData(TextUtil.convertToStr(popupReturn.getEditBoxString(0)))
-		WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).placeScript()
 
 	def __eventWBPlotScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getMap().plot(userData[0], userData[1]).setScriptData(TextUtil.convertToStr(popupReturn.getEditBoxString(0)))

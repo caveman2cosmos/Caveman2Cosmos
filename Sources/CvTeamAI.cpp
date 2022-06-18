@@ -1356,7 +1356,7 @@ int CvTeamAI::AI_getBarbarianCivWarVal(TeamTypes eTeam, int iMaxDistance) const
 }
 
 
-int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
+int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam)
 {
 	PROFILE_FUNC();
 	FAssert(eTeam != getID());
@@ -1392,35 +1392,13 @@ int CvTeamAI::AI_techTradeVal(TechTypes eTech, TeamTypes eTeam) const
 				logBBAI("\t%d (%S) for team %d", iTech, GC.getTechInfo((TechTypes)iTech).getDescription(), iTeam);
 			}
 		}
-		std::vector<int> paiBonusClassRevealed(GC.getNumBonusClassInfos(), 0);
-		std::vector<int> paiBonusClassUnrevealed(GC.getNumBonusClassInfos(), 0);
-		std::vector<int> paiBonusClassHave(GC.getNumBonusClassInfos(), 0);
 
 		CvPlayerAI& teamLeader = GET_PLAYER(getLeaderID());
 
-		for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
-		{
-			const TechTypes eRevealTech = (TechTypes)GC.getBonusInfo((BonusTypes)iI).getTechReveal();
-			if (eRevealTech != NO_TECH)
-			{
-				const BonusClassTypes eBonusClass = (BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType();
-				if (isHasTech(eRevealTech))
-				{
-					paiBonusClassRevealed[eBonusClass]++;
-				}
-				else paiBonusClassUnrevealed[eBonusClass]++;
-
-				if (teamLeader.getNumAvailableBonuses((BonusTypes)iI) > 0
-				||  teamLeader.countOwnedBonuses((BonusTypes)iI) > 0)
-				{
-					paiBonusClassHave[eBonusClass]++;
-				}
-			}
-		}
 		const bool bAsync = (teamLeader.isHuman() || GET_PLAYER(GET_TEAM(eTeam).getLeaderID()).isHuman());
 
-		const float iOurActualTechValue = (float)teamLeader.AI_TechValueCached(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave, true);
-		const float iAverageTechValue = (float)teamLeader.AI_averageCurrentTechValue(eTech, bAsync, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave);
+		const float iOurActualTechValue = (float)teamLeader.AI_TechValueCached(eTech, bAsync, true);
+		const float iAverageTechValue = (float)teamLeader.AI_averageCurrentTechValue(eTech, bAsync);
 
 		// Multiply the base cost by a squashing function of relative goodness of the proposed tech and an average one from what we can currently research
 		const float boost = (iOurActualTechValue - iAverageTechValue) / (iOurActualTechValue + iAverageTechValue);

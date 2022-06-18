@@ -43,8 +43,8 @@ class WBTechScreen:
 		self.aWidgetBucket.append("topBar")
 		self.aWidgetBucket.append("botBar")
 
-		screen.setText("ExitSubScreen0", "", "<font=4b>" + TRNSLTR.getText("TXT_WORD_EXIT", ()), 1<<1, xRes - 16, 0, 0, eFontTitle, eWidGen, 0, 1)
-		self.aWidgetBucket.append("ExitSubScreen0")
+		screen.setText("ExitSubScreen", "", "<font=4b>" + TRNSLTR.getText("TXT_WORD_EXIT", ()), 1<<1, xRes - 16, 0, 0, eFontTitle, eWidGen, 0, 1)
+		self.aWidgetBucket.append("ExitSubScreen")
 
 		DDB = "CurrentTeam"
 		self.aWidgetBucket.append(DDB)
@@ -327,6 +327,10 @@ class WBTechScreen:
 		return 1
 
 
+	def update(self, fDelta): return
+
+	# # # # # #
+	# Clean Up
 	def exit(self, screen):
 		for widget in self.aWidgetBucket:
 			screen.deleteWidget(widget)

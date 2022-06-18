@@ -661,8 +661,6 @@ public:
 	void setShadowUnit(const CvUnit* pUnit);
 	CvUnit* getShadowUnit() const;
 
-	TechTypes getDesiredDiscoveryTech() const;
-	void setDesiredDiscoveryTech(TechTypes eTech);
 	void waitForTech(int iFlag, int eTech);
 
 	bool canGift(bool bTestVisible = false, bool bTestTransport = true) const;
@@ -780,9 +778,9 @@ public:
 	bool construct(BuildingTypes eBuilding);
 
 	TechTypes getDiscoveryTech() const;
-	int getDiscoverResearch(TechTypes eTech) const;
+	int getDiscoverResearch(const TechTypes eTech = NO_TECH) const;
 	bool canDiscover() const;
-	bool discover();
+	bool discover(TechTypes eTech = NO_TECH);
 
 	int getMaxHurryProduction(const CvCity* pCity) const;
 	int getHurryProduction(const CvPlot* pPlot) const;
@@ -1750,7 +1748,6 @@ protected:
 	bool m_bAutoPromoting;
 	bool m_bAutoUpgrading;
 	IDInfo m_shadowUnit;
-	TechTypes m_eDesiredDiscoveryTech;
 	//Great Commanders... By KillmePlease
 	int m_iCommanderID; //id of commander. used for game save/load
 	mutable int m_iCommanderCacheTurn;
