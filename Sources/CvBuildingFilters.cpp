@@ -273,20 +273,14 @@ BuildingFilterList::BuildingFilterList(CvPlayer *pPlayer, CvCity *pCity)
 {
 	m_pPlayer = pPlayer;
 	m_pCity = pCity;
-
-	for (int i = 0; i < NUM_BUILDING_FILTERS; i++)
-	{
-		m_apBuildingFilters[i] = NULL;
-	}
 }
 
 void BuildingFilterList::init()
 {
 	for (int i = 0; i < NUM_BUILDING_FILTERS; i++)
 	{
-		SAFE_DELETE(m_apBuildingFilters[i]);
+		m_apBuildingFilters[i] = NULL;
 	}
-
 	m_apBuildingFilters[BUILDING_FILTER_HIDE_BASIC_INVISIBLE] = new BuildingFilterCanBuild(true);
 	if (m_pCity)
 		m_apBuildingFilters[BUILDING_FILTER_HIDE_BASIC_INVISIBLE]->Activate();
