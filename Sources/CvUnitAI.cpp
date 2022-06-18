@@ -778,8 +778,14 @@ bool CvUnitAI::AI_upgrade()
 	// NOW, we should ALWAYS maintain the role a unit was designed for.
 	// Watch for odd problems this might introduce elsewhere though.
 	const CvUnitInfo& unitInfo = GC.getUnitInfo(getUnitType());
-	const int iNumUpgrades = unitInfo.getNumUnitUpgrades();
-	if (iNumUpgrades > 0)
+
+	std::vector<int> upgradeChain = unitInfo.getUnitUpgradeChain();
+	if (gUnitLogLevel >= 2)
+	{
+		logBBAI("	%S at (%d,%d) have %d upgrades", getName(0).GetCString(), getX(), getY(), (int)upgradeChain.size());
+	}
+
+	if (!upgradeChain.empty())
 	{
 		const CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
 		const UnitAITypes eUnitAI = AI_getUnitAIType();
@@ -787,17 +793,21 @@ bool CvUnitAI::AI_upgrade()
 		const int iCurrentValue = kPlayer.AI_unitValue(getUnitType(), eUnitAI, pArea);
 
 		UnitTypes eBestUnit = NO_UNIT;
-		int iBestValue = 0;
-		for (int iI = 0; iI < iNumUpgrades; iI++)
-		{
-			const UnitTypes eUnitX = (UnitTypes)unitInfo.getUnitUpgrade(iI);
+		int iBestValue = -1;
 
-			if (GC.getUnitInfo(eUnitX).getUnitAIType(eUnitAI)
-			&& !GC.getUnitInfo(eUnitX).getNotUnitAIType(eUnitAI)
+		foreach_(int iUnitX, upgradeChain)
+		{
+			const UnitTypes eUnitX = (UnitTypes)iUnitX;
+
+			if (!GC.getUnitInfo(eUnitX).getNotUnitAIType(eUnitAI)
 			&& canUpgrade(eUnitX)
-			&& kPlayer.AI_unitValue(eUnitX, eUnitAI, pArea) > iCurrentValue)
+			&& kPlayer.AI_unitValue(eUnitX, eUnitAI, pArea) >= iCurrentValue)
 			{
-				const int iValue = 1 + GC.getGame().getSorenRandNum(10000, "AI Upgrade");
+				if (gUnitLogLevel >= 2)
+				{
+					logBBAI("	%S at (%d,%d) can upgrade to %S", getName(0).GetCString(), getX(), getY(), GC.getUnitInfo(eUnitX).getDescription());
+				}
+				const int iValue = GC.getGame().getSorenRandNum(1000, "AI Upgrade");
 
 				if (iValue > iBestValue)
 				{
@@ -810,7 +820,7 @@ bool CvUnitAI::AI_upgrade()
 		{
 			if (gUnitLogLevel >= 2)
 			{
-				logBBAI("	%S at (%d,%d) upgrading to %S", getName(0).GetCString(), getX(), getY(), GC.getUnitInfo(eBestUnit).getDescription());
+				logBBAI("	Trying to upgrade %S at (%d,%d) to %S", getName(0).GetCString(), getX(), getY(), GC.getUnitInfo(eBestUnit).getDescription());
 			}
 			return upgrade(eBestUnit);
 		}
@@ -5582,7 +5592,7 @@ void CvUnitAI::AI_prophetMove()
 	}
 	/*TB Prophet Mod end*/
 
-	if (AI_discover(true, true))
+	if (AI_discover(true))
 	{
 		return;
 	}
@@ -5670,7 +5680,7 @@ void CvUnitAI::AI_artistMove()
 		return;
 	}
 
-	if (AI_discover(true, true))
+	if (AI_discover(true))
 	{
 		return;
 	}
@@ -5721,11 +5731,6 @@ void CvUnitAI::AI_artistMove()
 		return;
 	}
 
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  09/18/09								jdog5000	  */
-	/*																							  */
-	/* Unit AI																					  */
-	/************************************************************************************************/
 	if (getGroup()->isStranded())
 	{
 		if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, -1, -1, -1, MOVE_NO_ENEMY_TERRITORY, 1))
@@ -5733,9 +5738,6 @@ void CvUnitAI::AI_artistMove()
 			return;
 		}
 	}
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					   END												  */
-	/************************************************************************************************/
 
 	if (AI_safety())
 	{
@@ -5756,7 +5758,7 @@ void CvUnitAI::AI_scientistMove()
 		return;
 	}
 
-	if (AI_discover(true, true))
+	if (AI_discover(true))
 	{
 		return;
 	}
@@ -6351,7 +6353,7 @@ void CvUnitAI::AI_merchantMove()
 		return;
 	}
 
-	if (AI_discover(true, true))
+	if (AI_discover(true))
 	{
 		return;
 	}
@@ -6581,7 +6583,7 @@ void CvUnitAI::AI_engineerMove()
 		return;
 	}
 
-	if (AI_discover(true, true))
+	if (AI_discover(true))
 	{
 		return;
 	}
@@ -9088,65 +9090,62 @@ void CvUnitAI::AI_settlerSeaMove()
 	// upgrade to galleons.  Scrap galleys, switch unit AI for stuck Carracks.
 	if (plot()->isCity() && plot()->getOwner() == getOwner())
 	{
-		//
+		UnitTypes eBestSettlerTransport = NO_UNIT;
+		GET_PLAYER(getOwner()).AI_bestCityUnitAIValue(AI_getUnitAIType(), NULL, &eBestSettlerTransport);
+		if (eBestSettlerTransport != NO_UNIT)
 		{
-			UnitTypes eBestSettlerTransport = NO_UNIT;
-			GET_PLAYER(getOwner()).AI_bestCityUnitAIValue(AI_getUnitAIType(), NULL, &eBestSettlerTransport);
-			if (eBestSettlerTransport != NO_UNIT)
+			if (eBestSettlerTransport != getUnitType()
+			&& GET_PLAYER(getOwner()).AI_unitImpassableCount(eBestSettlerTransport) == 0
+			&& !upgradeAvailable(getUnitType(), eBestSettlerTransport))
 			{
-				if (eBestSettlerTransport != getUnitType()
-				&& GET_PLAYER(getOwner()).AI_unitImpassableCount(eBestSettlerTransport) == 0
-				&& !upgradeAvailable(getUnitType(), eBestSettlerTransport))
+				getGroup()->unloadAll();
+
+				if (GET_PLAYER(getOwner()).AI_unitImpassableCount(getUnitType()) > 0)
 				{
-					getGroup()->unloadAll();
-
-					if (GET_PLAYER(getOwner()).AI_unitImpassableCount(getUnitType()) > 0)
+					scrap();
+					return;
+				}
+				else
+				{
+					CvArea* pWaterArea = plot()->waterArea();
+					FAssert(pWaterArea != NULL);
+					if (pWaterArea != NULL)
 					{
-						scrap();
-						return;
-					}
-					else
-					{
-						CvArea* pWaterArea = plot()->waterArea();
-						FAssert(pWaterArea != NULL);
-						if (pWaterArea != NULL)
+						if (GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_EXPLORE_SEA) == 0)
 						{
-							if (GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_EXPLORE_SEA) == 0)
+							if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_EXPLORE_SEA, pWaterArea) > 0)
 							{
-								if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_EXPLORE_SEA, pWaterArea) > 0)
-								{
-									AI_setUnitAIType(UNITAI_EXPLORE_SEA);
-									AI_exploreSeaMove();
-									return;
-								}
-							}
-
-							if (GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_SPY_SEA) == 0)
-							{
-								if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_SPY_SEA, area()) > 0)
-								{
-									AI_setUnitAIType(UNITAI_SPY_SEA);
-									AI_spySeaMove();
-									return;
-								}
-							}
-
-							if (GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_MISSIONARY_SEA) == 0)
-							{
-								if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_MISSIONARY_SEA, area()) > 0)
-								{
-									AI_setUnitAIType(UNITAI_MISSIONARY_SEA);
-									AI_missionarySeaMove();
-									return;
-								}
-							}
-
-							if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_ATTACK_SEA, pWaterArea) > 0)
-							{
-								AI_setUnitAIType(UNITAI_ATTACK_SEA);
-								AI_attackSeaMove();
+								AI_setUnitAIType(UNITAI_EXPLORE_SEA);
+								AI_exploreSeaMove();
 								return;
 							}
+						}
+
+						if (GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_SPY_SEA) == 0)
+						{
+							if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_SPY_SEA, area()) > 0)
+							{
+								AI_setUnitAIType(UNITAI_SPY_SEA);
+								AI_spySeaMove();
+								return;
+							}
+						}
+
+						if (GET_PLAYER(getOwner()).AI_totalUnitAIs(UNITAI_MISSIONARY_SEA) == 0)
+						{
+							if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_MISSIONARY_SEA, area()) > 0)
+							{
+								AI_setUnitAIType(UNITAI_MISSIONARY_SEA);
+								AI_missionarySeaMove();
+								return;
+							}
+						}
+
+						if (GET_PLAYER(getOwner()).AI_unitValue(getUnitType(), UNITAI_ATTACK_SEA, pWaterArea) > 0)
+						{
+							AI_setUnitAIType(UNITAI_ATTACK_SEA);
+							AI_attackSeaMove();
+							return;
 						}
 					}
 				}
@@ -13827,62 +13826,62 @@ bool CvUnitAI::AI_spreadCorporationAirlift()
 	return false;
 }
 
+
 // Returns true if a mission was pushed...
-bool CvUnitAI::AI_discover(bool bThisTurnOnly, bool bFirstResearchOnly)
+bool CvUnitAI::AI_discover(const bool bFirstResearchOnly)
 {
-	if (canDiscover())
+	if (!canDiscover())
 	{
-		TechTypes eDiscoverTech = getDiscoveryTech();
-		bool bIsFirstTech = (GET_PLAYER(getOwner()).AI_isFirstTech(eDiscoverTech));
+		return false;
+	}
+	const TechTypes eTech = getDiscoveryTech();
+	const bool bIsFirstTech = GET_PLAYER(getOwner()).AI_isFirstTech(eTech);
 
-		if (bFirstResearchOnly && !bIsFirstTech)
+	if (bFirstResearchOnly && !bIsFirstTech)
+	{
+		return false;
+	}
+	const int iPercentWasted = 100 * GET_TEAM(getTeam()).getResearchProgress(eTech) / GET_TEAM(getTeam()).getResearchCost(eTech);
+
+	FAssert(iPercentWasted >= 0 && iPercentWasted <= 100);
+
+	if (bIsFirstTech)
+	{
+		if (getDiscoverResearch(eTech) >= GET_TEAM(getTeam()).getResearchLeft(eTech))
+		{
+			if (iPercentWasted <= 30 || bFirstResearchOnly && iPercentWasted <= 50)
+			{
+				getGroup()->pushMission(MISSION_DISCOVER);
+				return true;
+			}
+		}
+		else if (bFirstResearchOnly)
 		{
 			return false;
 		}
+	}
+	// Unit cannot finish the tech this turn, so why not speed it up some?
+	if (getDiscoverResearch(eTech) <= GET_TEAM(getTeam()).getResearchLeft(eTech))
+	{
+		getGroup()->pushMission(MISSION_DISCOVER);
+		return true;
+	}
+	// Unit can finish the tech this turn.
 
-		int iPercentWasted = (100 - ((getDiscoverResearch(eDiscoverTech) * 100) / getDiscoverResearch(NO_TECH)));
-		FAssert(((iPercentWasted >= 0) && (iPercentWasted <= 100)));
-
-
-		if (getDiscoverResearch(eDiscoverTech) >= GET_TEAM(getTeam()).getResearchLeft(eDiscoverTech))
-		{
-			if ((iPercentWasted < 51) && bFirstResearchOnly && bIsFirstTech)
-			{
-				getGroup()->pushMission(MISSION_DISCOVER);
-				return true;
-			}
-
-			if (iPercentWasted < (bIsFirstTech ? 31 : 11))
-			{
-				//I need a good way to assess if the tech is actually valuable...
-				//but don't have one.
-				getGroup()->pushMission(MISSION_DISCOVER);
-				return true;
-			}
-		}
-		else if (bThisTurnOnly)
-		{
-			return false;
-		}
-
-		if (iPercentWasted <= 11)
-		{
-			if (GET_PLAYER(getOwner()).getCurrentResearch() == eDiscoverTech)
-			{
-				getGroup()->pushMission(MISSION_DISCOVER);
-				return true;
-			}
-		}
+	if (GET_PLAYER(getOwner()).getResearchTurnsLeft(eTech, true)
+	<= std::max(1, GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 100))
+	{
+		return false;
+	}
+	// Takes some time to invent, allow some wastage.
+	if (iPercentWasted <= 5 || iPercentWasted <= 15 && GET_PLAYER(getOwner()).getCurrentResearch() == eTech)
+	{
+		getGroup()->pushMission(MISSION_DISCOVER);
+		return true;
 	}
 	return false;
 }
 
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD & RevDCM					 09/03/10						jdog5000	  */
-/*																				phungus420	*/
-/* Great People AI, Unit AI																	 */
-/************************************************************************************************/
 
 namespace {
 	// Helper function to determine if a unit looks legendaryish
@@ -13963,9 +13962,6 @@ bool CvUnitAI::AI_leadLegend()
 	return false;
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_lead(std::vector<UnitAITypes>& aeUnitAITypes)

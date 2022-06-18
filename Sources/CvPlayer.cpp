@@ -74,7 +74,6 @@ public:
 		{
 			init();
 		}
-
 		return m_validUpgrades.find(UpgradePair(eFromUnit, eToUnit)) != m_validUpgrades.end();
 	}
 
@@ -116,32 +115,6 @@ private:
 			}
 		}
 	}
-
-#if 0
-	bool upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit, int iCount)
-	{
-		if (iCount > GC.getNumUnitInfos())
-		{
-			return false;
-		}
-
-		CvUnitInfo &fromUnitInfo = GC.getUnitInfo(eFromUnit);
-
-		if (fromUnitInfo.isUnitUpgrade(eToUnit))
-		{
-			return true;
-		}
-
-		for (int iI = 0; iI < fromUnitInfo.getNumUnitUpgrades(); iI++)
-		{
-			if (upgradeAvailable((UnitTypes) fromUnitInfo.getUnitUpgrade(iI), eToUnit, (iCount + 1)))
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-#endif
 
 private:
 	bool m_init;
@@ -8498,11 +8471,7 @@ bool CvPlayer::isNoResearchAvailable() const
 
 int CvPlayer::getResearchTurnsLeft(TechTypes eTech, bool bOverflow) const
 {
-	int iTurnsLeft = getResearchTurnsLeftTimes100(eTech, bOverflow);
-
-	iTurnsLeft = (iTurnsLeft + 99) / 100; // round up
-
-	return std::max(1, iTurnsLeft);
+	return std::max(1, (getResearchTurnsLeftTimes100(eTech, bOverflow) + 99) / 100); // round up
 }
 
 int CvPlayer::getResearchTurnsLeftTimes100(TechTypes eTech, bool bOverflow) const

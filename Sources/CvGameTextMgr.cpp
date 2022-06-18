@@ -8093,34 +8093,6 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			{
 				if (bShift && !bAlt && pPlot->headUnitNode() == NULL)
 				{
-					const int iBonusClasses = GC.getNumBonusClassInfos();
-					std::vector<int> paiBonusClassRevealed(iBonusClasses, 0);
-					std::vector<int> paiBonusClassUnrevealed(iBonusClasses, 0);
-					std::vector<int> paiBonusClassHave(iBonusClasses, 0);
-
-					for (int iI = 0; iI < GC.getNumBonusInfos(); iI++)
-					{
-						if (GC.getBonusInfo((BonusTypes)iI).getTechReveal() != NO_TECH)
-						{
-							if (plotTeam->isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iI).getTechReveal()))
-							{
-								paiBonusClassRevealed[(BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType()]++;
-							}
-							else
-							{
-								paiBonusClassUnrevealed[(BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType()]++;
-							}
-
-							if (GET_PLAYER(pPlot->getOwner()).getNumAvailableBonuses((BonusTypes)iI) > 0)
-							{
-								paiBonusClassHave[(BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType()]++;
-							}
-							else if (GET_PLAYER(pPlot->getOwner()).countOwnedBonuses((BonusTypes)iI) > 0)
-							{
-								paiBonusClassHave[(BonusClassTypes)GC.getBonusInfo((BonusTypes)iI).getBonusClassType()]++;
-							}
-						}
-					}
 					bool bFirst = true;
 					for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 					{
@@ -8137,7 +8109,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 								}
 								bool bDummy;
 								szString.append(CvWString::format(L"\n%s (%d) = %d (bld:%d, unt:%d)", GC.getTechInfo((TechTypes)iI).getDescription(), iPathLength,
-									GET_PLAYER(pPlot->getOwner()).AI_techValue((TechTypes)iI, 1, false, false, paiBonusClassRevealed, paiBonusClassUnrevealed, paiBonusClassHave),
+									GET_PLAYER(pPlot->getOwner()).AI_techValue((TechTypes)iI, 1, false, false),
 									GET_PLAYER(pPlot->getOwner()).AI_techBuildingValue((TechTypes)iI, 1, bDummy),
 									GET_PLAYER(pPlot->getOwner()).AI_techUnitValue((TechTypes)iI, 1, bDummy)));
 							}
