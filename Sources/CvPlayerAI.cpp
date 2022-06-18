@@ -694,7 +694,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	const bool bAnyWar = GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0;
 	const int64_t iStartingGold = getGold();
 	const int iTargetGold = AI_goldTarget();
-	int64_t iUpgradeBudget = AI_goldToUpgradeAllUnits() / (bAnyWar ? 1 : 2);
+	int64_t iUpgradeBudget = std::max<int64_t>(iStartingGold - iTargetGold, AI_goldToUpgradeAllUnits()) / (bAnyWar ? 1 : 2);
 
 	iUpgradeBudget = std::min<int64_t>(iUpgradeBudget, (iStartingGold - iTargetGold < iUpgradeBudget) ? (iStartingGold - iTargetGold) : iStartingGold / 2);
 	iUpgradeBudget = std::max<int64_t>(0, iUpgradeBudget);
@@ -712,14 +712,16 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 	// Always willing to upgrade 1 unit if we have the money
 	iUpgradeBudget = std::max<int64_t>(iUpgradeBudget, 1);
 
-	bool bUnderBudget = true;
-
 	CvPlot* pLastUpgradePlot = NULL;
-	for (int iPass = 0; iPass < 4; iPass++)
+	for (int iPass = 0; iPass < 3; iPass++)
 	{
-		foreach_(CvUnit * unitX, units())
+		if (isNPC())
 		{
-			if (unitX->isDead())
+			iPass = 3;
+		}
+		foreach_(CvUnit* unitX, units())
+		{
+			if (unitX->isDead() || !unitX->isReadyForUpgrade())
 			{
 				continue;
 			}
@@ -741,56 +743,45 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			{
 				case 0:
 				{
-					// BBAI note:  Effectively only for galleys, triremes, and ironclads -
-					//		Unit types which are limited in what terrain they can operate.
-					if (AI_unitImpassableCount(unitX->getUnitType()) > 0)
+					if (unitPlot->isCity())
 					{
-						bValid = true;
+						if (unitPlot->getBestDefender(getID()) == unitX
+						// try to upgrade units which are in danger... but don't get obsessed
+						|| pLastUpgradePlot != unitPlot && AI_getAnyPlotDanger(unitPlot, 1, false))
+						{
+							bNoDisband = true;
+							bValid = true;
+							pLastUpgradePlot = unitPlot;
+						}
 					}
 					break;
 				}
 				case 1:
 				{
-					if (unitPlot->isCity())
+					// Unit types which are limited in what terrain they can operate.
+					if (AI_unitImpassableCount(unitX->getUnitType()) > 0)
 					{
-						if (unitPlot->getBestDefender(getID()) == unitX)
-						{
-							bNoDisband = true;
-							bValid = true;
-							pLastUpgradePlot = unitPlot;
-						}
-
-						// try to upgrade units which are in danger... but don't get obsessed
-						if (!bValid && (pLastUpgradePlot != unitPlot) && ((AI_getAnyPlotDanger(unitPlot, 1, false))))
-						{
-							bNoDisband = true;
-							bValid = true;
-							pLastUpgradePlot = unitPlot;
-						}
+						bValid = true;
+					}
+					else if (unitX->cargoSpace() > 0
+					// Only normal transports
+					&&  unitX->getSpecialCargo() == NO_SPECIALUNIT
+					// Also upgrade escort ships
+					||  unitX->AI_getUnitAIType() == UNITAI_ESCORT_SEA)
+					{
+						bValid = bAnyWar || iStartingGold - getGold() < iUpgradeBudget;
 					}
 					break;
 				}
 				case 2:
 				{
-					bUnderBudget = (iStartingGold - getGold()) < iUpgradeBudget;
-
-					// Only normal transports
-					if ((unitX->cargoSpace() > 0) && (unitX->getSpecialCargo() == NO_SPECIALUNIT))
-					{
-						bValid = (bAnyWar || bUnderBudget);
-					}
-					// Also upgrade escort ships
-					if (unitX->AI_getUnitAIType() == UNITAI_ESCORT_SEA)
-					{
-						bValid = (bAnyWar || bUnderBudget);
-					}
+					bValid = iStartingGold - getGold() < iUpgradeBudget;
 					break;
 				}
-				case 3:
+				case 3: // Special case for NPC
 				{
-					bUnderBudget = (iStartingGold - getGold()) < iUpgradeBudget;
-
-					bValid = (bAnyWar || bUnderBudget);
+					bValid = true;
+					bNoDisband = true;
 					break;
 				}
 				default:
@@ -799,12 +790,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 					break;
 				}
 			}
-
-			if (!bValid)
-			{
-				continue;
-			}
-			bool bKilled = false;
+			// Kill off units
 			if (!bNoDisband && unitX->canFight() && !unitX->isAnimal() && getUnitUpkeepNet(unitX->isMilitaryBranch(), unitX->getUpkeep100()) > 0)
 			{
 				CvCity* pPlotCity = unitPlot->getPlotCity();
@@ -850,7 +836,10 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 					}
 				}
 			}
-			unitX->AI_upgrade(); // CAN DELETE UNIT!!!
+			if (bValid)
+			{
+				unitX->AI_upgrade(); // CAN DELETE UNIT!!!
+			}
 		}
 	}
 	if (isNPC())
@@ -23671,15 +23660,14 @@ int CvPlayerAI::AI_goldToUpgradeAllUnits(int iExpThreshold) const
 	// cache the value for each unit type
 	std::vector<int> aiUnitUpgradePrice(GC.getNumUnitInfos(), 0);	// initializes to zeros
 
-	foreach_(const CvUnit * pLoopUnit, units())
+	foreach_(const CvUnit * unitX, units())
 	{
 		// if experience is below threshold, skip this unit
-		if (pLoopUnit == NULL || pLoopUnit->isDelayedDeath() || pLoopUnit->getExperience() < iExpThreshold)
+		if (unitX == NULL || unitX->isDelayedDeath() || unitX->getExperience() < iExpThreshold)
 		{
 			continue;
 		}
-
-		const UnitTypes eUnitType = pLoopUnit->getUnitType();
+		const UnitTypes eUnitType = unitX->getUnitType();
 
 		// check cached value for this unit type
 		const int iCachedUnitGold = aiUnitUpgradePrice[eUnitType];
@@ -23698,41 +23686,23 @@ int CvPlayerAI::AI_goldToUpgradeAllUnits(int iExpThreshold) const
 		int iUnitGold = 0;
 		int iUnitUpgradePossibilities = 0;
 
-		const UnitAITypes eUnitAIType = pLoopUnit->AI_getUnitAIType();
-		if (pLoopUnit->plot() != NULL) {
-			const CvArea* pUnitArea = pLoopUnit->area();
+		const UnitAITypes eUnitAIType = unitX->AI_getUnitAIType();
+		if (unitX->plot() != NULL)
+		{
+			const CvArea* pUnitArea = unitX->area();
 			const int iUnitValue = AI_unitValue(eUnitType, eUnitAIType, pUnitArea);
-			for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
-			{
-				// is this a valid upgrade?
-				if (pLoopUnit->upgradeAvailable(eUnitType, (UnitTypes)iI))
-				{
-					// is it better?
-					const int iUpgradeValue = AI_unitValue((UnitTypes)iI, eUnitAIType, pUnitArea);
-					if (iUpgradeValue > iUnitValue)
-					{
-						// can we actually make this upgrade?
-						bool bCanUpgrade = false;
-						const CvCity* pCapitalCity = getCapitalCity();
-						if (pCapitalCity != NULL && pCapitalCity->canTrain((UnitTypes)iI))
-						{
-							bCanUpgrade = true;
-						}
-						else
-						{
-							const CvCity* pCloseCity = GC.getMap().findCity(pLoopUnit->getX(), pLoopUnit->getY(), getID(), NO_TEAM, true, (pLoopUnit->getDomainType() == DOMAIN_SEA));
-							if (pCloseCity != NULL && pCloseCity->canTrain((UnitTypes)iI))
-							{
-								bCanUpgrade = true;
-							}
-						}
 
-						if (bCanUpgrade)
-						{
-							iUnitGold += pLoopUnit->upgradePrice((UnitTypes)iI);
-							iUnitUpgradePossibilities++;
-						}
-					}
+			foreach_(int iUnitX, GC.getUnitInfo(eUnitType).getUnitUpgradeChain())
+			{
+				const UnitTypes eUnitY = (UnitTypes)iUnitX;
+				// is it better?
+				if (!GC.getUnitInfo(eUnitY).getNotUnitAIType(eUnitAIType)
+				&& unitX->canUpgrade(eUnitY)
+				&& AI_unitValue(eUnitY, eUnitAIType, pUnitArea) > iUnitValue)
+				{
+					// can we actually make this upgrade?
+					iUnitGold += unitX->upgradePrice(eUnitY);
+					iUnitUpgradePossibilities++;
 				}
 			}
 		}

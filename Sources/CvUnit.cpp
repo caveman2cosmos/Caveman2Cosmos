@@ -12079,7 +12079,7 @@ CvCity* CvUnit::getUpgradeCity(bool bSearch) const
 	PROFILE_FUNC();
 
 	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
-	UnitAITypes eUnitAI = AI_getUnitAIType();
+	const UnitAITypes eUnitAI = AI_getUnitAIType();
 	CvArea* pArea = area();
 
 	const int iCurrentValue = kPlayer.AI_unitValue(getUnitType(), eUnitAI, pArea);
@@ -12087,34 +12087,31 @@ CvCity* CvUnit::getUpgradeCity(bool bSearch) const
 	int iBestSearchValue = MAX_INT;
 	CvCity* pBestUpgradeCity = NULL;
 
-	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	foreach_(int iUnitX, GC.getUnitInfo(m_eUnitType).getUnitUpgradeChain())
 	{
-		const UnitTypes eUnitX = static_cast<UnitTypes>(iI);
-		if (upgradeAvailable(m_eUnitType, eUnitX) && kPlayer.canTrain(eUnitX))
-		{
-			int iNewValue = kPlayer.AI_unitValue(eUnitX, eUnitAI, pArea);
-			if (iNewValue > iCurrentValue)
-			{
-				int iSearchValue;
-				CvCity* pUpgradeCity = getUpgradeCity(eUnitX, bSearch, &iSearchValue);
-				if (pUpgradeCity != NULL)
-				{
-					// if not searching or close enough, then this match will do
-					if (!bSearch || iSearchValue < 16)
-					{
-						return pUpgradeCity;
-					}
+		const UnitTypes eUnitX = (UnitTypes)iUnitX;
 
-					if (iSearchValue < iBestSearchValue)
-					{
-						iBestSearchValue = iSearchValue;
-						pBestUpgradeCity = pUpgradeCity;
-					}
+		if (upgradeAvailable(m_eUnitType, eUnitX) && kPlayer.canTrain(eUnitX)
+		&& kPlayer.AI_unitValue(eUnitX, eUnitAI, pArea) > iCurrentValue)
+		{
+			int iSearchValue;
+			CvCity* pUpgradeCity = getUpgradeCity(eUnitX, bSearch, &iSearchValue);
+			if (pUpgradeCity != NULL)
+			{
+				// if not searching or close enough, then this match will do
+				if (!bSearch || iSearchValue < 16)
+				{
+					return pUpgradeCity;
+				}
+
+				if (iSearchValue < iBestSearchValue)
+				{
+					iBestSearchValue = iSearchValue;
+					pBestUpgradeCity = pUpgradeCity;
 				}
 			}
 		}
 	}
-
 	return pBestUpgradeCity;
 }
 
