@@ -109,6 +109,7 @@ def clearCurrentSigns ():
 	gCurrentSigns = None
 
 
+'''
 def clearSignsAndLandmarks(pPlot):
 	""" Removes any current landmarks or signs from a plot.
 
@@ -125,6 +126,7 @@ def clearSignsAndLandmarks(pPlot):
 	# Don't even know what this does; it was the last of my failed attempts to force the signs to show.
 	#engine.setDirty(EngineDirtyBits.GlobeTexture_DIRTY_BIT, True)
 	return True
+'''
 
 def placeLandmark(pPlot, sEventType, iFood, iProd, iComm, bIsSign, iSignOwner):
 	""" Places a landmark on a plot identifying a yield change with a short description.

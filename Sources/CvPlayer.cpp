@@ -28947,7 +28947,7 @@ int CvPlayer::getUnitListNumInGroup(int iGroup)
 
 UnitTypes CvPlayer::getUnitListType(int iGroup, int iPos)
 {
-	return m_UnitList.getUnitType(iGroup, iPos);
+	return m_UnitList.getUnitListType(iGroup, iPos);
 }
 
 int CvPlayer::getUnitListSelectedRow()
