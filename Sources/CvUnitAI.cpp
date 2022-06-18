@@ -3108,20 +3108,7 @@ void CvUnitAI::AI_attackCityMove()
 		bReadyToAttack = getGroup()->getNumUnits() >= (bHuntBarbs ? 3 : AI_stackOfDoomExtra());
 	}
 
-
-	// RevolutionDCM - new field bombard AI
-	// Dale - RB: Field Bombard START
-	//if (AI_RbombardCity())
-	//{
-	//	return;
-	//}
-	// Dale - RB: Field Bombard END
-
-	// Dale - ARB: Archer Bombard START
-	// Koshling - don't decide to do this yet if we think we're ready to
-	//attack the city or we'll get distracted and just wind up Abombarding!
-
-	bool bCity = plot()->isCity();
+	const bool bCity = plot()->isCity();
 
 	if (bReadyToAttack)
 	{
@@ -3152,12 +3139,16 @@ void CvUnitAI::AI_attackCityMove()
 		//	Special case - if we have no attackers at all advertise for one urgently
 		if (iCityCaptureCount == 0 && !isCargo())
 		{
-			GET_PLAYER(getOwner()).getContractBroker().advertiseWork(HIGH_PRIORITY_ESCORT_PRIORITY + 1,
-																		   NO_UNITCAPABILITIES,
-																		   getX(),
-																		   getY(),
-																		   this,
-																		   UNITAI_ATTACK_CITY);
+			GET_PLAYER(getOwner()).getContractBroker().advertiseWork(
+				HIGH_PRIORITY_ESCORT_PRIORITY + 1,
+				NO_UNITCAPABILITIES,
+				getX(),
+				getY(),
+				this,
+				UNITAI_ATTACK_CITY
+			);
+			m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
+			m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
 
 			if (gUnitLogLevel > 2)
 			{
@@ -3167,19 +3158,6 @@ void CvUnitAI::AI_attackCityMove()
 			}
 		}
 	}
-
-	//The following is fatally flawed and needs some more serious review.  Creates a potential infinite loop and may be a cause of fracturing AI unit intentions.  If a unit is going to change roles, it should probably do so more carefully than this and with greater intent.  Not just splitting off other units but also officially changing AI types, and only if the unit is truly appropriate to do so.  If the need for city defense is desperate, then simply moving the selection group to the city that needs the help would be appropriate, not trying to split up the selection group.
-	//if (AI_guardCity(false, false))
-	//{
-	//	if( bReadyToAttack && (eAreaAIType != AREAAI_DEFENSIVE))
-	//	{
-	//		CvSelectionGroup* pOldGroup = getGroup();
-
-	//		pOldGroup->AI_separateNonAI(UNITAI_ATTACK_CITY);
-	//	}
-
-	//	return;
-	//}
 
 	if (AI_groupMergeRange(UNITAI_ATTACK_CITY, 0, true, true, bIgnoreFaster))
 	{
@@ -3275,9 +3253,6 @@ void CvUnitAI::AI_attackCityMove()
 		}
 
 		//	Grab some more units if we can
-		CvUnitSelectionCriteria healerCriteria;
-
-		healerCriteria.m_bIsHealer = true;
 
 		UnitCombatTypes eMostNeeded = NO_UNITCOMBAT;
 		int iNeedSupportCount = 0;
@@ -3315,66 +3290,73 @@ void CvUnitAI::AI_attackCityMove()
 				}
 			}
 		}
-		healerCriteria.m_eHealUnitCombat = eMostNeeded;
-		//	Try to get a healer if we don't have enough
-		if (!isCargo() && eMostNeeded != NO_UNITCOMBAT)
+
+		if (m_contractsLastEstablishedTurn != GC.getGame().getGameTurn())
 		{
-			GET_PLAYER(getOwner()).getContractBroker().advertiseWork(HIGH_PRIORITY_ESCORT_PRIORITY,
-																		   HEALER_UNITCAPABILITIES,
-																		   getX(),
-																		   getY(),
-																		   this,
-																		   UNITAI_HEALER,
-																		   -1,
-																		   &healerCriteria);
-
-			if (gUnitLogLevel > 2)
+			// Try to get a healer if we don't have enough
+			if (!isCargo() && eMostNeeded != NO_UNITCOMBAT)
 			{
-				CvWString szString;
-				getUnitAIString(szString, AI_getUnitAIType());
-				logBBAI("	%S's %S at (%d,%d) requests healer for attack stack", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY());
-			}
-		}
+				CvUnitSelectionCriteria healerCriteria;
+				healerCriteria.m_bIsHealer = true;
+				healerCriteria.m_eHealUnitCombat = eMostNeeded;
 
-		//	If we're still on home turf advertise for more attackers at a
-		//	priority that is increased if we're not yet up to strength
-		if (plot()->getOwner() == getOwner() && !isCargo())
-		{
-			//First cover the see invisible bases
-			if (AI_establishStackSeeInvisibleCoverage())
-			{
-				return;
-			}
-
-			GET_PLAYER(getOwner()).getContractBroker().advertiseWork(bReadyToAttack ? LOW_PRIORITY_ESCORT_PRIORITY : HIGH_PRIORITY_ESCORT_PRIORITY,
-																		   NO_UNITCAPABILITIES,
-																		   getX(),
-																		   getY(),
-																		   this,
-																		   UNITAI_ATTACK_CITY);
-
-			if (gUnitLogLevel > 2)
-			{
-				CvWString szString;
-				getUnitAIString(szString, AI_getUnitAIType());
-				logBBAI("	%S's %S at (%d,%d) requests more attackers for attack stack at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY(), bReadyToAttack ? LOW_PRIORITY_ESCORT_PRIORITY : HIGH_PRIORITY_ESCORT_PRIORITY);
-			}
-
-			//	Also try to get a great commander if we don't have one
-			if (GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS) && !getGroup()->hasCommander())
-			{
-				GET_PLAYER(getOwner()).getContractBroker().advertiseWork(bReadyToAttack ? HIGH_PRIORITY_ESCORT_PRIORITY : LOW_PRIORITY_ESCORT_PRIORITY,
-																			   NO_UNITCAPABILITIES,
-																			   getX(),
-																			   getY(),
-																			   this,
-																			   UNITAI_GENERAL);
-
+				GET_PLAYER(getOwner()).getContractBroker().advertiseWork(
+					HIGH_PRIORITY_ESCORT_PRIORITY,
+					HEALER_UNITCAPABILITIES,
+					getX(), getY(),
+					this, UNITAI_HEALER,
+					-1, &healerCriteria
+				);
+				m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
+				m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
 				if (gUnitLogLevel > 2)
 				{
 					CvWString szString;
 					getUnitAIString(szString, AI_getUnitAIType());
-					logBBAI("	%S's %S at (%d,%d) requests great commander for attack stack at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY(), HIGH_PRIORITY_ESCORT_PRIORITY);
+					logBBAI("	%S's %S at (%d,%d) requests healer for attack stack", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY());
+				}
+			}
+
+			// If we're still on home turf advertise for more attackers at a priority that is increased if we're not yet up to strength
+			if (plot()->getOwner() == getOwner() && !isCargo())
+			{
+				//First cover the see invisible bases
+				if (AI_establishStackSeeInvisibleCoverage())
+				{
+					return;
+				}
+				GET_PLAYER(getOwner()).getContractBroker().advertiseWork(
+					bReadyToAttack ? LOW_PRIORITY_ESCORT_PRIORITY : HIGH_PRIORITY_ESCORT_PRIORITY,
+					NO_UNITCAPABILITIES,
+					getX(), getY(),
+					this, UNITAI_ATTACK_CITY
+				);
+				m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
+				m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
+				if (gUnitLogLevel > 2)
+				{
+					CvWString szString;
+					getUnitAIString(szString, AI_getUnitAIType());
+					logBBAI("	%S's %S at (%d,%d) requests more attackers for attack stack at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY(), bReadyToAttack ? LOW_PRIORITY_ESCORT_PRIORITY : HIGH_PRIORITY_ESCORT_PRIORITY);
+				}
+
+				//	Also try to get a great commander if we don't have one
+				if (GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS) && !getGroup()->hasCommander())
+				{
+					GET_PLAYER(getOwner()).getContractBroker().advertiseWork(
+						bReadyToAttack ? HIGH_PRIORITY_ESCORT_PRIORITY : LOW_PRIORITY_ESCORT_PRIORITY,
+						NO_UNITCAPABILITIES,
+						getX(), getY(),
+						this, UNITAI_GENERAL
+					);
+					m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
+					m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
+					if (gUnitLogLevel > 2)
+					{
+						CvWString szString;
+						getUnitAIString(szString, AI_getUnitAIType());
+						logBBAI("	%S's %S at (%d,%d) requests great commander for attack stack at priority %d", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getX(), getY(), HIGH_PRIORITY_ESCORT_PRIORITY);
+					}
 				}
 			}
 		}
@@ -3448,24 +3430,10 @@ void CvUnitAI::AI_attackCityMove()
 				}
 			}
 
-			/*****************************************************************************************************/
-			/**  Author: TheLadiesOgre																		  **/
-			/**  Date: 16.09.2009																			   **/
-			/**  ModComp: TLOTags																			   **/
-			/**  Reason Added: Implement AI_paradrop for other UNITAI's now that it is potentially available	**/
-			/**  Notes: 14.10.2009-- Moved higher and added bCity check										 **/
-			/*****************************************************************************************************/
-			if (bCity)
+			if (bCity && AI_paradrop(getDropRange()))
 			{
-				if (AI_paradrop(getDropRange()))
-				{
-					return;
-				}
+				return;
 			}
-
-			/*****************************************************************************************************/
-			/**  TheLadiesOgre; 16.09.2009; TLOTags															 **/
-			/*****************************************************************************************************/
 
 			if (iComparePostBombard < iAttackRatio)
 			{
@@ -3521,21 +3489,10 @@ void CvUnitAI::AI_attackCityMove()
 	// BBAI TODO: Stack v stack combat ... definitely want to do in own territory, but what about enemy territory?
 	if (getGroup()->hasCollateralDamage() && plot()->getOwner() == getOwner())
 	{
-		/************************************************************************************************/
-		/* REVOLUTIONDCM							 05/24/08								Glider1	*/
-		/*																							  */
-		/*																							  */
-		/************************************************************************************************/
-				// RevolutionDCM - ranged bombardment AI
-				// Dale - RB: Field Bombard START
 		if (AI_RbombardUnit(1, 50, 3, 2, 130))
 		{
 			return;
 		}
-		// RevolutionDCM - end
-/************************************************************************************************/
-/* REVOLUTIONDCM							 END									 Glider1	*/
-/************************************************************************************************/
 
 		if (AI_anyAttack(1, 45, 3, false))
 		{
@@ -3544,21 +3501,10 @@ void CvUnitAI::AI_attackCityMove()
 
 		if (!bReadyToAttack)
 		{
-			/************************************************************************************************/
-			/* REVOLUTIONDCM							 05/24/08								Glider1	*/
-			/*																							  */
-			/*																							  */
-			/************************************************************************************************/
-						// RevolutionDCM - ranged bombardment AI
-						// Dale - RB: Field Bombard START
 			if (AI_RbombardUnit(getGroup()->getMinimumRBombardRange(), 30, 5, 2, 110))
 			{
 				return;
 			}
-			// RevolutionDCM - end
-/************************************************************************************************/
-/* REVOLUTIONDCM							 END									 Glider1	*/
-/************************************************************************************************/
 
 			if (AI_anyAttack(1, 25, 5))
 			{
@@ -3575,14 +3521,12 @@ void CvUnitAI::AI_attackCityMove()
 		}
 	}
 
-	// Disabling city attack specialists from doing general attacks and pillaging [11/19/2019 billw]
-#if 0
 	//	If we're still in our own territory attack infiltrators
 	if (plot()->getOwner() == getOwner() && AI_anyAttack(2, 50))
 	{
 		return;
 	}
-	else if (AI_anyAttack(1, 60, 0, false))
+	if (AI_anyAttack(1, 60, 0, false))
 	{
 		return;
 	}
@@ -3599,7 +3543,6 @@ void CvUnitAI::AI_attackCityMove()
 			return;
 		}
 	}
-#endif
 
 	if (plot()->getOwner() == getOwner())
 	{
@@ -11473,12 +11416,8 @@ bool CvUnitAI::AI_groupMergeRange(UnitAITypes eUnitAI, int iMaxRange, bool bBigg
 			pGroup->mergeIntoGroup(pBestUnit->getGroup());
 			return true;
 		}
-		else
-		{
-			return pGroup->pushMissionInternal(MISSION_MOVE_TO_UNIT, pBestUnit->getOwner(), pBestUnit->getID(), 0, false, false, MISSIONAI_GROUP, NULL, pBestUnit);
-		}
+		return pGroup->pushMissionInternal(MISSION_MOVE_TO_UNIT, pBestUnit->getOwner(), pBestUnit->getID(), 0, false, false, MISSIONAI_GROUP, NULL, pBestUnit);
 	}
-
 	return false;
 }
 
@@ -27604,12 +27543,9 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 
 				GET_PLAYER(getOwner()).getContractBroker().advertiseWork
 				(
-					priority,
-					NO_UNITCAPABILITIES,
-					getX(),
-					getY(),
-					this,
-					UNITAI_HUNTER_ESCORT
+					priority, NO_UNITCAPABILITIES,
+					getX(), getY(),
+					this, UNITAI_HUNTER_ESCORT
 				);
 				m_contractsLastEstablishedTurn = GC.getGame().getGameTurn();
 				m_contractualState = CONTRACTUAL_STATE_AWAITING_ANSWER;
