@@ -353,7 +353,6 @@ void CvPlayerAI::AI_reset(bool bConstructor)
 		// Can assume none of them are initialized if one of them isn't.
 		FAssertMsg(m_bonusClassUnrevealed == NULL, "Memory leak");
 		FAssertMsg(m_bonusClassHave == NULL, "Memory leak");
-		FErrorMsg(CvString::format("LALALAAL %d", GC.getNumBonusClassInfos()).c_str());
 		m_bonusClassRevealed = new int[GC.getNumBonusClassInfos()];
 		m_bonusClassUnrevealed = new int[GC.getNumBonusClassInfos()];
 		m_bonusClassHave = new int[GC.getNumBonusClassInfos()];
