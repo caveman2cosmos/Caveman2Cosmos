@@ -55,6 +55,12 @@
     <Filter Include="Source Files\AI_Components">
       <UniqueIdentifier>{000a1b33-12de-4d05-9a15-1ab255f4867c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Python">
+      <UniqueIdentifier>{8f1dfe2c-eacb-4d42-95ae-4eceeacc9bcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Globals">
+      <UniqueIdentifier>{312f3523-1fbd-4e19-bbf3-0b0ed1f5f648}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="_precompile.cpp">
@@ -560,9 +566,6 @@
     <ClInclude Include="CvViewport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AI_Defines.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BoolExpr.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -845,66 +848,6 @@
     <ClInclude Include="CvXMLLoadUtilitySetMod.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CyArea.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyArgsList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyArtFileMgr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyCity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyDeal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyGame.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyGameCoreUtils.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyGameTextMgr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyGlobalContext.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyHallOfFameInfo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyIterator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyMap.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyMapGenerator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyMessageControl.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyPlayer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyPlot.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyReplayInfo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CySelectionGroup.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyTeam.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CyUnit.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="FAssert.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -1051,6 +994,69 @@
     </ClInclude>
     <ClInclude Include="CvBonusInfo.h">
       <Filter>Header Files\InfoClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="CyArea.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyArgsList.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyArtFileMgr.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyCity.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyDeal.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyGame.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyGameCoreUtils.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyGameTextMgr.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyGlobalContext.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyHallOfFameInfo.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyIterator.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyMap.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyMapGenerator.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyMessageControl.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyPlayer.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyPlot.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyReplayInfo.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CySelectionGroup.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyTeam.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="CyUnit.h">
+      <Filter>Header Files\Python</Filter>
+    </ClInclude>
+    <ClInclude Include="AI_Defines.h">
+      <Filter>Header Files\Globals</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
