@@ -22,9 +22,6 @@
     <Filter Include="Source Files\InfoClasses">
       <UniqueIdentifier>{f1586103-9f6f-4ce2-ab9b-3aa8cb583ce0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\InfoClasses">
-      <UniqueIdentifier>{176d085c-21c8-4b21-bae7-70b8815878b8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\SupportModules">
       <UniqueIdentifier>{f78cd592-6e51-4d6d-b7c2-9ec217001b35}</UniqueIdentifier>
     </Filter>
@@ -58,8 +55,32 @@
     <Filter Include="Header Files\Python">
       <UniqueIdentifier>{8f1dfe2c-eacb-4d42-95ae-4eceeacc9bcc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\City">
+      <UniqueIdentifier>{61303a02-1b40-4c40-a4ac-df9b4148957c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Area">
+      <UniqueIdentifier>{1dc8d3f7-4da9-4733-9b7c-a62d3a0fc58d}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Header Files\Globals">
       <UniqueIdentifier>{312f3523-1fbd-4e19-bbf3-0b0ed1f5f648}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InfoClasses">
+      <UniqueIdentifier>{176d085c-21c8-4b21-bae7-70b8815878b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Plot">
+      <UniqueIdentifier>{f8fe33ee-cc24-41e0-9849-61a1af0ed5f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Player">
+      <UniqueIdentifier>{0e99d609-4483-439a-83cc-beb272ff6056}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Unit">
+      <UniqueIdentifier>{5ff910bd-64d2-4176-bf35-274e2db7d546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\DLLInterface">
+      <UniqueIdentifier>{c35c4404-09ee-4236-a6dd-344067a09a09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Enums">
+      <UniqueIdentifier>{784ff81b-7f12-4096-98c7-e32947fe4416}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -566,40 +587,10 @@
     <ClInclude Include="CvViewport.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BoolExpr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CheckSum.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvArea.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CvArtFileMgr.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CvBugOptions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvBuildingFilters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvBuildingGrouping.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvBuildingList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvBuildingSort.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CvBuildLists.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvCity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvCityAI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvContractBroker.h">
@@ -608,70 +599,7 @@
     <ClInclude Include="CvDate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CvDeal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDefines.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDiploParameters.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLButtonPopup.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLEngineIFaceBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLEntity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLEntityIFaceBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLEventReporterIFaceBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLFAStarIFaceBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLFlagEntityIFaceBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLIniParserIFaceBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLInterfaceIFaceBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLPlotBuilderIFaceBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDllPythonEvents.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLPythonIFaceBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLSymbolIFaceBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDllTranslator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLUtilityIFaceBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLWidgetData.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvDLLXMLIFaceBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="wchar_utils.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvEnums.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvEventReporter.h">
@@ -687,12 +615,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvGameCoreDLL.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvGameCoreDLLDefNew.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvGameCoreDLLUndefNew.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvGameCoreUtils.h">
@@ -747,15 +669,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvPathGenerator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvPlayer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvPlayerAI.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvPlot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvPlotGroup.h">
@@ -818,16 +731,7 @@
     <ClInclude Include="CvTeamAI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CvUnit.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvUnitAI.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CvUnitComponents.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvUnitFilters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvUnitGrouping.h">
@@ -849,9 +753,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FAssert.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FAStarNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FDataIOStream.h">
@@ -914,9 +815,6 @@
     <ClInclude Include="StackWalker.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="copy_iterator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="logging.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -937,9 +835,6 @@
     </ClInclude>
     <ClInclude Include="SCyDebug.h">
       <Filter>Header Files\Smart</Filter>
-    </ClInclude>
-    <ClInclude Include="algorithm2.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="scoring.h">
       <Filter>Header Files</Filter>
@@ -1055,8 +950,134 @@
     <ClInclude Include="CyUnit.h">
       <Filter>Header Files\Python</Filter>
     </ClInclude>
+    <ClInclude Include="CvPlot.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CvPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CvPlayerAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CvUnitAI.h">
+      <Filter>Header Files\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="CvUnit.h">
+      <Filter>Header Files\Unit</Filter>
+    </ClInclude>
     <ClInclude Include="AI_Defines.h">
       <Filter>Header Files\Globals</Filter>
+    </ClInclude>
+    <ClInclude Include="BoolExpr.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckSum.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="CvBuildingGrouping.h">
+      <Filter>Header Files\City</Filter>
+    </ClInclude>
+    <ClInclude Include="CvBuildingFilters.h">
+      <Filter>Header Files\City</Filter>
+    </ClInclude>
+    <ClInclude Include="CvArea.h">
+      <Filter>Header Files\Plot</Filter>
+    </ClInclude>
+    <ClInclude Include="CvBugOptions.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="copy_iterator.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="algorithm2.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="CvCity.h">
+      <Filter>Header Files\City</Filter>
+    </ClInclude>
+    <ClInclude Include="CvCityAI.h">
+      <Filter>Header Files\City</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDefines.h">
+      <Filter>Header Files\Globals</Filter>
+    </ClInclude>
+    <ClInclude Include="CvBuildingList.h">
+      <Filter>Header Files\City</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDeal.h">
+      <Filter>Header Files\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDiploParameters.h">
+      <Filter>Header Files\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDLLButtonPopup.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDLLEngineIFaceBase.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDLLEntity.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDLLEntityIFaceBase.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDLLEventReporterIFaceBase.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDLLFAStarIFaceBase.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDLLFlagEntityIFaceBase.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDLLIniParserIFaceBase.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDLLInterfaceIFaceBase.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDLLPlotBuilderIFaceBase.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDllPythonEvents.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDLLPythonIFaceBase.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDLLSymbolIFaceBase.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDllTranslator.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDLLUtilityIFaceBase.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDLLWidgetData.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvDLLXMLIFaceBase.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvEnums.h">
+      <Filter>Header Files\Enums</Filter>
+    </ClInclude>
+    <ClInclude Include="CvGameCoreDLLUndefNew.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvGameCoreDLLDefNew.h">
+      <Filter>Header Files\DLLInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvUnitFilters.h">
+      <Filter>Header Files\City</Filter>
+    </ClInclude>
+    <ClInclude Include="FAStarNode.h">
+      <Filter>Header Files\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="CvBuildingSort.h">
+      <Filter>Header Files\City</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
