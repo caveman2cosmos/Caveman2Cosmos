@@ -112,6 +112,18 @@
     <Filter Include="Header Files\VisualInterface\Civopedia">
       <UniqueIdentifier>{a24101a0-1669-4c4f-b47d-3e0e880f7337}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Tools\Logging">
+      <UniqueIdentifier>{de568f4e-f259-4922-b518-15553cb3e01f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MemoryManagement">
+      <UniqueIdentifier>{89fa160c-1a36-4470-b52b-20b816b8afdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\SavegameHandling">
+      <UniqueIdentifier>{52e3aee7-f53a-45b0-a473-40340c86329d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Unit\Mission">
+      <UniqueIdentifier>{8cf38423-5c7c-4f8b-9a63-557d0e481ce1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="_precompile.cpp">
@@ -602,111 +614,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CvTaggedSaveFormatWrapper.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvViewport.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="wchar_utils.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvEventReporter.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvInfoClassTraits.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvOutcome.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvOutcomeMission.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvPopupReturn.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvReplayInfo.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvReplayMessage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvUnitComponents.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CvUnitSort.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FAssert.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FDataIOStream.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FDataStreamBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FDialogTemplate.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FFreeListArray.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FFreeListArrayBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FFreeListTrashArray.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FInputDevice.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FProfiler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="FVariableSystem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IDValueMap.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IntExpr.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Stopwatch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="EnumFlags.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="NiPoint.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Win32.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="StackWalker.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="logging.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="index_iterator_base.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="nullptr_t.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="hash.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SCvInternalGlobals.h">
       <Filter>Header Files\Smart</Filter>
     </ClInclude>
@@ -715,21 +622,6 @@
     </ClInclude>
     <ClInclude Include="SCyDebug.h">
       <Filter>Header Files\Smart</Filter>
-    </ClInclude>
-    <ClInclude Include="scoring.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="flatten_range.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="idinfo_iterator_base.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="enum_iterator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GlobalDefines.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvImprovementInfo.h">
       <Filter>Header Files\InfoClasses</Filter>
@@ -743,17 +635,11 @@
     <ClInclude Include="CvValueService.h">
       <Filter>Header Files\Services</Filter>
     </ClInclude>
-    <ClInclude Include="BetterBTSAI.h">
-      <Filter>Header Files\Tools</Filter>
-    </ClInclude>
     <ClInclude Include="CvWorkerAI.h">
       <Filter>Header Files\Unit\AI_Components</Filter>
     </ClInclude>
     <ClInclude Include="CvSettlerAI.h">
       <Filter>Header Files\Unit\AI_Components</Filter>
-    </ClInclude>
-    <ClInclude Include="CvUnitSelectionCriteria.h">
-      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="CvWorkerService.h">
       <Filter>Header Files\Services</Filter>
@@ -1109,6 +995,132 @@
     <ClInclude Include="CvUnitGrouping.h">
       <Filter>Header Files\Unit</Filter>
     </ClInclude>
+    <ClInclude Include="wchar_utils.h">
+      <Filter>Header Files\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Stopwatch.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="logging.h">
+      <Filter>Header Files\Tools\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="BetterBTSAI.h">
+      <Filter>Header Files\Tools\Logging</Filter>
+    </ClInclude>
+    <ClInclude Include="CvInfoClassTraits.h">
+      <Filter>Header Files\InfoClasses</Filter>
+    </ClInclude>
+    <ClInclude Include="FFreeListArray.h">
+      <Filter>Header Files\MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="FFreeListArrayBase.h">
+      <Filter>Header Files\MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="FFreeListTrashArray.h">
+      <Filter>Header Files\MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="CvUnitComponents.h">
+      <Filter>Header Files\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="CvPopupReturn.h">
+      <Filter>Header Files\VisualInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvTaggedSaveFormatWrapper.h">
+      <Filter>Header Files\SavegameHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="flatten_range.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="FAssert.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="CvViewport.h">
+      <Filter>Header Files\VisualInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvUnitSelectionCriteria.h">
+      <Filter>Header Files\City\BuildMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="CvUnitSort.h">
+      <Filter>Header Files\City\BuildMenu</Filter>
+    </ClInclude>
+    <ClInclude Include="enum_iterator.h">
+      <Filter>Header Files\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="FDataIOStream.h">
+      <Filter>Header Files\MemoryManagement</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumFlags.h">
+      <Filter>Header Files\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="FInputDevice.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="nullptr_t.h">
+      <Filter>Header Files\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="hash.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalDefines.h">
+      <Filter>Header Files\Globals</Filter>
+    </ClInclude>
+    <ClInclude Include="IDValueMap.h">
+      <Filter>Header Files\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="IntExpr.h">
+      <Filter>Header Files\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="FDataStreamBase.h">
+      <Filter>Header Files\DataHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="FDialogTemplate.h">
+      <Filter>Header Files\VisualInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="index_iterator_base.h">
+      <Filter>Header Files\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="FProfiler.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="CvReplayMessage.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="CvReplayInfo.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="FVariableSystem.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="NiPoint.h">
+      <Filter>Header Files\DataTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="StackWalker.h">
+      <Filter>Header Files\DataHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>Header Files\DataHandling</Filter>
+    </ClInclude>
+    <ClInclude Include="Win32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CvEventReporter.h">
+      <Filter>Header Files\VisualInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="CvOutcome.h">
+      <Filter>Header Files\Unit\Mission</Filter>
+    </ClInclude>
+    <ClInclude Include="CvOutcomeMission.h">
+      <Filter>Header Files\Unit\Mission</Filter>
+    </ClInclude>
+    <ClInclude Include="idinfo_iterator_base.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="scoring.h">
+      <Filter>Header Files\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files\GameCore</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CvGameCoreDLL.rc">
@@ -1116,16 +1128,16 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="FVariableSystem.inl">
-      <Filter>Header Files</Filter>
-    </None>
-    <None Include="interfaceDirtyBits.inl">
-      <Filter>Header Files</Filter>
-    </None>
     <None Include="fbuild.bff" />
     <None Include="cpp.hint" />
     <None Include="CvGameCoreDLL.def" />
     <None Include=".editorconfig" />
+    <None Include="FVariableSystem.inl">
+      <Filter>Header Files\Tools</Filter>
+    </None>
+    <None Include="interfaceDirtyBits.inl">
+      <Filter>Header Files\Enums</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\Notes for the next breaking of save game compatability cycle.txt" />
