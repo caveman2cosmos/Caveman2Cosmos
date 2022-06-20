@@ -12,7 +12,6 @@ Created:	2009-01-21
 #include "CvBugOptions.h"
 #include "CvGlobals.h"
 #include "CvPython.h"
-#include "OutputRatios.h"
 
 bool g_bIsBug = false;
 
