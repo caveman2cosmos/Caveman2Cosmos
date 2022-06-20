@@ -543,6 +543,8 @@ class CvEventManager:
 
 
 	def gameStart(self, bNewGame=False):
+		CvScreensInterface.mainInterface.bSetStartZoom = True
+
 		############################
 		# Cache game specific data #
 		if GAME.isNetworkMultiPlayer():
@@ -694,6 +696,7 @@ class CvEventManager:
 
 
 	def onLoadGame(self, argsList):
+		GAME.onFinalInitialized()
 		self.gameStart()
 
 
@@ -2793,8 +2796,6 @@ class CvEventManager:
 
 	def onGameUpdate(self, argsList):
 		# Called on each game turn slice.
-#		turnSlice = argsList[0][0][0]	# (((turnSlice, ), ), )
-
 		# OOS Logger
 		if self.bNetworkMP and CyInterface().isOOSVisible():
 			import OOSLogger

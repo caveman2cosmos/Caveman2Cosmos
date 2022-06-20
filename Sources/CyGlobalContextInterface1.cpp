@@ -128,5 +128,6 @@ void CyGlobalContextPythonInterface1(python::class_<CyGlobalContext>& x)
 		//.def("getTraitOptionEditsInfo", &CyGlobalContext::getTraitOptionEditsInfo, python::return_value_policy<python::reference_existing_object>(), "(TraitOptionEditsID) - CvInfo for TraitOptionEditsID")
 
 		.def("setIsBug", &CyGlobalContext::setIsBug, "void () - init BUG on dll side")
+		.def("refreshOptionsBUG", &CyGlobalContext::refreshOptionsBUG, "void () - refresh some key BUG options")
 	;
 }
