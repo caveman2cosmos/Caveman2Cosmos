@@ -27,7 +27,6 @@ struct plotInfo
 	FeatureTypes newFeature;
 	BuildTypes currentBuild;
 	BuildTypes newBuild;
-
 };
 
 #endif

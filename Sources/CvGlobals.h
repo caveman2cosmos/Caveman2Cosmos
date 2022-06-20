@@ -453,9 +453,6 @@ public:
 	int iStuckUnitID;
 	int iStuckUnitCount;
 
-	bool isXMLLogging() const;
-	void setXMLLogging(bool bNewVal);
-
 	void updateReplacements();
 
 	int getNumCityTabInfos() const;
@@ -767,6 +764,7 @@ public:
 	void setAreaFinder(FAStar* pVal);
 	void setPlotGroupFinder(FAStar* pVal);
 	void setIsBug();
+	void refreshOptionsBUG();
 
 	uint32_t getAssetCheckSum() const;
 
@@ -1085,8 +1083,6 @@ protected:
 
 	DO_FOR_EACH_GLOBAL_DEFINE(DECLARE_MEMBER_VAR)
 	DO_FOR_EACH_INFO_TYPE(DECLARE_MEMBER_VAR)
-
-	bool m_bXMLLogging;
 
 	float m_fPLOT_SIZE;
 

@@ -106,7 +106,7 @@ CvGame::~CvGame()
 	SAFE_DELETE_ARRAY(m_aiFlexibleDifficultyTimer);
 }
 
-
+// Toffer - Called every time one starts a new game, be it scenario, custom, or play now.
 void CvGame::init(HandicapTypes eHandicap)
 {
 	GC.getInitCore().endGameSetup();
@@ -313,8 +313,6 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 	}
 
-	m_plotGroupHashesInitialized = false;
-
 	//Ruthless AI means Aggressive AI is on too.
 	if (isOption(GAMEOPTION_RUTHLESS_AI) && !isOption(GAMEOPTION_AGGRESSIVE_AI))
 	{
@@ -485,11 +483,107 @@ void CvGame::init(HandicapTypes eHandicap)
 	}
 	AI_init();
 
-	// set the unit and building filters to default state now that game is fully initialized.
-	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUntrainableUnits", false));
+	doUpdateCacheOnTurn();
+}
+
+
+// Toffer - Called everytime a save has been loaded, or a new game has been started.
+//	Not called when regenerating map.
+void CvGame::onFinalInitialized(const bool bNewGame)
+{
+	PROFILE("CvGame::onFinalInitialized");
+
+	// Game has been initialized fully when reaching this point.
+	m_bFinalInitialized = true;
+	// First code flow opportunity after fully loading a save is here
+	if (!bNewGame)
+	{
+		// Close will free any resources and display any warnings if we've just finished loading/saving
+		CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper(); wrapper.close();
+	}
+
+	GC.getLoadedInitCore().checkVersions();
+
+	for(int iI = 0; iI < MAX_PLAYERS; iI++)
+	{
+		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		{
+			GET_PLAYER((PlayerTypes)iI).RecalculatePlotGroupHashes();
+		}
+	}
+
+	gDLL->getEngineIFace()->clearSigns();
+	gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
+
+	//	Remove and re-add the GW on load
+	processGreatWall(false, true, false);
+	processGreatWall(true, true);
+
+	// Recalculate vision on load (a stickytape - can't find where it's dropping visibility on loading)
+
+	//The tracking really cannot work unless it starts right.  Plus, this is not a bad procedural step just in case it's coming from an old save or somesuch.  Doesn't cost us much time on load.
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	{
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+		pLoopPlot->unitGameStateCorrections();
+		pLoopPlot->clearVisibilityCounts();
+		CvCity* pCity = pLoopPlot->getPlotCity();
+		if (pCity != NULL && pCity->isNPC() && pCity->isRevealed(GET_PLAYER(getActivePlayer()).getTeam(), false))
+		{
+			pCity->updateVisibility();
+		}
+	}
+	GC.getMap().updateSight(true, false);
+
+	for (int iI = 0; iI < GC.getNumGameOptionInfos(); iI++)
+	{
+		const GameOptionTypes eGameOption = ((GameOptionTypes)iI);
+		if (isOption(eGameOption))
+		{
+			enforceOptionCompatibility(eGameOption);
+		}
+	}
+
+	//TB: Set Statuses
+	setStatusPromotions();
+
+	//	Super forts adaptation to C2C - make sure this map has had
+	//	its choke points calculated - note we check this every turn
+	//	because of a future intent to force periodic relcalulation
+	//	on significant events (discovery of mountaineering by someone,
+	//	terra-forming leading to water<->land transformations, etc.)
+	ensureChokePointsEvaluated();
+	gDLL->getInterfaceIFace()->setEndTurnCounter(2 * getBugOptionINT("MainInterface__AutoEndTurnDelay", 2));
+
+	// Set the unit/building filters to default state now that game is fully initialized.
+	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUntrainableUnits", true));
 	BuildingFilterList::setFilterActiveAll(BUILDING_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUnconstructableBuildings", false));
 
-	doUpdateCacheOnTurn();
+	if (bNewGame) doPreTurn0();
+}
+
+// Toffer - This is only called when starting new games, or after regenerating map, right before turn 0 starts.
+void CvGame::doPreTurn0()
+{
+	OutputDebugString("doPreTurn0: Start\n");
+	PROFILE_FUNC();
+
+	updatePlotGroups();
+
+	GC.getMap().updateIrrigated();
+
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
+	{
+		if (GET_TEAM((TeamTypes)iI).isAlive())
+		{
+			GET_TEAM((TeamTypes)iI).AI_updateAreaStragies();
+		}
+	}
+	{
+		PROFILE("CvGame::update.AutoSave");
+		gDLL->getEngineIFace()->AutoSave(true);
+	}
+	OutputDebugString("doPreTurn0: End\n");
 }
 
 //
@@ -582,8 +676,6 @@ bool CvGame::canRegenerateMap() const
 
 void CvGame::regenerateMap()
 {
-	setFinalInitialized(false);
-
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		GET_PLAYER((PlayerTypes)iI).killUnits();
@@ -619,7 +711,6 @@ void CvGame::regenerateMap()
 	setInitialItems();
 
 	initScoreCalculation();
-	setFinalInitialized(true);
 
 	GC.getMap().setupGraphical();
 	gDLL->getEngineIFace()->SetDirty(GlobeTexture_DIRTY_BIT, true);
@@ -629,11 +720,10 @@ void CvGame::regenerateMap()
 	{
 		gDLL->getInterfaceIFace()->setDirty(Advanced_Start_DIRTY_BIT, true);
 	}
-	else gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
-
 	CvEventReporter::getInstance().mapRegen();
 
-	gDLL->getEngineIFace()->AutoSave(true);
+	doPreTurn0();
+
 	// Toffer - Move camera after autosave as the latter interrupts the former from completing succsessfully.
 	GC.getCurrentViewport()->bringIntoView(GET_PLAYER(GC.getGame().getActivePlayer()).getStartingPlot()->getX(), GET_PLAYER(GC.getGame().getActivePlayer()).getStartingPlot()->getY());
 }
@@ -1001,8 +1091,6 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 		GC.updateReplacements();
 
 	m_lastGraphicUpdateRequestTickCount = -1;
-
-	m_plotGroupHashesInitialized = false;
 
 	CvPlotPaging::ResetPaging();
 }
@@ -2123,94 +2211,10 @@ int CvGame::getTeamClosenessScore(int** aaiDistances, int* aiStartingLocs)
 
 void CvGame::update()
 {
-#ifdef LOG_AI
-	gPlayerLogLevel = getBugOptionINT("Autolog__BBAILevel", 0);
-	gTeamLogLevel = gPlayerLogLevel;
-	gCityLogLevel = gPlayerLogLevel;
-	gUnitLogLevel = gPlayerLogLevel;
-
-	if ( gPlayerLogLevel > 0 )
-	{
-		GC.setXMLLogging(true);
-	}
-#endif
-
 	startProfilingDLL(false);
-
-	CvPlotPaging::UpdatePaging();
 
 	//OutputDebugString(CvString::format("Start profiling(false) for CvGame::update()\n").c_str());
 	PROFILE_BEGIN("CvGame::update");
-
-	if ( !m_plotGroupHashesInitialized )
-	{
-		PROFILE("CvGame::update.OneTimeInit");
-
-		//	First opportunity after a load or save is here since sadly the DLL structure
-		//	gives us no load/save-completed event
-		CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-		//	Close will free any resources and display any warnings if we've just finished loading/saving
-		wrapper.close();
-
-		GC.getLoadedInitCore().checkVersions();
-
-		for(int iI = 0; iI < MAX_PLAYERS; iI++)
-		{
-			if (GET_PLAYER((PlayerTypes)iI).isAlive())
-			{
-				GET_PLAYER((PlayerTypes)iI).RecalculatePlotGroupHashes();
-			}
-		}
-
-		m_plotGroupHashesInitialized = true;
-
-		gDLL->getEngineIFace()->clearSigns();
-		gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
-
-		//	Remove and re-add the GW on load
-		processGreatWall(false, true, false);
-		processGreatWall(true, true);
-
-		// Recalculate vision on load (a stickytape - can't find where it's dropping visibility on loading)
-
-		//The tracking really cannot work unless it starts right.  Plus, this is not a bad procedural step just in case it's coming from an old save or somesuch.  Doesn't cost us much time on load.
-		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
-		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-			pLoopPlot->unitGameStateCorrections();
-			pLoopPlot->clearVisibilityCounts();
-			CvCity* pCity = pLoopPlot->getPlotCity();
-			if (pCity != NULL && pCity->isNPC() && pCity->isRevealed(GET_PLAYER(getActivePlayer()).getTeam(), false))
-			{
-				pCity->updateVisibility();
-			}
-		}
-		GC.getMap().updateSight(true, false);
-
-		for (int iI = 0; iI < GC.getNumGameOptionInfos(); iI++)
-		{
-			const GameOptionTypes eGameOption = ((GameOptionTypes)iI);
-			if (isOption(eGameOption))
-			{
-				enforceOptionCompatibility(eGameOption);
-			}
-		}
-
-		//TB: Set Statuses
-		setStatusPromotions();
-
-		//	Super forts adaptation to C2C - make sure this map has had
-		//	its choke points calculated - note we check this every turn
-		//	because of a future intent to force periodic relcalulation
-		//	on significant events (discovery of mountaineering by someone,
-		//	terra-forming leading to water<->land transformations, etc.)
-		ensureChokePointsEvaluated();
-		gDLL->getInterfaceIFace()->setEndTurnCounter(2 * getBugOptionINT("MainInterface__AutoEndTurnDelay", 2));
-		// Toffer - Attempt to fix the lack of unit cycle process on load
-		gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
-	}
-
 	{
 		PROFILE("CvGame::update.ViewportInit");
 
@@ -2234,8 +2238,15 @@ void CvGame::update()
 			gDLL->getInterfaceIFace()->setDirty(GlobeLayer_DIRTY_BIT, true);
 		}
 	}
+	if (0 == (m_iTurnSlice % 10)
+	&& gDLL->getInterfaceIFace()->getLengthSelectionList() == 0)
+	{
+		gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
+	}
+	CvPlotPaging::UpdatePaging();
 
 again:
+
 	if (!gDLL->GetWorldBuilderMode() || isInAdvancedStart())
 	{
 		PROFILE("CvGame::update.Turn");
@@ -2243,15 +2254,7 @@ again:
 		sendPlayerOptions();
 		// sample generic event
 		CyArgsList pyArgs;
-		pyArgs.add(getTurnSlice());
 		CvEventReporter::getInstance().genericEvent("gameUpdate", pyArgs.makeFunctionArgs());
-
-		if (getTurnSlice() == 0)
-		{
-			PROFILE("CvGame::update.AutoSave");
-
-			gDLL->getEngineIFace()->AutoSave(true);
-		}
 
 		if (getNumGameTurnActive() == 0 && (!isPbem() || !getPbemTurnSent()))
 		{
@@ -2269,7 +2272,10 @@ again:
 		{
 			setGameState(GAMESTATE_OVER);
 		}
-		changeTurnSlice(1);
+		if (m_iTurnSlice < MAX_INT)
+			m_iTurnSlice += 1;
+		 // A counter can't be allowed to stop incrementing, so loop it.
+		else m_iTurnSlice = MAX_INT - 99999;
 
 		if (NO_PLAYER != getActivePlayer() && GET_PLAYER(getActivePlayer()).getAdvancedStartPoints() >= 0 && !gDLL->getInterfaceIFace()->isInAdvancedStart())
 		{
@@ -3431,12 +3437,6 @@ void CvGame::setEstimateEndTurn(int iNewValue)
 	m_iEstimateEndTurn = iNewValue;
 }
 
-
-void CvGame::changeTurnSlice(int iChange)
-{
-	m_iTurnSlice += iChange;
-}
-
 int CvGame::getTurnSlice() const
 {
 	return m_iTurnSlice;
@@ -4463,31 +4463,15 @@ bool CvGame::isFinalInitialized() const
 }
 
 
-void CvGame::setFinalInitialized(bool bNewValue)
+// Toffer - This is only called when starting new games, weird that it isn't called when loading saves...
+/*DllExport*/ void CvGame::setFinalInitialized(bool bNewValue)
 {
-	OutputDebugString("Setting FinalInitialized: Start\n");
-	PROFILE_FUNC();
-
-	if (m_bFinalInitialized != bNewValue)
+	if (bNewValue)
 	{
-		m_bFinalInitialized = bNewValue;
-
-		if (bNewValue)
-		{
-			updatePlotGroups();
-
-			GC.getMap().updateIrrigated();
-
-			for (int iI = 0; iI < MAX_TEAMS; iI++)
-			{
-				if (GET_TEAM((TeamTypes)iI).isAlive())
-				{
-					GET_TEAM((TeamTypes)iI).AI_updateAreaStragies();
-				}
-			}
-		}
+		OutputDebugString("Exe says the game is fully initialized\n");
+		onFinalInitialized(true);
 	}
-	OutputDebugString("Setting FinalInitialized: End\n");
+	else OutputDebugString("Exe says the game is no longer initialized\n"); // This never happens ever.
 }
 
 
@@ -7831,16 +7815,13 @@ CvRandom& CvGame::getSorenRand()
 
 void CvGame::logRandomResult(const wchar_t* szStreamName, const char* pszLog, int iMax, int iResult)
 {
-	if (GC.isXMLLogging() || isNetworkMultiPlayer())
+	if (isNetworkMultiPlayer() && isFinalInitialized())
 	{
-		if (isFinalInitialized())
-		{
-			static int iLine = 0;
-			logging::logMsg(
-				(bst::format("RandomLogger - Player %d - Set %d.log") % getActivePlayer() % (getGameTurn()/50)).str().c_str(),
-				"%d\t%d\t%S\t%s\t%d\t%d\n", ++iLine, getGameTurn()+1, szStreamName, pszLog, iMax, iResult
-			);
-		}
+		static int iLine = 0;
+		logging::logMsg(
+			(bst::format("RandomLogger - Player %d - Set %d.log") % getActivePlayer() % (getGameTurn()/50)).str().c_str(),
+			"%d\t%d\t%S\t%s\t%d\t%d\n", ++iLine, getGameTurn()+1, szStreamName, pszLog, iMax, iResult
+		);
 	}
 }
 
@@ -8248,7 +8229,11 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper,"CvGame",&m_bScoreDirty);
 	WRAPPER_READ(wrapper,"CvGame",(int*)&m_circumnavigatingTeam);
 	// m_bDebugMode not saved
-	WRAPPER_READ(wrapper,"CvGame",&m_bFinalInitialized);
+
+	// @SAVEBREAK DELETE
+	WRAPPER_SKIP_ELEMENT(wrapper,"CvGame", m_bFinalInitialized, SAVE_VALUE_ANY);
+	// SAVEBREAK@
+
 	// m_bPbemTurnSent not saved
 	WRAPPER_READ(wrapper,"CvGame",&m_bHotPbemBetweenTurns);
 	// m_bPlayerOptionsSent not saved
@@ -8503,8 +8488,6 @@ void CvGame::read(FDataStreamBase* pStream)
 	int iCurrentHandicap = range(getHandicapType(), 0, GC.getNumHandicapInfos() - 1);
 	setHandicapType((HandicapTypes)iCurrentHandicap);
 
-	m_plotGroupHashesInitialized = false;	//	Force calculation in first update timeslice
-
 	//Example of how to skip element
 	//WRAPPER_SKIP_ELEMENT(wrapper,"CvGame",m_bCircumnavigated, SAVE_VALUE_ANY);
 	WRAPPER_READ_CLASS_ARRAY(wrapper,"CvGame", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiImprovementCount);
@@ -8575,7 +8558,7 @@ void CvGame::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvGame", m_bScoreDirty);
 	WRAPPER_WRITE(wrapper, "CvGame", (int)m_circumnavigatingTeam);
 	// m_bDebugMode not saved
-	WRAPPER_WRITE(wrapper, "CvGame", m_bFinalInitialized);
+
 	// m_bPbemTurnSent not saved
 	WRAPPER_WRITE(wrapper, "CvGame", m_bHotPbemBetweenTurns);
 	// m_bPlayerOptionsSent not saved

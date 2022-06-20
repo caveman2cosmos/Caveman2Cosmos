@@ -215,7 +215,6 @@ public:
 
 	DllExport int getTurnSlice() const;
 	int getMinutesPlayed() const;
-	void changeTurnSlice(int iChange);
 
 	int getCutoffSlice() const;
 	void setCutoffSlice(int iNewValue);
@@ -415,6 +414,8 @@ public:
 
 	DllExport bool isFinalInitialized() const;
 	DllExport void setFinalInitialized(bool bNewValue);
+	void onFinalInitialized(const bool bNewGame = false);
+	void doPreTurn0();
 
 	bool getPbemTurnSent() const;
 	DllExport void setPbemTurnSent(bool bNewValue);
@@ -820,11 +821,10 @@ protected:
 	stdext::hash_map<VoteSourceTypes, ReligionTypes> m_mapVoteSourceReligions;
 	std::vector<EventTriggerTypes> m_aeInactiveTriggers;
 
-	int		m_iNumCultureVictoryCities;
-	int		m_eCultureVictoryCultureLevel;
+	int m_iNumCultureVictoryCities;
+	int m_eCultureVictoryCultureLevel;
 
-	bool	m_plotGroupHashesInitialized;
-	bool	m_bRecalculatingModifiers;
+	bool m_bRecalculatingModifiers;
 
 	void doTurn();
 	void doDeals();
