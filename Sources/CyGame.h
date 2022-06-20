@@ -159,7 +159,7 @@ public:
 	bool isSimultaneousTeamTurns() const;
 
 	bool isFinalInitialized() const;
-	void onFinalInitialized(const bool bNewGame);
+	void onFinalInitialized();
 
 	PlayerTypes getActivePlayer() const;
 	void setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat);

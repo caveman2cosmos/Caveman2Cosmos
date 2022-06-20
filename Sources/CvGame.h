@@ -414,7 +414,8 @@ public:
 
 	DllExport bool isFinalInitialized() const;
 	DllExport void setFinalInitialized(bool bNewValue);
-	void onFinalInitialized(const bool bNewGame);
+	void onFinalInitialized(const bool bNewGame = false);
+	void doPreTurn0();
 
 	bool getPbemTurnSent() const;
 	DllExport void setPbemTurnSent(bool bNewValue);
@@ -823,7 +824,6 @@ protected:
 	int m_iNumCultureVictoryCities;
 	int m_eCultureVictoryCultureLevel;
 
-	//bool m_bFirstGameSlice;
 	bool m_bRecalculatingModifiers;
 
 	void doTurn();

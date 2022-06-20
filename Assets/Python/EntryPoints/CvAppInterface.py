@@ -40,19 +40,19 @@ def onSave():
 	return cPickle.dumps(CvEventInterface.onEvent(('OnSave', 0, 0, 0, 0, 0)))
 
 def onLoad(argsList):
-	import CvScreensInterface
-	CvScreensInterface.mainInterface.bSetStartZoom = True
-	import CvEventInterface
-	loadDataStr = argsList[0]
-	if loadDataStr:
+	if argsList[0]:
+		import CvEventInterface
 		import cPickle
-		CvEventInterface.onEvent(('OnLoad', cPickle.loads(loadDataStr), 0, 0, 0, 0, 0))
+		CvEventInterface.onEvent(('OnLoad', cPickle.loads(argsList[0]), 0, 0, 0, 0, 0))
 
+# Toffer - This one is called right before the map is seen when starting an new game or loading a save from the main menu.
+#	Not called when loading a save from within an active game.
+#	Called later than the OnLoad event, but earlier than the GameStart event.
 def preGameStart():
 	#import CvEventInterface
 	#CvEventInterface.getEventManager().fireEvent("PreGameStart")
+	print "PreGameStart"
 	import CvScreensInterface
-	CvScreensInterface.mainInterface.bSetStartZoom = True
 	CvScreensInterface.showMainInterface()
 
 def recalculateModifiers():

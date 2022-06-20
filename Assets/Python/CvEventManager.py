@@ -543,7 +543,8 @@ class CvEventManager:
 
 
 	def gameStart(self, bNewGame=False):
-		GAME.onFinalInitialized(bNewGame)
+		CvScreensInterface.mainInterface.bSetStartZoom = True
+
 		############################
 		# Cache game specific data #
 		if GAME.isNetworkMultiPlayer():
@@ -695,6 +696,7 @@ class CvEventManager:
 
 
 	def onLoadGame(self, argsList):
+		GAME.onFinalInitialized()
 		self.gameStart()
 
 

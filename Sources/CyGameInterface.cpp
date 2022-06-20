@@ -148,7 +148,7 @@ void CyGamePythonInterface()
 		.def("isSimultaneousTeamTurns", &CyGame::isSimultaneousTeamTurns, "bool ()")
 
 		.def("isFinalInitialized", &CyGame::isFinalInitialized, "bool () - Returns whether or not the game initialization process has ended (game has started)")
-		.def("onFinalInitialized", &CyGame::onFinalInitialized, "void (bool bNewGame) - dll is poor at homing in on this game event (i.e. new game + load save), so python will notify it.")
+		.def("onFinalInitialized", &CyGame::onFinalInitialized, "void () - dll is poor at homing in on the load save finished game event, so python will notify it")
 
 		.def("getActivePlayer", &CyGame::getActivePlayer, "returns index of the active player")
 		.def("setActivePlayer", &CyGame::setActivePlayer, "void (int /*PlayerTypes*/ eNewValue, bool bForceHotSeat)")
