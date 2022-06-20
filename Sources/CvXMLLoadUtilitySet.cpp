@@ -495,19 +495,13 @@ bool CvXMLLoadUtility::SetGlobalTypes()
 		return false;
 	}
 
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   03/14/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	// Debugging dependencies problems - BEGIN
 #ifdef _DEBUG
+/*************************************************************************************/
+/* XML_CHECK_DOUBLE_TYPE - Debugging dependencies problems - 03/14/08 - MRGENIE		*/
 	GC.logInfoTypeMap("SetGlobalTypes PRE");
+/* XML_CHECK_DOUBLE_TYPE					END										*/
+/************************************************************************************/
 #endif
-	// Debugging dependencies problems - END
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   END                                                  */
-/************************************************************************************************/
 
 	if (LoadCivXml("xml/GlobalTypes.xml"))
 	{
@@ -532,19 +526,14 @@ bool CvXMLLoadUtility::SetGlobalTypes()
 		SetVariableListTagPair(&GC.getFootstepAudioTags(), L"FootstepAudioTags", GC.getNumFootstepAudioTypes(), "");
 	}
 
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   03/14/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	// Debugging dependencies problems - BEGIN
 #ifdef _DEBUG
+/*************************************************************************************/
+/* XML_CHECK_DOUBLE_TYPE - Debugging dependencies problems - 03/14/08 - MRGENIE		*/
 	GC.logInfoTypeMap("SetGlobalTypes POST");
+/* XML_CHECK_DOUBLE_TYPE					END										*/
+/************************************************************************************/
 #endif
-	// Debugging dependencies problems - END
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   END                                                  */
-/************************************************************************************************/
+
 	// delete the pointer to the FXml variable
 	DestroyFXml();
 

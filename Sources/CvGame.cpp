@@ -7815,16 +7815,13 @@ CvRandom& CvGame::getSorenRand()
 
 void CvGame::logRandomResult(const wchar_t* szStreamName, const char* pszLog, int iMax, int iResult)
 {
-	if (GC.isXMLLogging() || isNetworkMultiPlayer())
+	if (isNetworkMultiPlayer() && isFinalInitialized())
 	{
-		if (isFinalInitialized())
-		{
-			static int iLine = 0;
-			logging::logMsg(
-				(bst::format("RandomLogger - Player %d - Set %d.log") % getActivePlayer() % (getGameTurn()/50)).str().c_str(),
-				"%d\t%d\t%S\t%s\t%d\t%d\n", ++iLine, getGameTurn()+1, szStreamName, pszLog, iMax, iResult
-			);
-		}
+		static int iLine = 0;
+		logging::logMsg(
+			(bst::format("RandomLogger - Player %d - Set %d.log") % getActivePlayer() % (getGameTurn()/50)).str().c_str(),
+			"%d\t%d\t%S\t%s\t%d\t%d\n", ++iLine, getGameTurn()+1, szStreamName, pszLog, iMax, iResult
+		);
 	}
 }
 

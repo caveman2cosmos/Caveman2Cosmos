@@ -132,8 +132,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_fPLOT_SIZE(0)
 	, m_iViewportCenterOnSelectionCenterBorder(5)
 	, m_szAlternateProfilSampleName("")
-	, m_bXMLLogging(true)
-
 	// BBAI Options
 	, m_bBBAI_AIR_COMBAT(false)
 	, m_bBBAI_HUMAN_VASSAL_WAR_BUILD(false)
@@ -2442,8 +2440,6 @@ void cvInternalGlobals::cacheGlobals()
 
 	m_bTECH_DIFFUSION_ENABLE = !(getDefineINT("TECH_DIFFUSION_ENABLE") == 0);
 
-	m_bXMLLogging = getDefineINT("XML_LOGGING_ENABLED");
-
 	m_szAlternateProfilSampleName = getDefineSTRING("PROFILER_ALTERNATE_SAMPLE_SET_SOURCE");
 	if (m_szAlternateProfilSampleName == NULL)
 	{
@@ -2651,29 +2647,26 @@ int cvInternalGlobals::getOrCreateInfoTypeForString(const char* szType)
 
 void cvInternalGlobals::logInfoTypeMap(const char* tagMsg)
 {
-	if (GC.isXMLLogging())
+	logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " === Info Type Map Dump BEGIN: %s ===", tagMsg);
+
+	int iCnt = 0;
+	std::vector<std::string> vInfoMapKeys;
+	for (InfosMap::const_iterator it = m_infosMap.begin(); it != m_infosMap.end(); ++it)
 	{
-		logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " === Info Type Map Dump BEGIN: %s ===", tagMsg);
-
-		int iCnt = 0;
-		std::vector<std::string> vInfoMapKeys;
-		for (InfosMap::const_iterator it = m_infosMap.begin(); it != m_infosMap.end(); ++it)
-		{
-			std::string sKey = it->first;
-			vInfoMapKeys.push_back(sKey);
-		}
-
-		algo::sort(vInfoMapKeys);
-
-		foreach_(const std::string& sKey, vInfoMapKeys)
-		{
-			logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " * %i --  %s: %i", iCnt, sKey.c_str(), m_infosMap[sKey.c_str()]);
-			iCnt++;
-		}
-
-		logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", "Entries in total: %i", iCnt);
-		logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " === Info Type Map Dump END: %s ===", tagMsg);
+		std::string sKey = it->first;
+		vInfoMapKeys.push_back(sKey);
 	}
+
+	algo::sort(vInfoMapKeys);
+
+	foreach_(const std::string& sKey, vInfoMapKeys)
+	{
+		logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " * %i --  %s: %i", iCnt, sKey.c_str(), m_infosMap[sKey.c_str()]);
+		iCnt++;
+	}
+
+	logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", "Entries in total: %i", iCnt);
+	logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " === Info Type Map Dump END: %s ===", tagMsg);
 }
 /************************************************************************************************/
 /* SORT_ALPHABET                           END                                                  */
@@ -2969,8 +2962,6 @@ void cvInternalGlobals::refreshOptionsBUG()
 	gCityLogLevel = gPlayerLogLevel;
 	gUnitLogLevel = gPlayerLogLevel;
 
-	m_bXMLLogging = gPlayerLogLevel > 0;
-
 	OutputRatios::setBaseOutputWeights(
 		getBugOptionINT("CityScreen__BaseWeightFood", 10),
 		getBugOptionINT("CityScreen__BaseWeightHammer", 8),
@@ -2992,12 +2983,6 @@ bool cvInternalGlobals::getBBAI_HUMAN_VASSAL_WAR_BUILD() const
 bool cvInternalGlobals::getTECH_DIFFUSION_ENABLE() const
 {
 	return m_bTECH_DIFFUSION_ENABLE;
-}
-
-
-bool cvInternalGlobals::isXMLLogging() const
-{
-	return m_bXMLLogging;
 }
 
 

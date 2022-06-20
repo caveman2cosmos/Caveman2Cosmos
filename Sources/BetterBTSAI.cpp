@@ -14,16 +14,13 @@ int gUnitLogLevel = 0;
 // AI decision making logging
 void logBBAI(char* format, ... )
 {
-	if (GC.isXMLLogging())
-	{
-		static char buf[2048];
-		_vsnprintf( buf, 2048-4, format, (char*)(&format+1) );
-		gDLL->logMsg("BBAI.log", buf);
+	static char buf[2048];
+	_vsnprintf( buf, 2048-4, format, (char*)(&format+1) );
+	gDLL->logMsg("BBAI.log", buf);
 
-		// Echo to debugger
-		strcat(buf, "\n");
-		OutputDebugString(buf);
-	}
+	// Echo to debugger
+	strcat(buf, "\n");
+	OutputDebugString(buf);
 }
 
 void logAIJson(CvWString type,CvWString identifier, CvWString squirrel, CvWString message)
