@@ -2930,17 +2930,15 @@ bool cvInternalGlobals::bugInitCalled() const
 	return bBugInitCalled;
 }
 
+// Toffer - Only ever called once, happens the first time one start a new game, or loads a save.
 void cvInternalGlobals::setIsBug()
 {
 	bBugInitCalled = true;
 
 	::setIsBug();
+	refreshOptionsBUG();
 
-#ifdef _DEBUG // Matt: temporary
-	Cy::call("CvInfoUtilInterface", "init");
-#endif
-
-	//	If viewports are truned on in BUG the settinsg there override those in the global defines
+	// If viewports are truned on in BUG the settinsg there override those in the global defines
 	if (getBugOptionBOOL("MainInterface__EnableViewports", false))
 	{
 		m_ENABLE_VIEWPORTS = true;
@@ -2963,6 +2961,23 @@ void cvInternalGlobals::setIsBug()
 	}
 }
 
+void cvInternalGlobals::refreshOptionsBUG()
+{
+	// Toffer - ToDo - Add the missing bug options for specific logging.
+	gPlayerLogLevel = getBugOptionINT("Autolog__BBAILevel", 0);
+	gTeamLogLevel = gPlayerLogLevel;
+	gCityLogLevel = gPlayerLogLevel;
+	gUnitLogLevel = gPlayerLogLevel;
+
+	m_bXMLLogging = gPlayerLogLevel > 0;
+
+	OutputRatios::setBaseOutputWeights(
+		getBugOptionINT("CityScreen__BaseWeightFood", 10),
+		getBugOptionINT("CityScreen__BaseWeightHammer", 8),
+		getBugOptionINT("CityScreen__BaseWeightCommerce", 6)
+	);
+}
+
 
 bool cvInternalGlobals::getBBAI_AIR_COMBAT() const
 {
@@ -2979,11 +2994,6 @@ bool cvInternalGlobals::getTECH_DIFFUSION_ENABLE() const
 	return m_bTECH_DIFFUSION_ENABLE;
 }
 
-
-void cvInternalGlobals::setXMLLogging(bool bNewVal)
-{
-	m_bXMLLogging = bNewVal;
-}
 
 bool cvInternalGlobals::isXMLLogging() const
 {

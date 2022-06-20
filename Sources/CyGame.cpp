@@ -572,6 +572,11 @@ bool CyGame::isFinalInitialized() const
 	return m_pGame.isFinalInitialized();
 }
 
+void CyGame::onFinalInitialized(const bool bNewGame)
+{
+	m_pGame.onFinalInitialized(bNewGame);
+}
+
 PlayerTypes CyGame::getActivePlayer() const
 {
 	return m_pGame.getActivePlayer();

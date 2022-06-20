@@ -454,7 +454,6 @@ public:
 	int iStuckUnitCount;
 
 	bool isXMLLogging() const;
-	void setXMLLogging(bool bNewVal);
 
 	void updateReplacements();
 
@@ -767,6 +766,7 @@ public:
 	void setAreaFinder(FAStar* pVal);
 	void setPlotGroupFinder(FAStar* pVal);
 	void setIsBug();
+	void refreshOptionsBUG();
 
 	uint32_t getAssetCheckSum() const;
 
