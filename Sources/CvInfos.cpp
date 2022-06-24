@@ -17653,7 +17653,7 @@ bool CvProjectInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iWorldTradeRoutes, L"iWorldTradeRoutes");
 	pXML->GetOptionalChildXmlValByName(&m_bTechShareWithHalfCivs, L"bTechShareWithHalfCivs");
 	pXML->GetOptionalChildXmlValByName(&m_iInflationModifier, L"iInflationModifier");
-	
+
 	if (pXML->TryMoveToXmlFirstChild(L"CommerceModifiers"))
 	{
 		pXML->SetCommerce(&m_piCommerceModifier);
@@ -19194,7 +19194,7 @@ CvTraitInfo::~CvTraitInfo()
 	GC.removeDelayedResolution((int*)&m_iPrereqTrait);
 	GC.removeDelayedResolution((int*)&m_iPrereqOrTrait1);
 	GC.removeDelayedResolution((int*)&m_iPrereqOrTrait2);
-	
+
 	CvInfoUtil(this).uninitDataMembers();
 }
 

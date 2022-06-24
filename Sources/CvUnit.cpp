@@ -10545,7 +10545,7 @@ TechTypes CvUnit::getDiscoveryTech() const
 int CvUnit::getDiscoverResearch(const TechTypes eTech) const
 {
 	int iResearch = (
-		m_pUnitInfo->getBaseDiscover() + 
+		m_pUnitInfo->getBaseDiscover() +
 		m_pUnitInfo->getDiscoverMultiplier() * GET_TEAM(getTeam()).getTotalPopulation()
 	);
 	if (iResearch > 0)

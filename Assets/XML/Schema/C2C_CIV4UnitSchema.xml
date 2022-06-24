@@ -2828,7 +2828,7 @@
 		<element type="PropertyType" minOccurs="0"/>
 		<element type="PrereqTech" minOccurs="0"/>
 		<element type="ObsoleteTech" minOccurs="0"/>
-		<element type="Categories" minOccurs="0"/>		
+		<element type="Categories" minOccurs="0"/>
 		<element type="iCommunicability" minOccurs="0"/>
 		<element type="iOutbreakModifier" minOccurs="0"/>
 		<element type="iOvercomeModifier" minOccurs="0"/>

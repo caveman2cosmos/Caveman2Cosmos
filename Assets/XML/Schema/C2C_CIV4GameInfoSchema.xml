@@ -2198,7 +2198,7 @@
 	</ElementType>
 	<ElementType name="Civ4IdeaInfos" content="eltOnly">
 		<element type="IdeaInfos" minOccurs="0"/>
-	</ElementType>	
+	</ElementType>
 	<ElementType name="Civ4CategoryInfos" content="eltOnly">
 		<element type="CategoryInfos" minOccurs="0"/>
 	</ElementType>

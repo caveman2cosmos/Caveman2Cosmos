@@ -5312,7 +5312,7 @@ public:
 	int getStateReligionCommerce(int i) const;
 	int* getStateReligionCommerceArray() const;
 	int getFlavorValue(int i) const;
-	
+
 	int getCategory(int i) const;
 	int getNumCategories() const;
 	bool isCategory(int i) const;
@@ -8800,7 +8800,7 @@ public:
 	int getCureAfflictionChangeType(int i) const;
 	int getNumCureAfflictionChangeTypes() const;
 	bool isCureAfflictionChangeType(int i) const;
-	
+
 	int getNumAfflictionFortitudeChangeModifiers() const;
 	const PromotionLineModifier& getAfflictionFortitudeChangeModifier(int iAfflictionLine) const;
 
