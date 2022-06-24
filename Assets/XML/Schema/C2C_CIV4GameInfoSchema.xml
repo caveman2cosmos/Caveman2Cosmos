@@ -1544,7 +1544,7 @@
 		<element type="bCtrlDown" minOccurs="0"/>
 		<element type="iHotKeyPriority" minOccurs="0"/>
 		<element type="iOrderPriority" minOccurs="0"/>
-		<element type="Button" maxOccurs="*"/>
+		<element type="Button" minOccurs="0"/>
 		<element type="PropertyManipulators" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="SpecialistInfos" content="eltOnly">
