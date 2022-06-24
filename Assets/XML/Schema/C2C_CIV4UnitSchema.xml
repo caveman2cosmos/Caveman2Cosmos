@@ -448,7 +448,6 @@
 	<ElementType name="PromotionLineType" content="textOnly"/>
 	<ElementType name="MinEraType" content="textOnly"/>
 	<ElementType name="MaxEraType" content="textOnly"/>
-	<ElementType name="Category" content="textOnly"/>
 	<!--Boolean Vectors-->
 	<ElementType name="SubCombatType" content="textOnly"/>
 	<ElementType name="SubCombatTypes" content="eltOnly">
@@ -2675,7 +2674,6 @@
 		<element type="EntityEventInfo" maxOccurs="*" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="Path" content="textOnly"/>
-	<ElementType name="Category" content="textOnly"/>
 	<ElementType name="Operator" content="textOnly"/>
 	<ElementType name="BaseID" content="textOnly" dt:type="int"/>
 	<ElementType name="SetIncrement" content="textOnly" dt:type="int"/>
