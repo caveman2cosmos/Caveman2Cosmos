@@ -122,6 +122,7 @@ class CvMapCategoryInfo;
 class CvIdeaClassInfo;
 class CvIdeaInfo;
 class CvInvisibleInfo;
+class CvCategoryInfo;
 //class CvTraitOptionEditsInfo;
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/24/07                                MRGENIE      */
@@ -472,6 +473,9 @@ public:
 
 	int getNumInvisibleInfos() const;
 	CvInvisibleInfo& getInvisibleInfo(InvisibleTypes e) const;
+
+	int getNumCategoryInfos() const;
+	CvCategoryInfo& getCategoryInfo(CategoryTypes e) const;
 
 	int getNumVoteSourceInfos() const;
 	CvVoteSourceInfo& getVoteSourceInfo(VoteSourceTypes e) const;
@@ -974,6 +978,7 @@ protected:
 	std::vector<CvInfoBase*> m_paMonthInfo;
 	std::vector<CvInfoBase*> m_paDenialInfo;
 	std::vector<CvInvisibleInfo*> m_paInvisibleInfo;
+	std::vector<CvCategoryInfo*> m_paCategoryInfo;
 	std::vector<CvVoteSourceInfo*> m_paVoteSourceInfo;
 	std::vector<CvUnitCombatInfo*> m_paUnitCombatInfo;
 	std::vector<CvPromotionLineInfo*> m_paPromotionLineInfo;

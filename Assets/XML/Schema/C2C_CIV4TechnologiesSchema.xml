@@ -161,6 +161,7 @@
 		<element type="Help" minOccurs="0"/>
 		<element type="Strategy" minOccurs="0"/>
 		<element type="Advisor" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="iAIWeight" minOccurs="0"/>
 		<element type="iAITradeModifier" minOccurs="0"/>
 		<element type="iCost" minOccurs="0"/>
@@ -262,4 +263,8 @@
 	<ElementType name="FreeSpecialistCounts" content="eltOnly">
 		<element type="FreeSpecialistCount" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="Categories" content="eltOnly">
+		<element type="Category" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Category" content="textOnly"/>
 </Schema>

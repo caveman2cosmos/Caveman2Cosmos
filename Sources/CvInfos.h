@@ -270,6 +270,10 @@ public:
 	int getCommerceChange(int i) const;
 	int getFlavorValue(int i) const;
 
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
+
 	const char* getTexture() const;
 
 	//Team Project (1)
@@ -331,6 +335,8 @@ protected:
 	IDValueMap<TechTypes, int> m_aTechHealthTypes;
 	std::vector<UnitCombatModifier> m_aUnitCombatExperienceTypes;
 	std::vector<UnitCombatModifier> m_aUnitCombatExperienceTypesNull;
+
+	std::vector<int> m_aiCategories;
 
 	CvString m_szTexture;
 };
@@ -425,6 +431,10 @@ public:
 	const PrereqBuilding& getPrereqOrBuilding(int iIndex) const;
 	int getPrereqOrBuildingType(int iIndex) const;
 	int getPrereqOrBuildingMinimumRequired(int iIndex) const;
+
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
 
 	bool isGlobal() const;
 
@@ -544,6 +554,8 @@ protected:
 	int m_iCorporationMaintenanceModifier;
 	int m_iPrereqGameOption;
 	int* m_piFreeSpecialistCount;
+
+	std::vector<int> m_aiCategories;
 
 	std::vector<PrereqBuilding> m_aPrereqBuilding;
 	std::vector<PrereqBuilding> m_aPrereqOrBuilding;
@@ -877,6 +889,10 @@ public:
 	int getNoAutoEquiptoCombatClassType(int i) const;
 	int getNumNoAutoEquiptoCombatClassTypes() const;
 	bool isNoAutoEquiptoCombatClassType(int i) const;
+
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
 
 	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
 
@@ -1349,6 +1365,7 @@ protected:
 	std::vector<int> m_aiNotOnUnitCombatTypes;
 	std::vector<int> m_aiNotOnDomainTypes;
 	std::vector<int> m_aiNoAutoEquiptoCombatClassTypes;
+	std::vector<int> m_aiCategories;
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
 	std::vector<BonusTypes> m_aiPrereqBonusTypes;
 	std::vector<int> m_aiAddsBuildTypes;
@@ -1952,6 +1969,10 @@ public:
 	int getTrapImmunityUnitCombatType(int i) const;
 	int getNumTrapImmunityUnitCombatTypes() const;
 	bool isTrapImmunityUnitCombatType(int i) const;
+
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	int getNumAfflictionFortitudeModifiers() const;
@@ -2593,6 +2614,7 @@ private:
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
 	std::vector<int> m_aiTrapSetWithPromotionTypes;
 	std::vector<int> m_aiTrapImmunityUnitCombatTypes;
+	std::vector<int> m_aiCategories;
 
 	std::vector<HealUnitCombat> m_aHealUnitCombatTypes;
 	std::vector<GroupSpawnUnitCombat> m_aGroupSpawnUnitCombatTypes;
@@ -3066,10 +3088,15 @@ public:
 	CvString getCivicAttitudeReasonNamesVectorElement(int i) const;
 	CvString getCivicAttitudeReasonValuesVectorElement(int i) const;
 
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
+
 	bool readPass3();
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvCivicInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
+
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
@@ -3210,6 +3237,8 @@ protected:
 	int** m_ppiBuildingCommerceModifier;
 	int** m_ppiBonusCommerceModifier;
 	int** m_ppiImprovementYieldChanges;
+
+	std::vector<int> m_aiCategories;
 
 	IDValueMap<BuildingTypes, int> m_aBuildingProductionModifier;
 
@@ -3882,6 +3911,10 @@ public:
 	int getFeatureProduction(FeatureTypes e) const;
 	bool isFeatureRemove(FeatureTypes e) const;
 
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
+
 	const std::vector<BonusTypes>& getPrereqBonuses() const			{ return m_aiPrereqBonusTypes; }
 	const std::vector<MapCategoryTypes>& getMapCategories() const	{ return m_aeMapCategoryTypes; }
 	const std::vector<TerrainStructs>& getTerrainStructs() const	{ return m_aTerrainStructs; }
@@ -3917,6 +3950,7 @@ private:
 	int* m_paiFeatureProduction;
 	bool* m_pabFeatureRemove;
 
+	std::vector<int> m_aiCategories;
 	std::vector<BonusTypes> m_aiPrereqBonusTypes;
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
 
@@ -4031,6 +4065,10 @@ public:
 	int* getYieldChangeArray() const;
 	int getTechMovementChange(int i) const;
 
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
+
 	const std::vector<BonusTypes>& getPrereqOrBonuses() const;
 
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
@@ -4057,6 +4095,7 @@ private:
 	// Arrays
 	int* m_piYieldChange;
 	int* m_piTechMovementChange;
+	std::vector<int> m_aiCategories;
 	std::vector<BonusTypes> m_piPrereqOrBonuses;
 };
 
@@ -4199,6 +4238,10 @@ public:
 
 	bool canBeSecondary() const;
 
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
+
 	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
@@ -4223,6 +4266,7 @@ protected:
 	bool m_bIgnoreTerrainCulture;
 	bool m_bCanGrowAnywhere;
 
+	std::vector<int> m_aiCategories;
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
 public:
 
@@ -4456,6 +4500,10 @@ public:
 	bool isColdDamage() const;
 	//TB Combat Mod end
 
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
+
 private:
 	CvPropertyManipulators m_PropertyManipulators;
 
@@ -4481,6 +4529,7 @@ private:
 	int* m_piYields;
 	int* m_pi3DAudioScriptFootstepIndex;
 
+	std::vector<int> m_aiCategories;
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
@@ -5145,6 +5194,10 @@ public:
 
 	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
 
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
+
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(const CvProjectInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
@@ -5204,6 +5257,7 @@ protected:
 	int* m_piProjectsNeeded;
 
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
+	std::vector<int> m_aiCategories;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5258,6 +5312,10 @@ public:
 	int getStateReligionCommerce(int i) const;
 	int* getStateReligionCommerceArray() const;
 	int getFlavorValue(int i) const;
+	
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
 
 	const std::vector<BuildingTypes>& getShrineBuildings() const { return m_shrineBuildings; }
 	void addShrineBuilding(BuildingTypes eBuilding) { m_shrineBuildings.push_back(eBuilding); }
@@ -5269,6 +5327,8 @@ public:
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 private:
+
+
 	CvPropertyManipulators m_PropertyManipulators;
 
 	// TGA_INDEXATION 01/21/08 MRGENIE
@@ -5296,6 +5356,7 @@ private:
 	int* m_paiStateReligionCommerce;
 	int* m_piFlavorValue;
 
+	std::vector<int> m_aiCategories;
 	std::vector<BuildingTypes> m_shrineBuildings;
 };
 
@@ -5367,6 +5428,10 @@ public:
 	CvString getCompetingCorporationNamesVectorElement(const int i) const;
 	bool getCompetingCorporationValuesVectorElement(const int i) const;
 
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
+
 	bool readPass3();
 	int getYieldChange(int i) const;
 	int* getYieldChangeArray() const;
@@ -5380,6 +5445,9 @@ public:
 	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 private:
+
+	std::vector<int> m_aiCategories;
+
 	CvPropertyManipulators m_PropertyManipulators;
 
 protected:
@@ -5586,6 +5654,10 @@ public:
 	int getOnGameOption(int i) const;
 	int getNumOnGameOptions() const;
 	bool isOnGameOption(int i) const;
+
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
 
 	//Arrays
 	int getSpecialistYieldChange(int i, int j) const;
@@ -5849,6 +5921,7 @@ private:
 	int* m_piGoldenAgeYieldChangesFiltered;
 	int* m_piGoldenAgeCommerceChangesFiltered;
 	// bool vector without delayed resolution
+	std::vector<int> m_aiCategories;
 	// int vector utilizing struct with delayed resolution
 	IDValueMap<ImprovementTypes, int> m_aImprovementUpgradeModifierTypes;
 	IDValueMap<BuildTypes, int> m_aBuildWorkerSpeedModifierTypes;
@@ -8357,6 +8430,10 @@ public:
 	int getNumCriticalOriginCombatClassTypes() const;
 	bool isCriticalOriginCombatClassType(int i) const;
 
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
+
 	// int vector utilizing pairing without delayed resolution
 	int getNumUnitCombatContractChanceChanges() const;
 	int getUnitCombatContractChanceChange(int iUnitCombat) const;
@@ -8426,6 +8503,7 @@ protected:
 	std::vector<int> m_aiCriticalOriginCombatClassTypes;
 	std::vector<int> m_aiPromotions;
 	std::vector<int> m_aiBuildings;
+	std::vector<int> m_aiCategories;
 
 	// int vector utilizing pairing without delayed resolution
 	UnitCombatModifierArray m_aUnitCombatContractChanceChanges;
@@ -8687,6 +8765,10 @@ public:
 	int getNumTrapImmunityUnitCombatTypes() const;
 	bool isTrapImmunityUnitCombatType(int i) const;
 
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
+
 	// int vector utilizing pairing without delayed resolution
 	int getNumWithdrawOnTerrainTypeChanges() const;
 	int getWithdrawOnTerrainTypeChange(int iTerrain) const;
@@ -8718,7 +8800,7 @@ public:
 	int getCureAfflictionChangeType(int i) const;
 	int getNumCureAfflictionChangeTypes() const;
 	bool isCureAfflictionChangeType(int i) const;
-
+	
 	int getNumAfflictionFortitudeChangeModifiers() const;
 	const PromotionLineModifier& getAfflictionFortitudeChangeModifier(int iAfflictionLine) const;
 
@@ -9021,6 +9103,7 @@ protected:
 	std::vector<int> m_aiGGptsforUnitTypes;
 	std::vector<int> m_aiDefaultStatusTypes;
 	std::vector<int> m_aiTrapImmunityUnitCombatTypes;
+	std::vector<int> m_aiCategories;
 	// int vectors utilizing pairing without delayed resolution
 	TerrainModifierArray m_aWithdrawOnTerrainTypesChange;
 	FeatureModifierArray m_aWithdrawOnFeatureTypesChange;
@@ -9172,6 +9255,37 @@ private:
 	int m_iChar;
 	int m_iFontButtonIndex;
 	bool m_bIntrinsic;
+};
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//
+//  class : CvCategoryInfo
+//
+//  DESC:   Contains info about Category Types
+//
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+class CvCategoryInfo
+	: public CvInfoBase
+	, private bst::noncopyable
+{
+public:
+
+	CvCategoryInfo();
+	virtual ~CvCategoryInfo();
+
+	bool read(CvXMLLoadUtility* pXML);
+	void copyNonDefaults(const CvCategoryInfo* pClassInfo);
+	void getCheckSum(uint32_t& iSum) const;
+
+	bool isInitialized();
+
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
+
+protected:
+	bool m_bInitialized;
+	std::vector<int> m_aiCategories;
 };
 
 class CvUnitAIInfo : public CvInfoBase, private bst::noncopyable { };

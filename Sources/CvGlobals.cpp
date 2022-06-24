@@ -1286,6 +1286,18 @@ CvInvisibleInfo& cvInternalGlobals::getInvisibleInfo(InvisibleTypes e) const
 }
 
 
+int cvInternalGlobals::getNumCategoryInfos() const
+{
+	return (int)m_paCategoryInfo.size();
+}
+
+CvCategoryInfo& cvInternalGlobals::getCategoryInfo(CategoryTypes e) const
+{
+	FASSERT_BOUNDS(0, GC.getNumCategoryInfos(), e);
+	return *(m_paCategoryInfo[e]);
+}
+
+
 int cvInternalGlobals::getNumVoteSourceInfos() const
 {
 	return (int)m_paVoteSourceInfo.size();

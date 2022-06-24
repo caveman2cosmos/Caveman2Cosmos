@@ -652,6 +652,21 @@ bool CvBuildingInfo::isCommerceFlexible(int i) const
 	return m_pbCommerceFlexible ? m_pbCommerceFlexible[i] : false;
 }
 
+int CvBuildingInfo::getCategory(int i) const
+{
+	return m_aiCategories[i];
+}
+
+int CvBuildingInfo::getNumCategories() const
+{
+	return (int)m_aiCategories.size();
+}
+
+bool CvBuildingInfo::isCategory(int i) const
+{
+	return algo::any_of_equal(m_aiCategories, i);
+}
+
 int CvBuildingInfo::getPrereqInCityBuilding(const int i) const
 {
 	return m_aiPrereqInCityBuildings[i];
@@ -1947,6 +1962,7 @@ void CvBuildingInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_freeBonuses);
 	CheckSumC(iSum, m_aePrereqOrRawVicinityBonuses);
 	CheckSumC(iSum, m_aePrereqOrBonuses);
+	CheckSumC(iSum, m_aiCategories);
 	CheckSumC(iSum, m_aiPrereqInCityBuildings);
 	CheckSumC(iSum, m_vPrereqNotInCityBuildings);
 	CheckSumC(iSum, m_vPrereqOrBuilding);
@@ -3061,6 +3077,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->SetOptionalVectorWithDelayedResolution(m_aiFreeTraitTypes, L"FreeTraitTypes");
+	pXML->SetOptionalVectorWithDelayedResolution(m_aiCategories, L"Categories");
 	pXML->SetOptionalVectorWithDelayedResolution(m_aiPrereqInCityBuildings, L"PrereqInCityBuildings");
 	pXML->SetOptionalVectorWithDelayedResolution(m_vPrereqNotInCityBuildings, L"PrereqNotInCityBuildings");
 	pXML->SetOptionalVectorWithDelayedResolution(m_vPrereqOrBuilding, L"PrereqOrBuildings");
@@ -4119,6 +4136,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo)
 	}
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aFreePromoTypes, pClassInfo->getFreePromoTypes());
 	GC.copyNonDefaultDelayedResolutionVector(m_aiFreeTraitTypes, pClassInfo->m_aiFreeTraitTypes);
+	GC.copyNonDefaultDelayedResolutionVector(m_aiCategories, pClassInfo->m_aiCategories);
 	GC.copyNonDefaultDelayedResolutionVector(m_aiPrereqInCityBuildings, pClassInfo->m_aiPrereqInCityBuildings);
 	GC.copyNonDefaultDelayedResolutionVector(m_vPrereqNotInCityBuildings, pClassInfo->m_vPrereqNotInCityBuildings);
 	GC.copyNonDefaultDelayedResolutionVector(m_vPrereqOrBuilding, pClassInfo->m_vPrereqOrBuilding);

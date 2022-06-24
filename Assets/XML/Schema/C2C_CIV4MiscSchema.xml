@@ -148,6 +148,7 @@
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<!-- XMLCOPY				END					MRGENIE -->
 		<element type="Description" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="iValue" minOccurs="0"/>
 		<element type="iAdvancedStartCost" minOccurs="0"/>
 		<element type="iMovement" minOccurs="0"/>
@@ -537,4 +538,8 @@
 		<element type="ScriptUnitInfos" minOccurs="0" maxOccurs="1"/>
 		<element type="ScriptSoundInfos" minOccurs="0" maxOccurs="1"/>
 	</ElementType>
+	<ElementType name="Categories" content="eltOnly">
+		<element type="Category" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Category" content="textOnly"/>
 </Schema>

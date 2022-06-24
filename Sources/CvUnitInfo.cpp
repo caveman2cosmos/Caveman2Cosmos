@@ -1798,6 +1798,21 @@ const std::vector<BonusTypes>& CvUnitInfo::getPrereqOrVicinityBonuses() const
 	return m_piPrereqOrVicinityBonuses;
 }
 
+int CvUnitInfo::getCategory(int i) const
+{
+	return m_aiCategories[i];
+}
+
+int CvUnitInfo::getNumCategories() const
+{
+	return (int)m_aiCategories.size();
+}
+
+bool CvUnitInfo::isCategory(int i) const
+{
+	return algo::any_of_equal(m_aiCategories, i);
+}
+
 CvWString CvUnitInfo::getCivilizationName(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumCivilizationInfos(), i);
@@ -3759,6 +3774,7 @@ void CvUnitInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iCommandRange);
 
 	CheckSumC(iSum, m_piPrereqOrVicinityBonuses);
+	CheckSumC(iSum, m_aiCategories);
 	CheckSumI(iSum, GC.getNumRouteInfos(), m_pbPassableRouteNeeded);
 
 	m_KillOutcomeList.getCheckSum(iSum);
@@ -4443,6 +4459,7 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->SetOptionalVector(&m_piPrereqOrVicinityBonuses, L"PrereqVicinityBonuses");
+	pXML->SetOptionalVector(&m_aiCategories, L"Categories");
 
 	m_PropertyManipulators.read(pXML);
 
@@ -5417,6 +5434,7 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo)
 	if ( m_iCommandRange == iDefault )	m_iCommandRange = pClassInfo->getCommandRange();
 
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_piPrereqOrVicinityBonuses, pClassInfo->m_piPrereqOrVicinityBonuses);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiCategories, pClassInfo->m_aiCategories);
 
 	for (int i = 0; i < GC.getNumRouteInfos(); i++)
 	{
