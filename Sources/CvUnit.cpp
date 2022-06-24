@@ -20465,7 +20465,7 @@ const PromotionKeyedInfo* CvUnit::findPromotionKeyedInfo(PromotionTypes ePromoti
 
 	if (m_promotionKeyedInfo.size() > 32 && itr->second.Empty())
 	{
-		m_promotionKeyedInfo.erase(itr->first); // Alberts2 - Erase empty elem�nts to save memory
+		m_promotionKeyedInfo.erase(itr->first); // Alberts2 - Erase empty elemnts to save memory
 		return NULL;
 	}
 
@@ -20517,7 +20517,7 @@ const PromotionLineKeyedInfo* CvUnit::findPromotionLineKeyedInfo(PromotionLineTy
 
 	if (m_promotionLineKeyedInfo.size() > 16 && itr->second.Empty())
 	{
-		m_promotionLineKeyedInfo.erase(itr->first); // Alberts2 - Erase empty elem�nts to save memory
+		m_promotionLineKeyedInfo.erase(itr->first); // Alberts2 - Erase empty elemnts to save memory
 		return NULL;
 	}
 
@@ -20558,7 +20558,7 @@ const TerrainKeyedInfo*	CvUnit::findTerrainKeyedInfo(TerrainTypes eTerrain) cons
 	}
 	if (m_terrainKeyedInfo.size() > 16 && itr->second.Empty())
 	{
-		m_terrainKeyedInfo.erase(itr->first); // Alberts2 - Erase empty elem�nts to save memory
+		m_terrainKeyedInfo.erase(itr->first); // Alberts2 - Erase empty elemnts to save memory
 		return NULL;
 	}
 	return &(itr->second);
@@ -20593,7 +20593,7 @@ const FeatureKeyedInfo* CvUnit::findFeatureKeyedInfo(FeatureTypes eFeature) cons
 	}
 	if (m_featureKeyedInfo.size() > 16 && itr->second.Empty())
 	{
-		m_featureKeyedInfo.erase(itr->first); // Alberts2 - Erase empty elem�nts to save memory
+		m_featureKeyedInfo.erase(itr->first); // Alberts2 - Erase empty elemnts to save memory
 		return NULL;
 	}
 	return &(itr->second);
@@ -20628,7 +20628,7 @@ const UnitCombatKeyedInfo* CvUnit::findUnitCombatKeyedInfo(UnitCombatTypes eUnit
 	}
 	if (m_unitCombatKeyedInfo.size() > 32 && itr->second.Empty())
 	{
-		m_unitCombatKeyedInfo.erase(itr->first); // Alberts2 - Erase empty elem�nts to save memory
+		m_unitCombatKeyedInfo.erase(itr->first); // Alberts2 - Erase empty elemnts to save memory
 		return NULL;
 	}
 	return &(itr->second);
