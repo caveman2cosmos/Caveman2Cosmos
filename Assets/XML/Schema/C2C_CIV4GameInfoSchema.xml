@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+	<ElementType name="Category" content="textOnly"/>
+	<ElementType name="Categories" content="eltOnly">
+		<element type="Category"/>
+	</ElementType>
 	<!-- Replacements added by AIAndy -->
 	<ElementType name="ReplacementCondition"/>
 	<ElementType name="ReplacementID"/>
@@ -2199,12 +2203,6 @@
 	<ElementType name="Civ4IdeaInfos" content="eltOnly">
 		<element type="IdeaInfos" minOccurs="0"/>
 	</ElementType>
-	<ElementType name="Civ4CategoryInfos" content="eltOnly">
-		<element type="CategoryInfos" minOccurs="0"/>
-	</ElementType>
-	<ElementType name="CategoryInfos" content="eltOnly">
-		<element type="CategoryInfo" maxOccurs="*"/>
-	</ElementType>
 	<ElementType name="CategoryInfo" content="eltOnly">
 		<element type="Type"/>
 		<element type="bForceOverwrite" minOccurs="0"/>
@@ -2217,8 +2215,10 @@
 		<element type="Strategy" minOccurs="0"/>
 		<element type="Categories" minOccurs="0"/>
 	</ElementType>
-	<ElementType name="Categories" content="eltOnly">
-		<element type="Category" maxOccurs="*"/>
+	<ElementType name="CategoryInfos" content="eltOnly">
+		<element type="CategoryInfo" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="Category" content="textOnly"/>
+	<ElementType name="Civ4CategoryInfos" content="eltOnly">
+		<element type="CategoryInfos" minOccurs="0"/>
+	</ElementType>
 </Schema>
