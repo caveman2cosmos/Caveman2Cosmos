@@ -1709,7 +1709,7 @@ bool CvSelectionGroup::startMission()
 								bAction = true;
 							}
 							break;
-
+						}
 						case MISSION_AIRBOMB5:
 						{
 							if (pLoopUnit->airBomb5(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
@@ -1720,12 +1720,10 @@ bool CvSelectionGroup::startMission()
 						}
 						case MISSION_FENGAGE:
 						{
-							if(GC.isDCM_FIGHTER_ENGAGE())
+							if (GC.isDCM_FIGHTER_ENGAGE()
+							&& pLoopUnit->fighterEngage(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
 							{
-								if (pLoopUnit->fighterEngage(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
-								{
-									bAction = true;
-								}
+								bAction = true;
 							}
 							break;
 						}
