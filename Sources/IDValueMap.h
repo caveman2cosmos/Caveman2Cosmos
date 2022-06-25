@@ -137,7 +137,6 @@ struct IDValueMap
 		{
 			if (!hasValue(otherPair.first))
 			{
-				//m_map.push_back(std::make_pair(otherPair.first, otherPair.second));
 				m_map.push_back(value_type(otherPair));
 			}
 		}
