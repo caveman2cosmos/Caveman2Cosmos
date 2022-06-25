@@ -53,6 +53,7 @@ public:
 	CvGameObjectCity* getGameObject() { return &m_GameObject; }
 	const CvGameObjectCity* getGameObject() const { return &m_GameObject; }
 	int getNumWorkers() const { return m_workers.size(); }
+	std::vector<int> getWorkers() const { return m_workers; }
 	void setWorkerHave(const int iUnitID, const bool bNewValue);
 
 private:
