@@ -132,7 +132,6 @@ DllExport void DLLPublishToPython()
 	CyPropertiesPythonInterface();
 	CyBoolExprPythonInterface();
 	CyIntExprPythonInterface();
-	CvInfoUtil::publishPythonInterface();
 	SCyDebug::installInPython();
 
 	//
