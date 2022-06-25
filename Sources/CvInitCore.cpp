@@ -1707,11 +1707,6 @@ void CvInitCore::read(FDataStreamBase* pStream)
 
 	m_eGameSpeed = NO_GAMESPEED;
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_GAMESPEEDS, (int*)&m_eGameSpeed);
-	if (m_eGameSpeed == NO_GAMESPEED)  // Old savegame before gamespeed remapping
-	{
-		WRAPPER_READ(wrapper, "CvInitCore", (int*)&m_eGameSpeed);
-		handleOldGameSpeed();
-	}
 
 	WRAPPER_READ(wrapper, "CvInitCore", (int*)&m_eTurnTimer);
 	WRAPPER_READ(wrapper, "CvInitCore", (int*)&m_eCalendar);
@@ -2186,7 +2181,7 @@ void CvInitCore::calculateAssetCheckSum()
 	m_uiAssetCheckSum = GC.getAssetCheckSum();
 
 #ifdef _DEBUG
-	//	Perform some validation checks of the loaded info classes (add as needed)
+	// Perform some validation checks of the loaded info classes (add as needed)
 	CvTechInfo::validate();
 #endif
 }
@@ -2212,48 +2207,4 @@ void CvInitCore::checkVersions()
 			}
 		}
 	}
-}
-
-void CvInitCore::handleOldGameSpeed()
-{
-	switch ((int) m_eGameSpeed)
-	{
-		case 0: // eternity
-			m_eGameSpeed = (GameSpeedTypes) GC.getInfoTypeForString("GAMESPEED_ETERNITY");
-			if (m_eGameSpeed != NO_GAMESPEED) // eternity still existing?
-				return;
-
-		case 1: // snail
-			m_eGameSpeed = (GameSpeedTypes) GC.getInfoTypeForString("GAMESPEED_SNAIL");
-			if (m_eGameSpeed != NO_GAMESPEED) // snail still existing?
-				return;
-
-		case 2: // marathon
-			m_eGameSpeed = (GameSpeedTypes) GC.getInfoTypeForString("GAMESPEED_MARATHON");
-			if (m_eGameSpeed != NO_GAMESPEED) // marathon still existing?
-				return;
-
-		case 3: // epic
-			m_eGameSpeed = (GameSpeedTypes) GC.getInfoTypeForString("GAMESPEED_EPIC");
-			if (m_eGameSpeed != NO_GAMESPEED) // epic still existing?
-				return;
-
-		case 4: // normal
-			m_eGameSpeed = (GameSpeedTypes) GC.getInfoTypeForString("GAMESPEED_NORMAL");
-			if (m_eGameSpeed != NO_GAMESPEED) // normal still existing?
-				return;
-
-		case 5: // quick
-			m_eGameSpeed = (GameSpeedTypes) GC.getInfoTypeForString("GAMESPEED_QUICK");
-			if (m_eGameSpeed != NO_GAMESPEED) // quick still existing?
-				return;
-
-		case 6: // blitz
-			m_eGameSpeed = (GameSpeedTypes) GC.getInfoTypeForString("GAMESPEED_BLITZ");
-			if (m_eGameSpeed != NO_GAMESPEED) // blitz still existing?
-				return;
-	}
-
-	// backup plan is using the highest number game speed (which is fastest currently)
-	m_eGameSpeed = (GameSpeedTypes) (GC.getNumGameSpeedInfos() - 1);
 }

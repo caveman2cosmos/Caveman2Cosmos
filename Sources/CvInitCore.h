@@ -290,8 +290,6 @@ public:
 	CvString getExeName() const;
 // BUG - EXE/DLL Paths - end
 
-	void handleOldGameSpeed();
-
 protected:
 
 	void clearCustomMapOptions();
