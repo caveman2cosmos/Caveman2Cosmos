@@ -363,7 +363,6 @@ CvBuildingInfo::~CvBuildingInfo()
 	GC.removeDelayedResolution((int*)&m_iObsoletesToBuilding);
 
 	GC.removeDelayedResolutionVector(m_aEnabledCivilizationTypes);
-	GC.removeDelayedResolutionVector(m_aAidRateChanges);
 	GC.removeDelayedResolutionVector(m_aiFreeTraitTypes);
 	GC.removeDelayedResolutionVector(m_aiPrereqInCityBuildings);
 	GC.removeDelayedResolutionVector(m_vPrereqNotInCityBuildings);
@@ -3025,7 +3024,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"FreePromoTypes"))
 	{
 		const int iNum = pXML->GetXmlChildrenNumber(L"FreePromoType" );
-		m_aFreePromoTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
+		m_aFreePromoTypes.resize(iNum);
 
 		if(pXML->TryMoveToXmlFirstChild())
 		{
@@ -3060,7 +3059,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"HealUnitCombatTypes"))
 	{
 		const int iNum = pXML->GetXmlChildrenNumber(L"HealUnitCombatType" );
-		m_aHealUnitCombatTypes.resize(iNum); // Important to keep the delayed resolution pointers correct
+		m_aHealUnitCombatTypes.resize(iNum);
 
 		if(pXML->TryMoveToXmlFirstChild())
 		{
@@ -3083,7 +3082,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"BonusAidModifiers"))
 	{
 		const int iNum = pXML->GetXmlChildrenNumber(L"BonusAidModifier" );
-		m_aBonusAidModifiers.resize(iNum); // Important to keep the delayed resolution pointers correct
+		m_aBonusAidModifiers.resize(iNum);
 
 		if(pXML->TryMoveToXmlFirstChild())
 		{
@@ -3108,7 +3107,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	if(pXML->TryMoveToXmlFirstChild(L"AidRateChanges"))
 	{
 		const int iNum = pXML->GetXmlChildrenNumber(L"AidRateChange" );
-		m_aAidRateChanges.resize(iNum); // Important to keep the delayed resolution pointers correct
+		m_aAidRateChanges.resize(iNum);
 
 		if(pXML->TryMoveToXmlFirstChild())
 		{
@@ -3178,7 +3177,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_iMaxPlayerInstances, L"iMaxPlayerInstances", -1);
 	pXML->GetOptionalChildXmlValByName(&m_iExtraPlayerInstances, L"iExtraPlayerInstances", 0);
 
-	pXML->SetVariableListTagPair(&m_piVictoryThreshold, L"VictoryThresholds",  GC.getNumVictoryInfos());
+	pXML->SetVariableListTagPair(&m_piVictoryThreshold, L"VictoryThresholds", GC.getNumVictoryInfos());
 
 	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iFreeBuilding, L"FreeBuilding");
 	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iFreeAreaBuilding, L"FreeAreaBuilding");
