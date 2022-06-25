@@ -210,6 +210,7 @@ public:
 	int getNUM_CITY_PLOTS() const { return NUM_CITY_PLOTS; }
 
 	void setIsBug() { GC.setIsBug(); }
+	void refreshOptionsBUG() { GC.refreshOptionsBUG(); }
 
 	void setNoUpdateDefineFLOAT( const char * szName, float fValue ) { return GC.setDefineFLOAT( szName, fValue, false ); }
 

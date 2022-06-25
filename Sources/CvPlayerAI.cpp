@@ -119,15 +119,15 @@ CvPlayerAI::CvPlayerAI()
 	m_aiUnitWeights = NULL;
 	m_aiUnitCombatWeights = NULL;
 	m_aiCloseBordersAttitudeCache = new int[MAX_PLAYERS];
-	//Afforess
+
 	m_aiCivicValueCache = NULL;
 
 	m_aiAttitudeCache = new int[MAX_PLAYERS];
 
 	// Toffer - Transient Caches
-	m_bonusClassRevealed = new int[GC.getNumBonusClassInfos()];
-	m_bonusClassUnrevealed = new int[GC.getNumBonusClassInfos()];
-	m_bonusClassHave = new int[GC.getNumBonusClassInfos()];
+	m_bonusClassRevealed = NULL;
+	m_bonusClassUnrevealed = NULL;
+	m_bonusClassHave = NULL;
 
 	AI_reset(true);
 }
@@ -187,7 +187,6 @@ void CvPlayerAI::AI_uninit()
 	SAFE_DELETE_ARRAY(m_abNonTradeBonusCalculated);
 	SAFE_DELETE_ARRAY(m_aiUnitWeights);
 	SAFE_DELETE_ARRAY(m_aiUnitCombatWeights);
-	//Afforess
 	SAFE_DELETE_ARRAY(m_aiCivicValueCache);
 }
 
@@ -349,6 +348,15 @@ void CvPlayerAI::AI_reset(bool bConstructor)
 	}
 	m_missionTargetCache.clear();
 
+	if (!bConstructor && m_bonusClassRevealed == NULL)
+	{
+		// Can assume none of them are initialized if one of them isn't.
+		FAssertMsg(m_bonusClassUnrevealed == NULL, "Memory leak");
+		FAssertMsg(m_bonusClassHave == NULL, "Memory leak");
+		m_bonusClassRevealed = new int[GC.getNumBonusClassInfos()];
+		m_bonusClassUnrevealed = new int[GC.getNumBonusClassInfos()];
+		m_bonusClassHave = new int[GC.getNumBonusClassInfos()];
+	}
 	m_iBonusClassTallyCachedTurn = -1;
 }
 

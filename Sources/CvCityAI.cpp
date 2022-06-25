@@ -898,7 +898,7 @@ void CvCityAI::AI_chooseProduction()
 
 	int iBuildUnitProb = AI_buildUnitProb();
 
-	int iExistingWorkers = player.AI_totalAreaUnitAIs(pArea, UNITAI_WORKER);
+	int iWorkersInArea = player.AI_totalAreaUnitAIs(pArea, UNITAI_WORKER);
 	int iNeededWorkersInArea = player.AI_neededWorkers(pArea);
 	// Sea worker need independent of whether water area is militarily relevant
 	int iNeededSeaWorkers = (bMaybeWaterArea) ? AI_neededSeaWorkers() : 0;
@@ -1040,7 +1040,7 @@ void CvCityAI::AI_chooseProduction()
 	int iProductionRank = findYieldRateRank(YIELD_PRODUCTION);
 
 
-	if (gCityLogLevel >= 3) logBBAI("      City %S pop %d considering new production: iProdRank %d, iBuildUnitProb %d", getName().GetCString(), getPopulation(), iProductionRank, iBuildUnitProb);
+	if (gCityLogLevel > 2) logBBAI("      City %S pop %d considering new production: iProdRank %d, iBuildUnitProb %d", getName().GetCString(), getPopulation(), iProductionRank, iBuildUnitProb);
 
 	// -------------------- BBAI Notes -------------------------
 	// Start special circumstances
@@ -1049,9 +1049,9 @@ void CvCityAI::AI_chooseProduction()
 	// Barbarian city build priorities
 	if (isHominid())
 	{
-		if (gCityLogLevel >= 3)
+		if (gCityLogLevel > 2)
 		{
-			logBBAI("      Barb city %S - area workers %d (need %d more), local %d (need %d more)", getName().GetCString(), iExistingWorkers, iNeededWorkersInArea, AI_getWorkersHave(), iWorkersNeeded);
+			logBBAI("      Barb city %S - area workers %d (need %d), workers assigned to city %d (need %d more)", getName().GetCString(), iWorkersInArea, iNeededWorkersInArea, AI_getWorkersHave(), iWorkersNeeded);
 		}
 		if (!AI_isDefended(0, true))
 		{
@@ -1138,7 +1138,8 @@ void CvCityAI::AI_chooseProduction()
 				}
 			}
 		}
-		if (!bDanger && 0 < iNeededWorkersInArea && iWorkersNeeded > 0)
+
+		if (!bDanger && iWorkersInArea < iNeededWorkersInArea && iWorkersNeeded > 0)
 		{
 			if (AI_chooseUnit("barbarian worker for established city", UNITAI_WORKER))
 			{
@@ -1533,7 +1534,7 @@ void CvCityAI::AI_chooseProduction()
 	bool bChooseWorker = false;
 	if (!bInhibitUnits && !(bDefenseWar && iWarSuccessRatio < -50) && !bDanger)
 	{
-		if (iExistingWorkers == 0) // Not a single worker on my landmass
+		if (iWorkersInArea == 0) // Not a single worker on my landmass
 		{
 			if (iNeededWorkersInArea > 0 && iProductionRank < (player.getNumCities() + 1) * 2 / 3)
 			{
@@ -1661,7 +1662,7 @@ void CvCityAI::AI_chooseProduction()
 			}
 		}
 
-		if (!bChooseWorker && (iWorkersNeeded > 0 || iNeededWorkersInArea > iExistingWorkers / 3 && AI_totalBestBuildValue(pArea) > 0 /*Fuyu: anything bigger than 0 is ok*/))
+		if (!bChooseWorker && (iWorkersNeeded > 0 || iNeededWorkersInArea > iWorkersInArea / 3 && AI_totalBestBuildValue(pArea) > 0 /*Fuyu: anything bigger than 0 is ok*/))
 		{
 			if (AI_chooseUnit("capital with no workers", UNITAI_WORKER))
 			{
@@ -1694,8 +1695,8 @@ void CvCityAI::AI_chooseProduction()
 			// BBAI TODO: Needs logic to check for early settler builds, settler builds in small cities, whether settler sea exists for water area sites?
 			if (pWaterArea != NULL)
 			{
-				int iTotalCities = player.getNumCities();
-				int iSettlerSeaNeeded = std::min(iNumWaterAreaCitySites, ((iTotalCities + 4) / 8) + 1);
+				const int iTotalCities = player.getNumCities();
+				int iSettlerSeaNeeded = std::min(iNumWaterAreaCitySites, 1 + (iTotalCities + 4) / 8);
 				if (player.getCapitalCity() != NULL)
 				{
 					int iOverSeasColonies = iTotalCities - player.getCapitalCity()->area()->getCitiesPerPlayer(getOwner());
@@ -1716,7 +1717,7 @@ void CvCityAI::AI_chooseProduction()
 				if (player.AI_totalWaterAreaUnitAIs(pWaterArea, UNITAI_SETTLER_SEA) < iSettlerSeaNeeded)
 				{
 					/* financial trouble: 2/3; */
-					if (!bDanger && bFinancialTrouble && iExistingWorkers < 5 * iNeededWorkersInArea && iWorkersNeeded > 0
+					if (!bDanger && bFinancialTrouble && iWorkersInArea < 5 * iNeededWorkersInArea && iWorkersNeeded > 0
 					&& (getPopulation() > 1 || GC.getGame().getGameTurn() - getGameTurnAcquired() > 15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 100))
 					{
 						if (!bChooseWorker && AI_chooseUnit("worker needed", UNITAI_WORKER))
@@ -1736,7 +1737,7 @@ void CvCityAI::AI_chooseProduction()
 			if (iPlotSettlerCount == 0 && iNumSettlers < iMaxSettlers)
 			{
 				// Workers first if in financial trouble
-				if (!bDanger && iExistingWorkers < (2 * iNeededWorkersInArea + 2) / 3 && iWorkersNeeded > 0
+				if (!bDanger && iWorkersInArea < (2 * iNeededWorkersInArea + 2) / 3 && iWorkersNeeded > 0
 				&& (getPopulation() > 1 || GC.getGame().getGameTurn() - getGameTurnAcquired() > 15 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 100))
 				{
 					if (!bChooseWorker && AI_chooseUnit("worker needed 2", UNITAI_WORKER))
@@ -2026,7 +2027,7 @@ void CvCityAI::AI_chooseProduction()
 			return;
 		}
 
-		if (!bChooseWorker && !bInhibitUnits && (!bDefenseWar || iWarSuccessRatio >= -30) && 0 < iNeededWorkersInArea
+		if (!bChooseWorker && !bInhibitUnits && (!bDefenseWar || iWarSuccessRatio >= -30) && iWorkersInArea < iNeededWorkersInArea
 		&& (getPopulation() > 3 || iProductionRank < (player.getNumCities() + 1) / 2))
 		{
 			if (AI_chooseUnit("no danger workers", UNITAI_WORKER))
@@ -2088,7 +2089,7 @@ void CvCityAI::AI_chooseProduction()
 
 	m_iTempBuildPriority--;
 
-	if (!bInhibitUnits && !bChooseWorker && !bDanger && 0 < iNeededWorkersInArea
+	if (!bInhibitUnits && !bChooseWorker && !bDanger && iWorkersInArea < iNeededWorkersInArea
 	&& (!bDefenseWar || iWarSuccessRatio >= -50)
 	&& iProductionRank < (player.getNumCities() + 1) / 2)
 	{
@@ -2102,7 +2103,7 @@ void CvCityAI::AI_chooseProduction()
 #if 0
 	//do a check for one tile island type thing?
 	//this can be overridden by "wait and grow more"
-	if (!bDanger && iExistingWorkers == 0 && (isCapital() || iNeededWorkersInArea > 0 || iNeededSeaWorkers > iExistingSeaWorkers))
+	if (!bDanger && iWorkersInArea == 0 && (isCapital() || iNeededWorkersInArea > 0 || iNeededSeaWorkers > iExistingSeaWorkers))
 	{
 		if (!bStrategyTurtle && (!bDefenseWar || iWarSuccessRatio >= -30))
 		{
@@ -2313,9 +2314,9 @@ void CvCityAI::AI_chooseProduction()
 	if (!bInhibitUnits && !(bLandWar && iWarSuccessRatio < 0) && !bDanger)
 	{
 		/* financial trouble: ---; will grow above happy cap: 2/3; both: 3/4; else 4/7 */
-		if ((iExistingWorkers < ((4 * iNeededWorkersInArea) + 6) / 7)
-			/* || (bFinancialTrouble && (iExistingWorkers < (((2*iNeededWorkersInArea) + 1)/3))) */
-			|| (((iExistingWorkers < ((2 * iNeededWorkersInArea) + 2) / 3) || (bFinancialTrouble && (iExistingWorkers < (((3 * iNeededWorkersInArea) + 3) / 4))))
+		if ((iWorkersInArea < ((4 * iNeededWorkersInArea) + 6) / 7)
+			/* || (bFinancialTrouble && (iWorkersInArea < (((2*iNeededWorkersInArea) + 1)/3))) */
+			|| (((iWorkersInArea < ((2 * iNeededWorkersInArea) + 2) / 3) || (bFinancialTrouble && (iWorkersInArea < (((3 * iNeededWorkersInArea) + 3) / 4))))
 				&& (((happyLevel() - unhappyLevel()) <= 0) && (foodDifference(false) > 0 || (foodDifference(false) == 0 && happyLevel() - unhappyLevel() < 0)))))
 		{
 			if (iWorkersNeeded > 0)
@@ -2578,7 +2579,7 @@ void CvCityAI::AI_chooseProduction()
 	// Koshling - next section moved from quite a bit earlier to avoid not-needed-yet worker builds before we have checked basic economy builds
 	// do a check for one tile island type thing?
 	// this can be overridden by "wait and grow more"
-	if (!bInhibitUnits && !bDanger && iExistingWorkers == 0 && (isCapital() || iNeededWorkersInArea > 0 || (iNeededSeaWorkers > iExistingSeaWorkers)))
+	if (!bInhibitUnits && !bDanger && iWorkersInArea == 0 && (isCapital() || iNeededWorkersInArea > 0 || (iNeededSeaWorkers > iExistingSeaWorkers)))
 	{
 		if (!bStrategyTurtle && (!bDefenseWar || iWarSuccessRatio >= -30))
 		{
@@ -11590,8 +11591,7 @@ void CvCityAI::AI_updateWorkersNeededHere()
 
 	iWorkersNeeded = std::max((iUnimprovedWorkedPlotCount + 1) / 2, iWorkersNeeded);
 
-	/*
-	if (gCityLogLevel >= 3)
+	if (gCityLogLevel > 2)
 	{
 		logBBAI(
 			"      City %S has %d workers: %d from plotTarget, %d newly built, %d finished soon",
@@ -11599,7 +11599,6 @@ void CvCityAI::AI_updateWorkersNeededHere()
 			iWorkersHaveByPlotTargetMissionAI, iWorkersHaveNewlyBuilt, iWorkersHave
 		);
 	}
-	*/
 	iWorkersHave += iWorkersHaveNewlyBuilt;
 	iWorkersHave += iWorkersHaveByPlotTargetMissionAI;
 

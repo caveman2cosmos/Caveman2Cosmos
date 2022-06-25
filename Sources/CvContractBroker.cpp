@@ -131,12 +131,17 @@ void CvContractBroker::advertiseWork(int iPriority, unitCapabilities eUnitFlags,
 			if (itr == m_contractedUnits.end())
 			{
 				m_contractedUnits[pLoopSelectionGroup->getID()] = true;
-				if (gUnitLogLevel >= 3) logBBAI("      Unit %S (%d) at (%d,%d) already responding to contract at (%d,%d)",
-												 pLoopSelectionGroup->getHeadUnit()->getDescription().GetCString(),
-												 pLoopSelectionGroup->getHeadUnit()->getID(),
-												 pLoopSelectionGroup->getX(),
-												 pLoopSelectionGroup->getY(),
-												 iAtX, iAtY);
+				if (gUnitLogLevel > 2)
+				{
+					logBBAI(
+						"      Unit %S (%d) at (%d,%d) already responding to contract at (%d,%d)",
+						pLoopSelectionGroup->getHeadUnit()->getDescription().GetCString(),
+						pLoopSelectionGroup->getHeadUnit()->getID(),
+						pLoopSelectionGroup->getX(),
+						pLoopSelectionGroup->getY(),
+						iAtX, iAtY
+					);
+				}
 
 				if (iUnitStrengthTimes100 == -1)
 				{

@@ -22556,7 +22556,7 @@ int CvCity::getUnitListNumInGroup(int iGroup)
 
 UnitTypes CvCity::getUnitListType(int iGroup, int iPos)
 {
-	return m_UnitList.getUnitType(iGroup, iPos);
+	return m_UnitList.getUnitListType(iGroup, iPos);
 }
 
 int CvCity::getUnitListSelectedRow()

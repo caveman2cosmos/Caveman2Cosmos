@@ -139,7 +139,6 @@
     <Compile Include="EntryPoints\CvDiplomacyInterface.py" />
     <Compile Include="EntryPoints\CvEventInterface.py" />
     <Compile Include="EntryPoints\CvGameInterface.py" />
-    <Compile Include="EntryPoints\CvInfoUtilInterface.py" />
     <Compile Include="EntryPoints\CvOptionsScreenCallbackInterface.py" />
     <Compile Include="EntryPoints\CvOutcomeInterface.py" />
     <Compile Include="EntryPoints\CvRandomEventInterface.py" />
