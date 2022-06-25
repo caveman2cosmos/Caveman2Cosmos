@@ -236,10 +236,6 @@ public:
 	int getNumCivCities() const;
 	void changeNumCities(int iChange);
 
-	int getStatusPromotion(int i) const;
-	int getNumStatusPromotions() const;
-	void setStatusPromotions();
-
 	int getTotalPopulation() const;
 	void changeTotalPopulation(int iChange);
 
@@ -755,8 +751,6 @@ protected:
 	//TB Nukefix (reversal) Next line should be commented out
 	//bool m_bNukesValid;
 	TeamTypes m_circumnavigatingTeam;
-
-	std::vector<int> m_aiStatusPromotions;
 
 	HandicapTypes m_eHandicap;
 	PlayerTypes m_ePausePlayer;

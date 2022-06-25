@@ -289,7 +289,6 @@ public:
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);
 
-	virtual void AI_init() = 0;
 	virtual void AI_reset() = 0;
 	virtual void AI_separate() = 0;
 	virtual bool AI_update() = 0;

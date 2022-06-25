@@ -219,21 +219,21 @@
 			<Type>GOODY_COLONIST</Type>
 			<Description>TXT_KEY_GOODY_SETTLER</Description>
 			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<FreeUnit>UNIT_COLONIST</FreeUnit>
+			<FreeUnit>UNIT_SETTLER</FreeUnit>
 			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_PIONEER</Type>
 			<Description>TXT_KEY_GOODY_SETTLER</Description>
 			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<FreeUnit>UNIT_PIONEER</FreeUnit>
+			<FreeUnit>UNIT_SETTLER</FreeUnit>
 			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_AIRSETTLER</Type>
 			<Description>TXT_KEY_GOODY_SETTLER</Description>
 			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<FreeUnit>UNIT_AIRSETTLER</FreeUnit>
+			<FreeUnit>UNIT_SETTLER</FreeUnit>
 			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
@@ -316,105 +316,105 @@
 			<Type>GOODY_WARRIOR</Type>
 			<Description>TXT_KEY_GOODY_WARRIOR</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_CLUBMAN</FreeUnit>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
 			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_STONE_AGE_SPEARMAN</Type>
 			<Description>TXT_KEY_GOODY_STONE_SPEARMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_STONE_SPEARMAN</FreeUnit>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
 			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_STONE_AGE_AXEMAN</Type>
 			<Description>TXT_KEY_GOODY_STONE_AXEMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_STONE_AXEMAN</FreeUnit>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
 			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SPEARMAN</Type>
 			<Description>TXT_KEY_GOODY_SPEARMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_SPEARMAN</FreeUnit>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
 			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_AXEMAN</Type>
 			<Description>TXT_KEY_GOODY_AXEMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_AXEMAN</FreeUnit>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
 			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SWORDSMAN</Type>
 			<Description>TXT_KEY_GOODY_SWORDSMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_SWORDSMAN</FreeUnit>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
 			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_PIKEMAN</Type>
 			<Description>TXT_KEY_GOODY_PIKEMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_PIKEMAN</FreeUnit>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
 			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MACEMAN</Type>
 			<Description>TXT_KEY_GOODY_MACEMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_MACEMAN</FreeUnit>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
 			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HEAVY_SWORDSMAN</Type>
 			<Description>TXT_KEY_GOODY_SWORDSMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_HEAVY_SWORDSMAN</FreeUnit>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
 			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HEAVY_PIKEMAN</Type>
 			<Description>TXT_KEY_GOODY_PIKEMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_HEAVY_PIKEMAN</FreeUnit>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
 			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ARQUEBUSIER</Type>
 			<Description>TXT_KEY_GOODY_ARQUEBUSIER</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_ARQUEBUSIER</FreeUnit>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
 			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_RIFLEMAN</Type>
 			<Description>TXT_KEY_GOODY_INFANTRY</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_RIFLEMAN</FreeUnit>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
 			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INFANTRY</Type>
 			<Description>TXT_KEY_GOODY_INFANTRY</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_INFANTRY</FreeUnit>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
 			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_INFANTRY</Type>
 			<Description>TXT_KEY_GOODY_INFANTRY</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_MODERN_INFANTRY</FreeUnit>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
 			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_TESLA_INFANTRY</Type>
 			<Description>TXT_KEY_GOODY_INFANTRY</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_TESLA_INFANTRY</FreeUnit>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
 			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
@@ -427,105 +427,105 @@
 			<Type>GOODY_ARCHER</Type>
 			<Description>TXT_KEY_GOODY_ARCHER</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_ARCHER</FreeUnit>
+			<FreeUnit>UNIT_STONE_THROWER</FreeUnit>
 			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_COMPOSITE_BOWMAN</Type>
 			<Description>TXT_KEY_GOODY_COMPOSITE_BOWMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_COMPOSITE_BOWMAN</FreeUnit>
+			<FreeUnit>UNIT_STONE_THROWER</FreeUnit>
 			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_LONGBOWMAN</Type>
 			<Description>TXT_KEY_GOODY_COMPOSITE_BOWMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_LONGBOWMAN</FreeUnit>
+			<FreeUnit>UNIT_STONE_THROWER</FreeUnit>
 			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SCOUT</Type>
 			<Description>TXT_KEY_GOODY_SCOUT</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_SCOUT</FreeUnit>
+			<FreeUnit>UNIT_WANDERER</FreeUnit>
 			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_GUIDE</Type>
 			<Description>TXT_KEY_GOODY_SCOUT</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_GUIDE</FreeUnit>
+			<FreeUnit>UNIT_WANDERER</FreeUnit>
 			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_EXPLORER</Type>
 			<Description>TXT_KEY_GOODY_SCOUT</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_EXPLORER</FreeUnit>
+			<FreeUnit>UNIT_WANDERER</FreeUnit>
 			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ADVENTURER</Type>
 			<Description>TXT_KEY_GOODY_SCOUT</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_ADVENTURER</FreeUnit>
+			<FreeUnit>UNIT_WANDERER</FreeUnit>
 			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MOTORCYCLE</Type>
 			<Description>TXT_KEY_GOODY_SCOUT</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_MOTORCYCLE</FreeUnit>
+			<FreeUnit>UNIT_WANDERER</FreeUnit>
 			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_UNMANNED_TRIKE</Type>
 			<Description>TXT_KEY_GOODY_SCOUT</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_UNMANNED_TRIKE</FreeUnit>
+			<FreeUnit>UNIT_WANDERER</FreeUnit>
 			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HUNTER</Type>
 			<Description>TXT_KEY_GOODY_HUNTER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_HUNTER</FreeUnit>
+			<FreeUnit>UNIT_CHASER</FreeUnit>
 			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_RANGER</Type>
 			<Description>TXT_KEY_GOODY_HUNTER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_RANGER</FreeUnit>
+			<FreeUnit>UNIT_CHASER</FreeUnit>
 			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_WARDEN</Type>
 			<Description>TXT_KEY_GOODY_HUNTER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_WARDEN</FreeUnit>
+			<FreeUnit>UNIT_CHASER</FreeUnit>
 			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_WARDEN2</Type>
 			<Description>TXT_KEY_GOODY_HUNTER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_WARDEN</FreeUnit>
+			<FreeUnit>UNIT_CHASER</FreeUnit>
 			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_GAME_HUNTER</Type>
 			<Description>TXT_KEY_GOODY_HUNTER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_GAME_HUNTER</FreeUnit>
+			<FreeUnit>UNIT_CHASER</FreeUnit>
 			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BIG_GAME_HUNTER</Type>
 			<Description>TXT_KEY_GOODY_HUNTER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_BIG_GAME_HUNTER</FreeUnit>
+			<FreeUnit>UNIT_CHASER</FreeUnit>
 			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
@@ -539,42 +539,42 @@
 			<Type>GOODY_HEALER</Type>
 			<Description>TXT_KEY_GOODY_HEALER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_HEALER</FreeUnit>
+			<FreeUnit>UNIT_WISE_WOMAN</FreeUnit>
 			<EraType>C2C_ERA_ANCIENT</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_APOTHECARY</Type>
 			<Description>TXT_KEY_GOODY_HEALER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_APOTHECARY</FreeUnit>
+			<FreeUnit>UNIT_WISE_WOMAN</FreeUnit>
 			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_SURGEON</Type>
 			<Description>TXT_KEY_GOODY_HEALER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_SURGEON</FreeUnit>
+			<FreeUnit>UNIT_WISE_WOMAN</FreeUnit>
 			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MEDIC</Type>
 			<Description>TXT_KEY_GOODY_HEALER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_MEDIC</FreeUnit>
+			<FreeUnit>UNIT_WISE_WOMAN</FreeUnit>
 			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_AMBULANCE_II</Type>
 			<Description>TXT_KEY_GOODY_HEALER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_AMBULANCE_II</FreeUnit>
+			<FreeUnit>UNIT_WISE_WOMAN</FreeUnit>
 			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MEDEVAC_DROPSHIP</Type>
 			<Description>TXT_KEY_GOODY_HEALER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_MEDEVAC_DROPSHIP</FreeUnit>
+			<FreeUnit>UNIT_WISE_WOMAN</FreeUnit>
 			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
@@ -595,49 +595,49 @@
 			<Type>GOODY_DOG_WORKER</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<FreeUnit>UNIT_WORKANIMAL</FreeUnit>
+			<FreeUnit>UNIT_WORKER</FreeUnit>
 			<EraType>C2C_ERA_CLASSICAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_ELEPHANT_WORKER</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<FreeUnit>UNIT_WORKELEPHANT</FreeUnit>
+			<FreeUnit>UNIT_WORKER</FreeUnit>
 			<EraType>C2C_ERA_MEDIEVAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MULE_WORKER</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<FreeUnit>UNIT_WORKMULE</FreeUnit>
+			<FreeUnit>UNIT_WORKER</FreeUnit>
 			<EraType>C2C_ERA_RENAISSANCE</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_INDUSTRIAL_WORKER</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<FreeUnit>UNIT_WORKER_INDUSTRIAL</FreeUnit>
+			<FreeUnit>UNIT_WORKER</FreeUnit>
 			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_WORKER</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<FreeUnit>UNIT_WORKER_MODERN</FreeUnit>
+			<FreeUnit>UNIT_WORKER</FreeUnit>
 			<EraType>C2C_ERA_ATOMIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MODERN_WORKER2</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<FreeUnit>UNIT_WORKER_MODERN</FreeUnit>
+			<FreeUnit>UNIT_WORKER</FreeUnit>
 			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_CLONES</Type>
 			<Description>TXT_KEY_GOODY_WORKER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
-			<FreeUnit>UNIT_CLONES</FreeUnit>
+			<FreeUnit>UNIT_WORKER</FreeUnit>
 			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>

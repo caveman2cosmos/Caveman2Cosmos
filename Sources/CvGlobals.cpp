@@ -1011,6 +1011,16 @@ BonusTypes cvInternalGlobals::getMapBonus(const int i) const
 	return m_mapBonuses[i];
 }
 
+int cvInternalGlobals::getStatusPromotion(int i) const
+{
+	return m_aiStatusPromotions[i];
+}
+
+int cvInternalGlobals::getNumStatusPromotions() const
+{
+	return (int)m_aiStatusPromotions.size();
+}
+
 int cvInternalGlobals::getNumFeatureInfos() const
 {
 	return (int)m_paFeatureInfo.size();
@@ -1283,6 +1293,18 @@ CvInvisibleInfo& cvInternalGlobals::getInvisibleInfo(InvisibleTypes e) const
 {
 	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), e);
 	return *(m_paInvisibleInfo[e]);
+}
+
+
+int cvInternalGlobals::getNumCategoryInfos() const
+{
+	return (int)m_paCategoryInfo.size();
+}
+
+CvCategoryInfo& cvInternalGlobals::getCategoryInfo(CategoryTypes e) const
+{
+	FASSERT_BOUNDS(0, GC.getNumCategoryInfos(), e);
+	return *(m_paCategoryInfo[e]);
 }
 
 
@@ -3051,8 +3073,16 @@ void cvInternalGlobals::doPostLoadCaching()
 			(*infoVector)[i]->doPostLoadCaching(i);
 		}
 	}
+	//TB: Set Statuses
+	m_aiStatusPromotions.clear();
+	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	{
+		if (GC.getPromotionInfo((PromotionTypes)iI).isStatus())
+		{
+			m_aiStatusPromotions.push_back(iI);
+		}
+	}
 }
-
 
 void cvInternalGlobals::checkInitialCivics()
 {

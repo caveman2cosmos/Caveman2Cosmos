@@ -168,7 +168,6 @@ void CvCityAI::AI_reset()
 	m_neededDefenders = -1;
 
 	m_iWorkersNeeded = 0;
-	m_iWorkersHave = 0;
 
 	m_iBuildPriority = CITY_BUILD_PRIORITY_CEILING;
 	m_bRequestedUnit = false;
@@ -196,6 +195,7 @@ void CvCityAI::AI_reset()
 
 	m_iCityThreat = -1;
 }
+
 
 void CvCityAI::SendLog(CvWString function, CvWString message) const
 {
@@ -902,7 +902,7 @@ void CvCityAI::AI_chooseProduction()
 	int iNeededWorkersInArea = player.AI_neededWorkers(pArea);
 	// Sea worker need independent of whether water area is militarily relevant
 	int iNeededSeaWorkers = (bMaybeWaterArea) ? AI_neededSeaWorkers() : 0;
-	const int iWorkersNeeded = AI_getWorkersNeeded() - AI_getWorkersHave();
+	const int iWorkersNeeded = AI_getWorkersNeeded() - getNumWorkers();
 	int iExistingSeaWorkers = (waterArea(true) != NULL) ? player.AI_totalWaterAreaUnitAIs(waterArea(true), UNITAI_WORKER_SEA) : 0;
 
 	int iAreaBestFoundValue;
@@ -964,10 +964,6 @@ void CvCityAI::AI_chooseProduction()
 				}
 			}
 		}
-	}
-	if (gCityLogLevel > 2)
-	{
-		logBBAI("Player %d (%S) - %S - iNumSettlers=%d; iMaxSettlers=%d", getOwner(), player.getCivilizationDescription(0), getName().GetCString(), iNumSettlers, iMaxSettlers);
 	}
 	int iEconomyFlags = 0;
 	int iEconomyFlagBits = 0;
@@ -1039,20 +1035,24 @@ void CvCityAI::AI_chooseProduction()
 
 	int iProductionRank = findYieldRateRank(YIELD_PRODUCTION);
 
-
-	if (gCityLogLevel > 2) logBBAI("      City %S pop %d considering new production: iProdRank %d, iBuildUnitProb %d", getName().GetCString(), getPopulation(), iProductionRank, iBuildUnitProb);
-
-	// -------------------- BBAI Notes -------------------------
-	// Start special circumstances
+	if (gCityLogLevel > 2)
+	{
+		logBBAI(
+			"\nPlayer %d (%S) - %S (pop %d):\n"
+			"	Considering new production: iProdRank %d, iBuildUnitProb %d\n"
+			"	Area workers %d (need %d), workers assigned to city %d (need %d more)\n"
+			"	iNumSettlers=%d; iMaxSettlers=%d\n",
+			getOwner(), player.getCivilizationDescription(0), getName().GetCString(), getPopulation(),
+			iProductionRank, iBuildUnitProb,
+			iWorkersInArea, iNeededWorkersInArea, getNumWorkers(), iWorkersNeeded,
+			iNumSettlers, iMaxSettlers
+		);
+	}
 
 	// -------------------- BBAI Notes -------------------------
 	// Barbarian city build priorities
 	if (isHominid())
 	{
-		if (gCityLogLevel > 2)
-		{
-			logBBAI("      Barb city %S - area workers %d (need %d), workers assigned to city %d (need %d more)", getName().GetCString(), iWorkersInArea, iNeededWorkersInArea, AI_getWorkersHave(), iWorkersNeeded);
-		}
 		if (!AI_isDefended(0, true))
 		{
 			if (AI_chooseDefender("barbarian defenders"))
@@ -11266,10 +11266,7 @@ int	CvCityAI::getPlayerDangerPercentage(PlayerTypes ePlayer, int& iModifier) con
 			break;
 		}
 
-		/********************************************************************************/
-		/*	RevDCM Better BUG AI changes	28.10.2010							Fuyu	*/
-		/********************************************************************************/
-				// Beef up border security next to powerful rival, (Fuyu) just not too much if our units are weaker on average
+		// Beef up border security next to powerful rival, (Fuyu) just not too much if our units are weaker on average
 		if (kPlayer.getPower() > GET_PLAYER(getOwner()).getPower())
 		{
 			int iTempMultiplier = std::min(400, (100 * kPlayer.getPower()) / std::max(1, GET_PLAYER(getOwner()).getPower()));
@@ -11278,29 +11275,11 @@ int	CvCityAI::getPlayerDangerPercentage(PlayerTypes ePlayer, int& iModifier) con
 			iResult *= iTempMultiplier;
 			iResult /= 100;
 		}
-		/********************************************************************************/
-		/*	RevDCM Better BUG AI changes	28.10.2010							END		*/
-		/********************************************************************************/
 
-
-		/************************************************************************************************/
-		/* UNOFFICIAL_PATCH                       01/04/09                                jdog5000      */
-		/*                                                                                              */
-		/* Bugfix                                                                                       */
-		/************************************************************************************************/
-		/* orginal bts code
-				if (bCrushStrategy)
-				{
-					iValue /= 2;
-				}
-		*/
 		if (bCrushStrategy)
 		{
 			iResult /= 2;
 		}
-		/************************************************************************************************/
-		/* UNOFFICIAL_PATCH                        END                                                  */
-		/************************************************************************************************/
 	}
 
 	//	Koshling - modify by the difference in difficulty levels between us and the player
@@ -11373,11 +11352,7 @@ int CvCityAI::AI_cityThreat(TeamTypes eTargetTeam, int* piThreatModifier)
 	}
 
 	iValue += 2 * GET_PLAYER(getOwner()).AI_getPlotDanger(plot(), 3, false);
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                         05/22/08                                jdog5000      */
-	/*                                                                                              */
-	/* Revolution AI                                                                                */
-	/************************************************************************************************/
+
 	if (getRevolutionIndex() > 750)
 	{
 		iValue += getRevolutionIndex() / 25;
@@ -11386,9 +11361,6 @@ int CvCityAI::AI_cityThreat(TeamTypes eTargetTeam, int* piThreatModifier)
 	{
 		iValue += getRevolutionIndex() / 100;
 	}
-	/************************************************************************************************/
-	/* REVOLUTION_MOD                          END                                                  */
-	/************************************************************************************************/
 
 	m_iCityThreat = iValue;
 	m_iCityThreatModifier = iModifier;
@@ -11398,30 +11370,6 @@ int CvCityAI::AI_cityThreat(TeamTypes eTargetTeam, int* piThreatModifier)
 	}
 
 	return iValue;
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                       END                                                  */
-	/************************************************************************************************/
-}
-
-//Workers have/needed is not intended to be a strict
-//target but rather an indication.
-//if needed is at least 1 that means a worker
-//will be doing something useful
-int CvCityAI::AI_getWorkersHave() const
-{
-	return m_iWorkersHave;
-}
-
-int CvCityAI::AI_getWorkersNeeded() const
-{
-	return m_iWorkersNeeded;
-}
-
-void CvCityAI::AI_changeWorkersHave(int iChange)
-{
-	m_iWorkersHave += iChange;
-	FASSERT_NOT_NEGATIVE(m_iWorkersHave);
-	m_iWorkersHave = std::max(0, m_iWorkersHave);
 }
 
 //This needs to be serialized for human workers.
@@ -11441,60 +11389,43 @@ void CvCityAI::AI_updateWorkersNeededHere()
 	int iWorstWorkedPlotValue = MAX_INT;
 	int iBestUnworkedPlotValue = 0;
 
-	int iWorkersHave = 0;
-
-	if (getProductionUnit() != NO_UNIT
-	&& getProductionUnitAI() == UNITAI_WORKER
-	&& getProductionTurnsLeft() <= 2)
-	{
-		iWorkersHave++;
-	}
-
-	int iWorkersHaveByPlotTargetMissionAI = AI_workingCityPlotTargetMissionAIs(getOwner(), MISSIONAI_BUILD);
-	int iWorkersHaveNewlyBuilt = 0;
-
-	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+	for (int iI = SKIP_CITY_HOME_PLOT; iI < NUM_CITY_PLOTS; iI++)
 	{
 		const CvPlot* pLoopPlot = getCityIndexPlot(iI);
 		if (NULL != pLoopPlot && pLoopPlot->getWorkingCity() == this && pLoopPlot->getArea() == getArea())
 		{
-			iWorkersHaveNewlyBuilt += pLoopPlot->plotCount(PUF_isUnitAIType, UNITAI_WORKER, -1, NULL, getOwner(), getTeam(), PUF_isNoMissionAI, -1, -1);
-
-			if (iI != CITY_HOME_PLOT)
+			if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT)
 			{
-				if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT)
-				{
-					if (pLoopPlot->isBeingWorked())
-					{
-						(
-							AI_getBestBuild(iI) != NO_BUILD
-							?
-							iUnimprovedWorkedPlotCount++
-							:
-							iWorkedUnimprovableCount++
-							);
-					}
-					else if (AI_getBestBuild(iI) != NO_BUILD)
-					{
-						iUnimprovedUnworkedPlotCount++;
-					}
-				}
-				else if (!pLoopPlot->isBeingWorked())
-				{
-					iImprovedUnworkedPlotCount++;
-				}
-
-				for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
-				{
-					aiYields[iJ] = pLoopPlot->getYield((YieldTypes)iJ);
-				}
-
 				if (pLoopPlot->isBeingWorked())
 				{
-					iWorstWorkedPlotValue = std::min(iWorstWorkedPlotValue, AI_yieldValue(aiYields, NULL, false, false, false, false, true, true));
+					(
+						AI_getBestBuild(iI) != NO_BUILD
+						?
+						iUnimprovedWorkedPlotCount++
+						:
+						iWorkedUnimprovableCount++
+					);
 				}
-				else iBestUnworkedPlotValue = std::max(iBestUnworkedPlotValue, AI_yieldValue(aiYields, NULL, false, false, false, false, true, true));
+				else if (AI_getBestBuild(iI) != NO_BUILD)
+				{
+					iUnimprovedUnworkedPlotCount++;
+				}
 			}
+			else if (!pLoopPlot->isBeingWorked())
+			{
+				iImprovedUnworkedPlotCount++;
+			}
+
+			for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+			{
+				aiYields[iJ] = pLoopPlot->getYield((YieldTypes)iJ);
+			}
+
+			if (pLoopPlot->isBeingWorked())
+			{
+				iWorstWorkedPlotValue = std::min(iWorstWorkedPlotValue, AI_yieldValue(aiYields, NULL, false, false, false, false, true, true));
+			}
+			else iBestUnworkedPlotValue = std::max(iBestUnworkedPlotValue, AI_yieldValue(aiYields, NULL, false, false, false, false, true, true));
 		}
 	}
 	//specialists?
@@ -11591,73 +11522,16 @@ void CvCityAI::AI_updateWorkersNeededHere()
 
 	iWorkersNeeded = std::max((iUnimprovedWorkedPlotCount + 1) / 2, iWorkersNeeded);
 
+	m_iWorkersNeeded = iWorkersNeeded;
+
+	FASSERT_NOT_NEGATIVE(iWorkersNeeded);
+	OutputDebugString(CvString::format("Player %d, city: %S, workers have: %d, workers needed: %d\n", getOwner(), getName().GetCString(), getNumWorkers(), iWorkersNeeded).c_str());
 	if (gCityLogLevel > 2)
 	{
-		logBBAI(
-			"      City %S has %d workers: %d from plotTarget, %d newly built, %d finished soon",
-			getName().GetCString(), (iWorkersHave + iWorkersHaveNewlyBuilt + iWorkersHaveByPlotTargetMissionAI),
-			iWorkersHaveByPlotTargetMissionAI, iWorkersHaveNewlyBuilt, iWorkersHave
-		);
+		logBBAI("Player %d, city: %S, workers have: %d, workers needed: %d", getOwner(), getName().GetCString(), getNumWorkers(), iWorkersNeeded);
 	}
-	iWorkersHave += iWorkersHaveNewlyBuilt;
-	iWorkersHave += iWorkersHaveByPlotTargetMissionAI;
-
-	m_iWorkersNeeded = iWorkersNeeded;
-	m_iWorkersHave = iWorkersHave;
-	FASSERT_NOT_NEGATIVE(iWorkersNeeded);
-	FASSERT_NOT_NEGATIVE(m_iWorkersHave);
-	OutputDebugString(CvString::format("Player %d, city: %S, workers have: %d, workers needed: %d\n", getOwner(), getName().GetCString(), iWorkersHave, iWorkersNeeded).c_str());
 }
 
-
-int CvCityAI::AI_workingCityPlotTargetMissionAIs(PlayerTypes ePlayer, MissionAITypes eMissionAI, UnitAITypes eUnitAI, bool bSameAreaOnly) const
-{
-	PROFILE_FUNC();
-
-	int iCount = 0;
-
-	foreach_(const CvSelectionGroup * groupX, GET_PLAYER(ePlayer).groups())
-	{
-		bool bCanMoveAllTerrain = bSameAreaOnly; //only check if bSameAreaOnly
-		const CvPlot* pMissionPlot = groupX->AI_getMissionAIPlot();
-
-		if (pMissionPlot && pMissionPlot->getWorkingCity() == this
-		&& (eMissionAI == NO_MISSIONAI || groupX->AI_getMissionAIType() == eMissionAI))
-		{
-			if (eUnitAI == NO_UNITAI && !bSameAreaOnly)
-			{
-				iCount += groupX->getNumUnits();
-			}
-			else
-			{
-				const CvUnit* pHeadUnit = groupX->getHeadUnit();
-				if (pHeadUnit)
-				{
-					int iCorrectUnitAICount = 0;
-					foreach_(const CvUnit * unit, groupX->units())
-					{
-						if (bCanMoveAllTerrain && !unit->canMoveAllTerrain())
-						{
-							bCanMoveAllTerrain = false;
-						}
-						if (eUnitAI == NO_UNITAI || unit->AI_getUnitAIType() == eUnitAI)
-						{
-							iCorrectUnitAICount++;
-						}
-					}
-					if (!bSameAreaOnly || bCanMoveAllTerrain || pHeadUnit->getArea() == pMissionPlot->getArea())
-					{
-						iCount += iCorrectUnitAICount;
-					}
-				}
-			}
-		}
-	}
-	return iCount;
-}
-/********************************************************************************/
-/* 	Worker Counting 											END 			*/
-/********************************************************************************/
 
 BuildingTypes CvCityAI::AI_bestAdvancedStartBuilding(int iPass)
 {
@@ -11690,9 +11564,7 @@ BuildingTypes CvCityAI::AI_bestAdvancedStartBuilding(int iPass)
 	return AI_bestBuildingThreshold(iFocusFlags, 0, std::max(0, 25 - iPass * 5));
 }
 
-//
-//
-//
+
 void CvCityAI::read(FDataStreamBase* pStream)
 {
 	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
@@ -11733,7 +11605,9 @@ void CvCityAI::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iNeededFloatingDefenders);
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iNeededFloatingDefendersCacheTurn);
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iWorkersNeeded);
-	WRAPPER_READ(wrapper, "CvCityAI", &m_iWorkersHave);
+	// @SAVEBREAK DELETE
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCityAI", m_iWorkersHave, SAVE_VALUE_ANY);
+	// SAVEBREAK@
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iTempBuildPriority);
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iBuildPriority);
 	WRAPPER_READ(wrapper, "CvCityAI", &m_bNavalMilitaryProductionCity);
@@ -11742,9 +11616,7 @@ void CvCityAI::read(FDataStreamBase* pStream)
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
 
-//
-//
-//
+
 void CvCityAI::write(FDataStreamBase* pStream)
 {
 	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
@@ -11781,7 +11653,6 @@ void CvCityAI::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCityAI", m_iNeededFloatingDefenders);
 	WRAPPER_WRITE(wrapper, "CvCityAI", m_iNeededFloatingDefendersCacheTurn);
 	WRAPPER_WRITE(wrapper, "CvCityAI", m_iWorkersNeeded);
-	WRAPPER_WRITE(wrapper, "CvCityAI", m_iWorkersHave);
 	WRAPPER_WRITE(wrapper, "CvCityAI", m_iTempBuildPriority);
 	WRAPPER_WRITE(wrapper, "CvCityAI", m_iBuildPriority);
 	WRAPPER_WRITE(wrapper, "CvCityAI", m_bNavalMilitaryProductionCity);

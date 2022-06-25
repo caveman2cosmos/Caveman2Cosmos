@@ -11847,7 +11847,7 @@ int CvPlayerAI::AI_neededWorkers(const CvArea* pArea) const
 		if (pLoopCity->getArea() == pArea->getID())
 		{
 			iNeeded += pLoopCity->AI_getWorkersNeeded() * 3;
-			iHave += pLoopCity->AI_getWorkersHave() * 3;
+			iHave += pLoopCity->getNumWorkers() * 3;
 			iCities++;
 		}
 	}

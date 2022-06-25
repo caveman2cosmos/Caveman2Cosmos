@@ -81,8 +81,6 @@ CvInitCore::CvInitCore()
 	bPathsSet = false;
 // BUG - EXE/DLL Paths - end
 
-	m_bRecalcRequestProcessed = false;
-	//m_uiAssetCheckSum = -1;
 	m_uiSavegameAssetCheckSum = -1;
 
 	reset(NO_GAMEMODE);
@@ -1684,8 +1682,6 @@ void CvInitCore::read(FDataStreamBase* pStream)
 		throw std::invalid_argument(reason);
 	}
 
-	m_bRecalcRequestProcessed = false;
-
 	//	Asset checksum of the build that did the save
 	m_uiSavegameAssetCheckSum = -1;	//	If save doesn't have the info
 	WRAPPER_READ(wrapper, "CvInitCore", &m_uiSavegameAssetCheckSum);
@@ -1707,11 +1703,6 @@ void CvInitCore::read(FDataStreamBase* pStream)
 
 	m_eGameSpeed = NO_GAMESPEED;
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvInitCore", REMAPPED_CLASS_TYPE_GAMESPEEDS, (int*)&m_eGameSpeed);
-	if (m_eGameSpeed == NO_GAMESPEED)  // Old savegame before gamespeed remapping
-	{
-		WRAPPER_READ(wrapper, "CvInitCore", (int*)&m_eGameSpeed);
-		handleOldGameSpeed();
-	}
 
 	WRAPPER_READ(wrapper, "CvInitCore", (int*)&m_eTurnTimer);
 	WRAPPER_READ(wrapper, "CvInitCore", (int*)&m_eCalendar);
@@ -2171,10 +2162,6 @@ void CvInitCore::reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID)
 }
 // ! Afforess
 
-unsigned int CvInitCore::getAssetCheckSum() const
-{
-	return m_uiAssetCheckSum;
-}
 
 unsigned int CvInitCore::getSavegameAssetCheckSum() const
 {
@@ -2186,74 +2173,26 @@ void CvInitCore::calculateAssetCheckSum()
 	m_uiAssetCheckSum = GC.getAssetCheckSum();
 
 #ifdef _DEBUG
-	//	Perform some validation checks of the loaded info classes (add as needed)
+	// Perform some validation checks of the loaded info classes (add as needed)
 	CvTechInfo::validate();
 #endif
 }
 
 void CvInitCore::checkVersions()
 {
-	if (!m_bRecalcRequestProcessed && !getNewGame())
+	// If assets changed
+	if (m_uiSavegameAssetCheckSum != m_uiAssetCheckSum)
 	{
-		// If assets changed
-		if (m_uiSavegameAssetCheckSum != GC.getInitCore().getAssetCheckSum())
+		const PlayerTypes ePlayer = GC.getGame().getActivePlayer();
+		// DLL or assets changed, recommend modifier reloading
+		if (NO_PLAYER != ePlayer && GET_PLAYER(ePlayer).isAlive() && GET_PLAYER(ePlayer).isHuman())
 		{
-			const PlayerTypes ePlayer = GC.getGame().getActivePlayer();
-			// DLL or assets changed, recommend modifier reloading
-			if (NO_PLAYER != ePlayer && GET_PLAYER(ePlayer).isAlive() && GET_PLAYER(ePlayer).isHuman())
+			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_MODIFIER_RECALCULATION);
+			if (NULL != pInfo)
 			{
-				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_MODIFIER_RECALCULATION);
-				if (NULL != pInfo)
-				{
-					gDLL->getInterfaceIFace()->addPopup(pInfo, ePlayer, true, true);
-				}
-				m_uiSavegameAssetCheckSum = GC.getInitCore().getAssetCheckSum();
-				m_bRecalcRequestProcessed = true;
+				gDLL->getInterfaceIFace()->addPopup(pInfo, ePlayer, false, true);
 			}
+			m_uiSavegameAssetCheckSum = m_uiAssetCheckSum;
 		}
 	}
-}
-
-void CvInitCore::handleOldGameSpeed()
-{
-	switch ((int) m_eGameSpeed)
-	{
-		case 0: // eternity
-			m_eGameSpeed = (GameSpeedTypes) GC.getInfoTypeForString("GAMESPEED_ETERNITY");
-			if (m_eGameSpeed != NO_GAMESPEED) // eternity still existing?
-				return;
-
-		case 1: // snail
-			m_eGameSpeed = (GameSpeedTypes) GC.getInfoTypeForString("GAMESPEED_SNAIL");
-			if (m_eGameSpeed != NO_GAMESPEED) // snail still existing?
-				return;
-
-		case 2: // marathon
-			m_eGameSpeed = (GameSpeedTypes) GC.getInfoTypeForString("GAMESPEED_MARATHON");
-			if (m_eGameSpeed != NO_GAMESPEED) // marathon still existing?
-				return;
-
-		case 3: // epic
-			m_eGameSpeed = (GameSpeedTypes) GC.getInfoTypeForString("GAMESPEED_EPIC");
-			if (m_eGameSpeed != NO_GAMESPEED) // epic still existing?
-				return;
-
-		case 4: // normal
-			m_eGameSpeed = (GameSpeedTypes) GC.getInfoTypeForString("GAMESPEED_NORMAL");
-			if (m_eGameSpeed != NO_GAMESPEED) // normal still existing?
-				return;
-
-		case 5: // quick
-			m_eGameSpeed = (GameSpeedTypes) GC.getInfoTypeForString("GAMESPEED_QUICK");
-			if (m_eGameSpeed != NO_GAMESPEED) // quick still existing?
-				return;
-
-		case 6: // blitz
-			m_eGameSpeed = (GameSpeedTypes) GC.getInfoTypeForString("GAMESPEED_BLITZ");
-			if (m_eGameSpeed != NO_GAMESPEED) // blitz still existing?
-				return;
-	}
-
-	// backup plan is using the highest number game speed (which is fastest currently)
-	m_eGameSpeed = (GameSpeedTypes) (GC.getNumGameSpeedInfos() - 1);
 }

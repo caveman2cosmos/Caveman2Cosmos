@@ -216,13 +216,7 @@ public:
 	int AI_playerCloseness(PlayerTypes eIndex, int iMaxDistance);
 	int AI_cityThreat(TeamTypes eTargetTeam = NO_TEAM, int* piThreatModifier = NULL);
 
-	int AI_getWorkersHave() const;
-	int AI_getWorkersNeeded() const;
-	void AI_changeWorkersHave(int iChange);
-
-	// Fuyu - Worker Counting 03.08.2010
-	int AI_workingCityPlotTargetMissionAIs(PlayerTypes ePlayer, MissionAITypes eMissionAI, UnitAITypes eUnitAI = NO_UNITAI, bool bSameAreaOnly = false) const;
-	// ! Fuyu
+	int AI_getWorkersNeeded() const { return m_iWorkersNeeded; }
 
 	BuildingTypes AI_bestAdvancedStartBuilding(int iPass);
 
@@ -286,7 +280,6 @@ protected:
 	int m_iNeededFloatingDefendersCacheTurn;
 
 	int m_iWorkersNeeded;
-	int m_iWorkersHave;
 
 	int	m_iBuildPriority;
 	int	m_iTempBuildPriority;
