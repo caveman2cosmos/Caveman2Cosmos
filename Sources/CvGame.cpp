@@ -6826,7 +6826,7 @@ namespace {
 	bool barbarianCityShouldSpawnWorker(CvGame* game, CvCity* city)
 	{
 		return (city->getPopulation() > 1 || game->getGameTurn() - city->getGameTurnAcquired() > 10 * GC.getGameSpeedInfo(game->getGameSpeedType()).getHammerCostPercent() / 100)
-			&& city->AI_getWorkersHave() == 0
+			&& city->getNumWorkers() == 0
 			&& city->AI_getWorkersNeeded() > 0
 			&& (7 * city->getPopulation()) > game->getSorenRandNum(100, "Barb - workers");
 	}

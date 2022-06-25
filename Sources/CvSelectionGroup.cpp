@@ -60,14 +60,13 @@ void CvSelectionGroup::init(int iID, PlayerTypes eOwner)
 
 	//--------------------------------
 	// Init other game data
-	AI_init();
+	AI_reset();
 }
 
 
 void CvSelectionGroup::uninit()
 {
 	m_units.clear();
-
 	m_missionQueue.clear();
 }
 
@@ -94,21 +93,12 @@ void CvSelectionGroup::reset(int iID, PlayerTypes eOwner, bool bConstructorCall)
 	m_eAutomateType = NO_AUTOMATE;
 	m_bIsBusyCache = false;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/19/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
 	m_bIsStrandedCache = false;
 	m_bIsStrandedCacheValid = false;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-// BUG - Safe Move - start
+
 	m_bLastPathPlotChecked = false;
 	m_bLastPlotVisible = false;
 	m_bLastPlotRevealed = false;
-// BUG - Safe Move - end
 
 	if (!bConstructorCall)
 	{

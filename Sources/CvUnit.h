@@ -1716,7 +1716,7 @@ public:
 	PlayerTypes m_eOriginalOwner;
 
 	bool isWorker() const;
-	CvCity* getWorkerAssignedCity() const;
+	UnitCompWorker* CvUnit::getWorkerComponent() const;
 
 protected:
 	int m_iDCMBombRange;

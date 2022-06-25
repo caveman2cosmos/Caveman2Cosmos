@@ -1218,6 +1218,8 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 
 	m_pPlayerInvestigated = other.m_pPlayerInvestigated;
 	m_Properties = other.m_Properties;
+	m_commander = other.m_commander;
+	m_worker = other.m_worker;
 
 	return *this;
 }
@@ -1690,6 +1692,15 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		OutputDebugString(CvString::format("Unit %S of player %S killed\n", getName().GetCString(), owner.getCivilizationDescription(0)).c_str());
 
 		owner.AI_changeNumAIUnits(AI_getUnitAIType(), -1);
+		if (isWorker())
+		{
+			CvCity* city = owner.getCity(m_worker->getAssignedCity());
+			if (city)
+			{
+				OutputDebugString(CvString::format("Worker at (%d,%d) killed with mission for city %S\n", getX(), getY(), city->getName().GetCString()).c_str());
+				city->setWorkerHave(getID(), false);
+			}
+		}
 		AI_killed(); // Update AI counts for this unit
 		//GC.getGame().logOOSSpecial(15, getID(), INVALID_PLOT_COORD, INVALID_PLOT_COORD);
 		setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true);
@@ -18697,22 +18708,22 @@ void CvUnit::changeExtraHillsDefensePercent(int iChange)
 //WorkRateMod
 int CvUnit::hillsWorkModifier() const
 {
-	return m_worker != NULL ? m_worker->getHillsWorkModifier() : 0;
+	return isWorker() ? m_worker->getHillsWorkModifier() : 0;
 }
 
 int CvUnit::peaksWorkModifier() const
 {
-	return m_worker != NULL ? m_worker->getPeaksWorkModifier() : 0;
+	return isWorker() ? m_worker->getPeaksWorkModifier() : 0;
 }
 
 int CvUnit::getWorkModifier() const
 {
-	return m_worker != NULL ? m_worker->getWorkModifier() : 0;
+	return isWorker() ? m_worker->getWorkModifier() : 0;
 }
 
 int CvUnit::getExtraWorkModForBuild(const BuildTypes eBuild) const
 {
-	return m_worker != NULL ? m_worker->getExtraWorkModForBuild(eBuild) : 0;
+	return isWorker() ? m_worker->getExtraWorkModForBuild(eBuild) : 0;
 }
 
 
@@ -23504,6 +23515,8 @@ void CvUnit::read(FDataStreamBase* pStream)
 			info->m_iExtraTrapTriggerUnitCombatType = g_paiTempExtraTrapTriggerUnitCombatType[iI];
 		}
 	}
+	int iAssignedCity = -1;
+	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iAssignedCity, "m_iAssignedCity");
 
 	//bool bWorker = false;
 	//WRAPPER_READ_DECORATED(wrapper, "CvUnit", &bWorker, "bWorker");
@@ -23539,6 +23552,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 				m_worker->changeExtraWorkModForBuild(static_cast<BuildTypes>(iI), (short)g_paiTempExtraBuildWorkPercent[iI]);
 			}
 		}
+		m_worker->setCityAssignment(iAssignedCity);
 	}
 
 	//Example of how to skip an outdated and unnecessary save element (at least for ints and bools)
@@ -24379,6 +24393,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTrapAvoidanceUnitCombatType(eUnitTag), "extraTrapAvoidanceUnitCombatType");
 		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTrapTriggerUnitCombatType(eUnitTag), "extraTrapTriggerUnitCombatType");
 	}
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bWorker ? m_worker->getAssignedCity() : -1), "m_iAssignedCity");
 
 	//WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isWorker(), "bWorker");
 
@@ -39108,16 +39123,7 @@ bool CvUnit::isWorker() const
 	return m_worker != NULL;
 }
 
-CvCity* CvUnit::getWorkerAssignedCity() const
+UnitCompWorker* CvUnit::getWorkerComponent() const
 {
-	if (getGroup()->AI_getMissionAIType() == MISSIONAI_BUILD)
-	{
-		const CvPlot* missionPlot = getGroup()->AI_getMissionAIPlot();
-
-		if (missionPlot != NULL)
-		{
-			return missionPlot->getWorkingCity();
-		}
-	}
-	return NULL;
+	return m_worker;
 }

@@ -50,11 +50,15 @@ public:
 
 	void changeExtraWorkModForBuild(const BuildTypes eBuild, const short iChange);
 	int getExtraWorkModForBuild(const BuildTypes eBuild) const;
+	void setCityAssignment(const int iCityID) { m_iAssignedCity = iCityID; };
+	int getAssignedCity() const { return m_iAssignedCity; }
 
 private:
+	void reset(const bool bBlanc);
 	short m_iWorkModifier;
 	short m_iHillsWorkModifier;
 	short m_iPeaksWorkModifier;
+	int m_iAssignedCity;
 
 	std::vector<BuildTypes> m_extraBuilds;
 	std::map<BuildTypes, short> m_extraWorkModForBuild;

@@ -6542,7 +6542,7 @@ void CvTeam::read(FDataStreamBase* pStream)
 	// Toffer - Read vectors
 	{
 		short iSize = 0;
-		short iType;
+		short iType = -1;
 		// Tech
 		WRAPPER_READ_DECORATED(wrapper, "CvTeam", &iSize, "NoTradeTechSize");
 		for (short i = 0; i < iSize; ++i)
