@@ -225,9 +225,6 @@ void CvGame::init(HandicapTypes eHandicap)
 	// Alberts2: Recalculate which info class replacements are currently active
 	GC.updateReplacements();
 
-	//TB: Set Statuses
-	setStatusPromotions();
-
 	//establish improvement costs
 	//for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	//{
@@ -502,9 +499,7 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper(); wrapper.close();
 	}
 
-	GC.getLoadedInitCore().checkVersions();
-
-	for(int iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
@@ -512,28 +507,6 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		}
 	}
 
-	gDLL->getEngineIFace()->clearSigns();
-	gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
-
-	//	Remove and re-add the GW on load
-	processGreatWall(false, true, false);
-	processGreatWall(true, true);
-
-	// Recalculate vision on load (a stickytape - can't find where it's dropping visibility on loading)
-
-	//The tracking really cannot work unless it starts right.  Plus, this is not a bad procedural step just in case it's coming from an old save or somesuch.  Doesn't cost us much time on load.
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
-	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-		pLoopPlot->unitGameStateCorrections();
-		pLoopPlot->clearVisibilityCounts();
-		CvCity* pCity = pLoopPlot->getPlotCity();
-		if (pCity != NULL && pCity->isNPC() && pCity->isRevealed(GET_PLAYER(getActivePlayer()).getTeam(), false))
-		{
-			pCity->updateVisibility();
-		}
-	}
-	GC.getMap().updateSight(true, false);
 
 	for (int iI = 0; iI < GC.getNumGameOptionInfos(); iI++)
 	{
@@ -544,22 +517,49 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		}
 	}
 
-	//TB: Set Statuses
-	setStatusPromotions();
-
 	//	Super forts adaptation to C2C - make sure this map has had
 	//	its choke points calculated - note we check this every turn
 	//	because of a future intent to force periodic relcalulation
 	//	on significant events (discovery of mountaineering by someone,
 	//	terra-forming leading to water<->land transformations, etc.)
 	ensureChokePointsEvaluated();
-	gDLL->getInterfaceIFace()->setEndTurnCounter(2 * getBugOptionINT("MainInterface__AutoEndTurnDelay", 2));
 
+	if (bNewGame) doPreTurn0();
+	else
+	{
+		// TB - Recalculate vision on load (a stickytape - can't find where it's dropping visibility on loading)
+		// The tracking really cannot work unless it starts right.
+		//	Plus, this is not a bad procedural step just in case it's coming from an old save or somesuch.
+		//	Doesn't cost us much time on load.
+		for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+		{
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+			pLoopPlot->unitGameStateCorrections();
+			pLoopPlot->clearVisibilityCounts();
+			CvCity* pCity = pLoopPlot->getPlotCity();
+			if (pCity != NULL && pCity->isNPC() && pCity->isRevealed(GET_PLAYER(getActivePlayer()).getTeam(), false))
+			{
+				pCity->updateVisibility();
+			}
+		}
+		GC.getMap().updateSight(true, false);
+
+		// Remove and re-add the GW on load
+		processGreatWall(false, true, false);
+		processGreatWall(true, true);
+
+		// Is a modifier recalc needed?
+		GC.getLoadedInitCore().checkVersions();
+	}
 	// Set the unit/building filters to default state now that game is fully initialized.
 	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUntrainableUnits", true));
 	BuildingFilterList::setFilterActiveAll(BUILDING_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUnconstructableBuildings", false));
 
-	if (bNewGame) doPreTurn0();
+	// Toffer - We have some issues with signs disappearing,
+	//	not sure if these are really needed, commented out as a test.
+	//gDLL->getEngineIFace()->clearSigns();
+	gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
+	//gDLL->getInterfaceIFace()->setEndTurnCounter(2 * getBugOptionINT("MainInterface__AutoEndTurnDelay", 2));
 }
 
 // Toffer - This is only called when starting new games, or after regenerating map, right before turn 0 starts.
@@ -3598,29 +3598,6 @@ int CvGame::getNumCivCities() const
 		- GET_PLAYER(BARBARIAN_PLAYER).getNumCities()
 		- GET_PLAYER(NEANDERTHAL_PLAYER).getNumCities()
 	);
-}
-
-
-int CvGame::getStatusPromotion(int i) const
-{
-	return m_aiStatusPromotions[i];
-}
-
-int CvGame::getNumStatusPromotions() const
-{
-	return (int)m_aiStatusPromotions.size();
-}
-
-void CvGame::setStatusPromotions()
-{
-	m_aiStatusPromotions.clear();
-	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
-	{
-		if (GC.getPromotionInfo((PromotionTypes)iI).isStatus())
-		{
-			m_aiStatusPromotions.push_back(iI);
-		}
-	}
 }
 
 
@@ -11408,7 +11385,7 @@ void CvGame::processGreatWall(bool bIn, bool bForce, bool bSeeded) const
 
 void CvGame::ensureChokePointsEvaluated()
 {
-	if ( m_iChokePointCalculationVersion < CURRENT_CHOKE_POINT_VERSION )
+	if (m_iChokePointCalculationVersion < CURRENT_CHOKE_POINT_VERSION)
 	{
 		m_iChokePointCalculationVersion = CURRENT_CHOKE_POINT_VERSION;
 

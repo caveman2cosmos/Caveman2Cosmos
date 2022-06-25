@@ -390,6 +390,9 @@ public:
 	int getNumMapBonuses() const;
 	BonusTypes getMapBonus(const int i) const;
 
+	int getStatusPromotion(int i) const;
+	int getNumStatusPromotions() const;
+
 	int getNumFeatureInfos() const;
 	CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum) const;
 
@@ -504,6 +507,7 @@ public:
 private:
 	void registerUnitAI(const char* szType, int enumVal);
 	void registerMission(const char* szType, int enumVal);
+
 public:
 	void registerPlotTypes();
 	void registerUnitAIs();
@@ -1098,6 +1102,7 @@ protected:
 	CvString m_szDllProfileText;
 
 	std::vector<BonusTypes> m_mapBonuses;
+	std::vector<int> m_aiStatusPromotions;
 
 // BBAI Options
 public:

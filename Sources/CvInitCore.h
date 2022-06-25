@@ -276,7 +276,6 @@ public:
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-	uint32_t getAssetCheckSum() const;
 	uint32_t getSavegameAssetCheckSum() const;
 	void calculateAssetCheckSum();
 	void checkVersions();
@@ -408,8 +407,6 @@ protected:
 	static CvString* exeName;
 	static bool bPathsSet;
 // BUG - EXE/DLL Paths - end
-
-	bool m_bRecalcRequestProcessed;
 
 	// Asset checksum of the current build
 	uint32_t m_uiAssetCheckSum;

@@ -29870,20 +29870,22 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 
 	const PromotionLineTypes promotionLineStandout = GC.getPROMOTIONLINE_STANDOUT();
 
-	for (int iI = 0; iI < GC.getGame().getNumStatusPromotions(); iI++)
+	const int iNumStatusPromotions = GC.getNumStatusPromotions();
+
+	for (int iI = 0; iI < iNumStatusPromotions; iI++)
 	{
 		int iValue = 0;
-		const int iStatus = GC.getGame().getStatusPromotion(iI);
+		const int iStatus = GC.getStatusPromotion(iI);
 		const PromotionTypes eStatus = (PromotionTypes)iStatus;
 		const CvPromotionInfo& kPromotion = GC.getPromotionInfo(eStatus);
 		PromotionTypes eRemoveStatus = NO_PROMOTION;
 
-		for (int iJ = 0; iJ < GC.getGame().getNumStatusPromotions(); iJ++)
+		for (int iJ = 0; iJ < iNumStatusPromotions; iJ++)
 		{
-			if (kPromotion.getPromotionLine() == GC.getPromotionInfo((PromotionTypes)GC.getGame().getStatusPromotion(iJ)).getPromotionLine()
-			&& GC.getPromotionInfo((PromotionTypes)GC.getGame().getStatusPromotion(iJ)).getLinePriority() == 1)
+			if (kPromotion.getPromotionLine() == GC.getPromotionInfo((PromotionTypes)GC.getStatusPromotion(iJ)).getPromotionLine()
+			&& GC.getPromotionInfo((PromotionTypes)GC.getStatusPromotion(iJ)).getLinePriority() == 1)
 			{
-				eRemoveStatus = (PromotionTypes)GC.getGame().getStatusPromotion(iJ);
+				eRemoveStatus = (PromotionTypes)GC.getStatusPromotion(iJ);
 				break;
 			}
 		}
