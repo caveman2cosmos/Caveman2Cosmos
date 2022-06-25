@@ -1,5 +1,4 @@
 #include "CvGameCoreDLL.h"
-#include "CvInfoUtil.h"
 #include "CvPython.h"
 #include "CyCity.h"
 #include "CyGlobalContext.h"
