@@ -355,47 +355,21 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_pabHurry);
 	//SAFE_DELETE(m_pExprFreePromotionCondition);
 
-	for (int i = 0; i < (int)m_aEnabledCivilizationTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aEnabledCivilizationTypes[i]));
-	}
-
-	for (int i = 0; i < (int)m_aAidRateChanges.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aAidRateChanges[i]));
-	}
-
-	for (int i = 0; i < (int)m_aiFreeTraitTypes.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aiFreeTraitTypes[i]));
-	}
-
-	for (int i = 0; i < (int)m_aiPrereqInCityBuildings.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_aiPrereqInCityBuildings[i]));
-	}
-
-	for (int i = 0; i < (int)m_vPrereqNotInCityBuildings.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_vPrereqNotInCityBuildings[i]));
-	}
-
-	for (int i=0; i<(int)m_vPrereqOrBuilding.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_vPrereqOrBuilding[i]));
-	}
-
-	for (int i=0; i<(int)m_vReplacementBuilding.size(); i++)
-	{
-		GC.removeDelayedResolution((int*)&(m_vReplacementBuilding[i]));
-	}
-
 	GC.removeDelayedResolution((int*)&m_iFreeBuilding);
 	GC.removeDelayedResolution((int*)&m_iFreeAreaBuilding);
 	GC.removeDelayedResolution((int*)&m_iProductionContinueBuilding);
 	GC.removeDelayedResolution((int*)&m_iPrereqAnyoneBuilding);
 	GC.removeDelayedResolution((int*)&m_iExtendsBuilding);
 	GC.removeDelayedResolution((int*)&m_iObsoletesToBuilding);
+
+	GC.removeDelayedResolutionVector(m_aEnabledCivilizationTypes);
+	GC.removeDelayedResolutionVector(m_aAidRateChanges);
+	GC.removeDelayedResolutionVector(m_aiFreeTraitTypes);
+	GC.removeDelayedResolutionVector(m_aiPrereqInCityBuildings);
+	GC.removeDelayedResolutionVector(m_vPrereqNotInCityBuildings);
+	GC.removeDelayedResolutionVector(m_vPrereqOrBuilding);
+	GC.removeDelayedResolutionVector(m_vReplacementBuilding);
+	GC.removeDelayedResolutionVector(m_aiCategories);
 
 	m_aBuildingHappinessChanges.removeDelayedResolution();
 	m_aUnitProductionModifier.removeDelayedResolution();
