@@ -38,24 +38,33 @@ class CityOutputHistory
 public:
 	CityOutputHistory()
 	{
-		// ToDo - Make the magic number 3 into a global define perhaps?
-		recentOutputTurn = new int[3]();
-
-		for (int i = 0; i < 3; i++)
-		{
-			recentOutputHistory.push_back(new std::vector< std::pair<OrderTypes, int> >);
-		}
+		// ToDo - Make the magic number 3 (iHistorySize) into a global define perhaps?
+		recentOutputTurn = new int[iHistorySize]();
+		recentOutputHistory.resize(iHistorySize);
 	}
 	~CityOutputHistory()
 	{
 		SAFE_DELETE_ARRAY(recentOutputTurn);
-		recentOutputHistory.clear();
 	}
+
+	void reset()
+	{
+		for (int iI = 0; iI < iHistorySize; iI++)
+		{
+			recentOutputTurn[iI] = 0;
+		}
+		recentOutputHistory.clear();
+		recentOutputHistory.resize(iHistorySize);
+	}
+
 	void addToHistory(OrderTypes eOrder, int iType, int iForceList=-1)
 	{
 		if (iForceList > -1) // Used when reading saves.
 		{
-			recentOutputHistory[iForceList]->push_back(std::make_pair(eOrder, iType));
+			if (iForceList < iHistorySize)
+			{
+				recentOutputHistory[iForceList].push_back(std::make_pair(eOrder, iType));
+			}
 			return;
 		}
 		const int iTurn = GC.getGame().getGameTurn();
@@ -63,30 +72,41 @@ public:
 		if (iTurn != recentOutputTurn[0])
 		{
 			// Iterate history
-			for (int i = 2; i > 0; i--)
+			for (int i = iHistorySize - 1; i > 0; i--)
 			{
 				recentOutputHistory[i] = recentOutputHistory[i-1];
 				recentOutputTurn[i] = recentOutputTurn[i-1];
 			}
-			recentOutputHistory[0] = new std::vector< std::pair<OrderTypes, int> >;
+			recentOutputHistory[0].clear();
 			recentOutputTurn[0] = iTurn;
 		}
-		recentOutputHistory[0]->push_back(std::make_pair(eOrder, iType));
+		recentOutputHistory[0].push_back(std::make_pair(eOrder, iType));
+
+		logBBAI("    City added (%d, %d) on turn %d to history", (int)eOrder, iType, iTurn);
+
+		for (uint16_t iI = 0; iI < iHistorySize; iI++)
+		{
+			for (uint16_t iJ = 0; iJ < recentOutputHistory[iI].size(); iJ++)
+			{
+				logBBAI("    City History: (%d, %d) on turn %d", recentOutputHistory[iI][iJ].first, recentOutputHistory[iI][iJ].second, recentOutputTurn[iI]);
+			}
+		}
 	}
 	void setRecentOutputTurn(const int iTurn, const int iElement) const
 	{
-		if (iElement >= 3) return;
+		if (iElement >= iHistorySize) return;
 
 		recentOutputTurn[iElement] = iTurn;
 	}
 	int getRecentOutputTurn(const int iTurn) const
 	{
-		return recentOutputTurn[range(iTurn, 0, 2)];
+		return recentOutputTurn[range(iTurn, 0, iHistorySize-1)];
 	}
 
 private:
+	const static int iHistorySize = 3;
 	int* recentOutputTurn;
-	std::vector< std::vector< std::pair<OrderTypes, int> >* > recentOutputHistory;
+	std::vector< std::vector< std::pair<OrderTypes, int> > > recentOutputHistory;
 };
 
 // Public Functions...
@@ -226,6 +246,7 @@ CvCity::CvCity()
 	m_paiStartDeferredSectionNumBonuses = NULL;
 	m_bMarkedForDestruction = false;
 
+	m_outputHistory = new CityOutputHistory();
 	reset(0, NO_PLAYER, 0, 0, true);
 }
 
@@ -1104,7 +1125,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_bIsGreatWallSeed = false;
 	m_deferringBonusProcessingCount = 0;
 
-	m_outputHistory = new CityOutputHistory();
+	m_outputHistory->reset();
 }
 
 
