@@ -54,7 +54,7 @@ struct IDValueMap
 
 			if (pXML->TryMoveToXmlFirstChild())
 			{
-				m_map.resize(iNumSibs);
+				m_map.resize(iNumSibs); // Important to keep the delayed resolution pointers correct
 
 				foreach_(value_type& pair, m_map)
 				{
@@ -104,7 +104,7 @@ struct IDValueMap
 
 			if (iNumSibs > 0)
 			{
-				m_map.resize(iNumSibs);
+				m_map.resize(iNumSibs); // Important to keep the delayed resolution pointers correct
 
 				if (pXML->TryMoveToXmlFirstChild())
 				{
@@ -137,7 +137,7 @@ struct IDValueMap
 		{
 			if (!hasValue(otherPair.first))
 			{
-				m_map.push_back(std::make_pair(otherPair.first, otherPair.second));
+				m_map.push_back(value_type(otherPair));
 			}
 		}
 	}
@@ -167,7 +167,7 @@ struct IDValueMap
 		{
 			const std::vector<value_type>& otherVector = other.m_map;
 			const int num = otherVector.size();
-			m_map.resize(num);
+			m_map.resize(num); // Important to keep the delayed resolution pointers correct
 			for (int i = 0; i < num; i++)
 			{
 				m_map[i] = std::make_pair((ID_)-1, otherVector[i].second);

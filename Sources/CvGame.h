@@ -215,7 +215,6 @@ public:
 
 	DllExport int getTurnSlice() const;
 	int getMinutesPlayed() const;
-	void changeTurnSlice(int iChange);
 
 	int getCutoffSlice() const;
 	void setCutoffSlice(int iNewValue);
@@ -236,10 +235,6 @@ public:
 	int getNumCities() const;
 	int getNumCivCities() const;
 	void changeNumCities(int iChange);
-
-	int getStatusPromotion(int i) const;
-	int getNumStatusPromotions() const;
-	void setStatusPromotions();
 
 	int getTotalPopulation() const;
 	void changeTotalPopulation(int iChange);
@@ -415,6 +410,8 @@ public:
 
 	DllExport bool isFinalInitialized() const;
 	DllExport void setFinalInitialized(bool bNewValue);
+	void onFinalInitialized(const bool bNewGame = false);
+	void doPreTurn0();
 
 	bool getPbemTurnSent() const;
 	DllExport void setPbemTurnSent(bool bNewValue);
@@ -755,8 +752,6 @@ protected:
 	//bool m_bNukesValid;
 	TeamTypes m_circumnavigatingTeam;
 
-	std::vector<int> m_aiStatusPromotions;
-
 	HandicapTypes m_eHandicap;
 	PlayerTypes m_ePausePlayer;
 	mutable UnitTypes m_eBestLandUnit;
@@ -820,11 +815,10 @@ protected:
 	stdext::hash_map<VoteSourceTypes, ReligionTypes> m_mapVoteSourceReligions;
 	std::vector<EventTriggerTypes> m_aeInactiveTriggers;
 
-	int		m_iNumCultureVictoryCities;
-	int		m_eCultureVictoryCultureLevel;
+	int m_iNumCultureVictoryCities;
+	int m_eCultureVictoryCultureLevel;
 
-	bool	m_plotGroupHashesInitialized;
-	bool	m_bRecalculatingModifiers;
+	bool m_bRecalculatingModifiers;
 
 	void doTurn();
 	void doDeals();

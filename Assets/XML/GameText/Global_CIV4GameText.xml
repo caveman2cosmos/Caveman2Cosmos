@@ -14052,7 +14052,7 @@
 		<Tag>TXT_KEY_MISC_ENABLES</Tag>
 		<English>[ICON_BULLET]Enables[SPACE]</English>
 		<French>[ICON_BULLET]Permet[SPACE]:[SPACE]</French>
-		<German>[ICON_BULLET]neue Beförderungen:[SPACE]</German>
+		<German>[ICON_BULLET]ermöglicht:[SPACE]</German>
 		<Italian>[ICON_BULLET]Permette[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Permite[SPACE]</Spanish>
 	</TEXT>
@@ -16742,14 +16742,6 @@
 		<French>Un %s1_Name ne peut pas terminer %s2_Build parce qu'il requiert de sacrifier une unité de taille standard de ce type.</French>
 		<Polish>%s1_Name nie może ukończyć %s2_Build ponieważ wymaga to poświęcenia standardowej wielkości jednostki danego typu.</Polish>
 		<Russian>%s1_Name не может завершить %s2_Build, потому что для этого требуется принести в жертву отряд стандартного размера группы этого типа.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_UNIT_DEATH</Tag>
-		<English>Your %s1_unit has Perished</English>
-		<French>Votre %s1_unit a péri</French>
-		<Italian>La tua unità %s1_unit è morta</Italian>
-		<Polish>Twoja jednostka: %s1_unit zginęła</Polish>
-		<Russian>Ваш %s1_unit ïîãèáëî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_UNIT_DISBANDED_NO_MONEY</Tag>
@@ -22351,7 +22343,7 @@
 		<Tag>TXT_KEY_REQUIRES</Tag>
 		<English>[NEWLINE][COLOR_WARNING_TEXT]Requires[SPACE]</English>
 		<French>[NEWLINE][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
-		<German>[NEWLINE][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
+		<German>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
 		<Italian>[NEWLINE][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
 		<Spanish>[NEWLINE][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
 		<Polish>[NEWLINE][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
@@ -28617,7 +28609,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_REQUIRED_TO_BUILD</Tag>
 		<English>[ICON_BULLET]Can be built by[SPACE]</English>
 		<French>[ICON_BULLET]Peut être construit par[SPACE]</French>
-		<German>[ICON_BULLET]Kann errichtet werden von[SPACE]</German>
+		<German>[ICON_BULLET]kann errichtet werden von[SPACE]</German>
 		<Italian>[ICON_BULLET]L'unità può essere costruita da[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Construible por[SPACE]</Spanish>
 	</TEXT>
@@ -28814,7 +28806,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNIT_GORILLA_PEDIA</Tag>
 		<English>Gorillas, the largest of the living primates, are ground-dwelling omnivores that inhabit the forests of Africa. Gorillas are divided into two species and (still under debate as of 2007) either four or five subspecies. Its DNA is 97%-98% identical to that of a human, and are the next closest living relatives to humans after the two chimpanzee species.</English>
 		<French>Les gorilles, le plus grand des primats vivants, sont des omnivores de terre-logement qui habitent les forêts de l'Afrique. Des gorilles sont encore divisés en deux espèces et (sous la discussion en date de 2007) quatre ou cinq sous-espèces. Son ADN est 97%-98% identique à celui d'un humain, et est les prochains parents vivants les plus étroits aux humains après les deux espèces de chimpanzé.</French>
-		<German>Gorillas, das größte der lebenden Primas, sind Boden-Wohnung Allesfresser, die die Wälder von Afrika bewohnen. Gorillas werden in zwei Sorten und (noch unter Debatte ab 2007) geteilt, entweder vier oder fünf Unterarten. Seine DNA ist 97%-98% identisch zu dem eines Menschen und ist die folgenden nähsten lebenden Verwandten zu den Menschen nach den zwei Schimpansesorten.</German>
+		<German>[COLOR_UNIT_TEXT]Gorillas[COLOR_REVERT] sind die größten lebenden Primaten und bewohnen die mittleren Teile Afrikas. Die Gattung umfasst zwei Arten mit jeweils zwei Unterarten.[NEWLINE]Die schwanzlosen Menschenaffen sind robust gebaut, wobei Östliche Gorillas noch etwas schwerer und stämmiger sind. Die Arme sind deutlich länger als die Beine, womit sie sich am Boden im Knöchelgang bewegen. Hände und Füße sind sehr breit. Die großen Zehen sind wie die Daumen opponierbar. Die Fingerabdrücke sind wie beim Menschen einzigartig. Das Fell der Östlichen Gorillas ist schwarz, bei den Westlichen Gorillas eher braun. Bei älteren Männchen färbt es sich auf dem Rücken grau, weshalb sie auch Silberrücken genannt werden. Die Schnauze ist auffallend kurz und über den Augen bilden sich deutliche Wülste. Die Tiere besitzen 32 Zähne und sind reine Pflanzenfresser. Je nach Art sind Gorillas mehr oder weniger gute Kletterer. Obwohl sie nicht schwimmen können, sind sie nicht wasserscheu. Sie leben in Gruppen, die sich allerdings gelegentlich auflösen und neu formieren. Sie kommunizieren mit Rufen und Rülps- oder Grunzlauten sowie mit Gesten. Typisch ist das Trommeln auf die Brust als Begrüßung untereinander. Natürliche Feinde haben die Gorillas kaum, lediglich Jungtiere fallen gelegentlich Leoparden zum Opfer.[NEWLINE]Die Hauptbedrohung für den Gorilla ist der Mensch durch Bejagung und Lebensraumzerstörung. Forscher untersuchen schon seit längerer Zeit die Kommunikationsfähigkeit der Gorillas. So gab es beispielsweise Versuche, einem Weibchen die Gebärdensprache zu lehren.</German>
 		<Italian>I gorillas, i più grandi dei primati viventi, sono onnivori della terra-dimora che abitano le foreste dell'Africa. I gorillas sono divisi ancora in due specie e (sotto il dibattito a partire da 2007) quattro o cinque sottospeci. Il relativo DNA è 97%-98% identico a quello di un essere umano ed è i parenti viventi più vicini seguenti agli esseri umani dopo le due specie dello scimpanzè.</Italian>
 		<Spanish>Los gorilas, los más grandes de los primates vivos, son los omnívoros de la tierra-vivienda que habitan los bosques de África. Los gorilas todavía se dividen en dos especies y (bajo discusión en fecha 2007) cuatro o cinco subespecies. Su DNA es 97%-98% idéntico a el de un ser humano, y es los parientes vivos más cercanos siguientes a los seres humanos después de las dos especies del chimpancé.</Spanish>
 	</TEXT>

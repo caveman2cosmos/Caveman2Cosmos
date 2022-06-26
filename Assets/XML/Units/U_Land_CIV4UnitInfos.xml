@@ -175,7 +175,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iBaseUpkeep>4</iBaseUpkeep>
-			<iMoves>1</iMoves>
+			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>7</iGroupSize>

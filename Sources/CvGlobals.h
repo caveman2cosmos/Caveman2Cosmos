@@ -122,6 +122,7 @@ class CvMapCategoryInfo;
 class CvIdeaClassInfo;
 class CvIdeaInfo;
 class CvInvisibleInfo;
+class CvCategoryInfo;
 //class CvTraitOptionEditsInfo;
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/24/07                                MRGENIE      */
@@ -389,6 +390,9 @@ public:
 	int getNumMapBonuses() const;
 	BonusTypes getMapBonus(const int i) const;
 
+	int getStatusPromotion(int i) const;
+	int getNumStatusPromotions() const;
+
 	int getNumFeatureInfos() const;
 	CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum) const;
 
@@ -453,9 +457,6 @@ public:
 	int iStuckUnitID;
 	int iStuckUnitCount;
 
-	bool isXMLLogging() const;
-	void setXMLLogging(bool bNewVal);
-
 	void updateReplacements();
 
 	int getNumCityTabInfos() const;
@@ -475,6 +476,9 @@ public:
 
 	int getNumInvisibleInfos() const;
 	CvInvisibleInfo& getInvisibleInfo(InvisibleTypes e) const;
+
+	int getNumCategoryInfos() const;
+	CvCategoryInfo& getCategoryInfo(CategoryTypes e) const;
 
 	int getNumVoteSourceInfos() const;
 	CvVoteSourceInfo& getVoteSourceInfo(VoteSourceTypes e) const;
@@ -503,6 +507,7 @@ public:
 private:
 	void registerUnitAI(const char* szType, int enumVal);
 	void registerMission(const char* szType, int enumVal);
+
 public:
 	void registerPlotTypes();
 	void registerUnitAIs();
@@ -767,6 +772,7 @@ public:
 	void setAreaFinder(FAStar* pVal);
 	void setPlotGroupFinder(FAStar* pVal);
 	void setIsBug();
+	void refreshOptionsBUG();
 
 	uint32_t getAssetCheckSum() const;
 
@@ -976,6 +982,7 @@ protected:
 	std::vector<CvInfoBase*> m_paMonthInfo;
 	std::vector<CvInfoBase*> m_paDenialInfo;
 	std::vector<CvInvisibleInfo*> m_paInvisibleInfo;
+	std::vector<CvCategoryInfo*> m_paCategoryInfo;
 	std::vector<CvVoteSourceInfo*> m_paVoteSourceInfo;
 	std::vector<CvUnitCombatInfo*> m_paUnitCombatInfo;
 	std::vector<CvPromotionLineInfo*> m_paPromotionLineInfo;
@@ -1086,8 +1093,6 @@ protected:
 	DO_FOR_EACH_GLOBAL_DEFINE(DECLARE_MEMBER_VAR)
 	DO_FOR_EACH_INFO_TYPE(DECLARE_MEMBER_VAR)
 
-	bool m_bXMLLogging;
-
 	float m_fPLOT_SIZE;
 
 	int m_iViewportCenterOnSelectionCenterBorder;
@@ -1097,6 +1102,7 @@ protected:
 	CvString m_szDllProfileText;
 
 	std::vector<BonusTypes> m_mapBonuses;
+	std::vector<int> m_aiStatusPromotions;
 
 // BBAI Options
 public:

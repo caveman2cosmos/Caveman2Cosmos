@@ -2640,7 +2640,7 @@ int CvTeam::getResearchCost(TechTypes eTech) const
 
 int CvTeam::getResearchLeft(TechTypes eTech) const
 {
-	return std::max(0, (getResearchCost(eTech) - getResearchProgress(eTech)));
+	return std::max(0, getResearchCost(eTech) - getResearchProgress(eTech));
 }
 
 
@@ -4761,11 +4761,11 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 {
 	FASSERT_BOUNDS(0, GC.getNumTechInfos(), eIndex);
 	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
+	FASSERT_NOT_NEGATIVE(iNewValue);
 
 	if (getResearchProgress(eIndex) != iNewValue)
 	{
 		m_paiResearchProgress[eIndex] = iNewValue;
-		FASSERT_NOT_NEGATIVE(getResearchProgress(eIndex));
 
 		if (getID() == GC.getGame().getActiveTeam())
 		{
@@ -4773,7 +4773,7 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 			gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 		}
 
-		if (getResearchProgress(eIndex) >= getResearchCost(eIndex))
+		if (iNewValue >= getResearchCost(eIndex))
 		{
 			setHasTech(eIndex, true, ePlayer, true, true);
 
@@ -4782,7 +4782,7 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 			{
 				GET_PLAYER(ePlayer).changeOverflowResearch(
 					GET_PLAYER(ePlayer).doMultipleResearch(
-						100 * (getResearchProgress(eIndex) - getResearchCost(eIndex))
+						100 * (iNewValue - getResearchCost(eIndex))
 						/
 						GET_PLAYER(ePlayer).calculateResearchModifier(eIndex)
 					)
@@ -5152,6 +5152,9 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 		processTech(eTech, iChange, bAnnounce);
 		return;
 	}
+	clearDiscoveryTechCache();
+	GET_PLAYER(ePlayer).resetBonusClassTallyCache(-1, false);
+
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
@@ -6539,7 +6542,7 @@ void CvTeam::read(FDataStreamBase* pStream)
 	// Toffer - Read vectors
 	{
 		short iSize = 0;
-		short iType;
+		short iType = -1;
 		// Tech
 		WRAPPER_READ_DECORATED(wrapper, "CvTeam", &iSize, "NoTradeTechSize");
 		for (short i = 0; i < iSize; ++i)

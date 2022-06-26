@@ -1245,6 +1245,10 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	{
 		gDLL->getInterfaceIFace()->clearSelectedCities();
 	}
+	while (m_workers.size() > 0)
+	{
+		setWorkerHave(m_workers[0], false);
+	}
 
 	CvPlot* pPlot = plot();
 
@@ -17256,7 +17260,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	// Toffer - Read vectors
 	{
 		short iSize = 0;
-		short iType;
+		short iType = -1;
 		// Building
 		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "FreeBuildingsSize");
 		for (short i = 0; i < iSize; ++i)
@@ -17533,6 +17537,18 @@ void CvCity::read(FDataStreamBase* pStream)
 	}
 	WRAPPER_READ(wrapper, "CvCity", &m_iRevIndexDistanceMod);
 
+	// Toffer - Read vectors
+	{
+		short iSize = 0;
+		int iUnitID = -1;
+		// Building
+		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "WorkersSize");
+		for (short i = 0; i < iSize; ++i)
+		{
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iUnitID, "WorkerUnitID");
+			m_workers.push_back(iUnitID);
+		}
+	}
 	WRAPPER_READ_OBJECT_END(wrapper);
 	//Example of how to skip an unneeded element
 	//WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iMaxFoodKeptPercent, SAVE_VALUE_ANY);	// was present in old formats
@@ -17973,6 +17989,14 @@ void CvCity::write(FDataStreamBase* pStream)
 	}
 	WRAPPER_WRITE(wrapper, "CvCity", m_iRevIndexDistanceMod);
 
+	// Toffer - Write vectors
+	{
+		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", (short)m_workers.size(), "WorkersSize");
+		foreach_(const int iUnitID, m_workers)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iUnitID, "WorkerUnitID");
+		}
+	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
@@ -22624,7 +22648,7 @@ int CvCity::getUnitListNumInGroup(int iGroup)
 
 UnitTypes CvCity::getUnitListType(int iGroup, int iPos)
 {
-	return m_UnitList.getUnitType(iGroup, iPos);
+	return m_UnitList.getUnitListType(iGroup, iPos);
 }
 
 int CvCity::getUnitListSelectedRow()
@@ -24439,4 +24463,48 @@ void CvCity::AI_setPropertyControlBuildingQueued(bool bSet)
 bool CvCity::AI_isPropertyControlBuildingQueued() const
 {
 	return m_bPropertyControlBuildingQueued;
+}
+
+
+void CvCity::setWorkerHave(const int iUnitID, const bool bNewValue)
+{
+	std::vector<int>::iterator itr = find(m_workers.begin(), m_workers.end(), iUnitID);
+
+	if (bNewValue)
+	{
+		if (itr == m_workers.end())
+		{
+			UnitCompWorker* workerComp = GET_PLAYER(getOwner()).getUnit(iUnitID)->getWorkerComponent();
+			if (workerComp)
+			{
+				m_workers.push_back(iUnitID);
+				workerComp->setCityAssignment(getID());
+			}
+			else
+			{
+				FErrorMsg("UnitCompWorker unexpectedly not initialized");
+			}
+		}
+		else
+		{
+			FErrorMsg("Tried to add a duplicate vector element!");
+		}
+	}
+	else if (itr != m_workers.end())
+	{
+		UnitCompWorker* workerComp = GET_PLAYER(getOwner()).getUnit(iUnitID)->getWorkerComponent();
+		if (workerComp)
+		{
+			workerComp->setCityAssignment(-1);
+		}
+		else
+		{
+			FErrorMsg("UnitCompWorker unexpectedly not initialized");
+		}
+		m_workers.erase(itr);
+	}
+	else
+	{
+		FErrorMsg("Vector element to remove was missing!");
+	}
 }

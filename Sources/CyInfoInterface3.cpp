@@ -132,6 +132,7 @@ void CyInfoPythonInterface3()
 		.def("getAdjectiveKey", &CvReligionInfo::pyGetAdjectiveKey, "wstring ()")
 		// Arrays
 		.def("getGlobalReligionCommerce", &CvReligionInfo::getGlobalReligionCommerce, "int (int i)")
+		.def("getFlavorValue", &CvReligionInfo::getFlavorValue, "int (int i)")
 	;
 
 

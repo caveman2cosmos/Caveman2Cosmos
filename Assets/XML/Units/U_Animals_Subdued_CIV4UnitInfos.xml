@@ -1397,7 +1397,7 @@
 					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 					<PassableTech>TECH_ASTRONOMY</PassableTech>
 				</TerrainPassableTech>
-			</TerrainPassableTechs>			
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4193,7 +4193,7 @@
 					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 					<PassableTech>TECH_ASTRONOMY</PassableTech>
 				</TerrainPassableTech>
-			</TerrainPassableTechs>			
+			</TerrainPassableTechs>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12851,7 +12851,7 @@
 					<PassableTech>TECH_ASTRONOMY</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
-			<MapCategoryTypes>			
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
@@ -18523,7 +18523,7 @@
 					<PassableTech>TECH_ASTRONOMY</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
-			<MapCategoryTypes>			
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
@@ -22372,7 +22372,7 @@
 			<Combat>UNITCOMBAT_SEA_ANIMAL_TALE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_IDEA</SubCombatType>
-			</SubCombatTypes>			
+			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>

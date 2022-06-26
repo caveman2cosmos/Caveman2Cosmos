@@ -60,14 +60,13 @@ void CvSelectionGroup::init(int iID, PlayerTypes eOwner)
 
 	//--------------------------------
 	// Init other game data
-	AI_init();
+	AI_reset();
 }
 
 
 void CvSelectionGroup::uninit()
 {
 	m_units.clear();
-
 	m_missionQueue.clear();
 }
 
@@ -94,21 +93,12 @@ void CvSelectionGroup::reset(int iID, PlayerTypes eOwner, bool bConstructorCall)
 	m_eAutomateType = NO_AUTOMATE;
 	m_bIsBusyCache = false;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/19/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
 	m_bIsStrandedCache = false;
 	m_bIsStrandedCacheValid = false;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-// BUG - Safe Move - start
+
 	m_bLastPathPlotChecked = false;
 	m_bLastPlotVisible = false;
 	m_bLastPlotRevealed = false;
-// BUG - Safe Move - end
 
 	if (!bConstructorCall)
 	{
@@ -481,7 +471,7 @@ void CvSelectionGroup::pushMission(MissionTypes eMission, int iData1, int iData2
 {
 	if ( eMission == MISSION_SKIP && eMissionAI == NO_MISSIONAI)
 	{
-		//	No longer targeting any mission - make sure we don't keep reciord of the fact that we were previously
+		//	No longer targeting any mission - make sure we don't keep record of the fact that we were previously
 		((CvSelectionGroupAI*)this)->AI_setMissionAI(NO_MISSIONAI,NULL,NULL);
 	}
 	pushMissionInternal(eMission, iData1, iData2, iFlags, bAppend, bManual, eMissionAI, pMissionAIPlot, pMissionAIUnit);
@@ -608,108 +598,36 @@ void CvSelectionGroup::updateMission()
 
 CvPlot* CvSelectionGroup::lastMissionPlot() const
 {
-	CvUnit* pTargetUnit;
 	CLLNode<MissionData>* pMissionNode = tailMissionQueueNode();
 
 	while (pMissionNode != NULL)
 	{
 		switch (pMissionNode->m_data.eMissionType)
 		{
-		case MISSION_MOVE_TO:
-// BUG - Sentry Actions - start
+			case MISSION_MOVE_TO:
 #ifdef _MOD_SENTRY
-		case MISSION_MOVE_TO_SENTRY:
+			case MISSION_MOVE_TO_SENTRY:
 #endif
-// BUG - Sentry Actions - end
-		case MISSION_ROUTE_TO:
-			return GC.getMap().plot(pMissionNode->m_data.iData1, pMissionNode->m_data.iData2);
-			break;
-
-		case MISSION_MOVE_TO_UNIT:
-			pTargetUnit = GET_PLAYER((PlayerTypes)pMissionNode->m_data.iData1).getUnit(pMissionNode->m_data.iData2);
-			if (pTargetUnit != NULL)
+			case MISSION_ROUTE_TO:
 			{
-				return pTargetUnit->plot();
+				return GC.getMap().plot(pMissionNode->m_data.iData1, pMissionNode->m_data.iData2);
 			}
-			break;
-
-		case MISSION_SKIP:
-		case MISSION_SLEEP:
-		case MISSION_FORTIFY:
-		case MISSION_BUILDUP:
-		case MISSION_AUTO_BUILDUP:
-		case MISSION_HEAL_BUILDUP:
-		case MISSION_PLUNDER:
-		case MISSION_AIRPATROL:
-		case MISSION_SEAPATROL:
-		case MISSION_HEAL:
-		case MISSION_SENTRY:
-// BUG - Sentry Actions - start
-#ifdef _MOD_SENTRY
-		case MISSION_SENTRY_WHILE_HEAL:
-		case MISSION_SENTRY_NAVAL_UNITS:
-		case MISSION_SENTRY_LAND_UNITS:
-#endif
-// BUG - Sentry Actions - end
-		case MISSION_AIRLIFT:
-		case MISSION_NUKE:
-		case MISSION_RECON:
-		case MISSION_PARADROP:
-		case MISSION_AIRBOMB:
-		case MISSION_BOMBARD:
-		case MISSION_RANGE_ATTACK:
-		case MISSION_PILLAGE:
-		case MISSION_SABOTAGE:
-		case MISSION_DESTROY:
-		case MISSION_STEAL_PLANS:
-		case MISSION_FOUND:
-		case MISSION_SPREAD:
-		case MISSION_SPREAD_CORPORATION:
-		case MISSION_JOIN:
-		case MISSION_CONSTRUCT:
-		case MISSION_DISCOVER:
-		case MISSION_HURRY:
-		case MISSION_TRADE:
-		case MISSION_GREAT_WORK:
-		case MISSION_INFILTRATE:
-		case MISSION_GOLDEN_AGE:
-		case MISSION_BUILD:
-		case MISSION_LEAD:
-		case MISSION_ESPIONAGE:
-		case MISSION_DIE_ANIMATION:
-		// Dale - AB: Bombing
-		case MISSION_AIRBOMB1:
-		case MISSION_AIRBOMB2:
-		case MISSION_AIRBOMB3:
-		case MISSION_AIRBOMB4:
-		case MISSION_AIRBOMB5:
-		// Dale - RB: Field Bombard
-		case MISSION_RBOMBARD:
-		// Dale - FE: Fighters
-		case MISSION_FENGAGE:
-		// ! Dale
-		case MISSION_CLAIM_TERRITORY:
-		case MISSION_HURRY_FOOD:
-		case MISSION_INQUISITION:
-		case MISSION_ESPIONAGE_SLEEP:
-		case MISSION_SHADOW:
-		case MISSION_GREAT_COMMANDER:
-		case MISSION_WAIT_FOR_TECH:
-		//TB Combat Mods (Cure) begin
-		case MISSION_CURE:
-		case MISSION_AMBUSH:
-		case MISSION_ASSASSINATE:
-			break;
-
-		default:
-			// AIAndy: Assumed to be an outcome mission
-			// FErrorMsg("error");
-			break;
+			case MISSION_MOVE_TO_UNIT:
+			{
+				const CvUnit* pTargetUnit = GET_PLAYER((PlayerTypes)pMissionNode->m_data.iData1).getUnit(pMissionNode->m_data.iData2);
+				if (pTargetUnit != NULL)
+				{
+					return pTargetUnit->plot();
+				}
+				break;
+			}
+			default: // AIAndy: Assumed to be an outcome mission
+			{
+				break;
+			}
 		}
-
 		pMissionNode = prevMissionQueueNode(pMissionNode);
 	}
-
 	return plot();
 }
 
@@ -737,509 +655,503 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 	{
 		switch (iMission)
 		{
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
-		case MISSION_MOVE_TO_SENTRY:
-			if (!pLoopUnit->canSentry(NULL))
-			{
-				return false;
-			}
-			// fall through to next case
+			case MISSION_MOVE_TO_SENTRY:
+				if (!pLoopUnit->canSentry(NULL))
+				{
+					return false;
+				}
+				// fall through to next case
 #endif
-// BUG - Sentry Actions - end
+			case MISSION_MOVE_TO:
+				if (!pPlot->at(iData1, iData2))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_MOVE_TO:
-			if (!(pPlot->at(iData1, iData2)))
-			{
-				return true;
-			}
-			break;
+			case MISSION_ROUTE_TO:
+				if (!(pPlot->at(iData1, iData2)) || (getBestBuildRoute(pPlot) != NO_ROUTE))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_ROUTE_TO:
-			if (!(pPlot->at(iData1, iData2)) || (getBestBuildRoute(pPlot) != NO_ROUTE))
-			{
-				return true;
-			}
-			break;
+			case MISSION_MOVE_TO_UNIT:
+				FAssertMsg(iData1 != NO_PLAYER, "iData1 should be a valid Player");
+				pTargetUnit = GET_PLAYER((PlayerTypes)iData1).getUnit(iData2);
+				if ((pTargetUnit != NULL) && !(pTargetUnit->atPlot(pPlot)))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_MOVE_TO_UNIT:
-			FAssertMsg(iData1 != NO_PLAYER, "iData1 should be a valid Player");
-			pTargetUnit = GET_PLAYER((PlayerTypes)iData1).getUnit(iData2);
-			if ((pTargetUnit != NULL) && !(pTargetUnit->atPlot(pPlot)))
-			{
-				return true;
-			}
-			break;
+			case MISSION_SKIP:
+				if (pLoopUnit->canHold())
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_SKIP:
-			if (pLoopUnit->canHold())
-			{
-				return true;
-			}
-			break;
+			case MISSION_SLEEP:
+				if (pLoopUnit->canSleep())
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_SLEEP:
-			if (pLoopUnit->canSleep())
-			{
-				return true;
-			}
-			break;
+			case MISSION_FORTIFY:
+				if (pLoopUnit->canFortify())
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_FORTIFY:
-			if (pLoopUnit->canFortify())
-			{
-				return true;
-			}
-			break;
+			case MISSION_BUILDUP:
+				if (pLoopUnit->canBuildUp())
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_BUILDUP:
-			if (pLoopUnit->canBuildUp())
-			{
-				return true;
-			}
-			break;
+			case MISSION_AUTO_BUILDUP:
+				if (pLoopUnit->canBuildUp() || pLoopUnit->canFortify() || pLoopUnit->canSleep())
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_AUTO_BUILDUP:
-			if (pLoopUnit->canBuildUp() || pLoopUnit->canFortify() || pLoopUnit->canSleep())
-			{
-				return true;
-			}
-			break;
+			case MISSION_HEAL_BUILDUP:
+				if (pLoopUnit->canHeal(pPlot) && pPlot->getTotalTurnDamage(this) <= 0)
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_HEAL_BUILDUP:
-			if (pLoopUnit->canHeal(pPlot) && pPlot->getTotalTurnDamage(this) <= 0)
-			{
-				return true;
-			}
-			break;
+			case MISSION_AIRPATROL:
+				if (pLoopUnit->canAirPatrol(pPlot))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_AIRPATROL:
-			if (pLoopUnit->canAirPatrol(pPlot))
-			{
-				return true;
-			}
-			break;
+			case MISSION_SEAPATROL:
+				if (pLoopUnit->canSeaPatrol(pPlot))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_SEAPATROL:
-			if (pLoopUnit->canSeaPatrol(pPlot))
-			{
-				return true;
-			}
-			break;
+			case MISSION_HEAL:
+				//ls612: Fix for Terrain damage, apparently that wasn't factored in anywhere else.
+				if (pLoopUnit->canHeal(pPlot) && pPlot->getTotalTurnDamage(this) <= 0)
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_HEAL:
-			//ls612: Fix for Terrain damage, apparently that wasn't factored in anywhere else.
-			if (pLoopUnit->canHeal(pPlot) && pPlot->getTotalTurnDamage(this) <= 0)
-			{
-				return true;
-			}
-			break;
+			case MISSION_SENTRY:
+				if (pLoopUnit->canSentry(pPlot))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_SENTRY:
-			if (pLoopUnit->canSentry(pPlot))
-			{
-				return true;
-			}
-			break;
-
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
-		case MISSION_SENTRY_WHILE_HEAL:
-			if ((pLoopUnit->canSentry(pPlot)) && (pLoopUnit->canHeal(pPlot)))
-			{
-				return true;
-			}
-			break;
+			case MISSION_SENTRY_WHILE_HEAL:
+				if ((pLoopUnit->canSentry(pPlot)) && (pLoopUnit->canHeal(pPlot)))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_SENTRY_NAVAL_UNITS:
-			if ((getDomainType() == DOMAIN_SEA) && (pLoopUnit->canSentry(pPlot)))
-			{
-				return true;
-			}
-			break;
+			case MISSION_SENTRY_NAVAL_UNITS:
+				if ((getDomainType() == DOMAIN_SEA) && (pLoopUnit->canSentry(pPlot)))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_SENTRY_LAND_UNITS:
-			if ((getDomainType() == DOMAIN_LAND) && (pLoopUnit->canSentry(pPlot)))
-			{
-				return true;
-			}
-			break;
+			case MISSION_SENTRY_LAND_UNITS:
+				if ((getDomainType() == DOMAIN_LAND) && (pLoopUnit->canSentry(pPlot)))
+				{
+					return true;
+				}
+				break;
 #endif
-// BUG - Sentry Actions - end
 
-		case MISSION_AIRLIFT:
-			if (pLoopUnit->canAirliftAt(pPlot, iData1, iData2))
-			{
-				return true;
-			}
-			break;
+			case MISSION_AIRLIFT:
+				if (pLoopUnit->canAirliftAt(pPlot, iData1, iData2))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_NUKE:
-			if (pLoopUnit->canNukeAt(pPlot, iData1, iData2))
-			{
-				return true;
-			}
-			break;
-		case MISSION_RECON:
-			if (pLoopUnit->canReconAt(pPlot, iData1, iData2))
-			{
-				return true;
-			}
-			break;
+			case MISSION_NUKE:
+				if (pLoopUnit->canNukeAt(pPlot, iData1, iData2))
+				{
+					return true;
+				}
+				break;
+			case MISSION_RECON:
+				if (pLoopUnit->canReconAt(pPlot, iData1, iData2))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_PARADROP:
-			if (pLoopUnit->canParadropAt(pPlot, iData1, iData2))
-			{
-				return true;
-			}
-			break;
+			case MISSION_PARADROP:
+				if (pLoopUnit->canParadropAt(pPlot, iData1, iData2))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_AIRBOMB:
-			if (pLoopUnit->canAirBombAt(pPlot, iData1, iData2))
-			{
-				return true;
-			}
-			break;
+			case MISSION_AIRBOMB:
+				if (pLoopUnit->canAirBombAt(pPlot, iData1, iData2))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_BOMBARD:
-			if (pLoopUnit->canBombard(pPlot))
-			{
-				return true;
-			}
-			break;
+			case MISSION_BOMBARD:
+				if (pLoopUnit->canBombard(pPlot))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_RBOMBARD:
-			// Dale - RB: Field Bombard
-			if (GC.isDCM_RANGE_BOMBARD() && pLoopUnit->canBombardAtRanged(pPlot, iData1, iData2))
-			{
-				return true;
-			}
-			break;
+			case MISSION_RBOMBARD:
+				if (GC.isDCM_RANGE_BOMBARD() && pLoopUnit->canBombardAtRanged(pPlot, iData1, iData2))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_RANGE_ATTACK:
-			if (pLoopUnit->canRangeStrikeAt(pPlot, iData1, iData2))
-			{
-				return true;
-			}
-			break;
+			case MISSION_RANGE_ATTACK:
+				if (pLoopUnit->canRangeStrikeAt(pPlot, iData1, iData2))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_PLUNDER:
-			if (pLoopUnit->canPlunder(pPlot, bTestVisible))
-			{
-				return true;
-			}
-			break;
+			case MISSION_PLUNDER:
+				if (pLoopUnit->canPlunder(pPlot, bTestVisible))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_PILLAGE:
-			if (pLoopUnit->canPillage(pPlot))
-			{
-				return true;
-			}
-			break;
+			case MISSION_PILLAGE:
+				if (pLoopUnit->canPillage(pPlot))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_SABOTAGE:
-			if (pLoopUnit->canSabotage(pPlot, bTestVisible))
-			{
-				return true;
-			}
-			break;
+			case MISSION_SABOTAGE:
+				if (pLoopUnit->canSabotage(pPlot, bTestVisible))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_DESTROY:
-			if (pLoopUnit->canDestroy(pPlot, bTestVisible))
-			{
-				return true;
-			}
-			break;
+			case MISSION_DESTROY:
+				if (pLoopUnit->canDestroy(pPlot, bTestVisible))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_STEAL_PLANS:
-			if (pLoopUnit->canStealPlans(pPlot, bTestVisible))
-			{
-				return true;
-			}
-			break;
+			case MISSION_STEAL_PLANS:
+				if (pLoopUnit->canStealPlans(pPlot, bTestVisible))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_FOUND:
+			case MISSION_FOUND:
 #ifdef NOMADIC_START
-			if (!GET_TEAM(pLoopUnit->getTeam()).isHasTech(sedentaryLifestyle))
-			{
-				return false;
-			}
+				if (!GET_TEAM(pLoopUnit->getTeam()).isHasTech(sedentaryLifestyle))
+				{
+					return false;
+				}
 #endif
-			if (pLoopUnit->canFound(pPlot, bTestVisible))
-			{
-				return true;
-			}
-			break;
+				if (pLoopUnit->canFound(pPlot, bTestVisible))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_SPREAD:
-			if (pLoopUnit->canSpread(pPlot, ((ReligionTypes)iData1), bTestVisible))
-			{
-				return true;
-			}
-			break;
+			case MISSION_SPREAD:
+				if (pLoopUnit->canSpread(pPlot, ((ReligionTypes)iData1), bTestVisible))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_SPREAD_CORPORATION:
-			if (pLoopUnit->canSpreadCorporation(pPlot, ((CorporationTypes)iData1), bTestVisible))
-			{
-				return true;
-			}
-			break;
+			case MISSION_SPREAD_CORPORATION:
+				if (pLoopUnit->canSpreadCorporation(pPlot, ((CorporationTypes)iData1), bTestVisible))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_JOIN:
-			if (pLoopUnit->canJoin(pPlot, ((SpecialistTypes)iData1)))
-			{
-				return true;
-			}
-			break;
+			case MISSION_JOIN:
+				if (pLoopUnit->canJoin(pPlot, ((SpecialistTypes)iData1)))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_CONSTRUCT:
-			if (pLoopUnit->canConstruct(pPlot, ((BuildingTypes)iData1), bTestVisible))
-			{
-				return true;
-			}
-			break;
+			case MISSION_CONSTRUCT:
+				if (pLoopUnit->canConstruct(pPlot, ((BuildingTypes)iData1), bTestVisible))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_DISCOVER:
-			if (pLoopUnit->canDiscover())
-			{
-				return true;
-			}
-			break;
+			case MISSION_DISCOVER:
+				if (pLoopUnit->canDiscover())
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_HURRY:
-			if (pLoopUnit->canHurry(pPlot, bTestVisible))
-			{
-				return true;
-			}
-			break;
+			case MISSION_HURRY:
+				if (pLoopUnit->canHurry(pPlot, bTestVisible))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_TRADE:
-			if (pLoopUnit->canTrade(pPlot, bTestVisible))
-			{
-				return true;
-			}
-			break;
+			case MISSION_TRADE:
+				if (pLoopUnit->canTrade(pPlot, bTestVisible))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_GREAT_WORK:
-			if (pLoopUnit->canGreatWork(pPlot))
-			{
-				return true;
-			}
-			break;
+			case MISSION_GREAT_WORK:
+				if (pLoopUnit->canGreatWork(pPlot))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_INFILTRATE:
-			if (pLoopUnit->canInfiltrate(pPlot, bTestVisible))
-			{
-				return true;
-			}
-			break;
+			case MISSION_INFILTRATE:
+				if (pLoopUnit->canInfiltrate(pPlot, bTestVisible))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_GOLDEN_AGE:
-			//this means to play the animation only
-			if (iData1 != -1)
-			{
-				return true;
-			}
+			case MISSION_GOLDEN_AGE:
+				//this means to play the animation only
+				if (iData1 != -1)
+				{
+					return true;
+				}
 
-			if (pLoopUnit->canGoldenAge(bTestVisible))
-			{
-				return true;
-			}
-			break;
+				if (pLoopUnit->canGoldenAge(bTestVisible))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_BUILD:
-		{
-			FASSERT_BOUNDS(0, GC.getNumBuildInfos(), iData1);
-
-			if (pLoopUnit->canBuild(pPlot, (BuildTypes)iData1, bTestVisible && !GET_PLAYER(pLoopUnit->getOwner()).isModderOption(MODDEROPTION_HIDE_UNAVAILBLE_BUILDS)))
+			case MISSION_BUILD:
 			{
-				return true;
-			}
-			break;
-		}
-		case MISSION_LEAD:
-			if (pLoopUnit->canLead(pPlot, iData1))
-			{
-				return true;
-			}
-			break;
+				FASSERT_BOUNDS(0, GC.getNumBuildInfos(), iData1);
 
-		case MISSION_ESPIONAGE:
-			if (pLoopUnit->canEspionage(pPlot, bTestVisible))
-			{
-				return true;
+				if (pLoopUnit->canBuild(pPlot, (BuildTypes)iData1, bTestVisible && !GET_PLAYER(pLoopUnit->getOwner()).isModderOption(MODDEROPTION_HIDE_UNAVAILBLE_BUILDS)))
+				{
+					return true;
+				}
+				break;
 			}
-			break;
+			case MISSION_LEAD:
+				if (pLoopUnit->canLead(pPlot, iData1))
+				{
+					return true;
+				}
+				break;
 
-		case MISSION_CURE:
+			case MISSION_ESPIONAGE:
+				if (pLoopUnit->canEspionage(pPlot, bTestVisible))
+				{
+					return true;
+				}
+				break;
+
+			case MISSION_CURE:
 #ifdef OUTBREAKS_AND_AFFLICTIONS
-			if (pLoopUnit->canCure(pPlot, ((PromotionLineTypes)iData1)))
-			{
-				return true;
-			}
+				if (pLoopUnit->canCure(pPlot, ((PromotionLineTypes)iData1)))
+				{
+					return true;
+				}
 #endif
-			break;
+				break;
 
-		//ls612: Viewports Go To City mission
-		case MISSION_GOTO:
-			if (pLoopUnit->getDomainType() == DOMAIN_LAND || pLoopUnit->getDomainType() == DOMAIN_SEA)
-			{
-				return true;
-			}
-			break;
-
-		case MISSION_DIE_ANIMATION:
-			return false;
-			break;
-
-		case MISSION_BEGIN_COMBAT:
-		case MISSION_END_COMBAT:
-		case MISSION_AIRSTRIKE:
-			if (pLoopUnit->canAirStrike(pPlot))
-			{
-				return true;
-			}
-			break;
-		case MISSION_SURRENDER:
-		case MISSION_IDLE:
-		case MISSION_DIE:
-		case MISSION_DAMAGE:
-		case MISSION_MULTI_SELECT:
-		case MISSION_MULTI_DESELECT:
-			break;
-		// Dale - AB: Bombing START
-		case MISSION_AIRBOMB1:
-			if (pLoopUnit->canAirBomb1At(pPlot, iData1, iData2))
-			{
-				return true;
-			}
-			break;
-
-		case MISSION_AIRBOMB2:
-			if (pLoopUnit->canAirBomb2At(pPlot, iData1, iData2))
-			{
-				return true;
-			}
-			break;
-
-		case MISSION_AIRBOMB3:
-			if (pLoopUnit->canAirBomb3At(pPlot, iData1, iData2))
-			{
-				return true;
-			}
-			break;
-
-		case MISSION_AIRBOMB4:
-			if (pLoopUnit->canAirBomb4At(pPlot, iData1, iData2))
-			{
-				return true;
-			}
-			break;
-
-		case MISSION_AIRBOMB5:
-			if (pLoopUnit->canAirBomb5At(pPlot, iData1, iData2))
-			{
-				return true;
-			}
-			break;
-		// Dale - AB: Bombing END
-
-		// Dale - FE: Fighters START
-		case MISSION_FENGAGE:
-			if (pLoopUnit->canFEngageAt(pPlot, iData1, iData2))
-			{
-				return true;
-			}
-			break;
-		// Dale - FE: Fighters END
-		case MISSION_CLAIM_TERRITORY:
-			if (pLoopUnit->canClaimTerritory(pPlot))
-			{
-				return true;
-			}
-			break;
-
-		case MISSION_HURRY_FOOD:
-			if (pLoopUnit->canHurryFood(pPlot))
-			{
-				return true;
-			}
-			break;
-		case MISSION_INQUISITION:
-			if (pLoopUnit->canPerformInquisition(pPlot))
-			{
-				return true;
-			}
-			break;
-		case MISSION_ESPIONAGE_SLEEP:
-			if (pLoopUnit->plot()->isCity() && pLoopUnit->canSleep() && pLoopUnit->canEspionage(pPlot, true) && pLoopUnit->getFortifyTurns() != GC.getMAX_FORTIFY_TURNS())
-			{
-				return true;
-			}
-			break;
-		case MISSION_SHADOW:
-			{
-				const CvPlot* pShadowPlot = GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2);
-
-				if (pShadowPlot != NULL)
+			//ls612: Viewports Go To City mission
+			case MISSION_GOTO:
+				if (pLoopUnit->getDomainType() == DOMAIN_LAND || pLoopUnit->getDomainType() == DOMAIN_SEA)
 				{
-					const int iValidShadowUnits = algo::count_if(pShadowPlot->units(),
-						bind(&CvUnit::canShadowAt, pLoopUnit, pShadowPlot, _1));
+					return true;
+				}
+				break;
 
-					if (iValidShadowUnits > 0)
+			case MISSION_DIE_ANIMATION:
+				return false;
+				break;
+
+			case MISSION_BEGIN_COMBAT:
+			case MISSION_END_COMBAT:
+			case MISSION_AIRSTRIKE:
+				if (pLoopUnit->canAirStrike(pPlot))
+				{
+					return true;
+				}
+				break;
+			case MISSION_SURRENDER:
+			case MISSION_IDLE:
+			case MISSION_DIE:
+			case MISSION_DAMAGE:
+			case MISSION_MULTI_SELECT:
+			case MISSION_MULTI_DESELECT:
+				break;
+			case MISSION_AIRBOMB1:
+				if (pLoopUnit->canAirBomb1At(pPlot, iData1, iData2))
+				{
+					return true;
+				}
+				break;
+
+			case MISSION_AIRBOMB2:
+				if (pLoopUnit->canAirBomb2At(pPlot, iData1, iData2))
+				{
+					return true;
+				}
+				break;
+
+			case MISSION_AIRBOMB3:
+				if (pLoopUnit->canAirBomb3At(pPlot, iData1, iData2))
+				{
+					return true;
+				}
+				break;
+
+			case MISSION_AIRBOMB4:
+				if (pLoopUnit->canAirBomb4At(pPlot, iData1, iData2))
+				{
+					return true;
+				}
+				break;
+
+			case MISSION_AIRBOMB5:
+				if (pLoopUnit->canAirBomb5At(pPlot, iData1, iData2))
+				{
+					return true;
+				}
+				break;
+
+			case MISSION_FENGAGE:
+				if (pLoopUnit->canFEngageAt(pPlot, iData1, iData2))
+				{
+					return true;
+				}
+				break;
+			case MISSION_CLAIM_TERRITORY:
+				if (pLoopUnit->canClaimTerritory(pPlot))
+				{
+					return true;
+				}
+				break;
+
+			case MISSION_HURRY_FOOD:
+				if (pLoopUnit->canHurryFood(pPlot))
+				{
+					return true;
+				}
+				break;
+			case MISSION_INQUISITION:
+				if (pLoopUnit->canPerformInquisition(pPlot))
+				{
+					return true;
+				}
+				break;
+			case MISSION_ESPIONAGE_SLEEP:
+				if (pLoopUnit->plot()->isCity() && pLoopUnit->canSleep() && pLoopUnit->canEspionage(pPlot, true) && pLoopUnit->getFortifyTurns() != GC.getMAX_FORTIFY_TURNS())
+				{
+					return true;
+				}
+				break;
+			case MISSION_SHADOW:
+				{
+					const CvPlot* pShadowPlot = GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2);
+
+					if (pShadowPlot != NULL)
 					{
-						return true;
+						const int iValidShadowUnits = algo::count_if(pShadowPlot->units(),
+							bind(&CvUnit::canShadowAt, pLoopUnit, pShadowPlot, _1));
+
+						if (iValidShadowUnits > 0)
+						{
+							return true;
+						}
 					}
 				}
-			}
-			break;
-		case MISSION_GREAT_COMMANDER:
-			if (GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS) && pLoopUnit->getUnitInfo().isGreatGeneral() && !pLoopUnit->isCommander())
-			{
-				return true;
-			}
-			break;
-		case MISSION_WAIT_FOR_TECH:
-			if (pLoopUnit->canDiscover())
-			{
-				return true;
-			}
-			break;
-
-		case MISSION_ASSASSINATE:
-			if (pLoopUnit->canAmbush(pPlot, true))
-			{
-				return true;
-			}
-			break;
-
-		case MISSION_AMBUSH:
-			if (pLoopUnit->canAmbush(pPlot, false))
-			{
-				return true;
-			}
-			break;
-		default:
-			// AIAndy: Assumed to be an outcome mission
-			// FErrorMsg("error");
-			const CvOutcomeMission* pOutcomeMission = pLoopUnit->getUnitInfo().getOutcomeMissionByMission((MissionTypes)iMission);
-			if (pOutcomeMission && pOutcomeMission->isPossible(pLoopUnit, bTestVisible))
-			{
-				return true;
-			}
-			// Outcome missions on unit combats
-			for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-			{
-				if (pLoopUnit->isHasUnitCombat((UnitCombatTypes)iI))
+				break;
+			case MISSION_GREAT_COMMANDER:
+				if (GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS) && pLoopUnit->getUnitInfo().isGreatGeneral() && !pLoopUnit->isCommander())
 				{
-					const CvOutcomeMission* pOutcomeMission = GC.getUnitCombatInfo((UnitCombatTypes)iI).getOutcomeMissionByMission((MissionTypes)iMission);
-					if (pOutcomeMission && pOutcomeMission->isPossible(pLoopUnit, bTestVisible))
+					return true;
+				}
+				break;
+			case MISSION_WAIT_FOR_TECH:
+			{
+				if (pLoopUnit->canDiscover())
+				{
+					return true;
+				}
+				break;
+			}
+			case MISSION_ASSASSINATE:
+			{
+				if (pLoopUnit->canAmbush(pPlot, true))
+				{
+					return true;
+				}
+				break;
+			}
+			case MISSION_AMBUSH:
+			{
+				if (pLoopUnit->canAmbush(pPlot, false))
+				{
+					return true;
+				}
+				break;
+			}
+			default: // AIAndy: Assumed to be an outcome mission
+			{
+				const CvOutcomeMission* pOutcomeMission = pLoopUnit->getUnitInfo().getOutcomeMissionByMission((MissionTypes)iMission);
+				if (pOutcomeMission && pOutcomeMission->isPossible(pLoopUnit, bTestVisible))
+				{
+					return true;
+				}
+				// Outcome missions on unit combats
+				for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+				{
+					if (pLoopUnit->isHasUnitCombat((UnitCombatTypes)iI))
 					{
-						return true;
+						const CvOutcomeMission* pOutcomeMission = GC.getUnitCombatInfo((UnitCombatTypes)iI).getOutcomeMissionByMission((MissionTypes)iMission);
+						if (pOutcomeMission && pOutcomeMission->isPossible(pLoopUnit, bTestVisible))
+						{
+							return true;
+						}
 					}
 				}
+				break;
 			}
-			break;
 		}
 	}
 	return false;
@@ -1260,10 +1172,8 @@ bool CvSelectionGroup::startMission()
 		{
 			gDLL->getInterfaceIFace()->changeCycleSelectionCounter(1);
 		}
-
 		return false;
 	}
-
 	setActivityType(canAllMove() ? ACTIVITY_MISSION : ACTIVITY_HOLD);
 
 	bool bDelete = false;
@@ -1283,184 +1193,118 @@ bool CvSelectionGroup::startMission()
 
 		switch (headMissionQueueNode()->m_data.eMissionType)
 		{
-		case MISSION_MOVE_TO:
-// BUG - Sentry Actions - start
+			case MISSION_MOVE_TO:
 #ifdef _MOD_SENTRY
-		case MISSION_MOVE_TO_SENTRY:
+			case MISSION_MOVE_TO_SENTRY:
 #endif
-// BUG - Sentry Actions - end
-// BUG - Safe Move - start
-			// if player is human, save the visibility and reveal state of the last plot of the move path from the initial plot
-			if (isHuman())
 			{
-				checkLastPathPlot(GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2));
+				// if player is human, save the visibility and reveal state of the last plot of the move path from the initial plot
+				if (isHuman())
+				{
+					checkLastPathPlot(GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2));
+				}
+				break;
 			}
-			break;
-// BUG - Safe Move - end
 
-		case MISSION_ROUTE_TO:
-		case MISSION_MOVE_TO_UNIT:
-			break;
+			case MISSION_SKIP:
+				setActivityType(ACTIVITY_HOLD);
+				bDelete = true;
+				break;
 
-		case MISSION_SKIP:
-			setActivityType(ACTIVITY_HOLD);
-			bDelete = true;
-			break;
+			case MISSION_SLEEP:
+				setActivityType(ACTIVITY_SLEEP, MISSION_SLEEP);
+				bNotify = true;
+				bDelete = true;
+				break;
 
-		case MISSION_SLEEP:
-			setActivityType(ACTIVITY_SLEEP, MISSION_SLEEP);
-			bNotify = true;
-			bDelete = true;
-			break;
+			case MISSION_FORTIFY:
+				setActivityType(ACTIVITY_SLEEP, MISSION_FORTIFY);
+				bNotify = true;
+				bDelete = true;
+				break;
 
-		case MISSION_FORTIFY:
-			setActivityType(ACTIVITY_SLEEP, MISSION_FORTIFY);
-			bNotify = true;
-			bDelete = true;
-			break;
+			case MISSION_BUILDUP:
+				setActivityType(ACTIVITY_SLEEP, MISSION_BUILDUP);
+				bNotify = true;
+				bDelete = true;
+				break;
 
-		case MISSION_BUILDUP:
-			setActivityType(ACTIVITY_SLEEP, MISSION_BUILDUP);
-			bNotify = true;
-			bDelete = true;
-			break;
+			case MISSION_AUTO_BUILDUP:
+				setActivityType(ACTIVITY_SLEEP, MISSION_AUTO_BUILDUP);
+				bNotify = true;
+				bDelete = true;
+				break;
 
-		case MISSION_AUTO_BUILDUP:
-			setActivityType(ACTIVITY_SLEEP, MISSION_AUTO_BUILDUP);
-			bNotify = true;
-			bDelete = true;
-			break;
+			case MISSION_HEAL_BUILDUP:
+				setActivityType(ACTIVITY_HEAL, MISSION_HEAL_BUILDUP);
+				bNotify = true;
+				bDelete = true;
+				break;
 
-		case MISSION_HEAL_BUILDUP:
-			setActivityType(ACTIVITY_HEAL, MISSION_HEAL_BUILDUP);
-			bNotify = true;
-			bDelete = true;
-			break;
+			case MISSION_PLUNDER:
+				setActivityType(ACTIVITY_PLUNDER);
+				bNotify = true;
+				bDelete = true;
+				break;
 
-		case MISSION_PLUNDER:
-			setActivityType(ACTIVITY_PLUNDER);
-			bNotify = true;
-			bDelete = true;
-			break;
+			case MISSION_AIRPATROL:
+				setActivityType(ACTIVITY_INTERCEPT);
+				bDelete = true;
+				break;
 
-		case MISSION_AIRPATROL:
-			setActivityType(ACTIVITY_INTERCEPT);
-			bDelete = true;
-			break;
+			case MISSION_SEAPATROL:
+				setActivityType(ACTIVITY_PATROL);
+				bDelete = true;
+				break;
 
-		case MISSION_SEAPATROL:
-			setActivityType(ACTIVITY_PATROL);
-			bDelete = true;
-			break;
+			case MISSION_HEAL:
+				setActivityType(ACTIVITY_HEAL, MISSION_SLEEP);
+				bNotify = true;
+				bDelete = true;
+				break;
 
-		case MISSION_HEAL:
-			setActivityType(ACTIVITY_HEAL, MISSION_SLEEP);
-			bNotify = true;
-			bDelete = true;
-			break;
-
-		case MISSION_SENTRY:
-			setActivityType(ACTIVITY_SENTRY);
-			bNotify = true;
-			bDelete = true;
-			break;
-
-// BUG - Sentry Actions - start
+			case MISSION_SENTRY:
+				setActivityType(ACTIVITY_SENTRY);
+				bNotify = true;
+				bDelete = true;
+				break;
 #ifdef _MOD_SENTRY
-		case MISSION_SENTRY_WHILE_HEAL:
-			setActivityType(ACTIVITY_SENTRY_WHILE_HEAL);
-			bNotify = true;
-			bDelete = true;
-			break;
+			case MISSION_SENTRY_WHILE_HEAL:
+				setActivityType(ACTIVITY_SENTRY_WHILE_HEAL);
+				bNotify = true;
+				bDelete = true;
+				break;
 
-		case MISSION_SENTRY_NAVAL_UNITS:
-			setActivityType(ACTIVITY_SENTRY_NAVAL_UNITS);
-			bNotify = true;
-			bDelete = true;
-			break;
+			case MISSION_SENTRY_NAVAL_UNITS:
+				setActivityType(ACTIVITY_SENTRY_NAVAL_UNITS);
+				bNotify = true;
+				bDelete = true;
+				break;
 
-		case MISSION_SENTRY_LAND_UNITS:
-			setActivityType(ACTIVITY_SENTRY_LAND_UNITS);
-			bNotify = true;
-			bDelete = true;
-			break;
+			case MISSION_SENTRY_LAND_UNITS:
+				setActivityType(ACTIVITY_SENTRY_LAND_UNITS);
+				bNotify = true;
+				bDelete = true;
+				break;
 #endif
-// BUG - Sentry Actions - end
-
-		case MISSION_AIRLIFT:
-		case MISSION_NUKE:
-		case MISSION_RECON:
-		case MISSION_PARADROP:
-		case MISSION_AIRBOMB:
-		case MISSION_BOMBARD:
-		case MISSION_RANGE_ATTACK:
-		case MISSION_PILLAGE:
-		case MISSION_SABOTAGE:
-		case MISSION_DESTROY:
-		case MISSION_STEAL_PLANS:
-		case MISSION_FOUND:
-		case MISSION_SPREAD:
-		case MISSION_SPREAD_CORPORATION:
-		case MISSION_JOIN:
-		case MISSION_CONSTRUCT:
-		case MISSION_DISCOVER:
-		case MISSION_HURRY:
-		case MISSION_TRADE:
-		case MISSION_GREAT_WORK:
-		case MISSION_INFILTRATE:
-		case MISSION_GOLDEN_AGE:
-		case MISSION_BUILD:
-		case MISSION_LEAD:
-		case MISSION_ESPIONAGE:
-		case MISSION_DIE_ANIMATION:
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-		// Dale - AB: Bombing START
-		case MISSION_AIRBOMB1:
-		case MISSION_AIRBOMB2:
-		case MISSION_AIRBOMB3:
-		case MISSION_AIRBOMB4:
-		case MISSION_AIRBOMB5:
-		// Dale - AB: Bombing END
-		// Dale - RB: Field Bombard START
-		case MISSION_RBOMBARD:
-		// Dale - RB: Field Bombard END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-
-		case MISSION_CLAIM_TERRITORY:
-		case MISSION_HURRY_FOOD:
-		case MISSION_INQUISITION:
-		case MISSION_GREAT_COMMANDER:
-			break;
-		case MISSION_ESPIONAGE_SLEEP:
-		case MISSION_WAIT_FOR_TECH:
-		case MISSION_AMBUSH:
-		case MISSION_ASSASSINATE:
-			bDelete = true;
-			break;
-		case MISSION_SHADOW:
-			break;
-
-		default:
-			// AIAndy: Assumed to be an outcome mission
-			// FErrorMsg("error");
-			break;
+			case MISSION_ESPIONAGE_SLEEP:
+			case MISSION_WAIT_FOR_TECH:
+			case MISSION_AMBUSH:
+			case MISSION_ASSASSINATE:
+				bDelete = true;
+				break;
+			default: // AIAndy: Assumed to be an outcome mission
+			{
+				break;
+			}
 		}
 
-		if ( bNotify )
+		if (bNotify)
 		{
 			NotifyEntity( headMissionQueueNode()->m_data.eMissionType );
 		}
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      03/30/10                                jdog5000      */
-/*                                                                                              */
-/* War tactics AI                                                                               */
-/************************************************************************************************/
-		if( headMissionQueueNode()->m_data.eMissionType == MISSION_PILLAGE )
+		if (headMissionQueueNode()->m_data.eMissionType == MISSION_PILLAGE)
 		{
 			// Fast units pillage first
 			int iMaxMovesLeft = 1;
@@ -1567,333 +1411,354 @@ bool CvSelectionGroup::startMission()
 				{
 					switch (headMissionQueueNode()->m_data.eMissionType)
 					{
-					case MISSION_MOVE_TO:
-					case MISSION_ROUTE_TO:
-					case MISSION_MOVE_TO_UNIT:
-					case MISSION_SKIP:
-					case MISSION_SLEEP:
-					case MISSION_FORTIFY:
-					case MISSION_BUILDUP:
-					case MISSION_AUTO_BUILDUP:
-					case MISSION_HEAL_BUILDUP:
-					case MISSION_AIRPATROL:
-					case MISSION_SEAPATROL:
-					case MISSION_HEAL:
-					case MISSION_SENTRY:
-// BUG - Sentry Actions - start
+						case MISSION_MOVE_TO:
+						case MISSION_ROUTE_TO:
+						case MISSION_MOVE_TO_UNIT:
+						case MISSION_SKIP:
+						case MISSION_SLEEP:
+						case MISSION_FORTIFY:
+						case MISSION_BUILDUP:
+						case MISSION_AUTO_BUILDUP:
+						case MISSION_HEAL_BUILDUP:
+						case MISSION_AIRPATROL:
+						case MISSION_SEAPATROL:
+						case MISSION_HEAL:
+						case MISSION_SENTRY:
+						case MISSION_BUILD:
 #ifdef _MOD_SENTRY
-					case MISSION_MOVE_TO_SENTRY:
-					case MISSION_SENTRY_WHILE_HEAL:
-					case MISSION_SENTRY_NAVAL_UNITS:
-					case MISSION_SENTRY_LAND_UNITS:
+						case MISSION_MOVE_TO_SENTRY:
+						case MISSION_SENTRY_WHILE_HEAL:
+						case MISSION_SENTRY_NAVAL_UNITS:
+						case MISSION_SENTRY_LAND_UNITS:
 #endif
-// BUG - Sentry Actions - end
-						break;
-
-					case MISSION_AIRLIFT:
-						if (pLoopUnit->airlift(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
 						{
-							bAction = true;
+							break;
 						}
-						break;
-
-					case MISSION_NUKE:
-						if (pLoopUnit->nuke(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+						case MISSION_AIRLIFT:
 						{
-							bAction = true;
-
-							if (GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2)->isVisibleToWatchingHuman())
-							{
-								bNuke = true;
-							}
-						}
-						break;
-					case MISSION_RECON:
-						if (pLoopUnit->recon(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_PARADROP:
-						if (pLoopUnit->paradrop(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_AIRBOMB:
-						if (pLoopUnit->airBomb(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_BOMBARD:
-						if (pLoopUnit->bombard())
-						{
-							bAction = true;
-						}
-						break;
-
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-					case MISSION_RBOMBARD:
-						// Dale - RB: Field Bombard START
-						if(GC.isDCM_RANGE_BOMBARD())
-						{
-							if (pLoopUnit->bombardRanged(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+							if (pLoopUnit->airlift(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
 							{
 								bAction = true;
 							}
+							break;
 						}
-						break;
-
-					case MISSION_RANGE_ATTACK:
-						if (pLoopUnit->rangeStrike(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+						case MISSION_NUKE:
 						{
-							bAction = true;
-						}
-						break;
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
+							if (pLoopUnit->nuke(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+							{
+								bAction = true;
 
-					case MISSION_PILLAGE:
-						if (pLoopUnit->pillage())
+								if (GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2)->isVisibleToWatchingHuman())
+								{
+									bNuke = true;
+								}
+							}
+							break;
+						}
+						case MISSION_RECON:
 						{
-							bAction = true;
+							if (pLoopUnit->recon(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+							{
+								bAction = true;
+							}
+							break;
 						}
-						break;
-
-					case MISSION_PLUNDER:
-						if (pLoopUnit->plunder())
+						case MISSION_PARADROP:
 						{
-							bAction = true;
+							if (pLoopUnit->paradrop(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+							{
+								bAction = true;
+							}
+							break;
 						}
-						break;
-
-					case MISSION_SABOTAGE:
-						if (pLoopUnit->sabotage())
+						case MISSION_AIRBOMB:
 						{
-							bAction = true;
+							if (pLoopUnit->airBomb(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+							{
+								bAction = true;
+							}
+							break;
 						}
-						break;
-
-					case MISSION_DESTROY:
-						if (pLoopUnit->destroy())
+						case MISSION_BOMBARD:
 						{
-							bAction = true;
+							if (pLoopUnit->bombard())
+							{
+								bAction = true;
+							}
+							break;
 						}
-						break;
-
-					case MISSION_STEAL_PLANS:
-						if (pLoopUnit->stealPlans())
+						case MISSION_RBOMBARD:
 						{
-							bAction = true;
+							if(GC.isDCM_RANGE_BOMBARD())
+							{
+								if (pLoopUnit->bombardRanged(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+								{
+									bAction = true;
+								}
+							}
+							break;
 						}
-						break;
-
-					case MISSION_FOUND:
-						if (pLoopUnit->found())
+						case MISSION_RANGE_ATTACK:
 						{
-							bAction = true;
+							if (pLoopUnit->rangeStrike(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+							{
+								bAction = true;
+							}
+							break;
 						}
-						break;
-
-					case MISSION_SPREAD:
-						if (pLoopUnit->spread((ReligionTypes)(headMissionQueueNode()->m_data.iData1)))
+						case MISSION_PILLAGE:
 						{
-							bAction = true;
+							if (pLoopUnit->pillage())
+							{
+								bAction = true;
+							}
+							break;
 						}
-						break;
-
-					case MISSION_SPREAD_CORPORATION:
-						if (pLoopUnit->spreadCorporation((CorporationTypes)(headMissionQueueNode()->m_data.iData1)))
+						case MISSION_PLUNDER:
 						{
-							bAction = true;
+							if (pLoopUnit->plunder())
+							{
+								bAction = true;
+							}
+							break;
 						}
-						break;
-
-					//TB Combat Mod Begin (Cure)
-					case MISSION_CURE:
+						case MISSION_SABOTAGE:
+						{
+							if (pLoopUnit->sabotage())
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_DESTROY:
+						{
+							if (pLoopUnit->destroy())
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_STEAL_PLANS:
+						{
+							if (pLoopUnit->stealPlans())
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_FOUND:
+						{
+							if (pLoopUnit->found())
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_SPREAD:
+						{
+							if (pLoopUnit->spread((ReligionTypes)(headMissionQueueNode()->m_data.iData1)))
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_SPREAD_CORPORATION:
+						{
+							if (pLoopUnit->spreadCorporation((CorporationTypes)(headMissionQueueNode()->m_data.iData1)))
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_CURE:
+						{
 #ifdef OUTBREAKS_AND_AFFLICTIONS
-						if (pLoopUnit->CureAffliction((PromotionLineTypes)(headMissionQueueNode()->m_data.iData1)))
-						{
-							bAction = true;
-						}
-#endif
-						break;
-					//TB Combat Mod end (Cure)
-					case MISSION_JOIN:
-						if (pLoopUnit->join((SpecialistTypes)(headMissionQueueNode()->m_data.iData1)))
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_CONSTRUCT:
-						if (pLoopUnit->construct((BuildingTypes)(headMissionQueueNode()->m_data.iData1)))
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_DISCOVER:
-						if (pLoopUnit->discover())
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_HURRY:
-						if (pLoopUnit->hurry())
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_TRADE:
-						if (pLoopUnit->trade())
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_GREAT_WORK:
-						if (pLoopUnit->greatWork())
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_INFILTRATE:
-						if (pLoopUnit->infiltrate())
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_GOLDEN_AGE:
-						//just play animation, not golden age - JW
-						if (headMissionQueueNode()->m_data.iData1 != -1)
-						{
-							pLoopUnit->addMission(CvMissionDefinition(MISSION_GOLDEN_AGE, pLoopUnit->plot(), pLoopUnit));
-							pLoopUnit->NotifyEntity(MISSION_GOLDEN_AGE);
-							bAction = true;
-						}
-						else if (pLoopUnit->goldenAge())
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_BUILD:
-						break;
-
-					case MISSION_LEAD:
-						if (pLoopUnit->lead(headMissionQueueNode()->m_data.iData1))
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_ESPIONAGE:
-						if (pLoopUnit->espionage((EspionageMissionTypes)headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
-						{
-							bAction = true;
-						}
-						pUnitNode = NULL; // allow one unit at a time to do espionage
-						break;
-
-				// Dale - AB: Bombing START
-					case MISSION_AIRBOMB1:
-						if (pLoopUnit->airBomb1(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_AIRBOMB2:
-						if (pLoopUnit->airBomb2(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_AIRBOMB3:
-						if (pLoopUnit->airBomb3(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_AIRBOMB4:
-						if (pLoopUnit->airBomb4(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
-						{
-							bAction = true;
-						}
-						break;
-
-					case MISSION_AIRBOMB5:
-						if (pLoopUnit->airBomb5(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
-						{
-							bAction = true;
-						}
-						break;
-						// Dale - AB: Bombing END
-
-					// Dale - FE: Fighters START
-					case MISSION_FENGAGE:
-						if(GC.isDCM_FIGHTER_ENGAGE())
-						{
-							if (pLoopUnit->fighterEngage(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+							if (pLoopUnit->CureAffliction((PromotionLineTypes)(headMissionQueueNode()->m_data.iData1)))
 							{
 								bAction = true;
 							}
+#endif
+							break;
 						}
-						break;
-					// Dale - FE: Fighters END
-					case MISSION_CLAIM_TERRITORY:
-						if (pLoopUnit->claimTerritory())
+						case MISSION_JOIN:
 						{
-							bAction = true;
+							if (pLoopUnit->join((SpecialistTypes)(headMissionQueueNode()->m_data.iData1)))
+							{
+								bAction = true;
+							}
+							break;
 						}
-						pUnitNode = NULL; // allow only one unit to claim territory (no need for more)
-						break;
-
-					case MISSION_HURRY_FOOD:
-						if (pLoopUnit->hurryFood())
+						case MISSION_CONSTRUCT:
 						{
-							bAction = true;
+							if (pLoopUnit->construct((BuildingTypes)(headMissionQueueNode()->m_data.iData1)))
+							{
+								bAction = true;
+							}
+							break;
 						}
-						break;
-
-					case MISSION_INQUISITION:
-						if (pLoopUnit->performInquisition())
+						case MISSION_DISCOVER:
 						{
-							bAction = true;
+							if (pLoopUnit->discover())
+							{
+								bAction = true;
+							}
+							break;
 						}
-						break;
-
-					case MISSION_ESPIONAGE_SLEEP:
-						if (pLoopUnit->sleepForEspionage())
+						case MISSION_HURRY:
 						{
-							//bAction = true;
+							if (pLoopUnit->hurry())
+							{
+								bAction = true;
+							}
+							break;
 						}
-						break;
-
-					case MISSION_WAIT_FOR_TECH:
-						pLoopUnit->waitForTech(headMissionQueueNode()->m_data.iFlags, headMissionQueueNode()->m_data.iData1);
-						break;
-
-					case MISSION_GREAT_COMMANDER:
-						pLoopUnit->setCommander(true);
-						pUnitNode = NULL;
-						break;
-
-					case MISSION_SHADOW:
+						case MISSION_TRADE:
+						{
+							if (pLoopUnit->trade())
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_GREAT_WORK:
+						{
+							if (pLoopUnit->greatWork())
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_INFILTRATE:
+						{
+							if (pLoopUnit->infiltrate())
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_GOLDEN_AGE:
+						{
+							//just play animation, not golden age - JW
+							if (headMissionQueueNode()->m_data.iData1 != -1)
+							{
+								pLoopUnit->addMission(CvMissionDefinition(MISSION_GOLDEN_AGE, pLoopUnit->plot(), pLoopUnit));
+								pLoopUnit->NotifyEntity(MISSION_GOLDEN_AGE);
+								bAction = true;
+							}
+							else if (pLoopUnit->goldenAge())
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_LEAD:
+						{
+							if (pLoopUnit->lead(headMissionQueueNode()->m_data.iData1))
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_ESPIONAGE:
+						{
+							if (pLoopUnit->espionage((EspionageMissionTypes)headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+							{
+								bAction = true;
+							}
+							pUnitNode = NULL; // allow one unit at a time to do espionage
+							break;
+						}
+						case MISSION_AIRBOMB1:
+						{
+							if (pLoopUnit->airBomb1(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_AIRBOMB2:
+						{
+							if (pLoopUnit->airBomb2(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_AIRBOMB3:
+						{
+							if (pLoopUnit->airBomb3(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_AIRBOMB4:
+						{
+							if (pLoopUnit->airBomb4(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_AIRBOMB5:
+						{
+							if (pLoopUnit->airBomb5(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_FENGAGE:
+						{
+							if (GC.isDCM_FIGHTER_ENGAGE()
+							&& pLoopUnit->fighterEngage(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_CLAIM_TERRITORY:
+						{
+							if (pLoopUnit->claimTerritory())
+							{
+								bAction = true;
+							}
+							pUnitNode = NULL; // allow only one unit to claim territory (no need for more)
+							break;
+						}
+						case MISSION_HURRY_FOOD:
+						{
+							if (pLoopUnit->hurryFood())
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_INQUISITION:
+						{
+							if (pLoopUnit->performInquisition())
+							{
+								bAction = true;
+							}
+							break;
+						}
+						case MISSION_ESPIONAGE_SLEEP:
+						{
+							pLoopUnit->sleepForEspionage();
+							break;
+						}
+						case MISSION_WAIT_FOR_TECH:
+						{
+							pLoopUnit->waitForTech(headMissionQueueNode()->m_data.iFlags, headMissionQueueNode()->m_data.iData1);
+							break;
+						}
+						case MISSION_GREAT_COMMANDER:
+						{
+							pLoopUnit->setCommander(true);
+							pUnitNode = NULL;
+							break;
+						}
+						case MISSION_SHADOW:
 						{
 							CvPlot* pShadowPlot = GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2);
 							if (pShadowPlot != NULL)
@@ -1928,35 +1793,37 @@ bool CvSelectionGroup::startMission()
 									}
 								}
 							}
+							break;
 						}
-						break;
-
-					case MISSION_DIE_ANIMATION:
-						bAction = true;
-						break;
-
-					case MISSION_ASSASSINATE:
-						if (pLoopUnit == pBestUnit && pLoopUnit->doAmbush(true))
+						case MISSION_DIE_ANIMATION:
 						{
 							bAction = true;
+							break;
 						}
-						break;
-
-					case MISSION_AMBUSH:
-						if (pLoopUnit == pBestUnit && pLoopUnit->doAmbush(false))
+						case MISSION_ASSASSINATE:
 						{
-							bAction = true;
+							if (pLoopUnit == pBestUnit && pLoopUnit->doAmbush(true))
+							{
+								bAction = true;
+							}
+							break;
 						}
-						break;
-
-					default:
-						// AIAndy: Assumed to be an outcome mission
-						// FErrorMsg("error");
-						if (pLoopUnit->doOutcomeMission(headMissionQueueNode()->m_data.eMissionType))
+						case MISSION_AMBUSH:
 						{
-							bAction = true;
+							if (pLoopUnit == pBestUnit && pLoopUnit->doAmbush(false))
+							{
+								bAction = true;
+							}
+							break;
 						}
-						break;
+						default: // AIAndy: Assumed to be an outcome mission
+						{
+							if (pLoopUnit->doOutcomeMission(headMissionQueueNode()->m_data.eMissionType))
+							{
+								bAction = true;
+							}
+							break;
+						}
 					}
 
 					if (getNumUnits() == 0 || headMissionQueueNode() == NULL)
@@ -1967,9 +1834,6 @@ bool CvSelectionGroup::startMission()
 			}
 		}
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	if (getNumUnits() > 0 && headMissionQueueNode() != NULL)
 	{
@@ -1999,7 +1863,6 @@ bool CvSelectionGroup::startMission()
 			}
 		}
 	}
-
 	return bResult;
 }
 
@@ -2077,172 +1940,58 @@ bool CvSelectionGroup::continueMission(int iSteps)
 	{
 		switch (headQueueNode->m_data.eMissionType)
 		{
-		case MISSION_MOVE_TO:
-// BUG - Sentry Actions - start
-#ifdef _MOD_SENTRY
-		case MISSION_MOVE_TO_SENTRY:
-#endif
-// BUG - Sentry Actions - end
-// BUG - Safe Move - start
-			// if player is human, save the visibility and reveal state of the last plot of the move path from the initial plot
-			// if it hasn't been saved already to handle units in motion when loading a game
-			if (isHuman() && !isLastPathPlotChecked())
-			{
-				checkLastPathPlot(GC.getMap().plot(headQueueNode->m_data.iData1, headQueueNode->m_data.iData2));
-			}
-// BUG - Safe Move - end
-
-			if (getDomainType() == DOMAIN_AIR)
-			{
-				groupPathTo(headQueueNode->m_data.iData1, headQueueNode->m_data.iData2, headQueueNode->m_data.iFlags);
-				bDone = true;
-			}
-			else if (groupPathTo(headQueueNode->m_data.iData1, headQueueNode->m_data.iData2, headQueueNode->m_data.iFlags))
-			{
-				bAction = true;
-
-				if (getNumUnits() > 0 && !canAllMove() && headMissionQueueNode() != NULL)
+			case MISSION_MOVE_TO:
+	// BUG - Sentry Actions - start
+	#ifdef _MOD_SENTRY
+			case MISSION_MOVE_TO_SENTRY:
+	#endif
+	// BUG - Sentry Actions - end
+	// BUG - Safe Move - start
+				// if player is human, save the visibility and reveal state of the last plot of the move path from the initial plot
+				// if it hasn't been saved already to handle units in motion when loading a game
+				if (isHuman() && !isLastPathPlotChecked())
 				{
-					if (groupAmphibMove(GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2), headMissionQueueNode()->m_data.iFlags))
-					{
-						bAction = false;
-						bDone = true;
-					}
+					checkLastPathPlot(GC.getMap().plot(headQueueNode->m_data.iData1, headQueueNode->m_data.iData2));
 				}
-			}
-			else
-			{
-				if (getNumUnits() > 0 && headMissionQueueNode() != NULL)
+	// BUG - Safe Move - end
+
+				if (getDomainType() == DOMAIN_AIR)
 				{
-					if (groupAmphibMove(GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2), headMissionQueueNode()->m_data.iFlags))
-					{
-						bAction = false;
-						bDone = true;
-						break;
-					}
-				}
-
-				bFailed = true;	//	Can't move there! (e.g. - breaches stacking limit)
-				bDone = true;
-			}
-			break;
-
-		case MISSION_ROUTE_TO:
-			if (groupRoadTo(headQueueNode->m_data.iData1, headQueueNode->m_data.iData2, headQueueNode->m_data.iFlags))
-			{
-				bAction = true;
-			}
-			else
-			{
-				bFailed = true;	//	Can't move there! (e.g. - breaches stacking limit)
-				bDone = true;
-			}
-			break;
-
-		case MISSION_MOVE_TO_UNIT:
-			if ((getHeadUnitAI() == UNITAI_CITY_DEFENSE) && plot()->isCity() && (plot()->getTeam() == getTeam()))
-			{
-				if (plot()->getBestDefender(getOwner())->getGroup() == this)
-				{
-					bAction = false;
+					groupPathTo(headQueueNode->m_data.iData1, headQueueNode->m_data.iData2, headQueueNode->m_data.iFlags);
 					bDone = true;
-					break;
 				}
-			}
-			pTargetUnit = GET_PLAYER((PlayerTypes)headQueueNode->m_data.iData1).getUnit(headQueueNode->m_data.iData2);
-			if (pTargetUnit != NULL)
-			{
-				// Handling for mission to retrieve a unit
-				if( AI_getMissionAIType() == MISSIONAI_PICKUP )
+				else if (groupPathTo(headQueueNode->m_data.iData1, headQueueNode->m_data.iData2, headQueueNode->m_data.iFlags))
 				{
-					if( !(pTargetUnit->getGroup()->isStranded()) || isFull() || (pTargetUnit->plot() == NULL) )
-					{
-						bDone = true;
-						bAction = false;
-						break;
-					}
+					bAction = true;
 
-					CvPlot* pPickupPlot = NULL;
-					int iPathTurns;
-					int iBestPathTurns = MAX_INT;
-
-					if( (canMoveAllTerrain() || pTargetUnit->plot()->isWater() || pTargetUnit->plot()->isFriendlyCity(*getHeadUnit(), true)) && generatePath(plot(), pTargetUnit->plot(), 0, false, &iPathTurns) )
+					if (getNumUnits() > 0 && !canAllMove() && headMissionQueueNode() != NULL)
 					{
-						pPickupPlot = pTargetUnit->plot();
-					}
-					else
-					{
-						foreach_(CvPlot* pAdjacentPlot, pTargetUnit->plot()->adjacent())
+						if (groupAmphibMove(GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2), headMissionQueueNode()->m_data.iFlags))
 						{
-							if( atPlot(pAdjacentPlot) )
-							{
-								pPickupPlot = pAdjacentPlot;
-								break;
-							}
-
-							if( pAdjacentPlot->isWater() || pAdjacentPlot->isFriendlyCity(*getHeadUnit(), true) )
-							{
-								if( generatePath(plot(), pAdjacentPlot, 0, true, &iPathTurns) )
-								{
-									if( iPathTurns < iBestPathTurns )
-									{
-										pPickupPlot = pAdjacentPlot;
-										iBestPathTurns = iPathTurns;
-									}
-								}
-							}
-						}
-					}
-
-					if( pPickupPlot != NULL )
-					{
-						if( atPlot(pPickupPlot) )
-						{
-							foreach_(CvUnit* pLoopUnit, units() | filtered(!CvUnit::fn::isFull()))
-							{
-								pTargetUnit->getGroup()->setRemoteTransportUnit(pLoopUnit);
-							}
-
-							bAction = true;
+							bAction = false;
 							bDone = true;
 						}
-						else
-						{
-							if (groupPathTo(pPickupPlot->getX(), pPickupPlot->getY(), headMissionQueueNode()->m_data.iFlags))
-							{
-								bAction = true;
-							}
-							else
-							{
-								bDone = true;
-							}
-						}
 					}
-					else
-					{
-						bDone = true;
-					}
-					break;
 				}
-
-				if (AI_getMissionAIType() != MISSIONAI_SHADOW && AI_getMissionAIType() != MISSIONAI_GROUP)
+				else
 				{
-					if (!plot()->isOwned() || plot()->getOwner() == getOwner())
+					if (getNumUnits() > 0 && headMissionQueueNode() != NULL)
 					{
-						const CvPlot* pMissionPlot = pTargetUnit->getGroup()->AI_getMissionAIPlot();
-						if (pMissionPlot != NULL && NO_TEAM != pMissionPlot->getTeam())
+						if (groupAmphibMove(GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2), headMissionQueueNode()->m_data.iFlags))
 						{
-							if (pMissionPlot->isOwned() && pTargetUnit->isPotentialEnemy(pMissionPlot->getTeam(), pMissionPlot))
-							{
-								bAction = false;
-								bDone = true;
-								break;
-							}
+							bAction = false;
+							bDone = true;
+							break;
 						}
 					}
-				}
 
-				if (groupPathTo(pTargetUnit->getX(), pTargetUnit->getY(), headMissionQueueNode()->m_data.iFlags))
+					bFailed = true;	//	Can't move there! (e.g. - breaches stacking limit)
+					bDone = true;
+				}
+				break;
+
+			case MISSION_ROUTE_TO:
+				if (groupRoadTo(headQueueNode->m_data.iData1, headQueueNode->m_data.iData2, headQueueNode->m_data.iFlags))
 				{
 					bAction = true;
 				}
@@ -2251,134 +2000,122 @@ bool CvSelectionGroup::continueMission(int iSteps)
 					bFailed = true;	//	Can't move there! (e.g. - breaches stacking limit)
 					bDone = true;
 				}
-			}
-			else
-			{
-				bDone = true;
-			}
-			break;
-
-		case MISSION_SKIP:
-		case MISSION_SLEEP:
-		case MISSION_FORTIFY:
-		case MISSION_BUILDUP:
-		case MISSION_AUTO_BUILDUP:
-		case MISSION_HEAL_BUILDUP:
-		case MISSION_PLUNDER:
-		case MISSION_AIRPATROL:
-		case MISSION_SEAPATROL:
-		case MISSION_HEAL:
-		case MISSION_SENTRY:
-// BUG - Sentry Actions - start
-#ifdef _MOD_SENTRY
-		case MISSION_SENTRY_WHILE_HEAL:
-		case MISSION_SENTRY_NAVAL_UNITS:
-		case MISSION_SENTRY_LAND_UNITS:
-#endif
-// BUG - Sentry Actions - end
-			FErrorMsg("error");
-			break;
-
-		case MISSION_AIRLIFT:
-		case MISSION_NUKE:
-		case MISSION_RECON:
-		case MISSION_PARADROP:
-		case MISSION_AIRBOMB:
-		case MISSION_BOMBARD:
-		case MISSION_RANGE_ATTACK:
-		case MISSION_PILLAGE:
-		case MISSION_SABOTAGE:
-		case MISSION_DESTROY:
-		case MISSION_STEAL_PLANS:
-		case MISSION_FOUND:
-		case MISSION_SPREAD:
-		case MISSION_SPREAD_CORPORATION:
-		case MISSION_CURE:
-		case MISSION_JOIN:
-		case MISSION_CONSTRUCT:
-		case MISSION_DISCOVER:
-		case MISSION_HURRY:
-		case MISSION_TRADE:
-		case MISSION_GREAT_WORK:
-		case MISSION_INFILTRATE:
-		case MISSION_GOLDEN_AGE:
-		case MISSION_LEAD:
-		case MISSION_ESPIONAGE:
-		case MISSION_DIE_ANIMATION:
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-		// Dale - AB: Bombing START
-		case MISSION_AIRBOMB1:
-		case MISSION_AIRBOMB2:
-		case MISSION_AIRBOMB3:
-		case MISSION_AIRBOMB4:
-		case MISSION_AIRBOMB5:
-		case MISSION_RBOMBARD:
-			break;
-
-		case MISSION_BUILD:
-			if (!groupBuild((BuildTypes)(headQueueNode->m_data.iData1)))
-			{
-				bFailed = true;
-				bDone = true;
-			}
-			break;
-
-		case MISSION_HURRY_FOOD:
-		case MISSION_INQUISITION:
-		case MISSION_CLAIM_TERRITORY:
-		case MISSION_ESPIONAGE_SLEEP:
-		case MISSION_GREAT_COMMANDER:
-		case MISSION_SHADOW:
-		case MISSION_WAIT_FOR_TECH:
-		case MISSION_AMBUSH:
-		case MISSION_ASSASSINATE:
-			break;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-		default:
-			// AIAndy: Assumed to be an outcome mission
-			// FErrorMsg("error");
-			break;
-		}
-	}
-
-	if ((getNumUnits() > 0) && (headMissionQueueNode() != NULL))
-	{
-		if (!bDone)
-		{
-			switch (headMissionQueueNode()->m_data.eMissionType)
-			{
-			case MISSION_MOVE_TO:
-// BUG - Sentry Actions - start
-#ifdef _MOD_SENTRY
-			case MISSION_MOVE_TO_SENTRY:
-#endif
-// BUG - Sentry Actions - end
-				if (at(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
-				{
-// BUG - Safe Move - start
-					clearLastPathPlot();
-// BUG - Safe Move - end
-					bDone = true;
-				}
-				break;
-
-			case MISSION_ROUTE_TO:
-				if (at(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
-				{
-					if (getBestBuildRoute(plot()) == NO_ROUTE)
-					{
-						bDone = true;
-					}
-				}
 				break;
 
 			case MISSION_MOVE_TO_UNIT:
-				pTargetUnit = GET_PLAYER((PlayerTypes)headMissionQueueNode()->m_data.iData1).getUnit(headMissionQueueNode()->m_data.iData2);
-				if ((pTargetUnit == NULL) || atPlot(pTargetUnit->plot()))
+				if ((getHeadUnitAI() == UNITAI_CITY_DEFENSE) && plot()->isCity() && (plot()->getTeam() == getTeam()))
+				{
+					if (plot()->getBestDefender(getOwner())->getGroup() == this)
+					{
+						bAction = false;
+						bDone = true;
+						break;
+					}
+				}
+				pTargetUnit = GET_PLAYER((PlayerTypes)headQueueNode->m_data.iData1).getUnit(headQueueNode->m_data.iData2);
+				if (pTargetUnit != NULL)
+				{
+					// Handling for mission to retrieve a unit
+					if( AI_getMissionAIType() == MISSIONAI_PICKUP )
+					{
+						if( !(pTargetUnit->getGroup()->isStranded()) || isFull() || (pTargetUnit->plot() == NULL) )
+						{
+							bDone = true;
+							bAction = false;
+							break;
+						}
+
+						CvPlot* pPickupPlot = NULL;
+						int iPathTurns;
+						int iBestPathTurns = MAX_INT;
+
+						if( (canMoveAllTerrain() || pTargetUnit->plot()->isWater() || pTargetUnit->plot()->isFriendlyCity(*getHeadUnit(), true)) && generatePath(plot(), pTargetUnit->plot(), 0, false, &iPathTurns) )
+						{
+							pPickupPlot = pTargetUnit->plot();
+						}
+						else
+						{
+							foreach_(CvPlot* pAdjacentPlot, pTargetUnit->plot()->adjacent())
+							{
+								if( atPlot(pAdjacentPlot) )
+								{
+									pPickupPlot = pAdjacentPlot;
+									break;
+								}
+
+								if( pAdjacentPlot->isWater() || pAdjacentPlot->isFriendlyCity(*getHeadUnit(), true) )
+								{
+									if( generatePath(plot(), pAdjacentPlot, 0, true, &iPathTurns) )
+									{
+										if( iPathTurns < iBestPathTurns )
+										{
+											pPickupPlot = pAdjacentPlot;
+											iBestPathTurns = iPathTurns;
+										}
+									}
+								}
+							}
+						}
+
+						if( pPickupPlot != NULL )
+						{
+							if( atPlot(pPickupPlot) )
+							{
+								foreach_(CvUnit* pLoopUnit, units() | filtered(!CvUnit::fn::isFull()))
+								{
+									pTargetUnit->getGroup()->setRemoteTransportUnit(pLoopUnit);
+								}
+
+								bAction = true;
+								bDone = true;
+							}
+							else
+							{
+								if (groupPathTo(pPickupPlot->getX(), pPickupPlot->getY(), headMissionQueueNode()->m_data.iFlags))
+								{
+									bAction = true;
+								}
+								else
+								{
+									bDone = true;
+								}
+							}
+						}
+						else
+						{
+							bDone = true;
+						}
+						break;
+					}
+
+					if (AI_getMissionAIType() != MISSIONAI_SHADOW && AI_getMissionAIType() != MISSIONAI_GROUP)
+					{
+						if (!plot()->isOwned() || plot()->getOwner() == getOwner())
+						{
+							const CvPlot* pMissionPlot = pTargetUnit->getGroup()->AI_getMissionAIPlot();
+							if (pMissionPlot != NULL && NO_TEAM != pMissionPlot->getTeam())
+							{
+								if (pMissionPlot->isOwned() && pTargetUnit->isPotentialEnemy(pMissionPlot->getTeam(), pMissionPlot))
+								{
+									bAction = false;
+									bDone = true;
+									break;
+								}
+							}
+						}
+					}
+
+					if (groupPathTo(pTargetUnit->getX(), pTargetUnit->getY(), headMissionQueueNode()->m_data.iFlags))
+					{
+						bAction = true;
+					}
+					else
+					{
+						bFailed = true;	//	Can't move there! (e.g. - breaches stacking limit)
+						bDone = true;
+					}
+				}
+				else
 				{
 					bDone = true;
 				}
@@ -2395,86 +2132,101 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			case MISSION_SEAPATROL:
 			case MISSION_HEAL:
 			case MISSION_SENTRY:
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 			case MISSION_SENTRY_WHILE_HEAL:
 			case MISSION_SENTRY_NAVAL_UNITS:
 			case MISSION_SENTRY_LAND_UNITS:
 #endif
-// BUG - Sentry Actions - end
+			{
 				FErrorMsg("error");
 				break;
-
-			case MISSION_AIRLIFT:
-			case MISSION_NUKE:
-
-			case MISSION_RECON:
-			case MISSION_PARADROP:
-			case MISSION_AIRBOMB:
-			case MISSION_BOMBARD:
-			case MISSION_RANGE_ATTACK:
-			case MISSION_PILLAGE:
-			case MISSION_SABOTAGE:
-			case MISSION_DESTROY:
-			case MISSION_STEAL_PLANS:
-			case MISSION_FOUND:
-			case MISSION_SPREAD:
-			case MISSION_SPREAD_CORPORATION:
-			case MISSION_CURE:
-			case MISSION_JOIN:
-			case MISSION_CONSTRUCT:
-			case MISSION_DISCOVER:
-			case MISSION_HURRY:
-			case MISSION_TRADE:
-			case MISSION_GREAT_WORK:
-			case MISSION_INFILTRATE:
-			case MISSION_GOLDEN_AGE:
-			case MISSION_LEAD:
-			case MISSION_ESPIONAGE:
-			case MISSION_DIE_ANIMATION:
-
-			// Dale - AB: Bombing
-			case MISSION_AIRBOMB1:
-			case MISSION_AIRBOMB2:
-			case MISSION_AIRBOMB3:
-			case MISSION_AIRBOMB4:
-			case MISSION_AIRBOMB5:
-			// Dale - RB: Field Bombard
-			case MISSION_RBOMBARD:
-			// Dale - FE: Fighters
-			case MISSION_FENGAGE:
-			// ! Dale
-				bDone = true;
-				break;
-
+			}
 			case MISSION_BUILD:
-				// XXX what happens if two separate worker groups are both building the mine...
-				/*if (plot()->getBuildType() != ((BuildTypes)(headMissionQueueNode()->m_data.iData1)))
+			{
+				if (!groupBuild((BuildTypes)(headQueueNode->m_data.iData1)))
+				{
+					bFailed = true;
+					bDone = true;
+				}
+				break;
+			}
+			default: // AIAndy: Assumed to be an outcome mission
+			{
+				break;
+			}
+		}
+	}
+
+	if ((getNumUnits() > 0) && (headMissionQueueNode() != NULL))
+	{
+		if (!bDone)
+		{
+			switch (headMissionQueueNode()->m_data.eMissionType)
+			{
+				case MISSION_MOVE_TO:
+#ifdef _MOD_SENTRY
+				case MISSION_MOVE_TO_SENTRY:
+#endif
+					if (at(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+					{
+						clearLastPathPlot();
+						bDone = true;
+					}
+					break;
+
+				case MISSION_ROUTE_TO:
+					if (at(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2))
+					{
+						if (getBestBuildRoute(plot()) == NO_ROUTE)
+						{
+							bDone = true;
+						}
+					}
+					break;
+
+				case MISSION_MOVE_TO_UNIT:
+					pTargetUnit = GET_PLAYER((PlayerTypes)headMissionQueueNode()->m_data.iData1).getUnit(headMissionQueueNode()->m_data.iData2);
+					if ((pTargetUnit == NULL) || atPlot(pTargetUnit->plot()))
+					{
+						bDone = true;
+					}
+					break;
+
+				case MISSION_SKIP:
+				case MISSION_SLEEP:
+				case MISSION_FORTIFY:
+				case MISSION_BUILDUP:
+				case MISSION_AUTO_BUILDUP:
+				case MISSION_HEAL_BUILDUP:
+				case MISSION_PLUNDER:
+				case MISSION_AIRPATROL:
+				case MISSION_SEAPATROL:
+				case MISSION_HEAL:
+				case MISSION_SENTRY:
+#ifdef _MOD_SENTRY
+				case MISSION_SENTRY_WHILE_HEAL:
+				case MISSION_SENTRY_NAVAL_UNITS:
+				case MISSION_SENTRY_LAND_UNITS:
+#endif
+				{
+					FErrorMsg("error");
+					break;
+				}
+				case MISSION_BUILD:
+					// XXX what happens if two separate worker groups are both building the mine...
+					/*if (plot()->getBuildType() != ((BuildTypes)(headMissionQueueNode()->m_data.iData1)))
+					{
+						bDone = true;
+					}*/
+					break;
+				case MISSION_ESPIONAGE_SLEEP:
+					break;
+
+				default:
 				{
 					bDone = true;
-				}*/
-				break;
-
-			case MISSION_HURRY_FOOD:
-			case MISSION_INQUISITION:
-			case MISSION_CLAIM_TERRITORY:
-			case MISSION_GREAT_COMMANDER:
-				bDone = true;
-				break;
-			case MISSION_ESPIONAGE_SLEEP:
-				break;
-			case MISSION_SHADOW:
-			case MISSION_WAIT_FOR_TECH:
-			case MISSION_AMBUSH:
-			case MISSION_ASSASSINATE:
-				bDone = true;
-				break;
-
-			default:
-				// AIAndy: Assumed to be an outcome mission
-				// FErrorMsg("error");
-				bDone = true;
-				break;
+					break;
+				}
 			}
 		}
 	}
@@ -2632,15 +2384,15 @@ bool CvSelectionGroup::canDoCommand(CommandTypes eCommand, int iData1, int iData
 
 bool CvSelectionGroup::canEverDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible, bool bUseCache) const
 {
-	if(eCommand == COMMAND_LOAD)
+	if (eCommand == COMMAND_LOAD)
 	{
 		return algo::any_of(plot()->units(), !CvUnit::fn::isFull());
 	}
-	else if(eCommand == COMMAND_UNLOAD)
+	if (eCommand == COMMAND_UNLOAD)
 	{
 		return algo::any_of(units(), CvUnit::fn::isCargo());
 	}
-	else if(eCommand == COMMAND_UPGRADE && bUseCache)
+	if (eCommand == COMMAND_UPGRADE && bUseCache)
 	{
 		//see if any of the different units can upgrade to this unit type
 		for(int i=0;i<(int)m_aDifferentUnitCache.size();i++)
@@ -2649,10 +2401,8 @@ bool CvSelectionGroup::canEverDoCommand(CommandTypes eCommand, int iData1, int i
 			if(unit->canDoCommand(eCommand, iData1, iData2, bTestVisible, false))
 				return true;
 		}
-
 		return false;
 	}
-
 	return true;
 }
 
@@ -2877,118 +2627,73 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
+		FAssertMsg(pLoopUnit != NULL, "TestAssert, if this never happen then remove the following if statement");
+
+		if (pLoopUnit == NULL) return false;
+
 		switch (eInterfaceMode)
 		{
-		case INTERFACEMODE_AIRLIFT:
-			if (pLoopUnit != NULL && pLoopUnit->canAirliftAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRLIFT:
 			{
-				return true;
+				return pLoopUnit->canAirliftAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_NUKE:
-			if (pLoopUnit != NULL && pLoopUnit->canNukeAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_NUKE:
 			{
-				return true;
+				return pLoopUnit->canNukeAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-		case INTERFACEMODE_RECON:
-			if (pLoopUnit != NULL && pLoopUnit->canReconAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_RECON:
 			{
-				return true;
+				return pLoopUnit->canReconAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_PARADROP:
-			if (pLoopUnit != NULL && pLoopUnit->canParadropAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_PARADROP:
 			{
-				return true;
+				return pLoopUnit->canParadropAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB:
-			if (pLoopUnit != NULL && pLoopUnit->canAirBombAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB:
 			{
-				return true;
+				return pLoopUnit->canAirBombAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_RANGE_ATTACK:
-			if (pLoopUnit != NULL && pLoopUnit->canRangeStrikeAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_RANGE_ATTACK:
 			{
-				return true;
+				return pLoopUnit->canRangeStrikeAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRSTRIKE:
-			if (pLoopUnit != NULL && pLoopUnit->canEnterPlot(pPlot, MoveCheck::Attack))
+			case INTERFACEMODE_AIRSTRIKE:
 			{
-				return true;
+				return pLoopUnit->canEnterPlot(pPlot, MoveCheck::Attack);
 			}
-			break;
-
-		case INTERFACEMODE_REBASE:
-			if (pLoopUnit != NULL && pLoopUnit->canEnterPlot(pPlot))
+			case INTERFACEMODE_REBASE:
 			{
-				return true;
+				return pLoopUnit->canEnterPlot(pPlot);
 			}
-			break;
-
-		// Dale - AB: Bombing
-		case INTERFACEMODE_AIRBOMB1:
-			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb1At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB1:
 			{
-				return true;
+				return GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb1At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB2:
-			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb2At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB2:
 			{
-				return true;
+				return GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb2At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB3:
-			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb3At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB3:
 			{
-				return true;
+				return GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb3At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB4:
-			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb4At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB4:
 			{
-				return true;
+				return GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb4At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB5:
-			if (pLoopUnit != NULL && GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb5At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_AIRBOMB5:
 			{
-				return true;
+				return GC.isDCM_AIR_BOMBING() && pLoopUnit->canAirBomb5At(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		// Dale - RB: Field Bombard
-		case INTERFACEMODE_BOMBARD:
-			if (pLoopUnit != NULL && GC.isDCM_RANGE_BOMBARD() && pLoopUnit->canBombardAtRanged(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_BOMBARD:
 			{
-				return true;
+				return GC.isDCM_RANGE_BOMBARD() && pLoopUnit->canBombardAtRanged(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-
-		// Dale - FE: Fighters
-		case INTERFACEMODE_FENGAGE:
-			if (pLoopUnit != NULL && GC.isDCM_FIGHTER_ENGAGE() && pLoopUnit->canFEngageAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY()))
+			case INTERFACEMODE_FENGAGE:
 			{
-				return true;
+				return GC.isDCM_FIGHTER_ENGAGE() && pLoopUnit->canFEngageAt(pLoopUnit->plot(), pPlot->getX(), pPlot->getY());
 			}
-			break;
-		// ! Dale
-
-		case INTERFACEMODE_SHADOW_UNIT:
-			if (pLoopUnit != NULL)
+			case INTERFACEMODE_SHADOW_UNIT:
 			{
 				foreach_(CvUnit* pLoopUnit, pPlot->units())
 				{
@@ -2997,12 +2702,9 @@ bool CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes eInterfaceMode, C
 						return true;
 					}
 				}
+				return false;
 			}
-			break;
-
-		default:
-			return true;
-			break;
+			default: return true;
 		}
 	}
 	return false;
@@ -3936,13 +3638,12 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 						pBestAttackUnit->attack(pDestPlot, bQuick, bLoopStealthDefense);
 					}
 				}
-				else if (pBestDefender)
-				{
-					pBestAttackUnit->attack(pDestPlot, false, bLoopStealthDefense);
-					break;
-				}
 				else
 				{
+					if (pBestDefender)
+					{
+						pBestAttackUnit->attack(pDestPlot, false, bLoopStealthDefense);
+					}
 					break;
 				}
 				// Afforess 6/20/11
@@ -4006,8 +3707,7 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 #else
 		//TBNote: Need to make this an option perhaps.  Groups probably shouldn't be automatically splitting up to continue the planned move, particularly for human players.
 		//Would check if the whole group can move into the plot first.  This warrants more study before acting on this.
-		if (
-			pLoopUnit->canMove()
+		if (pLoopUnit->canMove()
 		&&	(
 				bCombat && (!pLoopUnit->isNoCapture() || !pPlot->isEnemyCity(*pLoopUnit))
 				?
@@ -4020,24 +3720,13 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 // BUG - Sentry Actions - end
 		{
 			pLoopUnit->move(pPlot, true);
-			//next statement perhaps should be an if is dead kind of protection against reporting the move elsewhere//TBFIXHERE
-			if (pLoopUnit->isDead())
-			{
-				// Toffer - Shouldn't this be handled when pLoopUnit actually dies in the above pLoopUnit->move(pPlot, true);
-				//	rather than after it has died here below.
-				pLoopUnit->joinGroup(NULL, true);
-				pLoopUnit->finishMoves();
-			}
 		}
 		else
 		{
 			pLoopUnit->joinGroup(NULL, true);
 			pLoopUnit->ExecuteMove(((float)(GC.getMissionInfo(MISSION_MOVE_TO).getTime() * gDLL->getMillisecsPerTurn())) / 1000.0f, false);
-/************************************************************************************************/
-/* Afforess	                  Start		 07/31/10                                               */
-/*                                                                                              */
-/* Units Seem to be getting stuck here                                                          */
-/************************************************************************************************/
+
+			// Afforess - Units Seem to be getting stuck here
 			if (GC.iStuckUnitID != pLoopUnit->getID())
 			{
 				GC.iStuckUnitID = pLoopUnit->getID();
@@ -4062,18 +3751,13 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 					pLoopUnit->finishMoves();
 				}
 			}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 		}
 	}
-
 	pStartPlot->enableCenterUnitRecalc(true);
 	pPlot->enableCenterUnitRecalc(true);
 
 	//execute move
-	if(bEndMove || !canAllMove())
+	if (bEndMove || !canAllMove())
 	{
 		foreach_(CvUnit* pLoopUnit, units())
 		{
@@ -4081,7 +3765,6 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 			pLoopUnit->ExecuteMove(((float)(GC.getMissionInfo(MISSION_MOVE_TO).getTime() * gDLL->getMillisecsPerTurn())) / 1000.0f, false);
 		}
 	}
-
 	m_bIsMidMove = false;
 }
 
@@ -5495,7 +5178,7 @@ void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 	// this means that if a new unit is going to become the head, change its AI to match, if possible
 	// AI_setUnitAIType removes the unit from the current group (at least currently), so we have to be careful in the loop here
 	// so, loop until we have not changed unit AIs
-	bool bChangedUnitAI;
+	bool bChangedUnitAI = true;
 	do
 	{
 		bChangedUnitAI = false;
@@ -5506,7 +5189,6 @@ void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 		while (pUnitNode != NULL && !bChangedUnitAI)
 		{
 			CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-			//pUnitNode = nextUnitNode(pUnitNode);
 
 			if (pLoopUnit != NULL)
 			{
@@ -6150,12 +5832,9 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 						}
 					}
 
-					if (isHuman())
+					if (isHuman() && !isLastPathPlotVisible() && getDomainType() != DOMAIN_AIR)
 					{
-						if (!(isLastPathPlotVisible()) && (getDomainType() != DOMAIN_AIR))
-						{
-							return false;
-						}
+						return false;
 					}
 
 					CvUnit* pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, bStealth);
@@ -6226,7 +5905,6 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 										}
 									}
 								}
-
 								bBombardExhausted = !bFoundBombard;
 
 								continue;
@@ -6243,7 +5921,6 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 							{
 								AI_queueGroupAttack(iX, iY);
 							}
-
 							break;
 						}
 					}

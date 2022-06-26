@@ -208,7 +208,7 @@ protected:
 	bool AI_spreadCorporation();
 	bool AI_spreadReligionAirlift();
 	bool AI_spreadCorporationAirlift();
-	bool AI_discover(bool bThisTurnOnly = false, bool bFirstResearchOnly = false);
+	bool AI_discover(const bool bFirstResearchOnly = false);
 
 	bool AI_leadLegend();
 

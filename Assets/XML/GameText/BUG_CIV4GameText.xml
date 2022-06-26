@@ -3025,6 +3025,30 @@
 		<Russian>Ñ÷åò÷èê ãíåâà</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTFOOD_HOVER</Tag>
+		<English>AI yield value weight defines the relative value ratio between the yield types.[NEWLINE]Don't mess with this unless you know what you're doing!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTFOOD_TEXT</Tag>
+		<English>Food</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTHAMMER_HOVER</Tag>
+		<English>AI yield value weight defines the relative value ratio between the yield types.[NEWLINE]Don't mess with this unless you know what you're doing!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTHAMMER_TEXT</Tag>
+		<English>Hammer</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTCOMMERCE_HOVER</Tag>
+		<English>AI yield value weight defines the relative value ratio between the yield types.[NEWLINE]Don't mess with this unless you know what you're doing!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTCOMMERCE_TEXT</Tag>
+		<English>Commerce</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__GREATPERSONINFO_HOVER</Tag>
 		<English>When checked, displays the percentage chance and type of each possible [ICON_GREATPEOPLE] on the bar. The number shown is controlled by the General setting.</English>
 		<French>Lorsque activé, affiche le pourcentage de probabilité de chaque type de [ICON_GREATPEOPLE] dans la barre. Le Nombre de pourcentages affichés est géré dans l'onglet Général.</French>

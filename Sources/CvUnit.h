@@ -661,8 +661,6 @@ public:
 	void setShadowUnit(const CvUnit* pUnit);
 	CvUnit* getShadowUnit() const;
 
-	TechTypes getDesiredDiscoveryTech() const;
-	void setDesiredDiscoveryTech(TechTypes eTech);
 	void waitForTech(int iFlag, int eTech);
 
 	bool canGift(bool bTestVisible = false, bool bTestTransport = true) const;
@@ -780,9 +778,9 @@ public:
 	bool construct(BuildingTypes eBuilding);
 
 	TechTypes getDiscoveryTech() const;
-	int getDiscoverResearch(TechTypes eTech) const;
+	int getDiscoverResearch(const TechTypes eTech = NO_TECH) const;
 	bool canDiscover() const;
-	bool discover();
+	bool discover(TechTypes eTech = NO_TECH);
 
 	int getMaxHurryProduction(const CvCity* pCity) const;
 	int getHurryProduction(const CvPlot* pPlot) const;
@@ -1509,7 +1507,6 @@ public:
 	void testPromotionReady();
 
 	bool isDelayedDeath() const;
-	void startDelayedDeath();
 	bool doDelayedDeath();
 
 	bool isCombatFocus() const;
@@ -1712,13 +1709,14 @@ public:
 	virtual void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd) = 0;
 	virtual bool isWaitingOnUnitAI(int iIndex) const = 0;
 	virtual bool isWaitingOnUnitAIAny() const = 0;
+	virtual bool processContracts(int iMinPriority = 0) = 0;
 
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
 
 	PlayerTypes m_eOriginalOwner;
 
 	bool isWorker() const;
-	CvCity* getWorkerAssignedCity() const;
+	UnitCompWorker* CvUnit::getWorkerComponent() const;
 
 protected:
 	int m_iDCMBombRange;
@@ -1750,7 +1748,6 @@ protected:
 	bool m_bAutoPromoting;
 	bool m_bAutoUpgrading;
 	IDInfo m_shadowUnit;
-	TechTypes m_eDesiredDiscoveryTech;
 	//Great Commanders... By KillmePlease
 	int m_iCommanderID; //id of commander. used for game save/load
 	mutable int m_iCommanderCacheTurn;
@@ -2639,8 +2636,7 @@ public:
 	void changeExtraBombardRate(int iChange);
 	void setExtraBombardRate(int iChange);
 	int getBombardRate() const;
-	int getSMBombardRateTotalBase() const;
-	int getSMBombardRate() const;
+	int getBombardRateBase() const;
 	void setSMBombardRate();
 
 	int getAirBombCurrRate() const;

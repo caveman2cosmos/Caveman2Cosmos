@@ -99,6 +99,28 @@ int CyGlobalContext::getInfoTypeForString(const char* szInfoType, bool bHideAsse
 	return GC.getInfoTypeForString(szInfoType, bHideAssert);
 }
 
+int CyGlobalContext::getNumFlavorTypes() const
+{
+	return GC.getNumFlavorTypes();
+}
+
+const char* CyGlobalContext::getFlavorType(FlavorTypes e) const
+{
+	return GC.getFlavorTypes(e).c_str();
+}
+
+const python::list CyGlobalContext::getFlavorTypes() const
+{
+	python::list l = python::list();
+	const CvString*& flavorTypes = GC.getFlavorTypes();
+
+	for (int i = 0, num = GC.getNumFlavorTypes(); i < num; i++)
+	{
+		l.append(flavorTypes[i].c_str());
+	}
+	return l;
+}
+
 const CvMapInfo& CyGlobalContext::getMapInfo(MapTypes eMap) const
 {
 	return GC.getMapInfo(eMap);

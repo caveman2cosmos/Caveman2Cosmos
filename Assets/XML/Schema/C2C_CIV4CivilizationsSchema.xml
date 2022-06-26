@@ -769,6 +769,7 @@
 		<element type="Button" minOccurs="0"/>
 		<element type="OnGameOptions" minOccurs="0"/>
 		<element type="NotOnGameOptions" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="TraitPrereq" minOccurs="0"/>
 		<element type="TraitPrereqOr1" minOccurs="0"/>
 		<element type="TraitPrereqOr2" minOccurs="0"/>
@@ -1082,4 +1083,8 @@
 	<ElementType name="Civ4CivNameInfos" content="eltOnly">
 		<element type="CivNameInfos" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="Categories" content="eltOnly">
+		<element type="Category" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Category" content="textOnly"/>
 </Schema>

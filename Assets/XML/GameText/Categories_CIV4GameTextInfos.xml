@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUPS</Tag>
+		<English>General Specialist Groups</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_ASSIGNABLE_SPECIALISTS</Tag>
+		<English>Assignable Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_CIVILIAN</Tag>
+		<English>Civilian Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_CAPTIVE</Tag>
+		<English>Captive Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_RELIGIOUS</Tag>
+		<English>Religious Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_CULTURAL</Tag>
+		<English>Cultural Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_RESEARCH</Tag>
+		<English>Research Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_ECONOMIC</Tag>
+		<English>Economic Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_ARCHITECTURAL</Tag>
+		<English>Architectural Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_POLITICAL</Tag>
+		<English>Political Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_MEDICAL</Tag>
+		<English>Medical Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_ESPIONAGE</Tag>
+		<English>Espionage Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_LEGAL</Tag>
+		<English>Legal Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_MILITARY</Tag>
+		<English>Military Specialists</English>
+	</TEXT>
+</Civ4GameText>

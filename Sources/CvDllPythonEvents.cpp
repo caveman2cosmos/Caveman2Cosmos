@@ -821,18 +821,6 @@ void CvDllPythonEvents::reportSelectionGroupPushMission(const CvSelectionGroup* 
 	postEvent(eventData, "selectionGroupPushMission");
 }
 
-void CvDllPythonEvents::reportUnitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot)
-{
-	EventArgs eventData;
-	eventData
-		.no_json()
-		.arg("event", "unitMove")
-		.arg("pPlot", pPlot)
-		.arg("pUnit", pUnit)
-		.arg("pOldPlot", pOldPlot);
-	postEvent(eventData, "unitMove");
-}
-
 void CvDllPythonEvents::reportUnitCreated(CvUnit* pUnit)
 {
 	EventArgs eventData;

@@ -56,7 +56,6 @@ public:
 
 	virtual void selectionGroupPushMission(CvSelectionGroup* pSelectionGroup, MissionTypes eMission) = 0;
 
-	virtual void unitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot) = 0;
 	virtual void unitCreated(CvUnit *pUnit) = 0;
 	virtual void unitBuilt(CvCity *pCity, CvUnit *pUnit) = 0;
 	virtual void unitKilled(CvUnit *pUnit, PlayerTypes eAttacker) = 0;

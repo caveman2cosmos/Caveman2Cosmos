@@ -13,36 +13,12 @@
 
 // Public Functions...
 
-CvSelectionGroupAI::CvSelectionGroupAI()
-{
-	AI_reset();
-}
-
-
-CvSelectionGroupAI::~CvSelectionGroupAI()
-{
-	AI_uninit();
-}
-
-
-void CvSelectionGroupAI::AI_init()
-{
-	AI_reset();
-
-	//--------------------------------
-	// Init other game data
-}
-
-
-void CvSelectionGroupAI::AI_uninit()
-{
-}
+CvSelectionGroupAI::CvSelectionGroupAI() { AI_reset(); }
+CvSelectionGroupAI::~CvSelectionGroupAI() { }
 
 
 void CvSelectionGroupAI::AI_reset()
 {
-	AI_uninit();
-
 	m_iMissionAIX = INVALID_PLOT_COORD;
 	m_iMissionAIY = INVALID_PLOT_COORD;
 
@@ -157,57 +133,57 @@ bool CvSelectionGroupAI::AI_update()
 	while (m_bGroupAttack && !bFailedAlreadyFighting || readyToMove())
 	{
 		iTempHack++;
-		if (iTempHack > 90 && iTempHack < 100)
+		if (iTempHack > 45 && iTempHack < 50)
 		{
-			FErrorMsg("error");
 			CvUnit* pHeadUnit = getHeadUnit();
 			if (NULL != pHeadUnit)
 			{
-				//if (GC.getLogging())
-				//{
-					int iPass = iTempHack - 90;
-					char szOut[1024];
-					CvWString szTempString;
-					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
-					sprintf
-					(
-						szOut, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n",
-						iPass, pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
-						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString()
-					);
-					gDLL->messageControlLog(szOut);
-				//}
+				int iPass = iTempHack - 90;
+				char szOut[1024];
+				CvWString szTempString;
+				getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+				sprintf
+				(
+					szOut, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n",
+					iPass, pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+					pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString()
+				);
+				gDLL->messageControlLog(szOut);
+
+				FErrorMsg(szOut);
 			}
+			else FErrorMsg("error");
 		}
-		if (iTempHack >= 100)
+		else if (iTempHack >= 50)
 		{
-			FErrorMsg("error");
 			CvUnit* pHeadUnit = getHeadUnit();
 			if (NULL != pHeadUnit)
 			{
-				if (GC.getLogging())
-				{
-					char szOut[1024];
-					CvWString szTempString;
-					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
-					sprintf
-					(
-						szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n",
-						pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
-						pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString()
-					);
-					gDLL->messageControlLog(szOut);
-				}
+				char szOut[1024];
+				CvWString szTempString;
+				getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+				sprintf
+				(
+					szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n",
+					pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+					pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString()
+				);
+				gDLL->messageControlLog(szOut);
+
+				FErrorMsg(szOut);
+
 				pHeadUnit->finishMoves();
 			}
 			else if (readyToMove())
 			{
+				FErrorMsg("splitting group");
 				splitGroup(1);
 				break;
 			}
+			else FErrorMsg("error");
+
 			break;
 		}
-
 		// if we want to force the group to attack, force another attack
 		if (m_bGroupAttack)
 		{
@@ -215,8 +191,7 @@ bool CvSelectionGroupAI::AI_update()
 
 			groupAttack(m_iGroupAttackX, m_iGroupAttackY, MOVE_DIRECT_ATTACK, bFailedAlreadyFighting);
 		}
-		// else pick AI action
-		else
+		else // pick AI action
 		{
 			CvUnit* pHeadUnit = getHeadUnit();
 
@@ -224,7 +199,6 @@ bool CvSelectionGroupAI::AI_update()
 			{
 				break;
 			}
-
 			resetPath();
 
 			if (pHeadUnit->AI_update())
@@ -278,11 +252,7 @@ bool CvSelectionGroupAI::AI_update()
 		{
 			pushMission(MISSION_SKIP);
 		}
-
-		// AI should never put units to sleep, how does this ever happen?
-		//FAssert( getHeadUnit()->isCargo() || getActivityType() != ACTIVITY_SLEEP );
 	}
-
 	return !bDead && (isBusy() || isCargoBusy());
 }
 
@@ -1036,21 +1006,27 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 	if (oldPlot && eOldMissionAI != NO_MISSIONAI)
 	{
 		GET_PLAYER(getOwner()).AI_noteMissionAITargetCountChange(eOldMissionAI, oldPlot, -getNumUnits(), plot(), -getNumUnitCargoVolumeTotal());
+	}
 
-		// Worker city tracking
-		if (eOldMissionAI == MISSIONAI_BUILD)
+	// Worker city tracking
+	foreach_(CvUnit* unitX, units())
+	{
+		const UnitCompWorker* workerComp = unitX->getWorkerComponent();
+		if (workerComp)
 		{
-			CvCity* oldCity = oldPlot->getWorkingCity();
-			if (oldCity)
+			CvCity* city = GET_PLAYER(getOwner()).getCity(workerComp->getAssignedCity());
+			if (city)
 			{
-				oldCity->AI_changeWorkersHave(-1);
-				if (pNewUnit)
-					OutputDebugString(CvString::format("Worker at (%d,%d) detaching from mission for city %S\n", pNewUnit->getX(), pNewUnit->getY(), oldCity->getName().GetCString()).c_str());
-				else OutputDebugString(CvString::format("Worker detaching from mission at (%d,%d) for city %S\n", oldPlot->getX(), oldPlot->getY(), oldCity->getName().GetCString()).c_str());
+				// eOldMissionAI can be NO_MISSIONAI, and oldPlot can be NULL, at this point,
+				//	as a unit assigned to a city can join a selection-group that has not yet pushed the MISSIONAI_BUILD.
+				if (gUnitLogLevel > 2)
+				{
+					logBBAI("    Worker (%d) at (%d,%d) detaching from mission for city %S", unitX->getID(), unitX->getX(), unitX->getY(), city->getName().GetCString());
+				}
+				city->setWorkerHave(unitX->getID(), false);
 			}
 		}
 	}
-
 	// Set mission AI
 	m_eMissionAIType = eNewMissionAI;
 
@@ -1065,10 +1041,17 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 			CvCity* newCity = newPlot->getWorkingCity();
 			if (newCity)
 			{
-				newCity->AI_changeWorkersHave(1);
-				if (pNewUnit)
-					OutputDebugString(CvString::format("Worker at (%d,%d) attaching to mission for city %S\n", pNewUnit->getX(), pNewUnit->getY(), newCity->getName().GetCString()).c_str());
-				else OutputDebugString(CvString::format("Worker attaching to mission at (%d,%d) for city %S\n", newPlot->getX(), newPlot->getY(), newCity->getName().GetCString()).c_str());
+				foreach_(CvUnit* unitX, units())
+				{
+					if (unitX->AI_getUnitAIType() == UNITAI_WORKER)
+					{
+						if (gUnitLogLevel > 2)
+						{
+							logBBAI("Worker (%d) at (%d,%d) attaching to mission for city %S\n", unitX->getID(), unitX->getX(), unitX->getY(), newCity->getName().GetCString());
+						}
+						newCity->setWorkerHave(unitX->getID(), true);
+					}
+				}
 			}
 		}
 

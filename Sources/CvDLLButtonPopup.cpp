@@ -1480,11 +1480,11 @@ bool CvDLLButtonPopup::launchChooseTechPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
 	CvPlayer& player = GET_PLAYER(GC.getGame().getActivePlayer());
 
-	int iDiscover = info.getData1();
+	const int iDiscover = info.getData1();
 	CvWString szHeader = info.getText();
 	if (szHeader.empty())
 	{
-		szHeader = (iDiscover > 0) ? gDLL->getText("TXT_KEY_POPUP_CHOOSE_TECH").c_str() : gDLL->getText("TXT_KEY_POPUP_RESEARCH_NEXT").c_str();
+		szHeader = (iDiscover > 0 ? gDLL->getText("TXT_KEY_POPUP_CHOOSE_TECH") : gDLL->getText("TXT_KEY_POPUP_RESEARCH_NEXT")).c_str();
 	}
 	gDLL->getInterfaceIFace()->popupSetHeaderString(pPopup, szHeader, DLL_FONT_LEFT_JUSTIFY);
 
@@ -1506,14 +1506,14 @@ bool CvDLLButtonPopup::launchChooseTechPopup(CvPopup* pPopup, CvPopupInfo &info)
 	int iNumTechs = 0;
 	for (int iPass = 0; iPass < 2; iPass++)
 	{
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+		for (int iI = GC.getNumTechInfos() - 1; iI > -1; iI--)
 		{
 			if ((iI == eBestTech || iI == eNextBestTech) == (iPass == 0) && player.canResearch((TechTypes)iI))
 			{
 				CvWString szBuffer;
-				szBuffer.Format(L"%s (%d)", GC.getTechInfo((TechTypes)iI).getDescription(), ((iDiscover > 0) ? 0 : player.getResearchTurnsLeft(((TechTypes)iI), true)));
+				szBuffer.Format(L"%s (%d)", GC.getTechInfo((TechTypes)iI).getDescription(), ((iDiscover > 0) ? 0 : player.getResearchTurnsLeft((TechTypes)iI, true)));
 
-				if ((iI == eBestTech) || (iI == eNextBestTech))
+				if (iI == eBestTech || iI == eNextBestTech)
 				{
 					szBuffer += gDLL->getText("TXT_KEY_POPUP_RECOMMENDED_ONLY_ADV", GC.getAdvisorInfo((AdvisorTypes)(GC.getTechInfo((TechTypes)iI).getAdvisorType())).getTextKeyWide());
 				}
@@ -1549,7 +1549,7 @@ bool CvDLLButtonPopup::launchChooseTechPopup(CvPopup* pPopup, CvPopupInfo &info)
 
 	gDLL->getInterfaceIFace()->popupSetPopupType(pPopup, POPUPEVENT_TECHNOLOGY, ARTFILEMGR.getInterfaceArtInfo("INTERFACE_POPUPBUTTON_TECH")->getPath());
 
-	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, ((iDiscover > 0) ? POPUPSTATE_QUEUED : POPUPSTATE_MINIMIZED));
+	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, (iDiscover > 0 ? POPUPSTATE_QUEUED : POPUPSTATE_MINIMIZED));
 
 	return true;
 }
@@ -2719,73 +2719,39 @@ bool CvDLLButtonPopup::launchSelectShadowUnitPopup(CvPopup* pPopup, CvPopupInfo 
 
 bool CvDLLButtonPopup::launchSelectDiscoveryTechPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
-	int iUnitID = info.getData1();
-	PlayerTypes ePlayer = GC.getGame().getActivePlayer();
+	const PlayerTypes ePlayer = GC.getGame().getActivePlayer();
+
 	if (ePlayer == NO_PLAYER)
 	{
 		return false;
 	}
+	CvPlayerAI& player = GET_PLAYER(ePlayer);
+	CvUnit* unit = player.getUnit(info.getData1());
 
-	CvUnit* pUnit = GET_PLAYER(ePlayer).getUnit(iUnitID);
-	if (pUnit == NULL)
+	if (unit == NULL)
 	{
 		return false;
 	}
-
 	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_CHOOSE_TECH_TO_WAIT_FOR"));
 
-	CvWString szBuffer;
-	//Find the last tech
-	int iBestX = 0;
-	for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
+	for (int iI = GC.getNumTechInfos() - 1; iI > -1; iI--)
 	{
-		if (GET_PLAYER(ePlayer).canEverResearch((TechTypes)iJ))
+		if (player.canResearch((TechTypes)iI))
 		{
-			if (GC.getTechInfo((TechTypes)iJ).getGridX() > iBestX)
+			for (int iJ = GC.getNumFlavorTypes() - 1; iJ > -1; iJ--)
 			{
-				iBestX = GC.getTechInfo((TechTypes)iJ).getGridX();
-			}
-		}
-	}
-	//Forces sorting by the columns in the tech screen
-	for (int iColumn = 0; iColumn < iBestX + 1; iColumn++)
-	{
-		TechTypes eBestTech = NO_TECH;
-		int iBestValue = 0;
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-		{
-			if (GC.getTechInfo((TechTypes)iI).getGridX() == iColumn)
-			{
-				if (GET_PLAYER(ePlayer).canEverResearch((TechTypes)iI) && !GET_TEAM(GET_PLAYER(ePlayer).getTeam()).isHasTech((TechTypes)iI))
+				if (GC.getTechInfo((TechTypes) iI).getFlavorValue(iJ) * GC.getUnitInfo(unit->getUnitType()).getFlavorValue(iJ) > 0)
 				{
-					int iValue = 0;
-
-					for (int iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
-					{
-						iValue += (GC.getTechInfo((TechTypes) iI).getFlavorValue(iJ) * GC.getUnitInfo(pUnit->getUnitType()).getFlavorValue(iJ));
-					}
-					if (iValue > iBestValue)
-					{
-						eBestTech = (TechTypes)iI;
-						iBestValue = iValue;
-					}
+					gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, GC.getTechInfo((TechTypes)iI).getDescription(), GC.getTechInfo((TechTypes)iI).getButton(), iI, WIDGET_GENERAL);
+					break;
 				}
 			}
 		}
-		if (eBestTech != NO_TECH)
-		{
-			szBuffer.Format(L"%s", GC.getTechInfo(eBestTech).getDescription());
-			gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, GC.getTechInfo(eBestTech).getButton(), int(eBestTech), WIDGET_GENERAL);
-		}
 	}
-
-
-
 	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_NEVER_MIND"), NULL, GC.getNumTechInfos(), WIDGET_GENERAL);
-
 	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
 
-	return (true);
+	return true;
 }
 
 bool CvDLLButtonPopup::launchChooseBuildUpPopup(CvPopup* pPopup, CvPopupInfo &info)
@@ -2966,7 +2932,7 @@ bool CvDLLButtonPopup::launchSelectMergeUnitPopup(CvPopup* pPopup, CvPopupInfo &
 			{
 				if (pLoopUnit->getUnitType() == pUnit->getUnitType() && pLoopUnit->groupRank() == pUnit->groupRank() && pLoopUnit->qualityRank() == pUnit->qualityRank())
 				{
-					if (!pLoopUnit->isHurt() && !pLoopUnit->isDead() && !pLoopUnit->isFighting() && !pLoopUnit->isCargo() && !pLoopUnit->hasCargo() && !pLoopUnit->isDelayedDeath() && !pLoopUnit->isSpy() && !pLoopUnit->hasMoved() && (pLoopUnit->baseWorkRate() < 1) && (pLoopUnit->groupRank() < pLoopUnit->eraGroupMergeLimit()))
+					if (!pLoopUnit->isHurt() && !pLoopUnit->isDead() && !pLoopUnit->isFighting() && !pLoopUnit->isCargo() && !pLoopUnit->hasCargo() && !pLoopUnit->isSpy() && !pLoopUnit->hasMoved() && (pLoopUnit->baseWorkRate() < 1) && (pLoopUnit->groupRank() < pLoopUnit->eraGroupMergeLimit()))
 					{
 						if (!pLoopUnit->hasCannotMergeSplit())
 						{
@@ -3108,7 +3074,7 @@ bool CvDLLButtonPopup::launchSelectArrestUnitPopup(CvPopup* pPopup, CvPopupInfo 
 		{
 			if (GET_PLAYER(pLoopUnit->getOwner()).getArrestingUnit() != pLoopUnit->getID())
 			{
-				if (!pLoopUnit->isInvisible(GET_PLAYER(ePlayer).getTeam(), false) && !pLoopUnit->isDead() && !pLoopUnit->isFighting() && !pLoopUnit->isDelayedDeath() && !pLoopUnit->isSpy())
+				if (!pLoopUnit->isInvisible(GET_PLAYER(ePlayer).getTeam(), false) && !pLoopUnit->isDead() && !pLoopUnit->isFighting() && !pLoopUnit->isSpy())
 				{
 					CvWStringBuffer szBuffer;
 					GAMETEXT.setUnitHelp(szBuffer, pLoopUnit, true);
