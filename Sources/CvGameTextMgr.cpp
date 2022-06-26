@@ -8078,7 +8078,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 						}
 					}
 				}
-				szString.append(CvWString::format(L"\n\nWorkers H/N (%d , %d)", pPlotCity->AI_getWorkersHave(), pPlotCity->AI_getWorkersNeeded()));
+				szString.append(CvWString::format(L"\n\nWorkers H/N (%d , %d)", pPlotCity->getNumWorkers(), pPlotCity->AI_getWorkersNeeded()));
 				szString.append(CvWString::format(L"\n\nWorkboats Needed = %d", pPlotCity->AI_neededSeaWorkers()));
 
 				int iAreaSiteBestValue = 0;

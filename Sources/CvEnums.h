@@ -1546,6 +1546,11 @@ enum InvisibleTypes
 	NO_INVISIBLE = -1,
 };
 
+enum CategoryTypes
+{
+	NO_CATEGORY = -1,
+};
+
 enum VoteSourceTypes
 {
 	NO_VOTESOURCE = -1,

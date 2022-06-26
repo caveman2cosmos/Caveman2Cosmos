@@ -4493,7 +4493,7 @@ class MapPrint:
 		# feature dictionaries
 		# --------------------
 		self.__featureDict = {
-			efIce										: ["�", "Ice"	],
+			efIce										: ["", "Ice"	],
 			GC.getInfoTypeForString('FEATURE_FALLOUT')	: ["*", "Fallout"],
 			efJungle									: ["j", "Jungle"],
 			efForest									: ["f", "Forest"],

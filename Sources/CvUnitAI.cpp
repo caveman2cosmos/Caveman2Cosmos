@@ -700,15 +700,7 @@ void CvUnitAI::doUnitAIMove()
 //	Note death (or capture) of a unit
 void CvUnitAI::AI_killed()
 {
-	{
-		CvCity* workerAssignedCity = getWorkerAssignedCity();
-		if (workerAssignedCity)
-		{
-			OutputDebugString(CvString::format("Worker at (%d,%d) killed with mission for city %S\n", getX(), getY(), workerAssignedCity->getName().GetCString()).c_str());
-			workerAssignedCity->AI_changeWorkersHave(-1);
-		}
-	}
-	if (gUnitLogLevel >= 2)
+	if (gUnitLogLevel > 1)
 	{
 		//	Logging of death location and some mission info
 		CvPlot* pMissionPlot = getGroup()->AI_getMissionAIPlot();
@@ -2221,7 +2213,7 @@ void CvUnitAI::AI_workerMove()
 				return;
 			}
 
-			if (pCity->AI_getWorkersNeeded() > 0 && (plot()->isCity() || pCity->AI_getWorkersNeeded() < (1 + pCity->AI_getWorkersHave() * 2) / 3) && AI_improveCity(pCity))
+			if (pCity->AI_getWorkersNeeded() > 0 && (plot()->isCity() || pCity->AI_getWorkersNeeded() < (1 + pCity->getNumWorkers() * 2) / 3) && AI_improveCity(pCity))
 			{
 				return;
 			}
@@ -2245,7 +2237,7 @@ void CvUnitAI::AI_workerMove()
 	}
 
 	{
-		const bool bNextCity = pCity == NULL || pCity->AI_getWorkersNeeded() == 0 || pCity->AI_getWorkersHave() > pCity->AI_getWorkersNeeded() + 1;
+		const bool bNextCity = pCity == NULL || pCity->AI_getWorkersNeeded() == 0 || pCity->getNumWorkers() > pCity->AI_getWorkersNeeded() + 1;
 
 		if (bNextCity)
 		{
@@ -21141,7 +21133,7 @@ bool CvUnitAI::AI_improveLocalPlot(int iRange, const CvCity* pIgnoreCity)
 
 				if (iIndex != CITY_HOME_PLOT && bestBuildForCurrentCity != NO_BUILD
 				&& (currentImprovementOnPlot == NO_IMPROVEMENT || GC.getBuildInfo(bestBuildForCurrentCity).getImprovement() != NO_IMPROVEMENT)
-				&& (NULL == pIgnoreCity || pCity->AI_getWorkersNeeded() > 0 && pCity->AI_getWorkersHave() < 1 + pCity->AI_getWorkersNeeded() * 2 / 3)
+				&& (NULL == pIgnoreCity || pCity->AI_getWorkersNeeded() > 0 && pCity->getNumWorkers() < 1 + pCity->AI_getWorkersNeeded() * 2 / 3)
 				&& canBuild(pLoopPlot, bestBuildForCurrentCity)
 				&& generatePath(pLoopPlot, isHuman() ? 0 : MOVE_IGNORE_DANGER, true, &iPathTurns))
 				{
@@ -21249,7 +21241,7 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 		if (pLoopCity != pCity)
 		{
 			int iWorkersNeeded = pLoopCity->AI_getWorkersNeeded();
-			int iWorkersHave = pLoopCity->AI_getWorkersHave();
+			int iWorkersHave = pLoopCity->getNumWorkers();
 
 			int iValue = 100 * std::max(0, iWorkersNeeded - iWorkersHave) + 10 * iWorkersNeeded;
 
@@ -21289,7 +21281,7 @@ bool CvUnitAI::AI_nextCityToImprove(CvCity* pCity)
 									eBestBuild = eBuild;
 									pBestPlot = pPlot;
 									//CvPlot* pEndTurnPlot = getPathEndTurnPlot();
-									FAssert(!atPlot(pBestPlot) || NULL == pCity || pCity->AI_getWorkersNeeded() == 0 || pCity->AI_getWorkersHave() > pCity->AI_getWorkersNeeded() + 1);
+									FAssert(!atPlot(pBestPlot) || NULL == pCity || pCity->AI_getWorkersNeeded() == 0 || pCity->getNumWorkers() > pCity->AI_getWorkersNeeded() + 1);
 								}
 							}
 						}
@@ -22291,7 +22283,7 @@ BuildTypes CvUnitAI::AI_betterPlotBuild(const CvPlot* pPlot, BuildTypes eBuild) 
 
 	if ((pPlot->getNonObsoleteBonusType(getTeam()) == NO_BONUS) && (pPlot->getWorkingCity() != NULL))
 	{
-		iWorkersNeeded = std::max(1, std::min(iWorkersNeeded, pPlot->getWorkingCity()->AI_getWorkersHave()));
+		iWorkersNeeded = std::max(1, std::min(iWorkersNeeded, pPlot->getWorkingCity()->getNumWorkers()));
 	}
 
 	const FeatureTypes eFeature = pPlot->getFeatureType();
@@ -29870,20 +29862,22 @@ bool CvUnitAI::AI_selectStatus(bool bStack, CvUnit* pUnit)
 
 	const PromotionLineTypes promotionLineStandout = GC.getPROMOTIONLINE_STANDOUT();
 
-	for (int iI = 0; iI < GC.getGame().getNumStatusPromotions(); iI++)
+	const int iNumStatusPromotions = GC.getNumStatusPromotions();
+
+	for (int iI = 0; iI < iNumStatusPromotions; iI++)
 	{
 		int iValue = 0;
-		const int iStatus = GC.getGame().getStatusPromotion(iI);
+		const int iStatus = GC.getStatusPromotion(iI);
 		const PromotionTypes eStatus = (PromotionTypes)iStatus;
 		const CvPromotionInfo& kPromotion = GC.getPromotionInfo(eStatus);
 		PromotionTypes eRemoveStatus = NO_PROMOTION;
 
-		for (int iJ = 0; iJ < GC.getGame().getNumStatusPromotions(); iJ++)
+		for (int iJ = 0; iJ < iNumStatusPromotions; iJ++)
 		{
-			if (kPromotion.getPromotionLine() == GC.getPromotionInfo((PromotionTypes)GC.getGame().getStatusPromotion(iJ)).getPromotionLine()
-			&& GC.getPromotionInfo((PromotionTypes)GC.getGame().getStatusPromotion(iJ)).getLinePriority() == 1)
+			if (kPromotion.getPromotionLine() == GC.getPromotionInfo((PromotionTypes)GC.getStatusPromotion(iJ)).getPromotionLine()
+			&& GC.getPromotionInfo((PromotionTypes)GC.getStatusPromotion(iJ)).getLinePriority() == 1)
 			{
-				eRemoveStatus = (PromotionTypes)GC.getGame().getStatusPromotion(iJ);
+				eRemoveStatus = (PromotionTypes)GC.getStatusPromotion(iJ);
 				break;
 			}
 		}

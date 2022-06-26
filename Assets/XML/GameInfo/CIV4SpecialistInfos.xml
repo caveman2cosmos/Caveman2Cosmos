@@ -7,6 +7,10 @@
 			<Civilopedia>TXT_KEY_CONCEPT_SPECIALISTS_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/Citizen.dds</Texture>
 			<bVisible>1</bVisible>
+			<Categories>
+				<Category>CATEGORY_ASSIGNABLE_SPECIALISTS</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_CIVILIAN</Category>
+			</Categories>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -27,6 +31,10 @@
 			<Texture>Art/Interface/MainScreen/CityScreen/slave.dds</Texture>
 			<bSlave>1</bSlave>
 			<bVisible>1</bVisible>
+			<Categories>
+				<Category>CATEGORY_ASSIGNABLE_SPECIALISTS</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_CAPTIVE</Category>
+			</Categories>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>1</iYield>
@@ -65,6 +73,10 @@
 			<Civilopedia>TXT_KEY_CONCEPT_SPECIALISTS_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/Priest.dds</Texture>
 			<bVisible>1</bVisible>
+			<Categories>
+				<Category>CATEGORY_ASSIGNABLE_SPECIALISTS</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_RELIGIOUS</Category>
+			</Categories>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Yields>
@@ -91,6 +103,10 @@
 			<Civilopedia>TXT_KEY_CONCEPT_SPECIALISTS_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/Artist.dds</Texture>
 			<bVisible>1</bVisible>
+			<Categories>
+				<Category>CATEGORY_ASSIGNABLE_SPECIALISTS</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_CULTURAL</Category>
+			</Categories>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Commerces>
@@ -112,6 +128,10 @@
 			<Civilopedia>TXT_KEY_CONCEPT_SPECIALISTS_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/scientist.dds</Texture>
 			<bVisible>1</bVisible>
+			<Categories>
+				<Category>CATEGORY_ASSIGNABLE_SPECIALISTS</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_RESEARCH</Category>
+			</Categories>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Commerces>
@@ -127,6 +147,10 @@
 			<Civilopedia>TXT_KEY_CONCEPT_SPECIALISTS_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/merchant.dds</Texture>
 			<bVisible>1</bVisible>
+			<Categories>
+				<Category>CATEGORY_ASSIGNABLE_SPECIALISTS</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_ECONOMIC</Category>
+			</Categories>
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Commerces>
@@ -148,6 +172,10 @@
 			<Civilopedia>TXT_KEY_CONCEPT_SPECIALISTS_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/engineer.dds</Texture>
 			<bVisible>1</bVisible>
+			<Categories>
+				<Category>CATEGORY_ASSIGNABLE_SPECIALISTS</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_ARCHITECTURAL</Category>
+			</Categories>
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Yields>
@@ -173,6 +201,10 @@
 			<Civilopedia>TXT_KEY_CONCEPT_SPECIALISTS_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/noble.dds</Texture>
 			<bVisible>1</bVisible>
+			<Categories>
+				<Category>CATEGORY_ASSIGNABLE_SPECIALISTS</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_POLITICAL</Category>
+			</Categories>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Commerces>
 				<iCommerce>2</iCommerce>
@@ -193,6 +225,10 @@
 			<Civilopedia>TXT_KEY_CONCEPT_SPECIALIST_DOCTOR_PEDIA</Civilopedia>
 			<Texture>Art/Interface/Buttons/Specialists/doctor.dds</Texture>
 			<bVisible>1</bVisible>
+			<Categories>
+				<Category>CATEGORY_ASSIGNABLE_SPECIALISTS</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_MEDICAL</Category>
+			</Categories>
 			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Commerces>
@@ -223,6 +259,10 @@
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_SPY_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/spy.dds</Texture>
 			<bVisible>1</bVisible>
+			<Categories>
+				<Category>CATEGORY_ASSIGNABLE_SPECIALISTS</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_ESPIONAGE</Category>
+			</Categories>
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Commerces>
@@ -245,6 +285,10 @@
 			<Civilopedia>TXT_KEY_CONCEPT_SPECIALISTS_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/Investigator.dds</Texture>
 			<bVisible>1</bVisible>
+			<Categories>
+				<Category>CATEGORY_ASSIGNABLE_SPECIALISTS</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_LEGAL</Category>
+			</Categories>
 			<GreatPeopleUnitType>UNIT_GREAT_DETECTIVE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Commerces>
@@ -277,6 +321,10 @@
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_STATESMAN_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/lawyer.dds</Texture>
 			<bVisible>1</bVisible>
+			<Categories>
+				<Category>CATEGORY_ASSIGNABLE_SPECIALISTS</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_POLITICAL</Category>
+			</Categories>
 			<GreatPeopleUnitType>UNIT_GREAT_STATESMAN</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
 			<Yields>
@@ -317,6 +365,10 @@
 			<Civilopedia>TXT_KEY_CONCEPT_SPECIALISTS_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/celebrity.dds</Texture>
 			<bVisible>1</bVisible>
+			<Categories>
+				<Category>CATEGORY_ASSIGNABLE_SPECIALISTS</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_CULTURAL</Category>
+			</Categories>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -341,6 +393,9 @@
 			<Description>TXT_KEY_UNIT_GREAT_STATESMAN</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_STATESMAN_PEDIA</Civilopedia>
 			<Texture>Art/Interface/mainscreen/cityscreen/great_statesman.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_POLITICAL</Category>
+			</Categories>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -369,6 +424,9 @@
 			<Description>TXT_KEY_SPECIALIST_GREAT_PROPHET</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/Great_Priest.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_RELIGIOUS</Category>
+			</Categories>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
@@ -392,6 +450,9 @@
 			<Description>TXT_KEY_SPECIALIST_GREAT_ARTIST</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/Great_Artist.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_CULTURAL</Category>
+			</Categories>
 			<Commerces>
 				<iCommerce>3</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -410,6 +471,9 @@
 			<Description>TXT_KEY_SPECIALIST_GREAT_SCIENTIST</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/Great_Scientist.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_RESEARCH</Category>
+			</Categories>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -441,6 +505,9 @@
 			<Description>TXT_KEY_SPECIALIST_GREAT_MERCHANT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/Great_Merchant.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_ECONOMIC</Category>
+			</Categories>
 			<Yields>
 				<iYield>1</iYield>
 				<iYield>0</iYield>
@@ -464,6 +531,9 @@
 			<Description>TXT_KEY_SPECIALIST_GREAT_ENGINEER</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/Great_Engineer.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_ARCHITECTURAL</Category>
+			</Categories>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
@@ -491,6 +561,9 @@
 			<Description>TXT_KEY_SPECIALIST_GREAT_MILITARY_INSTRUCTOR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
 			<Texture>,Art/Interface/MainScreen/CityScreen/Great_Engineer.dds,Art/Interface/Buttons/Warlords_Atlas_2.dds,2,6</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_MILITARY</Category>
+			</Categories>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -514,6 +587,9 @@
 			<Description>TXT_KEY_SPECIALIST_GREAT_ADMIRAL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/specialist_great_admiral.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_MILITARY</Category>
+			</Categories>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -537,6 +613,9 @@
 			<Description>TXT_KEY_SPECIALIST_GREAT_HUNTER</Description>
 			<Civilopedia>TXT_KEY_SPECIALIST_GREAT_HUNTER_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/great_hunter.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_MILITARY</Category>
+			</Categories>
 			<Yields>
 				<iYield>5</iYield>
 				<iYield>0</iYield>
@@ -555,6 +634,9 @@
 			<Description>TXT_KEY_SPECIALIST_GREAT_SPY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_SPY_PEDIA</Civilopedia>
 			<Texture>,Art/Interface/Buttons/TechTree/Corporation.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,6,14</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_ESPIONAGE</Category>
+			</Categories>
 			<Commerces>
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
@@ -579,6 +661,9 @@
 			<Civilopedia>TXT_KEY_CONCEPT_SPECIALISTS_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/android.dds</Texture>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_CIVILIAN</Category>
+			</Categories>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>10</iYield>
@@ -591,6 +676,9 @@
 			<Description>TXT_KEY_SPECIALIST_MILITARY_INSTRUCTOR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
 			<Texture>Art/Interface/Buttons/Specialists/Warlord_Instructor.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_MILITARY</Category>
+			</Categories>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -614,6 +702,9 @@
 			<Description>TXT_KEY_SPECIALIST_SETTLED_SLAVE</Description>
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_CAPTIVE</Category>
+			</Categories>
 			<bSlave>1</bSlave>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -652,6 +743,9 @@
 			<Description>TXT_KEY_SPECIALIST_SETTLED_CITIZEN</Description>
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_CITIZEN_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/Citizen.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_CIVILIAN</Category>
+			</Categories>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<Yields>
 				<iYield>-2</iYield>
@@ -673,6 +767,9 @@
 			<Description>TXT_KEY_SPECIALIST_SETTLED_GLADIATOR</Description>
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_GLADIATOR_PEDIA</Civilopedia>
 			<Texture>Art/Interface/mainscreen/cityscreen/specialist_gladiator.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_MILITARY</Category>
+			</Categories>
 			<Yields>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -696,6 +793,9 @@
 			<Description>TXT_KEY_SPECIALIST_GREAT_DOCTOR</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_DOCTOR_PEDIA</Civilopedia>
 			<Texture>Art/Interface/buttons/specialists/great_doctor.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_MEDICAL</Category>
+			</Categories>
 			<Commerces>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -723,6 +823,9 @@
 			<Description>TXT_KEY_SPECIALIST_GREAT_SLEUTH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_DETECTIVE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/Detective.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_LEGAL</Category>
+			</Categories>
 			<Commerces>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -752,6 +855,9 @@
 			<Description>TXT_KEY_SPECIALIST_SETTLED_SLAVE_FOOD</Description>
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_food.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_CAPTIVE</Category>
+			</Categories>
 			<bSlave>1</bSlave>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -790,6 +896,10 @@
 			<Description>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PRODUCTION</Description>
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_production.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_CAPTIVE</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_ARCHITECTURAL</Category>
+			</Categories>
 			<bSlave>1</bSlave>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -828,6 +938,10 @@
 			<Description>TXT_KEY_SPECIALIST_SETTLED_SLAVE_COMMERCE</Description>
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_commerce.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_CAPTIVE</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_ECONOMIC</Category>
+			</Categories>
 			<bSlave>1</bSlave>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -866,6 +980,10 @@
 			<Description>TXT_KEY_SPECIALIST_SETTLED_SLAVE_SANITATION</Description>
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_sanitation.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_CAPTIVE</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_MEDICAL</Category>
+			</Categories>
 			<bSlave>1</bSlave>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -917,6 +1035,10 @@
 			<Description>TXT_KEY_SPECIALIST_SETTLED_SLAVE_HEALTH</Description>
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_health.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_CAPTIVE</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_RESEARCH</Category>
+			</Categories>
 			<bSlave>1</bSlave>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -955,6 +1077,10 @@
 			<Description>TXT_KEY_SPECIALIST_SETTLED_SLAVE_ENTERTAINMENT</Description>
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_entertainment.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_CAPTIVE</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_CULTURAL</Category>
+			</Categories>
 			<bSlave>1</bSlave>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -993,6 +1119,10 @@
 			<Description>TXT_KEY_SPECIALIST_SETTLED_SLAVE_TUTOR</Description>
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_tutor.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_CAPTIVE</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_RESEARCH</Category>
+			</Categories>
 			<bSlave>1</bSlave>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -1038,6 +1168,10 @@
 			<Description>TXT_KEY_SPECIALIST_SETTLED_SLAVE_MILITARY</Description>
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_military.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_CAPTIVE</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_MILITARY</Category>
+			</Categories>
 			<bSlave>1</bSlave>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
@@ -1076,6 +1210,10 @@
 			<Description>TXT_KEY_SPECIALIST_SETTLED_SLAVE_CRIME_PREVENTION</Description>
 			<Civilopedia>TXT_KEY_SPECIALIST_SETTLED_SLAVE_PEDIA</Civilopedia>
 			<Texture>Art/Interface/MainScreen/CityScreen/slave_crime_prevention.dds</Texture>
+			<Categories>
+				<Category>CATEGORY_SPECIALIST_GROUP_CAPTIVE</Category>
+				<Category>CATEGORY_SPECIALIST_GROUP_LEGAL</Category>
+			</Categories>
 			<bSlave>1</bSlave>
 			<iGreatPeopleRateChange>-1</iGreatPeopleRateChange>
 			<Yields>
