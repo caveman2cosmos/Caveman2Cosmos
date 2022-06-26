@@ -1039,7 +1039,7 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 		if (eNewMissionAI == MISSIONAI_BUILD)
 		{
 			CvCity* newCity = newPlot->getWorkingCity();
-			if (newCity)
+			if (newCity && newCity->getOwner() == getOwner())
 			{
 				foreach_(CvUnit* unitX, units())
 				{
