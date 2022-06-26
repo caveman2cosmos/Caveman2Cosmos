@@ -3,11 +3,9 @@
 #ifndef CvInfoUtil_h__
 #define CvInfoUtil_h__
 
-#include "CvInfoClassTraits.h"
 #include "CvGameCoreDLL.h"
-#include "CvBuildingInfo.h"
 #include "CvGlobals.h"
-#include "CvPython.h"
+#include "CvInfoClassTraits.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 #include "IDValueMap.h"
