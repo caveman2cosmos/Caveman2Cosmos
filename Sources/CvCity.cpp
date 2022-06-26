@@ -33,6 +33,7 @@
 #pragma warning( disable : 4355 )
 
 // Helper class
+// ToDo - Move it to its own cpp/h file.
 class CityOutputHistory
 {
 public:
@@ -81,16 +82,6 @@ public:
 			recentOutputTurn[0] = iTurn;
 		}
 		recentOutputHistory[0].push_back(std::make_pair(eOrder, iType));
-
-		logBBAI("    City added (%d, %d) on turn %d to history", (int)eOrder, iType, iTurn);
-
-		for (uint16_t iI = 0; iI < iHistorySize; iI++)
-		{
-			for (uint16_t iJ = 0; iJ < recentOutputHistory[iI].size(); iJ++)
-			{
-				logBBAI("    City History: (%d, %d) on turn %d", recentOutputHistory[iI][iJ].first, recentOutputHistory[iI][iJ].second, recentOutputTurn[iI]);
-			}
-		}
 	}
 	void setRecentOutputTurn(const int iTurn, const int iElement) const
 	{
