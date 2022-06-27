@@ -3441,6 +3441,7 @@ class CvMainInterface:
 
 		if self.iCityTab == CITYTAB_ADMIN and self.iCityTab != iTab:
 			screen.deleteWidget("CT|AdminLastOutput")
+			screen.deleteWidget("PreviousOutput")
 
 		self.iCityTab = iTab
 		xRes = self.xRes
@@ -5252,14 +5253,14 @@ class CvMainInterface:
 				if self.InCity and not bCtrl:
 					self.bBuildWorkQueue = True
 
-			elif iData in (13, 16, 31): # A D S
+			elif iData in (13, 16, 29, 31): # A D Q S
 				if self.InCity:
 					if bCtrl and iData == 16 and self.InCity.iPlayer == self.iPlayer:
 						GAME.selectedCitiesGameNetMessage(GameMessageTypes.GAMEMESSAGE_DO_TASK, TaskTypes.TASK_CONSCRIPT, -1, -1, False, bAlt, bShift, bCtrl)
 						return 1
 
 					elif not (bAlt or bCtrl or bShift):
-						iTab = {13:CITYTAB_UNIT, 16:CITYTAB_WONDER, 31:CITYTAB_BUILDING}[iData]
+						iTab = {13:CITYTAB_UNIT, 16:CITYTAB_WONDER, 29:CITYTAB_ADMIN, 31:CITYTAB_BUILDING}[iData]
 
 						if iTab == self.iCityTab:
 							self.exitCityTab(screen)
@@ -5443,13 +5444,16 @@ class CvMainInterface:
 					x = self.xPopProgBar
 					y = self.yBotBar + 12
 					if not ID:
-						szTxt = TRNSLTR.getText("INTERFACE_UNIT_TAB", ())
-						szKey = "A"
+						szTxt = TRNSLTR.getText("INTERFACE_TAB_ADMIN", ())
+						szKey = "Q"
 					elif ID == 1:
-						szTxt = TRNSLTR.getText("INTERFACE_BUILDING_TAB", ())
+						szTxt = TRNSLTR.getText("INTERFACE_TAB_UNIT", ())
+						szKey = "A"
+					elif ID == 2:
+						szTxt = TRNSLTR.getText("INTERFACE_TAB_BUILDING", ())
 						szKey = "S"
 					else:
-						szTxt = TRNSLTR.getText("INTERFACE_WONDER_TAB", ())
+						szTxt = TRNSLTR.getText("INTERFACE_TAB_WONDER", ())
 						szKey = "D"
 
 					szTxt += " <color=144,255,72>&#60" + szKey + "&#62"
