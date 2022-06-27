@@ -388,6 +388,9 @@ void cvInternalGlobals::init()
 
 	m_VarSystem = new FVariableSystem;
 	m_asyncRand = new CvRandom;
+	// Toffer - Strange that there's three instances of CvInitCore...
+	//	Maybe when a save is loaded from within a game the new one has to be built before the old one is destroyed.
+	//	I guess the exe does some juggling magic with the three, we only ever use m_initCore internaly in the dll.
 	m_initCore = new CvInitCore;
 	m_loadedInitCore = new CvInitCore;
 	m_iniInitCore = new CvInitCore;

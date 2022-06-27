@@ -572,9 +572,9 @@ bool CyGame::isFinalInitialized() const
 	return m_pGame.isFinalInitialized();
 }
 
-void CyGame::onFinalInitialized()
+void CyGame::onFinalInitialized(const bool bNewGame)
 {
-	m_pGame.onFinalInitialized();
+	m_pGame.onFinalInitialized(bNewGame);
 }
 
 PlayerTypes CyGame::getActivePlayer() const
@@ -1102,7 +1102,11 @@ bool CyGame::regenerateMap()
 
 void CyGame::saveGame(std::string fileName) const
 {
-	gDLL->getEngineIFace()->SaveGame((CvString &)fileName, SAVEGAME_NORMAL);
+	if (fileName.empty())
+	{
+		gDLL->getEngineIFace()->AutoSave(true);
+	}
+	else gDLL->getEngineIFace()->SaveGame((CvString &)fileName, SAVEGAME_NORMAL);
 }
 
 std::string CyGame::getDLLPath() const
