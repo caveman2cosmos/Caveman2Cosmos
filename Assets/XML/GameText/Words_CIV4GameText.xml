@@ -131,6 +131,10 @@
 		<Russian>Ó÷àñòîê</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_WORD_RECOMMENDATIONS</Tag>
+		<English>Recommendations</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_WORD_SPOT</Tag>
 		<English>Spot</English>
 		<German>Sicht</German>

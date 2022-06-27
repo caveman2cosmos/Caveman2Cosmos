@@ -317,6 +317,8 @@ void CyInfoPythonInterface3()
 		.def("getColor", &CvColorInfo::getColor, python::return_value_policy<python::reference_existing_object>())
 	;
 
+	python::class_<CvAdvisorInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvAdvisorInfo", python::no_init);
+
 
 	python::class_<CvPlayerColorInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvPlayerColorInfo", python::no_init)
 
