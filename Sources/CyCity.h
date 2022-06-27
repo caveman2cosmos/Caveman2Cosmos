@@ -453,6 +453,11 @@ public:
 	int AI_bestUnit() const;
 	int AI_bestUnitAI(UnitAITypes eUnitAITypes) const;
 
+	int getCityOutputHistorySize() const;
+	int getRecentOutputTurn(int i) const;
+	int getCityOutputHistoryNumEntries(const uint16_t i) const;
+	int getCityOutputHistoryEntry(const uint16_t i, const uint16_t iEntry, const bool bFirst) const;
+
 private:
 	CvCity* m_pCity;
 };

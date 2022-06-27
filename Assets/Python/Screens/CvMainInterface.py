@@ -3473,8 +3473,7 @@ class CvMainInterface:
 
 		y = 166
 		h = yMax - y
-		Pnl = "CityTabWindow"
-		screen.addPanel(Pnl, "", "", True, True, x, y, w, h, PanelStyles.PANEL_STYLE_MAIN)
+		screen.addPanel("CityTabWindow", "", "", True, True, x, y, w, h, PanelStyles.PANEL_STYLE_MAIN)
 		h -= 28
 		self.updateCityTab(screen, iTab, x, y, w, h)
 		screen.setText("CT|Options0", "", "<img=Art/Interface/Buttons/general/optionIcon1.dds>", 1<<0, xRes - xRes/4 - 42, 138, 0, FontTypes.GAME_FONT, eWidGen, 0, 0)
@@ -3591,94 +3590,23 @@ class CvMainInterface:
 
 	def updateCityTab(self, screen, iTab, x=-1, y0=166, w=-1, h=-1):
 
-		eWidGen = WidgetTypes.WIDGET_GENERAL
-		InCity = self.InCity
-		city = InCity.CyCity
-		iSize = CityOpt.getBuildIconSize()
-
 		if -1 in (x, w, h):
 			if self.bCityScreen:
-				xRes = self.xRes
-				a4thX = xRes/4
-				halfX = xRes/2
-				x = a4thX
-				w = halfX
+				x = self.xRes/4
+				w = self.xRes/2
 			else:
 				x = self.xMidL
 				w = self.xMidR - x
 			h = self.yBotBar - y0 - 10
 
-		y = 0
-
 		if iTab == CITYTAB_ADMIN:
-			team = InCity.CyTeam
-			eFontGame = FontTypes.GAME_FONT
-			ePanelBlack	= PanelStyles.PANEL_STYLE_MAIN_BLACK25
-			y2 = y0 + 30
-			h2 = h - 30
-			w2 = w/2
-			x2 = x + w2
-			w3 = w2 - 20
-
-			PnlLeft = "CT|AdminLastOutput"
-			PnlRight = "CityTabScrPnl"
-			ROW = "CT|AdminEntry"
-
-			screen.setLabelAt("", "CityTabWindow", "<font=3b>" + TRNSLTR.getText("TXT_KEY_PREVIOUS_OUTPUT", ()), 1<<0, 12, 8, 0, eFontGame, eWidGen, 1, 2)
-			screen.setLabelAt("", "CityTabWindow", "<font=3b>" + TRNSLTR.getText("TXT_WORD_RECOMMENDATIONS", ()), 1<<0, w/2 + 8, 8, 0, eFontGame, eWidGen, 1, 2)
-
-			screen.addScrollPanel(PnlLeft, "", x, y2, w2, h2, PanelStyles.PANEL_STYLE_MAIN)
-			screen.setStyle(PnlLeft, "ScrollPanel_Alt_Style")
-			screen.addScrollPanel(PnlRight, "", x2, y2, w2, h2, PanelStyles.PANEL_STYLE_MAIN)
-			screen.setStyle(PnlRight, "ScrollPanel_Alt_Style")
-
-			screen.attachPanelAt(PnlLeft, "PreviousOutput", "", "", True, False, ePanelBlack, 4, y - 4, w3, h2, eWidGen, 1, 1)
-
-			n = 0
-			iBestUnit = city.AI_bestUnit()
-			if iBestUnit > -1:
-				szRow = str(n)
-				screen.attachPanelAt(PnlRight, ROW + szRow, "", "", True, False, ePanelBlack, 0, y - 4, w3, iSize + 2, eWidGen, 1, 1)
-				unitInfo = GC.getUnitInfo(iBestUnit)
-				szUnitName = unitInfo.getDescription()
-				iAdvisor = unitInfo.getAdvisorType()
-				if iAdvisor > -1:
-					szTxt = "<font=3>" + TRNSLTR.getText("TXT_KEY_POPUP_RECOMMENDED", (szUnitName, city.getUnitProductionTurnsLeft(iBestUnit, 0), GC.getAdvisorInfo(iAdvisor).getDescription()))
-				else:
-					szTxt = "<font=3>" + TRNSLTR.getText("TXT_KEY_POPUP_RECOMMENDED", (szUnitName, city.getUnitProductionTurnsLeft(iBestUnit, 0), GC.getUnitCombatInfo(unitInfo.getUnitCombatType()).getDescription()))
-
-				PF = "WID|UNIT|CityWork%d"
-				screen.setImageButtonAt((PF % iBestUnit) + "|img" + szRow, PnlRight, unitInfo.getButton(), -2, y, iSize, iSize, eWidGen, 1, 2)
-				screen.setTextAt((PF % iBestUnit) + "|" + szRow, PnlRight, szTxt, 1<<0, iSize + 4, y + iSize/3, 0, eFontGame, eWidGen, 1, 2)
-				n += 1
-				y += iSize + 4
-
-			iBestUnit = city.AI_bestUnitAI(UnitAITypes.UNITAI_WORKER)
-			if iBestUnit > -1 and not self.isUnitMaxedOut(iBestUnit, InCity):
-				szRow = str(n)
-				screen.attachPanelAt(PnlRight, ROW + szRow, "", "", True, False, ePanelBlack, 0, y - 4, w3, iSize + 2, eWidGen, 1, 1)
-				unitInfo = GC.getUnitInfo(iBestUnit)
-				szTxt = "<font=3>" + TRNSLTR.getText("TXT_KEY_POPUP_RECOMMENDED", (unitInfo.getDescription(), city.getUnitProductionTurnsLeft(iBestUnit, 0), "TXT_KEY_UNIT_WORKER"))
-
-				PF = "WID|UNIT|CityWork%d"
-				screen.setImageButtonAt((PF % iBestUnit) + "|img" + szRow, PnlRight, unitInfo.getButton(), -2, y, iSize, iSize, eWidGen, 1, 2)
-				screen.setTextAt((PF % iBestUnit) + "|" + szRow, PnlRight, szTxt, 1<<0, iSize + 4, y + iSize/3, 0, eFontGame, eWidGen, 1, 2)
-				n += 1
-				y += iSize + 4
-
-			iBestUnit = city.AI_bestUnitAI(UnitAITypes.UNITAI_SETTLE)
-			if iBestUnit > -1 and not self.isUnitMaxedOut(iBestUnit, InCity):
-				szRow = str(n)
-				screen.attachPanelAt(PnlRight, ROW + szRow, "", "", True, False, ePanelBlack, 0, y - 4, w3, iSize + 2, eWidGen, 1, 1)
-				unitInfo = GC.getUnitInfo(iBestUnit)
-				szTxt = "<font=3>" + TRNSLTR.getText("TXT_KEY_POPUP_RECOMMENDED", (unitInfo.getDescription(), city.getUnitProductionTurnsLeft(iBestUnit, 0), "TXT_KEY_UNIT_SETTLER"))
-
-				PF = "WID|UNIT|CityWork%d"
-				screen.setImageButtonAt((PF % iBestUnit) + "|img" + szRow, PnlRight, unitInfo.getButton(), -2, y, iSize, iSize, eWidGen, 1, 2)
-				screen.setTextAt((PF % iBestUnit) + "|" + szRow, PnlRight, szTxt, 1<<0, iSize + 4, y + iSize/3, 0, eFontGame, eWidGen, 1, 2)
-				n += 1
-				y += iSize + 4
+			self.updateCityAdmin(screen, x, y0, w, h)
 			return
+
+		eWidGen = WidgetTypes.WIDGET_GENERAL
+		InCity = self.InCity
+		city = InCity.CyCity
+		iSize = CityOpt.getBuildIconSize()
 
 		Pnl = "CityTabScrPnl"
 		screen.addScrollPanel(Pnl, "", x, y0, w, h, PanelStyles.PANEL_STYLE_MAIN)
@@ -3693,6 +3621,7 @@ class CvMainInterface:
 		dx = iSize + 4
 		iBtnPerRow = (w - 16) / dx
 		xStart = x = (w - 16) % (dx * iBtnPerRow) / 2
+		y = 0
 
 		if iTab == CITYTAB_UNIT:
 			city.setUnitListInvalid()
@@ -3872,6 +3801,131 @@ class CvMainInterface:
 				x += dx
 				iCount += 1
 
+	def updateCityAdmin(self, screen, x, y0, w, h):
+
+		uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1b, uFont1 = self.aFontList
+		eWidGen = WidgetTypes.WIDGET_GENERAL
+		eFontGame = FontTypes.GAME_FONT
+		ePanelBlack	= PanelStyles.PANEL_STYLE_MAIN_BLACK25
+		ePnlStyleBlue50 = PanelStyles.PANEL_STYLE_BLUE50
+
+		InCity = self.InCity
+		city = InCity.CyCity
+		iSize = CityOpt.getBuildIconSize()
+
+		if self.iResID == 2:
+			dy = 24
+		elif self.iResID == 1:
+			dy = 22
+		else:
+			dy = 20
+
+		x2 = x + 8
+		y2 = y0 + 30
+		h2 = h - 40
+		w2 = w/2 - 12
+
+		w3 = w2 - 12
+
+		PnlLeft = "CT|AdminLastOutput"
+		PnlRight = "CityTabScrPnl"
+		ROW = "CT|AdminEntry"
+
+		screen.setLabelAt("", "CityTabWindow", uFont3b + TRNSLTR.getText("TXT_KEY_PREVIOUS_OUTPUT", ()), 1<<0, 12, 8, 0, eFontGame, eWidGen, 1, 2)
+		screen.setLabelAt("", "CityTabWindow", uFont3b + TRNSLTR.getText("TXT_WORD_RECOMMENDATIONS", ()), 1<<0, w/2 + 8, 8, 0, eFontGame, eWidGen, 1, 2)
+		screen.addPanel("PreviousOutput", "", "", True, True, x + 12, y2, w3 + 4, h2 + 24, ePanelBlack)
+
+		screen.addScrollPanel(PnlLeft, "", x2, y2, w2, h2, PanelStyles.PANEL_STYLE_MAIN)
+		screen.setStyle(PnlLeft, "ScrollPanel_Alt_Style")
+		screen.addScrollPanel(PnlRight, "", x2 + w2, y2, w2 + 6, h2, PanelStyles.PANEL_STYLE_MAIN)
+		screen.setStyle(PnlRight, "ScrollPanel_Alt_Style")
+
+		y = 5
+		n = 0
+		for iHistory in xrange(city.getCityOutputHistorySize()):
+			iTurn = city.getRecentOutputTurn(iHistory)
+			if iTurn < 1: break
+			iNumEntries = city.getCityOutputHistoryNumEntries(iHistory)
+
+			Pnl = ROW + str(n)
+			screen.attachPanelAt(PnlLeft, Pnl, "", "", True, False, ePnlStyleBlue50, 2, y - 8, w3 - 8, 10 + iNumEntries * dy + dy, eWidGen, 1, 2)
+			screen.setLabelAt("", Pnl, uFont2b + TRNSLTR.getText("TXT_KEY_TIME_TURN", (iTurn,)), 1<<0, 4, 2, 0, eFontGame, eWidGen, 1, 2)
+			y1 = dy
+			for iEntry in xrange(iNumEntries):
+
+				iOrder = city.getCityOutputHistoryEntry(iHistory, iEntry, True)
+				iType = city.getCityOutputHistoryEntry(iHistory, iEntry, False)
+
+				if iOrder == OrderTypes.ORDER_TRAIN:
+
+					info = GC.getUnitInfo(iType)
+					TXT = "WID|UNIT|OUTPUTLOG%d|%d" %(iType, n)
+
+				elif iOrder == OrderTypes.ORDER_CONSTRUCT:
+
+					info = GC.getBuildingInfo(iType)
+					TXT = "WID|BUILDING|OUTPUTLOG%d|%d" %(iType, n)
+
+				elif iOrder == OrderTypes.ORDER_CREATE:
+
+					info = GC.getProjectInfo(iType)
+					TXT = "WID|PROJECT|OUTPUTLOG%d|%d" %(iType, n)
+
+				screen.setTextAt(TXT, Pnl, "%s<img=%s size=%d> %s" %(uFont2, info.getButton(), dy-4, info.getDescription()), 1<<0, 8, y1, 0, eFontGame, eWidGen, 1, 2)
+
+				n += 1
+				y1 += dy
+			y += y1 + 10
+		y = 0
+
+		iBestUnit = city.AI_bestUnit()
+		if iBestUnit > -1:
+			szRow = str(n)
+			screen.attachPanelAt(PnlRight, ROW + szRow, "", "", True, False, ePanelBlack, -2, y - 4, w3, iSize + 3, eWidGen, 1, 2)
+			unitInfo = GC.getUnitInfo(iBestUnit)
+			szUnitName = unitInfo.getDescription()
+			iAdvisor = unitInfo.getAdvisorType()
+			if iAdvisor > -1:
+				szTxt = uFont3 + TRNSLTR.getText("TXT_KEY_POPUP_RECOMMENDED", (szUnitName, city.getUnitProductionTurnsLeft(iBestUnit, 0), GC.getAdvisorInfo(iAdvisor).getDescription()))
+			else:
+				szTxt = uFont3 + TRNSLTR.getText("TXT_KEY_POPUP_RECOMMENDED", (szUnitName, city.getUnitProductionTurnsLeft(iBestUnit, 0), GC.getUnitCombatInfo(unitInfo.getUnitCombatType()).getDescription()))
+
+			PF = "WID|UNIT|CityWork%d"
+			screen.addDDSGFCAt("", ROW + szRow, unitInfo.getButton(), -1, -1, iSize, iSize, eWidGen, 1, 2, False)
+			screen.setImageButtonAt((PF % iBestUnit) + "|img" + szRow, ROW + szRow, "", 0, 4, w3, iSize + 3, eWidGen, 1, 2)
+			screen.setTextAt((PF % iBestUnit) + "|" + szRow, ROW + szRow, szTxt, 1<<0, iSize + 4, iSize/2 - dy/2 - 2, 0, eFontGame, eWidGen, 1, 2)
+			n += 1
+			y += iSize + 4
+
+		iBestUnit = city.AI_bestUnitAI(UnitAITypes.UNITAI_WORKER)
+		if iBestUnit > -1 and not self.isUnitMaxedOut(iBestUnit, InCity):
+			szRow = str(n)
+			screen.attachPanelAt(PnlRight, ROW + szRow, "", "", True, False, ePanelBlack, 0, y - 4, w3, iSize + 2, eWidGen, 1, 2)
+			unitInfo = GC.getUnitInfo(iBestUnit)
+			szTxt = uFont3 + TRNSLTR.getText("TXT_KEY_POPUP_RECOMMENDED", (unitInfo.getDescription(), city.getUnitProductionTurnsLeft(iBestUnit, 0), "TXT_KEY_UNIT_WORKER"))
+
+			PF = "WID|UNIT|CityWork%d"
+			screen.addDDSGFCAt("", ROW + szRow, unitInfo.getButton(), -2, 0, iSize, iSize, eWidGen, 1, 2, False)
+			screen.setImageButtonAt((PF % iBestUnit) + "|img" + szRow, ROW + szRow, "", 0, 4, w3, iSize + 3, eWidGen, 1, 2)
+			screen.setTextAt((PF % iBestUnit) + "|" + szRow, ROW + szRow, szTxt, 1<<0, iSize + 4, iSize/2 - dy/2, 0, eFontGame, eWidGen, 1, 2)
+			n += 1
+			y += iSize + 4
+
+		iBestUnit = city.AI_bestUnitAI(UnitAITypes.UNITAI_SETTLE)
+		if iBestUnit > -1 and not self.isUnitMaxedOut(iBestUnit, InCity):
+			szRow = str(n)
+			screen.attachPanelAt(PnlRight, ROW + szRow, "", "", True, False, ePanelBlack, 0, y - 4, w3, iSize + 2, eWidGen, 1, 2)
+			unitInfo = GC.getUnitInfo(iBestUnit)
+			szTxt = uFont3 + TRNSLTR.getText("TXT_KEY_POPUP_RECOMMENDED", (unitInfo.getDescription(), city.getUnitProductionTurnsLeft(iBestUnit, 0), "TXT_KEY_UNIT_SETTLER"))
+
+			PF = "WID|UNIT|CityWork%d"
+			screen.addDDSGFCAt("", ROW + szRow, unitInfo.getButton(), -2, 0, iSize, iSize, eWidGen, 1, 2, False)
+			screen.setImageButtonAt((PF % iBestUnit) + "|img" + szRow, ROW + szRow, "", 0, 4, w3, iSize + 3, eWidGen, 1, 2)
+			screen.setTextAt((PF % iBestUnit) + "|" + szRow, ROW + szRow, szTxt, 1<<0, iSize + 4, iSize/2 - dy/2, 0, eFontGame, eWidGen, 1, 2)
+			n += 1
+			y += iSize + 4
+
+
 	def isUnitMaxedOut(self, iType, InCity, iExtra=0):
 		return (
 			GAME.isUnitMaxedOut(iType, InCity.CyTeam.getUnitMaking(iType) + iExtra)
@@ -3886,6 +3940,7 @@ class CvMainInterface:
 		screen.deleteWidget("CityTabScrPnl")
 		if self.iCityTab == CITYTAB_ADMIN:
 			screen.deleteWidget("CT|AdminLastOutput")
+			screen.deleteWidget("PreviousOutput")
 		screen.deleteWidget("CT|Options0")
 		screen.deleteWidget("ScrlPnlFilters")
 		screen.hide("CT|UnitGrouping")
@@ -5308,6 +5363,16 @@ class CvMainInterface:
 								szTxt = szTxt[:-2]
 							szTxt += self.iconCommerceList[i]
 						self.updateTooltip(screen, szTxt, self.xPopProgBar, y)
+
+				elif TYPE == "UNIT":
+					self.dataTT = [bCtrl, bShift, bAlt, "", iType, self.InCity.CyCity]
+					self.updateTooltip(screen, CyGTM.getUnitHelp(iType, False, True, True, self.InCity.CyCity))
+
+				elif TYPE == "BUILDING":
+					self.updateTooltip(screen, CyGTM.getBuildingHelp(iType, True, self.InCity.CyCity, False, False, True))
+
+				elif TYPE == "PROJECT":
+					self.updateTooltip(screen, CyGTM.getProjectHelp(iType, False, self.InCity.CyCity))
 
 				elif TYPE == "PROMO":
 					szTxt = ""

@@ -233,5 +233,10 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("getTradeYield", &CyCity::getTradeYield, "int (int /*YieldTypes*/) - trade adjustment to YieldType")
 
 		.def("isEventOccured", &CyCity::isEventOccured, "bool (int /*EventTypes*/)")
+
+		.def("getCityOutputHistorySize", &CyCity::getCityOutputHistorySize, "int ()")
+		.def("getRecentOutputTurn", &CyCity::getRecentOutputTurn, "int (int i)")
+		.def("getCityOutputHistoryNumEntries", &CyCity::getCityOutputHistoryNumEntries, "int (int i)")
+		.def("getCityOutputHistoryEntry", &CyCity::getCityOutputHistoryEntry, "int (int iHistory, int iEntry, bool bFirst)")
 	;
 }

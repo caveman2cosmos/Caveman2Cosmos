@@ -1836,3 +1836,20 @@ int CyCity::AI_bestUnitAI(UnitAITypes eUnitAITypes) const
 	int iDummyValue;
 	return m_pCity->AI_bestUnitAI(eUnitAITypes, iDummyValue, true, true, &CvUnitSelectionCriteria().IgnoreGrowth(true));
 }
+
+int CyCity::getCityOutputHistorySize() const
+{
+	return m_pCity->getCityOutputHistorySize();
+}
+int CyCity::getRecentOutputTurn(int i) const
+{
+	return m_pCity->getRecentOutputTurn(i);
+}
+int CyCity::getCityOutputHistoryNumEntries(const uint16_t i) const
+{
+	return m_pCity->getCityOutputHistoryNumEntries(i);
+}
+int CyCity::getCityOutputHistoryEntry(const uint16_t i, const uint16_t iEntry, const bool bFirst) const
+{
+	return m_pCity->getCityOutputHistoryEntry(i, iEntry, bFirst);
+}

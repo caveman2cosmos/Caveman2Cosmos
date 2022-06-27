@@ -36,69 +36,97 @@
 // ToDo - Move it to its own cpp/h file.
 class CityOutputHistory
 {
-public:
-	CityOutputHistory()
-	{
-		// ToDo - Make the magic number 3 (iHistorySize) into a global define perhaps?
-		recentOutputTurn = new int[iHistorySize]();
-		recentOutputHistory.resize(iHistorySize);
-	}
-	~CityOutputHistory()
-	{
-		SAFE_DELETE_ARRAY(recentOutputTurn);
-	}
-
-	void reset()
-	{
-		for (int iI = 0; iI < iHistorySize; iI++)
+	public:
+		CityOutputHistory()
 		{
-			recentOutputTurn[iI] = 0;
+			recentOutputTurn = new uint32_t[iHistorySize]();
+			recentOutputHistory.resize(iHistorySize);
 		}
-		recentOutputHistory.clear();
-		recentOutputHistory.resize(iHistorySize);
-	}
-
-	void addToHistory(OrderTypes eOrder, int iType, int iForceList=-1)
-	{
-		if (iForceList > -1) // Used when reading saves.
+		~CityOutputHistory()
 		{
-			if (iForceList < iHistorySize)
+			SAFE_DELETE_ARRAY(recentOutputTurn);
+		}
+
+		static void setCityOutputHistorySize(const uint16_t iSize) { iHistorySize = iSize; }
+		static uint16_t getCityOutputHistorySize() { return iHistorySize; }
+
+		void reset()
+		{
+			for (uint16_t iI = 0; iI < iHistorySize; iI++)
 			{
-				recentOutputHistory[iForceList].push_back(std::make_pair(eOrder, iType));
+				recentOutputTurn[iI] = 0;
 			}
-			return;
+			recentOutputHistory.clear();
+			recentOutputHistory.resize(iHistorySize);
 		}
-		const int iTurn = GC.getGame().getGameTurn();
 
-		if (iTurn != recentOutputTurn[0])
+		void addToHistory(OrderTypes eOrder, uint16_t iType, short iHistory=-1)
 		{
-			// Iterate history
-			for (int i = iHistorySize - 1; i > 0; i--)
+			if (iHistory > -1) // Used when reading saves.
 			{
-				recentOutputHistory[i] = recentOutputHistory[i-1];
-				recentOutputTurn[i] = recentOutputTurn[i-1];
+				if (iHistory < static_cast<int>(iHistorySize))
+				{
+					recentOutputHistory[iHistory].push_back(std::make_pair(eOrder, iType));
+				}
+				return;
 			}
-			recentOutputHistory[0].clear();
-			recentOutputTurn[0] = iTurn;
+			const int iGameTurn = GC.getGame().getGameTurn();
+
+			if (iGameTurn != recentOutputTurn[0])
+			{
+				// Iterate history
+				for (uint16_t i = iHistorySize - 1; i > 0; i--)
+				{
+					recentOutputHistory[i] = recentOutputHistory[i-1];
+					recentOutputTurn[i] = recentOutputTurn[i-1];
+				}
+				recentOutputHistory[0].clear();
+				recentOutputTurn[0] = iGameTurn;
+			}
+			recentOutputHistory[0].push_back(std::make_pair(eOrder, iType));
 		}
-		recentOutputHistory[0].push_back(std::make_pair(eOrder, iType));
-	}
-	void setRecentOutputTurn(const int iTurn, const int iElement) const
-	{
-		if (iElement >= iHistorySize) return;
 
-		recentOutputTurn[iElement] = iTurn;
-	}
-	int getRecentOutputTurn(const int iTurn) const
-	{
-		return recentOutputTurn[range(iTurn, 0, iHistorySize-1)];
-	}
+		// Used when reading saves.
+		void setRecentOutputTurn(const uint16_t iHistory, const int iGameTurn) const
+		{
+			if (notInRange(iHistory)) return;
 
-private:
-	const static int iHistorySize = 3;
-	int* recentOutputTurn;
-	std::vector< std::vector< std::pair<OrderTypes, int> > > recentOutputHistory;
+			recentOutputTurn[iHistory] = iGameTurn;
+		}
+
+		uint32_t getRecentOutputTurn(const uint16_t iHistory) const
+		{
+			if (notInRange(iHistory)) return 0;
+
+			return recentOutputTurn[iHistory];
+		}
+
+		uint16_t getCityOutputHistoryNumEntries(const uint16_t iHistory) const
+		{
+			if (notInRange(iHistory)) return 0;
+
+			return recentOutputHistory[iHistory].size();
+		}
+
+		uint16_t getCityOutputHistoryEntry(const uint16_t iHistory, const uint16_t iEntry, const bool bFirst) const
+		{
+			if (notInRange(iHistory)) return NULL;
+
+			if (bFirst)
+			{
+				return static_cast<uint16_t>(recentOutputHistory[iHistory][iEntry].first);
+			}
+			return recentOutputHistory[iHistory][iEntry].second;
+		}
+
+	private:
+		bool notInRange(const uint16_t iHistory) const { return iHistory < 0 || iHistory >= iHistorySize; }
+		static uint16_t iHistorySize;
+		uint32_t* recentOutputTurn;
+		std::vector< std::vector< std::pair<OrderTypes, uint16_t> > > recentOutputHistory;
 };
+uint16_t CityOutputHistory::iHistorySize;
+
 
 // Public Functions...
 
@@ -237,7 +265,12 @@ CvCity::CvCity()
 	m_paiStartDeferredSectionNumBonuses = NULL;
 	m_bMarkedForDestruction = false;
 
+	// Toffer - ToDo - Move this so it is only called once at game launch, maybe to cvInternalGlobals::doPostLoadCaching().
+	CityOutputHistory::setCityOutputHistorySize((uint16_t)GC.getCITY_OUTPUT_HISTORY_SIZE());
+
+	// Toffer - The class that tracks the output a city had the last CITY_OUTPUT_HISTORY_TURN_SIZE turns where it actually produced something.
 	m_outputHistory = new CityOutputHistory();
+
 	reset(0, NO_PLAYER, 0, 0, true);
 }
 
@@ -16107,17 +16140,17 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 		{
 			case ORDER_TRAIN:
 			{
-				m_outputHistory->addToHistory(ORDER_TRAIN, (int)order.getUnitType());
+				m_outputHistory->addToHistory(ORDER_TRAIN, (uint16_t)order.getUnitType());
 				break;
 			}
 			case ORDER_CONSTRUCT:
 			{
-				m_outputHistory->addToHistory(ORDER_CONSTRUCT, (int)order.getBuildingType());
+				m_outputHistory->addToHistory(ORDER_CONSTRUCT, (uint16_t)order.getBuildingType());
 				break;
 			}
 			case ORDER_CREATE:
 			{
-				m_outputHistory->addToHistory(ORDER_CREATE, (int)order.getProjectType());
+				m_outputHistory->addToHistory(ORDER_CREATE, (uint16_t)order.getProjectType());
 				break;
 			}
 			default: FErrorMsg("Can Occur?");
@@ -17560,6 +17593,31 @@ void CvCity::read(FDataStreamBase* pStream)
 			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iUnitID, "WorkerUnitID");
 			m_workers.push_back(iUnitID);
 		}
+
+		{
+			uint16_t iCityOutputHistorySize = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iCityOutputHistorySize, "CityOutputHistorySize");
+
+			for (uint16_t iI = 0; iI < iCityOutputHistorySize; iI++)
+			{
+				uint32_t iTurn = 0;
+				WRAPPER_READ_DECORATED(wrapper, "CvCity", &iTurn, "RecentOutputTurn");
+				m_outputHistory->setRecentOutputTurn(iI, iTurn);
+
+				uint16_t iCityOutputHistoryNumEntries = 0;
+				WRAPPER_READ_DECORATED(wrapper, "CvCity", &iCityOutputHistoryNumEntries, "CityOutputHistoryNumEntries");
+
+				for (uint16_t iJ = 0; iJ < iCityOutputHistoryNumEntries; iJ++)
+				{
+					uint16_t iOrderType = -1;
+					uint16_t iType = -1;
+					WRAPPER_READ_DECORATED(wrapper, "CvCity", &iOrderType, "OrderType");
+					WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "Type");
+
+					m_outputHistory->addToHistory(static_cast<OrderTypes>(iOrderType), iType, static_cast<short>(iI));
+				}
+			}
+		}
 	}
 	WRAPPER_READ_OBJECT_END(wrapper);
 	//Example of how to skip an unneeded element
@@ -18007,6 +18065,20 @@ void CvCity::write(FDataStreamBase* pStream)
 		foreach_(const int iUnitID, m_workers)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iUnitID, "WorkerUnitID");
+		}
+
+		uint16_t iCityOutputHistorySize = CityOutputHistory::getCityOutputHistorySize();
+		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iCityOutputHistorySize, "CityOutputHistorySize");
+		for (uint16_t iI = 0; iI < iCityOutputHistorySize; iI++)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory->getRecentOutputTurn(iI), "RecentOutputTurn");
+			uint16_t iCityOutputHistoryNumEntries = m_outputHistory->getCityOutputHistoryNumEntries(iI);
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iCityOutputHistoryNumEntries, "CityOutputHistoryNumEntries");
+			for (uint16_t iJ = 0; iJ < iCityOutputHistoryNumEntries; iJ++)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory->getCityOutputHistoryEntry(iI, iJ, true), "OrderType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory->getCityOutputHistoryEntry(iI, iJ, false), "Type");
+			}
 		}
 	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
@@ -24520,3 +24592,24 @@ void CvCity::setWorkerHave(const int iUnitID, const bool bNewValue)
 		FErrorMsg("Vector element to remove was missing!");
 	}
 }
+
+uint16_t CvCity::getCityOutputHistorySize() const
+{
+	return CityOutputHistory::getCityOutputHistorySize();
+}
+
+uint32_t CvCity::getRecentOutputTurn(const int i) const
+{
+	return m_outputHistory->getRecentOutputTurn(i);
+}
+
+uint16_t CvCity::getCityOutputHistoryNumEntries(const uint16_t i) const
+{
+	return m_outputHistory->getCityOutputHistoryNumEntries(i);
+}
+
+uint16_t CvCity::getCityOutputHistoryEntry(const uint16_t i, const uint16_t iEntry, const bool bFirst) const
+{
+	return m_outputHistory->getCityOutputHistoryEntry(i, iEntry, bFirst);
+}
+
