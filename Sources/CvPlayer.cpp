@@ -339,6 +339,7 @@ void CvPlayer::init(PlayerTypes eID)
 	// Init other game data
 	FAssert(getTeam() != NO_TEAM);
 	GET_TEAM(getTeam()).changeNumMembers(1);
+	LeaderHeadTypes eBestPersonality = getLeaderType();
 
 	if (GC.getInitCore().getSlotStatus(getID()) == SS_TAKEN || GC.getInitCore().getSlotStatus(getID()) == SS_COMPUTER)
 	{
@@ -346,7 +347,7 @@ void CvPlayer::init(PlayerTypes eID)
 
 		if (GC.getGame().isOption(GAMEOPTION_RANDOM_PERSONALITIES) && !isNPC() && !isMinorCiv())
 		{
-			LeaderHeadTypes eBestPersonality = NO_LEADER;
+			eBestPersonality = NO_LEADER;
 			int iBestValue = 0;
 
 			for (int iI = 0; iI < GC.getNumLeaderHeadInfos(); iI++)
@@ -393,12 +394,50 @@ void CvPlayer::init(PlayerTypes eID)
 		}
 
 		FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::init");
-		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
+
+		int iNumCoreDefaultTraits = GC.getLeaderHeadInfo(eBestPersonality).getNumDefaultTraits();
+		int iNumDefaultComplexTraits = GC.getLeaderHeadInfo(eBestPersonality).getNumDefaultComplexTraits();
+		TraitTypes eTrait = NO_TRAIT;
+
+		if (GC.getGame().isOption(GAMEOPTION_COMPLEX_TRAITS) && iNumDefaultComplexTraits > 0)
 		{
-			if (GC.getLeaderHeadInfo(getLeaderType()).hasTrait((TraitTypes)iI) && GC.getTraitInfo((TraitTypes)iI).isValidTrait(true))
+			for (int iI = 0; iI < iNumDefaultComplexTraits; ++iI)
 			{
-				m_pabHasTrait[(TraitTypes)iI] = true;
-				processTrait((TraitTypes)iI, 1);
+				if (GC.getLeaderHeadInfo(eBestPersonality).isDefaultComplexTrait(iI))
+				{
+					eTrait = TraitTypes(GC.getLeaderHeadInfo(eBestPersonality).getDefaultComplexTrait(iI));
+					if (GC.getTraitInfo(eTrait).isValidTrait(true))
+					{
+						m_pabHasTrait[eTrait] = true;
+						processTrait(eTrait, 1);
+					}
+				}
+			}
+		}
+		else if (iNumCoreDefaultTraits > 0)
+		{
+			for (int iI = 0; iI < iNumCoreDefaultTraits; ++iI)
+			{
+				if (GC.getLeaderHeadInfo(eBestPersonality).isDefaultTrait(iI))
+				{
+					eTrait = TraitTypes(GC.getLeaderHeadInfo(eBestPersonality).getDefaultTrait(iI));
+					if (GC.getTraitInfo(eTrait).isValidTrait(true))
+					{
+						m_pabHasTrait[eTrait] = true;
+						processTrait(eTrait, 1);
+					}
+				}
+			}
+		}
+		else
+		{
+			for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
+			{
+				if (GC.getLeaderHeadInfo(eBestPersonality).hasTrait((TraitTypes)iI) && GC.getTraitInfo((TraitTypes)iI).isValidTrait(true))
+				{
+					m_pabHasTrait[(TraitTypes)iI] = true;
+					processTrait((TraitTypes)iI, 1);
+				}
 			}
 		}
 		updateMaxAnarchyTurns();
@@ -500,6 +539,8 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 		GET_TEAM(getTeam()).changeNumMembers(1);
 	}
 
+	LeaderHeadTypes eBestPersonality = (LeaderHeadTypes)(int)getPersonalityType();
+
 	if ((GC.getInitCore().getSlotStatus(getID()) == SS_TAKEN) || (GC.getInitCore().getSlotStatus(getID()) == SS_COMPUTER))
 	{
 		if (bSetAlive)
@@ -508,7 +549,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 		}
 		if (GC.getGame().isOption(GAMEOPTION_RANDOM_PERSONALITIES) && !isNPC() && !isMinorCiv())
 		{
-			LeaderHeadTypes eBestPersonality = NO_LEADER;
+			eBestPersonality = NO_LEADER;
 			int iBestValue = 0;
 
 			for (int iI = 0; iI < GC.getNumLeaderHeadInfos(); iI++)
@@ -555,12 +596,50 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 		}
 
 		FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::init");
-		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
+
+		int iNumCoreDefaultTraits = GC.getLeaderHeadInfo(eBestPersonality).getNumDefaultTraits();
+		int iNumDefaultComplexTraits = GC.getLeaderHeadInfo(eBestPersonality).getNumDefaultComplexTraits();
+		TraitTypes eTrait = NO_TRAIT;
+
+		if (GC.getGame().isOption(GAMEOPTION_COMPLEX_TRAITS) && iNumDefaultComplexTraits > 0)
 		{
-			if (GC.getLeaderHeadInfo(getLeaderType()).hasTrait((TraitTypes)iI) && GC.getTraitInfo((TraitTypes)iI).isValidTrait(true))
+			for (int iI = 0; iI < iNumDefaultComplexTraits; ++iI)
 			{
-				m_pabHasTrait[(TraitTypes)iI] = true;
-				processTrait((TraitTypes)iI, 1);
+				if (GC.getLeaderHeadInfo(eBestPersonality).isDefaultComplexTrait(iI))
+				{
+					eTrait = TraitTypes(GC.getLeaderHeadInfo(eBestPersonality).getDefaultComplexTrait(iI));
+					if (GC.getTraitInfo(eTrait).isValidTrait(true))
+					{
+						m_pabHasTrait[eTrait] = true;
+						processTrait(eTrait, 1);
+					}
+				}
+			}
+		}
+		else if (iNumCoreDefaultTraits > 0)
+		{
+			for (int iI = 0; iI < iNumCoreDefaultTraits; ++iI)
+			{
+				if (GC.getLeaderHeadInfo(eBestPersonality).isDefaultTrait(iI))
+				{
+					eTrait = TraitTypes(GC.getLeaderHeadInfo(eBestPersonality).getDefaultTrait(iI));
+					if (GC.getTraitInfo(eTrait).isValidTrait(true))
+					{
+						m_pabHasTrait[eTrait] = true;
+						processTrait(eTrait, 1);
+					}
+				}
+			}
+		}
+		else
+		{
+			for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
+			{
+				if (GC.getLeaderHeadInfo(eBestPersonality).hasTrait((TraitTypes)iI) && GC.getTraitInfo((TraitTypes)iI).isValidTrait(true))
+				{
+					m_pabHasTrait[(TraitTypes)iI] = true;
+					processTrait((TraitTypes)iI, 1);
+				}
 			}
 		}
 
@@ -1577,12 +1656,52 @@ void CvPlayer::changeLeader(LeaderHeadTypes eNewLeader)
 
 	// Add new traits
 	FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::init");
-	for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
+
+	const LeaderHeadTypes eLeader = (LeaderHeadTypes)(int)getLeaderType();
+
+	int iNumCoreDefaultTraits = GC.getLeaderHeadInfo(eLeader).getNumDefaultTraits();
+	int iNumDefaultComplexTraits = GC.getLeaderHeadInfo(eLeader).getNumDefaultComplexTraits();
+	TraitTypes eTrait = NO_TRAIT;
+
+	if (GC.getGame().isOption(GAMEOPTION_COMPLEX_TRAITS) && iNumDefaultComplexTraits > 0)
 	{
-		if (GC.getLeaderHeadInfo(getLeaderType()).hasTrait((TraitTypes)iI) && GC.getTraitInfo((TraitTypes)iI).isValidTrait(true))
+		for (int iI = 0; iI < iNumDefaultComplexTraits; ++iI)
 		{
-			m_pabHasTrait[(TraitTypes)iI] = true;
-			processTrait((TraitTypes)iI, 1);
+			if (GC.getLeaderHeadInfo(eLeader).isDefaultComplexTrait(iI))
+			{
+				eTrait = TraitTypes(GC.getLeaderHeadInfo(eLeader).getDefaultComplexTrait(iI));
+				if (GC.getTraitInfo(eTrait).isValidTrait(true))
+				{
+					m_pabHasTrait[eTrait] = true;
+					processTrait(eTrait, 1);
+				}
+			}
+		}
+	}
+	else if (iNumCoreDefaultTraits > 0)
+	{
+		for (int iI = 0; iI < iNumCoreDefaultTraits; ++iI)
+		{
+			if (GC.getLeaderHeadInfo(eLeader).isDefaultTrait(iI))
+			{
+				eTrait = TraitTypes(GC.getLeaderHeadInfo(eLeader).getDefaultTrait(iI));
+				if (GC.getTraitInfo(eTrait).isValidTrait(true))
+				{
+					m_pabHasTrait[eTrait] = true;
+					processTrait(eTrait, 1);
+				}
+			}
+		}
+	}
+	else
+	{
+		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
+		{
+			if (GC.getLeaderHeadInfo(eLeader).hasTrait((TraitTypes)iI) && GC.getTraitInfo((TraitTypes)iI).isValidTrait(true))
+			{
+				m_pabHasTrait[(TraitTypes)iI] = true;
+				processTrait((TraitTypes)iI, 1);
+			}
 		}
 	}
 
@@ -28695,13 +28814,29 @@ void CvPlayer::recalculateModifiers()
 		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 		{
 			const TraitTypes eTrait = ((TraitTypes)iI);
+			bool bLeaderHasTrait = false;
 			if (!GC.getTraitInfo(eTrait).isCivilizationTrait() && !GC.getTraitInfo(eTrait).isBarbarianSelectionOnly())
 			{
 				if (hasTrait(eTrait) && GC.getTraitInfo(eTrait).getLinePriority() != 0)
 				{
 					m_pabHasTrait[eTrait] = false;
 				}
-				if (GC.getLeaderHeadInfo(getLeaderType()).hasTrait(eTrait) && !hasTrait(eTrait) && GC.getTraitInfo(eTrait).getLinePriority() == 0)
+				if (GC.getGame().isOption(GAMEOPTION_COMPLEX_TRAITS))
+				{
+					if (GC.getLeaderHeadInfo(getLeaderType()).isDefaultComplexTrait((int)eTrait))
+					{
+						bLeaderHasTrait = true;
+					}
+				}
+				else if (GC.getLeaderHeadInfo(getLeaderType()).isDefaultTrait((int)eTrait))
+				{
+					bLeaderHasTrait = true;
+				}
+				else if (GC.getLeaderHeadInfo(getLeaderType()).hasTrait(eTrait))
+				{
+					bLeaderHasTrait = true;
+				}
+				if (bLeaderHasTrait && !hasTrait(eTrait) && GC.getTraitInfo(eTrait).getLinePriority() == 0)
 				{
 					if (GC.getTraitInfo(eTrait).isNegativeTrait())
 					{

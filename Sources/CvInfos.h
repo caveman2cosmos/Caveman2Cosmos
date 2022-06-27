@@ -4743,6 +4743,18 @@ public:
 	void setConquestVictoryWeight(int i);
 	void setDominationVictoryWeight(int i);
 	void setDiplomacyVictoryWeight(int i);
+
+
+	//Int list Vector without delayed resolution
+	
+	int getDefaultTrait(int i) const;
+	int getNumDefaultTraits() const;
+	bool isDefaultTrait(int i) const;
+
+	int getDefaultComplexTrait(int i) const;
+	int getNumDefaultComplexTraits() const;
+	bool isDefaultComplexTrait(int i) const;
+
 protected:
 	int m_iMilitaryUnitRefuseAttitudeThreshold;
 	int m_iWorkerRefuseAttitudeThreshold;
@@ -4846,6 +4858,11 @@ protected:
 	int m_iFreedomAppreciation;
 	int m_iFavoriteCivic;
 	int m_iFavoriteReligion;
+
+	//Int list Vector without delayed resolution
+	std::vector<int> m_aiDefaultTraits;
+	std::vector<int> m_aiDefaultComplexTraits;
+
 
 	CvString m_szArtDefineTag;
 

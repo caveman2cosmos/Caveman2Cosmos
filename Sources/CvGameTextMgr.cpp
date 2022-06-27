@@ -11852,22 +11852,79 @@ void CvGameTextMgr::parseLeaderTraits(CvWStringBuffer &szHelpString, LeaderHeadT
 			GC.getNumTraitInfos() > 0,
 			"GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvSimpleCivPicker::setLeaderText"
 		);
+		
 
-		for (int iI = 0; iI < GC.getNumTraitInfos(); ++iI)
+		int iNumCoreDefaultTraits = GC.getLeaderHeadInfo(eLeader).getNumDefaultTraits();
+		int iNumDefaultComplexTraits = GC.getLeaderHeadInfo(eLeader).getNumDefaultComplexTraits();
+		TraitTypes eTrait = NO_TRAIT;
+
+		if (GC.getGame().isOption(GAMEOPTION_COMPLEX_TRAITS) && iNumDefaultComplexTraits > 0)
 		{
-			if (GC.getLeaderHeadInfo(eLeader).hasTrait((TraitTypes)iI) && GC.getTraitInfo((TraitTypes)iI).isValidTrait(true))
+			for (int iI = 0; iI < iNumDefaultComplexTraits; ++iI)
 			{
-				if (!bFirst)
+				if (GC.getLeaderHeadInfo(eLeader).isDefaultComplexTrait(iI))
 				{
-					if (bDawnOfMan)
-						szHelpString.append(L", ");
-					else if (bCivilopediaText)
-						szHelpString.append(L"\n\n");
-					else szHelpString.append(L"\n");
-				}
-				else bFirst = false;
+					eTrait = TraitTypes(GC.getLeaderHeadInfo(eLeader).getDefaultComplexTrait(iI));
+					if (GC.getTraitInfo(eTrait).isValidTrait(true))
+					{
+						if (!bFirst)
+						{
+							if (bDawnOfMan)
+								szHelpString.append(L", ");
+							else if (bCivilopediaText)
+								szHelpString.append(L"\n\n");
+							else szHelpString.append(L"\n");
+						}
+						else bFirst = false;
 
-				parseTraits(szHelpString, (TraitTypes)iI, eCivilization, bDawnOfMan);
+						parseTraits(szHelpString, eTrait, eCivilization, bDawnOfMan);
+					}
+				}
+			}
+		}
+		else if (iNumCoreDefaultTraits > 0)
+		{
+			for (int iI = 0; iI < iNumCoreDefaultTraits; ++iI)
+			{
+				if (GC.getLeaderHeadInfo(eLeader).isDefaultTrait(iI))
+				{
+					eTrait = TraitTypes(GC.getLeaderHeadInfo(eLeader).getDefaultTrait(iI));
+					if (GC.getTraitInfo(eTrait).isValidTrait(true))
+					{
+						if (!bFirst)
+						{
+							if (bDawnOfMan)
+								szHelpString.append(L", ");
+							else if (bCivilopediaText)
+								szHelpString.append(L"\n\n");
+							else szHelpString.append(L"\n");
+						}
+						else bFirst = false;
+
+						parseTraits(szHelpString, eTrait, eCivilization, bDawnOfMan);
+					}
+				}
+			}
+		}
+		else
+		{
+			for (int iI = 0; iI < GC.getNumTraitInfos(); ++iI)
+			{
+				eTrait = TraitTypes(iI);
+				if (GC.getLeaderHeadInfo(eLeader).hasTrait(eTrait) && GC.getTraitInfo(eTrait).isValidTrait(true))
+				{
+					if (!bFirst)
+					{
+						if (bDawnOfMan)
+							szHelpString.append(L", ");
+						else if (bCivilopediaText)
+							szHelpString.append(L"\n\n");
+						else szHelpString.append(L"\n");
+					}
+					else bFirst = false;
+
+					parseTraits(szHelpString, eTrait, eCivilization, bDawnOfMan);
+				}
 			}
 		}
 	}
@@ -11888,21 +11945,72 @@ void CvGameTextMgr::parseLeaderShortTraits(CvWStringBuffer &szHelpString, Leader
 		FAssertMsg((GC.getNumTraitInfos() > 0),
 			"GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvSimpleCivPicker::setLeaderText");
 
+		int iNumCoreDefaultTraits = GC.getLeaderHeadInfo(eLeader).getNumDefaultTraits();
+		int iNumDefaultComplexTraits = GC.getLeaderHeadInfo(eLeader).getNumDefaultComplexTraits();
+		TraitTypes eTrait = NO_TRAIT;
 		bool bFirst = true;
-		for (int iI = 0; iI < GC.getNumTraitInfos(); ++iI)
+
+		if (GC.getGame().isOption(GAMEOPTION_COMPLEX_TRAITS) && iNumDefaultComplexTraits > 0)
 		{
-			const TraitTypes eTrait = ((TraitTypes)iI);
-			if (GC.getLeaderHeadInfo(eLeader).hasTrait(eTrait) && !(GC.getGame().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS) && GC.getTraitInfo(eTrait).isNegativeTrait()) &&
-				!(GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS) && !GC.getTraitInfo(eTrait).isNegativeTrait()) &&
-				((GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && (GC.getTraitInfo(eTrait).getLinePriority() != 0 || GC.getTraitInfo(eTrait).isCivilizationTrait())) ||
-				(!GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eTrait).getLinePriority() == 0)))
+			for (int iI = 0; iI < iNumDefaultComplexTraits; ++iI)
 			{
-				if (!bFirst)
+				if (GC.getLeaderHeadInfo(eLeader).isDefaultTrait(iI))
 				{
-					szHelpString.append(L"/");
+					eTrait = TraitTypes(GC.getLeaderHeadInfo(eLeader).getDefaultComplexTrait(iI));
+					if (!(GC.getGame().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS) && GC.getTraitInfo(eTrait).isNegativeTrait()) &&
+						!(GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS) && !GC.getTraitInfo(eTrait).isNegativeTrait()) &&
+						((GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && (GC.getTraitInfo(eTrait).getLinePriority() != 0 || GC.getTraitInfo(eTrait).isCivilizationTrait())) ||
+						(!GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eTrait).getLinePriority() == 0)))
+					{
+						if (!bFirst)
+						{
+							szHelpString.append(L"/");
+						}
+						szHelpString.append(gDLL->getText(GC.getTraitInfo(eTrait).getShortDescription()));
+						bFirst = false;
+					}
 				}
-				szHelpString.append(gDLL->getText(GC.getTraitInfo((TraitTypes)iI).getShortDescription()));
-				bFirst = false;
+			}
+		}
+		else if (iNumCoreDefaultTraits > 0)
+		{
+			for (int iI = 0; iI < iNumCoreDefaultTraits; ++iI)
+			{
+				if (GC.getLeaderHeadInfo(eLeader).isDefaultTrait(iI))
+				{
+					eTrait = TraitTypes(GC.getLeaderHeadInfo(eLeader).getDefaultTrait(iI));
+					if (!(GC.getGame().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS) && GC.getTraitInfo(eTrait).isNegativeTrait()) &&
+						!(GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS) && !GC.getTraitInfo(eTrait).isNegativeTrait()) &&
+						((GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && (GC.getTraitInfo(eTrait).getLinePriority() != 0 || GC.getTraitInfo(eTrait).isCivilizationTrait())) ||
+						(!GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eTrait).getLinePriority() == 0)))
+					{
+						if (!bFirst)
+						{
+							szHelpString.append(L"/");
+						}
+						szHelpString.append(gDLL->getText(GC.getTraitInfo(eTrait).getShortDescription()));
+						bFirst = false;
+					}
+				}
+			}
+		}
+		else
+		{
+			for (int iI = 0; iI < GC.getNumTraitInfos(); ++iI)
+			{
+				eTrait = ((TraitTypes)iI);
+				if (GC.getLeaderHeadInfo(eLeader).hasTrait(eTrait) && !(GC.getGame().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS) && GC.getTraitInfo(eTrait).isNegativeTrait()) &&
+					!(GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS) && !GC.getTraitInfo(eTrait).isNegativeTrait()) &&
+					((GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && (GC.getTraitInfo(eTrait).getLinePriority() != 0 || GC.getTraitInfo(eTrait).isCivilizationTrait())) ||
+					(!GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eTrait).getLinePriority() == 0)))
+				{
+					if (!bFirst)
+					{
+						szHelpString.append(L"/");
+					}
+					szHelpString.append(gDLL->getText(GC.getTraitInfo(eTrait).getShortDescription()));
+					bFirst = false;
+				}
 			}
 		}
 	}
