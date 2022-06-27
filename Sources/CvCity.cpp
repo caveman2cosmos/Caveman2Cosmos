@@ -32,6 +32,102 @@
 //Disable this passed in initialization list warning, as it is only stored in the constructor of CvBuildingList and not used
 #pragma warning( disable : 4355 )
 
+// Helper class
+// ToDo - Move it to its own cpp/h file.
+class CityOutputHistory
+{
+	public:
+		CityOutputHistory()
+		{
+			recentOutputTurn = new uint32_t[iHistorySize]();
+			recentOutputHistory.resize(iHistorySize);
+		}
+		~CityOutputHistory()
+		{
+			SAFE_DELETE_ARRAY(recentOutputTurn);
+		}
+
+		static void setCityOutputHistorySize(const uint16_t iSize) { iHistorySize = iSize; }
+		static uint16_t getCityOutputHistorySize() { return iHistorySize; }
+
+		void reset()
+		{
+			for (uint16_t iI = 0; iI < iHistorySize; iI++)
+			{
+				recentOutputTurn[iI] = 0;
+			}
+			recentOutputHistory.clear();
+			recentOutputHistory.resize(iHistorySize);
+		}
+
+		void addToHistory(OrderTypes eOrder, uint16_t iType, short iHistory=-1)
+		{
+			if (iHistory > -1) // Used when reading saves.
+			{
+				if (iHistory < static_cast<int>(iHistorySize))
+				{
+					recentOutputHistory[iHistory].push_back(std::make_pair(eOrder, iType));
+				}
+				return;
+			}
+			const int iGameTurn = GC.getGame().getGameTurn();
+
+			if (iGameTurn != recentOutputTurn[0])
+			{
+				// Iterate history
+				for (uint16_t i = iHistorySize - 1; i > 0; i--)
+				{
+					recentOutputHistory[i] = recentOutputHistory[i-1];
+					recentOutputTurn[i] = recentOutputTurn[i-1];
+				}
+				recentOutputHistory[0].clear();
+				recentOutputTurn[0] = iGameTurn;
+			}
+			recentOutputHistory[0].push_back(std::make_pair(eOrder, iType));
+		}
+
+		// Used when reading saves.
+		void setRecentOutputTurn(const uint16_t iHistory, const int iGameTurn) const
+		{
+			if (notInRange(iHistory)) return;
+
+			recentOutputTurn[iHistory] = iGameTurn;
+		}
+
+		uint32_t getRecentOutputTurn(const uint16_t iHistory) const
+		{
+			if (notInRange(iHistory)) return 0;
+
+			return recentOutputTurn[iHistory];
+		}
+
+		uint16_t getCityOutputHistoryNumEntries(const uint16_t iHistory) const
+		{
+			if (notInRange(iHistory)) return 0;
+
+			return recentOutputHistory[iHistory].size();
+		}
+
+		uint16_t getCityOutputHistoryEntry(const uint16_t iHistory, const uint16_t iEntry, const bool bFirst) const
+		{
+			if (notInRange(iHistory)) return NULL;
+
+			if (bFirst)
+			{
+				return static_cast<uint16_t>(recentOutputHistory[iHistory][iEntry].first);
+			}
+			return recentOutputHistory[iHistory][iEntry].second;
+		}
+
+	private:
+		bool notInRange(const uint16_t iHistory) const { return iHistory < 0 || iHistory >= iHistorySize; }
+		static uint16_t iHistorySize;
+		uint32_t* recentOutputTurn;
+		std::vector< std::vector< std::pair<OrderTypes, uint16_t> > > recentOutputHistory;
+};
+uint16_t CityOutputHistory::iHistorySize;
+
+
 // Public Functions...
 
 CvCity::CvCity()
@@ -169,6 +265,12 @@ CvCity::CvCity()
 	m_paiStartDeferredSectionNumBonuses = NULL;
 	m_bMarkedForDestruction = false;
 
+	// Toffer - ToDo - Move this so it is only called once at game launch, maybe to cvInternalGlobals::doPostLoadCaching().
+	CityOutputHistory::setCityOutputHistorySize((uint16_t)GC.getCITY_OUTPUT_HISTORY_SIZE());
+
+	// Toffer - The class that tracks the output a city had the last CITY_OUTPUT_HISTORY_TURN_SIZE turns where it actually produced something.
+	m_outputHistory = new CityOutputHistory();
+
 	reset(0, NO_PLAYER, 0, 0, true);
 }
 
@@ -225,6 +327,8 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiBonusCommerceRateModifier);
 	SAFE_DELETE_ARRAY(m_aiBonusCommercePercentChanges);
 	SAFE_DELETE_ARRAY(m_aiBuildingCommerceTechChange);
+
+	SAFE_DELETE(m_outputHistory);
 }
 
 
@@ -1044,6 +1148,8 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 
 	m_bIsGreatWallSeed = false;
 	m_deferringBonusProcessingCount = 0;
+
+	m_outputHistory->reset();
 }
 
 
@@ -1684,12 +1790,9 @@ void CvCity::updateSelectedCity(bool bTestProduction)
 {
 	algo::for_each(plots(), bind(CvPlot::updateShowCitySymbols, _1));
 
-	if (bTestProduction)
+	if (bTestProduction && getOwner() == GC.getGame().getActivePlayer() && !isProduction())
 	{
-		if ((getOwner() == GC.getGame().getActivePlayer()) && !isProduction())
-		{
-			chooseProduction(NO_UNIT, NO_BUILDING, NO_PROJECT, false, true);
-		}
+		chooseProduction(NO_UNIT, NO_BUILDING, NO_PROJECT, false, true);
 	}
 }
 
@@ -1850,7 +1953,6 @@ void CvCity::chooseProduction(UnitTypes eTrainUnit, BuildingTypes eConstructBuil
 		pPopupInfo->setData2(NO_ORDER);
 		pPopupInfo->setData3(NO_UNIT);
 	}
-
 	gDLL->getInterfaceIFace()->addPopup(pPopupInfo, getOwner(), false, bFront);
 }
 
@@ -15598,24 +15700,18 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 	if (!bAppend || getOrderQueueLength() == 1)
 	{
 		// If the head order is a build list, resolve it
-		if (eOrder == ORDER_LIST)
-		{
-			if (!pushFirstValidBuildListOrder(iData1))
-			{
-				// pop the list if there is nothing to construct on it any more
-				popOrder(0);
-			}
-			else
-			{
-				if (!bSave)
-				{
-					popOrder(1);
-				}
-			}
-		}
-		else
+		if (eOrder != ORDER_LIST)
 		{
 			startHeadOrder();
+		}
+		else if (!pushFirstValidBuildListOrder(iData1))
+		{
+			// pop the list if there is nothing to construct on it any more
+			popOrder(0);
+		}
+		else if (!bSave)
+		{
+			popOrder(1);
 		}
 	}
 
@@ -15832,9 +15928,8 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 
 			}
 		}
+		break;
 	}
-	break;
-
 	case ORDER_CONSTRUCT:
 	{
 		eConstructBuilding = order.getBuildingType();
@@ -15906,6 +16001,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 		break;
 	}
 	case ORDER_CREATE:
+	{
 		eCreateProject = order.getProjectType();
 
 		GET_TEAM(getTeam()).changeProjectMaking(eCreateProject, -1);
@@ -15983,7 +16079,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 			m_iGoldFromLostProduction = m_iLostProductionModified * GC.getMAXED_PROJECT_GOLD_PERCENT() / 100;
 		}
 		break;
-
+	}
 	case ORDER_MAINTAIN:
 	case ORDER_LIST:
 		break;
@@ -16024,25 +16120,41 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 		}
 	}
 
-	if (bChoose)
+	if (bChoose && getOrderQueueLength() == 0)
 	{
-		if (getOrderQueueLength() == 0)
+		if (isHuman() && !isProductionAutomated())
 		{
-			if (isHuman() && !isProductionAutomated())
+			if (bWasFoodProduction)
 			{
-				if (bWasFoodProduction)
-				{
-					AI_assignWorkingPlots();
-				}
-				chooseProduction(eTrainUnit, eConstructBuilding, eCreateProject, bFinish);
+				AI_assignWorkingPlots();
 			}
-			else AI_chooseProduction();
+			chooseProduction(eTrainUnit, eConstructBuilding, eCreateProject, bFinish);
 		}
+		else AI_chooseProduction();
 	}
 
 
 	if (bFinish)
 	{
+		switch (order.eOrderType)
+		{
+			case ORDER_TRAIN:
+			{
+				m_outputHistory->addToHistory(ORDER_TRAIN, (uint16_t)order.getUnitType());
+				break;
+			}
+			case ORDER_CONSTRUCT:
+			{
+				m_outputHistory->addToHistory(ORDER_CONSTRUCT, (uint16_t)order.getBuildingType());
+				break;
+			}
+			case ORDER_CREATE:
+			{
+				m_outputHistory->addToHistory(ORDER_CREATE, (uint16_t)order.getProjectType());
+				break;
+			}
+			default: FErrorMsg("Can Occur?");
+		}
 		const char* szIcon = NULL;
 		wchar_t szBuffer[1024];
 		char szSound[1024];
@@ -16256,84 +16368,87 @@ void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
 	}
 }
 
+
 bool CvCity::doCheckProduction()
 {
 	CvPlayerAI& player = GET_PLAYER(getOwner());
-	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+
+	for (int iI = GC.getNumUnitInfos() - 1; iI > -1; iI--)
 	{
-		if (getUnitProduction((UnitTypes)iI) > 0)
+		const UnitTypes eUnitX = static_cast<UnitTypes>(iI);
+		if (getUnitProduction(eUnitX) > 0 && player.isProductionMaxedUnit(eUnitX))
 		{
-			if (player.isProductionMaxedUnit((UnitTypes)iI))
+			const int iProductionGold = getUnitProduction(eUnitX) * GC.getMAXED_UNIT_GOLD_PERCENT() / 100;
+
+			if (iProductionGold > 0)
 			{
-				int iProductionGold = ((getUnitProduction((UnitTypes)iI) * GC.getMAXED_UNIT_GOLD_PERCENT()) / 100);
-
-				if (iProductionGold > 0)
-				{
-					player.changeGold(iProductionGold);
-
-
-					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED", getNameKey(), GC.getUnitInfo((UnitTypes)iI).getTextKeyWide(), iProductionGold);
-					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getCommerceInfo(COMMERCE_GOLD).getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true);
-				}
-
-				setUnitProduction(((UnitTypes)iI), 0);
+				player.changeGold(iProductionGold);
+				AddDLLMessage(
+					getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText(
+						"TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED",
+						getNameKey(), GC.getUnitInfo(eUnitX).getTextKeyWide(), iProductionGold
+					),
+					"AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getCommerceInfo(COMMERCE_GOLD).getButton(),
+					GC.getCOLOR_RED(), getX(), getY(), true, true
+				);
 			}
+			setUnitProduction(eUnitX, 0);
 		}
 	}
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = GC.getNumBuildingInfos() - 1; iI > -1; iI--)
 	{
-		if (getBuildingProduction((BuildingTypes)iI) > 0)
+		const BuildingTypes eTypeX = static_cast<BuildingTypes>(iI);
+		if (getBuildingProduction(eTypeX) > 0 && player.isProductionMaxedBuilding(eTypeX))
 		{
-			if (player.isProductionMaxedBuilding((BuildingTypes)iI))
+			if (GC.getBuildingInfo(eTypeX).getProductionContinueBuilding() != NO_BUILDING && canConstruct(eTypeX))
 			{
-				int iProductionGold = getBuildingProduction((BuildingTypes)iI) * GC.getMAXED_BUILDING_GOLD_PERCENT() / 100;
-
-				if (GC.getBuildingInfo((BuildingTypes)iI).getProductionContinueBuilding() != NO_BUILDING)
-				{
-					if (canConstruct((BuildingTypes)iI))
-					{
-						//setBuildingProduction(eBuilding, getBuildingProduction((BuildingTypes)iI));
-						iProductionGold = 0;
-						m_iLostProduction = getBuildingProduction((BuildingTypes)iI);
-
-						//szBuffer = DLL_SERIALIZE(gDLL->getText("TXT_KEY_MISC_PROD_CONVERTED", getBuildingProduction((BuildingTypes)iI),  GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide(), GC.getBuildingInfo(eBuilding).getTextKeyWide()));
-						//AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getYieldInfo(YIELD_PRODUCTION).getButton(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);
-					}
-				}
+				m_iLostProduction = getBuildingProduction(eTypeX);
+			}
+			else
+			{
+				const int iProductionGold = getBuildingProduction(eTypeX) * GC.getMAXED_BUILDING_GOLD_PERCENT() / 100;
 
 				if (iProductionGold > 0)
 				{
 					player.changeGold(iProductionGold);
-
-					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED", getNameKey(), GC.getBuildingInfo((BuildingTypes)iI).getTextKeyWide(), iProductionGold);
-					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getCommerceInfo(COMMERCE_GOLD).getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true);
+					AddDLLMessage(
+						getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED",
+							getNameKey(), GC.getBuildingInfo(eTypeX).getTextKeyWide(), iProductionGold
+						),
+						"AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getCommerceInfo(COMMERCE_GOLD).getButton(),
+						GC.getCOLOR_RED(), getX(), getY(), true, true
+					);
 				}
-
-				setBuildingProduction(((BuildingTypes)iI), 0);
 			}
+			setBuildingProduction(eTypeX, 0);
 		}
 	}
 
-	for (int iI = 0; iI < GC.getNumProjectInfos(); iI++)
+	for (int iI = GC.getNumProjectInfos() - 1; iI > -1; iI--)
 	{
-		if (getProjectProduction((ProjectTypes)iI) > 0)
+		const ProjectTypes eTypeX = static_cast<ProjectTypes>(iI);
+		if (getProjectProduction(eTypeX) > 0 && player.isProductionMaxedProject(eTypeX))
 		{
-			if (player.isProductionMaxedProject((ProjectTypes)iI))
+			const int iProductionGold = ((getProjectProduction(eTypeX) * GC.getMAXED_PROJECT_GOLD_PERCENT()) / 100);
+
+			if (iProductionGold > 0)
 			{
-				const int iProductionGold = ((getProjectProduction((ProjectTypes)iI) * GC.getMAXED_PROJECT_GOLD_PERCENT()) / 100);
-
-				if (iProductionGold > 0)
-				{
-					player.changeGold(iProductionGold);
-
-
-					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED", getNameKey(), GC.getProjectInfo((ProjectTypes)iI).getTextKeyWide(), iProductionGold);
-					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getCommerceInfo(COMMERCE_GOLD).getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true);
-				}
-
-				setProjectProduction(((ProjectTypes)iI), 0);
+				player.changeGold(iProductionGold);
+				AddDLLMessage(
+					getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+					gDLL->getText(
+						"TXT_KEY_MISC_LOST_WONDER_PROD_CONVERTED",
+						getNameKey(), GC.getProjectInfo(eTypeX).getTextKeyWide(), iProductionGold
+					),
+					"AS2D_WONDERGOLD", MESSAGE_TYPE_MINOR_EVENT, GC.getCommerceInfo(COMMERCE_GOLD).getButton(),
+					GC.getCOLOR_RED(), getX(), getY(), true, true
+				);
 			}
+			setProjectProduction(eTypeX, 0);
 		}
 	}
 
@@ -16343,7 +16458,7 @@ bool CvCity::doCheckProduction()
 		return true;
 	}
 
-	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	for (int iI = GC.getNumUnitInfos() - 1; iI > -1; iI--)
 	{
 		const UnitTypes unitType = static_cast<UnitTypes>(iI);
 		if (getFirstUnitOrder(unitType) != -1)
@@ -16377,7 +16492,6 @@ bool CvCity::doCheckProduction()
 			}
 		}
 	}
-
 	bool bOK = true;
 
 	for (int iI = getOrderQueueLength() - 1; iI >= 0; iI--)
@@ -16388,7 +16502,6 @@ bool CvCity::doCheckProduction()
 			bOK = false;
 		}
 	}
-
 	return bOK;
 }
 
@@ -17480,6 +17593,31 @@ void CvCity::read(FDataStreamBase* pStream)
 			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iUnitID, "WorkerUnitID");
 			m_workers.push_back(iUnitID);
 		}
+
+		{
+			uint16_t iCityOutputHistorySize = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iCityOutputHistorySize, "CityOutputHistorySize");
+
+			for (uint16_t iI = 0; iI < iCityOutputHistorySize; iI++)
+			{
+				uint32_t iTurn = 0;
+				WRAPPER_READ_DECORATED(wrapper, "CvCity", &iTurn, "RecentOutputTurn");
+				m_outputHistory->setRecentOutputTurn(iI, iTurn);
+
+				uint16_t iCityOutputHistoryNumEntries = 0;
+				WRAPPER_READ_DECORATED(wrapper, "CvCity", &iCityOutputHistoryNumEntries, "CityOutputHistoryNumEntries");
+
+				for (uint16_t iJ = 0; iJ < iCityOutputHistoryNumEntries; iJ++)
+				{
+					uint16_t iOrderType = -1;
+					uint16_t iType = -1;
+					WRAPPER_READ_DECORATED(wrapper, "CvCity", &iOrderType, "OrderType");
+					WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "Type");
+
+					m_outputHistory->addToHistory(static_cast<OrderTypes>(iOrderType), iType, static_cast<short>(iI));
+				}
+			}
+		}
 	}
 	WRAPPER_READ_OBJECT_END(wrapper);
 	//Example of how to skip an unneeded element
@@ -17927,6 +18065,20 @@ void CvCity::write(FDataStreamBase* pStream)
 		foreach_(const int iUnitID, m_workers)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iUnitID, "WorkerUnitID");
+		}
+
+		uint16_t iCityOutputHistorySize = CityOutputHistory::getCityOutputHistorySize();
+		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iCityOutputHistorySize, "CityOutputHistorySize");
+		for (uint16_t iI = 0; iI < iCityOutputHistorySize; iI++)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory->getRecentOutputTurn(iI), "RecentOutputTurn");
+			uint16_t iCityOutputHistoryNumEntries = m_outputHistory->getCityOutputHistoryNumEntries(iI);
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iCityOutputHistoryNumEntries, "CityOutputHistoryNumEntries");
+			for (uint16_t iJ = 0; iJ < iCityOutputHistoryNumEntries; iJ++)
+			{
+				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory->getCityOutputHistoryEntry(iI, iJ, true), "OrderType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory->getCityOutputHistoryEntry(iI, iJ, false), "Type");
+			}
 		}
 	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
@@ -24440,3 +24592,24 @@ void CvCity::setWorkerHave(const int iUnitID, const bool bNewValue)
 		FErrorMsg("Vector element to remove was missing!");
 	}
 }
+
+uint16_t CvCity::getCityOutputHistorySize() const
+{
+	return CityOutputHistory::getCityOutputHistorySize();
+}
+
+uint32_t CvCity::getRecentOutputTurn(const int i) const
+{
+	return m_outputHistory->getRecentOutputTurn(i);
+}
+
+uint16_t CvCity::getCityOutputHistoryNumEntries(const uint16_t i) const
+{
+	return m_outputHistory->getCityOutputHistoryNumEntries(i);
+}
+
+uint16_t CvCity::getCityOutputHistoryEntry(const uint16_t i, const uint16_t iEntry, const bool bFirst) const
+{
+	return m_outputHistory->getCityOutputHistoryEntry(i, iEntry, bFirst);
+}
+

@@ -15729,7 +15729,7 @@ const char* CvLeaderHeadInfo::getArtDefineTag() const
 }
 
 // Arrays
-
+//DEFTRAITORIG
 bool CvLeaderHeadInfo::hasTrait(int i) const
 {
 	FASSERT_BOUNDS(0, GC.getNumTraitInfos(), i);
@@ -15867,6 +15867,37 @@ void CvLeaderHeadInfo::setDiplomacyVictoryWeight(int i)
 	m_iDiplomacyVictoryWeight = i;
 }
 
+//Int list Vector without delayed resolution
+int CvLeaderHeadInfo::getDefaultTrait(int i) const
+{
+	return m_aiDefaultTraits[i];
+}
+
+int CvLeaderHeadInfo::getNumDefaultTraits() const
+{
+	return (int)m_aiDefaultTraits.size();
+}
+
+bool CvLeaderHeadInfo::isDefaultTrait(int i) const
+{
+	return algo::any_of_equal(m_aiDefaultTraits, i);
+}
+
+int CvLeaderHeadInfo::getDefaultComplexTrait(int i) const
+{
+	return m_aiDefaultComplexTraits[i];
+}
+
+int CvLeaderHeadInfo::getNumDefaultComplexTraits() const
+{
+	return (int)m_aiDefaultComplexTraits.size();
+}
+
+bool CvLeaderHeadInfo::isDefaultComplexTrait(int i) const
+{
+	return algo::any_of_equal(m_aiDefaultComplexTraits, i);
+}
+
 
 void CvLeaderHeadInfo::getCheckSum(uint32_t& iSum) const
 {
@@ -15969,6 +16000,14 @@ void CvLeaderHeadInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_iWorkerRefuseAttitudeThreshold);
 	CheckSum(iSum, m_iCorporationRefuseAttitudeThreshold);
 	CheckSum(iSum, m_iSecretaryGeneralVoteRefuseAttitudeThreshold);
+
+
+	//Int list Vector without delayed resolution
+
+	CheckSumC(iSum, m_aiDefaultTraits);
+	CheckSumC(iSum, m_aiDefaultComplexTraits);
+
+
 }
 
 const CvArtInfoLeaderhead* CvLeaderHeadInfo::getArtInfo() const
@@ -16138,6 +16177,11 @@ bool CvLeaderHeadInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"SecretaryGeneralVoteRefuseAttitudeThreshold", "ATTITUDE_ANNOYED");
 	m_iSecretaryGeneralVoteRefuseAttitudeThreshold = pXML->GetInfoClass(szTextVal);
+
+	//Int list Vector without delayed resolution
+	pXML->SetOptionalVector(&m_aiDefaultTraits, L"DefaultTraits");
+	pXML->SetOptionalVector(&m_aiDefaultComplexTraits, L"DefaultComplexTraits");
+
 
 	setDefaultMemoryInfo();
 	setDefaultContactInfo();
@@ -16374,6 +16418,12 @@ void CvLeaderHeadInfo::copyNonDefaults(const CvLeaderHeadInfo* pClassInfo)
 	if (getConquestVictoryWeight() == 0) m_iConquestVictoryWeight = pClassInfo->getConquestVictoryWeight();
 	if (getDominationVictoryWeight() == 0) m_iDominationVictoryWeight = pClassInfo->getDominationVictoryWeight();
 	if (getDiplomacyVictoryWeight() == 0) m_iDiplomacyVictoryWeight = pClassInfo->getDiplomacyVictoryWeight();
+
+
+	//Int list Vector without delayed resolution
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiDefaultTraits, pClassInfo->m_aiDefaultTraits);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiDefaultComplexTraits, pClassInfo->m_aiDefaultComplexTraits);
+
 }
 
 //I'm lazy, so sue me. The XML still overrides this, so no worries.

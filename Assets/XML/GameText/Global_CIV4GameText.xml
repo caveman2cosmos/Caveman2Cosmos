@@ -12465,38 +12465,6 @@
 		<Spanish>Ya podéis adoptar el [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT] como religión oficial...</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION</Tag>
-		<English>Choose production in %s1_City...</English>
-		<French>Choix de la production de %s1_City...</French>
-		<German>Wählt die Produktion in %s1_City ...</German>
-		<Italian>Scegli la produzione a %s1_City...</Italian>
-		<Spanish>Elegid la producción de %s1_City...</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_BUILDING</Tag>
-		<English>You have constructed a building ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) in %s2_City...</English>
-		<French>Vous avez construit un bâtiment ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) à %s2_City...</French>
-		<German>Ihr habt ein Gebäude ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) in %s2_City errichtet ...</German>
-		<Italian>Hai costruito l'edificio ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) a %s2_City...</Italian>
-		<Spanish>Habéis construido [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT] en %s2_City...</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_PROJECT</Tag>
-		<English>You have created a project ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) in %s2_City...</English>
-		<French>Vous avez créé un projet ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) à %s2_City...</French>
-		<German>Ihr habt ein Projekt ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) in %s2_City erschaffen ...</German>
-		<Italian>Hai creato il progetto ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) a %s2_City...</Italian>
-		<Spanish>Habéis creado [COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT] en %s2_City...</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_UNIT</Tag>
-		<English>You have trained a unit ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) in %s2_City...</English>
-		<French>Vous avez entraîné une nouvelle unité ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) à %s2_City...</French>
-		<German>Ihr habt eine Einheit ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) in %s2_City ausgebildet ...</German>
-		<Italian>Hai addestrato l'unità ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) a %s2_City...</Italian>
-		<Spanish>Habéis entrenado a [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT] en %s2_City...</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MINIMIZED_CHOOSE_TECH</Tag>
 		<English>Choose a new technology to research...</English>
 		<French>Choisissez une nouvelle technologie à rechercher...</French>
@@ -20651,38 +20619,6 @@
 		<Spanish>Por supuesto, cancelémoslo.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_POPUP_CANNOT_CONSTRUCT_WORK_NEXT_LIMITED</Tag>
-		<English>You cannot continue constructing [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
-		<French>Vous ne pouvez plus assurer la construction de : [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à la place ?</French>
-		<German>Die Errichtung des Gebäudes [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
-		<Italian>Non puoi continuare a costruire l'edificio [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
-		<Spanish>No podéis seguir construyendo [NUM1:el:la:los:las] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
-	</TEXT>
-		<TEXT>
-		<Tag>TXT_KEY_POPUP_CANNOT_CREATE_WORK_NEXT</Tag>
-		<English>You cannot continue creating a [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
-		<French>Vous ne pouvez plus assurer la création de : [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à la place ?</French>
-		<German>Das Projekt [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
-		<Italian>Non puoi continuare la realizzazione del progetto [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
-		<Spanish>No podéis seguir creando [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CANNOT_CREATE_WORK_NEXT_LIMITED</Tag>
-		<English>You cannot continue creating [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
-		<French>Vous ne pouvez plus créer : [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à la place ?</French>
-		<German>Das Projekt [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
-		<Italian>Non puoi continuare a creare il progetto [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
-		<Spanish>No podéis seguir creando [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CANNOT_TRAIN_WORK_NEXT_LIMITED</Tag>
-		<English>You cannot continue training [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
-		<French>Vous ne pouvez plus entraîner : [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à la place ?</French>
-		<German>Die Ausbildung der Einheit [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
-		<Italian>Non puoi continuare a realizzare l'unità [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
-		<Spanish>No podéis seguir entrenando [NUM1:al:a la:a los:a las] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_POPUP_CHOOSE_TECH</Tag>
 		<English>Choose a technology...</English>
 		<French>Choisissez une technologie...</French>
@@ -20721,22 +20657,6 @@
 		<German>Ja, stimmt die Gebete an!</German>
 		<Italian>Sì, iniziamo subito i riti!</Italian>
 		<Spanish>¡Sí, que empiecen los cánticos!</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CREATED_WORK_ON_NEXT_LIMITED</Tag>
-		<English>You have created [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName. What would you like to work on next?</English>
-		<French>Vous avez créé : [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire ensuite ?</French>
-		<German>Das Projekt [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName wurde fertig gestellt. Wie lautet Euer nächster Befehl?</German>
-		<Italian>Hai creato il progetto [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare adesso?</Italian>
-		<Spanish>Habéis creado [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer a continuación?</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CREATED_WORK_ON_NEXT_SPACESHIP</Tag>
-		<English>%s2_CityName has added [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] to the spaceship. What would you like to work on next?</English>
-		<French>Ajout de : [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] au vaisseau par %s2_CityName. Que souhaitez-vous construire ensuite ?</French>
-		<German>%s2_CityName hat das Projekt [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] zum Raumschiff hinzugefügt. Woran möchtet Ihr als Nächstes arbeiten?</German>
-		<Italian>%s2_CityName ha aggiunto [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] all'astronave. Qual è il prossimo compito?</Italian>
-		<Spanish>%s2_CityName ha añadido [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] a la nave espacial. ¿Qué queréis hacer a continuación?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_CULTURE_DEMAND</Tag>
@@ -21092,27 +21012,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_RECOMMENDED</Tag>
-		<English>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Recommended (%s3_AdvsrName)[COLOR_REVERT]</English>
+		<English>%s1_ProdName (%d2 Turns) - [COLOR_HIGHLIGHT_TEXT]%s3_Advisor[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Conseil (%s3_AdvsrName) :[COLOR_REVERT] %s1_ProdName (%d2_NumTurns) </French>
 		<German>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]empfohlen (%s3_AdvsrName)[COLOR_REVERT]</German>
 		<Italian>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Consigliato (%s3_AdvsrName)[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT](%s3_AdvsrName) Se recomienda crear:[COLOR_REVERT] %s1_ProdName (%d2_NumTurns [NUM2:turno:turnos])</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_RECOMMENDED_NO_ADV</Tag>
-		<English>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Recommended[COLOR_REVERT]</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Conseil :[COLOR_REVERT] %s1_ProdName (%d2_NumTurns) </French>
-		<German>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]empfohlen[COLOR_REVERT]</German>
-		<Italian>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Consigliato[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_HIGHLIGHT_TEXT]Se recomienda crear:[COLOR_REVERT] %s1_ProdName (%d2_NumTurns [NUM2:turno:turnos])</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_RECOMMENDED_NO_ADV_OR_TURNS</Tag>
-		<English>%s1_WorkName [COLOR_HIGHLIGHT_TEXT]Recommended[COLOR_REVERT]</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Conseil :[COLOR_REVERT] %s1_WorkName</French>
-		<German>%s1_WorkName [COLOR_HIGHLIGHT_TEXT]empfohlen[COLOR_REVERT]</German>
-		<Italian>%s1_WorkName [COLOR_HIGHLIGHT_TEXT]Consigliato[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_HIGHLIGHT_TEXT]Se recomienda:[COLOR_REVERT] %s1_WorkName</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_RECOMMENDED_ONLY_ADV</Tag>
@@ -21299,14 +21203,6 @@
 		<Spanish>Excelencia, %s1_CityName es una ciudad costera y debería aprovechar lo que le ofrece la mar. La construcción de [NUM2:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] aumentaría de manera significativa su crecimiento.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_POPUP_WHAT_TO_BUILD</Tag>
-		<English>What would you like to build in this city?</English>
-		<French>Que souhaitez-vous construire dans cette ville ?</French>
-		<German>Was wollt Ihr in dieser Stadt errichten?</German>
-		<Italian>Cosa vuoi creare in questa città?</Italian>
-		<Spanish>¿Qué os gustaría construir en esta ciudad?</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_POPUP_YES_START_REVOLUTION</Tag>
 		<English>Yes, let's get this revolution started!</English>
 		<French>Oui, que la révolution commence !</French>
@@ -21328,6 +21224,10 @@
 		<Spanish>Poder</Spanish>
 		<Polish>Siła</Polish>
 		<Russian>Ìîãóùåñòâî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PREVIOUS_OUTPUT</Tag>
+		<English>Previous Output</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_CONVERTS</Tag>

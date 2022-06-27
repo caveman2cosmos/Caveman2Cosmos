@@ -226,5 +226,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getUnitListNumInGroup", &CyCity::getUnitListNumInGroup, "int (int)")
 		.def("getUnitListType", &CyCity::getUnitListType, "int (int,int)")
 
+		.def("AI_bestUnit", &CyCity::AI_bestUnit, "int ()")
+		.def("AI_bestUnitAI", &CyCity::AI_bestUnitAI, "int (UnitAITypes eUnitAITypes)")
 		;
 }

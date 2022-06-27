@@ -1,26 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_POPUP_CANNOT_CONSTRUCT_WORK_NEXT</Tag>
-		<English>You cannot continue constructing a [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
-		<French>Vous ne pouvez pas continuer à construire [NUM1:un:une:des:des] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] à %s2_CityName. Que voulez-vous faire à la place?</French>
-		<German>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] [NUM1:kann:können] nicht in %s2_CityName fertiggestellt werden. Was wollt Ihr stattdessen produzieren lassen?</German>
-		<Italian>Non puoi continuare a costruire [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] a %s2_CityName. Cosa vorresti produrre al suo posto?</Italian>
-		<Polish>Nie możesz kontynuować konstrukcji [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] w %s2_CityName. Czy mamy się zająć teraz?</Polish>
-		<Spanish>No podéis seguir construyendo [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
-		<Russian>Построить здание [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] в городе %s2_CityName не удастся. Выберите другое занятие.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CANNOT_TRAIN_WORK_NEXT</Tag>
-		<English>You cannot continue training a [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
-		<French>Vous ne pouvez pas poursuivre l'entraînement [NUM1:d'un:d'une:de:de] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à la place?</French>
-		<German>[COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] [NUM1:kann:können] nicht länger in %s2_CityName aufgestellt werden. Was wollt Ihr stattdessen produzieren lassen?</German>
-		<Italian>Non puoi continuare ad addestrare l'unità [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] a %s2_CityName. Cosa vorresti produrre al suo posto?</Italian>
-		<Polish>Nie możesz kontynuować werbunku [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] w %s2_CityName. Czy mamy się zająć teraz?</Polish>
-		<Spanish>No podéis seguir entrenando a [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
-		<Russian>Продолжить производство юнита [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] в городе %s2_CityName нельзя. Выберите другое занятие.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_POPUP_CHAIR_ELECTION</Tag>
 		<English>As Chair of the Congress of Vienna, you can choose a Congress Act to put forward for a global vote.</English>
 		<French>En tant que Porte parole du Congrès de Vienne, vous pouvez choisir un Acte du Congrès, qui sera soumis au vote.</French>
@@ -45,36 +25,6 @@
 		<Polish>Wybierz format zapisu</Polish>
 		<Spanish>Elige un formato de guardado</Spanish>
 		<Russian>Выберите формат сохр.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CONSTRUCTED_WORK_ON_NEXT</Tag>
-		<English>You have constructed a [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName. What would you like to work on next?</English>
-		<French>Vous venez de construire [NUM1:un:une:des:des] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire ensuite?</French>
-		<German>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName fertiggestellt. Was wollt Ihr als Nächstes produzieren?</German>
-		<Italian>Hai costruito [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] a %s2_CityName. Cosa vuoi produrre adesso?</Italian>
-		<Polish>Zbudowałeś [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] w %s2_CityName. Nad czym mamy się teraz skupić?</Polish>
-		<Spanish>Habéis construido [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer a continuación?</Spanish>
-		<Russian>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]: строительство в городе %s2_CityName завершено. Чем займетесь далее?</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CONSTRUCTED_WORK_ON_NEXT_LIMITED</Tag>
-		<English>You have constructed [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName. What would you like to work on next?</English>
-		<French>Vous avez construit [NUM1:un:une:des:des] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire ensuite?</French>
-		<German>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName fertiggestellt. Was wollt Ihr als Nächstes produzieren?</German>
-		<Italian>Hai costruito [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] a %s2_CityName. Cosa vuoi produrre adesso?</Italian>
-		<Polish>Zbudowałeś [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] w %s2_CityName. Nad czym mamy się teraz skupić?</Polish>
-		<Spanish>Habéis construido [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer a continuación?</Spanish>
-		<Russian>[COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT]: производство в городе %s2_CityName завершено. Чем займетесь дальше?</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CREATED_WORK_ON_NEXT</Tag>
-		<English>You have created a [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName. What would you like to work on next?</English>
-		<French>Vous avez créé [NUM1:un:une:des:des] [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] à %s2_CityName. Que voulez-vous faire ensuite?</French>
-		<German>[COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName fertiggestellt. Was wollt Ihr als Nächstes produzieren?</German>
-		<Italian>Hai realizzato [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] a %s2_CityName. Cosa vuoi produrre adesso?</Italian>
-		<Polish>Stworzyłeś [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] w %s2_CityName. Nad czym mamy się teraz skupić?</Polish>
-		<Spanish>Habéis creado [COLOR_HIGHLIGHT_TEXT]%s1_PrjctName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer a continuación?</Spanish>
-		<Russian>Создание проекта [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] в городе %s2_CityName завершено. Чем займетесь далее?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_ENTER_LANDS_WAR</Tag>
@@ -196,26 +146,6 @@
 		<Polish>To straszne!</Polish>
 		<Spanish>¡Es horrible!</Spanish>
 		<Russian>Какой кошмар!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_TRAINED_WORK_ON_NEXT</Tag>
-		<English>You have trained a [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName. What would you like to work on next?</English>
-		<French>Vous avez entraîné [NUM1:un:une:des:des] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à présent?</French>
-		<German>[COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName aufgestellt. Was wollt Ihr als Nächstes produzieren?</German>
-		<Italian>Hai addestrato [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] a %s2_CityName. Cosa vuoi produrre adesso?</Italian>
-		<Polish>Wytrenowałeś [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] w %s2_CityName. Nad czym mamy się teraz skupić?</Polish>
-		<Spanish>Habéis entrenado a [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer a continuación?</Spanish>
-		<Russian>Юнит [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] в городе %s2_CityName готов. Чем займетесь далее?</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_TRAINED_WORK_ON_NEXT_LIMITED</Tag>
-		<English>You have trained [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName. What would you like to work on next?</English>
-		<French>Vous avez entraîné [NUM1:un:une:des:des] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire ensuite?</French>
-		<German>[COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName aufgestellt. Was wollt Ihr als Nächstes produzieren?</German>
-		<Italian>Hai addestrato [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] a %s2_CityName. Cosa vuoi produrre adesso?</Italian>
-		<Polish>Wytrenowałeś [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] w %s2_CityName. Nad czym mamy się teraz skupić?</Polish>
-		<Spanish>Habéis entrenado a [NUM1:un:una:unos:unas] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer a continuación?</Spanish>
-		<Russian>Юнит [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] в городе %s2_CityName готов. Чем займетесь дальше?</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_UNHAPPY_CITIZENS_DEMAND</Tag>

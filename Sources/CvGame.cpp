@@ -549,7 +549,7 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		processGreatWall(true, true);
 
 		// Is a modifier recalc needed?
-		GC.getLoadedInitCore().checkVersions();
+		GC.getInitCore().checkVersions();
 	}
 	// Set the unit/building filters to default state now that game is fully initialized.
 	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUntrainableUnits", true));
@@ -583,6 +583,9 @@ void CvGame::doPreTurn0()
 		PROFILE("CvGame::update.AutoSave");
 		gDLL->getEngineIFace()->AutoSave(true);
 	}
+	// Toffer - Move camera after autosave as the latter interrupts the former from completing succsessfully.
+	GC.getCurrentViewport()->bringIntoView(GET_PLAYER(GC.getGame().getActivePlayer()).getStartingPlot()->getX(), GET_PLAYER(GC.getGame().getActivePlayer()).getStartingPlot()->getY());
+
 	OutputDebugString("doPreTurn0: End\n");
 }
 
@@ -723,9 +726,6 @@ void CvGame::regenerateMap()
 	CvEventReporter::getInstance().mapRegen();
 
 	doPreTurn0();
-
-	// Toffer - Move camera after autosave as the latter interrupts the former from completing succsessfully.
-	GC.getCurrentViewport()->bringIntoView(GET_PLAYER(GC.getGame().getActivePlayer()).getStartingPlot()->getX(), GET_PLAYER(GC.getGame().getActivePlayer()).getStartingPlot()->getY());
 }
 
 void CvGame::uninit()
@@ -4444,10 +4444,7 @@ bool CvGame::isFinalInitialized() const
 /*DllExport*/ void CvGame::setFinalInitialized(bool bNewValue)
 {
 	if (bNewValue)
-	{
 		OutputDebugString("Exe says the game is fully initialized\n");
-		onFinalInitialized(true);
-	}
 	else OutputDebugString("Exe says the game is no longer initialized\n"); // This never happens ever.
 }
 

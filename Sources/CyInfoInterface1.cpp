@@ -173,6 +173,7 @@ void CyInfoPythonInterface1()
 		;
 
 	python::class_<CvUnitInfo, python::bases<CvInfoBase, CvScalableInfo>, boost::noncopyable>("CvUnitInfo", python::no_init)
+		.def("getAdvisorType", &CvUnitInfo::getAdvisorType, "int ()")
 
 		.def("getMaxGlobalInstances", &CvUnitInfo::getMaxGlobalInstances, "int ()")
 		.def("getMaxPlayerInstances", &CvUnitInfo::getMaxPlayerInstances, "int ()")

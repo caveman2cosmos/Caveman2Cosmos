@@ -93,9 +93,6 @@
 			<option id="RemoveSpecialist" key="Remove Specialist"
 					type="boolean" default="True"/>
 
-			<option id="CDAZoomCityDetails" key="CDA Zoom City Details"
-					type="boolean" default="True"/>
-
 			<option id="RemoveFeatureHealthEffects" key="Remove Feature Health Effects"
 					type="boolean" default="True" dll="5"/>
 			<option id="RemoveFeatureHealthEffectsCountOtherTiles" key="Remove Feature Health Effects Count Other Tiles"
