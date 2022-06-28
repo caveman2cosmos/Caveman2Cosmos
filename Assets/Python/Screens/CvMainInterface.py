@@ -2062,7 +2062,7 @@ class CvMainInterface:
 					else:
 						print "[WARN] self.bUpdateCityTab unnecessarily set to 'True'"
 				else:
-					self.updateCityTab(screen, iTab)
+					self.updateCityTab(screen)
 
 				self.bUpdateCityTab = False
 
@@ -3476,7 +3476,7 @@ class CvMainInterface:
 		h = yMax - y
 		screen.addPanel("CityTabWindow", "", "", True, True, x, y, w, h, PanelStyles.PANEL_STYLE_MAIN)
 		h -= 28
-		self.updateCityTab(screen, iTab, x, y, w, h)
+		self.updateCityTab(screen, x, y, w, h)
 		screen.setText("CT|Options0", "", "<img=Art/Interface/Buttons/general/optionIcon1.dds>", 1<<0, xRes - xRes/4 - 42, 138, 0, FontTypes.GAME_FONT, eWidGen, 0, 0)
 
 	def fillUnitCityTabHeader(self, screen):
@@ -3589,8 +3589,9 @@ class CvMainInterface:
 		screen.show("CT|BuildingSorting")
 
 
-	def updateCityTab(self, screen, iTab, x=-1, y0=166, w=-1, h=-1):
+	def updateCityTab(self, screen, x=-1, y0=166, w=-1, h=-1):
 
+		iTab = self.iCityTab
 		if -1 in (x, w, h):
 			if self.bCityScreen:
 				x = self.xRes/4
@@ -5786,11 +5787,11 @@ class CvMainInterface:
 			elif BASE == "CT":
 				if TYPE == "UnitFilter":
 					self.InCity.CyCity.setUnitListFilterActive(ID, not self.InCity.CyCity.getUnitListFilterActive(ID))
-					self.updateCityTab(screen, 0)
+					self.updateCityTab(screen)
 
 				elif TYPE == "BuildingFilter":
 					self.InCity.CyCity.setBuildingListFilterActive(ID, not self.InCity.CyCity.getBuildingListFilterActive(ID))
-					self.updateCityTab(screen, self.iCityTab)
+					self.updateCityTab(screen)
 
 				elif TYPE == "Options":
 					import CityOptions
@@ -5958,7 +5959,7 @@ class CvMainInterface:
 						iUnitSorting = screen.getPullDownData(NAME, iData)
 						if iUnitSorting >= 0:
 							self.InCity.CyCity.setUnitListSorting(iUnitSorting)
-					self.updateCityTab(screen, self.iCityTab)
+					self.updateCityTab(screen)
 
 		elif iCode == 20: # slider stop
 			if NAME == "FoVSlider":
@@ -5991,7 +5992,7 @@ def applyCityTabOptions(iPlayer, userData, popupReturn):
 	CityOpt.setBuildIconSize(popupReturn.getSpinnerWidgetValue(0))
 	screen = CyGInterfaceScreen("MainInterface", CvScreenEnums.MAIN_INTERFACE)
 	g_mainInterface.buildCityTabButtons(screen, g_mainInterface.InCity.CyCity)
-	g_mainInterface.updateCityTab(screen, g_mainInterface.iCityTab)
+	g_mainInterface.updateCityTab(screen)
 	g_mainInterface.cityOptions.drawOptions(screen, g_mainInterface)
 
 
