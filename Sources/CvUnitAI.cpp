@@ -13782,7 +13782,7 @@ bool CvUnitAI::AI_discover(const bool bFirstResearchOnly)
 		{
 			if (iPercentWasted <= 30 || bFirstResearchOnly && iPercentWasted <= 50)
 			{
-				getGroup()->pushMission(MISSION_DISCOVER);
+				discover(eTech);
 				return true;
 			}
 		}
@@ -13794,7 +13794,7 @@ bool CvUnitAI::AI_discover(const bool bFirstResearchOnly)
 	// Unit cannot finish the tech this turn, so why not speed it up some?
 	if (getDiscoverResearch(eTech) <= GET_TEAM(getTeam()).getResearchLeft(eTech))
 	{
-		getGroup()->pushMission(MISSION_DISCOVER);
+		discover(eTech);
 		return true;
 	}
 	// Unit can finish the tech this turn.
@@ -13807,7 +13807,7 @@ bool CvUnitAI::AI_discover(const bool bFirstResearchOnly)
 	// Takes some time to invent, allow some wastage.
 	if (iPercentWasted <= 5 || iPercentWasted <= 15 && GET_PLAYER(getOwner()).getCurrentResearch() == eTech)
 	{
-		getGroup()->pushMission(MISSION_DISCOVER);
+		discover(eTech);
 		return true;
 	}
 	return false;

@@ -730,12 +730,6 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 			GC.getGame().selectionListGameNetMessage(GAMEMESSAGE_PUSH_MISSION, MISSION_SHADOW, info.getData2(), info.getData3(), pPopupReturn->getButtonClicked());
 		}
 		break;
-	case BUTTONPOPUP_SELECT_DISCOVERY_TECH:
-		if (pPopupReturn->getButtonClicked() != GC.getNumTechInfos())
-		{
-			GC.getGame().selectionListGameNetMessage(GAMEMESSAGE_PUSH_MISSION, MISSION_WAIT_FOR_TECH, pPopupReturn->getButtonClicked(), pPopupReturn->getButtonClicked(), GC.getNumTechInfos());
-		}
-		break;
 	case BUTTONPOPUP_CHOOSE_BUILDUP:
 		if (pPopupReturn->getButtonClicked() != 0)
 		{
@@ -800,9 +794,15 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		}
 		break;
 
+	case BUTTONPOPUP_SELECT_DISCOVERY_TECH:
+	{ 
+		if (pPopupReturn->getButtonClicked() != GC.getNumTechInfos())
+		{
+			GC.getGame().selectionListGameNetMessage(GAMEMESSAGE_PUSH_MISSION, MISSION_DISCOVER, info.getData1(), pPopupReturn->getButtonClicked());
+		}
+	}
 	case BUTTONPOPUP_GOTO_CITY:
 		break;
-
 
 	case BUTTONPOPUP_CHOOSE_ARREST_UNIT:
 		if (pPopupReturn->getButtonClicked() != 0)
@@ -2717,6 +2717,7 @@ bool CvDLLButtonPopup::launchSelectShadowUnitPopup(CvPopup* pPopup, CvPopupInfo 
 	return (true);
 }
 
+
 bool CvDLLButtonPopup::launchSelectDiscoveryTechPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
 	const PlayerTypes ePlayer = GC.getGame().getActivePlayer();
@@ -2725,24 +2726,57 @@ bool CvDLLButtonPopup::launchSelectDiscoveryTechPopup(CvPopup* pPopup, CvPopupIn
 	{
 		return false;
 	}
-	CvPlayerAI& player = GET_PLAYER(ePlayer);
-	CvUnit* unit = player.getUnit(info.getData1());
+	CvUnit* unit = NULL;
 
+	foreach_(CvUnit* unitX, gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getGroup()->units())
+	{
+		if (unitX->canDiscover())
+		{
+			unit = unitX;
+			break;
+		}
+	}
 	if (unit == NULL)
 	{
 		return false;
 	}
-	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_CHOOSE_TECH_TO_WAIT_FOR"));
+	CvPlayerAI& player = GET_PLAYER(ePlayer);
 
+	const TechTypes eTechAI = unit->getDiscoveryTech();
+	info.setData1(unit->getID());
+
+	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_CHOOSE_TECH_TO_WAIT_FOR"));
+	gDLL->getInterfaceIFace()->popupAddGenericButton(
+		pPopup,
+		gDLL->getText(
+			"TXT_KEY_POPUP_RECOMMENDED",
+			GC.getTechInfo(eTechAI).getDescription(),
+			player.getResearchTurnsLeft(eTechAI, true),
+			GC.getAdvisorInfo((AdvisorTypes)GC.getTechInfo(eTechAI).getAdvisorType()).getTextKeyWide()
+		),
+		GC.getTechInfo(eTechAI).getButton(), static_cast<int>(eTechAI), WIDGET_PEDIA_JUMP_TO_TECH,
+		static_cast<int>(eTechAI), -1, true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY
+	);
 	for (int iI = GC.getNumTechInfos() - 1; iI > -1; iI--)
 	{
-		if (player.canResearch((TechTypes)iI))
+		const TechTypes eTechX = static_cast<TechTypes>(iI);
+
+		if (eTechX != eTechAI && player.canResearch(eTechX))
 		{
 			for (int iJ = GC.getNumFlavorTypes() - 1; iJ > -1; iJ--)
 			{
-				if (GC.getTechInfo((TechTypes) iI).getFlavorValue(iJ) * GC.getUnitInfo(unit->getUnitType()).getFlavorValue(iJ) > 0)
+				if (GC.getTechInfo(eTechX).getFlavorValue(iJ) * GC.getUnitInfo(unit->getUnitType()).getFlavorValue(iJ) > 0)
 				{
-					gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, GC.getTechInfo((TechTypes)iI).getDescription(), GC.getTechInfo((TechTypes)iI).getButton(), iI, WIDGET_GENERAL);
+					gDLL->getInterfaceIFace()->popupAddGenericButton(
+						pPopup,
+						gDLL->getText(
+							"INTERFACE_CITY_PRODUCTION",
+							GC.getTechInfo(eTechX).getDescription(),
+							player.getResearchTurnsLeft(eTechX, true)
+						),
+						GC.getTechInfo(eTechX).getButton(), iI, WIDGET_PEDIA_JUMP_TO_TECH,
+						iI, -1, true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY
+					);
 					break;
 				}
 			}
@@ -2750,9 +2784,9 @@ bool CvDLLButtonPopup::launchSelectDiscoveryTechPopup(CvPopup* pPopup, CvPopupIn
 	}
 	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_NEVER_MIND"), NULL, GC.getNumTechInfos(), WIDGET_GENERAL);
 	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false, POPUPSTATE_IMMEDIATE);
-
 	return true;
 }
+
 
 bool CvDLLButtonPopup::launchChooseBuildUpPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
