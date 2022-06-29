@@ -19089,38 +19089,45 @@ int CvCity::getBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCo
 
 void CvCity::setBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange)
 {
+	int iCount = 0;
+	bool bFound = false;
+	const bool bErase = iChange == 0;
 	foreach_(BuildingCommerceChange& commerceChange, m_aBuildingCommerceChange)
 	{
 		if (commerceChange.eBuilding == eBuilding && commerceChange.eCommerce == eCommerce)
 		{
+			bFound = true;
 			if (commerceChange.iChange != iChange)
 			{
-				if (iChange == 0)
-				{
-					// Don't worry, we are exiting the function at this point, not continuing the loop
-					m_aBuildingCommerceChange.erase(&commerceChange);
-				}
-				else
+				if (!bErase)
 				{
 					commerceChange.iChange = iChange;
 				}
 				updateBuildingCommerce();
 			}
-
-			return;
+			break;
 		}
+		iCount++;
 	}
 
-	if (0 != iChange)
+	if (bFound)
 	{
-		BuildingCommerceChange kChange;
-		kChange.eBuilding = eBuilding;
-		kChange.eCommerce = eCommerce;
-		kChange.iChange = iChange;
-		m_aBuildingCommerceChange.push_back(kChange);
-
-		updateBuildingCommerce();
+		if (bErase)
+		{
+			m_aBuildingCommerceChange.erase(m_aBuildingCommerceChange.begin()+iCount);
+		}
+		return;
 	}
+	else if (bErase) return;
+
+	// Cache new vector entry.
+	BuildingCommerceChange kChange;
+	kChange.eBuilding = eBuilding;
+	kChange.eCommerce = eCommerce;
+	kChange.iChange = iChange;
+	m_aBuildingCommerceChange.push_back(kChange);
+
+	updateBuildingCommerce();
 }
 
 void CvCity::changeBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange)
