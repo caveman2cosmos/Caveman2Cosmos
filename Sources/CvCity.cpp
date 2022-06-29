@@ -18923,21 +18923,18 @@ bool CvCity::isEventOccured(EventTypes eEvent) const
 
 void CvCity::setEventOccured(EventTypes eEvent, bool bOccured)
 {
-	foreach_(EventTypes eEventOccured, m_aEventsOccured)
+	std::vector<EventTypes>::iterator itr = find(m_aEventsOccured.begin(), m_aEventsOccured.end(), eEvent);
+
+	if (itr == m_aEventsOccured.end())
 	{
-		if (eEventOccured == eEvent)
+		if (bOccured)
 		{
-			if (!bOccured)
-			{
-				m_aEventsOccured.erase(&eEventOccured);
-			}
-			return;
+			m_aEventsOccured.push_back(eEvent);
 		}
 	}
-
-	if (bOccured)
+	else if (!bOccured)
 	{
-		m_aEventsOccured.push_back(eEvent);
+		m_aEventsOccured.erase(itr);
 	}
 }
 
