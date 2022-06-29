@@ -19034,7 +19034,7 @@ void CvCity::setBuildingYieldChange(BuildingTypes eBuilding, YieldTypes eYield, 
 			{
 				if (!bErase)
 				{
-					yieldChange.iChange = iChange;;
+					yieldChange.iChange = iChange;
 				}
 
 				if (hasFullyActiveBuilding(eBuilding))
@@ -19055,19 +19055,18 @@ void CvCity::setBuildingYieldChange(BuildingTypes eBuilding, YieldTypes eYield, 
 		}
 		return;
 	}
+	else if (bErase) return;
 
-	if (!bErase)
+	// Cache new vector entry.
+	BuildingYieldChange kChange;
+	kChange.eBuilding = eBuilding;
+	kChange.eYield = eYield;
+	kChange.iChange = iChange;
+	m_aBuildingYieldChange.push_back(kChange);
+
+	if (hasFullyActiveBuilding(eBuilding))
 	{
-		BuildingYieldChange kChange;
-		kChange.eBuilding = eBuilding;
-		kChange.eYield = eYield;
-		kChange.iChange = iChange;
-		m_aBuildingYieldChange.push_back(kChange);
-
-		if (hasFullyActiveBuilding(eBuilding))
-		{
-			changeExtraYield(eYield, iChange);
-		}
+		changeExtraYield(eYield, iChange);
 	}
 }
 
