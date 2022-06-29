@@ -19021,31 +19021,42 @@ int CvCity::getBuildingYieldChange(BuildingTypes eBuilding, YieldTypes eYield) c
 
 void CvCity::setBuildingYieldChange(BuildingTypes eBuilding, YieldTypes eYield, int iChange)
 {
+	int iCount = 0;
+	bool bFound = false;
+	const bool bErase = iChange == 0;
 	foreach_(BuildingYieldChange& yieldChange, m_aBuildingYieldChange)
 	{
 		if (yieldChange.eBuilding == eBuilding && yieldChange.eYield == eYield)
 		{
+			bFound = true;
 			const int iOldChange = yieldChange.iChange;
 			if (iOldChange != iChange)
 			{
-				if (iChange == 0)
+				if (!bErase)
 				{
-					// Don't worry, we are exiting the function at this point, not continuing the loop
-					m_aBuildingYieldChange.erase(&yieldChange);
+					yieldChange.iChange = iChange;;
 				}
-				else yieldChange.iChange = iChange;
-
 
 				if (hasFullyActiveBuilding(eBuilding))
 				{
 					changeExtraYield(eYield, iChange - iOldChange);
 				}
 			}
-			return;
+			break;
 		}
+		iCount++;
 	}
 
-	if (0 != iChange)
+	if (bFound)
+	{
+		if (bErase)
+		{
+			m_aBuildingYieldChange.erase(m_aBuildingYieldChange.begin()+iCount);
+		}
+		return;
+	}
+
+	if (!bErase)
 	{
 		BuildingYieldChange kChange;
 		kChange.eBuilding = eBuilding;
