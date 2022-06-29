@@ -912,12 +912,13 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 				break;
 
 			case MISSION_DISCOVER:
+			{
 				if (pLoopUnit->canDiscover())
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_HURRY:
 				if (pLoopUnit->canHurry(pPlot, bTestVisible))
 				{
@@ -984,6 +985,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 				break;
 
 			case MISSION_CURE:
+			{
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 				if (pLoopUnit->canCure(pPlot, ((PromotionLineTypes)iData1)))
 				{
@@ -991,19 +993,19 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 				}
 #endif
 				break;
-
-			//ls612: Viewports Go To City mission
+			}
 			case MISSION_GOTO:
+			{
 				if (pLoopUnit->getDomainType() == DOMAIN_LAND || pLoopUnit->getDomainType() == DOMAIN_SEA)
 				{
 					return true;
 				}
 				break;
-
+			}
 			case MISSION_DIE_ANIMATION:
+			{
 				return false;
-				break;
-
+			}
 			case MISSION_BEGIN_COMBAT:
 			case MISSION_END_COMBAT:
 			case MISSION_AIRSTRIKE:
@@ -1086,6 +1088,7 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 				}
 				break;
 			case MISSION_SHADOW:
+			{
 				{
 					const CvPlot* pShadowPlot = GC.getMap().plot(headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2);
 
@@ -1101,15 +1104,10 @@ bool CvSelectionGroup::canStartMission(int iMission, int iData1, int iData2, CvP
 					}
 				}
 				break;
+			}
 			case MISSION_GREAT_COMMANDER:
-				if (GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS) && pLoopUnit->getUnitInfo().isGreatGeneral() && !pLoopUnit->isCommander())
-				{
-					return true;
-				}
-				break;
-			case MISSION_WAIT_FOR_TECH:
 			{
-				if (pLoopUnit->canDiscover())
+				if (GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS) && pLoopUnit->getUnitInfo().isGreatGeneral() && !pLoopUnit->isCommander())
 				{
 					return true;
 				}
@@ -1288,15 +1286,10 @@ bool CvSelectionGroup::startMission()
 				break;
 #endif
 			case MISSION_ESPIONAGE_SLEEP:
-			case MISSION_WAIT_FOR_TECH:
 			case MISSION_AMBUSH:
 			case MISSION_ASSASSINATE:
 				bDelete = true;
 				break;
-			default: // AIAndy: Assumed to be an outcome mission
-			{
-				break;
-			}
 		}
 
 		if (bNotify)
@@ -1598,7 +1591,7 @@ bool CvSelectionGroup::startMission()
 						}
 						case MISSION_DISCOVER:
 						{
-							if (pLoopUnit->discover())
+							if (GET_PLAYER(pLoopUnit->getOwner()).getUnit(headMissionQueueNode()->m_data.iData1)->discover((TechTypes)headMissionQueueNode()->m_data.iData2))
 							{
 								bAction = true;
 							}
@@ -1745,11 +1738,6 @@ bool CvSelectionGroup::startMission()
 						case MISSION_ESPIONAGE_SLEEP:
 						{
 							pLoopUnit->sleepForEspionage();
-							break;
-						}
-						case MISSION_WAIT_FOR_TECH:
-						{
-							pLoopUnit->waitForTech(headMissionQueueNode()->m_data.iFlags, headMissionQueueNode()->m_data.iData1);
 							break;
 						}
 						case MISSION_GREAT_COMMANDER:
@@ -2450,170 +2438,188 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 	{
 		switch (eInterfaceMode)
 		{
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
-		case INTERFACEMODE_GO_TO_SENTRY:
-			if (sentryAlertSameDomainType())
+			case INTERFACEMODE_GO_TO_SENTRY:
 			{
-				return false;
+				if (sentryAlertSameDomainType())
+				{
+					return false;
+				}
+				// fall through to next case
 			}
-			// fall through to next case
 #endif
-// BUG - Sentry Actions - end
-		case INTERFACEMODE_GO_TO:
-			if ((getDomainType() != DOMAIN_AIR) && (getDomainType() != DOMAIN_IMMOBILE))
+			case INTERFACEMODE_GO_TO:
 			{
-				return true;
-			}
-			break;
-
-		case INTERFACEMODE_GO_TO_TYPE:
-			if ((getDomainType() != DOMAIN_AIR) && (getDomainType() != DOMAIN_IMMOBILE))
-			{
-				if (pLoopUnit->plot()->plotCount(PUF_isUnitType, pLoopUnit->getUnitType(), -1, NULL, pLoopUnit->getOwner()) > 1)
+				if ((getDomainType() != DOMAIN_AIR) && (getDomainType() != DOMAIN_IMMOBILE))
 				{
 					return true;
 				}
+				break;
 			}
-			break;
-
-		case INTERFACEMODE_GO_TO_ALL:
-			if ((getDomainType() != DOMAIN_AIR) && (getDomainType() != DOMAIN_IMMOBILE))
+			case INTERFACEMODE_GO_TO_TYPE:
 			{
-				if (pLoopUnit->plot()->plotCount(NULL, -1, -1, NULL, pLoopUnit->getOwner()) > 1)
+				if ((getDomainType() != DOMAIN_AIR) && (getDomainType() != DOMAIN_IMMOBILE))
+				{
+					if (pLoopUnit->plot()->plotCount(PUF_isUnitType, pLoopUnit->getUnitType(), -1, NULL, pLoopUnit->getOwner()) > 1)
+					{
+						return true;
+					}
+				}
+				break;
+			}
+			case INTERFACEMODE_GO_TO_ALL:
+			{
+				if (getDomainType() != DOMAIN_AIR && getDomainType() != DOMAIN_IMMOBILE)
+				{
+					if (pLoopUnit->plot()->plotCount(NULL, -1, -1, NULL, pLoopUnit->getOwner()) > 1)
+					{
+						return true;
+					}
+				}
+				break;
+			}
+			case INTERFACEMODE_ROUTE_TO:
+			{
+				if (pLoopUnit->AI_getUnitAIType() == UNITAI_WORKER || pLoopUnit->AI_getUnitAIType() == UNITAI_WORKER_SEA)
+				{
+					if (pLoopUnit->canBuildRoute())
+					{
+						return true;
+					}
+				}
+				break;
+			}
+			case INTERFACEMODE_AIRLIFT:
+			{
+				if (pLoopUnit->canAirlift(pLoopUnit->plot()))
 				{
 					return true;
 				}
+				break;
 			}
-			break;
-
-		case INTERFACEMODE_ROUTE_TO:
-			if (pLoopUnit->AI_getUnitAIType() == UNITAI_WORKER || pLoopUnit->AI_getUnitAIType() == UNITAI_WORKER_SEA)
+			case INTERFACEMODE_NUKE:
 			{
-				if (pLoopUnit->canBuildRoute())
+				if (pLoopUnit->canNuke() && pLoopUnit->canMove())
 				{
 					return true;
 				}
+				break;
 			}
-			break;
-
-		case INTERFACEMODE_AIRLIFT:
-			if (pLoopUnit->canAirlift(pLoopUnit->plot()))
+			case INTERFACEMODE_RECON:
 			{
-				return true;
-			}
-			break;
-
-		case INTERFACEMODE_NUKE:
-			if (pLoopUnit->canNuke() && pLoopUnit->canMove())
-			{
-				return true;
-			}
-			break;
-		case INTERFACEMODE_RECON:
-			if (pLoopUnit->canRecon())
-			{
-				return true;
-			}
-			break;
-
-		case INTERFACEMODE_PARADROP:
-			if (pLoopUnit->canParadrop(pLoopUnit->plot()))
-			{
-				return true;
-			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB:
-			if (pLoopUnit->canAirBomb())
-			{
-				return true;
-			}
-			break;
-
-		case INTERFACEMODE_RANGE_ATTACK:
-			if (pLoopUnit->canRangeStrike())
-			{
-				return true;
-			}
-			break;
-
-		case INTERFACEMODE_AIRSTRIKE:
-			if (pLoopUnit->getDomainType() == DOMAIN_AIR)
-			{
-				if (pLoopUnit->canAirAttack())
+				if (pLoopUnit->canRecon())
 				{
 					return true;
 				}
+				break;
 			}
-			break;
-
-		case INTERFACEMODE_REBASE:
-			if (pLoopUnit->getDomainType() == DOMAIN_AIR)
+			case INTERFACEMODE_PARADROP:
 			{
-				return true;
+				if (pLoopUnit->canParadrop(pLoopUnit->plot()))
+				{
+					return true;
+				}
+				break;
 			}
-			break;
-
-		// Dale - AB: Bombing
-		case INTERFACEMODE_AIRBOMB1:
-			if (pLoopUnit->canAirBomb1())
+			case INTERFACEMODE_AIRBOMB:
 			{
-				return true;
+				if (pLoopUnit->canAirBomb())
+				{
+					return true;
+				}
+				break;
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB2:
-			if (pLoopUnit->canAirBomb2())
+			case INTERFACEMODE_RANGE_ATTACK:
 			{
-				return true;
+				if (pLoopUnit->canRangeStrike())
+				{
+					return true;
+				}
+				break;
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB3:
-			if (pLoopUnit->canAirBomb3())
+			case INTERFACEMODE_AIRSTRIKE:
 			{
-				return true;
+				if (pLoopUnit->getDomainType() == DOMAIN_AIR)
+				{
+					if (pLoopUnit->canAirAttack())
+					{
+						return true;
+					}
+				}
+				break;
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB4:
-			if (pLoopUnit->canAirBomb4())
+			case INTERFACEMODE_REBASE:
 			{
-				return true;
+				if (pLoopUnit->getDomainType() == DOMAIN_AIR)
+				{
+					return true;
+				}
+				break;
 			}
-			break;
-
-		case INTERFACEMODE_AIRBOMB5:
-			if (pLoopUnit->canAirBomb5())
+			case INTERFACEMODE_AIRBOMB1:
 			{
-				return true;
+				if (pLoopUnit->canAirBomb1())
+				{
+					return true;
+				}
+				break;
 			}
-			break;
-
-		// Dale - RB: Field Bombard
-		case INTERFACEMODE_BOMBARD:
-			if (pLoopUnit->canRBombard())
+			case INTERFACEMODE_AIRBOMB2:
 			{
-				return true;
+				if (pLoopUnit->canAirBomb2())
+				{
+					return true;
+				}
+				break;
 			}
-			break;
-
-		// Dale - FE: Fighters
-		case INTERFACEMODE_FENGAGE:
-			if (pLoopUnit->canFEngage() && GC.isDCM_FIGHTER_ENGAGE())
+			case INTERFACEMODE_AIRBOMB3:
 			{
-				return true;
+				if (pLoopUnit->canAirBomb3())
+				{
+					return true;
+				}
+				break;
 			}
-			break;
-		// ! Dale
-
-		case INTERFACEMODE_SHADOW_UNIT:
-			if (pLoopUnit->canShadow())
+			case INTERFACEMODE_AIRBOMB4:
 			{
-				return true;
+				if (pLoopUnit->canAirBomb4())
+				{
+					return true;
+				}
+				break;
 			}
-			break;
+			case INTERFACEMODE_AIRBOMB5:
+			{
+				if (pLoopUnit->canAirBomb5())
+				{
+					return true;
+				}
+				break;
+			}
+			case INTERFACEMODE_BOMBARD:
+			{
+				if (pLoopUnit->canRBombard())
+				{
+					return true;
+				}
+				break;
+			}
+			case INTERFACEMODE_FENGAGE:
+			{
+				if (pLoopUnit->canFEngage() && GC.isDCM_FIGHTER_ENGAGE())
+				{
+					return true;
+				}
+				break;
+			}
+			case INTERFACEMODE_SHADOW_UNIT:
+			{
+				if (pLoopUnit->canShadow())
+				{
+					return true;
+				}
+				break;
+			}
 		}
 	}
 	return false;

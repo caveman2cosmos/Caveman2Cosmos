@@ -1090,7 +1090,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	if (!bConstructorCall)
 		GC.updateReplacements();
 
-	m_lastGraphicUpdateRequestTickCount = -1;
+	m_lastGraphicUpdateRequestTickCount = 0;
 
 	CvPlotPaging::ResetPaging();
 }
@@ -2230,10 +2230,9 @@ void CvGame::update()
 		//	If a rebuild of the graphics is needed and about a second has gone by since a new refresh was last
 		//	requested perform the rebuild (this amalgamates all the rebuild requests pertaining to a move or
 		//	a sequence of moves)
-		if ( m_lastGraphicUpdateRequestTickCount != -1 && (GetTickCount() - m_lastGraphicUpdateRequestTickCount) > 500 )
+		if (m_lastGraphicUpdateRequestTickCount > 0 && GetTickCount() - m_lastGraphicUpdateRequestTickCount > 500)
 		{
-			m_lastGraphicUpdateRequestTickCount = -1;
-
+			m_lastGraphicUpdateRequestTickCount = 0;
 			gDLL->getEngineIFace()->RebuildAllPlots();
 			gDLL->getInterfaceIFace()->setDirty(GlobeLayer_DIRTY_BIT, true);
 		}

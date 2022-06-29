@@ -18923,21 +18923,18 @@ bool CvCity::isEventOccured(EventTypes eEvent) const
 
 void CvCity::setEventOccured(EventTypes eEvent, bool bOccured)
 {
-	foreach_(EventTypes eEventOccured, m_aEventsOccured)
+	std::vector<EventTypes>::iterator itr = find(m_aEventsOccured.begin(), m_aEventsOccured.end(), eEvent);
+
+	if (itr == m_aEventsOccured.end())
 	{
-		if (eEventOccured == eEvent)
+		if (bOccured)
 		{
-			if (!bOccured)
-			{
-				m_aEventsOccured.erase(&eEventOccured);
-			}
-			return;
+			m_aEventsOccured.push_back(eEvent);
 		}
 	}
-
-	if (bOccured)
+	else if (!bOccured)
 	{
-		m_aEventsOccured.push_back(eEvent);
+		m_aEventsOccured.erase(itr);
 	}
 }
 
@@ -19024,42 +19021,52 @@ int CvCity::getBuildingYieldChange(BuildingTypes eBuilding, YieldTypes eYield) c
 
 void CvCity::setBuildingYieldChange(BuildingTypes eBuilding, YieldTypes eYield, int iChange)
 {
+	int iCount = 0;
+	bool bFound = false;
+	const bool bErase = iChange == 0;
 	foreach_(BuildingYieldChange& yieldChange, m_aBuildingYieldChange)
 	{
 		if (yieldChange.eBuilding == eBuilding && yieldChange.eYield == eYield)
 		{
+			bFound = true;
 			const int iOldChange = yieldChange.iChange;
 			if (iOldChange != iChange)
 			{
-				if (iChange == 0)
+				if (!bErase)
 				{
-					// Don't worry, we are exiting the function at this point, not continuing the loop
-					m_aBuildingYieldChange.erase(&yieldChange);
+					yieldChange.iChange = iChange;
 				}
-				else yieldChange.iChange = iChange;
-
 
 				if (hasFullyActiveBuilding(eBuilding))
 				{
 					changeExtraYield(eYield, iChange - iOldChange);
 				}
 			}
-			return;
+			break;
 		}
+		iCount++;
 	}
 
-	if (0 != iChange)
+	if (bFound)
 	{
-		BuildingYieldChange kChange;
-		kChange.eBuilding = eBuilding;
-		kChange.eYield = eYield;
-		kChange.iChange = iChange;
-		m_aBuildingYieldChange.push_back(kChange);
-
-		if (hasFullyActiveBuilding(eBuilding))
+		if (bErase)
 		{
-			changeExtraYield(eYield, iChange);
+			m_aBuildingYieldChange.erase(m_aBuildingYieldChange.begin()+iCount);
 		}
+		return;
+	}
+	else if (bErase) return;
+
+	// Cache new vector entry.
+	BuildingYieldChange kChange;
+	kChange.eBuilding = eBuilding;
+	kChange.eYield = eYield;
+	kChange.iChange = iChange;
+	m_aBuildingYieldChange.push_back(kChange);
+
+	if (hasFullyActiveBuilding(eBuilding))
+	{
+		changeExtraYield(eYield, iChange);
 	}
 }
 
@@ -19082,38 +19089,45 @@ int CvCity::getBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCo
 
 void CvCity::setBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange)
 {
+	int iCount = 0;
+	bool bFound = false;
+	const bool bErase = iChange == 0;
 	foreach_(BuildingCommerceChange& commerceChange, m_aBuildingCommerceChange)
 	{
 		if (commerceChange.eBuilding == eBuilding && commerceChange.eCommerce == eCommerce)
 		{
+			bFound = true;
 			if (commerceChange.iChange != iChange)
 			{
-				if (iChange == 0)
-				{
-					// Don't worry, we are exiting the function at this point, not continuing the loop
-					m_aBuildingCommerceChange.erase(&commerceChange);
-				}
-				else
+				if (!bErase)
 				{
 					commerceChange.iChange = iChange;
 				}
 				updateBuildingCommerce();
 			}
-
-			return;
+			break;
 		}
+		iCount++;
 	}
 
-	if (0 != iChange)
+	if (bFound)
 	{
-		BuildingCommerceChange kChange;
-		kChange.eBuilding = eBuilding;
-		kChange.eCommerce = eCommerce;
-		kChange.iChange = iChange;
-		m_aBuildingCommerceChange.push_back(kChange);
-
-		updateBuildingCommerce();
+		if (bErase)
+		{
+			m_aBuildingCommerceChange.erase(m_aBuildingCommerceChange.begin()+iCount);
+		}
+		return;
 	}
+	else if (bErase) return;
+
+	// Cache new vector entry.
+	BuildingCommerceChange kChange;
+	kChange.eBuilding = eBuilding;
+	kChange.eCommerce = eCommerce;
+	kChange.iChange = iChange;
+	m_aBuildingCommerceChange.push_back(kChange);
+
+	updateBuildingCommerce();
 }
 
 void CvCity::changeBuildingCommerceChange(BuildingTypes eBuilding, CommerceTypes eCommerce, int iChange)

@@ -25,9 +25,9 @@ CvViewport::CvViewport(CvMap* pMap)
 	, m_bSelectCity(false)
 	, m_bAddSelectedCity(false)
 	, m_state(VIEWPORT_ACTION_STATE_NONE)
-	, m_countdown(0)
+//	, m_countdown(0)
 	, m_eSpoofHiddenGraphics(VIEWPORT_SPOOF_NONE)
-	, m_spoofTransitionStartTickCount(-1)
+	, m_spoofTransitionStartTickCount(0)
 {
 	resizeForMap();
 
@@ -280,31 +280,26 @@ void CvViewport::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRi
 //	Process the current action state (which may include transitioning to another state)
 void CvViewport::processActionState()
 {
-	if ( m_countdown > 0 )
+	/*
+	if (m_countdown > 0)
 	{
 		m_countdown--;
 		return;
 	}
-
-	if ( m_spoofTransitionStartTickCount != -1 )
+	*/
+	if (m_spoofTransitionStartTickCount > 0 && GetTickCount() - m_spoofTransitionStartTickCount > 5000)
 	{
-		if ( GetTickCount() - m_spoofTransitionStartTickCount > 5000 )
+		setSpoofHiddenGraphics(VIEWPORT_SPOOF_NOT_ADJACENT_TO_REVEALED);
+
+		for (int iI = numPlots() - 1; iI > -1; iI--)
 		{
-			setSpoofHiddenGraphics(VIEWPORT_SPOOF_NOT_ADJACENT_TO_REVEALED);
+			CvPlot*	pPlot = plotByIndex(iI);
 
-			for(int iI = 0; iI < numPlots(); iI++)
+			if (pPlot != NULL && pPlot->isRiverMask()
+			&& !pPlot->isRevealed(GC.getGame().getActiveTeam(), true)
+			&&  pPlot->isAdjacentRevealed(GC.getGame().getActiveTeam(), true))
 			{
-				CvPlot*	pPlot = plotByIndex(iI);
-
-				if ( pPlot != NULL )
-				{
-					if ( pPlot->isRiverMask() &&
-						 !pPlot->isRevealed(GC.getGame().getActiveTeam(), true) &&
-						 pPlot->isAdjacentRevealed(GC.getGame().getActiveTeam(), true) )
-					{
-						pPlot->updateRiverSymbol(true, false);
-					}
-				}
+				pPlot->updateRiverSymbol(true, false);
 			}
 		}
 	}
@@ -615,12 +610,9 @@ void CvViewport::setSpoofHiddenGraphics(ViewportGraphicalSpoofingState eValue)
 {
 	m_eSpoofHiddenGraphics = eValue;
 
-	if ( eValue == VIEWPORT_SPOOF_ALL_UNREVEALED )
+	if (eValue == VIEWPORT_SPOOF_ALL_UNREVEALED)
 	{
 		m_spoofTransitionStartTickCount = GetTickCount();
 	}
-	else
-	{
-		m_spoofTransitionStartTickCount = -1;
-	}
+	else m_spoofTransitionStartTickCount = 0;
 }

@@ -91,8 +91,6 @@ public:
 	void doRefreshMilitaryAdvisor(CvWidgetDataStruct &widgetDataStruct);
 	void doMenu( void );
 	void doLaunch(CvWidgetDataStruct &widgetDataStruct);
-	//ls612: Viewport Goto Helper
-	void doGoToCity(CvWidgetDataStruct &widgetDataStruct);
 
 	//	Help parsing
 	void parsePlotListHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);

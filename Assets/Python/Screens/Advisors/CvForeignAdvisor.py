@@ -1060,8 +1060,6 @@ class CvForeignAdvisor:
 		techsToGive = self.techsToGive
 		techsToTake = self.techsToTake
 
-		eWidJuToTech = WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH
-
 		H_EDGE = self.H_EDGE_PANEL
 
 		eFontGame = FontTypes.GAME_FONT

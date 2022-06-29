@@ -1279,8 +1279,7 @@ bool CvGame::canHandleAction(int iAction, CvPlot* pPlot, bool bTestVisible, bool
 {
 	PROFILE_FUNC();
 
-	if (GC.getActionInfo(iAction).getControlType() != NO_CONTROL
-	&& canDoControl((ControlTypes)GC.getActionInfo(iAction).getControlType()))
+	if (canDoControl((ControlTypes)GC.getActionInfo(iAction).getControlType()))
 	{
 		return true;
 	}
@@ -1350,68 +1349,72 @@ void CvGame::setupActionCache() const
 
 void CvGame::handleAction(int iAction)
 {
-	CvUnit* pHeadSelectedUnit;
-	bool bAlt;
-	bool bShift;
-	bool bSkip;
-
-	bAlt = gDLL->altKey();
-	bShift = gDLL->shiftKey();
-
-	if (!(gDLL->getInterfaceIFace()->canHandleAction(iAction)))
+	if (!gDLL->getInterfaceIFace()->canHandleAction(iAction))
 	{
 		return;
 	}
+	const bool bAlt = gDLL->altKey();
+	const bool bShift = gDLL->shiftKey();
+	CvActionInfo& action = GC.getActionInfo(iAction);
 
-	if (GC.getActionInfo(iAction).getControlType() != NO_CONTROL)
-	{
-		doControl((ControlTypes)(GC.getActionInfo(iAction).getControlType()));
-	}
+	doControl((ControlTypes)action.getControlType());
 
-	if (gDLL->getInterfaceIFace()->canDoInterfaceMode((InterfaceModeTypes)GC.getActionInfo(iAction).getInterfaceModeType(), gDLL->getInterfaceIFace()->getSelectionList()))
+	if (gDLL->getInterfaceIFace()->canDoInterfaceMode((InterfaceModeTypes)action.getInterfaceModeType(), gDLL->getInterfaceIFace()->getSelectionList()))
 	{
-		pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+		CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 		if (pHeadSelectedUnit != NULL)
 		{
-			if (GC.getInterfaceModeInfo((InterfaceModeTypes)GC.getActionInfo(iAction).getInterfaceModeType()).getSelectAll())
+			if (GC.getInterfaceModeInfo((InterfaceModeTypes)action.getInterfaceModeType()).getSelectAll())
 			{
 				gDLL->getInterfaceIFace()->selectGroup(pHeadSelectedUnit, false, false, true);
 			}
-			else if (GC.getInterfaceModeInfo((InterfaceModeTypes)GC.getActionInfo(iAction).getInterfaceModeType()).getSelectType())
+			else if (GC.getInterfaceModeInfo((InterfaceModeTypes)action.getInterfaceModeType()).getSelectType())
 			{
 				gDLL->getInterfaceIFace()->selectGroup(pHeadSelectedUnit, false, true, false);
 			}
 		}
-
-		gDLL->getInterfaceIFace()->setInterfaceMode((InterfaceModeTypes)GC.getActionInfo(iAction).getInterfaceModeType());
+		gDLL->getInterfaceIFace()->setInterfaceMode((InterfaceModeTypes)action.getInterfaceModeType());
 	}
 
-	if (GC.getActionInfo(iAction).getMissionType() != NO_MISSION)
 	{
-		bSkip = false;
-		//ls612: City Go To in Viewports
-		if (GC.getActionInfo(iAction).getMissionType() == MISSION_GOTO)
+		const MissionTypes eMission = (MissionTypes)action.getMissionType();
+
+		if (eMission != NO_MISSION)
 		{
-			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_GOTO_CITY);
-			if (NULL != pInfo)
+			bool bSkip = false;
+
+			if (eMission == MISSION_GOTO)
 			{
-				bSkip = true;
-				gDLL->getInterfaceIFace()->addPopup(pInfo);
+				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_GOTO_CITY);
+				if (NULL != pInfo)
+				{
+					bSkip = true;
+					gDLL->getInterfaceIFace()->addPopup(pInfo);
+				}
+			}
+
+			if (eMission == MISSION_DISCOVER)
+			{
+				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_SELECT_DISCOVERY_TECH);
+				if (pInfo)
+				{
+					bSkip = true;
+					gDLL->getInterfaceIFace()->addPopup(pInfo);
+				}
+			}
+
+			if (!bSkip)
+			{
+				selectionListGameNetMessage(GAMEMESSAGE_PUSH_MISSION, eMission, action.getMissionData(), -1, 0, bAlt, bShift);
 			}
 		}
-		if (!bSkip)
-		{
-	// BUG - All Units Actions - start
-			selectionListGameNetMessage(GAMEMESSAGE_PUSH_MISSION, GC.getActionInfo(iAction).getMissionType(), GC.getActionInfo(iAction).getMissionData(), -1, 0, bAlt, bShift);
-	// BUG - All Units Actions - end
-		}
 	}
 
-	if (GC.getActionInfo(iAction).getCommandType() != NO_COMMAND)
+	if (action.getCommandType() != NO_COMMAND)
 	{
-		bSkip = false;
-		if (GC.getActionInfo(iAction).getCommandType() == COMMAND_LOAD)
+		bool bSkip = false;
+		if (action.getCommandType() == COMMAND_LOAD)
 		{
 			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_LOADUNIT);
 			if (NULL != pInfo)
@@ -1422,7 +1425,7 @@ void CvGame::handleAction(int iAction)
 		}
 		if (!bSkip)
 		{
-			if (GC.getActionInfo(iAction).isConfirmCommand())
+			if (action.isConfirmCommand())
 			{
 				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CONFIRMCOMMAND);
 				if (NULL != pInfo)
@@ -1434,7 +1437,7 @@ void CvGame::handleAction(int iAction)
 			}
 			else
 			{
-				selectionListGameNetMessage(GAMEMESSAGE_DO_COMMAND, GC.getActionInfo(iAction).getCommandType(), GC.getActionInfo(iAction).getCommandData(), -1, 0, bAlt);
+				selectionListGameNetMessage(GAMEMESSAGE_DO_COMMAND, action.getCommandType(), action.getCommandData(), -1, 0, bAlt);
 			}
 		}
 	}
@@ -1444,137 +1447,152 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 {
 	switch (eControl)
 	{
-	case CONTROL_SELECTYUNITTYPE:
-	case CONTROL_SELECTYUNITALL:
-	case CONTROL_SELECT_HEALTHY:
-	case CONTROL_SELECTCITY:
-	case CONTROL_SELECTCAPITAL:
-	case CONTROL_NEXTUNIT:
-	case CONTROL_PREVUNIT:
-	case CONTROL_CYCLEUNIT:
-	case CONTROL_CYCLEUNIT_ALT:
-	case CONTROL_CYCLEWORKER:
-	case CONTROL_LASTUNIT:
-	case CONTROL_AUTOMOVES:
-	case CONTROL_SAVE_GROUP:
-	case CONTROL_QUICK_SAVE:
-	case CONTROL_QUICK_LOAD:
-	case CONTROL_ORTHO_CAMERA:
-	case CONTROL_CYCLE_CAMERA_FLYING_MODES:
-	case CONTROL_ISOMETRIC_CAMERA_LEFT:
-	case CONTROL_ISOMETRIC_CAMERA_RIGHT:
-	case CONTROL_FLYING_CAMERA:
-	case CONTROL_MOUSE_FLYING_CAMERA:
-	case CONTROL_TOP_DOWN_CAMERA:
-	case CONTROL_TURN_LOG:
-	case CONTROL_CHAT_ALL:
-	case CONTROL_CHAT_TEAM:
-	case CONTROL_GLOBE_VIEW:
-		if (!gDLL->getInterfaceIFace()->isFocused())
+		case NO_CONTROL:
 		{
-			return true;
+			return false;
 		}
-		break;
-
-	case CONTROL_FORCEENDTURN:
-		if (!gDLL->getInterfaceIFace()->isFocused() && !gDLL->getInterfaceIFace()->isInAdvancedStart())
+		case CONTROL_SELECTYUNITTYPE:
+		case CONTROL_SELECTYUNITALL:
+		case CONTROL_SELECT_HEALTHY:
+		case CONTROL_SELECTCITY:
+		case CONTROL_SELECTCAPITAL:
+		case CONTROL_NEXTUNIT:
+		case CONTROL_PREVUNIT:
+		case CONTROL_CYCLEUNIT:
+		case CONTROL_CYCLEUNIT_ALT:
+		case CONTROL_CYCLEWORKER:
+		case CONTROL_LASTUNIT:
+		case CONTROL_AUTOMOVES:
+		case CONTROL_SAVE_GROUP:
+		case CONTROL_QUICK_SAVE:
+		case CONTROL_QUICK_LOAD:
+		case CONTROL_ORTHO_CAMERA:
+		case CONTROL_CYCLE_CAMERA_FLYING_MODES:
+		case CONTROL_ISOMETRIC_CAMERA_LEFT:
+		case CONTROL_ISOMETRIC_CAMERA_RIGHT:
+		case CONTROL_FLYING_CAMERA:
+		case CONTROL_MOUSE_FLYING_CAMERA:
+		case CONTROL_TOP_DOWN_CAMERA:
+		case CONTROL_TURN_LOG:
+		case CONTROL_CHAT_ALL:
+		case CONTROL_CHAT_TEAM:
+		case CONTROL_GLOBE_VIEW:
 		{
-			return true;
-		}
-		break;
-
-
-	case CONTROL_PING:
-	case CONTROL_SIGN:
-	case CONTROL_GRID:
-	case CONTROL_YIELDS:
-	case CONTROL_RESOURCE_ALL:
-	case CONTROL_UNIT_ICONS:
-	case CONTROL_GLOBELAYER:
-	case CONTROL_FREE_COLONY:
-		if (!gDLL->getInterfaceIFace()->isFocusedWidget())
-		{
-			return true;
-		}
-		break;
-
-	case CONTROL_OPTIONS_SCREEN:
-	case CONTROL_DOMESTIC_SCREEN:
-	case CONTROL_VICTORY_SCREEN:
-	case CONTROL_CIVILOPEDIA:
-	case CONTROL_RELIGION_SCREEN:
-	case CONTROL_CORPORATION_SCREEN:
-	case CONTROL_CIVICS_SCREEN:
-	case CONTROL_FOREIGN_SCREEN:
-	case CONTROL_FINANCIAL_SCREEN:
-	case CONTROL_MILITARY_SCREEN:
-	case CONTROL_TECH_CHOOSER:
-	case CONTROL_DIPLOMACY:
-	case CONTROL_HALL_OF_FAME:
-	case CONTROL_INFO:
-	case CONTROL_DETAILS:
-	case CONTROL_SAVE_NORMAL:
-	case CONTROL_ESPIONAGE_SCREEN:
-		return true;
-		break;
-	case CONTROL_NEXTCITY:
-	case CONTROL_PREVCITY:
-		if (!gDLL->getInterfaceIFace()->isSpaceshipScreenUp())
-		{
-			return true;
-		}
-		break;
-
-	case CONTROL_ADMIN_DETAILS:
-		return true;
-		break;
-
-	case CONTROL_CENTERONSELECTION:
-		if (gDLL->getInterfaceIFace()->getLookAtPlot() != gDLL->getInterfaceIFace()->getSelectionPlot())
-		{
-			return true;
-		}
-		break;
-
-	case CONTROL_LOAD_GAME:
-		if (!(isNetworkMultiPlayer()))
-		{
-			return true;
-		}
-		break;
-
-	case CONTROL_RETIRE:
-		if ((getGameState() == GAMESTATE_ON || isGameMultiPlayer()) && GET_PLAYER(getActivePlayer()).isAlive())
-		{
-			if (!isPbem() && !isHotSeat())
+			if (!gDLL->getInterfaceIFace()->isFocused())
 			{
 				return true;
 			}
-			if (!GET_PLAYER(getActivePlayer()).isEndTurn())
+			break;
+		}
+		case CONTROL_FORCEENDTURN:
+		{
+			if (!gDLL->getInterfaceIFace()->isFocused() && !gDLL->getInterfaceIFace()->isInAdvancedStart())
 			{
 				return true;
 			}
+			break;
 		}
-		break;
-
-	case CONTROL_WORLD_BUILDER:
-		if (!isGameMultiPlayer() && !gDLL->getInterfaceIFace()->isInAdvancedStart())
+		case CONTROL_PING:
+		case CONTROL_SIGN:
+		case CONTROL_GRID:
+		case CONTROL_YIELDS:
+		case CONTROL_RESOURCE_ALL:
+		case CONTROL_UNIT_ICONS:
+		case CONTROL_GLOBELAYER:
+		case CONTROL_FREE_COLONY:
+		{
+			if (!gDLL->getInterfaceIFace()->isFocusedWidget())
+			{
+				return true;
+			}
+			break;
+		}
+		case CONTROL_OPTIONS_SCREEN:
+		case CONTROL_DOMESTIC_SCREEN:
+		case CONTROL_VICTORY_SCREEN:
+		case CONTROL_CIVILOPEDIA:
+		case CONTROL_RELIGION_SCREEN:
+		case CONTROL_CORPORATION_SCREEN:
+		case CONTROL_CIVICS_SCREEN:
+		case CONTROL_FOREIGN_SCREEN:
+		case CONTROL_FINANCIAL_SCREEN:
+		case CONTROL_MILITARY_SCREEN:
+		case CONTROL_TECH_CHOOSER:
+		case CONTROL_DIPLOMACY:
+		case CONTROL_HALL_OF_FAME:
+		case CONTROL_INFO:
+		case CONTROL_DETAILS:
+		case CONTROL_SAVE_NORMAL:
+		case CONTROL_ESPIONAGE_SCREEN:
 		{
 			return true;
 		}
-		break;
-
-	case CONTROL_ENDTURN:
-	case CONTROL_ENDTURN_ALT:
-		if (gDLL->getInterfaceIFace()->isEndTurnMessage() && !gDLL->getInterfaceIFace()->isFocused() && !gDLL->getInterfaceIFace()->isInAdvancedStart())
+		case CONTROL_NEXTCITY:
+		case CONTROL_PREVCITY:
+		{
+			if (!gDLL->getInterfaceIFace()->isSpaceshipScreenUp())
+			{
+				return true;
+			}
+			break;
+		}
+		case CONTROL_ADMIN_DETAILS:
 		{
 			return true;
 		}
-		break;
-
-	default:
-		FErrorMsg("eControl did not match any valid options");
-		break;
+		case CONTROL_CENTERONSELECTION:
+		{
+			if (gDLL->getInterfaceIFace()->getLookAtPlot() != gDLL->getInterfaceIFace()->getSelectionPlot())
+			{
+				return true;
+			}
+			break;
+		}
+		case CONTROL_LOAD_GAME:
+		{
+			if (!(isNetworkMultiPlayer()))
+			{
+				return true;
+			}
+			break;
+		}
+		case CONTROL_RETIRE:
+		{
+			if ((getGameState() == GAMESTATE_ON || isGameMultiPlayer()) && GET_PLAYER(getActivePlayer()).isAlive())
+			{
+				if (!isPbem() && !isHotSeat())
+				{
+					return true;
+				}
+				if (!GET_PLAYER(getActivePlayer()).isEndTurn())
+				{
+					return true;
+				}
+			}
+			break;
+		}
+		case CONTROL_WORLD_BUILDER:
+		{
+			if (!isGameMultiPlayer() && !gDLL->getInterfaceIFace()->isInAdvancedStart())
+			{
+				return true;
+			}
+			break;
+		}
+		case CONTROL_ENDTURN:
+		case CONTROL_ENDTURN_ALT:
+		{
+			if (gDLL->getInterfaceIFace()->isEndTurnMessage() && !gDLL->getInterfaceIFace()->isFocused() && !gDLL->getInterfaceIFace()->isInAdvancedStart())
+			{
+				return true;
+			}
+			break;
+		}
+		default:
+		{
+			FErrorMsg("eControl did not match any valid options");
+			break;
+		}
 	}
 	return false;
 }
