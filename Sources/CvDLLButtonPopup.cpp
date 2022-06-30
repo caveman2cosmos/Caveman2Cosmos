@@ -1170,7 +1170,7 @@ bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
 	{
 		CvCity* pCity = GET_PLAYER(GC.getGame().getActivePlayer()).getCity(info.getData1());
 
-		if (!pCity->isProduction())
+		if (pCity && !pCity->isProduction())
 		{
 			switch (info.getData2())
 			{
