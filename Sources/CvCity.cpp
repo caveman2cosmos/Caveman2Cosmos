@@ -1786,14 +1786,11 @@ bool CvCity::canBeSelected() const
 }
 
 
-void CvCity::updateSelectedCity(bool bTestProduction)
+/*DllExport*/ void CvCity::updateSelectedCity(bool bTestProduction)
 {
-	algo::for_each(plots(), bind(CvPlot::updateShowCitySymbols, _1));
+	OutputDebugString(CvString::format("Exe updating selected city (bTestProduction=%d)\n", (int)bTestProduction).c_str());
 
-	if (bTestProduction && getOwner() == GC.getGame().getActivePlayer() && !isProduction())
-	{
-		chooseProduction(NO_UNIT, NO_BUILDING, NO_PROJECT, false, true);
-	}
+	algo::for_each(plots(), bind(CvPlot::updateShowCitySymbols, _1));
 }
 
 
