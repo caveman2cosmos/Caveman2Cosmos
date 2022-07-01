@@ -4728,7 +4728,7 @@ class CvMainInterface:
 										bWillingToTalk = True
 
 								if bShowCityCount:
-									if bSameTeam or bTeamOpenBorder2U or (bWillingToTalk and bTeamHasYourEmbassy):
+									if bSameTeam or bTeamOpenBorder2U or self.bDebugMode or (bWillingToTalk and bTeamHasYourEmbassy):
 										szTxt = str(CyPlayer.getNumCities())
 									else:
 										iCount = 0
