@@ -20911,110 +20911,79 @@ bool CvUnitAI::AI_connectPlot(CvPlot* pPlot, int iRange)
 {
 	PROFILE_FUNC();
 
-	int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED);
-	int iPathTurns = 0;
-
 	FAssert(canBuildRoute());
 
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  08/19/09								jdog5000	  */
-	/*																							  */
-	/* Unit AI, Efficiency																		  */
-	/************************************************************************************************/
-		// BBAI efficiency: check area for land units before generating paths
 	if ((getDomainType() == DOMAIN_LAND) && (pPlot->area() != area()) && !(getGroup()->canMoveAllTerrain()))
 	{
 		return false;
 	}
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					   END												  */
-	/************************************************************************************************/
+	int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED;
+	int iPathTurns = 0;
 
-	if (!pPlot->isVisible(getTeam(), false) || !pPlot->isVisibleEnemyUnit(this))
+	if (!pPlot->isVisible(getTeam(), false) || !pPlot->isVisibleEnemyUnit(this)
+	&& GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pPlot, MISSIONAI_BUILD, getGroup(), iRange) == 0
+	&& generateSafePathforVulnerable(pPlot, &iPathTurns))
 	{
-		if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pPlot, MISSIONAI_BUILD, getGroup(), iRange) == 0)
+		bool bHasPossibleTargetCity = false;
+
+		foreach_(const CvCity * cityX, GET_PLAYER(getOwner()).cities())
 		{
-			if (generateSafePathforVulnerable(pPlot, &iPathTurns))/*if (generatePath(pPlot, iBasePathFlags, true))*/
+			if (pPlot->isConnectedTo(cityX))
 			{
-				bool	bHasPossibleTargetCity = false;
+				continue;
+			}
+			if (!bHasPossibleTargetCity && !cityX->plot()->isVisibleEnemyUnit(this))
+			{
+				bHasPossibleTargetCity = true;
+			}
+			FAssertMsg(pPlot->getPlotCity() != cityX, "pPlot->getPlotCity() is not expected to be equal with cityX");
 
-				foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
+			if (plot()->getPlotGroup(getOwner()) == cityX->plot()->getPlotGroup(getOwner()))
+			{
+				PROFILE("CvUnitAI::AI_connectPlot.StrangeCase");
+
+				if (generateSafePathforVulnerable(pPlot, &iPathTurns))
 				{
-					if (!(pPlot->isConnectedTo(pLoopCity)))
-					{
-						bHasPossibleTargetCity |= !pLoopCity->plot()->isVisibleEnemyUnit(this);
-
-						FAssertMsg(pPlot->getPlotCity() != pLoopCity, "pPlot->getPlotCity() is not expected to be equal with pLoopCity");
-
-						if (plot()->getPlotGroup(getOwner()) == pLoopCity->plot()->getPlotGroup(getOwner()))
-						{
-							PROFILE("CvUnitAI::AI_connectPlot.StrangeCase");
-
-							if (generateSafePathforVulnerable(pPlot, &iPathTurns))
-							{
-								return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pPlot->getX(), pPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, pLoopCity->plot());
-							}
-							getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-							return true;
-
-							//return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pPlot->getX(), pPlot->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pPlot);
-						}
-					}
+					return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pPlot->getX(), pPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, cityX->plot());
 				}
+				getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+				return true;
+			}
+		}
 
-				CvReachablePlotSet	plotSet(getGroup(), iBasePathFlags);
-				if (bHasPossibleTargetCity)
-				{
-					plotSet.Populate(MAX_INT);
-				}
-				else
-				{
-					return false;
-				}
+		if (!bHasPossibleTargetCity)
+		{
+			return false;
+		}
+		CvReachablePlotSet plotSet(getGroup(), iBasePathFlags);
+		plotSet.Populate(MAX_INT);
 
-				foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
+		foreach_(const CvCity * cityX, GET_PLAYER(getOwner()).cities())
+		{
+			if (pPlot->isConnectedTo(cityX) || plotSet.find(cityX->plot()) == plotSet.end())
+			{
+				continue;
+			}
+			FAssertMsg(pPlot->getPlotCity() != cityX, "pPlot->getPlotCity() is not expected to be equal with cityX");
+
+			if (!(cityX->plot()->isVisibleEnemyUnit(this)))
+			{
+				if (generateSafePathforVulnerable(cityX->plot(), &iPathTurns))
 				{
-					if (plotSet.find(pLoopCity->plot()) == plotSet.end())
+					if (atPlot(pPlot)) // need to test before moving...
 					{
-						continue;
+						return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, cityX->getX(), cityX->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pPlot);
 					}
 
-					if (!(pPlot->isConnectedTo(pLoopCity)))
+					if (generateSafePathforVulnerable(cityX->plot(), &iPathTurns))
 					{
-						FAssertMsg(pPlot->getPlotCity() != pLoopCity, "pPlot->getPlotCity() is not expected to be equal with pLoopCity");
-
-						if (!(pLoopCity->plot()->isVisibleEnemyUnit(this)))
-						{
-							if (generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))/*if (generatePath(pLoopCity->plot(), iBasePathFlags, true))*/
-							{
-								if (atPlot(pPlot)) // need to test before moving...
-								{
-									return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pLoopCity->getX(), pLoopCity->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pPlot);
-								}
-								else
-								{
-									if (generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))
-									{
-										return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pLoopCity->getX(), pLoopCity->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, pLoopCity->plot());
-									}
-									else
-									{
-										getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-										return true;
-									}
-
-									//if ( getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pLoopCity->getX(), pLoopCity->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pPlot) )
-									//{
-									//	getGroup()->pushMission(MISSION_ROUTE_TO, pPlot->getX(), pPlot->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, (getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BUILD, pPlot);
-
-									//	return true;
-									//}
-								}
-							}
-						}
+						return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, cityX->getX(), cityX->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, cityX->plot());
 					}
+					getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+					return true;
 				}
 			}
+
 		}
 	}
 	return false;
