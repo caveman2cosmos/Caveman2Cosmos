@@ -195,13 +195,7 @@
     <ClCompile Include="_precompile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BoolExpr.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CvMessageControl.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CvMessageData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CvPopupReturn.cpp">
@@ -677,6 +671,12 @@
     </ClCompile>
     <ClCompile Include="FDataIOStream.cpp">
       <Filter>Source Files\DataHandling</Filter>
+    </ClCompile>
+    <ClCompile Include="CvMessageData.cpp">
+      <Filter>Source Files\VisualInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="BoolExpr.cpp">
+      <Filter>Source Files\Tools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
