@@ -20,7 +20,7 @@ public:
 	DllExport void init(TeamTypes eID);
 	DllExport void reset(TeamTypes eID = NO_TEAM, bool bConstructorCall = false);
 
-	CvGameObjectTeam* getGameObject() {return &m_GameObject;};
+	CvGameObjectTeam* getGameObject() { return &m_GameObject; }
 protected:
 	CvGameObjectTeam m_GameObject;
 	void uninit();
@@ -599,14 +599,24 @@ protected:
 	void cancelDefensivePacts();
 	void announceTechToPlayers(TechTypes eIndex, bool bPartial = false);
 
+
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);
 
-	// AIAndy: Properties
+// AIAndy: Properties
+protected:
 	CvProperties m_Properties;
 public:
 	CvProperties* getProperties();
 	const CvProperties* getPropertiesConst() const;
+
+// Toffer - Cache current research choices.
+private:
+	std::vector<TechTypes> m_adjacentResearch;
+public:
+	void cacheAdjacentResearch();
+	void setAdjacentResearch(const TechTypes eTech, const bool bNewValue);
+	const std::vector<TechTypes>& getAdjacentResearch() const { return m_adjacentResearch; }
 };
 
 #endif

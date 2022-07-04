@@ -3067,14 +3067,6 @@ void cvInternalGlobals::doPostLoadCaching()
 			}
 		}
 	}
-
-	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
-	{
-		for (uint32_t i = 0, num = infoVector->size(); i < num; i++)
-		{
-			(*infoVector)[i]->doPostLoadCaching(i);
-		}
-	}
 	//TB: Set Statuses
 	m_aiStatusPromotions.clear();
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -3082,6 +3074,14 @@ void cvInternalGlobals::doPostLoadCaching()
 		if (GC.getPromotionInfo((PromotionTypes)iI).isStatus())
 		{
 			m_aiStatusPromotions.push_back(iI);
+		}
+	}
+
+	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
+	{
+		for (uint32_t i = 0, num = infoVector->size(); i < num; i++)
+		{
+			(*infoVector)[i]->doPostLoadCaching(i);
 		}
 	}
 }

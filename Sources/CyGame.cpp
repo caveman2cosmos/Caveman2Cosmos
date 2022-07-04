@@ -1144,11 +1144,6 @@ void CyGame::setModderGameOption(ModderGameOptionTypes eIndex, int iNewValue)
 	m_pGame.setModderGameOption(eIndex, iNewValue);
 }
 
-bool CyGame::canEverResearch(TechTypes iTech) const
-{
-	return m_pGame.canEverResearch(iTech);
-}
-
 bool CyGame::canEverConstruct(BuildingTypes iBuilding) const
 {
 	return m_pGame.canEverConstruct(iBuilding);

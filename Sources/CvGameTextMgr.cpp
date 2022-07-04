@@ -9135,7 +9135,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 								}
 								break;
 							}
-							if (GET_PLAYER(GC.getGame().getActivePlayer()).canEverResearch(eTechPrereq) && iClosestX > GC.getTechInfo(eTechPrereq).getGridX())
+							if (GET_PLAYER(GC.getGame().getActivePlayer()).canResearch(eTechPrereq, false) && iClosestX > GC.getTechInfo(eTechPrereq).getGridX())
 							{
 								iClosestX = GC.getTechInfo(eTechPrereq).getGridX();
 								eClosestUnlockingTech = eTechPrereq;

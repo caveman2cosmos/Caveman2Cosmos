@@ -144,7 +144,6 @@ class CvMainInterface:
 			self.iMaxDefenseDamage		= GC.getMAX_CITY_DEFENSE_DAMAGE()
 			self.fMoveDenominator = float(GC.getMOVE_DENOMINATOR())
 			self.bNegGoldIsMaintenance	= GC.getDefineINT("TREAT_NEGATIVE_GOLD_AS_MAINTENANCE")
-			self.iNumTechInfos			= GC.getNumTechInfos()
 			self.iNumReligionInfos		= GC.getNumReligionInfos()
 			self.iNumCorporationInfos	= GC.getNumCorporationInfos()
 			self.iNumBonusInfos			= GC.getNumBonusInfos()
@@ -2131,32 +2130,35 @@ class CvMainInterface:
 	def updateResearchButtons(self, screen):
 		print "updateResearchButtons"
 		IFT = self.iInterfaceType
-		CyPlayer = self.CyPlayer
-		if CyPlayer.getCurrentResearch() == -1:
+		player = self.CyPlayer
+		if player.getCurrentResearch() == -1:
 			if GAME.GetWorldBuilderMode() or IFT not in (InterfaceVisibility.INTERFACE_SHOW, InterfaceVisibility.INTERFACE_HIDE):
 				pass
 			elif not self.shownResearchSelection:
 				eWidGen = WidgetTypes.WIDGET_GENERAL
-				bCanFoundReligion = CyPlayer.canFoundReligion()
-				iTechInfos = self.iNumTechInfos
+				bCanFoundReligion = player.canFoundReligion()
 				xywh = self.xywhTechBar
 				iNumTechBtnPerRow = xywh[2] / 50
 				aList = []
 				iCount = 0
 				xStart = xywh[0] + 8
 				aMap = self.aRel2TechMap
-				for i in xrange(iTechInfos):
-					if CyPlayer.canResearch(i):
-						szName = "WID|TECH|Selection" + str(i)
-						if i in aMap:
-							if not bCanFoundReligion or GAME.countKnownTechNumTeams(i):
-								artPath = aMap[i].getGenericTechButton()
+				team = self.CyTeam
+				for i in xrange(team.getNumAdjacentResearch()):
+					iTechX = team.getAdjacentResearch(i)
+					# Toffer - canResearch can fail as adjacent research is cached even...
+					#	if special requirements like building requirements are not met.
+					if player.canResearch(iTechX, True):
+						szName = "WID|TECH|Selection" + str(iTechX)
+						if iTechX in aMap:
+							if not bCanFoundReligion or GAME.countKnownTechNumTeams(iTechX):
+								artPath = aMap[iTechX].getGenericTechButton()
 								if not artPath:
-									artPath = GC.getTechInfo(i).getButton()
+									artPath = GC.getTechInfo(iTechX).getButton()
 							else:
-								artPath = aMap[i].getTechButton()
+								artPath = aMap[iTechX].getTechButton()
 						else:
-							artPath = GC.getTechInfo(i).getButton()
+							artPath = GC.getTechInfo(iTechX).getButton()
 						# Set the selection button position
 						x = xStart + 50 * (iCount % iNumTechBtnPerRow)
 						y = 50 * (iCount / iNumTechBtnPerRow)
