@@ -807,7 +807,7 @@ protected:
 	ReplayMessageList m_listReplayMessages;
 	CvReplayInfo* m_pReplayInfo;
 
-	DWORD	m_lastGraphicUpdateRequestTickCount;
+	DWORD m_lastGraphicUpdateRequestTickCount;
 
 	int m_iNumSessions;
 

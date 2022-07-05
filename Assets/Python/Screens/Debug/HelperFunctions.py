@@ -446,8 +446,7 @@ class HelperFunctions:
 
 		if iTechXY != 0 and iTechXY != 99999: #If we have tech requirement or tech obsoletion
 			return aTechDesc[aTechID.index(iTechXY)]
-		else:
-			return ""
+		return ""
 
 	#^^^^ HIGHEST TECH REQUIREMENT LOCATION FINDER FUNCTIONS  ^^^^#
 

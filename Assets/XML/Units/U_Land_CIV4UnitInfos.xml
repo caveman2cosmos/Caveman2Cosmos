@@ -16916,7 +16916,6 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<UnitUpgrades>
 				<UnitType>UNIT_BTR80</UnitType>
-				<UnitType>UNIT_JEEP</UnitType>
 			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>

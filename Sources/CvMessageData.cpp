@@ -465,34 +465,29 @@ void CvNetResearch::Execute()
 {
 	if (m_ePlayer != NO_PLAYER)
 	{
-		CvPlayer& kPlayer = GET_PLAYER(m_ePlayer);
 		if (m_iDiscover > 0)
 		{
-			GET_TEAM(kPlayer.getTeam()).setHasTech(m_eTech, true, m_ePlayer, true, true);
+			GET_TEAM(GET_PLAYER(m_ePlayer).getTeam()).setHasTech(m_eTech, true, m_ePlayer, true, true);
 
-			if (m_iDiscover > 1)
+			if (m_iDiscover > 1 && m_ePlayer == GC.getGame().getActivePlayer())
 			{
-				if (m_ePlayer == GC.getGame().getActivePlayer())
-				{
-					kPlayer.chooseTech(m_iDiscover - 1);
-				}
+				GET_PLAYER(m_ePlayer).chooseTech(m_iDiscover - 1);
 			}
 		}
-		else
+		else if (m_eTech != NO_TECH)
 		{
-			if (m_eTech == NO_TECH)
+			CvPlayer& kPlayer = GET_PLAYER(m_ePlayer);
+			if (kPlayer.canResearch(m_eTech, false))
 			{
-				kPlayer.clearResearchQueue();
-			}
-			else if (kPlayer.canEverResearch(m_eTech))
-			{
-				if ((GET_TEAM(kPlayer.getTeam()).isHasTech(m_eTech) || kPlayer.isResearchingTech(m_eTech)) && !m_bShift)
+				if (!m_bShift && kPlayer.isResearchingTech(m_eTech))
 				{
 					kPlayer.clearResearchQueue();
 				}
 				kPlayer.pushResearch(m_eTech, !m_bShift);
 			}
 		}
+		else GET_PLAYER(m_ePlayer).clearResearchQueue();
+
 
 		if (GC.getGame().getActivePlayer() == m_ePlayer)
 		{

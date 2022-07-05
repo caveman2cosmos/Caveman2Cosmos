@@ -388,6 +388,9 @@ void cvInternalGlobals::init()
 
 	m_VarSystem = new FVariableSystem;
 	m_asyncRand = new CvRandom;
+	// Toffer - Strange that there's three instances of CvInitCore...
+	//	Maybe when a save is loaded from within a game the new one has to be built before the old one is destroyed.
+	//	I guess the exe does some juggling magic with the three, we only ever use m_initCore internaly in the dll.
 	m_initCore = new CvInitCore;
 	m_loadedInitCore = new CvInitCore;
 	m_iniInitCore = new CvInitCore;
@@ -1718,7 +1721,6 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_ESPIONAGE_SLEEP);
 	REGISTER_MISSION(MISSION_GREAT_COMMANDER);
 	REGISTER_MISSION(MISSION_SHADOW);
-	REGISTER_MISSION(MISSION_WAIT_FOR_TECH);
 	REGISTER_MISSION(MISSION_GOTO);
 	REGISTER_MISSION(MISSION_BUTCHER);
 	REGISTER_MISSION(MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE);
@@ -3065,14 +3067,6 @@ void cvInternalGlobals::doPostLoadCaching()
 			}
 		}
 	}
-
-	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
-	{
-		for (uint32_t i = 0, num = infoVector->size(); i < num; i++)
-		{
-			(*infoVector)[i]->doPostLoadCaching(i);
-		}
-	}
 	//TB: Set Statuses
 	m_aiStatusPromotions.clear();
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -3080,6 +3074,14 @@ void cvInternalGlobals::doPostLoadCaching()
 		if (GC.getPromotionInfo((PromotionTypes)iI).isStatus())
 		{
 			m_aiStatusPromotions.push_back(iI);
+		}
+	}
+
+	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
+	{
+		for (uint32_t i = 0, num = infoVector->size(); i < num; i++)
+		{
+			(*infoVector)[i]->doPostLoadCaching(i);
 		}
 	}
 }

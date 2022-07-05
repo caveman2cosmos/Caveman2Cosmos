@@ -4100,10 +4100,10 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 	}
 	// ! Afforess
 
-	//	If we had already decided to beeline previously, stick with it
+	// If we had already decided to beeline previously, stick with it
 	if (m_eBestResearchTarget != NO_TECH && iMaxPathLength > 1)
 	{
-		if (canEverResearch(m_eBestResearchTarget) && !kTeam.isHasTech(m_eBestResearchTarget))
+		if (canResearch(m_eBestResearchTarget, false))
 		{
 			techPath* path = findBestPath(m_eBestResearchTarget, iValue, bIgnoreCost, bAsync);
 
@@ -4141,7 +4141,7 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 				const TechTypes eTechX = static_cast<TechTypes>(iI);
 
 				if ((eIgnoreAdvisor == NO_ADVISOR || GC.getTechInfo(eTechX).getAdvisorType() != eIgnoreAdvisor)
-				&& canEverResearch(eTechX) && !kTeam.isHasTech(eTechX)
+				&& canResearch(eTechX, false)
 				&& GC.getTechInfo(eTechX).getEra() <= getCurrentEra() + 1)
 				{
 					iPathLength = findPathLength(eTechX, false);
@@ -4237,12 +4237,12 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync)
 
 	//	Determine the sample to use - we use the researchable techs closest in base cost to the one we are seeking to compare with the average
 	std::vector<TechResearchDist> researchCosts;
-	for (int idx = 0; idx < GC.getNumTechInfos(); idx++)
+	foreach_(const TechTypes eTechX, team.getAdjacentResearch())
 	{
-		TechTypes techType = static_cast<TechTypes>(idx);
-		if (techType != eRelativeTo && canResearch(techType))
+		FAssertMsg(canResearch(eTechX, true, false), CvString::format("team %d - tech: %S (%d)", getTeam(), GC.getTechInfo(eTechX).getDescription(), (int)eTechX).c_str());
+		if (eTechX != eRelativeTo && canResearch(eTechX))
 		{
-			researchCosts.push_back(TechResearchDist(techType, std::abs(team.getResearchCost(techType) - iCost)));
+			researchCosts.push_back(TechResearchDist(eTechX, std::abs(team.getResearchCost(eTechX) - iCost)));
 		}
 	}
 
@@ -4309,16 +4309,16 @@ int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, bool considerFo
 		int iTotalWeight = 100;
 
 		// What does it (immediately) lead to?
-		for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
+		foreach_(const TechTypes eLeadsTo, GC.getTechInfo(eTech).getLeadsToTechs())
 		{
 			bool bIsORPreReq = false;
-			foreach_(const TechTypes ePrereq, GC.getTechInfo((TechTypes)iJ).getPrereqOrTechs())
+			foreach_(const TechTypes ePrereqOr, GC.getTechInfo(eLeadsTo).getPrereqOrTechs())
 			{
-				if (ePrereq == eTech)
+				if (ePrereqOr == eTech)
 				{
 					bIsORPreReq = true;
 				}
-				else if (GET_TEAM(getTeam()).isHasTech(ePrereq))
+				else if (GET_TEAM(getTeam()).isHasTech(ePrereqOr))
 				{
 					// Already got an OR pre-req, another makes no difference
 					bIsORPreReq = false;
@@ -4328,12 +4328,12 @@ int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, bool considerFo
 
 			bool bIsANDPreReq = false;
 			int iANDPrereqs = 0;
-			foreach_(const TechTypes ePrereq, GC.getTechInfo((TechTypes)iJ).getPrereqAndTechs())
+			foreach_(const TechTypes ePrereqAnd, GC.getTechInfo(eLeadsTo).getPrereqAndTechs())
 			{
-				if (!GET_TEAM(getTeam()).isHasTech(ePrereq))
+				if (!GET_TEAM(getTeam()).isHasTech(ePrereqAnd))
 				{
 					iANDPrereqs++;
-					if (ePrereq == eTech)
+					if (ePrereqAnd == eTech)
 					{
 						bIsANDPreReq = true;
 					}
@@ -4348,7 +4348,7 @@ int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, bool considerFo
 
 				iTotalWeight += iANDPercentage + iORPercentage;
 
-				iValue += (iANDPercentage + iORPercentage) * AI_TechValueCached((TechTypes)iJ, bAsync) / 100;
+				iValue += (iANDPercentage + iORPercentage) * AI_TechValueCached(eLeadsTo, bAsync) / 100;
 			}
 		}
 
@@ -18243,7 +18243,7 @@ void CvPlayerAI::AI_doDiplo()
 					iBestValue = 0;
 					eBestGiveTech = NO_TECH;
 
-					// Don't give techs for tree to advanced vassals ...
+					// Don't give techs for free to advanced vassals ...
 					if (GET_PLAYER((PlayerTypes)iI).getTechScore() * 10 < getTechScore() * 9)
 					{
 						for (int iJ = 0; iJ < GC.getNumTechInfos(); iJ++)
@@ -18663,7 +18663,7 @@ void CvPlayerAI::AI_doDiplo()
 								{
 									setTradeItem(&item, TRADE_TECHNOLOGIES, iJ);
 
-									if (canTradeItem(((PlayerTypes)iI), item, true))
+									if (canTradeItem((PlayerTypes)iI, item, true))
 									{
 										const int iValue = 1 + GC.getGame().getSorenRandNum(10000, "AI Giving Help");
 
@@ -20255,7 +20255,7 @@ void CvPlayerAI::AI_doDiplo()
 									{
 										setTradeItem(&item, TRADE_TECHNOLOGIES, iJ);
 
-										if (canTradeItem(((PlayerTypes)iI), item, true))
+										if (canTradeItem((PlayerTypes)iI, item, true))
 										{
 											const int iValue =
 												(
@@ -36858,37 +36858,27 @@ TechTypes CvPlayerAI::AI_bestReligiousTech(int iMaxPathLength, TechTypes eIgnore
 
 	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 	{
-		if ((eIgnoreTech == NO_TECH) || (iI != eIgnoreTech))
+		const TechTypes eTechX = static_cast<TechTypes>(iI);
+
+		if ((eIgnoreTech == NO_TECH || eTechX != eIgnoreTech)
+		&& (eIgnoreAdvisor == NO_ADVISOR || GC.getTechInfo(eTechX).getAdvisorType() != eIgnoreAdvisor)
+		&& canResearch(eTechX, false)
+		&& GC.getTechInfo(eTechX).getEra() <= getCurrentEra())
 		{
-			if ((eIgnoreAdvisor == NO_ADVISOR) || (GC.getTechInfo((TechTypes)iI).getAdvisorType() != eIgnoreAdvisor))
+			const int iPathLength = findPathLength(eTechX, false);
+
+			if (iPathLength <= iMaxPathLength)
 			{
-				if (canEverResearch((TechTypes)iI))
+				const int iValue = AI_religiousTechValue(eTechX) / std::max(1, iPathLength);
+
+				if (iValue > iBestValue)
 				{
-					if (!GET_TEAM(getTeam()).isHasTech((TechTypes)iI))
-					{
-						if (GC.getTechInfo((TechTypes)iI).getEra() <= (getCurrentEra()))
-						{
-							const int iPathLength = findPathLength(((TechTypes)iI), false);
-
-							if (iPathLength <= iMaxPathLength)
-							{
-								int iValue = AI_religiousTechValue((TechTypes)iI);
-
-								iValue /= std::max(1, iPathLength);
-
-								if (iValue > iBestValue)
-								{
-									iBestValue = iValue;
-									eBestTech = ((TechTypes)iI);
-								}
-							}
-						}
-					}
+					iBestValue = iValue;
+					eBestTech = eTechX;
 				}
 			}
 		}
 	}
-
 	return eBestTech;
 }
 

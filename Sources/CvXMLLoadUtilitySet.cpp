@@ -1085,7 +1085,7 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 
 	GC.cacheInfoTypes();
 
-	OutputDebugString("Loading PostMenu Infos: End");
+	OutputDebugString("Loading PostMenu Infos: End\n");
 
 	return true;
 }

@@ -661,8 +661,6 @@ public:
 	void setShadowUnit(const CvUnit* pUnit);
 	CvUnit* getShadowUnit() const;
 
-	void waitForTech(int iFlag, int eTech);
-
 	bool canGift(bool bTestVisible = false, bool bTestTransport = true) const;
 	void gift(bool bTestTransport = true);
 

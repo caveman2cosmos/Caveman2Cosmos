@@ -69,6 +69,8 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 
 		.def("getColorInfo", &CyGlobalContext::getColorInfo, python::return_value_policy<python::reference_existing_object>(), "ColorInfo (int id)")
 
+		.def("getAdvisorInfo", &CyGlobalContext::getAdvisorInfo, python::return_value_policy<python::reference_existing_object>(), "AdvisorInfo (int id)")
+
 		.def("getInfoTypeForString", &CyGlobalContext::getInfoTypeForString, CyGlobalContext_getInfoTypeForString_overloads())
 
 		.def("getNumFlavorTypes", &CyGlobalContext::getNumFlavorTypes)

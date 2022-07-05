@@ -1238,86 +1238,42 @@ bool isPlotEventTrigger(EventTriggerTypes eTrigger)
 	return false;
 }
 
-#ifdef DISCOVERY_TECH_CACHE
-namespace {
-	//	Small cache
-	std::vector<stdext::hash_map<UnitTypes, TechTypes> > g_discoveryTechCache;
-	int g_cachedTurn = -1;
-}
-#endif // DISCOVERY_TECH_CACHE
 
-void clearDiscoveryTechCache()
-{
-	g_discoveryTechCache.clear();
-}
 TechTypes getDiscoveryTech(const UnitTypes eUnit, const PlayerTypes ePlayer)
 {
 	PROFILE_FUNC();
 	FEnsureMsg(ePlayer != NO_PLAYER, "Player must be valid for this function");
 
-#ifdef DISCOVERY_TECH_CACHE
-	if (g_cachedTurn != GC.getGame().getGameTurn())
-	{
-		g_discoveryTechCache.clear();
-		g_cachedTurn = GC.getGame().getGameTurn();
-	}
-#endif // DISCOVERY_TECH_CACHE
-
-	// After the first turn this should not cause any allocation to occur as the max size required will have been reserved
-	g_discoveryTechCache.resize(std::max(g_discoveryTechCache.size(), static_cast<size_t>(ePlayer) + 1));
+	CvPlayerAI& player = GET_PLAYER(ePlayer);
+	const CvTeam& team = GET_TEAM(player.getTeam());
 
 	TechTypes eBestTech = NO_TECH;
-#ifdef DISCOVERY_TECH_CACHE
-	stdext::hash_map<UnitTypes,TechTypes>::const_iterator itr = g_discoveryTechCache[ePlayer].find(eUnit);
-	if ( itr == g_discoveryTechCache[ePlayer].end() )
-#endif // DISCOVERY_TECH_CACHE
+	int iBestValue = 0;
+
+	foreach_(const TechTypes eTechX, team.getAdjacentResearch())
 	{
-		CvPlayerAI& kPlayer = GET_PLAYER(ePlayer);
-
-		int iBestValue = 0;
-
-		// Toffer - ToDo - Rather than cache g_discoveryTechCache,
-		//	we should just cache the tech indexes of those few techs that can be researched at the moment by each team;
-		//	as the below "researchable techs by team" loops are used in many places in our code.
-		//	One vector (with TechTypes or int elements) per team, is probably best.
-		// Such a cache would be refreshed each time a tech is discovered by a team,
-		//	and it would be a very small cache that could be looped readily without performance concerns.
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+		if (player.canResearch(eTechX))
 		{
-			if (kPlayer.canResearch((TechTypes)iI))
+			int iValue = 0;
+
+			for (int iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
 			{
-				int iValue = 0;
+				iValue += GC.getTechInfo(eTechX).getFlavorValue(iJ) * GC.getUnitInfo(eUnit).getFlavorValue(iJ);
+			}
 
-				for (int iJ = 0; iJ < GC.getNumFlavorTypes(); iJ++)
+			if (iValue > 0)
+			{
+				iValue *= 10;
+				iValue += player.AI_TechValueCached(eTechX, player.isHuman());
+
+				if (iValue > iBestValue)
 				{
-					iValue += (GC.getTechInfo((TechTypes) iI).getFlavorValue(iJ) * GC.getUnitInfo(eUnit).getFlavorValue(iJ));
-				}
-
-				if (iValue > 0)
-				{
-					iValue *= 10;
-					iValue += kPlayer.AI_TechValueCached((TechTypes)iI, kPlayer.isHuman());
-
-					if (iValue > iBestValue)
-					{
-						iBestValue = iValue;
-						eBestTech = (TechTypes)iI;
-					}
+					iBestValue = iValue;
+					eBestTech = eTechX;
 				}
 			}
 		}
-
-#ifdef DISCOVERY_TECH_CACHE
-		g_discoveryTechCache[ePlayer].insert(std::make_pair(eUnit,eBestTech));
-#endif // DISCOVERY_TECH_CACHE
 	}
-#ifdef DISCOVERY_TECH_CACHE
-	else
-	{
-		eBestTech = itr->second;
-	}
-#endif // DISCOVERY_TECH_CACHE
-
 	return eBestTech;
 }
 
@@ -4131,7 +4087,6 @@ void getMissionTypeString(CvWString& szString, MissionTypes eMissionType)
 	case MISSION_ESPIONAGE_SLEEP: szString = L"MISSION_ESPIONAGE_SLEEP"; break;
 	case MISSION_GREAT_COMMANDER: szString = L"MISSION_GREAT_COMMANDER"; break;
 	case MISSION_SHADOW: szString = L"MISSION_SHADOW"; break;
-	case MISSION_WAIT_FOR_TECH: szString = L"MISSION_WAIT_FOR_TECH"; break;
 	case MISSION_GOTO: szString = L"MISSION_GOTO"; break;
 	case MISSION_BUTCHER: szString = L"MISSION_BUTCHER"; break;
 	case MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE: szString = L"MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE"; break;

@@ -232,169 +232,169 @@ bool CvUnitAI::AI_update()
 	{
 		switch (getGroup()->getAutomateType())  // NOLINT(clang-diagnostic-switch-enum)
 		{
-			case AUTOMATE_BUILD:
+		case AUTOMATE_BUILD:
+		{
+			if (AI_getUnitAIType() == UNITAI_WORKER)
 			{
-				if (AI_getUnitAIType() == UNITAI_WORKER)
-				{
-					AI_workerMove();
-				}
-				else if (AI_getUnitAIType() == UNITAI_WORKER_SEA)
-				{
-					AI_workerSeaMove();
-				}
-				else FErrorMsg("error");
+				AI_workerMove();
+			}
+			else if (AI_getUnitAIType() == UNITAI_WORKER_SEA)
+			{
+				AI_workerSeaMove();
+			}
+			else FErrorMsg("error");
 
+			break;
+		}
+		case AUTOMATE_NETWORK:
+		{
+			AI_networkAutomated();
+			break;
+		}
+		case AUTOMATE_CITY:
+		{
+			AI_cityAutomated();
+			break;
+		}
+		case AUTOMATE_EXPLORE:
+		{
+			switch (getDomainType())
+			{
+			case DOMAIN_SEA:
+			{
+				AI_exploreSeaMove();
 				break;
 			}
-			case AUTOMATE_NETWORK:
+			case DOMAIN_AIR:
 			{
-				AI_networkAutomated();
-				break;
-			}
-			case AUTOMATE_CITY:
-			{
-				AI_cityAutomated();
-				break;
-			}
-			case AUTOMATE_EXPLORE:
-			{
-				switch (getDomainType())
+				// if we are cargo (on a carrier), hold if the carrier is not done moving yet
+				const CvUnit* pTransportUnit = getTransportUnit();
+				if (pTransportUnit != NULL
+				&& pTransportUnit->isAutomated()
+				&& pTransportUnit->canMove()
+				&& pTransportUnit->getGroup()->getActivityType() != ACTIVITY_HOLD)
 				{
-					case DOMAIN_SEA:
-					{
-						AI_exploreSeaMove();
-						break;
-					}
-					case DOMAIN_AIR:
-					{
-						// if we are cargo (on a carrier), hold if the carrier is not done moving yet
-						const CvUnit* pTransportUnit = getTransportUnit();
-						if (pTransportUnit != NULL
-						&& pTransportUnit->isAutomated()
-						&& pTransportUnit->canMove()
-						&& pTransportUnit->getGroup()->getActivityType() != ACTIVITY_HOLD)
-						{
-							getGroup()->pushMission(MISSION_SKIP);
-							break;
-						}
-						AI_exploreAirMove(); // Have air units explore like AI units do
-						break;
-					}
-					case DOMAIN_LAND:
-					{
-						AI_exploreMove();
-						break;
-					}
-					default: FErrorMsg("error");
+					getGroup()->pushMission(MISSION_SKIP);
+					break;
 				}
-				// if we have air cargo (we are a carrier), and are done moving, explore with the aircraft as well
-				if (hasCargo() && getDomainCargo() == DOMAIN_AIR
-				&& (!canMove() || getGroup()->getActivityType() == ACTIVITY_HOLD))
+				AI_exploreAirMove(); // Have air units explore like AI units do
+				break;
+			}
+			case DOMAIN_LAND:
+			{
+				AI_exploreMove();
+				break;
+			}
+			default: FErrorMsg("error");
+			}
+			// if we have air cargo (we are a carrier), and are done moving, explore with the aircraft as well
+			if (hasCargo() && getDomainCargo() == DOMAIN_AIR
+			&& (!canMove() || getGroup()->getActivityType() == ACTIVITY_HOLD))
+			{
+				std::vector<CvUnit*> aCargoUnits;
+				getCargoUnits(aCargoUnits);
+				if (!aCargoUnits.empty())
 				{
-					std::vector<CvUnit*> aCargoUnits;
-					getCargoUnits(aCargoUnits);
-					if (!aCargoUnits.empty())
-					{
-						validateCargoUnits();
-					}
-					foreach_(const CvUnit * pCargoUnit, aCargoUnits)
-					{
-						FAssert(isAutomated())
+					validateCargoUnits();
+				}
+				foreach_(const CvUnit * pCargoUnit, aCargoUnits)
+				{
+					FAssert(isAutomated())
 
 						if (pCargoUnit->getDomainType() == DOMAIN_AIR && pCargoUnit->canMove())
 						{
 							pCargoUnit->getGroup()->setAutomateType(AUTOMATE_EXPLORE);
 							pCargoUnit->getGroup()->setActivityType(ACTIVITY_AWAKE);
 						}
-					}
 				}
-				break;
 			}
-			case AUTOMATE_RELIGION:
+			break;
+		}
+		case AUTOMATE_RELIGION:
+		{
+			if (AI_getUnitAIType() == UNITAI_MISSIONARY)
 			{
-				if (AI_getUnitAIType() == UNITAI_MISSIONARY)
-				{
-					AI_missionaryMove();
-				}
-				else if (getGroup()->hasUnitOfAI(UNITAI_MISSIONARY))
-				{
-					CvSelectionGroup* pGroup = getGroup();
-					joinGroup(NULL);
-					joinGroup(pGroup);
-					getGroup()->setAutomateType(AUTOMATE_RELIGION);
-				}
-				else
-				{
-					getGroup()->setAutomateType(NO_AUTOMATE);
-				}
-				break;
+				AI_missionaryMove();
 			}
-			case AUTOMATE_PILLAGE:
+			else if (getGroup()->hasUnitOfAI(UNITAI_MISSIONARY))
 			{
-				AI_AutomatedpillageMove();
-				break;
+				CvSelectionGroup* pGroup = getGroup();
+				joinGroup(NULL);
+				joinGroup(pGroup);
+				getGroup()->setAutomateType(AUTOMATE_RELIGION);
 			}
-			case AUTOMATE_HUNT:
+			else
 			{
-				AI_SearchAndDestroyMove();
-				break;
+				getGroup()->setAutomateType(NO_AUTOMATE);
 			}
-			case AUTOMATE_CITY_DEFENSE:
+			break;
+		}
+		case AUTOMATE_PILLAGE:
+		{
+			AI_AutomatedpillageMove();
+			break;
+		}
+		case AUTOMATE_HUNT:
+		{
+			AI_SearchAndDestroyMove();
+			break;
+		}
+		case AUTOMATE_CITY_DEFENSE:
+		{
+			AI_cityDefense();
+			break;
+		}
+		case AUTOMATE_BORDER_PATROL:
+		{
+			AI_borderPatrol();
+			break;
+		}
+		case AUTOMATE_PIRATE:
+		{
+			AI_pirateSeaMove();
+			break;
+		}
+		case AUTOMATE_HURRY:
+		{
+			AI_merchantMove();
+			break;
+		}
+		//Yes, these automations do the same thing, but they act differently for different units.
+		case AUTOMATE_AIRSTRIKE:
+		case AUTOMATE_AIRBOMB:
+		{
+			AI_autoAirStrike();
+			break;
+		}
+		case AUTOMATE_AIR_RECON:
+		{
+			AI_exploreAirMove();
+			break;
+		}
+		case AUTOMATE_UPGRADING:
+		case AUTOMATE_CANCEL_UPGRADING:
+		case AUTOMATE_PROMOTIONS:
+		case AUTOMATE_CANCEL_PROMOTIONS:
+		{
+			FErrorMsg("SelectionGroup Should Not be Using These Automations!");
+			break;
+		}
+		case AUTOMATE_SHADOW:
+		{
+			// If we've lost the unit we're shadowing,
+			// not sure how this can happen but empirically it's been seen,
+			// then lose the automation.
+			if (getShadowUnit() == NULL)
 			{
-				AI_cityDefense();
-				break;
+				getGroup()->setAutomateType(NO_AUTOMATE);
 			}
-			case AUTOMATE_BORDER_PATROL:
+			else
 			{
-				AI_borderPatrol();
-				break;
+				AI_shadowMove();
 			}
-			case AUTOMATE_PIRATE:
-			{
-				AI_pirateSeaMove();
-				break;
-			}
-			case AUTOMATE_HURRY:
-			{
-				AI_merchantMove();
-				break;
-			}
-			//Yes, these automations do the same thing, but they act differently for different units.
-			case AUTOMATE_AIRSTRIKE:
-			case AUTOMATE_AIRBOMB:
-			{
-				AI_autoAirStrike();
-				break;
-			}
-			case AUTOMATE_AIR_RECON:
-			{
-				AI_exploreAirMove();
-				break;
-			}
-			case AUTOMATE_UPGRADING:
-			case AUTOMATE_CANCEL_UPGRADING:
-			case AUTOMATE_PROMOTIONS:
-			case AUTOMATE_CANCEL_PROMOTIONS:
-			{
-				FErrorMsg("SelectionGroup Should Not be Using These Automations!");
-				break;
-			}
-			case AUTOMATE_SHADOW:
-			{
-				// If we've lost the unit we're shadowing,
-				// not sure how this can happen but empirically it's been seen,
-				// then lose the automation.
-				if (getShadowUnit() == NULL)
-				{
-					getGroup()->setAutomateType(NO_AUTOMATE);
-				}
-				else
-				{
-					AI_shadowMove();
-				}
-				break;
-			}
-			default: FErrorMsg("error");
+			break;
+		}
+		default: FErrorMsg("error");
 		}
 		// if no longer automated, then we want to bail
 		return !isDelayedDeath() && !getGroup()->isAutomated();
@@ -6621,19 +6621,19 @@ void CvUnitAI::AI_spyMove()
 
 		switch (eWarPlan)
 		{
-			case WARPLAN_LIMITED:
-			case WARPLAN_TOTAL:
-			{
-				iEspionageChance += 50;
-			}
-			case NO_WARPLAN:
-			{
-				break;
-			}
-			default:
-			{
-				iEspionageChance += 20;
-			}
+		case WARPLAN_LIMITED:
+		case WARPLAN_TOTAL:
+		{
+			iEspionageChance += 50;
+		}
+		case NO_WARPLAN:
+		{
+			break;
+		}
+		default:
+		{
+			iEspionageChance += 20;
+		}
 		}
 
 		if (plot()->isCity() && plot()->getTeam() != getTeam())
@@ -13782,8 +13782,7 @@ bool CvUnitAI::AI_discover(const bool bFirstResearchOnly)
 		{
 			if (iPercentWasted <= 30 || bFirstResearchOnly && iPercentWasted <= 50)
 			{
-				getGroup()->pushMission(MISSION_DISCOVER);
-				return true;
+				return discover(eTech);
 			}
 		}
 		else if (bFirstResearchOnly)
@@ -13794,8 +13793,7 @@ bool CvUnitAI::AI_discover(const bool bFirstResearchOnly)
 	// Unit cannot finish the tech this turn, so why not speed it up some?
 	if (getDiscoverResearch(eTech) <= GET_TEAM(getTeam()).getResearchLeft(eTech))
 	{
-		getGroup()->pushMission(MISSION_DISCOVER);
-		return true;
+		return discover(eTech);
 	}
 	// Unit can finish the tech this turn.
 
@@ -13807,8 +13805,7 @@ bool CvUnitAI::AI_discover(const bool bFirstResearchOnly)
 	// Takes some time to invent, allow some wastage.
 	if (iPercentWasted <= 5 || iPercentWasted <= 15 && GET_PLAYER(getOwner()).getCurrentResearch() == eTech)
 	{
-		getGroup()->pushMission(MISSION_DISCOVER);
-		return true;
+		return discover(eTech);
 	}
 	return false;
 }
@@ -20914,110 +20911,79 @@ bool CvUnitAI::AI_connectPlot(CvPlot* pPlot, int iRange)
 {
 	PROFILE_FUNC();
 
-	int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED);
-	int iPathTurns = 0;
-
 	FAssert(canBuildRoute());
 
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  08/19/09								jdog5000	  */
-	/*																							  */
-	/* Unit AI, Efficiency																		  */
-	/************************************************************************************************/
-		// BBAI efficiency: check area for land units before generating paths
 	if ((getDomainType() == DOMAIN_LAND) && (pPlot->area() != area()) && !(getGroup()->canMoveAllTerrain()))
 	{
 		return false;
 	}
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					   END												  */
-	/************************************************************************************************/
+	int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED;
+	int iPathTurns = 0;
 
-	if (!pPlot->isVisible(getTeam(), false) || !pPlot->isVisibleEnemyUnit(this))
+	if (!pPlot->isVisible(getTeam(), false) || !pPlot->isVisibleEnemyUnit(this)
+	&& GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pPlot, MISSIONAI_BUILD, getGroup(), iRange) == 0
+	&& generateSafePathforVulnerable(pPlot, &iPathTurns))
 	{
-		if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pPlot, MISSIONAI_BUILD, getGroup(), iRange) == 0)
+		bool bHasPossibleTargetCity = false;
+
+		foreach_(const CvCity * cityX, GET_PLAYER(getOwner()).cities())
 		{
-			if (generateSafePathforVulnerable(pPlot, &iPathTurns))/*if (generatePath(pPlot, iBasePathFlags, true))*/
+			if (pPlot->isConnectedTo(cityX))
 			{
-				bool	bHasPossibleTargetCity = false;
+				continue;
+			}
+			if (!bHasPossibleTargetCity && !cityX->plot()->isVisibleEnemyUnit(this))
+			{
+				bHasPossibleTargetCity = true;
+			}
+			FAssertMsg(pPlot->getPlotCity() != cityX, "pPlot->getPlotCity() is not expected to be equal with cityX");
 
-				foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
+			if (plot()->getPlotGroup(getOwner()) == cityX->plot()->getPlotGroup(getOwner()))
+			{
+				PROFILE("CvUnitAI::AI_connectPlot.StrangeCase");
+
+				if (generateSafePathforVulnerable(pPlot, &iPathTurns))
 				{
-					if (!(pPlot->isConnectedTo(pLoopCity)))
-					{
-						bHasPossibleTargetCity |= !pLoopCity->plot()->isVisibleEnemyUnit(this);
-
-						FAssertMsg(pPlot->getPlotCity() != pLoopCity, "pPlot->getPlotCity() is not expected to be equal with pLoopCity");
-
-						if (plot()->getPlotGroup(getOwner()) == pLoopCity->plot()->getPlotGroup(getOwner()))
-						{
-							PROFILE("CvUnitAI::AI_connectPlot.StrangeCase");
-
-							if (generateSafePathforVulnerable(pPlot, &iPathTurns))
-							{
-								return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pPlot->getX(), pPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, pLoopCity->plot());
-							}
-							getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-							return true;
-
-							//return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pPlot->getX(), pPlot->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pPlot);
-						}
-					}
+					return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pPlot->getX(), pPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, cityX->plot());
 				}
+				getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+				return true;
+			}
+		}
 
-				CvReachablePlotSet	plotSet(getGroup(), iBasePathFlags);
-				if (bHasPossibleTargetCity)
-				{
-					plotSet.Populate(MAX_INT);
-				}
-				else
-				{
-					return false;
-				}
+		if (!bHasPossibleTargetCity)
+		{
+			return false;
+		}
+		CvReachablePlotSet plotSet(getGroup(), iBasePathFlags);
+		plotSet.Populate(MAX_INT);
 
-				foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
+		foreach_(const CvCity * cityX, GET_PLAYER(getOwner()).cities())
+		{
+			if (pPlot->isConnectedTo(cityX) || plotSet.find(cityX->plot()) == plotSet.end())
+			{
+				continue;
+			}
+			FAssertMsg(pPlot->getPlotCity() != cityX, "pPlot->getPlotCity() is not expected to be equal with cityX");
+
+			if (!(cityX->plot()->isVisibleEnemyUnit(this)))
+			{
+				if (generateSafePathforVulnerable(cityX->plot(), &iPathTurns))
 				{
-					if (plotSet.find(pLoopCity->plot()) == plotSet.end())
+					if (atPlot(pPlot)) // need to test before moving...
 					{
-						continue;
+						return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, cityX->getX(), cityX->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pPlot);
 					}
 
-					if (!(pPlot->isConnectedTo(pLoopCity)))
+					if (generateSafePathforVulnerable(cityX->plot(), &iPathTurns))
 					{
-						FAssertMsg(pPlot->getPlotCity() != pLoopCity, "pPlot->getPlotCity() is not expected to be equal with pLoopCity");
-
-						if (!(pLoopCity->plot()->isVisibleEnemyUnit(this)))
-						{
-							if (generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))/*if (generatePath(pLoopCity->plot(), iBasePathFlags, true))*/
-							{
-								if (atPlot(pPlot)) // need to test before moving...
-								{
-									return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pLoopCity->getX(), pLoopCity->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pPlot);
-								}
-								else
-								{
-									if (generateSafePathforVulnerable(pLoopCity->plot(), &iPathTurns))
-									{
-										return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pLoopCity->getX(), pLoopCity->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, pLoopCity->plot());
-									}
-									else
-									{
-										getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-										return true;
-									}
-
-									//if ( getGroup()->pushMissionInternal(MISSION_ROUTE_TO, pLoopCity->getX(), pLoopCity->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, false, false, MISSIONAI_BUILD, pPlot) )
-									//{
-									//	getGroup()->pushMission(MISSION_ROUTE_TO, pPlot->getX(), pPlot->getY(), MOVE_SAFE_TERRITORY | MOVE_WITH_CAUTION, (getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BUILD, pPlot);
-
-									//	return true;
-									//}
-								}
-							}
-						}
+						return getGroup()->pushMissionInternal(MISSION_ROUTE_TO, cityX->getX(), cityX->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_BUILD, cityX->plot());
 					}
+					getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+					return true;
 				}
 			}
+
 		}
 	}
 	return false;
@@ -22458,13 +22424,16 @@ bool CvUnitAI::AI_connectCity()
 	CvCity* pLoopCity = plot()->getWorkingCity();
 	if (pLoopCity != NULL)
 	{
-		if (AI_plotValid(pLoopCity->plot()))
+		if (pLoopCity->getNumWorkers() <= 2)
 		{
-			if (!(pLoopCity->isConnectedToCapital()))
+			if (AI_plotValid(pLoopCity->plot()))
 			{
-				if (AI_connectPlot(pLoopCity->plot(), 1))
+				if (!(pLoopCity->isConnectedToCapital()))
 				{
-					return true;
+					if (AI_connectPlot(pLoopCity->plot(), 1))
+					{
+						return true;
+					}
 				}
 			}
 		}
@@ -22472,13 +22441,16 @@ bool CvUnitAI::AI_connectCity()
 
 	foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
-		if (AI_plotValid(pLoopCity->plot()))
+		if (pLoopCity->getNumWorkers() <= 2)
 		{
-			if (!(pLoopCity->isConnectedToCapital()))
+			if (AI_plotValid(pLoopCity->plot()))
 			{
-				if (AI_connectPlot(pLoopCity->plot(), 1))
+				if (!(pLoopCity->isConnectedToCapital()))
 				{
-					return true;
+					if (AI_connectPlot(pLoopCity->plot(), 1))
+					{
+						return true;
+					}
 				}
 			}
 		}
@@ -22494,7 +22466,7 @@ bool CvUnitAI::AI_routeCity()
 	PROFILE_FUNC();
 
 	CvCity* pRouteToCity;
-	int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED);
+	int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | MOVE_OUR_TERRITORY | MOVE_RECONSIDER_ON_LEAVING_OWNED;
 
 	if (!canBuildRoute())
 	{
@@ -27522,11 +27494,11 @@ void CvUnitAI::AI_SearchAndDestroyMove(bool bWithCommander)
 	{
 		// Get the proper accompaniment
 		const bool bContractEscort =
-		(
-			!isHuman() && !isCargo() && AI_getUnitAIType() == UNITAI_HUNTER
-			&& GET_PLAYER(getOwner()).getBestUnitType(UNITAI_HUNTER_ESCORT) != NO_UNIT
-			&& getGroup()->countNumUnitAIType(UNITAI_HUNTER_ESCORT) < 1
-		);
+			(
+				!isHuman() && !isCargo() && AI_getUnitAIType() == UNITAI_HUNTER
+				&& GET_PLAYER(getOwner()).getBestUnitType(UNITAI_HUNTER_ESCORT) != NO_UNIT
+				&& getGroup()->countNumUnitAIType(UNITAI_HUNTER_ESCORT) < 1
+			);
 		if (bContractEscort)
 		{
 			if (m_contractsLastEstablishedTurn != GC.getGame().getGameTurn())

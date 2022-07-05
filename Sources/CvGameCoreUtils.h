@@ -250,7 +250,6 @@ DllExport void setTradeItem(TradeData* pItem, TradeableItems eItemType = TRADE_I
 
 bool isPlotEventTrigger(EventTriggerTypes eTrigger);
 
-void clearDiscoveryTechCache();
 TechTypes getDiscoveryTech(const UnitTypes eUnit, const PlayerTypes ePlayer);
 
 void setListHelp(wchar_t* szBuffer, const wchar_t* szStart, const wchar_t* szItem, const wchar_t* szSeparator, bool bFirst);

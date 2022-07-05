@@ -454,7 +454,6 @@ with GFC_Control_Button
 		map GFC_Control								= GFC_Control_StandardButton_Style;
 	}
 
-
 	GFC_Control_EtchedButton_Style
 	{
 		with .Size

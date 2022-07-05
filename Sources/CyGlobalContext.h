@@ -87,6 +87,7 @@ public:
 	const CvSeaLevelInfo * getSeaLevelInfo(int i) const;
 	const CvInfoBase * getUnitAIInfo(int i) const;
 	const CvColorInfo* getColorInfo(int i) const;
+	const CvAdvisorInfo* getAdvisorInfo(int i) const;
 	const CvUnitArtStyleTypeInfo* getUnitArtStyleTypeInfo(int i) const;
 	const CvPropertyInfo* getPropertyInfo(int i) const;
 	const CvPlayerColorInfo* getPlayerColorInfo(int i) const;

@@ -159,7 +159,7 @@ public:
 	bool isSimultaneousTeamTurns() const;
 
 	bool isFinalInitialized() const;
-	void onFinalInitialized();
+	void onFinalInitialized(const bool bNewGame);
 
 	PlayerTypes getActivePlayer() const;
 	void setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat);
@@ -299,7 +299,6 @@ public:
 	int getModderGameOption(ModderGameOptionTypes eIndex) const;
 	void setModderGameOption(ModderGameOptionTypes eIndex, int iNewValue);
 
-	bool canEverResearch(TechTypes iTech) const;
 	bool canEverConstruct(BuildingTypes iBuilding) const;
 	bool canEverTrain(UnitTypes iUnit) const;
 	bool canEverSpread(CorporationTypes iCorporation) const;

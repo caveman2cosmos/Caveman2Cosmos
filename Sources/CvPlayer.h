@@ -61,6 +61,8 @@ public:
 
 protected:
 	CvGameObjectPlayer m_GameObject;
+	void baseInit(PlayerTypes eID);
+	void initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSetAlive = true);
 
 public:
 
@@ -321,7 +323,7 @@ public:
 	int calculateTotalCommerce() const;
 
 	bool canEverResearch(TechTypes eTech) const;
-	bool canResearch(TechTypes eTech) const;
+	bool canResearch(const TechTypes eTech, const bool bRightNow = true, const bool bSpecialRequirements = true) const;
 	TechTypes getCurrentResearch() const;
 	bool isCurrentResearchRepeat() const;
 	bool isNoResearchAvailable() const;
@@ -829,7 +831,6 @@ public:
 	void setTeam(TeamTypes eTeam);
 	void updateTeamType();
 
-	void setDoNotBotherStatus(PlayerTypes playerID);
 	bool isDoNotBotherStatus(PlayerTypes playerID) const;
 
 	DllExport PlayerColorTypes getPlayerColor() const;
@@ -1439,8 +1440,6 @@ public:
 
 	int getFractionalCombatExperience() const;
 	void changeFractionalCombatExperience(int iChange, UnitTypes eGGType = NO_UNIT);
-
-	void updateCache();
 
 	void clearTileCulture();
 	void clearCityCulture();

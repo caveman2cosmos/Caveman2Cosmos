@@ -29,7 +29,8 @@ bool CvInitCore::bPathsSet;
 // Used to signal the BULL saved game format is used
 #define BUG_DLL_SAVE_FORMAT		64
 
-// Public Functions...
+uint32_t CvInitCore::m_uiAssetCheckSum = 0;
+uint32_t CvInitCore::m_uiSavegameAssetCheckSum = 0;
 
 CvInitCore::CvInitCore()
 {
@@ -80,8 +81,6 @@ CvInitCore::CvInitCore()
 // BUG - EXE/DLL Paths - start
 	bPathsSet = false;
 // BUG - EXE/DLL Paths - end
-
-	m_uiSavegameAssetCheckSum = -1;
 
 	reset(NO_GAMEMODE);
 
@@ -572,8 +571,6 @@ void CvInitCore::resetGame()
 	m_eGameSpeed = (GameSpeedTypes)GC.getDefineINT("STANDARD_GAMESPEED");	// NO_ option?
 	m_eTurnTimer = (TurnTimerTypes)GC.getDefineINT("STANDARD_TURNTIMER");	// NO_ option?
 	m_eCalendar = (CalendarTypes)GC.getDefineINT("STANDARD_CALENDAR");		// NO_ option?
-
-	m_uiSavegameAssetCheckSum = -1;
 
 	// Map-specific custom parameters
 	clearCustomMapOptions();
@@ -1683,9 +1680,9 @@ void CvInitCore::read(FDataStreamBase* pStream)
 	}
 
 	//	Asset checksum of the build that did the save
-	m_uiSavegameAssetCheckSum = -1;	//	If save doesn't have the info
-	WRAPPER_READ(wrapper, "CvInitCore", &m_uiSavegameAssetCheckSum);
-	OutputDebugString(CvString::format("Asset CheckSum of save is %d\n", m_uiSavegameAssetCheckSum).c_str());
+	WRAPPER_READ_DECORATED(wrapper, "CvInitCore", &m_uiSavegameAssetCheckSum, "m_uiSavegameAssetCheckSum");
+	//OutputDebugString(CvString::format("Asset CheckSum READ %I32u = m_uiAssetCheckSum\n", m_uiAssetCheckSum).c_str());
+	//OutputDebugString(CvString::format("Asset CheckSum READ %I32u = m_uiSavegameAssetCheckSum\n", m_uiSavegameAssetCheckSum).c_str());
 
 	// GAME DATA
 	WRAPPER_READ(wrapper, "CvInitCore", (int*)&m_eType);
@@ -1944,6 +1941,7 @@ void CvInitCore::write(FDataStreamBase* pStream)
 
 	// record the asset checksum of the build doing the save
 	WRAPPER_WRITE_DECORATED(wrapper, "CvInitCore", m_uiAssetCheckSum, "m_uiSavegameAssetCheckSum");
+	//OutputDebugString(CvString::format("Asset CheckSum WRITE:\n%I32u = m_uiAssetCheckSum\n%I32u = m_uiSavegameAssetCheckSum", m_uiAssetCheckSum, m_uiSavegameAssetCheckSum).c_str());
 
 	// GAME DATA
 	WRAPPER_WRITE(wrapper, "CvInitCore", m_eType);
@@ -2163,14 +2161,10 @@ void CvInitCore::reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID)
 // ! Afforess
 
 
-unsigned int CvInitCore::getSavegameAssetCheckSum() const
-{
-	return m_uiSavegameAssetCheckSum;
-}
-
 void CvInitCore::calculateAssetCheckSum()
 {
 	m_uiAssetCheckSum = GC.getAssetCheckSum();
+	//OutputDebugString(CvString::format("Asset CheckSum calculateAssetCheckSum:\n%I32u = m_uiAssetCheckSum\n%I32u = m_uiSavegameAssetCheckSum", m_uiAssetCheckSum, m_uiSavegameAssetCheckSum).c_str());
 
 #ifdef _DEBUG
 	// Perform some validation checks of the loaded info classes (add as needed)
@@ -2180,6 +2174,7 @@ void CvInitCore::calculateAssetCheckSum()
 
 void CvInitCore::checkVersions()
 {
+	//OutputDebugString(CvString::format("Asset CheckSum checkVersions:\n%I32u = m_uiAssetCheckSum\n%I32u = m_uiSavegameAssetCheckSum", m_uiAssetCheckSum, m_uiSavegameAssetCheckSum).c_str());
 	// If assets changed
 	if (m_uiSavegameAssetCheckSum != m_uiAssetCheckSum)
 	{
@@ -2192,7 +2187,6 @@ void CvInitCore::checkVersions()
 			{
 				gDLL->getInterfaceIFace()->addPopup(pInfo, ePlayer, false, true);
 			}
-			m_uiSavegameAssetCheckSum = m_uiAssetCheckSum;
 		}
 	}
 }

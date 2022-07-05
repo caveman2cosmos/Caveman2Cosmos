@@ -29528,19 +29528,6 @@ void CvUnit::setShadowUnit(const CvUnit* pUnit)
 }
 
 
-void CvUnit::waitForTech(int iFlag, int iTech)
-{
-	if (iFlag != GC.getNumTechInfos())
-	{
-		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_SELECT_DISCOVERY_TECH, getID(), 0, 0);
-		if (pInfo)
-		{
-			gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner(), true);
-		}
-	}
-	else discover((TechTypes)iTech);
-}
-
 CvProperties* CvUnit::getProperties()
 {
 	return &m_Properties;

@@ -704,6 +704,15 @@ bool CyTeam::isNoTradeTech(int /*TechTypes*/ iIndex) const
 	return m_pTeam->isNoTradeTech((TechTypes)iIndex);
 }
 
+int CyTeam::getNumAdjacentResearch() const
+{
+	return m_pTeam->getAdjacentResearch().size();
+}
+int CyTeam::getAdjacentResearch(int i) const
+{
+	return m_pTeam->getAdjacentResearch()[i];
+}
+
 int CyTeam::getImprovementYieldChange(int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2) const
 {
 	return m_pTeam->getImprovementYieldChange((ImprovementTypes)eIndex1, (YieldTypes)eIndex2);

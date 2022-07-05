@@ -223,18 +223,18 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 		if self.options.isShowTechTradeAlert():
 			techsByPlayer = {}
 			researchTechs = set()
-			iTotalTechs = GC.getNumTechInfos()
 			tradeData.ItemType = TradeableItems.TRADE_TECHNOLOGIES
 			bCheck1 = True
 			for CyPlayerX in TradeUtil.getTechTradePartners(CyPlayer):
 				techsToTrade = set()
-				for iTech in range(iTotalTechs):
-					if bCheck1 and CyPlayer.canResearch(iTech):
-						researchTechs.add(iTech)
-					tradeData.iData = iTech
+				for i in xrange(CyTeam.getNumAdjacentResearch()):
+					iTechX = CyTeam.getAdjacentResearch(i)
+					if bCheck1 and CyPlayer.canResearch(iTechX, True):
+						researchTechs.add(iTechX)
+					tradeData.iData = iTechX
 					if CyPlayerX.canTradeItem(iPlayer, tradeData, False):
 						if CyPlayerX.getTradeDenial(iPlayer, tradeData) == DenialTypes.NO_DENIAL: # will trade
-							techsToTrade.add(iTech)
+							techsToTrade.add(iTechX)
 				bCheck1 = False
 				techsByPlayer[CyPlayerX.getID()] = techsToTrade
 

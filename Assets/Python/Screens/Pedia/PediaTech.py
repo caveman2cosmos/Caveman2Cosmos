@@ -99,7 +99,7 @@ class PediaTech:
 		iEra = CvTheTechInfo.getEra()
 #		szTechEra = TRNSLTR.changeTextColor(GC.getEraInfo(iEra).getDescription(), iEra * 255 / GC.getNumEraInfos())
 		if CyPlayer:
-			szTechCost = TRNSLTR.getText("TXT_KEY_PEDIA_COST", (GC.getTeam(GC.getGame().getActiveTeam()).getResearchCost(iTheTech),))
+			szTechCost = TRNSLTR.getText("TXT_KEY_PEDIA_COST", (GC.getTeam(CyPlayer.getTeam()).getResearchCost(iTheTech),))
 		else:
 			szTechCost = TRNSLTR.getText("%d1_Num", (CvTheTechInfo.getResearchCost(),))
 		szCostText = szTechCost + u"%c" % (GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar())
@@ -297,17 +297,11 @@ class PediaTech:
 			screen.show(Pnl)
 		# Leads To
 		Pnl = aName()
+
 		screen.addPanel(Pnl, TRNSLTR.getText("TXT_KEY_PEDIA_LEADS_TO", ()), "", False, True, self.X_COL_3, Y_BOT_ROW_3, W_COL_3, H_BOT_ROW, ePnlBlue50)
-		for i in range(GC.getNumTechInfos()):
-			CvTechInfo = GC.getTechInfo(i)
-
-			for iType in CvTechInfo.getPrereqOrTechs():
-				if iType == iTheTech:
-					screen.attachImageButton(Pnl, "", CvTechInfo.getButton(), enumGBS, eWidJuToDerTech, i, 1, False)
-
-			for iType in CvTechInfo.getPrereqAndTechs():
-				if iType == iTheTech:
-					screen.attachImageButton(Pnl, "", CvTechInfo.getButton(), enumGBS, eWidJuToDerTech, i, 1, False)
+		for i in xrange(CvTheTechInfo.getNumLeadsToTechs()):
+			iTechX = CvTheTechInfo.getLeadsToTech(i)
+			screen.attachImageButton(Pnl, "", GC.getTechInfo(iTechX).getButton(), enumGBS, eWidJuToDerTech, iTechX, 1, False)
 
 		# Quote
 		szTxt = CvTheTechInfo.getQuote()
