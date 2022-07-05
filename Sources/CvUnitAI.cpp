@@ -2163,11 +2163,6 @@ void CvUnitAI::AI_workerMove()
 	BuildTypes eBestBonusBuild = NO_BUILD;
 	int iBestBonusValue = 0;
 
-	if (bCanRoute && !isNPC() && AI_connectCity())
-	{
-		return;
-	}
-
 	// find bonuses within 2 moves to improve
 	if (CvWorkerService::ImproveBonus(this, 2))
 	{
