@@ -3925,18 +3925,17 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 		}
 
 		// double space if had any war
-		if( kTeam.getAnyWarPlanCount(true) > 0 )
+		if (kTeam.hasWarPlan(true))
 		{
-			int iEnemyPowerPercent = kTeam.AI_getEnemyPowerPercent();
+			const int iEnemyPowerPercent = kTeam.AI_getEnemyPowerPercent();
 			szBuffer.append(CvWString::format(SETCOLR L"\nEnemy Power Percent: %d" ENDCOLR, TEXT_COLOR((iEnemyPowerPercent < 100) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"), iEnemyPowerPercent));
-
 		}
 		if (bHadAny)
 		{
 			int iWarSuccessRatio = kTeam.AI_getWarSuccessCapitulationRatio();
 			szBuffer.append(CvWString::format(SETCOLR L"\nWar Success Ratio: %d" ENDCOLR, TEXT_COLOR((iWarSuccessRatio > 0) ? "COLOR_POSITIVE_TEXT" : "COLOR_NEGATIVE_TEXT"), iWarSuccessRatio));
 		}
-		if (bHadAny || kTeam.getAnyWarPlanCount(true) > 0)
+		if (bHadAny || kTeam.hasWarPlan(true))
 		{
 			szBuffer.append(NEWLINE);
 			szBuffer.append(NEWLINE);
@@ -4070,7 +4069,7 @@ void CvDLLWidgetData::parseContactCivHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 		// team power (if agressive, we use higher value)
 		int iTeamPower = kTeam.getPower(true);
-		if (bAggressive && kTeam.getAnyWarPlanCount(true) == 0)
+		if (bAggressive && !kTeam.hasWarPlan(true))
 		{
 			iTeamPower *= 4;
 			iTeamPower /= 3;

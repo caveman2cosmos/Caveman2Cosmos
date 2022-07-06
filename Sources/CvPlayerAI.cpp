@@ -699,7 +699,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 		return;
 	}
 
-	const bool bAnyWar = GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0;
+	const bool bAnyWar = GET_TEAM(getTeam()).hasWarPlan(true);
 	const int64_t iStartingGold = getGold();
 	const int iTargetGold = AI_goldTarget();
 	int64_t iUpgradeBudget = std::max<int64_t>(iStartingGold - iTargetGold, AI_goldToUpgradeAllUnits()) / (bAnyWar ? 1 : 2);
@@ -4007,7 +4007,7 @@ int CvPlayerAI::AI_goldTarget() const
 	iGold *= 100 + calculateInflationRate();
 	iGold /= 100;
 
-	const bool bAnyWar = GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0;
+	const bool bAnyWar = GET_TEAM(getTeam()).hasWarPlan(true);
 	if (bAnyWar)
 	{
 		iGold *= 3;
@@ -4079,7 +4079,7 @@ TechTypes CvPlayerAI::AI_bestTech(int iMaxPathLength, bool bIgnoreCost, bool bAs
 		{
 			bValid = false;
 		}
-		if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) == 0)
+		if (!GET_TEAM(getTeam()).hasWarPlan(true))
 		{
 			bValid = false;
 		}
@@ -5903,7 +5903,7 @@ int CvPlayerAI::AI_techUnitValue(TechTypes eTech, int iPathLength, bool& bEnable
 {
 	const bool bWarPlan =
 		(
-			GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0
+			GET_TEAM(getTeam()).hasWarPlan(true)
 			|| // or aggressive personality
 			GET_TEAM(getTeam()).AI_getTotalWarOddsTimes100() > 400
 		);
@@ -7755,31 +7755,34 @@ PlayerVoteTypes CvPlayerAI::AI_diploVote(const VoteSelectionSubData& kVoteData, 
 					// Vassals always deny war trade requests and thus previously always voted no
 					bValid = false;
 
-					if (
-						GET_TEAM(getTeam()).getAnyWarPlanCount(true) == 0
-					&&
+					if
+					(
+						!GET_TEAM(getTeam()).hasWarPlan(true)
+						&&
 						(
 							eSecretaryGeneral == NO_TEAM
 							||
 							GET_TEAM(getTeam()).AI_getAttitude(eSecretaryGeneral)
-				>
+							>
 							GC.getLeaderHeadInfo(getPersonalityType()).getDeclareWarRefuseAttitudeThreshold()
-							)
+						)
 					)
 					{
 						if (eSecretaryGeneral != NO_TEAM && GET_TEAM(getTeam()).isVassal(eSecretaryGeneral))
 						{
 							bValid = true;
 						}
-						else if (
+						else if
 						(
-							GET_TEAM(getTeam()).isAVassal()
-							?
-							GET_TEAM(getTeam()).getCurrentMasterPower(true)
-							:
-							GET_TEAM(getTeam()).getPower(true)
+							(
+								GET_TEAM(getTeam()).isAVassal()
+								?
+								GET_TEAM(getTeam()).getCurrentMasterPower(true)
+								:
+								GET_TEAM(getTeam()).getPower(true)
 							)
-					> GET_TEAM(eWarTeam).getDefensivePower())
+							> GET_TEAM(eWarTeam).getDefensivePower()
+						)
 						{
 							bValid = true;
 						}
@@ -9604,91 +9607,70 @@ DenialTypes CvPlayerAI::AI_bonusTrade(BonusTypes eBonus, PlayerTypes ePlayer) co
 
 	bool bStrategic = false;
 
-	/************************************************************************************************/
-	/* Fuyu & Afforess				   Start		 6/22/10										*/
-	/*																							  */
-	/*  Better AI: Strategic For Current Era														*/
-	/************************************************************************************************/
-	//disregard obsolete units
+	// Disregard obsolete units
 	const CvCity* pCapitalCity = getCapitalCity();
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		if (!GC.getGame().canEverTrain((UnitTypes)iI))
+		if (!GC.getGame().canEverTrain((UnitTypes)iI)
+		|| pCapitalCity->allUpgradesAvailable((UnitTypes)iI) != NO_UNIT)
 		{
 			continue;
 		}
 
-		if (pCapitalCity->allUpgradesAvailable((UnitTypes)iI) != NO_UNIT)
-		{
-			continue;
-		}
-		/************************************************************************************************/
-		/* Fuyu						  END															*/
-		/************************************************************************************************/
 		if (GC.getUnitInfo((UnitTypes)iI).getPrereqAndBonus() == eBonus
 		|| algo::any_of_equal(GC.getUnitInfo((UnitTypes)iI).getPrereqOrBonuses(), eBonus))
 		{
 			bStrategic = true;
+			break;
 		}
 	}
 
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	if (!bStrategic)
 	{
-		if (GET_TEAM(getTeam()).isObsoleteBuilding((BuildingTypes)iI)
-		|| !GC.getGame().canEverConstruct((BuildingTypes)iI))
+		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
-			continue;
-		}
+			if (GET_TEAM(getTeam()).isObsoleteBuilding((BuildingTypes)iI)
+			|| !GC.getGame().canEverConstruct((BuildingTypes)iI))
+			{
+				continue;
+			}
 
-		if (GC.getBuildingInfo((BuildingTypes)iI).getPrereqAndBonus() == eBonus
-		|| algo::any_of_equal(GC.getBuildingInfo((BuildingTypes)iI).getPrereqOrBonuses(), eBonus))
-		{
-			bStrategic = true;
+			if (GC.getBuildingInfo((BuildingTypes)iI).getPrereqAndBonus() == eBonus
+			|| algo::any_of_equal(GC.getBuildingInfo((BuildingTypes)iI).getPrereqOrBonuses(), eBonus))
+			{
+				bStrategic = true;
+				break;
+			}
 		}
 	}
-
 	// XXX marble and stone???
 
 	const AttitudeTypes eAttitude = AI_getAttitude(ePlayer);
 
 	if (bStrategic)
 	{
-		/************************************************************************************************/
-		/* Afforess					  Start		 03/19/10											   */
-		/*																							  */
-		/* Ruthless AI																				  */
-		/************************************************************************************************/
 		//If we are planning war, don't sell our resources!
-		if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
+		if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI) && GET_TEAM(getTeam()).hasWarPlan(true))
 		{
-			if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
-			{
-				return DENIAL_MYSTERY;
-			}
+			return DENIAL_MYSTERY;
 		}
-		/************************************************************************************************/
-		/* Afforess						 END															*/
-		/************************************************************************************************/
+
 		if (eAttitude <= GC.getLeaderHeadInfo(getPersonalityType()).getStrategicBonusRefuseAttitudeThreshold())
 		{
 			return DENIAL_ATTITUDE;
 		}
 	}
 
-	if (GC.getBonusInfo(eBonus).getHappiness() > 0)
+	if (GC.getBonusInfo(eBonus).getHappiness() > 0
+	&& eAttitude <= GC.getLeaderHeadInfo(getPersonalityType()).getHappinessBonusRefuseAttitudeThreshold())
 	{
-		if (eAttitude <= GC.getLeaderHeadInfo(getPersonalityType()).getHappinessBonusRefuseAttitudeThreshold())
-		{
-			return DENIAL_ATTITUDE;
-		}
+		return DENIAL_ATTITUDE;
 	}
 
-	if (GC.getBonusInfo(eBonus).getHealth() > 0)
+	if (GC.getBonusInfo(eBonus).getHealth() > 0
+	&& eAttitude <= GC.getLeaderHeadInfo(getPersonalityType()).getHealthBonusRefuseAttitudeThreshold())
 	{
-		if (eAttitude <= GC.getLeaderHeadInfo(getPersonalityType()).getHealthBonusRefuseAttitudeThreshold())
-		{
-			return DENIAL_ATTITUDE;
-		}
+		return DENIAL_ATTITUDE;
 	}
 
 	return NO_DENIAL;
@@ -10075,27 +10057,12 @@ DenialTypes CvPlayerAI::AI_stopTradingTrade(TeamTypes eTradeTeam, PlayerTypes eP
 			}
 		}
 	}
-	/************************************************************************************************/
-	/* Afforess					  Start		 03/19/10											   */
-	/*																							  */
-	/* Ruthless AI: Don't cancel open borders, we may need those in war							 */
-	/************************************************************************************************/
-	//Fuyu: looks like a good idea, not just for ruthless AI
-	/*
-		if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
-	*/
+
+	if (GET_TEAM(getTeam()).isOpenBorders(eTradeTeam) && GET_TEAM(getTeam()).hasWarPlan(true))
 	{
-		if (GET_TEAM(getTeam()).isOpenBorders(eTradeTeam))
-		{
-			if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
-			{
-				return DENIAL_MYSTERY;
-			}
-		}
+		return DENIAL_MYSTERY;
 	}
-	/************************************************************************************************/
-	/* Afforess						 END															*/
-	/************************************************************************************************/
+
 	return NO_DENIAL;
 }
 
@@ -10164,12 +10131,11 @@ DenialTypes CvPlayerAI::AI_civicTrade(CivicTypes eCivic, PlayerTypes ePlayer) co
 	}
 
 	CivicTypes eFavoriteCivic = (CivicTypes)GC.getLeaderHeadInfo(getPersonalityType()).getFavoriteCivic();
-	if (eFavoriteCivic != NO_CIVIC)
+	if (eFavoriteCivic != NO_CIVIC
+	&& isCivic(eFavoriteCivic)
+	&& GC.getCivicInfo(eCivic).getCivicOptionType() == GC.getCivicInfo(eFavoriteCivic).getCivicOptionType())
 	{
-		if (isCivic(eFavoriteCivic) && (GC.getCivicInfo(eCivic).getCivicOptionType() == GC.getCivicInfo(eFavoriteCivic).getCivicOptionType()))
-		{
-			return DENIAL_FAVORITE_CIVIC;
-		}
+		return DENIAL_FAVORITE_CIVIC;
 	}
 
 	if (GC.getCivilizationInfo(getCivilizationType()).getCivilizationInitialCivics(GC.getCivicInfo(eCivic).getCivicOptionType()) == eCivic)
@@ -10181,21 +10147,12 @@ DenialTypes CvPlayerAI::AI_civicTrade(CivicTypes eCivic, PlayerTypes ePlayer) co
 	{
 		return DENIAL_ATTITUDE;
 	}
-	/************************************************************************************************/
-	/* Afforess					  Start		 03/19/10											   */
-	/*																							  */
-	/* Ruthless AI: Don't change civics when planning war										   */
-	/************************************************************************************************/
-	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
+
+	// Don't change civics when at war (Anarchy is bad)
+	if (GET_TEAM(getTeam()).isAtWar(false))
 	{
-		if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
-		{
-			return DENIAL_JOKING;
-		}
+		return DENIAL_JOKING;
 	}
-	/************************************************************************************************/
-	/* Afforess						 END															*/
-	/************************************************************************************************/
 	return NO_DENIAL;
 }
 
@@ -10263,21 +10220,12 @@ DenialTypes CvPlayerAI::AI_religionTrade(ReligionTypes eReligion, PlayerTypes eP
 	{
 		return DENIAL_ATTITUDE;
 	}
-	/************************************************************************************************/
-	/* Afforess					  Start		 03/19/10											   */
-	/*																							  */
-	/* Ruthless AI: Don't Change Religions When we are planning war (Anarchy is bad)				*/
-	/************************************************************************************************/
-	if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
+
+	// Don't change religions when at war (Anarchy is bad)
+	if (GET_TEAM(getTeam()).isAtWar(false))
 	{
-		if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
-		{
-			return DENIAL_NO_GAIN;
-		}
+		return DENIAL_NO_GAIN;
 	}
-	/************************************************************************************************/
-	/* Afforess						 END															*/
-	/************************************************************************************************/
 	return NO_DENIAL;
 }
 
@@ -13184,7 +13132,7 @@ int CvPlayerAI::AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum, CivicT
 	const CvCivicInfo& kCivic = GC.getCivicInfo(eCivic);
 	const CvTeamAI& pTeam = GET_TEAM(getTeam());
 
-	bool bWarPlan = pTeam.getAnyWarPlanCount(true) > 0;
+	bool bWarPlan = pTeam.hasWarPlan(true);
 	if (bWarPlan)
 	{
 		bWarPlan = false;
@@ -16804,80 +16752,63 @@ void CvPlayerAI::AI_doCounter()
 {
 	PROFILE_FUNC();
 
-	int iBonusImports;
-	int iI, iJ;
-
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getTeam(), false)
+		&& GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getTeam() != getTeam())
+			if (getStateReligion() != NO_RELIGION
+			&&  getStateReligion() == GET_PLAYER((PlayerTypes)iI).getStateReligion())
 			{
-				if (GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
+				AI_changeSameReligionCounter((PlayerTypes)iI, 1);
+			}
+			else if (AI_getSameReligionCounter((PlayerTypes)iI) > 0)
+			{
+				AI_changeSameReligionCounter((PlayerTypes)iI, -1);
+			}
+
+			if (getStateReligion() != NO_RELIGION
+			&&  getStateReligion() != GET_PLAYER((PlayerTypes)iI).getStateReligion()
+			&& GET_PLAYER((PlayerTypes)iI).getStateReligion() != NO_RELIGION)
+			{
+				AI_changeDifferentReligionCounter((PlayerTypes)iI, 1);
+			}
+			else if (AI_getDifferentReligionCounter((PlayerTypes)iI) > 0)
+			{
+				AI_changeDifferentReligionCounter((PlayerTypes)iI, -1);
+			}
+
+			if (GC.getLeaderHeadInfo(getPersonalityType()).getFavoriteCivic() != NO_CIVIC)
+			{
+				if (isCivic((CivicTypes) GC.getLeaderHeadInfo(getPersonalityType()).getFavoriteCivic())
+				&& GET_PLAYER((PlayerTypes)iI).isCivic((CivicTypes)GC.getLeaderHeadInfo(getPersonalityType()).getFavoriteCivic()))
 				{
-					if ((getStateReligion() != NO_RELIGION) &&
-						  (getStateReligion() == GET_PLAYER((PlayerTypes)iI).getStateReligion()))
-					{
-						AI_changeSameReligionCounter(((PlayerTypes)iI), 1);
-					}
-					else
-					{
-						if (AI_getSameReligionCounter((PlayerTypes)iI) > 0)
-						{
-							AI_changeSameReligionCounter(((PlayerTypes)iI), -1);
-						}
-					}
-
-					if ((getStateReligion() != NO_RELIGION) &&
-						  (GET_PLAYER((PlayerTypes)iI).getStateReligion() != NO_RELIGION) &&
-						  (getStateReligion() != GET_PLAYER((PlayerTypes)iI).getStateReligion()))
-					{
-						AI_changeDifferentReligionCounter(((PlayerTypes)iI), 1);
-					}
-					else
-					{
-						if (AI_getDifferentReligionCounter((PlayerTypes)iI) > 0)
-						{
-							AI_changeDifferentReligionCounter(((PlayerTypes)iI), -1);
-						}
-					}
-
-					if (GC.getLeaderHeadInfo(getPersonalityType()).getFavoriteCivic() != NO_CIVIC)
-					{
-						if (isCivic((CivicTypes)(GC.getLeaderHeadInfo(getPersonalityType()).getFavoriteCivic())) &&
-							  GET_PLAYER((PlayerTypes)iI).isCivic((CivicTypes)(GC.getLeaderHeadInfo(getPersonalityType()).getFavoriteCivic())))
-						{
-							AI_changeFavoriteCivicCounter(((PlayerTypes)iI), 1);
-						}
-						else
-						{
-							if (AI_getFavoriteCivicCounter((PlayerTypes)iI) > 0)
-							{
-								AI_changeFavoriteCivicCounter(((PlayerTypes)iI), -1);
-							}
-						}
-					}
-
-					iBonusImports = getNumTradeBonusImports((PlayerTypes)iI);
-
-					if (iBonusImports > 0)
-					{
-						AI_changeBonusTradeCounter(((PlayerTypes)iI), iBonusImports);
-					}
-					else
-					{
-						AI_changeBonusTradeCounter(((PlayerTypes)iI), -(std::min(AI_getBonusTradeCounter((PlayerTypes)iI), ((GET_PLAYER((PlayerTypes)iI).getNumCities() / 4) + 1))));
-					}
+					AI_changeFavoriteCivicCounter(((PlayerTypes)iI), 1);
 				}
+				else if (AI_getFavoriteCivicCounter((PlayerTypes)iI) > 0)
+				{
+					AI_changeFavoriteCivicCounter(((PlayerTypes)iI), -1);
+				}
+			}
+
+			const int iBonusImports = getNumTradeBonusImports((PlayerTypes)iI);
+
+			if (iBonusImports > 0)
+			{
+				AI_changeBonusTradeCounter(((PlayerTypes)iI), iBonusImports);
+			}
+			else
+			{
+				AI_changeBonusTradeCounter(((PlayerTypes)iI), -(std::min(AI_getBonusTradeCounter((PlayerTypes)iI), ((GET_PLAYER((PlayerTypes)iI).getNumCities() / 4) + 1))));
 			}
 		}
 	}
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-			for (iJ = 0; iJ < NUM_CONTACT_TYPES; iJ++)
+			for (int iJ = 0; iJ < NUM_CONTACT_TYPES; iJ++)
 			{
 				if (AI_getContactTimer(((PlayerTypes)iI), ((ContactTypes)iJ)) > 0)
 				{
@@ -16887,40 +16818,33 @@ void CvPlayerAI::AI_doCounter()
 		}
 	}
 
-	for (iI = 0; iI < MAX_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
-			for (iJ = 0; iJ < NUM_MEMORY_TYPES; iJ++)
+			for (int iJ = 0; iJ < NUM_MEMORY_TYPES; iJ++)
 			{
-				if (AI_getMemoryCount(((PlayerTypes)iI), ((MemoryTypes)iJ)) > 0)
+				if (AI_getMemoryCount((PlayerTypes)iI, (MemoryTypes)iJ) > 0
+				&& GC.getLeaderHeadInfo(getPersonalityType()).getMemoryDecayRand(iJ) > 0)
 				{
-					if (GC.getLeaderHeadInfo(getPersonalityType()).getMemoryDecayRand(iJ) > 0)
+					// Afforess - 04/26/14 - Ruthless AI: Easier for the AI to forget past wrongs
+					//	AI attitude is designed to make AI players feel human, but it makes them weak
+					//	A Perfect AI treats enemies and friends alike, both are obstacles to victory
+					int iRand = GC.getLeaderHeadInfo(getPersonalityType()).getMemoryDecayRand(iJ);
+
+					if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_REALISTIC_DIPLOMACY))
 					{
-						/************************************************************************************************/
-						/* Afforess					  Start		 04/26/14											   */
-						/*																							  */
-						/* Ruthless AI: Easier for the AI to forget past wrongs										 */
-						/************************************************************************************************/
-						//AI attitude is designed to make AI players feel human, but it makes them weak
-						//A Perfect AI treats enemies and friends alike, both are obstacles to victory
-						int iRand = GC.getLeaderHeadInfo(getPersonalityType()).getMemoryDecayRand(iJ);
-						if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_REALISTIC_DIPLOMACY))
-						{
-							iRand /= 3;
-							iRand /= AI_getMemoryCount(((PlayerTypes)iI), ((MemoryTypes)iJ));
-						}
-						if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
-						{
-							iRand /= 2;
-						}
-						if (GC.getGame().getSorenRandNum(iRand, "Memory Decay") == 0)
-						{
-							/************************************************************************************************/
-							/* Afforess						 END															*/
-							/************************************************************************************************/
-							AI_changeMemoryCount(((PlayerTypes)iI), ((MemoryTypes)iJ), -1);
-						}
+						iRand /= 1 + AI_getMemoryCount((PlayerTypes)iI, (MemoryTypes)iJ);
+					}
+
+					if (GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI))
+					{
+						iRand /= 3;
+					}
+
+					if (GC.getGame().getSorenRandNum(iRand, "Memory Decay") == 0)
+					{
+						AI_changeMemoryCount((PlayerTypes)iI, (MemoryTypes)iJ, -1);
 					}
 				}
 			}
@@ -16933,7 +16857,7 @@ void CvPlayerAI::AI_doMilitary()
 	PROFILE_FUNC();
 
 	// Afforess - add multiple passes
-	if (AI_isFinancialTrouble() && GET_TEAM(getTeam()).getAnyWarPlanCount(true) == 0)
+	if (AI_isFinancialTrouble() && !GET_TEAM(getTeam()).hasWarPlan(true))
 	{
 		const short iSafePercent = AI_safeFunding();
 		int64_t iNetIncome = getCommerceRate(COMMERCE_GOLD) + std::max(0, getGoldPerTurn());
@@ -21770,7 +21694,7 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 			case UNITAI_ASSAULT_SEA:
 			case UNITAI_CARRIER_SEA:
 			case UNITAI_MISSILE_CARRIER_SEA:
-				if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
+				if (GET_TEAM(getTeam()).hasWarPlan(true))
 				{
 					iValue *= 5;
 				}
@@ -21787,7 +21711,7 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 			case UNITAI_DEFENSE_AIR:
 			case UNITAI_CARRIER_AIR:
 			case UNITAI_MISSILE_AIR:
-				if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
+				if (GET_TEAM(getTeam()).hasWarPlan(true))
 				{
 					iValue *= 5;
 				}
@@ -21847,7 +21771,7 @@ int CvPlayerAI::AI_cultureVictoryTechValue(TechTypes eTech) const
 	}
 
 	//units
-	const bool bAnyWarplan = GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0;
+	const bool bAnyWarplan = GET_TEAM(getTeam()).hasWarPlan(true);
 	int iBestUnitValue = 0;
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
@@ -23001,7 +22925,7 @@ int CvPlayerAI::AI_getStrategyHash() const
 		iTempValue += 4;
 	}
 
-	if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) == 0)
+	if (!GET_TEAM(getTeam()).hasWarPlan(true))
 	{
 		iTempValue += (GET_TEAM(getTeam()).getBestKnownTechScorePercent() < 85) ? 5 : 3;
 	}
@@ -23183,8 +23107,9 @@ int CvPlayerAI::AI_getStrategyHash() const
 	}
 
 	// Economic focus (K-Mod) - Note: this strategy is a gambit. The goal is catch up in tech by avoiding building units.
-	if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) == 0 &&
-		(100 * iAverageEnemyUnit >= 150 * iTypicalAttack && 100 * iAverageEnemyUnit >= 180 * iTypicalDefence))
+	if (!GET_TEAM(getTeam()).hasWarPlan(true)
+	&& 100 * iAverageEnemyUnit >= 150 * iTypicalAttack
+	&& 100 * iAverageEnemyUnit >= 180 * iTypicalDefence)
 	{
 		m_iStrategyHash |= AI_STRATEGY_ECONOMY_FOCUS;
 	}
@@ -24078,21 +24003,14 @@ int CvPlayerAI::AI_countNumAreaHostileUnits(const CvArea* pArea, bool bPlayer, b
 int CvPlayerAI::AI_getTotalFloatingDefendersNeeded(const CvArea* pArea) const
 {
 	PROFILE_FUNC();
-	int iDefenders;
-	int iCurrentEra = getCurrentEra();
-	int iAreaCities = pArea->getCitiesPerPlayer(getID());
 
-	iCurrentEra = std::max(0, iCurrentEra - GC.getGame().getStartEra() / 2);
+	const int iAreaCities = pArea->getCitiesPerPlayer(getID());
+	const int iCurrentEra = std::max(0, getCurrentEra() - GC.getGame().getStartEra() / 2);
 
-	iDefenders = 1 + ((iCurrentEra + ((GC.getGame().getMaxCityElimination() > 0) ? 3 : 2)) * iAreaCities);
+	int iDefenders = 1 + iAreaCities * (iCurrentEra + (GC.getGame().getMaxCityElimination() > 0 ? 3 : 2));
 	iDefenders /= 3;
 	iDefenders += pArea->getPopulationPerPlayer(getID()) / 7;
 
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  04/01/10								jdog5000	  */
-	/*																							  */
-	/* War strategy AI, Victory Strategy AI														 */
-	/************************************************************************************************/
 	if (pArea->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE || pArea->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE || pArea->getAreaAIType(getTeam()) == AREAAI_MASSING)
 	{
 		if (!pArea->isHomeArea(getID()) && iAreaCities <= std::min(4, pArea->getNumCities() / 3))
@@ -24107,29 +24025,26 @@ int CvPlayerAI::AI_getTotalFloatingDefendersNeeded(const CvArea* pArea) const
 	{
 		iDefenders *= 2;
 	}
-	else
+	else if (AI_isDoStrategy(AI_STRATEGY_ALERT2))
 	{
-		if (AI_isDoStrategy(AI_STRATEGY_ALERT2))
-		{
-			iDefenders *= 2;
-		}
-		else if (AI_isDoStrategy(AI_STRATEGY_ALERT1))
-		{
-			iDefenders *= 3;
-			iDefenders /= 2;
-		}
-		else if (pArea->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE)
+		iDefenders *= 2;
+	}
+	else if (AI_isDoStrategy(AI_STRATEGY_ALERT1))
+	{
+		iDefenders *= 3;
+		iDefenders /= 2;
+	}
+	else if (pArea->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE)
+	{
+		iDefenders *= 2;
+		iDefenders /= 3;
+	}
+	else if (pArea->getAreaAIType(getTeam()) == AREAAI_MASSING)
+	{
+		if (GET_TEAM(getTeam()).AI_getEnemyPowerPercent(true) < (10 + GC.getLeaderHeadInfo(getPersonalityType()).getMaxWarNearbyPowerRatio()))
 		{
 			iDefenders *= 2;
 			iDefenders /= 3;
-		}
-		else if (pArea->getAreaAIType(getTeam()) == AREAAI_MASSING)
-		{
-			if (GET_TEAM(getTeam()).AI_getEnemyPowerPercent(true) < (10 + GC.getLeaderHeadInfo(getPersonalityType()).getMaxWarNearbyPowerRatio()))
-			{
-				iDefenders *= 2;
-				iDefenders /= 3;
-			}
 		}
 	}
 
@@ -24145,7 +24060,7 @@ int CvPlayerAI::AI_getTotalFloatingDefendersNeeded(const CvArea* pArea) const
 	}
 
 	// Afforess - check finances
-	if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) == 0 && AI_isFinancialTrouble())
+	if (!GET_TEAM(getTeam()).hasWarPlan(true) && AI_isFinancialTrouble())
 	{
 		iDefenders = std::max(1, iDefenders / 2);
 	}
@@ -24153,9 +24068,6 @@ int CvPlayerAI::AI_getTotalFloatingDefendersNeeded(const CvArea* pArea) const
 	// Removed AI_STRATEGY_GET_BETTER_UNITS reduction, it was reducing defenses twice
 
 	if (AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3))
-		/************************************************************************************************/
-		/* BETTER_BTS_AI_MOD					   END												  */
-		/************************************************************************************************/
 	{
 		iDefenders += 2 * iAreaCities;
 		if (pArea->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE)
@@ -24172,35 +24084,18 @@ int CvPlayerAI::AI_getTotalFloatingDefendersNeeded(const CvArea* pArea) const
 		iDefenders += 2;
 	}
 
-	if (getCapitalCity() != NULL)
+	if (getCapitalCity() != NULL
+	&&  getCapitalCity()->area() != pArea
+	// Lessen defensive requirements only if not being attacked locally
+	&& pArea->getAreaAIType(getTeam()) != AREAAI_DEFENSIVE)
 	{
-		if (getCapitalCity()->area() != pArea)
-		{
-			/************************************************************************************************/
-			/* UNOFFICIAL_PATCH					   01/23/09								jdog5000	  */
-			/*																							  */
-			/* Bugfix, War tactics AI																	   */
-			/************************************************************************************************/
-			/* original BTS code
-						//Defend offshore islands only lightly.
-						iDefenders = std::min(iDefenders, iAreaCities * iAreaCities - 1);
-			*/
-			// Lessen defensive requirements only if not being attacked locally
-			if (pArea->getAreaAIType(getTeam()) != AREAAI_DEFENSIVE)
-			{
-				// This may be our first city captured on a large enemy continent, need defenses to scale up based
-				// on total number of area cities not just ours
-				iDefenders = std::min(iDefenders, iAreaCities * iAreaCities + pArea->getNumCities() - iAreaCities - 1);
-			}
-			/************************************************************************************************/
-			/* UNOFFICIAL_PATCH						END												  */
-			/************************************************************************************************/
-		}
+		// This may be our first city captured on a large enemy continent,
+		//	need defenses to scale up based on total number of area cities not just ours.
+		iDefenders = std::min(iDefenders, iAreaCities * iAreaCities + pArea->getNumCities() - iAreaCities - 1);
 	}
 
-	// Super Forts begin *AI_defense* - Build a few extra floating defenders for occupying forts
+	// Build a few extra floating defenders for occupying forts
 	iDefenders += iAreaCities / 2;
-	// Super Forts end
 
 	return iDefenders;
 }
@@ -25139,7 +25034,7 @@ int CvPlayerAI::AI_getMinFoundValue() const
 {
 	int iValue = 4000 / (1 + getProfitMargin() * getProfitMargin());
 
-	if (GET_TEAM(getTeam()).getAnyWarPlanCount(1) > 0)
+	if (GET_TEAM(getTeam()).hasWarPlan(true))
 	{
 		iValue *= 2;
 	}
@@ -37008,7 +36903,7 @@ void CvPlayerAI::AI_doMilitaryProductionCity()
 	{
 		iNumMilitaryProdCitiesNeeded += getNumCities() / 4;
 	}
-	else if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
+	else if (GET_TEAM(getTeam()).hasWarPlan(true))
 	{
 		iNumMilitaryProdCitiesNeeded += getNumCities() / 8;
 	}

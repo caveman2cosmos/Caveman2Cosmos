@@ -12156,8 +12156,9 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 						}
 					}
 				}
+				const bool bWarPlan = GET_TEAM(getTeam()).hasWarPlan(true);
 
-				if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
+				if (bWarPlan)
 				{
 					szBuffer.append(CvWString::format(L";  planning war with: "));
 
@@ -12169,14 +12170,16 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 							szBuffer.append(CvWString::format(L"%d,", iI));
 						}
 					}
+					if (gPlayerLogLevel > 1)
+					{
+						logBBAI("%S\n\tEnemy power perc: %d (%d with others reduction)", szBuffer.getCString(), GET_TEAM(getTeam()).AI_getEnemyPowerPercent(), GET_TEAM(getTeam()).AI_getEnemyPowerPercent(true));
+					}
 				}
-				logBBAI("%S", szBuffer.getCString());
-				szBuffer.clear();
-
-				if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
+				else if (gPlayerLogLevel > 1)
 				{
-					logBBAI("	Enemy power perc: %d (%d with others reduction)", GET_TEAM(getTeam()).AI_getEnemyPowerPercent(), GET_TEAM(getTeam()).AI_getEnemyPowerPercent(true));
+					logBBAI("%S", szBuffer.getCString());
 				}
+				szBuffer.clear();
 			}
 
 			FAssertMsg(isAlive(), "isAlive is expected to be true");
@@ -26345,7 +26348,7 @@ DenialTypes CvPlayer::AI_militaryUnitTrade(const CvUnit* pUnit, PlayerTypes ePla
 		return DENIAL_JOKING;
 	}
 
-	if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0 && !GET_TEAM(getTeam()).AI_shareWar(GET_PLAYER(ePlayer).getTeam()))
+	if (GET_TEAM(getTeam()).hasWarPlan(true) && !GET_TEAM(getTeam()).AI_shareWar(GET_PLAYER(ePlayer).getTeam()))
 	{
 		return DENIAL_NO_GAIN;
 	}

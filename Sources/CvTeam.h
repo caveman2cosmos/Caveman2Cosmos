@@ -72,6 +72,7 @@ public:
 
 	int getWarPlanCount(WarPlanTypes eWarPlan, bool bIgnoreMinors) const;
 	int getAnyWarPlanCount(bool bIgnoreMinors) const;
+	bool hasWarPlan(bool bIgnoreMinors) const;
 	int getChosenWarCount(bool bIgnoreMinors) const;
 	int getHasMetCivCount(bool bIgnoreMinors) const;
 	bool hasMetAnyCiv(bool bIgnoreMinors = true) const;
