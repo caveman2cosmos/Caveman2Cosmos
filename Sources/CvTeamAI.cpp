@@ -1570,7 +1570,7 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 {
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
-	int iValue = 0;
+	uint64_t iValue = 0;
 
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
@@ -1580,29 +1580,32 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 		{
 			if (!pLoopPlot->isRevealed(getID(), false))
 			{
-				iValue += pLoopPlot->isWater() ? 20 : 50;
+				iValue += pLoopPlot->isWater() ? 15 : 30;
 			}
 			else
 			{
 				if (pLoopPlot->getRevealedOwner(eTeam, false) == pLoopPlot->getOwner()
 				&& pLoopPlot->getRevealedOwner(getID(), false) != pLoopPlot->getOwner())
 				{
-					iValue += 5;
-				}
-				if (pLoopPlot->getRevealedImprovementType(eTeam, false) == pLoopPlot->getImprovementType()
-				&& pLoopPlot->getRevealedImprovementType(getID(), false) != pLoopPlot->getImprovementType())
-				{
-					iValue += 2;
-				}
-				if (pLoopPlot->getRevealedRouteType(eTeam, false) == pLoopPlot->getRouteType()
-				&& pLoopPlot->getRevealedRouteType(getID(), false) != pLoopPlot->getRouteType())
-				{
-					iValue += 1;
+					iValue += 4;
 				}
 				CvCity* pCity = pLoopPlot->getPlotCity();
 				if (pCity != NULL && pCity->isRevealed(eTeam, false) && !pCity->isRevealed(getID(), false))
 				{
-					iValue += 10;
+					iValue += 8;
+				}
+				else
+				{
+					if (pLoopPlot->getRevealedImprovementType(eTeam, false) == pLoopPlot->getImprovementType()
+					&& pLoopPlot->getRevealedImprovementType(getID(), false) != pLoopPlot->getImprovementType())
+					{
+						iValue += 2;
+					}
+					if (pLoopPlot->getRevealedRouteType(eTeam, false) == pLoopPlot->getRouteType()
+					&& pLoopPlot->getRevealedRouteType(getID(), false) != pLoopPlot->getRouteType())
+					{
+						iValue += 1;
+					}
 				}
 			}
 		}
@@ -1614,7 +1617,8 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 	if (getAnyWarPlanCount(true) > 0)
 	{
 		// Up to date maps are invaluable when starting a war.
-		iValue *= 2;
+		iValue *= 3;
+		iValue /= 2;
 		// We should check to see if their map covers the team(s) we are gearing for war with
 		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 		{
@@ -1622,7 +1626,7 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 			&& AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN
 			&& GET_TEAM(eTeam).AI_teamCloseness((TeamTypes)iI) > 0)
 			{
-				iValue *= 4;
+				iValue *= 2;
 			}
 		}
 	}
@@ -1633,7 +1637,8 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 	{
 		return iValue * 2 / 3;
 	}
-	return iValue;
+	//OutputDebugString(CvString::format("AI_mapTradeVal: how much is the other's (%d) map worth to me (%d)\n\tValue=%I64u\n", (int)eTeam, getID(), iValue).c_str());
+	return static_cast<int>(std::min<uint64_t>(iValue, MAX_INT));
 }
 
 

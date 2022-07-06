@@ -7861,12 +7861,10 @@ PlayerVoteTypes CvPlayerAI::AI_diploVote(const VoteSelectionSubData& kVoteData, 
 int CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pList, bool bIgnoreAnnual, int iChange) const
 {
 	CLLNode<TradeData>* pNode;
-	CvCity* pCity;
-	int iValue;
 
 	FAssertMsg(ePlayer != getID(), "shouldn't call this function on ourselves");
 
-	iValue = 0;
+	int iValue = 0;
 
 	if (atWar(getTeam(), GET_PLAYER(ePlayer).getTeam()))
 	{
@@ -7875,134 +7873,165 @@ int CvPlayerAI::AI_dealVal(PlayerTypes ePlayer, const CLinkList<TradeData>* pLis
 
 	for (pNode = pList->head(); pNode; pNode = pList->next(pNode))
 	{
-		FAssertMsg(!(pNode->m_data.m_bHidden), "(pNode->m_data.m_bHidden) did not return false as expected");
+		FAssert(!pNode->m_data.m_bHidden);
 
 		switch (pNode->m_data.m_eItemType)
 		{
-		case TRADE_TECHNOLOGIES:
-			iValue += GET_TEAM(getTeam()).AI_techTradeVal((TechTypes)(pNode->m_data.m_iData), GET_PLAYER(ePlayer).getTeam());
-			break;
-		case TRADE_RESOURCES:
-			if (!bIgnoreAnnual)
+			case TRADE_TECHNOLOGIES:
 			{
-				iValue += AI_bonusTradeVal(((BonusTypes)(pNode->m_data.m_iData)), ePlayer, iChange);
+				iValue += GET_TEAM(getTeam()).AI_techTradeVal((TechTypes)(pNode->m_data.m_iData), GET_PLAYER(ePlayer).getTeam());
+				break;
+			}
+			case TRADE_RESOURCES:
+			{
+				if (!bIgnoreAnnual)
+				{
+					iValue += AI_bonusTradeVal(((BonusTypes)(pNode->m_data.m_iData)), ePlayer, iChange);
 
-				// The partner player is also loosing value for it, which is good for us
-				iValue += GET_PLAYER(ePlayer).AI_bonusTradeVal(((BonusTypes)(pNode->m_data.m_iData)), getID(), -iChange);
+					// The partner player is also loosing value for it, which is good for us
+					iValue += GET_PLAYER(ePlayer).AI_bonusTradeVal(((BonusTypes)(pNode->m_data.m_iData)), getID(), -iChange);
+				}
+				break;
 			}
-			break;
-		case TRADE_CITIES:
-			pCity = GET_PLAYER(ePlayer).getCity(pNode->m_data.m_iData);
-			if (pCity != NULL)
+			case TRADE_CITIES:
 			{
-				iValue += AI_cityTradeVal(pCity);
+				CvCity* pCity = GET_PLAYER(ePlayer).getCity(pNode->m_data.m_iData);
+				if (pCity != NULL)
+				{
+					iValue += AI_cityTradeVal(pCity);
 
-				//	The partner player is also loosing value for it, which is good for us
-				iValue += GET_PLAYER(ePlayer).AI_ourCityValue(pCity);
+					//	The partner player is also loosing value for it, which is good for us
+					iValue += GET_PLAYER(ePlayer).AI_ourCityValue(pCity);
+				}
+				break;
 			}
-			break;
-		case TRADE_GOLD:
-		{
-			iValue += AI_getGoldValue(pNode->m_data.m_iData);
-			break;
-		}
-		case TRADE_GOLD_PER_TURN:
-		{
-			if (!bIgnoreAnnual)
+			case TRADE_GOLD:
 			{
-				iValue += AI_getGoldValue(pNode->m_data.m_iData * getTreatyLength());
+				iValue += AI_getGoldValue(pNode->m_data.m_iData, AI_goldTradeValuePercent());
+				break;
 			}
-			break;
-		}
-		case TRADE_MAPS:
-			iValue += GET_TEAM(getTeam()).AI_mapTradeVal(GET_PLAYER(ePlayer).getTeam());
-			break;
-		case TRADE_SURRENDER:
-			if (!bIgnoreAnnual)
+			case TRADE_GOLD_PER_TURN:
 			{
-				iValue += GET_TEAM(getTeam()).AI_surrenderTradeVal(GET_PLAYER(ePlayer).getTeam());
+				if (!bIgnoreAnnual)
+				{
+					iValue += AI_getGoldValue(pNode->m_data.m_iData * getTreatyLength(), AI_goldTradeValuePercent());
+				}
+				break;
 			}
-			break;
-		case TRADE_VASSAL:
-			if (!bIgnoreAnnual)
+			case TRADE_MAPS:
 			{
-				iValue += GET_TEAM(getTeam()).AI_vassalTradeVal(GET_PLAYER(ePlayer).getTeam());
+				iValue += GET_TEAM(getTeam()).AI_mapTradeVal(GET_PLAYER(ePlayer).getTeam());
+				break;
 			}
-			break;
-		case TRADE_OPEN_BORDERS:
-			iValue += GET_TEAM(getTeam()).AI_openBordersTradeVal(GET_PLAYER(ePlayer).getTeam());
-			break;
-		case TRADE_DEFENSIVE_PACT:
-			iValue += GET_TEAM(getTeam()).AI_defensivePactTradeVal(GET_PLAYER(ePlayer).getTeam());
-			break;
-		case TRADE_PEACE:
-			iValue += GET_TEAM(getTeam()).AI_makePeaceTradeVal(((TeamTypes)(pNode->m_data.m_iData)), GET_PLAYER(ePlayer).getTeam());
-			break;
-		case TRADE_WAR:
-			iValue += GET_TEAM(getTeam()).AI_declareWarTradeVal(((TeamTypes)(pNode->m_data.m_iData)), GET_PLAYER(ePlayer).getTeam());
-			break;
-		case TRADE_EMBARGO:
-			iValue += AI_stopTradingTradeVal(((TeamTypes)(pNode->m_data.m_iData)), ePlayer);
-			break;
-		case TRADE_CIVIC:
-			iValue += AI_civicTradeVal(((CivicTypes)(pNode->m_data.m_iData)), ePlayer);
-			break;
-		case TRADE_RELIGION:
-			iValue += AI_religionTradeVal(((ReligionTypes)(pNode->m_data.m_iData)), ePlayer);
-			break;
-			/************************************************************************************************/
-			/* Afforess					  Start		 06/16/10											   */
-			/*																							  */
-			/* Advanced Diplomacy																		   */
-			/************************************************************************************************/
-		case TRADE_EMBASSY:
-			iValue += GET_TEAM(getTeam()).AI_embassyTradeVal(GET_PLAYER(ePlayer).getTeam());
-			break;
-		case TRADE_CONTACT:
-			iValue += GET_TEAM(getTeam()).AI_contactTradeVal((TeamTypes)(pNode->m_data.m_iData), GET_PLAYER(ePlayer).getTeam());
-			break;
-		case TRADE_CORPORATION:
-			iValue += AI_corporationTradeVal((CorporationTypes)pNode->m_data.m_iData);
+			case TRADE_SURRENDER:
+			{
+				if (!bIgnoreAnnual)
+				{
+					iValue += GET_TEAM(getTeam()).AI_surrenderTradeVal(GET_PLAYER(ePlayer).getTeam());
+				}
+				break;
+			}
+			case TRADE_VASSAL:
+			{
+				if (!bIgnoreAnnual)
+				{
+					iValue += GET_TEAM(getTeam()).AI_vassalTradeVal(GET_PLAYER(ePlayer).getTeam());
+				}
+				break;
+			}
+			case TRADE_OPEN_BORDERS:
+			{
+				iValue += GET_TEAM(getTeam()).AI_openBordersTradeVal(GET_PLAYER(ePlayer).getTeam());
+				break;
+			}
+			case TRADE_DEFENSIVE_PACT:
+			{
+				iValue += GET_TEAM(getTeam()).AI_defensivePactTradeVal(GET_PLAYER(ePlayer).getTeam());
+				break;
+			}
+			case TRADE_PEACE:
+			{
+				iValue += GET_TEAM(getTeam()).AI_makePeaceTradeVal(((TeamTypes)(pNode->m_data.m_iData)), GET_PLAYER(ePlayer).getTeam());
+				break;
+			}
+			case TRADE_WAR:
+			{
+				iValue += GET_TEAM(getTeam()).AI_declareWarTradeVal(((TeamTypes)(pNode->m_data.m_iData)), GET_PLAYER(ePlayer).getTeam());
+				break;
+			}
+			case TRADE_EMBARGO:
+			{
+				iValue += AI_stopTradingTradeVal(((TeamTypes)(pNode->m_data.m_iData)), ePlayer);
+				break;
+			}
+			case TRADE_CIVIC:
+			{
+				iValue += AI_civicTradeVal(((CivicTypes)(pNode->m_data.m_iData)), ePlayer);
+				break;
+			}
+			case TRADE_RELIGION:
+			{
+				iValue += AI_religionTradeVal(((ReligionTypes)(pNode->m_data.m_iData)), ePlayer);
+				break;
+			}
+			case TRADE_EMBASSY:
+			{
+				iValue += GET_TEAM(getTeam()).AI_embassyTradeVal(GET_PLAYER(ePlayer).getTeam());
+				break;
+			}
+			case TRADE_CONTACT:
+			{
+				iValue += GET_TEAM(getTeam()).AI_contactTradeVal((TeamTypes)(pNode->m_data.m_iData), GET_PLAYER(ePlayer).getTeam());
+				break;
+			}
+			case TRADE_CORPORATION:
+			{
+				iValue += AI_corporationTradeVal((CorporationTypes)pNode->m_data.m_iData);
 
-			//	Partner is losing it also
-			iValue += GET_PLAYER(ePlayer).AI_corporationTradeVal((CorporationTypes)pNode->m_data.m_iData);
-			break;
-		case TRADE_PLEDGE_VOTE:
-			iValue += AI_pledgeVoteTradeVal(GC.getGame().getVoteTriggered(GC.getGame().getCurrentVoteID()), ((PlayerVoteTypes)(pNode->m_data.m_iData)), ePlayer);
-			break;
-		case TRADE_SECRETARY_GENERAL_VOTE:
-			iValue += AI_secretaryGeneralTradeVal((VoteSourceTypes)(pNode->m_data.m_iData), ePlayer);
-			break;
-		case TRADE_RITE_OF_PASSAGE:
-			iValue += GET_TEAM(getTeam()).AI_LimitedBordersTradeVal(GET_PLAYER(ePlayer).getTeam());
-			break;
-		case TRADE_FREE_TRADE_ZONE:
-			iValue += GET_TEAM(getTeam()).AI_FreeTradeAgreementVal(GET_PLAYER(ePlayer).getTeam());
-			break;
-		case TRADE_WORKER:
-		{
-			CvUnit* pUnit = GET_PLAYER(ePlayer).getUnit(pNode->m_data.m_iData);
-			if (pUnit != NULL)
-			{
-				iValue += AI_workerTradeVal(pUnit);
+				//	Partner is losing it also
+				iValue += GET_PLAYER(ePlayer).AI_corporationTradeVal((CorporationTypes)pNode->m_data.m_iData);
+				break;
 			}
-		}
-		break;
-		case TRADE_MILITARY_UNIT:
-		{
-			CvUnit* pUnit = GET_PLAYER(ePlayer).getUnit(pNode->m_data.m_iData);
-			if (pUnit != NULL)
+			case TRADE_PLEDGE_VOTE:
 			{
-				iValue += AI_militaryUnitTradeVal(pUnit);
+				iValue += AI_pledgeVoteTradeVal(GC.getGame().getVoteTriggered(GC.getGame().getCurrentVoteID()), ((PlayerVoteTypes)(pNode->m_data.m_iData)), ePlayer);
+				break;
 			}
-		}
-		break;
-		/************************************************************************************************/
-		/* Afforess						 END															*/
-		/************************************************************************************************/
+			case TRADE_SECRETARY_GENERAL_VOTE:
+			{
+				iValue += AI_secretaryGeneralTradeVal((VoteSourceTypes)(pNode->m_data.m_iData), ePlayer);
+				break;
+			}
+			case TRADE_RITE_OF_PASSAGE:
+			{
+				iValue += GET_TEAM(getTeam()).AI_LimitedBordersTradeVal(GET_PLAYER(ePlayer).getTeam());
+				break;
+			}
+			case TRADE_FREE_TRADE_ZONE:
+			{
+				iValue += GET_TEAM(getTeam()).AI_FreeTradeAgreementVal(GET_PLAYER(ePlayer).getTeam());
+				break;
+			}
+			case TRADE_WORKER:
+			{
+				const CvUnit* pUnit = GET_PLAYER(ePlayer).getUnit(pNode->m_data.m_iData);
+				if (pUnit != NULL)
+				{
+					iValue += AI_workerTradeVal(pUnit);
+				}
+				break;
+			}
+			case TRADE_MILITARY_UNIT:
+			{
+				const CvUnit* pUnit = GET_PLAYER(ePlayer).getUnit(pNode->m_data.m_iData);
+				if (pUnit != NULL)
+				{
+					iValue += AI_militaryUnitTradeVal(pUnit);
+				}
+				break;
+			}
 		}
 	}
-
 	return iValue;
 }
 
@@ -8287,7 +8316,8 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 			const int iValueDiff = iAIDealWeight - iHumanDealWeight;
 			if (iValueDiff > 0)
 			{
-				int iGoldData = AI_getGoldFromValue(iValueDiff);
+				const int iGoldValuePercent = AI_goldTradeValuePercent();
+				int iGoldData = AI_getGoldFromValue(iValueDiff, iGoldValuePercent);
 				if (iGoldData > 0)
 				{
 					const int iMaxTrade = GET_PLAYER(ePlayer).AI_maxGoldTrade(getID());
@@ -8299,7 +8329,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 					else
 					{
 						// Account for rounding errors
-						while (iGoldData < iMaxTrade && AI_getGoldValue(iGoldData) < iValueDiff)
+						while (iGoldData < iMaxTrade && AI_getGoldValue(iGoldData, iGoldValuePercent) < iValueDiff)
 						{
 							iGoldData++;
 						}
@@ -8308,7 +8338,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 					// If we can wrap this up with gold outright then do so.
 					if (iGoldData > 0)
 					{
-						const int iValue = AI_getGoldValue(iGoldData);
+						const int iValue = AI_getGoldValue(iGoldData, iGoldValuePercent);
 						if (iValue > 0)
 						{
 							iHumanDealWeight += iValue;
@@ -8432,7 +8462,8 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 			const int iValueDiff = iAIDealWeight - iHumanDealWeight;
 			if (iValueDiff > 0)
 			{
-				int iGoldData = AI_getGoldFromValue(iValueDiff);
+				const int iGoldValuePercent = AI_goldTradeValuePercent();
+				int iGoldData = AI_getGoldFromValue(iValueDiff, iGoldValuePercent);
 				if (iGoldData > 0)
 				{
 					const int iMaxTrade = GET_PLAYER(ePlayer).AI_maxGoldTrade(getID());
@@ -8444,7 +8475,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 					else
 					{
 						// Account for rounding errors
-						while (iGoldData < iMaxTrade && AI_getGoldValue(iGoldData) < iValueDiff)
+						while (iGoldData < iMaxTrade && AI_getGoldValue(iGoldData, iGoldValuePercent) < iValueDiff)
 						{
 							iGoldData++;
 						}
@@ -8452,7 +8483,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 
 					if (iGoldData > 0)
 					{
-						const int iValue = AI_getGoldValue(iGoldData);
+						const int iValue = AI_getGoldValue(iGoldData, iGoldValuePercent);
 						if (iValue > 0)
 						{
 							iHumanDealWeight += iValue;
@@ -8471,18 +8502,21 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 			if (iValueDiff > 0)
 			{
 				const int iTurns = getTreatyLength();
-				int iGoldData = AI_getGoldFromValue(iValueDiff) / iTurns;
+				const int iGoldValuePercent = AI_goldTradeValuePercent();
+				int iGoldData = AI_getGoldFromValue(iValueDiff, iGoldValuePercent);
+				OutputDebugString(CvString::format("%S (%d)\n\tValueDiff=%d, iGoldValuePercent=%d, iGoldData=%d\n\t\tAI_getGoldValue=%d\n", getCivilizationDescription(0), getID(), iValueDiff, iGoldValuePercent, iGoldData, AI_getGoldValue(iGoldData, iGoldValuePercent)).c_str());
 
 				// Account for rounding errors
-				while (AI_getGoldValue(iGoldData * iTurns) < iValueDiff)
+				while (iGoldData < MAX_INT && AI_getGoldValue(iGoldData, iGoldValuePercent) < iValueDiff)
 				{
 					iGoldData++;
+					OutputDebugString(CvString::format("\tValueDiff=%d, iGoldValuePercent=%d, iGoldData=%d\n\t\tAI_getGoldValue=%d\n", iValueDiff, iGoldValuePercent, iGoldData, AI_getGoldValue(iGoldData, iGoldValuePercent)).c_str());
 				}
-				iGoldData = std::min(iGoldData, GET_PLAYER(ePlayer).AI_maxGoldPerTurnTrade(getID()));
+				iGoldData = std::min(iGoldData / iTurns, GET_PLAYER(ePlayer).AI_maxGoldPerTurnTrade(getID()));
 
 				if (iGoldData > 0)
 				{
-					const int iValue = AI_getGoldValue(iGoldData * iTurns);
+					const int iValue = AI_getGoldValue(iGoldData * iTurns, iGoldValuePercent);
 					if (iValue > 0)
 					{
 						iHumanDealWeight += iValue;
@@ -8606,18 +8640,22 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 				{
 					switch (pNode->m_data.m_eItemType)
 					{
-					case TRADE_GOLD:
-						if (!bTheirGoldDeal)
+						case TRADE_GOLD:
 						{
-							pGoldNode = pNode;
+							if (!bTheirGoldDeal)
+							{
+								pGoldNode = pNode;
+							}
+							break;
 						}
-						break;
-					case TRADE_GOLD_PER_TURN:
-						if (!bTheirGoldDeal)
+						case TRADE_GOLD_PER_TURN:
 						{
-							pGoldPerTurnNode = pNode;
+							if (!bTheirGoldDeal)
+							{
+								pGoldPerTurnNode = pNode;
+							}
+							break;
 						}
-						break;
 					}
 				}
 			}
@@ -8628,7 +8666,8 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 			const int iValueDiff = iHumanDealWeight - iAIDealWeight;
 			if (iValueDiff > 0)
 			{
-				int iGoldData = AI_getGoldFromValue(iValueDiff);
+				const int iGoldValuePercent = AI_goldTradeValuePercent();
+				int iGoldData = AI_getGoldFromValue(iValueDiff, iGoldValuePercent);
 				if (iGoldData > 0)
 				{
 					const int iMaxTrade = AI_maxGoldTrade(ePlayer);
@@ -8640,7 +8679,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 					else
 					{
 						// Account for rounding errors
-						while (iGoldData < iMaxTrade && AI_getGoldValue(iGoldData) < iValueDiff)
+						while (iGoldData < iMaxTrade && AI_getGoldValue(iGoldData, iGoldValuePercent) < iValueDiff)
 						{
 							iGoldData++;
 						}
@@ -8649,7 +8688,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 					// If we can wrap this up with gold outright then do so.
 					if (iGoldData > 0)
 					{
-						const int iValue = AI_getGoldValue(iGoldData);
+						const int iValue = AI_getGoldValue(iGoldData, iGoldValuePercent);
 						if (iValue > 0)
 						{
 							iAIDealWeight += iValue;
@@ -8770,7 +8809,8 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 			const int iValueDiff = iHumanDealWeight - iAIDealWeight;
 			if (iValueDiff > 0)
 			{
-				int iGoldData = AI_getGoldFromValue(iValueDiff);
+				const int iGoldValuePercent = AI_goldTradeValuePercent();
+				int iGoldData = AI_getGoldFromValue(iValueDiff, iGoldValuePercent);
 				if (iGoldData > 0)
 				{
 					const int iMaxTrade = AI_maxGoldTrade(ePlayer);
@@ -8782,7 +8822,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 					else
 					{
 						// Account for rounding errors
-						while (iGoldData < iMaxTrade && AI_getGoldValue(iGoldData) < iValueDiff)
+						while (iGoldData < iMaxTrade && AI_getGoldValue(iGoldData, iGoldValuePercent) < iValueDiff)
 						{
 							iGoldData++;
 						}
@@ -8790,7 +8830,7 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 
 					if (iGoldData > 0)
 					{
-						const int iValue = AI_getGoldValue(iGoldData);
+						const int iValue = AI_getGoldValue(iGoldData, iGoldValuePercent);
 						if (iValue > 0)
 						{
 							iAIDealWeight += iValue;
@@ -8808,18 +8848,19 @@ bool CvPlayerAI::AI_counterPropose(PlayerTypes ePlayer, const CLinkList<TradeDat
 			if (iValueDiff > 0)
 			{
 				const int iTurns = getTreatyLength();
-				int iGoldData = AI_getGoldFromValue(iValueDiff) / iTurns;
+				const int iGoldValuePercent = AI_goldTradeValuePercent();
+				int iGoldData = AI_getGoldFromValue(iValueDiff, iGoldValuePercent);
 
 				// Account for rounding errors
-				while (AI_getGoldValue(iGoldData * iTurns) < iValueDiff)
+				while (iGoldData < MAX_INT && AI_getGoldValue(iGoldData, iGoldValuePercent) < iValueDiff)
 				{
 					iGoldData++;
 				}
-				iGoldData = std::min(iGoldData, AI_maxGoldPerTurnTrade(ePlayer));
+				iGoldData = std::min(iGoldData / iTurns, AI_maxGoldPerTurnTrade(ePlayer));
 
 				if (iGoldData > 0)
 				{
-					const int iValue = AI_getGoldValue(iGoldData * iTurns);
+					const int iValue = AI_getGoldValue(iGoldData * iTurns, iGoldValuePercent);
 					if (iValue > 0)
 					{
 						iAIDealWeight += iValue;
@@ -8845,31 +8886,32 @@ int CvPlayerAI::AI_maxGoldTrade(PlayerTypes ePlayer) const
 
 	if (isHuman() || GET_PLAYER(ePlayer).getTeam() == getTeam())
 	{
-		iMaxGold = getGold();
+		const int iMaxGold = getGold();
+		return iMaxGold < MAX_INT ? static_cast<int>(iMaxGold) : MAX_INT;
 	}
-	else
+	const int64_t iGold = getGold();
+	iMaxGold = iGold;
+
+	iMaxGold *= GC.getLeaderHeadInfo(getPersonalityType()).getMaxGoldTradePercent();
+	iMaxGold /= 100;
+
+	const int iGoldRate = calculateGoldRate();
+
+	if (iGoldRate < 0)
 	{
-		const int64_t iGold = getGold();
-		iMaxGold = iGold;
-
-		iMaxGold *= GC.getLeaderHeadInfo(getPersonalityType()).getMaxGoldTradePercent();
-		iMaxGold /= 100;
-
-		const int iGoldRate = calculateGoldRate();
-
-		if (iGoldRate < 0)
-		{
-			iMaxGold = std::min(iMaxGold, iGold + iGoldRate * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 10);
-		}
+		iMaxGold = std::min<int64_t>(iMaxGold, iGold + iGoldRate * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / 10);
+	}
+	if (iMaxGold > 0)
+	{
 		iMaxGold *= 100 + calculateInflationRate();
 		iMaxGold /= 100;
-
-		iMaxGold = std::min(iMaxGold, iGold);
+		iMaxGold = std::min<int64_t>(iMaxGold, iGold);
 
 		iMaxGold -= (iMaxGold % GC.getDIPLOMACY_VALUE_REMAINDER());
-	}
 
-	return iMaxGold < MAX_INT ? std::max(0, (int)iMaxGold) : MAX_INT;
+		return iMaxGold < MAX_INT ? static_cast<int>(iMaxGold) : MAX_INT;
+	}
+	return 0;
 }
 
 
@@ -8898,13 +8940,13 @@ int CvPlayerAI::AI_maxGoldPerTurnTrade(PlayerTypes ePlayer) const
 
 
 // Toffer - Gold 2 Value & Value 2 Gold
-int CvPlayerAI::AI_getGoldValue(const int iGold) const
+int CvPlayerAI::AI_getGoldValue(const int iGold, const int iValuePercent) const
 {
-	return iGold * AI_goldTradeValuePercent() / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+	return static_cast<int>(std::min<uint64_t>(iGold * iValuePercent / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent(), MAX_INT));
 }
-int CvPlayerAI::AI_getGoldFromValue(const int iValue) const
+int CvPlayerAI::AI_getGoldFromValue(const int iValue, const int iValuePercent) const
 {
-	return iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / AI_goldTradeValuePercent();
+	return static_cast<int>(std::min<uint64_t>(iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent() / iValuePercent, MAX_INT));
 }
 // ! Toffer
 
@@ -19062,7 +19104,8 @@ void CvPlayerAI::AI_doDiplo()
 										if (iTheirValue > iOurValue)
 										{
 											const int iValueDiff = iTheirValue - iOurValue;
-											int iGold = AI_getGoldFromValue(iValueDiff);
+											const int iGoldValuePercent = AI_goldTradeValuePercent();
+											int iGold = AI_getGoldFromValue(iValueDiff, iGoldValuePercent);
 											if (iGold > 0)
 											{
 												const int iMaxTrade = GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID());
@@ -19074,7 +19117,7 @@ void CvPlayerAI::AI_doDiplo()
 												else
 												{
 													// Account for rounding errors
-													while (iGold < iMaxTrade && AI_getGoldValue(iGold) < iValueDiff)
+													while (iGold < iMaxTrade && AI_getGoldValue(iGold, iGoldValuePercent) < iValueDiff)
 													{
 														iGold++;
 													}
@@ -19082,7 +19125,7 @@ void CvPlayerAI::AI_doDiplo()
 
 												if (iGold > 0)
 												{
-													const int iValue = AI_getGoldValue(iGold);
+													const int iValue = AI_getGoldValue(iGold, iGoldValuePercent);
 													if (iValue > 0)
 													{
 														setTradeItem(&item, TRADE_GOLD, iGold);
@@ -19099,7 +19142,8 @@ void CvPlayerAI::AI_doDiplo()
 										else if (iOurValue > iTheirValue)
 										{
 											const int iValueDiff = iOurValue - iTheirValue;
-											int iGold = AI_getGoldFromValue(iValueDiff);
+											const int iGoldValuePercent = AI_goldTradeValuePercent();
+											int iGold = AI_getGoldFromValue(iValueDiff, iGoldValuePercent);
 											if (iGold > 0)
 											{
 												const int iMaxTrade = AI_maxGoldTrade((PlayerTypes)iI);
@@ -19111,7 +19155,7 @@ void CvPlayerAI::AI_doDiplo()
 												else
 												{
 													// Account for rounding errors
-													while (iGold < iMaxTrade && AI_getGoldValue(iGold) < iValueDiff)
+													while (iGold < iMaxTrade && AI_getGoldValue(iGold, iGoldValuePercent) < iValueDiff)
 													{
 														iGold++;
 													}
@@ -19119,7 +19163,7 @@ void CvPlayerAI::AI_doDiplo()
 
 												if (iGold > 0)
 												{
-													const int iValue = AI_getGoldValue(iGold);
+													const int iValue = AI_getGoldValue(iGold, iGoldValuePercent);
 													if (iValue > 0)
 													{
 														setTradeItem(&item, TRADE_GOLD, iGold);
@@ -19252,7 +19296,8 @@ void CvPlayerAI::AI_doDiplo()
 									if (iTheirValue > iOurValue)
 									{
 										const int iValueDiff = iTheirValue - iOurValue;
-										int iGold = AI_getGoldFromValue(iValueDiff);
+										const int iGoldValuePercent = AI_goldTradeValuePercent();
+										int iGold = AI_getGoldFromValue(iValueDiff, iGoldValuePercent);
 										if (iGold > 0)
 										{
 											const int iMaxTrade = GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID());
@@ -19264,7 +19309,7 @@ void CvPlayerAI::AI_doDiplo()
 											else
 											{
 												// Account for rounding errors
-												while (iGold < iMaxTrade && AI_getGoldValue(iGold) < iValueDiff)
+												while (iGold < iMaxTrade && AI_getGoldValue(iGold, iGoldValuePercent) < iValueDiff)
 												{
 													iGold++;
 												}
@@ -19272,7 +19317,7 @@ void CvPlayerAI::AI_doDiplo()
 
 											if (iGold > 0)
 											{
-												const int iValue = AI_getGoldValue(iGold);
+												const int iValue = AI_getGoldValue(iGold, iGoldValuePercent);
 												if (iValue > 0)
 												{
 													setTradeItem(&item, TRADE_GOLD, iGold);
@@ -19289,7 +19334,8 @@ void CvPlayerAI::AI_doDiplo()
 									else if (iOurValue > iTheirValue)
 									{
 										const int iValueDiff = iOurValue - iTheirValue;
-										int iGold = AI_getGoldFromValue(iValueDiff);
+										const int iGoldValuePercent = AI_goldTradeValuePercent();
+										int iGold = AI_getGoldFromValue(iValueDiff, iGoldValuePercent);
 										if (iGold > 0)
 										{
 											const int iMaxTrade = AI_maxGoldTrade((PlayerTypes)iI);
@@ -19301,7 +19347,7 @@ void CvPlayerAI::AI_doDiplo()
 											else
 											{
 												// Account for rounding errors
-												while (iGold < iMaxTrade && AI_getGoldValue(iGold) < iValueDiff)
+												while (iGold < iMaxTrade && AI_getGoldValue(iGold, iGoldValuePercent) < iValueDiff)
 												{
 													iGold++;
 												}
@@ -19309,7 +19355,7 @@ void CvPlayerAI::AI_doDiplo()
 
 											if (iGold > 0)
 											{
-												const int iValue = AI_getGoldValue(iGold);
+												const int iValue = AI_getGoldValue(iGold, iGoldValuePercent);
 												if (iValue > 0)
 												{
 													setTradeItem(&item, TRADE_GOLD, iGold);
@@ -19457,7 +19503,8 @@ void CvPlayerAI::AI_doDiplo()
 											if (iTheirValue > iOurValue)
 											{
 												const int iValueDiff = iTheirValue - iOurValue;
-												int iGold = AI_getGoldFromValue(iValueDiff);
+												const int iGoldValuePercent = AI_goldTradeValuePercent();
+												int iGold = AI_getGoldFromValue(iValueDiff, iGoldValuePercent);
 												if (iGold > 0)
 												{
 													const int iMaxTrade = GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID());
@@ -19469,7 +19516,7 @@ void CvPlayerAI::AI_doDiplo()
 													else
 													{
 														// Account for rounding errors
-														while (iGold < iMaxTrade && AI_getGoldValue(iGold) < iValueDiff)
+														while (iGold < iMaxTrade && AI_getGoldValue(iGold, iGoldValuePercent) < iValueDiff)
 														{
 															iGold++;
 														}
@@ -19477,7 +19524,7 @@ void CvPlayerAI::AI_doDiplo()
 
 													if (iGold > 0)
 													{
-														const int iValue = AI_getGoldValue(iGold);
+														const int iValue = AI_getGoldValue(iGold, iGoldValuePercent);
 														if (iValue > 0)
 														{
 															setTradeItem(&item, TRADE_GOLD, iGold);
@@ -19494,7 +19541,8 @@ void CvPlayerAI::AI_doDiplo()
 											else if (iOurValue > iTheirValue)
 											{
 												const int iValueDiff = iOurValue - iTheirValue;
-												int iGold = AI_getGoldFromValue(iValueDiff);
+												const int iGoldValuePercent = AI_goldTradeValuePercent();
+												int iGold = AI_getGoldFromValue(iValueDiff, iGoldValuePercent);
 												if (iGold > 0)
 												{
 													const int iMaxTrade = AI_maxGoldTrade((PlayerTypes)iI);
@@ -19506,7 +19554,7 @@ void CvPlayerAI::AI_doDiplo()
 													else
 													{
 														// Account for rounding errors
-														while (iGold < iMaxTrade && AI_getGoldValue(iGold) < iValueDiff)
+														while (iGold < iMaxTrade && AI_getGoldValue(iGold, iGoldValuePercent) < iValueDiff)
 														{
 															iGold++;
 														}
@@ -19514,7 +19562,7 @@ void CvPlayerAI::AI_doDiplo()
 
 													if (iGold > 0)
 													{
-														const int iValue = AI_getGoldValue(iGold);
+														const int iValue = AI_getGoldValue(iGold, iGoldValuePercent);
 														if (iValue > 0)
 														{
 															setTradeItem(&item, TRADE_GOLD, iGold);
@@ -19726,7 +19774,7 @@ void CvPlayerAI::AI_doDiplo()
 
 										if (canTradeItem((PlayerTypes)iI, item, true))
 										{
-											const int iGold = AI_getGoldFromValue(GET_TEAM(getTeam()).AI_contactTradeVal(eTeamX, GET_PLAYER((PlayerTypes)iI).getTeam()));
+											const int iGold = AI_getGoldFromValue(GET_TEAM(getTeam()).AI_contactTradeVal(eTeamX, GET_PLAYER((PlayerTypes)iI).getTeam()), AI_goldTradeValuePercent());
 
 											if (iGold > 0 && iGold <= GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID()))
 											{
@@ -19840,7 +19888,7 @@ void CvPlayerAI::AI_doDiplo()
 											}
 											if (pWorker != NULL)
 											{
-												const int iGold = AI_getGoldFromValue(GET_PLAYER((PlayerTypes)iI).AI_workerTradeVal(pWorker));
+												const int iGold = AI_getGoldFromValue(GET_PLAYER((PlayerTypes)iI).AI_workerTradeVal(pWorker), AI_goldTradeValuePercent());
 
 												if (iGold > 0 && AI_maxGoldTrade((PlayerTypes)iI) >= iGold)
 												{
@@ -19964,7 +20012,7 @@ void CvPlayerAI::AI_doDiplo()
 										if (iUnitValue > iTechValue)
 										{
 											const int iValueDiff = iUnitValue - iTechValue;
-											const int iGold = AI_getGoldFromValue(iValueDiff);
+											const int iGold = AI_getGoldFromValue(iValueDiff, AI_goldTradeValuePercent());
 
 											if (iGold > 0 && AI_maxGoldTrade((PlayerTypes)iI) >= iGold)
 											{
@@ -19980,7 +20028,7 @@ void CvPlayerAI::AI_doDiplo()
 										else if (iUnitValue < iTechValue)
 										{
 											const int iValueDiff = iTechValue - iUnitValue;
-											const int iGold = AI_getGoldFromValue(iValueDiff);
+											const int iGold = AI_getGoldFromValue(iValueDiff, AI_goldTradeValuePercent());
 
 											if (iGold > 0 && GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID()) >= iGold)
 											{
@@ -20326,7 +20374,8 @@ void CvPlayerAI::AI_doDiplo()
 									if (iTheirValue > iOurValue)
 									{
 										const int iValueDiff = iTheirValue - iOurValue;
-										int iGold = AI_getGoldFromValue(iValueDiff);
+										const int iGoldValuePercent = AI_goldTradeValuePercent();
+										int iGold = AI_getGoldFromValue(iValueDiff, iGoldValuePercent);
 										if (iGold > 0)
 										{
 											const int iMaxTrade = GET_PLAYER((PlayerTypes)iI).AI_maxGoldTrade(getID());
@@ -20338,7 +20387,7 @@ void CvPlayerAI::AI_doDiplo()
 											else
 											{
 												// Account for rounding errors
-												while (iGold < iMaxTrade && AI_getGoldValue(iGold) < iValueDiff)
+												while (iGold < iMaxTrade && AI_getGoldValue(iGold, iGoldValuePercent) < iValueDiff)
 												{
 													iGold++;
 												}
@@ -20348,7 +20397,7 @@ void CvPlayerAI::AI_doDiplo()
 
 											if (iGold > 0)
 											{
-												const int iValue = AI_getGoldValue(iGold);
+												const int iValue = AI_getGoldValue(iGold, iGoldValuePercent);
 												if (iValue > 0)
 												{
 													setTradeItem(&item, TRADE_GOLD, iGold);
@@ -20365,7 +20414,8 @@ void CvPlayerAI::AI_doDiplo()
 									else if (iOurValue > iTheirValue)
 									{
 										const int iValueDiff = iOurValue - iTheirValue;
-										int iGold = AI_getGoldFromValue(iValueDiff);
+										const int iGoldValuePercent = AI_goldTradeValuePercent();
+										int iGold = AI_getGoldFromValue(iValueDiff, iGoldValuePercent);
 										if (iGold > 0)
 										{
 											const int iMaxTrade = AI_maxGoldTrade((PlayerTypes)iI);
@@ -20377,7 +20427,7 @@ void CvPlayerAI::AI_doDiplo()
 											else
 											{
 												// Account for rounding errors
-												while (iGold < iMaxTrade && AI_getGoldValue(iGold) < iValueDiff)
+												while (iGold < iMaxTrade && AI_getGoldValue(iGold, iGoldValuePercent) < iValueDiff)
 												{
 													iGold++;
 												}
@@ -20387,7 +20437,7 @@ void CvPlayerAI::AI_doDiplo()
 
 											if (iGold > 0)
 											{
-												const int iValue = AI_getGoldValue(iGold);
+												const int iValue = AI_getGoldValue(iGold, iGoldValuePercent);
 												if (iValue > 0)
 												{
 													setTradeItem(&item, TRADE_GOLD, iGold);
