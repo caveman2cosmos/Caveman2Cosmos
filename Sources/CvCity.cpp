@@ -24406,78 +24406,82 @@ void CvCity::changePropertySpawn(int iChange, PropertyTypes eProperty, UnitTypes
 
 void CvCity::doPropertyUnitSpawn()
 {
-	const int iNumCriminals = plot()->getNumCriminals();
-	const int iMaximum = getPopulation() / 2;
-	if (iNumCriminals < iMaximum)
+	for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
 	{
-		for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
+		const PropertyTypes eProperty = (PropertyTypes)iI;
+		int iCurrentValue = std::max(0, getPropertiesConst()->getValueByProperty(eProperty));
+		if (eProperty == 0)
 		{
-			const PropertyTypes eProperty = (PropertyTypes)iI;
-			const bool bPositiveProperty = (GC.getPropertyInfo(eProperty).getAIWeight() >= 0);
-			int iCurrentValue = std::max(0, getPropertiesConst()->getValueByProperty(eProperty));
-			if (eProperty == 0) //SHOULD be crime but this is subject to flaw if the first property type ever changes.  There's a faster way than getvisual but it takes some setup.  if this becomes necessary to move off of hard coding, use the examples for peaks and hills.
+			// TB - SHOULD be crime, but this is subject to flaw if the first property type ever changes.
+			//	There's a faster way than getvisual but it takes some setup.
+			//	If it becomes necessary to move off of hard coding, use the examples for peaks and hills.
+			const int iNumCriminals = plot()->getNumCriminals();
+			if (iNumCriminals < getPopulation() / 2)
 			{
-				iCurrentValue -= ((iCurrentValue / 10) * iNumCriminals);
+				continue;
 			}
-			iCurrentValue = std::max(0, iCurrentValue);
-			iCurrentValue /= 2;
-			PlayerTypes eSpawnOwner = getOwner();
-			if (!bPositiveProperty)
+			iCurrentValue -= iNumCriminals * iCurrentValue / 10;
+		}
+		const bool bPositiveProperty = GC.getPropertyInfo(eProperty).getAIWeight() >= 0;
+
+		iCurrentValue = std::max(0, iCurrentValue);
+		iCurrentValue /= 2;
+		const PlayerTypes eSpawnOwner = bPositiveProperty ? getOwner() : (PlayerTypes)BARBARIAN_PLAYER;
+
+		foreach_(const PropertySpawns& it, m_aPropertySpawns)
+		{
+			if (it.eProperty == eProperty
+			&& GC.getGame().getSorenRandNum(10000, "Property Unit Spawn Check") < iCurrentValue)
 			{
-				eSpawnOwner = (PlayerTypes)BARBARIAN_PLAYER;
-			}
-			foreach_(const PropertySpawns& it, m_aPropertySpawns)
-			{
-				if (it.eProperty == eProperty
-				&& GC.getGame().getSorenRandNum(10000, "Property Unit Spawn Check") < iCurrentValue)
+				const UnitTypes eUnit = it.eUnit;
+				if (!GET_PLAYER(getOwner()).canTrain(eUnit, false, false, true, true))
 				{
-					const UnitTypes eUnit = it.eUnit;
-					if (!GET_PLAYER(getOwner()).canTrain(eUnit, false, false, true, true))
+					continue;
+				}
+				//TBNote:Saving this brilliant example...
+				//std::vector<int> aiUnitAIIndex;
+				//for (int iJ = 0; iJ < NUM_UNITAI_TYPES; iJ++)
+				//{
+				//	if (GC.getUnitInfo(eUnit).getUnitAIType(iJ))
+				//	{
+				//		aiUnitAIIndex.push_back(iJ);
+				//	}
+				//}
+				//int iAIRoll = GC.getGame().getSorenRandNum(aiUnitAIIndex.size(), "Property Unit Spawn AI Check");
+				//UnitAITypes eUnitAI = (UnitAITypes)aiUnitAIIndex[iAIRoll];
+
+				FAssertMsg(bPositiveProperty || GC.getUnitInfo(eUnit).isBlendIntoCity(), CvString::format("Trying to spawn %s from property spawn, but it doesn't have bBlendIntoCity enabled, which is a requirement", GC.getUnitInfo(eUnit).getType()).c_str());
+
+				CvUnit* pUnit = GET_PLAYER(eSpawnOwner).initUnit(eUnit, getX(), getY(), UNITAI_BARB_CRIMINAL, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+
+				if (pUnit != NULL)
+				{
+					FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
+					if (pUnit->isExcile())
 					{
-						continue;
+						pUnit->jumpToNearestValidPlot(false);
 					}
-					//TBNote:Saving this brilliant example...
-					//std::vector<int> aiUnitAIIndex;
-					//aiUnitAIIndex.clear();
-					//for (int iJ = 0; iJ < NUM_UNITAI_TYPES; iJ++)
-					//{
-					//	if (GC.getUnitInfo(eUnit).getUnitAIType(iJ))
-					//	{
-					//		aiUnitAIIndex.push_back(iJ);
-					//	}
-					//}
-					//int iAIRoll = GC.getGame().getSorenRandNum(aiUnitAIIndex.size(), "Property Unit Spawn AI Check");
-					//UnitAITypes eUnitAI = (UnitAITypes)aiUnitAIIndex[iAIRoll];
+					pUnit->finishMoves();
 
-					FAssertMsg(GC.getUnitInfo(eUnit).isBlendIntoCity(), CvString::format("Trying to spawn %s from property spawn, but it doesn't have bBlendIntoCity enabled, which is a requirement", GC.getUnitInfo(eUnit).getType()).c_str());
+					addProductionExperience(pUnit);
 
-					CvUnit* pUnit = GET_PLAYER(eSpawnOwner).initUnit(eUnit, getX(), getY(), UNITAI_BARB_CRIMINAL, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-
-					if (pUnit != NULL)
+					if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
 					{
-						FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
-						if (pUnit->isExcile())
+						if (bPositiveProperty)
 						{
-							pUnit->jumpToNearestValidPlot(false);
+							AddDLLMessage(
+								getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_FRIENDLY", GC.getUnitInfo(eUnit).getDescription(), getNameKey()),
+								NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT(), getX(), getY(), true, true
+							);
 						}
-						pUnit->finishMoves();
-
-						addProductionExperience(pUnit);
-
-						if (!bPositiveProperty)
+						else
 						{
-							if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
-							{
-
-								const CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_BARB", GC.getUnitInfo(eUnit).getDescription(), getNameKey());
-								AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true);
-							}
-						}
-						else if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
-						{
-
-							const CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_FRIENDLY", GC.getUnitInfo(eUnit).getDescription(), getNameKey());
-							AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT(), getX(), getY(), true, true);
+							AddDLLMessage(
+								getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_BARB", GC.getUnitInfo(eUnit).getDescription(), getNameKey()),
+								NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true
+							);
 						}
 					}
 				}
