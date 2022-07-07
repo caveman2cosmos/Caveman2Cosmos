@@ -24416,7 +24416,7 @@ void CvCity::doPropertyUnitSpawn()
 			//	There's a faster way than getvisual but it takes some setup.
 			//	If it becomes necessary to move off of hard coding, use the examples for peaks and hills.
 			const int iNumCriminals = plot()->getNumCriminals();
-			if (iNumCriminals < getPopulation() / 2)
+			if (iNumCriminals >= getPopulation() / 2)
 			{
 				continue;
 			}
