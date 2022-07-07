@@ -3825,8 +3825,8 @@ class CvMainInterface:
 			dy = 20
 
 		x2 = x + 8
-		y2 = y0 + 30
-		h2 = h - 40
+		y2 = y0 + 32
+		h2 = h - 44
 		w2 = w/2 - 12
 
 		w3 = w2 - 12
@@ -3837,7 +3837,7 @@ class CvMainInterface:
 
 		screen.setLabelAt("", "CityTabWindow", uFont3b + TRNSLTR.getText("TXT_KEY_PREVIOUS_OUTPUT", ()), 1<<0, 12, 8, 0, eFontGame, eWidGen, 1, 2)
 		screen.setLabelAt("", "CityTabWindow", uFont3b + TRNSLTR.getText("TXT_WORD_RECOMMENDATIONS", ()), 1<<0, w/2 + 8, 8, 0, eFontGame, eWidGen, 1, 2)
-		screen.addPanel("PreviousOutput", "", "", True, True, x + 12, y2, w3 + 4, h2 + 24, ePanelBlack)
+		screen.addPanel("PreviousOutput", "", "", True, True, x + 12, y2 - 2, w3 + 4, h2 + 28, ePanelBlack)
 
 		screen.addScrollPanel(PnlLeft, "", x2, y2, w2, h2, PanelStyles.PANEL_STYLE_MAIN)
 		screen.setStyle(PnlLeft, "ScrollPanel_Alt_Style")
@@ -3852,7 +3852,7 @@ class CvMainInterface:
 			iNumEntries = city.getCityOutputHistoryNumEntries(iHistory)
 
 			Pnl = ROW + str(n)
-			screen.attachPanelAt(PnlLeft, Pnl, "", "", True, False, ePnlStyleBlue50, 2, y - 8, w3 - 8, 10 + iNumEntries * dy + dy, eWidGen, 1, 2)
+			screen.attachPanelAt(PnlLeft, Pnl, "", "", True, False, ePnlStyleBlue50, 6, y - 8, w3 - 16, 10 + iNumEntries * dy + dy, eWidGen, 1, 2)
 			screen.setLabelAt("", Pnl, uFont2b + TRNSLTR.getText("TXT_KEY_TIME_TURN", (iTurn,)), 1<<0, 4, 2, 0, eFontGame, eWidGen, 1, 2)
 			y1 = dy
 			for iEntry in xrange(iNumEntries):
