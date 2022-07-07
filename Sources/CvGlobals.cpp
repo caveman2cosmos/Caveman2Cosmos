@@ -25,6 +25,7 @@
 #include "CvDLLUtilityIFaceBase.h"
 #include "CyGlobalContext.h"
 #include "FVariableSystem.h"
+#include "CityOutputHistory.h"
 #include <time.h>
 #include <sstream>
 
@@ -3084,6 +3085,8 @@ void cvInternalGlobals::doPostLoadCaching()
 			(*infoVector)[i]->doPostLoadCaching(i);
 		}
 	}
+
+	CityOutputHistory::setCityOutputHistorySize((uint16_t)GC.getCITY_OUTPUT_HISTORY_SIZE());
 }
 
 void cvInternalGlobals::checkInitialCivics()

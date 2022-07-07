@@ -28,107 +28,11 @@
 #ifdef THE_GREAT_WALL
 #include "CvDLLEngineIFaceBase.h"
 #endif
+#include "CityOutputHistory.h"
 
 //Disable this passed in initialization list warning, as it is only stored in the constructor of CvBuildingList and not used
 #pragma warning( disable : 4355 )
 
-// Helper class
-// ToDo - Move it to its own cpp/h file.
-class CityOutputHistory
-{
-	public:
-		CityOutputHistory()
-		{
-			recentOutputTurn = new uint32_t[iHistorySize]();
-			recentOutputHistory.resize(iHistorySize);
-		}
-		~CityOutputHistory()
-		{
-			SAFE_DELETE_ARRAY(recentOutputTurn);
-		}
-
-		static void setCityOutputHistorySize(const uint16_t iSize) { iHistorySize = iSize; }
-		static uint16_t getCityOutputHistorySize() { return iHistorySize; }
-
-		void reset()
-		{
-			for (uint16_t iI = 0; iI < iHistorySize; iI++)
-			{
-				recentOutputTurn[iI] = 0;
-			}
-			recentOutputHistory.clear();
-			recentOutputHistory.resize(iHistorySize);
-		}
-
-		void addToHistory(OrderTypes eOrder, uint16_t iType, short iHistory=-1)
-		{
-			if (iHistory > -1) // Used when reading saves.
-			{
-				if (iHistory < static_cast<int>(iHistorySize))
-				{
-					recentOutputHistory[iHistory].push_back(std::make_pair(eOrder, iType));
-				}
-				return;
-			}
-			const int iGameTurn = GC.getGame().getGameTurn();
-
-			if (iGameTurn != recentOutputTurn[0])
-			{
-				// Iterate history
-				for (uint16_t i = iHistorySize - 1; i > 0; i--)
-				{
-					recentOutputHistory[i] = recentOutputHistory[i-1];
-					recentOutputTurn[i] = recentOutputTurn[i-1];
-				}
-				recentOutputHistory[0].clear();
-				recentOutputTurn[0] = iGameTurn;
-			}
-			recentOutputHistory[0].push_back(std::make_pair(eOrder, iType));
-		}
-
-		// Used when reading saves.
-		void setRecentOutputTurn(const uint16_t iHistory, const int iGameTurn) const
-		{
-			if (notInRange(iHistory)) return;
-
-			recentOutputTurn[iHistory] = iGameTurn;
-		}
-
-		uint32_t getRecentOutputTurn(const uint16_t iHistory) const
-		{
-			if (notInRange(iHistory)) return 0;
-
-			return recentOutputTurn[iHistory];
-		}
-
-		uint16_t getCityOutputHistoryNumEntries(const uint16_t iHistory) const
-		{
-			if (notInRange(iHistory)) return 0;
-
-			return recentOutputHistory[iHistory].size();
-		}
-
-		uint16_t getCityOutputHistoryEntry(const uint16_t iHistory, const uint16_t iEntry, const bool bFirst) const
-		{
-			if (notInRange(iHistory)) return NULL;
-
-			if (bFirst)
-			{
-				return static_cast<uint16_t>(recentOutputHistory[iHistory][iEntry].first);
-			}
-			return recentOutputHistory[iHistory][iEntry].second;
-		}
-
-	private:
-		bool notInRange(const uint16_t iHistory) const { return iHistory < 0 || iHistory >= iHistorySize; }
-		static uint16_t iHistorySize;
-		uint32_t* recentOutputTurn;
-		std::vector< std::vector< std::pair<OrderTypes, uint16_t> > > recentOutputHistory;
-};
-uint16_t CityOutputHistory::iHistorySize;
-
-
-// Public Functions...
 
 CvCity::CvCity()
 	: m_GameObject(this),
@@ -264,9 +168,6 @@ CvCity::CvCity()
 	m_deferringBonusProcessingCount = 0;
 	m_paiStartDeferredSectionNumBonuses = NULL;
 	m_bMarkedForDestruction = false;
-
-	// Toffer - ToDo - Move this so it is only called once at game launch, maybe to cvInternalGlobals::doPostLoadCaching().
-	CityOutputHistory::setCityOutputHistorySize((uint16_t)GC.getCITY_OUTPUT_HISTORY_SIZE());
 
 	// Toffer - The class that tracks the output a city had the last CITY_OUTPUT_HISTORY_TURN_SIZE turns where it actually produced something.
 	m_outputHistory = new CityOutputHistory();
