@@ -20,6 +20,7 @@ class CityOutputHistory
 	static void setCityOutputHistorySize(const uint16_t iSize) { iHistorySize = iSize; }
 	static uint16_t getCityOutputHistorySize() { return iHistorySize; }
 
+	uint16_t getSize() { return getCityOutputHistorySize(); }
 	void addToHistory(OrderTypes eOrder, uint16_t iType, short iHistory=-1);
 	void setRecentOutputTurn(const uint16_t iHistory, const int iGameTurn) const;
 	uint32_t getRecentOutputTurn(const uint16_t iHistory) const;

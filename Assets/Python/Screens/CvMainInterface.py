@@ -3846,10 +3846,12 @@ class CvMainInterface:
 
 		y = 5
 		n = 0
-		for iHistory in xrange(city.getCityOutputHistorySize()):
-			iTurn = city.getRecentOutputTurn(iHistory)
+		history = city.getCityOutputHistory()
+		print ("WWWWWWWWWWWWW", history.getSize())
+		for iHistory in xrange(history.getSize()):
+			iTurn = history.getRecentOutputTurn(iHistory)
 			if iTurn < 1: break
-			iNumEntries = city.getCityOutputHistoryNumEntries(iHistory)
+			iNumEntries = history.getCityOutputHistoryNumEntries(iHistory)
 
 			Pnl = ROW + str(n)
 			screen.attachPanelAt(PnlLeft, Pnl, "", "", True, False, ePnlStyleBlue50, 6, y - 8, w3 - 16, 10 + iNumEntries * dy + dy, eWidGen, 1, 2)
@@ -3857,8 +3859,8 @@ class CvMainInterface:
 			y1 = dy
 			for iEntry in xrange(iNumEntries):
 
-				iOrder = city.getCityOutputHistoryEntry(iHistory, iEntry, True)
-				iType = city.getCityOutputHistoryEntry(iHistory, iEntry, False)
+				iOrder = history.getCityOutputHistoryEntry(iHistory, iEntry, True)
+				iType = history.getCityOutputHistoryEntry(iHistory, iEntry, False)
 
 				if iOrder == OrderTypes.ORDER_TRAIN:
 

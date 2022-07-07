@@ -38,7 +38,8 @@ CvCity::CvCity()
 	: m_GameObject(this),
 	m_BuildingList(NULL, this),
 	m_UnitList(NULL, this),
-	m_Properties(this)
+	m_Properties(this),
+	m_outputHistory()
 {
 	m_aiRiverPlotYield = new int[NUM_YIELD_TYPES];
 	m_aiBaseYieldRate = new int[NUM_YIELD_TYPES];
@@ -169,9 +170,6 @@ CvCity::CvCity()
 	m_paiStartDeferredSectionNumBonuses = NULL;
 	m_bMarkedForDestruction = false;
 
-	// Toffer - The class that tracks the output a city had the last CITY_OUTPUT_HISTORY_TURN_SIZE turns where it actually produced something.
-	m_outputHistory = new CityOutputHistory();
-
 	reset(0, NO_PLAYER, 0, 0, true);
 }
 
@@ -228,8 +226,6 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiBonusCommerceRateModifier);
 	SAFE_DELETE_ARRAY(m_aiBonusCommercePercentChanges);
 	SAFE_DELETE_ARRAY(m_aiBuildingCommerceTechChange);
-
-	SAFE_DELETE(m_outputHistory);
 }
 
 
@@ -1050,7 +1046,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_bIsGreatWallSeed = false;
 	m_deferringBonusProcessingCount = 0;
 
-	m_outputHistory->reset();
+	m_outputHistory.reset();
 }
 
 
@@ -16038,17 +16034,17 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 		{
 			case ORDER_TRAIN:
 			{
-				m_outputHistory->addToHistory(ORDER_TRAIN, (uint16_t)order.getUnitType());
+				m_outputHistory.addToHistory(ORDER_TRAIN, (uint16_t)order.getUnitType());
 				break;
 			}
 			case ORDER_CONSTRUCT:
 			{
-				m_outputHistory->addToHistory(ORDER_CONSTRUCT, (uint16_t)order.getBuildingType());
+				m_outputHistory.addToHistory(ORDER_CONSTRUCT, (uint16_t)order.getBuildingType());
 				break;
 			}
 			case ORDER_CREATE:
 			{
-				m_outputHistory->addToHistory(ORDER_CREATE, (uint16_t)order.getProjectType());
+				m_outputHistory.addToHistory(ORDER_CREATE, (uint16_t)order.getProjectType());
 				break;
 			}
 			default: FErrorMsg("Can Occur?");
@@ -17500,7 +17496,7 @@ void CvCity::read(FDataStreamBase* pStream)
 			{
 				uint32_t iTurn = 0;
 				WRAPPER_READ_DECORATED(wrapper, "CvCity", &iTurn, "RecentOutputTurn");
-				m_outputHistory->setRecentOutputTurn(iI, iTurn);
+				m_outputHistory.setRecentOutputTurn(iI, iTurn);
 
 				uint16_t iCityOutputHistoryNumEntries = 0;
 				WRAPPER_READ_DECORATED(wrapper, "CvCity", &iCityOutputHistoryNumEntries, "CityOutputHistoryNumEntries");
@@ -17512,7 +17508,7 @@ void CvCity::read(FDataStreamBase* pStream)
 					WRAPPER_READ_DECORATED(wrapper, "CvCity", &iOrderType, "OrderType");
 					WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "Type");
 
-					m_outputHistory->addToHistory(static_cast<OrderTypes>(iOrderType), iType, static_cast<short>(iI));
+					m_outputHistory.addToHistory(static_cast<OrderTypes>(iOrderType), iType, static_cast<short>(iI));
 				}
 			}
 		}
@@ -17969,13 +17965,13 @@ void CvCity::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iCityOutputHistorySize, "CityOutputHistorySize");
 		for (uint16_t iI = 0; iI < iCityOutputHistorySize; iI++)
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory->getRecentOutputTurn(iI), "RecentOutputTurn");
-			uint16_t iCityOutputHistoryNumEntries = m_outputHistory->getCityOutputHistoryNumEntries(iI);
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory.getRecentOutputTurn(iI), "RecentOutputTurn");
+			uint16_t iCityOutputHistoryNumEntries = m_outputHistory.getCityOutputHistoryNumEntries(iI);
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iCityOutputHistoryNumEntries, "CityOutputHistoryNumEntries");
 			for (uint16_t iJ = 0; iJ < iCityOutputHistoryNumEntries; iJ++)
 			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory->getCityOutputHistoryEntry(iI, iJ, true), "OrderType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory->getCityOutputHistoryEntry(iI, iJ, false), "Type");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory.getCityOutputHistoryEntry(iI, iJ, true), "OrderType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory.getCityOutputHistoryEntry(iI, iJ, false), "Type");
 			}
 		}
 	}
@@ -24509,23 +24505,7 @@ void CvCity::setWorkerHave(const int iUnitID, const bool bNewValue)
 	}
 }
 
-uint16_t CvCity::getCityOutputHistorySize() const
+const CityOutputHistory* CvCity::getCityOutputHistory() const
 {
-	return CityOutputHistory::getCityOutputHistorySize();
+	return &m_outputHistory;
 }
-
-uint32_t CvCity::getRecentOutputTurn(const int i) const
-{
-	return m_outputHistory->getRecentOutputTurn(i);
-}
-
-uint16_t CvCity::getCityOutputHistoryNumEntries(const uint16_t i) const
-{
-	return m_outputHistory->getCityOutputHistoryNumEntries(i);
-}
-
-uint16_t CvCity::getCityOutputHistoryEntry(const uint16_t i, const uint16_t iEntry, const bool bFirst) const
-{
-	return m_outputHistory->getCityOutputHistoryEntry(i, iEntry, bFirst);
-}
-
