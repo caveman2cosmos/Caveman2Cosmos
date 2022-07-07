@@ -2163,11 +2163,6 @@ void CvUnitAI::AI_workerMove()
 	BuildTypes eBestBonusBuild = NO_BUILD;
 	int iBestBonusValue = 0;
 
-	if (bCanRoute && !isNPC() && AI_connectCity())
-	{
-		return;
-	}
-
 	// find bonuses within 2 moves to improve
 	if (CvWorkerService::ImproveBonus(this, 2))
 	{
@@ -3011,11 +3006,7 @@ void CvUnitAI::AI_paratrooperMove()
 	return;
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  04/02/10								jdog5000	  */
-/*																							  */
-/* War tactics AI, Barbarian AI																 */
-/************************************************************************************************/
+
 void CvUnitAI::AI_attackCityMove()
 {
 	PROFILE_FUNC();
@@ -3626,7 +3617,7 @@ void CvUnitAI::AI_attackCityMove()
 		}
 	}
 
-	bool bAnyWarPlan = (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0);
+	const bool bAnyWarPlan = GET_TEAM(getTeam()).hasWarPlan(true);
 
 	if (bReadyToAttack)
 	{
@@ -3834,9 +3825,6 @@ void CvUnitAI::AI_attackCityMove()
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
 
 void CvUnitAI::AI_attackCityLemmingMove()
@@ -6703,7 +6691,9 @@ void CvUnitAI::AI_spyMove()
 
 	if (plot()->getTeam() == getTeam())
 	{
-		if (kTeam.getAnyWarPlanCount(true) == 0 || GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE4) || GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3))
+		if (!kTeam.hasWarPlan(true)
+		|| GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE4)
+		|| GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3))
 		{
 			if (GC.getGame().getSorenRandNum(10, "AI Spy defense") > 0)
 			{
@@ -8036,11 +8026,7 @@ void CvUnitAI::AI_exploreSeaMove()
 	return;
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  04/18/10								jdog5000	  */
-/*																							  */
-/* Naval AI																					 */
-/************************************************************************************************/
+
 void CvUnitAI::AI_assaultSeaMove()
 {
 	PROFILE_FUNC();
@@ -8129,7 +8115,7 @@ void CvUnitAI::AI_assaultSeaMove()
 
 	bool bReinforce = false;
 	bool bAttack = false;
-	bool bNoWarPlans = (GET_TEAM(getTeam()).getAnyWarPlanCount(true) == 0);
+	const bool bNoWarPlans = !GET_TEAM(getTeam()).hasWarPlan(true);
 	bool bAttackBarbarian = false;
 	bool bIsBarbarian = isNPC();
 
@@ -8706,9 +8692,6 @@ void CvUnitAI::AI_assaultSeaMove()
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 
 
 void CvUnitAI::AI_settlerSeaMove()
@@ -23477,7 +23460,7 @@ int CvUnitAI::AI_airOffenseBaseValue(const CvPlot* pPlot) const
 
 	int iValue = 0;
 
-	if (GET_TEAM(eTeam).getAnyWarPlanCount(true) > 0)
+	if (GET_TEAM(eTeam).hasWarPlan(true))
 	{
 		// Don't count assault assist, don't want to weight defending colonial coasts when homeland might be under attack
 		const bool bAssault = baseArea->getAreaAIType(eTeam) == AREAAI_ASSAULT || baseArea->getAreaAIType(eTeam) == AREAAI_ASSAULT_MASSING;
@@ -27002,7 +26985,7 @@ bool CvUnitAI::AI_StrategicForts()
 	}
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	const TeamTypes eTeam = getTeam();
-	const bool bWarPlan = GET_TEAM(eTeam).getAnyWarPlanCount(true) > 0;
+	const bool bWarPlan = GET_TEAM(eTeam).hasWarPlan(true);
 
 	CvReachablePlotSet plotSet(getGroup(), 0, MAX_INT);
 	BuildTypes eBestBuild = NO_BUILD;
@@ -27222,49 +27205,39 @@ bool CvUnitAI::AI_command()
 		return false;
 	}
 
-	bool bCommand = false;
+	bool bCommand = static_cast<int>(GET_PLAYER(getOwner()).Commanders.size()) < 2 + GET_PLAYER(getOwner()).getNumCities() / 5;
 
-	if (!bCommand)
-	{
-		if ((int)GET_PLAYER(getOwner()).Commanders.size() < 2 + GET_PLAYER(getOwner()).getNumCities() / 5)
-		{
-			bCommand = true;
-		}
-	}
 	if (!bCommand)
 	{
 		for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
 		{
-			if (GET_TEAM(GET_PLAYER((PlayerTypes)iPlayer).getTeam()).isAtWar(getTeam()))
+			if (GET_TEAM(GET_PLAYER((PlayerTypes)iPlayer).getTeam()).isAtWar(getTeam())
+			&& GET_PLAYER(getOwner()).Commanders.size() < GET_PLAYER((PlayerTypes)iPlayer).Commanders.size())
 			{
-				if (GET_PLAYER(getOwner()).Commanders.size() < GET_PLAYER((PlayerTypes)iPlayer).Commanders.size())
-				{
-					bCommand = true;
-					break;
-				}
+				bCommand = true;
+				break;
 			}
 		}
 	}
-	if (!bCommand)
+
+	if (!bCommand
+	&& GET_TEAM(getTeam()).getAnyWarPlanCount(true) > static_cast<int>(GET_PLAYER(getOwner()).Commanders.size()))
 	{
-		if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > (int)GET_PLAYER(getOwner()).Commanders.size())
-		{
-			bCommand = true;
-		}
+		bCommand = true;
 	}
+
 	if (bCommand && plot()->getPlotCity() != NULL)
 	{
-		int iTotalThreat = std::max(1, GET_PLAYER(getOwner()).AI_getTotalAreaCityThreat(area(), NULL));
-		int iOurThreat = plot()->getPlotCity()->AI_cityThreat();
+		const int iTotalThreat = std::max(1, GET_PLAYER(getOwner()).AI_getTotalAreaCityThreat(area(), NULL));
+		const int iOurThreat = plot()->getPlotCity()->AI_cityThreat();
 
-		//Unlikely to level the commander fast enough to be useful, leading troops will bring more immediate benefits
-		int iNumCities = std::max(1, GET_PLAYER(getOwner()).getNumCities());
-		if (iOurThreat > (2 * iTotalThreat) / iNumCities)
+		// Unlikely to level the commander fast enough to be useful, leading troops will bring more immediate benefits
+		const int iNumCities = std::max(1, GET_PLAYER(getOwner()).getNumCities());
+		if (iOurThreat > 2 * iTotalThreat / iNumCities)
 		{
 			bCommand = false;
 		}
 	}
-
 	setCommander(bCommand);
 	return bCommand;
 }

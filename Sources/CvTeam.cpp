@@ -2105,6 +2105,20 @@ int CvTeam::getAnyWarPlanCount(bool bIgnoreMinors) const
 	return iCount;
 }
 
+bool CvTeam::hasWarPlan(bool bIgnoreMinors) const
+{
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+	{
+		if (GET_TEAM((TeamTypes)iI).isAlive()
+		&& (!bIgnoreMinors || !GET_TEAM((TeamTypes)iI).isMinorCiv())
+		&& AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
 
 int CvTeam::getChosenWarCount(bool bIgnoreMinors) const
 {
@@ -2266,7 +2280,7 @@ bool CvTeam::isMasterPlanningLandWar(const CvArea* pArea) const
 	{
 		if (isVassal((TeamTypes)iI))
 		{
-			if (GET_TEAM((TeamTypes)iI).getAnyWarPlanCount(true) > 0)
+			if (GET_TEAM((TeamTypes)iI).hasWarPlan(true))
 			{
 				if (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_OFFENSIVE
 				||  pArea->getAreaAIType((TeamTypes)iI) == AREAAI_DEFENSIVE
@@ -2294,42 +2308,40 @@ bool CvTeam::isMasterPlanningLandWar(const CvArea* pArea) const
 
 bool CvTeam::isMasterPlanningSeaWar(const CvArea* pArea) const
 {
-	if( !isAVassal() )
+	if (!isAVassal())
 	{
 		return false;
 	}
-
-	if( (pArea->getAreaAIType(getID()) == AREAAI_ASSAULT) || (pArea->getAreaAIType(getID()) == AREAAI_ASSAULT_ASSIST) || (pArea->getAreaAIType(getID()) == AREAAI_ASSAULT_MASSING) )
+	if (pArea->getAreaAIType(getID()) == AREAAI_ASSAULT
+	||  pArea->getAreaAIType(getID()) == AREAAI_ASSAULT_ASSIST
+	||  pArea->getAreaAIType(getID()) == AREAAI_ASSAULT_MASSING)
 	{
 		return true;
 	}
-
 	for( int iI = 0; iI < MAX_PC_TEAMS; iI++ )
 	{
-		if( isVassal((TeamTypes)iI) )
+		if (isVassal((TeamTypes)iI))
 		{
-			if( GET_TEAM((TeamTypes)iI).getAnyWarPlanCount(true) > 0 )
+			if (GET_TEAM((TeamTypes)iI).hasWarPlan(true))
 			{
-				if( (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT) || (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT_ASSIST) || (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT_MASSING) )
+				if (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT
+				||  pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT_ASSIST
+				||  pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT_MASSING)
 				{
 					return (GC.getGame().getSorenRandNum((isCapitulated() ? 3 : 2),"Vassal sea war") == 0);
 				}
-				else if( pArea->getAreaAIType((TeamTypes)iI) == AREAAI_NEUTRAL )
+				if (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_NEUTRAL)
 				{
-					// Master has no presence here
-					return false;
+					return false; // Master has no presence here
 				}
-
 			}
-			else if( GET_TEAM((TeamTypes)iI).isHuman() )
+			else if (GET_TEAM((TeamTypes)iI).isHuman())
 			{
 				return false;
 			}
-
 			break;
 		}
 	}
-
 	return false;
 }
 
@@ -2895,7 +2907,7 @@ void CvTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 				{
 					AI_setWarPlan(eBarbCivVictim, WARPLAN_TOTAL, true);
 				}
-				else if (getAnyWarPlanCount(true) == 0)
+				else if (!hasWarPlan(true))
 				{
 					int iCount = 0;
 					foreach_(const CvUnit* pLoopUnit, GET_PLAYER(getLeaderID()).units())
