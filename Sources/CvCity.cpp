@@ -1241,7 +1241,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	}
 
 	setPopulation(0);
-	AI_assignWorkingPlots();
+	//AI_assignWorkingPlots();
 	clearOrderQueue();
 
 	// remember the visibility before we take away the city from the plot below
