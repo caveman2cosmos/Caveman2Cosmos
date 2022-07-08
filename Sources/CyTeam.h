@@ -176,6 +176,8 @@ public:
 	bool isHasTech(int /*TechTypes*/ iIndex) const;
 	void setHasTech(int /*TechTypes*/ eIndex, bool bNewValue, int /*PlayerTypes*/ ePlayer, bool bFirst, bool bAnnounce);
 	bool isNoTradeTech(int /*TechType */ iIndex) const;
+	int getNumAdjacentResearch() const;
+	int getAdjacentResearch(int i) const;
 
 	int getImprovementYieldChange(int /*ImprovementTypes*/ eIndex, int /*YieldTypes*/ eIndex2) const;
 	void changeImprovementYieldChange(int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, int iChange);

@@ -2747,23 +2747,17 @@ void CvCityAI::AI_chooseProduction()
 		if (NULL != pWaterArea)
 		{
 			// Coastal city extra logic
-
 			pAssaultWaterArea = pWaterArea;
 
 			// If on offensive and can't reach enemy cities from here, act like using AREAAI_ASSAULT
-			if ((pAssaultWaterArea != NULL) && !bBuildAssault)
+			if (!bBuildAssault
+			&& pAssaultWaterArea != NULL
+			&& GET_TEAM(getTeam()).hasWarPlan(true)
+			&& eAreaAI != AREAAI_DEFENSIVE
+			// BBAI TODO: faster to switch to checking path for some selection group?
+			&& !plot()->isHasPathToEnemyCity(getTeam()))
 			{
-				if ((GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0))
-				{
-					if ((eAreaAI != AREAAI_DEFENSIVE))
-					{
-						// BBAI TODO: faster to switch to checking path for some selection group?
-						if (!(plot()->isHasPathToEnemyCity(getTeam())))
-						{
-							bBuildAssault = true;
-						}
-					}
-				}
+				bBuildAssault = true;
 			}
 		}
 
@@ -3571,7 +3565,7 @@ UnitTypes CvCityAI::AI_bestUnit(int& iBestUnitValue, int iNumSelectableTypes, Un
 	{
 		const CvArea* pWaterArea = waterArea(true);
 
-		bool bWarPlan = (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0);
+		const bool bWarPlan = GET_TEAM(getTeam()).hasWarPlan(true);
 		bool bDefense = (area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE);
 		bool bLandWar = (bDefense || (area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE) || (area()->getAreaAIType(getTeam()) == AREAAI_MASSING));
 		bool bAssault = (area()->getAreaAIType(getTeam()) == AREAAI_ASSAULT);
@@ -5173,7 +5167,6 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					}
 					iValue += kBuilding.getDomainFreeExperience(iI) * (bMetAnyCiv ? iDomainExpValue : iDomainExpValue / 2);
 				}
-				bool bWarPlan = (kTeam.getAnyWarPlanCount(true) > 0);
 				int iPromoValue = 0;
 				foreach_(const FreePromoTypes & freePromoType, kBuilding.getFreePromoTypes())
 				{
@@ -5216,6 +5209,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 				if ((!isDevelopingCity() || isCapital()) && kBuilding.EnablesUnits())
 				{
+					const bool bWarPlan = kTeam.hasWarPlan(true);
 					const CvGameObjectCity* pObject = getGameObject();
 					// add the extra building and its bonuses to the override to see if they influence the train condition of a unit
 					std::vector<GOMOverride> queries;
@@ -11852,7 +11846,7 @@ int CvCityAI::AI_getPromotionValue(PromotionTypes ePromotion) const
 		return 0; //Avoid division by 0 when the city can't train units or the promotion never applies.
 	}
 	iValue /= iCanTrainCount;
-	if (GET_TEAM(getTeam()).getAnyWarPlanCount(true) > 0)
+	if (GET_TEAM(getTeam()).hasWarPlan(true))
 	{
 		iValue *= 2;
 	}
@@ -12369,7 +12363,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 	const bool bMetAnyCiv = team.hasMetAnyCiv();
 	const bool bAtWar = team.isAtWar();
-	const bool bWarPlan = team.getAnyWarPlanCount(true) > 0;
+	const bool bWarPlan = team.hasWarPlan(true);
 	//const bool bCleanPower = pArea->isCleanPower(eTeam);
 	const bool bDevelopingCity = isDevelopingCity();
 	const bool bCapital = isCapital();

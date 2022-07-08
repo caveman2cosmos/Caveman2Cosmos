@@ -120,6 +120,7 @@ void CvTeam::init(TeamTypes eID)
 
 	if (GC.getGame().isFinalInitialized())
 	{
+		cacheAdjacentResearch(); // Mid-game re-initialization
 		//logging::logMsg("C2C.log", "   Checking for declarations of war against reset team %d\n", (int)getID());
 
 		const bool bMinorCiv = isMinorCiv();
@@ -1023,11 +1024,8 @@ void CvTeam::doTurn()
 	// We may need new rules here for aliens and such, but there's really no need to do anything for animals regarding technology unless we want to represent evolution somehow... lol.
 	if (isHominid())
 	{
-		// Toffer - if we cached a vector listing all techs currently possible to select for active research per team, we wouldn't have to loop through all techs here.
-		for (int iI = GC.getNumTechInfos() - 1; iI > -1; iI--)
+		foreach_(const TechTypes eTechX, getAdjacentResearch())
 		{
-			const TechTypes eTechX = static_cast<TechTypes>(iI);
-
 			if (GET_PLAYER(getLeaderID()).canResearch(eTechX))
 			{
 				int iPossibleCount = 0;
@@ -2107,6 +2105,20 @@ int CvTeam::getAnyWarPlanCount(bool bIgnoreMinors) const
 	return iCount;
 }
 
+bool CvTeam::hasWarPlan(bool bIgnoreMinors) const
+{
+	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+	{
+		if (GET_TEAM((TeamTypes)iI).isAlive()
+		&& (!bIgnoreMinors || !GET_TEAM((TeamTypes)iI).isMinorCiv())
+		&& AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
 
 int CvTeam::getChosenWarCount(bool bIgnoreMinors) const
 {
@@ -2268,7 +2280,7 @@ bool CvTeam::isMasterPlanningLandWar(const CvArea* pArea) const
 	{
 		if (isVassal((TeamTypes)iI))
 		{
-			if (GET_TEAM((TeamTypes)iI).getAnyWarPlanCount(true) > 0)
+			if (GET_TEAM((TeamTypes)iI).hasWarPlan(true))
 			{
 				if (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_OFFENSIVE
 				||  pArea->getAreaAIType((TeamTypes)iI) == AREAAI_DEFENSIVE
@@ -2296,42 +2308,40 @@ bool CvTeam::isMasterPlanningLandWar(const CvArea* pArea) const
 
 bool CvTeam::isMasterPlanningSeaWar(const CvArea* pArea) const
 {
-	if( !isAVassal() )
+	if (!isAVassal())
 	{
 		return false;
 	}
-
-	if( (pArea->getAreaAIType(getID()) == AREAAI_ASSAULT) || (pArea->getAreaAIType(getID()) == AREAAI_ASSAULT_ASSIST) || (pArea->getAreaAIType(getID()) == AREAAI_ASSAULT_MASSING) )
+	if (pArea->getAreaAIType(getID()) == AREAAI_ASSAULT
+	||  pArea->getAreaAIType(getID()) == AREAAI_ASSAULT_ASSIST
+	||  pArea->getAreaAIType(getID()) == AREAAI_ASSAULT_MASSING)
 	{
 		return true;
 	}
-
 	for( int iI = 0; iI < MAX_PC_TEAMS; iI++ )
 	{
-		if( isVassal((TeamTypes)iI) )
+		if (isVassal((TeamTypes)iI))
 		{
-			if( GET_TEAM((TeamTypes)iI).getAnyWarPlanCount(true) > 0 )
+			if (GET_TEAM((TeamTypes)iI).hasWarPlan(true))
 			{
-				if( (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT) || (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT_ASSIST) || (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT_MASSING) )
+				if (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT
+				||  pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT_ASSIST
+				||  pArea->getAreaAIType((TeamTypes)iI) == AREAAI_ASSAULT_MASSING)
 				{
 					return (GC.getGame().getSorenRandNum((isCapitulated() ? 3 : 2),"Vassal sea war") == 0);
 				}
-				else if( pArea->getAreaAIType((TeamTypes)iI) == AREAAI_NEUTRAL )
+				if (pArea->getAreaAIType((TeamTypes)iI) == AREAAI_NEUTRAL)
 				{
-					// Master has no presence here
-					return false;
+					return false; // Master has no presence here
 				}
-
 			}
-			else if( GET_TEAM((TeamTypes)iI).isHuman() )
+			else if (GET_TEAM((TeamTypes)iI).isHuman())
 			{
 				return false;
 			}
-
 			break;
 		}
 	}
-
 	return false;
 }
 
@@ -2897,7 +2907,7 @@ void CvTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 				{
 					AI_setWarPlan(eBarbCivVictim, WARPLAN_TOTAL, true);
 				}
-				else if (getAnyWarPlanCount(true) == 0)
+				else if (!hasWarPlan(true))
 				{
 					int iCount = 0;
 					foreach_(const CvUnit* pLoopUnit, GET_PLAYER(getLeaderID()).units())
@@ -5084,6 +5094,50 @@ bool CvTeam::isHasTech(TechTypes eIndex) const
 	return m_pabHasTech[eIndex];
 }
 
+
+void CvTeam::cacheAdjacentResearch()
+{
+	//OutputDebugString(CvString::format("cacheAdjacentResearch team=%d\n", getID()).c_str());
+	if (isNPC() && !isHominid())
+	{
+		return; // Animal NPC's can't research anyway.
+	}
+	m_adjacentResearch.clear();
+
+	const CvPlayer& leader = GET_PLAYER(getLeaderID());
+
+	for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
+	{
+		if (leader.canResearch((TechTypes)iI, true, false))
+		{
+			m_adjacentResearch.push_back((TechTypes)iI);
+			//OutputDebugString(CvString::format("\tcacheAdjacentResearch tech=%d\n", iI).c_str());
+		}
+	}
+}
+
+void CvTeam::setAdjacentResearch(const TechTypes eTech, const bool bNewValue)
+{
+	if (isNPC() && !isHominid())
+	{
+		return; // Animal NPC's can't research anyway.
+	}
+	//OutputDebugString(CvString::format("setAdjacentResearch team=%d, tech=%d, bNewValue=%d\n", getID(), (int)eTech, (int)bNewValue).c_str());
+	std::vector<TechTypes>::iterator itr = find(m_adjacentResearch.begin(), m_adjacentResearch.end(), eTech);
+
+	if (bNewValue)
+	{
+		if (itr == m_adjacentResearch.end())
+		{
+			m_adjacentResearch.push_back(eTech);
+		}
+	}
+	else if (itr != m_adjacentResearch.end())
+	{
+		m_adjacentResearch.erase(itr);
+	}
+}
+
 void CvTeam::announceTechToPlayers(TechTypes eIndex, bool bPartial)
 {
 	const bool bSound = !bPartial && (GC.getGame().isNetworkMultiPlayer() || gDLL->getInterfaceIFace()->noTechSplash());
@@ -5152,7 +5206,7 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 		processTech(eTech, iChange, bAnnounce);
 		return;
 	}
-	clearDiscoveryTechCache();
+
 	GET_PLAYER(ePlayer).resetBonusClassTallyCache(-1, false);
 
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
@@ -5222,6 +5276,21 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 
 	if (isHasTech(eTech))
 	{
+		if (GC.getGame().isFinalInitialized())
+		{
+			// Toffer - Tracking of this cache causes issues during game initialization.
+			//	A sweeping cache update will be done at when the game is finally initialized anyway.
+			setAdjacentResearch(eTech, false);
+
+			foreach_(const TechTypes eTechX, kTech.getLeadsToTechs())
+			{
+				if (GET_PLAYER(getLeaderID()).canResearch(eTechX, true, false))
+				{
+					setAdjacentResearch(eTechX, true);
+				}
+			}
+		}
+
 		if (gTeamLogLevel >= 2)
 		{
 			logBBAI("    Team %d (%S) acquires tech %S", getID(), GET_PLAYER(ePlayer).getCivilizationDescription(0), kTech.getDescription() );
@@ -5361,31 +5430,53 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 				}
 			}
 		}
-
-		const bool bGlobal = kTech.isGlobal();
-
-		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			CvPlayerAI& playerX = GET_PLAYER((PlayerTypes)iI);
+			const bool bGlobal = kTech.isGlobal();
 
-			if (playerX.isAlive())
+			if (bGlobal)
 			{
-				if (playerX.getTeam() == getID())
+				for (int iI = 0; iI < MAX_TEAMS; iI++)
 				{
-					if (playerX.isResearchingTech(eTech))
+					if (iI != getID() && GET_TEAM((TeamTypes)iI).isAlive())
+					{
+						const std::vector<TechTypes>& adjacentResearch = GET_TEAM((TeamTypes)iI).getAdjacentResearch();
+
+						if (find(adjacentResearch.begin(), adjacentResearch.end(), eTech) != adjacentResearch.end())
+						{
+							GET_TEAM((TeamTypes)iI).setAdjacentResearch(eTech, false);
+						}
+					}
+				}
+			}
+
+			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+			{
+				CvPlayerAI& playerX = GET_PLAYER((PlayerTypes)iI);
+
+				if (playerX.isAlive())
+				{
+					if (playerX.getTeam() == getID())
+					{
+						if (playerX.isResearchingTech(eTech))
+						{
+							playerX.popResearch(eTech);
+						}
+						playerX.AI_nowHasTech(eTech);
+						playerX.invalidateYieldRankCache();
+					}
+					else if (bGlobal && playerX.isResearchingTech(eTech))
 					{
 						playerX.popResearch(eTech);
 					}
-					playerX.AI_nowHasTech(eTech);
-					playerX.invalidateYieldRankCache();
-				}
-				else if (bGlobal && playerX.isResearchingTech(eTech))
-				{
-					playerX.popResearch(eTech);
 				}
 			}
 		}
-
+#ifdef _DEBUG
+		foreach_(const TechTypes eTechX, getAdjacentResearch())
+		{
+			FAssert(GET_PLAYER(getLeaderID()).canResearch(eTechX, true, false));
+		}
+#endif
 		if (bFirst && GC.getGame().countKnownTechNumTeams(eTech) == 1)
 		{
 			const UnitTypes eFreeUnit = (UnitTypes)kTech.getFirstFreeUnit();
@@ -5560,6 +5651,11 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 			gDLL->getInterfaceIFace()->setDirty(ResearchButtons_DIRTY_BIT, true);
 			gDLL->getInterfaceIFace()->setDirty(GlobeLayer_DIRTY_BIT, true);
 		}
+	}
+	else
+	{
+		// Rarely are techs removed, probably worldbuilder.
+		cacheAdjacentResearch(); // Harder to remove than add.
 	}
 }
 
@@ -6641,8 +6737,6 @@ void CvTeam::read(FDataStreamBase* pStream)
 
 void CvTeam::write(FDataStreamBase* pStream)
 {
-	int iI;
-
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
@@ -6680,13 +6774,13 @@ void CvTeam::write(FDataStreamBase* pStream)
 
 	//	Format change - we now store 100 times the actual value, but no need to change the save format - just
 	//	convert on load and save
-	for(iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		m_aiWarWearinessTimes100[iI] /= 100;
 	}
 
 	WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvTeam", MAX_TEAMS, m_aiWarWearinessTimes100, "m_aiWarWeariness");
-	for(iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		m_aiWarWearinessTimes100[iI] *= 100;
 	}
@@ -6712,9 +6806,9 @@ void CvTeam::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_PROJECTS, GC.getNumProjectInfos(), m_paiProjectDefaultArtTypes);
 
 	//project art types
-	for(int i=0;i<GC.getNumProjectInfos();i++)
+	for (int i = 0; i < GC.getNumProjectInfos(); i++)
 	{
-		for(int j=0;j<m_paiProjectCount[i];j++)
+		for (int j = 0; j < m_paiProjectCount[i]; j++)
 		{
 			WRAPPER_WRITE(wrapper, "CvTeam", m_pavProjectArtTypes[i][j]);
 		}
@@ -6729,7 +6823,7 @@ void CvTeam::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_VICTORIES, GC.getNumVictoryInfos(), m_aiVictoryCountdown);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_TECHS, GC.getNumTechInfos(), m_pabHasTech);
 
-	for (iI=0;iI<GC.getNumImprovementInfos();iI++)
+	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
 		WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", NUM_YIELD_TYPES, m_ppaaiImprovementYieldChange[iI]);
 	}
@@ -6783,7 +6877,7 @@ void CvTeam::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiTechExtraBuildingHealth);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
 
-	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvTeam", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_ppiBuildingSpecialistChange[iI]);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvTeam", NUM_COMMERCE_TYPES, m_ppiBuildingCommerceModifier[iI]);

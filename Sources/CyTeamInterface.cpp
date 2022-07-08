@@ -164,6 +164,8 @@ void CyTeamPythonInterface()
 		.def("isHasTech", &CyTeam::isHasTech, "bool (TechID) - has the team researched techID")
 		.def("setHasTech", &CyTeam::setHasTech, "void (TechID, bNewValue, iPlayer, bFirst, bAnnounce)")
 		.def("isNoTradeTech", &CyTeam::isNoTradeTech, "bool (TechID)")
+		.def("getNumAdjacentResearch", &CyTeam::getNumAdjacentResearch, "int () - Amount of tech choices")
+		.def("getAdjacentResearch", &CyTeam::getAdjacentResearch, "int /*TechTypes*/ (int i)")
 
 		.def("getImprovementYieldChange", &CyTeam::getImprovementYieldChange,	"int (int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)")
 		.def("changeImprovementYieldChange", &CyTeam::changeImprovementYieldChange, "void (int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, iChange)")

@@ -92,6 +92,8 @@ void CyInfoPythonInterface1()
 		.def("getFlavorValue", &CvTechInfo::getFlavorValue, "int (int i)")
 		.def("getPrereqOrTechs", &CvTechInfo::getPrereqOrTechs, python::return_value_policy<python::reference_existing_object>())
 		.def("getPrereqAndTechs", &CvTechInfo::getPrereqAndTechs, python::return_value_policy<python::reference_existing_object>())
+		.def("getNumLeadsToTechs", &CvTechInfo::getNumLeadsToTechs, "int ()")
+		.def("getLeadsToTech", &CvTechInfo::getLeadsToTech, "int (int i)")
 
 		.def("isCommerceFlexible", &CvTechInfo::isCommerceFlexible, "bool (int i)")
 		.def("isTerrainTrade", &CvTechInfo::isTerrainTrade, "bool (int i)")

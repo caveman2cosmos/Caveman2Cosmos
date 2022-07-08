@@ -28,113 +28,18 @@
 #ifdef THE_GREAT_WALL
 #include "CvDLLEngineIFaceBase.h"
 #endif
+#include "CityOutputHistory.h"
 
 //Disable this passed in initialization list warning, as it is only stored in the constructor of CvBuildingList and not used
 #pragma warning( disable : 4355 )
 
-// Helper class
-// ToDo - Move it to its own cpp/h file.
-class CityOutputHistory
-{
-	public:
-		CityOutputHistory()
-		{
-			recentOutputTurn = new uint32_t[iHistorySize]();
-			recentOutputHistory.resize(iHistorySize);
-		}
-		~CityOutputHistory()
-		{
-			SAFE_DELETE_ARRAY(recentOutputTurn);
-		}
-
-		static void setCityOutputHistorySize(const uint16_t iSize) { iHistorySize = iSize; }
-		static uint16_t getCityOutputHistorySize() { return iHistorySize; }
-
-		void reset()
-		{
-			for (uint16_t iI = 0; iI < iHistorySize; iI++)
-			{
-				recentOutputTurn[iI] = 0;
-			}
-			recentOutputHistory.clear();
-			recentOutputHistory.resize(iHistorySize);
-		}
-
-		void addToHistory(OrderTypes eOrder, uint16_t iType, short iHistory=-1)
-		{
-			if (iHistory > -1) // Used when reading saves.
-			{
-				if (iHistory < static_cast<int>(iHistorySize))
-				{
-					recentOutputHistory[iHistory].push_back(std::make_pair(eOrder, iType));
-				}
-				return;
-			}
-			const int iGameTurn = GC.getGame().getGameTurn();
-
-			if (iGameTurn != recentOutputTurn[0])
-			{
-				// Iterate history
-				for (uint16_t i = iHistorySize - 1; i > 0; i--)
-				{
-					recentOutputHistory[i] = recentOutputHistory[i-1];
-					recentOutputTurn[i] = recentOutputTurn[i-1];
-				}
-				recentOutputHistory[0].clear();
-				recentOutputTurn[0] = iGameTurn;
-			}
-			recentOutputHistory[0].push_back(std::make_pair(eOrder, iType));
-		}
-
-		// Used when reading saves.
-		void setRecentOutputTurn(const uint16_t iHistory, const int iGameTurn) const
-		{
-			if (notInRange(iHistory)) return;
-
-			recentOutputTurn[iHistory] = iGameTurn;
-		}
-
-		uint32_t getRecentOutputTurn(const uint16_t iHistory) const
-		{
-			if (notInRange(iHistory)) return 0;
-
-			return recentOutputTurn[iHistory];
-		}
-
-		uint16_t getCityOutputHistoryNumEntries(const uint16_t iHistory) const
-		{
-			if (notInRange(iHistory)) return 0;
-
-			return recentOutputHistory[iHistory].size();
-		}
-
-		uint16_t getCityOutputHistoryEntry(const uint16_t iHistory, const uint16_t iEntry, const bool bFirst) const
-		{
-			if (notInRange(iHistory)) return NULL;
-
-			if (bFirst)
-			{
-				return static_cast<uint16_t>(recentOutputHistory[iHistory][iEntry].first);
-			}
-			return recentOutputHistory[iHistory][iEntry].second;
-		}
-
-	private:
-		bool notInRange(const uint16_t iHistory) const { return iHistory < 0 || iHistory >= iHistorySize; }
-		static uint16_t iHistorySize;
-		uint32_t* recentOutputTurn;
-		std::vector< std::vector< std::pair<OrderTypes, uint16_t> > > recentOutputHistory;
-};
-uint16_t CityOutputHistory::iHistorySize;
-
-
-// Public Functions...
 
 CvCity::CvCity()
 	: m_GameObject(this),
 	m_BuildingList(NULL, this),
 	m_UnitList(NULL, this),
-	m_Properties(this)
+	m_Properties(this),
+	m_outputHistory()
 {
 	m_aiRiverPlotYield = new int[NUM_YIELD_TYPES];
 	m_aiBaseYieldRate = new int[NUM_YIELD_TYPES];
@@ -265,12 +170,6 @@ CvCity::CvCity()
 	m_paiStartDeferredSectionNumBonuses = NULL;
 	m_bMarkedForDestruction = false;
 
-	// Toffer - ToDo - Move this so it is only called once at game launch, maybe to cvInternalGlobals::doPostLoadCaching().
-	CityOutputHistory::setCityOutputHistorySize((uint16_t)GC.getCITY_OUTPUT_HISTORY_SIZE());
-
-	// Toffer - The class that tracks the output a city had the last CITY_OUTPUT_HISTORY_TURN_SIZE turns where it actually produced something.
-	m_outputHistory = new CityOutputHistory();
-
 	reset(0, NO_PLAYER, 0, 0, true);
 }
 
@@ -327,8 +226,6 @@ CvCity::~CvCity()
 	SAFE_DELETE_ARRAY(m_aiBonusCommerceRateModifier);
 	SAFE_DELETE_ARRAY(m_aiBonusCommercePercentChanges);
 	SAFE_DELETE_ARRAY(m_aiBuildingCommerceTechChange);
-
-	SAFE_DELETE(m_outputHistory);
 }
 
 
@@ -1149,7 +1046,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_bIsGreatWallSeed = false;
 	m_deferringBonusProcessingCount = 0;
 
-	m_outputHistory->reset();
+	m_outputHistory.reset();
 }
 
 
@@ -1344,7 +1241,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	}
 
 	setPopulation(0);
-	AI_assignWorkingPlots();
+	//AI_assignWorkingPlots();
 	clearOrderQueue();
 
 	// remember the visibility before we take away the city from the plot below
@@ -16137,17 +16034,17 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 		{
 			case ORDER_TRAIN:
 			{
-				m_outputHistory->addToHistory(ORDER_TRAIN, (uint16_t)order.getUnitType());
+				m_outputHistory.addToHistory(ORDER_TRAIN, (uint16_t)order.getUnitType());
 				break;
 			}
 			case ORDER_CONSTRUCT:
 			{
-				m_outputHistory->addToHistory(ORDER_CONSTRUCT, (uint16_t)order.getBuildingType());
+				m_outputHistory.addToHistory(ORDER_CONSTRUCT, (uint16_t)order.getBuildingType());
 				break;
 			}
 			case ORDER_CREATE:
 			{
-				m_outputHistory->addToHistory(ORDER_CREATE, (uint16_t)order.getProjectType());
+				m_outputHistory.addToHistory(ORDER_CREATE, (uint16_t)order.getProjectType());
 				break;
 			}
 			default: FErrorMsg("Can Occur?");
@@ -17599,7 +17496,7 @@ void CvCity::read(FDataStreamBase* pStream)
 			{
 				uint32_t iTurn = 0;
 				WRAPPER_READ_DECORATED(wrapper, "CvCity", &iTurn, "RecentOutputTurn");
-				m_outputHistory->setRecentOutputTurn(iI, iTurn);
+				m_outputHistory.setRecentOutputTurn(iI, iTurn);
 
 				uint16_t iCityOutputHistoryNumEntries = 0;
 				WRAPPER_READ_DECORATED(wrapper, "CvCity", &iCityOutputHistoryNumEntries, "CityOutputHistoryNumEntries");
@@ -17611,7 +17508,7 @@ void CvCity::read(FDataStreamBase* pStream)
 					WRAPPER_READ_DECORATED(wrapper, "CvCity", &iOrderType, "OrderType");
 					WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "Type");
 
-					m_outputHistory->addToHistory(static_cast<OrderTypes>(iOrderType), iType, static_cast<short>(iI));
+					m_outputHistory.addToHistory(static_cast<OrderTypes>(iOrderType), iType, static_cast<short>(iI));
 				}
 			}
 		}
@@ -18068,13 +17965,13 @@ void CvCity::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iCityOutputHistorySize, "CityOutputHistorySize");
 		for (uint16_t iI = 0; iI < iCityOutputHistorySize; iI++)
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory->getRecentOutputTurn(iI), "RecentOutputTurn");
-			uint16_t iCityOutputHistoryNumEntries = m_outputHistory->getCityOutputHistoryNumEntries(iI);
+			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory.getRecentOutputTurn(iI), "RecentOutputTurn");
+			uint16_t iCityOutputHistoryNumEntries = m_outputHistory.getCityOutputHistoryNumEntries(iI);
 			WRAPPER_WRITE_DECORATED(wrapper, "CvCity", iCityOutputHistoryNumEntries, "CityOutputHistoryNumEntries");
 			for (uint16_t iJ = 0; iJ < iCityOutputHistoryNumEntries; iJ++)
 			{
-				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory->getCityOutputHistoryEntry(iI, iJ, true), "OrderType");
-				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory->getCityOutputHistoryEntry(iI, iJ, false), "Type");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory.getCityOutputHistoryEntry(iI, iJ, true), "OrderType");
+				WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_outputHistory.getCityOutputHistoryEntry(iI, iJ, false), "Type");
 			}
 		}
 	}
@@ -24406,78 +24303,82 @@ void CvCity::changePropertySpawn(int iChange, PropertyTypes eProperty, UnitTypes
 
 void CvCity::doPropertyUnitSpawn()
 {
-	const int iNumCriminals = plot()->getNumCriminals();
-	const int iMaximum = getPopulation() / 2;
-	if (iNumCriminals < iMaximum)
+	for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
 	{
-		for (int iI = 0; iI < GC.getNumPropertyInfos(); iI++)
+		const PropertyTypes eProperty = (PropertyTypes)iI;
+		int iCurrentValue = std::max(0, getPropertiesConst()->getValueByProperty(eProperty));
+		if (eProperty == 0)
 		{
-			const PropertyTypes eProperty = (PropertyTypes)iI;
-			const bool bPositiveProperty = (GC.getPropertyInfo(eProperty).getAIWeight() >= 0);
-			int iCurrentValue = std::max(0, getPropertiesConst()->getValueByProperty(eProperty));
-			if (eProperty == 0) //SHOULD be crime but this is subject to flaw if the first property type ever changes.  There's a faster way than getvisual but it takes some setup.  if this becomes necessary to move off of hard coding, use the examples for peaks and hills.
+			// TB - SHOULD be crime, but this is subject to flaw if the first property type ever changes.
+			//	There's a faster way than getvisual but it takes some setup.
+			//	If it becomes necessary to move off of hard coding, use the examples for peaks and hills.
+			const int iNumCriminals = plot()->getNumCriminals();
+			if (iNumCriminals >= getPopulation() / 2)
 			{
-				iCurrentValue -= ((iCurrentValue / 10) * iNumCriminals);
+				continue;
 			}
-			iCurrentValue = std::max(0, iCurrentValue);
-			iCurrentValue /= 2;
-			PlayerTypes eSpawnOwner = getOwner();
-			if (!bPositiveProperty)
+			iCurrentValue -= iNumCriminals * iCurrentValue / 10;
+		}
+		const bool bPositiveProperty = GC.getPropertyInfo(eProperty).getAIWeight() >= 0;
+
+		iCurrentValue = std::max(0, iCurrentValue);
+		iCurrentValue /= 2;
+		const PlayerTypes eSpawnOwner = bPositiveProperty ? getOwner() : (PlayerTypes)BARBARIAN_PLAYER;
+
+		foreach_(const PropertySpawns& it, m_aPropertySpawns)
+		{
+			if (it.eProperty == eProperty
+			&& GC.getGame().getSorenRandNum(10000, "Property Unit Spawn Check") < iCurrentValue)
 			{
-				eSpawnOwner = (PlayerTypes)BARBARIAN_PLAYER;
-			}
-			foreach_(const PropertySpawns& it, m_aPropertySpawns)
-			{
-				if (it.eProperty == eProperty
-				&& GC.getGame().getSorenRandNum(10000, "Property Unit Spawn Check") < iCurrentValue)
+				const UnitTypes eUnit = it.eUnit;
+				if (!GET_PLAYER(getOwner()).canTrain(eUnit, false, false, true, true))
 				{
-					const UnitTypes eUnit = it.eUnit;
-					if (!GET_PLAYER(getOwner()).canTrain(eUnit, false, false, true, true))
+					continue;
+				}
+				//TBNote:Saving this brilliant example...
+				//std::vector<int> aiUnitAIIndex;
+				//for (int iJ = 0; iJ < NUM_UNITAI_TYPES; iJ++)
+				//{
+				//	if (GC.getUnitInfo(eUnit).getUnitAIType(iJ))
+				//	{
+				//		aiUnitAIIndex.push_back(iJ);
+				//	}
+				//}
+				//int iAIRoll = GC.getGame().getSorenRandNum(aiUnitAIIndex.size(), "Property Unit Spawn AI Check");
+				//UnitAITypes eUnitAI = (UnitAITypes)aiUnitAIIndex[iAIRoll];
+
+				FAssertMsg(bPositiveProperty || GC.getUnitInfo(eUnit).isBlendIntoCity(), CvString::format("Trying to spawn %s from property spawn, but it doesn't have bBlendIntoCity enabled, which is a requirement", GC.getUnitInfo(eUnit).getType()).c_str());
+
+				CvUnit* pUnit = GET_PLAYER(eSpawnOwner).initUnit(eUnit, getX(), getY(), UNITAI_BARB_CRIMINAL, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+
+				if (pUnit != NULL)
+				{
+					FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
+					if (pUnit->isExcile())
 					{
-						continue;
+						pUnit->jumpToNearestValidPlot(false);
 					}
-					//TBNote:Saving this brilliant example...
-					//std::vector<int> aiUnitAIIndex;
-					//aiUnitAIIndex.clear();
-					//for (int iJ = 0; iJ < NUM_UNITAI_TYPES; iJ++)
-					//{
-					//	if (GC.getUnitInfo(eUnit).getUnitAIType(iJ))
-					//	{
-					//		aiUnitAIIndex.push_back(iJ);
-					//	}
-					//}
-					//int iAIRoll = GC.getGame().getSorenRandNum(aiUnitAIIndex.size(), "Property Unit Spawn AI Check");
-					//UnitAITypes eUnitAI = (UnitAITypes)aiUnitAIIndex[iAIRoll];
+					pUnit->finishMoves();
 
-					FAssertMsg(GC.getUnitInfo(eUnit).isBlendIntoCity(), CvString::format("Trying to spawn %s from property spawn, but it doesn't have bBlendIntoCity enabled, which is a requirement", GC.getUnitInfo(eUnit).getType()).c_str());
+					addProductionExperience(pUnit);
 
-					CvUnit* pUnit = GET_PLAYER(eSpawnOwner).initUnit(eUnit, getX(), getY(), UNITAI_BARB_CRIMINAL, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-
-					if (pUnit != NULL)
+					if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
 					{
-						FAssertMsg(pUnit != NULL, "pUnit is expected to be assigned a valid unit object");
-						if (pUnit->isExcile())
+						if (bPositiveProperty)
 						{
-							pUnit->jumpToNearestValidPlot(false);
+							AddDLLMessage(
+								getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_FRIENDLY", GC.getUnitInfo(eUnit).getDescription(), getNameKey()),
+								NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT(), getX(), getY(), true, true
+							);
 						}
-						pUnit->finishMoves();
-
-						addProductionExperience(pUnit);
-
-						if (!bPositiveProperty)
+						else
 						{
-							if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
-							{
-
-								const CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_BARB", GC.getUnitInfo(eUnit).getDescription(), getNameKey());
-								AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true);
-							}
-						}
-						else if (!GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_IGNORE_DISABLED_ALERTS))
-						{
-
-							const CvWString szBuffer = gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_FRIENDLY", GC.getUnitInfo(eUnit).getDescription(), getNameKey());
-							AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), GC.getCOLOR_HIGHLIGHT_TEXT(), getX(), getY(), true, true);
+							AddDLLMessage(
+								getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+								gDLL->getText("TXT_KEY_CITY_PROPERTY_SPAWN_BARB", GC.getUnitInfo(eUnit).getDescription(), getNameKey()),
+								NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getUnitInfo(eUnit).getButton(), GC.getCOLOR_WARNING_TEXT(), getX(), getY(), true, true
+							);
 						}
 					}
 				}
@@ -24604,23 +24505,7 @@ void CvCity::setWorkerHave(const int iUnitID, const bool bNewValue)
 	}
 }
 
-uint16_t CvCity::getCityOutputHistorySize() const
+const CityOutputHistory* CvCity::getCityOutputHistory() const
 {
-	return CityOutputHistory::getCityOutputHistorySize();
+	return &m_outputHistory;
 }
-
-uint32_t CvCity::getRecentOutputTurn(const int i) const
-{
-	return m_outputHistory->getRecentOutputTurn(i);
-}
-
-uint16_t CvCity::getCityOutputHistoryNumEntries(const uint16_t i) const
-{
-	return m_outputHistory->getCityOutputHistoryNumEntries(i);
-}
-
-uint16_t CvCity::getCityOutputHistoryEntry(const uint16_t i, const uint16_t iEntry, const bool bFirst) const
-{
-	return m_outputHistory->getCityOutputHistoryEntry(i, iEntry, bFirst);
-}
-

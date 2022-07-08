@@ -438,21 +438,14 @@ public:
 
 	bool isGlobal() const;
 
-	// Dale - AB: Bombing START
 	bool getDCMAirBombTech1() const;
 	bool getDCMAirBombTech2() const;
-protected:
-	bool m_bDCMAirBombTech1;
-	bool m_bDCMAirBombTech2;
-public:
-	// Dale - AB: Bombing END
+
 
 	std::wstring getQuote() const;
 	const char* getQuoteKey() const;
 	const char* getSound() const;
 	const char* getSoundMP() const;
-
-	// Arrays
 
 	int getDomainExtraMoves(int i) const;
 	int getFlavorValue(int i) const;
@@ -462,7 +455,7 @@ public:
 
 	bool isCommerceFlexible(int i) const;
 	bool isTerrainTrade(int i) const;
-	//ls612: Tech Commerce Modifiers
+
 	int getCommerceModifier(int i) const;
 	int* getCommerceModifierArray() const;
 
@@ -470,7 +463,9 @@ public:
 	void copyNonDefaults(const CvTechInfo* pClassInfo);
 	void getCheckSum(uint32_t& iSum) const;
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
+	void doPostLoadCaching(uint32_t iThis);
+	const std::set<TechTypes>& getLeadsToTechs() const { return m_leadsTo; }
+
 protected:
 
 	int m_iAdvisorType;
@@ -481,12 +476,12 @@ protected:
 	int m_iTradeRoutes;
 	int m_iFeatureProductionModifier;
 	int m_iWorkerSpeedModifier;
-	//DPII < Maintenance Modifier >
+
 	int m_iMaintenanceModifier;
 	int m_iDistanceMaintenanceModifier;
 	int m_iNumCitiesMaintenanceModifier;
 	int m_iCoastalDistanceMaintenanceModifier;
-	//DPII < Maintenance Modifier >
+
 	int m_iFirstFreeUnit;
 	int m_iFirstFreeProphet;
 	int m_iHealth;
@@ -497,6 +492,14 @@ protected:
 
 	int m_iGridX;
 	int m_iGridY;
+
+	int m_iInflationModifier;
+	int m_iGlobalTradeModifier;
+	int m_iGlobalForeignTradeModifier;
+	int m_iTradeMissionModifier;
+	int m_iCorporationRevenueModifier;
+	int m_iCorporationMaintenanceModifier;
+	int m_iPrereqGameOption;
 
 	bool m_bRepeat;
 	bool m_bTrade;
@@ -517,27 +520,9 @@ protected:
 	bool m_bIgnoreIrrigation;
 	bool m_bWaterWork;
 	bool m_bRiverTrade;
-
-	CvString m_szQuoteKey;
-	CvString m_szSound;
-	CvString m_szSoundMP;
-
-	// Arrays
-
-	int* m_piDomainExtraMoves;
-	int* m_piFlavorValue;
-
-	std::vector<TechTypes> m_piPrereqOrTechs;
-	std::vector<TechTypes> m_piPrereqAndTechs;
-
-	bool* m_pbCommerceFlexible;
-	bool* m_pbTerrainTrade;
-	//ls612: Tech Commerce Modifiers
-	int* m_piCommerceModifier;
-
-	//TB Tech Tags
+	bool m_bDCMAirBombTech1;
+	bool m_bDCMAirBombTech2;
 	bool m_bGlobal;
-	//TB Tech Tags end
 	bool m_bCanPassPeaks;
 	bool m_bMoveFastPeaks;
 	bool m_bCanFoundOnPeaks;
@@ -546,19 +531,38 @@ protected:
 	bool m_bRebaseAnywhere;
 	bool m_bEnablesDesertFarming;
 
-	int m_iInflationModifier;
-	int m_iGlobalTradeModifier;
-	int m_iGlobalForeignTradeModifier;
-	int m_iTradeMissionModifier;
-	int m_iCorporationRevenueModifier;
-	int m_iCorporationMaintenanceModifier;
-	int m_iPrereqGameOption;
+	CvString m_szQuoteKey;
+	CvString m_szSound;
+	CvString m_szSoundMP;
+
+
+	int* m_piDomainExtraMoves;
+	int* m_piFlavorValue;
+	int* m_piCommerceModifier;
 	int* m_piFreeSpecialistCount;
+
+	bool* m_pbCommerceFlexible;
+	bool* m_pbTerrainTrade;
 
 	std::vector<int> m_aiCategories;
 
+	std::vector<TechTypes> m_piPrereqOrTechs;
+	std::vector<TechTypes> m_piPrereqAndTechs;
+
 	std::vector<PrereqBuilding> m_aPrereqBuilding;
 	std::vector<PrereqBuilding> m_aPrereqOrBuilding;
+
+private:
+	std::set<TechTypes> m_leadsTo;
+	void setLeadsTo(const TechTypes eTech);
+public:
+	int getNumLeadsToTechs() const { return m_leadsTo.size(); }
+	int getLeadsToTech(const int iCount) const
+	{
+		std::set<TechTypes>::const_iterator itr = m_leadsTo.begin();
+		for (int i = 0; i < iCount; i++) itr++;
+		return *itr;
+	}
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

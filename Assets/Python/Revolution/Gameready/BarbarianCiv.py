@@ -247,7 +247,7 @@ class BarbarianCiv:
 			iMinEra = iEra - self.RevOpt.getNewWorldErasBehind()
 			if iMinEra > -1:
 				for iTech in xrange(iNumTechs):
-					if CyPlayer.canEverResearch(iTech) and GC.getTechInfo(iTech).getEra() <= iMinEra:
+					if CyPlayer.canResearch(iTech, False) and GC.getTechInfo(iTech).getEra() <= iMinEra:
 						CyTeam.setHasTech(iTech, True, iPlayer, False, False)
 		else:
 			iNumTeams = GAME.countCivTeamsAlive()
@@ -257,7 +257,7 @@ class BarbarianCiv:
 				if iTech in techsOwned:
 					CyTeam.setHasTech(iTech, True, iPlayer, False, False)
 					continue
-				if not CyPlayer.canEverResearch(iTech):
+				if not CyPlayer.canResearch(iTech, False):
 					continue
 				iKnownRatio = 100 * GAME.countKnownTechNumTeams(iTech) / iNumTeams
 				if iKnownRatio < 100 and closeTeams:

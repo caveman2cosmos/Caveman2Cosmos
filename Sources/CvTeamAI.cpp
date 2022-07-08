@@ -1002,7 +1002,7 @@ int CvTeamAI::AI_startWarVal(TeamTypes eTeam) const
 	}
 
 	// If occupied or conquest inclined and early/not strong, value weak opponents
-	if (getAnyWarPlanCount(true) > 0
+	if (hasWarPlan(true)
 	||  AI_isAnyMemberDoVictoryStrategy(AI_VICTORY_CONQUEST2)
 	&& !AI_isAnyMemberDoVictoryStrategy(AI_VICTORY_CONQUEST3))
 	{
@@ -1234,7 +1234,7 @@ int CvTeamAI::AI_endWarVal(TeamTypes eTeam) const
 
 int CvTeamAI::AI_minorKeepWarVal(TeamTypes eTeam) const
 {
-	if (getAnyWarPlanCount(true) > 0
+	if (hasWarPlan(true)
 	&& (!isMinorCiv() || isRebel())
 	|| !AI_hasCitiesInPrimaryArea(eTeam)
 	|| AI_teamCloseness(eTeam) <= 0)
@@ -1467,13 +1467,13 @@ DenialTypes CvTeamAI::AI_techTrade(const TechTypes eTech, const TeamTypes eTeam)
 	const bool bTechBrokering = !game.isOption(GAMEOPTION_NO_TECH_BROKERING);
 
 	// Afforess - Don't Sell Military Secrets when gearing for war
-	if (getAnyWarPlanCount(true) > 0 && GC.getTechInfo(eTech).getFlavorValue(GC.getInfoTypeForString("FLAVOR_MILITARY")) > 3
+	if (hasWarPlan(true)
+	&& GC.getTechInfo(eTech).getFlavorValue(GC.getInfoTypeForString("FLAVOR_MILITARY")) > 3
 	// Only worry about the receiving team if there is no tech brokering.
 	&& (bTechBrokering || AI_getWarPlan(eTeam) != NO_WARPLAN))
 	{
 		return DENIAL_NO_GAIN;
 	}
-	// ! Afforess
 
 	if (eAttitude < ATTITUDE_FRIENDLY)
 	{
@@ -1570,7 +1570,7 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 {
 	FAssertMsg(eTeam != getID(), "shouldn't call this function on ourselves");
 
-	int iValue = 0;
+	uint64_t iValue = 0;
 
 	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
@@ -1580,29 +1580,32 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 		{
 			if (!pLoopPlot->isRevealed(getID(), false))
 			{
-				iValue += pLoopPlot->isWater() ? 20 : 50;
+				iValue += pLoopPlot->isWater() ? 15 : 30;
 			}
 			else
 			{
 				if (pLoopPlot->getRevealedOwner(eTeam, false) == pLoopPlot->getOwner()
 				&& pLoopPlot->getRevealedOwner(getID(), false) != pLoopPlot->getOwner())
 				{
-					iValue += 5;
-				}
-				if (pLoopPlot->getRevealedImprovementType(eTeam, false) == pLoopPlot->getImprovementType()
-				&& pLoopPlot->getRevealedImprovementType(getID(), false) != pLoopPlot->getImprovementType())
-				{
-					iValue += 2;
-				}
-				if (pLoopPlot->getRevealedRouteType(eTeam, false) == pLoopPlot->getRouteType()
-				&& pLoopPlot->getRevealedRouteType(getID(), false) != pLoopPlot->getRouteType())
-				{
-					iValue += 1;
+					iValue += 4;
 				}
 				CvCity* pCity = pLoopPlot->getPlotCity();
 				if (pCity != NULL && pCity->isRevealed(eTeam, false) && !pCity->isRevealed(getID(), false))
 				{
-					iValue += 10;
+					iValue += 8;
+				}
+				else
+				{
+					if (pLoopPlot->getRevealedImprovementType(eTeam, false) == pLoopPlot->getImprovementType()
+					&& pLoopPlot->getRevealedImprovementType(getID(), false) != pLoopPlot->getImprovementType())
+					{
+						iValue += 2;
+					}
+					if (pLoopPlot->getRevealedRouteType(eTeam, false) == pLoopPlot->getRouteType()
+					&& pLoopPlot->getRevealedRouteType(getID(), false) != pLoopPlot->getRouteType())
+					{
+						iValue += 1;
+					}
 				}
 			}
 		}
@@ -1611,10 +1614,11 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 	{
 		return 0;
 	}
-	if (getAnyWarPlanCount(true) > 0)
+	if (hasWarPlan(true))
 	{
 		// Up to date maps are invaluable when starting a war.
-		iValue *= 2;
+		iValue *= 3;
+		iValue /= 2;
 		// We should check to see if their map covers the team(s) we are gearing for war with
 		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 		{
@@ -1622,7 +1626,7 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 			&& AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN
 			&& GET_TEAM(eTeam).AI_teamCloseness((TeamTypes)iI) > 0)
 			{
-				iValue *= 4;
+				iValue *= 2;
 			}
 		}
 	}
@@ -1631,9 +1635,11 @@ int CvTeamAI::AI_mapTradeVal(TeamTypes eTeam) const
 
 	if (GET_TEAM(eTeam).isVassal(getID()))
 	{
-		return iValue * 2 / 3;
+		iValue *= 2;
+		iValue /= 3;
 	}
-	return iValue;
+	//OutputDebugString(CvString::format("AI_mapTradeVal: how much is the other's (%d) map worth to me (%d)\n\tValue=%I64u\n", (int)eTeam, getID(), iValue).c_str());
+	return static_cast<int>(std::min<uint64_t>(iValue, MAX_INT));
 }
 
 
@@ -1670,7 +1676,7 @@ DenialTypes CvTeamAI::AI_mapTrade(TeamTypes eTeam) const
 		}
 	}
 	// We should check to see if their map covers the team(s) we are gearing for war with
-	if (getAnyWarPlanCount(true) > 0)
+	if (hasWarPlan(true))
 	{
 		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
 		{
@@ -2774,7 +2780,7 @@ DenialTypes CvTeamAI::AI_declareWarTrade(TeamTypes eWarTeam, TeamTypes eTeam, bo
 		return NO_DENIAL;
 	}
 
-	if (!GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI) && getAnyWarPlanCount(true) > 0)
+	if (!GC.getGame().isOption(GAMEOPTION_RUTHLESS_AI) && hasWarPlan(true))
 	{
 		return DENIAL_TOO_MANY_WARS;
 	}
@@ -2796,7 +2802,7 @@ DenialTypes CvTeamAI::AI_declareWarTrade(TeamTypes eWarTeam, TeamTypes eTeam, bo
 		return NO_DENIAL;
 	}
 
-	if (getAnyWarPlanCount(true) > 0)
+	if (hasWarPlan(true))
 	{
 		return DENIAL_TOO_MANY_WARS;
 	}
@@ -2839,7 +2845,7 @@ DenialTypes CvTeamAI::AI_declareWarTrade(TeamTypes eWarTeam, TeamTypes eTeam, bo
 int CvTeamAI::AI_openBordersTradeVal(TeamTypes eTeam) const
 {
 	// Double value if we are planning war, but not against eTeam.
-	if (AI_getWarPlan(eTeam) == NO_WARPLAN && getAnyWarPlanCount(true) > 0)
+	if (AI_getWarPlan(eTeam) == NO_WARPLAN && hasWarPlan(true))
 	{
 		return 2 * (getNumCities() + GET_TEAM(eTeam).getNumCities());
 	}
@@ -4224,7 +4230,7 @@ void CvTeamAI::AI_doWar()
 	const int iNumMembers = getNumMembers();
 
 	// if no war plans, consider starting one!
-	if (getAnyWarPlanCount(true) == 0 || iEnemyPowerPercent < 45)
+	if (!hasWarPlan(true) || iEnemyPowerPercent < 45)
 	{
 		bool bAggressive = GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI);
 		int iFinancialTroubleCount = 0;
@@ -4309,7 +4315,7 @@ void CvTeamAI::AI_doWar()
 
 				int iOurPower = getPower(true);
 
-				if (bAggressive && (getAnyWarPlanCount(true) == 0))
+				if (bAggressive && !hasWarPlan(true))
 				{
 					iOurPower *= 4;
 					iOurPower /= 3;
@@ -4555,7 +4561,7 @@ int CvTeamAI::AI_getTechMonopolyValue(TechTypes eTech, TeamTypes eTeam) const
 {
 	int iValue = 0;
 
-	const bool bWarPlan = (getAnyWarPlanCount(eTeam) > 0);
+	const bool bWarPlan = getAnyWarPlanCount(eTeam) > 0;
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{

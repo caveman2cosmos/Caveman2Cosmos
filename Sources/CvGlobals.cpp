@@ -25,6 +25,7 @@
 #include "CvDLLUtilityIFaceBase.h"
 #include "CyGlobalContext.h"
 #include "FVariableSystem.h"
+#include "CityOutputHistory.h"
 #include <time.h>
 #include <sstream>
 
@@ -3067,14 +3068,6 @@ void cvInternalGlobals::doPostLoadCaching()
 			}
 		}
 	}
-
-	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
-	{
-		for (uint32_t i = 0, num = infoVector->size(); i < num; i++)
-		{
-			(*infoVector)[i]->doPostLoadCaching(i);
-		}
-	}
 	//TB: Set Statuses
 	m_aiStatusPromotions.clear();
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
@@ -3084,6 +3077,16 @@ void cvInternalGlobals::doPostLoadCaching()
 			m_aiStatusPromotions.push_back(iI);
 		}
 	}
+
+	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
+	{
+		for (uint32_t i = 0, num = infoVector->size(); i < num; i++)
+		{
+			(*infoVector)[i]->doPostLoadCaching(i);
+		}
+	}
+
+	CityOutputHistory::setCityOutputHistorySize((uint16_t)GC.getCITY_OUTPUT_HISTORY_SIZE());
 }
 
 void cvInternalGlobals::checkInitialCivics()

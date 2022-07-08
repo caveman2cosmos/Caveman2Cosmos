@@ -7,6 +7,7 @@
 // Python wrapper class for CvCity
 //
 
+#include "CityOutputHistory.h"
 class CvCity;
 //class CvProperties;
 class CyPlot;
@@ -423,6 +424,7 @@ public:
 	int AI_cityValue() const;
 
 	CvProperties* getProperties() const;
+	const CityOutputHistory* getCityOutputHistory() const;
 
 	bool getBuildingListFilterActive(int /*BuildingFilterTypes*/ eFilter);
 	void setBuildingListFilterActive(int /*BuildingFilterTypes*/ eFilter, bool bActive);
@@ -452,11 +454,6 @@ public:
 
 	int AI_bestUnit() const;
 	int AI_bestUnitAI(UnitAITypes eUnitAITypes) const;
-
-	int getCityOutputHistorySize() const;
-	int getRecentOutputTurn(int i) const;
-	int getCityOutputHistoryNumEntries(const uint16_t i) const;
-	int getCityOutputHistoryEntry(const uint16_t i, const uint16_t iEntry, const bool bFirst) const;
 
 private:
 	CvCity* m_pCity;

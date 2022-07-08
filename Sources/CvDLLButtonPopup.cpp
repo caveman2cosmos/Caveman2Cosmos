@@ -1502,30 +1502,33 @@ bool CvDLLButtonPopup::launchChooseTechPopup(CvPopup* pPopup, CvPopupInfo &info)
 		:
 		player.AI_bestTech(1, iDiscover > 0, true, eBestTech, (AdvisorTypes)GC.getTechInfo(eBestTech).getAdvisorType())
 	);
+	const CvTeam& team = GET_TEAM(player.getTeam());
 
 	int iNumTechs = 0;
 	for (int iPass = 0; iPass < 2; iPass++)
 	{
-		for (int iI = GC.getNumTechInfos() - 1; iI > -1; iI--)
+		foreach_(const TechTypes eTechX, team.getAdjacentResearch())
 		{
-			if ((iI == eBestTech || iI == eNextBestTech) == (iPass == 0) && player.canResearch((TechTypes)iI))
+			FAssertMsg(player.canResearch(eTechX, true, false), CvString::format("tech = %S (%d)", GC.getTechInfo(eTechX).getDescription(), (int)eTechX).c_str());
+
+			if ((eTechX == eBestTech || eTechX == eNextBestTech) == (iPass == 0) && player.canResearch(eTechX))
 			{
 				CvWString szBuffer;
-				szBuffer.Format(L"%s (%d)", GC.getTechInfo((TechTypes)iI).getDescription(), ((iDiscover > 0) ? 0 : player.getResearchTurnsLeft((TechTypes)iI, true)));
+				szBuffer.Format(L"%s (%d)", GC.getTechInfo(eTechX).getDescription(), ((iDiscover > 0) ? 0 : player.getResearchTurnsLeft(eTechX, true)));
 
-				if (iI == eBestTech || iI == eNextBestTech)
+				if (eTechX == eBestTech || eTechX == eNextBestTech)
 				{
-					szBuffer += gDLL->getText("TXT_KEY_POPUP_RECOMMENDED_ONLY_ADV", GC.getAdvisorInfo((AdvisorTypes)(GC.getTechInfo((TechTypes)iI).getAdvisorType())).getTextKeyWide());
+					szBuffer += gDLL->getText("TXT_KEY_POPUP_RECOMMENDED_ONLY_ADV", GC.getAdvisorInfo((AdvisorTypes)(GC.getTechInfo(eTechX).getAdvisorType())).getTextKeyWide());
 				}
-				CvString szButton = GC.getTechInfo((TechTypes) iI).getButton();
+				CvString szButton;
 
-				if (player.canFoundReligion() && GC.getGame().isTechCanFoundReligion((TechTypes)iI))
+				if (player.canFoundReligion() && GC.getGame().isTechCanFoundReligion(eTechX))
 				{
 					for (int iJ = 0; iJ < GC.getNumReligionInfos(); iJ++)
 					{
-						if (GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq() == iI)
+						if (GC.getReligionInfo((ReligionTypes)iJ).getTechPrereq() == eTechX)
 						{
-							if (GC.getGame().countKnownTechNumTeams((TechTypes)iI) < 1)
+							if (GC.getGame().countKnownTechNumTeams(eTechX) < 1)
 							{
 								szButton = GC.getReligionInfo((ReligionTypes) iJ).getTechButton();
 							}
@@ -1537,7 +1540,12 @@ bool CvDLLButtonPopup::launchChooseTechPopup(CvPopup* pPopup, CvPopupInfo &info)
 						}
 					}
 				}
-				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, szBuffer, szButton, iI, WIDGET_RESEARCH, iI, iDiscover, true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY);
+				else szButton = GC.getTechInfo(eTechX).getButton();
+
+				gDLL->getInterfaceIFace()->popupAddGenericButton(
+					pPopup, szBuffer, szButton, static_cast<int>(eTechX), WIDGET_RESEARCH,
+					static_cast<int>(eTechX), iDiscover, true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY
+				);
 				iNumTechs++;
 			}
 		}
@@ -2757,10 +2765,10 @@ bool CvDLLButtonPopup::launchSelectDiscoveryTechPopup(CvPopup* pPopup, CvPopupIn
 		GC.getTechInfo(eTechAI).getButton(), static_cast<int>(eTechAI), WIDGET_PEDIA_JUMP_TO_TECH,
 		static_cast<int>(eTechAI), -1, true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY
 	);
-	for (int iI = GC.getNumTechInfos() - 1; iI > -1; iI--)
-	{
-		const TechTypes eTechX = static_cast<TechTypes>(iI);
+	const CvTeam& team = GET_TEAM(player.getTeam());
 
+	foreach_(const TechTypes eTechX, team.getAdjacentResearch())
+	{
 		if (eTechX != eTechAI && player.canResearch(eTechX))
 		{
 			for (int iJ = GC.getNumFlavorTypes() - 1; iJ > -1; iJ--)
@@ -2774,8 +2782,8 @@ bool CvDLLButtonPopup::launchSelectDiscoveryTechPopup(CvPopup* pPopup, CvPopupIn
 							GC.getTechInfo(eTechX).getDescription(),
 							player.getResearchTurnsLeft(eTechX, true)
 						),
-						GC.getTechInfo(eTechX).getButton(), iI, WIDGET_PEDIA_JUMP_TO_TECH,
-						iI, -1, true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY
+						GC.getTechInfo(eTechX).getButton(), static_cast<int>(eTechX), WIDGET_PEDIA_JUMP_TO_TECH,
+						static_cast<int>(eTechX), -1, true, POPUP_LAYOUT_STRETCH, DLL_FONT_LEFT_JUSTIFY
 					);
 					break;
 				}

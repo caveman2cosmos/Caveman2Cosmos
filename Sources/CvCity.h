@@ -11,6 +11,7 @@
 #include "CvProperties.h"
 #include "CvBuildingList.h"
 #include "CvUnitList.h"
+#include "CityOutputHistory.h"
 
 class CvArea;
 class CvArtInfoBuilding;
@@ -18,7 +19,6 @@ class CvPlot;
 class CvPlotGroup;
 class CvUnit;
 class CvUnitSelectionCriteria;
-class CityOutputHistory;
 
 // BUG - start
 void addGoodOrBad(int iValue, int& iGood, int& iBad);
@@ -64,7 +64,7 @@ private:
 
 protected:
 	CvGameObjectCity m_GameObject;
-	CityOutputHistory* m_outputHistory;
+	CityOutputHistory m_outputHistory;
 
 
 public:
@@ -2095,10 +2095,7 @@ public:
 	void AI_setPropertyControlBuildingQueued(bool bSet);
 	bool AI_isPropertyControlBuildingQueued() const;
 
-	uint16_t getCityOutputHistorySize() const;
-	uint32_t getRecentOutputTurn(const int i) const;
-	uint16_t getCityOutputHistoryNumEntries(const uint16_t i) const;
-	uint16_t getCityOutputHistoryEntry(const uint16_t i, const uint16_t iEntry, const bool bFirst) const;
+	const CityOutputHistory* getCityOutputHistory() const;
 
 private:
 	mutable stdext::hash_map<UnitTypes,bool> m_canTrainCacheUnits;

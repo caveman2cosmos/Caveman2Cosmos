@@ -144,7 +144,6 @@ class CvMainInterface:
 			self.iMaxDefenseDamage		= GC.getMAX_CITY_DEFENSE_DAMAGE()
 			self.fMoveDenominator = float(GC.getMOVE_DENOMINATOR())
 			self.bNegGoldIsMaintenance	= GC.getDefineINT("TREAT_NEGATIVE_GOLD_AS_MAINTENANCE")
-			self.iNumTechInfos			= GC.getNumTechInfos()
 			self.iNumReligionInfos		= GC.getNumReligionInfos()
 			self.iNumCorporationInfos	= GC.getNumCorporationInfos()
 			self.iNumBonusInfos			= GC.getNumBonusInfos()
@@ -2131,32 +2130,35 @@ class CvMainInterface:
 	def updateResearchButtons(self, screen):
 		print "updateResearchButtons"
 		IFT = self.iInterfaceType
-		CyPlayer = self.CyPlayer
-		if CyPlayer.getCurrentResearch() == -1:
+		player = self.CyPlayer
+		if player.getCurrentResearch() == -1:
 			if GAME.GetWorldBuilderMode() or IFT not in (InterfaceVisibility.INTERFACE_SHOW, InterfaceVisibility.INTERFACE_HIDE):
 				pass
 			elif not self.shownResearchSelection:
 				eWidGen = WidgetTypes.WIDGET_GENERAL
-				bCanFoundReligion = CyPlayer.canFoundReligion()
-				iTechInfos = self.iNumTechInfos
+				bCanFoundReligion = player.canFoundReligion()
 				xywh = self.xywhTechBar
 				iNumTechBtnPerRow = xywh[2] / 50
 				aList = []
 				iCount = 0
 				xStart = xywh[0] + 8
 				aMap = self.aRel2TechMap
-				for i in xrange(iTechInfos):
-					if CyPlayer.canResearch(i):
-						szName = "WID|TECH|Selection" + str(i)
-						if i in aMap:
-							if not bCanFoundReligion or GAME.countKnownTechNumTeams(i):
-								artPath = aMap[i].getGenericTechButton()
+				team = self.CyTeam
+				for i in xrange(team.getNumAdjacentResearch()):
+					iTechX = team.getAdjacentResearch(i)
+					# Toffer - canResearch can fail as adjacent research is cached even...
+					#	if special requirements like building requirements are not met.
+					if player.canResearch(iTechX, True):
+						szName = "WID|TECH|Selection" + str(iTechX)
+						if iTechX in aMap:
+							if not bCanFoundReligion or GAME.countKnownTechNumTeams(iTechX):
+								artPath = aMap[iTechX].getGenericTechButton()
 								if not artPath:
-									artPath = GC.getTechInfo(i).getButton()
+									artPath = GC.getTechInfo(iTechX).getButton()
 							else:
-								artPath = aMap[i].getTechButton()
+								artPath = aMap[iTechX].getTechButton()
 						else:
-							artPath = GC.getTechInfo(i).getButton()
+							artPath = GC.getTechInfo(iTechX).getButton()
 						# Set the selection button position
 						x = xStart + 50 * (iCount % iNumTechBtnPerRow)
 						y = 50 * (iCount / iNumTechBtnPerRow)
@@ -3823,8 +3825,8 @@ class CvMainInterface:
 			dy = 20
 
 		x2 = x + 8
-		y2 = y0 + 30
-		h2 = h - 40
+		y2 = y0 + 32
+		h2 = h - 44
 		w2 = w/2 - 12
 
 		w3 = w2 - 12
@@ -3835,7 +3837,7 @@ class CvMainInterface:
 
 		screen.setLabelAt("", "CityTabWindow", uFont3b + TRNSLTR.getText("TXT_KEY_PREVIOUS_OUTPUT", ()), 1<<0, 12, 8, 0, eFontGame, eWidGen, 1, 2)
 		screen.setLabelAt("", "CityTabWindow", uFont3b + TRNSLTR.getText("TXT_WORD_RECOMMENDATIONS", ()), 1<<0, w/2 + 8, 8, 0, eFontGame, eWidGen, 1, 2)
-		screen.addPanel("PreviousOutput", "", "", True, True, x + 12, y2, w3 + 4, h2 + 24, ePanelBlack)
+		screen.addPanel("PreviousOutput", "", "", True, True, x + 12, y2 - 2, w3 + 4, h2 + 28, ePanelBlack)
 
 		screen.addScrollPanel(PnlLeft, "", x2, y2, w2, h2, PanelStyles.PANEL_STYLE_MAIN)
 		screen.setStyle(PnlLeft, "ScrollPanel_Alt_Style")
@@ -3844,19 +3846,21 @@ class CvMainInterface:
 
 		y = 5
 		n = 0
-		for iHistory in xrange(city.getCityOutputHistorySize()):
-			iTurn = city.getRecentOutputTurn(iHistory)
+		history = city.getCityOutputHistory()
+		print ("WWWWWWWWWWWWW", history.getSize())
+		for iHistory in xrange(history.getSize()):
+			iTurn = history.getRecentOutputTurn(iHistory)
 			if iTurn < 1: break
-			iNumEntries = city.getCityOutputHistoryNumEntries(iHistory)
+			iNumEntries = history.getCityOutputHistoryNumEntries(iHistory)
 
 			Pnl = ROW + str(n)
-			screen.attachPanelAt(PnlLeft, Pnl, "", "", True, False, ePnlStyleBlue50, 2, y - 8, w3 - 8, 10 + iNumEntries * dy + dy, eWidGen, 1, 2)
+			screen.attachPanelAt(PnlLeft, Pnl, "", "", True, False, ePnlStyleBlue50, 6, y - 8, w3 - 16, 10 + iNumEntries * dy + dy, eWidGen, 1, 2)
 			screen.setLabelAt("", Pnl, uFont2b + TRNSLTR.getText("TXT_KEY_TIME_TURN", (iTurn,)), 1<<0, 4, 2, 0, eFontGame, eWidGen, 1, 2)
 			y1 = dy
 			for iEntry in xrange(iNumEntries):
 
-				iOrder = city.getCityOutputHistoryEntry(iHistory, iEntry, True)
-				iType = city.getCityOutputHistoryEntry(iHistory, iEntry, False)
+				iOrder = history.getCityOutputHistoryEntry(iHistory, iEntry, True)
+				iType = history.getCityOutputHistoryEntry(iHistory, iEntry, False)
 
 				if iOrder == OrderTypes.ORDER_TRAIN:
 

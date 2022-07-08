@@ -299,7 +299,6 @@ public:
 	int getModderGameOption(ModderGameOptionTypes eIndex) const;
 	void setModderGameOption(ModderGameOptionTypes eIndex, int iNewValue);
 
-	bool canEverResearch(TechTypes iTech) const;
 	bool canEverConstruct(BuildingTypes iBuilding) const;
 	bool canEverTrain(UnitTypes iUnit) const;
 	bool canEverSpread(CorporationTypes iCorporation) const;

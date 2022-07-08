@@ -488,6 +488,7 @@ void CvGame::init(HandicapTypes eHandicap)
 //	Not called when regenerating map.
 void CvGame::onFinalInitialized(const bool bNewGame)
 {
+	OutputDebugString("onFinalInitialized: Start\n");
 	PROFILE("CvGame::onFinalInitialized");
 
 	// Game has been initialized fully when reaching this point.
@@ -499,6 +500,14 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper(); wrapper.close();
 	}
 
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
+	{
+		if (GET_TEAM((TeamTypes)iI).isAlive())
+		{
+			GET_TEAM((TeamTypes)iI).cacheAdjacentResearch();
+		}
+	}
+
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
@@ -507,10 +516,9 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		}
 	}
 
-
 	for (int iI = 0; iI < GC.getNumGameOptionInfos(); iI++)
 	{
-		const GameOptionTypes eGameOption = ((GameOptionTypes)iI);
+		const GameOptionTypes eGameOption = (GameOptionTypes)iI;
 		if (isOption(eGameOption))
 		{
 			enforceOptionCompatibility(eGameOption);
@@ -524,7 +532,10 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 	//	terra-forming leading to water<->land transformations, etc.)
 	ensureChokePointsEvaluated();
 
-	if (bNewGame) doPreTurn0();
+	if (bNewGame)
+	{
+		doPreTurn0();
+	}
 	else
 	{
 		// TB - Recalculate vision on load (a stickytape - can't find where it's dropping visibility on loading)
@@ -560,6 +571,7 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 	//gDLL->getEngineIFace()->clearSigns();
 	gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
 	//gDLL->getInterfaceIFace()->setEndTurnCounter(2 * getBugOptionINT("MainInterface__AutoEndTurnDelay", 2));
+	OutputDebugString("onFinalInitialized: End\n");
 }
 
 // Toffer - This is only called when starting new games, or after regenerating map, right before turn 0 starts.
@@ -591,9 +603,10 @@ void CvGame::doPreTurn0()
 
 //
 // Set initial items (units, techs, etc...)
-//
+// Toffer - Not called for scenarios.
 void CvGame::setInitialItems()
 {
+	OutputDebugString("setInitialItems: Start\n");
 	PROFILE_FUNC();
 
 	// Toffer - Some victory conditions make no sense for games without competitors.
@@ -669,6 +682,7 @@ void CvGame::setInitialItems()
 		addLandmarkSigns();
 		updateInitialSigns();
 	}
+	OutputDebugString("setInitialItems: End\n");
 }
 
 
@@ -1177,25 +1191,23 @@ void CvGame::initFreeState()
 		{
 			if (GET_TEAM((TeamTypes)iJ).isAlive())
 			{
-				bool bValid = false;
-				if (tech.getEra() < iStartEra && !tech.isDisable())
+				if (tech.getEra() < iStartEra && !tech.isDisable()
+				&& (!GET_TEAM((TeamTypes)iJ).isNPC() || GET_TEAM((TeamTypes)iJ).isHominid()))
 				{
-					bValid = true;
+					GET_TEAM((TeamTypes)iJ).setHasTech((TechTypes)iI, true, NO_PLAYER, false, false);
 				}
-
-				if (!bValid)
+				else
 				{
 					for (int iK = 0; iK < MAX_PLAYERS; iK++)
 					{
 						if (GET_PLAYER((PlayerTypes)iK).isAliveAndTeam((TeamTypes)iJ)
 						&& GC.getCivilizationInfo(GET_PLAYER((PlayerTypes)iK).getCivilizationType()).isCivilizationFreeTechs(iI))
 						{
-							bValid = true;
+							GET_TEAM((TeamTypes)iJ).setHasTech((TechTypes)iI, true, NO_PLAYER, false, false);
 							break;
 						}
 					}
 				}
-				GET_TEAM((TeamTypes)iJ).setHasTech((TechTypes)iI, bValid, NO_PLAYER, false, false);
 			}
 		}
 	}
@@ -4444,7 +4456,7 @@ bool CvGame::isFinalInitialized() const
 {
 	if (bNewValue)
 		OutputDebugString("Exe says the game is fully initialized\n");
-	else OutputDebugString("Exe says the game is no longer initialized\n"); // This never happens ever.
+	else OutputDebugString("Exe says the game is no longer initialized\n"); // Looks like this never happen.
 }
 
 
