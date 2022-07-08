@@ -4629,29 +4629,25 @@ int CvPlayer::countReligionSpreadUnits(const CvArea* pArea, ReligionTypes eRelig
 
 	int iCount = 0;
 
-	foreach_(const CvUnit* pLoopUnit, units())
+	foreach_(const CvUnit* unitX, units())
 	{
-		if (pLoopUnit->getArea() == pArea->getID())
+		if (!unitX->isDead()
+		&& unitX->getArea() == pArea->getID()
+		&& unitX->getUnitInfo().getReligionSpreads(eReligion) > 0)
 		{
-			if (pLoopUnit->getUnitInfo().getReligionSpreads(eReligion) > 0)
-			{
-				iCount++;
-			}
+			iCount++;
 		}
 	}
 
-	if( bIncludeTraining )
+	if (bIncludeTraining)
 	{
 		foreach_(const CvCity* pLoopCity, cities())
 		{
 			const UnitTypes eUnit = pLoopCity->getProductionUnit();
 
-			if( eUnit != NO_UNIT )
+			if (eUnit != NO_UNIT && GC.getUnitInfo(eUnit).getReligionSpreads(eReligion) > 0)
 			{
-				if(GC.getUnitInfo(eUnit).getReligionSpreads(eReligion) > 0)
-				{
-					iCount++;
-				}
+				iCount++;
 			}
 		}
 	}
