@@ -488,8 +488,8 @@ void CvGame::init(HandicapTypes eHandicap)
 //	Not called when regenerating map.
 void CvGame::onFinalInitialized(const bool bNewGame)
 {
-	OutputDebugString("onFinalInitialized: Start\n");
 	PROFILE("CvGame::onFinalInitialized");
+	OutputDebugString("onFinalInitialized: Start\n");
 
 	// Game has been initialized fully when reaching this point.
 	m_bFinalInitialized = true;
@@ -498,6 +498,9 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 	{
 		// Close will free any resources and display any warnings if we've just finished loading/saving
 		CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper(); wrapper.close();
+
+		gDLL->getInterfaceIFace()->clearSelectionList();
+		gDLL->getInterfaceIFace()->clearSelectedCities();
 	}
 
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
@@ -510,9 +513,22 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		CvPlayer& player = GET_PLAYER((PlayerTypes)iI);
+
+		if (player.isAlive())
 		{
-			GET_PLAYER((PlayerTypes)iI).RecalculatePlotGroupHashes();
+			player.RecalculatePlotGroupHashes();
+
+			if (player.isHuman())
+			{
+				foreach_(CvCity* city, player.cities())
+				{
+					if (!city->isProduction())
+					{
+						player.setIdleCity(city, true);
+					}
+				}
+			}
 		}
 	}
 
@@ -2249,11 +2265,6 @@ void CvGame::update()
 			gDLL->getInterfaceIFace()->setDirty(GlobeLayer_DIRTY_BIT, true);
 		}
 	}
-	if (0 == (m_iTurnSlice % 10)
-	&& gDLL->getInterfaceIFace()->getLengthSelectionList() == 0)
-	{
-		gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
-	}
 	CvPlotPaging::UpdatePaging();
 
 again:
@@ -2308,6 +2319,23 @@ again:
 		goto again;
 	}
 
+	if (GET_PLAYER(getActivePlayer()).isTurnActive()
+	&& !gDLL->getInterfaceIFace()->isDiploOrPopupWaiting()
+	&& !gDLL->getInterfaceIFace()->isFocused()
+	&&  gDLL->getInterfaceIFace()->getLengthSelectionList() == 0
+	&&  gDLL->getInterfaceIFace()->getHeadSelectedCity() == NULL)
+	{
+		if (GET_PLAYER(getActivePlayer()).hasIdleCity())
+		{
+			CvCity* city = GET_PLAYER(getActivePlayer()).getIdleCity();
+			gDLL->getInterfaceIFace()->addSelectedCity(city, false);
+			GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+		}
+		else if (0 == (m_iTurnSlice % 8))
+		{
+			gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
+		}
+	}
 	PROFILE_END();
 	stopProfilingDLL(false);
 }
@@ -2492,37 +2520,22 @@ void CvGame::selectUnit(CvUnit* pUnit, bool bClear, bool bToggle, bool bSound) c
 {
 	PROFILE_FUNC();
 
-	bool bSelectGroup;
-	bool bGroup;
-
-	if (gDLL->getInterfaceIFace()->getHeadSelectedUnit() == NULL)
-	{
-		bSelectGroup = true;
-	}
-	else if (gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getGroup() != pUnit->getGroup())
-	{
-		bSelectGroup = true;
-	}
-	else if (pUnit->IsSelected() && !(gDLL->getInterfaceIFace()->mirrorsSelectionGroup()))
-	{
-		bSelectGroup = !bToggle;
-	}
-	else
-	{
-		bSelectGroup = false;
-	}
+	const bool bSelectGroup =
+	(
+		gDLL->getInterfaceIFace()->getHeadSelectedUnit() == NULL
+		||
+		gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getGroup() != pUnit->getGroup()
+		||
+		!bToggle && pUnit->IsSelected() && !gDLL->getInterfaceIFace()->mirrorsSelectionGroup()
+	);
 
 	gDLL->getInterfaceIFace()->clearSelectedCities();
 
 	if (bClear)
 	{
 		gDLL->getInterfaceIFace()->clearSelectionList();
-		bGroup = false;
 	}
-	else
-	{
-		bGroup = gDLL->getInterfaceIFace()->mirrorsSelectionGroup();
-	}
+	const bool bGroup = !bClear && gDLL->getInterfaceIFace()->mirrorsSelectionGroup();
 
 	if (bSelectGroup)
 	{

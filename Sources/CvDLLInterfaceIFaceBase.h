@@ -63,7 +63,7 @@ public:
 	virtual int getSymbolID(int iSymbol) = 0;
 	virtual CLLNode<IDInfo>* deleteSelectionListNode(CLLNode<IDInfo>* pNode) = 0;
 	virtual CLLNode<IDInfo>* nextSelectionListNode(CLLNode<IDInfo>* pNode) = 0;
-	virtual int getLengthSelectionList() = 0;
+	virtual int getLengthSelectionList() = 0; // Toffer - Units only, not cities.
 	virtual CLLNode<IDInfo>* headSelectionListNode() = 0;
 
 	virtual void selectCity(CvCity* pNewValue, bool bTestProduction = false) = 0;

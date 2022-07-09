@@ -624,22 +624,11 @@ enum ButtonPopupTypes
 	BUTTONPOPUP_FREE_COLONY,
 	BUTTONPOPUP_LAUNCH,
 	BUTTONPOPUP_FOUND_RELIGION,
-/************************************************************************************************/
-/* Afforess	                  Start		 09/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	//Castle Mod
 	BUTTONPOPUP_INVASION,
-	//AUA
 	BUTTONPOPUP_SELECT_UNIT,
 	BUTTONPOPUP_SELECT_DISCOVERY_TECH,
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	BUTTONPOPUP_GET_SAVE_FORMAT,	//	Koshling - user choose save format dialog
-
-	BUTTONPOPUP_MODIFIER_RECALCULATION,  // Ask user if he wants to recalculated modifiers when DLL or assets have changed
+	BUTTONPOPUP_GET_SAVE_FORMAT, // Koshling - user choose save format dialog
+	BUTTONPOPUP_MODIFIER_RECALCULATION, // Ask user if he wants to recalculated modifiers when DLL or assets have changed
 	BUTTONPOPUP_NAME_LIST,
 	BUTTONPOPUP_CHOOSE_TRAIT,
 	BUTTONPOPUP_CHOOSE_TRAIT_NEGATIVE,
