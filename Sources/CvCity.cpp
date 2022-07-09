@@ -1192,7 +1192,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	const PlayerTypes eOwner = getOwner();
 	CvPlayer& kOwner = GET_PLAYER(eOwner);
 
-	if (isHuman() || kOwner.isHumanDisabled())
+	if (m_orderQueue.empty() && (isHuman() || kOwner.isHumanDisabled()))
 	{
 		kOwner.setIdleCity(this, false);
 	}
