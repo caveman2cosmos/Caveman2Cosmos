@@ -1428,6 +1428,7 @@ class CvMainInterface:
 				self.cleanPlotList(screen)
 				self.bCityChange = True
 				self.bBuildWorkQueue = True
+				self.bUpdateCityTab = True
 
 				self.InCity = City(city, iCityID)
 
@@ -1508,7 +1509,6 @@ class CvMainInterface:
 				CyIF.selectCity(city, False) # \Hack, City FoV is set and we can enter the city now.
 				self.evalIFT(screen, IFT, bCityScreen, CyPlayerAct)
 				self.bCityEnter = True
-				self.bUpdateCityTab = True
 			else: # Return to map.
 				self.setFieldofView(self.iField_View)
 				self.evalIFT(screen, IFT, bCityScreen, CyPlayerAct)
@@ -3847,7 +3847,7 @@ class CvMainInterface:
 		y = 5
 		n = 0
 		history = city.getCityOutputHistory()
-		print ("WWWWWWWWWWWWW", history.getSize())
+
 		for iHistory in xrange(history.getSize()):
 			iTurn = history.getRecentOutputTurn(iHistory)
 			if iTurn < 1: break
@@ -3865,17 +3865,34 @@ class CvMainInterface:
 				if iOrder == OrderTypes.ORDER_TRAIN:
 
 					info = GC.getUnitInfo(iType)
+
+					if not iEntry and iTurn == GAME.getGameTurn():
+						sound = info.getArtInfo(0, GC.getPlayer(city.getOwner()).getCurrentEra(), UnitArtStyleTypes(-1)).getTrainSound()
+
 					TXT = "WID|UNIT|OUTPUTLOG%d|%d" %(iType, n)
 
 				elif iOrder == OrderTypes.ORDER_CONSTRUCT:
 
 					info = GC.getBuildingInfo(iType)
+
+					if not iEntry and iTurn == GAME.getGameTurn():
+						sound = info.getConstructSound()
+
 					TXT = "WID|BUILDING|OUTPUTLOG%d|%d" %(iType, n)
 
 				elif iOrder == OrderTypes.ORDER_CREATE:
 
 					info = GC.getProjectInfo(iType)
+
+					if not iEntry and iTurn == GAME.getGameTurn():
+						sound = info.getCreateSound()
+
 					TXT = "WID|PROJECT|OUTPUTLOG%d|%d" %(iType, n)
+
+
+				if not iEntry and iTurn == GAME.getGameTurn():
+					screen.setPanelColor(Pnl, 128, 255, 128)
+					CyIF.playGeneralSound(sound)
 
 				screen.setTextAt(TXT, Pnl, "%s<img=%s size=%d> %s" %(uFont2, info.getButton(), dy-4, info.getDescription()), 1<<0, 8, y1, 0, eFontGame, eWidGen, 1, 2)
 

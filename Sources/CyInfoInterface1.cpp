@@ -256,6 +256,7 @@ void CyInfoPythonInterface1()
 		//.def("getTerrainImpassable", &CvUnitInfo::getTerrainImpassable, "bool (int i)")
 		//.def("getFeatureImpassable", &CvUnitInfo::getFeatureImpassable, "bool (int i)")
 		.def("getUnitNames", &CvUnitInfo::getUnitNames, "string (int i)")
+		.def("getArtInfo", &CvUnitInfo::getArtInfo,  python::return_value_policy<python::reference_existing_object>(), "CvArtInfoUnit* (int i, bool bLate)")
 		//TB SubCombat Mod begin  TB Combat Mods Begin
 		//boolean vectors
 		.def("isSubCombatType", &CvUnitInfo::isSubCombatType, "int (int i)")
@@ -479,6 +480,7 @@ void CyInfoPythonInterface1()
 
 		.def("isAnyTechSpecialistChanges", &CvBuildingInfo::isAnyTechSpecialistChanges, "bool ()")
 
+		.def("getConstructSound", &CvBuildingInfo::getConstructSound, "string ()")
 		.def("getHotKey", &CvBuildingInfo::getHotKey, "string ()")
 		.def("getArtDefineTag", &CvBuildingInfo::getArtDefineTag, "string ()")
 		.def("getMovie", &CvBuildingInfo::getMovie, "string ()")

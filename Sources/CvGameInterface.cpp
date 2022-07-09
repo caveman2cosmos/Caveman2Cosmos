@@ -871,6 +871,10 @@ void CvGame::cycleSelectionGroups(bool bClear, bool bForward, bool bWorkers) con
 
 void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWorkers, bool bSetCamera, bool bAllowViewportSwitch) const
 {
+	if (GET_PLAYER(getActivePlayer()).hasIdleCity())
+	{
+		return;
+	}
 	CvSelectionGroup* pNextSelectionGroup;
 	CvUnit* pCycleUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
@@ -1486,7 +1490,10 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 		}
 		case CONTROL_FORCEENDTURN:
 		{
-			if (!gDLL->getInterfaceIFace()->isFocused() && !gDLL->getInterfaceIFace()->isInAdvancedStart())
+			if (!gDLL->getInterfaceIFace()->isFocused()
+			&&  !gDLL->getInterfaceIFace()->isInAdvancedStart()
+			&&  !gDLL->getInterfaceIFace()->isDiploOrPopupWaiting()
+			&& !GET_PLAYER(getActivePlayer()).hasIdleCity())
 			{
 				return true;
 			}
@@ -1550,7 +1557,7 @@ bool CvGame::canDoControl(ControlTypes eControl) const
 		}
 		case CONTROL_LOAD_GAME:
 		{
-			if (!(isNetworkMultiPlayer()))
+			if (!isNetworkMultiPlayer())
 			{
 				return true;
 			}

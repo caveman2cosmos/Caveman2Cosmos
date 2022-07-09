@@ -113,8 +113,6 @@ public:
 
 	void doTask(TaskTypes eTask, int iData1 = -1, int iData2 = -1, bool bOption = false, bool bAlt = false, bool bShift = false, bool bCtrl = false);
 
-	void chooseProduction(UnitTypes eTrainUnit = NO_UNIT, BuildingTypes eConstructBuilding = NO_BUILDING, ProjectTypes eCreateProject = NO_PROJECT, bool bFinish = false, bool bFront = false);
-
 	// Base iterator type for iterating over city plots, returning valid ones only
 	template < class Value_ >
 	struct city_plot_iterator_base :
@@ -2156,7 +2154,6 @@ public:
 		DECLARE_MAP_FUNCTOR(CvCity, void, AI_updateAssignWork);
 		DECLARE_MAP_FUNCTOR(CvCity, void, AI_markBestBuildValuesStale);
 		DECLARE_MAP_FUNCTOR(CvCity, void, setupGraphical);
-		DECLARE_MAP_FUNCTOR(CvCity, void, chooseProduction);
 		DECLARE_MAP_FUNCTOR(CvCity, void, invalidatePopulationRankCache);
 		DECLARE_MAP_FUNCTOR(CvCity, void, invalidateYieldRankCache);
 		DECLARE_MAP_FUNCTOR(CvCity, void, invalidateCommerceRankCache);

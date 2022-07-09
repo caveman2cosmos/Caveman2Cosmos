@@ -106,6 +106,7 @@ void CyInfoPythonInterface3()
 		.def("isAllowsNukes", &CvProjectInfo::isAllowsNukes, "bool ()")
 
 		.def("getMovieArtDef", &CvProjectInfo::getMovieArtDef, "string ()")
+		.def("getCreateSound", &CvProjectInfo::getCreateSound, "string ()")
 
 		// Arrays
 		.def("getBonusProductionModifier", &CvProjectInfo::getBonusProductionModifier, "int (int i)")
@@ -248,6 +249,7 @@ void CyInfoPythonInterface3()
 
 
 	python::class_<CvArtInfoUnit, python::bases<CvArtInfoScalableAsset>, boost::noncopyable>("CvArtInfoUnit", python::no_init)
+		.def("getTrainSound", &CvArtInfoUnit::getTrainSound, "string ()")
 	;
 
 	python::class_<CvArtInfoBuilding, python::bases<CvArtInfoScalableAsset>, boost::noncopyable>("CvArtInfoBuilding", python::no_init)

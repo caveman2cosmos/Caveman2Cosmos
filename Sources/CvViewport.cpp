@@ -96,6 +96,8 @@ void CvViewport::resizeForMap()
 void CvViewport::bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity)
 {
 	m_pLookatPlot = m_pMap->plot(iX, iY);
+	//OutputDebugString(CvString::format("bringIntoView: x=%d, y=%d\n", iX, iY).c_str());
+
 	if (pSelectionUnit != NULL && !pSelectionUnit->isDead())
 	{
 		m_preservedHeadSelectedUnitId = pSelectionUnit->getIDInfo();
