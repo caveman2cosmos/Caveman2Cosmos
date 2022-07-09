@@ -251,7 +251,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	reset(iID, eOwner, pPlot->getX(), pPlot->getY());
 
 	CvPlayer& player = GET_PLAYER(eOwner);
-	if (isHuman())
+	if (isHuman() || owner.isHumanDisabled())
 	{
 		player.setIdleCity(this, true);
 	}
