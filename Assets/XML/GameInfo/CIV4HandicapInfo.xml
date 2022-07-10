@@ -100,24 +100,7 @@
 				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
@@ -379,43 +362,7 @@
 				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
@@ -677,24 +624,7 @@
 				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
@@ -965,24 +895,7 @@
 				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
@@ -1290,24 +1203,7 @@
 				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
@@ -1620,24 +1516,7 @@
 				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
@@ -1950,24 +1829,7 @@
 				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
@@ -2308,24 +2170,7 @@
 				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
@@ -2668,24 +2513,7 @@
 				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
@@ -3039,24 +2867,7 @@
 				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>

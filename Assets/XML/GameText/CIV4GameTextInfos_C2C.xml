@@ -215,18 +215,6 @@
 		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих лучников!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_ARQUEBUSIER</Tag>
-		<English>[SPACE]The village has agreed to send one of its arquebusiers along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs arquebusiers pour partager vos aventures!</French>
-		<Russian>[SPACE]Жители деревни согласились отпустить вместе с вами одного из своих аркебузиров!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_AXEMAN</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its axemen along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec hache pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих секироносцев!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOODY_BARBARIANS</Tag>
 		<English>The villagers are hostile!</English>
 		<French>Les villageois sont hostiles !</French>
@@ -272,30 +260,12 @@
 		<Spanish>Los aldeanos han curado a la unidad.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_INFANTRY</Tag>
-		<English>[SPACE]The community has agreed to send one of its infantry along with you!</English>
-		<French>[SPACE]La communauté a accepté de vous confier un de leurs infanteries pour partager vos aventures!</French>
-		<Russian>[SPACE]Здешняя община согласилась отпустить с вами одного из добровольцев, желающего вступить в ряды вашей армии!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_MACEMAN</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its flailmen along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec fléau pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих булавоносцев!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOODY_MAP</Tag>
 		<English>The villagers have provided you with a map!</English>
 		<French>Les villageois vous ont donné une carte !</French>
 		<German>Die Bewohner haben Euch eine Karte überlassen!</German>
 		<Italian>Gli abitanti del villaggio ti hanno donato una mappa!</Italian>
 		<Spanish>Los aldeanos os han dado un mapa.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_PIKEMAN</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its pikemen along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs piquiers pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих копейщиков!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_RESEARCH</Tag>
@@ -321,24 +291,6 @@
 		<Spanish>Los aldeanos os han dado un colono.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_SPEARMAN</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its spearmen along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec lance pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих копьеносцев!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_STONE_AXEMAN</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its strong axeman along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec hache pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих воинов с топорами!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_SWORDSMAN</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its swordsmen along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs épéistes pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих мечников!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOODY_TECH</Tag>
 		<English>The villagers have given you the secrets of a new Technology!</English>
 		<French>Les villageois vous ont enseigné une nouvelle technologie !</French>
@@ -348,11 +300,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_WARRIOR</Tag>
-		<English>The villagers have provided you with a Warrior!</English>
-		<French>Les villageois vous fournissent un guerrier !</French>
-		<German>Die Bewohner haben Euch einen Krieger zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un guerriero!</Italian>
-		<Spanish>Los aldeanos os han dado un guerrero.</Spanish>
+		<English>A military type unit joins your civilization.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_WISE_WOMAN</Tag>
@@ -385,25 +333,6 @@
 		<Spanish>¡Los aldeanos te han proporcionado su cazador más hábil!</Spanish>
 		<Polish>Mieszkańcy dołączają do Ciebie jako Łowcy!</Polish>
 		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì îõîòíèêà!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_STONE_SPEARMAN</Tag>
-		<English>The villagers have provided you with a Stone Spearman!</English>
-		<French>Les villageois vous fournissent un guerrier!</French>
-		<German>Die Bewohner haben Euch einen Steinspeerkämpfer zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un Guerriero con lancia in pietra!</Italian>
-		<Spanish>Los aldeanos os han dado un Guerrero con lanza de piedra.</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Kamienni Włócznicy!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì äðåâíåãî êîïüåíîñöà!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_STONE_THROWER</Tag>
-		<English>The villagers have provided you with a Stone Thrower!</English>
-		<French>Les Villageois vous ont procuré un Lanceur de Pierres!</French>
-		<German>Die Bewohner haben Euch einen Steinewerfer zur Verfügung gestellt!</German>
-		<Spanish>¡Los aldeanos os han proporcionado un Lanzador de piedras!</Spanish>
-		<Polish>Tubylcy wytrenowali i przekazali Ci Miotacza Kamieni!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì äðåâíåãî ìåòàòåëÿ!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_TRIBE</Tag>
