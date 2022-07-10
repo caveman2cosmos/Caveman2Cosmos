@@ -5145,6 +5145,22 @@ void CvUnitAI::AI_exploreMove()
 			return;
 		}
 	}
+	if (plot()->getOwner() != getOwner())
+	{
+		if (getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 0)
+		{
+			AI_setUnitAIType(UNITAI_HUNTER_ESCORT);
+			return;
+		}
+		foreach_(const CvUnit * unitX, plot()->units())
+		{
+			if (unitX->getOwner() == getOwner() && !unitX->getGroup()->canDefend() && unitX->getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 0)
+			{
+				AI_setUnitAIType(UNITAI_HUNTER_ESCORT);
+				return;
+			}
+		}
+	}
 
 	if (getDamage() > 0)
 	{
@@ -5434,7 +5450,7 @@ void CvUnitAI::AI_hunterEscortMove()
 		}
 		if (getGroup()->countNumUnitAIType(UNITAI_WORKER) > 0)
 		{
-			getGroup()->AI_separateAI(UNITAI_SUBDUED_ANIMAL);
+			getGroup()->AI_separateAI(UNITAI_WORKER);
 		}
 	}
 	else if (!isHuman())
@@ -5453,11 +5469,18 @@ void CvUnitAI::AI_hunterEscortMove()
 		if (getGroup()->countNumUnitAIType(UNITAI_WORKER) + getGroup()->countNumUnitAIType(UNITAI_SUBDUED_ANIMAL) > 0)
 		{
 			// If we have hangers-ons escort them back to our territory
-			if (AI_retreatToCity())
+			if (AI_reachHome() || AI_retreatToCity())
 			{
 				return;
 			}
+			getGroup()->pushMission(MISSION_SKIP);
+			return;
 		}
+	}
+
+	if (AI_group(GroupingParams().withUnitAI(UNITAI_HUNTER).maxGroupSize(1).maxPathTurns(0)))
+	{
+		return;
 	}
 
 	if (processContracts())
@@ -5468,6 +5491,13 @@ void CvUnitAI::AI_hunterEscortMove()
 	if (!isHuman() && plot()->isCoastalLand() && GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, MISSIONAI_PICKUP) > 0)
 	{
 		getGroup()->pushMission(MISSION_SKIP);
+		return;
+	}
+
+	if (m_contractualState == CONTRACTUAL_STATE_NO_WORK_FOUND
+	&& GET_PLAYER(getOwner()).AI_neededExplorers(area()) > GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_EXPLORE))
+	{
+		AI_setUnitAIType(UNITAI_EXPLORE);
 		return;
 	}
 
@@ -5488,7 +5518,6 @@ void CvUnitAI::AI_hunterEscortMove()
 	{
 		return;
 	}
-
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
 }
@@ -6373,13 +6402,11 @@ void CvUnitAI::AI_subduedAnimalMove()
 		}
 
 		// Try to move to a nearby hunter unit if one is available to group with it
-		if (AI_groupMergeRange(UNITAI_HUNTER, 1, false, true, true))
-		{
-			return;
-		}
-
-		//	Try to move to a nearby hunter escort unit if one is available to group with it
-		if (AI_groupMergeRange(UNITAI_HUNTER_ESCORT, 1, false, true, true))
+		if (AI_groupMergeRange(UNITAI_HUNTER, 1, false, true, true)
+		// Try to move to a nearby hunter escort unit if one is available to group with it
+		||  AI_groupMergeRange(UNITAI_HUNTER_ESCORT, 1, false, true, true)
+		// Try to move to a nearby explorer unit if one is available to group with it
+		||  AI_groupMergeRange(UNITAI_EXPLORE, 1, false, true, true))
 		{
 			return;
 		}
@@ -22057,7 +22084,7 @@ bool CvUnitAI::processContracts(int iMinPriority)
 					logBBAI("	...already at target plot.");
 				}
 				contractFulfilled();
-				getGroup()->pushMission(MISSION_SKIP);//problem for tracking units fulfilling certain jobs by simply being there.  MissionAI is not set this way.  Might have to improve on this.
+				getGroup()->pushMission(MISSION_SKIP);
 			}
 		}
 		else
