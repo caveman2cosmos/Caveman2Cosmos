@@ -97,8 +97,13 @@ public:
 	//	Initialize
 	void	init(PlayerTypes eOwner);
 
+	void log(CvWString message) const;
+	void log(CvWString message);
+
 	//	Delete all work requests and looking for work records
 	void	reset();
+
+	void clearTenders();
 
 	//	Note a unit looking for work
 	void	lookingForWork(const CvUnit* pUnit, int iMinPriority = 0);
