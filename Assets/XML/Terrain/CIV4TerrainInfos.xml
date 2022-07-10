@@ -3044,7 +3044,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_OCEAN_POLAR</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>5</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
