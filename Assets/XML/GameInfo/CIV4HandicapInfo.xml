@@ -90,14 +90,6 @@
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<GoodyType>GOODY_WARRIOR</GoodyType>
@@ -255,14 +247,6 @@
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<GoodyType>GOODY_WARRIOR</GoodyType>
@@ -430,14 +414,6 @@
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<GoodyType>GOODY_WARRIOR</GoodyType>
@@ -619,23 +595,7 @@
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<GoodyType>GOODY_WARRIOR</GoodyType>
@@ -846,23 +806,7 @@
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<GoodyType>GOODY_WARRIOR</GoodyType>
@@ -1101,23 +1045,7 @@
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<GoodyType>GOODY_WARRIOR</GoodyType>
@@ -1373,14 +1301,6 @@
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<GoodyType>GOODY_WARRIOR</GoodyType>
@@ -1656,14 +1576,6 @@
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<GoodyType>GOODY_WARRIOR</GoodyType>
@@ -1949,14 +1861,6 @@
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<GoodyType>GOODY_WARRIOR</GoodyType>
@@ -2253,14 +2157,6 @@
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<GoodyType>GOODY_WARRIOR</GoodyType>

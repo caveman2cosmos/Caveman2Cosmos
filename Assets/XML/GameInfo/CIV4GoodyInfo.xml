@@ -46,63 +46,6 @@
 			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
 			<Sound>AS2D_GOODY_XP</Sound>
 			<iExperience>4</iExperience>
-			<EraType>C2C_ERA_PREHISTORIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_ANCIENT_EXPERIENCE</Type>
-			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
-			<Sound>AS2D_GOODY_XP</Sound>
-			<iExperience>6</iExperience>
-			<EraType>C2C_ERA_ANCIENT</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_CLASSICAL_EXPERIENCE</Type>
-			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
-			<Sound>AS2D_GOODY_XP</Sound>
-			<iExperience>8</iExperience>
-			<EraType>C2C_ERA_CLASSICAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_MEDIEVAL_EXPERIENCE</Type>
-			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
-			<Sound>AS2D_GOODY_XP</Sound>
-			<iExperience>10</iExperience>
-			<EraType>C2C_ERA_MEDIEVAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_RENAISSANCE_EXPERIENCE</Type>
-			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
-			<Sound>AS2D_GOODY_XP</Sound>
-			<iExperience>12</iExperience>
-			<EraType>C2C_ERA_RENAISSANCE</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_INDUSTRIAL_EXPERIENCE</Type>
-			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
-			<Sound>AS2D_GOODY_XP</Sound>
-			<iExperience>14</iExperience>
-			<EraType>C2C_ERA_INDUSTRIAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_MODERN_EXPERIENCE</Type>
-			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
-			<Sound>AS2D_GOODY_XP</Sound>
-			<iExperience>16</iExperience>
-			<EraType>C2C_ERA_ATOMIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_INFORMATION_EXPERIENCE</Type>
-			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
-			<Sound>AS2D_GOODY_XP</Sound>
-			<iExperience>18</iExperience>
-			<EraType>C2C_ERA_INFORMATION</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_NANOTECH_EXPERIENCE</Type>
-			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
-			<Sound>AS2D_GOODY_XP</Sound>
-			<iExperience>20</iExperience>
-			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HEALING</Type>
