@@ -5132,6 +5132,15 @@ void CvUnitAI::AI_exploreMove()
 	{
 		return;
 	}
+	MissionAITypes eMissionAIType = MISSIONAI_GROUP;
+
+	if (!isHuman() && plot()->getOwner() == getOwner() && GET_PLAYER(getOwner()).AI_unitTargetMissionAIs(this, &eMissionAIType, 1, getGroup(), 1) > 0)
+	{
+		// Wait for units which are joining our group this turn
+		getGroup()->pushMission(MISSION_SKIP);
+		return;
+	}
+
 	if (!isHuman() && canAttack())
 	{
 		if (AI_cityAttack(1, 60))
