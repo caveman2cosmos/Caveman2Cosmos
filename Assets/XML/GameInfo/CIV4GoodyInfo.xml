@@ -313,6 +313,12 @@
 			<bTech>1</bTech>
 		</GoodyInfo>
 		<GoodyInfo>
+			<Type>GOODY_WARRIOR</Type>
+			<Description>TXT_KEY_GOODY_WARRIOR</Description>
+			<Sound>AS2D_GOODY_WARRIOR</Sound>
+			<FreeUnit>UNIT_BRUTE</FreeUnit>
+		</GoodyInfo>
+		<GoodyInfo>
 			<Type>GOODY_SCOUT</Type>
 			<Description>TXT_KEY_GOODY_SCOUT</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
@@ -359,42 +365,6 @@
 			<Description>TXT_KEY_GOODY_HUNTER</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
 			<FreeUnit>UNIT_CHASER</FreeUnit>
-			<EraType>C2C_ERA_PREHISTORIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_RANGER</Type>
-			<Description>TXT_KEY_GOODY_HUNTER</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_CHASER</FreeUnit>
-			<EraType>C2C_ERA_ANCIENT</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_WARDEN</Type>
-			<Description>TXT_KEY_GOODY_HUNTER</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_CHASER</FreeUnit>
-			<EraType>C2C_ERA_CLASSICAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_WARDEN2</Type>
-			<Description>TXT_KEY_GOODY_HUNTER</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_CHASER</FreeUnit>
-			<EraType>C2C_ERA_MEDIEVAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_GAME_HUNTER</Type>
-			<Description>TXT_KEY_GOODY_HUNTER</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_CHASER</FreeUnit>
-			<EraType>C2C_ERA_RENAISSANCE</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_BIG_GAME_HUNTER</Type>
-			<Description>TXT_KEY_GOODY_HUNTER</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_CHASER</FreeUnit>
-			<EraType>C2C_ERA_INDUSTRIAL</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_WISE_WOMAN</Type>

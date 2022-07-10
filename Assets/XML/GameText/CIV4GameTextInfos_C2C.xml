@@ -209,24 +209,12 @@
 		<Russian>[ICON_BULLET]Внедрение в [LINK=%s1_corporationType]%s2_corporation[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_ARCHER</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its archers along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs archers pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих лучников!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOODY_BARBARIANS</Tag>
 		<English>The villagers are hostile!</English>
 		<French>Les villageois sont hostiles !</French>
 		<German>Die Bewohner sind Euch feindlich gesonnen!</German>
 		<Italian>Gli abitanti del villaggio sono ostili!</Italian>
 		<Spanish>Los aldeanos son hostiles.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_COMPOSITE_BOWMAN</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its bowmen along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs archers long pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих лучников!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_CRIMINAL</Tag>
@@ -326,13 +314,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
-		<English>The villagers have provided you with their most skilled huntsman!</English>
-		<French>Les villageois vous ont fourni leur chasseur le plus talentueux!</French>
-		<German>Die Dorfbewohner haben Ihnen ihren geschicktesten Jäger zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno fornito il loro cacciatore più abile!</Italian>
-		<Spanish>¡Los aldeanos te han proporcionado su cazador más hábil!</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Łowcy!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì îõîòíèêà!</Russian>
+		<English>A hunter type unit joins your civilization.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_TRIBE</Tag>
