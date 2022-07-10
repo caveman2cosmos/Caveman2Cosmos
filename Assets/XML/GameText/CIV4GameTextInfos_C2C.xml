@@ -264,19 +264,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_SCOUT</Tag>
-		<English>The villagers have provided you with a Scout!</English>
-		<French>Les villageois vous fournissent un éclaireur !</French>
-		<German>Die Bewohner haben Euch einen Späher zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato uno scout!</Italian>
-		<Spanish>Los aldeanos os han dado un batidor.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_SETTLER</Tag>
-		<English>The villagers have provided you with a Settler!</English>
-		<French>Les villageois vous fournissent un colon !</French>
-		<German>Die Bewohner haben Euch einen Siedler zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un colono!</Italian>
-		<Spanish>Los aldeanos os han dado un colono.</Spanish>
+		<English>A scout type unit joins your civilization.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_TECH</Tag>
@@ -301,16 +289,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
 		<English>A hunter type unit joins your civilization.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_TRIBE</Tag>
-		<English>The villagers have provided you with a Tribe!</English>
-		<French>Les villageois vous fournissent un colon!</French>
-		<German>Eine ortsansässige Sippe hat sich Euch angeschlossen!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato una tribù!</Italian>
-		<Spanish>Los aldeanos os han dado una Tribu.</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Szczep!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì ïëåìÿ!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_CATEGORY_PREREQUISITE</Tag>

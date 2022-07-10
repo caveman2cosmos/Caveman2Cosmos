@@ -188,55 +188,6 @@
 			<iMapProb>80</iMapProb>
 		</GoodyInfo>
 		<GoodyInfo>
-			<Type>GOODY_TRIBE</Type>
-			<Description>TXT_KEY_GOODY_TRIBE</Description>
-			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<FreeUnit>UNIT_TRIBE</FreeUnit>
-			<EraType>C2C_ERA_PREHISTORIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_SETTLER</Type>
-			<Description>TXT_KEY_GOODY_SETTLER</Description>
-			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<FreeUnit>UNIT_SETTLER</FreeUnit>
-			<EraType>C2C_ERA_ANCIENT</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_SETTLER2</Type>
-			<Description>TXT_KEY_GOODY_SETTLER</Description>
-			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<FreeUnit>UNIT_SETTLER</FreeUnit>
-			<EraType>C2C_ERA_CLASSICAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_SETTLER3</Type>
-			<Description>TXT_KEY_GOODY_SETTLER</Description>
-			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<FreeUnit>UNIT_SETTLER</FreeUnit>
-			<EraType>C2C_ERA_MEDIEVAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_COLONIST</Type>
-			<Description>TXT_KEY_GOODY_SETTLER</Description>
-			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<FreeUnit>UNIT_SETTLER</FreeUnit>
-			<EraType>C2C_ERA_RENAISSANCE</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_PIONEER</Type>
-			<Description>TXT_KEY_GOODY_SETTLER</Description>
-			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<FreeUnit>UNIT_SETTLER</FreeUnit>
-			<EraType>C2C_ERA_INDUSTRIAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_AIRSETTLER</Type>
-			<Description>TXT_KEY_GOODY_SETTLER</Description>
-			<Sound>AS2D_GOODY_SETTLER</Sound>
-			<FreeUnit>UNIT_SETTLER</FreeUnit>
-			<EraType>C2C_ERA_ATOMIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
 			<Type>GOODY_EXPERIENCE</Type>
 			<Description>TXT_KEY_GOODY_EXPERIENCE</Description>
 			<Sound>AS2D_GOODY_XP</Sound>
@@ -323,42 +274,6 @@
 			<Description>TXT_KEY_GOODY_SCOUT</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
 			<FreeUnit>UNIT_WANDERER</FreeUnit>
-			<EraType>C2C_ERA_PREHISTORIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_GUIDE</Type>
-			<Description>TXT_KEY_GOODY_SCOUT</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_WANDERER</FreeUnit>
-			<EraType>C2C_ERA_ANCIENT</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_EXPLORER</Type>
-			<Description>TXT_KEY_GOODY_SCOUT</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_WANDERER</FreeUnit>
-			<EraType>C2C_ERA_CLASSICAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_ADVENTURER</Type>
-			<Description>TXT_KEY_GOODY_SCOUT</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_WANDERER</FreeUnit>
-			<EraType>C2C_ERA_MEDIEVAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_MOTORCYCLE</Type>
-			<Description>TXT_KEY_GOODY_SCOUT</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_WANDERER</FreeUnit>
-			<EraType>C2C_ERA_ATOMIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_UNMANNED_TRIKE</Type>
-			<Description>TXT_KEY_GOODY_SCOUT</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_WANDERER</FreeUnit>
-			<EraType>C2C_ERA_INFORMATION</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HUNTER</Type>
@@ -377,7 +292,7 @@
 			<Description>TXT_KEY_GOODY_GATHERER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
 			<FreeUnit>UNIT_GATHERER</FreeUnit>
-		</GoodyInfo>		
+		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>

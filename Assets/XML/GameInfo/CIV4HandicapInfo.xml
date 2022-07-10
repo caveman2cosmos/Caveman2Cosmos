@@ -122,17 +122,7 @@
 				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- High Gold -->
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
@@ -189,19 +179,6 @@
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
-				<!-- Settler -->
-				<GoodyType>GOODY_SETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER2</GoodyType>
-				<GoodyType>GOODY_SETTLER3</GoodyType>
-				<GoodyType>GOODY_COLONIST</GoodyType>
-				<GoodyType>GOODY_PIONEER</GoodyType>
-				<GoodyType>GOODY_AIRSETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER2</GoodyType>
-				<GoodyType>GOODY_SETTLER3</GoodyType>
-				<GoodyType>GOODY_COLONIST</GoodyType>
-				<GoodyType>GOODY_PIONEER</GoodyType>
-				<GoodyType>GOODY_AIRSETTLER</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -358,11 +335,6 @@
 				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- High Gold -->
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
@@ -417,19 +389,6 @@
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
-				<!-- Settler -->
-				<GoodyType>GOODY_SETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER2</GoodyType>
-				<GoodyType>GOODY_SETTLER3</GoodyType>
-				<GoodyType>GOODY_COLONIST</GoodyType>
-				<GoodyType>GOODY_PIONEER</GoodyType>
-				<GoodyType>GOODY_AIRSETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER2</GoodyType>
-				<GoodyType>GOODY_SETTLER3</GoodyType>
-				<GoodyType>GOODY_COLONIST</GoodyType>
-				<GoodyType>GOODY_PIONEER</GoodyType>
-				<GoodyType>GOODY_AIRSETTLER</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -608,11 +567,6 @@
 				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- High Gold -->
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
@@ -657,13 +611,6 @@
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
-				<!-- Settler -->
-				<GoodyType>GOODY_SETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER2</GoodyType>
-				<GoodyType>GOODY_SETTLER3</GoodyType>
-				<GoodyType>GOODY_COLONIST</GoodyType>
-				<GoodyType>GOODY_PIONEER</GoodyType>
-				<GoodyType>GOODY_AIRSETTLER</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -875,11 +822,6 @@
 				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- High Gold -->
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
@@ -924,13 +866,6 @@
 				<!-- Tech -->
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
-				<!-- Settler -->
-				<GoodyType>GOODY_SETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER2</GoodyType>
-				<GoodyType>GOODY_SETTLER3</GoodyType>
-				<GoodyType>GOODY_COLONIST</GoodyType>
-				<GoodyType>GOODY_PIONEER</GoodyType>
-				<GoodyType>GOODY_AIRSETTLER</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -1170,11 +1105,6 @@
 				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- High Gold -->
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
@@ -1478,11 +1408,6 @@
 				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- High Gold -->
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
@@ -1795,11 +1720,6 @@
 				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- High Gold -->
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
@@ -2131,11 +2051,6 @@
 				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- Hunter -->
 				<GoodyType>GOODY_HUNTER</GoodyType>
 				<!-- Low Research -->
@@ -2469,11 +2384,6 @@
 				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- Hunter -->
 				<GoodyType>GOODY_HUNTER</GoodyType>
 				<!-- Low Research -->
