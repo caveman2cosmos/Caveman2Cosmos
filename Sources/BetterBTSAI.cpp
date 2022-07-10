@@ -28,3 +28,14 @@ void logAIJson(CvWString type,CvWString identifier, CvWString squirrel, CvWStrin
 	const std::wstring data = "{ type: \"" + type + "\" name: \""+identifier+ "\" function: \" " + squirrel + "\" message: \"" + message + "\" }";
 	logging::logMsgW("FLB.log", data.c_str());
 }
+
+void logCB(CvString message) {
+
+	const std::string data = message;
+	logging::logMsg("CB.log", data.c_str());
+}
+
+void logToFile(CvString message, char* filename) {
+	const std::string data = message;
+	logging::logMsg(filename, data.c_str());
+}
