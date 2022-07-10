@@ -264,12 +264,6 @@
 		<Spanish>Los aldeanos os han dado oro.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_HEALER</Tag>
-		<English>[SPACE]A local Healer has decided to join your cause!</English>
-		<French>[SPACE]Un guérisseur local a décidé de rejoindre votre cause!</French>
-		<Russian>[SPACE]Местный целитель решил присоединиться к вашему делу!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOODY_HEALING</Tag>
 		<English>The villagers have healed your unit!</English>
 		<French>Les villageois ont soigné votre unité !</French>
@@ -362,10 +356,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_WISE_WOMAN</Tag>
-		<English>[SPACE]One of the tribe's women has taken a liking to your explorers!</English>
-		<French>[SPACE]Une femme de la tribu est tombée amoureuse d'un de vos éclaireurs!</French>
-		<German>Ein paar Frauen des Stammes haben an Euren Entdeckern Gefallen gefunden!</German>
-		<Russian>[SPACE]Одна из женщин племени понравилась вашим разведчикам!</Russian>
+		<English>A healer type unit joins your civilization.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_WORKER</Tag>

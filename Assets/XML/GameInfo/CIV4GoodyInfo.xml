@@ -533,49 +533,6 @@
 			<Description>TXT_KEY_GOODY_WISE_WOMAN</Description>
 			<Sound>AS2D_GOODY_SCOUT</Sound>
 			<FreeUnit>UNIT_WISE_WOMAN</FreeUnit>
-			<EraType>C2C_ERA_PREHISTORIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_HEALER</Type>
-			<Description>TXT_KEY_GOODY_HEALER</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_WISE_WOMAN</FreeUnit>
-			<EraType>C2C_ERA_ANCIENT</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_APOTHECARY</Type>
-			<Description>TXT_KEY_GOODY_HEALER</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_WISE_WOMAN</FreeUnit>
-			<EraType>C2C_ERA_CLASSICAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_SURGEON</Type>
-			<Description>TXT_KEY_GOODY_HEALER</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_WISE_WOMAN</FreeUnit>
-			<EraType>C2C_ERA_INDUSTRIAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_MEDIC</Type>
-			<Description>TXT_KEY_GOODY_HEALER</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_WISE_WOMAN</FreeUnit>
-			<EraType>C2C_ERA_ATOMIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_AMBULANCE_II</Type>
-			<Description>TXT_KEY_GOODY_HEALER</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_WISE_WOMAN</FreeUnit>
-			<EraType>C2C_ERA_INFORMATION</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_MEDEVAC_DROPSHIP</Type>
-			<Description>TXT_KEY_GOODY_HEALER</Description>
-			<Sound>AS2D_GOODY_SCOUT</Sound>
-			<FreeUnit>UNIT_WISE_WOMAN</FreeUnit>
-			<EraType>C2C_ERA_NANOTECH</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_GATHERER</Type>

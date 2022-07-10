@@ -88,12 +88,6 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
@@ -373,12 +367,6 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
@@ -677,12 +665,6 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
@@ -962,12 +944,6 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
@@ -1293,12 +1269,6 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
@@ -1629,12 +1599,6 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
@@ -1974,12 +1938,6 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
@@ -2338,12 +2296,6 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
@@ -2704,12 +2656,6 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
@@ -3081,12 +3027,6 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
