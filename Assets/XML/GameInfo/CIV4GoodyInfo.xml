@@ -5,179 +5,33 @@
 			<Type>GOODY_LOW_GOLD</Type>
 			<Description>TXT_KEY_GOODY_GOLD</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>8</iGold>
-			<iGoldRand1>11</iGoldRand1>
-			<iGoldRand2>11</iGoldRand2>
-			<EraType>C2C_ERA_PREHISTORIC</EraType>
+			<iGold>10</iGold>
+			<iGoldRand1>10</iGoldRand1>
+			<iGoldRand2>10</iGoldRand2>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HIGH_GOLD</Type>
 			<Description>TXT_KEY_GOODY_GOLD</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>15</iGold>
-			<iGoldRand1>31</iGoldRand1>
-			<iGoldRand2>31</iGoldRand2>
-			<EraType>C2C_ERA_PREHISTORIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_ANCIENT_LOW_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>15</iGold>
-			<iGoldRand1>31</iGoldRand1>
-			<iGoldRand2>31</iGoldRand2>
-			<EraType>C2C_ERA_ANCIENT</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_ANCIENT_HIGH_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>30</iGold>
-			<iGoldRand1>62</iGoldRand1>
-			<iGoldRand2>62</iGoldRand2>
-			<EraType>C2C_ERA_ANCIENT</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_CLASSICAL_LOW_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>30</iGold>
-			<iGoldRand1>62</iGoldRand1>
-			<iGoldRand2>62</iGoldRand2>
-			<EraType>C2C_ERA_CLASSICAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_CLASSICAL_HIGH_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>60</iGold>
-			<iGoldRand1>124</iGoldRand1>
-			<iGoldRand2>124</iGoldRand2>
-			<EraType>C2C_ERA_CLASSICAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_MEDIEVAL_LOW_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>60</iGold>
-			<iGoldRand1>124</iGoldRand1>
-			<iGoldRand2>124</iGoldRand2>
-			<EraType>C2C_ERA_MEDIEVAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_MEDIEVAL_HIGH_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>120</iGold>
-			<iGoldRand1>248</iGoldRand1>
-			<iGoldRand2>248</iGoldRand2>
-			<EraType>C2C_ERA_MEDIEVAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_RENAISSANCE_LOW_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>120</iGold>
-			<iGoldRand1>248</iGoldRand1>
-			<iGoldRand2>248</iGoldRand2>
-			<EraType>C2C_ERA_RENAISSANCE</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_RENAISSANCE_HIGH_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>240</iGold>
-			<iGoldRand1>596</iGoldRand1>
-			<iGoldRand2>596</iGoldRand2>
-			<EraType>C2C_ERA_RENAISSANCE</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_INDUSTRIAL_LOW_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>240</iGold>
-			<iGoldRand1>596</iGoldRand1>
-			<iGoldRand2>596</iGoldRand2>
-			<EraType>C2C_ERA_INDUSTRIAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_INDUSTRIAL_HIGH_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>480</iGold>
-			<iGoldRand1>1192</iGoldRand1>
-			<iGoldRand2>1192</iGoldRand2>
-			<EraType>C2C_ERA_INDUSTRIAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_MODERN_LOW_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>480</iGold>
-			<iGoldRand1>1192</iGoldRand1>
-			<iGoldRand2>1192</iGoldRand2>
-			<EraType>C2C_ERA_ATOMIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_MODERN_HIGH_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>960</iGold>
-			<iGoldRand1>2384</iGoldRand1>
-			<iGoldRand2>2384</iGoldRand2>
-			<EraType>C2C_ERA_ATOMIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_INFORMATION_LOW_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>960</iGold>
-			<iGoldRand1>2384</iGoldRand1>
-			<iGoldRand2>2384</iGoldRand2>
-			<EraType>C2C_ERA_INFORMATION</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_INFORMATION_HIGH_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>1920</iGold>
-			<iGoldRand1>4768</iGoldRand1>
-			<iGoldRand2>4768</iGoldRand2>
-			<EraType>C2C_ERA_INFORMATION</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_NANOTECH_LOW_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>1920</iGold>
-			<iGoldRand1>4768</iGoldRand1>
-			<iGoldRand2>4768</iGoldRand2>
-			<EraType>C2C_ERA_NANOTECH</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_NANOTECH_HIGH_GOLD</Type>
-			<Description>TXT_KEY_GOODY_GOLD</Description>
-			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iGold>3840</iGold>
-			<iGoldRand1>9536</iGoldRand1>
-			<iGoldRand2>9536</iGoldRand2>
-			<EraType>C2C_ERA_NANOTECH</EraType>
+			<iGold>20</iGold>
+			<iGoldRand1>20</iGoldRand1>
+			<iGoldRand2>20</iGoldRand2>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_LOW_RESEARCH</Type>
 			<Description>TXT_KEY_GOODY_RESEARCH</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iResearch>10</iResearch>
-			<iGoldRand1>10</iGoldRand1>
-			<iGoldRand2>10</iGoldRand2>
+			<iResearch>5</iResearch>
+			<iGoldRand1>5</iGoldRand1>
+			<iGoldRand2>5</iGoldRand2>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_HIGH_RESEARCH</Type>
 			<Description>TXT_KEY_GOODY_RESEARCH</Description>
 			<Sound>AS2D_GOODY_GOLD</Sound>
-			<iResearch>28</iResearch>
-			<iGoldRand1>36</iGoldRand1>
-			<iGoldRand2>36</iGoldRand2>
+			<iResearch>10</iResearch>
+			<iGoldRand1>10</iGoldRand1>
+			<iGoldRand2>10</iGoldRand2>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_MAP</Type>
