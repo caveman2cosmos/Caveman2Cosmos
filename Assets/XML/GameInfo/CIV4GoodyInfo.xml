@@ -377,64 +377,7 @@
 			<Description>TXT_KEY_GOODY_GATHERER</Description>
 			<Sound>AS2D_GOODY_WORKER</Sound>
 			<FreeUnit>UNIT_GATHERER</FreeUnit>
-			<EraType>C2C_ERA_PREHISTORIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_WORKER</Type>
-			<Description>TXT_KEY_GOODY_WORKER</Description>
-			<Sound>AS2D_GOODY_WORKER</Sound>
-			<FreeUnit>UNIT_WORKER</FreeUnit>
-			<EraType>C2C_ERA_ANCIENT</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_DOG_WORKER</Type>
-			<Description>TXT_KEY_GOODY_WORKER</Description>
-			<Sound>AS2D_GOODY_WORKER</Sound>
-			<FreeUnit>UNIT_WORKER</FreeUnit>
-			<EraType>C2C_ERA_CLASSICAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_ELEPHANT_WORKER</Type>
-			<Description>TXT_KEY_GOODY_WORKER</Description>
-			<Sound>AS2D_GOODY_WORKER</Sound>
-			<FreeUnit>UNIT_WORKER</FreeUnit>
-			<EraType>C2C_ERA_MEDIEVAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_MULE_WORKER</Type>
-			<Description>TXT_KEY_GOODY_WORKER</Description>
-			<Sound>AS2D_GOODY_WORKER</Sound>
-			<FreeUnit>UNIT_WORKER</FreeUnit>
-			<EraType>C2C_ERA_RENAISSANCE</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_INDUSTRIAL_WORKER</Type>
-			<Description>TXT_KEY_GOODY_WORKER</Description>
-			<Sound>AS2D_GOODY_WORKER</Sound>
-			<FreeUnit>UNIT_WORKER</FreeUnit>
-			<EraType>C2C_ERA_INDUSTRIAL</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_MODERN_WORKER</Type>
-			<Description>TXT_KEY_GOODY_WORKER</Description>
-			<Sound>AS2D_GOODY_WORKER</Sound>
-			<FreeUnit>UNIT_WORKER</FreeUnit>
-			<EraType>C2C_ERA_ATOMIC</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_MODERN_WORKER2</Type>
-			<Description>TXT_KEY_GOODY_WORKER</Description>
-			<Sound>AS2D_GOODY_WORKER</Sound>
-			<FreeUnit>UNIT_WORKER</FreeUnit>
-			<EraType>C2C_ERA_INFORMATION</EraType>
-		</GoodyInfo>
-		<GoodyInfo>
-			<Type>GOODY_CLONES</Type>
-			<Description>TXT_KEY_GOODY_WORKER</Description>
-			<Sound>AS2D_GOODY_WORKER</Sound>
-			<FreeUnit>UNIT_WORKER</FreeUnit>
-			<EraType>C2C_ERA_NANOTECH</EraType>
-		</GoodyInfo>
+		</GoodyInfo>		
 		<GoodyInfo>
 			<Type>GOODY_BARBARIANS_WEAK</Type>
 			<Description>TXT_KEY_GOODY_BARBARIANS</Description>

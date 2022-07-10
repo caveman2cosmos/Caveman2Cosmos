@@ -295,22 +295,8 @@
 		<English>A healer type unit joins your civilization.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_WORKER</Tag>
-		<English>The villagers have provided you with a Worker!</English>
-		<French>Les villageois vous fournissent un ouvrier !</French>
-		<German>Die Bewohner haben Euch einen Bautrupp zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un lavoratore!</Italian>
-		<Spanish>Los aldeanos os han dado un trabajador.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOODY_GATHERER</Tag>
-		<English>The villagers have provided you with a Gatherer!</English>
-		<French>Les villageois vous fournissent un ouvrier!</French>
-		<German>Die Bewohner haben Euch einen Sammler zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un raccoglitore!</Italian>
-		<Spanish>Los aldeanos os han dado un Recolector.</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Zbieracze!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì ñîáèðàòåëÿ!</Russian>
+		<English>A worker type unit joins your civilization.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
