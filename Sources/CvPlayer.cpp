@@ -8829,7 +8829,7 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 		{
 			if (iI != getID() && GET_TEAM((TeamTypes)iI).isAlive())
 			{
-				
+
 			}
 		}
 	}

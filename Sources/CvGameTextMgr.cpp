@@ -11796,7 +11796,7 @@ void CvGameTextMgr::parseLeaderTraits(CvWStringBuffer &szHelpString, LeaderHeadT
 			GC.getNumTraitInfos() > 0,
 			"GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvSimpleCivPicker::setLeaderText"
 		);
-		
+
 
 		int iNumCoreDefaultTraits = GC.getLeaderHeadInfo(eLeader).getNumDefaultTraits();
 		int iNumDefaultComplexTraits = GC.getLeaderHeadInfo(eLeader).getNumDefaultComplexTraits();
