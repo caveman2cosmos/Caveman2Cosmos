@@ -2898,7 +2898,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_OCEAN</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>5</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -3190,7 +3190,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_OCEAN_TROPICAL</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>5</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -3336,7 +3336,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>4</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -3482,7 +3482,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA_POLAR</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>4</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -3628,7 +3628,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA_TROPICAL</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>4</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -3920,7 +3920,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_DEEP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_COAST_DEEP</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>2</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -4066,7 +4066,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_DEEP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_COAST_DEEP</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>2</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -4212,7 +4212,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_DEEP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA_DEEP</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>4</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -4358,7 +4358,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_DEEP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA_DEEP_POLAR</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>2</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -4504,7 +4504,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_DEEP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA_DEEP_TROPICAL</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>2</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -4650,7 +4650,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_TRENCH_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_TRENCH</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>5</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -4796,7 +4796,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_TRENCH_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_TRENCH</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>5</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -4942,7 +4942,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_TRENCH_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_TRENCH</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>5</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
