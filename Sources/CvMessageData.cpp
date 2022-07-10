@@ -10,6 +10,8 @@
 #include "CvSelectionGroup.h"
 #include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvInfos.h"
 
 CvMessageData* CvMessageData::createMessage(GameMessageTypes eType)
 {

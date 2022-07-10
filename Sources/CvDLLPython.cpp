@@ -42,6 +42,7 @@ void CyMessageControlInterface();
 void CyPropertiesPythonInterface();
 void CyBoolExprPythonInterface();
 void CyIntExprPythonInterface();
+void CyCityOutputHistoryInterface();
 
 
 DllExport void DLLPublishToPython()
@@ -131,6 +132,7 @@ DllExport void DLLPublishToPython()
 	CyPropertiesPythonInterface();
 	CyBoolExprPythonInterface();
 	CyIntExprPythonInterface();
+	CyCityOutputHistoryInterface();
 	SCyDebug::installInPython();
 
 	//

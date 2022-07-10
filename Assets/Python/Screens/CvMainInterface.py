@@ -1428,6 +1428,7 @@ class CvMainInterface:
 				self.cleanPlotList(screen)
 				self.bCityChange = True
 				self.bBuildWorkQueue = True
+				self.bUpdateCityTab = True
 
 				self.InCity = City(city, iCityID)
 
@@ -1508,7 +1509,6 @@ class CvMainInterface:
 				CyIF.selectCity(city, False) # \Hack, City FoV is set and we can enter the city now.
 				self.evalIFT(screen, IFT, bCityScreen, CyPlayerAct)
 				self.bCityEnter = True
-				self.bUpdateCityTab = True
 			else: # Return to map.
 				self.setFieldofView(self.iField_View)
 				self.evalIFT(screen, IFT, bCityScreen, CyPlayerAct)
@@ -3825,8 +3825,8 @@ class CvMainInterface:
 			dy = 20
 
 		x2 = x + 8
-		y2 = y0 + 30
-		h2 = h - 40
+		y2 = y0 + 32
+		h2 = h - 44
 		w2 = w/2 - 12
 
 		w3 = w2 - 12
@@ -3837,7 +3837,7 @@ class CvMainInterface:
 
 		screen.setLabelAt("", "CityTabWindow", uFont3b + TRNSLTR.getText("TXT_KEY_PREVIOUS_OUTPUT", ()), 1<<0, 12, 8, 0, eFontGame, eWidGen, 1, 2)
 		screen.setLabelAt("", "CityTabWindow", uFont3b + TRNSLTR.getText("TXT_WORD_RECOMMENDATIONS", ()), 1<<0, w/2 + 8, 8, 0, eFontGame, eWidGen, 1, 2)
-		screen.addPanel("PreviousOutput", "", "", True, True, x + 12, y2, w3 + 4, h2 + 24, ePanelBlack)
+		screen.addPanel("PreviousOutput", "", "", True, True, x + 12, y2 - 2, w3 + 4, h2 + 28, ePanelBlack)
 
 		screen.addScrollPanel(PnlLeft, "", x2, y2, w2, h2, PanelStyles.PANEL_STYLE_MAIN)
 		screen.setStyle(PnlLeft, "ScrollPanel_Alt_Style")
@@ -3846,34 +3846,53 @@ class CvMainInterface:
 
 		y = 5
 		n = 0
-		for iHistory in xrange(city.getCityOutputHistorySize()):
-			iTurn = city.getRecentOutputTurn(iHistory)
+		history = city.getCityOutputHistory()
+
+		for iHistory in xrange(history.getSize()):
+			iTurn = history.getRecentOutputTurn(iHistory)
 			if iTurn < 1: break
-			iNumEntries = city.getCityOutputHistoryNumEntries(iHistory)
+			iNumEntries = history.getCityOutputHistoryNumEntries(iHistory)
 
 			Pnl = ROW + str(n)
-			screen.attachPanelAt(PnlLeft, Pnl, "", "", True, False, ePnlStyleBlue50, 2, y - 8, w3 - 8, 10 + iNumEntries * dy + dy, eWidGen, 1, 2)
+			screen.attachPanelAt(PnlLeft, Pnl, "", "", True, False, ePnlStyleBlue50, 6, y - 8, w3 - 16, 10 + iNumEntries * dy + dy, eWidGen, 1, 2)
 			screen.setLabelAt("", Pnl, uFont2b + TRNSLTR.getText("TXT_KEY_TIME_TURN", (iTurn,)), 1<<0, 4, 2, 0, eFontGame, eWidGen, 1, 2)
 			y1 = dy
 			for iEntry in xrange(iNumEntries):
 
-				iOrder = city.getCityOutputHistoryEntry(iHistory, iEntry, True)
-				iType = city.getCityOutputHistoryEntry(iHistory, iEntry, False)
+				iOrder = history.getCityOutputHistoryEntry(iHistory, iEntry, True)
+				iType = history.getCityOutputHistoryEntry(iHistory, iEntry, False)
 
 				if iOrder == OrderTypes.ORDER_TRAIN:
 
 					info = GC.getUnitInfo(iType)
+
+					if not iEntry and iTurn == GAME.getGameTurn():
+						sound = info.getArtInfo(0, GC.getPlayer(city.getOwner()).getCurrentEra(), UnitArtStyleTypes(-1)).getTrainSound()
+
 					TXT = "WID|UNIT|OUTPUTLOG%d|%d" %(iType, n)
 
 				elif iOrder == OrderTypes.ORDER_CONSTRUCT:
 
 					info = GC.getBuildingInfo(iType)
+
+					if not iEntry and iTurn == GAME.getGameTurn():
+						sound = info.getConstructSound()
+
 					TXT = "WID|BUILDING|OUTPUTLOG%d|%d" %(iType, n)
 
 				elif iOrder == OrderTypes.ORDER_CREATE:
 
 					info = GC.getProjectInfo(iType)
+
+					if not iEntry and iTurn == GAME.getGameTurn():
+						sound = info.getCreateSound()
+
 					TXT = "WID|PROJECT|OUTPUTLOG%d|%d" %(iType, n)
+
+
+				if not iEntry and iTurn == GAME.getGameTurn():
+					screen.setPanelColor(Pnl, 128, 255, 128)
+					CyIF.playGeneralSound(sound)
 
 				screen.setTextAt(TXT, Pnl, "%s<img=%s size=%d> %s" %(uFont2, info.getButton(), dy-4, info.getDescription()), 1<<0, 8, y1, 0, eFontGame, eWidGen, 1, 2)
 

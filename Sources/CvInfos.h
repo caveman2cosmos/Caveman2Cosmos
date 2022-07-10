@@ -4750,7 +4750,7 @@ public:
 
 
 	//Int list Vector without delayed resolution
-	
+
 	int getDefaultTrait(int i) const;
 	int getNumDefaultTraits() const;
 	bool isDefaultTrait(int i) const;

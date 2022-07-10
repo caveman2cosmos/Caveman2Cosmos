@@ -289,7 +289,6 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 			CvCity* pCity = GET_PLAYER(GC.getGame().getActivePlayer()).getCity(info.getData1());
 			if (NULL != pCity)
 			{
-				pCity->chooseProduction();
 				CvMessageControl::getInstance().sendDoTask(info.getData1(), TASK_KEEP, GC.getGame().getActivePlayer(), -1, info.getOption1(), info.getOption2(), false, false);
 			}
 		}
@@ -305,7 +304,6 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 			CvCity* pCity = GET_PLAYER(GC.getGame().getActivePlayer()).getCity(info.getData1());
 			if (NULL != pCity)
 			{
-				pCity->chooseProduction();
 				CvMessageControl::getInstance().sendDoTask(info.getData1(), TASK_KEEP, GC.getGame().getActivePlayer(), -1, false, false, false, false);
 			}
 		}
@@ -795,7 +793,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		break;
 
 	case BUTTONPOPUP_SELECT_DISCOVERY_TECH:
-	{ 
+	{
 		if (pPopupReturn->getButtonClicked() != GC.getNumTechInfos())
 		{
 			GC.getGame().selectionListGameNetMessage(GAMEMESSAGE_PUSH_MISSION, MISSION_DISCOVER, info.getData1(), pPopupReturn->getButtonClicked());
@@ -929,10 +927,6 @@ bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 		case BUTTONPOPUP_TEXT:
 		{
 			return launchTextPopup(pPopup, info);
-		}
-		case BUTTONPOPUP_CHOOSEPRODUCTION:
-		{
-			return launchProductionPopup(pPopup, info);
 		}
 		case BUTTONPOPUP_CHANGERELIGION:
 		{
@@ -1141,62 +1135,6 @@ bool CvDLLButtonPopup::launchTextPopup(CvPopup* pPopup, CvPopupInfo &info)
 	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, info.getText());
 	gDLL->getInterfaceIFace()->popupLaunch(pPopup, true, POPUPSTATE_IMMEDIATE);
 	return (true);
-}
-
-// Helper container for use in launchProductionPopup for sorting unit build options
-struct UnitBuildItem
-{
-	UnitTypes type;
-	int strength;
-
-	UnitBuildItem(UnitTypes type = NO_UNIT, int strength = 0) : type(type), strength(strength) {}
-	bool operator<(const UnitBuildItem& other) const { return strength < other.strength; }
-};
-
-// Helper container for use in launchProductionPopup for sorting project build options
-struct ProjectBuildItem
-{
-	ProjectTypes type;
-	int turns;
-
-	ProjectBuildItem(ProjectTypes type = NO_PROJECT, int turns = 0) : type(type), turns(turns) {}
-	bool operator<(const ProjectBuildItem& other) const { return turns < other.turns; }
-};
-
-// Toffer - Pseudo popup, i.e. hijacking the popup system.
-bool CvDLLButtonPopup::launchProductionPopup(CvPopup* pPopup, CvPopupInfo &info)
-{
-	if (GC.getGame().getGameState() != GAMESTATE_OVER)
-	{
-		CvCity* pCity = GET_PLAYER(GC.getGame().getActivePlayer()).getCity(info.getData1());
-
-		if (pCity && !pCity->isProduction())
-		{
-			switch (info.getData2())
-			{
-				case ORDER_TRAIN:
-				{
-					gDLL->getInterfaceIFace()->playGeneralSound(GC.getUnitInfo((UnitTypes)info.getData3()).getArtInfo(0, GET_PLAYER(pCity->getOwner()).getCurrentEra(), NO_UNIT_ARTSTYLE)->getTrainSound());
-					pCity->chooseProduction((UnitTypes)info.getData3(), NO_BUILDING, NO_PROJECT);
-					break;
-				}
-				case ORDER_CONSTRUCT:
-				{
-					gDLL->getInterfaceIFace()->playGeneralSound(GC.getBuildingInfo((BuildingTypes)info.getData3()).getConstructSound());
-					pCity->chooseProduction(NO_UNIT, (BuildingTypes)info.getData3(), NO_PROJECT);
-					break;
-				}
-				case ORDER_CREATE:
-				{
-					gDLL->getInterfaceIFace()->playGeneralSound(GC.getProjectInfo((ProjectTypes)info.getData3()).getCreateSound());
-					pCity->chooseProduction(NO_UNIT, NO_BUILDING, (ProjectTypes)info.getData3());
-					break;
-				}
-			}
-			gDLL->getInterfaceIFace()->selectCity(pCity);
-		}
-	}
-	return false;
 }
 
 bool CvDLLButtonPopup::launchChangeReligionPopup(CvPopup* pPopup, CvPopupInfo &info)

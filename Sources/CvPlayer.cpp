@@ -1430,6 +1430,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iFocusPlotY = -1;
 
 	Commanders.clear();
+	m_idleCities.clear();
 }
 
 
@@ -2819,7 +2820,6 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			}
 			else
 			{
-				pNewCity->chooseProduction();
 				CvEventReporter::getInstance().cityAcquiredAndKept(eOldOwner, eNewOwner, pNewCity, bConquest, bTrade);
 			}
 		}
@@ -4629,29 +4629,25 @@ int CvPlayer::countReligionSpreadUnits(const CvArea* pArea, ReligionTypes eRelig
 
 	int iCount = 0;
 
-	foreach_(const CvUnit* pLoopUnit, units())
+	foreach_(const CvUnit* unitX, units())
 	{
-		if (pLoopUnit->getArea() == pArea->getID())
+		if (!unitX->isDead()
+		&& unitX->getArea() == pArea->getID()
+		&& unitX->getUnitInfo().getReligionSpreads(eReligion) > 0)
 		{
-			if (pLoopUnit->getUnitInfo().getReligionSpreads(eReligion) > 0)
-			{
-				iCount++;
-			}
+			iCount++;
 		}
 	}
 
-	if( bIncludeTraining )
+	if (bIncludeTraining)
 	{
 		foreach_(const CvCity* pLoopCity, cities())
 		{
 			const UnitTypes eUnit = pLoopCity->getProductionUnit();
 
-			if( eUnit != NO_UNIT )
+			if (eUnit != NO_UNIT && GC.getUnitInfo(eUnit).getReligionSpreads(eReligion) > 0)
 			{
-				if(GC.getUnitInfo(eUnit).getReligionSpreads(eReligion) > 0)
-				{
-					iCount++;
-				}
+				iCount++;
 			}
 		}
 	}
@@ -6525,11 +6521,7 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 
 	pCity->doAutobuild();
 
-	if (isHuman() && getAdvancedStartPoints() < 0)
-	{
-		pCity->chooseProduction();
-	}
-	else
+	if (!isHuman() || getAdvancedStartPoints() > -1)
 	{
 		pCity->doFoundMessage();
 	}
@@ -8830,14 +8822,6 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 			if (find(adjacentResearch.begin(), adjacentResearch.end(), info->getTechPrereq()) != adjacentResearch.end())
 			{
 				GET_TEAM(getTeam()).setAdjacentResearch(info->getTechPrereq(), false);
-			}
-		}
-
-		for (int iI = 0; iI < MAX_TEAMS; iI++)
-		{
-			if (iI != getID() && GET_TEAM((TeamTypes)iI).isAlive())
-			{
-				
 			}
 		}
 	}
@@ -16994,8 +16978,6 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 
 		if (isHuman())
 		{
-			algo::for_each(cities(), CvCity::fn::chooseProduction());
-
 			chooseTech();
 
 			if (canRevolution(NULL))
@@ -30847,4 +30829,35 @@ bool CvPlayer::isAliveAndTeam(const TeamTypes eTeam, const bool bSameTeam, const
 	);
 	// Could probably get away with the second evaluation even when eTeamAlt == NO_TEAM
 	// Best to be on the safe side though
+}
+
+void CvPlayer::setIdleCity(CvCity* city, const bool bNewValue)
+{
+	FAssert(bNewValue || !m_idleCities.empty());
+	std::vector<CvCity*>::iterator itr = find(m_idleCities.begin(), m_idleCities.end(), city);
+
+	if (bNewValue)
+	{
+		if (itr == m_idleCities.end())
+		{
+			m_idleCities.push_back(city);
+		}
+		else FErrorMsg("Tried to add a duplicate vector element!");
+	}
+	else if (itr != m_idleCities.end())
+	{
+		m_idleCities.erase(itr);
+	}
+	else FErrorMsg("Vector element to remove was missing!");
+}
+
+CvCity* CvPlayer::getIdleCity() const
+{
+	FAssert(!m_idleCities.empty());
+	return m_idleCities[0];
+}
+
+bool CvPlayer::hasIdleCity() const
+{
+	return !m_idleCities.empty();
 }

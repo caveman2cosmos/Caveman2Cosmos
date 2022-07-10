@@ -364,6 +364,7 @@ public:
 	int getTopPopCount() const;
 	int getImprovementCount(ImprovementTypes eIndex) const;
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
+
 protected:
 	void doFlexibleDifficulty();
 	void doHightoLow();
@@ -378,8 +379,8 @@ protected:
 	int m_iNumWonders;
 	bool m_bDiploVictoryEnabled;
 	bool m_bAnyoneHasUnitZoneOfControl;
-public:
 
+public:
 	unsigned int getInitialTime() const;
 	DllExport void setInitialTime(unsigned int uiNewValue);
 

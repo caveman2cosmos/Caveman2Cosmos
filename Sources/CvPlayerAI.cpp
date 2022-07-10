@@ -8889,7 +8889,7 @@ int CvPlayerAI::AI_maxGoldTrade(PlayerTypes ePlayer) const
 
 	if (isHuman() || GET_PLAYER(ePlayer).getTeam() == getTeam())
 	{
-		const int iMaxGold = getGold();
+		const int64_t iMaxGold = getGold();
 		return iMaxGold < MAX_INT ? static_cast<int>(iMaxGold) : MAX_INT;
 	}
 	const int64_t iGold = getGold();
