@@ -1,6 +1,7 @@
 // CvTaggedSaveFormatWrapper.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvBonusInfo.h"
 #include "CvBuildingInfo.h"
 #include "CvGlobals.h"
 #include "CvImprovementInfo.h"

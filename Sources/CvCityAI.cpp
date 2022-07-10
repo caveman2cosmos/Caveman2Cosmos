@@ -2,6 +2,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
+#include "CvBonusInfo.h"
 #include "CvBuildingInfo.h"
 #include "CvImprovementInfo.h"
 #include "CvBonusInfo.h"
