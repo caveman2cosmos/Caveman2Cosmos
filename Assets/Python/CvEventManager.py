@@ -965,10 +965,7 @@ class CvEventManager:
 					CyTeamL = GC.getTeam(iTeamL)
 
 				# Factor in winners handicap versus losers handicap
-				iHandicapFactor = 100 + 4 * (GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent() - GC.getHandicapInfo(CyPlayerL.getHandicapType()).getCivicUpkeepPercent())
-				if iHandicapFactor < 1: iHandicapFactor = 1
-				# Test variant, may be better.
-				iHandicapFactor2 = 1000 * GC.getHandicapInfo(CyPlayerL.getHandicapType()).getCivicUpkeepPercent() / GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent()
+				iHandicapFactor = 1000 * GC.getHandicapInfo(CyPlayerL.getHandicapType()).getCivicUpkeepPercent() / GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent()
 
 				# Message
 				if iPlayerAct is None:
@@ -988,31 +985,33 @@ class CvEventManager:
 							szTxt = CyPlayerW.getName()
 				# Sneak promo
 				if bSneak:
-					iStolen = CyTeamL.getEspionagePointsAgainstTeam(iTeamW) * 2 - CyTeamW.getEspionagePointsAgainstTeam(iTeamL)
-					if iStolen > 1:
-						iStolen = intSqrt(iStolen * 100) * 10 / iHandicapFactor
-					if iStolen > 0:
-						CyTeamW.changeEspionagePointsAgainstTeam(iTeamL, iStolen)
-						CyTeamL.changeEspionagePointsAgainstTeam(iTeamW,-iStolen)
-						# Message
-						if iPlayerW == iPlayerAct:
-							CvUtil.sendMessage(
-								TRNSLTR.getText("TXT_KEY_MSG_SNEAK_YOU", (szTxt, iStolen)), iPlayerW, 16,
-								'Art/Interface/Buttons/Process/spyprocessmeager.dds',
-								ColorTypes(44), iX, iY, True, True, bForce=False
-							)
-						elif iPlayerL == iPlayerAct:
-							CvUtil.sendMessage(
-								TRNSLTR.getText("TXT_KEY_MSG_SNEAK",(szTxt, iStolen)), iPlayerL, 16,
-								'Art/Interface/Buttons/Process/spyprocessmeager.dds',
-								ColorTypes(44), iX, iY, True, True, bForce=False
-							)
+					iLoserPointsAgainstWinner = CyTeamL.getEspionagePointsAgainstTeam(iTeamW)
+					iWinnerPointsAgainstLoser = CyTeamW.getEspionagePointsAgainstTeam(iTeamL)
+					iBase = 5 * iLoserPointsAgainstWinner - iWinnerPointsAgainstLoser
+					if iBase > 0:
+						iStolen = intSqrt(iBase * iLoserPointsAgainstWinner / (1 + iWinnerPointsAgainstLoser)) * iHandicapFactor / 1000
+						if iStolen > 0:
+							CyTeamW.changeEspionagePointsAgainstTeam(iTeamL, iStolen)
+							CyTeamL.changeEspionagePointsAgainstTeam(iTeamW,-iStolen)
+							# Message
+							if iPlayerW == iPlayerAct:
+								CvUtil.sendMessage(
+									TRNSLTR.getText("TXT_KEY_MSG_SNEAK_YOU", (szTxt, iStolen)), iPlayerW, 16,
+									'Art/Interface/Buttons/Process/spyprocessmeager.dds',
+									ColorTypes(44), iX, iY, True, True, bForce=False
+								)
+							elif iPlayerL == iPlayerAct:
+								CvUtil.sendMessage(
+									TRNSLTR.getText("TXT_KEY_MSG_SNEAK",(szTxt, iStolen)), iPlayerL, 16,
+									'Art/Interface/Buttons/Process/spyprocessmeager.dds',
+									ColorTypes(44), iX, iY, True, True, bForce=False
+						)
 				# Marauder promo
 				if bMarauder:
 					iStolen = CyPlayerL.getGold() / (CyPlayerL.getNumUnits() + 1)
 					if iStolen > 0:
 						iStolen = intSqrt(iStolen)
-						iStolen *= iHandicapFactor2
+						iStolen *= iHandicapFactor
 						iStolen /= 1000
 
 					if iStolen > 0:
@@ -1038,7 +1037,7 @@ class CvEventManager:
 
 					if CyTeamL.isHasTech(iTechW) or not CyTeamW.isHasTech(iTechL):
 
-						iStolen = intSqrt(CyPlayerL.calculateBaseNetResearch() * 100) / iHandicapFactor
+						iStolen = intSqrt(CyPlayerL.calculateBaseNetResearch() * 4) * iHandicapFactor / 1000
 						if iStolen:
 							CyTeamW.changeResearchProgress(iTechW, iStolen, iPlayerW)
 							CyTeamL.changeResearchProgress(iTechL,-iStolen, iPlayerL)

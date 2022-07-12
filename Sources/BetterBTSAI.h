@@ -10,5 +10,7 @@ extern int gUnitLogLevel;
 
 void logBBAI(char* format, ... );
 void logAIJson(CvWString type, CvWString identifier, CvWString squirrel, CvWString message);
+void logCB(CvString message);
+void logToFile(CvString message, char* filename);
 
 #endif

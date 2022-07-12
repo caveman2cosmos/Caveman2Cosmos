@@ -8824,14 +8824,6 @@ void CvPlayer::foundReligion(ReligionTypes eReligion, ReligionTypes eSlotReligio
 				GET_TEAM(getTeam()).setAdjacentResearch(info->getTechPrereq(), false);
 			}
 		}
-
-		for (int iI = 0; iI < MAX_TEAMS; iI++)
-		{
-			if (iI != getID() && GET_TEAM((TeamTypes)iI).isAlive())
-			{
-				
-			}
-		}
 	}
 	if (GC.getGame().isReligionFounded(eReligion))
 	{

@@ -8661,55 +8661,6 @@
 		<Russian>Для всех городов в течение Золотого века</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_GATHERER</Tag>
-		<English>The villagers have provided you with a Gatherer!</English>
-		<French>Les villageois vous fournissent un ouvrier!</French>
-		<German>Die Bewohner haben Euch einen Sammler zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un raccoglitore!</Italian>
-		<Spanish>Los aldeanos os han dado un Recolector.</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Zbieracze!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì ñîáèðàòåëÿ!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
-		<English>The villagers have provided you with their most skilled huntsman!</English>
-		<French>Les villageois vous ont fourni leur chasseur le plus talentueux!</French>
-		<German>Die Dorfbewohner haben Ihnen ihren geschicktesten Jäger zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno fornito il loro cacciatore più abile!</Italian>
-		<Spanish>¡Los aldeanos te han proporcionado su cazador más hábil!</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Łowcy!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì îõîòíèêà!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_STONE_SPEARMAN</Tag>
-		<English>The villagers have provided you with a Stone Spearman!</English>
-		<French>Les villageois vous fournissent un guerrier!</French>
-		<German>Die Bewohner haben Euch einen Steinspeerkämpfer zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un Guerriero con lancia in pietra!</Italian>
-		<Spanish>Los aldeanos os han dado un Guerrero con lanza de piedra.</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Kamienni Włócznicy!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì äðåâíåãî êîïüåíîñöà!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_STONE_THROWER</Tag>
-		<English>The villagers have provided you with a Stone Thrower!</English>
-		<French>Les Villageois vous ont procuré un Lanceur de Pierres!</French>
-		<German>Die Bewohner haben Euch einen Steinewerfer zur Verfügung gestellt!</German>
-		<Spanish>¡Los aldeanos os han proporcionado un Lanzador de piedras!</Spanish>
-		<Polish>Tubylcy wytrenowali i przekazali Ci Miotacza Kamieni!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì äðåâíåãî ìåòàòåëÿ!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_TRIBE</Tag>
-		<English>The villagers have provided you with a Tribe!</English>
-		<French>Les villageois vous fournissent un colon!</French>
-		<German>Eine ortsansässige Sippe hat sich Euch angeschlossen!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato una tribù!</Italian>
-		<Spanish>Los aldeanos os han dado una Tribu.</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Szczep!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì ïëåìÿ!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOOD_HEALTH_FROM_SPECIALISTS</Tag>
 		<English>%D1_Change[ICON_HEALTHY] from Specialists</English>
 		<French>%D1_Change[ICON_HEALTHY] des Spécialistes</French>

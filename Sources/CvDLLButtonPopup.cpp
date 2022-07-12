@@ -793,7 +793,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		break;
 
 	case BUTTONPOPUP_SELECT_DISCOVERY_TECH:
-	{ 
+	{
 		if (pPopupReturn->getButtonClicked() != GC.getNumTechInfos())
 		{
 			GC.getGame().selectionListGameNetMessage(GAMEMESSAGE_PUSH_MISSION, MISSION_DISCOVER, info.getData1(), pPopupReturn->getButtonClicked());
