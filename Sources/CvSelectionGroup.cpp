@@ -5339,11 +5339,18 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 			break; // Toffer - Job done.
 		}
 	}
-
 	FAssertMsg(pRemainderGroup == this || getNumUnits() == 0, "Source group in split action wasn't fully emptied");
 	FAssertMsg(pSplitGroup->getNumUnits() == iSplitSize, "New split group didn't meet requested size");
-	FAssertMsg(pRemainderGroup->getNumUnits() == 1 + sourceGroupSize - iSplitSize, "New remainder group didn't meet expected size");
-
+	FAssertMsg(
+		pRemainderGroup->getNumUnits() == (getNumUnits() == 0 ? 2 : 1) + sourceGroupSize - iSplitSize,
+		CvString::format(
+			"%S (%d) - New remainder group of %d didn't meet expected size of %d",
+			pRemainderGroup->getHeadUnit()->getDescription().c_str(),
+			pRemainderGroup->getHeadUnit()->getID(),
+			pRemainderGroup->getNumUnits(),
+			(getNumUnits() == 0 ? 2 : 1) + sourceGroupSize - iSplitSize
+		).c_str()
+	);
 	if (ppOtherGroup != NULL)
 	{
 		*ppOtherGroup = pRemainderGroup;
