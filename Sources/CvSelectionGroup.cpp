@@ -4635,7 +4635,7 @@ CvPlot* CvSelectionGroup::getPathEndTurnPlot() const
 
 	if (NULL != pNode)
 	{
-		if ((pNode->m_pParent == NULL) || (pNode->m_iData2 == 1))
+		if (pNode->m_pParent == NULL || pNode->m_iData2 == 1)
 		{
 			return GC.getMap().plotSorenINLINE(pNode->m_iX, pNode->m_iY);
 		}
@@ -4646,43 +4646,37 @@ CvPlot* CvSelectionGroup::getPathEndTurnPlot() const
 			{
 				return GC.getMap().plotSorenINLINE(pNode->m_pParent->m_iX, pNode->m_pParent->m_iY);
 			}
-
 			pNode = pNode->m_pParent;
 		}
 	}
-
 	FErrorMsg("error");
 
 	return NULL;
 #else
 	CvPath::const_iterator itr = getPath().begin();
 
-	//	CvPath stores the node the unit started on first, but the 'first plot' required is the
-	//	first one moved to
-	if ( itr != getPath().end() )
+	// CvPath stores the node the unit started on first, but the 'first plot' required is the first one moved to
+	if (itr != getPath().end())
 	{
-		int iStart = itr.turn();
+		const int iStart = itr.turn();
 		CvPlot*	pPlot = itr.plot();
 
-		while ( itr.turn() == iStart && itr != getPath().end() )
+		while (itr.turn() == iStart && itr != getPath().end())
 		{
 			pPlot = itr.plot();
-
 			++itr;
 		}
-
-		if(pPlot == getPath().begin().plot() && pPlot != getPath().lastPlot())
-		{
-			OutputDebugString(CvString::format("Bad path movement calc on path from (%d,%d) to (%d,%d)\n",pPlot->getX(), pPlot->getY(),getPath().lastPlot()->getX(), getPath().lastPlot()->getY()).c_str());
-		}
-
-		FAssert(pPlot != getPath().begin().plot() || pPlot == getPath().lastPlot());
+		FAssertMsg(
+			pPlot != getPath().begin().plot() || pPlot == getPath().lastPlot(),
+			CvString::format(
+				"Bad path movement calc on path from (%d,%d) to (%d,%d) for %S (%d) at plot (%d,%d)\n",
+				pPlot->getX(), pPlot->getY(),getPath().lastPlot()->getX(), getPath().lastPlot()->getY(),
+				getHeadUnit()->getDescription().c_str(),getHeadUnit()->getID(), plot()->getX(), plot()->getY()
+			).c_str()
+		);
 		return pPlot;
 	}
-	else
-	{
-		return NULL;
-	}
+	return NULL;
 #endif
 }
 
