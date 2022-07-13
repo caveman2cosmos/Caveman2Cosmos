@@ -741,12 +741,6 @@
     <ClCompile Include="SCyDebug.cpp">
       <Filter>Source\Tools\Debug</Filter>
     </ClCompile>
-    <ClCompile Include="CvContractBrokerRepository.cpp">
-      <Filter>Source\Infrastructure\ContractBroker\Repository</Filter>
-    </ClCompile>
-    <ClCompile Include="CvUnitContractBrokerCapability.cpp">
-      <Filter>Source\Base\Unit\Capabilities</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CvDLLButtonPopup.h">
@@ -825,9 +819,6 @@
       <Filter>Source\Base\Unit\Capabilities</Filter>
     </ClInclude>
     <ClInclude Include="CvSettlerAI.h">
-      <Filter>Source\Base\Unit\Capabilities</Filter>
-    </ClInclude>
-    <ClInclude Include="CvUnitContractBrokerCapability.h">
       <Filter>Source\Base\Unit\Capabilities</Filter>
     </ClInclude>
     <ClInclude Include="BoolExpr.h">
@@ -1168,9 +1159,6 @@
     </ClInclude>
     <ClInclude Include="CvValueService.h">
       <Filter>Source\Base\Player\Services</Filter>
-    </ClInclude>
-    <ClInclude Include="CvContractBrokerRepository.h">
-      <Filter>Source\Infrastructure\ContractBroker\Repository</Filter>
     </ClInclude>
     <ClInclude Include="CvOutcome.h">
       <Filter>Source\Base\Outcome</Filter>
