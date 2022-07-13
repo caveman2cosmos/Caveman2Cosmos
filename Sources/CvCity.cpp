@@ -1196,6 +1196,10 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	{
 		kOwner.setIdleCity(this, false);
 	}
+	else
+	{
+		FAssertMsg(!kOwner.isIdleCity(this), "City with production is cached as idle!");
+	}
 
 	CvPlot* pPlot = plot();
 
@@ -15535,6 +15539,10 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 
 	if (!bValid)
 	{
+		if (m_orderQueue.empty() && (isHuman() || owner.isHumanDisabled()))
+		{
+			owner.setIdleCity(this, true);
+		}
 		return;
 	}
 

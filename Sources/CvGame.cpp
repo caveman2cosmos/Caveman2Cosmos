@@ -2328,6 +2328,7 @@ again:
 		if (GET_PLAYER(getActivePlayer()).hasIdleCity())
 		{
 			CvCity* city = GET_PLAYER(getActivePlayer()).getIdleCity();
+			FAssert(city != NULL);
 			gDLL->getInterfaceIFace()->addSelectedCity(city, false);
 			GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
 		}

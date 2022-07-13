@@ -30517,17 +30517,6 @@ void CvPlayer::checkReligiousDisablingAllBuildings()
 	for_each(cities(), CvCity::fn::checkReligiousDisablingAllBuildings());
 }
 
-
-void CvPlayer::doGoldenAgebyPercentage(int iPercent)
-{
-	int iRounds = 0;
-	iRounds += getGoldenAgeLength();
-	iRounds *= iPercent;
-	iRounds /= 100;
-	iRounds = std::max(1, iRounds);
-	changeGoldenAgeTurns(iRounds);
-}
-
 int CvPlayer::getBaseMergeSelectionUnit() const
 {
 	return m_iBaseMergeSelection;
@@ -30841,6 +30830,7 @@ void CvPlayer::setIdleCity(CvCity* city, const bool bNewValue)
 		if (itr == m_idleCities.end())
 		{
 			m_idleCities.push_back(city);
+			FAssert(!city->isProduction());
 		}
 		else FErrorMsg("Tried to add a duplicate vector element!");
 	}
@@ -30855,6 +30845,11 @@ CvCity* CvPlayer::getIdleCity() const
 {
 	FAssert(!m_idleCities.empty());
 	return m_idleCities[0];
+}
+
+bool CvPlayer::isIdleCity(CvCity* city) const
+{
+	return find(m_idleCities.begin(), m_idleCities.end(), city) != m_idleCities.end();
 }
 
 bool CvPlayer::hasIdleCity() const

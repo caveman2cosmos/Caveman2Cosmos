@@ -1630,25 +1630,40 @@ void CvUnitAI::AI_animalMove()
 
 	const bool bReckless = GC.getGame().isOption(GAMEOPTION_RECKLESS_ANIMALS);
 
-	//TB Animal Mod Begin
 	if (canAttack())
 	{
-		const int iAttackProb = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAnimalAttackProb();
-		// Attack potential targets first. Animals are pretty good at assessing their chances of taking down prey, therefore 60% odds prereq.
-		if (bReckless || iAttackProb > 99 || GC.getGame().getSorenRandNum(100, "Animal Attack") < iAttackProb)
+		if (bReckless)
 		{
-			if (AI_attackTargets(2, bReckless ? 0 : 60, 0, false, true))
+			if (AI_anyAttack(2, 0, 0, false))
 			{
 				return;
 			}
 		}
-		// Then attack elsewhere, recklessness based on animal aggression.
-		// 5% odds assessment is there to account for some small understanding of likelihood of success even in an aggressive action.
-		if (bReckless || GC.getGame().getSorenRandNum(10, "Animal Attack") < getMyAggression(iAttackProb))
+		else
 		{
-			if (AI_anyAttack(2, (bReckless ? 0 : 5), 0, false, true))
+			// Recklessness based on animal aggression.
+			// 1% odds assessment is there to account for some small understanding of likelihood of success even in an aggressive action.
+			if (GC.getGame().getSorenRandNum(10, "Animal Attack")
+				<
+				getMyAggression(GC.getHandicapInfo(GC.getGame().getHandicapType()).getAnimalAttackProb()))
 			{
-				return;
+				if (AI_anyAttack(2, 1, 0, false))
+				{
+					return;
+				}
+			}
+			else // not reckless.
+			{
+				// Animals are pretty good at assessing their chances of taking down prey, therefore 60% odds prereq.
+				if (GC.getGame().getSorenRandNum(100, "Animal Attack")
+					<
+					GC.getHandicapInfo(GC.getGame().getHandicapType()).getAnimalAttackProb())
+				{
+					if (AI_anyAttack(2, 60, 0, false))
+					{
+						return;
+					}
+				}
 			}
 		}
 	}
@@ -3891,21 +3906,10 @@ void CvUnitAI::AI_collateralMove()
 		return;
 	}
 
-	/************************************************************************************************/
-	/* REVOLUTIONDCM							 05/24/08								Glider1	*/
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
-		// RevolutionDCM - ranged bombardment AI
-		// Dale - RB: Field Bombard START
 	if (AI_RbombardUnit(1, 50, 3, 1, 100))
 	{
 		return;
 	}
-	// RevolutionDCM - end
-/************************************************************************************************/
-/* REVOLUTIONDCM							 END									 Glider1	*/
-/************************************************************************************************/
 
 	if (AI_anyAttack(1, 45, 3))
 	{
@@ -3916,21 +3920,11 @@ void CvUnitAI::AI_collateralMove()
 	{
 		return;
 	}
-	/************************************************************************************************/
-	/* REVOLUTIONDCM							 05/24/08								Glider1	*/
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
-		// RevolutionDCM - ranged bombardment AI
-		// Dale - RB: Field Bombard START
+
 	if (AI_RbombardUnit(1, 40, 3, 0, 100))
 	{
 		return;
 	}
-	// RevolutionDCM - end
-/************************************************************************************************/
-/* REVOLUTIONDCM							 END									Glider1	*/
-/************************************************************************************************/
 
 	if (AI_anyAttack(1, 35, 3))
 	{
@@ -3941,21 +3935,12 @@ void CvUnitAI::AI_collateralMove()
 	{
 		return;
 	}
-	/************************************************************************************************/
-	/* REVOLUTIONDCM							 05/24/08								Glider1	*/
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
-		// RevolutionDCM - ranged bombardment AI
-		// Dale - RB: Field Bombard START
+
 	if (AI_RbombardUnit(1, 25, 5, 0, 80))
 	{
 		return;
 	}
-	// RevolutionDCM - end
-/************************************************************************************************/
-/* REVOLUTIONDCM							  END									Glider1	*/
-/************************************************************************************************/
+
 	if (AI_anyAttack(1, 20, 5))
 	{
 		return;
@@ -3973,21 +3958,11 @@ void CvUnitAI::AI_collateralMove()
 			return;
 		}
 	}
-	/************************************************************************************************/
-	/* REVOLUTIONDCM							 05/24/08								Glider1	*/
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
-		// RevolutionDCM - ranged bombardment AI
-		// Dale - RB: Field Bombard START
+
 	if (AI_RbombardUnit(getGroup()->getMinimumRBombardRange(), 40, 3, 0, 100))
 	{
 		return;
 	}
-	// RevolutionDCM - end
-/************************************************************************************************/
-/* REVOLUTIONDCM							 END									 Glider1	*/
-/************************************************************************************************/
 
 	if (AI_anyAttack(2, 55, 3))
 	{
@@ -4003,34 +3978,16 @@ void CvUnitAI::AI_collateralMove()
 	{
 		return;
 	}
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  09/01/09								jdog5000	  */
-	/*																							  */
-	/* Unit AI																					  */
-	/************************************************************************************************/
-		//if (AI_protect(50))
+
 	if (AI_protect(50, 8))
-		/************************************************************************************************/
-		/* BETTER_BTS_AI_MOD					   END												  */
-		/************************************************************************************************/
 	{
 		return;
 	}
-	/************************************************************************************************/
-	/* REVOLUTIONDCM							 05/24/08								Glider1	*/
-	/*																							  */
-	/*																							  */
-	/************************************************************************************************/
-		// RevolutionDCM - ranged bombardment plot AI
-		// Dale - RB: Field Bombard START
+
 	if (AI_RbombardPlot(getDCMBombRange(), 20))
 	{
 		return;
 	}
-	// RevolutionDCM - end
-/************************************************************************************************/
-/* REVOLUTIONDCM							 END									 Glider1	*/
-/************************************************************************************************/
 
 	if (AI_guardCity(false, true, 3))
 	{
@@ -4042,11 +3999,6 @@ void CvUnitAI::AI_collateralMove()
 		return;
 	}
 
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					  09/18/09								jdog5000	  */
-	/*																							  */
-	/* Unit AI																					  */
-	/************************************************************************************************/
 	if (getGroup()->isStranded())
 	{
 		if (AI_load(UNITAI_ASSAULT_SEA, MISSIONAI_LOAD_ASSAULT, NO_UNITAI, -1, -1, -1, -1, MOVE_NO_ENEMY_TERRITORY, 1))
@@ -4054,15 +4006,11 @@ void CvUnitAI::AI_collateralMove()
 			return;
 		}
 	}
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD					   END												  */
-	/************************************************************************************************/
 
 	if (AI_safety(3))
 	{
 		return;
 	}
-
 	getGroup()->pushMission(MISSION_SKIP);
 	return;
 }
@@ -17837,25 +17785,10 @@ bool CvUnitAI::AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow)
 	return false;
 }
 
-/************************************************************************************************/
-/* REVOLUTIONDCM							05/24/08								Glider1	 */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-// RevolutionDCM - return this function to vanilla except for the archer bombard option
-// Returns true if a mission was pushed...
+
 bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool bAllowCities, bool bFollow)
 {
 	PROFILE_FUNC();
-
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
-	CvPlot* endTurnPlot = NULL;
-	int iSearchRange;
-	int iPathTurns;
-	int iValue;
-	int iBestValue;
-
 
 	FAssert(canMove());
 
@@ -17863,127 +17796,104 @@ bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool 
 	{
 		return true;
 	}
-	else if (iRange < 1)
+	if (iRange < 1)
 	{
 		return false;
 	}
 
-	if (bFollow)
-	{
-		iSearchRange = 1;
-	}
-	else
-	{
-		iSearchRange = AI_searchRange(iRange);
-	}
-
-	CvReachablePlotSet plotSet(getGroup(), MOVE_THROUGH_ENEMY, iSearchRange);
-
-	// RevolutionDCM - return this function to vanilla except for the archer bombard option
 	if (AI_rangeAttack(iRange))
 	{
 		return true;
 	}
 
+	const int iSearchRange = bFollow ? 1 : AI_searchRange(iRange);
+
+	CvReachablePlotSet plotSet(getGroup(), MOVE_THROUGH_ENEMY, iSearchRange);
+
 	if (getDomainType() == DOMAIN_LAND && AI_claimForts(&plotSet, 0, iRange + 1))
 	{
 		return true;
 	}
-
-	iBestValue = 0;
-	pBestPlot = NULL;
+	int iPathTurns;
+	int iBestValue = 0;
+	CvPlot* pBestPlot = NULL;
 
 	for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
 	{
 		FAssert(itr.stepDistance() <= iSearchRange);
-		//	Have we already considered this plot in a previous invocation?
-		int iOpaqueInfo = itr.getOpaqueInfo(ACTIVITY_ID_ANY_ATTACK);
-		if (iMinStack == 0 && bAllowCities && !bFollow)
-		{
-			if (plotOpaqueInfoMatches(iOpaqueInfo, ACTIVITY_ID_ANY_ATTACK, iOddsThreshold))
-			{
-				continue;
-			}
-		}
 
-		pLoopPlot = itr.plot();
-
-		if (CvSelectionGroup::getPathGenerator()->haveRouteLength(pLoopPlot, getGroup(), 0, iPathTurns) && iPathTurns > iRange)
+		if (iMinStack == 0 && bAllowCities && !bFollow
+		// Have we already considered this plot in a previous invocation?
+		&& plotOpaqueInfoMatches(itr.getOpaqueInfo(ACTIVITY_ID_ANY_ATTACK), ACTIVITY_ID_ANY_ATTACK, iOddsThreshold))
 		{
 			continue;
 		}
 
-		// Super Forts begin *AI_offense* - modified if statement so forts will be attacked too
-		if (((bAllowCities) || !(pLoopPlot->isCity(true))))
-			// Super Forts end
+		CvPlot* pLoopPlot = itr.plot();
+
+		if (CvSelectionGroup::getPathGenerator()->haveRouteLength(pLoopPlot, getGroup(), 0, iPathTurns) && iPathTurns > iRange
+		|| !bAllowCities && pLoopPlot->isCity(true)
+		|| !getGroup()->canEnterOrAttackPlot(pLoopPlot, true)
+		|| (!pLoopPlot->isVisible(getTeam(), false) || !pLoopPlot->isVisibleEnemyUnit(this))
+		&& (!pLoopPlot->isCity(true) || !AI_potentialEnemy(pLoopPlot->getTeam()))
+		|| pLoopPlot->getNumVisibleEnemyTargetUnits(this) < iMinStack)
 		{
-			if (getGroup()->canEnterOrAttackPlot(pLoopPlot, true))
+			continue;
+		}
+		int iValue = 0;
+		bool bWinLikely = false;
+		int iAdjustedOddsThreshold = 0;
+
+		PROFILE("CvUnitAI::AI_anyAttack.FoundTarget");
+
+		if (pLoopPlot->getNumVisiblePotentialEnemyDefenders(this) > 0)
+		{
+			iValue += getGroup()->AI_attackOdds(pLoopPlot, true, false, &bWinLikely, iOddsThreshold);
+			iAdjustedOddsThreshold = AI_finalOddsThreshold(pLoopPlot, iOddsThreshold);
+			if (bWinLikely && pLoopPlot->isCity(false))
 			{
-				// Super Forts begin *AI_offense* - modified if statement so forts will be attacked too
-				if ((pLoopPlot->isVisible(getTeam(), false) && pLoopPlot->isVisibleEnemyUnit(this)) || (pLoopPlot->isCity(true) && AI_potentialEnemy(pLoopPlot->getTeam())))
-					// Super Forts end
+				iValue += iOddsThreshold;
+			}
+		}
+		else
+		{
+			iValue += 100 * pLoopPlot->getNumVisiblePotentialEnemyDefenderless(this);
+			iAdjustedOddsThreshold = 1;
+			bWinLikely = true;
+		}
+
+		//	Increase value on our territory since we really want to get rid of enemies there even
+		//	if it costs us a few losses
+		if (pLoopPlot->getOwner() == getOwner() && bWinLikely)
+		{
+			iValue *= 2;
+		}
+
+		if (iMinStack == 0 && bAllowCities && !bFollow && iAdjustedOddsThreshold != 0)
+		{
+			itr.setOpaqueInfo(ACTIVITY_ID_ANY_ATTACK, 1 + 100 * iValue * iOddsThreshold / iAdjustedOddsThreshold);
+		}
+
+		if (iValue > iBestValue && iValue >= iAdjustedOddsThreshold)
+		{
+			PROFILE("CvUnitAI::AI_anyAttack.SearchPath");
+
+			if (!atPlot(pLoopPlot) && (bFollow ? getGroup()->canEnterPlot(pLoopPlot, true) : generatePath(pLoopPlot, 0, true, &iPathTurns, iRange)))
+			{
+				PROFILE("CvUnitAI::AI_anyAttack.SuccessfulPath");
+
+				CvPlot* endTurnPlot = getPathEndTurnPlot();
+
+				if (endTurnPlot == pLoopPlot || !exposedToDanger(bFollow ? pLoopPlot : endTurnPlot, iOddsThreshold))
 				{
-					if (pLoopPlot->getNumVisibleEnemyUnits(this) >= iMinStack)
+					iBestValue = iValue;
+					pBestPlot = bFollow ? pLoopPlot : endTurnPlot;
+					FAssert(!atPlot(pBestPlot));
+
+					if (iValue > iAdjustedOddsThreshold + (100 - iAdjustedOddsThreshold) / 2)
 					{
-						bool bWinLikely = false;
-						int iAdjustedOddsThreshold = 0;
-
-						PROFILE("CvUnitAI::AI_anyAttack.FoundTarget");
-						if (pLoopPlot->getNumVisiblePotentialEnemyDefenders(this) > 0)
-						{
-							iValue = getGroup()->AI_attackOdds(pLoopPlot, true, false, &bWinLikely, iOddsThreshold);
-							iAdjustedOddsThreshold = AI_finalOddsThreshold(pLoopPlot, iOddsThreshold);
-							if (bWinLikely && pLoopPlot->isCity(false))
-							{
-								iValue += iOddsThreshold;
-							}
-						}
-						else
-						{
-							iValue = 100 * pLoopPlot->getNumVisiblePotentialEnemyDefenderless(this);
-							iAdjustedOddsThreshold = 1;
-							bWinLikely = true;
-						}
-
-						//	Increase value on our territory since we really want to get rid of enemies there even
-						//	if it costs us a few losses
-						if (pLoopPlot->getOwner() == getOwner() && bWinLikely)
-						{
-							iValue *= 2;
-						}
-
-						if (iMinStack == 0 && bAllowCities && !bFollow)
-						{
-							if (iAdjustedOddsThreshold != 0)
-							{
-								itr.setOpaqueInfo(ACTIVITY_ID_ANY_ATTACK, 1 + (100 * iValue * iOddsThreshold) / iAdjustedOddsThreshold);
-							}
-						}
-
-						if (iValue > iBestValue && iValue >= iAdjustedOddsThreshold)
-						{
-							PROFILE("CvUnitAI::AI_anyAttack.SearchPath");
-							if (!atPlot(pLoopPlot) && ((bFollow) ? getGroup()->canEnterPlot(pLoopPlot, true) : (generatePath(pLoopPlot, 0, true, &iPathTurns, iRange))))
-							{
-								PROFILE("CvUnitAI::AI_anyAttack.SuccessfulPath");
-
-								endTurnPlot = getPathEndTurnPlot();
-
-								if (endTurnPlot == pLoopPlot || !exposedToDanger((bFollow) ? pLoopPlot : endTurnPlot, iOddsThreshold))
-								{
-									iBestValue = iValue;
-									pBestPlot = ((bFollow) ? pLoopPlot : endTurnPlot);
-									FAssert(!atPlot(pBestPlot));
-
-									if (iValue > iAdjustedOddsThreshold + (100 - iAdjustedOddsThreshold) / 2)
-									{
-										//	Result is significantly better than we've been asked to find so cut
-										//	off the search now
-										break;
-									}
-								}
-							}
-						}
+						// Result is significantly better than we've been asked to find so cut off the search now
+						break;
 					}
 				}
 			}
@@ -17991,19 +17901,19 @@ bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool 
 	}
 
 #ifdef VALIDITY_CHECK_NEW_ATTACK_SEARCH
-	CvPlot* pNewAlgorithmBestPlot = pBestPlot;
-	int iNewAlgorithmBestValue = iBestValue;
-	int iDX, iDY;
-
-	iBestValue = 0;
-	pBestPlot = NULL;
-
 	{
+		CvPlot* pNewAlgorithmBestPlot = pBestPlot;
+		int iNewAlgorithmBestValue = iBestValue;
+		int iDX, iDY;
+
+		iBestValue = 0;
+		pBestPlot = NULL;
+
 		for (iDX = -(iSearchRange); iDX <= iSearchRange; iDX++)
 		{
 			for (iDY = -(iSearchRange); iDY <= iSearchRange; iDY++)
 			{
-				pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
+				CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
 				if (pLoopPlot != NULL)
 				{
@@ -18016,7 +17926,7 @@ bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool 
 								if (pLoopPlot->getNumVisiblePotentialEnemyDefenders(this) >= iMinStack)
 								{
 									PROFILE("CvUnitAI::AI_anyAttack.FoundTarget");
-									iValue = getGroup()->AI_attackOdds(pLoopPlot, true);
+									const int iValue = getGroup()->AI_attackOdds(pLoopPlot, true);
 
 									if (iValue > iBestValue && iValue >= AI_finalOddsThreshold(pLoopPlot, iOddsThreshold))
 									{
@@ -18041,10 +17951,9 @@ bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool 
 				}
 			}
 		}
+		FAssert((pNewAlgorithmBestPlot == NULL) == (pBestPlot == NULL) || getDomainType() != DOMAIN_SEA);
+		FAssert(iNewAlgorithmBestValue == iBestValue || getDomainType() != DOMAIN_SEA);
 	}
-
-	FAssert((pNewAlgorithmBestPlot == NULL) == (pBestPlot == NULL) || getDomainType() != DOMAIN_SEA);
-	FAssert(iNewAlgorithmBestValue == iBestValue || getDomainType() != DOMAIN_SEA);
 #endif
 
 	if (pBestPlot != NULL)
@@ -18052,151 +17961,10 @@ bool CvUnitAI::AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack, bool 
 		FAssert(!atPlot(pBestPlot));
 		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), ((bFollow) ? MOVE_DIRECT_ATTACK : 0));
 	}
-
 	return false;
 }
-// RevolutionDCM end
-/************************************************************************************************/
-/* REVOLUTIONDCM							END									 Glider1	 */
-/************************************************************************************************/
-
-bool CvUnitAI::AI_attackTargets(int iRange, int iOddsThreshold, int iMinStack, bool bAllowCities, bool bFollow)
-{
-	PROFILE_FUNC();
-
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
-	CvPlot* endTurnPlot = NULL;
-	int iSearchRange;
-	int iPathTurns;
-	int iValue;
-	int iBestValue;
-
-	if (AI_ambush(iOddsThreshold, true))
-	{
-		return true;
-	}
-
-	FAssert(canMove());
-	iSearchRange = AI_searchRange(iRange);
 
 
-	CvReachablePlotSet plotSet(getGroup(), MOVE_THROUGH_ENEMY, iSearchRange);
-
-	if (getDomainType() == DOMAIN_LAND && AI_claimForts(&plotSet, 0, iRange + 1))
-	{
-		return true;
-	}
-
-	iBestValue = 0;
-	pBestPlot = NULL;
-
-
-	for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr)
-	{
-		FAssert(itr.stepDistance() <= iSearchRange);
-		//	Have we already considered this plot in a previous invocation?
-		int iOpaqueInfo = itr.getOpaqueInfo(ACTIVITY_ID_ANY_ATTACK);
-		if (iMinStack == 0 && bAllowCities && !bFollow)
-		{
-			if (plotOpaqueInfoMatches(iOpaqueInfo, ACTIVITY_ID_ANY_ATTACK, iOddsThreshold))
-			{
-				continue;
-			}
-		}
-
-		pLoopPlot = itr.plot();
-
-		if (CvSelectionGroup::getPathGenerator()->haveRouteLength(pLoopPlot, getGroup(), 0, iPathTurns) && iPathTurns > iRange)
-		{
-			continue;
-		}
-
-		// Super Forts begin *AI_offense* - modified if statement so forts will be attacked too
-		if (((bAllowCities) || !(pLoopPlot->isCity(true))))
-			// Super Forts end
-		{
-			if (getGroup()->canEnterOrAttackPlot(pLoopPlot, true))
-			{
-				// Super Forts begin *AI_offense* - modified if statement so forts will be attacked too
-				if ((pLoopPlot->isVisible(getTeam(), false) && pLoopPlot->isVisibleEnemyUnit(this)) || (pLoopPlot->isCity(true) && AI_potentialEnemy(pLoopPlot->getTeam())))
-					// Super Forts end
-				{
-					if (pLoopPlot->getNumVisibleEnemyTargetUnits(this) >= iMinStack)
-					{
-						bool bWinLikely = false;
-						int iAdjustedOddsThreshold = 0;
-
-						PROFILE("CvUnitAI::AI_anyAttack.FoundTarget");
-						if (pLoopPlot->getNumVisiblePotentialEnemyDefenders(this) > 0)
-						{
-							iValue = getGroup()->AI_attackOdds(pLoopPlot, true, false, &bWinLikely, iOddsThreshold);
-							iAdjustedOddsThreshold = AI_finalOddsThreshold(pLoopPlot, iOddsThreshold);
-							if (bWinLikely && pLoopPlot->isCity(false))
-							{
-								iValue += iOddsThreshold;
-							}
-						}
-						else
-						{
-							iValue = 100 * pLoopPlot->getNumVisiblePotentialEnemyDefenderless(this);
-							iAdjustedOddsThreshold = 1;
-							bWinLikely = true;
-						}
-
-						//	Increase value on our territory since we really want to get rid of enemies there even
-						//	if it costs us a few losses
-						if (pLoopPlot->getOwner() == getOwner() && bWinLikely)
-						{
-							iValue *= 2;
-						}
-
-						if (iMinStack == 0 && bAllowCities && !bFollow)
-						{
-							if (iAdjustedOddsThreshold != 0)
-							{
-								itr.setOpaqueInfo(ACTIVITY_ID_ANY_ATTACK, 1 + (100 * iValue * iOddsThreshold) / iAdjustedOddsThreshold);
-							}
-						}
-
-						if (iValue > iBestValue && iValue >= iAdjustedOddsThreshold)
-						{
-							PROFILE("CvUnitAI::AI_anyAttack.SearchPath");
-							if (!atPlot(pLoopPlot) && ((bFollow) ? getGroup()->canEnterPlot(pLoopPlot, true) : (generatePath(pLoopPlot, 0, true, &iPathTurns, iRange))))
-							{
-								PROFILE("CvUnitAI::AI_anyAttack.SuccessfulPath");
-
-								endTurnPlot = getPathEndTurnPlot();
-
-								if (endTurnPlot == pLoopPlot || !exposedToDanger((bFollow) ? pLoopPlot : endTurnPlot, iOddsThreshold))
-								{
-									iBestValue = iValue;
-									pBestPlot = ((bFollow) ? pLoopPlot : endTurnPlot);
-									FAssert(!atPlot(pBestPlot));
-
-									if (iValue > iAdjustedOddsThreshold + (100 - iAdjustedOddsThreshold) / 2)
-									{
-										//	Result is significantly better than we've been asked to find so cut
-										//	off the search now
-										break;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	if (pBestPlot != NULL)
-	{
-		FAssert(!atPlot(pBestPlot));
-		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), ((bFollow) ? MOVE_DIRECT_ATTACK : 0));
-	}
-
-	return false;
-}
 // Returns true if a mission was pushed...
 bool CvUnitAI::AI_rangeAttack(int iRange)
 {
@@ -18464,87 +18232,70 @@ bool CvUnitAI::AI_pirateBlockade()
 {
 	PROFILE_FUNC();
 
-	int iPathTurns;
-	int iValue;
-	int iI;
-
 	std::vector<int> aiDeathZone(GC.getMap().numPlots(), 0);
 
 	CvReachablePlotSet plotSet(getGroup(), 0, MAX_INT);
 
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-		if (plotSet.find(pLoopPlot) != plotSet.end())
+		CvPlot* plotX = GC.getMap().plotByIndex(iI);
+
+		if (plotSet.find(plotX) != plotSet.end() && plotX->isOwned() && plotX->getTeam() != getTeam())
 		{
-			if (pLoopPlot->isOwned() && (pLoopPlot->getTeam() != getTeam()))
+			int iBestHostileMoves = 0;
+			foreach_(CvUnit * unitX, plotX->units())
 			{
-				int iBestHostileMoves = 0;
-				foreach_(CvUnit * pLoopUnit, pLoopPlot->units())
+				if (isEnemy(unitX->getTeam(), unitX->plot(), unitX)
+				&&  unitX->getDomainType() == DOMAIN_SEA
+				&& !unitX->isInvisible(getTeam(), false)
+				&&  unitX->canAttack()
+				&&  unitX->currEffectiveStr(NULL, NULL, NULL) > currEffectiveStr(plotX, unitX, NULL))
 				{
-					if (isEnemy(pLoopUnit->getTeam(), pLoopUnit->plot(), pLoopUnit))
-					{
-						if (pLoopUnit->getDomainType() == DOMAIN_SEA && !pLoopUnit->isInvisible(getTeam(), false))
-						{
-							if (pLoopUnit->canAttack())
-							{
-								if (pLoopUnit->currEffectiveStr(NULL, NULL, NULL) > currEffectiveStr(pLoopPlot, pLoopUnit, NULL))
-								{
-									//Fuyu: No (rail)roads on water, always movement cost 1. Rounding up of course
-									iBestHostileMoves = std::max(iBestHostileMoves, (pLoopUnit->getMoves() + GC.getMOVE_DENOMINATOR() - 1) / GC.getMOVE_DENOMINATOR());
-								}
-							}
-						}
-					}
+					//Fuyu: No (rail)roads on water, always movement cost 1. Rounding up of course
+					iBestHostileMoves = std::max(iBestHostileMoves, (unitX->getMoves() + GC.getMOVE_DENOMINATOR() - 1) / GC.getMOVE_DENOMINATOR());
 				}
-				if (iBestHostileMoves > 0)
+			}
+			if (iBestHostileMoves > 0)
+			{
+				foreach_(const CvPlot * pRangePlot, plotX->rect(iBestHostileMoves, iBestHostileMoves))
 				{
-					foreach_(const CvPlot * pRangePlot, pLoopPlot->rect(iBestHostileMoves, iBestHostileMoves))
-					{
-						aiDeathZone[GC.getMap().plotNum(pRangePlot->getX(), pRangePlot->getY())]++;
-					}
+					aiDeathZone[GC.getMap().plotNum(pRangePlot->getX(), pRangePlot->getY())]++;
 				}
 			}
 		}
 	}
 
-	bool bIsInDanger = aiDeathZone[GC.getMap().plotNum(getX(), getY())] > 0;
-	bool bNeedsHeal = (getDamage() > 0);
-	bool bHasTerrainDamage = (plot()->getTotalTurnDamage(getGroup()) > 0 || plot()->getFeatureTurnDamage() > 0);
+	const bool bIsInDanger = aiDeathZone[GC.getMap().plotNum(getX(), getY())] > 0;
+	const bool bHasTerrainDamage = plot()->getTotalTurnDamage(getGroup()) > 0 || plot()->getFeatureTurnDamage() > 0;
+	const bool bNeedsHeal = getDamage() > 0;
+	const bool bHurtAndInWildernessOrInBadShape = bNeedsHeal && (!plot()->isOwned() && !plot()->isAdjacentOwned() || getDamagePercent() > 25);
 
-	if (!bIsInDanger)
+	if (!bIsInDanger && bHurtAndInWildernessOrInBadShape)
 	{
-		if (bNeedsHeal)
+		// If we only have damage explained by the current plot for one turn
+		//	don't use that as an excuse to immediately turn around and go hide in a city!
+		if (!bHasTerrainDamage || getDamage() > (plot()->getTotalTurnDamage(getGroup()) + plot()->getFeatureTurnDamage()))
 		{
-			if ((!plot()->isOwned() && !plot()->isAdjacentOwned()) || getDamagePercent() > 25)
+			if (AI_retreatToCity(false, false, 1 + getDamagePercent() / 20))
 			{
-				//	If we only have damage explained by teh curretn plot for one turn
-				//	don't use that as an excuse to immediately turn around and go hide
-				//	in a city!
-				if (!bHasTerrainDamage || getDamage() > (plot()->getTotalTurnDamage(getGroup()) + plot()->getFeatureTurnDamage()))
-				{
-					if (AI_retreatToCity(false, false, 1 + getDamagePercent() / 20))
-					{
-						return true;
-					}
-				}
-
-				if (!bHasTerrainDamage)
-				{
-					getGroup()->pushMission(MISSION_SKIP);
-					return true;
-				}
+				return true;
 			}
 		}
-	}
 
+		if (!bHasTerrainDamage)
+		{
+			getGroup()->pushMission(MISSION_SKIP);
+			return true;
+		}
+	}
+	int iPathTurns;
 	int iBestValue = 0;
 	CvPlot* pBestPlot = NULL;
 	CvPlot* pBestBlockadePlot = NULL;
 	bool bBestIsForceMove = false;
 	bool bBestIsMove = false;
 
-	for (iI = 0; iI < GC.getMap().numPlots(); iI++)
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 	{
 		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 
@@ -18586,20 +18337,16 @@ bool CvUnitAI::AI_pirateBlockade()
 								}
 							}
 						}
-						iValue = iPopulationValue;
-
-						iValue *= 1000;
-
-						iValue /= 16 + iBlockadedCount;
+						int iValue = 1000 * iPopulationValue;
 
 						if (atPlot(pLoopPlot))
 						{
 							iValue *= 3;
 						}
+						iValue /= 16 + iBlockadedCount;
 
-						int iDeath = aiDeathZone[GC.getMap().plotNum(pLoopPlot->getX(), pLoopPlot->getY())];
+						const int iDeath = aiDeathZone[GC.getMap().plotNum(pLoopPlot->getX(), pLoopPlot->getY())];
 
-						bool bForceMove = false;
 						if (iDeath)
 						{
 							iValue /= 10;
@@ -18610,7 +18357,7 @@ bool CvUnitAI::AI_pirateBlockade()
 						CvReachablePlotSet::const_iterator itr = plotSet.find(pLoopPlot);
 
 						FAssert(itr != plotSet.end());
-						int iMinTurns = itr.stepDistance() / baseMoves() + 1;
+						const int iMinTurns = itr.stepDistance() / baseMoves() + 1;
 
 						if (iMinTurns <= 2 && !pLoopPlot->isAdjacentOwned() && bIsInDanger && iPopulationValue == 0)
 						{
@@ -18628,20 +18375,19 @@ bool CvUnitAI::AI_pirateBlockade()
 
 						if (iBestEstimateValue > iBestValue && generatePath(pLoopPlot, MOVE_AVOID_ENEMY_WEIGHT_3, true, &iPathTurns))
 						{
-							if (!iDeath && bIsInDanger && (iPathTurns <= 2) && (0 == iPopulationValue))
+							bool bForceMove = false;
+
+							if (!iDeath && bIsInDanger
+							&& iPathTurns < 3 && 0 == iPopulationValue
+							&& getPathMovementRemaining() == 0
+							&& !pLoopPlot->isAdjacentOwned())
 							{
-								if (getPathMovementRemaining() == 0)
+								const int iRand = GC.getGame().getSorenRandNum(2500, "AI Pirate Retreat");
+								iValue += iRand;
+								if (iRand > 1000)
 								{
-									if (!pLoopPlot->isAdjacentOwned())
-									{
-										int iRand = GC.getGame().getSorenRandNum(2500, "AI Pirate Retreat");
-										iValue += iRand;
-										if (iRand > 1000)
-										{
-											iValue += GC.getGame().getSorenRandNum(2500, "AI Pirate Retreat");
-											bForceMove = true;
-										}
-									}
+									iValue += GC.getGame().getSorenRandNum(2500, "AI Pirate Retreat");
+									bForceMove = true;
 								}
 							}
 
@@ -18649,13 +18395,12 @@ bool CvUnitAI::AI_pirateBlockade()
 							{
 								iValue /= iPathTurns + 1;
 							}
+							const bool bMove = iPathTurns == 1 && getPathMovementRemaining() > 0;
 
-							bool bMove = (iPathTurns == 1) && (getPathMovementRemaining() > 0);
 							if (bMove && !atPlot(pLoopPlot))
 							{
 								iValue *= 2;
 							}
-
 							if (iValue > iBestValue)
 							{
 								iBestValue = iValue;
@@ -18671,7 +18416,7 @@ bool CvUnitAI::AI_pirateBlockade()
 		}
 	}
 
-	if ((pBestPlot != NULL) && (pBestBlockadePlot != NULL))
+	if (pBestPlot != NULL && pBestBlockadePlot != NULL)
 	{
 		FAssert(canPlunder(pBestBlockadePlot));
 
@@ -18680,85 +18425,53 @@ bool CvUnitAI::AI_pirateBlockade()
 			getGroup()->pushMission(MISSION_PLUNDER, -1, -1, 0, (getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BLOCKADE, pBestBlockadePlot);
 			return true;
 		}
-		else
+		FAssert(!atPlot(pBestPlot));
+
+		if (bNeedsHeal)
 		{
-			FAssert(!atPlot(pBestPlot));
+			CvPlot* pBestStopAndHealPlot = pBestPlot;
 
-			if (bNeedsHeal)
+			// Examine plots we move through in this turn and see if any is suitable to stop and heal in
+			generatePath(pBestPlot, MOVE_AVOID_ENEMY_WEIGHT_3, true, &iPathTurns);
+			CvPath::const_iterator itr = getGroup()->getPath().begin();
+
+			while (itr != getGroup()->getPath().end())
 			{
-				CvPlot* pBestStopAndHealPlot = pBestPlot;
+				CvPlot* pPlot = itr.plot();
 
-				//	Examine plots we move through in this turn and see if any is suitable to stop and heal in
-				generatePath(pBestPlot, MOVE_AVOID_ENEMY_WEIGHT_3, true, &iPathTurns);
-				CvPath::const_iterator itr = getGroup()->getPath().begin();
-
-				while (itr != getGroup()->getPath().end())
+				// If an intermediary plot is one that the heal decsion logic (near the start of this method)
+				//	would choose to heal in, then just stop there on our way
+				if (bHurtAndInWildernessOrInBadShape
+				&& aiDeathZone[GC.getMap().plotNum(pPlot->getX(), pPlot->getY())] < 1
+				&& pPlot->getTotalTurnDamage(getGroup()) < 1
+				&& pPlot->getFeatureTurnDamage() < 1)
 				{
-					CvPlot* pPlot = itr.plot();
-
-					//	If an intermediary plot is one that the heal decsion logic (near the start of this method)
-					//	would choose to heal in, then just stop there on our way
-					if ((!pPlot->isOwned() && !pPlot->isAdjacentOwned()) || getDamagePercent() > 25)
-					{
-						const bool bIsInDanger = aiDeathZone[GC.getMap().plotNum(pPlot->getX(), pPlot->getY())] > 0;
-						const bool bHasTerrainDamage = (pPlot->getTotalTurnDamage(getGroup()) > 0 || pPlot->getFeatureTurnDamage() > 0);
-						if (!bIsInDanger && !bHasTerrainDamage)
-						{
-							pBestStopAndHealPlot = pPlot;
-						}
-					}
-
-					if (pPlot == pBestPlot)
-					{
-						break;
-					}
-
-					++itr;
+					pBestStopAndHealPlot = pPlot;
 				}
 
-				pBestPlot = pBestStopAndHealPlot;
-			}
-
-			if (bBestIsForceMove)
-			{
-				/************************************************************************************************/
-				/* BETTER_BTS_AI_MOD					  01/01/09								jdog5000	  */
-				/*																							  */
-				/* Pirate AI																					*/
-				/************************************************************************************************/
-				/* original bts code
-								getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY());
-				*/
-				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_AVOID_ENEMY_WEIGHT_3);
-				/************************************************************************************************/
-				/* BETTER_BTS_AI_MOD					   END												  */
-				/************************************************************************************************/
-			}
-			else
-			{
-				/************************************************************************************************/
-				/* BETTER_BTS_AI_MOD					  01/01/09								jdog5000	  */
-				/*																							  */
-				/* Pirate AI																					*/
-				/************************************************************************************************/
-				/* original bts code
-								getGroup()->pushMission(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0, false, false, MISSIONAI_BLOCKADE, pBestBlockadePlot);
-				*/
-				if (getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_AVOID_ENEMY_WEIGHT_3, false, false, MISSIONAI_BLOCKADE, pBestBlockadePlot))
-					/************************************************************************************************/
-					/* BETTER_BTS_AI_MOD					   END												  */
-					/************************************************************************************************/
+				if (pPlot == pBestPlot)
 				{
-					if (bBestIsMove)
-					{
-						getGroup()->pushMission(MISSION_PLUNDER, -1, -1, 0, (getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BLOCKADE, pBestBlockadePlot);
-					}
-					return true;
+					break;
 				}
+				++itr;
 			}
+			pBestPlot = pBestStopAndHealPlot;
+		}
+
+		if (bBestIsForceMove)
+		{
+			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_AVOID_ENEMY_WEIGHT_3);
+		}
+
+		if (getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_AVOID_ENEMY_WEIGHT_3, false, false, MISSIONAI_BLOCKADE, pBestBlockadePlot))
+		{
+			if (bBestIsMove)
+			{
+				getGroup()->pushMission(MISSION_PLUNDER, -1, -1, 0, (getGroup()->getLengthMissionQueue() > 0), false, MISSIONAI_BLOCKADE, pBestBlockadePlot);
+			}
+			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -18813,12 +18526,7 @@ bool CvUnitAI::AI_seaBombardRange(int iMaxRange)
 				int iPathTurns;
 				if (generatePath(pLoopPlot, 0, true, &iPathTurns))
 				{
-					/********************************************************************************/
-					/* 	BETTER_BTS_AI_MOD						6/24/08				jdog5000	*/
-					/* 																			*/
-					/* 	Naval AI																*/
-					/********************************************************************************/
-										// Loop construction doesn't guarantee we can get there anytime soon, could be on other side of narrow continent
+					// Loop construction doesn't guarantee we can get there anytime soon, could be on other side of narrow continent
 					if (iPathTurns <= (1 + iMaxRange / std::max(1, baseMoves())))
 					{
 						// Check only for supporting our own ground troops first, if none will look for another target
@@ -18849,21 +18557,13 @@ bool CvUnitAI::AI_seaBombardRange(int iMaxRange)
 								}
 							}
 						}
-						/********************************************************************************/
-						/* 	BETTER_BTS_AI_MOD							END							*/
-						/********************************************************************************/
 					}
 				}
 			}
 		}
 	}
 
-	/********************************************************************************/
-	/* 	BETTER_BTS_AI_MOD						6/24/08				jdog5000	*/
-	/* 																			*/
-	/* 	Naval AI																*/
-	/********************************************************************************/
-		// If no troops of ours to support, check for other bombard targets
+	// If no troops of ours to support, check for other bombard targets
 	if ((pBestPlot == NULL) && (pBestBombardPlot == NULL))
 	{
 		if (AI_getUnitAIType() != UNITAI_ASSAULT_SEA)
@@ -18887,21 +18587,12 @@ bool CvUnitAI::AI_seaBombardRange(int iMaxRange)
 								int iValue = std::min(20, pBombardCity->getDefenseModifier(false) / 2);
 
 								// Inclination to support attacks by others
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  08/20/09								jdog5000	  */
-/*																							  */
-/* Unit AI, Efficiency																		  */
-/************************************************************************************************/
-								//if( GET_PLAYER(pBombardCity->getOwner()).AI_getPlotDanger(pBombardCity->plot(), 2, false) > 0 )
 								if (GET_PLAYER(pBombardCity->getOwner()).AI_getAnyPlotDanger(pBombardCity->plot(), 2, false))
 								{
 									iValue += 60;
 								}
-								/************************************************************************************************/
-								/* BETTER_BTS_AI_MOD					   END												  */
-								/************************************************************************************************/
 
-																// Inclination to bombard a different nearby city to extend the reach of blockade
+								// Inclination to bombard a different nearby city to extend the reach of blockade
 								if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pBombardCity->plot(), MISSIONAI_BLOCKADE, getGroup(), 3) == 0)
 								{
 									iValue += 35 + pBombardCity->getPopulation();
@@ -18939,9 +18630,6 @@ bool CvUnitAI::AI_seaBombardRange(int iMaxRange)
 			}
 		}
 	}
-	/********************************************************************************/
-	/* 	BETTER_BTS_AI_MOD							END							*/
-	/********************************************************************************/
 
 	if ((pBestPlot != NULL) && (pBestBombardPlot != NULL))
 	{
@@ -18950,30 +18638,13 @@ bool CvUnitAI::AI_seaBombardRange(int iMaxRange)
 			// if we are at the plot from which to bombard, and we have a unit that can bombard this turn, do it
 			if (bBombardUnitCanBombardNow && pGroup->canBombard(pBestBombardPlot))
 			{
-				/************************************************************************************************/
-				/* REVOLUTIONDCM							05/24/08								Glider1	 */
-				/*																							  */
-				/*																							  */
-				/************************************************************************************************/
-								// RevolutionDCM - sea bombard AI formally DCM 1.7 AI_RbombardCity()
-								// Dale - RB: Field Bombard START
-								//if (AI_RbombardCity())
-								//{
-								//	return;
-								//}
 				if (AI_RbombardNaval())
 				{
 					return true;
 				}
-				// Dale - RB: Field Bombard END
-
-				// RevolutionDCM - bug fix 04/07/2009 DCM 1.7 accidently omits this line - thanks Arian for reporting
 				getGroup()->pushMission(MISSION_BOMBARD, -1, -1, 0, false, false, MISSIONAI_BLOCKADE, pBestBombardPlot);
-				/************************************************************************************************/
-				/* REVOLUTIONDCM							END									 Glider1	 */
-				/************************************************************************************************/
 
-								// if city bombarded enough, wake up any units that were waiting to bombard this city
+				// if city bombarded enough, wake up any units that were waiting to bombard this city
 				CvCity* pBombardCity = bombardTarget(pBestBombardPlot); // is NULL if city cannot be bombarded any more
 				if (pBombardCity == NULL || pBombardCity->getDefenseDamage() < ((GC.getMAX_CITY_DEFENSE_DAMAGE() * 5) / 6))
 				{
@@ -18989,19 +18660,13 @@ bool CvUnitAI::AI_seaBombardRange(int iMaxRange)
 			{
 				getGroup()->pushMission(MISSION_SKIP);
 			}
-
 			return true;
 		}
-		else
-		{
-			FAssert(!atPlot(pBestPlot));
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0, false, false, MISSIONAI_BLOCKADE, pBestBombardPlot);
-		}
+		FAssert(!atPlot(pBestPlot));
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0, false, false, MISSIONAI_BLOCKADE, pBestBombardPlot);
 	}
-
 	return false;
 }
-
 
 
 // Returns true if a mission was pushed...
@@ -19390,11 +19055,8 @@ bool CvUnitAI::AI_found()
 		{
 			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_FOUND, pBestFoundPlot);
 		}
-
 		getGroup()->pushMission(MISSION_SKIP);
 		return true;
-
-		//return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_SAFE_TERRITORY, false, false, MISSIONAI_FOUND, pBestFoundPlot);
 	}
 	return false;
 }
@@ -19448,29 +19110,23 @@ bool CvUnitAI::AI_foundRange(int iRange, bool bFollow)
 		}
 	}
 
-	if ((pBestPlot != NULL) && (pBestFoundPlot != NULL))
+	if (pBestPlot != NULL && pBestFoundPlot != NULL)
 	{
 		if (atPlot(pBestFoundPlot))
 		{
 			getGroup()->pushMission(MISSION_FOUND, -1, -1, 0, false, false, MISSIONAI_FOUND, pBestFoundPlot);
 			return true;
 		}
-		else if (!bFollow)
+		if (!bFollow)
 		{
 			if (generateSafePathforVulnerable(pBestPlot, &iPathTurns))
 			{
 				return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_IGNORE_DANGER, false, false, MISSIONAI_FOUND, pBestFoundPlot);
 			}
-			else
-			{
-				getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
-				return true;
-			}
-			//FAssert(!atPlot(pBestPlot));
-			//return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_SAFE_TERRITORY, false, false, MISSIONAI_FOUND, pBestFoundPlot);
+			getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_WAIT_FOR_ESCORT);
+			return true;
 		}
 	}
-
 	return false;
 }
 
