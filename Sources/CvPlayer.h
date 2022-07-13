@@ -62,6 +62,7 @@ public:
 	void setIdleCity(CvCity* city, const bool bNewValue);
 	bool hasIdleCity() const;
 	CvCity* getIdleCity() const;
+	bool isIdleCity(CvCity* city) const;
 
 protected:
 	CvGameObjectPlayer m_GameObject;
