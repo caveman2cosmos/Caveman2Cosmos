@@ -30517,17 +30517,6 @@ void CvPlayer::checkReligiousDisablingAllBuildings()
 	for_each(cities(), CvCity::fn::checkReligiousDisablingAllBuildings());
 }
 
-
-void CvPlayer::doGoldenAgebyPercentage(int iPercent)
-{
-	int iRounds = 0;
-	iRounds += getGoldenAgeLength();
-	iRounds *= iPercent;
-	iRounds /= 100;
-	iRounds = std::max(1, iRounds);
-	changeGoldenAgeTurns(iRounds);
-}
-
 int CvPlayer::getBaseMergeSelectionUnit() const
 {
 	return m_iBaseMergeSelection;

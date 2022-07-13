@@ -2216,8 +2216,6 @@ public:
 
 	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
-
-	void doGoldenAgebyPercentage(int iPercent);
 	//TB Traits end
 
 	void startDeferredPlotGroupBonusCalculation();
