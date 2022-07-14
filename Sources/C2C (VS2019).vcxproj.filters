@@ -594,9 +594,6 @@
     <ClCompile Include="CyBoolExprInterface.cpp">
       <Filter>Source\Infrastructure\DataReading\DataHandling\XML\BoolExpr</Filter>
     </ClCompile>
-    <ClCompile Include="CyCity.cpp">
-      <Filter>Source\Base\City</Filter>
-    </ClCompile>
     <ClCompile Include="CyCityInterface1.cpp">
       <Filter>Source\Base\City\PythonInterfaces</Filter>
     </ClCompile>
@@ -740,6 +737,18 @@
     </ClCompile>
     <ClCompile Include="SCyDebug.cpp">
       <Filter>Source\Tools\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="CyCity.cpp">
+      <Filter>Source\Base\City\PythonInterfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="CityOutputHistory.cpp">
+      <Filter>Source\UI\City</Filter>
+    </ClCompile>
+    <ClCompile Include="CounterSet.cpp">
+      <Filter>Source\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="CyCityOutputHistoryInterface.cpp">
+      <Filter>Source\UI\City</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1181,9 +1190,6 @@
     <ClInclude Include="CvArtFileMgr.h">
       <Filter>Source\UI\ArtfileManager</Filter>
     </ClInclude>
-    <ClInclude Include="CyCity.h">
-      <Filter>Source\Base\City</Filter>
-    </ClInclude>
     <ClInclude Include="CheckSum.h">
       <Filter>Source\Tools\Debug</Filter>
     </ClInclude>
@@ -1249,6 +1255,15 @@
     </ClInclude>
     <ClInclude Include="CvGameTextMgr.h">
       <Filter>Source\UI\GameTextManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CyCity.h">
+      <Filter>Source\Base\City\PythonInterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="CityOutputHistory.h">
+      <Filter>Source\UI\City</Filter>
+    </ClInclude>
+    <ClInclude Include="CounterSet.h">
+      <Filter>Source\Tools</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
