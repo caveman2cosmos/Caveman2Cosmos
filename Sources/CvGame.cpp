@@ -521,13 +521,7 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 
 			if (player.isHuman())
 			{
-				foreach_(CvCity* city, player.cities())
-				{
-					if (!city->isProduction())
-					{
-						player.setIdleCity(city, true);
-					}
-				}
+				player.resetIdleCities();
 			}
 		}
 	}
@@ -2319,18 +2313,25 @@ again:
 		goto again;
 	}
 
-	if (GET_PLAYER(getActivePlayer()).isTurnActive()
+	if (kActivePlayer.isTurnActive()
 	&& !gDLL->getInterfaceIFace()->isDiploOrPopupWaiting()
 	&& !gDLL->getInterfaceIFace()->isFocused()
 	&&  gDLL->getInterfaceIFace()->getLengthSelectionList() == 0
 	&&  gDLL->getInterfaceIFace()->getHeadSelectedCity() == NULL)
 	{
-		if (GET_PLAYER(getActivePlayer()).hasIdleCity())
+		if (kActivePlayer.hasIdleCity())
 		{
-			CvCity* city = GET_PLAYER(getActivePlayer()).getIdleCity();
-			FAssert(city != NULL);
-			gDLL->getInterfaceIFace()->addSelectedCity(city, false);
-			GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+			CvCity* city = kActivePlayer.getIdleCity();
+			if (city)
+			{
+				gDLL->getInterfaceIFace()->addSelectedCity(city, false);
+				GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+			}
+			else
+			{
+				FErrorMsg("idleCity == NULL; fixing");
+				GET_PLAYER(getActivePlayer()).resetIdleCities();
+			}
 		}
 		else if (0 == (m_iTurnSlice % 8))
 		{

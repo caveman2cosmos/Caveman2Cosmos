@@ -30820,17 +30820,17 @@ bool CvPlayer::isAliveAndTeam(const TeamTypes eTeam, const bool bSameTeam, const
 	// Best to be on the safe side though
 }
 
-void CvPlayer::setIdleCity(CvCity* city, const bool bNewValue)
+void CvPlayer::setIdleCity(const int iCityID, const bool bNewValue)
 {
 	FAssert(bNewValue || !m_idleCities.empty());
-	std::vector<CvCity*>::iterator itr = find(m_idleCities.begin(), m_idleCities.end(), city);
+	std::vector<int>::iterator itr = find(m_idleCities.begin(), m_idleCities.end(), iCityID);
 
 	if (bNewValue)
 	{
 		if (itr == m_idleCities.end())
 		{
-			m_idleCities.push_back(city);
-			FAssert(!city->isProduction());
+			m_idleCities.push_back(iCityID);
+			FAssert(!getCity(iCityID)->isProduction());
 		}
 		else FErrorMsg("Tried to add a duplicate vector element!");
 	}
@@ -30844,15 +30844,28 @@ void CvPlayer::setIdleCity(CvCity* city, const bool bNewValue)
 CvCity* CvPlayer::getIdleCity() const
 {
 	FAssert(!m_idleCities.empty());
-	return m_idleCities[0];
+	return getCity(m_idleCities[0]);
 }
 
-bool CvPlayer::isIdleCity(CvCity* city) const
+bool CvPlayer::isIdleCity(const int iCityID) const
 {
-	return find(m_idleCities.begin(), m_idleCities.end(), city) != m_idleCities.end();
+	return find(m_idleCities.begin(), m_idleCities.end(), iCityID) != m_idleCities.end();
 }
 
 bool CvPlayer::hasIdleCity() const
 {
 	return !m_idleCities.empty();
+}
+
+void CvPlayer::resetIdleCities()
+{
+	m_idleCities.clear();
+
+	foreach_(CvCity* city, cities())
+	{
+		if (!city->isProduction())
+		{
+			setIdleCity(city->getID(), true);
+		}
+	}
 }

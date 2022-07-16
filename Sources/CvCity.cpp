@@ -180,6 +180,7 @@ CvCity::~CvCity()
 		CvDLLEntity::removeEntity();			// remove entity from engine
 		CvDLLEntity::destroyEntity();			// delete CvCityEntity and detach from us
 	}
+	FAssertMsg(!GET_PLAYER(eOwner).isIdleCity(getID()), "NULL City cached as idle!");
 
 	uninit();
 
@@ -253,7 +254,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	CvPlayer& player = GET_PLAYER(eOwner);
 	if (isHuman() || player.isHumanDisabled())
 	{
-		player.setIdleCity(this, true);
+		player.setIdleCity(getID(), true);
 	}
 	//--------------------------------
 	// Init non-saved data
@@ -1196,11 +1197,11 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 
 	if (m_orderQueue.empty() && (isHuman() || kOwner.isHumanDisabled()))
 	{
-		kOwner.setIdleCity(this, false);
+		kOwner.setIdleCity(getID(), false);
 	}
 	else
 	{
-		FAssertMsg(!kOwner.isIdleCity(this), "City with production is cached as idle!");
+		FAssertMsg(!kOwner.isIdleCity(getID()), "City with production is cached as idle!");
 	}
 
 	CvPlot* pPlot = plot();
@@ -15535,18 +15536,14 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 		default: FErrorMsg("iOrder did not match a valid option");
 	}
 
-	if (!bValid)
-	{
-		if (m_orderQueue.empty() && (isHuman() || owner.isHumanDisabled()))
-		{
-			owner.setIdleCity(this, true);
-		}
-		return;
-	}
-
 	if (m_orderQueue.empty() && (isHuman() || owner.isHumanDisabled()))
 	{
-		owner.setIdleCity(this, false);
+		owner.setIdleCity(getID(), !bValid);
+	}
+
+	if (!bValid)
+	{
+		return;
 	}
 
 	if (bAppend)
@@ -15982,13 +15979,12 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 		}
 	}
 
-	if (m_orderQueue.empty() && (isHuman() || owner.isHumanDisabled()))
-	{
-		owner.setIdleCity(this, true);
-	}
-
 	if (bChoose && m_orderQueue.empty())
 	{
+		if (isHuman() || owner.isHumanDisabled())
+		{
+			owner.setIdleCity(getID(), true);
+		}
 		if (isHuman() && !isProductionAutomated())
 		{
 			if (bWasFoodProduction)
