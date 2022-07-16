@@ -602,8 +602,10 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_eOccupationCultureLevel = NO_CULTURELEVEL;
 	m_iLineOfSight = 0;
 	m_iLandmarkAngerTimer = 0;
+	// @SAVEBREAK delete - flabbert - 16.07.2022
 	m_iInvasionChance = 0;
 	m_iInvasionTimer = 0;
+	// SAVEBREAK
 	m_iFreshWater = 0;
 	m_iAdjacentDamagePercent = 0;
 	m_iLostProduction = 0;
@@ -1401,9 +1403,6 @@ void CvCity::doTurn()
 	//Checks conditions of buildings, may disable or enable some
 	checkBuildings();
 	checkFreeBuildings();
-
-	//Checks if enemy troops have found secret entrance into the city
-	doInvasion();
 
 	//Damages enemy units around the city, if applicable
 	doAttack();
@@ -4967,7 +4966,6 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 
 		if (!bReligiously)
 		{
-			changeInvasionChance(kBuilding.getInvasionChance() * iChange);
 			changeLineOfSight(kBuilding.getLineOfSight() * iChange);
 		}
 		changeAdjacentDamagePercent(kBuilding.getAdjacentDamagePercent() * iChange);
@@ -16984,8 +16982,12 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", (int*)&m_eOccupationCultureLevel);
 	WRAPPER_READ(wrapper, "CvCity", &m_iLineOfSight);
 	WRAPPER_READ(wrapper, "CvCity", &m_iLandmarkAngerTimer);
+
+	// @SAVEBREAK DELETE - flabbert - 16.07.2022
 	WRAPPER_READ(wrapper, "CvCity", &m_iInvasionChance);
 	WRAPPER_READ(wrapper, "CvCity", &m_iInvasionTimer);
+	// SaVEBREAK@
+
 	WRAPPER_READ(wrapper, "CvCity", &m_iFreshWater);
 	WRAPPER_READ(wrapper, "CvCity", &m_iAdjacentDamagePercent);
 	WRAPPER_READ(wrapper, "CvCity", &m_iWorkableRadiusOverride);
@@ -17680,8 +17682,10 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_eOccupationCultureLevel);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iLineOfSight);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iLandmarkAngerTimer);
+	// @SAVEBREAK delete - flabbert - 16.07.2022
 	WRAPPER_WRITE(wrapper, "CvCity", m_iInvasionChance);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iInvasionTimer);
+	// SAVEBREAK@
 	WRAPPER_WRITE(wrapper, "CvCity", m_iFreshWater);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iAdjacentDamagePercent);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iWorkableRadiusOverride);
@@ -19737,32 +19741,6 @@ void CvCity::updateImprovementHealth()
 }
 
 
-
-int CvCity::getInvasionChance() const
-{
-	return m_iInvasionChance;
-}
-
-void CvCity::changeInvasionChance(int iChange)
-{
-	m_iInvasionChance += iChange;
-}
-
-int CvCity::getInvasionTimer() const
-{
-	return m_iInvasionTimer;
-}
-
-void CvCity::changeInvasionTimer(int iChange)
-{
-	m_iInvasionTimer += iChange;
-}
-
-bool CvCity::isInvaded() const
-{
-	return getInvasionTimer() > 0;
-}
-
 int CvCity::getLandmarkAngerTimer() const
 {
 	return m_iLandmarkAngerTimer;
@@ -21224,69 +21202,6 @@ void CvCity::changeUnitCombatExtraStrength(UnitCombatTypes eIndex, int iChange)
 	m_paiUnitCombatExtraStrength[eIndex] += iChange;
 }
 
-namespace {
-	bool unitCouldInvade(const CvUnit* unit, const TeamTypes& testTeam)
-	{
-		return GET_TEAM(unit->getTeam()).isAtWar(testTeam) && !unit->isAnimal() && !unit->isOnlyDefensive() && !unit->canAttackOnlyCities();
-	}
-}
-
-void CvCity::doInvasion()
-{
-	PROFILE_FUNC();
-
-	PlayerTypes ePlayer = NO_PLAYER;
-	if (!isInvaded())
-	{
-		bool bTestInvasion = false;
-		if (getInvasionChance() > 0)
-		{
-			foreach_(const CvPlot* adjacentPlot, plot()->adjacent())
-			{
-				bst::optional<CvUnit*> unit = algo::find_if(adjacentPlot->units(), bind(unitCouldInvade, _1, getTeam()));
-				if (unit)
-				{
-					bTestInvasion = true;
-					ePlayer = (*unit)->getOwner();
-					break;
-				}
-			}
-		}
-		if (bTestInvasion)
-		{
-			if (GC.getGame().getSorenRandNum(100, "Enemy Invades City Chance") < getInvasionChance())
-			{
-				int iTurns = getInvasionChance() / 2;
-				changeInvasionTimer(iTurns);
-				//Alert the Player
-				if (GET_PLAYER(getOwner()).isHuman())
-				{
-					CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_INVASION);
-					pInfo->setData1(getID());
-					gDLL->getInterfaceIFace()->addPopup(pInfo, getOwner());
-				}
-				//Alert the invader
-				if (GET_PLAYER(ePlayer).isHuman())
-				{
-
-					CvWString szBuffer = gDLL->getText("TXT_KEY_INVASION_SUCCESSFUL", getNameKey());
-					AddDLLMessage(ePlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BARRACKS", MESSAGE_TYPE_INFO, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);
-				}
-			}
-		}
-	}
-	else
-	{
-		changeInvasionTimer(-1);
-		if (!isInvaded())
-		{
-
-			CvWString szBuffer = gDLL->getText("TXT_KEY_INVASION_ENDED", getNameKey());
-			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BUILD_BARRACKS", MESSAGE_TYPE_INFO, ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);
-		}
-	}
-}
-
 bool CvCity::isZoneOfControl() const
 {
 	return (m_iZoCCount > 0);
@@ -22140,8 +22055,10 @@ void CvCity::clearModifierTotals()
 	m_iSpecialistHappiness = 0;
 	m_iSpecialistUnhappiness = 0;
 	m_iLineOfSight = 0;
+	// @SAVEBREAK delete - flabbert - 16.07.2022
 	m_iInvasionChance = 0;
 	m_iInvasionTimer = 0;
+	// SAVEBREAK
 	m_iAdjacentDamagePercent = 0;
 	m_iWorkableRadiusOverride = 0;
 	m_iProtectedCultureCount = 0;

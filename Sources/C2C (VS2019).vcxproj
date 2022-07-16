@@ -360,6 +360,7 @@
     <ClInclude Include="CityOutputHistory.h" />
     <ClInclude Include="copy_iterator.h" />
     <ClInclude Include="CounterSet.h" />
+    <ClInclude Include="CvCityInvasionComponent.h" />
     <ClInclude Include="CvPlotPaging.h" />
     <ClInclude Include="CvPython.h" />
     <ClInclude Include="CvSettlerAI.h" />
