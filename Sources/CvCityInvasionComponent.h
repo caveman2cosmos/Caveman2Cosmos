@@ -24,6 +24,10 @@ public:
 	CvCityInvasionComponent(CvCity* pCity) {
 		thisCity = pCity;
 	}
+	void reset() {
+		m_iInvasionChance = 0;
+		m_iInvasionTimer = 0;
+	}
 	int getInvasionChance() const
 	{
 		return m_iInvasionChance;
