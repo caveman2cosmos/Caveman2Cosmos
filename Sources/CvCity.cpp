@@ -21454,6 +21454,7 @@ void CvCity::doCorporation()
 	}
 }
 
+// TODO: cache this variable
 int CvCity::getCorporationInfluence(CorporationTypes eCorporation) const
 {
 	int iInfluence = 100;
