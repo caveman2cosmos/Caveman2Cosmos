@@ -11846,8 +11846,12 @@ int CvPlayerAI::AI_neededWorkers(const CvArea* pArea) const
 	{
 		return 0;
 	}
-	iNeeded = std::max((iNeeded - iHave) / 3, iCities + intSqrt(1 + getCurrentEra()) - iHave / 3); // Biggest of actual need and minimum work force reserve.
-	//OutputDebugString(CvString::format("A: Player %d, Area %d, Workers needed: %d, workers have: %d\n", getID(), pArea->getID(), iNeeded, iHave/3).c_str());
+	iNeeded = std::max(iNeeded - iHave, iCities + intSqrt(1 + 2 * getCurrentEra()) - iHave); // Biggest of actual need and minimum work force reserve.
+	OutputDebugString(CvString::format("A: Player %d, Area %d, Workers needed: %d, workers have: %d\n", getID(), pArea->getID(), iNeeded, iHave).c_str());
+	if (gPlayerLogLevel > 2)
+	{
+		logBBAI("A: Player %d, Area %d, Workers needed: %d, workers have: %d\n", getID(), pArea->getID(), iNeeded, iHave);
+	}
 
 	if (iNeeded < 1)
 	{
@@ -11855,7 +11859,11 @@ int CvPlayerAI::AI_neededWorkers(const CvArea* pArea) const
 	}
 	iNeeded = std::min(iNeeded, 1 + iCities + intSqrt(iCities)); // max 1 + 1 workers per city in area + 1 worker per city squared in area.
 
-	//OutputDebugString(CvString::format("B: Player %d, Area %d, Workers needed: %d\n", getID(), pArea->getID(), iNeeded).c_str());
+	OutputDebugString(CvString::format("B: Player %d, Area %d, Workers needed: %d\n", getID(), pArea->getID(), iNeeded).c_str());
+	if (gPlayerLogLevel > 2)
+	{
+		logBBAI("B: Player %d, Area %d, Workers needed: %d\n", getID(), pArea->getID(), iNeeded);
+	}
 
 	return std::max(1, iNeeded);
 

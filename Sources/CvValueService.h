@@ -3,6 +3,9 @@
 #ifndef CV_VALUESERVICE
 #define CV_VALUESERVICE
 
+
+// TODO: Split into classes with the relevant stuff for each class model on ContractBroker
+
 #include "CvPlot.h"
 #include "PlotInfo.h"
 #include "CvValueService.h"

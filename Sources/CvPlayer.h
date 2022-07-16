@@ -62,6 +62,7 @@ public:
 	void setIdleCity(CvCity* city, const bool bNewValue);
 	bool hasIdleCity() const;
 	CvCity* getIdleCity() const;
+	bool isIdleCity(CvCity* city) const;
 
 protected:
 	CvGameObjectPlayer m_GameObject;
@@ -2215,8 +2216,6 @@ public:
 
 	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
-
-	void doGoldenAgebyPercentage(int iPercent);
 	//TB Traits end
 
 	void startDeferredPlotGroupBonusCalculation();

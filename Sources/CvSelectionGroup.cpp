@@ -143,11 +143,10 @@ bool CvSelectionGroup::sentryAlert() const
 			}
 		}
 	}
-
 	return false;
 }
 
-// BUG - Sentry Actions - start
+
 #ifdef _MOD_SENTRY
 /*
  * Similar to sentryAlert() except only checks water/land plots based on the domain type of the head unit.
@@ -172,23 +171,27 @@ bool CvSelectionGroup::sentryAlertSameDomainType() const
 	{
 		foreach_(const CvPlot* pPlot, pHeadUnit->plot()->rect(iMaxRange, iMaxRange))
 		{
-			if (pHeadUnit->plot()->canSeePlot(pPlot, pHeadUnit->getTeam(), iMaxRange - 1, NO_DIRECTION))
+			if (pHeadUnit->plot()->canSeePlot(pPlot, pHeadUnit->getTeam(), iMaxRange - 1, NO_DIRECTION)
+			&& pPlot->isVisibleEnemyUnit(pHeadUnit))
 			{
-				if (pPlot->isVisibleEnemyUnit(pHeadUnit))
+				if (pPlot->isWater())
 				{
-					if (pPlot->isWater() ? (getDomainType() == DOMAIN_SEA) : (getDomainType() == DOMAIN_LAND))
+					if (getDomainType() == DOMAIN_SEA)
 					{
 						return true;
 					}
 				}
+				else if (getDomainType() == DOMAIN_LAND)
+				{
+					return true;
+				}
 			}
 		}
 	}
-
 	return false;
 }
 #endif
-// BUG - Sentry Actions - end
+
 
 void CvSelectionGroup::doTurn()
 {
@@ -239,10 +242,8 @@ void CvSelectionGroup::doTurn()
 			setActivityType(ACTIVITY_AWAKE);
 		}
 
-// BUG - Sentry Healing and Explorering Units - start
 		if (isHuman())
 		{
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 			if (((eActivityType == ACTIVITY_SENTRY_NAVAL_UNITS) && (sentryAlertSameDomainType())) ||
 				((eActivityType == ACTIVITY_SENTRY_LAND_UNITS) && (sentryAlertSameDomainType())) ||
@@ -251,9 +252,7 @@ void CvSelectionGroup::doTurn()
 				setActivityType(ACTIVITY_AWAKE);
 			}
 #endif
-// BUG - Sentry Actions - end
 
-// BUG - Sentry Exploring Units - start
 			if (isAutomated() && getAutomateType() == AUTOMATE_EXPLORE && getBugOptionBOOL("Actions__SentryHealing", true, "BUG_SENTRY_HEALING") && sentryAlert())
 			{
 				if (!(getBugOptionBOOL("Actions__SentryHealingOnlyNeutral", true, "BUG_SENTRY_HEALING_ONLY_NEUTRAL") && plot()->isOwned()))
@@ -261,9 +260,6 @@ void CvSelectionGroup::doTurn()
 					setActivityType(ACTIVITY_AWAKE);
 				}
 			}
-// BUG - Sentry Exploring Units - end
-
-// BUG - Sentry Healing Units - start
 // AIAndy: This is pointless when there is the separate sentry while heal button
 #ifndef _MOD_SENTRY
 			if (eActivityType == ACTIVITY_HEAL && getBugOptionBOOL("Actions__SentryHealing", true, "BUG_SENTRY_HEALING") && sentryAlert())
@@ -275,10 +271,9 @@ void CvSelectionGroup::doTurn()
 			}
 #endif
 		}
-// BUG - Sentry Healing and Explorering Units - end
 
 		// with improvements to launching air patrols, now can wake every turn
-		if ( (eActivityType == ACTIVITY_INTERCEPT) && !isHuman() )
+		if (eActivityType == ACTIVITY_INTERCEPT && !isHuman())
 		{
 			setActivityType(ACTIVITY_AWAKE);
 		}
@@ -329,7 +324,6 @@ void CvSelectionGroup::doTurn()
 			}
 		}
 	}
-
 	doDelayedDeath();
 }
 
@@ -359,7 +353,6 @@ bool CvSelectionGroup::showMoves() const
 			}
 		}
 	}
-
 	return false;
 }
 
@@ -395,7 +388,6 @@ void CvSelectionGroup::updateTimers()
 			updateMission();
 		}
 	}
-
 	doDelayedDeath();
 }
 
@@ -429,7 +421,6 @@ bool CvSelectionGroup::doDelayedDeath()
 		kill();
 		return true;
 	}
-
 	return false;
 }
 
@@ -489,7 +480,6 @@ bool CvSelectionGroup::pushMissionInternal(MissionTypes eMission, int iData1, in
 		{
 			return true;
 		}
-
 		clearMissionQueue();
 	}
 
@@ -517,15 +507,12 @@ bool CvSelectionGroup::pushMissionInternal(MissionTypes eMission, int iData1, in
 			{
 				playActionSound();
 			}
-
 			gDLL->getInterfaceIFace()->setHasMovedUnit(true);
 		}
-
 		CvEventReporter::getInstance().selectionGroupPushMission(this, eMission);
 
 		doDelayedDeath();
 	}
-
 	return bResult;
 }
 
@@ -551,25 +538,18 @@ void CvSelectionGroup::autoMission()
 
 	if (getNumUnits() > 0 && headMissionQueueNode() != NULL && !isBusy())
 	{
-		const bool bVisibleHuman = isHuman() && algo::any_of(units(), !CvUnit::fn::alwaysInvisible());
-
-		if (bVisibleHuman && GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 1))
+		if (isHuman()
+		&& algo::any_of(units(), !CvUnit::fn::alwaysInvisible())
+		&& GET_PLAYER(getOwner()).AI_getAnyPlotDanger(plot(), 1))
 		{
 			clearMissionQueue();
 		}
-		else
+		else if (getActivityType() == ACTIVITY_MISSION)
 		{
-			if (getActivityType() == ACTIVITY_MISSION)
-			{
-				continueMission();
-			}
-			else
-			{
-				startMission();
-			}
+			continueMission();
 		}
+		else startMission();
 	}
-
 	doDelayedDeath();
 }
 
@@ -619,10 +599,6 @@ CvPlot* CvSelectionGroup::lastMissionPlot() const
 				{
 					return pTargetUnit->plot();
 				}
-				break;
-			}
-			default: // AIAndy: Assumed to be an outcome mission
-			{
 				break;
 			}
 		}
@@ -2138,10 +2114,6 @@ bool CvSelectionGroup::continueMission(int iSteps)
 				}
 				break;
 			}
-			default: // AIAndy: Assumed to be an outcome mission
-			{
-				break;
-			}
 		}
 	}
 
@@ -2241,25 +2213,16 @@ bool CvSelectionGroup::continueMission(int iSteps)
 				if (getOwner() == GC.getGame().getActivePlayer() && IsSelected())
 				{
 					if ((headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO) ||
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 						(headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO_SENTRY) ||
 #endif
-// BUG - Sentry Actions - end
 						(headMissionQueueNode()->m_data.eMissionType == MISSION_ROUTE_TO) ||
 						(headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO_UNIT))
 					{
 						gDLL->getInterfaceIFace()->changeCycleSelectionCounter(GET_PLAYER(getOwner()).isOption(PLAYEROPTION_QUICK_MOVES) ? 1 : 2);
 					}
 				}
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       08/04/09                                jdog5000      */
-/*                                                                                              */
-/* Player interface                                                                             */
-/************************************************************************************************/
-/* original bts code
-				deleteMissionQueueNode(headMissionQueueNode());
-*/
+
 				if (!isHuman() || (headMissionQueueNode()->m_data.eMissionType != MISSION_MOVE_TO))
 				{
 					deleteMissionQueueNode(headMissionQueueNode());
@@ -2276,25 +2239,18 @@ bool CvSelectionGroup::continueMission(int iSteps)
 				{
 					deleteMissionQueueNode(headMissionQueueNode());
 				}
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
 			}
 		}
-		else
+		else if (canAllMove())
 		{
-			if (canAllMove())
-			{
-				//	If the recursion fails that is not an overall failure, since this step did something
-				continueMission(iSteps + 1);
-			}
-			else if (!isBusy() && getOwner() == GC.getGame().getActivePlayer() && IsSelected())
-			{
-				gDLL->getInterfaceIFace()->changeCycleSelectionCounter(1);
-			}
+			// If the recursion fails that is not an overall failure, since this step did something
+			continueMission(iSteps + 1);
+		}
+		else if (!isBusy() && getOwner() == GC.getGame().getActivePlayer() && IsSelected())
+		{
+			gDLL->getInterfaceIFace()->changeCycleSelectionCounter(1);
 		}
 	}
-
 	return !bFailed;
 }
 
@@ -2340,14 +2296,11 @@ bool CvSelectionGroup::canDoCommand(CommandTypes eCommand, int iData1, int iData
 {
 	PROFILE_FUNC();
 
-	//cache isBusy
-	if (bUseCache ? m_bIsBusyCache : isBusy())
+	if ((bUseCache ? m_bIsBusyCache : isBusy())
+	|| !canEverDoCommand(eCommand, iData1, iData2, bTestVisible, bUseCache))
 	{
 		return false;
 	}
-
-	if(!canEverDoCommand(eCommand, iData1, iData2, bTestVisible, bUseCache))
-		return false;
 
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
@@ -2401,23 +2354,22 @@ void CvSelectionGroup::setupActionCache()
 
 	//cache different unit types
 	m_aDifferentUnitCache.erase(m_aDifferentUnitCache.begin(), m_aDifferentUnitCache.end());
+
 	foreach_(CvUnit* unit, units())
 	{
-		if(unit->isReadyForUpgrade())
+		if (unit->isReadyForUpgrade())
 		{
 			const UnitTypes unitType = unit->getUnitType();
 			bool bFound = false;
-			for(int i=0;i<(int)m_aDifferentUnitCache.size();i++)
+			for (int i = 0; i < (int)m_aDifferentUnitCache.size(); i++)
 			{
-				if(unitType == m_aDifferentUnitCache[i]->getUnitType())
+				if (unitType == m_aDifferentUnitCache[i]->getUnitType())
 				{
 					bFound = true;
 					break;
 				}
 			}
-
-			if(!bFound)
-				m_aDifferentUnitCache.push_back(unit);
+			if (!bFound) m_aDifferentUnitCache.push_back(unit);
 		}
 	}
 }
@@ -2769,13 +2721,11 @@ bool CvSelectionGroup::isWaiting() const
 			  (getActivityType() == ACTIVITY_SLEEP) ||
 					(getActivityType() == ACTIVITY_HEAL) ||
 					(getActivityType() == ACTIVITY_SENTRY) ||
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 					(getActivityType() == ACTIVITY_SENTRY_WHILE_HEAL) ||
 					(getActivityType() == ACTIVITY_SENTRY_NAVAL_UNITS) ||
 					(getActivityType() == ACTIVITY_SENTRY_LAND_UNITS) ||
 #endif
-// BUG - Sentry Actions - end
 					(getActivityType() == ACTIVITY_PATROL) ||
 					(getActivityType() == ACTIVITY_PLUNDER) ||
 					(getActivityType() == ACTIVITY_INTERCEPT));
@@ -2831,10 +2781,7 @@ int CvSelectionGroup::getCargo(bool bVolume) const
 	{
 		return algo::accumulate(units() | transformed(CvUnit::fn::SMgetCargo()), 0);
 	}
-	else
-	{
-		return algo::accumulate(units() | transformed(CvUnit::fn::getCargo()), 0);
-	}
+	return algo::accumulate(units() | transformed(CvUnit::fn::getCargo()), 0);
 }
 
 bool CvSelectionGroup::canAllMove() const
@@ -2850,22 +2797,16 @@ bool CvSelectionGroup::canAnyMove(bool bValidate)
 	{
 		return algo::any_of(units(), CvUnit::fn::canMove());
 	}
-	else
+	const int canMoveCount = algo::count_if(units(), CvUnit::fn::canMove());
+
+	if (canMoveCount > 0 && canMoveCount < getNumUnits() && !isBusy() && getActivityType() == ACTIVITY_AWAKE)
 	{
-		const int canMoveCount = algo::count_if(units(), CvUnit::fn::canMove());
-		if (canMoveCount > 0
-			&& canMoveCount < getNumUnits()
-			&& !isBusy()
-			&& getActivityType() == ACTIVITY_AWAKE)
-		{
-			//	Selection group has both units that can and cannot move further
-			//	If we're validating the state then such groups should be busy (else
-			//	a WFoC will result), so if they are not set them to sleep for this
-			//	turn
-			setActivityType(ACTIVITY_SLEEP);
-		}
-		return canMoveCount > 0;
+		// Selection group has both units that can and cannot move further.
+		//	If we're validating the state then such groups should be busy (else a WFoC will result),
+		//	so if they are not set them to sleep for this turn
+		setActivityType(ACTIVITY_SLEEP);
 	}
+	return canMoveCount > 0;
 }
 
 bool CvSelectionGroup::hasMoved() const
@@ -3364,13 +3305,13 @@ int CvSelectionGroup::getY() const
 
 bool CvSelectionGroup::at(int iX, int iY) const
 {
-	return((getX() == iX) && (getY() == iY));
+	return getX() == iX && getY() == iY;
 }
 
 
-bool CvSelectionGroup::atPlot( const CvPlot* pPlot) const
+bool CvSelectionGroup::atPlot(const CvPlot* pPlot) const
 {
-	return (plot() == pPlot);
+	return plot() == pPlot;
 }
 
 
@@ -3906,11 +3847,11 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 	FASSERT_BOUNDS(0, MAX_PLAYERS, getOwner());
 	FASSERT_BOUNDS(0, GC.getNumBuildInfos(), eBuild);
 
-	bool bContinue = false;
-
 	const CvPlot* pPlot = plot();
 
-	const ImprovementTypes eImprovement = GC.getBuildInfo(eBuild).getImprovement();
+	const CvBuildInfo& kBuildInfo = GC.getBuildInfo(eBuild);
+	const ImprovementTypes eImprovement = kBuildInfo.getImprovement();
+
 	if (eImprovement != NO_IMPROVEMENT)
 	{
 		if (AI_isControlled())
@@ -3929,30 +3870,31 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 					}
 				}
 			}
-//
-//			if (AI_getMissionAIType() == MISSION_BUILD)
-//			{
-//                CvCity* pWorkingCity = pPlot->getWorkingCity();
-//                if ((pWorkingCity != NULL) && (AI_getMissionAIPlot() == pPlot))
-//                {
-//                    if (pWorkingCity->AI_getBestBuild(pWorkingCity->getCityPlotIndex(pPlot)) != eBuild)
-//                    {
-//                        return false;
-//                    }
-//                }
-//			}
+			/*
+			if (AI_getMissionAIType() == MISSION_BUILD)
+			{
+				CvCity* pWorkingCity = pPlot->getWorkingCity();
+				if ((pWorkingCity != NULL) && (AI_getMissionAIPlot() == pPlot))
+				{
+					if (pWorkingCity->AI_getBestBuild(pWorkingCity->getCityPlotIndex(pPlot)) != eBuild)
+					{
+						return false;
+					}
+				}
+			}
+			*/
 		}
 	}
 
-// BUG - Pre-Chop - start
+	bool bContinue = false;
 	bool bCheckChop = false;
 	bool bStopOtherWorkers = false;
 
 	const FeatureTypes eFeature = pPlot->getFeatureType();
-	const CvBuildInfo& kBuildInfo = GC.getBuildInfo(eBuild);
+
 	if (eFeature != NO_FEATURE && isHuman() && kBuildInfo.isFeatureRemove(eFeature) && kBuildInfo.getFeatureProduction(eFeature) != 0)
 	{
-		if (kBuildInfo.getImprovement() == NO_IMPROVEMENT)
+		if (eImprovement == NO_IMPROVEMENT)
 		{
 			// clearing a forest or jungle
 			if (getBugOptionBOOL("Actions__PreChopForests", true, "BUG_PRECHOP_FORESTS"))
@@ -3960,15 +3902,11 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 				bCheckChop = true;
 			}
 		}
-		else
+		else if (getBugOptionBOOL("Actions__PreChopImprovements", true, "BUG_PRECHOP_IMPROVEMENTS"))
 		{
-			if (getBugOptionBOOL("Actions__PreChopImprovements", true, "BUG_PRECHOP_IMPROVEMENTS"))
-			{
-				bCheckChop = true;
-			}
+			bCheckChop = true;
 		}
 	}
-// BUG - Pre-Chop - end
 
 	foreach_(CvUnit* pLoopUnit, units())
 	{
@@ -3984,7 +3922,6 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 				break;
 			}
 
-// BUG - Pre-Chop - start
 			if (bCheckChop && pPlot->getBuildTurnsLeft(eBuild, getOwner()) == 1)
 			{
 				// TODO: stop other worker groups
@@ -3993,35 +3930,41 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 
 				if (iProduction > 0)
 				{
-
-					CvWString szBuffer = gDLL->getText("TXT_KEY_BUG_PRECLEARING_FEATURE_BONUS", GC.getFeatureInfo(eFeature).getTextKeyWide(), iProduction, pCity->getNameKey());
-					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_INFO, GC.getFeatureInfo(eFeature).getButton(), GC.getCOLOR_WHITE(), getX(), getY(), true, true);
+					AddDLLMessage(
+						getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+						gDLL->getText(
+							"TXT_KEY_BUG_PRECLEARING_FEATURE_BONUS",
+							GC.getFeatureInfo(eFeature).getTextKeyWide(), iProduction, pCity->getNameKey()
+						),
+						ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_INFO,
+						GC.getFeatureInfo(eFeature).getButton(), GC.getCOLOR_WHITE(), getX(), getY(), true, true
+					);
 				}
 				bContinue = false;
 				bStopOtherWorkers = true;
 				break;
 			}
-// BUG - Pre-Chop - end
 		}
 	}
 
-// BUG - Pre-Chop - start
 	if (bStopOtherWorkers)
 	{
 		foreach_(const CvUnit* pLoopUnit, pPlot->units())
 		{
 			CvSelectionGroup* pSelectionGroup = pLoopUnit->getGroup();
 
-			if (pSelectionGroup != NULL && pSelectionGroup != this && pSelectionGroup->getOwner() == getOwner()
-					&& pSelectionGroup->getActivityType() == ACTIVITY_MISSION && pSelectionGroup->getLengthMissionQueue() > 0
-					&& pSelectionGroup->getMissionType(0) == kBuildInfo.getMissionType() && pSelectionGroup->getMissionData1(0) == eBuild)
+			if (pSelectionGroup != NULL
+			&&  pSelectionGroup != this
+			&&  pSelectionGroup->getOwner() == getOwner()
+			&&  pSelectionGroup->getActivityType() == ACTIVITY_MISSION
+			&&  pSelectionGroup->getLengthMissionQueue() > 0
+			&&  pSelectionGroup->getMissionType(0) == kBuildInfo.getMissionType()
+			&&  pSelectionGroup->getMissionData1(0) == eBuild)
 			{
 				pSelectionGroup->deleteMissionQueueNode(pSelectionGroup->headMissionQueueNode());
 			}
 		}
 	}
-// BUG - Pre-Chop - end
-
 	return bContinue;
 }
 
@@ -4599,7 +4542,6 @@ CvPlot* CvSelectionGroup::getPathFirstPlot() const
 		{
 			return GC.getMap().plotSorenINLINE(pNode->m_iX, pNode->m_iY);
 		}
-
 		pNode = pNode->m_pParent;
 	}
 
@@ -4616,10 +4558,7 @@ CvPlot* CvSelectionGroup::getPathFirstPlot() const
 	{
 		return itr.plot();
 	}
-	else
-	{
-		return NULL;
-	}
+	return NULL;
 #endif
 }
 
@@ -4635,7 +4574,7 @@ CvPlot* CvSelectionGroup::getPathEndTurnPlot() const
 
 	if (NULL != pNode)
 	{
-		if ((pNode->m_pParent == NULL) || (pNode->m_iData2 == 1))
+		if (pNode->m_pParent == NULL || pNode->m_iData2 == 1)
 		{
 			return GC.getMap().plotSorenINLINE(pNode->m_iX, pNode->m_iY);
 		}
@@ -4646,43 +4585,37 @@ CvPlot* CvSelectionGroup::getPathEndTurnPlot() const
 			{
 				return GC.getMap().plotSorenINLINE(pNode->m_pParent->m_iX, pNode->m_pParent->m_iY);
 			}
-
 			pNode = pNode->m_pParent;
 		}
 	}
-
 	FErrorMsg("error");
 
 	return NULL;
 #else
 	CvPath::const_iterator itr = getPath().begin();
 
-	//	CvPath stores the node the unit started on first, but the 'first plot' required is the
-	//	first one moved to
-	if ( itr != getPath().end() )
+	// CvPath stores the node the unit started on first, but the 'first plot' required is the first one moved to
+	if (itr != getPath().end())
 	{
-		int iStart = itr.turn();
+		const int iStart = itr.turn();
 		CvPlot*	pPlot = itr.plot();
 
-		while ( itr.turn() == iStart && itr != getPath().end() )
+		while (itr.turn() == iStart && itr != getPath().end())
 		{
 			pPlot = itr.plot();
-
 			++itr;
 		}
-
-		if(pPlot == getPath().begin().plot() && pPlot != getPath().lastPlot())
-		{
-			OutputDebugString(CvString::format("Bad path movement calc on path from (%d,%d) to (%d,%d)\n",pPlot->getX(), pPlot->getY(),getPath().lastPlot()->getX(), getPath().lastPlot()->getY()).c_str());
-		}
-
-		FAssert(pPlot != getPath().begin().plot() || pPlot == getPath().lastPlot());
+		FAssertMsg(
+			pPlot != getPath().begin().plot() || pPlot == getPath().lastPlot(),
+			CvString::format(
+				"Bad path movement calc on path from (%d,%d) to (%d,%d) for %S (%d) at plot (%d,%d)\n",
+				pPlot->getX(), pPlot->getY(),getPath().lastPlot()->getX(), getPath().lastPlot()->getY(),
+				getHeadUnit()->getDescription().c_str(),getHeadUnit()->getID(), plot()->getX(), plot()->getY()
+			).c_str()
+		);
 		return pPlot;
 	}
-	else
-	{
-		return NULL;
-	}
+	return NULL;
 #endif
 }
 
@@ -5110,33 +5043,26 @@ void CvSelectionGroup::removeUnit(CvUnit* pUnit)
 CLLNode<IDInfo>* CvSelectionGroup::deleteUnitNode(CLLNode<IDInfo>* pNode)
 {
 	FAssertNotInScope(CvSelectionGroup_CvUnit_LOOP);
+
 	if (getOwner() != NO_PLAYER)
 	{
-		//setAutomateType(NO_AUTOMATE); // Afforess: Allow Automated Units to Stack Attack
-
 		clearMissionQueue();
 
 		switch (getActivityType())
 		{
-		case ACTIVITY_SLEEP:
-		case ACTIVITY_INTERCEPT:
-		case ACTIVITY_PATROL:
-		case ACTIVITY_PLUNDER:
-			break;
-		default:
-			setActivityType(ACTIVITY_AWAKE);
-			break;
+			case ACTIVITY_SLEEP:
+			case ACTIVITY_INTERCEPT:
+			case ACTIVITY_PATROL:
+			case ACTIVITY_PLUNDER:
+				break;
+			default: setActivityType(ACTIVITY_AWAKE);
 		}
 	}
-
 	const CvUnit* pLoopUnit = ::getUnit(pNode->m_data);
-	const int iVolume = pLoopUnit ? pLoopUnit->getCargoVolume() : 0;
 
-	CLLNode<IDInfo>* pNextUnitNode = m_units.deleteNode(pNode);
+	AI_noteSizeChange(-1, pLoopUnit ? pLoopUnit->getCargoVolume() : 0);
 
-	AI_noteSizeChange(-1, iVolume);
-
-	return pNextUnitNode;
+	return m_units.deleteNode(pNode);
 }
 
 
@@ -5345,11 +5271,18 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 			break; // Toffer - Job done.
 		}
 	}
-
 	FAssertMsg(pRemainderGroup == this || getNumUnits() == 0, "Source group in split action wasn't fully emptied");
 	FAssertMsg(pSplitGroup->getNumUnits() == iSplitSize, "New split group didn't meet requested size");
-	FAssertMsg(pRemainderGroup->getNumUnits() == 1 + sourceGroupSize - iSplitSize, "New remainder group didn't meet expected size");
-
+	FAssertMsg(
+		pRemainderGroup->getNumUnits() == (getNumUnits() == 0 ? 2 : 1) + sourceGroupSize - iSplitSize,
+		CvString::format(
+			"%S (%d) - New remainder group of %d didn't meet expected size of %d",
+			pRemainderGroup->getHeadUnit()->getDescription().c_str(),
+			pRemainderGroup->getHeadUnit()->getID(),
+			pRemainderGroup->getNumUnits(),
+			(getNumUnits() == 0 ? 2 : 1) + sourceGroupSize - iSplitSize
+		).c_str()
+	);
 	if (ppOtherGroup != NULL)
 	{
 		*ppOtherGroup = pRemainderGroup;
@@ -5373,13 +5306,13 @@ int CvSelectionGroup::getUnitIndex(CvUnit* pUnit, int maxIndex /* = -1 */) const
 		{
 			return iIndex;
 		}
-
 		iIndex++;
 
 		if (maxIndex >= 0 && iIndex >= maxIndex)
+		{
 			return -1;
+		}
 	}
-
 	return -1;
 }
 
@@ -5566,34 +5499,29 @@ CLLNode<MissionData>* CvSelectionGroup::prevMissionQueueNode(CLLNode<MissionData
 
 CLLNode<MissionData>* CvSelectionGroup::headMissionQueueNodeExternal() const
 {
-	static CLLNode<MissionData>	transformedMission;
-	CLLNode<MissionData>*	pHeadMissionData = m_missionQueue.head();
+	static CLLNode<MissionData> transformedMission;
+	CLLNode<MissionData>* pHeadMissionData = m_missionQueue.head();
 
-	if ( pHeadMissionData != NULL )
+	if (pHeadMissionData == NULL)
 	{
-		CvViewport* pCurrentViewport;
-		transformedMission = *pHeadMissionData;
+		return NULL;
+	}
+	transformedMission = *pHeadMissionData;
 
-		switch(transformedMission.m_data.eMissionType)
-		{
+	switch (transformedMission.m_data.eMissionType)
+	{
 		case MISSION_MOVE_TO:
 		case MISSION_ROUTE_TO:
 		case MISSION_RANGE_ATTACK:
-			pCurrentViewport = GC.getCurrentViewport();
+		{
+			CvViewport* pCurrentViewport = GC.getCurrentViewport();
 
 			transformedMission.m_data.iData1 = pCurrentViewport->getViewportXFromMapX(transformedMission.m_data.iData1);
 			transformedMission.m_data.iData2 = pCurrentViewport->getViewportYFromMapY(transformedMission.m_data.iData2);
 			break;
-		default:
-			break;
 		}
-
-		return &transformedMission;
 	}
-	else
-	{
-		return NULL;
-	}
+	return &transformedMission;
 }
 
 CLLNode<MissionData>* CvSelectionGroup::headMissionQueueNode() const
@@ -5636,16 +5564,14 @@ int CvSelectionGroup::getMissionData1(int iNode) const
 
 	while (pMissionNode != NULL)
 	{
-		if ( iNode == iCount )
+		if (iNode == iCount)
 		{
 			return pMissionNode->m_data.iData1;
 		}
-
 		iCount++;
 
 		pMissionNode = nextMissionQueueNode(pMissionNode);
 	}
-
 	return -1;
 }
 
@@ -5661,12 +5587,10 @@ int CvSelectionGroup::getMissionData2(int iNode) const
 		{
 			return pMissionNode->m_data.iData2;
 		}
-
 		iCount++;
 
 		pMissionNode = nextMissionQueueNode(pMissionNode);
 	}
-
 	return -1;
 }
 
@@ -5767,7 +5691,6 @@ bool CvSelectionGroup::activateHeadMission()
 		//	we won't be running automated mission continuance in parallel
 		return startMission();
 	}
-
 	return true;
 }
 
@@ -5782,7 +5705,6 @@ void CvSelectionGroup::deactivateHeadMission()
 		{
 			setActivityType(ACTIVITY_AWAKE);
 		}
-
 		setMissionTimer(0);
 
 		if (getOwner() == GC.getGame().getActivePlayer() && IsSelected())
@@ -5792,10 +5714,7 @@ void CvSelectionGroup::deactivateHeadMission()
 	}
 }
 
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-// Dale - SA: Stack Attack START
+
 bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting, bool bStealth)
 {
 	CvPlot* pDestPlot = GC.getMap().plot(iX, iY);
@@ -5937,19 +5856,14 @@ bool CvSelectionGroup::groupStackAttack(int iX, int iY, int iFlags, bool& bFaile
 
 	return bAttack;
 }
-// Dale - SA: Stack Attack END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
 
-// BUG - All Units Actions - start
+
 bool CvSelectionGroup::allMatch(UnitTypes eUnit) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eUnit);
 
 	return algo::all_of(units(), CvUnit::fn::getUnitType() == eUnit);
 }
-// BUG - All Units Actions - end
 
 // BUG - Safe Move - start
 void CvSelectionGroup::checkLastPathPlot(const CvPlot* pPlot)
@@ -6047,11 +5961,11 @@ void CvSelectionGroup::validateLocations(bool bFixup) const
 {
 	CvPlot* pPlot = NULL;
 	CvUnit* pTransportUnit;
-	bool	bTransportUnitSet = false;
+	bool bTransportUnitSet = false;
 
 	foreach_(CvUnit* pLoopUnit, units())
 	{
-		if ( !bTransportUnitSet )
+		if (!bTransportUnitSet)
 		{
 			bTransportUnitSet = true;
 			pTransportUnit = pLoopUnit->getTransportUnit();
@@ -6059,7 +5973,7 @@ void CvSelectionGroup::validateLocations(bool bFixup) const
 
 		if (pTransportUnit != pLoopUnit->getTransportUnit())
 		{
-			if ( bFixup )
+			if (bFixup)
 			{
 				FErrorMsg("Group split in cargo state - fixing");
 
@@ -6067,36 +5981,23 @@ void CvSelectionGroup::validateLocations(bool bFixup) const
 			}
 			else
 			{
-				if(!pLoopUnit->isHuman())
-				{
-					FErrorMsg("Group split in cargo state");
-				}
+				FAssertMsg(pLoopUnit->isHuman(), "Group split in cargo state");
 			}
 		}
 
-		if ( pPlot == NULL )
+		if (pPlot == NULL)
 		{
 			pPlot = pLoopUnit->plot();
 		}
-		else
+		else if (!bFixup)
 		{
-			if ( bFixup )
-			{
-				if ( pPlot != pLoopUnit->plot() )
-				{
-					FErrorMsg("Incorrect plot on unit of group - fixing");
+			FAssertMsg(pLoopUnit->isHuman() || pPlot == pLoopUnit->plot(), "Incorrect plot on unit of group");
+		}
+		else if (pPlot != pLoopUnit->plot())
+		{
+			FErrorMsg("Incorrect plot on unit of group - fixing");
 
-					//	Drop the errant unit from the group
-					pLoopUnit->joinGroup(NULL);
-				}
-			}
-			else
-			{
-				if(!pLoopUnit->isHuman())
-				{
-					FAssertMsg(pPlot == pLoopUnit->plot(), "Incorrect plot on unit of group");
-				}
-			}
+			pLoopUnit->joinGroup(NULL); // Drop the errant unit from the group
 		}
 	}
 }
@@ -6133,7 +6034,6 @@ bool CvSelectionGroup::findNewLeader(UnitAITypes eAIType)
 
 		return true;
 	}
-
 	return false;
 }
 
@@ -6143,25 +6043,27 @@ namespace {
 		// Inhibit workers from this function since some sacrifice themselves
 		// (which would require much more programming to manage for the ai)
 		// and worker merging is only a way for players to manage less units really.
-		return unit->AI_getUnitAIType() != UNITAI_WORKER
-			&& unit->canMerge(true);
+		return unit->AI_getUnitAIType() != UNITAI_WORKER && unit->canMerge(true);
 	}
 }
 
+
+// TB Notes: I'd like to add that a unit should only merge with units of the same AI to avoid problems here.
 bool CvSelectionGroup::doMergeCheck()
 {
-	// TB Notes: I'd like to add that a unit should only merge with units of the same AI to avoid problems here.
-	bool anyMerged = false, merged = true;
-	do
+	bool anyMerged = false;
+
+	while (true)
 	{
-		merged = false;
 		bst::optional<CvUnit*> mergable = algo::find_if(units(), isMergable);
+
 		if (mergable)
 		{
-			anyMerged = merged = true;
+			anyMerged = true;
 			(*mergable)->doMerge();
 		}
-	} while (merged);
+		else break;
+	}
 	return anyMerged;
 }
 
@@ -6172,7 +6074,6 @@ int CvSelectionGroup::getCargoSpace() const
 	const UnitAITypes eUnitAI = getHeadUnitAI();
 	int iCargoCount = 0;
 
-	// first pass, count but ignore special cargo units
 	foreach_(const CvUnit* unitX, units())
 	{
 		if (unitX->AI_getUnitAIType() == eUnitAI)
@@ -6190,7 +6091,6 @@ int CvSelectionGroup::getCargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, Dom
 	const UnitAITypes eUnitAI = getHeadUnitAI();
 	int iCargoCount = 0;
 
-	// first pass, count but ignore special cargo units
 	foreach_(const CvUnit* unitX, units())
 	{
 		if (unitX->AI_getUnitAIType() == eUnitAI)

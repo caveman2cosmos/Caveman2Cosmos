@@ -138,7 +138,7 @@ bool CvSelectionGroupAI::AI_update()
 			CvUnit* pHeadUnit = getHeadUnit();
 			if (NULL != pHeadUnit)
 			{
-				int iPass = iTempHack - 90;
+				int iPass = iTempHack - 45;
 				char szOut[1024];
 				CvWString szTempString;
 				getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
