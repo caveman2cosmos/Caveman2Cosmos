@@ -59,16 +59,17 @@ public:
 	CvGameObjectPlayer* getGameObject() { return &m_GameObject; };
 	const CvGameObjectPlayer* getGameObject() const { return &m_GameObject; };
 
-	void setIdleCity(CvCity* city, const bool bNewValue);
+	void setIdleCity(const int iCityID, const bool bNewValue);
 	bool hasIdleCity() const;
 	CvCity* getIdleCity() const;
-	bool isIdleCity(CvCity* city) const;
+	bool isIdleCity(const int iCityID) const;
+	void resetIdleCities();
 
 protected:
 	CvGameObjectPlayer m_GameObject;
 	void baseInit(PlayerTypes eID);
 	void initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSetAlive = true);
-	std::vector<CvCity*> m_idleCities;
+	std::vector<int> m_idleCities;
 
 public:
 

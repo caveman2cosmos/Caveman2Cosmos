@@ -256,6 +256,9 @@
     <Filter Include="Source\DataTypes\Structs">
       <UniqueIdentifier>{1ffdc357-252e-45bf-ab87-97513dfb0d94}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Base\City\Components">
+      <UniqueIdentifier>{70b61629-e789-4bbf-84e4-36fa4fe311bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FDataIOStream.cpp">
@@ -594,9 +597,6 @@
     <ClCompile Include="CyBoolExprInterface.cpp">
       <Filter>Source\Infrastructure\DataReading\DataHandling\XML\BoolExpr</Filter>
     </ClCompile>
-    <ClCompile Include="CyCity.cpp">
-      <Filter>Source\Base\City</Filter>
-    </ClCompile>
     <ClCompile Include="CyCityInterface1.cpp">
       <Filter>Source\Base\City\PythonInterfaces</Filter>
     </ClCompile>
@@ -740,6 +740,18 @@
     </ClCompile>
     <ClCompile Include="SCyDebug.cpp">
       <Filter>Source\Tools\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="CyCity.cpp">
+      <Filter>Source\Base\City\PythonInterfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="CityOutputHistory.cpp">
+      <Filter>Source\UI\City</Filter>
+    </ClCompile>
+    <ClCompile Include="CounterSet.cpp">
+      <Filter>Source\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="CyCityOutputHistoryInterface.cpp">
+      <Filter>Source\UI\City</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -1181,9 +1193,6 @@
     <ClInclude Include="CvArtFileMgr.h">
       <Filter>Source\UI\ArtfileManager</Filter>
     </ClInclude>
-    <ClInclude Include="CyCity.h">
-      <Filter>Source\Base\City</Filter>
-    </ClInclude>
     <ClInclude Include="CheckSum.h">
       <Filter>Source\Tools\Debug</Filter>
     </ClInclude>
@@ -1249,6 +1258,18 @@
     </ClInclude>
     <ClInclude Include="CvGameTextMgr.h">
       <Filter>Source\UI\GameTextManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CyCity.h">
+      <Filter>Source\Base\City\PythonInterfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="CityOutputHistory.h">
+      <Filter>Source\UI\City</Filter>
+    </ClInclude>
+    <ClInclude Include="CounterSet.h">
+      <Filter>Source\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="CvCityInvasionComponent.h">
+      <Filter>Source\Base\City\Components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

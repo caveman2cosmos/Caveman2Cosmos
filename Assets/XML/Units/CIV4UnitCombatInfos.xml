@@ -7378,7 +7378,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_VOLUME</Category>
 			</Categories>
-			<iExperiencePercent>140</iExperiencePercent>
+			<iExperiencePercent>80</iExperiencePercent>
 			<iSelfHealModifier>18</iSelfHealModifier>
 			<iGroupBase>1</iGroupBase>
 			<OnGameOptions>
@@ -7410,7 +7410,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_VOLUME</Category>
 			</Categories>
-			<iExperiencePercent>90</iExperiencePercent>
+			<iExperiencePercent>60</iExperiencePercent>
 			<iSelfHealModifier>12</iSelfHealModifier>
 			<iGroupBase>2</iGroupBase>
 			<OnGameOptions>
@@ -7436,7 +7436,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_VOLUME</Category>
 			</Categories>
-			<iExperiencePercent>50</iExperiencePercent>
+			<iExperiencePercent>40</iExperiencePercent>
 			<iSelfHealModifier>7</iSelfHealModifier>
 			<iGroupBase>3</iGroupBase>
 			<OnGameOptions>
@@ -7548,7 +7548,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_VOLUME</Category>
 			</Categories>
-			<iExperiencePercent>-50</iExperiencePercent>
+			<iExperiencePercent>-40</iExperiencePercent>
 			<iSelfHealModifier>-7</iSelfHealModifier>
 			<iGroupBase>7</iGroupBase>
 			<OnGameOptions>
@@ -7590,7 +7590,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_VOLUME</Category>
 			</Categories>
-			<iExperiencePercent>-90</iExperiencePercent>
+			<iExperiencePercent>-60</iExperiencePercent>
 			<iSelfHealModifier>-12</iSelfHealModifier>
 			<iGroupBase>8</iGroupBase>
 			<OnGameOptions>
@@ -7632,7 +7632,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_VOLUME</Category>
 			</Categories>
-			<iExperiencePercent>-140</iExperiencePercent>
+			<iExperiencePercent>-80</iExperiencePercent>
 			<iSelfHealModifier>-18</iSelfHealModifier>
 			<iGroupBase>9</iGroupBase>
 			<OnGameOptions>
@@ -7674,7 +7674,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_VOLUME</Category>
 			</Categories>
-			<iExperiencePercent>-200</iExperiencePercent>
+			<iExperiencePercent>-100</iExperiencePercent>
 			<iSelfHealModifier>-25</iSelfHealModifier>
 			<iGroupBase>10</iGroupBase>
 			<OnGameOptions>
@@ -7716,7 +7716,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_VOLUME</Category>
 			</Categories>
-			<iExperiencePercent>-270</iExperiencePercent>
+			<iExperiencePercent>-120</iExperiencePercent>
 			<iSelfHealModifier>-33</iSelfHealModifier>
 			<iGroupBase>11</iGroupBase>
 			<OnGameOptions>
@@ -7758,7 +7758,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_VOLUME</Category>
 			</Categories>
-			<iExperiencePercent>-350</iExperiencePercent>
+			<iExperiencePercent>-140</iExperiencePercent>
 			<iSelfHealModifier>-42</iSelfHealModifier>
 			<iGroupBase>12</iGroupBase>
 			<OnGameOptions>
@@ -7800,7 +7800,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_VOLUME</Category>
 			</Categories>
-			<iExperiencePercent>-440</iExperiencePercent>
+			<iExperiencePercent>-160</iExperiencePercent>
 			<iSelfHealModifier>-52</iSelfHealModifier>
 			<iGroupBase>13</iGroupBase>
 			<OnGameOptions>
@@ -8239,7 +8239,7 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
-			<iExperiencePercent>150</iExperiencePercent>
+			<iExperiencePercent>75</iExperiencePercent>
 			<iQualityBase>0</iQualityBase>
 			<iUpkeepModifier>-200</iUpkeepModifier>
 			<VisibilityIntensityRangeChangeTypes>
@@ -8256,7 +8256,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_QUALITY</Category>
 			</Categories>
-			<iExperiencePercent>120</iExperiencePercent>
+			<iExperiencePercent>60</iExperiencePercent>
 			<iQualityBase>1</iQualityBase>
 			<iUpkeepModifier>-140</iUpkeepModifier>
 			<OnGameOptions>
@@ -8288,7 +8288,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_QUALITY</Category>
 			</Categories>
-			<iExperiencePercent>90</iExperiencePercent>
+			<iExperiencePercent>45</iExperiencePercent>
 			<iQualityBase>2</iQualityBase>
 			<iUpkeepModifier>-90</iUpkeepModifier>
 			<OnGameOptions>
@@ -8320,7 +8320,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_QUALITY</Category>
 			</Categories>
-			<iExperiencePercent>60</iExperiencePercent>
+			<iExperiencePercent>30</iExperiencePercent>
 			<iQualityBase>3</iQualityBase>
 			<iUpkeepModifier>-50</iUpkeepModifier>
 			<OnGameOptions>
@@ -8352,7 +8352,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_QUALITY</Category>
 			</Categories>
-			<iExperiencePercent>30</iExperiencePercent>
+			<iExperiencePercent>15</iExperiencePercent>
 			<iQualityBase>4</iQualityBase>
 			<iUpkeepModifier>-20</iUpkeepModifier>
 			<OnGameOptions>
@@ -8414,7 +8414,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_QUALITY</Category>
 			</Categories>
-			<iExperiencePercent>-30</iExperiencePercent>
+			<iExperiencePercent>-15</iExperiencePercent>
 			<iQualityBase>6</iQualityBase>
 			<iUpkeepModifier>20</iUpkeepModifier>
 			<OnGameOptions>
@@ -8446,7 +8446,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_QUALITY</Category>
 			</Categories>
-			<iExperiencePercent>-60</iExperiencePercent>
+			<iExperiencePercent>-30</iExperiencePercent>
 			<iQualityBase>7</iQualityBase>
 			<iUpkeepModifier>50</iUpkeepModifier>
 			<OnGameOptions>
@@ -8472,7 +8472,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_QUALITY</Category>
 			</Categories>
-			<iExperiencePercent>-90</iExperiencePercent>
+			<iExperiencePercent>-45</iExperiencePercent>
 			<iQualityBase>8</iQualityBase>
 			<iUpkeepModifier>90</iUpkeepModifier>
 			<OnGameOptions>
@@ -8498,7 +8498,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_QUALITY</Category>
 			</Categories>
-			<iExperiencePercent>-120</iExperiencePercent>
+			<iExperiencePercent>-60</iExperiencePercent>
 			<iQualityBase>9</iQualityBase>
 			<iUpkeepModifier>140</iUpkeepModifier>
 			<OnGameOptions>
@@ -8527,7 +8527,7 @@
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
-			<iExperiencePercent>-150</iExperiencePercent>
+			<iExperiencePercent>-75</iExperiencePercent>
 			<iQualityBase>10</iQualityBase>
 			<iUpkeepModifier>200</iUpkeepModifier>
 			<VisibilityIntensityChangeTypes>
