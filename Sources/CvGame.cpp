@@ -2280,7 +2280,7 @@ void CvGame::update()
 			else
 			{
 				FErrorMsg("idleCity == NULL; fixing");
-				playerAct.resetIdleCities();
+				GET_PLAYER(getActivePlayer()).resetIdleCities();
 			}
 		}
 		else if (0 == (m_iTurnSlice % 8))
