@@ -180,7 +180,7 @@ CvCity::~CvCity()
 		CvDLLEntity::removeEntity();			// remove entity from engine
 		CvDLLEntity::destroyEntity();			// delete CvCityEntity and detach from us
 	}
-	FAssertMsg(!GET_PLAYER(eOwner).isIdleCity(getID()), "NULL City cached as idle!");
+	FAssertMsg(!GET_PLAYER(m_eOwner).isIdleCity(getID()), "NULL City cached as idle!");
 
 	uninit();
 
