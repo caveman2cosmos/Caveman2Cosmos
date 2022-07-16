@@ -180,7 +180,6 @@ CvCity::~CvCity()
 		CvDLLEntity::removeEntity();			// remove entity from engine
 		CvDLLEntity::destroyEntity();			// delete CvCityEntity and detach from us
 	}
-	FAssertMsg(!GET_PLAYER(m_eOwner).isIdleCity(getID()), "NULL City cached as idle!");
 
 	uninit();
 
@@ -1195,15 +1194,6 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	const PlayerTypes eOwner = getOwner();
 	CvPlayer& kOwner = GET_PLAYER(eOwner);
 
-	if (m_orderQueue.empty() && (isHuman() || kOwner.isHumanDisabled()))
-	{
-		kOwner.setIdleCity(getID(), false);
-	}
-	else
-	{
-		FAssertMsg(!kOwner.isIdleCity(getID()), "City with production is cached as idle!");
-	}
-
 	CvPlot* pPlot = plot();
 
 	// Take this plot out of zobrist hashes for local plot groups
@@ -1255,6 +1245,15 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	setPopulation(0);
 	//AI_assignWorkingPlots();
 	clearOrderQueue();
+
+	if (m_orderQueue.empty() && (isHuman() || kOwner.isHumanDisabled()))
+	{
+		kOwner.setIdleCity(getID(), false);
+	}
+	else
+	{
+		FAssertMsg(!kOwner.isIdleCity(getID()), "City with production is cached as idle!");
+	}
 
 	// remember the visibility before we take away the city from the plot below
 	std::vector<bool> abEspionageVisibility;
@@ -15536,14 +15535,14 @@ void CvCity::pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bo
 		default: FErrorMsg("iOrder did not match a valid option");
 	}
 
-	if (m_orderQueue.empty() && (isHuman() || owner.isHumanDisabled()))
-	{
-		owner.setIdleCity(getID(), !bValid);
-	}
-
 	if (!bValid)
 	{
 		return;
+	}
+
+	if (m_orderQueue.empty() && (isHuman() || owner.isHumanDisabled()))
+	{
+		owner.setIdleCity(getID(), false);
 	}
 
 	if (bAppend)
@@ -15979,20 +15978,24 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 		}
 	}
 
-	if (bChoose && m_orderQueue.empty())
+	if (m_orderQueue.empty())
 	{
 		if (isHuman() || owner.isHumanDisabled())
 		{
 			owner.setIdleCity(getID(), true);
 		}
-		if (isHuman() && !isProductionAutomated())
+
+		if (bChoose)
 		{
-			if (bWasFoodProduction)
+			if (isHuman() && !isProductionAutomated())
 			{
-				AI_assignWorkingPlots();
+				if (bWasFoodProduction)
+				{
+					AI_assignWorkingPlots();
+				}
 			}
+			else AI_chooseProduction();
 		}
-		else AI_chooseProduction();
 	}
 
 	if (bFinish)

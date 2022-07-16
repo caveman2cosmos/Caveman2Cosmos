@@ -2261,6 +2261,34 @@ void CvGame::update()
 	}
 	CvPlotPaging::UpdatePaging();
 
+	const CvPlayerAI& playerAct = GET_PLAYER(getActivePlayer());
+
+	if (playerAct.isTurnActive()
+	&& !gDLL->getInterfaceIFace()->isDiploOrPopupWaiting()
+	&& !gDLL->getInterfaceIFace()->isFocused()
+	&&  gDLL->getInterfaceIFace()->getLengthSelectionList() == 0
+	&&  gDLL->getInterfaceIFace()->getHeadSelectedCity() == NULL)
+	{
+		if (playerAct.hasIdleCity())
+		{
+			CvCity* city = playerAct.getIdleCity();
+			if (city)
+			{
+				gDLL->getInterfaceIFace()->addSelectedCity(city, false);
+				GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+			}
+			else
+			{
+				FErrorMsg("idleCity == NULL; fixing");
+				playerAct.resetIdleCities();
+			}
+		}
+		else if (0 == (m_iTurnSlice % 8))
+		{
+			gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
+		}
+	}
+
 again:
 
 	if (!gDLL->GetWorldBuilderMode() || isInAdvancedStart())
@@ -2293,51 +2321,23 @@ again:
 		 // A counter can't be allowed to stop incrementing, so loop it.
 		else m_iTurnSlice = MAX_INT - 99999;
 
-		if (NO_PLAYER != getActivePlayer() && GET_PLAYER(getActivePlayer()).getAdvancedStartPoints() >= 0 && !gDLL->getInterfaceIFace()->isInAdvancedStart())
+		if (NO_PLAYER != getActivePlayer() && playerAct.getAdvancedStartPoints() >= 0 && !gDLL->getInterfaceIFace()->isInAdvancedStart())
 		{
 			gDLL->getInterfaceIFace()->setInAdvancedStart(true);
 			gDLL->getInterfaceIFace()->setWorldBuilder(true);
 		}
 	}
 
-	//OutputDebugString(CvString::format("Stop profiling(false) after CvGame::update()\n").c_str());
-	const CvPlayerAI& kActivePlayer = GET_PLAYER(getActivePlayer());
-
 	if (!isGameMultiPlayer() && getBugOptionBOOL("MainInterface__MinimizeAITurnSlices", false)
-	&& (!kActivePlayer.isTurnActive() || kActivePlayer.isAutoMoves() && kActivePlayer.isOption(PLAYEROPTION_QUICK_MOVES))
+	&& (!playerAct.isTurnActive() || playerAct.isAutoMoves() && playerAct.isOption(PLAYEROPTION_QUICK_MOVES))
 	// Toffer - isAlive check is needed for the "you have been defeated" popups to appear as they should.
 	// Without it the game will just pass turns between the AI's without ever refreshing your screen, making it seem like the game freezed the moment you were defeated.
-	&& kActivePlayer.isAlive())
+	&& playerAct.isAlive())
 	{
 		updateTimers();
 		goto again;
 	}
-
-	if (kActivePlayer.isTurnActive()
-	&& !gDLL->getInterfaceIFace()->isDiploOrPopupWaiting()
-	&& !gDLL->getInterfaceIFace()->isFocused()
-	&&  gDLL->getInterfaceIFace()->getLengthSelectionList() == 0
-	&&  gDLL->getInterfaceIFace()->getHeadSelectedCity() == NULL)
-	{
-		if (kActivePlayer.hasIdleCity())
-		{
-			CvCity* city = kActivePlayer.getIdleCity();
-			if (city)
-			{
-				gDLL->getInterfaceIFace()->addSelectedCity(city, false);
-				GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
-			}
-			else
-			{
-				FErrorMsg("idleCity == NULL; fixing");
-				GET_PLAYER(getActivePlayer()).resetIdleCities();
-			}
-		}
-		else if (0 == (m_iTurnSlice % 8))
-		{
-			gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
-		}
-	}
+	//OutputDebugString(CvString::format("Stop profiling(false) after CvGame::update()\n").c_str());
 	PROFILE_END();
 	stopProfilingDLL(false);
 }
