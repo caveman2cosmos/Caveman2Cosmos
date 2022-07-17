@@ -602,10 +602,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_eOccupationCultureLevel = NO_CULTURELEVEL;
 	m_iLineOfSight = 0;
 	m_iLandmarkAngerTimer = 0;
-	// @SAVEBREAK delete - flabbert - 16.07.2022
-	m_iInvasionChance = 0;
-	m_iInvasionTimer = 0;
-	// SAVEBREAK
 	m_iFreshWater = 0;
 	m_iAdjacentDamagePercent = 0;
 	m_iLostProduction = 0;
@@ -16983,8 +16979,8 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iLandmarkAngerTimer);
 
 	// @SAVEBREAK DELETE - flabbert - 16.07.2022
-	WRAPPER_READ(wrapper, "CvCity", &m_iInvasionChance);
-	WRAPPER_READ(wrapper, "CvCity", &m_iInvasionTimer);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iInvasionChance, SAVE_VALUE_ANY);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iInvasionTimer, SAVE_VALUE_ANY);
 	// SaVEBREAK@
 
 	WRAPPER_READ(wrapper, "CvCity", &m_iFreshWater);
@@ -17681,10 +17677,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_eOccupationCultureLevel);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iLineOfSight);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iLandmarkAngerTimer);
-	// @SAVEBREAK delete - flabbert - 16.07.2022
-	WRAPPER_WRITE(wrapper, "CvCity", m_iInvasionChance);
-	WRAPPER_WRITE(wrapper, "CvCity", m_iInvasionTimer);
-	// SAVEBREAK@
+
 	WRAPPER_WRITE(wrapper, "CvCity", m_iFreshWater);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iAdjacentDamagePercent);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iWorkableRadiusOverride);
@@ -22055,10 +22048,6 @@ void CvCity::clearModifierTotals()
 	m_iSpecialistHappiness = 0;
 	m_iSpecialistUnhappiness = 0;
 	m_iLineOfSight = 0;
-	// @SAVEBREAK delete - flabbert - 16.07.2022
-	m_iInvasionChance = 0;
-	m_iInvasionTimer = 0;
-	// SAVEBREAK
 	m_iAdjacentDamagePercent = 0;
 	m_iWorkableRadiusOverride = 0;
 	m_iProtectedCultureCount = 0;

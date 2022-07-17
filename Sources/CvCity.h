@@ -1661,10 +1661,6 @@ protected:
 	bool m_bResetTechs;
 	int m_iLineOfSight;
 	int m_iLandmarkAngerTimer;
-	// @SAVEBREAK delete - flabbert - 16.07.2022
-	int m_iInvasionChance;
-	int m_iInvasionTimer;
-	// SAVEBREAK@
 	int m_iAdjacentDamagePercent;
 	int m_iWorkableRadiusOverride;
 	int m_iProtectedCultureCount;
