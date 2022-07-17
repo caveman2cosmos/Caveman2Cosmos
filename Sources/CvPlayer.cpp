@@ -3192,14 +3192,9 @@ void CvPlayer::killUnits()
 }
 
 
-// XXX should pUnit be a CvSelectionGroup???
 // Returns the next unit in the cycle...
 CvSelectionGroup* CvPlayer::cycleSelectionGroups(const CvUnit* pUnit, bool bForward, bool bWorkers, bool* pbWrap, bool bAllowViewportSwitch)
 {
-	CLLNode<int>* pFirstSelectionGroupNode;
-	CvSelectionGroup* pLoopSelectionGroup;
-	const CvViewport* pCurrentViewport = GC.getCurrentViewport();
-
 	if (pbWrap != NULL)
 	{
 		*pbWrap = false;
@@ -3213,31 +3208,16 @@ CvSelectionGroup* CvPlayer::cycleSelectionGroups(const CvUnit* pUnit, bool bForw
 		{
 			if (getSelectionGroup(pSelectionGroupNode->m_data) == pUnit->getGroup())
 			{
-				if (bForward)
-				{
-					pSelectionGroupNode = nextGroupCycleNode(pSelectionGroupNode);
-				}
-				else
-				{
-					pSelectionGroupNode = previousGroupCycleNode(pSelectionGroupNode);
-				}
+				pSelectionGroupNode = bForward ? nextGroupCycleNode(pSelectionGroupNode) : previousGroupCycleNode(pSelectionGroupNode);
 				break;
 			}
-
 			pSelectionGroupNode = nextGroupCycleNode(pSelectionGroupNode);
 		}
 	}
 
 	if (pSelectionGroupNode == NULL)
 	{
-		if (bForward)
-		{
-			pSelectionGroupNode = headGroupCycleNode();
-		}
-		else
-		{
-			pSelectionGroupNode = tailGroupCycleNode();
-		}
+		pSelectionGroupNode = bForward ? headGroupCycleNode() : tailGroupCycleNode();
 
 		if (pbWrap != NULL)
 		{
@@ -3249,77 +3229,53 @@ CvSelectionGroup* CvPlayer::cycleSelectionGroups(const CvUnit* pUnit, bool bForw
 	{
 		CvSelectionGroup* pNonViewportOption = NULL;
 
-		pFirstSelectionGroupNode = pSelectionGroupNode;
+		CLLNode<int>* pFirstSelectionGroupNode = pSelectionGroupNode;
+		const CvViewport* pCurrentViewport = GC.getCurrentViewport();
 
 		while (true)
 		{
-			pLoopSelectionGroup = getSelectionGroup(pSelectionGroupNode->m_data);
+			CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pSelectionGroupNode->m_data);
 			FAssertMsg(pLoopSelectionGroup != NULL, "LoopSelectionGroup is not assigned a valid value");
 
-			if (pLoopSelectionGroup->readyToSelect())
+			if (pLoopSelectionGroup->readyToSelect() && (!bWorkers || pLoopSelectionGroup->hasWorker()))
 			{
-				if (!bWorkers || pLoopSelectionGroup->hasWorker())
+				if (pUnit && pLoopSelectionGroup == pUnit->getGroup() && pbWrap != NULL)
 				{
-					if (pUnit && pLoopSelectionGroup == pUnit->getGroup())
-					{
-						if (pbWrap != NULL)
-						{
-							*pbWrap = true;
-						}
-					}
+					*pbWrap = true;
+				}
 
-					if (pCurrentViewport->isInViewport(pLoopSelectionGroup->getX(), pLoopSelectionGroup->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
-					{
-						return pLoopSelectionGroup;
-					}
-					else if ( pNonViewportOption == NULL )
-					{
-						pNonViewportOption = pLoopSelectionGroup;
-					}
+				if (pCurrentViewport->isInViewport(pLoopSelectionGroup->getX(), pLoopSelectionGroup->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
+				{
+					return pLoopSelectionGroup;
+				}
+				if (pNonViewportOption == NULL)
+				{
+					pNonViewportOption = pLoopSelectionGroup;
 				}
 			}
 
-			if (bForward)
+			pSelectionGroupNode = bForward ? nextGroupCycleNode(pSelectionGroupNode) : previousGroupCycleNode(pSelectionGroupNode);
+
+			if (pSelectionGroupNode == NULL)
 			{
-				pSelectionGroupNode = nextGroupCycleNode(pSelectionGroupNode);
+				pSelectionGroupNode = bForward ? headGroupCycleNode() : tailGroupCycleNode();
 
-				if (pSelectionGroupNode == NULL)
+				if (pbWrap != NULL)
 				{
-					pSelectionGroupNode = headGroupCycleNode();
-
-					if (pbWrap != NULL)
-					{
-						*pbWrap = true;
-					}
+					*pbWrap = true;
 				}
 			}
-			else
-			{
-				pSelectionGroupNode = previousGroupCycleNode(pSelectionGroupNode);
-
-				if (pSelectionGroupNode == NULL)
-				{
-					pSelectionGroupNode = tailGroupCycleNode();
-
-					if (pbWrap != NULL)
-					{
-						*pbWrap = true;
-					}
-				}
-			}
-
 			if (pSelectionGroupNode == pFirstSelectionGroupNode)
 			{
 				break;
 			}
 		}
 
-		if ( pNonViewportOption != NULL && bAllowViewportSwitch )
+		if (pNonViewportOption != NULL && bAllowViewportSwitch)
 		{
 			return pNonViewportOption;
 		}
 	}
-
 	return NULL;
 }
 
@@ -12271,7 +12227,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 			{
 				if (gDLL->getInterfaceIFace()->getLengthSelectionList() == 0)
 				{
-					gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
+					GC.getGame().updateSelectionListInternal();
 				}
 				gDLL->getInterfaceIFace()->setDirty(SelectionCamera_DIRTY_BIT, true);
 			}
@@ -12399,16 +12355,9 @@ void CvPlayer::setAutoMoves(bool bNewValue)
 	{
 		m_bAutoMoves = bNewValue;
 
-		if (!isAutoMoves())
+		if (!isAutoMoves() && (isEndTurn() || !isHuman() && !hasReadyUnit(true)))
 		{
-			if (isEndTurn() || (!isHuman() && !hasReadyUnit(true)))
-			{
-				setTurnActive(false);
-			}
-			else if (getID() == GC.getGame().getActivePlayer())
-			{
-				gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
-			}
+			setTurnActive(false);
 		}
 	}
 }

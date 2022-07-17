@@ -2283,10 +2283,7 @@ void CvGame::update()
 				GET_PLAYER(getActivePlayer()).resetIdleCities();
 			}
 		}
-		else if (0 == (m_iTurnSlice % 8))
-		{
-			gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
-		}
+		else cycleSelectionGroups();
 	}
 
 again:

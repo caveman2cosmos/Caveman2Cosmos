@@ -1628,7 +1628,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 			if (IsSelected())
 			{
-				gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
+				GC.getGame().updateSelectionListInternal();
 			}
 			else
 			{
@@ -5802,14 +5802,10 @@ void CvUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 		}
 	}
 
-	if (bCycle)
+	if (bCycle && IsSelected())
 	{
-		if (IsSelected())
-		{
-			gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
-		}
+		GC.getGame().updateSelectionListInternal();
 	}
-
 	getGroup()->doDelayedDeath();
 }
 
@@ -16563,9 +16559,22 @@ void CvUnit::setMoves(int iNewValue)
 
 		if (IsSelected())
 		{
-			gDLL->getFAStarIFace()->ForceReset(&GC.getInterfacePathFinder());
-
-			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
+			if (!canMove())
+			{
+				if (!getGroup()->canAnyMove())
+				{
+					GC.getGame().updateSelectionListInternal();
+				}
+				else
+				{
+					gDLL->getInterfaceIFace()->insertIntoSelectionList(this, false, true);
+				}
+			}
+			else
+			{
+				gDLL->getFAStarIFace()->ForceReset(&GC.getInterfacePathFinder());
+				gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
+			}
 		}
 
 		if (pPlot == gDLL->getInterfaceIFace()->getSelectionPlot())
@@ -36651,6 +36660,7 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, MissionTypes eSle
 				m_bIsBuildUp = true;
 				m_eCurrentBuildUpType = ePromotionLine;
 			}
+			GC.getGame().updateSelectionListInternal();
 			return;
 		}
 		// Choose buildup popup
