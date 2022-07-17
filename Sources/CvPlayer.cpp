@@ -11978,10 +11978,10 @@ void CvPlayer::setTurnActiveForPbem(bool bActive)
 	// does nothing more than to set the member variable before saving the game
 	// the rest of the turn will be performed upon loading the game
 	// This allows the player to browse the game in paused mode after he has generated the save
-	if (isTurnActive() != bActive)
+	if (m_bTurnActive != bActive)
 	{
 		m_bTurnActive = bActive;
-		GC.getGame().changeNumGameTurnActive(isTurnActive() ? 1 : -1);
+		GC.getGame().changeNumGameTurnActive(bActive ? 1 : -1);
 		GC.getMap().invalidateIsActivePlayerNoDangerCache();
 	}
 }
@@ -11992,11 +11992,11 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 	PROFILE_FUNC();
 
 
-	if (isTurnActive() != bNewValue)
+	if (m_bTurnActive != bNewValue)
 	{
 		m_bTurnActive = bNewValue;
 
-		if (isTurnActive())
+		if (bNewValue)
 		{
 			PROFILE("CvPlayer::setTurnActive.SetActive");
 
@@ -12005,7 +12005,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				stopProfilingDLL(true);
 			}
 
-			if (GC.getLogging() && gDLL->getChtLvl() > 0)
+			if (GC.getLogging())
 			{
 				char szOut[1024];
 				sprintf(szOut, "Player %d Turn ON\n", getID());
@@ -12047,86 +12047,84 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 
 					logBBAI("  Economy avg: %d,  Industry avg: %d,  Agriculture avg: %d", iEconomy, iProduction, iAgri);
 				}
+
+				if (gPlayerLogLevel >= 2)
+				{
+					PROFILE("CvPlayer::setTurnActive.SetActive.Log2");
+
+					CvWStringBuffer szBuffer;
+
+					logBBAI("	Player %d (%S) has %d cities, %d pop, %d power, %d tech percent", getID(), getCivilizationDescription(0), getNumCities(), getTotalPopulation(), getPower(), GET_TEAM(getTeam()).getBestKnownTechScorePercent());
+
+					if( GET_PLAYER(getID()).AI_isFinancialTrouble() )
+					{
+						logBBAI("	Financial trouble!");
+					}
+					szBuffer.append(CvWString::format(L"	Team %d has met: ", getTeam()));
+
+					for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+					{
+						if (iI != getTeam() && GET_TEAM(getTeam()).isHasMet((TeamTypes)iI) && GET_TEAM((TeamTypes)iI).isAlive())
+						{
+							szBuffer.append(CvWString::format(L"%d,", iI));
+						}
+					}
+
+					if (GET_TEAM(getTeam()).getVassalCount() > 0)
+					{
+						szBuffer.append(CvWString::format(L";  vassals: "));
+
+						for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+						{
+							if (iI != getTeam() && GET_TEAM((TeamTypes)iI).isVassal(getTeam()) && GET_TEAM((TeamTypes)iI).isAlive())
+							{
+								szBuffer.append(CvWString::format(L"%d,", iI));
+							}
+						}
+					}
+
+					if (GET_TEAM(getTeam()).isAtWar(true))
+					{
+						szBuffer.append(CvWString::format(L";  at war with: "));
+
+						for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+						{
+							if (iI != getTeam() && GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) && GET_TEAM((TeamTypes)iI).isAlive())
+							{
+								szBuffer.append(CvWString::format(L"%d,", iI));
+							}
+						}
+					}
+					const bool bWarPlan = GET_TEAM(getTeam()).hasWarPlan(true);
+
+					if (bWarPlan)
+					{
+						szBuffer.append(CvWString::format(L";  planning war with: "));
+
+						for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+						{
+							if (iI != getTeam() && GET_TEAM((TeamTypes)iI).isAlive()
+							&& !GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) && GET_TEAM(getTeam()).AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN)
+							{
+								szBuffer.append(CvWString::format(L"%d,", iI));
+							}
+						}
+						if (gPlayerLogLevel > 1)
+						{
+							logBBAI("%S\n\tEnemy power perc: %d (%d with others reduction)", szBuffer.getCString(), GET_TEAM(getTeam()).AI_getEnemyPowerPercent(), GET_TEAM(getTeam()).AI_getEnemyPowerPercent(true));
+						}
+					}
+					else if (gPlayerLogLevel > 1)
+					{
+						logBBAI("%S", szBuffer.getCString());
+					}
+					szBuffer.clear();
+				}
 			}
-
-			if (gPlayerLogLevel >= 2)
-			{
-				PROFILE("CvPlayer::setTurnActive.SetActive.Log2");
-
-				CvWStringBuffer szBuffer;
-
-				logBBAI("	Player %d (%S) has %d cities, %d pop, %d power, %d tech percent", getID(), getCivilizationDescription(0), getNumCities(), getTotalPopulation(), getPower(), GET_TEAM(getTeam()).getBestKnownTechScorePercent());
-
-				if( GET_PLAYER(getID()).AI_isFinancialTrouble() )
-				{
-					logBBAI("	Financial trouble!");
-				}
-				szBuffer.append(CvWString::format(L"	Team %d has met: ", getTeam()));
-
-				for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-				{
-					if (iI != getTeam() && GET_TEAM(getTeam()).isHasMet((TeamTypes)iI) && GET_TEAM((TeamTypes)iI).isAlive())
-					{
-						szBuffer.append(CvWString::format(L"%d,", iI));
-					}
-				}
-
-				if (GET_TEAM(getTeam()).getVassalCount() > 0)
-				{
-					szBuffer.append(CvWString::format(L";  vassals: "));
-
-					for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-					{
-						if (iI != getTeam() && GET_TEAM((TeamTypes)iI).isVassal(getTeam()) && GET_TEAM((TeamTypes)iI).isAlive())
-						{
-							szBuffer.append(CvWString::format(L"%d,", iI));
-						}
-					}
-				}
-
-				if (GET_TEAM(getTeam()).isAtWar(true))
-				{
-					szBuffer.append(CvWString::format(L";  at war with: "));
-
-					for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-					{
-						if (iI != getTeam() && GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) && GET_TEAM((TeamTypes)iI).isAlive())
-						{
-							szBuffer.append(CvWString::format(L"%d,", iI));
-						}
-					}
-				}
-				const bool bWarPlan = GET_TEAM(getTeam()).hasWarPlan(true);
-
-				if (bWarPlan)
-				{
-					szBuffer.append(CvWString::format(L";  planning war with: "));
-
-					for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-					{
-						if (iI != getTeam() && GET_TEAM((TeamTypes)iI).isAlive()
-						&& !GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) && GET_TEAM(getTeam()).AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN)
-						{
-							szBuffer.append(CvWString::format(L"%d,", iI));
-						}
-					}
-					if (gPlayerLogLevel > 1)
-					{
-						logBBAI("%S\n\tEnemy power perc: %d (%d with others reduction)", szBuffer.getCString(), GET_TEAM(getTeam()).AI_getEnemyPowerPercent(), GET_TEAM(getTeam()).AI_getEnemyPowerPercent(true));
-					}
-				}
-				else if (gPlayerLogLevel > 1)
-				{
-					logBBAI("%S", szBuffer.getCString());
-				}
-				szBuffer.clear();
-			}
-
 			FAssertMsg(isAlive(), "isAlive is expected to be true");
 
 			setEndTurn(false);
 			GC.getGame().resetTurnTimer();
-
 			{
 				PROFILE("CvPlayer::setTurnActive.SetActive.CalcDanger");
 
@@ -12221,15 +12219,6 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 					else gDLL->getInterfaceIFace()->playGeneralSound("AS2D_NEWTURN");
 				}
 				doWarnings();
-			}
-
-			if (getID() == GC.getGame().getActivePlayer())
-			{
-				if (gDLL->getInterfaceIFace()->getLengthSelectionList() == 0)
-				{
-					GC.getGame().updateSelectionListInternal();
-				}
-				gDLL->getInterfaceIFace()->setDirty(SelectionCamera_DIRTY_BIT, true);
 			}
 		}
 		else
