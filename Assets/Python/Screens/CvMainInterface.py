@@ -3444,6 +3444,8 @@ class CvMainInterface:
 		if self.iCityTab == CITYTAB_ADMIN and self.iCityTab != iTab:
 			screen.deleteWidget("CT|AdminLastOutput")
 			screen.deleteWidget("PreviousOutput")
+			if not self.bCityScreen:
+				screen.deleteWidget("CT|Cityzoom0")
 
 		self.iCityTab = iTab
 		xRes = self.xRes
