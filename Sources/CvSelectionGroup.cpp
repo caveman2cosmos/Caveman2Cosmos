@@ -120,24 +120,23 @@ void CvSelectionGroup::kill()
 
 bool CvSelectionGroup::sentryAlert() const
 {
-	CvUnit* pHeadUnit = NULL;
+	CvUnit* unit = NULL;
 	int iMaxRange = 0;
-	foreach_(CvUnit* pLoopUnit, units())
+	foreach_(CvUnit* unitX, units())
 	{
-		const int iRange = pLoopUnit->visibilityRange() + 1;
+		const int iRange = unitX->visibilityRange() + 1;
 		if (iRange > iMaxRange)
 		{
 			iMaxRange = iRange;
-			pHeadUnit = pLoopUnit;
+			unit = unitX;
 		}
 	}
 
-	if (NULL != pHeadUnit)
+	if (NULL != unit)
 	{
-		foreach_(const CvPlot* pPlot, pHeadUnit->plot()->rect(iMaxRange, iMaxRange))
+		foreach_(const CvPlot* plotX, unit->plot()->rect(iMaxRange, iMaxRange))
 		{
-			if (pHeadUnit->plot()->canSeePlot(pPlot, pHeadUnit->getTeam(), iMaxRange - 1, NO_DIRECTION)
-			&& pPlot->isVisibleEnemyUnit(pHeadUnit))
+			if (unit->plot()->canSeePlot(plotX, unit->getTeam(), iMaxRange - 1) && plotX->isVisibleEnemyUnit(unit))
 			{
 				return true;
 			}
@@ -153,28 +152,26 @@ bool CvSelectionGroup::sentryAlert() const
  */
 bool CvSelectionGroup::sentryAlertSameDomainType() const
 {
+	CvUnit* unit = NULL;
 	int iMaxRange = 0;
-	int iIndex = -1;
 
-	foreach_(CvUnit* pLoopUnit, units())
+	foreach_(CvUnit* unitX, units())
 	{
-		const int iRange = pLoopUnit->visibilityRange() + 1;
+		const int iRange = unitX->visibilityRange() + 1;
 		if (iRange > iMaxRange)
 		{
 			iMaxRange = iRange;
-			iIndex = getUnitIndex(pLoopUnit);
+			unit = unitX;
 		}
 	}
 
-	const CvUnit* pHeadUnit = ((iIndex == -1) ? NULL : getUnitAt(iIndex));
-	if (NULL != pHeadUnit)
+	if (NULL != unit)
 	{
-		foreach_(const CvPlot* pPlot, pHeadUnit->plot()->rect(iMaxRange, iMaxRange))
+		foreach_(const CvPlot* plotX, unit->plot()->rect(iMaxRange, iMaxRange))
 		{
-			if (pHeadUnit->plot()->canSeePlot(pPlot, pHeadUnit->getTeam(), iMaxRange - 1, NO_DIRECTION)
-			&& pPlot->isVisibleEnemyUnit(pHeadUnit))
+			if (unit->plot()->canSeePlot(plotX, unit->getTeam(), iMaxRange - 1) && plotX->isVisibleEnemyUnit(unit))
 			{
-				if (pPlot->isWater())
+				if (plotX->isWater())
 				{
 					if (getDomainType() == DOMAIN_SEA)
 					{
