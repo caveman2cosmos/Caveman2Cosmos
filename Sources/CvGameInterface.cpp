@@ -531,7 +531,7 @@ void CvGame::updateColoredPlots()
 			{
 				if (pTargetPlot->isVisible(pHeadSelectedUnit->getTeam(), false)
 				&& plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pTargetPlot->getX(), pTargetPlot->getY()) <= iRange
-				&& pHeadSelectedUnit->plot()->canSeePlot(pTargetPlot, pHeadSelectedUnit->getTeam(), iRange, pHeadSelectedUnit->getFacingDirection(true)))
+				&& pHeadSelectedUnit->plot()->canSeePlot(pTargetPlot, pHeadSelectedUnit->getTeam(), iRange))
 				{
 					NiColorA color(GC.getColorInfo(GC.getCOLOR_YELLOW()).getColor());
 					color.a = 0.5f;
@@ -650,9 +650,9 @@ void CvGame::updateBlockadedPlots()
 }
 
 
-void CvGame::updateSelectionList()
+/*DllExport*/ void CvGame::updateSelectionList()
 {
-	updateSelectionListInternal(true, true);
+	OutputDebugString("Exe wants to update selection list\n");
 }
 
 void CvGame::updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwitch, bool bForceAcceptCurrent)
@@ -675,7 +675,7 @@ void CvGame::updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwi
 
 				if (selectionPlot == NULL || !nextPlotUnit(selectionPlot, true, true))
 				{
-					cycleSelectionGroupsInternal(true, true, false, bSetCamera, bAllowViewportSwitch);
+					cycleSelectionGroups(true, true, false, bSetCamera, bAllowViewportSwitch);
 				}
 			}
 		}
@@ -863,13 +863,7 @@ void CvGame::cycleCities(bool bForward, bool bAdd) const
 }
 
 
-
-void CvGame::cycleSelectionGroups(bool bClear, bool bForward, bool bWorkers) const
-{
-	cycleSelectionGroupsInternal(bClear, bForward, bWorkers, true, true);
-}
-
-void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWorkers, bool bSetCamera, bool bAllowViewportSwitch) const
+void CvGame::cycleSelectionGroups(bool bClear, bool bForward, bool bWorkers, bool bSetCamera, bool bAllowViewportSwitch) const
 {
 	if (GET_PLAYER(getActivePlayer()).hasIdleCity())
 	{
@@ -907,11 +901,8 @@ void CvGame::cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWork
 			return;
 		}
 		// If we switched viewport then the asynchronous viewport switching will also handle the unit selection
-		else
-		{
-			FAssert(pNextSelectionGroup->getOwner() == getActivePlayer());
-			gDLL->getInterfaceIFace()->selectUnit(pNextSelectionGroup->getHeadUnit(), bClear);
-		}
+		FAssert(pNextSelectionGroup->getOwner() == getActivePlayer());
+		gDLL->getInterfaceIFace()->selectUnit(pNextSelectionGroup->getHeadUnit(), bClear);
 	}
 	// If we switched viewport then the asynchronous viewport switching will also handle the lookat
 	if (bSetCamera
@@ -1778,7 +1769,12 @@ void CvGame::doControl(ControlTypes eControl)
 		case CONTROL_CYCLEUNIT:
 		case CONTROL_CYCLEUNIT_ALT:
 		{
-			cycleSelectionGroups(true);
+			const CvUnit* prevUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+			cycleSelectionGroups();
+			if (prevUnit && prevUnit == gDLL->getInterfaceIFace()->getHeadSelectedUnit() && prevUnit->getGroup()->getActivityType() != ACTIVITY_AWAKE)
+			{
+				gDLL->getInterfaceIFace()->clearSelectionList();
+			}
 			break;
 		}
 		case CONTROL_CYCLEWORKER:

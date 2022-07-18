@@ -2055,9 +2055,7 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 		{
 			for (int dy = -iRange; dy <= iRange; dy++)
 			{
-				if (bAerial
-				//check if anything blocking the plot
-				|| (canSeeDisplacementPlot(eTeam, dx, dy, dx, dy, true, abs(dx) == iRange || abs(dy) == iRange)))
+				if (bAerial || canSeeDisplacementPlot(eTeam, dx, dy, dx, dy))
 				{
 					CvPlot* pPlot = plotXY(getX(), getY(), dx, dy);
 					if (NULL != pPlot)
@@ -2085,7 +2083,7 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 	}
 }
 
-bool CvPlot::canSeePlot(const CvPlot* pPlot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const
+bool CvPlot::canSeePlot(const CvPlot* pPlot, TeamTypes eTeam, int iRange) const
 {
 	if (pPlot == NULL)
 	{
@@ -2095,12 +2093,12 @@ bool CvPlot::canSeePlot(const CvPlot* pPlot, TeamTypes eTeam, int iRange, Direct
 	const int dx = dxWrap(pPlot->getX() - getX());
 	const int dy = dyWrap(pPlot->getY() - getY());
 
-	return canSeeDisplacementPlot(eTeam, dx, dy, dx, dy, true, abs(dx) == iRange || abs(dy) == iRange);
+	return canSeeDisplacementPlot(eTeam, dx, dy, dx, dy);
 }
 
-bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int originalDX, int originalDY, bool firstPlot, bool outerRing) const
+bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int originalDX, int originalDY) const
 {
-	CvPlot *pPlot = plotXY(getX(), getY(), dx, dy);
+	CvPlot* pPlot = plotXY(getX(), getY(), dx, dy);
 	if (pPlot == NULL)
 	{
 		return false;
@@ -2123,13 +2121,14 @@ bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int origina
 	int closest = -1;
 	for (int i = 0; i < 3; i++)
 	{
-		// int tempClosest = abs(displacements[i][0] * originalDX - displacements[i][1] * originalDY); //more accurate, but less structured on a grid
 		allClosest[i] = abs(displacements[i][0] * dy - displacements[i][1] * dx); // cross product
-		if((closest == -1) || (allClosest[i] < closest))
+
+		if (closest == -1 || allClosest[i] < closest)
 		{
 			closest = allClosest[i];
 		}
 	}
+	const int fromLevel = seeFromLevel(eTeam);
 
 	// iterate through all minimum plots to see if any of them are passable
 	for (int i = 0; i < 3; i++)
@@ -2138,39 +2137,24 @@ bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int origina
 		int nextDY = displacements[i][1];
 
 		// Make sure we change plots
-		if((nextDX != dx || nextDY != dy)
-			&& allClosest[i] == closest
-			&& canSeeDisplacementPlot(eTeam, nextDX, nextDY, originalDX, originalDY, false, false)
-			)
+		if ((nextDX != dx || nextDY != dy)
+		&& (nextDX != originalDX || nextDY != originalDY)
+		&& allClosest[i] == closest
+		&& !canSeeDisplacementPlot(eTeam, nextDX, nextDY, originalDX, originalDY))
 		{
-			int fromLevel = seeFromLevel(eTeam);
-			int throughLevel = pPlot->seeThroughLevel();
-
-			// Check strictly higher level
-			if(outerRing)
-			{
-				const CvPlot* passThroughPlot = plotXY(getX(), getY(), nextDX, nextDY);
-				if(passThroughPlot)
-				{
-					int passThroughLevel = passThroughPlot->seeThroughLevel();
-					if (fromLevel >= passThroughLevel
-						// Either we can see through to it or it is high enough to see from far
-						&& (fromLevel > passThroughLevel || pPlot->seeFromLevel(eTeam) > fromLevel))
-					{
-						return true;
-					}
-				}
-			}
-			// we can clearly see this level or
-			// we can also see it if it is the first plot that is too tall
-			else if (fromLevel >= throughLevel || firstPlot)
-			{
-				return true;
-			}
+			return false;
 		}
 	}
 
-	return false;
+	if (dx != originalDX || dy != originalDY)
+	{
+		const CvPlot* passThroughPlot = plotXY(getX(), getY(), dx, dy);
+		if (passThroughPlot && fromLevel < passThroughPlot->seeThroughLevel())
+		{
+			return false;
+		}
+	}
+	return true;
 }
 
 void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)

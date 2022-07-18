@@ -377,7 +377,7 @@ void CvViewport::processActionState()
 	case VIEWPORT_ACTION_STATE_SET_LOOKAT:
 		if ( ::getUnit(m_preservedHeadSelectedUnitId) == NULL && !m_bDisplayCityScreen && !m_bSelectCity )
 		{
-			GC.getGame().cycleSelectionGroupsInternal(true, true, false, false, false);
+			GC.getGame().cycleSelectionGroups(true, true, false, false, false);
 		}
 		m_preservedHeadSelectedUnitId.reset();
 		if ( m_pLookatPlot != NULL && m_pLookatPlot->isInViewport() )
@@ -424,7 +424,7 @@ void CvViewport::processActionState()
 			//	none get one selected
 			if ( pSelectedUnit == NULL )
 			{
-				GC.getGame().updateSelectionListInternal(true, true);
+				GC.getGame().updateSelectionListInternal();
 				pSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 			}
 
