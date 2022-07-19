@@ -3444,6 +3444,8 @@ class CvMainInterface:
 		if self.iCityTab == CITYTAB_ADMIN and self.iCityTab != iTab:
 			screen.deleteWidget("CT|AdminLastOutput")
 			screen.deleteWidget("PreviousOutput")
+			if not self.bCityScreen:
+				screen.deleteWidget("CT|Cityzoom0")
 
 		self.iCityTab = iTab
 		xRes = self.xRes
@@ -3460,7 +3462,12 @@ class CvMainInterface:
 		screen.setStyle(ID, "Panel_City_Title_Style")
 
 		if iTab == CITYTAB_ADMIN:
-			screen.setLabelAt(ID + "Text", ID, "<font=4><color=100,100,120,255>" + TRNSLTR.getText("TXT_KEY_BUG_OPTLABEL_ROMSETTINGS__CITYMANAGEMENT", ()), 1<<2, (halfX - 8) / 2, 2, 0, FontTypes.GAME_FONT, eWidGen, 1, 1)
+			txt = "<font=4><color=100,100,100>" + TRNSLTR.getText("TXT_KEY_BUG_OPTLABEL_ROMSETTINGS__CITYMANAGEMENT", ())
+			if self.bCityScreen:
+				screen.setLabelAt(ID + "Text", ID, txt, 1<<2, (halfX - 8) / 2, 2, 0, FontTypes.GAME_FONT, eWidGen, 1, 2)
+			else:
+				city = self.InCity.CyCity
+				screen.setText("CT|Cityzoom0", ID, txt + " <color=60,200,240>" + city.getName(), 1<<2, halfX - 8, 140, 0, FontTypes.GAME_FONT, eWidGen, 1, 2)
 
 		elif iTab == CITYTAB_UNIT:
 			self.fillUnitCityTabHeader(screen)
@@ -3964,6 +3971,8 @@ class CvMainInterface:
 		if self.iCityTab == CITYTAB_ADMIN:
 			screen.deleteWidget("CT|AdminLastOutput")
 			screen.deleteWidget("PreviousOutput")
+			if not self.bCityScreen:
+				screen.deleteWidget("CT|Cityzoom0")
 		screen.deleteWidget("CT|Options0")
 		screen.deleteWidget("ScrlPnlFilters")
 		screen.hide("CT|UnitGrouping")
@@ -5817,6 +5826,11 @@ class CvMainInterface:
 				elif TYPE == "Options":
 					import CityOptions
 					self.cityOptions = CityOptions.CityOptions(screen, self)
+
+				elif TYPE == "Cityzoom":
+					self.exitCityTab(screen)
+					CyIF.selectCity(self.InCity.CyCity, False)
+					self.bUpdateCityTab = True
 
 			elif BASE == "BldgList":
 				if TYPE == "Demolish":

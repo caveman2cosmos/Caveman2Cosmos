@@ -6767,7 +6767,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_HOVER</Tag>
-		<English>XP Gains based on how units fought in battle. The harder the battle, the more XP will be earned.</English>
+		<English>XP Gains based on how units fought in battle. The harder the battle, the more XP will be earned. Easy battles means much less XP earned.</English>
 		<French>Les Gains d'EXP basés sur la manière dont l'unité se bat au combat. Plus la bataille est difficile, plus d'EXP est obtenu.</French>
 		<German>Die Erfahrungspunkte (EP) basieren darauf, wie erfolgreich die Einheiten in der Schlacht gekämpft haben. Je härter die Schlacht, umso mehr Erfahrungspunkte kommen hinzu.</German>
 		<Italian>Guadagni di XP basati su come combatte l'unità in battaglia. Più la battaglia è difficile, più XP viene guadagnata.</Italian>
@@ -6776,12 +6776,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_TEXT</Tag>
-		<English>Dynamic XP</English>
-		<French>EXP amélioré</French>
-		<German>Dynamischer Erfahrungsgewinn</German>
-		<Italian>XP dinamica</Italian>
-		<Spanish>Experiencia dinámica</Spanish>
-		<Russian>Äèíàìè÷åñêèé îïûò</Russian>
+		<English>Less XP</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__INFRASTRUCTUREIGNORESIMPROVEMENTS_HOVER</Tag>

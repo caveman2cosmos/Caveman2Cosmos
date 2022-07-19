@@ -3840,11 +3840,6 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 		// TB Interpret Note: bGrowMore must be FALSE for cities to queue settlers!
 		// This was basically saying that if the city has more population than improved tiles then it won't build settlers!
 		bGrowMore = getPopulation() < player.getTotalPopulation() / player.getNumCities() && AI_countGoodTiles(true, false, 100) > getPopulation();
-
-		if (gPlayerLogLevel > 2)
-		{
-			logBBAI("bGrowMore (%d) - AI_countGoodTiles(true, false, 100) > %d (getPopulation())", int(bGrowMore), getPopulation());
-		}
 	}
 
 	//	Check the cache

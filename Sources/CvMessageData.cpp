@@ -1594,9 +1594,13 @@ void CvNetChooseBuildUp::Execute()
 		{
 			GET_PLAYER(m_ePlayer).getUnit(m_iID)->setBuildUpType(m_ePromotionLine);
 		}
-		else if (GET_PLAYER(m_ePlayer).getUnit(m_iID)->isBuildUp())
+		else
 		{
-			GET_PLAYER(m_ePlayer).getUnit(m_iID)->clearBuildups();
+			if (GET_PLAYER(m_ePlayer).getUnit(m_iID)->isBuildUp())
+			{
+				GET_PLAYER(m_ePlayer).getUnit(m_iID)->clearBuildups();
+			}
+			GET_PLAYER(m_ePlayer).getUnit(m_iID)->getGroup()->setActivityType(ACTIVITY_AWAKE);
 		}
 	}
 }

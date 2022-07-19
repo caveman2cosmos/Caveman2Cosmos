@@ -12,6 +12,7 @@
 #include "CvBuildingList.h"
 #include "CvUnitList.h"
 #include "CityOutputHistory.h"
+#include "CvGameObject.h"
 
 class CvArea;
 class CvArtInfoBuilding;
@@ -1325,15 +1326,6 @@ public:
 	int getUnitCombatExtraStrength(UnitCombatTypes eIndex) const;
 	void changeUnitCombatExtraStrength(UnitCombatTypes eIndex, int iChange);
 
-	int getInvasionChance() const;
-	void changeInvasionChance(int iChange);
-
-	int getInvasionTimer() const;
-	void changeInvasionTimer(int iChange);
-	bool isInvaded() const;
-
-	void doInvasion();
-
 	void setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValue, const bool bProcess = true);
 	bool isDisabledBuilding(const short iIndex) const;
 
@@ -1669,8 +1661,6 @@ protected:
 	bool m_bResetTechs;
 	int m_iLineOfSight;
 	int m_iLandmarkAngerTimer;
-	int m_iInvasionChance;
-	int m_iInvasionTimer;
 	int m_iAdjacentDamagePercent;
 	int m_iWorkableRadiusOverride;
 	int m_iProtectedCultureCount;

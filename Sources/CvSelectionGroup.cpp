@@ -120,24 +120,23 @@ void CvSelectionGroup::kill()
 
 bool CvSelectionGroup::sentryAlert() const
 {
-	CvUnit* pHeadUnit = NULL;
+	CvUnit* unit = NULL;
 	int iMaxRange = 0;
-	foreach_(CvUnit* pLoopUnit, units())
+	foreach_(CvUnit* unitX, units())
 	{
-		const int iRange = pLoopUnit->visibilityRange() + 1;
+		const int iRange = unitX->visibilityRange() + 1;
 		if (iRange > iMaxRange)
 		{
 			iMaxRange = iRange;
-			pHeadUnit = pLoopUnit;
+			unit = unitX;
 		}
 	}
 
-	if (NULL != pHeadUnit)
+	if (NULL != unit)
 	{
-		foreach_(const CvPlot* pPlot, pHeadUnit->plot()->rect(iMaxRange, iMaxRange))
+		foreach_(const CvPlot* plotX, unit->plot()->rect(iMaxRange, iMaxRange))
 		{
-			if (pHeadUnit->plot()->canSeePlot(pPlot, pHeadUnit->getTeam(), iMaxRange - 1, NO_DIRECTION)
-			&& pPlot->isVisibleEnemyUnit(pHeadUnit))
+			if (unit->plot()->canSeePlot(plotX, unit->getTeam(), iMaxRange - 1) && plotX->isVisibleEnemyUnit(unit))
 			{
 				return true;
 			}
@@ -153,28 +152,26 @@ bool CvSelectionGroup::sentryAlert() const
  */
 bool CvSelectionGroup::sentryAlertSameDomainType() const
 {
+	CvUnit* unit = NULL;
 	int iMaxRange = 0;
-	int iIndex = -1;
 
-	foreach_(CvUnit* pLoopUnit, units())
+	foreach_(CvUnit* unitX, units())
 	{
-		const int iRange = pLoopUnit->visibilityRange() + 1;
+		const int iRange = unitX->visibilityRange() + 1;
 		if (iRange > iMaxRange)
 		{
 			iMaxRange = iRange;
-			iIndex = getUnitIndex(pLoopUnit);
+			unit = unitX;
 		}
 	}
 
-	const CvUnit* pHeadUnit = ((iIndex == -1) ? NULL : getUnitAt(iIndex));
-	if (NULL != pHeadUnit)
+	if (NULL != unit)
 	{
-		foreach_(const CvPlot* pPlot, pHeadUnit->plot()->rect(iMaxRange, iMaxRange))
+		foreach_(const CvPlot* plotX, unit->plot()->rect(iMaxRange, iMaxRange))
 		{
-			if (pHeadUnit->plot()->canSeePlot(pPlot, pHeadUnit->getTeam(), iMaxRange - 1, NO_DIRECTION)
-			&& pPlot->isVisibleEnemyUnit(pHeadUnit))
+			if (unit->plot()->canSeePlot(plotX, unit->getTeam(), iMaxRange - 1) && plotX->isVisibleEnemyUnit(unit))
 			{
-				if (pPlot->isWater())
+				if (plotX->isWater())
 				{
 					if (getDomainType() == DOMAIN_SEA)
 					{
@@ -570,7 +567,7 @@ void CvSelectionGroup::updateMission()
 			}
 			else if (getOwner() == GC.getGame().getActivePlayer() && gDLL->getInterfaceIFace()->getHeadSelectedUnit() == NULL)
 			{
-				gDLL->getInterfaceIFace()->changeCycleSelectionCounter(1);
+				GC.getGame().updateSelectionListInternal();
 			}
 		}
 	}
@@ -1144,7 +1141,7 @@ bool CvSelectionGroup::startMission()
 	{
 		if (getOwner() == GC.getGame().getActivePlayer() && IsSelected())
 		{
-			gDLL->getInterfaceIFace()->changeCycleSelectionCounter(1);
+			GC.getGame().updateSelectionListInternal();
 		}
 		return false;
 	}
@@ -1155,11 +1152,13 @@ bool CvSelectionGroup::startMission()
 	bool bNuke = false;
 	bool bNotify = false;
 	bool bResult = true;
+	bool bCycle = true;
 
 	if (!canStartMission(headMissionQueueNode()->m_data.eMissionType, headMissionQueueNode()->m_data.iData1, headMissionQueueNode()->m_data.iData2, plot()))
 	{
 		bDelete = true;
 		bResult = false;
+		bCycle = false;
 	}
 	else
 	{
@@ -1179,93 +1178,116 @@ bool CvSelectionGroup::startMission()
 				}
 				break;
 			}
-
 			case MISSION_SKIP:
+			{
 				setActivityType(ACTIVITY_HOLD);
 				bDelete = true;
 				break;
-
+			}
 			case MISSION_SLEEP:
+			{
 				setActivityType(ACTIVITY_SLEEP, MISSION_SLEEP);
 				bNotify = true;
 				bDelete = true;
 				break;
-
+			}
 			case MISSION_FORTIFY:
+			{
 				setActivityType(ACTIVITY_SLEEP, MISSION_FORTIFY);
 				bNotify = true;
 				bDelete = true;
 				break;
-
+			}
 			case MISSION_BUILDUP:
+			{
 				setActivityType(ACTIVITY_SLEEP, MISSION_BUILDUP);
 				bNotify = true;
 				bDelete = true;
+				bCycle = false;
 				break;
-
+			}
 			case MISSION_AUTO_BUILDUP:
+			{
 				setActivityType(ACTIVITY_SLEEP, MISSION_AUTO_BUILDUP);
 				bNotify = true;
 				bDelete = true;
 				break;
-
+			}
 			case MISSION_HEAL_BUILDUP:
+			{
 				setActivityType(ACTIVITY_HEAL, MISSION_HEAL_BUILDUP);
 				bNotify = true;
 				bDelete = true;
 				break;
-
+			}
 			case MISSION_PLUNDER:
+			{
 				setActivityType(ACTIVITY_PLUNDER);
 				bNotify = true;
 				bDelete = true;
 				break;
-
+			}
 			case MISSION_AIRPATROL:
+			{
 				setActivityType(ACTIVITY_INTERCEPT);
 				bDelete = true;
 				break;
-
+			}
 			case MISSION_SEAPATROL:
+			{
 				setActivityType(ACTIVITY_PATROL);
 				bDelete = true;
 				break;
-
+			}
 			case MISSION_HEAL:
+			{
 				setActivityType(ACTIVITY_HEAL, MISSION_SLEEP);
 				bNotify = true;
 				bDelete = true;
 				break;
-
+			}
 			case MISSION_SENTRY:
+			{
 				setActivityType(ACTIVITY_SENTRY);
 				bNotify = true;
 				bDelete = true;
 				break;
+			}
 #ifdef _MOD_SENTRY
 			case MISSION_SENTRY_WHILE_HEAL:
+			{
 				setActivityType(ACTIVITY_SENTRY_WHILE_HEAL);
 				bNotify = true;
 				bDelete = true;
 				break;
-
+			}
 			case MISSION_SENTRY_NAVAL_UNITS:
+			{
 				setActivityType(ACTIVITY_SENTRY_NAVAL_UNITS);
 				bNotify = true;
 				bDelete = true;
 				break;
-
+			}
 			case MISSION_SENTRY_LAND_UNITS:
+			{
 				setActivityType(ACTIVITY_SENTRY_LAND_UNITS);
 				bNotify = true;
 				bDelete = true;
 				break;
+			}
 #endif
 			case MISSION_ESPIONAGE_SLEEP:
-			case MISSION_AMBUSH:
-			case MISSION_ASSASSINATE:
+			{
 				bDelete = true;
 				break;
+			}
+			case MISSION_AMBUSH:
+			case MISSION_ASSASSINATE:
+			{
+				bDelete = true;
+				bCycle = false;
+				break;
+			}
 		}
 
 		if (bNotify)
@@ -1815,9 +1837,9 @@ bool CvSelectionGroup::startMission()
 		{
 			if (bDelete)
 			{
-				if (getOwner() == GC.getGame().getActivePlayer() && IsSelected())
+				if (bCycle && getOwner() == GC.getGame().getActivePlayer() && IsSelected())
 				{
-					gDLL->getInterfaceIFace()->changeCycleSelectionCounter(GET_PLAYER(getOwner()).isOption(PLAYEROPTION_QUICK_MOVES) ? 1 : 2);
+					GC.getGame().updateSelectionListInternal();
 				}
 				deleteMissionQueueNode(headMissionQueueNode());
 			}
@@ -2210,16 +2232,18 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		{
 			if (!isBusy())
 			{
-				if (getOwner() == GC.getGame().getActivePlayer() && IsSelected())
+				if (getOwner() == GC.getGame().getActivePlayer() && IsSelected() && !canAnyMove())
 				{
-					if ((headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO) ||
+					if (headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO
+					||
 #ifdef _MOD_SENTRY
-						(headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO_SENTRY) ||
+						headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO_SENTRY
+					||
 #endif
-						(headMissionQueueNode()->m_data.eMissionType == MISSION_ROUTE_TO) ||
-						(headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO_UNIT))
+						headMissionQueueNode()->m_data.eMissionType == MISSION_ROUTE_TO
+					||  headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO_UNIT)
 					{
-						gDLL->getInterfaceIFace()->changeCycleSelectionCounter(GET_PLAYER(getOwner()).isOption(PLAYEROPTION_QUICK_MOVES) ? 1 : 2);
+						GC.getGame().updateSelectionListInternal();
 					}
 				}
 
@@ -2248,7 +2272,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		}
 		else if (!isBusy() && getOwner() == GC.getGame().getActivePlayer() && IsSelected())
 		{
-			gDLL->getInterfaceIFace()->changeCycleSelectionCounter(1);
+			GC.getGame().updateSelectionListInternal();
 		}
 	}
 	return !bFailed;
@@ -2786,8 +2810,7 @@ int CvSelectionGroup::getCargo(bool bVolume) const
 
 bool CvSelectionGroup::canAllMove() const
 {
-	return getNumUnits() > 0
-		&& algo::all_of(units(), CvUnit::fn::canMove());
+	return getNumUnits() > 0 && algo::all_of(units(), CvUnit::fn::canMove());
 }
 
 
@@ -4408,69 +4431,62 @@ void CvSelectionGroup::setActivityType(ActivityTypes eNewValue, MissionTypes eSl
 {
 	FAssert(getOwner() != NO_PLAYER);
 
-	const ActivityTypes eOldActivity = m_eActivityType;
-
-	if (eOldActivity != eNewValue)
+	if (eNewValue == m_eActivityType)
 	{
-		if (eOldActivity == ACTIVITY_INTERCEPT)
-		{
-			airCircle(false);
-		}
-		setBlockading(false);
+		return;
+	}
+	if (m_eActivityType == ACTIVITY_INTERCEPT)
+	{
+		airCircle(false);
+	}
+	setBlockading(false);
 
-		m_eActivityType = eNewValue;
+	m_eActivityType = eNewValue;
 
-		if (eNewValue == ACTIVITY_INTERCEPT)
-		{
-			airCircle(true);
-		}
-		CvPlot* pPlot = plot();
+	if (eNewValue == ACTIVITY_INTERCEPT)
+	{
+		airCircle(true);
+	}
+	CvPlot* pPlot = plot();
 
-		if (eNewValue != ACTIVITY_MISSION)
+	if (eNewValue != ACTIVITY_MISSION)
+	{
+		if (eNewValue != ACTIVITY_INTERCEPT)
 		{
-			if (eNewValue != ACTIVITY_INTERCEPT)
+			//don't idle intercept animation
+			foreach_(CvUnit* pLoopUnit, units())
 			{
-				//don't idle intercept animation
-				foreach_(CvUnit* pLoopUnit, units())
+				pLoopUnit->NotifyEntity(MISSION_IDLE);
+				if (pLoopUnit->isDead()) continue;
+
+				// Determine proper Sleep type
+				if (!isHuman() || eSleepType != NO_MISSION && (eNewValue == ACTIVITY_SLEEP || eNewValue == ACTIVITY_HEAL))
 				{
-					pLoopUnit->NotifyEntity(MISSION_IDLE);
-					if (pLoopUnit->isDead()) continue;
+					if (
+						pLoopUnit->isBuildUpable()
+					&&	(
+								eSleepType == MISSION_BUILDUP
+							||	eSleepType == MISSION_AUTO_BUILDUP
+							||	eSleepType == MISSION_HEAL_BUILDUP
+							||	eSleepType == NO_MISSION
+						)
+					) pLoopUnit->setBuildUpType(NO_PROMOTIONLINE, eSleepType);
 
-					// Determine proper Sleep type
-					if (!isHuman() || eSleepType != NO_MISSION && (eNewValue == ACTIVITY_SLEEP || eNewValue == ACTIVITY_HEAL))
-					{
-						MissionTypes eMission = MISSION_SLEEP;
-
-						if (
-							pLoopUnit->isBuildUpable()
-						&&	(
-									eSleepType == MISSION_BUILDUP
-								||	eSleepType == MISSION_AUTO_BUILDUP
-								||	eSleepType == MISSION_HEAL_BUILDUP
-								||	eSleepType == NO_MISSION
-							)
-						) pLoopUnit->setBuildUpType(NO_PROMOTIONLINE, eSleepType);
-
-						if (eMission == MISSION_SLEEP && pLoopUnit->isFortifyable())
-						{
-							eMission = MISSION_FORTIFY;
-						}
-						pLoopUnit->setSleepType(eMission);
-					}
+					pLoopUnit->setSleepType(pLoopUnit->isFortifyable() ? MISSION_FORTIFY : MISSION_SLEEP);
 				}
 			}
-
-			if (getTeam() == GC.getGame().getActiveTeam() && pPlot != NULL)
-			{
-				pPlot->setFlagDirty(true);
-			}
 		}
 
-		if (pPlot == gDLL->getInterfaceIFace()->getSelectionPlot())
+		if (getTeam() == GC.getGame().getActiveTeam() && pPlot != NULL)
 		{
-			gDLL->getInterfaceIFace()->setDirty(PlotListButtons_DIRTY_BIT, true);
-			gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
+			pPlot->setFlagDirty(true);
 		}
+	}
+
+	if (pPlot == gDLL->getInterfaceIFace()->getSelectionPlot())
+	{
+		gDLL->getInterfaceIFace()->setDirty(PlotListButtons_DIRTY_BIT, true);
+		gDLL->getInterfaceIFace()->setDirty(SelectionButtons_DIRTY_BIT, true);
 	}
 }
 
@@ -5707,9 +5723,12 @@ void CvSelectionGroup::deactivateHeadMission()
 		}
 		setMissionTimer(0);
 
-		if (getOwner() == GC.getGame().getActivePlayer() && IsSelected())
+		if (getOwner() == GC.getGame().getActivePlayer()
+		&& IsSelected()
+		&& getActivityType() == ACTIVITY_AWAKE
+		&& !canAnyMove())
 		{
-			gDLL->getInterfaceIFace()->changeCycleSelectionCounter(1);
+			GC.getGame().updateSelectionListInternal();
 		}
 	}
 }

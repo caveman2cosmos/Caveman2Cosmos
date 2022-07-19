@@ -256,6 +256,9 @@
     <Filter Include="Source\DataTypes\Structs">
       <UniqueIdentifier>{1ffdc357-252e-45bf-ab87-97513dfb0d94}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Base\City\Components">
+      <UniqueIdentifier>{70b61629-e789-4bbf-84e4-36fa4fe311bf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FDataIOStream.cpp">
@@ -1264,6 +1267,9 @@
     </ClInclude>
     <ClInclude Include="CounterSet.h">
       <Filter>Source\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="CvCityInvasionComponent.h">
+      <Filter>Source\Base\City\Components</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

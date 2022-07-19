@@ -1628,7 +1628,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 			if (IsSelected())
 			{
-				gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
+				GC.getGame().updateSelectionListInternal();
 			}
 			else
 			{
@@ -5802,14 +5802,10 @@ void CvUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 		}
 	}
 
-	if (bCycle)
+	if (bCycle && IsSelected())
 	{
-		if (IsSelected())
-		{
-			gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
-		}
+		GC.getGame().updateSelectionListInternal();
 	}
-
 	getGroup()->doDelayedDeath();
 }
 
@@ -5933,10 +5929,10 @@ TeamTypes CvUnit::getDeclareWarMove(const CvPlot* pPlot) const
 bool CvUnit::willRevealByMove(const CvPlot* pPlot) const
 {
 	const int iRange = visibilityRange(pPlot) + 1;
-	foreach_(const CvPlot* pLoopPlot, pPlot->rect(iRange, iRange))
+
+	foreach_(const CvPlot* plotX, pPlot->rect(iRange, iRange))
 	{
-		if (!pLoopPlot->isRevealed(getTeam(), false)
-		&& pPlot->canSeePlot(pLoopPlot, getTeam(), visibilityRange(), NO_DIRECTION))
+		if (!plotX->isRevealed(getTeam(), false) && pPlot->canSeePlot(plotX, getTeam(), visibilityRange()))
 		{
 			return true;
 		}
@@ -16563,9 +16559,22 @@ void CvUnit::setMoves(int iNewValue)
 
 		if (IsSelected())
 		{
-			gDLL->getFAStarIFace()->ForceReset(&GC.getInterfacePathFinder());
-
-			gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
+			if (!canMove())
+			{
+				if (!getGroup()->canAnyMove())
+				{
+					GC.getGame().updateSelectionListInternal();
+				}
+				else
+				{
+					gDLL->getInterfaceIFace()->insertIntoSelectionList(this, false, true);
+				}
+			}
+			else
+			{
+				gDLL->getFAStarIFace()->ForceReset(&GC.getInterfacePathFinder());
+				gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
+			}
 		}
 
 		if (pPlot == gDLL->getInterfaceIFace()->getSelectionPlot())
@@ -25107,20 +25116,12 @@ bool CvUnit::canRangeStrikeAt(const CvPlot* pPlot, int iX, int iY) const
 		return false;
 	}
 
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       05/10/10                             jdog5000         */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
 	// Need to check target plot too
 	//Fuyu: AI-controlled units can strike even when tile is invisible
 	if (isHuman() && !isAutomated() && !pTargetPlot->isVisible(getTeam(), false))
 	{
 		return false;
 	}
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
 
 	if (plotDistance(pPlot->getX(), pPlot->getY(), pTargetPlot->getX(), pTargetPlot->getY()) > airRange())
 	{
@@ -25133,7 +25134,7 @@ bool CvUnit::canRangeStrikeAt(const CvPlot* pPlot, int iX, int iY) const
 		return false;
 	}
 
-	if (!pPlot->canSeePlot(pTargetPlot, getTeam(), airRange(), getFacingDirection(true)))
+	if (!pPlot->canSeePlot(pTargetPlot, getTeam(), airRange()))
 	{
 		return false;
 	}
@@ -36651,6 +36652,7 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, MissionTypes eSle
 				m_bIsBuildUp = true;
 				m_eCurrentBuildUpType = ePromotionLine;
 			}
+			GC.getGame().updateSelectionListInternal();
 			return;
 		}
 		// Choose buildup popup
@@ -37077,7 +37079,7 @@ void CvUnit::updateSpotIntensity(const InvisibleTypes eInvisibleType, const bool
 		{
 			for (int dy = -iRange; dy <= iRange; dy++)
 			{
-				if (bAerial || plot()->canSeeDisplacementPlot(getTeam(), dx, dy, dx, dy, true, abs(dx) == iRange || abs(dy) == iRange))
+				if (bAerial || plot()->canSeeDisplacementPlot(getTeam(), dx, dy, dx, dy))
 				{
 					CvPlot* pPlot = plotXY(getX(), getY(), dx, dy);
 

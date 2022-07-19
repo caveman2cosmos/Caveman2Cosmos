@@ -83,8 +83,7 @@ public:
 	MapTypes getCurrentMap() const;
 	void setCurrentMap(MapTypes eNewMap);
 
-	void updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwitch, bool bForceAcceptCurrent = false);
-	void cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWorkers, bool bSetCamera, bool bAllowViewportSwitch) const;
+	void updateSelectionListInternal(bool bSetCamera = true, bool bAllowViewportSwitch = true, bool bForceAcceptCurrent = false);
 
 	void processGreatWall(bool bIn, bool bForce = false, bool bSeeded = true) const;
 	void noteGraphicRebuildNeeded();
@@ -96,7 +95,7 @@ public:
 	DllExport void getPlotUnits(const CvPlot *pPlot, std::vector<CvUnit*>& plotUnits) const;
 
 	DllExport void cycleCities(bool bForward = true, bool bAdd = false) const;
-	void cycleSelectionGroups(bool bClear, bool bForward = true, bool bWorkers = false) const;
+	void cycleSelectionGroups(bool bClear = true, bool bForward = true, bool bWorkers = false, bool bSetCamera = true, bool bAllowViewportSwitch = true) const;
 	bool nextPlotUnit(const CvPlot* pPlot, bool bForward = true, bool bAuto = false, int iCount = -1) const;
 	DllExport bool cyclePlotUnits(const CvPlot* pPlot, bool bForward = true, bool bAuto = false, int iCount = -1) const;
 	DllExport bool selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift) const;

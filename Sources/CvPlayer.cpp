@@ -3192,14 +3192,9 @@ void CvPlayer::killUnits()
 }
 
 
-// XXX should pUnit be a CvSelectionGroup???
 // Returns the next unit in the cycle...
 CvSelectionGroup* CvPlayer::cycleSelectionGroups(const CvUnit* pUnit, bool bForward, bool bWorkers, bool* pbWrap, bool bAllowViewportSwitch)
 {
-	CLLNode<int>* pFirstSelectionGroupNode;
-	CvSelectionGroup* pLoopSelectionGroup;
-	const CvViewport* pCurrentViewport = GC.getCurrentViewport();
-
 	if (pbWrap != NULL)
 	{
 		*pbWrap = false;
@@ -3213,31 +3208,16 @@ CvSelectionGroup* CvPlayer::cycleSelectionGroups(const CvUnit* pUnit, bool bForw
 		{
 			if (getSelectionGroup(pSelectionGroupNode->m_data) == pUnit->getGroup())
 			{
-				if (bForward)
-				{
-					pSelectionGroupNode = nextGroupCycleNode(pSelectionGroupNode);
-				}
-				else
-				{
-					pSelectionGroupNode = previousGroupCycleNode(pSelectionGroupNode);
-				}
+				pSelectionGroupNode = bForward ? nextGroupCycleNode(pSelectionGroupNode) : previousGroupCycleNode(pSelectionGroupNode);
 				break;
 			}
-
 			pSelectionGroupNode = nextGroupCycleNode(pSelectionGroupNode);
 		}
 	}
 
 	if (pSelectionGroupNode == NULL)
 	{
-		if (bForward)
-		{
-			pSelectionGroupNode = headGroupCycleNode();
-		}
-		else
-		{
-			pSelectionGroupNode = tailGroupCycleNode();
-		}
+		pSelectionGroupNode = bForward ? headGroupCycleNode() : tailGroupCycleNode();
 
 		if (pbWrap != NULL)
 		{
@@ -3249,77 +3229,53 @@ CvSelectionGroup* CvPlayer::cycleSelectionGroups(const CvUnit* pUnit, bool bForw
 	{
 		CvSelectionGroup* pNonViewportOption = NULL;
 
-		pFirstSelectionGroupNode = pSelectionGroupNode;
+		CLLNode<int>* pFirstSelectionGroupNode = pSelectionGroupNode;
+		const CvViewport* pCurrentViewport = GC.getCurrentViewport();
 
 		while (true)
 		{
-			pLoopSelectionGroup = getSelectionGroup(pSelectionGroupNode->m_data);
+			CvSelectionGroup* pLoopSelectionGroup = getSelectionGroup(pSelectionGroupNode->m_data);
 			FAssertMsg(pLoopSelectionGroup != NULL, "LoopSelectionGroup is not assigned a valid value");
 
-			if (pLoopSelectionGroup->readyToSelect())
+			if (pLoopSelectionGroup->readyToSelect() && (!bWorkers || pLoopSelectionGroup->hasWorker()))
 			{
-				if (!bWorkers || pLoopSelectionGroup->hasWorker())
+				if (pUnit && pLoopSelectionGroup == pUnit->getGroup() && pbWrap != NULL)
 				{
-					if (pUnit && pLoopSelectionGroup == pUnit->getGroup())
-					{
-						if (pbWrap != NULL)
-						{
-							*pbWrap = true;
-						}
-					}
+					*pbWrap = true;
+				}
 
-					if (pCurrentViewport->isInViewport(pLoopSelectionGroup->getX(), pLoopSelectionGroup->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
-					{
-						return pLoopSelectionGroup;
-					}
-					else if ( pNonViewportOption == NULL )
-					{
-						pNonViewportOption = pLoopSelectionGroup;
-					}
+				if (pCurrentViewport->isInViewport(pLoopSelectionGroup->getX(), pLoopSelectionGroup->getY(), GC.getVIEWPORT_FOCUS_BORDER()))
+				{
+					return pLoopSelectionGroup;
+				}
+				if (pNonViewportOption == NULL)
+				{
+					pNonViewportOption = pLoopSelectionGroup;
 				}
 			}
 
-			if (bForward)
+			pSelectionGroupNode = bForward ? nextGroupCycleNode(pSelectionGroupNode) : previousGroupCycleNode(pSelectionGroupNode);
+
+			if (pSelectionGroupNode == NULL)
 			{
-				pSelectionGroupNode = nextGroupCycleNode(pSelectionGroupNode);
+				pSelectionGroupNode = bForward ? headGroupCycleNode() : tailGroupCycleNode();
 
-				if (pSelectionGroupNode == NULL)
+				if (pbWrap != NULL)
 				{
-					pSelectionGroupNode = headGroupCycleNode();
-
-					if (pbWrap != NULL)
-					{
-						*pbWrap = true;
-					}
+					*pbWrap = true;
 				}
 			}
-			else
-			{
-				pSelectionGroupNode = previousGroupCycleNode(pSelectionGroupNode);
-
-				if (pSelectionGroupNode == NULL)
-				{
-					pSelectionGroupNode = tailGroupCycleNode();
-
-					if (pbWrap != NULL)
-					{
-						*pbWrap = true;
-					}
-				}
-			}
-
 			if (pSelectionGroupNode == pFirstSelectionGroupNode)
 			{
 				break;
 			}
 		}
 
-		if ( pNonViewportOption != NULL && bAllowViewportSwitch )
+		if (pNonViewportOption != NULL && bAllowViewportSwitch)
 		{
 			return pNonViewportOption;
 		}
 	}
-
 	return NULL;
 }
 
@@ -12022,10 +11978,10 @@ void CvPlayer::setTurnActiveForPbem(bool bActive)
 	// does nothing more than to set the member variable before saving the game
 	// the rest of the turn will be performed upon loading the game
 	// This allows the player to browse the game in paused mode after he has generated the save
-	if (isTurnActive() != bActive)
+	if (m_bTurnActive != bActive)
 	{
 		m_bTurnActive = bActive;
-		GC.getGame().changeNumGameTurnActive(isTurnActive() ? 1 : -1);
+		GC.getGame().changeNumGameTurnActive(bActive ? 1 : -1);
 		GC.getMap().invalidateIsActivePlayerNoDangerCache();
 	}
 }
@@ -12036,11 +11992,11 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 	PROFILE_FUNC();
 
 
-	if (isTurnActive() != bNewValue)
+	if (m_bTurnActive != bNewValue)
 	{
 		m_bTurnActive = bNewValue;
 
-		if (isTurnActive())
+		if (bNewValue)
 		{
 			PROFILE("CvPlayer::setTurnActive.SetActive");
 
@@ -12049,7 +12005,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				stopProfilingDLL(true);
 			}
 
-			if (GC.getLogging() && gDLL->getChtLvl() > 0)
+			if (GC.getLogging())
 			{
 				char szOut[1024];
 				sprintf(szOut, "Player %d Turn ON\n", getID());
@@ -12091,86 +12047,84 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 
 					logBBAI("  Economy avg: %d,  Industry avg: %d,  Agriculture avg: %d", iEconomy, iProduction, iAgri);
 				}
+
+				if (gPlayerLogLevel >= 2)
+				{
+					PROFILE("CvPlayer::setTurnActive.SetActive.Log2");
+
+					CvWStringBuffer szBuffer;
+
+					logBBAI("	Player %d (%S) has %d cities, %d pop, %d power, %d tech percent", getID(), getCivilizationDescription(0), getNumCities(), getTotalPopulation(), getPower(), GET_TEAM(getTeam()).getBestKnownTechScorePercent());
+
+					if( GET_PLAYER(getID()).AI_isFinancialTrouble() )
+					{
+						logBBAI("	Financial trouble!");
+					}
+					szBuffer.append(CvWString::format(L"	Team %d has met: ", getTeam()));
+
+					for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+					{
+						if (iI != getTeam() && GET_TEAM(getTeam()).isHasMet((TeamTypes)iI) && GET_TEAM((TeamTypes)iI).isAlive())
+						{
+							szBuffer.append(CvWString::format(L"%d,", iI));
+						}
+					}
+
+					if (GET_TEAM(getTeam()).getVassalCount() > 0)
+					{
+						szBuffer.append(CvWString::format(L";  vassals: "));
+
+						for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+						{
+							if (iI != getTeam() && GET_TEAM((TeamTypes)iI).isVassal(getTeam()) && GET_TEAM((TeamTypes)iI).isAlive())
+							{
+								szBuffer.append(CvWString::format(L"%d,", iI));
+							}
+						}
+					}
+
+					if (GET_TEAM(getTeam()).isAtWar(true))
+					{
+						szBuffer.append(CvWString::format(L";  at war with: "));
+
+						for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+						{
+							if (iI != getTeam() && GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) && GET_TEAM((TeamTypes)iI).isAlive())
+							{
+								szBuffer.append(CvWString::format(L"%d,", iI));
+							}
+						}
+					}
+					const bool bWarPlan = GET_TEAM(getTeam()).hasWarPlan(true);
+
+					if (bWarPlan)
+					{
+						szBuffer.append(CvWString::format(L";  planning war with: "));
+
+						for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
+						{
+							if (iI != getTeam() && GET_TEAM((TeamTypes)iI).isAlive()
+							&& !GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) && GET_TEAM(getTeam()).AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN)
+							{
+								szBuffer.append(CvWString::format(L"%d,", iI));
+							}
+						}
+						if (gPlayerLogLevel > 1)
+						{
+							logBBAI("%S\n\tEnemy power perc: %d (%d with others reduction)", szBuffer.getCString(), GET_TEAM(getTeam()).AI_getEnemyPowerPercent(), GET_TEAM(getTeam()).AI_getEnemyPowerPercent(true));
+						}
+					}
+					else if (gPlayerLogLevel > 1)
+					{
+						logBBAI("%S", szBuffer.getCString());
+					}
+					szBuffer.clear();
+				}
 			}
-
-			if (gPlayerLogLevel >= 2)
-			{
-				PROFILE("CvPlayer::setTurnActive.SetActive.Log2");
-
-				CvWStringBuffer szBuffer;
-
-				logBBAI("	Player %d (%S) has %d cities, %d pop, %d power, %d tech percent", getID(), getCivilizationDescription(0), getNumCities(), getTotalPopulation(), getPower(), GET_TEAM(getTeam()).getBestKnownTechScorePercent());
-
-				if( GET_PLAYER(getID()).AI_isFinancialTrouble() )
-				{
-					logBBAI("	Financial trouble!");
-				}
-				szBuffer.append(CvWString::format(L"	Team %d has met: ", getTeam()));
-
-				for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-				{
-					if (iI != getTeam() && GET_TEAM(getTeam()).isHasMet((TeamTypes)iI) && GET_TEAM((TeamTypes)iI).isAlive())
-					{
-						szBuffer.append(CvWString::format(L"%d,", iI));
-					}
-				}
-
-				if (GET_TEAM(getTeam()).getVassalCount() > 0)
-				{
-					szBuffer.append(CvWString::format(L";  vassals: "));
-
-					for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-					{
-						if (iI != getTeam() && GET_TEAM((TeamTypes)iI).isVassal(getTeam()) && GET_TEAM((TeamTypes)iI).isAlive())
-						{
-							szBuffer.append(CvWString::format(L"%d,", iI));
-						}
-					}
-				}
-
-				if (GET_TEAM(getTeam()).isAtWar(true))
-				{
-					szBuffer.append(CvWString::format(L";  at war with: "));
-
-					for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-					{
-						if (iI != getTeam() && GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) && GET_TEAM((TeamTypes)iI).isAlive())
-						{
-							szBuffer.append(CvWString::format(L"%d,", iI));
-						}
-					}
-				}
-				const bool bWarPlan = GET_TEAM(getTeam()).hasWarPlan(true);
-
-				if (bWarPlan)
-				{
-					szBuffer.append(CvWString::format(L";  planning war with: "));
-
-					for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-					{
-						if (iI != getTeam() && GET_TEAM((TeamTypes)iI).isAlive()
-						&& !GET_TEAM(getTeam()).isAtWar((TeamTypes)iI) && GET_TEAM(getTeam()).AI_getWarPlan((TeamTypes)iI) != NO_WARPLAN)
-						{
-							szBuffer.append(CvWString::format(L"%d,", iI));
-						}
-					}
-					if (gPlayerLogLevel > 1)
-					{
-						logBBAI("%S\n\tEnemy power perc: %d (%d with others reduction)", szBuffer.getCString(), GET_TEAM(getTeam()).AI_getEnemyPowerPercent(), GET_TEAM(getTeam()).AI_getEnemyPowerPercent(true));
-					}
-				}
-				else if (gPlayerLogLevel > 1)
-				{
-					logBBAI("%S", szBuffer.getCString());
-				}
-				szBuffer.clear();
-			}
-
 			FAssertMsg(isAlive(), "isAlive is expected to be true");
 
 			setEndTurn(false);
 			GC.getGame().resetTurnTimer();
-
 			{
 				PROFILE("CvPlayer::setTurnActive.SetActive.CalcDanger");
 
@@ -12265,15 +12219,6 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 					else gDLL->getInterfaceIFace()->playGeneralSound("AS2D_NEWTURN");
 				}
 				doWarnings();
-			}
-
-			if (getID() == GC.getGame().getActivePlayer())
-			{
-				if (gDLL->getInterfaceIFace()->getLengthSelectionList() == 0)
-				{
-					gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
-				}
-				gDLL->getInterfaceIFace()->setDirty(SelectionCamera_DIRTY_BIT, true);
 			}
 		}
 		else
@@ -12399,16 +12344,9 @@ void CvPlayer::setAutoMoves(bool bNewValue)
 	{
 		m_bAutoMoves = bNewValue;
 
-		if (!isAutoMoves())
+		if (!isAutoMoves() && (isEndTurn() || !isHuman() && !hasReadyUnit(true)))
 		{
-			if (isEndTurn() || (!isHuman() && !hasReadyUnit(true)))
-			{
-				setTurnActive(false);
-			}
-			else if (getID() == GC.getGame().getActivePlayer())
-			{
-				gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
-			}
+			setTurnActive(false);
 		}
 	}
 }
@@ -30820,17 +30758,17 @@ bool CvPlayer::isAliveAndTeam(const TeamTypes eTeam, const bool bSameTeam, const
 	// Best to be on the safe side though
 }
 
-void CvPlayer::setIdleCity(CvCity* city, const bool bNewValue)
+void CvPlayer::setIdleCity(const int iCityID, const bool bNewValue)
 {
 	FAssert(bNewValue || !m_idleCities.empty());
-	std::vector<CvCity*>::iterator itr = find(m_idleCities.begin(), m_idleCities.end(), city);
+	std::vector<int>::iterator itr = find(m_idleCities.begin(), m_idleCities.end(), iCityID);
 
 	if (bNewValue)
 	{
 		if (itr == m_idleCities.end())
 		{
-			m_idleCities.push_back(city);
-			FAssert(!city->isProduction());
+			m_idleCities.push_back(iCityID);
+			FAssert(!getCity(iCityID)->isProduction());
 		}
 		else FErrorMsg("Tried to add a duplicate vector element!");
 	}
@@ -30844,15 +30782,28 @@ void CvPlayer::setIdleCity(CvCity* city, const bool bNewValue)
 CvCity* CvPlayer::getIdleCity() const
 {
 	FAssert(!m_idleCities.empty());
-	return m_idleCities[0];
+	return getCity(m_idleCities[0]);
 }
 
-bool CvPlayer::isIdleCity(CvCity* city) const
+bool CvPlayer::isIdleCity(const int iCityID) const
 {
-	return find(m_idleCities.begin(), m_idleCities.end(), city) != m_idleCities.end();
+	return find(m_idleCities.begin(), m_idleCities.end(), iCityID) != m_idleCities.end();
 }
 
 bool CvPlayer::hasIdleCity() const
 {
 	return !m_idleCities.empty();
+}
+
+void CvPlayer::resetIdleCities()
+{
+	m_idleCities.clear();
+
+	foreach_(CvCity* city, cities())
+	{
+		if (!city->isProduction())
+		{
+			setIdleCity(city->getID(), true);
+		}
+	}
 }
