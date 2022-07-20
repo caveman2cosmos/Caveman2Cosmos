@@ -1950,7 +1950,6 @@ int CvPlot::getNearestLandArea() const
 	return pPlot ? pPlot->getArea() : -1;
 }
 
-
 CvPlot* CvPlot::getNearestLandPlot() const
 {
 	return getNearestLandPlotInternal(0);
@@ -1968,16 +1967,7 @@ int CvPlot::seeFromLevel(TeamTypes eTeam) const
 
 	if (!isWater())
 	{
-		iLevel++;
-
-		if (isAsPeak())
-		{
-			iLevel += GC.getPEAK_SEE_FROM_CHANGE();
-		}
-		else if (isHills())
-		{
-			iLevel += GC.getHILLS_SEE_FROM_CHANGE();
-		}
+		iLevel += 1 + getElevationLevel();
 	}
 	else if (GET_TEAM(eTeam).isExtraWaterSeeFrom())
 	{
@@ -1985,7 +1975,6 @@ int CvPlot::seeFromLevel(TeamTypes eTeam) const
 	}
 	return iLevel;
 }
-
 
 int CvPlot::seeThroughLevel() const
 {
@@ -2012,6 +2001,20 @@ int CvPlot::seeThroughLevel() const
 	return iLevel;
 }
 
+// Toffer - Quite basic setup:
+//	Water/Flatland < Hill < Peak.
+int CvPlot::getElevationLevel() const
+{
+	if (isAsPeak())
+	{
+		return GC.getPEAK_SEE_FROM_CHANGE();
+	}
+	if (isHills())
+	{
+		return GC.getHILLS_SEE_FROM_CHANGE();
+	}
+	return 0;
+}
 
 
 void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups)
@@ -2055,35 +2058,32 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 		{
 			for (int dy = -iRange; dy <= iRange; dy++)
 			{
-				if (bAerial || canSeeDisplacementPlot(eTeam, dx, dy, dx, dy))
+				CvPlot* pPlot = plotXY(getX(), getY(), dx, dy);
+
+				if (NULL != pPlot && (bAerial || canSeePlot(pPlot, eTeam)))
 				{
-					CvPlot* pPlot = plotXY(getX(), getY(), dx, dy);
-					if (NULL != pPlot)
+					int iFinalIntensity = 0;
+
+					if (bIncrement && bHideSeek && eInvisible != NO_INVISIBLE && pUnit != NULL)
 					{
-						int iFinalIntensity = 0;
+						const int iDistance = std::max(abs(dx), abs(dy));
 
-						if (bIncrement && bHideSeek && eInvisible != NO_INVISIBLE && pUnit != NULL)
+						if (iDistance > 0)
 						{
-							const int iDistance = std::max(abs(dx), abs(dy));
+							const int iSpotRange = pUnit->visibilityIntensityRangeTotal(eInvisible);
 
-							if (iDistance > 0)
-							{
-								const int iSpotRange = pUnit->visibilityIntensityRangeTotal(eInvisible);
-
-								iFinalIntensity = pUnit->visibilityIntensityTotal(eInvisible) - std::max(0, iDistance - iSpotRange);
-							}
-							else iFinalIntensity = pUnit->visibilityIntensityTotal(eInvisible) + pUnit->visibilityIntensitySameTileTotal(eInvisible);
-
+							iFinalIntensity = pUnit->visibilityIntensityTotal(eInvisible) - std::max(0, iDistance - iSpotRange);
 						}
-						pPlot->changeVisibilityCount(eTeam, (bIncrement ? 1 : -1), eInvisible, bUpdatePlotGroups, iFinalIntensity, iUnitID);
+						else iFinalIntensity = pUnit->visibilityIntensityTotal(eInvisible) + pUnit->visibilityIntensitySameTileTotal(eInvisible);
 					}
+					pPlot->changeVisibilityCount(eTeam, (bIncrement ? 1 : -1), eInvisible, bUpdatePlotGroups, iFinalIntensity, iUnitID);
 				}
 			}
 		}
 	}
 }
 
-bool CvPlot::canSeePlot(const CvPlot* pPlot, TeamTypes eTeam, int iRange) const
+bool CvPlot::canSeePlot(const CvPlot* pPlot, TeamTypes eTeam) const
 {
 	if (pPlot == NULL)
 	{
@@ -2093,66 +2093,101 @@ bool CvPlot::canSeePlot(const CvPlot* pPlot, TeamTypes eTeam, int iRange) const
 	const int dx = dxWrap(pPlot->getX() - getX());
 	const int dy = dyWrap(pPlot->getY() - getY());
 
-	return canSeeDisplacementPlot(eTeam, dx, dy, dx, dy);
+	return canSeeDisplacementPlot(eTeam, dx, dy, abs(dx), abs(dy), true);
 }
 
-bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int originalDX, int originalDY) const
+bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int dx0, int dy0, bool bEndPoint) const
 {
-	CvPlot* pPlot = plotXY(getX(), getY(), dx, dy);
-	if (pPlot == NULL)
-	{
-		return false;
-	}
 	// Base case is current plot
 	if (dx == 0 && dy == 0)
 	{
 		return true;
 	}
+	const CvPlot* seePlot = plotXY(getX(), getY(), dx, dy);
 
-	// Find closest of three points (1, 2, 3) to original line from Start (S) to End (E)
-	// The diagonal is computed first as that guarantees a change in position
-	// -------------
-	// |   | 2 | S |
-	// -------------
-	// | E | 1 | 3 |
-	// -------------
-	int displacements[3][2] = { {dx - getSign(dx), dy - getSign(dy)}, {dx - getSign(dx), dy}, {dx, dy - getSign(dy)} };
-	int allClosest[3];
-	int closest = -1;
-	for (int i = 0; i < 3; i++)
+	if (seePlot == NULL)
 	{
-		allClosest[i] = abs(displacements[i][0] * dy - displacements[i][1] * dx); // cross product
+		return false;
+	}
+	int step1[] = { 0, 0 };
+	int step2[] = { dx, dy };
+	int iSteps = 0;
 
-		if (closest == -1 || allClosest[i] < closest)
+	if (abs(dx) > 1 || abs(dy) > 1) // seePlot is not adjacent to "this" plot.
+	{
+		iSteps++;
+		if (dx == 0) // Straight vertical line to "this" plot.
 		{
-			closest = allClosest[i];
+			step1[1] = dy - getSign(dy);
+		}
+		else if (dy == 0) // Straight horizontal line to "this" plot.
+		{
+			step1[0] = dx - getSign(dx);
+		}
+		else // Diagonal is valid for sure
+		{
+			step1[0] = dx - getSign(dx);
+			step1[1] = dy - getSign(dy);
+
+			if (abs(dx) != abs(dy)) // Diagonal to "this" plot is not grid aligned.
+			{
+				iSteps++;
+				// One of the two straight directions is also valid
+				if (abs(dx) > abs(dy))
+				{
+					step2[0] = dx - getSign(dx);
+				}
+				else
+				{
+					step2[1] = dy - getSign(dy);
+				}
+			}
 		}
 	}
-	const int fromLevel = seeFromLevel(eTeam);
 
-	// iterate through all minimum plots to see if any of them are passable
-	for (int i = 0; i < 3; i++)
+	if (iSteps > 0)
 	{
-		int nextDX = displacements[i][0];
-		int nextDY = displacements[i][1];
+		bool bFailedStep1 = !canSeeDisplacementPlot(eTeam, step1[0], step1[1], dx0, dy0);
 
-		// Make sure we change plots
-		if ((nextDX != dx || nextDY != dy)
-		&& (nextDX != originalDX || nextDY != originalDY)
-		&& allClosest[i] == closest
-		&& !canSeeDisplacementPlot(eTeam, nextDX, nextDY, originalDX, originalDY))
+		if (iSteps == 2)
+		{
+			if (bFailedStep1
+			&& (step1[0] != 0 && 2*abs(step1[0]) <= dx0 || step1[1] != 0 && 2*abs(step1[1]) <= dy0))
+			{
+				return false;
+			}
+
+			if (!canSeeDisplacementPlot(eTeam, step2[0], step2[1], dx0, dy0)
+			&& (bFailedStep1 || step2[0] != step2[1] && (2*abs(step2[0]) >= dx0 || 2*abs(step2[1]) >= dy0)))
+			{
+				return false;
+			}
+		}
+		else if (bFailedStep1)
 		{
 			return false;
 		}
 	}
 
-	if (dx != originalDX || dy != originalDY)
+	if (bEndPoint)
 	{
-		const CvPlot* passThroughPlot = plotXY(getX(), getY(), dx, dy);
-		if (passThroughPlot && fromLevel < passThroughPlot->seeThroughLevel())
+		if (iSteps > 0)
 		{
-			return false;
+			int iPrevHeight = plotXY(getX(), getY(), step1[0], step1[1])->getElevationLevel();
+
+			if (iSteps == 2)
+			{
+				iPrevHeight = std::min(iPrevHeight, plotXY(getX(), getY(), step2[0], step2[1])->getElevationLevel());
+			}
+			if (seePlot->getElevationLevel() < iPrevHeight)
+			{
+				return false;
+			}
 		}
+	}
+	else if (seeFromLevel(eTeam) < seePlot->seeThroughLevel())
+	{
+		return false;
 	}
 	return true;
 }
@@ -2163,7 +2198,7 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 
 	// City
 	{
-		CvCity* pCity = getPlotCity();
+		const CvCity* pCity = getPlotCity();
 
 		if (pCity != NULL)
 		{

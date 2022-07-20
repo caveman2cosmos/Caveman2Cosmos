@@ -5932,7 +5932,7 @@ bool CvUnit::willRevealByMove(const CvPlot* pPlot) const
 
 	foreach_(const CvPlot* plotX, pPlot->rect(iRange, iRange))
 	{
-		if (!plotX->isRevealed(getTeam(), false) && pPlot->canSeePlot(plotX, getTeam(), visibilityRange()))
+		if (!plotX->isRevealed(getTeam(), false) && pPlot->canSeePlot(plotX, getTeam()))
 		{
 			return true;
 		}
@@ -25134,7 +25134,7 @@ bool CvUnit::canRangeStrikeAt(const CvPlot* pPlot, int iX, int iY) const
 		return false;
 	}
 
-	if (!pPlot->canSeePlot(pTargetPlot, getTeam(), airRange()))
+	if (!pPlot->canSeePlot(pTargetPlot, getTeam()))
 	{
 		return false;
 	}
@@ -37079,28 +37079,25 @@ void CvUnit::updateSpotIntensity(const InvisibleTypes eInvisibleType, const bool
 		{
 			for (int dy = -iRange; dy <= iRange; dy++)
 			{
-				if (bAerial || plot()->canSeeDisplacementPlot(getTeam(), dx, dy, dx, dy))
+				CvPlot* pPlot = plotXY(getX(), getY(), dx, dy);
+
+				if (NULL != pPlot && (bAerial || plot()->canSeePlot(pPlot, getTeam())))
 				{
-					CvPlot* pPlot = plotXY(getX(), getY(), dx, dy);
+					const int iDistance = std::max(abs(dx), abs(dy));
 
-					if (NULL != pPlot)
+					if (iDistance > 0)
 					{
-						const int iDistance = std::max(abs(dx), abs(dy));
-
-						if (iDistance > 0)
-						{
-							pPlot->setSpotIntensity(
-								getTeam(), eInvisible, getID(),
-								visibilityIntensityTotal(eInvisible) - std::max(0, iDistance - visibilityIntensityRangeTotal(eInvisible))
-							);
-						}
-						else
-						{
-							pPlot->setSpotIntensity(
-								getTeam(), eInvisible, getID(),
-								visibilityIntensityTotal(eInvisible) + visibilityIntensitySameTileTotal(eInvisible)
-							);
-						}
+						pPlot->setSpotIntensity(
+							getTeam(), eInvisible, getID(),
+							visibilityIntensityTotal(eInvisible) - std::max(0, iDistance - visibilityIntensityRangeTotal(eInvisible))
+						);
+					}
+					else
+					{
+						pPlot->setSpotIntensity(
+							getTeam(), eInvisible, getID(),
+							visibilityIntensityTotal(eInvisible) + visibilityIntensitySameTileTotal(eInvisible)
+						);
 					}
 				}
 			}
