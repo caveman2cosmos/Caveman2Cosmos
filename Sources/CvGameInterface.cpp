@@ -531,7 +531,7 @@ void CvGame::updateColoredPlots()
 			{
 				if (pTargetPlot->isVisible(pHeadSelectedUnit->getTeam(), false)
 				&& plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pTargetPlot->getX(), pTargetPlot->getY()) <= iRange
-				&& pHeadSelectedUnit->plot()->canSeePlot(pTargetPlot, pHeadSelectedUnit->getTeam(), iRange))
+				&& pHeadSelectedUnit->plot()->canSeePlot(pTargetPlot, pHeadSelectedUnit->getTeam()))
 				{
 					NiColorA color(GC.getColorInfo(GC.getCOLOR_YELLOW()).getColor());
 					color.a = 0.5f;
