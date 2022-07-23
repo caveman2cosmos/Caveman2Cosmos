@@ -3866,22 +3866,23 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 		}
 	}
 
-	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	for (int iI = GC.getNumUnitInfos() - 1; iI > -1; iI--)
 	{
-		const UnitTypes eLoopUnit = (UnitTypes)iI;
-		if (bGrowMore && isFoodProduction(eLoopUnit) || !AI_meetsUnitSelectionCriteria(eLoopUnit, &tempCriteria))
+		const UnitTypes eUnitX = static_cast<UnitTypes>(iI);
+		if (bGrowMore && isFoodProduction(eUnitX) || !AI_meetsUnitSelectionCriteria(eUnitX, &tempCriteria))
 		{
 			continue;
 		}
-		const CvUnitInfo& unit = GC.getUnitInfo(eLoopUnit);
+		const CvUnitInfo& unit = GC.getUnitInfo(eUnitX);
 
 		if (unit.getNotUnitAIType(eUnitAI)
-			|| tempCriteria.m_eIgnoreAdvisor != NO_ADVISOR && unit.getAdvisorType() == tempCriteria.m_eIgnoreAdvisor
-			|| !canTrain(eLoopUnit))
+		|| tempCriteria.m_eIgnoreAdvisor != NO_ADVISOR
+		&& tempCriteria.m_eIgnoreAdvisor == unit.getAdvisorType()
+		|| !canTrain(eUnitX))
 		{
 			continue;
 		}
-		int iValue = player.AI_unitValue(eLoopUnit, eUnitAI, area(), &tempCriteria);
+		int iValue = player.AI_unitValue(eUnitX, eUnitAI, area(), &tempCriteria);
 
 		if (iValue > 0)
 		{
@@ -3893,13 +3894,13 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 			// Allow order of magnitude
 			iValue *= 100; // Need it multiplying up so that truncation errors don't render.
 
-			iValue += getProductionExperience(eLoopUnit);
+			iValue += getProductionExperience(eUnitX);
 
 			// KOSHLING - this need rework to take actual promotion values. *** TODO ***
 			// May need some caching to do so at appropriate performance levels.
 			const int iCombatType = unit.getUnitCombatType();
 			int iPromotionValue = 0;
-			for (int iJ = 0; iJ < GC.getNumPromotionInfos(); iJ++)
+			for (int iJ = GC.getNumPromotionInfos() - 1; iJ > -1; iJ--)
 			{
 				// Unit
 				if (unit.getFreePromotions(iJ))
@@ -3930,7 +3931,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 				// Traits
 				if (iCombatType != NO_UNITCOMBAT)
 				{
-					for (int iK = 0; iK < GC.getNumTraitInfos(); iK++)
+					for (int iK = GC.getNumTraitInfos() - 1; iK > -1; iK--)
 					{
 						if (hasTrait((TraitTypes)iK) && GC.getTraitInfo((TraitTypes)iK).isFreePromotionUnitCombats(iJ, iCombatType))
 						{
@@ -3965,7 +3966,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 			if (iValue > iBestValue)
 			{
 				iBestValue = iValue;
-				eBestUnit = eLoopUnit;
+				eBestUnit = eUnitX;
 			}
 		}
 	}
