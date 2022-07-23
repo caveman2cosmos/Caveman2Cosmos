@@ -20064,7 +20064,7 @@ bool CvUnitAI::AI_settlerSeaFerry()
 				int iPathTurns;
 				if (generatePath(pLoopCity->plot(), 0, true, &iPathTurns))
 				{
-					iValue += std::max(0, (GET_PLAYER(getOwner()).AI_neededWorkers(pLoopCity->area()) - GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(pLoopCity->area(), UNITAI_WORKER)));
+					iValue += std::max(0, GET_PLAYER(getOwner()).AI_neededWorkers(pLoopCity->area()) - GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(pLoopCity->area(), UNITAI_WORKER));
 					iValue *= 1000;
 					iValue /= 4 + iPathTurns;
 					if (atPlot(pLoopCity->plot()))
@@ -22445,141 +22445,89 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 {
 	PROFILE_FUNC();
 
-	CvCity* pCity;
 	CvPlot* pBestPlot = NULL;
 	CvPlot* endTurnPlot = NULL;
-	int iPathTurns;
-	int iValue;
 	int iBestValue = MAX_INT;
-	int iPass;
-	int iCurrentDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot());
+	const int iCurrentDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(plot());
 
-	pCity = plot()->getPlotCity();
+	CvCity* pCity = plot()->getPlotCity();
 
-	if (0 == iCurrentDanger)
+	if (0 == iCurrentDanger && pCity && pCity->getOwner() == getOwner()
+	&& (!bPrimary || GET_PLAYER(getOwner()).AI_isPrimaryArea(pCity->area()))
+	&& (!bAirlift || pCity->getMaxAirlift() > 0)
+	&& !pCity->plot()->isVisibleEnemyUnit(this))
 	{
-		if (pCity != NULL)
+		// If we've successfully retreated and have an escort release it for now,
+		//	the exceptions are generals who build up multiple escorts while in cities
+		if (!canDefend() && getGroup()->canDefend() && AI_getUnitAIType() != UNITAI_GENERAL)
 		{
-			if (pCity->getOwner() == getOwner())
-			{
-				if (!bPrimary || GET_PLAYER(getOwner()).AI_isPrimaryArea(pCity->area()))
-				{
-					if (!bAirlift || (pCity->getMaxAirlift() > 0))
-					{
-						if (!(pCity->plot()->isVisibleEnemyUnit(this)))
-						{
-							//	If we've successfully retreated and have an escort release it for now - the exceptions
-							//	are generals who build up multiple escorts while in cities
-							if (!canDefend() && getGroup()->canDefend() && AI_getUnitAIType() != UNITAI_GENERAL)
-							{
-								joinGroup(NULL);
-							}
-
-							getGroup()->pushMission(MISSION_SKIP);
-							return true;
-						}
-					}
-				}
-			}
+			joinGroup(NULL);
 		}
+		getGroup()->pushMission(MISSION_SKIP);
+		return true;
 	}
+	const int iSearchRange = AI_searchRange(iMaxPath);
 
-	int iSearchRange = AI_searchRange(iMaxPath);
-
-	for (iPass = 0; iPass < 4; iPass++)
+	int iPass = 0;
+	for (; iPass < 4; iPass++)
 	{
-		CvReachablePlotSet plotSet(getGroup(), (iPass > 1) ? MOVE_IGNORE_DANGER : 0, iSearchRange);
+		CvReachablePlotSet plotSet(getGroup(), iPass > 1 ? MOVE_IGNORE_DANGER : 0, iSearchRange);
 
-		foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
+		foreach_(const CvCity * cityX, GET_PLAYER(getOwner()).cities())
 		{
-			if (plotSet.find(pLoopCity->plot()) != plotSet.end())
+			if (plotSet.find(cityX->plot()) == plotSet.end()
+			|| bPrimary && !GET_PLAYER(getOwner()).AI_isPrimaryArea(cityX->area())
+			|| bAirlift && cityX->getMaxAirlift() < 1
+			|| cityX->plot()->isVisibleEnemyUnit(this)
+			|| !bAirlift && getDomainType() == DOMAIN_LAND && cityX->area() != area() && !getGroup()->canMoveAllTerrain()
+			|| atPlot(cityX->plot()))
 			{
-				if (!bPrimary || GET_PLAYER(getOwner()).AI_isPrimaryArea(pLoopCity->area()))
+				continue;
+			}
+			int iPathTurns;
+
+			if (generatePath(cityX->plot(), ((iPass > 1) ? MOVE_IGNORE_DANGER : 0), true, &iPathTurns) 
+			&& iPathTurns <= (iPass == 2 ? 1 : iMaxPath))
+			{
+				// Water units can't defend a city.
+				// Any unthreatened city acceptable on 0th pass, solves problem where sea units would
+				// oscillate in and out of threatened city because they had iCurrentDanger = 0 on turns outside city
+
+				bool bCheck = iPass > 0 || getGroup()->canDefend();
+				if (!bCheck)
 				{
-					if (!bAirlift || (pLoopCity->getMaxAirlift() > 0))
+					const int iLoopDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(cityX->plot());
+					bCheck = (
+						iLoopDanger == 0
+						|| (
+							iLoopDanger < iCurrentDanger
+							&& //Fuyu: try to avoid doomed cities
+							iLoopDanger < 2 * (cityX->plot()->getNumDefenders(getOwner()))
+						)
+					);
+				}
+				if (bCheck)
+				{
+					int iValue = iPathTurns;
+
+					if (AI_getUnitAIType() == UNITAI_SETTLER_SEA)
 					{
-						if (!(pLoopCity->plot()->isVisibleEnemyUnit(this)))
+						iValue *= 1 + std::max(0, GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(cityX->area(), UNITAI_SETTLE) - GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(cityX->area(), UNITAI_SETTLER_SEA));
+					}
+
+					if (iValue < iBestValue)
+					{
+						endTurnPlot = getPathEndTurnPlot();
+
+						if (endTurnPlot == cityX->plot() || !exposedToDanger(endTurnPlot, 60))
 						{
-							/************************************************************************************************/
-							/* BETTER_BTS_AI_MOD					  08/19/09								jdog5000	  */
-							/*																							  */
-							/* Unit AI, Efficiency																		  */
-							/************************************************************************************************/
-														// BBAI efficiency: check area for land units before generating path
-							if (!bAirlift && (getDomainType() == DOMAIN_LAND) && (pLoopCity->area() != area()) && !(getGroup()->canMoveAllTerrain()))
+							iBestValue = iValue;
+							pBestPlot = endTurnPlot;
+
+							if (atPlot(pBestPlot))
 							{
-								continue;
-							}
-							/************************************************************************************************/
-							/* BETTER_BTS_AI_MOD					   END												  */
-							/************************************************************************************************/
-
-							if (!atPlot(pLoopCity->plot()) && generatePath(pLoopCity->plot(), ((iPass > 1) ? MOVE_IGNORE_DANGER : 0), true, &iPathTurns))
-							{
-								if (iPathTurns <= ((iPass == 2) ? 1 : iMaxPath))
-								{
-									/************************************************************************************************/
-									/* BETTER_BTS_AI_MOD					  08/19/09								jdog5000	  */
-									/*																							  */
-									/* Naval AI																					 */
-									/************************************************************************************************/
-									/* original bts code
-																		if ((iPass > 0) || (getGroup()->canFight() || GET_PLAYER(getOwner()).AI_getPlotDanger(pLoopCity->plot()) < iCurrentDanger))
-									*/
-									// Water units can't defend a city
-									// Any unthreatened city acceptable on 0th pass, solves problem where sea units
-									// would oscillate in and out of threatened city because they had iCurrentDanger = 0
-									// on turns outside city
-
-									bool bCheck = (iPass > 0) || (getGroup()->canDefend());
-									if (!bCheck)
-									{
-										int iLoopDanger = GET_PLAYER(getOwner()).AI_getPlotDanger(pLoopCity->plot());
-										bCheck = (iLoopDanger == 0) || (iLoopDanger < iCurrentDanger
-											//Fuyu: try to avoid doomed cities
-											&& iLoopDanger < 2 * (pLoopCity->plot()->getNumDefenders(getOwner())));
-									}
-
-									if (bCheck)
-										/************************************************************************************************/
-										/* BETTER_BTS_AI_MOD					   END												  */
-										/************************************************************************************************/
-									{
-										iValue = iPathTurns;
-
-										if (AI_getUnitAIType() == UNITAI_SETTLER_SEA)
-										{
-											iValue *= 1 + std::max(0, GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(pLoopCity->area(), UNITAI_SETTLE) - GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(pLoopCity->area(), UNITAI_SETTLER_SEA));
-										}
-
-										if (iValue < iBestValue)
-										{
-											endTurnPlot = getPathEndTurnPlot();
-
-											if (endTurnPlot == pLoopCity->plot() || !exposedToDanger(endTurnPlot, 60))
-											{
-												iBestValue = iValue;
-												pBestPlot = endTurnPlot;
-												/************************************************************************************************/
-												/* BETTER_BTS_AI_MOD					  01/27/08								jdog5000	  */
-												/*																							  */
-												/* Bugfix																					   */
-												/************************************************************************************************/
-																							// Not sure what can go wrong here, it seems somehow m_iData1 (moves) was set to 0
-																							// for first node in path so m_iData2 (turns) incremented
-												if (atPlot(pBestPlot))
-												{
-													//FErrorMsg("error");
-													pBestPlot = getGroup()->getPathFirstPlot();
-													FAssert(!atPlot(pBestPlot));
-												}
-												/************************************************************************************************/
-												/* BETTER_BTS_AI_MOD					   END												  */
-												/************************************************************************************************/
-											}
-										}
-									}
-								}
+								pBestPlot = getGroup()->getPathFirstPlot();
+								FAssert(!atPlot(pBestPlot));
 							}
 						}
 					}
@@ -22591,33 +22539,19 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 		{
 			break;
 		}
-		else if (iPass == 0)
+		if (iPass == 0 && pCity && pCity->getOwner() == getOwner()
+		&& (!bPrimary || GET_PLAYER(getOwner()).AI_isPrimaryArea(pCity->area()))
+		&& (!bAirlift || pCity->getMaxAirlift() > 0)
+		&& !pCity->plot()->isVisibleEnemyUnit(this))
 		{
-			if (pCity != NULL)
+			// If we've successfully retreated and have an escort release it for now
+			if (!canDefend() && getGroup()->canDefend())
 			{
-				if (pCity->getOwner() == getOwner())
-				{
-					if (!bPrimary || GET_PLAYER(getOwner()).AI_isPrimaryArea(pCity->area()))
-					{
-						if (!bAirlift || (pCity->getMaxAirlift() > 0))
-						{
-							if (!(pCity->plot()->isVisibleEnemyUnit(this)))
-							{
-								//	If we've successfully retreasted and have an escort release it for now
-								if (!canDefend() && getGroup()->canDefend())
-								{
-									joinGroup(NULL);
-								}
-
-								getGroup()->pushMission(MISSION_SKIP);
-								return true;
-							}
-						}
-					}
-				}
+				joinGroup(NULL);
 			}
+			getGroup()->pushMission(MISSION_SKIP);
+			return true;
 		}
-
 		if (getGroup()->alwaysInvisible())
 		{
 			break;
@@ -22627,41 +22561,25 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 	if (pBestPlot != NULL)
 	{
 		FAssert(!atPlot(pBestPlot));
-		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), ((iPass > 0) ? MOVE_IGNORE_DANGER : 0));
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), iPass > 0 ? MOVE_IGNORE_DANGER : 0);
 	}
 
-	if (pCity != NULL)
+	if (pCity && pCity->getTeam() == getTeam())
 	{
-		if (pCity->getTeam() == getTeam())
+		// If we've successfully retreated and have an escort release it for now
+		if (!canDefend() && getGroup()->canDefend())
 		{
-			//	If we've successfully retreated and have an escort release it for now
-			if (!canDefend() && getGroup()->canDefend())
-			{
-				joinGroup(NULL);
-			}
-
-			getGroup()->pushMission(MISSION_SKIP);
-			return true;
+			joinGroup(NULL);
 		}
+		getGroup()->pushMission(MISSION_SKIP);
+		return true;
 	}
-
 	return false;
 }
 
 
 // Returns true if a mission was pushed...
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  01/15/09								jdog5000	  */
-/*																							  */
-/* Naval AI																					 */
-/************************************************************************************************/
-/* original bts code
-bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI)
-*/
 bool CvUnitAI::AI_pickup(UnitAITypes eUnitAI, bool bCountProduction, int iMaxPath)
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
 {
 	PROFILE_FUNC();
 

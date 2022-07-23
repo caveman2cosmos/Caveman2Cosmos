@@ -15077,14 +15077,12 @@ CvCity* CvPlayer::nextCityExternal(int *pIterIdx, bool bRev) const
 CvCity* CvPlayer::firstCityExternal(int *pIterIdx, bool bRev) const
 {
 	CvCity* pResult = !bRev ? m_cities[CURRENT_MAP]->beginIter(pIterIdx) : m_cities[CURRENT_MAP]->endIter(pIterIdx);
+
 	if (pResult == NULL || pResult->isInViewport())
 	{
 		return pResult;
 	}
-	else
-	{
-		return nextCityExternal(pIterIdx, bRev);
-	}
+	return nextCityExternal(pIterIdx, bRev);
 }
 
 
