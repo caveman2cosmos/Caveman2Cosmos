@@ -1663,7 +1663,10 @@ void CvCityAI::AI_chooseProduction()
 			}
 		}
 
-		if (!bChooseWorker && (iWorkersNeeded > 0 || iNeededWorkersInArea > iWorkersInArea / 3 && AI_totalBestBuildValue(pArea) > 0 /*Fuyu: anything bigger than 0 is ok*/))
+		if (!bChooseWorker && iWorkersInArea <= iNeededWorkersInArea
+		&& (iWorkersNeeded > 0 || iNeededWorkersInArea > iWorkersInArea * 4/5)
+		// Fuyu: anything bigger than 0 is ok
+		&& AI_totalBestBuildValue(pArea) > 0)
 		{
 			if (AI_chooseUnit("capital with no workers", UNITAI_WORKER))
 			{
@@ -11512,10 +11515,9 @@ void CvCityAI::AI_updateWorkersNeededHere()
 
 	iWorkersNeeded = std::max((iUnimprovedWorkedPlotCount + 1) / 2, iWorkersNeeded);
 
-	m_iWorkersNeeded = iWorkersNeeded;
+	m_iWorkersNeeded = std::max(0, iWorkersNeeded - plot()->plotCount(PUF_isUnitAIType, UNITAI_WORKER, -1, NULL, getOwner(), getTeam(), PUF_isNoMissionAI, -1, -1));
 
 	FASSERT_NOT_NEGATIVE(iWorkersNeeded);
-	OutputDebugString(CvString::format("Player %d, city: %S, workers have: %d, workers needed: %d\n", getOwner(), getName().GetCString(), getNumWorkers(), iWorkersNeeded).c_str());
 	if (gCityLogLevel > 2)
 	{
 		logBBAI("Player %d, city: %S, workers have: %d, workers needed: %d", getOwner(), getName().GetCString(), getNumWorkers(), iWorkersNeeded);
