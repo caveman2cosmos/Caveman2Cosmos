@@ -2302,11 +2302,13 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				}
 			}
 
-			int iNumHealSupp = pUnit->getNumHealSupportTotal();
-			if (iNumHealSupp > 0)
 			{
-				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_UNITHELP_NUM_HEAL_SUPPORT", iNumHealSupp, pUnit->getHealSupportUsedTotal(), pUnit->getHealSupportRemaining()));
+				const int iNumHealSupp = pUnit->getNumHealSupportTotal();
+				if (iNumHealSupp > 0)
+				{
+					szString.append(NEWLINE);
+					szString.append(gDLL->getText("TXT_KEY_UNITHELP_NUM_HEAL_SUPPORT", iNumHealSupp, pUnit->getHealSupportRemaining()));
+				}
 			}
 
 			if (pUnit->getSameTileHeal() != 0)
