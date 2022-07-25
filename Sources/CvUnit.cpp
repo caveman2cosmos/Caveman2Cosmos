@@ -7742,78 +7742,50 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 {
 	PROFILE_FUNC();
 
-	CvCity* pCity;
-	CvUnit* pHealUnit = NULL;
-	int iTotalHeal;
-	int iHeal;
-	int iBestHeal;
-	int iI;
-	int iHealAs = MAX_INT;
-
-	int iNumHealAs = m_pUnitInfo->getNumHealAsTypes();
-	bool bHasHealAs = (iNumHealAs > 0);
-
 	if (pPlot->getTotalTurnDamage(this) > 0)
 	{
 		return 0;
 	}
 
 	//Find what will take the longest to heal and use that rate
-	int iNumTurns = MAX_INT;
-	int iBestNumTurns = MAX_INT;
-	bool bNeedsHealing = false;
-	if (bHasHealAs)
+	if (m_pUnitInfo->getNumHealAsTypes() > 0)
 	{
-		iBestHeal = MAX_INT;
-		for (iI = 0; iI < iNumHealAs; iI++)
+		int iWorstNumTurns = -1;
+		int iBestHeal = MAX_INT;
+		for (int iI = m_pUnitInfo->getNumHealAsTypes() - 1; iI > -1; iI--)
 		{
-			UnitCombatTypes eHealAsType = (UnitCombatTypes)m_pUnitInfo->getHealAsType(iI);
-			if (getHealAsDamage(eHealAsType) > 0)
+			const UnitCombatTypes eHealAsType = (UnitCombatTypes)m_pUnitInfo->getHealAsType(iI);
+			const int iHealAsDamage = getHealAsDamage(eHealAsType);
+			if (iHealAsDamage > 0)
 			{
-				bNeedsHealing = true;
-				iHealAs = getHealRateAsType(pPlot, bHealCheck, eHealAsType);
-				if (iHealAs > 0)
-				{
-					iNumTurns = (getHealAsDamage(eHealAsType)/ iHealAs);
-				}
-				else
-				{
-					iNumTurns = MAX_INT;
-				}
+				const int iHealAs = getHealRateAsType(pPlot, bHealCheck, eHealAsType);
+				const int iNumTurns = iHealAs > 0 ? iHealAsDamage / iHealAs : MAX_INT;
+
 				//Note we're actually looking for the slowest to heal here to use that for the # of rounds to heal total
-				if (iNumTurns > iBestNumTurns)
+				if (iNumTurns > iWorstNumTurns)
 				{
 					iBestHeal = iHealAs;
+					iWorstNumTurns = iNumTurns;
+					if (iNumTurns == MAX_INT)
+					{
+						break;
+					}
 				}
 			}
 		}
-		if (bNeedsHealing)
+		if (iWorstNumTurns > -1)
 		{
-			if (iBestHeal > getDamage())
-			{
-				iBestHeal = getDamage();
-			}
-
-			iTotalHeal = iBestHeal;
-
 			if (!hasNoSelfHeal())
 			{
-				iTotalHeal = std::max(1, iTotalHeal);
+				return std::max(1, std::min(iBestHeal, getDamage()));
 			}
-			else
-			{
-				iTotalHeal = std::max(0, iTotalHeal);
-			}
-			return iTotalHeal;
+			return std::max(0, std::min(iBestHeal, getDamage()));
 		}
 	}
 
+	int iTotalHeal = 0;
 
-	pCity = pPlot->getPlotCity();
-
-	iTotalHeal = 0;
-
-	if (!hasNoSelfHeal() || (getSelfHealModifierTotal() < 0))
+	if (!hasNoSelfHeal() || getSelfHealModifierTotal() < 0)
 	{
 		iTotalHeal += getSelfHealModifierTotal();
 	}
@@ -7821,6 +7793,9 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 	if (pPlot->isCity(true, getTeam()))
 	{
 		iTotalHeal += GC.getCITY_HEAL_RATE() + (GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) ? getExtraFriendlyHeal() : getExtraNeutralHeal());
+
+		const CvCity* pCity = pPlot->getPlotCity();
+
 		if (pCity && !pCity->isOccupation())
 		{
 			iTotalHeal += pCity->getHealRate();
@@ -7844,19 +7819,16 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 			iTotalHeal += (GC.getFRIENDLY_HEAL_RATE() + getExtraFriendlyHeal());
 		}
 	}
+	CvUnit* pHealUnit = NULL;
 
 	// XXX optimize this (save it?)
-	iBestHeal = 0;
+	int iBestHeal = 0;
 
 	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
 		if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
 		{
-			iHeal = pLoopUnit->getSameTileHeal();
-			//if (pLoopUnit->getSameTileHeal() > 0)
-			//{
-			//	iHeal += pLoopUnit->establishModifier();
-			//}
+			const int iHeal = pLoopUnit->getSameTileHeal();
 
 			if (iHeal > iBestHeal)
 			{
@@ -7872,11 +7844,7 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 		{
 			if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
 			{
-				iHeal = pLoopUnit->getAdjacentTileHeal();
-				//if (pLoopUnit->getAdjacentTileHeal() > 0)
-				//{
-				//	iHeal += pLoopUnit->establishModifier();
-				//}
+				const int iHeal = pLoopUnit->getAdjacentTileHeal();
 
 				if (iHeal > iBestHeal)
 				{
@@ -7886,6 +7854,7 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 			}
 		}
 	}
+	iTotalHeal += iBestHeal;
 
 	if (pHealUnit != NULL && bHealCheck)
 	{
@@ -7893,18 +7862,11 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 		pHealUnit->changeExperience100((10));
 	}
 
-	iTotalHeal += iBestHeal;
-	// XXX
 	if (!hasNoSelfHeal())
 	{
-		iTotalHeal = std::max(1, iTotalHeal);
+		return std::max(1, iTotalHeal);
 	}
-	else
-	{
-		iTotalHeal = std::max(0, iTotalHeal);
-	}
-
-	return iTotalHeal;
+	return std::max(0, iTotalHeal);
 }
 
 int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTypes eHealAsType) const
