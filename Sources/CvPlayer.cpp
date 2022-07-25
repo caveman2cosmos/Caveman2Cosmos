@@ -20547,7 +20547,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		double fMaxTaxIncome = static_cast<double>(m_iMaxTaxIncome);
 		WRAPPER_WRITE(wrapper, "CvPlayer", fMaxTaxIncome);
 	}
-	//	Use condensed format now - only save non-default array elements
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }

@@ -8146,16 +8146,10 @@ void CvCity::changeHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombat, int iCh
 	m_paiHealUnitCombatTypeVolume[eUnitCombat] += iChange;
 }
 
-void CvCity::setHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombat, int iChange)
-{
-	m_paiHealUnitCombatTypeVolume[eUnitCombat] = iChange;
-}
-
 int CvCity::getEspionageHealthCounter() const
 {
 	return std::min(8, m_iEspionageHealthCounter);
 }
-
 
 void CvCity::changeEspionageHealthCounter(int iChange)
 {

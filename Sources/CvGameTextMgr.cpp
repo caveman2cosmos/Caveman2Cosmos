@@ -2315,36 +2315,29 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_SAME", pUnit->getSameTileHeal()) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
 			}
 
-			if (pUnit->hasHealUnitCombat())
-			{
-				int iVolume = 0;
-				for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-				{
-					iVolume = pUnit->getHealUnitCombatTypeTotal((UnitCombatTypes)iI);
-					if (iVolume > 0)
-					{
-						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_SAME", GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide(), iVolume) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
-					}
-				}
-			}
-
 			if (pUnit->getAdjacentTileHeal() != 0)
 			{
 				szString.append(NEWLINE);
 				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_ADJACENT", pUnit->getAdjacentTileHeal()) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
 			}
 
-			if (pUnit->hasHealUnitCombat())
+			if (pUnit->getHealUnitCombatCount() > 0)
 			{
-				int iVolume = 0;
-				for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+				for (int iI = GC.getNumUnitCombatInfos() - 1; iI > -1; iI--)
 				{
-					iVolume = pUnit->getHealUnitCombatTypeAdjacentTotal((UnitCombatTypes)iI);
-					if (iVolume > 0)
+					const int i0 = pUnit->getHealUnitCombatTypeTotal((UnitCombatTypes)iI);
+
+					if (i0 > 0)
 					{
 						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_ADJACENT", GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide(), iVolume) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
+						szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_SAME", GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide(), i0) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
+					}
+					const int i1 = pUnit->getHealUnitCombatTypeAdjacentTotal((UnitCombatTypes)iI);
+
+					if (i1 > 0)
+					{
+						szString.append(NEWLINE);
+						szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_ADJACENT", GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide(), i1) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
 					}
 				}
 			}
