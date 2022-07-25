@@ -1555,11 +1555,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_NUM_HEAL_SUPPORT</Tag>
-		<English>[ICON_BULLET]Heals %d1_Volume Unit(s)/turn. (%d3_Rem Remaining)</English>
-		<French>[ICON_BULLET]Soigne %d1_Volume Unité(s)/tour. (%d3_Rem Restant)</French>
-		<German>[ICON_BULLET]heilt %d1_Volume [NUM1:Einheit:Einheiten] pro Runde. (%d3_Rem verbleibend)</German>
-		<Polish>[ICON_BULLET]Może pomagać w leczeniu %d1_Volume jednostek na turę. (%d2_Used użytych / %d3_Rem pozostało)</Polish>
-		<Russian>[ICON_BULLET]Лечит %d1_Volume отряд(ов)/ход. (%d3_Rem остальных)</Russian>
+		<English>[ICON_BULLET]Heals %d1 [NUM1:Unit:Units]/turn. (%d2 Remaining)</English>
+		<French>[ICON_BULLET]Soigne %d1 Unité(s)/tour. (%d2 Restant)</French>
+		<German>[ICON_BULLET]heilt %d1 [NUM1:Einheit:Einheiten] pro Runde. (%d2 verbleibend)</German>
+		<Polish>[ICON_BULLET]Może pomagać w leczeniu %d1 jednostek na turę. (%d2 pozostało)</Polish>
+		<Russian>[ICON_BULLET]Лечит %d1 отряд(ов)/ход. (%d2 остальных)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_ONEUP</Tag>
