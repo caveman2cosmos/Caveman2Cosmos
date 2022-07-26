@@ -83,7 +83,7 @@ public:
 	MapTypes getCurrentMap() const;
 	void setCurrentMap(MapTypes eNewMap);
 
-	void updateSelectionListInternal(bool bSetCamera = true, bool bAllowViewportSwitch = true, bool bForceAcceptCurrent = false);
+	void updateSelectionListInternal(int iCycleDelay = 0, bool bSetCamera = true, bool bAllowViewportSwitch = true, bool bForceAcceptCurrent = false);
 
 	void processGreatWall(bool bIn, bool bForce = false, bool bSeeded = true) const;
 	void noteGraphicRebuildNeeded();
@@ -707,6 +707,7 @@ protected:
 	int m_iDateTurn;
 
 	int m_iTurnSlice;
+	int m_iMinGameSliceToCycleUnit;
 	int m_iCutoffSlice;
 	int m_iNumGameTurnActive;
 	int m_iNumCities;

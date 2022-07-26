@@ -655,17 +655,17 @@ void CvGame::updateBlockadedPlots()
 	OutputDebugString("Exe wants to update selection list\n");
 }
 
-void CvGame::updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwitch, bool bForceAcceptCurrent)
+void CvGame::updateSelectionListInternal(int iCycleDelay, bool bSetCamera, bool bAllowViewportSwitch, bool bForceAcceptCurrent)
 {
 	if (GET_PLAYER(getActivePlayer()).isOption(PLAYEROPTION_NO_UNIT_CYCLING) || GC.getCurrentViewport()->isSelectionInhibitted())
 	{
 		return;
 	}
-
 	const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 	if (pHeadSelectedUnit == NULL || !bForceAcceptCurrent && !pHeadSelectedUnit->getGroup()->readyToSelect(true))
 	{
+		if (iCycleDelay == 0)
 		{
 			const CvPlot* originalPlot = gDLL->getInterfaceIFace()->getOriginalPlot();
 
@@ -678,12 +678,25 @@ void CvGame::updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwi
 					cycleSelectionGroups(true, true, false, bSetCamera, bAllowViewportSwitch);
 				}
 			}
-		}
-		pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+			const CvUnit* newSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
-		if (pHeadSelectedUnit != NULL && !pHeadSelectedUnit->getGroup()->readyToSelect())
+			if (newSelectedUnit != NULL && !newSelectedUnit->getGroup()->readyToSelect())
+			{
+				gDLL->getInterfaceIFace()->clearSelectionList();
+			}
+		}
+		else 
 		{
-			gDLL->getInterfaceIFace()->clearSelectionList();
+			if (m_iTurnSlice > MAX_INT - iCycleDelay)
+			{
+				m_iMinGameSliceToCycleUnit = m_iTurnSlice + iCycleDelay - 99999;
+			}
+			else m_iMinGameSliceToCycleUnit = m_iTurnSlice + iCycleDelay;
+
+			if (pHeadSelectedUnit != NULL && !pHeadSelectedUnit->getGroup()->readyToSelect())
+			{
+				gDLL->getInterfaceIFace()->clearSelectionList();
+			}
 		}
 	}
 }
@@ -1795,7 +1808,6 @@ void CvGame::doControl(ControlTypes eControl)
 			{
 				cycleSelectionGroups(true, false);
 			}
-
 			gDLL->getInterfaceIFace()->setLastSelectedUnit(NULL);
 			break;
 		}

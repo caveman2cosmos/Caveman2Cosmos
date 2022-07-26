@@ -842,6 +842,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	m_iEstimateEndTurn = 0;
 	m_iDateTurn = -500;
 	m_iTurnSlice = 0;
+	m_iMinGameSliceToCycleUnit = 0;
 	m_iCutoffSlice = 0;
 	m_iNumGameTurnActive = 0;
 	m_iNumCities = 0;
@@ -2283,7 +2284,11 @@ void CvGame::update()
 				GET_PLAYER(getActivePlayer()).resetIdleCities();
 			}
 		}
-		else cycleSelectionGroups();
+		else if (m_iMinGameSliceToCycleUnit <= m_iTurnSlice)
+		{
+			m_iMinGameSliceToCycleUnit = 0;
+			cycleSelectionGroups();
+		}
 	}
 
 again:

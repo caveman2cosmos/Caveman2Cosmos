@@ -4430,7 +4430,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (!bAdvance && !m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught && !bStealthDefense)
 				{
 					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-					checkRemoveSelectionAfterAttack();
 				}
 				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 				{
@@ -4460,7 +4459,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 		{
 			if (!m_combatResult.bAttackerOnslaught)
 			{
-
 				if (!m_combatResult.bAttackerStampedes)
 				{
 					if (bHuman)
@@ -4544,7 +4542,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					else if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
 					{
 						changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-						checkRemoveSelectionAfterAttack();
 					}
 					if (getGroup() != NULL)
 					{
@@ -4590,7 +4587,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 						else if (!bStealthDefense && !m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
 						{
 							changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-							checkRemoveSelectionAfterAttack();
 						}
 					}
 					else
@@ -4600,7 +4596,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 						{
 							changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 						}
-						checkRemoveSelectionAfterAttack();
 					}
 					if (getGroup() != NULL)
 					{
@@ -4619,7 +4614,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				{
 					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				}
-				checkRemoveSelectionAfterAttack();
 				if (getGroup() != NULL)
 				{
 					if (getGroup()->canAnyMove())//testing selective situation here.
@@ -4788,7 +4782,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				{
 					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				}
-				checkRemoveSelectionAfterAttack();
 				if (getGroup() != NULL)
 				{
 					if (getGroup()->canAnyMove())//testing selective situation here.
@@ -5007,7 +5000,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				// This is before the plot advancement, the unit will always try to walk back
 				// to the square that they came from, before advancing.
 			}
-			checkRemoveSelectionAfterAttack();
 			if (getGroup() != NULL)
 			{
 				if (getGroup()->canAnyMove())//testing selective situation here.
@@ -5039,7 +5031,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				//GC.getGame().logOOSSpecial(53, getID(), getMoves(), getDamage());
-				checkRemoveSelectionAfterAttack();
 
 				if (getGroup() != NULL)
 				{
@@ -5108,7 +5099,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 			}
-			checkRemoveSelectionAfterAttack();
+
 			if (getGroup() != NULL)
 			{
 				if (getGroup()->canAnyMove()) // testing selective situation here.
@@ -5118,14 +5109,11 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				else getGroup()->clearMissionQueue();
 			}
 		}
-	}
-}
 
-void CvUnit::checkRemoveSelectionAfterAttack()
-{
-	if (IsSelected() && !canMove() && gDLL->getInterfaceIFace()->getLengthSelectionList() > 1)
-	{
-		gDLL->getInterfaceIFace()->removeFromSelectionList(this);
+		if (IsSelected() && !canMove())
+		{
+			GC.getGame().updateSelectionListInternal();
+		}
 	}
 }
 
@@ -10485,16 +10473,13 @@ bool CvUnit::canConstruct(const CvPlot* pPlot, BuildingTypes eBuilding, bool bTe
 
 bool CvUnit::construct(BuildingTypes eBuilding)
 {
-	CvCity* pCity;
-
 	if (!canConstruct(plot(), eBuilding))
 	{
 		return false;
 	}
+	CvCity* pCity = plot()->getPlotCity();
 
-	pCity = plot()->getPlotCity();
-
-	if (pCity != NULL)
+	if (pCity)
 	{
 		pCity->setNumRealBuilding(eBuilding, 1);
 
@@ -10505,7 +10490,6 @@ bool CvUnit::construct(BuildingTypes eBuilding)
 	{
 		NotifyEntity(MISSION_CONSTRUCT);
 	}
-
 	GET_PLAYER(getOwner()).NoteUnitConstructed(eBuilding);
 
 	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
@@ -10576,6 +10560,7 @@ bool CvUnit::discover(TechTypes eTech)
 	{
 		NotifyEntity(MISSION_DISCOVER);
 	}
+	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
 	kill(true, NO_PLAYER, true);
 
 	return true;
@@ -16531,21 +16516,14 @@ void CvUnit::setMoves(int iNewValue)
 
 		if (IsSelected())
 		{
-			if (!canMove())
-			{
-				if (!getGroup()->canAnyMove())
-				{
-					GC.getGame().updateSelectionListInternal();
-				}
-				else
-				{
-					gDLL->getInterfaceIFace()->insertIntoSelectionList(this, false, true);
-				}
-			}
-			else
+			if (canMove())
 			{
 				gDLL->getFAStarIFace()->ForceReset(&GC.getInterfacePathFinder());
 				gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
+			}
+			else if (getGroup()->canAnyMove())
+			{
+				gDLL->getInterfaceIFace()->removeFromSelectionList(this);
 			}
 		}
 
@@ -28615,18 +28593,10 @@ bool CvUnit::hurryFood()
 
 bool CvUnit::sleepForEspionage()
 {
-	if (!canSleep() || !canEspionage(plot(), true))
+	if (!canSleep() || !canEspionage(plot(), true) || getFortifyTurns() == GC.getMAX_FORTIFY_TURNS())
 	{
 		return false;
 	}
-
-	if (getFortifyTurns() == GC.getMAX_FORTIFY_TURNS())
-	{
-		return false;
-	}
-
-	getGroup()->setActivityType(ACTIVITY_SLEEP);
-
 	m_iSleepTimer = 1;
 
 	return true;

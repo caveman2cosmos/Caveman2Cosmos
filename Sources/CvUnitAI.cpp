@@ -12793,43 +12793,30 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 
 	if (pGroup->getNumUnits() == 1)
 	{
-		if (getDamage() > 0)
+		if (getDamage() < 1)
 		{
-			OutputDebugString("AI_heal: one unit stack\n");
-			if ((plot()->isCity() || healTurns(plot()) == 1) && !isAlwaysHeal())
+			return false;
+		}
+		OutputDebugString("AI_heal: one unit stack\n");
+		if ((plot()->isCity() || healTurns(plot()) == 1) && !isAlwaysHeal())
+		{
+			OutputDebugString("AI_heal: city or 1 turn heal\n");
+			pGroup->pushMission(MISSION_HEAL);
+			return true;
+		}
+		if (plot()->getNumVisibleAdjacentEnemyDefenders(this) == 0 && !isAlwaysHeal()
+		&& (plot()->getTeam() == NO_TEAM || !GET_TEAM(plot()->getTeam()).isAtWar(getTeam())))
+		{
+			if (!plot()->isCity() && AI_moveIntoCity(1))
 			{
-				OutputDebugString("AI_heal: city or 1 turn heal\n");
-				pGroup->pushMission(MISSION_HEAL);
+				OutputDebugString("AI_heal: one turn city move\n");
 				return true;
 			}
-			if (plot()->getNumVisibleAdjacentEnemyDefenders(this) == 0 && !isAlwaysHeal())
-			{
-				OutputDebugString("AI_heal: no adjacent defenders\n");
-				//	Koshling - this was causing more death than it was saving, especially now that
-				//	explorer and engineer callers do a safety check before attempting to heal
-				//if (!noDefensiveBonus() || GC.getGame().getSorenRandNum(3, "AI Heal"))
-				{
-					OutputDebugString(CvString::format("AI_heal: noDefensiveBonus()=%d, considering heal\n", noDefensiveBonus()).c_str());
-					if (plot()->getTeam() == NO_TEAM || !GET_TEAM(plot()->getTeam()).isAtWar(getTeam()))
-					{
-						if (!plot()->isCity() && AI_moveIntoCity(1))
-						{
-							OutputDebugString("AI_heal: one turn city move\n");
-							return true;
-						}
-						OutputDebugString("AI_heal: healing\n");
-						pGroup->pushMission(MISSION_HEAL);
-						return true;
-					}
-				}
-				//else
-				//{
-				//	OutputDebugString(CvString::format("AI_heal: noDefensiveBonus()=%d, NOT healing\n",noDefensiveBonus()).c_str());
-				//}
-			}
-			OutputDebugString("AI_heal: denying heal\n");
+			OutputDebugString("AI_heal: healing\n");
+			pGroup->pushMission(MISSION_HEAL);
+			return true;
 		}
-		return false;
+		OutputDebugString("AI_heal: denying heal\n");
 	}
 
 	iMaxPath = std::min(iMaxPath, 2);
@@ -14222,107 +14209,77 @@ bool CvUnitAI::AI_moveToOurTerritory(int maxMoves)
 	return false;
 }
 
-//	To cope with units like heroes, that are constructed under various unitAIs, but which
-//	can construct buildings as an option, this rouine determines whether a switch to doing
-//	so is appropriate, and if so performs it
+// To cope with units like heroes, that are constructed under various unitAIs,
+//	but which can construct buildings as an option,
+//	this rouine determines whether a switch to doing so is appropriate, and if so performs it.
 bool CvUnitAI::checkSwitchToConstruct()
 {
-	//	Don't bail on a city for which we are the only defender
-	if (plot()->getPlotCity() != NULL && plot()->getNumDefenders(getOwner()) == 1)
+	// Don't bail on a city for which we are the only defender
+	if (m_pUnitInfo->getNumBuildings() < 1 || plot()->getPlotCity() != NULL && plot()->getNumDefenders(getOwner()) == 1)
 	{
 		return false;
 	}
+	CvPlot* pBestConstructPlot;
+	CvPlot* pBestPlot;
+	CvUnitAI* eBestTargetingUnit;
+	BuildingTypes eBestBuilding;
 
-	if (m_pUnitInfo->getNumBuildings() > 0)
+	// What are the relative values of the possible constructed buildings vs our military value.
+	const int iMilitaryValue = GET_PLAYER(getOwner()).AI_unitValue(m_eUnitType, AI_getUnitAIType(), area());
+
+	if (getBestConstructValue(MAX_INT, MAX_INT, 0, 0, true, pBestConstructPlot, pBestPlot, eBestTargetingUnit, eBestBuilding) > iMilitaryValue)
 	{
-		CvPlot* pBestConstructPlot;
-		CvPlot* pBestPlot;
-		CvUnitAI* eBestTargetingUnit;
-		BuildingTypes eBestBuilding;
-
-		//	What are the relative values of the possible constructed buildings vs
-		//	our military value
-		int iConstructValue = getBestConstructValue(MAX_INT, MAX_INT, 0, 0, true, pBestConstructPlot, pBestPlot, eBestTargetingUnit, eBestBuilding);
-		int iMilitaryValue = GET_PLAYER(getOwner()).AI_unitValue(m_eUnitType, AI_getUnitAIType(), area());
-
-		if (iConstructValue > iMilitaryValue)
+		// If we are grouped must ungroup before enacting this
+		if (getGroup()->getNumUnits() > 1)
 		{
-			//	If we are grouped must ungroup before enacting this
-			if (getGroup()->getNumUnits() > 1)
-			{
-				joinGroup(NULL);
-			}
-
-			return enactConstruct(pBestConstructPlot, pBestPlot, eBestTargetingUnit, eBestBuilding);
+			joinGroup(NULL);
 		}
-		else
-		{
-			//	If this is a bit out-dated as a military unit consider joining a city as a specialist
-			UnitTypes eBestUnit = GET_PLAYER(getOwner()).bestBuildableUnitForAIType(getDomainType(), AI_getUnitAIType());
-			CvCity* pCapitalCity = GET_PLAYER(getOwner()).getCapitalCity();
-			if (eBestUnit != NO_UNIT && pCapitalCity != NULL)
-			{
-				int	iBestUnitAIValue = GET_PLAYER(getOwner()).AI_unitValue(eBestUnit, AI_getUnitAIType(), pCapitalCity->area());
-
-				if (iBestUnitAIValue > (3 * iMilitaryValue) / 2)
-				{
-					return AI_join();
-				}
-			}
-
-			return false;
-		}
+		return enactConstruct(pBestConstructPlot, pBestPlot, eBestTargetingUnit, eBestBuilding);
 	}
+	// If this is a bit out-dated as a military unit consider joining a city as a specialist
+	UnitTypes eBestUnit = GET_PLAYER(getOwner()).bestBuildableUnitForAIType(getDomainType(), AI_getUnitAIType());
+	CvCity* pCapitalCity = GET_PLAYER(getOwner()).getCapitalCity();
 
-	// AIAndy: Return value was missing here, unit can't construct buildings so return false
+	if (eBestUnit != NO_UNIT && pCapitalCity != NULL
+	&& GET_PLAYER(getOwner()).AI_unitValue(eBestUnit, AI_getUnitAIType(), pCapitalCity->area()) > iMilitaryValue * 3/2)
+	{
+		return AI_join();
+	}
 	return false;
 }
 
 bool CvUnitAI::enactConstruct(CvPlot* pBestConstructPlot, CvPlot* pBestPlot, CvUnitAI* eBestTargetingUnit, BuildingTypes eBestBuilding)
 {
-	if ((pBestPlot != NULL) && (pBestConstructPlot != NULL) && (eBestBuilding != NO_BUILDING))
+	if (pBestPlot == NULL || pBestConstructPlot == NULL || eBestBuilding == NO_BUILDING)
 	{
-		GET_PLAYER(getOwner()).AI_changeNumBuildingsNeeded(eBestBuilding, -1);
-
-		if (atPlot(pBestConstructPlot))
-		{
-			getGroup()->pushMission(MISSION_CONSTRUCT, eBestBuilding);
-			return true;
-		}
-		else
-		{
-			FAssert(!atPlot(pBestPlot));
-
-			//	Take over responsibility from any overridden targeting unit
-			if (eBestTargetingUnit != NULL)
-			{
-				eBestTargetingUnit->m_eIntendedConstructBuilding = NO_BUILDING;
-			}
-
-			m_eIntendedConstructBuilding = eBestBuilding;
-
-			//	If we have to move outside our own territory heal first
-			if (getDamage() > 0 && pBestPlot->getOwner() != getOwner())
-			{
-				// May not avoid healing on a bad plot though since it's not going through AI_heal() - watch for this
-				getGroup()->pushMission(MISSION_HEAL, -1, -1, 0, false, false, NO_MISSIONAI, pBestConstructPlot);
-				return true;
-			}
-
-			/************************************************************************************************/
-			/* BETTER_BTS_AI_MOD					  03/09/09								jdog5000	  */
-			/*																							  */
-			/* Unit AI																					  */
-			/************************************************************************************************/
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_NO_ENEMY_TERRITORY | MOVE_WITH_CAUTION | MOVE_AVOID_ENEMY_UNITS, false, false, MISSIONAI_CONSTRUCT, pBestConstructPlot);
-			/************************************************************************************************/
-			/* BETTER_BTS_AI_MOD					   END												  */
-			/************************************************************************************************/
-		}
+		return false;
 	}
+	GET_PLAYER(getOwner()).AI_changeNumBuildingsNeeded(eBestBuilding, -1);
 
-	return false;
+	if (atPlot(pBestConstructPlot))
+	{
+		getGroup()->pushMission(MISSION_CONSTRUCT, eBestBuilding);
+		return true;
+	}
+	FAssert(!atPlot(pBestPlot));
+
+	//	Take over responsibility from any overridden targeting unit
+	if (eBestTargetingUnit != NULL)
+	{
+		eBestTargetingUnit->m_eIntendedConstructBuilding = NO_BUILDING;
+	}
+	m_eIntendedConstructBuilding = eBestBuilding;
+
+	// If we have to move outside our own territory heal first
+	if (getDamage() > 0 && pBestPlot->getOwner() != getOwner())
+	{
+		// May not avoid healing on a bad plot though since it's not going through AI_heal() - watch for this
+		getGroup()->pushMission(MISSION_HEAL, -1, -1, 0, false, false, NO_MISSIONAI, pBestConstructPlot);
+		return true;
+	}
+	return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), MOVE_NO_ENEMY_TERRITORY | MOVE_WITH_CAUTION | MOVE_AVOID_ENEMY_UNITS, false, false, MISSIONAI_CONSTRUCT, pBestConstructPlot);
 }
+
 
 namespace {
 	// Helper class for recording what buildings are already planned for construction by units
@@ -14543,15 +14500,14 @@ bool CvUnitAI::AI_construct(int iMaxCount, int iMaxSingleBuildingCount, int iThr
 {
 	PROFILE_FUNC();
 
-	CvPlot* pBestPlot;
-	CvPlot* pBestConstructPlot;
-	CvUnitAI* eBestTargetingUnit;
-	BuildingTypes eBestBuilding;
-
 	if (m_pUnitInfo->getNumBuildings() < 1)
 	{
 		return false;
 	}
+	CvPlot* pBestPlot;
+	CvPlot* pBestConstructPlot;
+	CvUnitAI* eBestTargetingUnit;
+	BuildingTypes eBestBuilding;
 
 	if (getBestConstructValue(iMaxCount, iMaxSingleBuildingCount, bDecayProbabilities ? 50 : 0, iThreshold, assumeSameValueEverywhere, pBestConstructPlot, pBestPlot, eBestTargetingUnit, eBestBuilding) > 0)
 	{
@@ -14559,13 +14515,9 @@ bool CvUnitAI::AI_construct(int iMaxCount, int iMaxSingleBuildingCount, int iThr
 		{
 			logBBAI("	%S at (%d,%d) going to construct %S at (%d,%d)", getName(0).GetCString(), getX(), getY(), GC.getBuildingInfo(eBestBuilding).getDescription(), pBestConstructPlot->getX(), pBestConstructPlot->getY());
 		}
-
 		return enactConstruct(pBestConstructPlot, pBestPlot, eBestTargetingUnit, eBestBuilding);
 	}
-	else
-	{
-		return false;
-	}
+	return false;
 }
 
 // Returns true if a mission was pushed...
