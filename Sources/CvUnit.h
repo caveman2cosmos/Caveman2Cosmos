@@ -2089,7 +2089,6 @@ protected:
 	bool isCombatVisible(const CvUnit* pDefender) const;
 	void resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition& kBattle, bool bSamePlot = false);
 	void resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionDefinition& kBattle);
-	void checkRemoveSelectionAfterAttack();
 
 	// ------ BEGIN InfluenceDrivenWar -------------------------------
 	float doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal);
