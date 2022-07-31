@@ -1978,25 +1978,11 @@ int CvPlot::seeFromLevel(TeamTypes eTeam) const
 
 int CvPlot::seeThroughLevel() const
 {
-	int iLevel = 0;
+	int iLevel = isWater() ? 0 : 1 + getElevationLevel();
 
 	if (getFeatureType() != NO_FEATURE)
 	{
 		iLevel += GC.getFeatureInfo(getFeatureType()).getSeeThroughChange();
-	}
-
-	if (!isWater())
-	{
-		iLevel++;
-
-		if (isAsPeak())
-		{
-			iLevel += GC.getPEAK_SEE_THROUGH_CHANGE();
-		}
-		else if (isHills())
-		{
-			iLevel += GC.getHILLS_SEE_THROUGH_CHANGE();
-		}
 	}
 	return iLevel;
 }
@@ -2007,13 +1993,9 @@ int CvPlot::getElevationLevel() const
 {
 	if (isAsPeak())
 	{
-		return GC.getPEAK_SEE_FROM_CHANGE();
+		return 2;
 	}
-	if (isHills())
-	{
-		return GC.getHILLS_SEE_FROM_CHANGE();
-	}
-	return 0;
+	return isHills();
 }
 
 
@@ -2045,12 +2027,7 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 	}
 	aSeeInvisibleTypes.push_back(NO_INVISIBLE);
 
-	const bool bAerial = (pUnit != NULL && pUnit->getDomainType() == DOMAIN_AIR);
-
-	if (!bAerial)
-	{
-		iRange++; // check one extra outer ring
-	}
+	const bool bAerial = pUnit && pUnit->getDomainType() == DOMAIN_AIR;
 
 	foreach_(const InvisibleTypes eInvisible, aSeeInvisibleTypes)
 	{
@@ -2143,24 +2120,25 @@ bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int dx0, in
 				}
 			}
 		}
-	}
-
-	if (iSteps > 0)
-	{
-		bool bFailedStep1 = !canSeeDisplacementPlot(eTeam, step1[0], step1[1], dx0, dy0);
+		const bool bFailedStep1 = !canSeeDisplacementPlot(eTeam, step1[0], step1[1], dx0, dy0);
 
 		if (iSteps == 2)
 		{
-			if (bFailedStep1
-			&& (step1[0] != 0 && 2*abs(step1[0]) <= dx0 || step1[1] != 0 && 2*abs(step1[1]) <= dy0))
+			if (bFailedStep1 && 2*abs(step1[0]) < dx0 && 2*abs(step1[1]) < dy0)
 			{
 				return false;
 			}
 
-			if (!canSeeDisplacementPlot(eTeam, step2[0], step2[1], dx0, dy0)
-			&& (bFailedStep1 || step2[0] != step2[1] && (2*abs(step2[0]) >= dx0 || 2*abs(step2[1]) >= dy0)))
+			if (!canSeeDisplacementPlot(eTeam, step2[0], step2[1], dx0, dy0))
 			{
-				return false;
+				if (bFailedStep1)
+				{
+					return false;
+				}
+				if (2*abs(step2[0]) > dx0 && 2*abs(step2[1]) > dy0)
+				{
+					return false;
+				}
 			}
 		}
 		else if (bFailedStep1)
@@ -2200,37 +2178,20 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 	{
 		const CvCity* pCity = getPlotCity();
 
-		if (pCity != NULL)
+		if (pCity)
 		{
-			// Vassal
+			const CvTeam& team = GET_TEAM(pCity->getTeam());
+
 			for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
 			{
-				if (GET_TEAM(getTeam()).isVassal((TeamTypes)iI))
+				// Vassal
+				if (GET_TEAM(getTeam()).isVassal((TeamTypes)iI)
+				// Espionage - Enough EPs gives you visibility into someone's cities
+				|| pCity->getEspionageVisibility((TeamTypes)iI)
+				// Embassy Allows Players to See Capitals
+				|| pCity->isCapital() && team.isHasEmbassy((TeamTypes)iI))
 				{
-					changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
-				}
-			}
-
-			// EspionageEffect
-			for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
-			{
-				if (pCity->getEspionageVisibility((TeamTypes)iI))
-				{
-					// Passive Effect: enough EPs gives you visibility into someone's cities
-					changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
-				}
-			}
-
-			// Afforess - Embassy Allows Players to See Capitals
-			if (pCity->isCapital())
-			{
-				TeamTypes pTeam = pCity->getTeam();
-				for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
-				{
-					if (GET_TEAM(pTeam).isHasEmbassy((TeamTypes)iI))
-					{
-						changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
-					}
+					changeAdjacentSight((TeamTypes)iI, 1, bIncrement, NULL, bUpdatePlotGroups);
 				}
 			}
 		}
@@ -2239,7 +2200,7 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 	// Owned
 	if (isOwned())
 	{
-		changeAdjacentSight(getTeam(), GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
+		changeAdjacentSight(getTeam(), 1, bIncrement, NULL, bUpdatePlotGroups);
 	}
 
 	// Unit
@@ -2295,9 +2256,7 @@ void CvPlot::updateSeeFromSight(bool bIncrement, bool bUpdatePlotGroups)
 
 	const int iRange = GC.getMAX_UNIT_VISIBILITY_RANGE() + 1;
 
-	algo::for_each(rect(iRange, iRange),
-		bind(&CvPlot::updateSight, _1, bIncrement, bUpdatePlotGroups)
-	);
+	algo::for_each(rect(iRange, iRange), bind(&CvPlot::updateSight, _1, bIncrement, bUpdatePlotGroups));
 }
 
 
@@ -6026,7 +5985,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 			if (isOwned())
 			{
-				changeAdjacentSight(getTeam(), GC.getPLOT_VISIBILITY_RANGE(), false, NULL, bUpdatePlotGroup);
+				changeAdjacentSight(getTeam(), 1, false, NULL, bUpdatePlotGroup);
 
 				if (area())
 				{
@@ -6081,7 +6040,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 			if (isOwned())
 			{
-				changeAdjacentSight(getTeam(), GC.getPLOT_VISIBILITY_RANGE(), true, NULL, bUpdatePlotGroup);
+				changeAdjacentSight(getTeam(), 1, true, NULL, bUpdatePlotGroup);
 
 				if (area())
 				{

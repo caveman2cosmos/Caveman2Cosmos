@@ -11329,11 +11329,11 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 			{
 				if (pOldCapitalCity != NULL)
 				{
-					pOldCapitalCity->plot()->changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), false, NULL, bUpdatePlotGroups);
+					pOldCapitalCity->plot()->changeAdjacentSight((TeamTypes)iI, 1, false, NULL, bUpdatePlotGroups);
 				}
 				if (pNewCapitalCity != NULL)
 				{
-					pNewCapitalCity->plot()->changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), true, NULL, bUpdatePlotGroups);
+					pNewCapitalCity->plot()->changeAdjacentSight((TeamTypes)iI, 1, true, NULL, bUpdatePlotGroups);
 				}
 			}
 		}
