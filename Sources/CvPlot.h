@@ -240,12 +240,13 @@ public:
 	int getNearestLandArea() const;
 	CvPlot* getNearestLandPlot() const;
 
-	int getElevationLevel() const;
+	int getElevationLevel(const bool bExtra = false) const;
+	int getTerrainElevation() const;
 	int seeFromLevel(TeamTypes eTeam) const;
 	int seeThroughLevel() const;
 	void changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups);
 	bool canSeePlot(const CvPlot* plot, TeamTypes eTeam) const;
-	bool canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int dx0, int dy0, bool bEndPoint = false) const;
+	bool canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int dx0, int dy0, int& iTopElevation, int& iTopElevationDistance, bool bEndPoint = false) const;
 	void updateSight(bool bIncrement, bool bUpdatePlotGroups);
 	void updateSeeFromSight(bool bIncrement, bool bUpdatePlotGroups);
 

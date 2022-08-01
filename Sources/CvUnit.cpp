@@ -12368,7 +12368,7 @@ int CvUnit::visibilityRange(const CvPlot* pPlot) const
 	{
 		pPlot = plot();
 	}
-	int iRange = 1 + pPlot->getElevationLevel() + getExtraVisibilityRange();
+	int iRange = 1 + pPlot->getTerrainElevation() + getExtraVisibilityRange();
 
 	if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 	{

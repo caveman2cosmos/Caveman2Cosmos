@@ -9659,7 +9659,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<iVisibilityChange>4</iVisibilityChange>
-			<iSeeFrom>3</iSeeFrom>
+			<iSeeFrom>2</iSeeFrom>
 			<iUniqueRange>0</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<!-- <bUpgradeRequiresFortify>1</bUpgradeRequiresFortify> -->
@@ -9750,7 +9750,7 @@
 			<ImprovementPillage>IMPROVEMENT_STONE_WATCHTOWER</ImprovementPillage>
 			<ImprovementUpgrade>IMPROVEMENT_RADAR_TOWER</ImprovementUpgrade>
 			<iVisibilityChange>3</iVisibilityChange>
-			<iSeeFrom>2</iSeeFrom>
+			<iSeeFrom>1</iSeeFrom>
 			<iUniqueRange>0</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>

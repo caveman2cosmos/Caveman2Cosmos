@@ -1967,7 +1967,7 @@ int CvPlot::seeFromLevel(TeamTypes eTeam) const
 
 	if (!isWater())
 	{
-		iLevel += 1 + getElevationLevel();
+		iLevel += 1 + getTerrainElevation();
 	}
 	else if (GET_TEAM(eTeam).isExtraWaterSeeFrom())
 	{
@@ -1978,7 +1978,7 @@ int CvPlot::seeFromLevel(TeamTypes eTeam) const
 
 int CvPlot::seeThroughLevel() const
 {
-	int iLevel = isWater() ? 0 : 1 + getElevationLevel();
+	int iLevel = isWater() ? 0 : 1 + getTerrainElevation();
 
 	if (getFeatureType() != NO_FEATURE)
 	{
@@ -1989,13 +1989,28 @@ int CvPlot::seeThroughLevel() const
 
 // Toffer - Quite basic setup:
 //	Water/Flatland < Hill < Peak.
-int CvPlot::getElevationLevel() const
+int CvPlot::getElevationLevel(const bool bExtra) const
+{
+	int iLevel = 3 * getTerrainElevation();
+
+	if (bExtra && getImprovementType() != NO_IMPROVEMENT)
+	{
+		iLevel += GC.getImprovementInfo(getImprovementType()).getSeeFrom();
+	}
+	return iLevel;
+}
+
+int CvPlot::getTerrainElevation() const
 {
 	if (isAsPeak())
 	{
 		return 2;
 	}
-	return isHills();
+	if (isHills())
+	{
+		return 1;
+	}
+	return 0;
 }
 
 
@@ -2069,11 +2084,12 @@ bool CvPlot::canSeePlot(const CvPlot* pPlot, TeamTypes eTeam) const
 	//find displacement
 	const int dx = dxWrap(pPlot->getX() - getX());
 	const int dy = dyWrap(pPlot->getY() - getY());
-
-	return canSeeDisplacementPlot(eTeam, dx, dy, abs(dx), abs(dy), true);
+	int iDummy1 = 0;
+	int iDummy2 = 0;
+	return canSeeDisplacementPlot(eTeam, dx, dy, dx, dy, iDummy1, iDummy2, true);
 }
 
-bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int dx0, int dy0, bool bEndPoint) const
+bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int dx0, int dy0, int& iTopElevation, int& iTopElevationDistance, bool bEndPoint) const
 {
 	// Base case is current plot
 	if (dx == 0 && dy == 0)
@@ -2085,6 +2101,18 @@ bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int dx0, in
 	if (seePlot == NULL)
 	{
 		return false;
+	}
+	bool bCanFail = true;
+	if (!bEndPoint)
+	{
+		iTopElevation = seePlot->getElevationLevel();
+		iTopElevationDistance = std::max(abs(dx), abs(dy));
+
+		if (2*iTopElevationDistance >= std::max(abs(dx0), abs(dy0))
+		&& plotXY(getX(), getY(), dx0, dy0)->getElevationLevel() > iTopElevation)
+		{
+			bCanFail = false; // This is a guess for now
+		}
 	}
 	int step1[] = { 0, 0 };
 	int step2[] = { dx, dy };
@@ -2120,51 +2148,117 @@ bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int dx0, in
 				}
 			}
 		}
-		const bool bFailedStep1 = !canSeeDisplacementPlot(eTeam, step1[0], step1[1], dx0, dy0);
+		int iTopElevation1 = 0;
+		int iTopElevationDistance1 = 0;
+		const bool bFailedStep1 = !canSeeDisplacementPlot(eTeam, step1[0], step1[1], dx0, dy0, iTopElevation1, iTopElevationDistance1);
 
+		bool bFailed = false;
+		bool bTestCanFail = false;
 		if (iSteps == 2)
 		{
-			if (bFailedStep1 && 2*abs(step1[0]) < dx0 && 2*abs(step1[1]) < dy0)
+			if (bFailedStep1 && 2*abs(step1[0]) < abs(dx0) && 2*abs(step1[1]) < abs(dy0))
 			{
-				return false;
+				if (bCanFail)
+				{
+					return false;
+				}
+				bFailed = true;
 			}
+			int iTopElevation2 = 0;
+			int iTopElevationDistance2 = 0;
 
-			if (!canSeeDisplacementPlot(eTeam, step2[0], step2[1], dx0, dy0))
+			if (!canSeeDisplacementPlot(eTeam, step2[0], step2[1], dx0, dy0, iTopElevation2, iTopElevationDistance2))
 			{
 				if (bFailedStep1)
 				{
-					return false;
+					if (bCanFail)
+					{
+						return false;
+					}
+					bFailed = true;
 				}
-				if (2*abs(step2[0]) > dx0 && 2*abs(step2[1]) > dy0)
+				if (!bFailed && 2*abs(step2[0]) > abs(dx0) && 2*abs(step2[1]) > abs(dy0))
 				{
-					return false;
+					if (bCanFail)
+					{
+						return false;
+					}
+					bFailed = true;
 				}
+			}
+			if (iTopElevation1 < iTopElevation2)
+			{
+				if (iTopElevation1 > iTopElevation)
+				{
+					iTopElevation = iTopElevation1;
+					iTopElevationDistance = iTopElevationDistance1;
+					bTestCanFail = true;
+				}
+			}
+			else if (iTopElevation2 > iTopElevation)
+			{
+				iTopElevation = iTopElevation2;
+				iTopElevationDistance = iTopElevationDistance2;
+				bTestCanFail = true;
 			}
 		}
 		else if (bFailedStep1)
 		{
+			if (bCanFail)
+			{
+				return false;
+			}
+			bFailed = true;
+		}
+		else if (iTopElevation1 > iTopElevation)
+		{
+			iTopElevation = iTopElevation1;
+			iTopElevationDistance = iTopElevationDistance1;
+			bTestCanFail = true;
+		}
+
+		if (bTestCanFail)
+		{
+			if (plotXY(getX(), getY(), dx0, dy0)->getElevationLevel() > iTopElevation && 2*iTopElevationDistance >= std::max(abs(dx0), abs(dy0)))
+			{
+				return true;
+			}
+		}
+		else if (bFailed)
+		{
 			return false;
+		}
+		else if (!bCanFail)
+		{
+			return true;
 		}
 	}
 
 	if (bEndPoint)
 	{
-		if (iSteps > 0)
+		const int iMyElevation = getElevationLevel(true);
+		if (iMyElevation < iTopElevation)
 		{
-			int iPrevHeight = plotXY(getX(), getY(), step1[0], step1[1])->getElevationLevel();
-
-			if (iSteps == 2)
-			{
-				iPrevHeight = std::min(iPrevHeight, plotXY(getX(), getY(), step2[0], step2[1])->getElevationLevel());
-			}
-			if (seePlot->getElevationLevel() < iPrevHeight)
+			return false;
+		}
+		if (iMyElevation == iTopElevation)
+		{
+			if (seePlot->getElevationLevel() < iTopElevation)
 			{
 				return false;
 			}
 		}
+		else if (seePlot->getElevationLevel() < iTopElevation && 2*iTopElevationDistance >= std::max(dx0, dy0))
+		{
+			return false;
+		}
 	}
 	else if (seeFromLevel(eTeam) < seePlot->seeThroughLevel())
 	{
+		if (dx0 == -3 && dy0 == 0)
+		{
+			OutputDebugString(CvString::format("\n\t(%d,%d) failed - seeFromLevel(eTeam) < seePlot->seeThroughLevel()\n", dx, dy, (int)bCanFail, iTopElevation, iTopElevationDistance).c_str());
+		}
 		return false;
 	}
 	return true;
