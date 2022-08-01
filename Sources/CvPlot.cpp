@@ -2255,10 +2255,6 @@ bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int dx0, in
 	}
 	else if (seeFromLevel(eTeam) < seePlot->seeThroughLevel())
 	{
-		if (dx0 == -3 && dy0 == 0)
-		{
-			OutputDebugString(CvString::format("\n\t(%d,%d) failed - seeFromLevel(eTeam) < seePlot->seeThroughLevel()\n", dx, dy, (int)bCanFail, iTopElevation, iTopElevationDistance).c_str());
-		}
 		return false;
 	}
 	return true;
