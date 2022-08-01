@@ -124,16 +124,7 @@ class CvIdeaInfo;
 class CvInvisibleInfo;
 class CvCategoryInfo;
 //class CvTraitOptionEditsInfo;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 10/24/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// MLF loading
 class CvModLoadControlInfo;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 class CvMapInfo;
 
 #include "CvInfoClassTraits.h"
@@ -149,6 +140,7 @@ enum DelayedResolutionTypes
 };
 
 extern CvDLLUtilityIFaceBase* gDLL;
+extern bool gMiscLogging;
 
 class cvInternalGlobals
 	: private bst::noncopyable

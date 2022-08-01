@@ -63,6 +63,7 @@ void deleteInfoArray(std::vector<CvInfoBase*>* array)
 CvGlobals gGlobalsProxy;	// for debugging
 cvInternalGlobals* gGlobals = NULL;
 CvDLLUtilityIFaceBase* gDLL = NULL;
+bool gMiscLogging = false;
 
 #ifdef _DEBUG
 int inDLL = 0;
@@ -2981,11 +2982,11 @@ void cvInternalGlobals::setIsBug()
 
 void cvInternalGlobals::refreshOptionsBUG()
 {
-	// Toffer - ToDo - Add the missing bug options for specific logging.
-	gPlayerLogLevel = getBugOptionINT("Autolog__BBAILevel", 0);
-	gTeamLogLevel = gPlayerLogLevel;
-	gCityLogLevel = gPlayerLogLevel;
-	gUnitLogLevel = gPlayerLogLevel;
+	gPlayerLogLevel = getBugOptionINT("Autolog__LogLevelPlayerBBAI", 0);
+	gTeamLogLevel = getBugOptionINT("Autolog__LogLevelTeamBBAI", 0);
+	gCityLogLevel = getBugOptionINT("Autolog__LogLevelCityBBAI", 0);
+	gUnitLogLevel = getBugOptionINT("Autolog__LogLevelUnitBBAI", 0);
+	gMiscLogging = getBugOptionBOOL("Autolog__MiscLogging", false);
 
 	OutputRatios::setBaseOutputWeights(
 		getBugOptionINT("CityScreen__BaseWeightFood", 10),
