@@ -125,7 +125,7 @@
 			<Description>TXT_KEY_ROUTE_VACTRAIN</Description>
 			<iValue>9</iValue>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
-			<iMovement>24</iMovement>
+			<iMovement>20</iMovement>
 			<iFlatMovement>8</iFlatMovement>
 			<BonusType>BONUS_TITANIUM_WARES</BonusType>
 			<Yields>
@@ -136,7 +136,7 @@
 			<TechMovementChanges>
 				<TechMovementChange>
 					<PrereqTech>TECH_SKYROADS</PrereqTech>
-					<iMovementChange>-8</iMovementChange>
+					<iMovementChange>-4</iMovementChange>
 				</TechMovementChange>
 			</TechMovementChanges>
 			<Button>art/interface/buttons/improvements/hyperloop.dds</Button>
