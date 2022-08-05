@@ -2904,11 +2904,20 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					{
 						const UnitCombatTypes eHealAsTypes = (UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI);
 						const int iHealAsDamage = pUnit->getHealAsDamage((UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI));
+						const int iHealTurns = pUnit->healTurnsAsType(pUnit->plot(), eHealAsTypes);
 						if (iHealAsDamage > 0)
 						{
 							szString.append(NEWLINE);
-							szString.append(gDLL->getText("TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT",
-								GC.getUnitCombatInfo(eHealAsTypes).getTextKeyWide(), iHealAsDamage, pUnit->healTurnsAsType(pUnit->plot(), eHealAsTypes)));
+							if (iHealTurns == MAX_INT)
+							{
+								szString.append(gDLL->getText("TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT_NOHEAL",
+								GC.getUnitCombatInfo(eHealAsTypes).getTextKeyWide(), iHealAsDamage));
+							}
+							else
+							{
+								szString.append(gDLL->getText("TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT",
+									GC.getUnitCombatInfo(eHealAsTypes).getTextKeyWide(), iHealAsDamage, iHealTurns));
+							}
 						}
 					}
 				}
