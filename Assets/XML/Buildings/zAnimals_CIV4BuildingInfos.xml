@@ -274,7 +274,7 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 				<UnitCombatFreeExperience>
-					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
+					<UnitCombatType>UNITCOMBAT_FELINE</UnitCombatType>
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
