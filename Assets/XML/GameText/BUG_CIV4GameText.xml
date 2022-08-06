@@ -6801,16 +6801,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_HOVER</Tag>
-		<English>XP Gains based on how units fought in battle. The harder the battle, the more XP will be earned. Easy battles means much less XP earned.</English>
-		<French>Les Gains d'EXP basés sur la manière dont l'unité se bat au combat. Plus la bataille est difficile, plus d'EXP est obtenu.</French>
-		<German>Die Erfahrungspunkte (EP) basieren darauf, wie erfolgreich die Einheiten in der Schlacht gekämpft haben. Je härter die Schlacht, umso mehr Erfahrungspunkte kommen hinzu.</German>
-		<Italian>Guadagni di XP basati su come combatte l'unità in battaglia. Più la battaglia è difficile, più XP viene guadagnata.</Italian>
-		<Spanish>La obtención de experiencia se basará en la destreza demostrada en la batalla. Cuanto más complicada sea, más experiencia se ganará.</Spanish>
-		<Russian>Ïðèðîñò îïûòà áóäåò çàâèñåòü èç òîãî, êàê îòðÿäû ñðàæàëèñü â áîþ. ×åì æåñò÷å áîé, òåì áîëüøå îïûòà áóäåò íà÷èñëÿòüñÿ.</Russian>
+		<English>Even without this option enabled, XP from combat is partially determined by victory chance. However, enabling this "Dynamic XP" game option will significantly magnify the effect, making it slower to train high-level units through low-risk combat (Minimum XP lowered to 0.01 from 1), but increasing further the XP gained by winning at lower odds (Maximum XP uncapped from 10). Additionally, many combat-adjacent actions such as pillaging, bombardment, etc. will give small amounts of XP.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_TEXT</Tag>
-		<English>Less XP</English>
+		<English>Dynamic XP</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__INFRASTRUCTUREIGNORESIMPROVEMENTS_HOVER</Tag>
