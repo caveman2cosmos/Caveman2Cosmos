@@ -25,6 +25,12 @@
 			</FeatureDoubleMoveChangeTypes>
 			<bForMilitary>1</bForMilitary>
 			<bForNavalMilitary>1</bForNavalMilitary>
+			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_CAMOUFLAGE</InvisibleType>
+					<iIntensity>1</iIntensity>
+				</VisibilityIntensityChangeType>
+			</VisibilityIntensityChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/recons.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
