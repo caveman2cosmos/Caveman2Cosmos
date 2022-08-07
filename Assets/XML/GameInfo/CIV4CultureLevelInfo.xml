@@ -2,6 +2,7 @@
 <Civ4CultureLevelInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<CultureLevelInfos>
 		<CultureLevelInfo>
+			<!-- r=0: 1 tile (1 tile start gameoption) -->
 			<Type>CULTURELEVEL_NONE</Type>
 			<Description>TXT_KEY_CULTURELEVEL_NONE</Description>
 			<iCityDefenseModifier>0</iCityDefenseModifier>
@@ -50,6 +51,7 @@
 			<iMaxNationalWondersOCC>2</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
+			<!-- r=1: 9 tiles -->
 			<Type>CULTURELEVEL_POOR</Type>
 			<Description>TXT_KEY_CULTURELEVEL_POOR</Description>
 			<iCityDefenseModifier>3</iCityDefenseModifier>
@@ -98,6 +100,7 @@
 			<iMaxNationalWondersOCC>4</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
+			<!-- r=1: 9 tiles -->
 			<Type>CULTURELEVEL_POOR</Type>
 			<ReplacementID>CULTURELEVEL_ALT_POOR</ReplacementID>
 			<ReplacementCondition>
@@ -153,9 +156,10 @@
 			<iMaxNationalWondersOCC>4</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
+			<!-- r=2: 21 tiles -->
 			<Type>CULTURELEVEL_FLEDGLING</Type>
 			<Description>TXT_KEY_CULTURELEVEL_FLEDGLING</Description>
-			<iCityDefenseModifier>8</iCityDefenseModifier>
+			<iCityDefenseModifier>7</iCityDefenseModifier>
 			<SpeedThresholds>
 				<SpeedThreshold>
 					<GameSpeedType>GAMESPEED_ETERNITY</GameSpeedType>
@@ -201,6 +205,7 @@
 			<iMaxNationalWondersOCC>6</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
+			<!-- r=3: 37 tiles -->
 			<Type>CULTURELEVEL_DEVELOPING</Type>
 			<Description>TXT_KEY_CULTURELEVEL_DEVELOPING</Description>
 			<iCityDefenseModifier>12</iCityDefenseModifier>
@@ -298,8 +303,8 @@
 			<iMaxNationalWonders>10</iMaxNationalWonders>
 			<iMaxNationalWondersOCC>10</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
-		<!--Afforess: Used only for Realistic Culture Spread Option -->
 		<CultureLevelInfo>
+			<!-- r=4: 57 tiles -->
 			<Type>CULTURELEVEL_REFINED</Type>
 			<Description>TXT_KEY_CULTURELEVEL_REFINED</Description>
 			<iCityDefenseModifier>18</iCityDefenseModifier>
@@ -397,8 +402,8 @@
 			<iMaxNationalWonders>14</iMaxNationalWonders>
 			<iMaxNationalWondersOCC>14</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
-		<!--Afforess: Used only for Realistic Culture Spread Option -->
 		<CultureLevelInfo>
+			<!-- r=5: 81 tiles -->
 			<Type>CULTURELEVEL_INFLUENTIAL</Type>
 			<Description>TXT_KEY_CULTURELEVEL_INFLUENTIAL</Description>
 			<iCityDefenseModifier>25</iCityDefenseModifier>
@@ -448,6 +453,7 @@
 		</CultureLevelInfo>
 		<!--Afforess: Used only for Realistic Culture Spread Option -->
 		<CultureLevelInfo>
+			<!-- r=6: 109 tiles -->
 			<Type>CULTURELEVEL_IMPRESSIVE</Type>
 			<Description>TXT_KEY_CULTURELEVEL_IMPRESSIVE</Description>
 			<iCityDefenseModifier>30</iCityDefenseModifier>
@@ -496,8 +502,8 @@
 			<iMaxNationalWonders>18</iMaxNationalWonders>
 			<iMaxNationalWondersOCC>18</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
-		<!--Afforess: Used only for Realistic Culture Spread Option -->
 		<CultureLevelInfo>
+			<!-- r=7: 141 tiles -->
 			<Type>CULTURELEVEL_LEGENDARY</Type>
 			<Description>TXT_KEY_CULTURELEVEL_LEGENDARY</Description>
 			<iCityDefenseModifier>35</iCityDefenseModifier>
@@ -546,6 +552,7 @@
 			<iMaxNationalWondersOCC>20</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
+			<!-- r=8: 177 tiles -->
 			<Type>CULTURELEVEL_ILLUSTRIOUS</Type>
 			<Description>TXT_KEY_CULTURELEVEL_ILLUSTRIOUS</Description>
 			<iCityDefenseModifier>40</iCityDefenseModifier>
@@ -594,6 +601,7 @@
 			<iMaxNationalWondersOCC>22</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
+			<!-- r=9: 217 tiles -->
 			<Type>CULTURELEVEL_PHENOMENAL</Type>
 			<Description>TXT_KEY_CULTURELEVEL_PHENOMENAL</Description>
 			<iCityDefenseModifier>45</iCityDefenseModifier>
@@ -642,6 +650,7 @@
 			<iMaxNationalWondersOCC>25</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
+			<!-- r=10: 261 tiles -->
 			<Type>CULTURELEVEL_MONUMENTAL</Type>
 			<Description>TXT_KEY_CULTURELEVEL_MONUMENTAL</Description>
 			<iCityDefenseModifier>50</iCityDefenseModifier>
