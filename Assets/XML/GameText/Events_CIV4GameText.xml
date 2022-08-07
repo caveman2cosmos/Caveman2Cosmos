@@ -2630,14 +2630,6 @@
 		<Spanish>La erupción de un volcán cercano a %s2_city ha devastado el campo. Por suerte, la propia ciudad %s1:2_civ_adjective se ha salvado.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_2</Tag>
-		<English>The earth has spewed forth lava and ash from a previously dormant volcano near the %s1_civ_adjective city of %s2_city.</English>
-		<French>Un volcan jusqu'ici endormi a craché de la lave et des cendres près de la ville %s1:2_civ_adjective de %s2_city.</French>
-		<German>Ein bislang inaktiver Vulkan in der Nähe der %s1:2_civ_adjective Stadt %s2_city hat Lava und Asche gespien.</German>
-		<Italian>La terra ha eruttato lava e ceneri da un vulcano addormentato vicino alla città %s1_civ_adjective di %s2_city.</Italian>
-		<Spanish>La tierra ha escupido lava y cenizas por un volcán que antes estaba inactivo en la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_ACTIVE</Tag>
 		<English>Reports speak of increased volcanic activity.</English>
 		<French>Des rumeurs courent concernant une augmentation de l'activité volcanique.</French>
@@ -12731,17 +12723,12 @@
 		<Russian>Геологи обнаружили перспективный источник геотермальной энергии под %s2_city. Они хотят знать, какие действия мы можем предпринять.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_1</Tag>
-		<English>A volcano has erupted near %s2_city, spewing deadly ash clouds, lava flows, and mud- and debris-filled snow melts.</English>
-		<French>Un volcan est entré en éruption près de %s2_city, crachant des nuages de cendre, des coulées de lave et de la neige mêlée de boue et de débris.</French>
-		<German>In der Nähe der Stadt %s2_city hat es einen Vulkanausbruch gegeben, der tödliche Aschewolken, Lavaflüsse sowie stark verschmutzte Schneeschmelzen mit sich brachte.</German>
-		<Italian>Un vulcano ha eruttato vicino a %s2_city, vomitando letali nuvole di cenere, lava e causando inondazioni di neve sciolta mista a fango e detriti.</Italian>
-		<Spanish>Un volcán ha entrado en erupción cerca de %s2_city, escupiendo mortíferas nubes de ceniza, ríos de lava y barro y lluvias de rocas.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT</Tag>
-		<English>This formerly active volcano has shown no activity for some time, and is now considered dormant.</English>
-		<Russian>Вулкан, считавшийся потухшим в наше время, проснулся и вновь извергается. Сельская местность была опустошена.</Russian>
+		<English>The earth has spewed forth lava and ash from a previously dormant volcano near the %s1_civ_adjective city of %s2_city.</English>
+		<French>Un volcan jusqu'ici endormi a craché de la lave et des cendres près de la ville %s1:2_civ_adjective de %s2_city.</French>
+		<German>Ein bislang inaktiver Vulkan in der Nähe der %s1:2_civ_adjective Stadt %s2_city hat Lava und Asche gespien.</German>
+		<Italian>La terra ha eruttato lava e ceneri da un vulcano addormentato vicino alla città %s1_civ_adjective di %s2_city.</Italian>
+		<Spanish>La tierra ha escupido lava y cenizas por un volcán que antes estaba inactivo en la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Tag>
@@ -13100,23 +13087,7 @@
 		<Russian>Óäà÷ëèâûé èãðîê èç %s2_city ñóìåë ñîðâàòü êóø â Ëàñ-Âåãàñ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_VOLCANO_1</Tag>
-		<English>Send what aid we can to the survivors. Be thankful that the city itself was not struck.</English>
-		<French>Envoyer toute l'aide que nous pouvons aux survivants. Remercions le ciel que la ville ait été épargnée.</French>
-		<German>Die Überlebenden sollen jede nur mögliche Hilfe bekommen. Wir sollten dankbar sein, dass die Stadt selbst verschont geblieben ist.</German>
-		<Italian>Invia gli aiuti disponibili ai sopravvissuti. Sii contento che la città non sia stata colpita.</Italian>
-		<Spanish>Enviad cuanta ayuda podamos a los supervivientes. Demos gracias de que la propia ciudad no se haya visto afectada.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_VOLCANO_1_HELP</Tag>
-		<English>[ICON_BULLET]Suffer loss of plot improvements near the eruption</English>
-		<French>[ICON_BULLET]Subir des pertes d'aménagements sur les cases proches de l'éruption</French>
-		<German>[ICON_BULLET]Verlust der Geländefeld-Modernisierungen in der Nähe der Eruption</German>
-		<Italian>[ICON_BULLET]Perdita dei miglioramenti delle caselle vicino all'eruzione</Italian>
-		<Spanish>[ICON_BULLET]Pérdida de mejoras de casillas cerca de la erupción.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_VOLCANO_ERUPTION_1</Tag>
+		<Tag>TXT_KEY_EVENT_VOLCANO_ERUPTION</Tag>
 		<English>A volcano eruption has destroyed much of its vicinity!</English>
 		<French>Une éruption volcanique a causé beaucoup de dégâts à sa périphérie!</French>
 		<German>Die Rekultivierung des Gebiets sollte jetzt unsere vorrangige Aufgabe sein.</German>
@@ -13124,7 +13095,7 @@
 		<Russian>Извержение вулкана разрушило большую часть его окрестностей!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_VOLCANO_ERUPTION_1_HELP</Tag>
+		<Tag>TXT_KEY_EVENT_VOLCANO_ERUPTION_HELP</Tag>
 		<English>Surrounding improvements are lost, units caught in the eruption may be displaced and damaged or killed. The surrounding tiles gain 1 [ICON_FOOD] if an earlier eruption did not already do this.</English>
 		<French>Les aménagements aux alentours sont perdus, les unités prises dans l'éruption sont blessées ou mortes. Certaines ont pu fuir. Les cases environnantes obtiennent +1 [ICON_FOOD] si une éruption précédente n'a pas déjà procuré ce bonus.</French>
 		<German>Verlust von Landschaftsausbauten und Verlust oder Beschädigung von Einheiten in der Nähe der Eruption, +1 [ICON_FOOD] auf umliegenden Feldern (nur einmalig pro Feld möglich)</German>
