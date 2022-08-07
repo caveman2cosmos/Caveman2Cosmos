@@ -13973,9 +13973,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_VOLCANO</Tag>
-		<English>Beneath the remnants of the old volcano near %s2_CityName a source of [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] has been discovered!</English>
-		<French>Parmi les restes d'un ancien volcan près de %s2_CityName, une source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] a été découverte!</French>
-		<Polish>Pod pozostałościami starego wulkanu nieopodal %s2_CityName odkryto nowe źródło [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT]!</Polish>
+		<English>Beneath the remnants of the old volcano a source of [COLOR_HIGHLIGHT_TEXT]obsidian[COLOR_REVERT] has been discovered!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DISTANCE_FROM_PALACE</Tag>
