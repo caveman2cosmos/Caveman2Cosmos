@@ -3759,6 +3759,9 @@ def isSeaLevelMap():
 	"""Uses the Sea Level options"""
 	return 0
 
+def getNumHiddenCustomMapOptions():
+	return 0
+
 def getNumCustomMapOptions():
 	loadMapOptionDefaults()
 	return len(selection_names_and_values)

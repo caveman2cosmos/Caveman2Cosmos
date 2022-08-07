@@ -4663,6 +4663,9 @@ def getWrapY():
 	return mc.WrapY
 
 
+def getNumHiddenCustomMapOptions():
+	return 0
+
 def getNumCustomMapOptions():
 	mc.initialize()
 	return 6

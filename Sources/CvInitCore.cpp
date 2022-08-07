@@ -1074,7 +1074,8 @@ CustomMapOptionTypes CvInitCore::getCustomMapOption(int iOptionID) const
 void CvInitCore::setCustomMapOption(int iOptionID, CustomMapOptionTypes eCustomMapOption)
 {
 	FASSERT_BOUNDS(0, m_iNumCustomMapOptions, iOptionID);
-	if ( checkBounds(iOptionID, 0, m_iNumCustomMapOptions) )
+
+	if (checkBounds(iOptionID, 0, m_iNumCustomMapOptions))
 	{
 		m_aeCustomMapOptions[iOptionID] = eCustomMapOption;
 	}
