@@ -1160,19 +1160,6 @@ CvTechInfo::~CvTechInfo()
 	GC.removeDelayedResolution((int*)&m_iFirstFreeProphet);
 }
 
-//	Validate tech info data after load (debug only)
-void CvTechInfo::validate()
-{
-#ifdef _DEBUG
-	for(int iI = 0; iI < GC.getNumTechInfos(); iI++)
-	{
-		const CvTechInfo& info = GC.getTechInfo((TechTypes)iI);
-
-		//	Arbitrary tests - add cases as suspected bugs crop up to pre-detect
-		FASSERT_BOUNDS(0, GC.getNumEraInfos(), info.getEra());
-	}
-#endif
-}
 
 int CvTechInfo::getAdvisorType() const
 {

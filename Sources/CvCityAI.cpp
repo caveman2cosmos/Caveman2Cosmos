@@ -4282,8 +4282,7 @@ bool CvCityAI::AI_canRushBuildingConstruction(BuildingTypes building) const
 }
 
 
-//	KOSHLING Mod - pre-calculate and cache building values for all focuses
-//
+// KOSHLING Mod - pre-calculate and cache building values for all focuses
 //	Simple class to hold the calculated values for one building type and city
 #ifdef _DEBUG
 //#define VALIDATE_BUILDING_CACHE_CONSISTENCY
