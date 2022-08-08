@@ -2639,7 +2639,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_ACTIVE</Tag>
-		<English>Reports from the %s1_civ_adjective empire speak of increased volcanic activity.</English>
+		<English>Reports speak of increased volcanic activity.</English>
 		<French>Des rumeurs courent concernant une augmentation de l'activité volcanique.</French>
 		<Polish>Raporty z Imperium %s1_civ_adjective mówią o zwiększonej aktywności wulkanicznej.</Polish>
 		<Russian>Приходят известия о повышенной вулканической активности в державе %s1_civ_adjective.</Russian>

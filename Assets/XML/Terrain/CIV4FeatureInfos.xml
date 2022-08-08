@@ -6535,11 +6535,11 @@
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<TerrainType>TERRAIN_COAST</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>

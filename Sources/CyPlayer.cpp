@@ -1547,14 +1547,9 @@ AttitudeTypes CyPlayer::AI_getAttitude(int /*PlayerTypes*/ ePlayer) const
 	//Fuyu catching AIAutoplay weirdness
 	if (m_pPlayer->getID() == (PlayerTypes)ePlayer)
 	{
-#ifdef _DEBUG
 		FErrorMsg("shouldn't call this function on ourselves (Python)");
-		throw new std::exception();
-#endif
 		return NO_ATTITUDE;
 	}
-	//Fuyu end
-
 	return m_pPlayer->AI_getAttitude((PlayerTypes)ePlayer);
 }
 

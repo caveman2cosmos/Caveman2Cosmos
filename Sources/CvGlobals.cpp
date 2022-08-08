@@ -2636,18 +2636,6 @@ int cvInternalGlobals::getInfoTypeForString(const char* szType, bool hideAssert)
 /*                                                                                              */
 /* Rearranging the infos map                                                                    */
 /************************************************************************************************/
-/*
-void cvInternalGlobals::setInfoTypeFromString(const char* szType, int idx)
-{
-	FAssertMsg(szType, "null info type string");
-#ifdef _DEBUG
-	InfosMap::const_iterator it = m_infosMap.find(szType);
-	int iExisting = (it!=m_infosMap.end()) ? it->second : -1;
-	FAssertMsg(iExisting==-1 || iExisting==idx || strcmp(szType, "ERROR")==0, CvString::format("xml info type entry %s already exists", szType).c_str());
-#endif
-	m_infosMap[szType] = idx;
-}
-*/
 void cvInternalGlobals::setInfoTypeFromString(const char* szType, int idx)
 {
 	FAssertMsg(szType, "null info type string");

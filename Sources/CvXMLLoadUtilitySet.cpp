@@ -119,14 +119,8 @@ bool CvXMLLoadUtility::ReadGlobalDefines(const char* szXMLFileName, CvCacheObjec
 	return true;
 }
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetGlobalDefines()
-//
-//  PURPOSE :   Initialize the variables located in globaldefines.cpp/h with the values in
-//				GlobalDefines.xml
-//
-//------------------------------------------------------------------------------------------------------
+
+// Initialize the variables located in globaldefines.cpp/h with the values in GlobalDefines.xml
 bool CvXMLLoadUtility::SetGlobalDefines()
 {
 	OutputDebugString("Setting Global Defines: Start\n");
@@ -134,11 +128,10 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 	UpdateProgressCB("GlobalDefines");
 
 	/////////////////////////////////
+	// Use disk cache if possible.
+	// If no cache or cache is older than xml file, use xml file like normal, else read from cache
 	//
-	// use disk cache if possible.
-	// if no cache or cache is older than xml file, use xml file like normal, else read from cache
-	//
-	CvCacheObject* cache = gDLL->createGlobalDefinesCacheObject("GlobalDefines.dat");	// cache file name
+	CvCacheObject* cache = gDLL->createGlobalDefinesCacheObject("GlobalDefines.dat"); // cache file name
 
 	DEBUG_LOG("XmlCheckDoubleTypes.log", "\nEntering: GlobalDefines\n");
 
@@ -152,22 +145,17 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 		return false;
 	}
 
-	//	Parallel maps
+	// Parallel maps
 	if (!ReadGlobalDefines("xml\\ParallelMaps_GlobalDefines.xml", cache))
 	{
 		FErrorMsg("ParallelMaps_GlobalDefines Failed to load!");
 	}
 
-	//Affores
 	if (!ReadGlobalDefines("xml\\A_New_Dawn_GlobalDefines.xml", cache))
 	{
 		FErrorMsg("A_New_Dawn_GlobalDefines Failed to load!");
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
-/*                                                                                              */
-/* XML Options                                                                                  */
-/************************************************************************************************/
+
 	if (!ReadGlobalDefines("xml\\BBAI_Game_Options_GlobalDefines.xml", cache))
 	{
 		FErrorMsg("BBAI_Game_Options_GlobalDefines Failed to load!");
@@ -183,21 +171,11 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 		FErrorMsg("TechDiffusion_GlobalDefines Failed to load!");
 	}
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* TGA_INDEXATION                          02/19/08                                MRGENIE      */
-/*                                                                                              */
-/* reading the Defines to know the modded TGA icons                                             */
-/************************************************************************************************/
+	// MRGENIE - TGA_INDEXATION - 02/19/08 - Reading the Defines to know the modded TGA icons
 	if (!ReadGlobalDefines("res\\Fonts\\GameFont_GlobalDefines.xml", cache))
 	{
 		FErrorMsg("The \"GameFont_GlobalDefines.xml\" must reside in the \"Mods\\World of Civilization\\Assets\\res\\Fonts\" directory next to the 2 GameFont.tga files");
 	}
-/************************************************************************************************/
-/* TGA_INDEXATION                          END                                                  */
-/************************************************************************************************/
 
 	if (gDLL->isModularXMLLoading())
 	{
@@ -213,11 +191,6 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 			}
 		}
 	}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/15/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	else
 	{
 		std::vector<CvString> aszFiles;
@@ -232,9 +205,6 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 			}
 		}
 	}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 
 	gDLL->destroyCache(cache);
 
@@ -245,26 +215,20 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 	return true;
 }
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetPostGlobalsGlobalDefines()
-//
-//  PURPOSE :   This function assumes that the SetGlobalDefines function has already been called
-//							it then loads the few global defines that needed to reference a global variable that
-//							hadn't been loaded in prior to the SetGlobalDefines call
-//
-//------------------------------------------------------------------------------------------------------
+
+// This function assumes that the SetGlobalDefines function has already been called.
+//	It loads the few global defines that reference a variable that
+//	hadn't yet been initialized at the prior SetGlobalDefines call.
 bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 {
 	OutputDebugString("Setting Post Global Defines: Start\n");
 
-	const char* szVal=NULL;		// holds the string value from the define queue
-	int idx;
-
 	if (GC.getDefinesVarSystem()->GetSize() > 0)
 	{
+		const char* szVal = NULL; // holds the string value from the define queue
+
 		SetGlobalDefine("LAND_TERRAIN", szVal);
-		idx = GetInfoClass(szVal);
+		int idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("LAND_TERRAIN", idx);
 
 		SetGlobalDefine("DEEP_WATER_TERRAIN", szVal);
@@ -274,7 +238,7 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		SetGlobalDefine("SHALLOW_WATER_TERRAIN", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("SHALLOW_WATER_TERRAIN", idx);
-//GWMod Start M.A.
+
 		SetGlobalDefine("FROZEN_TERRAIN", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("FROZEN_TERRAIN", idx);
@@ -311,7 +275,6 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("MARSH_TERRAIN", idx);
 
-//GWMod end M.A.
 		SetGlobalDefine("LAND_IMPROVEMENT", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("LAND_IMPROVEMENT", idx);
@@ -465,23 +428,16 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		return true;
 	}
 
-	char	szMessage[1024];
-	sprintf( szMessage, "Size of Global Defines is not greater than 0. \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
+	char szMessage[1024];
+	sprintf(szMessage, "Size of Global Defines is not greater than 0. \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 	gDLL->MessageBox(szMessage, "XML Load Error");
 
 	OutputDebugString("Setting Post Global Defines: End\n");
-
 	return false;
 }
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetGlobalTypes()
-//
-//  PURPOSE :   Initialize the variables located in globaltypes.cpp/h with the values in
-//				GlobalTypes.xml
-//
-//------------------------------------------------------------------------------------------------------
+
+// Initialize the variables located in globaltypes.cpp/h with the values in GlobalTypes.xml
 bool CvXMLLoadUtility::SetGlobalTypes()
 {
 	OutputDebugString("Setting Global Types: Start\n");
@@ -496,11 +452,8 @@ bool CvXMLLoadUtility::SetGlobalTypes()
 	}
 
 #ifdef _DEBUG
-/*************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE - Debugging dependencies problems - 03/14/08 - MRGENIE		*/
+	// MRGENIE - XML_CHECK_DOUBLE_TYPE - Debugging dependencies problems - 03/14/08
 	GC.logInfoTypeMap("SetGlobalTypes PRE");
-/* XML_CHECK_DOUBLE_TYPE					END										*/
-/************************************************************************************/
 #endif
 
 	if (LoadCivXml("xml/GlobalTypes.xml"))
@@ -527,11 +480,8 @@ bool CvXMLLoadUtility::SetGlobalTypes()
 	}
 
 #ifdef _DEBUG
-/*************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE - Debugging dependencies problems - 03/14/08 - MRGENIE		*/
+	// MRGENIE - XML_CHECK_DOUBLE_TYPE - Debugging dependencies problems - 03/14/08
 	GC.logInfoTypeMap("SetGlobalTypes POST");
-/* XML_CHECK_DOUBLE_TYPE					END										*/
-/************************************************************************************/
 #endif
 
 	// delete the pointer to the FXml variable
@@ -542,57 +492,35 @@ bool CvXMLLoadUtility::SetGlobalTypes()
 	return true;
 }
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetDiplomacyCommentTypes()
-//
-//  PURPOSE :   Creates a full list of Diplomacy Comments
-//
-//
-//------------------------------------------------------------------------------------------------------
+
 void CvXMLLoadUtility::SetDiplomacyCommentTypes(CvString** ppszString, int* iNumVals)
 {
 	FErrorMsg("should never get here");
 }
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetupGlobalLandscapeInfos()
-//
-//  PURPOSE :   Initialize the appropriate variables located in globals.cpp/h with the values in
-//				Terrain\Civ4TerrainSettings.xml
-//
-//------------------------------------------------------------------------------------------------------
+
+// Initialize the appropriate variables located in globals.cpp/h with the values in:
+//	Terrain\Civ4TerrainSettings.xml
 bool CvXMLLoadUtility::SetupGlobalLandscapeInfo()
 {
 	if (!CreateFXml())
 	{
 		return false;
 	}
-
 	LoadGlobalClassInfo(GC.m_paLandscapeInfo, "CIV4TerrainSettings", "Terrain", L"/Civ4TerrainSettings/LandscapeInfos/LandscapeInfo", false);
 
-	// delete the pointer to the FXml variable
-	DestroyFXml();
-
+	DestroyFXml(); // delete the pointer to the FXml variable
 	return true;
 }
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetGlobalArtDefines()
-//
-//  PURPOSE :   Initialize the appropriate variables located in globals.cpp/h with the values in
-//				Civ4ArtDefines.xml
-//
-//------------------------------------------------------------------------------------------------------
+
+// Initialize the appropriate variables located in globals.cpp/h with the values in Civ4ArtDefines.xml
 bool CvXMLLoadUtility::SetGlobalArtDefines()
 {
 	if (!CreateFXml())
 	{
 		return false;
 	}
-
 	LoadGlobalClassInfo(ARTFILEMGR.getInterfaceArtInfo(), "CIV4ArtDefines_Interface", "Art", L"/Civ4ArtDefines/InterfaceArtInfos/InterfaceArtInfo", false);
 	LoadGlobalClassInfo(ARTFILEMGR.getMovieArtInfo(), "CIV4ArtDefines_Movie", "Art", L"/Civ4ArtDefines/MovieArtInfos/MovieArtInfo", false);
 	LoadGlobalClassInfo(ARTFILEMGR.getMiscArtInfo(), "CIV4ArtDefines_Misc", "Art", L"/Civ4ArtDefines/MiscArtInfos/MiscArtInfo", false);
@@ -606,17 +534,11 @@ bool CvXMLLoadUtility::SetGlobalArtDefines()
 	LoadGlobalClassInfo(ARTFILEMGR.getFeatureArtInfo(), "CIV4ArtDefines_Feature", "Art", L"/Civ4ArtDefines/FeatureArtInfos/FeatureArtInfo", false);
 
 	DestroyFXml();
-
 	return true;
 }
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetGlobalText()
-//
-//  PURPOSE :   Handles all Global Text Infos
-//
-//------------------------------------------------------------------------------------------------------
+
+// Handles all Global Text Infos
 bool CvXMLLoadUtility::LoadGlobalText()
 {
 	OutputDebugString("Begin load global text\n");
@@ -669,31 +591,15 @@ bool CvXMLLoadUtility::LoadGlobalText()
 		return false;
 	}
 
-	//
 	// load all files in the xml text directory
-	//
 	std::vector<CvString> aszFiles;
 	std::vector<CvString> aszModfiles;
 
 	gDLL->enumerateFiles(aszFiles, "xml\\GameText\\*.xml");
 
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 05/23/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/* original firaxis
-	if (gDLL->isModularXMLLoading())
-	{
-		gDLL->enumerateFiles(aszModfiles, L"modules\\*_CIV4GameText.xml");
-		aszFiles.insert(aszFiles.end(), aszModfiles.begin(), aszModfiles.end());
-	}
-*/
 	gDLL->enumerateFiles(aszModfiles, "modules\\*_CIV4GameText*.xml");
 	aszFiles.insert(aszFiles.end(), aszModfiles.begin(), aszModfiles.end());
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
+
 	std::vector<CvGameText> texts;
 
 	foreach_(const CvString& szFile, aszFiles)
@@ -703,11 +609,8 @@ bool CvXMLLoadUtility::LoadGlobalText()
 			SetGameText(L"/Civ4GameText", L"/Civ4GameText/TEXT", texts);
 		}
 	}
-
 	DestroyFXml();
-
 	OutputDebugString("End load global text\n");
-
 	return true;
 }
 
@@ -759,23 +662,22 @@ inline bool cmpReligionTGA(CvReligionInfo* lhs, CvReligionInfo* rhs) { return lh
 inline bool cmpCorporationTGA(CvCorporationInfo* lhs, CvCorporationInfo* rhs) { return lhs->getTGAIndex() < rhs->getTGAIndex();}
 // comparator function for sorting InfoBase by TextKey alphabetically
 inline bool cmpInfoByAlphabet(CvInfoBase* lhs, CvInfoBase* rhs) { return CvWString::format(lhs->getTextKeyWide()) < CvWString::format(rhs->getTextKeyWide());}
-//
+
+
 // Globals which must be loaded before the main menus.
-// Don't put anything in here unless it has to be loaded before the main menus,
-// instead try to load things in LoadPostMenuGlobals()
-//
+//	Don't put anything in here unless it has to be loaded before the main menus,
+//	instead try to load things in LoadPostMenuGlobals().
 bool CvXMLLoadUtility::LoadPreMenuGlobals()
 {
 	OutputDebugString("Loading PreMenu Infos: Start\n");
 
 	GC.registerNPCPlayers();
 
-	//ReplacementStep: search down here for 'InfoReplacements()'
+	// ReplacementStep: search down here for 'InfoReplacements()'
 	if (!CreateFXml())
 	{
 		return false;
 	}
-
 	OutputDebugString("Begin load global infos\n");
 	LoadGlobalClassInfo(GC.m_paCategoryInfo, "CIV4CategoryInfos", "GameInfo", L"/Civ4CategoryInfos/CategoryInfos/CategoryInfo", false);
 	LoadGlobalClassInfo(GC.m_paInvisibleInfo, "CIV4InvisibleInfos", "Units", L"/Civ4InvisibleInfos/InvisibleInfos/InvisibleInfo", false);
@@ -853,11 +755,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.m_paUnitInfo, "CIV4UnitInfos", "Units", L"/Civ4UnitInfos/UnitInfos/UnitInfo", false, &GC.m_UnitInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paTraitInfo, "CIV4TraitInfos", "Civilizations", L"/Civ4TraitInfos/TraitInfos/TraitInfo", false, &GC.m_TraitInfoReplacements);
 	LoadGlobalClassInfo(GC.m_paLeaderHeadInfo, "CIV4LeaderHeadInfos", "Civilizations", L"/Civ4LeaderHeadInfos/LeaderHeadInfos/LeaderHeadInfo", false, &GC.m_LeaderHeadInfoReplacements);
-/************************************************************************************************/
-/* SORT_ALPHABET                           11/17/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	OutputDebugString("Pre leaderhead sort\n");
 	std::sort(GC.m_paLeaderHeadInfo.begin(), GC.m_paLeaderHeadInfo.end(), cmpInfoByAlphabet);
 	for (int i = 0; i < GC.getNumLeaderHeadInfos(); i++)
@@ -865,20 +763,12 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.setInfoTypeFromString(GC.getLeaderHeadInfo((LeaderHeadTypes)i).getType(), i);
 	}
 	OutputDebugString("Post leaderhead sort\n");
-/************************************************************************************************/
-/* SORT_ALPHABET                           END                                                  */
-/************************************************************************************************/
 
 	LoadGlobalClassInfo(GC.m_paUnitArtStyleTypeInfo, "CIV4UnitArtStyleTypeInfos", "Civilizations", L"/Civ4UnitArtStyleTypeInfos/UnitArtStyleTypeInfos/UnitArtStyleTypeInfo", false);
 	LoadGlobalClassInfo(GC.m_paCivilizationInfo, "CIV4CivilizationInfos", "Civilizations", L"/Civ4CivilizationInfos/CivilizationInfos/CivilizationInfo", false, &GC.m_CivilizationInfoReplacements);
 
 	LoadGlobalClassInfo(GC.m_paProjectInfo, "CIV4ProjectInfo", "GameInfo", L"/Civ4ProjectInfo/ProjectInfos/ProjectInfo", false, &GC.m_ProjectInfoReplacements);
 
-/************************************************************************************************/
-/* SORT_ALPHABET                           11/17/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	OutputDebugString("Pre civ sort\n");
 	std::sort(GC.m_paCivilizationInfo.begin(), GC.m_paCivilizationInfo.end(), cmpInfoByAlphabet);
 	for (int i = 0; i < GC.getNumCivilizationInfos(); i++)
@@ -886,9 +776,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.setInfoTypeFromString(GC.getCivilizationInfo((CivilizationTypes)i).getType(), i);
 	}
 	OutputDebugString("Post civ sort\n");
-/************************************************************************************************/
-/* SORT_ALPHABET                           END                                                  */
-/************************************************************************************************/
+
 	LoadGlobalClassInfo(GC.m_paHints, "CIV4Hints", "GameInfo", L"/Civ4Hints/HintInfos/HintInfo", false);
 	LoadGlobalClassInfo(GC.m_paMainMenus, "CIV4MainMenus", "Art", L"/Civ4MainMenus/MainMenus/MainMenu", false);
 	LoadGlobalClassInfo(GC.m_paSlideShowInfo, "CIV4SlideShowInfos", "Interface", L"/Civ4SlideShowInfos/SlideShowInfos/SlideShowInfo", false);
@@ -1000,14 +888,9 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	return true;
 }
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   LoadPostMenuGlobals()
-//
-//  PURPOSE :   loads global xml data which isn't needed for the main menus
-//		this data is loaded as a secodn stage, when the game is launched
-//
-//------------------------------------------------------------------------------------------------------
+
+// Loads global xml data which isn't needed for the main menus
+//	this data is loaded as a second stage, when the game is launched.
 bool CvXMLLoadUtility::LoadPostMenuGlobals()
 {
 	PROFILE_FUNC();
@@ -1091,15 +974,9 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 }
 
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetGlobalStringArray(char (**ppszString)[256], char* szTagName, int* iNumVals)
-//
-//  PURPOSE :   takes the szTagName parameter and if it finds it in the currently selected XML element
-//				then it loads the ppszString parameter with the string values under it and the
-//				iNumVals with the total number of tags with the szTagName in the xml file
-//
-//------------------------------------------------------------------------------------------------------
+// Takes the szTagName parameter and if it finds it in the currently selected XML element
+//	then it loads the ppszString parameter with the string values under it and the
+//	iNumVals with the total number of tags with the szTagName in the xml file.
 void CvXMLLoadUtility::SetGlobalStringArray(CvString **ppszString, wchar_t* szTagName, int* iNumVals, bool bUseEnum)
 {
 	logging::logMsgW("xml.log", L"SetGlobalStringArray %s\n", szTagName);
@@ -1129,357 +1006,363 @@ void CvXMLLoadUtility::SetGlobalStringArray(CvString **ppszString, wchar_t* szTa
 			}
 		}
 	}
-
-	// if the local string pointer is null then we weren't able to find the szTagName in the xml
+	// If the local string pointer is null then we weren't able to find the szTagName in the xml
 	// so we will FAssert to let whoever know it
 	if (!pszString)
 	{
-		char	szMessage[1024];
+		char szMessage[1024];
 		sprintf( szMessage, "Error locating tag node in SetGlobalStringArray function \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
 }
 
 
-
-
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetGlobalActionInfo(CvActionInfo** ppActionInfo, int* iNumVals)
-//
-//  PURPOSE :   Takes the szTagName parameter and if it exists in the xml it loads the ppActionInfo
-//				with the value under it and sets the value of the iNumVals parameter to the total number
-//				of occurances of the szTagName tag in the xml.
-//
-//------------------------------------------------------------------------------------------------------
+// Takes the szTagName parameter and if it exists in the xml it loads the ppActionInfo
+//	with the value under it and sets the value of the iNumVals parameter to
+//	the total number of occurances of the szTagName tag in the xml.
 void CvXMLLoadUtility::SetGlobalActionInfo()
 {
 	PROFILE_FUNC();
 	logging::logMsg("xml.log", "SetGlobalActionInfo\n");
-	int i=0;					//loop counter
 
 	STATIC_ASSERT(NUM_INTERFACEMODE_TYPES > 0, value_should_be_greater_than_zero);
 	STATIC_ASSERT(NUM_CONTROL_TYPES > 0, value_should_be_greater_than_zero);
 	STATIC_ASSERT(NUM_COMMAND_TYPES > 0, value_should_be_greater_than_zero);
 
-	if(!(GC.getNumBuildInfos() > 0))
+	const int iNumPromoInfos = GC.getNumPromotionInfos();
+	const int iNumBuildInfos = GC.getNumBuildInfos();
+	const int iNumMissionInfos = GC.getNumMissionInfos();
+	const int iNumAutomationInfos = GC.getNumAutomateInfos();
+
+	if (iNumBuildInfos < 1)
 	{
-		char	szMessage[1024];
+		char szMessage[1024];
 		sprintf( szMessage, "GC.getNumBuildInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
-	if(!(GC.getNumPromotionInfos() > 0))
+	if (iNumPromoInfos < 1)
 	{
-		char	szMessage[1024];
+		char szMessage[1024];
 		sprintf( szMessage, "GC.getNumPromotionInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
-	if(!(GC.getNumSpecialistInfos() > 0) )
+	if (GC.getNumSpecialistInfos() < 1)
 	{
-		char	szMessage[1024];
+		char szMessage[1024];
 		sprintf( szMessage, "GC.getNumSpecialistInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
-	if(!(GC.getNumBuildingInfos() > 0) )
+	if (GC.getNumBuildingInfos() < 1)
 	{
-		char	szMessage[1024];
+		char szMessage[1024];
 		sprintf( szMessage, "GC.getNumBuildingInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
-	if(!(GC.getNumAutomateInfos() > 0) )
+	if (iNumAutomationInfos < 1)
 	{
-		char	szMessage[1024];
+		char szMessage[1024];
 		sprintf( szMessage, "GC.getNumAutomateInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
-	if(!(GC.getNumMissionInfos() > 0) )
+	if (iNumMissionInfos < 1)
 	{
-		char	szMessage[1024];
+		char szMessage[1024];
 		sprintf( szMessage, "GC.getNumMissionInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
+	int iActionInfoIndex = 0;
 
-	int* piOrderedIndex=NULL;
-
-	int iNumOrigVals = GC.getNumActionInfos();
-
-	int iNumActionInfos = iNumOrigVals +
-		NUM_INTERFACEMODE_TYPES +
-		GC.getNumBuildInfos() +
-		GC.getNumPromotionInfos() +
-		GC.getNumReligionInfos() +
-		GC.getNumCorporationInfos() +
-		GC.getNumUnitInfos() +
-		GC.getNumSpecialistInfos() +
-		GC.getNumBuildingInfos() +
-		NUM_CONTROL_TYPES +
-		NUM_COMMAND_TYPES +
-		GC.getNumAutomateInfos() +
-		GC.getNumMissionInfos();
-
-	int* piIndexList = new int[iNumActionInfos];
-	int* piPriorityList = new int[iNumActionInfos];
-	int* piActionInfoTypeList = new int[iNumActionInfos];
-
-	int iTotalActionInfoCount = 0;
-
-	// loop through control info
-	for (i=0;i<NUM_COMMAND_TYPES;i++)
+	FAssert(GC.getNumActionInfos() == 0);
 	{
-		piIndexList[iTotalActionInfoCount] = i;
-		piPriorityList[iTotalActionInfoCount] = GC.getCommandInfo((CommandTypes)i).getOrderPriority();
-		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_COMMAND;
-		iTotalActionInfoCount++;
+		const int iTotal = iNumMissionInfos + NUM_COMMAND_TYPES + NUM_INTERFACEMODE_TYPES + NUM_CONTROL_TYPES;
+
+		int* piIndexList = new int[iTotal];
+		int* piPriorityList = new int[iTotal];
+		ActionSubTypes* piActionInfoTypeList = new ActionSubTypes[iTotal];
+
+		int n = 0;
+
+		for (int i = 0; i < iNumMissionInfos; i++)
+		{
+			piIndexList[n] = i;
+			piPriorityList[n] = GC.getMissionInfo((MissionTypes)i).getOrderPriority();
+			piActionInfoTypeList[n] = ACTIONSUBTYPE_MISSION;
+			n++;
+		}
+		for (int i = 0; i < NUM_COMMAND_TYPES; i++)
+		{
+			piIndexList[n] = i;
+			piPriorityList[n] = GC.getCommandInfo((CommandTypes)i).getOrderPriority();
+			piActionInfoTypeList[n] = ACTIONSUBTYPE_COMMAND;
+			n++;
+		}
+		for (int i = 0; i < NUM_INTERFACEMODE_TYPES; i++)
+		{
+			piIndexList[n] = i;
+			piPriorityList[n] = GC.getInterfaceModeInfo((InterfaceModeTypes)i).getOrderPriority();
+			piActionInfoTypeList[n] = ACTIONSUBTYPE_INTERFACEMODE;
+			n++;
+		}
+		for (int i = 0; i < NUM_CONTROL_TYPES; i++)
+		{
+			piIndexList[n] = i;
+			piPriorityList[n] = GC.getControlInfo((ControlTypes)i).getOrderPriority();
+			piActionInfoTypeList[n] = ACTIONSUBTYPE_CONTROL;
+			n++;
+		}
+
+		int* piOrderedIndex = new int[iTotal];
+
+		orderHotkeyInfo(&piOrderedIndex, piPriorityList, iTotal);
+
+		for (int i = 0; i < iTotal; i++)
+		{
+			CvActionInfo* pActionInfo = new CvActionInfo;
+			pActionInfo->setOriginalIndex(piIndexList[piOrderedIndex[i]]);
+			pActionInfo->setSubType(piActionInfoTypeList[piOrderedIndex[i]]);
+
+			if (piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_MISSION)
+			{
+				GC.getMissionInfo((MissionTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(iActionInfoIndex++);
+			}
+			if (piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_COMMAND)
+			{
+				GC.getCommandInfo((CommandTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(iActionInfoIndex++);
+			}
+			else if (piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_INTERFACEMODE)
+			{
+				GC.getInterfaceModeInfo((InterfaceModeTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(iActionInfoIndex++);
+			}
+			else if (piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_CONTROL)
+			{
+				GC.getControlInfo((ControlTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(iActionInfoIndex++);
+			}
+			GC.m_paActionInfo.push_back(pActionInfo);
+		}
+	}
+	{
+		// Toffer - Internal sorting in build actions makes sense
+		int* piIndexList = new int[iNumBuildInfos];
+		int* piPriorityList = new int[iNumBuildInfos];
+		ActionSubTypes* piActionInfoTypeList = new ActionSubTypes[iNumBuildInfos];
+		int iTotalActionInfoCount = 0;
+
+		for (int i = 0; i < iNumBuildInfos; i++)
+		{
+			piIndexList[i] = i;
+			piPriorityList[i] = GC.getBuildInfo((BuildTypes)i).getOrderPriority();
+			piActionInfoTypeList[i] = ACTIONSUBTYPE_BUILD;
+		}
+		int* piOrderedIndex = new int[iNumBuildInfos];
+
+		orderHotkeyInfo(&piOrderedIndex, piPriorityList, iNumBuildInfos);
+
+		for (int i = 0; i < iNumBuildInfos; i++)
+		{
+			CvActionInfo* pActionInfo = new CvActionInfo;
+			pActionInfo->setOriginalIndex(piIndexList[piOrderedIndex[i]]);
+			pActionInfo->setSubType(piActionInfoTypeList[piOrderedIndex[i]]);
+
+			GC.getBuildInfo((BuildTypes)piIndexList[piOrderedIndex[i]]).setMissionType(GetInfoClass("MISSION_BUILD"));
+			GC.getBuildInfo((BuildTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(iActionInfoIndex++);
+
+			GC.m_paActionInfo.push_back(pActionInfo);
+		}
 	}
 
-	for (i=0;i<NUM_INTERFACEMODE_TYPES;i++)
-	{
-		piIndexList[iTotalActionInfoCount] = i;
-		piPriorityList[iTotalActionInfoCount] = GC.getInterfaceModeInfo((InterfaceModeTypes)i).getOrderPriority();
-		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_INTERFACEMODE;
-		iTotalActionInfoCount++;
-	}
-
-	for (i=0;i<GC.getNumBuildInfos();i++)
-	{
-		piIndexList[iTotalActionInfoCount] = i;
-		piPriorityList[iTotalActionInfoCount] = GC.getBuildInfo((BuildTypes)i).getOrderPriority();
-		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_BUILD;
-		iTotalActionInfoCount++;
-	}
-
-	for (i=0;i<GC.getNumPromotionInfos();i++)
-	{
-		piIndexList[iTotalActionInfoCount] = i;
-		piPriorityList[iTotalActionInfoCount] = GC.getPromotionInfo((PromotionTypes)i).getOrderPriority();
-		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_PROMOTION;
-		iTotalActionInfoCount++;
-	}
-
-	for (i=0;i<GC.getNumUnitInfos();i++)
-	{
-		piIndexList[iTotalActionInfoCount] = i;
-		piPriorityList[iTotalActionInfoCount] = GC.getUnitInfo((UnitTypes)i).getOrderPriority();
-		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_UNIT;
-		iTotalActionInfoCount++;
-	}
-
-	for (i=0;i<GC.getNumReligionInfos();i++)
-	{
-		piIndexList[iTotalActionInfoCount] = i;
-		piPriorityList[iTotalActionInfoCount] = GC.getReligionInfo((ReligionTypes)i).getOrderPriority();
-		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_RELIGION;
-		iTotalActionInfoCount++;
-	}
-
-	for (i=0;i<GC.getNumCorporationInfos();i++)
-	{
-		piIndexList[iTotalActionInfoCount] = i;
-		piPriorityList[iTotalActionInfoCount] = GC.getCorporationInfo((CorporationTypes)i).getOrderPriority();
-		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_CORPORATION;
-		iTotalActionInfoCount++;
-	}
-
-	for (i=0;i<GC.getNumSpecialistInfos();i++)
-	{
-		piIndexList[iTotalActionInfoCount] = i;
-		piPriorityList[iTotalActionInfoCount] = GC.getSpecialistInfo((SpecialistTypes)i).getOrderPriority();
-		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_SPECIALIST;
-		iTotalActionInfoCount++;
-	}
-
-	for (i=0;i<GC.getNumBuildingInfos();i++)
-	{
-		piIndexList[iTotalActionInfoCount] = i;
-		piPriorityList[iTotalActionInfoCount] = GC.getBuildingInfo((BuildingTypes)i).getOrderPriority();
-		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_BUILDING;
-		iTotalActionInfoCount++;
-	}
-
-	for (i=0;i<NUM_CONTROL_TYPES;i++)
-	{
-		piIndexList[iTotalActionInfoCount] = i;
-		piPriorityList[iTotalActionInfoCount] = GC.getControlInfo((ControlTypes)i).getOrderPriority();
-		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_CONTROL;
-		iTotalActionInfoCount++;
-	}
-
-	for (i=0;i<GC.getNumAutomateInfos();i++)
-	{
-		piIndexList[iTotalActionInfoCount] = i;
-		piPriorityList[iTotalActionInfoCount] = GC.getAutomateInfo(i).getOrderPriority();
-		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_AUTOMATE;
-		iTotalActionInfoCount++;
-	}
-
-	for (i=0;i<GC.getNumMissionInfos();i++)
-	{
-		piIndexList[iTotalActionInfoCount] = i;
-		piPriorityList[iTotalActionInfoCount] = GC.getMissionInfo((MissionTypes)i).getOrderPriority();
-		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_MISSION;
-		iTotalActionInfoCount++;
-	}
-
-	SAFE_DELETE_ARRAY(piOrderedIndex);
-	piOrderedIndex = new int[iNumActionInfos];
-
-	orderHotkeyInfo(&piOrderedIndex, piPriorityList, iNumActionInfos);
-	for (i=0;i<iNumActionInfos;i++)
+	// Toffer - No point in internally sorting the limited unit upgrade actions.
+	for (int i = GC.getNumUnitInfos() - 1; i > -1; i--)
 	{
 		CvActionInfo* pActionInfo = new CvActionInfo;
-		pActionInfo->setOriginalIndex(piIndexList[piOrderedIndex[i]]);
-		pActionInfo->setSubType((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]]);
-		if ((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_COMMAND)
-		{
-			GC.getCommandInfo((CommandTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-		}
-		else if ((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_INTERFACEMODE)
-		{
-			GC.getInterfaceModeInfo((InterfaceModeTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-		}
-		else if ((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_BUILD)
-		{
-			GC.getBuildInfo((BuildTypes)piIndexList[piOrderedIndex[i]]).setMissionType(GetInfoClass("MISSION_BUILD"));
-			GC.getBuildInfo((BuildTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-		}
-		else if ((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_PROMOTION)
-		{
-			if (GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isEquipment())
-			{
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setCommandType(GetInfoClass("COMMAND_REEQUIP"));
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setHotKeyDescription(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getTextKeyWide(), GC.getCommandInfo((CommandTypes)(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getCommandType())).getTextKeyWide(), CreateHotKeyFromDescription(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getHotKey(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isShiftDown(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isAltDown(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isCtrlDown()));
-			}
-			else if(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isStatus())
-			{
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setCommandType(GetInfoClass("COMMAND_STATUS"));
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setHotKeyDescription(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getTextKeyWide(), GC.getCommandInfo((CommandTypes)(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getCommandType())).getTextKeyWide(), CreateHotKeyFromDescription(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getHotKey(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isShiftDown(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isAltDown(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isCtrlDown()));
-			}
-			else
-			{
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setCommandType(GetInfoClass("COMMAND_PROMOTION"));
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setHotKeyDescription(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getTextKeyWide(), GC.getCommandInfo((CommandTypes)(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getCommandType())).getTextKeyWide(), CreateHotKeyFromDescription(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getHotKey(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isShiftDown(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isAltDown(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isCtrlDown()));
-			}
-		}
-		else if ((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_UNIT)
-		{
-			GC.getUnitInfo((UnitTypes)piIndexList[piOrderedIndex[i]]).setCommandType(GetInfoClass("COMMAND_UPGRADE"));
-			GC.getUnitInfo((UnitTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-			GC.getUnitInfo((UnitTypes)piIndexList[piOrderedIndex[i]]).setHotKeyDescription(GC.getUnitInfo((UnitTypes)piIndexList[piOrderedIndex[i]]).getTextKeyWide(), GC.getCommandInfo((CommandTypes)(GC.getUnitInfo((UnitTypes)piIndexList[piOrderedIndex[i]]).getCommandType())).getTextKeyWide(), CreateHotKeyFromDescription(GC.getUnitInfo((UnitTypes)piIndexList[piOrderedIndex[i]]).getHotKey(), GC.getUnitInfo((UnitTypes)piIndexList[piOrderedIndex[i]]).isShiftDown(), GC.getUnitInfo((UnitTypes)piIndexList[piOrderedIndex[i]]).isAltDown(), GC.getUnitInfo((UnitTypes)piIndexList[piOrderedIndex[i]]).isCtrlDown()));
-		}
-		else if ((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_RELIGION)
-		{
-			GC.getReligionInfo((ReligionTypes)piIndexList[piOrderedIndex[i]]).setMissionType(GetInfoClass("MISSION_SPREAD"));
-			GC.getReligionInfo((ReligionTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-			GC.getReligionInfo((ReligionTypes)piIndexList[piOrderedIndex[i]]).setHotKeyDescription(GC.getReligionInfo((ReligionTypes)piIndexList[piOrderedIndex[i]]).getTextKeyWide(), GC.getMissionInfo((MissionTypes)(GC.getReligionInfo((ReligionTypes)piIndexList[piOrderedIndex[i]]).getMissionType())).getTextKeyWide(), CreateHotKeyFromDescription(GC.getReligionInfo((ReligionTypes)piIndexList[piOrderedIndex[i]]).getHotKey(), GC.getReligionInfo((ReligionTypes)piIndexList[piOrderedIndex[i]]).isShiftDown(), GC.getReligionInfo((ReligionTypes)piIndexList[piOrderedIndex[i]]).isAltDown(), GC.getReligionInfo((ReligionTypes)piIndexList[piOrderedIndex[i]]).isCtrlDown()));
-		}
-		else if ((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_CORPORATION)
-		{
-			GC.getCorporationInfo((CorporationTypes)piIndexList[piOrderedIndex[i]]).setMissionType(GetInfoClass("MISSION_SPREAD_CORPORATION"));
-			GC.getCorporationInfo((CorporationTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-			GC.getCorporationInfo((CorporationTypes)piIndexList[piOrderedIndex[i]]).setHotKeyDescription(GC.getCorporationInfo((CorporationTypes)piIndexList[piOrderedIndex[i]]).getTextKeyWide(), GC.getMissionInfo((MissionTypes)(GC.getCorporationInfo((CorporationTypes)piIndexList[piOrderedIndex[i]]).getMissionType())).getTextKeyWide(), CreateHotKeyFromDescription(GC.getCorporationInfo((CorporationTypes)piIndexList[piOrderedIndex[i]]).getHotKey(), GC.getCorporationInfo((CorporationTypes)piIndexList[piOrderedIndex[i]]).isShiftDown(), GC.getCorporationInfo((CorporationTypes)piIndexList[piOrderedIndex[i]]).isAltDown(), GC.getCorporationInfo((CorporationTypes)piIndexList[piOrderedIndex[i]]).isCtrlDown()));
-		}
-		else if ((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_SPECIALIST)
-		{
-			GC.getSpecialistInfo((SpecialistTypes)piIndexList[piOrderedIndex[i]]).setMissionType(GetInfoClass("MISSION_JOIN"));
-			GC.getSpecialistInfo((SpecialistTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-			GC.getSpecialistInfo((SpecialistTypes)piIndexList[piOrderedIndex[i]]).setHotKeyDescription(GC.getSpecialistInfo((SpecialistTypes)piIndexList[piOrderedIndex[i]]).getTextKeyWide(), GC.getMissionInfo((MissionTypes)(GC.getSpecialistInfo((SpecialistTypes)piIndexList[piOrderedIndex[i]]).getMissionType())).getTextKeyWide(), CreateHotKeyFromDescription(GC.getSpecialistInfo((SpecialistTypes)piIndexList[piOrderedIndex[i]]).getHotKey(), GC.getSpecialistInfo((SpecialistTypes)piIndexList[piOrderedIndex[i]]).isShiftDown(), GC.getSpecialistInfo((SpecialistTypes)piIndexList[piOrderedIndex[i]]).isAltDown(), GC.getSpecialistInfo((SpecialistTypes)piIndexList[piOrderedIndex[i]]).isCtrlDown()));
-		}
-		else if ((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_BUILDING)
-		{
-			GC.getBuildingInfo((BuildingTypes)piIndexList[piOrderedIndex[i]]).setMissionType(GetInfoClass("MISSION_CONSTRUCT"));
-			GC.getBuildingInfo((BuildingTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-			GC.getBuildingInfo((BuildingTypes)piIndexList[piOrderedIndex[i]]).setHotKeyDescription(GC.getBuildingInfo((BuildingTypes)piIndexList[piOrderedIndex[i]]).getTextKeyWide(), GC.getMissionInfo((MissionTypes)(GC.getBuildingInfo((BuildingTypes)piIndexList[piOrderedIndex[i]]).getMissionType())).getTextKeyWide(), CreateHotKeyFromDescription(GC.getBuildingInfo((BuildingTypes)piIndexList[piOrderedIndex[i]]).getHotKey(), GC.getBuildingInfo((BuildingTypes)piIndexList[piOrderedIndex[i]]).isShiftDown(), GC.getBuildingInfo((BuildingTypes)piIndexList[piOrderedIndex[i]]).isAltDown(), GC.getBuildingInfo((BuildingTypes)piIndexList[piOrderedIndex[i]]).isCtrlDown()));
-		}
-		else if ((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_CONTROL)
-		{
-			GC.getControlInfo((ControlTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-		}
-		else if ((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_AUTOMATE)
-		{
-			GC.getAutomateInfo(piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-		}
-		else if ((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_MISSION)
-		{
-			GC.getMissionInfo((MissionTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i + iNumOrigVals);
-		}
+		pActionInfo->setOriginalIndex(i);
+		pActionInfo->setSubType(ACTIONSUBTYPE_UNIT);
+
+		CvUnitInfo& unit = GC.getUnitInfo(static_cast<UnitTypes>(i));
+
+		unit.setCommandType(GetInfoClass("COMMAND_UPGRADE"));
+		unit.setActionInfoIndex(iActionInfoIndex++);
+		unit.setHotKeyDescription(unit.getTextKeyWide(), GC.getCommandInfo((CommandTypes)(unit.getCommandType())).getTextKeyWide(), CreateHotKeyFromDescription(unit.getHotKey(), unit.isShiftDown(), unit.isAltDown(), unit.isCtrlDown()));
 
 		GC.m_paActionInfo.push_back(pActionInfo);
 	}
 
-	SAFE_DELETE_ARRAY(piOrderedIndex);
-	SAFE_DELETE_ARRAY(piIndexList);
-	SAFE_DELETE_ARRAY(piPriorityList);
-	SAFE_DELETE_ARRAY(piActionInfoTypeList);
-}
-
-
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetGlobalAnimationPathInfo(CvAnimationPathInfo** ppAnimationPathInfo, char* szTagName, int* iNumVals)
-//
-//  PURPOSE :   Takes the szTagName parameter and if it exists in the xml it loads the ppAnimationPathInfo
-//				with the value under it and sets the value of the iNumVals parameter to the total number
-//				of occurances of the szTagName tag in the xml.
-//
-//------------------------------------------------------------------------------------------------------
-/*void CvXMLLoadUtility::SetGlobalAnimationPathInfo(CvAnimationPathInfo** ppAnimationPathInfo, const wchar_t* szTagName, int* iNumVals)
-{
-	PROFILE_FUNC();
-	logMsg( "SetGlobalAnimationPathInfo %s\n", szTagName );
-
-	int		i;						// Loop counters
-	CvAnimationPathInfo * pAnimPathInfo = NULL;	// local pointer to the domain info memory
-
-	if ( TryMoveToXmlFirstMatchingElement(szTagName) )
+	// Toffer - No point in internally sorting these unit actions.
+	for (int i = 0; i < GC.getNumSpecialistInfos(); i++)
 	{
-		// get the number of times the szTagName tag appears in the xml file
-		*iNumVals = GETXML->NumOfElementsByTagName(NULL,szTagName);
+		CvActionInfo* pActionInfo = new CvActionInfo;
+		pActionInfo->setOriginalIndex(i);
+		pActionInfo->setSubType(ACTIONSUBTYPE_SPECIALIST);
 
-		// allocate memory for the domain info based on the number above
-		*ppAnimationPathInfo = new CvAnimationPathInfo[*iNumVals];
-		pAnimPathInfo = *ppAnimationPathInfo;
+		CvSpecialistInfo& specialist = GC.getSpecialistInfo(static_cast<SpecialistTypes>(i));
 
-		MoveToXmlParent();
-		TryMoveToXmlFirstChild();
-		TryMoveToXmlFirstChild();
+		specialist.setMissionType(GetInfoClass("MISSION_JOIN"));
+		specialist.setActionInfoIndex(iActionInfoIndex++);
+		specialist.setHotKeyDescription(specialist.getTextKeyWide(), GC.getMissionInfo((MissionTypes)(specialist.getMissionType())).getTextKeyWide(), CreateHotKeyFromDescription(specialist.getHotKey(), specialist.isShiftDown(), specialist.isAltDown(), specialist.isCtrlDown()));
 
+		GC.m_paActionInfo.push_back(pActionInfo);
+	}
 
-		// Loop through each tag.
-		for (i=0;i<*iNumVals;i++)
+	// Toffer - No point in internally sorting these unit actions.
+	for (int i = GC.getNumReligionInfos() - 1; i > -1; i--)
+	{
+		CvActionInfo* pActionInfo = new CvActionInfo;
+		pActionInfo->setOriginalIndex(i);
+		pActionInfo->setSubType(ACTIONSUBTYPE_RELIGION);
+
+		CvReligionInfo& religion = GC.getReligionInfo(static_cast<ReligionTypes>(i));
+
+		religion.setMissionType(GetInfoClass("MISSION_SPREAD"));
+		religion.setActionInfoIndex(iActionInfoIndex++);
+		religion.setHotKeyDescription(religion.getTextKeyWide(), GC.getMissionInfo((MissionTypes)(religion.getMissionType())).getTextKeyWide(), CreateHotKeyFromDescription(religion.getHotKey(), religion.isShiftDown(), religion.isAltDown(), religion.isCtrlDown()));
+
+		GC.m_paActionInfo.push_back(pActionInfo);
+	}
+
+	// Toffer - No point in internally sorting these unit actions.
+	for (int i = GC.getNumCorporationInfos() - 1; i > -1; i--)
+	{
+		CvActionInfo* pActionInfo = new CvActionInfo;
+		pActionInfo->setOriginalIndex(i);
+		pActionInfo->setSubType(ACTIONSUBTYPE_CORPORATION);
+
+		CvCorporationInfo& corp = GC.getCorporationInfo(static_cast<CorporationTypes>(i));
+
+		corp.setMissionType(GetInfoClass("MISSION_SPREAD_CORPORATION"));
+		corp.setActionInfoIndex(iActionInfoIndex++);
+		corp.setHotKeyDescription(corp.getTextKeyWide(), GC.getMissionInfo((MissionTypes)corp.getMissionType()).getTextKeyWide(), CreateHotKeyFromDescription(corp.getHotKey(), corp.isShiftDown(), corp.isAltDown(), corp.isCtrlDown()));
+
+		GC.m_paActionInfo.push_back(pActionInfo);
+	}
+
+	// Toffer - No point in internally sorting these unit actions.
+	for (int i = GC.getNumBuildingInfos() - 1; i > -1; i--)
+	{
+		CvActionInfo* pActionInfo = new CvActionInfo;
+		pActionInfo->setOriginalIndex(i);
+		pActionInfo->setSubType(ACTIONSUBTYPE_BUILDING);
+
+		CvBuildingInfo& building = GC.getBuildingInfo(static_cast<BuildingTypes>(i));
+
+		building.setMissionType(GetInfoClass("MISSION_CONSTRUCT"));
+		building.setActionInfoIndex(iActionInfoIndex++);
+		building.setHotKeyDescription(building.getTextKeyWide(), GC.getMissionInfo((MissionTypes)building.getMissionType()).getTextKeyWide(), CreateHotKeyFromDescription(building.getHotKey(), building.isShiftDown(), building.isAltDown(), building.isCtrlDown()));
+
+		GC.m_paActionInfo.push_back(pActionInfo);
+	}
+	{
+		// Toffer - Internal sorting in automation actions makes sense
+		int* piIndexList = new int[iNumAutomationInfos];
+		int* piPriorityList = new int[iNumAutomationInfos];
+
+		for (int i = 0; i < iNumAutomationInfos; i++)
 		{
-			if (!pAnimPathInfo[i].read(this))
-				break;
-			GC.setInfoTypeFromString(pAnimPathInfo[i].getType(), i);	// add type to global info type hash map
-			if (!TryMoveToXmlNextSibling())
-			{
-				break;
-			}
+			piPriorityList[i] = GC.getAutomateInfo(i).getOrderPriority();
+		}
+
+		int* piOrderedIndex = new int[iNumAutomationInfos];
+
+		orderHotkeyInfo(&piOrderedIndex, piPriorityList, iNumAutomationInfos);
+
+		for (int i = 0; i < iNumAutomationInfos; i++)
+		{
+			CvActionInfo* pActionInfo = new CvActionInfo;
+			pActionInfo->setOriginalIndex(piOrderedIndex[i]);
+			pActionInfo->setSubType(ACTIONSUBTYPE_AUTOMATE);
+
+			GC.getAutomateInfo(piOrderedIndex[i]).setActionInfoIndex(iActionInfoIndex++);
+
+			GC.m_paActionInfo.push_back(pActionInfo);
 		}
 	}
 
-	// if we didn't find the tag name in the xml then we never set the local pointer to the
-	// newly allocated memory and there for we will FAssert to let people know this most
-	// interesting fact
-	if(!pAnimPathInfo )
 	{
-		char	szMessage[1024];
-		sprintf( szMessage, "Error finding tag node in SetGlobalAnimationPathInfo function \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-		gDLL->MessageBox(szMessage, "XML Error");
-	}
-}*/
+		const int iTotal = iNumPromoInfos;
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetGlobalUnitScales(float* pfLargeScale, float* pfSmallScale, char* szTagName)
-//
-//  PURPOSE :   Takes the szTagName parameter and if it exists in the xml it loads the ppPromotionInfo
-//				with the value under it and sets the value of the iNumVals parameter to the total number
-//				of occurances of the szTagName tag in the xml.
-//
-//------------------------------------------------------------------------------------------------------
+		int* piIndexList = new int[iNumPromoInfos];
+		int* piPriorityList = new int[iNumPromoInfos];
+
+		const int iStatusPriority = GC.getCommandInfo((CommandTypes)GetInfoClass("COMMAND_STATUS")).getOrderPriority();
+		const int iEquipPriority = GC.getCommandInfo((CommandTypes)GetInfoClass("COMMAND_REEQUIP")).getOrderPriority();
+		const int iBigLimit = std::max(iStatusPriority, iEquipPriority);
+		const int iSmallLimit = std::min(std::min(iStatusPriority, iEquipPriority), iBigLimit - 1);
+
+		int n = 0;
+
+		for (int i = 0; i < iNumPromoInfos; i++)
+		{
+			const CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)i);
+
+			if (promo.isStatus())
+			{
+				piIndexList[n] = i;
+				piPriorityList[n] = std::max(iBigLimit, iStatusPriority + promo.getOrderPriority());
+				n++;
+			}
+		}
+
+		for (int i = 0; i < iNumPromoInfos; i++)
+		{
+			const CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)i);
+
+			if (promo.isEquipment())
+			{
+				piIndexList[n] = i;
+				piPriorityList[n] = range(iEquipPriority + promo.getOrderPriority(), iSmallLimit, iBigLimit - 1);
+				n++;
+			}
+		}
+
+		for (int i = 0; i < iNumPromoInfos; i++)
+		{
+			const CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)i);
+
+			if (!promo.isStatus() && !promo.isEquipment())
+			{
+				piIndexList[n] = i;
+				piPriorityList[n] = std::min(promo.getOrderPriority(), iSmallLimit - 1);
+				n++;
+			}
+		}
+		FAssert(n == iNumPromoInfos);
+
+		int* piOrderedIndex = new int[iNumPromoInfos];
+
+		orderHotkeyInfo(&piOrderedIndex, piPriorityList, iNumPromoInfos);
+
+		for (int i = 0; i < iNumPromoInfos; i++)
+		{
+			CvActionInfo* pActionInfo = new CvActionInfo;
+			pActionInfo->setOriginalIndex(piIndexList[piOrderedIndex[i]]);
+			pActionInfo->setSubType(ACTIONSUBTYPE_PROMOTION);
+
+			CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]);
+
+			if (promo.isEquipment())
+			{
+				promo.setCommandType(GetInfoClass("COMMAND_REEQUIP"));
+			}
+			else if (promo.isStatus())
+			{
+				promo.setCommandType(GetInfoClass("COMMAND_STATUS"));
+			}
+			else
+			{
+				promo.setCommandType(GetInfoClass("COMMAND_PROMOTION"));
+			}
+			promo.setActionInfoIndex(iActionInfoIndex++);
+			promo.setHotKeyDescription(
+				promo.getTextKeyWide(), GC.getCommandInfo((CommandTypes)promo.getCommandType()).getTextKeyWide(),
+				CreateHotKeyFromDescription(promo.getHotKey(), promo.isShiftDown(), promo.isAltDown(), promo.isCtrlDown())
+			);
+			GC.m_paActionInfo.push_back(pActionInfo);
+		}
+	}
+}
+
+
+// Takes the szTagName parameter and if it exists in the xml it loads the ppPromotionInfo
+//	with the value under it and sets the value of the iNumVals parameter to
+//	the total number of occurances of the szTagName tag in the xml.
 void CvXMLLoadUtility::SetGlobalUnitScales(float* pfLargeScale, float* pfSmallScale, const wchar_t* szTagName)
 {
 	PROFILE_FUNC();
@@ -1491,8 +1374,7 @@ void CvXMLLoadUtility::SetGlobalUnitScales(float* pfLargeScale, float* pfSmallSc
 		// the current tag and gets the value of that new node
 		if (GetChildXmlVal(pfLargeScale))
 		{
-			// set the current xml node to it's next sibling and then
-			// get the sibling's char value
+			// set the current xml node to it's next sibling and then get the sibling's char value
 			GetNextXmlVal(pfSmallScale);
 
 			// set the current xml node to it's parent node
@@ -1502,22 +1384,15 @@ void CvXMLLoadUtility::SetGlobalUnitScales(float* pfLargeScale, float* pfSmallSc
 	else
 	{
 		// if we didn't find the tag name in the xml then we never set the local pointer to the
-		// newly allocated memory and there for we will FAssert to let people know this most
-		// interesting fact
-		char	szMessage[1024];
+		// newly allocated memory and there for we will FAssert to let people know this most interesting fact
+		char szMessage[1024];
 		sprintf( szMessage, "Error finding tag node in SetGlobalUnitScales function \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
 }
 
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetGameText()
-//
-//  PURPOSE :   Reads game text info from XML and adds it to the translation manager
-//
-//------------------------------------------------------------------------------------------------------
+// Reads game text info from XML and adds it to the translation manager
 void CvXMLLoadUtility::SetGameText(const wchar_t* szTextGroup, const wchar_t* szTagName, std::vector<CvGameText>& texts)
 {
 	PROFILE_FUNC();
@@ -1548,16 +1423,11 @@ void CvXMLLoadUtility::SetGameText(const wchar_t* szTextGroup, const wchar_t* sz
 	logging::logMsg("xml.log", "Read %i text(s)\n", texts.size() - startNumOfTexts);
 }
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetGlobalClassInfo - This is a template function that is USED FOR ALMOST ALL INFO CLASSES.
-//		Each info class should have a read(CvXMLLoadUtility*) function that is responsible for initializing
-//		the class from xml data.
-//
-//  PURPOSE :   takes the szTagName parameter and loads the ppszString with the text values
-//				under the tags.  This will be the hints displayed during game initialization and load
-//
-//------------------------------------------------------------------------------------------------------
+
+// This is a template function that is USED FOR ALMOST ALL INFO CLASSES.
+//	Each info class should have a read(CvXMLLoadUtility*) function that is responsible for initializing the class from xml data.
+//	Takes the szTagName parameter and loads the ppszString with the text values under the tags.
+//	This will be the hints displayed during game initialization and load
 template <class T>
 void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t* szTagName, CvInfoReplacements<T>* pReplacements)
 {
@@ -1574,8 +1444,8 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 		// loop through each tag
 		do
 		{
-// Anq: try to load TYPE, DEPEDENCY, FORCEOVERWRITE, REPLACEMENT info before actually calling read()
-// Firstly, we read the type name, look it up in the global map whether one of the same type is loaded.
+			// Anq: try to load TYPE, DEPEDENCY, FORCEOVERWRITE, REPLACEMENT info before actually calling read()
+			//	Firstly, we read the type name, look it up in the global map whether one of the same type is loaded.
 			CvString szTypeName, szTypeReplace;
 			bool bHasType = true;
 			if (!GetOptionalChildXmlValByName(szTypeName, L"Type") || szTypeName.empty())
@@ -1691,12 +1561,9 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 	}
 }
 
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 05/17/08                                MRGENIE      */
-/*                                                                                              */
-/* This method is a replacement for the bTwoPass, if stuff that is depending on each other in   */
-/* a loop, the bTwoPass would fail since it doesn't look first in the other Modules!            */
-/************************************************************************************************/
+
+// MRGENIE - MODULAR_LOADING_CONTROL - 05/17/08 - This method is a replacement for the bTwoPass.
+//	The bTwoPass would fail if stuff depend on each other since it doesn't look first in the other Modules!
 template <class T>
 void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aInfos, const wchar_t* szTagName, CvInfoReplacements<T>* pReplacements)
 {
@@ -1766,9 +1633,7 @@ void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aIn
 		} while (TryMoveToXmlNextSibling());
 	}
 }
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
+
 
 void CvXMLLoadUtility::SetDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfos, const wchar_t* szTagName)
 {
@@ -1808,23 +1673,13 @@ void CvXMLLoadUtility::SetDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfo
 			}
 			else
 			{
-/*************************************************************************************************/
-/**	TrueModular								05/26/09	Written: Mr. Genie	Imported: Xienwolf	**/
-/**																								**/
-/**	Properly links Modular modifications to previous elements, and allows partial overwriting	**/
-/*************************************************************************************************/
-/**								---- Start Original Code ----									**
-				DiploInfos[iIndex]->read(this);
-/**								----  End Original Code  ----									**/
+				// TrueModular - 05/26/09 - Written: Mr. Genie - Imported: Xienwolf
+				//	Properly links Modular modifications to previous elements, and allows partial overwriting
 				bool bForceOverwrite = false;
 				GetOptionalChildXmlValByName(&bForceOverwrite, L"bForceOverwrite");
-				if(!bForceOverwrite)
+				if (!bForceOverwrite)
 					DiploInfos[iIndex]->copyNonDefaults(this);
-/*************************************************************************************************/
-/**	TrueModular								END													**/
-/*************************************************************************************************/
 			}
-
 		} while (TryMoveToXmlNextSibling());
 	}
 }
@@ -1881,12 +1736,8 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 			}
 		}
 
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 05/17/08                                MRGENIE      */
-/*                                                                                              */
-/* This method is a replacement for the bTwoPass, if stuff that is depending on each other in   */
-/* a loop, the bTwoPass would fail since it doesn't look first in the other Modules!            */
-/************************************************************************************************/
+		// MRGENIE - MODULAR_LOADING_CONTROL - 05/17/08 - This method is a replacement for the bTwoPass.
+		//	The bTwoPass would fail if stuff depend on each other since it doesn't look first in the other Modules!
 		if (bTwoPass)	// reloop through the modules!
 		{
 			foreach_(const CvString& szFile, aszFiles)
@@ -1897,16 +1748,7 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 				}
 			}
 		}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 	}
-
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/15/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	else
 	{
 		std::vector<CvString> aszFiles;
@@ -1938,13 +1780,9 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 			}
 		}
 
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 05/17/08                                MRGENIE      */
-/*                                                                                              */
-/* This method is a replacement for the bTwoPass, if stuff that is depending on each other in   */
-/* a loop, the bTwoPass would fail since it doesn't look first in the other Modules!            */
-/************************************************************************************************/
-		if (bTwoPass)	// reloop through the modules!
+		// MRGENIE - MODULAR_LOADING_CONTROL - 05/17/08 - This method is a replacement for the bTwoPass.
+		//	The bTwoPass would fail if stuff depend on each other since it doesn't look first in the other Modules!
+		if (bTwoPass) // reloop through the modules!
 		{
 			foreach_(const CvString& szFile, aszFiles)
 			{
@@ -1954,60 +1792,11 @@ void CvXMLLoadUtility::LoadGlobalClassInfo(std::vector<T*>& aInfos, const char* 
 				}
 			}
 		}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 	}
 
 	m_pParser->resetDocumentPool();
 }
 
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 05/13/08                                MRGENIE      */
-/* we use this for xml's that should only be loaded as a module                                 */
-/*                                                                                              */
-/************************************************************************************************/
-// AIAndy: Still unused, so no more maintained for now
-/*template <class T>
-void CvXMLLoadUtility::LoadGlobalClassInfoModular(std::vector<T*>& aInfos, const char* szFileRoot, const char* szFileDirectory, const char* szXmlPath, bool bTwoPass)
-{
-	// we don't wanna use cache for modular loading, could do that, but safer just to load modules from scratch..
-	bool bLoaded = false;
-	GC.addToInfosVectors(&aInfos);
-
-#ifdef _DEBUG
-	logXmlCheckDoubleTypes("\nEntering: %s\n", szFileRoot);
-#endif
-	CvXMLLoadUtilitySetMod* pModEnumVector = new CvXMLLoadUtilitySetMod;
-
-	std::vector<CvString> aszFiles;
-	//aszFiles.reserve(10000);
-	unsigned long ulCheckSum = 0;
-	pModEnumVector->loadModControlArray(aszFiles, szFileRoot, ulCheckSum);
-
-	for (std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
-	{
-
-		bLoaded = LoadCivXml(NULL, *it);
-
-		if (!bLoaded)
-		{
-			char szMessage[1024];
-			sprintf(szMessage, "LoadXML call failed for %s.", (*it).GetCString());
-			gDLL->MessageBox(szMessage, "XML Load Error");
-		}
-		else
-		{
-			SetGlobalClassInfo(aInfos, szXmlPath, bTwoPass);
-		}
-	}
-
-	SAFE_DELETE(pModEnumVector);
-	SAFE_DELETE(p_szDirName);
-}*/
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 
 void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInfos, const char* szFileRoot, const char* szFileDirectory, const wchar_t* szXmlPath, bool bUseCaching)
 {
@@ -2028,12 +1817,6 @@ void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInf
 				}
 			}
 		}
-
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/15/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		else
 		{
 			std::vector<CvString> aszFiles;
@@ -2047,9 +1830,6 @@ void CvXMLLoadUtility::LoadDiplomacyInfo(std::vector<CvDiplomacyInfo*>& DiploInf
 				}
 			}
 		}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 	}
 }
 
@@ -2065,11 +1845,9 @@ bool sortHotkeyPriority(const OrderIndex& orderIndex1, const OrderIndex& orderIn
 
 void CvXMLLoadUtility::orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, int iLength)
 {
-	int* piSortedIndex;
-	std::vector<OrderIndex> viOrderPriority;
+	std::vector<OrderIndex> viOrderPriority; viOrderPriority.resize(iLength);
 
-	viOrderPriority.resize(iLength);
-	piSortedIndex = *ppiSortedIndex;
+	int* piSortedIndex = *ppiSortedIndex;
 
 	// set up vector
 	for (int iI = 0; iI < iLength; iI++)
@@ -2088,71 +1866,15 @@ void CvXMLLoadUtility::orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, 
 	}
 }
 
-//
-// helper sort predicate
-//
-/*
-bool sortHotkeyPriorityOld(const CvHotkeyInfo* hotkey1, const CvHotkeyInfo* hotkey2)
-{
-return (hotkey1->getOrderPriority() < hotkey2->getOrderPriority());
-}
-*/
 
-//------------------------------------------------------------------------------------------------
-// FUNCTION:    void CvXMLLoadUtility::orderHotkeyInfoOld(T **ppHotkeyInfos, int iLength)
-//! \brief      order a hotkey info derived class
-//! \param      ppHotkeyInfos is a hotkey info derived class
-//!							iLength is the length of the hotkey info derived class array
-//! \retval
-//------------------------------------------------------------------------------------------------
-/*
-template <class T>
-void CvXMLLoadUtility::orderHotkeyInfoOld(T **ppHotkeyInfos, int iLength)
-{
-int iI;
-std::vector<T*> vHotkeyInfo;
-T* pHotkeyInfo;	// local pointer to the hotkey info memory
-
-for (iI=0;iI<iLength;iI++)
-{
-pHotkeyInfo = new T;
-*pHotkeyInfo = (*ppHotkeyInfos)[iI];
-vHotkeyInfo.push_back(pHotkeyInfo);
-}
-
-std::sort(vHotkeyInfo.begin(), vHotkeyInfo.end(), sortHotkeyPriority);
-
-for (iI=0;iI<iLength;iI++)
-{
-(*ppHotkeyInfos)[iI] = *vHotkeyInfo[iI];
-}
-
-for (iI=0;iI<(int)vHotkeyInfo.size();iI++)
-{
-vHotkeyInfo[iI]->reset();
-SAFE_DELETE(vHotkeyInfo[iI]);
-}
-vHotkeyInfo.clear();
-}
-*/
-
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetYields(int** ppiYield)
-//
-//  PURPOSE :   Allocate memory for the yield parameter and set it to the values
-//				in the xml file.  The current/last located node must be the first child of the
-//				yield changes node
-//
-//------------------------------------------------------------------------------------------------------
+// Allocate memory for the yield parameter and set it to the values in the xml file.
+//	The current/last located node must be the first child of the yield changes node.
 int CvXMLLoadUtility::SetYields(int** ppiYield)
 {
-	int i=0;			//loop counter
-	int iNumSibs=0;		// the number of siblings the current xml node has
-	int *piYield;	// local pointer for the yield memory
+	int *piYield; // local pointer for the yield memory
 
 	// get the total number of children the current xml node has
-	iNumSibs = GetXmlChildrenNumber();
+	const int iNumSibs = GetXmlChildrenNumber();
 
 	InitList(ppiYield, NUM_YIELD_TYPES);
 
@@ -2165,14 +1887,14 @@ int CvXMLLoadUtility::SetYields(int** ppiYield)
 		// child and sets the parameter with the new node's value succeeds
 		if (GetChildXmlVal(&piYield[0]))
 		{
-			if(!(iNumSibs <= NUM_YIELD_TYPES))
+			if (iNumSibs > NUM_YIELD_TYPES)
 			{
-				char	szMessage[1024];
+				char szMessage[1024];
 				sprintf( szMessage, "For loop iterator is greater than array size \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 				gDLL->MessageBox(szMessage, "XML Error");
 			}
 			// loop through all the siblings, we start at 1 since we already have the first value
-			for (i=1;i<iNumSibs;i++)
+			for (int i = 1; i < iNumSibs; i++)
 			{
 				// if the call to the function that sets the current xml node to it's first non-comment
 				// sibling and sets the parameter with the new node's value does not succeed
@@ -2186,31 +1908,22 @@ int CvXMLLoadUtility::SetYields(int** ppiYield)
 			MoveToXmlParent();
 		}
 	}
-
 	return iNumSibs;
 }
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTime, int** ppiFeatureProduction, bool** ppbFeatureRemove)
-//
-//  PURPOSE :   allocate and set the feature struct variables for the CvBuildInfo class
-//	Last Modified: Afforess, 5/25/10
-//------------------------------------------------------------------------------------------------------
+
+// Allocate and set the feature struct variables for the CvBuildInfo class.
 void CvXMLLoadUtility::SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTime, int** ppiFeatureProduction, bool** ppbFeatureRemove)
 {
-	int i=0;				//loop counter
-	int iNumChildren;		// the number of siblings the current xml node has
-	int iFeatureIndex;
-	char szTextVal[256];	// temporarily hold the text value of the current xml node
+	char szTextVal[256]; // temporarily hold the text value of the current xml node
 	int* paiFeatureTech = NULL;
 	int* paiFeatureTime = NULL;
 	int* paiFeatureProduction = NULL;
 	bool* pabFeatureRemove = NULL;
 
-	if(GC.getNumFeatureInfos() < 1)
+	if (GC.getNumFeatureInfos() < 1)
 	{
-		char	szMessage[1024];
+		char szMessage[1024];
 		sprintf( szMessage, "no feature infos set yet! \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
@@ -2226,60 +1939,44 @@ void CvXMLLoadUtility::SetFeatureStruct(int** ppiFeatureTech, int** ppiFeatureTi
 
 	if (TryMoveToXmlFirstChild(L"FeatureStructs"))
 	{
-		iNumChildren = GetXmlChildrenNumber();
+		const int iNumChildren = GetXmlChildrenNumber(); // the number of siblings the current xml node has
 
-		if (0 < iNumChildren)
+		if (0 < iNumChildren && TryMoveToXmlFirstChild(L"FeatureStruct"))
 		{
-			if (TryMoveToXmlFirstChild(L"FeatureStruct"))
+			if (iNumChildren > GC.getNumFeatureInfos())
 			{
-				if(!(iNumChildren <= GC.getNumFeatureInfos()))
+				char szMessage[1024];
+				sprintf(szMessage, "iNumSibs is greater than GC.getNumFeatureInfos in SetFeatureStruct function \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
+				gDLL->MessageBox(szMessage, "XML Error");
+			}
+			for (int i = 0; i < iNumChildren; i++)
+			{
+				GetChildXmlValByName(szTextVal, L"FeatureType");
+				const int iFeatureIndex = GetInfoClass(szTextVal);
+				if (iFeatureIndex == -1)
 				{
-					char	szMessage[1024];
-					sprintf( szMessage, "iNumSibs is greater than GC.getNumFeatureInfos in SetFeatureStruct function \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
+					char szMessage[1024];
+					sprintf(szMessage, "iFeatureIndex is -1 inside SetFeatureStruct function \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 					gDLL->MessageBox(szMessage, "XML Error");
 				}
-				for (i=0;i<iNumChildren;i++)
-				{
-					GetChildXmlValByName(szTextVal, L"FeatureType");
-					iFeatureIndex = GetInfoClass(szTextVal);
-					if(!(iFeatureIndex != -1))
-					{
-						char	szMessage[1024];
-						sprintf( szMessage, "iFeatureIndex is -1 inside SetFeatureStruct function \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-						gDLL->MessageBox(szMessage, "XML Error");
-					}
-					GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
-					paiFeatureTech[iFeatureIndex] = GetInfoClass(szTextVal);
-					GetChildXmlValByName(&paiFeatureTime[iFeatureIndex], L"iTime");
-					GetChildXmlValByName(&paiFeatureProduction[iFeatureIndex], L"iProduction");
-					GetOptionalChildXmlValByName(&pabFeatureRemove[iFeatureIndex], L"bRemove");
+				GetOptionalChildXmlValByName(szTextVal, L"PrereqTech");
+				paiFeatureTech[iFeatureIndex] = GetInfoClass(szTextVal);
+				GetChildXmlValByName(&paiFeatureTime[iFeatureIndex], L"iTime");
+				GetChildXmlValByName(&paiFeatureProduction[iFeatureIndex], L"iProduction");
+				GetOptionalChildXmlValByName(&pabFeatureRemove[iFeatureIndex], L"bRemove");
 
-					if (!TryMoveToXmlNextSibling())
-					{
-						break;
-					}
-				}
-
-				MoveToXmlParent();
+				if (!TryMoveToXmlNextSibling()) break;
 			}
+			MoveToXmlParent();
 		}
-
 		MoveToXmlParent();
 	}
 }
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetImprovementBonuses(CvImprovementBonusInfo** ppImprovementBonus)
-//
-//  PURPOSE :   Allocate memory for the improvement bonus pointer and fill it based on the
-//				values in the xml.
-//
-//------------------------------------------------------------------------------------------------------
+
+// Allocate memory for the improvement bonus pointer and fill it based on the values in the xml.
 void CvXMLLoadUtility::SetImprovementBonuses(CvImprovementBonusInfo** ppImprovementBonus)
 {
-	int i = 0;				//loop counter
-	int iNumChildren;		// the number of siblings the current xml node has
 	char szNodeVal[256];	// temporarily holds the string value of the current xml node
 	CvImprovementBonusInfo* paImprovementBonus;	// local pointer to the bonus type struct in memory
 
@@ -2289,28 +1986,27 @@ void CvXMLLoadUtility::SetImprovementBonuses(CvImprovementBonusInfo** ppImprovem
 	paImprovementBonus = *ppImprovementBonus;
 
 	// get the total number of children the current xml node has
-	iNumChildren = GetXmlChildrenNumber();
+	const int iNumChildren = GetXmlChildrenNumber();
 	// if we can set the current xml node to the child of the one it is at now
 	if (TryMoveToXmlFirstChild(L"BonusTypeStruct"))
 	{
-		if (!(iNumChildren <= GC.getNumBonusInfos()))
+		if (iNumChildren > GC.getNumBonusInfos())
 		{
-			char	szMessage[1024];
+			char szMessage[1024];
 			sprintf(szMessage, "For loop iterator is greater than array size \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 			gDLL->MessageBox(szMessage, "XML Error");
 		}
 		// loop through all the siblings
-		for (i = 0; i<iNumChildren; i++)
+		for (int i = 0; i<iNumChildren; i++)
 		{
 			// call the function that sets the FXml pointer to the first non-comment child of
 			// the current tag and gets the value of that new node
 
 			if (GetChildXmlValByName(szNodeVal, L"BonusType"))
 			{
-				int iBonusIndex;	// index of the match in the bonus types list
 				// call the find in list function to return either -1 if no value is found
 				// or the index in the list the match is found at
-				iBonusIndex = GetInfoClass(szNodeVal);
+				const int iBonusIndex = GetInfoClass(szNodeVal); // index of the match in the bonus types list
 				// if we found a match we will get the next sibling's boolean value at that match's index
 				if (iBonusIndex >= 0)
 				{
@@ -2318,15 +2014,7 @@ void CvXMLLoadUtility::SetImprovementBonuses(CvImprovementBonusInfo** ppImprovem
 					GetOptionalChildXmlValByName(&paImprovementBonus[iBonusIndex].m_bBonusMakesValid, L"bBonusMakesValid");
 					GetOptionalChildXmlValByName(&paImprovementBonus[iBonusIndex].m_bBonusTrade, L"bBonusTrade");
 					GetOptionalChildXmlValByName(&paImprovementBonus[iBonusIndex].m_iDiscoverRand, L"iDiscoverRand");
-					/************************************************************************************************/
-					/* Afforess	                  Start		 07/27/10                                               */
-					/*                                                                                              */
-					/*                                                                                              */
-					/************************************************************************************************/
 					GetOptionalChildXmlValByName(&paImprovementBonus[iBonusIndex].m_iDepletionRand, L"iDepletionRand");
-					/************************************************************************************************/
-					/* Afforess	                     END                                                            */
-					/************************************************************************************************/
 
 					SAFE_DELETE_ARRAY(paImprovementBonus[iBonusIndex].m_piYieldChange);	// free memory - MT, since we are about to reallocate
 					if (TryMoveToXmlFirstChild(L"YieldChanges"))
@@ -2334,44 +2022,27 @@ void CvXMLLoadUtility::SetImprovementBonuses(CvImprovementBonusInfo** ppImprovem
 						SetYields(&paImprovementBonus[iBonusIndex].m_piYieldChange);
 						MoveToXmlParent();
 					}
-					else
-					{
-						InitList(&paImprovementBonus[iBonusIndex].m_piYieldChange, NUM_YIELD_TYPES);
-					}
+					else InitList(&paImprovementBonus[iBonusIndex].m_piYieldChange, NUM_YIELD_TYPES);
 				}
-				else
-				{
-					MoveToXmlParent();
-				}
-
-				// set the current xml node to it's parent node
+				else MoveToXmlParent(); // set the current xml node to its parent node
 			}
 
 			// if we cannot set the current xml node to it's next sibling then we will break out of the for loop
 			// otherwise we will continue looping
-			if (!TryMoveToXmlNextSibling())
-			{
-				break;
-			}
+			if (!TryMoveToXmlNextSibling()) break;
 		}
 		// set the current xml node to it's parent node
 		MoveToXmlParent();
 	}
 }
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetVariableListTagPair(	int **ppiList, const char* szRootTagName,
-//										int iInfoBaseSize, int iInfoBaseLength, int iDefaultListVal)
-//
-//  PURPOSE :   allocate and initialize a list from a tag pair in the xml
-//
-//------------------------------------------------------------------------------------------------------
+
+// Allocate and initialize a list from a tag pair in the xml
 void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRootTagName, int iInfoBaseLength, int iDefaultListVal)
 {
 	if (0 > iInfoBaseLength)
 	{
-		char	szMessage[1024];
+		char szMessage[1024];
 		char* tmp = xercesc::XMLString::transcode(szRootTagName);
 		sprintf( szMessage, "Allocating zero or less memory in CvXMLLoadUtility::SetVariableListTagPair (tag: %s)\n Current XML file is: %s", tmp, GC.getCurrentXMLFile().GetCString());
 		xercesc::XMLString::release(&tmp);
@@ -2379,7 +2050,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRo
 	}
 	if (TryMoveToXmlFirstChild(szRootTagName))
 	{
-		int iNumChildren = GetXmlChildrenNumber();
+		const int iNumChildren = GetXmlChildrenNumber();
 		if (0 < iNumChildren)
 		{
 			InitList(ppiList, iInfoBaseLength, iDefaultListVal);
@@ -2418,26 +2089,20 @@ void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRo
 	}
 }
 
-/************************************************************************************************/
-/* RevDCM  XMLloading                             05/05/10             phungus420               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//allows loading of a variable pair into an array by tag name
-void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRootTagName,
-		int iInfoBaseLength, const wchar_t* szValueTagName, int iValueInfoBaseLength, int iDefaultListVal)
+
+// phungus420 - XMLloading - 05/05/10 - Allows loading of a variable pair into an array by tag name
+void CvXMLLoadUtility::SetVariableListTagPair(
+	int **ppiList, const wchar_t* szRootTagName,
+	int iInfoBaseLength, const wchar_t* szValueTagName,
+	int iValueInfoBaseLength, int iDefaultListVal)
 {
-	int i;
-	int iIndexVal;
-	int iNumSibs;
-	int iValue;
 	char szTextPosition[256];
 	char szTextVal[256];
 	int* piList = NULL;
 
 	if (0 > iInfoBaseLength)
 	{
-		char	szMessage[1024];
+		char szMessage[1024];
 		char* tmp = xercesc::XMLString::transcode(szRootTagName);
 		sprintf( szMessage, "Allocating zero or less memory in CvXMLLoadUtility::SetVariableListTagPair (tag: %s)\n Current XML file is: %s", tmp, GC.getCurrentXMLFile().GetCString());
 		xercesc::XMLString::release(&tmp);
@@ -2446,14 +2111,15 @@ void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRo
 
 	if (TryMoveToXmlFirstChild(szRootTagName))
 	{
-		iNumSibs = GetXmlChildrenNumber();
+		const int iNumSibs = GetXmlChildrenNumber();
 		if (0 < iNumSibs)
 		{
 			InitList(ppiList, iInfoBaseLength, iDefaultListVal);
 			piList = *ppiList;
-			if(!(iNumSibs <= iInfoBaseLength))
+
+			if (iNumSibs > iInfoBaseLength)
 			{
-				char	szMessage[1024];
+				char szMessage[1024];
 				char* tmp = xercesc::XMLString::transcode(szRootTagName);
 				sprintf( szMessage, "There are more siblings than memory allocated for them in CvXMLLoadUtility::SetVariableListTagPair (tag: %s)\n Current XML file is: %s", tmp, GC.getCurrentXMLFile().GetCString());
 				xercesc::XMLString::release(&tmp);
@@ -2461,32 +2127,28 @@ void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRo
 			}
 			if (TryMoveToXmlFirstChild())
 			{
-				for (i=0;i<iNumSibs;i++)
+				for (int i = 0; i < iNumSibs; i++)
 				{
 					if (GetChildXmlVal(szTextPosition))
 					{
-						iIndexVal = GetInfoClass(szTextPosition);
+						const int iIndexVal = GetInfoClass(szTextPosition);
 
 						if (iIndexVal != -1)
 						{
 							MoveToXmlParent();
 							GetOptionalChildXmlValByName(szTextVal, szValueTagName);
-							iValue = GetInfoClass(szTextVal);
-							if( (iValue < -1) || (iValue >= iValueInfoBaseLength) )
+							const int iValue = GetInfoClass(szTextVal);
+							if (iValue < -1 || iValue >= iValueInfoBaseLength)
 							{
-								char	szMessage[1024];
+								char szMessage[1024];
 								char* tmp = xercesc::XMLString::transcode(szRootTagName);
 								sprintf( szMessage, "A defined value for an array is outside of the accepted size of the infoclass! (tag: %s)\n Current XML file is: %s", tmp, GC.getCurrentXMLFile().GetCString());
 								xercesc::XMLString::release(&tmp);
 								gDLL->MessageBox(szMessage, "XML Error");
-							} else
-							{
-								piList[iIndexVal] = iValue;
 							}
-						} else
-						{
-							MoveToXmlParent();
+							else piList[iIndexVal] = iValue;
 						}
+						else MoveToXmlParent();
 					}
 
 					if (!TryMoveToXmlNextSibling())
@@ -2494,37 +2156,23 @@ void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRo
 						break;
 					}
 				}
-
 				MoveToXmlParent();
 			}
 		}
-
 		MoveToXmlParent();
 	}
 }
-/************************************************************************************************/
-/* RevDCM	                                 END                                                */
-/************************************************************************************************/
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetVariableListTagPair(	bool **ppbList, const char* szRootTagName,
-//										int iInfoBaseSize, int iInfoBaseLength, bool bDefaultListVal)
-//
-//  PURPOSE :   allocate and initialize a list from a tag pair in the xml
-//
-//------------------------------------------------------------------------------------------------------
+
+// Allocate and initialize a list from a tag pair in the xml
 void CvXMLLoadUtility::SetVariableListTagPair(bool **ppbList, const wchar_t* szRootTagName, int iInfoBaseLength, bool bDefaultListVal)
 {
-	int i;
-	int iIndexVal;
-	int iNumSibs;
 	char szTextVal[256];
 	bool* pbList;
 
-	if(!(0 < iInfoBaseLength))
+	if (iInfoBaseLength < 1)
 	{
-		char	szMessage[1024];
+		char szMessage[1024];
 		char* tmp = xercesc::XMLString::transcode(szRootTagName);
 		sprintf( szMessage, "Allocating zero or less memory in CvXMLLoadUtility::SetVariableListTagPair (tag: %s)\n Current XML file is: %s", tmp, GC.getCurrentXMLFile().GetCString());
 		xercesc::XMLString::release(&tmp);
@@ -2532,14 +2180,14 @@ void CvXMLLoadUtility::SetVariableListTagPair(bool **ppbList, const wchar_t* szR
 	}
 	if (TryMoveToXmlFirstChild(szRootTagName))
 	{
-		iNumSibs = GetXmlChildrenNumber();
+		const int iNumSibs = GetXmlChildrenNumber();
 		if (0 < iNumSibs)
 		{
 			InitList(ppbList, iInfoBaseLength, bDefaultListVal);
 			pbList = *ppbList;
-			if(!(iNumSibs <= iInfoBaseLength))
+			if (iNumSibs > iInfoBaseLength)
 			{
-				char	szMessage[1024];
+				char szMessage[1024];
 				char* tmp = xercesc::XMLString::transcode(szRootTagName);
 				sprintf( szMessage, "There are more siblings than memory allocated for them in CvXMLLoadUtility::SetVariableListTagPair (tag: %s)\n Current XML file is: %s", tmp, GC.getCurrentXMLFile().GetCString());
 				xercesc::XMLString::release(&tmp);
@@ -2547,52 +2195,37 @@ void CvXMLLoadUtility::SetVariableListTagPair(bool **ppbList, const wchar_t* szR
 			}
 			if (TryMoveToXmlFirstChild())
 			{
-				for (i=0;i<iNumSibs;i++)
+				for (int i = 0; i < iNumSibs; i++)
 				{
 					if (GetChildXmlVal(szTextVal))
 					{
-						iIndexVal = GetInfoClass(szTextVal);
+						const int iIndexVal = GetInfoClass(szTextVal);
 						if (iIndexVal != -1)
 						{
 							GetNextXmlVal(&pbList[iIndexVal]);
 						}
-
 						MoveToXmlParent();
 					}
 
-					if (!TryMoveToXmlNextSibling())
-					{
-						break;
-					}
+					if (!TryMoveToXmlNextSibling()) break;
 				}
-
 				MoveToXmlParent();
 			}
 		}
-
 		MoveToXmlParent();
 	}
 }
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetVariableListTagPair(	float **ppfList, const char* szRootTagName,
-//										int iInfoBaseSize, int iInfoBaseLength, float fDefaultListVal)
-//
-//  PURPOSE :   allocate and initialize a list from a tag pair in the xml
-//
-//------------------------------------------------------------------------------------------------------
+
+// Allocate and initialize a list from a tag pair in the xml
 void CvXMLLoadUtility::SetVariableListTagPair(float **ppfList, const wchar_t* szRootTagName, int iInfoBaseLength, float fDefaultListVal)
 {
-	int i;
-	int iIndexVal;
-	int iNumSibs;
 	char szTextVal[256];
 	float* pfList;
 
-	if(!(0 < iInfoBaseLength))
+	if (iInfoBaseLength < 1)
 	{
-		char	szMessage[1024];
+		char szMessage[1024];
 		char* tmp = xercesc::XMLString::transcode(szRootTagName);
 		sprintf( szMessage, "Allocating zero or less memory in CvXMLLoadUtility::SetVariableListTagPair (tag: %s)\n Current XML file is: %s", tmp, GC.getCurrentXMLFile().GetCString());
 		xercesc::XMLString::release(&tmp);
@@ -2600,14 +2233,14 @@ void CvXMLLoadUtility::SetVariableListTagPair(float **ppfList, const wchar_t* sz
 	}
 	if (TryMoveToXmlFirstChild(szRootTagName))
 	{
-		iNumSibs = GetXmlChildrenNumber();
+		const int iNumSibs = GetXmlChildrenNumber();
 		if (0 < iNumSibs)
 		{
 			InitList(ppfList, iInfoBaseLength, fDefaultListVal);
 			pfList = *ppfList;
-			if(!(iNumSibs <= iInfoBaseLength))
+			if (iNumSibs > iInfoBaseLength)
 			{
-				char	szMessage[1024];
+				char szMessage[1024];
 				char* tmp = xercesc::XMLString::transcode(szRootTagName);
 				sprintf( szMessage, "There are more siblings than memory allocated for them in CvXMLLoadUtility::SetVariableListTagPair (tag: %s)\n Current XML file is: %s", tmp, GC.getCurrentXMLFile().GetCString());
 				xercesc::XMLString::release(&tmp);
@@ -2615,41 +2248,28 @@ void CvXMLLoadUtility::SetVariableListTagPair(float **ppfList, const wchar_t* sz
 			}
 			if (TryMoveToXmlFirstChild())
 			{
-				for (i=0;i<iNumSibs;i++)
+				for (int i = 0; i < iNumSibs; i++)
 				{
 					if (GetChildXmlVal(szTextVal))
 					{
-						iIndexVal = GetInfoClass(szTextVal);
+						const int iIndexVal = GetInfoClass(szTextVal);
 						if (iIndexVal != -1)
 						{
 							GetNextXmlVal(&pfList[iIndexVal]);
 						}
-
 						MoveToXmlParent();
 					}
-
-					if (!TryMoveToXmlNextSibling())
-					{
-						break;
-					}
+					if (!TryMoveToXmlNextSibling()) break;
 				}
-
 				MoveToXmlParent();
 			}
 		}
-
 		MoveToXmlParent();
 	}
 }
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetVariableListTagPair(	CvString **ppfList, const char* szRootTagName,
-//										int iInfoBaseSize, int iInfoBaseLength, CvString szDefaultListVal)
-//
-//  PURPOSE :   allocate and initialize a list from a tag pair in the xml
-//
-//------------------------------------------------------------------------------------------------------
+
+// Allocate and initialize a list from a tag pair in the xml
 void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t* szRootTagName, int iInfoBaseLength, CvString szDefaultListVal)
 {
 	int i;
@@ -2660,7 +2280,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t
 
 	if(!(0 < iInfoBaseLength))
 	{
-		char	szMessage[1024];
+		char szMessage[1024];
 		char* tmp = xercesc::XMLString::transcode(szRootTagName);
 		sprintf( szMessage, "Allocating zero or less memory in CvXMLLoadUtility::SetVariableListTagPair (tag: %s)\n Current XML file is: %s", tmp, GC.getCurrentXMLFile().GetCString());
 		xercesc::XMLString::release(&tmp);
@@ -2675,7 +2295,7 @@ void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t
 			pszList = *ppszList;
 			if(!(iNumSibs <= iInfoBaseLength))
 			{
-				char	szMessage[1024];
+				char szMessage[1024];
 				char* tmp = xercesc::XMLString::transcode(szRootTagName);
 				sprintf( szMessage, "There are more siblings than memory allocated for them in CvXMLLoadUtility::SetVariableListTagPair (tag: %s)\n Current XML file is: %s", tmp, GC.getCurrentXMLFile().GetCString());
 				xercesc::XMLString::release(&tmp);
@@ -2710,29 +2330,19 @@ void CvXMLLoadUtility::SetVariableListTagPair(CvString **ppszList, const wchar_t
 	}
 }
 
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   SetVariableListTagPairForAudioScripts(int **ppiList, const char* szRootTagName,
-//										int iInfoBaseLength, int iDefaultListVal)
-//
-//  PURPOSE :   allocate and initialize a list from a tag pair in the xml for audio scripts
-//
-//------------------------------------------------------------------------------------------------------
+
+// Allocate and initialize a list from a tag pair in the xml for audio scripts
 void CvXMLLoadUtility::SetVariableListTagPairForAudioScripts(int **ppiList, const wchar_t* szRootTagName, int iInfoBaseLength, int iDefaultListVal)
 {
-	int i;
-	int iIndexVal;
-	int iNumSibs;
 	char szTextVal[256];
 	int* piList;
-	CvString szTemp;
 
 	if (TryMoveToXmlFirstChild(szRootTagName))
 	{
-		iNumSibs = GetXmlChildrenNumber();
-		if(!(0 < iInfoBaseLength))
+		const int iNumSibs = GetXmlChildrenNumber();
+		if (1 > iInfoBaseLength)
 		{
-			char	szMessage[1024];
+			char szMessage[1024];
 			char* tmp = xercesc::XMLString::transcode(szRootTagName);
 			sprintf( szMessage, "Allocating zero or less memory in CvXMLLoadUtility::SetVariableListTagPair (tag: %s)\n Current XML file is: %s", tmp, GC.getCurrentXMLFile().GetCString());
 			xercesc::XMLString::release(&tmp);
@@ -2742,9 +2352,9 @@ void CvXMLLoadUtility::SetVariableListTagPairForAudioScripts(int **ppiList, cons
 		{
 			InitList(ppiList, iInfoBaseLength, iDefaultListVal);
 			piList = *ppiList;
-			if(!(iNumSibs <= iInfoBaseLength))
+			if (iNumSibs > iInfoBaseLength)
 			{
-				char	szMessage[1024];
+				char szMessage[1024];
 				char* tmp = xercesc::XMLString::transcode(szRootTagName);
 				sprintf( szMessage, "There are more siblings than memory allocated for them in CvXMLLoadUtility::SetVariableListTagPair (tag: %s)\n Current XML file is: %s", tmp, GC.getCurrentXMLFile().GetCString());
 				xercesc::XMLString::release(&tmp);
@@ -2752,72 +2362,43 @@ void CvXMLLoadUtility::SetVariableListTagPairForAudioScripts(int **ppiList, cons
 			}
 			if (TryMoveToXmlFirstChild())
 			{
-				for (i=0;i<iNumSibs;i++)
+				for (int i = 0; i < iNumSibs; i++)
 				{
 					if (GetChildXmlVal(szTextVal))
 					{
-						iIndexVal = GetInfoClass(szTextVal);
+						const int iIndexVal = GetInfoClass(szTextVal);
 						if (iIndexVal != -1)
 						{
+							CvString szTemp;
 							GetNextXmlVal(szTemp);
-							if ( szTemp.GetLength() > 0 )
-								piList[iIndexVal] = gDLL->getAudioTagIndex(szTemp);
-							else
-								piList[iIndexVal] = -1;
+							piList[iIndexVal] = szTemp.GetLength() > 0 ? gDLL->getAudioTagIndex(szTemp) : -1;
 						}
-
 						MoveToXmlParent();
 					}
-
-					if (!TryMoveToXmlNextSibling())
-					{
-						break;
-					}
+					if (!TryMoveToXmlNextSibling()) break;
 				}
-
 				MoveToXmlParent();
 			}
 		}
-
 		MoveToXmlParent();
 	}
-/************************************************************************************************/
-/* XMLCOPY                                 10/12/07                                MRGENIE      */
-/*                                                                                              */
-/* Always create this array, for XML copy comparison                                            */
-/************************************************************************************************/
-	else
-	{
-		InitList(ppiList, iInfoBaseLength, iDefaultListVal);
-	}
-/************************************************************************************************/
-/* XMLCOPY                                 END                                                  */
-/************************************************************************************************/
+	// MRGENIE - XMLCOPY - 10/12/07
+	// Always create this array, for XML copy comparison
+	else InitList(ppiList, iInfoBaseLength, iDefaultListVal);
 }
 
 
 bool CvXMLLoadUtility::LoadPlayerOptions()
 {
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	// MLF loading
 	if (!gDLL->isModularXMLLoading())
 	{
-		if (!CreateFXml())
-			return false;
+		if (!CreateFXml()) return false;
 
 		ModularLoadingControlXML();
-
 		DestroyFXml();
 	}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
-	if (!CreateFXml())
-		return false;
+	if (!CreateFXml()) return false;
 
 	LoadGlobalClassInfo(GC.m_paPlayerOptionInfos, "CIV4PlayerOptionInfos", "GameInfo", L"/Civ4PlayerOptionInfos/PlayerOptionInfos/PlayerOptionInfo", false);
 	FAssert(static_cast<int>(GC.m_paPlayerOptionInfos.size()) == NUM_PLAYEROPTION_TYPES);
@@ -2828,8 +2409,7 @@ bool CvXMLLoadUtility::LoadPlayerOptions()
 
 bool CvXMLLoadUtility::LoadGraphicOptions()
 {
-	if (!CreateFXml())
-		return false;
+	if (!CreateFXml()) return false;
 
 	LoadGlobalClassInfo(GC.m_paGraphicOptionInfos, "CIV4GraphicOptionInfos", "GameInfo", L"/Civ4GraphicOptionInfos/GraphicOptionInfos/GraphicOptionInfo", false);
 	FAssert(static_cast<int>(GC.m_paGraphicOptionInfos.size()) == NUM_GRAPHICOPTION_TYPES);
@@ -2838,12 +2418,9 @@ bool CvXMLLoadUtility::LoadGraphicOptions()
 	return true;
 }
 
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 10/24/07                            MRGENIE          */
-/*                                                                                              */
-/* Initialize the list of Module Directories to be loaded                                       */
-/************************************************************************************************/
-// Main control of the MLF feature
+
+// MRGENIE - MODULAR_LOADING_CONTROL - 10/24/07
+//	Initialize the list of Module Directories to be loaded. Main control of the MLF feature.
 void CvXMLLoadUtility::ModularLoadingControlXML()
 {
 	CvXMLLoadUtilitySetMod::setModLoadControlDirArray(LoadModLoadControlInfo(GC.m_paModLoadControls));
@@ -2983,49 +2560,6 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<CvModLoadControlInfo*>&
 	}
 	return false;
 }
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
-
-/************************************************************************************************/
-/* SORT_ALPHABET                           11/17/07                                MRGENIE      */
-/*                                                                                              */
-/* Method for alphabetically order tags                                                         */
-/************************************************************************************************/
-//template <class T>
-//void CvXMLLoadUtility::SortAlphabetGlobalClassInfo(std::vector<T*>& aInfos)
-//{
-//	int iLenghtInfos = aInfos.size();	//Number of Elements
-//	T* pTempClassInfo = new T;	// Temp to store while swapping positions
-//
-//	for ( int iI = 0; iI < iLenghtInfos; iI++ )
-//	{
-//		int minIndex = iI; //stores index of the min array value
-//
-//		for ( int iJ = iI + 1; iJ < iLenghtInfos; iJ++ )
-//		{
-//			if ( CvWString::format(aInfos[iJ]->getTextKeyWide()) < CvWString::format(aInfos[minIndex]->getTextKeyWide()) )
-//			{
-//				minIndex = iJ;
-//			}
-//		}
-//
-//		//swap the Info classes at positions iI and minIndex
-//		pTempClassInfo = aInfos[minIndex];
-//		aInfos[minIndex] = aInfos[iI];
-//		aInfos[iI] = pTempClassInfo;		// This is the actual new order
-//
-//		// Set the InfoTypeFromString map properly according to the new alphabetical order
-//		if (NULL != aInfos[iI]->getType())
-//		{
-//			// overwrite existing info maps with the proper id's
-//			GC.setInfoTypeFromString(aInfos[iI]->getType(), iI);
-//		}
-//	}
-//}
-/************************************************************************************************/
-/* SORT_ALPHABET                           END                                                  */
-/************************************************************************************************/
 
 void CvXMLLoadUtility::RemoveTGAFiller()
 {

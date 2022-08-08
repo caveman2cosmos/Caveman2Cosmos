@@ -3469,6 +3469,9 @@ selection_names_and_values = [
 def getDescription():
 	return unicode("SmartMap")
 
+def getNumHiddenCustomMapOptions():
+	return 0
+
 #return the total number of custom options for this map
 def getNumCustomMapOptions():
 	firstTimeInit()

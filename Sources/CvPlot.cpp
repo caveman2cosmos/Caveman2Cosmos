@@ -12647,8 +12647,13 @@ int CvPlot::getTerrainTurnDamage(const CvUnit* pUnit) const
 	}
 	if (getFeatureType() != NO_FEATURE)
 	{
-		//Oasis or Flood Plain
+		// No damage on Oasis or Flood Plain or Ancient Forest
 		if (GC.getFeatureInfo(getFeatureType()).getYieldChange(YIELD_FOOD) > 0)
+		{
+			return 0;
+		}
+		// No damage on Cave
+		if (getFeatureType() == GC.getInfoTypeForString("FEATURE_CAVES"))
 		{
 			return 0;
 		}

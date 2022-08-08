@@ -304,24 +304,12 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 
 		FAssert(getOwner() != NO_PLAYER);
 
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
-	/*                                                                                              */
-	/* Efficiency, Lead From Behind                                                                 */
-	/************************************************************************************************/
-		// From Lead From Behind by UncutDragon
-	/* original code
-		if (pPlot->getBestDefender(NO_PLAYER, getOwner(), NULL, !bPotentialEnemy, bPotentialEnemy) == NULL)
-	*/	// modified
-		if (!pPlot->hasDefender(false, NO_PLAYER, getOwner(), getHeadUnit(), !bPotentialEnemy, bPotentialEnemy))//disagrees with earlier count
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                       END                                                  */
-	/************************************************************************************************/
+		if (!pPlot->hasDefender(false, NO_PLAYER, getOwner(), getHeadUnit(), !bPotentialEnemy, bPotentialEnemy))
 		{
-			return 100;
+			return 100; // Disagrees with earlier count
 		}
 
-		//	Initialize predicted health for all units involved
+		// Initialize predicted health for all units involved
 		int iStartAttackerMaxStrength = 0;
 		int iNumDefenders = 0;
 		bool bAttackingGroupHasAlwaysHostileUnits = false;
@@ -334,17 +322,17 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 			pLoopUnit->AI_setPredictedHitPoints(-1);
 
 #ifdef _DEBUG
-			sprintf(buffer,"Attacker id %d has start cur HP %d\n",pLoopUnit->getID(),pLoopUnit->getHP());
+			sprintf(buffer,"Attacker id %d has start cur HP %d\n", pLoopUnit->getID(), pLoopUnit->getHP());
 			OutputDebugString(buffer);
 #endif
 			if ( pLoopUnit->getHP() > 0 )
 			{
 				int iStr = pLoopUnit->maxCombatStr(pPlot, pLoopUnit);
 
-				iStartAttackerMaxStrength += iStr;	//	Really want a more general valuation here that accounts
-													//	for all promotions, not just those in action at this plot
+				iStartAttackerMaxStrength += iStr; // Really want a more general valuation here that accounts
+												//	for all promotions, not just those in action at this plot
 #ifdef _DEBUG
-				sprintf(buffer,"Attacker id %d has start str %d\n",pLoopUnit->getID(),iStr);
+				sprintf(buffer,"Attacker id %d has start str %d\n", pLoopUnit->getID(), iStr);
 				OutputDebugString(buffer);
 #endif
 				pLoopUnit->AI_setPredictedHitPoints(pLoopUnit->getHP());

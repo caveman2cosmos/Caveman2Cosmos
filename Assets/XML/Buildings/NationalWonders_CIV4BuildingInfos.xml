@@ -3512,6 +3512,16 @@
 				<iYield>4</iYield>
 			</YieldChanges>
 			<FreePromoTypes>
+				<!-- Only giving promo 2 doesn't work atm due to checking for #2 before #1; this is a quick fix -->
+				<FreePromoType>
+					<PromotionType>PROMOTION_HUNTER1</PromotionType>
+					<FreePromotionCondition>
+						<Has>
+							<GOMType>GOM_UNITCOMBAT</GOMType>
+							<ID>UNITCOMBAT_HUNTER</ID>
+						</Has>
+					</FreePromotionCondition>
+				</FreePromoType>
 				<FreePromoType>
 					<PromotionType>PROMOTION_HUNTER2</PromotionType>
 				</FreePromoType>

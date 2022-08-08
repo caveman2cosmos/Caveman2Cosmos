@@ -9,18 +9,15 @@
 		<CommandInfo>
 			<Type>COMMAND_PROMOTION</Type>
 			<Description>TXT_KEY_COMMAND_PROMOTION</Description>
-			<Help/>
 		</CommandInfo>
 		<CommandInfo>
 			<Type>COMMAND_UPGRADE</Type>
 			<Description>TXT_KEY_COMMAND_UPGRADE</Description>
-			<Help/>
 			<bAll>1</bAll>
 		</CommandInfo>
 		<CommandInfo>
 			<Type>COMMAND_AUTOMATE</Type>
 			<Description>TXT_KEY_COMMAND_AUTOMATE</Description>
-			<Help/>
 			<Button>Art/Interface/Buttons/Actions/Automate.dds</Button>
 		</CommandInfo>
 		<CommandInfo>
@@ -37,7 +34,7 @@
 			<bShiftDownAlt>0</bShiftDownAlt>
 			<bCtrlDownAlt>0</bCtrlDownAlt>
 			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
-			<iOrderPriority>15</iOrderPriority>
+			<iOrderPriority>100</iOrderPriority>
 			<bVisible>1</bVisible>
 			<bAll>1</bAll>
 			<Button>Art/Interface/Buttons/Actions/Wake.dds</Button>
@@ -56,6 +53,7 @@
 			<bShiftDownAlt>0</bShiftDownAlt>
 			<bCtrlDownAlt>0</bCtrlDownAlt>
 			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+			<iOrderPriority>27</iOrderPriority>
 			<bVisible>1</bVisible>
 			<bAll>1</bAll>
 			<Button>Art/Interface/Buttons/Actions/Cancel.dds</Button>
@@ -74,6 +72,7 @@
 			<bShiftDownAlt>0</bShiftDownAlt>
 			<bCtrlDownAlt>0</bCtrlDownAlt>
 			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+			<iOrderPriority>27</iOrderPriority>
 			<bVisible>0</bVisible>
 			<bAll>1</bAll>
 			<Button>Art/Interface/Buttons/Actions/Cancel.dds</Button>
@@ -92,6 +91,7 @@
 			<bShiftDownAlt>0</bShiftDownAlt>
 			<bCtrlDownAlt>0</bCtrlDownAlt>
 			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+			<iOrderPriority>26</iOrderPriority>
 			<bVisible>1</bVisible>
 			<bAll>1</bAll>
 			<Button>Art/Interface/Buttons/Actions/Cancel.dds</Button>
@@ -110,7 +110,7 @@
 			<bShiftDownAlt>0</bShiftDownAlt>
 			<bCtrlDownAlt>0</bCtrlDownAlt>
 			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
-			<iOrderPriority>16</iOrderPriority>
+			<iOrderPriority>1000</iOrderPriority>
 			<bConfirmCommand>1</bConfirmCommand>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Actions/Delete.dds</Button>
@@ -129,6 +129,7 @@
 			<bShiftDownAlt>0</bShiftDownAlt>
 			<bCtrlDownAlt>0</bCtrlDownAlt>
 			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+			<iOrderPriority>-1</iOrderPriority>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Actions/GiveUnits.dds</Button>
 		</CommandInfo>
@@ -146,6 +147,7 @@
 			<bShiftDownAlt>0</bShiftDownAlt>
 			<bCtrlDownAlt>0</bCtrlDownAlt>
 			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+			<iOrderPriority>49</iOrderPriority>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Actions/Load.dds</Button>
 		</CommandInfo>
@@ -153,6 +155,7 @@
 			<Type>COMMAND_LOAD_UNIT</Type>
 			<Description>TXT_KEY_COMMAND_LOAD_UNIT</Description>
 			<Help>TXT_KEY_COMMAND_LOAD_UNIT_HELP</Help>
+			<iOrderPriority>49</iOrderPriority>
 		</CommandInfo>
 		<CommandInfo>
 			<Type>COMMAND_UNLOAD</Type>
@@ -168,6 +171,7 @@
 			<bShiftDownAlt>0</bShiftDownAlt>
 			<bCtrlDownAlt>0</bCtrlDownAlt>
 			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+			<iOrderPriority>49</iOrderPriority>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Actions/Unload.dds</Button>
 		</CommandInfo>
@@ -185,6 +189,7 @@
 			<bShiftDownAlt>0</bShiftDownAlt>
 			<bCtrlDownAlt>0</bCtrlDownAlt>
 			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
+			<iOrderPriority>49</iOrderPriority>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Actions/UnloadAll.dds</Button>
 		</CommandInfo>
@@ -196,7 +201,7 @@
 		<CommandInfo>
 			<Type>COMMAND_REEQUIP</Type>
 			<Description>TXT_KEY_COMMAND_REEQUIP</Description>
-			<Help/>
+			<iOrderPriority>100000</iOrderPriority>
 			<bVisible>1</bVisible>
 		</CommandInfo>
 		<CommandInfo>
@@ -214,19 +219,21 @@
 		<CommandInfo>
 			<Type>COMMAND_STATUS</Type>
 			<Description>TXT_KEY_COMMAND_STATUS</Description>
-			<Help/>
 			<bVisible>1</bVisible>
+			<iOrderPriority>200000</iOrderPriority>
 		</CommandInfo>
 		<CommandInfo>
 			<Type>COMMAND_ARREST</Type>
 			<Description>TXT_KEY_COMMAND_ARREST</Description>
 			<bVisible>1</bVisible>
+			<iOrderPriority>52</iOrderPriority>
 			<Button>art/Buttons/Missions/ArrestCommand.dds</Button>
 		</CommandInfo>
 		<CommandInfo>
 			<Type>COMMAND_AMBUSH</Type>
 			<Description>TXT_KEY_COMMAND_AMBUSH</Description>
 			<bVisible>1</bVisible>
+			<iOrderPriority>52</iOrderPriority>
 			<Button>art/Buttons/Missions/AmbushCommand.dds</Button>
 		</CommandInfo>
 	</CommandInfos>

@@ -192,17 +192,10 @@ void CyTeam::setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck)
 {
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).getTeam() == m_pTeam->getID())
+		if (GET_PLAYER((PlayerTypes)iI).getTeam() == m_pTeam->getID() && GET_PLAYER((PlayerTypes)iI).getCivilizationType() < 0)
 		{
-			if (GET_PLAYER((PlayerTypes)iI).getCivilizationType() < 0)
-			{
-				FErrorMsg("GET_PLAYER((PlayerTypes)iI) of m_pTeam should have a civilizationType");
-#ifdef _DEBUG
-				throw new std::exception();
-#endif
-			}
+			FErrorMsg("GET_PLAYER((PlayerTypes)iI) of m_pTeam should have a civilizationType");
 		}
-
 	}
 	m_pTeam->setIsMinorCiv(bNewValue, bDoBarbCivCheck);
 }

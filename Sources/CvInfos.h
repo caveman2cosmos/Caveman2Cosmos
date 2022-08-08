@@ -358,9 +358,6 @@ public:
 	CvTechInfo();
 	virtual ~CvTechInfo();
 
-	// Validate tech info da after load (debug only)
-	static void validate();
-
 	int getAdvisorType() const;
 	int getAIWeight() const;
 	int getAITradeModifier() const;

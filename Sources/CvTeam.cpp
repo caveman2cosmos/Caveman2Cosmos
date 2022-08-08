@@ -5471,12 +5471,7 @@ void CvTeam::setHasTech(TechTypes eTech, bool bNewValue, PlayerTypes ePlayer, bo
 				}
 			}
 		}
-#ifdef _DEBUG
-		foreach_(const TechTypes eTechX, getAdjacentResearch())
-		{
-			FAssert(GET_PLAYER(getLeaderID()).canResearch(eTechX, true, false));
-		}
-#endif
+
 		if (bFirst && GC.getGame().countKnownTechNumTeams(eTech) == 1)
 		{
 			const UnitTypes eFreeUnit = (UnitTypes)kTech.getFirstFreeUnit();
