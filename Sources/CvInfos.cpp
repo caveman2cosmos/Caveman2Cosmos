@@ -307,7 +307,7 @@ bool CvHotkeyInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bAltDownAlt, L"bAltDownAlt");
 	pXML->GetOptionalChildXmlValByName(&m_bShiftDownAlt, L"bShiftDownAlt");
 	pXML->GetOptionalChildXmlValByName(&m_bCtrlDownAlt, L"bCtrlDownAlt");
-	pXML->GetOptionalChildXmlValByName(&m_iOrderPriority, L"iOrderPriority", 5);
+	pXML->GetOptionalChildXmlValByName(&m_iOrderPriority, L"iOrderPriority", 0);
 
 	setHotKeyDescription(getTextKeyWide(), NULL, pXML->CreateHotKeyFromDescription(getHotKey(), m_bShiftDown, m_bAltDown, m_bCtrlDown));
 
@@ -318,70 +318,68 @@ void CvHotkeyInfo::copyNonDefaults(const CvHotkeyInfo* pClassInfo)
 {
 	CvInfoBase::copyNonDefaults(pClassInfo);
 
-	const bool bDefault = false;
-	const int iDefault = 0;
 	const CvString cDefault = CvString::format("").GetCString();
 	const CvWString wDefault = CvWString::format(L"").GetCString();
 
-	if ( getHotKeyVal() == iDefault )
+	if (getHotKeyVal() == 0)
 	{
 		m_iHotKeyVal = pClassInfo->getHotKeyVal();
 	}
-	if ( getHotKeyPriority() == -1 )
+	if (getHotKeyPriority() == -1)
 	{
 		m_iHotKeyPriority = pClassInfo->getHotKeyPriority();
 	}
-	if ( getHotKeyValAlt() == iDefault )
+	if (getHotKeyValAlt() == 0)
 	{
 		m_iHotKeyValAlt = pClassInfo->getHotKeyValAlt();
 	}
-	if ( getHotKeyPriorityAlt() == -1 )
+	if (getHotKeyPriorityAlt() == -1)
 	{
 		m_iHotKeyPriorityAlt = pClassInfo->getHotKeyPriorityAlt();
 	}
-	if ( getOrderPriority() == 5 )
+	if (getOrderPriority() == 0)
 	{
 		m_iOrderPriority = pClassInfo->getOrderPriority();
 	}
 
-	if ( isAltDown() == bDefault )
+	if (isAltDown() == false)
 	{
 		m_bAltDown = pClassInfo->isAltDown();
 	}
-	if ( isShiftDown() == bDefault )
+	if (isShiftDown() == false)
 	{
 		m_bShiftDown = pClassInfo->isShiftDown();
 	}
-	if ( isCtrlDown() == bDefault )
+	if (isCtrlDown() == false)
 	{
 		m_bCtrlDown = pClassInfo->isCtrlDown();
 	}
-	if ( isAltDownAlt() == bDefault )
+	if (isAltDownAlt() == false)
 	{
 		m_bAltDownAlt = pClassInfo->isAltDownAlt();
 	}
-	if ( isShiftDownAlt() == bDefault )
+	if (isShiftDownAlt() == false)
 	{
 		m_bShiftDownAlt = pClassInfo->isShiftDownAlt();
 	}
-	if ( isCtrlDownAlt() == bDefault )
+	if (isCtrlDownAlt() == false)
 	{
 		m_bCtrlDownAlt = pClassInfo->isCtrlDownAlt();
 	}
 
-	if ( getHotKey() == cDefault )
+	if (getHotKey() == cDefault)
 	{
 		m_szHotKey = pClassInfo->getHotKey();
 	}
-	if ( getHotKeyDescriptionKey() == wDefault )
+	if (getHotKeyDescriptionKey() == wDefault)
 	{
 		m_szHotKeyDescriptionKey = pClassInfo->getHotKeyDescriptionKey();
 	}
-	if ( getHotKeyAltDescriptionKey() == wDefault )
+	if (getHotKeyAltDescriptionKey() == wDefault)
 	{
 		m_szHotKeyAltDescriptionKey = pClassInfo->getHotKeyAltDescriptionKey();
 	}
-	if ( getHotKeyString() == wDefault )
+	if (getHotKeyString() == wDefault)
 	{
 		m_szHotKeyString = pClassInfo->getHotKeyString();
 	}

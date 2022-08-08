@@ -1029,13 +1029,15 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 	STATIC_ASSERT(NUM_CONTROL_TYPES > 0, value_should_be_greater_than_zero);
 	STATIC_ASSERT(NUM_COMMAND_TYPES > 0, value_should_be_greater_than_zero);
 
+	const int iNumPromoInfos = GC.getNumPromotionInfos();
+
 	if (GC.getNumBuildInfos() < 1)
 	{
 		char szMessage[1024];
 		sprintf( szMessage, "GC.getNumBuildInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
-	if (GC.getNumPromotionInfos() < 1)
+	if (iNumPromoInfos < 1)
 	{
 		char szMessage[1024];
 		sprintf( szMessage, "GC.getNumPromotionInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
@@ -1066,15 +1068,12 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
 
-	int* piOrderedIndex=NULL;
-
 	const int iNumOrigVals = GC.getNumActionInfos();
 
 	const int iNumActionInfos =
 	(
 		iNumOrigVals + NUM_INTERFACEMODE_TYPES + NUM_CONTROL_TYPES + NUM_COMMAND_TYPES
 		+ GC.getNumBuildInfos()
-		+ GC.getNumPromotionInfos()
 		+ GC.getNumReligionInfos()
 		+ GC.getNumCorporationInfos()
 		+ GC.getNumUnitInfos()
@@ -1082,6 +1081,7 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		+ GC.getNumBuildingInfos()
 		+ GC.getNumAutomateInfos()
 		+ GC.getNumMissionInfos()
+		+ iNumPromoInfos
 	);
 	int* piIndexList = new int[iNumActionInfos];
 	int* piPriorityList = new int[iNumActionInfos];
@@ -1114,19 +1114,19 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		iTotalActionInfoCount++;
 	}
 
-	for (int i = 0; i < GC.getNumPromotionInfos(); i++)
-	{
-		piIndexList[iTotalActionInfoCount] = i;
-		piPriorityList[iTotalActionInfoCount] = GC.getPromotionInfo((PromotionTypes)i).getOrderPriority();
-		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_PROMOTION;
-		iTotalActionInfoCount++;
-	}
-
 	for (int i = 0; i < GC.getNumUnitInfos(); i++)
 	{
 		piIndexList[iTotalActionInfoCount] = i;
 		piPriorityList[iTotalActionInfoCount] = GC.getUnitInfo((UnitTypes)i).getOrderPriority();
 		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_UNIT;
+		iTotalActionInfoCount++;
+	}
+
+	for (int i = 0; i < GC.getNumSpecialistInfos(); i++)
+	{
+		piIndexList[iTotalActionInfoCount] = i;
+		piPriorityList[iTotalActionInfoCount] = GC.getSpecialistInfo((SpecialistTypes)i).getOrderPriority();
+		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_SPECIALIST;
 		iTotalActionInfoCount++;
 	}
 
@@ -1146,14 +1146,6 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		iTotalActionInfoCount++;
 	}
 
-	for (int i = 0; i < GC.getNumSpecialistInfos(); i++)
-	{
-		piIndexList[iTotalActionInfoCount] = i;
-		piPriorityList[iTotalActionInfoCount] = GC.getSpecialistInfo((SpecialistTypes)i).getOrderPriority();
-		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_SPECIALIST;
-		iTotalActionInfoCount++;
-	}
-
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
 		piIndexList[iTotalActionInfoCount] = i;
@@ -1170,12 +1162,37 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		iTotalActionInfoCount++;
 	}
 
-	for (int i = 0; i < GC.getNumAutomateInfos(); i++)
 	{
-		piIndexList[iTotalActionInfoCount] = i;
-		piPriorityList[iTotalActionInfoCount] = GC.getAutomateInfo(i).getOrderPriority();
-		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_AUTOMATE;
-		iTotalActionInfoCount++;
+		const int iStatusPriority = GC.getCommandInfo((CommandTypes)GetInfoClass("COMMAND_STATUS")).getOrderPriority();
+
+		for (int i = 0; i < iNumPromoInfos; i++)
+		{
+			const CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)i);
+
+			if (promo.isStatus())
+			{
+				piIndexList[iTotalActionInfoCount] = i;
+				piPriorityList[iTotalActionInfoCount] = iStatusPriority;
+				piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_PROMOTION;
+				iTotalActionInfoCount++;
+			}
+		}
+	}
+	{
+		const int iEquipPriority = GC.getCommandInfo((CommandTypes)GetInfoClass("COMMAND_REEQUIP")).getOrderPriority();
+
+		for (int i = 0; i < iNumPromoInfos; i++)
+		{
+			const CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)i);
+
+			if (promo.isEquipment())
+			{
+				piIndexList[iTotalActionInfoCount] = i;
+				piPriorityList[iTotalActionInfoCount] = iEquipPriority;
+				piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_PROMOTION;
+				iTotalActionInfoCount++;
+			}
+		}
 	}
 
 	for (int i = 0; i < GC.getNumMissionInfos(); i++)
@@ -1186,15 +1203,37 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		iTotalActionInfoCount++;
 	}
 
-	SAFE_DELETE_ARRAY(piOrderedIndex);
-	piOrderedIndex = new int[iNumActionInfos];
+	for (int i = 0; i < GC.getNumAutomateInfos(); i++)
+	{
+		piIndexList[iTotalActionInfoCount] = i;
+		piPriorityList[iTotalActionInfoCount] = GC.getAutomateInfo(i).getOrderPriority();
+		piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_AUTOMATE;
+		iTotalActionInfoCount++;
+	}
+
+	for (int i = 0; i < iNumPromoInfos; i++)
+	{
+		const CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)i);
+
+		if (!promo.isStatus() && !promo.isEquipment())
+		{
+			piIndexList[iTotalActionInfoCount] = i;
+			piPriorityList[iTotalActionInfoCount] = promo.getOrderPriority();
+			piActionInfoTypeList[iTotalActionInfoCount] = ACTIONSUBTYPE_PROMOTION;
+			iTotalActionInfoCount++;
+		}
+	}
+
+	int* piOrderedIndex = new int[iNumActionInfos];
 
 	orderHotkeyInfo(&piOrderedIndex, piPriorityList, iNumActionInfos);
+
 	for (int i = 0; i < iNumActionInfos; i++)
 	{
 		CvActionInfo* pActionInfo = new CvActionInfo;
 		pActionInfo->setOriginalIndex(piIndexList[piOrderedIndex[i]]);
 		pActionInfo->setSubType((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]]);
+
 		if ((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_COMMAND)
 		{
 			GC.getCommandInfo((CommandTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
@@ -1210,24 +1249,25 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 		}
 		else if ((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_PROMOTION)
 		{
-			if (GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isEquipment())
+			CvPromotionInfo& promo = GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]);
+
+			if (promo.isEquipment())
 			{
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setCommandType(GetInfoClass("COMMAND_REEQUIP"));
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setHotKeyDescription(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getTextKeyWide(), GC.getCommandInfo((CommandTypes)(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getCommandType())).getTextKeyWide(), CreateHotKeyFromDescription(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getHotKey(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isShiftDown(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isAltDown(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isCtrlDown()));
+				promo.setCommandType(GetInfoClass("COMMAND_REEQUIP"));
 			}
-			else if(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isStatus())
+			else if (promo.isStatus())
 			{
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setCommandType(GetInfoClass("COMMAND_STATUS"));
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setHotKeyDescription(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getTextKeyWide(), GC.getCommandInfo((CommandTypes)(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getCommandType())).getTextKeyWide(), CreateHotKeyFromDescription(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getHotKey(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isShiftDown(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isAltDown(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isCtrlDown()));
+				promo.setCommandType(GetInfoClass("COMMAND_STATUS"));
 			}
 			else
 			{
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setCommandType(GetInfoClass("COMMAND_PROMOTION"));
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setActionInfoIndex(i);
-				GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).setHotKeyDescription(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getTextKeyWide(), GC.getCommandInfo((CommandTypes)(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getCommandType())).getTextKeyWide(), CreateHotKeyFromDescription(GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).getHotKey(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isShiftDown(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isAltDown(), GC.getPromotionInfo((PromotionTypes)piIndexList[piOrderedIndex[i]]).isCtrlDown()));
+				promo.setCommandType(GetInfoClass("COMMAND_PROMOTION"));
 			}
+			promo.setActionInfoIndex(i);
+			promo.setHotKeyDescription(
+				promo.getTextKeyWide(), GC.getCommandInfo((CommandTypes)promo.getCommandType()).getTextKeyWide(),
+				CreateHotKeyFromDescription(promo.getHotKey(), promo.isShiftDown(), promo.isAltDown(), promo.isCtrlDown())
+			);
 		}
 		else if ((ActionSubTypes)piActionInfoTypeList[piOrderedIndex[i]] == ACTIONSUBTYPE_UNIT)
 		{
