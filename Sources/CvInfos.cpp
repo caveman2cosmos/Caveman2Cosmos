@@ -7341,7 +7341,7 @@ int CvActionInfo::getHotKeyPriorityAlt() const
 int CvActionInfo::getOrderPriority() const
 {
 	const CvHotkeyInfo* pHotkeyInfo = getHotkeyInfo();
-	return pHotkeyInfo ? pHotkeyInfo->getOrderPriority() : -1;
+	return pHotkeyInfo ? pHotkeyInfo->getOrderPriority() : 0;
 }
 
 bool CvActionInfo::isAltDown() const

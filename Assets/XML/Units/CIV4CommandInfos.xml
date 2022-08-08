@@ -110,7 +110,7 @@
 			<bShiftDownAlt>0</bShiftDownAlt>
 			<bCtrlDownAlt>0</bCtrlDownAlt>
 			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
-			<iOrderPriority>-2</iOrderPriority>
+			<iOrderPriority>1000</iOrderPriority>
 			<bConfirmCommand>1</bConfirmCommand>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Actions/Delete.dds</Button>
@@ -129,7 +129,7 @@
 			<bShiftDownAlt>0</bShiftDownAlt>
 			<bCtrlDownAlt>0</bCtrlDownAlt>
 			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
-			<iOrderPriority>2</iOrderPriority>
+			<iOrderPriority>-1</iOrderPriority>
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Actions/GiveUnits.dds</Button>
 		</CommandInfo>
@@ -201,27 +201,26 @@
 		<CommandInfo>
 			<Type>COMMAND_REEQUIP</Type>
 			<Description>TXT_KEY_COMMAND_REEQUIP</Description>
+			<iOrderPriority>100000</iOrderPriority>
 			<bVisible>1</bVisible>
 		</CommandInfo>
 		<CommandInfo>
 			<Type>COMMAND_MERGE</Type>
 			<Description>TXT_KEY_COMMAND_MERGE</Description>
 			<bVisible>1</bVisible>
-			<iOrderPriority>51</iOrderPriority>
 			<Button>art/Buttons/Missions/Merge.dds</Button>
 		</CommandInfo>
 		<CommandInfo>
 			<Type>COMMAND_SPLIT</Type>
 			<Description>TXT_KEY_COMMAND_SPLIT</Description>
 			<bVisible>1</bVisible>
-			<iOrderPriority>50</iOrderPriority>
 			<Button>art/Buttons/Missions/Split.dds</Button>
 		</CommandInfo>
 		<CommandInfo>
 			<Type>COMMAND_STATUS</Type>
 			<Description>TXT_KEY_COMMAND_STATUS</Description>
 			<bVisible>1</bVisible>
-			<iOrderPriority>48</iOrderPriority>
+			<iOrderPriority>200000</iOrderPriority>
 		</CommandInfo>
 		<CommandInfo>
 			<Type>COMMAND_ARREST</Type>
