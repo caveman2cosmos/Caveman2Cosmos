@@ -2302,11 +2302,13 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				}
 			}
 
-			int iNumHealSupp = pUnit->getNumHealSupportTotal();
-			if (iNumHealSupp > 0)
 			{
-				szString.append(NEWLINE);
-				szString.append(gDLL->getText("TXT_KEY_UNITHELP_NUM_HEAL_SUPPORT", iNumHealSupp, pUnit->getHealSupportUsedTotal(), pUnit->getHealSupportRemaining()));
+				const int iNumHealSupp = pUnit->getNumHealSupportTotal();
+				if (iNumHealSupp > 0)
+				{
+					szString.append(NEWLINE);
+					szString.append(gDLL->getText("TXT_KEY_UNITHELP_NUM_HEAL_SUPPORT", iNumHealSupp, pUnit->getHealSupportRemaining()));
+				}
 			}
 
 			if (pUnit->getSameTileHeal() != 0)
@@ -2315,36 +2317,29 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_SAME", pUnit->getSameTileHeal()) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
 			}
 
-			if (pUnit->hasHealUnitCombat())
-			{
-				int iVolume = 0;
-				for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-				{
-					iVolume = pUnit->getHealUnitCombatTypeTotal((UnitCombatTypes)iI);
-					if (iVolume > 0)
-					{
-						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_SAME", GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide(), iVolume) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
-					}
-				}
-			}
-
 			if (pUnit->getAdjacentTileHeal() != 0)
 			{
 				szString.append(NEWLINE);
 				szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_ADJACENT", pUnit->getAdjacentTileHeal()) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
 			}
 
-			if (pUnit->hasHealUnitCombat())
+			if (pUnit->getHealUnitCombatCount() > 0)
 			{
-				int iVolume = 0;
-				for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+				for (int iI = GC.getNumUnitCombatInfos() - 1; iI > -1; iI--)
 				{
-					iVolume = pUnit->getHealUnitCombatTypeAdjacentTotal((UnitCombatTypes)iI);
-					if (iVolume > 0)
+					const int i0 = pUnit->getHealUnitCombatTypeTotal((UnitCombatTypes)iI);
+
+					if (i0 > 0)
 					{
 						szString.append(NEWLINE);
-						szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_ADJACENT", GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide(), iVolume) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
+						szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_SAME", GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide(), i0) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
+					}
+					const int i1 = pUnit->getHealUnitCombatTypeAdjacentTotal((UnitCombatTypes)iI);
+
+					if (i1 > 0)
+					{
+						szString.append(NEWLINE);
+						szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_HEALS_UNITCOMBAT_ADJACENT", GC.getUnitCombatInfo((UnitCombatTypes)iI).getTextKeyWide(), i1) + gDLL->getText("TXT_KEY_PROMOTIONHELP_DAMAGE_TURN"));
 					}
 				}
 			}
@@ -2909,11 +2904,20 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					{
 						const UnitCombatTypes eHealAsTypes = (UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI);
 						const int iHealAsDamage = pUnit->getHealAsDamage((UnitCombatTypes)GC.getUnitInfo(pUnit->getUnitType()).getHealAsType(iI));
+						const int iHealTurns = pUnit->healTurnsAsType(pUnit->plot(), eHealAsTypes);
 						if (iHealAsDamage > 0)
 						{
 							szString.append(NEWLINE);
-							szString.append(gDLL->getText("TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT",
-								GC.getUnitCombatInfo(eHealAsTypes).getTextKeyWide(), iHealAsDamage, pUnit->healTurnsAsType(pUnit->plot(), eHealAsTypes)));
+							if (iHealTurns == MAX_INT)
+							{
+								szString.append(gDLL->getText("TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT_NOHEAL",
+								GC.getUnitCombatInfo(eHealAsTypes).getTextKeyWide(), iHealAsDamage));
+							}
+							else
+							{
+								szString.append(gDLL->getText("TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT",
+									GC.getUnitCombatInfo(eHealAsTypes).getTextKeyWide(), iHealAsDamage, iHealTurns));
+							}
 						}
 					}
 				}
@@ -5227,15 +5231,7 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 							}
 						}
 					}
-					//TB Display Mod end
-					//szTempBuffer.Format(L"AI odds: %d%%", iOdds);
-					//szString += NEWLINE + szTempBuffer;
-	/*************************************************************************************************/
-	/** ADVANCED COMBAT ODDS					  3/11/09						   PieceOfMind	  */
-	/** BEGIN																	   v2.0			 */
-	/*************************************************************************************************/
-	/* New Code */
-					else if (ACO_enabled && !bTBView)
+					else if (ACO_enabled && !bTBView) // PieceOfMind - ADVANCED COMBAT ODDS - 3/11/09 - v2.0
 					{
 						szString.append(NEWLINE);
 
@@ -5243,16 +5239,6 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						bool ACO_debug = getBugOptionBOOL("ACO__Debug", false, "ACO_DEBUG");
 
 						/** phungus sart **/
-	//					bool bctrl; bctrl = gDLL->ctrlKey();
-	//					if (bctrl)
-	//					{//SWITCHAROO IS DISABLED IN V1.0.  Hopefully it will be available in the next version. At the moment is has issues when modifiers are present.
-	//						CvUnit* swap = pAttacker;
-	//						pAttacker = pDefender;
-	//						pDefender = swap;
-	//
-	//						CvPlot* pAttackerPlot = pAttacker->plot();
-	//						  CvPlot* pDefenderPlot = pDefender->plot();
-	//					}
 						int iAttackerExperienceModifier = 0;
 						int iDefenderExperienceModifier = 0;
 						for (int ePromotion = 0; ePromotion < GC.getNumPromotionInfos(); ++ePromotion)
@@ -5276,18 +5262,6 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 
 						/** Many thanks to DanF5771 for some of these calculations! **/
 						//TB Combat Mods begin
-						//originals
-						//int iAttackerStrength  = pAttacker->currCombatStr(NULL, NULL);
-						//int iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
-						//int iDefenderStrength  = pDefender->currCombatStr(pPlot, pAttacker);
-						//int iDefenderFirepower = pDefender->currFirepower(pPlot, pAttacker);
-						//FAssert((iAttackerStrength + iDefenderStrength)*(iAttackerFirepower + iDefenderFirepower) > 0);
-						//int iStrengthFactor	= ((iAttackerFirepower + iDefenderFirepower + 1) / 2);
-						//  iDamageToAttacker = std::max(1,((GC.getDefineINT("COMBAT_DAMAGE") * (iDefenderFirepower + iStrengthFactor)) / (iAttackerFirepower + iStrengthFactor)));
-						//  iDamageToDefender = std::max(1,((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / (iDefenderFirepower + iStrengthFactor)));
-						//int iDamageToAttacker  = std::max(1, ((((GC.getDefineINT("COMBAT_DAMAGE") * (iDefenderFirepower + iStrengthFactor)) / (iAttackerFirepower + iStrengthFactor)) * iAttackerArmor)/100));
-						//int iDamageToDefender  = std::max(1, ((((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / (iDefenderFirepower + iStrengthFactor)) * iDefenderArmor)/100));
-
 						int iDefenderInitialOdds = ((GC.getCOMBAT_DIE_SIDES() * iDefenderStrength) / (iAttackerStrength + iDefenderStrength));
 						int iDefenderHitOdds = std::max(5, iDefenderInitialOdds - ((iDefenderHitModifier * iDefenderInitialOdds) / 100));
 
@@ -5318,26 +5292,21 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 									szString.append(szTempBuffer.GetCString());
 								}
 							}
-							else
+							else if (pAttacker->isHominid())
 							{
-								//defender is not barbarian
-								if (pAttacker->isHominid())
+								//attacker is barbarian
+								if (!GET_PLAYER(pDefender->getOwner()).isHominid() && GET_PLAYER(pDefender->getOwner()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(pDefender->getOwner()).getHandicapType()).getFreeWinsVsBarbs())
 								{
-									//attacker is barbarian
-									if (!GET_PLAYER(pDefender->getOwner()).isHominid() && GET_PLAYER(pDefender->getOwner()).getWinsVsBarbs() < GC.getHandicapInfo(GET_PLAYER(pDefender->getOwner()).getHandicapType()).getFreeWinsVsBarbs())
-									{
-										//defender is not barbarian and defender has free wins left and attacker is barbarian
-										iAttackerOdds = std::min((10 * GC.getCOMBAT_DIE_SIDES()) / 100, iAttackerOdds);
-										iDefenderOdds = std::max((90 * GC.getCOMBAT_DIE_SIDES()) / 100, iDefenderOdds);
-										szTempBuffer.Format(SETCOLR L"%d\n" ENDCOLR,
-											TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getHandicapInfo(GET_PLAYER(pDefender->getOwner()).getHandicapType()).getFreeWinsVsBarbs() - GET_PLAYER(pDefender->getOwner()).getWinsVsBarbs());
-										szString.append(gDLL->getText("TXT_ACO_BARBFREEWINSLEFT"));
-										szString.append(szTempBuffer.GetCString());
-									}
+									//defender is not barbarian and defender has free wins left and attacker is barbarian
+									iAttackerOdds = std::min((10 * GC.getCOMBAT_DIE_SIDES()) / 100, iAttackerOdds);
+									iDefenderOdds = std::max((90 * GC.getCOMBAT_DIE_SIDES()) / 100, iDefenderOdds);
+									szTempBuffer.Format(SETCOLR L"%d\n" ENDCOLR,
+										TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getHandicapInfo(GET_PLAYER(pDefender->getOwner()).getHandicapType()).getFreeWinsVsBarbs() - GET_PLAYER(pDefender->getOwner()).getWinsVsBarbs());
+									szString.append(gDLL->getText("TXT_ACO_BARBFREEWINSLEFT"));
+									szString.append(szTempBuffer.GetCString());
 								}
 							}
 						}
-
 
 						//XP calculations
 						int iAttackerWithdrawalProbability = pAttacker->withdrawVSOpponentProbTotal(pDefender, pPlot) - pDefender->pursuitVSOpponentProbTotal(pAttacker);

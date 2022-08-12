@@ -421,6 +421,16 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 		doSetUnitCombats();
 		doSetFreePromotions(true);
 		doSetDefaultStatuses();
+
+		// Cache initial healer values
+		for (int iI = m_pUnitInfo->getNumHealUnitCombatTypes() - 1; iI > -1; iI--)
+		{
+			const HealUnitCombat& data = m_pUnitInfo->getHealUnitCombatType(iI);
+
+			changeHealUnitCombatTypeVolume(data.eUnitCombat, data.iHeal);
+			changeHealUnitCombatTypeAdjacentVolume(data.eUnitCombat, data.iAdjacentHeal);
+		}
+
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
 			setSMValues();
@@ -4420,7 +4430,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (!bAdvance && !m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught && !bStealthDefense)
 				{
 					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-					checkRemoveSelectionAfterAttack();
 				}
 				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 				{
@@ -4450,7 +4459,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 		{
 			if (!m_combatResult.bAttackerOnslaught)
 			{
-
 				if (!m_combatResult.bAttackerStampedes)
 				{
 					if (bHuman)
@@ -4534,7 +4542,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					else if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
 					{
 						changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-						checkRemoveSelectionAfterAttack();
 					}
 					if (getGroup() != NULL)
 					{
@@ -4580,7 +4587,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 						else if (!bStealthDefense && !m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
 						{
 							changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-							checkRemoveSelectionAfterAttack();
 						}
 					}
 					else
@@ -4590,7 +4596,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 						{
 							changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 						}
-						checkRemoveSelectionAfterAttack();
 					}
 					if (getGroup() != NULL)
 					{
@@ -4609,7 +4614,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				{
 					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				}
-				checkRemoveSelectionAfterAttack();
 				if (getGroup() != NULL)
 				{
 					if (getGroup()->canAnyMove())//testing selective situation here.
@@ -4778,7 +4782,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				{
 					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				}
-				checkRemoveSelectionAfterAttack();
 				if (getGroup() != NULL)
 				{
 					if (getGroup()->canAnyMove())//testing selective situation here.
@@ -4997,7 +5000,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				// This is before the plot advancement, the unit will always try to walk back
 				// to the square that they came from, before advancing.
 			}
-			checkRemoveSelectionAfterAttack();
 			if (getGroup() != NULL)
 			{
 				if (getGroup()->canAnyMove())//testing selective situation here.
@@ -5029,7 +5031,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				//GC.getGame().logOOSSpecial(53, getID(), getMoves(), getDamage());
-				checkRemoveSelectionAfterAttack();
 
 				if (getGroup() != NULL)
 				{
@@ -5098,7 +5099,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 			}
-			checkRemoveSelectionAfterAttack();
+
 			if (getGroup() != NULL)
 			{
 				if (getGroup()->canAnyMove()) // testing selective situation here.
@@ -5108,14 +5109,11 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				else getGroup()->clearMissionQueue();
 			}
 		}
-	}
-}
 
-void CvUnit::checkRemoveSelectionAfterAttack()
-{
-	if (IsSelected() && !canMove() && gDLL->getInterfaceIFace()->getLengthSelectionList() > 1)
-	{
-		gDLL->getInterfaceIFace()->removeFromSelectionList(this);
+		if (IsSelected() && !canMove())
+		{
+			GC.getGame().updateSelectionListInternal();
+		}
 	}
 }
 
@@ -7732,78 +7730,50 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 {
 	PROFILE_FUNC();
 
-	CvCity* pCity;
-	CvUnit* pHealUnit = NULL;
-	int iTotalHeal;
-	int iHeal;
-	int iBestHeal;
-	int iI;
-	int iHealAs = MAX_INT;
-
-	int iNumHealAs = m_pUnitInfo->getNumHealAsTypes();
-	bool bHasHealAs = (iNumHealAs > 0);
-
 	if (pPlot->getTotalTurnDamage(this) > 0)
 	{
 		return 0;
 	}
 
 	//Find what will take the longest to heal and use that rate
-	int iNumTurns = MAX_INT;
-	int iBestNumTurns = MAX_INT;
-	bool bNeedsHealing = false;
-	if (bHasHealAs)
+	if (m_pUnitInfo->getNumHealAsTypes() > 0)
 	{
-		iBestHeal = MAX_INT;
-		for (iI = 0; iI < iNumHealAs; iI++)
+		int iWorstNumTurns = -1;
+		int iBestHeal = MAX_INT;
+		for (int iI = m_pUnitInfo->getNumHealAsTypes() - 1; iI > -1; iI--)
 		{
-			UnitCombatTypes eHealAsType = (UnitCombatTypes)m_pUnitInfo->getHealAsType(iI);
-			if (getHealAsDamage(eHealAsType) > 0)
+			const UnitCombatTypes eHealAsType = (UnitCombatTypes)m_pUnitInfo->getHealAsType(iI);
+			const int iHealAsDamage = getHealAsDamage(eHealAsType);
+			if (iHealAsDamage > 0)
 			{
-				bNeedsHealing = true;
-				iHealAs = getHealRateAsType(pPlot, bHealCheck, eHealAsType);
-				if (iHealAs > 0)
-				{
-					iNumTurns = (getHealAsDamage(eHealAsType)/ iHealAs);
-				}
-				else
-				{
-					iNumTurns = MAX_INT;
-				}
+				const int iHealAs = getHealRateAsType(pPlot, bHealCheck, eHealAsType);
+				const int iNumTurns = iHealAs > 0 ? iHealAsDamage / iHealAs : MAX_INT;
+
 				//Note we're actually looking for the slowest to heal here to use that for the # of rounds to heal total
-				if (iNumTurns > iBestNumTurns)
+				if (iNumTurns > iWorstNumTurns)
 				{
 					iBestHeal = iHealAs;
+					iWorstNumTurns = iNumTurns;
+					if (iNumTurns == MAX_INT)
+					{
+						break;
+					}
 				}
 			}
 		}
-		if (bNeedsHealing)
+		if (iWorstNumTurns > -1)
 		{
-			if (iBestHeal > getDamage())
-			{
-				iBestHeal = getDamage();
-			}
-
-			iTotalHeal = iBestHeal;
-
 			if (!hasNoSelfHeal())
 			{
-				iTotalHeal = std::max(1, iTotalHeal);
+				return std::max(1, std::min(iBestHeal, getDamage()));
 			}
-			else
-			{
-				iTotalHeal = std::max(0, iTotalHeal);
-			}
-			return iTotalHeal;
+			return std::max(0, std::min(iBestHeal, getDamage()));
 		}
 	}
 
+	int iTotalHeal = 0;
 
-	pCity = pPlot->getPlotCity();
-
-	iTotalHeal = 0;
-
-	if (!hasNoSelfHeal() || (getSelfHealModifierTotal() < 0))
+	if (!hasNoSelfHeal() || getSelfHealModifierTotal() < 0)
 	{
 		iTotalHeal += getSelfHealModifierTotal();
 	}
@@ -7811,6 +7781,9 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 	if (pPlot->isCity(true, getTeam()))
 	{
 		iTotalHeal += GC.getCITY_HEAL_RATE() + (GET_TEAM(getTeam()).isFriendlyTerritory(pPlot->getTeam()) ? getExtraFriendlyHeal() : getExtraNeutralHeal());
+
+		const CvCity* pCity = pPlot->getPlotCity();
+
 		if (pCity && !pCity->isOccupation())
 		{
 			iTotalHeal += pCity->getHealRate();
@@ -7834,19 +7807,16 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 			iTotalHeal += (GC.getFRIENDLY_HEAL_RATE() + getExtraFriendlyHeal());
 		}
 	}
+	CvUnit* pHealUnit = NULL;
 
 	// XXX optimize this (save it?)
-	iBestHeal = 0;
+	int iBestHeal = 0;
 
 	foreach_(CvUnit* pLoopUnit, pPlot->units())
 	{
 		if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
 		{
-			iHeal = pLoopUnit->getSameTileHeal();
-			//if (pLoopUnit->getSameTileHeal() > 0)
-			//{
-			//	iHeal += pLoopUnit->establishModifier();
-			//}
+			const int iHeal = pLoopUnit->getSameTileHeal();
 
 			if (iHeal > iBestHeal)
 			{
@@ -7862,11 +7832,7 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 		{
 			if (pLoopUnit->getTeam() == getTeam() && pLoopUnit->hasHealSupportRemaining()) // XXX what about alliances?
 			{
-				iHeal = pLoopUnit->getAdjacentTileHeal();
-				//if (pLoopUnit->getAdjacentTileHeal() > 0)
-				//{
-				//	iHeal += pLoopUnit->establishModifier();
-				//}
+				const int iHeal = pLoopUnit->getAdjacentTileHeal();
 
 				if (iHeal > iBestHeal)
 				{
@@ -7876,6 +7842,7 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 			}
 		}
 	}
+	iTotalHeal += iBestHeal;
 
 	if (pHealUnit != NULL && bHealCheck)
 	{
@@ -7883,18 +7850,11 @@ int CvUnit::healRate(const CvPlot* pPlot, bool bHealCheck) const
 		pHealUnit->changeExperience100((10));
 	}
 
-	iTotalHeal += iBestHeal;
-	// XXX
 	if (!hasNoSelfHeal())
 	{
-		iTotalHeal = std::max(1, iTotalHeal);
+		return std::max(1, iTotalHeal);
 	}
-	else
-	{
-		iTotalHeal = std::max(0, iTotalHeal);
-	}
-
-	return iTotalHeal;
+	return std::max(0, iTotalHeal);
 }
 
 int CvUnit::getHealRateAsType(const CvPlot* pPlot, bool bHealCheck, UnitCombatTypes eHealAsType) const
@@ -10513,16 +10473,13 @@ bool CvUnit::canConstruct(const CvPlot* pPlot, BuildingTypes eBuilding, bool bTe
 
 bool CvUnit::construct(BuildingTypes eBuilding)
 {
-	CvCity* pCity;
-
 	if (!canConstruct(plot(), eBuilding))
 	{
 		return false;
 	}
+	CvCity* pCity = plot()->getPlotCity();
 
-	pCity = plot()->getPlotCity();
-
-	if (pCity != NULL)
+	if (pCity)
 	{
 		pCity->setNumRealBuilding(eBuilding, 1);
 
@@ -10533,7 +10490,6 @@ bool CvUnit::construct(BuildingTypes eBuilding)
 	{
 		NotifyEntity(MISSION_CONSTRUCT);
 	}
-
 	GET_PLAYER(getOwner()).NoteUnitConstructed(eBuilding);
 
 	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
@@ -10604,6 +10560,7 @@ bool CvUnit::discover(TechTypes eTech)
 	{
 		NotifyEntity(MISSION_DISCOVER);
 	}
+	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
 	kill(true, NO_PLAYER, true);
 
 	return true;
@@ -12411,13 +12368,13 @@ int CvUnit::visibilityRange(const CvPlot* pPlot) const
 	{
 		pPlot = plot();
 	}
+	int iRange = 1 + pPlot->getTerrainElevation() + getExtraVisibilityRange();
 
-	int iImprovementVisibilityChange = 0;
 	if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 	{
-		iImprovementVisibilityChange = GC.getImprovementInfo(pPlot->getImprovementType()).getVisibilityChange();
+		iRange += GC.getImprovementInfo(pPlot->getImprovementType()).getVisibilityChange();
 	}
-	return std::min(GC.getMAX_UNIT_VISIBILITY_RANGE(), GC.getUNIT_VISIBILITY_RANGE() + getExtraVisibilityRange() + iImprovementVisibilityChange);
+	return std::min(GC.getMAX_UNIT_VISIBILITY_RANGE(), iRange);
 }
 
 
@@ -16559,21 +16516,14 @@ void CvUnit::setMoves(int iNewValue)
 
 		if (IsSelected())
 		{
-			if (!canMove())
-			{
-				if (!getGroup()->canAnyMove())
-				{
-					GC.getGame().updateSelectionListInternal();
-				}
-				else
-				{
-					gDLL->getInterfaceIFace()->insertIntoSelectionList(this, false, true);
-				}
-			}
-			else
+			if (canMove())
 			{
 				gDLL->getFAStarIFace()->ForceReset(&GC.getInterfacePathFinder());
 				gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
+			}
+			else if (getGroup()->canAnyMove())
+			{
+				gDLL->getInterfaceIFace()->removeFromSelectionList(this);
 			}
 		}
 
@@ -21213,7 +21163,6 @@ void CvUnit::setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPr
 				gDLL->getEntityIFace()->updatePromotionLayers(getUnitEntity());
 			}
 		}
-		setHealUnitCombatCount();
 	}
 }
 
@@ -23491,7 +23440,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iUpkeep100);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iBuildUpTurns);
 
-	// Read compressed data format
 	for (int iI = GC.getNumUnitCombatInfos() - 1; iI > -1; iI--)
 	{
 		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempOngoingTrainingCount[iI], "ongoingTrainingCount");
@@ -24389,18 +24337,18 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpkeep100);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iBuildUpTurns);
 
-	//	Use condensed format now - only save non-default array elements
-	for(int iI = GC.getNumUnitCombatInfos() - 1; iI > -1; iI--)
+	for (int iI = GC.getNumUnitCombatInfos() - 1; iI > -1; iI--)
 	{
-		const UnitCombatTypes eUnitTag = static_cast<UnitCombatTypes>(iI);
-		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getOngoingTrainingCount(eUnitTag), "ongoingTrainingCount");
-		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getHealUnitCombatTypeTotal(eUnitTag), "healUnitCombatTypeVolume");
-		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getHealUnitCombatTypeAdjacentTotal(eUnitTag), "healUnitCombatTypeAdjacentVolume");
-		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getTrapImmunityUnitCombatCount(eUnitTag), "trapImmunityUnitCombatCount");
-		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getTargetUnitCombatCount(eUnitTag), "targetUnitCombatCount");
-		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTrapDisableUnitCombatType(eUnitTag), "extraTrapDisableUnitCombatType");
-		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTrapAvoidanceUnitCombatType(eUnitTag), "extraTrapAvoidanceUnitCombatType");
-		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraTrapTriggerUnitCombatType(eUnitTag), "extraTrapTriggerUnitCombatType");
+		const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(static_cast<UnitCombatTypes>(iI));
+
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info ? info->m_iOngoingTrainingCount : 0, "ongoingTrainingCount");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info ? info->m_iHealUnitCombatTypeVolume : 0, "healUnitCombatTypeVolume");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info ? info->m_iHealUnitCombatTypeAdjacentVolume : 0, "healUnitCombatTypeAdjacentVolume");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info ? info->m_iTrapImmunityUnitCombatCount : 0, "trapImmunityUnitCombatCount");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info ? info->m_iTargetUnitCombatCount : 0, "targetUnitCombatCount");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info ? info->m_iExtraTrapDisableUnitCombatType : 0, "extraTrapDisableUnitCombatType");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info ? info->m_iExtraTrapAvoidanceUnitCombatType : 0, "extraTrapAvoidanceUnitCombatType");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info ? info->m_iExtraTrapTriggerUnitCombatType : 0, "extraTrapTriggerUnitCombatType");
 	}
 	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bWorker ? m_worker->getAssignedCity() : -1), "m_iAssignedCity");
 
@@ -28644,18 +28592,10 @@ bool CvUnit::hurryFood()
 
 bool CvUnit::sleepForEspionage()
 {
-	if (!canSleep() || !canEspionage(plot(), true))
+	if (!canSleep() || !canEspionage(plot(), true) || getFortifyTurns() == GC.getMAX_FORTIFY_TURNS())
 	{
 		return false;
 	}
-
-	if (getFortifyTurns() == GC.getMAX_FORTIFY_TURNS())
-	{
-		return false;
-	}
-
-	getGroup()->setActivityType(ACTIVITY_SLEEP);
-
 	m_iSleepTimer = 1;
 
 	return true;
@@ -31773,7 +31713,7 @@ int CvUnit::getOngoingTrainingCount(UnitCombatTypes eUnitCombatType) const
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombatType);
 
-	return info == NULL ? 0 : info->m_iOngoingTrainingCount;
+	return info ? info->m_iOngoingTrainingCount : 0;
 }
 
 void CvUnit::changeOngoingTrainingCount(UnitCombatTypes eUnitCombatType, int iChange)
@@ -34252,29 +34192,10 @@ int CvUnit::worsenedProbabilitytoAfflict(PromotionLineTypes eAfflictionLine) con
 }
 #endif // OUTBREAKS_AND_AFFLICTIONS
 
-bool CvUnit::hasHealUnitCombat() const
-{
-	return m_iHealUnitCombatCount > 0;
-}
 
-int CvUnit:: getHealUnitCombatCount() const
+int CvUnit::getHealUnitCombatCount() const
 {
 	return m_iHealUnitCombatCount;
-}
-
-void CvUnit::setHealUnitCombatCount()
-{
-	m_iHealUnitCombatCount = 0;
-	int iTotal = 0;
-	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
-	{
-		iTotal = getHealUnitCombatTypeTotal((UnitCombatTypes)iI);
-		iTotal += getHealUnitCombatTypeAdjacentTotal((UnitCombatTypes)iI);
-		if (iTotal > 0)
-		{
-			m_iHealUnitCombatCount += iTotal;
-		}
-	}
 }
 
 int CvUnit::getHealUnitCombatTypeTotal(UnitCombatTypes eUnitCombatType) const
@@ -34283,19 +34204,7 @@ int CvUnit::getHealUnitCombatTypeTotal(UnitCombatTypes eUnitCombatType) const
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombatType);
 
-	int iEvaluation = (info == NULL ? 0 : info->m_iHealUnitCombatTypeVolume);
-	const int iNum = m_pUnitInfo->getNumHealUnitCombatTypes();
-
-	for (int iI = 0; iI < iNum; iI++)
-	{
-		const UnitCombatTypes eUnitCombat = m_pUnitInfo->getHealUnitCombatType(iI).eUnitCombat;
-		if (eUnitCombat == eUnitCombatType)
-		{
-			iEvaluation += m_pUnitInfo->getHealUnitCombatType(iI).iHeal;
-		}
-	}
-
-	return std::max(0, iEvaluation);
+	return std::max(0, info ? info->m_iHealUnitCombatTypeVolume : 0);
 }
 
 void CvUnit::changeHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombatType, int iChange)
@@ -34306,23 +34215,16 @@ void CvUnit::changeHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombatType, int
 	{
 		UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eUnitCombatType);
 
-		setHealUnitCombatCount();
-
+		if (info->m_iHealUnitCombatTypeVolume > 0)
+		{
+			m_iHealUnitCombatCount -= info->m_iHealUnitCombatTypeVolume;
+		}
 		info->m_iHealUnitCombatTypeVolume += iChange;
-	}
-}
 
-void CvUnit::setHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombatType, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType);
-
-	UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eUnitCombatType, iChange != 0);
-
-	if (info != NULL)
-	{
-		setHealUnitCombatCount();
-
-		info->m_iHealUnitCombatTypeVolume = iChange;
+		if (info->m_iHealUnitCombatTypeVolume > 0)
+		{
+			m_iHealUnitCombatCount += info->m_iHealUnitCombatTypeVolume;
+		}
 	}
 }
 
@@ -34332,19 +34234,7 @@ int CvUnit::getHealUnitCombatTypeAdjacentTotal(UnitCombatTypes eUnitCombatType) 
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombatType);
 
-	int iEvaluation = (info == NULL ? 0 : info->m_iHealUnitCombatTypeAdjacentVolume);
-	const int iNum = m_pUnitInfo->getNumHealUnitCombatTypes();
-
-	for (int iI = 0; iI < iNum; iI++)
-	{
-		const UnitCombatTypes eUnitCombat = m_pUnitInfo->getHealUnitCombatType(iI).eUnitCombat;
-		if (eUnitCombat == eUnitCombatType)
-		{
-			iEvaluation += m_pUnitInfo->getHealUnitCombatType(iI).iAdjacentHeal;
-		}
-	}
-
-	return std::max(0, iEvaluation);
+	return std::max(0, info ? info->m_iHealUnitCombatTypeAdjacentVolume : 0);
 }
 
 void CvUnit::changeHealUnitCombatTypeAdjacentVolume(UnitCombatTypes eUnitCombatType, int iChange)
@@ -34355,23 +34245,16 @@ void CvUnit::changeHealUnitCombatTypeAdjacentVolume(UnitCombatTypes eUnitCombatT
 	{
 		UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eUnitCombatType);
 
-		setHealUnitCombatCount();
-
+		if (info->m_iHealUnitCombatTypeAdjacentVolume > 0)
+		{
+			m_iHealUnitCombatCount -= info->m_iHealUnitCombatTypeAdjacentVolume;
+		}
 		info->m_iHealUnitCombatTypeAdjacentVolume += iChange;
-	}
-}
 
-void CvUnit::setHealUnitCombatTypeAdjacentVolume(UnitCombatTypes eUnitCombatType, int iChange)
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombatType);
-
-	UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eUnitCombatType, iChange != 0);
-
-	if (info != NULL)
-	{
-		setHealUnitCombatCount();
-
-		info->m_iHealUnitCombatTypeAdjacentVolume = iChange;
+		if (info->m_iHealUnitCombatTypeAdjacentVolume > 0)
+		{
+			m_iHealUnitCombatCount += info->m_iHealUnitCombatTypeAdjacentVolume;
+		}
 	}
 }
 
@@ -36666,7 +36549,7 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, MissionTypes eSle
 	}
 
 	// AI buildup evaluation
-	const bool bCanHeal = hasHealUnitCombat() || getSameTileHeal() > 0 || getAdjacentTileHeal() > 0;
+	const bool bCanHeal = getHealUnitCombatCount() > 0 || getSameTileHeal() > 0 || getAdjacentTileHeal() > 0;
 	const bool bMustHeal = getDamage() > 0;
 	int iBestValue = 0;
 
@@ -38532,7 +38415,7 @@ int CvUnit::getTrapImmunityUnitCombatCount(UnitCombatTypes eUnitCombat) const
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombat);
 
-	return info == NULL ? 0 : info->m_iTrapImmunityUnitCombatCount;
+	return info ? info->m_iTrapImmunityUnitCombatCount : 0;
 }
 
 bool CvUnit::hasTrapImmunityUnitCombat(UnitCombatTypes eUnitCombat) const
@@ -38553,19 +38436,12 @@ void CvUnit::changeTrapImmunityUnitCombatCount(UnitCombatTypes eUnitCombat, int 
 	}
 }
 
-int CvUnit::getTargetUnitCombatCount(UnitCombatTypes eUnitCombat) const
+bool CvUnit::hasTargetUnitCombat(UnitCombatTypes eUnitCombat) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eUnitCombat);
-
-	return info == NULL ? 0 : info->m_iTargetUnitCombatCount;
-}
-
-bool CvUnit::hasTargetUnitCombat(UnitCombatTypes eUnitCombat) const
-{
-	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat);
-	return (getTargetUnitCombatCount(eUnitCombat) > 0);
+	return (info ? info->m_iTargetUnitCombatCount > 0 : false);
 }
 
 void CvUnit::changeTargetUnitCombatCount(UnitCombatTypes eUnitCombat, int iChange)
@@ -38574,19 +38450,13 @@ void CvUnit::changeTargetUnitCombatCount(UnitCombatTypes eUnitCombat, int iChang
 
 	if (iChange != 0)
 	{
-		UnitCombatKeyedInfo* info = findOrCreateUnitCombatKeyedInfo(eUnitCombat);
-
-		info->m_iTargetUnitCombatCount += iChange;
+		findOrCreateUnitCombatKeyedInfo(eUnitCombat)->m_iTargetUnitCombatCount += iChange;
 	}
 }
 
 int CvUnit::trapDisableUnitCombatTotal(UnitCombatTypes eCombatType) const
 {
-	int iAmount = m_pUnitInfo->getTrapDisableUnitCombatType(eCombatType);
-
-	iAmount += getExtraTrapDisableUnitCombatType(eCombatType);
-
-	return std::max(0,iAmount);
+	return std::max(0, m_pUnitInfo->getTrapDisableUnitCombatType(eCombatType) + getExtraTrapDisableUnitCombatType(eCombatType));
 }
 
 int CvUnit::getExtraTrapDisableUnitCombatType(UnitCombatTypes eIndex) const
@@ -38595,7 +38465,7 @@ int CvUnit::getExtraTrapDisableUnitCombatType(UnitCombatTypes eIndex) const
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	return (info == NULL ? 0 : info->m_iExtraTrapDisableUnitCombatType);
+	return info ? info->m_iExtraTrapDisableUnitCombatType : 0;
 }
 
 void CvUnit::changeExtraTrapDisableUnitCombatType(UnitCombatTypes eIndex, int iChange)
@@ -38631,7 +38501,7 @@ int CvUnit::getExtraTrapAvoidanceUnitCombatType(UnitCombatTypes eIndex) const
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	return  (info == NULL ? 0 : info->m_iExtraTrapAvoidanceUnitCombatType);
+	return  info ? info->m_iExtraTrapAvoidanceUnitCombatType : 0;
 }
 
 void CvUnit::changeExtraTrapAvoidanceUnitCombatType(UnitCombatTypes eIndex, int iChange)
@@ -38666,7 +38536,7 @@ int CvUnit::getExtraTrapTriggerUnitCombatType(UnitCombatTypes eIndex) const
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	return (info == NULL ? 0 : info->m_iExtraTrapTriggerUnitCombatType);
+	return info ? info->m_iExtraTrapTriggerUnitCombatType : 0;
 }
 
 void CvUnit::changeExtraTrapTriggerUnitCombatType(UnitCombatTypes eIndex, int iChange)
@@ -38696,25 +38566,23 @@ bool CvUnit::isArmedTrap() const
 	return (isTrap() && isArmed());
 }
 
+// pUnit is the unit setting the trap
 void CvUnit::setTrap(CvUnit* pUnit)
 {
-	//pUnit is the unit setting the trap
 	m_bIsArmed = true;
 	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
-		if (pUnit->hasTrapSetWithPromotion((PromotionTypes)iI))
+		if (pUnit->hasTrapSetWithPromotion((PromotionTypes)iI)
+		&& canAcquirePromotion((PromotionTypes)iI, PromotionRequirements::ForFree))
 		{
-			if (canAcquirePromotion((PromotionTypes)iI, PromotionRequirements::ForFree))
-			{
-				setHasPromotion((PromotionTypes)iI, true, true, false, false);
-			}
+			setHasPromotion((PromotionTypes)iI, true, true, false, false);
 		}
 	}
 }
 
 bool CvUnit::isArmed() const
 {
-	return (m_bIsArmed || getImmobileTimer() > 0);
+	return m_bIsArmed || getImmobileTimer() > 0;
 }
 
 void CvUnit::doTrap(CvUnit* pUnit)
@@ -38866,7 +38734,6 @@ bool CvUnit::doTrapDisable(CvUnit* pUnit)
 		setCapturingPlayer(pUnit->getOwner());
 		setCapturingUnit(pUnit);
 	}
-
 	kill(false, pUnit->getOwner(), true);
 	return true;
 }

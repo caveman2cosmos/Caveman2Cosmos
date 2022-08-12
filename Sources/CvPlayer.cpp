@@ -11329,11 +11329,11 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 			{
 				if (pOldCapitalCity != NULL)
 				{
-					pOldCapitalCity->plot()->changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), false, NULL, bUpdatePlotGroups);
+					pOldCapitalCity->plot()->changeAdjacentSight((TeamTypes)iI, 1, false, NULL, bUpdatePlotGroups);
 				}
 				if (pNewCapitalCity != NULL)
 				{
-					pNewCapitalCity->plot()->changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), true, NULL, bUpdatePlotGroups);
+					pNewCapitalCity->plot()->changeAdjacentSight((TeamTypes)iI, 1, true, NULL, bUpdatePlotGroups);
 				}
 			}
 		}
@@ -15077,14 +15077,12 @@ CvCity* CvPlayer::nextCityExternal(int *pIterIdx, bool bRev) const
 CvCity* CvPlayer::firstCityExternal(int *pIterIdx, bool bRev) const
 {
 	CvCity* pResult = !bRev ? m_cities[CURRENT_MAP]->beginIter(pIterIdx) : m_cities[CURRENT_MAP]->endIter(pIterIdx);
+
 	if (pResult == NULL || pResult->isInViewport())
 	{
 		return pResult;
 	}
-	else
-	{
-		return nextCityExternal(pIterIdx, bRev);
-	}
+	return nextCityExternal(pIterIdx, bRev);
 }
 
 
@@ -20549,7 +20547,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		double fMaxTaxIncome = static_cast<double>(m_iMaxTaxIncome);
 		WRAPPER_WRITE(wrapper, "CvPlayer", fMaxTaxIncome);
 	}
-	//	Use condensed format now - only save non-default array elements
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }

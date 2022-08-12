@@ -63,6 +63,7 @@ void deleteInfoArray(std::vector<CvInfoBase*>* array)
 CvGlobals gGlobalsProxy;	// for debugging
 cvInternalGlobals* gGlobals = NULL;
 CvDLLUtilityIFaceBase* gDLL = NULL;
+bool gMiscLogging = false;
 
 #ifdef _DEBUG
 int inDLL = 0;
@@ -2635,18 +2636,6 @@ int cvInternalGlobals::getInfoTypeForString(const char* szType, bool hideAssert)
 /*                                                                                              */
 /* Rearranging the infos map                                                                    */
 /************************************************************************************************/
-/*
-void cvInternalGlobals::setInfoTypeFromString(const char* szType, int idx)
-{
-	FAssertMsg(szType, "null info type string");
-#ifdef _DEBUG
-	InfosMap::const_iterator it = m_infosMap.find(szType);
-	int iExisting = (it!=m_infosMap.end()) ? it->second : -1;
-	FAssertMsg(iExisting==-1 || iExisting==idx || strcmp(szType, "ERROR")==0, CvString::format("xml info type entry %s already exists", szType).c_str());
-#endif
-	m_infosMap[szType] = idx;
-}
-*/
 void cvInternalGlobals::setInfoTypeFromString(const char* szType, int idx)
 {
 	FAssertMsg(szType, "null info type string");
@@ -2981,11 +2970,11 @@ void cvInternalGlobals::setIsBug()
 
 void cvInternalGlobals::refreshOptionsBUG()
 {
-	// Toffer - ToDo - Add the missing bug options for specific logging.
-	gPlayerLogLevel = getBugOptionINT("Autolog__BBAILevel", 0);
-	gTeamLogLevel = gPlayerLogLevel;
-	gCityLogLevel = gPlayerLogLevel;
-	gUnitLogLevel = gPlayerLogLevel;
+	gPlayerLogLevel = getBugOptionINT("Autolog__LogLevelPlayerBBAI", 0);
+	gTeamLogLevel = getBugOptionINT("Autolog__LogLevelTeamBBAI", 0);
+	gCityLogLevel = getBugOptionINT("Autolog__LogLevelCityBBAI", 0);
+	gUnitLogLevel = getBugOptionINT("Autolog__LogLevelUnitBBAI", 0);
+	gMiscLogging = getBugOptionBOOL("Autolog__MiscLogging", false);
 
 	OutputRatios::setBaseOutputWeights(
 		getBugOptionINT("CityScreen__BaseWeightFood", 10),

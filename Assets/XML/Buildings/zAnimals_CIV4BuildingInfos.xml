@@ -273,6 +273,10 @@
 					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
+					<UnitCombatType>UNITCOMBAT_FELINE</UnitCombatType>
+					<iExperience>1</iExperience>
+				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
 			<TechCommerceChanges>
 				<TechCommerceChange>

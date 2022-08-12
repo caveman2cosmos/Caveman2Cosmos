@@ -7,14 +7,15 @@
 		<section id="Autolog">
 			<!-- Move this outside of INI once Mod objects hold options -->
 			<option id="LoggingOn" type="boolean" default="False"/>
+			<option id="Enabled" key="Enabled" type="boolean" default="True" get="isEnabled"/>
+			<option id="Silent" key="Silent" type="boolean" default="False" get="isSilent"/>
 
-			<option id="Enabled" key="Enabled" type="boolean" default="True" get="isEnabled" set="setEnabled" label="Enable Logging"
-				help="When checked, various game events are logged to a text file using eotinb's AutoLog mod."/>
+			<list id="LogLevelPlayerBBAI" key="LogLevelPlayerBBAI" type="int" default="0" listType="int" values="0,1,2,3" get="getLogLevelPlayerBBAI"/>
+			<list id="LogLevelTeamBBAI" key="LogLevelTeamBBAI" type="int" default="0" listType="int" values="0,1,2,3" get="getLogLevelTeamBBAI"/>
+			<list id="LogLevelCityBBAI" key="LogLevelCityBBAI" type="int" default="0" listType="int" values="0,1,2,3" get="getLogLevelCityBBAI"/>
+			<list id="LogLevelUnitBBAI" key="LogLevelUnitBBAI" type="int" default="0" listType="int" values="0,1,2,3" get="getLogLevelUnitBBAI"/>
 
-			<option id="Silent" key="Silent" type="boolean" default="False" get="isSilent" set="setSilent" label="Start Automatically"
-				help="When checked, the logger is automatically started with no in-game message."/>
-
-			<list id="BBAILevel" key="BBAILevel" type="int" default="0" listType="int" values="0,1,2,3" get="getBBAILevel" set="setBBAILevel"/>
+			<option id="MiscLogging" key="MiscLogging" type="boolean" default="True"/>
 
 			<!-- Log file -->
 			<option id="DefaultFileName" key="Default File Name" type="boolean" default="True" get="isUseDefaultFileName" set="setUseDefaultFileName"

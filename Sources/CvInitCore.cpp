@@ -1074,7 +1074,8 @@ CustomMapOptionTypes CvInitCore::getCustomMapOption(int iOptionID) const
 void CvInitCore::setCustomMapOption(int iOptionID, CustomMapOptionTypes eCustomMapOption)
 {
 	FASSERT_BOUNDS(0, m_iNumCustomMapOptions, iOptionID);
-	if ( checkBounds(iOptionID, 0, m_iNumCustomMapOptions) )
+
+	if (checkBounds(iOptionID, 0, m_iNumCustomMapOptions))
 	{
 		m_aeCustomMapOptions[iOptionID] = eCustomMapOption;
 	}
@@ -2164,17 +2165,28 @@ void CvInitCore::reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID)
 void CvInitCore::calculateAssetCheckSum()
 {
 	m_uiAssetCheckSum = GC.getAssetCheckSum();
-	//OutputDebugString(CvString::format("Asset CheckSum calculateAssetCheckSum:\n%I32u = m_uiAssetCheckSum\n%I32u = m_uiSavegameAssetCheckSum", m_uiAssetCheckSum, m_uiSavegameAssetCheckSum).c_str());
-
-#ifdef _DEBUG
-	// Perform some validation checks of the loaded info classes (add as needed)
-	CvTechInfo::validate();
-#endif
+	/*
+	OutputDebugString(
+		CvString::format(
+			"Asset CheckSum calculateAssetCheckSum:\n%I32u = m_uiAssetCheckSum\n%I32u = m_uiSavegameAssetCheckSum",
+			m_uiAssetCheckSum, m_uiSavegameAssetCheckSum
+		)
+		.c_str()
+	);
+	*/
 }
 
 void CvInitCore::checkVersions()
 {
-	//OutputDebugString(CvString::format("Asset CheckSum checkVersions:\n%I32u = m_uiAssetCheckSum\n%I32u = m_uiSavegameAssetCheckSum", m_uiAssetCheckSum, m_uiSavegameAssetCheckSum).c_str());
+	/*
+	OutputDebugString(
+		CvString::format(
+			"Asset CheckSum checkVersions:\n%I32u = m_uiAssetCheckSum\n%I32u = m_uiSavegameAssetCheckSum",
+			m_uiAssetCheckSum, m_uiSavegameAssetCheckSum
+		)
+		.c_str()
+	);
+	*/
 	// If assets changed
 	if (m_uiSavegameAssetCheckSum != m_uiAssetCheckSum)
 	{

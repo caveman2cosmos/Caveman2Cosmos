@@ -147,10 +147,17 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT</Tag>
-		<English>[ICON_BULLET]Damage that %s1_UNITCOMBAT: %d2_Mod%%. Heals in %d3 Turns.</English>
+		<English>[ICON_BULLET]Damage that %s1_UNITCOMBAT: %d2_Mod%%. Heals in %d3 Turn(s).</English>
 		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. se soigne en %d3 Tours.</French>
 		<Polish>[ICON_BULLET]Obrażenia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. Uleczone w %d3 tur.</Polish>
 		<Russian>[ICON_BULLET]Урон %s1_UNITCOMBAT: %d2_Mod%%. Лечит за %d3 ходов.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT_NOHEAL</Tag>
+		<English>[ICON_BULLET]Damage that %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</English>
+		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</French>
+		<Polish>[ICON_BULLET]Obrażenia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</Polish>
+		<Russian>[ICON_BULLET]Урон %s1_UNITCOMBAT: %d2_Mod%%. [COLOR_WARNING_TEXT]Cannot heal here.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_FIRST_STRIKES</Tag>

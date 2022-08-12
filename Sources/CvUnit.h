@@ -2089,7 +2089,6 @@ protected:
 	bool isCombatVisible(const CvUnit* pDefender) const;
 	void resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition& kBattle, bool bSamePlot = false);
 	void resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionDefinition& kBattle);
-	void checkRemoveSelectionAfterAttack();
 
 	// ------ BEGIN InfluenceDrivenWar -------------------------------
 	float doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal);
@@ -2449,15 +2448,11 @@ public:
 	int worsenedProbabilitytoAfflict(PromotionLineTypes eAfflictionLine) const;
 #endif // OUTBREAKS_AND_AFFLICTIONS
 
-	bool hasHealUnitCombat() const;
 	int getHealUnitCombatCount() const;
-	void setHealUnitCombatCount();
 	int getHealUnitCombatTypeTotal(UnitCombatTypes eUnitCombatType) const;
 	void changeHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombatType, int iChange);
-	void setHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombatType, int iChange);
 	int getHealUnitCombatTypeAdjacentTotal(UnitCombatTypes eUnitCombatType) const;
 	void changeHealUnitCombatTypeAdjacentVolume(UnitCombatTypes eUnitCombatType, int iChange);
-	void setHealUnitCombatTypeAdjacentVolume(UnitCombatTypes eUnitCombatType, int iChange);
 
 	void doSetUnitCombats();
 	void doSetFreePromotions(bool bAdding, TraitTypes eTrait = NO_TRAIT);
@@ -2903,7 +2898,6 @@ public:
 	bool hasTrapImmunityUnitCombat(UnitCombatTypes eUnitCombat) const;
 	void changeTrapImmunityUnitCombatCount(UnitCombatTypes eUnitCombat, int iChange);
 
-	int getTargetUnitCombatCount(UnitCombatTypes eUnitCombat) const;
 	bool hasTargetUnitCombat(UnitCombatTypes eUnitCombat) const;
 	void changeTargetUnitCombatCount(UnitCombatTypes eUnitCombat, int iChange);
 

@@ -311,7 +311,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	{
 		if (GET_TEAM(getTeam()).isVassal((TeamTypes)iI))
 		{
-			pPlot->changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), true, NULL, false);
+			pPlot->changeAdjacentSight((TeamTypes)iI, 1, true, NULL, false);
 		}
 	}
 
@@ -1289,7 +1289,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	{
 		if (GET_TEAM(kOwner.getTeam()).isVassal((TeamTypes)iI))
 		{
-			pPlot->changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), false, NULL, false);
+			pPlot->changeAdjacentSight((TeamTypes)iI, 1, false, NULL, false);
 		}
 	}
 
@@ -1297,7 +1297,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	{
 		if (abEspionageVisibility[iI])
 		{
-			pPlot->changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), false, NULL, false);
+			pPlot->changeAdjacentSight((TeamTypes)iI, 1, false, NULL, false);
 		}
 	}
 
@@ -1313,7 +1313,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 		{
 			if (GET_TEAM(kOwner.getTeam()).isHasEmbassy((TeamTypes)iI))
 			{
-				pPlot->changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), false, NULL, false);
+				pPlot->changeAdjacentSight((TeamTypes)iI, 1, false, NULL, false);
 			}
 		}
 		kOwner.findNewCapital();
@@ -8146,16 +8146,10 @@ void CvCity::changeHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombat, int iCh
 	m_paiHealUnitCombatTypeVolume[eUnitCombat] += iChange;
 }
 
-void CvCity::setHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombat, int iChange)
-{
-	m_paiHealUnitCombatTypeVolume[eUnitCombat] = iChange;
-}
-
 int CvCity::getEspionageHealthCounter() const
 {
 	return std::min(8, m_iEspionageHealthCounter);
 }
-
 
 void CvCity::changeEspionageHealthCounter(int iChange)
 {

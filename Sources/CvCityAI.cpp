@@ -1663,7 +1663,10 @@ void CvCityAI::AI_chooseProduction()
 			}
 		}
 
-		if (!bChooseWorker && (iWorkersNeeded > 0 || iNeededWorkersInArea > iWorkersInArea / 3 && AI_totalBestBuildValue(pArea) > 0 /*Fuyu: anything bigger than 0 is ok*/))
+		if (!bChooseWorker && iWorkersInArea <= iNeededWorkersInArea
+		&& (iWorkersNeeded > 0 || iNeededWorkersInArea > iWorkersInArea * 4/5)
+		// Fuyu: anything bigger than 0 is ok
+		&& AI_totalBestBuildValue(pArea) > 0)
 		{
 			if (AI_chooseUnit("capital with no workers", UNITAI_WORKER))
 			{
@@ -3863,22 +3866,23 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 		}
 	}
 
-	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
+	for (int iI = GC.getNumUnitInfos() - 1; iI > -1; iI--)
 	{
-		const UnitTypes eLoopUnit = (UnitTypes)iI;
-		if (bGrowMore && isFoodProduction(eLoopUnit) || !AI_meetsUnitSelectionCriteria(eLoopUnit, &tempCriteria))
+		const UnitTypes eUnitX = static_cast<UnitTypes>(iI);
+		if (bGrowMore && isFoodProduction(eUnitX) || !AI_meetsUnitSelectionCriteria(eUnitX, &tempCriteria))
 		{
 			continue;
 		}
-		const CvUnitInfo& unit = GC.getUnitInfo(eLoopUnit);
+		const CvUnitInfo& unit = GC.getUnitInfo(eUnitX);
 
 		if (unit.getNotUnitAIType(eUnitAI)
-			|| tempCriteria.m_eIgnoreAdvisor != NO_ADVISOR && unit.getAdvisorType() == tempCriteria.m_eIgnoreAdvisor
-			|| !canTrain(eLoopUnit))
+		|| tempCriteria.m_eIgnoreAdvisor != NO_ADVISOR
+		&& tempCriteria.m_eIgnoreAdvisor == unit.getAdvisorType()
+		|| !canTrain(eUnitX))
 		{
 			continue;
 		}
-		int iValue = player.AI_unitValue(eLoopUnit, eUnitAI, area(), &tempCriteria);
+		int iValue = player.AI_unitValue(eUnitX, eUnitAI, area(), &tempCriteria);
 
 		if (iValue > 0)
 		{
@@ -3890,13 +3894,13 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 			// Allow order of magnitude
 			iValue *= 100; // Need it multiplying up so that truncation errors don't render.
 
-			iValue += getProductionExperience(eLoopUnit);
+			iValue += getProductionExperience(eUnitX);
 
 			// KOSHLING - this need rework to take actual promotion values. *** TODO ***
 			// May need some caching to do so at appropriate performance levels.
 			const int iCombatType = unit.getUnitCombatType();
 			int iPromotionValue = 0;
-			for (int iJ = 0; iJ < GC.getNumPromotionInfos(); iJ++)
+			for (int iJ = GC.getNumPromotionInfos() - 1; iJ > -1; iJ--)
 			{
 				// Unit
 				if (unit.getFreePromotions(iJ))
@@ -3927,7 +3931,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 				// Traits
 				if (iCombatType != NO_UNITCOMBAT)
 				{
-					for (int iK = 0; iK < GC.getNumTraitInfos(); iK++)
+					for (int iK = GC.getNumTraitInfos() - 1; iK > -1; iK--)
 					{
 						if (hasTrait((TraitTypes)iK) && GC.getTraitInfo((TraitTypes)iK).isFreePromotionUnitCombats(iJ, iCombatType))
 						{
@@ -3962,7 +3966,7 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 			if (iValue > iBestValue)
 			{
 				iBestValue = iValue;
-				eBestUnit = eLoopUnit;
+				eBestUnit = eUnitX;
 			}
 		}
 	}
@@ -4278,8 +4282,7 @@ bool CvCityAI::AI_canRushBuildingConstruction(BuildingTypes building) const
 }
 
 
-//	KOSHLING Mod - pre-calculate and cache building values for all focuses
-//
+// KOSHLING Mod - pre-calculate and cache building values for all focuses
 //	Simple class to hold the calculated values for one building type and city
 #ifdef _DEBUG
 //#define VALIDATE_BUILDING_CACHE_CONSISTENCY
@@ -11512,10 +11515,9 @@ void CvCityAI::AI_updateWorkersNeededHere()
 
 	iWorkersNeeded = std::max((iUnimprovedWorkedPlotCount + 1) / 2, iWorkersNeeded);
 
-	m_iWorkersNeeded = iWorkersNeeded;
+	m_iWorkersNeeded = std::max(0, iWorkersNeeded - plot()->plotCount(PUF_isUnitAIType, UNITAI_WORKER, -1, NULL, getOwner(), getTeam(), PUF_isNoMissionAI, -1, -1));
 
 	FASSERT_NOT_NEGATIVE(iWorkersNeeded);
-	OutputDebugString(CvString::format("Player %d, city: %S, workers have: %d, workers needed: %d\n", getOwner(), getName().GetCString(), getNumWorkers(), iWorkersNeeded).c_str());
 	if (gCityLogLevel > 2)
 	{
 		logBBAI("Player %d, city: %S, workers have: %d, workers needed: %d", getOwner(), getName().GetCString(), getNumWorkers(), iWorkersNeeded);

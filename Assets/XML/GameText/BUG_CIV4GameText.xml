@@ -1189,16 +1189,6 @@
 		<Russian>Øèðîêèé ýêðàí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__BBAILEVEL_HOVER</Tag>
-		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
-		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__BBAILEVEL_TEXT</Tag>
-		<English>BBAI logging level</English>
-		<Spanish>Nivel de registro de BBAI</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__COLORCODING_HOVER</Tag>
 		<English>When checked, comments are color-coded for forum posts.</English>
 		<French>Lorsque activé, les commentaires sont colorés pour les forums.</French>
@@ -1245,7 +1235,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__ENABLED_TEXT</Tag>
-		<English>Enable Logging</English>
+		<English>Enable BBAI Logging</English>
 		<French>Activer le log</French>
 		<German>Protokollierung aktivieren</German>
 		<Italian>Abilita Registro Automatico</Italian>
@@ -1288,13 +1278,57 @@
 		<Russian>Ïóòü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FORMAT_HOVER</Tag>
-		<English>The format of the log output.</English>
-		<French>Le style du log.</French>
-		<German>Bestimmt die Formatierung, in der das Protokoll erstellt wird</German>
-		<Italian>Lo stile di visualizzazione del registro.</Italian>
-		<Spanish>Formato de la salida del registro.</Spanish>
-		<Russian>Ôîðìàò âûäà÷è â æóðíàë.</Russian>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FILEPATH_HOVER</Tag>
+		<English>Directory where log file resides (fully qualified path, i.e. C:\folder\subfolder or blank).</English>
+		<French>Le Répertoire ou le fichier de log sera sauvegardé (chemin complet, p.ex. C:\folder\subfolder ou vide).</French>
+		<German>Verzeichnis, in dem sich die Protokolldatei befindet (komplette Pfadangabe, d.h. C:\Ordner\Unterordner oder leer lassen)</German>
+		<Italian>Cartella dove è localizzato il file di registro (percorso completo (ad esempio C:\cartella\sottocartella) o vuoto).</Italian>
+		<Spanish>Directorio donde reside el archivo de registro (ruta completa, p. ej. C:\carpeta\subcarpeta o vacío).</Spanish>
+		<Russian>Êàòàëîã, â êîòîðîì ôàéë æóðíàëà ðàñïîëîæåí (ïîëíûé ïóòü, ò.å. C:\folder\subfolder èëè ïóñòî).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELCITYBBAI_HOVER</Tag>
+		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELCITYBBAI_TEXT</Tag>
+		<English>City log</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELPLAYERBBAI_HOVER</Tag>
+		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELPLAYERBBAI_TEXT</Tag>
+		<English>Player log</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELTEAMBBAI_HOVER</Tag>
+		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELTEAMBBAI_TEXT</Tag>
+		<English>Team log</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELUNITBBAI_HOVER</Tag>
+		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELUNITBBAI_TEXT</Tag>
+		<English>Unit log</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__MISCLOGGING_TEXT</Tag>
+		<English>Misc Logging</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__MISCLOGGING_HOVER</Tag>
+		<English>Enables a wide variation of specialized logs.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FORMAT_LIST</Tag>

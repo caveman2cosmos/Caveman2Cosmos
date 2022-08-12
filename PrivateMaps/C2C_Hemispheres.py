@@ -23,6 +23,9 @@ def isAdvancedMap():
 	"This map should not show up in simple mode"
 	return 0
 
+def getNumHiddenCustomMapOptions():
+	return 0
+
 def getNumCustomMapOptions():
 	return 3
 

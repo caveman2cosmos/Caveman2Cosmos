@@ -1967,7 +1967,7 @@ int CvPlot::seeFromLevel(TeamTypes eTeam) const
 
 	if (!isWater())
 	{
-		iLevel += 1 + getElevationLevel();
+		iLevel += 1 + getTerrainElevation();
 	}
 	else if (GET_TEAM(eTeam).isExtraWaterSeeFrom())
 	{
@@ -1978,40 +1978,37 @@ int CvPlot::seeFromLevel(TeamTypes eTeam) const
 
 int CvPlot::seeThroughLevel() const
 {
-	int iLevel = 0;
+	int iLevel = isWater() ? 0 : 1 + getTerrainElevation();
 
 	if (getFeatureType() != NO_FEATURE)
 	{
 		iLevel += GC.getFeatureInfo(getFeatureType()).getSeeThroughChange();
-	}
-
-	if (!isWater())
-	{
-		iLevel++;
-
-		if (isAsPeak())
-		{
-			iLevel += GC.getPEAK_SEE_THROUGH_CHANGE();
-		}
-		else if (isHills())
-		{
-			iLevel += GC.getHILLS_SEE_THROUGH_CHANGE();
-		}
 	}
 	return iLevel;
 }
 
 // Toffer - Quite basic setup:
 //	Water/Flatland < Hill < Peak.
-int CvPlot::getElevationLevel() const
+int CvPlot::getElevationLevel(const bool bExtra) const
+{
+	int iLevel = 3 * getTerrainElevation();
+
+	if (bExtra && getImprovementType() != NO_IMPROVEMENT)
+	{
+		iLevel += GC.getImprovementInfo(getImprovementType()).getSeeFrom();
+	}
+	return iLevel;
+}
+
+int CvPlot::getTerrainElevation() const
 {
 	if (isAsPeak())
 	{
-		return GC.getPEAK_SEE_FROM_CHANGE();
+		return 2;
 	}
 	if (isHills())
 	{
-		return GC.getHILLS_SEE_FROM_CHANGE();
+		return 1;
 	}
 	return 0;
 }
@@ -2045,12 +2042,7 @@ void CvPlot::changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, C
 	}
 	aSeeInvisibleTypes.push_back(NO_INVISIBLE);
 
-	const bool bAerial = (pUnit != NULL && pUnit->getDomainType() == DOMAIN_AIR);
-
-	if (!bAerial)
-	{
-		iRange++; // check one extra outer ring
-	}
+	const bool bAerial = pUnit && pUnit->getDomainType() == DOMAIN_AIR;
 
 	foreach_(const InvisibleTypes eInvisible, aSeeInvisibleTypes)
 	{
@@ -2092,11 +2084,12 @@ bool CvPlot::canSeePlot(const CvPlot* pPlot, TeamTypes eTeam) const
 	//find displacement
 	const int dx = dxWrap(pPlot->getX() - getX());
 	const int dy = dyWrap(pPlot->getY() - getY());
-
-	return canSeeDisplacementPlot(eTeam, dx, dy, abs(dx), abs(dy), true);
+	int iDummy1 = 0;
+	int iDummy2 = 0;
+	return canSeeDisplacementPlot(eTeam, dx, dy, dx, dy, iDummy1, iDummy2, true);
 }
 
-bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int dx0, int dy0, bool bEndPoint) const
+bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int dx0, int dy0, int& iTopElevation, int& iTopElevationDistance, bool bEndPoint) const
 {
 	// Base case is current plot
 	if (dx == 0 && dy == 0)
@@ -2108,6 +2101,18 @@ bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int dx0, in
 	if (seePlot == NULL)
 	{
 		return false;
+	}
+	bool bCanFail = true;
+	if (!bEndPoint)
+	{
+		iTopElevation = seePlot->getElevationLevel();
+		iTopElevationDistance = std::max(abs(dx), abs(dy));
+
+		if (2*iTopElevationDistance >= std::max(abs(dx0), abs(dy0))
+		&& plotXY(getX(), getY(), dx0, dy0)->getElevationLevel() > iTopElevation)
+		{
+			bCanFail = false; // This is a guess for now
+		}
 	}
 	int step1[] = { 0, 0 };
 	int step2[] = { dx, dy };
@@ -2143,46 +2148,109 @@ bool CvPlot::canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int dx0, in
 				}
 			}
 		}
-	}
+		int iTopElevation1 = 0;
+		int iTopElevationDistance1 = 0;
+		const bool bFailedStep1 = !canSeeDisplacementPlot(eTeam, step1[0], step1[1], dx0, dy0, iTopElevation1, iTopElevationDistance1);
 
-	if (iSteps > 0)
-	{
-		bool bFailedStep1 = !canSeeDisplacementPlot(eTeam, step1[0], step1[1], dx0, dy0);
-
+		bool bFailed = false;
+		bool bTestCanFail = false;
 		if (iSteps == 2)
 		{
-			if (bFailedStep1
-			&& (step1[0] != 0 && 2*abs(step1[0]) <= dx0 || step1[1] != 0 && 2*abs(step1[1]) <= dy0))
+			if (bFailedStep1 && 2*abs(step1[0]) < abs(dx0) && 2*abs(step1[1]) < abs(dy0))
 			{
-				return false;
+				if (bCanFail)
+				{
+					return false;
+				}
+				bFailed = true;
 			}
+			int iTopElevation2 = 0;
+			int iTopElevationDistance2 = 0;
 
-			if (!canSeeDisplacementPlot(eTeam, step2[0], step2[1], dx0, dy0)
-			&& (bFailedStep1 || step2[0] != step2[1] && (2*abs(step2[0]) >= dx0 || 2*abs(step2[1]) >= dy0)))
+			if (!canSeeDisplacementPlot(eTeam, step2[0], step2[1], dx0, dy0, iTopElevation2, iTopElevationDistance2))
 			{
-				return false;
+				if (bFailedStep1)
+				{
+					if (bCanFail)
+					{
+						return false;
+					}
+					bFailed = true;
+				}
+				if (!bFailed && 2*abs(step2[0]) > abs(dx0) && 2*abs(step2[1]) > abs(dy0))
+				{
+					if (bCanFail)
+					{
+						return false;
+					}
+					bFailed = true;
+				}
+			}
+			if (iTopElevation1 < iTopElevation2)
+			{
+				if (iTopElevation1 > iTopElevation)
+				{
+					iTopElevation = iTopElevation1;
+					iTopElevationDistance = iTopElevationDistance1;
+					bTestCanFail = true;
+				}
+			}
+			else if (iTopElevation2 > iTopElevation)
+			{
+				iTopElevation = iTopElevation2;
+				iTopElevationDistance = iTopElevationDistance2;
+				bTestCanFail = true;
 			}
 		}
 		else if (bFailedStep1)
 		{
+			if (bCanFail)
+			{
+				return false;
+			}
+			bFailed = true;
+		}
+		else if (iTopElevation1 > iTopElevation)
+		{
+			iTopElevation = iTopElevation1;
+			iTopElevationDistance = iTopElevationDistance1;
+			bTestCanFail = true;
+		}
+
+		if (bTestCanFail)
+		{
+			if (plotXY(getX(), getY(), dx0, dy0)->getElevationLevel() > iTopElevation && 2*iTopElevationDistance >= std::max(abs(dx0), abs(dy0)))
+			{
+				return true;
+			}
+		}
+		else if (bFailed)
+		{
 			return false;
+		}
+		else if (!bCanFail)
+		{
+			return true;
 		}
 	}
 
 	if (bEndPoint)
 	{
-		if (iSteps > 0)
+		const int iMyElevation = getElevationLevel(true);
+		if (iMyElevation < iTopElevation)
 		{
-			int iPrevHeight = plotXY(getX(), getY(), step1[0], step1[1])->getElevationLevel();
-
-			if (iSteps == 2)
-			{
-				iPrevHeight = std::min(iPrevHeight, plotXY(getX(), getY(), step2[0], step2[1])->getElevationLevel());
-			}
-			if (seePlot->getElevationLevel() < iPrevHeight)
+			return false;
+		}
+		if (iMyElevation == iTopElevation)
+		{
+			if (seePlot->getElevationLevel() < iTopElevation)
 			{
 				return false;
 			}
+		}
+		else if (seePlot->getElevationLevel() < iTopElevation && 2*iTopElevationDistance >= std::max(dx0, dy0))
+		{
+			return false;
 		}
 	}
 	else if (seeFromLevel(eTeam) < seePlot->seeThroughLevel())
@@ -2200,37 +2268,20 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 	{
 		const CvCity* pCity = getPlotCity();
 
-		if (pCity != NULL)
+		if (pCity)
 		{
-			// Vassal
+			const CvTeam& team = GET_TEAM(pCity->getTeam());
+
 			for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
 			{
-				if (GET_TEAM(getTeam()).isVassal((TeamTypes)iI))
+				// Vassal
+				if (GET_TEAM(getTeam()).isVassal((TeamTypes)iI)
+				// Espionage - Enough EPs gives you visibility into someone's cities
+				|| pCity->getEspionageVisibility((TeamTypes)iI)
+				// Embassy Allows Players to See Capitals
+				|| pCity->isCapital() && team.isHasEmbassy((TeamTypes)iI))
 				{
-					changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
-				}
-			}
-
-			// EspionageEffect
-			for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
-			{
-				if (pCity->getEspionageVisibility((TeamTypes)iI))
-				{
-					// Passive Effect: enough EPs gives you visibility into someone's cities
-					changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
-				}
-			}
-
-			// Afforess - Embassy Allows Players to See Capitals
-			if (pCity->isCapital())
-			{
-				TeamTypes pTeam = pCity->getTeam();
-				for (int iI = 0; iI < MAX_PC_TEAMS; ++iI)
-				{
-					if (GET_TEAM(pTeam).isHasEmbassy((TeamTypes)iI))
-					{
-						changeAdjacentSight((TeamTypes)iI, GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
-					}
+					changeAdjacentSight((TeamTypes)iI, 1, bIncrement, NULL, bUpdatePlotGroups);
 				}
 			}
 		}
@@ -2239,7 +2290,7 @@ void CvPlot::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 	// Owned
 	if (isOwned())
 	{
-		changeAdjacentSight(getTeam(), GC.getPLOT_VISIBILITY_RANGE(), bIncrement, NULL, bUpdatePlotGroups);
+		changeAdjacentSight(getTeam(), 1, bIncrement, NULL, bUpdatePlotGroups);
 	}
 
 	// Unit
@@ -2295,9 +2346,7 @@ void CvPlot::updateSeeFromSight(bool bIncrement, bool bUpdatePlotGroups)
 
 	const int iRange = GC.getMAX_UNIT_VISIBILITY_RANGE() + 1;
 
-	algo::for_each(rect(iRange, iRange),
-		bind(&CvPlot::updateSight, _1, bIncrement, bUpdatePlotGroups)
-	);
+	algo::for_each(rect(iRange, iRange), bind(&CvPlot::updateSight, _1, bIncrement, bUpdatePlotGroups));
 }
 
 
@@ -6026,7 +6075,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 			if (isOwned())
 			{
-				changeAdjacentSight(getTeam(), GC.getPLOT_VISIBILITY_RANGE(), false, NULL, bUpdatePlotGroup);
+				changeAdjacentSight(getTeam(), 1, false, NULL, bUpdatePlotGroup);
 
 				if (area())
 				{
@@ -6081,7 +6130,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 
 			if (isOwned())
 			{
-				changeAdjacentSight(getTeam(), GC.getPLOT_VISIBILITY_RANGE(), true, NULL, bUpdatePlotGroup);
+				changeAdjacentSight(getTeam(), 1, true, NULL, bUpdatePlotGroup);
 
 				if (area())
 				{
@@ -12598,8 +12647,13 @@ int CvPlot::getTerrainTurnDamage(const CvUnit* pUnit) const
 	}
 	if (getFeatureType() != NO_FEATURE)
 	{
-		//Oasis or Flood Plain
+		// No damage on Oasis or Flood Plain or Ancient Forest
 		if (GC.getFeatureInfo(getFeatureType()).getYieldChange(YIELD_FOOD) > 0)
+		{
+			return 0;
+		}
+		// No damage on Cave
+		if (getFeatureType() == GC.getInfoTypeForString("FEATURE_CAVES"))
 		{
 			return 0;
 		}
