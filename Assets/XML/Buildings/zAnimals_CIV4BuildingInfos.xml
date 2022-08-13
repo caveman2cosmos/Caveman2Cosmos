@@ -8,12 +8,16 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_AMPHIBIAN_POND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_MILITARY</Advisor>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FOLKLORE_AMPHIBIAN</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>306</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -117,6 +121,17 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FOLKLORE_ARCTICFOX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_DHOLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_DOG</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_EWOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_MANEDWOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GREY_WOLF</BuildingType>
+			</PrereqOrBuildings>
+			<iCost>92</iCost>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -158,6 +173,15 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_FOLKLORE_AARDVARK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_ANTEATER</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_ARMADILLO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BEAVER</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GLYPTO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</BuildingType>
+			</PrereqOrBuildings>
+			<iCost>70</iCost>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<UnitCombatProdModifiers>
 				<UnitCombatProdModifier>
@@ -182,6 +206,55 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_CAIMAN</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_CROCODILE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_GATOR_ASIAN</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_GHARIAL</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_HYENA</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_NILECROC</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_WEASEL</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_RIVER_CROC_LARGE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_RIVER_CROC</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_SALTWATER_CROC_LARGE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_SALTWATER_CROC</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
+			<iCost>306</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
