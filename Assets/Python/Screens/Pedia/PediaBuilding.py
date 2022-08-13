@@ -443,7 +443,7 @@ class PediaBuilding:
 			else:
 				bPlus = True
 			if aList3:
-				screen.attachLabel(panelName, "", szBracketL + szfont2b + "Own")
+				screen.attachLabel(panelName, "", szBracketL + szfont2b + TRNSLTR.getText("TXT_KEY_PEDIA_OWN", ()))
 				for i in range(len(aList3)):
 					iType, iAmount = aList3[i]
 					screen.attachLabel(panelName, "", szfont4b + " " + str(iAmount))
