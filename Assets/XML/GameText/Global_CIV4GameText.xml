@@ -19676,6 +19676,7 @@
 		<Tag>TXT_KEY_PASSAGE</Tag>
 		<English>[ICON_BULLET]This unit can enter territories you have a Right of Passage or Open Borders agreement with.</English>
 		<French>[ICON_BULLET]Cette unité peut entrer à l'intérieur des frontières lorsqu'il existe un droit de passage ou un Accord de frontières ouvertes</French>
+		<German>[ICON_BULLET]kann Gebiete von Nationen betreten, mit denen eine Durchreiseerlaubnis oder offene Grenzen vereinbart wurden</German>		
 		<Russian>[ICON_BULLET]Этот отряд может входить на территории, с владельцами которых у вас есть право на проход или соглашение об открытых границах.</Russian>
 	</TEXT>
 	<TEXT>
@@ -28328,7 +28329,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_DEFENDS_UNIT_FIRST</Tag>
 		<English>[ICON_BULLET]Defends first against %s1_unit_list</English>
 		<French>[ICON_BULLET]Défend d'abord contre %s1_unit_list</French>
-		<German>[ICON_BULLET]Nimmt als Erstes die Verteidigung gegen folgende Einheiten auf: %s1_unit_list</German>
+		<German>[ICON_BULLET]verteidigt im Kampf vorrangig gegen: %s1_unit_list</German>
 		<Italian>[ICON_BULLET]Difende primariamente contro %s1_unit_list</Italian>
 		<Spanish>[ICON_BULLET]Defiende primero contra %s1_unit_list</Spanish>
 	</TEXT>
@@ -28400,7 +28401,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_HIDDEN_NATIONALITY</Tag>
 		<English>[ICON_BULLET]Hidden Nationality</English>
 		<French>[ICON_BULLET]Nationalité cachée</French>
-		<German>[ICON_BULLET]Versteckte Nationalität</German>
+		<German>[ICON_BULLET]versteckte Nationalität</German>
 		<Italian>[ICON_BULLET]Nazionalità nascosta</Italian>
 		<Spanish>[ICON_BULLET]Nacionalidad oculta</Spanish>
 	</TEXT>
@@ -28440,7 +28441,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_IGNORE_TERRAIN</Tag>
 		<English>[ICON_BULLET]Ignores Terrain Movement Costs</English>
 		<French>[ICON_BULLET]Ignore les pénalités de mouvement du terrain</French>
-		<German>[ICON_BULLET]Ignoriert Fortbewegungskosten auf Gelände</German>
+		<German>[ICON_BULLET]ignoriert Fortbewegungskosten auf Gelände</German>
 		<Italian>[ICON_BULLET]Ignora i costi di movimento sul terreno</Italian>
 		<Spanish>[ICON_BULLET]No le afectan los costes de movimiento por terreno</Spanish>
 	</TEXT>
@@ -28472,7 +28473,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_INVISIBLE_MOST</Tag>
 		<English>[ICON_BULLET]Invisible to Most Units</English>
 		<French>[ICON_BULLET]Invisible pour la plupart des unités</French>
-		<German>[ICON_BULLET]Für die meisten Einheiten unsichtbar</German>
+		<German>[ICON_BULLET]für die meisten Einheiten unsichtbar</German>
 		<Italian>[ICON_BULLET]Invisibile alla maggior parte delle unità</Italian>
 		<Spanish>[ICON_BULLET]Invisible para la mayoría de las unidades</Spanish>
 	</TEXT>
@@ -28579,7 +28580,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<!-- %s1_Text = can be any building, bonus, civic etc -->
 		<English>[COLOR_WARNING_TEXT]Requires %s1_Text[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert : %s1_Text[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Erfordert: %s1_Text[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]erfordert: %s1_Text[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Richiede %s1_Text[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Text[COLOR_REVERT]</Spanish>
 		<Russian>[COLOR_WARNING_TEXT]Требует %s1_Text[COLOR_REVERT]</Russian>

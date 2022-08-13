@@ -759,6 +759,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_INSIDIOUSNESS</Tag>
 		<English>[ICON_BULLET]Increases local Insidiousness by %s1_amount%% (Helps Criminals avoid discovery)</English>
 		<French>[ICON_BULLET]Donne à toutes les unités criminelles produites dans la ville %s1_amount%% d'Incidiosité.</French>
+		<German>[ICON_BULLET]erhöht die Gesetzlosigkeit der Bevölkerung um %s1_amount%% (hilft Kriminellen ihrer Entdeckung zu entgehen)</German>
 		<Russian>[ICON_BULLET]Увеличивает уровень беззакония в городе на %s1_amount%% (помогает преступникам избежать раскрытия)</Russian>
 	</TEXT>
 	<TEXT>
@@ -775,6 +776,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_INVESTIGATION</Tag>
 		<English>[ICON_BULLET]Increases local Investigation by %s1_amount%% (Helps Law Enforcement catch Criminals)</English>
 		<French>[ICON_BULLET]Donne à toutes les unités produites dans la ville %s1_amount%% d'Investigation.</French>
+		<German>[ICON_BULLET]verbessert die örtliche Ermittlungsrate um %s1_amount%%  (hilft Gesetzeshütern bei der Festnahme von Kriminellen)</German>
 		<Russian>[ICON_BULLET]Увеличивает эффективность местного розыска на %s1_amount%% (помогает правоохранителям поймать преступников)</Russian>
 	</TEXT>
 	<TEXT>
@@ -1047,6 +1049,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_PROPERTY_SPAWN_BARB</Tag>
 		<English>[ICON_BULLET]Can spawn a barbarian %s1_Unit.</English>
 		<French>[ICON_BULLET]Peut faire appaître un %s1_Unit barbare.</French>
+		<German>[ICON_BULLET]kann [NUM1:einen barbarischen:eine barbarische:ein barbarisches:barbarische:barbarische:barbarische] %s1:4_Unit auftauchen lassen</German>
 		<Russian>[ICON_BULLET]Может породить варварский отряд %s1_Unit.</Russian>
 	</TEXT>
 	<TEXT>
