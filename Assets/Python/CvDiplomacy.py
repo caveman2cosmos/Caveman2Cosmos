@@ -228,10 +228,12 @@ class CvDiplomacy:
 			self.addUserComment("USER_DIPLOCOMMENT_EXIT")
 
 		elif szType == "AI_DIPLOCOMMENT_RESEARCH":
-			CyPlayer = GC.getPlayer(self.diploScreen.getWhoTradingWith())
-			for i in range(GC.getNumTechInfos()):
-				if CyPlayer.canResearch(i):
-					self.addUserComment("USER_DIPLOCOMMENT_RESEARCH_TECH", i, -1, GC.getTechInfo(i).getTextKey())
+			player = GC.getPlayer(self.diploScreen.getWhoTradingWith())
+			team = GC.getTeam(player.getTeam())
+			for i in xrange(team.getNumAdjacentResearch()):
+				iTechX = team.getAdjacentResearch(i)
+				if player.canResearch(iTechX, True):
+					self.addUserComment("USER_DIPLOCOMMENT_RESEARCH_TECH", iTechX, -1, GC.getTechInfo(iTechX).getTextKey())
 
 			self.addUserComment("USER_DIPLOCOMMENT_SOMETHING_ELSE")
 			self.addUserComment("USER_DIPLOCOMMENT_EXIT")

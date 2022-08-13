@@ -47,7 +47,7 @@ public:
 	int /*HandicapTypes*/ getHandicapType() const;
 	int /*CivilizationTypes*/ getCivilizationType() const;
 	int /*SpecialUnitTypes*/ getSpecialUnitType() const;
-	int /*UnitTypes*/ getCaptureUnitType() const;
+	UnitTypes getCaptureUnitType() const;
 	int /*UnitCombatTypes*/ getUnitCombatType() const;
 	DomainTypes getDomainType() const;
 

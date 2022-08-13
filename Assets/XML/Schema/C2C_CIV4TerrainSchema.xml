@@ -191,6 +191,7 @@
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="ArtDefineTag" minOccurs="0"/>
 		<element type="Yields" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
@@ -316,6 +317,7 @@
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="ArtDefineTag" minOccurs="0"/>
 		<element type="YieldChanges" minOccurs="0"/>
 		<element type="RiverYieldChange" minOccurs="0"/>
@@ -445,6 +447,7 @@
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="BonusClassType" minOccurs="0"/>
 		<element type="ArtDefineTag" minOccurs="0"/>
 		<element type="TechReveal" minOccurs="0"/>
@@ -692,6 +695,7 @@
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="ArtDefineTag" minOccurs="0"/>
 		<element type="PrereqNatureYields" minOccurs="0"/>
 		<element type="YieldChanges" minOccurs="0"/>
@@ -824,4 +828,8 @@
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 	</ElementType>
+	<ElementType name="Categories" content="eltOnly">
+		<element type="Category" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Category" content="textOnly"/>
 </Schema>

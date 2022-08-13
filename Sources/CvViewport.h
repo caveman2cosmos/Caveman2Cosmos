@@ -387,7 +387,7 @@ private:
 	bool							m_bDisplayCityScreen;
 	bool							m_bSelectCity;
 	bool							m_bAddSelectedCity;
-	int								m_countdown;
+	//int							m_countdown;
 	ViewportGraphicalSpoofingState	m_eSpoofHiddenGraphics;
 	DWORD							m_spoofTransitionStartTickCount;
 };

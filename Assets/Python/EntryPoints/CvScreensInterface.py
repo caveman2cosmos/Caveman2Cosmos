@@ -451,6 +451,7 @@ def rightMouseDown(argsList):
 
 def mouseOverPlot(argsList):
 
+	print argsList[0]
 	if argsList[0] == STRATEGY_OVERLAY_SCREEN:
 		overlayScreen.onMouseOverPlot()
 
@@ -712,7 +713,6 @@ def lateInit():
 	import WBProjectScreen
 	import WBTeamScreen
 	import WBPlayerScreen
-	import WBUnitScreen
 	import WBPromotionScreen
 	import WBDiplomacyScreen
 	import WBPlayerUnits
@@ -728,7 +728,6 @@ def lateInit():
 	screenMap[WB_PROJECT]		= WBProjectScreen.WBProjectScreen(worldBuilderScreen)
 	screenMap[WB_TEAM]			= WBTeamScreen.WBTeamScreen(worldBuilderScreen)
 	screenMap[WB_PLAYER]		= WBPlayerScreen.WBPlayerScreen(worldBuilderScreen)
-	screenMap[WB_UNIT]			= WBUnitScreen.WBUnitScreen(worldBuilderScreen)
 	screenMap[WB_PROMOTION]		= WBPromotionScreen.WBPromotionScreen(worldBuilderScreen)
 	screenMap[WB_DIPLOMACY]		= WBDiplomacyScreen.WBDiplomacyScreen(worldBuilderScreen)
 	screenMap[WB_UNITLIST]		= WBPlayerUnits.WBPlayerUnits(worldBuilderScreen)

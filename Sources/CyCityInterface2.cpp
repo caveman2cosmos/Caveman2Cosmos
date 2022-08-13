@@ -204,6 +204,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("setAutomatedCanBuild", &CyCity::setAutomatedCanBuild, "void ()")
 
 		.def("getProperties", &CyCity::getProperties, python::return_value_policy<python::reference_existing_object>(), "CvProperties ()")
+		.def("getCityOutputHistory", &CyCity::getCityOutputHistory, python::return_value_policy<python::reference_existing_object>(), "CityOutputHistory ()")
 
 		.def("getBuildingListFilterActive", &CyCity::getBuildingListFilterActive, "bool (int)")
 		.def("setBuildingListFilterActive", &CyCity::setBuildingListFilterActive, "void (int,bool)")
@@ -226,5 +227,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getUnitListNumInGroup", &CyCity::getUnitListNumInGroup, "int (int)")
 		.def("getUnitListType", &CyCity::getUnitListType, "int (int,int)")
 
+		.def("AI_bestUnit", &CyCity::AI_bestUnit, "int ()")
+		.def("AI_bestUnitAI", &CyCity::AI_bestUnitAI, "int (UnitAITypes eUnitAITypes)")
 		;
 }

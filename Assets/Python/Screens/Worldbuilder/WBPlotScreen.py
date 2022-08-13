@@ -3,7 +3,6 @@ import CvScreenEnums
 import WBEventScreen
 import WBPlayerUnits
 import WBCityEditScreen
-import WBUnitScreen
 import WBPlayerScreen
 import WBTeamScreen
 import WBInfoScreen
@@ -522,7 +521,7 @@ class WBPlotScreen:
 			elif iIndex == 5:
 				pUnit = pPlot.getUnit(0)
 				if pUnit:
-					WBUnitScreen.WBUnitScreen(self.WB).interfaceScreen(pUnit)
+					self.WB.goToSubScreen("UnitScreen", [pUnit])
 			elif iIndex == 6:
 				WBPlayerUnits.WBPlayerUnits(self.WB).interfaceScreen(iPlayer)
 			elif iIndex == 11:

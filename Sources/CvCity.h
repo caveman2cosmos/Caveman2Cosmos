@@ -11,6 +11,8 @@
 #include "CvProperties.h"
 #include "CvBuildingList.h"
 #include "CvUnitList.h"
+#include "CityOutputHistory.h"
+#include "CvGameObject.h"
 
 class CvArea;
 class CvArtInfoBuilding;
@@ -52,12 +54,19 @@ public:
 
 	CvGameObjectCity* getGameObject() { return &m_GameObject; }
 	const CvGameObjectCity* getGameObject() const { return &m_GameObject; }
+	int getNumWorkers() const { return m_workers.size(); }
+	std::vector<int> getWorkers() const { return m_workers; }
+	void setWorkerHave(const int iUnitID, const bool bNewValue);
 
 private:
 	bool canHurryInternal(const HurryTypes eHurry) const;
 
+	std::vector<int> m_workers;
+
 protected:
 	CvGameObjectCity m_GameObject;
+	CityOutputHistory m_outputHistory;
+
 
 public:
 	int getRevolutionIndex() const;
@@ -104,8 +113,6 @@ public:
 	void createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThreshold, bool bIncrementExperience);
 
 	void doTask(TaskTypes eTask, int iData1 = -1, int iData2 = -1, bool bOption = false, bool bAlt = false, bool bShift = false, bool bCtrl = false);
-
-	void chooseProduction(UnitTypes eTrainUnit = NO_UNIT, BuildingTypes eConstructBuilding = NO_BUILDING, ProjectTypes eCreateProject = NO_PROJECT, bool bFinish = false, bool bFront = false);
 
 	// Base iterator type for iterating over city plots, returning valid ones only
 	template < class Value_ >
@@ -589,7 +596,6 @@ public:
 
 	int getHealUnitCombatTypeTotal(UnitCombatTypes eUnitCombat) const;
 	void changeHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombat, int iChange);
-	void setHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombat, int iChange);
 
 	int getEspionageHealthCounter() const;
 	void changeEspionageHealthCounter(int iChange);
@@ -1319,15 +1325,6 @@ public:
 	int getUnitCombatExtraStrength(UnitCombatTypes eIndex) const;
 	void changeUnitCombatExtraStrength(UnitCombatTypes eIndex, int iChange);
 
-	int getInvasionChance() const;
-	void changeInvasionChance(int iChange);
-
-	int getInvasionTimer() const;
-	void changeInvasionTimer(int iChange);
-	bool isInvaded() const;
-
-	void doInvasion();
-
 	void setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValue, const bool bProcess = true);
 	bool isDisabledBuilding(const short iIndex) const;
 
@@ -1437,7 +1434,6 @@ public:
 	//	KOSHLING - initialisation called on every city prior to performing unit mission allocation logic
 	//	This allows caches that will remian valid for the procesign of teh current turn's units to be cleared
 	virtual void AI_preUnitTurn() = 0;
-	virtual void AI_noteUnitEscortNeeded() = 0;
 	virtual void AI_trained(UnitTypes eUnitType, UnitAITypes eUnitAIType) = 0;
 	virtual UnitTypes AI_bestUnit(int& iBestValue, int iNumSelectableTypes = -1, UnitAITypes* pSelectableTypes = NULL, bool bAsync = false, UnitAITypes* peBestUnitAI = NULL, bool bNoRand = false, bool bNoWeighting = false, const CvUnitSelectionCriteria* criteria = NULL) = 0;
 	virtual UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync = false, bool bNoRand = false, const CvUnitSelectionCriteria* criteria = NULL) = 0;
@@ -1516,12 +1512,7 @@ public:
 	virtual int AI_cityThreat(TeamTypes eTargetTeam = NO_TEAM, int* piThreatModifier = NULL) = 0;
 	virtual BuildingTypes AI_bestAdvancedStartBuilding(int iPass) = 0;
 
-	virtual int AI_getWorkersHave() const = 0;
 	virtual int AI_getWorkersNeeded() const = 0;
-	virtual void AI_changeWorkersHave(int iChange) = 0;
-
-	// Fuyu - Worker Counting - 03.08.2010
-	virtual int AI_workingCityPlotTargetMissionAIs(PlayerTypes ePlayer, MissionAITypes eMissionAI, UnitAITypes eUnitAI = NO_UNITAI, bool bSameAreaOnly = false) const = 0;
 
 	virtual int AI_getBuildPriority() const = 0;
 
@@ -1669,8 +1660,6 @@ protected:
 	bool m_bResetTechs;
 	int m_iLineOfSight;
 	int m_iLandmarkAngerTimer;
-	int m_iInvasionChance;
-	int m_iInvasionTimer;
 	int m_iAdjacentDamagePercent;
 	int m_iWorkableRadiusOverride;
 	int m_iProtectedCultureCount;
@@ -2092,6 +2081,9 @@ public:
 
 	void AI_setPropertyControlBuildingQueued(bool bSet);
 	bool AI_isPropertyControlBuildingQueued() const;
+
+	const CityOutputHistory* getCityOutputHistory() const;
+
 private:
 	mutable stdext::hash_map<UnitTypes,bool> m_canTrainCacheUnits;
 	mutable stdext::hash_map<UnitTypes,UnitTypes> m_eCachedAllUpgradesResults;
@@ -2151,7 +2143,6 @@ public:
 		DECLARE_MAP_FUNCTOR(CvCity, void, AI_updateAssignWork);
 		DECLARE_MAP_FUNCTOR(CvCity, void, AI_markBestBuildValuesStale);
 		DECLARE_MAP_FUNCTOR(CvCity, void, setupGraphical);
-		DECLARE_MAP_FUNCTOR(CvCity, void, chooseProduction);
 		DECLARE_MAP_FUNCTOR(CvCity, void, invalidatePopulationRankCache);
 		DECLARE_MAP_FUNCTOR(CvCity, void, invalidateYieldRankCache);
 		DECLARE_MAP_FUNCTOR(CvCity, void, invalidateCommerceRankCache);

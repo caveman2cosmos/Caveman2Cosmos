@@ -26,6 +26,12 @@ protected:
 
 	bool checkBounds( int iValue, int iLower, int iUpper ) const;
 
+private:
+	// Asset checksum of the current build
+	static uint32_t m_uiAssetCheckSum;
+	// Asset checksum of the build which created the save that was last loaded
+	static uint32_t m_uiSavegameAssetCheckSum;
+
 public:
 
 	// **************************
@@ -267,17 +273,10 @@ public:
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);
 
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
-/*                                                                                              */
-/* Savegame compatibility                                                                       */
-/************************************************************************************************/
+	// MODULAR_LOADING_CONTROL - Savegame compatibility - 11/30/07 - MRGENIE
 	void reassignPlayerAdvanced(PlayerTypes eOldID, PlayerTypes eNewID);
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
-	uint32_t getAssetCheckSum() const;
-	uint32_t getSavegameAssetCheckSum() const;
+	// ! MODULAR_LOADING_CONTROL
+
 	void calculateAssetCheckSum();
 	void checkVersions();
 	void endGameSetup();
@@ -289,8 +288,6 @@ public:
 	CvString getExePath() const;
 	CvString getExeName() const;
 // BUG - EXE/DLL Paths - end
-
-	void handleOldGameSpeed();
 
 protected:
 
@@ -410,13 +407,6 @@ protected:
 	static CvString* exeName;
 	static bool bPathsSet;
 // BUG - EXE/DLL Paths - end
-
-	bool m_bRecalcRequestProcessed;
-
-	// Asset checksum of the current build
-	uint32_t m_uiAssetCheckSum;
-	// Asset checksum of the build which performed the save of the loaded game
-	uint32_t m_uiSavegameAssetCheckSum;
 };
 
 #endif

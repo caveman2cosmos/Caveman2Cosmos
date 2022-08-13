@@ -86,7 +86,7 @@ class CvTechChooser:
 	def getTechState(self, iTech):
 		if self.CyTeam.isHasTech(iTech):
 			return CIV_HAS_TECH
-		if not self.CyPlayer.canEverResearch(iTech):
+		if not self.CyPlayer.canResearch(iTech, False):
 			return CIV_NO_RESEARCH
 		if not self.CyPlayer.isResearchingTech(iTech):
 			return CIV_TECH_AVAILABLE

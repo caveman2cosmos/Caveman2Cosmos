@@ -1,8 +1,10 @@
 
 #include "CvGameCoreDLL.h"
+#include "CvDLLInterfaceIFaceBase.h"
 #include "CvGlobals.h"
 #include "CvMap.h"
 #include "CvPlotPaging.h"
+#include "CvDLLInterfaceIFaceBase.h"
 
 #include <psapi.h>
 

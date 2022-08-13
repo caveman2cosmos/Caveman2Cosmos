@@ -3961,6 +3961,9 @@ mo = MapOptions()
 ## Begin Map-Script
 ##############################################################################
 
+def getNumHiddenCustomMapOptions():
+	return 0
+
 def getNumCustomMapOptions():
 	if mo.bfirstRun:
 		print "Preparing World Map Script"

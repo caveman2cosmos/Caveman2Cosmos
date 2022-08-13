@@ -427,15 +427,6 @@ CyPlot* CyMap::getLastPathPlotByIndex(int index) const
 }
 
 
-// Super Forts *canal* *choke*
-void CyMap::calculateCanalAndChokePoints()
-{
-	if (m_pMap)
-	{
-		m_pMap->calculateCanalAndChokePoints();
-	}
-}
-
 void CyMap::moveUnitToMap(const CyUnit* unit, int numTravelTurns)
 {
 	m_pMap->moveUnitToMap(*unit->getUnit(), numTravelTurns);

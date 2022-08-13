@@ -2027,25 +2027,28 @@ def canApplyClassicLiteratureDone2(argsList):
 	player = GC.getPlayer(argsList[1].ePlayer)
 	iEraAncient = GC.getInfoTypeForString("C2C_ERA_ANCIENT")
 
-	for iTech in xrange(GC.getNumTechInfos()):
-		if GC.getTechInfo(iTech).getEra() == iEraAncient and player.canResearch(iTech):
+	team = GC.getTeam(player.getTeam())
+	for i in xrange(team.getNumAdjacentResearch()):
+		iTechX = team.getAdjacentResearch(i)
+		if GC.getTechInfo(iTechX).getEra() == iEraAncient and player.canResearch(iTechX, True):
 			return True
 	return False
 
 def applyClassicLiteratureDone2(argsList):
-  data = argsList[1]
-  player = GC.getPlayer(data.ePlayer)
+	data = argsList[1]
+	player = GC.getPlayer(data.ePlayer)
 
-  iEraAncient = GC.getInfoTypeForString("C2C_ERA_ANCIENT")
+	iEraAncient = GC.getInfoTypeForString("C2C_ERA_ANCIENT")
 
-  listTechs = []
-  for iTech in xrange(GC.getNumTechInfos()):
-    if GC.getTechInfo(iTech).getEra() == iEraAncient and player.canResearch(iTech):
-      listTechs.append(iTech)
+	listTechs = []
+	team = GC.getTeam(player.getTeam())
+	for i in xrange(team.getNumAdjacentResearch()):
+		iTechX = team.getAdjacentResearch(i)
+		if GC.getTechInfo(iTechX).getEra() == iEraAncient and player.canResearch(iTechX, True):
+			listTechs.append(iTechX)
 
-  if len(listTechs) > 0:
-    iTech = listTechs[GAME.getSorenRandNum(len(listTechs), "Classic Literature Event Tech selection")]
-    GC.getTeam(player.getTeam()).setHasTech(iTech, True, data.ePlayer, True, True)
+	if listTechs:
+		team.setHasTech(listTechs[GAME.getSorenRandNum(len(listTechs), "Classic Literature Event Tech selection")], True, data.ePlayer, True, True)
 
 def getHelpClassicLiteratureDone3(argsList):
 	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
@@ -7081,9 +7084,8 @@ def applyCivilWar(argsList):
 	pNewTeam.setHasTech(OBtech, False, iNewID, False, False)
 
 	# Add techs to new player
-	iMaxTech = GC.getNumTechInfos()
 	for counter in xrange(iMaxTech):
-		if (pTriggerTeam.isHasTech(counter) == True) and (pNewTeam.isHasTech(counter) == False):
+		if pTriggerTeam.isHasTech(counter) and not pNewTeam.isHasTech(counter):
 			pNewTeam.setHasTech(counter, True, iNewID, False, False)
 
 	# Hand over cities

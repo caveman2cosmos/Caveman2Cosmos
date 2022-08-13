@@ -175,277 +175,277 @@ class TheScreen:
 		iTargetPlayer = self.iTargetPlayer
 		if iTargetPlayer is None:
 			return
-		else:
-			bDebug = GAME.isDebugMode()
-			iPlayerAct = self.iPlayerAct
-			CyPlayerAct = self.CyPlayerAct
-			iTeamAct = self.iTeamAct
-			CyTeamAct = self.CyTeamAct
 
-			uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1 = self.aFontList
+		bDebug = GAME.isDebugMode()
+		iPlayerAct = self.iPlayerAct
+		CyPlayerAct = self.CyPlayerAct
+		iTeamAct = self.iTeamAct
+		CyTeamAct = self.CyTeamAct
 
-			iWidGen			= WidgetTypes.WIDGET_GENERAL
-			iPanelBlue50	= PanelStyles.PANEL_STYLE_BLUE50
-			iPanelIn		= PanelStyles.PANEL_STYLE_IN
-			iTableStd		= TableStyles.TABLE_STYLE_STANDARD
-			iBtnLabel		= ButtonStyles.BUTTON_STYLE_LABEL
-			iFontTitle		= FontTypes.TITLE_FONT
+		uFontEdge, uFont4b, uFont4, uFont3b, uFont3, uFont2b, uFont2, uFont1 = self.aFontList
 
-			artPath0 = CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath()
-			artPath1 = CyArtFileMgr().getInterfaceArtInfo("INTERFACE_BUTTONS_MINUS").getPath()
-			artPath2 = CyArtFileMgr().getInterfaceArtInfo("INTERFACE_BUTTONS_PLUS").getPath()
-			szIcon = uFont3 + self.charEsp
-			ANGRY_CIV_CHAR		= self.ANGRY_CIV_CHAR
-			charBeaker			= self.charBeaker
-			charCross			= self.charCross
-			charLifeSupportSS	= self.charLifeSupportSS
+		iWidGen			= WidgetTypes.WIDGET_GENERAL
+		iPanelBlue50	= PanelStyles.PANEL_STYLE_BLUE50
+		iPanelIn		= PanelStyles.PANEL_STYLE_IN
+		iTableStd		= TableStyles.TABLE_STYLE_STANDARD
+		iBtnLabel		= ButtonStyles.BUTTON_STYLE_LABEL
+		iFontTitle		= FontTypes.TITLE_FONT
 
-			aHalfX = self.iResolutionX / 2
-			dx = aHalfX / 48
-			x = dx
-			y = self.Y_TOP_PAGE + 16
-			self.dx = dx = aHalfX - 2 * dx
-			self.dy = dy = self.H_PAGE - 32
+		artPath0 = CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath()
+		artPath1 = CyArtFileMgr().getInterfaceArtInfo("INTERFACE_BUTTONS_MINUS").getPath()
+		artPath2 = CyArtFileMgr().getInterfaceArtInfo("INTERFACE_BUTTONS_PLUS").getPath()
+		szIcon = uFont3 + self.charEsp
+		ANGRY_CIV_CHAR		= self.ANGRY_CIV_CHAR
+		charBeaker			= self.charBeaker
+		charCross			= self.charCross
+		charLifeSupportSS	= self.charLifeSupportSS
 
-			# Left Panel
-			PanelLeft = self.getNextWidgetName()
-			screen.addScrollPanel(PanelLeft, "", x, y, dx, dy, PanelStyles.PANEL_STYLE_EMPTY)
+		aHalfX = self.iResolutionX / 2
+		dx = aHalfX / 48
+		x = dx
+		y = self.Y_TOP_PAGE + 16
+		self.dx = dx = aHalfX - 2 * dx
+		self.dy = dy = self.H_PAGE - 32
 
-			SIZE = self.SIZE
-			iSize = SIZE / 2 - 8
+		# Left Panel
+		PanelLeft = self.getNextWidgetName()
+		screen.addScrollPanel(PanelLeft, "", x, y, dx, dy, PanelStyles.PANEL_STYLE_EMPTY)
 
-			x2 = x + 4*dx/7
-			y1 = -4 - SIZE
-			dy1 = SIZE/8
-			y2 = 3*dy1
-			y3 = 2*dy1
-			y4 = 4*dy1
-			for iPlayerX in self.aPlayerList:
-				x1 = 26
-				y1 += SIZE + 4
-				CyPlayerX = GC.getPlayer(iPlayerX)
-				iTeamX = CyPlayerX.getTeam()
-				CyTeamX = GC.getTeam(iTeamX)
-				szPlayerX = str(iPlayerX)
-				# leader panel
-				LeaderPanel = "LeaderPanel" + szPlayerX
-				screen.attachPanelAt(PanelLeft, LeaderPanel, "", "", False, False, iPanelIn, 0, y1, dx - 40, SIZE + 2, iWidGen, 0, 0)
+		SIZE = self.SIZE
+		iSize = SIZE / 2 - 8
 
-				szText = uFont3 + u'%c' %(ANGRY_CIV_CHAR + CyPlayerX.AI_getAttitude(iPlayerAct))
-				screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, szText, 1<<0, 0, SIZE - y4, 0, iFontTitle, iWidGen, 0, 0)
-				# leader image
-				leaderBtn = "LeaderBtn" + szPlayerX
-				Btn = GC.getLeaderHeadInfo(CyPlayerX.getLeaderType()).getButton()
-				screen.addCheckBoxGFCAt(PanelLeft, leaderBtn, Btn, artPath0, x1, y1, SIZE, SIZE, iWidGen, 0, 0, iBtnLabel, False)
-				x1 += SIZE
-				# leader name
-				iColR = CyPlayerX.getPlayerTextColorR()
-				iColG = CyPlayerX.getPlayerTextColorG()
-				iColB = CyPlayerX.getPlayerTextColorB()
-				if iColR + iColG + iColB < 149:
-					if iColR >= iColG:
-						if iColR >= iColB:
-							iColR = 255
-						else:
-							iColB = 255
-					elif iColG > iColB:
-						iColG = 255
+		x2 = x + 4*dx/7
+		y1 = -4 - SIZE
+		dy1 = SIZE/8
+		y2 = 3*dy1
+		y3 = 2*dy1
+		y4 = 4*dy1
+		for iPlayerX in self.aPlayerList:
+			x1 = 26
+			y1 += SIZE + 4
+			CyPlayerX = GC.getPlayer(iPlayerX)
+			iTeamX = CyPlayerX.getTeam()
+			CyTeamX = GC.getTeam(iTeamX)
+			szPlayerX = str(iPlayerX)
+			# leader panel
+			LeaderPanel = "LeaderPanel" + szPlayerX
+			screen.attachPanelAt(PanelLeft, LeaderPanel, "", "", False, False, iPanelIn, 0, y1, dx - 40, SIZE + 2, iWidGen, 0, 0)
+
+			szText = uFont3 + u'%c' %(ANGRY_CIV_CHAR + CyPlayerX.AI_getAttitude(iPlayerAct))
+			screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, szText, 1<<0, 0, SIZE - y4, 0, iFontTitle, iWidGen, 0, 0)
+			# leader image
+			leaderBtn = "LeaderBtn" + szPlayerX
+			Btn = GC.getLeaderHeadInfo(CyPlayerX.getLeaderType()).getButton()
+			screen.addCheckBoxGFCAt(PanelLeft, leaderBtn, Btn, artPath0, x1, y1, SIZE, SIZE, iWidGen, 0, 0, iBtnLabel, False)
+			x1 += SIZE
+			# leader name
+			iColR = CyPlayerX.getPlayerTextColorR()
+			iColG = CyPlayerX.getPlayerTextColorG()
+			iColB = CyPlayerX.getPlayerTextColorB()
+			if iColR + iColG + iColB < 149:
+				if iColR >= iColG:
+					if iColR >= iColB:
+						iColR = 255
 					else:
 						iColB = 255
-				szText = u"<color=%d,%d,%d>" %(iColR, iColG, iColB)
-				szText = uFont2 + szText + CyPlayerX.getName() + " - " + CyPlayerX.getCivilizationShortDescription(0)
-				screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, szText, 1<<0, x1, -2, 0, iFontTitle, iWidGen, 0, 0)
-
-				# EP Weights
-				screen.setImageButtonAt("WeightBtn|Less" + szPlayerX, LeaderPanel, artPath1, x1, y2, iSize, iSize, iWidGen, iTeamX, 0)
-				x1 += iSize
-				screen.setImageButtonAt("WeightBtn|More" + szPlayerX, LeaderPanel, artPath2, x1, y2, iSize, iSize, iWidGen, iTeamX, 0)
-				x1 += iSize
-				szText = uFont3 + str(CyPlayerAct.getEspionageSpendingWeightAgainstTeam(iTeamX))
-				screen.setLabelAt("SpyWeight" + szPlayerX, LeaderPanel, szText, 1<<0, x1, y2, 0, iFontTitle, iWidGen, 0, 0)
-				x1 += y3 * 5
-
-				# Espionage Points
-				iEP = CyTeamAct.getEspionagePointsAgainstTeam(iTeamX)
-				screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, uFont2 + str(iEP), 1<<1, x2, y3, 0, iFontTitle, iWidGen, -1, -1)
-
-				iEP_X = CyTeamX.getEspionagePointsAgainstTeam(iTeamAct)
-				if iEP > iEP_X * 1.1 or bDebug:
-					bSeeDetails = True
-					screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, uFont2 + str(iEP_X), 1<<1, x2, y4, 0, iFontTitle, iWidGen, 0, 0)
+				elif iColG > iColB:
+					iColG = 255
 				else:
-					bSeeDetails = False
+					iColB = 255
+			szText = u"<color=%d,%d,%d>" %(iColR, iColG, iColB)
+			szText = uFont2 + szText + CyPlayerX.getName() + " - " + CyPlayerX.getCivilizationShortDescription(0)
+			screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, szText, 1<<0, x1, -2, 0, iFontTitle, iWidGen, 0, 0)
 
-				# Points per turn
-				screen.setLabelAt("EspIcon" + szPlayerX, LeaderPanel, szIcon, 1<<0, 0, dy1, 0, iFontTitle, iWidGen, 0, 0)
+			# EP Weights
+			screen.setImageButtonAt("WeightBtn|Less" + szPlayerX, LeaderPanel, artPath1, x1, y2, iSize, iSize, iWidGen, iTeamX, 0)
+			x1 += iSize
+			screen.setImageButtonAt("WeightBtn|More" + szPlayerX, LeaderPanel, artPath2, x1, y2, iSize, iSize, iWidGen, iTeamX, 0)
+			x1 += iSize
+			szText = uFont3 + str(CyPlayerAct.getEspionageSpendingWeightAgainstTeam(iTeamX))
+			screen.setLabelAt("SpyWeight" + szPlayerX, LeaderPanel, szText, 1<<0, x1, y2, 0, iFontTitle, iWidGen, 0, 0)
+			x1 += y3 * 5
 
-				iSpending = CyPlayerAct.getEspionageSpending(iTeamX)
-				szText = uFont2
+			# Espionage Points
+			iEP = CyTeamAct.getEspionagePointsAgainstTeam(iTeamX)
+			screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, uFont2 + str(iEP), 1<<1, x2, y3, 0, iFontTitle, iWidGen, -1, -1)
+
+			iEP_X = CyTeamX.getEspionagePointsAgainstTeam(iTeamAct)
+			if iEP > iEP_X * 1.1 or bDebug:
+				bSeeDetails = True
+				screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, uFont2 + str(iEP_X), 1<<1, x2, y4, 0, iFontTitle, iWidGen, 0, 0)
+			else:
+				bSeeDetails = False
+
+			# Points per turn
+			screen.setLabelAt("EspIcon" + szPlayerX, LeaderPanel, szIcon, 1<<0, 0, dy1, 0, iFontTitle, iWidGen, 0, 0)
+
+			iSpending = CyPlayerAct.getEspionageSpending(iTeamX)
+			szText = uFont2
+			if iSpending:
+				if iSpending > 0:
+					szText += "<color=0,255,0>+"
+				else:
+					szText += "<color=255,0,0>"
+			szText += str(iSpending)
+			screen.setLabelAt("EspSpending" + szPlayerX, LeaderPanel, szText, 1<<0, x2+2, y3, 0, iFontTitle, iWidGen, 0, 0)
+
+			if bSeeDetails:
+				iSpending = CyPlayerX.getEspionageSpending(iPlayerAct)
 				if iSpending:
+					szText = uFont2
 					if iSpending > 0:
-						szText += "<color=0,255,0>+"
+						szText += "<color=255,0,0>+"
 					else:
-						szText += "<color=255,0,0>"
-				szText += str(iSpending)
-				screen.setLabelAt("EspSpending" + szPlayerX, LeaderPanel, szText, 1<<0, x2+2, y3, 0, iFontTitle, iWidGen, 0, 0)
+						szText += "<color=0,255,0>"
+					szText += str(iSpending)
+					screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, szText, 1<<0, x2+2, y4, 0, iFontTitle, iWidGen, 0, 0)
 
-				if bSeeDetails:
-					iSpending = CyPlayerX.getEspionageSpending(iPlayerAct)
-					if iSpending:
-						szText = uFont2
-						if iSpending > 0:
-							szText += "<color=255,0,0>+"
-						else:
-							szText += "<color=0,255,0>"
-						szText += str(iSpending)
-						screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, szText, 1<<0, x2+2, y4, 0, iFontTitle, iWidGen, 0, 0)
+			# EPoints Multiplier
+			iMultiplier = getEspionageModifier(iTeamAct, iTeamX)
+			szText = uFont2
+			if iMultiplier >= 130:
+				szText += "<color=255,255,0>"
+			elif iMultiplier <= 70:
+				szText += "<color=0,255,255>"
+			szText += str(iMultiplier) + "%"
+			screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, szText, 1<<1, x1, y3, 0, iFontTitle, iWidGen, 0, 0)
 
-				# EPoints Multiplier
-				iMultiplier = getEspionageModifier(iTeamAct, iTeamX)
+			if bSeeDetails:
+				iMultiplier = getEspionageModifier(iTeamX, iTeamAct)
 				szText = uFont2
 				if iMultiplier >= 130:
-					szText += "<color=255,255,0>"
-				elif iMultiplier <= 70:
 					szText += "<color=0,255,255>"
+				elif iMultiplier <= 70:
+					szText += "<color=255,255,0>"
 				szText += str(iMultiplier) + "%"
-				screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, szText, 1<<1, x1, y3, 0, iFontTitle, iWidGen, 0, 0)
+				screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, szText, 1<<1, x1, y4, 0, iFontTitle, iWidGen, 0, 0)
+			x1 += 6
 
-				if bSeeDetails:
-					iMultiplier = getEspionageModifier(iTeamX, iTeamAct)
-					szText = uFont2
-					if iMultiplier >= 130:
-						szText += "<color=0,255,255>"
-					elif iMultiplier <= 70:
-						szText += "<color=255,255,0>"
-					szText += str(iMultiplier) + "%"
-					screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, szText, 1<<1, x1, y4, 0, iFontTitle, iWidGen, 0, 0)
-				x1 += 6
+			# Counter Espionage
+			iCounterEsp = CyTeamAct.getCounterespionageTurnsLeftAgainstTeam(iTeamX)
+			if iCounterEsp > 0:
+				szText = "<color=0,255,0>(" + str(iCounterEsp) + ")"
+				screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, uFont2 + szText, 1<<0, x1, y3, 0, iFontTitle, iWidGen, 0, 0)
 
-				# Counter Espionage
-				iCounterEsp = CyTeamAct.getCounterespionageTurnsLeftAgainstTeam(iTeamX)
+			if bSeeDetails:
+				iCounterEsp = CyTeamX.getCounterespionageTurnsLeftAgainstTeam(iTeamAct)
 				if iCounterEsp > 0:
-					szText = "<color=0,255,0>(" + str(iCounterEsp) + ")"
-					screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, uFont2 + szText, 1<<0, x1, y3, 0, iFontTitle, iWidGen, 0, 0)
+					szText = "<color=255,0,0>(" + str(iCounterEsp) + ")"
+					screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, uFont2 + szText, 1<<0, x1, y4, 0, iFontTitle, iWidGen, 0, 0)
 
-				if bSeeDetails:
-					iCounterEsp = CyTeamX.getCounterespionageTurnsLeftAgainstTeam(iTeamAct)
-					if iCounterEsp > 0:
-						szText = "<color=255,0,0>(" + str(iCounterEsp) + ")"
-						screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, uFont2 + szText, 1<<0, x1, y4, 0, iFontTitle, iWidGen, 0, 0)
+			# Symbols for 'Demographics' and 'Research'
+			iDemoCost = CyPlayerAct.getEspionageMissionCost(self.MissionSeeDemo, iPlayerX, None, -1)
+			iTechCost = CyPlayerAct.getEspionageMissionCost(self.MissionSeeResearch, iPlayerX, None, -1)
 
-				# Symbols for 'Demographics' and 'Research'
-				iDemoCost = CyPlayerAct.getEspionageMissionCost(self.MissionSeeDemo, iPlayerX, None, -1)
-				iTechCost = CyPlayerAct.getEspionageMissionCost(self.MissionSeeResearch, iPlayerX, None, -1)
+			# can see demographics icon
+			if iEP >= iDemoCost:
+				szText = charLifeSupportSS
+			else:
+				szText = charCross
 
+			# can see research icon
+			if iEP >= iTechCost:
+				szText += charBeaker
+			else:
+				szText += charCross
+
+			screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, uFont3 + szText, 1<<1, dx - 56, y3 - 2, 0, iFontTitle, iWidGen, 0, 0)
+
+			if bSeeDetails:
+				# Target Player
+				iDemoCost = CyPlayerX.getEspionageMissionCost(self.MissionSeeDemo, iPlayerAct, None, -1)
+				iTechCost = CyPlayerX.getEspionageMissionCost(self.MissionSeeResearch, iPlayerAct, None, -1)
 				# can see demographics icon
-				if iEP >= iDemoCost:
+				if iEP_X >= iDemoCost:
 					szText = charLifeSupportSS
 				else:
 					szText = charCross
-
 				# can see research icon
-				if iEP >= iTechCost:
+				if iEP_X >= iTechCost:
 					szText += charBeaker
 				else:
 					szText += charCross
 
-				screen.setLabelAt(self.getNextWidgetName(), LeaderPanel, uFont3 + szText, 1<<1, dx - 56, y3 - 2, 0, iFontTitle, iWidGen, 0, 0)
+				szName = self.getNextWidgetName()
+				screen.setLabelAt(szName, LeaderPanel, uFont3 + szText, 1<<1, dx - 56, y4, 0, iFontTitle, iWidGen, 0, 0)
 
-				if bSeeDetails:
-					# Target Player
-					iDemoCost = CyPlayerX.getEspionageMissionCost(self.MissionSeeDemo, iPlayerAct, None, -1)
-					iTechCost = CyPlayerX.getEspionageMissionCost(self.MissionSeeResearch, iPlayerAct, None, -1)
-					# can see demographics icon
-					if iEP_X >= iDemoCost:
-						szText = charLifeSupportSS
-					else:
-						szText = charCross
-					# can see research icon
-					if iEP_X >= iTechCost:
-						szText += charBeaker
-					else:
-						szText += charCross
+		self.refreshMissionTab_Left(screen, CyPlayerAct)
+		screen.setState("LeaderBtn" + str(iTargetPlayer), True)
 
-					szName = self.getNextWidgetName()
-					screen.setLabelAt(szName, LeaderPanel, uFont3 + szText, 1<<1, dx - 56, y4, 0, iFontTitle, iWidGen, 0, 0)
+		# Right Panel
+		bMissionList = self.bMissionList
+		x += aHalfX
+		RightPanel = self.getNextWidgetName()
+		screen.addPanel(RightPanel, "", "", True, True, x, y, dx, dy, iPanelBlue50)
 
-			self.refreshMissionTab_Left(screen, CyPlayerAct)
-			screen.setState("LeaderBtn" + str(iTargetPlayer), True)
+		dx1 = 20
+		dx2 = dx / 3
+		dx3 = dx - 24
+		dy1 = 8
+		dy2 = dy / 4
 
-			# Right Panel
-			bMissionList = self.bMissionList
-			x += aHalfX
-			RightPanel = self.getNextWidgetName()
-			screen.addPanel(RightPanel, "", "", True, True, x, y, dx, dy, iPanelBlue50)
+		# City/Mission List Header
+		szText = uFont3b + TRNSLTR.getText("TXT_KEY_CONCEPT_CITIES", ())
+		screen.setTextAt("ListHeader0", RightPanel, szText, 1<<0, dx1, dy1, 0, iFontTitle, iWidGen, 0, 0)
+		szText = uFont3b + TRNSLTR.getText("TXT_KEY_ESPIONAGE_SCREEN_MISSIONS", ())
+		screen.setTextAt("ListHeader1", RightPanel, szText, 1<<0, dx1, dy1, 0, iFontTitle, iWidGen, 0, 0)
+		if bMissionList:
+			screen.hide("ListHeader0")
+		else:
+			screen.hide("ListHeader1")
 
-			dx1 = 20
-			dx2 = dx / 3
-			dx3 = dx - 24
-			dy1 = 8
-			dy2 = dy / 4
+		# City/Mission Table Header
+		szText = uFont3b + TRNSLTR.getText("TXT_KEY_CONCEPT_CITIES", ())
+		screen.setLabelAt("CityTableHeader", RightPanel, szText, 1<<0, dx2, dy2, 0, iFontTitle, iWidGen, 0, 0)
+		szText = uFont3b + TRNSLTR.getText("TXT_KEY_ESPIONAGE_SCREEN_MISSIONS", ())
+		screen.setLabelAt("MissionTableHeader", RightPanel, szText, 1<<0, dx2, dy2, 0, iFontTitle, iWidGen, 0, 0)
+		if bMissionList:
+			screen.hide("MissionTableHeader")
+		else:
+			screen.hide("CityTableHeader")
 
-			# City/Mission List Header
-			szText = uFont3b + TRNSLTR.getText("TXT_KEY_CONCEPT_CITIES", ())
-			screen.setTextAt("ListHeader0", RightPanel, szText, 1<<0, dx1, dy1, 0, iFontTitle, iWidGen, 0, 0)
-			szText = uFont3b + TRNSLTR.getText("TXT_KEY_ESPIONAGE_SCREEN_MISSIONS", ())
-			screen.setTextAt("ListHeader1", RightPanel, szText, 1<<0, dx1, dy1, 0, iFontTitle, iWidGen, 0, 0)
-			if bMissionList:
-				screen.hide("ListHeader0")
-			else:
-				screen.hide("ListHeader1")
+		# Other Headers
+		szText = uFont3b + TRNSLTR.getText("TXT_KEY_ESPIONAGE_SCREEN_PASSIVE_EFFECTS", ())
+		screen.setLabelAt(self.getNextWidgetName(), RightPanel, szText, 1<<0, dx2, dy1, 0, iFontTitle, iWidGen, 0, 0)
 
-			# City/Mission Table Header
-			szText = uFont3b + TRNSLTR.getText("TXT_KEY_CONCEPT_CITIES", ())
-			screen.setLabelAt("CityTableHeader", RightPanel, szText, 1<<0, dx2, dy2, 0, iFontTitle, iWidGen, 0, 0)
-			szText = uFont3b + TRNSLTR.getText("TXT_KEY_ESPIONAGE_SCREEN_MISSIONS", ())
-			screen.setLabelAt("MissionTableHeader", RightPanel, szText, 1<<0, dx2, dy2, 0, iFontTitle, iWidGen, 0, 0)
-			if bMissionList:
-				screen.hide("MissionTableHeader")
-			else:
-				screen.hide("CityTableHeader")
+		szText = uFont3b + TRNSLTR.getText("TXT_KEY_ESPIONAGE_SCREEN_COST", ())
+		screen.setLabelAt(self.getNextWidgetName(), RightPanel, szText, 1<<1, dx3, dy1, 0, iFontTitle, iWidGen, 0, 0)
 
-			# Other Headers
-			szText = uFont3b + TRNSLTR.getText("TXT_KEY_ESPIONAGE_SCREEN_PASSIVE_EFFECTS", ())
-			screen.setLabelAt(self.getNextWidgetName(), RightPanel, szText, 1<<0, dx2, dy1, 0, iFontTitle, iWidGen, 0, 0)
+		screen.setLabelAt(self.getNextWidgetName(), RightPanel, szText, 1<<1, dx3, dy2, 0, iFontTitle, iWidGen, 0, 0)
 
-			szText = uFont3b + TRNSLTR.getText("TXT_KEY_ESPIONAGE_SCREEN_COST", ())
-			screen.setLabelAt(self.getNextWidgetName(), RightPanel, szText, 1<<1, dx3, dy1, 0, iFontTitle, iWidGen, 0, 0)
+		self.x1 = x1 = x + dx1
+		self.x2 = x2 = x + dx2
+		self.y1 = y1 = y + dy1 * 2
+		self.y2 = y2 = y + dy2 + 4
 
-			screen.setLabelAt(self.getNextWidgetName(), RightPanel, szText, 1<<1, dx3, dy2, 0, iFontTitle, iWidGen, 0, 0)
+		# Mission selection list
+		LIST = "CityMissionList1"
+		screen.addListBoxGFC(LIST, "", x1, y1 + 26, x2 - x1 - 16, dy - 64, iTableStd)
+		screen.enableSelect(LIST, True)
+		screen.setStyle(LIST, "Table_StandardCiv_Style")
+		iCount = 0
+		for iMissionX in range(GC.getNumEspionageMissionInfos()):
+			pMission = GC.getEspionageMissionInfo(iMissionX)
+			# Filter
+			if pMission.getCost() == -1 or not pMission.isTargetsCity(): continue
+			if pMission.getTechPrereq() != -1 and not CyTeamAct.isHasTech(pMission.getTechPrereq()): continue
+			# Carry on
+			szText = uFont2 + pMission.getDescription()
+			screen.appendListBoxStringNoUpdate(LIST, szText, iWidGen, iMissionX, 0, 1<<0)
+			# Default active mission
+			if self.iMissionAct == -1:
+				self.iMissionAct = iMissionX
+			# Select active mission
+			if self.iMissionAct == iMissionX:
+				screen.setSelectedListBoxStringGFC(LIST, iCount)
+			# Iterate
+			iCount += 1
+		screen.updateListBox(LIST)
+		if not bMissionList:
+			screen.hide(LIST)
 
-			self.x1 = x1 = x + dx1
-			self.x2 = x2 = x + dx2
-			self.y1 = y1 = y + dy1 * 2
-			self.y2 = y2 = y + dy2 + 4
-
-			# Mission selection list
-			LIST = "CityMissionList1"
-			screen.addListBoxGFC(LIST, "", x1, y1 + 26, x2 - x1 - 16, dy - 64, iTableStd)
-			screen.enableSelect(LIST, True)
-			screen.setStyle(LIST, "Table_StandardCiv_Style")
-			iCount = 0
-			for iMissionX in range(GC.getNumEspionageMissionInfos()):
-				pMission = GC.getEspionageMissionInfo(iMissionX)
-				# Filter
-				if pMission.getCost() == -1 or not pMission.isTargetsCity(): continue
-				if pMission.getTechPrereq() != -1 and not CyTeamAct.isHasTech(pMission.getTechPrereq()): continue
-				# Carry on
-				szText = uFont2 + pMission.getDescription()
-				screen.appendListBoxStringNoUpdate(LIST, szText, iWidGen, iMissionX, 0, 1<<0)
-				# Default active mission
-				if self.iMissionAct == -1:
-					self.iMissionAct = iMissionX
-				# Select active mission
-				if self.iMissionAct == iMissionX:
-					screen.setSelectedListBoxStringGFC(LIST, iCount)
-				# Iterate
-				iCount += 1
-			screen.updateListBox(LIST)
-			if not bMissionList:
-				screen.hide(LIST)
-
-			self.EffectsTable = self.getNextWidgetName()
-			self.refreshMissionTab_Right(screen)
+		self.EffectsTable = self.getNextWidgetName()
+		self.refreshMissionTab_Right(screen)
 
 
 	def refreshMissionTab_Right(self, screen):

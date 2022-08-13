@@ -56,12 +56,6 @@ class PediaUnit:
 		aName = self.main.getNextWidgetName
 
 		eWidGen				= WidgetTypes.WIDGET_GENERAL
-		eWidJuToBonus		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS
-		eWidJuToBuilding	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING
-		eWidJuToTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH
-		eWidJuToUnit		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT
-		eWidJuToPromo		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_PROMOTION
-		eWidJuToCivic		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIVIC
 		ePnlBlue50			= PanelStyles.PANEL_STYLE_BLUE50
 		eFontTitle			= FontTypes.TITLE_FONT
 

@@ -16,6 +16,12 @@
 					<bTrait>1</bTrait>
 				</Trait>
 			</Traits>
+			<DefaultTraits>
+				<TraitType>TRAIT_BARBARIAN</TraitType>
+			</DefaultTraits>
+			<DefaultComplexTraits>
+				<TraitType>TRAIT_BARBARIAN</TraitType>
+			</DefaultComplexTraits>
 			<DiplomacyIntroMusicPeace>
 				<DiploMusicPeaceEra>
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
@@ -450,6 +456,12 @@
 					<bTrait>1</bTrait>
 				</Trait>
 			</Traits>
+			<DefaultTraits>
+				<TraitType>TRAIT_BARBARIAN</TraitType>
+			</DefaultTraits>
+			<DefaultComplexTraits>
+				<TraitType>TRAIT_BARBARIAN</TraitType>
+			</DefaultComplexTraits>
 			<DiplomacyIntroMusicPeace>
 				<DiploMusicPeaceEra>
 					<EraType>C2C_ERA_PREHISTORIC</EraType>
@@ -760,6 +772,22 @@
 					<bTrait>1</bTrait>
 				</Trait>
 			</Traits>
+			<DefaultTraits>
+				<TraitType>TRAIT_PHILOSOPHICAL</TraitType>
+				<TraitType>TRAIT_AGGRESSIVE</TraitType>
+				<TraitType>TRAIT_MEGALOMANIAC</TraitType>
+				<TraitType>TRAIT_PHILOSOPHICAL1</TraitType>
+				<TraitType>TRAIT_AGGRESSIVE1</TraitType>
+				<TraitType>TRAIT_MEGALOMANIAC1</TraitType>
+			</DefaultTraits>
+			<DefaultComplexTraits>
+				<TraitType>TRAIT_PHILOSOPHICAL</TraitType>
+				<TraitType>TRAIT_AGGRESSIVE</TraitType>
+				<TraitType>TRAIT_MEGALOMANIAC</TraitType>
+				<TraitType>TRAIT_PHILOSOPHICAL1</TraitType>
+				<TraitType>TRAIT_AGGRESSIVE1</TraitType>
+				<TraitType>TRAIT_MEGALOMANIAC1</TraitType>
+			</DefaultComplexTraits>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>

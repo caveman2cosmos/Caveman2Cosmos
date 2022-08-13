@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUPS</Tag>
+		<English>General Specialist Groups</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_ASSIGNABLE_SPECIALISTS</Tag>
+		<English>Assignable Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_CIVILIAN</Tag>
+		<English>Civilian Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_CAPTIVE</Tag>
+		<English>Captive Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_RELIGIOUS</Tag>
+		<English>Religious Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_CULTURAL</Tag>
+		<English>Cultural Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_RESEARCH</Tag>
+		<English>Research Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_ECONOMIC</Tag>
+		<English>Economic Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_ARCHITECTURAL</Tag>
+		<English>Architectural Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_POLITICAL</Tag>
+		<English>Political Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_MEDICAL</Tag>
+		<English>Medical Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_ESPIONAGE</Tag>
+		<English>Espionage Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_LEGAL</Tag>
+		<English>Legal Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_SPECIALIST_GROUP_MILITARY</Tag>
+		<English>Military Specialists</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUPS</Tag>
+		<English>Unit Types</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_SIZE_MATTERS_RANK_GROUPS</Tag>
+		<English>Size Matters Rank Categories</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_EQUIPMENT_GROUPS</Tag>
+		<English>Equipment Option Activated Unit Capabilities</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_ANIMAL_GROUPS</Tag>
+		<English>Animal Designations</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SIZE</Tag>
+		<English>Size of Individuals in Unit</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_VOLUME</Tag>
+		<English>Volume of Beings in Unit</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_QUALITY</Tag>
+		<English>Combat Quality of Unit</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SPEED</Tag>
+		<English>Unit Speed Category</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ATTACK_FORM</Tag>
+		<English>Attack Form</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPON_METHOD</Tag>
+		<English>Weapon Method</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPON_STYLE</Tag>
+		<English>Armament Style</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_H2H</Tag>
+		<English>Primary Hand to Hand Weapon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_SIDEARMS</Tag>
+		<English>Sidearm Close Combat Weapon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_DISTANCE</Tag>
+		<English>Primary Distance Weapon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_BACKUP</Tag>
+		<English>Backup Ranged Weapon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_DETONATE</Tag>
+		<English>Detonation Weapon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_WEAPONS_AIR2GROUND</Tag>
+		<English>Air to Ground Weapon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ARMORS</Tag>
+		<English>Armor Category</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SHIELDS</Tag>
+		<English>Shield Category</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_NATURAL</Tag>
+		<English>Natural Ability</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_TAXONOMY</Tag>
+		<English>Taxonomical Category</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_INVERTEBRATE</Tag>
+		<English>Invertebrate Sub-Category</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_FISH</Tag>
+		<English>Fish Sub-Category</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_AMPHIBIAN</Tag>
+		<English>Amphibian Sub-Category</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_REPTILE</Tag>
+		<English>Reptile Sub-Category</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_BIRD</Tag>
+		<English>Bird Sub-Category</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Tag>
+		<English>Mammal Sub-Category</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_PRIMARY_ROLE</Tag>
+		<English>Primary Role</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_COMBAT</Tag>
+		<English>Combat Class</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_MOBILITY</Tag>
+		<English>Mobility Method</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SIEGE_TYPES</Tag>
+		<English>Siege Type</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_SPECIES</Tag>
+		<English>Species Type</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ERA</Tag>
+		<English>Era of Unit Access</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_MOUNT</Tag>
+		<English>Mount Animal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ANIMAL_ASSISTED</Tag>
+		<English>Assistance Animal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_RELIGION</Tag>
+		<English>Dominant Religion</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_CULTURE</Tag>
+		<English>Dominant Culture</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_ARMOR_TYPES</Tag>
+		<English>Armor Type</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_ARMOR_MATERIAL</Tag>
+		<English>Armor Material</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_SHIELD_MATERIAL</Tag>
+		<English>Shield Material</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_ABILITIES</Tag>
+		<English>Special Abilities</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_HEALING_GROUPS</Tag>
+		<English>Healing Categories</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_HEALS_AS</Tag>
+		<English>Heals As Type</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_HEALER_TYPES</Tag>
+		<English>Assists in Healing</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CATEGORY_UNITCOMBAT_GROUP_PROMOTED</Tag>
+		<English>As Promoted</English>
+	</TEXT>
+</Civ4GameText>

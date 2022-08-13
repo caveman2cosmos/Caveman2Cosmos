@@ -238,7 +238,7 @@ void CvPropertyManipulators::copyNonDefaults(const CvPropertyManipulators* pProp
 	}
 }
 
-void CvPropertyManipulators::getCheckSum(unsigned int &iSum) const
+void CvPropertyManipulators::getCheckSum(uint32_t& iSum) const
 {
 	foreach_(const CvPropertySource* pSource, getSources())
 	{

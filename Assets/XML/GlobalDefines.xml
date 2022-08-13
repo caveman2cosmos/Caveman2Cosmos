@@ -273,32 +273,8 @@
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>PLOT_VISIBILITY_RANGE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>UNIT_VISIBILITY_RANGE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>MAX_UNIT_VISIBILITY_RANGE</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>PEAK_SEE_FROM_CHANGE</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>PEAK_SEE_THROUGH_CHANGE</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>HILLS_SEE_FROM_CHANGE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>HILLS_SEE_THROUGH_CHANGE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>8</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MAX_YIELD_STACK</DefineName>
@@ -1737,5 +1713,9 @@
 	<Define>
 		<DefineName>NEXT_TRAIT_CULTURE_REQ_PERCENT</DefineName>
 		<iDefineIntVal>100</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>CITY_OUTPUT_HISTORY_SIZE</DefineName>
+		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 </Civ4Defines>

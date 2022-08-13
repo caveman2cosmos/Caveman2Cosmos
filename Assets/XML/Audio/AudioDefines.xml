@@ -4481,13 +4481,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_GOODY_SETTLER</SoundID>
-			<Filename>Sounds/Ambient/GoodySettler</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_GOODY_WARRIOR</SoundID>
 			<Filename>Sounds/Ambient/GoodyWarrior</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>

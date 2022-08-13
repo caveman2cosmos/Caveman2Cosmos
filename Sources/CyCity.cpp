@@ -5,6 +5,7 @@
 #include "CyCity.h"
 #include "CyPlot.h"
 #include "CyUnit.h"
+#include "CvUnitSelectionCriteria.h"
 
 //
 // Python wrapper class for CvCity
@@ -272,7 +273,7 @@ int CyCity::getBuildingProductionTurnsLeft(int /*BuildingTypes*/ iBuilding, int 
 
 int CyCity::getProjectProductionTurnsLeft(int /*ProjectTypes*/ eProject, int iNum) const
 {
-	return m_pCity->getProductionTurnsLeft((ProjectTypes)eProject, iNum);
+	return m_pCity->getProductionTurnsLeft((ProjectTypes) eProject, iNum);
 }
 
 void CyCity::setProduction(int iNewValue)
@@ -1724,6 +1725,11 @@ CvProperties* CyCity::getProperties() const
 	return m_pCity->getProperties();
 }
 
+const CityOutputHistory* CyCity::getCityOutputHistory() const
+{
+	return m_pCity->getCityOutputHistory();
+}
+
 bool CyCity::getBuildingListFilterActive(int eFilter)
 {
 	return m_pCity->getBuildingListFilterActive((BuildingFilterTypes)eFilter);
@@ -1822,4 +1828,16 @@ int CyCity::getUnitListType(int iGroup, int iPos)
 bool CyCity::isEventOccured(int eEvent) const
 {
 	return m_pCity->isEventOccured((EventTypes)eEvent);
+}
+
+int CyCity::AI_bestUnit() const
+{
+	int iDummyValue;
+	return m_pCity->AI_bestUnit(iDummyValue, -1, NULL, true, NULL, true, false, NULL);
+}
+
+int CyCity::AI_bestUnitAI(UnitAITypes eUnitAITypes) const
+{
+	int iDummyValue;
+	return m_pCity->AI_bestUnitAI(eUnitAITypes, iDummyValue, true, true, &CvUnitSelectionCriteria().IgnoreGrowth(true));
 }
