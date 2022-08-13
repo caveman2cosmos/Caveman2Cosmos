@@ -5615,4 +5615,12 @@
 		<Spanish>Cebra</Spanish>
 		<Russian>Çåáðà</Russian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_DUCK</Tag>
+		<English>Tamed Duck</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TAMED_TURKEY</Tag>
+		<English>Tamed Turkey</English>
+	</TEXT>
 </Civ4GameText>
