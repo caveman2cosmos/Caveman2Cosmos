@@ -723,6 +723,7 @@
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WEASEL</BuildingType>
+				<BuildingType>BUILDING_BAD_BOY_CAGE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BADGER</BuildingType>
@@ -15862,6 +15863,7 @@
 				<BuildingType>BUILDING_FOLKLORE_WEASEL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RACCOON</BuildingType>
 				<BuildingType>BUILDING_RACCOON_TRAPS</BuildingType>
+				<BuildingType>BUILDING_BAD_BOY_CAGE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
@@ -15919,6 +15921,7 @@
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WEASEL</BuildingType>
+				<BuildingType>BUILDING_BAD_BOY_CAGE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RATEL</BuildingType>
@@ -19025,6 +19028,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA_OTTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WEASEL</BuildingType>
+				<BuildingType>BUILDING_BAD_BOY_CAGE</BuildingType>
 				<BuildingType>BUILDING_OTTER_CAMP</BuildingType>
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -19433,6 +19437,7 @@
 				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WEASEL</BuildingType>
+				<BuildingType>BUILDING_BAD_BOY_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKUNK</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -21852,6 +21857,7 @@
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WEASEL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOLVERINE</BuildingType>
+				<BuildingType>BUILDING_BAD_BOY_CAGE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
