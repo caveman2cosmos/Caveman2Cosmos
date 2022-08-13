@@ -210,47 +210,11 @@
 				<Or>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_CAIMAN</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
 						<ID>BUILDING_FOLKLORE_CROCODILE</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_GATOR_ASIAN</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_GHARIAL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_HYENA</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_NILECROC</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
 						<ID>BUILDING_FOLKLORE_WEASEL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_RIVER_CROC_LARGE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_RIVER_CROC</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_SALTWATER_CROC_LARGE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_SALTWATER_CROC</ID>
 					</Has>
 				</Or>
 			</ConstructCondition>
@@ -283,11 +247,15 @@
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>306</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -331,6 +299,23 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_LION</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_TIGER</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_SPOTTED_CAT</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
+			<iCost>306</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -378,6 +363,23 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_BIRD</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_RAPTOR</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
+			<iCost>306</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -437,7 +439,9 @@
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
 			</PrereqInCityBuildings>
+			<iCost>306</iCost>
 			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -741,11 +745,13 @@
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARINE_INSTITUTE</BuildingType>
+				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CETAEA_INSTITUTE</BuildingType>
 				<BuildingType>BUILDING_SALACHIMORPHA_INSTITUTE</BuildingType>
 			</PrereqNotInCityBuildings>
+			<iCost>1260</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -779,11 +785,13 @@
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARINE_INSTITUTE</BuildingType>
+				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CEPHALOPOD_INSTITUTE</BuildingType>
 				<BuildingType>BUILDING_SALACHIMORPHA_INSTITUTE</BuildingType>
 			</PrereqNotInCityBuildings>
+			<iCost>1260</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -809,11 +817,16 @@
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<iMaxLatitude>60</iMaxLatitude>
 			<PrereqTech>TECH_AQUACULTURE</PrereqTech>
+			<bWater>1</bWater>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
+			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TOWN_HALL</BuildingType>
 				<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
 				<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>3690</iCost>
 			<YieldChanges>
 				<iYield>4</iYield>
 			</YieldChanges>
@@ -862,6 +875,7 @@
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<iMaxLatitude>80</iMaxLatitude>
 			<PrereqTech>TECH_AQUACULTURE</PrereqTech>
+			<bWater>1</bWater>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TOWN_HALL</BuildingType>
 				<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
@@ -870,6 +884,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_CRAB</BuildingType>
 			</PrereqInCityBuildings>
+			<iCost>3690</iCost>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
 				<iYield>4</iYield>
@@ -895,7 +910,9 @@
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
 			</PrereqInCityBuildings>
+			<iCost>306</iCost>
 			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -1145,6 +1162,35 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
+			<ConstructCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_ELEPHANT</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_ELEPHANT</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_ANTELOPE</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_BOAR</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_FOLKLORE_RHINO_TAXONOMY</ID>
+					</Has>
+				</Or>
+			</ConstructCondition>
+			<iCost>306</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1331,6 +1377,7 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
+			<iCost>300</iCost>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
@@ -1364,6 +1411,7 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
+			<iCost>120</iCost>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2449,11 +2497,13 @@
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARINE_INSTITUTE</BuildingType>
+				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_CEPHALOPOD_INSTITUTE</BuildingType>
 				<BuildingType>BUILDING_CETAEA_INSTITUTE</BuildingType>
 			</PrereqNotInCityBuildings>
+			<iCost>1260</iCost>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>

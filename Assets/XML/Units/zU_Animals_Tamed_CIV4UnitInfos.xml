@@ -3833,6 +3833,7 @@
 				<BuildingType>BUILDING_DUCK</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_DUCK_FLOCKS</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
@@ -3918,6 +3919,7 @@
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
 				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
 				<BuildingType>BUILDING_TURKEY_FARM</BuildingType>
+				<BuildingType>BUILDING_TURKEY_FLOCKS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
