@@ -344,38 +344,40 @@
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
 			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_DANCE_HUT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_DANCE_HALL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_NIGHT_CLUB</ID>
-					</Has>
-				</Or>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_FLAMINGO</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_PEACOCK</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_SECRETARYBIRD</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_VULTURE</ID>
-					</Has>
-				</Or>
+				<And>
+					<Or>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_DANCE_HUT</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_DANCE_HALL</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_NIGHT_CLUB</ID>
+						</Has>
+					</Or>
+					<Or>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_FOLKLORE_FLAMINGO</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_FOLKLORE_PEACOCK</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_FOLKLORE_SECRETARYBIRD</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_FOLKLORE_VULTURE</ID>
+						</Has>
+					</Or>
+				</And>
 			</ConstructCondition>
 			<iCost>60</iCost>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>
@@ -8424,34 +8426,36 @@
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			</TechTypes>
 			<ConstructCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_DANCE_HUT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_DANCE_HALL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_NIGHT_CLUB</ID>
-					</Has>
-				</Or>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_ARCTICFOX</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_FENNECFOX</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_REDFOX</ID>
-					</Has>
-				</Or>
+				<And>
+					<Or>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_DANCE_HUT</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_DANCE_HALL</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_NIGHT_CLUB</ID>
+						</Has>
+					</Or>
+					<Or>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_FOLKLORE_ARCTICFOX</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_FOLKLORE_FENNECFOX</ID>
+						</Has>
+						<Has>
+							<GOMType>GOM_BUILDING</GOMType>
+							<ID>BUILDING_FOLKLORE_REDFOX</ID>
+						</Has>
+					</Or>
+				</And>
 			</ConstructCondition>
 			<iCost>60</iCost>
 			<ObsoleteTech>TECH_MIND_UPLOADING</ObsoleteTech>

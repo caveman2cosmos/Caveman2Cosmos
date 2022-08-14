@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
+	<!-- Constructable buildings (should be) twice the regular hammer cost of buildings at that tech level -->
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_AMPHIBIAN_POND</Type>
