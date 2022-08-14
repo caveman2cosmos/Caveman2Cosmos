@@ -7,6 +7,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_PRIMARY_ROLE</Category>
 			</Categories>
+			<iExtraUpkeep100>20</iExtraUpkeep100>
 			<bCannotMergeSplit>1</bCannotMergeSplit>
 			<Button>Art/Interface/Buttons/units/sparth/categories/subdued.dds</Button>
 			<Actions>
@@ -183,6 +184,7 @@
 			<Categories>
 				<Category>CATEGORY_UNITCOMBAT_GROUP_COMBAT</Category>
 			</Categories>
+			<iExtraUpkeep100>50</iExtraUpkeep100>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_RECORD_TALE</MissionType>
