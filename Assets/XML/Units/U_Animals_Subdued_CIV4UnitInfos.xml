@@ -7,9 +7,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -63,9 +67,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -119,9 +127,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -178,9 +190,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -241,9 +257,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -301,9 +321,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -356,9 +380,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -526,9 +554,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -696,9 +728,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -866,9 +902,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -925,9 +965,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -982,9 +1026,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1042,9 +1090,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1102,9 +1154,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1271,9 +1327,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1330,9 +1390,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -1454,9 +1518,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1622,9 +1690,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1794,9 +1866,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -1963,9 +2039,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2134,9 +2214,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2304,9 +2388,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2363,9 +2451,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2420,9 +2512,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2591,9 +2687,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2762,9 +2862,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2931,9 +3035,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -2989,9 +3097,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3046,9 +3158,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3218,9 +3334,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3389,9 +3509,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3559,9 +3683,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3729,9 +3857,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -3897,9 +4029,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4066,9 +4202,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4126,9 +4266,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -4248,9 +4392,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4447,9 +4595,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -4565,9 +4717,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4623,9 +4779,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4679,9 +4839,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4737,9 +4901,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4794,9 +4962,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4858,9 +5030,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -4917,9 +5093,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5095,9 +5275,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -5218,9 +5402,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5388,9 +5576,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5449,9 +5641,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -5568,9 +5764,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5631,9 +5831,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5694,9 +5898,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -5866,9 +6074,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6038,9 +6250,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6211,9 +6427,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6387,9 +6607,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6445,9 +6669,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6617,9 +6845,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6680,9 +6912,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6737,9 +6973,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -6909,9 +7149,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7081,9 +7325,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7138,9 +7386,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7308,9 +7560,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7478,9 +7734,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7536,9 +7796,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -7708,9 +7972,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -7831,9 +8099,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8000,9 +8272,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8058,9 +8334,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8228,9 +8508,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -8352,9 +8636,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8522,9 +8810,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8579,9 +8871,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8636,9 +8932,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8702,9 +9002,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -8826,9 +9130,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8887,9 +9195,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -8949,9 +9261,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9119,9 +9435,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9288,9 +9608,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9347,9 +9671,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9517,9 +9845,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9687,9 +10019,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9747,9 +10083,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -9945,9 +10285,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -10070,9 +10414,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10238,9 +10586,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10434,9 +10786,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10491,9 +10847,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10661,9 +11021,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -10829,9 +11193,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11000,9 +11368,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11172,9 +11544,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11230,9 +11606,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11287,9 +11667,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11345,9 +11729,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11401,9 +11789,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11457,9 +11849,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11514,9 +11910,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11681,9 +12081,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11739,9 +12143,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11907,9 +12315,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -11966,9 +12378,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -12088,9 +12504,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -12146,9 +12566,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_SUBDUED_MAMMOTH</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
@@ -12318,9 +12742,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -12494,9 +12922,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -12664,9 +13096,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -12785,9 +13221,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -12906,9 +13346,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -13030,9 +13474,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13205,9 +13653,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13377,9 +13829,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13434,9 +13890,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13522,9 +13982,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13579,9 +14043,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -13751,9 +14219,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -13877,9 +14349,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -14049,9 +14525,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -14105,9 +14585,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -14274,9 +14758,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -14330,9 +14818,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -14454,9 +14946,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -14622,9 +15118,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -14795,9 +15295,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -14853,9 +15357,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -15021,9 +15529,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -15080,9 +15592,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -15141,9 +15657,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -15203,9 +15723,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -15374,9 +15898,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -15433,9 +15961,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -15492,9 +16024,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -15548,9 +16084,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -15721,9 +16261,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -15781,9 +16325,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -15837,9 +16385,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -15896,9 +16448,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -16066,9 +16622,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -16125,9 +16685,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -16246,9 +16810,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -16305,9 +16873,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -16365,9 +16937,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -16535,9 +17111,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -16706,9 +17286,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -16883,9 +17467,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -17007,9 +17595,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -17180,9 +17772,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -17240,9 +17836,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -17299,9 +17899,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -17358,9 +17962,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -17417,9 +18025,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -17476,9 +18088,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -17648,9 +18264,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -17819,9 +18439,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -17881,9 +18505,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -18051,9 +18679,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -18221,9 +18853,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -18459,9 +19095,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -18696,9 +19336,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -18758,9 +19402,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -18816,9 +19464,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -18940,9 +19592,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -19064,9 +19720,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -19186,9 +19846,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -19245,9 +19909,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -19413,9 +20081,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -19471,9 +20143,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -19641,9 +20317,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -19809,9 +20489,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -19978,9 +20662,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -20149,9 +20837,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -20318,9 +21010,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -20375,9 +21071,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -20431,9 +21131,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -20487,9 +21191,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -20656,9 +21364,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -20715,9 +21427,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -20773,9 +21489,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -20832,9 +21552,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -20887,9 +21611,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -21009,9 +21737,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -21181,9 +21913,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -21241,9 +21977,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -21301,9 +22041,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -21360,9 +22104,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -21419,9 +22167,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -21478,9 +22230,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -21537,9 +22293,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
 			<TerrainImpassableTypes>
@@ -21662,9 +22422,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -21833,9 +22597,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -22002,9 +22770,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
@@ -24530,9 +25302,13 @@
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_STANDARD</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
+				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_SUBDUED_ZEBRA</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
