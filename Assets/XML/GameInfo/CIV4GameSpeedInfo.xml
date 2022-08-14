@@ -197,7 +197,7 @@ Also you will need to change the STANDARD_GAMESPEED in GlobalDefines.xml if you 
 				</Percent>
 				<Percent>
 					<ID>ADAPT_UNIT_YIELD</ID>
-					<iValue>1625</iValue>
+					<iValue>1225</iValue>
 				</Percent>
 				<Percent>
 					<ID>ADAPT_BUILDING_AND_UNIT_COSTS</ID>
