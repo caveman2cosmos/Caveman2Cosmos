@@ -6293,7 +6293,7 @@ def doVolcanoDormantEruption(argsList):
   doVolcanoPlot(pPlot)
   doVolcanoNeighbouringPlots(pPlot)
   doVolcanoAdjustFertility((pPlot, 1, team))
-  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT")))
+  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT_ERUPTION")))
 
 def doVolcanoExtinction(argsList):
   data = argsList[0]

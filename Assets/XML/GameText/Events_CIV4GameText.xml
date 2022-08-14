@@ -2622,14 +2622,6 @@
 		<Russian>Óäà÷ëèâûé èãðîê èç %s2_city ñóìåë ñîðâàòü êóø â Ëàñ-Âåãàñå.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_1</Tag>
-		<English>A volcanic eruption near %s2_city has devastated the countryside. Fortunately, the %s1_civ_adjective city itself was spared.</English>
-		<French>Une éruption volcanique près de %s2_city a dévasté la campagne. Heureusement, la ville %s1:2_civ_adjective a été épargnée.</French>
-		<German>Ein Vulkanausbruch in der Nähe von %s2_city hat den Landstrich verwüstet. Glücklicherweise blieb die %s1:3_civ_adjective Stadt selbst verschont.</German>
-		<Italian>Un'eruzione vulcanica vicino a %s2_city ha devastato il territorio. Fortunatamente la città %s1_civ_adjective è stata risparmiata.</Italian>
-		<Spanish>La erupción de un volcán cercano a %s2_city ha devastado el campo. Por suerte, la propia ciudad %s1:2_civ_adjective se ha salvado.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_ACTIVE</Tag>
 		<English>Reports speak of increased volcanic activity.</English>
 		<French>Des rumeurs courent concernant une augmentation de l'activité volcanique.</French>
@@ -12724,14 +12716,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT</Tag>
-		<English>The earth has spewed forth lava and ash from a previously dormant volcano near the %s1_civ_adjective city of %s2_city.</English>
-		<French>Un volcan jusqu'ici endormi a craché de la lave et des cendres près de la ville %s1:2_civ_adjective de %s2_city.</French>
-		<German>Ein bislang inaktiver Vulkan in der Nähe der %s1:2_civ_adjective Stadt %s2_city hat Lava und Asche gespien.</German>
-		<Italian>La terra ha eruttato lava e ceneri da un vulcano addormentato vicino alla città %s1_civ_adjective di %s2_city.</Italian>
-		<Spanish>La tierra ha escupido lava y cenizas por un volcán que antes estaba inactivo en la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
+		<English>The earth has spewed forth lava and ash from a previously dormant volcano!</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Tag>
+		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT_ERUPTION</Tag>
 		<English>A volcano has erupted at a site we long regarded as safe, even though traces of volcanic activity long ago could be found. While this caused widespread destruction, the surrounding soil has improved tremendously.</English>
 		<French>L'éruption d'un volcan a eu lieu sur un site que l'on pensait sûr, même si de l'activité volcanique avait déjà été recensée à cet emplacement. Malgré les destructions occasionnées par cette catastrophe, le sol de la région en est amélioré.</French>
 		<German>Ein Vulkan ist in einem Gebiet ausgebrochen, das bei unseren Wissenschaftlern bisher als sicher galt, obwohl durchaus Spuren von vulkanischen Aktivitäten vor vielen tausend Jahren dort zu finden waren. Durch den Ausbruch kam es zu großflächigen Zerstörungen im Umfeld, aber auch zu einer erstaunlichen Steigerung der Bodenqualität.</German>
