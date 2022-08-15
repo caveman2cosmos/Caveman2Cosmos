@@ -709,6 +709,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT_COMBAT</Tag>
 		<English>Combat Types</English>
+		<German>Kategorien</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT_UPGRADES</Tag>
@@ -846,6 +847,11 @@
 		<Spanish>Sin cambios</Spanish>
 		<Polish>Bez zmian</Polish>
 		<Russian>Íå èçìåíÿòü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_OWN</Tag>
+		<English>Own</English>
+		<German>im Besitz:</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_QUOTE</Tag>

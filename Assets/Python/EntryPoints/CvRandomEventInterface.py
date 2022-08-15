@@ -661,64 +661,6 @@ def canTriggerMonsoonCity(argsList):
 
   return False
 
-######## VOLCANO ###########
-
-def getHelpVolcano1(argsList):
-	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_1_HELP", ())
-
-def canApplyVolcano1(argsList):
-	data = argsList[1]
-
-	for iDX in xrange(-1, 2):
-		for iDY in xrange(-1, 2):
-			plotX = plotXY(data.iPlotX, data.iPlotY, iDX, iDY)
-			if not plotX.isNone() and plotX.getImprovementType() != -1:
-				return True
-	return False
-
-def applyVolcano1(argsList):
-	data = argsList[1]
-	plots = []
-	iPlots = 0
-	for iDX in xrange(-1, 2):
-		for iDY in xrange(-1, 2):
-			plotX = plotXY(data.iPlotX, data.iPlotY, iDX, iDY)
-			if not plotX.isNone():
-				iImprovement = plotX.getImprovementType()
-				if iImprovement > -1:
-					plots.append((plotX, iImprovement))
-					iPlots += 1
-
-	if not plots: raise "Event - Error in canApplyVolcano1"
-
-	if iPlots < 3:
-		iRange = iPlots
-	else: iRange = 3
-
-	listRuins = [
-		GC.getInfoTypeForString("IMPROVEMENT_COTTAGE"),
-		GC.getInfoTypeForString("IMPROVEMENT_HAMLET"),
-		GC.getInfoTypeForString("IMPROVEMENT_VILLAGE"),
-		GC.getInfoTypeForString("IMPROVEMENT_TOWN"),
-		GC.getInfoTypeForString("IMPROVEMENT_SUBURBS"),
-		GC.getInfoTypeForString("IMPROVEMENT_GOODY_HUT")
-	]
-	iRuins = GC.getInfoTypeForString("IMPROVEMENT_CITY_RUINS")
-
-	for i in xrange(iRange):
-		if i and GAME.getSorenRandNum(100, "Volcano event num improvements destroyed") < 50:
-			break
-		plot, iImprovement = plots.pop(GAME.getSorenRandNum(iPlots, "Volcano event improvement destroyed"))
-		iPlots -= 1
-		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getImprovementInfo(iImprovement).getTextKey(), ))
-		CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getImprovementInfo(iImprovement).getButton(), GC.getCOLOR_RED(), plot.getX(), plot.getY(), True, True)
-		if iImprovement in listRuins:
-			plot.setImprovementType(iRuins)
-		else:
-			plot.setImprovementType(-1)
-
-
-
 ######## DUSTBOWL ###########
 
 def canTriggerDustbowlCont(argsList):
@@ -6351,7 +6293,7 @@ def doVolcanoDormantEruption(argsList):
   doVolcanoPlot(pPlot)
   doVolcanoNeighbouringPlots(pPlot)
   doVolcanoAdjustFertility((pPlot, 1, team))
-  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT")))
+  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT_ERUPTION")))
 
 def doVolcanoExtinction(argsList):
   data = argsList[0]
@@ -6391,7 +6333,7 @@ def doVolcanoSleep(argsList):
   doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT")))
 
 def getHelpVolcanoEruption1(argsList):
-	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_ERUPTION_1_HELP", ())
+	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_ERUPTION_HELP", ())
 
 def getHelpVolcanoSleep(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_SLEEP_HELP", ())

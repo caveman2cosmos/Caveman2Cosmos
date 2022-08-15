@@ -43752,7 +43752,7 @@
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/totem_fish.dds</Button>
+			<Button>Art/Interface/Buttons/Units/Tuna.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TUNA_NETS</Type>
