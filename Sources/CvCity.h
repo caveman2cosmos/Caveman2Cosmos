@@ -1301,8 +1301,6 @@ public:
 	int calculateCorporationHappiness() const;
 
 	BuildTypes findChopBuild(FeatureTypes eFeature) const;
-	CultureLevelTypes getOccupationCultureLevel() const;
-	void setOccupationCultureLevel(CultureLevelTypes eNewValue);
 	CultureLevelTypes getMaxCultureLevelAmongPlayers() const;
 	CultureLevelTypes getCultureLevel(PlayerTypes eIndex) const;
 	CultureLevelTypes getCultureLevelForCulture(int iCulture) const;
@@ -1703,8 +1701,6 @@ protected:
 
 	std::map<short, YieldArray> m_terrainYieldChanges;
 	std::map<short, YieldArray> m_plotYieldChanges;
-
-	CultureLevelTypes m_eOccupationCultureLevel;
 
 	int m_iMilitaryProductionModifier;
 	int m_iSpaceProductionModifier;

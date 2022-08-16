@@ -8629,9 +8629,6 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					szTempBuffer.Format(L"Max culture level = %d ", pCity->getMaxCultureLevelAmongPlayers());
 					szString.append(szTempBuffer);
 					szString.append(NEWLINE);
-					szTempBuffer.Format(L"Occupation culture level = %d ", pCity->getOccupationCultureLevel());
-					szString.append(szTempBuffer);
-					szString.append(NEWLINE);
 
 					// check avoid growth
 					if (bAvoidGrowth || bIgnoreGrowth)

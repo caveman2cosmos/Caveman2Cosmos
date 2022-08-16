@@ -2393,15 +2393,15 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				originalTradeNetworkConnectivity[iI] = GET_PLAYER((PlayerTypes)iI).isAlive() ? pCityPlot->getPlotGroup((PlayerTypes)iI) : NULL;
 			}
 		}
-		const int iOccupationRange = pOldCity->getMaxCultureLevelAmongPlayers();
 
 		if (hasFixedBorders())
 		{
+			const int iOccupationRange = pOldCity->getMaxCultureLevelAmongPlayers();
 			pOldCity->clearCultureDistanceCache();
 
-			for (int iDX = -(iOccupationRange); iDX <= iOccupationRange; iDX++)
+			for (int iDX = -iOccupationRange; iDX <= iOccupationRange; iDX++)
 			{
-				for (int iDY = -(iOccupationRange); iDY <= iOccupationRange; iDY++)
+				for (int iDY = -iOccupationRange; iDY <= iOccupationRange; iDY++)
 				{
 					const int iCultureDist = pOldCity->cultureDistance(iDX, iDY);
 					if (iCultureDist > iOccupationRange)
@@ -2413,7 +2413,6 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 					if (pLoopPlot != NULL && !pLoopPlot->isCity() && pLoopPlot->getOwner() == eOldOwner
 					&&  pLoopPlot->isPotentialCityWorkForArea(pOldCity->area()))
 					{
-						bool bCultureLevelFound = false;
 						bool bDoClaim = false;
 
 						for (int iJ = 0; iJ < GC.getNumCultureLevelInfos(); ++iJ)
@@ -2427,17 +2426,9 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 								{
 									bDoClaim = true;
 								}
-								bCultureLevelFound = true;
 								break;
 							}
 						}
-
-						// Occupy the tile if it is NOT within the city's culture range, but is within occupation range
-						if (!bDoClaim && !bCultureLevelFound && iCultureDist <= pOldCity->getOccupationCultureLevel())
-						{
-							bDoClaim = true;
-						}
-
 						if (bDoClaim)
 						{
 							pLoopPlot->setClaimingOwner(eNewOwner);
@@ -2731,10 +2722,6 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			}
 		}
 
-		if (iOccupationRange > 0)
-		{
-			pNewCity->setOccupationCultureLevel((CultureLevelTypes)iOccupationRange);
-		}
 		pNewCity->checkBuildings(false);
 		pNewCity->updateEspionageVisibility(false);
 

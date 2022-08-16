@@ -96,8 +96,6 @@ CvPlot::CvPlot()
 	m_apaiCultureRangeCities = NULL;
 	m_apaiInvisibleVisibilityCount = NULL;
 
-	m_aiOccupationCultureRangeCities = NULL;
-
 	m_aiMountainLeaderCount = NULL;	//	Koshling - mountain mod efficiency
 	m_pFeatureSymbol = NULL;
 	m_pPlotBuilder = NULL;
@@ -200,7 +198,6 @@ void CvPlot::uninit()
 	SAFE_DELETE_ARRAY(m_aeRevealedRouteType);
 
 	SAFE_DELETE_ARRAY(m_aiMountainLeaderCount);
-	SAFE_DELETE_ARRAY(m_aiOccupationCultureRangeCities);
 	SAFE_DELETE_ARRAY(m_paiBuildProgress);
 	SAFE_DELETE_ARRAY2(m_apaiCultureRangeCities, MAX_PLAYERS);
 	SAFE_DELETE_ARRAY2(m_apaiInvisibleVisibilityCount, MAX_TEAMS);
@@ -4440,7 +4437,7 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 		// Koshling - changed Fixed Borders to not unconditionally hold territory, but only
 		//	to hold it against a natural owner with less than twice the FB player's culture
 		&& getCulture(eOwner) > iBestCulture/2
-		&& (isWithinCultureRange(eOwner) || isWithinOccupationRange(eOwner)))
+		&& isWithinCultureRange(eOwner))
 		{
 			return eOwner;
 		}
@@ -10371,7 +10368,7 @@ void CvPlot::doCulture()
 	}
 
 	//Decay if you've lost any source of culture on the plot
-	if (getOwner() != NO_PLAYER && !isWithinCultureRange(getOwner()) && !isWithinOccupationRange(getOwner()))
+	if (getOwner() != NO_PLAYER && !isWithinCultureRange(getOwner()))
 	{
 		setCulture(getOwner(), std::max(0, getCulture(getOwner())/2 - 10), true, true);
 	}
@@ -10529,7 +10526,6 @@ void CvPlot::read(FDataStreamBase* pStream)
 {
 	int iI;
 	bool bVal;
-	char cCount;
 	int iCount;
 
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
@@ -10586,14 +10582,18 @@ void CvPlot::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvPlot", &m_eClaimingOwner);
 	WRAPPER_READ(wrapper, "CvPlot", (int*)&m_eLandmarkType);
 
-	SAFE_DELETE_ARRAY(m_aiOccupationCultureRangeCities);
-	cCount = 0;
-	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &cCount, "cConditional");
-	if (cCount > 0)
+	// @SAVEBREAK DELETE - Toffer
 	{
-		m_aiOccupationCultureRangeCities = new char[cCount];
-		WRAPPER_READ_ARRAY(wrapper, "CvPlot", cCount, m_aiOccupationCultureRangeCities);
+		char cCount = 0;
+		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &cCount, "cConditional");
+
+		if (cCount > 0)
+		{
+			char* m_aiOccupationCultureRangeCities = new char[cCount];
+			WRAPPER_READ_ARRAY(wrapper, "CvPlot", cCount, m_aiOccupationCultureRangeCities);
+		}
 	}
+	// SAVEBREAK@
 
 	WRAPPER_READ(wrapper, "CvPlot", &m_zobristContribution);
 
@@ -10633,7 +10633,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 	m_aiCulture.clear();
 
 	int buffer[MAX_PLAYERS];
-	cCount = 0;
+	char cCount = 0;
 	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &cCount, "cConditional");
 	if (cCount > 0)
 	{
@@ -11028,15 +11028,9 @@ void CvPlot::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvPlot", m_eClaimingOwner);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_eLandmarkType);
 
-	if (NULL == m_aiOccupationCultureRangeCities)
-	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)0, "cConditional");
-	}
-	else
-	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_PLAYERS, "cConditional");
-		WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", MAX_PLAYERS, m_aiOccupationCultureRangeCities);
-	}
+	// @SAVEBREAK DELETE - Toffer
+	WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)0, "cConditional");
+	// SAVEBREAK@
 
 	WRAPPER_WRITE(wrapper, "CvPlot", m_zobristContribution);
 
@@ -12399,43 +12393,6 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePl
 	return bResult;
 }
 
-int CvPlot::getOccupationCultureRangeCities(PlayerTypes eOwnerIndex) const
-{
-	FASSERT_BOUNDS(0, MAX_PLAYERS, eOwnerIndex);
-
-	if (NULL == m_aiOccupationCultureRangeCities)
-	{
-		return 0;
-	}
-
-	return m_aiOccupationCultureRangeCities[eOwnerIndex];
-}
-
-
-bool CvPlot::isWithinOccupationRange(PlayerTypes eOwnerIndex) const
-{
-	return (getOccupationCultureRangeCities(eOwnerIndex) > 0);
-}
-
-
-void CvPlot::changeOccupationCultureRangeCities(PlayerTypes eOwnerIndex, int iChange)
-{
-	FASSERT_BOUNDS(0, MAX_PLAYERS, eOwnerIndex);
-
-	if (0 != iChange)
-	{
-		if (NULL == m_aiOccupationCultureRangeCities)
-		{
-			m_aiOccupationCultureRangeCities = new char[MAX_PLAYERS];
-			for (int iI = 0; iI < MAX_PLAYERS; ++iI)
-			{
-				m_aiOccupationCultureRangeCities[iI] = 0;
-			}
-		}
-
-		m_aiOccupationCultureRangeCities[eOwnerIndex] += iChange;
-	}
-}
 
 // Called at the end of turn. Sets the owner that claimed the plot the previous turn.
 // NOTE: We can't make the plot neutral at the moment of claiming (setForceUnowned()), because the aggressor could use it imidiatelly (i.e. travel using roads).
@@ -12448,6 +12405,7 @@ void CvPlot::doTerritoryClaiming()
 		m_eClaimingOwner = NO_PLAYER;
 	}
 }
+
 
 int CvPlot::getRevoltProtection() const
 {
