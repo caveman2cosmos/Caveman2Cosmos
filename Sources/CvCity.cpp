@@ -8363,7 +8363,7 @@ int CvCity::getAdditionalHealth(int iGoodPercent, int iBadPercent, int& iGood, i
 
 	// Delta
 	iGood += (iGoodPercent / 100) + getFeatureGoodHealth();
-	iBad += (iBadPercent / 100) + getFeatureBadHealth(); // bad health is stored as negative
+	iBad += (iBadPercent / 100) - getFeatureBadHealth();
 
 	return iGood - iBad - iStarting;
 }
