@@ -6463,8 +6463,8 @@ int CvCity::maxHurryPopulation() const
 /*   plots and will lead to cultural borders at mountains and other key features                */
 /************************************************************************************************/
 
-#define	MAX_CLOSE_DIST	100	//	Arbitrary to some extent
-#define	HASH_RELATIVE_CLOSE_DIST(x,y)	(((x) + MAX_CLOSE_DIST) + 2*MAX_CLOSE_DIST*((y) + MAX_CLOSE_DIST))
+//	Unique index assuming x, y args are less than 100 ("relative close")
+#define	HASH_RELATIVE_CLOSE_DIST(x,y)	((x) + 100*(y))
 
 void CvCity::recalculateCultureDistances(int iMaxDistance) const
 {
