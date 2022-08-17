@@ -100,7 +100,7 @@
 			<iMaxNationalWondersOCC>4</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
-			<!-- r=1: 9 tiles -->
+			<!-- r=1: 9 tiles (enables r=0 level)-->
 			<Type>CULTURELEVEL_POOR</Type>
 			<ReplacementID>CULTURELEVEL_ALT_POOR</ReplacementID>
 			<ReplacementCondition>
@@ -453,7 +453,6 @@
 		</CultureLevelInfo>
 		<!--Afforess: Used only for Realistic Culture Spread Option -->
 		<CultureLevelInfo>
-			<!-- r=6: 109 tiles -->
 			<Type>CULTURELEVEL_IMPRESSIVE</Type>
 			<Description>TXT_KEY_CULTURELEVEL_IMPRESSIVE</Description>
 			<iCityDefenseModifier>30</iCityDefenseModifier>
@@ -503,7 +502,7 @@
 			<iMaxNationalWondersOCC>18</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
-			<!-- r=7: 141 tiles -->
+			<!-- r=6: 109 tiles -->
 			<Type>CULTURELEVEL_LEGENDARY</Type>
 			<Description>TXT_KEY_CULTURELEVEL_LEGENDARY</Description>
 			<iCityDefenseModifier>35</iCityDefenseModifier>
@@ -552,7 +551,7 @@
 			<iMaxNationalWondersOCC>20</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
-			<!-- r=8: 177 tiles -->
+			<!-- r=7: 141 tiles -->
 			<Type>CULTURELEVEL_ILLUSTRIOUS</Type>
 			<Description>TXT_KEY_CULTURELEVEL_ILLUSTRIOUS</Description>
 			<iCityDefenseModifier>40</iCityDefenseModifier>
@@ -601,7 +600,7 @@
 			<iMaxNationalWondersOCC>22</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
-			<!-- r=9: 217 tiles -->
+			<!-- r=8: 177 tiles -->
 			<Type>CULTURELEVEL_PHENOMENAL</Type>
 			<Description>TXT_KEY_CULTURELEVEL_PHENOMENAL</Description>
 			<iCityDefenseModifier>45</iCityDefenseModifier>
@@ -650,7 +649,7 @@
 			<iMaxNationalWondersOCC>25</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
-			<!-- r=10: 261 tiles -->
+			<!-- r=9: 217 tiles -->
 			<Type>CULTURELEVEL_MONUMENTAL</Type>
 			<Description>TXT_KEY_CULTURELEVEL_MONUMENTAL</Description>
 			<iCityDefenseModifier>50</iCityDefenseModifier>
