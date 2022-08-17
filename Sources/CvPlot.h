@@ -332,9 +332,6 @@ public:
 	bool changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePlayer = NO_PLAYER);
 	void changeCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex, int iChange, bool bUpdatePlotGroups, bool bUpdateCulture = true);
 	bool isHasValidBonus() const;
-	int getOccupationCultureRangeCities(PlayerTypes eOwnerIndex) const;
-	bool isWithinOccupationRange(PlayerTypes eOwnerIndex) const;
-	void changeOccupationCultureRangeCities(PlayerTypes eOwnerIndex,int iChange);
 	PlayerTypes getClaimingOwner() const;
 	void setClaimingOwner(PlayerTypes eNewValue);
 
@@ -382,7 +379,6 @@ protected:
 	CvGameObjectPlot m_GameObject;
 
 	char /*PlayerTypes*/ m_eClaimingOwner;
-	char* m_aiOccupationCultureRangeCities;
 	void doTerritoryClaiming();
 	CvWString m_szLandmarkMessage;
 	CvWString m_szLandmarkName;
