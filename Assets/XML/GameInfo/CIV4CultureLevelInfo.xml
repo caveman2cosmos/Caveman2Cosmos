@@ -1,6 +1,15 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4CultureLevelInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<CultureLevelInfos>
+		<!-- Speed thresholds:
+			Ultrafast = 1/4x normal
+			Blitz = 1/2x normal 
+			Long = 2x normal
+			Epic = 3x normal
+			Marathon = 4x normal
+			Snail = 6x normal
+			Eons = 8x normal
+			Eternity = 10x normal-->
 		<CultureLevelInfo>
 			<!-- r=0: 1 tile (1 tile start gameoption) -->
 			<Type>CULTURELEVEL_NONE</Type>
@@ -48,7 +57,7 @@
 			<iMaxWorldWonders>1</iMaxWorldWonders>
 			<iMaxTeamWonders>1</iMaxTeamWonders>
 			<iMaxNationalWonders>2</iMaxNationalWonders>
-			<iMaxNationalWondersOCC>2</iMaxNationalWondersOCC>
+			<iMaxNationalWondersOCC>4</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
 			<!-- r=1: 9 tiles -->
@@ -97,7 +106,7 @@
 			<iMaxWorldWonders>1</iMaxWorldWonders>
 			<iMaxTeamWonders>1</iMaxTeamWonders>
 			<iMaxNationalWonders>4</iMaxNationalWonders>
-			<iMaxNationalWondersOCC>4</iMaxNationalWondersOCC>
+			<iMaxNationalWondersOCC>8</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
 			<!-- r=1: 9 tiles (enables r=0 level)-->
@@ -153,7 +162,57 @@
 			<iMaxWorldWonders>1</iMaxWorldWonders>
 			<iMaxTeamWonders>1</iMaxTeamWonders>
 			<iMaxNationalWonders>4</iMaxNationalWonders>
-			<iMaxNationalWondersOCC>4</iMaxNationalWondersOCC>
+			<iMaxNationalWondersOCC>8</iMaxNationalWondersOCC>
+		</CultureLevelInfo>
+		<CultureLevelInfo>
+			<!-- Used only for Realistic Culture Spread Option: r=1.5 -->
+			<Type>TXT_KEY_CULTURELEVEL_MINISCULE</Type>
+			<Description>TXT_KEY_CULTURELEVEL_MINISCULE</Description>
+			<iCityDefenseModifier>5</iCityDefenseModifier>
+			<PrereqGameOption>GAMEOPTION_REALISTIC_CULTURE_SPREAD</PrereqGameOption>
+			<SpeedThresholds>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_ETERNITY</GameSpeedType>
+					<iThreshold>200</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_EONS</GameSpeedType>
+					<iThreshold>160</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_SNAIL</GameSpeedType>
+					<iThreshold>120</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_MARATHON</GameSpeedType>
+					<iThreshold>80</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_EPIC</GameSpeedType>
+					<iThreshold>60</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_LONG</GameSpeedType>
+					<iThreshold>40</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_NORMAL</GameSpeedType>
+					<iThreshold>20</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_BLITZ</GameSpeedType>
+					<iThreshold>10</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_ULTRAFAST</GameSpeedType>
+					<iThreshold>5</iThreshold>
+				</SpeedThreshold>
+			</SpeedThresholds>
+			<iCityRadius>2</iCityRadius>
+			<iMaxWorldWonders>1</iMaxWorldWonders>
+			<iMaxTeamWonders>1</iMaxTeamWonders>
+			<iMaxNationalWonders>5</iMaxNationalWonders>
+			<iMaxNationalWondersOCC>10</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
 			<!-- r=2: 21 tiles -->
@@ -202,7 +261,57 @@
 			<iMaxWorldWonders>2</iMaxWorldWonders>
 			<iMaxTeamWonders>2</iMaxTeamWonders>
 			<iMaxNationalWonders>6</iMaxNationalWonders>
-			<iMaxNationalWondersOCC>6</iMaxNationalWondersOCC>
+			<iMaxNationalWondersOCC>12</iMaxNationalWondersOCC>
+		</CultureLevelInfo>
+		<CultureLevelInfo>
+			<!-- Used only for Realistic Culture Spread Option: r=1.5 -->
+			<Type>TXT_KEY_CULTURELEVEL_MINOR</Type>
+			<Description>TXT_KEY_CULTURELEVEL_MINOR</Description>
+			<iCityDefenseModifier>7</iCityDefenseModifier>
+			<PrereqGameOption>GAMEOPTION_REALISTIC_CULTURE_SPREAD</PrereqGameOption>
+			<SpeedThresholds>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_ETERNITY</GameSpeedType>
+					<iThreshold>1100</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_EONS</GameSpeedType>
+					<iThreshold>880</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_SNAIL</GameSpeedType>
+					<iThreshold>660</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_MARATHON</GameSpeedType>
+					<iThreshold>440</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_EPIC</GameSpeedType>
+					<iThreshold>330</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_LONG</GameSpeedType>
+					<iThreshold>220</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_NORMAL</GameSpeedType>
+					<iThreshold>110</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_BLITZ</GameSpeedType>
+					<iThreshold>55</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_ULTRAFAST</GameSpeedType>
+					<iThreshold>27</iThreshold>
+				</SpeedThreshold>
+			</SpeedThresholds>
+			<iCityRadius>2</iCityRadius>
+			<iMaxWorldWonders>2</iMaxWorldWonders>
+			<iMaxTeamWonders>2</iMaxTeamWonders>
+			<iMaxNationalWonders>7</iMaxNationalWonders>
+			<iMaxNationalWondersOCC>14</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
 			<!-- r=3: 37 tiles -->
@@ -251,9 +360,9 @@
 			<iMaxWorldWonders>2</iMaxWorldWonders>
 			<iMaxTeamWonders>2</iMaxTeamWonders>
 			<iMaxNationalWonders>8</iMaxNationalWonders>
-			<iMaxNationalWondersOCC>8</iMaxNationalWondersOCC>
+			<iMaxNationalWondersOCC>16</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
-		<!--Afforess: Used only for Realistic Culture Spread Option -->
+		<!-- Used only for Realistic Culture Spread Option -->
 		<CultureLevelInfo>
 			<Type>CULTURELEVEL_PROMINENT</Type>
 			<Description>TXT_KEY_CULTURELEVEL_PROMINENT</Description>
@@ -301,7 +410,7 @@
 			<iMaxWorldWonders>3</iMaxWorldWonders>
 			<iMaxTeamWonders>3</iMaxTeamWonders>
 			<iMaxNationalWonders>10</iMaxNationalWonders>
-			<iMaxNationalWondersOCC>10</iMaxNationalWondersOCC>
+			<iMaxNationalWondersOCC>20</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
 			<!-- r=4: 57 tiles -->
@@ -350,7 +459,7 @@
 			<iMaxWorldWonders>4</iMaxWorldWonders>
 			<iMaxTeamWonders>4</iMaxTeamWonders>
 			<iMaxNationalWonders>12</iMaxNationalWonders>
-			<iMaxNationalWondersOCC>12</iMaxNationalWondersOCC>
+			<iMaxNationalWondersOCC>24</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<!--Afforess: Used only for Realistic Culture Spread Option -->
 		<CultureLevelInfo>
@@ -400,7 +509,7 @@
 			<iMaxWorldWonders>5</iMaxWorldWonders>
 			<iMaxTeamWonders>5</iMaxTeamWonders>
 			<iMaxNationalWonders>14</iMaxNationalWonders>
-			<iMaxNationalWondersOCC>14</iMaxNationalWondersOCC>
+			<iMaxNationalWondersOCC>28</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
 			<!-- r=5: 81 tiles -->
@@ -449,7 +558,7 @@
 			<iMaxWorldWonders>6</iMaxWorldWonders>
 			<iMaxTeamWonders>5</iMaxTeamWonders>
 			<iMaxNationalWonders>16</iMaxNationalWonders>
-			<iMaxNationalWondersOCC>16</iMaxNationalWondersOCC>
+			<iMaxNationalWondersOCC>32</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<!--Afforess: Used only for Realistic Culture Spread Option -->
 		<CultureLevelInfo>
@@ -499,7 +608,7 @@
 			<iMaxWorldWonders>7</iMaxWorldWonders>
 			<iMaxTeamWonders>6</iMaxTeamWonders>
 			<iMaxNationalWonders>18</iMaxNationalWonders>
-			<iMaxNationalWondersOCC>18</iMaxNationalWondersOCC>
+			<iMaxNationalWondersOCC>36</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
 			<!-- r=6: 109 tiles -->
@@ -548,7 +657,57 @@
 			<iMaxWorldWonders>8</iMaxWorldWonders>
 			<iMaxTeamWonders>7</iMaxTeamWonders>
 			<iMaxNationalWonders>20</iMaxNationalWonders>
-			<iMaxNationalWondersOCC>20</iMaxNationalWondersOCC>
+			<iMaxNationalWondersOCC>40</iMaxNationalWondersOCC>
+		</CultureLevelInfo>
+		<CultureLevelInfo>
+			<!-- Used only for Realistic Culture Spread Option: r=1.5 -->
+			<Type>TXT_KEY_CULTURELEVEL_TREMENDOUS</Type>
+			<Description>TXT_KEY_CULTURELEVEL_TREMENDOUS</Description>
+			<iCityDefenseModifier>37</iCityDefenseModifier>
+			<PrereqGameOption>GAMEOPTION_REALISTIC_CULTURE_SPREAD</PrereqGameOption>
+			<SpeedThresholds>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_ETERNITY</GameSpeedType>
+					<iThreshold>2600000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_EONS</GameSpeedType>
+					<iThreshold>2080000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_SNAIL</GameSpeedType>
+					<iThreshold>1560000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_MARATHON</GameSpeedType>
+					<iThreshold>1040000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_EPIC</GameSpeedType>
+					<iThreshold>780000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_LONG</GameSpeedType>
+					<iThreshold>520000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_NORMAL</GameSpeedType>
+					<iThreshold>260000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_BLITZ</GameSpeedType>
+					<iThreshold>130000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_ULTRAFAST</GameSpeedType>
+					<iThreshold>65000</iThreshold>
+				</SpeedThreshold>
+			</SpeedThresholds>
+			<iCityRadius>3</iCityRadius>
+			<iMaxWorldWonders>9</iMaxWorldWonders>
+			<iMaxTeamWonders>9</iMaxTeamWonders>
+			<iMaxNationalWonders>21</iMaxNationalWonders>
+			<iMaxNationalWondersOCC>42</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
 			<!-- r=7: 141 tiles -->
@@ -597,7 +756,57 @@
 			<iMaxWorldWonders>10</iMaxWorldWonders>
 			<iMaxTeamWonders>12</iMaxTeamWonders>
 			<iMaxNationalWonders>22</iMaxNationalWonders>
-			<iMaxNationalWondersOCC>22</iMaxNationalWondersOCC>
+			<iMaxNationalWondersOCC>44</iMaxNationalWondersOCC>
+		</CultureLevelInfo>
+		<CultureLevelInfo>
+			<!-- Used only for Realistic Culture Spread Option: r=1.5 -->
+			<Type>TXT_KEY_CULTURELEVEL_STUPENDOUS</Type>
+			<Description>TXT_KEY_CULTURELEVEL_STUPENDOUS</Description>
+			<iCityDefenseModifier>42</iCityDefenseModifier>
+			<PrereqGameOption>GAMEOPTION_REALISTIC_CULTURE_SPREAD</PrereqGameOption>
+			<SpeedThresholds>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_ETERNITY</GameSpeedType>
+					<iThreshold>5200000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_EONS</GameSpeedType>
+					<iThreshold>4160000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_SNAIL</GameSpeedType>
+					<iThreshold>3120000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_MARATHON</GameSpeedType>
+					<iThreshold>2080000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_EPIC</GameSpeedType>
+					<iThreshold>1560000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_LONG</GameSpeedType>
+					<iThreshold>1040000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_NORMAL</GameSpeedType>
+					<iThreshold>520000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_BLITZ</GameSpeedType>
+					<iThreshold>260000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_ULTRAFAST</GameSpeedType>
+					<iThreshold>130000</iThreshold>
+				</SpeedThreshold>
+			</SpeedThresholds>
+			<iCityRadius>3</iCityRadius>
+			<iMaxWorldWonders>11</iMaxWorldWonders>
+			<iMaxTeamWonders>13</iMaxTeamWonders>
+			<iMaxNationalWonders>23</iMaxNationalWonders>
+			<iMaxNationalWondersOCC>46</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
 			<!-- r=8: 177 tiles -->
@@ -646,7 +855,57 @@
 			<iMaxWorldWonders>12</iMaxWorldWonders>
 			<iMaxTeamWonders>14</iMaxTeamWonders>
 			<iMaxNationalWonders>25</iMaxNationalWonders>
-			<iMaxNationalWondersOCC>25</iMaxNationalWondersOCC>
+			<iMaxNationalWondersOCC>50</iMaxNationalWondersOCC>
+		</CultureLevelInfo>
+		<CultureLevelInfo>
+			<!-- Used only for Realistic Culture Spread Option: r=1.5 -->
+			<Type>TXT_KEY_CULTURELEVEL_MAJESTIC</Type>
+			<Description>TXT_KEY_CULTURELEVEL_MAJESTIC</Description>
+			<iCityDefenseModifier>47</iCityDefenseModifier>
+			<PrereqGameOption>GAMEOPTION_REALISTIC_CULTURE_SPREAD</PrereqGameOption>
+			<SpeedThresholds>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_ETERNITY</GameSpeedType>
+					<iThreshold>10400000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_EONS</GameSpeedType>
+					<iThreshold>8320000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_SNAIL</GameSpeedType>
+					<iThreshold>6240000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_MARATHON</GameSpeedType>
+					<iThreshold>4160000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_EPIC</GameSpeedType>
+					<iThreshold>3120000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_LONG</GameSpeedType>
+					<iThreshold>2080000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_NORMAL</GameSpeedType>
+					<iThreshold>1040000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_BLITZ</GameSpeedType>
+					<iThreshold>520000</iThreshold>
+				</SpeedThreshold>
+				<SpeedThreshold>
+					<GameSpeedType>GAMESPEED_ULTRAFAST</GameSpeedType>
+					<iThreshold>260000</iThreshold>
+				</SpeedThreshold>
+			</SpeedThresholds>
+			<iCityRadius>3</iCityRadius>
+			<iMaxWorldWonders>13</iMaxWorldWonders>
+			<iMaxTeamWonders>15</iMaxTeamWonders>
+			<iMaxNationalWonders>27</iMaxNationalWonders>
+			<iMaxNationalWondersOCC>54</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 		<CultureLevelInfo>
 			<!-- r=9: 217 tiles -->
@@ -695,7 +954,7 @@
 			<iMaxWorldWonders>14</iMaxWorldWonders>
 			<iMaxTeamWonders>16</iMaxTeamWonders>
 			<iMaxNationalWonders>31</iMaxNationalWonders>
-			<iMaxNationalWondersOCC>31</iMaxNationalWondersOCC>
+			<iMaxNationalWondersOCC>62</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
 	</CultureLevelInfos>
 </Civ4CultureLevelInfo>

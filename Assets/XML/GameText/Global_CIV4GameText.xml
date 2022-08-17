@@ -4976,6 +4976,26 @@
 		<Spanish>Refinada</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_MINISCULE</Tag>
+		<English>Miniscule</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_MINOR</Tag>
+		<English>Minor</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_TREMENDOUS</Tag>
+		<English>Tremendous</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_STUPENDOUS</Tag>
+		<English>Stupendous</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_MAJESTIC</Tag>
+		<English>Majestic</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CURE_AFFLICTION</Tag>
 		<English>[ICON_BULLET]Cure: May remove or improve %s1_PromotionName on those afflicted.</English>
 		<French>[ICON_BULLET]Guérison: Peut enlever ou améliorer %s1_PromotionName pour ceux qui subissent une affliction.</French>
