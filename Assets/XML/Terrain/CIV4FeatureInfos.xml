@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4FeatureInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<FeatureInfos>
+		<!-- <iCultureDistance> slows down growth over tiles with Realistic Culture option on. 
+				Note this value stacks with regular distance AND terrain (see CIV4TerrainInfos.xml)
+				Alternatively, <bIgnoreTerrainCulture> will make the feature's tile
+				ignore underlaying terrain cost. -->
 		<FeatureInfo>
 			<Type>FEATURE_ICE</Type>
 			<Description>TXT_KEY_FEATURE_ICE</Description>
@@ -2189,7 +2193,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
-			<iCultureDistance>1</iCultureDistance>
+			<iCultureDistance>1</iCultureDistance> <!-- Is added to TerrainInfo value of 'Peak'-->
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2296,7 +2300,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
-			<iCultureDistance>1</iCultureDistance>
+			<iCultureDistance>1</iCultureDistance> <!-- Is added to TerrainInfo value of 'Peak'-->
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4281,6 +4285,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
+			<iCultureDistance>2</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4328,6 +4333,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
+			<iCultureDistance>1</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4765,6 +4771,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
+			<iCultureDistance>2</iCultureDistance>
 			<FootstepSounds>
 				<FootstepSound>
 					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
@@ -4929,6 +4936,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
+			<iCultureDistance>1</iCultureDistance>
 			<FootstepSounds>
 				<FootstepSound>
 					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
@@ -6179,6 +6187,7 @@
 			<iTurnDamage>15</iTurnDamage>
 			<bNoCity>1</bNoCity>
 			<bNukeImmune>1</bNukeImmune>
+			<iCultureDistance>1</iCultureDistance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
@@ -6213,6 +6222,7 @@
 			<iAppearance>-1</iAppearance>
 			<bNoCity>1</bNoCity>
 			<bNukeImmune>1</bNukeImmune>
+			<iCultureDistance>1</iCultureDistance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
@@ -6575,6 +6585,7 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_PLAINS</TerrainType>
@@ -6602,6 +6613,7 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
@@ -6623,6 +6635,7 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -6680,6 +6693,7 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<iCultureDistance>1</iCultureDistance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -6832,6 +6846,7 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>

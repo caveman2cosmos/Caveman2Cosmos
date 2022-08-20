@@ -461,7 +461,7 @@
 			<iMaxNationalWonders>12</iMaxNationalWonders>
 			<iMaxNationalWondersOCC>24</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
-		<!--Afforess: Used only for Realistic Culture Spread Option -->
+		<!-- Used only for Realistic Culture Spread Option -->
 		<CultureLevelInfo>
 			<Type>CULTURELEVEL_ELEGANT</Type>
 			<Description>TXT_KEY_CULTURELEVEL_ELEGANT</Description>
@@ -560,7 +560,7 @@
 			<iMaxNationalWonders>16</iMaxNationalWonders>
 			<iMaxNationalWondersOCC>32</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
-		<!--Afforess: Used only for Realistic Culture Spread Option -->
+		<!-- Used only for Realistic Culture Spread Option -->
 		<CultureLevelInfo>
 			<Type>CULTURELEVEL_IMPRESSIVE</Type>
 			<Description>TXT_KEY_CULTURELEVEL_IMPRESSIVE</Description>

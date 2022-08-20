@@ -6458,12 +6458,13 @@ int CvCity::maxHurryPopulation() const
 
 /************************************************************************************************/
 /* phunny_pharmer                Start		 04/20/10                                           */
-/*   the goal of this modification is to make it so that difficult tiles (ie hills, mountains)  */
-/*   receive less culture per turn; this will make cultural borders grow more slowly on these   */
-/*   plots and will lead to cultural borders at mountains and other key features                */
+/*   the goal of this modification is to make it so that difficult tiles (ie hills, mountains)	*/
+/*   not in 8 tiles directly adjacent to city center receive less culture per turn; this will	*/
+/*   make cultural borders grow more slowly on these plots and will lead to cultural borders	*/
+/*   at mountains and other key features                										*/
 /************************************************************************************************/
 
-//	Unique index assuming x, y args are less than 100 ("relative close")
+//	Unique index assuming x, y args are less than 50 ("relative close")
 #define	HASH_RELATIVE_CLOSE_DIST(x,y)	((x) + 100*(y))
 
 void CvCity::recalculateCultureDistances(int iMaxDistance) const
@@ -6483,10 +6484,11 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 		}
 	}
 
-	// determine whether or not any value has changed when calculating distances
-	//   note that this is initially set to true as long as the maximum distance is not 1
-	//   when values cease to change, the final distances have been calculated
-	bool bHasChanged = (iMaxDistance != 1);
+	// Blaze: Spiraling outward from center should more efficient if perf issues exist (getCityIndexPlot);
+	//        this implementation is rather brute-force and inefficient, but isn't run v. often at least
+	// Currently: Calculate distance values of all tiles in iMaxDistance (>1) radial size grid,
+	//   recalculating entire grid until no values have changed.
+	bool bHasChanged = (iMaxDistance > 1);
 
 	// as long as there are changes during the last iteration
 	while (bHasChanged)
@@ -6541,43 +6543,63 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 	//   from an unusual direction, eg if there is a mountain range in the way
 	int distance = MAX_INT;
 
-	// check all directions to determine the cultural distance
-	//   note 1: all directions are checked
-	//   note 2: the distance to the plot is defined as the distance to the
-	//     neighbor, plus any penalty for crossing a river, plus an additional
-	//     one for reaching that particular square
-	//   note 3: if a neighbor has a distance of MAX_INT, then it is ignored
-	//     since that means that the neighbor is defined
+	/* Determine the neighborly cultural distance of given plot:
+		1: All directions from given plot are checked
+		2: Neighbors with distance of MAX_INT are ignored because they
+			don't exist or haven't been calculated yet
+		3: Smallest (neighbor distance + 1 + possible neighbor river penalties) is used
+		4: Greater river penalty (2, not 1) if team lacks bridge building */
+	bool bExtraRiverPenalty = !GET_TEAM(getTeam()).isBridgeBuilding();
+	bool bHasCrossedRiver = false;
+
+	// This could be split off into its own function...
+	// East
 	int iPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX + 1, iDY);
-	int iEastDist = m_aCultureDistances[iPlotIndex];
-	if (iEastDist != 0 && iEastDist != MAX_INT)
+	int iNeighborDist = m_aCultureDistances[iPlotIndex];
+	if (iNeighborDist != 0 && iNeighborDist != MAX_INT)
 	{
-		iEastDist += pPlot->isRiverCrossing(DIRECTION_EAST);
-		distance = std::min(distance, iEastDist + 1);
+		iNeighborDist += 1 + pPlot->isRiverCrossing(DIRECTION_EAST) * (1 + bExtraRiverPenalty);
+		if (iNeighborDist < distance)
+		{
+			distance = iNeighborDist;
+			bHasCrossedRiver = pPlot->isRiverCrossing(DIRECTION_EAST);
+		}
 	}
-
+	// South
 	iPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY - 1);
-	int iSouthDist = m_aCultureDistances[iPlotIndex];
-	if (iSouthDist != 0 && iSouthDist != MAX_INT)
+	iNeighborDist = m_aCultureDistances[iPlotIndex];
+	if (iNeighborDist != 0 && iNeighborDist != MAX_INT)
 	{
-		iSouthDist += pPlot->isRiverCrossing(DIRECTION_SOUTH);
-		distance = std::min(distance, iSouthDist + 1);
+		iNeighborDist += 1 + pPlot->isRiverCrossing(DIRECTION_SOUTH) * (1 + bExtraRiverPenalty);
+		if (iNeighborDist < distance)
+		{
+			distance = iNeighborDist;
+			bHasCrossedRiver = pPlot->isRiverCrossing(DIRECTION_SOUTH);
+		}
 	}
-
+	// West
 	iPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX - 1, iDY);
-	int iWestDist = m_aCultureDistances[iPlotIndex];
-	if (iWestDist != 0 && iWestDist != MAX_INT)
+	iNeighborDist = m_aCultureDistances[iPlotIndex];
+	if (iNeighborDist != 0 && iNeighborDist != MAX_INT)
 	{
-		iWestDist += pPlot->isRiverCrossing(DIRECTION_WEST);
-		distance = std::min(distance, iWestDist + 1);
+		iNeighborDist += 1 + pPlot->isRiverCrossing(DIRECTION_WEST) * (1 + bExtraRiverPenalty);
+		if (iNeighborDist < distance)
+		{
+			distance = iNeighborDist;
+			bHasCrossedRiver = pPlot->isRiverCrossing(DIRECTION_WEST);
+		}
 	}
-
+	// North
 	iPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY + 1);
-	int iNorthDist = m_aCultureDistances[iPlotIndex];
-	if (iNorthDist != 0 && iNorthDist != MAX_INT)
+	iNeighborDist = m_aCultureDistances[iPlotIndex];
+	if (iNeighborDist != 0 && iNeighborDist != MAX_INT)
 	{
-		iNorthDist += pPlot->isRiverCrossing(DIRECTION_NORTH);
-		distance = std::min(distance, iNorthDist + 1);
+		iNeighborDist += 1 + pPlot->isRiverCrossing(DIRECTION_NORTH) * (1 + bExtraRiverPenalty);
+		if (iNeighborDist < distance)
+		{
+			distance = iNeighborDist;
+			bHasCrossedRiver = pPlot->isRiverCrossing(DIRECTION_NORTH);
+		}
 	}
 
 	// if the distance to the plot is unchanged, perhaps because all the
@@ -6586,50 +6608,47 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 	if (distance == MAX_INT) return MAX_INT;
 
 	// increase the cultural distance for the tile if it is difficult terrain
-	//   key idea: distant and difficult terrain will accumulate less culture
-	//   each turn, making cultural borders grow more slowly on these terrain
+	//   key idea: difficult terrain will take longer to expand to, and
+	//   grow less quickly once expanded. Extra mountain penalty (2) if no tech.
 
-	// if the plot is a hills, tundra, or marsh, or coast plot
-	//   increase the effective distance by one
-
-	bool bBonus = (pPlot->getBonusType(getTeam()) != NO_BONUS);
 	int terrainDistance = 0;
-	TerrainTypes eTerrain;
-	if (pPlot->isHills())
+	if (pPlot->isAsPeak())
 	{
-		eTerrain = GC.getTERRAIN_HILL();
-	}
-	else if (pPlot->isAsPeak())
-	{
-		eTerrain = GC.getTERRAIN_PEAK();
+		terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_PEAK()).getCultureDistance();
+		terrainDistance += 2 * !GET_TEAM(getTeam()).isCanFoundOnPeaks();
 	}
 	else
 	{
-		eTerrain = pPlot->getTerrainType();
-	}
-
-	if (!bBonus)
-	{
-		terrainDistance += GC.getTerrainInfo(eTerrain).getCultureDistance();
+		terrainDistance += GC.getTerrainInfo(pPlot->getTerrainType()).getCultureDistance();
+		if (pPlot->isHills())
+		{
+			terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_HILL()).getCultureDistance();
+		}
 	}
 
 	if (pPlot->getFeatureType() != NO_FEATURE)
 	{
-		//used for floodplains
+		// some features cause underlaying terrain cost to be ignored; oasis, floodplain, some nat'l wonders
 		if (GC.getFeatureInfo(pPlot->getFeatureType()).isIgnoreTerrainCulture())
 		{
 			terrainDistance = 0;
 		}
-		if (!bBonus)
+		terrainDistance += GC.getFeatureInfo(pPlot->getFeatureType()).getCultureDistance();
+	}
+
+	// If plot has a known resource, reduce penalties by up to 2 from terrain/river
+	if (pPlot->getBonusType(getTeam()) != NO_BONUS)
+	{
+		terrainDistance -= 2;
+		if (terrainDistance < 0 && bHasCrossedRiver)
 		{
-			terrainDistance += GC.getFeatureInfo(pPlot->getFeatureType()).getCultureDistance();
+			distance += std::max(-1 - bExtraRiverPenalty, terrainDistance);
 		}
 	}
 	distance += std::max(0, terrainDistance);
 
 	// at this point, we are done
 	//   save the cached distance in the m_aCultureDistances structure
-	//   in order to facilitate the next step of the dynamic programming
 	return distance;
 }
 
@@ -6654,8 +6673,6 @@ int CvCity::cultureDistance(int iDX, int iDY, bool bForce) const
 
 	if (!bForce && GC.getGame().isOption(GAMEOPTION_REALISTIC_CULTURE_SPREAD))
 	{
-		//	This is not a true plot index but we can assume iDX and iDY are less than the total map dimensions so
-		//	it is a unique index
 		int iPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY);
 
 		std::map<int, int>::const_iterator itr = m_aCultureDistances.find(iPlotIndex);
@@ -6673,9 +6690,7 @@ int CvCity::cultureDistance(int iDX, int iDY, bool bForce) const
 	}
 	return plotDistance(0, 0, iDX, iDY);
 }
-/************************************************************************************************/
-/* phunny_pharmer                    END                                                        */
-/************************************************************************************************/
+
 
 int CvCity::cultureStrength(PlayerTypes ePlayer, int& iOriginal) const
 {
@@ -10708,9 +10723,11 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 
 	m_eCultureLevel = eNewValue;
 
-	// Culture level chnage can change our radius requiring recalculation of best builds
+	// Culture level change can change our radius requiring recalculation of best builds
 	AI_markBestBuildValuesStale();
 
+	// Remove plots that do not exist in new border and should have existed in old border
+	// Essentially, border shrinking; also does not remove tiles if distance has increased since last growth
 	if (eOldValue != NO_CULTURELEVEL)
 	{
 		for (int iDX = -eOldValue; iDX <= eOldValue; iDX++)
@@ -10744,6 +10761,8 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 	/************************************************************************************************/
 	clearCultureDistanceCache();
 
+	// Add plots if distance greater than previous, but in current
+	// Can miss tiles if distance was greater than previous, but shrunk since last update?
 	if (eNewValue != NO_CULTURELEVEL)
 	{
 		for (int iDX = -eNewValue; iDX <= eNewValue; iDX++)
