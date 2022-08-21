@@ -6476,15 +6476,15 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 	{
 		for (int iDY = -1; iDY <= 1; ++iDY)
 		{
-			int iPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY);
+			int plotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY);
 
 			// then the plot distance should be set to one
 			//   as all points one away from the city have this default value
-			m_aCultureDistances[iPlotIndex] = 1;
+			m_aCultureDistances[plotIndex] = 1;
 		}
 	}
 
-	// Blaze: Spiraling outward from center should more efficient if perf issues exist (getCityIndexPlot);
+	// Blaze: Spiraling outward from center should more efficient if perf issues exist (style of getCityIndexPlot);
 	//        this implementation is rather brute-force and inefficient, but isn't run v. often at least
 	// Currently: Calculate distance values of all tiles in iMaxDistance (>1) radial size grid,
 	//   recalculating entire grid until no values have changed.
@@ -6500,7 +6500,7 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 		{
 			for (int iDY = -iMaxDistance; iDY <= iMaxDistance; ++iDY)
 			{
-				int iPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY);
+				int plotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY);
 
 				// find the distance to the current plot
 				int distance = plotDistance(0, 0, iDX, iDY);
@@ -6516,9 +6516,9 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 					// if it has changed, save the value and mark that
 					//   all values should be recomputed since they
 					//   may depend on this value
-					if (m_aCultureDistances[iPlotIndex] != iNewValue)
+					if (m_aCultureDistances[plotIndex] != iNewValue)
 					{
-						m_aCultureDistances[iPlotIndex] = iNewValue;
+						m_aCultureDistances[plotIndex] = iNewValue;
 						bHasChanged = true;
 					}
 				}
@@ -6538,80 +6538,11 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 	//  or if the plot does not exist, then the plot distance is maximal
 	if (plotDistance(0, 0, iDX, iDY) > iMaxDistance || pPlot == NULL) return MAX_INT;
 
-	// determine the distance from the square to the city from all directions
-	//   it is entirely possible that the shortest distance to a city may come
-	//   from an unusual direction, eg if there is a mountain range in the way
-	int distance = MAX_INT;
-
-	/* Determine the neighborly cultural distance of given plot:
-		1: All directions from given plot are checked
-		2: Neighbors with distance of MAX_INT are ignored because they
-			don't exist or haven't been calculated yet
-		3: Smallest (neighbor distance + 1 + possible neighbor river penalties) is used
-		4: Greater river penalty (2, not 1) if team lacks bridge building */
-	bool bExtraRiverPenalty = !GET_TEAM(getTeam()).isBridgeBuilding();
-	bool bHasCrossedRiver = false;
-
-	// This could be split off into its own function...
-	// East
-	int iPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX + 1, iDY);
-	int iNeighborDist = m_aCultureDistances[iPlotIndex];
-	if (iNeighborDist != 0 && iNeighborDist != MAX_INT)
-	{
-		iNeighborDist += 1 + pPlot->isRiverCrossing(DIRECTION_EAST) * (1 + bExtraRiverPenalty);
-		if (iNeighborDist < distance)
-		{
-			distance = iNeighborDist;
-			bHasCrossedRiver = pPlot->isRiverCrossing(DIRECTION_EAST);
-		}
-	}
-	// South
-	iPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY - 1);
-	iNeighborDist = m_aCultureDistances[iPlotIndex];
-	if (iNeighborDist != 0 && iNeighborDist != MAX_INT)
-	{
-		iNeighborDist += 1 + pPlot->isRiverCrossing(DIRECTION_SOUTH) * (1 + bExtraRiverPenalty);
-		if (iNeighborDist < distance)
-		{
-			distance = iNeighborDist;
-			bHasCrossedRiver = pPlot->isRiverCrossing(DIRECTION_SOUTH);
-		}
-	}
-	// West
-	iPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX - 1, iDY);
-	iNeighborDist = m_aCultureDistances[iPlotIndex];
-	if (iNeighborDist != 0 && iNeighborDist != MAX_INT)
-	{
-		iNeighborDist += 1 + pPlot->isRiverCrossing(DIRECTION_WEST) * (1 + bExtraRiverPenalty);
-		if (iNeighborDist < distance)
-		{
-			distance = iNeighborDist;
-			bHasCrossedRiver = pPlot->isRiverCrossing(DIRECTION_WEST);
-		}
-	}
-	// North
-	iPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY + 1);
-	iNeighborDist = m_aCultureDistances[iPlotIndex];
-	if (iNeighborDist != 0 && iNeighborDist != MAX_INT)
-	{
-		iNeighborDist += 1 + pPlot->isRiverCrossing(DIRECTION_NORTH) * (1 + bExtraRiverPenalty);
-		if (iNeighborDist < distance)
-		{
-			distance = iNeighborDist;
-			bHasCrossedRiver = pPlot->isRiverCrossing(DIRECTION_NORTH);
-		}
-	}
-
-	// if the distance to the plot is unchanged, perhaps because all the
-	//   neighbors have distance MAX_INT, return the value of MAX_INT in
-	//   order to ensure that the culture distance is recalculated
-	if (distance == MAX_INT) return MAX_INT;
-
-	// increase the cultural distance for the tile if it is difficult terrain
-	//   key idea: difficult terrain will take longer to expand to, and
-	//   grow less quickly once expanded. Extra mountain penalty (2) if no tech.
-
+	// Calculate terrain distance necessary before neighbors, because bonus presence can
+	// remove any combination of terrain and river crossing penalties; chosing which neighbor
+	// therefore requires the current terrain known to avoid an endlessly-updating loop.
 	int terrainDistance = 0;
+
 	if (pPlot->isAsPeak())
 	{
 		terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_PEAK()).getCultureDistance();
@@ -6636,16 +6567,60 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 		terrainDistance += GC.getFeatureInfo(pPlot->getFeatureType()).getCultureDistance();
 	}
 
-	// If plot has a known resource, reduce penalties by up to 2 from terrain/river
-	if (pPlot->getBonusType(getTeam()) != NO_BONUS)
+	// If plot has a known resource, reduce penalties by 2.
+	// Check if negative after applying possible river penalties.
+	if (pPlot->getBonusType(getTeam()) != NO_BONUS) terrainDistance -= 2;
+
+	/* Determine the final cultural distance of given plot:
+		1: All directions from given plot are checked (could come from weird direction)
+		2: Neighbors with distance of MAX_INT are ignored because they
+			don't exist or haven't been calculated yet
+		3: Presence of a bonus can reduce terrain and river penalties; need
+			calculate full cost from each tile to prevent endless recalc
+		3: Smallest total possible distance is used from all neighbors
+		4: Greater river penalty (2, not 1) if team lacks bridge building */
+	int distance = MAX_INT;
+	bool hasExtraRiverPenalty = !GET_TEAM(getTeam()).isBridgeBuilding();
+
+	// This could be split off into its own function...
+	// terrainDistance carries over any bonus discount onto river penalty as applicable
+
+	// East
+	int plotIndex = HASH_RELATIVE_CLOSE_DIST(iDX + 1, iDY);
+	int neighborDist = m_aCultureDistances[plotIndex];
+	if (neighborDist != 0 && neighborDist != MAX_INT)
 	{
-		terrainDistance -= 2;
-		if (terrainDistance < 0 && bHasCrossedRiver)
-		{
-			distance += std::max(-1 - bExtraRiverPenalty, terrainDistance);
-		}
+		neighborDist += 1 + std::max(0,
+			terrainDistance + pPlot->isRiverCrossing(DIRECTION_EAST) * (1 + hasExtraRiverPenalty));
+		if (neighborDist < distance) distance = neighborDist;
 	}
-	distance += std::max(0, terrainDistance);
+	// South
+	plotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY - 1);
+	neighborDist = m_aCultureDistances[plotIndex];
+	if (neighborDist != 0 && neighborDist != MAX_INT)
+	{
+		neighborDist += 1 + std::max(0,
+			terrainDistance + pPlot->isRiverCrossing(DIRECTION_SOUTH) * (1 + hasExtraRiverPenalty));
+		if (neighborDist < distance) distance = neighborDist;
+	}
+	// West
+	plotIndex = HASH_RELATIVE_CLOSE_DIST(iDX - 1, iDY);
+	neighborDist = m_aCultureDistances[plotIndex];
+	if (neighborDist != 0 && neighborDist != MAX_INT)
+	{
+		neighborDist += 1 + std::max(0,
+			terrainDistance + pPlot->isRiverCrossing(DIRECTION_WEST) * (1 + hasExtraRiverPenalty));
+		if (neighborDist < distance) distance = neighborDist;
+	}
+	// North
+	plotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY + 1);
+	neighborDist = m_aCultureDistances[plotIndex];
+	if (neighborDist != 0 && neighborDist != MAX_INT)
+	{
+		neighborDist += 1 + std::max(0,
+			terrainDistance + pPlot->isRiverCrossing(DIRECTION_NORTH) * (1 + hasExtraRiverPenalty));
+		if (neighborDist < distance) distance = neighborDist;
+	}
 
 	// at this point, we are done
 	//   save the cached distance in the m_aCultureDistances structure
@@ -6673,15 +6648,15 @@ int CvCity::cultureDistance(int iDX, int iDY, bool bForce) const
 
 	if (!bForce && GC.getGame().isOption(GAMEOPTION_REALISTIC_CULTURE_SPREAD))
 	{
-		int iPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY);
+		int plotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY);
 
-		std::map<int, int>::const_iterator itr = m_aCultureDistances.find(iPlotIndex);
+		std::map<int, int>::const_iterator itr = m_aCultureDistances.find(plotIndex);
 
 		if (itr == m_aCultureDistances.end())
 		{
 			recalculateCultureDistances(plotDistance(0, 0, iDX, iDY));
 
-			return m_aCultureDistances[iPlotIndex];
+			return m_aCultureDistances[plotIndex];
 		}
 		else
 		{
