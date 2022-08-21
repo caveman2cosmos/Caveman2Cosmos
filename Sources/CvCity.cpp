@@ -10868,19 +10868,30 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 	{
 		const GameSpeedTypes eSpeed = GAME.getGameSpeedType();
 		const int iCulture = getCultureTimes100(getOwner()) / 100;
+		int iCultureLevelOffset = 0;
 
-		for (int iI = (GC.getNumCultureLevelInfos() - 1); iI > 0; iI--)
+		// Loop thru culture levels; if we pass a level that doesn't apply, remember we need to skip it
+		for (int iLevel = 0; iLevel <= GC.getNumCultureLevelInfos() - 1; iLevel++)
 		{
-			const CvCultureLevelInfo& info = GC.getCultureLevelInfo((CultureLevelTypes)iI);
-
-			if ((info.getPrereqGameOption() == NO_GAMEOPTION || GAME.isOption((GameOptionTypes)info.getPrereqGameOption()))
-			&& iCulture >= info.getSpeedThreshold(eSpeed))
+			const CvCultureLevelInfo& info = GC.getCultureLevelInfo((CultureLevelTypes)iLevel);
+			if (info.getPrereqGameOption() == NO_GAMEOPTION || GAME.isOption((GameOptionTypes)info.getPrereqGameOption()))
 			{
-				setCultureLevel((CultureLevelTypes)iI, bUpdatePlotGroups);
-				return;
+				// When we are below a threshold that means we've not hit this level, minus inapplicable levels
+				if (iCulture < info.getSpeedThreshold(eSpeed))
+				{
+					setCultureLevel((CultureLevelTypes)(iLevel - iCultureLevelOffset - 1), bUpdatePlotGroups);
+					return;
+				}
+			}
+			else
+			{
+				iCultureLevelOffset++;
 			}
 		}
+		// If we're not below the last threshold, we have max level
+		setCultureLevel((CultureLevelTypes)(GC.getNumCultureLevelInfos() - 1 - iCultureLevelOffset), bUpdatePlotGroups);
 	}
+	// Occupied has 0 culture level
 	setCultureLevel((CultureLevelTypes)0, bUpdatePlotGroups);
 }
 
