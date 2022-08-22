@@ -6478,9 +6478,10 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 		{
 			int plotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY);
 
-			// then the plot distance should be set to one
-			//   as all points one away from the city have this default value
-			m_aCultureDistances[plotIndex] = 1;
+			// Center has no distance, adjacencies always 1
+			// Distance 0 helps city tile itself have more culture than tiles adjacent to it.
+			if (iDY == 0 && iDX == 0) m_aCultureDistances[plotIndex] = 0;
+			else m_aCultureDistances[plotIndex] = 1;
 		}
 	}
 
@@ -6543,6 +6544,7 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 	// therefore requires the current terrain known to avoid an endlessly-updating loop.
 	int terrainDistance = 0;
 
+	// Terrain distance increased by 2 if can't found on peaks; peak-type also ignore regular terrain
 	if (pPlot->isAsPeak())
 	{
 		terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_PEAK()).getCultureDistance();
@@ -6555,6 +6557,11 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 		{
 			terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_HILL()).getCultureDistance();
 		}
+		// Terrain distance increased by 2 if can't trade on water terrain
+		if (pPlot->isWater())
+		{
+			if (!GET_TEAM(getTeam()).isTerrainTrade(pPlot->getTerrainType())) terrainDistance += 2;
+		}	
 	}
 
 	if (pPlot->getFeatureType() != NO_FEATURE)
@@ -16198,10 +16205,14 @@ void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
 	}
 	else eCultureLevel = getCultureLevel();
 
-	const int iFreeCultureRate = GC.getCITY_FREE_CULTURE_GROWTH_FACTOR();
+	// Put culture onto plots from the city
 	if (iCulture > 0 && eCultureLevel != NO_CULTURELEVEL)
 	{
+		// this recalculates a lot each turn, but provides border updates immediately
 		clearCultureDistanceCache();
+		int iMaxCultureLevel = GC.getNumCultureLevelInfos();
+		const int iDensityFactor = GC.getCITY_CULTURE_DENSITY_FACTOR();
+
 		for (int iDX = -eCultureLevel; iDX <= eCultureLevel; iDX++)
 		{
 			for (int iDY = -eCultureLevel; iDY <= eCultureLevel; iDY++)
@@ -16214,7 +16225,9 @@ void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
 
 					if (pLoopPlot != NULL && pLoopPlot->isPotentialCityWorkForArea(area()))
 					{
-						pLoopPlot->changeCulture(ePlayer, (((eCultureLevel - iCultureRange) * iFreeCultureRate) + iCultureRate + 1), (bUpdate || !(pLoopPlot->isOwned())));
+						pLoopPlot->changeCulture(ePlayer,
+							1 + iCultureRate * (1 + iDensityFactor * (eCultureLevel - iCultureRange) / 100)  / iMaxCultureLevel,
+							(bUpdate || !(pLoopPlot->isOwned())));
 					}
 				}
 			}

@@ -313,16 +313,24 @@
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Starting/minimum culture on city tile -->
 		<DefineName>FREE_CITY_CULTURE</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Does not apply on 1-tile start gameoption -->
 		<DefineName>FREE_CITY_ADJACENT_CULTURE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>CITY_FREE_CULTURE_GROWTH_FACTOR</DefineName>
-		<iDefineIntVal>22</iDefineIntVal>
+		<!-- Acts as a % multiplier on culture density from center to edge.
+			100 is default cultural density (linear with distance from city)
+			E.g. 200 would make (level-distance) twice as powerful, i.e. stronger
+			cores, useful if you think cities flip too fast from culture. 
+			Lower the value if you think cities don't flip enough. A value of 0
+			would make cities put the same amount of culture on each tile. -->
+		<DefineName>CITY_CULTURE_DENSITY_FACTOR</DefineName>
+		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>GREAT_WORKS_CULTURE_TURNS</DefineName>
