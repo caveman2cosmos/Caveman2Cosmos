@@ -17743,24 +17743,20 @@ void CvUnit::calcUpkeep100()
 	{
 		return;
 	}
-	int iCalc = 100 * m_pUnitInfo->getBaseUpkeep();
+	int iCalc = 100 * m_pUnitInfo->getBaseUpkeep() + m_iExtraUpkeep100;
+
 	if (iCalc > 0)
 	{
-		iCalc += m_iExtraUpkeep100;
+		iCalc = getModifiedIntValue(iCalc, m_iUpkeepModifier);
+		iCalc = getModifiedIntValue(iCalc, m_iUpkeepMultiplierSM);
 
-		if (iCalc > 0)
+		const int iOldUpkeep = m_iUpkeep100;
+		m_iUpkeep100 = std::max(0,  iCalc);
+
+		// Update player total
+		if (m_iUpkeep100 != iOldUpkeep)
 		{
-			iCalc = getModifiedIntValue(iCalc, m_iUpkeepModifier);
-			iCalc = getModifiedIntValue(iCalc, m_iUpkeepMultiplierSM);
-
-			const int iOldUpkeep = m_iUpkeep100;
-			m_iUpkeep100 = std::max(0,  iCalc);
-
-			// Update player total
-			if (m_iUpkeep100 != iOldUpkeep)
-			{
-				GET_PLAYER(getOwner()).changeUnitUpkeep(m_iUpkeep100 - iOldUpkeep, isMilitaryBranch());
-			}
+			GET_PLAYER(getOwner()).changeUnitUpkeep(m_iUpkeep100 - iOldUpkeep, isMilitaryBranch());
 		}
 	}
 }

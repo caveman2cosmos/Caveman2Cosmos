@@ -599,7 +599,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iSpecialistHappiness = 0;
 	m_iSpecialistUnhappiness = 0;
 	m_iCiv = NO_CIVILIZATION;
-	m_eOccupationCultureLevel = NO_CULTURELEVEL;
 	m_iLineOfSight = 0;
 	m_iLandmarkAngerTimer = 0;
 	m_iFreshWater = 0;
@@ -1210,7 +1209,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 		CvPlot::fn::setWorkingCityOverride(NULL)
 	);
 	setCultureLevel(NO_CULTURELEVEL, false);
-	setOccupationCultureLevel(NO_CULTURELEVEL);
+	clearCultureDistanceCache();
 
 	const int iNumBuildingInfos = GC.getNumBuildingInfos();
 	for (int iI = 0; iI < iNumBuildingInfos; iI++)
@@ -6633,9 +6632,7 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 	//   in order to facilitate the next step of the dynamic programming
 	return distance;
 }
-/************************************************************************************************/
-/* phunny_pharmer                    END                                                        */
-/************************************************************************************************/
+
 /************************************************************************************************/
 /* phunny_pharmer                Start		 05/03/10                                           */
 /*   clear all the values in the culture distance cache; these values will have to be recom-    */
@@ -6645,9 +6642,7 @@ void CvCity::clearCultureDistanceCache()
 {
 	m_aCultureDistances.clear();
 }
-/************************************************************************************************/
-/* phunny_pharmer                    END                                                        */
-/************************************************************************************************/
+
 /************************************************************************************************/
 /* phunny_pharmer                Start		 04/20/10                                           */
 /*   the cache of culture distances precomputed by recalculateCultureDistance is used in order  */
@@ -8361,14 +8356,14 @@ int CvCity::getAdditionalHealthByFeature(FeatureTypes eFeature, int iChange, int
  */
 int CvCity::getAdditionalHealth(int iGoodPercent, int iBadPercent, int& iGood, int& iBad) const
 {
-	int iStarting = iGood - iBad;
+	const int iStarting = iGood - iBad;
 
 	// Add current
 	calculateFeatureHealthPercent(iGoodPercent, iBadPercent);
 
 	// Delta
-	iGood += (iGoodPercent / 100) - getFeatureGoodHealth();
-	iBad += (iBadPercent / 100) + getFeatureBadHealth();		// bad health is stored as negative
+	iGood += (iGoodPercent / 100) + getFeatureGoodHealth();
+	iBad += (iBadPercent / 100) - getFeatureBadHealth();
 
 	return iGood - iBad - iStarting;
 }
@@ -16965,10 +16960,10 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadVicinityBonus);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CIVILIZATIONS, &m_iCiv);
 
-	// @SAVEBREAK DELETE - Toffer - 25.04.2021
+	// @SAVEBREAK DELETE - Toffer
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iExtraYieldTurns, SAVE_VALUE_ANY);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_eOccupationCultureLevel, SAVE_VALUE_ANY);
 	// SAVEBREAK@
-	WRAPPER_READ(wrapper, "CvCity", (int*)&m_eOccupationCultureLevel);
 	WRAPPER_READ(wrapper, "CvCity", &m_iLineOfSight);
 	WRAPPER_READ(wrapper, "CvCity", &m_iLandmarkAngerTimer);
 
@@ -17668,7 +17663,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadVicinityBonus);
 	WRAPPER_WRITE_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CIVILIZATIONS, m_iCiv);
 
-	WRAPPER_WRITE(wrapper, "CvCity", m_eOccupationCultureLevel);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iLineOfSight);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iLandmarkAngerTimer);
 
@@ -20722,89 +20716,6 @@ BuildTypes CvCity::findChopBuild(FeatureTypes eFeature) const
 	}
 
 	return NO_BUILD;
-}
-
-CultureLevelTypes CvCity::getOccupationCultureLevel() const
-{
-	return m_eOccupationCultureLevel;
-}
-
-
-void CvCity::setOccupationCultureLevel(CultureLevelTypes eNewValue)
-{
-	PROFILE_FUNC();
-
-	int eOldValue = getOccupationCultureLevel();
-
-	if (eOldValue != eNewValue)
-	{
-		m_eOccupationCultureLevel = eNewValue;
-
-		if (eOldValue != NO_CULTURELEVEL)
-		{
-			clearCultureDistanceCache();
-			for (int iDX = -eOldValue; iDX <= eOldValue; iDX++)
-			{
-				for (int iDY = -eOldValue; iDY <= eOldValue; iDY++)
-				{
-					int iCultureRange = cultureDistance(iDX, iDY);
-
-					if (iCultureRange > getOccupationCultureLevel())
-					{
-						if (iCultureRange <= eOldValue)
-						{
-							FAssert(iCultureRange <= GC.getNumCultureLevelInfos());
-
-							CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-							if (pLoopPlot != NULL)
-							{
-								pLoopPlot->changeOccupationCultureRangeCities(getOwner(), -1);
-							}
-						}
-					}
-				}
-			}
-		}
-
-		if (getOccupationCultureLevel() != NO_CULTURELEVEL)
-		{
-			for (int iDX = -getOccupationCultureLevel(); iDX <= getOccupationCultureLevel(); iDX++)
-			{
-				for (int iDY = -getOccupationCultureLevel(); iDY <= getOccupationCultureLevel(); iDY++)
-				{
-					/************************************************************************************************/
-					/* phunny_pharmer             Start		 05/01/10                                               */
-					/*   occupation culture doesn't play well with caching, so just use the plot distance           */
-					/************************************************************************************************/
-					int iCultureRange = cultureDistance(iDX, iDY, true);
-					//					iCultureRange = plotDistance(0, 0, iDX, iDY);
-					/************************************************************************************************/
-					/* phunny_pharmer             END                                                               */
-					/************************************************************************************************/
-
-					if (iCultureRange > eOldValue)
-					{
-						if (iCultureRange <= getOccupationCultureLevel())
-						{
-							FAssert(iCultureRange <= GC.getNumCultureLevelInfos());
-
-							CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-							if (pLoopPlot != NULL)
-							{
-								if (pLoopPlot->isPotentialCityWorkForArea(area()))
-								{
-									pLoopPlot->changeCulture(getOwner(), 1, false);
-								}
-								pLoopPlot->changeOccupationCultureRangeCities(getOwner(), 1);
-							}
-						}
-					}
-				}
-			}
-		}
-	}
 }
 
 CultureLevelTypes CvCity::getMaxCultureLevelAmongPlayers() const

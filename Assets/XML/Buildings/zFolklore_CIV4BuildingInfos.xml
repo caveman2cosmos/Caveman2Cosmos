@@ -1,5 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
+	<!-- Constructable taxonomies (should be) twice the regular hammer cost of buildings at that tech level -->
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_FOLKLORE_CORAL</Type>
@@ -1764,6 +1765,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_DART_FROG</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -1922,6 +1924,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SAIGA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WILDEBEEST</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -2764,6 +2767,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SPECTACLED_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SUN_BEAR</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_BEAR</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_BEAR</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -3085,6 +3089,7 @@
 				<BuildingType>BUILDING_FOLKLORE_TURKEY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_VULTURE</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -3366,6 +3371,7 @@
 				<BuildingType>BUILDING_FOLKLORE_WARTHOG</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BAIRDS_TAPIR</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_BOAR</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_BOAR</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -3769,6 +3775,7 @@
 				<BuildingType>BUILDING_FOLKLORE_TARANTULA_JUNGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TARANTULA</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -3863,6 +3870,7 @@
 				<BuildingType>BUILDING_FOLKLORE_MUSKOX</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WILDEBEEST</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -4765,6 +4773,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROC_LARGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROC</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_CROCODILE</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_CROCODILE</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -5728,6 +5737,7 @@
 				<BuildingType>BUILDING_FOLKLORE_MALAYAN_TAPIR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -6088,6 +6098,7 @@
 				<BuildingType>BUILDING_FOLKLORE_TUNA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WHALESHARK</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -6249,6 +6260,7 @@
 				<BuildingType>BUILDING_FOLKLORE_RHEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -7702,6 +7714,7 @@
 				<BuildingType>BUILDING_FOLKLORE_HIPPOPOTAMUS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PYGMYHIPPO</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_HIPPOS</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_HIPPOS</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -8853,6 +8866,7 @@
 				<BuildingType>BUILDING_FOLKLORE_ORCA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WHALESHARK</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_LEVIATHAN</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_LEVIATHAN</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -9152,6 +9166,7 @@
 				<BuildingType>BUILDING_FOLKLORE_TUNA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WHALESHARK</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_LOCAL_FISH</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -9753,6 +9768,7 @@
 				<BuildingType>BUILDING_FOLKLORE_WALLAROO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOMBAT</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_MARSUPIAL</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -9966,6 +9982,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_PLATYPUS</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_MONOTREMES</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_MONOTREMES</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -10304,6 +10321,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_CAPUCHIN</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_NEW_W_MONKEY</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_NEW_W_MONKEY</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -10650,6 +10668,7 @@
 				<BuildingType>BUILDING_FOLKLORE_MANDRILL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ORANGUTAN</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_OLD_MAN</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -10741,6 +10760,7 @@
 				<BuildingType>BUILDING_FOLKLORE_GORILLA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MANDRILL</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_OLD_W_MONKEY</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_OLD_W_MONKEY</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -11083,6 +11103,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BARREDOWL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HORNED_OWL</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -11858,6 +11879,7 @@
 				<BuildingType>BUILDING_FOLKLORE_EMPEROR_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -12574,6 +12596,7 @@
 				<BuildingType>BUILDING_FOLKLORE_HAWK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEAEAGLE</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -12787,6 +12810,7 @@
 				<BuildingType>BUILDING_FOLKLORE_RAY_MANTA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RAY_EAGLE</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_RAY</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_RAY</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -13270,6 +13294,7 @@
 				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_VIPER_CHAIN</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -13424,6 +13449,7 @@
 				<BuildingType>BUILDING_FOLKLORE_JAVA_RHINO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WHITE_RHINO</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_RHINO_TAXONOMY</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_RHINO_TAXONOMY</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -13703,6 +13729,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BEAVER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CAPYBARA</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -14043,6 +14070,7 @@
 				<BuildingType>BUILDING_FOLKLORE_RAVEN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_VULTURE</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_SCAVENGER</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -14325,6 +14353,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SEAEAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TERN</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -14542,6 +14571,7 @@
 				<BuildingType>BUILDING_FOLKLORE_REEF_SHARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WHALESHARK</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_SHARK</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_SHARK</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -14822,6 +14852,7 @@
 				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_VIPER_CHAIN</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_SNAKES</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_SNAKES</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -15042,6 +15073,7 @@
 				<BuildingType>BUILDING_FOLKLORE_PANTHER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SNOW_LEOPARD</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -15319,6 +15351,7 @@
 				<BuildingType>BUILDING_FOLKLORE_MOUNTAIN_TAPIR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BAIRDS_TAPIR</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<FreeBuilding>BUILDING_FOLKLORE_TAPIR</FreeBuilding>
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_TAPIR</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
@@ -15660,6 +15693,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BENGALTIGER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SIBERIAN_TIGER</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -16437,6 +16471,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SKUNK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOLVERINE</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -16782,6 +16817,7 @@
 				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GREY_WOLF</BuildingType>
 			</PrereqOrBuildings>
+			<iCost>250</iCost>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>

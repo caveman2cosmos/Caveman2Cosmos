@@ -12,10 +12,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_0</Tag>
 		<English>[COLOR_YELLOW]Requires [LINK=%s1]%s2[\LINK] (%d3 Total) in any city[COLOR_REVERT]</English>
+		<German>[ICON_BULLET][COLOR_YELLOW]erfordert [LINK=%s1]%s2[\LINK] (%d3 insgesamt) in eigenen Städten[COLOR_REVERT]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_REQUIRES_NUM_BUILDINGS_1</Tag>
 		<English>[COLOR_YELLOW]Requires [LINK=%s1]%s2[\LINK] (%d3/%d4 Total) in any city[COLOR_REVERT]</English>
+		<German>[ICON_BULLET][COLOR_YELLOW]erfordert [LINK=%s1]%s2[\LINK] (%d3/%d4 insgesamt) in eigenen Städten[COLOR_REVERT]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HELPTEXT_UNIT_UPKEEP_EXTRA</Tag>
