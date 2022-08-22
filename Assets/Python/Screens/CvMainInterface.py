@@ -5251,6 +5251,7 @@ class CvMainInterface:
 	# Core Interface Functions #
 	############################
 	def update(self, fDelta): return
+
 	# Will handle the input for this screen...
 	def handleInput(self, inputClass):
 		HandleInputUtil.debugInput(inputClass)
@@ -5270,6 +5271,18 @@ class CvMainInterface:
 
 
 		if iCode == 16: # Key Down
+
+			# C2C modification: unselect on ESC
+
+			if iData == InputTypes.KB_ESCAPE and not CyIF.isFocused():
+				if CyIF.isCitySelection():
+					CyIF.clearSelectedCities()
+					return 1
+				else:
+					CyIF.clearSelectionList()
+					return 1
+
+			# END C2C modification 
 
 			if iData in (2, 3, 4, 5, 6, 7, 8, 9, 10, 11): # 0-9
 				if self.InCity and not bCtrl:
