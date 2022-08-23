@@ -403,11 +403,11 @@
 			<Description>TXT_KEY_CONCEPT_SEA_TUNNELS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SEA_TUNNELS_PEDIA</Civilopedia>
 		</NewConceptInfo>
-		<NewConceptInfo>
+		<!-- <NewConceptInfo>
 			<Type>CONCEPT_STACK_ATTACK</Type>
 			<Description>TXT_KEY_CONCEPT_STACK_ATTACK</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_STACK_ATTACK_PEDIA</Civilopedia>
-		</NewConceptInfo>
+		</NewConceptInfo> -->
 		<NewConceptInfo>
 			<Type>CONCEPT_SUBDUED_ANIMALS</Type>
 			<Description>TXT_KEY_CONCEPT_SUBDUED_ANIMALS</Description>
