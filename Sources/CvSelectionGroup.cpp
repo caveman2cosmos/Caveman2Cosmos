@@ -3472,7 +3472,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 			{
 				bAffixFirstDefender = true;
 			}
-// BUG - Safe Move - end
+			// BUG - Safe Move - end
 
 			bool bNoBlitz = (!pBestAttackUnit->isBlitz() && pBestAttackUnit->isMadeAttack());
 

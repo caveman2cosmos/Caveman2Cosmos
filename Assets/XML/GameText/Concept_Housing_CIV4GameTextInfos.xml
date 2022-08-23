@@ -2,10 +2,10 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_AUTO_BUILDINGS</Tag>
-		<English>Automatically built buildings</English>
-		<German>Automatische Stadteffekte</German>
-		<Italian>Edifici automatici</Italian>
-		<Russian>Автоматически построенные здания</Russian>
+		<English>1. Automatically Built Buildings</English>
+		<German>1. Automatische Stadteffekte</German>
+		<Italian>1. Edifici automatici</Italian>
+		<Russian>1. Автоматически построенные здания</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_AUTO_BUILDINGS_PEDIA</Tag>

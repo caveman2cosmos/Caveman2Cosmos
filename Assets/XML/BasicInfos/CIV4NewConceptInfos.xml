@@ -114,6 +114,11 @@
 			<Civilopedia>TXT_KEY_CONCEPT_C2C_TERRAINS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
+			<Type>CONCEPT_C2C_CULTURE</Type>
+			<Description>TXT_KEY_CONCEPT_C2C_CULTURE</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_C2C_CULTURE_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
 			<Type>CONCEPT_CASTLE_IMPROVEMENTS</Type>
 			<Description>TXT_KEY_CONCEPT_CASTLE_IMPROVEMENTS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CASTLE_IMPROVEMENTS_PEDIA</Civilopedia>
@@ -122,6 +127,11 @@
 			<Type>CONCEPT_CRIME</Type>
 			<Description>TXT_KEY_CONCEPT_CRIME</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_CRIME_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
+			<Type>CONCEPT_DEVELOPING_LEADERS</Type>
+			<Description>TXT_KEY_CONCEPT_DEVELOPING_LEADERS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_DEVELOPING_LEADERS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_DYNAMIC_EXPERIENCE</Type>
@@ -199,6 +209,11 @@
 			<Civilopedia>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
+			<Type>CONCEPT_NATURAL_WONDERS</Type>
+			<Description>TXT_KEY_NATURAL_WONDERS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_NATURAL_WONDERS_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
 			<Type>CONCEPT_OCCASIONAL_PROMOTIONS</Type>
 			<Description>TXT_KEY_CONCEPT_OCCASIONAL_PROMOTIONS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_OCCASIONAL_PROMOTIONS_PEDIA</Civilopedia>
@@ -217,6 +232,11 @@
 			<Type>CONCEPT_POLLUTION</Type>
 			<Description>TXT_KEY_CONCEPT_POLLUTION</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_POLLUTION_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
+			<Type>CONCEPT_PROPERTIES</Type>
+			<Description>TXT_KEY_CONCEPT_PROPERTIES</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_PROPERTIES_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_RBOMBARD</Type>
@@ -709,11 +729,6 @@
 			<Type>CONCEPT_STRATEGY_WORLD_WAR</Type>
 			<Description>TXT_KEY_STRATEGY_WORLD_WAR</Description>
 			<Civilopedia>TXT_KEY_STRATEGY_WORLD_WAR_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
-			<Type>CONCEPT_NATURAL_WONDERS</Type>
-			<Description>TXT_KEY_NATURAL_WONDERS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_NATURAL_WONDERS_PEDIA</Civilopedia>
 		</NewConceptInfo>
 	</NewConceptInfos>
 </Civ4NewConceptInfos>
