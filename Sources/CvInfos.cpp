@@ -25699,7 +25699,7 @@ void CvUpkeepInfo::getCheckSum(uint32_t& iSum) const
 //
 
 CvCultureLevelInfo::CvCultureLevelInfo() :
-m_iLevel(-1),
+m_eLevel(NO_CULTURELEVEL),
 m_iCityDefenseModifier(0),
 /************************************************************************************************/
 /* JOOYO_ADDON, Added by Jooyo, 06/17/09														*/
