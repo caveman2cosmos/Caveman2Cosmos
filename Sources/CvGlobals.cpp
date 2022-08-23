@@ -3111,3 +3111,17 @@ void cvInternalGlobals::checkInitialCivics()
 		}
 	}
 }
+
+void cvInternalGlobals::setCultureLevels()
+{
+	int iLevel = 0;
+
+	foreach_(CvCultureLevelInfo* info, m_paCultureLevelInfo)
+	{
+		if (info->getPrereqGameOption() == NO_GAMEOPTION || getGame().isOption((GameOptionTypes)info->getPrereqGameOption()))
+		{
+			info->setLevel(iLevel);
+			iLevel++;
+		}
+	}
+}

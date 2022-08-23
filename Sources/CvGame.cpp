@@ -1064,6 +1064,8 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	UnitTypes eUnit;
 	std::vector<UnitTypes> aUpgradeUnits;
 
+	GC.setCultureLevels();
+
 	//Establish speedy promotion & Building reference by line
 	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 	{

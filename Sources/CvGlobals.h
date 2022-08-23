@@ -772,6 +772,8 @@ public:
 
 	void checkInitialCivics();
 
+	void setCultureLevels();
+
 protected:
 	void doPostLoadCaching();
 

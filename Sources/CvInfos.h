@@ -6953,6 +6953,9 @@ public:
 	CvCultureLevelInfo();
 	virtual ~CvCultureLevelInfo();
 
+	int getLevel() const { return m_iLevel; }
+	void setLevel(int iLevel) { m_iLevel = iLevel; }
+
 	int getCityDefenseModifier() const;
 
 	int getCityRadius() const;
@@ -6970,9 +6973,9 @@ public:
 
 	void getCheckSum(uint32_t& iSum) const;
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
-
+	//----------------------PRIVATE MEMBER VARIABLES----------------------------
+private:
+	int m_iLevel;
 	int m_iCityDefenseModifier;
 	int m_iCityRadius;
 	int m_iMaxWorldWonders;
