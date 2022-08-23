@@ -10839,6 +10839,8 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 	{
 		return;
 	}
+	uint32_t iCultureLevel = 0;
+
 	CvGameAI& GAME = GC.getGame();
 
 	if (!isOccupation()
@@ -10850,19 +10852,18 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 		const GameSpeedTypes eSpeed = GAME.getGameSpeedType();
 		const int iCulture = getCultureTimes100(getOwner()) / 100;
 
-		for (int iI = (GC.getNumCultureLevelInfos() - 1); iI > 0; iI--)
+		foreach_(const CvCultureLevelInfo* info, GC.getCultureLevelInfos())
 		{
-			const CvCultureLevelInfo& info = GC.getCultureLevelInfo((CultureLevelTypes)iI);
-
-			if ((info.getPrereqGameOption() == NO_GAMEOPTION || GAME.isOption((GameOptionTypes)info.getPrereqGameOption()))
-			&& iCulture >= info.getSpeedThreshold(eSpeed))
+			if (info->getPrereqGameOption() == NO_GAMEOPTION || GAME.isOption((GameOptionTypes)info->getPrereqGameOption()))
 			{
-				setCultureLevel((CultureLevelTypes)iI, bUpdatePlotGroups);
-				return;
+				if (iCulture < info->getSpeedThreshold(eSpeed))
+					break;
+
+				iCultureLevel++;
 			}
 		}
 	}
-	setCultureLevel((CultureLevelTypes)0, bUpdatePlotGroups);
+	setCultureLevel(static_cast<CultureLevelTypes>(iCultureLevel), bUpdatePlotGroups);
 }
 
 
