@@ -28398,7 +28398,6 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_DIPLOMACY</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_ARJOS</Type>
@@ -33499,7 +33498,6 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_DIPLOMACY</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_KATIPUNAN_CAVALRY</Type>
@@ -47676,7 +47674,6 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<PrereqGameOption>GAMEOPTION_ADVANCED_DIPLOMACY</PrereqGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_HEMUDU_HUNTERS</Type>
