@@ -10872,6 +10872,7 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 		}
 		// If we're not below the last threshold, we have max level
 		setCultureLevel((CultureLevelTypes)(GC.getNumCultureLevelInfos() - 1 - iCultureLevelOffset), bUpdatePlotGroups);
+		return;
 	}
 	// Occupied has 0 culture level
 	setCultureLevel((CultureLevelTypes)0, bUpdatePlotGroups);

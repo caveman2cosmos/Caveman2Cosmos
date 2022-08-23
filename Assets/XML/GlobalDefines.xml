@@ -318,7 +318,8 @@
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Does not apply on 1-tile start gameoption -->
+		<!-- Does not apply on 1-tile start gameoption; places this much culture
+			on adjacent tiles when a city is founded. -->
 		<DefineName>FREE_CITY_ADJACENT_CULTURE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>

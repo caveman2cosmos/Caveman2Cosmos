@@ -9486,10 +9486,11 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 			}
 
 			// recompute the city culture distance cache if feature/terrain has changed
-			if (pCity != NULL && bCultureDistUpdate)
-			{
-				pCity->clearCultureDistanceCache();
-			}
+			// Not necessary while culture is updating every turn in doPlotCulture and on setCultureLevel
+			// if (pCity != NULL && bCultureDistUpdate)
+			// {
+			// 	pCity->clearCultureDistanceCache();
+			// }
 
 			bFinished = true;
 		}

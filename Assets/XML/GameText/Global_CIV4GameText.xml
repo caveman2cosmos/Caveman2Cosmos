@@ -2597,7 +2597,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BULLET</Tag>
 		<English>[ICON_BULLET]</English>
-		<Russian>[ICON_BULLET]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BULLET_STARTS_WITH</Tag>
@@ -3026,16 +3025,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_CULTURE</Tag>
-		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</English>
-		<French>[NEWLINE][ICON_CULTURE] : %d1/%d2 (%s3)</French>
-		<German>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</German>
-		<Italian>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</Italian>
-		<Spanish>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</Spanish>
+		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3: Lvl %d4)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_CULTURE_NO_LEVEL</Tag>
-		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2</English>
-		<Russian>[NEWLINE][ICON_CULTURE]: %d1/%d2</Russian>
+		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3: Lvl %d4)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_FOOD_GROW</Tag>
@@ -3106,10 +3100,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_GREAT_PEOPLE</Tag>
 		<English>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</English>
-		<French>[NEWLINE][ICON_GREATPEOPLE] : %d1/%d2</French>
-		<German>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</German>
-		<Italian>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</Italian>
-		<Spanish>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_GROWTH</Tag>
@@ -3140,10 +3130,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_PRODUCTION</Tag>
 		<English>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</English>
-		<French>[NEWLINE]%s1 : %d2/%d3 [ICON_PRODUCTION]</French>
-		<German>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</German>
-		<Italian>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</Italian>
-		<Spanish>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_SELECT</Tag>
