@@ -5436,7 +5436,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 		}
 		case TRADE_SECRETARY_GENERAL_VOTE:
 		{
-/*
+			/*
 			if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY)
 			&& !GET_TEAM(getTeam()).isHuman()
 			&& GC.getGame().isDiploVote((VoteSourceTypes)item.m_iData)
@@ -5445,11 +5445,11 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 			{
 				bResult = true;
 			}
-*/
+			*/
 			break;
 		}
 		case TRADE_PLEDGE_VOTE:
-/*
+			/*
 			if (GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY))
 			{
 				VoteTriggeredData* pVoteTriggered = GC.getGame().getVoteTriggered(GC.getGame().getCurrentVoteID());
@@ -5467,7 +5467,7 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 					}
 				}
 			}
-*/
+			*/
 			break;
 
 		case TRADE_PEACE:

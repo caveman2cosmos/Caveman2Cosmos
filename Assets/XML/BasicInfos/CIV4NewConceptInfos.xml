@@ -2,6 +2,22 @@
 <!-- This file contains the C2C game concepts, traits and strategy. -->
 <Civ4NewConceptInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<NewConceptInfos>
+		<!-- Divisors for sections -->
+		<NewConceptInfo>
+			<Type>CONCEPT_C2C_GAMEPLAY</Type>
+			<Description>TXT_KEY_CONCEPT_C2C_GAMEPLAY</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_C2C_GAMEPLAY_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
+			<Type>CONCEPT_C2C_GAMEOPTIONS</Type>
+			<Description>TXT_KEY_CONCEPT_C2C_GAMEOPTIONS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_C2C_GAMEOPTIONS_PEDIA</Civilopedia>
+		</NewConceptInfo>
+		<NewConceptInfo>
+			<Type>CONCEPT_C2C_BUGOPTIONS</Type>
+			<Description>TXT_KEY_CONCEPT_C2C_BUGOPTIONS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_C2C_BUGOPTIONS_PEDIA</Civilopedia>
+		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ACTIVE_DEFENSE</Type>
 			<Description>TXT_KEY_CONCEPT_ACTIVE_DEFENSE</Description>
@@ -15,7 +31,7 @@
 		<NewConceptInfo>
 			<Type>CONCEPT_ADVANCED_DIPLOMACY</Type>
 			<Description>TXT_KEY_CONCEPT_ADVDIPLOMACY</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_DIPLOMACY_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CONCEPT_ADVDIPLOMACY_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
 			<Type>CONCEPT_ADVANCED_ESPIONAGE</Type>
