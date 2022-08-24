@@ -2309,6 +2309,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	}
 	else
 	{
+		// Notifications, gold on capture
 		if (bConquest)
 		{
 			if (bHuman)
@@ -2373,6 +2374,8 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				iX, iY, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT")
 			);
 		}
+
+		// Adjust occupation time due to buildings
 		const int iNumBuildingInfos = GC.getNumBuildingInfos();
 		int iOccupationTimeModifier = 0;
 		for (int iI = 0; iI < iNumBuildingInfos; iI++)
@@ -2383,6 +2386,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				iOccupationTimeModifier += GC.getBuildingInfo((BuildingTypes)iI).getOccupationTimeModifier();
 			}
 		}
+		
 		CvPlotGroup* originalTradeNetworkConnectivity[MAX_PLAYERS];
 
 		// Whose trade networks was this city relevant to prior to ownership change

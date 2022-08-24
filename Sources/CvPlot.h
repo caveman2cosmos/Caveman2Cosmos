@@ -1011,7 +1011,7 @@ protected:
 	char** m_apaiCultureRangeCities; // SAVEBREAK remove
 	short** m_apaiInvisibleVisibilityCount;
 
-/* Koshling - need to cache presence of mountain leaders in mountain plots so that CanMoveThrough calculations don't get bogged down searching unit stacks.
+	/* Koshling - need to cache presence of mountain leaders in mountain plots so that CanMoveThrough calculations don't get bogged down searching unit stacks.
 	This is a count of mountain leader units in the plot for each team.
 	The array is only created if the plot is a mountain plot and at least one team has a mountain leader present.
 	The array is cleared when the last leader leaves, so the memory overhead is low */

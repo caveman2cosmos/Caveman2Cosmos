@@ -10725,6 +10725,7 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 		updateFeatureHealth();
 		updateImprovementHealth();
 
+		// Alert people if max culture level acquired in a known city
 		if (eNewValue == GC.getNumCultureLevelInfos() - 1)
 		{
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)

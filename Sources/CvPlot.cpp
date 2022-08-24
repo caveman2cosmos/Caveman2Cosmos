@@ -4354,7 +4354,7 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 		return ePlayerSurrounds;
 	}
 
-	/* plots that are not forts and are adjacent to cities always belong to those cities' owners */
+	/* plots that are not forts and are adjacent to cities can alway belong to those cities' owners */
 	if (GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER) && !isCity(true))
 	{
 		const CvCity* adjacentCity = getAdjacentCity();
@@ -4902,8 +4902,6 @@ int CvPlot::getNumVisibleUnits(PlayerTypes ePlayer) const
 
 /************************************************************************************************/
 /* Afforess	                  Start		 6/22/11                                                */
-/*                                                                                              */
-/*                                                                                              */
 /************************************************************************************************/
 int CvPlot::getNumVisibleEnemyUnits(PlayerTypes ePlayer) const
 {
@@ -7921,7 +7919,6 @@ PlayerTypes CvPlot::findHighestCulturePlayer() const
 			}
 		}
 	}
-
 	return eBestPlayer;
 }
 
@@ -8668,24 +8665,25 @@ void CvPlot::changeBlockadedCount(TeamTypes eTeam, int iChange)
 
 		m_aiBlockadedCount[eTeam] += iChange;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      06/01/09                                jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* BETTER_BTS_AI_MOD                      06/01/09                                jdog5000      */
+		/* Bugfix                                                                                       */
+		/************************************************************************************************/
 		FAssertMsg(m_aiBlockadedCount[eTeam] >= 0, CvString::format("Blockaded count on a plot should not go lower than 0, it is now %d", getBlockadedCount(eTeam)).c_str());
 		FAssertMsg(m_aiBlockadedCount[eTeam] == 0 || isWater(), "Non water tiles cannot have a non-zero Blockaded count");
 
 		// Hack so that never get negative blockade counts as a result of fixing issue causing
 		// rare permanent blockades.
-		// TB Note: this can throw off counts and we have false additional amounts soooo, the negative may be necessary based on the order of things taking place and when you try to 'fix' it like this you create a permanent blockade.
+		// TB Note: this can throw off counts and we have false additional amounts soooo,
+		// the negative may be necessary based on the order of things taking place and
+		// when you try to 'fix' it like this you create a permanent blockade.
 		//if( getBlockadedCount(eTeam) < 0 )
 		//{
 		//	m_aiBlockadedCount[eTeam] = 0;
 		//}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+		/************************************************************************************************/
+		/* BETTER_BTS_AI_MOD                       END                                                  */
+		/************************************************************************************************/
 
 		CvCity* pWorkingCity = getWorkingCity();
 		if (NULL != pWorkingCity)
@@ -10187,8 +10185,8 @@ void CvPlot::doCulture()
 
 	doImprovementCulture();
 
+	// Do potential revolts
 	CvCity* pCity = getPlotCity();
-
 	if (pCity != NULL)
 	{
 		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
@@ -12290,7 +12288,8 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePl
 
 
 // Called at the end of turn. Sets the owner that claimed the plot the previous turn.
-// NOTE: We can't make the plot neutral at the moment of claiming (setForceUnowned()), because the aggressor could use it imidiatelly (i.e. travel using roads).
+// NOTE: We can't make the plot neutral at the moment of claiming (setForceUnowned()),
+// because the aggressor could use it immediately (i.e. travel using roads).
 void CvPlot::doTerritoryClaiming()
 {
 	if (m_eClaimingOwner != NO_PLAYER)
