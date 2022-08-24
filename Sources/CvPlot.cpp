@@ -228,7 +228,7 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_iFeatureVariety = 0;
 	m_iOwnershipDuration = 0;
 	m_iUpgradeProgress = 0;
-	m_iForceUnownedTimer = 0;
+	m_iForceUnownedTimer = 0; // SAVEBREAK remove
 	m_iCityRadiusCount = 0;
 	m_iRiverID = -1;
 	m_iMinOriginalStartDist = -1;
@@ -613,11 +613,6 @@ TeamTypes CvPlot::getTeam() const
 void CvPlot::doTurn()
 {
 	PROFILE_FUNC();
-
-	if (isForceUnowned())
-	{
-		changeForceUnownedTimer(-1);
-	}
 
 	if (isOwned())
 	{
@@ -4340,10 +4335,6 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 {
 	PROFILE("CvPlot::calculateCulturalOwner()");
 
-	if (isForceUnowned())
-	{
-		return NO_PLAYER;
-	}
 	int iBestCulture = 0;
 	PlayerTypes eBestPlayer = findHighestCulturePlayer();
 	const PlayerTypes eOwner = getOwner();
@@ -5537,26 +5528,6 @@ void CvPlot::setImprovementUpgradeProgress(int iNewValue)
 void CvPlot::changeImprovementUpgradeProgress(int iChange)
 {
 	setImprovementUpgradeProgress(m_iUpgradeProgress + iChange);
-}
-
-
-bool CvPlot::isForceUnowned() const
-{
-	return m_iForceUnownedTimer > 0;
-}
-
-
-void CvPlot::setForceUnownedTimer(int iNewValue)
-{
-	m_iForceUnownedTimer = iNewValue;
-	FASSERT_NOT_NEGATIVE(m_iForceUnownedTimer);
-}
-
-
-void CvPlot::changeForceUnownedTimer(int iChange)
-{
-	m_iForceUnownedTimer += iChange;
-	FASSERT_NOT_NEGATIVE(m_iForceUnownedTimer);
 }
 
 
@@ -10446,7 +10417,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_iImprovementDuration, SAVE_VALUE_ANY);
 	// SAVEBREAK@
 	WRAPPER_READ(wrapper, "CvPlot", &m_iUpgradeProgress);
-	WRAPPER_READ(wrapper, "CvPlot", &m_iForceUnownedTimer);
+	WRAPPER_READ(wrapper, "CvPlot", &m_iForceUnownedTimer); // SAVEBREAK remove
 	WRAPPER_READ(wrapper, "CvPlot", &m_iCityRadiusCount);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iRiverID);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iMinOriginalStartDist);
@@ -10897,7 +10868,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iFeatureVariety);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iOwnershipDuration);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iUpgradeProgress);
-	WRAPPER_WRITE(wrapper, "CvPlot", m_iForceUnownedTimer);
+	WRAPPER_WRITE(wrapper, "CvPlot", m_iForceUnownedTimer); // SAVEBREAK remove
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iCityRadiusCount);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iRiverID);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iMinOriginalStartDist);
@@ -12288,7 +12259,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePl
 
 
 // Called at the end of turn. Sets the owner that claimed the plot the previous turn.
-// NOTE: We can't make the plot neutral at the moment of claiming (setForceUnowned()),
+// NOTE: We can't make the plot neutral at the moment of claiming,
 // because the aggressor could use it immediately (i.e. travel using roads).
 void CvPlot::doTerritoryClaiming()
 {

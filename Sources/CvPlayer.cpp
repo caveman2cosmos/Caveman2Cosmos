@@ -2398,7 +2398,8 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			}
 		}
 
-		// Should claim tiles from opponent. Logic broken with culture fixes, Blaze TODO reimplement.
+		// Should claim some tiles from opponent. Logic broken with culture fixes, Blaze TODO reimplement.
+		// Removed forceUnowned, don't think necessary.
 		/*
 		if (hasFixedBorders())
 		{
@@ -2438,37 +2439,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 						if (bDoClaim)
 						{
 							pLoopPlot->setClaimingOwner(eNewOwner);
-							pLoopPlot->setForceUnownedTimer(1);
-						}
-					}
-				}
-			}
-		}
-		// Blaze TODO reimplement
-		else if (bConquest)
-		{
-			const int iRange = pOldCity->getCultureLevel();
-
-			for (int iDX = -(iRange); iDX <= iRange; iDX++)
-			{
-				for (int iDY = -(iRange); iDY <= iRange; iDY++)
-				{
-					if (pOldCity->cultureDistance(iDX, iDY) <= iRange && pOldCity->cultureDistance(iDX, iDY) > 1)
-					{
-						CvPlot* pLoopPlot = plotXY(iX, iY, iDX, iDY);
-
-						if (pLoopPlot != NULL && pLoopPlot->getOwner() == eOldOwner
-						&& pLoopPlot->getNumCultureRangeCities(eOldOwner) == 1)
-						{
-							for (int iI = 0; iI < MAX_PLAYERS; iI++)
-							{
-								if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getTeam(), false, pOldCity->getTeam())
-								&& pLoopPlot->getNumCultureRangeCities((PlayerTypes)iI) > 0)
-								{
-									pLoopPlot->setForceUnownedTimer(GC.getDefineINT("FORCE_UNOWNED_CITY_TIMER"));
-									break;
-								}
-							}
+							pLoopPlot->setForceUnownedTimer(1); // setForceUnowned removed. 
 						}
 					}
 				}

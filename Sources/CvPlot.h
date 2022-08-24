@@ -605,10 +605,6 @@ public:
 	void setImprovementUpgradeProgress(int iNewValue);
 	void changeImprovementUpgradeProgress(int iChange);
 
-	bool isForceUnowned() const;
-	void setForceUnownedTimer(int iNewValue);
-	void changeForceUnownedTimer(int iChange);
-
 	int getCityRadiusCount() const;
 	int isCityRadius() const;
 	void changeCityRadiusCount(int iChange);
@@ -909,7 +905,7 @@ protected:
 	short m_iFeatureVariety;
 	short m_iOwnershipDuration;
 	short m_iUpgradeProgress;
-	short m_iForceUnownedTimer;
+	short m_iForceUnownedTimer; // SAVEBREAK remove
 	short m_iCityRadiusCount;
 	int m_iRiverID;
 	short m_iMinOriginalStartDist;
