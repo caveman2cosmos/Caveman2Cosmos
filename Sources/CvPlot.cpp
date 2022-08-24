@@ -3449,7 +3449,6 @@ void CvPlot::changeDefenseDamage(int iChange)
 }
 
 // Super Forts *culture*
-
 void CvPlot::changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate)
 {
 	if (0 == iChange || iRange < 0)
@@ -3504,15 +3503,13 @@ void CvPlot::doImprovementCulture()
 				{
 					for (int iDY = -iCultureRange; iDY <= iCultureRange; iDY++)
 					{
-						const int iDistance = plotDistance(0, 0, iDX, iDY);
-
-						if (iDistance <= iCultureRange)
+						if (plotDistance(0, 0, iDX, iDY) <= iCultureRange)
 						{
 							CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
 							if (pLoopPlot != NULL)
 							{
-								pLoopPlot->changeCulture(eOwner, iCulture + iCulture*(iCultureRange - iDistance), false);
+								pLoopPlot->changeCulture(eOwner, iCulture, false);
 							}
 						}
 					}
@@ -4340,11 +4337,6 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 	const PlayerTypes eOwner = getOwner();
 	const PlayerTypes ePlayerSurrounds = getPlayerWithTerritorySurroundingThisPlotCardinally();
 
-	if (eOwner != NO_PLAYER && eBestPlayer == NO_PLAYER && getCulture(eOwner) < 1)
-	{
-		return ePlayerSurrounds;
-	}
-
 	/* plots that are not forts and are adjacent to cities can alway belong to those cities' owners */
 	if (GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER) && !isCity(true))
 	{
@@ -4355,17 +4347,19 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 		}
 	}
 
+	// If all plots around this culturally neutral plot are owned by a player, grant that player this plot.
+	if (eBestPlayer == NO_PLAYER && ePlayerSurrounds != NO_PLAYER)
+	{
+		return ePlayerSurrounds;
+	}
+
 	// Have to check for the current owner being alive for this to work correctly in the cultural
 	//	re-assignment that takes place as he dies during processing of the capture of his last city.
 	if (eOwner != NO_PLAYER && GET_PLAYER(eOwner).isAlive() && GET_PLAYER(eOwner).hasFixedBorders())
 	{
-		// Owner have fixed borders
-		// Can not steal land from other, more dominant fixed border civilization
+		// If *current* owner has fixed borders, keeps control unless they have under 1/2 culture of best player.
 		if (eBestPlayer != NO_PLAYER
 		&&  eBestPlayer != eOwner
-		&& !GET_PLAYER(eBestPlayer).hasFixedBorders()
-		// Fixed borders should only hold if under 1/2 culture of primary owner.
-		// Need to doublecheck this func, and consider if both have fixed? Blaze TODO
 		&& getCulture(eOwner) > iBestCulture/2)
 		{
 			return eOwner;
@@ -4380,6 +4374,13 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 		}
 	}
 
+	// TODO reimplement
+	// I think this would do a tiebreaker between people on same team so that
+	// players on the same team would fight less over plots that they could work.
+	// So, even if player A had up to 5x the culture of player B, A would not take
+	// from B if they were on the same team, were a vassal of B, and B could work/prioritize that plot.
+	// Can mostly reimplement by saying instead of 'in range', just compare the distances.
+	/*
 	if (!isCity() && eBestPlayer != NO_PLAYER)
 	{
 		int iBestPriority = MAX_INT;
@@ -4402,8 +4403,7 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 				{
 					const PlayerTypes ePlayerX = cityX->getOwner();
 
-					// Blaze TODO not actually entirely sure what this does, need to investigate.
-					// Can use same 'hasPlotGainedCulture` check here, though.
+					// isWithinCultureRange(ePlayerX) would check if the tile is receiving culture from a city of that player
 					// if (eBestPlayer != ePlayerX && getCulture(ePlayerX) > 0 && isWithinCultureRange(ePlayerX))
 					if (eBestPlayer != ePlayerX && getCulture(ePlayerX) > 0)
 					{
@@ -4418,13 +4418,8 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 				}
 			}
 		}
-	}
+	}*/
 
-	// Toffer - If all plots around this neutral plot is owned by a player, grant that player this plot.
-	if (eBestPlayer == NO_PLAYER || ePlayerSurrounds != NO_PLAYER)
-	{
-		return ePlayerSurrounds;
-	}
 	return eBestPlayer;
 }
 
@@ -5980,6 +5975,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 		{
 			setOwnershipDuration(0);
 
+			// Remove effects from old owner of tile (Keep symmetry with below where needed!)
 			if (isOwned())
 			{
 				changeAdjacentSight(getTeam(), 1, false, NULL, bUpdatePlotGroup);
@@ -6004,12 +6000,6 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 				if (getImprovementType() != NO_IMPROVEMENT)
 				{
 					GET_PLAYER(getOwner()).changeImprovementCount(getImprovementType(), -1);
-					// Super Forts begin *culture* - adapted to C2C
-					if (GC.getImprovementInfo(getImprovementType()).getCulture() > 0 )
-					{
-						changeCultureRangeFortsWithinRange(getOwner(), -1, GC.getImprovementInfo(getImprovementType()).getCultureRange(), false);
-					}
-					// Super Forts end
 				}
 
 				updatePlotGroupBonus(false);
@@ -6035,6 +6025,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 			setWorkingCityOverride(NULL);
 			updateWorkingCity();
 
+			// Add same effects to new owner of tile (Keep symmetry with above!)
 			if (isOwned())
 			{
 				changeAdjacentSight(getTeam(), 1, true, NULL, bUpdatePlotGroup);
@@ -6099,6 +6090,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 				verifyUnitValidPlot();
 			}
 
+			// Why is this so low, should not be merged with second isOwned check above?
 			if (isOwned() && !GET_PLAYER(getOwner()).isNPC())
 			{
 				if (isGoody())
@@ -6875,6 +6867,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 			}
 		}
 		*/
+		// Remove old improvement
 		if (eOldImprovement != NO_IMPROVEMENT)
 		{
 			if (area())
@@ -6884,11 +6877,6 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 			if (isOwned())
 			{
 				GET_PLAYER(getOwner()).changeImprovementCount(eOldImprovement, -1);
-				// Super Forts *culture*
-				if (GC.getImprovementInfo(eOldImprovement).getCulture() > 0)
-				{
-					changeCultureRangeFortsWithinRange(getOwner(), -1, GC.getImprovementInfo(eOldImprovement).getCultureRange(), false);
-				}
 			}
 		}
 		if (eNewImprovement != NO_IMPROVEMENT)
@@ -7933,6 +7921,8 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 	{
 		std::vector<std::pair<PlayerTypes, int> >::iterator itr;
 
+		// Blaze - 24.8.22 - This overflow protection shouldn't be needed with change to make culture
+		// in equilibrium states, rather than rising infinitely.
 		// Toffer - 08.08.20
 		// 4 byte integer overflow protection
 		if (iNewValue > 1000000000) // trigger reduction at a billion
@@ -7989,6 +7979,10 @@ void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate)
 {
 	if (0 != iChange)
 	{
+		// Lots of things put 1 culture on a tile to mark as claimed; adjust above threshold if so.
+		logging::logMsg("Test.log", "changing by %d", iChange);
+		if (iChange > 0 && iChange < minimumNonDecayCulture()) iChange = minimumNonDecayCulture(); 
+		logging::logMsg("Test.log", "sike it's actually %d which should be %d", iChange, minimumNonDecayCulture());
 		const int iNonNegativeCulture = std::max(getCulture(eIndex) + iChange, 0);
 		setCulture(eIndex, iNonNegativeCulture, bUpdate, true);
 	}
@@ -9395,13 +9389,6 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, TeamTypes eTeam
 				bCultureDistUpdate = true;
 			}
 
-			// recompute the city culture distance cache if feature/terrain has changed
-			// Not necessary while culture is updating every turn in doPlotCulture and on setCultureLevel
-			// if (pCity != NULL && bCultureDistUpdate)
-			// {
-			// 	pCity->clearCultureDistanceCache();
-			// }
-
 			bFinished = true;
 		}
 	}
@@ -10217,22 +10204,45 @@ void CvPlot::doCulture()
 		}
 	}
 
-	// Blaze TODO:
-	// For each alive player, decay their culture on this plot if their value of
-	// (new cache) `hasPlotGainedCulture` is false. CvPlot::setCulture should
-	// mark hasPlotGainedCulture to true for the player it's called on with positive change.
-	if (getOwner() != NO_PLAYER)
-	{
-		setCulture(getOwner(), std::max(0, getCulture(getOwner())/2 - 10), true, true);
-	}
+	if (getOwner() != NO_PLAYER) decayCulture();
 
-	// This only checks if owner is correct, doesn't change culture value. May depend on hasPlotGainedCulture.
+	// This only checks/updates if owner is correct, doesn't change culture value.
+	// Setting forcibly claimed territory comes after, in doTurn
 	updateCulture(true, true);
+}
 
-	// Here, reset `hasPlotGainedCulture` to false for all players.
-	// I think this solution will probably need to be added to the save file, otherwise
-	// reloading a turn could cause a different outcome due to decay not being saved from
-	// another team's turn.
+
+void CvPlot::decayCulture()
+{
+	// May need to make decay stronger on higher strength tiles, without kneecapping earlygame.
+	// Perhaps 10% plus 5% per every 100 culture or something capping out at 50%, need to examine.
+	// Gotta avoid 'welfare cliffs' though.
+	// NOTE: If decay function is altered, gotta change minimumNonDecayCulture.
+	int decayPercent = GC.getTILE_CULTURE_DECAY_PERCENT();
+	int decayFlat = GC.getTILE_CULTURE_DECAY_CONSTANT();
+
+	for (int playerNum = 0; playerNum < MAX_PC_PLAYERS; playerNum++)
+	{
+		CvPlayer& playerX = GET_PLAYER((PlayerTypes)playerNum);
+		if (playerX.isAlive() && getCulture((PlayerTypes)playerNum) > 0)
+		{
+			// Don't need to force update after each player, update culture is called next in doCulture
+			// plotgroups I think need updating though? Same pattern as improvementCulture and SuperFort culture
+			logging::logMsg("Test.log", "Changing from %d", getCulture((PlayerTypes)playerNum));
+			setCulture((PlayerTypes)playerNum,
+				std::max(0, getCulture((PlayerTypes)playerNum) * (100 - decayPercent) / 100 - decayFlat),
+				true, true);
+			logging::logMsg("Test.log", "To: %d", getCulture((PlayerTypes)playerNum));
+		}
+	}
+}
+
+
+int CvPlot::minimumNonDecayCulture()
+{
+	// Lowest culture above which, after 1 decay, will still be > 0. Inverse of decay func, basically.
+	logging::logMsg("Test.log", "Min decay calc says %d", (2 + GC.getTILE_CULTURE_DECAY_CONSTANT()) * 100 / (100 - GC.getTILE_CULTURE_DECAY_PERCENT()));
+	return ((2 + GC.getTILE_CULTURE_DECAY_CONSTANT()) * 100 / (100 - GC.getTILE_CULTURE_DECAY_PERCENT()));
 }
 
 

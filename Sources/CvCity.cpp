@@ -289,20 +289,14 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	updateCultureLevel(false);
 
-	if (pPlot->getCulture(getOwner()) < GC.getFREE_CITY_CULTURE())
-	{
-		pPlot->setCulture(getOwner(), GC.getFREE_CITY_CULTURE(), bBumpUnits, false);
-	}
+	pPlot->changeCulture(getOwner(), GC.getFREE_CITY_CULTURE(), bBumpUnits);
 
 	if (!GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING))
 	{
 		const int iAdjCulture = GC.getFREE_CITY_ADJACENT_CULTURE();
 		foreach_(CvPlot* pAdjacentPlot, plot()->adjacent())
 		{
-			if (pAdjacentPlot->getCulture(getOwner()) < iAdjCulture)
-			{
-				pAdjacentPlot->setCulture(getOwner(), iAdjCulture, bBumpUnits, false);
-			}
+			pAdjacentPlot->changeCulture(getOwner(), iAdjCulture, bBumpUnits);
 			pAdjacentPlot->updateCulture(bBumpUnits, false);
 		}
 	}
@@ -10794,26 +10788,26 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 	{
 		const GameSpeedTypes eSpeed = GAME.getGameSpeedType();
 		const int iCulture = getCultureTimes100(getOwner()) / 100;
-		int iCultureLevelOffset = 0;
 
+		// Loop thru infos to find level
 		foreach_(const CvCultureLevelInfo* info, GC.getCultureLevelInfos())
 		{
 			if (info->getPrereqGameOption() == NO_GAMEOPTION || GAME.isOption((GameOptionTypes)info->getPrereqGameOption()))
 			{
 				if (iCulture < info->getSpeedThreshold(eSpeed))
-					break;
-
+				{
+					// If we are below threshold, we have not reached yet.
+					setCultureLevel(static_cast<CultureLevelTypes>(iCultureLevel - 1), bUpdatePlotGroups);
+					return;
+				}
 				iCultureLevel++;
 			}
-			else
-			{
-				iCultureLevelOffset++;
-			}
 		}
-		// If we're not below the last threshold, we have max level
-		setCultureLevel((CultureLevelTypes)(GC.getNumCultureLevelInfos() - 1 - iCultureLevelOffset), bUpdatePlotGroups);
+		// Max level culture
+		setCultureLevel(static_cast<CultureLevelTypes>(iCultureLevel), bUpdatePlotGroups);
 		return;
 	}
+	// Occupied/revolution etc, 0 culture level
 	setCultureLevel(static_cast<CultureLevelTypes>(iCultureLevel), bUpdatePlotGroups);
 }
 
@@ -16129,8 +16123,9 @@ void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
 	FAssert(NO_PLAYER != ePlayer);
 
 	const int iCulture = getCultureTimes100(ePlayer);
-	CultureLevelTypes eCultureLevel = (CultureLevelTypes)0;
 
+	// ? If doPlotCulture is called on a city that's not the player's, or something?
+	CultureLevelTypes eCultureLevel = (CultureLevelTypes)0;
 	if (getOwner() != ePlayer)
 	{
 		const GameSpeedTypes eSpeed = GC.getGame().getGameSpeedType();
@@ -16145,34 +16140,54 @@ void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
 	}
 	else eCultureLevel = getCultureLevel();
 
-	// Put culture onto plots from the city
-	if (iCulture > 0 && eCultureLevel != NO_CULTURELEVEL)
+	// Put culture onto plots from the city, even if "0" culture output,
+	// to prevent loss thru decay if 0 culture and not realistic culture.
+	clearCultureDistanceCache();
+	for (int iDX = -eCultureLevel; iDX <= eCultureLevel; iDX++)
 	{
-		// this recalculates a lot each turn, but provides border updates immediately
-		clearCultureDistanceCache();
-		int iMaxCultureLevel = GC.getNumCultureLevelInfos();
-		const int iDensityFactor = GC.getCITY_CULTURE_DENSITY_FACTOR();
-
-		for (int iDX = -eCultureLevel; iDX <= eCultureLevel; iDX++)
+		for (int iDY = -eCultureLevel; iDY <= eCultureLevel; iDY++)
 		{
-			for (int iDY = -eCultureLevel; iDY <= eCultureLevel; iDY++)
+			const int iCultureDistance = cultureDistance(iDX, iDY);
+
+			if (iCultureDistance <= eCultureLevel)
 			{
-				const int iCultureRange = cultureDistance(iDX, iDY);
+				CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
-				if (iCultureRange <= eCultureLevel)
+				if (pLoopPlot != NULL && pLoopPlot->isPotentialCityWorkForArea(area()))
 				{
-					CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-					if (pLoopPlot != NULL && pLoopPlot->isPotentialCityWorkForArea(area()))
-					{
-						pLoopPlot->changeCulture(ePlayer,
-							1 + iCultureRate * (1 + iDensityFactor * (eCultureLevel - iCultureRange) / 100)  / iMaxCultureLevel,
-							(bUpdate || !(pLoopPlot->isOwned())));
-					}
+					// changeCulture bumps upward to ensure plot cannot be lost thru decay even if culture gain is too small
+					pLoopPlot->changeCulture(ePlayer,
+						cultureDistanceDropoff(iCultureRate, eCultureLevel, iCultureDistance),
+						(bUpdate || !(pLoopPlot->isOwned())));
 				}
 			}
 		}
 	}
+}
+
+
+int CvCity::cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int distanceFromSource)
+{
+	/* This function could probably be improved some.
+		Currently is linear dropoff or flat, but nonlinearity might be necessary if culture too strong.
+		I want to do something like ((range-distance)/range)^x as a modifier on base gain for
+		fractional x around 1 where xml controls x, but... obvious issues with floating point. */
+
+	FASSERT_NOT_NEGATIVE(baseCultureGain);
+	FAssertMsg(distanceFromSource <= rangeOfSource, "Calculating culture gain for distance greater than max range.");
+
+	const int iDensityFactor = GC.getCITY_CULTURE_DENSITY_FACTOR();
+	int modifiedCultureGain = 0;
+
+	// 1->0 multiplier on base rate as distance from source goes 0->max
+	modifiedCultureGain = baseCultureGain * (rangeOfSource - distanceFromSource) / rangeOfSource;
+	// Some fraction 0-100 should be distance-modified.
+	modifiedCultureGain *= iDensityFactor / 100;
+	// The rest is flat base culture rate.
+	modifiedCultureGain += baseCultureGain * (100 - iDensityFactor) / 100;
+	
+	modifiedCultureGain = std::max(modifiedCultureGain, 1);
+	return modifiedCultureGain;
 }
 
 

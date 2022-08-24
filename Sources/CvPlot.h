@@ -1020,6 +1020,8 @@ protected:
 
 	void doFeature();
 	void doCulture();
+	void decayCulture();
+	int minimumNonDecayCulture();
 
 	void processArea(CvArea* pArea, int iChange);
 	void doImprovementUpgrade(const ImprovementTypes eType);

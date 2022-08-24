@@ -1914,6 +1914,8 @@ protected:
 	void doGrowth();
 	void doCulture();
 	void doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate);
+	void decayCulture();
+	int cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int distanceFromSource);
 	void doProduction(bool bAllowNoProduction);
 	void doDecay();
 	void doReligion();
