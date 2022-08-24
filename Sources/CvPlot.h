@@ -312,8 +312,6 @@ public:
 	bool isAdjacentOwned() const;
 	bool isAdjacentPlayer(PlayerTypes ePlayer, bool bLandOnly = false) const;
 	bool isAdjacentTeam(TeamTypes eTeam, bool bLandOnly = false) const;
-	bool isWithinCultureRange(PlayerTypes ePlayer, int* iFoundRange = NULL) const;
-	int getNumCultureRangeCities(PlayerTypes ePlayer) const;
 
 	bool isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb = true ) const;
 	bool isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer = NO_PLAYER ) const;
@@ -330,7 +328,6 @@ public:
 
 	CvCity* getAdjacentCity(PlayerTypes ePlayer = NO_PLAYER) const;
 	bool changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePlayer = NO_PLAYER);
-	void changeCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex, int iChange, bool bUpdatePlotGroups, bool bUpdateCulture = true);
 	bool isHasValidBonus() const;
 	PlayerTypes getClaimingOwner() const;
 	void setClaimingOwner(PlayerTypes eNewValue);
@@ -825,10 +822,6 @@ public:
 	DllExport CvUnit* getDebugCenterUnit() const;
 	void setCenterUnit(CvUnit* pNewValue);
 
-	int getCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex) const;
-	bool isCultureRangeCity(PlayerTypes eOwnerIndex, int iRangeIndex) const;
-	//void changeCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex, int iChange, bool bUpdatePlotGroups);
-
 	int getInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible) const;
 	bool isSpotterInSight(TeamTypes eTeam, InvisibleTypes eInvisible) const;
 	void changeInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible, int iChange);
@@ -1015,7 +1008,7 @@ protected:
 
 	CvPlotBuilder* m_pPlotBuilder; // builds bonuses and improvements
 
-	char** m_apaiCultureRangeCities;
+	char** m_apaiCultureRangeCities; // SAVEBREAK remove
 	short** m_apaiInvisibleVisibilityCount;
 
 /* Koshling - need to cache presence of mountain leaders in mountain plots so that CanMoveThrough calculations don't get bogged down searching unit stacks.

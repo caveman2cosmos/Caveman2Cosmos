@@ -1650,9 +1650,8 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 
 	if ( // Can raze
 			!GC.getGame().isOption(GAMEOPTION_NO_CITY_RAZING)
-		&& (
+		&& ( // Can't raze if same ID ever owned, or if random chance. Can raze max culture level cities.
 			!pCity->isEverOwned(getID())
-			&& !pCity->plot()->isCultureRangeCity(getID(), std::max(0, GC.getNumCultureLevelInfos() - 1))
 			|| pCity->calculateTeamCulturePercent(getTeam()) < GC.getDefineINT("RAZING_CULTURAL_PERCENT_THRESHOLD")
 			)
 	)

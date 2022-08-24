@@ -2394,6 +2394,8 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			}
 		}
 
+		// Should claim tiles from opponent. Logic broken with culture fixes, Blaze TODO reimplement.
+		/*
 		if (hasFixedBorders())
 		{
 			const int iOccupationRange = pOldCity->getMaxCultureLevelAmongPlayers();
@@ -2438,6 +2440,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				}
 			}
 		}
+		// Blaze TODO reimplement
 		else if (bConquest)
 		{
 			const int iRange = pOldCity->getCultureLevel();
@@ -2466,7 +2469,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 					}
 				}
 			}
-		}
+		}*/
 
 		if (eOriginalOwner == eOldOwner
 		|| GC.getGame().isOption(GAMEOPTION_BARBARIAN_CIV) && pOldCity->isCapital() && eOriginalOwner == BARBARIAN_PLAYER)
@@ -27000,37 +27003,6 @@ void CvPlayer::setShowLandmarks(bool bNewVal)
 void CvPlayer::acquireFort(CvPlot* pPlot)
 {
 	pPlot->setOwner(getID(),true,true);
-
-#ifdef UNUSED_CODE_DUE_TO_SUPERFORTS_MERGE
-	CvPlot* pLoopPlot;
-	int iI;
-
-	ImprovementTypes eOldFortImprovement = pPlot->getImprovementType();
-
-	foreach_(CvPlot* pLoopPlot, pPlot->adjacent())
-	{
-		if (!pLoopPlot->isCity())
-		{
-			if ((pLoopPlot->getOwner() == pPlot->getOwner()) || (pLoopPlot->getOwner() == NO_PLAYER))
-			{
-				const int iNumCitiesForRange = pLoopPlot->getCultureRangeCities(pPlot->getOwner(), 1);
-
-				if (iNumCitiesForRange == 1 && pLoopPlot->calculateCulturalOwner() == getID())
-				{
-					//	This captures surrounding tiles that are culturally owned by the
-					//	captor even if the previous owner has fixed borders
-					pLoopPlot->setOwner(getID(), true, false);
-				}
-			}
-		}
-	}
-
-	pPlot->setImprovementType(NO_IMPROVEMENT);
-
-	pPlot->setOwner(getID(), true, false);
-
-	pPlot->setImprovementType(eOldFortImprovement);
-#endif
 }
 
 int CvPlayer::getResourceConsumption(BonusTypes eBonus) const

@@ -3473,8 +3473,6 @@ void CvPlot::changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange
 
 				if (pLoopPlot != NULL)
 				{
-					pLoopPlot->changeCultureRangeCities(ePlayer, iCultureDistance, iChange, false, false);
-
 					// Make sure that if a plot is newly in range it gets at least 1 culture
 					if (iChange > 0 && pLoopPlot->getCulture(ePlayer) == 0)
 					{
@@ -4119,36 +4117,6 @@ bool CvPlot::isAdjacentTeam(TeamTypes eTeam, bool bLandOnly) const
 }
 
 
-bool CvPlot::isWithinCultureRange(PlayerTypes ePlayer, int* iFoundRange) const
-{
-	for (int iI = 0; iI < GC.getNumCultureLevelInfos(); ++iI)
-	{
-		if (isCultureRangeCity(ePlayer, iI))
-		{
-			if (iFoundRange != NULL)
-			{
-				*iFoundRange = iI;
-			}
-			return true;
-		}
-	}
-
-	return false;
-}
-
-
-int CvPlot::getNumCultureRangeCities(PlayerTypes ePlayer) const
-{
-	int iCount = 0;
-
-	for (int iI = 0; iI < GC.getNumCultureLevelInfos(); ++iI)
-	{
-		iCount += getCultureRangeCities(ePlayer, iI);
-	}
-
-	return iCount;
-}
-
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      01/10/10                                jdog5000      */
 /*                                                                                              */
@@ -4377,39 +4345,10 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 		return NO_PLAYER;
 	}
 	int iBestCulture = 0;
-	int iBestRange = MAX_INT;
-	PlayerTypes eBestPlayer = NO_PLAYER;
+	PlayerTypes eBestPlayer = findHighestCulturePlayer();
 	const PlayerTypes eOwner = getOwner();
 	const PlayerTypes ePlayerSurrounds = getPlayerWithTerritorySurroundingThisPlotCardinally();
 
-	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
-	{
-		const PlayerTypes ePlayerX = static_cast<PlayerTypes>(iI);
-		if (GET_PLAYER(ePlayerX).isAlive())
-		{
-			const int iCulture = getCulture(ePlayerX);
-
-			if (iCulture > 0)
-			{
-				int iCultureRange;
-
-				// Super Forts begin *culture*
-				if (isWithinCultureRange(ePlayerX, &iCultureRange))
-				// Super Forts end
-				{
-					// Koshling - modified so that equal culture victory goes to the player with the closest culture source as first tie-breaker.
-					if (iCulture > iBestCulture
-					|| iCulture == iBestCulture
-					&& (iCultureRange < iBestRange || eOwner == ePlayerX && iCultureRange == iBestRange))
-					{
-						iBestCulture = iCulture;
-						eBestPlayer = ePlayerX;
-						iBestRange = iCultureRange;
-					}
-				}
-			}
-		}
-	}
 	if (eOwner != NO_PLAYER && eBestPlayer == NO_PLAYER && getCulture(eOwner) < 1)
 	{
 		return ePlayerSurrounds;
@@ -4434,10 +4373,9 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 		if (eBestPlayer != NO_PLAYER
 		&&  eBestPlayer != eOwner
 		&& !GET_PLAYER(eBestPlayer).hasFixedBorders()
-		// Koshling - changed Fixed Borders to not unconditionally hold territory, but only
-		//	to hold it against a natural owner with less than twice the FB player's culture
-		&& getCulture(eOwner) > iBestCulture/2
-		&& isWithinCultureRange(eOwner))
+		// Fixed borders should only hold if under 1/2 culture of primary owner.
+		// Need to doublecheck this func, and consider if both have fixed? Blaze TODO
+		&& getCulture(eOwner) > iBestCulture/2)
 		{
 			return eOwner;
 		}
@@ -4473,7 +4411,10 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 				{
 					const PlayerTypes ePlayerX = cityX->getOwner();
 
-					if (eBestPlayer != ePlayerX && getCulture(ePlayerX) > 0 && isWithinCultureRange(ePlayerX))
+					// Blaze TODO not actually entirely sure what this does, need to investigate.
+					// Can use same 'hasPlotGainedCulture` check here, though.
+					// if (eBestPlayer != ePlayerX && getCulture(ePlayerX) > 0 && isWithinCultureRange(ePlayerX))
+					if (eBestPlayer != ePlayerX && getCulture(ePlayerX) > 0)
 					{
 						const int iPriority = GC.getCityPlotPriority()[iI] + 5 * (cityX->getTeam() == eBestTeam);
 
@@ -9875,67 +9816,6 @@ void CvPlot::setCenterUnit(CvUnit* pNewValue)
 }
 
 
-int CvPlot::getCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex) const
-{
-	FASSERT_BOUNDS(0, MAX_PLAYERS, eOwnerIndex);
-	FASSERT_BOUNDS(0, GC.getNumCultureLevelInfos(), iRangeIndex);
-
-	if (m_apaiCultureRangeCities == NULL
-	|| eOwnerIndex == NO_PLAYER
-	|| m_apaiCultureRangeCities[eOwnerIndex] == NULL)
-	{
-		return 0;
-	}
-	return m_apaiCultureRangeCities[eOwnerIndex][iRangeIndex];
-}
-
-
-bool CvPlot::isCultureRangeCity(PlayerTypes eOwnerIndex, int iRangeIndex) const
-{
-	return (getCultureRangeCities(eOwnerIndex, iRangeIndex) > 0);
-}
-
-
-void CvPlot::changeCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex, int iChange, bool bUpdatePlotGroups, bool bUpdateCulture)
-{
-	FASSERT_BOUNDS(0, MAX_PLAYERS, eOwnerIndex);
-	FASSERT_BOUNDS(0, GC.getNumCultureLevelInfos(), iRangeIndex);
-
-	if (0 != iChange)
-	{
-		const bool bOldCultureRangeCities = isCultureRangeCity(eOwnerIndex, iRangeIndex);
-
-		if (NULL == m_apaiCultureRangeCities)
-		{
-			m_apaiCultureRangeCities = new char*[MAX_PLAYERS];
-			for (int iI = 0; iI < MAX_PLAYERS; ++iI)
-			{
-				m_apaiCultureRangeCities[iI] = NULL;
-			}
-		}
-
-		if (NULL == m_apaiCultureRangeCities[eOwnerIndex])
-		{
-			m_apaiCultureRangeCities[eOwnerIndex] = new char[GC.getNumCultureLevelInfos()];
-			for (int iI = 0; iI < GC.getNumCultureLevelInfos(); ++iI)
-			{
-				m_apaiCultureRangeCities[eOwnerIndex][iI] = 0;
-			}
-		}
-
-		m_apaiCultureRangeCities[eOwnerIndex][iRangeIndex] += iChange;
-
-		if (bUpdateCulture)
-		{
-			if (bOldCultureRangeCities != isCultureRangeCity(eOwnerIndex, iRangeIndex))
-			{
-				updateCulture(true, bUpdatePlotGroups);
-			}
-		}
-	}
-}
-
-
 int CvPlot::getInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible) const
 {
 	FASSERT_BOUNDS(0, MAX_TEAMS, eTeam);
@@ -10368,13 +10248,22 @@ void CvPlot::doCulture()
 		}
 	}
 
-	//Decay if you've lost any source of culture on the plot
-	if (getOwner() != NO_PLAYER && !isWithinCultureRange(getOwner()))
+	// Blaze TODO:
+	// For each alive player, decay their culture on this plot if their value of
+	// (new cache) `hasPlotGainedCulture` is false. CvPlot::setCulture should
+	// mark hasPlotGainedCulture to true for the player it's called on with positive change.
+	if (getOwner() != NO_PLAYER)
 	{
 		setCulture(getOwner(), std::max(0, getCulture(getOwner())/2 - 10), true, true);
 	}
 
+	// This only checks if owner is correct, doesn't change culture value. May depend on hasPlotGainedCulture.
 	updateCulture(true, true);
+
+	// Here, reset `hasPlotGainedCulture` to false for all players.
+	// I think this solution will probably need to be added to the save file, otherwise
+	// reloading a turn could cause a different outcome due to decay not being saved from
+	// another team's turn.
 }
 
 
@@ -10848,6 +10737,8 @@ void CvPlot::read(FDataStreamBase* pStream)
 	}
 	// SAVEBREAK@
 
+	// SAVEBREAK start remove
+	//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_apaiCultureRangeCities, SAVE_VALUE_ANY); // Is this right?
 	if (NULL != m_apaiCultureRangeCities)
 	{
 		for (int iI = 0; iI < MAX_PLAYERS; ++iI)
@@ -10879,6 +10770,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 			}
 		}
 	}
+	// SAVEBREAK end
 
 	//	Read the plot danger counts for all players that have any here
 	int	iPlayersWithDanger = 0;
@@ -11222,6 +11114,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (int)0, "iConditional");
 	}
 
+	// SAVEBREAK start remove
 	if (NULL == m_apaiCultureRangeCities)
 	{
 		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)0, "cConditional");
@@ -11242,6 +11135,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 			}
 		}
 	}
+	// SAVEBREAK end remove
 
 	//	Write out plot danger counts for all players that have any here
 	int	iPlayersWithDanger = 0;

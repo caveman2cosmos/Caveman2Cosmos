@@ -10708,66 +10708,7 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 	// Culture level change can change our radius requiring recalculation of best builds
 	AI_markBestBuildValuesStale();
 
-	// Remove plots that do not exist in new border and should have existed in old border
-	// Essentially, border shrinking; also does not remove tiles if distance has increased since last growth
-	if (eOldValue != NO_CULTURELEVEL)
-	{
-		for (int iDX = -eOldValue; iDX <= eOldValue; iDX++)
-		{
-			for (int iDY = -eOldValue; iDY <= eOldValue; iDY++)
-			{
-				const int iCultureRange = cultureDistance(iDX, iDY, true);
-
-				if (iCultureRange > eNewValue && iCultureRange <= eOldValue)
-				{
-					FAssert(iCultureRange <= GC.getNumCultureLevelInfos());
-
-					CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-					if (pLoopPlot != NULL)
-					{
-						pLoopPlot->changeCultureRangeCities(getOwner(), iCultureRange, -1, bUpdatePlotGroups);
-					}
-				}
-			}
-		}
-	}
-
-	/************************************************************************************************/
-	/* phunny_pharmer             Start		 04/21/10                                               */
-	/*   ensure that the scaling back of cultural distances occurs before caching                   */
-	/*     note that the first time the city is built, no caching is necessary since the above loop */
-	/*     will not be entered (the old value is equal to NO_CULTURELEVEL)                          */
-	/*       however, on all subsequent calls, the cultureDistance function refers to the culture   */
-	/*       level m_eCultureLevel, so that cannot be changed until after the function completes    */
-	/************************************************************************************************/
-	clearCultureDistanceCache();
-
-	// Add plots if distance greater than previous, but in current
-	// Can miss tiles if distance was greater than previous, but shrunk since last update?
-	if (eNewValue != NO_CULTURELEVEL)
-	{
-		for (int iDX = -eNewValue; iDX <= eNewValue; iDX++)
-		{
-			for (int iDY = -eNewValue; iDY <= eNewValue; iDY++)
-			{
-				const int iCultureRange = cultureDistance(iDX, iDY, true);
-
-				if (iCultureRange > eOldValue && iCultureRange <= eNewValue)
-				{
-					FAssert(iCultureRange <= GC.getNumCultureLevelInfos());
-
-					CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-					if (pLoopPlot != NULL)
-					{
-						pLoopPlot->changeCultureRangeCities(getOwner(), iCultureRange, 1, bUpdatePlotGroups);
-					}
-				}
-			}
-		}
-	}
-
+	// Border expansion alert
 	if (GC.getGame().isFinalInitialized() && eNewValue > eOldValue && eNewValue > 1)
 	{
 		{
