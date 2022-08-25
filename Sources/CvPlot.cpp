@@ -10150,58 +10150,86 @@ void CvPlot::doCulture()
 	if (pCity != NULL)
 	{
 		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
-
-		if (eCulturalOwner != NO_PLAYER && GET_PLAYER(eCulturalOwner).getTeam() != getTeam() && !pCity->isOccupation()
-		&& GC.getGame().getSorenRandNum(100, "Revolt #1") < GC.getREVOLT_TEST_PROB())
+		if (eCulturalOwner != NO_PLAYER && GET_PLAYER(eCulturalOwner).getTeam() != getTeam() && !pCity->isOccupation())
 		{
-			int iOriginal = 0; // Dummy variable
-			const int iCityStrength = pCity->cultureStrength(eCulturalOwner, iOriginal);
+			int iCultureOwnerWinningPercent = calculateCulturePercent(eCulturalOwner) - calculateCulturePercent(getOwner());
 
-			if (pCity->isNPC() || GC.getGame().getSorenRandNum(100, "Revolt #2") < iCityStrength)
+			// Check to check for revolt, rate adjusted by gamespeed, at least 1% minimum.
+			if (GC.getGame().getSorenRandNum(100, "Revolt #1") < std::max(1, GC.getREVOLT_TEST_PROB() *
+			100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()))
 			{
-				foreach_(CvUnit* pLoopUnit, units())
-				{
-					if (pLoopUnit->isNPC())
-					{
-						pLoopUnit->kill(false, eCulturalOwner);
-					}
-					else if (pLoopUnit->canDefend())
-					{
-						pLoopUnit->changeDamage(pLoopUnit->getHP() / 2, eCulturalOwner);
-					}
-				}
+				int iOriginal = 0; // Dummy variable
+				const int iCityStrength = pCity->cultureStrength(eCulturalOwner, iOriginal);
+				int iRevoltRoll = GC.getGame().getSorenRandNum(100, "Revolt #2");
 
-				if (pCity->isNPC()
-				|| (!GC.getGame().isOption(GAMEOPTION_NO_CITY_FLIPPING)
-					&& (GC.getGame().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
-					&& pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS")))
+				if (pCity->isNPC() || iRevoltRoll < iCityStrength)
 				{
-					if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+					foreach_(CvUnit* pLoopUnit, units())
 					{
-						pCity->kill(true);
+						if (pLoopUnit->isNPC())
+						{
+							pLoopUnit->kill(false, eCulturalOwner);
+						}
+						else if (pLoopUnit->canDefend())
+						{
+							pLoopUnit->changeDamage(pLoopUnit->getHP() / 2, eCulturalOwner);
+						}
+					}
+
+					if (pCity->isNPC()
+					|| (!GC.getGame().isOption(GAMEOPTION_NO_CITY_FLIPPING)
+						&& (GC.getGame().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
+						&& pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS")))
+					{
+						if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+						{
+							pCity->kill(true);
+						}
+						else
+						{
+							setOwner(eCulturalOwner, true, true); // Will invalidate pCity pointer.
+						}
 					}
 					else
 					{
-						setOwner(eCulturalOwner, true, true); // Will invalidate pCity pointer.
+						pCity->changeNumRevolts(eCulturalOwner, 1);
+						pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT") / 100);
+
+						// XXX announce for all seen cities?
+
+						if (isInViewport())
+						{
+							CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
+							AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
+								ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
+
+							AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
+								ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
+						}
 					}
 				}
-				else
+				// Revolt is possible, but got lucky this time
+				else if (((iRevoltRoll - iCityStrength) < iCityStrength) && isInViewport())
 				{
-					pCity->changeNumRevolts(eCulturalOwner, 1);
-					pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT") / 100);
+					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_FAILED_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
+					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT_END", MESSAGE_TYPE_MINOR_EVENT,
+						ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
 
-					// XXX announce for all seen cities?
-
-					if (isInViewport())
-					{
-						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
-						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
-							ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
-
-						AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
-							ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
-					}
+					AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT_END", MESSAGE_TYPE_MINOR_EVENT,
+						ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
 				}
+			}
+			// ~2x more likely to be alerted of high discontent than revolt or quelled one (don't want every turn)
+			else if (GC.getGame().getSorenRandNum(100, "Revolt #1 Alert") < std::max(1, GC.getREVOLT_TEST_PROB() *
+				200 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent())
+				&& isInViewport())
+			{
+				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCONTENT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
+				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_ADVISOR_SUGGEST", MESSAGE_TYPE_MINOR_EVENT,
+					ARTFILEMGR.getInterfaceArtInfo("INTERFACE_ANGRYCITIZEN_TEXTURE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
+
+				AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_ADVISOR_SUGGEST", MESSAGE_TYPE_MINOR_EVENT,
+					ARTFILEMGR.getInterfaceArtInfo("INTERFACE_ANGRYCITIZEN_TEXTURE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
 			}
 		}
 	}
