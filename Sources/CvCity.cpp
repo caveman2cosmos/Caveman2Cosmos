@@ -1415,7 +1415,9 @@ void CvCity::doTurn()
 
 	doCulture();
 
-	doPlotCulture(false, getOwner(), getCommerceRate(COMMERCE_CULTURE));
+	// updating after plot culture ensures player always sees correct ownership on plot,
+	// but plot could technically wiggle back and forth during AI turns.
+	doPlotCulture(true, getOwner(), getCommerceRate(COMMERCE_CULTURE));
 
 	//	Force deferred plot group recalculation to happen now before we assess production
 	CvPlot::setDeferredPlotGroupRecalculationMode(false);
@@ -16181,10 +16183,9 @@ int CvCity::cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int d
 	FAssertMsg(distanceFromSource <= rangeOfSource, "Calculating culture gain for distance greater than max range.");
 
 	const int iDensityFactor = GC.getCITY_CULTURE_DENSITY_FACTOR();
-	int modifiedCultureGain = 0;
 
 	// 1->0 multiplier on base rate as distance from source goes 0->max
-	modifiedCultureGain = baseCultureGain * (rangeOfSource - distanceFromSource) / std::max(1, rangeOfSource);
+	int modifiedCultureGain = baseCultureGain * (rangeOfSource - distanceFromSource) / std::max(1, rangeOfSource);
 	// Some fraction 0-100 should be distance-modified.
 	modifiedCultureGain *= iDensityFactor / 100;
 	// The rest is flat base culture rate.

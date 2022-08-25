@@ -648,6 +648,8 @@ void CvPlot::doTurn()
 	// ! Super Forts
 
 	doFeature();
+	// doCulture checks city tiles if calculateCulturalOwner
+	// says it should be other player, for revolt
 	doCulture();
 
 	verifyUnitValidPlot();
@@ -4337,7 +4339,7 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 	const PlayerTypes eOwner = getOwner();
 	const PlayerTypes ePlayerSurrounds = getPlayerWithTerritorySurroundingThisPlotCardinally();
 
-	/* plots that are not forts and are adjacent to cities can alway belong to those cities' owners */
+	/* plots that are not forts and are *adjacent* to cities can alway belong to those cities' owners */
 	if (GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER) && !isCity(true))
 	{
 		const CvCity* adjacentCity = getAdjacentCity();
@@ -5943,7 +5945,9 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 			GET_PLAYER(eNewValue).acquireCity(pOldCity, false, false, bUpdatePlotGroup); // will delete the pointer
 			pOldCity = NULL;
 			CvCity* pNewCity = getPlotCity();
-			FAssertMsg(pNewCity != NULL, "NewCity is not assigned a valid value");
+
+			// pNewCity can be null if acquireCity causes autoraze (e.g. pop 1, 1-city-challenge, etc)
+			// FAssertMsg(pNewCity != NULL, "NewCity is not assigned a valid value");
 
 			if (pNewCity != NULL)
 			{
