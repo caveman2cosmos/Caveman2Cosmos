@@ -13063,21 +13063,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BATTLEFIELD_EVAC</Tag>
-		<English>Our %s1 has been evacuated to our Capital and has thankfully made a full recovery</English>
-		<French>Notre %s1 a été évacuée à notre Capitale et il est complètement rétabli</French>
-		<German>Unsere Einheit %s1 wurde in unsere Hauptstadt evakuiert und hat sich vollständig erholt</German>
+		<English>Our %s1 has been evacuated to our Capital and has thankfully made a full recovery.</English>
+		<French>Notre %s1 a été évacuée à notre Capitale et il est complètement rétabli.</French>
+		<German>Unsere Einheit %s1 wurde in unsere Hauptstadt evakuiert und hat sich vollständig erholt.</German>
 		<Spanish>[NUM1:Nuestro:Nuestra:Nuestros:Nuestras] %s1 [NUM1:ha sido evacuado:ha sido evacuada:han sido evacuados:han sido evacuadas] hacia nuestra capital, donde [NUM1:se ha:se ha:se han:se han] recuperado completamente.</Spanish>
-		<Polish>Nasza jednostka: %s1 ewakuowała się do Stolicy i odzyskała pełnie sił</Polish>
+		<Polish>Nasza jednostka: %s1 ewakuowała się do Stolicy i odzyskała pełnie sił.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BORDERS_EXPANDED</Tag>
-		<English>[COLOR_MAGENTA]The borders of %s1_CityName have expanded![COLOR_REVERT]</English>
-		<French>[COLOR_MAGENTA]Les frontières de %s1_CityName se sont étendues![COLOR_REVERT]</French>
-		<German>[COLOR_MAGENTA]Die Stadtgrenzen von %s1_CityName haben sich erweitert![COLOR_REVERT]</German>
-		<Italian>[COLOR_MAGENTA]I confini di %s1_CityName si sono espansi![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_MAGENTA]Las fronteras de %s1_CityName se han ampliado.[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_MAGENTA]Granice kulturowe miasta: %s1_CityName rozszerzyły się![COLOR_REVERT]</Polish>
-		<Russian>[COLOR_MAGENTA]Ãîðîä %s1_CityName ðàñøèðÿåò ãðàíèöû![COLOR_REVERT]</Russian>
+		<English>[COLOR_MAGENTA]The culture of %s1_CityName has grown, and is now considered %s2_LevelName![COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BUILDING_BOMBARD_DEFENSE_HOVER</Tag>

@@ -6452,19 +6452,14 @@ int CvCity::maxHurryPopulation() const
 	return (getPopulation() / 2);
 }
 
-/************************************************************************************************/
-/* phunny_pharmer                Start		 04/20/10                                           */
-/*   the goal of this modification is to make it so that difficult tiles (ie hills, mountains)	*/
-/*   not in 8 tiles directly adjacent to city center receive less culture per turn; this will	*/
-/*   make cultural borders grow more slowly on these plots and will lead to cultural borders	*/
-/*   at mountains and other key features                										*/
-/************************************************************************************************/
 
 //	Unique index assuming x, y args are less than 50 ("relative close")
 #define	HASH_RELATIVE_CLOSE_DIST(x,y)	((x) + 100*(y))
 
 void CvCity::recalculateCultureDistances(int iMaxDistance) const
 {
+	// This function does some special checks for tiles adjacent to city,
+	// then (inefficiently, atm) calls calculateCulturalDistance to compute specific tiles
 	PROFILE_FUNC();
 
 	// if the point is within one square of the city center
@@ -6526,6 +6521,8 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 
 int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 {
+	// This function is the meat of Realistic Culture, determines extra distance/cost for tiles.
+	// Each point of distance corresponds 1:1 with level of city culture to reach it.
 	PROFILE_FUNC();
 
 	// find the current plot and the distance to it
@@ -6583,7 +6580,7 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 	int extraRiverPenalty = !GET_TEAM(getTeam()).isBridgeBuilding() + !GET_TEAM(getTeam()).isRiverTrade();
 	bool hasBonus = pPlot->getBonusType(getTeam()) != NO_BONUS;
 
-	// This could be split off into its own function...
+	// This could be split off into its own function... Or use some foreach DIRECTION_CARDINAL or whatever it is
 	// A revealed bonus on plot makes net cost modifier halved, rounding down, then also 1 less.
 	// Final modifier can't be negative, though.
 
@@ -6632,26 +6629,22 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 	return distance;
 }
 
-/************************************************************************************************/
-/* phunny_pharmer                Start		 05/03/10                                           */
-/*   clear all the values in the culture distance cache; these values will have to be recom-    */
-/*     puted on the next relevant call to cultureDistance()                                     */
-/************************************************************************************************/
+
 void CvCity::clearCultureDistanceCache()
 {
 	m_aCultureDistances.clear();
 }
 
-/************************************************************************************************/
-/* phunny_pharmer                Start		 04/20/10                                           */
-/*   the cache of culture distances precomputed by recalculateCultureDistance is used in order  */
-/*     to determine the culture distance from the city center the plot location                 */
-/************************************************************************************************/
-int CvCity::cultureDistance(int iDX, int iDY, bool bForce) const
+
+int CvCity::cultureDistance(int iDX, int iDY) const
 {
+	// Entry point for realistic culture. Tries to use cached value if possible,
+	// if not, must recalc everything in range. Not sure if cache is stored separately 
+	// for each city or just locally for the function whenever called?
+	// In either case need to recompute cache each turn because many things can change distance.
 	PROFILE_FUNC();
 
-	if (!bForce && GC.getGame().isOption(GAMEOPTION_REALISTIC_CULTURE_SPREAD))
+	if (GC.getGame().isOption(GAMEOPTION_REALISTIC_CULTURE_SPREAD))
 	{
 		int plotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY);
 
@@ -6674,7 +6667,8 @@ int CvCity::cultureDistance(int iDX, int iDY, bool bForce) const
 
 int CvCity::cultureStrength(PlayerTypes ePlayer, int& iOriginal) const
 {
-	// Low is good for city; must beat d100 to prevent revolt, when base revolt chance triggers
+	// This func is measuring strength of cultural "attacker" ePlayer in a foreign city.
+	// Not terribly well bounded imo; should also probably be more dependent on total culture than era or pop.
 	int iStrength = 1;
 
 	iStrength += (getHighestPopulation() * 2);
@@ -6685,21 +6679,18 @@ int CvCity::cultureStrength(PlayerTypes ePlayer, int& iOriginal) const
 		iStrength += (GC.getGame().getCurrentEra() + 1);
 	}
 
-	//	Handle culture getting very large
-	int	iPlayerCulture = plot()->getCulture(ePlayer);
-	int iOwnerCulture = plot()->getCulture(getOwner());
+	int	iAttackerPercent = plot()->calculateCulturePercent(ePlayer);
+	int iDefenderPercent = plot()->calculateCulturePercent(getOwner());
 
-	if (iPlayerCulture > MAX_INT / 1000 || iOwnerCulture > MAX_INT / 1000)
-	{
-		iPlayerCulture /= 1000;
-		iOwnerCulture /= 1000;
+	// Fixed border math to match CvPlot::calculateCulturalOwner()
+	bool bDefenderHasFixedBorders = GET_PLAYER(getOwner()).hasFixedBorders();
+	// Ranges from 100 to 200 as attacker:defender culture ratio goes from 1:1 to 1:0
+	int iCultureRatioModifier = 100 + std::max(0, iAttackerPercent - (1 + bDefenderHasFixedBorders) * iDefenderPercent);
+	// XML to make this even stronker (default 100 makes modifer range from 100 to 400, instead of 100 to 200)
+	iCultureRatioModifier = (GC.getREVOLT_TOTAL_CULTURE_MODIFIER() + 100) * iCultureRatioModifier / 100;
+	iStrength *= iCultureRatioModifier / 100;
 
-		FAssert(GC.getREVOLT_TOTAL_CULTURE_MODIFIER() < 1000);
-	}
-
-	iStrength *= std::max(0, (((GC.getREVOLT_TOTAL_CULTURE_MODIFIER() * (iPlayerCulture - iOwnerCulture + 1)) / (iPlayerCulture + 1)) + 100));
-	iStrength /= 100;
-
+	// By default, attacker having a state religion doubles attacking power
 	if (GET_PLAYER(ePlayer).getStateReligion() != NO_RELIGION)
 	{
 		if (isHasReligion(GET_PLAYER(ePlayer).getStateReligion()))
@@ -6709,6 +6700,7 @@ int CvCity::cultureStrength(PlayerTypes ePlayer, int& iOriginal) const
 		}
 	}
 
+	// By default, defender having state religion halves attacker's power
 	if (GET_PLAYER(getOwner()).getStateReligion() != NO_RELIGION)
 	{
 		if (isHasReligion(GET_PLAYER(getOwner()).getStateReligion()))
@@ -6719,14 +6711,15 @@ int CvCity::cultureStrength(PlayerTypes ePlayer, int& iOriginal) const
 	}
 	iOriginal = iStrength;
 	iStrength -= (iStrength * cultureGarrison(ePlayer)) / 100;;
-	iStrength = std::min(100, std::max(0, iStrength));
+	iStrength = std::max(0, iStrength);
 	return iStrength;
 }
 
 
 int CvCity::cultureGarrison(PlayerTypes ePlayer) const
 {
-	int iGarrison = 1;
+	// Changed from init at 1. No garrison if no units, right?
+	int iGarrison = 0;
 
 	foreach_ (const CvUnit * unit, plot()->units())
 	{
@@ -10714,7 +10707,7 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 		{
 			AddDLLMessage(
 				getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-				gDLL->getText("TXT_KEY_MISC_BORDERS_EXPANDED", getNameKey()),
+				gDLL->getText("TXT_KEY_MISC_BORDERS_EXPANDED", getNameKey(), GC.getCultureLevelInfo(eNewValue).getTextKeyWide()),
 				"AS2D_CULTUREEXPANDS", MESSAGE_TYPE_MINOR_EVENT,
 				GC.getCommerceInfo(COMMERCE_CULTURE).getButton(),
 				GC.getCOLOR_WHITE(), getX(), getY(), true, true

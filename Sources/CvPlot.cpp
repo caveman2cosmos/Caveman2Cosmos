@@ -4360,6 +4360,7 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 	if (eOwner != NO_PLAYER && GET_PLAYER(eOwner).isAlive() && GET_PLAYER(eOwner).hasFixedBorders())
 	{
 		// If *current* owner has fixed borders, keeps control unless they have under 1/2 culture of best player.
+		// If this ratio/effect of fixed borders is altered, change corresponding math in CvCity::cultureStrength
 		if (eBestPlayer != NO_PLAYER
 		&&  eBestPlayer != eOwner
 		&& getCulture(eOwner) > iBestCulture/2)

@@ -799,14 +799,17 @@
 		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- 0 no effect, 100 doubles effect of culture ratio on liklihood of culture revolt. -->
 		<DefineName>REVOLT_TOTAL_CULTURE_MODIFIER</DefineName>
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- 0 no effect, 100 = double liklihood of revolt if cultural attacker has state religion -->
 		<DefineName>REVOLT_OFFENSE_STATE_RELIGION_MODIFIER</DefineName>
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- 0 no effect, -50 = halves liklihood of revolt if cultural defender has state religion -->
 		<DefineName>REVOLT_DEFENSE_STATE_RELIGION_MODIFIER</DefineName>
 		<iDefineIntVal>-50</iDefineIntVal>
 	</Define>
@@ -817,6 +820,7 @@
 		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- How many revolts required before city flips on i+1 revolt -->
 		<DefineName>NUM_WARNING_REVOLTS</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
