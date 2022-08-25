@@ -3474,7 +3474,7 @@ void CvPlot::changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange
 					}
 					if (bUpdate)
 					{
-						pLoopPlot->updateCulture(true,true);
+						pLoopPlot->updateCulture(true, true);
 					}
 				}
 			}
@@ -4347,8 +4347,8 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 		}
 	}
 
-	// If all plots around this culturally neutral plot are owned by a player, grant that player this plot.
-	if (eBestPlayer == NO_PLAYER && ePlayerSurrounds != NO_PLAYER)
+	// If all plots around this neutral plot (no culture or no owner) are owned by a player, grant that player this plot.
+	if ((eBestPlayer == NO_PLAYER || eOwner == NO_PLAYER) && ePlayerSurrounds != NO_PLAYER)
 	{
 		return ePlayerSurrounds;
 	}
@@ -7980,9 +7980,7 @@ void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate)
 	if (0 != iChange)
 	{
 		// Lots of things put 1 culture on a tile to mark as claimed; adjust above threshold if so.
-		logging::logMsg("Test.log", "changing by %d", iChange);
 		if (iChange > 0 && iChange < minimumNonDecayCulture()) iChange = minimumNonDecayCulture(); 
-		logging::logMsg("Test.log", "sike it's actually %d which should be %d", iChange, minimumNonDecayCulture());
 		const int iNonNegativeCulture = std::max(getCulture(eIndex) + iChange, 0);
 		setCulture(eIndex, iNonNegativeCulture, bUpdate, true);
 	}
@@ -10228,11 +10226,9 @@ void CvPlot::decayCulture()
 		{
 			// Don't need to force update after each player, update culture is called next in doCulture
 			// plotgroups I think need updating though? Same pattern as improvementCulture and SuperFort culture
-			logging::logMsg("Test.log", "Changing from %d", getCulture((PlayerTypes)playerNum));
 			setCulture((PlayerTypes)playerNum,
-				std::max(0, getCulture((PlayerTypes)playerNum) * (100 - decayPercent) / 100 - decayFlat),
-				true, true);
-			logging::logMsg("Test.log", "To: %d", getCulture((PlayerTypes)playerNum));
+				std::max(0, getCulture((PlayerTypes)playerNum) * (100 - decayPercent) / std::max(1, 100 - decayFlat)),
+				true, false);
 		}
 	}
 }
@@ -10241,8 +10237,7 @@ void CvPlot::decayCulture()
 int CvPlot::minimumNonDecayCulture()
 {
 	// Lowest culture above which, after 1 decay, will still be > 0. Inverse of decay func, basically.
-	logging::logMsg("Test.log", "Min decay calc says %d", (2 + GC.getTILE_CULTURE_DECAY_CONSTANT()) * 100 / (100 - GC.getTILE_CULTURE_DECAY_PERCENT()));
-	return ((2 + GC.getTILE_CULTURE_DECAY_CONSTANT()) * 100 / (100 - GC.getTILE_CULTURE_DECAY_PERCENT()));
+	return ((2 + GC.getTILE_CULTURE_DECAY_CONSTANT()) * 100 / std::max(1, (100 - GC.getTILE_CULTURE_DECAY_PERCENT())));
 }
 
 

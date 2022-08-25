@@ -332,7 +332,7 @@
 	<Define>
 		<!-- Each turn, culture on each plot will decay by this percent.
 			E.g. value of 10 means 50 culture loses 5, becomes 45.
-			Do not enter 0, unless you like crashing! 1 is fine tho. -->
+			Don't use 0 or 100, but between is alright. -->
 		<DefineName>TILE_CULTURE_DECAY_PERCENT</DefineName>
 		<iDefineIntVal>10</iDefineIntVal>
 	</Define>

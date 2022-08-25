@@ -6480,7 +6480,9 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 	}
 
 	// Blaze: Spiraling outward from center (style of getCityIndexPlot) is more efficient if perf issues exist;
-	//   this implementation is rather brute-force and inefficient.
+	// 	this implementation is rather brute-force and inefficient. Will need to make edits to existing func tho,
+	// 	because as is getCityIndexPlot(0) == getCityIndexPlot(37), and we'll need a few more plots than that...
+	// 	Maybe pass an optional bool arg telling it not to take the modulus or however it loops?
 	// Currently: Calculate distance values of all tiles in iMaxDistance radial size grid,
 	//   recalculating entire grid until no values have changed. This happens ~iMaxDistance times per city per turn.
 	bool bHasChanged = (iMaxDistance > 1 ||
@@ -7800,8 +7802,10 @@ int CvCity::calculateDistanceMaintenanceTimes100(int iExtraDistanceModifier, int
 			}
 
 			// Toffer: Is this scaling rational?
-			// It may be more probable that players would settle cities further away from capital on bigger maps than they normally would on a smaller one even if closer alternatives are possible.
-			// So maybe a small discount on bigger maps makes sense, if just to give the players a lttle more freedom in where to settle as there's more possible locations to consider.
+			// It may be more probable that players would settle cities further away from capital on bigger
+			// maps than they normally would on a smaller one even if closer alternatives are possible.
+			// So maybe a small discount on bigger maps makes sense, if just to give the players a lttle more
+			// freedom in where to settle as there's more possible locations to consider.
 			iValue *= GC.getWorldInfo(GC.getMap().getWorldSize()).getDistanceMaintenancePercent();
 			iValue /= 100;
 			// !Toffer
@@ -7841,7 +7845,7 @@ int CvCity::calculateNumCitiesMaintenanceTimes100(int iExtraModifier) const
 	iNumCitiesPercent /= 16;
 
 	/* Toffer - Skews early game balance too much between map sizes.
-Large maps have a discount on distance maintenance, that is adequate, this doesn't skew early game very much as you settle close to capital anyway.
+	Large maps have a discount on distance maintenance, that is adequate, this doesn't skew early game very much as you settle close to capital anyway.
 	iNumCitiesPercent *= GC.getWorldInfo(GC.getMap().getWorldSize()).getNumCitiesMaintenancePercent();
 	iNumCitiesPercent /= 100;
 	*/
@@ -16180,7 +16184,7 @@ int CvCity::cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int d
 	int modifiedCultureGain = 0;
 
 	// 1->0 multiplier on base rate as distance from source goes 0->max
-	modifiedCultureGain = baseCultureGain * (rangeOfSource - distanceFromSource) / rangeOfSource;
+	modifiedCultureGain = baseCultureGain * (rangeOfSource - distanceFromSource) / std::max(1, rangeOfSource);
 	// Some fraction 0-100 should be distance-modified.
 	modifiedCultureGain *= iDensityFactor / 100;
 	// The rest is flat base culture rate.
