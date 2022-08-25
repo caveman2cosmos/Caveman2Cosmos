@@ -16108,6 +16108,14 @@
 		<Spanish>Ha tenido lugar una rebelión %s1:2_CivAdj en %s2_CityName.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_DISCONTENT_IN_CITY</Tag>
+		<English>%s1_CivAdj influence is causing cultural discontent in %s2_CityName...</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_FAILED_REVOLT_IN_CITY</Tag>
+		<English>Local authorities struggled to put down a large %s1_CivAdj demonstration in %s2_CityName.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_REVOLUTION_HAS_BEGUN</Tag>
 		<English>The revolution has begun!!!</English>
 		<French>La révolution a éclaté !</French>

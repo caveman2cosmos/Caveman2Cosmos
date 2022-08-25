@@ -811,6 +811,8 @@
 		<iDefineIntVal>-50</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- This is the chance to *test* whether or not a city revolts, not
+			the liklihood of it revolting at all. Also scaled by gamespeed in dll -->
 		<DefineName>REVOLT_TEST_PROB</DefineName>
 		<iDefineIntVal>10</iDefineIntVal>
 	</Define>

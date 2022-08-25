@@ -6674,6 +6674,7 @@ int CvCity::cultureDistance(int iDX, int iDY, bool bForce) const
 
 int CvCity::cultureStrength(PlayerTypes ePlayer, int& iOriginal) const
 {
+	// Low is good for city; must beat d100 to prevent revolt, when base revolt chance triggers
 	int iStrength = 1;
 
 	iStrength += (getHighestPopulation() * 2);
@@ -6717,9 +6718,8 @@ int CvCity::cultureStrength(PlayerTypes ePlayer, int& iOriginal) const
 		}
 	}
 	iOriginal = iStrength;
-	int iGarrisonReduction = (iStrength * cultureGarrison(ePlayer)) / 100;
-	iStrength -= iGarrisonReduction;
-	iStrength = std::max(0, iStrength);
+	iStrength -= (iStrength * cultureGarrison(ePlayer)) / 100;;
+	iStrength = std::min(100, std::max(0, iStrength));
 	return iStrength;
 }
 
