@@ -27684,6 +27684,7 @@ float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWith
 	{
 		int iDefenders = pLoserPlot->getNumVisibleEnemyDefenders(this);
 
+		// Hardcoded 4 is weird. Do log base 2 (cityPop) + 1. Counting position of highest bit is integer log 2 math, no floats.
 		if (iDefenders < 4 && GC.isIDW_EMERGENCY_DRAFT_ENABLED())
 		{
 			const int iDefenderCulture = pLoserPlot->getCulture(pLoserUnit->getOwner());
