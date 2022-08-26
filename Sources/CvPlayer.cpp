@@ -2398,12 +2398,11 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			}
 		}
 
-		// Should claim some tiles from opponent. Logic broken with culture fixes, Blaze TODO reimplement.
-		// Removed forceUnowned, don't think necessary.
-		/*
+		// Fixed borders conquest "flashes" all tiles in workable range to the conquerer.
+		// They only actually retain tiles they could keep normally though, so no unpredictable tile flipping next turn.
 		if (hasFixedBorders())
 		{
-			const int iOccupationRange = pOldCity->getMaxCultureLevelAmongPlayers();
+			const int iOccupationRange = pOldCity->getNumCityPlots();
 			pOldCity->clearCultureDistanceCache();
 
 			for (int iDX = -iOccupationRange; iDX <= iOccupationRange; iDX++)
@@ -2417,34 +2416,17 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 					}
 					CvPlot* pLoopPlot = plotXY(iX, iY, iDX, iDY);
 
-					if (pLoopPlot != NULL && !pLoopPlot->isCity() && pLoopPlot->getOwner() == eOldOwner
-					&&  pLoopPlot->isPotentialCityWorkForArea(pOldCity->area()))
+					// Only grab non-city, non-fort tiles from old owner
+					if (pLoopPlot != NULL && !pLoopPlot->isCity(true) && pLoopPlot->getOwner() == eOldOwner)
 					{
-						bool bDoClaim = false;
-
-						for (int iJ = 0; iJ < GC.getNumCultureLevelInfos(); ++iJ)
-						{
-							const int iNumCitiesForRange = pLoopPlot->getCultureRangeCities(eOldOwner, iJ);
-
-							if (iNumCitiesForRange > 0)
-							{
-								// Occupy the tile if it is within the city's culture range, but not within any other city's range at the same or closer distance
-								if (iNumCitiesForRange == 1 && iCultureDist == iJ && pOldCity->getCultureLevel() >= iJ)
-								{
-									bDoClaim = true;
-								}
-								break;
-							}
-						}
-						if (bDoClaim)
-						{
-							pLoopPlot->setClaimingOwner(eNewOwner);
-							pLoopPlot->setForceUnownedTimer(1); // setForceUnowned removed. 
-						}
+						// Sets owner to conquerer regardless of their culture on it, but don't update yet
+						pLoopPlot->setOwner(eNewOwner, false, false);
+						// Sees if owner can actually hold onto it, resetting if not
+						pLoopPlot->updateCulture(true, true);
 					}
 				}
 			}
-		}*/
+		}
 
 		if (eOriginalOwner == eOldOwner
 		|| GC.getGame().isOption(GAMEOPTION_BARBARIAN_CIV) && pOldCity->isCapital() && eOriginalOwner == BARBARIAN_PLAYER)
