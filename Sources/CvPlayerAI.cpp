@@ -25582,8 +25582,8 @@ int CvPlayerAI::AI_getPlotAirbaseValue(const CvPlot* pPlot) const
 	const CvPlot* iMinOtherCityPlot = NULL;
 
 	// Super Forts begin *choke* *canal* - commenting out unnecessary code
-//	int iMinFriendlyCityDistance = MAX_INT;
-//	CvPlot* iMinFriendlyCityPlot = NULL;
+	//	int iMinFriendlyCityDistance = MAX_INT;
+	//	CvPlot* iMinFriendlyCityPlot = NULL;
 
 	int iOtherCityCount = 0;
 

@@ -6679,13 +6679,15 @@ int CvCity::cultureStrength(PlayerTypes ePlayer, int& iOriginal) const
 		iStrength += (GC.getGame().getCurrentEra() + 1);
 	}
 
+	// Presence of 3rd party culture lowers max bonus
 	int	iAttackerPercent = plot()->calculateCulturePercent(ePlayer);
 	int iDefenderPercent = plot()->calculateCulturePercent(getOwner());
 
-	// Fixed border math to match CvPlot::calculateCulturalOwner()
-	bool bDefenderHasFixedBorders = GET_PLAYER(getOwner()).hasFixedBorders();
-	// Ranges from 100 to 200 as attacker:defender culture ratio goes from 1:1 to 1:0
-	int iCultureRatioModifier = 100 + std::max(0, iAttackerPercent - (1 + bDefenderHasFixedBorders) * iDefenderPercent);
+	// Fixed borders start to flip later than regular. 100, or 100+
+	int iFixedBordersModifier = 100 + 
+		GET_PLAYER(getOwner()).hasFixedBorders() * (GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") - 100);
+	// Ranges from 100 to 200 as attacker:defender culture % ratio goes from 1:1 to 1:0
+	int iCultureRatioModifier = 100 + std::max(0, iAttackerPercent - (iFixedBordersModifier) * iDefenderPercent / 100);
 	// XML to make this even stronker (default 100 makes modifer range from 100 to 400, instead of 100 to 200)
 	iCultureRatioModifier = (GC.getREVOLT_TOTAL_CULTURE_MODIFIER() + 100) * iCultureRatioModifier / 100;
 	iStrength *= iCultureRatioModifier / 100;

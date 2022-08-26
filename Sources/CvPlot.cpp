@@ -959,7 +959,8 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 
 void CvPlot::updateCulture(bool bBumpUnits, bool bUpdatePlotGroups)
 {
-	//	Koshling - C2C code left largely unchanged on Super Forts merge as it already worked essentially the same way here
+	//	Cities and forts w/ units will only update via regular CvPlot::doCulture (revolt)
+	// Revolt only possible for forts without units though, regardless of fixed borders
 	if (!isCity() && (!isActsAsCity() || getUnitPower(getOwner()) == 0))
 	{
 		const PlayerTypes eNewOwner = calculateCulturalOwner();
@@ -3526,10 +3527,11 @@ void CvPlot::doImprovementCulture()
 
 	if (improvement.isActsAsCity() && getOwnershipDuration() > GC.getDefineINT("SUPER_FORTS_DURATION_BEFORE_REVOLT"))
 	{
-		// Check for a fort culture flip
+		// Check for a fort culture flip. Fixed borders altered threshold checked here
 		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
 		if (eCulturalOwner != NO_PLAYER && eCulturalOwner != eOwner && GET_PLAYER(eCulturalOwner).getTeam() != getTeam())
 		{
+			// Defenders prevent flipping regardless of fixed borders.
 			const bool bDefenderFound = algo::any_of(units(), bind(CvUnit::getOwner, _1) == eOwner && bind(CvUnit::canDefend, _1, this));
 			if (!bDefenderFound)
 			{
@@ -4306,7 +4308,6 @@ void CvPlot::invalidateIsTeamBorderCache() const
 /************************************************************************************************/
 
 
-/*** Dexy - Fixed Borders START ****/
 /* returns the city adjacent to this plot or NULL if none exists. more than one can't exist, because of the 2-tile spacing btwn cities limit. */
 //Alberts2: added eplayer parameter to only return the city if the owner == eplayer
 CvCity* CvPlot::getAdjacentCity(PlayerTypes eplayer) const
@@ -4327,11 +4328,12 @@ CvCity* CvPlot::getAdjacentCity(PlayerTypes eplayer) const
 
 	return NULL;
 }
-/*** Dexy - Fixed Borders  END  ****/
 
 
 PlayerTypes CvPlot::calculateCulturalOwner() const
 {
+	// Function calculates who *should* own this plot via cultural means
+	// Actually setting owner happens in CvPlot::setOwner, includes other checks (revolts for cities, etc)
 	PROFILE("CvPlot::calculateCulturalOwner()");
 
 	int iBestCulture = 0;
@@ -4339,42 +4341,32 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 	const PlayerTypes eOwner = getOwner();
 	const PlayerTypes ePlayerSurrounds = getPlayerWithTerritorySurroundingThisPlotCardinally();
 
-	/* plots that are not forts and are *adjacent* to cities can alway belong to those cities' owners */
+	// non-city, non fort plots that are *adjacent* to cities may always belong to those cities' owners
 	if (GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER) && !isCity(true))
 	{
 		const CvCity* adjacentCity = getAdjacentCity();
 		if (adjacentCity != NULL)
-		{
 			return adjacentCity->getOwner();
-		}
 	}
 
 	// If all plots around this neutral plot (no culture or no owner) are owned by a player, grant that player this plot.
 	if ((eBestPlayer == NO_PLAYER || eOwner == NO_PLAYER) && ePlayerSurrounds != NO_PLAYER)
-	{
 		return ePlayerSurrounds;
-	}
 
 	// Have to check for the current owner being alive for this to work correctly in the cultural
 	//	re-assignment that takes place as he dies during processing of the capture of his last city.
 	if (eOwner != NO_PLAYER && GET_PLAYER(eOwner).isAlive() && GET_PLAYER(eOwner).hasFixedBorders())
 	{
-		// If *current* owner has fixed borders, keeps control unless they have under 1/2 culture of best player.
-		// If this ratio/effect of fixed borders is altered, change corresponding math in CvCity::cultureStrength
+		// If *current* owner has fixed borders, keeps control unless
+		// they have under xml specified ratio culture of best player.
 		if (eBestPlayer != NO_PLAYER
 		&&  eBestPlayer != eOwner
-		&& getCulture(eOwner) > iBestCulture/2)
-		{
+		&& getCulture(eOwner) * GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") / 100 >= iBestCulture)
 			return eOwner;
-		}
 
-		// Unit claiming the plot
-		if (algo::any_of(units(), CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::canClaimTerritory(NULL))
-		// Or this is a fort, outside of our normal borders.
-		|| isActsAsCity())
-		{
+		// Unit passively maintaining claims.
+		if (algo::any_of(units(), CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::canClaimTerritory(NULL)))
 			return eOwner;
-		}
 	}
 
 	// TODO reimplement
@@ -6095,7 +6087,6 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 				verifyUnitValidPlot();
 			}
 
-			// Why is this so low, should not be merged with second isOwned check above?
 			if (isOwned() && !GET_PLAYER(getOwner()).isNPC())
 			{
 				if (isGoody())
@@ -10144,9 +10135,10 @@ void CvPlot::doCulture()
 {
 	PROFILE("CvPlot::doCulture()");
 
+	// Fort flip checking occurs here
 	doImprovementCulture();
 
-	// Do potential revolts
+	// Check if city flips (revolts)
 	CvCity* pCity = getPlotCity();
 	if (pCity != NULL)
 	{
@@ -10237,7 +10229,7 @@ void CvPlot::doCulture()
 
 	if (getOwner() != NO_PLAYER) decayCulture();
 
-	// This only checks/updates if owner is correct, doesn't change culture value.
+	// Check other tiles for flipping
 	// Setting forcibly claimed territory comes after, in doTurn
 	updateCulture(true, true);
 }
@@ -10258,10 +10250,9 @@ void CvPlot::decayCulture()
 		if (playerX.isAlive() && getCulture((PlayerTypes)playerNum) > 0)
 		{
 			// Don't need to force update after each player, update culture is called next in doCulture
-			// plotgroups I think need updating though? Same pattern as improvementCulture and SuperFort culture
 			setCulture((PlayerTypes)playerNum,
 				std::max(0, getCulture((PlayerTypes)playerNum) * (100 - decayPercent) / std::max(1, 100 - decayFlat)),
-				true, false);
+				false, false);
 		}
 	}
 }
