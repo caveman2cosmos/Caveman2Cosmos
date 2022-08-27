@@ -5280,6 +5280,20 @@ class CvMainInterface:
 
 		if iCode == 16: # Key Down
 
+			# N47 - Unselect on ESC (Toffer - Implemented code suggested by N47 with tweaks)
+
+			if iData == 1 and not CyIF.isFocused(): # InputTypes.KB_ESCAPE
+
+				if self.InCity:
+					CyIF.clearSelectedCities()
+					return 1
+				elif self.AtUnit and (self.AtUnit.CyUnit.isWaiting() or not self.AtUnit.CyUnit.canMove()):
+					CyIF.clearSelectionList()
+					return 1
+
+				return 0
+
+
 			if iData in (2, 3, 4, 5, 6, 7, 8, 9, 10, 11): # 0-9
 				if self.InCity and not bCtrl:
 					self.bBuildWorkQueue = True
@@ -5298,6 +5312,7 @@ class CvMainInterface:
 						else:
 							self.openCityTab(screen, iTab)
 						return 1
+
 			elif iData == 14:
 				if bCtrl:
 					CyIF.toggleBareMapMode()
