@@ -874,11 +874,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NATIONAL_WONDERS_PER_CITY</Tag>
-		<English>[COLOR_WARNING_TEXT]Can only Construct %d1_Num National Wonders per City[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Construction de merveilles nationales limitée à %d1_Num par ville[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Kann nur %d1_Num [NUM1:Nationales:Nationale] Wunder pro Stadt errichten[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Puoi costruire soltanto %d1_Num Meraviglie Nazionali per città[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla nacional:maravillas nacionales] por ciudad[COLOR_REVERT]</Spanish>
+		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num National Wonders.[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NATIONAL_WONDER_ALLOWED</Tag>
@@ -1379,11 +1375,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_TEAM_WONDERS_PER_CITY</Tag>
-		<English>[COLOR_WARNING_TEXT]Can only Construct %d1_Num Team Wonders per City[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Construction de merveilles d'équipe limitée à %d1_Num par ville[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Kann nur %d1_Num Teamwunder pro Stadt errichten[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Puoi costruire soltanto %d1_Num Meraviglie di Squadra per città[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla de equipo:maravillas de equipo] por ciudad[COLOR_REVERT]</Spanish>
+		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num Team Wonders.[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_TEAM_WONDER_ALLOWED</Tag>
@@ -1577,11 +1569,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDERS_PER_CITY</Tag>
-		<English>[COLOR_WARNING_TEXT]Can only Construct %d1_Num World Wonders per City[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Construction de merveilles mondiales limitée à %d1_Num par ville[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Kann nur %d1_Num Weltwunder pro Stadt errichten[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Puoi costruire soltanto %d1_Num Grandi Meraviglie per città[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla del mundo:maravillas del mundo] por ciudad[COLOR_REVERT]</Spanish>
+		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num World Wonders.[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDER_ALLOWED</Tag>
