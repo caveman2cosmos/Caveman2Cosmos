@@ -159,6 +159,9 @@ public:
 
 	TechTypes AI_bestTech(int iMaxPathLength = 1, bool bIgnoreCost = false, bool bAsync = false, TechTypes eIgnoreTech = NO_TECH, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR);
 
+
+	bool AI_canTrainSettler();
+
 	int AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost, bool bAsync);
 	int AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bEnablesWonder);
 	int AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnablesUnitWonder);
@@ -490,6 +493,9 @@ private:
 	int* m_bonusClassUnrevealed;
 	int* m_bonusClassHave;
 	int m_iBonusClassTallyCachedTurn;
+
+	// will be set to true first time every game load when settler can be built. (since it never happens that you can no longer build settler unit
+	bool m_canTrainSettler;
 
 	int AI_corporationTradeVal(CorporationTypes eCorporation) const;
 
