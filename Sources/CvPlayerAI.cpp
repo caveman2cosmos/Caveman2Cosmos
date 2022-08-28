@@ -11334,7 +11334,8 @@ int CvPlayerAI::AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea*
 			}
 			//	The '30' scaling is empirical based on what seems reasonable for crime fighting units
 			iValue += iPropertyValue;
-			//	Drop through
+			iValue += iCombatValue;
+			break;
 		case UNITAI_PARADROP:
 			//	For now the AI cannot cope with bad property values on anything but hunter or pillage units
 			if (iPropertyValue < 0)
