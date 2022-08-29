@@ -16,14 +16,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_HOUSING</Tag>
-		<English>Housing</English>
-		<German>Wohnraum</German>
-		<Italian>Abitazioni</Italian>
-		<Russian>Жилье</Russian>
+		<English>1. Housing</English>
+		<German>1. Wohnraum</German>
+		<Italian>1. Abitazioni</Italian>
+		<Russian>1. Жилье</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_HOUSING_PEDIA</Tag>
-		<English>Housing represents buildings that are automatically built when conditions are met. See also [LINK=CONCEPT_AUTO_BUILDINGS]Automatically built buildings[\LINK].</English>
+		<English>Housing represents buildings that are automatically built when conditions are met. See also [LINK=CONCEPT_AUTO_BUILDINGS]Automatic Builds[\LINK].</English>
 		<Russian>[H1]Жилища в С2С[\H1][TAB]Статья находится в редакции. Подробности см. в разделе:[LINK=CONCEPT_AUTO_BUILDINGS]Автоматически построенные здания[\LINK].[PARAGRAPH:2][COLOR_HIGHLIGHT_TEXT]Примечание:[COLOR_REVERT] планомерное улучшение состояния жилого фонда ваших граждан - это хороший способ улучшить производительность вашей экономики.</Russian>
 	</TEXT>
 </Civ4GameText>

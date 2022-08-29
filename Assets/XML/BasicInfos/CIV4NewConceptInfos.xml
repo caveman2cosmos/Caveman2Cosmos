@@ -69,11 +69,6 @@
 			<Civilopedia>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_PROGRESS_BAR_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
-			<Type>CONCEPT_BUG_GREAT_PERSON_TECH_PREFERENCIES</Type>
-			<Description>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_TECH_PREFERENCIES</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_BUG_GREAT_PERSON_TECH_PREFERENCIES_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
 			<Type>CONCEPT_BUG_IMPROVED_GLANCE_TAB</Type>
 			<Description>TXT_KEY_CONCEPT_BUG_IMPROVED_GLANCE_TAB</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_BUG_IMPROVED_GLANCE_TAB_PEDIA</Civilopedia>

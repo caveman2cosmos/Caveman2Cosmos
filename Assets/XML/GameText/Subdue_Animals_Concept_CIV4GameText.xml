@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES</Tag>
-		<English>Folklore</English>
+		<English>1. Folklore</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES_PEDIA</Tag>
