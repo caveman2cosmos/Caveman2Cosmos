@@ -10243,6 +10243,7 @@ void CvPlot::decayCulture()
 	// Gotta avoid 'welfare cliffs' though.
 	// NOTE: If decay function is altered, gotta change minimumNonDecayCulture.
 	int decayPercent = GC.getTILE_CULTURE_DECAY_PERCENT();
+	decayPercent = decayPercent * 100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	int decayFlat = GC.getTILE_CULTURE_DECAY_CONSTANT();
 
 	for (int playerNum = 0; playerNum < MAX_PC_PLAYERS; playerNum++)
@@ -10262,7 +10263,10 @@ void CvPlot::decayCulture()
 int CvPlot::minimumNonDecayCulture()
 {
 	// Lowest culture above which, after 1 decay, will still be > 0. Inverse of decay func, basically.
-	return ((2 + GC.getTILE_CULTURE_DECAY_CONSTANT()) * 100 / std::max(1, (100 - GC.getTILE_CULTURE_DECAY_PERCENT())));
+	// Can cache as CvGame variable if needed, idk.
+	return ((2 +
+		GC.getTILE_CULTURE_DECAY_CONSTANT() * 100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent())
+		* 100 / std::max(1, (100 - GC.getTILE_CULTURE_DECAY_PERCENT())));
 }
 
 
