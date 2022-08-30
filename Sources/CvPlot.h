@@ -719,7 +719,7 @@ public:
 	int countTotalCulture() const;
 	int countFriendlyCulture(TeamTypes eTeam) const;
 	PlayerTypes findHighestCulturePlayer() const;
-	int calculateCulturePercent(PlayerTypes eIndex) const;
+	int calculateCulturePercent(PlayerTypes eIndex, int iExtraDigits = 0) const;
 	int calculateTeamCulturePercent(TeamTypes eIndex) const;
 	void setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bUpdatePlotGroups);
 	void changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate);

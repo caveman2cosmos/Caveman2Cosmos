@@ -6706,8 +6706,8 @@ int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
 	int iRisk = (getHighestPopulation() * 2);
 
 	// Presence of 3rd party culture lowers max bonus
-	int	iAttackerPercent = plot()->calculateCulturePercent(eCultureAttacker);
-	int iDefenderPercent = std::max(1, plot()->calculateCulturePercent(getOwner()));
+	int	iAttackerPercent = plot()->calculateCulturePercent(eCultureAttacker, 2);
+	int iDefenderPercent = std::max(1, plot()->calculateCulturePercent(getOwner(), 2));
 	// Adjust defender percent by possible fixed border modifier
 	// (otherwise inflated risk when FB city is threatened)
 	iDefenderPercent = iDefenderPercent * (100 +
@@ -6722,10 +6722,10 @@ int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
 			iRisk += (GC.getGame().getCurrentEra() + 1);
 		}
 	}
-	else if (iAttackerPercent > iDefenderPercent)
+	else
 		iRisk += (GC.getGame().getCurrentEra() + 1);
 
-	// Ranges from 100 to 10,000 as attacker:defender culture % ratio goes from 1:1 to 1:0.01
+	// Ranges from 100 to 1,000,000 as attacker:defender culture % ratio goes from 1:1 to 1:0.01
 	// Nonlinear!
 	int iCultureRatioModifier = 100 * iAttackerPercent / std::max(1, iDefenderPercent);
 	// XML to make this even stronker (default 100 doubles above modifier)

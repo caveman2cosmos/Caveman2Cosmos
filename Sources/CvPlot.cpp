@@ -7878,8 +7878,8 @@ PlayerTypes CvPlot::findHighestCulturePlayer() const
 	return eBestPlayer;
 }
 
-// returns value between 0 and 100
-int CvPlot::calculateCulturePercent(PlayerTypes eIndex) const
+// returns value between 0 and 100, with extra 0 per optional iExtraDigits
+int CvPlot::calculateCulturePercent(PlayerTypes eIndex, int iExtraDigits) const
 {
 	PROFILE_FUNC();
 
@@ -7887,7 +7887,7 @@ int CvPlot::calculateCulturePercent(PlayerTypes eIndex) const
 
 	if (iTotalCulture > 0)
 	{
-		return 100 * getCulture(eIndex) / iTotalCulture;
+		return intPow(10, iExtraDigits) * 100 * getCulture(eIndex) / iTotalCulture;
 	}
 	return 0;
 }
@@ -10147,6 +10147,7 @@ void CvPlot::doCulture()
 		if (eCulturalOwner != NO_PLAYER && GET_PLAYER(eCulturalOwner).getTeam() != getTeam() && !pCity->isOccupation())
 		{
 			// Check to check for revolt, rate adjusted by gamespeed, at least 1% minimum.
+			// If adjusted, also update `int iSpeedAdjustment` in CvGameTextMgr, CvDLLWidgetData
 			if (GC.getGame().getSorenRandNum(100, "Revolt #1") < std::max(1, GC.getREVOLT_TEST_PROB() *
 			100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()))
 			{

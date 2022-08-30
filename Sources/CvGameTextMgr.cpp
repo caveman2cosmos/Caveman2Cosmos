@@ -9457,7 +9457,6 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 
 	CvWString szTempBuffer;
 	CvWString szTempBuffer2;
-	CvWString szTempBuffer3;
 	bool bFirst;
 	int iFoodDifference;
 	int iProductionDiffNoFood;
@@ -10053,17 +10052,21 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		{
 			if (GET_PLAYER(eCulturalOwner).getTeam() != pCity->getTeam())
 			{
-				int iOriginal = pCity->baseRevoltRisk(eCulturalOwner);
 				int iCityStrength = pCity->netRevoltRisk(eCulturalOwner);
+				int iOriginal = pCity->baseRevoltRisk(eCulturalOwner);
+				int iSpeedAdjustment = GC.getREVOLT_TEST_PROB() * 100 /
+					GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 				int iGarrison = pCity->cultureGarrison(eCulturalOwner);
 
 				if (iCityStrength > 0)
 				{
-					szTempBuffer.Format(L"" SETCOLR L"%.2f%%" ENDCOLR,TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),((float)iCityStrength)/100);
-					szTempBuffer2.Format(L"" SETCOLR L"%d%%" ENDCOLR,TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),iOriginal);
-					szTempBuffer3.Format(L"" SETCOLR L"%d%%" ENDCOLR,TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),iGarrison);
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_MISC_CHANCE_OF_REVOLT", szTempBuffer.GetCString(), szTempBuffer2.GetCString(), szTempBuffer3.GetCString()));
+					szString.append(gDLL->getText("TXT_KEY_MISC_CHANCE_OF_REVOLT",
+						CvWString::format(L"" SETCOLR L"%.2f%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), ((float)iCityStrength*iSpeedAdjustment)/10000).GetCString(),
+						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iOriginal).GetCString(),
+						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iSpeedAdjustment).GetCString(),
+						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iGarrison).GetCString()
+					));
 				}
 			}
 		}
