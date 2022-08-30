@@ -718,7 +718,6 @@ public:
 	int getCulture(PlayerTypes eIndex) const;
 	int countTotalCulture() const;
 	int countFriendlyCulture(TeamTypes eTeam) const;
-	TeamTypes findHighestCultureTeam() const;
 	PlayerTypes findHighestCulturePlayer() const;
 	int calculateCulturePercent(PlayerTypes eIndex) const;
 	int calculateTeamCulturePercent(TeamTypes eIndex) const;

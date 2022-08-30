@@ -7848,14 +7848,6 @@ int CvPlot::countTotalCulture() const
 }
 
 
-TeamTypes CvPlot::findHighestCultureTeam() const
-{
-	const PlayerTypes eBestPlayer = findHighestCulturePlayer();
-
-	return eBestPlayer != NO_PLAYER ? GET_PLAYER(eBestPlayer).getTeam() : NO_TEAM;
-}
-
-
 PlayerTypes CvPlot::findHighestCulturePlayer() const
 {
 	PlayerTypes eBestPlayer = NO_PLAYER;
