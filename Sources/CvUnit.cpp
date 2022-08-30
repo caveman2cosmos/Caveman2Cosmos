@@ -28358,7 +28358,7 @@ bool CvUnit::canClaimTerritory(const CvPlot* pPlot) const
 			return false;
 		}
 
-		/* plots adjacent to cities always belong to those cities' owners */
+		/* cannot claim plots adjacent to someone else's city */
 		if (pPlot->getAdjacentCity(pPlot->getOwner()) != NULL)
 		{
 			return false;

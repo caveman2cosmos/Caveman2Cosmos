@@ -6454,7 +6454,7 @@ int CvCity::maxHurryPopulation() const
 
 
 //	Unique index assuming x, y args are less than 50 ("relative close")
-#define	HASH_RELATIVE_CLOSE_DIST(x,y)	((x) + 100*(y))
+#define	HASH_RELATIVE_CLOSE_DIST(x,y)	(x + 100*y)
 
 void CvCity::recalculateCultureDistances(int iMaxDistance) const
 {
@@ -6526,11 +6526,11 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 	PROFILE_FUNC();
 
 	// find the current plot and the distance to it
-	CvPlot* pPlot = plotXY(getX(), getY(), iDX, iDY);
+	CvPlot* mainPlot = plotXY(getX(), getY(), iDX, iDY);
 
 	// if the plot distance is greater than the maximum desired plot distance
 	//  or if the plot does not exist, then the plot distance is maximal
-	if (plotDistance(0, 0, iDX, iDY) > iMaxDistance || pPlot == NULL) return MAX_INT;
+	if (plotDistance(0, 0, iDX, iDY) > iMaxDistance || mainPlot == NULL) return MAX_INT;
 
 	// Calculate terrain distance necessary before neighbors, because bonus presence can
 	// remove any combination of terrain and river crossing penalties; chosing which neighbor
@@ -6538,33 +6538,33 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 	int terrainDistance = 0;
 
 	// Terrain distance increased by 2 if can't found on peaks; peak-type also ignore regular terrain
-	if (pPlot->isAsPeak())
+	if (mainPlot->isAsPeak())
 	{
 		terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_PEAK()).getCultureDistance();
 		terrainDistance += 2 * !GET_TEAM(getTeam()).isCanFoundOnPeaks();
 	}
 	else
 	{
-		terrainDistance += GC.getTerrainInfo(pPlot->getTerrainType()).getCultureDistance();
-		if (pPlot->isHills())
+		terrainDistance += GC.getTerrainInfo(mainPlot->getTerrainType()).getCultureDistance();
+		if (mainPlot->isHills())
 		{
 			terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_HILL()).getCultureDistance();
 		}
 		// Terrain distance increased by 2 if can't trade on water terrain
-		if (pPlot->isWater())
+		if (mainPlot->isWater())
 		{
-			if (!GET_TEAM(getTeam()).isTerrainTrade(pPlot->getTerrainType())) terrainDistance += 2;
+			if (!GET_TEAM(getTeam()).isTerrainTrade(mainPlot->getTerrainType())) terrainDistance += 2;
 		}	
 	}
 
-	if (pPlot->getFeatureType() != NO_FEATURE)
+	if (mainPlot->getFeatureType() != NO_FEATURE)
 	{
 		// some features cause underlaying terrain cost to be ignored; oasis, floodplain, some nat'l wonders
-		if (GC.getFeatureInfo(pPlot->getFeatureType()).isIgnoreTerrainCulture())
+		if (GC.getFeatureInfo(mainPlot->getFeatureType()).isIgnoreTerrainCulture())
 		{
 			terrainDistance = 0;
 		}
-		terrainDistance += GC.getFeatureInfo(pPlot->getFeatureType()).getCultureDistance();
+		terrainDistance += GC.getFeatureInfo(mainPlot->getFeatureType()).getCultureDistance();
 	}
 
 	/* Determine the final cultural distance of given plot:
@@ -6575,21 +6575,46 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 			calculate full cost from each tile to prevent endless recalc
 		3: Smallest total possible distance is used from all neighbors
 		4: Greater river penalty (+1 each) for lacking river trade, bridge building */
+
 	int distance = MAX_INT;
 	int netDistanceModifier = 0;
+	int plotIndex = 0;
+	int neighborDist = 0;
 	int extraRiverPenalty = !GET_TEAM(getTeam()).isBridgeBuilding() + !GET_TEAM(getTeam()).isRiverTrade();
-	bool hasBonus = pPlot->getBonusType(getTeam()) != NO_BONUS;
+	bool hasBonus = mainPlot->getBonusType(getTeam()) != NO_BONUS;
 
-	// This could be split off into its own function... Or use some foreach DIRECTION_CARDINAL or whatever it is
-	// A revealed bonus on plot makes net cost modifier halved, rounding down, then also 1 less.
-	// Final modifier can't be negative, though.
+	// Condensed version I couldn't quite get working?
+	/*
+	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
+	{
+		// Needs a better way to get the adjustments for idX and iDY, this fails on world wrap.
+		// directionXY maybe, but this starts to get ridiculous. There's a simple way I'm missing.
+		plotIndex = HASH_RELATIVE_CLOSE_DIST(iDX + adjacentPlot->getX() - mainPlot->getX(),
+											 iDY + adjacentPlot->getY() - mainPlot->getY());
+		neighborDist = m_aCultureDistances[plotIndex];
 
+		if (neighborDist != 0 && neighborDist != MAX_INT)
+		{
+			netDistanceModifier = terrainDistance;
+			if (mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)))
+				netDistanceModifier += 1 + extraRiverPenalty;
+			// A revealed bonus on plot makes net cost modifier halved, rounding down, then also 1 less.
+			netDistanceModifier = netDistanceModifier / (1 + hasBonus) - hasBonus;
+			// Final modifier can't be negative, though.
+			neighborDist += 1 + std::max(0, netDistanceModifier);
+			if (neighborDist < distance)
+				distance = neighborDist;
+		}
+	}
+	*/
+
+	// Annoying to update version:
 	// East
-	int plotIndex = HASH_RELATIVE_CLOSE_DIST(iDX + 1, iDY);
-	int neighborDist = m_aCultureDistances[plotIndex];
+	plotIndex = HASH_RELATIVE_CLOSE_DIST(iDX + 1, iDY);
+	neighborDist = m_aCultureDistances[plotIndex];
 	if (neighborDist != 0 && neighborDist != MAX_INT)
 	{
-		netDistanceModifier = terrainDistance + pPlot->isRiverCrossing(DIRECTION_EAST) * (1 + extraRiverPenalty);
+		netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(DIRECTION_EAST) * (1 + extraRiverPenalty);
 		netDistanceModifier = netDistanceModifier / (1 + hasBonus) - hasBonus;
 		neighborDist += 1 + std::max(0, netDistanceModifier);
 		if (neighborDist < distance) distance = neighborDist;
@@ -6599,7 +6624,7 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 	neighborDist = m_aCultureDistances[plotIndex];
 	if (neighborDist != 0 && neighborDist != MAX_INT)
 	{
-		netDistanceModifier = terrainDistance + pPlot->isRiverCrossing(DIRECTION_SOUTH) * (1 + extraRiverPenalty);
+		netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(DIRECTION_SOUTH) * (1 + extraRiverPenalty);
 		netDistanceModifier = netDistanceModifier / (1 + hasBonus) - hasBonus;
 		neighborDist += 1 + std::max(0, netDistanceModifier);
 		if (neighborDist < distance) distance = neighborDist;
@@ -6609,7 +6634,7 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 	neighborDist = m_aCultureDistances[plotIndex];
 	if (neighborDist != 0 && neighborDist != MAX_INT)
 	{
-		netDistanceModifier = terrainDistance + pPlot->isRiverCrossing(DIRECTION_WEST) * (1 + extraRiverPenalty);
+		netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(DIRECTION_WEST) * (1 + extraRiverPenalty);
 		netDistanceModifier = netDistanceModifier / (1 + hasBonus) - hasBonus;
 		neighborDist += 1 + std::max(0, netDistanceModifier);
 		if (neighborDist < distance) distance = neighborDist;
@@ -6619,7 +6644,7 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 	neighborDist = m_aCultureDistances[plotIndex];
 	if (neighborDist != 0 && neighborDist != MAX_INT)
 	{
-		netDistanceModifier = terrainDistance + pPlot->isRiverCrossing(DIRECTION_NORTH) * (1 + extraRiverPenalty);
+		netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(DIRECTION_NORTH) * (1 + extraRiverPenalty);
 		netDistanceModifier = netDistanceModifier / (1 + hasBonus) - hasBonus;
 		neighborDist += 1 + std::max(0, netDistanceModifier);
 		if (neighborDist < distance) distance = neighborDist;

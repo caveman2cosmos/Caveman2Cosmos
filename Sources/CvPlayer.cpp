@@ -2398,32 +2398,28 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			}
 		}
 
-		// Fixed borders conquest "flashes" all tiles in workable range to the conquerer.
+		// Conquest "flashes" all tiles in workable range to the conquerer, giving map info of surrounding tiles.
 		// They only actually retain tiles they could keep normally though, so no unpredictable tile flipping next turn.
-		if (hasFixedBorders())
+		// If civ has fixed borders, they'll retain more due to the lower threshold for maintaining ownership.
+		pOldCity->clearCultureDistanceCache();
+		const int iCultureLevel = pOldCity->getCultureLevel();
+		for (int iPlotIndex = 1; iPlotIndex < pOldCity->getNumCityPlots(); iPlotIndex++)
 		{
-			const int iOccupationRange = pOldCity->getNumCityPlots();
-			pOldCity->clearCultureDistanceCache();
-
-			for (int iDX = -iOccupationRange; iDX <= iOccupationRange; iDX++)
+			CvPlot* pLoopPlot = pOldCity->getCityIndexPlot(iPlotIndex);
+			if (pLoopPlot != NULL)
 			{
-				for (int iDY = -iOccupationRange; iDY <= iOccupationRange; iDY++)
+				const int iCultureDist = pOldCity->cultureDistance(pLoopPlot->getX(), pLoopPlot->getY());
+				if (iCultureDist > iCultureLevel)
 				{
-					const int iCultureDist = pOldCity->cultureDistance(iDX, iDY);
-					if (iCultureDist > iOccupationRange)
-					{
-						continue;
-					}
-					CvPlot* pLoopPlot = plotXY(iX, iY, iDX, iDY);
-
-					// Only grab non-city, non-fort tiles from old owner
-					if (pLoopPlot != NULL && !pLoopPlot->isCity(true) && pLoopPlot->getOwner() == eOldOwner)
-					{
-						// Sets owner to conquerer regardless of their culture on it, but don't update yet
-						pLoopPlot->setOwner(eNewOwner, false, false);
-						// Sees if owner can actually hold onto it, resetting if not
-						pLoopPlot->updateCulture(true, true);
-					}
+					continue;
+				}
+				// Only grab non-city, non-fort tiles from old owner
+				if (!pLoopPlot->isCity(true) && pLoopPlot->getOwner() == eOldOwner)
+				{
+					// Sets owner to conquerer regardless of their culture on it, but don't update yet
+					pLoopPlot->setOwner(eNewOwner, false, false);
+					// Sees if owner can actually hold onto it, resetting if not
+					pLoopPlot->updateCulture(true, true);
 				}
 			}
 		}

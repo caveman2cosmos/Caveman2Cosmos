@@ -959,7 +959,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 
 void CvPlot::updateCulture(bool bBumpUnits, bool bUpdatePlotGroups)
 {
-	//	Cities and forts w/ units will only update via regular CvPlot::doCulture (revolt)
+	// Cities and forts w/ units will only update via regular CvPlot::doCulture (revolt)
 	// Revolt only possible for forts without units though, regardless of fixed borders
 	if (!isCity() && (!isActsAsCity() || getUnitPower(getOwner()) == 0))
 	{
@@ -3527,7 +3527,7 @@ void CvPlot::doImprovementCulture()
 
 	if (improvement.isActsAsCity() && getOwnershipDuration() > GC.getDefineINT("SUPER_FORTS_DURATION_BEFORE_REVOLT"))
 	{
-		// Check for a fort culture flip. Fixed borders altered threshold checked here
+		// Check for a fort culture flip. Fixed borders altered threshold checked there
 		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
 		if (eCulturalOwner != NO_PLAYER && eCulturalOwner != eOwner && GET_PLAYER(eCulturalOwner).getTeam() != getTeam())
 		{
@@ -4336,8 +4336,8 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 	// Actually setting owner happens in CvPlot::setOwner, includes other checks (revolts for cities, etc)
 	PROFILE("CvPlot::calculateCulturalOwner()");
 
-	int iBestCulture = 0;
 	PlayerTypes eBestPlayer = findHighestCulturePlayer();
+	int iBestCulture = eBestPlayer != NO_PLAYER ? getCulture(eBestPlayer) : 0;
 	const PlayerTypes eOwner = getOwner();
 	const PlayerTypes ePlayerSurrounds = getPlayerWithTerritorySurroundingThisPlotCardinally();
 
@@ -4349,18 +4349,13 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 			return adjacentCity->getOwner();
 	}
 
-	// If all plots around this neutral plot (no culture or no owner) are owned by a player, grant that player this plot.
-	if ((eBestPlayer == NO_PLAYER || eOwner == NO_PLAYER) && ePlayerSurrounds != NO_PLAYER)
-		return ePlayerSurrounds;
-
 	// Have to check for the current owner being alive for this to work correctly in the cultural
 	//	re-assignment that takes place as he dies during processing of the capture of his last city.
 	if (eOwner != NO_PLAYER && GET_PLAYER(eOwner).isAlive() && GET_PLAYER(eOwner).hasFixedBorders())
 	{
-		// If *current* owner has fixed borders, keeps control unless
-		// they have under xml specified ratio culture of best player.
-		if (eBestPlayer != NO_PLAYER
-		&&  eBestPlayer != eOwner
+		// If *current* owner has fixed borders, keeps control if
+		// they have over xml specified ratio culture of best player.
+		if (eBestPlayer != NO_PLAYER && eBestPlayer != eOwner
 		&& getCulture(eOwner) * GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") / 100 >= iBestCulture)
 			return eOwner;
 
@@ -4368,6 +4363,10 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 		if (algo::any_of(units(), CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::canClaimTerritory(NULL)))
 			return eOwner;
 	}
+
+	// If all plots around this neutral plot (no culture or no owner) are owned by a player, grant that player this plot.
+	if ((eBestPlayer == NO_PLAYER || eOwner == NO_PLAYER) && ePlayerSurrounds != NO_PLAYER)
+		return ePlayerSurrounds;
 
 	// TODO reimplement
 	// I think this would do a tiebreaker between people on same team so that
@@ -4673,8 +4672,14 @@ void CvPlot::removeGoody()
 
 bool CvPlot::isCity(bool bCheckImprovement, TeamTypes eForTeam) const
 {
-	if (bCheckImprovement && isActsAsCity()
-	&& (NO_TEAM == eForTeam || NO_TEAM == getTeam() && GC.getImprovementInfo(getImprovementType()).isOutsideBorders() || GET_TEAM(eForTeam).isFriendlyTerritory(getTeam())))
+	// Checking for city also includes improvement (fort) w/bCheckImprovement if:
+	// No team specified, or
+	// Tile with fort is on no team, or
+	// Fort is within friendly territory of specified team
+	if (bCheckImprovement && isActsAsCity() &&
+		(NO_TEAM == eForTeam
+		|| NO_TEAM == getTeam() && GC.getImprovementInfo(getImprovementType()).isOutsideBorders()
+		|| GET_TEAM(eForTeam).isFriendlyTerritory(getTeam())))
 	{
 		return true;
 	}
@@ -7864,6 +7869,10 @@ PlayerTypes CvPlot::findHighestCulturePlayer() const
 				iBestValue = iValue;
 				eBestPlayer = (PlayerTypes)iI;
 			}
+			// Tiebreaker: goes to current owner rather than lowest index
+			else if (iValue == iBestValue && iValue > 0)
+				if (getOwner() == (PlayerTypes)iI)
+					eBestPlayer = (PlayerTypes)iI;
 		}
 	}
 	return eBestPlayer;
