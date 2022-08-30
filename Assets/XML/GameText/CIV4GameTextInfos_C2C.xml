@@ -320,7 +320,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CHANCE_OF_REVOLT</Tag>
-		<English>Revolt %%/Turn: %s1_Chance%%[NEWLINE](%s2_CityStrength%% base: %s3_SpeedAdjustment%% gamespeed, %s4_Garrison%% unit protection)</English>
+		<English>Revolt %%/Turn: %s1_Chance [NEWLINE](%s2_CityStrength base: x%s3_SpeedAdjustment gamespeed, x%s4_Garrison units)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CRIMINAL_CAUGHT</Tag>
