@@ -6690,40 +6690,55 @@ int CvCity::cultureDistance(int iDX, int iDY) const
 }
 
 
-int CvCity::cultureStrength(PlayerTypes ePlayer, int& iOriginal) const
+int CvCity::netRevoltRisk(PlayerTypes cultureAttacker) const
 {
-	// This func is measuring strength of cultural "attacker" ePlayer in a foreign city.
-	// Not terribly well bounded imo; should also probably be more dependent on total culture than era or pop.
-	int iStrength = 1;
+	// Returns 100x % chance of revolt to eCultureAttacker when modified by defending units
+	// 100 = 1%, 10,000 = 100%
+	return std::max(0,
+		baseRevoltRisk(cultureAttacker) * (100 - cultureGarrison(cultureAttacker)));
+}
 
-	iStrength += (getHighestPopulation() * 2);
 
-	foreach_(const CvPlot* pLoopPlot, plot()->adjacent()
-	| filtered(CvPlot::fn::getOwner() == ePlayer))
-	{
-		iStrength += (GC.getGame().getCurrentEra() + 1);
-	}
+int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
+{
+	// Returns % chance of revolt to eCultureAttacker unmodified by defending units
+	// Should probably be less dependent on era or pop.
+	int iRisk = (getHighestPopulation() * 2);
 
 	// Presence of 3rd party culture lowers max bonus
-	int	iAttackerPercent = plot()->calculateCulturePercent(ePlayer);
+	int	iAttackerPercent = plot()->calculateCulturePercent(eCultureAttacker);
 	int iDefenderPercent = std::max(1, plot()->calculateCulturePercent(getOwner()));
+	// Adjust defender percent by possible fixed border modifier
+	// (otherwise inflated risk when FB city is threatened)
+	iDefenderPercent = iDefenderPercent * (100 +
+		GET_PLAYER(getOwner()).hasFixedBorders() * (GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") - 100)) / 100;
 
-	// Fixed borders start to flip later than regular. 100, or 100+
-	int iFixedBordersModifier = 100 + 
-		GET_PLAYER(getOwner()).hasFixedBorders() * (GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") - 100);
-	// Ranges from 100 to 100*100 as attacker:defender culture % ratio goes from 1:1 to 1:0
-	int iCultureRatioModifier = 100 * std::max(1, iAttackerPercent / (iFixedBordersModifier * iDefenderPercent / 100));
+	// If adjacent tiles can be acquired, factor in, else there's an additional min risk
+	if (!GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER))
+	{
+		foreach_(const CvPlot* pLoopPlot, plot()->adjacent()
+		| filtered(CvPlot::fn::getOwner() == eCultureAttacker))
+		{
+			iRisk += (GC.getGame().getCurrentEra() + 1);
+		}
+	}
+	else if (iAttackerPercent > iDefenderPercent)
+		iRisk += (GC.getGame().getCurrentEra() + 1);
+
+	// Ranges from 100 to 10,000 as attacker:defender culture % ratio goes from 1:1 to 1:0.01
+	// Nonlinear!
+	int iCultureRatioModifier = 100 * iAttackerPercent / std::max(1, iDefenderPercent);
 	// XML to make this even stronker (default 100 doubles above modifier)
 	iCultureRatioModifier = (GC.getREVOLT_TOTAL_CULTURE_MODIFIER() + 100) * iCultureRatioModifier / 100;
-	iStrength *= iCultureRatioModifier / 100;
+	iRisk *= iCultureRatioModifier / 100;
 
 	// By default, attacker having a state religion doubles attacking power
-	if (GET_PLAYER(ePlayer).getStateReligion() != NO_RELIGION)
+	if (GET_PLAYER(eCultureAttacker).getStateReligion() != NO_RELIGION)
 	{
-		if (isHasReligion(GET_PLAYER(ePlayer).getStateReligion()))
+		if (isHasReligion(GET_PLAYER(eCultureAttacker).getStateReligion()))
 		{
-			iStrength *= std::max(0, (GC.getREVOLT_OFFENSE_STATE_RELIGION_MODIFIER() + 100));
-			iStrength /= 100;
+			iRisk *= std::max(0, (GC.getREVOLT_OFFENSE_STATE_RELIGION_MODIFIER() + 100));
+			iRisk /= 100;
 		}
 	}
 
@@ -6732,31 +6747,24 @@ int CvCity::cultureStrength(PlayerTypes ePlayer, int& iOriginal) const
 	{
 		if (isHasReligion(GET_PLAYER(getOwner()).getStateReligion()))
 		{
-			iStrength *= std::max(0, (GC.getREVOLT_DEFENSE_STATE_RELIGION_MODIFIER() + 100));
-			iStrength /= 100;
+			iRisk *= std::max(0, (GC.getREVOLT_DEFENSE_STATE_RELIGION_MODIFIER() + 100));
+			iRisk /= 100;
 		}
 	}
-	iOriginal = iStrength;
-	iStrength -= (iStrength * cultureGarrison(ePlayer)) / 100;;
-	iStrength = std::max(0, iStrength);
-	return iStrength;
+	return iRisk;	
 }
 
 
-int CvCity::cultureGarrison(PlayerTypes ePlayer) const
+int CvCity::cultureGarrison(PlayerTypes eCultureAttacker) const
 {
-	// Changed from init at 1. No garrison if no units, right?
+	// Sums all culture revolt defense of units on tile. No limit... should probably have one, somehow
 	int iGarrison = 0;
 
 	foreach_ (const CvUnit * unit, plot()->units())
-	{
 		iGarrison += unit->revoltProtectionTotal();
-	}
 
-	if (atWar(GET_PLAYER(ePlayer).getTeam(), getTeam()))
-	{
+	if (atWar(GET_PLAYER(eCultureAttacker).getTeam(), getTeam()))
 		iGarrison *= 2;
-	}
 
 	return iGarrison;
 }

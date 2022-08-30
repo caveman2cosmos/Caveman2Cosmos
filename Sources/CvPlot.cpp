@@ -10146,15 +10146,13 @@ void CvPlot::doCulture()
 		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
 		if (eCulturalOwner != NO_PLAYER && GET_PLAYER(eCulturalOwner).getTeam() != getTeam() && !pCity->isOccupation())
 		{
-			int iCultureOwnerWinningPercent = calculateCulturePercent(eCulturalOwner) - calculateCulturePercent(getOwner());
-
 			// Check to check for revolt, rate adjusted by gamespeed, at least 1% minimum.
 			if (GC.getGame().getSorenRandNum(100, "Revolt #1") < std::max(1, GC.getREVOLT_TEST_PROB() *
 			100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()))
 			{
-				int iOriginal = 0; // Dummy variable
-				const int iCityStrength = pCity->cultureStrength(eCulturalOwner, iOriginal);
-				int iRevoltRoll = GC.getGame().getSorenRandNum(100, "Revolt #2");
+				// iCityStrength is 100x % chance of revolt
+				const int iCityStrength = pCity->netRevoltRisk(eCulturalOwner);
+				int iRevoltRoll = GC.getGame().getSorenRandNum(10000, "Revolt #2");
 
 				if (pCity->isNPC() || iRevoltRoll < iCityStrength)
 				{
@@ -10187,7 +10185,7 @@ void CvPlot::doCulture()
 					else
 					{
 						pCity->changeNumRevolts(eCulturalOwner, 1);
-						pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT") / 100);
+						pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT") / 10000);
 
 						// XXX announce for all seen cities?
 

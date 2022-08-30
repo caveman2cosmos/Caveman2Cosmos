@@ -365,8 +365,9 @@ public:
 	int hurryAngerLength(HurryTypes eHurry) const;
 	int maxHurryPopulation() const;
 
-	int cultureStrength(PlayerTypes ePlayer, int &iOriginal) const;
-	int cultureGarrison(PlayerTypes ePlayer) const;
+	int netRevoltRisk(PlayerTypes cultureAttacker) const;
+	int baseRevoltRisk(PlayerTypes eCultureAttacker) const;
+	int cultureGarrison(PlayerTypes eCultureAttacker) const;
 
 	//	Note arrival or leaving of a unit
 	void noteUnitMoved(const CvUnit* pUnit) const;
