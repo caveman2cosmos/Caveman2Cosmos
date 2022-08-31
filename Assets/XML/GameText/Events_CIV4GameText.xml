@@ -2002,7 +2002,7 @@
 		<English>%s1_civ_adjective merchants are now selling domesticated prairie dogs as exotic pets.</English>
 		<French>Des marchands %s1:3_civ_adjective vendent des chiens de prairie comme animaux domestiques.</French>
 		<German>Die %s1:2_civ_adjective Händler verkaufen nun Präriehunde als exotische Haustiere.</German>
-		<Italian>I mercanti %s1_civ_adjective vendono cani della prateria addomesticati come animali esotici da compagnia.</Italian>
+		<Italian>I mercanti %s1:3_civ_adjective vendono cani della prateria addomesticati come animali esotici da compagnia.</Italian>
 		<Spanish>Los mercaderes %s1:3_civ_adjective están vendiendo perros de las praderas domesticados como mascotas exóticas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2010,55 +2010,56 @@
 		<English>A well-known scientist from %s2_city has become a preacher at the local Christian Monastery.</English>
 		<French>Un scientifique réputé de %s2_city est rentré dans les ordres au monastère chrétien local</French>
 		<German>Ein renommierter Wissenschaftler der Stadt %s2_city predigt im örtlichen Christlichen Kloster.</German>
-		<Italian>Un rinomato scienziato di %s2_city è diventato un predicatore presso il locale Monastero Cristiano.</Italian>
-		<Spanish>Un reputado científico de %s2_city se ha convertido en predicador en el monasterio cristiano local.</Spanish>
+		<Italian>Un rinomato scienziato di %s2_city è diventato un predicatore presso il locale monastero cristiano.</Italian>
 		<Polish>Szanowany naukowiec z %s2_city został kaznodzieją w lokalnym Chrześcijańskim Zakonie.</Polish>
 		<Russian>Известный ученый из %s2_city стал проповедником в местном христианском монастыре.</Russian>
+		<Spanish>Un reputado científico de %s2_city se ha convertido en predicador en el monasterio cristiano local.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PRESIDENT_ASSASSINATED</Tag>
 		<English>The %s1_civ_adjective president has been assassinated by a radical. New security precautions are being taken.</English>
 		<French>Le Président %s1_civ_adjective a été assassiné par un radical. De nouvelles règles de sécurités ont été mises en oeuvre.</French>
 		<German>Der %s1_civ_adjective Präsident wurde von einem radikalen Attentäter ermordet. Die Sicherheitsmaßnahmen wurden verstärkt.</German>
-		<Italian>Il presidente %s1_civ_adjective è stato assassinato da un radicale. La sicurezza verrà rinforzata</Italian>
-		<Spanish>El presidente %s1_civ_adjective ha sido asesinado por un radical. Se están reforzando las medidas de seguridad.</Spanish>
+		<Italian>Il presidente %s1_civ_adjective è stato assassinato da un estremista. Nuove misure di sicurezza verranno prese.</Italian>
 		<Polish>Prezydent %s1_civ_adjective został zamordowany przez radykała. Nowe zasady bezpieczeństwa zostały wdrożone.</Polish>
 		<Russian>Президент державы %s1_civ_adjective был убит анархистом. Предпринимаются беспрецедентные меры безопасности.</Russian>
+		<Spanish>El presidente %s1_civ_adjective ha sido asesinado por un radical. Se están reforzando las medidas de seguridad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PRIME_TIMBER</Tag>
 		<English>Trees in a local region of the %s1_civ_adjective Empire are particularly good building material.</English>
 		<French>Les arbres d'une région de l'Empire %s1_civ_adjective sont particulièrement adaptés en tant que matériau de construction.</French>
 		<German>Bäume in einer bestimmten region des %s1_civ_adjective Reiches erweisen sich als besonders gutes Baumaterial.</German>
-		<Italian>Gli alberi in una regione dell'Impero %s1_civ_adjective costituiscono un ottimo materiale da costruzione.</Italian>
-		<Spanish>Los árboles de una región del imperio %s1_civ_adjective son particularmente buenos como material de construcción.</Spanish>
+		<Italian>Gli alberi di una regione dell'Impero %s1_civ_adjective costituiscono un ottimo materiale da costruzione.</Italian>
 		<Polish>Drzewa w jednym z regionów Imperium %s1_civ_adjective są szczególnie cenione jako materiał budowlany.</Polish>
 		<Russian>В одном из регионов державы %s1_civ_adjective местные породы деревьев зарекомендовали себя, как превосходный строительный материал.</Russian>
+		<Spanish>Los árboles de una región del imperio %s1_civ_adjective son particularmente buenos como material de construcción.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_PROMISING_COMMANDER_1</Tag>
 		<English>A local noble in %s1_civ_adjective Empire who showed promise in the last war has been promoted to Master-of-Arms.</English>
 		<French>Un noble local de l'Empire %s1_civ_adjective qui s'est distingué au combat durant la dernière Guerre a été promu Maître d'Armes.</French>
 		<German>Ein Feudalherr des %s1_civ_adjective Imperiums, der einen guten Eindruck im letzten Krieg hinterließ, wurde zum Waffenmeister befördert.</German>
-		<Italian>Nell'Impero %s1_civ_adjective, un nobile locale che ha giurato fedeltà durante l'ultima guerra è stato promosso a Maestro d'armi.</Italian>
-		<Spanish>Un noble del imperio %s1_civ_adjective, considerado una promesa desde la última guerra, ha sido ascendido a Maestro de Armas.</Spanish>
+		<Italian>Un nobile dell'Impero %s1_civ_adjective che ha giurato fedeltà durante l'ultima guerra è stato promosso a Mastro d'armi.</Italian>
 		<Polish>Miejscowy szlachcic z Imperium %s1_civ_adjective który wykazał się w czasie ostatniej wojny, został mianowany marszałkiem.</Polish>
 		<Russian>A local noble in %s1_civ_adjective Empire who showed promise in the last war has been promoted to Master-of-Arms.</Russian>
+		<Spanish>Un noble del imperio %s1_civ_adjective, considerado una promesa desde la última guerra, ha sido ascendido a Maestro de Armas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_QUALITY_WOOL</Tag>
 		<English>Sheep in the %s1_civ_adjective Empire have produced unusually high quality wool. Profits from coat sales are up.</English>
 		<French>Les Moutons de l'Empire %s1_civ_adjective ont produit une laine d'une qualité particulièrement bonne. Les profits provenant des ventes de vêtements sont en hausse.</French>
 		<German>Schafe im %s1_civ_adjective Imperium haben eine Wolle von außergewöhnlich hoher Qualität produziert. Die Profite vom Verkauf von Wintermänteln steigen.</German>
-		<Italian>Nell'Impero %s1_civ_adjective, le pecore hanno prodotto lana di qualità stranamente alta. I profitti derivanti dalla vendita di maglioni stanno aumentando.</Italian>
-		<Spanish>Las Ovejas del imperio %s1_civ_adjective han producido lana de una calidad extraordinariamente alta. Las ganancias por la venta de abrigos están aumentando.</Spanish>
+		<Italian>Le pecore dell'Impero %s1_civ_adjective hanno inaspettatamente prodotto lana di qualità alta. I profitti derivanti dalla vendita di maglioni stanno aumentando.</Italian>
 		<Polish>Owce w Imperium %s1_civ_adjective produkują wysokiej jakości wełnę Zyski ze sprzedaży okryć wzrosły.</Polish>
 		<Russian>Сказывают, что тонкорунные овцы в державе %s1_civ_adjective стали давать шерсть необычайно высокого качества. Прибыль от продажи тулупов заметно выросла.</Russian>
+		<Spanish>Las Ovejas del imperio %s1_civ_adjective han producido lana de una calidad extraordinariamente alta. Las ganancias por la venta de abrigos están aumentando.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_QUICKSAND</Tag>
 		<English>Some units of the %s1_civ_adjective empire got stuck in the sand dunes.</English>
 		<French>Des unités de l'empire %s1_civ_adjective ont été pris au piège dans des sables mouvants.</French>
+		<Italian>Alcune unità dell'Impero %s1_civ_adjective sono rimaste bloccate fra le dune.</Italian>
 		<Polish>Niektóre jednostki w Imperium %s1_civ_adjective utknęły w lotnych piaskach.</Polish>
 		<Russian>Говорят, что воинские отряды державы %s1_civ_adjective застряли в песчаных дюнах.</Russian>
 	</TEXT>
@@ -2068,9 +2069,9 @@
 		<French>Un rabbin de la ville de %s2_city a terminé la rédaction de son oeuvre religieuse.</French>
 		<German>Ein Rabbi aus der Stadt %s2_city hat eine wertvolle Sammlung religiöser Schriften verfasst.</German>
 		<Italian>Un rabbino di %s2_city ha scritto una preziosa raccolta di opere religiose</Italian>
-		<Spanish>Un rabino de %s2_city ha escrito una valiosa colección de obras religiosas.</Spanish>
 		<Polish>Rabin z %s2_city zebrał nieocenioną kolekcję pism religijnych.</Polish>
 		<Russian>Раввин из города %s2_city составил бесценный сборник религиозных сочинений.</Russian>
+		<Spanish>Un rabino de %s2_city ha escrito una valiosa colección de obras religiosas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_RECRUITMENT_DRIVE</Tag>
@@ -2078,9 +2079,9 @@
 		<French>L'Empire %s1_civ_adjective a commencé une politique révolutionnaire de recrutement à travers le monde, encourageant des milliers d'étrangers à rejoindre leur armée.</French>
 		<German>Das %s1_civ_adjective Imperium hat ein revolutionäres Rekrutierungsprogramm gestartet, welches Tausende ermutigt, sich einberufen zu lassen.</German>
 		<Italian>L'Impero %s1_civ_adjective ha iniziato un programma di reclutamento rivoluzionario, incoraggiando migliaia di giovani ad arruolarsi.</Italian>
-		<Spanish>El ejército %s1_civ_adjective ha iniciado un programa de reclutamiento revolucionario, alentando a miles a unirse a sus filas.</Spanish>
 		<Polish>Imperium %s1_civ_adjective rozpoczęło rewolucyjny program naboru poprzedzony starannym szkoleniem rekrutów.</Polish>
 		<Russian>В державе %s1_civ_adjective успешно провели военную реформу и призывную систему, поощрив тысячи граждан вступать в ряды армии.</Russian>
+		<Spanish>El ejército %s1_civ_adjective ha iniciado un programa de reclutamiento revolucionario, alentando a miles a unirse a sus filas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_REFINERY_EXPLOSION</Tag>
@@ -2088,16 +2089,16 @@
 		<French>Une explosion a détruit la Raffinerie de Pétrole de la ville %s1:2_civ_adjective de %s2_city.</French>
 		<German>Eine Explosion hat die Ölraffinerie in der %s1_civ_adjective Stadt %s2_city zerstört.</German>
 		<Italian>Un'esplosione ha distrutto la raffineria nella città %s1:2_civ_adjective di %s2_city.</Italian>
-		<Spanish>Una explosión ha destruido la Refinería de petróleo en la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 		<Polish>Eksplozja zniszczyła Rafinerię Ropy Naftowej znajdującą się w mieście %s2_city (należącym do cywilizacji %s1_civ_adjective).</Polish>
 		<Russian>В державе %s1_civ_adjective в городе %s2_city взрыв уничтожил нефтеперерабатывающий завод.</Russian>
+		<Spanish>Una explosión ha destruido la Refinería de petróleo en la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_REINFORCED_HULL_1</Tag>
 		<English>Rumors abound that %s1_civ_adjective shipmasters are doing extensive refitting work on their trireme fleet.</English>
 		<French>Selon certaines rumeurs, les capitaines de navires %s1:2_civ_adjective effectuent des modifications importantes sur leurs trirèmes.</French>
 		<German>Es gibt Gerüchte, dass %s1:3_civ_adjective Schiffbauer ihre Trieren-Flotte überarbeiten.</German>
-		<Italian>Pare che i capitani %s1_civ_adjective stiano facendo grossi lavori sulla loro flotta di triremi.</Italian>
+		<Italian>Si rincorrono voci che i mastri costruttori di navi dell'Impero %s1_civ_adjective stiano svolgendo ampi lavori di riallestimento sull'intera flotta di triremi.</Italian>
 		<Spanish>Numerosos rumores apuntan a que los oficiales %s1:3_civ_adjective están realizando amplios trabajos de mejora en su flota de trirremes.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2105,17 +2106,17 @@
 		<English>The latest tourist hot spot is a town outside the %s1_civ_adjective city of %s2_city, and the local economy is booming.</English>
 		<French>La dernière destination touristique à la mode est une petite ville à proximité de la ville %s1:2_civ_adjective de %s2_city, et l'économie locale explose là-bas.</French>
 		<German>Die neueste Touristenhochburg ist ein Ort außerhalb der %s1_civ_adjective Stadt %s2_city, die lokale Wirtschaft boomt.</German>
-		<Italian>Un paesino vicino alla città %s1:2_civ_adjective di %s2_city è una famosa località turistica: l'economia locale fiorisce.</Italian>
-		<Spanish>El último destino turístico de moda es un pueblo a las afueras de la ciudad %s1:2_civ_adjective de %s2_city: la economía local está en auge.</Spanish>
+		<Italian>Un paesino vicino alla città %s1:2_civ_adjective di %s2_city è diventata una rinomata località turistica. L'economia locale sta fiorendo.</Italian>
 		<Polish>Miasteczko nieopodal %s1_civ_adjective %s2_city jest najmodniejszą w tym sezonie atrakcją turystyczną!</Polish>
 		<Russian>%s1_civ_adjective переживают подъем в туристической отрасли благодаря процветающему и привлекательному для туристов пригороду близ города %s2_city.</Russian>
+		<Spanish>El último destino turístico de moda es un pueblo a las afueras de la ciudad %s1:2_civ_adjective de %s2_city: la economía local está en auge.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_RIFLED_CANNON_1</Tag>
 		<English>%s1_civ_adjective Cannon units can now shoot farther and more accurately thanks to improved barrel design.</English>
 		<French>Les unités d'artillerie %s1:4_civ_adjective peuvent à présent tirer plus loin et plus précisément grâce aux fûts améliorés.</French>
 		<German>%s1:3_civ_adjective Kanoneneinheiten können durch eine Verbesserung des Laufs nun weiter und genauer schießen.</German>
-		<Italian>I cannoni %s1_civ_adjective ora possono sparare più lontano e con più precisione, grazie a un nuovo tipo di canna.</Italian>
+		<Italian>I cannoni %s1:3_civ_adjective ora possono sparare più lontano e con più precisione, grazie a un nuovo e migliore tipo di canna.</Italian>
 		<Spanish>Ahora, las unidades de cañones %s1:4_civ_adjective pueden disparar más lejos y con mayor precisión gracias a las mejoras en el diseño del cañón.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2123,17 +2124,17 @@
 		<English>A rogue radio station in the %s1_civ_adjective city of %s2_city is broadcasting propaganda against the ruling party.</English>
 		<French>Une radio pirate dans la ville %s1:2_civ_adjective de %s2_city diffuse de la propagande anti-gouvernementale.</French>
 		<German>Im %[s1_civ_adjective]en Reich verbreitet ein Piratensender ausgehend von der Stadt %s2_city Propaganda gegen die Regierung.</German>
-		<Italian>Una stazione radio dissidente nella città %s1:2_civ_adjective di %s2_city sta diffondendo propaganda contro il partito al potere</Italian>
-		<Spanish>Una emisora pirata en la ciudad %s1:2_civ_adjective de %s2_city está emitiendo propaganda contra el partido gobernante.</Spanish>
+		<Italian>Una stazione radio dissidente nella città %s1:2_civ_adjective di %s2_city sta diffondendo propaganda contro il partito al potere.</Italian>
 		<Polish>Nielegalna stacja radiowa w %s1_civ_adjective city of %s2_city nadaje propagandowe audycja przeciw rządzocej partii.</Polish>
 		<Russian>Подпольная радиостанция в городе %s2_city державы %s1_civ_adjective транслирует антиправительственную пропаганду.</Russian>
+		<Spanish>Una emisora pirata en la ciudad %s1:2_civ_adjective de %s2_city está emitiendo propaganda contra el partido gobernante.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_RUNNING_BULLS</Tag>
 		<English>"Running With the Bulls", an annual ritual practiced by the people of %s2_city, is gaining worldwide renown.</English>
 		<French>La course "Courons avec les taureaux", pratiquée chaque année par les habitants de %s2_city, est en train de se forger une réputation mondiale.</French>
 		<German>Der "Stierlauf", eine jährliche Volksveranstaltung in %s2_city, erringt zurzeit weltweite Bekanntheit.</German>
-		<Italian>La "Corsa coi tori", un rito annuale praticato dalla gente di %s2_city, sta acquistando notorietà a livello mondiale.</Italian>
+		<Italian>La Corsa coi tori, un rito annuale praticato dalla gente di %s2_city, sta acquistando notorietà a livello mondiale.</Italian>
 		<Spanish>Los "encierros", un ritual anual que practica el pueblo de %s2_city, están ganado renombre mundial.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2141,7 +2142,7 @@
 		<English>Enterprising %s1_civ_adjective grocers in %s2_city have struck a deal to import surplus food from rural farmers outside the normal range of city business.</English>
 		<French>A %s2_city, d'entreprenants épiciers %s1:3_civ_adjective ont conclu un accord pour importer de la nourriture à des fermiers vivant en dehors du champ d'activités habituel de la ville.</French>
 		<German>Geschäftstüchtige %s1:3_civ_adjective Krämer in %s2_city haben ein Handelsabkommen für den Import zusätzlicher Nahrungsmittel aus den ländlichen Gegenden außerhalb der regulären städtischen Handelsreichweite geschlossen.</German>
-		<Italian>Intraprendenti droghieri %s1_civ_adjective di %s2_city hanno raggiunto un accordo per l'importazione del cibo in eccesso dagli agricoltori normalmente al di fuori del raggio d'affari della città.</Italian>
+		<Italian>Gli intraprendenti droghieri %s1:3_civ_adjective di %s2_city hanno raggiunto un accordo per importare cibo in eccesso dagli agricoltori che normalmente sono fuori del raggio d'affari della città.</Italian>
 		<Spanish>Los emprendedores colmados %s1:3_civ_adjective de %s2_city han cerrado un trato para aceptar los excedentes de alimentos de los campesinos que normalmente trabajan al margen de los negocios de la ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2149,7 +2150,7 @@
 		<English>The Grocer in the %s1_civ_adjective city of %s2_city is becoming renowned for its superior selection, quality and quantity of foodstuffs.</English>
 		<French>L'épicier %s1_civ_adjective de la ville de %s2_city est en train de se forger une solide réputation pour la qualité de la nourriture qu'il propose.</French>
 		<German>Der Krämer der %s1:2_civ_adjective Stadt %s2_city ist für die hervorragende Auswahl, Qualität und Quantität seiner Lebensmittel bekannt.</German>
-		<Italian>Il droghiere nella città %s1_civ_adjective di %s2_city sta diventando famoso per l'assortimento, la qualità e la quantità superiori dei suoi generi alimentari.</Italian>
+		<Italian>Il droghiere nella città %s1:2_civ_adjective di %s2_city sta diventando famoso per l'assortimento, la qualità e la quantità migliori dei suoi generi alimentari.</Italian>
 		<Spanish>Los colmados de la ciudad %s1:2_civ_adjective de %s2_city se están haciendo famosos por la calidad, la selección y la cantidad de sus víveres.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2157,7 +2158,7 @@
 		<English>Rumours tell stories about people who can travel across seas.</English>
 		<French>Des rumeurs lointaines annoncent que des gens peuvent traverser les mers.</French>
 		<German>In Gerüchten wird erzählt, es gäbe Menschen, die über das Meer reisen können.</German>
-		<Italian>Ci sono storie di persone che possono viaggiare attraverso i mari.</Italian>
+		<Italian>Si raccontano storie di persone che possono attraversare i mari.</Italian>
 		<Spanish>Se cuentan historias sobre gente capaz de viajar a través de los mares.</Spanish>
 		<Polish>Krążą plotki o ludziach, którzy potrafią przemierzać morza.</Polish>
 		<Russian>В соседних племенах ходят слухи о неких людях, способных путешествовать по морям.</Russian>
@@ -2167,7 +2168,7 @@
 		<English>%s1_civ_adjective merchants are now selling gunpowder in larger quantities.</English>
 		<French>Des marchands %s1:3_civ_adjective vendent de la poudre à canon en grande quantité.</French>
 		<German>Die %s1:2_civ_adjective Händler verkaufen nun größere Mengen von Schießpulver.</German>
-		<Italian>I mercanti %s1_civ_adjective vendono maggiori quantità di polvere da sparo.</Italian>
+		<Italian>I mercanti %s1:3_civ_adjective stanno vendendo polvere da sparo in maggiori quantità.</Italian>
 		<Spanish>Los mercaderes %s1:3_civ_adjective están vendiendo pólvora en grandes cantidades.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2176,26 +2177,26 @@
 		<French>L'Empire %s1_civ_adjective has découvert des dépôts importants de Sel dans son territoire.</French>
 		<German>Das %s1_civ_adjective Imperium hat bedeutende Vorkommen an Speisesalz in ihren Grenzen entdeckt.</German>
 		<Italian>L'Impero %s1_civ_adjective ha scoperto grandi depositi di sale nel proprio territorio.</Italian>
-		<Spanish>El imperio %s1_civ_adjective ha descubierto grandes depósitos de sal en su territorio.</Spanish>
 		<Polish>Imperium %s1_civ_adjective odkryło spore złoża soli w obrębie swoich granic.</Polish>
 		<Russian>The %s1_civ_adjective Empire has discovered significant deposits of salt within their borders.</Russian>
+		<Spanish>El imperio %s1_civ_adjective ha descubierto grandes depósitos de sal en su territorio.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SANDSTORM</Tag>
 		<English>Sandstorm has made some of the routes disappear in the sand near the %s1_civ_adjective city of %s2_city.</English>
-		<French>Des Tempêtes de sable ont fait disparaitre des routes près de la ville %s1:2_civ_adjective de %s2_city.</French>
+		<French>Des Tempêtes de sable ont fait disparaître des routes près de la ville %s1:2_civ_adjective de %s2_city.</French>
 		<German>Durch Sandstürme sind in der Nähe der %s1_civ_adjective Stadt %s2_city einige Straßen im Sand verschwunden.</German>
 		<Italian>Una tempesta di sabbia ha fatto scomparire le vie di comunicazione vicino alla città %s1:2_civ_adjective di %s2_city.</Italian>
-		<Spanish>Una tormenta de arena ha hecho desaparecer bajo la arena algunos de los caminos cerca de la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 		<Polish>Burza piaskowa zniszczyła drogi należące do cywilizacji %s1_civ_adjective, niedaleko miasta %s2_city.</Polish>
 		<Russian>Песчаные бури в державе %s1_civ_adjective погребли торговые пути под слоем песка около города %s2_city.</Russian>
+		<Spanish>Una tormenta de arena ha hecho desaparecer bajo la arena algunos de los caminos cerca de la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SEA_TURTLES</Tag>
 		<English>%s1_civ_adjective people are now harvesting sea turtles on an annual basis.</English>
 		<French>Les %s1:3_civ_adjective ramassent désormais des tortues de mer toute l'année.</French>
 		<German>Die %s1:3_civ_adjective Bevölkerung "erntet" nun jährlich Seeschildkröten.</German>
-		<Italian>La popolazione %s1_civ_adjective sta raccogliendo testuggini su base annuale.</Italian>
+		<Italian>La popolazione %s1:2_civ_adjective sta raccogliendo testuggini su base annuale.</Italian>
 		<Spanish>El pueblo %s1:1_civ_adjective está recolectando Tortugas marinas cada año.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2203,7 +2204,7 @@
 		<English>A cache of ancient texts has been discovered hidden away in a %s1_civ_adjective monastery.</English>
 		<French>Une cache de textes anciens a été découverte dans un monastère %s1_civ_adjective.</French>
 		<German>Ein Lager versteckter antiker Schriften wurde in einem %s1:2_civ_adjective Kloster entdeckt.</German>
-		<Italian>In un monastero %s1_civ_adjective è stato scoperto un deposito di antichi testi.</Italian>
+		<Italian>Un enorme quantità nascosta di testi antichi è stata scoperta in un monastero %s1_civ_adjective.</Italian>
 		<Spanish>Una reserva de textos antiguos que estaba oculta en un monasterio %s1:1_civ_adjective ha sido descubierta.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2211,10 +2212,10 @@
 		<English>The well-protected %s1_civ_adjective citizens endure paying a Security Tax to help maintain their city walls and guards.</English>
 		<French>En échange d'une bonne protection, les citoyens %s1:3_civ_adjective doivent subir un Impôt Sécuritaire pour aider au maintien des murs et des gardes de leur ville.</French>
 		<German>Die gut geschützten %[s1_civ_adjective]en Bürger akzeptieren eine zusätzliche Sicherheitssteuer zur Unterhaltung ihrer Stadtmauern.</German>
-		<Italian>I cittadini %s1:3_civ_adjective, che sono ben protetti, accettano di pagare una tassa di sicurezza per mantenere mura e guardie della città.</Italian>
-		<Spanish>Los ciudadanos %s1:3_civ_adjective están bien protegidos. Soportan el pago de un impuesto de seguridad para contribuir al mantenimiento de las murallas y guardias de su ciudad.</Spanish>
+		<Italian>I ben protetti cittadini %s1:3_civ_adjective accettano di pagare una tassa di sicurezza per mantenere mura e guardie della città.</Italian>
 		<Polish>Chronieni obywatele %s1_civ_adjective płacą specjalny podatek firmie ochroniarskiej oraz na utrzymanie murów miejskich.</Polish>
 		<Russian>The well-protected %s1_civ_adjective citizens endure paying a Security Tax to help maintain their city walls and guards.</Russian>
+		<Spanish>Los ciudadanos %s1:3_civ_adjective están bien protegidos. Soportan el pago de un impuesto de seguridad para contribuir al mantenimiento de las murallas y guardias de su ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SEGMENTED_ARMOR_1</Tag>
@@ -2222,16 +2223,16 @@
 		<French>Des unités de combat rapproché %s1:4_civ_adjective sont à présent déployées avec de nouvelles armures augmentant leur défense contre les unité d'archers.</French>
 		<German>%s1_civ_adjective Nahkampfeinheiten werden jetzt mit neuen, segmentierten Panzern ausgestattet und verbessern somit ihre Verteigung gegenüber Bogenschützen.</German>
 		<Italian>Le unità da combattimento ravvicinato %s1:4_civ_adjective sono ora equipaggiate con una nuova armatura a piastre, che migliora la loro difesa contro gli arcieri.</Italian>
-		<Spanish>Las unidades de cuerpo a cuerpo %s1:4_civ_adjective son ahora equipadas con nuevas armaduras segmentadas, que mejoran su defensa frente a los arqueros.</Spanish>
 		<Polish>Jednostki walczące wręcz należące do państwa %s1_civ_adjective są od teraz wyposażone w nową, zbroję segmentową, która poprawia ich obronę względem łuczników.</Polish>
 		<Russian>%s1_civ_adjective Melee units are now deployed with new, segmented armors, improving their defense versus Archery units.</Russian>
+		<Spanish>Las unidades de cuerpo a cuerpo %s1:4_civ_adjective son ahora equipadas con nuevas armaduras segmentadas, que mejoran su defensa frente a los arqueros.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SETBACK_1</Tag>
 		<English>%s1_civ_adjective researchers are rumored to have suffered a major setback, slowing their progress.</English>
 		<French>Des chercheurs %s1:3_civ_adjective auraient subi un revers majeur qui ralentit leurs recherches.</French>
 		<German>Die %s1:2_civ_adjective Forscher sollen einen herben Rückschlag erlitten haben, der ihre Fortschritte verlangsamt.</German>
-		<Italian>Pare che i ricercatori %s1_civ_adjective abbiano subito una battuta d'arresto, che ha rallentato il loro progresso.</Italian>
+		<Italian>Pare che i ricercatori %s1:3_civ_adjective abbiano subito una battuta d'arresto, che ha rallentato il loro progresso.</Italian>
 		<Spanish>Se rumorea que los investigadores %s1:1_civ_adjective han sufrido un gran revés que ha frenado sus avances.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2239,14 +2240,15 @@
 		<English>%s1_civ_adjective discoveries have turned out to be false! This dead end result has slowed their current research project.</English>
 		<French>Les découvertes %s1:4_civ_adjective se sont avérées erronées ! Ce travail en pure perte a ralenti leur projet de recherches actuel.</French>
 		<German>Die %s1:2_civ_adjective Entdeckungen haben sich als falsch erwiesen. Dies bedeutet einen herben Rückschlag für ihr aktuelles Forschungsprojekt.</German>
-		<Italian>Le scoperte %s1_civ_adjective si sono rivelate false! Questo vicolo cieco ha rallentato il progresso del loro attuale progetto di ricerca.</Italian>
+		<Italian>Le scoperte %s1:4_civ_adjective si sono rivelate sbagliate! Questo fallimento ha rallentato il progresso del loro attuale progetto di ricerca.</Italian>
 		<Spanish>¡Los descubrimientos %s1:3_civ_adjective han resultado ser falsos! Este callejón sin salida ha entorpecido mucho su proyecto de investigación.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SHERIFF</Tag>
-		<English>Crime is on the rise in the %s1_civ_adjective empire</English>
-		<French>La criminalité augmente dans l'empire %s1_civ_adjective</French>
-		<Polish>Przestępczość wzrasta w %s1_civ_adjective empire</Polish>
+		<English>Crime is on the rise in the %s1_civ_adjective empire.</English>
+		<French>La criminalité augmente dans l'empire %s1_civ_adjective.</French>
+		<Italian>La criminalità sta aumentando nell'Impero %s1_civ_adjective.</Italian>
+		<Polish>Przestępczość wzrasta w %s1_civ_adjective empire.</Polish>
 		<Russian>В державе %s1_civ_adjective отмечен небывалый рост преступности.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2255,26 +2257,26 @@
 		<French>Une espèce locale de vers à soie de l'Empire %s1_civ_adjective Empire est presque éteinte.</French>
 		<German>Eine regionale Spezies von Seidenwürmern im %s1_civ_adjective Imperium ist nahezu ausgestorben.</German>
 		<Italian>Una specie locale di baco da seta nell'Impero %s1_civ_adjective è quasi estinta.</Italian>
-		<Spanish>Una especie de gusano de seda endémica del imperio %s1_civ_adjective está prácticamente extinta.</Spanish>
 		<Polish>Lokalny gatunek jedwabnika w Imperium %s1_civ_adjective jest na skraju wyginięcia.</Polish>
 		<Russian>Местный вид тутового шелкопряда в державе %s1_civ_adjective практически исчез из-за инфекции.</Russian>
+		<Spanish>Una especie de gusano de seda endémica del imperio %s1_civ_adjective está prácticamente extinta.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SILVER_RAIN</Tag>
 		<English>An accident has happened during weather control test! A cloud of nanites which was designed for controlling local weather patterns malfunctioned during test and now these nanites are destroying environment instead of improving it!</English>
 		<French>Un Accident s'est produit durant un test de contrôle météorologique! Un nuage de nanites conçu pour contrôler la météo locale a mal fonctionné et est en train de détruire l'environnement au lieu de l'améliorer!</French>
 		<German>Während eines Wetterkontrollexperiments ist ein Unfall geschehen! Eine Wolke von Naniten, die eigentlich das örtliche Wetter kontrollieren sollten hatten im Test eine Fehlfunktion und zerstören nun die Umwelt statt sie zu verbessern!</German>
-		<Italian>Durante un test per il controllo del meteo è successo un incidente! Una nuvola di naniti progettata per controllare le condizioni meteorologiche locali ha avuto un malfunzionamento durante il test; ora i naniti stanno distruggengo l'ambiente invece di proteggerlo!</Italian>
-		<Spanish>¡Ha ocurrido un accidente durante una prueba de control meteorológico! Una nube de nanoides que fue diseñada originalmente para controlar los patrones del clima local se descontroló durante la prueba; ¡ahora estos nanoides están destruyendo el medio en lugar de protegerlo!</Spanish>
+		<Italian>Un incidente è occorso durante un test per il controllo del meteo! Una nuvola di naniti progettata per controllare le condizioni meteorologiche locali ha avuto un malfunzionamento durante il test e ora sta distruggendo l'ambiente, anziché proteggerlo!</Italian>
 		<Polish>Przy kontroli pogody zdarzył się wypadek! Chmura nanitów, która miała kontrolować lokalną pogodę miała awarię podczas testów i teraz niszczy ona środowisko zamiast je poprawiać</Polish>
 		<Russian>Произошла авария во время опытов по контролю погоды! Из-за сбоя в программе для облака нанитов, разработанного для управления местными погодными условиями, эти они разрушают окружающую среду, а не улучшают ее!</Russian>
+		<Spanish>¡Ha ocurrido un accidente durante una prueba de control meteorológico! Una nube de nanoides que fue diseñada originalmente para controlar los patrones del clima local se descontroló durante la prueba; ¡ahora estos nanoides están destruyendo el medio en lugar de protegerlo!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SLAVE_REVOLT</Tag>
 		<English>A slave revolt has taken place in the %s1_civ_adjective city of %s2_city!</English>
 		<French>Une révolte d'esclaves a eu lieu dans la ville %s1:2_civ_adjective de %s2_city !</French>
 		<German>In der %s1:2_civ_adjective Stadt %s2_city tobt ein Sklavenaufstand!</German>
-		<Italian>Una rivolta di schiavi è scoppiata nella città %s1_civ_adjective di %s2_city!</Italian>
+		<Italian>Una rivolta di schiavi è scoppiata nella città %s1:2_civ_adjective di %s2_city!</Italian>
 		<Spanish>¡Una rebelión de esclavos ha tenido lugar en la ciudad %s1:2_civ_adjective de %s2_city!</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2282,7 +2284,7 @@
 		<English>The slaves in %s2_city are still in revolt. Local authorities are bumbling the crackdown.</English>
 		<French>Les esclaves de %s2_city sont toujours en rébellion. Les autorités locales peinent à rétablir l'ordre.</French>
 		<German>Die Sklaven in %s2_city rebellieren noch immer. Die örtlichen Behörden greifen hart durch.</German>
-		<Italian>Gli schiavi a %s2_city sono ancora in rivolta. Le autorità locali hanno causato un pasticcio.</Italian>
+		<Italian>Gli schiavi a %s2_city sono ancora in rivolta. Le autorità locali non riescono a ristabilire l'ordine.</Italian>
 		<Spanish>Los esclavos de %s2_city siguen alzados. Las autoridades locales no están siendo capaces de tomar medidas enérgicas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2290,7 +2292,7 @@
 		<English>Smallpox epidemic has broken out amongst %s1_civ_adjective people, originating in the city of %s2_city.</English>
 		<French>Une épidémie de Variole a été découverte auprès du peuple %s1_civ_adjective, avec comme origine la ville de %s2_city.</French>
 		<German>Die Pocken sind ausgebrochen bei dem %s1_civ_adjective Volk, der Ursprung liegt in der Stadt %s2_city.</German>
-		<Italian>Un'epidemia di vaiolo è scoppiata nel popolo %s1_civ_adjective, avendo come origine la città di %s2_city.</Italian>
+		<Italian>Un'epidemia di vaiolo è scoppiata nell'Impero %s1_civ_adjective. L'origine è indicata nella città di %s2_city.</Italian>
 		<Spanish>Una epidemia de viruela se ha extendido entre la población %s1:2_civ_adjective, se ha originado en la ciudad de %s2_city.</Spanish>
 		<Polish>Epidemia ospy wietrznej wybuchła w mieście %s2_city (należącym do cywilizacji %s1_civ_adjective).</Polish>
 		<Russian>Эпидемия оспы вспыхнула среди %s1_civ_adjective в городе %s2_city.</Russian>
@@ -2300,13 +2302,14 @@
 		<English>%s1_civ_adjective weaponsmiths have invented smokeless powder, giving their musketmen a significant advantage.</English>
 		<French>Les fabricants d'armes %s1:2_civ_adjective ont inventé une poudre sans fumée, qui donne aux arquebusiers un avantage significatif.</French>
 		<German>%s1:3_civ_adjective Waffenschmiede haben raucharmes Pulver erfunden, was ihren Musketieren einen erheblichen Vorteil verschafft.</German>
-		<Italian>Gli armaioli %s1_civ_adjective hanno inventato polvere da sparo senza fumo, dando ai loro soldati con moschetto un notevole vantaggio.</Italian>
+		<Italian>Gli armaioli %s1:3_civ_adjective hanno inventato un tipo di polvere da sparo che non fa fumo, dando ai loro soldati con moschetto un notevole vantaggio.</Italian>
 		<Spanish>Los forjadores de armas %s1:3_civ_adjective han inventado pólvora sin humo, lo que proporciona a sus mosquetes una importante ventaja.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SNAKEOIL</Tag>
 		<English>Snake Oil is rumored to cure all ailments in the %s1_civ_adjective empire.</English>
 		<French>On prétend que l'huile de Serpent permet de guérir tous les maux dans l'empire %s1_civ_adjective.</French>
+		<Italian>Sembra che l'olio di serpente sia in grado di curare qualsiasi malattia nell'Impero %s1_civ_adjective.</Italian>
 		<Polish>Plotki głoszą, żę Olej z węży leczy wszystkie choroby w %s1_civ_adjective empire.</Polish>
 		<Russian>Ходят слухи, будто Змеиный бальзам в державе %s1_civ_adjective излечивает все болезни.</Russian>
 	</TEXT>
@@ -2315,10 +2318,10 @@
 		<English>The lack of social advancement in the %s1_civ_adjective city of %s2_city has resulted in emigration to foreign lands.</English>
 		<French>le manque d'avancées sociales dans la ville %s1:2_civ_adjective de %s2_city a entraîné une exode de sa population.</French>
 		<German>Der Mangel an sozialem Fortschritt in der %s1_civ_adjective Stadt %s2_city führt zu einer Emigrationswelle ins Ausland.</German>
-		<Italian>La mancanza di avanzamenti sociali nella città %s1:2_civ_adjective di %s2_city ha causato un'emigrazione verso paesi stranieri.</Italian>
-		<Spanish>La falta de avances sociales en la ciudad %s1:2_civ_adjective de %s2_city ha provocado un éxodo poblacional hacia tierras extranjeras.</Spanish>
+		<Italian>L'assenza di possibilità di avanzamenti sociali nella città %s1:2_civ_adjective di %s2_city sta causando una forte emigrazione verso paesi stranieri.</Italian>
 		<Polish>Brak rozwoju społecznego w %s1_civ_adjective city of %s2_city doprowadził do emigracji obywateli tego państwa.</Polish>
 		<Russian>Отсутствие развития и застой в общественной жизни города %s2_city привело к эмиграции %s1_civ_adjective в чужие земли.</Russian>
+		<Spanish>La falta de avances sociales en la ciudad %s1:2_civ_adjective de %s2_city ha provocado un éxodo poblacional hacia tierras extranjeras.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SOLO_FLIGHT</Tag>
@@ -2333,7 +2336,7 @@
 		<English>%s1_civ_adjective merchants are offering discounts on barrels of their sour crude oil, which is filled with impurities.</English>
 		<French>Les marchands %s1:3_civ_adjective proposent des réductions sur des tonnes de pétrole brut acide, infesté d'impuretés.</French>
 		<German>Die %s1:2_civ_adjective Händler gewähren auf jedes Fass ihres minderwertigen, ziemlich verunreinigten Rohöls einen Nachlass.</German>
-		<Italian>I mercanti %s1_civ_adjective stanno facendo sconti sul loro petrolio grezzo, che è pieno di impurità.</Italian>
+		<Italian>I mercanti %s1:3_civ_adjective stanno facendo sconti sul loro petrolio grezzo, che è pieno di impurità.</Italian>
 		<Spanish>Los mercaderes %s1:3_civ_adjective están ofreciendo descuentos por la compra al por mayor de crudo ácido, que está lleno de impurezas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2349,7 +2352,7 @@
 		<English>Vermin got in to the granary in %s2_city. All the food stored there was ruined.</English>
 		<French>La vermine a infesté les greniers de la ville : %s2_city. Toute la nourriture qui y était stockée a été perdue.</French>
 		<German>Ungeziefer ist in den Kornspeicher von %s2_city gelangt. Alle dort gelagerten Nahrungsvorräte wurden vernichtet.</German>
-		<Italian>I ratti si sono intrufolati nel granaio a %s2_city. Tutto il cibo immagazzinato è stato rovinato.</Italian>
+		<Italian>I ratti si sono intrufolati nel granaio a %s2_city. Tutto il cibo immagazzinato è immangiabile adesso.</Italian>
 		<Spanish>Las alimañas entraron en el granero de %s2_city. Toda la comida que allí había almacenada se ha perdido.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2357,18 +2360,18 @@
 		<English>The %s1_civ_adjective cities have built enough [COLOR_BUILDING_TEXT]Colosseums[COLOR_REVERT] to complete the National Sports League quest, strengthening their social fabric and their national identity.</English>
 		<French>Les villes %s1:4_civ_adjective ont construit suffisamment de [COLOR_BUILDING_TEXT]Colisées[COLOR_REVERT] pour achever la quête de la Ligue Sportive Nationale, renforçant le tissu social et l'identité nationale.</French>
 		<German>Die %s1:2_civ_adjective Städte haben genug [COLOR_BUILDING_TEXT]Kolosseen[COLOR_REVERT] errichtet, um die Quest "Nationale Sportliga" zu erfüllen, wodurch ihr sozialer Zusammenhalt und ihr Nationalitätsbewusstsein gestärkt wird.</German>
-		<Italian>Le città %s1_civ_adjective hanno costruito abbastanza [COLOR_BUILDING_TEXT]Colossei[COLOR_REVERT] per completare l'impresa del Campionato nazionale, rinforzando il tessuto sociale e l'identità nazionale.</Italian>
+		<Italian>Le città %s1:4_civ_adjective hanno costruito abbastanza [COLOR_BUILDING_TEXT]Colossei[COLOR_REVERT] per completare la missione "Campionato nazionale", rinforzando il tessuto sociale e l'identità nazionale.</Italian>
 		<Spanish>Las ciudades %s1:4_civ_adjective han construido suficientes [COLOR_BUILDING_TEXT]Coliseos[COLOR_REVERT] para completar la misión Liga deportiva nacional, lo que fortalece su tejido social y su identidad nacional.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SPY_DISCOVERED</Tag>
-		<English>A %s4_civ_adjective infiltrator has been dicovered in the %s1_civ_adjective government.</English>
+		<English>A %s4_civ_adjective infiltrator has been discovered in the %s1_civ_adjective government.</English>
 		<French>Un infiltrateur %s4_civ_adjective a été découvert au sein du gouvernement %s1_civ_adjective</French>
 		<German>In den Reihen der %[s1_civ_adjective]en Regierung ist ein %[s4_civ_adjective]er Spion enttarnt worden.</German>
-		<Italian>Un infiltratore %s4_civ_adjective è stato scoperto all'interno del governo %s1_civ_adjective</Italian>
-		<Spanish>Un infiltrado %s4_civ_adjective ha sido descubierto en el gobierno %s1_civ_adjective.</Spanish>
+		<Italian>Un infiltrato %s4_civ_adjective è stato scoperto all'interno del governo %s1_civ_adjective</Italian>
 		<Polish>Infiltrator z %s4_civ_adjective został odkryty w rządzie %s1_civ_adjective.</Polish>
 		<Russian>Сообщают, что в высших эшелонах власти %s1_civ_adjective был раскрыт агент влияния %s4_civ_adjective.</Russian>
+		<Spanish>Un infiltrado %s4_civ_adjective ha sido descubierto en el gobierno %s1_civ_adjective.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_STAINED_GLASS</Tag>
@@ -2383,65 +2386,67 @@
 		<English>Efforts in the %s1_civ_adjective Empire to reduce paperwork and personnel in government have been an outrageous success.</English>
 		<French>Les Efforts de l'Empire %s1_civ_adjective pour réduire les formalités administratives et le personnel de leur gouvernement ont remporté succès scandaleux.</French>
 		<German>Bemühungen im %s1_civ_adjective Imperium, den Papierkrieg und das Personal in der Regierung zu reduzieren wurden zu einem unglaublichen Erfolg.</German>
-		<Italian>Nell'Impero %s1_civ_adjective, gli sforzi per ridurre i documenti cartacei e il personale nel governo hanno avuto un grandissimo successo.</Italian>
-		<Spanish>Los esfuerzos del imperio %s1_civ_adjective por reducir la carga administrativa y el personal en el gobierno han sido un éxito grandioso.</Spanish>
+		<Italian>Gli sforzi per ridurre la burocrazia e il personale di Governo nell'Impero %s1_civ_adjective hanno avuto un grandissimo successo.</Italian>
 		<Polish>Próby zredukowania w Imperium %s1_civ_adjective pracy papierkowej i urzędników okazały się niesamowitym sukcesem.</Polish>
 		<Russian>Усилия по сокращению бумажной работы и чиновников в правительстве в державе %s1_civ_adjective обернулись невероятным успехом.</Russian>
+		<Spanish>Los esfuerzos del imperio %s1_civ_adjective por reducir la carga administrativa y el personal en el gobierno han sido un éxito grandioso.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_STRONGER_FITTINGS_1</Tag>
 		<English>%s1_civ_adjective Crossbow units are rumored to be carrying improved weapons. Specifics on how or why their bows are stronger remains a mystery.</English>
 		<French>On raconte que les unités d'arbalétriers %s1:4_civ_adjective portent des armes améliorées. Personne ne sait précisément ni comment ni pourquoi leurs arbalètes sont plus puissantes.</French>
 		<German>%s1:3_civ_adjective Armbrustschützen haben angeblich verbesserte Waffen. Wie oder warum ihre Armbrüste stärker sind, ist unklar.</German>
-		<Italian>Pare che i balestrieri %s1_civ_adjective abbiano armi migliorate. I motivi per cui le loro balestre risultino più forti rimangono un mistero.</Italian>
+		<Italian>Pare che i balestrieri %s1:3_civ_adjective dispongano di armi migliorate. I motivi per cui le loro balestre risultino più forti rimangono un mistero.</Italian>
 		<Spanish>Se rumorea que las unidades de ballesteros %s1:4_civ_adjective llevan armas mejoradas. Sigue siendo un misterio qué es exactamente lo que hace más potentes sus ballestas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_STUCK_IN_SWAMP_1</Tag>
 		<English>A foolish unit of the %s1_civ_adjective empire got lost in vast swamplands. Its gonna take some time for them to recover.</English>
 		<French>Une unité stupide de l'empire %s1_civ_adjective s'est perdue dans les marais. Il leur faudra un peu de temps pour récupérer.</French>
-		<Italian>Una stolta unità dell'Impero %s1_civ_adjective si è persa negli acquitrini. Ci vorrà del tempo per recuperarli.</Italian>
-		<Spanish>Una estúpida unidad del imperio %s1_civ_adjective se ha perdido en un vasto pantano. Le tomará tiempo recuperarse.</Spanish>
+		<Italian>Una sconsiderata unità dell'Impero %s1_civ_adjective si è persa nelle paludi. Ci vorrà del tempo per recuperarli.</Italian>
 		<Polish>Głupia jednostka %s1_civ_adjective zgubiła się na bagnach. Zajmie jej trochę czasu za nim się wydostanie.</Polish>
 		<Russian>Недотепы из воинского отряда %s1_civ_adjective умудрились увязнуть в коварных топях. Им понадобится некоторое время, чтобы выбраться и прийти в себя.</Russian>
+		<Spanish>Una estúpida unidad del imperio %s1_civ_adjective se ha perdido en un vasto pantano. Le tomará tiempo recuperarse.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SUBWAY</Tag>
 		<English>The %s1_civ_adjective metropolis of %s2_city has constructed a mass transit marvel: an underground railroad network. They are calling it the Subway.</English>
 		<French>La métropole %s1:2_civ_adjective de %s2_city a construit une merveille destinée aux transports de masse : un réseau ferré souterrain. Ils appellent ça "le métropolitain".</French>
 		<German>Die %s1:3_civ_adjective Metropole %s2_city hat ein Wunderwerk des Nahverkehrs errichtet: ein unterirdisches Schienennetz, U-Bahn genannt.</German>
-		<Italian>La metropoli %s1_civ_adjective di %s2_city ha costruito una meraviglia per il trasporto di massa: una rete ferroviaria sotterranea. L'hanno chiamata Metropolitana.</Italian>
+		<Italian>La metropoli %s1_civ_adjective di %s2_city ha costruito un capolavoro per il trasporto di massa: una rete ferroviaria sotterranea. L'hanno chiamata "Metropolitana".</Italian>
 		<Spanish>La metrópolis %s1:2_civ_adjective de %s2_city ha construido una maravilla de los transportes públicos: una red subterránea de ferrocarriles. La han llamado "metropolitano" o "metro".</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SUMMER_OF_LOVE</Tag>
 		<English>The Summer of Love has begun in the city of %s2 as the Woodstock Music Festival is held there.</English>
-		<French>L'été de l'Amour a commencé dans la ville de %s2, représenté par le Festival de Musique de Wookstock</French>
-		<Italian>La Summer of Love è iniziata a %s2 dove si tiene il festival di Woodstock.</Italian>
+		<French>L'Été de l'Amour a commencé dans la ville de %s2, représenté par le Festival de Musique de Wookstock</French>
+		<Italian>L'Estate dell'Amore è iniziata a %s2, dove si tiene il festival di Woodstock.</Italian>
 		<Russian>Ëåòî Ëþáâè íà÷àëîñü â ãîðîäå %s2 ãäå ñåé÷àñ ïðîõîäèò Ôåñòèâàëü Âóäñòîê.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_SUPER_VIRUS</Tag>
-		<English>Overzealous hygenic standards in the %s1_civ_adjective empire have lead to the creation of a deadly super-virus, which is laying waste to their citizens!!!</English>
+		<English>Overzealous hygienic standards in the %s1_civ_adjective empire have lead to the creation of a deadly super-virus, which is laying waste to their citizens!!!</English>
 		<French>Des normes hygiéniques extrêmes de %s1_civ_adjective empire ont abouti à la création d'un 'Super-Virus' mortel, have lead to the creation of a deadly super-virus, qui ravage leurs citoyens à présent!!!</French>
-		<Spanish>¡Unos estándares higiénicos demasiado severos en el imperio %s1_civ_adjective han inducido la creación de un supervirus mortal que está arrasando a sus ciudadanos!</Spanish>
+		<Italian>Le norme igieniche troppo zelanti dell'Impero %s1_civ_adjective hanno portato alla creazione di un super-virus letale, che ora sta facendo strage di cittadini!!!</Italian>
 		<Polish>Nadgorliwe standardy higieniczne w imperium %s1_civ_adjective stworzyły śmiertelnego super wirusa, który zabiją ich obywateli!!!</Polish>
 		<Russian>Избыточные санитарные нормы в державе %s1_civ_adjective привели к утечке из лаборатории смертоносного супервируса, унесшего множество людских жизней!!!</Russian>
+		<Spanish>¡Unos estándares higiénicos demasiado severos en el imperio %s1_civ_adjective han inducido la creación de un supervirus mortal que está arrasando a sus ciudadanos!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TANNERY_GLUE</Tag>
 		<English>A master tanner in the %s1_civ_adjective city of %s2_city has found out that leftover leather can be turned into glue and he's now happy to sell this new product to everyone.</English>
 		<French>Un maître tanneur de la ville %s1:2_civ_adjective de %s2_city a réussi à utiliser des restes de cuir pour en faire de la colle et est à présent heureux de vendre ce nouveau produit.</French>
 		<German>Ein Meistergerber in der %s1_civ_adjective Stadt %s2_city has herausgefunden, dass Lederreste in einen Klebstoff umgewandelt werden können. Er freut sich, dieses neue Produkt an jedermann verkaufen zu können.</German>
-		<Italian>Un mastro conciatore nella città %s1:2_civ_adjective di %s2_city ha scoperto che la pelle avanzata dalla conciatura può essere trasformata in colla. Ora è felice di produrre questo nuovo prodotto a tutti quanti.</Italian>
-		<Spanish>Un maestro curtidor de la ciudad %s1:2_civ_adjective de %s2_city ha averiguado que se pueden transformar los restos de cuero en pegamento, y ahora está feliz de vender este nuevo producto a todo el mundo.</Spanish>
+		<Italian>Un mastro conciatore nella città %s1:2_civ_adjective di %s2_city ha scoperto che la pelle avanzata dalla conciatura può essere trasformata in colla. Ora è felice di vendere questo nuovo prodotto a chiunque.</Italian>
 		<Polish>Garbarz w mieście %s2_city należącym do cywilizacji %s1_civ_adjective, odkrył że resztki skóry mogą być przerobione na klej i teraz sprzedaje swój nowy produkt wszystkim chętnym.</Polish>
 		<Russian>%s1_civ_adjective обнаружили новый способ изготовления клея из кожного сырья. По слухам, дубильщики в городе %s2_city готовы продавать новый товар любому желающему.</Russian>
+		<Spanish>Un maestro curtidor de la ciudad %s1:2_civ_adjective de %s2_city ha averiguado que se pueden transformar los restos de cuero en pegamento, y ahora está feliz de vender este nuevo producto a todo el mundo.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TARPIT</Tag>
 		<English>Some units of the %s1_civ_adjective empire got stuck in the tar pit.</English>
-		<French>Des unités de l'empire %s1_civ_adjective ont été pris au piège dans des sables mouvants.</French>
+		<French>Des unités de l'empire %s1_civ_adjective ont été pris au piège dans des fosses de goudron.</French>
+		<Italian>Alcune unità dell'Impero %s1_civ_adjective sono rimaste intrappolate nelle fosse di catrame.</Italian>
 		<Polish>Niektóre jednostki z imperium %s1_civ_adjective utkneły w dołach ze smołą.</Polish>
 		<Russian>Из земель %s1_civ_adjective пришли курьезные слухи о целом воинском отряде, угодившем в смоляную яму.</Russian>
 	</TEXT>
@@ -2451,16 +2456,16 @@
 		<French>Des magistrats ont découvert que l'Empire %s1_civ_adjective a falsifié une partie de ses bilans comptables.</French>
 		<German>Verwaltungsbeamte im %s1_civ_adjective Imperium haben Aufzeichnungen für die Schatzkammer gefälscht.</German>
 		<Italian>I funzionari dell'Impero %s1_civ_adjective hanno falsificato i registri delle tasse.</Italian>
-		<Spanish>Los magistrados del Tribunal en el imperio %s1_civ_adjective han descubierto falsificaciones en los registros del tesoro.</Spanish>
 		<Polish>Dworscy urzędnicy z Imperium %s1_civ_adjective sfałszowali dokumenty skarbowe.</Polish>
 		<Russian>Должностные лица Империи %s1_civ_adjective были уличены в подделке документов.</Russian>
+		<Spanish>Los magistrados del Tribunal en el imperio %s1_civ_adjective han descubierto falsificaciones en los registros del tesoro.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TEA</Tag>
 		<English>%s1_civ_adjective citizens who are socially advanced have adopted imported %s4_civ_adjective tea as their beverage of choice.</English>
 		<French>Les citoyens %s1:2_civ_adjective, qui sont socialement avancés, ont adopté le thé %s4_civ_adjective d'importation comme boisson préférée.</French>
 		<German>%s1:3_civ_adjective Bürger der gehobenen sozialen Schicht trinken nun am liebsten importierten %s4:2_civ_adjective Tee.</German>
-		<Italian>I cittadini %s1_civ_adjective, socialmente avanzati, hanno adottato il tè %s4_civ_adjective d'importazione come bevanda preferita.</Italian>
+		<Italian>I cittadini %s1:3_civ_adjective, socialmente avanzati, hanno adottato il tè %s4_civ_adjective d'importazione come loro bevanda preferita.</Italian>
 		<Spanish>Los ciudadanos %s1:3_civ_adjective más avanzados socialmente han adoptado el té %s4:1_civ_adjective de importación como bebida predilecta.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2468,7 +2473,7 @@
 		<English>A massive barbarian uprising is occurring. The Goths have gathered an army and their axemen seek to plunder civilizations.</English>
 		<French>Un soulèvement massif de barbares est en cours. Les Goths ont rassemblé une armée et leurs soldats avec hache veulent mettre à sac toute civilisation.</French>
 		<German>Es gibt einen Barbarenaufstand. Die Goten haben eine Armee versammelt und ihre Axtkämpfer gieren nach den Schätzen der Zivilisation.</German>
-		<Italian>È in corso una gigantesca rivolta di barbari. I Goti hanno formato un esercito e i loro guerrieri con ascia vogliono distruggere la civiltà.</Italian>
+		<Italian>È in corso una gigantesca rivolta di barbari. I Goti hanno formato un esercito e i loro guerrieri con ascia vogliono saccheggiare le nazioni civilizzate.</Italian>
 		<Spanish>Se está produciendo un levantamiento bárbaro masivo. Los godos han reunido un ejército y sus soldados con hacha pretenden saquear civilizaciones.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2492,17 +2497,17 @@
 		<English>A massive barbarian uprising is occurring. Mullah Omar is leading his Taliban Army out of the lawless zones to capture nearby cities.</English>
 		<French>Un soulèvement massif de barbares est en cours. Le mollah Omar mène sa armée des talibans hors des zones anarchiques dans le but de capturer les villes voisines.</French>
 		<German>Es gibt einen massiven Barbarenaufstand. Mulla Omar führt seine Taliban-Armee aus den gesetzlosen Zonen heraus, um nahe gelegene Städte zu erobern.</German>
-		<Italian>È in corso una gigantesca rivolta di barbari. Il mullah Omar sta conducendo il suo esercito di Talebani dalle terre senza legge per conquistare le città vicine.</Italian>
-		<Spanish>Se está produciendo un levantamiento bárbaro masivo. Mohammed Omar está comandando a su ejército de talibanes fuera de las zonas desgobernadas para capturar las ciudades cercanas.</Spanish>
+		<Italian>È in corso una gigantesca rivolta di barbari. Il mullah Omar sta conducendo il suo esercito di Talebani fuori dalle terre senza legge per conquistare le città vicine.</Italian>
 		<Polish>Nastąpiło masowe powstanie barbarzyńców. Mullah Omar prowadzi swą armię Talibów, aby przejąć kontrolę nad pobliskimi miastami.</Polish>
 		<Russian>Произошло массовое выступление диких душманов! Мулла Омар выводит свою армию талибов из серой зоны с целью захватить близлежащие города.</Russian>
+		<Spanish>Se está produciendo un levantamiento bárbaro masivo. Mohammed Omar está comandando a su ejército de talibanes fuera de las zonas desgobernadas para capturar las ciudades cercanas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_THE_VANDALS</Tag>
 		<English>A massive barbarian uprising is occurring. The Vandals strike out against civilization, seeking to claim its prizes with their swords.</English>
 		<French>Un soulèvement massif de barbares est en cours. Les Vandales attaquent la civilisation et leur dû avec leurs épées.</French>
 		<German>Es gibt einen Barbarenaufstand. Die Wandalen ziehen auf einen Kreuzzug gegen die Zivilisation und fordern die Beute mit dem blanken Schwert ein.</German>
-		<Italian>È in corso una gigantesca rivolta di barbari. I Vandali si scagliano contro la civiltà, cercando di conquistarne i vantaggi con le spade.</Italian>
+		<Italian>È in corso una gigantesca rivolta di barbari. I Vandali si scagliano contro la civiltà, cercando di conquistarne le spoglie con la spada.</Italian>
 		<Spanish>Se está produciendo un levantamiento bárbaro masivo. Los vándalos atacan la civilización y utilizan sus espadas para conseguir su botín.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2510,7 +2515,7 @@
 		<English>A massive barbarian uprising is occurring. The Vedic Aryans seek to plunder the riches of civilization.</English>
 		<French>Un soulèvement massif de barbares est en cours. Les Aryens védiques veulent piller les richesses de la civilisation.</French>
 		<German>Es gibt einen Barbarenaufstand. Die vedischen Arier wollen die Schätze der Zivilisation plündern.</German>
-		<Italian>È in corso una gigantesca rivolta di barbari. Gli Ariani vedici vogliono saccheggiare le ricchezze della civiltà.</Italian>
+		<Italian>È in corso una gigantesca rivolta di barbari. Gli Ariani vedici vogliono saccheggiare le ricchezze delle nazioni civilizzate.</Italian>
 		<Spanish>Se está produciendo un levantamiento bárbaro masivo. Los arios védicos pretenden saquear las riquezas de la civilización.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2518,7 +2523,7 @@
 		<English>Thoroughbred race horses raised by %s1_civ_adjective breeders have generated extra revenue for their treasury.</English>
 		<French>Les chevaux pur-sang des éleveurs %s1:2_civ_adjective ont généré des revenus supplémentaires pour leur trésorerie.</French>
 		<German>Vollblut-Rennpferde von %s1:2_civ_adjective Züchtern bringen zusätzliche Einnahmen.</German>
-		<Italian>I purosangue da corsa degli allevatori %s1_civ_adjective hanno creato ulteriori entrate per il loro tesoro.</Italian>
+		<Italian>I purosangue da corsa degli allevatori %s1:3_civ_adjective hanno generato ulteriori entrate per lo Stato.</Italian>
 		<Spanish>Los caballos de carreras purasangres de los criadores %s1:3_civ_adjective han generado ingresos extra para su tesoro.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2535,16 +2540,16 @@
 		<French>L'Empire tolérant %s1_civ_adjective a réuni beaucoup de personnes issues de différentes influences spirituelles.</French>
 		<German>Das tolerante %s1_civ_adjective Imperium zieht zahlreiche spirituell veranlagte Menschen vom ganzen Erdball an.</German>
 		<Italian>Il tollerante impero %s1_civ_adjective ha riunito molte personalità spirituali da tutto il mondo.</Italian>
-		<Spanish>El tolerante imperio %s1_civ_adjective ha reunido a muchas personalidades del ámbito espiritual de todo el mundo.</Spanish>
 		<Polish>Tolerancyjne Imperium %s1_civ_adjective zebrało wielu uduchowionych mędrców z całego świata.</Polish>
 		<Russian>The tolerant %s1_civ_adjective Empire has drawn many spiritually-minded people together from across the globe.</Russian>
+		<Spanish>El tolerante imperio %s1_civ_adjective ha reunido a muchas personalidades del ámbito espiritual de todo el mundo.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TOO_CLOSE_TO_CALL</Tag>
 		<English>%s1_civ_adjective election results were so close, the courts had to rule on the vote-counting procedures to arrive at an outcome.</English>
 		<French>Les résultats de l'élection %s1:2_civ_adjective étaient si proches que la Justice a dû diriger les procédures de recompte pour arriver à un résultat.</French>
 		<German>Die %s1:2_civ_adjective Wahlergebnisse waren so knapp, dass die Gerichte über die Stimmzählungsverfahren entscheiden mussten, um zu einem Ergebnis zu gelangen.</German>
-		<Italian>I risultati delle elezioni %s1_civ_adjective erano così vicini che le corti hanno dovuto giudicare le procedure di spoglio per ottenere un risultato.</Italian>
+		<Italian>I risultati delle elezioni %s1:4_civ_adjective erano così incerti che i tribunali hanno dovuto pronunciarsi sulle procedure di conteggio dei voti per giungere a un risultato.</Italian>
 		<Spanish>Los resultados de las elecciones %s1:4_civ_adjective han sido tan similares entre sí, que los tribunales han tenido que pronunciarse sobre los procedimientos de recuento de votos para validar uno de los resultados.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2560,7 +2565,7 @@
 		<English>%s1_civ_adjective infrastructure was wiped out by a deadly thunderstorm and the violent twisters it spawned.</English>
 		<French>L'infrastructure %s1:2_civ_adjective a été balayée par une tempête destructrice accompagnée de violentes tornades.</French>
 		<German>Ein Tod bringender Gewittersturm und heftige Tornados haben die %s1:3_civ_adjective Infrastruktur ausgelöscht.</German>
-		<Italian>Un'infrastruttura %s1_civ_adjective è stata spazzata via da una letale tempesta e dai violenti tornado che ha generato.</Italian>
+		<Italian>Un'infrastruttura %s1:2_civ_adjective è stata spazzata via da una letale tempesta e dai violenti tornado che ha generato.</Italian>
 		<Spanish>Las infraestructuras %s1:4_civ_adjective han sido arrasadas por una violenta tormenta y los huracanes que esta generó.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2568,7 +2573,7 @@
 		<English>%s1_civ_adjective Melee units are now deployed with new, larger shields, improving their defense versus Archery units.</English>
 		<French>Les unités de combat rapproché %s1:4_civ_adjective sont à présent déployées avec de nouveaux boucliers plus larges qui améliorent leur défense face aux unités d'archers.</French>
 		<German>%s1:3_civ_adjective Nahkampfeinheiten werden nun mit neuen, größeren Schilden ausgerüstet, die ihre Verteidigung gegen Bogenschützen verbessert.</German>
-		<Italian>Le unità da mischia %s1_civ_adjective ora sono equipaggiate con scudi nuovi e più grandi, che migliorano le loro difese contro le unità di arcieri.</Italian>
+		<Italian>Le unità da mischia %s1:4_civ_adjective ora sono equipaggiate con scudi nuovi e più grandi, che migliorano la loro difesa contro gli arcieri.</Italian>
 		<Spanish>Las unidades de cuerpo a cuerpo %s1:4_civ_adjective ya se han desplegado con nuevos escudos de mayor tamaño, lo que mejora su capacidad defensiva frente a las unidades con armas de proyectil.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2576,10 +2581,10 @@
 		<English>The man who is Tezcatlipoca's likeness has escaped during this year's Toxcatl feast in the %s1_civ_adjective Empire.</English>
 		<French>L'homme qui incarne Tezcatlipoca s'est échappé au cours du festival annuel de Toxcatl de l'empire %s1_civ_adjective.</French>
 		<German>Im %[s1_civ_adjective]en Reich gibt es einen religiösen Skandal, weil das geweihte Opfer vor der heiligen Blutzeremonie entkommen konnte.</German>
-		<Italian>L'uomo che ha le sembianze di Tezcatlipoca è scappato durante la celebrazione di quest'anno di Toxcatl nell'Impero %s1_civ_adjective</Italian>
-		<Spanish>El hombre favorito de Tezcatlipoca ha huido durante el festival Toxcatl en el imperio %s1_civ_adjective.</Spanish>
+		<Italian>L'uomo che ha le sembianze di Tezcatlipoca è scappato durante la celebrazione di Toxcatl di quest'anno nell'Impero %s1_civ_adjective.</Italian>
 		<Polish>Człowiek, który był wcieleniem Tezcatlipoca uciekł z tegorocznej uczty Toxcatl w Imperium %s1_civ_adjective.</Polish>
 		<Russian>Человек в костюме Тескатлипоки сбежал во время ежегодного праздника Токстатль в Империи %s1_civ_adjective.</Russian>
+		<Spanish>El hombre favorito de Tezcatlipoca ha huido durante el festival Toxcatl en el imperio %s1_civ_adjective.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TRADE_FOUNDED_1</Tag>
@@ -2587,9 +2592,9 @@
 		<French>Les notions d'échange et de commerce se répandent. Les premières caravanes commerciales sont maintenant à la recherche de nouvelles routes du commerce.</French>
 		<German>Das Konzept des Handels verbreitet sich. Die ersten Handelskaravanen suchen jetzt nach ergiebigen Handelswegen.</German>
 		<Italian>Si sta diffondendo il concetto del commercio. Le prime carovane commerciali stanno ora cercando rotte commerciali redditizie.</Italian>
-		<Spanish>Se está difundiendo el concepto de comercio. Las primeras Caravanas comerciales están ahora buscando nuevas rutas comerciales rentables.</Spanish>
 		<Polish>Koncepcja wymiany handlowej szybko się rozprzestrzenia. Pierwsze karawany handlowe poszukują już dochodowych szlaków kupieckich.</Polish>
 		<Russian>Concept of trading is spreading. First Trade Caravans are now seeking valuable trade routes.</Russian>
+		<Spanish>Se está difundiendo el concepto de comercio. Las primeras Caravanas comerciales están ahora buscando nuevas rutas comerciales rentables.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TREASURY_PLUNDERED_1</Tag>
