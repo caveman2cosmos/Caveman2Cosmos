@@ -13299,9 +13299,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_MILITIA_EMERGED</Tag>
-		<English>City militia has emerged! Resistance:</English>
-		<French>Des habitants ont pris les armes et se sont constitués en Milice ! Résistance :</French>
-		<Russian>Поднято по тревоге городское ополчение! Сопротивление:</Russian>
+		<English>%s1_CivAdj influence in the city (%d2.%d3%% of %d4%% needed) is insufficient to stop organization of local militia!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_NATIONALITY</Tag>

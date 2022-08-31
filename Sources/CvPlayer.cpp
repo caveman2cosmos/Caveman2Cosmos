@@ -3330,7 +3330,7 @@ void CvPlayer::setName(std::wstring szNewValue)
 
 const wchar_t* CvPlayer::getNameKey() const
 {
-/* dynamic civ names
+	/* dynamic civ names
 	if (GC.getInitCore().getLeaderNameKey(getID()).empty() || (GC.getGame().isMPOption(MPOPTION_ANONYMOUS) && isAlive()))
 	{
 		return GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide();
@@ -3339,7 +3339,7 @@ const wchar_t* CvPlayer::getNameKey() const
 	{
 		return GC.getInitCore().getLeaderNameKey(getID());
 	}
-*/
+	*/
 	if (!m_szName.empty())
 	{
 		return m_szName;
@@ -3354,7 +3354,7 @@ const wchar_t* CvPlayer::getNameKey() const
 
 const wchar_t* CvPlayer::getCivilizationDescription(uint uiForm) const
 {
-/* dynamic civ names
+	/* dynamic civ names
 	if (GC.getInitCore().getCivDescription(getID(), uiForm).empty())
 	{
 		return GC.getCivilizationInfo(getCivilizationType()).getDescription(uiForm);
@@ -3363,7 +3363,7 @@ const wchar_t* CvPlayer::getCivilizationDescription(uint uiForm) const
 	{
 		return GC.getInitCore().getCivDescription(getID(), uiForm);
 	}
-*/
+	*/
 	if( !(m_szCivDesc.empty()) )
 	{
 		return m_szCivDesc;
@@ -3396,7 +3396,7 @@ void CvPlayer::setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::
 
 const wchar_t* CvPlayer::getCivilizationDescriptionKey() const
 {
-/* dynamic civ names
+	/* dynamic civ names
 	if (GC.getInitCore().getCivDescriptionKey(getID()).empty())
 	{
 		return GC.getCivilizationInfo(getCivilizationType()).getTextKeyWide();
@@ -3405,7 +3405,7 @@ const wchar_t* CvPlayer::getCivilizationDescriptionKey() const
 	{
 		return GC.getInitCore().getCivDescriptionKey(getID());
 	}
-*/
+	*/
 	if( !(m_szCivDesc.empty()) )
 	{
 		return m_szCivDesc;
@@ -3423,7 +3423,7 @@ const wchar_t* CvPlayer::getCivilizationDescriptionKey() const
 
 const wchar_t* CvPlayer::getCivilizationShortDescription(uint uiForm) const
 {
-/* dynamic civ names
+	/* dynamic civ names
 	if (GC.getInitCore().getCivShortDesc(getID(), uiForm).empty())
 	{
 		return GC.getCivilizationInfo(getCivilizationType()).getShortDescription(uiForm);
@@ -3432,7 +3432,7 @@ const wchar_t* CvPlayer::getCivilizationShortDescription(uint uiForm) const
 	{
 		return GC.getInitCore().getCivShortDesc(getID(), uiForm);
 	}
-*/
+	*/
 	if( !(m_szCivShort.empty()) )
 	{
 		return m_szCivShort;
@@ -3450,7 +3450,7 @@ const wchar_t* CvPlayer::getCivilizationShortDescription(uint uiForm) const
 
 const wchar_t* CvPlayer::getCivilizationShortDescriptionKey() const
 {
-/* dynamic civ names
+	/* dynamic civ names
 	if (GC.getInitCore().getCivShortDescKey(getID()).empty())
 	{
 		return GC.getCivilizationInfo(getCivilizationType()).getShortDescriptionKey();
@@ -3459,7 +3459,7 @@ const wchar_t* CvPlayer::getCivilizationShortDescriptionKey() const
 	{
 		return GC.getInitCore().getCivShortDescKey(getID());
 	}
-*/
+	*/
 	if( !(m_szCivShort.empty()) )
 	{
 		return m_szCivShort;
@@ -3477,7 +3477,7 @@ const wchar_t* CvPlayer::getCivilizationShortDescriptionKey() const
 
 const wchar_t* CvPlayer::getCivilizationAdjective(uint uiForm) const
 {
-/* dynamic civ names
+	/* dynamic civ names
 	if (GC.getInitCore().getCivAdjective(getID(), uiForm).empty())
 	{
 		return GC.getCivilizationInfo(getCivilizationType()).getAdjective(uiForm);
@@ -3486,7 +3486,7 @@ const wchar_t* CvPlayer::getCivilizationAdjective(uint uiForm) const
 	{
 		return GC.getInitCore().getCivAdjective(getID(), uiForm);
 	}
-*/
+	*/
 	if( !(m_szCivAdj.empty()) )
 	{
 		return m_szCivAdj;
@@ -3503,7 +3503,7 @@ const wchar_t* CvPlayer::getCivilizationAdjective(uint uiForm) const
 
 const wchar_t* CvPlayer::getCivilizationAdjectiveKey() const
 {
-/* dynamic civ names
+	/* dynamic civ names
 	if (GC.getInitCore().getCivAdjectiveKey(getID()).empty())
 	{
 		return GC.getCivilizationInfo(getCivilizationType()).getAdjectiveKey();
@@ -3512,7 +3512,7 @@ const wchar_t* CvPlayer::getCivilizationAdjectiveKey() const
 	{
 		return GC.getInitCore().getCivAdjectiveKey(getID());
 	}
-*/
+	*/
 	if( !(m_szCivAdj.empty()) )
 	{
 		return m_szCivAdj;

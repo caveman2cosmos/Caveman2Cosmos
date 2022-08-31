@@ -7972,12 +7972,14 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 }
 
 
-void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate)
+void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate, bool bDoMinAdjust)
+// bDoMinAdjust defaults true; use false for things that may want small culture change such as IDW
 {
 	if (0 != iChange)
 	{
 		// Lots of things put 1 culture on a tile to mark as claimed; adjust above threshold if so.
-		if (iChange > 0 && iChange < minimumNonDecayCulture()) iChange = minimumNonDecayCulture(); 
+		if (bDoMinAdjust && iChange > 0 && iChange < minimumNonDecayCulture())
+			iChange = minimumNonDecayCulture();
 		const int iNonNegativeCulture = std::max(getCulture(eIndex) + iChange, 0);
 		setCulture(eIndex, iNonNegativeCulture, bUpdate, true);
 	}

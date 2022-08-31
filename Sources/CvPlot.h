@@ -722,7 +722,7 @@ public:
 	int calculateCulturePercent(PlayerTypes eIndex, int iExtraDigits = 0) const;
 	int calculateTeamCulturePercent(TeamTypes eIndex) const;
 	void setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bUpdatePlotGroups);
-	void changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate);
+	void changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate, bool bDoMinAdjust = true);
 	int countNumAirUnits(TeamTypes eTeam) const;
 	int countNumAirUnitCargoVolume(TeamTypes eTeam) const;
 	int airUnitSpaceAvailable(TeamTypes eTeam) const;
