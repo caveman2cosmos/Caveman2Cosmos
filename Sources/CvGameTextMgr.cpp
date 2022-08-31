@@ -20904,7 +20904,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				setBuildingActualEffects(szBuffer, szStart, eBuilding, pCity);
 			}
 		}
-// BUG - Building Actual Effects - end
+	// BUG - Building Actual Effects - end
 	}
 
 	if (bCivilopediaText)

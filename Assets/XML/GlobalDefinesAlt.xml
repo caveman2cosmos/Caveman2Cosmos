@@ -43,7 +43,7 @@
 	<Define>
 		<DefineName>IDW_BASE_COMBAT_INFLUENCE</DefineName>
 		<!-- Higher value: more influence from combat victory -->
-		<iDefineIntVal>320</iDefineIntVal>
+		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_NO_CITY_DEFENDER_MULTIPLIER</DefineName>
@@ -68,22 +68,22 @@
 	<Define>
 		<DefineName>IDW_WINNER_PLOT_MULTIPLIER</DefineName>
 		<!-- By default: the same influence mulitiplier in attacker and defended plot -->
-		<iDefineIntVal>75</iDefineIntVal>
+		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_LOSER_PLOT_MULTIPLIER</DefineName>
 		<!-- By default: the same influence mulitiplier in attacker and defended plot -->
-		<iDefineIntVal>25</iDefineIntVal>
+		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_EMERGENCY_DRAFT_ENABLED</DefineName>
 		<!-- Enable/Disable militia "auto-draft"; works only if IDW_ENABLED = 1 -->
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_EMERGENCY_DRAFT_MIN_POPULATION</DefineName>
 		<!-- Minimal city size to draft militia -->
-		<iDefineIntVal>5</iDefineIntVal>
+		<iDefineIntVal>6</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_EMERGENCY_DRAFT_STRENGTH</DefineName>
@@ -94,6 +94,11 @@
 		<DefineName>IDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER</DefineName>
 		<!-- Draft anger percentage from militia -->
 		<iDefineIntVal>50</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>IDW_EMERGENCY_DRAFT_CULTURE_THRESHOLD</DefineName>
+		<!-- If attacker has above this much % culture in city, defender cannot emergency draft  -->
+		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_NO_BARBARIAN_INFLUENCE</DefineName>

@@ -19414,10 +19414,6 @@ void CvCity::getBuildQueue(std::vector<std::string>& astrQueue) const
 // ------ BEGIN InfluenceDrivenWar -------------------------------
 void CvCity::emergencyConscript()
 {
-	if (getPopulation() < GC.getIDW_EMERGENCY_DRAFT_MIN_POPULATION())
-	{
-		return;
-	}
 	if (getConscriptUnit() == NO_UNIT)
 	{
 		return;

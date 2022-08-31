@@ -3748,7 +3748,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				GET_TEAM(pDefender->getTeam()).AI_changeWarSuccess(getTeam(), GC.getDefineINT("WAR_SUCCESS_DEFENDING"));
 			}
 
-			const float fInfluenceRatio = GC.isIDW_ENABLED() ? pDefender->doVictoryInfluence(this, false, false) : 0.0f;
+			const int iInfluenceRatio = GC.isIDW_ENABLED() ? pDefender->doVictoryInfluence(this, false, false) : 0;
 
 			if (bHuman)
 			{
@@ -3768,9 +3768,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 				else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DIED_ATTACKING", getNameKey(), pDefender->getNameKey());
 
-				if (fInfluenceRatio > 0.0f)
+				if (iInfluenceRatio > 0)
 				{
-					szBuffer = szBuffer + CvString::format(" %s: -%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), fInfluenceRatio);
+					szBuffer = szBuffer + CvString::format(" %s: -%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), ((float)iInfluenceRatio)/100);
 				}
 				AddDLLMessage(
 					getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,
@@ -3800,9 +3800,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 				else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_KILLED_ENEMY_UNIT_HIDDEN", pDefender->getNameKey(), getNameKey());
 
-				if (fInfluenceRatio > 0.0f)
+				if (iInfluenceRatio > 0)
 				{
-					szBuffer = szBuffer + CvString::format(" %s: +%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), fInfluenceRatio);
+					szBuffer = szBuffer + CvString::format(" %s: +%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), ((float)iInfluenceRatio)/100);
 				}
 				AddDLLMessage(
 					pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,
@@ -4075,7 +4075,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				GET_TEAM(getTeam()).AI_changeWarSuccess(pDefender->getTeam(), GC.getDefineINT("WAR_SUCCESS_ATTACKING"));
 			}
 
-			const float fInfluenceRatio = GC.isIDW_ENABLED() ? doVictoryInfluence(pDefender, true, false) : 0.0f;
+			const int iInfluenceRatio = GC.isIDW_ENABLED() ? doVictoryInfluence(pDefender, true, false) : 0;
 
 			if (bHuman)
 			{
@@ -4103,9 +4103,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 				else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_DESTROYED_ENEMY", getNameKey(), pDefender->getNameKey());
 
-				if (fInfluenceRatio > 0.0f)
+				if (iInfluenceRatio > 0)
 				{
-					szBuffer = szBuffer + CvString::format(" %s: +%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), fInfluenceRatio);
+					szBuffer = szBuffer + CvString::format(" %s: +%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), ((float)iInfluenceRatio)/100);
 				}
 				AddDLLMessage(
 					getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,
@@ -4151,9 +4151,9 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 				else szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED", pDefender->getNameKey(), getNameKey(), getVisualCivAdjective(pDefender->getTeam()));
 
-				if (fInfluenceRatio > 0.0f)
+				if (iInfluenceRatio > 0)
 				{
-					szBuffer = szBuffer + CvString::format(" %s: -%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), fInfluenceRatio);
+					szBuffer = szBuffer + CvString::format(" %s: -%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), ((float)iInfluenceRatio)/100);
 				}
 				AddDLLMessage(
 					pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer,
@@ -9237,13 +9237,13 @@ bool CvUnit::pillage()
 
 			if (iPillageGold > 0)
 			{
-				const float fInfluenceRatio =
+				const int iInfluenceRatio =
 				(
 					GC.isIDW_ENABLED() && GC.isIDW_PILLAGE_INFLUENCE_ENABLED() && atWar(pPlot->getTeam(), getTeam())
 					?
 					doPillageInfluence()
 					:
-					0.0f
+					0
 				);
 				iPillageGold += iPillageGold * getPillageChange() / 100;
 				player.changeGold(iPillageGold);
@@ -9349,9 +9349,9 @@ bool CvUnit::pillage()
 				{
 					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_IMP_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getTextKeyWide(), getNameKey(), getVisualCivAdjective(pPlot->getTeam()));
 
-					if (fInfluenceRatio > 0.0f)
+					if (iInfluenceRatio > 0)
 					{
-						szBuffer = szBuffer + CvString::format(" %s: -%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), fInfluenceRatio);
+						szBuffer = szBuffer + CvString::format(" %s: -%.1f%%", gDLL->getText("TXT_KEY_TILE_INFLUENCE").GetCString(), ((float)iInfluenceRatio)/100);
 					}
 					AddDLLMessage(
 						ePlayerPillaged, false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
@@ -27622,48 +27622,45 @@ bool CvUnit::fighterEngage(int iX, int iY)
 // ! Dale - FE: Fighters
 
 
-/************************************************************************************************/
-/* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
-/*                                                                                              */
-/* Original Author Moctezuma              Start                                                 */
-/************************************************************************************************/
+// IDW start
 // unit influences combat area after victory
 // returns influence % in defended plot
-float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal)
+// also handles emergency drafting???
+int CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal)
 {
 	PROFILE_FUNC();
 
 	if (!pLoserUnit->canDefend())
 	{
-		return 0.0f; // no influence from worker capture
+		return 0; // no influence from worker capture
 	}
 	if (GET_PLAYER(pLoserUnit->getOwner()).hasFixedBorders())
 	{
-		return 0.0f;
+		return 0;
 	}
 	if (plot()->getWorkingCity() != NULL && plot()->getWorkingCity()->isProtectedCulture())
 	{
-		return 0.0f;
+		return 0;
 	}
 	if (pLoserUnit->plot()->getWorkingCity() != NULL && pLoserUnit->plot()->getWorkingCity()->isProtectedCulture())
 	{
-		return 0.0f;
+		return 0;
 	}
 	if (isAnimal() || pLoserUnit->isAnimal())
 	{
-		return 0.0f;
+		return 0;
 	}
 	if (isAlwaysHostile(plot()) || pLoserUnit->isAlwaysHostile(pLoserUnit->plot()))
 	{
-		return 0.0f;
+		return 0;
 	}
 	if (GC.isIDW_NO_BARBARIAN_INFLUENCE() && (isHominid() || pLoserUnit->isHominid()))
 	{
-		return 0.0f;
+		return 0;
 	}
 	if (GC.isIDW_NO_NAVAL_INFLUENCE() && DOMAIN_SEA == getDomainType())
 	{
-		return 0.0f;
+		return 0;
 	}
 
 	CvPlot* pWinnerPlot = plot();
@@ -27682,32 +27679,37 @@ float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWith
 	}
 	if (pLoserPlot->isEnemyCity(*this, true)) // city combat
 	{
+		const CvCity* pLoserCity = pLoserPlot->getPlotCity();
 		int iDefenders = pLoserPlot->getNumVisibleEnemyDefenders(this);
+		// Couldn't figure out how to count leading zeroes for ghetto log2(city pop)
+		// int iEmergencyDefenderLimit = 15 - countl_zero((uint16_t)(pLoserPlot->getPlotCity()->getPopulation()));
+		int iEmergencyDefenderLimit = 2 + intSqrt((uint)(pLoserCity->getPopulation())) / 2;
+		logging::logMsg("Test.log", "Emergency def limit is %d", iEmergencyDefenderLimit);
 
-		// Hardcoded 4 is weird. Do log base 2 (cityPop) + 1. Counting position of highest bit is integer log 2 math, no floats.
-		if (iDefenders < 4 && GC.isIDW_EMERGENCY_DRAFT_ENABLED())
+		// if attacker culture has not yet surpassed threshold & defender can still draft,
+		// city is not captured yet but emergency militia is drafted
+		if (GC.isIDW_EMERGENCY_DRAFT_ENABLED() && iDefenders < iEmergencyDefenderLimit)
 		{
-			const int iDefenderCulture = pLoserPlot->getCulture(pLoserUnit->getOwner());
-			const int iAttackerCulture = pLoserPlot->getCulture(getOwner());
+			const int iAttackerCulturePercent = pLoserPlot->calculateCulturePercent(getOwner());
 
-			if (iDefenderCulture >= iAttackerCulture * 2)
+			if (iAttackerCulturePercent < GC.getIDW_EMERGENCY_DRAFT_CULTURE_THRESHOLD()
+				&& pLoserCity->getPopulation() >= GC.getIDW_EMERGENCY_DRAFT_MIN_POPULATION())
 			{
-				// if defender culture in city's central tile is still higher then atacker culture
-				// -> city is not captured yet but emergency militia is drafted
 				pLoserPlot->getPlotCity()->emergencyConscript();
+
 				iDefenders++;
 
-				// calculate city resistence % (to be displayed in game log)
-				const float fResistence = (iDefenderCulture-iAttackerCulture) * 100.0f / (2 * pDefenderPlot->countTotalCulture());
-				{
-					CvWString szResistence;
-					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_MILITIA_EMERGED");
-					szResistence.Format(L" %.1f%%", fResistence);
-					szBuffer += szResistence;
-					//szBuffer.Format(L"City militia has emerged! Resistance: %.1f%%", fResistence);
-					AddDLLMessage(pLoserUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pLoserPlot->getX(), pLoserPlot->getY(), true, true);
-					AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pLoserPlot->getX(), pLoserPlot->getY());
-				}
+				// // calculate city resistence % (to be displayed in game log)
+				// const float fResistence = (iDefenderCulture-iAttackerCulture) * 100.0f / (2 * pDefenderPlot->countTotalCulture());
+				// {
+				// 	CvWString szResistence;
+				// 	CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_MILITIA_EMERGED");
+				// 	szResistence.Format(L" %.1f%%", fResistence);
+				// 	szBuffer += szResistence;
+				// 	//szBuffer.Format(L"City militia has emerged! Resistance: %.1f%%", fResistence);
+				// 	AddDLLMessage(pLoserUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_GREEN(), pLoserPlot->getX(), pLoserPlot->getY(), true, true);
+				// 	AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(), GC.getCOLOR_RED(), pLoserPlot->getX(), pLoserPlot->getY());
+				// }
 			}
 		}
 		if (iDefenders == 0) // City Capture
@@ -27742,9 +27744,9 @@ float CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWith
 
 	if (iTotalCulture > 0)
 	{
-		return (pDefenderPlot->getCulture(getOwner()) - iWinnerCultureBefore) * 100.0f / iTotalCulture;
+		return (pDefenderPlot->getCulture(getOwner()) - iWinnerCultureBefore) * 100 / iTotalCulture;
 	}
-    return 0.0f;
+    return 0;
 }
 
 // unit influences given plot and surounding area i.e. transfers culture from target civ to unit's owner
@@ -27821,9 +27823,7 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlaye
 					}
 
 					if (iCultureTransfer == iTargetCulture
-					&& (pLoopPlot->isActsAsCity() // fort, must not lose all culture when it may still be garrisoned
-					// plot without city can't lose the last point of culture if its owner has fixed borders, otherwise it'd flip
-					|| pLoopPlot->getPlotCity() == NULL && GET_PLAYER(eTargetPlayer).hasFixedBorders()))
+					&& pLoopPlot->isActsAsCity()) // fort, must not lose all culture when it may still be garrisoned)
 					{
 						iCultureTransfer--;
 					}
@@ -27844,30 +27844,30 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlaye
 
 // unit influences current tile via pillaging
 // returns influence % in current plot
-float CvUnit::doPillageInfluence()
+int CvUnit::doPillageInfluence()
 {
 	if (isAnimal() || isHiddenNationality())
 	{
-		return 0.0f;
+		return 0;
 	}
 	if (isHominid() && GC.isIDW_NO_BARBARIAN_INFLUENCE())
 	{
-		return 0.0f;
+		return 0;
 	}
 	if (DOMAIN_SEA == getDomainType() && GC.isIDW_NO_NAVAL_INFLUENCE())
 	{
-		return 0.0f;
+		return 0;
 	}
 
 	CvPlot* pPlot = plot();
 	if (pPlot == NULL)
 	{
 		FErrorMsg("pPlot == NULL; should not happen");
-		return 0.0f;
+		return 0;
 	}
 	if (pPlot->getWorkingCity() != NULL && pPlot->getWorkingCity()->isProtectedCulture())
 	{
-		return 0.0f;
+		return 0;
 	}
 
 	const PlayerTypes eTargetPlayer = pPlot->getOwner();
@@ -27875,7 +27875,7 @@ float CvUnit::doPillageInfluence()
 	if (iTargetCulture < 1)
 	{
 		FErrorMsg("iTargetCulture < 1; should not happen");
-		return 0.0f;
+		return 0;
 	}
 	int iCultureTransfer = GC.getIDW_BASE_PILLAGE_INFLUENCE() * intSqrt(iTargetCulture) / 100;
 	if (iCultureTransfer < 1)
@@ -27884,11 +27884,6 @@ float CvUnit::doPillageInfluence()
 	if (iTargetCulture <= iCultureTransfer)
 	{
 		iCultureTransfer = iTargetCulture;
-		// plot can't lose the last point of culture if its owner has fixed borders, otherwise it'd flip
-		if (GET_PLAYER(eTargetPlayer).hasFixedBorders())
-		{
-			iCultureTransfer--;
-		}
 	}
 
 	if (iCultureTransfer > 0)
@@ -27899,9 +27894,9 @@ float CvUnit::doPillageInfluence()
 		pPlot->changeCulture(getOwner(), iCultureTransfer, true);
 
 		// calculate influence % in pillaged plot (to be displayed in game log)
-		return (pPlot->getCulture(getOwner()) - iOurCultureBefore) * 100.0f / pPlot->countTotalCulture();
+		return (pPlot->getCulture(getOwner()) - iOurCultureBefore) * 100 / pPlot->countTotalCulture();
 	}
-	return 0.0f;
+	return 0;
 }
 // ------ END InfluenceDrivenWar ---------------------------------
 
