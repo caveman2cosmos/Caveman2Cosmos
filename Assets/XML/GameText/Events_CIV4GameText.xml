@@ -2936,9 +2936,9 @@
 		<French>Vous devez construire assez de centrales de production d'électricité de type: -- [COLOR_BUILDING_TEXT]Centrales hydro-électriques[COLOR_REVERT] et [COLOR_BUILDING_TEXT]Centrales Nucléaires[COLOR_REVERT] -- pour réduire la pollution et notre dépendance à légard les combustibles fossiles.</French>
 		<German>Sie haben nun die Aufgabe, genügend kleine Kraftwerke zu errichten -- [COLOR_BUILDING_TEXT]Wasserkraftwerke[COLOR_REVERT] und [COLOR_BUILDING_TEXT]Kernkraftwerke[COLOR_REVERT] -- um die Umweltverschmutzung und unsere Abhängigkeit von fossilen Brennstoffen zu verringern.</German>
 		<Italian>Devi costruire abbastanza centrali elettriche su piccola scala ([COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] e [COLOR_BUILDING_TEXT]Centrali nucleari[COLOR_REVERT]) per ridurre sia l'inquinamento che la nostra dipendenza dai combustibili fossili.</Italian>
-		<Spanish>Os designo para construir suficientes centrales de generación de energía a pequeña escala ([COLOR_BUILDING_TEXT]Centrales hidroeléctricas[COLOR_REVERT] y [COLOR_BUILDING_TEXT]Centrales nucleares[COLOR_REVERT]) para reducir tanto la contaminación como nuestra dependencia de los combustibles fósiles.</Spanish>
 		<Polish>Zlecono ci budowę takiej ilości małych elektrowni -- [COLOR_BUILDING_TEXT]Elektrowni Wodnych[COLOR_REVERT] oraz [COLOR_BUILDING_TEXT]Elektrowni Nuklearnych[COLOR_REVERT] –- aby ograniczyć emisję zanieczyszczeń oraz uniezależnić się od paliw kopalnych.</Polish>
 		<Russian>Вам поставлена задача построить достаточно малых электростанций. -- [COLOR_BUILDING_TEXT]ГЭС[COLOR_REVERT] и [COLOR_BUILDING_TEXT]АЭС[COLOR_REVERT] -- для сокращения вредных выбросов, так и нашей зависимости от ископаемого топлива.</Russian>
+		<Spanish>Os designo para construir suficientes centrales de generación de energía a pequeña escala ([COLOR_BUILDING_TEXT]Centrales hidroeléctricas[COLOR_REVERT] y [COLOR_BUILDING_TEXT]Centrales nucleares[COLOR_REVERT]) para reducir tanto la contaminación como nuestra dependencia de los combustibles fósiles.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ALTERNATIVE_ENERGY_4_HELP</Tag>
@@ -2946,9 +2946,9 @@
 		<French>[ICON_BULLET]Requiert d'avoir adopté la doctrine [COLOR_POSITIVE_TEXT]Environnementalisme[COLOR_REVERT].</French>
 		<German>[ICON_BULLET]Muß z.Z. die ökonomische Gesellschaftsform [COLOR_POSITIVE_TEXT]Umweltschutz[COLOR_REVERT] verwenden.</German>
 		<Italian>[ICON_BULLET]La forma di governo [COLOR_POSITIVE_TEXT]Verde[COLOR_REVERT] deve essere attiva.</Italian>
-		<Spanish>[ICON_BULLET]Requiere tener el principio [COLOR_POSITIVE_TEXT]Ecologismo[COLOR_REVERT] activo</Spanish>
 		<Polish>[ICON_BULLET]Musisz opierać się na następującej doktrynie ekonomicznej: [COLOR_POSITIVE_TEXT]Ochrona Środowiska[COLOR_REVERT].</Polish>
 		<Russian>[ICON_BULLET]Вы должны сделать [COLOR_POSITIVE_TEXT]Охрану природы[COLOR_REVERT] активной экономической парадигмой.</Russian>
+		<Spanish>[ICON_BULLET]Requiere tener el principio [COLOR_POSITIVE_TEXT]Ecologismo[COLOR_REVERT] activo</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ALTERNATIVE_ENERGY_DONE_1</Tag>
@@ -2956,9 +2956,9 @@
 		<French>Employer notre compétence à la production d'électricité pour augmenter la productivité dans le nos[COLOR_BUILDING_TEXT]Usines[COLOR_REVERT].</French>
 		<German>Verwenden Sie unsere Erfahrung in der Stromerzeugung, um die Produktivität unserer [COLOR_BUILDING_TEXT]Fabriken[COLOR_REVERT] zu erhöhen.</German>
 		<Italian>Usa la nostra abilità nella produzione di energia per aumentare il rendimento delle nostre [COLOR_BUILDING_TEXT]Fabbriche[COLOR_REVERT].</Italian>
-		<Spanish>Utilizar nuestras técnicas de generación de energía para aumentar la productividad de nuestras [COLOR_BUILDING_TEXT]Fábricas[COLOR_REVERT].</Spanish>
 		<Polish>Wykorzystaj nasze umiejętności w produkcji energii, aby zwiększyć wydajność naszych [COLOR_BUILDING_TEXT]Fabryk[COLOR_REVERT].</Polish>
 		<Russian>Используйте наши достижения в производстве электроэнергии для повышения производительности наших [COLOR_BUILDING_TEXT]Фабрик[COLOR_REVERT].</Russian>
+		<Spanish>Utilizar nuestras técnicas de generación de energía para aumentar la productividad de nuestras [COLOR_BUILDING_TEXT]Fábricas[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ALTERNATIVE_ENERGY_DONE_2</Tag>
@@ -2966,46 +2966,46 @@
 		<French>Vendre le surplus d'énergie développée pas nos [COLOR_BUILDING_TEXT]Centrales hydro-électriques[COLOR_REVERT] pour faire des bénéfices.</French>
 		<German>Verkaufen Sie die überschüssige Energie, die in unseren [COLOR_BUILDING_TEXT]Wasserkraftwerken[COLOR_REVERT] erzeugt wird mit Profit.</German>
 		<Italian>Vendi l'elettricità prodotta in eccesso dalle nostre [COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] per generare ulteriori profitti.</Italian>
-		<Spanish>Vender el excedente de energía generado en nuestras [COLOR_BUILDING_TEXT]Centrales hidroeléctricas[COLOR_REVERT] para obtener beneficios.</Spanish>
 		<Polish>Sprzedaj nadwyżki energii wygenerowane przez nasze [COLOR_BUILDING_TEXT]Elektrownie Wodne[COLOR_REVERT].</Polish>
 		<Russian>Продавайте излишки электроэнергии, произведенную на наших [COLOR_BUILDING_TEXT]ГЭС[COLOR_REVERT], для получения прибыли.</Russian>
+		<Spanish>Vender el excedente de energía generado en nuestras [COLOR_BUILDING_TEXT]Centrales hidroeléctricas[COLOR_REVERT] para obtener beneficios.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ALTERNATIVE_ENERGY_DONE_3</Tag>
 		<English>Sell the excess power generated at our [COLOR_BUILDING_TEXT]Nuclear Plants[COLOR_REVERT] for a profit.</English>
 		<French>Vendre le surplus d'énergie développée par nos [COLOR_BUILDING_TEXT]Centrales Nucléaires[COLOR_REVERT] pour faire des bénéfices.</French>
 		<German>Verkaufen Sie die überschüssige Energie, die in unseren [COLOR_BUILDING_TEXT]Kernkraftwerken[COLOR_REVERT] erzeugt wird mit Profit.</German>
-		<Italian>Vendi l'elettricità prodotta in eccesso dalle nostre [COLOR_BUILDING_TEXT]Centrali Nucleari[COLOR_REVERT] per un profitto.</Italian>
-		<Spanish>Vender el excedente de energía generado en nuestras [COLOR_BUILDING_TEXT]Centrales nucleares[COLOR_REVERT] para obtener beneficios.</Spanish>
+		<Italian>Vendi l'elettricità prodotta in eccesso dalle nostre [COLOR_BUILDING_TEXT]Centrali nucleari[COLOR_REVERT] per generare ulteriori profitti.</Italian>
 		<Polish>Sprzedaj nadwyżki energii wygenerowane przez nasze [COLOR_BUILDING_TEXT]Elektrownie Nuklearne[COLOR_REVERT].</Polish>
 		<Russian>Продавайте излишки электроэнергии, произведенную на наших [COLOR_BUILDING_TEXT]АЭС[COLOR_REVERT], для получения прибыли.</Russian>
+		<Spanish>Vender el excedente de energía generado en nuestras [COLOR_BUILDING_TEXT]Centrales nucleares[COLOR_REVERT] para obtener beneficios.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ALTERNATIVE_ENERGY_DONE_4</Tag>
 		<English>Use the knowledge gained from this project to improve environmental conditions at our [COLOR_BUILDING_TEXT]Factories[COLOR_REVERT].</English>
 		<French>Employer la connaissance gagnée par ce projet pour améliorer des conditions environnementales de nos [COLOR_BUILDING_TEXT]Usines[COLOR_REVERT].</French>
 		<German>Verwenden Sie Kenntnisse aus diesem, um die Umweltbedingungen in unseren [COLOR_BUILDING_TEXT]Fabriken[COLOR_REVERT] zu verbessern.</German>
-		<Italian>Usa la conoscenza guadagnata da questo progetto per migliorare le condizioni ambientali nelle nostre [COLOR_BUILDING_TEXT]Fabbriche[COLOR_REVERT].</Italian>
-		<Spanish>Utilizar el conocimiento adquirido con este proyecto para mejorar las condiciones medioambientales de nuestras [COLOR_BUILDING_TEXT]Fábricas[COLOR_REVERT].</Spanish>
+		<Italian>Usa le conoscenze acquisite da questo progetto per migliorare le condizioni ambientali nelle nostre [COLOR_BUILDING_TEXT]Fabbriche[COLOR_REVERT].</Italian>
 		<Polish>Wykorzystaj wiedzę zdobytą podczas prac nad projektem aby zmniejszyć szkodliwe oddziaływanie naszych [COLOR_BUILDING_TEXT]Fabryk[COLOR_REVERT] na środowisko.</Polish>
 		<Russian>Используйте знания, полученные в ходе этого проекта, для совершенствования природосберегающих технологий на наших [COLOR_BUILDING_TEXT]Фабриках[COLOR_REVERT].</Russian>
+		<Spanish>Utilizar el conocimiento adquirido con este proyecto para mejorar las condiciones medioambientales de nuestras [COLOR_BUILDING_TEXT]Fábricas[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ALTERNATIVE_ENERGY_HELP_1</Tag>
 		<English>[PARAGRAPH:1]To complete this quest, you must build a total of %d1 [COLOR_BUILDING_TEXT]Hydro Plants[COLOR_REVERT] and/or [COLOR_BUILDING_TEXT]Nuclear Plants[COLOR_REVERT] in your various cities. You are allowed to build [COLOR_POSITIVE_TEXT]any combination of Hydro Plants and Nuclear Plants that add up to the total.[COLOR_REVERT][PARAGRAPH:1]An additional reward option will be available if your civilization is running the Economic Civic [COLOR_POSITIVE_TEXT]Environmentalism[COLOR_REVERT] when the quest is completed.[PARAGRAPH:1]You will fail this quest if a rival civilization completes it first, or if your civilization constructs or acquires direct control over the [COLOR_NEGATIVE_TEXT]Three Gorges Dam[COLOR_REVERT] before having met the conditions.</English>
 		<French>[PARAGRAPH:1]Pour accomplir cette quête, vous devez avoir construit un total de %d1 [COLOR_BUILDING_TEXT]Centrales hydro-électriques[COLOR_REVERT] et/ou [COLOR_BUILDING_TEXT]Centrales Nucléaires[COLOR_REVERT] dans vos diverses villes. On vous permet de construire indifféremment[COLOR_POSITIVE_TEXT]des centrales hydro-électriques et centrales nucléaires qui s'ajoutent au total, même lorsque construites dans la même ville.[COLOR_REVERT][PARAGRAPH:1]Une récompense supplémentaire vous sera attribuée si vous avez adopté la doctrine [COLOR_POSITIVE_TEXT]Environmentalisme[COLOR_REVERT] lorsque la quête se termine.[PARAGRAPH:1]Vous échouerez cette quête si une civilisation rivale l'accomplit avant vous, ou si votre civilisation construit ou acquiert le contrôle direct du [COLOR_NEGATIVE_TEXT]Barrage des Trois Gorges[COLOR_REVERT] avant d'avoir remplit toutes les conditions de la quête.</French>
 		<German>[PARAGRAPH:1]Um diesen Quest durchzuführen, müssen Sie eine Gesamtmenge von %d1 [COLOR_BUILDING_TEXT]Wasserkraftwerken[COLOR_REVERT] und/oder [COLOR_BUILDING_TEXT]Kernkraftwerken[COLOR_REVERT] in Ihren verschiedenen Städten errichten. Sie können dabei [COLOR_POSITIVE_TEXT]jede beliebige Kombination von Wasserkraft- und Kernkraftwerken[COLOR_REVERT] errichten.[PARAGRAPH:1]Eine zusätzliche Belohnungsoption wird vorhanden sein, wenn Ihre Zivilisation die ökonomische Gesellschaftsform [COLOR_POSITIVE_TEXT]Umweltschutz[COLOR_REVERT] betreibt, wenn der Quest beendet ist.[PARAGRAPH:1]Der Quest wird scheitern, wenn eine rivalisierende Zivilisation den Bau zuerst vollendet oder wenn Ihre Zivilisation den [COLOR_NEGATIVE_TEXT]Drei-Schluchten-Damm[COLOR_REVERT] erbaut oder kontrolliert bevor die Bedingungen erfüllt sind.</German>
-		<Italian>[PARAGRAPH:1]Per completare questa impresa, devi costruire un totale di %d1 [COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] e/o [COLOR_BUILDING_TEXT]Centrali nucleari[COLOR_REVERT] nelle tue varie città. Puoi costruire [COLOR_POSITIVE_TEXT]qualunque combinazione di centrali idroelettriche e centrali nucleari che si sommano al totale.[COLOR_REVERT][PARAGRAPH:1]Un'ulteriore ricompensa sarà disponibile se la tua nazione utilizza la forma di governo [COLOR_POSITIVE_TEXT]Verde[COLOR_REVERT] quando l'impresa viene completata.[PARAGRAPH:1]Fallirai quest'impresa se una civiltà rivale la completa per prima, o se la vostra civilizzazione costruisce o acquisisce il controllo diretto della [COLOR_NEGATIVE_TEXT]Diga delle tre gole[COLOR_REVERT] prima di aver costruito il numero richiesto di centrali.</Italian>
-		<Spanish>[PARAGRAPH:1]Para completar esta misión, deberás construir un total de %d1 [COLOR_BUILDING_TEXT]Centrales hidroeléctricas[COLOR_REVERT] y/o [COLOR_BUILDING_TEXT]Centrales nucleares[COLOR_REVERT] en varias de tus ciudades. Puedes construir [COLOR_POSITIVE_TEXT]cualquier combinación de Centrales hidroeléctricas y Centrales nucleares, todas se añadirán al total.[COLOR_REVERT][PARAGRAPH:1]Podrás disponer de una opción de recompensa adicional si tu civilización tiene el principio [COLOR_POSITIVE_TEXT]Ecologismo[COLOR_REVERT] activo en el momento de completar la misión.[PARAGRAPH:1]Fallarás la misión si una civilización rival la completa primero, o si tu civilización construye o toma el control directo de la [COLOR_NEGATIVE_TEXT]Presa de las Tres Gargantas[COLOR_REVERT] antes de cumplir las condiciones.</Spanish>
+		<Italian>[PARAGRAPH:1]Per completare questa missione, devi costruire %d1 [COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] e/o [COLOR_BUILDING_TEXT]Centrali nucleari[COLOR_REVERT] nelle tue città. Puoi costruire [COLOR_POSITIVE_TEXT]qualunque combinazione di centrali idroelettriche e centrali nucleari che si sommano al totale[COLOR_REVERT].[PARAGRAPH:1]Un'ulteriore ricompensa sarà disponibile se la tua nazione utilizza la forma di governo [COLOR_POSITIVE_TEXT]Verde[COLOR_REVERT] quando l'impresa viene completata.[PARAGRAPH:1]Fallirai quest'impresa se una civiltà rivale la completa per prima o se la tua civiltà costruisce o acquisisce il controllo diretto della [COLOR_NEGATIVE_TEXT]Diga delle tre gole[COLOR_REVERT] prima di aver costruito il numero richiesto di centrali.</Italian>
 		<Polish>[PARAGRAPH:1]Aby wypełnić warunki zadania należy wybudować %d1 [COLOR_BUILDING_TEXT]Elektrowni Wodnych[COLOR_REVERT] i/lub [COLOR_BUILDING_TEXT]Elektrowni Nuklearnych[COLOR_REVERT] w różnych miastach. Dopuszczalne są [COLOR_POSITIVE_TEXT]wszystkie kombinacje.[COLOR_REVERT][PARAGRAPH:1]Dostaniesz dodatkową premię jeśli będziesz używać doktryny [COLOR_POSITIVE_TEXT]Ochrona Środowiska[COLOR_REVERT], kiedy zadanie zostanie zakończone.[PARAGRAPH:1]Przegrasz to zadanie jeśli którakolwiek z innych cywilizacji ukończy je wcześniej, lub nie zdążysz wypełnić warunków przed wybudowaniem lub przejęciem [COLOR_NEGATIVE_TEXT]Zapory Trzech Przełomów[COLOR_REVERT].</Polish>
 		<Russian>[PARAGRAPH:1]Для успешного завершения этого квеста, вы должны построить в общей сложности %d1 [COLOR_BUILDING_TEXT]ГЭС[COLOR_REVERT] и/или [COLOR_BUILDING_TEXT]АЭС[COLOR_REVERT] в ваших разных городах. Вам разрешено строить [COLOR_POSITIVE_TEXT]любую комбинацию ГЭС и АЭС в общей сложности.[COLOR_REVERT] [PARAGRAPH:1]Вы получите дополнительную награду, если ваша цивилизация использует экономическую парадигму [COLOR_POSITIVE_TEXT]Охрана природы[COLOR_REVERT] после завершения задания. [PARAGRAPH:1]Задание будет провалено, если конкурирующая цивилизация завершит его первой, или если ваша цивилизация построит или получит прямой контроль над [COLOR_NEGATIVE_TEXT]Плотиной «Три ущелья»[COLOR_REVERT] прежде, чем будут выполнены условия.</Russian>
+		<Spanish>[PARAGRAPH:1]Para completar esta misión, deberás construir un total de %d1 [COLOR_BUILDING_TEXT]Centrales hidroeléctricas[COLOR_REVERT] y/o [COLOR_BUILDING_TEXT]Centrales nucleares[COLOR_REVERT] en varias de tus ciudades. Puedes construir [COLOR_POSITIVE_TEXT]cualquier combinación de Centrales hidroeléctricas y Centrales nucleares, todas se añadirán al total.[COLOR_REVERT][PARAGRAPH:1]Podrás disponer de una opción de recompensa adicional si tu civilización tiene el principio [COLOR_POSITIVE_TEXT]Ecologismo[COLOR_REVERT] activo en el momento de completar la misión.[PARAGRAPH:1]Fallarás la misión si una civilización rival la completa primero, o si tu civilización construye o toma el control directo de la [COLOR_NEGATIVE_TEXT]Presa de las Tres Gargantas[COLOR_REVERT] antes de cumplir las condiciones.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ANCIENTOLYMPICS_1</Tag>
 		<English>These Games are honorable, but overall their importance to our civilization is minor.</English>
 		<French>Ces jeux sont honorables mais globalement, leur importance pour notre civilisation est mineure.</French>
 		<German>Diese Spiele sind ehrenhaft, aber ihr Wert für unsere Zivilisation ist eher gering.</German>
-		<Italian>Questi giochi sono un impegno onorevole, ma la loro importanza per la nostra nazione è minima.</Italian>
+		<Italian>Questi Giochi sono un impegno onorevole, ma la loro importanza per la nostra nazione è minima.</Italian>
 		<Spanish>Estos Juegos son respetables, pero tienen una importancia menor para nuestra civilización.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3013,13 +3013,13 @@
 		<English>These Games are grand! We should invite and sponsor athletes from neighboring civilizations to attend.</English>
 		<French>Ces jeux sont fantastiques ! Nous devrions inviter et parrainer des athlètes des civilisations voisines.</French>
 		<German>Diese Spiele sind großartig! Wir sollten Athleten der Nachbarzivilisationen einladen, an ihnen teilzunehmen.</German>
-		<Italian>Questi giochi sono grandiosi! Dovremmo invitare e sponsorizzare atleti di altre civiltà affinché partecipino.</Italian>
+		<Italian>Questi Giochi sono grandiosi! Dovremmo invitare e sponsorizzare atleti di altre nazioni affinché partecipino.</Italian>
 		<Spanish>¡Estos Juegos son grandiosos! Deberíamos invitar a atletas de civilizaciones vecinas y patrocinar su participación.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ANCIENTOLYMPICS_HELP_2</Tag>
-		<English>[ICON_BULLET]Receive a %D1 diplomatic boost with all your close neighbors</English>
-		<French>[ICON_BULLET]Recevez un avantage diplomatique %D1 avec tous vos voisins proches</French>
+		<English>[ICON_BULLET]Receive a %D1 diplomatic boost with all your close neighbors.</English>
+		<French>[ICON_BULLET]Recevez un avantage diplomatique %D1 avec tous vos voisins proches.</French>
 		<German>[ICON_BULLET]Ihr erhaltet einen %D1 Bonus für Diplomatie mit allen näheren Nachbarn.</German>
 		<Italian>[ICON_BULLET]Ricevi un incremento diplomatico di %D1 con tutte le civiltà vicine.</Italian>
 		<Spanish>[ICON_BULLET]Recibir %D1 de mejora diplomática con todos tus vecinos cercanos.</Spanish>
@@ -3045,7 +3045,7 @@
 		<English>The extra patients will enhance city revenue.</English>
 		<French>Les patients supplémentaires vont améliorer les revenus de la ville.</French>
 		<German>Die zusätzlichen Patienten werden die Einnahmen der Stadt erhöhen.</German>
-		<Italian>I pazienti extra aumenteranno le entrate della città.</Italian>
+		<Italian>I pazienti aggiuntivi aumenteranno le entrate della città.</Italian>
 		<Spanish>Los pacientes extra mejorarán los ingresos de la ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3053,7 +3053,7 @@
 		<English>We could sanction the hospital as a state holy site. This may please the local populace.</English>
 		<French>Nous pouvons faire de l'hôpital un lieu saint national. Cela fera plaisir à la population locale.</French>
 		<German>Wir können das Krankenhaus zu einer staatlichen heiligen Stätte machen. Darüber könnte sich die einheimische Bevölkerung freuen.</German>
-		<Italian>Potremmo riconoscere l'ospedale come luogo sacro. Potrebbe far piacere alla popolazione locale.</Italian>
+		<Italian>Potremmo riconoscere l'ospedale come luogo sacro. Questo potrebbe far piacere alla popolazione locale.</Italian>
 		<Spanish>Podríamos declarar el hospital como un lugar santo del estado. Esto posiblemente agradaría a la población local.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3077,10 +3077,10 @@
 		<English>Anti-monarchists are claiming that the King has too much power and that religious leaders need to have some, too.</English>
 		<French>Des anti-monarchistes prétendent que le roi a trop de pouvoir, et que les autorités religieuses devraient en avoir plus.</French>
 		<German>Gläubige Menschen protestieren gegen die Ohnmacht religiöser Institutionen im Vergleich zur Allmacht Eures Königshauses.</German>
-		<Italian>Gli antimonarchici rivendicano che il Re ha troppi poteri, e che i leader religiosi debbano avere i propri poteri rafforzati.</Italian>
-		<Spanish>Antimonárquicos reclaman qué el rey tiene demasiado poder y qué los lideres religiosos deberian tener algo también.</Spanish>
+		<Italian>Gli antimonarchici protestano contro i troppi poteri del Re e sostengono che i leader religiosi debbano vedere rafforzati i propri.</Italian>
 		<Polish>Anty-rojaliści twierdzą, że król posiada za dużo władzy i przywódcy religijni pragną trochę władzy dla siebie.</Polish>
 		<Russian>Антимонархисты утверждают, что у короля слишком много власти и что духовные лидеры тоже должны иметь такую власть.</Russian>
+		<Spanish>Antimonárquicos reclaman qué el rey tiene demasiado poder y qué los lideres religiosos deberian tener algo también.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ANTIMONARCHISTS_1</Tag>
@@ -3088,9 +3088,9 @@
 		<French>L'Etat, c'est moi!</French>
 		<German>Der Staat bin ich!</German>
 		<Italian>Il Re è lo Stato!</Italian>
-		<Spanish>¡Nuestro rey es el estado!</Spanish>
 		<Polish>Nasz Król to Państwo!</Polish>
 		<Russian>Государство - это Я!</Russian>
+		<Spanish>¡El nuestro rey es el estado!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ANTIMONARCHISTS_2</Tag>
@@ -3098,9 +3098,9 @@
 		<French>Ce sont de justes revendications, notre clergé a besoin d'être plus influent.</French>
 		<German>Nun gut, ich gewähre den Geistlichen mehr Einfluss.</German>
 		<Italian>Hanno ragione, le organizzazioni ecclesiastiche devono avere più influenza.</Italian>
-		<Spanish>Es un argumento válido, nuestro clérigos necesitan más influencia.</Spanish>
 		<Polish>Ważne by nasi klerycy mieli więcej wpływów.</Polish>
 		<Russian>В этом есть доля истины: наши священники нуждаются в большем влиянии.</Russian>
+		<Spanish>Es un argumento válido, nuestro clérigos necesitan más influencia.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_APPLESEED_1</Tag>
@@ -3116,9 +3116,9 @@
 		<French>Envoyer des Félicitations aux chasseurs qui ont découvert ce nouveau type d'armes.</French>
 		<German>Gratuliere dem Jäger, der diese wunderbare Waffe entdeckt hat.</German>
 		<Italian>Congratulati con i cacciatori che hanno inventato quest'arma.</Italian>
-		<Spanish>Enviad mis felicitaciones a los cazadores que han inventado este nuevo tipo de arma.</Spanish>
 		<Polish>Wyślij gratulacje myśliwym, którzy odkryli ten nowy typ broni.</Polish>
 		<Russian>Поздравляем охотников, открывших этот прекрасный вид оружия.</Russian>
+		<Spanish>Enviad mis felicitaciones a los cazadores que han inventado este nuevo tipo de arma.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ARTIFICIAL_ELEMENT_1</Tag>
@@ -3126,66 +3126,66 @@
 		<French>Félicitez les scientifiques et envoyez d'autres chercheurs dans cette faculté!</French>
 		<German>Gratuliere den Wissenschaftlern und schicke mehr Forscher in diese Einrichtung!</German>
 		<Italian>Congratulati con gli scienziati e manda più ricercatori nel loro impianto!</Italian>
-		<Spanish>Felicitad a los científicos y enviad más investigadores a este complejo.</Spanish>
 		<Polish>Pogratuluj naukowcom i wyślij więcej pracowników do tego instytutu!</Polish>
 		<Russian>Поздравьте ученых и отправьте еще исследователей на этот объект!</Russian>
+		<Spanish>Felicitad a los científicos y enviad más investigadores a este complejo.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ASSASSIN_DISCOVERED</Tag>
 		<English>A %s1_civ_adjective assassin is operating in our capital! What should we do?</English>
-		<French>Un Assassin %s1_civ_adjective opère actuellemtn dans notre capitale! Que devons-nous faire?</French>
+		<French>Un Assassin %s1_civ_adjective opère actuellement dans notre capitale! Que devons-nous faire?</French>
 		<German>Ein %s1_civ_adjective Attentäter wurde in unserer Hauptstadt gesichtet. Was sollen wir tun?</German>
 		<Italian>Un assassino %s1_civ_adjective è stato scoperto nella nostra capitale! Cosa dovremmo fare?</Italian>
-		<Spanish>¡Un asesino %s1_civ_adjective está operando en nuestra capital! ¿Qué debemos hacer?</Spanish>
 		<Polish>Zabójca %s1_civ_adjective działa w naszej stolicy! Co powinniśmy teraz zrobić?</Polish>
 		<Russian>Наемный убийца из державы %s1_civ_adjective орудует в нашей столице! Как нам поступить с ним?</Russian>
+		<Spanish>¡Un asesino %s1_civ_adjective está operando en nuestra capital! ¿Qué debemos hacer?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ASSASSIN_DISCOVERED_1</Tag>
 		<English>Be discreet. Offer the to release the assassin to their government, but question him first.</English>
 		<French>Soyez discret. Rendez-le à son pays, mais interrogez-le d'abord.</French>
 		<German>Sei diskret. Bitte die Auslieferung des Attentäters an sein Heimatland an, aber verhöre ihn zuerst.</German>
-		<Italian>Sii discreto. Offri di rilasciare l'assassino, ma prima interrogalo.</Italian>
-		<Spanish>Sed discretos. Ofreced a su gobierno la liberación del asesino, pero interrogadle primero.</Spanish>
+		<Italian>Sii discreto. Offri di riconsegnare l'assassino al suo governo, ma prima interrogalo.</Italian>
 		<Polish>Bądź dyskretnym. Zaoferuj zwolnienie zabójcy jego rządowi, ale najpierw przesłuchaj go.</Polish>
 		<Russian>Будьте осторожны. Предложите их правительству выкупить пленника, но прежде допросите его.</Russian>
+		<Spanish>Sed discretos. Ofreced a su gobierno la liberación del asesino, pero interrogadle primero.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ASSASSIN_DISCOVERED_2</Tag>
 		<English>Every man has his price. His skills could make him a very valuable asset.</English>
-		<French>Personne n'est incorruptible. Ses connaissances pourraient nous etre précieuses.</French>
+		<French>Personne n'est incorruptible. Ses connaissances pourraient nous être précieuses.</French>
 		<German>Jedermann ist käuflich. Dieser Spion könnte uns noch nützlich sein.</German>
 		<Italian>Ogni uomo ha un suo prezzo. Le sue conoscenze potrebbero tornarci molto utili.</Italian>
-		<Spanish>Todo el mundo tiene un precio. Su conocimiento puede convertirle en un recurso muy valioso.</Spanish>
 		<Polish>Każdy ma swoją cenę. Jego zdolności mogą nam się bardzo przydać.</Polish>
 		<Russian>У каждого человека есть своя цена. Его навыки могут сделать его очень ценным активом.</Russian>
+		<Spanish>Todo el mundo tiene un precio. Su conocimiento puede convertirle en un recurso muy valioso.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ASSASSIN_DISCOVERED_3</Tag>
 		<English>That is an act of war! Clearly, our people and military contractors will rise to the occasion!</English>
 		<French>C'est une déclaration de guerre! Il est évident que notre peuple et nos fournisseurs militaires sauront profiter de cette occasion!</French>
 		<German>Dieser Vorfall ist ein kriegerischer Akt! Die Empörung wird das Volk in Rage versetzen und zu Höchstleistungen antreiben.</German>
-		<Italian>Questo è un atto di guerra! Certamente, i nostri cittadini reagiranno duramente alla notizia e i fornitori militari vorranno approfittare di questa occasione!</Italian>
-		<Spanish>¡Esto es un acto de guerra! Obviamente, nuestro pueblo y nuestros proveedores militares estarán a la altura de las circunstancias.</Spanish>
+		<Italian>Questo è un atto di guerra! Certamente i nostri cittadini e i nostri fornitori militari vorranno approfittare di questa occasione!</Italian>
 		<Polish>Ten wrogi akt jest równoznaczny z wypowiedzeniem wojny! Niewątpliwie nasi obywatele i kontraktorzy militarni staną na wysokości zadania!</Polish>
 		<Russian>Это акт неприкрытой агрессии! Понятно, что наши люди и военные подрядчики окажутся на высоте!</Russian>
+		<Spanish>¡Esto es un acto de guerra! Obviamente, nuestro pueblo y nuestros proveedores militares estarán a la altura de las circunstancias.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ASSASSIN_DISCOVERED_3_HELP</Tag>
 		<English>[ICON_BULLET]Receive %d1 [COLOR_UNIT_TEXT][NUM1:Axeman:Axemen][COLOR_REVERT].</English>
 		<French>[ICON_BULLET]Recevoir %d1 [COLOR_UNIT_TEXT][NUM1:Guerrier:Guerriers] avec Hache[COLOR_REVERT].</French>
 		<German>[ICON_BULLET]Erhalte %d1 [COLOR_UNIT_TEXT][NUM1:Axeman:Axemen][COLOR_REVERT].</German>
-		<Italian>[ICON_BULLET]Ricevi %d1 [COLOR_UNIT_TEXT][NUM1:guerriero con ascia:guerrieri con ascia][COLOR_REVERT].</Italian>
-		<Spanish>[ICON_BULLET]Recibes %d1 [COLOR_UNIT_TEXT][NUM1:Guerrero:Guerreros] con hacha[COLOR_REVERT].</Spanish>
+		<Italian>[ICON_BULLET]Ricevi %d1 [COLOR_UNIT_TEXT][NUM1:guerriero:guerrieri] con ascia[COLOR_REVERT].</Italian>
 		<Polish>[ICON_BULLET]Otrzymujemy %d1 [NUM1:jednostkę:jednostek] [COLOR_UNIT_TEXT]Toporników[COLOR_REVERT].</Polish>
 		<Russian>[ICON_BULLET]Получить %d1 [NUM1:отряд:отрядов] [COLOR_UNIT_TEXT]Секироносцев[COLOR_REVERT].</Russian>
+		<Spanish>[ICON_BULLET]Recibes %d1 [COLOR_UNIT_TEXT][NUM1:Guerrero:Guerreros] con hacha[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ATTITUDE_BAD</Tag>
 		<English>[ICON_BULLET]Suffer a [COLOR_NEGATIVE_TEXT]%D1[COLOR_REVERT] relations hit with %s2_player</English>
 		<French>[ICON_BULLET]Subir un malus relationnel de [COLOR_NEGATIVE_TEXT]%D1[COLOR_REVERT] envers %s2_player</French>
 		<German>[ICON_BULLET]Verschlechterung der Beziehungen mit %s2_player um [COLOR_NEGATIVE_TEXT]%D1[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Peggiorare di [COLOR_NEGATIVE_TEXT]%D1[COLOR_REVERT] le relazioni con %s2_player</Italian>
+		<Italian>[ICON_BULLET]Peggiora di [COLOR_NEGATIVE_TEXT]%D1[COLOR_REVERT] le relazioni con %s2_player</Italian>
 		<Spanish>[ICON_BULLET]Sufrir un [COLOR_NEGATIVE_TEXT]%D1[COLOR_REVERT] de empeoramiento de las relaciones con %s2_player</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3193,7 +3193,7 @@
 		<English>[ICON_BULLET]Gain a [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] relations boost with %s2_player</English>
 		<French>[ICON_BULLET]Gagner un bonus relationnel de [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] envers %s2_player</French>
 		<German>[ICON_BULLET]Verbesserung der Beziehungen mit %s2_player um [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT]</German>
-		<Italian>[ICON_BULLET]Migliorare di [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] le relazioni con %s2_player</Italian>
+		<Italian>[ICON_BULLET]Migliora di [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] le relazioni con %s2_player</Italian>
 		<Spanish>[ICON_BULLET]Ganar un [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] de mejora de las relaciones con %s2_player</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3201,7 +3201,7 @@
 		<English>Decorate our glorious heroes of the sword!</English>
 		<French>Décorer nos glorieux héros !</French>
 		<German>Verleiht unseren glorreichen Helden des Schwertes eine Auszeichnung!</German>
-		<Italian>Decora i gloriosi eroi della spada!</Italian>
+		<Italian>Decorate i nostri gloriosi eroi della spada!</Italian>
 		<Spanish>¡Que se condecore a los gloriosos héroes de la espada!</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3209,7 +3209,7 @@
 		<English>Convert our axemen to the new axe handles immediately.</English>
 		<French>Adoptons immédiatement les nouveaux manches de hache pour nos soldats avec hache.</French>
 		<German>Rüstet unsere Axtkämpfer sofort mit den neuen Axtgriffen aus.</German>
-		<Italian>Arma immediatamente i nostri guerrieri con le nuove asce.</Italian>
+		<Italian>Armate immediatamente i nostri guerrieri con le nuove asce.</Italian>
 		<Spanish>Que nuestros soldados con hacha se adapten a las nuevas empuñaduras de hacha inmediatamente.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3217,7 +3217,7 @@
 		<English>Our people are thriving in peace time.</English>
 		<French>Nos citoyens prospèrent en ces temps de paix.</French>
 		<German>Unser Volk wächst und gedeiht in Friedenszeiten.</German>
-		<Italian>La nostra popolazione sta prosperando, in tempo di pace.</Italian>
+		<Italian>La nostra popolazione sta prosperando in tempo di pace.</Italian>
 		<Spanish>Nuestro pueblo progresa en tiempos de paz.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3226,16 +3226,16 @@
 		<French>Les meilleurs variétés de nos bananes ont été décimées par une maladie.</French>
 		<German>Die geschmackvollsten Bananensorten sind durch die gefürchtete Bananenpest vernichtet worden.</German>
 		<Italian>Le varietà migliori di banane sono state spazzate via da una malattia.</Italian>
-		<Spanish>Una temida plaga ha diezmado nuestras mejores variantes de plataneras.</Spanish>
 		<Polish>Najsmaczniejsza odmiana banana została zniszczona przez śmiercionośną plagę.</Polish>
 		<Russian>Наш самый вкусный сорт бананов погубила ужасная болезнь.</Russian>
+		<Spanish>Una temida plaga ha diezmado nuestras mejores variantes de plataneras.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BANANA_BLIGHT_1</Tag>
 		<English>This is just too bad. We'll have to be content with the remaining varieties.</English>
 		<French>Vraiment trop dommage. Nous allons nous contenter des variétés survivantes.</French>
 		<German>Das ist schrecklich. Wir müssen uns mit den verbleibenden Sorten zufrieden geben.</German>
-		<Italian>Non va bene. Dovremo accontentarci delle varietà rimanenti.</Italian>
+		<Italian>Questa è una brutta notizia. Dovremo accontentarci delle varietà rimanenti.</Italian>
 		<Spanish>Es una lástima. Deberemos contentarnos con las demás variantes.</Spanish>
 		<Polish>To smutne. Będziemy musieli się zadowolić tymi odmianami jakie pozostały.</Polish>
 		<Russian>Это очень плохо. Придется довольствоваться оставшимися сортами.</Russian>
@@ -3245,7 +3245,7 @@
 		<English>Mmm, ice cream. The customers must be going bananas over that!</English>
 		<French>Mmmh, de la crème glacée. Les clients vont adorer !</French>
 		<German>Mmm, Eis. Davon werden die Kunden noch ganz Banane im Kopf!</German>
-		<Italian>Mmm, il gelato. I clienti impazziranno, per quello!</Italian>
+		<Italian>Mmm, gelato. I clienti impazziranno!</Italian>
 		<Spanish>Mmm, helado. ¡A los clientes se les hará la boca agua!</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3253,7 +3253,7 @@
 		<English>We are likely to take the worst of the barbarian horde's fury.</English>
 		<French>Nous allons sûrement subir le gros de la furie de la horde barbare.</French>
 		<German>Wir werden wohl den Zorn dieser Barbarenhorde ertragen müssen.</German>
-		<Italian>È probabile che il peggio della furia dell'orda barbarica tocchi a noi.</Italian>
+		<Italian>È probabile che il peggio della furia di quest'orda barbarica tocchi a noi.</Italian>
 		<Spanish>Es probable que nos llevemos la peor parte de la furia de la horda bárbara.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3286,16 +3286,16 @@
 		<French>Des Lasers? Cool! Installez-les!</French>
 		<German>Laser? Cool! Macht sie wahr!</German>
 		<Italian>Laser? Molto bene! Fatelo al più presto!</Italian>
-		<Spanish>¿Sistemas láser? ¡Perfecto! ¡Instaladlos!</Spanish>
 		<Polish>Lasery? Super! Niech tak się stanie!</Polish>
 		<Russian>Лазеры? Круто! Сделайте это!</Russian>
+		<Spanish>¿Sistemas láser? ¡Perfecto! ¡Instaladlos!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BEST_DEFENSE_1</Tag>
 		<English>The Best Defense[PARAGRAPH:1]You are tasked by your armed forces to build enough [COLOR_BUILDING_TEXT]Castles[COLOR_REVERT] for them to ward off invasion effectively.</English>
 		<French>La Meilleure Défense[PARAGRAPH:1]Vos forces armées vous chargent de construire suffisamment de [COLOR_BUILDING_TEXT]Châteaux[COLOR_REVERT] pour qu'ils puissent écarter efficacement les invasions.</French>
 		<German>Die beste Verteidigung[PARAGRAPH:1]Eure Armee hat Euch aufgetragen, genug [COLOR_BUILDING_TEXT]Schlösser[COLOR_REVERT] zu bauen, um eine Invasion wirkungsvoll abzuwehren.</German>
-		<Italian>Miglior difesa[PARAGRAPH:1]Hai ricevuto il compito, dalle tue forze armate, di costruire abbastanza [COLOR_BUILDING_TEXT]Castelli[COLOR_REVERT] da poter respingere efficacemente un'invasione.</Italian>
+		<Italian>La miglior difesa[PARAGRAPH:1]Hai ricevuto il compito, dalle tue forze armate, di costruire un numero sufficiente di [COLOR_BUILDING_TEXT]Castelli[COLOR_REVERT] per poter respingere efficacemente un'invasione.</Italian>
 		<Spanish>La mejor defensa[PARAGRAPH:1]Las fuerzas armadas han encargado la construcción de [COLOR_BUILDING_TEXT]Castillos[COLOR_REVERT] suficientes para repeler una invasión de forma eficaz.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3303,7 +3303,7 @@
 		<English>Use our advantage to help better train our forces.</English>
 		<French>Utiliser notre avantage pour mieux entraîner nos troupes.</French>
 		<German>Setzt unseren Vorteil ein, um unsere Truppen besser auszubilden.</German>
-		<Italian>Usa il nostro vantaggio per addestrare meglio le nostre forze.</Italian>
+		<Italian>Usa questo vantaggio per addestrare meglio le nostre forze.</Italian>
 		<Spanish>Que nuestra ventaja se utilice para entrenar mejor a nuestras fuerzas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3324,10 +3324,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BEST_DEFENSE_DONE_HELP_2</Tag>
-		<English>[ICON_BULLET]Receive [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] attitude from all leaders</English>
-		<French>[ICON_BULLET]Recevez [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] attitude des autre dirigeants</French>
+		<English>[ICON_BULLET]Receive [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] attitude from all leaders.</English>
+		<French>[ICON_BULLET]Recevez [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] attitude des autre dirigeants.</French>
 		<German>[ICON_BULLET]Verbessert die Haltung aller Staatsoberhäupter um [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT].</German>
-		<Italian>[ICON_BULLET]Ricevi [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] atteggiamento da tutti i leader</Italian>
+		<Italian>[ICON_BULLET]Ricevi [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] atteggiamento da tutti i leader.</Italian>
 		<Spanish>[ICON_BULLET]Recibir [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] de actitud de todos los líderes.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3335,7 +3335,7 @@
 		<English>[PARAGRAPH:1]To complete this quest, you must build %d1 [COLOR_BUILDING_TEXT]Castles[COLOR_REVERT] in your cities.[PARAGRAPH:1]An additional reward option will be available if your civilization controls the Great Wall.[PARAGRAPH:1]You will fail this quest if a rival civilization completes it first, or if you discover [COLOR_TECH_TEXT]Rifling[COLOR_REVERT], [COLOR_TECH_TEXT]Railroad[COLOR_REVERT], or [COLOR_TECH_TEXT]Economics[COLOR_REVERT] without having met the conditions.</English>
 		<French>[PARAGRAPH:1]Pour achever cette quête, vous devez construire %d1 [COLOR_BUILDING_TEXT]Châteaux[COLOR_REVERT] dans vos villes.[PARAGRAPH:1]Une option de récompense supplémentaire sera disponible si votre civilisation contrôle la Grande Muraille.[PARAGRAPH:1]Vous échouerez si une civilisation rivale achève cette quête avant vous ou si vous découvrez le [COLOR_TECH_TEXT]Fusil[COLOR_REVERT], le [COLOR_TECH_TEXT]Chemin de Fer[COLOR_REVERT] ou les [COLOR_TECH_TEXT]Sciences Economiques[COLOR_REVERT] sans avoir rempli les conditions de victoire.</French>
 		<German>[PARAGRAPH:1]Um diese Quest abzuschließen, müssen Sie %d1 [COLOR_BUILDING_TEXT]Schlösser[COLOR_REVERT] in Ihren Städten bauen.[PARAGRAPH:1]Sie erhalten eine zusätzliche Belohnung, wenn Sie bei Erfüllung der Quest die Große Mauer kontrollieren. [PARAGRAPH:1]Sie scheitern, wenn eine andere Zivilisation die Quest vor Ihnen abschließt oder wenn Sie die Technologie [COLOR_TECH_TEXT]Drall[COLOR_REVERT], [COLOR_TECH_TEXT]Eisenbahn[COLOR_REVERT] oder [COLOR_TECH_TEXT]Wirtschaftswesen[COLOR_REVERT] entdecken, ohne die Bedingungen erfüllt zu haben.</German>
-		<Italian>[PARAGRAPH:1]Per completare l'impresa devi costruire %d1 [COLOR_BUILDING_TEXT]Castelli[COLOR_REVERT] nelle tue città.[PARAGRAPH:1]Se la tua civiltà controlla la Grande Muraglia otterrai un'ulteriore ricompensa.[PARAGRAPH:1]Fallirai nell'impresa se un'altra civiltà la completa per prima, o se scoprirai [COLOR_TECH_TEXT]Rigatura delle canne[COLOR_REVERT], [COLOR_TECH_TEXT]Ferrovia[COLOR_REVERT] o [COLOR_TECH_TEXT]Economia[COLOR_REVERT] senza aver soddisfatto le condizioni.</Italian>
+		<Italian>[PARAGRAPH:1]Per completare l'impresa devi costruire %d1 [COLOR_BUILDING_TEXT]Castelli[COLOR_REVERT] nelle tue città.[PARAGRAPH:1]Se la tua civiltà controlla la Grande Muraglia otterrai un'ulteriore ricompensa.[PARAGRAPH:1]Fallirai nell'impresa se un'altra civiltà la completa per prima o se scoprirai [COLOR_TECH_TEXT]Rigatura delle canne[COLOR_REVERT], [COLOR_TECH_TEXT]Ferrovia[COLOR_REVERT] o [COLOR_TECH_TEXT]Economia[COLOR_REVERT] senza aver soddisfatto le condizioni.</Italian>
 		<Spanish>[PARAGRAPH:1]Para completar esta misión, debéis construir %d1 [COLOR_BUILDING_TEXT]Castillos[COLOR_REVERT] en vuestras ciudades.[PARAGRAPH:1]Será posible elegir una opción de recompensa adicional si vuestra civilización controla la Gran Muralla.[PARAGRAPH:1]Esta misión fracasará si una civilización rival la cumple antes o si descubres el [COLOR_TECH_TEXT]Fusil[COLOR_REVERT], el [COLOR_TECH_TEXT]Ferrocarril[COLOR_REVERT] o la [COLOR_TECH_TEXT]Economía[COLOR_REVERT] sin haber cumplido las condiciones.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3343,47 +3343,47 @@
 		<English>He might have been bragging about his skills. Let him show us some of his abilities.</English>
 		<French>Il se vante peut-être un peu trop. Qu'il nous montre d'abord ce qu'il sait faire.</French>
 		<Italian>Avrebbe potuto vantarsi delle proprie abilità. Lascia che ci mostri le sue capacità.</Italian>
-		<Spanish>Ha debido de estar fanfarroneando sobre su destreza. Que nos muestre sus habilidades.</Spanish>
 		<Polish>Jesteśmy dumni z jego zdolności. Niech nam pokaże co odkrył.</Polish>
 		<Russian>Возможно, он просто хвастался своими навыками. Позвольте ему показать нам некоторые из его способностей.</Russian>
+		<Spanish>Ha debido de estar fanfarroneando sobre su destreza. Que nos muestre sus habilidades.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BEST_HUNTERS_2</Tag>
 		<English>A good hunter you say? Let's give him the chance to teach our hunters some tracking tips.</English>
 		<French>Un bon chasseur? Donnons-lui la chance d'enseigner aux autres son expérience.</French>
-		<Italian>Hai detto che è un buon cacciatore? Diamogli la chance di insegnare qualcosa ai nostri cacciatori.</Italian>
-		<Spanish>¿Un buen cazador dices? Démosle la oportunidad de enseñar algunos trucos de rastreo a nuestros cazadores.</Spanish>
+		<Italian>Hai detto che è un buon cacciatore? Diamogli la possibilità di insegnare qualcosa ai nostri cacciatori.</Italian>
 		<Polish>Dobry Łowca mówisz? Dajmy szanse innym by nauczyli się od niego lepszego tropienia.</Polish>
 		<Russian>Вы говорите, что он хороший охотник? Давайте дадим ему возможность обучить наших охотников навыкам следопыта.</Russian>
+		<Spanish>¿Un buen cazador dices? Démosle la oportunidad de enseñar algunos trucos de rastreo a nuestros cazadores.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BEST_HUNTERS_3</Tag>
 		<English>This is good news! Let's get our hunters together so he can teach them some hunting lessons.</English>
 		<French>Très bonne nouvelle! Rassemblons tous nos chasseurs, et demandons lui de leur montrer ce qu'il a appris.</French>
 		<Italian>Sono ottime notizie! Radunate i nostri cacciatori in modo che possa tenere alcune lezioni di caccia.</Italian>
-		<Spanish>¡Son buenas noticias! Reunamos a los demás cazadores para que así pueda darles algunas lecciones de caza.</Spanish>
 		<Polish>Świetna Nowina! Weź wszystkich Łowców i nich da im lekcję o polowaniu.</Polish>
 		<Russian>Это добрые известия! Давайте соберем наших охотников, дабы он преподал им кое-какие уроки охоты.</Russian>
+		<Spanish>¡Son buenas noticias! Reunamos a los demás cazadores para que así pueda darles algunas lecciones de caza.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BETTER_COAL</Tag>
 		<English>Our scientists have developed better ways of processing coal fuel. Our economy stands ready to benefit from this development.</English>
-		<French>Nos scientifiques ont trouvé une meilleure facon d'exploiter le charbon. Notre économie va bénéficier énormement de cette découverte.</French>
+		<French>Nos scientifiques ont trouvé une meilleure façon d'exploiter le charbon. Notre économie va bénéficier énormément de cette découverte.</French>
 		<German>Unsere Wissenschaftler haben ein verbessertes Verfahren zur Energiegewinnung aus Kohle entwickelt, von welchem unsere Wirtschaft profitieren könnte.</German>
 		<Italian>I nostri scienziati hanno sviluppato metodi migliori per la lavorazione del combustibile derivante dal carbone. La nostra economia è pronta per beneficiare di questo sviluppo.</Italian>
-		<Spanish>Nuestros científicos han descubierto mejores métodos para procesar carbón. Nuestra economia está preparada para beneficiarse de este desarrollo.</Spanish>
 		<Polish>Nasi naukowcy znaleźli nowy sposób wykorzystania węgla. Nasza gospodarka jest już gotowa wykorzystać to nowe, lepsze paliwo.</Polish>
 		<Russian>Наши ученые разработали лучшие способы переработки угольного топлива. Наша экономика готова извлечь выгоду из этого открытия.</Russian>
+		<Spanish>Nuestros científicos han descubierto mejores métodos para procesar carbón. Nuestra economia está preparada para beneficiarse de este desarrollo.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BETTER_COAL_1</Tag>
 		<English>Put it to use at our Coal-fueled power plants. Production is power!</English>
-		<French>Appliquez cette avancée immediatement à nos centrales a charbon. La production, c'est le pouvoir!</French>
+		<French>Appliquez cette avancée immédiatement à nos centrales a charbon. La production, c'est le pouvoir!</French>
 		<German>Fördert den Einsatz dieser Technik in unseren Kohlekraftwerken, um die städtischen Produktionsraten zu steigern.</German>
 		<Italian>Usiamolo nelle nostre centrali a carbone. La produttività è potere!</Italian>
-		<Spanish>Aplicadlo en nuestras plantas de carbó. ¡La producción es poder!</Spanish>
 		<Polish>Użyjcie tego na szych Elektrowniach Węglowych. Produkcja to potęga!</Polish>
 		<Russian>Используйте для наших угольных электростанций. Производство - это сила!</Russian>
+		<Spanish>Aplicadlo en nuestras plantas de carbó. ¡La producción es poder!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BETTER_COAL_2</Tag>
