@@ -184,6 +184,8 @@ public:
 	void doBonusDepletion();
 
 	void updateCulture(bool bBumpUnits, bool bUpdatePlotGroups);
+	void checkCityRevolt();
+	void checkFortRevolt();
 
 	void updateFog();
 	void updateVisibility();

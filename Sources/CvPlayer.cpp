@@ -2784,19 +2784,6 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 void CvPlayer::killCities()
 {
 	algo::for_each(cities(), CvCity::fn::kill(false));
-
-	// Super Forts begin *culture* - Clears culture from forts when a player dies
-	const PlayerTypes ePlayer = getID();
-	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
-	{
-		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
-		if (pLoopPlot->getOwner() == ePlayer)
-		{
-			pLoopPlot->setOwner(pLoopPlot->calculateCulturalOwner(), true, false);
-		}
-	}
-	// Super Forts end
-
 	GC.getGame().updatePlotGroups();
 }
 

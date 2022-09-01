@@ -959,15 +959,139 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 
 void CvPlot::updateCulture(bool bBumpUnits, bool bUpdatePlotGroups)
 {
-	// Cities and forts w/ units will only update via regular CvPlot::doCulture (revolt)
-	// Revolt only possible for forts without units though, regardless of fixed borders
-	if (!isCity() && (!isActsAsCity() || getUnitPower(getOwner()) == 0))
+	// Forts and cities will call calculateCulturalOwner in updating,
+	// but have require additional criteria before flipping/revolting
+	if (getPlotCity() != NULL)
+		checkCityRevolt();
+	else if (isActsAsCity())
+		checkFortRevolt();
+	else
 	{
 		const PlayerTypes eNewOwner = calculateCulturalOwner();
-
-		if (eNewOwner != NO_PLAYER || !isActsAsCity())
-		{
+		if (eNewOwner != NO_PLAYER)
 			setOwner(eNewOwner, bBumpUnits, bUpdatePlotGroups);
+	}
+}
+
+
+void CvPlot::checkCityRevolt()
+{
+	// Check if city flips (revolts)
+	CvCity* pCity = getPlotCity();
+	if (pCity == NULL) return;
+
+	const PlayerTypes eCulturalOwner = calculateCulturalOwner();
+	if (eCulturalOwner != NO_PLAYER && GET_PLAYER(eCulturalOwner).getTeam() != getTeam() && !pCity->isOccupation())
+	{
+		// Check to check for revolt, rate adjusted by gamespeed, at least 1% minimum.
+		// If adjusted, also update `int iSpeedAdjustment` in CvGameTextMgr, CvDLLWidgetData
+		if (GC.getGame().getSorenRandNum(100, "Revolt #1") < std::max(1, GC.getREVOLT_TEST_PROB() *
+		100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()))
+		{
+			// iCityStrength is 100x % chance of revolt
+			const int iCityStrength = pCity->netRevoltRisk(eCulturalOwner);
+			int iRevoltRoll = GC.getGame().getSorenRandNum(10000, "Revolt #2");
+
+			if (pCity->isNPC() || iRevoltRoll < iCityStrength)
+			{
+				foreach_(CvUnit* pLoopUnit, units())
+				{
+					if (pLoopUnit->isNPC())
+					{
+						pLoopUnit->kill(false, eCulturalOwner);
+					}
+					else if (pLoopUnit->canDefend())
+					{
+						pLoopUnit->changeDamage(pLoopUnit->getHP() / 2, eCulturalOwner);
+					}
+				}
+
+				if (pCity->isNPC()
+				|| (!GC.getGame().isOption(GAMEOPTION_NO_CITY_FLIPPING)
+					&& (GC.getGame().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
+					&& pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS")))
+				{
+					if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+					{
+						pCity->kill(true);
+					}
+					else
+					{
+						setOwner(eCulturalOwner, true, true); // Will invalidate pCity pointer.
+					}
+				}
+				else
+				{
+					pCity->changeNumRevolts(eCulturalOwner, 1);
+					pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT") / 10000);
+
+					// XXX announce for all seen cities?
+
+					if (isInViewport())
+					{
+						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
+						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
+							ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
+
+						AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
+							ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
+					}
+				}
+			}
+			// Revolt is possible, but got lucky this time
+			else if (((iRevoltRoll - iCityStrength) < iCityStrength) && isInViewport())
+			{
+				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_FAILED_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
+				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT_END", MESSAGE_TYPE_MINOR_EVENT,
+					ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
+
+				AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT_END", MESSAGE_TYPE_MINOR_EVENT,
+					ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
+			}
+		}
+		// ~2x more likely to be alerted of high discontent than revolt or quelled one (don't want every turn)
+		else if (GC.getGame().getSorenRandNum(100, "Revolt #1 Alert") < std::max(1, GC.getREVOLT_TEST_PROB() *
+			200 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent())
+			&& isInViewport())
+		{
+			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCONTENT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
+			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_ADVISOR_SUGGEST", MESSAGE_TYPE_MINOR_EVENT,
+				ARTFILEMGR.getInterfaceArtInfo("INTERFACE_ANGRYCITIZEN_TEXTURE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
+
+			AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_ADVISOR_SUGGEST", MESSAGE_TYPE_MINOR_EVENT,
+				ARTFILEMGR.getInterfaceArtInfo("INTERFACE_ANGRYCITIZEN_TEXTURE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
+		}
+	}
+}
+
+
+void CvPlot::checkFortRevolt()
+{
+	if (getImprovementType() == NO_IMPROVEMENT)
+		return;
+
+	const CvImprovementInfo& improvement = GC.getImprovementInfo(getImprovementType());
+	const PlayerTypes eOwner = getOwner();
+
+	if (improvement.isActsAsCity() && getOwnershipDuration() > GC.getDefineINT("SUPER_FORTS_DURATION_BEFORE_REVOLT"))
+	{
+		// Check for a fort culture flip. Fixed borders altered threshold checked there
+		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
+		if (eCulturalOwner != NO_PLAYER && eCulturalOwner != eOwner && GET_PLAYER(eCulturalOwner).getTeam() != getTeam())
+		{
+			// Defenders prevent flipping regardless of fixed borders.
+			const bool bDefenderFound = algo::any_of(units(), bind(CvUnit::getOwner, _1) == eOwner && bind(CvUnit::canDefend, _1, this));
+			if (!bDefenderFound)
+			{
+				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_REVOLTED_JOINED", improvement.getText(), GET_PLAYER(eCulturalOwner).getCivilizationDescriptionKey());
+				AddDLLMessage(eOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO,
+					improvement.getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true);
+
+				AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO,
+					improvement.getButton(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);
+
+				setOwner(eCulturalOwner, true, true);
+			}
 		}
 	}
 }
@@ -3488,9 +3612,8 @@ void CvPlot::changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange
 void CvPlot::doImprovementCulture()
 {
 	if (getImprovementType() == NO_IMPROVEMENT)
-	{
 		return;
-	}
+
 	const CvImprovementInfo& improvement = GC.getImprovementInfo(getImprovementType());
 	const PlayerTypes eOwner = getOwner();
 	if (eOwner != NO_PLAYER)
@@ -3521,28 +3644,6 @@ void CvPlot::doImprovementCulture()
 			else
 			{
 				changeCulture(eOwner, iCulture, false);
-			}
-		}
-	}
-
-	if (improvement.isActsAsCity() && getOwnershipDuration() > GC.getDefineINT("SUPER_FORTS_DURATION_BEFORE_REVOLT"))
-	{
-		// Check for a fort culture flip. Fixed borders altered threshold checked there
-		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
-		if (eCulturalOwner != NO_PLAYER && eCulturalOwner != eOwner && GET_PLAYER(eCulturalOwner).getTeam() != getTeam())
-		{
-			// Defenders prevent flipping regardless of fixed borders.
-			const bool bDefenderFound = algo::any_of(units(), bind(CvUnit::getOwner, _1) == eOwner && bind(CvUnit::canDefend, _1, this));
-			if (!bDefenderFound)
-			{
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_REVOLTED_JOINED", improvement.getText(), GET_PLAYER(eCulturalOwner).getCivilizationDescriptionKey());
-				AddDLLMessage(eOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO,
-					improvement.getButton(), GC.getCOLOR_RED(), getX(), getY(), true, true);
-
-				AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO,
-					improvement.getButton(), GC.getCOLOR_GREEN(), getX(), getY(), true, true);
-
-				setOwner(eCulturalOwner, true, true);
 			}
 		}
 	}
@@ -4333,10 +4434,12 @@ CvCity* CvPlot::getAdjacentCity(PlayerTypes eplayer) const
 PlayerTypes CvPlot::calculateCulturalOwner() const
 {
 	// Function calculates who *should* own this plot via cultural means
-	// Actually setting owner happens in CvPlot::setOwner, includes other checks (revolts for cities, etc)
+	// Actually setting owner happens in CvPlot::setOwner
 	PROFILE("CvPlot::calculateCulturalOwner()");
 
+	// this will be who should own the plot by default
 	PlayerTypes eBestPlayer = findHighestCulturePlayer();
+
 	int iBestCulture = eBestPlayer != NO_PLAYER ? getCulture(eBestPlayer) : 0;
 	const PlayerTypes eOwner = getOwner();
 	const PlayerTypes ePlayerSurrounds = getPlayerWithTerritorySurroundingThisPlotCardinally();
@@ -4349,6 +4452,7 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 			return adjacentCity->getOwner();
 	}
 
+	// Fixed borders adjustments for culture threshold, unit passive claiming
 	// Have to check for the current owner being alive for this to work correctly in the cultural
 	//	re-assignment that takes place as he dies during processing of the capture of his last city.
 	if (eOwner != NO_PLAYER && GET_PLAYER(eOwner).isAlive() && GET_PLAYER(eOwner).hasFixedBorders())
@@ -6052,12 +6156,10 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 				if (getImprovementType() != NO_IMPROVEMENT)
 				{
 					GET_PLAYER(getOwner()).changeImprovementCount(getImprovementType(), 1);
-					// Super Forts begin *culture* - adapted to C2C
 					if (GC.getImprovementInfo(getImprovementType()).getCulture() > 0)
 					{
 						changeCultureRangeFortsWithinRange(getOwner(), 1, GC.getImprovementInfo(getImprovementType()).getCultureRange(), true);
 					}
-					// Super Forts end
 				}
 
 				updatePlotGroupBonus(true);
@@ -10138,100 +10240,11 @@ void CvPlot::doCulture()
 {
 	PROFILE("CvPlot::doCulture()");
 
-	// Fort flip checking occurs here
 	doImprovementCulture();
-
-	// Check if city flips (revolts)
-	CvCity* pCity = getPlotCity();
-	if (pCity != NULL)
-	{
-		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
-		if (eCulturalOwner != NO_PLAYER && GET_PLAYER(eCulturalOwner).getTeam() != getTeam() && !pCity->isOccupation())
-		{
-			// Check to check for revolt, rate adjusted by gamespeed, at least 1% minimum.
-			// If adjusted, also update `int iSpeedAdjustment` in CvGameTextMgr, CvDLLWidgetData
-			if (GC.getGame().getSorenRandNum(100, "Revolt #1") < std::max(1, GC.getREVOLT_TEST_PROB() *
-			100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()))
-			{
-				// iCityStrength is 100x % chance of revolt
-				const int iCityStrength = pCity->netRevoltRisk(eCulturalOwner);
-				int iRevoltRoll = GC.getGame().getSorenRandNum(10000, "Revolt #2");
-
-				if (pCity->isNPC() || iRevoltRoll < iCityStrength)
-				{
-					foreach_(CvUnit* pLoopUnit, units())
-					{
-						if (pLoopUnit->isNPC())
-						{
-							pLoopUnit->kill(false, eCulturalOwner);
-						}
-						else if (pLoopUnit->canDefend())
-						{
-							pLoopUnit->changeDamage(pLoopUnit->getHP() / 2, eCulturalOwner);
-						}
-					}
-
-					if (pCity->isNPC()
-					|| (!GC.getGame().isOption(GAMEOPTION_NO_CITY_FLIPPING)
-						&& (GC.getGame().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
-						&& pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS")))
-					{
-						if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
-						{
-							pCity->kill(true);
-						}
-						else
-						{
-							setOwner(eCulturalOwner, true, true); // Will invalidate pCity pointer.
-						}
-					}
-					else
-					{
-						pCity->changeNumRevolts(eCulturalOwner, 1);
-						pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT") / 10000);
-
-						// XXX announce for all seen cities?
-
-						if (isInViewport())
-						{
-							CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
-							AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
-								ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
-
-							AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
-								ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
-						}
-					}
-				}
-				// Revolt is possible, but got lucky this time
-				else if (((iRevoltRoll - iCityStrength) < iCityStrength) && isInViewport())
-				{
-					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_FAILED_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
-					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT_END", MESSAGE_TYPE_MINOR_EVENT,
-						ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
-
-					AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT_END", MESSAGE_TYPE_MINOR_EVENT,
-						ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
-				}
-			}
-			// ~2x more likely to be alerted of high discontent than revolt or quelled one (don't want every turn)
-			else if (GC.getGame().getSorenRandNum(100, "Revolt #1 Alert") < std::max(1, GC.getREVOLT_TEST_PROB() *
-				200 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent())
-				&& isInViewport())
-			{
-				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCONTENT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
-				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_ADVISOR_SUGGEST", MESSAGE_TYPE_MINOR_EVENT,
-					ARTFILEMGR.getInterfaceArtInfo("INTERFACE_ANGRYCITIZEN_TEXTURE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
-
-				AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_ADVISOR_SUGGEST", MESSAGE_TYPE_MINOR_EVENT,
-					ARTFILEMGR.getInterfaceArtInfo("INTERFACE_ANGRYCITIZEN_TEXTURE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
-			}
-		}
-	}
 
 	if (getOwner() != NO_PLAYER) decayCulture();
 
-	// Check other tiles for flipping
+	// updateCulture checks forts, cities for flipping.
 	// Setting forcibly claimed territory comes after, in doTurn
 	updateCulture(true, true);
 }
