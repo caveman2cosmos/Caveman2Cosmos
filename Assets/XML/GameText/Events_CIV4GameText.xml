@@ -738,7 +738,7 @@
 		<English>The %s1_civ_adjective people have trained the largest force of Swordsman units. Advisors across the known world are wondering if their civilizations will survive long enough to see what lies beyond the sword.</English>
 		<French>Le peuple %s1_civ_adjective a entraîné le plus grand nombre d'unités de Spadassins. Les conseillers du monde entier se demandent si leur civilisation vivra assez longtemps pour voir ce qui repose au-delà des épées.</French>
 		<German>Das %s1:3_civ_adjective Volk hat die größte Armee aus Schwertkämpfer-Einheiten ausgebildet. Berater der gesamten entdeckten Welt fragen sich, ob ihre Zivilisationen lange genug überleben, um zu sehen, was jenseits des Schwerts liegt.</German>
-		<Italian>Il popolo %s1_civ_adjective ha addestrato la più grande forza militare di spadaccini. Gli analisti di tutto il mondo conosciuto si chiedono se le loro civiltà sopravviveranno abbastanza a lungo da vedere cosa c'è oltre la spada.</Italian>
+		<Italian>L'Impero %s1_civ_adjective ha addestrato la più grande forza militare di spadaccini. Gli analisti di tutto il mondo conosciuto si chiedono se le loro civiltà sopravviveranno abbastanza a lungo da vedere cosa c'è oltre la spada.</Italian>
 		<Spanish>Los %s1:3_civ_adjective han entrenado a la mayor fuerza de soldados con espada. Consejeros de todo el mundo conocido se preguntan si sus civilizaciones vivirán para ver qué hay más allá de la espada.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -1096,7 +1096,7 @@
 		<English>The %s1_civ_adjective people have trained the largest force of musket units. Advisors across the known world are panicking at the thought of their nation being ground under the thundering clatter and deadly terror of an endless hail of bullets.</English>
 		<French>Le peuple %s1_civ_adjective a entraîné le plus grand nombre d'unités d'arquebusiers. Les conseillers de tout le monde connu paniquent à la pensée de leur nation mise à terre par le fracas assourdissant et la terreur mortelle d'une grêle de balles sans fin.</French>
 		<German>Das %s1:3_civ_adjective Volk hat die größte Truppe Musketier-Einheiten ausgebildet. Berater der gesamten entdeckten Welt brechen in Panik aus beim Gedanken daran, dass ihre Nation unter dem donnernden Lärm des endlosen Kugelhagels zermalmt wird.</German>
-		<Italian>Il popolo %s1_civ_adjective ha addestrato la più grande forza militare di soldati con moschetto. Gli analisti di tutto il mondo conosciuto sono in preda al panico all'idea che la loro nazione possa essere soggiogata dal fragore e dal terrore mortale di una pioggia infinita di proiettili.</Italian>
+		<Italian>L'Impero %s1_civ_adjective ha addestrato la più grande forza militare di soldati con moschetto. Gli analisti di tutto il mondo conosciuto sono in preda al panico all'idea che la loro nazione possa essere soggiogata dal fragore e dal terrore mortale di una pioggia infinita di proiettili.</Italian>
 		<Spanish>Los %s1:3_civ_adjective han entrenado a la mayor fuerza de mosquetes. Consejeros de todo el mundo conocido tiemblan ante la idea de que su nación pueda ser aplastada por el estrépito y el terror de una interminable lluvia de balas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2601,17 +2601,17 @@
 		<English>Group of thieves have plundered Treasury in %s2_city!</English>
 		<French>Un Groupe de voleurs a pillé le trésor de %s2_city!</French>
 		<German>Eine Diebesgruppe hat die Schatzkammer in %s2_city geplündert!</German>
-		<Italian>Un gruppo di ladri ha rubato il tesoro a %s2_city!</Italian>
-		<Spanish>¡Un grupo de ladrones ha saqueado el tesoro en %s2_city!</Spanish>
+		<Italian>Un gruppo di ladri ha svuotato le casse cittadine di %s2_city!</Italian>
 		<Polish>Grupa złodziei zrabowała skarbiec w mieście %s2_city!</Polish>
 		<Russian>Шайка воров обчистила сокровищницу в городе %s2_city!</Russian>
+		<Spanish>¡Un grupo de ladrones ha saqueado el tesoro en %s2_city!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TRUFFLES</Tag>
 		<English>%s1_civ_adjective people are bragging about their truffles, claiming they are the most delicious in the world.</English>
 		<French>Les %s1:3_civ_adjective se vantent de leurs truffes, allant jusqu'à prétendre qu'elles sont les plus délicieuses au monde.</French>
 		<German>Die %s1:2_civ_adjective Bürger brüsten sich mit ihren Trüffeln und behaupten, sie seien die schmackhaftesten der Welt.</German>
-		<Italian>La popolazione %s1_civ_adjective si vanta dei propri tartufi, che decanta come i più deliziosi al mondo.</Italian>
+		<Italian>La popolazione %s1:2_civ_adjective si vanta dei propri tartufi, che decanta come i più deliziosi al mondo.</Italian>
 		<Spanish>El pueblo %s1:1_civ_adjective se vanagloria de sus Trufas y dice que son las más ricas del mundo.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2619,14 +2619,14 @@
 		<English>A tsunami more than fifteen meters high has rolled over the %s1_civ_adjective city of %s2_city. The destruction is unprecedented in world history.</English>
 		<French>Un tsunami de plus de quinze mètres de haut a déferlé sur la ville %s1:2_civ_adjective de %s2_city. Jamais le monde n'avait connu de destruction d'une si grande ampleur.</French>
 		<German>Ein mehr als fünfzehn Meter hoher Tsunami ist über die %s1:3_civ_adjective Stadt %s2_city hinweggerollt und hat ein in der Weltgeschichte unübertroffenes Ausmaß an Verwüstungen angerichtet.</German>
-		<Italian>Uno tsunami di oltre quindici metri ha investito la città %s1_civ_adjective di %s2_city. La distruzione è senza precedenti storici.</Italian>
+		<Italian>Uno tsunami di oltre quindici metri ha investito la città %s1:2_civ_adjective di %s2_city. La distruzione è senza precedenti.</Italian>
 		<Spanish>Un "tsunami" de más de quince metros de altura ha anegado la ciudad %s1:2_civ_adjective de %s2_city, y ha provocado una destrucción sin precedentes en los anales mundiales.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_TUSK</Tag>
 		<English>%s1_civ_adjective whalers are now hunting narwhals.</English>
 		<French>Les baleiniers %s1_civ_adjective chassent des narvals.</French>
-		<Italian>Le baleniere %s1_civ_adjective danno la caccia ai narvali.</Italian>
+		<Italian>Le baleniere %s1:2_civ_adjective adesso stanno dando la caccia ai narvali.</Italian>
 		<Polish>Wielorybnicy z %s1_civ_adjective poluja od teraz na narwale.</Polish>
 		<Russian>Ó %s1_civ_adjective êèòîáîåâ îòêðûëñÿ ñåçîí ïðîìûñëà íàðâàëîâ.</Russian>
 	</TEXT>
@@ -2635,24 +2635,25 @@
 		<English>News reports claim that UFOs have been sighted near the Army Base in the %s1_civ_adjective city of %s2_city. People are flocking to the site with cameras as they are trying to get a glimpse of these UFOs.</English>
 		<French>Des Informateurs affirment que des Ovnis ont été repérés près de la base militaire %s1:2_civ_adjective de %s2_city. Les gens ont envahi le site avec des appareils photo dans l'espoir de pouvoir apercevoir et prouver leur existence.</French>
 		<German>Die Nachrichten berichten, dass in der Nähe der Armeestation der %s1_civ_adjective Stadt %s2_city UFOs gesichtet worden sind. Die Menschen strömen mit ihren Kameras dorthin um einen Blick auf diese Ufos zu erhaschen.</German>
-		<Italian>I telegiornali affermano che alcuni UFO sono stati avvistati vicino alla città %s1:2_civ_adjective di %s2_city. Le persone si stanno dirigendo verso questo sito armate di macchine fotografiche per catturare un'immagine di questi UFO.</Italian>
-		<Spanish>Los noticieros informan de que se han avistado OVNIs cerca de la ciudad %s1:2_civ_adjective de %s2_city. La gente se está dirigiendo masivamente hacia el sitio con cámaras con las que están intentando capturar una instantánea de esos OVNIs.</Spanish>
+		<Italian>I giornali affermano che alcuni UFO sono stati avvistati vicino alla città %s1:2_civ_adjective di %s2_city. Le persone si stanno dirigendo al luogo dell'avvistamento armate di macchine fotografiche per catturare il momento.</Italian>
 		<Polish>Najnowsze wiadomości donoszą o dostrzeżeniu Niezidentyfikowanych Obiektów Latających w pobliżu Bazy Wojskowej %s1_civ_adjective w mieście %s2_city. Ludzie zmierzają do tego miejsca z aparatami fotograficznymi, aby zdobyć dowód istnienia kosmitów.</Polish>
 		<Russian>Согласно недавним репортажам, возле военной базы %s1_civ_adjective в городе %s2_city были замечены НЛО. Люди стекаются к месту происшествия с фотоаппаратами, рассчитывая увидеть эти НЛО.</Russian>
+		<Spanish>Los noticieros informan de que se han avistado OVNIs cerca de la ciudad %s1:2_civ_adjective de %s2_city. La gente se está dirigiendo masivamente hacia el sitio con cámaras con las que están intentando capturar una instantánea de esos OVNIs.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_UNLIMITED_POWER</Tag>
 		<English>Geothermal energy has been found underneath the %s1_civ_adjective empire.</English>
 		<French>De l'Energie Géothermique a été trouvé au sein de %s1_civ_adjective empire.</French>
-		<Spanish>Se ha encontrado una fuente de energía geotérmica en la capa subterránea del imperio %s1_civ_adjective.</Spanish>
+		<Italian>Una fonte di energia geotermica è stata individuata nell'Impero %s1_civ_adjective.</Italian>
 		<Polish>Energia geotermalna została odkryta w imperium %s1_civ_adjective.</Polish>
 		<Russian>Источники геотермальной энергии были найдены в недрах державы %s1_civ_adjective.</Russian>
+		<Spanish>Se ha encontrado una fuente de energía geotérmica en la capa subterránea del imperio %s1_civ_adjective.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_VEGAS_JACKPOT</Tag>
 		<English>A lucky gambler from %s2_city has hit the jackpot on the Las Vegas Strip.</English>
 		<French>Un joueur chanceux de %s2_city a décroché le jackpot à Las Vegas.</French>
-		<Italian>Un fortunato giocatore d'azzardo di %s2_city ha vinto il jackpot sulla strip di Las Vegas.</Italian>
+		<Italian>Un fortunato giocatore d'azzardo di %s2_city ha vinto il jackpot sulla Strip di Las Vegas.</Italian>
 		<Russian>Óäà÷ëèâûé èãðîê èç %s2_city ñóìåë ñîðâàòü êóø â Ëàñ-Âåãàñå.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2660,7 +2661,7 @@
 		<English>A volcanic eruption near %s2_city has devastated the countryside. Fortunately, the %s1_civ_adjective city itself was spared.</English>
 		<French>Une éruption volcanique près de %s2_city a dévasté la campagne. Heureusement, la ville %s1:2_civ_adjective a été épargnée.</French>
 		<German>Ein Vulkanausbruch in der Nähe von %s2_city hat den Landstrich verwüstet. Glücklicherweise blieb die %s1:3_civ_adjective Stadt selbst verschont.</German>
-		<Italian>Un'eruzione vulcanica vicino a %s2_city ha devastato il territorio. Fortunatamente la città %s1_civ_adjective è stata risparmiata.</Italian>
+		<Italian>Un'eruzione vulcanica vicino a %s2_city ha devastato il territorio circostante. Fortunatamente la città %s1:2_civ_adjective è stata risparmiata.</Italian>
 		<Spanish>La erupción de un volcán cercano a %s2_city ha devastado el campo. Por suerte, la propia ciudad %s1:2_civ_adjective se ha salvado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2668,13 +2669,14 @@
 		<English>The earth has spewed forth lava and ash from a previously dormant volcano near the %s1_civ_adjective city of %s2_city.</English>
 		<French>Un volcan jusqu'ici endormi a craché de la lave et des cendres près de la ville %s1:2_civ_adjective de %s2_city.</French>
 		<German>Ein bislang inaktiver Vulkan in der Nähe der %s1:2_civ_adjective Stadt %s2_city hat Lava und Asche gespien.</German>
-		<Italian>La terra ha eruttato lava e ceneri da un vulcano addormentato vicino alla città %s1_civ_adjective di %s2_city.</Italian>
+		<Italian>La terra ha eruttato lava e ceneri da un vulcano addormentato vicino alla città %s1:2_civ_adjective di %s2_city.</Italian>
 		<Spanish>La tierra ha escupido lava y cenizas por un volcán que antes estaba inactivo en la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_ACTIVE</Tag>
 		<English>Reports from the %s1_civ_adjective empire speak of increased volcanic activity.</English>
 		<French>Des rumeurs courent concernant une augmentation de l'activité volcanique.</French>
+		<Italian>Notizie provenienti dall'Impero %s1_civ_adjective parlano di attività vulcaniche in aumento.</Italian>
 		<Polish>Raporty z Imperium %s1_civ_adjective mówią o zwiększonej aktywności wulkanicznej.</Polish>
 		<Russian>Приходят известия о повышенной вулканической активности в державе %s1_civ_adjective.</Russian>
 	</TEXT>
@@ -2682,8 +2684,8 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_WARSHIPS_DONE</Tag>
 		<English>The %s1_civ_adjective people have trained the largest fleet of warships. Advisors across the known world whisper of their fears that this fleet will dominate the seas for centuries to come.</English>
 		<French>Le peuple %s1_civ_adjective a construit la plus grande flotte de navires de guerre. Les conseillers du monde entier craignent que cette flotte ne domine les océans pour les siècles à venir.</French>
-		<German>Das %s1:3_civ_adjective Volk hat die größte Kriegsschiffflotte ausgebildet. Berater der gesamten entdeckten Welt fürchten, dass diese Flotte jahrhundertelang die Meere beherrschen wird.</German>
-		<Italian>La popolazione %s1_civ_adjective ha costruito la più grande flotta di navi da guerra. I consiglieri di tutto il mondo hanno paura che la flotta dominerà i mari per i prossimi secoli.</Italian>
+		<German>Das %s1:3_civ_adjective Volk hat die größte Kriegsschiffsflotte ausgebildet. Berater der gesamten entdeckten Welt fürchten, dass diese Flotte jahrhundertelang die Meere beherrschen wird.</German>
+		<Italian>L'Impero %s1_civ_adjective ha costruito la più grande flotta di navi da guerra. Gli analisti di tutto il mondo conosciuto hanno paura che questa flotta dominerà i mari per i prossimi secoli.</Italian>
 		<Spanish>Los %s1:3_civ_adjective han entrenado a la mayor flota de barcos de guerra. Consejeros de todo el mundo conocido confiesan entre susurros su temor de que esta flota domine los mares durante los siglos venideros.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2691,7 +2693,7 @@
 		<English>The %s1_civ_adjective people have trained the largest force of Chariot units. Advisors across the known world are panicking at the thought of their nation being ground under the thundering hooves and churning wheels of these mighty war machines.</English>
 		<French>Le peuple %s1_civ_adjective a entraîné la plus importante armée de Chars. Les conseillers du monde entier paniquent à l'idée que leur nation puisse être attaquée par ces puissantes machines de guerre.</French>
 		<German>Das %s1:3_civ_adjective Volk hat die größte Truppe Streitwagen-Einheiten ausgebildet. Berater der gesamten entdeckten Welt geraten in Panik beim Gedanken daran, dass ihre Nation unter den donnernden Hufen und krachenden Rädern dieser mächtigen Kriegsmaschinen zermalmt wird.</German>
-		<Italian>La popolazione %s1_civ_adjective ha addestrato la più grande forza militare militare composta da bighe. I consiglieri di tutto il mondo si stanno lasciando prendere dal panico, al pensiero della propria nazione investita dagli zoccoli e dalle pesanti ruote di queste macchine da guerra.</Italian>
+		<Italian>L'Impero %s1_civ_adjective ha addestrato la più grande forza militare militare composta da carri. Gli analisti di tutto il mondo conosciuto si stanno lasciando prendere dal panico al pensiero della propria nazione investita dagli zoccoli e dalle pesanti ruote di queste macchine da guerra.</Italian>
 		<Spanish>Los %s1:3_civ_adjective han entrenado a la mayor fuerza de carros. Consejeros de todo el mundo conocido tiemblan ante la idea de que su nación pueda ser aplastada por los cascos y ruedas de estas poderosas máquinas de guerra.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2700,16 +2702,16 @@
 		<French>Les Habitants de la ville %s1:2_civ_adjective de %s2_city ont bâti un mémorial pour commémorer les soldats qui ont donné leurs vies durant les dernières Guerres.</French>
 		<German>Die Bürger der %s1_civ_adjective Stadt %s2_city haben ein Kriegerdenkmal errichtet, um an Soldaten, die in den vergangenen Kriegen ihr Leben verloren haben zu erinnern.</German>
 		<Italian>Gli abitanti della città %s1:2_civ_adjective di %s2_city hanno costruito un memoriale di guerra, per commemorare le vite dei soldati persi nelle recenti guerre.</Italian>
-		<Spanish>Los habitantes de la ciudad %s1:2_civ_adjective de %s2_city han construido un Monumento a los caídos en memoria de los soldados perdidos en guerras recientes.</Spanish>
 		<Polish>Mieszkańcy %s1_civ_adjective city of %s2_city zbudowali pomnik żołnierzy poległych w niedawnych wojnach.</Polish>
 		<Russian>The citizens of the %s1_civ_adjective city of %s2_city have built a war memorial to commemorate the lives of soldiers lost in recent wars.</Russian>
+		<Spanish>Los habitantes de la ciudad %s1:2_civ_adjective de %s2_city han construido un Monumento a los caídos en memoria de los soldados perdidos en guerras recientes.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WASHED_OUT</Tag>
 		<English>Floods have washed out some of the routes near the %s1_civ_adjective city of %s2_city.</English>
 		<French>Des inondations ont noyé les routes près de la ville %s1:2_civ_adjective de %s2_city.</French>
 		<German>Einige Straßen in der Nähe der %s1:2_civ_adjective Stadt %s2_city wurden überflutet.</German>
-		<Italian>Le inondazioni hanno distrutto alcune strade vicino alla città %s1_civ_adjective di %s2_city.</Italian>
+		<Italian>Le inondazioni hanno distrutto alcune strade vicino alla città %s1:2_civ_adjective di %s2_city.</Italian>
 		<Spanish>Las inundaciones han arrasado algunas de las rutas cercanas a la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2717,15 +2719,15 @@
 		<English>The Waters of Life, drawn from a certain oasis in %s2_civ_adjective lands, are rumored to be able to cure the sick and heal the injured.</English>
 		<French>Les Eaux de la Vie, tirées d'une certaine oasis des terres %s2:4_civ_adjective, sont supposées pouvoir guérir les malades et soigner les blessés.</French>
 		<German>Das Wasser des Lebens, das aus einer bestimmten %s2:2_civ_adjective Oase stammt, kann angeblich Kranke und Verletzte heilen.</German>
-		<Italian>Le Acque della vita, che sgorgano in un'oasi nelle terre %s2_civ_adjective, sembrano essere in grado di curare i malati e guarire i feriti.</Italian>
+		<Italian>Le Acque della vita, che sgorgano in un'oasi nelle terre %s2:4_civ_adjective, sembrano essere in grado di curare i malati e guarire i feriti.</Italian>
 		<Spanish>Según los rumores, las Aguas de la Vida, que se obtienen de cierto oasis de las tierras %s2:4_civ_adjective, tienen la capacidad de sanar a los enfermos y curar a los heridos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WEDDING_FEUD</Tag>
-		<English>Nobles from a %s4_civ_adjective family are angry with their new %s1_civ_adjective inlaws for holding a %s3_religion_adjective wedding against their wishes. This event has drawn great interest within these nations as feuding has broken out over the dispute.</English>
+		<English>Nobles from a %s4_civ_adjective family are angry with their new %s1_civ_adjective in-laws for holding a %s3_religion_adjective wedding against their wishes. This event has drawn great interest within these nations as feuding has broken out over the dispute.</English>
 		<French>Des nobles issus d'une famille %s4:2_civ_adjective se sont disputés avec leurs beaux-parents %s1:3_civ_adjective, leur reprochant d'avoir organisé un mariage %s3:1_religion_adjective contre leurs souhaits. Cet évènement a suscité un grand intérêt au sein de ces deux nations et prend une ampleur politique.</French>
 		<German>Die Mitglieder einer %s4:2_civ_adjective Adelsfamilie sind wütend auf ihre neue %s1:3_civ_adjective Schwiegerverwandtschaft, weil gegen ihren Wunsch eine %s3:3_religion_adjective Trauungszeremonie abgehalten wurde. Dieses Ereignis erregt die Gemüter in der Bevölkerung und hat einen Streit zwischen den beiden Nationen ausgelöst.</German>
-		<Italian>I nobili di una famiglia %s4_civ_adjective sono adirati con i loro nuovi consuoceri %s1_civ_adjective per aver organizzato un matrimonio %s3_religion_adjective contro i loro desideri. Questo fatto ha attirato un grande interesse nelle due nazioni, tanto che per questo le due famiglie sono ora in lotta.</Italian>
+		<Italian>I nobili di una famiglia %s4:2_civ_adjective sono adirati con i loro nuovi consuoceri %s1:3_civ_adjective per aver organizzato un matrimonio %s3_religion_adjective contro il loro volere. L'evento ha suscitato grande interesse all'interno di queste nazioni, coinvolte dalla disputa che divide queste due famiglie.</Italian>
 		<Spanish>Los nobles de una familia %s4:2_civ_adjective están enojados con su nueva familia política %s1:2_civ_adjective por haber celebrado una boda %s3:2_religion_adjective en contra de sus deseos. Este asunto ha suscitado un gran interés entre ambas naciones, ya que la disputa se ha convertido en una cuestión de honor.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2733,15 +2735,15 @@
 		<English>A new source of Whales has been located off the %s1_civ_adjective coast.</English>
 		<French>Une nouvelle source de baleines a été localisée près de la côte %s1:2_civ_adjective.</French>
 		<German>Vor der Küste des %s1:2_civ_adjective Reiches wurde eine neue Walschule entdeckt.</German>
-		<Italian>È stata localizzata una nuova fonte di balene davanti alla costa %s1_civ_adjective.</Italian>
+		<Italian>È stato localizzato un nuovo branco di balene davanti alla costa %s1:2_civ_adjective.</Italian>
 		<Spanish>Se ha localizado un nuevo caladero de ballenas en la costa %s1:2_civ_adjective.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WININGMONKS</Tag>
-		<English>%s1_civ_adjective monks who have grown their vinyards over the years are now producing Wines in significant quantities.</English>
+		<English>%s1_civ_adjective monks who have grown their vineyards over the years are now producing Wines in significant quantities.</English>
 		<French>Les moines %s1_civ_adjective qui ont fait pousser leurs vignes pendant des années produisent à présent du vin en quantité importante.</French>
 		<German>Die Mönche des %s1:2_civ_adjective Reichs, die schon seit Jahren Wein anbauen, produzieren erstaunliche Mengen.</German>
-		<Italian>I monaci %s1_civ_adjective hanno coltivato per anni i propri vigneti e ora producono vini in quantità significative.</Italian>
+		<Italian>I monaci %s1:3_civ_adjective hanno coltivato per anni i propri vigneti e ora producono vino in quantità significative.</Italian>
 		<Spanish>Monjes %s1:3_civ_adjective que llevan años cultivando viñas producen ahora vinos en cantidades significativas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2749,10 +2751,10 @@
 		<English>War breaks out between the %s1_civ_adjective and %s3_civ_adjective empires after a football game between their national teams turns deadly!</English>
 		<French>La guerre éclate entre les empires %s1:3_civ_adjective et %s3:3_civ_adjective après qu'un match de football entre leurs équipes nationales tourne au drame!</French>
 		<German>Krieg bricht zwischen dem %s1_civ_adjective und dem %s3_civ_adjective Reich aus, nachdem ein Fußballspiel zwischen ihren Nationalmannschaften tödlich endet!</German>
-		<Italian>è scoppiata la guerra tra l'Impero %s1_civ_adjective e quello %s3_civ_adjective dopo che una partita di calcio tra le loro nazionali è finita nel sangue!</Italian>
-		<Spanish>¡Ha estallado la guerra entre los imperios %s1_civ_adjective y %s3_civ_adjective después de que un partido de fútbol entre sus selecciones nacionales acabara en tragedia!</Spanish>
+		<Italian>È scoppiata la guerra tra l'Impero %s1_civ_adjective e quello %s3_civ_adjective, dopo che una partita di calcio tra le loro nazionali è finita nel sangue!</Italian>
 		<Polish>Wybuchła wojna pomiędzy imperium %s1_civ_adjective i %s3_civ_adjective niedługo po krwawym incydencie jaki miał miejsce tuż po zakończonym meczu ich narodowych drużyn!</Polish>
 		<Russian>War breaks out between the %s1_civ_adjective and %s3_civ_adjective empires after a football game between their national teams turns deadly!</Russian>
+		<Spanish>¡Ha estallado la guerra entre los imperios %s1_civ_adjective y %s3_civ_adjective después de que un partido de fútbol entre sus selecciones nacionales acabara en tragedia!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTWORLD_FUTBOL_WAR_2</Tag>
@@ -2760,27 +2762,28 @@
 		<French>Le gouvernement %s1_civ_adjective a présenté ses excuses pour la violence engendrée à la suite d'un match de football dans %s2_city. Une compensation a été offerte aux familles des victimes.</French>
 		<German>Die %s1_civ_adjective Regierung entschuldigt sich für die Fußballgewalttätigkeit in %s2_city. Den Familien der Opfer ist eine Entschädigung angeboten worden.</German>
 		<Italian>Il governo %s1_civ_adjective si scusa per le violenze durante la partita di calcio a %s2_city. Un indennizzo è stato offerto ai familiari delle vittime.</Italian>
-		<Spanish>El gobierno %s1_civ_adjective se disculpa por la violencia provocada por el fútbol en %s2_city. Se ha ofrecido una indemnización a las familias de las víctimas.</Spanish>
 		<Polish>Rząd %s1_civ_adjective przeprasza za brutalny incydent w mieście %s2_city jaki miał miejsce tuż po zakończonym meczu z jej narodową drużyną. Rekompensata została zaoferowana rodzinom ofiar.</Polish>
 		<Russian>The %s1_civ_adjective government apologizes for the football violence in %s2_city. Compensation has been offered to the victims' families.</Russian>
+		<Spanish>El gobierno %s1_civ_adjective se disculpa por la violencia provocada por el fútbol en %s2_city. Se ha ofrecido una indemnización a las familias de las víctimas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTWORLD_FUTBOL_WAR_3</Tag>
 		<English>Tensions between the %s1_civ_adjective and %s3_civ_adjective empires have increased after recent football violence between their citizens claimed several lives.</English>
 		<French>Les tensions entre les empires %s1:3_civ_adjective et %s3:3_civ_adjective ont augmenté après des violences récentes entre leurs citoyens lors d'un match de football, qui ont réclamé plusieurs vies.</French>
 		<German>Spannungen zwischen dem %s1_civ_adjective und dem %s3_civ_adjective Reich haben sich nach kürzlicher Fußballgewalttätigkeit erhöht und dabei einige Leben gekostet.</German>
-		<Italian>La tensione tra gli imperi %s1_civ_adjective e %s3_civ_adjective è aumentata dopo i fatti di violenza tra i loro tifosi durante la recente partita di calcio.</Italian>
-		<Spanish>Las tensiones entre los imperios %s1_civ_adjective y %s3_civ_adjective han aumentado después de que el reciente brote de violencia entre sus ciudadanos debido al fútbol se cobrara varias vidas.</Spanish>
+		<Italian>La tensione tra gli Imperi %s1_civ_adjective e %s3_civ_adjective è aumentata dopo gli episodi di violenza tra i loro tifosi durante una recente partita di calcio.</Italian>
 		<Polish>Pogorszyły się stosunki pomiędzy narodami %s1_civ_adjective i %s3_civ_adjective po brutalnych zamieszkach jakie miały miejsce po zakończonym meczu ich narodowych drużyn.</Polish>
 		<Russian>Tensions between the %s1_civ_adjective and %s3_civ_adjective empires have increased after recent football violence between their citizens claimed several lives.</Russian>
+		<Spanish>Las tensiones entre los imperios %s1_civ_adjective y %s3_civ_adjective han aumentado después de que el reciente brote de violencia entre sus ciudadanos debido al fútbol se cobrara varias vidas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ABATIS_IN_DISREPAIR</Tag>
 		<English>Our lack of military funding and neglect has left this abatis in shambles.</English>
 		<French>En raison de nos investissements militaires insuffisants et notre négligence, cet abatti est tombé en ruines</French>
-		<Spanish>La falta de financiación militar y el estado de abandono han dejado este Abatis con cerco espinoso en ruínas.</Spanish>
+		<Italian>La carenza di fondi e l'incuria hanno ridotto questa abbattuta in rovina.</Italian>
 		<Polish>Nasz brak finansowania armii i zaniedbania doprowadziły te zasieki do ruiny.</Polish>
 		<Russian>Отсутствие должного финансирования и пренебрежение привели эти засеки в запустение.</Russian>
+		<Spanish>La falta de financiación militar y el estado de abandono han dejado este Abatis con cerco espinoso en ruínas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ACADEMIC_FUNDING_1</Tag>
@@ -2796,12 +2799,14 @@
 		<Tag>TXT_KEY_EVENT_ACHIEVEMENT</Tag>
 		<English>This is certainly a good day for our glorious nation.</English>
 		<French>C'est sûrement un des plus beaux jours de notre glorieuse nation, Félicitations!!</French>
+		<Italian>Questo è davvero un bel giorno per la nostra gloriosa nazione.</Italian>
 		<Russian>Это, безусловно, хороший день для нашей славной нации.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_AGRICULTURAL</Tag>
 		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great agricultural achievement! The realm is blessed with a massive increase in agrarian output.</English>
 		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement agricole! Le royaume bénéficie d'une augmentation massive de la production de nourriture.</French>
+		<Italian>Questo è un momento storico! Il nostro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha ottenuto un grande risultato per l'agricoltura! L'Impero è benedetto da un massiccio aumento della produzione agricola.</Italian>
 		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Rolnicze!</Polish>
 		<Russian>В эту историческую эпоху, благодаря нашему [COLOR_UNIT_TEXT]Национальному герою[COLOR_REVERT] мы достигли огромных успехов в сельском хозяйстве! По всей стране отмечается заметный прирост урожайности.</Russian>
 	</TEXT>
@@ -2809,6 +2814,7 @@
 		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_COMMERCIAL</Tag>
 		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great commercial achievement! Gold and wealth pours into the coffers like never before.</English>
 		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement commercial! Or et richesse débordent de leurs coffres forts comme jamais.</French>
+		<Italian>Questo è un momento storico! Il nostro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha ottenuto un grande risultato per il commercio! Oro e ricchezze si riversano nei forzieri come mai prima d'ora.</Italian>
 		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Handlowe!</Polish>
 		<Russian>В эту историческую эпоху, благодаря нашему [COLOR_UNIT_TEXT]Национальному герою[COLOR_REVERT] мы достигли огромных успехов в торговле! Золото и богатства переполняют сундуки, как никогда раньше.</Russian>
 	</TEXT>
@@ -2816,6 +2822,7 @@
 		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_CULTURAL</Tag>
 		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great cultural achievement! The sophistication of our civilization is the envy of the world.</English>
 		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement culturel! La sophistication de leur civilisation est enviée dans le monde entier.</French>
+		<Italian>Questo è un momento storico! Il nostro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha ottenuto un grande risultato per la cultura! La raffinatezza della nostra civiltà è invidiata da tutto il mondo.</Italian>
 		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Kulturowe!</Polish>
 		<Russian>В эту историческую эпоху, благодаря нашему [COLOR_UNIT_TEXT]Национальному герою[COLOR_REVERT] мы достигли огромных успехов в культуре! Утонченность и изысканность нашей цивилизации является предметом зависти для всего мира.</Russian>
 	</TEXT>
@@ -2823,6 +2830,7 @@
 		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_INDUSTRIAL</Tag>
 		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great industrial achievement! Industrial production has boomed to an unprecedented level.</English>
 		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement industriel! Leur production atteint à présent un niveau inégalé.</French>
+		<Italian>Questo è un momento storico! Il nostro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha ottenuto un grande risultato per l'industria! La nostra produzione industriale ha raggiunto livelli senza precedenti.</Italian>
 		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Przemysłowe!</Polish>
 		<Russian>В эту историческую эпоху, благодаря нашему [COLOR_UNIT_TEXT]Национальному герою[COLOR_REVERT] мы достигли огромных успехов в промышленности! Объем промышленного производства вырос до беспрецедентного уровня.</Russian>
 	</TEXT>
@@ -2830,6 +2838,7 @@
 		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_MILITARY</Tag>
 		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great military achievement! Our armies now are amongst the most feared in the world.</English>
 		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement militaire! Votre armée fait partie des plus craintes de ce monde.</French>
+		<Italian>Questo è un momento storico! Il nostro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha ottenuto un grande risultato militare! Il nostro esercito è adesso uno dei più temuti del mondo.</Italian>
 		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Wojskowe!</Polish>
 		<Russian>В эту историческую эпоху, благодаря нашему [COLOR_UNIT_TEXT]Национальному герою[COLOR_REVERT] мы достигли огромных успехов в военном деле! Наши вооруженные силы ныне одни из самых грозных во всем мире.</Russian>
 	</TEXT>
@@ -2837,6 +2846,7 @@
 		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_POLITICAL</Tag>
 		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great political achievement! The world watches in awe as our leaders manage one of the most organized and efficient governments in history.</English>
 		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement politique! Le monde reste bouche bée devant le plus efficient et organisé des gouvernements de toute l'histoire.</French>
+		<Italian>Questo è un momento storico! Il nostro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha ottenuto un grande risultato politico! Il mondo assiste con ammirazione a come i nostri leader gestiscono uno dei governi più organizzati ed efficienti della storia.</Italian>
 		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Polityczne!</Polish>
 		<Russian>В эту историческую эпоху, благодаря нашему [COLOR_UNIT_TEXT]Национальному герою[COLOR_REVERT] мы достигли огромных успехов в общественно-политическом устройстве! Мир с восхищением наблюдает за тем, как наши лидеры управляют одним из самых организованных и эффективных правительств в истории.</Russian>
 	</TEXT>
@@ -2844,6 +2854,7 @@
 		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_SCIENTIFIC</Tag>
 		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great scientific achievement! Our technological advancement is now something to behold.</English>
 		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement scientifique! Nos percées technologique sont à suivre avec attention.</French>
+		<Italian>Questo è un momento storico! Il nostro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha ottenuto un grande risultato tecnologico! I nostri progressi tecnologici sono ormai qualcosa di straordinario.</Italian>
 		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Naukowe!</Polish>
 		<Russian>В эту историческую эпоху, благодаря нашему [COLOR_UNIT_TEXT]Национальному герою[COLOR_REVERT] мы достигли огромных успехов в науке! Наше технологическое развитие - образец подражания для других.</Russian>
 	</TEXT>
@@ -2851,6 +2862,7 @@
 		<Tag>TXT_KEY_EVENT_ACHIEVEMENT_SEAFARING</Tag>
 		<English>This is a historic era, our [COLOR_UNIT_TEXT]National Hero[COLOR_REVERT] has accomplished a great seafaring achievement! No other nation possess ships that are stronger and faster. They sail across the seven seas and bring back exotic riches from the far corners of the world.</English>
 		<French>C'est une période historique pour votre peuple, un de vos [COLOR_UNIT_TEXT]Héros[COLOR_REVERT] a mené à son terme un grand accomplissement maritime! Aucune autre nation ne possède de navires aussi résistants ni aussi rapides. Ils ont vogués à travers les sept océans pour ramener des richesse exotiques des quatre coins du globe.</French>
+		<Italian>Questo è un momento storico! Il nostro [COLOR_UNIT_TEXT]Eroe nazionale[COLOR_REVERT] ha ottenuto un grande risultato per la navigazione! Nessun'altra nazione possiede navi più forti e più veloci, che navigano attraverso i sette mari e riportano ricchezze esotiche dagli angoli più remoti del mondo.</Italian>
 		<Polish>To historyczna era dla naszych ludzi, ich [COLOR_UNIT_TEXT]Bohater Narodowy[COLOR_REVERT] stworzył wspaniałe Osiągnięcie Morskie!</Polish>
 		<Russian>В эту историческую эпоху, благодаря нашему [COLOR_UNIT_TEXT]Национальному герою[COLOR_REVERT] мы достигли огромных успехов в мореплавании! Ни в одной другой стране нет таких быстроходных и мощных кораблей, подобных нашим. Они плавают по семи морям и океанам и привозят богатства и диковинки из дальних уголков мира.</Russian>
 	</TEXT>
@@ -2866,7 +2878,7 @@
 		<Tag>TXT_KEY_EVENT_ADD_ONE_POPULATION</Tag>
 		<English>Join the city. Increasing the population by one.</English>
 		<French>Rejoindre la Ville. Augmente de 1 la population.</French>
-		<Italian>Unisci alla città; incrementa la popolazione di 1.</Italian>
+		<Italian>Unisci alla città. Incrementa la popolazione di 1.</Italian>
 		<Polish>Dołącz do miasta. Zwiększa populację miasta o 1.</Polish>
 		<Russian>Ïîäñåëèòü â ãîðîä. Íàñåëåíèå ãîðîäà óâåëè÷èâàåòñÿ íà îäíîãî æèòåëÿ.</Russian>
 	</TEXT>
@@ -2875,7 +2887,7 @@
 		<English>Allow their recovery teams unfettered access to the crash site.</English>
 		<French>Autoriser leurs équipes de secours à accéder au site de l'accident.</French>
 		<German>Gewährt ihren Bergungstrupps uneingeschränkten Zugang zur Absturzstelle.</German>
-		<Italian>Lascia libero accesso alle loro squadre di soccorso fino al luogo dello schianto.</Italian>
+		<Italian>Lascia libero accesso al luogo dello schianto alle loro squadre di soccorso.</Italian>
 		<Spanish>Dar acceso sin límite al lugar del siniestro a sus equipos de rescate.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2883,7 +2895,7 @@
 		<English>Stall them for time while your own team learns what it can first.</English>
 		<French>Gagner du temps pendant que votre propre équipe essaye d'en savoir plus.</French>
 		<German>Haltet sie eine Weile hin, bis unsere eigenen Leute mehr über die Sache herausgefunden haben.</German>
-		<Italian>Tieni occupate le loro squadre di soccorso mentre la tua raccoglie più informazioni possibile.</Italian>
+		<Italian>Tieni occupate le loro squadre di soccorso, mentre la tua raccoglie più informazioni possibile.</Italian>
 		<Spanish>Entretenerlos el tiempo suficiente para que nuestro propio equipo averigüe primero cuanto pueda.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2891,7 +2903,7 @@
 		<English>Deny access. Claim the wreckage and let your engineers pore over it.</English>
 		<French>Refuser l'accès. Revendiquer la propriété de l'épave et laisser vos ingénieurs l'étudier.</French>
 		<German>Verweigert ihnen den Zutritt zur Absturzstelle. Sichert das Wrack und lasst es von Euren Ingenieuren untersuchen.</German>
-		<Italian>Nega l'accesso. Rivendica i relitti e lascia che i tuoi ingegneri li studino.</Italian>
+		<Italian>Nega l'accesso. Rivendica il relitto e lascia che i tuoi ingegneri lo studino.</Italian>
 		<Spanish>Denegarles el acceso. Apoderarse de los restos y que nuestros ingenieros los estudien minuciosamente.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2899,7 +2911,7 @@
 		<English>One of your passenger airliners has crashed in %s1_civ_adjective territory. They have allowed unrestricted access to your recovery teams, building trust between your two nations.</English>
 		<French>Un de vos avions commerciaux s'est écrasé en territoire %s1:1_civ_adjective. Les %s1:3_civ_adjective ont autorisé vos équipes de secours à accéder au site de l'accident, renforçant ainsi la confiance entre vos deux nations.</French>
 		<German>Eine Eurer Passagiermaschinen ist auf dem Territorium des %s1:2_civ_adjective Volkes abgestürzt. Sie gewähren Euren Bergungstrupps uneingeschränkten Zugang, wodurch das Vertrauensverhältnis zwischen den beiden Nationen steigt.</German>
-		<Italian>Uno dei tuoi aerei passeggeri è precipitato nel territorio %s1_civ_adjective. Hanno concesso il libero accesso alle tue squadre di soccorso, creando fiducia tra le due nazioni.</Italian>
+		<Italian>Uno dei tuoi aerei passeggeri è precipitato nel territorio %s1_civ_adjective. Hanno concesso il libero accesso alle tue squadre di soccorso, creando un sentimento di fiducia tra le due nazioni.</Italian>
 		<Spanish>Uno de nuestros aviones de pasajeros se ha estrellado en territorio %s1:1_civ_adjective. Se les ha concedido acceso total a nuestros equipos de rescate, lo que ha alimentado la confianza entre nuestras dos naciones.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2907,7 +2919,7 @@
 		<English>One of your passenger airliners has crashed in %s1_civ_adjective territory. They seemed to be unsure how to react at first, but finally allowed your recovery teams access to the crash site.</English>
 		<French>Un de vos avions commerciaux s'est écrasé en territoire %s1:1_civ_adjective. Après quelques hésitations, ils ont finalement laissé vos équipes de secours accéder au site de l'accident.</French>
 		<German>Eine Eurer Passagiermaschinen ist auf dem Territorium des %s1:2_civ_adjective Volkes abgestürzt. Sie schienen zunächst unsicher, wie sie reagieren sollten, gewähren Euren Bergungstrupps nun aber uneingeschränkten Zugang zur Absturzstelle.</German>
-		<Italian>Uno dei tuoi aerei passeggeri è precipitato nel territorio %s1_civ_adjective. Sembravano insicuri su come reagire, all'inizio, ma poi hanno permesso alle tue squadre di soccorso di accedere al luogo dello schianto.</Italian>
+		<Italian>Uno dei tuoi aerei passeggeri è precipitato nel territorio %s1_civ_adjective. Non sembravano sicuri su come reagire all'inizio, ma poi hanno permesso alle tue squadre di soccorso di accedere al luogo dello schianto.</Italian>
 		<Spanish>Uno de nuestros aviones de pasajeros se ha estrellado en territorio %s1:1_civ_adjective. Al principio no sabían muy bien cómo reaccionar, pero finalmente han concedido acceso a nuestros equipos de rescate al lugar del siniestro.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2923,7 +2935,7 @@
 		<English>You are tasked to build enough small-scale power generation plants -- [COLOR_BUILDING_TEXT]Hydro Plants[COLOR_REVERT] and [COLOR_BUILDING_TEXT]Nuclear Plants[COLOR_REVERT] -- to reduce both pollution and our dependence on fossil fuels.</English>
 		<French>Vous devez construire assez de centrales de production d'électricité de type: -- [COLOR_BUILDING_TEXT]Centrales hydro-électriques[COLOR_REVERT] et [COLOR_BUILDING_TEXT]Centrales Nucléaires[COLOR_REVERT] -- pour réduire la pollution et notre dépendance à légard les combustibles fossiles.</French>
 		<German>Sie haben nun die Aufgabe, genügend kleine Kraftwerke zu errichten -- [COLOR_BUILDING_TEXT]Wasserkraftwerke[COLOR_REVERT] und [COLOR_BUILDING_TEXT]Kernkraftwerke[COLOR_REVERT] -- um die Umweltverschmutzung und unsere Abhängigkeit von fossilen Brennstoffen zu verringern.</German>
-		<Italian>Devi costruire abbastanza centrali elettriche su piccola scala -- [COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] e [COLOR_BUILDING_TEXT]Centrali nucleari[COLOR_REVERT] -- per ridurre sia l'inquinamento che la nostra dipendenza dai combustibili fossili.</Italian>
+		<Italian>Devi costruire abbastanza centrali elettriche su piccola scala ([COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] e [COLOR_BUILDING_TEXT]Centrali nucleari[COLOR_REVERT]) per ridurre sia l'inquinamento che la nostra dipendenza dai combustibili fossili.</Italian>
 		<Spanish>Os designo para construir suficientes centrales de generación de energía a pequeña escala ([COLOR_BUILDING_TEXT]Centrales hidroeléctricas[COLOR_REVERT] y [COLOR_BUILDING_TEXT]Centrales nucleares[COLOR_REVERT]) para reducir tanto la contaminación como nuestra dependencia de los combustibles fósiles.</Spanish>
 		<Polish>Zlecono ci budowę takiej ilości małych elektrowni -- [COLOR_BUILDING_TEXT]Elektrowni Wodnych[COLOR_REVERT] oraz [COLOR_BUILDING_TEXT]Elektrowni Nuklearnych[COLOR_REVERT] –- aby ograniczyć emisję zanieczyszczeń oraz uniezależnić się od paliw kopalnych.</Polish>
 		<Russian>Вам поставлена задача построить достаточно малых электростанций. -- [COLOR_BUILDING_TEXT]ГЭС[COLOR_REVERT] и [COLOR_BUILDING_TEXT]АЭС[COLOR_REVERT] -- для сокращения вредных выбросов, так и нашей зависимости от ископаемого топлива.</Russian>
@@ -2953,7 +2965,7 @@
 		<English>Sell the excess power generated at our [COLOR_BUILDING_TEXT]Hydro Plants[COLOR_REVERT] for a profit.</English>
 		<French>Vendre le surplus d'énergie développée pas nos [COLOR_BUILDING_TEXT]Centrales hydro-électriques[COLOR_REVERT] pour faire des bénéfices.</French>
 		<German>Verkaufen Sie die überschüssige Energie, die in unseren [COLOR_BUILDING_TEXT]Wasserkraftwerken[COLOR_REVERT] erzeugt wird mit Profit.</German>
-		<Italian>Vendi l'elettricità prodotta in eccesso dalle nostre [COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] per un profitto.</Italian>
+		<Italian>Vendi l'elettricità prodotta in eccesso dalle nostre [COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] per generare ulteriori profitti.</Italian>
 		<Spanish>Vender el excedente de energía generado en nuestras [COLOR_BUILDING_TEXT]Centrales hidroeléctricas[COLOR_REVERT] para obtener beneficios.</Spanish>
 		<Polish>Sprzedaj nadwyżki energii wygenerowane przez nasze [COLOR_BUILDING_TEXT]Elektrownie Wodne[COLOR_REVERT].</Polish>
 		<Russian>Продавайте излишки электроэнергии, произведенную на наших [COLOR_BUILDING_TEXT]ГЭС[COLOR_REVERT], для получения прибыли.</Russian>
@@ -2983,7 +2995,7 @@
 		<English>[PARAGRAPH:1]To complete this quest, you must build a total of %d1 [COLOR_BUILDING_TEXT]Hydro Plants[COLOR_REVERT] and/or [COLOR_BUILDING_TEXT]Nuclear Plants[COLOR_REVERT] in your various cities. You are allowed to build [COLOR_POSITIVE_TEXT]any combination of Hydro Plants and Nuclear Plants that add up to the total.[COLOR_REVERT][PARAGRAPH:1]An additional reward option will be available if your civilization is running the Economic Civic [COLOR_POSITIVE_TEXT]Environmentalism[COLOR_REVERT] when the quest is completed.[PARAGRAPH:1]You will fail this quest if a rival civilization completes it first, or if your civilization constructs or acquires direct control over the [COLOR_NEGATIVE_TEXT]Three Gorges Dam[COLOR_REVERT] before having met the conditions.</English>
 		<French>[PARAGRAPH:1]Pour accomplir cette quête, vous devez avoir construit un total de %d1 [COLOR_BUILDING_TEXT]Centrales hydro-électriques[COLOR_REVERT] et/ou [COLOR_BUILDING_TEXT]Centrales Nucléaires[COLOR_REVERT] dans vos diverses villes. On vous permet de construire indifféremment[COLOR_POSITIVE_TEXT]des centrales hydro-électriques et centrales nucléaires qui s'ajoutent au total, même lorsque construites dans la même ville.[COLOR_REVERT][PARAGRAPH:1]Une récompense supplémentaire vous sera attribuée si vous avez adopté la doctrine [COLOR_POSITIVE_TEXT]Environmentalisme[COLOR_REVERT] lorsque la quête se termine.[PARAGRAPH:1]Vous échouerez cette quête si une civilisation rivale l'accomplit avant vous, ou si votre civilisation construit ou acquiert le contrôle direct du [COLOR_NEGATIVE_TEXT]Barrage des Trois Gorges[COLOR_REVERT] avant d'avoir remplit toutes les conditions de la quête.</French>
 		<German>[PARAGRAPH:1]Um diesen Quest durchzuführen, müssen Sie eine Gesamtmenge von %d1 [COLOR_BUILDING_TEXT]Wasserkraftwerken[COLOR_REVERT] und/oder [COLOR_BUILDING_TEXT]Kernkraftwerken[COLOR_REVERT] in Ihren verschiedenen Städten errichten. Sie können dabei [COLOR_POSITIVE_TEXT]jede beliebige Kombination von Wasserkraft- und Kernkraftwerken[COLOR_REVERT] errichten.[PARAGRAPH:1]Eine zusätzliche Belohnungsoption wird vorhanden sein, wenn Ihre Zivilisation die ökonomische Gesellschaftsform [COLOR_POSITIVE_TEXT]Umweltschutz[COLOR_REVERT] betreibt, wenn der Quest beendet ist.[PARAGRAPH:1]Der Quest wird scheitern, wenn eine rivalisierende Zivilisation den Bau zuerst vollendet oder wenn Ihre Zivilisation den [COLOR_NEGATIVE_TEXT]Drei-Schluchten-Damm[COLOR_REVERT] erbaut oder kontrolliert bevor die Bedingungen erfüllt sind.</German>
-		<Italian>[PARAGRAPH:1]Per completare questa impresa, devi costruire un totale di %d1 [COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] e/o [COLOR_BUILDING_TEXT]Centrali nucleari[COLOR_REVERT] nelle tue varie città. Puoi costruire [COLOR_POSITIVE_TEXT]qualundue combinazione di centrali idroelettriche e centrali nucleari che si sommano al totale.[COLOR_REVERT][PARAGRAPH:1]Un'ulteriore ricompensa sarà disponibile se la tua nazione utilizza la forma di governo [COLOR_POSITIVE_TEXT]Verde[COLOR_REVERT] quando l'impresa viene completata.[PARAGRAPH:1]Fallirai quest'impresa se una civiltà rivale la completa per prima, o se la vostra civilizzazione costruisce o acquisce il controllo diretto della [COLOR_NEGATIVE_TEXT]Diga delle tre gole[COLOR_REVERT] prima di aver costruito il numero richiesto di centrali.</Italian>
+		<Italian>[PARAGRAPH:1]Per completare questa impresa, devi costruire un totale di %d1 [COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] e/o [COLOR_BUILDING_TEXT]Centrali nucleari[COLOR_REVERT] nelle tue varie città. Puoi costruire [COLOR_POSITIVE_TEXT]qualunque combinazione di centrali idroelettriche e centrali nucleari che si sommano al totale.[COLOR_REVERT][PARAGRAPH:1]Un'ulteriore ricompensa sarà disponibile se la tua nazione utilizza la forma di governo [COLOR_POSITIVE_TEXT]Verde[COLOR_REVERT] quando l'impresa viene completata.[PARAGRAPH:1]Fallirai quest'impresa se una civiltà rivale la completa per prima, o se la vostra civilizzazione costruisce o acquisisce il controllo diretto della [COLOR_NEGATIVE_TEXT]Diga delle tre gole[COLOR_REVERT] prima di aver costruito il numero richiesto di centrali.</Italian>
 		<Spanish>[PARAGRAPH:1]Para completar esta misión, deberás construir un total de %d1 [COLOR_BUILDING_TEXT]Centrales hidroeléctricas[COLOR_REVERT] y/o [COLOR_BUILDING_TEXT]Centrales nucleares[COLOR_REVERT] en varias de tus ciudades. Puedes construir [COLOR_POSITIVE_TEXT]cualquier combinación de Centrales hidroeléctricas y Centrales nucleares, todas se añadirán al total.[COLOR_REVERT][PARAGRAPH:1]Podrás disponer de una opción de recompensa adicional si tu civilización tiene el principio [COLOR_POSITIVE_TEXT]Ecologismo[COLOR_REVERT] activo en el momento de completar la misión.[PARAGRAPH:1]Fallarás la misión si una civilización rival la completa primero, o si tu civilización construye o toma el control directo de la [COLOR_NEGATIVE_TEXT]Presa de las Tres Gargantas[COLOR_REVERT] antes de cumplir las condiciones.</Spanish>
 		<Polish>[PARAGRAPH:1]Aby wypełnić warunki zadania należy wybudować %d1 [COLOR_BUILDING_TEXT]Elektrowni Wodnych[COLOR_REVERT] i/lub [COLOR_BUILDING_TEXT]Elektrowni Nuklearnych[COLOR_REVERT] w różnych miastach. Dopuszczalne są [COLOR_POSITIVE_TEXT]wszystkie kombinacje.[COLOR_REVERT][PARAGRAPH:1]Dostaniesz dodatkową premię jeśli będziesz używać doktryny [COLOR_POSITIVE_TEXT]Ochrona Środowiska[COLOR_REVERT], kiedy zadanie zostanie zakończone.[PARAGRAPH:1]Przegrasz to zadanie jeśli którakolwiek z innych cywilizacji ukończy je wcześniej, lub nie zdążysz wypełnić warunków przed wybudowaniem lub przejęciem [COLOR_NEGATIVE_TEXT]Zapory Trzech Przełomów[COLOR_REVERT].</Polish>
 		<Russian>[PARAGRAPH:1]Для успешного завершения этого квеста, вы должны построить в общей сложности %d1 [COLOR_BUILDING_TEXT]ГЭС[COLOR_REVERT] и/или [COLOR_BUILDING_TEXT]АЭС[COLOR_REVERT] в ваших разных городах. Вам разрешено строить [COLOR_POSITIVE_TEXT]любую комбинацию ГЭС и АЭС в общей сложности.[COLOR_REVERT] [PARAGRAPH:1]Вы получите дополнительную награду, если ваша цивилизация использует экономическую парадигму [COLOR_POSITIVE_TEXT]Охрана природы[COLOR_REVERT] после завершения задания. [PARAGRAPH:1]Задание будет провалено, если конкурирующая цивилизация завершит его первой, или если ваша цивилизация построит или получит прямой контроль над [COLOR_NEGATIVE_TEXT]Плотиной «Три ущелья»[COLOR_REVERT] прежде, чем будут выполнены условия.</Russian>
@@ -3978,7 +3990,7 @@
 		<English>Our ranchers are expanding their cattle pastures to meet demands from our growing and hungry cities.</English>
 		<French>Nos Fermiers ont étendu leurs pâturages pour s'adapter à la demande croissante de nos Villes.</French>
 		<German>Unsere Viehhüter erweitern ihre Viehweiden um der erhöhten Nachfrage durch wachsende und hungrige Städte nachzukommen.</German>
-		<Italian>I nostri allevatori stanno espanendo i loro pascoli per venire incontro alle domande di città affamate e in crescita.</Italian>
+		<Italian>I nostri allevatori stanno espandendo i loro pascoli per venire incontro alle domande di città affamate e in crescita.</Italian>
 		<Spanish>Nuestros ganaderos están ampliando sus pastizales de ganado para satisfacer la demanda de nuestras crecientes ciudades.</Spanish>
 		<Polish>Nasi ranczerzy rozszerzają swoje pastwiska, żeby nadążyć za popytem.</Polish>
 		<Russian>Наши владельцы ранчо расширяют свои пастбища, чтобы удовлетворить потребности наших растущих и голодных городов.</Russian>
@@ -5075,7 +5087,7 @@
 		<English>Freedom is the best motivator. We are lucky to have workers like these, who keep the power flowing to our citizenry.</English>
 		<French>La liberté est une excellente motivation. Nous sommes ravis que nos travailleurs puissent assurer un accès continu à l'électricité. </French>
 		<German>Die Freiheit ist die beste Motivation. Wir können froh sein, solche Arbeiter zu haben, die jederzeit die Stromversorgung für unsere Bürger sicherstellen.</German>
-		<Italian>La libertà è il miglior motivatore. Siamo fortunati ad avere operai come questi, che mantengono l'afflusso di energia alla cittadinanza.</Italian>
+		<Italian>La libertà è la migliore motivazione. Siamo fortunati ad avere operai come questi, che mantengono l'afflusso di energia alla cittadinanza.</Italian>
 		<Spanish>La libertad es la mejor motivación. Somos afortunados por tener trabajadores como éstos, que velan para que la electricidad llegue a la ciudadanía.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5083,7 +5095,7 @@
 		<English>Elite Swordsmen[PARAGRAPH:1]You are tasked by your military leaders to train a sizable force of [COLOR_UNIT_TEXT]Swordsmen[COLOR_REVERT].</English>
 		<French>Spadassins d'élite[PARAGRAPH:1]Vos dirigeants militaires vous chargent d'entraîner de nombreux [COLOR_UNIT_TEXT]Spadassins[COLOR_REVERT].</French>
 		<German>Elite-Schwertkämpfer[PARAGRAPH:1]Eure Militärführer verlangen von Euch, eine große Truppe [COLOR_UNIT_TEXT]Schwertkämpfer[COLOR_REVERT] auszubilden.</German>
-		<Italian>Spadaccini d'elite[PARAGRAPH:1]I capi militari ti hanno incaricato di creare un esercito di [COLOR_UNIT_TEXT]Spadaccini[COLOR_REVERT].</Italian>
+		<Italian>Spadaccini d'élite[PARAGRAPH:1]I capi militari ti hanno incaricato di creare un esercito di [COLOR_UNIT_TEXT]Spadaccini[COLOR_REVERT].</Italian>
 		<Spanish>Soldados con espada de élite[PARAGRAPH:1]Los líderes militares han encargado llevar a cabo el entrenamiento de una fuerza considerable de [COLOR_UNIT_TEXT]Soldados con espada[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5253,7 +5265,7 @@
 		<English>You have failed the quest of the Elite Swordsmen!</English>
 		<French>Vous avez échoué dans la quête des Spadassins d'élite !</French>
 		<German>Die Quest "Elite-Schwertkämpfer" ist gescheitert!</German>
-		<Italian>Hai fallito nell'impresa dei Spadaccini d'elite!</Italian>
+		<Italian>Hai fallito nell'impresa dei Spadaccini d'élite!</Italian>
 		<Spanish>La misión Soldados con espada de élite ha fracasado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5366,7 +5378,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAMINE_1</Tag>
-		<English>We are unable to assist at this time. Send our condolensces to their leaders.</English>
+		<English>We are unable to assist at this time. Send our condolences to their leaders.</English>
 		<French>Nous ne pouvons les aider pour l'instant. Envoyez nos condoléances à leurs dirigeants.</French>
 		<German>Wir können ihnen zurzeit nicht helfen. Sprecht ihren Staatsoberhäuptern unser Beileid aus.</German>
 		<Italian>In questo momento non possiamo aiutarli. Invia le nostre condoglianze ai loro leader.</Italian>
@@ -5406,7 +5418,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAMOUS_DOCTOR</Tag>
-		<English>A world-reknowned doctor has decided to retire in %s2_city and is giving his fortune to local charities. How should this money be used?</English>
+		<English>A world-renowned doctor has decided to retire in %s2_city and is giving his fortune to local charities. How should this money be used?</English>
 		<French>Un docteur de renommée mondiale a décidé de prendre sa retraite dans la ville de %s2_city, et veux donner sa fortune aux oeuvres de charité locales. Comment voulez-vous que cet or soit réparti?</French>
 		<German>Ein weltbekannter Arzt in der %s1_civ_adjective Stadt %s2_city setzt sich zur Ruhe und spendet sein Vermögen der örtlichen Wohlfahrt. Wie sollte das Geld verwendet werden?</German>
 		<Italian>Un dottore di fama mondiale ha deciso di ritirarsi a %s2_city e ha donato le sue fortune agli enti di carità locali. Come dovrebbe essere usato questo denaro?</Italian>
@@ -6621,7 +6633,7 @@
 		<English>No action will be taken.</English>
 		<French>Aucune mesure ne sera prise.</French>
 		<German>Keine Maßnahmen ergreifen.</German>
-		<Italian>Nessun'azione sarà intrapresa.</Italian>
+		<Italian>Nessuna azione sarà intrapresa.</Italian>
 		<Spanish>No se realizará ninguna acción.</Spanish>
 		<Polish>Nie podejmuj żadnych działań.</Polish>
 		<Russian>Никаких действий предприниматься не будет.</Russian>
@@ -6879,7 +6891,7 @@
 		<English>Horse Whispering[PARAGRAPH:1]You are tasked by your elite trainers to build enough stables for them to transcend the traditional limits of animal husbandry.</English>
 		<French>Murmurer à l'oreille des chevaux[PARAGRAPH:1]Vos entraîneurs d'élite vous chargent de construire suffisamment d'écuries, afin de dépasser les limites de l'élevage traditionnel.</French>
 		<German>Pferdeflüstern[PARAGRAPH:1]Eure Elite-Trainer verlangen, dass Ihr genug Ställe baut, um über die Grenzen der traditionellen Tierzucht hinauszugehen.</German>
-		<Italian>Sussurrare ai cavalli[PARAGRAPH:1]Hai ricevuto il compito, dai tuoi allevatori d'elite, di costruire abbastanza stalle affinché loro possano superare i tradizionali limiti dell'allevamento.</Italian>
+		<Italian>Sussurrare ai cavalli[PARAGRAPH:1]Hai ricevuto il compito, dai tuoi allevatori d'élite, di costruire abbastanza stalle affinché loro possano superare i tradizionali limiti dell'allevamento.</Italian>
 		<Spanish>Susurradores de caballos[PARAGRAPH:1]Los adiestradores de élite han encargado la construcción de establos suficientes para traspasar los límites tradicionales de la ganadería.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7266,7 +7278,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_INFLUENZA_1</Tag>
-		<English>Spend whatever is necessary to quarrantine the city.</English>
+		<English>Spend whatever is necessary to quarantine the city.</English>
 		<French>Dépenser tout l'argent nécessaire pour mettre la ville en quarantaine.</French>
 		<German>Tut, was immer notwendig ist, um die Stadt unter Quarantäne zu stellen.</German>
 		<Italian>Spendi ciò che serve per mettere la città in quarantena.</Italian>
@@ -10232,7 +10244,7 @@
 		<English>Well, we allow all to follow their own paths.</English>
 		<French>Bien, nous leur permettons à tous de suivre leur propre voie.</French>
 		<German>Nun, wir gestatten es jedem seinen eigenen Weg zu gehen.</German>
-		<Italian>Bene, permettiamo a tutti di segurie la propria strada.</Italian>
+		<Italian>Bene, permettiamo a tutti di seguire la propria strada.</Italian>
 		<Spanish>Bien, permitimos que todos sigan sus propias creencias.</Spanish>
 		<Polish>Niech każdy wybierze swoją duchową ścieżkę.</Polish>
 		<Russian>Что ж, мы позволяем всем идти своими путями.</Russian>
@@ -11338,7 +11350,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_GREEK_FIRE</Tag>
-		<English>Our alchemists have developed a liquid based on naptha that ignites easily and cannot be put out with water -- in fact, the liquid will ignite while floating on water itself. It will be devastating for use against enemy ships.</English>
+		<English>Our alchemists have developed a liquid based on naphtha that ignites easily and cannot be put out with water -- in fact, the liquid will ignite while floating on water itself. It will be devastating for use against enemy ships.</English>
 		<French>Nos alchimistes ont développé un liquide basé sur le naptha qui s'enflamme très facilement et ne peut pas être eteint avec de l'eau -- en fait, ce liquide s'enflamme tout en flottant sur l'eau elle-même. Il sera dévastateur contre les bateaux ennemis.</French>
 		<German>Unsere Alchemisten haben eine auf Naphtha basierende Flüssigkeit entwickelt, die leicht entzündet und nicht mit Wasser gelöscht werden kann -- tatsächlich entzündet die Flüssigkeit beim Schwimmen auf Wasser. Sie wird in der Verwendung gegen feindliche Schiffe vernichtend sein.</German>
 		<Italian>I nostri alchimisti hanno sviluppato un liquido basato sulla nafta che brucia facilmente e non può essere spento con l'acqua - anzi, questo liquido brucia anche galleggiando sull'acqua. Sarà devastante se usato contro le navi nemiche.</Italian>
@@ -12622,7 +12634,7 @@
 		<English>Imported %s1_civ_adjective tea has become all the rage amongst our social elite.</English>
 		<French>Le thé %s1_civ_adjective d'importation fait fureur au sein de l'élite.</French>
 		<German>Die soziale Elite findet importierten %s1:2_civ_adjective Tee momentan absolut toll.</German>
-		<Italian>Il tè %s1_civ_adjective d'importazione è il preferito dall'elite della nostra società.</Italian>
+		<Italian>Il tè %s1_civ_adjective d'importazione è il preferito dall'élite della nostra società.</Italian>
 		<Spanish>El té %s1:1_civ_adjective de importación ha causado sensación entre los miembros de nuestra élite social.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -12907,7 +12919,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_WININGMONKS_1</Tag>
-		<English>Monks from the Monastery in %s2_city have grown their private vinyards large enough for them to become nationally significant.</English>
+		<English>Monks from the Monastery in %s2_city have grown their private vineyards large enough for them to become nationally significant.</English>
 		<French>Les moines de la ville : %s2_city ont suffisamment fait pousser leurs vignes pour que cela ait un impact au niveau national.</French>
 		<German>Die Mönche des Klosters von %s2_city haben so große Weingärten, dass sie landesweit bekannt sind.</German>
 		<Italian>I monaci del monastero di %s2_city hanno fatto crescere i loro vigneti tanto da diventare rilevanti per la nazione.</Italian>
@@ -13109,7 +13121,7 @@
 		<Tag>TXT_KEY_EVENT_VEGAS_JACKPOT</Tag>
 		<English>A gambler from %s2_city has hit the jackpot on the Las Vegas Strip! Of course, our tax collectors stand ready for just such an event.</English>
 		<French>Un joueur de %s2_city a décroché le jackpot à Las Vegas! Bien sûr, nos collecteurs d'impôts sont prêts pour un tel événement.</French>
-		<Italian>Un giocatore di %s2_city ha vinto il jackpot nella Strip di Las Vegas! Ovviamente, i nostri esattori delle tasse satvano aspettando un evento come questo.</Italian>
+		<Italian>Un giocatore di %s2_city ha vinto il jackpot nella Strip di Las Vegas! Ovviamente, i nostri esattori delle tasse stavano aspettando un evento come questo.</Italian>
 		<Russian>Èãðîê èç %s2_city âçÿë äæýêïîò â Ëàñ-Âåãàñå! Ðàçóìååòñÿ, íàøà íàëîãîâàÿ èíñïåêöèÿ íå äðåìëåò.</Russian>
 	</TEXT>
 	<TEXT>
@@ -13130,7 +13142,7 @@
 		<Tag>TXT_KEY_EVENT_VEGAS_JACKPOT_OTHER_1</Tag>
 		<English>A lucky gambler from %s2_city has hit the jackpot on the Las Vegas Strip.</English>
 		<French>Un joueur chanceux de %s2_city a décroché le jackpot à Las Vegas.</French>
-		<Italian>Un fortunato giocatore d'azzardo di %s2_city ha vinto il jackpot sulla strip di Las Vegas.</Italian>
+		<Italian>Un fortunato giocatore d'azzardo di %s2_city ha vinto il jackpot sulla Strip di Las Vegas.</Italian>
 		<Russian>Óäà÷ëèâûé èãðîê èç %s2_city ñóìåë ñîðâàòü êóø â Ëàñ-Âåãàñ.</Russian>
 	</TEXT>
 	<TEXT>
