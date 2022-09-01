@@ -10803,7 +10803,7 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 	AI_updateBestBuild();
 }
 
-
+// Stores level as indexed by values in xml.
 void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 {
 	if (getCultureUpdateTimer() > 0)
@@ -10823,26 +10823,19 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 		const GameSpeedTypes eSpeed = GAME.getGameSpeedType();
 		const int iCulture = getCultureTimes100(getOwner()) / 100;
 
-		// Loop thru infos to find level
-		foreach_(const CvCultureLevelInfo* info, GC.getCultureLevelInfos())
+		// Will set culture level to that indexed by xml, but only if matches option of current game
+		for (int iI = (GC.getNumCultureLevelInfos() - 1); iI > 0; iI--)
 		{
-			if (info->getPrereqGameOption() == NO_GAMEOPTION || GAME.isOption((GameOptionTypes)info->getPrereqGameOption()))
+			const CvCultureLevelInfo& info = GC.getCultureLevelInfo((CultureLevelTypes)iI);
+
+			if ((info.getPrereqGameOption() == NO_GAMEOPTION || GAME.isOption((GameOptionTypes)info.getPrereqGameOption()))
+			&& iCulture >= info.getSpeedThreshold(eSpeed))
 			{
-				if (iCulture < info->getSpeedThreshold(eSpeed))
-				{
-					// If we are below threshold, we have not reached yet.
-					setCultureLevel(static_cast<CultureLevelTypes>(iCultureLevel - 1), bUpdatePlotGroups);
-					return;
-				}
-				iCultureLevel++;
+				setCultureLevel((CultureLevelTypes)iI, bUpdatePlotGroups);
+				return;
 			}
 		}
-		// Max level culture
-		setCultureLevel(static_cast<CultureLevelTypes>(iCultureLevel), bUpdatePlotGroups);
-		return;
 	}
-	// Occupied/revolution etc, 0 culture level
-	setCultureLevel(static_cast<CultureLevelTypes>(iCultureLevel), bUpdatePlotGroups);
 }
 
 
@@ -16159,20 +16152,31 @@ void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
 	const int iCulture = getCultureTimes100(ePlayer);
 
 	// ? If doPlotCulture is called on a city that's not the player's, or something?
+	// Hack: Forcing to recalculate to use right culture level
+	// TODO fix upstream to be less hacky!
 	CultureLevelTypes eCultureLevel = (CultureLevelTypes)0;
-	if (getOwner() != ePlayer)
+	// if (getOwner() != ePlayer)
 	{
-		const GameSpeedTypes eSpeed = GC.getGame().getGameSpeedType();
-		for (int iI = (GC.getNumCultureLevelInfos() - 1); iI > 0; iI--)
+		const CvGame& GAME = GC.getGame();
+		const GameSpeedTypes eSpeed = GAME.getGameSpeedType();
+		int iActualLevel = 0;
+
+		foreach_(const CvCultureLevelInfo* info, GC.getCultureLevelInfos())
 		{
-			if (iCulture >= 100 * GC.getCultureLevelInfo((CultureLevelTypes)iI).getSpeedThreshold(eSpeed))
+			// Only count valid game options for current game
+			if (info->getPrereqGameOption() == NO_GAMEOPTION || GAME.isOption((GameOptionTypes)info->getPrereqGameOption()))
 			{
-				eCultureLevel = (CultureLevelTypes)iI;
-				break;
+				if (iCulture < 100 * info->getSpeedThreshold(eSpeed))
+				{
+					eCultureLevel = (CultureLevelTypes)(iActualLevel - 1);
+					break;
+				}
+				iActualLevel++;
 			}
 		}
 	}
-	else eCultureLevel = getCultureLevel();
+	// else eCultureLevel = getCultureLevel();
+	// end hack
 
 	// Put culture onto plots from the city, even if "0" culture output,
 	// to prevent loss thru decay if 0 culture and not realistic culture.
@@ -16189,7 +16193,8 @@ void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
 
 				if (pLoopPlot != NULL && pLoopPlot->isPotentialCityWorkForArea(area()))
 				{
-					// changeCulture bumps upward to ensure plot cannot be lost thru decay even if culture gain is too small
+					// changeCulture includes a check to culture value upward
+					// to ensure plot cannot be lost thru decay even if culture gain is too small
 					pLoopPlot->changeCulture(ePlayer,
 						cultureDistanceDropoff(iCultureRate, eCultureLevel, iCultureDistance),
 						(bUpdate || !(pLoopPlot->isOwned())));
