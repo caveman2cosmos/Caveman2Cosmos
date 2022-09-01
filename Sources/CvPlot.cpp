@@ -968,8 +968,7 @@ void CvPlot::updateCulture(bool bBumpUnits, bool bUpdatePlotGroups)
 	else
 	{
 		const PlayerTypes eNewOwner = calculateCulturalOwner();
-		if (eNewOwner != NO_PLAYER)
-			setOwner(eNewOwner, bBumpUnits, bUpdatePlotGroups);
+		setOwner(eNewOwner, bBumpUnits, bUpdatePlotGroups);
 	}
 }
 
@@ -10268,9 +10267,11 @@ void CvPlot::decayCulture()
 		CvPlayer& playerX = GET_PLAYER((PlayerTypes)playerNum);
 		if (playerX.isAlive() && getCulture((PlayerTypes)playerNum) > 0)
 		{
-			// Don't need to force update after each player, update culture is called next in doCulture
 			setCulture((PlayerTypes)playerNum,
-				std::max(0, getCulture((PlayerTypes)playerNum) * (100 - decayPercent) / std::max(1, 100 - decayFlat)),
+				std::max(0,
+				// default: current culture * 90% then - 1
+				getCulture((PlayerTypes)playerNum) * (100 - decayPercent) / 100 - decayFlat),
+				// Don't need to update borders, update culture is called next in doCulture
 				false, false);
 		}
 	}
@@ -10283,7 +10284,7 @@ int CvPlot::minimumNonDecayCulture()
 	// Can cache as CvGame variable if needed, idk.
 	return ((2 +
 		GC.getTILE_CULTURE_DECAY_CONSTANT() * 100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent())
-		* 100 / std::max(1, (100 - GC.getTILE_CULTURE_DECAY_PERCENT())));
+		* 100 / (100 - GC.getTILE_CULTURE_DECAY_PERCENT()));
 }
 
 
