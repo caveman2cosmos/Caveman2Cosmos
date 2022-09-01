@@ -362,8 +362,8 @@
 			<iMaxNationalWonders>8</iMaxNationalWonders>
 			<iMaxNationalWondersOCC>16</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
-		<!-- Used only for Realistic Culture Spread Option -->
 		<CultureLevelInfo>
+			<!-- Used only for Realistic Culture Spread Option: r=3.5 -->
 			<Type>CULTURELEVEL_PROMINENT</Type>
 			<Description>TXT_KEY_CULTURELEVEL_PROMINENT</Description>
 			<iCityDefenseModifier>15</iCityDefenseModifier>
@@ -461,8 +461,8 @@
 			<iMaxNationalWonders>12</iMaxNationalWonders>
 			<iMaxNationalWondersOCC>24</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
-		<!-- Used only for Realistic Culture Spread Option -->
 		<CultureLevelInfo>
+			<!-- Used only for Realistic Culture Spread Option: r=4.5 -->
 			<Type>CULTURELEVEL_ELEGANT</Type>
 			<Description>TXT_KEY_CULTURELEVEL_ELEGANT</Description>
 			<iCityDefenseModifier>21</iCityDefenseModifier>
@@ -560,8 +560,8 @@
 			<iMaxNationalWonders>16</iMaxNationalWonders>
 			<iMaxNationalWondersOCC>32</iMaxNationalWondersOCC>
 		</CultureLevelInfo>
-		<!-- Used only for Realistic Culture Spread Option -->
 		<CultureLevelInfo>
+			<!-- Used only for Realistic Culture Spread Option: r=5.5 -->
 			<Type>CULTURELEVEL_IMPRESSIVE</Type>
 			<Description>TXT_KEY_CULTURELEVEL_IMPRESSIVE</Description>
 			<iCityDefenseModifier>30</iCityDefenseModifier>
