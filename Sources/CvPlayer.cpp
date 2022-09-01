@@ -2309,7 +2309,6 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 	}
 	else
 	{
-		// Notifications, gold on capture
 		if (bConquest)
 		{
 			if (bHuman)
@@ -2373,35 +2372,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				gDLL->getText("TXT_KEY_MISC_CITY_WAS_CAPTURED_BY", szName.GetCString(), getCivilizationDescriptionKey()),
 				iX, iY, (ColorTypes)GC.getInfoTypeForString("COLOR_WARNING_TEXT")
 			);
-
-			// Conquest "flashes" all tiles in workable range to the conquerer, giving map info of surrounding tiles.
-			// They only actually retain tiles they could keep normally though, so no unpredictable tile flipping next turn.
-			// If civ has fixed borders, they'll retain more due to the lower threshold for maintaining ownership.
-			pOldCity->clearCultureDistanceCache();
-			const int iCultureLevel = pOldCity->getCultureLevel();
-			for (int iPlotIndex = 1; iPlotIndex < pOldCity->getNumCityPlots(); iPlotIndex++)
-			{
-				CvPlot* pLoopPlot = pOldCity->getCityIndexPlot(iPlotIndex);
-				if (pLoopPlot != NULL)
-				{
-					const int iCultureDist = pOldCity->cultureDistance(pLoopPlot->getX(), pLoopPlot->getY());
-					if (iCultureDist > iCultureLevel)
-					{
-						continue;
-					}
-					// Only grab non-city, non-fort tiles from old owner
-					if (!pLoopPlot->isCity(true) && pLoopPlot->getOwner() == eOldOwner)
-					{
-						// Sets owner to conquerer regardless of their culture on it, but don't update yet
-						pLoopPlot->setOwner(eNewOwner, false, false);
-						// Sees if owner can actually hold onto it, resetting if not
-						pLoopPlot->updateCulture(true, true);
-					}
-				}
-			}
 		}
-
-		// Adjust occupation time due to buildings
 		const int iNumBuildingInfos = GC.getNumBuildingInfos();
 		int iOccupationTimeModifier = 0;
 		for (int iI = 0; iI < iNumBuildingInfos; iI++)
@@ -2412,7 +2383,6 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				iOccupationTimeModifier += GC.getBuildingInfo((BuildingTypes)iI).getOccupationTimeModifier();
 			}
 		}
-		
 		CvPlotGroup* originalTradeNetworkConnectivity[MAX_PLAYERS];
 
 		// Whose trade networks was this city relevant to prior to ownership change
@@ -2421,6 +2391,80 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
 				originalTradeNetworkConnectivity[iI] = GET_PLAYER((PlayerTypes)iI).isAlive() ? pCityPlot->getPlotGroup((PlayerTypes)iI) : NULL;
+			}
+		}
+
+		if (hasFixedBorders())
+		{
+			const int iOccupationRange = pOldCity->getMaxCultureLevelAmongPlayers();
+			pOldCity->clearCultureDistanceCache();
+
+			for (int iDX = -iOccupationRange; iDX <= iOccupationRange; iDX++)
+			{
+				for (int iDY = -iOccupationRange; iDY <= iOccupationRange; iDY++)
+				{
+					const int iCultureDist = pOldCity->cultureDistance(iDX, iDY);
+					if (iCultureDist > iOccupationRange)
+					{
+						continue;
+					}
+					CvPlot* pLoopPlot = plotXY(iX, iY, iDX, iDY);
+
+					if (pLoopPlot != NULL && !pLoopPlot->isCity() && pLoopPlot->getOwner() == eOldOwner
+					&&  pLoopPlot->isPotentialCityWorkForArea(pOldCity->area()))
+					{
+						bool bDoClaim = false;
+
+						for (int iJ = 0; iJ < GC.getNumCultureLevelInfos(); ++iJ)
+						{
+							const int iNumCitiesForRange = pLoopPlot->getCultureRangeCities(eOldOwner, iJ);
+
+							if (iNumCitiesForRange > 0)
+							{
+								// Occupy the tile if it is within the city's culture range, but not within any other city's range at the same or closer distance
+								if (iNumCitiesForRange == 1 && iCultureDist == iJ && pOldCity->getCultureLevel() >= iJ)
+								{
+									bDoClaim = true;
+								}
+								break;
+							}
+						}
+						if (bDoClaim)
+						{
+							pLoopPlot->setClaimingOwner(eNewOwner);
+							pLoopPlot->setForceUnownedTimer(1);
+						}
+					}
+				}
+			}
+		}
+		else if (bConquest)
+		{
+			const int iRange = pOldCity->getCultureLevel();
+
+			for (int iDX = -(iRange); iDX <= iRange; iDX++)
+			{
+				for (int iDY = -(iRange); iDY <= iRange; iDY++)
+				{
+					if (pOldCity->cultureDistance(iDX, iDY) <= iRange && pOldCity->cultureDistance(iDX, iDY) > 1)
+					{
+						CvPlot* pLoopPlot = plotXY(iX, iY, iDX, iDY);
+
+						if (pLoopPlot != NULL && pLoopPlot->getOwner() == eOldOwner
+						&& pLoopPlot->getNumCultureRangeCities(eOldOwner) == 1)
+						{
+							for (int iI = 0; iI < MAX_PLAYERS; iI++)
+							{
+								if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getTeam(), false, pOldCity->getTeam())
+								&& pLoopPlot->getNumCultureRangeCities((PlayerTypes)iI) > 0)
+								{
+									pLoopPlot->setForceUnownedTimer(GC.getDefineINT("FORCE_UNOWNED_CITY_TIMER"));
+									break;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 
@@ -2784,6 +2828,19 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 void CvPlayer::killCities()
 {
 	algo::for_each(cities(), CvCity::fn::kill(false));
+
+	// Super Forts begin *culture* - Clears culture from forts when a player dies
+	const PlayerTypes ePlayer = getID();
+	for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+	{
+		CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+		if (pLoopPlot->getOwner() == ePlayer)
+		{
+			pLoopPlot->setOwner(pLoopPlot->calculateCulturalOwner(), true, false);
+		}
+	}
+	// Super Forts end
+
 	GC.getGame().updatePlotGroups();
 }
 
@@ -3317,7 +3374,7 @@ void CvPlayer::setName(std::wstring szNewValue)
 
 const wchar_t* CvPlayer::getNameKey() const
 {
-	/* dynamic civ names
+/* dynamic civ names
 	if (GC.getInitCore().getLeaderNameKey(getID()).empty() || (GC.getGame().isMPOption(MPOPTION_ANONYMOUS) && isAlive()))
 	{
 		return GC.getLeaderHeadInfo(getLeaderType()).getTextKeyWide();
@@ -3326,7 +3383,7 @@ const wchar_t* CvPlayer::getNameKey() const
 	{
 		return GC.getInitCore().getLeaderNameKey(getID());
 	}
-	*/
+*/
 	if (!m_szName.empty())
 	{
 		return m_szName;
@@ -3341,7 +3398,7 @@ const wchar_t* CvPlayer::getNameKey() const
 
 const wchar_t* CvPlayer::getCivilizationDescription(uint uiForm) const
 {
-	/* dynamic civ names
+/* dynamic civ names
 	if (GC.getInitCore().getCivDescription(getID(), uiForm).empty())
 	{
 		return GC.getCivilizationInfo(getCivilizationType()).getDescription(uiForm);
@@ -3350,7 +3407,7 @@ const wchar_t* CvPlayer::getCivilizationDescription(uint uiForm) const
 	{
 		return GC.getInitCore().getCivDescription(getID(), uiForm);
 	}
-	*/
+*/
 	if( !(m_szCivDesc.empty()) )
 	{
 		return m_szCivDesc;
@@ -3383,7 +3440,7 @@ void CvPlayer::setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::
 
 const wchar_t* CvPlayer::getCivilizationDescriptionKey() const
 {
-	/* dynamic civ names
+/* dynamic civ names
 	if (GC.getInitCore().getCivDescriptionKey(getID()).empty())
 	{
 		return GC.getCivilizationInfo(getCivilizationType()).getTextKeyWide();
@@ -3392,7 +3449,7 @@ const wchar_t* CvPlayer::getCivilizationDescriptionKey() const
 	{
 		return GC.getInitCore().getCivDescriptionKey(getID());
 	}
-	*/
+*/
 	if( !(m_szCivDesc.empty()) )
 	{
 		return m_szCivDesc;
@@ -3410,7 +3467,7 @@ const wchar_t* CvPlayer::getCivilizationDescriptionKey() const
 
 const wchar_t* CvPlayer::getCivilizationShortDescription(uint uiForm) const
 {
-	/* dynamic civ names
+/* dynamic civ names
 	if (GC.getInitCore().getCivShortDesc(getID(), uiForm).empty())
 	{
 		return GC.getCivilizationInfo(getCivilizationType()).getShortDescription(uiForm);
@@ -3419,7 +3476,7 @@ const wchar_t* CvPlayer::getCivilizationShortDescription(uint uiForm) const
 	{
 		return GC.getInitCore().getCivShortDesc(getID(), uiForm);
 	}
-	*/
+*/
 	if( !(m_szCivShort.empty()) )
 	{
 		return m_szCivShort;
@@ -3437,7 +3494,7 @@ const wchar_t* CvPlayer::getCivilizationShortDescription(uint uiForm) const
 
 const wchar_t* CvPlayer::getCivilizationShortDescriptionKey() const
 {
-	/* dynamic civ names
+/* dynamic civ names
 	if (GC.getInitCore().getCivShortDescKey(getID()).empty())
 	{
 		return GC.getCivilizationInfo(getCivilizationType()).getShortDescriptionKey();
@@ -3446,7 +3503,7 @@ const wchar_t* CvPlayer::getCivilizationShortDescriptionKey() const
 	{
 		return GC.getInitCore().getCivShortDescKey(getID());
 	}
-	*/
+*/
 	if( !(m_szCivShort.empty()) )
 	{
 		return m_szCivShort;
@@ -3464,7 +3521,7 @@ const wchar_t* CvPlayer::getCivilizationShortDescriptionKey() const
 
 const wchar_t* CvPlayer::getCivilizationAdjective(uint uiForm) const
 {
-	/* dynamic civ names
+/* dynamic civ names
 	if (GC.getInitCore().getCivAdjective(getID(), uiForm).empty())
 	{
 		return GC.getCivilizationInfo(getCivilizationType()).getAdjective(uiForm);
@@ -3473,7 +3530,7 @@ const wchar_t* CvPlayer::getCivilizationAdjective(uint uiForm) const
 	{
 		return GC.getInitCore().getCivAdjective(getID(), uiForm);
 	}
-	*/
+*/
 	if( !(m_szCivAdj.empty()) )
 	{
 		return m_szCivAdj;
@@ -3490,7 +3547,7 @@ const wchar_t* CvPlayer::getCivilizationAdjective(uint uiForm) const
 
 const wchar_t* CvPlayer::getCivilizationAdjectiveKey() const
 {
-	/* dynamic civ names
+/* dynamic civ names
 	if (GC.getInitCore().getCivAdjectiveKey(getID()).empty())
 	{
 		return GC.getCivilizationInfo(getCivilizationType()).getAdjectiveKey();
@@ -3499,7 +3556,7 @@ const wchar_t* CvPlayer::getCivilizationAdjectiveKey() const
 	{
 		return GC.getInitCore().getCivAdjectiveKey(getID());
 	}
-	*/
+*/
 	if( !(m_szCivAdj.empty()) )
 	{
 		return m_szCivAdj;
@@ -26943,6 +27000,37 @@ void CvPlayer::setShowLandmarks(bool bNewVal)
 void CvPlayer::acquireFort(CvPlot* pPlot)
 {
 	pPlot->setOwner(getID(),true,true);
+
+#ifdef UNUSED_CODE_DUE_TO_SUPERFORTS_MERGE
+	CvPlot* pLoopPlot;
+	int iI;
+
+	ImprovementTypes eOldFortImprovement = pPlot->getImprovementType();
+
+	foreach_(CvPlot* pLoopPlot, pPlot->adjacent())
+	{
+		if (!pLoopPlot->isCity())
+		{
+			if ((pLoopPlot->getOwner() == pPlot->getOwner()) || (pLoopPlot->getOwner() == NO_PLAYER))
+			{
+				const int iNumCitiesForRange = pLoopPlot->getCultureRangeCities(pPlot->getOwner(), 1);
+
+				if (iNumCitiesForRange == 1 && pLoopPlot->calculateCulturalOwner() == getID())
+				{
+					//	This captures surrounding tiles that are culturally owned by the
+					//	captor even if the previous owner has fixed borders
+					pLoopPlot->setOwner(getID(), true, false);
+				}
+			}
+		}
+	}
+
+	pPlot->setImprovementType(NO_IMPROVEMENT);
+
+	pPlot->setOwner(getID(), true, false);
+
+	pPlot->setImprovementType(eOldFortImprovement);
+#endif
 }
 
 int CvPlayer::getResourceConsumption(BonusTypes eBonus) const
