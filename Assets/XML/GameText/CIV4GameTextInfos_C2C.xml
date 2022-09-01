@@ -320,9 +320,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CHANCE_OF_REVOLT</Tag>
-		<English>Chance of Revolt: %s1_Chance%% (%s2_CityStrength%% Cultural Revolt Sentiment. %s3_Garrison%% total Revolt Protection from Units)</English>
-		<French>Chances de Révolte: %s1_Chance%% (%s2_CityStrength%% de Sentiment de Récolte Culturelle. %s3_Garrison%% de total de Protection contre la révolte, des Unités)</French>
-		<Russian>Угроза восстания: %s1_Chance%% (%s2_CityStrength%% из-за культурных различий. %s3_Garrison%% к общей защите от восстаний для отрядов).</Russian>
+		<English>Revolt %%/Turn: %s1_Chance [NEWLINE](%s2_CityStrength base: x%s3_SpeedAdjustment gamespeed, x%s4_Garrison units)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CRIMINAL_CAUGHT</Tag>
