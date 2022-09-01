@@ -3575,9 +3575,12 @@ void CvPlot::changeDefenseDamage(int iChange)
 	}
 }
 
-// Super Forts *culture*
-void CvPlot::changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate)
+
+void CvPlot::pushCultureFromFort(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate)
 {
+	// Pushes a little culture from fort; used when fort is newly placed or acquired
+	// to get potential nearby neutral plots. doImprovementCulture() gets regular culture.
+	// Removing culture on fort loss happens by natural decay or IDW
 	if (0 == iChange || iRange < 0)
 	{
 		return;
@@ -3608,6 +3611,7 @@ void CvPlot::changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange
 		}
 	}
 }
+
 
 void CvPlot::doImprovementCulture()
 {
@@ -6158,7 +6162,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 					GET_PLAYER(getOwner()).changeImprovementCount(getImprovementType(), 1);
 					if (GC.getImprovementInfo(getImprovementType()).getCulture() > 0)
 					{
-						changeCultureRangeFortsWithinRange(getOwner(), 1, GC.getImprovementInfo(getImprovementType()).getCultureRange(), true);
+						pushCultureFromFort(getOwner(), 1, GC.getImprovementInfo(getImprovementType()).getCultureRange(), true);
 					}
 				}
 
@@ -7046,10 +7050,9 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 			if (isOwned())
 			{
 				GET_PLAYER(getOwner()).changeImprovementCount(eNewImprovement, 1);
-				// Super Forts *culture*
 				if (GC.getImprovementInfo(eNewImprovement).getCulture() > 0)
 				{
-					changeCultureRangeFortsWithinRange(getOwner(), 1, GC.getImprovementInfo(eNewImprovement).getCultureRange(), true);
+					pushCultureFromFort(getOwner(), 1, GC.getImprovementInfo(eNewImprovement).getCultureRange(), true);
 				}
 			}
 		}
