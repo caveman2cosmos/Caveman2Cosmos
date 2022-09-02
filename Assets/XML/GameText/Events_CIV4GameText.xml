@@ -3391,59 +3391,59 @@
 		<French>J'imagine que nous pouvons faire de nos cales sèches un endroit plus sain et plus productif, alors.</French>
 		<German>Fördert den Einsatz dieser Technik in unseren Trockendocks, um die dortigen Gesundheitsbedingungen und Erträge zu verbessern.</German>
 		<Italian>Penso che i nostri cantieri navali ne gioverebbero, sarebbero luoghi più sani per chi ci lavora e anche leggermente più produttivi.</Italian>
-		<Spanish>Supongo que entonces podemos hacer de nuestros astilleros un lugar más saludable y algo más productivo.</Spanish>
 		<Polish>W sumie możemy zmienić nasze Doki na trochę bardziej bezpieczne miejsce do pracy za cene trochę zmniejszonej produktywności.</Polish>
 		<Russian>Я полагаю, что мы можем сделать наши Сухие доки более здоровыми для работы и чуть более продуктивными.</Russian>
+		<Spanish>Supongo que entonces podemos hacer de nuestros astilleros un lugar más saludable y algo más productivo.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BILLIONS_AND_BILLIONS_1</Tag>
 		<English>Send our congratulations for his work to improve science education.</English>
 		<French>Envoyez nos félicitations pour que son travail améliore l'enseignement de la science.</French>
 		<German>Senden Sie unsere Glückwünsche für seine Leistung, die wissenschaftliche Ausbildung zu verbessern.</German>
-		<Italian>Manda le nostre congratulazioni affinché il suo lavoro migliori la formazione scientifica.</Italian>
-		<Spanish>Envíad nuestras felicitaciones por su trabajo para mejorar la formación científica.</Spanish>
+		<Italian>Inviagli le nostre congratulazioni affinché il suo lavoro migliori la formazione scientifica.</Italian>
 		<Polish>Wyślij gratulacje i podziękowania za jego wkład i pracę w polepszaniu edukacji obywateli.</Polish>
 		<Russian>Поздравляем его с работой по улучшению естественнонаучного образования.</Russian>
+		<Spanish>Envía nuestras felicitaciones por su trabajo para mejorar la formación científica.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BILLIONS_AND_BILLIONS_2</Tag>
 		<English>Send that man to Hollywood to make some films about science! How much does he need?</English>
 		<French>Envoyez cet homme à Hollywood pour faire plus de films au sujet de la science! De combien a-t-il besoin?</French>
 		<German>Schicken Sie diesen Mann nach Hollywood, um mehr Filme über Wissenschaft zu produzieren! Welche Unterstützung benötigt er?</German>
-		<Italian>Manda quell'uomo a Hollywood per fare più pellicole sulla scienza! Di quanto ha bisogno?</Italian>
-		<Spanish>¡Envía a ese hombre a Hollywood para que haga más películas sobre ciencia! ¿Cuánto necesita?</Spanish>
+		<Italian>Manda quell'uomo a Hollywood per fare più film sulla scienza! Di quanto ha bisogno?</Italian>
 		<Polish>Wyślij go do Hollywood, aby mógł nakręcić więcej takich filmów!</Polish>
 		<Russian>Отправьте этого человека в Голливуд популяризировать фильмы о науке! Сколько ему нужно?</Russian>
+		<Spanish>¡Envía a ese hombre a Hollywood para que haga más películas sobre ciencia! ¿Cuánto necesita?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLACKBEARD</Tag>
 		<English>The infamous Pirate [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] has set sail for our waters, seeking plunder and mayhem! His flotilla is just over the horizon!</English>
 		<French>Le pirate infâme [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] a dirigé ses voiles vers nos eaux! Sa flotille est visible juste au-dessus de l'horizon!</French>
 		<German>Der berüchtigte Pirat [COLOR_NEGATIVE_TEXT]Blackbeard[COLOR_REVERT] hat Segel auf unsere Gewässer gesetzt und sucht Plünderung und Chaos! Seine Flotille liegt direkt hinter dem Horizont!</German>
-		<Italian>Il pirata malfamato [COLOR_NEGATIVE_TEXT]Barbanera[COLOR_REVERT] sta facendo rotta per le nostre coste! La sua flotta è visibile appena sopra l'orizzonte!</Italian>
-		<Spanish>¡El infame pirata [COLOR_NEGATIVE_TEXT]Barbanegra[COLOR_REVERT] ha fijado el rumbo hacia nuestras aguas! ¡Su flotilla se divisa sobre el horizonte!</Spanish>
+		<Italian>Il malfamato pirata [COLOR_NEGATIVE_TEXT]Barbanera[COLOR_REVERT] sta facendo rotta per le nostre coste! La sua flotta è già visibile all'orizzonte!</Italian>
 		<Polish>Zniesławiony pirat [COLOR_NEGATIVE_TEXT]Czarnobrody[COLOR_REVERT] zmierza ku naszych wodom w celu rozpętania chaosu! Jego flotylla jest tuż za horyzontem!</Polish>
 		<Russian>Печально известный пират [COLOR_NEGATIVE_TEXT]Черная Борода[COLOR_REVERT] прибыл в наши воды, разоряя мирных купцов и сея хаос! Его флотилия уже на горизонте!</Russian>
+		<Spanish>¡El infame pirata [COLOR_NEGATIVE_TEXT]Barbanegra[COLOR_REVERT] ha fijado el rumbo hacia nuestras aguas! ¡Su flotilla se divisa sobre el horizonte!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLACKBEARD_1</Tag>
 		<English>Blast! Catch as catch can, Mr. Gridley!</English>
 		<French>Feu! Alertez la Marine.</French>
 		<German>Bestellen Sie die Flotte, um anzugreifen.</German>
-		<Italian>Fuoco! Avvisate la Marina!.</Italian>
-		<Spanish>¡Fuego! ¡Atrape a los que pueda, almirante!</Spanish>
+		<Italian>Fuoco! Avvisate la Marina!</Italian>
 		<Polish>Ognia! Ile tylko wlezie, panie Gridley!</Polish>
 		<Russian>Огонь! Не упустите его, мистер Мэйнард!</Russian>
+		<Spanish>¡Fuego! ¡Atrape a los que pueda, almirante!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLACKBEARD_HELP_1</Tag>
 		<English>[ICON_BULLET]A dangerous number of barbarian [COLOR_UNIT_TEXT]Frigate[COLOR_REVERT] and [COLOR_UNIT_TEXT]Privateer[COLOR_REVERT] units have spawned near our waters.</English>
 		<French>[ICON_BULLET]Un nombre important de [COLOR_UNIT_TEXT]Frégates[COLOR_REVERT] et de [COLOR_UNIT_TEXT]Corsaires[COLOR_REVERT] barbares est apparu de nos eaux.</French>
 		<German>[ICON_BULLET]Eine gefährliche Anzahl von barbarischen [COLOR_UNIT_TEXT]Fregatten[COLOR_REVERT] und [COLOR_UNIT_TEXT]Freibeutern[COLOR_REVERT] sind vor unseren Gewässern aufgetaucht.</German>
-		<Italian>[ICON_BULLET]Ai nostri confini c'è un pericoloso numero di [COLOR_UNIT_TEXT]fregate[COLOR_REVERT] e [COLOR_UNIT_TEXT]navi corsare[COLOR_REVERT] barbari.</Italian>
-		<Spanish>[ICON_BULLET]Un importante número de [COLOR_UNIT_TEXT]Fragatas[COLOR_REVERT] y [COLOR_UNIT_TEXT]Corsarios[COLOR_REVERT] bárbaros aparecerá cerca de nuestras aguas</Spanish>
-		<Polish>[ICON_BULLET]Niebezpieczna liczba barbarzyńskich [COLOR_UNIT_TEXT]Fregat[COLOR_REVERT] oraz [COLOR_UNIT_TEXT]Okrętów Pirackich[COLOR_REVERT] pojawiła się na naszych wodach!.</Polish>
+		<Italian>[ICON_BULLET]Ai nostri confini c'è un pericoloso numero di [COLOR_UNIT_TEXT]fregate[COLOR_REVERT] e [COLOR_UNIT_TEXT]navi corsare[COLOR_REVERT] barbare.</Italian>
+		<Polish>[ICON_BULLET]Niebezpieczna liczba barbarzyńskich [COLOR_UNIT_TEXT]Fregat[COLOR_REVERT] oraz [COLOR_UNIT_TEXT]Okrętów Pirackich[COLOR_REVERT] pojawiła się na naszych wodach!</Polish>
 		<Russian>[ICON_BULLET]Грозная флотилия пиратских [COLOR_UNIT_TEXT]Фрегатов[COLOR_REVERT] и [COLOR_UNIT_TEXT]Корсаров[COLOR_REVERT] появилась в наших водах.</Russian>
+		<Spanish>[ICON_BULLET]Un importante número de [COLOR_UNIT_TEXT]Fragatas[COLOR_REVERT] y [COLOR_UNIT_TEXT]Corsarios[COLOR_REVERT] bárbaros aparecerá cerca de nuestras aguas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLACK_DEATH_1</Tag>
@@ -3451,9 +3451,9 @@
 		<French>Dépenser tout l'argent nécessaire pour mettre la ville en quarantaine.</French>
 		<German>Tut, was immer notwendig ist, um die Stadt unter Quarantäne zu stellen.</German>
 		<Italian>Spendi ciò che serve per mettere la città in quarantena.</Italian>
-		<Spanish>No escatimemos gastos para declarar la ciudad en cuarentena.</Spanish>
 		<Polish>Zainwestujmy ile tylko potrzeba aby uratować miasto!</Polish>
 		<Russian>Сделайте все необходимое для изоляции города.</Russian>
+		<Spanish>No escatimemos gastos para declarar la ciudad en cuarentena.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLACK_DEATH_2</Tag>
@@ -3461,19 +3461,19 @@
 		<French>Si seulement nous avions découvert la médecine!</French>
 		<German>Wenn wir uns nur auf dem Gebiet der Medizin auskennen würden!</German>
 		<Italian>Se solo conoscessimo la Medicina!</Italian>
-		<Spanish>¡Si supiéramos algo de medicina!</Spanish>
 		<Polish>Gdybyśmy tylko znali tajemnicę Medycyny!</Polish>
 		<Russian>Если бы у нас было знание Медицины!</Russian>
+		<Spanish>¡Si supiéramos algo de medicina!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLACK_DEATH_HELP_2</Tag>
 		<English>[ICON_BULLET]The plague spreads to some nearby cities and reduces their population by %d1</English>
 		<French>[ICON_BULLET]La peste se propage aux villes voisines et réduit leur population de %d1</French>
 		<German>[ICON_BULLET]Die Pest breitet sich in einigen Nachbarstädten aus und reduziert ihre Bevölkerung um %d1</German>
-		<Italian>[ICON_BULLET]La peste si diffonde ad alcune città vicine e riduce la loro popolazione di %d1</Italian>
-		<Spanish>[ICON_BULLET]La Peste Negra se extenderá a algunas ciudades cercanas y reducirá su población en %d1</Spanish>
+		<Italian>[ICON_BULLET]La peste si diffonde in alcune città vicine e riduce la loro popolazione di %d1</Italian>
 		<Polish>[ICON_BULLET]Plaga przedostaje się do pobliskich miast i redukuje ich populację o %d1</Polish>
 		<Russian>[ICON_BULLET]Чума распространяется в некоторые близлежащие города и сокращает их население на %d1</Russian>
+		<Spanish>[ICON_BULLET]La Peste Negra se extenderá a algunas ciudades cercanas y reducirá su población en %d1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLACK_DEATH_HIT_CITY</Tag>
@@ -3481,61 +3481,63 @@
 		<French>La Peste a frappé %s1_city.</French>
 		<German>Die Pest verbreitet sich in %s1_city.</German>
 		<Italian>La peste ha colpito %s1_city.</Italian>
-		<Spanish>La Peste Negra se ha propagado por %s1_city.</Spanish>
 		<Polish>Plaga zaatakowała miasto %s1_city.</Polish>
 		<Russian>Чума поразила город %s1_city.</Russian>
+		<Spanish>La Peste Negra se ha propagado por %s1_city.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLACK_PEARLS_1</Tag>
 		<English>Let them keep the secret. We are happy enough to tax their higher profits.</English>
 		<French>Qu'ils gardent leur secret ! Contentons-nous de taxer leurs profits.</French>
 		<German>Sollen sie ihr Geheimnis für sich behalten. Uns reichen die Erträge, die wir aus der Besteuerung ihrer höheren Gewinne erwirtschaften.</German>
-		<Italian>Lasciamo che se lo tengano. Ci accontenteremo delle tasse provenienti dai loro maggiori profitti.</Italian>
+		<Italian>Lasciamo che si tengano i loro segreti. Ci accontenteremo delle tasse provenienti dai loro maggiori profitti.</Italian>
 		<Spanish>Que guarden el secreto. Nos contentaremos con gravar sus beneficios, ahora mayores.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLARNEYVISIT</Tag>
 		<English>Charmed by the eloquence granted to you by the Blarney Stone, the %s1_civ_adjective leader is paying a state visit to your capital.</English>
 		<French>Charmé par l'éloquence que vous apporte les pierres de Blarney, le leader %s1_civ_adjective prévoit une visite d'état dans votre Capitale.</French>
-		<Italian>Ammirato dall'eloquenza che la pietra di Blarney ti ha donato, il leader %s1_civ_adjective sta facendo una visita di stato alla tua capitale.</Italian>
+		<Italian>Ammirato dall'eloquenza che la Pietra di Blarney ti ha donato, il leader %s1_civ_adjective sta facendo una visita di Stato alla tua capitale.</Italian>
 		<Russian>Îçàðåííûé êðàñíîðå÷èåì ïîëó÷åííûì îò êàìíÿ Áëàðíè, %s1_civ_adjective ëèäåð íàõîäèòñÿ ñ ãîñóäàðñòâåííûì âèçèòîì â âàøåé ñòîëèöå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLARNEYVISIT_1</Tag>
 		<English>I hope this will build friendship between our two civilizations.</English>
 		<French>J'espère que cela va sceller l'amitié entre nos deux civilisations.</French>
-		<Italian>Spero che questo gesto sia la base di una grande amicizia tra le nostre due civiltà.</Italian>
+		<Italian>Spero che questo gesto sia la base di una grande amicizia tra le nostre due nazioni.</Italian>
 		<Russian>ß íàäåþñü, ÷òî ýòî ñîîðóæåíèå ñòàíåò îñíîâîé äëÿ äðóæáû ìåæäó íàøèìè ñòðàíàìè.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLARNEYVISIT_2</Tag>
 		<English>This visit made us closer.</English>
 		<French>Cette visite nous a rapprochés.</French>
+		<Italian>Questa visita ci ha avvicinato.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLARNEYVISIT_OTHER_1</Tag>
 		<English>You have been invited to pay a state visit to the %s1_civ_adjective capital.</English>
 		<French>You avez été invité à faire une visite d'état dans la Capitale %s1_civ_adjective.</French>
-		<Italian>Sei stato invitato ad una visita di stato nella capitale %s1_civ_adjective.</Italian>
+		<Italian>Sei stato invitato a compiere una visita di Stato nella capitale %s1:2_civ_adjective.</Italian>
 		<Russian>Âû ïîëó÷èëè ïðèãëàøåíèå ñîâåðøèòü ãîñóäàðñòâåííûé âèçèò â %s1_civ_adjective ñòîëèöó.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLARNEYVISIT_OTHER_2</Tag>
 		<English>We are now a bit closer after this visit.</English>
 		<French>Nous sommes maintenant un peu plus proches après cette visite.</French>
+		<Italian>Siamo un po' più vicini dopo questa visita.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLESSED_SEA_1</Tag>
 		<English>The Blessed Sea[PARAGRAPH:1]You are tasked by your religious leaders to found cities on new landmasses. If you can build enough cities on new landmasses you will please the masters, who will offer you a choice of rewards.</English>
 		<French>La mer bénie[PARAGRAPH:1]Vous êtes chargé par vos chefs religieux de fonder des villes sur de nouveaux continents. Si vous parvenez à construire suffisamment de villes sur de nouveaux continents, vous honorerez vos maîtres, qui vous couvriront de récompenses.</French>
 		<German>Gesegnete See[PARAGRAPH:1]Eure religiösen Führer haben Euch aufgetragen, Städte in neuen Ländern anzusiedeln. Wenn Ihr genügend Städte in anderen Ländern gründet, werden die weisen Männer zufrieden sein und Euch zahlreiche Belohnungen anbieten.</German>
-		<Italian>Il Mare Benedetto[PARAGRAPH:1]Vieni incaricato dai capi religiosi di fondare delle città su nuovi territori. Se ne costruisci abbastanza li accontenterai e ti offriranno delle ricompense.</Italian>
+		<Italian>Il Mare Benedetto[PARAGRAPH:1]Sei stato incaricato dai capi religiosi di fondare delle città su nuovi continenti. Se ne costruisci abbastanza, i capi religiosi ne saranno contenti e ti offriranno delle ricompense.</Italian>
 		<Spanish>El bendito mar[PARAGRAPH:1]Los líderes religiosos han encargado la búsqueda de ciudades en nuevas masas de tierra. Si se construyen bastantes ciudades en ellas, se complacerá a los dirigentes, que ofrecerán un abanico de recompensas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BLESSED_SEA_DONE_1</Tag>
 		<English>Establish your religion in a number of your cities.</English>
-		<French>Etablir votre religion dans un certain nombre de vos villes.</French>
+		<French>Établir votre religion dans un certain nombre de vos villes.</French>
 		<German>Etabliert Eure Religion in mehreren Städten.</German>
 		<Italian>Instaura la tua religione in molte tue città.</Italian>
 		<Spanish>Llevar nuestra religión a un número determinado de ciudades.</Spanish>
@@ -3545,7 +3547,7 @@
 		<English>Receive a Temple improvement in all cities with five population or more, where your State Religion is present.</English>
 		<French>Obtenir un temple dans toutes les villes d'au moins cinq habitants, sous réserve que votre religion d'Etat y soit présente.</French>
 		<German>Ihr erhaltet eine Tempel-Modernisierung in allen Städten mit einer Bevölkerungsgröße von 5 oder mehr, in denen Eure Staatsreligion vorherrscht.</German>
-		<Italian>Ricevi un miglioramento del tempio in tutte le città, con una popolazione pari a cinque o superiore, in cui è presente la religione di stato.</Italian>
+		<Italian>Ricevi un miglioramento del tempio in tutte le città, con una popolazione pari a cinque o superiore, in cui è presente la religione di Stato.</Italian>
 		<Spanish>Recibir una mejora en el Templo de todas las ciudades que tengan cinco o más de población y nuestra religión oficial.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3561,7 +3563,7 @@
 		<English>[PARAGRAPH:1]To complete this quest, you must establish or capture cities on %d1 total landmasses of any size, from one-plot islands to massive continents. All landmasses where you have at least one city are counted. Note that additional cities on the same island or continent do not help in this quest. The goal is to establish your presence on a number of different landmasses and thereby prove your mastery over the waters.[PARAGRAPH:1] You will fail this quest if you change state religions, cease to have a state religion or reach [COLOR_TECH_TEXT]Industrialism[COLOR_REVERT] without having met the conditions.</English>
 		<French>Pour mener votre quête à bien, vous devez fonder ou capturer des villes sur un total de %d1 continents, dont la taille varie d'une seule case à une surface colossale. Tous les continents où vous avez au moins une ville sont pris en compte. Sachez que la construction de nouvelles villes sur une même île ou sur un même continent ne contribuera pas à l'achèvement de votre quête. Le but est d'établir votre présence sur plusieurs continents différents et démontrer ainsi votre maîtrise des mers.[PARAGRAPH:1]Vous échouerez dans votre quête si vous changez les religions d'Etat,cessez d'avoir une religion d'Etat ou atteignez l'industrialisme sans en avoir rempli les conditions.</French>
 		<German>[PARAGRAPH:1]Um diese Quest zu erfüllen, müssen Sie auf insgesamt %d1 Ländern beliebiger Größe, von kleinen Inseln bis hin zu großen Kontinenten, Städte errichten oder einnehmen. Es zählen alle Landmassen, auf denen Sie mindestens eine Stadt unterhalten. Beachten Sie jedoch, dass zusätzliche Städte auf derselben Insel oder demselben Kontinent in diesem Fall nicht helfen. Das Questziel lautet, Ihre Anwesenheit auf einer Reihe verschiedener Landmassen zu etablieren und dadurch Ihre Dominanz auf dem Meer zu beweisen.[PARAGRAPH:1]Diese Quest gilt als gescheitert, wenn Sie die Staatsreligion wechseln, die Staatsreligion abschaffen oder die Industrialisierung erreichen, ohne die geforderten Bedingungen erfüllt zu haben.</German>
-		<Italian>[PARAGRAPH:1]Per portare a termine questa impresa devi fondare o catturare città su %d1 territori di qualsiasi dimensione, da isolette grandi come un campo a enormi continenti. Verranno contati tutti i territori su cui hai almeno una città. Nota che più città sulla stessa isola o sullo stesso continente non ti aiutano nell'impresa. Lo scopo è quello di stabilire la tua presenza su un numero di territori diversi, provando così il tuo dominio sulle acque.[PARAGRAPH:1] Fallirai nell'impresa se cambi religione di stato, cessi di avere una religione di stato o se raggiungi l'Industrialismo senza aver soddisfatto le condizioni.</Italian>
+		<Italian>[PARAGRAPH:1]Per portare a termine questa impresa devi fondare o conquistare città su %d1 territori di qualsiasi dimensione, che siano isolette o enormi continenti. Verranno contati tutti i territori su cui hai almeno una città. Nota che più città sulla stessa isola o sullo stesso continente non ti aiutano nell'impresa. Lo scopo è quello di stabilire la tua presenza su un numero di territori diversi, provando così il tuo dominio sulle acque.[PARAGRAPH:1] Fallirai nell'impresa se cambi religione di Stato, cessi di avere una religione di Stato o se raggiungi l'Industrialismo senza aver soddisfatto le condizioni.</Italian>
 		<Spanish>[PARAGRAPH:1]Para completar esta misión, hay que fundar ciudades o capturarlas en un total de %d1 masas de tierra de cualquier tamaño, desde islas de una casilla hasta enormes continentes. Se contarán todas las masas de tierra en las que se tenga al menos una ciudad. Hay que tener en cuenta que las ciudades adicionales que haya en una misma isla o continente no contarán para esta misión. El objetivo consiste en tener una presencia en un número de masas de tierra diferentes y, con ello, demostrar el dominio de las aguas.[PARAGRAPH:1] Esta misión será un fracaso si se cambia la religión oficial, si se deja de tener una religión oficial o si se llega al Industrialismo sin haber cumplido las condiciones.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3577,7 +3579,7 @@
 		<English>Organize and send assistance to help them dig out and to preserve threatened facilities.</English>
 		<French>Organiser et envoyer des secours pour les aider à déneiger et préserver les installations menacées.</French>
 		<German>Organisiert Hilfstrupps und schickt sie aus, um die Bergungs- und Sicherungsmaßnahmen zu unterstützen.</German>
-		<Italian>Organizza e invia aiuti per aiutarli a liberarsi dalla neve e proteggere gli edifici in pericolo.</Italian>
+		<Italian>Organizza e invia aiuti per aiutarli a liberarsi e proteggere gli edifici in pericolo.</Italian>
 		<Spanish>Organizad y enviadles ayuda para las tareas de desescombro y mantenimiento de las instalaciones en peligro.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3585,7 +3587,7 @@
 		<English>[ICON_BULLET]Receive a [COLOR_BUILDING_TEXT]%s1_building[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Obtenir [NUM1:Un:Une] [COLOR_BUILDING_TEXT]%s1_building[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Gebäude [COLOR_BUILDING_TEXT]%s1_building[COLOR_REVERT] erhalten</German>
-		<Italian>[ICON_BULLET]Ricevere [NUM1:un:una] [COLOR_BUILDING_TEXT]%s1_building[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Ricevi [NUM1:un:una] [COLOR_BUILDING_TEXT]%s1_building[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]Recibir [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_building[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3601,7 +3603,7 @@
 		<English>[ICON_BULLET]The %s1_resource is lost</English>
 		<French>[ICON_BULLET]Notre source [NUM1:de:d'] %s1_resource est perdue</French>
 		<German>[ICON_BULLET]Verlust der Ressource %s1_resource</German>
-		<Italian>[ICON_BULLET]%s1_resource [NUM1:finito:finita]</Italian>
+		<Italian>[ICON_BULLET]%s1_resource è [NUM1:finito:finita]</Italian>
 		<Spanish>[ICON_BULLET][NUM1:Se ha perdido el:Se ha perdido la:Se han perdido los:Se han perdido las] %s1_resource</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3609,7 +3611,7 @@
 		<English>[ICON_BULLET]Reveal all [COLOR_HIGHLIGHT_TEXT]%s1_bonus[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Révéler l'emplacement des ressources en [COLOR_HIGHLIGHT_TEXT]%s1_bonus[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]Alle Bonusgüter [COLOR_HIGHLIGHT_TEXT]%s1_bonus[COLOR_REVERT] enthüllen</German>
-		<Italian>[ICON_BULLET]Rivelare tutti i [COLOR_HIGHLIGHT_TEXT]%s1_bonus[COLOR_REVERT]</Italian>
+		<Italian>[ICON_BULLET]Rivela tutti i [COLOR_HIGHLIGHT_TEXT]%s1_bonus[COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]Mostrar [NUM1:todo el:toda la:todos los:todas las] [COLOR_HIGHLIGHT_TEXT]%s1_bonus[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3617,17 +3619,17 @@
 		<English>[ICON_BULLET]Receive %d1 [COLOR_UNIT_TEXT]%s2_units[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Obtenir [NUM1:un:une:%d1:%d1] [COLOR_UNIT_TEXT]%s2_UnitName[COLOR_REVERT]</French>
 		<German>[ICON_BULLET]%d1 x [COLOR_UNIT_TEXT]%s2_units[COLOR_REVERT] erhalten</German>
-		<Italian>[ICON_BULLET]Ricevere %d1 [COLOR_UNIT_TEXT]%s2_units[COLOR_REVERT]</Italian>
-		<Spanish>[ICON_BULLET]Recibir %d1 [COLOR_UNIT_TEXT]%s2:2_units[COLOR_REVERT]</Spanish>
+		<Italian>[ICON_BULLET]Ricevi %d1 [COLOR_UNIT_TEXT]%s2_units[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET]Otrzymuje %d1 [COLOR_UNIT_TEXT]%s2_units[COLOR_REVERT]</Polish>
 		<Russian>[ICON_BULLET]Получить %d1 [COLOR_UNIT_TEXT]%s2_units[COLOR_REVERT]</Russian>
+		<Spanish>[ICON_BULLET]Recibir %d1 [COLOR_UNIT_TEXT]%s2:2_units[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BOWYER_1</Tag>
 		<English>We will include the new design principles in all of our bowmaking.</English>
 		<French>Nous inclurons cette nouvelle technologie dans la fabrication de tous nos arcs.</French>
 		<German>Wir werden die neuen Entwürfe für unsere Bogenherstellung übernehmen.</German>
-		<Italian>Includeremo i principi del nuovo progetto nella produzione di archi.</Italian>
+		<Italian>Includeremo questi nuovi principi nella produzione di nuovi archi.</Italian>
 		<Spanish>Incluiremos ese diseño en los principios de toda nuestra confección de arcos.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3656,7 +3658,7 @@
 		<Tag>TXT_KEY_EVENT_BREAK_THE_BANK_2</Tag>
 		<English>Good fortune should be enjoyed.</English>
 		<French>La bonne fortune doit être appréciée.</French>
-		<Italian>Dovrebbe godersi la sua buona stella.</Italian>
+		<Italian>La fortuna andrebbe goduta.</Italian>
 		<Russian>Óäà÷åé ñëåäóåò íàñëàæäàòüñÿ...</Russian>
 	</TEXT>
 	<TEXT>
@@ -3671,30 +3673,30 @@
 		<English>The dam in %s2_city has broken. The city's suburbs are flooded and deaths have been reported.</English>
 		<French>Le barrage de %s2_city a rompu. Les banlieues de la ville sont inondées et il y a de nombreuses victimes.</French>
 		<German>Ein Dammbruch in der Stadt %s2_city verursacht Überflutungen von Stadtbezirken und fordert Todesopfer.</German>
-		<Italian>La diga di %s2_city è crollata. I sobborghi della città sono stati inondati e sono state segnalate diverse persone che hanno perso la vita.</Italian>
-		<Spanish>La presa en %s2_city ha cedido. Las afueras de la ciudad están inundadas y se informa de varias muertes.</Spanish>
+		<Italian>La diga di %s2_city è crollata. I sobborghi della città sono stati inondati e diverse persone hanno perso la vita.</Italian>
 		<Polish>Tama w %s2_city uległa uszkodzeniu. Przedmieścia miasta zostały zalane i zanotowane wiele ofiar śmiertelnych.</Polish>
 		<Russian>В городе %s2_city размыло плотину! Пригороды оказались затоплены, не обошлось и без человеческих жертв.</Russian>
+		<Spanish>La presa en %s2_city ha cedido. Las afueras de la ciudad están inundadas y se informa de varias muertes.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROKEN_DAM_1</Tag>
 		<English>That is very unfortunate, but we can not help. Tell the local authorities they'll have to handle the situation.</English>
 		<French>C'est malheureux, mais nous ne pouvons rien y faire. Mettez les autorités locales en charge de la situation.</French>
 		<German>Wir können uns derzeit keine Hilfsmaßnahmen leisten. Die lokalen Behörden müssen mit dieser Situation selbst fertig werden.</German>
-		<Italian>È una cosa molto spiacevole, ma non possiamo fare nulla. Dici alle autorità locali che dovranno occuparsi della situazione.</Italian>
-		<Spanish>Es muy desafortunado, pero no podemos ayudar. Decir a las autoridades locales que tendrán que manejar la situación.</Spanish>
+		<Italian>È una cosa molto spiacevole, ma non possiamo fare nulla. Avverti le autorità locali che dovranno occuparsi della situazione.</Italian>
 		<Polish>To bardzo smutne, ale niestety nie możemy pomóc. Niech zajmą się tym władze samorządowe.</Polish>
 		<Russian>Это большое несчастье, но мы не можем помочь. Скажите местным властям, что им самим придется справиться с ситуацией.</Russian>
+		<Spanish>Es muy desafortunado, pero no podemos ayudar. Decir a las autoridades locales que tendrán que manejar la situación.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROKEN_DAM_2</Tag>
 		<English>Repair the dam from our emergency funds.</English>
 		<French>Réparez le barrage a l'aide de nos fonds d'urgence.</French>
 		<German>Organisiert einen Wiederaufbau des Dammes.</German>
-		<Italian>Ripara la diga con i nostri fondi destinati alle emergenze</Italian>
-		<Spanish>Reparar la presa con nuestros fondos de emergencia.</Spanish>
+		<Italian>Ripara la diga con i nostri fondi destinati alle emergenze.</Italian>
 		<Polish>Napraw tą tamę z naszych zapasowych funduszy.</Polish>
 		<Russian>Отремонтируйте плотину на средства из наших резервных фондов.</Russian>
+		<Spanish>Reparar la presa con nuestros fondos de emergencia.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROKEN_DAM_3</Tag>
