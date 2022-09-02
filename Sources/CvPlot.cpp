@@ -10277,11 +10277,10 @@ void CvPlot::decayCulture()
 	decayPercent = decayPercent * 100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	int decayFlat = GC.getTILE_CULTURE_DECAY_CONSTANT();
 
-	for (int playerNum = 0; playerNum < MAX_PLAYERS; playerNum++)
+	for (int playerNum = 0; playerNum < MAX_PC_PLAYERS; playerNum++)
 	{
 		CvPlayer& playerX = GET_PLAYER((PlayerTypes)playerNum);
-		// Check if alive? Barb?
-		if (getCulture((PlayerTypes)playerNum) > 0)
+		if (playerX.isAlive() && getCulture((PlayerTypes)playerNum) > 0)
 		{
 			setCulture((PlayerTypes)playerNum,
 				std::max(0,
