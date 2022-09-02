@@ -27661,6 +27661,7 @@ int CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdr
 	// Multipliers are percents, stored as *100. E.g., 1 = 0.1%, 100 = 1%, 10,000 = 100%
 	int iWinnerPlotMultiplier = 100 * GC.getIDW_WINNER_PLOT_MULTIPLIER();
 	int iLoserPlotMultiplier = 100 * GC.getIDW_LOSER_PLOT_MULTIPLIER();
+	// Unused currently
 	if (bWithdrawal)
 	{
 		iWinnerPlotMultiplier /= 3;
@@ -27716,7 +27717,7 @@ int CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdr
 			bFieldCombat = false;
 		}
 	}
-	else if (pLoserPlot->isActsAsCity() && pLoserPlot->getNumVisibleEnemyDefenders(this) > 1)
+	else if (pLoserPlot->isActsAsCity() && pLoserPlot->getNumVisibleEnemyDefenders(this) == 0)
 	{
 		// Fort captured
 		const int iFortCaptureMultiplier = GC.getIDW_FORT_CAPTURE_MULTIPLIER();
