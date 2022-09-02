@@ -6655,7 +6655,6 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 
 	// Annoying to update version:
 	// East
-	logging::logMsg("Test.log", "Working on plot xy %d, %d, index %d", iDX+1, iDY, HASH_RELATIVE_CLOSE_DIST(iDX + 1, iDY));
 	neighborPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX + 1, iDY);
 	neighborDist = m_aCultureDistances[neighborPlotIndex];
 	if (neighborDist != 0 && neighborDist != MAX_INT)
@@ -6666,7 +6665,6 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 		if (neighborDist < distance) distance = neighborDist;
 	}
 	// South
-	logging::logMsg("Test.log", "Working on plot xy %d, %d, index %d", iDX, iDY-1, HASH_RELATIVE_CLOSE_DIST(iDX, iDY-1));
 	neighborPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY - 1);
 	neighborDist = m_aCultureDistances[neighborPlotIndex];
 	if (neighborDist != 0 && neighborDist != MAX_INT)
@@ -6677,7 +6675,6 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 		if (neighborDist < distance) distance = neighborDist;
 	}
 	// West
-	logging::logMsg("Test.log", "Working on plot xy %d, %d, index %d", iDX-1, iDY, HASH_RELATIVE_CLOSE_DIST(iDX - 1, iDY));
 	neighborPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX - 1, iDY);
 	neighborDist = m_aCultureDistances[neighborPlotIndex];
 	if (neighborDist != 0 && neighborDist != MAX_INT)
@@ -6688,7 +6685,6 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 		if (neighborDist < distance) distance = neighborDist;
 	}
 	// North
-	logging::logMsg("Test.log", "Working on plot xy %d, %d, index %d", iDX, iDY+1, HASH_RELATIVE_CLOSE_DIST(iDX, iDY+1));
 	neighborPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY + 1);
 	neighborDist = m_aCultureDistances[neighborPlotIndex];
 	if (neighborDist != 0 && neighborDist != MAX_INT)
@@ -10857,6 +10853,7 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 			}
 		}
 	}
+	setCultureLevel((CultureLevelTypes)0, bUpdatePlotGroups);
 }
 
 
