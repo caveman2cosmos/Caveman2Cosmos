@@ -130,6 +130,8 @@ CvPlayerAI::CvPlayerAI()
 	m_bonusClassUnrevealed = NULL;
 	m_bonusClassHave = NULL;
 
+	m_canTrainSettler = false;
+
 	AI_reset(true);
 }
 
@@ -5883,6 +5885,21 @@ int CvPlayerAI::AI_techBuildingValue(TechTypes eTech, int iPathLength, bool& bEn
 	return iValue;
 }
 
+// abstraction of the loop to check if civilization can already train a settler, and set a boolean if it can 
+bool CvPlayerAI::AI_canTrainSettler() {
+	if (!m_canTrainSettler) {
+		for (int iI = GC.getNumUnitInfos() - 1; iI > -1; iI--)
+		{
+			if (GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType() == UNITAI_SETTLE && canTrain((UnitTypes)iI))
+			{
+				m_canTrainSettler = true;
+				break;
+			}
+		}
+	}
+	return m_canTrainSettler;
+}
+
 
 int CvPlayerAI::AI_techUnitValue(TechTypes eTech, int iPathLength, bool& bEnablesUnitWonder)
 {
@@ -5935,15 +5952,8 @@ int CvPlayerAI::AI_techUnitValue(TechTypes eTech, int iPathLength, bool& bEnable
 				{
 					// FIRST settler unit has a much higher weighting
 					iUnitValue += 10000;
-
-					// Toffer - ToDo - Add boolean cache per team that flags if team has unlocked first trainable settler unit by tech or not.
-					for (int iI = GC.getNumUnitInfos() - 1; iI > -1; iI--)
-					{
-						if (GC.getUnitInfo((UnitTypes)iI).getDefaultUnitAIType() == UNITAI_SETTLE && canTrain((UnitTypes)iI))
-						{
-							iUnitValue -= 9000;
-							break;
-						}
+					if (AI_canTrainSettler()) {
+						iUnitValue -= 9000;
 					}
 					break;
 				}

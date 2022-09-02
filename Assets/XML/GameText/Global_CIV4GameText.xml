@@ -13964,12 +13964,12 @@
 		<Russian>Âû îáíàðóæèëè íîâûé îðèåíòèð!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE</Tag>
-		<English>You have discovered a source of [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] near %s2_CityName!</English>
-		<French>Vous avez découvert une source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] près de %s2_CityName !</French>
-		<German>Ihr habt in der Nähe der Stadt %s2_CityName ein Vorkommen des Bonusguts [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] entdeckt!</German>
-		<Italian>Hai scoperto una risorsa di [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] vicino a %s2_CityName!</Italian>
-		<Spanish>Habéis descubierto una fuente de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] cerca de %s2_CityName.</Spanish>
+		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_IMPROVEMENT</Tag>
+		<English>Industrious workers outside of %s1_CityName have discovered a source of [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT]!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_CITY</Tag>
+		<English>Citizens of %s1_CityName have stumbled upon a nearby source of [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT]!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_VOLCANO</Tag>

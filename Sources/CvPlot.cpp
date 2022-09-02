@@ -724,7 +724,7 @@ bool CvPlot::doBonusDiscovery()
 		}
 		else if (bWorked)
 		{
-			iOdds = 30000; // small chance always there when worked by city.
+			iOdds = 40000; // small chance always there when worked by city.
 		}
 
 		if (iOdds > 0 && team.isHasTech((TechTypes)GC.getBonusInfo(eBonus).getTechReveal()) && canHaveBonus(eBonus))
@@ -743,15 +743,30 @@ bool CvPlot::doBonusDiscovery()
 
 				if (pCity != NULL && isInViewport())
 				{
-					AddDLLMessage(
-						getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
-						gDLL->getText(
-							"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE",
-							GC.getBonusInfo(eBonus).getTextKeyWide(), pCity->getNameKey()
-						),
-						"AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(eBonus).getButton(),
-						GC.getCOLOR_WHITE(), getViewportX(), getViewportY(), true, true
-					);
+					if (bImpBonus)
+					{
+						AddDLLMessage(
+							getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_IMPROVEMENT",
+								pCity->getNameKey(), GC.getBonusInfo(eBonus).getTextKeyWide()
+							),
+							"AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(eBonus).getButton(),
+							GC.getCOLOR_WHITE(), getViewportX(), getViewportY(), true, true
+						);
+					}
+					else
+					{
+						AddDLLMessage(
+							getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+							gDLL->getText(
+								"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_CITY",
+								pCity->getNameKey(), GC.getBonusInfo(eBonus).getTextKeyWide()
+							),
+							"AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(eBonus).getButton(),
+							GC.getCOLOR_WHITE(), getViewportX(), getViewportY(), true, true
+						);
+					}
 				}
 				return true;
 			}
