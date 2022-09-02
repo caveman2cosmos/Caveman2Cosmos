@@ -27631,25 +27631,24 @@ int CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdr
 	PROFILE_FUNC();
 
 	if (!pLoserUnit->canDefend())
-	{
 		return 0; // no influence from worker capture
-	}
+
 	if (isAnimal() || pLoserUnit->isAnimal())
-	{
 		return 0;
-	}
+
 	if (isAlwaysHostile(plot()) || pLoserUnit->isAlwaysHostile(pLoserUnit->plot()))
-	{
 		return 0;
-	}
+
 	if (GC.isIDW_NO_BARBARIAN_INFLUENCE() && (isHominid() || pLoserUnit->isHominid()))
-	{
 		return 0;
-	}
+
 	if (GC.isIDW_NO_NAVAL_INFLUENCE() && DOMAIN_SEA == getDomainType())
-	{
 		return 0;
-	}
+
+	const PlayerTypes pLoserPlayer = pLoserUnit->getOwner();
+
+	if (pLoserPlayer < 0 || pLoserPlayer > MAX_PLAYERS)
+		return 0; // Bad unit owner TODO find out why gets passed in
 
 	CvPlot* pWinnerPlot = plot();
 	CvPlot* pLoserPlot = pLoserUnit->plot();
@@ -27700,7 +27699,7 @@ int CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdr
 				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_MILITIA_EMERGED",
 					GET_PLAYER(getOwner()).getCivilizationAdjective(), iAttackerCulturePercent/10,
 					iAttackerCulturePercent % 10, GC.getIDW_EMERGENCY_DRAFT_CULTURE_THRESHOLD());
-				AddDLLMessage(pLoserUnit->getOwner(), false, GC.getEVENT_MESSAGE_TIME(),
+				AddDLLMessage(pLoserPlayer, false, GC.getEVENT_MESSAGE_TIME(),
 					szBuffer, "AS2D_UNIT_BUILD_UNIT", MESSAGE_TYPE_INFO, getButton(),
 					GC.getCOLOR_GREEN(), pLoserPlot->getX(), pLoserPlot->getY(), true, true);
 				AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(),
@@ -27712,8 +27711,8 @@ int CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdr
 		{
 			const int iNoCityDefenderMultiplier = GC.getIDW_NO_CITY_DEFENDER_MULTIPLIER();
 
-			influencePlots(pLoserPlot, pLoserUnit->getOwner(), iLoserPlotMultiplier * iNoCityDefenderMultiplier / 100);
-			influencePlots(pWinnerPlot, pLoserUnit->getOwner(), iWinnerPlotMultiplier * iNoCityDefenderMultiplier / 100);
+			influencePlots(pLoserPlot, pLoserPlayer, iLoserPlotMultiplier * iNoCityDefenderMultiplier / 100);
+			influencePlots(pWinnerPlot, pLoserPlayer, iWinnerPlotMultiplier * iNoCityDefenderMultiplier / 100);
 			bFieldCombat = false;
 		}
 	}
@@ -27722,14 +27721,14 @@ int CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdr
 		// Fort captured
 		const int iFortCaptureMultiplier = GC.getIDW_FORT_CAPTURE_MULTIPLIER();
 
-		influencePlots(pLoserPlot, pLoserUnit->getOwner(), iLoserPlotMultiplier * iFortCaptureMultiplier / 100);
-		influencePlots(pWinnerPlot, pLoserUnit->getOwner(), iWinnerPlotMultiplier * iFortCaptureMultiplier / 100);
+		influencePlots(pLoserPlot, pLoserPlayer, iLoserPlotMultiplier * iFortCaptureMultiplier / 100);
+		influencePlots(pWinnerPlot, pLoserPlayer, iWinnerPlotMultiplier * iFortCaptureMultiplier / 100);
 		bFieldCombat = false;
 	}
 	if (bFieldCombat)
 	{
-		influencePlots(pLoserPlot, pLoserUnit->getOwner(), iLoserPlotMultiplier);
-		influencePlots(pWinnerPlot, pLoserUnit->getOwner(), iWinnerPlotMultiplier);
+		influencePlots(pLoserPlot, pLoserPlayer, iLoserPlotMultiplier);
+		influencePlots(pWinnerPlot, pLoserPlayer, iWinnerPlotMultiplier);
 	}
 
 	// calculate influence % in defended plot (to be displayed in game log)
@@ -27745,6 +27744,8 @@ int CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdr
 // unit influences given plot and surounding area i.e. transfers culture from target civ to unit's owner
 void CvUnit::influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlayer, const int iLocationMultiplier)
 {
+	FASSERT_BOUNDS(0, MAX_PLAYERS, eTargetPlayer);
+
 	// get influence radius
 	const int iInfluenceRadius = GC.getIDW_INFLUENCE_RADIUS();
 	if (iInfluenceRadius < 0) return;
@@ -27780,6 +27781,7 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlaye
 					int iMult = iMultiplier;
 					// calculate distance multiplier for current plot
 					int iDistanceMultiplier = 100 / intPow((iDistance + 1), 2);
+					if (iDistanceMultiplier < 1) continue;
 
 					// Cities gain reduced culture transfer if not emergency draft,
 					// also halved if city has protected culture
@@ -27798,6 +27800,9 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlaye
 
 					// Removing a total of 1e6
 					int iCultureTransfer = iMult * iDistanceMultiplier / 100 * iTargetCulture / 10000;
+
+					// Catch potential unlikely overflows?
+					if (iCultureTransfer < 0) iCultureTransfer = 0;
 
 					if (iTargetCulture < iCultureTransfer)
 					{
