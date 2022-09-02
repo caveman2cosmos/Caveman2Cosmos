@@ -2384,11 +2384,12 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				CvPlot* pLoopPlot = pOldCity->getCityIndexPlot(iPlotIndex);
 				if (pLoopPlot != NULL)
 				{
-					const int iCultureDist = pOldCity->cultureDistance(pLoopPlot->getX(), pLoopPlot->getY());
-					if (iCultureDist > iCultureLevel)
-					{
-						continue;
-					}
+					// cultureDistance needs dX, dY, not absolute. Blaze TODO fix 
+					// const int iCultureDist = pOldCity->cultureDistance(pLoopPlot->getX(), pLoopPlot->getY());
+					// if (iCultureDist > iCultureLevel)
+					// {
+					// 	continue;
+					// }
 					// Only grab non-city, non-fort tiles from old owner
 					if (!pLoopPlot->isCity(true) && pLoopPlot->getOwner() == eOldOwner)
 					{
