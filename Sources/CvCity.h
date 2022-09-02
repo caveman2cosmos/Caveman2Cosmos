@@ -365,9 +365,9 @@ public:
 	int hurryAngerLength(HurryTypes eHurry) const;
 	int maxHurryPopulation() const;
 
-//	int cultureDistance(int iDX, int iDY) const;
-	int cultureStrength(PlayerTypes ePlayer, int &iOriginal) const;
-	int cultureGarrison(PlayerTypes ePlayer) const;
+	int netRevoltRisk(PlayerTypes cultureAttacker) const;
+	int baseRevoltRisk(PlayerTypes eCultureAttacker) const;
+	int cultureGarrison(PlayerTypes eCultureAttacker) const;
 
 	//	Note arrival or leaving of a unit
 	void noteUnitMoved(const CvUnit* pUnit) const;
@@ -1524,19 +1524,14 @@ public:
 
 	int getBestYieldAvailable(YieldTypes eYield) const;
 
-/************************************************************************************************/
-/* phunny_pharmer                Start		 05/03/10                                           */
-/*   note: recalculateCultureDistance must be const as it is called from cultureDistance, a     */
-/*     const function; this means that the actual cached structure must be mutable in order to  */
-/*     be modified in the const method                                                          */
-/************************************************************************************************/
+	/*   note: recalculateCultureDistance must be const as it is called from cultureDistance, a     */
+	/*     const function; this means that the actual cached structure must be mutable in order to  */
+	/*     be modified in the const method                                                          */
 	void recalculateCultureDistances(int iMaxDistance) const;
 	int calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const;
 	void clearCultureDistanceCache();
-	int cultureDistance(int iDX, int iDY, bool bForce = false) const;
-/************************************************************************************************/
-/* phunny_pharmer                End		 05/03/10                                           */
-/************************************************************************************************/
+	int cultureDistance(int iDX, int iDY) const;
+
 	void clearModifierTotals();
 	void recalculateModifiers();
 
@@ -1914,6 +1909,8 @@ protected:
 	void doGrowth();
 	void doCulture();
 	void doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate);
+	void decayCulture();
+	int cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int distanceFromSource);
 	void doProduction(bool bAllowNoProduction);
 	void doDecay();
 	void doReligion();

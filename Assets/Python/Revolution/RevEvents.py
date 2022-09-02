@@ -912,7 +912,8 @@ def checkForAssimilation():
 
 								relations = CyPlayerX.AI_getAttitude(iPlayerMaster)
 
-								if CyPlot0.getCulture(iPlayerMaster)/(1.0*CyPlot0.countTotalCulture()) > .25:
+								# Blaze: Added 1 to divisor to avoid div/0 error, needs investigating why triggered.
+								if CyPlot0.getCulture(iPlayerMaster)/(1.0*CyPlot0.countTotalCulture() + 1) > .25:
 									# Assimilate with master with large culture in city
 									if not relations == AttitudeTypes.ATTITUDE_FURIOUS:
 
@@ -971,7 +972,8 @@ def checkForAssimilation():
 										CyPlayerCult2 = CyPlayerY
 										iMaxCult2 = iCulture
 
-								iTotalCulture = CyPlot0.countTotalCulture()
+								# Blaze: Added 1 to avoid div/0 error, needs investigating why triggered.
+								iTotalCulture = CyPlot0.countTotalCulture() + 1
 								if iMaxCult2/(1.0*iTotalCulture) > .2:
 									relations = CyPlayerX.AI_getAttitude(iPlayerCult2)
 									if relations in (AttitudeTypes.ATTITUDE_PLEASED, AttitudeTypes.ATTITUDE_FRIENDLY) \
