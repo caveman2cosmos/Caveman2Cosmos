@@ -6453,9 +6453,9 @@ int CvCity::maxHurryPopulation() const
 }
 
 
-//	Unique index assuming dx, dy args are less than 5000 ("relative close")
-// Extra parens around (x) and (y) are maybe needed???
-#define	HASH_RELATIVE_CLOSE_DIST(x,y)	((x) + 10000 * (y))
+//	Unique index assuming dx, dy args are less than 500 ("relative close")
+//  Extra parems around (x), (y) needed: # statments are TEXT REPLACEMENT, not code execution
+#define	HASH_RELATIVE_CLOSE_DIST(x,y)	((x) + 1000 * (y))
 
 // We enter realistic culture here
 int CvCity::cultureDistance(int iDX, int iDY) const
