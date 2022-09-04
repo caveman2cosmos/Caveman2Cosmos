@@ -2657,22 +2657,6 @@
 		<Russian>Óäà÷ëèâûé èãðîê èç %s2_city ñóìåë ñîðâàòü êóø â Ëàñ-Âåãàñå.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_1</Tag>
-		<English>A volcanic eruption near %s2_city has devastated the countryside. Fortunately, the %s1_civ_adjective city itself was spared.</English>
-		<French>Une éruption volcanique près de %s2_city a dévasté la campagne. Heureusement, la ville %s1:2_civ_adjective a été épargnée.</French>
-		<German>Ein Vulkanausbruch in der Nähe von %s2_city hat den Landstrich verwüstet. Glücklicherweise blieb die %s1:3_civ_adjective Stadt selbst verschont.</German>
-		<Italian>Un'eruzione vulcanica vicino a %s2_city ha devastato il territorio circostante. Fortunatamente la città %s1:2_civ_adjective è stata risparmiata.</Italian>
-		<Spanish>La erupción de un volcán cercano a %s2_city ha devastado el campo. Por suerte, la propia ciudad %s1:2_civ_adjective se ha salvado.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_2</Tag>
-		<English>The earth has spewed forth lava and ash from a previously dormant volcano near the %s1_civ_adjective city of %s2_city.</English>
-		<French>Un volcan jusqu'ici endormi a craché de la lave et des cendres près de la ville %s1:2_civ_adjective de %s2_city.</French>
-		<German>Ein bislang inaktiver Vulkan in der Nähe der %s1:2_civ_adjective Stadt %s2_city hat Lava und Asche gespien.</German>
-		<Italian>La terra ha eruttato lava e ceneri da un vulcano addormentato vicino alla città %s1:2_civ_adjective di %s2_city.</Italian>
-		<Spanish>La tierra ha escupido lava y cenizas por un volcán que antes estaba inactivo en la ciudad %s1:2_civ_adjective de %s2_city.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_ACTIVE</Tag>
 		<English>Reports from the %s1_civ_adjective empire speak of increased volcanic activity.</English>
 		<French>Des rumeurs courent concernant une augmentation de l'activité volcanique.</French>
@@ -3953,46 +3937,46 @@
 		<English>Make an example of these hotheads who threaten the safety of the Empire! Have them arrested for treason, and round up any of their supporters among the civilian population, too.</English>
 		<French>Faites un exemple de ces têtes brulées qui menacent la sûreté de l'Empire! Arrêtez-les pour la trahison, et nettoyez également leurs supporters parmi la population civile.</French>
 		<German>Statuiert ein Exempel mit diesen Hitzköpfen, die die Sicherheit des Imperium bedrohen! Lasst sie wegen Verrats einsperren und ergreift auch ihre Sympatisanten in der Zivilbevölkerung!</German>
-		<Italian>Fai un esempio di queste teste calde che minacciano la sicurezza dell'Impero! Arrestali per tradimento e raduna anche i loro sostenitori fra la popolazione civile.</Italian>
-		<Spanish>¡Dadme un ejemplo de estos fanáticos que amenazan la seguridad del imperio! Que sean arrestados por traición, y reunid también a sus partidarios entre la población civil.</Spanish>
+		<Italian>Fate un esempio di queste teste calde che minacciano la sicurezza dell'Impero! Arrestateli per tradimento e radunate anche i loro sostenitori fra la popolazione civile.</Italian>
 		<Polish>Aresztuj ich za zdradę, razem z cywilami którzy ich popierali. Niech będzie to przykład dla wszystkich zapaleńców, którzy odważą się zagrozić bezpieczeństwu Imperium!</Polish>
+		<Spanish>¡Dadme un ejemplo de estos fanáticos que amenazan la seguridad del imperio! Que sean arrestados por traición, y reunid también a sus partidarios entre la población civil.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CARNATION_REVOLUTION_2</Tag>
 		<English>These Army captains have a point. Perhaps it is time for the old to retire and let the young officers run the government with their new ideas.</English>
 		<French>Ces capitaines marquent un point. Il est peut-être temps pour les anciens de se retirer et de laisser les jeunes officiers prendre le relais avec leurs nouvelles idées</French>
 		<German>Diese Armeekapitäne haben irgendwie recht. Möglicherweise ist es Zeit, dass die Alten sich zurückziehen und es denn jungen Offizieren überlassen, die Regierung mit ihren neuen Ideen zu führen.</German>
-		<Italian>Questi capitani dell'esercito hanno un punto. Forse è tempo per i vecchi di ritirarsi e lasciare agli ufficiali giovani far funzionare il governo con le loro nuove idee.</Italian>
-		<Spanish>Estos capitanes del ejército tienen algo de razón. Quizás sea hora de que los viejos se retiren y se deje a los oficiales jóvenes a cargo del gobierno con sus nuevas ideas.</Spanish>
+		<Italian>Questi ufficiali dell'esercito hanno ragione. Forse è tempo per i vecchi di ritirarsi e lasciare spazio agli ufficiali giovani con le loro nuove idee.</Italian>
 		<Polish>Być może ci wojskowi mają rację. Może nadszedł czas, aby starzy odeszli, a rządami zajęli się młodzi.</Polish>
+		<Spanish>Estos capitanes del ejército tienen algo de razón. Quizás sea hora de que los viejos se retiren y se deje a los oficiales jóvenes a cargo del gobierno con sus nuevas ideas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CARNATION_REVOLUTION_HELP_2</Tag>
-		<English>Offer peace treaty to %s2_adjective. Immediate civics switch to: [COLOR_POSITIVE_TEXT]Representation, Free Speech, State Property[COLOR_REVERT]. [COLOR_NEGATIVE_TEXT]Two turns of anarchy.[COLOR_REVERT]</English>
-		<French>Proposez aux %s2_adjective un Traité de paix. Adoptez également les doctrines: [COLOR_POSITIVE_TEXT]Représentation, Discours Libre, Propriété d'état[COLOR_REVERT]. [COLOR_NEGATIVE_TEXT]Deux tours d'anarchie.[COLOR_REVERT]</French>
-		<German>Friedensangebot an die %s2_adjective. Sofortiger Wechsel der Gesellschaftsformen zu: [COLOR_POSITIVE_TEXT]Repräsentation, Meinungsfreiheit, Staatseigentum[COLOR_REVERT]. [COLOR_NEGATIVE_TEXT]Zwei Runden Unruhen.[COLOR_REVERT]</German>
-		<Italian>Offerta di un trattato di pace a %s2_adjective. Adotterà le forme di governo: [COLOR_POSITIVE_TEXT]Rappresentanza, Libertà di parola, Proprietà di stato[COLOR_REVERT]. [COLOR_NEGATIVE_TEXT]Due turni di anarquía.[COLOR_REVERT]</Italian>
-		<Spanish>[ICON_BULLET]Se ofrecerá a los %s2:3_adjective un tratado de paz[NEWLINE][ICON_BULLET]Los principios cambiarán automáticamente a: [COLOR_POSITIVE_TEXT]Representatividad, Libertad de expresión, Propiedad estatal[COLOR_REVERT][NEWLINE][ICON_BULLET]Dos turnos de anarquía</Spanish>
-		<Polish>Zaproponuj pokój z cywilizacją %s2_adjective. Natychmiastowa zmiana ustroju na: [COLOR_POSITIVE_TEXT]Reprezentacja, Wolność Słowa, Nacjonalizacja[COLOR_REVERT]. [COLOR_NEGATIVE_TEXT]Dwie tury anarchii.[COLOR_REVERT]</Polish>
+		<English>Offer peace treaty to %s2_adjective. Immediate civics switch to: [COLOR_POSITIVE_TEXT]Representation[COLOR_REVERT], [COLOR_POSITIVE_TEXT]Free Speech[COLOR_REVERT], [COLOR_POSITIVE_TEXT]State Property[COLOR_REVERT]. [COLOR_NEGATIVE_TEXT]Two turns of anarchy.[COLOR_REVERT]</English>
+		<French>Proposez aux %s2_adjective un Traité de paix. Adoptez également les doctrines: [COLOR_POSITIVE_TEXT]Représentation[COLOR_REVERT], [COLOR_POSITIVE_TEXT]Discours Libre[COLOR_REVERT], [COLOR_POSITIVE_TEXT]Propriété d'état[COLOR_REVERT]. [COLOR_NEGATIVE_TEXT]Deux tours d'anarchie.[COLOR_REVERT]</French>
+		<German>Friedensangebot an die %s2_adjective. Sofortiger Wechsel der Gesellschaftsformen zu: [COLOR_POSITIVE_TEXT]Repräsentation[COLOR_REVERT], [COLOR_POSITIVE_TEXT]Meinungsfreiheit[COLOR_REVERT], [COLOR_POSITIVE_TEXT]Staatseigentum[COLOR_REVERT]. [COLOR_NEGATIVE_TEXT]Zwei Runden Unruhen.[COLOR_REVERT]</German>
+		<Italian>Offri un trattato di pace all'Impero %s2_adjective. Adotterà le forme di governo: [COLOR_POSITIVE_TEXT]Rappresentanza[COLOR_REVERT], [COLOR_POSITIVE_TEXT]Libertà di parola[COLOR_REVERT], [COLOR_POSITIVE_TEXT]Proprietà di stato[COLOR_REVERT]. [COLOR_NEGATIVE_TEXT]Due turni di anarchia.[COLOR_REVERT]</Italian>
+		<Polish>Zaproponuj pokój z cywilizacją %s2_adjective. Natychmiastowa zmiana ustroju na: [COLOR_POSITIVE_TEXT]Reprezentacja[COLOR_REVERT], [COLOR_POSITIVE_TEXT]Wolność Słowa[COLOR_REVERT], [COLOR_POSITIVE_TEXT]Nacjonalizacja[COLOR_REVERT]. [COLOR_NEGATIVE_TEXT]Dwie tury anarchii.[COLOR_REVERT]</Polish>
+		<Spanish>Se ofrecerá a los %s2:3_adjective un tratado de paz. Los principios cambiarán automáticamente a: [COLOR_POSITIVE_TEXT]Representatividad[COLOR_REVERT], [COLOR_POSITIVE_TEXT]Libertad de expresión[COLOR_REVERT], [COLOR_POSITIVE_TEXT]Propiedad estatal[COLOR_REVERT]. [COLOR_NEGATIVE_TEXT]Dos turnos de anarquía.[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CARNATION_REVOLUTION_OTHER_2</Tag>
 		<English>The government of our %s1_civ_adjective enemy has been overthrown in a coup d'etat. The new leadership has asked to end the long war with us so that it can get on with domestic reforms. Do you wish to end the war?</English>
 		<French>Le gouvernement de notre ennemi %s1_civ_adjective a été renversé dans un coup d'état. La nouvelle équipe a demandé à mettre un terme à la longue guerre entre nous, de sorte qu'elle puisse mettre en place des réformes internes. Souhaitez-vous mettre un terme à la guerre?</French>
 		<German>Die Regierung unseres %s1_civ_adjective Feindes ist in einem Staatsstreich gestürzt worden. Die neue Führung hat gebeten, den langen Krieg mit uns zu beenden, damit sie an inländischen Reformen arbeiten kann. Möchten Sie den Krieg beenden?</German>
-		<Italian>Il governo del nostro nemico %s1_civ_adjective è stato rovesciato da un colpo di stato. La nuova leadership ha chiesto di concludere la guerra lunga con noi in moda da poter iniziare le riforme interne. Desideri concludere la guerra?</Italian>
-		<Spanish>El gobierno de nuestros enemigos %s1:3_civ_adjective ha sido derrocado por un golpe de Estado. Sus nuevos líderes han solicitado terminar la larga guerra entre nosotros, de modo que puedan progresar mediante reformas internas. ¿Deseas acabar la guerra?</Spanish>
+		<Italian>Il governo del nostro nemico %s1_civ_adjective è stato rovesciato da un colpo di Stato. La nuova leadership ha chiesto di concludere la lunga guerra con noi in modo da poter iniziare un periodo di riforme interne. Desideri concludere la guerra?</Italian>
 		<Polish>Rząd %s1_civ_adjective został obalony w wyniku zamachu stanu. Nowy przywódca pragnie zakończenia długiej wojny, aby móc przeprowadzić reformy gospodarcze. Czy i ty chcesz zakończyć tę wojnę?</Polish>
+		<Spanish>El gobierno de nuestros enemigos %s1:3_civ_adjective ha sido derrocado por un golpe de Estado. Sus nuevos líderes han solicitado terminar la larga guerra entre nosotros, de modo que puedan progresar mediante reformas internas. ¿Deseas acabar la guerra?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CATTLE_RANCHERS</Tag>
 		<English>Our ranchers are expanding their cattle pastures to meet demands from our growing and hungry cities.</English>
 		<French>Nos Fermiers ont étendu leurs pâturages pour s'adapter à la demande croissante de nos Villes.</French>
 		<German>Unsere Viehhüter erweitern ihre Viehweiden um der erhöhten Nachfrage durch wachsende und hungrige Städte nachzukommen.</German>
-		<Italian>I nostri allevatori stanno espandendo i loro pascoli per venire incontro alle domande di città affamate e in crescita.</Italian>
-		<Spanish>Nuestros ganaderos están ampliando sus pastizales de ganado para satisfacer la demanda de nuestras crecientes ciudades.</Spanish>
+		<Italian>I nostri allevatori stanno espandendo i loro pascoli per soddisfare le richieste delle nostre città in crescita e affamate.</Italian>
 		<Polish>Nasi ranczerzy rozszerzają swoje pastwiska, żeby nadążyć za popytem.</Polish>
 		<Russian>Наши владельцы ранчо расширяют свои пастбища, чтобы удовлетворить потребности наших растущих и голодных городов.</Russian>
+		<Spanish>Nuestros ganaderos están ampliando sus pastizales de ganado para satisfacer la demanda de nuestras crecientes ciudades.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CATTLE_RANCHERS_1</Tag>
@@ -4000,25 +3984,27 @@
 		<French>Plus de Viande!</French>
 		<German>Mehr Rindfleisch!</German>
 		<Italian>Più carne!</Italian>
-		<Spanish>¡Más carne!</Spanish>
 		<Polish>Więcej wołowiny!</Polish>
 		<Russian>Больше говядины!</Russian>
+		<Spanish>¡Más carne!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CAUSES_FOREIGN_HOLY_ANGER</Tag>
 		<English>[ICON_BULLET]Damages relationships with all nations who have [CT_STATE_RELIGION] as a State Religion</English>
 		<French>[ICON_BULLET]déteriore les relations avec toutes les nations qui ont le [CT_STATE_RELIGION] comme Religion d'Etat</French>
-		<Spanish>[ICON_BULLET]Daña las relaciones con todas las naciones que tengan [CT_STATE_RELIGION] como religión oficial</Spanish>
+		<Italian>[ICON_BULLET]Danneggia le relazioni con tutte le nazioni che hanno [CT_STATE_RELIGION] come religione di Stato</Italian>
 		<Polish>[ICON_BULLET]Pogorszy nasze stosunki dyplomatyczne z wszystkimi narodami które posiadają naszą religie jako swoją religię narodową</Polish>
 		<Russian>[ICON_BULLET]Наносит ущерб отношениям со всеми странами, в которых [CT_STATE_RELIGION] является государственной религией</Russian>
+		<Spanish>[ICON_BULLET]Daña las relaciones con todas las naciones que tengan [CT_STATE_RELIGION] como religión oficial</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CAUSES_HOLY_ANGER</Tag>
-		<English>[ICON_BULLET]Causes Temporary Unhappiness in all cities with [CT_STATE_RELIGION]</English>
+		<English>[ICON_BULLET]Causes temporary unhappiness in all cities with [CT_STATE_RELIGION]</English>
 		<French>[ICON_BULLET]Engendre un mécontentement temporaire dans toutes les villes avec [CT_STATE_RELIGION]</French>
-		<Spanish>[ICON_BULLET]Causa infelicidad temporal en todas las ciudades con [CT_STATE_RELIGION]</Spanish>
+		<Italian>[ICON_BULLET]Provoca infelicità temporanea in tutte le città con [CT_STATE_RELIGION]</Italian>
 		<Polish>[ICON_BULLET]Spowoduje tymczasowe niezadowolenie we wszystkich miastach z naszą religią</Polish>
 		<Russian>[ICON_BULLET]Вызывает временно недовольство во всех городах с [CT_STATE_RELIGION]</Russian>
+		<Spanish>[ICON_BULLET]Causa infelicidad temporal en todas las ciudades con [CT_STATE_RELIGION]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CHAIN_SHOT_1</Tag>
@@ -4026,16 +4012,16 @@
 		<French>Nous allons équiper tous nos navires de ces nouvelles munitions.</French>
 		<German>We werden alle unsere Kriegsschiffe mit der neuen Munition ausrüsten</German>
 		<Italian>Equipaggeremo tutte le nostre navi con il nuovo tipo di munizioni.</Italian>
-		<Spanish>Equiparemos a todos nuestros barcos con el nuevo tipo de munición.</Spanish>
 		<Polish>Zaopatrzymy wszystkie jednostki morskie w nowy rodzaj amunicji.</Polish>
 		<Russian>Мы оснастим все наши военные корабли новым типом боеприпасов.</Russian>
+		<Spanish>Equiparemos a todos nuestros barcos con el nuevo tipo de munición.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CHAMPION_1</Tag>
 		<English>Decorate our champions! We shall celebrate their achievement.</English>
 		<French>Décorer nos champions ! Nous allons célébrer leurs exploits.</French>
 		<German>Verleiht unseren Meistereinheiten eine Auszeichnung! Wir sollten ihre Leistungen gebührend feiern.</German>
-		<Italian>Premiamo i nostri campioni! Festeggeremo la loro impresa.</Italian>
+		<Italian>Decorate i nostri campioni! Festeggeremo la loro impresa.</Italian>
 		<Spanish>¡Condecorad a nuestros campeones! Debemos celebrar sus logros.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4050,19 +4036,20 @@
 		<Tag>TXT_KEY_EVENT_CHANGE_CIVICS</Tag>
 		<English>[ICON_BULLET]Will change current Government Civic to %s1</English>
 		<French>[ICON_BULLET]Changera la Doctrine de Gouvernement en %s1</French>
-		<Spanish>[ICON_BULLET]Cambiará tu principio de Gobierno a %s1</Spanish>
+		<Italian>[ICON_BULLET]Cambierà la forma di governo in %s1</Italian>
 		<Polish>[ICON_BULLET]Zmieni obecną doktrynę rządu na %s1</Polish>
 		<Russian>[ICON_BULLET]Изменит текущую правительственную парадигму на %s1</Russian>
+		<Spanish>[ICON_BULLET]Cambiará tu principio de Gobierno a %s1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CHARIOTRY_FOUNDED_1</Tag>
 		<English>Chariots shall crush our enemies!</English>
 		<French>Les Chars vont écraser nos ennemis!</French>
 		<German>Streitwägen sollen unsere Feinde vernichten!</German>
-		<Italian>I carri dovrebbero distruggere i nostri nemici!</Italian>
-		<Spanish>¡Los Carros aplastarán a nuestros enemigos!</Spanish>
+		<Italian>I carri distruggeranno i nostri nemici!</Italian>
 		<Polish>Niechaj rydwany zmiażdżą naszych wrogów!</Polish>
 		<Russian>Колесницы сокрушат наших врагов!</Russian>
+		<Spanish>¡Los Carros aplastarán a nuestros enemigos!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CHARIOTRY_FOUNDED_2</Tag>
@@ -4070,26 +4057,26 @@
 		<French>Nous avons besoin d'unités montées plus expérimentées.</French>
 		<German>Wir brauchen berittene Einheiten mit mehr Erfahrung.</German>
 		<Italian>Abbiamo bisogno di unità montate con più esperienza.</Italian>
-		<Spanish>Necesitamos unidades montadas más experimentadas.</Spanish>
 		<Polish>Potrzebujemy bardziej doświadczonej konnicy.</Polish>
 		<Russian>Нам нужны более опытные кавалеристы.</Russian>
+		<Spanish>Necesitamos unidades montadas más experimentadas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CHARIOTRY_FOUNDED_3</Tag>
 		<English>We can not afford this now.</English>
 		<French>Nous ne pouvons pas nous le permettre pour l'instant.</French>
 		<German>Wir können uns das jetzt nicht leisten.</German>
-		<Italian>Non possiamo permetterci queste spese, per il momento.</Italian>
-		<Spanish>No podemos permitirnos esto por el momento.</Spanish>
+		<Italian>Non possiamo permettercelo per il momento.</Italian>
 		<Polish>Nie możemy sobie teraz na to pozwolić.</Polish>
 		<Russian>Мы не можем позволить себе это сейчас.</Russian>
+		<Spanish>No podemos permitirnos esto por el momento.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CHARISMATIC_1</Tag>
 		<English>Advise him to focus on his relationship with the armed forces.</English>
 		<French>Lui conseiller de se concentrer sur ses relations avec les forces armées.</French>
 		<German>Ratet ihm, sich auf die Beziehungen zwischen den Streitkräften zu konzentrieren.</German>
-		<Italian>Avvertilo di concentrarsi sulla sua relazione con le forze armate.</Italian>
+		<Italian>Avvertilo di concentrarsi sulla sua relazione con le Forze armate.</Italian>
 		<Spanish>Que se le recomiende concentrarse en su relación con las fuerzas armadas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4105,7 +4092,7 @@
 		<English>Set up a monument at the airport to produce tourism.</English>
 		<French>Eriger un monument à l'aéroport pour encourager le tourisme.</French>
 		<German>Errichtet ein Denkmal am Flughafen, um den Tourismus anzukurbeln.</German>
-		<Italian>Erigi un monumento all'aeroporto per produrre turismo.</Italian>
+		<Italian>Erigi un monumento all'aeroporto per incentivare il turismo.</Italian>
 		<Spanish>Que se coloque un monumento en el aeropuerto para que genere turismo.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4113,7 +4100,7 @@
 		<English>Organize a rebuilding effort.</English>
 		<French>Organiser la reconstruction.</French>
 		<German>Organisiert den Wiederaufbau.</German>
-		<Italian>Organizza la ricostruzione.</Italian>
+		<Italian>Organizza gli sforzi di ricostruzione.</Italian>
 		<Spanish>Que empiecen las tareas de reconstrucción.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4121,7 +4108,7 @@
 		<English>Investigate the cause of the fire.</English>
 		<French>Enquêter sur la cause de l'incendie.</French>
 		<German>Untersucht die Ursache des Feuers.</German>
-		<Italian>Investiga le cause dell'incendio.</Italian>
+		<Italian>Indaga sulle cause dell'incendio.</Italian>
 		<Spanish>Que se investigue la causa del incendio.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4129,13 +4116,14 @@
 		<English>We are too pressed to spare any attention to a fire.</English>
 		<French>Nous sommes trop pressés pour nous occuper d'un incendie.</French>
 		<German>Wir sind zu beschäftigt, um uns um ein Feuer zu kümmern.</German>
-		<Italian>Siamo troppo presi per prestare attenzione a un incendio.</Italian>
+		<Italian>Siamo troppo occupati per prestare attenzione a un piccolo incendio.</Italian>
 		<Spanish>Estamos demasiado ocupados como para prestar atención a un incendio.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_1</Tag>
 		<English>Commend the local firefighters for their work.</English>
 		<French>Rendre hommage aux forces locales pour leur travail.</French>
+		<Italian>Elogiate i locali vigili del fuoco per il loro impegno.</Italian>
 		<Polish>Wyślijcie lokalnych strażaków do tej pracy.</Polish>
 		<Russian>Передайте нашу благодарность местным пожарным за их работу.</Russian>
 	</TEXT>
@@ -4143,102 +4131,119 @@
 		<Tag>TXT_KEY_EVENT_CITYFIRE_10</Tag>
 		<English>Declare a national emergency and have all forces that can be spared help out.</English>
 		<French>Déclenchez une urgence nationale et envoyez toutes les forces disponibles pour leur prêter main forte.</French>
+		<Italian>Dichiarate un'emergenza nazionale e impegnate tutte le forze disponibili a dare una mano.</Italian>
 		<Polish>Wprowadzamy stan wyjątkowy i wyślijcie wszystkie siły na jakie możemy sobie pozwolić.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_11</Tag>
 		<English>Send as many reinforcements as can be spared from the vicinity. Make saving lives the top priority, buildings can be rebuild.</English>
 		<French>Envoyez autant de renfort que nous pourrons trouver dans la région. Sauvez les vies en priorité, les bâtiments peuvent être reconstruits.</French>
+		<Italian>Inviate tutti i rinforzi disponibili a dare una mano. La priorità assoluta è salvare le vite umane, gli edifici possono essere ricostruiti.</Italian>
 		<Polish>Wyślijcie wszystkie możliwe siły i służby. Priorytetem jest ratowanie życia ludzkiego, budynki można odbudować.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_12</Tag>
 		<English>We cannot send any more help, the local forces will need to do the best they can.</English>
 		<French>Nous ne pouvons pas envoyer plus de renforts, les forces locales vont devoir faire au mieux.</French>
+		<Italian>Non possiamo inviare altri aiuti, le forze sul posto dovranno fare del loro meglio.</Italian>
 		<Polish>Nie możemy wysłać więcej pomocy. Lokalne służby są zdane same na siebie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_2</Tag>
 		<English>If they need some additional forces, they shall have them.</English>
 		<French>S'ils ont besoin de renfort, qu'on leur en mette à disposition.</French>
+		<Italian>Se hanno bisogno di forze aggiuntive, le avranno.</Italian>
 		<Polish>Jeśli potrzebują trochę nowych sił, to niech je dostaną.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_3</Tag>
 		<English>There is no reason to doubt their ability to cope on their own.</English>
 		<French>Il n'y a pas de raison de douter de la capacité à gérer la situation eux-même.</French>
+		<Italian>Non c'è motivo di dubitare della loro capacità di farcela da soli.</Italian>
 		<Polish>Nie ma powodów by wątpić w ich zdolność poradzenia sobie bez naszej pomocy</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_4</Tag>
 		<English>Offer all the help they need.</English>
 		<French>Offrez-leur toute l'aide dont ils ont besoin.</French>
+		<Italian>Offrite tutto l'aiuto di cui hanno bisogno.</Italian>
 		<Polish>Zaoferujmy pomoc jakiej potrzebują.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_5</Tag>
 		<English>We will help out with some of the requested aid, they should be fine.</English>
 		<French>Nous allons leur fournir quelques renforts, cela devrait aller.</French>
+		<Italian>Forniremo alcuni degli aiuti richiesti, per il resto ce la faranno.</Italian>
 		<Polish>Wyślemy część pomocy jakiej potrzebują, powinno wystarczyć.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_6</Tag>
 		<English>Our local forces will need to control the fires themselves, we have to additional resources to spare.</English>
 		<French>Nos forces locales vont devoir se débrouiller, nous devons garder les autres ressources disponibles.</French>
+		<Italian>Le nostre forze locali dovranno controllare gli incendi da sole, non abbiamo risorse aggiuntive a disposizione.</Italian>
 		<Polish>Nasze lokalne służby muszą sobie z tym poradzić same. Nie posiadamy środków na szerszą akcję.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_7</Tag>
 		<English>Mobilize all firefighters in the area to help fight this fire.</English>
 		<French>Mobilisez tous les hommes de la région pour renforcer les équipes locales.</French>
+		<Italian>Mobilitate tutti i vigili del fuoco della zona per aiutare a combattere questo incendio.</Italian>
 		<Polish>Wezwijcie wszystkich strażaków z okolicy by pomóc w gaszeniu ognia.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_8</Tag>
 		<English>Send some additional forces and equipment and hope for the best.</English>
 		<French>Envoyez-leur quelques renforts et équipement, et espérons pour le mieux.</French>
+		<Italian>Inviate forze ed equipaggiamenti supplementari e speriamo per il meglio.</Italian>
 		<Polish>Wyślijmy dodatkowy sprzęt i służby i miejmy nadzieję, że to wystarczy.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_9</Tag>
 		<English>We cannot afford to send additional help. The local forces will need to tackle this on their own.</English>
 		<French>Nous ne pouvons pas nous permettre d'envoyer des renforts. Les forces locales devront gérer.</French>
+		<Italian>Non possiamo inviare aiuti aggiuntivi. Le forze locali dovranno farcela da sole.</Italian>
 		<Polish>Nasze lokalne służby muszą sobie z tym poradzić same. Nie posiadamy środków na szerszą akcję.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_CATASTROPHIC_1</Tag>
 		<English>Catastrophic fire has occurred!</English>
 		<French>Un incendie catastrophique s'est produit !</French>
+		<Italian>Si è verificato un incendio catastrofico!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_HIT_CITY</Tag>
 		<English>The fire has killed many people in %s2, the population is reduced by %d1.</English>
 		<French>Le feu a tué de nombreux habitants de %s2, la population est réduite de %d1.</French>
+		<Italian>L'incendio ha ucciso molte persone a %s2, la popolazione si è ridotta di %d1.</Italian>
 		<Polish>Pożar zabił wielu ludzi w %s2, populacja zmniejsza się o %d1.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_MAJOR_1</Tag>
 		<English>We had large fire!</English>
 		<French>Nous avons eu un grand incendie !</French>
+		<Italian>Si è verificato un grosso incendio!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_MINOR_1</Tag>
 		<English>We had minor fire.</English>
 		<French>Nous avons eu un incendie mineur.</French>
+		<Italian>Si è verificato un piccolo incendio!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITYFIRE_NOHIT_CITY</Tag>
 		<English>Fortunately the fire in %d1 has not claimed any lives.</English>
 		<French>Heureusement, le feu à %d1 n'a pas fait de victimes humaines.</French>
+		<Italian>Fortunatamente, l'incendio a %d1 non ha fatto vittime.</Italian>
 		<Polish>Na szczęście pożar w %d1 nie pochłonął żadnych ofiar.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITY_ANARCHY</Tag>
 		<English>[ICON_BULLET]%d1 turns of anarchy in %s2_city</English>
 		<French>[ICON_BULLET]%d1 tours d'anarchie à %s2_city</French>
-		<Spanish>[ICON_BULLET]%d1 turn[NUM1:o:os] de disturbios en %s2_city</Spanish>
+		<Italian>[ICON_BULLET]%d1 turni di anarchia a %s2_city</Italian>
 		<Polish>[ICON_BULLET]%d1 tur anarchii w %s2_city</Polish>
 		<Russian>[ICON_BULLET]%d1 ходов к анархии в городе %s2_city</Russian>
+		<Spanish>[ICON_BULLET]%d1 turn[NUM1:o:os] de disturbios en %s2_city</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED</Tag>
@@ -4246,14 +4251,15 @@
 		<French>[COLOR_RED][NUM1:Votre:Votre:Vos:Vos] [COLOR_REVERT][COLOR_YIELD_FOOD]%s1_improvement[COLOR_REVERT] [COLOR_RED][NUM1:a:a:ont:ont] été détrui[NUM1:t:te:ts:tes][COLOR_REVERT]</French>
 		<German>Eure Modernisierung %s1_improvement wurde zerstört</German>
 		<Italian>[NUM1:Il tuo:La tua] %s1_improvement è [NUM1:stato distrutto:stata distrutta]</Italian>
-		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_improvement [NUM1:ha quedado destruido:ha quedado destruida:han quedado destruidos:han quedado destruidas]</Spanish>
 		<Russian>Ваше улучшение - %s1_improvement было разрушено</Russian>
+		<Spanish>[NUM1:Vuestro:Vuestra:Vuestros:Vuestras] %s1_improvement [NUM1:ha quedado destruido:ha quedado destruida:han quedado destruidos:han quedado destruidas]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED_NOOWNER</Tag>
 		<English>A %s1_improvement has been destroyed.</English>
-		<French>[NUM1:Un:Une:Des:Des] %s1_improvement [NUM1:a:a:ont:ont] été [NUM1:détruit:détruite:détruits:détruites]</French>
-		<Polish>%s1_improvement została zniszczona</Polish>
+		<French>[NUM1:Un:Une:Des:Des] %s1_improvement [NUM1:a:a:ont:ont] été [NUM1:détruit:détruite:détruits:détruites].</French>
+		<Italian>[NUM1:Un:Una] %s1_improvement è [NUM1:stato distrutto:stata distrutta].</Italian>
+		<Polish>%s1_improvement została zniszczona.</Polish>
 		<Russian>Здание %s1_improvement будет уничтожено.</Russian>
 	</TEXT>
 	<TEXT>
@@ -4261,7 +4267,7 @@
 		<English>Send commendations to the leaders of the exploring party.</English>
 		<French>Envoyer nos félicitations aux chefs des équipes d'exploration.</French>
 		<German>Sendet Belobigungsschreiben an die Leiter der Expedition.</German>
-		<Italian>Invia le congratulazioni ai capi del gruppo esplorativo.</Italian>
+		<Italian>Inviate le nostre congratulazioni ai capi dell'esplorazione.</Italian>
 		<Spanish>Que se envíen nuestros elogios y parabienes a los líderes de la expedición.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4269,7 +4275,7 @@
 		<English>Fund additional exploratory efforts.</English>
 		<French>Financer des campagnes d'exploration supplémentaires.</French>
 		<German>Finanziert weitere Expeditionen.</German>
-		<Italian>Finanzia ulteriori sforzi esplorativi.</Italian>
+		<Italian>Finanziate ulteriori sforzi esplorativi.</Italian>
 		<Spanish>Que se financien más proyectos de exploración.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4277,24 +4283,25 @@
 		<English>Send commendations to the leaders of the exploring party.</English>
 		<French>Envoyer nos félicitations aux chefs des équipes d'exploration.</French>
 		<German>Sendet Belobigungsschreiben an die Leiter der Expedition.</German>
-		<Italian>Invia le congratulazioni ai capi del gruppo esplorativo.</Italian>
-		<Spanish>Enviad nuestros elogios a los líderes de la expedición.</Spanish>
+		<Italian>Inviate le congratulazioni ai capi del gruppo esplorativo.</Italian>
 		<Polish>Wyślij gratulacje do przywódcy ekspedycji.</Polish>
 		<Russian>Передайте наши поздравления руководителям экспедиции.</Russian>
+		<Spanish>Enviad nuestros elogios a los líderes de la expedición.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CITY_UNREST</Tag>
 		<English>[ICON_BULLET]%d1 [ICON_UNHAPPY] in %s2</English>
 		<French>[ICON_BULLET]%d1 [ICON_UNHAPPY] à %s2</French>
-		<Spanish>[ICON_BULLET]%d1[ICON_UNHAPPY] en %s2</Spanish>
+		<Italian>[ICON_BULLET]%d1 [ICON_UNHAPPY] a %s2</Italian>
 		<Polish>[ICON_BULLET]%d1 [ICON_UNHAPPY] w %s2</Polish>
 		<Russian>[ICON_BULLET]%d1 [ICON_UNHAPPY] в %s2</Russian>
+		<Spanish>[ICON_BULLET]%d1[ICON_UNHAPPY] en %s2</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CIVIL_WAR</Tag>
 		<English>Bring me his head on a pole, crush this city, I am the ruler here.</English>
 		<French>Apportez-moi sa tête sur un pique, rasez la ville, je suis le chef ici.</French>
-		<Italian>Portatemi la sua testa su un palo e distruggete la città: sono IO che comando.</Italian>
+		<Italian>Portatemi la sua testa su un palo e distruggete la città. Qui comando IO.</Italian>
 		<Russian>Ïðèíåñèòå ìíå åãî ãîëîâó íà ïèêå, ñîêðóøèòå ýòîò ãîðîä, èáî ÿ ïðàâëþ çäåñü.</Russian>
 	</TEXT>
 	<TEXT>
@@ -4302,10 +4309,10 @@
 		<English>Send congratulations to the developers. Our people should enjoy this game.</English>
 		<French>Envoyez nos félicitations aux développeurs. Notre bon peuple devrait apprecier ce jeu.</French>
 		<German>Übermittelt meine Glückwünsche. Unser Volk soll sich an dem Spiel erfreuen.</German>
-		<Italian>Manda le nostre congratulazioni agli sviluppatori. La nostra gente si divertirà con questo gioco.</Italian>
-		<Spanish>Enviar felicitaciones a los desarrolladores. Nuestro pueblo disfrutará de este juego.</Spanish>
+		<Italian>Mandate le nostre congratulazioni agli sviluppatori. La nostra gente si divertirà con questo gioco.</Italian>
 		<Polish>Wyślijcie gratulację dla twórców. Nasi ludzie powinni się ucieszyć z nowej gry.</Polish>
 		<Russian>Отправить поздравления разработчикам. Наши люди должны наслаждаться этой игрой.</Russian>
+		<Spanish>Enviar felicitaciones a los desarrolladores. Nuestro pueblo disfrutará de este juego.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CIV_GAME_2</Tag>
@@ -4313,19 +4320,19 @@
 		<French>Il semblerait que ce jeu aie un fort potentiel éducatif. Nous devrions l'utiliser dans notre système scolaire.</French>
 		<German>Dieses Spiel scheint großes Bildungspotenzial zu haben. Lasst es uns im Bildungswesen einsetzen.</German>
 		<Italian>Questo gioco sembra avere un grande potenziale educativo. Propongo che venga usato nel nostro sistema scolastico.</Italian>
-		<Spanish>Este juego parece tener un gran potencial educacional. Propongo que sea usado en nuestro sistema educativo.</Spanish>
 		<Polish>To może być świetne narzędzie edukacyjne. Zasugerujcie wykorzystanie tej gry w szkołach.</Polish>
 		<Russian>У этой игры большой познавательный потенциал. Предложите использовать ее в нашей образовательной системе.</Russian>
+		<Spanish>Este juego parece tener un gran potencial educacional. Propongo que sea usado en nuestro sistema educativo.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CIV_GAME_3</Tag>
 		<English>Computer games? They have no place in our society! Sell the franchise to foreign buyers!</English>
 		<French>Des jeux vidéos? Pas de ça dans notre société! Vendez la franchise à des acheteurs étrangers!</French>
 		<German>Computerspiele? So etwas verdirbt die Gesellschaft nur. Verkauft die Rechte ins Ausland!</German>
-		<Italian>Giochi per computer? Non c'è posto per loro nella nostra società! Vendi la licenza ad acquirenti stranieri!</Italian>
-		<Spanish>¿Juegos de ordenador? ¡No tienen cabida en nuestra sociedad! ¡Vende la franquicia a compradores extranjeros!</Spanish>
+		<Italian>Giochi per computer? Non c'è posto per loro nella nostra società! Vendi l'idea a degli acquirenti stranieri!</Italian>
 		<Polish>Gry komputerowe? Nie ma dla nich miejsca w naszym społeczeństwie. Sprzedajcie to zagranicznym inwestorom.</Polish>
 		<Russian>Компьютерные игры? Им нет места в нашем обществе! Продайте франшизу иностранным покупателям!</Russian>
+		<Spanish>¿Juegos de ordenador? ¡No tienen cabida en nuestra sociedad! ¡Vende la franquicia a compradores extranjeros!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CLASSIC_LITERATURE_1</Tag>
@@ -4340,7 +4347,7 @@
 		<English>Our library with the largest repository of classic literature receives a research bonus.</English>
 		<French>Notre bibliothèque avec la littérature classique la plus importante reçoit un bonus de recherche.</French>
 		<German>Die Bibliothek mit der größten Auswahl klassischer Literatur bekommt einen Forschungsbonus.</German>
-		<Italian>La nostra biblioteca col maggior numero di opere classiche riceve un bonus di ricerca.</Italian>
+		<Italian>La biblioteca col maggior numero di opere classiche riceverà un bonus di ricerca.</Italian>
 		<Spanish>Nuestra biblioteca, dotada del mayor fondo de literatura clásica, recibe una bonificación de investigación.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4348,7 +4355,7 @@
 		<English>Discover and decipher lost knowledge from within some of the literature.</English>
 		<French>Découvrir et décrypter les connaissances perdues à l'aide de la littérature.</French>
 		<German>Entdeckt und entziffert vergessenes Wissen aus der Literatur.</German>
-		<Italian>Scopri e decifra conoscenza perduta, dalla letteratura a tua disposizione.</Italian>
+		<Italian>Scopri e decifra la conoscenza perduta all'interno di alcuni testi letterari.</Italian>
 		<Spanish>Que se descubra y se descifre el conocimiento perdido que contiene parte de la literatura.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4356,7 +4363,7 @@
 		<English>[COLOR_BUILDING_TEXT]The Great Library[COLOR_REVERT] receives additional scholars to help boost research.</English>
 		<French>[COLOR_BUILDING_TEXT]La Grande Bibliothèque[COLOR_REVERT] reçoit des érudits supplémentaires pour faire progresser la recherche.</French>
 		<German>[COLOR_BUILDING_TEXT]Die Große Bibliothek[COLOR_REVERT] erhält zusätzliche Gelehrte, die die Forschung fördern.</German>
-		<Italian>La [COLOR_BUILDING_TEXT]Grande Biblioteca[COLOR_REVERT] ottiene studiosi addizionali per incrementare la ricerca.</Italian>
+		<Italian>La [COLOR_BUILDING_TEXT]Grande Biblioteca[COLOR_REVERT] otterrà studiosi aggiuntivi per incrementare la ricerca.</Italian>
 		<Spanish>[COLOR_BUILDING_TEXT]La Gran Biblioteca[COLOR_REVERT] recibe eruditos adicionales para dar mayor impulso a la investigación.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4364,7 +4371,7 @@
 		<English>[ICON_BULLET]Receive a random Technology from among Ancient Era techs not yet discovered.</English>
 		<French>[ICON_BULLET]Recevez une technologie aléatoire parmi les technologies perdues de l'Ere Ancienne.</French>
 		<German>[ICON_BULLET]Ihr erhaltet eine zufällige Technologie aus der Antike, die noch nicht entdeckt wurde.</German>
-		<Italian>[ICON_BULLET]Ricevi una tecnologia a caso tra le tecnologie dell'era antica che non hai ancora scoperto.</Italian>
+		<Italian>[ICON_BULLET]Ricevi una tecnologia a caso tra le tecnologie dell'Era antica che non hai ancora scoperto.</Italian>
 		<Spanish>[ICON_BULLET]Recibir una tecnología al azar de las tecnologías de la Antigüedad que todavía no se han descubierto.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4372,13 +4379,14 @@
 		<English>[PARAGRAPH:1]To complete this quest, you must build %d1 [COLOR_BUILDING_TEXT]Libraries[COLOR_REVERT] in your various cities.[PARAGRAPH:1]An additional reward option will be available if you control the [COLOR_BUILDING_TEXT]Great Library[COLOR_REVERT] if and when this quest is successfully completed.[PARAGRAPH:1]You will fail this quest if a rival civilization completes it first, or if you reach the Renaissance Era without having met the conditions.</English>
 		<French>[PARAGRAPH:1]Pour achever cette quête, vous devez construire %d1 [COLOR_BUILDING_TEXT]Bibliothèques[COLOR_REVERT] dans différentes villes.[PARAGRAPH:1]Une option de récompense supplémentaire sera disponible si vous contrôlez la [COLOR_BUILDING_TEXT]Grande Bibliothèque[COLOR_REVERT] si et lorsque cette quête est achevée avec succès.[PARAGRAPH:1]Vous échouerez si une civilisation rivale achève cette quête avant vous ou si vous atteignez la Renaissance sans avoir rempli les conditions de victoire.</French>
 		<German>[PARAGRAPH:1]Um diese Quest abzuschließen, müssen Sie %d1 [COLOR_BUILDING_TEXT]Bibliotheken[COLOR_REVERT] in Ihren Städten bauen. [PARAGRAPH:1]Sie erhalten eine zusätzliche Belohnung, wenn Sie bei Erfüllung der Quest die [COLOR_BUILDING_TEXT]Große Bibliothek[COLOR_REVERT] kontrollieren.[PARAGRAPH:1]Sie scheitern, wenn eine andere Zivilisation die Quest vor Ihnen abschließt oder wenn Sie die Renaissance erreichen, ohne die Bedingungen erfüllt zu haben.</German>
-		<Italian>[PARAGRAPH:1]Per completare l'impresa devi costruire %d1 [COLOR_BUILDING_TEXT]Biblioteche[COLOR_REVERT] nelle tue città.[PARAGRAPH:1]Se controlli la [COLOR_BUILDING_TEXT]Grande Biblioteca[COLOR_REVERT] ti verrà data un'ulteriore ricompensa, se e quando completerai l'impresa.[PARAGRAPH:1]Fallirai nell'impresa se un'altra civiltà la completa per prima, o se raggiungerai il Rinascimento senza aver soddisfatto le condizioni.</Italian>
+		<Italian>[PARAGRAPH:1]Per completare l'impresa devi costruire %d1 [COLOR_BUILDING_TEXT]Biblioteche[COLOR_REVERT] nelle tue città.[PARAGRAPH:1]Se controlli la [COLOR_BUILDING_TEXT]Grande Biblioteca[COLOR_REVERT] ti verrà data un'ulteriore ricompensa, se e quando completerai l'impresa.[PARAGRAPH:1]Fallirai nell'impresa se un'altra civiltà la completa per prima o se raggiungerai il Rinascimento senza aver soddisfatto le condizioni.</Italian>
 		<Spanish>[PARAGRAPH:1]Para completar esta misión, debéis construir %d1 [COLOR_BUILDING_TEXT]Bibliotecas[COLOR_REVERT] en vuestras diversas ciudades.[PARAGRAPH:1]Será posible elegir una opción de recompensa adicional si se ostenta el control de la [COLOR_BUILDING_TEXT]Gran Biblioteca[COLOR_REVERT] siempre y cuando esta misión se haya cumplido satisfactoriamente.[PARAGRAPH:1]Esta misión fracasará si una civilización rival la cumple antes o si se alcanza la era del Renacimiento sin haber cumplido las condiciones.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CLAY_1</Tag>
 		<English>This is a high quality clay. We should use it in our potter's shop.</English>
 		<French>Cet argile est de très bonne qualité. Nous l'utiliserons pour nos poteries.</French>
+		<Italian>Questa argilla è di ottima qualità. Dovremmo utilizzarla nelle nostre botteghe di ceramiche.</Italian>
 		<Polish>To jest glina wysokiej jakosci. Przyda sie naszemu garncarzowi.</Polish>
 		<Russian>Ýòà ãëèíà îêàçàëàñü âûñøåé ïðîáû. Íàì ñòîèò åå ïîñòàâëÿòü â íàøè ëàâêè êåðàìè÷åñêèõ èçäåëèé.</Russian>
 	</TEXT>
@@ -4387,7 +4395,7 @@
 		<English>Clunker coal? What a mess. Less valuable per ton, but it still burns, right? Just deal with it.</English>
 		<French>Du charbon impur ? Ah, zut. Bon d'accord, il a moins de valeur, mais il brûle, non ? Vendez-le !</French>
 		<German>Minderwertige Kohle? Wie ärgerlich! Sie ist zwar weniger wert, aber sie brennt immerhin, oder nicht? Da kann man nichts machen.</German>
-		<Italian>Carbone di scarto? Che disastro. Ha un valore unitario più basso, ma brucia comunque, no? Pensaci tu.</Italian>
+		<Italian>Carbone di scarto? Che disastro. Rende di meno sul mercato, ma brucia comunque, no? Pensaci tu.</Italian>
 		<Spanish>¿Carbón de turba? Qué desastre. Bueno, cada tonelada vale menos, pero sigue quemando, ¿no? Tendremos que conformarnos.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4396,14 +4404,15 @@
 		<French>Réparez le navire et remettez-le à flot dès que possible.</French>
 		<German>Repariert das Schiff und bringt es so schnell wie möglich wieder auf Kurs.</German>
 		<Italian>Ripara la nave e rimettila in grado di navigare il prima possibile.</Italian>
-		<Spanish>Reparad el navío y que vuelva a estar operativo lo más pronto posible.</Spanish>
 		<Polish>Napraw statek i wróć na kurs tak szybko jak to możliwe.</Polish>
 		<Russian>Отремонтируйте корабль и верните его на курс как можно скорее.</Russian>
+		<Spanish>Reparad el navío y que vuelva a estar operativo lo más pronto posible.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COCK_FIGHTS_1</Tag>
 		<English>The animal activists are right, we need to stop this!</English>
 		<French>Les Activistes ont raison, nous devons arrêter cela!</French>
+		<Italian>Gli animalisti hanno ragion, dobbiamo fermare questo scempio!</Italian>
 		<Polish>Obrońcy praw zwierząt mają rację. Musimy zakończyć eksperymenty!</Polish>
 		<Russian>Зоозащитники правы, нам следует это прекратить!</Russian>
 	</TEXT>
@@ -4411,13 +4420,15 @@
 		<Tag>TXT_KEY_EVENT_COCK_FIGHTS_2</Tag>
 		<English>Its a cultural tradition. Let them continue.</English>
 		<French>C'est une tradition culturelle. Ces activités sont tolérées.</French>
+		<Italian>È una tradizione della nostra cultura. Lasciate che continui.</Italian>
 		<Polish>To lokalna tradycja. Niech kontynuują.</Polish>
 		<Russian>Нам следует бережно хранить наши культурные традиции.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COCK_FIGHTS_3</Tag>
-		<English>Lets promote cock fighting and make some money off it!</English>
+		<English>Let's promote cock fighting and make some money off it!</English>
 		<French>Au contraire, faisons-en la promotion, et nous en retirerons de l'or!</French>
+		<Italian>Promuoviamo i combattimenti tra galli e facciamoci su qualche soldo!</Italian>
 		<Polish>Promujmy walki kogutów i zarabiajmy na tym!</Polish>
 		<Russian>Давайте популяризируем петушиные бои и заработаем на них!</Russian>
 	</TEXT>
@@ -4426,32 +4437,35 @@
 		<English>What if something even bigger is out there, on a collision course with our world? If so, we must find it. We must get into space!</English>
 		<French>Et si quelque chose de plus gros risquait de s'écraser sur notre monde ? Si c'est le cas, nous devons le découvrir. Nous devons aller dans l'espace !</French>
 		<German>Was, wenn es da draußen noch etwas Größeres gibt, das sich auf Kollisionskurs mit unserer Welt befindet? Wir müssen in den Weltraum!</German>
-		<Italian>E se qualcosa di più grosso fosse là fuori, in rotta di collisione con il nostro pianeta? Se è così dobbiamo trovarlo. Dobbiamo andare nello spazio!</Italian>
+		<Italian>E se qualcosa di più grosso là fuori fosse in rotta di collisione con il nostro pianeta? Se fosse così dobbiamo trovarlo. Dobbiamo andare nello spazio!</Italian>
 		<Spanish>¿Y qué pasaría si algo más grande estuviera en trayectoria de colisión contra nuestro mundo? Tenemos que averiguarlo. ¡Debemos ir al espacio!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COMPULSORY_DEM_1</Tag>
-		<English>"Compulsory voting makes about as much as sense as having the death penalty for attempted suicide," says civil rights activists. "You can't force people to be free! You can only give them the choice. Besides, if all those derelicts who can't be bothered to get off their butts once every few years voted, who would they elect? I shudder to think."</English>
-		<French>"Le vote obligatoire est tout aussi sensé que de recourir à la peine de mort pour ceux qui réalisent une tentative de suicide," prétendent les militants des droits civils. "Vous ne pouvez pas forcer les gens à être libre! Vous pouvez seulement leur donner le choix. D'ailleurs, si tous ces oubliés qui ne peuvent être dérangés de leur pied d'estale votaient, qui éliraient-ils ? Je frémis rien qu'en y pensant."</French>
-		<Spanish>"El sufragio obligatorio tiene el mismo sentido que castigar con la pena de muerte por un intento de suicidio", aseguran activistas de derechos humanos. "¡No puedes forzar a la gente a ser libre! Solo puedes darles la posibilidad de elegir. Por otra parte, si todos aquellos vagos que no se molestan en mover el trasero una vez cada pocos años votaran, ¿quién saldría elegido? Me estremezco solo de pensarlo."</Spanish>
-		<Polish>Obowiązkowe głosowanie robi wokoło tak dużo jak zamysł kary śmierci dla niedoszłego samobójcy, mówi obrońca praw obywatelskich. "Nie możesz zmusić ludzi do bycia wolnym! Możesz tylko dać im wybór. Poza tym, co z tymi których nie obchodzi to wszystko na kogo by zagłosowali? Drżę myśleć."</Polish>
+		<English>«Compulsory voting makes about as much as sense as having the death penalty for attempted suicide,» says civil rights activists. «You can't force people to be free! You can only give them the choice. Besides, if all those derelicts who can't be bothered to get off their butts once every few years voted, who would they elect? I shudder to think.»</English>
+		<French>« Le vote obligatoire est tout aussi sensé que de recourir à la peine de mort pour ceux qui réalisent une tentative de suicide, » prétendent les militants des droits civils. « Vous ne pouvez pas forcer les gens à être libre! Vous pouvez seulement leur donner le choix. D'ailleurs, si tous ces oubliés qui ne peuvent être dérangés de leur pied d'estale votaient, qui éliraient-ils ? Je frémis rien qu'en y pensant. »</French>
+		<Italian>«Il voto obbligatorio ha senso quanto la pena di morte per i tentativi di suicidio», dicono gli attivisti per i diritti civili. «Non si possono obbligare le persone a essere libere! Si può solo dare loro la possibilità di scegliere. Inoltre, se tutti quei derelitti che non si prendono la briga di alzare il sedere una volta ogni tot anni votassero, chi eleggerebbero? Mi vengono i brividi a pensarci».</Italian>
+		<Polish>«Obowiązkowe głosowanie robi wokoło tak dużo jak zamysł kary śmierci dla niedoszłego samobójcy», mówi obrońca praw obywatelskich. «Nie możesz zmusić ludzi do bycia wolnym! Możesz tylko dać im wybór. Poza tym, co z tymi których nie obchodzi to wszystko na kogo by zagłosowali? Drżę myśleć.»</Polish>
 		<Russian>«В обязательном голосовании столько же смысла, сколько и в смертной казни за попытку самоубийства», - утверждают правозащитники. - «Вы не можете принудить людей быть свободными! Вы можете только дать им выбор. Допустим, вы даже заставили раз в несколько лет правонарушителей оторвать свои задницы с уютных кресел. Кого бы они избрали? Об этом страшно даже подумать».</Russian>
+		<Spanish>«El sufragio obligatorio tiene el mismo sentido que castigar con la pena de muerte por un intento de suicidio», aseguran activistas de derechos humanos. «¡No puedes forzar a la gente a ser libre! Solo puedes darles la posibilidad de elegir. Por otra parte, si todos aquellos vagos que no se molestan en mover el trasero una vez cada pocos años votaran, ¿quién saldría elegido? Me estremezco solo de pensarlo».</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COMPULSORY_DEM_2</Tag>
-		<English>"It's not contradictory at all," argues a notorious political commentator. "The fact is, if not everyone votes, the outcome isn't truly representative. Some groups - like elderly gun nuts - vote more often than others. That's why we always end up with such terrible politicians."</English>
-		<French>"Ce n'est pas du tout contradictoire," affirme un célèbre commentateur politique. "Le fait est que, si tout le monde ne vote pas, le résultat n'est pas vraiment représentatif. Certains groupes - commme ces vieux fous de la gachette - votent plus souvent que d'autres. C'est pour cela que l'on se retrouve avec de si piètres politiciens."</French>
-		<Spanish>"No es algo contradictorio en absoluto," razona un célebre analista político. "El tema es el siguiente: si no votan todos, el resultado no es representativo en realidad. Algunos grupos (como esos viejos chiflados del gatillo) van a votar con más frecuencia que otros. Por este motivo siempre acabamos teniendo estos terribles políticos."</Spanish>
-		<Polish>To nie jest sprzeczne w ogóle, twierdzi znany komentator polityczny. "Faktem jest, jeśli nie wszyscy głosują, wynik nie jest prawdziwie reprezentatywny. Niektóre grupy - jak w przypadku starszych - głosujących częściej niż inne. Dlatego zawsze skończymy z takimi strasznymi politykami."</Polish>
+		<English>«It's not contradictory at all,» argues a notorious political commentator. «The fact is, if not everyone votes, the outcome isn't truly representative. Some groups - like elderly gun nuts - vote more often than others. That's why we always end up with such terrible politicians.»</English>
+		<French>« Ce n'est pas du tout contradictoire », affirme un célèbre commentateur politique. « Le fait est que, si tout le monde ne vote pas, le résultat n'est pas vraiment représentatif. Certains groupes - commme ces vieux fous de la gachette - votent plus souvent que d'autres. C'est pour cela que l'on se retrouve avec de si piètres politiciens. »</French>
+		<Italian>«Non è affatto contraddittorio», sostiene un noto commentatore politico. «Il punto è che, se non votano tutti, il risultato non è veramente rappresentativo. Alcuni gruppi - come gli anziani fanatici delle armi - votano più spesso di altri. Ecco perché ci ritroviamo sempre con politici terribili».</Italian>
+		<Polish>«To nie jest sprzeczne w ogóle», twierdzi znany komentator polityczny. «Faktem jest, jeśli nie wszyscy głosują, wynik nie jest prawdziwie reprezentatywny. Niektóre grupy - jak w przypadku starszych - głosujących częściej niż inne. Dlatego zawsze skończymy z takimi strasznymi politykami».</Polish>
 		<Russian>«В этом нет ничего зазорного», - утверждает известный политический комментатор. «Дело в том, что результат не является действительно репрезентативным, если голосует только часть избирателей. Некоторые группы - например, пенсионеры - голосуют чаще, чем другие. Вот почему мы всегда сталкиваемся с такими ужасными политиками».</Russian>
+		<Spanish>«No es algo contradictorio en absoluto», razona un célebre analista político. «El tema es el siguiente: si no votan todos, el resultado no es representativo en realidad. Algunos grupos (como esos viejos chiflados del gatillo) van a votar con más frecuencia que otros. Por este motivo siempre acabamos teniendo estos terribles políticos».</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COMPULSORY_DEM_3</Tag>
-		<English>"This raises an interesting issue," says your chief political advisor. "Why do we need elections, anyway? Seems to me it would be much simpler if you just decided what was right, and did it. Wouldn't that save everyone a lot of time?"</English>
-		<French>"Cela soulève une question intéressante," dit votre conseiller politique. "Pourquoi avons-nous besoin d'élections, de toute façon? Il me semble qu'il serait beaucoup plus simple si vous avez juste à décider ce qui doit être, et le réalisez. Ce serait un gain de temps pour tout le monde, non?"</French>
-		<Spanish>"Esto saca a la luz una interesante cuestión," dice tu consejero de Interior. "¿Para qué necesitamos elecciones, de cualquier forma? Me parece que sería mucho más simple que usted decidiera qué es lo correcto, y lo llevara a cabo. ¿No nos ahorraría un montón de tiempo a todos?"</Spanish>
-		<Polish>To bardzo ciekawa kwestia, mówi Twój główny doradca ds. Polityki. "Po co nam wybory? Wydaje się o wiele prostsze jeśli podejmujesz decyzje co jest dobre a co nie. Nie zaoszczędzi to wszystkim sporo czasu?"</Polish>
+		<English>«This raises an interesting issue,» says your chief political advisor. «Why do we need elections, anyway? Seems to me it would be much simpler if you just decided what was right, and did it. Wouldn't that save everyone a lot of time?»</English>
+		<French>«Cela soulève une question intéressante, » dit votre conseiller politique. « Pourquoi avons-nous besoin d'élections, de toute façon? Il me semble qu'il serait beaucoup plus simple si vous avez juste à décider ce qui doit être, et le réalisez. Ce serait un gain de temps pour tout le monde, non? »</French>
+		<Italian>«Questo solleva un quesito interessante», dice il tuo consigliere politico. «Alla fin fine, perché tenere delle elezioni? Mi sembrerebbe molto più semplice se si decidesse semplicemente cosa è giusto fare e lo si facesse. Non risparmieremmo tutti un sacco di tempo?»</Italian>
+		<Polish>«To bardzo ciekawa kwestia», mówi Twój główny doradca ds. Polityki. «Po co nam wybory? Wydaje się o wiele prostsze jeśli podejmujesz decyzje co jest dobre a co nie. Nie zaoszczędzi to wszystkim sporo czasu?»</Polish>
 		<Russian>«Это поднимает интересную проблему», - говорит ваш главный политический советник. - «В любом случае, к чему нам выборы? Мне кажется, было бы намного проще, если бы вы просто решили за других, что правильно, и сделали это. Разве это не бы не сэкономило всем уйму времени?»</Russian>
+		<Spanish>«Esto saca a la luz una interesante cuestión,» dice tu consejero de Interior. «¿Para qué necesitamos elecciones, de cualquier forma? Me parece que sería mucho más simple que usted decidiera qué es lo correcto, y lo llevara a cabo. ¿No nos ahorraría un montón de tiempo a todos?»</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CONTINUE</Tag>
@@ -4466,10 +4480,10 @@
 		<English>A philosopher from %s2_city is stirring up controversy among our population. Our people are highly distrustful of his teachings.</English>
 		<French>Un philosophe de %s2_city a jeté le trouble parmi nos gens qui se méfient fortement de ses enseignements.</French>
 		<German>Ein Philosoph aus %s2_city löst Kontroversen innerhalb unserer Bevölkerung aus. Seine Lehren machen die Leute argwöhnisch.</German>
-		<Italian>Un filosofo di %s2_city sta scatenando una controversia all'interno della nostra popolazione. I nostri cittadini sono molto diffidenti nei confronti dei suoi insegnamenti.</Italian>
-		<Spanish>Un filósofo de %s2_city está levantando controversia entre nuestra población. Nuestra gente está realmente disgustada con sus enseñanzas.</Spanish>
+		<Italian>Un filosofo di %s2_city sta generando controversie fra la nostra popolazione. I nostri cittadini sono molto diffidenti nei confronti dei suoi insegnamenti.</Italian>
 		<Polish>Filozof z %s2_city głosi kontrowersyjne tezy wśród naszej społeczności. Ludzie są z tego niezadowoleni.</Polish>
 		<Russian>Идеи одного философа из города %s2_city породили споры среди нашего населения. Наши люди не очень доверяют его учениям.</Russian>
+		<Spanish>Un filósofo de %s2_city está levantando controversia entre nuestra población. Nuestra gente está realmente disgustada con sus enseñanzas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CONTROVERSIAL_PHILOSOPHER_1</Tag>
@@ -4477,36 +4491,36 @@
 		<French>Nous ne tolèrerons aucune hérésie. Bannissez-le!</French>
 		<German>Derartige Ketzerei wird nicht toleriert. Schickt ihn ins Exil!</German>
 		<Italian>Non tollereremo un'eresia simile. Mandatelo in esilio!</Italian>
-		<Spanish>No toleraremos tal herejía. ¡Mandadlo al exilio!</Spanish>
 		<Polish>Nie będziemy tolerować takiej herezji. Wygnać go!</Polish>
 		<Russian>Мы не потерпим такой ереси. Отправьте его в ссылку!</Russian>
+		<Spanish>No toleraremos tal herejía. ¡Mandadlo al exilio!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CONTROVERSIAL_PHILOSOPHER_2</Tag>
 		<English>He's a senile old fool. Let him teach if he wants to.</English>
 		<French>Ce n'est qu'un vieux radoteur. Laissez-le enseigner s'il le souhaite.</French>
 		<German>Der senile alte Narr soll lehren, was er will.</German>
-		<Italian>È un vecchio pazzo. Lasciatelo insegnare se vuole.</Italian>
-		<Spanish>Es un viejo tonto senil. Dejadle enseñar si así lo desea.</Spanish>
+		<Italian>È un vecchio pazzo. Lasciatelo insegnare, se vuole.</Italian>
 		<Polish>To stary głupiec. Niech sobie gada co chce.</Polish>
 		<Russian>Он выживший из ума старикашка. Пускай ораторствует, если хочет.</Russian>
+		<Spanish>Es un viejo tonto senil. Dejadle enseñar si así lo desea.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CONTROVERSIAL_PHILOSOPHER_3</Tag>
 		<English>That's one exceptional mind! Sponsor an Academy for him to teach!</English>
 		<French>C'est un esprit exceptionnel! Proposons-lui une chaire où il puisse enseigner!</French>
 		<German>Würdigt diesen außergewöhnlichen Geist durch die Errichtung einer eigenen Akademie!</German>
-		<Italian>Quest'uomo è dotato di una mente eccezionale. Mandatelo ad insegnare in un'accademia!</Italian>
-		<Spanish>¡Es una mente excepcional! ¡Haced que imparta sus enseñanzas en una Academia!</Spanish>
+		<Italian>Quest'uomo è dotato di una mente eccezionale. Mandatelo a insegnare in un'accademia!</Italian>
 		<Polish>Co za geniusz! Wyślijcie go do Akademii, niech naucza!</Polish>
 		<Russian>Он истинный гений! Спонсируйте Академию, чтобы он имел возможность обучать молодежь!</Russian>
+		<Spanish>¡Es una mente excepcional! ¡Haced que imparta sus enseñanzas en una Academia!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CONVERT_OTHER_CITIES</Tag>
 		<English>[ICON_BULLET]Convert up to %d1 of their cities to %s2_religion</English>
 		<French>[ICON_BULLET]Convertir jusqu'à %d1 de leurs villes à la religion %s2_religion</French>
 		<German>[ICON_BULLET]Konvertiert bis zu %d1 ihrer Städte zur Religion %s2_religion</German>
-		<Italian>[ICON_BULLET]Convertire fino a %d1 delle loro città [NUM2:al:alla] %s2_religion</Italian>
+		<Italian>[ICON_BULLET]Converti fino a %d1 delle loro città alla religione %s2:2_religion</Italian>
 		<Spanish>[ICON_BULLET]Convertir hasta %d1 de las ciudades de los otros al %s2_religion</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4514,29 +4528,30 @@
 		<English>[ICON_BULLET]Convert up to %d1 of your own cities to %s2_religion</English>
 		<French>[ICON_BULLET]Convertir jusqu'à %d1 de vos villes à la religion %s2_religion</French>
 		<German>[ICON_BULLET]Konvertiert bis zu %d1 Eurer Städte zur Religion %s2_religion</German>
-		<Italian>[ICON_BULLET]Convertire fino a %d1 delle tue città [NUM2:al:alla] %s2_religion</Italian>
+		<Italian>[ICON_BULLET]Converti fino a %d1 delle tue città alla religione %s2:2_religion</Italian>
 		<Spanish>[ICON_BULLET]Convertir hasta %d1 de las ciudades propias al %s2_religion</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COOKING</Tag>
 		<English>Interesting. Let's share this knowledge with the rest of our tribe.</English>
 		<French>Intéressant. Partageons cette découverte au reste de la tribu.</French>
-		<Italian>Interessante; dovremmo condividere questa conoscenza con il resto della nostra tribù.</Italian>
-		<Spanish>Interesante. Compartamos estos conocimientos con el resto de la tribu.</Spanish>
+		<Italian>Interessante. Dovremmo condividere questa conoscenza con il resto della nostra tribù.</Italian>
 		<Polish>Interesujące. Przekażcie wiedzę reszcie plemienia.</Polish>
+		<Spanish>Interesante. Compartamos estos conocimientos con el resto de la tribu.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COOKING_TRIGGER</Tag>
 		<English>One of our tribe members has accidentally found a way to get more digestible food by putting it over fire for a short period of time.</English>
 		<French>Un membre de notre tribu a trouvé par accident que la nourriture placée sur le feu durant une courte période était plus digeste.</French>
-		<Italian>Uno dei membri della nostra tribù ha accidentalmente trovato un modo per ottenere del cibo più digeribile, mettendolo sopra il fuoco per un breve periodo di tempo.</Italian>
-		<Spanish>Uno de los miembros de nuestra tribu han encontrado por casualidad un modo de hacer más digerible la comida, colocándola sobre el fuego durante un breve periodo de tiempo.</Spanish>
+		<Italian>Uno dei membri della nostra tribù ha accidentalmente trovato un modo per rendere il cibo più digeribile, mettendolo sopra il fuoco per un breve periodo di tempo.</Italian>
 		<Polish>Jeden z członków naszego plemienia przypadkiem odkrył jak polepszyć smak jedzenia poprzez podtrzymanie go nad ogniem.</Polish>
+		<Spanish>Uno de los miembros de nuestra tribu han encontrado por casualidad un modo de hacer más digerible la comida, colocándola sobre el fuego durante un breve periodo de tiempo.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COOKING_WN</Tag>
 		<English>It is rumored that the %s1_civ_adjective tribe have discovered a revolutionary method to prepare food.</English>
 		<French>D'après les rumeurs, la tribu %s1_civ_adjective a découvert une méthode révolutionnaire pour préparer la nourriture.</French>
+		<Italian>Si dice che la tribù %s1:2_civ_adjective abbia scoperto un metodo rivoluzionario di preparare il cibo.</Italian>
 		<Russian>It is rumored that the %s1_civ_adjective tribe have discovered a revolutionary method to prepare food.</Russian>
 	</TEXT>
 	<TEXT>
@@ -4545,16 +4560,16 @@
 		<French>Nos navires actuels peuvent être modifiés? Commencez immédiatement.</French>
 		<German>Unsere vorhanden Schiffe können auch damit aufgerüstet werden? Beginnt sofort damit.</German>
 		<Italian>Possiamo migliorare le nostre navi? Cominciate immediatamente.</Italian>
-		<Spanish>¿Pueden beneficiarse también nuestros barcos actuales de esta mejora? Empezad de inmediato.</Spanish>
 		<Polish>Nasze istniejące okręty również mogą być wzmocnione? Rozpocząć prace natychmiast!</Polish>
 		<Russian>Имеющиеся у нас корабли тоже могут быть переоснащены? Приступайте немедленно.</Russian>
+		<Spanish>¿Pueden beneficiarse también nuestros barcos actuales de esta mejora? Empezad de inmediato.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CORPORATE_EXPANSION_1</Tag>
 		<English>Corporate Expansion[PARAGRAPH:1]You are tasked by your corporate leaders to expand the reach of their corporation.</English>
 		<French>Expansion d'entreprise[PARAGRAPH:1]Les dirigeants de vos entreprises vous chargent d'étendre l'influence de leur société.</French>
 		<German>Unternehmensexpansion[PARAGRAPH:1]Die Unternehmensvorstände verlangen von Euch, die Reichweite ihrer Kapitalgesellschaft auszudehnen.</German>
-		<Italian>Espansione corporativa[PARAGRAPH:1]I capi della corporazione ti hanno incaricato di espandere la loro influenza.</Italian>
+		<Italian>Espansione corporativa[PARAGRAPH:1]Sei stato incaricato dai tuoi leader aziendali di espandere il campo d'azione della loro azienda.</Italian>
 		<Spanish>Expansión corporativa[PARAGRAPH:1]Los líderes corporativos encargan aumentar la expansión y alcance de su corporación.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4570,13 +4585,14 @@
 		<English>[PARAGRAPH:1]To complete this quest, you must spread [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT] to %d2 new cities.</English>
 		<French>[PARAGRAPH:1]Pour achever cette quête, vous devez étendre l'entreprise [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT] à %d2 nouvelles villes.</French>
 		<German>[PARAGRAPH:1]Um diese Quest abzuschließen, müssen Sie die Kapitalgesellschaft [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT] in %d2 neue Städte expandieren.</German>
-		<Italian>[PARAGRAPH:1]Per completare l'impresa devi diffondere la [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT] in %d2 nuove città.</Italian>
+		<Italian>[PARAGRAPH:1]Per completare l'impresa devi diffondere [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT] in %d2 nuove città.</Italian>
 		<Spanish>[PARAGRAPH:1]Para completar esta misión, debéis extender [COLOR_HIGHLIGHT_TEXT]%s1_corporation[COLOR_REVERT] a %d2 nuevas ciudades.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CORRUPT_SENATE</Tag>
 		<English>Widespread corruption in senate</English>
 		<French>Corruption généralisée au Sénat</French>
+		<Italian>Corruzione diffusa nel Senato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CORRUPT_SENATE_1</Tag>
@@ -4584,61 +4600,62 @@
 		<French>Il va falloir faire face à la colère du public.</French>
 		<German>Wir werden mit der öffentlichen Verärgerung zurechtkommen müssen.</German>
 		<Italian>Dovremo affrontare la collera del pubblico.</Italian>
-		<Spanish>Tendremos que afrontar este escándalo público.</Spanish>
 		<Polish>Musimy sobie jakoś poradzić z niezadowoleniem ludzi.</Polish>
 		<Russian>Нам просто нужно разобраться с возмущением общественности.</Russian>
+		<Spanish>Tendremos que afrontar este escándalo público.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CORRUPT_SENATE_2</Tag>
 		<English>We should be able to bribe a few of the opposition leaders to take care of this.</English>
 		<French>Nous devrions pouvoir corrompre quelques leaders de l'opposition pour étouffer l'affaire.</French>
 		<German>Wir sollten in der Lage sein, ein paar oppositionelle Anführer zu bestechen und sich darum zu kümmern.</German>
-		<Italian>Dovremmo riuscire a corrompere alcuni leader dell'opposizione che si occuperanno di ciò.</Italian>
-		<Spanish>Podríamos sobornar a algunos líderes de la oposición para que se ocupen de esto.</Spanish>
+		<Italian>Dovremmo riuscire a corrompere alcuni leader dell'opposizione affinché se ne occupino.</Italian>
 		<Polish>Może uda się przekupić kilku przywódców opozycji żeby się tym zajęli?</Polish>
 		<Russian>Нам имеет смысл подкупить нескольких лидеров оппозиции, чтобы замять этот скандал.</Russian>
+		<Spanish>Podríamos sobornar a algunos líderes de la oposición para que se ocupen de esto.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COSTS_GOLD</Tag>
 		<English>Costs %d1 Gold</English>
 		<French>Coût: %d1 Or</French>
-		<Spanish>Coste: %d1[ICON_GOLD]</Spanish>
+		<Italian>Costa %d1 Oro</Italian>
 		<Polish>Koszt: %d1 Złota</Polish>
 		<Russian>Цена %d1 золота</Russian>
+		<Spanish>Coste: %d1[ICON_GOLD]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COTTON_IRRIGATION</Tag>
 		<English>Engineers have drawn up plans to increase the yield of the local cotton crop by diverting irrigation from local farms.</English>
 		<French>Nos Ingénieurs ont mis au point une méthode permettant d'accroître la production de coton en améliorant l'irrigation de nos champs.</French>
 		<German>Ingenieure haben Pläne erstellt, um durch die Umleitung von Bewässerung von den örtlichen Bauernhöfen die Baumwollerträge zu erhöhen.</German>
-		<Italian>Gli ingegneri hanno sviluppato dei piani per incrementare la resa delle piantagioni di cotone locale, deviando l'irrigazione dalle fattorie locali.</Italian>
-		<Spanish>Nuestros ingenieros han elaborado un plan para aumentar el rendimiento del cultivo local de algodón, que consiste en el desvío del riego de las granjas de alrededor.</Spanish>
+		<Italian>Gli ingegneri hanno sviluppato dei piani per incrementare la resa delle piantagioni locali di cotone, deviando l'irrigazione dalle fattorie locali.</Italian>
 		<Polish>Inżynierowie stworzyli nowe plany podniesienia produkcji z lokalnych plantacji Bawełny poprzez zachęcenie do imigracji ludności z mniejszych farm.</Polish>
+		<Spanish>Nuestros ingenieros han elaborado un plan para aumentar el rendimiento del cultivo local de algodón, que consiste en el desvío del riego de las granjas de alrededor.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COTTON_IRRIGATION_1</Tag>
 		<English>This is a good plan!</English>
 		<French>Ca c'est un bon plan!</French>
 		<German>Das ist ein guter Plan!</German>
-		<Italian>Questo è un ottimo piano!</Italian>
-		<Spanish>¡Es un buen plan!</Spanish>
+		<Italian>Mi sembra una buona idea!</Italian>
 		<Polish>To jest znakomity plan!</Polish>
+		<Spanish>¡Es un buen plan!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_COTTON_IRRIGATION_2</Tag>
 		<English>No, this doesn't sound too bright.</English>
 		<French>Non, cela ne me semble pas assez innovant.</French>
 		<German>Nein, das klingt nicht sehr schlau.</German>
-		<Italian>No, non mi sembra un buon piano.</Italian>
-		<Spanish>No, no parece una idea muy brillante.</Spanish>
+		<Italian>No, non mi sembra una buona idea.</Italian>
 		<Polish>Nie, to jest zły pomysł.</Polish>
+		<Spanish>No, no parece una idea muy brillante.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CRISIS_IN_THE_SENATE_1</Tag>
 		<English>Let the senators fight amongst themselves. When both sides are weakened, step in and assert presidential authority.</English>
 		<French>Laisser les sénateurs se battre entre eux. Lorsque les deux côtés seront affaiblis, intervenir et déclarer l'autorité présidentielle.</French>
 		<German>Sollen die Senatoren einander bekämpfen. Schreitet ein, wenn beide Seiten geschwächt sind, und sichert die Autorität des Präsidenten.</German>
-		<Italian>Lascia che i senatori combattano tra loro. Quando entrambe le coalizioni saranno indebolite, entra in gioco e rivendica l'autorità presidenziale.</Italian>
+		<Italian>Lascia che i senatori combattano tra loro. Quando entrambe le coalizioni saranno indebolite, entreremo in gioco noi rivendicando l'autorità presidenziale.</Italian>
 		<Spanish>Que los senadores luchen entre ellos. Cuando ambos bandos estén debilitados, daremos un paso al frente y haremos valer la autoridad presidencial.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4646,7 +4663,7 @@
 		<English>Support the ruling party in impeaching numerous members of the scandalized party, destroying all effective opposition to the ruling party.</English>
 		<French>Soutenir le parti dirigeant, en accusant plusieurs membres du parti lésé, afin de détruire toute opposition.</French>
 		<German>Unterstützt die regierende Partei dabei, zahlreiche Mitglieder der skandalträchtigen Partei aus ihren Ämtern zu entheben und so die gesamte effektive Opposition der Regierungspartei zu zerstören.</German>
-		<Italian>Sostieni il partito al governo nella condanna di numerosi membri del partito coinvolto nello scandalo, distruggendo tutta l'opposizione.</Italian>
+		<Italian>Supporta il partito al potere nell'indagare i membri del partito al centro dello scandalo, distruggendo ogni opposizione effettiva al partito al potere.</Italian>
 		<Spanish>Que se dé apoyo al partido gobernante mediante la presentación de cargos contra numerosos miembros del partido envuelto en el escándalo. De este modo se eliminará la oposición del partido en el poder.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4654,7 +4671,7 @@
 		<English>Rely on judicial authority to enforce the letter of the constitution.</English>
 		<French>Se fier à l'autorité juridique pour renforcer la lettre de la constitution.</French>
 		<German>Verlasst Euch darauf, dass die Justiz die Verfassung durchsetzt.</German>
-		<Italian>Affidati all'autorità giudiziaria affinché sostenga la costituzione.</Italian>
+		<Italian>Affidati all'autorità giudiziaria affinché applichi la Costituzione alla lettera.</Italian>
 		<Spanish>Confiaremos en que la autoridad judicial haga cumplir el texto de la constitución.</Spanish>
 	</TEXT>
 	<TEXT>
