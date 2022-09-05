@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+	<ElementType name="Category" content="textOnly"/>
+	<ElementType name="Categories" content="eltOnly">
+		<element type="Category"/>
+	</ElementType>
 	<!-- Replacements added by AIAndy -->
 	<ElementType name="ReplacementCondition"/>
 	<ElementType name="ReplacementID"/>
@@ -107,7 +111,6 @@
 	<ElementType name="iValue"/>
 	<!-- TB's Tags begin -->
 	<!--Textual References-->
-	<ElementType name="GenericCategory" content="textOnly"/>
 	<!--Integers-->
 	<ElementType name="iNationalCaptureProbabilityModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iNationalCaptureResistanceModifier" content="textOnly" dt:type="int"/>
@@ -435,6 +438,7 @@
 		<element type="Description" minOccurs="0"/>
 		<element type="Adjective" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="TechPrereq" minOccurs="0"/>
 		<element type="FreeUnit" minOccurs="0"/>
 		<element type="iFreeUnits" minOccurs="0"/>
@@ -493,6 +497,7 @@
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="TechPrereq" minOccurs="0"/>
 		<element type="ObsoleteTech" minOccurs="0"/>
 		<element type="PrereqBuildings" minOccurs="0"/>
@@ -823,6 +828,7 @@
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Strategy" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="VictoryPrereq" minOccurs="0"/>
 		<element type="TechPrereq" minOccurs="0"/>
 		<element type="AnyonePrereqProject" minOccurs="0"/>
@@ -1168,6 +1174,7 @@
 		<element type="Description" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Strategy" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
 		<element type="Button" minOccurs="0"/>
 		<element type="TechPrereq" minOccurs="0"/>
@@ -1514,6 +1521,7 @@
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Strategy" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="Texture" minOccurs="0"/>
 		<element type="bSlave" minOccurs="0"/>
 		<element type="bVisible" minOccurs="0"/>
@@ -1536,7 +1544,7 @@
 		<element type="bCtrlDown" minOccurs="0"/>
 		<element type="iHotKeyPriority" minOccurs="0"/>
 		<element type="iOrderPriority" minOccurs="0"/>
-		<element type="Button" maxOccurs="*"/>
+		<element type="Button" minOccurs="0"/>
 		<element type="PropertyManipulators" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="SpecialistInfos" content="eltOnly">
@@ -1802,7 +1810,6 @@
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
-		<element type="GenericCategory" minOccurs="0"/>
 		<element type="bDefault" minOccurs="0"/>
 		<element type="bVisible" minOccurs="0"/>
 		<element type="EnforcesGameOptionOnTypes" minOccurs="0"/>
@@ -2195,5 +2202,23 @@
 	</ElementType>
 	<ElementType name="Civ4IdeaInfos" content="eltOnly">
 		<element type="IdeaInfos" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="CategoryInfo" content="eltOnly">
+		<element type="Type"/>
+		<element type="bForceOverwrite" minOccurs="0"/>
+		<element type="bForceDelete" minOccurs="0"/>
+		<element type="iForceInsertLocation" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+		<element type="Description" minOccurs="0"/>
+		<element type="Help" minOccurs="0"/>
+		<element type="Strategy" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="CategoryInfos" content="eltOnly">
+		<element type="CategoryInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4CategoryInfos" content="eltOnly">
+		<element type="CategoryInfos" minOccurs="0"/>
 	</ElementType>
 </Schema>

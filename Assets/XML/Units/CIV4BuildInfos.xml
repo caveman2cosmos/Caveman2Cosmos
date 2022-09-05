@@ -1153,7 +1153,52 @@
 			<iHotKeyPriority>1</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildWinery.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,6,8</Button>
 		</BuildInfo>
-		<!-- Fruit Picker -> Winery -->
+		<!-- Grape Picker -> Winery -->
+		<BuildInfo>
+			<Type>BUILD_GRAPE_PICKING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_GRAPE_PICKING_CAMP</Description>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+			<ObsoleteTech>TECH_FERMENTATION</ObsoleteTech>
+			<iTime>200</iTime>
+			<iCost>3</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_S</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Builds/picker_grape.dds</Button>
+		</BuildInfo>
+		<!-- Grape Gathering Camp (Kill) -> Grape Picker -->
+		<BuildInfo>
+			<Type>BUILD_GRAPE_GATHERING_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP_KILL</Description>
+			<PrereqTech>TECH_GATHERING</PrereqTech>
+			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
+			<iTime>200</iTime>
+			<iCost>1</iCost>
+			<bKill>1</bKill>
+			<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_S</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Builds/gatherer_grape.dds</Button>
+		</BuildInfo>
+		<!-- Orchard -> Vertical Farm -->
+		<BuildInfo>
+			<Type>BUILD_ORCHARD</Type>
+			<Description>TXT_KEY_BUILD_ORCHARD</Description>
+			<PrereqTech>TECH_ORCHARDS</PrereqTech>
+			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
+			<iTime>500</iTime>
+			<iCost>15</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_ORCHARD</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_U</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/Builds/orchard.dds</Button>
+		</BuildInfo>
+		<!-- Fruit Picker -> Orchard -->
 		<BuildInfo>
 			<Type>BUILD_FRUIT_PICKING_CAMP</Type>
 			<Description>TXT_KEY_BUILD_FRUIT_PICKING_CAMP</Description>
@@ -1183,51 +1228,6 @@
 			<HotKey>KB_S</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/gatherer_genericfruit.dds</Button>
-		</BuildInfo>
-		<!-- Orchard -> Vertical Farm -->
-		<BuildInfo>
-			<Type>BUILD_ORCHARD</Type>
-			<Description>TXT_KEY_BUILD_ORCHARD</Description>
-			<PrereqTech>TECH_ORCHARDS</PrereqTech>
-			<ObsoleteTech>TECH_VERTICAL_FARMING</ObsoleteTech>
-			<iTime>500</iTime>
-			<iCost>15</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_ORCHARD</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_U</HotKey>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/orchard.dds</Button>
-		</BuildInfo>
-		<!-- Grape Picker -> Orchard -->
-		<BuildInfo>
-			<Type>BUILD_GRAPE_PICKING_CAMP</Type>
-			<Description>TXT_KEY_BUILD_GRAPE_PICKING_CAMP</Description>
-			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<ObsoleteTech>TECH_FERMENTATION</ObsoleteTech>
-			<iTime>200</iTime>
-			<iCost>3</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_GRAPE_PICKING_CAMP</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_S</HotKey>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/picker_grape.dds</Button>
-		</BuildInfo>
-		<!-- Grape Gathering Camp (Kill) -> Grape Picker -->
-		<BuildInfo>
-			<Type>BUILD_GRAPE_GATHERING_CAMP_KILL</Type>
-			<Description>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP_KILL</Description>
-			<PrereqTech>TECH_GATHERING</PrereqTech>
-			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
-			<iTime>200</iTime>
-			<iCost>1</iCost>
-			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_S</HotKey>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Interface/Buttons/Builds/gatherer_grape.dds</Button>
 		</BuildInfo>
 		<!-- Plantation -> Vertical Farm -->
 		<BuildInfo>

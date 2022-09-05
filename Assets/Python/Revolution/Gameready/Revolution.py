@@ -1132,7 +1132,7 @@ class Revolution:
 				if eRouteType != -1:
 					for i in xrange(GC.getNumTechInfos()):
 						tech = GC.getTechInfo(i)
-						if(GC.getRouteInfo(eRouteType).getTechMovementChange(i) != 0 and pTeam.isHasTech(i)):
+						if GC.getRouteInfo(eRouteType).getTechMovementChange(i) != 0 and pTeam.isHasTech(i):
 							bTechRouteModifier = True
 							break
 				if bTechRouteModifier:

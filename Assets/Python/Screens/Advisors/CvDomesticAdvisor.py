@@ -1573,6 +1573,7 @@ class CvDomesticAdvisor:
 		screen = self.getScreen()
 		if not screen.isActive():
 			return
+
 		HandleInputUtil.debugInput(inputClass)
 		bAlt, bCtrl, bShift = self.InputData.getModifierKeys()
 		iCode	= inputClass.eNotifyCode
@@ -1613,46 +1614,12 @@ class CvDomesticAdvisor:
 				self.drawScreen()
 
 			elif NAME == "CDA_PAGE_":
-				if not iCol:
-					CyCity = self.CyPlayer.getCity(iData2)
-					screen.hideScreen()
-					CyMap().bringIntoView(CyCity.getX(), CyCity.getY(), True, False, True, False, False)
-				elif iCol == 1:
-					name = screen.getTableText("CDA_PAGE_%d" % ID, 1, iRow)
-					for CyCity in self.cityList:
-						if CyCity.getName() == name:
-							xRes = self.xRes
-							if xRes > 2500:
-								header = "<font=4b>"
-								body = "\n<font=3>"
-								w = 560
-								h = 184
-							elif xRes > 1700:
-								header = "<font=3b>"
-								body = "\n<font=2>"
-								w = 500
-								h = 172
-							elif xRes > 1400:
-								header = "<font=2b>"
-								body = "\n<font=1>"
-								w = 440
-								h = 160
-							else:
-								header = "<font=1b>"
-								body = "\n<font=0>"
-								w = 380
-								h = 136
-							szTxt = header + TRNSLTR.getText("TXT_KEY_NAME_CITY", ()) + body + name
-							iCityID = CyCity.getID()
-							popup = CyPopup(5000, EventContextTypes.EVENTCONTEXT_ALL, True)
-							popup.setUserData(("CITY", name, iCityID, iRow))
-							popup.setSize(w, h)
-							popup.setPosition(xRes/2 - w/2, self.yRes/2 - h/2)
-							popup.setBodyString(szTxt, 1<<0)
-							popup.createEditBox(name, 0)
-							popup.setEditBoxMaxCharCount(24, 0, 0)
-							popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
-							break
+				name = screen.getTableText("CDA_PAGE_%d" % ID, 1, iRow)
+				for cyCity in self.cityList:
+					if cyCity.getName() == name:
+						screen.hideScreen()
+						CyMap().bringIntoView(cyCity.getX(), cyCity.getY(), True, False, True, False, False)
+						break
 
 		elif iCode == NotifyCode.NOTIFY_CLICKED:
 			bCustomizing = self.bCustomizing

@@ -554,6 +554,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GIVEN_FREE_AREA</Tag>
 		<English>[ICON_BULLET]Building Given for Free in same continent By[SPACE]</English>
+		<German>[ICON_BULLET]kostenloses Gebäude auf dem gleichen Kontinent[SPACE]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL</Tag>
@@ -758,6 +759,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_INSIDIOUSNESS</Tag>
 		<English>[ICON_BULLET]Increases local Insidiousness by %s1_amount%% (Helps Criminals avoid discovery)</English>
 		<French>[ICON_BULLET]Donne à toutes les unités criminelles produites dans la ville %s1_amount%% d'Incidiosité.</French>
+		<German>[ICON_BULLET]erhöht die Gesetzlosigkeit der Bevölkerung um %s1_amount%% (hilft Kriminellen ihrer Entdeckung zu entgehen)</German>
 		<Russian>[ICON_BULLET]Увеличивает уровень беззакония в городе на %s1_amount%% (помогает преступникам избежать раскрытия)</Russian>
 	</TEXT>
 	<TEXT>
@@ -774,6 +776,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_INVESTIGATION</Tag>
 		<English>[ICON_BULLET]Increases local Investigation by %s1_amount%% (Helps Law Enforcement catch Criminals)</English>
 		<French>[ICON_BULLET]Donne à toutes les unités produites dans la ville %s1_amount%% d'Investigation.</French>
+		<German>[ICON_BULLET]verbessert die örtliche Ermittlungsrate um %s1_amount%%  (hilft Gesetzeshütern bei der Festnahme von Kriminellen)</German>
 		<Russian>[ICON_BULLET]Увеличивает эффективность местного розыска на %s1_amount%% (помогает правоохранителям поймать преступников)</Russian>
 	</TEXT>
 	<TEXT>
@@ -871,11 +874,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NATIONAL_WONDERS_PER_CITY</Tag>
-		<English>[COLOR_WARNING_TEXT]Can only Construct %d1_Num National Wonders per City[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Construction de merveilles nationales limitée à %d1_Num par ville[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Kann nur %d1_Num [NUM1:Nationales:Nationale] Wunder pro Stadt errichten[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Puoi costruire soltanto %d1_Num Meraviglie Nazionali per città[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla nacional:maravillas nacionales] por ciudad[COLOR_REVERT]</Spanish>
+		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num National Wonders.[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NATIONAL_WONDER_ALLOWED</Tag>
@@ -1046,6 +1045,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_PROPERTY_SPAWN_BARB</Tag>
 		<English>[ICON_BULLET]Can spawn a barbarian %s1_Unit.</English>
 		<French>[ICON_BULLET]Peut faire appaître un %s1_Unit barbare.</French>
+		<German>[ICON_BULLET]kann [NUM1:einen barbarischen:eine barbarische:ein barbarisches:barbarische:barbarische:barbarische] %s1:4_Unit auftauchen lassen</German>
 		<Russian>[ICON_BULLET]Может породить варварский отряд %s1_Unit.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1375,11 +1375,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_TEAM_WONDERS_PER_CITY</Tag>
-		<English>[COLOR_WARNING_TEXT]Can only Construct %d1_Num Team Wonders per City[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Construction de merveilles d'équipe limitée à %d1_Num par ville[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Kann nur %d1_Num Teamwunder pro Stadt errichten[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Puoi costruire soltanto %d1_Num Meraviglie di Squadra per città[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla de equipo:maravillas de equipo] por ciudad[COLOR_REVERT]</Spanish>
+		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num Team Wonders.[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_TEAM_WONDER_ALLOWED</Tag>
@@ -1573,11 +1569,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDERS_PER_CITY</Tag>
-		<English>[COLOR_WARNING_TEXT]Can only Construct %d1_Num World Wonders per City[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Construction de merveilles mondiales limitée à %d1_Num par ville[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Kann nur %d1_Num Weltwunder pro Stadt errichten[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Puoi costruire soltanto %d1_Num Grandi Meraviglie per città[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla del mundo:maravillas del mundo] por ciudad[COLOR_REVERT]</Spanish>
+		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num World Wonders.[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDER_ALLOWED</Tag>

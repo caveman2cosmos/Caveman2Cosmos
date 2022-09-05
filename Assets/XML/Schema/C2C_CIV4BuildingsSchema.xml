@@ -759,6 +759,7 @@
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="Strategy" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="Advisor" minOccurs="0"/>
 		<element type="ArtDefineTag" minOccurs="0"/>
 		<element type="MovieDefineTag" minOccurs="0"/>
@@ -1282,4 +1283,8 @@
 	<ElementType name="PrereqOrBuildings" content="eltOnly">
 		<element type="BuildingType" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="Categories" content="eltOnly">
+		<element type="Category" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Category" content="textOnly"/>
 </Schema>

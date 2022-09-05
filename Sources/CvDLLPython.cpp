@@ -1,5 +1,4 @@
 #include "CvGameCoreDLL.h"
-#include "CvInfoUtil.h"
 #include "CvPython.h"
 #include "CyCity.h"
 #include "CyGlobalContext.h"
@@ -43,6 +42,7 @@ void CyMessageControlInterface();
 void CyPropertiesPythonInterface();
 void CyBoolExprPythonInterface();
 void CyIntExprPythonInterface();
+void CyCityOutputHistoryInterface();
 
 
 DllExport void DLLPublishToPython()
@@ -96,6 +96,7 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<FeatureTypes>();
 	registerAllowPyIntAsType<TerrainTypes>();
 	registerAllowPyIntAsType<PromotionTypes>();
+	registerAllowPyIntAsType<FlavorTypes>();
 
 	publishPythonVectorInterface<std::vector<BonusTypes>, CovertToInteger>();
 	publishPythonVectorInterface<std::vector<ImprovementTypes>, CovertToInteger>();
@@ -131,7 +132,7 @@ DllExport void DLLPublishToPython()
 	CyPropertiesPythonInterface();
 	CyBoolExprPythonInterface();
 	CyIntExprPythonInterface();
-	CvInfoUtil::publishPythonInterface();
+	CyCityOutputHistoryInterface();
 	SCyDebug::installInPython();
 
 	//

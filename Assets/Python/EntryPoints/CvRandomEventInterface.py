@@ -661,64 +661,6 @@ def canTriggerMonsoonCity(argsList):
 
   return False
 
-######## VOLCANO ###########
-
-def getHelpVolcano1(argsList):
-	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_1_HELP", ())
-
-def canApplyVolcano1(argsList):
-	data = argsList[1]
-
-	for iDX in xrange(-1, 2):
-		for iDY in xrange(-1, 2):
-			plotX = plotXY(data.iPlotX, data.iPlotY, iDX, iDY)
-			if not plotX.isNone() and plotX.getImprovementType() != -1:
-				return True
-	return False
-
-def applyVolcano1(argsList):
-	data = argsList[1]
-	plots = []
-	iPlots = 0
-	for iDX in xrange(-1, 2):
-		for iDY in xrange(-1, 2):
-			plotX = plotXY(data.iPlotX, data.iPlotY, iDX, iDY)
-			if not plotX.isNone():
-				iImprovement = plotX.getImprovementType()
-				if iImprovement > -1:
-					plots.append((plotX, iImprovement))
-					iPlots += 1
-
-	if not plots: raise "Event - Error in canApplyVolcano1"
-
-	if iPlots < 3:
-		iRange = iPlots
-	else: iRange = 3
-
-	listRuins = [
-		GC.getInfoTypeForString("IMPROVEMENT_COTTAGE"),
-		GC.getInfoTypeForString("IMPROVEMENT_HAMLET"),
-		GC.getInfoTypeForString("IMPROVEMENT_VILLAGE"),
-		GC.getInfoTypeForString("IMPROVEMENT_TOWN"),
-		GC.getInfoTypeForString("IMPROVEMENT_SUBURBS"),
-		GC.getInfoTypeForString("IMPROVEMENT_GOODY_HUT")
-	]
-	iRuins = GC.getInfoTypeForString("IMPROVEMENT_CITY_RUINS")
-
-	for i in xrange(iRange):
-		if i and GAME.getSorenRandNum(100, "Volcano event num improvements destroyed") < 50:
-			break
-		plot, iImprovement = plots.pop(GAME.getSorenRandNum(iPlots, "Volcano event improvement destroyed"))
-		iPlots -= 1
-		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getImprovementInfo(iImprovement).getTextKey(), ))
-		CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getImprovementInfo(iImprovement).getButton(), GC.getCOLOR_RED(), plot.getX(), plot.getY(), True, True)
-		if iImprovement in listRuins:
-			plot.setImprovementType(iRuins)
-		else:
-			plot.setImprovementType(-1)
-
-
-
 ######## DUSTBOWL ###########
 
 def canTriggerDustbowlCont(argsList):
@@ -2027,25 +1969,28 @@ def canApplyClassicLiteratureDone2(argsList):
 	player = GC.getPlayer(argsList[1].ePlayer)
 	iEraAncient = GC.getInfoTypeForString("C2C_ERA_ANCIENT")
 
-	for iTech in xrange(GC.getNumTechInfos()):
-		if GC.getTechInfo(iTech).getEra() == iEraAncient and player.canResearch(iTech):
+	team = GC.getTeam(player.getTeam())
+	for i in xrange(team.getNumAdjacentResearch()):
+		iTechX = team.getAdjacentResearch(i)
+		if GC.getTechInfo(iTechX).getEra() == iEraAncient and player.canResearch(iTechX, True):
 			return True
 	return False
 
 def applyClassicLiteratureDone2(argsList):
-  data = argsList[1]
-  player = GC.getPlayer(data.ePlayer)
+	data = argsList[1]
+	player = GC.getPlayer(data.ePlayer)
 
-  iEraAncient = GC.getInfoTypeForString("C2C_ERA_ANCIENT")
+	iEraAncient = GC.getInfoTypeForString("C2C_ERA_ANCIENT")
 
-  listTechs = []
-  for iTech in xrange(GC.getNumTechInfos()):
-    if GC.getTechInfo(iTech).getEra() == iEraAncient and player.canResearch(iTech):
-      listTechs.append(iTech)
+	listTechs = []
+	team = GC.getTeam(player.getTeam())
+	for i in xrange(team.getNumAdjacentResearch()):
+		iTechX = team.getAdjacentResearch(i)
+		if GC.getTechInfo(iTechX).getEra() == iEraAncient and player.canResearch(iTechX, True):
+			listTechs.append(iTechX)
 
-  if len(listTechs) > 0:
-    iTech = listTechs[GAME.getSorenRandNum(len(listTechs), "Classic Literature Event Tech selection")]
-    GC.getTeam(player.getTeam()).setHasTech(iTech, True, data.ePlayer, True, True)
+	if listTechs:
+		team.setHasTech(listTechs[GAME.getSorenRandNum(len(listTechs), "Classic Literature Event Tech selection")], True, data.ePlayer, True, True)
 
 def getHelpClassicLiteratureDone3(argsList):
 	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
@@ -2154,9 +2099,9 @@ def applyMasterBlacksmithDone1(argsList):
 	CyInterface().addMessage(
 		data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(),
 		TRNSLTR.getText(
-			"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE",
+			"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_IMPROVEMENT",
 			(
-				GC.getBonusInfo(iBonus).getTextKey(), GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey()
+				GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey(), GC.getBonusInfo(iBonus).getTextKey()
 			)
 		),
 		"AS2D_DISCOVERBONUS", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(iBonus).getButton(),
@@ -6348,7 +6293,7 @@ def doVolcanoDormantEruption(argsList):
   doVolcanoPlot(pPlot)
   doVolcanoNeighbouringPlots(pPlot)
   doVolcanoAdjustFertility((pPlot, 1, team))
-  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT")))
+  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT_ERUPTION")))
 
 def doVolcanoExtinction(argsList):
   data = argsList[0]
@@ -6388,7 +6333,7 @@ def doVolcanoSleep(argsList):
   doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT")))
 
 def getHelpVolcanoEruption1(argsList):
-	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_ERUPTION_1_HELP", ())
+	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_ERUPTION_HELP", ())
 
 def getHelpVolcanoSleep(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_SLEEP_HELP", ())
@@ -7081,9 +7026,8 @@ def applyCivilWar(argsList):
 	pNewTeam.setHasTech(OBtech, False, iNewID, False, False)
 
 	# Add techs to new player
-	iMaxTech = GC.getNumTechInfos()
 	for counter in xrange(iMaxTech):
-		if (pTriggerTeam.isHasTech(counter) == True) and (pNewTeam.isHasTech(counter) == False):
+		if pTriggerTeam.isHasTech(counter) and not pNewTeam.isHasTech(counter):
 			pNewTeam.setHasTech(counter, True, iNewID, False, False)
 
 	# Hand over cities

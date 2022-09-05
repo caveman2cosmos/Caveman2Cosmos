@@ -164,6 +164,7 @@
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="PrereqTech" minOccurs="0"/>
 		<element type="iTime" minOccurs="0"/>
 		<element type="iCost" minOccurs="0"/>
@@ -197,7 +198,6 @@
 	<!--TB's Tags begin-->
 	<!--Textual References -->
 	<ElementType name="PromotionLine" content="textOnly"/>
-	<ElementType name="GenericCategory" content="textOnly"/>
 	<ElementType name="ReplacesUnitCombat" content="textOnly"/>
 	<ElementType name="DefaultStatusType" content="textOnly"/>
 	<!--Integers-->
@@ -1800,6 +1800,7 @@
 		<element type="GroupSpawnUnitCombatTypes" minOccurs="0"/>
 		<!--TB SubCombat Mod end-->
 		<element type="Domain" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="DefaultUnitAI" minOccurs="0"/>
 		<element type="Invisible" minOccurs="0"/>
 		<element type="SeeInvisible" minOccurs="0"/>
@@ -2306,6 +2307,7 @@
 		<element type="MinEraType" minOccurs="0"/>
 		<element type="MaxEraType" minOccurs="0"/>
 		<element type="StateReligionPrereq" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
 		<element type="bLeader" minOccurs="0"/>
 		<element type="bNoSelfHeal" minOccurs="0"/>
@@ -2672,7 +2674,6 @@
 		<element type="EntityEventInfo" maxOccurs="*" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="Path" content="textOnly"/>
-	<ElementType name="Category" content="textOnly"/>
 	<ElementType name="Operator" content="textOnly"/>
 	<ElementType name="BaseID" content="textOnly" dt:type="int"/>
 	<ElementType name="SetIncrement" content="textOnly" dt:type="int"/>
@@ -2827,6 +2828,7 @@
 		<element type="PropertyType" minOccurs="0"/>
 		<element type="PrereqTech" minOccurs="0"/>
 		<element type="ObsoleteTech" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="iCommunicability" minOccurs="0"/>
 		<element type="iOutbreakModifier" minOccurs="0"/>
 		<element type="iOvercomeModifier" minOccurs="0"/>
@@ -2871,7 +2873,7 @@
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
-		<element type="GenericCategory" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="KillOutcomes" minOccurs="0"/>
 		<element type="Actions" minOccurs="0"/>
 		<element type="ReligionType" minOccurs="0"/>
@@ -3111,4 +3113,8 @@
 	<ElementType name="Civ4InvisibleInfos" content="eltOnly">
 		<element type="InvisibleInfos" minOccurs="0"/>
 	</ElementType>
+	<ElementType name="Categories" content="eltOnly">
+		<element type="Category" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Category" content="textOnly"/>
 </Schema>

@@ -135,8 +135,7 @@ public:
 	int calculateResearchRate(int /*TechTypes*/ eTech) const;
 	int calculateResearchModifier(int /*TechTypes*/ eTech) const;
 	int calculateBaseNetResearch() const;
-	bool canEverResearch(int /*TechTypes*/ eTech) const;
-	bool canResearch(int /*TechTypes*/ eTech) const;
+	bool canResearch(const int iTech, const bool bRightNow) const;
 	int /* TechTypes */ getCurrentResearch() const;
 	bool isCurrentResearchRepeat() const;
 	int getResearchTurnsLeft(int /*TechTypes*/ eTech, bool bOverflow) const;

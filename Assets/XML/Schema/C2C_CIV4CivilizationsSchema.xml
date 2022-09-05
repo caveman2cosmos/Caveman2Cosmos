@@ -461,6 +461,12 @@
 	<ElementType name="FavoriteReligion" content="textOnly"/>
 	<ElementType name="TraitType" content="textOnly"/>
 	<ElementType name="bTrait" content="textOnly" dt:type="boolean"/>
+	<ElementType name="DefaultTraits" content="eltOnly">
+		<element type="TraitType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="DefaultComplexTraits" content="eltOnly">
+		<element type="TraitType" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 	<ElementType name="Trait" content="eltOnly">
 		<element type="TraitType"/>
 		<element type="bTrait"/>
@@ -650,6 +656,8 @@
 		<element type="FavoriteCivic" minOccurs="0"/>
 		<element type="FavoriteReligion" minOccurs="0"/>
 		<element type="Traits" minOccurs="0"/>
+		<element type="DefaultTraits" minOccurs="0"/>
+		<element type="DefaultComplexTraits" minOccurs="0"/>
 		<element type="Flavors" minOccurs="0"/>
 		<element type="ContactRands" minOccurs="0"/>
 		<element type="ContactDelays" minOccurs="0"/>
@@ -769,6 +777,7 @@
 		<element type="Button" minOccurs="0"/>
 		<element type="OnGameOptions" minOccurs="0"/>
 		<element type="NotOnGameOptions" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="TraitPrereq" minOccurs="0"/>
 		<element type="TraitPrereqOr1" minOccurs="0"/>
 		<element type="TraitPrereqOr2" minOccurs="0"/>
@@ -1082,4 +1091,8 @@
 	<ElementType name="Civ4CivNameInfos" content="eltOnly">
 		<element type="CivNameInfos" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="Categories" content="eltOnly">
+		<element type="Category" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Category" content="textOnly"/>
 </Schema>

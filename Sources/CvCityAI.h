@@ -114,7 +114,6 @@ public:
 	//	This allows caches that will remain valid for the processing of the current turn's units to be cleared
 	virtual void AI_preUnitTurn();
 
-	virtual void AI_noteUnitEscortNeeded();
 	virtual void AI_trained(UnitTypes eUnitType, UnitAITypes eUnitAIType);
 
 	void AI_chooseProduction();
@@ -217,13 +216,7 @@ public:
 	int AI_playerCloseness(PlayerTypes eIndex, int iMaxDistance);
 	int AI_cityThreat(TeamTypes eTargetTeam = NO_TEAM, int* piThreatModifier = NULL);
 
-	int AI_getWorkersHave() const;
-	int AI_getWorkersNeeded() const;
-	void AI_changeWorkersHave(int iChange);
-
-	// Fuyu - Worker Counting 03.08.2010
-	int AI_workingCityPlotTargetMissionAIs(PlayerTypes ePlayer, MissionAITypes eMissionAI, UnitAITypes eUnitAI = NO_UNITAI, bool bSameAreaOnly = false) const;
-	// ! Fuyu
+	int AI_getWorkersNeeded() const { return m_iWorkersNeeded; }
 
 	BuildingTypes AI_bestAdvancedStartBuilding(int iPass);
 
@@ -287,7 +280,6 @@ protected:
 	int m_iNeededFloatingDefendersCacheTurn;
 
 	int m_iWorkersNeeded;
-	int m_iWorkersHave;
 
 	int	m_iBuildPriority;
 	int	m_iTempBuildPriority;
@@ -351,7 +343,6 @@ protected:
 
 	void AI_buildGovernorChooseProduction();
 
-	int AI_getYieldMagicValue(const int* piYieldsTimes100, bool bHealthy) const;
 	int AI_getPlotMagicValue(const CvPlot* pPlot, bool bHealthy, bool bWorkerOptimization = false) const;
 	int AI_countGoodTiles(bool bHealthy, bool bUnworkedOnly, int iThreshold = 50, bool bWorkerOptimization = false) const;
 	int AI_countGoodSpecialists(bool bHealthy) const;
@@ -424,7 +415,6 @@ private:
 
 	int m_neededDefenders;	//	Cached at the start of unit mission calculations each turn
 	int m_neededDefendersVicinity;
-	int m_requestedEscorts;
 
 	int m_iCityThreat;
 	int m_iCityThreatModifier;

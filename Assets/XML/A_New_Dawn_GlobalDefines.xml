@@ -213,10 +213,6 @@
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>XML_LOGGING_ENABLED</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<!-- Realistic Corporations: Corporation will be founded when more players than X have the prereq tech for it. -->
 		<DefineName>MINIMUM_PLAYERS_WITH_TECH_FOR_AUTO_CORPORATION_FOUNDING</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
@@ -253,10 +249,6 @@
 	</Define>
 	<Define>
 		<DefineName>KILLERRABBIT_SPAWN_MODIFIER</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>ZOOM_CITY_FOR_PRODUCTION_POPUP</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>

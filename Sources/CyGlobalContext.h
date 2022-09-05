@@ -34,6 +34,10 @@ public:
 
 	int getInfoTypeForString(const char* szInfoType, bool bHideAssert = false) const;
 
+	int getNumFlavorTypes() const;
+	const char* getFlavorType(FlavorTypes e) const;
+	const python::list getFlavorTypes() const;
+
 	const CvMapInfo& getMapInfo(MapTypes eMap) const;
 	const CvEffectInfo* getEffectInfo(int i) const;
 	const CvTerrainInfo* getTerrainInfo(int i) const;
@@ -83,6 +87,7 @@ public:
 	const CvSeaLevelInfo * getSeaLevelInfo(int i) const;
 	const CvInfoBase * getUnitAIInfo(int i) const;
 	const CvColorInfo* getColorInfo(int i) const;
+	const CvAdvisorInfo* getAdvisorInfo(int i) const;
 	const CvUnitArtStyleTypeInfo* getUnitArtStyleTypeInfo(int i) const;
 	const CvPropertyInfo* getPropertyInfo(int i) const;
 	const CvPlayerColorInfo* getPlayerColorInfo(int i) const;
@@ -206,6 +211,7 @@ public:
 	int getNUM_CITY_PLOTS() const { return NUM_CITY_PLOTS; }
 
 	void setIsBug() { GC.setIsBug(); }
+	void refreshOptionsBUG() { GC.refreshOptionsBUG(); }
 
 	void setNoUpdateDefineFLOAT( const char * szName, float fValue ) { return GC.setDefineFLOAT( szName, fValue, false ); }
 

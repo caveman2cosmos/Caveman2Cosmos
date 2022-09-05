@@ -16,13 +16,17 @@ class BugAutologOptionsTab(BugOptionsTab.BugOptionsTab):
 
 	def create(self, screen):
 		self.createTab(screen)
-		panel = self.createMainPanel(screen)
-		column = self.addOneColumnLayout(screen, panel)
+		column = self.addOneColumnLayout(screen, self.createMainPanel(screen))
 
-		left, middle, right = self.addMultiColumnLayout(screen, column, 3, "Autolog")
+		self.addCheckbox(screen, column, "Autolog__MiscLogging")
+		screen.attachHSeparator(column, column + "Sep0")
+		left, center, right = self.addThreeColumnLayout(screen, column, "Autolog0")
 		self.addCheckbox(screen, left, "Autolog__Enabled")
-		self.addCheckbox(screen, middle, "Autolog__Silent")
-		self.addIntDropdown(screen, right, right, "Autolog__BBAILevel")
+		self.addCheckbox(screen, left, "Autolog__Silent")
+		self.addIntDropdown(screen, center, center, "Autolog__LogLevelTeamBBAI")
+		self.addIntDropdown(screen, center, center, "Autolog__LogLevelPlayerBBAI")
+		self.addIntDropdown(screen, right, right, "Autolog__LogLevelUnitBBAI")
+		self.addIntDropdown(screen, right, right, "Autolog__LogLevelCityBBAI")
 
 		# File and Format
 		screen.attachHSeparator(column, column + "Sep1")

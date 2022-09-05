@@ -624,22 +624,11 @@ enum ButtonPopupTypes
 	BUTTONPOPUP_FREE_COLONY,
 	BUTTONPOPUP_LAUNCH,
 	BUTTONPOPUP_FOUND_RELIGION,
-/************************************************************************************************/
-/* Afforess	                  Start		 09/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	//Castle Mod
 	BUTTONPOPUP_INVASION,
-	//AUA
 	BUTTONPOPUP_SELECT_UNIT,
 	BUTTONPOPUP_SELECT_DISCOVERY_TECH,
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	BUTTONPOPUP_GET_SAVE_FORMAT,	//	Koshling - user choose save format dialog
-
-	BUTTONPOPUP_MODIFIER_RECALCULATION,  // Ask user if he wants to recalculated modifiers when DLL or assets have changed
+	BUTTONPOPUP_GET_SAVE_FORMAT, // Koshling - user choose save format dialog
+	BUTTONPOPUP_MODIFIER_RECALCULATION, // Ask user if he wants to recalculated modifiers when DLL or assets have changed
 	BUTTONPOPUP_NAME_LIST,
 	BUTTONPOPUP_CHOOSE_TRAIT,
 	BUTTONPOPUP_CHOOSE_TRAIT_NEGATIVE,
@@ -1546,6 +1535,11 @@ enum InvisibleTypes
 	NO_INVISIBLE = -1,
 };
 
+enum CategoryTypes
+{
+	NO_CATEGORY = -1,
+};
+
 enum VoteSourceTypes
 {
 	NO_VOTESOURCE = -1,
@@ -1702,7 +1696,6 @@ enum MissionTypes
 	MISSION_ESPIONAGE_SLEEP,
 	MISSION_GREAT_COMMANDER,
 	MISSION_SHADOW,
-	MISSION_WAIT_FOR_TECH,
 
 	//ls612: City Goto in Viewports
 	MISSION_GOTO,

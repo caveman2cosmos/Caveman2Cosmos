@@ -62,6 +62,10 @@ public:
 	bool isFeature(int i) const;
 	bool isFeatureTerrain(int i) const;
 
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
+
 	const std::vector<MapCategoryTypes>& getMapCategories() const { return m_aeMapCategoryTypes; }
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
@@ -132,6 +136,8 @@ private:
 	bool* m_pbTerrain;
 	bool* m_pbFeature;
 	bool* m_pbFeatureTerrain;
+
+	std::vector<int> m_aiCategories;
 
 	std::vector<MapCategoryTypes> m_aeMapCategoryTypes;
 #ifdef OUTBREAKS_AND_AFFLICTIONS

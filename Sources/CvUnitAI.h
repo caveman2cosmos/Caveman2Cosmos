@@ -91,8 +91,8 @@ protected:
 	int m_iGarrisonCity;
 	int m_iAffirmedGarrisonCity;
 
-	BuildingTypes	m_eIntendedConstructBuilding;	//	Used to coordinate subdued animal and great person builds
-	static ConstructionNeeds*	m_constructionNeeds;
+	BuildingTypes m_eIntendedConstructBuilding; // Used to coordinate subdued animal and great person builds
+	static ConstructionNeeds* m_constructionNeeds;
 
 	int m_iGroupLeadOverride;
 	int m_iPredictedHitPoints;
@@ -175,8 +175,6 @@ protected:
 
 	bool AI_shadow(UnitAITypes eUnitAI, int iMax = -1, int iMaxRatio = -1, bool bWithCargoOnly = true, bool bOutsideCityOnly = false, int iMaxPath = MAX_INT);
 
-
-	// Returns true if a group was joined or a mission was pushed...
 	bool AI_group(const GroupingParams& params);
 
 	//bool AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITypes eTransportedUnitAI = NO_UNITAI, int iMinCargo = -1, int iMinCargoSpace = -1, int iMaxCargoSpace = -1, int iMaxCargoOurUnitAI = -1, int iFlags = 0, int iMaxPath = MAX_INT, int iMaxTransportPath = MAX_INT);
@@ -188,27 +186,26 @@ protected:
 	bool AI_guardBonus(int iMinValue = 0);
 	int AI_getPlotDefendersNeeded(const CvPlot* pPlot, int iExtra) const;
 	bool AI_guardFort(bool bSearch = true);
-	// Super Forts begin *AI_defense*
+
 	bool AI_guardFortMinDefender(bool bSearch = true);
-	// Super Forts end
+
 	bool AI_guardCitySite();
 	bool AI_guardSpy(int iRandomPercent);
 
 	bool AI_chokeDefend();
 	bool AI_heal(int iDamagePercent = 0, int iMaxPath = MAX_INT);
 	bool AI_afterAttack();
-	/*TB Prophet Mod begin*/
+
 	bool AI_foundReligion();
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	bool AI_cureAffliction(PromotionLineTypes eAfflictionLine);
 #endif
-	/*TB Prophet Mod end*/
 	bool AI_goldenAge();
 	bool AI_spreadReligion();
 	bool AI_spreadCorporation();
 	bool AI_spreadReligionAirlift();
 	bool AI_spreadCorporationAirlift();
-	bool AI_discover(bool bThisTurnOnly = false, bool bFirstResearchOnly = false);
+	bool AI_discover(const bool bFirstResearchOnly = false);
 
 	bool AI_leadLegend();
 
@@ -240,8 +237,6 @@ protected:
 	bool AI_hide();
 	bool AI_goody(int iRange);
 
-	// Send explorer units to group up with combat groups if we are at war
-	// Return true if it happens
 	bool AI_explorerJoinOffensiveStacks();
 	bool AI_explore();
 	bool AI_exploreRange(int iRange);
@@ -254,16 +249,13 @@ protected:
 	bool AI_bombardCity();
 	bool AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow = false);
 	bool AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack = 0, bool bAllowCities = true, bool bFollow = false);
-	bool AI_attackTargets(int iRange, int iOddsThreshold, int iMinStack = 0, bool bAllowCities = true, bool bFollow = false);
 
-// Dale - RB: Field Bombard
 	bool AI_RbombardPlot(int iRange, int iBonusValueThreshold); // RevolutionDCM
 	bool AI_RbombardUnit(int iRange, int iHighestOddsThreshold, int iMinStack, int iSeigeDiff, int iPowerThreshold, bool bCity = false);
 	bool AI_RbombardCity(const CvCity* pCity);
 	bool AI_RbombardNaval();
-// Dale - FE: Fighters
+
 	bool AI_FEngage();
-// ! Dale
 
 	bool AI_rangeAttack(int iRange);
 	bool AI_leaveAttack(int iRange, int iThreshold, int iStrengthThreshold);
@@ -451,8 +443,6 @@ public:
 	bool AI_isNegativePropertyUnit() const;
 	int getMyAggression(int iAttackProb) const;
 
-	//	Check whether a plot is dangerous for the unit (alone) with provided acceptable
-	//	survival odds
 	bool exposedToDanger(const CvPlot* pPlot, int acceptableOdds, bool bConsiderOnlyWorstThreat = false) const;
 	bool getThreateningUnit(const CvPlot* pPlot, CvUnit*& pThreateningUnit, const CvPlot* pAttackPlot, int& iIndex, bool bReturnWorstOfMultiple = false) const;
 

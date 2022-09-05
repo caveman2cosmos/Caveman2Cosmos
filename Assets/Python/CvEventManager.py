@@ -15,7 +15,6 @@ import CvAdvisorUtils
 import DebugUtils
 import SdToolKit as SDTK
 
-import WBUnitScreen
 import WBPlayerScreen
 import WBPlotScreen
 
@@ -543,7 +542,9 @@ class CvEventManager:
 			GC.getPlayer(iData2).changeCommercePercent(CommerceTypes(iData3), iData4)
 
 
-	def gameStart(self, bNewGame=False):
+	def gameStart(self, bNewGame):
+		CvScreensInterface.mainInterface.bSetStartZoom = True
+
 		############################
 		# Cache game specific data #
 		if GAME.isNetworkMultiPlayer():
@@ -626,49 +627,21 @@ class CvEventManager:
 		[0]  Crusade			[1]  Great Zimbabwe			[2]  Helsinki				[3]  Alamo
 		[4]  Lascaux			[5]  World Bank				[6]  Taipei 101				[7]  Cyrus Cylinder		etc.
 		'''
+		GAME.onFinalInitialized(bNewGame)
+
 
 	def onGameStart(self, argsList):
-		# Called when a game is created the moment you can see the map.
 		self.gameStart(True)
-		G = GAME
+		# Called when a game is created the moment you can see the map.
+		if GAME.getGameTurn() == GAME.getStartTurn():
 
-		if G.getGameTurn() == G.getStartTurn():
-			if G.isHotSeat() or G.isPbem():
-				for iPlayer in xrange(self.MAX_PC_PLAYERS):
-					CyPlayer = GC.getPlayer(iPlayer)
-					if CyPlayer.isHuman() and CyPlayer.isAlive():
-						popup = CyPopupInfo()
-						popup.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
-						popup.setText("showDawnOfMan")
-						popup.addPopup(iPlayer)
-				if G.isPbem():
-					popup = CyPopupInfo()
-					popup.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_DETAILS)
-					popup.setOption1(true)
-					popup.addPopup(iPlayer)
-			else:
-				iPlayer = G.getActivePlayer()
-				CyPlayer = GC.getPlayer(iPlayer)
-				if CyPlayer.isHuman() and CyPlayer.isAlive():
-					popup = CyPopupInfo()
-					popup.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
-					popup.setText('showDawnOfMan')
-					popup.addPopup(iPlayer)
-				szText = ""
-				if GC.getDefineINT("START_YEAR") != G.getGameTurnYear():
-					szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_NOT_PREHISTORIC", ())
-				if G.isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START):
-					szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_ADVANCED_START", ())
-				if szText:
-					szText = TRNSLTR.getText("TXT_KEY_MOD_HEADER", ()) + szText
-					popup = CyPopupInfo()
-					popup.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_TEXT)
-					popup.setText(szText)
-					popup.addPopup(iPlayer)
+			self.doDawnOfMan()
+
 			if not CyInterface().isInAdvancedStart():
 				self.freePromotions()
 		else:
 			CyInterface().setSoundSelectionReady(True)
+
 
 
 	def freePromotions(self):
@@ -695,8 +668,47 @@ class CvEventManager:
 
 
 	def onLoadGame(self, argsList):
-		self.gameStart()
+		if GAME.getGameTurn() == GAME.getStartTurn():
+			self.doDawnOfMan()
 
+			if not CyInterface().isInAdvancedStart():
+				self.freePromotions()
+
+		self.gameStart(False)
+
+	def doDawnOfMan(self):
+		if GAME.isHotSeat() or GAME.isPbem():
+			for iPlayer in xrange(self.MAX_PC_PLAYERS):
+				CyPlayer = GC.getPlayer(iPlayer)
+				if CyPlayer.isHuman() and CyPlayer.isAlive():
+					popup = CyPopupInfo()
+					popup.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
+					popup.setText("showDawnOfMan")
+					popup.addPopup(iPlayer)
+			if GAME.isPbem():
+				popup = CyPopupInfo()
+				popup.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_DETAILS)
+				popup.setOption1(true)
+				popup.addPopup(iPlayer)
+		else:
+			iPlayer = GAME.getActivePlayer()
+			CyPlayer = GC.getPlayer(iPlayer)
+			if CyPlayer.isHuman() and CyPlayer.isAlive():
+				popup = CyPopupInfo()
+				popup.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_PYTHON_SCREEN)
+				popup.setText('showDawnOfMan')
+				popup.addPopup(iPlayer)
+			szText = ""
+			if GC.getDefineINT("START_YEAR") != GAME.getGameTurnYear():
+				szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_NOT_PREHISTORIC", ())
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START):
+				szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_ADVANCED_START", ())
+			if szText:
+				szText = TRNSLTR.getText("TXT_KEY_MOD_HEADER", ()) + szText
+				popup = CyPopupInfo()
+				popup.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_TEXT)
+				popup.setText(szText)
+				popup.addPopup(iPlayer)
 
 	'''
 	def onPreSave(self, argsList): return
@@ -953,10 +965,7 @@ class CvEventManager:
 					CyTeamL = GC.getTeam(iTeamL)
 
 				# Factor in winners handicap versus losers handicap
-				iHandicapFactor = 100 + 4 * (GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent() - GC.getHandicapInfo(CyPlayerL.getHandicapType()).getCivicUpkeepPercent())
-				if iHandicapFactor < 1: iHandicapFactor = 1
-				# Test variant, may be better.
-				iHandicapFactor2 = 1000 * GC.getHandicapInfo(CyPlayerL.getHandicapType()).getCivicUpkeepPercent() / GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent()
+				iHandicapFactor = 1000 * GC.getHandicapInfo(CyPlayerL.getHandicapType()).getCivicUpkeepPercent() / GC.getHandicapInfo(CyPlayerW.getHandicapType()).getCivicUpkeepPercent()
 
 				# Message
 				if iPlayerAct is None:
@@ -976,31 +985,33 @@ class CvEventManager:
 							szTxt = CyPlayerW.getName()
 				# Sneak promo
 				if bSneak:
-					iStolen = CyTeamL.getEspionagePointsAgainstTeam(iTeamW) * 2 - CyTeamW.getEspionagePointsAgainstTeam(iTeamL)
-					if iStolen > 1:
-						iStolen = intSqrt(iStolen * 100) * 10 / iHandicapFactor
-					if iStolen > 0:
-						CyTeamW.changeEspionagePointsAgainstTeam(iTeamL, iStolen)
-						CyTeamL.changeEspionagePointsAgainstTeam(iTeamW,-iStolen)
-						# Message
-						if iPlayerW == iPlayerAct:
-							CvUtil.sendMessage(
-								TRNSLTR.getText("TXT_KEY_MSG_SNEAK_YOU", (szTxt, iStolen)), iPlayerW, 16,
-								'Art/Interface/Buttons/Process/spyprocessmeager.dds',
-								ColorTypes(44), iX, iY, True, True, bForce=False
-							)
-						elif iPlayerL == iPlayerAct:
-							CvUtil.sendMessage(
-								TRNSLTR.getText("TXT_KEY_MSG_SNEAK",(szTxt, iStolen)), iPlayerL, 16,
-								'Art/Interface/Buttons/Process/spyprocessmeager.dds',
-								ColorTypes(44), iX, iY, True, True, bForce=False
-							)
+					iLoserPointsAgainstWinner = CyTeamL.getEspionagePointsAgainstTeam(iTeamW)
+					iWinnerPointsAgainstLoser = CyTeamW.getEspionagePointsAgainstTeam(iTeamL)
+					iBase = 5 * iLoserPointsAgainstWinner - iWinnerPointsAgainstLoser
+					if iBase > 0:
+						iStolen = intSqrt(iBase * iLoserPointsAgainstWinner / (1 + iWinnerPointsAgainstLoser)) * iHandicapFactor / 1000
+						if iStolen > 0:
+							CyTeamW.changeEspionagePointsAgainstTeam(iTeamL, iStolen)
+							CyTeamL.changeEspionagePointsAgainstTeam(iTeamW,-iStolen)
+							# Message
+							if iPlayerW == iPlayerAct:
+								CvUtil.sendMessage(
+									TRNSLTR.getText("TXT_KEY_MSG_SNEAK_YOU", (szTxt, iStolen)), iPlayerW, 16,
+									'Art/Interface/Buttons/Process/spyprocessmeager.dds',
+									ColorTypes(44), iX, iY, True, True, bForce=False
+								)
+							elif iPlayerL == iPlayerAct:
+								CvUtil.sendMessage(
+									TRNSLTR.getText("TXT_KEY_MSG_SNEAK",(szTxt, iStolen)), iPlayerL, 16,
+									'Art/Interface/Buttons/Process/spyprocessmeager.dds',
+									ColorTypes(44), iX, iY, True, True, bForce=False
+						)
 				# Marauder promo
 				if bMarauder:
 					iStolen = CyPlayerL.getGold() / (CyPlayerL.getNumUnits() + 1)
 					if iStolen > 0:
 						iStolen = intSqrt(iStolen)
-						iStolen *= iHandicapFactor2
+						iStolen *= iHandicapFactor
 						iStolen /= 1000
 
 					if iStolen > 0:
@@ -1026,7 +1037,7 @@ class CvEventManager:
 
 					if CyTeamL.isHasTech(iTechW) or not CyTeamW.isHasTech(iTechL):
 
-						iStolen = intSqrt(CyPlayerL.calculateBaseNetResearch() * 100) / iHandicapFactor
+						iStolen = intSqrt(CyPlayerL.calculateBaseNetResearch() * 4) * iHandicapFactor / 1000
 						if iStolen:
 							CyTeamW.changeResearchProgress(iTechW, iStolen, iPlayerW)
 							CyTeamL.changeResearchProgress(iTechL,-iStolen, iPlayerL)
@@ -2550,41 +2561,43 @@ class CvEventManager:
 							if listPlots:
 								bAtCapital = False
 								iUnit = CyCity.getConscriptUnit()
-								for i in xrange(iNumUnits):
-									iPlot = GAME.getSorenRandNum(len(listPlots), "Partisan event placement")
-									CyPlayerHC.initUnit(iUnit, listPlots[iPlot].getX(), listPlots[iPlot].getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+								if iUnit > -1:
+									for i in xrange(iNumUnits):
+										iPlot = GAME.getSorenRandNum(len(listPlots), "Partisan event placement")
+										CyPlayerHC.initUnit(iUnit, listPlots[iPlot].getX(), listPlots[iPlot].getY(), UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 
-								unitInfo = GC.getUnitInfo(iUnit)
-								CvUtil.sendMessage(
-									TRNSLTR.getText("TXT_KEY_EVENT_PARTISANS_1", (iNumUnits, unitInfo.getTextKey(), CyCity.getName())),
-									iPlayerHC, 10, unitInfo.getButton(), ColorTypes(13), iX, iY, True, True, bForce=False
-								)
-								CvUtil.sendMessage(
-									TRNSLTR.getText("TXT_KEY_EVENT_PARTISANS_OTHER_1", (CyPlayerHC.getCivilizationAdjectiveKey(), CyCity.getName(), iNumUnits, unitInfo.getTextKey())),
-									iPlayer, 10, unitInfo.getButton(), ColorTypes(44), iX, iY, True, True
-								)
+									unitInfo = GC.getUnitInfo(iUnit)
+									CvUtil.sendMessage(
+										TRNSLTR.getText("TXT_KEY_EVENT_PARTISANS_1", (iNumUnits, unitInfo.getTextKey(), CyCity.getName())),
+										iPlayerHC, 10, unitInfo.getButton(), ColorTypes(13), iX, iY, True, True, bForce=False
+									)
+									CvUtil.sendMessage(
+										TRNSLTR.getText("TXT_KEY_EVENT_PARTISANS_OTHER_1", (CyPlayerHC.getCivilizationAdjectiveKey(), CyCity.getName(), iNumUnits, unitInfo.getTextKey())),
+										iPlayer, 10, unitInfo.getButton(), ColorTypes(44), iX, iY, True, True
+									)
 
 						if bAtCapital and not CyPlayerHC.isNPC():
 
 							capital = CyPlayerHC.getCapitalCity()
 							iUnit = capital.getConscriptUnit()
-							iNumUnits = (iNumUnits + 1) / 2
-							iX = capital.getX(); iY = capital.getY()
-							for i in xrange(iNumUnits):
-								CyPlayerHC.initUnit(iUnit, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
+							if iUnit > -1:
+								iNumUnits = (iNumUnits + 1) / 2
+								iX = capital.getX(); iY = capital.getY()
+								for i in xrange(iNumUnits):
+									CyPlayerHC.initUnit(iUnit, iX, iY, UnitAITypes.UNITAI_ATTACK, DirectionTypes.DIRECTION_SOUTH)
 
-							unitInfo = GC.getUnitInfo(iUnit)
-							CvUtil.sendMessage(
-								TRNSLTR.getText("TXT_KEY_EVENT_PARTISANS_2", (iNumUnits, unitInfo.getTextKey(), CyCity.getName())), iPlayerHC, 10,
-								unitInfo.getButton(), ColorTypes(13), iX, iY, True, True, bForce=False
-							)
-							if not capital.isRevealed(iPlayer, False):
-								iX = CyCity.getX(); iY = CyCity.getY()
+								unitInfo = GC.getUnitInfo(iUnit)
+								CvUtil.sendMessage(
+									TRNSLTR.getText("TXT_KEY_EVENT_PARTISANS_2", (iNumUnits, unitInfo.getTextKey(), CyCity.getName())), iPlayerHC, 10,
+									unitInfo.getButton(), ColorTypes(13), iX, iY, True, True, bForce=False
+								)
+								if not capital.isRevealed(iPlayer, False):
+									iX = CyCity.getX(); iY = CyCity.getY()
 
-							CvUtil.sendMessage(
-								TRNSLTR.getText("TXT_KEY_EVENT_PARTISANS_OTHER_2", (CyPlayerHC.getCivilizationAdjectiveKey(), CyCity.getName(), iNumUnits, unitInfo.getTextKey())),
-								iPlayer, 10, unitInfo.getButton(), ColorTypes(44), iX, iY, True, True
-							)
+								CvUtil.sendMessage(
+									TRNSLTR.getText("TXT_KEY_EVENT_PARTISANS_OTHER_2", (CyPlayerHC.getCivilizationAdjectiveKey(), CyCity.getName(), iNumUnits, unitInfo.getTextKey())),
+									iPlayer, 10, unitInfo.getButton(), ColorTypes(44), iX, iY, True, True
+								)
 						break
 					elif iCultureLevel == 2:
 						break
@@ -2794,8 +2807,6 @@ class CvEventManager:
 
 	def onGameUpdate(self, argsList):
 		# Called on each game turn slice.
-#		turnSlice = argsList[0][0][0]	# (((turnSlice, ), ), )
-
 		# OOS Logger
 		if self.bNetworkMP and CyInterface().isOOSVisible():
 			import OOSLogger
@@ -2865,9 +2876,6 @@ class CvEventManager:
 		unit = GC.getPlayer(userData[0]).getUnit(userData[1])
 		newName = popupReturn.getEditBoxString(0)
 		unit.setName(newName)
-		if GAME.GetWorldBuilderMode():
-			WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).placeStats()
-			WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).placeCurrentUnit()
 
 	def __eventWBPlayerScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getPlayer(userData[0]).setScriptData(TextUtil.convertToStr(popupReturn.getEditBoxString(0)))
@@ -2882,7 +2890,6 @@ class CvEventManager:
 
 	def __eventWBUnitScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getPlayer(userData[0]).getUnit(userData[1]).setScriptData(TextUtil.convertToStr(popupReturn.getEditBoxString(0)))
-		WBUnitScreen.WBUnitScreen(CvScreensInterface.worldBuilderScreen).placeScript()
 
 	def __eventWBPlotScriptPopupApply(self, playerID, userData, popupReturn):
 		GC.getMap().plot(userData[0], userData[1]).setScriptData(TextUtil.convertToStr(popupReturn.getEditBoxString(0)))

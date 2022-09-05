@@ -16,8 +16,6 @@ public:
 	DllExport CvSelectionGroupAI();
 	DllExport virtual ~CvSelectionGroupAI();
 
-	void AI_init();
-	void AI_uninit();
 	void AI_reset();
 
 	void AI_separate();

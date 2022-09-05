@@ -95,7 +95,7 @@ class EnhancedTechConquest:
 				continue
 			iTechsBehind += 1
 			# Continue if the conquerer cannot research the technology
-			if bCheckPrereq and not CyPlayerN.canResearch(iTech):
+			if bCheckPrereq and not CyPlayerN.canResearch(iTech, True):
 				continue
 			# Append the technology to the possible technology list
 			iCost = CyTeamN.getResearchCost(iTech)

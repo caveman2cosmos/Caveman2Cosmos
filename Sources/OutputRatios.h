@@ -5,7 +5,7 @@
 struct OutputRatios
 {
 	OutputRatios(int food, int production, int commerce);
-	void SetOutputWeights(int foodWeight, double productionWeight, double commerceWeight);
+	static void setBaseOutputWeights(int foodWeight, int productionWeight, int commerceWeight);
 	void IncreaseOutputWeights(int foodWeight, int productionWeight, int commerceWeight);
 	void IncreaseFoodWeight(const int foodWeight);
 	void DecraseFoodWeight(const int foodWeight);
@@ -17,9 +17,11 @@ struct OutputRatios
 	int food_ratio;
 	int production_ratio;
 	int commerce_ratio;
+	/*
 	int food_weight;
 	int production_weight;
 	int commerce_weight;
+	*/
 };
 
 #endif

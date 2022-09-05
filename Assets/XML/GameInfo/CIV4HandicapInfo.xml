@@ -66,14 +66,14 @@
 			<iStartingWorkerUnits>1</iStartingWorkerUnits>
 			<iAIDeclareWarProb>50</iAIDeclareWarProb>
 			<iAIWorkRateModifier>-30</iAIWorkRateModifier>
-			<iAIGrowthPercent>130</iAIGrowthPercent>
-			<iAITrainPercent>130</iAITrainPercent>
-			<iAIWorldTrainPercent>130</iAIWorldTrainPercent>
-			<iAIConstructPercent>124</iAIConstructPercent>
-			<iAIWorldConstructPercent>124</iAIWorldConstructPercent>
-			<iAICreatePercent>124</iAICreatePercent>
-			<iAIWorldCreatePercent>124</iAIWorldCreatePercent>
-			<iAIResearchPercent>112</iAIResearchPercent>
+			<iAIGrowthPercent>115</iAIGrowthPercent>
+			<iAITrainPercent>124</iAITrainPercent>
+			<iAIWorldTrainPercent>115</iAIWorldTrainPercent>
+			<iAIConstructPercent>118</iAIConstructPercent>
+			<iAIWorldConstructPercent>115</iAIWorldConstructPercent>
+			<iAICreatePercent>115</iAICreatePercent>
+			<iAIWorldCreatePercent>115</iAIWorldCreatePercent>
+			<iAIResearchPercent>109</iAIResearchPercent>
 			<iAICivicUpkeepPercent>130</iAICivicUpkeepPercent>
 			<iAIUnitUpkeepPercent>130</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>130</iAIUnitSupplyPercent>
@@ -88,146 +88,31 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- High Gold -->
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Hunter -->
 				<GoodyType>GOODY_HUNTER</GoodyType>
-				<GoodyType>GOODY_RANGER</GoodyType>
-				<GoodyType>GOODY_WARDEN</GoodyType>
-				<GoodyType>GOODY_WARDEN2</GoodyType>
-				<GoodyType>GOODY_GAME_HUNTER</GoodyType>
-				<GoodyType>GOODY_BIG_GAME_HUNTER</GoodyType>
 				<GoodyType>GOODY_HUNTER</GoodyType>
-				<GoodyType>GOODY_RANGER</GoodyType>
-				<GoodyType>GOODY_WARDEN</GoodyType>
-				<GoodyType>GOODY_WARDEN2</GoodyType>
-				<GoodyType>GOODY_GAME_HUNTER</GoodyType>
-				<GoodyType>GOODY_BIG_GAME_HUNTER</GoodyType>
 				<!-- Low Research -->
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<!-- Worker -->
 				<GoodyType>GOODY_GATHERER</GoodyType>
-				<GoodyType>GOODY_WORKER</GoodyType>
-				<GoodyType>GOODY_DOG_WORKER</GoodyType>
-				<GoodyType>GOODY_ELEPHANT_WORKER</GoodyType>
-				<GoodyType>GOODY_MULE_WORKER</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
-				<GoodyType>GOODY_CLONES</GoodyType>
 				<GoodyType>GOODY_GATHERER</GoodyType>
-				<GoodyType>GOODY_WORKER</GoodyType>
-				<GoodyType>GOODY_DOG_WORKER</GoodyType>
-				<GoodyType>GOODY_ELEPHANT_WORKER</GoodyType>
-				<GoodyType>GOODY_MULE_WORKER</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
-				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -238,19 +123,6 @@
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
-				<!-- Settler -->
-				<GoodyType>GOODY_SETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER2</GoodyType>
-				<GoodyType>GOODY_SETTLER3</GoodyType>
-				<GoodyType>GOODY_COLONIST</GoodyType>
-				<GoodyType>GOODY_PIONEER</GoodyType>
-				<GoodyType>GOODY_AIRSETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER2</GoodyType>
-				<GoodyType>GOODY_SETTLER3</GoodyType>
-				<GoodyType>GOODY_COLONIST</GoodyType>
-				<GoodyType>GOODY_PIONEER</GoodyType>
-				<GoodyType>GOODY_AIRSETTLER</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -324,14 +196,14 @@
 			<iStartingWorkerUnits>1</iStartingWorkerUnits>
 			<iAIDeclareWarProb>55</iAIDeclareWarProb>
 			<iAIWorkRateModifier>-20</iAIWorkRateModifier>
-			<iAIGrowthPercent>120</iAIGrowthPercent>
-			<iAITrainPercent>120</iAITrainPercent>
-			<iAIWorldTrainPercent>120</iAIWorldTrainPercent>
-			<iAIConstructPercent>116</iAIConstructPercent>
-			<iAIWorldConstructPercent>116</iAIWorldConstructPercent>
-			<iAICreatePercent>116</iAICreatePercent>
-			<iAIWorldCreatePercent>116</iAIWorldCreatePercent>
-			<iAIResearchPercent>108</iAIResearchPercent>
+			<iAIGrowthPercent>110</iAIGrowthPercent>
+			<iAITrainPercent>116</iAITrainPercent>
+			<iAIWorldTrainPercent>110</iAIWorldTrainPercent>
+			<iAIConstructPercent>112</iAIConstructPercent>
+			<iAIWorldConstructPercent>110</iAIWorldConstructPercent>
+			<iAICreatePercent>110</iAICreatePercent>
+			<iAIWorldCreatePercent>110</iAIWorldCreatePercent>
+			<iAIResearchPercent>106</iAIResearchPercent>
 			<iAICivicUpkeepPercent>120</iAICivicUpkeepPercent>
 			<iAIUnitUpkeepPercent>120</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>120</iAIUnitSupplyPercent>
@@ -373,153 +245,29 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- High Gold -->
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Hunter -->
 				<GoodyType>GOODY_HUNTER</GoodyType>
-				<GoodyType>GOODY_RANGER</GoodyType>
-				<GoodyType>GOODY_WARDEN</GoodyType>
-				<GoodyType>GOODY_WARDEN2</GoodyType>
-				<GoodyType>GOODY_GAME_HUNTER</GoodyType>
-				<GoodyType>GOODY_BIG_GAME_HUNTER</GoodyType>
 				<!-- Low Research -->
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<!-- Worker -->
 				<GoodyType>GOODY_GATHERER</GoodyType>
-				<GoodyType>GOODY_WORKER</GoodyType>
-				<GoodyType>GOODY_DOG_WORKER</GoodyType>
-				<GoodyType>GOODY_ELEPHANT_WORKER</GoodyType>
-				<GoodyType>GOODY_MULE_WORKER</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
-				<GoodyType>GOODY_CLONES</GoodyType>
 				<GoodyType>GOODY_GATHERER</GoodyType>
-				<GoodyType>GOODY_WORKER</GoodyType>
-				<GoodyType>GOODY_DOG_WORKER</GoodyType>
-				<GoodyType>GOODY_ELEPHANT_WORKER</GoodyType>
-				<GoodyType>GOODY_MULE_WORKER</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
-				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -529,19 +277,6 @@
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
-				<!-- Settler -->
-				<GoodyType>GOODY_SETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER2</GoodyType>
-				<GoodyType>GOODY_SETTLER3</GoodyType>
-				<GoodyType>GOODY_COLONIST</GoodyType>
-				<GoodyType>GOODY_PIONEER</GoodyType>
-				<GoodyType>GOODY_AIRSETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER2</GoodyType>
-				<GoodyType>GOODY_SETTLER3</GoodyType>
-				<GoodyType>GOODY_COLONIST</GoodyType>
-				<GoodyType>GOODY_PIONEER</GoodyType>
-				<GoodyType>GOODY_AIRSETTLER</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -608,14 +343,14 @@
 			<iStartingExploreUnits>1</iStartingExploreUnits>
 			<iAIDeclareWarProb>60</iAIDeclareWarProb>
 			<iAIWorkRateModifier>-10</iAIWorkRateModifier>
-			<iAIGrowthPercent>110</iAIGrowthPercent>
-			<iAITrainPercent>110</iAITrainPercent>
-			<iAIWorldTrainPercent>110</iAIWorldTrainPercent>
-			<iAIConstructPercent>108</iAIConstructPercent>
-			<iAIWorldConstructPercent>108</iAIWorldConstructPercent>
-			<iAICreatePercent>108</iAICreatePercent>
-			<iAIWorldCreatePercent>108</iAIWorldCreatePercent>
-			<iAIResearchPercent>104</iAIResearchPercent>
+			<iAIGrowthPercent>105</iAIGrowthPercent>
+			<iAITrainPercent>108</iAITrainPercent>
+			<iAIWorldTrainPercent>105</iAIWorldTrainPercent>
+			<iAIConstructPercent>106</iAIConstructPercent>
+			<iAIWorldConstructPercent>105</iAIWorldConstructPercent>
+			<iAICreatePercent>105</iAICreatePercent>
+			<iAIWorldCreatePercent>105</iAIWorldCreatePercent>
+			<iAIResearchPercent>103</iAIResearchPercent>
 			<iAICivicUpkeepPercent>110</iAICivicUpkeepPercent>
 			<iAIUnitUpkeepPercent>110</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>110</iAIUnitSupplyPercent>
@@ -677,126 +412,29 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- High Gold -->
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Hunter -->
 				<GoodyType>GOODY_HUNTER</GoodyType>
-				<GoodyType>GOODY_RANGER</GoodyType>
-				<GoodyType>GOODY_WARDEN</GoodyType>
-				<GoodyType>GOODY_WARDEN2</GoodyType>
-				<GoodyType>GOODY_GAME_HUNTER</GoodyType>
-				<GoodyType>GOODY_BIG_GAME_HUNTER</GoodyType>
 				<!-- Low Research -->
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<!-- Worker -->
 				<GoodyType>GOODY_GATHERER</GoodyType>
-				<GoodyType>GOODY_WORKER</GoodyType>
-				<GoodyType>GOODY_DOG_WORKER</GoodyType>
-				<GoodyType>GOODY_ELEPHANT_WORKER</GoodyType>
-				<GoodyType>GOODY_MULE_WORKER</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
-				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -805,13 +443,6 @@
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
-				<!-- Settler -->
-				<GoodyType>GOODY_SETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER2</GoodyType>
-				<GoodyType>GOODY_SETTLER3</GoodyType>
-				<GoodyType>GOODY_COLONIST</GoodyType>
-				<GoodyType>GOODY_PIONEER</GoodyType>
-				<GoodyType>GOODY_AIRSETTLER</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -962,130 +593,25 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- High Gold -->
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Hunter -->
 				<GoodyType>GOODY_HUNTER</GoodyType>
-				<GoodyType>GOODY_RANGER</GoodyType>
-				<GoodyType>GOODY_WARDEN</GoodyType>
-				<GoodyType>GOODY_WARDEN2</GoodyType>
-				<GoodyType>GOODY_GAME_HUNTER</GoodyType>
-				<GoodyType>GOODY_BIG_GAME_HUNTER</GoodyType>
 				<!-- Low Research -->
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
@@ -1093,14 +619,6 @@
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<!-- Worker -->
 				<GoodyType>GOODY_GATHERER</GoodyType>
-				<GoodyType>GOODY_WORKER</GoodyType>
-				<GoodyType>GOODY_DOG_WORKER</GoodyType>
-				<GoodyType>GOODY_ELEPHANT_WORKER</GoodyType>
-				<GoodyType>GOODY_MULE_WORKER</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER</GoodyType>
-				<GoodyType>GOODY_MODERN_WORKER2</GoodyType>
-				<GoodyType>GOODY_CLONES</GoodyType>
 				<!-- High Research -->
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
 				<GoodyType>GOODY_HIGH_RESEARCH</GoodyType>
@@ -1108,13 +626,6 @@
 				<!-- Tech -->
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
-				<!-- Settler -->
-				<GoodyType>GOODY_SETTLER</GoodyType>
-				<GoodyType>GOODY_SETTLER2</GoodyType>
-				<GoodyType>GOODY_SETTLER3</GoodyType>
-				<GoodyType>GOODY_COLONIST</GoodyType>
-				<GoodyType>GOODY_PIONEER</GoodyType>
-				<GoodyType>GOODY_AIRSETTLER</GoodyType>
 			</Goodies>
 		</HandicapInfo>
 		<HandicapInfo>
@@ -1181,14 +692,14 @@
 			<iAIStartingExploreUnits>1</iAIStartingExploreUnits>
 			<iAIDeclareWarProb>70</iAIDeclareWarProb>
 			<iAIWorkRateModifier>10</iAIWorkRateModifier>
-			<iAIGrowthPercent>90</iAIGrowthPercent>
-			<iAITrainPercent>90</iAITrainPercent>
-			<iAIWorldTrainPercent>90</iAIWorldTrainPercent>
-			<iAIConstructPercent>92</iAIConstructPercent>
-			<iAIWorldConstructPercent>92</iAIWorldConstructPercent>
-			<iAICreatePercent>92</iAICreatePercent>
-			<iAIWorldCreatePercent>92</iAIWorldCreatePercent>
-			<iAIResearchPercent>96</iAIResearchPercent>
+			<iAIGrowthPercent>95</iAIGrowthPercent>
+			<iAITrainPercent>92</iAITrainPercent>
+			<iAIWorldTrainPercent>95</iAIWorldTrainPercent>
+			<iAIConstructPercent>94</iAIConstructPercent>
+			<iAIWorldConstructPercent>95</iAIWorldConstructPercent>
+			<iAICreatePercent>95</iAICreatePercent>
+			<iAIWorldCreatePercent>95</iAIWorldCreatePercent>
+			<iAIResearchPercent>97</iAIResearchPercent>
 			<iAICivicUpkeepPercent>90</iAICivicUpkeepPercent>
 			<iAIUnitUpkeepPercent>90</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>90</iAIUnitSupplyPercent>
@@ -1293,121 +804,24 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- High Gold -->
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Hunter -->
 				<GoodyType>GOODY_HUNTER</GoodyType>
-				<GoodyType>GOODY_RANGER</GoodyType>
-				<GoodyType>GOODY_WARDEN</GoodyType>
-				<GoodyType>GOODY_WARDEN2</GoodyType>
-				<GoodyType>GOODY_GAME_HUNTER</GoodyType>
-				<GoodyType>GOODY_BIG_GAME_HUNTER</GoodyType>
 				<!-- Low Research -->
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
@@ -1492,14 +906,14 @@
 			<iAIStartingWorkerUnits>1</iAIStartingWorkerUnits>
 			<iAIDeclareWarProb>75</iAIDeclareWarProb>
 			<iAIWorkRateModifier>20</iAIWorkRateModifier>
-			<iAIGrowthPercent>80</iAIGrowthPercent>
-			<iAITrainPercent>80</iAITrainPercent>
-			<iAIWorldTrainPercent>80</iAIWorldTrainPercent>
-			<iAIConstructPercent>84</iAIConstructPercent>
-			<iAIWorldConstructPercent>84</iAIWorldConstructPercent>
-			<iAICreatePercent>84</iAICreatePercent>
-			<iAIWorldCreatePercent>84</iAIWorldCreatePercent>
-			<iAIResearchPercent>92</iAIResearchPercent>
+			<iAIGrowthPercent>90</iAIGrowthPercent>
+			<iAITrainPercent>84</iAITrainPercent>
+			<iAIWorldTrainPercent>90</iAIWorldTrainPercent>
+			<iAIConstructPercent>88</iAIConstructPercent>
+			<iAIWorldConstructPercent>90</iAIWorldConstructPercent>
+			<iAICreatePercent>90</iAICreatePercent>
+			<iAIWorldCreatePercent>90</iAIWorldCreatePercent>
+			<iAIResearchPercent>94</iAIResearchPercent>
 			<iAICivicUpkeepPercent>80</iAICivicUpkeepPercent>
 			<iAIUnitUpkeepPercent>80</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>80</iAIUnitSupplyPercent>
@@ -1629,112 +1043,23 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- High Gold -->
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Hunter -->
 				<GoodyType>GOODY_HUNTER</GoodyType>
-				<GoodyType>GOODY_RANGER</GoodyType>
-				<GoodyType>GOODY_WARDEN</GoodyType>
-				<GoodyType>GOODY_WARDEN2</GoodyType>
-				<GoodyType>GOODY_GAME_HUNTER</GoodyType>
-				<GoodyType>GOODY_BIG_GAME_HUNTER</GoodyType>
 				<!-- Low Research -->
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
@@ -1812,14 +1137,14 @@
 			<iAIStartingWorkerUnits>1</iAIStartingWorkerUnits>
 			<iAIDeclareWarProb>80</iAIDeclareWarProb>
 			<iAIWorkRateModifier>30</iAIWorkRateModifier>
-			<iAIGrowthPercent>70</iAIGrowthPercent>
-			<iAITrainPercent>70</iAITrainPercent>
-			<iAIWorldTrainPercent>70</iAIWorldTrainPercent>
-			<iAIConstructPercent>76</iAIConstructPercent>
-			<iAIWorldConstructPercent>76</iAIWorldConstructPercent>
-			<iAICreatePercent>76</iAICreatePercent>
-			<iAIWorldCreatePercent>76</iAIWorldCreatePercent>
-			<iAIResearchPercent>88</iAIResearchPercent>
+			<iAIGrowthPercent>85</iAIGrowthPercent>
+			<iAITrainPercent>76</iAITrainPercent>
+			<iAIWorldTrainPercent>85</iAIWorldTrainPercent>
+			<iAIConstructPercent>82</iAIConstructPercent>
+			<iAIWorldConstructPercent>85</iAIWorldConstructPercent>
+			<iAICreatePercent>85</iAICreatePercent>
+			<iAIWorldCreatePercent>85</iAIWorldCreatePercent>
+			<iAIResearchPercent>91</iAIResearchPercent>
 			<iAICivicUpkeepPercent>70</iAICivicUpkeepPercent>
 			<iAIUnitUpkeepPercent>70</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>70</iAIUnitSupplyPercent>
@@ -1974,112 +1299,23 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- High Gold -->
 				<GoodyType>GOODY_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_HIGH_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_HIGH_GOLD</GoodyType>
 				<!-- Hunter -->
 				<GoodyType>GOODY_HUNTER</GoodyType>
-				<GoodyType>GOODY_RANGER</GoodyType>
-				<GoodyType>GOODY_WARDEN</GoodyType>
-				<GoodyType>GOODY_WARDEN2</GoodyType>
-				<GoodyType>GOODY_GAME_HUNTER</GoodyType>
-				<GoodyType>GOODY_BIG_GAME_HUNTER</GoodyType>
 				<!-- Low Research -->
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
@@ -2164,14 +1400,14 @@
 			<iAIStartingWorkerUnits>2</iAIStartingWorkerUnits>
 			<iAIDeclareWarProb>85</iAIDeclareWarProb>
 			<iAIWorkRateModifier>40</iAIWorkRateModifier>
-			<iAIGrowthPercent>60</iAIGrowthPercent>
-			<iAITrainPercent>60</iAITrainPercent>
-			<iAIWorldTrainPercent>60</iAIWorldTrainPercent>
-			<iAIConstructPercent>68</iAIConstructPercent>
-			<iAIWorldConstructPercent>68</iAIWorldConstructPercent>
-			<iAICreatePercent>68</iAICreatePercent>
-			<iAIWorldCreatePercent>68</iAIWorldCreatePercent>
-			<iAIResearchPercent>84</iAIResearchPercent>
+			<iAIGrowthPercent>80</iAIGrowthPercent>
+			<iAITrainPercent>68</iAITrainPercent>
+			<iAIWorldTrainPercent>80</iAIWorldTrainPercent>
+			<iAIConstructPercent>76</iAIConstructPercent>
+			<iAIWorldConstructPercent>80</iAIWorldConstructPercent>
+			<iAICreatePercent>80</iAICreatePercent>
+			<iAIWorldCreatePercent>80</iAIWorldCreatePercent>
+			<iAIResearchPercent>88</iAIResearchPercent>
 			<iAICivicUpkeepPercent>60</iAICivicUpkeepPercent>
 			<iAIUnitUpkeepPercent>60</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>60</iAIUnitSupplyPercent>
@@ -2338,102 +1574,21 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- Hunter -->
 				<GoodyType>GOODY_HUNTER</GoodyType>
-				<GoodyType>GOODY_RANGER</GoodyType>
-				<GoodyType>GOODY_WARDEN</GoodyType>
-				<GoodyType>GOODY_WARDEN2</GoodyType>
-				<GoodyType>GOODY_GAME_HUNTER</GoodyType>
-				<GoodyType>GOODY_BIG_GAME_HUNTER</GoodyType>
 				<!-- Low Research -->
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
@@ -2506,14 +1661,14 @@
 			<iAIStartingWorkerUnits>1</iAIStartingWorkerUnits>
 			<iAIDeclareWarProb>90</iAIDeclareWarProb>
 			<iAIWorkRateModifier>50</iAIWorkRateModifier>
-			<iAIGrowthPercent>50</iAIGrowthPercent>
-			<iAITrainPercent>50</iAITrainPercent>
-			<iAIWorldTrainPercent>50</iAIWorldTrainPercent>
-			<iAIConstructPercent>60</iAIConstructPercent>
-			<iAIWorldConstructPercent>60</iAIWorldConstructPercent>
-			<iAICreatePercent>60</iAICreatePercent>
-			<iAIWorldCreatePercent>60</iAIWorldCreatePercent>
-			<iAIResearchPercent>80</iAIResearchPercent>
+			<iAIGrowthPercent>75</iAIGrowthPercent>
+			<iAITrainPercent>60</iAITrainPercent>
+			<iAIWorldTrainPercent>75</iAIWorldTrainPercent>
+			<iAIConstructPercent>70</iAIConstructPercent>
+			<iAIWorldConstructPercent>75</iAIWorldConstructPercent>
+			<iAICreatePercent>75</iAICreatePercent>
+			<iAIWorldCreatePercent>75</iAIWorldCreatePercent>
+			<iAIResearchPercent>85</iAIResearchPercent>
 			<iAICivicUpkeepPercent>50</iAICivicUpkeepPercent>
 			<iAIUnitUpkeepPercent>50</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>50</iAIUnitSupplyPercent>
@@ -2704,102 +1859,21 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Recon -->
 				<GoodyType>GOODY_SCOUT</GoodyType>
-				<GoodyType>GOODY_GUIDE</GoodyType>
-				<GoodyType>GOODY_EXPLORER</GoodyType>
-				<GoodyType>GOODY_ADVENTURER</GoodyType>
-				<GoodyType>GOODY_MOTORCYCLE</GoodyType>
-				<GoodyType>GOODY_UNMANNED_TRIKE</GoodyType>
 				<!-- Hunter -->
 				<GoodyType>GOODY_HUNTER</GoodyType>
-				<GoodyType>GOODY_RANGER</GoodyType>
-				<GoodyType>GOODY_WARDEN</GoodyType>
-				<GoodyType>GOODY_WARDEN2</GoodyType>
-				<GoodyType>GOODY_GAME_HUNTER</GoodyType>
-				<GoodyType>GOODY_BIG_GAME_HUNTER</GoodyType>
 				<!-- Low Research -->
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
@@ -2874,14 +1948,14 @@
 			<iAIStartingWorkerUnits>2</iAIStartingWorkerUnits>
 			<iAIDeclareWarProb>100</iAIDeclareWarProb>
 			<iAIWorkRateModifier>70</iAIWorkRateModifier>
-			<iAIGrowthPercent>30</iAIGrowthPercent>
-			<iAITrainPercent>30</iAITrainPercent>
-			<iAIWorldTrainPercent>30</iAIWorldTrainPercent>
-			<iAIConstructPercent>44</iAIConstructPercent>
-			<iAIWorldConstructPercent>44</iAIWorldConstructPercent>
-			<iAICreatePercent>44</iAICreatePercent>
-			<iAIWorldCreatePercent>44</iAIWorldCreatePercent>
-			<iAIResearchPercent>72</iAIResearchPercent>
+			<iAIGrowthPercent>65</iAIGrowthPercent>
+			<iAITrainPercent>44</iAITrainPercent>
+			<iAIWorldTrainPercent>65</iAIWorldTrainPercent>
+			<iAIConstructPercent>58</iAIConstructPercent>
+			<iAIWorldConstructPercent>65</iAIWorldConstructPercent>
+			<iAICreatePercent>65</iAICreatePercent>
+			<iAIWorldCreatePercent>65</iAIWorldCreatePercent>
+			<iAIResearchPercent>79</iAIResearchPercent>
 			<iAICivicUpkeepPercent>30</iAICivicUpkeepPercent>
 			<iAIUnitUpkeepPercent>30</iAIUnitUpkeepPercent>
 			<iAIUnitSupplyPercent>30</iAIUnitSupplyPercent>
@@ -3081,88 +2155,17 @@
 				<GoodyType>GOODY_HEALING</GoodyType>
 				<!-- Healer -->
 				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
-				<GoodyType>GOODY_HEALER</GoodyType>
-				<GoodyType>GOODY_APOTHECARY</GoodyType>
-				<GoodyType>GOODY_SURGEON</GoodyType>
-				<GoodyType>GOODY_MEDIC</GoodyType>
-				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
-				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
 				<!-- Experience -->
 				<GoodyType>GOODY_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
-				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
 				<!-- Warrior -->
 				<GoodyType>GOODY_WARRIOR</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SPEARMAN</GoodyType>
-				<GoodyType>GOODY_AXEMAN</GoodyType>
-				<GoodyType>GOODY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_MACEMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
-				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
-				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
-				<GoodyType>GOODY_RIFLEMAN</GoodyType>
-				<GoodyType>GOODY_INFANTRY</GoodyType>
-				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
-				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
-				<GoodyType>GOODY_STONE_THROWER</GoodyType>
-				<GoodyType>GOODY_ARCHER</GoodyType>
-				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
-				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<GoodyType>GOODY_WARRIOR</GoodyType>
 				<!-- Low Gold -->
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<GoodyType>GOODY_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
-				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
 				<!-- Low Research -->
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
 				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>

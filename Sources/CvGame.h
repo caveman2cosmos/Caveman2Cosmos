@@ -83,8 +83,7 @@ public:
 	MapTypes getCurrentMap() const;
 	void setCurrentMap(MapTypes eNewMap);
 
-	void updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwitch, bool bForceAcceptCurrent = false);
-	void cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWorkers, bool bSetCamera, bool bAllowViewportSwitch) const;
+	void updateSelectionListInternal(int iCycleDelay = 0, bool bSetCamera = true, bool bAllowViewportSwitch = true, bool bForceAcceptCurrent = false);
 
 	void processGreatWall(bool bIn, bool bForce = false, bool bSeeded = true) const;
 	void noteGraphicRebuildNeeded();
@@ -96,7 +95,7 @@ public:
 	DllExport void getPlotUnits(const CvPlot *pPlot, std::vector<CvUnit*>& plotUnits) const;
 
 	DllExport void cycleCities(bool bForward = true, bool bAdd = false) const;
-	void cycleSelectionGroups(bool bClear, bool bForward = true, bool bWorkers = false) const;
+	void cycleSelectionGroups(bool bClear = true, bool bForward = true, bool bWorkers = false, bool bSetCamera = true, bool bAllowViewportSwitch = true) const;
 	bool nextPlotUnit(const CvPlot* pPlot, bool bForward = true, bool bAuto = false, int iCount = -1) const;
 	DllExport bool cyclePlotUnits(const CvPlot* pPlot, bool bForward = true, bool bAuto = false, int iCount = -1) const;
 	DllExport bool selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift) const;
@@ -215,7 +214,6 @@ public:
 
 	DllExport int getTurnSlice() const;
 	int getMinutesPlayed() const;
-	void changeTurnSlice(int iChange);
 
 	int getCutoffSlice() const;
 	void setCutoffSlice(int iNewValue);
@@ -236,10 +234,6 @@ public:
 	int getNumCities() const;
 	int getNumCivCities() const;
 	void changeNumCities(int iChange);
-
-	int getStatusPromotion(int i) const;
-	int getNumStatusPromotions() const;
-	void setStatusPromotions();
 
 	int getTotalPopulation() const;
 	void changeTotalPopulation(int iChange);
@@ -369,6 +363,7 @@ public:
 	int getTopPopCount() const;
 	int getImprovementCount(ImprovementTypes eIndex) const;
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
+
 protected:
 	void doFlexibleDifficulty();
 	void doHightoLow();
@@ -383,8 +378,8 @@ protected:
 	int m_iNumWonders;
 	bool m_bDiploVictoryEnabled;
 	bool m_bAnyoneHasUnitZoneOfControl;
-public:
 
+public:
 	unsigned int getInitialTime() const;
 	DllExport void setInitialTime(unsigned int uiNewValue);
 
@@ -415,6 +410,8 @@ public:
 
 	DllExport bool isFinalInitialized() const;
 	DllExport void setFinalInitialized(bool bNewValue);
+	void onFinalInitialized(const bool bNewGame = false);
+	void doPreTurn0();
 
 	bool getPbemTurnSent() const;
 	DllExport void setPbemTurnSent(bool bNewValue);
@@ -710,6 +707,7 @@ protected:
 	int m_iDateTurn;
 
 	int m_iTurnSlice;
+	int m_iMinGameSliceToCycleUnit;
 	int m_iCutoffSlice;
 	int m_iNumGameTurnActive;
 	int m_iNumCities;
@@ -754,8 +752,6 @@ protected:
 	//TB Nukefix (reversal) Next line should be commented out
 	//bool m_bNukesValid;
 	TeamTypes m_circumnavigatingTeam;
-
-	std::vector<int> m_aiStatusPromotions;
 
 	HandicapTypes m_eHandicap;
 	PlayerTypes m_ePausePlayer;
@@ -812,7 +808,7 @@ protected:
 	ReplayMessageList m_listReplayMessages;
 	CvReplayInfo* m_pReplayInfo;
 
-	DWORD	m_lastGraphicUpdateRequestTickCount;
+	DWORD m_lastGraphicUpdateRequestTickCount;
 
 	int m_iNumSessions;
 
@@ -820,11 +816,10 @@ protected:
 	stdext::hash_map<VoteSourceTypes, ReligionTypes> m_mapVoteSourceReligions;
 	std::vector<EventTriggerTypes> m_aeInactiveTriggers;
 
-	int		m_iNumCultureVictoryCities;
-	int		m_eCultureVictoryCultureLevel;
+	int m_iNumCultureVictoryCities;
+	int m_eCultureVictoryCultureLevel;
 
-	bool	m_plotGroupHashesInitialized;
-	bool	m_bRecalculatingModifiers;
+	bool m_bRecalculatingModifiers;
 
 	void doTurn();
 	void doDeals();

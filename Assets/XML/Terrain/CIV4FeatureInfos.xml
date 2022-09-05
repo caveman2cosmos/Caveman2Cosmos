@@ -1970,6 +1970,7 @@
 			<Description>TXT_KEY_FEATURE_VERY_TALL_GRASS</Description>
 			<Civilopedia>TXT_KEY_FEATURE_VERY_TALL_GRASS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_VERY_TALL_GRASS</ArtDefineTag>
+			<iSeeThrough>1</iSeeThrough>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -6534,11 +6535,11 @@
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<TerrainType>TERRAIN_COAST</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>

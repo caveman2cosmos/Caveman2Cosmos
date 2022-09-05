@@ -71,13 +71,6 @@
 		<Spanish>¡Anarquía! (%d1)</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>INTERFACE_BUILDING_TAB</Tag>
-		<English>Building Tab</English>
-		<French>Bâtiments</French>
-		<German>Gebäude bauen</German>
-		<Russian>Панель зданий</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>INTERFACE_CITY_COMMERCE_RATE</Tag>
 		<English>%F1: %s2 (%D3/Turn)</English>
 		<French>%F1 : %s2 (%D3/tour)</French>
@@ -316,14 +309,25 @@
 		<Spanish>[COLOR_UNIT_TEXT]#%d1 - %s2[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>INTERFACE_UNIT_TAB</Tag>
+		<Tag>INTERFACE_TAB_ADMIN</Tag>
+		<English>Admin Tab</English>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_TAB_BUILDING</Tag>
+		<English>Building Tab</English>
+		<French>Bâtiments</French>
+		<German>Gebäude bauen</German>
+		<Russian>Панель зданий</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_TAB_UNIT</Tag>
 		<English>Unit Tab</English>
 		<French>Unités</French>
 		<German>Einheiten bauen</German>
 		<Russian>Панель юнитов</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>INTERFACE_WONDER_TAB</Tag>
+		<Tag>INTERFACE_TAB_WONDER</Tag>
 		<English>Wonder Tab</English>
 		<French>Merveilles</French>
 		<German>Wunder bauen</German>
@@ -8657,55 +8661,6 @@
 		<Russian>Для всех городов в течение Золотого века</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_GATHERER</Tag>
-		<English>The villagers have provided you with a Gatherer!</English>
-		<French>Les villageois vous fournissent un ouvrier!</French>
-		<German>Die Bewohner haben Euch einen Sammler zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un raccoglitore!</Italian>
-		<Spanish>Los aldeanos os han dado un Recolector.</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Zbieracze!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì ñîáèðàòåëÿ!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
-		<English>The villagers have provided you with their most skilled huntsman!</English>
-		<French>Les villageois vous ont fourni leur chasseur le plus talentueux!</French>
-		<German>Die Dorfbewohner haben Ihnen ihren geschicktesten Jäger zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno fornito il loro cacciatore più abile!</Italian>
-		<Spanish>¡Los aldeanos te han proporcionado su cazador más hábil!</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Łowcy!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì îõîòíèêà!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_STONE_SPEARMAN</Tag>
-		<English>The villagers have provided you with a Stone Spearman!</English>
-		<French>Les villageois vous fournissent un guerrier!</French>
-		<German>Die Bewohner haben Euch einen Steinspeerkämpfer zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un Guerriero con lancia in pietra!</Italian>
-		<Spanish>Los aldeanos os han dado un Guerrero con lanza de piedra.</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Kamienni Włócznicy!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì äðåâíåãî êîïüåíîñöà!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_STONE_THROWER</Tag>
-		<English>The villagers have provided you with a Stone Thrower!</English>
-		<French>Les Villageois vous ont procuré un Lanceur de Pierres!</French>
-		<German>Die Bewohner haben Euch einen Steinewerfer zur Verfügung gestellt!</German>
-		<Spanish>¡Los aldeanos os han proporcionado un Lanzador de piedras!</Spanish>
-		<Polish>Tubylcy wytrenowali i przekazali Ci Miotacza Kamieni!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì äðåâíåãî ìåòàòåëÿ!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_TRIBE</Tag>
-		<English>The villagers have provided you with a Tribe!</English>
-		<French>Les villageois vous fournissent un colon!</French>
-		<German>Eine ortsansässige Sippe hat sich Euch angeschlossen!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato una tribù!</Italian>
-		<Spanish>Los aldeanos os han dado una Tribu.</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Szczep!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì ïëåìÿ!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOOD_HEALTH_FROM_SPECIALISTS</Tag>
 		<English>%D1_Change[ICON_HEALTHY] from Specialists</English>
 		<French>%D1_Change[ICON_HEALTHY] des Spécialistes</French>
@@ -12465,38 +12420,6 @@
 		<Spanish>Ya podéis adoptar el [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT] como religión oficial...</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION</Tag>
-		<English>Choose production in %s1_City...</English>
-		<French>Choix de la production de %s1_City...</French>
-		<German>Wählt die Produktion in %s1_City ...</German>
-		<Italian>Scegli la produzione a %s1_City...</Italian>
-		<Spanish>Elegid la producción de %s1_City...</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_BUILDING</Tag>
-		<English>You have constructed a building ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) in %s2_City...</English>
-		<French>Vous avez construit un bâtiment ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) à %s2_City...</French>
-		<German>Ihr habt ein Gebäude ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) in %s2_City errichtet ...</German>
-		<Italian>Hai costruito l'edificio ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) a %s2_City...</Italian>
-		<Spanish>Habéis construido [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT] en %s2_City...</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_PROJECT</Tag>
-		<English>You have created a project ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) in %s2_City...</English>
-		<French>Vous avez créé un projet ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) à %s2_City...</French>
-		<German>Ihr habt ein Projekt ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) in %s2_City erschaffen ...</German>
-		<Italian>Hai creato il progetto ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) a %s2_City...</Italian>
-		<Spanish>Habéis creado [COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT] en %s2_City...</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_UNIT</Tag>
-		<English>You have trained a unit ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) in %s2_City...</English>
-		<French>Vous avez entraîné une nouvelle unité ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) à %s2_City...</French>
-		<German>Ihr habt eine Einheit ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) in %s2_City ausgebildet ...</German>
-		<Italian>Hai addestrato l'unità ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) a %s2_City...</Italian>
-		<Spanish>Habéis entrenado a [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT] en %s2_City...</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MINIMIZED_CHOOSE_TECH</Tag>
 		<English>Choose a new technology to research...</English>
 		<French>Choisissez une nouvelle technologie à rechercher...</French>
@@ -14041,18 +13964,16 @@
 		<Russian>Âû îáíàðóæèëè íîâûé îðèåíòèð!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE</Tag>
-		<English>You have discovered a source of [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] near %s2_CityName!</English>
-		<French>Vous avez découvert une source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] près de %s2_CityName !</French>
-		<German>Ihr habt in der Nähe der Stadt %s2_CityName ein Vorkommen des Bonusguts [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] entdeckt!</German>
-		<Italian>Hai scoperto una risorsa di [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] vicino a %s2_CityName!</Italian>
-		<Spanish>Habéis descubierto una fuente de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] cerca de %s2_CityName.</Spanish>
+		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_IMPROVEMENT</Tag>
+		<English>Industrious workers outside of %s1_CityName have discovered a source of [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT]!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_CITY</Tag>
+		<English>Citizens of %s1_CityName have stumbled upon a nearby source of [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT]!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_VOLCANO</Tag>
-		<English>Beneath the remnants of the old volcano near %s2_CityName a source of [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] has been discovered!</English>
-		<French>Parmi les restes d'un ancien volcan près de %s2_CityName, une source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] a été découverte!</French>
-		<Polish>Pod pozostałościami starego wulkanu nieopodal %s2_CityName odkryto nowe źródło [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT]!</Polish>
+		<English>Beneath the remnants of the old volcano a source of [COLOR_HIGHLIGHT_TEXT]obsidian[COLOR_REVERT] has been discovered!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DISTANCE_FROM_PALACE</Tag>
@@ -14084,7 +14005,7 @@
 		<Tag>TXT_KEY_MISC_ENABLES</Tag>
 		<English>[ICON_BULLET]Enables[SPACE]</English>
 		<French>[ICON_BULLET]Permet[SPACE]:[SPACE]</French>
-		<German>[ICON_BULLET]neue Beförderungen:[SPACE]</German>
+		<German>[ICON_BULLET]ermöglicht:[SPACE]</German>
 		<Italian>[ICON_BULLET]Permette[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Permite[SPACE]</Spanish>
 	</TEXT>
@@ -19755,6 +19676,7 @@
 		<Tag>TXT_KEY_PASSAGE</Tag>
 		<English>[ICON_BULLET]This unit can enter territories you have a Right of Passage or Open Borders agreement with.</English>
 		<French>[ICON_BULLET]Cette unité peut entrer à l'intérieur des frontières lorsqu'il existe un droit de passage ou un Accord de frontières ouvertes</French>
+		<German>[ICON_BULLET]kann Gebiete von Nationen betreten, mit denen eine Durchreiseerlaubnis oder offene Grenzen vereinbart wurden</German>		
 		<Russian>[ICON_BULLET]Этот отряд может входить на территории, с владельцами которых у вас есть право на проход или соглашение об открытых границах.</Russian>
 	</TEXT>
 	<TEXT>
@@ -20651,38 +20573,6 @@
 		<Spanish>Por supuesto, cancelémoslo.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_POPUP_CANNOT_CONSTRUCT_WORK_NEXT_LIMITED</Tag>
-		<English>You cannot continue constructing [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
-		<French>Vous ne pouvez plus assurer la construction de : [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à la place ?</French>
-		<German>Die Errichtung des Gebäudes [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
-		<Italian>Non puoi continuare a costruire l'edificio [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
-		<Spanish>No podéis seguir construyendo [NUM1:el:la:los:las] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
-	</TEXT>
-		<TEXT>
-		<Tag>TXT_KEY_POPUP_CANNOT_CREATE_WORK_NEXT</Tag>
-		<English>You cannot continue creating a [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
-		<French>Vous ne pouvez plus assurer la création de : [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à la place ?</French>
-		<German>Das Projekt [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
-		<Italian>Non puoi continuare la realizzazione del progetto [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
-		<Spanish>No podéis seguir creando [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CANNOT_CREATE_WORK_NEXT_LIMITED</Tag>
-		<English>You cannot continue creating [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
-		<French>Vous ne pouvez plus créer : [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à la place ?</French>
-		<German>Das Projekt [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
-		<Italian>Non puoi continuare a creare il progetto [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
-		<Spanish>No podéis seguir creando [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CANNOT_TRAIN_WORK_NEXT_LIMITED</Tag>
-		<English>You cannot continue training [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
-		<French>Vous ne pouvez plus entraîner : [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à la place ?</French>
-		<German>Die Ausbildung der Einheit [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
-		<Italian>Non puoi continuare a realizzare l'unità [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
-		<Spanish>No podéis seguir entrenando [NUM1:al:a la:a los:a las] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_POPUP_CHOOSE_TECH</Tag>
 		<English>Choose a technology...</English>
 		<French>Choisissez une technologie...</French>
@@ -20721,22 +20611,6 @@
 		<German>Ja, stimmt die Gebete an!</German>
 		<Italian>Sì, iniziamo subito i riti!</Italian>
 		<Spanish>¡Sí, que empiecen los cánticos!</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CREATED_WORK_ON_NEXT_LIMITED</Tag>
-		<English>You have created [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName. What would you like to work on next?</English>
-		<French>Vous avez créé : [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire ensuite ?</French>
-		<German>Das Projekt [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName wurde fertig gestellt. Wie lautet Euer nächster Befehl?</German>
-		<Italian>Hai creato il progetto [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare adesso?</Italian>
-		<Spanish>Habéis creado [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer a continuación?</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CREATED_WORK_ON_NEXT_SPACESHIP</Tag>
-		<English>%s2_CityName has added [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] to the spaceship. What would you like to work on next?</English>
-		<French>Ajout de : [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] au vaisseau par %s2_CityName. Que souhaitez-vous construire ensuite ?</French>
-		<German>%s2_CityName hat das Projekt [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] zum Raumschiff hinzugefügt. Woran möchtet Ihr als Nächstes arbeiten?</German>
-		<Italian>%s2_CityName ha aggiunto [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] all'astronave. Qual è il prossimo compito?</Italian>
-		<Spanish>%s2_CityName ha añadido [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] a la nave espacial. ¿Qué queréis hacer a continuación?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_CULTURE_DEMAND</Tag>
@@ -21092,27 +20966,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_RECOMMENDED</Tag>
-		<English>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Recommended (%s3_AdvsrName)[COLOR_REVERT]</English>
+		<English>%s1_ProdName (%d2 Turns) - [COLOR_HIGHLIGHT_TEXT]%s3_Advisor[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Conseil (%s3_AdvsrName) :[COLOR_REVERT] %s1_ProdName (%d2_NumTurns) </French>
 		<German>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]empfohlen (%s3_AdvsrName)[COLOR_REVERT]</German>
 		<Italian>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Consigliato (%s3_AdvsrName)[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT](%s3_AdvsrName) Se recomienda crear:[COLOR_REVERT] %s1_ProdName (%d2_NumTurns [NUM2:turno:turnos])</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_RECOMMENDED_NO_ADV</Tag>
-		<English>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Recommended[COLOR_REVERT]</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Conseil :[COLOR_REVERT] %s1_ProdName (%d2_NumTurns) </French>
-		<German>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]empfohlen[COLOR_REVERT]</German>
-		<Italian>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Consigliato[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_HIGHLIGHT_TEXT]Se recomienda crear:[COLOR_REVERT] %s1_ProdName (%d2_NumTurns [NUM2:turno:turnos])</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_RECOMMENDED_NO_ADV_OR_TURNS</Tag>
-		<English>%s1_WorkName [COLOR_HIGHLIGHT_TEXT]Recommended[COLOR_REVERT]</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Conseil :[COLOR_REVERT] %s1_WorkName</French>
-		<German>%s1_WorkName [COLOR_HIGHLIGHT_TEXT]empfohlen[COLOR_REVERT]</German>
-		<Italian>%s1_WorkName [COLOR_HIGHLIGHT_TEXT]Consigliato[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_HIGHLIGHT_TEXT]Se recomienda:[COLOR_REVERT] %s1_WorkName</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_RECOMMENDED_ONLY_ADV</Tag>
@@ -21299,14 +21157,6 @@
 		<Spanish>Excelencia, %s1_CityName es una ciudad costera y debería aprovechar lo que le ofrece la mar. La construcción de [NUM2:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] aumentaría de manera significativa su crecimiento.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_POPUP_WHAT_TO_BUILD</Tag>
-		<English>What would you like to build in this city?</English>
-		<French>Que souhaitez-vous construire dans cette ville ?</French>
-		<German>Was wollt Ihr in dieser Stadt errichten?</German>
-		<Italian>Cosa vuoi creare in questa città?</Italian>
-		<Spanish>¿Qué os gustaría construir en esta ciudad?</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_POPUP_YES_START_REVOLUTION</Tag>
 		<English>Yes, let's get this revolution started!</English>
 		<French>Oui, que la révolution commence !</French>
@@ -21328,6 +21178,10 @@
 		<Spanish>Poder</Spanish>
 		<Polish>Siła</Polish>
 		<Russian>Ìîãóùåñòâî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PREVIOUS_OUTPUT</Tag>
+		<English>Previous Output</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_CONVERTS</Tag>
@@ -22443,7 +22297,7 @@
 		<Tag>TXT_KEY_REQUIRES</Tag>
 		<English>[NEWLINE][COLOR_WARNING_TEXT]Requires[SPACE]</English>
 		<French>[NEWLINE][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
-		<German>[NEWLINE][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
+		<German>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
 		<Italian>[NEWLINE][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
 		<Spanish>[NEWLINE][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
 		<Polish>[NEWLINE][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
@@ -28475,7 +28329,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_DEFENDS_UNIT_FIRST</Tag>
 		<English>[ICON_BULLET]Defends first against %s1_unit_list</English>
 		<French>[ICON_BULLET]Défend d'abord contre %s1_unit_list</French>
-		<German>[ICON_BULLET]Nimmt als Erstes die Verteidigung gegen folgende Einheiten auf: %s1_unit_list</German>
+		<German>[ICON_BULLET]verteidigt im Kampf vorrangig gegen: %s1_unit_list</German>
 		<Italian>[ICON_BULLET]Difende primariamente contro %s1_unit_list</Italian>
 		<Spanish>[ICON_BULLET]Defiende primero contra %s1_unit_list</Spanish>
 	</TEXT>
@@ -28547,7 +28401,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_HIDDEN_NATIONALITY</Tag>
 		<English>[ICON_BULLET]Hidden Nationality</English>
 		<French>[ICON_BULLET]Nationalité cachée</French>
-		<German>[ICON_BULLET]Versteckte Nationalität</German>
+		<German>[ICON_BULLET]versteckte Nationalität</German>
 		<Italian>[ICON_BULLET]Nazionalità nascosta</Italian>
 		<Spanish>[ICON_BULLET]Nacionalidad oculta</Spanish>
 	</TEXT>
@@ -28587,7 +28441,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_IGNORE_TERRAIN</Tag>
 		<English>[ICON_BULLET]Ignores Terrain Movement Costs</English>
 		<French>[ICON_BULLET]Ignore les pénalités de mouvement du terrain</French>
-		<German>[ICON_BULLET]Ignoriert Fortbewegungskosten auf Gelände</German>
+		<German>[ICON_BULLET]ignoriert Fortbewegungskosten auf Gelände</German>
 		<Italian>[ICON_BULLET]Ignora i costi di movimento sul terreno</Italian>
 		<Spanish>[ICON_BULLET]No le afectan los costes de movimiento por terreno</Spanish>
 	</TEXT>
@@ -28619,7 +28473,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_INVISIBLE_MOST</Tag>
 		<English>[ICON_BULLET]Invisible to Most Units</English>
 		<French>[ICON_BULLET]Invisible pour la plupart des unités</French>
-		<German>[ICON_BULLET]Für die meisten Einheiten unsichtbar</German>
+		<German>[ICON_BULLET]für die meisten Einheiten unsichtbar</German>
 		<Italian>[ICON_BULLET]Invisibile alla maggior parte delle unità</Italian>
 		<Spanish>[ICON_BULLET]Invisible para la mayoría de las unidades</Spanish>
 	</TEXT>
@@ -28709,7 +28563,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_REQUIRED_TO_BUILD</Tag>
 		<English>[ICON_BULLET]Can be built by[SPACE]</English>
 		<French>[ICON_BULLET]Peut être construit par[SPACE]</French>
-		<German>[ICON_BULLET]Kann errichtet werden von[SPACE]</German>
+		<German>[ICON_BULLET]kann errichtet werden von[SPACE]</German>
 		<Italian>[ICON_BULLET]L'unità può essere costruita da[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Construible por[SPACE]</Spanish>
 	</TEXT>
@@ -28726,7 +28580,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<!-- %s1_Text = can be any building, bonus, civic etc -->
 		<English>[COLOR_WARNING_TEXT]Requires %s1_Text[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert : %s1_Text[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Erfordert: %s1_Text[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]erfordert: %s1_Text[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Richiede %s1_Text[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Text[COLOR_REVERT]</Spanish>
 		<Russian>[COLOR_WARNING_TEXT]Требует %s1_Text[COLOR_REVERT]</Russian>
@@ -28906,7 +28760,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNIT_GORILLA_PEDIA</Tag>
 		<English>Gorillas, the largest of the living primates, are ground-dwelling omnivores that inhabit the forests of Africa. Gorillas are divided into two species and (still under debate as of 2007) either four or five subspecies. Its DNA is 97%-98% identical to that of a human, and are the next closest living relatives to humans after the two chimpanzee species.</English>
 		<French>Les gorilles, le plus grand des primats vivants, sont des omnivores de terre-logement qui habitent les forêts de l'Afrique. Des gorilles sont encore divisés en deux espèces et (sous la discussion en date de 2007) quatre ou cinq sous-espèces. Son ADN est 97%-98% identique à celui d'un humain, et est les prochains parents vivants les plus étroits aux humains après les deux espèces de chimpanzé.</French>
-		<German>Gorillas, das größte der lebenden Primas, sind Boden-Wohnung Allesfresser, die die Wälder von Afrika bewohnen. Gorillas werden in zwei Sorten und (noch unter Debatte ab 2007) geteilt, entweder vier oder fünf Unterarten. Seine DNA ist 97%-98% identisch zu dem eines Menschen und ist die folgenden nähsten lebenden Verwandten zu den Menschen nach den zwei Schimpansesorten.</German>
+		<German>[COLOR_UNIT_TEXT]Gorillas[COLOR_REVERT] sind die größten lebenden Primaten und bewohnen die mittleren Teile Afrikas. Die Gattung umfasst zwei Arten mit jeweils zwei Unterarten.[NEWLINE]Die schwanzlosen Menschenaffen sind robust gebaut, wobei Östliche Gorillas noch etwas schwerer und stämmiger sind. Die Arme sind deutlich länger als die Beine, womit sie sich am Boden im Knöchelgang bewegen. Hände und Füße sind sehr breit. Die großen Zehen sind wie die Daumen opponierbar. Die Fingerabdrücke sind wie beim Menschen einzigartig. Das Fell der Östlichen Gorillas ist schwarz, bei den Westlichen Gorillas eher braun. Bei älteren Männchen färbt es sich auf dem Rücken grau, weshalb sie auch Silberrücken genannt werden. Die Schnauze ist auffallend kurz und über den Augen bilden sich deutliche Wülste. Die Tiere besitzen 32 Zähne und sind reine Pflanzenfresser. Je nach Art sind Gorillas mehr oder weniger gute Kletterer. Obwohl sie nicht schwimmen können, sind sie nicht wasserscheu. Sie leben in Gruppen, die sich allerdings gelegentlich auflösen und neu formieren. Sie kommunizieren mit Rufen und Rülps- oder Grunzlauten sowie mit Gesten. Typisch ist das Trommeln auf die Brust als Begrüßung untereinander. Natürliche Feinde haben die Gorillas kaum, lediglich Jungtiere fallen gelegentlich Leoparden zum Opfer.[NEWLINE]Die Hauptbedrohung für den Gorilla ist der Mensch durch Bejagung und Lebensraumzerstörung. Forscher untersuchen schon seit längerer Zeit die Kommunikationsfähigkeit der Gorillas. So gab es beispielsweise Versuche, einem Weibchen die Gebärdensprache zu lehren.</German>
 		<Italian>I gorillas, i più grandi dei primati viventi, sono onnivori della terra-dimora che abitano le foreste dell'Africa. I gorillas sono divisi ancora in due specie e (sotto il dibattito a partire da 2007) quattro o cinque sottospeci. Il relativo DNA è 97%-98% identico a quello di un essere umano ed è i parenti viventi più vicini seguenti agli esseri umani dopo le due specie dello scimpanzè.</Italian>
 		<Spanish>Los gorilas, los más grandes de los primates vivos, son los omnívoros de la tierra-vivienda que habitan los bosques de África. Los gorilas todavía se dividen en dos especies y (bajo discusión en fecha 2007) cuatro o cinco subespecies. Su DNA es 97%-98% idéntico a el de un ser humano, y es los parientes vivos más cercanos siguientes a los seres humanos después de las dos especies del chimpancé.</Spanish>
 	</TEXT>

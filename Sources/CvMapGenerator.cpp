@@ -1,5 +1,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
+#include "CvBonusInfo.h"
 #include "CvFractal.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"

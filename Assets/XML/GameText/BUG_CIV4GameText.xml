@@ -1189,16 +1189,6 @@
 		<Russian>Øèðîêèé ýêðàí</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__BBAILEVEL_HOVER</Tag>
-		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
-		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__BBAILEVEL_TEXT</Tag>
-		<English>BBAI logging level</English>
-		<Spanish>Nivel de registro de BBAI</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__COLORCODING_HOVER</Tag>
 		<English>When checked, comments are color-coded for forum posts.</English>
 		<French>Lorsque activé, les commentaires sont colorés pour les forums.</French>
@@ -1245,7 +1235,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__ENABLED_TEXT</Tag>
-		<English>Enable Logging</English>
+		<English>Enable BBAI Logging</English>
 		<French>Activer le log</French>
 		<German>Protokollierung aktivieren</German>
 		<Italian>Abilita Registro Automatico</Italian>
@@ -1288,13 +1278,57 @@
 		<Russian>Ïóòü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FORMAT_HOVER</Tag>
-		<English>The format of the log output.</English>
-		<French>Le style du log.</French>
-		<German>Bestimmt die Formatierung, in der das Protokoll erstellt wird</German>
-		<Italian>Lo stile di visualizzazione del registro.</Italian>
-		<Spanish>Formato de la salida del registro.</Spanish>
-		<Russian>Ôîðìàò âûäà÷è â æóðíàë.</Russian>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FILEPATH_HOVER</Tag>
+		<English>Directory where log file resides (fully qualified path, i.e. C:\folder\subfolder or blank).</English>
+		<French>Le Répertoire ou le fichier de log sera sauvegardé (chemin complet, p.ex. C:\folder\subfolder ou vide).</French>
+		<German>Verzeichnis, in dem sich die Protokolldatei befindet (komplette Pfadangabe, d.h. C:\Ordner\Unterordner oder leer lassen)</German>
+		<Italian>Cartella dove è localizzato il file di registro (percorso completo (ad esempio C:\cartella\sottocartella) o vuoto).</Italian>
+		<Spanish>Directorio donde reside el archivo de registro (ruta completa, p. ej. C:\carpeta\subcarpeta o vacío).</Spanish>
+		<Russian>Êàòàëîã, â êîòîðîì ôàéë æóðíàëà ðàñïîëîæåí (ïîëíûé ïóòü, ò.å. C:\folder\subfolder èëè ïóñòî).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELCITYBBAI_HOVER</Tag>
+		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELCITYBBAI_TEXT</Tag>
+		<English>City log</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELPLAYERBBAI_HOVER</Tag>
+		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELPLAYERBBAI_TEXT</Tag>
+		<English>Player log</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELTEAMBBAI_HOVER</Tag>
+		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELTEAMBBAI_TEXT</Tag>
+		<English>Team log</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELUNITBBAI_HOVER</Tag>
+		<English>Set the level of BBAI logging - 0 = off, 1 = important events, 2 = many decisions, 3 = most detailed</English>
+		<Spanish>Cambie el nivel de registrado de BBAI: 0 = desactivado, 1 = eventos importantes, 2 = decisiones, 3 = más detallado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__LOGLEVELUNITBBAI_TEXT</Tag>
+		<English>Unit log</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__MISCLOGGING_TEXT</Tag>
+		<English>Misc Logging</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__MISCLOGGING_HOVER</Tag>
+		<English>Enables a wide variation of specialized logs.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FORMAT_LIST</Tag>
@@ -3025,6 +3059,30 @@
 		<Russian>Ñ÷åò÷èê ãíåâà</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTFOOD_HOVER</Tag>
+		<English>AI yield value weight defines the relative value ratio between the yield types.[NEWLINE]Don't mess with this unless you know what you're doing!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTFOOD_TEXT</Tag>
+		<English>Food</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTHAMMER_HOVER</Tag>
+		<English>AI yield value weight defines the relative value ratio between the yield types.[NEWLINE]Don't mess with this unless you know what you're doing!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTHAMMER_TEXT</Tag>
+		<English>Hammer</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTCOMMERCE_HOVER</Tag>
+		<English>AI yield value weight defines the relative value ratio between the yield types.[NEWLINE]Don't mess with this unless you know what you're doing!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__BASEWEIGHTCOMMERCE_TEXT</Tag>
+		<English>Commerce</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYSCREEN__GREATPERSONINFO_HOVER</Tag>
 		<English>When checked, displays the percentage chance and type of each possible [ICON_GREATPEOPLE] on the bar. The number shown is controlled by the General setting.</English>
 		<French>Lorsque activé, affiche le pourcentage de probabilité de chaque type de [ICON_GREATPEOPLE] dans la barre. Le Nombre de pourcentages affichés est géré dans l'onglet Général.</French>
@@ -4616,24 +4674,6 @@
 		<Italian>Mantenimento</Italian>
 		<Spanish>Mantenimiento</Spanish>
 		<Russian>Ñîäåðæàíèå</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__CDAZOOMCITYDETAILS_HOVER</Tag>
-		<English>When checked, the Zoom to City button includes detailed information about the city as when hovering over a city bar on the map.</English>
-		<French>Lorsque activé, Les Infos du bouton de Zoom sur la ville inclut les informations détaillées concernant celle-ci, de la même manière que l'infobulle de la ville sur la carte.</French>
-		<German>Zeigt im Tooltip der Schaltfläche "Zur Stadt zoomen" dieselben ausführlichen Informationen an, wie wenn der Mauszeiger über einen Stadtbalken auf der Karte bewegt würde</German>
-		<Italian>Quando è selezionato, il testo a comparsa del Bottone di Zoom Cittadino nella schermata del 'Consigliere Interno' include informazioni dettagliate sulla Città, come quelle visualizzate quando si posiziona il cursore sulla Barra Cittadina sulla mappa.</Italian>
-		<Spanish>Cuando se activa, el botón 'Detalles de la ciudad' incluye información detallada sobre la ciudad, como cuando se pasa el ratón por encima de la barra de ciudad en el mapa.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, êíîïêà ïåðåéòè ê ãîðîäó âêëþ÷àåò òàêóþ æå ïîäðîáíóþ èíôîðìàöèþ î ãîðîäå êàê êîãäà ïåðåìåùàåòåñü íàä ïîëîñêîé ãîðîäà íà êàðòå.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__CDAZOOMCITYDETAILS_TEXT</Tag>
-		<English>Zoom to City Details</English>
-		<French>Zoom des Détails de Ville</French>
-		<German>Zur Stadt zoomen</German>
-		<Italian>Bottone di Zoom Cittadino</Italian>
-		<Spanish>Botón de 'Detalles de la ciudad'</Spanish>
-		<Russian>Ïîäðîáíîñòè ïåðåéòè ê ãîðîäó</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__CONSCRIPTLIMIT_HOVER</Tag>
@@ -6761,21 +6801,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_HOVER</Tag>
-		<English>XP Gains based on how units fought in battle. The harder the battle, the more XP will be earned.</English>
-		<French>Les Gains d'EXP basés sur la manière dont l'unité se bat au combat. Plus la bataille est difficile, plus d'EXP est obtenu.</French>
-		<German>Die Erfahrungspunkte (EP) basieren darauf, wie erfolgreich die Einheiten in der Schlacht gekämpft haben. Je härter die Schlacht, umso mehr Erfahrungspunkte kommen hinzu.</German>
-		<Italian>Guadagni di XP basati su come combatte l'unità in battaglia. Più la battaglia è difficile, più XP viene guadagnata.</Italian>
-		<Spanish>La obtención de experiencia se basará en la destreza demostrada en la batalla. Cuanto más complicada sea, más experiencia se ganará.</Spanish>
-		<Russian>Ïðèðîñò îïûòà áóäåò çàâèñåòü èç òîãî, êàê îòðÿäû ñðàæàëèñü â áîþ. ×åì æåñò÷å áîé, òåì áîëüøå îïûòà áóäåò íà÷èñëÿòüñÿ.</Russian>
+		<English>Even without this option enabled, XP from combat is partially determined by victory chance. However, enabling this "Dynamic XP" game option will significantly magnify the effect, making it slower to train high-level units through low-risk combat (Minimum XP lowered to 0.01 from 1), but increasing further the XP gained by winning at lower odds (Maximum XP uncapped from 10). Additionally, many combat-adjacent actions such as pillaging, bombardment, etc. will give small amounts of XP.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__IMPROVEDXP_TEXT</Tag>
 		<English>Dynamic XP</English>
-		<French>EXP amélioré</French>
-		<German>Dynamischer Erfahrungsgewinn</German>
-		<Italian>XP dinamica</Italian>
-		<Spanish>Experiencia dinámica</Spanish>
-		<Russian>Äèíàìè÷åñêèé îïûò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__INFRASTRUCTUREIGNORESIMPROVEMENTS_HOVER</Tag>

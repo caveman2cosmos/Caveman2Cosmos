@@ -111,6 +111,10 @@ public:
 	int getNumFeatureChangeTypes() const;
 	bool isFeatureChangeType(int i) const;
 
+	int getCategory(int i) const;
+	int getNumCategories() const;
+	bool isCategory(int i) const;
+
 	//Post Load Functions
 	//void setHighestCost();
 	//int getHighestCost() const;
@@ -197,6 +201,7 @@ private:
 	std::vector<int> m_aiAlternativeImprovementUpgradeTypes;
 	std::vector<int> m_aiFeatureChangeTypes;
 	std::vector<BuildTypes> m_improvementBuildTypes;
+	std::vector<int> m_aiCategories;
 
 	CvPropertyManipulators m_PropertyManipulators;
 

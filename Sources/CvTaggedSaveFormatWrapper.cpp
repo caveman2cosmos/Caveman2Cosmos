@@ -1,6 +1,7 @@
 // CvTaggedSaveFormatWrapper.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvBonusInfo.h"
 #include "CvBuildingInfo.h"
 #include "CvGlobals.h"
 #include "CvImprovementInfo.h"
@@ -1010,6 +1011,17 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 			m_stream->WriteString(info.getType());
 		}
 		break;
+	case REMAPPED_CLASS_TYPE_CATEGORIES:
+		entry.numClasses = GC.getNumCategoryInfos();
+		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)& entry);
+		for (int i = 0; i < entry.numClasses; i++)
+		{
+			const CvCategoryInfo& info = GC.getCategoryInfo((CategoryTypes)i);
+
+			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
+				m_stream->WriteString(info.getType());
+		}
+		break;
 	case REMAPPED_CLASS_TYPE_MISSIONS:
 		entry.numClasses = GC.getNumMissionInfos();
 		m_stream->Write(sizeof(class_mapping_table_entry), (uint8_t*)&entry);
@@ -1112,6 +1124,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTables()
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_YIELDS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_COMMERCES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_DOMAINS);
+	WriteClassMappingTable(REMAPPED_CLASS_TYPE_CATEGORIES);
 }
 
 //	How many members of a given class type were present at save time?
@@ -1237,6 +1250,9 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType)
 			break;
 		case REMAPPED_CLASS_TYPE_INVISIBLES:
 			result = GC.getNumInvisibleInfos();
+			break;
+		case REMAPPED_CLASS_TYPE_CATEGORIES:
+			result = GC.getNumCategoryInfos();
 			break;
 		case REMAPPED_CLASS_TYPE_MISSIONS:
 			result = GC.getNumMissionInfos();

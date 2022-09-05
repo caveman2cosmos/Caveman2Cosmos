@@ -491,6 +491,21 @@ bool CvImprovementInfo::isFeatureChangeType(int i) const
 	return algo::any_of_equal(m_aiFeatureChangeTypes, i);
 }
 
+int CvImprovementInfo::getCategory(int i) const
+{
+	return (m_aiCategories[i]);
+}
+
+int CvImprovementInfo::getNumCategories() const
+{
+	return (int)(m_aiCategories.size());
+}
+
+bool CvImprovementInfo::isCategory(int i) const
+{
+	return algo::any_of_equal(m_aiCategories, i);
+}
+
 //Post Load functions
 //void CvImprovementInfo::setHighestCost()
 //{
@@ -626,6 +641,7 @@ void CvImprovementInfo::getCheckSum(uint32_t& iSum) const
 	CheckSum(iSum, m_bGlobal);
 	CheckSumC(iSum, m_aiAlternativeImprovementUpgradeTypes);
 	CheckSumC(iSum, m_aiFeatureChangeTypes);
+	CheckSumC(iSum, m_aiCategories);
 }
 
 bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
@@ -897,6 +913,7 @@ bool CvImprovementInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalTypeEnumWithDelayedResolution(m_iBonusChange, L"BonusChange");
 	pXML->SetOptionalVectorWithDelayedResolution(m_aiAlternativeImprovementUpgradeTypes, L"AlternativeImprovementUpgradeTypes");
 	pXML->SetOptionalVector(&m_aiFeatureChangeTypes, L"FeatureChangeTypes");
+	pXML->SetOptionalVector(&m_aiCategories, L"Categories");
 
 	return true;
 }
@@ -1130,6 +1147,7 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	GC.copyNonDefaultDelayedResolution((int*)&m_iBonusChange, (int*)&pClassInfo->m_iBonusChange);
 
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiFeatureChangeTypes, pClassInfo->m_aiFeatureChangeTypes);
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiCategories, pClassInfo->m_aiCategories);
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aeMapCategoryTypes, pClassInfo->getMapCategories());
 }
 

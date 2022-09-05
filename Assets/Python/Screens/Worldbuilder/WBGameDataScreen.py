@@ -704,7 +704,6 @@ class WBGameDataScreen:
 
 			elif NAME == "ExitSubScreen":
 				self.exit(screen)
-				return 1
 
 		elif iCode == 11: # List Select
 
@@ -745,6 +744,8 @@ class WBGameDataScreen:
 
 		return 1
 
+
+	def update(self, fDelta): return
 
 	# # # # # #
 	# Clean Up

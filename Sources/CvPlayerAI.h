@@ -157,14 +157,17 @@ public:
 	int AI_goldTarget() const;
 	int AI_goldValueAssessmentModifier() const;
 
-	TechTypes AI_bestTech(int iMaxPathLength = 1, bool bIgnoreCost = false, bool bAsync = false, TechTypes eIgnoreTech = NO_TECH, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR) const;
+	TechTypes AI_bestTech(int iMaxPathLength = 1, bool bIgnoreCost = false, bool bAsync = false, TechTypes eIgnoreTech = NO_TECH, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR);
 
-	int AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave) const;
-	int AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bEnablesWonder ) const;
-	int AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnablesUnitWonder ) const;
 
-	int  AI_TechValueCached(TechTypes eTech, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave, bool considerFollowOns = false) const;
-	int AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave) const;
+	bool AI_canTrainSettler();
+
+	int AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost, bool bAsync);
+	int AI_techBuildingValue( TechTypes eTech, int iPathLength, bool &bEnablesWonder);
+	int AI_techUnitValue( TechTypes eTech, int iPathLength, bool &bEnablesUnitWonder);
+
+	int  AI_TechValueCached(TechTypes eTech, bool bAsync, bool considerFollowOns = false);
+	int AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync);
 	void AI_chooseFreeTech();
 	void AI_chooseResearch();
 	void AI_startGoldenAge();
@@ -219,8 +222,8 @@ public:
 	int AI_maxGoldTrade(PlayerTypes ePlayer) const;
 	int AI_maxGoldPerTurnTrade(PlayerTypes ePlayer) const;
 
-	int AI_getGoldValue(const int iGold) const;
-	int AI_getGoldFromValue(const int iValue) const;
+	int AI_getGoldValue(const int iGold, const int iValuePercent) const;
+	int AI_getGoldFromValue(const int iValue, const int iValuePercent) const;
 
 	int AI_bonusVal(BonusTypes eBonus, int iChange = 1, bool bForTrade = false) const;
 	int AI_baseBonusVal(BonusTypes eBonus, bool bForTrade = false) const;
@@ -251,8 +254,8 @@ public:
 	int AI_totalWaterAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const;
 	int AI_countCargoSpace(UnitAITypes eUnitAI) const;
 
-	int AI_neededExplorers(const CvArea* pArea, bool bIdeal = false) const;
-	int AI_neededHunters(const CvArea* pArea, bool bIdeal = false) const;
+	int AI_neededExplorers(const CvArea* pArea) const;
+	int AI_neededHunters(const CvArea* pArea) const;
 	int AI_neededWorkers(const CvArea* pArea) const;
 	int AI_neededMissionaries(const CvArea* pArea, ReligionTypes eReligion) const;
 	int AI_neededExecutives(const CvArea* pArea, CorporationTypes eCorporation) const;
@@ -427,7 +430,7 @@ public:
 
 	void AI_recalculateFoundValues(int iX, int iY, int iInnerRadius, int iOuterRadius) const;
 
-	int AI_bestCityValue(const CvPlot* pPlot, int iFoundValue) const;
+	int AI_getCitySitePriorityFactor(const CvPlot* pPlot) const;
 	void AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) const;
 	void calculateCitySites() const;
 
@@ -481,9 +484,23 @@ public:
 
 	int AI_workerTradeVal(const CvUnit* pUnit) const;
 	int AI_militaryUnitTradeVal(const CvUnit* pUnit) const;
+
+	void resetBonusClassTallyCache(const int iTurn = -1, const bool bFull = true);
+
 private:
+	// Toffer - Transient Caches
+	int* m_bonusClassRevealed;
+	int* m_bonusClassUnrevealed;
+	int* m_bonusClassHave;
+	int m_iBonusClassTallyCachedTurn;
+
+	// will be set to true first time every game load when settler can be built. (since it never happens that you can no longer build settler unit
+	bool m_canTrainSettler;
+
 	int AI_corporationTradeVal(CorporationTypes eCorporation) const;
+
 public:
+
 	int AI_pledgeVoteTradeVal(const VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const;
 	int AI_secretaryGeneralTradeVal(VoteSourceTypes eVoteSource, PlayerTypes ePlayer) const;
 
@@ -496,7 +513,7 @@ public:
 	int AI_getCivicAttitudeChange(PlayerTypes ePlayer) const;
 	int AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, const CvUnit* pUnit = NULL, UnitAITypes eUnitAI = NO_UNITAI, bool bForBuildUp = false) const;
 	int AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit, const CvUnit* pUnit = NULL, UnitAITypes eUnitAI = NO_UNITAI) const;
-	TechTypes AI_bestReligiousTech(int iMaxPathLength, TechTypes eIgnoreTech, AdvisorTypes eIgnoreAdvisor) const;
+	TechTypes AI_bestReligiousTech(int iMaxPathLength, TechTypes eIgnoreTech, AdvisorTypes eIgnoreAdvisor);
 	int AI_religiousTechValue(TechTypes eTech) const;
 	int AI_ourCityValue(CvCity* pCity) const;
 
@@ -641,8 +658,8 @@ private:
 	static int plotDangerCacheReads;
 #endif
 
-	techPath* findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave) const;
-	int	 techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync, const std::vector<int>& paiBonusClassRevealed, const std::vector<int>& paiBonusClassUnrevealed, const std::vector<int>& paiBonusClassHave) const;
+	techPath* findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync);
+	int	 techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync);
 	TechTypes findStartTech(techPath* path) const;
 
 	typedef stdext::hash_map<TechTypes, int> TechTypesValueMap;

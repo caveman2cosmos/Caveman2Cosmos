@@ -63,7 +63,6 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__StrategicEvents"), bCanAdjustSettings)
 
 		self.addCheckbox(screen, center, "RoMSettings__IgnoreDisabledBuildingAlerts")
-		self.addCheckbox(screen, center, "RoMSettings__NoProductionPopup")
 
 		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__InfrastructureIgnoresImprovements"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__CanNotClaimOcean"), bCanAdjustSettings)

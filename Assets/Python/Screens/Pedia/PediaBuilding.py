@@ -50,10 +50,6 @@ class PediaBuilding:
 		bNotCulture = self.main.SECTION[1] != TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_C2C_CULTURES", ())
 
 		eWidGen				= WidgetTypes.WIDGET_GENERAL
-		eWidJuToBonus		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS
-		eWidJuToBuilding	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING
-		eWidJuToTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH
-		eWidJuToTerrain		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_TERRAIN
 		ePanelBlue50		= PanelStyles.PANEL_STYLE_BLUE50
 
 		enumGBS	= self.main.enumGBS
@@ -447,7 +443,7 @@ class PediaBuilding:
 			else:
 				bPlus = True
 			if aList3:
-				screen.attachLabel(panelName, "", szBracketL + szfont2b + "Own")
+				screen.attachLabel(panelName, "", szBracketL + szfont2b + TRNSLTR.getText("TXT_KEY_PEDIA_OWN", ()))
 				for i in range(len(aList3)):
 					iType, iAmount = aList3[i]
 					screen.attachLabel(panelName, "", szfont4b + " " + str(iAmount))

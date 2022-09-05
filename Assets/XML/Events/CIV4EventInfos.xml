@@ -1081,16 +1081,6 @@
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
-			<Type>EVENT_VOLCANO_1</Type>
-			<Description>TXT_KEY_EVENT_VOLCANO_1</Description>
-			<bPickCity>1</bPickCity>
-			<PythonCallback>applyVolcano1</PythonCallback>
-			<PythonCanDo>canApplyVolcano1</PythonCanDo>
-			<PythonHelp>getHelpVolcano1</PythonHelp>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
-		</EventInfo>
-		<EventInfo>
 			<Type>EVENT_DUSTBOWL_1</Type>
 			<Description>TXT_KEY_EVENT_DUSTBOWL_1</Description>
 			<bPickCity>1</bPickCity>
@@ -7013,8 +7003,8 @@
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
-			<Type>EVENT_VOLCANO_ERUPTION_1</Type>
-			<Description>TXT_KEY_EVENT_VOLCANO_ERUPTION_1</Description>
+			<Type>EVENT_VOLCANO_ERUPTION</Type>
+			<Description>TXT_KEY_EVENT_VOLCANO_ERUPTION</Description>
 			<bPickCity>1</bPickCity>
 			<PythonHelp>getHelpVolcanoEruption1</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>

@@ -905,7 +905,8 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 		// Optimize the case where we'e just stepping along the previously calculated path (as continueMission() does)
 		// If it is a MPOPTION_SIMULTANEOUS_TURNS game, don't apply that optimization to avoid sync issues
 		// TBOOSDEBUGNOTE : Changed !isHuman() to MPOPTION_SIMULTANEOUS_TURNS because it wasn't protecting against AI opponents withdrawing then re-evaluating Safety checks.
-		if (bSameGroup && m_generatedPath.lastPlot() == pTo && m_generatedPath.containsNode(pFrom))
+		if (bSameGroup && m_generatedPath.lastPlot() == pTo && m_generatedPath.containsNode(pFrom)
+		&& m_pBestTerminalNode != NULL && m_pBestTerminalNode->m_iPathTurns <= iMaxTurns)
 		{
 			bool bValid = true;
 

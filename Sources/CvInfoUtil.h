@@ -3,11 +3,9 @@
 #ifndef CvInfoUtil_h__
 #define CvInfoUtil_h__
 
-#include "CvInfoClassTraits.h"
 #include "CvGameCoreDLL.h"
-#include "CvBuildingInfo.h"
 #include "CvGlobals.h"
-#include "CvPython.h"
+#include "CvInfoClassTraits.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 #include "IDValueMap.h"
@@ -29,7 +27,6 @@ struct CvInfoUtil
 	{
 		foreach_(const WrappedVar* wrapper, m_wrappedVars)
 			delete wrapper;
-		m_wrappedVars.clear();
 	}
 
 	void initDataMembers()
@@ -89,8 +86,6 @@ struct CvInfoUtil
 		virtual void readXml(CvXMLLoadUtility*) = 0;
 		virtual void copyNonDefaults(const WrappedVar*)	= 0;
 
-		virtual void sendVarToPython(const char*) const {}
-
 		void* m_ptr;
 		const std::wstring m_tag;
 	};
@@ -129,13 +124,6 @@ struct CvInfoUtil
 		{
 			if (ref() == m_default)
 				ref() = static_cast<const IntWrapper*>(source)->ref();
-		}
-
-		void sendVarToPython(const char* file) const
-		{
-			Cy::call(file, "handleInteger", Cy::Args()
-				<< ref()
-			);
 		}
 
 		T& ref() const { return *static_cast<T*>(m_ptr); }
@@ -180,37 +168,57 @@ struct CvInfoUtil
 			CheckSum(iSum, ref());
 		}
 
-		void readXml(CvXMLLoadUtility* pXML)
+		virtual void readXml(CvXMLLoadUtility* pXML)
 		{
-			if (pXML->TryMoveToXmlFirstChild(m_tag.c_str()))
-			{
-				CvString szTextVal;
-				pXML->GetXmlVal(szTextVal);
-				ref() = static_cast<Enum_t>(GC.getInfoTypeForString(szTextVal));
-				pXML->MoveToXmlParent();
-			}
+			CvXMLLoadUtility::SetOptionalInfoType<NO_DELAYED_RESOLUTION>(pXML, ref(), m_tag.c_str());
 		}
 
-		void copyNonDefaults(const WrappedVar* source)
+		virtual void copyNonDefaults(const WrappedVar* source)
 		{
 			if (ref() == -1)
 				ref() = static_cast<const EnumWrapper*>(source)->ref();
 		}
 
-		void sendVarToPython(const char* file) const
+		Enum_t& ref() const { return *static_cast<Enum_t*>(m_ptr); }
+	};
+
+	///======================================
+	/// Enum with delayed resolution wrapper
+	///======================================
+
+	template <typename Enum_t>
+	struct EnumWithDelayedResolutionWrapper : EnumWrapper<Enum_t>
+	{
+		friend struct CvInfoUtil;
+
+	protected:
+		EnumWithDelayedResolutionWrapper(Enum_t& var, const wchar_t* tag)
+			: EnumWrapper<Enum_t>(var, tag)
+		{}
+
+		void uninitVar()
 		{
-			Cy::call(file, "handleEnum", Cy::Args()
-				<< static_cast<int>(ref())
-			);
+			GC.removeDelayedResolution(reinterpret_cast<int*>(&ref()));
 		}
 
-		Enum_t& ref() const { return *static_cast<Enum_t*>(m_ptr); }
+		void readXml(CvXMLLoadUtility* pXML)
+		{
+			CvXMLLoadUtility::SetOptionalInfoType<USE_DELAYED_RESOLUTION>(pXML, ref(), m_tag.c_str());
+		}
+
+		void copyNonDefaults(const WrappedVar* source)
+		{
+			GC.copyNonDefaultDelayedResolution(reinterpret_cast<int*>(&ref()), reinterpret_cast<int*>(&(static_cast<const EnumWithDelayedResolutionWrapper*>(source)->ref())));
+		}
 	};
 
 	template <typename Enum_t>
 	CvInfoUtil& addEnum(Enum_t& var, const wchar_t* tag)
 	{
-		m_wrappedVars.push_back(new EnumWrapper<Enum_t>(var, tag));
+		if (GC.isDelayedResolutionRequired(m_eInfoClass, InfoClassTraits<Enum_t>::InfoClassEnum))
+			m_wrappedVars.push_back(new EnumWithDelayedResolutionWrapper<Enum_t>(var, tag));
+		else
+			m_wrappedVars.push_back(new EnumWrapper<Enum_t>(var, tag));
 		return *this;
 	}
 
@@ -281,13 +289,6 @@ struct CvInfoUtil
 				if (element > -1 && algo::none_of_equal(ref(), element))
 					ref().push_back(element);
 			algo::sort(ref());
-		}
-
-		void sendVarToPython(const char* /*file*/) const
-		{
-			//Cy::call(file, "handleVector", Cy::Args()
-			//	<< ref()
-			//);
 		}
 
 		std::vector<T>& ref() const { return *static_cast<std::vector<T>*>(m_ptr); }
@@ -361,13 +362,6 @@ struct CvInfoUtil
 		{
 			ref().copyNonDefaultDelayedResolution(static_cast<const IDValueMapWithDelayedResolutionWrapper*>(source)->ref());
 		}
-
-		void checkSum(uint32_t& iSum) const
-		{
-			CheckSumC(iSum, ref());
-		}
-
-		IDValueMap_T& ref() const { return *static_cast<IDValueMap_T*>(m_ptr); }
 	};
 
 	template <typename T1, int default_>
@@ -434,24 +428,7 @@ struct CvInfoUtil
 		return *this;
 	}
 
-	///==================
-	/// Python interface
-	///==================
-
-	static void publishPythonInterface()
-	{
-		python::class_<CvInfoUtil, boost::noncopyable>("CvInfoUtil", python::init<CvBuildingInfo*>())
-			.def("sendDataMembersToPython", &CvInfoUtil::sendDataMembersToPython)
-		;
-	}
-
 private:
-	void sendDataMembersToPython(const std::string file) const
-	{
-		foreach_(const WrappedVar* wrapper, m_wrappedVars)
-			wrapper->sendVarToPython(file.c_str());
-	}
-
 	///========================================================
 	/// Wrapped pointers to the data members of an info object
 	///========================================================

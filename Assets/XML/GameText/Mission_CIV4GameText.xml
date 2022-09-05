@@ -1140,24 +1140,6 @@
 		<Spanish>El [COLOR_UNIT_TEXT]Espía[COLOR_REVERT] intentará robar los planos, que revelarán todas las unidades de la civilización objetivo.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_WAIT_FOR_TECH</Tag>
-		<English>Choose Desired Discovery Tech</English>
-		<French>Choisir la Technologie désirée</French>
-		<Italian>Scegli la tecnologia che vuoi ricercare</Italian>
-		<Spanish>Seleccionar el descubrimiento deseado</Spanish>
-		<Polish>Wybierz pożądaną Technologie</Polish>
-		<Russian>Выберите желательную технологию для обнаружения</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_WAIT_FOR_TECH_HELP</Tag>
-		<English>Allows selection of a desired discovery tech. The unit will sleep until that tech becomes available to research, and then will be consumed in researching it.</English>
-		<French>Permet à la sélection d'unité d'aider à la découvert d'une technologie. L'unité sera en veille jusqu'à ce que la technologie soit disponible pour la recherche, puis sera enlevée.</French>
-		<Italian>Permette la selezione di una tecnologia che si vuole ricercare. L'unità non si riattiverà finché quella tecnologia potrà essere ricercata, poi l'unità si consumerà ricercando la tecnologia.</Italian>
-		<Spanish>Permite seleccionar la tecnología que se desea descubrir. La unidad dormirá hasta que dicha tecnología esté disponible, entonces la investigará y se consumirá.</Spanish>
-		<Polish>Pozwala zaznaczonej jednostce na późniejsze odkrycie technologii. Jednostka będzie uśpiona dopóki technologia nie będzie możliwa do wynalezienia. Gdy już będzie możliwe odkrycie danej technologii jednostka automatycznie zostanie wykorzystana do odkrycia jej.</Polish>
-		<Russian>Позволяет выбрать желательную технологию для обнаружения. Юнит будет спать, пока эта технология не становится доступной, чтобы исследовать, и затем будет потреблять ее исследование.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_GO_TO_MAP_CISLUNAR</Tag>
 		<English>Transfer unit to Cislunar Space</English>
 	</TEXT>

@@ -13,36 +13,12 @@
 
 // Public Functions...
 
-CvSelectionGroupAI::CvSelectionGroupAI()
-{
-	AI_reset();
-}
-
-
-CvSelectionGroupAI::~CvSelectionGroupAI()
-{
-	AI_uninit();
-}
-
-
-void CvSelectionGroupAI::AI_init()
-{
-	AI_reset();
-
-	//--------------------------------
-	// Init other game data
-}
-
-
-void CvSelectionGroupAI::AI_uninit()
-{
-}
+CvSelectionGroupAI::CvSelectionGroupAI() { AI_reset(); }
+CvSelectionGroupAI::~CvSelectionGroupAI() { }
 
 
 void CvSelectionGroupAI::AI_reset()
 {
-	AI_uninit();
-
 	m_iMissionAIX = INVALID_PLOT_COORD;
 	m_iMissionAIY = INVALID_PLOT_COORD;
 
@@ -150,11 +126,64 @@ bool CvSelectionGroupAI::AI_update()
 
 	FAssert(!GET_PLAYER(getOwner()).isAutoMoves() || isHuman());
 
+	int iTempHack = 0; // XXX
 	bool bDead = false;
 	bool bFailedAlreadyFighting = false;
 
 	while (m_bGroupAttack && !bFailedAlreadyFighting || readyToMove())
 	{
+		iTempHack++;
+		if (iTempHack > 45 && iTempHack < 50)
+		{
+			CvUnit* pHeadUnit = getHeadUnit();
+			if (NULL != pHeadUnit)
+			{
+				int iPass = iTempHack - 45;
+				char szOut[1024];
+				CvWString szTempString;
+				getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+				sprintf
+				(
+					szOut, "Unit stuck in loop( Warning before short circuit (pass: %d) ): %S(%S)[%d, %d] (%S)\n",
+					iPass, pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+					pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString()
+				);
+				gDLL->messageControlLog(szOut);
+
+				FErrorMsg(szOut);
+			}
+			else FErrorMsg("error");
+		}
+		else if (iTempHack >= 50)
+		{
+			CvUnit* pHeadUnit = getHeadUnit();
+			if (NULL != pHeadUnit)
+			{
+				char szOut[1024];
+				CvWString szTempString;
+				getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+				sprintf
+				(
+					szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n",
+					pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
+					pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString()
+				);
+				gDLL->messageControlLog(szOut);
+
+				FErrorMsg(szOut);
+
+				pHeadUnit->finishMoves();
+			}
+			else if (readyToMove())
+			{
+				FErrorMsg("splitting group");
+				splitGroup(1);
+				break;
+			}
+			else FErrorMsg("error");
+
+			break;
+		}
 		// if we want to force the group to attack, force another attack
 		if (m_bGroupAttack)
 		{
@@ -223,11 +252,7 @@ bool CvSelectionGroupAI::AI_update()
 		{
 			pushMission(MISSION_SKIP);
 		}
-
-		// AI should never put units to sleep, how does this ever happen?
-		//FAssert( getHeadUnit()->isCargo() || getActivityType() != ACTIVITY_SLEEP );
 	}
-
 	return !bDead && (isBusy() || isCargoBusy());
 }
 
@@ -279,24 +304,12 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 
 		FAssert(getOwner() != NO_PLAYER);
 
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
-	/*                                                                                              */
-	/* Efficiency, Lead From Behind                                                                 */
-	/************************************************************************************************/
-		// From Lead From Behind by UncutDragon
-	/* original code
-		if (pPlot->getBestDefender(NO_PLAYER, getOwner(), NULL, !bPotentialEnemy, bPotentialEnemy) == NULL)
-	*/	// modified
-		if (!pPlot->hasDefender(false, NO_PLAYER, getOwner(), getHeadUnit(), !bPotentialEnemy, bPotentialEnemy))//disagrees with earlier count
-	/************************************************************************************************/
-	/* BETTER_BTS_AI_MOD                       END                                                  */
-	/************************************************************************************************/
+		if (!pPlot->hasDefender(false, NO_PLAYER, getOwner(), getHeadUnit(), !bPotentialEnemy, bPotentialEnemy))
 		{
-			return 100;
+			return 100; // Disagrees with earlier count
 		}
 
-		//	Initialize predicted health for all units involved
+		// Initialize predicted health for all units involved
 		int iStartAttackerMaxStrength = 0;
 		int iNumDefenders = 0;
 		bool bAttackingGroupHasAlwaysHostileUnits = false;
@@ -309,17 +322,17 @@ int CvSelectionGroupAI::AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy,
 			pLoopUnit->AI_setPredictedHitPoints(-1);
 
 #ifdef _DEBUG
-			sprintf(buffer,"Attacker id %d has start cur HP %d\n",pLoopUnit->getID(),pLoopUnit->getHP());
+			sprintf(buffer,"Attacker id %d has start cur HP %d\n", pLoopUnit->getID(), pLoopUnit->getHP());
 			OutputDebugString(buffer);
 #endif
 			if ( pLoopUnit->getHP() > 0 )
 			{
 				int iStr = pLoopUnit->maxCombatStr(pPlot, pLoopUnit);
 
-				iStartAttackerMaxStrength += iStr;	//	Really want a more general valuation here that accounts
-													//	for all promotions, not just those in action at this plot
+				iStartAttackerMaxStrength += iStr; // Really want a more general valuation here that accounts
+												//	for all promotions, not just those in action at this plot
 #ifdef _DEBUG
-				sprintf(buffer,"Attacker id %d has start str %d\n",pLoopUnit->getID(),iStr);
+				sprintf(buffer,"Attacker id %d has start str %d\n", pLoopUnit->getID(), iStr);
 				OutputDebugString(buffer);
 #endif
 				pLoopUnit->AI_setPredictedHitPoints(pLoopUnit->getHP());
@@ -981,21 +994,27 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 	if (oldPlot && eOldMissionAI != NO_MISSIONAI)
 	{
 		GET_PLAYER(getOwner()).AI_noteMissionAITargetCountChange(eOldMissionAI, oldPlot, -getNumUnits(), plot(), -getNumUnitCargoVolumeTotal());
+	}
 
-		// Worker city tracking
-		if (eOldMissionAI == MISSIONAI_BUILD)
+	// Worker city tracking
+	foreach_(CvUnit* unitX, units())
+	{
+		const UnitCompWorker* workerComp = unitX->getWorkerComponent();
+		if (workerComp)
 		{
-			CvCity* oldCity = oldPlot->getWorkingCity();
-			if (oldCity)
+			CvCity* city = GET_PLAYER(getOwner()).getCity(workerComp->getAssignedCity());
+			if (city)
 			{
-				oldCity->AI_changeWorkersHave(-1);
-				if (pNewUnit)
-					OutputDebugString(CvString::format("Worker at (%d,%d) detaching from mission for city %S\n", pNewUnit->getX(), pNewUnit->getY(), oldCity->getName().GetCString()).c_str());
-				else OutputDebugString(CvString::format("Worker detaching from mission at (%d,%d) for city %S\n", oldPlot->getX(), oldPlot->getY(), oldCity->getName().GetCString()).c_str());
+				// eOldMissionAI can be NO_MISSIONAI, and oldPlot can be NULL, at this point,
+				//	as a unit assigned to a city can join a selection-group that has not yet pushed the MISSIONAI_BUILD.
+				if (gUnitLogLevel > 2)
+				{
+					logBBAI("    Worker (%d) at (%d,%d) detaching from mission for city %S", unitX->getID(), unitX->getX(), unitX->getY(), city->getName().GetCString());
+				}
+				city->setWorkerHave(unitX->getID(), false);
 			}
 		}
 	}
-
 	// Set mission AI
 	m_eMissionAIType = eNewMissionAI;
 
@@ -1008,12 +1027,19 @@ void CvSelectionGroupAI::AI_setMissionAI(MissionAITypes eNewMissionAI, const CvP
 		if (eNewMissionAI == MISSIONAI_BUILD)
 		{
 			CvCity* newCity = newPlot->getWorkingCity();
-			if (newCity)
+			if (newCity && newCity->getOwner() == getOwner())
 			{
-				newCity->AI_changeWorkersHave(1);
-				if (pNewUnit)
-					OutputDebugString(CvString::format("Worker at (%d,%d) attaching to mission for city %S\n", pNewUnit->getX(), pNewUnit->getY(), newCity->getName().GetCString()).c_str());
-				else OutputDebugString(CvString::format("Worker attaching to mission at (%d,%d) for city %S\n", newPlot->getX(), newPlot->getY(), newCity->getName().GetCString()).c_str());
+				foreach_(CvUnit* unitX, units())
+				{
+					if (unitX->AI_getUnitAIType() == UNITAI_WORKER)
+					{
+						if (gUnitLogLevel > 2)
+						{
+							logBBAI("Worker (%d) at (%d,%d) attaching to mission for city %S\n", unitX->getID(), unitX->getX(), unitX->getY(), newCity->getName().GetCString());
+						}
+						newCity->setWorkerHave(unitX->getID(), true);
+					}
+				}
 			}
 		}
 
