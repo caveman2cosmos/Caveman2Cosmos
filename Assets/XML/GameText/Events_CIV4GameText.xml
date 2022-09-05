@@ -2660,9 +2660,9 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_VOLCANO_ACTIVE</Tag>
 		<English>Reports speak of increased volcanic activity.</English>
 		<French>Des rumeurs courent concernant une augmentation de l'activité volcanique.</French>
-		<Italian>Notizie provenienti dall'Impero %s1_civ_adjective parlano di attività vulcaniche in aumento.</Italian>
-		<Polish>Raporty z Imperium %s1_civ_adjective mówią o zwiększonej aktywności wulkanicznej.</Polish>
-		<Russian>Приходят известия о повышенной вулканической активности в державе %s1_civ_adjective.</Russian>
+		<Italian>Notizie parlano di attività vulcaniche in aumento.</Italian>
+		<Polish>Nadchodzą wieści o zwiększonej aktywności wulkanicznej.</Polish>
+		<Russian>Поступают новости об усилении вулканической активности.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_WARSHIPS_DONE</Tag>
