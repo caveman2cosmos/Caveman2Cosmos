@@ -1826,7 +1826,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_NSLCHAMP</Tag>
 		<English>The hometown hero of %s2_city is going to Disneyland after winning the %s1_civ_adjective National Sports League championship.</English>
 		<French>Le Héros local de %s2_city se déplace à Disneyland, après avoir gagné le Championnat de la Ligue Nationale de Sport %s1_civ_adjective.</French>
-		<Italian>Il campione nazionale di %s2_city sta andando a Disneyland dopo aver vinto il Campionato nazionale %s1_civ_adjective.</Italian>
+		<Italian>Il campione nazionale di %s2_city sta andando a Disneyland dopo aver vinto il Campionato sportivo nazionale %s1_civ_adjective.</Italian>
 		<Russian>Ðîäíîé ãîðîä ãåðîÿ %s2_city ñîáèðàåòñÿ ÷åñòâîâàòü åãî â Äèñíåéëåíäå ïîñëå îäåðæàííîé ïîáåäû â ñîðåâíîâàíèÿõ %s1_civ_adjective Êóáêà íàöèîíàëüíîé ñïîðòèâíîé ëèãè.</Russian>
 	</TEXT>
 	<TEXT>
@@ -2360,7 +2360,7 @@
 		<English>The %s1_civ_adjective cities have built enough [COLOR_BUILDING_TEXT]Colosseums[COLOR_REVERT] to complete the National Sports League quest, strengthening their social fabric and their national identity.</English>
 		<French>Les villes %s1:4_civ_adjective ont construit suffisamment de [COLOR_BUILDING_TEXT]Colisées[COLOR_REVERT] pour achever la quête de la Ligue Sportive Nationale, renforçant le tissu social et l'identité nationale.</French>
 		<German>Die %s1:2_civ_adjective Städte haben genug [COLOR_BUILDING_TEXT]Kolosseen[COLOR_REVERT] errichtet, um die Quest "Nationale Sportliga" zu erfüllen, wodurch ihr sozialer Zusammenhalt und ihr Nationalitätsbewusstsein gestärkt wird.</German>
-		<Italian>Le città %s1:4_civ_adjective hanno costruito abbastanza [COLOR_BUILDING_TEXT]Colossei[COLOR_REVERT] per completare la missione "Campionato nazionale", rinforzando il tessuto sociale e l'identità nazionale.</Italian>
+		<Italian>Le città %s1:4_civ_adjective hanno costruito abbastanza [COLOR_BUILDING_TEXT]Colossei[COLOR_REVERT] per completare la missione "Campionato sportivo nazionale", rinforzando il tessuto sociale e l'identità nazionale.</Italian>
 		<Spanish>Las ciudades %s1:4_civ_adjective han construido suficientes [COLOR_BUILDING_TEXT]Coliseos[COLOR_REVERT] para completar la misión Liga deportiva nacional, lo que fortalece su tejido social y su identidad nacional.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3515,7 +3515,7 @@
 		<English>The Blessed Sea[PARAGRAPH:1]You are tasked by your religious leaders to found cities on new landmasses. If you can build enough cities on new landmasses you will please the masters, who will offer you a choice of rewards.</English>
 		<French>La mer bénie[PARAGRAPH:1]Vous êtes chargé par vos chefs religieux de fonder des villes sur de nouveaux continents. Si vous parvenez à construire suffisamment de villes sur de nouveaux continents, vous honorerez vos maîtres, qui vous couvriront de récompenses.</French>
 		<German>Gesegnete See[PARAGRAPH:1]Eure religiösen Führer haben Euch aufgetragen, Städte in neuen Ländern anzusiedeln. Wenn Ihr genügend Städte in anderen Ländern gründet, werden die weisen Männer zufrieden sein und Euch zahlreiche Belohnungen anbieten.</German>
-		<Italian>Il Mare Benedetto[PARAGRAPH:1]Sei stato incaricato dai capi religiosi di fondare delle città su nuovi continenti. Se ne costruisci abbastanza, i capi religiosi ne saranno contenti e ti offriranno delle ricompense.</Italian>
+		<Italian>Mare Benedetto[PARAGRAPH:1]Sei stato incaricato dai capi religiosi di fondare delle città su nuovi continenti. Se ne costruisci abbastanza, i capi religiosi ne saranno contenti e ti offriranno delle ricompense.</Italian>
 		<Spanish>El bendito mar[PARAGRAPH:1]Los líderes religiosos han encargado la búsqueda de ciudades en nuevas masas de tierra. Si se construyen bastantes ciudades en ellas, se complacerá a los dirigentes, que ofrecerán un abanico de recompensas.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4680,19 +4680,19 @@
 		<French>C'est une trahison contre la République! Rassemblez le peuple et les unités d'armée fidèles pour combattre l'usurpateur!</French>
 		<German>Das ist Verrat gegen die Republik! Versammeln Sie das Volk und die loyalen die Armeemaßeinheiten, um den Usurpator zu bekämpfen!</German>
 		<Italian>Questo è tradimento contro la Repubblica! Raduna il popolo e le unità dell'esercito leali per combattere l'usurpatore!</Italian>
-		<Spanish>¡Ésto es una traición contra la República! ¡Reunid a la gente y las unidades leales del ejército para derrotar al usurpador!</Spanish>
 		<Polish>To jest zamach na Republikę! Wyślij lojalną armię do walki ze zdrajcami!</Polish>
 		<Russian>Это измена республике! Соберите надежных людей и верные Сенату полки, чтобы бороться с узурпатором!</Russian>
+		<Spanish>¡Ésto es una traición contra la República! ¡Reunid a la gente y las unidades leales del ejército para derrotar al usurpador!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CROSSING_THE_RUBICON_2</Tag>
 		<English>Setting brother against brother is not the answer. By using our cash reserves, we can persuade the Senate to restore the General to duty, and the soldiers to return to their barracks.</English>
 		<French>Opposer nos frères contre des frères n'est pas une solution. En employant nos réserves en espèces, nous pouvons persuader le sénat de réintégrer le général, et inciter les soldats à retourner à leurs casernes.</French>
 		<German>Bruder gegen Bruder aufzustellen ist nicht die Antwort. Indem wir unsere Barreserven verwenden, können wir den Senat überzeugen, den General wieder in sein AmMt zu setzen und die Soldaten zur Rückkehr zu ihre Kasernen zu bewegen.</German>
-		<Italian>Porre un fratello contro suo fratello non è la soluzione. Usando le nostre riserve di contanti, possiamo persuadere il senato a riportare in servizio il Generale ed i soldati a tornare nelle loro caserme.</Italian>
-		<Spanish>Luchar hermano contra hermano no es la solución. Usando nuestras reservas de efectivo, podemos persuadir al Senado para que el general vuelva a estar de servicio, y así los soldados vuelvan a sus cuarteles.</Spanish>
+		<Italian>Mettere fratello contro fratello non è la soluzione. Usando le nostre riserve del tesoro, possiamo persuadere il Senato a riportare in servizio il Generale e i soldati a tornare nelle caserme.</Italian>
 		<Polish>Bratobójcza walka nie jest rozwiązaniem problemu. Używając naszych rezerw pieniężnych, możemy wyperswadować senatowi, aby przywrócił Generała do służby a wojsko wysłał do koszar.</Polish>
 		<Russian>Нет ничего ужаснее братоубийственной войны. Лучше мы убедим Сенат с помощью щедрых денежных выплат вернуть полководца на службу, а солдат - вернуться в свои казармы.</Russian>
+		<Spanish>Luchar hermano contra hermano no es la solución. Usando nuestras reservas de efectivo, podemos persuadir al Senado para que el general vuelva a estar de servicio, y así los soldados vuelvan a sus cuarteles.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CROSSING_THE_RUBICON_2_HELP</Tag>
@@ -4700,9 +4700,9 @@
 		<French>[ICON_BULLET]Notre %s1_unit gagnera la promotion [COLOR_HIGHLIGHT_TEXT]%s2_promotion[COLOR_REVERT].</French>
 		<German>[ICON_BULLET]Unsere %s1_unit gewinnt eine[COLOR_HIGHLIGHT_TEXT]%s2_promotion[COLOR_REVERT] Beförderung.</German>
 		<Italian>[ICON_BULLET]La nostra unità %s1_unit guadagnerà la promozione [COLOR_HIGHLIGHT_TEXT]%s2_promotion[COLOR_REVERT].</Italian>
-		<Spanish>[ICON_BULLET]Nuestr[NUM1:o:a:os:as] %s1_unit obtendr[NUM1:á:á:án:án] el ascenso [COLOR_HIGHLIGHT_TEXT]%s2_promotion[COLOR_REVERT]</Spanish>
 		<Polish>[ICON_BULLET]Nasza jednostka %s1_unit otrzyma promocję [COLOR_HIGHLIGHT_TEXT]%s2_promotion[COLOR_REVERT].</Polish>
 		<Russian>[ICON_BULLET]Наш %s1_unit получит квалификацию [COLOR_HIGHLIGHT_TEXT]%s2_promotion[COLOR_REVERT].</Russian>
+		<Spanish>[ICON_BULLET]Nuestr[NUM1:o:a:os:as] %s1_unit obtendr[NUM1:á:á:án:án] el ascenso [COLOR_HIGHLIGHT_TEXT]%s2_promotion[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CROSSING_THE_RUBICON_3</Tag>
@@ -4710,19 +4710,19 @@
 		<French>Les dés sont jetés. Laissons le plus fort régner.</French>
 		<German>Der Würfel ist gefallen. Möge der Stärkste gewinnen.</German>
 		<Italian>Il dado è tratto. Che il più forte prevalga.</Italian>
-		<Spanish>La suerte está echada. Que el más fuerte prevalezca.</Spanish>
 		<Polish>Nadchodzi śmierć. Niech najsilniejszy obejmie władzę.</Polish>
 		<Russian>Жребий брошен. Пусть победит сильнейший.</Russian>
+		<Spanish>La suerte está echada. Que el más fuerte prevalezca.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CROSSING_THE_RUBICON_3_HELP</Tag>
-		<English>Two turns of anarchy; Government civic switch to Hereditary Rule.</English>
-		<French>Deux tours d'anarchie ; Doctrine de gouvernement changée en 'Héritage'.</French>
-		<German>Zwei Runden Unruhen; Gesellschaftsform wechselt zum Erbrecht.</German>
-		<Italian>Due turni di anarchia; adotterai la forma di governo "Monarchia".</Italian>
+		<English>Two turns of anarchy. Government civic switch to Hereditary Rule.</English>
+		<French>Deux tours d'anarchie. Doctrine de gouvernement changée en 'Héritage'.</French>
+		<German>Zwei Runden Unruhen. Gesellschaftsform wechselt zum Erbrecht.</German>
+		<Italian>Due turni di anarchia. Adotterai la forma di governo "Monarchia".</Italian>
+		<Polish>Dwie tury anarchii. Zmiana ustroju na Władza Dziedziczna.</Polish>
+		<Russian>Два хода анархии. Правительственная парадигма сменится на Монархию.</Russian>
 		<Spanish>[ICON_BULLET]Dos turnos de anarquía[NEWLINE][ICON_BULLET]El principio de Gobierno cambiará a Gobierno hereditario</Spanish>
-		<Polish>Dwie tury anarchii; zmiana ustroju na Władza Dziedziczna.</Polish>
-		<Russian>Два хода анархии; правительственная парадигма сменится на Монархию.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CRUCIBLE_STEEL_1</Tag>
@@ -4730,16 +4730,16 @@
 		<French>Equiper toutes les unités montées et de combat rapproché de ces nouvelles armes.</French>
 		<German>Rüste alle Nahkampf- und berittenen Einheiten mit Panzern und Waffen aus Wootz-Stahl aus.</German>
 		<Italian>Equipaggia tutte le unità da combattimento ravvicinato e quelle montate con armi e armature in acciaio wootz.</Italian>
-		<Spanish>Equipad a todas nuestras unidades cuerpo a cuerpo y montadas con armas y armaduras de acero wootz.</Spanish>
 		<Polish>Wyposaż wszystkie jednostki walczące wręcz nowym pancerzem i bronią z hartowanej stali.</Polish>
 		<Russian>Выдайте всем рукопашным и конным отрядам новую стальную экипировку и оружие.</Russian>
+		<Spanish>Equipad a todas nuestras unidades cuerpo a cuerpo y montadas con armas y armaduras de acero wootz.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CRUSADE_1</Tag>
 		<English>Crusade[PARAGRAPH:1]You are tasked by your religious leaders to capture and occupy the Holy City.</English>
 		<French>Croisade[PARAGRAPH:1]Vos dirigeants religieux vous chargent de capturer et d'occuper la Ville Sainte.</French>
 		<German>Kreuzzug[PARAGRAPH:1]Eure religiösen Führer fordern Euch auf, die Heilige Stadt zu erobern und zu besetzen.</German>
-		<Italian>Crociata[PARAGRAPH:1]I capi religiosi ti hanno incaricato di catturare e occupare la Città Santa.</Italian>
+		<Italian>Crociata[PARAGRAPH:1]I capi religiosi ti hanno incaricato di conquistare e occupare la Città Santa.</Italian>
 		<Spanish>Cruzada[PARAGRAPH:1]Los líderes religiosos han encargado capturar y ocupar la ciudad santa.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4771,7 +4771,7 @@
 		<English>[ICON_BULLET]Add %d1 [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] [NUM1:defender:defenders] to %s3_city.</English>
 		<French>[ICON_BULLET]Ajouter %d1 [NUM1:défenseur:défenseurs] [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] dans la ville : %s3_city.</French>
 		<German>[ICON_BULLET]Fügt der Stadt %s3_city %d1 Einheiten [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] als [NUM1:Verteidiger:Verteidiger] hinzu.</German>
-		<Italian>[ICON_BULLET]Aggiungi %d1 [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] [NUM1:difensore:difensori] a %s3_city.</Italian>
+		<Italian>[ICON_BULLET]Aggiungi %d1 [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] alla difesa di %s3_city.</Italian>
 		<Spanish>[ICON_BULLET]Añadir %d1 [NUM1:unidad:unidades] de [COLOR_UNIT_TEXT]%s2_unit[COLOR_REVERT] a la defensa de %s3_city</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4795,7 +4795,7 @@
 		<English>[PARAGRAPH:1]You will fail this quest if a rival civilization captures %s1_city first, if you change your state religion, or if your war ends for any reason prior to your success.</English>
 		<French>[PARAGRAPH:1]Vous échouerez si une civilisation rivale capture %s1_city en premier, si vous changez de religion d'état ou si, pour une raison quelconque, votre guerre se termine avant votre réussite.</French>
 		<German>[PARAGRAPH:1]Sie scheitern, wenn eine andere Zivilisation die Stadt %s1_city vor Ihnen erobert, wenn Sie Ihre Staatsreligion wechseln oder wenn der Krieg endet, ehe Sie Erfolg hatten.</German>
-		<Italian>[PARAGRAPH:1]Fallirai nell'impresa se una civiltà rivale cattura per prima %s1_city, se cambi religione di stato o se la guerra finisce per qualsiasi motivo prima del successo.</Italian>
+		<Italian>[PARAGRAPH:1]Fallirai nell'impresa se una civiltà rivale cattura %s1_city per prima, se cambi religione di Stato o se la guerra finisce per qualsiasi motivo prima del successo.</Italian>
 		<Spanish>[PARAGRAPH:1]Esta misión fracasará si una civilización rival toma antes %s1_city, si cambia la religión oficial o si la guerra termina por cualquier motivo antes de que la misión haya tenido éxito.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4819,29 +4819,29 @@
 		<English>That's wonderful news! Urge our physicians to start using this new treatment immediately.</English>
 		<French>Se sont des nouvelles merveilleuses! Invitez nos médecins à commencer à proposer ce nouveau traitement immédiatement.</French>
 		<German>Das sind wundervolle Nachrichten! Drängen Sie unsere Ärzte, diese neue Behandlung sofort zu verwenden.</German>
-		<Italian>Questa è una notizia meravigliosa! Invita i nostri medici ad iniziare ad applicare questa nuova terapia immediatamente.</Italian>
-		<Spanish>¡Son noticias maravillosas! Incitad a nuestros médicos a comenzar a usar este nuevo tratamiento inmediatamente.</Spanish>
+		<Italian>Questa è una notizia meravigliosa! Spingi i nostri medici ad applicare questa nuova terapia immediatamente.</Italian>
 		<Polish>To wspaniałe wieści! Nasi lekarze powinni natychmiast zacząć stosowanie nowej terapii!.</Polish>
 		<Russian>Это замечательные новости! Нашим врачам необходимо как можно скорее освоить новые методы лечения.</Russian>
+		<Spanish>¡Son noticias maravillosas! Incitad a nuestros médicos a comenzar a usar este nuevo tratamiento inmediatamente.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CURE_FOR_CANCER_HELP_1</Tag>
 		<English>(Applied to every Hospital in the Empire.)[PARAGRAPH:2][ICON_BULLET]Receive [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] attitude from all leaders</English>
-		<French>(appliqué à chaque hôpital dans l'empire.)[PARAGRAPH:2][ICON_BULLET]Recevez [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] attitude envers vous de la part de tous les Leaders</French>
+		<French>(Appliqué à chaque hôpital dans l'empire.)[PARAGRAPH:2][ICON_BULLET]Recevez [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] attitude envers vous de la part de tous les Leaders</French>
 		<German>(Angewendet auf jedes Krankenhaus im Reich.)[PARAGRAPH:2][ICON_BULLET]Empfangen Sie [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] Einstellung von allen Führern</German>
-		<Italian>(applicato ad ogni ospedale nell'Impero.)[PARAGRAPH:2][ICON_BULLET]Ricevi [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] atteggiamento da tutti i leader</Italian>
-		<Spanish>(se aplica a cada Hospital en el imperio)[PARAGRAPH:2][ICON_BULLET]Recibes [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] de actitud de todos los líderes</Spanish>
+		<Italian>(Valido per ogni ospedale nell'Impero.)[PARAGRAPH:2][ICON_BULLET]Ricevi [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] atteggiamento da tutti i leader</Italian>
 		<Polish>(Dla każdego Szpitala w Imperium.)[NEWLINE][ICON_BULLET]Otrzymujemy [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] nastawienia od wszystkich przywódców</Polish>
 		<Russian>(Применяется для каждой больницы в державе.)[PARAGRAPH][ICON_BULLET]Дает [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] к отношениям со всеми лидерами</Russian>
+		<Spanish>(Se aplica a cada Hospital en el imperio.)[PARAGRAPH:2][ICON_BULLET]Recibes [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] de actitud de todos los líderes</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DARWINS_VOYAGE_1</Tag>
 		<English>Excellent.</English>
 		<German>Ausgezeichnet.</German>
 		<Italian>Eccellente.</Italian>
-		<Spanish>Excelente.</Spanish>
 		<Polish>Wspaniale.</Polish>
 		<Russian>Превосходно.</Russian>
+		<Spanish>Excelente.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DECLARE_WAR</Tag>
@@ -4856,10 +4856,10 @@
 		<English>One of our high-ranking intelligence agents has defected to the %s1_civ_adjective empire.</English>
 		<French>Un de nos agents haut placé a déserté nos rangs pour rejoindre l'empire %s1_civ_adjective.</French>
 		<German>Einer unserer hochrangigen Spione ist zum %[s1_civ_adjective]en Reich übergelaufen.</German>
-		<Italian>Uno dei nostri ufficiali di alto grado del servizio segreto ha disertato ed è passato al servizio dell'Impero %s1_civ_adjective</Italian>
-		<Spanish>Uno de nuestros agentes de inteligencia de alto rango ha desertado al imperio %s1_civ_adjective</Spanish>
+		<Italian>Uno dei nostri ufficiali di alto grado del servizio segreto ha disertato ed è passato al servizio dell'Impero %s1_civ_adjective.</Italian>
 		<Polish>Jeden z naszych doświadczonych szpiegów zdradził nad dla %s1_civ_adjective empire.</Polish>
 		<Russian>Один из наших высокопоставленных разведчиков сбежал к %s1_civ_adjective.</Russian>
+		<Spanish>Uno de nuestros agentes de inteligencia de alto rango ha desertado al imperio %s1_civ_adjective.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DEFECTING_AGENT_1</Tag>
@@ -4867,27 +4867,27 @@
 		<French>C'est regrettable. Il nous faut revoir nos procédures de sécurité.</French>
 		<German>Das ist bedauerlich. Lasst die Sicherheitsmaßnahmen überprüfen.</German>
 		<Italian>È una cosa deplorevole. Dovremo rivedere le nostre misure di sicurezza.</Italian>
-		<Spanish>Es lamentable. Tendremos que revisar nuestros procedimientos de seguridad.</Spanish>
 		<Polish>To jest godne pożałowania. Musimy zrobić przegląd naszych procedur bezpieczeństwa.</Polish>
 		<Russian>Прискорбная весть. Нам следует ужесточить правила работы органов госбезопасности.</Russian>
+		<Spanish>Es lamentable. Tendremos que revisar nuestros procedimientos de seguridad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DEFECTING_AGENT_2</Tag>
 		<English>Unacceptable. An "accident" should happen to the traitor!</English>
 		<French>Intolérable. Un "accident" devrait arriver au traître!</French>
 		<German>Das ist inakzeptabel. Sorgt für einen "Unfall" des Verräters...</German>
-		<Italian>È inaccettabile. Il traditore la deve pagare!</Italian>
-		<Spanish>Inaceptable. El traidor debe sufrir un "accidente".</Spanish>
+		<Italian>È inaccettabile. Dovrebbe accadere un "incidente" al traditore!</Italian>
 		<Polish>Nie do zaakceptowania. "Wypadek" - to jest to co powinno spotkać zdrajcę!</Polish>
 		<Russian>Это немыслимо. Нужно организовать предателю небольшую «аварию»!</Russian>
+		<Spanish>Inaceptable. El traidor debe sufrir un "accidente".</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DELAY</Tag>
-		<English>[NEWLINE][ICON_BULLET]In addition%s1_txt_key_event_delay_below:</English>
-		<French>[NEWLINE][ICON_BULLET]Dans addition%s1_txt_key_event_delay_below :</French>
+		<English>[NEWLINE][ICON_BULLET]In addition %s1_txt_key_event_delay_below:</English>
+		<French>[NEWLINE][ICON_BULLET]Dans addition %s1_txt_key_event_delay_below :</French>
 		<German>[NEWLINE][ICON_BULLET]Zusätzlich %s1_txt_key_event_delay_below:</German>
 		<Italian>[NEWLINE][ICON_BULLET]Inoltre %s1_txt_key_event_delay_below:</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Además%s1_txt_key_event_delay_below:</Spanish>
+		<Spanish>[NEWLINE][ICON_BULLET]Además %s1_txt_key_event_delay_below:</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DELAY_TURNS</Tag>
@@ -4901,7 +4901,7 @@
 		<Tag>TXT_KEY_EVENT_DINO_ATTACK</Tag>
 		<English>An accident has led to an escape of animals at Dinosaur Park! Several people are dead and dozens are injured.</English>
 		<French>Un Accident a fait s'échapper des animaux du Parc de dinosaures! Plusieurs personnes sont mortes, et des douzaines sont blessées.</French>
-		<Italian>Un incidente ha causato la fuga degli animali al Parco dei dinosauri! Molte persone sono morte, e ci sono dozzine di feriti.</Italian>
+		<Italian>Un incidente ha causato la fuga degli animali al Parco dei dinosauri! Molte persone sono morte e ci sono dozzine di feriti.</Italian>
 		<Russian>Íåñ÷àñòíûé ñëó÷àé ïðèâåë ê ïîáåãó æèâîòíûõ èç Ïàðêà äèíîçàâðîâ!Íåñêîëüêî ÷åëîâåê ïîãèáëè è äåñÿòêè ïîëó÷èëè ðàíåíèÿ.</Russian>
 	</TEXT>
 	<TEXT>
@@ -4920,23 +4920,23 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DISSIDENT_PRIEST</Tag>
-		<English>A dissident priest from %s2_city is doubting the supreme power of Amun-Re in an unprecedented outbreak of heresy.</English>
-		<French>Un prêtre dissident de %s2_city, a mis en doute la puissance suprême d'Amon-Re, ouvrant la voie à une nouvelle hérésie.</French>
+		<English>A dissident priest from %s2_city is doubting the supreme power of Amun-Ra in an unprecedented outbreak of heresy.</English>
+		<French>Un prêtre dissident de %s2_city, a mis en doute la puissance suprême d'Amon-Ra, ouvrant la voie à une nouvelle hérésie.</French>
 		<German>Ein kritischer Priester der Stadt %s2_city zweifelt in beispielloser Ketzerei an der Macht des Fruchtbarkeitsgottes.</German>
-		<Italian>Un sacerdote dissidente di %s2_city sta dubitando del potere supremo di Amun-Re, creando una diffusione di eresie senza precedenti.</Italian>
+		<Italian>Un sacerdote dissidente di %s2_city sta dubitando del potere supremo di Amun-Ra, generando un'esplosione di eresia senza precedenti.</Italian>
 		<Spanish>En un brote de herejía sin precedentes, un sacerdote disidente de %s2_city duda del poder supremo de Amun-Ra.</Spanish>
-		<Polish>Wyklęty kapłan z %s2_city wątpi w nadprzyrodzoną moc Amona-Re, a jego kazania wkrótce doprowadzą niedługo do religijnej rebelii.</Polish>
+		<Polish>Wyklęty kapłan z %s2_city wątpi w nadprzyrodzoną moc Amona-Ra, a jego kazania wkrótce doprowadzą niedługo do religijnej rebelii.</Polish>
 		<Russian>Жрец-вольнодумец из %s2_city усомнился в божественности Амон-Ра, впав в глубочайшую ересь.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DISSIDENT_PRIEST_1</Tag>
-		<English>That is disgusting and preposterous. The heresy must be dealt with in the name of Amun-Re, even if the locals won't support it.</English>
-		<French>C'est inadmissible et dépravé. Cette hérésie doit être contrecarrée au nom d'Amon-Re, meme si les autochtones ne l'approuvent pas.</French>
+		<English>That is disgusting and preposterous. The heresy must be dealt with in the name of Amun-Ra, even if the locals won't support it.</English>
+		<French>C'est inadmissible et dépravé. Cette hérésie doit être contrecarrée au nom d'Amon-Ra, meme si les autochtones ne l'approuvent pas.</French>
 		<German>Beendet im Namen des Fruchtbarkeitsgottes diese widerliche Ketzerei, notfalls mit Gewalt gegen die Bevölkerung.</German>
-		<Italian>Tutto ciò è disgustoso e assurdo. Dovremo occuparci di questa eresia nel nome di Amun-Re, anche se non avremo l'appoggio delle popolazioni locali.</Italian>
-		<Spanish>Eso es lamentable y absurdo. La herejía debe ser tratada con el nombre de Amun-Ra, incluso si la población local no lo apoya.</Spanish>
-		<Polish>To obrzydliwe i oburzające. Herezja musi zostać ukarana w imieniu Amona-Re, nawet jeśli lokalnym mieszkańcom to się nie spodoba!</Polish>
+		<Italian>Tutto ciò è disgustoso e assurdo. Dovremo occuparci di questa eresia nel nome di Amun-Ra, anche se non avremo l'appoggio della popolazione locale.</Italian>
+		<Polish>To obrzydliwe i oburzające. Herezja musi zostać ukarana w imieniu Amona-Ra, nawet jeśli lokalnym mieszkańcom to się nie spodoba!</Polish>
 		<Russian>Это глупо и отвратительно. С ересью нужно бороться во имя Амона-Ра, даже если местные жители не поддержат ее.</Russian>
+		<Spanish>Eso es lamentable y absurdo. La herejía debe ser tratada con el nombre de Amun-Ra, incluso si la población local no lo apoya.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DISSIDENT_PRIEST_2</Tag>
@@ -4944,69 +4944,74 @@
 		<French>Ignorons cet imbécile, notre peuple s'en remettra.</French>
 		<German>Ignoriert den Verrückten, das Volk wird darüber hinwegkommen.</German>
 		<Italian>Ignoriamo questo pazzo, il nostro popolo si dimenticherà di tutto ciò che ha detto.</Italian>
-		<Spanish>Podemos ignorar esa minucia, nuestra gente se ocupará de ello.</Spanish>
 		<Polish>Zignorujcie tego wariata. Nasi ludzie za chwilę o nim zapomną.</Polish>
 		<Russian>Не стоит переживать из-за этого безумца, наши люди с этим справятся.</Russian>
+		<Spanish>Podemos ignorar esa minucia, nuestra gente se ocupará de ello.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DISSIDENT_PRIEST_3</Tag>
 		<English>Diversity is good. Allow these beliefs to spread and be recorded, though convincing our people that it's nothing to fear won't be easy.</English>
 		<French>La diversité est positive. Laissons ces croyances se propager, meme s'il ne sera pas facile de convaincre notre peuple de leur innocuité!</French>
 		<German>Der Glaube hat viele Gesichter. Zeichnet die neuen Überzeugungen auf und hindert sie nicht an der Ausbreitung, aber helft den Menschen, ihren Glauben zu wahren.</German>
-		<Italian>La diversità è un bene.Permettiamo a questa credenza di diffondersi e di essere dichiarata ufficialmente, sebbene convincere i nostri cittadini che non c'è nulla da temere sarà difficile.</Italian>
-		<Spanish>La diversidad es buena. Permitid que esas creencias se difundan y sean preservadas, aunque convencer a nuestra gente de que no hay nada que temer no será fácil.</Spanish>
+		<Italian>La diversità è un bene. Permetti a queste idee di diffondersi ed essere trascritte, sebbene convincere i nostri cittadini che non c'è nulla da temere sarà difficile.</Italian>
 		<Polish>Różnorodność jest dobra. Pozwólmy na głoszenie tych kazań i skierujmy skrybów do spisania ich. Z drugiej strony przekonanie ludzi, że nic im nie grozi może być kłopotliwe.</Polish>
 		<Russian>Свободомыслие только во благо. Не нужно мешать распространению этого вероучения и писания, хотя убедить наших людей, что опасаться бояться, будет непросто.</Russian>
+		<Spanish>La diversidad es buena. Permitid que esas creencias se difundan y sean preservadas, aunque convencer a nuestra gente de que no hay nada que temer no será fácil.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DOCK_WORKERS_STRIKE_1</Tag>
 		<English>Give into their demands, it's time for change!</English>
 		<French>Accéder à leurs demandes, il est temps de faire changer les choses!</French>
-		<Spanish>¡Acceded a sus demandas, es hora de cambiar las cosas!</Spanish>
+		<Italian>Cedete alle loro richieste, è tempo di cambiare!</Italian>
 		<Polish>Dać im to co chcą, czas na zmiany!</Polish>
 		<Russian>Удовлетворите их требования - настало время перемен!</Russian>
+		<Spanish>¡Acceded a sus demandas, es hora de cambiar las cosas!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DOCK_WORKERS_STRIKE_2</Tag>
 		<English>A little bribery should get them back to work.</English>
 		<French>Une petite enveloppe devrait les remettre au travail.</French>
-		<Spanish>Un pequeño soborno debería hacer que volvieran al trabajo.</Spanish>
+		<Italian>Basterà corromperli e torneranno al lavoro.</Italian>
 		<Polish>Mała łapówka i wrócą do pracy.</Polish>
 		<Russian>Подкуп лидеров протеста должен вернуть их к работе.</Russian>
+		<Spanish>Un pequeño soborno debería hacer que volvieran al trabajo.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DOCK_WORKERS_STRIKE_3</Tag>
 		<English>Bah, who needs so many workers anyway? Let's replace them with cranes and forklifts!</English>
 		<French>Bah, qui a besoin de tant de travailleurs actuellement? Qu'on les remplace par des grues et des palans!</French>
-		<Spanish>Bah, ¿quién necesita tantos trabajadores en este momento? ¡Sustituidlos por grúas y elevadores!</Spanish>
+		<Italian>Bah, a che servono tutti quei lavoratori? Rimpiazziamoli con gru e carrelli elevatori!</Italian>
 		<Polish>Kto potrzebuje tak wielu pracowników? Zamieńmy ich na dźwigi i wózki widłowe!</Polish>
 		<Russian>Да кому вообще нужно столько рабочих? Заменим их кранами и автопогрузчиками!</Russian>
+		<Spanish>Bah, ¿quién necesita tantos trabajadores en este momento? ¡Sustituidlos por grúas y elevadores!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DOCK_WORKERS_STRIKE_4</Tag>
 		<English>Demands? Only I can make demands!</English>
-		<French>Des demandes? Je suis le Seul à formuler des demandes!</French>
-		<Spanish>¿Demandas? ¡Aquí el único que demanda soy YO!</Spanish>
+		<French>Des demandes? Je suis le seul à formuler des demandes!</French>
+		<Italian>Richieste? Qui solo IO posso fare richieste!</Italian>
 		<Polish>Żądania? Tylko ja mogę żądać!</Polish>
 		<Russian>Требования? Только я вправе требовать!</Russian>
+		<Spanish>¿Demandas? ¡Aquí el único que demanda soy YO!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DOOMED_OPTION</Tag>
 		<English>[ICON_BULLET]Virus will spread and cause devastation</English>
 		<French>[ICON_BULLET]Le Virus se propage et dévaste la population</French>
-		<Spanish>[ICON_BULLET]El virus se propagará y devastará a la población</Spanish>
+		<Italian>[ICON_BULLET]Il virus si propagherà e causerà morte e devastazione</Italian>
 		<Polish>[ICON_BULLET]Wirus się rozprzestrzeni i spowoduje katastrofę</Polish>
 		<Russian>[ICON_BULLET]Вирус будет распространяться и вызывать разрушения</Russian>
+		<Spanish>[ICON_BULLET]El virus se propagará y devastará a la población</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUIDS_1</Tag>
 		<English>Allow the druids to visit the site and allow them to perform their rituals as they please.</English>
 		<French>Permettre aux druides de visiter le site et de réaliser leurs rituels à leur guise.</French>
 		<German>Erlaube den Druiden die Stätte zu besichtigen und alle Rituale nach ihren Wünschen auszuführen</German>
-		<Italian>Permetti ai druidi di visitare il sito e di eseguire i loro rituali, a loro piacimento.</Italian>
-		<Spanish>Permitid a los druidas visitar el sitio y dejadles realizar sus rituales como deseen.</Spanish>
+		<Italian>Permetti ai druidi di visitare il sito e di eseguire i loro rituali come meglio credono.</Italian>
 		<Polish>Pozwól druidom na wizytę w tym miejscu i odprawienie rytuałów.</Polish>
 		<Russian>Разрешите друидам посещать это место и позволять им выполнять свои ритуалы по своему усмотрению.</Russian>
+		<Spanish>Permitid a los druidas visitar el sitio y dejadles realizar sus rituales como deseen.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUIDS_2</Tag>
@@ -5014,19 +5019,19 @@
 		<French>Permettre aux druides de visiter le site, puis convainquez-les de rester dans notre ville. Nous pourrions avoir besoins de ces religieux.</French>
 		<German>Erlaube ihnen die Städte zu besichtigen, doch zwinge sie danach in unserer Stadt zu bleiben. Wir können solche religiösen Leute gebrauchen.</German>
 		<Italian>Permettigli di visitare il sito, ma in seguito costringili a restare nella nostra città. Abbiamo bisogno di persone così religiose.</Italian>
-		<Spanish>Permitidles visitar el sitio, pero posteriormente forzadles a quedarse en nuestra ciudad. Estos religiosos podrían sernos útiles.</Spanish>
 		<Polish>Pozwól druidom na wizytę w tym miejscu, ale potem zmuś ich do pozostania w naszym mieście. Możemy mieć pożytek z tak religijnych ludzi.</Polish>
 		<Russian>Разрешите им посещать это место, но после этого заставьте их остаться в нашем городе. Нам бы не помешали столь набожные люди.</Russian>
+		<Spanish>Permitidles visitar el sitio, pero posteriormente forzadles a quedarse en nuestra ciudad. Estos religiosos podrían sernos útiles.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DRUIDS_3</Tag>
 		<English>When they get to the Stonehenge sacrifice them all! That's what they are here for! Plunder their valuables too!</English>
 		<French>Lorsque qu'ils seront à Stonehenge, sacrificiez-les tous! Ils viennent pour cela de tout façon! Piller leurs affaires également!</French>
 		<German>Wenn sie Stonhenge erreichen, so opfere sie alle! Dafür sind sie da! Und nehmt ihnen ihre Wertgegenstände!</German>
-		<Italian>Quando arrivano a Stonehenge, sacrificateli tutti! Questo è ciò per cui sono qui! Saccheggiate anche i loro oggetti di valore!</Italian>
-		<Spanish>Cuando lleguen al Stonehenge, ¡sacrificadlos! ¡Para eso han venido hasta aquí! ¡Coged sus objetos valiosos, de paso!</Spanish>
+		<Italian>Quando arrivano a Stonehenge, sacrificateli tutti! Questo è ciò per cui sono qui! E strappate loro anche gli oggetti di valore!</Italian>
 		<Polish>Kiedy dostaną się do Stonehenge ofiaruj ich bogom! Właśnie dlatego przyszli do tego miejsca! Poza tym można ograbić ich z kosztowności!</Polish>
 		<Russian>Как только они доберутся до Стоунхенджа, принесите их в жертву! Вот для чего они здесь! И не забудьте также о богатствах!</Russian>
+		<Spanish>Cuando lleguen al Stonehenge, ¡sacrificadlos! ¡Para eso han venido hasta aquí! ¡Coged sus objetos valiosos, de paso!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DUSTBOWL_1</Tag>
@@ -5046,10 +5051,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_DUSTBOWL_2_HELP</Tag>
-		<English>[ICON_BULLET]Significant chance the dustbowl will continue</English>
+		<English>[ICON_BULLET]Significant chance the dustbowl will continue.</English>
 		<French>[ICON_BULLET]Risque important de voir les tempêtes de poussière continuer.</French>
 		<German>[ICON_BULLET]Es besteht eine hohe Wahrscheinlichkeit, dass die Trockenheit anhält.</German>
-		<Italian>[ICON_BULLET]C'è una seria possibilità che la desertificazione continui</Italian>
+		<Italian>[ICON_BULLET]C'è una seria possibilità che la desertificazione continui.</Italian>
 		<Spanish>[ICON_BULLET]Grandes posibilidades de que continúen las tormentas de arena.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5065,7 +5070,7 @@
 		<English>Fund an international awareness effort in addition to our local efforts.</English>
 		<French>Financez un effort international en plus de nos efforts locaux.</French>
 		<German>Finanziert zusätzlich zu unseren lokalen Anstrengungen eine internationale Kampagne.</German>
-		<Italian>Finanzia un'opera di consapevolezza internazionale, oltre a quelle locali.</Italian>
+		<Italian>Finanzia una campagna di consapevolezza internazionale, oltre a quelle locali.</Italian>
 		<Spanish>Que se financie un plan de concienciación internacional como complemento a las iniciativas locales.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5074,9 +5079,9 @@
 		<French>[ICON_BULLET]Persuader d'autres nations de se convertir à l'[COLOR_HIGHLIGHT_TEXT]écologie[COLOR_REVERT] (au moins une civilisation doit posséder cette capacité).</French>
 		<German>[ICON_BULLET]Überzeugt andere Nationen, zum [COLOR_HIGHLIGHT_TEXT]Umweltschutz[COLOR_REVERT] zu wechseln (mindestens eine Zivilisation muss dazu fähig sein).</German>
 		<Italian>[ICON_BULLET]Persuadi altre nazioni a convertirsi all'[COLOR_HIGHLIGHT_TEXT]Ambientalismo[COLOR_REVERT] (almeno una delle altre civiltà deve essere in grado di farlo).</Italian>
-		<Spanish>[ICON_BULLET]Convence a otras naciones de que se conviertan al [COLOR_HIGHLIGHT_TEXT]Ecologismo[COLOR_REVERT] (al menos una civilización debe poseer la capacidad de hacerlo).</Spanish>
 		<Polish>[ICON_BULLET]Należy przekonać inne nacje by przyjęły [COLOR_HIGHLIGHT_TEXT]Ochronę środowiska[COLOR_REVERT] (przynajmniej jedna cywilizacja musi posiadać zdolność do przyjęcia tej doktryny).</Polish>
 		<Russian>[ICON_BULLET]Persuade other nations to convert to [COLOR_HIGHLIGHT_TEXT]Environmentalism[COLOR_REVERT] (at least one civilization must have the ability to do so).</Russian>
+		<Spanish>[ICON_BULLET]Convence a otras naciones de que se conviertan al [COLOR_HIGHLIGHT_TEXT]Ecologismo[COLOR_REVERT] (al menos una civilización debe poseer la capacidad de hacerlo).</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_EARTHQUAKE_1</Tag>
@@ -5084,16 +5089,16 @@
 		<French>Envoyez toute l'aide possible aux survivants.</French>
 		<German>Sende den Überlebende alle Hilfe, die wir bieten können.</German>
 		<Italian>Manda tutto l'aiuto possibile ai sopravvissuti.</Italian>
-		<Spanish>Enviad toda la ayuda posible a los supervivientes.</Spanish>
 		<Polish>Wyślij co tylko można, aby pomóc ocalałym.</Polish>
 		<Russian>Пошлите помощь выжившим, какую мы только сможем.</Russian>
+		<Spanish>Enviad toda la ayuda posible a los supervivientes.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_EARTHQUAKE_1_HELP</Tag>
 		<English>[ICON_BULLET]Suffer loss of plot improvements near the earthquake</English>
 		<French>[ICON_BULLET]Subir les pertes des aménagements autour de l'épicentre</French>
 		<German>[ICON_BULLET]Eine Geländemodernisierung in der Nähe des Erdbebens geht verloren</German>
-		<Italian>[ICON_BULLET]Subisci la perdita dei miglioramenti vicino al terremoto</Italian>
+		<Italian>[ICON_BULLET]Subisci la perdita delle infrastrutture nei pressi dell'epicentro del terremoto</Italian>
 		<Spanish>[ICON_BULLET]Sufrirás la pérdida de mejoras de casilla en torno al epicentro del terremoto</Spanish>
 		<Polish>[ICON_BULLET]Niektóre ulepszenia, na polach niedaleko trzęsienia ziemi, zostały zniszczone</Polish>
 		<Russian>[ICON_BULLET]Будет разрушена часть улучшений вблизи очага бедствия</Russian>
@@ -5101,9 +5106,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ELECTRIC_COMPANY_1</Tag>
 		<English>Freedom is the best motivator. We are lucky to have workers like these, who keep the power flowing to our citizenry.</English>
-		<French>La liberté est une excellente motivation. Nous sommes ravis que nos travailleurs puissent assurer un accès continu à l'électricité. </French>
+		<French>La liberté est une excellente motivation. Nous sommes ravis que nos travailleurs puissent assurer un accès continu à l'électricité.</French>
 		<German>Die Freiheit ist die beste Motivation. Wir können froh sein, solche Arbeiter zu haben, die jederzeit die Stromversorgung für unsere Bürger sicherstellen.</German>
-		<Italian>La libertà è la migliore motivazione. Siamo fortunati ad avere operai come questi, che mantengono l'afflusso di energia alla cittadinanza.</Italian>
+		<Italian>La libertà è la migliore motivazione. Siamo fortunati ad avere operai come questi, che mantengono stabile l'afflusso di energia alla cittadinanza.</Italian>
 		<Spanish>La libertad es la mejor motivación. Somos afortunados por tener trabajadores como éstos, que velan para que la electricidad llegue a la ciudadanía.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5119,7 +5124,7 @@
 		<English>With such a large force of Swordsmen working together, additional training for these units can be achieved.</English>
 		<French>Avec un tel nombre de Spadassins opérant ensemble, un entraînement supplémentaire pour ces unités peut être effectué.</French>
 		<German>Mit einer so großen Truppe Schwertkämpfer können diese Einheiten weiter ausgebildet werden.</German>
-		<Italian>Con tanti spadaccini che lavorano insieme è possibile ottenere un ulteriore addestramento per queste unità.</Italian>
+		<Italian>Con un tale numero di spadaccini, è possibile ottenere un ulteriore addestramento per queste unità.</Italian>
 		<Spanish>Al tratarse de una fuerza de soldados con espada tan grande y unida, estas unidades pueden obtener más entrenamiento.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5136,17 +5141,18 @@
 		<French>[PARAGRAPH:1]Pour Terminer cette Quête, vous devez entraîner %d1 [COLOR_UNIT_TEXT][NUM1:Spadassin:Spadassins] Léger[COLOR_REVERT]. du Fer sera nécessaire.[PARAGRAPH:1]Une récompense supplémentaire sera disponible si votre Civilisation a adopté la [COLOR_HIGHLIGHT_TEXT]Monarchie[COLOR_REVERT].[PARAGRAPH:1]La quête sera un échec si une Civilisation rivale la rempli avant vous, ou si vous parvenez au Moyen Age avant d'avoir rempli toutes les conditions.</French>
 		<German>[PARAGRAPH:1]Um diese Mission erfolgreich zu absolvieren, müsst Ihr [COLOR_HIGHLIGHT_TEXT]%d1[COLOR_REVERT] [COLOR_UNIT_TEXT]Schwertkämpfer[COLOR_REVERT] aufgestellt haben. Hierzu ist Eisen erforderlich. Eine zusätzliche Belohnung winkt durch die Verwendung der Gesellschaftsform [COLOR_HIGHLIGHT_TEXT]Erbfolge[COLOR_REVERT]. Die Mission endet erfolglos, sollte eine andere Nation die Bedingungen zuerst erfüllen oder solltet Ihr das Zeitalter des Mittelalters erreichen, ohne die Bedingungen erfüllt zu haben.</German>
 		<Italian>[PARAGRAPH:1]Per completare quest'impresa, devi addestrare %d1 [COLOR_UNIT_TEXT][NUM1:spadaccino leggero:spadaccini leggeri][COLOR_REVERT]. È richiesta una fonte di ferro.[PARAGRAPH:1]Otterrai un'ulteriore ricompensa se la tua civiltà utilizza la forma di governo [COLOR_HIGHLIGHT_TEXT]Monarchia[COLOR_REVERT].[PARAGRAPH:1]Fallirai nell'impresa se una civiltà rivale la completa per prima o se raggiungerai il Medioevo senza aver soddisfatto le condizioni.</Italian>
-		<Spanish>[PARAGRAPH:1]Para completar esta misión, deberás entrenar %d1 [COLOR_UNIT_TEXT][NUM1:Soldado:Soldados] con espada ligera, normal o pesada[COLOR_REVERT]. Se requiere una fuente de Hierro.[PARAGRAPH:1]Podrás disponer de una opción de recompensa adicional si tu civilización tiene el principio [COLOR_HIGHLIGHT_TEXT]Monarquía[COLOR_REVERT] activo en el momento de completar la misión.[PARAGRAPH:1]Fallarás esta misión si una civilización rival la completa primero, o si alcanzas la Edad Media sin haber cumplido los objetivos.</Spanish>
 		<Polish>[PARAGRAPH:1]Aby wypełnić warunki zadania należy wytrenować %d1 [NUM1:jednostkę:jednostek] [COLOR_UNIT_TEXT]Lekki Zbrojny[COLOR_REVERT]. Potrzebne jest Żelazo.[PARAGRAPH:1]Dostaniesz dodatkową premię jeśli twoja cywilizacja posiada doktrynę [COLOR_HIGHLIGHT_TEXT]Monarchia[COLOR_REVERT].[PARAGRAPH:1]Przegrasz to zadanie jeśli którakolwiek z innych cywilizacji ukończy je wcześniej, lub nie zdążysz wypełnić warunków przed nadejściem epoki średniowiecznej.</Polish>
 		<Russian>[PARAGRAPH:1]Для выполнения этого задания, вы должны обучить %d1 [NUM1:отряд:отрядов] [COLOR_UNIT_TEXT]Легких, обычных[COLOR_REVERT] или [COLOR_UNIT_TEXT]Тяжелых мечников[COLOR_REVERT]. Вам потребуется ресурс железа.[PARAGRAPH:1]Дополнительная награда будет доступна, если ваша цивилизация использует парадигму [COLOR_HIGHLIGHT_TEXT]Монархия[COLOR_REVERT].[PARAGRAPH:1]Задание будет провалено в случае, если его раньше завершит конкурирующая цивилизация или если вы вступите в Средние века, не выполнив указанных условий.</Russian>
+		<Spanish>[PARAGRAPH:1]Para completar esta misión, deberás entrenar %d1 [COLOR_UNIT_TEXT][NUM1:Soldado:Soldados] con espada ligera, normal o pesada[COLOR_REVERT]. Se requiere una fuente de Hierro.[PARAGRAPH:1]Podrás disponer de una opción de recompensa adicional si tu civilización tiene el principio [COLOR_HIGHLIGHT_TEXT]Monarquía[COLOR_REVERT] activo en el momento de completar la misión.[PARAGRAPH:1]Fallarás esta misión si una civilización rival la completa primero, o si alcanzas la Edad Media sin haber cumplido los objetivos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_EMPIRE_POPULATION_LOSS</Tag>
-		<English>[ICON_BULLET]Every City Above Population %d1 loses %d2 Population</English>
-		<French>[ICON_BULLET]Chaque Ville avec une Population supérieur à %d1 perd %d2 Population</French>
-		<Spanish>[ICON_BULLET]Toda ciudad con una población por encima de %d1 perderá %d2 ciudadan[NUM1:o:os]</Spanish>
+		<English>[ICON_BULLET]Every City above population %d1 loses %d2 Population</English>
+		<French>[ICON_BULLET]Chaque Ville avec une population supérieur à %d1 perd %d2 Population</French>
+		<Italian>[ICON_BULLET]Ogni città con una popolazione superiore a %d1 perderà %d2 cittadin[NUM1:o:i]</Italian>
 		<Polish>[ICON_BULLET]Każde miasto z populacją powyżej %d1 straci %d2 populacji</Polish>
 		<Russian>[ICON_BULLET]Каждый город с населением выше %d1 теряет %d2 жителей</Russian>
+		<Spanish>[ICON_BULLET]Todas las ciudades con una población por encima de %d1 perderá %d2 ciudadan[NUM1:o:os]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ESPIONAGE_COST</Tag>
@@ -5185,10 +5191,10 @@
 		<English>At least these new additions to the Palace will brighten up the capital.</English>
 		<French>Au moins, ces mesures vont égayer le Palais et la Capitale.</French>
 		<German>Diese Ergänzung des Palastes wird wenigstens unsere Hauptstadt verschönern.</German>
-		<Italian>Almeno, queste aggiunte abbelliranno la capitale.</Italian>
-		<Spanish>Al menos estos nuevos añadidos al Palacio embellecerán la capital.</Spanish>
+		<Italian>Almeno queste aggiunte al Palazzo abbelliranno la capitale.</Italian>
 		<Polish>Przynajmniej te nowe dodatki przyozdobią nasz Pałac w stolicy.</Polish>
 		<Russian>По крайней мере, эти новые пристройки ко дворцу украсят столицу.</Russian>
+		<Spanish>Al menos estos nuevos añadidos al Palacio embellecerán la capital.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_EXPERIENCED_CAPTAIN_1</Tag>
@@ -5203,7 +5209,7 @@
 		<English>We should fund an effort to translate his experience into a format that can be passed on to future generations.</English>
 		<French>Nous devrions faire en sorte de consigner cette expérience pour pouvoir la transmettre aux générations futures.</French>
 		<German>Wir sollten uns darum bemühen, einen Weg zu finden, seine Erfahrung an zukünftige Generationen weiterzugeben.</German>
-		<Italian>Dovremmo finanziare il tentativo di trasformare le sue esperienze in un formato che possa essere trasmesso alle generazioni future.</Italian>
+		<Italian>Dovremmo finanziare il tentativo di trasmettere le sue esperienze alle generazioni future.</Italian>
 		<Spanish>Deberíamos financiar un plan para que su experiencia quede registrada en algún formato que pueda ser transmitido a las futuras generaciones.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5212,9 +5218,9 @@
 		<French>Des Seigneurs rustres ont lourdement taxé les serfs près de la ville de %s2_city.</French>
 		<German>Landesherren in der Umgebung von %s2_city belasten die Leibeigenen durch brutale Steuern.</German>
 		<Italian>I proprietari terrieri attorno alla città di %s2_city hanno brutalmente tassato i locali.</Italian>
-		<Spanish>Los terratenientes presentes alrederor de la ciudad de %s2_city han gravado fuertemente a los siervos locales.</Spanish>
 		<Polish>Lokalna szlachta z okolic %s2_city brutalnie ściąga podatki ze swoich poddanych.</Polish>
 		<Russian>Помещики в округе города %s2_city нещадно облагали податями местных крепостных.</Russian>
+		<Spanish>Los terratenientes presentes alrederor de la ciudad de %s2_city han gravado fuertemente a los siervos locales.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_EXPLOITED_PEASANTS_1</Tag>
@@ -5222,26 +5228,26 @@
 		<French>Leurs Souffrances vont alimenter notre Trésor.</French>
 		<German>Ihr Leiden wird unsere Schatzkammer auffüllen.</German>
 		<Italian>Le loro sofferenze riempiranno il tesoro.</Italian>
-		<Spanish>Su sufrimiento rellenará nuestro tesoro.</Spanish>
 		<Polish>Ich cierpienie napełni nasz skarbiec.</Polish>
 		<Russian>Их тяготы наполнят нашу казну.</Russian>
+		<Spanish>Su sufrimiento rellenará nuestro tesoro.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAIL_ALTERNATIVE_ENERGY_1</Tag>
 		<English>You have failed the quest for Alternative Energy.</English>
 		<French>Vous avez échoué la quête pour l'énergie alternative.</French>
 		<German>Ihre Quest auf Suche alternativer Energie ist gescheitert.</German>
-		<Italian>Hai fallito l'impresa dell'Energia alternativa.</Italian>
-		<Spanish>Has fallado la misión "Energía alternativa".</Spanish>
+		<Italian>Hai fallito la missione "Energia alternativa".</Italian>
 		<Polish>Nie udało ci się wykonać zadania "Alternatywne Źródła Energii".</Polish>
 		<Russian>Вы провалили квест "Альтернативные источники энергии".</Russian>
+		<Spanish>Has fallado la misión "Energía alternativa".</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAIL_BEST_DEFENSE</Tag>
 		<English>You have failed the quest of The Best Defense</English>
 		<French>Vous avez échoué dans la quête de La Meilleure Défense.</French>
 		<German>Die Quest "Die beste Verteidigung" ist gescheitert.</German>
-		<Italian>Hai fallito nell'impresa della Miglior difesa.</Italian>
+		<Italian>Hai fallito la missione "La miglior difesa".</Italian>
 		<Spanish>La misión La mejor defensa ha fracasado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5249,7 +5255,7 @@
 		<English>You have failed the quest of The Blessed Sea.</English>
 		<French>Vous n'avez pas réussi la quête de la mer bénie.</French>
 		<German>Die Quest "Gesegnete See" ist gescheitert.</German>
-		<Italian>Hai fallito l'impresa del Mare Benedetto.</Italian>
+		<Italian>Hai fallito la missione "Mare Benedetto".</Italian>
 		<Spanish>La misión "El bendito mar" ha fracasado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5257,7 +5263,7 @@
 		<English>You have failed the quest of Classic Literature.</English>
 		<French>Vous avez échoué dans la quête de la Littérature Classique.</French>
 		<German>Die Quest "Klassische Literatur" ist gescheitert.</German>
-		<Italian>Hai fallito nell'impresa della Letteratura classica.</Italian>
+		<Italian>Hai fallito la missione "Letteratura classica".</Italian>
 		<Spanish>La misión Literatura clásica ha fracasado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5265,7 +5271,7 @@
 		<English>You have failed the quest of the Corporate Expansion!</English>
 		<French>Vous avez échoué dans la quête d'Expansion d'entreprise.</French>
 		<German>Die Quest "Unternehmensexpansion" ist gescheitert!</German>
-		<Italian>Hai fallito nell'impresa dell'Espansione corporativa!</Italian>
+		<Italian>Hai fallito la missione "Espansione aziendale".</Italian>
 		<Spanish>¡La misión Expansión corporativa ha fracasado!</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5281,7 +5287,7 @@
 		<English>You have failed the quest of the Elite Swordsmen!</English>
 		<French>Vous avez échoué dans la quête des Spadassins d'élite !</French>
 		<German>Die Quest "Elite-Schwertkämpfer" ist gescheitert!</German>
-		<Italian>Hai fallito nell'impresa dei Spadaccini d'élite!</Italian>
+		<Italian>Hai fallito la missione "Spadaccini d'élite".</Italian>
 		<Spanish>La misión Soldados con espada de élite ha fracasado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5289,7 +5295,7 @@
 		<English>You have failed the Quest of Greed!</English>
 		<French>Vous avez échoué dans la quête de la Cupidité !</French>
 		<German>Die Quest "Gier" ist gescheitert!</German>
-		<Italian>Hai fallito nell'impresa dell'Avidità!</Italian>
+		<Italian>Hai fallito la missione "Avidità".</Italian>
 		<Spanish>La misión Avaricia ha fracasado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5297,33 +5303,33 @@
 		<English>You have failed the quest of "Guns not Butter!"</English>
 		<French>Vous avez échoué dans la quête Pas de beurre mais des canons.</French>
 		<German>Die Quest "Feuer statt Butter" ist gescheitert!</German>
-		<Italian>Hai fallito nell'impresa Fucili, non banane!</Italian>
+		<Italian>Hai fallito la missione "Fucili, non burro".</Italian>
 		<Spanish>¡La misión Armas de fuego, no mantequilla ha fracasado!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAIL_HARBORMASTER</Tag>
-		<English>You have failed the quest of the Harbormaster</English>
-		<French>Vous avez échoué dans la quête du Maître de port</French>
+		<English>You have failed the quest of the Harbormaster.</English>
+		<French>Vous avez échoué dans la quête du Maître de port.</French>
 		<German>Ihr seid bei der Mission "Hafenmeister" gescheitert.</German>
-		<Italian>Hai fallito l'impresa dell'Armatore.</Italian>
-		<Spanish>La misión El capitán del puerto ha fracasado.</Spanish>
+		<Italian>Hai fallito la missione "Armatore".</Italian>
 		<Polish>Zawiodłeś w wypełnieniu warunków zadania "Władca Mórz".</Polish>
 		<Russian>Вы провалили квест "Повелитель морей".</Russian>
+		<Spanish>La misión El capitán del puerto ha fracasado.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAIL_HOLY_MOUNTAIN</Tag>
 		<English>You have failed the quest of The Holy Mountain.</English>
 		<French>Vous n'avez pas réussi la quête de la montagne sacrée.</French>
 		<German>Die Quest "Der Heilige Berg" ist gescheitert.</German>
-		<Italian>Hai fallito l'impresa della Montagna Sacra.</Italian>
+		<Italian>Hai fallito la missione "Montagna Sacra".</Italian>
 		<Spanish>La misión "La Montaña Sagrada" ha fracasado.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAIL_HORSE_WHISPERING</Tag>
-		<English>You have failed the quest of Horse Whispering</English>
-		<French>Vous avez échoué dans la quête Murmurer à l'oreille des chevaux</French>
+		<English>You have failed the quest of Horse Whispering.</English>
+		<French>Vous avez échoué dans la quête Murmurer à l'oreille des chevaux.</French>
 		<German>Die Quest "Pferdeflüstern" ist gescheitert.</German>
-		<Italian>Hai fallito nell'impresa di Sussurrare ai cavalli.</Italian>
+		<Italian>Hai fallito la missione "Sussurrare ai cavalli".</Italian>
 		<Spanish>La misión Susurradores de caballos ha fracasado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5331,7 +5337,7 @@
 		<English>You have failed the quest of the Hostile Takeover!</English>
 		<French>Vous avez échoué dans la quête de l'OPA Hostile !</French>
 		<German>Die Quest "Feindliche Übernahme" ist gescheitert!</German>
-		<Italian>Hai fallito nell'impresa del Rilevamento ostile!</Italian>
+		<Italian>Hai fallito la missione "OPA ostile".</Italian>
 		<Spanish>¡La misión Opa hostil ha fracasado!</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5339,7 +5345,7 @@
 		<English>You have failed the quest of The Master Blacksmith.</English>
 		<French>Vous avez échoué dans la quête du Maître Forgeron.</French>
 		<German>Die Quest "Der Meisterschmied" ist gescheitert.</German>
-		<Italian>Hai fallito nell'impresa del Maestro fabbro.</Italian>
+		<Italian>Hai fallito la missione "Mastro fabbro".</Italian>
 		<Spanish>La misión El maestro herrero ha fracasado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5347,7 +5353,7 @@
 		<English>You have failed the quest of "Noble Knights!"</English>
 		<French>Vous avez échoué dans la quête des Nobles chevaliers !</French>
 		<German>Die Quest "Edle Ritter" ist gescheitert!</German>
-		<Italian>Hai fallito nell'impresa dei Nobili cavalieri!</Italian>
+		<Italian>Hai fallito la missione "Nobili cavalieri".</Italian>
 		<Spanish>¡La misión Caballeros nobles ha fracasado!</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5355,17 +5361,17 @@
 		<English>All records of ancient games have been forever lost.</English>
 		<French>Toutes les informations sur les jeux antiques ont été perdues pour toujours.</French>
 		<German>Alle Aufzeichnungen der antiken Spiele sind für immer verloren gegangen.</German>
-		<Italian>Tutte le informazioni sui giochi antichi sono state perse per sempre.</Italian>
-		<Spanish>Toda la información sobre los juegos antiguos se ha perdido por siempre.</Spanish>
+		<Italian>Tutte le informazioni sui Giochi antichi sono andate perse per sempre.</Italian>
 		<Polish>Wszystkie zapiski o starożytnych grach zostały stracone bezpowrotnie.</Polish>
 		<Russian>Все записи о древних играх были навсегда утрачены.</Russian>
+		<Spanish>Toda la información sobre los juegos antiguos se ha perdido por siempre.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAIL_OVERWHELM</Tag>
 		<English>You have failed the quest of the "Overwhelm Doctrine!"</English>
 		<French>Vous avez échoué dans la quête de la Doctrine de l'Ecrasement !</French>
 		<German>Die Quest "Überwältigungsdoktrin" ist gescheitert!</German>
-		<Italian>Hai fallito nell'impresa della Dottrina della sopraffazione!</Italian>
+		<Italian>Hai fallito la missione "Dottrina della sopraffazione".</Italian>
 		<Spanish>¡La misión Doctrina del doblegamiento ha fracasado!</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5373,7 +5379,7 @@
 		<English>You have failed the quest of The National Sports League.</English>
 		<French>Vous avez échoué dans la quête de la Ligue Sportive Nationale.</French>
 		<German>Die Quest "Nationale Sportliga" ist gescheitert.</German>
-		<Italian>Hai fallito nell'impresa del Campionato nazionale.</Italian>
+		<Italian>Hai fallito la missione "Campionato sportivo nazionale".</Italian>
 		<Spanish>La misión Liga deportiva nacional ha fracasado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5381,7 +5387,7 @@
 		<English>You have failed the quest of the Warships!</English>
 		<French>Vous avez échoué dans la quête des Navires de Guerre !</French>
 		<German>Die Quest "Kriegsschiffe" ist gescheitert!</German>
-		<Italian>Hai fallito nell'impresa delle Navi da guerra!</Italian>
+		<Italian>Hai fallito la missione "Navi da guerra".</Italian>
 		<Spanish>¡La misión Barcos de guerra ha fracasado!</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5389,7 +5395,7 @@
 		<English>You have failed the quest of the War Chariots!</English>
 		<French>Vous avez échoué dans la quête des Chars de Guerre !</French>
 		<German>Die Quest "Kriegsstreitwagen" ist gescheitert!</German>
-		<Italian>Hai fallito nell'impresa dei Carri da guerra!</Italian>
+		<Italian>Hai fallito la missione "Carri da guerra".</Italian>
 		<Spanish>La misión Carros de guerra ha fracasado.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5421,7 +5427,7 @@
 		<English>The %s1_civ_adjective people in %s2_city have sent half their stored food to your city of %s4_city to fend off starvation caused by a poor local harvest. This humanitarian relief may represent a positive turning point in your relations.</English>
 		<French>Les citoyens %s1:3_civ_adjective de %s2_city ont envoyé la moitié de leurs stocks de nourriture dans votre ville de %s4_city pour lutter contre la famine provoquée par une mauvaise récolte. cette aide humanitaire pourrait représenter un tournant positif dans vos relations.</French>
 		<German>Das %s1:3_civ_adjective Volk in %s2_city hat die Hälfte seiner Nahrungsvorräte in Eure Stadt %s4_city geschickt, um der durch die miserable Ernte ausgelösten Hungersnot entgegenzuwirken. Dieser Akt der humanitären Hilfe könnte einen Wendepunkt für die Beziehung der beiden Nationen darstellen.</German>
-		<Italian>La gente %s1_civ_adjective di %s2_city ha inviato metà delle proprie scorte di cibo alla tua città di %s4_city per allontanare la carestia causata da un cattivo raccolto. Questo aiuto umanitario potrebbe rappresentare un punto di svolta nelle relazioni con loro.</Italian>
+		<Italian>La popolazione %s1:2_civ_adjective di %s2_city ha inviato metà delle proprie scorte di cibo alla tua città di %s4_city per contrastare la carestia causata da un cattivo raccolto. Questo aiuto umanitario potrebbe rappresentare un punto di svolta nelle relazioni con loro.</Italian>
 		<Spanish>El pueblo %s1:1_civ_adjective de %s2_city ha enviado la mitad de los alimentos que tenía almacenados a nuestra ciudad de %s4_city para paliar la hambruna causada por una mala cosecha en el lugar. Este acto humanitario bien puede representar un punto de quiebra positivo en nuestras relaciones.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5429,7 +5435,7 @@
 		<English>The generous %s1_civ_adjective people in %s2_city have sent all of their food stores to your city of %s4_city to prevent famine caused by a poor local harvest. This humanitarian effort has brought your two peoples much closer together!</English>
 		<French>Les généreux citoyens %s1:3_civ_adjective de %s2_city ont envoyé tous leurs stocks de nourriture dans votre ville de %s4_city pour enrayer une famine due à une mauvaise récolte. Cette aide humanitaire a considérablement rapproché vos deux peuples !</French>
 		<German>Die selbstlosen %s1:2_civ_adjective Bürger von %s2_city haben ihre gesamten Nahrungsvorräte in Eure Stadt %s4_city geschickt, um der durch die miserable Ernte ausgelösten Hungersnot entgegenzuwirken. Durch diesen Akt der humanitären Hilfe sind sich die beiden Nationen deutlich näher gekommen!</German>
-		<Italian>La generosa popolazione %s1_civ_adjective di %s2_city ha inviato l'intera scorta di cibo alla tua città di %s4_city per scongiurare la carestia causata da un cattivo raccolto. Questo sforzo umanitario ha avvicinato molto le due popolazioni!</Italian>
+		<Italian>La generosa popolazione %s1:2_civ_adjective di %s2_city ha inviato l'intera scorta di cibo alla tua città di %s4_city per scongiurare la carestia causata da un cattivo raccolto. Questo sforzo umanitario ha avvicinato molto le due popolazioni!</Italian>
 		<Spanish>Los generosos %s1:3_civ_adjective de %s2_city han enviado cuantos alimentos tenían almacenados a nuestra ciudad de %s4_city para paliar la hambruna causada por una mala cosecha en el lugar. Este generoso acto humanitario ha estrechado mucho más los lazos entre nuestros dos pueblos.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5438,19 +5444,19 @@
 		<French>Un docteur de renommée mondiale a décidé de prendre sa retraite dans la ville de %s2_city, et veux donner sa fortune aux oeuvres de charité locales. Comment voulez-vous que cet or soit réparti?</French>
 		<German>Ein weltbekannter Arzt in der %s1_civ_adjective Stadt %s2_city setzt sich zur Ruhe und spendet sein Vermögen der örtlichen Wohlfahrt. Wie sollte das Geld verwendet werden?</German>
 		<Italian>Un dottore di fama mondiale ha deciso di ritirarsi a %s2_city e ha donato le sue fortune agli enti di carità locali. Come dovrebbe essere usato questo denaro?</Italian>
-		<Spanish>Un doctor mundialmente conocido ha decidido jubilarse en %s2_city y piensa donar su fortuna a las organizaciones caritativas locales. ¿Cómo debería usarse este dinero?</Spanish>
 		<Polish>Lekarz przechodzi na emeryturę w %s2_city i przekazał swój majątek na cele charytatywne. Jak chcesz wykorzystać te pieniądze?</Polish>
 		<Russian>Всемирно известный врач решил уйти в отставку в городе %s2 и завещал свое состояние местным благотворительным организациям. Как использовать эти деньги?</Russian>
+		<Spanish>Un doctor mundialmente conocido ha decidido jubilarse en %s2_city y piensa donar su fortuna a las organizaciones caritativas locales. ¿Cómo debería usarse este dinero?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAMOUS_DOCTOR_1</Tag>
 		<English>Put this money towards a research hospital annex onto our university.</English>
 		<French>Investir cet argent pour établir un centre de recherche médicale en annexe de notre université.</French>
 		<German>Verwendet das Geld für ein Forschungskrankenhaus als Erweiterung unserer Universität.</German>
-		<Italian>Usa questi soldi per un ospedale di ricerca, annesso all'università.</Italian>
-		<Spanish>Invertirlo en un centro de investigación médica dependiente de nuestra Universidad.</Spanish>
+		<Italian>Usa questi soldi per un ospedale di ricerca annesso all'università.</Italian>
 		<Polish>Przekaż pieniądze na badania do oddziału szpitalnego obok naszego uniwersytetu.</Polish>
 		<Russian>Передайте эти средства нашим медицинским университетам на исследовательские нужды.</Russian>
+		<Spanish>Invertirlo en un centro de investigación médica dependiente de nuestra Universidad.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAMOUS_DOCTOR_2</Tag>
@@ -5458,16 +5464,16 @@
 		<French>Utiliser cet argent pour implanter des cliniques gratuites dans la ville, pour s'occuper des malades et des blessés.</French>
 		<German>Verwende das Geld für kostenlose Kliniken in der Stadt, die sich um die Kranken und Verwundeten kümmern.</German>
 		<Italian>Usa questi soldi per creare cliniche gratuite nella città, per curare malati e feriti.</Italian>
-		<Spanish>Usarlo para establecer clínicas gratuitas en la ciudad, para cuidar a enfermos y heridos.</Spanish>
 		<Polish>Użyj tych pieniędzy by wybudować darmowe kliniki w mieście. Kliniki mają być dostępne dla wszystkich rannych i chorych z okolic.</Polish>
 		<Russian>Используйте эти деньги для создания в городе бесплатных поликлиник, для ухода за больными и пострадавшими.</Russian>
+		<Spanish>Usarlo para establecer clínicas gratuitas en la ciudad, para cuidar a enfermos y heridos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FARM_BANDITS_1</Tag>
 		<English>We need that food. Do whatever it takes to deal with those bandits.</English>
 		<French>Nous avons besoin de cette nourriture. Faire le nécessaire pour arrêter ces bandits.</French>
 		<German>Wir brauchen diese Nahrungsmittel. Tut, was immer nötig ist, um mit diesen Banditen fertig zu werden.</German>
-		<Italian>Abbiamo bisogno di quel cibo. Fa' ciò che serve per occuparsi di quei banditi.</Italian>
+		<Italian>Abbiamo bisogno di quel cibo. Fate ciò che serve per occuparsi di quei banditi.</Italian>
 		<Spanish>Necesitamos esos alimentos. Haced lo que sea necesario para encargaros de esos bandidos.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5475,16 +5481,16 @@
 		<English>Dispatch some of our troops to hunt down these bandits.</English>
 		<French>Envoyer des troupes pourchasser ces bandits.</French>
 		<German>Sendet einige unserer Truppen aus, um diese Banditen dingfest zu machen.</German>
-		<Italian>Invia alcune delle nostre truppe per dare la caccia ai banditi.</Italian>
+		<Italian>Inviate alcune delle nostre truppe per dare la caccia ai banditi.</Italian>
 		<Spanish>Enviad algunas tropas a dar buena cuenta de esos bandidos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FARM_BANDITS_3</Tag>
 		<English>We are too busy to be bothered. Leave the matter to the local authorities. (Banditry may continue)</English>
 		<French>Nous n'avons pas le temps de nous en occuper. Laisser les autorités locales s'en charger (les pillages risquent de continuer).</French>
-		<German>Wir können uns jetzt nicht darum kümmern. Überlasst die Sache den örtlichen Behörden. (Die Banditenüberfälle könnten andauern.)</German>
-		<Italian>Siamo troppo impegnati. Lascia che del problema si occupino le autorità locali. (I furti potrebbero continuare).</Italian>
-		<Spanish>Estamos demasiado ocupados como para que se nos moleste. Dejad el asunto en manos de las autoridades locales. Es posible que el bandidaje prosiga.</Spanish>
+		<German>Wir können uns jetzt nicht darum kümmern. Überlasst die Sache den örtlichen Behörden. (Die Banditenüberfälle könnten andauern)</German>
+		<Italian>Siamo troppo impegnati. Lasciate che del problema si occupino le autorità locali. (I furti potrebbero continuare)</Italian>
+		<Spanish>Estamos demasiado ocupados como para que se nos moleste. Dejad el asunto en manos de las autoridades locales. (Es posible que el bandidaje prosiga)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_FAUX_PAS_1</Tag>
@@ -6297,7 +6303,7 @@
 		<English>Well, having the parks is nice.</English>
 		<French>Bien, les parcs embellirent toujours une Ville.</French>
 		<German>Nun, es ist schön den Park zu haben.</German>
-		<Italian>Bè, è carino avere un parco.</Italian>
+		<Italian>Beh, è bello avere dei parchi.</Italian>
 		<Spanish>Excelente, es agradable tener esos parques.</Spanish>
 		<Polish>W sumie posiadanie parków nie jest złe</Polish>
 		<Russian>Что ж, парки - это прекрасно.</Russian>
@@ -6307,7 +6313,7 @@
 		<English>Guns Not Butter[PARAGRAPH:1]You are tasked by your military leaders to train a sizable force of musket units.</English>
 		<French>Pas de beurre, mais des canons[PARAGRAPH:1]Vos dirigeants militaires vous chargent d'entraîner un nombre important d'unités d'arquebusiers.</French>
 		<German>Feuer statt Butter[PARAGRAPH:1]Eure Militärführer verlangen von Euch, eine große Truppe Musketier-Einheiten auszubilden.</German>
-		<Italian>Fucili, non banane.[PARAGRAPH:1]I capi militari ti hanno incaricato di creare un esercito di unità con moschetto.</Italian>
+		<Italian>Fucili, non burro.[PARAGRAPH:1]I capi militari ti hanno incaricato di creare un esercito di unità con moschetto.</Italian>
 		<Spanish>Armas de fuego, no mantequilla[PARAGRAPH:1]Los líderes militares han encargado llevar a cabo el entrenamiento de una fuerza considerable de unidades de mosquete.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6971,7 +6977,7 @@
 		<English>Hostile Takeover[PARAGRAPH:1]You are tasked by your corporate leaders to obtain (by any means necessary) our own source of all resource types they need to conduct their operations.</English>
 		<French>OPA hostile[PARAGRAPH:1]Les entrepreneurs nationaux vous chargent d'obtenir (par n'importe quel moyen) une source nationale pour les ressources dont ils ont besoin.</French>
 		<German>Feindliche Übernahme[PARAGRAPH:1]Die Vorsitzenden Eurer Kapitalgesellschaften verlangen von Euch, eigene Vorkommen für alle Ressourcen zu erschließen, die sie für die Ausübung ihrer Geschäfte benötigen, egal mit welchen Mitteln.</German>
-		<Italian>Rilevamento ostile[PARAGRAPH:1]I capi della corporazione ti hanno incaricato di ottenere (con ogni mezzo) il controllo di ogni tipo di risorsa necessaria per le loro operazioni.</Italian>
+		<Italian>OPA ostile[PARAGRAPH:1]I capi della corporazione ti hanno incaricato di ottenere (con ogni mezzo) il controllo di ogni tipo di risorsa necessaria per le loro operazioni.</Italian>
 		<Spanish>Opa hostil[PARAGRAPH:1]Los líderes corporativos piden que se consiga una fuente propia para todos los tipos de recurso que necesitan para desarrollar sus operaciones, y que se empleen para ello todos los medios necesarios.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7817,7 +7823,7 @@
 		<English>The Master Blacksmith[PARAGRAPH:1]You are tasked by the master blacksmith to build enough new [COLOR_BUILDING_TEXT]Forges[COLOR_REVERT] to provide acceptable working environments for all the students to whom he intends to pass on his trade secrets.</English>
 		<French>Le Maître Forgeron[PARAGRAPH:1]Le maître forgeron vous charge de construire suffisamment de nouvelles [COLOR_BUILDING_TEXT]Forges[COLOR_REVERT] pour fournir un environnement de travail acceptable à tous les apprentis à qui il compte transmettre ses secrets.</French>
 		<German>Der Meisterschmied[PARAGRAPH:1]Der Meisterschmied fordert, dass Ihr genug neue [COLOR_BUILDING_TEXT]Schmieden[COLOR_REVERT] baut, um all jenen entsprechende Arbeitsplätze zu bieten, an die er seine Geheimnisse weitergibt.</German>
-		<Italian>Maestro fabbro[PARAGRAPH:1]Il maestro fabbro ti incarica di costruire abbastanza nuove [COLOR_BUILDING_TEXT]Fucine[COLOR_REVERT], in modo da fornire ambienti di lavoro accettabili a tutti gli studenti a cui trasmetterà i segreti della sua arte.</Italian>
+		<Italian>Mastro fabbro[PARAGRAPH:1]Il mastro fabbro ti incarica di costruire abbastanza nuove [COLOR_BUILDING_TEXT]Fucine[COLOR_REVERT], in modo da fornire ambienti di lavoro accettabili a tutti gli studenti a cui trasmetterà i segreti della sua arte.</Italian>
 		<Spanish>El maestro herrero[PARAGRAPH:1]El maestro herrero ha encargado la construcción de nuevas [COLOR_BUILDING_TEXT]Forjas[COLOR_REVERT] para proporcionar un entorno de trabajo aceptable a los estudiantes a quienes planea transmitir los secretos del oficio.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -7857,7 +7863,7 @@
 		<English>We applaud the accomplishments of our revered grand master blacksmith.</English>
 		<French>Nous sommes ravis des accomplissements de notre vénéré maître forgeron.</French>
 		<German>Die Leistungen unseres verehrten Großmeisters der Schmiedekunst verdienen unsere Hochachtung!</German>
-		<Italian>Applaudiamo le imprese del nostro onorato maestro fabbro.</Italian>
+		<Italian>Applaudiamo le imprese del nostro onorato mastro fabbro.</Italian>
 		<Spanish>Loados sean los logros de nuestro reverenciado gran maestro herrero.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -8402,7 +8408,7 @@
 		<Tag>TXT_KEY_EVENT_NSLCHAMP</Tag>
 		<English>The hometown hero of %s2_city has just won the National Sports League championship! What is he going to do next?</English>
 		<French>Le Héros local de %s2_city vient de gagner le Championnat de la Ligue Nationale de Sport ! Que va-t-il faire ensuite ?</French>
-		<Italian>Il campionato nazionale di %s2_city ha appena vinto il Campionato nazionale! Cosa farà ora?</Italian>
+		<Italian>Il campione di %s2_city ha appena vinto il Campionato sportivo nazionale! Cosa farà ora?</Italian>
 		<Russian>Â ðîäíîì ãîðîäå ãåðîÿ %s2_city èäåò ëèêîâàíèå ïî òîëüêî ÷òî âûèãðàííîìó èì ÷åìïèîíàòó â Íàöèîíàëüíîé ñïîðòèâíîé ëèãå! ×òî îí íàìåðåâàåòñÿ äåëàòü äàëüøå?</Russian>
 	</TEXT>
 	<TEXT>
@@ -8421,7 +8427,7 @@
 		<Tag>TXT_KEY_EVENT_NSL_CHAMP_OTHER_1</Tag>
 		<English>Disneyland is experiencing a rise in admissions after a visit from the winner of the %s1_civ_adjective National Sports League championship.</English>
 		<French>Disneyland connaît une augmentation des entrées après une visite du gagnant du Championnat de La Ligue Nationale de Sport %s1_civ_adjective.</French>
-		<Italian>Disneyland sta avendo un aumento delle entrate dopo una visita dal vincitore del Campionato nazionale %s1_civ_adjective.</Italian>
+		<Italian>Disneyland sta avendo un aumento delle entrate dopo una visita dal vincitore del Campionato sportivo nazionale %s1_civ_adjective.</Italian>
 		<Russian>Äèñíåéëåíä ïåðåæèâàåò íàïëûâ ïîñåòèòåëåé è ôàíàòîâ ïîñëå åãî ïîñåùåíèÿ àáñîëþòíûì ïîáåäèòåëåì â ñîðåâíîâàíèÿõ %s1_civ_adjective íàöèîíàëüíîé ñïîðòèâíîé ëèãè.</Russian>
 	</TEXT>
 	<TEXT>
@@ -9649,7 +9655,7 @@
 		<English>National Sports League[PARAGRAPH:1]You are tasked by your cultural advisors to build enough [COLOR_BUILDING_TEXT]Colosseums[COLOR_REVERT] to support viable sports leagues.</English>
 		<French>Ligue Sportive Nationale.[PARAGRAPH:1]Vos conseillers culturels vous chargent de construire suffisamment de [COLOR_BUILDING_TEXT]Colisées[COLOR_REVERT] pour soutenir des ligues sportives viables.</French>
 		<German>Nationale Sportliga[PARAGRAPH:1]Eure Kulturberater tragen Euch auf, genug [COLOR_BUILDING_TEXT]Kolosseen[COLOR_REVERT] zu bauen, um nationale Sportereignisse zu unterstützen.</German>
-		<Italian>Campionato nazionale[PARAGRAPH:1]Hai ricevuto il compito, dai tuoi consiglieri culturali, di costruire abbastanza [COLOR_BUILDING_TEXT]Colossei[COLOR_REVERT] da supportare campionati sportivi nazionali.</Italian>
+		<Italian>Campionato sportivo nazionale[PARAGRAPH:1]Hai ricevuto il compito, dai tuoi consiglieri culturali, di costruire abbastanza [COLOR_BUILDING_TEXT]Colossei[COLOR_REVERT] da supportare campionati sportivi nazionali.</Italian>
 		<Spanish>Liga deportiva nacional[PARAGRAPH:1]Los consejeros culturales han encargado la construcción de suficientes [COLOR_BUILDING_TEXT]Coliseos[COLOR_REVERT] para dar apoyo a ligas deportivas viables.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -10569,7 +10575,7 @@
 		<English>Congratulations! You have met the goals of your religious masters and spread your civilization across the waters. You have completed the quest of The Blessed Sea.</English>
 		<French>Félicitations! Vous avez atteint le but fixé par vos chefs religieux et propagé votre civilisation à travers les mers. Vous avez réussi la quête de la mer bénie.</French>
 		<German>Gratulation! Sie haben die Zielsetzungen Ihrer religiösen Führer erfüllt und Ihre Zivilisation über das Meer hinaus ausgedehnt. Sie haben die Quest "Gesegnete See" erfolgreich abgeschlossen!</German>
-		<Italian>Congratulazioni! Hai raggiunto gli obiettivi dei capi religiosi e hai diffuso la tua civiltà al di là delle acque. Hai completato l'impresa del Mare Benedetto.</Italian>
+		<Italian>Congratulazioni! Hai raggiunto gli obiettivi dei capi religiosi e hai diffuso la tua civiltà al di là delle acque. Hai completato la missione "Mare Benedetto".</Italian>
 		<Spanish>¡Felicidades! Se han satisfecho las condiciones de los líderes religiosos y se ha propagado nuestra civilización por las aguas. Se ha completado la misión "El bendito mar".</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11632,7 +11638,7 @@
 		<English>Congratulations! You have completed the quest of Hostile Takeover and enabled %s11_corporation to turn extra profit.</English>
 		<French>Félicitations ! Vous avez achevé la quête de l'OPA Hostile et permis à la société : %s11_corporation de faire des profits supplémentaires.</French>
 		<German>Glückwunsch! Sie haben die Quest "Feindliche Übernahme" abgeschlossen und der Kapitalgesellschaft %s11_corporation dadurch zu zusätzlichem Gewinn verholfen.</German>
-		<Italian>Congratulazioni! Hai completato l'impresa del Rilevamento ostile, permettendo alla %s11_corporation di realizzare profitti extra.</Italian>
+		<Italian>Congratulazioni! Hai completato la missione "OPA ostile", permettendo alla corprorazione %s11_corporation di realizzare profitti extra.</Italian>
 		<Spanish>¡Felicidades! Habéis completado la misión Opa hostil: %s11_corporation podrá obtener beneficios extra.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11924,7 +11930,7 @@
 		<English>The master blacksmith in %s2_city has offered to take on and train multiple apprentices if the government will build new forges for them to operate once their training has been completed.[PARAGRAPH:1]We will need to build enough [COLOR_BUILDING_TEXT]Forges[COLOR_REVERT] in our cities to accommodate the master's new students.</English>
 		<French>Le maître forgeron de %s2_city a proposé d'entraîner plusieurs apprentis si le gouvernement construit de nouvelles forges pour que ceux-ci exercent une fois leur apprentissage achevé.[PARAGRAPH:1]Nous aurons besoin de construire suffisamment de [COLOR_BUILDING_TEXT]Forges[COLOR_REVERT] dans nos villes pour accueillir les nouveaux apprentis du maître.</French>
 		<German>Der Meisterschmied der Stadt %s2_city hat angeboten, mehrere Lehrlinge gleichzeitig auszubilden, wenn die Regierung neue Schmieden baut, in denen die Lehrlinge nach der Ausbildung arbeiten können.[PARAGRAPH:1]Wir müssen genug [COLOR_BUILDING_TEXT]Schmieden[COLOR_REVERT] in unseren Städten bauen, um die neuen Gesellen zu versorgen.</German>
-		<Italian>Il maestro fabbro di %s2_city si è offerto di accettare e di addestrare più apprendisti, se il governo costruirà le fucine necessarie a farli lavorare, una volta che l'addestramento sarà terminato.[PARAGRAPH:1]Abbiamo bisogno di costruire abbastanza [COLOR_BUILDING_TEXT]Fucine[COLOR_REVERT] nelle nostre città per accogliere i nuovi studenti del maestro.</Italian>
+		<Italian>Il mastro fabbro di %s2_city si è offerto di accettare e di addestrare più apprendisti, se il governo costruirà le fucine necessarie a farli lavorare, una volta che l'addestramento sarà terminato.[PARAGRAPH:1]Abbiamo bisogno di costruire abbastanza [COLOR_BUILDING_TEXT]Fucine[COLOR_REVERT] nelle nostre città per accogliere i nuovi studenti del maestro.</Italian>
 		<Spanish>El maestro herrero de %s2_city se ha ofrecido a acoger e instruir a varios aprendices si el gobierno construye nuevas forjas en las que ocuparlos una vez su entrenamiento concluya.[PARAGRAPH:1]Tendremos que construir suficientes [COLOR_BUILDING_TEXT]Forjas[COLOR_REVERT] en nuestras ciudades para alojar a los nuevos estudiantes del maestro.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11932,7 +11938,7 @@
 		<English>Congratulations! You have met the goals of your master blacksmith and built enough [COLOR_BUILDING_TEXT]Forges[COLOR_REVERT] for each for his students to have his own to operate. Please choose a reward from among the benefits your new metalworking empire is able to provide to you.</English>
 		<French>Félicitations ! Vous avez atteint les objectifs de votre maître forgeron et construit suffisamment de [COLOR_BUILDING_TEXT]Forges[COLOR_REVERT] pour que chacun de ses apprentis puisse exercer. Veuillez choisir une récompense parmi les avantages que votre nouvel empire de la ferronnerie peut vous fournir.</French>
 		<German>Glückwunsch! Sie haben die Forderungen des Meisterschmieds erfüllt und genug [COLOR_BUILDING_TEXT]Schmieden[COLOR_REVERT] für alle seine Gesellen gebaut. Wählen Sie eine Belohnung aus den Vorteilen aus, die Ihr neues Schmiedeimperium Ihnen bieten kann.</German>
-		<Italian>Congratulazioni! Hai raggiunto gli obiettivi del maestro fabbro, costruendo abbastanza [COLOR_BUILDING_TEXT]Fucine[COLOR_REVERT] da far sì che ognuno dei suoi studenti abbia la propria. Scegli una ricompensa tra quelle messe a disposizione dal tuo nuovo impero metallurgico.</Italian>
+		<Italian>Congratulazioni! Hai raggiunto gli obiettivi del Mastro fabbro, costruendo abbastanza [COLOR_BUILDING_TEXT]Fucine[COLOR_REVERT] da far sì che ognuno dei suoi studenti abbia la propria. Scegli una ricompensa tra quelle messe a disposizione dal tuo nuovo impero metallurgico.</Italian>
 		<Spanish>¡Felicidades! Se han cumplido los objetivos del maestro herrero y se han construido [COLOR_BUILDING_TEXT]Forjas[COLOR_REVERT] suficientes para que cada uno de los estudiantes tenga una en la que trabajar. Elegid una de las recompensas que vuestro nuevo imperio de la forja del metal puede ofreceros.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -11940,7 +11946,7 @@
 		<English>%s2_city has produced a grand master blacksmith who has overseen the expansion and upgrade of the Forge to increase its efficiency.</English>
 		<French>%s2_city a produit un maître forgeron qui a procédé à l'agrandissement et l'amélioration de la forge afin d'augmenter son efficacité.</French>
 		<German>In der Stadt %s2_city wurde ein Großmeister der Schmiedekunst ausgebildet, der den Ausbau der Schmiede zur Steigerung ihrer Effizienz beaufsichtigt hat.</German>
-		<Italian>%s2_city ha prodotto un maestro fabbro, che si è occupato dell'espansione e del miglioramento della Fucina per aumentarne l'efficienza.</Italian>
+		<Italian>%s2_city ha prodotto un mastro fabbro, che si è occupato dell'espansione e del miglioramento della Fucina per aumentarne l'efficienza.</Italian>
 		<Spanish>%s2_city ha producido un gran maestro herrero que ha supervisado la ampliación y la modernización de la fragua para aumentar su eficacia.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -12134,7 +12140,7 @@
 		<English>Congratulations! You have built a powerful Aircraft Carrier battle fleet capable of conquering enemy cities in a single attack. A force capable of executing the Overwhelm Doctrine is now yours to command. Please choose your reward.</English>
 		<French>Félicitations ! Vous avez construit une puissante flotte de porte-avions capable de conquérir les villes ennemies en une seule attaque. Vous dirigez à présent une armée capable d'exécuter la Doctrine d'Ecrasement. Veuillez choisir votre récompense.</French>
 		<German>Glückwunsch! Sie haben eine mächtige Flugzeugträger-Schlachtflotte aufgebaut, mit der feindliche Städte in einem einzigen Angriff erobert werden können. Sie befehligen jetzt eine Streitmacht, welche die Überwältigungsdoktrin ausführen kann. Wählen Sie Ihre Belohnung aus.</German>
-		<Italian>Congratulazioni! Hai costruito una potente flotta da battaglia con portaerei, in grado di conquistare città nemiche con un singolo attacco. Ora al tuo comando c'è una forza in grado di mettere in atto la dottrina della sopraffazione. Scegli la ricompensa.</Italian>
+		<Italian>Congratulazioni! Hai costruito una potente flotta da battaglia con portaerei, in grado di conquistare città nemiche con un singolo attacco. Ora al tuo comando c'è una forza in grado di mettere in atto la Dottrina della sopraffazione. Scegli la tua ricompensa.</Italian>
 		<Spanish>¡Felicidades! Habéis creado una poderosa flota de combate de portaaviones capaz de conquistar ciudades enemigas con un solo ataque. Ahora tenéis a vuestras órdenes a una fuerza capaz de ejecutar la doctrina del doblegamiento. Elegid vuestra recompensa.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -12857,7 +12863,7 @@
 		<English>Congratulations! You have built the world's largest combat navy. Please choose your reward.</English>
 		<French>Félicitations ! Vous avez construit la plus grande marine de guerre du monde. Veuillez choisir votre récompense.</French>
 		<German>Glückwunsch! Sie haben die weltweit größte Kampfmarine aufgebaut. Wählen Sie Ihre Belohnung aus.</German>
-		<Italian>Congratulazioni! Hai costruito la marina da guerra più grande al mondo. Scegli la ricompensa.</Italian>
+		<Italian>Congratulazioni! Hai costruito la marina da guerra più grande al mondo. Scegli la tua ricompensa.</Italian>
 		<Spanish>¡Felicidades! Habéis creado la mayor flota naval de combate del mundo. Elegid vuestra recompensa.</Spanish>
 	</TEXT>
 	<TEXT>
