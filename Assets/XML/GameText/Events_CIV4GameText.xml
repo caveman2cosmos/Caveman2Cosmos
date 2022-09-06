@@ -6256,9 +6256,9 @@
 		<French>Cela va apporter du prestige à la ville!</French>
 		<German>Das wird unserer Stadt viel Prestige bringen!</German>
 		<Italian>Questo porterà prestigio alla nostra città!</Italian>
-		<Spanish>¡Esto dará prestigio a la ciudad!</Spanish>
 		<Polish>To przyniesie prestiż naszemu miastu.</Polish>
 		<Russian>Это повысит престиж города!</Russian>
+		<Spanish>¡Esto dará prestigio a la ciudad!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREED_1</Tag>
@@ -6266,7 +6266,7 @@
 		<French>Cupidité[PARAGRAPH:1]Vos dirigeants militaires vous chargent de prendre le contrôle de cette ressource.</French>
 		<German>Gier[PARAGRAPH:1]Eure Militärführer verlangen von Euch, die Macht über diese Ressource zu ergreifen.</German>
 		<Italian>Avidità[PARAGRAPH:1]I capi militari ti hanno incaricato di prendere il controllo di quella risorsa.</Italian>
-		<Spanish>Avaricia[PARAGRAPH:1]Los líderes militares han encargado realizar las tareas necesarias para controlar  dicho recurso.</Spanish>
+		<Spanish>Avaricia[PARAGRAPH:1]Los líderes militares han encargado realizar las tareas necesarias para controlar dicho recurso.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREED_DONE_1</Tag>
@@ -9690,7 +9690,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SPORTS_LEAGUE_DONE_3</Tag>
-		<English>Organize  large-scale periodic sporting events in the name of Zeus.</English>
+		<English>Organize large-scale periodic sporting events in the name of Zeus.</English>
 		<French>Organiser des événement sportifs périodiques de longue durée au nom de Zeus.</French>
 		<German>Organisiert groß angelegte Sportereignisse zu Ehren des Zeus.</German>
 		<Italian>Organizza periodicamente grandi manifestazioni sportive nel nome di Zeus.</Italian>
@@ -11164,7 +11164,7 @@
 		<French>Un nouveau modèle de charrue se popularise. Nos forges ont reçu des commandes de ces nouvelles charrues des fermiers de tout le pays.</French>
 		<German>Eine neue Pflugart hat sich verbreitet. In unseren Schmieden gehen Bestellungen von Bauern aus dem ganzen Land ein.</German>
 		<Italian>È diventato popolare un nuovo tipo di aratro. Le nostre fucine hanno evaso ordini di aratri da parte dei contadini sulle nostre terre.</Italian>
-		<Spanish>Se ha popularizado un nuevo diseño de arado. Nuestras forjas han atendido los pedidos de nuevos arados  realizados por granjeros de nuestras tierras.</Spanish>
+		<Spanish>Se ha popularizado un nuevo diseño de arado. Nuestras forjas han atendido los pedidos de nuevos arados realizados por granjeros de nuestras tierras.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_FASHION_1</Tag>
