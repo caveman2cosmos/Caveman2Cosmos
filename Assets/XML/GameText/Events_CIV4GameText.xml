@@ -98,13 +98,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_ANTIMONARCHISTS</Tag>
-		<English>%s1_civ_adjective antimonarchists are protesting, saying that the religious institutions don't have enough power compared to the King.</English>
+		<English>%s1_civ_adjective anti-monarchists are protesting, saying that the religious institutions don't have enough power compared to the King.</English>
 		<French>Des anti-monarchistes %s1:3_civ_adjective manifestent car ils trouvent que les institutions religieuses ne sont pas assez puissantes comparées au roi.</French>
 		<German>Im %[s1_civ_adjective]en Reich protestieren gläubige Menschen gegen die Ohnmacht religiöser Institutionen im Vergleich zur Allmacht des Königshauses.</German>
-		<Italian>Gli antimonarchici %s1:3_civ_adjective stanno protestando: sostengono che le istituzioni religiose non detengono abbastanza poteri rispetto al re.</Italian>
+		<Italian>Gli anti-monarchici %s1:3_civ_adjective stanno protestando: sostengono che le istituzioni religiose non detengono abbastanza poteri rispetto al re.</Italian>
 		<Polish>Przeciwnicy monarchii w %s1_civ_adjective protestują. Narzekają, że instytucje kościelne nie mają identycznej władzy jak Król.</Polish>
 		<Russian>В державе %s1_civ_adjective начались антимонархические выступления под предлогом, что королевские прерогативы ущемляют авторитет религиозных учреждений.</Russian>
-		<Spanish>Antimonárquicos %s1:3_civ_adjective están protestando, diciendo que las instituciones religiosas apenas tiene poder frente al Rey.</Spanish>
+		<Spanish>Anti-monárquicos %s1:3_civ_adjective están protestando, diciendo que las instituciones religiosas apenas tiene poder frente al Rey.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_APPLESEED</Tag>
@@ -146,7 +146,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_AXE_HAFT_1</Tag>
 		<English>%s1_civ_adjective craftsmen have improved the design of their axe manufacturing. These are the finest axes in the world.</English>
 		<French>Les artisans %s1:3_civ_adjective ont amélioré la fabrication des haches. Ce sont les meilleures haches du monde.</French>
-		<German>%s1:3_civ_adjective Handwerker haben ihre Axtherstellung verbessert. Dies sind die besten Äxte der Welt.</German>
+		<German>%s1:3_civ_adjective Handwerker haben das Design ihrer Axtfertigung verbessert. Dies sind die besten Äxte der Welt.</German>
 		<Italian>Gli artigiani %s1:3_civ_adjective hanno migliorato la propria tecnica di realizzazione di asce. Ora sono le migliori asce al mondo.</Italian>
 		<Spanish>Los artesanos %s1:3_civ_adjective han mejorado el diseño de su proceso de fabricación de hachas. Éstas son las mejores hachas del mundo.</Spanish>
 	</TEXT>
@@ -180,7 +180,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_BANANA_SPLIT</Tag>
 		<English>Invention of the banana split by a %s1_civ_adjective businessman has led to booming ice cream sales for their vendors.</English>
 		<French>L'invention du banana split par un homme d'affaires %s1_civ_adjective a conduit à une explosion des ventes de crème glacée chez les revendeurs.</French>
-		<German>Die Erfindung des Bananensplits durch einen %s1:2_civ_adjective Geschäftsmann hat zu gigantischen Verkaufszahlen der dortigen Eisverkäufer geführt.</German>
+		<German>Die Erfindung des Bananensplitt durch einen %s1:2_civ_adjective Geschäftsmann hat zu gigantischen Verkaufszahlen der dortigen Eisverkäufer geführt.</German>
 		<Italian>L'invenzione della banana split da parte di un uomo d'affari %s1_civ_adjective ha portato a un aumento delle vendite di gelato in quella nazione.</Italian>
 		<Spanish>La invención del banana split, obra de un hombre de negocios %s1:1_civ_adjective, ha reportado a los vendedores de helados un gran aumento de ventas.</Spanish>
 	</TEXT>
@@ -221,7 +221,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_BETTER_COAL</Tag>
 		<English>%s1_civ_adjective scientists have developed better ways of processing coal fuel.</English>
-		<French>Les scientifiques %s1:3_civ_adjective ont développé une méthode ameliorée d'exploitation du charbon.</French>
+		<French>Les scientifiques %s1:3_civ_adjective ont développé une méthode améliorée d'exploitation du charbon.</French>
 		<German>Die %[s1_civ_adjective]en Wissenschaftler entwickeln ein verbessertes Verfahren zur Energiegewinnung aus Kohle.</German>
 		<Italian>Gli scienziati %s1:3_civ_adjective hanno sviluppato metodi migliori per la lavorazione del combustibile derivante dal carbone.</Italian>
 		<Polish>Naukowcy z %s1_civ_adjective znaleźli lepszy sposób na wykorzystanie węgla.</Polish>
@@ -505,7 +505,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_COASTAL_REEF_STUCK</Tag>
 		<English>One of our ships got stuck on a reef after trying to navigate through treacherous coastal waters. Sailors managed to save it from sinking but it will take some time to set the ship free from the reef and fix the ship hull.</English>
 		<French>Un de nos navires s'est accroché à un récif en essayant de naviguer dans des eaux côtières traîtres. Les marins ont réussi à sauver le navire, mais il va falloir du temps pour réparer la coque et le sortir des récifs.</French>
-		<German>Eines unserer Schiffe ist auf ein Riff gefahren, nachdem es versucht hatte durch tükische Küstengewässer zu fahren. Den Matrosen ist es gelungen, das Schiff vor dem Untergang zu bewahren, doch wird es eine Weile dauern, bis es vom Riff befreit und der Rumpf repariert ist.</German>
+		<German>Eines unserer Schiffe ist auf ein Riff gefahren, nachdem es versucht hatte durch tückische Küstengewässer zu fahren. Den Matrosen ist es gelungen, das Schiff vor dem Untergang zu bewahren, doch wird es eine Weile dauern, bis es vom Riff befreit und der Rumpf repariert ist.</German>
 		<Italian>Una delle nostre navi si è arenata mentre stava navigando in acque costiere piuttosto insidiose. I marinai sono riusciti a impedire che affondasse, ma ci vorrà del tempo per disincastrare la nave dagli scogli e riparare lo scafo.</Italian>
 		<Polish>Jeden z naszych statków utknął na rafie po tym jak zaczął manewrować po płytkim wodach wybrzeża. Marynarze chcą ocalić go od utonięcia, ale zajmie to trochę czasu zanim uwolnią statek z rafy i naprawią kadłub.</Polish>
 		<Russian>Один из наших кораблей застрял на рифе после попытки пройти через коварные прибрежные воды. Морякам удалось спасти его от затопления, но потребуется некоторое время, чтобы снять корабль с отмели и починить его корпус.</Russian>
@@ -554,7 +554,7 @@
 		<Italian>Si rincorrono voci che i mastri costruttori di navi dell'Impero %s1_civ_adjective stiano svolgendo ampi lavori di riallestimento sull'intera flotta.</Italian>
 		<Polish>Plotki donoszą o kapitanach %s1_civ_adjective, którzy energicznie ulepszają statki w swojej flocie.</Polish>
 		<Russian>Ходят слухи, что судовладельцы %s1_civ_adjective затеяли обширное переоснащение всего своего флота.</Russian>
-		<Spanish>Según los rumores, los marineros %s1:3_civ_adjective están haciendo una extensa labor de reacondicionamiento en toda su flota.</Spanish>
+		<Spanish>Según los rumores, los marineros %s1:3_civ_adjective están haciendo una extensa labor de re-acondicionamiento en toda su flota.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_CORPORATE_EXPANSION_DONE</Tag>
@@ -674,7 +674,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_DRUIDS</Tag>
 		<English>A %s4_civ_adjective druids are making pilgrims to %s1_civ_adjective Stonehenge.</English>
-		<French>Des druides %s4:3_civ_adjective guident des pélerins jusqu'au site %s1_civ_adjective de Stonehenge.</French>
+		<French>Des druides %s4:3_civ_adjective guident des pèlerins jusqu'au site %s1_civ_adjective de Stonehenge.</French>
 		<German>Ein %s4_civ_adjective Druide macht eine Pilgerreise zum %s1_civ_adjective Stonehenge.</German>
 		<Italian>Alcuni druidi %s4:3_civ_adjective hanno compiuto un pellegrinaggio al sito %s1_civ_adjective di Stonehenge.</Italian>
 		<Polish>Druidzi %s4_civ_adjective tworzą pielgrzymkę do Stonehenge (należącym do cywilizacji %s1_civ_adjective).</Polish>
@@ -884,7 +884,7 @@
 		<French>La légende des Quarante voleurs attire les chasseurs de trésors et les aventuriers vers les terres %s2:4_civ_adjective.</French>
 		<German>Die Legende der Vierzig Diebe lockt Schatzsucher und Abenteurer in die %s2:2_civ_adjective Gebiete.</German>
 		<Italian>La leggenda dei Quaranta ladroni sta attirando cacciatori di tesori e avventurieri nelle terre %s2:4_civ_adjective.</Italian>
-		<Spanish>La leyenda de los Cuarenta Ladrones está atrayendo a cazatesoros y aventureros a las tierras %s2:4_civ_adjective.</Spanish>
+		<Spanish>La leyenda de los Cuarenta Ladrones está atrayendo a caza-tesoros y aventureros a las tierras %s2:4_civ_adjective.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FORT_IN_DISREPAIR</Tag>
@@ -947,7 +947,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FULLERENES_1</Tag>
 		<English>The %s1_civ_adjective scientists in %s2_city have made a discovery! They've found fullerenes, a new form of carbon molecules.</English>
-		<French>Les scientifiques %s1:3_civ_adjective de %s2_city ont fait une découverte! Il ont trouvé le fullerène, une nouvelle forme cristaline des molécules de carbone.</French>
+		<French>Les scientifiques %s1:3_civ_adjective de %s2_city ont fait une découverte! Il ont trouvé le fullerène, une nouvelle forme de molécules de carbone.</French>
 		<German>Die %s1_civ_adjective Forscher in %s2_city haben eine Entdeckung gemacht! Sie haben Fullerene gefunden, eine neue Form von Kohlenstoffmolekülen.</German>
 		<Italian>Gli scienziati %s1:3_civ_adjective di %s2_city hanno fatto una scoperta! Hanno trovato il fullerene, una nuova forma molecolare del carbonio.</Italian>
 		<Polish>Naukowcy %s1_civ_adjective w mieście %s2_city dokonali niesamowitego odkrycia! Wynaleźli fullereny - nową formę molekuł węgla.</Polish>
@@ -957,7 +957,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_FUTBOL_WAR</Tag>
 		<English>Football hooligans provoke violence after a championship game between the %s4_civ_adjective and %s1_civ_adjective national football teams. Several fatalities are reported.</English>
-		<French>Des Supporters ont commmis des actes de violence après un match de championnat entre les équipes nationales de football des %s4:3_civ_adjective et des %s1:3_civ_adjective. Plusieurs morts sont à déplorer.</French>
+		<French>Des Supporters ont commis des actes de violence après un match de championnat entre les équipes nationales de football des %s4:3_civ_adjective et des %s1:3_civ_adjective. Plusieurs morts sont à déplorer.</French>
 		<German>Fußballrowdys provozieren Gewalt nach einem Meisterschaftspiel zwischen dem %s4_civ_adjective und %s1_civ_adjective Nationalmannschaften. Von einigen Verletzten wird berichtet.</German>
 		<Italian>Degli hooligan hanno provocato delle violenze dopo una partita tra le squadre nazionali di calcio %s4:2_civ_adjective e %s1:2_civ_adjective. Vengono segnalate diverse vittime.</Italian>
 		<Polish>Chuligani stadionowi zachowywali się bardzo agresywnie po finałowym meczu pomiędzy narodowymi drużynami %s4_civ_adjective i %s1_civ_adjective. Stwierdzono kilkanaście ofiar śmiertelnych.</Polish>
@@ -1148,7 +1148,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_HARDY_SCOUTS</Tag>
 		<English>%s1_civ_adjective scouts are tough as nails, and can handle any situation that comes their way.</English>
-		<French>Les éclaireurs %s1:3_civ_adjective sont rusés et habiles comme personne et peuvent apréhender toutes les situations sans difficulté.</French>
+		<French>Les éclaireurs %s1:3_civ_adjective sont rusés et habiles comme personne et peuvent appréhender toutes les situations sans difficulté.</French>
 		<German>%s1_civ_adjective Entdecker sind besonders zäh und können jegliche Situation meistern.</German>
 		<Italian>Gli scout %s1:3_civ_adjective sono resistenti come il ferro e riescono ad affrontare ogni situazione che si trovano davanti.</Italian>
 		<Polish>Zwiadowcy z %s1_civ_adjective są twardzi jak kamień i potrafią sobie poradzić z każdą sytuacją jaką spotkają na swojej drodze.</Polish>
@@ -1320,7 +1320,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_IDITAROD</Tag>
 		<English>Sled dog racing is booming in the %s1_civ_adjective empire.</English>
-		<French>Les courses de chiens de traineaux sont renommées dans l'empire %s1_civ_adjective.</French>
+		<French>Les courses de chiens de traîneaux sont renommées dans l'empire %s1_civ_adjective.</French>
 		<Italian>Le corse con i cani da slitta stanno avendo un grande successo nell'Impero %s1_civ_adjective.</Italian>
 		<Polish>Zawody psich zaprzęgów rozkwitły w Imperium %s1_civ_adjective</Polish>
 		<Russian>Говорят, что в державе %s1_civ_adjective проводят гонки на собачьих упряжках.</Russian>
@@ -1356,7 +1356,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_INDEPENDENT_FISHERS</Tag>
 		<English>%s1_civ_adjective fishermen have organized their own workboat fleets.</English>
-		<French>Des pêcheurs %s1:3_civ_adjective ont organisé leur propre flotte de bâteau-ateliers.</French>
+		<French>Des pêcheurs %s1:3_civ_adjective ont organisé leur propre flotte de bateau-ateliers.</French>
 		<German>%s1_civ_adjective Fischer haben die Flotte ihrer Arbeitsboote neu organisiert.</German>
 		<Italian>Alcuni pescatori %s1:3_civ_adjective hanno costruito le proprie flotte di pescherecci.</Italian>
 		<Spanish>Algunos pescadores %s1:3_civ_adjective han organizado sus propias flotas de barcos faeneros.</Spanish>
@@ -1515,7 +1515,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_LOOSE_MORALS</Tag>
 		<English>Elders in %s1_civ_adjective society are disappointed in the music and culture of today's youth.</English>
-		<French>Les Aînés de la société %s1:2_civ_adjective sont déçus de la culture et la musique de la jeunesse d'aujourd'hui.</French>
+		<French>Les aînés de la société %s1:2_civ_adjective sont déçus de la culture et la musique de la jeunesse d'aujourd'hui.</French>
 		<German>Die Ältesten der %s1_civ_adjective Gesellschaft sind enttäuscht von der Musik und Kultur der heutigen Jugend.</German>
 		<Italian>Gli anziani nella società %s1:2_civ_adjective sono disgustati dalla musica e dalla cultura dei giovani.</Italian>
 		<Polish>Starszyzna w Imperium %s1_civ_adjective jest zawiedziona kulturą i muzyką współczesnej młodzieży.</Polish>
@@ -1853,7 +1853,7 @@
 		<Tag>TXT_KEY_EVENTTRIGGER_OVERWHELM_DONE</Tag>
 		<English>The %s1_civ_adjective people have constructed what is by far the most deadly fleet of warships in the history of warfare. Their aircraft carrier battle group could crush anything that gets in its way.</English>
 		<French>Le peuple %s1_civ_adjective a construit ce qui est de loin la plus impressionnante flotte de navires de guerre de l'histoire. Leur groupe de porte-avions de combat pourrait écraser quiconque se met en travers son chemin.</French>
-		<German>Das %s1:3_civ_adjective Volk hat die weitaus mächtigste Kriegsschiffflotte in der Geschichte der Kriegsführung errichtet. Ihre Flugzeugträger-Kampftruppe könnte alles zerschmettern, das sich ihr in den Weg stellt.</German>
+		<German>Das %s1:3_civ_adjective Volk hat die weitaus mächtigste Kriegsschiffsflotte in der Geschichte der Kriegsführung errichtet. Ihre Flugzeugträger-Kampftruppe könnte alles zerschmettern, das sich ihr in den Weg stellt.</German>
 		<Italian>La popolazione %s1:2_civ_adjective ha costruito la più letale flotta di navi da guerra della storia. Il loro gruppo da battaglia con portaerei può distruggere qualsiasi cosa si metta sulla sua strada.</Italian>
 		<Spanish>Los %s1:3_civ_adjective han construido la que es, con mucho, la más letal flota de barcos de guerra de la historia bélica. Su grupo de portaaviones de combate podría aplastar cualquier cosa que se cruzase en su camino.</Spanish>
 	</TEXT>
@@ -2767,7 +2767,7 @@
 		<Italian>La carenza di fondi e l'incuria hanno ridotto questa abbattuta in rovina.</Italian>
 		<Polish>Nasz brak finansowania armii i zaniedbania doprowadziły te zasieki do ruiny.</Polish>
 		<Russian>Отсутствие должного финансирования и пренебрежение привели эти засеки в запустение.</Russian>
-		<Spanish>La falta de financiación militar y el estado de abandono han dejado este Abatis con cerco espinoso en ruínas.</Spanish>
+		<Spanish>La falta de financiación militar y el estado de abandono han dejado este Abatis con cerco espinoso en ruinas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ACADEMIC_FUNDING_1</Tag>
@@ -2871,7 +2871,7 @@
 		<English>Allow their recovery teams unfettered access to the crash site.</English>
 		<French>Autoriser leurs équipes de secours à accéder au site de l'accident.</French>
 		<German>Gewährt ihren Bergungstrupps uneingeschränkten Zugang zur Absturzstelle.</German>
-		<Italian>Lascia libero accesso al luogo dello schianto alle loro squadre di soccorso.</Italian>
+		<Italian>Lasciate libero accesso al luogo dello schianto alle loro squadre di soccorso.</Italian>
 		<Spanish>Dar acceso sin límite al lugar del siniestro a sus equipos de rescate.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2879,7 +2879,7 @@
 		<English>Stall them for time while your own team learns what it can first.</English>
 		<French>Gagner du temps pendant que votre propre équipe essaye d'en savoir plus.</French>
 		<German>Haltet sie eine Weile hin, bis unsere eigenen Leute mehr über die Sache herausgefunden haben.</German>
-		<Italian>Tieni occupate le loro squadre di soccorso, mentre la tua raccoglie più informazioni possibile.</Italian>
+		<Italian>Tenete occupate le loro squadre di soccorso, mentre la nostra raccoglie più informazioni possibile.</Italian>
 		<Spanish>Entretenerlos el tiempo suficiente para que nuestro propio equipo averigüe primero cuanto pueda.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2887,7 +2887,7 @@
 		<English>Deny access. Claim the wreckage and let your engineers pore over it.</English>
 		<French>Refuser l'accès. Revendiquer la propriété de l'épave et laisser vos ingénieurs l'étudier.</French>
 		<German>Verweigert ihnen den Zutritt zur Absturzstelle. Sichert das Wrack und lasst es von Euren Ingenieuren untersuchen.</German>
-		<Italian>Nega l'accesso. Rivendica il relitto e lascia che i tuoi ingegneri lo studino.</Italian>
+		<Italian>Negate loro l'accesso. Rivendicate il relitto e fate in modo che i nostri ingegneri lo studino.</Italian>
 		<Spanish>Denegarles el acceso. Apoderarse de los restos y que nuestros ingenieros los estudien minuciosamente.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2895,7 +2895,7 @@
 		<English>One of your passenger airliners has crashed in %s1_civ_adjective territory. They have allowed unrestricted access to your recovery teams, building trust between your two nations.</English>
 		<French>Un de vos avions commerciaux s'est écrasé en territoire %s1:1_civ_adjective. Les %s1:3_civ_adjective ont autorisé vos équipes de secours à accéder au site de l'accident, renforçant ainsi la confiance entre vos deux nations.</French>
 		<German>Eine Eurer Passagiermaschinen ist auf dem Territorium des %s1:2_civ_adjective Volkes abgestürzt. Sie gewähren Euren Bergungstrupps uneingeschränkten Zugang, wodurch das Vertrauensverhältnis zwischen den beiden Nationen steigt.</German>
-		<Italian>Uno dei tuoi aerei passeggeri è precipitato nel territorio %s1_civ_adjective. Hanno concesso il libero accesso alle tue squadre di soccorso, creando un sentimento di fiducia tra le due nazioni.</Italian>
+		<Italian>Uno dei nostri aerei passeggeri è precipitato nel territorio %s1_civ_adjective. Hanno concesso il libero accesso alle nostre squadre di soccorso, creando un sentimento di fiducia tra le due nazioni.</Italian>
 		<Spanish>Uno de nuestros aviones de pasajeros se ha estrellado en territorio %s1:1_civ_adjective. Se les ha concedido acceso total a nuestros equipos de rescate, lo que ha alimentado la confianza entre nuestras dos naciones.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2903,7 +2903,7 @@
 		<English>One of your passenger airliners has crashed in %s1_civ_adjective territory. They seemed to be unsure how to react at first, but finally allowed your recovery teams access to the crash site.</English>
 		<French>Un de vos avions commerciaux s'est écrasé en territoire %s1:1_civ_adjective. Après quelques hésitations, ils ont finalement laissé vos équipes de secours accéder au site de l'accident.</French>
 		<German>Eine Eurer Passagiermaschinen ist auf dem Territorium des %s1:2_civ_adjective Volkes abgestürzt. Sie schienen zunächst unsicher, wie sie reagieren sollten, gewähren Euren Bergungstrupps nun aber uneingeschränkten Zugang zur Absturzstelle.</German>
-		<Italian>Uno dei tuoi aerei passeggeri è precipitato nel territorio %s1_civ_adjective. Non sembravano sicuri su come reagire all'inizio, ma poi hanno permesso alle tue squadre di soccorso di accedere al luogo dello schianto.</Italian>
+		<Italian>Uno dei nostri aerei passeggeri è precipitato nel territorio %s1_civ_adjective. Non sembravano sicuri su come reagire all'inizio, ma poi hanno permesso alle nostre squadre di soccorso di accedere al luogo dello schianto.</Italian>
 		<Spanish>Uno de nuestros aviones de pasajeros se ha estrellado en territorio %s1:1_civ_adjective. Al principio no sabían muy bien cómo reaccionar, pero finalmente han concedido acceso a nuestros equipos de rescate al lugar del siniestro.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2911,7 +2911,7 @@
 		<English>One of your passenger airliners has crashed in %s1_civ_adjective territory. They are denying all access and have claimed the wreckage as their own. This outrage has angered your people and driven a diplomatic wedge between your two nations.</English>
 		<French>Un de vos avions commerciaux s'est écrasé en territoire %s1:1_civ_adjective. Ils refusent tout accès et ont revendiqué la propriété de l'épave. Cet outrage a provoqué la colère de votre peuple et une tension diplomatique entre vos deux nations.</French>
 		<German>Eine Eurer Passagiermaschinen ist auf dem Hoheitsgebiet des %s1:2_civ_adjective Volkes abgestürzt. Sie verwehren unseren Bergungstrupps den Zugang zur Absturzstelle und beanspruchen das Wrack für sich selbst. Dieses Vorgehen löst Empörung in unserer Bevölkerung aus und treibt einen Keil in die diplomatischen Beziehungen zwischen unseren Nationen.</German>
-		<Italian>Uno dei tuoi aerei passeggeri è precipitato nel territorio %s1_civ_adjective. Ti hanno negato l'accesso e hanno rivendicato come loro il relitto. Questo oltraggio ha incollerito il tuo popolo e creato un abisso diplomatico tra le due nazioni.</Italian>
+		<Italian>Uno dei nostri aerei passeggeri è precipitato nel territorio %s1_civ_adjective. Ci hanno negato l'accesso e hanno rivendicato come loro il relitto. Questo oltraggio ha incollerito il nostro popolo e creato un abisso diplomatico tra le due nazioni.</Italian>
 		<Spanish>Uno de nuestros aviones de pasajeros se ha estrellado en territorio %s1:1_civ_adjective. Nos deniegan cualquier derecho de acceso y se han apoderado de los restos. Este ultraje ha inflamado a nuestro pueblo y ha provocado un punto de quiebra en las relaciones diplomáticas entre nuestras dos naciones.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2939,7 +2939,7 @@
 		<English>Use our skill at power generation to increase productivity in our [COLOR_BUILDING_TEXT]Factories[COLOR_REVERT].</English>
 		<French>Employer notre compétence à la production d'électricité pour augmenter la productivité dans le nos[COLOR_BUILDING_TEXT]Usines[COLOR_REVERT].</French>
 		<German>Verwenden Sie unsere Erfahrung in der Stromerzeugung, um die Produktivität unserer [COLOR_BUILDING_TEXT]Fabriken[COLOR_REVERT] zu erhöhen.</German>
-		<Italian>Usa la nostra abilità nella produzione di energia per aumentare il rendimento delle nostre [COLOR_BUILDING_TEXT]Fabbriche[COLOR_REVERT].</Italian>
+		<Italian>Usate la nostra abilità nella produzione di energia per aumentare il rendimento delle nostre [COLOR_BUILDING_TEXT]Fabbriche[COLOR_REVERT].</Italian>
 		<Polish>Wykorzystaj nasze umiejętności w produkcji energii, aby zwiększyć wydajność naszych [COLOR_BUILDING_TEXT]Fabryk[COLOR_REVERT].</Polish>
 		<Russian>Используйте наши достижения в производстве электроэнергии для повышения производительности наших [COLOR_BUILDING_TEXT]Фабрик[COLOR_REVERT].</Russian>
 		<Spanish>Utilizar nuestras técnicas de generación de energía para aumentar la productividad de nuestras [COLOR_BUILDING_TEXT]Fábricas[COLOR_REVERT].</Spanish>
@@ -2949,7 +2949,7 @@
 		<English>Sell the excess power generated at our [COLOR_BUILDING_TEXT]Hydro Plants[COLOR_REVERT] for a profit.</English>
 		<French>Vendre le surplus d'énergie développée pas nos [COLOR_BUILDING_TEXT]Centrales hydro-électriques[COLOR_REVERT] pour faire des bénéfices.</French>
 		<German>Verkaufen Sie die überschüssige Energie, die in unseren [COLOR_BUILDING_TEXT]Wasserkraftwerken[COLOR_REVERT] erzeugt wird mit Profit.</German>
-		<Italian>Vendi l'elettricità prodotta in eccesso dalle nostre [COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] per generare ulteriori profitti.</Italian>
+		<Italian>Vendete l'elettricità prodotta in eccesso dalle nostre [COLOR_BUILDING_TEXT]Centrali idroelettriche[COLOR_REVERT] per generare ulteriori profitti.</Italian>
 		<Polish>Sprzedaj nadwyżki energii wygenerowane przez nasze [COLOR_BUILDING_TEXT]Elektrownie Wodne[COLOR_REVERT].</Polish>
 		<Russian>Продавайте излишки электроэнергии, произведенную на наших [COLOR_BUILDING_TEXT]ГЭС[COLOR_REVERT], для получения прибыли.</Russian>
 		<Spanish>Vender el excedente de energía generado en nuestras [COLOR_BUILDING_TEXT]Centrales hidroeléctricas[COLOR_REVERT] para obtener beneficios.</Spanish>
@@ -2959,7 +2959,7 @@
 		<English>Sell the excess power generated at our [COLOR_BUILDING_TEXT]Nuclear Plants[COLOR_REVERT] for a profit.</English>
 		<French>Vendre le surplus d'énergie développée par nos [COLOR_BUILDING_TEXT]Centrales Nucléaires[COLOR_REVERT] pour faire des bénéfices.</French>
 		<German>Verkaufen Sie die überschüssige Energie, die in unseren [COLOR_BUILDING_TEXT]Kernkraftwerken[COLOR_REVERT] erzeugt wird mit Profit.</German>
-		<Italian>Vendi l'elettricità prodotta in eccesso dalle nostre [COLOR_BUILDING_TEXT]Centrali nucleari[COLOR_REVERT] per generare ulteriori profitti.</Italian>
+		<Italian>Vendete l'elettricità prodotta in eccesso dalle nostre [COLOR_BUILDING_TEXT]Centrali nucleari[COLOR_REVERT] per generare ulteriori profitti.</Italian>
 		<Polish>Sprzedaj nadwyżki energii wygenerowane przez nasze [COLOR_BUILDING_TEXT]Elektrownie Nuklearne[COLOR_REVERT].</Polish>
 		<Russian>Продавайте излишки электроэнергии, произведенную на наших [COLOR_BUILDING_TEXT]АЭС[COLOR_REVERT], для получения прибыли.</Russian>
 		<Spanish>Vender el excedente de energía generado en nuestras [COLOR_BUILDING_TEXT]Centrales nucleares[COLOR_REVERT] para obtener beneficios.</Spanish>
@@ -2969,7 +2969,7 @@
 		<English>Use the knowledge gained from this project to improve environmental conditions at our [COLOR_BUILDING_TEXT]Factories[COLOR_REVERT].</English>
 		<French>Employer la connaissance gagnée par ce projet pour améliorer des conditions environnementales de nos [COLOR_BUILDING_TEXT]Usines[COLOR_REVERT].</French>
 		<German>Verwenden Sie Kenntnisse aus diesem, um die Umweltbedingungen in unseren [COLOR_BUILDING_TEXT]Fabriken[COLOR_REVERT] zu verbessern.</German>
-		<Italian>Usa le conoscenze acquisite da questo progetto per migliorare le condizioni ambientali nelle nostre [COLOR_BUILDING_TEXT]Fabbriche[COLOR_REVERT].</Italian>
+		<Italian>Usate le conoscenze acquisite da questo progetto per migliorare le condizioni ambientali nelle nostre [COLOR_BUILDING_TEXT]Fabbriche[COLOR_REVERT].</Italian>
 		<Polish>Wykorzystaj wiedzę zdobytą podczas prac nad projektem aby zmniejszyć szkodliwe oddziaływanie naszych [COLOR_BUILDING_TEXT]Fabryk[COLOR_REVERT] na środowisko.</Polish>
 		<Russian>Используйте знания, полученные в ходе этого проекта, для совершенствования природосберегающих технологий на наших [COLOR_BUILDING_TEXT]Фабриках[COLOR_REVERT].</Russian>
 		<Spanish>Utilizar el conocimiento adquirido con este proyecto para mejorar las condiciones medioambientales de nuestras [COLOR_BUILDING_TEXT]Fábricas[COLOR_REVERT].</Spanish>
@@ -3019,7 +3019,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_ANCIENT_TEXTS_2</Tag>
 		<English>Fund an effort to preserve these artifacts in museums, accessible only to the most careful scholars.</English>
-		<French>Mettre tout en oeuvre pour préserver ces artefacts dans des musées, accessibles uniquement à des spécialistes triés sur le volet.</French>
+		<French>Mettre tout en œuvre pour préserver ces artefacts dans des musées, accessibles uniquement à des spécialistes triés sur le volet.</French>
 		<German>Gründet eine Initiative, um diese Artefakte in Museen zu lagern, wo sie nur den sorgfältigsten Gelehrten zugänglich sind.</German>
 		<Italian>Finanzia il tentativo di preservare questi manufatti nei musei, rendendoli accessibili solo agli studiosi più attenti.</Italian>
 		<Spanish>Que se financie un plan para conservar estos objetos en museos a los que solo puedan acceder los eruditos más cuidadosos.</Spanish>
@@ -3061,7 +3061,7 @@
 		<English>Anti-monarchists are claiming that the King has too much power and that religious leaders need to have some, too.</English>
 		<French>Des anti-monarchistes prétendent que le roi a trop de pouvoir, et que les autorités religieuses devraient en avoir plus.</French>
 		<German>Gläubige Menschen protestieren gegen die Ohnmacht religiöser Institutionen im Vergleich zur Allmacht Eures Königshauses.</German>
-		<Italian>Gli antimonarchici protestano contro i troppi poteri del Re e sostengono che i leader religiosi debbano vedere rafforzati i propri.</Italian>
+		<Italian>Gli anti-monarchici protestano contro i troppi poteri del Re e sostengono che i leader religiosi debbano vedere rafforzati i propri.</Italian>
 		<Polish>Anty-rojaliści twierdzą, że król posiada za dużo władzy i przywódcy religijni pragną trochę władzy dla siebie.</Polish>
 		<Russian>Антимонархисты утверждают, что у короля слишком много власти и что духовные лидеры тоже должны иметь такую власть.</Russian>
 		<Spanish>Antimonárquicos reclaman qué el rey tiene demasiado poder y qué los lideres religiosos deberian tener algo también.</Spanish>
@@ -3227,7 +3227,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BANANA_SPLIT_1</Tag>
 		<English>Mmm, ice cream. The customers must be going bananas over that!</English>
-		<French>Mmmh, de la crème glacée. Les clients vont adorer !</French>
+		<French>Mmmh, crème glacée. Les clients vont adorer !</French>
 		<German>Mmm, Eis. Davon werden die Kunden noch ganz Banane im Kopf!</German>
 		<Italian>Mmm, gelato. I clienti impazziranno!</Italian>
 		<Spanish>Mmm, helado. ¡A los clientes se les hará la boca agua!</Spanish>
@@ -3367,7 +3367,7 @@
 		<Italian>Usiamolo nelle nostre centrali a carbone. La produttività è potere!</Italian>
 		<Polish>Użyjcie tego na szych Elektrowniach Węglowych. Produkcja to potęga!</Polish>
 		<Russian>Используйте для наших угольных электростанций. Производство - это сила!</Russian>
-		<Spanish>Aplicadlo en nuestras plantas de carbó. ¡La producción es poder!</Spanish>
+		<Spanish>Aplicadlo en nuestras plantas de carbón. ¡La producción es poder!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BETTER_COAL_2</Tag>
@@ -3702,7 +3702,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_BROTHERS_IN_NEED_10</Tag>
-		<English>Their frontlines are static. Give them some of our Tanks!</English>
+		<English>Their front lines are static. Give them some of our Tanks!</English>
 		<French>Leurs lignes de front sont statiques. Donnez-leur de nos réservoirs!</French>
 		<German>Ihre Fronten sind statisch. Gib ihnen einige unserer Panzer!</German>
 		<Italian>Le loro linee del fronte sono statiche. Date loro alcuni dei nostri carri armati!</Italian>
@@ -3935,8 +3935,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CARNATION_REVOLUTION_1</Tag>
 		<English>Make an example of these hotheads who threaten the safety of the Empire! Have them arrested for treason, and round up any of their supporters among the civilian population, too.</English>
-		<French>Faites un exemple de ces têtes brulées qui menacent la sûreté de l'Empire! Arrêtez-les pour la trahison, et nettoyez également leurs supporters parmi la population civile.</French>
-		<German>Statuiert ein Exempel mit diesen Hitzköpfen, die die Sicherheit des Imperium bedrohen! Lasst sie wegen Verrats einsperren und ergreift auch ihre Sympatisanten in der Zivilbevölkerung!</German>
+		<French>Faites un exemple de ces têtes brûlées qui menacent la sûreté de l'Empire! Arrêtez-les pour la trahison, et nettoyez également leurs supporters parmi la population civile.</French>
+		<German>Statuiert ein Exempel mit diesen Hitzköpfen, die die Sicherheit des Imperium bedrohen! Lasst sie wegen Verrats einsperren und ergreift auch ihre Sympathisanten in der Zivilbevölkerung!</German>
 		<Italian>Fate un esempio di queste teste calde che minacciano la sicurezza dell'Impero! Arrestateli per tradimento e radunate anche i loro sostenitori fra la popolazione civile.</Italian>
 		<Polish>Aresztuj ich za zdradę, razem z cywilami którzy ich popierali. Niech będzie to przykład dla wszystkich zapaleńców, którzy odważą się zagrozić bezpieczeństwu Imperium!</Polish>
 		<Spanish>¡Dadme un ejemplo de estos fanáticos que amenazan la seguridad del imperio! Que sean arrestados por traición, y reunid también a sus partidarios entre la población civil.</Spanish>
@@ -3991,7 +3991,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CAUSES_FOREIGN_HOLY_ANGER</Tag>
 		<English>[ICON_BULLET]Damages relationships with all nations who have [CT_STATE_RELIGION] as a State Religion</English>
-		<French>[ICON_BULLET]déteriore les relations avec toutes les nations qui ont le [CT_STATE_RELIGION] comme Religion d'Etat</French>
+		<French>[ICON_BULLET]Détériore les relations avec toutes les nations qui ont le [CT_STATE_RELIGION] comme Religion d'Etat</French>
 		<Italian>[ICON_BULLET]Danneggia le relazioni con tutte le nazioni che hanno [CT_STATE_RELIGION] come religione di Stato</Italian>
 		<Polish>[ICON_BULLET]Pogorszy nasze stosunki dyplomatyczne z wszystkimi narodami które posiadają naszą religie jako swoją religię narodową</Polish>
 		<Russian>[ICON_BULLET]Наносит ущерб отношениям со всеми странами, в которых [CT_STATE_RELIGION] является государственной религией</Russian>
@@ -4295,7 +4295,7 @@
 		<Italian>[ICON_BULLET]%d1 [ICON_UNHAPPY] a %s2</Italian>
 		<Polish>[ICON_BULLET]%d1 [ICON_UNHAPPY] w %s2</Polish>
 		<Russian>[ICON_BULLET]%d1 [ICON_UNHAPPY] в %s2</Russian>
-		<Spanish>[ICON_BULLET]%d1[ICON_UNHAPPY] en %s2</Spanish>
+		<Spanish>[ICON_BULLET]%d1 [ICON_UNHAPPY] en %s2</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CIVIL_WAR</Tag>
@@ -5941,7 +5941,7 @@
 		<Italian>La nostra carenza di fondi e l'incuria hanno ridotto questo bunker di comando in rovina.</Italian>
 		<Polish>Nasz brak finansowania armii i zaniedbania doprowadziły ten bunkier dowodzenia do ruiny.</Polish>
 		<Russian>Отсутствие должного финансирования и бесхозяйственность привели к тому, что этот командный центр был разрушен.</Russian>
-		<Spanish>La falta de financiación militar y el estado de abandono han dejado este Centro de mando en ruínas.</Spanish>
+		<Spanish>La falta de financiación militar y el estado de abandono han dejado este Centro de mando en ruinas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GAME_MIGRATION</Tag>
@@ -5997,7 +5997,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GLOBAL_WARMING_1_HELP</Tag>
 		<English>A number of tiles around the map are changed reflecting the increasing global temperatures.</English>
-		<French>Certaines cases de terrains ont subi des modifications pour refléter l'augmentation de la rempérature globale.</French>
+		<French>Certaines cases de terrains ont subi des modifications pour refléter l'augmentation de la température globale.</French>
 		<Italian>Alcuni punti della mappa sono state modificati per riflettere l'aumento della temperatura globale.</Italian>
 		<Polish>Wiele terenów na świecie uległo zmianie, odzwierciedlając globalny wzrost temperatur.</Polish>
 		<Russian>Количество клеток вокруг карты изменилось, отражая растущие глобальные температуры.</Russian>
@@ -6119,7 +6119,7 @@
 		<English>Fund efforts to motivate more of the gold seekers to settle down when the rush ends.</English>
 		<French>Financer une campagne pour motiver d'autres chercheurs d'or à s'installer une fois la ruée terminée.</French>
 		<German>Finanziert Maßnahmen, die mehr Goldsucher motivieren, sich dort niederzulassen, wenn der Goldrausch vorbei ist.</German>
-		<Italian>Finanzia gli sforzi per motivare più cercatori d'oro a fermarsi, alla fine della corsa all'oro.</Italian>
+		<Italian>Stanziate dei fondi per motivare quanti più cercatori d'oro a fermarsi, alla fine della corsa all'oro.</Italian>
 		<Spanish>Que se financie una campaña para motivar a más buscadores de oro a que se queden cuando acabe la fiebre.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6135,10 +6135,10 @@
 		<English>Merchants from far and wide declare the harbor of %s2_city to be the best on the continent. Trade is booming.</English>
 		<French>Des Marchands d'un peu partout sont unanimes pour déclarer que le Port de %s2_city est le meilleur du continent. Le commerce explose.</French>
 		<German>Händler von nah und fern erklären den Hafen von %s2_city zum besten auf dem ganzen Kontinent. Der Handel boomt.</German>
-		<Italian>I mercanti di tutto il mondo dichiarano che il porto di %s2_city è il migliore del continente. È un boom economico!.</Italian>
-		<Spanish>Mercaderes de todos los rincones afirman que el Puerto de %s2_city es el mejor del continente. El comercio prospera.</Spanish>
+		<Italian>I mercanti di tutto il mondo dichiarano che il porto di %s2_city è il migliore del continente. Il commercio sta fiorendo.</Italian>
 		<Polish>Kupcy z odległych krain wybrali naszą przystań w %s2_city jako najlepszą do rozpoczęcia działalności handlowej na tym kontynencie. Handel kwitnie!</Polish>
 		<Russian>Купцы со всего света объявляют гавань в городе %s2_city лучшей на материке. Торговля процветает!</Russian>
+		<Spanish>Mercaderes de todos los rincones afirman que el Puerto de %s2_city es el mejor del continente. El comercio prospera.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GOOD_HARBOR_1</Tag>
@@ -6146,9 +6146,9 @@
 		<French>L'argent des taxes portuaires va aider l'économie locale.</French>
 		<German>Die Zölle werden der regionalen Wirtschaft helfen.</German>
 		<Italian>I soldi della dogana aiuteranno l'economia locale.</Italian>
-		<Spanish>El dinero de los aranceles ayudarán a la economía local.</Spanish>
 		<Polish>Pieniądze z ceł pomogą lokalnej gospodarce.</Polish>
 		<Russian>Доходы от пошлин будут подспорьем местной экономике.</Russian>
+		<Spanish>El dinero de los aranceles ayudarán a la economía local.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GRAPE_SHOT_1</Tag>
@@ -6156,9 +6156,9 @@
 		<French>Nous allons équiper toutes nos armes de siège de ce nouveau type de munitions.</French>
 		<German>Alle unsere Belagerungswaffen werden mit der neuen Munition ausgestattet.</German>
 		<Italian>Equipaggeremo tutte le nostre armi da assedio con questo nuovo tipo di munizioni.</Italian>
-		<Spanish>Equiparemos a todas nuestras armas de asedio con el nuevo tipo de munición.</Spanish>
 		<Polish>Zaopatrzymy wszystkie jednostki oblężnicze w nowy typ amunicji.</Polish>
 		<Russian>We will fit all of our siege units with the new ammunition type.</Russian>
+		<Spanish>Equiparemos a todas nuestras armas de asedio con el nuevo tipo de munición.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_BEAST</Tag>
@@ -6166,49 +6166,49 @@
 		<French>Un énorme animal a été découvert près d'un de nos camps de chasse.</French>
 		<German>Ein riesiges Tier wurde in der Nähe eines unserer Jagdlager gesichtet.</German>
 		<Italian>Un grande animale è stato avvistato nei dintorni di un nostro campo di caccia.</Italian>
-		<Spanish>Se ha descubierto una gran bestia cerca de uno de nuestros campamentos.</Spanish>
 		<Polish>Wielka bestia została odkryta niedaleko naszego obozu łowieckiego.</Polish>
 		<Russian>A great beast has been discovered near one of our hunting camps.</Russian>
+		<Spanish>Se ha descubierto una gran bestia cerca de uno de nuestros campamentos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_BEAST_1</Tag>
 		<English>Let it breed and give offspring. Hunt sparingly.</English>
 		<French>Laissez-la se reproduire, et chassez sa progéniture avec parcimonie.</French>
 		<German>Lasst das Tier sich vermehren und die Nachkommen maßvoll bejagen.</German>
-		<Italian>Lasciate che si riproduca. Cacciate con moderazione.</Italian>
-		<Spanish>Dejarla criar y tener descendencia. Cazar esporadicamente.</Spanish>
+		<Italian>Lasciate che si riproduca. E dategli la caccia con moderazione.</Italian>
 		<Polish>Niech się rozmnaża. Starajcie się nie przesadzać z polowaniem.</Polish>
 		<Russian>Let it breed and give offspring. Hunt sparingly.</Russian>
+		<Spanish>Dejarla criar y tener descendencia. Cazar esporadicamente.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_BEAST_2</Tag>
 		<English>Looks like it could feed many people. Organize a hunting party!</English>
 		<French>Sa viande pourrait nourrir beaucoup d'entre nous! Rassemblez nos chasseurs!</French>
 		<German>Das Tier kann sicher viele Menschen satt werden. Organisiert eine Jagd!</German>
-		<Italian>Potremmo dar da mangiare a diverse persone. Organizziamo una bella caccia!</Italian>
-		<Spanish>Parece que podría alimentar a mucha gente. ¡Organiza una partida de caza!</Spanish>
+		<Italian>Potrebbe dar da mangiare a diverse persone. Organizziamo una bella battuta di caccia!</Italian>
 		<Polish>Wygląda na to, że jej mięso może wyżywić wielu ludzi. Zorganizujmy wielkie polowanie!</Polish>
 		<Russian>Looks like it could feed many people. Organize a hunting party!</Russian>
+		<Spanish>Parece que podría alimentar a mucha gente. ¡Organiza una partida de caza!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_BEAST_3</Tag>
 		<English>Hunt it? Are you mad? The beast is a manifestation of a divine spirit!</English>
 		<French>La chasser? Vous êtes fous? Cette bête est une manifestation divine!</French>
 		<German>Das Tier zur Strecke bringen? Seid ihr von Sinnen? Dies ist eine Manifestation göttlichen Wirkens!</German>
-		<Italian>Cacciarlo? Sei matto? L'animale è una manifestazione di uno spirito divino!</Italian>
-		<Spanish>¿Cazarlo? ¿Estás loco? ¡La bestia es una manifestación de un espíritu divino!</Spanish>
+		<Italian>Dargli la caccia? Siete pazzi? Quell'animale è una manifestazione di uno spirito divino!</Italian>
 		<Polish>Polować na nie? Oszaleliście!? Ta bestia to manifestacja ducha świętego!</Polish>
 		<Russian>Hunt it? Are you mad? The beast is a manifestation of a divine spirit!</Russian>
+		<Spanish>¿Cazarlo? ¿Estás loco? ¡La bestia es una manifestación de un espíritu divino!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_BEAST_3_HELP</Tag>
 		<English>[ICON_BULLET]%D1[ICON_HAPPY] in all cities with %F3_religion for %d2 [NUM2:turn:turns].</English>
-		<French>[ICON_BULLET]%D1[ICON_HAPPY] dans toutes les villes %F3_religion pendant %d2 [NUM2:tour:tours]</French>
-		<German>[ICON_BULLET]%D1[ICON_HAPPY] in allen Städten mit %F3_religion für %d2 [NUM2:Runde:Runden]</German>
-		<Italian>[ICON_BULLET]%D1[ICON_HAPPY] in tutte le città con %F3_religion per %d2 [NUM2:turno:turni]</Italian>
-		<Spanish>[ICON_BULLET]%D1[ICON_HAPPY] en todas las ciudades con %F3_religion durante %d2 [NUM2:turno:turnos]</Spanish>
+		<French>[ICON_BULLET]%D1[ICON_HAPPY] dans toutes les villes %F3_religion pendant %d2 [NUM2:tour:tours].</French>
+		<German>[ICON_BULLET]%D1[ICON_HAPPY] in allen Städten mit %F3_religion für %d2 [NUM2:Runde:Runden].</German>
+		<Italian>[ICON_BULLET]%D1[ICON_HAPPY] in tutte le città con %F3_religion per %d2 [NUM2:turno:turni].</Italian>
 		<Polish>[ICON_BULLET]%D1[ICON_HAPPY] we wszystkich miastach z %F3_religion za %d2 [NUM2:turn:turns].</Polish>
 		<Russian>[ICON_BULLET]%D1[ICON_HAPPY] во всех городах с %F3_religion за %d2 [NUM2:ход:ходов].</Russian>
+		<Spanish>[ICON_BULLET]%D1[ICON_HAPPY] en todas las ciudades con %F3_religion durante %d2 [NUM2:turno:turnos].</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_GREAT_DEPRESSION_1</Tag>
@@ -11652,7 +11652,7 @@
 		<English>Congratulations! You have completed the quest of Hostile Takeover and enabled %s11_corporation to turn extra profit.</English>
 		<French>Félicitations ! Vous avez achevé la quête de l'OPA Hostile et permis à la société : %s11_corporation de faire des profits supplémentaires.</French>
 		<German>Glückwunsch! Sie haben die Quest "Feindliche Übernahme" abgeschlossen und der Kapitalgesellschaft %s11_corporation dadurch zu zusätzlichem Gewinn verholfen.</German>
-		<Italian>Congratulazioni! Hai completato la missione "OPA ostile", permettendo alla corprorazione %s11_corporation di realizzare profitti extra.</Italian>
+		<Italian>Congratulazioni! Hai completato la missione "OPA ostile", permettendo a %s11_corporation di realizzare profitti extra.</Italian>
 		<Spanish>¡Felicidades! Habéis completado la misión Opa hostil: %s11_corporation podrá obtener beneficios extra.</Spanish>
 	</TEXT>
 	<TEXT>
