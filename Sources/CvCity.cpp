@@ -6679,17 +6679,14 @@ int CvCity::cultureDistance(int iDX, int iDY, bool bForce) const
 
 int CvCity::cultureStrength(PlayerTypes ePlayer, int& iOriginal) const
 {
-	int iStrength = 1;
+	int iStrength = 1 + 2*getHighestPopulation();
 
-	iStrength += (getHighestPopulation() * 2);
-
-	foreach_(const CvPlot* pLoopPlot, plot()->adjacent()
-	| filtered(CvPlot::fn::getOwner() == ePlayer))
+	foreach_(const CvPlot* pLoopPlot, plot()->adjacent() | filtered(CvPlot::fn::getOwner() == ePlayer))
 	{
 		iStrength += (GC.getGame().getCurrentEra() + 1);
 	}
 
-	//	Handle culture getting very large
+	// Handle culture getting very large
 	int	iPlayerCulture = plot()->getCulture(ePlayer);
 	int iOwnerCulture = plot()->getCulture(getOwner());
 
@@ -6701,31 +6698,24 @@ int CvCity::cultureStrength(PlayerTypes ePlayer, int& iOriginal) const
 		FAssert(GC.getREVOLT_TOTAL_CULTURE_MODIFIER() < 1000);
 	}
 
-	iStrength *= std::max(0, (((GC.getREVOLT_TOTAL_CULTURE_MODIFIER() * (iPlayerCulture - iOwnerCulture + 1)) / (iPlayerCulture + 1)) + 100));
+	iStrength *= std::max(0, 100 + (GC.getREVOLT_TOTAL_CULTURE_MODIFIER() * (iPlayerCulture - iOwnerCulture + 1) / (iPlayerCulture + 1)));
 	iStrength /= 100;
 
-	if (GET_PLAYER(ePlayer).getStateReligion() != NO_RELIGION)
+	if (GET_PLAYER(ePlayer).getStateReligion() != NO_RELIGION && isHasReligion(GET_PLAYER(ePlayer).getStateReligion()))
 	{
-		if (isHasReligion(GET_PLAYER(ePlayer).getStateReligion()))
-		{
-			iStrength *= std::max(0, (GC.getREVOLT_OFFENSE_STATE_RELIGION_MODIFIER() + 100));
-			iStrength /= 100;
-		}
+		iStrength *= std::max(0, GC.getREVOLT_OFFENSE_STATE_RELIGION_MODIFIER() + 100);
+		iStrength /= 100;
 	}
 
-	if (GET_PLAYER(getOwner()).getStateReligion() != NO_RELIGION)
+	if (GET_PLAYER(getOwner()).getStateReligion() != NO_RELIGION && isHasReligion(GET_PLAYER(getOwner()).getStateReligion()))
 	{
-		if (isHasReligion(GET_PLAYER(getOwner()).getStateReligion()))
-		{
-			iStrength *= std::max(0, (GC.getREVOLT_DEFENSE_STATE_RELIGION_MODIFIER() + 100));
-			iStrength /= 100;
-		}
+		iStrength *= std::max(0, GC.getREVOLT_DEFENSE_STATE_RELIGION_MODIFIER() + 100);
+		iStrength /= 100;
 	}
 	iOriginal = iStrength;
-	int iGarrisonReduction = (iStrength * cultureGarrison(ePlayer)) / 100;
-	iStrength -= iGarrisonReduction;
-	iStrength = std::max(0, iStrength);
-	return iStrength;
+	// Subtract garrison reduction
+	iStrength -= iStrength * cultureGarrison(ePlayer) / 100;
+	return std::max(0, iStrength);
 }
 
 
@@ -12225,7 +12215,6 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
  * Returns the total additional commerce times 100 that adding one of the given buildings will provide.
  *
  * Doesn't check if the building can be constructed in this city.
- * Takes the NO_ESPIONAGE game option into account for CULTURE and ESPIONAGE.
  */
 int CvCity::getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const
 {
@@ -12461,22 +12450,9 @@ void CvCity::changeSpecialistCommerceTimes100(CommerceTypes eIndex, int iChange)
 }
 
 
-// BUG - Specialist Additional Commerce - start
-/*
- * Returns the total additional commerce that changing the number of given specialists will provide/remove.
- *
- * Takes the NO_ESPIONAGE game option into account for CULTURE and ESPIONAGE.
- */
-int CvCity::getAdditionalCommerceBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const
-{
-	return getAdditionalCommerceTimes100BySpecialist(eIndex, eSpecialist, iChange) / 100;
-}
 
-/*
- * Returns the total additional commerce times 100 that changing the number of given specialists will provide/remove.
- *
- * Takes the NO_ESPIONAGE game option into account for CULTURE and ESPIONAGE.
- */
+
+// Returns the total additional commerce that changing the number of given specialists will provide/remove.
 int CvCity::getAdditionalCommerceTimes100BySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const
 {
 	int iExtraRate = getAdditionalBaseCommerceRateBySpecialist(eIndex, eSpecialist, iChange);
@@ -12484,33 +12460,26 @@ int CvCity::getAdditionalCommerceTimes100BySpecialist(CommerceTypes eIndex, Spec
 	{
 		return 0;
 	}
-	int iCivicCommerce = GET_PLAYER(getOwner()).getSpecialistCommercePercentChanges(eSpecialist, eIndex);
-	iExtraRate += iCivicCommerce;
+	iExtraRate += GET_PLAYER(getOwner()).getSpecialistCommercePercentChanges(eSpecialist, eIndex);
 
-	int iModifier = getTotalCommerceRateModifier(eIndex);
-
-	int iExtraTimes100 = iExtraRate * 100;
-
-	iExtraTimes100 *= iModifier;
-	iExtraTimes100 /= 100;
-
-	return iExtraTimes100;
+	return iExtraRate * getTotalCommerceRateModifier(eIndex);
 }
 
-
-/*
- * Returns the additional base commerce rate that changing the number of given specialists will provide/remove.
- */
+// Returns the additional base commerce rate that changing the number of given specialists will provide/remove.
 int CvCity::getAdditionalBaseCommerceRateBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex);
 	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist);
-
-	const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eSpecialist);
-
-	return iChange * (kSpecialist.getCommerceChange(eIndex) + GET_PLAYER(getOwner()).getExtraSpecialistCommerce(eSpecialist, eIndex) + getLocalSpecialistExtraCommerce(eSpecialist, eIndex) + GET_PLAYER(getOwner()).getSpecialistExtraCommerce(eIndex));
+	return (
+		iChange * (
+			GC.getSpecialistInfo(eSpecialist).getCommerceChange(eIndex)
+			+ GET_PLAYER(getOwner()).getExtraSpecialistCommerce(eSpecialist, eIndex)
+			+ getLocalSpecialistExtraCommerce(eSpecialist, eIndex)
+			+ GET_PLAYER(getOwner()).getSpecialistExtraCommerce(eIndex)
+		)
+	);
 }
-// BUG - Specialist Additional Commerce - end
+
 
 
 int CvCity::getReligionCommerce(CommerceTypes eIndex) const
