@@ -608,9 +608,7 @@ public:
 	void setImprovementUpgradeProgress(int iNewValue);
 	void changeImprovementUpgradeProgress(int iChange);
 
-	bool isForceUnowned() const;
 	void setForceUnownedTimer(int iNewValue);
-	void changeForceUnownedTimer(int iChange);
 
 	int getCityRadiusCount() const;
 	int isCityRadius() const;

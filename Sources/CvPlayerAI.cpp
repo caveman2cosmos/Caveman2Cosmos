@@ -31430,25 +31430,25 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
-	int iOriginal = 0;
 	iTemp = kPromotion.getRevoltProtection();
 	if (iTemp != 0)
 	{
-		if ((eUnitAI == UNITAI_CITY_DEFENSE) ||
-			(eUnitAI == UNITAI_CITY_COUNTER) ||
-			(eUnitAI == UNITAI_CITY_SPECIAL) ||
-			(eUnitAI == UNITAI_PROPERTY_CONTROL) ||
-			(eUnitAI == UNITAI_INVESTIGATOR))
+		if (eUnitAI == UNITAI_CITY_DEFENSE
+		||	eUnitAI == UNITAI_CITY_COUNTER
+		||	eUnitAI == UNITAI_CITY_SPECIAL
+		||	eUnitAI == UNITAI_PROPERTY_CONTROL
+		||	eUnitAI == UNITAI_INVESTIGATOR)
 		{
-			if (pUnit != NULL && pUnit->plot() != NULL && pUnit->getX() != INVALID_PLOT_COORD)
+			if (pUnit && pUnit->plot() && pUnit->getX() != INVALID_PLOT_COORD)
 			{
-				PlayerTypes eOwner = pUnit->plot()->calculateCulturalOwner();
+				const PlayerTypes eOwner = pUnit->plot()->calculateCulturalOwner();
 				if (eOwner != NO_PLAYER && GET_PLAYER(eOwner).getTeam() != getTeam())
 				{
 					iValue += (iTemp * 3);
 				}
 				if (pUnit->plot()->isCity())
 				{
+					int iOriginal = 0;
 					iValue += pUnit->plot()->getPlotCity()->cultureStrength(eOwner, iOriginal) * iTemp / 100;
 				}
 			}

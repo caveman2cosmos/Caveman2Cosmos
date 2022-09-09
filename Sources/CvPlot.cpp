@@ -614,9 +614,9 @@ void CvPlot::doTurn()
 {
 	PROFILE_FUNC();
 
-	if (isForceUnowned())
+	if (m_iForceUnownedTimer > 0)
 	{
-		changeForceUnownedTimer(-1);
+		m_iForceUnownedTimer -= 1;
 	}
 
 	if (isOwned())
@@ -4387,7 +4387,7 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 {
 	PROFILE("CvPlot::calculateCulturalOwner()");
 
-	if (isForceUnowned())
+	if (m_iForceUnownedTimer > 0)
 	{
 		return NO_PLAYER;
 	}
@@ -5616,22 +5616,9 @@ void CvPlot::changeImprovementUpgradeProgress(int iChange)
 }
 
 
-bool CvPlot::isForceUnowned() const
-{
-	return m_iForceUnownedTimer > 0;
-}
-
-
 void CvPlot::setForceUnownedTimer(int iNewValue)
 {
 	m_iForceUnownedTimer = iNewValue;
-	FASSERT_NOT_NEGATIVE(m_iForceUnownedTimer);
-}
-
-
-void CvPlot::changeForceUnownedTimer(int iChange)
-{
-	m_iForceUnownedTimer += iChange;
 	FASSERT_NOT_NEGATIVE(m_iForceUnownedTimer);
 }
 
