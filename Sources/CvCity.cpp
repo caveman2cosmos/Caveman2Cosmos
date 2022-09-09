@@ -6701,7 +6701,7 @@ int CvCity::cultureStrength(PlayerTypes ePlayer, int& iOriginal) const
 	iStrength *= std::max(0, 100 + (GC.getREVOLT_TOTAL_CULTURE_MODIFIER() * (iPlayerCulture - iOwnerCulture + 1) / (iPlayerCulture + 1)));
 	iStrength /= 100;
 
-	if (GET_PLAYER(ePlayer).getStateReligion() != NO_RELIGION && isHasReligion(GET_PLAYER(ePlayer).getStateReligion()))
+	if (ePlayer != NO_PLAYER && GET_PLAYER(ePlayer).getStateReligion() != NO_RELIGION && isHasReligion(GET_PLAYER(ePlayer).getStateReligion()))
 	{
 		iStrength *= std::max(0, GC.getREVOLT_OFFENSE_STATE_RELIGION_MODIFIER() + 100);
 		iStrength /= 100;
@@ -6728,11 +6728,10 @@ int CvCity::cultureGarrison(PlayerTypes ePlayer) const
 		iGarrison += unit->revoltProtectionTotal();
 	}
 
-	if (atWar(GET_PLAYER(ePlayer).getTeam(), getTeam()))
+	if (ePlayer != NO_PLAYER && atWar(GET_PLAYER(ePlayer).getTeam(), getTeam()))
 	{
 		iGarrison *= 2;
 	}
-
 	return iGarrison;
 }
 
