@@ -31393,41 +31393,31 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 
-	//Team Project (3)
 	iTemp = kPromotion.getCaptureProbabilityModifierChange();
 	if (iTemp != 0)
 	{
-		if ((eUnitAI == UNITAI_INVESTIGATOR) ||
-			(pUnit != NULL && pUnit->canAttack()))
+		if (eUnitAI == UNITAI_INVESTIGATOR || pUnit && pUnit->canAttack())
 		{
 			iValue += iTemp * 3;
 		}
-		else if (pUnit != NULL && pUnit->canFight())
+		else if (pUnit && pUnit->canFight())
 		{
 			iValue += iTemp;
 		}
 		else
 		{
-			iValue++;
+			iValue += 2*(iTemp > 0) - 1;
 		}
 	}
 
 	iTemp = kPromotion.getCaptureResistanceModifierChange();
 	if (iTemp != 0)
 	{
-		if (pUnit != NULL && pUnit->canFight())
+		if (pUnit != NULL && pUnit->canFight() || eUnitAI == UNITAI_INVESTIGATOR || eUnitAI == UNITAI_ESCORT)
 		{
 			iValue += iTemp;
 		}
-		else if (eUnitAI == UNITAI_INVESTIGATOR ||
-				eUnitAI == UNITAI_ESCORT)
-		{
-			iValue += iTemp;
-		}
-		else
-		{
-			iValue++;
-		}
+		else iValue += 2*(iTemp > 0) - 1;
 	}
 
 	iTemp = kPromotion.getRevoltProtection();
