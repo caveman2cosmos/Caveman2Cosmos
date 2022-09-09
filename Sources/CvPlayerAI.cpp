@@ -31444,12 +31444,13 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 				const PlayerTypes eOwner = pUnit->plot()->calculateCulturalOwner();
 				if (eOwner != NO_PLAYER && GET_PLAYER(eOwner).getTeam() != getTeam())
 				{
-					iValue += (iTemp * 3);
-				}
-				if (pUnit->plot()->isCity())
-				{
-					int iOriginal = 0;
-					iValue += pUnit->plot()->getPlotCity()->cultureStrength(eOwner, iOriginal) * iTemp / 100;
+					iValue += 3*iTemp;
+
+					if (pUnit->plot()->isCity())
+					{
+						int iOriginal = 0;
+						iValue += pUnit->plot()->getPlotCity()->cultureStrength(eOwner, iOriginal) * iTemp / 100;
+					}
 				}
 			}
 		}
