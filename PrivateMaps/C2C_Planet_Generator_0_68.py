@@ -2699,7 +2699,6 @@ def addFeatures():
 	featFlood = cgc.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
 	featForest = cgc.getInfoTypeForString("FEATURE_FOREST")
 # Rise of Mankind 2.82 start
-	featStorm = cgc.getInfoTypeForString("FEATURE_STORM")
 	featSwamp = cgc.getInfoTypeForString("FEATURE_SWAMP")
 # Rise of Mankind 2.82 end
 
