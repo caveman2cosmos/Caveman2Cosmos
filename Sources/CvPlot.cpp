@@ -10181,15 +10181,13 @@ void CvPlot::doFeature()
 		return;
 	}
 
-	const int iStorm = GC.getInfoTypeForString("FEATURE_STORM", true);
-	const bool bNoStorms = GC.getGame().isModderGameOption(MODDERGAMEOPTION_NO_STORMS);
+	// flabbert
+	// these defines are broken, they remove all feature spreading, implementing storms have to be done differently (full remake, maybe as an "unkillable" unit?)
+	// const int iStorm = GC.getInfoTypeForString("FEATURE_STORM", true);
+	// const bool bNoStorms = GC.getGame().isModderGameOption(MODDERGAMEOPTION_NO_STORMS);
 
 	for (int iI = 0; iI < GC.getNumFeatureInfos(); ++iI)
 	{
-		if (iStorm == iI && bNoStorms)
-		{
-			continue;
-		}
 		const CvFeatureInfo& kFeature = GC.getFeatureInfo((FeatureTypes)iI);
 
 		if ((kFeature.getGrowthProbability() > 0 && !isUnit() || kFeature.getSpreadProbability() > 0)
@@ -10238,10 +10236,7 @@ void CvPlot::doFeature()
 				if (pCity != NULL && isInViewport())
 				{
 					// Tell the owner of this city.
-					const CvWString szBuffer = iI == iStorm ?
-						gDLL->getText("TXT_KEY_MISC_STORM_GROWN_NEAR_CITY", pCity->getNameKey())
-						:
-						gDLL->getText("TXT_KEY_MISC_FEATURE_GROWN_NEAR_CITY", kFeature.getTextKeyWide(), pCity->getNameKey());
+					const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_FEATURE_GROWN_NEAR_CITY", kFeature.getTextKeyWide(), pCity->getNameKey());
 
 					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, szSound, MESSAGE_TYPE_INFO,
 						kFeature.getButton(), GC.getCOLOR_WHITE(), getViewportX(),getViewportY(), true, true);
@@ -10281,7 +10276,7 @@ void CvPlot::decayCulture()
 	{
 		CvPlayer& playerX = GET_PLAYER((PlayerTypes)playerNum);
 		// Check if alive? Barb?
-		if (getCulture((PlayerTypes)playerNum) > 0)
+		if (getCulture((PlayerTypes)playerNum) > 0 && playerX.isAlive())
 		{
 			setCulture((PlayerTypes)playerNum,
 				std::max(0,
