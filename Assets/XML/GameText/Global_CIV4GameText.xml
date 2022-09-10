@@ -2597,6 +2597,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BULLET</Tag>
 		<English>[ICON_BULLET]</English>
+		<Russian>[ICON_BULLET]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BULLET_STARTS_WITH</Tag>
@@ -3025,11 +3026,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_CULTURE</Tag>
-		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3: Lvl %d4)</English>
+		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</English>
+		<French>[NEWLINE][ICON_CULTURE] : %d1/%d2 (%s3)</French>
+		<German>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</German>
+		<Italian>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</Italian>
+		<Spanish>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_CULTURE_NO_LEVEL</Tag>
-		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3: Lvl %d4)</English>
+		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2</English>
+		<Russian>[NEWLINE][ICON_CULTURE]: %d1/%d2</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_FOOD_GROW</Tag>
@@ -3100,6 +3106,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_GREAT_PEOPLE</Tag>
 		<English>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</English>
+		<French>[NEWLINE][ICON_GREATPEOPLE] : %d1/%d2</French>
+		<German>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</German>
+		<Italian>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</Italian>
+		<Spanish>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_GROWTH</Tag>
@@ -3130,6 +3140,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_PRODUCTION</Tag>
 		<English>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</English>
+		<French>[NEWLINE]%s1 : %d2/%d3 [ICON_PRODUCTION]</French>
+		<German>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</German>
+		<Italian>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</Italian>
+		<Spanish>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_SELECT</Tag>
@@ -4960,26 +4974,6 @@
 		<German>Fortgeschritten</German>
 		<Italian>Raffinato</Italian>
 		<Spanish>Refinada</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CULTURELEVEL_MINISCULE</Tag>
-		<English>Miniscule</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CULTURELEVEL_MINOR</Tag>
-		<English>Minor</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CULTURELEVEL_TREMENDOUS</Tag>
-		<English>Tremendous</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CULTURELEVEL_STUPENDOUS</Tag>
-		<English>Stupendous</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CULTURELEVEL_MAJESTIC</Tag>
-		<English>Majestic</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CURE_AFFLICTION</Tag>
@@ -13063,15 +13057,21 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BATTLEFIELD_EVAC</Tag>
-		<English>Our %s1 has been evacuated to our Capital and has thankfully made a full recovery.</English>
-		<French>Notre %s1 a été évacuée à notre Capitale et il est complètement rétabli.</French>
-		<German>Unsere Einheit %s1 wurde in unsere Hauptstadt evakuiert und hat sich vollständig erholt.</German>
+		<English>Our %s1 has been evacuated to our Capital and has thankfully made a full recovery</English>
+		<French>Notre %s1 a été évacuée à notre Capitale et il est complètement rétabli</French>
+		<German>Unsere Einheit %s1 wurde in unsere Hauptstadt evakuiert und hat sich vollständig erholt</German>
 		<Spanish>[NUM1:Nuestro:Nuestra:Nuestros:Nuestras] %s1 [NUM1:ha sido evacuado:ha sido evacuada:han sido evacuados:han sido evacuadas] hacia nuestra capital, donde [NUM1:se ha:se ha:se han:se han] recuperado completamente.</Spanish>
-		<Polish>Nasza jednostka: %s1 ewakuowała się do Stolicy i odzyskała pełnie sił.</Polish>
+		<Polish>Nasza jednostka: %s1 ewakuowała się do Stolicy i odzyskała pełnie sił</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BORDERS_EXPANDED</Tag>
-		<English>[COLOR_MAGENTA]The culture of %s1_CityName has grown, and is now considered %s2_LevelName![COLOR_REVERT]</English>
+		<English>[COLOR_MAGENTA]The borders of %s1_CityName have expanded![COLOR_REVERT]</English>
+		<French>[COLOR_MAGENTA]Les frontières de %s1_CityName se sont étendues![COLOR_REVERT]</French>
+		<German>[COLOR_MAGENTA]Die Stadtgrenzen von %s1_CityName haben sich erweitert![COLOR_REVERT]</German>
+		<Italian>[COLOR_MAGENTA]I confini di %s1_CityName si sono espansi![COLOR_REVERT]</Italian>
+		<Spanish>[COLOR_MAGENTA]Las fronteras de %s1_CityName se han ampliado.[COLOR_REVERT]</Spanish>
+		<Polish>[COLOR_MAGENTA]Granice kulturowe miasta: %s1_CityName rozszerzyły się![COLOR_REVERT]</Polish>
+		<Russian>[COLOR_MAGENTA]Ãîðîä %s1_CityName ðàñøèðÿåò ãðàíèöû![COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BUILDING_BOMBARD_DEFENSE_HOVER</Tag>
@@ -13299,7 +13299,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_MILITIA_EMERGED</Tag>
-		<English>%s1_CivAdj influence in the city (%d2.%d3%% of %d4%% needed) is insufficient to stop organization of local militia!</English>
+		<English>City militia has emerged! Resistance:</English>
+		<French>Des habitants ont pris les armes et se sont constitués en Milice ! Résistance :</French>
+		<Russian>Поднято по тревоге городское ополчение! Сопротивление:</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_NATIONALITY</Tag>
@@ -16098,14 +16100,6 @@
 		<German>In %s2_CityName hat eine %s1:3_CivAdj Revolte stattgefunden!</German>
 		<Italian>Una rivolta %s1_CivAdj è scoppiata a %s2_CityName!</Italian>
 		<Spanish>Ha tenido lugar una rebelión %s1:2_CivAdj en %s2_CityName.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_DISCONTENT_IN_CITY</Tag>
-		<English>%s1_CivAdj influence is causing cultural discontent in %s2_CityName...</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_FAILED_REVOLT_IN_CITY</Tag>
-		<English>Local authorities struggled to put down a large %s1_CivAdj demonstration in %s2_CityName.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_REVOLUTION_HAS_BEGUN</Tag>

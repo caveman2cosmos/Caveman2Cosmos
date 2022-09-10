@@ -1,12 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4FeatureInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<FeatureInfos>
-		<!-- <iCultureDistance> slows down growth over tiles with Realistic Culture option on. 
-				Note this value stacks with regular distance AND terrain (see CIV4TerrainInfos.xml)
-				Alternatively, <bIgnoreTerrainCulture> will make the feature's tile
-				ignore underlaying terrain cost.
-				Both can be used together; this in effect replaces the terrain distance with only
-				whatever the feature provides. -->
 		<FeatureInfo>
 			<Type>FEATURE_ICE</Type>
 			<Description>TXT_KEY_FEATURE_ICE</Description>
@@ -1087,7 +1081,6 @@
 			<iSpread>500</iSpread>
 			<iTurnDamage>25</iTurnDamage>
 			<iPopDestroys>-1</iPopDestroys>
-			<iCultureDistance>5</iCultureDistance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_BADLAND</TerrainType>
@@ -1276,7 +1269,6 @@
 			<iPopDestroys>-1</iPopDestroys>
 			<!-- GWMod new XML field M.A. -->
 			<bNoImprovement>1</bNoImprovement>
-			<iCultureDistance>4</iCultureDistance>
 			<FootstepSounds>
 				<FootstepSound>
 					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
@@ -1365,7 +1357,6 @@
 			<iSpread>1000</iSpread>
 			<iTurnDamage>50</iTurnDamage>
 			<iPopDestroys>-1</iPopDestroys>
-			<iCultureDistance>6</iCultureDistance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_BADLAND</TerrainType>
@@ -2198,7 +2189,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
-			<iCultureDistance>1</iCultureDistance> <!-- Is added to TerrainInfo value of 'Peak'-->
+			<iCultureDistance>1</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2305,7 +2296,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
-			<iCultureDistance>1</iCultureDistance> <!-- Is added to TerrainInfo value of 'Peak'-->
+			<iCultureDistance>1</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4290,7 +4281,6 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
-			<iCultureDistance>2</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4338,7 +4328,6 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
-			<iCultureDistance>1</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4530,8 +4519,6 @@
 			<iMovement>1</iMovement>
 			<iAppearance>400</iAppearance>
 			<iGrowth>15</iGrowth>
-			<iCultureDistance>1</iCultureDistance>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -4645,8 +4632,6 @@
 			<iMovement>1</iMovement>
 			<iAppearance>400</iAppearance>
 			<iGrowth>15</iGrowth>
-			<iCultureDistance>1</iCultureDistance>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -4780,7 +4765,6 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
-			<iCultureDistance>2</iCultureDistance>
 			<FootstepSounds>
 				<FootstepSound>
 					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
@@ -4945,7 +4929,6 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
-			<iCultureDistance>1</iCultureDistance>
 			<FootstepSounds>
 				<FootstepSound>
 					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
@@ -6173,7 +6156,6 @@
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -6197,8 +6179,6 @@
 			<iTurnDamage>15</iTurnDamage>
 			<bNoCity>1</bNoCity>
 			<bNukeImmune>1</bNukeImmune>
-			<iCultureDistance>2</iCultureDistance>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
@@ -6233,8 +6213,6 @@
 			<iAppearance>-1</iAppearance>
 			<bNoCity>1</bNoCity>
 			<bNukeImmune>1</bNukeImmune>
-			<iCultureDistance>1</iCultureDistance>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
@@ -6298,7 +6276,6 @@
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -6331,7 +6308,6 @@
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -6371,7 +6347,6 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -6403,7 +6378,6 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -6431,7 +6405,6 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_SCRUB</TerrainType>
@@ -6461,7 +6434,6 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
@@ -6490,7 +6462,6 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_PLAINS</TerrainType>
@@ -6520,7 +6491,6 @@
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -6563,7 +6533,6 @@
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -6606,7 +6575,6 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_PLAINS</TerrainType>
@@ -6634,7 +6602,6 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
@@ -6656,7 +6623,6 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -6686,7 +6652,6 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_PLAINS</TerrainType>
@@ -6715,7 +6680,6 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -6740,7 +6704,6 @@
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -6765,7 +6728,6 @@
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -6795,7 +6757,6 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -6822,7 +6783,6 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_LUSH</TerrainType>
@@ -6851,7 +6811,6 @@
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_SCRUB</TerrainType>
@@ -6873,7 +6832,6 @@
 			<bNoImprovement>1</bNoImprovement>
 			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>

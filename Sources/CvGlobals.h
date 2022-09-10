@@ -628,7 +628,6 @@ public:
 
 	int getNumCultureLevelInfos() const;
 	CvCultureLevelInfo& getCultureLevelInfo(CultureLevelTypes eCultureLevelNum) const;
-	const std::vector<CvCultureLevelInfo*>& getCultureLevelInfos() const { return m_paCultureLevelInfo; }
 
 	int getNumVictoryInfos() const;
 	CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum) const;
