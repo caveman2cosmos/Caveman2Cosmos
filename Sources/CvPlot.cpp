@@ -10199,6 +10199,9 @@ void CvPlot::doFeature()
 
 			foreach_(const CvPlot* pLoopPlot, cardinalDirectionAdjacent())
 			{
+				if (pLoopPlot == NULL) {
+					continue;
+				}
 				if (pLoopPlot->getFeatureType() == (FeatureTypes)iI)
 				{
 					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT)
