@@ -35957,18 +35957,22 @@ void CvUnit::changeRevoltProtection(int iChange)
 //need to change references to getRevoltProtection to the following:
 int CvUnit::revoltProtectionTotal() const
 {
+
+	return std::max(0, revoltProtectionTotalPreCheck());
+	
 	// The call that plugs into the rest of the code (final value).
 	// This can be plugged into the existing final, or even be renamed to the existing final (though experience has shown me this causes me tremendous confusion!).
 
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
-	// if the current final result of the SMM multiplicative mechanism is nothing but an empty shell
-	// then this is the first time it's being run so we take from the base value to start.
-	// Either that or the base is 0 anyhow.
-	|| getSMRevoltProtection() == 0)
-	{
-		return std::max(0, revoltProtectionTotalPreCheck());
-	}
-	return std::max(0, getSMRevoltProtection());
+	// disabling size matters revolt protection, it seems to give some weird results -- flabbert
+	//if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
+	//// if the current final result of the SMM multiplicative mechanism is nothing but an empty shell
+	//// then this is the first time it's being run so we take from the base value to start.
+	//// Either that or the base is 0 anyhow.
+	//|| getSMRevoltProtection() == 0)
+	//{
+	//		return std::max(0, revoltProtectionTotalPreCheck());
+	//}
+	// return std::max(0, getSMRevoltProtection());
 }
 
 int CvUnit::revoltProtectionTotalPreCheck() const//The total before the Size Matters multiplicative method adjusts for the final value.
