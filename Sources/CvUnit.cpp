@@ -27629,7 +27629,8 @@ bool CvUnit::fighterEngage(int iX, int iY)
 int CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal)
 {
 	PROFILE_FUNC();
-
+	if (pLoserUnit == NULL)
+		return 0; // this is not ideal, but if unit is deleted before this calculation we dont want the ctd
 	if (!pLoserUnit->canDefend())
 		return 0; // no influence from worker capture
 
