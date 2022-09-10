@@ -4546,7 +4546,7 @@ PlayerTypes CvPlot::getPlayerWithTerritorySurroundingThisPlotCardinally() const
 
 	foreach_(const CvPlot* plotX, cardinalDirectionAdjacent())
 	{
-		if (!plotX->isOwned() || ePlayer != NO_PLAYER && ePlayer != plotX->getOwner())
+		if (plotX == NULL || !plotX->isOwned() || ePlayer != NO_PLAYER && ePlayer != plotX->getOwner())
 		{
 			return NO_PLAYER;
 		}
