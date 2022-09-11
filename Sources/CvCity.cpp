@@ -12216,7 +12216,6 @@ int CvCity::getBuildingCommerceByBuilding(CommerceTypes eIndex, BuildingTypes eB
  * Returns the total additional commerce times 100 that adding one of the given buildings will provide.
  *
  * Doesn't check if the building can be constructed in this city.
- * Takes the NO_ESPIONAGE game option into account for CULTURE and ESPIONAGE.
  */
 int CvCity::getAdditionalCommerceTimes100ByBuilding(CommerceTypes eIndex, BuildingTypes eBuilding) const
 {
@@ -12452,22 +12451,9 @@ void CvCity::changeSpecialistCommerceTimes100(CommerceTypes eIndex, int iChange)
 }
 
 
-// BUG - Specialist Additional Commerce - start
-/*
- * Returns the total additional commerce that changing the number of given specialists will provide/remove.
- *
- * Takes the NO_ESPIONAGE game option into account for CULTURE and ESPIONAGE.
- */
-int CvCity::getAdditionalCommerceBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const
-{
-	return getAdditionalCommerceTimes100BySpecialist(eIndex, eSpecialist, iChange) / 100;
-}
 
-/*
- * Returns the total additional commerce times 100 that changing the number of given specialists will provide/remove.
- *
- * Takes the NO_ESPIONAGE game option into account for CULTURE and ESPIONAGE.
- */
+
+// Returns the total additional commerce that changing the number of given specialists will provide/remove.
 int CvCity::getAdditionalCommerceTimes100BySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const
 {
 	int iExtraRate = getAdditionalBaseCommerceRateBySpecialist(eIndex, eSpecialist, iChange);
@@ -12475,33 +12461,26 @@ int CvCity::getAdditionalCommerceTimes100BySpecialist(CommerceTypes eIndex, Spec
 	{
 		return 0;
 	}
-	int iCivicCommerce = GET_PLAYER(getOwner()).getSpecialistCommercePercentChanges(eSpecialist, eIndex);
-	iExtraRate += iCivicCommerce;
+	iExtraRate += GET_PLAYER(getOwner()).getSpecialistCommercePercentChanges(eSpecialist, eIndex);
 
-	int iModifier = getTotalCommerceRateModifier(eIndex);
-
-	int iExtraTimes100 = iExtraRate * 100;
-
-	iExtraTimes100 *= iModifier;
-	iExtraTimes100 /= 100;
-
-	return iExtraTimes100;
+	return iExtraRate * getTotalCommerceRateModifier(eIndex);
 }
 
-
-/*
- * Returns the additional base commerce rate that changing the number of given specialists will provide/remove.
- */
+// Returns the additional base commerce rate that changing the number of given specialists will provide/remove.
 int CvCity::getAdditionalBaseCommerceRateBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const
 {
 	FASSERT_BOUNDS(0, NUM_COMMERCE_TYPES, eIndex);
 	FASSERT_BOUNDS(0, GC.getNumSpecialistInfos(), eSpecialist);
-
-	const CvSpecialistInfo& kSpecialist = GC.getSpecialistInfo(eSpecialist);
-
-	return iChange * (kSpecialist.getCommerceChange(eIndex) + GET_PLAYER(getOwner()).getExtraSpecialistCommerce(eSpecialist, eIndex) + getLocalSpecialistExtraCommerce(eSpecialist, eIndex) + GET_PLAYER(getOwner()).getSpecialistExtraCommerce(eIndex));
+	return (
+		iChange * (
+			GC.getSpecialistInfo(eSpecialist).getCommerceChange(eIndex)
+			+ GET_PLAYER(getOwner()).getExtraSpecialistCommerce(eSpecialist, eIndex)
+			+ getLocalSpecialistExtraCommerce(eSpecialist, eIndex)
+			+ GET_PLAYER(getOwner()).getSpecialistExtraCommerce(eIndex)
+		)
+	);
 }
-// BUG - Specialist Additional Commerce - end
+
 
 
 int CvCity::getReligionCommerce(CommerceTypes eIndex) const
