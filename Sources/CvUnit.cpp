@@ -27629,7 +27629,8 @@ bool CvUnit::fighterEngage(int iX, int iY)
 int CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal)
 {
 	PROFILE_FUNC();
-
+	if (pLoserUnit == NULL)
+		return 0; // this is not ideal, but if unit is deleted before this calculation we dont want the ctd
 	if (!pLoserUnit->canDefend())
 		return 0; // no influence from worker capture
 
@@ -27809,13 +27810,6 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlaye
 						// cannot transfer more culture than remaining target culure
 						iCultureTransfer = iTargetCulture;
 					}
-					else if (iCultureTransfer < 1)
-					{
-						// always at least 1 point of culture must be transfered
-						// othervise we may have the problems with capturing of very low culture cities.
-						iCultureTransfer = 1;
-					}
-
 					if (iCultureTransfer == iTargetCulture
 					&& pLoopPlot->isActsAsCity()) // fort, must not lose all culture when it may still be garrisoned)
 					{
@@ -27827,8 +27821,8 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlaye
 						// target player's culture in plot is lowered
 						pLoopPlot->changeCulture(eTargetPlayer, -iCultureTransfer, false, false);
 						// owners's culture in plot is raised
-						pLoopPlot->changeCulture(getOwner(), iCultureTransfer, true, false);
 					}
+						pLoopPlot->changeCulture(getOwner(), iCultureTransfer, true, false);
 				}
 			}
 		}
@@ -35957,18 +35951,22 @@ void CvUnit::changeRevoltProtection(int iChange)
 //need to change references to getRevoltProtection to the following:
 int CvUnit::revoltProtectionTotal() const
 {
+
+	return std::max(0, revoltProtectionTotalPreCheck());
+	
 	// The call that plugs into the rest of the code (final value).
 	// This can be plugged into the existing final, or even be renamed to the existing final (though experience has shown me this causes me tremendous confusion!).
 
-	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
-	// if the current final result of the SMM multiplicative mechanism is nothing but an empty shell
-	// then this is the first time it's being run so we take from the base value to start.
-	// Either that or the base is 0 anyhow.
-	|| getSMRevoltProtection() == 0)
-	{
-		return std::max(0, revoltProtectionTotalPreCheck());
-	}
-	return std::max(0, getSMRevoltProtection());
+	// disabling size matters revolt protection, it seems to give some weird results -- flabbert
+	//if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
+	//// if the current final result of the SMM multiplicative mechanism is nothing but an empty shell
+	//// then this is the first time it's being run so we take from the base value to start.
+	//// Either that or the base is 0 anyhow.
+	//|| getSMRevoltProtection() == 0)
+	//{
+	//		return std::max(0, revoltProtectionTotalPreCheck());
+	//}
+	// return std::max(0, getSMRevoltProtection());
 }
 
 int CvUnit::revoltProtectionTotalPreCheck() const//The total before the Size Matters multiplicative method adjusts for the final value.

@@ -16173,27 +16173,23 @@ void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
 	// Hack: Forcing to recalculate to use right culture level
 	// TODO fix upstream to be less hacky!
 	CultureLevelTypes eCultureLevel = (CultureLevelTypes)0;
-	// if (getOwner() != ePlayer)
-	{
-		const CvGame& GAME = GC.getGame();
-		const GameSpeedTypes eSpeed = GAME.getGameSpeedType();
-		int iActualLevel = 0;
+	const CvGame& GAME = GC.getGame();
+	const GameSpeedTypes eSpeed = GAME.getGameSpeedType();
+	int iActualLevel = 0;
 
-		foreach_(const CvCultureLevelInfo* info, GC.getCultureLevelInfos())
+	foreach_(const CvCultureLevelInfo* info, GC.getCultureLevelInfos())
+	{
+		// Only count valid game options for current game
+		if (info->getPrereqGameOption() == NO_GAMEOPTION || GAME.isOption((GameOptionTypes)info->getPrereqGameOption()))
 		{
-			// Only count valid game options for current game
-			if (info->getPrereqGameOption() == NO_GAMEOPTION || GAME.isOption((GameOptionTypes)info->getPrereqGameOption()))
+			if (iCulture < 100 * info->getSpeedThreshold(eSpeed))
 			{
-				if (iCulture < 100 * info->getSpeedThreshold(eSpeed))
-				{
-					eCultureLevel = (CultureLevelTypes)(iActualLevel - 1);
-					break;
-				}
-				iActualLevel++;
+				eCultureLevel = (CultureLevelTypes)(iActualLevel - 1);
+				break;
 			}
+			iActualLevel++;
 		}
 	}
-	// else eCultureLevel = getCultureLevel();
 	// end hack
 
 	// Put culture onto plots from the city, even if "0" culture output,
