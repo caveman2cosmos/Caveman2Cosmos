@@ -20084,6 +20084,7 @@ void CvCity::doPromotion()
 	{
 		return;
 	}
+	bool bUnitPromoted = false;
 
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
@@ -20101,9 +20102,14 @@ void CvCity::doPromotion()
 				if (pLoopUnit->getTeam() == GET_PLAYER(getOwner()).getTeam())
 				{
 					assignPromotionsFromBuildingChecked(kBuilding, pLoopUnit);
+					bUnitPromoted = true;
 				}
 			}
 		}
+	}
+	if (bUnitPromoted)
+	{
+		doPromotion();
 	}
 }
 /*
