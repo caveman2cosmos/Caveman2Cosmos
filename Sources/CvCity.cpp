@@ -20101,8 +20101,10 @@ void CvCity::doPromotion()
 			{
 				if (pLoopUnit->getTeam() == GET_PLAYER(getOwner()).getTeam())
 				{
-					assignPromotionsFromBuildingChecked(kBuilding, pLoopUnit);
-					bUnitPromoted = true;
+					if (assignPromotionsFromBuildingChecked(kBuilding, pLoopUnit))
+					{
+						bUnitPromoted = true;
+					}
 				}
 			}
 		}
@@ -23171,7 +23173,7 @@ void CvCity::assignOngoingTraining(UnitCombatTypes eCombat, const CvPlot* pPlot)
 	}
 }
 
-bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit) const
+bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit)
 {
 	if (unit->canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)
 #ifdef COMBAT_MOD_EQUIPTMENT
@@ -23184,8 +23186,10 @@ bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit) cons
 	return false;
 }
 
-void CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo& building, CvUnit* unit) const
+bool CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo& building, CvUnit* unit)
 {
+	bool bUnitPromoted = false;
+
 	foreach_(const FreePromoTypes& freePromoType, building.getFreePromoTypes())
 	{
 		if (unit->canAcquirePromotion(freePromoType.ePromotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)
@@ -23197,12 +23201,14 @@ void CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo& building,
 				freePromoType.m_pExprFreePromotionCondition->evaluate(unit->getGameObject()))
 			{
 				unit->setHasPromotion(freePromoType.ePromotion, true);
+				bUnitPromoted = true;
 			}
 		}
 	}
+	return bUnitPromoted;
 }
 
-bool CvCity::canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const
+bool CvCity::canEquip(const CvUnit* pUnit, PromotionTypes eEquipment)
 {
 	//Some of this could be a bit misleading if its not understood that the result should be true if its NOT an equipment at all.
 	if (GC.getPromotionInfo(eEquipment).isEquipment())
