@@ -456,10 +456,9 @@ public:
 	void setUnitCombatOngoingTrainingTimeIncrement(UnitCombatTypes eIndex, int iChange);
 	void updateOngoingTraining(UnitCombatTypes eCombat);
 	void assignOngoingTraining(UnitCombatTypes eCombat, const CvPlot* pPlot);
-	static bool canEquip(const CvUnit* pUnit, PromotionTypes eEquipment);
+	bool canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const;
 
-	static bool assignPromotionChecked(PromotionTypes ePromotion, CvUnit* pUnit);
-	//static bool assignPromotionsFromBuildingChecked(const CvBuildingInfo& building, CvUnit* unit);
+	bool assignPromotionChecked(PromotionTypes ePromotion, CvUnit* pUnit) const;
 
 	//TB Combat Mods (Buildings) end
 	//TB Traits begin

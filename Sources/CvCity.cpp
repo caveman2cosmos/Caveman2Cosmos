@@ -23181,7 +23181,7 @@ void CvCity::assignOngoingTraining(UnitCombatTypes eCombat, const CvPlot* pPlot)
 	}
 }
 
-bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit)
+bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit) const
 {
 	if (unit->canAcquirePromotion(promotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)
 #ifdef COMBAT_MOD_EQUIPTMENT
@@ -23194,7 +23194,7 @@ bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit)
 	return false;
 }
 
-bool CvCity::canEquip(const CvUnit* pUnit, PromotionTypes eEquipment)
+bool CvCity::canEquip(const CvUnit* pUnit, PromotionTypes eEquipment) const
 {
 	//Some of this could be a bit misleading if its not understood that the result should be true if its NOT an equipment at all.
 	if (GC.getPromotionInfo(eEquipment).isEquipment())
