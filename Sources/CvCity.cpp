@@ -23194,29 +23194,6 @@ bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit)
 	return false;
 }
 
-template <typename BuildingInfoRange>
-bool assignPromotionsFromBuildingChecked(const CvBuildingInfo& building, CvUnit* unit)
-{
-	bool bUnitPromoted = false;
-
-	foreach_(const FreePromoTypes& freePromoType, building.getFreePromoTypes())
-	{
-		if (unit->canAcquirePromotion(freePromoType.ePromotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)
-#ifdef COMBAT_MOD_EQUIPTMENT
-		|| GC.getPromotionInfo(freePromoType.ePromotion).isEquipment() && canEquip(unit, freePromoType.ePromotion)
-#endif COMBAT_MOD_EQUIPTMENT
-		) {
-			if (!freePromoType.m_pExprFreePromotionCondition ||
-				freePromoType.m_pExprFreePromotionCondition->evaluate(unit->getGameObject()))
-			{
-				unit->setHasPromotion(freePromoType.ePromotion, true);
-				bUnitPromoted = true;
-			}
-		}
-	}
-	return bUnitPromoted;
-}
-
 bool CvCity::canEquip(const CvUnit* pUnit, PromotionTypes eEquipment)
 {
 	//Some of this could be a bit misleading if its not understood that the result should be true if its NOT an equipment at all.
