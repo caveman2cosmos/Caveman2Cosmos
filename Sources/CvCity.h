@@ -459,7 +459,7 @@ public:
 	static bool canEquip(const CvUnit* pUnit, PromotionTypes eEquipment);
 
 	static bool assignPromotionChecked(PromotionTypes ePromotion, CvUnit* pUnit);
-	static bool assignPromotionsFromBuildingChecked(const CvBuildingInfo& building, CvUnit* unit);
+	//static bool assignPromotionsFromBuildingChecked(const CvBuildingInfo& building, CvUnit* unit);
 
 	//TB Combat Mods (Buildings) end
 	//TB Traits begin

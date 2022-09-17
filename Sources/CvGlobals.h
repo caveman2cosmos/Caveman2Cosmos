@@ -570,6 +570,7 @@ public:
 	int getNumBuildingInfos() const;
 	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum) const;
 	const std::vector<CvBuildingInfo*>& getBuildingInfos() const { return m_paBuildingInfo; }
+	enum_range<BuildingTypes> getBuildingTypes() const;
 
 	int getNumSpecialBuildingInfos() const;
 	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const;

@@ -3362,6 +3362,35 @@ int CvCity::getProductionExperience(UnitTypes eUnit) const
 	return std::max(0, iExperience);
 }
 
+template <typename BuildingInfoRange_>
+void assignPromotionsFromBuildings(CvUnit& unit, const BuildingInfoRange_& buildings)
+{
+	bool bUnitPromoted = false;
+
+	foreach_(const CvBuildingInfo& buildingX, buildings)
+	{
+		foreach_(const FreePromoTypes& freePromoX, buildingX.getFreePromoTypes())
+		{
+			if (unit.canAcquirePromotion(freePromoX.ePromotion, PromotionRequirements::Promote | PromotionRequirements::ForFree)
+#ifdef COMBAT_MOD_EQUIPTMENT
+			|| GC.getPromotionInfo(freePromoX.ePromotion).isEquipment() && canEquip(&unit, freePromoX.ePromotion)
+#endif COMBAT_MOD_EQUIPTMENT
+			) {
+				if (!freePromoX.m_pExprFreePromotionCondition ||
+					freePromoX.m_pExprFreePromotionCondition->evaluate(unit.getGameObject()))
+				{
+					unit.setHasPromotion(freePromoX.ePromotion, true);
+					bUnitPromoted = true;
+				}
+			}
+		}
+	}
+	if (bUnitPromoted) // receiving a free promo can make other promos valid (which may have been checked in an earlier loop and failed already), so check again if any are recieved.
+	{
+		assignPromotionsFromBuildings(unit, buildings);
+	}
+}
+
 void CvCity::addProductionExperience(CvUnit* pUnit, bool bConscript)
 {
 	PROFILE_FUNC();
@@ -3383,17 +3412,12 @@ void CvCity::addProductionExperience(CvUnit* pUnit, bool bConscript)
 		}
 	}
 
-	const int iNumBuildingInfos = GC.getNumBuildingInfos();
-
-	for (int iI = 0; iI < iNumBuildingInfos; iI++)
-	{
-		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
-
-		if (getNumActiveBuilding(eBuilding) > 0)
-		{
-			assignPromotionsFromBuildingChecked(GC.getBuildingInfo(eBuilding), pUnit);
-		}
-	}
+	assignPromotionsFromBuildings(
+		*pUnit
+		, GC.getBuildingTypes()
+			| filtered(bind(CvCity::getNumActiveBuilding, this, _1) > 0)
+			| transformed(bind(cvInternalGlobals::getBuildingInfo, &GC, _1))
+	);
 }
 
 UnitTypes CvCity::getProductionUnit() const
@@ -20084,34 +20108,18 @@ void CvCity::doPromotion()
 	{
 		return;
 	}
-	bool bUnitPromoted = false;
-
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+	foreach_(CvUnit* unitX, plot()->units())
 	{
-		const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
-		if (getNumActiveBuilding(eBuilding) == 0)
+		if (unitX->getTeam() == GET_PLAYER(getOwner()).getTeam())
 		{
-			continue;
+			assignPromotionsFromBuildings(
+				*unitX
+				, GC.getBuildingTypes()
+					| filtered(bind(CvCity::getNumActiveBuilding, this, _1) > 0)
+					| transformed(bind(cvInternalGlobals::getBuildingInfo, &GC, _1))
+					| filtered(bind(CvBuildingInfo::isApplyFreePromotionOnMove, _1))
+			);
 		}
-		const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
-
-		if (kBuilding.isApplyFreePromotionOnMove() && !kBuilding.getFreePromoTypes().empty())
-		{
-			foreach_(CvUnit* pLoopUnit, plot()->units())
-			{
-				if (pLoopUnit->getTeam() == GET_PLAYER(getOwner()).getTeam())
-				{
-					if (assignPromotionsFromBuildingChecked(kBuilding, pLoopUnit))
-					{
-						bUnitPromoted = true;
-					}
-				}
-			}
-		}
-	}
-	if (bUnitPromoted)
-	{
-		doPromotion();
 	}
 }
 /*
@@ -23186,7 +23194,8 @@ bool CvCity::assignPromotionChecked(PromotionTypes promotion, CvUnit* unit)
 	return false;
 }
 
-bool CvCity::assignPromotionsFromBuildingChecked(const CvBuildingInfo& building, CvUnit* unit)
+template <typename BuildingInfoRange>
+bool assignPromotionsFromBuildingChecked(const CvBuildingInfo& building, CvUnit* unit)
 {
 	bool bUnitPromoted = false;
 

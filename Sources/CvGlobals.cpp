@@ -1971,6 +1971,11 @@ CvBuildingInfo& cvInternalGlobals::getBuildingInfo(BuildingTypes eBuildingNum) c
 	return *(m_paBuildingInfo[eBuildingNum]);
 }
 
+enum_range<BuildingTypes> cvInternalGlobals::getBuildingTypes() const
+{
+	return enum_range<BuildingTypes>(0, m_paBuildingInfo.size());
+}
+
 int cvInternalGlobals::getNumSpecialBuildingInfos() const
 {
 	return (int)m_paSpecialBuildingInfo.size();

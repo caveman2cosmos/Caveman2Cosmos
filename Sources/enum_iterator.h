@@ -63,15 +63,19 @@ namespace range_detail
 	};
 } // namespace range_detail
 
-template<typename EnumType, typename UnderlyingType>
+template<typename EnumType, typename UnderlyingType = size_t>
 class enum_range
 	: public bst::iterator_range< range_detail::enum_iterator<EnumType, UnderlyingType> >
 {
 	typedef range_detail::enum_iterator<EnumType, UnderlyingType> iterator_t;
 	typedef bst::iterator_range<iterator_t> base_t;
 public:
-	enum_range(EnumType first, EnumType last)
-		: base_t(iterator_t(first), iterator_t(last))
+	//enum_range(EnumType first, EnumType last)
+	//	: base_t(iterator_t(first), iterator_t(last))
+	//{
+	//}
+	enum_range(UnderlyingType first, UnderlyingType last)
+		: base_t(iterator_t(static_cast<EnumType>(first)), iterator_t(static_cast<EnumType>(last)))
 	{
 	}
 };
