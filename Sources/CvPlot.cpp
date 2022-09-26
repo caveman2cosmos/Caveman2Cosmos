@@ -997,15 +997,18 @@ void CvPlot::checkCityRevolt()
 	const PlayerTypes eCulturalOwner = calculateCulturalOwner();
 	if (eCulturalOwner != NO_PLAYER && GET_PLAYER(eCulturalOwner).getTeam() != getTeam() && !pCity->isOccupation())
 	{
+		const int iRevoltTestProb = GC.getREVOLT_TEST_PROB() * 100 /
+			GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+		
 		// Check to check for revolt, rate adjusted by gamespeed, at least 1% minimum.
 		// If adjusted, also update `int iSpeedAdjustment` in CvGameTextMgr, CvDLLWidgetData
-		if (GC.getGame().getSorenRandNum(100, "Revolt #1") < std::max(1, GC.getREVOLT_TEST_PROB() *
-		100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()))
+		if (GC.getGame().getSorenRandNum(100, "Revolt #1") < std::max(1, iRevoltTestProb))
 		{
 			// iCityStrength is 100x % chance of revolt
 			const int iCityStrength = pCity->netRevoltRisk(eCulturalOwner);
 			int iRevoltRoll = GC.getGame().getSorenRandNum(10000, "Revolt #2");
 
+			// Successful revolt
 			if (pCity->isNPC() || iRevoltRoll < iCityStrength)
 			{
 				foreach_(CvUnit* pLoopUnit, units())
@@ -1064,8 +1067,7 @@ void CvPlot::checkCityRevolt()
 			}
 		}
 		// ~2x more likely to be alerted of high discontent than revolt or quelled one (don't want every turn)
-		else if (GC.getGame().getSorenRandNum(100, "Revolt #1 Alert") < std::max(1, GC.getREVOLT_TEST_PROB() *
-			200 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent())
+		else if (GC.getGame().getSorenRandNum(100, "Revolt #1 Alert") < std::max(1, 2 * iRevoltTestProb)
 			&& isInViewport())
 		{
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCONTENT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());

@@ -16415,10 +16415,10 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 					for (int i = 0; i < iNumTurnsApplied; ++i)
 					{
 						pCity->changeCulture(getID(), iCultureAmount / iNumTurnsApplied, true, true);
-						pCity->plot()->changeCulture(getID(), iPlotCultureAmount / iNumTurnsApplied, true);
+						pCity->plot()->changeCulture(getID(), iPlotCultureAmount / iNumTurnsApplied, false);
 					}
 					pCity->changeCulture(getID(), iCultureAmount % iNumTurnsApplied, false, true);
-					pCity->plot()->changeCulture(getID(), iPlotCultureAmount % iNumTurnsApplied, true);
+					pCity->plot()->changeCulture(getID(), iPlotCultureAmount % iNumTurnsApplied, false);
 				}
 				bSomethingHappened = true;
 			}
