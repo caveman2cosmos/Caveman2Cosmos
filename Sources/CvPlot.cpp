@@ -8325,17 +8325,17 @@ void CvPlot::updatePlotGroup()
 	}
 }
 
-static void CalculateClosePlotGroupConnectSet(PlayerTypes ePlayer, CvPlot* pSeedPlot, std::vector<CvPlot*>& set, int iRange)
+void CalculateClosePlotGroupConnectSet(PlayerTypes ePlayer, const CvPlot* pSeedPlot, std::vector<const CvPlot*>& set, int iRange)
 {
-	CvPlotGroup* seedPlotGroup = pSeedPlot->getPlotGroup(ePlayer);
-
 	if (!algo::any_of_equal(set, pSeedPlot))
 	{
 		set.push_back(pSeedPlot);
 
 		if ( iRange > 0 )
 		{
-			foreach_(CvPlot* pAdjacentPlot, pSeedPlot->adjacent())
+			const CvPlotGroup* seedPlotGroup = pSeedPlot->getPlotGroup(ePlayer);
+
+			foreach_(const CvPlot* pAdjacentPlot, pSeedPlot->adjacent())
 			{
 				if (pAdjacentPlot->getPlotGroup(ePlayer) == seedPlotGroup)
 				{
@@ -8398,7 +8398,7 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 				{
 					bool	bIsSamePlotGroup[NUM_DIRECTION_TYPES];
 					int		iSamePlotGroupAdjacentCount = 0;
-					CvPlot* pAdjacentInstance = NULL;
+					const CvPlot* pAdjacentInstance = NULL;
 
 					for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 					{
@@ -8407,7 +8407,7 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 
 					for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 					{
-						CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
+						const CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
 
 						if (pAdjacentPlot != NULL && pAdjacentPlot->getPlotGroup(ePlayer) == pPlotGroup)
 						{
@@ -8422,7 +8422,7 @@ void CvPlot::updatePlotGroup(PlayerTypes ePlayer, bool bRecalculate, bool bRecal
 					{
 						PROFILE("CvPlot::updatePlotGroup.PotentialRemove");
 
-						std::vector<CvPlot*> closeConnected;
+						std::vector<const CvPlot*> closeConnected;
 
 						CalculateClosePlotGroupConnectSet(ePlayer, pAdjacentInstance, closeConnected, 3);
 
