@@ -21694,7 +21694,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 
 	EventTriggeredData* pTriggeredData = NULL;
 
-	FAssert(eEvent != NO_EVENT);
+	FASSERT_BOUNDS(0, GC.getNumEventInfos(), eEvent);
 
 	// -1 iEventTriggeredId implies a replay after a reset of modifiers and only modifier effects should be applied
 	const bool adjustModifiersOnly = (iEventTriggeredId == -1);
