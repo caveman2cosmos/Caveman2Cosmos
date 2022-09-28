@@ -20319,7 +20319,7 @@ bool CvUnit::isPromotionValid(PromotionTypes ePromotion, bool bFree, bool bKeepC
 		// The two solid ways to identify a Size Matters promotion that would not normally have a CC prereq.
 		// Note: Apparently having no CC prereq is a clear way to isolate promotions to only being assigned directly by event or other special injection.
 		// Thus it was necessary to pass the Size Matters promos despite having no particular CC prereq.
-		if (!promo.isForOffset() && !promo.isZeroesXP())
+		if (!promo.isForOffset() && !promo.isZeroesXP() && promo.getNumQualifiedUnitCombatTypes() > 0)
 		{
 			bool bValid = false;
 
