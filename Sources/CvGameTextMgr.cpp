@@ -12454,7 +12454,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	}
 	const bool bHideSeek = GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK);
 
-	CvPromotionInfo& promo = GC.getPromotionInfo(ePromotion);
+	const CvPromotionInfo& promo = GC.getPromotionInfo(ePromotion);
 	const int iLinePriority = promo.getLinePriority();
 	const PromotionLineTypes ePromoLine = promo.getPromotionLine();
 	const CvPromotionLineInfo* promoLine = ePromoLine != NO_PROMOTIONLINE ? &GC.getPromotionLineInfo(ePromoLine) : NULL;
@@ -14193,7 +14193,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 
 	if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_TERRAIN_DAMAGE))
 	{
-		bool* abIsIgnoreTerrainDamage = new bool[GC.getNumTerrainInfos()]();
+		bst::scoped_array<bool> abIsIgnoreTerrainDamage(new bool[GC.getNumTerrainInfos()]());
 
 		for (int iI = 0; iI < (int)linePromotionsOwned.size(); iI++)
 		{
@@ -14307,7 +14307,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 
 
 	{
-		bool* unitCombats = new bool[GC.getNumUnitCombatInfos()]();
+		bst::scoped_array<bool> unitCombats(new bool[GC.getNumUnitCombatInfos()]());
 
 		for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
 		{
@@ -14354,7 +14354,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	}
 
 	{
-		bool* trapSetWithPromo = new bool[GC.getNumPromotionInfos()]();
+		bst::scoped_array<bool> trapSetWithPromo(new bool[GC.getNumPromotionInfos()]());
 
 		for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 		{
@@ -14374,7 +14374,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		}
 	}
 	{
-		bool* unitCombats = new bool[GC.getNumUnitCombatInfos()]();
+		bst::scoped_array<bool> unitCombats(new bool[GC.getNumUnitCombatInfos()]());
 
 		for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 		{

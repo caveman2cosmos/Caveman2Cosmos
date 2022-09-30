@@ -21736,7 +21736,7 @@ void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, 
 {
 	PROFILE_FUNC();
 
-	FAssertMsg(eIndex < GC.getNumPromotionInfos(), "Invalid promotion");
+	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), eIndex);
 
 	if (eIndex == NO_PROMOTION)
 	{
@@ -21744,7 +21744,7 @@ void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, 
 		return;
 	}
 
-	CvPromotionInfo& kPromotion = GC.getPromotionInfo(eIndex);
+	const CvPromotionInfo& kPromotion = GC.getPromotionInfo(eIndex);
 	// Disable spy promotions mechanism
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	//TB Combat Mods begin (first, regardless of remove, add, or ignore because they already have it, reset AfflictionTurnCount to 0,
