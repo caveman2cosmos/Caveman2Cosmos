@@ -829,25 +829,6 @@
 		<Russian>Смоляная яма, или, точнее, известная как асфальтовая яма или асфальтовое озеро, является типом нефтяного фильтра, когда подземный битум просачивается на поверхность, создавая большую площадь природного асфальта. Это происходит потому, что после того, как материал достигает поверхности, его более легкие компоненты испаряются, оставляя только толстый слой асфальта.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_TORNADO</Tag>
-		<English>Tornado</English>
-		<French>Tornade</French>
-		<Spanish>
-			<Text>Tornado:Tornados</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Russian>Òîðíàäî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FEATURE_TORNADO_PEDIA</Tag>
-		<English>A tornado will destroy improvements on a plot. It will also make the plot impassable for one or two turns.</English>
-		<French>Une tornade détruira les améliorations sur un terrain. Cela rendra également l'intrigue impraticable pendant un ou deux tours.</French>
-		<Spanish>Un tornado destruirá todas las mejoras de una casilla. También hará la casilla impasable durante uno o dos turnos.</Spanish>
-		<Polish>Tornado (z hiszp. tronada - burza), trąba powietrzna - gwałtownie wirująca kolumna powietrza, będąca jednocześnie w kontakcie z powierzchnią ziemi i podstawą cumulonimbusa lub rzadziej wypiętrzonego cumulusa. Tornada osiągają różne rozmiary. Zwykle przyjmują postać widzialnego leja kondensacyjnego, węższym końcem dotykającego ziemi. Dolna część leja jest często otoczona chmurą odłamków i pyłu.</Polish>
-		<Russian>Торнадо уничтожает улучшения на пострадавшем участке. Оно также сделает пораженную клетку непроходимой на один или два хода.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FEATURE_VERY_TALL_GRASS</Tag>
 		<English>Very Tall Grass</English>
 		<French>Très Hautes Herbes</French>
