@@ -376,7 +376,6 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
@@ -1063,7 +1062,8 @@
 			<ObsoleteTech>TECH_MAINSTREAM_CLONING</ObsoleteTech>
 			<iCost>170</iCost>
 			<iMoves>2</iMoves>
-			<iWorkRate>250</iWorkRate>
+			<iWorkRate>270</iWorkRate>
+			<iBaseUpkeep>3</iBaseUpkeep>
 			<iAsset>3</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>

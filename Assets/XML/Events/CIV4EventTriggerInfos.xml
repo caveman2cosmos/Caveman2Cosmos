@@ -1206,65 +1206,6 @@
 			<PythonCanDo>canTriggerSpicy</PythonCanDo>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_TORNADO</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_TORNADO_1</Text>
-				<Text>TXT_KEY_EVENTTRIGGER_TORNADO_2</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_1</Text>
-					<Era>C2C_ERA_ANCIENT</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_1</Text>
-					<Era>C2C_ERA_CLASSICAL</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_1</Text>
-					<Era>C2C_ERA_MEDIEVAL</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_2</Text>
-					<Era>C2C_ERA_RENAISSANCE</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_2</Text>
-					<Era>C2C_ERA_INDUSTRIAL</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>C2C_ERA_ATOMIC</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>C2C_ERA_INFORMATION</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>C2C_ERA_NANOTECH</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>C2C_ERA_TRANSHUMAN</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<EventArt>Art/Event_Images/TornadoEvent.dds</EventArt>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>40</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<bOwnPlot>1</bOwnPlot>
-			<iPlotType>2</iPlotType>
-			<Events>
-				<Event>EVENT_TORNADO</Event>
-			</Events>
-			<ObsoleteTechs>
-				<ObsoleteTech>TECH_WEATHER_CONTROL</ObsoleteTech>
-			</ObsoleteTechs>
-			<bRecurring>1</bRecurring>
-			<PythonCanDo>canDoTornado</PythonCanDo>
-		</EventTriggerInfo>
-		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_BABY_BOOM</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_BABY_BOOM_1</Text>
@@ -1626,31 +1567,6 @@
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_WEATHER_CONTROL</ObsoleteTech>
 			</ObsoleteTechs>
-			<bRecurring>1</bRecurring>
-		</EventTriggerInfo>
-		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_VOLCANO</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_VOLCANO_1</Text>
-				<Text>TXT_KEY_EVENTTRIGGER_VOLCANO_2</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_1</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<EventArt>Art/Event_Images/VolcanoEvent.dds</EventArt>
-			<iWeight>25</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<bOwnPlot>1</bOwnPlot>
-			<Events>
-				<Event>EVENT_VOLCANO_1</Event>
-			</Events>
-			<OrPreReqs>
-				<PrereqTech>TECH_WRITING</PrereqTech>
-				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
-			</OrPreReqs>
 			<bRecurring>1</bRecurring>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
@@ -10614,6 +10530,7 @@
 			<bShowPlot>0</bShowPlot>
 			<EventArt>Art/Event_Images/musicofgods.dds</EventArt>
 		</EventTriggerInfo>
+		<!-- Turns 'extinct' volcano back to active -->
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_EXTINCT</Type>
 			<TriggerTexts>
@@ -10623,7 +10540,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>20</iWeight>
+			<iWeight>10</iWeight>
 			<iMaxOurLandmass>-1</iMaxOurLandmass>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<TerrainsRequired>
@@ -10636,12 +10553,13 @@
 				<BonusType>BONUS_SULPHUR</BonusType>
 			</BonusesRequired>
 			<Events>
-				<Event>EVENT_VOLCANO_ERUPTION_1</Event>
+				<Event>EVENT_VOLCANO_ERUPTION</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
 			<PythonCanDo>canDoNewVolcano</PythonCanDo>
 			<PythonCallback>doVolcanoNewEruption</PythonCallback>
 		</EventTriggerInfo>
+		<!-- Generates new volcano -->
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_NEW</Type>
 			<TriggerTexts>
@@ -10651,16 +10569,17 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>10</iWeight>
+			<iWeight>5</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<Events>
-				<Event>EVENT_VOLCANO_ERUPTION_1</Event>
+				<Event>EVENT_VOLCANO_ERUPTION</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
 			<bShowPlot>0</bShowPlot>
 			<PythonCanDo>canDoNewVolcano</PythonCanDo>
 			<PythonCallback>doVolcanoNewEruption</PythonCallback>
 		</EventTriggerInfo>
+		<!-- Dormant volcano -> Extinct -->
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_GOES_EXTINCT</Type>
 			<TriggerTexts>
@@ -10670,7 +10589,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>40</iWeight>
+			<iWeight>100</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
@@ -10683,6 +10602,7 @@
 			<PythonCanDo>canDoOldVolcano</PythonCanDo>
 			<PythonCallback>doVolcanoExtinction</PythonCallback>
 		</EventTriggerInfo>
+		<!-- Dormant -> Active -->
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_DORMANT</Type>
 			<TriggerTexts>
@@ -10692,19 +10612,20 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iWeight>50</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_VOLCANO_DORMANT</FeatureType>
 			</FeaturesRequired>
 			<Events>
-				<Event>EVENT_VOLCANO_ERUPTION_1</Event>
+				<Event>EVENT_VOLCANO_ERUPTION</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
 			<bShowPlot>0</bShowPlot>
 			<PythonCanDo>canDoOldVolcano</PythonCanDo>
 			<PythonCallback>doVolcanoDormantEruption</PythonCallback>
 		</EventTriggerInfo>
+		<!-- Active volcano -> Regular eruption -->
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_ACTIVE</Type>
 			<TriggerTexts>
@@ -10714,19 +10635,20 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>200</iWeight>
+			<iWeight>150</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
 			</FeaturesRequired>
 			<Events>
-				<Event>EVENT_VOLCANO_ERUPTION_1</Event>
+				<Event>EVENT_VOLCANO_ERUPTION</Event>
 			</Events>
 			<bRecurring>1</bRecurring>
 			<bShowPlot>0</bShowPlot>
 			<PythonCanDo>canDoOldVolcano</PythonCanDo>
 			<PythonCallback>doVolcanoExistingEruption</PythonCallback>
 		</EventTriggerInfo>
+		<!-- Active volcano -> Dormant -->
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_GOES_DORMANT</Type>
 			<TriggerTexts>
@@ -10736,7 +10658,7 @@
 				</TriggerText>
 			</TriggerTexts>
 			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>140</iWeight>
+			<iWeight>100</iWeight>
 			<iNumPlotsRequired>1</iNumPlotsRequired>
 			<FeaturesRequired>
 				<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>

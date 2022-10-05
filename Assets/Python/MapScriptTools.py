@@ -4502,7 +4502,6 @@ class MapPrint:
 		}
 		self.__featureDict[GC.getInfoTypeForString('FEATURE_SWAMP')] = ["w", "Swamp"]
 		self.__featureDict[efKelp]									 = ["=", "Kelp"]
-		self.__featureDict[GC.getInfoTypeForString('FEATURE_STORM')] = ["@", "Storm"]
 
 		# ------------------
 		# bonus dictionaries

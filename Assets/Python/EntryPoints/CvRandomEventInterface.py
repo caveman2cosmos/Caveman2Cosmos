@@ -661,64 +661,6 @@ def canTriggerMonsoonCity(argsList):
 
   return False
 
-######## VOLCANO ###########
-
-def getHelpVolcano1(argsList):
-	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_1_HELP", ())
-
-def canApplyVolcano1(argsList):
-	data = argsList[1]
-
-	for iDX in xrange(-1, 2):
-		for iDY in xrange(-1, 2):
-			plotX = plotXY(data.iPlotX, data.iPlotY, iDX, iDY)
-			if not plotX.isNone() and plotX.getImprovementType() != -1:
-				return True
-	return False
-
-def applyVolcano1(argsList):
-	data = argsList[1]
-	plots = []
-	iPlots = 0
-	for iDX in xrange(-1, 2):
-		for iDY in xrange(-1, 2):
-			plotX = plotXY(data.iPlotX, data.iPlotY, iDX, iDY)
-			if not plotX.isNone():
-				iImprovement = plotX.getImprovementType()
-				if iImprovement > -1:
-					plots.append((plotX, iImprovement))
-					iPlots += 1
-
-	if not plots: raise "Event - Error in canApplyVolcano1"
-
-	if iPlots < 3:
-		iRange = iPlots
-	else: iRange = 3
-
-	listRuins = [
-		GC.getInfoTypeForString("IMPROVEMENT_COTTAGE"),
-		GC.getInfoTypeForString("IMPROVEMENT_HAMLET"),
-		GC.getInfoTypeForString("IMPROVEMENT_VILLAGE"),
-		GC.getInfoTypeForString("IMPROVEMENT_TOWN"),
-		GC.getInfoTypeForString("IMPROVEMENT_SUBURBS"),
-		GC.getInfoTypeForString("IMPROVEMENT_GOODY_HUT")
-	]
-	iRuins = GC.getInfoTypeForString("IMPROVEMENT_CITY_RUINS")
-
-	for i in xrange(iRange):
-		if i and GAME.getSorenRandNum(100, "Volcano event num improvements destroyed") < 50:
-			break
-		plot, iImprovement = plots.pop(GAME.getSorenRandNum(iPlots, "Volcano event improvement destroyed"))
-		iPlots -= 1
-		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getImprovementInfo(iImprovement).getTextKey(), ))
-		CyInterface().addMessage(data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getImprovementInfo(iImprovement).getButton(), GC.getCOLOR_RED(), plot.getX(), plot.getY(), True, True)
-		if iImprovement in listRuins:
-			plot.setImprovementType(iRuins)
-		else:
-			plot.setImprovementType(-1)
-
-
-
 ######## DUSTBOWL ###########
 
 def canTriggerDustbowlCont(argsList):
@@ -2157,9 +2099,9 @@ def applyMasterBlacksmithDone1(argsList):
 	CyInterface().addMessage(
 		data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(),
 		TRNSLTR.getText(
-			"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE",
+			"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_IMPROVEMENT",
 			(
-				GC.getBonusInfo(iBonus).getTextKey(), GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey()
+				GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey(), GC.getBonusInfo(iBonus).getTextKey()
 			)
 		),
 		"AS2D_DISCOVERBONUS", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(iBonus).getButton(),
@@ -6351,7 +6293,7 @@ def doVolcanoDormantEruption(argsList):
   doVolcanoPlot(pPlot)
   doVolcanoNeighbouringPlots(pPlot)
   doVolcanoAdjustFertility((pPlot, 1, team))
-  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT")))
+  doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT_ERUPTION")))
 
 def doVolcanoExtinction(argsList):
   data = argsList[0]
@@ -6391,7 +6333,7 @@ def doVolcanoSleep(argsList):
   doVolcanoReport((pPlot, BugUtil.getPlainText("TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT")))
 
 def getHelpVolcanoEruption1(argsList):
-	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_ERUPTION_1_HELP", ())
+	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_ERUPTION_HELP", ())
 
 def getHelpVolcanoSleep(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_VOLCANO_SLEEP_HELP", ())
@@ -6750,43 +6692,43 @@ def getHelpGlobalWarming(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_GLOBAL_WARMING_1_HELP",())
 
 ######## TORNADO ###########
-def canDoTornado(argsList):
-	EventTriggeredData = argsList[0]
+# def canDoTornado(argsList):
+# 	EventTriggeredData = argsList[0]
 
-	CyPlot = GC.getMap().plot(EventTriggeredData.iPlotX, EventTriggeredData.iPlotY)
-	if CyPlot.isCity():
-		return 0
+# 	CyPlot = GC.getMap().plot(EventTriggeredData.iPlotX, EventTriggeredData.iPlotY)
+# 	if CyPlot.isCity():
+# 		return 0
 
-	if not CyPlot.canHaveFeature(GC.getInfoTypeForString('FEATURE_TORNADO')):
-		return 0
+# 	if not CyPlot.canHaveFeature(GC.getInfoTypeForString('FEATURE_TORNADO')):
+# 		return 0
 
-	iLatitude = CyPlot.getLatitude()
-	if iLatitude < 50 and 30 < iLatitude:
-		return 1
+# 	iLatitude = CyPlot.getLatitude()
+# 	if iLatitude < 50 and 30 < iLatitude:
+# 		return 1
 
-	iRandom = GAME.getSorenRandNum(101, "Random Plot") # 0 <-> 100
-	if iLatitude < 60 and 20 < iLatitude:
-		if iRandom < 20:
-			return 1
-	elif iRandom < 5:
-		return 1
-	return 0
+# 	iRandom = GAME.getSorenRandNum(101, "Random Plot") # 0 <-> 100
+# 	if iLatitude < 60 and 20 < iLatitude:
+# 		if iRandom < 20:
+# 			return 1
+# 	elif iRandom < 5:
+# 		return 1
+# 	return 0
 
-def doTornado(argsList):
-	EventTriggeredData = argsList[1]
-	x, y = EventTriggeredData.iPlotX, EventTriggeredData.iPlotY
-	CyPlot = GC.getMap().plot(x, y)
-	if 50 > GAME.getSorenRandNum(101, "Random Plot"):
-		CyPlot.setImprovementType(-1)
+# def doTornado(argsList):
+# 	EventTriggeredData = argsList[1]
+# 	x, y = EventTriggeredData.iPlotX, EventTriggeredData.iPlotY
+# 	CyPlot = GC.getMap().plot(x, y)
+# 	if 50 > GAME.getSorenRandNum(101, "Random Plot"):
+# 		CyPlot.setImprovementType(-1)
 
-	if 25 > GAME.getSorenRandNum(101, "Random Plot"):
-		CyPlot.setRouteType(-1)
+# 	if 25 > GAME.getSorenRandNum(101, "Random Plot"):
+# 		CyPlot.setRouteType(-1)
 
-	if CyPlot.getFeatureType() == -1:
-		CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_TORNADO'), 0)
+# 	if CyPlot.getFeatureType() == -1:
+# 		CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_TORNADO'), 0)
 
-	for pUnit in CyPlot.units():
-		pUnit.setImmobileTimer(1)
+# 	for pUnit in CyPlot.units():
+# 		pUnit.setImmobileTimer(1)
 
 ######## Native Good 1 -- lost resources ###########
 def canApplyNativegood1(argsList):

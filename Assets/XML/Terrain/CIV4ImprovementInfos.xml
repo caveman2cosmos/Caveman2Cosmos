@@ -17,6 +17,10 @@
 			Higher values reduce chance of depletion, no hard upper limit, but should be comparable to typical iDiscoverRand values.
 			Bonuses can only be depleted if the improvement actually provides a bonus for a civ.
 		</iDepletionRand>
+		<iCulture>
+			Places this much culture on each tile in iCultureRange each turn (no range = self only)
+			dll will bump up culture if it is insufficient to hold a tile by itself after accounting for decay values
+		</iCulture>
 	</BonusTypeStruct>
 -->
 <Civ4ImprovementInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">

@@ -313,16 +313,46 @@
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Starting/minimum culture on city tile -->
 		<DefineName>FREE_CITY_CULTURE</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Does not apply on 1-tile start gameoption; places this much culture
+			on adjacent tiles when a city is founded. -->
 		<DefineName>FREE_CITY_ADJACENT_CULTURE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>CITY_FREE_CULTURE_GROWTH_FACTOR</DefineName>
-		<iDefineIntVal>22</iDefineIntVal>
+		<!-- Goes from 0 to 100. At 0, a city will put equal culture on all tiles in its range.
+			At 100, it will put 1 culture (minimum) at max range tiles and 100% on city center. -->
+		<DefineName>CITY_CULTURE_DENSITY_FACTOR</DefineName>
+		<iDefineIntVal>50</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Each turn, culture on each plot will decay by this percent.
+			E.g. value of 10 means 50 culture loses 5, becomes 45.
+			Don't use 0 or 100, but between is alright. -->
+		<DefineName>TILE_CULTURE_DECAY_PERCENT</DefineName>
+		<iDefineIntVal>10</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Each turn, culture on each plot will decay by this flat value,
+			after the percent decay. E.g. value of 1 means 45 becomes 44. -->
+		<DefineName>TILE_CULTURE_DECAY_CONSTANT</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- The relative percent of culture by which another player must surpass
+			a player with fixed borders before a tile is flipped from culture only.
+			EX: A tile owned by player with fixed borders civic has 40 culture.
+			200 (default) = Needs twice the owner's culture in order to flip (81).
+			100 = No effect from fixed borders on tile flipping; 41 culture will flip.
+			100000 = Effectively infinitely powerful fixed borders; 100x culture to flip (40001).
+			NOTE: Cultural flipping of tiles is the same mechanism by which cities revolt from culture,
+			so high values here will make cultural revolts in fixed border civilizations much harder to obtain. -->
+		<DefineName>FIXED_BORDERS_CULTURE_RATIO_PERCENT</DefineName>
+		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>GREAT_WORKS_CULTURE_TURNS</DefineName>
@@ -781,22 +811,28 @@
 		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- 0 no effect, 100 doubles effect of culture ratio on liklihood of culture revolt. -->
 		<DefineName>REVOLT_TOTAL_CULTURE_MODIFIER</DefineName>
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- 0 no effect, 100 = double liklihood of revolt if cultural attacker has state religion -->
 		<DefineName>REVOLT_OFFENSE_STATE_RELIGION_MODIFIER</DefineName>
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- 0 no effect, -50 = halves liklihood of revolt if cultural defender has state religion -->
 		<DefineName>REVOLT_DEFENSE_STATE_RELIGION_MODIFIER</DefineName>
 		<iDefineIntVal>-50</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- This is the chance to *test* whether or not a city revolts, not
+			the liklihood of it revolting at all. Also scaled by gamespeed in dll -->
 		<DefineName>REVOLT_TEST_PROB</DefineName>
 		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- How many revolts required before city flips on i+1 revolt -->
 		<DefineName>NUM_WARNING_REVOLTS</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
