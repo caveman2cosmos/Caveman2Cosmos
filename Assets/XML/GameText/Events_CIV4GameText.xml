@@ -12751,6 +12751,7 @@
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCTION</Tag>
 		<English>Some traces of volcanic activity remain at this site, but there no longer seems to be any activity now.</English>
 		<French>Quelques traces d'activité volcanique sont visibles sur ce site, mais il ne semble plus actif à présent.</French>
+		<German>In diesem Gebiet sind noch Spuren früherer Ausbrüche zu finden, aber der Vulkan scheint jetzt erloschen zu sein.</German>
 		<Polish>Ślady wcześniejszych erupcji wulkanu można odnaleźć na tym terenie, ale obecnie wulkan wydaje się być wygasłym.</Polish>
 		<Russian>Некоторые следы вулканической активности остаются на этом месте, но, похоже, сам вулкан уже потух.</Russian>
 	</TEXT>
@@ -13115,6 +13116,7 @@
 		<Tag>TXT_KEY_EVENT_VOLCANO_EXTINCTION</Tag>
 		<English>At long last this volcano seems to have become extinct.</English>
 		<French>Enfin, ce volcan semble s'être complètement éteint.</French>
+		<German>Letztendlich scheint dieser Vulkan erloschen zu sein.</German>
 		<Polish>Ten wulkan wygasł dawno temu.</Polish>
 		<Russian>В конце концов этот вулкан, похоже, потух.</Russian>
 	</TEXT>
