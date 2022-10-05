@@ -3768,7 +3768,7 @@
 		<Tag>TXT_KEY_CIVICHELP_IMPROVEMENT_YIELD_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_Icon from[SPACE]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_Icon :[SPACE]</French>
-		<German>[ICON_BULLET]%D1_Change%F2_Icon durch die Modernisierung[SPACE]</German>
+		<German>[ICON_BULLET]%D1_Change%F2_Icon durch[SPACE]</German>
 		<Italian>[ICON_BULLET]%D1_Change%F2_Icon da[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2_Icon por[SPACE]</Spanish>
 	</TEXT>
@@ -4000,7 +4000,7 @@
 		<Tag>TXT_KEY_CIVICHELP_WORKER_SPEED</Tag>
 		<English>[ICON_BULLET]Workers Build Improvements %D1_Mod%% Faster</English>
 		<French>[ICON_BULLET]Vitesse de construction des aménagements : %D1_Mod%%</French>
-		<German>[ICON_BULLET]Bautrupps errichten Modernisierungen %D1_Mod%% schneller</German>
+		<German>[ICON_BULLET]Arbeitstrupps errichten Modernisierungen %D1_Mod%% schneller</German>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Mod%% più rapidamente</Italian>
 		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Mod%% más rápido</Spanish>
 	</TEXT>
@@ -7240,6 +7240,7 @@
 		<Tag>TXT_KEY_FEATURE_KILIMANJARO_PEDIA</Tag>
 		<English>Kilimanjaro, with its three volcanic cones, Kibo, Mawenzi, and Shira, is a dormant volcanic mountain in Kilimanjaro National Park, Kilimanjaro Region, Tanzania. It is the highest mountain in Tanzania, the highest mountain in Africa, and the highest free-standing mountain in the world at 5,895 metres or 19,341 feet above sea level (the Uhuru Peak/Kibo Peak).</English>
 		<French>Le Kilimanjaro, Le Kilimandjaro ou Kilimanjaro est une montagne située dans le Nord-Est de la Tanzanie et composée de trois volcans éteints: le Shira à l'ouest, culminant à 3 962 mètres d'altitude, le Mawenzi à l'est, s'élevant à 5 149 mètres d'altitude, et le Kibo, le plus récent géologiquement, situé entre les deux autres et dont le pic Uhuru, à 5 891,8 mètres d'altitude, constitue le point culminant de l'Afrique.</French>
+		<German>Der [COLOR_HIGHLIGHT_TEXT]Kilimandscharo[COLOR_REVERT] liegt im Nordosten Tansanias und ist eigentlich kein einzelner Berg, sondern ein ganzes Bergmassiv. Der mit 5895 m höchste Berg Afrikas, der Kibo, ist ein Teil des Kilimandscharos. Er ist gleichzeitig auch der höchste freistehende Berg der Welt. Seit 1973 ist das Gebiet ein Nationalpark, 1987 wurde es von der UNESCO zum Weltnaturerbe erklärt. Markant für den Kilimandscharo sind seine trotz des tropisch-heißen Klimas stets schneebedeckten Gipfel. Leider sind diese aber akut von der globalen Erwärmung betroffen und werden, wenn der Gletscherschwund im gleichen Maße weiter voranschreitet wie bisher, bis 2030 völlig verschwunden sein.</German>
 		<Polish>Kilimandżaro - góra w Tanzanii leżąca przy granicy z Kenią. Jest najwyższą górą Afryki i jednym z najwyższych samotnych masywów. Przeważa klimat równikowy, górski. Na wyższych poziomach jest zimniej.</Polish>
 		<Russian>Êèëèìàíäæàðî - âûñî÷àéøèé è ïîòåíöèàëüíî àêòèâíûé ñòðàòîâóëêàí Àôðèêè, íàõîäÿùèéñÿ íà ñåâåðî-âîñòîêå Òàíçàíèè, âûñî÷àéøàÿ òî÷êà êîíòèíåíòà (5895 ì. íàä óðîâíåì ìîðÿ).[PARAGRAPH:2]Ýòî ñàìûé âûñîêèé ãîðíûé ìàññèâ âíå Öåíòðàëüíîàçèàòñêîãî ïîÿñà. C 1902 ïî 1918 ãîäû íàçûâàëñÿ Âåðøèíà Êàéçåðà Âèëüãåëüìà. Êèëèìàíäæàðî âîçâûøàåòñÿ íàä ïëîñêîãîðüåì Ìàñàè, êîòîðîå ðàñïîëîæåíî íà âûñîòå 900 ìåòðîâ íàä óðîâíåì ìîðÿ.</Russian>
 	</TEXT>
@@ -18045,7 +18046,7 @@
 		<Tag>TXT_KEY_MOD_DCN_THE_BLANK_OF</Tag>
 		<English>%s of %s</English>
 		<French>%s des %s</French>
-		<German>%s von %s</German>
+		<German>%s %s</German>
 		<Italian>%s di %s</Italian>
 		<Spanish>%s de %s</Spanish>
 		<Polish>%s %s</Polish>
@@ -21188,6 +21189,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PREVIOUS_OUTPUT</Tag>
 		<English>Previous Output</English>
+		<German>Vorherige Aufträge</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_CONVERTS</Tag>
@@ -28553,7 +28555,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_ONLY_DEFENSIVE</Tag>
 		<English>[ICON_BULLET]Can Only Defend</English>
 		<French>[ICON_BULLET]Ne peut que se défendre</French>
-		<German>[ICON_BULLET]Kann nur verteidigen</German>
+		<German>[ICON_BULLET]kann nur verteidigen</German>
 		<Italian>[ICON_BULLET]Può solo difendere</Italian>
 		<Spanish>[ICON_BULLET]Sólo puede defender</Spanish>
 	</TEXT>
@@ -28653,7 +28655,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_WORKERS_FASTER</Tag>
 		<English>[ICON_BULLET]Workers Build Improvements %D1_Change%% Faster</English>
 		<French>[ICON_BULLET]Vitesse de construction des aménagements : %D1_Change%%</French>
-		<German>[ICON_BULLET]Bautrupps errichten Modernisierungen %D1_Change%% schneller</German>
+		<German>[ICON_BULLET]Arbeitstrupps errichten Modernisierungen %D1_Change%% schneller</German>
 		<Italian>[ICON_BULLET]I lavoratori realizzano i miglioramenti il %D1_Change%% più rapidamente</Italian>
 		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Change%% más rápido</Spanish>
 	</TEXT>
