@@ -718,7 +718,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_HEAL_UNITCOMBAT_MOD</Tag>
 		<English>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%%/Turn</English>
 		<French>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%%/Tour</French>
-		<German>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%% pro Runde</German>		
+		<German>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%% pro Runde</German>
 		<Polish>[ICON_BULLET]Wspomaga leczenie %s1_UNITCOMBAT Units %D2_Mod%% Obrażeń na turę.</Polish>
 		<Russian>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%%/Ход</Russian>
 	</TEXT>

@@ -999,7 +999,7 @@ void CvPlot::checkCityRevolt()
 	{
 		const int iRevoltTestProb = GC.getREVOLT_TEST_PROB() * 100 /
 			GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-		
+
 		// Check to check for revolt, rate adjusted by gamespeed, at least 1% minimum.
 		// If adjusted, also update `int iSpeedAdjustment` in CvGameTextMgr, CvDLLWidgetData
 		if (GC.getGame().getSorenRandNum(100, "Revolt #1") < std::max(1, iRevoltTestProb))

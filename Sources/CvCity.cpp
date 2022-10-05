@@ -6461,7 +6461,7 @@ int CvCity::maxHurryPopulation() const
 int CvCity::cultureDistance(int iDX, int iDY) const
 {
 	// Entry point for realistic culture. Tries to use cached value if possible,
-	// if not, must recalc everything in range. Not sure if cache is stored separately 
+	// if not, must recalc everything in range. Not sure if cache is stored separately
 	// for each city or just locally for the function whenever called?
 	// In either case need to recompute cache each turn because many things can change distance.
 	PROFILE_FUNC();
@@ -6493,7 +6493,7 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 	// This function does some special checks for tiles adjacent to city,
 	// then (inefficiently, atm) calls calculateCultureDistance to compute specific tiles
 	PROFILE_FUNC();
-	
+
 	int plotIndex = 0;
 
 	// if the point is within one square of the city center
@@ -6599,7 +6599,7 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 		if (mainPlot->isWater())
 		{
 			if (!GET_TEAM(getTeam()).isTerrainTrade(mainPlot->getTerrainType())) terrainDistance += 2;
-		}	
+		}
 	}
 
 	if (mainPlot->getFeatureType() != NO_FEATURE)
@@ -6768,7 +6768,7 @@ int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
 			iRisk /= 100;
 		}
 	}
-	return iRisk;	
+	return iRisk;
 }
 
 
@@ -16217,7 +16217,7 @@ int CvCity::cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int d
 	modifiedCultureGain *= iDensityFactor / 100;
 	// The rest is flat base culture rate.
 	modifiedCultureGain += baseCultureGain * (100 - iDensityFactor) / 100;
-	
+
 	modifiedCultureGain = std::max(modifiedCultureGain, 1);
 	return modifiedCultureGain;
 }
