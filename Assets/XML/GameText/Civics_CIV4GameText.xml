@@ -70,7 +70,7 @@
 		<Tag>TXT_KEY_CIVICHELP_BUILDING_COMMERCE_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Change %F2 from[SPACE]</English>
 		<French>[ICON_BULLET]%D1_Change %F2 :[SPACE]</French>
-		<German>[ICON_BULLET]%D1_Change %F2 durch die Modernisierung[SPACE]</German>
+		<German>[ICON_BULLET]%D1_Change %F2 durch[SPACE]</German>
 		<Italian>[ICON_BULLET]%D1_Change %F2 da[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2 por[SPACE]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change %F2 z:[SPACE]</Polish>
@@ -80,7 +80,7 @@
 		<Tag>TXT_KEY_CIVICHELP_BUILDING_COMMERCE_MODIFIER</Tag>
 		<English>[ICON_BULLET]%D1_Change%% %F2 from[SPACE]</English>
 		<French>[ICON_BULLET]%D1_Change%% %F2 :[SPACE]</French>
-		<German>[ICON_BULLET]%D1_Change%% %F2 durch die Modernisierung[SPACE]</German>
+		<German>[ICON_BULLET]%D1_Change%% %F2 durch[SPACE]</German>
 		<Italian>[ICON_BULLET]%D1_Change%% %F2 da[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change%% %F2 por[SPACE]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% %F2 z:[SPACE]</Polish>
@@ -314,7 +314,7 @@
 		<Tag>TXT_KEY_CIVICHELP_IMPROVEMENT_HAPPINESS</Tag>
 		<English>[ICON_BULLET]+%D1_Change% %F2 from[SPACE]</English>
 		<French>[ICON_BULLET]+%D1_Change% %F2 :[SPACE]</French>
-		<German>[ICON_BULLET]+%D1_Change% %F2 durch die Modernisierung[SPACE]</German>
+		<German>[ICON_BULLET]+%D1_Change% %F2 durch[SPACE]</German>
 		<Italian>[ICON_BULLET]+%D1_Change% %F2 da[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]+%D1_Change% %F2 por[SPACE]</Spanish>
 		<Polish>[ICON_BULLET]+%D1_Change% %F2 z:[SPACE]</Polish>
@@ -324,7 +324,7 @@
 		<Tag>TXT_KEY_CIVICHELP_IMPROVEMENT_HEALTHPERCENT</Tag>
 		<English>[ICON_BULLET]+%s1_Change %F2 from[SPACE]</English>
 		<French>[ICON_BULLET]+%s1_Change %F2 :[SPACE]</French>
-		<German>[ICON_BULLET]+%s1_Change %F2 durch die Modernisierung[SPACE]</German>
+		<German>[ICON_BULLET]+%s1_Change %F2 durch[SPACE]</German>
 		<Italian>[ICON_BULLET]+%s1_Change %F2 da[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]+%s1_Change %F2 por[SPACE]</Spanish>
 		<Polish>[ICON_BULLET]+%s1_Change %F2 z:[SPACE]</Polish>
@@ -605,7 +605,7 @@
 		<Tag>TXT_KEY_CIVICHELP_SPECIALIST_COMMERCE_CHANGE</Tag>
 		<English>[ICON_BULLET]%s1_Change %F2 from[SPACE]</English>
 		<French>[ICON_BULLET]%s1_Change %F2 :[SPACE]</French>
-		<German>[ICON_BULLET]%s1_Change %F2 durch die Modernisierung[SPACE]</German>
+		<German>[ICON_BULLET]%s1_Change %F2 durch[SPACE]</German>
 		<Italian>[ICON_BULLET]%s1_Change %F2 da[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]%s1_Change %F2 por[SPACE]</Spanish>
 		<Polish>[ICON_BULLET]%s1_Change %F2 z:[SPACE]</Polish>
@@ -647,7 +647,7 @@
 		<Tag>TXT_KEY_CIVICHELP_TERRAIN_YIELD_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_Icon from[SPACE]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_Icon :[SPACE]</French>
-		<German>[ICON_BULLET]%D1_Change%F2_Icon durch die Modernisierung[SPACE]</German>
+		<German>[ICON_BULLET]%D1_Change%F2_Icon durch[SPACE]</German>
 		<Italian>[ICON_BULLET]%D1_Change%F2_Icon da[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2_Icon por[SPACE]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%F2_Icon z:[SPACE]</Polish>

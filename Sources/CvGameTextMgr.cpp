@@ -9457,16 +9457,15 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 
 	CvWString szTempBuffer;
 	CvWString szTempBuffer2;
-	CvWString szTempBuffer3;
 	bool bFirst;
 	int iFoodDifference;
 	int iProductionDiffNoFood;
 	int iProductionDiffJustFood;
 	int iRate;
 	int iI;
-// BUG - Base Production and Commerce - start
+	// BUG - Base Production and Commerce - start
 	bool bBaseValues = (gDLL->ctrlKey() && getBugOptionBOOL("CityBar__BaseValues", true, "BUG_CITYBAR_BASE_VALUES"));
-// BUG - Base Production and Commerce - end
+	// BUG - Base Production and Commerce - end
 
 	FAssert(pCity->isInViewport());
 
@@ -9474,7 +9473,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 
 	szString.append(pCity->getName());
 
-// BUG - Health - start
+	// BUG - Health - start
 	if (getBugOptionBOOL("CityBar__Health", true, "BUG_CITYBAR_HEALTH"))
 	{
 		iRate = pCity->goodHealth() - pCity->badHealth();
@@ -9489,9 +9488,9 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 			szString.append(szTempBuffer);
 		}
 	}
-// BUG - Health - end
+	// BUG - Health - end
 
-// BUG - Happiness - start
+	// BUG - Happiness - start
 	if (getBugOptionBOOL("CityBar__Happiness", true, "BUG_CITYBAR_HAPPINESS"))
 	{
 		if (pCity->isDisorder())
@@ -9518,9 +9517,9 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 			}
 		}
 	}
-// BUG - Happiness - end
+	// BUG - Happiness - end
 
-// BUG - Hurry Anger Turns - start
+	// BUG - Hurry Anger Turns - start
 	if (getBugOptionBOOL("CityBar__HurryAnger", true, "BUG_CITYBAR_HURRY_ANGER") && pCity->getOwner() == GC.getGame().getActivePlayer())
 	{
 		iRate = pCity->getHurryAngerTimer();
@@ -9531,9 +9530,9 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 			szString.append(szTempBuffer);
 		}
 	}
-// BUG - Anger Anger Turns - end
+	// BUG - Anger Anger Turns - end
 
-// BUG - Draft Anger Turns - start
+	// BUG - Draft Anger Turns - start
 	if (getBugOptionBOOL("CityBar__DraftAnger", true, "BUG_CITYBAR_DRAFT_ANGER") && pCity->getOwner() == GC.getGame().getActivePlayer())
 	{
 		iRate = pCity->getConscriptAngerTimer();
@@ -9544,9 +9543,9 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 			szString.append(szTempBuffer);
 		}
 	}
-// BUG - Draft Anger Turns - end
+	// BUG - Draft Anger Turns - end
 
-// BUG - Food Assist - start
+	// BUG - Food Assist - start
 	if ((iFoodDifference != 0 || !pCity->isFoodProduction()) && getBugOptionBOOL("CityBar__FoodAssist", true, "BUG_CITYBAR_FOOD_ASSIST"))
 	{
 		if (iFoodDifference > 0)
@@ -9579,11 +9578,11 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_FOOD_GROWTH", iFoodDifference, pCity->getFood(), pCity->growthThreshold(), pCity->getFoodTurnsLeft()));
 		}
 	}
-// BUG - Food Assist - end
+	// BUG - Food Assist - end
 
 	if (pCity->getProductionNeeded() != MAX_INT)
 	{
-// BUG - Base Production - start
+		// BUG - Base Production - start
 		int iBaseProductionDiffNoFood;
 		if (bBaseValues)
 		{
@@ -9595,14 +9594,14 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		{
 			iBaseProductionDiffNoFood = pCity->getCurrentProductionDifference(ProductionCalc::None);
 		}
-// BUG - Base Production - end
+		// BUG - Base Production - end
 
 		iProductionDiffNoFood = pCity->getCurrentProductionDifference(ProductionCalc::Overflow);
 		iProductionDiffJustFood = (pCity->getCurrentProductionDifference(ProductionCalc::FoodProduction | ProductionCalc::Overflow) - iProductionDiffNoFood);
 
 		if (iProductionDiffJustFood > 0)
 		{
-// BUG - Base Production - start
+			// BUG - Base Production - start
 			if ((iProductionDiffNoFood != iBaseProductionDiffNoFood) && getBugOptionBOOL("CityBar__BaseProduction", true, "BUG_CITYBAR_BASE_PRODUCTION"))
 			{
 				szString.append(gDLL->getText("TXT_KEY_CITY_BAR_FOOD_HAMMER_PRODUCTION_WITH_BASE", iProductionDiffJustFood, iProductionDiffNoFood, pCity->getProductionName(), pCity->getProduction(), pCity->getProductionNeeded(), pCity->getProductionTurnsLeft(), iBaseProductionDiffNoFood));
@@ -9612,11 +9611,11 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 				// unchanged
 				szString.append(gDLL->getText("TXT_KEY_CITY_BAR_FOOD_HAMMER_PRODUCTION", iProductionDiffJustFood, iProductionDiffNoFood, pCity->getProductionName(), pCity->getProduction(), pCity->getProductionNeeded(), pCity->getProductionTurnsLeft()));
 			}
-// BUG - Base Production - end
+			// BUG - Base Production - end
 		}
 		else if (iProductionDiffNoFood > 0)
 		{
-// BUG - Base Production - start
+			// BUG - Base Production - start
 			if ((iProductionDiffNoFood != iBaseProductionDiffNoFood) && getBugOptionBOOL("CityBar__BaseProduction", true, "BUG_CITYBAR_BASE_PRODUCTION"))
 			{
 				szString.append(gDLL->getText("TXT_KEY_CITY_BAR_HAMMER_PRODUCTION_WITH_BASE", iProductionDiffNoFood, pCity->getProductionName(), pCity->getProduction(), pCity->getProductionNeeded(), pCity->getProductionTurnsLeft(), iBaseProductionDiffNoFood));
@@ -9626,14 +9625,14 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 				// unchanged
 				szString.append(gDLL->getText("TXT_KEY_CITY_BAR_HAMMER_PRODUCTION", iProductionDiffNoFood, pCity->getProductionName(), pCity->getProduction(), pCity->getProductionNeeded(), pCity->getProductionTurnsLeft()));
 			}
-// BUG - Base Production - end
+			// BUG - Base Production - end
 		}
 		else
 		{
 			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_PRODUCTION", pCity->getProductionName(), pCity->getProduction(), pCity->getProductionNeeded()));
 		}
 
-// BUG - Building Actual Effects - start
+		// BUG - Building Actual Effects - start
 		if (pCity->getOwner() == GC.getGame().getActivePlayer() && getBugOptionBOOL("CityBar__BuildingActualEffects", true, "BUG_CITYBAR_BUILDING_ACTUAL_EFFECTS"))
 		{
 			if (pCity->isProductionBuilding())
@@ -9645,9 +9644,9 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 				setBuildingActualEffects(szString, szStart, eBuilding, pCity, false);
 			}
 		}
-// BUG - Building Actual Effects - end
+	// BUG - Building Actual Effects - end
 	}
-// BUG - Base Production - start
+	// BUG - Base Production - start
 	else if (getBugOptionBOOL("CityBar__BaseProduction", true, "BUG_CITYBAR_BASE_PRODUCTION"))
 	{
 		int iOverflow = pCity->getOverflowProduction();
@@ -9674,9 +9673,9 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 			}
 		}
 	}
-// BUG - Base Production - end
+	// BUG - Base Production - end
 
-// BUG - Hurry Assist - start
+	// BUG - Hurry Assist - start
 	if (getBugOptionBOOL("CityBar__HurryAssist", true, "BUG_CITYBAR_HURRY_ASSIST") && pCity->getOwner() == GC.getGame().getActivePlayer())
 	{
 		bool bFirstHurry = true;
@@ -9727,9 +9726,9 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 			}
 		}
 	}
-// BUG - Hurry Assist - end
+	// BUG - Hurry Assist - end
 
-// BUG - Trade Detail - start
+	// BUG - Trade Detail - start
 	if (getBugOptionBOOL("CityBar__TradeDetail", true, "BUG_CITYBAR_TRADE_DETAIL"))
 	{
 		int iTotalTrade = 0;
@@ -9738,13 +9737,13 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		int iForeignTrade = 0;
 		int iForeignRoutes = 0;
 
-// BUG - Fractional Trade Routes - start
+		// BUG - Fractional Trade Routes - start
 #ifdef _MOD_FRACTRADE
 		bool bFractions = true;
 #else
 		bool bFractions = bBaseValues;
 #endif
-// BUG - Fractional Trade Routes - end
+		// BUG - Fractional Trade Routes - end
 
 		pCity->calculateTradeTotals(YIELD_COMMERCE, iDomesticTrade, iDomesticRoutes, iForeignTrade, iForeignRoutes, NO_PLAYER, !bFractions, bBaseValues);
 		iTotalTrade = iDomesticTrade + iForeignTrade;
@@ -9790,11 +9789,11 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 			bFirst = false;
 		}
 	}
-// BUG - Trade Detail - end
+	// BUG - Trade Detail - end
 
 	bFirst = true;
 
-// BUG - Commerce - start
+	// BUG - Commerce - start
 	if (getBugOptionBOOL("CityBar__Commerce", true, "BUG_CITYBAR_COMMERCE"))
 	{
 		if (bBaseValues)
@@ -9814,11 +9813,11 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 			bFirst = false;
 		}
 	}
-// BUG - Commerce - end
+	// BUG - Commerce - end
 
 	for (iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 	{
-// BUG - Base Values - start
+		// BUG - Base Values - start
 		if (bBaseValues)
 		{
 			iRate = pCity->getBaseCommerceRateTimes100((CommerceTypes)iI);
@@ -9828,7 +9827,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 			// unchanged
 			iRate = pCity->getCommerceRateTimes100((CommerceTypes)iI);
 		}
-// BUG - Base Values - end
+		// BUG - Base Values - end
 
 		if (iRate != 0)
 		{
@@ -9838,7 +9837,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		}
 	}
 
-// BUG - Base Values - start
+	// BUG - Base Values - start
 	if (bBaseValues)
 	{
 		iRate = pCity->getBaseGreatPeopleRate();
@@ -9848,7 +9847,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		// unchanged
 		iRate = pCity->getGreatPeopleRate();
 	}
-// BUG - Base Values - end
+	// BUG - Base Values - end
 
 	if (iRate != 0)
 	{
@@ -9869,8 +9868,8 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 
 	szString.append(CvWString::format(L" -%d.%02d %c", iMaintenance/100, iMaintenance%100, GC.getCommerceInfo(COMMERCE_GOLD).getChar()));
 
-// BUG - Building Icons - start
-// AIAndy: Changed to show only national and world wonders
+	// BUG - Building Icons - start
+	// AIAndy: Changed to show only national and world wonders
 	if (getBugOptionBOOL("CityBar__BuildingIcons", true, "BUG_CITYBAR_BUILDING_ICONS"))
 	{
 		bFirst = true;
@@ -9903,19 +9902,23 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 			}
 		}
 	}
-// BUG - Building Icons - end
+	// BUG - Building Icons - end
 
-// BUG - Culture Turns - start
+	// BUG - Culture Turns - start
 	int iCultureRate = pCity->getCommerceRateTimes100(COMMERCE_CULTURE);
 	if (iCultureRate > 0 && getBugOptionBOOL("CityBar__CultureTurns", true, "BUG_CITYBAR_CULTURE_TURNS"))
 	{
 		if (pCity->getCultureLevel() != NO_CULTURELEVEL)
 		{
-			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_CULTURE", pCity->getCulture(pCity->getOwner()), pCity->getCultureThreshold(), GC.getCultureLevelInfo(pCity->getCultureLevel()).getTextKeyWide()));
+			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_CULTURE",
+				pCity->getCulture(pCity->getOwner()), pCity->getCultureThreshold(),
+				GC.getCultureLevelInfo(pCity->getCultureLevel()).getTextKeyWide(), pCity->getCultureLevel()));
 		}
 		else
 		{
-			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_CULTURE_NO_LEVEL", pCity->getCulture(pCity->getOwner()), pCity->getCultureThreshold()));
+			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_CULTURE_NO_LEVEL",
+			pCity->getCulture(pCity->getOwner()), pCity->getCultureThreshold(),
+			GC.getCultureLevelInfo(pCity->getCultureLevel()).getTextKeyWide(), pCity->getCultureLevel()));
 		}
 		// all values are *100
 		int iCulture = pCity->getCultureTimes100(pCity->getOwner());
@@ -9929,12 +9932,15 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		// unchanged
 		if (pCity->getCultureLevel() != NO_CULTURELEVEL)
 		{
-			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_CULTURE", pCity->getCulture(pCity->getOwner()), pCity->getCultureThreshold(), GC.getCultureLevelInfo(pCity->getCultureLevel()).getTextKeyWide()));
+			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_CULTURE",
+				pCity->getCulture(pCity->getOwner()), pCity->getCultureThreshold(),
+				GC.getCultureLevelInfo(pCity->getCultureLevel()).getTextKeyWide(),
+				GC.getCultureLevelInfo(pCity->getCultureLevel()).getTextKeyWide(), pCity->getCultureLevel()));
 		}
 	}
-// BUG - Culture Turns - end
+	// BUG - Culture Turns - end
 
-// BUG - Great Person Turns - start
+	// BUG - Great Person Turns - start
 	int iGppRate = pCity->getGreatPeopleRate();
 	if (iGppRate > 0 && getBugOptionBOOL("CityBar__GreatPersonTurns", true, "BUG_CITYBAR_GREAT_PERSON_TURNS"))
 	{
@@ -9954,9 +9960,9 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_GREAT_PEOPLE", pCity->getGreatPeopleProgress(), GET_PLAYER(pCity->getOwner()).greatPeopleThresholdNonMilitary()));
 		}
 	}
-// BUG - Great Person Turns - end
+	// BUG - Great Person Turns - end
 
-// BUG - Specialists - start
+	// BUG - Specialists - start
 	if (getBugOptionBOOL("CityBar__Specialists", true, "BUG_CITYBAR_SPECIALISTS"))
 	{
 		// regular specialists
@@ -10019,7 +10025,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 			}
 		}
 	}
-// BUG - Specialists - end
+	// BUG - Specialists - end
 
 	int iNumUnits = pCity->plot()->countNumAirUnits(GC.getGame().getActiveTeam());
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
@@ -10037,7 +10043,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		szString.append(gDLL->getText("TXT_KEY_CITY_BAR_AIR_UNIT_CAPACITY", iNumUnits, pCity->getAirUnitCapacity(GC.getGame().getActiveTeam())));
 	}
 
-// BUG - Revolt Chance - start
+	// BUG - Revolt Chance - start
 	if (getBugOptionBOOL("CityBar__RevoltChance", true, "BUG_CITYBAR_REVOLT_CHANCE"))
 	{
 		const PlayerTypes eCulturalOwner = pCity->plot()->calculateCulturalOwner();
@@ -10046,22 +10052,26 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		{
 			if (GET_PLAYER(eCulturalOwner).getTeam() != pCity->getTeam())
 			{
-				int iOriginal = 0;
-				int iCityStrength = pCity->cultureStrength(eCulturalOwner, iOriginal);
+				int iCityStrength = pCity->netRevoltRisk(eCulturalOwner);
+				int iOriginal = pCity->baseRevoltRisk(eCulturalOwner);
+				int iSpeedAdjustment = GC.getREVOLT_TEST_PROB() * 100 /
+					GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 				int iGarrison = pCity->cultureGarrison(eCulturalOwner);
 
 				if (iCityStrength > 0)
 				{
-					szTempBuffer.Format(L"" SETCOLR L"%.2f" ENDCOLR,TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),(float)iCityStrength);
-					szTempBuffer2.Format(L"" SETCOLR L"%.2f" ENDCOLR,TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),(float)iOriginal);
-					szTempBuffer3.Format(L"" SETCOLR L"%.2f" ENDCOLR,TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"),(float)iGarrison);
 					szString.append(NEWLINE);
-					szString.append(gDLL->getText("TXT_KEY_MISC_CHANCE_OF_REVOLT", szTempBuffer.GetCString(), szTempBuffer2.GetCString(), szTempBuffer3.GetCString()));
+					szString.append(gDLL->getText("TXT_KEY_MISC_CHANCE_OF_REVOLT",
+						CvWString::format(L"" SETCOLR L"%.2f%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), ((float)iCityStrength*iSpeedAdjustment)/10000).GetCString(),
+						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iOriginal).GetCString(),
+						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iSpeedAdjustment).GetCString(),
+						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), (100-iGarrison)).GetCString()
+					));
 				}
 			}
 		}
 	}
-// BUG - Revolt Chance - end
+	// BUG - Revolt Chance - end
 
 	// Citybar revolution info
 	if (GC.getGame().isOption(GAMEOPTION_REVOLUTION))
@@ -10074,7 +10084,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 
 	pCity->getProperties()->buildDisplayString(szString);
 
-// BUG - Hide UI Instructions - start
+	// BUG - Hide UI Instructions - start
 	if (!getBugOptionBOOL("CityBar__HideInstructions", true, "BUG_CITYBAR_HIDE_INSTRUCTIONS"))
 	{
 		if (getBugOptionBOOL("CityBar__BaseValues", true, "BUG_CITYBAR_BASE_VALUES"))
@@ -10086,7 +10096,7 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 		szString.append(gDLL->getText("TXT_KEY_CITY_BAR_SELECT_CTRL"));
 		szString.append(gDLL->getText("TXT_KEY_CITY_BAR_SELECT_ALT"));
 	}
-// BUG - Hide UI Instructions - end
+	// BUG - Hide UI Instructions - end
 }
 
 void CvGameTextMgr::parseBuildUp(CvWStringBuffer &szHelpString, PromotionLineTypes ePromotionLine, CivilizationTypes eCivilization)
@@ -12444,7 +12454,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	}
 	const bool bHideSeek = GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK);
 
-	CvPromotionInfo& promo = GC.getPromotionInfo(ePromotion);
+	const CvPromotionInfo& promo = GC.getPromotionInfo(ePromotion);
 	const int iLinePriority = promo.getLinePriority();
 	const PromotionLineTypes ePromoLine = promo.getPromotionLine();
 	const CvPromotionLineInfo* promoLine = ePromoLine != NO_PROMOTIONLINE ? &GC.getPromotionLineInfo(ePromoLine) : NULL;
@@ -14183,7 +14193,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 
 	if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_TERRAIN_DAMAGE))
 	{
-		bool* abIsIgnoreTerrainDamage = new bool[GC.getNumTerrainInfos()]();
+		bst::scoped_array<bool> abIsIgnoreTerrainDamage(new bool[GC.getNumTerrainInfos()]());
 
 		for (int iI = 0; iI < (int)linePromotionsOwned.size(); iI++)
 		{
@@ -14297,7 +14307,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 
 
 	{
-		bool* unitCombats = new bool[GC.getNumUnitCombatInfos()]();
+		bst::scoped_array<bool> unitCombats(new bool[GC.getNumUnitCombatInfos()]());
 
 		for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++)
 		{
@@ -14344,7 +14354,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 	}
 
 	{
-		bool* trapSetWithPromo = new bool[GC.getNumPromotionInfos()]();
+		bst::scoped_array<bool> trapSetWithPromo(new bool[GC.getNumPromotionInfos()]());
 
 		for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 		{
@@ -14364,7 +14374,7 @@ void CvGameTextMgr::parsePromotionHelpInternal(CvWStringBuffer &szBuffer, Promot
 		}
 	}
 	{
-		bool* unitCombats = new bool[GC.getNumUnitCombatInfos()]();
+		bst::scoped_array<bool> unitCombats(new bool[GC.getNumUnitCombatInfos()]());
 
 		for (int iJ = 0; iJ < (int)linePromotionsOwned.size(); iJ++ )
 		{
@@ -20894,7 +20904,7 @@ void CvGameTextMgr::setBuildingHelp(CvWStringBuffer &szBuffer, const BuildingTyp
 				setBuildingActualEffects(szBuffer, szStart, eBuilding, pCity);
 			}
 		}
-// BUG - Building Actual Effects - end
+	// BUG - Building Actual Effects - end
 	}
 
 	if (bCivilopediaText)

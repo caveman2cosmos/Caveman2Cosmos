@@ -1183,6 +1183,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NILE_MONITOR_PEDIA</Tag>
 		<English>The Nile monitor (Varanus niloticus) is a large member of the monitor family (Varanidae) found throughout most of Sub-Saharan Africa and along the Nile. The population in West African forests and savannahs is sometimes recognized as a separate species, the West African Nile monitor (V. stellatus). Other common names include the African small-grain lizard, as well as iguana and various forms derived from it, such as guana, water leguaan or river leguaan (leguan, leguaan, and likkewaan mean monitor lizard in South African English, and can be used interchangeably)</English>
+		<German>Der [COLOR_UNIT_TEXT]Nilwaran[COLOR_REVERT] (Varanus niloticus) ist ein in Afrika vorkommendes Schuppenkriechtier.[NEWLINE]Die durchschnittliche Größe eines männlichen Exemplars liegt bei etwa 2 Metern, Weibchen sind etwas kleiner. Der lange Schwanz ist abgeflacht und dient als Ruder. Erwachsene Nilwarane sind graubraun bis olivbraun mit helleren Augenflecken und Bändern sowie dunklen Querstrichen an Rücken und Kehle. Die Anzahl der Augenflecken und Bänder unterscheidet diese Art vom Regenwald-Nilwaran, der weniger dieser Bänder besitzt. Nilwarane sind in allen Vegetationszonen Afrikas mit Ausnahme der Wüsten anzutreffen. Teilweise dringen sie auch in besiedelte Gebiete vor, wo sie auf Müllhalden nach Nahrung suchen. Tagsüber sonnen sie sich gern, nachts verstecken sie sich in unterirdischen Bauen. Sie sind gute Kletterer und sehr gute Schwimmer. Nilwarane sind Fleischfresser, wobei sie in der Trockenzeit auch häufig auf Aas zurückgreifen. Sie jagen je nach Alter und Lebensraum u.a. Vögel, Krebstiere, Amphibien und kleine Säuger, teilweise sogar Giftschlangen. Unter Jungtieren gibt es gelegentlich Kannibalismus. Teilweise arbeiten zwei Exemplare beim Beutefang zusammen, obwohl Nilwarane an sich Einzelgänger sind. Ein Weibchen legt je nach Körpergröße 5-60 Eier in Termitenhügel oder selbst gegrabene Höhlen. Die Jungen schlüpfen zur nächsten Regenzeit, wenn ausreichend Nahrung vorhanden ist.[NEWLINE]Bereits die alten Ägypter stellten den Nilwaran auf Denkmälern dar. Bis heute ist er als Nahrungsmittel und für den Lederhandel von Bedeutung. In Florida sind junge Nilwarane beliebte Heimtiere, die aber schnell zu groß werden. Ausgewilderte Exemplare haben inzwischen eine stabile Population entwickelt und werden zur Gefahr für heimische Arten.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUMBAT</Tag>
@@ -3426,6 +3427,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_NARWHAL</Tag>
 		<English>Subdued Narwhal</English>
 		<French>Narval (App.)</French>
+			<German>
+			<Text>Gefangener Narwal:Gefangenen Narwals:Gefangenen Narwal:Gefangenen Narwal:Gefangene Narwale:Gefangenen Narwale:Gefangenen Narwalen:Gefangenen Narwale</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Narvalo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -3466,6 +3472,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_OKAPI</Tag>
 		<English>Subdued Okapi</English>
 		<French>Okapi (App.)</French>
+		<German>
+			<Text>Gefangenes Okapi:Gefangenen Okapis:Gefangenen Okapi:Gefangene Okapi:Gefangene Okapis:Gefangenen Okapis:Gefangenen Okapis:Gefangenen Okapis</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Okapi addomesticato</Text>
 			<Gender>Male</Gender>
@@ -3489,6 +3500,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_ORANGUTAN</Tag>
 		<English>Subdued Orangutan</English>
 		<French>Orang-outan (App.)</French>
+		<German>
+			<Text>Gefangener Orang-Utan:Gefangenen Orang-Utans:Gefangenen Orang-Utan:Gefangenen Orang-Utan:Gefangene Orang-Utans:Gefangenen Orang-Utans:Gefangenen Orang-Utans:Gefangenen Orang-Utans</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Orangotango addomesticato</Text>
 			<Gender>Male</Gender>
@@ -3501,6 +3517,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_ORCA</Tag>
 		<English>Subdued Orca</English>
 		<French>Orque (App.)</French>
+		<German>
+			<Text>Gefangener Schwertwal:Gefangenen Schwertwals:Gefangenen Schwertwal:Gefangenen Schwertwal:Gefangene Schwertwale:Gefangenen Schwertwale:Gefangenen Schwertwalen:Gefangenen Schwertwale</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Orca addomesticata</Text>
 			<Gender>Female</Gender>
@@ -3518,8 +3539,8 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Gefangener Strauß:Gefangenen Straußes:Gefangenem Strauß:Gefangenen Strauß:Gefangene Strauße:Gefangenen Strauße:Gefangenen Straußen:Gefangenen Strauße</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Text>Gefangener Strauß:Gefangenen Straußes:Gefangenen Strauß:Gefangenen Strauß:Gefangene Strauße:Gefangenen Strauße:Gefangenen Straußen:Gefangenen Strauße</Text>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -3534,6 +3555,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_OXPECKER</Tag>
 		<English>Subdued Oxpecker</English>
 		<French>Pique-bœuf (App.)</French>
+		<German>
+			<Text>Gefangener Madenhacker:Gefangenen Madenhackers:Gefangenen Madenhacker:Gefangenen Madenhacker:Gefangene Madenhacker:Gefangenen Madenhacker:Gefangenen Madenhackern:Gefangenen Madenhacker</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Bufaga addomesticata</Text>
 			<Gender>Female</Gender>
@@ -3562,6 +3588,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangener Panther:Gefangenen Panthers:Gefangenen Panther:Gefangenen Panther:Gefangene Panther:Gefangenen Panther:Gefangenen Panthern:Gefangenen Panther</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Pantera addomesticata</Text>
 			<Gender>Female</Gender>
@@ -3581,6 +3612,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_PEACOCK</Tag>
 		<English>Subdued Peacock</English>
 		<French>Paon (App.)</French>
+		<German>
+			<Text>Gefangener Pfau:Gefangenen Pfaus:Gefangenen Pfau:Gefangenen Pfau:Gefangene Pfauen:Gefangenen Pfauen:Gefangenen Pfauen:Gefangenen Pfauen</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Pavone addomesticato</Text>
 			<Gender>Male</Gender>
@@ -3683,6 +3719,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_PROCOPTODON</Tag>
 		<English>Subdued Procoptodon</English>
 		<French>Procoptodon (App.)</French>
+		<German>
+			<Text>Gefangenes Procoptodon:Gefangenen Procoptodons:Gefangenen Procoptodon:Gefangene Procoptodon:Gefangene Procoptodonten:Gefangenen Procoptodonten:Gefangenen Procoptodonten:Gefangenen Procoptodonten</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Procoptodonte addomesticato</Text>
 			<Gender>Male</Gender>
@@ -3699,6 +3740,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangene Puffotter:Gefangenen Puffotter:Gefangenen Puffotter:Gefangene Puffotter:Gefangene Puffottern:Gefangenen Puffottern:Gefangenen Puffottern:Gefangenen Puffottern</Text>
+			<Gender>Female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Vipera soffiatrice addomesticata</Text>
 			<Gender>Female</Gender>
@@ -3722,7 +3768,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_QUOLL</Tag>
 		<English>Subdued Quoll</English>
 		<French>Chat marsupial (App.)</French>
-		<German>SubduedQuoll</German>
+		<German>
+			<Text>Gefangener Beutelmarder:Gefangenen Beutelmarders:Gefangenen Beutelmarder:Gefangenen Beutelmarder:Gefangene Beutelmarder:Gefangenen Beutelmarder:Gefangenen Beutelmardern:Gefangenen Beutelmarder</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Quoll addomesticato</Text>
 			<Gender>Male</Gender>
@@ -5182,6 +5232,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gezähmtes Mammut:Gezähmten Mammuts:Gezähmten Mammut:Gezähmte Mammut:Gezähmte Mammuts:Gezähmten Mammuts:Gezähmten Mammuts:Gezähmten Mammuts</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Oswojony Mamut</Polish>
 		<Russian>Ìàìîíò (äîì.)</Russian>
 	</TEXT>
