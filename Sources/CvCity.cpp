@@ -6637,6 +6637,7 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 			if (neighborDist < distance) distance = neighborDist;
 		}
 	}
+
 	// at this point, we are done; distance still might be MAX_INT if not adjacent to others.
 	return distance;
 }
@@ -9429,7 +9430,7 @@ void CvCity::updateFeatureHappiness(bool bLimited)
 	int iNewFeatureGoodHappiness = 0;
 	int iNewFeatureBadHappiness = 0;
 
-	foreach_(CvPlot* pLoopPlot, plots())
+	foreach_(const CvPlot* pLoopPlot, plots())
 	{
 		const FeatureTypes eFeature = pLoopPlot->getFeatureType();
 

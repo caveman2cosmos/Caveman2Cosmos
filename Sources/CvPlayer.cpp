@@ -2379,9 +2379,8 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			// If civ has fixed borders, they'll retain more due to the lower threshold for maintaining ownership.
 			pOldCity->clearCultureDistanceCache();
 			const int iCultureLevel = pOldCity->getCultureLevel();
-			foreach_(CvPlot* pLoopzPlot, pOldCity->plots(true))
+			foreach_(CvPlot* pLoopPlot, pOldCity->plots(true))
 			{
-				// cultureDistance needs dX, dY, not absolute. Blaze TODO fix
 				const int iCultureDist = pOldCity->cultureDistance(*pLoopPlot);
 				if (iCultureDist > iCultureLevel)
 				{
