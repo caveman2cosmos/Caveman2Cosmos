@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4FeatureInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<FeatureInfos>
-		<!-- <iCultureDistance> slows down growth over tiles with Realistic Culture option on. 
+		<!-- <iCultureDistance> slows down growth over tiles with Realistic Culture option on.
 				Note this value stacks with regular distance AND terrain (see CIV4TerrainInfos.xml)
 				Alternatively, <bIgnoreTerrainCulture> will make the feature's tile
 				ignore underlaying terrain cost.

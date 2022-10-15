@@ -6699,9 +6699,6 @@ def getHelpGlobalWarming(argsList):
 # 	if CyPlot.isCity():
 # 		return 0
 
-# 	if not CyPlot.canHaveFeature(GC.getInfoTypeForString('FEATURE_TORNADO')):
-# 		return 0
-
 # 	iLatitude = CyPlot.getLatitude()
 # 	if iLatitude < 50 and 30 < iLatitude:
 # 		return 1
@@ -6723,9 +6720,6 @@ def getHelpGlobalWarming(argsList):
 
 # 	if 25 > GAME.getSorenRandNum(101, "Random Plot"):
 # 		CyPlot.setRouteType(-1)
-
-# 	if CyPlot.getFeatureType() == -1:
-# 		CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_TORNADO'), 0)
 
 # 	for pUnit in CyPlot.units():
 # 		pUnit.setImmobileTimer(1)

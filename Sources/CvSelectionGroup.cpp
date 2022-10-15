@@ -1868,7 +1868,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 				headQueueNode->m_data.eMissionType == MISSION_MOVE_TO_SENTRY */
 				||
 				headQueueNode->m_data.eMissionType == MISSION_ROUTE_TO
-				|| 
+				||
 				headQueueNode->m_data.eMissionType == MISSION_MOVE_TO_UNIT
 			)
 			&&

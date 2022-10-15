@@ -5884,7 +5884,7 @@ int CvPlayerAI::AI_techBuildingValue(TechTypes eTech, int iPathLength, bool& bEn
 	return iValue;
 }
 
-// abstraction of the loop to check if civilization can already train a settler, and set a boolean if it can 
+// abstraction of the loop to check if civilization can already train a settler, and set a boolean if it can
 bool CvPlayerAI::AI_canTrainSettler() {
 	if (!m_canTrainSettler) {
 		for (int iI = GC.getNumUnitInfos() - 1; iI > -1; iI--)

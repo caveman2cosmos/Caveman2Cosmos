@@ -2384,7 +2384,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				CvPlot* pLoopPlot = pOldCity->getCityIndexPlot(iPlotIndex);
 				if (pLoopPlot != NULL)
 				{
-					// cultureDistance needs dX, dY, not absolute. Blaze TODO fix 
+					// cultureDistance needs dX, dY, not absolute. Blaze TODO fix
 					// const int iCultureDist = pOldCity->cultureDistance(pLoopPlot->getX(), pLoopPlot->getY());
 					// if (iCultureDist > iCultureLevel)
 					// {
@@ -2413,7 +2413,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				iOccupationTimeModifier += GC.getBuildingInfo((BuildingTypes)iI).getOccupationTimeModifier();
 			}
 		}
-		
+
 		CvPlotGroup* originalTradeNetworkConnectivity[MAX_PLAYERS];
 
 		// Whose trade networks was this city relevant to prior to ownership change

@@ -465,27 +465,6 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_STORM</Type>
-			<bAnimated>1</bAnimated>
-			<bRiverArt>0</bRiverArt>
-			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
-			<LightType>LIGHT_TYPE_SUN</LightType>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>Art/Interface/Buttons/Worldbuilder/storm.dds</Button>
-			<FeatureVariety>
-				<FeatureArtPieces>
-					<FeatureArtPiece>
-						<ModelFile>Art/Effects/sunami/Sunami.nif</ModelFile>
-						<Connections/>
-					</FeatureArtPiece>
-				</FeatureArtPieces>
-				<FeatureDummyNodes/>
-				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>Art/Interface/Buttons/Worldbuilder/storm.dds</VarietyButton>
-			</FeatureVariety>
-		</FeatureArtInfo>
-		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_FALLOUT</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
@@ -1436,27 +1415,6 @@
 				<FeatureDummyNodes/>
 				<bGenerateRotations>0</bGenerateRotations>
 				<VarietyButton>Art/Interface/Buttons/terrainfeatures/seagrass.dds</VarietyButton>
-			</FeatureVariety>
-		</FeatureArtInfo>
-		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_TORNADO</Type>
-			<bAnimated>1</bAnimated>
-			<bRiverArt>0</bRiverArt>
-			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
-			<LightType>LIGHT_TYPE_SUN</LightType>
-			<fScale>4.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>Art/Terrain/Features/Tornado/air_elemental.dds</Button>
-			<FeatureVariety>
-				<FeatureArtPieces>
-					<FeatureArtPiece>
-						<ModelFile>Art/Terrain/Features/Tornado/3tornado3.nif</ModelFile>
-						<Connections/>
-					</FeatureArtPiece>
-				</FeatureArtPieces>
-				<FeatureDummyNodes/>
-				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>Art/Terrain/Features/Tornado/air_elemental.dds</VarietyButton>
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>

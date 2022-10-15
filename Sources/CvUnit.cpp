@@ -35953,7 +35953,7 @@ int CvUnit::revoltProtectionTotal() const
 {
 
 	return std::max(0, revoltProtectionTotalPreCheck());
-	
+
 	// The call that plugs into the rest of the code (final value).
 	// This can be plugged into the existing final, or even be renamed to the existing final (though experience has shown me this causes me tremendous confusion!).
 
