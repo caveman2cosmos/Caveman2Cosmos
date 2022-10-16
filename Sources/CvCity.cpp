@@ -6509,6 +6509,7 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 	bool bHasChanged = (iMaxDistance > 1 ||
 		(iMaxDistance > 0 && GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING)));
 
+	int numLoops = 0;
 	// as long as there are changes during the last iteration
 	while (bHasChanged)
 	{
@@ -6538,6 +6539,11 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 				m_aCultureDistances[plotX] = iNewValue;
 				bHasChanged = true;
 			}
+		}
+		numLoops++;
+		if (numLoops > 100)
+		{
+			bHasChanged = false;
 		}
 	}
 }
