@@ -6554,7 +6554,6 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	// Each point of distance corresponds 1:1 with level of city culture to reach it.
 	PROFILE_FUNC();
 
-	FAssertMsg(plotDistance(getX(), getY(), mainPlot->getX(), mainPlot->getY()) <= iMaxDistance, "test"); // Matt: does the following check ever pass?
 	// if the plot distance is greater than the maximum desired plot distance
 	//  or if the plot does not exist, then the plot distance is maximal
 	if (plotDistance(getX(), getY(), mainPlot->getX(), mainPlot->getY()) > iMaxDistance) return MAX_INT;
