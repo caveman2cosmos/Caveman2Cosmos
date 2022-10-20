@@ -2091,9 +2091,9 @@ protected:
 	void resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionDefinition& kBattle);
 
 	// ------ BEGIN InfluenceDrivenWar -------------------------------
-	float doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal);
+	int doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal);
 	void influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlayer, const int iLocationMultiplier);
-	float doPillageInfluence();
+	int doPillageInfluence();
 	// ------ END InfluenceDrivenWar ---------------------------------
 
 	const PromotionKeyedInfo*	findPromotionKeyedInfo(PromotionTypes ePromotion) const;

@@ -22438,7 +22438,7 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 			}
 			int iPathTurns;
 
-			if (generatePath(cityX->plot(), ((iPass > 1) ? MOVE_IGNORE_DANGER : 0), true, &iPathTurns) 
+			if (generatePath(cityX->plot(), ((iPass > 1) ? MOVE_IGNORE_DANGER : 0), true, &iPathTurns)
 			&& iPathTurns <= (iPass == 2 ? 1 : iMaxPath))
 			{
 				// Water units can't defend a city.

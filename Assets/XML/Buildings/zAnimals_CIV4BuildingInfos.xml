@@ -886,7 +886,7 @@
 							<GOMType>GOM_BUILDING</GOMType>
 							<ID>BUILDING_METROPOLITAN_ADMINISTRATION</ID>
 						</Has>
-					</Or>	
+					</Or>
 				</And>
 			</ConstructCondition>
 			<iCost>3690</iCost>

@@ -42,58 +42,66 @@
 	</Define>
 	<Define>
 		<DefineName>IDW_BASE_COMBAT_INFLUENCE</DefineName>
-		<!-- Higher value: more influence from combat victory -->
-		<iDefineIntVal>320</iDefineIntVal>
+		<!-- With no other modifiers: What % of loser's culture should be given to attacker? -->
+		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_NO_CITY_DEFENDER_MULTIPLIER</DefineName>
-		<!-- Multiply influence if last city defender dies -->
+		<!-- Multiply influence by this % if last city defender dies -->
 		<iDefineIntVal>250</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_FORT_CAPTURE_MULTIPLIER</DefineName>
-		<!-- Multiply influence if fort is captured in combat -->
+		<!-- Multiply influence by this % if fort is captured in combat -->
 		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>IDW_WARLORD_MULTIPLIER</DefineName>
-		<!-- Multiply influence if warlord wins (works only in Warlords -->
+		<DefineName>IDW_LEADER_MULTIPLIER</DefineName>
+		<!-- Multiply influence by this % if unit has leader -->
 		<iDefineIntVal>130</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_INFLUENCE_RADIUS</DefineName>
 		<!-- Max plot distance to be influenced -->
+		<!-- 1/4 on each plot at range 1, 1/9 at range 2, etc -->
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_WINNER_PLOT_MULTIPLIER</DefineName>
-		<!-- By default: the same influence mulitiplier in attacker and defended plot -->
-		<iDefineIntVal>75</iDefineIntVal>
+		<!-- % of value on winner's plot -->
+		<!-- By default: half influence spread across attacker and defended plot -->
+		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_LOSER_PLOT_MULTIPLIER</DefineName>
-		<!-- By default: the same influence mulitiplier in attacker and defended plot -->
-		<iDefineIntVal>25</iDefineIntVal>
+		<!-- % of value on loser's plot -->
+		<!-- By default: half influence spread across attacker and defended plot -->
+		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_EMERGENCY_DRAFT_ENABLED</DefineName>
 		<!-- Enable/Disable militia "auto-draft"; works only if IDW_ENABLED = 1 -->
-		<iDefineIntVal>0</iDefineIntVal>
+		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_EMERGENCY_DRAFT_MIN_POPULATION</DefineName>
 		<!-- Minimal city size to draft militia -->
-		<iDefineIntVal>2</iDefineIntVal>
+		<iDefineIntVal>6</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_EMERGENCY_DRAFT_STRENGTH</DefineName>
-		<!-- Militia health ratio -->
+		<!-- Militia starting health % when drafted -->
 		<iDefineIntVal>33</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER</DefineName>
 		<!-- Draft anger percentage from militia -->
 		<iDefineIntVal>50</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>IDW_EMERGENCY_DRAFT_CULTURE_THRESHOLD</DefineName>
+		<!-- If attacker has above this much % culture in city, defender cannot emergency draft  -->
+		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_NO_BARBARIAN_INFLUENCE</DefineName>
@@ -112,12 +120,12 @@
 	</Define>
 	<Define>
 		<DefineName>IDW_BASE_PILLAGE_INFLUENCE</DefineName>
-		<!-- Higher value: more influence from pillage -->
-		<iDefineIntVal>200</iDefineIntVal>
+		<!-- What % of culture from pillaged tile should be given to pillager's faction? -->
+		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>IDW_CITY_TILE_MULTIPLIER</DefineName>
-		<!-- Multiplier used to adjust cultural effect of IDW in city tiles, not used if emergency draft is enabled-->
+		<!-- If emergency draft is disabled, multiply culture by this % on city tiles -->
 		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<!-- Super Spies -->

@@ -1652,9 +1652,8 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 
 	if ( // Can raze
 			!GC.getGame().isOption(GAMEOPTION_NO_CITY_RAZING)
-		&& (
+		&& ( // Can't raze if same ID ever owned, or if random chance. Can raze max culture level cities.
 			!pCity->isEverOwned(getID())
-			&& !pCity->plot()->isCultureRangeCity(getID(), std::max(0, GC.getNumCultureLevelInfos() - 1))
 			|| pCity->calculateTeamCulturePercent(getTeam()) < GC.getDefineINT("RAZING_CULTURAL_PERCENT_THRESHOLD")
 			)
 	)
@@ -5885,7 +5884,7 @@ int CvPlayerAI::AI_techBuildingValue(TechTypes eTech, int iPathLength, bool& bEn
 	return iValue;
 }
 
-// abstraction of the loop to check if civilization can already train a settler, and set a boolean if it can 
+// abstraction of the loop to check if civilization can already train a settler, and set a boolean if it can
 bool CvPlayerAI::AI_canTrainSettler() {
 	if (!m_canTrainSettler) {
 		for (int iI = GC.getNumUnitInfos() - 1; iI > -1; iI--)
@@ -25594,8 +25593,8 @@ int CvPlayerAI::AI_getPlotAirbaseValue(const CvPlot* pPlot) const
 	const CvPlot* iMinOtherCityPlot = NULL;
 
 	// Super Forts begin *choke* *canal* - commenting out unnecessary code
-//	int iMinFriendlyCityDistance = MAX_INT;
-//	CvPlot* iMinFriendlyCityPlot = NULL;
+	//	int iMinFriendlyCityDistance = MAX_INT;
+	//	CvPlot* iMinFriendlyCityPlot = NULL;
 
 	int iOtherCityCount = 0;
 
@@ -31261,7 +31260,7 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		}
 	}
 	//TB Combat Mods
-//TB Modification note:adjusted City Attack promo value to balance better against withdraw promos for city attack ai units.
+	//TB Modification note:adjusted City Attack promo value to balance better against withdraw promos for city attack ai units.
 	iTemp = kPromotion.getCityAttackPercent();
 	if (iTemp != 0)
 	{
@@ -31429,17 +31428,13 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		||	eUnitAI == UNITAI_PROPERTY_CONTROL
 		||	eUnitAI == UNITAI_INVESTIGATOR)
 		{
-			if (pUnit && pUnit->plot() && pUnit->getX() != INVALID_PLOT_COORD)
+			if (pUnit != NULL && pUnit->plot() != NULL && pUnit->getX() != INVALID_PLOT_COORD && pUnit->plot()->isCity())
 			{
-				const PlayerTypes eOwner = pUnit->plot()->calculateCulturalOwner();
-				if (eOwner != NO_PLAYER && GET_PLAYER(eOwner).getTeam() != getTeam())
+				PlayerTypes eCultureOwner = pUnit->plot()->calculateCulturalOwner();
+				// High weight for cities being threatened with culture revolution
+				if (eCultureOwner != NO_PLAYER && GET_PLAYER(eCultureOwner).getTeam() != getTeam())
 				{
-					iValue += 3*iTemp;
-				}
-				if (pUnit->plot()->isCity())
-				{
-					int iOriginal = 0;
-					iValue += pUnit->plot()->getPlotCity()->cultureStrength(eOwner, iOriginal) * iTemp / 100;
+					iValue += iTemp * 15;
 				}
 			}
 		}
@@ -35966,7 +35961,7 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		}
 	}
 	//TB Combat Mods
-//TB Modification note:adjusted City Attack promo value to balance better against withdraw promos for city attack ai units.
+	//TB Modification note:adjusted City Attack promo value to balance better against withdraw promos for city attack ai units.
 	iTemp = kUnitCombat.getCityAttackPercent();
 	if (iTemp != 0)
 	{
@@ -36126,7 +36121,6 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 		}
 	}
 
-	int iOriginal = 0;
 	iTemp = kUnitCombat.getRevoltProtection();
 	if (iTemp != 0)
 	{
@@ -36136,16 +36130,13 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 			(eUnitAI == UNITAI_PROPERTY_CONTROL) ||
 			(eUnitAI == UNITAI_INVESTIGATOR))
 		{
-			if (pUnit != NULL && pUnit->plot() != NULL && pUnit->getX() != INVALID_PLOT_COORD)
+			if (pUnit != NULL && pUnit->plot() != NULL && pUnit->getX() != INVALID_PLOT_COORD && pUnit->plot()->isCity())
 			{
-				PlayerTypes eOwner = pUnit->plot()->calculateCulturalOwner();
-				if (eOwner != NO_PLAYER && GET_PLAYER(eOwner).getTeam() != getTeam())
+				PlayerTypes eCultureOwner = pUnit->plot()->calculateCulturalOwner();
+				// High weight for cities being threatened with culture revolution
+				if (eCultureOwner != NO_PLAYER && GET_PLAYER(eCultureOwner).getTeam() != getTeam())
 				{
-					iValue += (iTemp * 3);
-				}
-				if (pUnit->plot()->isCity())
-				{
-					iValue += pUnit->plot()->getPlotCity()->cultureStrength(eOwner, iOriginal) * iTemp / 100;
+					iValue += iTemp * 15;
 				}
 			}
 		}

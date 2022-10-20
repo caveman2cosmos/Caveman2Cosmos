@@ -92,8 +92,8 @@ int CvGameAI::AI_combatValue(const UnitTypes eUnit) const
 		//iValue += (((100 + GC.getUnitInfo(eUnit).getArmor())/100)/5);
 		//iValue += (((100 + GC.getUnitInfo(eUnit).getPuncture())/100)/5);
 		// Inactive END
-		
-		// TOOD: rethink these calculations 
+
+		// TOOD: rethink these calculations
 		//iValue += (((100 * GC.getUnitInfo(eUnit).getPrecisionModifier())/100)/5);
 		//iValue += (((100 * GC.getUnitInfo(eUnit).getDodgeModifier())/100)/5);
 		//iValue += (((100 * GC.getUnitInfo(eUnit).getDamageModifier())/100)/5);

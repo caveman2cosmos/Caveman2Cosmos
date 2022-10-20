@@ -1206,65 +1206,6 @@
 			<PythonCanDo>canTriggerSpicy</PythonCanDo>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_TORNADO</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_TORNADO_1</Text>
-				<Text>TXT_KEY_EVENTTRIGGER_TORNADO_2</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_1</Text>
-					<Era>C2C_ERA_ANCIENT</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_1</Text>
-					<Era>C2C_ERA_CLASSICAL</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_1</Text>
-					<Era>C2C_ERA_MEDIEVAL</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_2</Text>
-					<Era>C2C_ERA_RENAISSANCE</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_2</Text>
-					<Era>C2C_ERA_INDUSTRIAL</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>C2C_ERA_ATOMIC</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>C2C_ERA_INFORMATION</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>C2C_ERA_NANOTECH</Era>
-				</TriggerText>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_TORNADO_3</Text>
-					<Era>C2C_ERA_TRANSHUMAN</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<EventArt>Art/Event_Images/TornadoEvent.dds</EventArt>
-			<iPercentGamesActive>100</iPercentGamesActive>
-			<iWeight>40</iWeight>
-			<iNumPlotsRequired>1</iNumPlotsRequired>
-			<bOwnPlot>1</bOwnPlot>
-			<iPlotType>2</iPlotType>
-			<Events>
-				<Event>EVENT_TORNADO</Event>
-			</Events>
-			<ObsoleteTechs>
-				<ObsoleteTech>TECH_WEATHER_CONTROL</ObsoleteTech>
-			</ObsoleteTechs>
-			<bRecurring>1</bRecurring>
-			<PythonCanDo>canDoTornado</PythonCanDo>
-		</EventTriggerInfo>
-		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_BABY_BOOM</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_BABY_BOOM_1</Text>
@@ -6193,6 +6134,12 @@
 		<!-- @SAVEBREAK delete EVENTTRIGGER_TOXCATL once we can remove event triggers - cultures are modularized -->
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_TOXCATL</Type>
+		</EventTriggerInfo>
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_VOLCANO</Type>
+		</EventTriggerInfo>
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_TORNADO</Type>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_DISSIDENT_PRIEST</Type>
