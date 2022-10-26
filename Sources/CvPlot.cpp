@@ -4654,6 +4654,8 @@ CvUnit* CvPlot::plotCheck(ConstPlotUnitFunc funcA, int iData1A, int iData2A, con
 {
 	foreach_(CvUnit* unitX, units())
 	{
+		if (unitX->isDead()) continue;
+
 		if ((eOwner == NO_PLAYER || unitX->getOwner() == eOwner)
 		&& (eTeam == NO_TEAM || unitX->getTeam() == eTeam)
 		&& funcA(unitX, iData1A, iData2A, pUnit)
