@@ -4564,14 +4564,12 @@ void CvPlot::plotAction(PlotUnitFunc func, int iData1, int iData2, PlayerTypes e
 {
 	PROFILE_FUNC();
 
-	foreach_(CvUnit* pLoopUnit, units())
+	foreach_(CvUnit* unitX, units())
 	{
-		if ((eOwner == NO_PLAYER) || (pLoopUnit->getOwner() == eOwner))
+		if ((eOwner == NO_PLAYER || unitX->getOwner() == eOwner)
+		&& (eTeam == NO_TEAM || unitX->getTeam() == eTeam))
 		{
-			if ((eTeam == NO_TEAM) || (pLoopUnit->getTeam() == eTeam))
-			{
-				func(pLoopUnit, iData1, iData2, NULL);
-			}
+			func(unitX, iData1, iData2, NULL);
 		}
 	}
 }
@@ -4583,39 +4581,29 @@ int CvPlot::plotCount(ConstPlotUnitFunc funcA, int iData1A, int iData2A, const C
 
 	int iCount = 0;
 
-	if ( iRange == 0 )
+	if (iRange == 0)
 	{
-		foreach_(const CvUnit* pLoopUnit, units())
+		foreach_(const CvUnit* unitX, units())
 		{
-			if ( pLoopUnit->isDead() )
-			{
-				continue;
-			}
+			if (unitX->isDead()) continue;
 
-			if ((eOwner == NO_PLAYER) || (pLoopUnit->getOwner() == eOwner))
+			if ((eOwner == NO_PLAYER || unitX->getOwner() == eOwner)
+			&& (eTeam == NO_TEAM || unitX->getTeam() == eTeam)
+			&& (funcA == NULL || funcA(unitX, iData1A, iData2A, pUnit))
+			&& (funcB == NULL || funcB(unitX, iData1B, iData2B, NULL)))
 			{
-				if ((eTeam == NO_TEAM) || (pLoopUnit->getTeam() == eTeam))
-				{
-					if ((funcA == NULL) || funcA(pLoopUnit, iData1A, iData2A, pUnit))
-					{
-						if ((funcB == NULL) || funcB(pLoopUnit, iData1B, iData2B, NULL))
-						{
-							iCount++;
-						}
-					}
-				}
+				iCount++;
 			}
 		}
 	}
 	else
 	{
-		//	Recurse for each plot in the specified range
-		foreach_(const CvPlot* pLoopPlot, rect(iRange, iRange))
+		// Recurse for each plot in the specified range
+		foreach_(const CvPlot* plotX, rect(iRange, iRange))
 		{
-			iCount += pLoopPlot->plotCount(funcA, iData1A, iData2A, pUnit, eOwner, eTeam, funcB, iData1B, iData2B);
+			iCount += plotX->plotCount(funcA, iData1A, iData2A, pUnit, eOwner, eTeam, funcB, iData1B, iData2B);
 		}
 	}
-
 	return iCount;
 }
 
@@ -4664,14 +4652,16 @@ int CvPlot::plotStrengthTimes100(UnitValueFlags eFlags, ConstPlotUnitFunc funcA,
 
 CvUnit* CvPlot::plotCheck(ConstPlotUnitFunc funcA, int iData1A, int iData2A, const CvUnit* pUnit, PlayerTypes eOwner, TeamTypes eTeam, ConstPlotUnitFunc funcB, int iData1B, int iData2B) const
 {
-	foreach_(CvUnit* pLoopUnit, units())
+	foreach_(CvUnit* unitX, units())
 	{
-		if ((eOwner == NO_PLAYER || pLoopUnit->getOwner() == eOwner)
-		&& (eTeam == NO_TEAM || pLoopUnit->getTeam() == eTeam)
-		&& funcA(pLoopUnit, iData1A, iData2A, pUnit)
-		&& (funcB == NULL || funcB(pLoopUnit, iData1B, iData2B, NULL)))
+		if (unitX->isDead()) continue;
+
+		if ((eOwner == NO_PLAYER || unitX->getOwner() == eOwner)
+		&& (eTeam == NO_TEAM || unitX->getTeam() == eTeam)
+		&& funcA(unitX, iData1A, iData2A, pUnit)
+		&& (funcB == NULL || funcB(unitX, iData1B, iData2B, NULL)))
 		{
-			return pLoopUnit;
+			return unitX;
 		}
 	}
 	return NULL;
@@ -5002,7 +4992,7 @@ bool CvPlot::isVisiblePotentialEnemyDefenderless(const CvUnit* pUnit) const
 
 bool CvPlot::isVisibleEnemyUnit(PlayerTypes ePlayer) const
 {
-	return (plotCheck(PUF_isEnemy, ePlayer, 0, NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, ePlayer) != NULL);
+	return plotCheck(PUF_isEnemy, ePlayer, 0, NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, ePlayer) != NULL;
 }
 
 int CvPlot::getNumVisibleUnits(PlayerTypes ePlayer) const
