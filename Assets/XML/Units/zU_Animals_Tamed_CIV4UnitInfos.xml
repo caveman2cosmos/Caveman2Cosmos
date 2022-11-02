@@ -3606,9 +3606,6 @@
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_FOLKLORE_HORSE</BuildingType>
-			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HORSE_BREEDER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>

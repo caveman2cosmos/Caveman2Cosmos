@@ -22438,7 +22438,7 @@ bool CvUnitAI::AI_retreatToCity(bool bPrimary, bool bAirlift, int iMaxPath)
 			}
 			int iPathTurns;
 
-			if (generatePath(cityX->plot(), ((iPass > 1) ? MOVE_IGNORE_DANGER : 0), true, &iPathTurns) 
+			if (generatePath(cityX->plot(), ((iPass > 1) ? MOVE_IGNORE_DANGER : 0), true, &iPathTurns)
 			&& iPathTurns <= (iPass == 2 ? 1 : iMaxPath))
 			{
 				// Water units can't defend a city.
@@ -27626,14 +27626,9 @@ void CvUnitAI::AI_AutomatedpillageMove()
 	{
 		return;
 	}
-
-	if (plot()->isOwned() && plot()->getOwner() != getOwner())
+	if (AI_pillageRange(6, 20))
 	{
-		if (AI_AutomatedPillage(40))
-		{
-			return;
-		}
-
+		return;
 	}
 
 	if (AI_pillageRange(3, 11))
@@ -27659,11 +27654,6 @@ void CvUnitAI::AI_AutomatedpillageMove()
 		}
 	}
 
-	if (AI_AutomatedPillage(20))
-	{
-		return;
-	}
-
 	if ((area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE) || isEnemy(plot()->getTeam()))
 	{
 		if (AI_pillage(20))
@@ -27673,11 +27663,6 @@ void CvUnitAI::AI_AutomatedpillageMove()
 	}
 
 	if (AI_heal())
-	{
-		return;
-	}
-
-	if (AI_AutomatedPillage(0))
 	{
 		return;
 	}

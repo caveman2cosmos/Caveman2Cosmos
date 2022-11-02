@@ -12817,6 +12817,10 @@
 		<English>The earth has spewed forth lava and ash from a previously dormant volcano!</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Tag>
+		<English>A sudden eruption has rocked the countryside and caused widespread destruction upon a new volcano's formation, though examination reveals that this site does bear some evidence of long-forgotten ancient volcanic activity. In the aftermath of this newer catastrophe the soil seems to have become tremendously fertile.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT_ERUPTION</Tag>
 		<English>A volcano has erupted at a site we long regarded as safe, even though traces of volcanic activity long ago could be found. While this caused widespread destruction, the surrounding soil has improved tremendously.</English>
 		<French>L'éruption d'un volcan a eu lieu sur un site que l'on pensait sûr, même si de l'activité volcanique avait déjà été recensée à cet emplacement. Malgré les destructions occasionnées par cette catastrophe, le sol de la région en est amélioré.</French>
@@ -12828,6 +12832,7 @@
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCTION</Tag>
 		<English>Some traces of volcanic activity remain at this site, but there no longer seems to be any activity now.</English>
 		<French>Quelques traces d'activité volcanique sont visibles sur ce site, mais il ne semble plus actif à présent.</French>
+		<German>In diesem Gebiet sind noch Spuren früherer Ausbrüche zu finden, aber der Vulkan scheint jetzt erloschen zu sein.</German>
 		<Polish>Ślady wcześniejszych erupcji wulkanu można odnaleźć na tym terenie, ale obecnie wulkan wydaje się być wygasłym.</Polish>
 		<Russian>Некоторые следы вулканической активности остаются на этом месте, но, похоже, сам вулкан уже потух.</Russian>
 	</TEXT>
@@ -13192,6 +13197,7 @@
 		<Tag>TXT_KEY_EVENT_VOLCANO_EXTINCTION</Tag>
 		<English>At long last this volcano seems to have become extinct.</English>
 		<French>Enfin, ce volcan semble s'être complètement éteint.</French>
+		<German>Letztendlich scheint dieser Vulkan erloschen zu sein.</German>
 		<Polish>Ten wulkan wygasł dawno temu.</Polish>
 		<Russian>В конце концов этот вулкан, похоже, потух.</Russian>
 	</TEXT>

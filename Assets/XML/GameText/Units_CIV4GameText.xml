@@ -10776,7 +10776,11 @@
 		<Tag>TXT_KEY_UNIT_HAWK</Tag>
 		<English>Hawk</English>
 		<French>Faucon</French>
-		<German>Habicht</German>
+		<German>
+			<Text>Habicht:Habichts:Habicht:Habicht:Habichte:Habichte:Habichten:Habichte</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Falco</Italian>
 		<Spanish>
 			<Text>Halcón</Text>
@@ -16158,6 +16162,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NARWHAL_PEDIA</Tag>
 		<English>The narwhal, or narwhale (Monodon monoceros), is a medium-sized toothed whale and possesses a large "tusk" from a protruding canine tooth. It lives year-round in the Arctic waters around Greenland, Canada, and Russia. It is one of two living species of whale in the Monodontidae family, along with the beluga whale. The narwhal males are distinguished by a long, straight, helical tusk, which is an elongated upper left canine. The narwhal was one of many species described by Carolus Linnaeus in his publication Systema Naturae in 1758.</English>
+		<German>Der [COLOR_UNIT_TEXT]Narwal[COLOR_REVERT] (Monodon monoceros) ist ein Zahnwal und bildet zusammen mit dem Weißwal die Familie der Gründelwale. Er bewohnt den Arktischen Ozean von Grönland bis zur Küste Sibiriens.[NEWLINE]Die Grundfarbe des Narwals ist Hellbraun bis Weiß, wogegen Kopf, Nacken und Rücken fast schwarz sind. Das Gewicht eines Männchens beträgt eineinhalb Tonnen, Weibchen sind etwas leichter. Ein erwachsener Narwal misst vier bis fünf Meter, dazu kommt vorwiegend bei Männchen ein maximal drei Meter langer Stoßzahn. Dabei handelt es sich meist um einen Eckzahn, der durch die Oberlippe bricht. Normalerweise bildet sich noch ein zweiter Zahn, der aber nicht durchbricht. Über die Funktion des Stoßzahns wurde lange spekuliert. Da er 10 Millionen Nervenenden enthält, dient er vermutlich zum Messen von Wassertemperatur und -druck bzw. auch des Salzgehalts des Wassers. Da Narwale Warmblüter sind, besitzen sie eine dicke Speckschicht unter der Haut, die sie vor Kälte schützt. Die Kommunikation und die Sinneswahrnehmung erfolgen über Schallwellen, die von Menschen als "Gesänge" wahrgenommen werden. Die Ernährung besteht aus Fischen, Tintenfischen und Krebstieren, die regelrecht eingesaugt werden. Da sie stets in der Nähe des Packeises leben, nutzen sie ihre Stirn, um die Eisdecke zu durchbrechen. Die größten Fressfeinde sind die Großen Schwertwale. Bei Gefahr verfallen Narwale deshalb in eine Regungslosigkeit und lassen sich lautlos im Wasser absinken. Umweltbelastungen in Form von Schwermetallen oder Pestiziden stellen eine weitere Bedrohung dar, da sich die Stoffe in Organen und im Fettgewebe anreichern.[NEWLINE]Die Inuit jagen den Narwal bis heute zu Nahrungszwecken und wegen des Stoßzahnes. Die Jagd ist jedoch streng reglementiert. Im Mittelalter hielt man den Zahn für das Horn des Einhorns. Er ist seit dem 13. Jahrundert als Reliquie im Besitz sakraler Institutionen Europas nachweisbar.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NATIVE_AMERICA_DOG_SOLDIER</Tag>
@@ -16470,6 +16475,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Weise Frau der Neandertaler:Weisen Frau der Neandertaler:Weisen Frau der Neandertaler:Weise Frau der Neandertaler:Weise Frauen der Neandertaler:Weisen Frauen der Neandertaler:Weisen Frauen der Neandertaler:Weisen Frauen der Neandertaler</Text>
+			<Gender>Female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Russian>Неанд. ведунья</Russian>
 	</TEXT>
 	<TEXT>
@@ -16961,6 +16971,11 @@
 		<Tag>TXT_KEY_UNIT_ORANGUTAN</Tag>
 		<English>Orangutan</English>
 		<French>Orang-outan</French>
+		<German>
+			<Text>Orang-Utan:Orang-Utans:Orang-Utan:Orang-Utan:Orang-Utans:Orang-Utans:Orang-Utans:Orang-Utans</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>Orangotango</Italian>
 		<Spanish>
 			<Text>Orangután</Text>
@@ -17031,7 +17046,7 @@
 		<English>Orca</English>
 		<French>Orque</French>
 		<German>
-			<Text>Killerwal:Killerwals:Killerwal:Killerwal:Killerwale:Killerwale:Killerwalen:Killerwale</Text>
+			<Text>Schwertwal:Schwertwals:Schwertwal:Schwertwal:Schwertwale:Schwertwale:Schwertwalen:Schwertwale</Text>
 			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
@@ -17046,6 +17061,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORCA_PEDIA</Tag>
 		<English>The killer whale (Orcinus orca), also referred to as the orca whale or orca, and less commonly as the blackfish or grampus, is a toothed whale belonging to the oceanic dolphin family. Killer whales are found in all oceans, from the frigid Arctic and Antarctic regions to tropical seas. Killer whales as a species have a diverse diet, although individual populations often specialize in particular types of prey. Some feed exclusively on fish, while others hunt marine mammals like pinnipeds, and even large whales. Killer whales are regarded as apex predators, lacking natural predators.</English>
+		<German>Der [COLOR_UNIT_TEXT]Schwertwal[COLOR_REVERT] (Orcinus orca), auch Killerwal oder Orca, ist in küstennahen Gewässern der ganzen Welt verbreitet.[NEWLINE]Mit durchschnittlich 8,2 m Länge (Männchen) bzw. 7 m (Weibchen) ist der Schwertwal die größte Art aus der Familie der Delfine. Die auffällige Finne, die auch namensgebend ist, kann bei den Bullen bis zu 1,8 m hoch werden. Erkennbar ist der Schwertwal auch an seiner kontrastreichen schwarz-weißen Färbung. Es existieren ca. 10 verschiedene Ökotypen, die sich anhand von Körperbau, Färbung, Verhalten, Lautäußerungen und bevorzugter Nahrung unterscheiden. Die sozialen Strukturen sind sehr komplex, wobei die Grundeinheit die Mutterlinie bildet, bestehend aus einer alten Kuh, ihren Kälbern sowie den Kälbern ihrer weiblichen Jungtiere. Ein breites Lauterepertoire dient zur Kommunikation und Echoortung, jedoch nicht bei der Jagd auf Säugetiere, um nicht auf sich aufmerksam zu machen. Der Speiseplan des Schwertwals ist vielseitig und umfasst ca. 140 Fischarten sowie Meeressäuger, Seevögel, Kopffüßer und Meeresschildkröten. Je nach Lebensraum spezialisieren sich die Tiere auf bestimmte Beute und passen ihr Jagdverhalten daran an, wobei sie zum Teil strategisch vorgehen. Als Spitzenprädator haben sie keine natürlichen Fressfeinde.[NEWLINE]Allgemein ist der Schwertwal nicht gefährdet, lokale Bestandsrückgänge sind auf Umweltverschmutzung oder Bejagung zurückzuführen. Der dänische Segelschiffstyp Spaekhugger (deutsch: Schwertwal) erinnert aufgrund seiner Form an den Rücken und die Finne des Schwertwals.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORDER_OF_THE_DRAGON</Tag>
@@ -17235,7 +17251,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OXPECKER_PEDIA</Tag>
 		<English>The oxpeckers are two species of bird which make up the family Buphagidae. Some ornithologists regard them as a subfamily Buphaginae within the starling family Sturnidae but they appear to be quite distinct. Oxpeckers are endemic to the savanna of Sub-Saharan Africa. Both the English and scientific names arise from their habit of perching on large mammals (both wild and domesticated) such as cattle or rhinoceroses, and eating ticks, botfly larvae, and other parasites.[PARAGRAPH:2]According to the more recent studies of Muscicapoidea phylogeny, the oxpeckers are an ancient line related to Mimidae (mockingbirds and thrashers) and starlings but not particularly close to either. Considering the known biogeography of these groups, the most plausible explanation seems that the oxpecker lineage originated in Eastern or Southeastern Asia like the other two. This would make the two species of Buphagus something like living fossils, and elegantly demonstrates that such remnants of past evolution can possess striking and unique autapomorphic adaptations.</English>
-		<German>Madenhacker sind Singvögel aus der Familie der Stare, die die Savannen von Mittel- und Ostafrika bevölkern. Sie ernähren sich von Insekten und deren Larven und suchen deshalb die Nähe zu großen Wild- oder Haustieren, mit denen sie symbiotische Beziehungen eingehen. Sie lassen sich von diesen befördern und befreien dafür ihr Fell von Parasiten und Quälgeistern. Außerdem warnen sie ihre Wirte vor Raubtieren in der Nähe.[PARAGRAPH:2]Madenhacker verfügen über ein hellbraunes Gefieder, je nach Art über rote oder gelbe Schnäbel und kräftige Füße. Obwohl sie sich gern von ihren Wirten transportieren lassen, sind sie auch gute Flieger. Die Vögel nutzen die Haare ihrer Wirtstiere zur Auskleidung ihrer Nester, die sie in Löchern, meist in Wänden, anlegen.</German>
+		<German>Madenhacker sind Singvögel aus der Familie der Stare, die die Savannen von Mittel- und Ostafrika bevölkern. Sie ernähren sich von Insekten und deren Larven und suchen deshalb die Nähe zu großen Wild- oder Haustieren, mit denen sie symbiotische Beziehungen eingehen. Sie lassen sich von diesen befördern und befreien dafür ihr Fell von Parasiten und Quälgeistern. Außerdem warnen sie ihre Wirte vor Raubtieren in der Nähe.[NEWLINE]Madenhacker verfügen über ein hellbraunes Gefieder, je nach Art über rote oder gelbe Schnäbel und kräftige Füße. Obwohl sie sich gern von ihren Wirten transportieren lassen, sind sie auch gute Flieger. Die Vögel nutzen die Haare ihrer Wirtstiere zur Auskleidung ihrer Nester, die sie in Löchern, meist in Wänden, anlegen.</German>
 		<Polish>Bąkojady (Buphagidae)? rodzina ptaków z rzędu wróblowych, wcześniej klasyfikowana w randze podrodziny Buphaginae w rodzinie szpakowatych. Bąkojady zamieszkują sawannę w środkowej i południowej Afryce.[PARAGRAPH:2]Żerują na dużych, roślinożernych ssakach kopytnych (bawołach, nosorożcach, zebrach, antylopach) i na słoniach. Wyjadają im ze skóry pasożyty (głównie kleszcze i larwy muchówek) oraz bliznowate tkanki i krew z ran ssaka. Nogi bąkojadów są krótkie i wyposażone w ostre pazury, dzięki czemu mogą się utrzymać na grzbiecie i bokach ciała poruszającego się ssaka. Bąkojady nie tylko oczyszczają skórę zwierząt, ale pełnią również rolę strażników ostrzegających o zagrożeniu. Są towarzyskie, żerują i nocują w stadach. Gnieżdżą się w dziuplach drzew.</Polish>
 	</TEXT>
 	<TEXT>
@@ -17610,6 +17626,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PEACOCK_PEDIA</Tag>
 		<English>Peafowl are two Asiatic species of flying birds in the genus Pavo of the pheasant family, Phasianidae, best known for the male's extravagant eye-spotted tail, which it displays as part of courtship. The male is called a peacock, the female a peahen, and the offspring peachicks. The adult female peafowl is grey and/or brown. Peachicks can be between yellow and a tawny colour with darker brown patches. The term also embraces the Congo Peafowl, which is placed in a separate genus Afropavo.</English>
+		<German>Der Asiatische [COLOR_UNIT_TEXT]Pfau[COLOR_REVERT] ist eine Gattung der Fasanenartigen und umfasst die Arten Blauer Pfau und Ährenträgerpfau (auch Grüner Pfau genannt).[NEWLINE]Die Heimat der Pfauen sind die Regenwälder von Süd- und Ostasien. Vor allem die Hähne fallen durch ihr Prachtkleid mit dem verlängerten Schwanz (Schleppe) auf, der aus ca. 150 Federn besteht, wobei jede Schmuckfeder einen Augenfleck besitzt. Das schillernde Gefieder enthält keine Farbpigmente, vielmehr sorgt die Interferenz des Lichts in winzigen Luftkammern für den Farbeindruck. Sowohl Männchen als auch Weibchen tragen eine kleine Federkrone. Die Tiere leben meist in losen Verbänden mit Hähnen, Hennen und Jungtieren zusammen. Ihre Nahrung besteht u.a. aus Samen, Früchten, Blüten und Insekten. Während der Balz stellen die Hähne ihre Schleppen auf und drehen sich langsam um die eigene Achse, um die Hennen zu beeindrucken. Die weitaus schlichter wirkenden Hennen legen etwa fünf Eier und kümmern sich allein um die Brut und Aufzucht der Jungtiere. Gelegentlich werden erwachsene Pfauen von Tigern oder Leoparden erbeutet.[NEWLINE]In Indien sind Pfauen beliebte Haustiere. Sie jagen nicht nur Mäuse, sondern vertreiben auch Kobras aus ihren Revieren und warnen vor Großkatzen. Die Federn der männlichen Tiere dienen in Asien zur Herstellung edler Stoffe.</German>
 		<Polish>Paw (łc. pavo) zool. Pavo cristatus, duży ptak z rodziny bażantowatych (Phasianidae), pochodzący z Indii, Cejlonu i Pakistanu, którego samiec posiada charakterystyczny wachlarzowato rozkładany ogon (tren) złożony z b. mocno wydłużonych piór nadogonowych o metalicznym brązowozielonym połysku, zakończonych okiem w barwach czarnej, niebieskiej, zielonej i żółtej oraz barwny czubek na głowie; hodowany powszechnie jako ptak ozdobny.</Polish>
 	</TEXT>
 	<TEXT>
@@ -18362,6 +18379,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PROCOPTODON_PEDIA</Tag>
 		<English>Procoptodon was a genus of giant short-faced kangaroo living in Australia during the Pleistocene epoch. P. goliah, the largest known kangaroo that ever existed, stood approximately 2 m (6.6 ft). They weighed about 230 kg (510 lb).[PARAGRAPH:2]Giant short-faced kangaroos had a flat face and forward-pointing eyes. On each foot they had a single large toe somewhat similar in appearance like a horse's hoof. On these unusual feet they moved quickly through the open forests and plains, where they sought grass and leaves to eat. Their front paws were equally strange: each front paw had two extra-long fingers with large claws. It is possible that they were used to grab branches, bringing leaves within eating distance. The genus was present until at least about 50,000 years ago before going extinct, although there is some evidence they may have survived to as recently as 18,000 years ago. Their demise is usually attributed to human activities, but this remains uncertain.[PARAGRAPH:2]Fossils of giant short-faced kangaroos have been found at the Naracoorte World Heritage fossil deposits in South Australia, Lake Menindee in New South Wales, Darling Downs in Queensland, and at many other sites. A full-size, lifelike replica is on permanent display with other ancient native Australian animals at the Australian Museum.[PARAGRAPH:2]The genus is paraphyletic, derived from Simosthenurus.</English>
+		<German>Als [COLOR_UNIT_TEXT]Procoptodon[COLOR_REVERT] bezeichnet man eine Gattung der ausgestorbenen Kurzschnauzenkängurus, die bis ins Pleistozän in Australien lebten.[NEWLINE]Das Procoptodon goliah war die größte Art der Gattung. Es fiel durch seine enorme Körpergröße von 2 bis 3 m und die kurze Schnauze auf und wurde etwa 230 kg schwer. Zudem waren die Zehen der Hinterläufe stark zurückgebildet, was entfernt an die Entwicklung der Pferde erinnert. Vermutlich konnte das Procoptodon dadurch hohe Fluchtgeschwindigkeiten erreichen. Die Nahrung des Kängurus bestand wahrscheinlich aus raufaserigen Pflanzen.[NEWLINE]Die letzten Vertreter der Gattung verschwanden, wie auch andere Großsäuger Australiens, während der Quartären Aussterbewelle.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PROGRAMMER</Tag>
@@ -18586,6 +18604,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUOLL_PEDIA</Tag>
 		<English>The quoll (genus Dasyurus) is a carnivorous marsupial native to mainland Australia, New Guinea and Tasmania. It is primarily nocturnal and spends most of the day in its den. There are six species of quoll; four are found in Australia and two in New Guinea. Another two species are known from fossil remains in Pliocene and Pleistocene deposits in Queensland. Genetic evidence indicates that the quoll evolved around 15 million years ago in the Miocene, and that the ancestors of the six species had all diverged by around 4 million years ago. The quoll species vary in weight and size, from 300 grams (11 oz) to 7 kilograms (15 lb). They have brown or black fur and a pink nose. They are largely solitary but come together for a few social interactions such as mating which occurs during the winter season. A female gives birth to up to 18 pups, of which only 6 survive to suckle on her teats.[PARAGRAPH:2]The quoll eats small mammals such as rabbits, small birds, lizards and insects. Its natural lifespan is between two and five years. All species have drastically declined in numbers since Australasia was colonised by Europeans, with one species, the Eastern quoll, becoming extinct on the Australian mainland, now being found only in Tasmania. Major threats to their survival include the cane toad, predators, urban development and poison baiting. Conservation efforts include breeding programs in captivity.</English>
+		<German>Die Gattung der [COLOR_UNIT_TEXT]Beutelmarder[COLOR_REVERT] umfasst sechs Arten, die nicht mit den plazentalen Mardern verwandt sind. Gelegentlich wird auch die englische Bezeichnung Quoll verwendet.[NEWLINE]Das Fell der Beutelmarder ist grau oder braun mit weißen Flecken. Die Körperlänge (ohne Schwanz) variiert je nach Art von 25 bis 75 cm. Der Riesenbeutelmarder kann bis zu 3 kg schwer werden. Beutelmarder gibt es in ganz Australien sowie in Neuguinea, auf Tasmanien und anderen Inseln. Sie sind nachtaktiv und verbringen den Tag in Höhlen, Erdlöchern oder hohlen Baumstämmen. Obwohl sie Bodenbewohner sind, können sie gut klettern. Sie bewohnen sowohl trockene als auch felsige Gebiete sowie Wälder. Beutelmarder sind Raubtiere, ernähren sich aber auch manchmal von Früchten und anderen Pflanzenteilen sowie Aas. Der Beutel ist nicht voll ausgebildet und wird meist nur während der Tragezeit angelegt. Nach der Geburt bleiben Jungtiere solange im Beutel, bis sie herausgewachsen sind (7 bis 15 Wochen).[NEWLINE]Durch menschliche Besiedlung, Jagd und eingeschleppte Nahrungskonkurrenz ist das Verbreitungsgebiet der Beutelmarder eingeschränkt worden. Vier der sechs Arten gelten als gefährdet.</German>
 		<Polish>Niełaz plamisty z wyglądu i wielkości przypomina kota. Tułów wraz z głową osiąga długość rzędu 40-45 cm, przy masie ciała nieco ponad 0,5 kg (samice) i około 1 kg (samce). Pokryty jest miękką, krótką i gęstą sierścią. Owłosiony ogon osiąga długość 21-30 cm. Niełazy występują w dwóch typach ubarwienia. Częściej spotykane - brunatne w kremowobiałe kropki, zaś rzadziej odnotowywane - czarne z białym nakrapianiem. Białe plamki są intensywniejsze na tułowiu, a mniej wyraźne na głowie. Plamy nie występują na ogonie, ale na jego zakończenie jest białe. Część brzuszna i kończyny są wybarwione w jaśniejszych kolorach. Torba jest płytka, wyposażona w 6-8 sutków.</Polish>
 	</TEXT>
 	<TEXT>

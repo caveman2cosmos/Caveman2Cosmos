@@ -880,6 +880,7 @@ def checkForAssimilation():
 			if iTurn - iTurnAcquiredCity0 > 15 and iNumCities < iMinCities:
 				iTotalLand = CyPlayerX.getTotalLand()
 				if iTotalLand < minNumPlots:
+					# Some patches for div0 errors on countTotalCulture in this section, Blaze 2022
 
 					if CyCity0.area().getNumCities() < iNumCities + 2:
 						continue # Isolated
@@ -912,7 +913,7 @@ def checkForAssimilation():
 
 								relations = CyPlayerX.AI_getAttitude(iPlayerMaster)
 
-								if CyPlot0.getCulture(iPlayerMaster)/(1.0*CyPlot0.countTotalCulture()) > .25:
+								if CyPlot0.getCulture(iPlayerMaster)/(max(1, 1.0*CyPlot0.countTotalCulture())) > .25:
 									# Assimilate with master with large culture in city
 									if not relations == AttitudeTypes.ATTITUDE_FURIOUS:
 
@@ -975,7 +976,7 @@ def checkForAssimilation():
 								if iMaxCult2/(1.0*iTotalCulture) > .2:
 									relations = CyPlayerX.AI_getAttitude(iPlayerCult2)
 									if relations in (AttitudeTypes.ATTITUDE_PLEASED, AttitudeTypes.ATTITUDE_FRIENDLY) \
-									or relations == AttitudeTypes.ATTITUDE_CAUTIOUS and iMaxCult2/(1.0*iTotalCulture) > .4:
+									or relations == AttitudeTypes.ATTITUDE_CAUTIOUS and iMaxCult2/(max(1, 1.0*iTotalCulture)) > .4:
 										if not CyPlayerCult2.isHuman():
 											CyPlayerDominant = CyPlayerCult2
 										elif not iPlayerX in noAssimilateList:

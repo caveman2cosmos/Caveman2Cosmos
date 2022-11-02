@@ -2597,7 +2597,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BULLET</Tag>
 		<English>[ICON_BULLET]</English>
-		<Russian>[ICON_BULLET]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BULLET_STARTS_WITH</Tag>
@@ -3026,16 +3025,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_CULTURE</Tag>
-		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</English>
-		<French>[NEWLINE][ICON_CULTURE] : %d1/%d2 (%s3)</French>
-		<German>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</German>
-		<Italian>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</Italian>
-		<Spanish>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</Spanish>
+		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3: Lvl %d4)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_CULTURE_NO_LEVEL</Tag>
-		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2</English>
-		<Russian>[NEWLINE][ICON_CULTURE]: %d1/%d2</Russian>
+		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3: Lvl %d4)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_FOOD_GROW</Tag>
@@ -3106,10 +3100,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_GREAT_PEOPLE</Tag>
 		<English>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</English>
-		<French>[NEWLINE][ICON_GREATPEOPLE] : %d1/%d2</French>
-		<German>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</German>
-		<Italian>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</Italian>
-		<Spanish>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_GROWTH</Tag>
@@ -3140,10 +3130,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_PRODUCTION</Tag>
 		<English>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</English>
-		<French>[NEWLINE]%s1 : %d2/%d3 [ICON_PRODUCTION]</French>
-		<German>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</German>
-		<Italian>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</Italian>
-		<Spanish>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_SELECT</Tag>
@@ -3782,7 +3768,7 @@
 		<Tag>TXT_KEY_CIVICHELP_IMPROVEMENT_YIELD_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_Icon from[SPACE]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_Icon :[SPACE]</French>
-		<German>[ICON_BULLET]%D1_Change%F2_Icon durch die Modernisierung[SPACE]</German>
+		<German>[ICON_BULLET]%D1_Change%F2_Icon durch[SPACE]</German>
 		<Italian>[ICON_BULLET]%D1_Change%F2_Icon da[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2_Icon por[SPACE]</Spanish>
 	</TEXT>
@@ -4014,7 +4000,7 @@
 		<Tag>TXT_KEY_CIVICHELP_WORKER_SPEED</Tag>
 		<English>[ICON_BULLET]Workers Build Improvements %D1_Mod%% Faster</English>
 		<French>[ICON_BULLET]Vitesse de construction des aménagements : %D1_Mod%%</French>
-		<German>[ICON_BULLET]Bautrupps errichten Modernisierungen %D1_Mod%% schneller</German>
+		<German>[ICON_BULLET]Arbeitstrupps errichten Modernisierungen %D1_Mod%% schneller</German>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Mod%% più rapidamente</Italian>
 		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Mod%% más rápido</Spanish>
 	</TEXT>
@@ -4974,6 +4960,26 @@
 		<German>Fortgeschritten</German>
 		<Italian>Raffinato</Italian>
 		<Spanish>Refinada</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_MINISCULE</Tag>
+		<English>Miniscule</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_MINOR</Tag>
+		<English>Minor</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_TREMENDOUS</Tag>
+		<English>Tremendous</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_STUPENDOUS</Tag>
+		<English>Stupendous</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_MAJESTIC</Tag>
+		<English>Majestic</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CURE_AFFLICTION</Tag>
@@ -7234,6 +7240,7 @@
 		<Tag>TXT_KEY_FEATURE_KILIMANJARO_PEDIA</Tag>
 		<English>Kilimanjaro, with its three volcanic cones, Kibo, Mawenzi, and Shira, is a dormant volcanic mountain in Kilimanjaro National Park, Kilimanjaro Region, Tanzania. It is the highest mountain in Tanzania, the highest mountain in Africa, and the highest free-standing mountain in the world at 5,895 metres or 19,341 feet above sea level (the Uhuru Peak/Kibo Peak).</English>
 		<French>Le Kilimanjaro, Le Kilimandjaro ou Kilimanjaro est une montagne située dans le Nord-Est de la Tanzanie et composée de trois volcans éteints: le Shira à l'ouest, culminant à 3 962 mètres d'altitude, le Mawenzi à l'est, s'élevant à 5 149 mètres d'altitude, et le Kibo, le plus récent géologiquement, situé entre les deux autres et dont le pic Uhuru, à 5 891,8 mètres d'altitude, constitue le point culminant de l'Afrique.</French>
+		<German>Der [COLOR_HIGHLIGHT_TEXT]Kilimandscharo[COLOR_REVERT] liegt im Nordosten Tansanias und ist eigentlich kein einzelner Berg, sondern ein ganzes Bergmassiv. Der mit 5895 m höchste Berg Afrikas, der Kibo, ist ein Teil des Kilimandscharos. Er ist gleichzeitig auch der höchste freistehende Berg der Welt. Seit 1973 ist das Gebiet ein Nationalpark, 1987 wurde es von der UNESCO zum Weltnaturerbe erklärt. Markant für den Kilimandscharo sind seine trotz des tropisch-heißen Klimas stets schneebedeckten Gipfel. Leider sind diese aber akut von der globalen Erwärmung betroffen und werden, wenn der Gletscherschwund im gleichen Maße weiter voranschreitet wie bisher, bis 2030 völlig verschwunden sein.</German>
 		<Polish>Kilimandżaro - góra w Tanzanii leżąca przy granicy z Kenią. Jest najwyższą górą Afryki i jednym z najwyższych samotnych masywów. Przeważa klimat równikowy, górski. Na wyższych poziomach jest zimniej.</Polish>
 		<Russian>Êèëèìàíäæàðî - âûñî÷àéøèé è ïîòåíöèàëüíî àêòèâíûé ñòðàòîâóëêàí Àôðèêè, íàõîäÿùèéñÿ íà ñåâåðî-âîñòîêå Òàíçàíèè, âûñî÷àéøàÿ òî÷êà êîíòèíåíòà (5895 ì. íàä óðîâíåì ìîðÿ).[PARAGRAPH:2]Ýòî ñàìûé âûñîêèé ãîðíûé ìàññèâ âíå Öåíòðàëüíîàçèàòñêîãî ïîÿñà. C 1902 ïî 1918 ãîäû íàçûâàëñÿ Âåðøèíà Êàéçåðà Âèëüãåëüìà. Êèëèìàíäæàðî âîçâûøàåòñÿ íàä ïëîñêîãîðüåì Ìàñàè, êîòîðîå ðàñïîëîæåíî íà âûñîòå 900 ìåòðîâ íàä óðîâíåì ìîðÿ.</Russian>
 	</TEXT>
@@ -13057,21 +13064,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BATTLEFIELD_EVAC</Tag>
-		<English>Our %s1 has been evacuated to our Capital and has thankfully made a full recovery</English>
-		<French>Notre %s1 a été évacuée à notre Capitale et il est complètement rétabli</French>
-		<German>Unsere Einheit %s1 wurde in unsere Hauptstadt evakuiert und hat sich vollständig erholt</German>
+		<English>Our %s1 has been evacuated to our Capital and has thankfully made a full recovery.</English>
+		<French>Notre %s1 a été évacuée à notre Capitale et il est complètement rétabli.</French>
+		<German>Unsere Einheit %s1 wurde in unsere Hauptstadt evakuiert und hat sich vollständig erholt.</German>
 		<Spanish>[NUM1:Nuestro:Nuestra:Nuestros:Nuestras] %s1 [NUM1:ha sido evacuado:ha sido evacuada:han sido evacuados:han sido evacuadas] hacia nuestra capital, donde [NUM1:se ha:se ha:se han:se han] recuperado completamente.</Spanish>
-		<Polish>Nasza jednostka: %s1 ewakuowała się do Stolicy i odzyskała pełnie sił</Polish>
+		<Polish>Nasza jednostka: %s1 ewakuowała się do Stolicy i odzyskała pełnie sił.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BORDERS_EXPANDED</Tag>
-		<English>[COLOR_MAGENTA]The borders of %s1_CityName have expanded![COLOR_REVERT]</English>
-		<French>[COLOR_MAGENTA]Les frontières de %s1_CityName se sont étendues![COLOR_REVERT]</French>
-		<German>[COLOR_MAGENTA]Die Stadtgrenzen von %s1_CityName haben sich erweitert![COLOR_REVERT]</German>
-		<Italian>[COLOR_MAGENTA]I confini di %s1_CityName si sono espansi![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_MAGENTA]Las fronteras de %s1_CityName se han ampliado.[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_MAGENTA]Granice kulturowe miasta: %s1_CityName rozszerzyły się![COLOR_REVERT]</Polish>
-		<Russian>[COLOR_MAGENTA]Ãîðîä %s1_CityName ðàñøèðÿåò ãðàíèöû![COLOR_REVERT]</Russian>
+		<English>[COLOR_MAGENTA]The culture of %s1_CityName has grown, and is now considered %s2_LevelName![COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BUILDING_BOMBARD_DEFENSE_HOVER</Tag>
@@ -13299,9 +13300,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_MILITIA_EMERGED</Tag>
-		<English>City militia has emerged! Resistance:</English>
-		<French>Des habitants ont pris les armes et se sont constitués en Milice ! Résistance :</French>
-		<Russian>Поднято по тревоге городское ополчение! Сопротивление:</Russian>
+		<English>%s1_CivAdj influence in the city (%d2.%d3%% of %d4%% needed) is insufficient to stop organization of local militia!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_NATIONALITY</Tag>
@@ -16102,6 +16101,14 @@
 		<Spanish>Ha tenido lugar una rebelión %s1:2_CivAdj en %s2_CityName.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_DISCONTENT_IN_CITY</Tag>
+		<English>%s1_CivAdj influence is causing cultural discontent in %s2_CityName...</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_FAILED_REVOLT_IN_CITY</Tag>
+		<English>Local authorities struggled to put down a large %s1_CivAdj demonstration in %s2_CityName.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_REVOLUTION_HAS_BEGUN</Tag>
 		<English>The revolution has begun!!!</English>
 		<French>La révolution a éclaté !</French>
@@ -18039,7 +18046,7 @@
 		<Tag>TXT_KEY_MOD_DCN_THE_BLANK_OF</Tag>
 		<English>%s of %s</English>
 		<French>%s des %s</French>
-		<German>%s von %s</German>
+		<German>%s %s</German>
 		<Italian>%s di %s</Italian>
 		<Spanish>%s de %s</Spanish>
 		<Polish>%s %s</Polish>
@@ -19676,7 +19683,7 @@
 		<Tag>TXT_KEY_PASSAGE</Tag>
 		<English>[ICON_BULLET]This unit can enter territories you have a Right of Passage or Open Borders agreement with.</English>
 		<French>[ICON_BULLET]Cette unité peut entrer à l'intérieur des frontières lorsqu'il existe un droit de passage ou un Accord de frontières ouvertes</French>
-		<German>[ICON_BULLET]kann Gebiete von Nationen betreten, mit denen eine Durchreiseerlaubnis oder offene Grenzen vereinbart wurden</German>		
+		<German>[ICON_BULLET]kann Gebiete von Nationen betreten, mit denen eine Durchreiseerlaubnis oder offene Grenzen vereinbart wurden</German>
 		<Russian>[ICON_BULLET]Этот отряд может входить на территории, с владельцами которых у вас есть право на проход или соглашение об открытых границах.</Russian>
 	</TEXT>
 	<TEXT>
@@ -21182,6 +21189,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PREVIOUS_OUTPUT</Tag>
 		<English>Previous Output</English>
+		<German>Vorherige Aufträge</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_CONVERTS</Tag>
@@ -28547,7 +28555,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_ONLY_DEFENSIVE</Tag>
 		<English>[ICON_BULLET]Can Only Defend</English>
 		<French>[ICON_BULLET]Ne peut que se défendre</French>
-		<German>[ICON_BULLET]Kann nur verteidigen</German>
+		<German>[ICON_BULLET]kann nur verteidigen</German>
 		<Italian>[ICON_BULLET]Può solo difendere</Italian>
 		<Spanish>[ICON_BULLET]Sólo puede defender</Spanish>
 	</TEXT>
@@ -28647,7 +28655,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_WORKERS_FASTER</Tag>
 		<English>[ICON_BULLET]Workers Build Improvements %D1_Change%% Faster</English>
 		<French>[ICON_BULLET]Vitesse de construction des aménagements : %D1_Change%%</French>
-		<German>[ICON_BULLET]Bautrupps errichten Modernisierungen %D1_Change%% schneller</German>
+		<German>[ICON_BULLET]Arbeitstrupps errichten Modernisierungen %D1_Change%% schneller</German>
 		<Italian>[ICON_BULLET]I lavoratori realizzano i miglioramenti il %D1_Change%% più rapidamente</Italian>
 		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Change%% más rápido</Spanish>
 	</TEXT>

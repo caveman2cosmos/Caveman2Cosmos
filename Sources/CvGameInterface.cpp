@@ -685,7 +685,7 @@ void CvGame::updateSelectionListInternal(int iCycleDelay, bool bSetCamera, bool 
 				gDLL->getInterfaceIFace()->clearSelectionList();
 			}
 		}
-		else 
+		else
 		{
 			if (m_iTurnSlice > MAX_INT - iCycleDelay)
 			{

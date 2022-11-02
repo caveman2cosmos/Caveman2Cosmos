@@ -710,7 +710,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_HEAL_MOD</Tag>
 		<English>[ICON_BULLET]Heals Units Extra %d1_Mod%% Damage/Turn</English>
 		<French>[ICON_BULLET]Soigne les unités de %d1_Mod%% de dégâts/tour</French>
-		<German>[ICON_BULLET]Heilt zusätzlich %d1_Mod%% Schaden/Runde bei Einheiten</German>
+		<German>[ICON_BULLET]heilt zusätzlich %d1_Mod%% Schaden pro Runde bei Einheiten</German>
 		<Italian>[ICON_BULLET]Cura le unità del %d1_Mod%% di danno extra per turno.</Italian>
 		<Spanish>[ICON_BULLET]Cura a las unidades un %d1_Mod%% de daño extra por turno</Spanish>
 	</TEXT>
@@ -718,6 +718,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_HEAL_UNITCOMBAT_MOD</Tag>
 		<English>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%%/Turn</English>
 		<French>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%%/Tour</French>
+		<German>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%% pro Runde</German>
 		<Polish>[ICON_BULLET]Wspomaga leczenie %s1_UNITCOMBAT Units %D2_Mod%% Obrażeń na turę.</Polish>
 		<Russian>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%%/Ход</Russian>
 	</TEXT>
@@ -1563,7 +1564,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_WORKER_MOD</Tag>
 		<English>[ICON_BULLET]Workers Build Improvements %D1_Mod%% Faster</English>
 		<French>[ICON_BULLET]Vitesse de construction des aménagements : %D1_Mod%%</French>
-		<German>[ICON_BULLET]Bautrupps errichten Modernisierungen %D1_Mod%% schneller</German>
+		<German>[ICON_BULLET]Arbeitstrupps errichten Modernisierungen %D1_Mod%% schneller</German>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Mod%% più rapidamente</Italian>
 		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Mod%% más rápido</Spanish>
 	</TEXT>
