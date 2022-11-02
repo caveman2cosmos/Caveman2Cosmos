@@ -1067,6 +1067,11 @@ public:
 	typedef bst::iterator_range<city_iterator> city_range;
 	city_range cities() const { return city_range(beginCities(), endCities()); }
 
+	safe_city_iterator beginCitiesSafe() const { return safe_city_iterator(beginCities(), endCities()); }
+	safe_city_iterator endCitiesSafe() const { return safe_city_iterator(); }
+	typedef bst::iterator_range<safe_city_iterator> safe_city_range;
+	safe_city_range cities_safe() const { return safe_city_range(beginCitiesSafe(), endCitiesSafe()); }
+
 	// deprecated, use city_iterator
 	CvCity* firstCity(int* pIterIdx, bool bRev = false) const;
 	// deprecated, use city_iterator

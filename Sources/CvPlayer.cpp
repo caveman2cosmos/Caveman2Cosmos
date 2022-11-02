@@ -3734,7 +3734,7 @@ void CvPlayer::doTurn()
 	{
 		PROFILE("CvPlayer::doTurn.DoCityTurn");
 
-		algo::for_each(cities(), CvCity::fn::doTurn());
+		algo::for_each(cities_safe(), CvCity::fn::doTurn());
 	}
 
 	// Johny Smith 04/19/09
