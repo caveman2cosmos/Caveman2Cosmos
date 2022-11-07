@@ -1417,7 +1417,7 @@ void CvCity::doTurn()
 
 	// updating after plot culture ensures player always sees correct ownership on plot,
 	// but plot could technically wiggle back and forth during AI turns.
-	doPlotCulture(true, getOwner(), getCommerceRate(COMMERCE_CULTURE));
+	doPlotCulture(getOwner(), getCommerceRate(COMMERCE_CULTURE));
 
 	//	Force deferred plot group recalculation to happen now before we assess production
 	CvPlot::setDeferredPlotGroupRecalculationMode(false);
@@ -12940,7 +12940,7 @@ void CvCity::setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, 
 
 		updateCultureLevel(bUpdatePlotGroups);
 
-		if (bPlots) doPlotCulture(true, eIndex, 0);
+		if (bPlots) doPlotCulture(eIndex, 0);
 	}
 
 	if (!bNationalSet && iOldCulture < iNewValue)
@@ -16088,7 +16088,7 @@ void CvCity::doCulture()
 }
 
 
-void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
+void CvCity::doPlotCulture(PlayerTypes ePlayer, int iCultureRate)
 {
 	PROFILE_FUNC();
 
@@ -16131,9 +16131,12 @@ void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
 		{
 			// changeCulture includes a check to culture value upward
 			// to ensure plot cannot be lost thru decay even if culture gain is too small
-			plotX->changeCulture(ePlayer,
+			plotX->changeCulture(
+				ePlayer,
 				cultureDistanceDropoff(iCultureRate, eCultureLevel, iCultureDistance),
-				(bUpdate || !plotX->isOwned()));
+				// Toffer - Only update plot ownership when the culture of non-owners increase.
+				plotX->getOwner() != ePlayer
+			);
 		}
 	}
 }
