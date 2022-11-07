@@ -11559,17 +11559,14 @@ bool CvGame::isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner, bool bC
 		return true;
 	}
 
-	if (bTrade || bConquest && bRecapture)
+	if (bTrade || bConquest && bRecapture || isOption(GAMEOPTION_NO_CITY_RAZING))
 	{
 		return false;
 	}
-	if (isOption(GAMEOPTION_NO_CITY_RAZING))
-	{
-		return false;
-	}
+
 	if (isOption(GAMEOPTION_ONE_CITY_CHALLENGE)
 	|| getMaxCityElimination() > 0
-	|| city->getPopulation() == 1)
+	|| bConquest && city->getPopulation() == 1)
 	{
 		return true;
 	}
