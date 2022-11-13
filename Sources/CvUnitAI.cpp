@@ -27174,6 +27174,9 @@ bool CvUnitAI::AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders,
 {
 	PROFILE_FUNC();
 
+
+	int localOddsThreshold = iOddsThreshold > 99 ? 99 : iOddsThreshold;
+	
 	const bool bCanCaptureCities =
 		getGroup()->getAutomateType() == AUTOMATE_HUNT && !GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_AUTO_HUNT_NO_CITY_CAPTURING) ||
 		getGroup()->getAutomateType() == AUTOMATE_BORDER_PATROL && !GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_AUTO_PATROL_NO_CITY_CAPTURING);
@@ -27198,7 +27201,7 @@ bool CvUnitAI::AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders,
 				const int attackOdds = getGroup()->AI_attackOdds(potentialTargetPlot, true);
 				const int plotScore = attackOdds + (huntingAnimals ? 25 : 0);
 
-				if (plotScore > bestScore && attackOdds >= AI_finalOddsThreshold(potentialTargetPlot, iOddsThreshold))
+				if (plotScore > bestScore && attackOdds >= AI_finalOddsThreshold(potentialTargetPlot, localOddsThreshold))
 				{
 					bestScore = plotScore;
 					bestTargetPlot = getPathEndTurnPlot();
