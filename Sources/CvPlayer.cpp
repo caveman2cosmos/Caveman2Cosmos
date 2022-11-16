@@ -2379,25 +2379,20 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			// If civ has fixed borders, they'll retain more due to the lower threshold for maintaining ownership.
 			pOldCity->clearCultureDistanceCache();
 			const int iCultureLevel = pOldCity->getCultureLevel();
-			for (int iPlotIndex = 1; iPlotIndex < pOldCity->getNumCityPlots(); iPlotIndex++)
+			foreach_(CvPlot* pLoopPlot, pOldCity->plots(true))
 			{
-				CvPlot* pLoopPlot = pOldCity->getCityIndexPlot(iPlotIndex);
-				if (pLoopPlot != NULL)
+				const int iCultureDist = pOldCity->cultureDistance(*pLoopPlot);
+				if (iCultureDist > iCultureLevel)
 				{
-					// cultureDistance needs dX, dY, not absolute. Blaze TODO fix 
-					// const int iCultureDist = pOldCity->cultureDistance(pLoopPlot->getX(), pLoopPlot->getY());
-					// if (iCultureDist > iCultureLevel)
-					// {
-					// 	continue;
-					// }
-					// Only grab non-city, non-fort tiles from old owner
-					if (!pLoopPlot->isCity(true) && pLoopPlot->getOwner() == eOldOwner)
-					{
-						// Sets owner to conquerer regardless of their culture on it, but don't update yet
-						pLoopPlot->setOwner(eNewOwner, false, false);
-						// Sees if owner can actually hold onto it, resetting if not
-						pLoopPlot->updateCulture(true, true);
-					}
+					continue;
+				}
+				// Only grab non-city, non-fort tiles from old owner
+				if (!pLoopPlot->isCity(true) && pLoopPlot->getOwner() == eOldOwner)
+				{
+					// Sets owner to conquerer regardless of their culture on it, but don't update yet
+					pLoopPlot->setOwner(eNewOwner, false, false);
+					// Sees if owner can actually hold onto it, resetting if not
+					pLoopPlot->updateCulture(true, true);
 				}
 			}
 		}
@@ -2413,7 +2408,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 				iOccupationTimeModifier += GC.getBuildingInfo((BuildingTypes)iI).getOccupationTimeModifier();
 			}
 		}
-		
+
 		CvPlotGroup* originalTradeNetworkConnectivity[MAX_PLAYERS];
 
 		// Whose trade networks was this city relevant to prior to ownership change
@@ -3739,7 +3734,7 @@ void CvPlayer::doTurn()
 	{
 		PROFILE("CvPlayer::doTurn.DoCityTurn");
 
-		algo::for_each(cities(), CvCity::fn::doTurn());
+		algo::for_each(cities_safe(), CvCity::fn::doTurn());
 	}
 
 	// Johny Smith 04/19/09

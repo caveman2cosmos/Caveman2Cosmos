@@ -10,6 +10,7 @@
 #include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
+#include "CvInfos.h"
 
 void UnitFilterBase::Activate()
 {

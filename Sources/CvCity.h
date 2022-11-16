@@ -1527,9 +1527,9 @@ public:
 	/*     const function; this means that the actual cached structure must be mutable in order to  */
 	/*     be modified in the const method                                                          */
 	void recalculateCultureDistances(int iMaxDistance) const;
-	int calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const;
+	int calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) const;
 	void clearCultureDistanceCache();
-	int cultureDistance(int iDX, int iDY) const;
+	int cultureDistance(const CvPlot& plot) const;
 
 	void clearModifierTotals();
 	void recalculateModifiers();
@@ -1903,13 +1903,13 @@ protected:
 	int*	m_aiCommerceRank;
 	bool*	m_abCommerceRankValid;
 
-	mutable std::map<int,int> m_aCultureDistances;
+	mutable std::map<const CvPlot*,int> m_aCultureDistances;
 
 	void doGrowth();
 	void doCulture();
-	void doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate);
+	void doPlotCulture(PlayerTypes ePlayer, int iCultureRate);
 	void decayCulture();
-	int cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int distanceFromSource);
+	static int cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int distanceFromSource);
 	void doProduction(bool bAllowNoProduction);
 	void doDecay();
 	void doReligion();

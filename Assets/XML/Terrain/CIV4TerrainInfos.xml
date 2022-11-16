@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4TerrainInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<TerrainInfos>
-		<!-- <iCultureDistance> slows down growth over tiles with Realistic Culture option on. 
-				Note this value stacks with regular distance, i.e. an entry of 1 means that 
+		<!-- <iCultureDistance> slows down growth over tiles with Realistic Culture option on.
+				Note this value stacks with regular distance, i.e. an entry of 1 means that
 				such tile won't be acquired until a second border expansion. Realistic Culture
 				has ~double the expansions though, which means an entry of 1 means, in effect,
 				there is a "regular" growth rate on the tile. Also stacks with features and

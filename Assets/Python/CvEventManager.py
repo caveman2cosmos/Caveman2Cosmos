@@ -1075,16 +1075,15 @@ class CvEventManager:
 		if iUnitW == mapUnitType["SPARTACUS"]:
 			# Capture 25%
 			if not GAME.getSorenRandNum(4, "Gods"):
-				CyPlotW = CyUnitW.plot()
-				iX = CyPlotW.getX()
-				iY = CyPlotW.getY()
-				CyUnitL.setXY(iX, iY, False, True, True)
-				CyUnitL.setDamage(100000, -1)
 
 				CyPlotL = CyUnitL.plot()
 				if not CyPlotL.isVisibleEnemyUnit(iPlayerW):
 					iX = CyPlotL.getX()
 					iY = CyPlotL.getY()
+				else:
+					CyPlotW = CyUnitW.plot()
+					iX = CyPlotW.getX()
+					iY = CyPlotW.getY()
 
 				GC.getPlayer(iPlayerW).initUnit(mapUnitType["GLADIATOR"], iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH).finishMoves()
 				# Message

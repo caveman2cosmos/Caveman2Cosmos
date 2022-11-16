@@ -6136,6 +6136,12 @@
 			<Type>EVENTTRIGGER_TOXCATL</Type>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_VOLCANO</Type>
+		</EventTriggerInfo>
+		<EventTriggerInfo>
+			<Type>EVENTTRIGGER_TORNADO</Type>
+		</EventTriggerInfo>
+		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_DISSIDENT_PRIEST</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_DISSIDENT_PRIEST</Text>

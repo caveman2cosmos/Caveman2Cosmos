@@ -1417,7 +1417,7 @@ void CvCity::doTurn()
 
 	// updating after plot culture ensures player always sees correct ownership on plot,
 	// but plot could technically wiggle back and forth during AI turns.
-	doPlotCulture(true, getOwner(), getCommerceRate(COMMERCE_CULTURE));
+	doPlotCulture(getOwner(), getCommerceRate(COMMERCE_CULTURE));
 
 	//	Force deferred plot group recalculation to happen now before we assess production
 	CvPlot::setDeferredPlotGroupRecalculationMode(false);
@@ -6453,24 +6453,18 @@ int CvCity::maxHurryPopulation() const
 }
 
 
-//	Unique index assuming dx, dy args are less than 500 ("relative close")
-//  Extra parems around (x), (y) needed: # statments are TEXT REPLACEMENT, not code execution
-#define	HASH_RELATIVE_CLOSE_DIST(x,y)	((x) + 1000 * (y))
-
 // We enter realistic culture here
-int CvCity::cultureDistance(int iDX, int iDY) const
+int CvCity::cultureDistance(const CvPlot& plot) const
 {
 	// Entry point for realistic culture. Tries to use cached value if possible,
-	// if not, must recalc everything in range. Not sure if cache is stored separately 
+	// if not, must recalc everything in range. Not sure if cache is stored separately
 	// for each city or just locally for the function whenever called?
 	// In either case need to recompute cache each turn because many things can change distance.
 	PROFILE_FUNC();
 
 	if (GC.getGame().isOption(GAMEOPTION_REALISTIC_CULTURE_SPREAD))
 	{
-		int plotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY);
-
-		std::map<int, int>::const_iterator itr = m_aCultureDistances.find(plotIndex);
+		std::map<const CvPlot*, int>::const_iterator itr = m_aCultureDistances.find(&plot);
 
 		if (itr == m_aCultureDistances.end())
 		{
@@ -6478,14 +6472,14 @@ int CvCity::cultureDistance(int iDX, int iDY) const
 			// is in a loop of distance greater than coord offset
 			recalculateCultureDistances(std::max(0, (int)getCultureLevel()));
 
-			return m_aCultureDistances[plotIndex];
+			return m_aCultureDistances[&plot];
 		}
 		else
 		{
 			return itr->second;
 		}
 	}
-	return plotDistance(0, 0, iDX, iDY);
+	return plotDistance(getX(), getY(), plot.getX(), plot.getY());
 }
 
 void CvCity::recalculateCultureDistances(int iMaxDistance) const
@@ -6493,22 +6487,16 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 	// This function does some special checks for tiles adjacent to city,
 	// then (inefficiently, atm) calls calculateCultureDistance to compute specific tiles
 	PROFILE_FUNC();
-	
-	int plotIndex = 0;
 
 	// if the point is within one square of the city center
-	for (int iDX = -1; iDX <= 1; iDX++)
+	foreach_(const CvPlot* plotX, plots(NUM_CITY_PLOTS_1))
 	{
-		for (int iDY = -1; iDY <= 1; iDY++)
-		{
-			plotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY);
-			// Center has 0 distance to helps city tile itself have more culture
-			if (iDY == 0 && iDX == 0) m_aCultureDistances[plotIndex] = 0;
-			// If 1 tile start is off, the rest in range 1 have distance 1, no modifiers
-			else if (!GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING)) m_aCultureDistances[plotIndex] = 1;
-			// If 1 tile start is on and are vertical or adjacent from core, then distance 1. Leftovers need calculating.
-			else if (iDY == 0 || iDX == 0) m_aCultureDistances[plotIndex] = 1;
-		}
+		// Center has 0 distance to helps city tile itself have more culture
+		if (getX() == plotX->getX() && getY() == plotX->getY()) m_aCultureDistances[plotX] = 0;
+		// If 1 tile start is off, the rest in range 1 have distance 1, no modifiers
+		else if (!GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING)) m_aCultureDistances[plotX] = 1;
+		// If 1 tile start is on and are vertical or adjacent from core, then distance 1. Leftovers need calculating.
+		else if (getX() == plotX->getX() || getY() == plotX->getY()) m_aCultureDistances[plotX] = 1;
 	}
 
 	// Blaze: Spiraling outward from center (style of getCityIndexPlot) is more efficient if perf issues exist;
@@ -6522,38 +6510,34 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 		(iMaxDistance > 0 && GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING)));
 
 	int numLoops = 0;
-	int iNewValue = 0;
 	// as long as there are changes during the last iteration
 	while (bHasChanged)
 	{
 		// reset the has changed variable to note a new loop cycle has begun
 		bHasChanged = false;
 
-		for (int iDX = -iMaxDistance; iDX <= iMaxDistance; iDX++)
+		foreach_(const CvPlot* plotX, plot()->rect(iMaxDistance, iMaxDistance))
 		{
-			for (int iDY = -iMaxDistance; iDY <= iMaxDistance; iDY++)
+			// Some tiles at center should not be calculated with formula (as they already are defined above):
+			if (plotDistance(getX(), getY(), plotX->getX(), plotX->getY()) < 2 &&
+				// Regular realistic culture, with any adjacency to city, and
+				(!GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING) ||
+				// 1-tile-start with cardinal adjacency to city
+				getX() == plotX->getX() || getY() == plotX->getY()))
 			{
-				// Some tiles at center should not be calculated with formula (as they already are defined above):
-				// 1-tile-start with cardinal adjacency to city, and
-				if ((GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING) && (abs(iDX) + abs(iDY) < 2)) ||
-					// regular realistic culture, with any adjacency to city
-					(!GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING) && (abs(iDX) < 2 && abs(iDY) < 2)))
-				{
-					// This is a slightly cursed function.
-					continue;
-				}
-				plotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY);
-				// recalculate the value to determine if it has changed
-				iNewValue = calculateCultureDistance(iDX, iDY, iMaxDistance);
+				// This is a slightly cursed function.
+				continue;
+			}
+			// recalculate the value to determine if it has changed
+			const int iNewValue = calculateCultureDistance(plotX, iMaxDistance);
 
-				// if it has changed, save the value and mark that
-				//   ALL values (!) should be recomputed since they
-				//   may depend on this value
-				if (m_aCultureDistances[plotIndex] != iNewValue)
-				{
-					m_aCultureDistances[plotIndex] = iNewValue;
-					bHasChanged = true;
-				}
+			// if it has changed, save the value and mark that
+			//   ALL values (!) should be recomputed since they
+			//   may depend on this value
+			if (m_aCultureDistances[plotX] != iNewValue)
+			{
+				m_aCultureDistances[plotX] = iNewValue;
+				bHasChanged = true;
 			}
 		}
 		numLoops++;
@@ -6564,18 +6548,15 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 	}
 }
 
-int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
+int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) const
 {
 	// This function is the meat of Realistic Culture, determines extra distance/cost for tiles.
 	// Each point of distance corresponds 1:1 with level of city culture to reach it.
 	PROFILE_FUNC();
 
-	// find the current plot and the distance to it
-	const CvPlot* mainPlot = plotXY(getX(), getY(), iDX, iDY);
-
 	// if the plot distance is greater than the maximum desired plot distance
 	//  or if the plot does not exist, then the plot distance is maximal
-	if (plotDistance(0, 0, iDX, iDY) > iMaxDistance || mainPlot == NULL) return MAX_INT;
+	if (plotDistance(getX(), getY(), mainPlot->getX(), mainPlot->getY()) > iMaxDistance) return MAX_INT;
 
 	// Calculate terrain distance necessary before neighbors, because bonus presence can
 	// remove any combination of terrain and river crossing penalties; chosing which neighbor
@@ -6599,7 +6580,7 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 		if (mainPlot->isWater())
 		{
 			if (!GET_TEAM(getTeam()).isTerrainTrade(mainPlot->getTerrainType())) terrainDistance += 2;
-		}	
+		}
 	}
 
 	if (mainPlot->getFeatureType() != NO_FEATURE)
@@ -6622,9 +6603,6 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 		4: Greater river penalty (+1 each) for lacking river trade, bridge building */
 
 	int distance = MAX_INT;
-	int netDistanceModifier = 0;
-	int neighborPlotIndex = 0;
-	int neighborDist = 0;
 	const int extraRiverPenalty = !GET_TEAM(getTeam()).isBridgeBuilding() + !GET_TEAM(getTeam()).isRiverTrade();
 	const bool hasBonus = mainPlot->getBonusType(getTeam()) != NO_BONUS;
 
@@ -6653,46 +6631,16 @@ int CvCity::calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const
 	}
 	*/
 
-	// Annoying to update version:
-	// East
-	neighborPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX + 1, iDY);
-	neighborDist = m_aCultureDistances[neighborPlotIndex];
-	if (neighborDist != 0 && neighborDist != MAX_INT)
+	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
 	{
-		netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(DIRECTION_EAST) * (1 + extraRiverPenalty);
-		netDistanceModifier = netDistanceModifier / (1 + hasBonus) - hasBonus;
-		neighborDist += 1 + std::max(0, netDistanceModifier);
-		if (neighborDist < distance) distance = neighborDist;
-	}
-	// South
-	neighborPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY - 1);
-	neighborDist = m_aCultureDistances[neighborPlotIndex];
-	if (neighborDist != 0 && neighborDist != MAX_INT)
-	{
-		netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(DIRECTION_SOUTH) * (1 + extraRiverPenalty);
-		netDistanceModifier = netDistanceModifier / (1 + hasBonus) - hasBonus;
-		neighborDist += 1 + std::max(0, netDistanceModifier);
-		if (neighborDist < distance) distance = neighborDist;
-	}
-	// West
-	neighborPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX - 1, iDY);
-	neighborDist = m_aCultureDistances[neighborPlotIndex];
-	if (neighborDist != 0 && neighborDist != MAX_INT)
-	{
-		netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(DIRECTION_WEST) * (1 + extraRiverPenalty);
-		netDistanceModifier = netDistanceModifier / (1 + hasBonus) - hasBonus;
-		neighborDist += 1 + std::max(0, netDistanceModifier);
-		if (neighborDist < distance) distance = neighborDist;
-	}
-	// North
-	neighborPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX, iDY + 1);
-	neighborDist = m_aCultureDistances[neighborPlotIndex];
-	if (neighborDist != 0 && neighborDist != MAX_INT)
-	{
-		netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(DIRECTION_NORTH) * (1 + extraRiverPenalty);
-		netDistanceModifier = netDistanceModifier / (1 + hasBonus) - hasBonus;
-		neighborDist += 1 + std::max(0, netDistanceModifier);
-		if (neighborDist < distance) distance = neighborDist;
+		int neighborDist = m_aCultureDistances[adjacentPlot];
+		if (neighborDist != 0 && neighborDist != MAX_INT)
+		{
+			int netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (1 + extraRiverPenalty);
+			netDistanceModifier = netDistanceModifier / (1 + hasBonus) - hasBonus;
+			neighborDist += 1 + std::max(0, netDistanceModifier);
+			if (neighborDist < distance) distance = neighborDist;
+		}
 	}
 
 	// at this point, we are done; distance still might be MAX_INT if not adjacent to others.
@@ -6768,7 +6716,7 @@ int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
 			iRisk /= 100;
 		}
 	}
-	return iRisk;	
+	return iRisk;
 }
 
 
@@ -9487,7 +9435,7 @@ void CvCity::updateFeatureHappiness(bool bLimited)
 	int iNewFeatureGoodHappiness = 0;
 	int iNewFeatureBadHappiness = 0;
 
-	foreach_(CvPlot* pLoopPlot, plots())
+	foreach_(const CvPlot* pLoopPlot, plots())
 	{
 		const FeatureTypes eFeature = pLoopPlot->getFeatureType();
 
@@ -12992,7 +12940,7 @@ void CvCity::setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, 
 
 		updateCultureLevel(bUpdatePlotGroups);
 
-		if (bPlots) doPlotCulture(true, eIndex, 0);
+		if (bPlots) doPlotCulture(eIndex, 0);
 	}
 
 	if (!bNationalSet && iOldCulture < iNewValue)
@@ -16140,11 +16088,11 @@ void CvCity::doCulture()
 }
 
 
-void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
+void CvCity::doPlotCulture(PlayerTypes ePlayer, int iCultureRate)
 {
 	PROFILE_FUNC();
 
-	FAssert(NO_PLAYER != ePlayer);
+	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
 
 	const int iCulture = getCultureTimes100(ePlayer);
 
@@ -16174,26 +16122,21 @@ void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
 	// Put culture onto plots from the city, even if "0" culture output,
 	// to prevent loss thru decay if 0 culture and not realistic culture.
 	clearCultureDistanceCache();
-	int iCultureDistance = 0;
-	for (int iDX = -eCultureLevel; iDX <= eCultureLevel; iDX++)
+
+	foreach_(CvPlot* plotX, plot()->rect((int)eCultureLevel, (int)eCultureLevel))
 	{
-		for (int iDY = -eCultureLevel; iDY <= eCultureLevel; iDY++)
+		const int iCultureDistance = cultureDistance(*plotX);
+
+		if (iCultureDistance <= eCultureLevel && plotX->isPotentialCityWorkForArea(area()))
 		{
-			iCultureDistance = cultureDistance(iDX, iDY);
-
-			if (iCultureDistance <= eCultureLevel)
-			{
-				CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-				if (pLoopPlot != NULL && pLoopPlot->isPotentialCityWorkForArea(area()))
-				{
-					// changeCulture includes a check to culture value upward
-					// to ensure plot cannot be lost thru decay even if culture gain is too small
-					pLoopPlot->changeCulture(ePlayer,
-						cultureDistanceDropoff(iCultureRate, eCultureLevel, iCultureDistance),
-						(bUpdate || !(pLoopPlot->isOwned())));
-				}
-			}
+			// changeCulture includes a check to culture value upward
+			// to ensure plot cannot be lost thru decay even if culture gain is too small
+			plotX->changeCulture(
+				ePlayer,
+				cultureDistanceDropoff(iCultureRate, eCultureLevel, iCultureDistance),
+				// Toffer - Only update plot ownership when the culture of non-owners increase.
+				plotX->getOwner() != ePlayer
+			);
 		}
 	}
 }
@@ -16217,7 +16160,7 @@ int CvCity::cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int d
 	modifiedCultureGain *= iDensityFactor / 100;
 	// The rest is flat base culture rate.
 	modifiedCultureGain += baseCultureGain * (100 - iDensityFactor) / 100;
-	
+
 	modifiedCultureGain = std::max(modifiedCultureGain, 1);
 	return modifiedCultureGain;
 }
