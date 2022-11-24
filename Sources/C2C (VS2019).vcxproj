@@ -189,6 +189,7 @@
     </BuildLog>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BaseUnitAi.cpp" />
     <ClCompile Include="CityOutputHistory.cpp" />
     <ClCompile Include="CounterSet.cpp" />
     <ClCompile Include="CvAllocator.cpp" />
@@ -356,6 +357,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm2.h" />
+    <ClInclude Include="BaseUnitAi.h" />
     <ClInclude Include="BetterBTSAI.h" />
     <ClInclude Include="CityOutputHistory.h" />
     <ClInclude Include="copy_iterator.h" />

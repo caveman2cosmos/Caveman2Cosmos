@@ -16155,7 +16155,14 @@ int CvCity::cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int d
 	const int iDensityFactor = GC.getCITY_CULTURE_DENSITY_FACTOR();
 
 	// 1->0 multiplier on base rate as distance from source goes 0->max
-	int modifiedCultureGain = baseCultureGain * (rangeOfSource - distanceFromSource) / std::max(1, rangeOfSource);
+	// int modifiedCultureGain = baseCultureGain * (rangeOfSource - distanceFromSource) / std::max(1, rangeOfSource);
+	// 
+
+	int midPoint = 3;
+	double factor = 2.718281828;
+	
+	int modifiedCultureGain = baseCultureGain / int((intPow(1 + factor,(distanceFromSource - midPoint))));
+	
 	// Some fraction 0-100 should be distance-modified.
 	modifiedCultureGain *= iDensityFactor / 100;
 	// The rest is flat base culture rate.
