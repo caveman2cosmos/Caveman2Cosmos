@@ -27630,12 +27630,13 @@ int CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdr
 {
 	PROFILE_FUNC();
 	if (pLoserUnit == NULL)
+	{
+		FErrorMsg("This can maybe occur, investigate when time allows");
 		return 0; // this is not ideal, but if unit is deleted before this calculation we dont want the ctd
-	if (!pLoserUnit->canDefend())
-		return 0; // no influence from worker capture
+	}
 
-	if (isAnimal() || pLoserUnit->isAnimal())
-		return 0;
+	if (!pLoserUnit->canDefend() || isAnimal() || pLoserUnit->isAnimal())
+		return 0; // no influence from worker capture or animal kill
 
 	if (isAlwaysHostile(plot()) || pLoserUnit->isAlwaysHostile(pLoserUnit->plot()))
 		return 0;
@@ -27649,7 +27650,10 @@ int CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdr
 	const PlayerTypes pLoserPlayer = pLoserUnit->getOwner();
 
 	if (pLoserPlayer < 0 || pLoserPlayer > MAX_PLAYERS)
+	{
+		FErrorMsg("This can maybe occur, investigate when time allows");
 		return 0; // Bad unit owner TODO find out why gets passed in
+	}
 
 	CvPlot* pWinnerPlot = plot();
 	CvPlot* pLoserPlot = pLoserUnit->plot();

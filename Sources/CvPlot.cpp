@@ -8025,6 +8025,12 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 
+	if (iNewValue == 0 && getPlotCity() != NULL && getPlotCity()->getOwner() == eIndex)
+	{
+		FErrorMsg("Trace: Attempting to set plot culture to zero for player that owns the city on the plot");
+		iNewValue = 1;
+	}
+
 	if (getCulture(eIndex) != iNewValue)
 	{
 		std::vector<std::pair<PlayerTypes, int> >::iterator itr;
@@ -10263,9 +10269,9 @@ void CvPlot::decayCulture()
 	// Perhaps 10% plus 5% per every 100 culture or something capping out at 50%, need to examine.
 	// Gotta avoid 'welfare cliffs' though.
 	// NOTE: If decay function is altered, gotta change minimumNonDecayCulture.
-	int decayPercent = GC.getTILE_CULTURE_DECAY_PERCENT();
-	decayPercent = decayPercent * 100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-	int decayFlat = GC.getTILE_CULTURE_DECAY_CONSTANT();
+
+	const int decayPercent = GC.getTILE_CULTURE_DECAY_PERCENT() * 100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+	const int decayFlat = GC.getTILE_CULTURE_DECAY_CONSTANT();
 
 	for (int playerNum = 0; playerNum < MAX_PLAYERS; playerNum++)
 	{
