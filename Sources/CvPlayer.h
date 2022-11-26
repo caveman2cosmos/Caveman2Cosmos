@@ -16,7 +16,7 @@
 #include "CvSelectionGroupAI.h"
 #include "CvTalkingHeadMessage.h"
 #include "CvUnitList.h"
-#include "CvUnitAI.h"
+#include "CvUnit.h"
 #include "index_iterator_base.h"
 #include "LinkedList.h"
 
@@ -1947,11 +1947,16 @@ protected:
 
 	CLinkList<CvWString> m_cityNames;
 
-	std::vector<CLinkList<int>*>						  m_groupCycles;
-	std::vector<FFreeListTrashArray<CvPlotGroup>*>		  m_plotGroups;
-	std::vector<FFreeListTrashArray<CvCityAI>*>			  m_cities;
-	std::vector<FFreeListTrashArray<CvUnitAI>*>			  m_units;
-	std::vector<FFreeListTrashArray<CvSelectionGroupAI>*> m_selectionGroups;
+	class CvUnitCreator
+	{
+	public: static CvUnit* create();
+	};
+
+	std::vector<CLinkList<int>*>								m_groupCycles;
+	std::vector<FFreeListTrashArray<CvPlotGroup>*>				m_plotGroups;
+	std::vector<FFreeListTrashArray<CvCityAI>*>					m_cities;
+	std::vector<FFreeListTrashArray<CvUnit, CvUnitCreator>*>	m_units;
+	std::vector<FFreeListTrashArray<CvSelectionGroupAI>*>		m_selectionGroups;
 
 	FFreeListTrashArray<EventTriggeredData> m_eventsTriggered;
 	CvEventMap m_mapEventsOccured;
@@ -1987,7 +1992,7 @@ protected:
 public:
 	inline bool isTempUnit(const CvUnit* pUnit) const
 	{
-		return (pUnit == m_pTempUnit || pUnit->AI_getBirthmark() == UNIT_BIRTHMARK_TEMP_UNIT);
+		return (pUnit == m_pTempUnit || pUnit->AI()->getBirthmark() == UNIT_BIRTHMARK_TEMP_UNIT);
 	}
 	inline const std::map<int, BonusTypes>& getGuardableResourcePlots() const
 	{

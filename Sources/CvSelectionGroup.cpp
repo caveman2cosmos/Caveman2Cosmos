@@ -1351,7 +1351,7 @@ bool CvSelectionGroup::startMission()
 					case MISSION_ASSASSINATE:
 						if (pLoopUnit->canAmbush(plot(), true))
 						{
-							const int iUnitValue1 = pLoopUnit->AI_attackOdds(plot(), false, 0, true);
+							const int iUnitValue1 = pLoopUnit->AI()->attackOdds(plot(), false, 0, true);
 							if (iUnitValue1 >= iBestUnitValue)
 							{
 								pBestUnit = pLoopUnit;
@@ -1363,7 +1363,7 @@ bool CvSelectionGroup::startMission()
 					case MISSION_AMBUSH:
 						if (pLoopUnit->canAmbush(plot(), false))
 						{
-							const int iUnitValue2 = pLoopUnit->AI_attackOdds(plot(), false, 0, false);
+							const int iUnitValue2 = pLoopUnit->AI()->attackOdds(plot(), false, 0, false);
 							if (iUnitValue2 >= iBestUnitValue)
 							{
 								pBestUnit = pLoopUnit;
@@ -2274,7 +2274,7 @@ bool CvSelectionGroup::checkMoveSafety(int iX, int iY, int iFlags)
 
 	if ( (iFlags &  MOVE_AVOID_ENEMY_UNITS) != 0 )
 	{
-		return !((CvUnitAI*)getHeadUnit())->exposedToDanger(pDestPlot, 80);
+		return !getHeadUnit()->AI()->exposedToDanger(pDestPlot, 80);
 	}
 
 	return true;
@@ -2428,7 +2428,7 @@ bool CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes eInterfaceMode)
 			}
 			case INTERFACEMODE_ROUTE_TO:
 			{
-				if (pLoopUnit->AI_getUnitAIType() == UNITAI_WORKER || pLoopUnit->AI_getUnitAIType() == UNITAI_WORKER_SEA)
+				if (pLoopUnit->AI()->getUnitAIType() == UNITAI_WORKER || pLoopUnit->AI()->getUnitAIType() == UNITAI_WORKER_SEA)
 				{
 					if (pLoopUnit->canBuildRoute())
 					{
@@ -3186,7 +3186,7 @@ bool CvSelectionGroup::calculateIsStranded()
 
 	if (plot()->area()->getNumCities() > 0)
 	{
-		if (headUnit->AI_getUnitAIType() == UNITAI_SPY)
+		if (headUnit->AI()->getUnitAIType() == UNITAI_SPY)
 		{
 			return false;
 		}
@@ -3250,7 +3250,7 @@ bool CvSelectionGroup::isInvisible(TeamTypes eTeam) const
 
 int CvSelectionGroup::countNumUnitAIType(UnitAITypes eUnitAI) const
 {
-	return NO_UNITAI == eUnitAI ? getNumUnits() : algo::count_if(units(), CvUnit::fn::AI_getUnitAIType() == eUnitAI);
+	return NO_UNITAI == eUnitAI ? getNumUnits() : algo::count_if(units(), CvUnit::fn::getUnitAIType() == eUnitAI);
 }
 
 
@@ -3685,7 +3685,7 @@ void CvSelectionGroup::groupMove(CvPlot* pPlot, bool bCombat, CvUnit* pCombatUni
 					{
 						char szOut[1024];
 						CvWString szTempString;
-						getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+						getUnitAIString(szTempString, pHeadUnit->AI()->getUnitAIType());
 						sprintf(szOut, "Unit stuck in loop: %S(%S)[%d, %d] (%S)\n", pHeadUnit->getName().GetCString(), GET_PLAYER(pHeadUnit->getOwner()).getName(),
 							pHeadUnit->getX(), pHeadUnit->getY(), szTempString.GetCString());
 						gDLL->messageControlLog(szOut);
@@ -4902,7 +4902,7 @@ void CvSelectionGroup::clearUnits()
 
 bool CvSelectionGroup::hasUnitOfAI(UnitAITypes eUnitAI) const
 {
-	return algo::any_of(units(), CvUnit::fn::AI_getUnitAIType() == eUnitAI);
+	return algo::any_of(units(), CvUnit::fn::getUnitAIType() == eUnitAI);
 }
 
 int	CvSelectionGroup::getWorstDamagePercent(UnitCombatTypes eIgnoreUnitCombat) const
@@ -4951,9 +4951,9 @@ bool CvSelectionGroup::addUnit(CvUnit* pUnit, bool bMinimalChange)
 	{
 		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 
-		if (!bAdded && ((pUnit->AI_groupFirstVal() > pLoopUnit->AI_groupFirstVal()) ||
-			  ((pUnit->AI_groupFirstVal() == pLoopUnit->AI_groupFirstVal()) &&
-				 (pUnit->AI_groupSecondVal() > pLoopUnit->AI_groupSecondVal()))))
+		if (!bAdded && ((pUnit->AI()->groupFirstVal() > pLoopUnit->AI()->groupFirstVal()) ||
+			  ((pUnit->AI()->groupFirstVal() == pLoopUnit->AI()->groupFirstVal()) &&
+				 (pUnit->AI()->groupSecondVal() > pLoopUnit->AI()->groupSecondVal()))))
 		{
 			m_units.insertBefore(pUnit->getIDInfo(), pUnitNode);
 			bAdded = true;
@@ -5113,20 +5113,22 @@ void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 
 			if (pLoopUnit != NULL)
 			{
-				const UnitAITypes eUnitAI = pLoopUnit->AI_getUnitAIType();
+				const UnitAITypes eUnitAI = pLoopUnit->AI()->getUnitAIType();
 
 				// if the unitAIs are different, and the loop unit has a higher val, then the group unitAI would change
 				// change this UnitAI to the old group UnitAI if possible
 				CvUnit* pNewHeadUnit = pSelectionGroup->getHeadUnit();
 				UnitAITypes eNewHeadUnitAI = pSelectionGroup->getHeadUnitAI();
-				if (pNewHeadUnit!= NULL && eUnitAI != eNewHeadUnitAI && pLoopUnit->AI_groupFirstVal() > pNewHeadUnit->AI_groupFirstVal())
+				if (pNewHeadUnit!= NULL && eUnitAI != eNewHeadUnitAI && pLoopUnit->AI()->groupFirstVal() > 
+					pNewHeadUnit->AI()->groupFirstVal())
 				{
-					// non-zero AI_unitValue means that this UnitAI is valid for this unit (that is the check used everywhere)
+					// non-zero AI_unitValue means that this UnitAI is valid for this unit (that is the check used 
+					// everywhere)
 					if (kPlayer.AI_unitValue(pLoopUnit->getUnitType(), eNewHeadUnitAI, NULL) > 0)
 					{
-						FAssert(pLoopUnit->AI_getUnitAIType() != UNITAI_HUNTER);
+						FAssert(pLoopUnit->AI()->getUnitAIType() != UNITAI_HUNTER);
 						// this will remove pLoopUnit from the current group
-						pLoopUnit->AI_setUnitAIType(eNewHeadUnitAI);
+						pLoopUnit->AI()->setUnitAIType(eNewHeadUnitAI);
 
 						bChangedUnitAI = true;
 					}
@@ -5149,7 +5151,7 @@ void CvSelectionGroup::mergeIntoGroup(CvSelectionGroup* pSelectionGroup)
 namespace {
 	bool isValidHeadUnit(const CvUnit* ignoreUnit, UnitAITypes requiredAI, const CvUnit* unit)
 	{
-		return unit != ignoreUnit && unit->AI_getUnitAIType() == requiredAI;
+		return unit != ignoreUnit && unit->AI()->getUnitAIType() == requiredAI;
 	}
 }
 
@@ -5177,7 +5179,7 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 		return NULL;
 	}
 
-	const UnitAITypes eOldHeadAI = pOldHeadUnit->AI_getUnitAIType();
+	const UnitAITypes eOldHeadAI = pOldHeadUnit->AI()->getUnitAIType();
 
 	// if pNewHeadUnit NULL, then we will use our current head to head the new split group of target size
 	if (pNewHeadUnit == NULL)
@@ -5224,7 +5226,7 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 	UnitGrouping unitGroups;
 	foreach_(CvUnit* unit, units())
 	{
-		unitGroups[unit->AI_getUnitAIType()].push_back(unit);
+		unitGroups[unit->AI()->getUnitAIType()].push_back(unit);
 	}
 
 	const int sourceGroupSize = getNumUnits();
@@ -5337,7 +5339,7 @@ CvUnit* CvSelectionGroup::getUnitAt(int index) const
 UnitAITypes CvSelectionGroup::getHeadUnitAI() const
 {
 	const CvUnit* pHeadUnit = getHeadUnit();
-	return pHeadUnit ? pHeadUnit->AI_getUnitAIType() : NO_UNITAI;
+	return pHeadUnit ? pHeadUnit->AI()->getUnitAIType() : NO_UNITAI;
 }
 
 
@@ -5921,7 +5923,8 @@ int CvSelectionGroup::getStrength() const
 
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
-		iStrength += pLoopUnit->AI_genericUnitValueTimes100(UNITVALUE_FLAGS_DEFENSIVE | UNITVALUE_FLAGS_OFFENSIVE);
+		iStrength += pLoopUnit->AI()->genericUnitValueTimes100(UNITVALUE_FLAGS_DEFENSIVE | 
+			UNITVALUE_FLAGS_OFFENSIVE);
 	}
 
 	return iStrength/100;
@@ -6001,7 +6004,7 @@ bool CvSelectionGroup::findNewLeader(UnitAITypes eAIType)
 	{
 		m_bIsChoosingNewLeader = true;
 
-		pBestUnit->AI_setUnitAIType(eAIType);
+		pBestUnit->AI()->setUnitAIType(eAIType);
 
 		m_bIsChoosingNewLeader = false;
 
@@ -6018,7 +6021,7 @@ namespace {
 		// Inhibit workers from this function since some sacrifice themselves
 		// (which would require much more programming to manage for the ai)
 		// and worker merging is only a way for players to manage less units really.
-		return unit->AI_getUnitAIType() != UNITAI_WORKER && unit->canMerge(true);
+		return unit->AI()->getUnitAIType() != UNITAI_WORKER && unit->canMerge(true);
 	}
 }
 
@@ -6051,7 +6054,7 @@ int CvSelectionGroup::getCargoSpace() const
 
 	foreach_(const CvUnit* unitX, units())
 	{
-		if (unitX->AI_getUnitAIType() == eUnitAI)
+		if (unitX->AI()->getUnitAIType() == eUnitAI)
 		{
 			iCargoCount += unitX->cargoSpace();
 		}
@@ -6068,7 +6071,7 @@ int CvSelectionGroup::getCargoSpaceAvailable(SpecialUnitTypes eSpecialCargo, Dom
 
 	foreach_(const CvUnit* unitX, units())
 	{
-		if (unitX->AI_getUnitAIType() == eUnitAI)
+		if (unitX->AI()->getUnitAIType() == eUnitAI)
 		{
 			iCargoCount += unitX->cargoSpaceAvailable(eSpecialCargo, eDomainCargo);
 		}
@@ -6082,7 +6085,7 @@ int CvSelectionGroup::countSeeInvisibleActive(UnitAITypes eUnitAI, InvisibleType
 
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
-		if (pLoopUnit->AI_getUnitAIType() == eUnitAI)
+		if (pLoopUnit->AI()->getUnitAIType() == eUnitAI)
 		{
 			if (GC.getGame().isOption(GAMEOPTION_HIDE_AND_SEEK))
 			{
@@ -6109,7 +6112,7 @@ int CvSelectionGroup::countSeeInvisibleActive(UnitAITypes eUnitAI, InvisibleType
 
 void CvSelectionGroup::releaseUnitAIs(UnitAITypes eUnitAI)
 {
-	algo::for_each(units() | filtered(CvUnit::fn::AI_getUnitAIType() == eUnitAI),
+	algo::for_each(units() | filtered(CvUnit::fn::getUnitAIType() == eUnitAI),
 		CvUnit::fn::joinGroup(NULL)
 	);
 }

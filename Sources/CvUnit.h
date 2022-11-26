@@ -9,6 +9,7 @@
 #include "CvGameObject.h"
 #include "CvProperties.h"
 #include "CvUnitComponents.h"
+#include "ICvUnitAI.h"
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
@@ -441,6 +442,8 @@ public:
 class CvUnit : public CvDLLEntity
 {
 public:
+	static CvUnit* createDefault(bool bIsDummy = false);
+
 	CvUnit(bool bIsDummy = false);
 	virtual ~CvUnit();
 
@@ -1680,34 +1683,9 @@ public:
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
 
-	virtual void AI_init(UnitAITypes eUnitAI, int iBirthmark) = 0;
-	virtual void AI_uninit() = 0;
-	virtual void AI_reset(UnitAITypes eUnitAI = NO_UNITAI, bool bConstructor = false) = 0;
-	virtual bool AI_update() = 0;
-	virtual bool AI_follow() = 0;
-	virtual bool AI_upgrade() = 0;
-	virtual bool AI_promote() = 0;
-	virtual int AI_groupFirstVal() const = 0;
-	virtual int AI_groupSecondVal() const = 0;
-	virtual int AI_attackOdds(const CvPlot* pPlot, bool bPotentialEnemy, CvUnit** ppDefender = NULL, bool bAssassinate = false) = 0;
-	//	Variant to test a specific defender AS IF it was in the specified plot
-	virtual int AI_attackOddsAtPlot(const CvPlot* pPlot, CvUnit* pDefender, bool modifyPredictedResults = false) = 0;
-	virtual bool AI_bestCityBuild(const CvCity* pCity, CvPlot** ppBestPlot = NULL, BuildTypes* peBestBuild = NULL, const CvPlot* pIgnorePlot = NULL, const CvUnit* pUnit = NULL) = 0;
-	virtual bool AI_isCityAIType() const = 0;
-	virtual UnitAITypes AI_getUnitAIType() const = 0;
-	virtual void AI_setUnitAIType(UnitAITypes eNewValue) = 0;
-	virtual int AI_sacrificeValue(const CvPlot* pPlot) const = 0;
-	virtual bool AI_isAwaitingContract() const = 0;
-	virtual bool AI_isCityGarrison(const CvCity* pCity) const = 0;
-	virtual void AI_setAsGarrison(const CvCity* pCity) = 0;
-	virtual bool AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITypes eTransportedUnitAI = NO_UNITAI, int iMinCargo = -1, int iMinCargoSpace = -1, int iMaxCargoSpace = -1, int iMaxCargoOurUnitAI = -1, int iFlags = 0, int iMaxPath = MAX_INT, int iMaxTransportPath = MAX_INT) = 0;
-	virtual void AI_flushValueCache() = 0;
-	virtual int	AI_genericUnitValueTimes100(UnitValueFlags eFlags) const = 0;
-	virtual int AI_getBirthmark() const = 0;
-	virtual void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd) = 0;
-	virtual bool isWaitingOnUnitAI(int iIndex) const = 0;
-	virtual bool isWaitingOnUnitAIAny() const = 0;
-	virtual bool processContracts(int iMinPriority = 0) = 0;
+	ICvUnitAI* AI() const;
+
+	UnitAITypes getUnitAIType() const;
 
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
 
@@ -2030,6 +2008,8 @@ protected:
 	bool m_bIsBuildUp;
 	bool m_bIsReligionLocked;
 
+	ICvUnitAI* m_ai;
+
 	PlayerTypes m_eOwner;
 	PlayerTypes m_eCapturingPlayer;
 	IDInfo m_eCapturingUnit;
@@ -2074,6 +2054,12 @@ protected:
 public:
 	bool canAirStrike(const CvPlot* pPlot) const;
 	bool airStrike(CvPlot* pPlot);
+
+	void getDefenderCombatValues(const CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower, int& iTheirOdds,
+		int& iTheirStrength, int& iOurDamage, int& iTheirDamage, CombatDetails* pTheirDetails, const CvUnit* pDefender) const;
+
+	bool isCombatVisible(const CvUnit* pDefender) const;
+
 protected:
 	// ! Dale
 
@@ -2083,10 +2069,6 @@ protected:
 	void increaseBattleRounds( CvBattleDefinition & battleDefinition ) const;
 	int computeWaveSize( bool bRangedRound, int iAttackerMax, int iDefenderMax ) const;
 
-	void getDefenderCombatValues(const CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower, int& iTheirOdds,
-		int& iTheirStrength, int& iOurDamage, int& iTheirDamage, CombatDetails* pTheirDetails, const CvUnit* pDefender) const;
-
-	bool isCombatVisible(const CvUnit* pDefender) const;
 	void resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition& kBattle, bool bSamePlot = false);
 	void resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionDefinition& kBattle);
 
@@ -2115,17 +2097,6 @@ public:
 
 	PromotionIterator getPromotionBegin();
 	PromotionIterator getPromotionEnd();
-
-	//	KOSHLING - inform the AI of unit losses so that it can adjust internal counts
-	virtual void AI_killed() = 0;
-	//	Set an override to the group head priority for this unit, to allow a unit that
-	//	would not nomally lead a stack to do so - priority will be preserved when other groups
-	//	joing one lead by a unit with an override, but reset if we join another group
-	virtual void AI_setLeaderPriority(int iPriority) = 0; //	 -1 means reset to default
-	virtual int AI_getPredictedHitPoints() const = 0;
-	virtual void AI_setPredictedHitPoints(int iPredictedHitPoints) = 0;
-	virtual bool AI_getHasAttacked() const = 0;
-	virtual int AI_beneficialPropertyValueToCity(const CvCity* pCity, PropertyTypes eProperty) const = 0;
 
 	bool isUsingDummyEntities() const;
 	static bool isDummyEntity(const CvEntity* entity);
@@ -3090,7 +3061,7 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, PlayerTypes, getOwner);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, UnitTypes, getUnitType);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, UnitCombatTypes, getUnitCombatType);
-		DECLARE_MAP_FUNCTOR_CONST(CvUnit, UnitAITypes, AI_getUnitAIType);
+		DECLARE_MAP_FUNCTOR_CONST(CvUnit, UnitAITypes, getUnitAIType);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, DomainTypes, getDomainType);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, int, getArea);
 		DECLARE_MAP_FUNCTOR_CONST(CvUnit, const CvArea*, area);

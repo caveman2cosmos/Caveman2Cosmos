@@ -197,6 +197,7 @@
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
     <ClCompile Include="CvSettlerAI.cpp" />
+    <ClCompile Include="CvUnitDefaultAI.cpp" />
     <ClCompile Include="CvValueService.cpp" />
     <ClCompile Include="CvWorkerAI.cpp" />
     <ClCompile Include="CvWorkerService.cpp" />
@@ -282,7 +283,6 @@
     <ClCompile Include="CvTeam.cpp" />
     <ClCompile Include="CvTeamAI.cpp" />
     <ClCompile Include="CvUnit.cpp" />
-    <ClCompile Include="CvUnitAI.cpp" />
     <ClCompile Include="CvUnitComponents.cpp" />
     <ClCompile Include="CvUnitFilters.cpp" />
     <ClCompile Include="CvUnitGrouping.cpp" />
@@ -374,6 +374,7 @@
     <ClInclude Include="GroupingParams.h" />
     <ClInclude Include="hash.h" />
     <ClInclude Include="CvBonusInfo.h" />
+    <ClInclude Include="ICvUnitAI.h" />
     <ClInclude Include="idinfo_iterator_base.h" />
     <ClInclude Include="CvMapExternal.h" />
     <ClInclude Include="CvMapInterfaceBase.h" />
@@ -478,7 +479,7 @@
     <ClInclude Include="CvTeam.h" />
     <ClInclude Include="CvTeamAI.h" />
     <ClInclude Include="CvUnit.h" />
-    <ClInclude Include="CvUnitAI.h" />
+    <ClInclude Include="CvUnitDefaultAI.h" />
     <ClInclude Include="CvUnitComponents.h" />
     <ClInclude Include="CvUnitFilters.h" />
     <ClInclude Include="CvUnitGrouping.h" />

@@ -1506,7 +1506,7 @@ bool PUF_isCityGarrison(const CvUnit* pUnit, int iData1, int iData2, const CvUni
 		}
 		else
 		{
-			const UnitAITypes eUnitAI = pUnit->AI_getUnitAIType();
+			const UnitAITypes eUnitAI = pUnit->AI()->getUnitAIType();
 
 			return !pUnit->noDefensiveBonus() && eUnitAI != UNITAI_ATTACK_CITY && eUnitAI != UNITAI_ATTACK;
 		}
@@ -1623,12 +1623,12 @@ bool PUF_isInjuredUnitCombatType(const CvUnit* pUnit, /*UnitCombatType*/int iDat
 bool PUF_isUnitAIType(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
 	FASSERT_NOT_NEGATIVE(iData1);
-	return (pUnit->AI_getUnitAIType() == iData1);
+	return (pUnit->AI()->getUnitAIType() == iData1);
 }
 
 bool PUF_isCityAIType(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	return pUnit->AI_isCityAIType();
+	return pUnit->AI()->isCityAIType();
 }
 
 bool PUF_isNotCityAIType(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)

@@ -101,9 +101,17 @@ bool CvUnit::isRealEntity(const CvEntity* entity)
 
 // Public Functions...
 #pragma warning( disable : 4355 )
+CvUnit* CvUnit::createDefault(bool bIsDummy)
+{
+	CvUnit* unit = new CvUnit(bIsDummy);
+	unit->m_ai = new CvUnitDefaultAI(unit);
+	return unit;
+}
 CvUnit::CvUnit(bool bIsDummy) : m_GameObject(this),
 m_Properties(this)
 {
+	m_ai = NULL;
+
 	m_aiExtraDomainModifier = new int[NUM_DOMAIN_TYPES];
 	m_aiExtraVisibilityIntensity = new int[GC.getNumInvisibleInfos()];
 	m_aiExtraInvisibilityIntensity = new int[GC.getNumInvisibleInfos()];
@@ -124,7 +132,8 @@ m_Properties(this)
 
 	if (g_dummyUnit == NULL && !bIsDummy)
 	{
-		g_dummyUnit = new CvUnitAI(true);
+		//g_dummyUnit = new CvUnitAI(true);
+		g_dummyUnit = CvUnit::createDefault(true);
 
 		if (GC.getENABLE_DYNAMIC_UNIT_ENTITIES())
 		{
@@ -346,7 +355,7 @@ void CvUnit::init(int iID, UnitTypes eUnit, UnitAITypes eUnitAI, PlayerTypes eOw
 	}
 	// Koshling -  moved this earlier to get unitAI set up so that
 	// constraint checking on the unitAI can work more uniformly
-	AI_init(eUnitAI, iBirthmark);
+	AI()->init(eUnitAI, iBirthmark);
 
 	if (eFacingDirection == NO_DIRECTION)
 		m_eFacingDirection = DIRECTION_SOUTH;
@@ -885,7 +894,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 
 		if (!bIdentityChange)
 		{
-			AI_reset(NO_UNITAI, true);
+			AI()->reset(NO_UNITAI, true);
 		}
 	}
 	m_pPlayerInvestigated = NO_PLAYER;
@@ -1701,7 +1710,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 	{
 		OutputDebugString(CvString::format("Unit %S of player %S killed\n", getName().GetCString(), owner.getCivilizationDescription(0)).c_str());
 
-		owner.AI_changeNumAIUnits(AI_getUnitAIType(), -1);
+		owner.AI_changeNumAIUnits(AI()->getUnitAIType(), -1);
 		if (isWorker())
 		{
 			CvCity* city = owner.getCity(m_worker->getAssignedCity());
@@ -1711,7 +1720,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 				city->setWorkerHave(getID(), false);
 			}
 		}
-		AI_killed(); // Update AI counts for this unit
+		AI()->killed(); // Update AI counts for this unit
 		//GC.getGame().logOOSSpecial(15, getID(), INVALID_PLOT_COORD, INVALID_PLOT_COORD);
 		setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true);
 
@@ -2357,8 +2366,8 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 	CombatDetails cdAttackerDetails;
 	CombatDetails cdDefenderDetails;
 
-	AI_setPredictedHitPoints(-1);
-	pDefender->AI_setPredictedHitPoints(-1);
+	AI()->setPredictedHitPoints(-1);
+	pDefender->AI()->setPredictedHitPoints(-1);
 	int iAttackerStrength = currCombatStr(NULL, NULL, &cdAttackerDetails);
 	int iAttackerFirepower = currFirepower(NULL, NULL);
 	int iDefenderStrength = 0;
@@ -6822,21 +6831,21 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 	switch (eAutomate)
 	{
 	case AUTOMATE_BUILD:
-		if ((AI_getUnitAIType() != UNITAI_WORKER) && (AI_getUnitAIType() != UNITAI_WORKER_SEA))
+		if ((AI()->getUnitAIType() != UNITAI_WORKER) && (AI()->getUnitAIType() != UNITAI_WORKER_SEA))
 		{
 			return false;
 		}
 		break;
 
 	case AUTOMATE_NETWORK:
-		if ((AI_getUnitAIType() != UNITAI_WORKER) || !canBuildRoute())
+		if ((AI()->getUnitAIType() != UNITAI_WORKER) || !canBuildRoute())
 		{
 			return false;
 		}
 		break;
 
 	case AUTOMATE_CITY:
-		if (AI_getUnitAIType() != UNITAI_WORKER)
+		if (AI()->getUnitAIType() != UNITAI_WORKER)
 		{
 			return false;
 		}
@@ -6881,7 +6890,7 @@ bool CvUnit::canAutomate(AutomateTypes eAutomate) const
 		break;
 
 	case AUTOMATE_RELIGION:
-		if (AI_getUnitAIType() != UNITAI_MISSIONARY)
+		if (AI()->getUnitAIType() != UNITAI_MISSIONARY)
 		{
 			return false;
 		}
@@ -7173,7 +7182,7 @@ void CvUnit::scrap()
 	if (gUnitLogLevel > 2)
 	{
 		CvWString szString;
-		getUnitAIString(szString, AI_getUnitAIType());
+		getUnitAIString(szString, AI()->getUnitAIType());
 		logBBAI("    %S scraps %S (%d) with %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), getName(0).GetCString(), getID(), szString.GetCString());
 	}
 
@@ -7267,7 +7276,7 @@ void CvUnit::gift(bool bTestTransport)
 
 	FAssertMsg(eNewOwner != NO_PLAYER, "plot()->getOwner() is not expected to be equal with NO_PLAYER");
 
-	CvUnit* pGiftUnit = GET_PLAYER(eNewOwner).initUnit(getUnitType(), getX(), getY(), AI_getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+	CvUnit* pGiftUnit = GET_PLAYER(eNewOwner).initUnit(getUnitType(), getX(), getY(), AI()->getUnitAIType(), NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
 	if (pGiftUnit == NULL)
 	{
 		FErrorMsg("GiftUnit is not assigned a valid value");
@@ -10085,7 +10094,7 @@ bool CvUnit::canSpread(const CvPlot* pPlot, ReligionTypes eReligion, bool bTestV
 	}
 
 	// TB Prophet Mod
-	if (AI_getUnitAIType() != UNITAI_MISSIONARY)
+	if (AI()->getUnitAIType() != UNITAI_MISSIONARY)
 	{
 		if (!GC.getGame().isOption(GAMEOPTION_DIVINE_PROPHETS)
 		|| GC.getGame().isOption(GAMEOPTION_LIMITED_RELIGIONS) && GET_PLAYER(getOwner()).hasHolyCity())
@@ -12043,7 +12052,7 @@ CvCity* CvUnit::getUpgradeCity(bool bSearch) const
 	PROFILE_FUNC();
 
 	CvPlayerAI& kPlayer = GET_PLAYER(getOwner());
-	const UnitAITypes eUnitAI = AI_getUnitAIType();
+	const UnitAITypes eUnitAI = AI()->getUnitAIType();
 	CvArea* pArea = area();
 
 	const int iCurrentValue = kPlayer.AI_unitValue(getUnitType(), eUnitAI, pArea);
@@ -12220,7 +12229,7 @@ bool CvUnit::upgrade(UnitTypes eUnit)
 // BUG - Upgrade Unit Event - end
 
 	//	Preserve the AI type if that is possible
-	UnitAITypes eUnitAI = AI_getUnitAIType();
+	UnitAITypes eUnitAI = AI()->getUnitAIType();
 
 	if ( !GC.getUnitInfo(eUnit).getUnitAIType(eUnitAI) )
 	{
@@ -12260,7 +12269,7 @@ bool CvUnit::upgrade(UnitTypes eUnit)
 	if (gUnitLogLevel > 2)
 	{
 		CvWString szString;
-		getUnitAIString(szString, pUpgradeUnit->AI_getUnitAIType());
+		getUnitAIString(szString, pUpgradeUnit->AI()->getUnitAIType());
 		logBBAI("    %S spends %d to upgrade %S to %S, unit AI %S", GET_PLAYER(getOwner()).getCivilizationDescription(0), upgradePrice(eUnit), getName(0).GetCString(), pUpgradeUnit->getName(0).GetCString(), szString.GetCString());
 	}
 
@@ -12899,7 +12908,7 @@ int CvUnit::maxHitPoints() const
 
 int CvUnit::getHP()	const
 {
-	return (AI_getPredictedHitPoints() == -1 ? getMaxHP() - getDamage() : AI_getPredictedHitPoints());
+	return (AI()->getPredictedHitPoints() == -1 ? getMaxHP() - getDamage() : AI()->getPredictedHitPoints());
 }
 
 
@@ -15300,7 +15309,7 @@ int CvUnit::getUnitAICargo(UnitAITypes eUnitAI) const
 {
 	std::vector<CvUnit*> aCargoUnits;
 	getCargoUnits(aCargoUnits);
-	return algo::count_if(aCargoUnits, bind(CvUnit::AI_getUnitAIType, _1) == eUnitAI);
+	return algo::count_if(aCargoUnits, bind(CvUnit::getUnitAIType, _1) == eUnitAI);
 }
 
 
@@ -15414,9 +15423,9 @@ void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, 
 
 	if (pSelectionGroup != pOldSelectionGroup && pSelectionGroup != NULL
 	&& pSelectionGroup->getHeadUnit() != NULL
-	&& pSelectionGroup->getHeadUnit()->isWaitingOnUnitAI((int)AI_getUnitAIType()))
+	&& pSelectionGroup->getHeadUnit()->AI()->isWaitingOnUnitAI((int)AI()->getUnitAIType()))
 	{
-		pSelectionGroup->getHeadUnit()->setToWaitOnUnitAI(AI_getUnitAIType(), false);
+		pSelectionGroup->getHeadUnit()->AI()->setToWaitOnUnitAI(AI()->getUnitAIType(), false);
 	}
 
 	if (pSelectionGroup != pOldSelectionGroup || pOldSelectionGroup == NULL)
@@ -15463,23 +15472,23 @@ void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, 
 				// if we were the head, if the head unitAI changed, then force the group to separate (non-humans)
 				if (bWasHead)
 				{
-					if (isWaitingOnUnitAIAny())
+					if (AI()->isWaitingOnUnitAIAny())
 					{
 						for (int iI = 0; iI < NUM_UNITAI_TYPES; iI++)
 						{
-							if (isWaitingOnUnitAI(iI))
+							if (AI()->isWaitingOnUnitAI(iI))
 							{
-								setToWaitOnUnitAI((UnitAITypes)iI, false);
+								AI()->setToWaitOnUnitAI((UnitAITypes)iI, false);
 							}
 						}
 					}
 					FAssert(pOldSelectionGroup->getHeadUnit() != NULL);
 
 					if (!pOldSelectionGroup->isChoosingNewLeader()
-					&& pOldSelectionGroup->getHeadUnit()->AI_getUnitAIType() != AI_getUnitAIType()
+					&& pOldSelectionGroup->getHeadUnit()->AI()->getUnitAIType() != AI()->getUnitAIType()
 					// Special case to try to hold together city attacks that are breaking up but can still succeed
 					// If we have lost the last city_attack AI unit see if we have a unit that COULD take over in the SAME role
-					&& (UNITAI_ATTACK_CITY != AI_getUnitAIType() || !pOldSelectionGroup->findNewLeader(UNITAI_ATTACK_CITY)))
+					&& (UNITAI_ATTACK_CITY != AI()->getUnitAIType() || !pOldSelectionGroup->findNewLeader(UNITAI_ATTACK_CITY)))
 					{
 						pOldSelectionGroup->AI_makeForceSeparate();
 					}
@@ -15488,16 +15497,17 @@ void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, 
 
 			if (pNewSelectionGroup != NULL)
 			{
-				if (pNewSelectionGroup->getHeadUnit() != NULL && pNewSelectionGroup->getHeadUnit()->isWaitingOnUnitAI((int)AI_getUnitAIType()))
+				if (pNewSelectionGroup->getHeadUnit() != NULL && pNewSelectionGroup->getHeadUnit()->AI()->
+					isWaitingOnUnitAI((int)AI()->getUnitAIType()))
 				{
-					pNewSelectionGroup->getHeadUnit()->setToWaitOnUnitAI(AI_getUnitAIType(), false);
+					pNewSelectionGroup->getHeadUnit()->AI()->setToWaitOnUnitAI(AI()->getUnitAIType(), false);
 				}
 
 				//	Normal rules apply when we join someone else's group unless
 				//	the priority chnage was actually to DOWNgrade our priority
-				if (AI_groupFirstVal() != LEADER_PRIORITY_MIN)
+				if (AI()->groupFirstVal() != LEADER_PRIORITY_MIN)
 				{
-					AI_setLeaderPriority(-1);
+					AI()->setLeaderPriority(-1);
 				}
 
 				m_iGroupID = pNewSelectionGroup->getID();
@@ -15510,7 +15520,7 @@ void CvUnit::joinGroup(CvSelectionGroup* pSelectionGroup, bool bRemoveSelected, 
 			else
 			{
 				//	Normal rules apply when we are alone again
-				AI_setLeaderPriority(-1);
+				AI()->setLeaderPriority(-1);
 
 				m_iGroupID = FFreeList::INVALID_INDEX;
 			}
@@ -15769,9 +15779,9 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		pNewPlot->area()->changeUnitsPerPlayer(eMyPlayer, 1);
 		pNewPlot->area()->changePower(eMyPlayer, getPowerValueTotal());
 
-		if (AI_getUnitAIType() != NO_UNITAI)
+		if (AI()->getUnitAIType() != NO_UNITAI)
 		{
-			pNewPlot->area()->changeNumAIUnits(eMyPlayer, AI_getUnitAIType(), 1);
+			pNewPlot->area()->changeNumAIUnits(eMyPlayer, AI()->getUnitAIType(), 1);
 		}
 
 		if (isAnimal())
@@ -15799,9 +15809,9 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		pOldPlot->area()->changeUnitsPerPlayer(eMyPlayer, -1);
 		pOldPlot->area()->changePower(eMyPlayer, -getPowerValueTotal());
 
-		if (AI_getUnitAIType() != NO_UNITAI)
+		if (AI()->getUnitAIType() != NO_UNITAI)
 		{
-			pOldPlot->area()->changeNumAIUnits(eMyPlayer, AI_getUnitAIType(), -1);
+			pOldPlot->area()->changeNumAIUnits(eMyPlayer, AI()->getUnitAIType(), -1);
 		}
 
 		if (isAnimal())
@@ -18951,7 +18961,7 @@ void CvUnit::setPromotionReady(bool bNewValue)
 		{
 			if (isAutoPromoting())
 			{
-				if(AI_promote())
+				if(AI()->promote())
 				{
 					setPromotionReady(false);
 					testPromotionReady();
@@ -19385,7 +19395,7 @@ void CvUnit::setTransportUnit(CvUnit* pTransportUnit)
 			{
 				if (pOldTransportUnit->getDomainType() == DOMAIN_SEA && pOldTransportUnit->isHominid())
 				{
-					pOldTransportUnit->AI_setUnitAIType(UNITAI_ATTACK_SEA);
+					pOldTransportUnit->AI()->setUnitAIType(UNITAI_ATTACK_SEA);
 				}
 			}
 
@@ -21143,7 +21153,7 @@ void CvUnit::setHasUnitCombat(UnitCombatTypes eIndex, bool bNewValue, bool bByPr
 			}
 			processUnitCombat(eIndex, bNewValue, bByPromo);
 
-			AI_flushValueCache();
+			AI()->flushValueCache();
 
 			//	Updates the grpahics last after everything is calculated
 			//  Not entirely sure this will be necessary?  Koshling what say you?
@@ -21840,7 +21850,7 @@ void CvUnit::setHasPromotion(PromotionTypes eIndex, bool bNewValue, bool bFree, 
 
 			processPromotion(eIndex, bNewValue, bInitial);
 
-			AI_flushValueCache();
+			AI()->flushValueCache();
 
 			// A unit can only have a single promotion in a promotion line for equipment or affliction promotions,
 			//	if we're applying a higher priority one make sure any lower priority one from the same line that was present previously is removed
@@ -23552,6 +23562,8 @@ void CvUnit::read(FDataStreamBase* pStream)
 		kill(false);
 		FErrorMsg("Unit Asset removed, killing unit.");
 	}
+
+	AI()->read(pStream);
 }
 
 
@@ -24351,6 +24363,18 @@ void CvUnit::write(FDataStreamBase* pStream)
 	//WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isWorker(), "bWorker");
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
+
+	AI()->write(pStream);
+}
+
+ICvUnitAI* CvUnit::AI() const
+{
+	return m_ai;
+}
+
+UnitAITypes CvUnit::getUnitAIType() const
+{
+	return AI()->getUnitAIType();
 }
 
 // Protected Functions...
@@ -28165,7 +28189,7 @@ void CvUnit::tradeUnit(PlayerTypes eReceivingPlayer)
 	else pBestCity = receiver.getCapitalCity();
 
 	CvUnit* pTradeUnit = receiver.initUnit(
-		getUnitType(), pBestCity->getX(), pBestCity->getY(), AI_getUnitAIType(), NO_DIRECTION,
+		getUnitType(), pBestCity->getX(), pBestCity->getY(), AI()->getUnitAIType(), NO_DIRECTION,
 		GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark")
 	);
 	if (pTradeUnit != NULL)
@@ -32489,20 +32513,20 @@ bool CvUnit::meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria)
 {
 	if (criteria != NULL)
 	{
-		if (criteria->m_eUnitAI != NO_UNITAI && AI_getUnitAIType() != criteria->m_eUnitAI)
+		if (criteria->m_eUnitAI != NO_UNITAI && AI()->getUnitAIType() != criteria->m_eUnitAI)
 		{
 			return false;
 		}
 
 		if ((criteria->m_bNoNegativeProperties || criteria->m_bPropertyBeneficial)
-		&& AI_beneficialPropertyValueToCity(NULL, NO_PROPERTY) < 0)
+		&& AI()->beneficialPropertyValueToCity(NULL, NO_PROPERTY) < 0)
 		{
 			return false;
 		}
 
 		if (criteria->m_eProperty != NO_PROPERTY)
 		{
-			const int iPropertyDelta = AI_beneficialPropertyValueToCity(NULL, criteria->m_eProperty);
+			const int iPropertyDelta = AI()->beneficialPropertyValueToCity(NULL, criteria->m_eProperty);
 
 			if (iPropertyDelta == 0)
 			{
@@ -34985,7 +35009,7 @@ bool CvUnit::canMerge(bool bAutocheck) const
 			{
 				iValidUnitCount++;
 			}
-			else if (pLoopUnit->AI_getUnitAIType() == AI_getUnitAIType())
+			else if (pLoopUnit->AI()->getUnitAIType() == AI()->getUnitAIType())
 			{
 				iValidUnitCount++;
 			}
@@ -35097,7 +35121,7 @@ void CvUnit::doMerge()
 				&& pLoopUnit->getUnitType() == pUnit1->getUnitType()
 				&& pLoopUnit->groupRank() == pUnit1->groupRank()
 				&& pLoopUnit->qualityRank() == pUnit1->qualityRank()
-				&& pLoopUnit->AI_getUnitAIType() == pUnit1->AI_getUnitAIType()
+				&& pLoopUnit->AI()->getUnitAIType() == pUnit1->AI()->getUnitAIType()
 
 				&& !pLoopUnit->isHurt()
 				&& !pLoopUnit->isDead()
@@ -36623,7 +36647,7 @@ void CvUnit::setBuildUpType(PromotionLineTypes ePromotionLine, MissionTypes eSle
 				if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1
 				&& canAcquirePromotion(ePromotion, PromotionRequirements::IgnoreHas | PromotionRequirements::ForFree | PromotionRequirements::ForBuildUp))
 				{
-					const int iValue = std::max(1, GET_PLAYER(getOwner()).AI_promotionValue(ePromotion, getUnitType(), this, AI_getUnitAIType(), true));
+					const int iValue = std::max(1, GET_PLAYER(getOwner()).AI_promotionValue(ePromotion, getUnitType(), this, AI()->getUnitAIType(), true));
 
 					if (iValue > iBestValue)
 					{
@@ -36707,7 +36731,7 @@ void CvUnit::incrementBuildUp()
 			const PromotionTypes ePromotion = (PromotionTypes)GC.getPromotionLineInfo(ePromotionLine).getPromotion(iI);
 
 			if (GC.getPromotionInfo(ePromotion).getLinePriority() == 1
-			&& GET_PLAYER(getOwner()).AI_promotionValue(ePromotion, getUnitType(), this, AI_getUnitAIType(), true) < 10)
+			&& GET_PLAYER(getOwner()).AI_promotionValue(ePromotion, getUnitType(), this, AI()->getUnitAIType(), true) < 10)
 			{
 				clearBuildups();
 				getGroup()->setActivityType(ACTIVITY_AWAKE);

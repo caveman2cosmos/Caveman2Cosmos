@@ -29,23 +29,28 @@ bool CvWorkerService::ShouldImproveCity(CvCity* targetCity)
 	return false;
 }
 
-bool CvWorkerService::ImproveBonus(CvUnitAI* unit, int allowedMovementTurns)
+bool CvWorkerService::ImproveBonus(CvUnit* unit, int allowedMovementTurns)
 {
 	const CvPlot* unitPlot = unit->plot();
 	const PlayerTypes unitOwner = unit->getOwner();
 	const CvPlayerAI& ownerReference = GET_PLAYER(unitOwner);
-	const int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | MOVE_OUR_TERRITORY | MOVE_RECONSIDER_ON_LEAVING_OWNED;
+	const int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | MOVE_OUR_TERRITORY | 
+		MOVE_RECONSIDER_ON_LEAVING_OWNED;
 	const bool gameOptionLeaveForests = ownerReference.isOption(PLAYEROPTION_LEAVE_FORESTS);
 	const bool gameOptionSafeAutomation = ownerReference.isOption(PLAYEROPTION_SAFE_AUTOMATION);
 	const bool gameOptionZoneOfControl = GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL);
 	const bool bCanRoute = unit->canBuildRoute();
-	const int maxDistanceFromBorder = unit->getGroup()->getNumUnits() > 1 && unit->getGroup()->canDefend() ? GC.getAI_WORKER_MAX_DISTANCE_FROM_CITY_OUT_BORDERS() / 2 + 1 : -1;
+	const int maxDistanceFromBorder = 
+		unit->getGroup()->getNumUnits() > 1 && unit->getGroup()->canDefend() 
+		? GC.getAI_WORKER_MAX_DISTANCE_FROM_CITY_OUT_BORDERS() / 2 + 1 
+		: -1;
 	BuildTypes overallBestBuild = NO_BUILD;
 	int bestBonusValue = 0;
 	int finalNumberOfMoveTurns = 0;
 	CvPlot* bestPlot = NULL;
 
-	CvReachablePlotSet plotSet(unit->getGroup(), iBasePathFlags, unit->AI_searchRange(allowedMovementTurns), true, maxDistanceFromBorder);
+	CvReachablePlotSet plotSet(unit->getGroup(), iBasePathFlags, unit->AI()->searchRange(allowedMovementTurns), 
+		true, maxDistanceFromBorder);
 
 	for (CvReachablePlotSet::const_iterator itr = plotSet.begin(); itr != plotSet.end(); ++itr) {
 
@@ -160,7 +165,8 @@ bool CvWorkerService::IsPlotValid(CvUnit* unit, CvPlot* plot)
 	return false;
 }
 
-BuildTypes CvWorkerService::GetFastestBuildForImprovementType(const CvPlayer& player, const ImprovementTypes improvementType, const CvPlot* plot, const CvUnitAI* unit, bool includeCurrentImprovement)
+BuildTypes CvWorkerService::GetFastestBuildForImprovementType(const CvPlayer& player, 
+	const ImprovementTypes improvementType, const CvPlot* plot, const CvUnit* unit, bool includeCurrentImprovement)
 {
 	int fastestTime = 10000;
 	BuildTypes fastestBuild = NO_BUILD;
@@ -171,7 +177,8 @@ BuildTypes CvWorkerService::GetFastestBuildForImprovementType(const CvPlayer& pl
 
 	foreach_(const BuildTypes eBuildType, potentialImprovement->getBuildTypes())
 	{
-		if (player.canBuild(plot, eBuildType, false, false) || (includeCurrentImprovement && improvementType == currentImprovementOnPlot))
+		if (player.canBuild(plot, eBuildType, false, false) || (includeCurrentImprovement && 
+			improvementType == currentImprovementOnPlot))
 		{
 			if (!checkUnitBuild || unit->canBuild(plot, eBuildType, false)) {
 				const int buildTime = GC.getBuildInfo(eBuildType).getTime();

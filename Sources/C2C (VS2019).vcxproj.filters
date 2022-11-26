@@ -522,9 +522,6 @@
     <ClCompile Include="CvUnit.cpp">
       <Filter>Source\Base\Unit</Filter>
     </ClCompile>
-    <ClCompile Include="CvUnitAI.cpp">
-      <Filter>Source\Base\Unit</Filter>
-    </ClCompile>
     <ClCompile Include="CvUnitComponents.cpp">
       <Filter>Source\Base\Unit\Capabilities</Filter>
     </ClCompile>
@@ -753,6 +750,9 @@
     <ClCompile Include="CyCityOutputHistoryInterface.cpp">
       <Filter>Source\UI\City</Filter>
     </ClCompile>
+    <ClCompile Include="CvUnitDefaultAI.cpp">
+      <Filter>Source\Base\Unit</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CvDLLButtonPopup.h">
@@ -824,7 +824,7 @@
     <ClInclude Include="CvUnitComponents.h">
       <Filter>Source\Base\Unit\Capabilities</Filter>
     </ClInclude>
-    <ClInclude Include="CvUnitAI.h">
+    <ClInclude Include="CvUnitDefaultAI.h">
       <Filter>Source\Base\Unit</Filter>
     </ClInclude>
     <ClInclude Include="CvWorkerAI.h">
@@ -1270,6 +1270,9 @@
     </ClInclude>
     <ClInclude Include="CvCityInvasionComponent.h">
       <Filter>Source\Base\City\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ICvUnitAI.h">
+      <Filter>Source\Base\Unit</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

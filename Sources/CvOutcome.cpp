@@ -1337,7 +1337,7 @@ int CvOutcome::AI_getValueInPlot(const CvUnit &kUnit, const CvPlot &kPlot, bool 
 
 	if (m_ePromotionType > NO_PROMOTION)
 	{
-		iValue += kPlayer.AI_promotionValue(m_ePromotionType, kUnit.getUnitType(), &kUnit, kUnit.AI_getUnitAIType());
+		iValue += kPlayer.AI_promotionValue(m_ePromotionType, kUnit.getUnitType(), &kUnit, kUnit.AI()->getUnitAIType());
 	}
 
 	if ( m_eEventTrigger != NO_EVENTTRIGGER )

@@ -41,7 +41,7 @@ void CvGameAI::AI_reset()
 
 	m_iPad = 0;
 
-	CvUnitAI::AI_clearCaches();
+	TCvUnitAI::clearCaches();
 }
 
 

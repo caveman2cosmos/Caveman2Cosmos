@@ -572,8 +572,8 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 
 	if (GC.getGame().isDebugMode() && bShift)
 	{
-		FAssertMsg(pUnit->AI_getUnitAIType() != NO_UNITAI, "pUnit's AI type expected to != NO_UNITAI");
-		CvWString unitAIType = GC.getUnitAIInfo(pUnit->AI_getUnitAIType()).getType();
+		FAssertMsg(pUnit->AI()->getUnitAIType() != NO_UNITAI, "pUnit's AI type expected to != NO_UNITAI");
+		CvWString unitAIType = GC.getUnitAIInfo(pUnit->AI()->getUnitAIType()).getType();
 		szTempBuffer.Format(L" (%s)", unitAIType.GetCString());
 		szString.append(szTempBuffer);
 	}
@@ -3280,10 +3280,10 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 
 		if (bShift && (gDLL->getChtLvl() > 0))
 		{
-			CvWString unitAIType = GC.getUnitAIInfo(pUnit->AI_getUnitAIType()).getType();
+			CvWString unitAIType = GC.getUnitAIInfo(pUnit->AI()->getUnitAIType()).getType();
 			szTempBuffer.Format(L"\nUnitAI Type = %s.", unitAIType.GetCString());
 			szString.append(szTempBuffer);
-			szTempBuffer.Format(L"\nSacrifice Value = %d.", pUnit->AI_sacrificeValue(NULL));
+			szTempBuffer.Format(L"\nSacrifice Value = %d.", pUnit->AI()->sacrificeValue(NULL));
 			szString.append(szTempBuffer);
 		}
 	}
@@ -3366,7 +3366,7 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 					// head unit name and unitai
 					szString.append(CvWString::format(SETCOLR L"%s" ENDCOLR, 255,190,0,255, pHeadUnit->getName().GetCString()));
 					szString.append(CvWString::format(L" (%d)", shortenID(pHeadUnit->getID())));
-					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
+					getUnitAIString(szTempString, pHeadUnit->AI()->getUnitAIType());
 					szString.append(CvWString::format(SETCOLR L" %s " ENDCOLR, GET_PLAYER(pHeadUnit->getOwner()).getPlayerTextColorR(), GET_PLAYER(pHeadUnit->getOwner()).getPlayerTextColorG(), GET_PLAYER(pHeadUnit->getOwner()).getPlayerTextColorB(), GET_PLAYER(pHeadUnit->getOwner()).getPlayerTextColorA(), szTempString.GetCString()));
 
 					//TB Removing promotions from plot list display - they are overwhelming and it's cooler to have to send in an invisible unit to get to see the promos on another stack
@@ -3436,7 +3436,7 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 							szString.append(L"\n to ");
 							szString.append(CvWString::format(SETCOLR L"%s" ENDCOLR, GET_PLAYER(pMissionUnit->getOwner()).getPlayerTextColorR(), GET_PLAYER(pMissionUnit->getOwner()).getPlayerTextColorG(), GET_PLAYER(pMissionUnit->getOwner()).getPlayerTextColorB(), GET_PLAYER(pMissionUnit->getOwner()).getPlayerTextColorA(), pMissionUnit->getName().GetCString()));
 							szString.append(CvWString::format(L"(%d) G:%d", shortenID(pMissionUnit->getID()), shortenID(pMissionUnit->getGroupID())));
-							getUnitAIString(szTempString, pMissionUnit->AI_getUnitAIType());
+							getUnitAIString(szTempString, pMissionUnit->AI()->getUnitAIType());
 							szString.append(CvWString::format(SETCOLR L" %s" ENDCOLR, GET_PLAYER(pMissionUnit->getOwner()).getPlayerTextColorR(), GET_PLAYER(pMissionUnit->getOwner()).getPlayerTextColorG(), GET_PLAYER(pMissionUnit->getOwner()).getPlayerTextColorB(), GET_PLAYER(pMissionUnit->getOwner()).getPlayerTextColorA(), szTempString.GetCString()));
 						}
 
@@ -3524,7 +3524,7 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 								// name and unitai
 								szString.append(CvWString::format(SETCOLR L"\n %s" ENDCOLR, TEXT_COLOR("COLOR_ALT_HIGHLIGHT_TEXT"), pCargoUnit->getName().GetCString()));
 								szString.append(CvWString::format(L"(%d)", shortenID(pCargoUnit->getID())));
-								getUnitAIString(szTempString, pCargoUnit->AI_getUnitAIType());
+								getUnitAIString(szTempString, pCargoUnit->AI()->getUnitAIType());
 								szString.append(CvWString::format(SETCOLR L" %s " ENDCOLR, GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorR(), GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorG(), GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorB(), GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorA(), szTempString.GetCString()));
 
 								// promotion icons
@@ -3549,7 +3549,7 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 								// name and unitai
 								szString.append(CvWString::format(SETCOLR L"\n-%s" ENDCOLR, TEXT_COLOR("COLOR_UNIT_TEXT"), pUnit->getName().GetCString()));
 								szString.append(CvWString::format(L" (%d)", shortenID(pUnit->getID())));
-								getUnitAIString(szTempString, pUnit->AI_getUnitAIType());
+								getUnitAIString(szTempString, pUnit->AI()->getUnitAIType());
 								szString.append(CvWString::format(SETCOLR L" %s " ENDCOLR, GET_PLAYER(pUnit->getOwner()).getPlayerTextColorR(), GET_PLAYER(pUnit->getOwner()).getPlayerTextColorG(), GET_PLAYER(pUnit->getOwner()).getPlayerTextColorB(), GET_PLAYER(pUnit->getOwner()).getPlayerTextColorA(), szTempString.GetCString()));
 
 								// promotion icons
@@ -3572,7 +3572,7 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 										// name and unitai
 										szString.append(CvWString::format(SETCOLR L"\n %s" ENDCOLR, TEXT_COLOR("COLOR_ALT_HIGHLIGHT_TEXT"), pCargoUnit->getName().GetCString()));
 										szString.append(CvWString::format(L"(%d)", shortenID(pCargoUnit->getID())));
-										getUnitAIString(szTempString, pCargoUnit->AI_getUnitAIType());
+										getUnitAIString(szTempString, pCargoUnit->AI()->getUnitAIType());
 										szString.append(CvWString::format(SETCOLR L" %s " ENDCOLR, GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorR(), GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorG(), GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorB(), GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorA(), szTempString.GetCString()));
 
 										// promotion icons

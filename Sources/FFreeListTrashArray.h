@@ -15,6 +15,13 @@
 #define FLTA_GROWTH_FACTOR	(2)
 
 template <class T>
+class NewTCreator
+{
+public:
+	static T* create() { return new T; }
+};
+
+template <class T, class TCreator = NewTCreator<T> >
 class FFreeListTrashArray
 {
 public:
@@ -22,7 +29,7 @@ public:
 	{
 	public:
 		iterator() : m_array(NULL), m_idx(0), m_value(NULL){}
-		explicit iterator(const FFreeListTrashArray<T>* array)
+		explicit iterator(const FFreeListTrashArray<T, TCreator>* array)
 			: m_array(array)
 			, m_idx(0)
 			, m_value(array->beginIter(&m_idx))
@@ -47,7 +54,7 @@ public:
 
 		T& dereference() const { return *m_value; }
 
-		const FFreeListTrashArray<T>* m_array;
+		const FFreeListTrashArray<T, TCreator>* m_array;
 		int m_idx;
 		T* m_value;
 	};
@@ -163,8 +170,8 @@ private:
 
 
 // Public functions...
-template <class T>
-FFreeListTrashArray<T>::FFreeListTrashArray()
+template <class T, class TCreator>
+FFreeListTrashArray<T, TCreator>::FFreeListTrashArray()
 	: m_iFreeListHead(FFreeList::FREE_LIST_INDEX)
 	, m_iFreeListCount(0)
 	, m_iLastIndex(FFreeList::INVALID_INDEX)
@@ -174,15 +181,15 @@ FFreeListTrashArray<T>::FFreeListTrashArray()
 	, m_pArray(NULL)
 {}
 
-template <class T>
-FFreeListTrashArray<T>::~FFreeListTrashArray()
+template <class T, class TCreator>
+FFreeListTrashArray<T, TCreator>::~FFreeListTrashArray()
 {
 	uninit();
 }
 
 
-template <class T>
-void FFreeListTrashArray<T>::init(int iNumSlots)
+template <class T, class TCreator>
+void FFreeListTrashArray<T, TCreator>::init(int iNumSlots)
 {
 	FAssertMsg(iNumSlots >= 0, "FFreeListTrashArray::init - iNumSlots must be >= 0");
 
@@ -224,8 +231,8 @@ void FFreeListTrashArray<T>::init(int iNumSlots)
 }
 
 
-template <class T>
-void FFreeListTrashArray<T>::uninit()
+template <class T, class TCreator>
+void FFreeListTrashArray<T, TCreator>::uninit()
 {
 	if (m_pArray != NULL)
 	{
@@ -240,16 +247,16 @@ void FFreeListTrashArray<T>::uninit()
 //
 
 // start at the beginning of the list and return the first item or NULL when done
-template <class T>
-T* FFreeListTrashArray<T>::beginIter(int* pIterIdx) const
+template <class T, class TCreator>
+T* FFreeListTrashArray<T, TCreator>::beginIter(int* pIterIdx) const
 {
 	*pIterIdx = 0;
 	return nextIter(pIterIdx);
 }
 
 // iterate from the current position and return the next item found or NULL when done
-template <class T>
-T* FFreeListTrashArray<T>::nextIter(int* pIterIdx) const
+template <class T, class TCreator>
+T* FFreeListTrashArray<T, TCreator>::nextIter(int* pIterIdx) const
 {
 	for (; (*pIterIdx) < getIndexAfterLast(); (*pIterIdx)++)
 	{
@@ -264,16 +271,16 @@ T* FFreeListTrashArray<T>::nextIter(int* pIterIdx) const
 }
 
 // start at the end of the list and return the last item or NULL when done
-template <class T>
-T* FFreeListTrashArray<T>::endIter(int* pIterIdx) const
+template <class T, class TCreator>
+T* FFreeListTrashArray<T, TCreator>::endIter(int* pIterIdx) const
 {
 	*pIterIdx = getIndexAfterLast() - 1;
 	return prevIter(pIterIdx);
 }
 
 // iterate from the current position and return the prev item found or NULL when done
-template <class T>
-T* FFreeListTrashArray<T>::prevIter(int* pIterIdx) const
+template <class T, class TCreator>
+T* FFreeListTrashArray<T, TCreator>::prevIter(int* pIterIdx) const
 {
 	for (; (*pIterIdx) >= 0; (*pIterIdx)--)
 	{
@@ -288,8 +295,8 @@ T* FFreeListTrashArray<T>::prevIter(int* pIterIdx) const
 }
 
 
-template <class T>
-T* FFreeListTrashArray<T>::add()
+template <class T, class TCreator>
+T* FFreeListTrashArray<T, TCreator>::add()
 {
 	if (m_pArray == NULL)
 	{
@@ -366,7 +373,7 @@ T* FFreeListTrashArray<T>::add()
 	}
 
 
-	m_pArray[iIndex].pData = new T;
+	m_pArray[iIndex].pData = TCreator::create();
 	m_pArray[iIndex].iNextFreeIndex = FFreeList::INVALID_INDEX;
 
 	if ( m_pArray[iIndex].iLastUsed == m_iCurrentID )
@@ -380,8 +387,8 @@ T* FFreeListTrashArray<T>::add()
 }
 
 
-template <class T>
-T* FFreeListTrashArray<T>::getAt(int iID) const
+template <class T, class TCreator>
+T* FFreeListTrashArray<T, TCreator>::getAt(int iID) const
 {
 	if ((iID == FFreeList::INVALID_INDEX) || (m_pArray == NULL))
 	{
@@ -404,8 +411,8 @@ T* FFreeListTrashArray<T>::getAt(int iID) const
 }
 
 
-template <class T>
-bool FFreeListTrashArray<T>::remove(const T* pData)
+template <class T, class TCreator>
+bool FFreeListTrashArray<T, TCreator>::remove(const T* pData)
 {
 	FAssertMsg(m_pArray != NULL, "FFreeListTrashArray::remove - not initialized");
 
@@ -424,8 +431,8 @@ bool FFreeListTrashArray<T>::remove(const T* pData)
 }
 
 
-template <class T>
-bool FFreeListTrashArray<T>::removeAt(int iID)
+template <class T, class TCreator>
+bool FFreeListTrashArray<T, TCreator>::removeAt(int iID)
 {
 	if ((iID == FFreeList::INVALID_INDEX) || (m_pArray == NULL))
 	{
@@ -460,8 +467,8 @@ bool FFreeListTrashArray<T>::removeAt(int iID)
 }
 
 
-template <class T>
-void FFreeListTrashArray<T>::removeAll()
+template <class T, class TCreator>
+void FFreeListTrashArray<T, TCreator>::removeAll()
 {
 	if (m_pArray == NULL)
 	{
@@ -484,8 +491,8 @@ void FFreeListTrashArray<T>::removeAll()
 }
 
 
-template <class T>
-void FFreeListTrashArray<T>::load(T* pData)
+template <class T, class TCreator>
+void FFreeListTrashArray<T, TCreator>::load(T* pData)
 {
 	FAssertMsg(pData != NULL, "FFreeListTrashArray::load - pData is NULL");
 	//assert((pData->getID() & FLTA_ID_MASK) < m_iCurrentID);
@@ -504,8 +511,8 @@ void FFreeListTrashArray<T>::load(T* pData)
 
 // Protected functions...
 
-template <class T>
-void FFreeListTrashArray<T>::growArray()
+template <class T, class TCreator>
+void FFreeListTrashArray<T, TCreator>::growArray()
 {
 	FAssertMsg(m_pArray != NULL, "FFreeListTrashArray::growArray - not initialized");
 
@@ -538,8 +545,8 @@ void FFreeListTrashArray<T>::growArray()
 //
 // use when list contains non-streamable types
 //
-template < class T >
-inline void FFreeListTrashArray< T >::Read( FDataStreamBase* pStream )
+template <class T, class TCreator>
+inline void FFreeListTrashArray<T, TCreator>::Read( FDataStreamBase* pStream )
 {
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
@@ -578,8 +585,8 @@ inline void FFreeListTrashArray< T >::Read( FDataStreamBase* pStream )
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
 
-template < class T >
-inline void FFreeListTrashArray< T >::Write( FDataStreamBase* pStream )
+template <class T, class TCreator>
+inline void FFreeListTrashArray<T, TCreator>::Write( FDataStreamBase* pStream )
 {
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
@@ -620,8 +627,8 @@ inline void FFreeListTrashArray< T >::Write( FDataStreamBase* pStream )
 //
 // use when list contains streamable types
 //
-template < class T >
-inline void ReadStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist, FDataStreamBase* pStream )
+template <class T, class TCreator>
+inline void ReadStreamableFFreeListTrashArray( FFreeListTrashArray<T, TCreator>& flist, FDataStreamBase* pStream )
 {
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
@@ -652,7 +659,7 @@ inline void ReadStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist, 
 
 	for ( int i = 0; i < iCount; i++ )
 	{
-		T* pData = new T;
+		T* pData = TCreator::create();
 		pData->read( pStream );
 		flist.load( pData );
 	}
@@ -664,8 +671,8 @@ inline void ReadStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist, 
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
 
-template < class T >
-inline void WriteStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist, FDataStreamBase* pStream )
+template <class T, class TCreator>
+inline void WriteStreamableFFreeListTrashArray( FFreeListTrashArray<T, TCreator>& flist, FDataStreamBase* pStream )
 {
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 

@@ -15,7 +15,7 @@
 #include "CvArea.h"
 #include "CvMapInterfaceBase.h"
 #include "CvPlot.h"
-#include "CvUnitAI.h"
+#include "CvUnit.h"
 #include "index_iterator_base.h"
 
 class CvCity;
@@ -278,10 +278,10 @@ private:
 		TravelingUnit(const CvUnit& travelingUnit, int numTravelTurns)
 			: numTurnsUntilArrival(numTravelTurns)
 		{
-			unit = static_cast<const CvUnitAI&>(travelingUnit);
+			unit = static_cast<const CvUnit&>(travelingUnit);
 		}
 
-		CvUnitAI unit;
+		CvUnit unit;
 		int numTurnsUntilArrival;
 	};
 

@@ -392,13 +392,13 @@ void CvMap::updateIncomingUnits()
 		{
 			GC.switchMap(m_eType);
 
-			const CvUnitAI& unit = travelingUnit->unit;
+			const CvUnit& unit = travelingUnit->unit;
 			CvPlayer& owner = GET_PLAYER(unit.getOwner());
 			const CvPlot* plot = owner.findStartingPlot();
-			CvUnit* newUnit = owner.initUnit(unit.getUnitType(), plot->getX(), plot->getY(), unit.AI_getUnitAIType(), NO_DIRECTION, 0);
+			CvUnit* newUnit = owner.initUnit(unit.getUnitType(), plot->getX(), plot->getY(), unit.AI()->getUnitAIType(), NO_DIRECTION, 0);
 			if (newUnit != NULL)
 			{
-				static_cast<CvUnitAI&>(*newUnit) = unit;
+				*newUnit = unit;
 				m_IncomingUnits.erase(&travelingUnit);
 				delete travelingUnit;
 			}

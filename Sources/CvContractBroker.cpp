@@ -51,8 +51,8 @@ void CvContractBroker::lookingForWork(const CvUnit* pUnit, int iMinPriority)
 
 	const int iUnitStr = GC.getGame().AI_combatValue(pUnit->getUnitType());
 
-	unitDetails.bIsWorker = (pUnit->AI_getUnitAIType() == UNITAI_WORKER);
-	unitDetails.bIsHealer = (pUnit->AI_getUnitAIType() == UNITAI_HEALER);
+	unitDetails.bIsWorker = (pUnit->AI()->getUnitAIType() == UNITAI_WORKER);
+	unitDetails.bIsHealer = (pUnit->AI()->getUnitAIType() == UNITAI_HEALER);
 
 	//	Combat values are just the crude value of the unit type for now - should add in promotions
 	//	here for sure
@@ -547,7 +547,7 @@ bool CvContractBroker::makeContract(CvUnit* pUnit, int& iAtX, int& iAtY, CvUnit*
 
 						suitableUnit->iContractedWorkRequest = m_workRequests[iI].iWorkRequestId;
 
-						const int iUnitStrengthTimes100 = std::max(1, unitX->AI_genericUnitValueTimes100(unitCapabilities2UnitValueFlags(m_workRequests[iI].eUnitFlags)));
+						const int iUnitStrengthTimes100 = std::max(1, unitX->AI()->genericUnitValueTimes100(unitCapabilities2UnitValueFlags(m_workRequests[iI].eUnitFlags)));
 						if (m_workRequests[iI].iRequiredStrengthTimes100 == -1 || iUnitStrengthTimes100 >= m_workRequests[iI].iRequiredStrengthTimes100)
 						{
 							//	Request is entirely fulfilled by this unit
@@ -648,7 +648,7 @@ advertisingUnit* CvContractBroker::findBestUnit(const workRequest& request, bool
 		&& unitInfo.iContractedWorkRequest == -1)
 		{
 			const CvUnit* unitX = findUnit(unitInfo.iUnitId);
-			if (unitX == NULL || request.eAIType != NO_UNITAI && unitX->AI_getUnitAIType() != request.eAIType)
+			if (unitX == NULL || request.eAIType != NO_UNITAI && unitX->AI()->getUnitAIType() != request.eAIType)
 			{
 				continue;
 			}
@@ -659,7 +659,7 @@ advertisingUnit* CvContractBroker::findBestUnit(const workRequest& request, bool
 
 				if ( (request.eUnitFlags & WORKER_UNITCAPABILITIES) == 0 || (request.eUnitFlags & HEALER_UNITCAPABILITIES) == 0)
 				{
-					if ( request.eAIType == NO_UNITAI || unitX->AI_getUnitAIType() == request.eAIType )
+					if ( request.eAIType == NO_UNITAI || unitX->AI()->getUnitAIType() == request.eAIType )
 					{
 						iValue += 10;
 
@@ -775,7 +775,7 @@ void CvContractBroker::postProcessUnitsLookingForWork()
 
 		if (unitX)
 		{
-			unitX->getGroup()->getHeadUnit()->processContracts();
+			unitX->getGroup()->getHeadUnit()->AI()->processContracts();
 		}
 	}
 }

@@ -544,17 +544,17 @@ void CvGame::updateColoredPlots()
 
 		if (!(GET_PLAYER(getActivePlayer()).isOption(PLAYEROPTION_NO_UNIT_RECOMMENDATIONS)))
 		{
-			if ((pHeadSelectedUnit->AI_getUnitAIType() == UNITAI_WORKER || pHeadSelectedUnit->AI_getUnitAIType() == UNITAI_WORKER_SEA)
+			if ((pHeadSelectedUnit->AI()->getUnitAIType() == UNITAI_WORKER || pHeadSelectedUnit->AI()->getUnitAIType() == UNITAI_WORKER_SEA)
 			&& pHeadSelectedUnit->plot()->getOwner() == pHeadSelectedUnit->getOwner())
 			{
 				pCity = pHeadSelectedUnit->plot()->getWorkingCity();
 
-				if (pCity != NULL && pHeadSelectedUnit->AI_bestCityBuild(pCity, &pBestPlot))
+				if (pCity != NULL && pHeadSelectedUnit->AI()->bestCityBuild(pCity, &pBestPlot))
 				{
 					FAssert(pBestPlot != NULL);
 					gDLL->getEngineIFace()->addColoredPlot(pBestPlot->getViewportX(), pBestPlot->getViewportY(), GC.getColorInfo(GC.getCOLOR_HIGHLIGHT_TEXT()).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);
 
-					if (pHeadSelectedUnit->AI_bestCityBuild(pCity, &pNextBestPlot, NULL, pBestPlot))
+					if (pHeadSelectedUnit->AI()->bestCityBuild(pCity, &pNextBestPlot, NULL, pBestPlot))
 					{
 						FAssert(pNextBestPlot != NULL);
 						gDLL->getEngineIFace()->addColoredPlot(pNextBestPlot->getViewportX(), pNextBestPlot->getViewportY(), GC.getColorInfo(GC.getCOLOR_HIGHLIGHT_TEXT()).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_RECOMMENDED_PLOTS);

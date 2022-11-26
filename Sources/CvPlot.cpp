@@ -3302,7 +3302,7 @@ namespace {
 			// In delayed death cycle
 			pLoopUnit->plot() == NULL
 			// Going to be dead
-			|| pLoopUnit->AI_getPredictedHitPoints() == 0
+			|| pLoopUnit->AI()->getPredictedHitPoints() == 0
 			// Already dead
 			|| pLoopUnit->isDead()
 			// Doesn't belong to the player we are interested in
@@ -4630,7 +4630,7 @@ int CvPlot::plotStrengthTimes100(UnitValueFlags eFlags, ConstPlotUnitFunc funcA,
 					{
 						if ((funcB == NULL) || funcB(pLoopUnit, iData1B, iData2B, NULL))
 						{
-							iStrength += pLoopUnit->AI_genericUnitValueTimes100(eFlags);
+							iStrength += pLoopUnit->AI()->genericUnitValueTimes100(eFlags);
 						}
 					}
 				}
@@ -12230,7 +12230,7 @@ void CvPlot::revealBestStealthDefender(const CvUnit* pAttacker)
 						{
 							if (pLoopUnit->canAttack(*pAttacker))
 							{
-								const int iValue = pLoopUnit->AI_attackOdds(this, pAttacker);
+								const int iValue = pLoopUnit->AI()->attackOdds(this, pAttacker);
 								if (iValue >= iBestValue)
 								{
 									iBestValue = iValue;
@@ -12995,7 +12995,7 @@ int CvPlot::countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible
 
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
-		const UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
+		const UnitAITypes eAIType = pLoopUnit->AI()->getUnitAIType();
 		//MissionAITypes eMissionAI = pLoopUnit->getGroup()->AI_getMissionAIType();
 
 		if (eAIType == UNITAI_SEE_INVISIBLE || eAIType == UNITAI_SEE_INVISIBLE_SEA)

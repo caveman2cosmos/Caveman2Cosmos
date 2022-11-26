@@ -11184,7 +11184,7 @@ void CvGame::loadPirateShip(CvUnit* pUnit)
 			&& pUnit->cargoSpaceAvailable(pPirate->getSpecialUnitType(), pPirate->getDomainType()) >= pPirate->SMCargoVolume())
 			{
 				pPirate->setTransportUnit(pUnit);
-				pUnit->AI_setUnitAIType(UNITAI_ASSAULT_SEA);
+				pUnit->AI()->setUnitAIType(UNITAI_ASSAULT_SEA);
 			}
 			else // Not enough space to load it on the ship...
 			{

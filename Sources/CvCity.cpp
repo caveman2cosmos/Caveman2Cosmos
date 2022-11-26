@@ -15668,7 +15668,7 @@ void CvCity::popOrder(int orderIndex, bool bFinish, bool bChoose, bool bResolveL
 					if (gCityLogLevel >= 1)
 					{
 						CvWString szString;
-						getUnitAIString(szString, pUnit->AI_getUnitAIType());
+						getUnitAIString(szString, pUnit->AI()->getUnitAIType());
 						logBBAI("    City %S finishes production of unit %S with UNITAI %S", getName().GetCString(), pUnit->getName(0).GetCString(), szString.GetCString());
 					}
 

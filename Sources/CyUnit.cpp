@@ -655,12 +655,12 @@ int CyUnit::captureResistanceTotal() const
 
 int /*UnitAITypes*/ CyUnit::getUnitAIType() const
 {
-	return m_pUnit->AI_getUnitAIType();
+	return m_pUnit->AI()->getUnitAIType();
 }
 
 void CyUnit::setUnitAIType(int /*UnitAITypes*/ iNewValue)
 {
-	m_pUnit->AI_setUnitAIType((UnitAITypes)iNewValue);
+	m_pUnit->AI()->setUnitAIType((UnitAITypes)iNewValue);
 }
 
 bool CyUnit::IsSelected() const

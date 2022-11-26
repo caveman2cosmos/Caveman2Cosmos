@@ -257,7 +257,7 @@ m_cachedBonusCount(NULL)
 		m_groupCycles.push_back(new CLinkList<int>);
 		m_plotGroups.push_back(new FFreeListTrashArray<CvPlotGroup>);
 		m_cities.push_back(new FFreeListTrashArray<CvCityAI>);
-		m_units.push_back(new FFreeListTrashArray<CvUnitAI>);
+		m_units.push_back(new FFreeListTrashArray<CvUnit, CvUnitCreator>);
 		m_selectionGroups.push_back(new FFreeListTrashArray<CvSelectionGroupAI>);
 	}
 
@@ -2890,7 +2890,7 @@ CvUnit* CvPlayer::getTempUnit(UnitTypes eUnit, int iX, int iY)
 	if ( m_pTempUnit == NULL )
 	{
 		m_pTempUnit = initUnit(eUnit, iX, iY, NO_UNITAI, NO_DIRECTION, UNIT_BIRTHMARK_TEMP_UNIT);
-		((CvPlayerAI*)this)->AI_changeNumAIUnits(m_pTempUnit->AI_getUnitAIType(),-1);	//	This one doesn't count
+		((CvPlayerAI*)this)->AI_changeNumAIUnits(m_pTempUnit->AI()->getUnitAIType(),-1);	//	This one doesn't count
 		removeGroupCycle(m_pTempUnit->getGroup()->getID());
 	}
 	else
@@ -2978,7 +2978,7 @@ void CvPlayer::disbandUnit()
 							iValue /= 6;
 						}
 
-						switch (pLoopUnit->AI_getUnitAIType())
+						switch (pLoopUnit->AI()->getUnitAIType())
 						{
 						case UNITAI_UNKNOWN:
 						case UNITAI_PROPHET:
@@ -3102,7 +3102,7 @@ void CvPlayer::disbandUnit()
 		if( gPlayerLogLevel >= 2 )
 		{
 			CvWString szString;
-			getUnitAIString(szString, pBestUnit->AI_getUnitAIType());
+			getUnitAIString(szString, pBestUnit->AI()->getUnitAIType());
 
 			logBBAI("	Player %d (%S) disbanding %S with UNITAI %S (forced)", getID(), getCivilizationDescription(0), pBestUnit->getName().GetCString(), szString.GetCString());
 		}
@@ -3957,7 +3957,7 @@ void CvPlayer::dumpStats() const
 	foreach_(const CvUnit* pLoopUnit, units())
 	{
 		UnitTypes eUnitType = pLoopUnit->getUnitType();
-		UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
+		UnitAITypes eAIType = pLoopUnit->AI()->getUnitAIType();
 		int		iMapKey = eAIType + (eUnitType << 16);
 
 		std::map<int,int>::iterator itr = unitCounts.find(iMapKey);
@@ -16587,7 +16587,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 				for (int i = 0; i < pPlot->getNumUnits(); i++)
 				{
 					pTargetUnit = pPlot->getUnitByIndex(i);
-					if (NULL != pTargetUnit && pTargetUnit->AI_getUnitAIType() == UNITAI_WORKER)
+					if (NULL != pTargetUnit && pTargetUnit->AI()->getUnitAIType() == UNITAI_WORKER)
 					{
 						if (pTargetUnit->getTeam() == eTargetTeam) break;
 						pTargetUnit = NULL;
@@ -30698,4 +30698,9 @@ void CvPlayer::resetIdleCities()
 			setIdleCity(city->getID(), true);
 		}
 	}
+}
+
+CvUnit* CvPlayer::CvUnitCreator::create()
+{
+	return CvUnit::createDefault();
 }

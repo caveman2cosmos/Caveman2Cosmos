@@ -407,7 +407,7 @@ void CvPlayerAI::AI_doTurnPre()
 
 				foreach_(const CvUnit * pLoopUnit, units())
 				{
-					const UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
+					const UnitAITypes eAIType = pLoopUnit->AI()->getUnitAIType();
 
 					if ((UnitAITypes)iI == eAIType && pLoopUnit->area() == pLoopArea)
 					{
@@ -595,7 +595,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 		// Copy units as we will be removing and adding some now.
 		foreach_(CvUnit * unit, units_safe() | filtered(CvUnit::fn::isPromotionReady()))
 		{
-			unit->AI_promote();
+			unit->AI()->promote();
 		}
 	}
 
@@ -662,7 +662,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 				if (pBestUnit != nullptr)
 				{
 					// Use AI upgrade to choose the best upgrade
-					bUpgraded = pBestUnit->AI_upgrade();
+					bUpgraded = pBestUnit->AI()->upgrade();
 					// Upgrade replaces the original unit with a new one, so old unit must be killed
 					pBestUnit->doDelayedDeath();
 				}
@@ -678,7 +678,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			// Copy units as we will be removing and adding some now.
 			foreach_(CvUnit * unit, units_safe() | filtered(CvUnit::fn::isAutoUpgrading() && CvUnit::fn::isReadyForUpgrade()))
 			{
-				unit->AI_upgrade();
+				unit->AI()->upgrade();
 				// Upgrade replaces the original unit with a new one, so old unit must be killed
 				unit->doDelayedDeath();
 			}
@@ -723,7 +723,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			// Koshling - never upgrade workers or subdued animals here as they typically have outcome
 			//	missions and construction capabilities that must be evaluated comparatively.
 			//	The UnitAI processing for these AI types handles upgrade explicitly.
-			switch (unitX->AI_getUnitAIType())
+			switch (unitX->AI()->getUnitAIType())
 			{
 				case UNITAI_SUBDUED_ANIMAL:
 				case UNITAI_WORKER:
@@ -762,7 +762,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 					// Only normal transports
 					&&  unitX->getSpecialCargo() == NO_SPECIALUNIT
 					// Also upgrade escort ships
-					||  unitX->AI_getUnitAIType() == UNITAI_ESCORT_SEA)
+					||  unitX->AI()->getUnitAIType() == UNITAI_ESCORT_SEA)
 					{
 						bValid = bAnyWar || iStartingGold - getGold() < iUpgradeBudget;
 					}
@@ -833,7 +833,7 @@ void CvPlayerAI::AI_doTurnUnitsPost()
 			}
 			if (bValid)
 			{
-				unitX->AI_upgrade(); // CAN DELETE UNIT!!!
+				unitX->AI()->upgrade(); // CAN DELETE UNIT!!!
 			}
 		}
 	}
@@ -1294,12 +1294,12 @@ int CvPlayerAI::AI_movementPriority(const CvSelectionGroup* pGroup) const
 		return pHeadUnit->canAirDefend() ? 3 : 4;
 	}
 
-	if (pHeadUnit->AI_getUnitAIType() == UNITAI_WORKER || pHeadUnit->AI_getUnitAIType() == UNITAI_WORKER_SEA)
+	if (pHeadUnit->AI()->getUnitAIType() == UNITAI_WORKER || pHeadUnit->AI()->getUnitAIType() == UNITAI_WORKER_SEA)
 	{
 		return 5;
 	}
 
-	if (pHeadUnit->AI_getUnitAIType() == UNITAI_EXPLORE || pHeadUnit->AI_getUnitAIType() == UNITAI_EXPLORE_SEA)
+	if (pHeadUnit->AI()->getUnitAIType() == UNITAI_EXPLORE || pHeadUnit->AI()->getUnitAIType() == UNITAI_EXPLORE_SEA)
 	{
 		return 6;
 	}
@@ -1348,7 +1348,7 @@ int CvPlayerAI::AI_movementPriority(const CvSelectionGroup* pGroup) const
 			iCurrCombat /= 2;
 		}
 
-		if (pHeadUnit->AI_isCityAIType())
+		if (pHeadUnit->AI()->isCityAIType())
 		{
 			iCurrCombat /= 2;
 		}
@@ -1915,7 +1915,7 @@ bool CvPlayerAI::AI_acceptUnit(const CvUnit* pUnit) const
 
 	if (AI_isFinancialTrouble())
 	{
-		if (pUnit->AI_getUnitAIType() == UNITAI_WORKER)
+		if (pUnit->AI()->getUnitAIType() == UNITAI_WORKER)
 		{
 			if (AI_neededWorkers(pUnit->area()) > 0)
 			{
@@ -1923,12 +1923,12 @@ bool CvPlayerAI::AI_acceptUnit(const CvUnit* pUnit) const
 			}
 		}
 
-		if (pUnit->AI_getUnitAIType() == UNITAI_WORKER_SEA)
+		if (pUnit->AI()->getUnitAIType() == UNITAI_WORKER_SEA)
 		{
 			return true;
 		}
 
-		if (pUnit->AI_getUnitAIType() == UNITAI_MISSIONARY)
+		if (pUnit->AI()->getUnitAIType() == UNITAI_MISSIONARY)
 		{
 			return true; //XXX
 		}
@@ -3765,7 +3765,7 @@ int CvPlayerAI::AI_countNumLocalNavy(const CvPlot* pPlot, int iRange) const
 			{
 				foreach_(const CvUnit * pLoopUnit, pLoopPlot->units())
 				{
-					const UnitAITypes aiType = pLoopUnit->AI_getUnitAIType();
+					const UnitAITypes aiType = pLoopUnit->AI()->getUnitAIType();
 
 					if (aiType == UNITAI_ATTACK_SEA || aiType == UNITAI_PIRATE_SEA || aiType == UNITAI_RESERVE_SEA)
 					{
@@ -4681,7 +4681,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 			{
 				if (pLoopUnit->isHasPromotion((PromotionTypes)iI))
 				{
-					iTempValue -= AI_promotionValue((PromotionTypes)iI, pLoopUnit->getUnitType(), pLoopUnit, pLoopUnit->AI_getUnitAIType());
+					iTempValue -= AI_promotionValue((PromotionTypes)iI, pLoopUnit->getUnitType(), pLoopUnit, pLoopUnit->AI()->getUnitAIType());
 				}
 			}
 		}
@@ -11755,7 +11755,7 @@ int CvPlayerAI::AI_totalWaterAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitA
 int CvPlayerAI::AI_countCargoSpace(UnitAITypes eUnitAI) const
 {
 	return algo::accumulate(units()
-		| filtered(CvUnit::fn::AI_getUnitAIType() == eUnitAI)
+		| filtered(CvUnit::fn::getUnitAIType() == eUnitAI)
 		| transformed(CvUnit::fn::cargoSpace()), 0);
 }
 
@@ -11959,7 +11959,7 @@ int CvPlayerAI::AI_adjacentPotentialAttackers(const CvPlot* pPlot, bool bTestCan
 		{
 			if (pLoopUnit->getOwner() == getID() && pLoopUnit->getDomainType() == (pPlot->isWater() ? DOMAIN_SEA : DOMAIN_LAND))
 			{
-				if (pLoopUnit->canAttack() && (!bTestCanMove || pLoopUnit->canMove()) && !pLoopUnit->AI_isCityAIType())
+				if (pLoopUnit->canAttack() && (!bTestCanMove || pLoopUnit->canMove()) && !pLoopUnit->AI()->isCityAIType())
 				{
 					iCount++;
 				}
@@ -11987,7 +11987,7 @@ int CvPlayerAI::AI_adjacentPotentialAttackers(const CvPlot* pPlot, bool bTestCan
 //					{
 //						if (!bTestVisible || (bTestVisible && !(pLoopUnit->isInvisible(getTeam(), true));
 //						{
-//							if (!(pLoopUnit->AI_isCityAIType()))
+//							if (!(pLoopUnit->AI()->isCityAIType()))
 //							{
 //								iCount++;
 //							}
@@ -21540,7 +21540,7 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 			}
 
 			// Multiplying by higher number means unit has higher priority, less likely to be disbanded
-			switch (unitX->AI_getUnitAIType())
+			switch (unitX->AI()->getUnitAIType())
 			{
 			case UNITAI_UNKNOWN:
 			case UNITAI_ANIMAL:
@@ -21729,7 +21729,7 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 		if (gPlayerLogLevel >= 2)
 		{
 			CvWString szString;
-			getUnitAIString(szString, pBestUnit->AI_getUnitAIType());
+			getUnitAIString(szString, pBestUnit->AI()->getUnitAIType());
 
 			logBBAI("	Player %d (%S) disbanding %S with UNITAI %S to save cash", getID(), getCivilizationDescription(0), pBestUnit->getName().GetCString(), szString.GetCString());
 		}
@@ -23657,7 +23657,7 @@ int CvPlayerAI::AI_goldToUpgradeAllUnits(int iExpThreshold) const
 		int iUnitGold = 0;
 		int iUnitUpgradePossibilities = 0;
 
-		const UnitAITypes eUnitAIType = unitX->AI_getUnitAIType();
+		const UnitAITypes eUnitAIType = unitX->AI()->getUnitAIType();
 		if (unitX->plot() != NULL)
 		{
 			const CvArea* pUnitArea = unitX->area();
@@ -23858,11 +23858,11 @@ void CvPlayerAI::AI_convertUnitAITypesForCrush()
 	{
 		bool bValid = false;
 
-		/* if (pLoopUnit->AI_getUnitAIType() == UNITAI_RESERVE
-		|| pLoopUnit->AI_isCityAIType() && (pLoopUnit->getExtraCityDefensePercent() <= 0)) */
+		/* if (pLoopUnit->AI()->getUnitAIType() == UNITAI_RESERVE
+		|| pLoopUnit->AI()->isCityAIType() && (pLoopUnit->getExtraCityDefensePercent() <= 0)) */
 		// K-Mod, protective leaders might still want to use their gunpowder units...
-		if (pLoopUnit->AI_getUnitAIType() == UNITAI_RESERVE || pLoopUnit->AI_getUnitAIType() == UNITAI_COLLATERAL
-			|| (pLoopUnit->AI_isCityAIType() && pLoopUnit->getExtraCityDefensePercent() <= 30))
+		if (pLoopUnit->AI()->getUnitAIType() == UNITAI_RESERVE || pLoopUnit->AI()->getUnitAIType() == UNITAI_COLLATERAL
+			|| (pLoopUnit->AI()->isCityAIType() && pLoopUnit->getExtraCityDefensePercent() <= 30))
 		{
 			bValid = true;
 		}
@@ -23873,7 +23873,7 @@ void CvPlayerAI::AI_convertUnitAITypesForCrush()
 		bValid = false;
 		}*/
 
-		if (!pLoopUnit->canAttack() || (pLoopUnit->AI_getUnitAIType() == UNITAI_CITY_SPECIAL))
+		if (!pLoopUnit->canAttack() || (pLoopUnit->AI()->getUnitAIType() == UNITAI_CITY_SPECIAL))
 		{
 			bValid = false;
 		}
@@ -23917,7 +23917,7 @@ void CvPlayerAI::AI_convertUnitAITypesForCrush()
 	{
 		if (rit->first > 0 && spare_units[rit->second->area()->getID()] > 0)
 		{
-			rit->second->AI_setUnitAIType(UNITAI_ATTACK_CITY);
+			rit->second->AI()->setUnitAIType(UNITAI_ATTACK_CITY);
 			spare_units[rit->second->area()->getID()]--;
 		}
 	}
@@ -26762,7 +26762,7 @@ int CvPlayerAI::strengthOfBestUnitAI(DomainTypes eDomain, UnitAITypes eUnitAITyp
 	int iCount = 0;
 	foreach_(const CvUnit * pLoopUnit, units())
 	{
-		if (eUnitAIType == NO_UNITAI || pLoopUnit->AI_getUnitAIType() == eUnitAIType)
+		if (eUnitAIType == NO_UNITAI || pLoopUnit->AI()->getUnitAIType() == eUnitAIType)
 		{
 			iCount++;
 			iTotal += pLoopUnit->getUnitInfo().getCombat();
@@ -36976,7 +36976,7 @@ void CvPlayerAI::AI_recalculateUnitCounts()
 
 	foreach_(const CvUnit * pLoopUnit, units())
 	{
-		const UnitAITypes eAIType = pLoopUnit->AI_getUnitAIType();
+		const UnitAITypes eAIType = pLoopUnit->AI()->getUnitAIType();
 
 		if (NO_UNITAI != eAIType)
 		{

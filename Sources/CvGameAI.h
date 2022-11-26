@@ -6,17 +6,20 @@
 #define CIV4_GAME_AI_H
 
 #include "CvGame.h"
+#include "CvUnitDefaultAI.h"
 
 class CvGameAI : public CvGame
 {
 
 public:
 
-  CvGameAI();
-  virtual ~CvGameAI();
+	typedef CvUnitDefaultAI TCvUnitAI;
 
-  void AI_init();
-  void AI_uninit();
+	CvGameAI();
+	virtual ~CvGameAI();
+
+	void AI_init();
+	void AI_uninit();
 	void AI_reset();
 
 	void AI_makeAssignWorkDirty();

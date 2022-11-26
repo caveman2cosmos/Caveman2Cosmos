@@ -6553,7 +6553,7 @@ bool CvCityAI::AI_isAirDefended(bool bCountLand, int iExtra)
 					// Count air units which can air patrol
 					if (pLoopUnit->getDamage() == 0 && !pLoopUnit->hasMoved())
 					{
-						if (pLoopUnit->AI_getUnitAIType() == UNITAI_DEFENSE_AIR)
+						if (pLoopUnit->AI()->getUnitAIType() == UNITAI_DEFENSE_AIR)
 						{
 							iAirIntercept += pLoopUnit->currInterceptionProbability();
 						}
@@ -8793,7 +8793,7 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 								int iPlotCount = 0;
 								foreach_(const CvUnit * pLoopUnit, kPlayer.units())
 								{
-									if ((pLoopUnit->AI_getUnitAIType() == UNITAI_MISSIONARY) && (pLoopUnit->getUnitInfo().getCorporationSpreads(eCorporation) > 0))
+									if ((pLoopUnit->AI()->getUnitAIType() == UNITAI_MISSIONARY) && (pLoopUnit->getUnitInfo().getCorporationSpreads(eCorporation) > 0))
 									{
 										iTotalCount++;
 										if (pLoopUnit->plot() == plot())
