@@ -8025,6 +8025,12 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 
 	FASSERT_BOUNDS(0, MAX_PLAYERS, eIndex);
 
+	if (iNewValue == 0 && getPlotCity() && getOwner() == eIndex)
+	{
+		FErrorMsg("Trace: Attempting to set plot culture to zero for player that owns the city on the plot");
+		iNewValue = 1;
+	}
+
 	if (getCulture(eIndex) != iNewValue)
 	{
 		std::vector<std::pair<PlayerTypes, int> >::iterator itr;
@@ -8089,10 +8095,11 @@ void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate, bool b
 	if (0 != iChange)
 	{
 		// Lots of things put 1 culture on a tile to mark as claimed; adjust above threshold if so.
-		if (bDoMinAdjust && iChange > 0 && iChange < minimumNonDecayCulture())
-			iChange = minimumNonDecayCulture();
-		const int iNonNegativeCulture = std::max(getCulture(eIndex) + iChange, 0);
-		setCulture(eIndex, iNonNegativeCulture, bUpdate, true);
+		if (bDoMinAdjust && iChange > 0)
+		{
+			iChange = std::max(iChange, minimumNonDecayCulture());
+		}
+		setCulture(eIndex, std::max(0, getCulture(eIndex) + iChange), bUpdate, true);
 	}
 }
 
@@ -10263,34 +10270,47 @@ void CvPlot::decayCulture()
 	// Perhaps 10% plus 5% per every 100 culture or something capping out at 50%, need to examine.
 	// Gotta avoid 'welfare cliffs' though.
 	// NOTE: If decay function is altered, gotta change minimumNonDecayCulture.
-	int decayPercent = GC.getTILE_CULTURE_DECAY_PERCENT();
-	decayPercent = decayPercent * 100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-	int decayFlat = GC.getTILE_CULTURE_DECAY_CONSTANT();
 
-	for (int playerNum = 0; playerNum < MAX_PLAYERS; playerNum++)
+	const int decayPermille = GC.getTILE_CULTURE_DECAY_PERCENT() * 1000 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+	const int decayFlat = GC.getTILE_CULTURE_DECAY_CONSTANT();
+
+	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
-		CvPlayer& playerX = GET_PLAYER((PlayerTypes)playerNum);
+		const PlayerTypes ePlayerX = static_cast<PlayerTypes>(i);
 		// Check if alive? Barb?
-		if (getCulture((PlayerTypes)playerNum) > 0 && playerX.isAlive())
+		if (getCulture(ePlayerX) > 0)
 		{
-			setCulture((PlayerTypes)playerNum,
-				std::max(0,
-				// default: current culture * 90% then - 1
-				getCulture((PlayerTypes)playerNum) * (100 - decayPercent) / 100 - decayFlat),
+			setCulture(
+				ePlayerX,
+				std::max(
+					getPlotCity() && getOwner() == ePlayerX ? 1 : 0,
+					// default: current culture * 90% then - 1
+					getCulture(ePlayerX) * (1000 - decayPermille) / 1000 - decayFlat
+				),
 				// Don't need to update borders, update culture is called next in doCulture
-				false, false);
+				false, false
+			);
 		}
 	}
 }
+
 
 
 int CvPlot::minimumNonDecayCulture()
 {
 	// Lowest culture above which, after 1 decay, will still be > 0. Inverse of decay func, basically.
 	// Can cache as CvGame variable if needed, idk.
-	return ((2 +
-		GC.getTILE_CULTURE_DECAY_CONSTANT() * 100 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent())
-		* 100 / (100 - GC.getTILE_CULTURE_DECAY_PERCENT()));
+	return (
+		(1 + GC.getTILE_CULTURE_DECAY_CONSTANT()) * 1000
+		/
+		(
+			1000 - (
+				GC.getTILE_CULTURE_DECAY_PERCENT() * 1000
+				/
+				GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
+			)
+		)
+	);
 }
 
 
