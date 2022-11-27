@@ -165,7 +165,7 @@ void CvUnitDefaultAI::reset(UnitAITypes eUnitAI, bool bConstructorCall)
 void CvUnitDefaultAI::SendLog(CvWString function, CvWString message)
 {
 	//WIP, wrapper of the new FLB logger, to create correct payload for m_unit class
-	CvWString aiType = "CvUnit";
+	CvWString aiType = "CvUnitAI";
 
 
 	// logAIJson(aiType, m_unit->getName(), function, message);
@@ -16783,11 +16783,11 @@ bool CvUnitDefaultAI::getThreateningUnit(const CvPlot* pPlot, CvUnit*& pThreaten
 			{
 				if (pPlot == pAttackPlot)
 				{
-					iOdds = 100 - ((CvUnit*)this)->AI()->attackOddsAtPlot(pPlot, pLoopUnit);
+					iOdds = 100 - m_unit->AI()->attackOddsAtPlot(pPlot, pLoopUnit);
 				}
 				else
 				{
-					iOdds = pLoopUnit->AI()->attackOddsAtPlot(pPlot, (CvUnit*)this);
+					iOdds = pLoopUnit->AI()->attackOddsAtPlot(pPlot, m_unit);
 				}
 
 				if (iOdds > iWorstOdds)
@@ -16848,7 +16848,7 @@ bool CvUnitDefaultAI::exposedToDanger(const CvPlot* pPlot, int acceptableOdds, b
 
 			while (getThreateningUnit(pPlot, threateningUnit, pPlot, iIndex, bConsiderOnlyWorstThreat))
 			{
-				int iOdds = ((CvUnit*)pOurAttacker)->AI()->attackOddsAtPlot(pPlot, threateningUnit);
+				int iOdds = pOurAttacker->AI()->attackOddsAtPlot(pPlot, threateningUnit);
 
 				//	attackOddsAtPlot returns a value capped artificially at 99, but for the ensuing calculation
 				//	that causes nasty rounding errors so we just treat 99 as if it were certainty
@@ -16910,7 +16910,7 @@ bool CvUnitDefaultAI::exposedToDanger(const CvPlot* pPlot, int acceptableOdds, b
 
 						if (!m_unit->isInvisible(pUnit->getTeam(), false))
 						{
-							int iOdds = pUnit->AI()->attackOddsAtPlot(pPlot, (CvUnit*)pOurDefender);
+							int iOdds = pUnit->AI()->attackOddsAtPlot(pPlot, pOurDefender);
 
 							//	attackOddsAtPlot returns a value capped artificially below at 1, but for the ensuing calculation
 							//	that causes nasty rounding errors so we just treat 1 as if it were certainty of failure
@@ -26035,22 +26035,22 @@ void CvUnitDefaultAI::read(FDataStreamBase* pStream)
 	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
-	WRAPPER_READ(wrapper, "CvUnit", &m_iGarrisonCity);	// which city does m_unit unit belong to the garrison of (if any)
-	WRAPPER_READ(wrapper, "CvUnit", &m_iGroupLeadOverride);
-	WRAPPER_READ(wrapper, "CvUnit", &m_bWaitingOnUnitAIAny);
+	WRAPPER_READ(wrapper, "CvUnitAI", &m_iGarrisonCity);	// which city does m_unit unit belong to the garrison of (if any)
+	WRAPPER_READ(wrapper, "CvUnitAI", &m_iGroupLeadOverride);
+	WRAPPER_READ(wrapper, "CvUnitAI", &m_bWaitingOnUnitAIAny);
 
 	//m_aiWaitingOnUnitAITypes.clear();
 	//uint iSize;
-	//WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iSize, "numWaitingOnUnitAITypes");
+	//WRAPPER_READ_DECORATED(wrapper, "CvUnitAI", &iSize, "numWaitingOnUnitAITypes");
 	//for (uint i = 0; i < iSize; i++)
 	//{
 	//	int iIndex;
-	//	WRAPPER_READ(wrapper, "CvUnit", &iIndex);
+	//	WRAPPER_READ(wrapper, "CvUnitAI", &iIndex);
 	//	m_aiWaitingOnUnitAITypes.push_back(iIndex);
 	//}
 
 	//Example of how to Skip Element
-	//WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iLastUnitUpdated, SAVE_VALUE_TYPE_INT);
+	//WRAPPER_SKIP_ELEMENT(wrapper, "CvUnitAI", m_iLastUnitUpdated, SAVE_VALUE_TYPE_INT);
 }
 
 
@@ -26064,15 +26064,15 @@ void CvUnitDefaultAI::write(FDataStreamBase* pStream)
 	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iGarrisonCity);	// which city does m_unit unit belong to the garrison of (if any)
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iGroupLeadOverride);
-	WRAPPER_WRITE(wrapper, "CvUnit", m_bWaitingOnUnitAIAny);
+	WRAPPER_WRITE(wrapper, "CvUnitAI", m_iGarrisonCity);	// which city does m_unit unit belong to the garrison of (if any)
+	WRAPPER_WRITE(wrapper, "CvUnitAI", m_iGroupLeadOverride);
+	WRAPPER_WRITE(wrapper, "CvUnitAI", m_bWaitingOnUnitAIAny);
 
 	//uint iSize = m_aiWaitingOnUnitAITypes.size();
-	//WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iSize, "numWaitingOnUnitAITypes");
+	//WRAPPER_WRITE_DECORATED(wrapper, "CvUnitAI", iSize, "numWaitingOnUnitAITypes");
 	//for (uint iI = 0; iI < iSize; iI++)
 	//{
-	//	WRAPPER_WRITE(wrapper, "CvUnit", m_aiWaitingOnUnitAITypes[iI]);
+	//	WRAPPER_WRITE(wrapper, "CvUnitAI", m_aiWaitingOnUnitAITypes[iI]);
 	//}
 }
 
