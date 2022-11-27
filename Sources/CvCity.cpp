@@ -3831,7 +3831,7 @@ namespace {
 	{
 		return order.eOrderType == ORDER_TRAIN
 			&& order.unit.contractedAIType == contractedAIType
-			&& order.unit.plotIndex == GC.getMap().plotNum(pDestPlot->getX(), pDestPlot->getY());
+			&& (pDestPlot == NULL || order.unit.plotIndex == GC.getMap().plotNum(pDestPlot->getX(), pDestPlot->getY()));
 	}
 };
 

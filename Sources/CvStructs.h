@@ -363,6 +363,18 @@ struct OrderData
 			/*UnitAITypes*/uint16_t AIType;
 			/*UnitAITypes*/uint8_t contractedAIType; // aux, 0xFF for none
 			uint8_t contractFlags; // aux
+
+			/* Toffer - Project: Contracts needs to be objects that lives on in the contract broker.
+				OrderData should have a reference to it here for unit orders, contractFlags and contractedAIType should be moved out of this struct and into the contract object.
+				On the unit side there will be two different caches, a vector of all the unit backup request a unit might have,
+				while the other is a single reference to the contract that the unit is responding to (a unit can only respond to 1 contract at any given time).
+				When the unit is trained, and if this OrderData has a non-null contract reference then the finished unit should inherit/cache the contract reference from this order.
+				When a responding unit meets up with the unit requesting it, the contract object can be deleted,
+				the contract broker would store the contracts in a vector, and the contract would itself know its state,
+				if it is queued as an order in a city or if a unit is currently responding to it.
+				That way we can ensure that a contract is being handled correctly from its origin to its conclusion,
+				i.e. if the responding unit dies then the contract broker will try agaion to either find a valid unit or get a city to queue a valid unit order.
+			*/
 		} unit;
 		struct {
 			/*BuildingTypes*/int type;
