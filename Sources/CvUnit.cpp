@@ -19218,36 +19218,29 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 		{
 			setCombatFirstStrikes(stealthStrikesTotal());
 		}
-		else
-		{
-			setCombatFirstStrikes((pCombatUnit->immuneToFirstStrikes()) ? 0 : (firstStrikes() + GC.getGame().getSorenRandNum(chanceFirstStrikes() + 1, "First Strike")));
-		}
+		else setCombatFirstStrikes((pCombatUnit->immuneToFirstStrikes()) ? 0 : (firstStrikes() + GC.getGame().getSorenRandNum(chanceFirstStrikes() + 1, "First Strike")));
 
 		FAssertMsg(getCombatUnit() == NULL, "Combat Unit is not expected to be assigned");
-		/*FAssertMsg(!(plot()->isFighting()), "(plot()->isFighting()) did not return false as expected");*///TB - this can happen now safely.
+
 		m_bCombatFocus = (bAttacking && !(gDLL->getInterfaceIFace()->isFocusedWidget()) && ((getOwner() == GC.getGame().getActivePlayer()) || ((pCombatUnit->getOwner() == GC.getGame().getActivePlayer()) && !(GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS)))));
 		m_combatUnit = pCombatUnit->getIDInfo();
+
 		if (!bStealthAttack)
 		{
 			setCombatFirstStrikes((pCombatUnit->immuneToFirstStrikes()) ? 0 : (firstStrikes() + GC.getGame().getSorenRandNum(chanceFirstStrikes() + 1, "First Strike")));
 		}
-		else
-		{
-			setCombatFirstStrikes(stealthStrikesTotal());
-		}
+		else setCombatFirstStrikes(stealthStrikesTotal());
+
 		//TB Combat mod begin
-		int iKnockbackAttempts = 0;
 		setCombatPowerShots(powerShotsTotal());
+
 		if (knockbackTotal() > 0)
 		{
-			iKnockbackAttempts = knockbackRetriesTotal() + 1;
-			setCombatKnockbacks(iKnockbackAttempts);
+			setCombatKnockbacks(knockbackRetriesTotal() + 1);
 		}
-		int iRepelAttempts = 0;
 		if (repelTotal() > 0)
 		{
-			iRepelAttempts = repelRetriesTotal() + 1;
-			setCombatRepels(iRepelAttempts);
+			setCombatRepels(repelRetriesTotal() + 1);
 		}
 		setCombatStuns(0);
 		//TB Combat Mod end
@@ -19255,7 +19248,6 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 	else if (getCombatUnit() != NULL)
 	{
 		FAssertMsg(getCombatUnit() != NULL, "getCombatUnit() is not expected to be equal with NULL");
-		FAssertMsg(isDead() || plot()->isFighting(), "plot()->isFighting is expected to be true");
 		m_bCombatFocus = false;
 		m_combatUnit.reset();
 		setCombatFirstStrikes(0);
@@ -19276,7 +19268,7 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 			gDLL->getInterfaceIFace()->setDirty(PlotListButtons_DIRTY_BIT, true);
 		}
 
-		if ( !isUsingDummyEntities()  && isInViewport())
+		if (!isUsingDummyEntities() && isInViewport())
 		{
 			CvDLLEntity::SetSiegeTower(false);
 		}
