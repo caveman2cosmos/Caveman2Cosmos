@@ -10301,15 +10301,20 @@ int CvPlot::minimumNonDecayCulture()
 	// Lowest culture above which, after 1 decay, will still be > 0. Inverse of decay func, basically.
 	// Can cache as CvGame variable if needed, idk.
 	return (
-		(1 + GC.getTILE_CULTURE_DECAY_CONSTANT()) * 1000
-		/
+		// Toffer - Round up (multiply by 100 add 99 and then divide all by 100) to get the effective min value.
 		(
-			1000 - (
-				GC.getTILE_CULTURE_DECAY_PERCENT() * 1000
-				/
-				GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
+			99 +
+			(1 + GC.getTILE_CULTURE_DECAY_CONSTANT()) * 100000
+			/
+			(
+				1000 - (
+					GC.getTILE_CULTURE_DECAY_PERCENT() * 1000
+					/
+					GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
+				)
 			)
 		)
+		/ 100
 	);
 }
 
