@@ -1831,7 +1831,7 @@ class CvMainInterface:
 			bEnable = CyUnit.getOwner() == iPlayerAct
 			bSelected = CyUnit.IsSelected()
 
-			if CyUnit.isFighting():
+			if CyUnit.isInBattle():
 				bShowHealth = False
 			elif CyUnit.getDomainType() == DomainTypes.DOMAIN_AIR:
 				bShowHealth = CyUnit.canAirAttack()
@@ -4190,7 +4190,7 @@ class CvMainInterface:
 						iRow += 1
 					# Fractional XP
 					fXP = CyUnit.getRealExperience()
-					if fXP and not CyUnit.isFighting():
+					if fXP and not CyUnit.isInBattle():
 						szXP = self.szInterfacePaneExperience
 						screen.appendTableRow(unitTable)
 						screen.setTableText(unitTable, 0, iRow, "<font=1>" + szXP, "", eWidGen, 0, 0, 1<<0)

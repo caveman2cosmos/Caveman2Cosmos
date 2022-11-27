@@ -5072,9 +5072,16 @@ bool CvPlot::isVisibleOtherUnit(PlayerTypes ePlayer) const
 }
 
 
-bool CvPlot::isFighting() const
+/*DllExport*/ bool CvPlot::isFighting() const
 {
-	return (plotCheck(PUF_isFighting) != NULL);
+	OutputDebugString("exe is asking if there's a unit in battle on this plot\n");
+
+	return plotCheck(PUF_isInBattle) != NULL;
+}
+
+bool CvPlot::isBattle() const
+{
+	return plotCheck(PUF_isInBattle) != NULL;
 }
 
 
