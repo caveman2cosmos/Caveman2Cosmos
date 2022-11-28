@@ -440,6 +440,8 @@ public:
 	DllExport bool isVisibleEnemyUnit(PlayerTypes ePlayer) const;
 	DllExport int getNumVisibleUnits(PlayerTypes ePlayer) const;
 
+	bool isBattle() const;
+
 	bool isVisibleEnemyUnit(const CvUnit* pUnit) const;
 	bool isVisibleOtherUnit(PlayerTypes ePlayer) const;
 

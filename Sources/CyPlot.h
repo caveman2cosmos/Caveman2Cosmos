@@ -68,7 +68,6 @@ public:
 	int getNumDefenders(int /*PlayerTypes*/ ePlayer) const;
 	int getNumVisiblePotentialEnemyDefenders(const CyUnit& kUnit) const;
 	bool isVisibleEnemyUnit(int /*PlayerTypes*/ ePlayer) const;
-	bool isFighting() const;
 
 	bool canHaveFeature(int /*FeatureTypes*/ eFeature) const;
 	bool isBonusNetwork(int /*TeamTypes*/ eTeam) const;

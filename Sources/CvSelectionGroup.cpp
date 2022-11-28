@@ -3558,7 +3558,7 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 				if (getNumUnits() > 1)
 				{
-					if (!bLoopStealthDefense && (pBestAttackUnit->plot()->isFighting() || pDestPlot->isFighting()))
+					if (!bLoopStealthDefense && (pBestAttackUnit->plot()->isBattle() || pDestPlot->isBattle()))
 					{
 						bFailedAlreadyFighting = true;
 					}
