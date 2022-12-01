@@ -20,6 +20,7 @@ class CvSelectionGroup;
 class CvArtInfoUnit;
 class CvUnitInfo;
 class CvUnitSelectionCriteria;
+namespace CvUnitNS { class CombatService; }
 #ifdef USE_OLD_PATH_GENERATOR
 class FAStarNode;
 #endif
@@ -542,7 +543,10 @@ public:
 
 	void doTurn();
 
-	void updateCombat(bool bQuick = false, CvUnit* pSelectedDefender = NULL, bool bSamePlot = false, bool bStealth = false, bool bNoCache = false);
+	void updateCombat(bool bQuick = false, CvUnit* pSelectedDefender = NULL, bool bSamePlot = false, 
+		bool bStealth = false, bool bNoCache = false);
+	void updateCombat2(bool bQuick = false, CvUnit* pSelectedDefender = NULL, bool bSamePlot = false,
+		bool bStealth = false, bool bNoCache = false);
 	void updateAirCombat(bool bQuick = false);
 	void updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish);
 
@@ -3094,6 +3098,8 @@ public:
 		DECLARE_MAP_FUNCTOR_CONST_3(CvUnit, bool, canBombardAtRanged, const CvPlot*, int, int);
 		DECLARE_MAP_FUNCTOR_CONST_3(CvUnit, int, getTriggerValue, EventTriggerTypes /*eTrigger*/, const CvPlot* /*pPlot*/, bool /*bCheckPlot*/);
 	};
+
+	friend class CvUnitNS::CombatService;
 };
 
 typedef std::vector<CvUnit*> UnitVector;

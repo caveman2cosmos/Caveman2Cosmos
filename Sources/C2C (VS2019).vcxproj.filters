@@ -750,8 +750,11 @@
     <ClCompile Include="CyCityOutputHistoryInterface.cpp">
       <Filter>Source\UI\City</Filter>
     </ClCompile>
-    <ClCompile Include="CvUnitDefaultAI.cpp">
-      <Filter>Source\Base\Unit</Filter>
+    <ClCompile Include="CvUnit_CombatService.cpp">
+      <Filter>Source\Base\Unit\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="CvUnit_DefaultAI.cpp">
+      <Filter>Source\Base\Unit\Services</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -823,9 +826,6 @@
     </ClInclude>
     <ClInclude Include="CvUnitComponents.h">
       <Filter>Source\Base\Unit\Capabilities</Filter>
-    </ClInclude>
-    <ClInclude Include="CvUnitDefaultAI.h">
-      <Filter>Source\Base\Unit</Filter>
     </ClInclude>
     <ClInclude Include="CvWorkerAI.h">
       <Filter>Source\Base\Unit\Capabilities</Filter>
@@ -1273,6 +1273,12 @@
     </ClInclude>
     <ClInclude Include="ICvUnitAI.h">
       <Filter>Source\Base\Unit</Filter>
+    </ClInclude>
+    <ClInclude Include="CvUnit_CombatService.h">
+      <Filter>Source\Base\Unit\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="CvUnit_DefaultAI.h">
+      <Filter>Source\Base\Unit\Services</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

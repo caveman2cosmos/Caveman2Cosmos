@@ -197,7 +197,8 @@
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
     <ClCompile Include="CvSettlerAI.cpp" />
-    <ClCompile Include="CvUnitDefaultAI.cpp" />
+    <ClCompile Include="CvUnit_CombatService.cpp" />
+    <ClCompile Include="CvUnit_DefaultAI.cpp" />
     <ClCompile Include="CvValueService.cpp" />
     <ClCompile Include="CvWorkerAI.cpp" />
     <ClCompile Include="CvWorkerService.cpp" />
@@ -364,6 +365,7 @@
     <ClInclude Include="CvPlotPaging.h" />
     <ClInclude Include="CvPython.h" />
     <ClInclude Include="CvSettlerAI.h" />
+    <ClInclude Include="CvUnit_CombatService.h" />
     <ClInclude Include="CvValueService.h" />
     <ClInclude Include="CvWorkerAI.h" />
     <ClInclude Include="CvWorkerService.h" />
@@ -479,7 +481,7 @@
     <ClInclude Include="CvTeam.h" />
     <ClInclude Include="CvTeamAI.h" />
     <ClInclude Include="CvUnit.h" />
-    <ClInclude Include="CvUnitDefaultAI.h" />
+    <ClInclude Include="CvUnit_DefaultAI.h" />
     <ClInclude Include="CvUnitComponents.h" />
     <ClInclude Include="CvUnitFilters.h" />
     <ClInclude Include="CvUnitGrouping.h" />

@@ -27,9 +27,12 @@
 #include "CvDLLUtilityIFaceBase.h"
 #include "CyPlot.h"
 #include "CyUnit.h"
+#include "CvUnit_CombatService.h"
 #ifdef USE_OLD_PATH_GENERATOR
 #include "FAStarNode.h"
 #endif
+
+using namespace CvUnitNS;
 
 static CvEntity* g_dummyEntity = NULL;
 static CvUnit*	 g_dummyUnit = NULL;
@@ -104,7 +107,7 @@ bool CvUnit::isRealEntity(const CvEntity* entity)
 CvUnit* CvUnit::createDefault(bool bIsDummy)
 {
 	CvUnit* unit = new CvUnit(bIsDummy);
-	unit->m_ai = new CvUnitDefaultAI(unit);
+	unit->m_ai = new DefaultAI(unit);
 	return unit;
 }
 CvUnit::CvUnit(bool bIsDummy) : m_GameObject(this),
@@ -3065,8 +3068,13 @@ void CvUnit::resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition&
 	}
 }
 
-
 void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot, bool bStealth, bool bNoCache)
+{
+	CombatService s(this, bQuick, pSelectedDefender, bSamePlot, bStealth, bNoCache);
+	s.updateCombat();
+}
+
+void CvUnit::updateCombat2(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot, bool bStealth, bool bNoCache)
 {
 	PROFILE_FUNC();
 
