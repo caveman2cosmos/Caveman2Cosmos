@@ -1561,9 +1561,9 @@ bool PUF_canAirDefend(const CvUnit* pUnit, int iData1, int iData2, const CvUnit*
 	return pUnit->canAirDefend();
 }
 
-bool PUF_isFighting(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
+bool PUF_isInBattle(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
 {
-	return pUnit->isFighting();
+	return pUnit->isInBattle();
 }
 
 bool PUF_isAnimal( const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis)
