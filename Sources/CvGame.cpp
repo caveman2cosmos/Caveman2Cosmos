@@ -503,6 +503,8 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		gDLL->getInterfaceIFace()->clearSelectedCities();
 	}
 
+	GC.cacheGameSpecificValues();
+
 	// Lowest culture which, after a culture decay, will still be > 0. Inverse of CvPlot::decayCulture(), basically.
 	m_iMinCultureOutput = (
 		// Toffer - Round up (multiply by 1000 add 999 and then divide by 1000) to get actual min value.
