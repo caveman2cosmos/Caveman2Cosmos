@@ -772,7 +772,7 @@ public:
 
 	void checkInitialCivics();
 
-	void setCultureLevels();
+	void cacheGameSpecificValues();
 
 protected:
 	void doPostLoadCaching();

@@ -503,6 +503,8 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		gDLL->getInterfaceIFace()->clearSelectedCities();
 	}
 
+	GC.cacheGameSpecificValues();
+
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		if (GET_TEAM((TeamTypes)iI).isAlive())
@@ -1063,8 +1065,6 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	// Sanguo Mod Performance start, added by poyuzhe 07.27.09
 	UnitTypes eUnit;
 	std::vector<UnitTypes> aUpgradeUnits;
-
-	GC.setCultureLevels();
 
 	//Establish speedy promotion & Building reference by line
 	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)

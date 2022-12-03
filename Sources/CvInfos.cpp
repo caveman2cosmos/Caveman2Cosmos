@@ -25699,22 +25699,16 @@ void CvUpkeepInfo::getCheckSum(uint32_t& iSum) const
 //
 
 CvCultureLevelInfo::CvCultureLevelInfo() :
-m_eLevel(NO_CULTURELEVEL),
+m_iLevel(-1),
 m_iCityDefenseModifier(0),
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 m_iCityRadius(1),
 m_iMaxWorldWonders(1),
 m_iMaxTeamWonders(1),
 m_iMaxNationalWonders(1),
 m_iMaxNationalWondersOCC(1),
 m_iPrereqGameOption(NO_GAMEOPTION),
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
+
 m_paiSpeedThreshold(NULL)
 {
 }

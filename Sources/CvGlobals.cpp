@@ -3112,20 +3112,16 @@ void cvInternalGlobals::checkInitialCivics()
 	}
 }
 
-void cvInternalGlobals::setCultureLevels()
+void cvInternalGlobals::cacheGameSpecificValues()
 {
-	CultureLevelTypes eLevel = 0;
+	int iLevel = 0;
 
 	foreach_(CvCultureLevelInfo* info, m_paCultureLevelInfo)
 	{
 		if (info->getPrereqGameOption() == NO_GAMEOPTION || getGame().isOption((GameOptionTypes)info->getPrereqGameOption()))
 		{
-			info->setLevel(eLevel);
-			eLevel += 1;
+			info->setLevel(iLevel++);
 		}
-		else
-		{
-			info->setLevel(NO_CULTURELEVEL);
-		}
+		else info->setLevel(-1);
 	}
 }
