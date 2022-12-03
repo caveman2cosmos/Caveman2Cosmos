@@ -10310,8 +10310,8 @@ int CvPlot::minimumNonDecayCulture()
 	return (
 		// Toffer - Round up (multiply by 100 add 99 and then divide all by 100) to get the effective min value.
 		(
-			99 +
-			(1 + GC.getTILE_CULTURE_DECAY_CONSTANT()) * 100000
+			999 +
+			(1 + GC.getTILE_CULTURE_DECAY_CONSTANT()) * 1000000
 			/
 			(
 				1000 - (
@@ -10321,7 +10321,7 @@ int CvPlot::minimumNonDecayCulture()
 				)
 			)
 		)
-		/ 100
+		/ 1000
 	);
 }
 
