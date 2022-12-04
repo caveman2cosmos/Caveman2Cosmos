@@ -1833,6 +1833,10 @@ bool CvSelectionGroup::startMission()
 			{
 				return continueMission();
 			}
+			else if (bCycle)
+			{
+				GC.getGame().updateSelectionListInternal();
+			}
 		}
 		if (bAction && bCycle && getOwner() == GC.getGame().getActivePlayer() && IsSelected()
 		&& (getNumUnits() > 1 || GET_PLAYER(GC.getGame().getActivePlayer()).isOption(PLAYEROPTION_QUICK_MOVES)))
