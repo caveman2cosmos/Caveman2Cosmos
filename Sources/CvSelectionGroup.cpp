@@ -2221,7 +2221,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 						headMissionQueueNode()->m_data.eMissionType == MISSION_ROUTE_TO
 					||  headMissionQueueNode()->m_data.eMissionType == MISSION_MOVE_TO_UNIT)
 					{
-						GC.getGame().updateSelectionListInternal(GET_PLAYER(GC.getGame().getActivePlayer()).isOption(PLAYEROPTION_QUICK_MOVES) ? 1 : 4);
+						GC.getGame().updateSelectionListInternal(getBugOptionINT("MainInterface__CycleDelayMove", 2));
 					}
 				}
 				if (!isHuman() || headMissionQueueNode()->m_data.eMissionType != MISSION_MOVE_TO)

@@ -388,6 +388,7 @@ protected:
 
 	int m_iTurnSlice;
 	int m_iMinGameSliceToCycleUnit;
+	int m_iCycleUnitSliceDelay;
 	int m_iCutoffSlice;
 	int m_iNumGameTurnActive;
 	int m_iNumCities;
