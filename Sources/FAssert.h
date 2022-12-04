@@ -8,6 +8,33 @@
 #define CONCATENATE1(arg1, arg2)  CONCATENATE2(arg1, arg2)
 #define CONCATENATE2(arg1, arg2)  arg1##arg2
 
+
+struct FAssertInfo
+{
+	std::string szExpression;
+	std::string szMessage;
+	std::string szPythonCallstack;
+	std::string szDLLCallstack;
+	std::string szFileName;
+	unsigned int line;
+	bool* bIgnoreAlways;
+
+	inline FAssertInfo() { bIgnoreAlways = &bDummyIgnoreAlways; }
+
+private:
+	static bool bDummyIgnoreAlways;
+};
+
+
+int sprintFAssertMsg(char* dest, const std::string& fileName, unsigned int line, const std::string& expression,
+	const std::string& msg, const std::string& pythonCallstack, const std::string& dllCallstack);
+
+inline int sprintFAssertMsg(char* dest, const FAssertInfo& info)
+{
+	return sprintFAssertMsg(dest, info.szFileName, info.line, info.szExpression, info.szMessage,
+		info.szPythonCallstack, info.szDLLCallstack);
+}
+
 // Only compile in FAssert's if FASSERT_ENABLE is defined.  By default, however, let's key off of
 // _DEBUG.  Sometimes, however, it's useful to enable asserts in release builds, and you can do that
 // simply by changing the following lines to define FASSERT_ENABLE or using project settings to override
@@ -15,14 +42,28 @@
 #define FASSERT_ENABLE
 #endif
 
-#if defined(FASSERT_ENABLE) || !defined(_DEBUG)
-#ifdef WIN32
-bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char*, bool& );
-#endif
-#endif
+#ifndef FASSERT_ENABLE
 
-#ifdef FASSERT_ENABLE
+#define FAssert( expr )
+#define FAssertMsg( expr, msg )
+#define FAssertRecalcMsg( expr, msg )
+#define FAssertOptionMsg( option, expr, msg )
+#define FAssertOptionRecalcMsg( option, expr, msg)
+#define FErrorMsg( msg )
+#define FEnsure( expr )
+#define FEnsureMsg( expr, msg )
+
+#define FAssertDeclareScope(_id_)
+#define FAssertInScope(_id_)
+#define FAssertNotInScope(_id_)
+
+#define FASSERT_BOUNDS(lower, upper, index)
+#define FASSERT_NOT_NEGATIVE(value)
+
+#else
+
 #if defined(__COVERITY__)
+
 #define FAssert( expr )	if( !(expr) ) throw std::exception(#expr);
 #define FAssertMsg( expr, msg )	FAssert( expr )
 #define FAssertRecalcMsg( expr, msg ) FAssert( expr )
@@ -31,14 +72,21 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 #define FErrorMsg( msg ) FAssert( false )
 #define FEnsure( expr ) { if( !(expr) ) throw std::exception(#expr); }
 #define FEnsureMsg( expr, msg ) { if( !(expr) ) throw std::exception(#expr); }
+
 #elif defined(WIN32)
+
+void fAssert(const char* szExpr, const char* szMsg, const char* szFile, unsigned int line,
+	const char* szFunction, bool* bIgnoreAlways, bool ensure = false);
+
+void fError(const char* szMsg, const char* szFile, unsigned int line,
+	const char* szFunction, bool* bIgnoreAlways, bool ensure = false);
 
 #define FAssert( expr )	\
 { \
 	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways && !(expr) ) \
 	{ \
-		if( FAssertDlg( #expr, 0, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
+		fAssert( #expr, 0, __FILE__, __LINE__, __FUNCTION__, &bIgnoreAlways ); \
 	} \
 }
 
@@ -47,7 +95,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways && !(expr) ) \
 	{ \
-		if( FAssertDlg( #expr, msg, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
+		fAssert( #expr, msg, __FILE__, __LINE__, __FUNCTION__, &bIgnoreAlways ); \
 	} \
 }
 
@@ -56,7 +104,8 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways && !(expr) ) \
 	{ \
-		if( FAssertDlg( #expr, CvString::format("%s\r\n\r\nPlease recalculate modifiers!", msg).c_str(), __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
+		fAssert( #expr, CvString::format("%s\r\n\r\nPlease recalculate modifiers!", msg).c_str(), __FILE__, \
+			__LINE__, __FUNCTION__, &bIgnoreAlways ); \
 	} \
 }
 
@@ -65,7 +114,8 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways && GC.getGame().isOption(option) && !(expr) ) \
 	{ \
-		if( FAssertDlg( #expr, CvString::format("Option: %s\r\n%s", #option, msg).c_str(), __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
+		fAssert( #expr, CvString::format("Option: %s\r\n%s", #option, msg).c_str(), __FILE__, __LINE__, \
+			__FUNCTION__, &bIgnoreAlways ); \
 	} \
 }
 
@@ -74,7 +124,8 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways && GC.getGame().isOption(option) && !(expr) ) \
 	{ \
-		if( FAssertDlg( #expr, CvString::format("Option: %s\r\n%s\r\n\r\nPlease recalculate modifiers!",  #option, msg).c_str(), __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
+		fAssert( #expr, CvString::format("Option: %s\r\n%s\r\n\r\nPlease recalculate modifiers!",  #option, \
+			msg).c_str(), __FILE__, __LINE__, __FUNCTION__, &bIgnoreAlways ); \
 	} \
 }
 
@@ -83,18 +134,16 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways ) \
 	{ \
-		if( FAssertDlg( "ERROR", msg, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
+		fError( msg, __FILE__, __LINE__, __FUNCTION__, &bIgnoreAlways ); \
 	} \
 }
-
 
 #define FEnsure( expr )	\
 { \
 	static bool bIgnoreAlways = false; \
 	if( !(expr) ) \
 	{ \
-		if( FAssertDlg( #expr, 0, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
-		throw std::exception(#expr); \
+		fAssert( #expr, 0, __FILE__, __LINE__, __FUNCTION__, &bIgnoreAlways, true ); \
 	} \
 }
 
@@ -103,8 +152,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 	static bool bIgnoreAlways = false; \
 	if( !(expr) ) \
 	{ \
-		if( FAssertDlg( #expr, msg, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) { _asm int 3 } \
-		throw std::exception(#expr); \
+		fAssert( #expr, msg, __FILE__, __LINE__, __FUNCTION__, &bIgnoreAlways, true ); \
 	} \
 }
 
@@ -120,6 +168,7 @@ bool FAssertDlg( const char*, const char*, const char*, unsigned int, const char
 #define FEnsureMsg( expr, msg ) { if( !(expr) ) throw std::exception(#expr); }
 
 #endif
+
 
 // An instance of this class will mark a scope so that other functions can check that they are or are not called from within it.
 template < int ID >
@@ -157,41 +206,6 @@ enum AssertScopeTypes
 #define FASSERT_NOT_NEGATIVE(value) \
 	FAssertMsg(value >= 0, (bst::format("Value (%d) is expected to be >= 0") % value).str().c_str())
 
-#else
-// FASSERT_ENABLE not defined
-#define FAssert( expr )
-#define FAssertMsg( expr, msg )
-#define FAssertRecalcMsg( expr, msg )
-#define FAssertOptionMsg( option, expr, msg )
-#define FAssertOptionRecalcMsg( option, expr, msg)
-#define FErrorMsg( msg )
-#define FEnsure( expr )
-#define FEnsureMsg( expr, msg )
-
-#define FAssertDeclareScope(_id_)
-#define FAssertInScope(_id_)
-#define FAssertNotInScope(_id_)
-
-#define FASSERT_BOUNDS(lower, upper, index)
-#define FASSERT_NOT_NEGATIVE(value)
-
-#endif
-
-#if defined(FASSERT_ENABLE) || !defined(_DEBUG)
-#ifdef WIN32
-
-// This AssertMsg is also shown in non debug builds
-#define FAssertMsg2( expr, msg ) \
-{ \
-	static bool bIgnoreAlways = false; \
-	if( !bIgnoreAlways && !(expr) ) \
-{ \
-	if( FAssertDlg( #expr, msg, __FILE__, __LINE__, __FUNCTION__, bIgnoreAlways ) ) \
-{ _asm int 3 } \
-} \
-}
-#endif
-#endif
 
 // Static assert implementation for C++03, from https://stackoverflow.com/a/1980156/6402065
 /**
@@ -235,6 +249,8 @@ namespace implementation {
 	{
 	}; // StaticAssertionTest<int>
 
-} // namespace implementation
+}
+
+#endif // FASSERT_ENABLE
 
 #endif // FASSERT_H

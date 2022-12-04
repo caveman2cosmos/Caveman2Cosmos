@@ -189,14 +189,17 @@
     </BuildLog>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AssertDialog.cpp" />
     <ClCompile Include="CityOutputHistory.cpp" />
     <ClCompile Include="CounterSet.cpp" />
     <ClCompile Include="CvAllocator.cpp" />
     <ClCompile Include="CvAllocator.h" />
     <ClCompile Include="CvBonusInfo.cpp" />
+    <ClCompile Include="CvErrorHandling.cpp" />
     <ClCompile Include="CvPlotPaging.cpp" />
     <ClCompile Include="CvPython.cpp" />
     <ClCompile Include="CvSettlerAI.cpp" />
+    <ClCompile Include="CvStackTraces.cpp" />
     <ClCompile Include="CvValueService.cpp" />
     <ClCompile Include="CvWorkerAI.cpp" />
     <ClCompile Include="CvWorkerService.cpp" />
@@ -356,14 +359,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm2.h" />
+    <ClInclude Include="AssertDialog.h" />
     <ClInclude Include="BetterBTSAI.h" />
     <ClInclude Include="CityOutputHistory.h" />
     <ClInclude Include="copy_iterator.h" />
     <ClInclude Include="CounterSet.h" />
     <ClInclude Include="CvCityInvasionComponent.h" />
+    <ClInclude Include="CvErrorHandling.h" />
     <ClInclude Include="CvPlotPaging.h" />
     <ClInclude Include="CvPython.h" />
     <ClInclude Include="CvSettlerAI.h" />
+    <ClInclude Include="CvStackTraces.h" />
     <ClInclude Include="CvValueService.h" />
     <ClInclude Include="CvWorkerAI.h" />
     <ClInclude Include="CvWorkerService.h" />

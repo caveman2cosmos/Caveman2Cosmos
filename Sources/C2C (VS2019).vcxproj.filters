@@ -753,6 +753,15 @@
     <ClCompile Include="CyCityOutputHistoryInterface.cpp">
       <Filter>Source\UI\City</Filter>
     </ClCompile>
+    <ClCompile Include="CvErrorHandling.cpp">
+      <Filter>Source\Base\GameCore</Filter>
+    </ClCompile>
+    <ClCompile Include="AssertDialog.cpp">
+      <Filter>Source\UI\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="CvStackTraces.cpp">
+      <Filter>Source\Tools\Debug</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CvDLLButtonPopup.h">
@@ -1270,6 +1279,15 @@
     </ClInclude>
     <ClInclude Include="CvCityInvasionComponent.h">
       <Filter>Source\Base\City\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="CvErrorHandling.h">
+      <Filter>Source\Base\GameCore</Filter>
+    </ClInclude>
+    <ClInclude Include="AssertDialog.h">
+      <Filter>Source\UI\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="CvStackTraces.h">
+      <Filter>Source\Tools\Debug</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
