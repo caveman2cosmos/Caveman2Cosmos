@@ -4261,6 +4261,22 @@
 		<English>Auto-end turn delay</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMIN_HOVER</Tag>
+		<English>Minimum slice delay before unit cycle will occur after unit does any action that should end its turn.[NEWLINE]Each slice is about 0.25 seconds long.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMIN_TEXT</Tag>
+		<English>Min cycle delay</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMOVE_HOVER</Tag>
+		<English>The slice delay before unit cycle will occur after unit finish its turn by moving.[NEWLINE]Each slice is about 0.25 seconds long.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMOVE_TEXT</Tag>
+		<English>Move cycle delay</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__ENABLEGRAPHICALPAGING_HOVER</Tag>
 		<English>Turn on or off paging out of off-focus graphics to save memory</English>
 		<French>Activer la Pagination des Graphiques hors champ pour préserver de la mémoire</French>

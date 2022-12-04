@@ -12860,11 +12860,13 @@ bool CvUnit::canUnitCoexistWithArrivingUnit(const CvUnit& enemyUnit) const
 
 /*DllExport*/ bool CvUnit::isFighting() const
 {
+	/* Toffer - exe asks this on every tick while a unit is selected so this spams up the debug output something terrible.
 	OutputDebugString("exe is asking if this unit is in battle\n");
-
-	return getCombatUnit() != NULL;
+	*/
+	return getUnit(m_combatUnit) != NULL;
 }
 
+// Toffer - Same as isFighting.
 bool CvUnit::isInBattle() const
 {
 	return getCombatUnit() != NULL;
@@ -16526,10 +16528,12 @@ void CvUnit::setMoves(int iNewValue)
 				gDLL->getFAStarIFace()->ForceReset(&GC.getInterfacePathFinder());
 				gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 			}
+			/* Toffer - make it a bug option - Unselect units upon expending all movement points.
 			else if (getGroup()->canAnyMove())
 			{
 				gDLL->getInterfaceIFace()->removeFromSelectionList(this);
 			}
+			*/
 		}
 
 		if (pPlot == gDLL->getInterfaceIFace()->getSelectionPlot())

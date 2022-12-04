@@ -5074,8 +5074,9 @@ bool CvPlot::isVisibleOtherUnit(PlayerTypes ePlayer) const
 
 /*DllExport*/ bool CvPlot::isFighting() const
 {
+	/* Toffer - exe asks this all the time a unit is selected so this spams up the debug output something terrible.
 	OutputDebugString("exe is asking if there's a unit in battle on this plot\n");
-
+	*/
 	return plotCheck(PUF_isInBattle) != NULL;
 }
 

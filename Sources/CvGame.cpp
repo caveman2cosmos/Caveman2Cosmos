@@ -2304,11 +2304,11 @@ void CvGame::update()
 				GET_PLAYER(getActivePlayer()).resetIdleCities();
 			}
 		}
-		else if (m_iMinGameSliceToCycleUnit <= m_iTurnSlice)
+		else if (m_iCycleUnitSliceDelay > 0)
 		{
-			m_iMinGameSliceToCycleUnit = 0;
-			cycleSelectionGroups();
+			m_iCycleUnitSliceDelay--;
 		}
+		else cycleSelectionGroups();
 	}
 
 again:

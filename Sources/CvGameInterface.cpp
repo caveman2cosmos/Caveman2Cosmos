@@ -659,6 +659,10 @@ void CvGame::updateSelectionListInternal(int iCycleDelay, bool bSetCamera, bool 
 	{
 		return;
 	}
+	{
+		const int iMinCycleDelay = getBugOptionINT("MainInterface__CycleDelayMin", 0);
+		if (iCycleDelay < iMinCycleDelay) iCycleDelay = iMinCycleDelay;
+	}
 	const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
 	if (pHeadSelectedUnit == NULL || !bForceAcceptCurrent && !pHeadSelectedUnit->getGroup()->readyToSelect(true))
@@ -685,11 +689,7 @@ void CvGame::updateSelectionListInternal(int iCycleDelay, bool bSetCamera, bool 
 		}
 		else
 		{
-			if (m_iTurnSlice > MAX_INT - iCycleDelay)
-			{
-				m_iMinGameSliceToCycleUnit = m_iTurnSlice + iCycleDelay - 99999;
-			}
-			else m_iMinGameSliceToCycleUnit = m_iTurnSlice + iCycleDelay;
+			m_iCycleUnitSliceDelay = iCycleDelay;
 
 			if (pHeadSelectedUnit != NULL && !pHeadSelectedUnit->getGroup()->readyToSelect())
 			{
