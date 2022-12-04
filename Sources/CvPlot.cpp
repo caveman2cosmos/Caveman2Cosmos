@@ -8104,7 +8104,7 @@ void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate, bool b
 		// Lots of things put 1 culture on a tile to mark as claimed; adjust above threshold if so.
 		if (bDoMinAdjust && iChange > 0)
 		{
-			iChange = std::max(iChange, minimumNonDecayCulture());
+			iChange = std::max(iChange, GC.getGame().getMinCultureOutput());
 		}
 		setCulture(eIndex, std::max(0, getCulture(eIndex) + iChange), bUpdate, true);
 	}
@@ -10276,7 +10276,7 @@ void CvPlot::decayCulture()
 	// May need to make decay stronger on higher strength tiles, without kneecapping earlygame.
 	// Perhaps 10% plus 5% per every 100 culture or something capping out at 50%, need to examine.
 	// Gotta avoid 'welfare cliffs' though.
-	// NOTE: If decay function is altered, gotta change minimumNonDecayCulture.
+	// NOTE: If decay function is altered, gotta make corresponding change to the GC.getGame().getMinCultureOutput() return.
 
 	const int decayPermille = GC.getTILE_CULTURE_DECAY_PERCENT() * 1000 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 	const int decayFlat = GC.getTILE_CULTURE_DECAY_CONSTANT();
@@ -10299,30 +10299,6 @@ void CvPlot::decayCulture()
 			);
 		}
 	}
-}
-
-
-
-int CvPlot::minimumNonDecayCulture()
-{
-	// Lowest culture above which, after 1 decay, will still be > 0. Inverse of decay func, basically.
-	// Can cache as CvGame variable if needed, idk.
-	return (
-		// Toffer - Round up (multiply by 100 add 99 and then divide all by 100) to get the effective min value.
-		(
-			999 +
-			(1 + GC.getTILE_CULTURE_DECAY_CONSTANT()) * 1000000
-			/
-			(
-				1000 - (
-					GC.getTILE_CULTURE_DECAY_PERCENT() * 1000
-					/
-					GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
-				)
-			)
-		)
-		/ 1000
-	);
 }
 
 
