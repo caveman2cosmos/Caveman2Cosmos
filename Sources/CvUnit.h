@@ -524,10 +524,8 @@ protected:
 	CvGameObjectUnit m_GameObject;
 
 	// Toffer - UnitComponents
-	UnitCompCommander*
-		m_commander;
-	UnitCompWorker*
-		m_worker;
+	UnitCompCommander* m_commander; // belongs to CvUnit and is deleted with it
+	UnitCompWorker* m_worker;       // belongs to CvUnit and is deleted with it
 
 public:
 	bool isInBattle() const;
@@ -2014,7 +2012,7 @@ protected:
 	bool m_bIsBuildUp;
 	bool m_bIsReligionLocked;
 
-	ICvUnitAI* m_ai;
+	ICvUnitAI* m_ai; // belongs to CvUnit and is deleted with it
 
 	PlayerTypes m_eOwner;
 	PlayerTypes m_eCapturingPlayer;
@@ -2028,13 +2026,13 @@ protected:
 	IDInfo m_combatUnit;
 	IDInfo m_transportUnit;
 
-	int* m_aiExtraDomainModifier;
+	int* m_aiExtraDomainModifier;              // array, belongs to CvUnit and is deleted with it
 
-	int* m_aiExtraVisibilityIntensity;
-	int* m_aiExtraInvisibilityIntensity;
-	int* m_aiExtraVisibilityIntensityRange;
-	int* m_aiNegatesInvisibleCount;
-	int* m_aiExtraVisibilityIntensitySameTile;
+	int* m_aiExtraVisibilityIntensity;         // array, belongs to CvUnit and is deleted with it
+	int* m_aiExtraInvisibilityIntensity;       // array, belongs to CvUnit and is deleted with it
+	int* m_aiExtraVisibilityIntensityRange;    // array, belongs to CvUnit and is deleted with it
+	int* m_aiNegatesInvisibleCount;            // array, belongs to CvUnit and is deleted with it
+	int* m_aiExtraVisibilityIntensitySameTile; // array, belongs to CvUnit and is deleted with it
 
 	CvWString m_szName;
 	CvString m_szScriptData;

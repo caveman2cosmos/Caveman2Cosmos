@@ -104,12 +104,14 @@ bool CvUnit::isRealEntity(const CvEntity* entity)
 
 // Public Functions...
 #pragma warning( disable : 4355 )
+
 CvUnit* CvUnit::createDefault(bool bIsDummy)
 {
 	CvUnit* unit = new CvUnit(bIsDummy);
 	unit->m_ai = new DefaultAI(unit);
 	return unit;
 }
+
 CvUnit::CvUnit(bool bIsDummy) : m_GameObject(this),
 m_Properties(this)
 {
@@ -231,6 +233,7 @@ CvUnit::~CvUnit()
 		}
 		CvDLLEntity::destroyEntity(); // delete CvUnitEntity and detach from us
 	}
+	SAFE_DELETE(m_ai);
 	SAFE_DELETE_ARRAY(m_aiExtraDomainModifier);
 	SAFE_DELETE_ARRAY(m_aiExtraVisibilityIntensity);
 	SAFE_DELETE_ARRAY(m_aiExtraInvisibilityIntensity);
