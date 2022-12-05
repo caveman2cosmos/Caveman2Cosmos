@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="NewFilter1">
-      <UniqueIdentifier>{a848c531-9701-45d1-bcfe-60bf32ecc60c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source">
       <UniqueIdentifier>{5d7f5282-1724-4f58-9fdf-ffaba988b6b9}</UniqueIdentifier>
     </Filter>
@@ -1288,6 +1285,9 @@
     </ClInclude>
     <ClInclude Include="CvStackTraces.h">
       <Filter>Source\Tools\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="CvMacros.h">
+      <Filter>Source\Globals</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

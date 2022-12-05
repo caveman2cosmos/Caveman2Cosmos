@@ -3,11 +3,7 @@
 #ifndef FASSERT_H
 #define FASSERT_H
 
-
-// Macro helpers
-#define CONCATENATE(arg1, arg2)   CONCATENATE1(arg1, arg2)
-#define CONCATENATE1(arg1, arg2)  CONCATENATE2(arg1, arg2)
-#define CONCATENATE2(arg1, arg2)  arg1##arg2
+#include "CvMacros.h"
 
 
 struct FAssertInfo
@@ -161,7 +157,7 @@ enum AssertScopeTypes
 	CvSelectionGroup_LOOP
 };
 
-#define FAssertDeclareScope(_id_) AssertScope<_id_> CONCATENATE(__AssertScope_##_id_##_, __LINE__)
+#define FAssertDeclareScope(_id_) AssertScope<_id_> CONCAT(__AssertScope_##_id_##_, __LINE__)
 #define FAssertInScope(_id_) FAssertMsg(AssertScope<_id_>::m_scopedepth != 0, "Expected to be in a " #_id_ " scope!")
 #define FAssertNotInScope(_id_) FAssertMsg(AssertScope<_id_>::m_scopedepth == 0, "Expected to not be in a " #_id_ " scope!")
 
@@ -188,33 +184,32 @@ enum AssertScopeTypes
  * STATIC_ASSERT(true, this_message_will_never_be_displayed);
  */
 
+// We wrap the non existing type inside a struct to avoid warning
+// messages about unused variables when static assertions are used at function
+// scope.
+// The use of sizeof makes sure the assertion error is not ignored by SFINAE.
 #define STATIC_ASSERT(expression, message)\
-  struct CONCATENATE(__static_assertion_at_line_, __LINE__)\
-  {\
-	implementation::StaticAssertion<static_cast<bool>((expression))> CONCATENATE(CONCATENATE(CONCATENATE(STATIC_ASSERTION_FAILED_AT_LINE_, __LINE__), _), message);\
-  };\
-  typedef implementation::StaticAssertionTest<sizeof(CONCATENATE(__static_assertion_at_line_, __LINE__))> CONCATENATE(__static_assertion_test_at_line_, __LINE__)
+struct CONCAT(__static_assertion_at_line_, __LINE__)\
+{\
+	implementation::StaticAssertion<static_cast<bool>((expression))> \
+		CONCAT4(STATIC_ASSERTION_FAILED_AT_LINE_, __LINE__, _, message);\
+};\
+typedef implementation::StaticAssertionTest<sizeof(CONCAT(__static_assertion_at_line_, __LINE__))> \
+	CONCAT(__static_assertion_test_at_line_, __LINE__)
 
- // note that we wrap the non existing type inside a struct to avoid warning
- // messages about unused variables when static assertions are used at function
- // scope
- // the use of sizeof makes sure the assertion error is not ignored by SFINAE
 
-namespace implementation {
-
+namespace implementation 
+{
 	template <bool>
 	struct StaticAssertion;
 
 	template <>
 	struct StaticAssertion<true>
-	{
-	}; // StaticAssertion<true>
+	{ };
 
 	template<int i>
 	struct StaticAssertionTest
-	{
-	}; // StaticAssertionTest<int>
-
+	{ };
 }
 
 #endif // FASSERT_ENABLE

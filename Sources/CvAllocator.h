@@ -3,10 +3,11 @@
 #ifndef CvAllocator_h__
 #define CvAllocator_h__
 
+#include "CvMacros.h"
 #include <new>
 #include <typeinfo>
 
-#define MEMTRACK_EXEMPT MemTrack::UntrackedScope CONCATENATE(__untracked_memory_marker_, __LINE__)
+#define MEMTRACK_EXEMPT MemTrack::UntrackedScope CONCAT(__untracked_memory_marker_, __LINE__)
 
 namespace MemTrack
 {

@@ -359,6 +359,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="algorithm2.h" />
+    <ClInclude Include="CvMacros.h" />
     <ClInclude Include="FAssertDialog.h" />
     <ClInclude Include="BetterBTSAI.h" />
     <ClInclude Include="CityOutputHistory.h" />
