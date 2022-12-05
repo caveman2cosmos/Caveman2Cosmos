@@ -9,8 +9,9 @@
 class CvErrorHandling
 {
 public:
-	static void assertFail(const FAssertInfo& info, bool ensure);
-	static void error(const FAssertInfo& info, bool ensure);
+	static void assertFail(const FAssertInfo& info);
+	static void ensureFail(const FAssertInfo& info);
+	static void error(const FAssertInfo& info);
 	static void fatal(const std::exception& ex);
 };
 

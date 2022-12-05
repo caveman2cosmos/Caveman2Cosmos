@@ -3,6 +3,7 @@
 #ifndef FASSERT_H
 #define FASSERT_H
 
+
 // Macro helpers
 #define CONCATENATE(arg1, arg2)   CONCATENATE1(arg1, arg2)
 #define CONCATENATE1(arg1, arg2)  CONCATENATE2(arg1, arg2)
@@ -20,20 +21,12 @@ struct FAssertInfo
 	bool* bIgnoreAlways;
 
 	inline FAssertInfo() { bIgnoreAlways = &bDummyIgnoreAlways; }
+	int sprint(char* dest) const;
 
 private:
 	static bool bDummyIgnoreAlways;
 };
 
-
-int sprintFAssertMsg(char* dest, const std::string& fileName, unsigned int line, const std::string& expression,
-	const std::string& msg, const std::string& pythonCallstack, const std::string& dllCallstack);
-
-inline int sprintFAssertMsg(char* dest, const FAssertInfo& info)
-{
-	return sprintFAssertMsg(dest, info.szFileName, info.line, info.szExpression, info.szMessage,
-		info.szPythonCallstack, info.szDLLCallstack);
-}
 
 // Only compile in FAssert's if FASSERT_ENABLE is defined.  By default, however, let's key off of
 // _DEBUG.  Sometimes, however, it's useful to enable asserts in release builds, and you can do that
@@ -76,19 +69,13 @@ inline int sprintFAssertMsg(char* dest, const FAssertInfo& info)
 #elif defined(WIN32)
 
 void fAssert(const char* szExpr, const char* szMsg, const char* szFile, unsigned int line,
-	const char* szFunction, bool* bIgnoreAlways, bool ensure = false);
+	const char* szFunction, bool* bIgnoreAlways);
 
 void fError(const char* szMsg, const char* szFile, unsigned int line,
-	const char* szFunction, bool* bIgnoreAlways, bool ensure = false);
+	const char* szFunction, bool* bIgnoreAlways);
 
-#define FAssert( expr )	\
-{ \
-	static bool bIgnoreAlways = false; \
-	if( !bIgnoreAlways && !(expr) ) \
-	{ \
-		fAssert( #expr, 0, __FILE__, __LINE__, __FUNCTION__, &bIgnoreAlways ); \
-	} \
-}
+void fEnsure(const char* szExpr, const char* szMsg, const char* szFile, unsigned int line,
+	const char* szFunction, bool* bIgnoreAlways);
 
 #define FAssertMsg( expr, msg ) \
 { \
@@ -99,37 +86,21 @@ void fError(const char* szMsg, const char* szFile, unsigned int line,
 	} \
 }
 
+#define FAssert( expr )	\
+FAssertMsg( expr, 0 )
+
 #define FAssertRecalcMsg( expr, msg ) \
-{ \
-	static bool bIgnoreAlways = false; \
-	if( !bIgnoreAlways && !(expr) ) \
-	{ \
-		fAssert( #expr, CvString::format("%s\r\n\r\nPlease recalculate modifiers!", msg).c_str(), __FILE__, \
-			__LINE__, __FUNCTION__, &bIgnoreAlways ); \
-	} \
-}
+FAssertMsg( expr, CvString::format("%s\r\n\r\nPlease recalculate modifiers!", msg).c_str() )
 
 #define FAssertOptionMsg( option, expr, msg ) \
-{ \
-	static bool bIgnoreAlways = false; \
-	if( !bIgnoreAlways && GC.getGame().isOption(option) && !(expr) ) \
-	{ \
-		fAssert( #expr, CvString::format("Option: %s\r\n%s", #option, msg).c_str(), __FILE__, __LINE__, \
-			__FUNCTION__, &bIgnoreAlways ); \
-	} \
-}
+FAssertMsg( !GC.getGame().isOption(option) || expr, CvString::format("Option: %s\r\n%s", #option, msg).c_str() )
 
 #define FAssertOptionRecalcMsg( option, expr, msg) \
-{ \
-	static bool bIgnoreAlways = false; \
-	if( !bIgnoreAlways && GC.getGame().isOption(option) && !(expr) ) \
-	{ \
-		fAssert( #expr, CvString::format("Option: %s\r\n%s\r\n\r\nPlease recalculate modifiers!",  #option, \
-			msg).c_str(), __FILE__, __LINE__, __FUNCTION__, &bIgnoreAlways ); \
-	} \
-}
+FAssertMsg( !GC.getGame().isOption(option) || expr, CvString::format("Option: %s\r\n%s\r\n\r\nPlease recalculate " \
+	"modifiers!", #option, msg).c_str() )
 
-#define FErrorMsg( msg )	\
+
+#define FErrorMsg( msg ) \
 { \
 	static bool bIgnoreAlways = false; \
 	if( !bIgnoreAlways ) \
@@ -138,23 +109,18 @@ void fError(const char* szMsg, const char* szFile, unsigned int line,
 	} \
 }
 
-#define FEnsure( expr )	\
-{ \
-	static bool bIgnoreAlways = false; \
-	if( !(expr) ) \
-	{ \
-		fAssert( #expr, 0, __FILE__, __LINE__, __FUNCTION__, &bIgnoreAlways, true ); \
-	} \
-}
 
 #define FEnsureMsg( expr, msg ) \
 { \
 	static bool bIgnoreAlways = false; \
 	if( !(expr) ) \
 	{ \
-		fAssert( #expr, msg, __FILE__, __LINE__, __FUNCTION__, &bIgnoreAlways, true ); \
+		fEnsure( #expr, msg, __FILE__, __LINE__, __FUNCTION__, &bIgnoreAlways ); \
 	} \
 }
+
+#define FEnsure( expr )	\
+FEnsureMsg( expr, 0 )
 
 #else
 // Non Win32 platforms--just use built-in FAssert

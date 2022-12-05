@@ -756,7 +756,7 @@
     <ClCompile Include="CvErrorHandling.cpp">
       <Filter>Source\Base\GameCore</Filter>
     </ClCompile>
-    <ClCompile Include="AssertDialog.cpp">
+    <ClCompile Include="FAssertDialog.cpp">
       <Filter>Source\UI\Dialog</Filter>
     </ClCompile>
     <ClCompile Include="CvStackTraces.cpp">
@@ -1283,7 +1283,7 @@
     <ClInclude Include="CvErrorHandling.h">
       <Filter>Source\Base\GameCore</Filter>
     </ClInclude>
-    <ClInclude Include="AssertDialog.h">
+    <ClInclude Include="FAssertDialog.h">
       <Filter>Source\UI\Dialog</Filter>
     </ClInclude>
     <ClInclude Include="CvStackTraces.h">

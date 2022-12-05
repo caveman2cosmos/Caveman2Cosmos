@@ -1,14 +1,14 @@
 #pragma once
 
-#ifndef ASSERT_DIALOG_H
-#define ASSERT_DIALOG_H
+#ifndef FASSERT_DIALOG_H
+#define FASSERT_DIALOG_H
 
 #include "FAssert.h"
 
-class AssertDialog
+class FAssertDialog
 {
 public:
-	// These are the return values from the modal Assert Dialog
+
 	enum Result
 	{
 		ASSERT_DLG_DEBUG = 0x01,

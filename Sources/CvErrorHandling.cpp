@@ -1,10 +1,10 @@
 #include "CvErrorHandling.h"
 
-#include "AssertDialog.h"
+#include "FAssertDialog.h"
 #include <string>
 #include <exception>
 
-void CvErrorHandling::assertFail(const FAssertInfo& info, bool ensure)
+void CvErrorHandling::assertFail(const FAssertInfo& info)
 {
 #ifdef FASSERT_LOGGING
 	logging::logMsg("Asserts.log", "%s %s (%d): %s,  %s\n%s\n%s",
@@ -39,33 +39,37 @@ void CvErrorHandling::assertFail(const FAssertInfo& info, bool ensure)
 	return false;
 #else
 
-	AssertDialog::Result result = AssertDialog::display(info);
+	FAssertDialog::Result result = FAssertDialog::display(info);
 
 	switch (result)
 	{
-	case AssertDialog::ASSERT_DLG_DEBUG:
+	case FAssertDialog::ASSERT_DLG_DEBUG:
 		_asm int 3
 		break;
 
-	case AssertDialog::ASSERT_DLG_IGNORE:
+	case FAssertDialog::ASSERT_DLG_IGNORE:
 		break;
 
-	case AssertDialog::ASSERT_DLG_IGNOREALWAYS:
+	case FAssertDialog::ASSERT_DLG_IGNOREALWAYS:
 		*info.bIgnoreAlways = true;
 		break;
 
-	case AssertDialog::ASSERT_DLG_EXIT:
+	case FAssertDialog::ASSERT_DLG_EXIT:
 		exit(0);
 		break;
 	}
 #endif
-	if (ensure)
-		throw std::exception(info.szExpression.c_str());
 }
 
-void CvErrorHandling::error(const FAssertInfo& info, bool ensure)
+void CvErrorHandling::ensureFail(const FAssertInfo& info)
 {
-	assertFail(info, ensure);
+	assertFail(info);
+	throw std::exception(info.szExpression.c_str());
+}
+
+void CvErrorHandling::error(const FAssertInfo& info)
+{
+	assertFail(info);
 }
 
 void CvErrorHandling::fatal(const std::exception& ex)

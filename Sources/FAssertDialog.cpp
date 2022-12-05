@@ -1,4 +1,4 @@
-#include "AssertDialog.h"
+#include "FAssertDialog.h"
 
 #include "FDialogTemplate.h"
 #include <sstream>
@@ -35,7 +35,7 @@ INT_PTR CALLBACK AssertDlgProc(HWND hDlg, UINT msg, WPARAM wParam, LPARAM lParam
 		sprintf(title, "Assert Failed: %s", moduleName);
 		SetWindowText(hDlg, title);
 
-		sprintFAssertMsg(g_AssertText, g_AssertInfo);
+		g_AssertInfo.sprint(g_AssertText);
 
 		::SetWindowText(::GetDlgItem(hDlg, IDC_ASSERTION_TEXT), g_AssertText);
 		::SetFocus(::GetDlgItem(hDlg, IDC_DEBUG));
@@ -47,19 +47,19 @@ INT_PTR CALLBACK AssertDlgProc(HWND hDlg, UINT msg, WPARAM wParam, LPARAM lParam
 		switch (LOWORD(wParam))
 		{
 		case IDC_DEBUG:
-			EndDialog(hDlg, AssertDialog::ASSERT_DLG_DEBUG);
+			EndDialog(hDlg, FAssertDialog::ASSERT_DLG_DEBUG);
 			return TRUE;
 
 		case IDC_IGNORE_ONCE:
-			EndDialog(hDlg, AssertDialog::ASSERT_DLG_IGNORE);
+			EndDialog(hDlg, FAssertDialog::ASSERT_DLG_IGNORE);
 			return TRUE;
 
 		case IDC_IGNORE_ALWAYS:
-			EndDialog(hDlg, AssertDialog::ASSERT_DLG_IGNOREALWAYS);
+			EndDialog(hDlg, FAssertDialog::ASSERT_DLG_IGNOREALWAYS);
 			return TRUE;
 
 		case IDC_ABORT:
-			EndDialog(hDlg, AssertDialog::ASSERT_DLG_EXIT);
+			EndDialog(hDlg, FAssertDialog::ASSERT_DLG_EXIT);
 			return TRUE;
 		}
 	}
@@ -70,7 +70,7 @@ INT_PTR CALLBACK AssertDlgProc(HWND hDlg, UINT msg, WPARAM wParam, LPARAM lParam
 }
 
 
-AssertDialog::Result AssertDialog::display(const FAssertInfo& assertInfo)
+FAssertDialog::Result FAssertDialog::display(const FAssertInfo& assertInfo)
 {
 	g_AssertInfo = assertInfo;
 
