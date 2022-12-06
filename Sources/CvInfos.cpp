@@ -24657,11 +24657,6 @@ void CvArtInfoBonus::setShaderNIF(const char* szDesc)
 	m_szShaderNIF = szDesc;
 }
 
-const CvArtInfoBonus* CvBonusInfo::getArtInfo() const
-{
-	return ARTFILEMGR.getBonusArtInfo( getArtDefineTag());
-}
-
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 // CvArtInfoUnit

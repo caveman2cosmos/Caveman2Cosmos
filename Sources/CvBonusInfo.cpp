@@ -328,6 +328,10 @@ void CvBonusInfo::setProvidedByImprovementTypes(const ImprovementTypes eType)
 	m_providedByImprovementTypes.push_back(eType);
 }
 
+/*DllExport*/ const CvArtInfoBonus* CvBonusInfo::getArtInfo() const
+{
+	return ARTFILEMGR.getBonusArtInfo(getArtDefineTag());
+}
 
 void CvBonusInfo::getCheckSum(uint32_t& iSum) const
 {

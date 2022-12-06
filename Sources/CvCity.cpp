@@ -1647,7 +1647,7 @@ bool CvCity::isCitySelected() const
 }
 
 
-bool CvCity::canBeSelected() const
+/*DllExport*/ bool CvCity::canBeSelected() const
 {
 	if ((getTeam() == GC.getGame().getActiveTeam()) || GC.getGame().isDebugMode())
 	{
@@ -5521,7 +5521,7 @@ LeaderHeadTypes CvCity::getPersonalityType() const
 }
 
 
-ArtStyleTypes CvCity::getArtStyleType() const
+/*DllExport*/ ArtStyleTypes CvCity::getArtStyleType() const
 {
 	if (getOriginalOwner() != NO_PLAYER)
 	{
@@ -5535,12 +5535,12 @@ CitySizeTypes CvCity::getCitySizeType() const
 	return ((CitySizeTypes)(range((getPopulation() / 7), 0, (NUM_CITYSIZE_TYPES - 1))));
 }
 
-const CvArtInfoBuilding* CvCity::getBuildingArtInfo(BuildingTypes eBuilding) const
+/*DllExport*/ const CvArtInfoBuilding* CvCity::getBuildingArtInfo(BuildingTypes eBuilding) const
 {
 	return GC.getBuildingInfo(eBuilding).getArtInfo();
 }
 
-float CvCity::getBuildingVisibilityPriority(BuildingTypes eBuilding) const
+/*DllExport*/ float CvCity::getBuildingVisibilityPriority(BuildingTypes eBuilding) const
 {
 	return GC.getBuildingInfo(eBuilding).getVisibilityPriority();
 }
@@ -5565,7 +5565,7 @@ bool CvCity::isHuman() const
 	return GET_PLAYER(getOwner()).isHuman();
 }
 
-bool CvCity::isVisible(TeamTypes eTeam, bool bDebug) const
+/*DllExport*/ bool CvCity::isVisible(TeamTypes eTeam, bool bDebug) const
 {
 	return plot()->isVisible(eTeam, bDebug);
 }
@@ -6789,7 +6789,7 @@ int CvCity::getCorporationCount() const
 }
 
 
-int CvCity::getID() const
+/*DllExport*/ int CvCity::getID() const
 {
 	return m_iID;
 }
@@ -6801,7 +6801,7 @@ int CvCity::getIndex() const
 }
 
 
-IDInfo CvCity::getIDInfo() const
+/*DllExport*/ IDInfo CvCity::getIDInfo() const
 {
 	IDInfo city(getOwner(), getID());
 	return city;
@@ -6814,7 +6814,7 @@ void CvCity::setID(int iID)
 }
 
 
-int CvCity::getViewportX() const
+/*DllExport*/ int CvCity::getViewportX() const
 {
 	const CvViewport* pCurrentViewPort = GC.getCurrentViewport();
 	FAssert(pCurrentViewPort != NULL);
@@ -6824,7 +6824,7 @@ int CvCity::getViewportX() const
 }
 
 
-int CvCity::getViewportY() const
+/*DllExport*/ int CvCity::getViewportY() const
 {
 	const CvViewport* pCurrentViewPort = GC.getCurrentViewport();
 	FAssert(pCurrentViewPort != NULL);
@@ -6856,7 +6856,7 @@ CvPlot* CvCity::plot() const
 	return GC.getMap().plotSorenINLINE(getX(), getY());
 }
 
-CvPlot* CvCity::plotExternal() const
+/*DllExport*/ CvPlot* CvCity::plotExternal() const
 {
 	FAssert(isInViewport());
 	return GC.getMap().plotSorenINLINE(getX(), getY());
@@ -10576,7 +10576,7 @@ void CvCity::setProductionAutomated(bool bNewValue)
 }
 
 
-bool CvCity::isWallOverride() const
+/*DllExport*/ bool CvCity::isWallOverride() const
 {
 	return m_bWallOverride;
 }
@@ -10593,25 +10593,25 @@ void CvCity::setWallOverride(bool bOverride)
 }
 
 
-bool CvCity::isInfoDirty() const
+/*DllExport*/ bool CvCity::isInfoDirty() const
 {
 	return m_bInfoDirty;
 }
 
 
-void CvCity::setInfoDirty(bool bNewValue)
+/*DllExport*/ void CvCity::setInfoDirty(bool bNewValue)
 {
 	m_bInfoDirty = bNewValue;
 }
 
 
-bool CvCity::isLayoutDirty() const
+/*DllExport*/ bool CvCity::isLayoutDirty() const
 {
 	return m_bLayoutDirty;
 }
 
 
-void CvCity::setLayoutDirty(bool bNewValue)
+/*DllExport*/ void CvCity::setLayoutDirty(bool bNewValue)
 {
 	m_bLayoutDirty = bNewValue;
 }
@@ -10641,7 +10641,7 @@ void CvCity::setOriginalOwner(PlayerTypes eNewValue)
 }
 
 
-TeamTypes CvCity::getTeam() const
+/*DllExport*/ TeamTypes CvCity::getTeam() const
 {
 	return GET_PLAYER(getOwner()).getTeam();
 }
@@ -13037,7 +13037,7 @@ void CvCity::setTradeRoute(PlayerTypes eIndex, bool bNewValue)
 }
 
 
-bool CvCity::isRevealed(TeamTypes eIndex, bool bDebug) const
+/*DllExport*/ bool CvCity::isRevealed(TeamTypes eIndex, bool bDebug) const
 {
 	if (bDebug && GC.getGame().isDebugMode())
 	{
@@ -13131,13 +13131,13 @@ void CvCity::updateEspionageVisibility(bool bUpdatePlotGroups)
 	}
 }
 
-const wchar_t* CvCity::getNameKey() const
+/*DllExport*/ const wchar_t* CvCity::getNameKey() const
 {
 	return m_szName;
 }
 
 
-const CvWString CvCity::getName(uint uiForm) const
+/*DllExport*/ const CvWString CvCity::getName(uint uiForm) const
 {
 	return gDLL->getObjectText(m_szName, uiForm, true);
 }
@@ -16025,7 +16025,7 @@ int CvCity::getOrderQueueLength() const
 //	return m_orderQueue.getLength();
 //}
 
-OrderData CvCity::getOrderData(int iIndex) const
+/*DllExport*/ OrderData CvCity::getOrderData(int iIndex) const
 {
 	if (m_orderQueue.size() <= static_cast<size_t>(iIndex))
 	{
@@ -16040,7 +16040,7 @@ void CvCity::setWallOverridePoints(const std::vector< std::pair<float, float> >&
 	setLayoutDirty(true);
 }
 
-const std::vector< std::pair<float, float> >& CvCity::getWallOverridePoints() const
+/*DllExport*/ const std::vector< std::pair<float, float> >& CvCity::getWallOverridePoints() const
 {
 	return m_kWallOverridePoints;
 }
@@ -17907,7 +17907,7 @@ public:
 #define	SHOW_BUILDINGS_DEFENSES	2
 #define	SHOW_BUILDINGS_OTHER	128
 
-void CvCity::getVisibleBuildings(std::list<BuildingTypes>& kChosenVisible, int& iChosenNumGenerics)
+/*DllExport*/ void CvCity::getVisibleBuildings(std::list<BuildingTypes>& kChosenVisible, int& iChosenNumGenerics)
 {
 	if (!plot()->isGraphicsVisible(ECvPlotGraphics::CITY))
 	{
@@ -18002,7 +18002,7 @@ static int natGetDeterministicRandom(int iMin, int iMax, int iSeedX, int iSeedY)
 	return (rand() % (iMax - iMin)) + iMin;
 }
 
-void CvCity::getVisibleEffects(ZoomLevelTypes eCurZoom, std::vector<const char*>& kEffectNames)
+/*DllExport*/ void CvCity::getVisibleEffects(ZoomLevelTypes eCurZoom, std::vector<const char*>& kEffectNames)
 {
 	if (isOccupation() && isVisible(getTeam(), false) == true)
 	{
@@ -18060,7 +18060,7 @@ void CvCity::getVisibleEffects(ZoomLevelTypes eCurZoom, std::vector<const char*>
 	}
 }
 
-void CvCity::getCityBillboardSizeIconColors(NiColorA& kDotColor, NiColorA& kTextColor) const
+/*DllExport*/ void CvCity::getCityBillboardSizeIconColors(NiColorA& kDotColor, NiColorA& kTextColor) const
 {
 	const NiColorA kPlayerColor = GC.getColorInfo((ColorTypes)GC.getPlayerColorInfo(GET_PLAYER(getOwner()).getPlayerColor()).getColorTypePrimary()).getColor();
 	static const NiColorA kGrowing(0.73f, 1, 0.73f, 1);
@@ -18104,7 +18104,7 @@ void CvCity::getCityBillboardSizeIconColors(NiColorA& kDotColor, NiColorA& kText
 	}
 }
 
-const char* CvCity::getCityBillboardProductionIcon() const
+/*DllExport*/ const char* CvCity::getCityBillboardProductionIcon() const
 {
 	if (canBeSelected() && isProduction())
 	{
@@ -18157,7 +18157,7 @@ const char* CvCity::getCityBillboardProductionIcon() const
 	return ARTFILEMGR.getInterfaceArtInfo("INTERFACE_BUTTONS_NOPRODUCTION")->getPath();
 }
 
-bool CvCity::getFoodBarPercentages(std::vector<float>& afPercentages) const
+/*DllExport*/ bool CvCity::getFoodBarPercentages(std::vector<float>& afPercentages) const
 {
 	if (!canBeSelected())
 	{
@@ -18177,7 +18177,7 @@ bool CvCity::getFoodBarPercentages(std::vector<float>& afPercentages) const
 	return true;
 }
 
-bool CvCity::getProductionBarPercentages(std::vector<float>& afPercentages) const
+/*DllExport*/ bool CvCity::getProductionBarPercentages(std::vector<float>& afPercentages) const
 {
 	if (!canBeSelected())
 	{
@@ -18197,7 +18197,7 @@ bool CvCity::getProductionBarPercentages(std::vector<float>& afPercentages) cons
 	return true;
 }
 
-NiColorA CvCity::getBarBackgroundColor() const
+/*DllExport*/ NiColorA CvCity::getBarBackgroundColor() const
 {
 	if (atWar(getTeam(), GC.getGame().getActiveTeam()))
 	{
@@ -18206,7 +18206,7 @@ NiColorA CvCity::getBarBackgroundColor() const
 	return NiColorA(0, 0, 0, 0.5f);
 }
 
-bool CvCity::isStarCity() const
+/*DllExport*/ bool CvCity::isStarCity() const
 {
 	return isCapital();
 }
@@ -19261,7 +19261,7 @@ int CvCity::getBestYieldAvailable(YieldTypes eYield) const
 	return iBestYieldAvailable;
 }
 
-int CvCity::getMusicScriptId() const
+/*DllExport*/ int CvCity::getMusicScriptId() const
 {
 	bool bIsHappy = true;
 	if (GC.getGame().getActiveTeam() == getTeam())
@@ -19291,12 +19291,12 @@ int CvCity::getMusicScriptId() const
 	}
 }
 
-int CvCity::getSoundscapeScriptId() const
+/*DllExport*/ int CvCity::getSoundscapeScriptId() const
 {
 	return GC.getEraInfo(GET_PLAYER(getOwner()).getCurrentEra()).getCitySoundscapeSciptId(getCitySizeType());
 }
 
-void CvCity::cheat(bool bCtrl, bool bAlt, bool bShift)
+/*DllExport*/ void CvCity::cheat(bool bCtrl, bool bAlt, bool bShift)
 {
 	if (gDLL->getChtLvl() > 0)
 	{
@@ -19315,7 +19315,7 @@ void CvCity::cheat(bool bCtrl, bool bAlt, bool bShift)
 	}
 }
 
-void CvCity::getBuildQueue(std::vector<std::string>& astrQueue) const
+/*DllExport*/ void CvCity::getBuildQueue(std::vector<std::string>& astrQueue) const
 {
 	foreach_(const OrderData& order, m_orderQueue)
 	{

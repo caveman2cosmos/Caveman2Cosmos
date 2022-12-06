@@ -72,7 +72,7 @@ bool CvPlayerAI::areStaticsInitialized()
 	return true;
 }
 
-DllExport CvPlayerAI& CvPlayerAI::getPlayerNonInl(PlayerTypes ePlayer)
+CvPlayerAI& CvPlayerAI::getPlayerNonInl(PlayerTypes ePlayer)
 {
 	if (ePlayer <= NO_PLAYER || ePlayer >= MAX_PLAYERS)
 	{

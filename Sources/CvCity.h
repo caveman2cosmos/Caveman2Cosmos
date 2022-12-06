@@ -1187,18 +1187,18 @@ public:
 
 	//CLLNode<OrderData>* nextOrderQueueNode(CLLNode<OrderData>* pNode) const;
 	//CLLNode<OrderData>* headOrderQueueNode() const;
-	DllExport int getNumOrdersQueued() const { return m_orderQueue.size(); };
+	DllExport int getNumOrdersQueued() const { return m_orderQueue.size(); }
 	DllExport OrderData getOrderData(int iIndex) const;
 	bool pushFirstValidBuildListOrder(int iListID);
 
 	// fill the kVisible array with buildings that you want shown in city, as well as the number of generics
 	// This function is called whenever CvCity::setLayoutDirty() is called
-	DllExport void getVisibleBuildings(std::list<BuildingTypes>& kVisible, int& iNumGenerics);
+	DllExport void getVisibleBuildings(std::list<BuildingTypes>& kChosenVisible, int& iChosenNumGenerics);
 
 	// Fill the kEffectNames array with references to effects in the CIV4EffectInfos.xml to have a
 	// city play a given set of effects. This is called whenever the interface updates the city billboard
 	// or when the zoom level changes
-	DllExport void getVisibleEffects(ZoomLevelTypes eCurrentZoom, std::vector<const char*>& kEffectNames);
+	DllExport void getVisibleEffects(ZoomLevelTypes eCurZoom, std::vector<const char*>& kEffectNames);
 
 
 	// Billboard appearance controls

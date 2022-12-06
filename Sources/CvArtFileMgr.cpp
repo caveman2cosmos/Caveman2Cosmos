@@ -97,7 +97,7 @@ ART_INFO_DEFN(Interface);
 //----------------------------------------------------------------------------
 static CvArtFileMgr* gs_ArtFileMgr = NULL;
 
-CvArtFileMgr& CvArtFileMgr::GetInstance()
+/*DllExport*/ CvArtFileMgr& CvArtFileMgr::GetInstance()
 {
 	if (gs_ArtFileMgr == NULL)
 	{
@@ -127,7 +127,7 @@ CvArtFileMgr& CvArtFileMgr::GetInstance()
 //	PURPOSE:	Initializes the Maps
 //
 //----------------------------------------------------------------------------
-void CvArtFileMgr::Init()
+/*DllExport*/ void CvArtFileMgr::Init()
 {
 	foreach_(ArtInfoItem* item, m_artInfoItems)
 	{
@@ -142,7 +142,7 @@ void CvArtFileMgr::Init()
 //	PURPOSE:	Deletes the Maps
 //
 //----------------------------------------------------------------------------
-void CvArtFileMgr::DeInit()
+/*DllExport*/ void CvArtFileMgr::DeInit()
 {
 	foreach_(ArtInfoItem* item, m_artInfoItems)
 	{
@@ -157,7 +157,7 @@ void CvArtFileMgr::DeInit()
 //	PURPOSE:	Reloads the XML & Rebuilds the Maps
 //
 //----------------------------------------------------------------------------
-void CvArtFileMgr::Reset()
+/*DllExport*/ void CvArtFileMgr::Reset()
 {
 	DeInit();		// Cleans Art Defines
 	CvXMLLoadUtility XMLLoadUtility;
@@ -173,7 +173,7 @@ void CvArtFileMgr::Reset()
 //	PURPOSE:	Builds the Art File Maps
 //
 //----------------------------------------------------------------------------
-void CvArtFileMgr::buildArtFileInfoMaps()
+/*DllExport*/ void CvArtFileMgr::buildArtFileInfoMaps()
 {
 	foreach_(ArtInfoItem* item, m_artInfoItems)
 	{

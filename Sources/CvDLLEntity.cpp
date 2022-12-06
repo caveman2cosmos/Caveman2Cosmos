@@ -58,7 +58,7 @@ void CvDLLEntity::destroyEntity()
 	gDLL->getEntityIFace()->destroyEntity(m_pEntity);
 }
 
-bool CvDLLEntity::IsSelected() const
+/*DllExport*/ bool CvDLLEntity::IsSelected() const
 {
 	return CvUnit::isRealEntity(getEntity()) && gDLL->getEntityIFace()->IsSelected(getEntity());
 }

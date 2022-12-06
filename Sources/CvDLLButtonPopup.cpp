@@ -33,7 +33,7 @@
 
 CvDLLButtonPopup* CvDLLButtonPopup::m_pInst = NULL;
 
-CvDLLButtonPopup& CvDLLButtonPopup::getInstance()
+/*DllExport*/ CvDLLButtonPopup& CvDLLButtonPopup::getInstance()
 {
 	if (m_pInst == NULL)
 	{
@@ -42,7 +42,7 @@ CvDLLButtonPopup& CvDLLButtonPopup::getInstance()
 	return *m_pInst;
 }
 
-void CvDLLButtonPopup::freeInstance()
+/*DllExport*/ void CvDLLButtonPopup::freeInstance()
 {
 	delete m_pInst;
 	m_pInst = NULL;
@@ -917,7 +917,7 @@ void CvDLLButtonPopup::OnFocus(CvPopup* pPopup, CvPopupInfo &info)
 }
 
 // returns false if popup is not launched
-bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
+/*DllExport*/ bool CvDLLButtonPopup::launchButtonPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
 	const PlayerTypes eActPlayer = GC.getGame().getActivePlayer();
 	GET_PLAYER(eActPlayer).setTurnHadUIInteraction(true);
