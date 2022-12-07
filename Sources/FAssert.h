@@ -168,6 +168,8 @@ enum AssertScopeTypes
 #define FASSERT_NOT_NEGATIVE(value) \
 	FAssertMsg(value >= 0, (bst::format("Value (%d) is expected to be >= 0") % value).str().c_str())
 
+#endif // FASSERT_ENABLE
+
 
 // Static assert implementation for C++03, from https://stackoverflow.com/a/1980156/6402065
 /**
@@ -184,10 +186,10 @@ enum AssertScopeTypes
  * STATIC_ASSERT(true, this_message_will_never_be_displayed);
  */
 
-// We wrap the non existing type inside a struct to avoid warning
-// messages about unused variables when static assertions are used at function
-// scope.
-// The use of sizeof makes sure the assertion error is not ignored by SFINAE.
+ // We wrap the non existing type inside a struct to avoid warning
+ // messages about unused variables when static assertions are used at function
+ // scope.
+ // The use of sizeof makes sure the assertion error is not ignored by SFINAE.
 #define STATIC_ASSERT(expression, message)\
 struct CONCAT(__static_assertion_at_line_, __LINE__)\
 {\
@@ -198,7 +200,7 @@ typedef implementation::StaticAssertionTest<sizeof(CONCAT(__static_assertion_at_
 	CONCAT(__static_assertion_test_at_line_, __LINE__)
 
 
-namespace implementation 
+namespace implementation
 {
 	template <bool>
 	struct StaticAssertion;
@@ -211,7 +213,5 @@ namespace implementation
 	struct StaticAssertionTest
 	{ };
 }
-
-#endif // FASSERT_ENABLE
 
 #endif // FASSERT_H
