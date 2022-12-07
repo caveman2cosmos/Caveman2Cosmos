@@ -12,41 +12,42 @@ namespace CvUnitNS
 {
 	class CombatService
 	{
-		CvUnit* m_unit;
+		CvUnit* unit;
 
-		bool m_bQuick; 
-		CvUnit* m_selectedDefender; 
-		bool m_bSamePlot;
-		bool m_bStealth;
-		bool m_bNoCache;
+		bool bQuick; 
+		CvUnit* pSelectedDefender; 
+		bool bSamePlot;
+		bool bStealth;
+		bool bNoCache;
 
-		bool m_bFinish;
-		CvPlot* m_plot;
-		CvUnit* m_defender;
-		const bool m_bHuman;           // const after initialization
-		const bool m_bHumanDefender;   // const after initialization
-		const bool m_bVisible;         // const after initialization
-		const PlayerTypes m_eAttacker; // const after initialization
-		const PlayerTypes m_eDefender; // const after initialization
-		const bool m_bStealthDefense;  // const after initialization
+		bool bFinish;
+		CvPlot* pPlot;
+		CvUnit* pDefender;
+		const bool bHuman;           // const after initialization
+		const bool bHumanDefender;   // const after initialization
+		const bool bVisible;         // const after initialization
+		const PlayerTypes eAttacker; // const after initialization
+		const PlayerTypes eDefender; // const after initialization
+		const bool bStealthDefense;  // const after initialization
 
 	public:
 		CombatService(CvUnit* unit, bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot, bool bStealth, 
 			bool bNoCache);
 
 		void updateCombat();
+	//	void updateCombat2();
 
-	private:
-		void init();
-		void fight(bool& abort);
-		void finishingPrelude();
-		void onWin();
-		void onLoss();
-		void onAttackerWithraw();
-		void onDefenderWithraw();
-		void onAttackerRepelled();
-		void onDefenderKnockedBack();
-		void onOtherResult();
+	//private:
+	//	void init();
+	//	void fight(bool& abort);
+	//	void finishingPrelude();
+	//	void onWin();
+	//	void onLoss();
+	//	void onAttackerWithraw();
+	//	void onDefenderWithraw();
+	//	void onAttackerRepelled();
+	//	void onDefenderKnockedBack();
+	//	void onOtherResult();
 	};
 }
 

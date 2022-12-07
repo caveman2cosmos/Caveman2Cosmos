@@ -1497,8 +1497,8 @@ public:
 	bool isMadeAttack() const;
 	void setMadeAttack(bool bNewValue);
 	//TB Combat Mods (Att&DefCounters)
-	int getRoundCount () const;
-	void changeRoundCount (int iChange);
+	int getRoundCount() const;
+	void changeRoundCount(int iChange);
 	int getAttackCount() const;
 	void changeAttackCount(int iChange);
 	int getDefenseCount() const;
