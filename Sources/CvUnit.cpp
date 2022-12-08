@@ -1696,12 +1696,10 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 			}
 		}
 		AI_killed(); // Update AI counts for this unit
-		//GC.getGame().logOOSSpecial(15, getID(), INVALID_PLOT_COORD, INVALID_PLOT_COORD);
-		setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true);
 
+		setCommander(false);
 		joinGroup(NULL, false, false);
-
-		CvEventReporter::getInstance().unitLost(this);
+		setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true);
 
 		const PlayerTypes eCapturingPlayer = getCapturingPlayer();
 		const UnitTypes eCaptureUnitType = getCaptureUnitType();
@@ -17243,7 +17241,7 @@ int CvUnit::getExtraVisibilityRange() const
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
-		if (pCommander != NULL)
+		if (pCommander)
 		{
 			return m_iExtraVisibilityRange + pCommander->m_iExtraVisibilityRange;
 		}
@@ -28498,10 +28496,9 @@ CvUnit* CvUnit::getCommander() const
 	}
 	CvUnit* pBestCommander = getUsedCommander();
 
-	if (pBestCommander != NULL) //return already used one if it is not dead.
+	if (pBestCommander) //return already used one if it is not dead.
 	{
-		// Recently destroyed commanders could cause a crash here without this protection.
-		if (pBestCommander->plot() != NULL && pBestCommander->controlPointsLeft() > 0
+		if (pBestCommander->controlPointsLeft() > 0
 		&& plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY()) <= pBestCommander->commandRange())
 		{
 			return pBestCommander;
@@ -28510,14 +28507,12 @@ CvUnit* CvUnit::getCommander() const
 		pBestCommander = NULL;
 		m_iCommanderCacheTurn = -1;
 	}
-
-	if (m_iCommanderCacheTurn == GC.getGame().getGameTurn())
+	else if (m_iCommanderCacheTurn == GC.getGame().getGameTurn())
 	{
 		pBestCommander = GET_PLAYER(getOwner()).getUnit(m_iCachedCommander);
-		if (pBestCommander != NULL)
+		if (pBestCommander)
 		{
-			// Guard against this being called during the death of said GC!
-			if (pBestCommander->plot() != NULL && pBestCommander->controlPointsLeft() > 0
+			if (pBestCommander->controlPointsLeft() > 0
 			&& plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY()) <= pBestCommander->commandRange())
 			{
 				return pBestCommander;
@@ -28529,62 +28524,55 @@ CvUnit* CvUnit::getCommander() const
 	int iBestCommanderDistance = 9999999;
 	if (getOwner() != NO_PLAYER)
 	{
-		const CvPlayer& kPlayer = GET_PLAYER(getOwner());
+		const CvPlayer& player = GET_PLAYER(getOwner());
+		const CvArea* area = area();
 
-		for (int i=0; i < (int)kPlayer.Commanders.size(); i++)		//loop through player's commanders
+		for (int i=0; i < (int)player.Commanders.size(); i++) //loop through player's commanders
 		{
-			CvUnit* pCommander = kPlayer.Commanders[i];
+			CvUnit* com = player.Commanders[i];
 
-			if (pCommander->controlPointsLeft() <= 0)
+			if (com->controlPointsLeft() <= 0 || com.area() != area)
 			{
 				continue;
 			}
-			const CvPlot* pCommPlot = pCommander->plot();
+			const CvPlot* comPlot = com->plot();
 
-			if (pCommPlot == NULL)
-			{
-				FErrorMsg("Commander Should Exist!");
-				continue;
-			}
-			const int iDistance = plotDistance(pCommPlot->getX(), pCommPlot->getY(), getX(), getY());
+			FAssertMsg(comPlot != NULL, "Unexpected... CTD incoming");
 
-			if (iDistance > pCommander->commandRange())
+			const int iDistance = plotDistance(comPlot->getX(), comPlot->getY(), getX(), getY());
+
+			if (iDistance > com->commandRange())
 			{
 				continue;
 			}
 			if (pBestCommander == NULL
 			// Best commander is at shorter distance, or at same distance but has more XP:
-			|| (iBestCommanderDistance < iDistance || iBestCommanderDistance == iDistance && pCommander->getExperience() > pBestCommander->getExperience()))
+			|| (iBestCommanderDistance < iDistance || iBestCommanderDistance == iDistance && com->getExperience() > pBestCommander->getExperience()))
 			{
-				pBestCommander = pCommander;
+				pBestCommander = com;
 				iBestCommanderDistance = iDistance;
 			}
 		}
 	}
 
-	//	Don't cache the human player because they may make abortive odds calculations
-	//	that lock a unit to a commander via the caching, and then not execute the attack that
-	//	gave rise to the odds calculation
+	// Don't cache the human player because they may make abortive odds
+	//	calculations that lock a unit to a commander via the caching,
+	//	and then not execute the attack that gave rise to the odds calculation.
 
-	//Perhaps do not cache commanders because it causes an OOS error to do so?  AIs make abortive odds calcs as well do they not?
+	// Perhaps do not cache commanders because it causes an OOS error to do so?  AIs make abortive odds calcs as well do they not?
 	if (!isHuman() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
 		m_iCommanderCacheTurn = GC.getGame().getGameTurn();
-		m_iCachedCommander = (pBestCommander == NULL ? NO_COMMANDER_ID : pBestCommander->getID());
+		m_iCachedCommander = (pBestCommander ? pBestCommander->getID() : NO_COMMANDER_ID);
 	}
 	return pBestCommander;
 }
 
 void CvUnit::tryUseCommander()
 {
-	CvUnit* pCommander = getUsedCommander();
+	CvUnit* pCommander = getCommander();
 
-	if ( pCommander == NULL || pCommander->controlPointsLeft() <= 0 )
-	{
-		pCommander = getCommander();
-	}
-
-	if (pCommander != NULL) //commander is used when any unit under his command fights in combat
+	if (pCommander) //commander is used when any unit under his command fights in combat
 	{
 		pCommander->m_commander->changeControlPointsLeft(-1);
 		m_iCommanderID = pCommander->getID();
@@ -28616,8 +28604,6 @@ void CvUnit::setCommander(bool bNewVal)
 	{
 		m_commander = new UnitCompCommander(m_pUnitInfo);
 
-		GET_PLAYER(getOwner()).Commanders.push_back(this);
-
 		foreach_(const UnitCombatTypes eSubCombat, m_pUnitInfo->getSubCombatTypes())
 		{
 			if (GC.getUnitCombatInfo(eSubCombat).getQualityBase() > -10)
@@ -28631,6 +28617,7 @@ void CvUnit::setCommander(bool bNewVal)
 		delete m_commander;
 		m_commander = NULL;
 	}
+	GET_PLAYER(getOwner()).listCommander(bNewVal, this);
 }
 
 void CvUnit::nullUsedCommander()

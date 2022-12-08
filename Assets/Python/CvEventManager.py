@@ -89,7 +89,6 @@ class CvEventManager:
 			'unitCreated'				: self.onUnitCreated,
 			'unitBuilt'					: self.onUnitBuilt,
 			'unitKilled'				: self.onUnitKilled,
-#			'unitLost'					: self.onUnitLost,
 			'unitPromoted'				: self.onUnitPromoted,
 			'unitUpgraded'				: self.onUnitUpgraded,
 #			'unitSelected'				: self.onUnitSelected,
@@ -2083,12 +2082,6 @@ class CvEventManager:
 		if CyUnit.getLeaderUnitType() == self.UNIT_STORY_TELLER:
 			# This will prevent a 'beastmaster lost' message when the unit is killed.
 			CyUnit.setLeaderUnitType(-1)
-
-
-	'''
-	def onUnitLost(self, argsList):
-		CyUnit, = argsList
-	'''
 
 
 	def onUnitPromoted(self, argsList):
