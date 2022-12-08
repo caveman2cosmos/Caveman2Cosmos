@@ -966,15 +966,7 @@ public:
 	int getNoInvisibilityCount() const;
 	void changeNoInvisibilityCount(int iChange);
 	bool isNukeImmune() const;
-/************************************************************************************************/
-/* REVDCM_OC                              02/16/10                                phungus420    */
-/*                                                                                              */
-/* Inquisitions                                                                                 */
-/************************************************************************************************/
 	bool isInquisitor() const;
-/************************************************************************************************/
-/* REVDCM_OC                               END                                                  */
-/************************************************************************************************/
 
 	int maxInterceptionProbability(bool bIgnoreCommanders = false) const;
 	int currInterceptionProbability() const;
@@ -1717,6 +1709,7 @@ public:
 
 	bool isWorker() const;
 	UnitCompWorker* CvUnit::getWorkerComponent() const;
+	void deselect(const bool bQuick = false);
 
 protected:
 	int m_iDCMBombRange;

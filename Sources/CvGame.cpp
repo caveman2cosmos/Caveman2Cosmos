@@ -1136,6 +1136,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 		GC.updateReplacements();
 
 	m_lastGraphicUpdateRequestTickCount = 0;
+	m_iCycleUnitSliceDelay = 0;
 
 	CvPlotPaging::ResetPaging();
 }
