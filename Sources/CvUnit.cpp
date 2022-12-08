@@ -1479,6 +1479,8 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 {
 	PROFILE_FUNC();
 
+	deselect(!bDelay);
+
 	if (m_combatResult.bDeathMessaged)
 	{
 		bMessaged = true;
@@ -1628,24 +1630,6 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		}
 		finishMoves();
 		m_iDamage = getMaxHP(); // Toffer - Makes isDead() True
-
-		if (IsSelected() && gDLL->getInterfaceIFace()->getLengthSelectionList() == 1)
-		{
-			if (!gDLL->getInterfaceIFace()->isFocused() && !gDLL->getInterfaceIFace()->isCitySelection() && !gDLL->getInterfaceIFace()->isDiploOrPopupWaiting())
-			{
-				GC.getGame().updateSelectionList();
-			}
-
-			if (IsSelected())
-			{
-				GC.getGame().updateSelectionListInternal();
-			}
-			else
-			{
-				gDLL->getInterfaceIFace()->setDirty(SelectionCamera_DIRTY_BIT, true);
-			}
-		}
-		gDLL->getInterfaceIFace()->removeFromSelectionList(this);
 
 		// XXX this is NOT a hack, without it, the game crashes.
 		if (!isUsingDummyEntities() && isInViewport())
@@ -4041,8 +4025,11 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 			}
 			list.execute(*pDefender, getOwner(), getUnitType());
+
+			return;
 		}
-		else if (pDefender->isDead())
+
+		if (pDefender->isDead())
 		{
 			if (pDefender->isNPC())
 			{
@@ -4434,7 +4421,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 				{
 					getGroup()->clearMissionQueue();
-					bFinish = false;
 					attack(pPlot, true);
 				}
 				if (bAdvance && getGroup() != NULL)
@@ -4445,14 +4431,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			}
 			//TB Combat Mods End
 
-			if (getGroup() != NULL)
-			{
-				if (getGroup()->canAnyMove()) // testing selective situation here.
-				{
-					getGroup()->setMissionPaneDirty();
-				}
-				else getGroup()->clearMissionQueue();
-			}
 			mergedList.execute(*this, eDefenderUnitPlayer, eDefenderUnitType);
 		}
 		else if (m_combatResult.bDefenderWithdrawn)
@@ -4525,7 +4503,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 				{
 					getGroup()->clearMissionQueue();
-					bFinish = false;
 					attack(pPlot,true);
 				}
 				else
@@ -4542,17 +4519,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					else if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
 					{
 						changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-					}
-					if (getGroup() != NULL)
-					{
-						if (!getGroup()->canAnyMove())//testing selective situation here.
-						{
-							getGroup()->clearMissionQueue();
-						}
-						else
-						{
-							getGroup()->setMissionPaneDirty();
-						}
 					}
 				}
 				//TB Combat Mod end
@@ -4571,12 +4537,11 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 				{
 					getGroup()->clearMissionQueue();
-					bFinish = false;
 					attack(pPlot,true);
 				}
 				else
 				{
-					if (getGroup() != NULL)
+					if (getGroup())
 					{
 						if (bAdvance && getGroup() != NULL && pPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
 						{
@@ -4589,39 +4554,15 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 							changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 						}
 					}
-					else
+					else if (!bStealthDefense)
 					{
-						//TB Combat Mod (Stampede) end
-						if (!bStealthDefense)
-						{
-							changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-						}
-					}
-					if (getGroup() != NULL)
-					{
-						if (getGroup()->canAnyMove())//testing selective situation here.
-						{
-							getGroup()->setMissionPaneDirty();
-						}
-						else getGroup()->clearMissionQueue();
+						changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 					}
 				}
 			}
-			else
+			else if (!bStealthDefense)
 			{
-				//TB Combat Mod (Stampede) end
-				if (!bStealthDefense)
-				{
-					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-				}
-				if (getGroup() != NULL)
-				{
-					if (getGroup()->canAnyMove())//testing selective situation here.
-					{
-						getGroup()->setMissionPaneDirty();
-					}
-					else getGroup()->clearMissionQueue();
-				}
+				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 			}
 		}
 		//TB Combat Mods
@@ -4770,27 +4711,14 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 			m_combatResult.bAttackerRepelled = false;
 
-			if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
-			{
-				//TB Combat Mod (Stampede)
-				bFinish = false;
-				attack(pPlot, true);
-			}
-			else
+			if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
 			{
 				if (!bStealthDefense)
 				{
 					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				}
-				if (getGroup() != NULL)
-				{
-					if (getGroup()->canAnyMove())//testing selective situation here.
-					{
-						getGroup()->setMissionPaneDirty();
-					}
-					else getGroup()->clearMissionQueue();
-				}
 			}
+			else attack(pPlot, true); //TB Combat Mod (Stampede)
 		}
 		else if (m_combatResult.bDefenderKnockedBack)
 		{
@@ -4984,7 +4912,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				//TB Combat Mod (Stampede)
 				getGroup()->clearMissionQueue();
-				bFinish = false;
 				attack(pPlot,true);
 			}
 
@@ -4996,17 +4923,8 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 					getGroup()->groupMove(pPlot, true, ((bAdvance) ? this : NULL));
 				}
-
 				// This is before the plot advancement, the unit will always try to walk back
 				// to the square that they came from, before advancing.
-			}
-			if (getGroup() != NULL)
-			{
-				if (getGroup()->canAnyMove())//testing selective situation here.
-				{
-					getGroup()->setMissionPaneDirty();
-				}
-				else getGroup()->clearMissionQueue();
 			}
 		}
 		else if (m_combatResult.bAttackerWithdraws)
@@ -5031,15 +4949,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				//GC.getGame().logOOSSpecial(53, getID(), getMoves(), getDamage());
-
-				if (getGroup() != NULL)
-				{
-					if (getGroup()->canAnyMove())//testing selective situation here.
-					{
-						getGroup()->setMissionPaneDirty();
-					}
-					else getGroup()->clearMissionQueue();
-				}
 			}
 			//TB Combat Mod (Stampede) begin
 			else if (m_combatResult.bAttackerStampedes)
@@ -5064,7 +4973,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				{
 					getGroup()->clearMissionQueue();
 				}
-				bFinish = false;
 				attack(pPlot,true);
 			}
 			else if (m_combatResult.bAttackerOnslaught)
@@ -5089,30 +4997,24 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				{
 					getGroup()->clearMissionQueue();
 				}
-				bFinish = false;
 				attack(pPlot, true);
 			}
 		}
-		else
+		else if (!bStealthDefense)
 		{
-			if (!bStealthDefense)
-			{
-				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-			}
-
-			if (getGroup() != NULL)
-			{
-				if (getGroup()->canAnyMove()) // testing selective situation here.
-				{
-					getGroup()->setMissionPaneDirty();
-				}
-				else getGroup()->clearMissionQueue();
-			}
+			changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 		}
 
 		if (IsSelected() && !canMove())
 		{
-			GC.getGame().updateSelectionListInternal();
+			if (gDLL->getInterfaceIFace()->getLengthSelectionList() > 1)
+			{
+				gDLL->getInterfaceIFace()->removeFromSelectionList(this);
+			}
+			else if (bSamePlot)
+			{
+				GC.getGame().updateSelectionListInternal();
+			}
 		}
 	}
 }
@@ -5688,121 +5590,125 @@ bool CvUnit::canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bT
 
 void CvUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 {
-	CvUnit* pUnit;
-
-	bool bCycle = false;
-
 	FAssert(getOwner() != NO_PLAYER);
 
-	if (canDoCommand(eCommand, iData1, iData2))
+	if (!canDoCommand(eCommand, iData1, iData2))
 	{
-		switch (eCommand)
-		{
+		return;
+	}
+	switch (eCommand)
+	{
 		case COMMAND_PROMOTION:
+		{
 			promote((PromotionTypes)iData1, iData2);
 			break;
-
+		}
 		case COMMAND_UPGRADE:
+		{
 			upgrade((UnitTypes)iData1);
-			bCycle = true;
 			break;
-
+		}
 		case COMMAND_AUTOMATE:
+		{
 			automate((AutomateTypes)iData1);
-			bCycle = true;
+			GC.getGame().updateSelectionListInternal();
 			break;
-
+		}
 		case COMMAND_WAKE:
+		{
 			getGroup()->setActivityType(ACTIVITY_AWAKE);
 			break;
-
+		}
 		case COMMAND_CANCEL:
+		{
 			getGroup()->popMission();
 			break;
-
+		}
 		case COMMAND_CANCEL_ALL:
+		{
 			getGroup()->clearMissionQueue();
 			break;
-
+		}
 		case COMMAND_STOP_AUTOMATION:
+		{
 			getGroup()->setAutomateType(NO_AUTOMATE);
 			break;
-
+		}
 		case COMMAND_DELETE:
+		{
 			scrap();
-			bCycle = true;
 			break;
-
+		}
 		case COMMAND_GIFT:
+		{
 			gift();
-			bCycle = true;
 			break;
-
+		}
 		case COMMAND_LOAD:
+		{
 			load();
-			bCycle = true;
 			break;
-
+		}
 		case COMMAND_LOAD_UNIT:
-			pUnit = ::getUnit(IDInfo(((PlayerTypes)iData1), iData2));
+		{
+			CvUnit* pUnit = ::getUnit(IDInfo(((PlayerTypes)iData1), iData2));
+
 			if (pUnit != NULL)
 			{
 				loadOntoUnit(pUnit);
-				bCycle = true;
 			}
 			break;
-
+		}
 		case COMMAND_UNLOAD:
+		{
 			unload();
-			bCycle = true;
 			break;
-
+		}
 		case COMMAND_UNLOAD_ALL:
+		{
 			unloadAll();
-			bCycle = true;
 			break;
-
+		}
 		case COMMAND_HOTKEY:
+		{
 			setHotKeyNumber(iData1);
 			break;
-
+		}
 		case COMMAND_REEQUIP:
+		{
 			reEquip((PromotionTypes)iData1);
 			finishMoves();
 			break;
-
+		}
 		case COMMAND_MERGE:
+		{
 			doMerge();
 			break;
-
+		}
 		case COMMAND_SPLIT:
+		{
 			doSplit();
 			break;
-
+		}
 		case COMMAND_STATUS:
+		{
 			statusUpdate((PromotionTypes)iData1);
 			if (!GC.getPromotionInfo((PromotionTypes)iData1).isQuick())
 			{
 				finishMoves();
 			}
 			break;
-
+		}
 		case COMMAND_ARREST:
+		{
 			doArrest();
 			break;
-
+		}
 		case COMMAND_AMBUSH:
-			break;
-
-		default:
-			FErrorMsg("error");
+		{
 			break;
 		}
-	}
-
-	if (bCycle && IsSelected())
-	{
-		GC.getGame().updateSelectionListInternal();
+		default: FErrorMsg("error");
 	}
 	getGroup()->doDelayedDeath();
 }
@@ -7086,11 +6992,7 @@ void CvUnit::automate(AutomateTypes eAutomate)
 	{
 		return;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 08/20/10                                               */
-/*                                                                                              */
-/* Advanced Automations                                                                         */
-/************************************************************************************************/
+
 	if (eAutomate == AUTOMATE_UPGRADING || eAutomate == AUTOMATE_CANCEL_UPGRADING)
 	{
 		foreach_(CvUnit* pLoopUnit, getGroup()->units())
@@ -7115,9 +7017,7 @@ void CvUnit::automate(AutomateTypes eAutomate)
 		}
 		return;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	getGroup()->setAutomateType(eAutomate);
 }
 
@@ -10491,7 +10391,6 @@ bool CvUnit::construct(BuildingTypes eBuilding)
 
 	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
 	kill(true, NO_PLAYER, true);
-
 	return true;
 }
 
@@ -38968,4 +38867,19 @@ bool CvUnit::isWorker() const
 UnitCompWorker* CvUnit::getWorkerComponent() const
 {
 	return m_worker;
+}
+
+void CvUnit::deselect(const bool bQuick)
+{
+	if (IsSelected())
+	{
+		if (gDLL->getInterfaceIFace()->getLengthSelectionList() > 1)
+		{
+			gDLL->getInterfaceIFace()->removeFromSelectionList(this);
+		}
+		else if (bQuick || GET_PLAYER(GC.getGame().getActivePlayer()).isOption(PLAYEROPTION_QUICK_MOVES))
+		{
+			GC.getGame().updateSelectionListInternal();
+		}
+	}
 }

@@ -667,7 +667,16 @@ void CvGame::updateSelectionListInternal(int iCycleDelay, bool bSetCamera, bool 
 
 	if (pHeadSelectedUnit == NULL || !bForceAcceptCurrent && !pHeadSelectedUnit->getGroup()->readyToSelect(true))
 	{
-		if (iCycleDelay == 0)
+		if (iCycleDelay > 0)
+		{
+			m_iCycleUnitSliceDelay = iCycleDelay;
+
+			if (pHeadSelectedUnit)
+			{
+				gDLL->getInterfaceIFace()->clearSelectionList();
+			}
+		}
+		else
 		{
 			const CvPlot* originalPlot = gDLL->getInterfaceIFace()->getOriginalPlot();
 
@@ -682,16 +691,7 @@ void CvGame::updateSelectionListInternal(int iCycleDelay, bool bSetCamera, bool 
 			}
 			const CvUnit* newSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
-			if (newSelectedUnit != NULL && !newSelectedUnit->getGroup()->readyToSelect())
-			{
-				gDLL->getInterfaceIFace()->clearSelectionList();
-			}
-		}
-		else
-		{
-			m_iCycleUnitSliceDelay = iCycleDelay;
-
-			if (pHeadSelectedUnit != NULL && !pHeadSelectedUnit->getGroup()->readyToSelect())
+			if (newSelectedUnit && !newSelectedUnit->getGroup()->readyToSelect())
 			{
 				gDLL->getInterfaceIFace()->clearSelectionList();
 			}

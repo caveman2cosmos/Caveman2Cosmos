@@ -27176,7 +27176,7 @@ bool CvUnitAI::AI_huntRange(int iRange, int iOddsThreshold, bool bStayInBorders,
 
 
 	int localOddsThreshold = iOddsThreshold > 99 ? 99 : iOddsThreshold;
-	
+
 	const bool bCanCaptureCities =
 		getGroup()->getAutomateType() == AUTOMATE_HUNT && !GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_AUTO_HUNT_NO_CITY_CAPTURING) ||
 		getGroup()->getAutomateType() == AUTOMATE_BORDER_PATROL && !GET_PLAYER(getOwner()).isModderOption(MODDEROPTION_AUTO_PATROL_NO_CITY_CAPTURING);
