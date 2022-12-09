@@ -298,8 +298,10 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 
 void CvPlot::clearModifierTotals()
 {
-	m_baseYields = new short[NUM_YIELD_TYPES]();
-
+	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
+	{
+		m_baseYields[iI] = 0;
+	}
 	getProperties()->clearForRecalculate();
 
 	// We will recalculate visibility from first principles
