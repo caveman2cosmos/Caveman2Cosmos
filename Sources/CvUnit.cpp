@@ -28525,13 +28525,13 @@ CvUnit* CvUnit::getCommander() const
 	if (getOwner() != NO_PLAYER)
 	{
 		const CvPlayer& player = GET_PLAYER(getOwner());
-		const CvArea* area = area();
+		const CvArea* pArea = area();
 
 		for (int i=0; i < (int)player.Commanders.size(); i++) //loop through player's commanders
 		{
 			CvUnit* com = player.Commanders[i];
 
-			if (com->controlPointsLeft() <= 0 || com.area() != area)
+			if (com->controlPointsLeft() <= 0 || com->area() != pArea)
 			{
 				continue;
 			}
