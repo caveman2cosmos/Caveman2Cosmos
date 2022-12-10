@@ -2929,11 +2929,6 @@ CvUnit* CvPlayer::initUnit(UnitTypes eUnit, int iX, int iY, UnitAITypes eUnitAI,
 	if (NULL != pUnit)
 	{
 		pUnit->init(pUnit->getID(), eUnit, ((eUnitAI == NO_UNITAI) ? GC.getUnitInfo(eUnit).getDefaultUnitAIType() : eUnitAI), getID(), iX, iY, eFacingDirection, iBirthmark);
-
-		if (pUnit->isCommander())
-		{
-			Commanders.push_back(pUnit);
-		}
 	}
 	return pUnit;
 }
@@ -15104,25 +15099,6 @@ CvUnit* CvPlayer::addUnit()
 
 void CvPlayer::deleteUnit(int iID)
 {
-	if (getUnit(iID)->isCommander())
-	{
-		for (int i=0; i < (int)Commanders.size(); i++)
-		{
-			if (Commanders[i]->getID() == iID)
-			{
-				Commanders.erase(Commanders.begin() + i);
-				//loop through units and delete commander from m_pUsedCommander fields:
-				foreach_(CvUnit* pLoopUnit, units())
-				{
-					if (pLoopUnit->getUsedCommander() != NULL && pLoopUnit->getUsedCommander()->getID() == iID)
-					{
-						pLoopUnit->nullUsedCommander();
-					}
-				}
-				break;
-			}
-		}
-	}
 	m_units[CURRENT_MAP]->removeAt(iID);
 }
 
@@ -19061,14 +19037,14 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		}
 		//Must be loaded AFTER units.
 		Commanders.clear();
-		foreach_(CvUnit* pLoopUnit, units())
+		foreach_(CvUnit* unitX, units())
 		{
-			if (pLoopUnit->isCommander())	//search for GGs among loaded units and add them to Commanders array
+			if (unitX->isCommander()) //search for GGs among loaded units and add them to Commanders array
 			{
-				Commanders.push_back(pLoopUnit);
+				Commanders.push_back(unitX);
 			}
 
-			if (pLoopUnit->isZoneOfControl())
+			if (unitX->isZoneOfControl())
 			{
 				GC.getGame().toggleAnyoneHasUnitZoneOfControl();
 			}
@@ -22670,7 +22646,7 @@ bool CvPlayer::checkExpireEvent(EventTypes eEvent, const EventTriggeredData& kTr
 
 		const CvPlayer& kPlayer = GET_PLAYER(kTriggeredData.m_ePlayer);
 
-		if (kTrigger.isStateReligion() & kTrigger.isPickReligion())
+		if (kTrigger.isStateReligion() && kTrigger.isPickReligion())
 		{
 			if (kPlayer.getStateReligion() != kTriggeredData.m_eReligion)
 			{
@@ -30696,6 +30672,33 @@ void CvPlayer::resetIdleCities()
 		if (!city->isProduction())
 		{
 			setIdleCity(city->getID(), true);
+		}
+	}
+}
+
+void CvPlayer::listCommander(bool bAdd, CvUnit* unit)
+{
+	if (bAdd)
+	{
+		Commanders.push_back(unit);
+		return;
+	}
+	const int iID = unit->getID();
+
+	for (int i = 0; i < static_cast<int>(Commanders.size()); i++)
+	{
+		if (Commanders[i]->getID() == iID)
+		{
+			Commanders.erase(Commanders.begin() + i);
+
+			foreach_(CvUnit* unitX, units())
+			{
+				if (unitX->getUsedCommander() && unitX->getUsedCommander()->getID() == iID)
+				{
+					unitX->nullUsedCommander();
+				}
+			}
+			break;
 		}
 	}
 }

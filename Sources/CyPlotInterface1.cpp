@@ -62,7 +62,6 @@ void CyPlotPythonInterface1(python::class_<CyPlot>& x)
 		.def("getNumDefenders", &CyPlot::getNumDefenders, "int (int /*PlayerTypes*/ ePlayer)")
 		.def("getNumVisibleEnemyDefenders", &CyPlot::getNumVisiblePotentialEnemyDefenders, "int (CyUnit* pUnit)")
 		.def("isVisibleEnemyUnit", &CyPlot::isVisibleEnemyUnit, "bool (int /*PlayerTypes*/ ePlayer)")
-		.def("isFighting", &CyPlot::isFighting, "bool ()")
 
 		.def("canHaveFeature", &CyPlot::canHaveFeature, "bool (int /*FeatureTypes*/ eFeature)")
 		.def("isBonusNetwork", &CyPlot::isBonusNetwork, "bool (int (TeamTypes) eTeam)")

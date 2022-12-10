@@ -197,9 +197,9 @@ bool CyUnit::isGoldenAge() const
 	return m_pUnit->isGoldenAge();
 }
 
-bool CyUnit::isFighting() const
+bool CyUnit::isInBattle() const
 {
-	return m_pUnit->isFighting();
+	return m_pUnit->isInBattle();
 }
 
 int CyUnit::getMaxHP() const

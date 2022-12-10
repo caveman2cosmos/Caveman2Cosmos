@@ -92,7 +92,6 @@ public:
 	void unitBuilt(CvCity *pCity, CvUnit *pUnit);
 	void unitKilled(CvUnit *pUnit, PlayerTypes eAttacker);
 	void unitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType, CvUnit* pNewUnit);
-	void unitLost(CvUnit *pUnit);
 	void unitPromoted(CvUnit *pUnit, PromotionTypes ePromotion);
 	void unitUpgraded(CvUnit *pOldUnit, CvUnit *pNewUnit, int iPrice);
 
