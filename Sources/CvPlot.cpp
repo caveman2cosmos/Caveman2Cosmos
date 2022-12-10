@@ -110,6 +110,9 @@ CvPlot::CvPlot()
 	m_iImprovementUpgradeHash = 0;
 	m_iCurrentRoundofUpgradeCache = -1;
 	// ! Toffer
+
+	m_commanderCount = new short[MAX_PLAYERS]();
+
 	m_iImprovementCurrentValue = 0;
 
 	m_szScriptData = NULL;
@@ -150,6 +153,7 @@ CvPlot::~CvPlot()
 	SAFE_DELETE_ARRAY(m_baseYields);
 	SAFE_DELETE_ARRAY(m_aiYield);
 	SAFE_DELETE_ARRAY(m_abIsTeamBorderCache);
+	SAFE_DELETE_ARRAY(m_commanderCount);
 }
 
 void CvPlot::init(int iX, int iY)
@@ -301,6 +305,10 @@ void CvPlot::clearModifierTotals()
 	for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 	{
 		m_baseYields[iI] = 0;
+	}
+	for (int i = 0; i < MAX_PLAYERS; i++)
+	{
+		m_commanderCount[i] = 0;
 	}
 	getProperties()->clearForRecalculate();
 
@@ -663,15 +671,9 @@ void CvPlot::doTurn()
 		setOwner(NO_PLAYER, false, false);
 	}
 #ifdef _DEBUG
+	foreach_ (CvUnit* unit, units())
 	{
-		foreach_ (CvUnit* unit, units())
-		{
-			FAssertMsg(unit->atPlot(this), "pLoopUnit is expected to be at the current plot instance");
-			if (!unit->atPlot(this))
-			{
-				removeUnit(unit);
-			}
-		}
+		FAssertMsg(unit->atPlot(this), "pLoopUnit is expected to be at the current plot instance");
 	}
 #endif
 }
@@ -10074,11 +10076,21 @@ void CvPlot::addUnit(CvUnit* pUnit, bool bUpdate)
 
 		setFlagDirty(true);
 	}
+
+	if (pUnit->isCommander() && pUnit->isCommanderReady())
+	{
+		countCommander(true, pUnit);
+	}
 }
 
 
 void CvPlot::removeUnit(CvUnit* pUnit, bool bUpdate)
 {
+	if (pUnit->isCommander() && pUnit->isCommanderReady())
+	{
+		countCommander(false, pUnit);
+	}
+
 	for (CLLNode<IDInfo>* pUnitNode = headUnitNode(); pUnitNode != NULL; )
 	{
 		if (::getUnit(pUnitNode->m_data) == pUnit)
@@ -10881,8 +10893,9 @@ void CvPlot::read(FDataStreamBase* pStream)
 			m_aPlotTeamVisibilityIntensity[iI].iIntensity = iType4;
 		}
 	}
-
 	WRAPPER_READ_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_baseYields);
+
+	WRAPPER_READ_ARRAY(wrapper, "CvPlot", MAX_PLAYERS, m_commanderCount);
 
 	//Example of how to Skip Element
 	//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_bPeaks, SAVE_VALUE_ANY);
@@ -11242,6 +11255,8 @@ void CvPlot::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlot", iType4);
 	}
 	WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_baseYields);
+
+	WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", MAX_PLAYERS, m_commanderCount);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -12962,7 +12977,7 @@ void CvPlot::unitGameStateCorrections()
 {
 	bool bUpdate = false;
 
-	for (CLLNode<IDInfo>* pUnitNode = headUnitNode(); pUnitNode != NULL; )
+	for (CLLNode<IDInfo>* pUnitNode = headUnitNode(); pUnitNode != NULL;)
 	{
 		CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
 
@@ -13135,4 +13150,38 @@ CvPlot::adjacent_range CvPlot::adjacent() const
 CvPlot::adjacent_range CvPlot::cardinalDirectionAdjacent() const
 {
 	return CvPlot::adjacent_range(beginAdjacent(NUM_CARDINALDIRECTION_TYPES, GC.getPlotCardinalDirectionX(), GC.getPlotCardinalDirectionY()), endAdjacent());
+}
+
+
+void CvPlot::countCommander(bool bNewVal, const CvUnit* pUnit)
+{
+	const short iRange = pUnit->commandRange();
+
+	OutputDebugString(CvString::format("countCommander: range=%d; oldCount=%d; iChange=%d\n", iRange, m_commanderCount[pUnit->getOwner()], bNewVal ? 1 : -1).c_str());
+
+	if (iRange > 0)
+	{
+		const PlayerTypes ePlayer = pUnit->getOwner();
+		const char iChange = bNewVal ? 1 : -1;
+
+		foreach_(CvPlot* plotX, rect(iRange, iRange))
+		{
+			plotX->changeCommanderCount(ePlayer, iChange);
+		}
+	}
+	else changeCommanderCount(pUnit->getOwner(), bNewVal ? 1 : -1);
+
+	OutputDebugString(CvString::format("countCommander new count=%d\n", m_commanderCount[pUnit->getOwner()]).c_str());
+}
+
+void CvPlot::changeCommanderCount(const PlayerTypes ePlayer, const char iChange)
+{
+	m_commanderCount[ePlayer] += iChange;
+
+	FASSERT_NOT_NEGATIVE(m_commanderCount[ePlayer]);
+}
+
+bool CvPlot::hasCommander(const PlayerTypes ePlayer) const
+{
+	return m_commanderCount[ePlayer] > 0;
 }

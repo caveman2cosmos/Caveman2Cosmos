@@ -1033,6 +1033,8 @@ protected:
 	// added so under cheat mode we can access protected stuff
 	friend class CvGameTextMgr;
 
+	short* m_commanderCount;
+
 // From Lead From Behind by UncutDragon
 public:
 	bool hasDefender(bool bCheckCanAttack, PlayerTypes eOwner, PlayerTypes eAttackingPlayer = NO_PLAYER, const CvUnit* pAttacker = NULL, bool bTestAtWar = false, bool bTestPotentialEnemy = false, bool bTestCanMove = false, bool bTestCanFight = false) const;
@@ -1040,6 +1042,9 @@ public:
 	void revealBestStealthDefender(const CvUnit* pAttacker);
 	void doPreAttackTraps(CvUnit* pAttacker);
 
+	void countCommander(bool bNewVal, const CvUnit* pUnit);
+	void changeCommanderCount(const PlayerTypes ePlayer, const char iChange);
+	bool hasCommander(const PlayerTypes ePlayer) const;
 
 #ifdef CAN_BUILD_VALUE_CACHING
 public:

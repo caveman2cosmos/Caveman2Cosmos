@@ -611,18 +611,16 @@ public:
 
 	int interceptionChance(const CvPlot* pPlot) const;
 
-	//Great Commanders... By KillmePlease
-
-	//for combat units:
 	CvUnit* getCommander() const;
-	void tryUseCommander(); //assigns m_pUsedCommander by call to getCommander() and consumes command points from used commander.
+	void tryUseCommander();
 	bool isCommander() const;
+	bool isCommanderReady() const;
 	void setCommander(bool bNewVal);
-	void nullUsedCommander(); //delete m_pUsedCommander
-	void clearCommanderCache() ; //	Should be called prior to each turn
+	void nullLastCommander();
 	//UnitCompCommander* getCommanderComp() const;
 
 	CvUnit* getUsedCommander() const;
+	CvUnit* getLastCommander() const;
 
 	int controlPointsLeft() const;
 	int controlPoints() const;
@@ -1742,9 +1740,9 @@ protected:
 	bool m_bAutoUpgrading;
 	IDInfo m_shadowUnit;
 	//Great Commanders... By KillmePlease
-	int m_iCommanderID; //id of commander. used for game save/load
+	mutable int m_iCommanderID; //id of commander. used for game save/load
+	int m_iUsedCommanderID;
 	mutable int m_iCommanderCacheTurn;
-	mutable int m_iCachedCommander;
 #define	NO_COMMANDER_ID	-2	//	Pseudo-id used to signify an assertion that the unit has no commander
 	int m_iPreCombatDamage;
 
@@ -3026,7 +3024,6 @@ public:
 	struct fn {
 		DECLARE_MAP_FUNCTOR(CvUnit, void, doActiveDefense);
 		DECLARE_MAP_FUNCTOR(CvUnit, void, doOpportunityFire);
-		DECLARE_MAP_FUNCTOR(CvUnit, void, clearCommanderCache);
 		DECLARE_MAP_FUNCTOR(CvUnit, void, setSMValues);
 		DECLARE_MAP_FUNCTOR(CvUnit, void, checkPromotionObsoletion);
 		DECLARE_MAP_FUNCTOR(CvUnit, void, reloadEntity);

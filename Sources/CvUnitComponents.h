@@ -19,6 +19,8 @@ public:
 	inline short getControlPointsLeft() const { return m_iControlPointsLeft; }
 	void restoreControlPoints();
 
+	inline bool isReady() const { return m_bReady; }
+
 	void changeCommandRange(const int iChange);
 	inline short getCommandRange() const { return m_iCommandRange; }
 
@@ -26,6 +28,7 @@ private:
 	short m_iControlPoints;
 	short m_iControlPointsLeft;
 	short m_iCommandRange;
+	bool m_bReady;
 };
 //------------------------------------------------------------------------------------------------------
 //  CLASS: UnitCompWorker

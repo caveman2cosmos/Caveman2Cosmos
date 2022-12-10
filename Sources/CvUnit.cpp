@@ -760,7 +760,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iSleepTimer = 0;
 	//@MOD Commanders: reset parameters
 	m_iCommanderID = -1;
-	m_iCommanderCacheTurn = -1;
+	m_iUsedCommanderID = -1;
 	m_eOriginalOwner = eOwner;
 	m_eNewDomainCargo = NO_DOMAIN;
 	m_eNewSpecialCargo = NO_SPECIALUNIT;
@@ -1117,7 +1117,7 @@ CvUnit& CvUnit::operator=(const CvUnit& other)
 	m_movementCharacteristicsHash = other.m_movementCharacteristicsHash;
 	m_iSleepTimer = other.m_iSleepTimer;
 	m_iCommanderID = other.m_iCommanderID;
-	m_iCommanderCacheTurn = other.m_iCommanderCacheTurn;
+	m_iUsedCommanderID = other.m_iUsedCommanderID;
 	m_eOriginalOwner = other.m_eOriginalOwner;
 	m_eNewDomainCargo = other.m_eNewDomainCargo;
 	m_eNewSpecialCargo = other.m_eNewSpecialCargo;
@@ -1761,9 +1761,13 @@ void CvUnit::doTurn()
 	if (isCommander())
 	{
 		m_commander->restoreControlPoints();
+
+		if (m_commander->isReady())
+		{
+			plot()->countCommander(true, this);
+		}
 	}
 	gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
-	m_iCommanderID = -1;	//reset used commander for combat units
 
 	m_bRevealed = false;
 	if (m_bHasHNCapturePromotion && getOwner() == plot()->getOwner())
@@ -16496,10 +16500,10 @@ void CvUnit::changeExperience100(int iChange, int iMax, bool bFromCombat, bool b
 			kPlayer.changeFractionalCombatExperience(getModifiedIntValue(iChange, iModGG), getGGExperienceEarnedTowardsType());
 		}
 
-		CvUnit* pCommander = getUsedCommander();
-		if (pCommander != NULL)
+		if (getUsedCommander())
 		{
-			pCommander->changeExperience100(60, iMax); //0.6 xp every time, make global define?
+			getUsedCommander()->changeExperience100(60, iMax); //0.6 xp every time, make global define?
+			m_iUsedCommanderID = -1;
 		}
 	}
 	if (iChange == 0)
@@ -21164,7 +21168,16 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	//	and apply commander specific stats at that point.
 	if (isCommander())
 	{
-		m_commander->changeControlPoints(kPromotion.getControlPoints() * iChange);
+		if (kPromotion.getControlPoints() != 0)
+		{
+			const bool bWasReady = isCommanderReady();
+			m_commander->changeControlPoints(kPromotion.getControlPoints() * iChange);
+
+			if (bWasReady != isCommanderReady())
+			{
+				plot()->countCommander(!bWasReady, this);
+			}
+		}
 		m_commander->changeCommandRange(kPromotion.getCommandRange() * iChange);
 	}
 
@@ -21981,7 +21994,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 	int iControlPointsLeft = 0;
 	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iControlPointsLeft, "m_iControlPointsLeft");
 
-	WRAPPER_READ(wrapper, "CvUnit", &m_iCommanderID); //id will be used later on player initialization to get m_pUsedCommander pointer
+	WRAPPER_READ(wrapper, "CvUnit", &m_iCommanderID);
 
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eOriginalOwner);
 
@@ -23503,7 +23516,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bCommander ? m_commander->getCommandRange() - m_pUnitInfo->getCommandRange() : 0), "m_iExtraCommandRange");
 	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bCommander ? m_commander->getControlPointsLeft() : 0), "m_iControlPointsLeft");
 
-	WRAPPER_WRITE(wrapper, "CvUnit", m_iCommanderID); //-1 means there is no used commander
+	WRAPPER_WRITE(wrapper, "CvUnit", m_iCommanderID);
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_eOriginalOwner);
 
@@ -28487,84 +28500,58 @@ CvUnit* CvUnit::getCommander() const
 {
 	PROFILE_FUNC();
 
+	FAssertMsg(plot() != NULL, "TEST");
 	// This routine gets called a HUGE number of times per turn (100s of millions in large games!)
 	//	so short-circuit the most common case of the unit having no commander when we can
 	//	Similarly protect against calls during initialization of a unit (before it has a plot set)
-	if (m_iCachedCommander == NO_COMMANDER_ID || plot() == NULL)
+	if (plot() == NULL || !plot()->hasCommander(getOwner()))
 	{
 		return NULL;
 	}
-	CvUnit* pBestCommander = getUsedCommander();
+	CvUnit* pBestCommander = getLastCommander();
 
 	if (pBestCommander) //return already used one if it is not dead.
 	{
-		if (pBestCommander->controlPointsLeft() > 0
-		&& plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY()) <= pBestCommander->commandRange())
+		if (plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY()) <= pBestCommander->commandRange())
 		{
 			return pBestCommander;
 		}
 		// The one we used would have been the cached one so will have to search again
 		pBestCommander = NULL;
-		m_iCommanderCacheTurn = -1;
-	}
-	else if (m_iCommanderCacheTurn == GC.getGame().getGameTurn())
-	{
-		pBestCommander = GET_PLAYER(getOwner()).getUnit(m_iCachedCommander);
-		if (pBestCommander)
-		{
-			if (pBestCommander->controlPointsLeft() > 0
-			&& plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY()) <= pBestCommander->commandRange())
-			{
-				return pBestCommander;
-			}
-			pBestCommander = NULL;
-		}
 	}
 
 	int iBestCommanderDistance = 9999999;
-	if (getOwner() != NO_PLAYER)
+
+	const CvPlayer& player = GET_PLAYER(getOwner());
+
+	for (int i = player.Commanders.size() - 1; i > -1; i--) //loop through player's commanders
 	{
-		const CvPlayer& player = GET_PLAYER(getOwner());
-		const CvArea* pArea = area();
+		CvUnit* com = player.Commanders[i];
 
-		for (int i=0; i < (int)player.Commanders.size(); i++) //loop through player's commanders
+		if (com->controlPointsLeft() <= 0)
 		{
-			CvUnit* com = player.Commanders[i];
+			continue;
+		}
+		const CvPlot* comPlot = com->plot();
 
-			if (com->controlPointsLeft() <= 0 || com->area() != pArea)
-			{
-				continue;
-			}
-			const CvPlot* comPlot = com->plot();
+		FAssertMsg(comPlot != NULL, "Unexpected... CTD incoming");
 
-			FAssertMsg(comPlot != NULL, "Unexpected... CTD incoming");
+		const int iDistance = plotDistance(comPlot->getX(), comPlot->getY(), getX(), getY());
 
-			const int iDistance = plotDistance(comPlot->getX(), comPlot->getY(), getX(), getY());
-
-			if (iDistance > com->commandRange())
-			{
-				continue;
-			}
-			if (pBestCommander == NULL
-			// Best commander is at shorter distance, or at same distance but has more XP:
-			|| (iBestCommanderDistance < iDistance || iBestCommanderDistance == iDistance && com->getExperience() > pBestCommander->getExperience()))
-			{
-				pBestCommander = com;
-				iBestCommanderDistance = iDistance;
-			}
+		if (iDistance > com->commandRange())
+		{
+			continue;
+		}
+		if (pBestCommander == NULL
+		// Best commander is at shorter distance, or at same distance but has more XP:
+		|| (iBestCommanderDistance < iDistance || iBestCommanderDistance == iDistance && com->getExperience() > pBestCommander->getExperience()))
+		{
+			pBestCommander = com;
+			iBestCommanderDistance = iDistance;
 		}
 	}
+	m_iCommanderID = pBestCommander ? pBestCommander->getID() : -1;
 
-	// Don't cache the human player because they may make abortive odds
-	//	calculations that lock a unit to a commander via the caching,
-	//	and then not execute the attack that gave rise to the odds calculation.
-
-	// Perhaps do not cache commanders because it causes an OOS error to do so?  AIs make abortive odds calcs as well do they not?
-	if (!isHuman() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
-	{
-		m_iCommanderCacheTurn = GC.getGame().getGameTurn();
-		m_iCachedCommander = (pBestCommander ? pBestCommander->getID() : NO_COMMANDER_ID);
-	}
 	return pBestCommander;
 }
 
@@ -28574,12 +28561,15 @@ void CvUnit::tryUseCommander()
 
 	if (pCommander) //commander is used when any unit under his command fights in combat
 	{
-		pCommander->m_commander->changeControlPointsLeft(-1);
-		m_iCommanderID = pCommander->getID();
+		m_iUsedCommanderID = pCommander->getID();
 
-		if (pCommander->m_commander->getControlPointsLeft() <= 0)
+		pCommander->m_commander->changeControlPointsLeft(-1);
+
+		if (!pCommander->m_commander->isReady())
 		{
 			FlushCombatStrCache(NULL);
+			pCommander->plot()->countCommander(false, pCommander);
+			nullLastCommander();
 		}
 	}
 }
@@ -28587,6 +28577,11 @@ void CvUnit::tryUseCommander()
 bool CvUnit::isCommander() const
 {
 	return m_commander != NULL;
+}
+
+bool CvUnit::isCommanderReady() const
+{
+	return m_commander->isReady();
 }
 
 /* Toffer - May need this one at some point... maybe
@@ -28618,22 +28613,31 @@ void CvUnit::setCommander(bool bNewVal)
 		m_commander = NULL;
 	}
 	GET_PLAYER(getOwner()).listCommander(bNewVal, this);
+
+	if (m_commander->isReady())
+	{
+		plot()->countCommander(bNewVal, this);
+	}
 }
 
-void CvUnit::nullUsedCommander()
+void CvUnit::nullLastCommander()
 {
 	m_iCommanderID = -1;
 }
 
+// This only exist during combat with the purpose of remembering what commander should get exp.
 CvUnit* CvUnit::getUsedCommander() const
+{
+	return (m_iUsedCommanderID == -1 ? NULL : GET_PLAYER(getOwner()).getUnit(m_iUsedCommanderID));
+}
+
+// This ties a commander to this unit for as long as said commander is valid;
+//	it cease to be valid mid combat when it expends its last CP.
+CvUnit* CvUnit::getLastCommander() const
 {
 	return (m_iCommanderID == -1 ? NULL : GET_PLAYER(getOwner()).getUnit(m_iCommanderID));
 }
 
-void CvUnit::clearCommanderCache()
-{
-	m_iCachedCommander = GC.getGame().isOption(GAMEOPTION_GREAT_COMMANDERS) ? -1 : NO_COMMANDER_ID;
-}
 
 int CvUnit::controlPoints() const
 {
@@ -29016,21 +29020,13 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 			setExperience100(iInitialAttXP);
 			GET_PLAYER(getOwner()).setCombatExperience(iInitialAttGGXP, getGGExperienceEarnedTowardsType());
 
-			// Great Commander XP
-			if (getUsedCommander() != NULL)
-			{
-				getUsedCommander()->setExperience100(getUsedCommander()->getExperience100() + 100);
-			}
 			//show message
-			{
-
-				const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", getNameKey(), GC.getPromotionInfo(ptPromotion).getText());
-				AddDLLMessage(
-					getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
-					GC.getPromotionInfo((PromotionTypes)0).getSound(), MESSAGE_TYPE_INFO, NULL,
-					GC.getCOLOR_GREEN(), getX(), getY()
-				);
-			}
+			const CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_YOUR_UNIT_PROMOTED_IN_BATTLE", getNameKey(), GC.getPromotionInfo(ptPromotion).getText());
+			AddDLLMessage(
+				getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,
+				GC.getPromotionInfo((PromotionTypes)0).getSound(), MESSAGE_TYPE_INFO, NULL,
+				GC.getCOLOR_GREEN(), getX(), getY()
+			);
 		}
 	}
 
@@ -29060,11 +29056,6 @@ void CvUnit::doBattleFieldPromotions(CvUnit* pDefender, const CombatDetails& cdD
 			GET_PLAYER(pDefender->getOwner()).setCombatExperience(iInitialDefGGXP, pDefender->getGGExperienceEarnedTowardsType());
 			bDefenderPromoted = true;
 
-			// Great Commander XP
-			if (pDefender->getUsedCommander() != NULL)
-			{
-				pDefender->getUsedCommander()->setExperience100(pDefender->getUsedCommander()->getExperience100() + 100);
-			}
 			//show message
 			{
 

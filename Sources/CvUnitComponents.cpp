@@ -8,6 +8,7 @@ UnitCompCommander::UnitCompCommander() // Used when loading save
 	m_iControlPoints = 0;
 	m_iControlPointsLeft = 0;
 	m_iCommandRange = 0;
+	m_bReady = false;
 }
 UnitCompCommander::~UnitCompCommander() { }
 
@@ -17,24 +18,32 @@ UnitCompCommander::UnitCompCommander(CvUnitInfo* unitInfo) // Used when unit bec
 	m_iControlPointsLeft = m_iControlPoints;
 
 	m_iCommandRange = unitInfo->getCommandRange();
+	m_bReady = m_iControlPointsLeft > 0;
+
+	FAssertMsg(m_bReady, "A commander with no CP is no commmander at all...");
 }
 
 void UnitCompCommander::changeControlPoints(const int iChange)
 {
 	m_iControlPoints += iChange;
-	m_iControlPointsLeft += iChange;
+	changeControlPointsLeft(iChange);
+
+	FAssertMsg(m_iControlPoints > 0, "A commander with no CP is no commmander at all...");
 }
 
 void UnitCompCommander::changeControlPointsLeft(const int iChange)
 {
 	m_iControlPointsLeft += iChange;
+	m_bReady = m_iControlPointsLeft > 0;
 }
 
 void UnitCompCommander::restoreControlPoints()
 {
 	m_iControlPointsLeft = m_iControlPoints;
-}
+	m_bReady = m_iControlPointsLeft > 0;
 
+	FAssertMsg(m_bReady, "A commander with no CP is no commmander at all...");
+}
 
 void UnitCompCommander::changeCommandRange(const int iChange)
 {
