@@ -2316,9 +2316,8 @@ public:
 	void statusUpdate(PromotionTypes eStatus);
 
 	int flankingStrengthbyUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex) const;
+	int getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, int iChange);
-	bool hasExtraFlankingStrikebyUnitCombatType(UnitCombatTypes eIndex) const;
 
 	int withdrawOnTerrainTotal(TerrainTypes eTerrainType) const;
 	int getExtraWithdrawOnTerrainType(TerrainTypes eIndex) const;
@@ -2331,9 +2330,8 @@ public:
 	bool hasExtraWithdrawOnFeatureType(FeatureTypes eIndex) const;
 
 	int withdrawVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
-	int getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex) const;
+	int getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, int iChange);
-	bool hasExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex) const;
 
 	int pursuitVSUnitCombatTotal(UnitCombatTypes eCombatType) const;
 	int getExtraPursuitVSUnitCombatType(UnitCombatTypes eIndex) const;

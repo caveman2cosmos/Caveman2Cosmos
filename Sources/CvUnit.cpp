@@ -19691,7 +19691,7 @@ int CvUnit::getExtraUnitCombatModifier(UnitCombatTypes eIndex, const bool bIntri
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
 		{
-			return info ? info->m_iExtraUnitCombatModifier : 0 + pCommander->getExtraUnitCombatModifier(eIndex);
+			return (info ? info->m_iExtraUnitCombatModifier : 0) + pCommander->getExtraUnitCombatModifier(eIndex);
 		}
 	}
 	return info ? info->m_iExtraUnitCombatModifier : 0;
@@ -23456,7 +23456,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 void CvUnit::write(FDataStreamBase* pStream)
 {
 	CvTaggedSaveFormatWrapper&	wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-	int iI;
 
 	wrapper.AttachToStream(pStream);
 
@@ -23577,7 +23576,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_STRING(wrapper, "CvUnit", m_szScriptData);
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
 		if ( isHasPromotion((PromotionTypes)iI) )
 		{
@@ -23653,7 +23652,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
 		if ( getAfflictionHitCount((PromotionTypes)iI) != 0)
 		{
@@ -23740,7 +23739,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatPowerShots);
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 	{
 		if ( getPromotionFreeCount((PromotionTypes)iI) != 0 )
 		{
@@ -23753,9 +23752,9 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCombatRepels);
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
-		if ( getExtraFlankingStrengthbyUnitCombatType((UnitCombatTypes)iI) != 0 )
+		if (getExtraFlankingStrengthbyUnitCombatType((UnitCombatTypes)iI) != 0)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo5");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraFlankingStrengthbyUnitCombatType((UnitCombatTypes)iI), "extraFlankingStrengthbyUnitCombatType");
@@ -23763,9 +23762,9 @@ void CvUnit::write(FDataStreamBase* pStream)
 	}
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
-		if ( getExtraWithdrawVSUnitCombatType((UnitCombatTypes)iI) != 0 )
+		if (getExtraWithdrawVSUnitCombatType((UnitCombatTypes)iI) != 0)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo6");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraWithdrawVSUnitCombatType((UnitCombatTypes)iI), "extraWithdrawVSUnitCombatType");
@@ -23773,7 +23772,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	}
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( getExtraRepelVSUnitCombatType((UnitCombatTypes)iI) != 0 )
 		{
@@ -23783,7 +23782,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	}
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( getExtraKnockbackVSUnitCombatType((UnitCombatTypes)iI) != 0 )
 		{
@@ -23793,7 +23792,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	}
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( getExtraPunctureVSUnitCombatType((UnitCombatTypes)iI) != 0 )
 		{
@@ -23803,7 +23802,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	}
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( getExtraArmorVSUnitCombatType((UnitCombatTypes)iI) != 0 )
 		{
@@ -23813,7 +23812,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	}
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( getExtraDodgeVSUnitCombatType((UnitCombatTypes)iI) != 0 )
 		{
@@ -23823,7 +23822,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	}
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( getExtraPrecisionVSUnitCombatType((UnitCombatTypes)iI) != 0 )
 		{
@@ -23833,7 +23832,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	}
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( getExtraCriticalVSUnitCombatType((UnitCombatTypes)iI) != 0 )
 		{
@@ -23843,7 +23842,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	}
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( getExtraRoundStunVSUnitCombatType((UnitCombatTypes)iI) != 0 )
 		{
@@ -23857,7 +23856,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
 	{
 		if ( getAfflictOnAttackTypeProbability((PromotionLineTypes)iI) != 0 ||
 			 getAfflictOnAttackTypeCount((PromotionLineTypes)iI) != 0 ||
@@ -23928,7 +23927,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraBreakdownDamage);
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( isHasUnitCombat((UnitCombatTypes)iI) )
 		{
@@ -23943,7 +23942,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( getExtraPursuitVSUnitCombatType((UnitCombatTypes)iI) != 0 )
 		{
@@ -23998,7 +23997,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iHealUnitCombatCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraSelfHealModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iNoSelfHealCount);
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
 		if ( getHealAsDamage((UnitCombatTypes)iI) != 0 )
 		{
@@ -24028,7 +24027,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iBlendIntoCityCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iUpgradeAnywhereCount);
 	//	Use condensed format now - only save non-default array elements
-	for(iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
+	for (int iI = 0; iI < GC.getNumInvisibleInfos(); iI++)
 	{
 		if ( m_aiExtraVisibilityIntensity[iI] != 0 ||
 			m_aiExtraInvisibilityIntensity[iI] != 0 ||
@@ -32659,28 +32658,30 @@ void CvUnit::statusUpdate(PromotionTypes eStatus)
 
 int CvUnit::flankingStrengthbyUnitCombatTotal(UnitCombatTypes eCombatType) const
 {
-	int iFStr = m_pUnitInfo->getFlankingStrengthbyUnitCombatType(eCombatType);
-
-	iFStr += getExtraFlankingStrengthbyUnitCombatType(eCombatType);
-
-	return std::max(0,iFStr);
+	return (
+		std::max(
+			0,
+			m_pUnitInfo->getFlankingStrengthbyUnitCombatType(eCombatType)
+			+ getExtraFlankingStrengthbyUnitCombatType(eCombatType, isCommander())
+		)
+	);
 }
 
-int CvUnit::getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex) const
+int CvUnit::getExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraFlankingStrengthbyUnitCombatType);
-
-	if (!isCommander())
+	if (!bIntrinsic)
 	{
 		const CvUnit* pCommander = getCommander();
-		if (pCommander != NULL)
-			return iBaseAmount + pCommander->getExtraFlankingStrengthbyUnitCombatType(eIndex);
+		if (pCommander)
+		{
+			return (info ? info->m_iExtraFlankingStrengthbyUnitCombatType : 0) + pCommander->getExtraFlankingStrengthbyUnitCombatType(eIndex);
+		}
 	}
-	return iBaseAmount;
+	return (info ? info->m_iExtraFlankingStrengthbyUnitCombatType : 0);
 }
 
 
@@ -32694,11 +32695,6 @@ void CvUnit::changeExtraFlankingStrengthbyUnitCombatType(UnitCombatTypes eIndex,
 
 		info->m_iExtraFlankingStrengthbyUnitCombatType += iChange;
 	}
-}
-
-bool CvUnit::hasExtraFlankingStrikebyUnitCombatType(UnitCombatTypes eIndex) const
-{
-	return (getExtraFlankingStrengthbyUnitCombatType(eIndex) != 0);
 }
 
 int CvUnit::withdrawOnTerrainTotal(TerrainTypes eTerrainType) const
@@ -32793,28 +32789,30 @@ bool CvUnit::hasExtraWithdrawOnFeatureType(FeatureTypes eIndex) const
 
 int CvUnit::withdrawVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 {
-	int iAmount = m_pUnitInfo->getWithdrawVSUnitCombatType(eCombatType);
-
-	iAmount += getExtraWithdrawVSUnitCombatType(eCombatType);
-
-	return std::max(0,iAmount);
+	return (
+		std::max(
+			0,
+			m_pUnitInfo->getWithdrawVSUnitCombatType(eCombatType)
+			+ getExtraWithdrawVSUnitCombatType(eCombatType, isCommander())
+		)
+	);
 }
 
-int CvUnit::getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex) const
+int CvUnit::getExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, const bool bIntrinsic) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraWithdrawVSUnitCombatType);
-
-	if (!isCommander())
+	if (!bIntrinsic)
 	{
 		const CvUnit* pCommander = getCommander();
-		if (pCommander != NULL)
-			return iBaseAmount + pCommander->getExtraWithdrawVSUnitCombatType(eIndex);
+		if (pCommander)
+		{
+			return (info ? info->m_iExtraWithdrawVSUnitCombatType : 0) + pCommander->getExtraWithdrawVSUnitCombatType(eIndex);
+		}
 	}
-	return iBaseAmount;
+	return info ? info->m_iExtraWithdrawVSUnitCombatType : 0;
 }
 
 
@@ -32828,11 +32826,6 @@ void CvUnit::changeExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex, int iCh
 
 		info->m_iExtraWithdrawVSUnitCombatType += iChange;
 	}
-}
-
-bool CvUnit::hasExtraWithdrawVSUnitCombatType(UnitCombatTypes eIndex) const
-{
-	return (getExtraWithdrawVSUnitCombatType(eIndex) != 0);
 }
 
 int CvUnit::pursuitVSUnitCombatTotal(UnitCombatTypes eCombatType) const

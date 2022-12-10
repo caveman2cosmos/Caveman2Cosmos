@@ -29512,11 +29512,9 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 		iTemp = kPromotion.getFlankingStrengthbyUnitCombatTypeChange(iI);
 		if (iTemp != 0)
 		{
-			if ((eUnitAI == UNITAI_COUNTER) ||
-				  (eUnitAI == UNITAI_ATTACK) ||
-				  (eUnitAI == UNITAI_ATTACK_CITY))
+			if (eUnitAI == UNITAI_COUNTER || eUnitAI == UNITAI_ATTACK || eUnitAI == UNITAI_ATTACK_CITY)
 			{
-				iExtra = kUnit.getFlankingStrengthbyUnitCombatType(iI) + (pUnit == NULL ? 0 : pUnit->getExtraFlankingStrengthbyUnitCombatType((UnitCombatTypes)iI) * 2);
+				iExtra = kUnit.getFlankingStrengthbyUnitCombatType(iI) + (pUnit ? 2*pUnit->getExtraFlankingStrengthbyUnitCombatType((UnitCombatTypes)iI, true) : 0);
 				iValue += ((iTemp * (100 + iExtra)) / 125);
 			}
 			else
@@ -30385,17 +30383,17 @@ int CvPlayerAI::AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, co
 			}
 		}
 
-		if (pUnit != NULL)
+		if (pUnit)
 		{
 			for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pUnit->getUnitCombatKeyedInfo().begin(), end = pUnit->getUnitCombatKeyedInfo().end(); it != end; ++it)
 			{
 				if (it->second.m_bHasUnitCombat)
 				{
-					iSameCombat += pUnit->getExtraWithdrawVSUnitCombatType(it->first);
+					iSameCombat += pUnit->getExtraWithdrawVSUnitCombatType(it->first, true);
 				}
 				else
 				{
-					iOtherCombat += pUnit->getExtraWithdrawVSUnitCombatType(it->first);
+					iOtherCombat += pUnit->getExtraWithdrawVSUnitCombatType(it->first, true);
 				}
 			}
 		}
@@ -34361,16 +34359,14 @@ int CvPlayerAI::AI_unitCombatValue(UnitCombatTypes eUnitCombat, UnitTypes eUnit,
 			iTemp = kUnitCombat.getFlankingStrengthbyUnitCombatTypeChange(iI).iModifier;
 			if (iTemp != 0)
 			{
-				if ((eUnitAI == UNITAI_COUNTER) ||
-					  (eUnitAI == UNITAI_ATTACK) ||
-					  (eUnitAI == UNITAI_ATTACK_CITY))
+				if (eUnitAI == UNITAI_COUNTER || eUnitAI == UNITAI_ATTACK || eUnitAI == UNITAI_ATTACK_CITY)
 				{
-					iExtra = kUnit.getFlankingStrengthbyUnitCombatType(iJ) + (pUnit == NULL ? 0 : pUnit->getExtraFlankingStrengthbyUnitCombatType((UnitCombatTypes)iJ) * 2);
-					iValue += ((iTemp * (100 + iExtra)) / 125);
+					iExtra = kUnit.getFlankingStrengthbyUnitCombatType(iJ) + (pUnit ? 2*pUnit->getExtraFlankingStrengthbyUnitCombatType((UnitCombatTypes)iJ, true) : 0);
+					iValue += iTemp * (100 + iExtra) / 125;
 				}
 				else
 				{
-					iValue += (iTemp / 10);
+					iValue += iTemp / 10;
 				}
 			}
 		}
