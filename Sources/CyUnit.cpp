@@ -467,11 +467,6 @@ bool CyUnit::isRiver() const
 	return m_pUnit->isRiver();
 }
 
-int CyUnit::getExtraMoves() const
-{
-	return m_pUnit->getExtraMoves();
-}
-
 int CyUnit::getRevoltProtection() const
 {
 	return m_pUnit->revoltProtectionTotal();
