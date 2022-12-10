@@ -280,6 +280,7 @@ public:
 	int getMissionType(int iNode) const;
 	int getMissionData1(int iNode) const;
 	int getMissionData2(int iNode) const;
+	bool isMoveMission(CLLNode<MissionData>* node) const;
 
 // BUG - All Units Actions - start
 	bool allMatch(UnitTypes eUnit) const;

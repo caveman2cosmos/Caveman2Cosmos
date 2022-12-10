@@ -409,7 +409,7 @@ void CvViewport::processActionState()
 	case VIEWPORT_ACTION_STATE_SET_SELECTION:
 		m_inhibitSelection = false;
 
-		GC.getGame().updateSelectionListInternal(false, false, true);
+		GC.getGame().updateSelectionListInternal(0, false, false, true);
 
 		//m_countdown = 20;
 		setActionState(VIEWPORT_ACTION_STATE_SET_LOOKAT);

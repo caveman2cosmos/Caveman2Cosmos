@@ -1479,6 +1479,8 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 {
 	PROFILE_FUNC();
 
+	deselect(!bDelay);
+
 	if (m_combatResult.bDeathMessaged)
 	{
 		bMessaged = true;
@@ -1629,24 +1631,6 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		finishMoves();
 		m_iDamage = getMaxHP(); // Toffer - Makes isDead() True
 
-		if (IsSelected() && gDLL->getInterfaceIFace()->getLengthSelectionList() == 1)
-		{
-			if (!gDLL->getInterfaceIFace()->isFocused() && !gDLL->getInterfaceIFace()->isCitySelection() && !gDLL->getInterfaceIFace()->isDiploOrPopupWaiting())
-			{
-				GC.getGame().updateSelectionList();
-			}
-
-			if (IsSelected())
-			{
-				GC.getGame().updateSelectionListInternal();
-			}
-			else
-			{
-				gDLL->getInterfaceIFace()->setDirty(SelectionCamera_DIRTY_BIT, true);
-			}
-		}
-		gDLL->getInterfaceIFace()->removeFromSelectionList(this);
-
 		// XXX this is NOT a hack, without it, the game crashes.
 		if (!isUsingDummyEntities() && isInViewport())
 		{
@@ -1712,12 +1696,10 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 			}
 		}
 		AI_killed(); // Update AI counts for this unit
-		//GC.getGame().logOOSSpecial(15, getID(), INVALID_PLOT_COORD, INVALID_PLOT_COORD);
-		setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true);
 
+		setCommander(false);
 		joinGroup(NULL, false, false);
-
-		CvEventReporter::getInstance().unitLost(this);
+		setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true);
 
 		const PlayerTypes eCapturingPlayer = getCapturingPlayer();
 		const UnitTypes eCaptureUnitType = getCaptureUnitType();
@@ -1917,7 +1899,7 @@ void CvUnit::updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish)
 
 	if (!bFinish)
 	{
-		if (isFighting())
+		if (isInBattle())
 		{
 			return;
 		}
@@ -2215,9 +2197,9 @@ void CvUnit::updateAirCombat(bool bQuick)
 	//if not finished and not fighting yet, set up combat damage and mission
 	if (!bFinish)
 	{
-		if (!isFighting())
+		if (!isInBattle())
 		{
-			if (plot()->isFighting() || pPlot->isFighting())
+			if (plot()->isBattle() || pPlot->isBattle())
 			{
 				return;
 			}
@@ -2230,8 +2212,8 @@ void CvUnit::updateAirCombat(bool bQuick)
 
 		FAssertMsg(pInterceptor != NULL, "Defender is not assigned a valid value");
 
-		FAssertMsg(plot()->isFighting(), "Current unit instance plot is not fighting as expected");
-		FAssertMsg(pInterceptor->plot()->isFighting(), "pPlot is not fighting as expected");
+		FAssertMsg(plot()->isBattle(), "Current unit instance plot is not fighting as expected");
+		FAssertMsg(pInterceptor->plot()->isBattle(), "pPlot is not fighting as expected");
 
 		CvAirMissionDefinition kAirMission(getDomainType() == DOMAIN_AIR ? MISSION_AIRSTRIKE : MISSION_PARADROP, pPlot, this, pInterceptor, GC.getMissionInfo(MISSION_AIRSTRIKE).getTime() * gDLL->getSecsPerTurn());
 		resolveAirCombat(pInterceptor, pPlot, kAirMission);
@@ -3139,11 +3121,11 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 	//if not finished and not fighting yet, set up combat damage and mission
 	if (!bFinish)
 	{
-		if (!isFighting())
+		if (!isInBattle())
 		{
 			PROFILE("CvUnit::updateCombat.StartFight");
 
-			if (!bStealth && (plot()->isFighting() || pPlot->isFighting()))
+			if (!bStealth && (plot()->isBattle() || pPlot->isBattle()))
 			{
 				/*GC.getGame().logOOSSpecial(11, getID(), getDamage());*/
 				return;
@@ -3291,8 +3273,8 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			}
 		}
 		FAssertMsg(pDefender != NULL, "Defender is not assigned a valid value");
-		FAssertMsg(plot()->isFighting(), "Current unit instance plot is not fighting as expected");
-		FAssertMsg(pPlot->isFighting(), "pPlot is not fighting as expected");
+		FAssertMsg(plot()->isBattle(), "Current unit instance plot is not fighting as expected");
+		FAssertMsg(pPlot->isBattle(), "pPlot is not fighting as expected");
 
 		if (!pDefender->canDefend())
 		{
@@ -4041,8 +4023,11 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 			}
 			list.execute(*pDefender, getOwner(), getUnitType());
+
+			return;
 		}
-		else if (pDefender->isDead())
+
+		if (pDefender->isDead())
 		{
 			if (pDefender->isNPC())
 			{
@@ -4434,7 +4419,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 				{
 					getGroup()->clearMissionQueue();
-					bFinish = false;
 					attack(pPlot, true);
 				}
 				if (bAdvance && getGroup() != NULL)
@@ -4445,14 +4429,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			}
 			//TB Combat Mods End
 
-			if (getGroup() != NULL)
-			{
-				if (getGroup()->canAnyMove()) // testing selective situation here.
-				{
-					getGroup()->setMissionPaneDirty();
-				}
-				else getGroup()->clearMissionQueue();
-			}
 			mergedList.execute(*this, eDefenderUnitPlayer, eDefenderUnitType);
 		}
 		else if (m_combatResult.bDefenderWithdrawn)
@@ -4525,7 +4501,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 				{
 					getGroup()->clearMissionQueue();
-					bFinish = false;
 					attack(pPlot,true);
 				}
 				else
@@ -4542,17 +4517,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 					else if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
 					{
 						changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-					}
-					if (getGroup() != NULL)
-					{
-						if (!getGroup()->canAnyMove())//testing selective situation here.
-						{
-							getGroup()->clearMissionQueue();
-						}
-						else
-						{
-							getGroup()->setMissionPaneDirty();
-						}
 					}
 				}
 				//TB Combat Mod end
@@ -4571,12 +4535,11 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
 				{
 					getGroup()->clearMissionQueue();
-					bFinish = false;
 					attack(pPlot,true);
 				}
 				else
 				{
-					if (getGroup() != NULL)
+					if (getGroup())
 					{
 						if (bAdvance && getGroup() != NULL && pPlot->getNumVisiblePotentialEnemyDefenders(this) == 0)
 						{
@@ -4589,39 +4552,15 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 							changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 						}
 					}
-					else
+					else if (!bStealthDefense)
 					{
-						//TB Combat Mod (Stampede) end
-						if (!bStealthDefense)
-						{
-							changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-						}
-					}
-					if (getGroup() != NULL)
-					{
-						if (getGroup()->canAnyMove())//testing selective situation here.
-						{
-							getGroup()->setMissionPaneDirty();
-						}
-						else getGroup()->clearMissionQueue();
+						changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 					}
 				}
 			}
-			else
+			else if (!bStealthDefense)
 			{
-				//TB Combat Mod (Stampede) end
-				if (!bStealthDefense)
-				{
-					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-				}
-				if (getGroup() != NULL)
-				{
-					if (getGroup()->canAnyMove())//testing selective situation here.
-					{
-						getGroup()->setMissionPaneDirty();
-					}
-					else getGroup()->clearMissionQueue();
-				}
+				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 			}
 		}
 		//TB Combat Mods
@@ -4770,27 +4709,14 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 			m_combatResult.bAttackerRepelled = false;
 
-			if (m_combatResult.bAttackerStampedes || m_combatResult.bAttackerOnslaught)
-			{
-				//TB Combat Mod (Stampede)
-				bFinish = false;
-				attack(pPlot, true);
-			}
-			else
+			if (!m_combatResult.bAttackerStampedes && !m_combatResult.bAttackerOnslaught)
 			{
 				if (!bStealthDefense)
 				{
 					changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				}
-				if (getGroup() != NULL)
-				{
-					if (getGroup()->canAnyMove())//testing selective situation here.
-					{
-						getGroup()->setMissionPaneDirty();
-					}
-					else getGroup()->clearMissionQueue();
-				}
 			}
+			else attack(pPlot, true); //TB Combat Mod (Stampede)
 		}
 		else if (m_combatResult.bDefenderKnockedBack)
 		{
@@ -4984,7 +4910,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			{
 				//TB Combat Mod (Stampede)
 				getGroup()->clearMissionQueue();
-				bFinish = false;
 				attack(pPlot,true);
 			}
 
@@ -4996,17 +4921,8 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 					getGroup()->groupMove(pPlot, true, ((bAdvance) ? this : NULL));
 				}
-
 				// This is before the plot advancement, the unit will always try to walk back
 				// to the square that they came from, before advancing.
-			}
-			if (getGroup() != NULL)
-			{
-				if (getGroup()->canAnyMove())//testing selective situation here.
-				{
-					getGroup()->setMissionPaneDirty();
-				}
-				else getGroup()->clearMissionQueue();
 			}
 		}
 		else if (m_combatResult.bAttackerWithdraws)
@@ -5031,15 +4947,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				}
 				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 				//GC.getGame().logOOSSpecial(53, getID(), getMoves(), getDamage());
-
-				if (getGroup() != NULL)
-				{
-					if (getGroup()->canAnyMove())//testing selective situation here.
-					{
-						getGroup()->setMissionPaneDirty();
-					}
-					else getGroup()->clearMissionQueue();
-				}
 			}
 			//TB Combat Mod (Stampede) begin
 			else if (m_combatResult.bAttackerStampedes)
@@ -5064,7 +4971,6 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				{
 					getGroup()->clearMissionQueue();
 				}
-				bFinish = false;
 				attack(pPlot,true);
 			}
 			else if (m_combatResult.bAttackerOnslaught)
@@ -5089,30 +4995,24 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 				{
 					getGroup()->clearMissionQueue();
 				}
-				bFinish = false;
 				attack(pPlot, true);
 			}
 		}
-		else
+		else if (!bStealthDefense)
 		{
-			if (!bStealthDefense)
-			{
-				changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
-			}
-
-			if (getGroup() != NULL)
-			{
-				if (getGroup()->canAnyMove()) // testing selective situation here.
-				{
-					getGroup()->setMissionPaneDirty();
-				}
-				else getGroup()->clearMissionQueue();
-			}
+			changeMoves(std::max(GC.getMOVE_DENOMINATOR(), pPlot->movementCost(this, plot())));
 		}
 
 		if (IsSelected() && !canMove())
 		{
-			GC.getGame().updateSelectionListInternal();
+			if (gDLL->getInterfaceIFace()->getLengthSelectionList() > 1)
+			{
+				gDLL->getInterfaceIFace()->removeFromSelectionList(this);
+			}
+			else if (bSamePlot)
+			{
+				GC.getGame().updateSelectionListInternal();
+			}
 		}
 	}
 }
@@ -5688,121 +5588,125 @@ bool CvUnit::canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bT
 
 void CvUnit::doCommand(CommandTypes eCommand, int iData1, int iData2)
 {
-	CvUnit* pUnit;
-
-	bool bCycle = false;
-
 	FAssert(getOwner() != NO_PLAYER);
 
-	if (canDoCommand(eCommand, iData1, iData2))
+	if (!canDoCommand(eCommand, iData1, iData2))
 	{
-		switch (eCommand)
-		{
+		return;
+	}
+	switch (eCommand)
+	{
 		case COMMAND_PROMOTION:
+		{
 			promote((PromotionTypes)iData1, iData2);
 			break;
-
+		}
 		case COMMAND_UPGRADE:
+		{
 			upgrade((UnitTypes)iData1);
-			bCycle = true;
 			break;
-
+		}
 		case COMMAND_AUTOMATE:
+		{
 			automate((AutomateTypes)iData1);
-			bCycle = true;
+			GC.getGame().updateSelectionListInternal();
 			break;
-
+		}
 		case COMMAND_WAKE:
+		{
 			getGroup()->setActivityType(ACTIVITY_AWAKE);
 			break;
-
+		}
 		case COMMAND_CANCEL:
+		{
 			getGroup()->popMission();
 			break;
-
+		}
 		case COMMAND_CANCEL_ALL:
+		{
 			getGroup()->clearMissionQueue();
 			break;
-
+		}
 		case COMMAND_STOP_AUTOMATION:
+		{
 			getGroup()->setAutomateType(NO_AUTOMATE);
 			break;
-
+		}
 		case COMMAND_DELETE:
+		{
 			scrap();
-			bCycle = true;
 			break;
-
+		}
 		case COMMAND_GIFT:
+		{
 			gift();
-			bCycle = true;
 			break;
-
+		}
 		case COMMAND_LOAD:
+		{
 			load();
-			bCycle = true;
 			break;
-
+		}
 		case COMMAND_LOAD_UNIT:
-			pUnit = ::getUnit(IDInfo(((PlayerTypes)iData1), iData2));
+		{
+			CvUnit* pUnit = ::getUnit(IDInfo(((PlayerTypes)iData1), iData2));
+
 			if (pUnit != NULL)
 			{
 				loadOntoUnit(pUnit);
-				bCycle = true;
 			}
 			break;
-
+		}
 		case COMMAND_UNLOAD:
+		{
 			unload();
-			bCycle = true;
 			break;
-
+		}
 		case COMMAND_UNLOAD_ALL:
+		{
 			unloadAll();
-			bCycle = true;
 			break;
-
+		}
 		case COMMAND_HOTKEY:
+		{
 			setHotKeyNumber(iData1);
 			break;
-
+		}
 		case COMMAND_REEQUIP:
+		{
 			reEquip((PromotionTypes)iData1);
 			finishMoves();
 			break;
-
+		}
 		case COMMAND_MERGE:
+		{
 			doMerge();
 			break;
-
+		}
 		case COMMAND_SPLIT:
+		{
 			doSplit();
 			break;
-
+		}
 		case COMMAND_STATUS:
+		{
 			statusUpdate((PromotionTypes)iData1);
 			if (!GC.getPromotionInfo((PromotionTypes)iData1).isQuick())
 			{
 				finishMoves();
 			}
 			break;
-
+		}
 		case COMMAND_ARREST:
+		{
 			doArrest();
 			break;
-
+		}
 		case COMMAND_AMBUSH:
-			break;
-
-		default:
-			FErrorMsg("error");
+		{
 			break;
 		}
-	}
-
-	if (bCycle && IsSelected())
-	{
-		GC.getGame().updateSelectionListInternal();
+		default: FErrorMsg("error");
 	}
 	getGroup()->doDelayedDeath();
 }
@@ -6524,10 +6428,12 @@ void CvUnit::fightInterceptor(const CvPlot* pPlot, bool bQuick)
 	updateAirCombat(bQuick);
 }
 
+
+/* Toffer - Unused function...
 void CvUnit::attackForDamage(CvUnit *pDefender, int attackerDamageChange, int defenderDamageChange)
 {
 	FAssert(getCombatTimer() == 0);
-	FAssert(!isFighting());
+	FAssert(!isInBattle());
 
 	if(pDefender == NULL)
 	{
@@ -6562,13 +6468,12 @@ void CvUnit::attackForDamage(CvUnit *pDefender, int attackerDamageChange, int de
 	bool bVisible = isCombatVisible(pDefender);
 
 	//if not finished and not fighting yet, set up combat damage and mission
-	if (!isFighting())
+	if (!isInBattle())
 	{
-		if (plot()->isFighting() || pPlot->isFighting())
+		if (plot()->isBattle() || pPlot->isBattle())
 		{
 			return;
 		}
-
 
 		bool bStealthAttack = false;
 		if (isInvisible(GET_PLAYER(pDefender->getOwner()).getTeam(), false, false) || pDefender->plot() == plot())
@@ -6614,12 +6519,11 @@ void CvUnit::attackForDamage(CvUnit *pDefender, int attackerDamageChange, int de
 			{
 				szMessage = gDLL->getText("TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK_UNKNOWN");
 			}
-
 			AddDLLMessage(pDefender->getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szMessage, "AS2D_COMBAT", MESSAGE_TYPE_DISPLAY_ONLY, getButton(), GC.getCOLOR_RED(), pPlot->getX(), pPlot->getY(), true);
 		}
 	}
-	FAssertMsg(plot()->isFighting(), "Current unit instance plot is not fighting as expected");
-	FAssertMsg(pPlot->isFighting(), "pPlot is not fighting as expected");
+	FAssertMsg(plot()->isBattle(), "Current unit instance plot is not fighting as expected");
+	FAssertMsg(pPlot->isBattle(), "pPlot is not fighting as expected");
 
 	//setup battle object
 	CvBattleDefinition kBattle(pPlot, this, pDefender);
@@ -6660,12 +6564,9 @@ void CvUnit::attackForDamage(CvUnit *pDefender, int attackerDamageChange, int de
 			addMission(kBattle);
 		}
 	}
-	else
-	{
-		setCombatTimer(1);
-	}
+	else setCombatTimer(1);
 }
-
+*/
 
 void CvUnit::move(CvPlot* pPlot, bool bShow)
 {
@@ -6714,7 +6615,7 @@ void CvUnit::move(CvPlot* pPlot, bool bShow)
 bool CvUnit::jumpToNearestValidPlot(bool bKill)
 {
 	FAssertMsg(!isAttacking(), "isAttacking did not return false as expected");
-	FAssertMsg(!isFighting(), "isFighting did not return false as expected");
+	FAssertMsg(!isInBattle(), "isInBattle did not return false as expected");
 
 	//	If the jump is due to being in an incorrect doamin it implies there WILL be an area change, so the relevant nearest
 	//	city cannot possibly be in the same area, hence we need to search all
@@ -7089,11 +6990,7 @@ void CvUnit::automate(AutomateTypes eAutomate)
 	{
 		return;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 08/20/10                                               */
-/*                                                                                              */
-/* Advanced Automations                                                                         */
-/************************************************************************************************/
+
 	if (eAutomate == AUTOMATE_UPGRADING || eAutomate == AUTOMATE_CANCEL_UPGRADING)
 	{
 		foreach_(CvUnit* pLoopUnit, getGroup()->units())
@@ -7118,16 +7015,14 @@ void CvUnit::automate(AutomateTypes eAutomate)
 		}
 		return;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	getGroup()->setAutomateType(eAutomate);
 }
 
 
 bool CvUnit::canScrap() const
 {
-	if (plot()->isFighting())
+	if (plot()->isBattle())
 	{
 		return false;
 	}
@@ -10494,7 +10389,6 @@ bool CvUnit::construct(BuildingTypes eBuilding)
 
 	getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
 	kill(true, NO_PLAYER, true);
-
 	return true;
 }
 
@@ -12860,9 +12754,19 @@ bool CvUnit::canUnitCoexistWithArrivingUnit(const CvUnit& enemyUnit) const
 	return false;
 }
 
-bool CvUnit::isFighting() const
+
+/*DllExport*/ bool CvUnit::isFighting() const
 {
-	return (getCombatUnit() != NULL);
+	/* Toffer - exe asks this on every tick while a unit is selected so this spams up the debug output something terrible.
+	OutputDebugString("exe is asking if this unit is in battle\n");
+	*/
+	return getUnit(m_combatUnit) != NULL;
+}
+
+// Toffer - Same as isFighting.
+bool CvUnit::isInBattle() const
+{
+	return getCombatUnit() != NULL;
 }
 
 
@@ -12874,13 +12778,13 @@ bool CvUnit::isAttacking() const
 
 bool CvUnit::isDefending() const
 {
-	return isFighting() && !isAttacking();
+	return isInBattle() && !isAttacking();
 }
 
 
 bool CvUnit::isCombat() const
 {
-	return isFighting() || isAttacking();
+	return isInBattle() || isAttacking();
 }
 
 int CvUnit::withdrawalHP(int iMaxHitPoints, int iAttackerEarly) const
@@ -15646,7 +15550,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	}
 	*/
 
-	if (isFighting())
+	if (isInBattle())
 	{
 		setCombatUnit(NULL);
 	}
@@ -16521,10 +16425,12 @@ void CvUnit::setMoves(int iNewValue)
 				gDLL->getFAStarIFace()->ForceReset(&GC.getInterfacePathFinder());
 				gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 			}
+			/* Toffer - make it a bug option - Unselect units upon expending all movement points.
 			else if (getGroup()->canAnyMove())
 			{
 				gDLL->getInterfaceIFace()->removeFromSelectionList(this);
 			}
+			*/
 		}
 
 		if (pPlot == gDLL->getInterfaceIFace()->getSelectionPlot())
@@ -17335,7 +17241,7 @@ int CvUnit::getExtraVisibilityRange() const
 	if (!isCommander())
 	{
 		const CvUnit* pCommander = getCommander();
-		if (pCommander != NULL)
+		if (pCommander)
 		{
 			return m_iExtraVisibilityRange + pCommander->m_iExtraVisibilityRange;
 		}
@@ -19018,7 +18924,7 @@ bool CvUnit::isDelayedDeath() const
 bool CvUnit::doDelayedDeath()
 {
 	// Koshling - added 'isDead' check to clean up units with 100% damage that have somehow been left behind
-	if (isDead() && !isFighting())
+	if (isDead() && !isInBattle())
 	{
 		killUnconditional(false, NO_PLAYER, true);
 		return true;
@@ -19218,36 +19124,29 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 		{
 			setCombatFirstStrikes(stealthStrikesTotal());
 		}
-		else
-		{
-			setCombatFirstStrikes((pCombatUnit->immuneToFirstStrikes()) ? 0 : (firstStrikes() + GC.getGame().getSorenRandNum(chanceFirstStrikes() + 1, "First Strike")));
-		}
+		else setCombatFirstStrikes((pCombatUnit->immuneToFirstStrikes()) ? 0 : (firstStrikes() + GC.getGame().getSorenRandNum(chanceFirstStrikes() + 1, "First Strike")));
 
 		FAssertMsg(getCombatUnit() == NULL, "Combat Unit is not expected to be assigned");
-		/*FAssertMsg(!(plot()->isFighting()), "(plot()->isFighting()) did not return false as expected");*///TB - this can happen now safely.
+
 		m_bCombatFocus = (bAttacking && !(gDLL->getInterfaceIFace()->isFocusedWidget()) && ((getOwner() == GC.getGame().getActivePlayer()) || ((pCombatUnit->getOwner() == GC.getGame().getActivePlayer()) && !(GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS)))));
 		m_combatUnit = pCombatUnit->getIDInfo();
+
 		if (!bStealthAttack)
 		{
 			setCombatFirstStrikes((pCombatUnit->immuneToFirstStrikes()) ? 0 : (firstStrikes() + GC.getGame().getSorenRandNum(chanceFirstStrikes() + 1, "First Strike")));
 		}
-		else
-		{
-			setCombatFirstStrikes(stealthStrikesTotal());
-		}
+		else setCombatFirstStrikes(stealthStrikesTotal());
+
 		//TB Combat mod begin
-		int iKnockbackAttempts = 0;
 		setCombatPowerShots(powerShotsTotal());
+
 		if (knockbackTotal() > 0)
 		{
-			iKnockbackAttempts = knockbackRetriesTotal() + 1;
-			setCombatKnockbacks(iKnockbackAttempts);
+			setCombatKnockbacks(knockbackRetriesTotal() + 1);
 		}
-		int iRepelAttempts = 0;
 		if (repelTotal() > 0)
 		{
-			iRepelAttempts = repelRetriesTotal() + 1;
-			setCombatRepels(iRepelAttempts);
+			setCombatRepels(repelRetriesTotal() + 1);
 		}
 		setCombatStuns(0);
 		//TB Combat Mod end
@@ -19255,7 +19154,6 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 	else if (getCombatUnit() != NULL)
 	{
 		FAssertMsg(getCombatUnit() != NULL, "getCombatUnit() is not expected to be equal with NULL");
-		FAssertMsg(plot()->isFighting(), "plot()->isFighting is expected to be true");
 		m_bCombatFocus = false;
 		m_combatUnit.reset();
 		setCombatFirstStrikes(0);
@@ -19276,7 +19174,7 @@ void CvUnit::setCombatUnit(CvUnit* pCombatUnit, bool bAttacking, bool bStealthAt
 			gDLL->getInterfaceIFace()->setDirty(PlotListButtons_DIRTY_BIT, true);
 		}
 
-		if ( !isUsingDummyEntities()  && isInViewport())
+		if (!isUsingDummyEntities() && isInViewport())
 		{
 			CvDLLEntity::SetSiegeTower(false);
 		}
@@ -27630,12 +27528,13 @@ int CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdr
 {
 	PROFILE_FUNC();
 	if (pLoserUnit == NULL)
+	{
+		FErrorMsg("This can maybe occur, investigate when time allows");
 		return 0; // this is not ideal, but if unit is deleted before this calculation we dont want the ctd
-	if (!pLoserUnit->canDefend())
-		return 0; // no influence from worker capture
+	}
 
-	if (isAnimal() || pLoserUnit->isAnimal())
-		return 0;
+	if (!pLoserUnit->canDefend() || isAnimal() || pLoserUnit->isAnimal())
+		return 0; // no influence from worker capture or animal kill
 
 	if (isAlwaysHostile(plot()) || pLoserUnit->isAlwaysHostile(pLoserUnit->plot()))
 		return 0;
@@ -27649,7 +27548,10 @@ int CvUnit::doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdr
 	const PlayerTypes pLoserPlayer = pLoserUnit->getOwner();
 
 	if (pLoserPlayer < 0 || pLoserPlayer > MAX_PLAYERS)
+	{
+		FErrorMsg("This can maybe occur, investigate when time allows");
 		return 0; // Bad unit owner TODO find out why gets passed in
+	}
 
 	CvPlot* pWinnerPlot = plot();
 	CvPlot* pLoserPlot = pLoserUnit->plot();
@@ -28594,10 +28496,9 @@ CvUnit* CvUnit::getCommander() const
 	}
 	CvUnit* pBestCommander = getUsedCommander();
 
-	if (pBestCommander != NULL) //return already used one if it is not dead.
+	if (pBestCommander) //return already used one if it is not dead.
 	{
-		// Recently destroyed commanders could cause a crash here without this protection.
-		if (pBestCommander->plot() != NULL && pBestCommander->controlPointsLeft() > 0
+		if (pBestCommander->controlPointsLeft() > 0
 		&& plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY()) <= pBestCommander->commandRange())
 		{
 			return pBestCommander;
@@ -28606,14 +28507,12 @@ CvUnit* CvUnit::getCommander() const
 		pBestCommander = NULL;
 		m_iCommanderCacheTurn = -1;
 	}
-
-	if (m_iCommanderCacheTurn == GC.getGame().getGameTurn())
+	else if (m_iCommanderCacheTurn == GC.getGame().getGameTurn())
 	{
 		pBestCommander = GET_PLAYER(getOwner()).getUnit(m_iCachedCommander);
-		if (pBestCommander != NULL)
+		if (pBestCommander)
 		{
-			// Guard against this being called during the death of said GC!
-			if (pBestCommander->plot() != NULL && pBestCommander->controlPointsLeft() > 0
+			if (pBestCommander->controlPointsLeft() > 0
 			&& plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY()) <= pBestCommander->commandRange())
 			{
 				return pBestCommander;
@@ -28625,62 +28524,55 @@ CvUnit* CvUnit::getCommander() const
 	int iBestCommanderDistance = 9999999;
 	if (getOwner() != NO_PLAYER)
 	{
-		const CvPlayer& kPlayer = GET_PLAYER(getOwner());
+		const CvPlayer& player = GET_PLAYER(getOwner());
+		const CvArea* pArea = area();
 
-		for (int i=0; i < (int)kPlayer.Commanders.size(); i++)		//loop through player's commanders
+		for (int i=0; i < (int)player.Commanders.size(); i++) //loop through player's commanders
 		{
-			CvUnit* pCommander = kPlayer.Commanders[i];
+			CvUnit* com = player.Commanders[i];
 
-			if (pCommander->controlPointsLeft() <= 0)
+			if (com->controlPointsLeft() <= 0 || com->area() != pArea)
 			{
 				continue;
 			}
-			const CvPlot* pCommPlot = pCommander->plot();
+			const CvPlot* comPlot = com->plot();
 
-			if (pCommPlot == NULL)
-			{
-				FErrorMsg("Commander Should Exist!");
-				continue;
-			}
-			const int iDistance = plotDistance(pCommPlot->getX(), pCommPlot->getY(), getX(), getY());
+			FAssertMsg(comPlot != NULL, "Unexpected... CTD incoming");
 
-			if (iDistance > pCommander->commandRange())
+			const int iDistance = plotDistance(comPlot->getX(), comPlot->getY(), getX(), getY());
+
+			if (iDistance > com->commandRange())
 			{
 				continue;
 			}
 			if (pBestCommander == NULL
 			// Best commander is at shorter distance, or at same distance but has more XP:
-			|| (iBestCommanderDistance < iDistance || iBestCommanderDistance == iDistance && pCommander->getExperience() > pBestCommander->getExperience()))
+			|| (iBestCommanderDistance < iDistance || iBestCommanderDistance == iDistance && com->getExperience() > pBestCommander->getExperience()))
 			{
-				pBestCommander = pCommander;
+				pBestCommander = com;
 				iBestCommanderDistance = iDistance;
 			}
 		}
 	}
 
-	//	Don't cache the human player because they may make abortive odds calculations
-	//	that lock a unit to a commander via the caching, and then not execute the attack that
-	//	gave rise to the odds calculation
+	// Don't cache the human player because they may make abortive odds
+	//	calculations that lock a unit to a commander via the caching,
+	//	and then not execute the attack that gave rise to the odds calculation.
 
-	//Perhaps do not cache commanders because it causes an OOS error to do so?  AIs make abortive odds calcs as well do they not?
+	// Perhaps do not cache commanders because it causes an OOS error to do so?  AIs make abortive odds calcs as well do they not?
 	if (!isHuman() && !GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS))
 	{
 		m_iCommanderCacheTurn = GC.getGame().getGameTurn();
-		m_iCachedCommander = (pBestCommander == NULL ? NO_COMMANDER_ID : pBestCommander->getID());
+		m_iCachedCommander = (pBestCommander ? pBestCommander->getID() : NO_COMMANDER_ID);
 	}
 	return pBestCommander;
 }
 
 void CvUnit::tryUseCommander()
 {
-	CvUnit* pCommander = getUsedCommander();
+	CvUnit* pCommander = getCommander();
 
-	if ( pCommander == NULL || pCommander->controlPointsLeft() <= 0 )
-	{
-		pCommander = getCommander();
-	}
-
-	if (pCommander != NULL) //commander is used when any unit under his command fights in combat
+	if (pCommander) //commander is used when any unit under his command fights in combat
 	{
 		pCommander->m_commander->changeControlPointsLeft(-1);
 		m_iCommanderID = pCommander->getID();
@@ -28712,8 +28604,6 @@ void CvUnit::setCommander(bool bNewVal)
 	{
 		m_commander = new UnitCompCommander(m_pUnitInfo);
 
-		GET_PLAYER(getOwner()).Commanders.push_back(this);
-
 		foreach_(const UnitCombatTypes eSubCombat, m_pUnitInfo->getSubCombatTypes())
 		{
 			if (GC.getUnitCombatInfo(eSubCombat).getQualityBase() > -10)
@@ -28727,6 +28617,7 @@ void CvUnit::setCommander(bool bNewVal)
 		delete m_commander;
 		m_commander = NULL;
 	}
+	GET_PLAYER(getOwner()).listCommander(bNewVal, this);
 }
 
 void CvUnit::nullUsedCommander()
@@ -34937,7 +34828,7 @@ bool CvUnit::canMerge(bool bAutocheck) const
 
 	if (isHurt()
 		|| isDead()
-		|| isFighting()
+		|| isInBattle()
 		|| isCargo()
 		|| hasCargo()
 		|| isSpy()
@@ -34970,7 +34861,7 @@ bool CvUnit::canMerge(bool bAutocheck) const
 
 			&& !pLoopUnit->isHurt()
 			&& !pLoopUnit->isDead()
-			&& !pLoopUnit->isFighting()
+			&& !pLoopUnit->isInBattle()
 			&& !pLoopUnit->isCargo()
 			&& !pLoopUnit->hasCargo()
 			&& !pLoopUnit->isSpy()
@@ -35023,7 +34914,7 @@ bool CvUnit::canSplit() const
 		return false;
 	}
 
-	if (isHurt() || isDead() || isFighting() || isCargo() || hasCargo() || isSpy() || hasMoved() || isInhibitSplit() )
+	if (isHurt() || isDead() || isInBattle() || isCargo() || hasCargo() || isSpy() || hasMoved() || isInhibitSplit() )
 	{
 		return false;
 	}
@@ -35101,7 +34992,7 @@ void CvUnit::doMerge()
 
 				&& !pLoopUnit->isHurt()
 				&& !pLoopUnit->isDead()
-				&& !pLoopUnit->isFighting()
+				&& !pLoopUnit->isInBattle()
 				&& !pLoopUnit->isCargo()
 				&& !pLoopUnit->hasCargo()
 				&& !pLoopUnit->isSpy()
@@ -37900,7 +37791,7 @@ bool CvUnit::canArrest() const
 			return false;
 		}
 		const CvPlot* pPlot = plot();
-		if (canMove() && canAttack() && !isDead() && !isFighting() && !isCargo() && getGroup()->getNumUnits() == 1)
+		if (canMove() && canAttack() && !isDead() && !isInBattle() && !isCargo() && getGroup()->getNumUnits() == 1)
 		{
 			if (pPlot != NULL)
 			{
@@ -37942,7 +37833,7 @@ void CvUnit::doArrest()
 				{
 					if (GET_PLAYER(pLoopUnit->getOwner()).getArrestingUnit() != pLoopUnit->getID())
 					{
-						if (!pLoopUnit->isInvisible(GET_PLAYER(getOwner()).getTeam(), false) && !pLoopUnit->isDead() && !pLoopUnit->isFighting() && !pLoopUnit->isSpy())
+						if (!pLoopUnit->isInvisible(GET_PLAYER(getOwner()).getTeam(), false) && !pLoopUnit->isDead() && !pLoopUnit->isInBattle() && !pLoopUnit->isSpy())
 						{
 							const int iOdds = getCombatOdds(this, pLoopUnit);
 							if (iOdds > 50 && iOdds > iBestOdds)
@@ -38963,4 +38854,19 @@ bool CvUnit::isWorker() const
 UnitCompWorker* CvUnit::getWorkerComponent() const
 {
 	return m_worker;
+}
+
+void CvUnit::deselect(const bool bQuick)
+{
+	if (IsSelected())
+	{
+		if (gDLL->getInterfaceIFace()->getLengthSelectionList() > 1)
+		{
+			gDLL->getInterfaceIFace()->removeFromSelectionList(this);
+		}
+		else if (bQuick || GET_PLAYER(GC.getGame().getActivePlayer()).isOption(PLAYEROPTION_QUICK_MOVES))
+		{
+			GC.getGame().updateSelectionListInternal();
+		}
+	}
 }

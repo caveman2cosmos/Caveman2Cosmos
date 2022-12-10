@@ -395,16 +395,9 @@ void CvEventReporter::unitKilled(CvUnit *pUnit, PlayerTypes eAttacker )
 	m_kStatistics.unitKilled(pUnit, eAttacker);
 }
 
-// BUG - Unit Captured Event - start
 void CvEventReporter::unitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType, CvUnit* pNewUnit)
 {
 	m_kPythonEventMgr.reportUnitCaptured(eFromPlayer, eUnitType, pNewUnit);
-}
-// BUG - Unit Captured Event - end
-
-void CvEventReporter::unitLost(CvUnit *pUnit)
-{
-	m_kPythonEventMgr.reportUnitLost(pUnit);
 }
 
 void CvEventReporter::unitPromoted(CvUnit *pUnit, PromotionTypes ePromotion)
@@ -412,12 +405,10 @@ void CvEventReporter::unitPromoted(CvUnit *pUnit, PromotionTypes ePromotion)
 	m_kPythonEventMgr.reportUnitPromoted(pUnit, ePromotion);
 }
 
-// BUG - Upgrade Unit Event - start
 void CvEventReporter::unitUpgraded(CvUnit *pOldUnit, CvUnit *pNewUnit, int iPrice)
 {
 	m_kPythonEventMgr.reportUnitUpgraded(pOldUnit, pNewUnit, iPrice);
 }
-// BUG - Upgrade Unit Event - end
 
 void CvEventReporter::unitSelected( CvUnit *pUnit)
 {

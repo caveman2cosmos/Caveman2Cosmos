@@ -773,6 +773,8 @@ public:
 
 	void checkInitialCivics();
 
+	void cacheGameSpecificValues();
+
 protected:
 	void doPostLoadCaching();
 

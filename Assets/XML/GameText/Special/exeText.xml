@@ -1223,8 +1223,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_CAPTURE_DESC</Tag>
-		<English>You have selected an unusable voice capture device. Voice capture disabled.</English>
-		<German>Es wurde ein ungeeignetes Gerät zur Sprachaufzeichnung ausgewählt. Sprachaufzeichnungen wurden deaktiviert.</German>
+		<English>You have selected an unusable voice capture device. Voice capture disabled.
+		This message usually appears when game is freshly installed, or when INI file was corrupted or deleted.
+		To disable this message: Go to C:\Users\"your username"\Documents\My Games\Beyond the Sword, open CivilizationIV.ini, and change "enablevoice = 1" to "enablevoice = 0"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_CAPTURE_TITLE</Tag>
@@ -3668,11 +3669,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RECOMMENDED_SPECS_MESSAGE</Tag>
-		<English>Your machine is below recommended specifications. The graphic settings were altered to accomodate this, however, you may experience performance issues.</English>
-		<French>Votre machine ne correspond pas à la configuration recommandée. Les paramètres graphiques ont été modifiés pour pallier ce problème, mais les performances du programme risquent d'en souffrir.</French>
-		<German>Ihr Computer entspricht nicht den empfohlenen Systemspezifikationen. Die Grafikeinstellungen wurden entsprechend angepasst, es könnten jedoch Performance-Probleme auftreten.</German>
-		<Italian>Il tuo computer è al di sotto dei requisiti consigliati. Le impostazioni grafiche sono state alterate di conseguenza ma, tuttavia, potrai avere dei problemi di prestazioni.</Italian>
-		<Spanish>El ordenador no cumple los requisitos recomendados. Se ha modificado la configuración gráfica en consecuencia, pero aun así es posible que se experimenten problemas de rendimiento.</Spanish>
+		<English>Your machine is below recommended specifications. The graphic settings were altered to accomodate this, however, you may experience performance issues.
+		This message usually appears when game is freshly installed, or when INI file was corrupted or deleted.
+		To disable this message: Go to C:\Users\"your username"\Documents\My Games\Beyond the Sword, open CivilizationIV.ini, and change "HideMinSpecWarning = 0" to "HideMinSpecWarning = 1"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REJECT_FULL_DESC</Tag>

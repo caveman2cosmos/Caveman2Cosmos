@@ -1377,6 +1377,7 @@ public:
 	void recalculateAllResourceConsumption();
 
 	std::vector<CvUnit*> Commanders;
+	void listCommander(bool bAdd, CvUnit* unit);
 
 	int getFreeSpecialistCount(SpecialistTypes eIndex) const;
 	void setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue);

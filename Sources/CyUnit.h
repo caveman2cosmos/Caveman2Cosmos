@@ -68,7 +68,7 @@ public:
 	bool isFound() const;
 	bool isGoldenAge() const;
 
-	bool isFighting() const;
+	bool isInBattle() const;
 	int getMaxHP() const;
 	int getHP() const;
 	bool isHurt() const;

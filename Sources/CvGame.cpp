@@ -503,6 +503,26 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		gDLL->getInterfaceIFace()->clearSelectedCities();
 	}
 
+	GC.cacheGameSpecificValues();
+
+	// Lowest culture which, after a culture decay, will still be > 0. Inverse of CvPlot::decayCulture(), basically.
+	m_iMinCultureOutput = (
+		// Toffer - Round up (multiply by 1000 add 999 and then divide by 1000) to get actual min value.
+		(
+			999 +
+			(1 + GC.getTILE_CULTURE_DECAY_CONSTANT()) * 1000000
+			/
+			(
+				1000 - (
+					GC.getTILE_CULTURE_DECAY_PERCENT() * 1000
+					/
+					GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent()
+				)
+			)
+		)
+		/ 1000
+	);
+
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		if (GET_TEAM((TeamTypes)iI).isAlive())
@@ -1116,6 +1136,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 		GC.updateReplacements();
 
 	m_lastGraphicUpdateRequestTickCount = 0;
+	m_iCycleUnitSliceDelay = 0;
 
 	CvPlotPaging::ResetPaging();
 }
@@ -2284,11 +2305,11 @@ void CvGame::update()
 				GET_PLAYER(getActivePlayer()).resetIdleCities();
 			}
 		}
-		else if (m_iMinGameSliceToCycleUnit <= m_iTurnSlice)
+		else if (m_iCycleUnitSliceDelay > 0)
 		{
-			m_iMinGameSliceToCycleUnit = 0;
-			cycleSelectionGroups();
+			m_iCycleUnitSliceDelay--;
 		}
+		else cycleSelectionGroups();
 	}
 
 again:

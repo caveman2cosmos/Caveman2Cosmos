@@ -440,6 +440,8 @@ public:
 	DllExport bool isVisibleEnemyUnit(PlayerTypes ePlayer) const;
 	DllExport int getNumVisibleUnits(PlayerTypes ePlayer) const;
 
+	bool isBattle() const;
+
 	bool isVisibleEnemyUnit(const CvUnit* pUnit) const;
 	bool isVisibleOtherUnit(PlayerTypes ePlayer) const;
 
@@ -1022,7 +1024,6 @@ protected:
 	void doFeature();
 	void doCulture();
 	void decayCulture();
-	int minimumNonDecayCulture();
 
 	void processArea(CvArea* pArea, int iChange);
 	void doImprovementUpgrade(const ImprovementTypes eType);

@@ -60,7 +60,7 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("isFound", &CyUnit::isFound, "bool ()")
 
 		.def("isGoldenAge", &CyUnit::isGoldenAge, "bool ()")
-		.def("isFighting", &CyUnit::isFighting, "bool ()")
+		.def("isInBattle", &CyUnit::isInBattle, "bool ()")
 		.def("getMaxHP", &CyUnit::getMaxHP, "int ()")
 		.def("getHP", &CyUnit::getHP, "int ()")
 		.def("isHurt", &CyUnit::isHurt, "bool ()")

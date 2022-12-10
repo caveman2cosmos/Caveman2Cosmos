@@ -21,6 +21,11 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_VENUS</Type>
@@ -37,6 +42,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_VENUS_LOWLANDS</Type>
@@ -53,6 +63,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_VENUS_HIGHLANDS</Type>
@@ -69,6 +84,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_ASTEROID_SURFACE</Type>
@@ -86,6 +106,11 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_JUPITER</Type>
@@ -103,6 +128,11 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_IO</Type>
@@ -117,6 +147,11 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_GANYMEDE</Type>
@@ -131,6 +166,11 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_EUROPA</Type>
@@ -145,6 +185,11 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_CALLISTO</Type>
@@ -159,6 +204,11 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_SATURN</Type>
@@ -176,6 +226,11 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_TITAN</Type>
@@ -189,6 +244,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_ENCELADUS</Type>
@@ -203,6 +263,11 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_LAVA_OCEAN</Type>
@@ -218,6 +283,11 @@
 				<MapCategoryType>MAPCATEGORY_AQUATIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_METHANE_OCEAN</Type>
@@ -232,6 +302,11 @@
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_AQUATIC</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_SUBSURFACE_OCEAN</Type>
@@ -248,6 +323,11 @@
 				<MapCategoryType>MAPCATEGORY_SUBTERRANEAN</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_URANUS</Type>
@@ -264,6 +344,11 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_UMBRIEL</Type>
@@ -278,6 +363,11 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_NEPTUNE</Type>
@@ -295,6 +385,11 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_TRITON</Type>
@@ -309,6 +404,11 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_KUIPER_BELT_OBJECT</Type>
@@ -326,6 +426,11 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_SUN</Type>
@@ -340,6 +445,11 @@
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_INNER_SOLAR_SYSTEM</Type>
@@ -353,6 +463,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_OUTER_SOLAR_SYSTEM</Type>
@@ -366,6 +481,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_TRANSNEPTUNIAN_SPACE</Type>
@@ -379,6 +499,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_TRANSTELLAR_SPACE</Type>
@@ -393,6 +518,11 @@
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_RED_DWARF</Type>
@@ -407,6 +537,11 @@
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_SUN_LIKE_STAR</Type>
@@ -421,6 +556,11 @@
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_RED_GIANT</Type>
@@ -435,6 +575,11 @@
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_ORION_ARM</Type>
@@ -449,6 +594,11 @@
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_MILKY_WAY</Type>
@@ -463,6 +613,11 @@
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_NEUTRON_STAR</Type>
@@ -477,6 +632,11 @@
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_NEBULA</Type>
@@ -491,6 +651,11 @@
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_STAR_CLUSTER</Type>
@@ -505,6 +670,11 @@
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_GALACTIC_CORE</Type>
@@ -519,6 +689,11 @@
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_LOCAL_GROUP</Type>
@@ -532,6 +707,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_VIRGO_SUPERCLUSTER</Type>
@@ -545,6 +725,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_OBSERVABLE_UNIVERSE</Type>
@@ -558,6 +743,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_INTERGALACTIC_VOID</Type>
@@ -571,6 +761,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_DISTANT_COSMOS</Type>
@@ -584,6 +779,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_HYPERSPACE</Type>
@@ -597,6 +797,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_DISTANT_PAST</Type>
@@ -610,6 +815,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_DISTANT_FUTURE</Type>
@@ -623,6 +833,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_BRANESPACE</Type>
@@ -636,6 +851,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_GREEN_MOON</Type>
@@ -649,6 +869,8 @@
 			<iMovement>3</iMovement>
 			<Yields>
 				<iYield>1</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
 			</Yields>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Grass.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
@@ -668,6 +890,8 @@
 			<iMovement>3</iMovement>
 			<Yields>
 				<iYield>1</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
 			</Yields>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Grass.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_TUNDRA_SELECT_AMB</WorldSoundscapeAudioScript>
@@ -688,6 +912,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_CISLUNAR_SPACE</Type>
@@ -701,6 +930,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>1</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_LUNAR_DOME</Type>
@@ -711,15 +945,16 @@
 			<iHealthPercent>-15</iHealthPercent>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
-			<Yields>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</Yields>
 			<Button>Art/Interface/Buttons/WorldBuilder/lunarbasalt.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_GRASSLAND_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_LUNAR_MARE</Type>
@@ -731,15 +966,16 @@
 			<iHealthPercent>-15</iHealthPercent>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>1</iMovement>
-			<Yields>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</Yields>
 			<Button>Art/Interface\Buttons\WorldBuilder\lunarMaria.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_PLAINS_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_LUNAR_HIGHLAND</Type>
@@ -756,6 +992,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_LUNAR_REGOLITH</Type>
@@ -772,6 +1013,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_LUNAR_RILLE</Type>
@@ -789,6 +1035,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_MARTIAN_ICE</Type>
@@ -806,6 +1057,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_MARTIAN_PERMAFROST</Type>
@@ -822,6 +1078,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_MARTIAN_DESERT</Type>
@@ -840,6 +1101,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_MARTIAN_DUNES</Type>
@@ -857,6 +1123,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_MARTIAN_BARREN</Type>
@@ -871,6 +1142,11 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_MARTIAN_PLAINS</Type>
@@ -880,15 +1156,16 @@
 			<bFound>1</bFound>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>1</iMovement>
-			<Yields>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</Yields>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Plains.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_PLAINS_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 		<TerrainInfo>
 			<Type>TERRAIN_MARTIAN_ROCKY</Type>
@@ -900,15 +1177,16 @@
 			<iDefense>25</iDefense>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>2</iMovement>
-			<Yields>
-				<iYield>0</iYield>
-				<iYield>1</iYield>
-			</Yields>
 			<Button>Art/Interface/Buttons/baseterrain/DuneRugged.dds</Button>
 			<WorldSoundscapeAudioScript>ASSS_PLAINS_SELECT_AMB</WorldSoundscapeAudioScript>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
 			</MapCategoryTypes>
+			<Yields>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>2</iYield>
+			</Yields>
 		</TerrainInfo>
 	</TerrainInfos>
 </Civ4TerrainInfos>
