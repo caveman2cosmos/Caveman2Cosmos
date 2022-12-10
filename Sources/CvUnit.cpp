@@ -33013,7 +33013,7 @@ int CvUnit::criticalVSUnitCombatTotal(UnitCombatTypes eCombatType) const
 		std::max(
 			0,
 			m_pUnitInfo->getCriticalVSUnitCombatType(eCombatType)
-			+ getExtraCriticalVSUnitCombatType(eCombatType)
+			+ getExtraCriticalVSUnitCombatType(eCombatType, isCommander())
 		)
 	);
 }
@@ -33024,7 +33024,7 @@ int CvUnit::getExtraCriticalVSUnitCombatType(UnitCombatTypes eIndex, const bool 
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	if (!isCommander())
+	if (!bIntrinsic)
 	{
 		const CvUnit* pCommander = getCommander();
 		if (pCommander)
