@@ -1872,7 +1872,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CRITICAL_VERSUS", pUnit->criticalVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
 				}
 			}
-				//Stun
+			//Stun
 			if (pUnit->roundStunProbTotal() != 0)
 			{
 				if (bShort)
