@@ -10073,7 +10073,7 @@ void CvPlot::addUnit(CvUnit* pUnit, bool bUpdate)
 		setFlagDirty(true);
 	}
 
-	if (pUnit->isCommander() && pUnit->isCommanderReady())
+	if (pUnit->isCommanderReady())
 	{
 		countCommander(true, pUnit);
 	}
@@ -10082,7 +10082,7 @@ void CvPlot::addUnit(CvUnit* pUnit, bool bUpdate)
 
 void CvPlot::removeUnit(CvUnit* pUnit, bool bUpdate)
 {
-	if (pUnit->isCommander() && pUnit->isCommanderReady())
+	if (pUnit->isCommanderReady())
 	{
 		countCommander(false, pUnit);
 	}
@@ -13175,7 +13175,7 @@ void CvPlot::countCommander(bool bNewVal, const CvUnit* pUnit)
 	const short iRange = pUnit->commandRange();
 
 	std::map<uint8_t, uint16_t>::const_iterator itr = m_commanderCount.find(static_cast<uint8_t>(pUnit->getOwner()));
-	OutputDebugString(CvString::format("countCommander (%d, %d): range=%d; oldCount=%d; iChange=%d\n", getX(), getY(), iRange, (itr == m_commanderCount.end()) ? 0 : itr->second, bNewVal ? 1 : -1).c_str());
+	//OutputDebugString(CvString::format("countCommander (%d, %d): range=%d; iChange=%d\n", getX(), getY(), iRange, bNewVal ? 1 : -1).c_str());
 
 	if (iRange > 0)
 	{
@@ -13187,16 +13187,13 @@ void CvPlot::countCommander(bool bNewVal, const CvUnit* pUnit)
 		}
 	}
 	else changeCommanderCount(static_cast<uint8_t>(pUnit->getOwner()), bNewVal);
-
-	itr = m_commanderCount.find(static_cast<uint8_t>(pUnit->getOwner()));
-	OutputDebugString(CvString::format("countCommander new count=%d\n", (itr == m_commanderCount.end()) ? 0 : itr->second).c_str());
 }
 
 void CvPlot::changeCommanderCount(const uint8_t iPlayer, const bool bAdd)
 {
 	std::map<uint8_t, uint16_t>::const_iterator itr = m_commanderCount.find(iPlayer);
 
-	OutputDebugString(CvString::format("changeCommanderCount plot at (%d, %d)\n", getX(), getY()).c_str());
+	//OutputDebugString(CvString::format("changeCommanderCount plot at (%d, %d): oldCount=%d\n", getX(), getY(), (itr == m_commanderCount.end()) ? 0 : itr->second).c_str());
 
 	if (itr == m_commanderCount.end())
 	{
@@ -13215,6 +13212,9 @@ void CvPlot::changeCommanderCount(const uint8_t iPlayer, const bool bAdd)
 	{
 		m_commanderCount[itr->first] += bAdd ? 1 : -1;
 	}
+	itr = m_commanderCount.find(iPlayer);
+
+	//OutputDebugString(CvString::format("changeCommanderCount plot at (%d, %d): newCount=%d\n", getX(), getY(), (itr == m_commanderCount.end()) ? 0 : itr->second).c_str());
 }
 
 bool CvPlot::hasCommander(const PlayerTypes ePlayer) const

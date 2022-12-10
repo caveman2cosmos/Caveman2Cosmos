@@ -1760,13 +1760,7 @@ void CvUnit::doTurn()
 
 	if (isCommander())
 	{
-		const bool bWasReady = m_commander->isReady();
 		m_commander->restoreControlPoints();
-
-		if (!bWasReady)
-		{
-			plot()->countCommander(true, this);
-		}
 	}
 	gDLL->getInterfaceIFace()->setDirty(InfoPane_DIRTY_BIT, true);
 
@@ -21092,29 +21086,8 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	//	and apply commander specific stats at that point.
 	if (isCommander())
 	{
-		if (kPromotion.getControlPoints() != 0)
-		{
-			const bool bWasReady = m_commander->isReady();
-			m_commander->changeControlPoints(kPromotion.getControlPoints() * iChange);
-
-			if (bWasReady != m_commander->isReady())
-			{
-				plot()->countCommander(!bWasReady, this);
-			}
-		}
-		if (kPromotion.getCommandRange() != 0)
-		{
-			if (m_commander->isReady())
-			{
-				plot()->countCommander(false, this);
-			}
-			m_commander->changeCommandRange(kPromotion.getCommandRange() * iChange);
-
-			if (m_commander->isReady())
-			{
-				plot()->countCommander(true, this);
-			}
-		}
+		m_commander->changeControlPoints(kPromotion.getControlPoints() * iChange);
+		m_commander->changeCommandRange(kPromotion.getCommandRange() * iChange);
 	}
 
 	changeImmuneToFirstStrikesCount((kPromotion.isImmuneToFirstStrikes()) ? iChange : 0);
@@ -23326,12 +23299,14 @@ void CvUnit::read(FDataStreamBase* pStream)
 	// Toffer - Initialize Components
 	if (bCommander)
 	{
-		m_commander = new UnitCompCommander();
-
-		m_commander->changeControlPoints(iExtraControlPoints + m_pUnitInfo->getControlPoints());
-		m_commander->changeControlPointsLeft(iControlPointsLeft - m_commander->getControlPoints());
-
-		m_commander->changeCommandRange(iExtraCommandRange + m_pUnitInfo->getCommandRange());
+		m_commander = (
+			new UnitCompCommander(
+				this,
+				m_pUnitInfo->getControlPoints() + iExtraControlPoints,
+				iControlPointsLeft,
+				m_pUnitInfo->getCommandRange() + iExtraCommandRange
+			)
+		);
 	}
 	// Toffer - Maybe a unit without builds were given builds in xml since this game was saved?
 	//	If all builds are removed from a unit in xml since save, and the unit doesn't have extra builds from promotions,
@@ -28503,7 +28478,6 @@ void CvUnit::tryUseCommander()
 		if (!pCommander->m_commander->isReady())
 		{
 			FlushCombatStrCache(NULL);
-			pCommander->plot()->countCommander(false, pCommander);
 			nullLastCommander();
 		}
 	}
@@ -28516,7 +28490,7 @@ bool CvUnit::isCommander() const
 
 bool CvUnit::isCommanderReady() const
 {
-	return m_commander->isReady();
+	return m_commander ? m_commander->isReady() : false;
 }
 
 /* Toffer - May need this one at some point... maybe
@@ -28532,7 +28506,7 @@ void CvUnit::setCommander(bool bNewVal)
 
 	if (bNewVal)
 	{
-		m_commander = new UnitCompCommander(m_pUnitInfo);
+		m_commander = new UnitCompCommander(this, m_pUnitInfo);
 
 		foreach_(const UnitCombatTypes eSubCombat, m_pUnitInfo->getSubCombatTypes())
 		{
@@ -28541,6 +28515,7 @@ void CvUnit::setCommander(bool bNewVal)
 				setHasUnitCombat(eSubCombat, false);
 			}
 		}
+		plot()->countCommander(true, this);
 	}
 	else
 	{
@@ -28548,11 +28523,6 @@ void CvUnit::setCommander(bool bNewVal)
 		m_commander = NULL;
 	}
 	GET_PLAYER(getOwner()).listCommander(bNewVal, this);
-
-	if (m_commander->isReady())
-	{
-		plot()->countCommander(bNewVal, this);
-	}
 }
 
 void CvUnit::nullLastCommander()

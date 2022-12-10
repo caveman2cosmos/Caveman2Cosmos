@@ -9,9 +9,9 @@
 class UnitCompCommander
 {
 public:
-	UnitCompCommander();
+	UnitCompCommander(const CvUnit* unit, short iCP, short iCPL, short iCR);
+	UnitCompCommander(const CvUnit* unit, CvUnitInfo* unitInfo);
 	~UnitCompCommander();
-	UnitCompCommander(CvUnitInfo* unitInfo);
 
 	void changeControlPoints(const int iChange);
 	void changeControlPointsLeft(const int iChange);
@@ -25,6 +25,7 @@ public:
 	inline short getCommandRange() const { return m_iCommandRange; }
 
 private:
+	const CvUnit* m_unit;
 	short m_iControlPoints;
 	short m_iControlPointsLeft;
 	short m_iCommandRange;
