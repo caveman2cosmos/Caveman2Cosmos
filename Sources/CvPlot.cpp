@@ -111,8 +111,6 @@ CvPlot::CvPlot()
 	m_iCurrentRoundofUpgradeCache = -1;
 	// ! Toffer
 
-	m_commanderCount = new short[MAX_PLAYERS]();
-
 	m_iImprovementCurrentValue = 0;
 
 	m_szScriptData = NULL;
@@ -153,7 +151,6 @@ CvPlot::~CvPlot()
 	SAFE_DELETE_ARRAY(m_baseYields);
 	SAFE_DELETE_ARRAY(m_aiYield);
 	SAFE_DELETE_ARRAY(m_abIsTeamBorderCache);
-	SAFE_DELETE_ARRAY(m_commanderCount);
 }
 
 void CvPlot::init(int iX, int iY)
@@ -291,6 +288,7 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_pathGenerationSeq = -1;
 
 	m_Properties.clear();
+	m_commanderCount.clear();
 
 	m_bPlotGroupsDirty = false;
 	m_aiVisibilityCount = new short[MAX_TEAMS];
@@ -306,10 +304,8 @@ void CvPlot::clearModifierTotals()
 	{
 		m_baseYields[iI] = 0;
 	}
-	for (int i = 0; i < MAX_PLAYERS; i++)
-	{
-		m_commanderCount[i] = 0;
-	}
+	m_commanderCount.clear();
+
 	getProperties()->clearForRecalculate();
 
 	// We will recalculate visibility from first principles
@@ -10895,8 +10891,21 @@ void CvPlot::read(FDataStreamBase* pStream)
 	}
 	WRAPPER_READ_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_baseYields);
 
-	WRAPPER_READ_ARRAY(wrapper, "CvPlot", MAX_PLAYERS, m_commanderCount);
+	// Toffer - Read maps
+	{
+		short iSize = 0;
+		uint8_t uType8 = 0;
+		uint16_t uCount16 = 0;
 
+		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "iCommanderCountSize");
+		while (iSize-- > 0)
+		{
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &uType8, "iCommanderCountPlayer");
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &uCount16, "iCommanderCountCount");
+
+			m_commanderCount.insert(std::make_pair(uType8, uCount16));
+		}
+	}
 	//Example of how to Skip Element
 	//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_bPeaks, SAVE_VALUE_ANY);
 	WRAPPER_READ_OBJECT_END(wrapper);
@@ -11256,7 +11265,15 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 	WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", NUM_YIELD_TYPES, m_baseYields);
 
-	WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", MAX_PLAYERS, m_commanderCount);
+	// Toffer - Write maps
+	{
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_commanderCount.size(), "iCommanderCountSize");
+		for (std::map<uint8_t, uint16_t>::const_iterator it = m_commanderCount.begin(), itEnd = m_commanderCount.end(); it != itEnd; ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", it->first, "iCommanderCountPlayer");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", it->second, "iCommanderCountCount");
+		}
+	}
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -13157,31 +13174,49 @@ void CvPlot::countCommander(bool bNewVal, const CvUnit* pUnit)
 {
 	const short iRange = pUnit->commandRange();
 
-	OutputDebugString(CvString::format("countCommander: range=%d; oldCount=%d; iChange=%d\n", iRange, m_commanderCount[pUnit->getOwner()], bNewVal ? 1 : -1).c_str());
+	std::map<uint8_t, uint16_t>::const_iterator itr = m_commanderCount.find(static_cast<uint8_t>(pUnit->getOwner()));
+	OutputDebugString(CvString::format("countCommander (%d, %d): range=%d; oldCount=%d; iChange=%d\n", getX(), getY(), iRange, (itr == m_commanderCount.end()) ? 0 : itr->second, bNewVal ? 1 : -1).c_str());
 
 	if (iRange > 0)
 	{
-		const PlayerTypes ePlayer = pUnit->getOwner();
-		const char iChange = bNewVal ? 1 : -1;
+		const uint8_t iPlayer = static_cast<uint8_t>(pUnit->getOwner());
 
 		foreach_(CvPlot* plotX, rect(iRange, iRange))
 		{
-			plotX->changeCommanderCount(ePlayer, iChange);
+			plotX->changeCommanderCount(iPlayer, bNewVal);
 		}
 	}
-	else changeCommanderCount(pUnit->getOwner(), bNewVal ? 1 : -1);
+	else changeCommanderCount(static_cast<uint8_t>(pUnit->getOwner()), bNewVal);
 
-	OutputDebugString(CvString::format("countCommander new count=%d\n", m_commanderCount[pUnit->getOwner()]).c_str());
+	OutputDebugString(CvString::format("countCommander new count=%d\n", (itr == m_commanderCount.end()) ? 0 : itr->second).c_str());
 }
 
-void CvPlot::changeCommanderCount(const PlayerTypes ePlayer, const char iChange)
+void CvPlot::changeCommanderCount(const uint8_t iPlayer, const bool bAdd)
 {
-	m_commanderCount[ePlayer] += iChange;
+	std::map<uint8_t, uint16_t>::const_iterator itr = m_commanderCount.find(iPlayer);
 
-	FASSERT_NOT_NEGATIVE(m_commanderCount[ePlayer]);
+	OutputDebugString(CvString::format("changeCommanderCount plot at (%d, %d)\n", getX(), getY()).c_str());
+
+	if (itr == m_commanderCount.end())
+	{
+		if (bAdd) // Add commander count
+		{
+			m_commanderCount.insert(std::make_pair(iPlayer, 1));
+		}
+		else FErrorMsg("Expected commander addition for first player entry on this plot");
+	}
+	else if (!bAdd && itr->second < 2) // Remove commander count
+	{
+		FAssertMsg(itr->second < 1, "This change would bring the count to a negative value! Code copes with it though")
+		m_commanderCount.erase(itr->first);
+	}
+	else // change commander count
+	{
+		m_commanderCount[itr->first] += bAdd ? 1 : -1;
+	}
 }
 
 bool CvPlot::hasCommander(const PlayerTypes ePlayer) const
 {
-	return m_commanderCount[ePlayer] > 0;
+	return m_commanderCount.find(static_cast<uint8_t>(ePlayer)) != m_commanderCount.end();
 }
