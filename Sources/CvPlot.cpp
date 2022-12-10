@@ -13188,6 +13188,7 @@ void CvPlot::countCommander(bool bNewVal, const CvUnit* pUnit)
 	}
 	else changeCommanderCount(static_cast<uint8_t>(pUnit->getOwner()), bNewVal);
 
+	itr = m_commanderCount.find(static_cast<uint8_t>(pUnit->getOwner()));
 	OutputDebugString(CvString::format("countCommander new count=%d\n", (itr == m_commanderCount.end()) ? 0 : itr->second).c_str());
 }
 
@@ -13207,7 +13208,7 @@ void CvPlot::changeCommanderCount(const uint8_t iPlayer, const bool bAdd)
 	}
 	else if (!bAdd && itr->second < 2) // Remove commander count
 	{
-		FAssertMsg(itr->second < 1, "This change would bring the count to a negative value! Code copes with it though")
+		FAssertMsg(itr->second > 0, "This change would bring the count to a negative value! Code copes with it though")
 		m_commanderCount.erase(itr->first);
 	}
 	else // change commander count

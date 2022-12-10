@@ -1760,9 +1760,10 @@ void CvUnit::doTurn()
 
 	if (isCommander())
 	{
+		const bool bWasReady = m_commander->isReady();
 		m_commander->restoreControlPoints();
 
-		if (m_commander->isReady())
+		if (!bWasReady)
 		{
 			plot()->countCommander(true, this);
 		}
@@ -21093,15 +21094,27 @@ void CvUnit::processPromotion(PromotionTypes eIndex, bool bAdding, bool bInitial
 	{
 		if (kPromotion.getControlPoints() != 0)
 		{
-			const bool bWasReady = isCommanderReady();
+			const bool bWasReady = m_commander->isReady();
 			m_commander->changeControlPoints(kPromotion.getControlPoints() * iChange);
 
-			if (bWasReady != isCommanderReady())
+			if (bWasReady != m_commander->isReady())
 			{
 				plot()->countCommander(!bWasReady, this);
 			}
 		}
-		m_commander->changeCommandRange(kPromotion.getCommandRange() * iChange);
+		if (kPromotion.getCommandRange() != 0)
+		{
+			if (m_commander->isReady())
+			{
+				plot()->countCommander(false, this);
+			}
+			m_commander->changeCommandRange(kPromotion.getCommandRange() * iChange);
+
+			if (m_commander->isReady())
+			{
+				plot()->countCommander(true, this);
+			}
+		}
 	}
 
 	changeImmuneToFirstStrikesCount((kPromotion.isImmuneToFirstStrikes()) ? iChange : 0);
