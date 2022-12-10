@@ -1565,7 +1565,7 @@ public:
 	int featureWorkPercent(FeatureTypes eIndex) const;
 	int buildWorkPercent(BuildTypes eIndex) const;
 
-	int getExtraUnitCombatModifier(UnitCombatTypes eIndex) const;
+	int getExtraUnitCombatModifier(UnitCombatTypes eIndex, const bool bIntrinsic = true) const;
 	void changeExtraUnitCombatModifier(UnitCombatTypes eIndex, int iChange);
 	//TB Combat Mods (adjusted the following line to include ", bool bEquip = false, bool bAfflict = false, bool bPromote = false"
 	bool canAcquirePromotion(PromotionTypes ePromotion, PromotionRequirements::flags requirements) const;
