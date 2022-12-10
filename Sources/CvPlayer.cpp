@@ -3690,8 +3690,6 @@ void CvPlayer::doTurn()
 		changeConversionTimer(-1);
 	}
 
-	algo::for_each(units(), CvUnit::fn::clearCommanderCache());
-
 	setConscriptCount(0);
 
 	resetUpgradeRoundCount();
@@ -28545,6 +28543,17 @@ void CvPlayer::recalculateModifiers()
 	//	Re-establish blockades
 	updatePlunder(1, false);
 	resetCivTypeEffects();
+
+	// Recalc plot commander counts
+	for (int i = Commanders.size() - 1; i > -1; i--)
+	{
+		CvUnit* com = Commanders[i];
+
+		if (com->isCommanderReady())
+		{
+			com->plot()->countCommander(true, com);
+		}
+	}
 }
 
 bool CvPlayer::upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit) const
@@ -30693,9 +30702,9 @@ void CvPlayer::listCommander(bool bAdd, CvUnit* unit)
 
 			foreach_(CvUnit* unitX, units())
 			{
-				if (unitX->getUsedCommander() && unitX->getUsedCommander()->getID() == iID)
+				if (unitX->getLastCommander() && unitX->getLastCommander()->getID() == iID)
 				{
-					unitX->nullUsedCommander();
+					unitX->nullLastCommander();
 				}
 			}
 			break;
