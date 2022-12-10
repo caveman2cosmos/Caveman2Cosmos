@@ -15094,7 +15094,7 @@ int CvUnit::unitDefenseModifier(UnitTypes eUnit) const
 int CvUnit::unitCombatModifier(UnitCombatTypes eUnitCombat) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eUnitCombat);
-	return (m_pUnitInfo->getUnitCombatModifier(eUnitCombat) + getExtraUnitCombatModifier(eUnitCombat));
+	return (m_pUnitInfo->getUnitCombatModifier(eUnitCombat) + getExtraUnitCombatModifier(eUnitCombat, isCommander()));
 }
 
 
@@ -19684,21 +19684,21 @@ void CvUnit::changeExtraFeatureDefensePercent(FeatureTypes eIndex, int iChange)
 	}
 }
 
-int CvUnit::getExtraUnitCombatModifier(UnitCombatTypes eIndex) const
+int CvUnit::getExtraUnitCombatModifier(UnitCombatTypes eIndex, const bool bIntrinsic) const
 {
 	FASSERT_BOUNDS(0, GC.getNumUnitCombatInfos(), eIndex);
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eIndex);
 
-	const int iBaseAmount = (info == NULL ? 0 : info->m_iExtraUnitCombatModifier);
-
-	if (!isCommander())
+	if (!bIntrinsic)
 	{
 		const CvUnit* pCommander = getCommander();
-		if (pCommander != NULL)
-			return iBaseAmount + pCommander->getExtraUnitCombatModifier(eIndex);
+		if (pCommander)
+		{
+			return info ? info->m_iExtraUnitCombatModifier : 0 + pCommander->getExtraUnitCombatModifier(eIndex);
+		}
 	}
-	return iBaseAmount;
+	return info ? info->m_iExtraUnitCombatModifier : 0;
 }
 
 
@@ -23625,9 +23625,9 @@ void CvUnit::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info.m_iExtraWithdrawOnFeatureType, "extraWithdrawOnFeatureType");
 		}
 	}
-	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
+	for (iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
 	{
-		if ( getExtraUnitCombatModifier((UnitCombatTypes)iI) != 0 )
+		if (getExtraUnitCombatModifier((UnitCombatTypes)iI) != 0)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasUnitCombatInfo");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraUnitCombatModifier((UnitCombatTypes)iI), "ExtraUnitCombatMod");
