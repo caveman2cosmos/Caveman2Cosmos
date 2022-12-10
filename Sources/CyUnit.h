@@ -132,8 +132,6 @@ public:
 
 	bool isRiver() const;
 
-	int getExtraMoves() const;
-
 	int getRevoltProtection() const;
 	int getPillageChange() const;
 	int getUpgradeDiscount() const;
