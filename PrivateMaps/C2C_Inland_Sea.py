@@ -33,7 +33,7 @@ import CvMapGeneratorUtil as MGU
 ################################################################
 ## MapScriptTools by Temudjin
 ################################################################
-import MapScriptTools as mst
+import MapScriptToolsOld as mst
 balancer = mst.bonusBalancer
 
 def getVersion():
@@ -66,8 +66,6 @@ def generateTerrainTypes():
 
 def addRivers():
 	print "-- addRivers()"
-	# Generate DeepOcean-terrain if mod allows for it
-	mst.deepOcean.buildDeepOcean()
 	# Generate marsh-terrain
 	mst.marshMaker.convertTerrain()
 	# Build between 0..3 mountain-ranges.
@@ -134,13 +132,6 @@ def normalizeAddExtras():
 
 	# Place special features on map
 	mst.featurePlacer.placeKelp()
-	mst.featurePlacer.placeHauntedLands()
-	mst.featurePlacer.placeCrystalPlains()
-
-	# Print maps and stats
-	mst.mapPrint.buildAreaMap( False, "normalizeAddExtras()" )
-	mst.mapPrint.buildRiverMap( False, "normalizeAddExtras()" )
-	mst.mapStats.mapStatistics()
 
 def minStartingDistanceModifier():
 	if CyGlobalContext().getGame().countCivPlayersEverAlive() <= 18:

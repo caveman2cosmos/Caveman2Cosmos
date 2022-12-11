@@ -28,9 +28,7 @@
 #the imports required for SmartMap or the borrowed fractal generators
 import operator
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
-from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
+import CvMapGeneratorUtil as MGU
 import pickle
 from math import pi
 import os, _winreg
@@ -1372,7 +1370,7 @@ def generateTerrainTypes():
 	useMapData = False
 
 	if terrainMethod == "standard":
-		terraingen = TerrainGenerator()
+		terraingen = MGU.TerrainGenerator()
 		terrainTypes = terraingen.generateTerrain()
 		OutputMessage("Python: SmartMap: Step 3 Generate Terrain: complete standard")
 		return terrainTypes
@@ -1945,7 +1943,7 @@ def addFeatures():
 
 	global featuregen
 	if featureMethod == "standard":
-		featuregen = FeatureGenerator()
+		featuregen = MGU.FeatureGenerator()
 		featuregen.addFeatures()
 		OutputMessage("Python: SmartMap: Step 4 Feature Generation: complete standard")
 		return 0
@@ -5109,7 +5107,7 @@ blueMarbleTerrainData = [
 #of other script behaviors on some of the options
 #some needed classes
 # subclass TerrainGenerator to redefine everything. This is a regional map.
-class GreatPlainsTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
+class GreatPlainsTerrainGenerator(MGU.TerrainGenerator):
 	def __init__(self, iRockyDesertPercent=50, iRockyPlainsPercent=30,
 				 iGrassPercent=17, iDesertPercent=8, iTexDesertPercent=20,
 				 iEastDesertPercent=2, iEastPlainsPercent=23,
@@ -5275,7 +5273,7 @@ class GreatPlainsTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
 # subclass TerrainGenerator to redefine everything. This is a regional map. Ice need not apply!
 # Latitudes, ratios, the works... It's all rewired. - Sirian June 20, 2005
 
-class OasisTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
+class OasisTerrainGenerator(MGU.TerrainGenerator):
 	def __init__(self, iGrassPercent=50, iPlainsPercent=35,
 				iNorthernPlainsPercent=40, iOasisGrassPercent=9,
 				iOasisPlainsPercent=16, iOasisTopLatitude=0.69,
@@ -5411,7 +5409,7 @@ class OasisTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
 
 		return terrainVal
 
-class GreatPlainsFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
+class GreatPlainsFeatureGenerator(MGU.FeatureGenerator):
 	def __init__(self, iJunglePercent=40, iEastForestPercent=45,
 				iForestPercent=8, iRockyForestPercent=55,
 				forest_grain=6, fracXExp=-1, fracYExp=-1):
@@ -5493,7 +5491,7 @@ class GreatPlainsFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 				if self.forests.getHeight(iX, iY) <= self.iForestLevel:
 					pPlot.setFeatureType(self.featureForest, 0)
 
-class OasisFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
+class OasisFeatureGenerator(MGU.FeatureGenerator):
 	def __init__(self, iJunglePercent=40, iForestPercent=45, jungle_grain=5, forest_grain=6, fracXExp=-1, fracYExp=-1):
 		self.map = CyMap()
 		self.mapRand = GC.getGame().getMapRand()
@@ -5571,7 +5569,7 @@ class OasisFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 
 def afterGeneration():
 	checkForBadPlots()
-	CvMapGeneratorUtil.placeC2CBonuses()
+	MGU.placeC2CBonuses()
 
 # 9.0
 #	 New land layout: earth.  Selecting this will generate the earth, with source data
