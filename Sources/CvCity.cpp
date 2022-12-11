@@ -6280,26 +6280,17 @@ int CvCity::foodDifference(const bool bBottom, const bool bIncludeWastage, const
 
 int CvCity::growthThreshold(const int iPopChange) const
 {
-	int iThreshold = GET_PLAYER(getOwner()).getGrowthThreshold(getPopulation() + iPopChange);
-
-	iThreshold *= (GET_PLAYER(getOwner()).getPopulationgrowthratepercentage() + 100);
-	iThreshold /= 100;
-
-	iThreshold *= (getPopulationgrowthratepercentage() + 100);
-	iThreshold /= 100;
-
-	if (getNumCityPlots() == NUM_CITY_PLOTS)
-	{
-		iThreshold = iThreshold * (100 + GC.getCITY_THIRD_RING_EXTRA_GROWTH_THRESHOLD_PERCENT()) / 100;
-	}
-
+	const int iThreshold = (
+		getModifiedIntValue(
+			GET_PLAYER(getOwner()).getGrowthThreshold(getPopulation() + iPopChange),
+			getPopulationgrowthratepercentage() + GET_PLAYER(getOwner()).getPopulationgrowthratepercentage()
+		)
+	);
 	if (isHominid())
 	{
-		iThreshold /= 2;	//	Those barbarians are just so damned fecund!
+		return std::max(1, iThreshold / 2); // Those barbarians are just so damned fecund!
 	}
-
 	return std::max(1, iThreshold);
-
 }
 
 
