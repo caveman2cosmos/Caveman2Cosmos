@@ -28519,6 +28519,10 @@ void CvUnit::setCommander(bool bNewVal)
 	}
 	else
 	{
+		if (m_commander->isReady())
+		{
+			plot()->countCommander(false, this);
+		}
 		delete m_commander;
 		m_commander = NULL;
 	}

@@ -11,13 +11,7 @@ UnitCompCommander::UnitCompCommander(const CvUnit* unit, short iCP, short iCPL, 
 	m_iCommandRange = iCR;
 	m_bReady = m_iControlPointsLeft > 0;
 }
-UnitCompCommander::~UnitCompCommander()
-{
-	if (m_bReady)
-	{
-		m_unit->plot()->countCommander(false, m_unit);
-	}
-}
+UnitCompCommander::~UnitCompCommander() { }
 
 UnitCompCommander::UnitCompCommander(const CvUnit* unit, CvUnitInfo* unitInfo) // Used when unit becomes commander
 {
