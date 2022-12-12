@@ -1821,11 +1821,11 @@ bool CvSelectionGroup::startMission()
 		{
 			setMissionTimer(GC.getMissionInfo(MISSION_NUKE).getTime());
 		}
-		//OutputDebugString(CvString::format("%S startMission endish mission=%d...\n", getHeadUnit()->getDescription().c_str(), headMissionQueueNode()->m_data.eMissionType).c_str());
+		OutputDebugString(CvString::format("%S startMission endish mission=%d...\n", getHeadUnit()->getDescription().c_str(), headMissionQueueNode()->m_data.eMissionType).c_str());
 
 		if (!isBusy())
 		{
-			//OutputDebugString(CvString::format("%S Not Busy...\n", getHeadUnit()->getDescription().c_str()).c_str());
+			OutputDebugString(CvString::format("%S Not Busy...\n", getHeadUnit()->getDescription().c_str()).c_str());
 			if (bDelete)
 			{
 				deleteMissionQueueNode(headMissionQueueNode());
@@ -1834,18 +1834,12 @@ bool CvSelectionGroup::startMission()
 			{
 				return continueMission();
 			}
-			//OutputDebugString(CvString::format("%S Not continueMission...\n", getHeadUnit()->getDescription().c_str()).c_str());
+			OutputDebugString(CvString::format("%S Not continueMission...\n", getHeadUnit()->getDescription().c_str()).c_str());
 
 			if (IsSelected() && (bCycle || !canAnyMove()))
 			{
 				GC.getGame().updateSelectionListInternal();
 			}
-		}
-		// Toffer - note to self, check if this is needed
-		else if (bAction && IsSelected() && !canAnyMove() && GET_PLAYER(GC.getGame().getActivePlayer()).isOption(PLAYEROPTION_QUICK_MOVES))
-		{
-			//OutputDebugString(CvString::format("%S WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW...\n", getHeadUnit()->getDescription().c_str()).c_str());
-			GC.getGame().updateSelectionListInternal();
 		}
 	}
 	return bResult;
@@ -1858,7 +1852,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 	CLLNode<MissionData>* missionNode = headMissionQueueNode();
 
-	//OutputDebugString(CvString::format("%S part 1 continueMission %d...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
+	OutputDebugString(CvString::format("%S part 1 continueMission %d...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
 
 	FAssert(!isBusy());
 	FAssert(missionNode != NULL);
@@ -1881,6 +1875,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 	bool bDone = false;
 	bool bAction = false;
 	bool bFailed = false;
+	bool bCombat = false;
 
 	if ((missionNode->m_data.iPushTurn == GC.getGame().getGameTurn() || (missionNode->m_data.iFlags & MOVE_THROUGH_ENEMY))
 	&& missionNode->m_data.eMissionType == MISSION_MOVE_TO
@@ -1890,9 +1885,10 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		if (groupAttack(missionNode->m_data.iData1, missionNode->m_data.iData2, missionNode->m_data.iFlags, bFailedAlreadyFighting))
 		{
 			bDone = true;
+			bCombat = true;
 		}
 		missionNode = headMissionQueueNode();
-		//OutputDebugString(CvString::format("%S continueMission %d after attack...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
+		OutputDebugString(CvString::format("%S continueMission %d after attack...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
 
 		// extra crash protection, should never happen (but a previous bug in groupAttack was causing a NULL here)
 		// while that bug is fixed, no reason to not be a little more careful
@@ -2111,7 +2107,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		}
 	}
 	missionNode = headMissionQueueNode();
-	//OutputDebugString(CvString::format("%S part 3 continueMission %d...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
+	OutputDebugString(CvString::format("%S part 3 continueMission %d...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
 
 	if (missionNode && getNumUnits() > 0)
 	{
@@ -2206,16 +2202,16 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 		if (bDone)
 		{
-			//OutputDebugString(CvString::format("%S Done...\n", getHeadUnit()->getDescription().c_str()).c_str());
+			OutputDebugString(CvString::format("%S Done...\n", getHeadUnit()->getDescription().c_str()).c_str());
 
-			if (IsSelected() && !canAnyMove())
+			if (IsSelected() && (bCombat ? !canAnyMove() : !canAllSelectedMove()))
 			{
 				GC.getGame().updateSelectionListInternal();
 			}
 
 			if (!isBusy())
 			{
-				//OutputDebugString(CvString::format("%S Not Busy...\n", getHeadUnit()->getDescription().c_str()).c_str());
+				OutputDebugString(CvString::format("%S Not Busy...\n", getHeadUnit()->getDescription().c_str()).c_str());
 
 				if (!isHuman() || missionNode->m_data.eMissionType != MISSION_MOVE_TO)
 				{
@@ -2779,6 +2775,20 @@ bool CvSelectionGroup::canAllMove() const
 	return getNumUnits() > 0 && algo::all_of(units(), CvUnit::fn::canMove());
 }
 
+bool CvSelectionGroup::canAllSelectedMove() const
+{
+	FAssert(isHuman());
+	if (!IsSelected()) return false;
+
+	foreach_(const CvUnit* unitX, units())
+	{
+		if (unitX->IsSelected() && !unitX->canMove())
+		{
+			return false;
+		}
+	}
+	return true;
+}
 
 bool CvSelectionGroup::canAnyMove(bool bValidate)
 {

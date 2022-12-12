@@ -187,8 +187,8 @@ public:
 
 	void setCommander(bool bNewValue);
 	bool isCommander() const;
-	int controlPointsLeft() const;
-	int controlPoints() const;
+	int getControlPointsLeft() const;
+	int getControlPoints() const;
 	float getRealExperience() const;
 
 protected:

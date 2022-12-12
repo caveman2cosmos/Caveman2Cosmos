@@ -617,14 +617,10 @@ public:
 	bool isCommanderReady() const;
 	void setCommander(bool bNewVal);
 	void nullLastCommander();
-	//UnitCompCommander* getCommanderComp() const;
+	UnitCompCommander* getCommanderComp() const;
 
 	CvUnit* getUsedCommander() const;
 	CvUnit* getLastCommander() const;
-
-	int controlPointsLeft() const;
-	int controlPoints() const;
-	int commandRange() const;
 
 	int getZoneOfControlCount() const;
 	bool isZoneOfControl() const;
