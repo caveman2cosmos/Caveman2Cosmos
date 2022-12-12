@@ -4202,7 +4202,7 @@ class CvMainInterface:
 						iRow += 1
 					# Great Commanders
 					if CyUnit.isCommander():
-						szTxt2 = u"%d/%d " %(CyUnit.controlPointsLeft(), CyUnit.controlPoints())
+						szTxt2 = u"%d/%d " %(CyUnit.getControlPointsLeft(), CyUnit.getControlPoints())
 						screen.appendTableRow(unitTable)
 						screen.setTableText(unitTable, 0, iRow, "<font=1>Control:", "", eWidGen, 0, 0, 1<<0)
 						iRow += 1

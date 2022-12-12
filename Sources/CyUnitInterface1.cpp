@@ -175,8 +175,8 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 
 		.def("setCommander", &CyUnit::setCommander, "void (bool bNewVal)")
 		.def("isCommander", &CyUnit::isCommander, "bool ()")
-		.def("controlPointsLeft", &CyUnit::controlPointsLeft, "int ()")
-		.def("controlPoints", &CyUnit::controlPoints, "int ()")
+		.def("getControlPointsLeft", &CyUnit::getControlPointsLeft, "int ()")
+		.def("getControlPoints", &CyUnit::getControlPoints, "int ()")
 		.def("getRealExperience", &CyUnit::getRealExperience, "float ()")
 
 		.def("captureProbabilityTotal", &CyUnit::captureProbabilityTotal, "int ()")

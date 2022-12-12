@@ -13172,7 +13172,7 @@ CvPlot::adjacent_range CvPlot::cardinalDirectionAdjacent() const
 
 void CvPlot::countCommander(bool bNewVal, const CvUnit* pUnit)
 {
-	const short iRange = pUnit->commandRange();
+	const short iRange = pUnit->getCommanderComp()->getCommandRange();
 
 	std::map<uint8_t, uint16_t>::const_iterator itr = m_commanderCount.find(static_cast<uint8_t>(pUnit->getOwner()));
 	//OutputDebugString(CvString::format("countCommander (%d, %d): range=%d; iChange=%d\n", getX(), getY(), iRange, bNewVal ? 1 : -1).c_str());

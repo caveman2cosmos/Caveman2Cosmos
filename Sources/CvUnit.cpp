@@ -28406,14 +28406,57 @@ bool CvUnit::sleepForEspionage()
 	return true;
 }
 
+
+UnitCompCommander* CvUnit::getCommanderComp() const
+{
+	return m_commander;
+}
+
+bool CvUnit::isCommander() const
+{
+	return m_commander != NULL;
+}
+
+bool CvUnit::isCommanderReady() const
+{
+	return m_commander ? m_commander->isReady() : false;
+}
+
+void CvUnit::setCommander(bool bNewVal)
+{
+	if (isCommander() == bNewVal) return;
+
+	if (bNewVal)
+	{
+		m_commander = new UnitCompCommander(this, m_pUnitInfo);
+
+		foreach_(const UnitCombatTypes eSubCombat, m_pUnitInfo->getSubCombatTypes())
+		{
+			if (GC.getUnitCombatInfo(eSubCombat).getQualityBase() > -10)
+			{
+				setHasUnitCombat(eSubCombat, false);
+			}
+		}
+		plot()->countCommander(true, this);
+	}
+	else
+	{
+		if (m_commander->isReady())
+		{
+			plot()->countCommander(false, this);
+		}
+		delete m_commander;
+		m_commander = NULL;
+	}
+	GET_PLAYER(getOwner()).listCommander(bNewVal, this);
+}
+
 CvUnit* CvUnit::getCommander() const
 {
 	PROFILE_FUNC();
 
 	FAssertMsg(plot() != NULL, "TEST");
-	// This routine gets called a HUGE number of times per turn (100s of millions in large games!)
-	//	so short-circuit the most common case of the unit having no commander when we can
-	//	Similarly protect against calls during initialization of a unit (before it has a plot set)
+	// This routine gets called a lot, so short-circuit when no commander is around.
 	if (plot() == NULL || !plot()->hasCommander(getOwner()))
 	{
 		return NULL;
@@ -28422,7 +28465,7 @@ CvUnit* CvUnit::getCommander() const
 
 	if (pBestCommander) //return already used one if it is not dead.
 	{
-		if (plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY()) <= pBestCommander->commandRange())
+		if (plotDistance(pBestCommander->getX(), pBestCommander->getY(), getX(), getY()) <= pBestCommander->getCommanderComp()->getCommandRange())
 		{
 			return pBestCommander;
 		}
@@ -28438,7 +28481,7 @@ CvUnit* CvUnit::getCommander() const
 	{
 		CvUnit* com = player.Commanders[i];
 
-		if (com->controlPointsLeft() <= 0)
+		if (com->getCommanderComp()->getControlPointsLeft() <= 0)
 		{
 			continue;
 		}
@@ -28448,7 +28491,7 @@ CvUnit* CvUnit::getCommander() const
 
 		const int iDistance = plotDistance(comPlot->getX(), comPlot->getY(), getX(), getY());
 
-		if (iDistance > com->commandRange())
+		if (iDistance > com->getCommanderComp()->getCommandRange())
 		{
 			continue;
 		}
@@ -28483,52 +28526,6 @@ void CvUnit::tryUseCommander()
 	}
 }
 
-bool CvUnit::isCommander() const
-{
-	return m_commander != NULL;
-}
-
-bool CvUnit::isCommanderReady() const
-{
-	return m_commander ? m_commander->isReady() : false;
-}
-
-/* Toffer - May need this one at some point... maybe
-UnitCompCommander* CvUnit::getCommanderComp() const
-{
-	return m_commander;
-}
-*/
-
-void CvUnit::setCommander(bool bNewVal)
-{
-	if (isCommander() == bNewVal) return;
-
-	if (bNewVal)
-	{
-		m_commander = new UnitCompCommander(this, m_pUnitInfo);
-
-		foreach_(const UnitCombatTypes eSubCombat, m_pUnitInfo->getSubCombatTypes())
-		{
-			if (GC.getUnitCombatInfo(eSubCombat).getQualityBase() > -10)
-			{
-				setHasUnitCombat(eSubCombat, false);
-			}
-		}
-		plot()->countCommander(true, this);
-	}
-	else
-	{
-		if (m_commander->isReady())
-		{
-			plot()->countCommander(false, this);
-		}
-		delete m_commander;
-		m_commander = NULL;
-	}
-	GET_PLAYER(getOwner()).listCommander(bNewVal, this);
-}
-
 void CvUnit::nullLastCommander()
 {
 	m_iCommanderID = -1;
@@ -28547,21 +28544,6 @@ CvUnit* CvUnit::getLastCommander() const
 	return (m_iCommanderID == -1 ? NULL : GET_PLAYER(getOwner()).getUnit(m_iCommanderID));
 }
 
-
-int CvUnit::controlPoints() const
-{
-	return m_commander != NULL ? m_commander->getControlPoints() : 0;
-}
-
-int CvUnit::controlPointsLeft() const
-{
-	return m_commander != NULL ? m_commander->getControlPointsLeft() : 0;
-}
-
-int CvUnit::commandRange() const
-{
-	return m_commander != NULL ? m_commander->getCommandRange() : 0;
-}
 
 int CvUnit::interceptionChance(const CvPlot* pPlot) const
 {
