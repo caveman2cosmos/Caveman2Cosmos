@@ -45,7 +45,7 @@ void UnitCompCommander::changeControlPointsLeft(const int iChange)
 		m_iControlPointsLeft += iChange;
 		m_bReady = m_iControlPointsLeft > 0;
 
-		if (!bWasReady != m_bReady)
+		if (bWasReady != m_bReady)
 		{
 			m_unit->plot()->countCommander(m_bReady, m_unit);
 		}
