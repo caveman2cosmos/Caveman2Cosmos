@@ -11466,6 +11466,7 @@ bool CvUnit::build(BuildTypes eBuild)
 	bool bFinished = plot()->changeBuildProgress(eBuild, workRate(false), getOwner());
 
 	finishMoves(); // needs to be at bottom because movesLeft() can affect workRate()...
+	deselect(true);
 
 	if (bFinished)
 	{

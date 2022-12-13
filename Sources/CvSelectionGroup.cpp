@@ -2097,8 +2097,10 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			}
 			case MISSION_BUILD:
 			{
+				OutputDebugString(CvString::format("%S MISSION_BUILD...\n", getHeadUnit()->getDescription().c_str()).c_str());
 				if (!groupBuild((BuildTypes)(missionNode->m_data.iData1)))
 				{
+					OutputDebugString(CvString::format("%S Failed...\n", getHeadUnit()->getDescription().c_str()).c_str());
 					bFailed = true;
 					bDone = true;
 				}
@@ -3899,15 +3901,15 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 		}
 	}
 
-	foreach_(CvUnit* pLoopUnit, units())
+	foreach_(CvUnit* unitX, units())
 	{
-		FAssertMsg(pLoopUnit->atPlot(pPlot), "pLoopUnit is expected to be at pPlot");
+		FAssertMsg(unitX->atPlot(pPlot), "unitX is expected to be at pPlot");
 
-		if (pLoopUnit->canBuild(pPlot, eBuild))
+		if (unitX->canBuild(pPlot, eBuild))
 		{
 			bContinue = true;
 
-			if (pLoopUnit->build(eBuild))
+			if (unitX->build(eBuild))
 			{
 				bContinue = false;
 				break;
@@ -3940,19 +3942,19 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 
 	if (bStopOtherWorkers)
 	{
-		foreach_(const CvUnit* pLoopUnit, pPlot->units())
+		foreach_(const CvUnit* unitX, pPlot->units())
 		{
-			CvSelectionGroup* pSelectionGroup = pLoopUnit->getGroup();
+			CvSelectionGroup* groupX = unitX->getGroup();
 
-			if (pSelectionGroup != NULL
-			&&  pSelectionGroup != this
-			&&  pSelectionGroup->getOwner() == getOwner()
-			&&  pSelectionGroup->getActivityType() == ACTIVITY_MISSION
-			&&  pSelectionGroup->getLengthMissionQueue() > 0
-			&&  pSelectionGroup->getMissionType(0) == kBuildInfo.getMissionType()
-			&&  pSelectionGroup->getMissionData1(0) == eBuild)
+			if (groupX != NULL
+			&&  groupX != this
+			&&  groupX->getOwner() == getOwner()
+			&&  groupX->getActivityType() == ACTIVITY_MISSION
+			&&  groupX->getLengthMissionQueue() > 0
+			&&  groupX->getMissionType(0) == kBuildInfo.getMissionType()
+			&&  groupX->getMissionData1(0) == eBuild)
 			{
-				pSelectionGroup->deleteMissionQueueNode(pSelectionGroup->headMissionQueueNode());
+				groupX->deleteMissionQueueNode(groupX->headMissionQueueNode());
 			}
 		}
 	}
