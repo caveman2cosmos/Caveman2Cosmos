@@ -440,6 +440,8 @@ public:
 	DllExport bool isVisibleEnemyUnit(PlayerTypes ePlayer) const;
 	DllExport int getNumVisibleUnits(PlayerTypes ePlayer) const;
 
+	bool isBattle() const;
+
 	bool isVisibleEnemyUnit(const CvUnit* pUnit) const;
 	bool isVisibleOtherUnit(PlayerTypes ePlayer) const;
 
@@ -1022,7 +1024,6 @@ protected:
 	void doFeature();
 	void doCulture();
 	void decayCulture();
-	int minimumNonDecayCulture();
 
 	void processArea(CvArea* pArea, int iChange);
 	void doImprovementUpgrade(const ImprovementTypes eType);
@@ -1039,6 +1040,8 @@ public:
 	void revealBestStealthDefender(const CvUnit* pAttacker);
 	void doPreAttackTraps(CvUnit* pAttacker);
 
+	void countCommander(bool bNewVal, const CvUnit* pUnit);
+	bool hasCommander(const PlayerTypes ePlayer) const;
 
 #ifdef CAN_BUILD_VALUE_CACHING
 public:
@@ -1056,6 +1059,9 @@ private:
 	int	m_zobristContribution;
 	int m_movementCharacteristicsHash;
 	bool m_bPlotGroupsDirty;
+
+	std::map<uint8_t, uint16_t> m_commanderCount; // PlayerType : CommanderCount
+	void changeCommanderCount(const uint8_t iPlayer, const bool bAdd);
 
 	static bool bDeferPlotGroupRecalculation;
 

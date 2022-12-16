@@ -1417,7 +1417,7 @@ void CvCity::doTurn()
 
 	// updating after plot culture ensures player always sees correct ownership on plot,
 	// but plot could technically wiggle back and forth during AI turns.
-	doPlotCulture(true, getOwner(), getCommerceRate(COMMERCE_CULTURE));
+	doPlotCulture(getOwner(), getCommerceRate(COMMERCE_CULTURE));
 
 	//	Force deferred plot group recalculation to happen now before we assess production
 	CvPlot::setDeferredPlotGroupRecalculationMode(false);
@@ -3831,7 +3831,7 @@ namespace {
 	{
 		return order.eOrderType == ORDER_TRAIN
 			&& order.unit.contractedAIType == contractedAIType
-			&& order.unit.plotIndex == GC.getMap().plotNum(pDestPlot->getX(), pDestPlot->getY());
+			&& (pDestPlot == NULL || order.unit.plotIndex == GC.getMap().plotNum(pDestPlot->getX(), pDestPlot->getY()));
 	}
 };
 
@@ -6280,26 +6280,17 @@ int CvCity::foodDifference(const bool bBottom, const bool bIncludeWastage, const
 
 int CvCity::growthThreshold(const int iPopChange) const
 {
-	int iThreshold = GET_PLAYER(getOwner()).getGrowthThreshold(getPopulation() + iPopChange);
-
-	iThreshold *= (GET_PLAYER(getOwner()).getPopulationgrowthratepercentage() + 100);
-	iThreshold /= 100;
-
-	iThreshold *= (getPopulationgrowthratepercentage() + 100);
-	iThreshold /= 100;
-
-	if (getNumCityPlots() == NUM_CITY_PLOTS)
-	{
-		iThreshold = iThreshold * (100 + GC.getCITY_THIRD_RING_EXTRA_GROWTH_THRESHOLD_PERCENT()) / 100;
-	}
-
+	const int iThreshold = (
+		getModifiedIntValue(
+			GET_PLAYER(getOwner()).getGrowthThreshold(getPopulation() + iPopChange),
+			getPopulationgrowthratepercentage() + GET_PLAYER(getOwner()).getPopulationgrowthratepercentage()
+		)
+	);
 	if (isHominid())
 	{
-		iThreshold /= 2;	//	Those barbarians are just so damned fecund!
+		return std::max(1, iThreshold / 2); // Those barbarians are just so damned fecund!
 	}
-
 	return std::max(1, iThreshold);
-
 }
 
 
@@ -12940,7 +12931,7 @@ void CvCity::setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, 
 
 		updateCultureLevel(bUpdatePlotGroups);
 
-		if (bPlots) doPlotCulture(true, eIndex, 0);
+		if (bPlots) doPlotCulture(eIndex, 0);
 	}
 
 	if (!bNationalSet && iOldCulture < iNewValue)
@@ -16088,78 +16079,58 @@ void CvCity::doCulture()
 }
 
 
-void CvCity::doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate)
+void CvCity::doPlotCulture(PlayerTypes ePlayer, int iCultureRate)
 {
 	PROFILE_FUNC();
-
 	FASSERT_BOUNDS(0, MAX_PLAYERS, ePlayer);
 
-	const int iCulture = getCultureTimes100(ePlayer);
-
-	// ? If doPlotCulture is called on a city that's not the player's, or something?
-	// Hack: Forcing to recalculate to use right culture level
-	// TODO fix upstream to be less hacky!
-	CultureLevelTypes eCultureLevel = (CultureLevelTypes)0;
-	const CvGame& GAME = GC.getGame();
-	const GameSpeedTypes eSpeed = GAME.getGameSpeedType();
-	int iActualLevel = 0;
-
-	foreach_(const CvCultureLevelInfo* info, GC.getCultureLevelInfos())
-	{
-		// Only count valid game options for current game
-		if (info->getPrereqGameOption() == NO_GAMEOPTION || GAME.isOption((GameOptionTypes)info->getPrereqGameOption()))
-		{
-			if (iCulture < 100 * info->getSpeedThreshold(eSpeed))
-			{
-				eCultureLevel = (CultureLevelTypes)(iActualLevel - 1);
-				break;
-			}
-			iActualLevel++;
-		}
-	}
-	// end hack
+	int iCultureLevel = GC.getCultureLevelInfo(getCultureLevel()).getLevel();
 
 	// Put culture onto plots from the city, even if "0" culture output,
 	// to prevent loss thru decay if 0 culture and not realistic culture.
 	clearCultureDistanceCache();
 
-	foreach_(CvPlot* plotX, plot()->rect((int)eCultureLevel, (int)eCultureLevel))
+	foreach_(CvPlot* plotX, plot()->rect(iCultureLevel, iCultureLevel))
 	{
 		const int iCultureDistance = cultureDistance(*plotX);
 
-		if (iCultureDistance <= eCultureLevel && plotX->isPotentialCityWorkForArea(area()))
+		if (iCultureDistance <= iCultureLevel && plotX->isPotentialCityWorkForArea(area()))
 		{
 			// changeCulture includes a check to culture value upward
 			// to ensure plot cannot be lost thru decay even if culture gain is too small
-			plotX->changeCulture(ePlayer,
-				cultureDistanceDropoff(iCultureRate, eCultureLevel, iCultureDistance),
-				(bUpdate || !plotX->isOwned()));
+			plotX->changeCulture(
+				ePlayer,
+				cultureDistanceDropoff(iCultureRate, iCultureLevel, iCultureDistance),
+				// Toffer - Only update plot ownership when the culture of non-owners increase.
+				plotX->getOwner() != ePlayer
+			);
 		}
 	}
 }
 
 
+/* This function could probably be improved some.
+	Currently is linear dropoff or flat, but nonlinearity might be necessary if culture too strong.
+	I want to do something like ((range-distance)/range)^x as a modifier on base gain for
+	fractional x around 1 where xml controls x, but... obvious issues with floating point. */
 int CvCity::cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int distanceFromSource)
 {
-	/* This function could probably be improved some.
-		Currently is linear dropoff or flat, but nonlinearity might be necessary if culture too strong.
-		I want to do something like ((range-distance)/range)^x as a modifier on base gain for
-		fractional x around 1 where xml controls x, but... obvious issues with floating point. */
-
 	FASSERT_NOT_NEGATIVE(baseCultureGain);
 	FAssertMsg(distanceFromSource <= rangeOfSource, "Calculating culture gain for distance greater than max range.");
 
-	const int iDensityFactor = GC.getCITY_CULTURE_DENSITY_FACTOR();
+	if (baseCultureGain < 1) return 1;
+
+	const int iDensityFactor = GC.getCITY_CULTURE_DENSITY_FACTOR(); // Some fraction 0-100 should be distance-modified.
 
 	// 1->0 multiplier on base rate as distance from source goes 0->max
-	int modifiedCultureGain = baseCultureGain * (rangeOfSource - distanceFromSource) / std::max(1, rangeOfSource);
-	// Some fraction 0-100 should be distance-modified.
-	modifiedCultureGain *= iDensityFactor / 100;
-	// The rest is flat base culture rate.
-	modifiedCultureGain += baseCultureGain * (100 - iDensityFactor) / 100;
-
-	modifiedCultureGain = std::max(modifiedCultureGain, 1);
-	return modifiedCultureGain;
+	const int modifiedCultureGain = (
+		baseCultureGain * (rangeOfSource - distanceFromSource) * iDensityFactor
+		/
+		std::max(100, 100*rangeOfSource)
+		+ // The rest is flat base culture rate.
+		baseCultureGain * (100 - iDensityFactor) / 100
+	);
+	return std::max(modifiedCultureGain, 1);
 }
 
 

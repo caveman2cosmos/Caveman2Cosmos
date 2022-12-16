@@ -166,7 +166,7 @@
 		</CultureLevelInfo>
 		<CultureLevelInfo>
 			<!-- Used only for Realistic Culture Spread Option: r=1.5 -->
-			<Type>TXT_KEY_CULTURELEVEL_MINISCULE</Type>
+			<Type>CULTURELEVEL_MINISCULE</Type>
 			<Description>TXT_KEY_CULTURELEVEL_MINISCULE</Description>
 			<iCityDefenseModifier>5</iCityDefenseModifier>
 			<PrereqGameOption>GAMEOPTION_REALISTIC_CULTURE_SPREAD</PrereqGameOption>
@@ -265,7 +265,7 @@
 		</CultureLevelInfo>
 		<CultureLevelInfo>
 			<!-- Used only for Realistic Culture Spread Option: r=1.5 -->
-			<Type>TXT_KEY_CULTURELEVEL_MINOR</Type>
+			<Type>CULTURELEVEL_MINOR</Type>
 			<Description>TXT_KEY_CULTURELEVEL_MINOR</Description>
 			<iCityDefenseModifier>7</iCityDefenseModifier>
 			<PrereqGameOption>GAMEOPTION_REALISTIC_CULTURE_SPREAD</PrereqGameOption>
@@ -661,7 +661,7 @@
 		</CultureLevelInfo>
 		<CultureLevelInfo>
 			<!-- Used only for Realistic Culture Spread Option: r=1.5 -->
-			<Type>TXT_KEY_CULTURELEVEL_TREMENDOUS</Type>
+			<Type>CULTURELEVEL_TREMENDOUS</Type>
 			<Description>TXT_KEY_CULTURELEVEL_TREMENDOUS</Description>
 			<iCityDefenseModifier>37</iCityDefenseModifier>
 			<PrereqGameOption>GAMEOPTION_REALISTIC_CULTURE_SPREAD</PrereqGameOption>
@@ -760,7 +760,7 @@
 		</CultureLevelInfo>
 		<CultureLevelInfo>
 			<!-- Used only for Realistic Culture Spread Option: r=1.5 -->
-			<Type>TXT_KEY_CULTURELEVEL_STUPENDOUS</Type>
+			<Type>CULTURELEVEL_STUPENDOUS</Type>
 			<Description>TXT_KEY_CULTURELEVEL_STUPENDOUS</Description>
 			<iCityDefenseModifier>42</iCityDefenseModifier>
 			<PrereqGameOption>GAMEOPTION_REALISTIC_CULTURE_SPREAD</PrereqGameOption>
@@ -859,7 +859,7 @@
 		</CultureLevelInfo>
 		<CultureLevelInfo>
 			<!-- Used only for Realistic Culture Spread Option: r=1.5 -->
-			<Type>TXT_KEY_CULTURELEVEL_MAJESTIC</Type>
+			<Type>CULTURELEVEL_MAJESTIC</Type>
 			<Description>TXT_KEY_CULTURELEVEL_MAJESTIC</Description>
 			<iCityDefenseModifier>47</iCityDefenseModifier>
 			<PrereqGameOption>GAMEOPTION_REALISTIC_CULTURE_SPREAD</PrereqGameOption>

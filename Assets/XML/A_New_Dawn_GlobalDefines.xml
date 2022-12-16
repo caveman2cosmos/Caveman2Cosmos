@@ -271,10 +271,6 @@ We default to all of them (1+2+128 = 131)
 		<fDefineFloatVal>0.05</fDefineFloatVal>
 	</Define>
 	<Define>
-		<DefineName>CITY_THIRD_RING_EXTRA_GROWTH_THRESHOLD_PERCENT</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
-	</Define>
-	<Define>
 		<!-- Set to non-0 value to enable dynamic activation of unit graphics entities (reduced memory usage and growth) -->
 		<DefineName>ENABLE_DYNAMIC_UNIT_ENTITIES</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
