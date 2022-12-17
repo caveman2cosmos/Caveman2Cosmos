@@ -596,10 +596,13 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 		szString.append(gDLL->getText("TXT_KEY_UNITHELP_XP", szTempBuffer.GetCString(), pUnit->experienceNeeded()));
 	}
 
-	if (pUnit->isCommander())
 	{
-		szString.append(gDLL->getText("TXT_KEY_UNITHELP_COMMAND_RANGE", pUnit->commandRange()));
-		szString.append(gDLL->getText("TXT_KEY_UNITHELP_COMMAND_POINTS", pUnit->controlPointsLeft(), pUnit->controlPoints()));
+		UnitCompCommander* commander = pUnit->getCommanderComp();
+		if (commander)
+		{
+			szString.append(gDLL->getText("TXT_KEY_UNITHELP_COMMAND_RANGE", commander->getCommandRange()));
+			szString.append(gDLL->getText("TXT_KEY_UNITHELP_COMMAND_POINTS", commander->getControlPointsLeft(), commander->getControlPoints()));
+		}
 	}
 
 	if (pUnit->getOwner() != GC.getGame().getActivePlayer() && !pUnit->isAnimal() && !pUnit->isHiddenNationality())
@@ -1872,7 +1875,7 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 					szString.append(gDLL->getText("TXT_KEY_PROMOTIONHELP_CRITICAL_VERSUS", pUnit->criticalVSUnitCombatTotal((UnitCombatTypes)iI), CvWString(GC.getUnitCombatInfo((UnitCombatTypes)iI).getType()).GetCString(), GC.getUnitCombatInfo((UnitCombatTypes) iI).getTextKeyWide()));
 				}
 			}
-				//Stun
+			//Stun
 			if (pUnit->roundStunProbTotal() != 0)
 			{
 				if (bShort)

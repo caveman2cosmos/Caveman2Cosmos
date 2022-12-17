@@ -2612,22 +2612,6 @@
 		<Russian>Èêîíêè ñòðîèòåëüñòâà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYBAR__CITYCONTROLLEDPLOTS_HOVER</Tag>
-		<English>When checked, highlights the area of tiles controlled by the selected city, similar to when you select a Settler.</English>
-		<French>Lorsque activé, met en évidence la zone de cases controllées par la ville.</French>
-		<German>Hebt die von der gewählten Stadt bearbeitbaren Geländefelder hervor (ähnlich wie bei Auswahl eines Siedlers)</German>
-		<Spanish>Cuando se activa, resalta las casillas controladas por la ciudad seleccionada, de forma similar a cuando se selecciona un Colono.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, ïîäñâå÷èâàåò îáëàñòü êëåòîê óïðàâëÿåìóþ âûáðàííûì ãîðîäîì, ïîäîáíî òîìó, êàê ïðè âûáîðå ïîñåëåíöà.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYBAR__CITYCONTROLLEDPLOTS_TEXT</Tag>
-		<English>Highlight Workable Area</English>
-		<French>Mise en évidence de la zone utile</French>
-		<German>Bearbeitbares Gebiet hervorheben</German>
-		<Spanish>Resaltar área trabajable</Spanish>
-		<Russian>Ïîäñâåòèòü ðàáî÷óþ îáëàñòü</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYBAR__CITYPLOTSTATUS_HOVER</Tag>
 		<English>When checked, highlights each tile controlled by the selected city using a color based on whether it's being worked and your ability to improve it.</English>
 		<French>Lorsque activé, met en évidence chaque case possédée par la ville avec une couleur particulière si elle est utilisée, ou peut être améliorée.</French>
@@ -4275,6 +4259,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__AUTOENDTURNDELAY_TEXT</Tag>
 		<English>Auto-end turn delay</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMIN_HOVER</Tag>
+		<English>Minimum slice delay before unit cycle will occur after unit does any action that should end its turn.[NEWLINE]Each slice is about 0.25 seconds long.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMIN_TEXT</Tag>
+		<English>Min cycle delay</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMOVE_HOVER</Tag>
+		<English>The slice delay before unit cycle will occur after unit finish its turn by moving.[NEWLINE]Each slice is about 0.25 seconds long.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__CYCLEDELAYMOVE_TEXT</Tag>
+		<English>Move cycle delay</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_MAININTERFACE__ENABLEGRAPHICALPAGING_HOVER</Tag>

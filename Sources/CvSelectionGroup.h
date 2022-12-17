@@ -108,6 +108,7 @@ public:
 	bool hasCargo() const;
 	int getCargo(bool bVolume = false) const;
 
+	bool canAllSelectedMove() const;
 	DllExport bool canAllMove() const;
 	DllExport bool canMoveInto(CvPlot* pPlot, bool bAttack = false);
 	DllExport bool canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar = false);
@@ -280,6 +281,7 @@ public:
 	int getMissionType(int iNode) const;
 	int getMissionData1(int iNode) const;
 	int getMissionData2(int iNode) const;
+	bool isMoveMission(CLLNode<MissionData>* node) const;
 
 // BUG - All Units Actions - start
 	bool allMatch(UnitTypes eUnit) const;
