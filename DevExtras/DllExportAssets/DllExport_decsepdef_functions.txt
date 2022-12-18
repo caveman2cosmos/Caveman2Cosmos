@@ -1,0 +1,948 @@
+CvActionInfo::getHotKeyPriority() const
+CvActionInfo::getHotKeyPriorityAlt() const
+CvActionInfo::getHotKeyVal() const
+CvActionInfo::getHotKeyValAlt() const
+CvActionInfo::getSubType() const
+CvActionInfo::isAltDown() const
+CvActionInfo::isAltDownAlt() const
+CvActionInfo::isCtrlDown() const
+CvActionInfo::isCtrlDownAlt() const
+CvActionInfo::isShiftDown() const
+CvActionInfo::isShiftDownAlt() const
+CvActionInfo::isVisible() const
+CvAirMissionDefinition::CvAirMissionDefinition(const%CvAirMissionDefinition&)
+CvAirMissionDefinition::getDamage(BattleUnitTypes) const
+CvAirMissionDefinition::isDead(BattleUnitTypes) const
+CvAnimationCategoryInfo::getCategoryBaseID()
+CvAnimationCategoryInfo::getCategoryDefaultTo()
+CvAnimationPathInfo::getNumPathDefinitions()
+CvAnimationPathInfo::getPath()
+CvAnimationPathInfo::getPathCategory(int)
+CvAnimationPathInfo::isMissionPath() const
+CvArtFileMgr::DeInit()
+CvArtFileMgr::GetInstance()
+CvArtFileMgr::Init()
+CvArtFileMgr::Reset()
+CvArtFileMgr::buildArtFileInfoMaps()
+CvArtInfoAsset::getKFM() const
+CvArtInfoAsset::getNIF() const
+CvArtInfoBonus::getShaderNIF() const
+CvArtInfoBuilding::getLSystemName() const
+CvArtInfoFeature::getLightType() const
+CvArtInfoFeature::getNumVarieties() const
+CvArtInfoFeature::getTileArtType() const
+CvArtInfoFeature::getVariety(int) const
+CvArtInfoFeature::isAnimated() const
+CvArtInfoFeature::isRiverArt() const
+CvArtInfoImprovement::getShaderNIF() const
+CvArtInfoLeaderhead::getBackgroundKFM() const
+CvArtInfoLeaderhead::getNoShaderNIF() const
+CvArtInfoTerrain::getBaseTexture()
+CvArtInfoTerrain::getBlendList(int)
+CvArtInfoTerrain::getDetailTexture()
+CvArtInfoTerrain::getGridTexture()
+CvArtInfoTerrain::getLayerOrder()
+CvArtInfoTerrain::useAlphaShader()
+CvArtInfoUnit::getActAsAir() const
+CvArtInfoUnit::getActAsLand() const
+CvArtInfoUnit::getActAsRanged() const
+CvArtInfoUnit::getBankRate() const
+CvArtInfoUnit::getBattleDistance() const
+CvArtInfoUnit::getCombatExempt() const
+CvArtInfoUnit::getDamageStates() const
+CvArtInfoUnit::getExchangeAngle() const
+CvArtInfoUnit::getPatrolSoundTag() const
+CvArtInfoUnit::getRangedDeathTime() const
+CvArtInfoUnit::getRunEndSoundTag() const
+CvArtInfoUnit::getRunLoopSoundTag() const
+CvArtInfoUnit::getShaderNIF() const
+CvArtInfoUnit::getShadowAttachNode() const
+CvArtInfoUnit::getShadowNIF() const
+CvArtInfoUnit::getShadowScale() const
+CvArtInfoUnit::getTrailFadeFalloff() const
+CvArtInfoUnit::getTrailFadeStarTime() const
+CvArtInfoUnit::getTrailLength() const
+CvArtInfoUnit::getTrailTaper() const
+CvArtInfoUnit::getTrailTexture() const
+CvArtInfoUnit::getTrailWidth() const
+CvAssetInfoBase::getPath() const
+CvBattleDefinition::CvBattleDefinition(const%CvBattleDefinition&)
+CvBattleDefinition::addBattleRound(const%CvBattleRound&)
+CvBattleDefinition::clearBattleRounds()
+CvBattleDefinition::getBattleRound(int)
+CvBattleDefinition::getBattleRound(int) const
+CvBattleDefinition::getDamage(BattleUnitTypes, BattleTimeTypes) const
+CvBattleDefinition::getFirstStrikes(BattleUnitTypes) const
+CvBattleDefinition::getNumBattleRounds() const
+CvBattleDefinition::isAdvanceSquare() const
+CvBattleDefinition::~CvBattleDefinition()
+CvBattleRound::getNumAlive(BattleUnitTypes) const
+CvBattleRound::getNumKilled(BattleUnitTypes) const
+CvBattleRound::getWaveSize() const
+CvBattleRound::isRangedRound() const
+CvBattleRound::setNumAlive(BattleUnitTypes, int)
+CvBattleRound::setNumKilled(BattleUnitTypes, int)
+CvBattleRound::setWaveSize(int)
+CvBonusInfo::getArtInfo() const
+CvBuildInfo::getEntityEvent() const
+CvBuildInfo::getMissionType() const
+CvCameraOverlayInfo::getBaseTexture() const
+CvCameraOverlayInfo::getCameraOverlayType() const
+CvCameraOverlayInfo::isVisible() const
+CvCity::canBeSelected() const
+CvCity::cheat(bool, bool, bool)
+CvCity::getArtStyleType() const
+CvCity::getBarBackgroundColor() const
+CvCity::getBuildQueue(std::vector<std::string>&) const
+CvCity::getBuildingArtInfo(BuildingTypes) const
+CvCity::getBuildingVisibilityPriority(BuildingTypes) const
+CvCity::getCityBillboardProductionIcon() const
+CvCity::getCityBillboardSizeIconColors(NiColorA&, NiColorA&) const
+CvCity::getFoodBarPercentages(std::vector<float>&) const
+CvCity::getID() const
+CvCity::getIDInfo() const
+CvCity::getMusicScriptId() const
+CvCity::getName(uint) const
+CvCity::getNameKey() const
+CvCity::getOrderData(int) const
+CvCity::getProductionBarPercentages(std::vector<float>&) const
+CvCity::getSoundscapeScriptId() const
+CvCity::getTeam() const
+CvCity::getViewportX() const
+CvCity::getViewportY() const
+CvCity::getVisibleBuildings(std::list<BuildingTypes>&, int&)
+CvCity::getVisibleEffects(ZoomLevelTypes, std::vector<const%char*>&)
+CvCity::getWallOverridePoints() const
+CvCity::isInfoDirty() const
+CvCity::isLayoutDirty() const
+CvCity::isRevealed(TeamTypes, bool) const
+CvCity::isStarCity() const
+CvCity::isVisible(TeamTypes, bool) const
+CvCity::isWallOverride() const
+CvCity::plotExternal() const
+CvCity::setInfoDirty(bool)
+CvCity::setLayoutDirty(bool)
+CvCity::updateSelectedCity(bool)
+CvCivilizationInfo::getAdjective(uint)
+CvCivilizationInfo::getDefaultPlayerColor() const
+CvCivilizationInfo::getFlagTexture() const
+CvCivilizationInfo::getShortDescription(uint)
+CvCivilizationInfo::isAIPlayable() const
+CvCivilizationInfo::isLeaders(int) const
+CvCivilizationInfo::isPlayable() const
+CvColorInfo::getColor() const
+CvCursorInfo::getPath()
+CvDLLButtonPopup::freeInstance()
+CvDLLButtonPopup::getInstance()
+CvDLLButtonPopup::launchButtonPopup(CvPopup*, CvPopupInfo&)
+CvDLLEntity::IsSelected() const
+CvDLLWidgetData::executeAction(CvWidgetDataStruct&)
+CvDLLWidgetData::executeAltAction(CvWidgetDataStruct&)
+CvDLLWidgetData::freeInstance()
+CvDLLWidgetData::getInstance()
+CvDLLWidgetData::isLink(const%CvWidgetDataStruct&) const
+CvDLLWidgetData::parseHelp(CvWStringBuffer&, CvWidgetDataStruct&)
+CvDeal::getFirstPlayer() const
+CvDeal::getGoldItem()
+CvDeal::getGoldPerTurnItem()
+CvDeal::getID() const
+CvDeal::getPeaceItem()
+CvDeal::getSecondPlayer() const
+CvDeal::hasData(TradeableItems)
+CvDeal::headFirstTradesNode() const
+CvDeal::headSecondTradesNode() const
+CvDeal::isCancelable(PlayerTypes, CvWString*)
+CvDeal::isDual(TradeableItems, bool)
+CvDeal::isEndWar(TradeableItems)
+CvDeal::isGold(TradeableItems)
+CvDeal::isVassalTributeDeal(const%CLinkList<TradeData>*)
+CvDeal::kill(bool)
+CvDeal::nextFirstTradesNode(CLLNode<TradeData>*) const
+CvDeal::nextSecondTradesNode(CLLNode<TradeData>*) const
+CvDiploParameters::CvDiploParameters(PlayerTypes)
+CvDiploParameters::getAIContact() const
+CvDiploParameters::getChatText() const
+CvDiploParameters::getData() const
+CvDiploParameters::getDiploComment() const
+CvDiploParameters::getHumanDiplo() const
+CvDiploParameters::getOurOfferList() const
+CvDiploParameters::getOurOffering() const
+CvDiploParameters::getPendingDelete() const
+CvDiploParameters::getRenegotiate() const
+CvDiploParameters::getTheirOfferList() const
+CvDiploParameters::getTheirOffering() const
+CvDiploParameters::getWhoTalkingTo() const
+CvDiploParameters::read(FDataStreamBase&)
+CvDiploParameters::setChatText(const%wchar_t*)
+CvDiploParameters::setHumanDiplo(bool)
+CvDiploParameters::setOurOfferList(const%CLinkList<TradeData>&)
+CvDiploParameters::setOurOffering(bool)
+CvDiploParameters::setPendingDelete(bool)
+CvDiploParameters::setTheirOfferList(const%CLinkList<TradeData>&)
+CvDiploParameters::setTheirOffering(bool)
+CvDiploParameters::setWhoTalkingTo(PlayerTypes)
+CvDiploParameters::write(FDataStreamBase&) const
+CvDllTranslator::initializeTags(CvWString&, CvWString&, CvWString&, CvWString&, CvWString&, CvWString&, CvWString&, std::map<std::wstring`CvWString>&, std::map<std::wstring`CvWString>&)
+CvDllTranslator::replaceCt(const%CvWString&, int, CvWString&)
+CvDllTranslator::replaceOur(const%CvWString&, int, CvWString&)
+CvEntityEventInfo::getAnimationPathType(int) const
+CvEntityEventInfo::getEffectType(int) const
+CvEventReporter::chat(CvWString)
+CvEventReporter::gameStart()
+CvEventReporter::getGameStatistics(std::vector<CvStatBase*>&)
+CvEventReporter::getInstance()
+CvEventReporter::getPlayerStatistics(PlayerTypes, std::vector<CvStatBase*>&)
+CvEventReporter::gotoPlotSet(CvPlot*, PlayerTypes)
+CvEventReporter::init()
+CvEventReporter::kbdEvent(int, int, int, int)
+CvEventReporter::mouseEvent(int, int, int, bool)
+CvEventReporter::newGame()
+CvEventReporter::newPlayer(PlayerTypes)
+CvEventReporter::plotPicked(CvPlot*)
+CvEventReporter::preSave()
+CvEventReporter::readStatistics(FDataStreamBase*)
+CvEventReporter::resetStatistics()
+CvEventReporter::unInit()
+CvEventReporter::unitSelected(CvUnit*)
+CvEventReporter::update(float)
+CvEventReporter::windowActivation(bool)
+CvEventReporter::writeStatistics(FDataStreamBase*)
+CvFeatureInfo::getArtInfo() const
+CvFractal::CvFractal()
+CvFractal::fracInit(int, int, int, CvRandom&, int, CvFractal*, int, int)
+CvFractal::fracInitHinted(int, int, int, CvRandom&, uint8_t*, int, int, CvFractal*, int, int)
+CvFractal::getHeight(int, int)
+CvFractal::getHeightFromPercent(int)
+CvGame::applyFlyoutMenu(const%CvFlyoutMenuData&)
+CvGame::calculateOptionsChecksum()
+CvGame::calculateSyncChecksum()
+CvGame::canDoPing(CvPlot*, PlayerTypes) const
+CvGame::canHandleAction(int, CvPlot*, bool, bool) const
+CvGame::cheatSpaceship() const
+CvGame::countNumHumanGameTurnActive() const
+CvGame::cycleCities(bool, bool) const
+CvGame::cyclePlotUnits(const%CvPlot*, bool, bool, int) const
+CvGame::getActivePlayer() const
+CvGame::getActiveTeam() const
+CvGame::getBuildingArtInfo(BuildingTypes) const
+CvGame::getDeal(int)
+CvGame::getEndTurnState() const
+CvGame::getGameState() const
+CvGame::getGameTurn()
+CvGame::getGlobeLayers(std::vector<CvGlobeLayerData>&) const
+CvGame::getGlobeviewConfigurationParameters(TeamTypes, bool&, bool&)
+CvGame::getHotPbemBetweenTurns() const
+CvGame::getIndexAfterLastDeal()
+CvGame::getName()
+CvGame::getNewHighlightPlot() const
+CvGame::getNextSoundtrack(EraTypes, int) const
+CvGame::getNumHumanPlayers()
+CvGame::getPausePlayer() const
+CvGame::getPlayerScore(PlayerTypes) const
+CvGame::getPlotHighlightColor(CvPlot*) const
+CvGame::getPlotUnit(const%CvPlot*, int) const
+CvGame::getPlotUnits(const%CvPlot*, std::vector<CvUnit*>&) const
+CvGame::getSoundtrackSpace() const
+CvGame::getSpaceVictory() const
+CvGame::getTeamScore(TeamTypes) const
+CvGame::getTurnSlice() const
+CvGame::getTurnSlicesRemaining()
+CvGame::getUnitDomain(UnitTypes) const
+CvGame::getWidgetShow(BonusTypes) const
+CvGame::getWidgetShow(ImprovementTypes) const
+CvGame::handleAction(int)
+CvGame::handleCityPlotRightPicked(CvCity*, CvPlot*, bool, bool, bool) const
+CvGame::handleCityScreenPlotDoublePicked(CvCity*, CvPlot*, bool, bool, bool) const
+CvGame::handleCityScreenPlotPicked(CvCity*, CvPlot*, bool, bool, bool) const
+CvGame::handleCityScreenPlotRightPicked(CvCity*, CvPlot*, bool, bool, bool) const
+CvGame::handleDiplomacySetAIComment(DiploCommentTypes) const
+CvGame::handleMiddleMouse(bool, bool, bool)
+CvGame::implementDeal(PlayerTypes, PlayerTypes, CLinkList<TradeData>*, CLinkList<TradeData>*, bool)
+CvGame::init(HandicapTypes)
+CvGame::initDiplomacy()
+CvGame::initEvents()
+CvGame::initFreeUnits()
+CvGame::initScoreCalculation()
+CvGame::initSelection() const
+CvGame::isDebugMode() const
+CvGame::isFinalInitialized() const
+CvGame::isGameMultiPlayer() const
+CvGame::isHotSeat() const
+CvGame::isMPOption(MultiplayerOptionTypes) const
+CvGame::isNetworkMultiPlayer() const
+CvGame::isOption(GameOptionTypes) const
+CvGame::isPaused() const
+CvGame::isPbem() const
+CvGame::isPitboss() const
+CvGame::isSoundtrackOverride(CvString&) const
+CvGame::isTeamGame() const
+CvGame::isWaterBuilding(BuildingTypes) const
+CvGame::loadBuildQueue(const%CvString&) const
+CvGame::nextActivePlayer(bool)
+CvGame::regenerateMap()
+CvGame::reset(HandicapTypes, bool)
+CvGame::reviveActivePlayer()
+CvGame::selectAll(CvPlot*) const
+CvGame::selectCity(CvCity*, bool, bool, bool) const
+CvGame::selectGroup(CvUnit*, bool, bool, bool) const
+CvGame::selectUnit(CvUnit*, bool, bool, bool) const
+CvGame::selectedCitiesGameNetMessage(int, int, int, int, bool, bool, bool, bool) const
+CvGame::selectionListGameNetMessage(int, int, int, int, int, bool, bool) const
+CvGame::selectionListIgnoreBuildingDefense() const
+CvGame::selectionListMove(CvPlot*, bool, bool, bool) const
+CvGame::setAIAutoPlayExternal(int)
+CvGame::setActivePlayer(PlayerTypes, bool)
+CvGame::setFinalInitialized(bool)
+CvGame::setGameState(GameStateTypes)
+CvGame::setInitialItems()
+CvGame::setInitialTime(unsigned%int)
+CvGame::setPausePlayer(PlayerTypes)
+CvGame::setPbemTurnSent(bool)
+CvGame::setReplayInfo(CvReplayInfo*)
+CvGame::setupActionCache() const
+CvGame::shouldCenterMinimap() const
+CvGame::shouldDisplayEndTurn() const
+CvGame::shouldDisplayEndTurnButton() const
+CvGame::shouldDisplayFlag() const
+CvGame::shouldDisplayReturn() const
+CvGame::shouldDisplayUnitModel() const
+CvGame::shouldDisplayWaitingOthers() const
+CvGame::shouldDisplayWaitingYou() const
+CvGame::shouldShowResearchButtons() const
+CvGame::startFlyoutMenu(const%CvPlot*, std::vector<CvFlyoutMenuData>&) const
+CvGame::testExtendedGame()
+CvGame::toggleDebugMode()
+CvGame::update()
+CvGame::updateBlockadedPlots()
+CvGame::updateColoredPlots()
+CvGame::updateDebugModeCache()
+CvGame::updateSelectionList()
+CvGame::updateTestEndTurn()
+CvGame::updateUnitEnemyGlow()
+CvGameText::CvGameText()
+CvGameTextMgr::DeInitialize()
+CvGameTextMgr::GetInstance()
+CvGameTextMgr::Initialize()
+CvGameTextMgr::Reset()
+CvGameTextMgr::assignFontIds(int, int)
+CvGameTextMgr::buildCityBillboardCityNameString(CvWStringBuffer&, CvCity*)
+CvGameTextMgr::buildCityBillboardCitySizeString(CvWStringBuffer&, CvCity*, const%NiColorA&)
+CvGameTextMgr::buildCityBillboardIconString(CvWStringBuffer&, CvCity*)
+CvGameTextMgr::buildCityBillboardProductionString(CvWStringBuffer&, CvCity*)
+CvGameTextMgr::getBonusDataForWB(std::vector<CvWBData>&)
+CvGameTextMgr::getBuildingDataForWB(bool, std::vector<CvWBData>&)
+CvGameTextMgr::getCityBillboardFoodbarColors(CvCity*, std::vector<NiColorA>&)
+CvGameTextMgr::getCityBillboardProductionbarColors(CvCity*, std::vector<NiColorA>&)
+CvGameTextMgr::getCityDataForAS(std::vector<CvWBData>&, std::vector<CvWBData>&, std::vector<CvWBData>&)
+CvGameTextMgr::getCorporationDataForWB(bool, std::vector<CvWBData>&)
+CvGameTextMgr::getFontSymbols(std::vector<std::vector<wchar_t>>&, std::vector<int>&)
+CvGameTextMgr::getGlobeLayerName(GlobeLayerTypes, int, CvWString&)
+CvGameTextMgr::getImprovementDataForAS(std::vector<CvWBData>&, std::vector<CvWBData>&)
+CvGameTextMgr::getImprovementDataForWB(std::vector<CvWBData>&)
+CvGameTextMgr::getInterfaceCenterText(CvWString&)
+CvGameTextMgr::getPlotHelp(CvPlot*, CvCity*, CvPlot*, bool, CvWStringBuffer&)
+CvGameTextMgr::getPromotionDataForWB(std::vector<CvWBData>&)
+CvGameTextMgr::getReligionDataForWB(bool, std::vector<CvWBData>&)
+CvGameTextMgr::getTechDataForAS(std::vector<CvWBData>&)
+CvGameTextMgr::getTechDataForWB(std::vector<CvWBData>&)
+CvGameTextMgr::getTerrainDataForWB(std::vector<CvWBData>&, std::vector<CvWBData>&, std::vector<CvWBData>&, std::vector<CvWBData>&)
+CvGameTextMgr::getTerritoryDataForWB(std::vector<CvWBData>&)
+CvGameTextMgr::getTradeScreenHeader(CvWString&, PlayerTypes, PlayerTypes, bool)
+CvGameTextMgr::getTradeScreenIcons(std::vector<std::pair<CvString`CvWidgetDataStruct>>&, PlayerTypes)
+CvGameTextMgr::getTradeScreenTitleIcon(CvString&, CvWidgetDataStruct&, PlayerTypes)
+CvGameTextMgr::getTurnTimerText(CvWString&)
+CvGameTextMgr::getUnitDataForAS(std::vector<CvWBData>&)
+CvGameTextMgr::getUnitDataForWB(std::vector<CvWBData>&)
+CvGameTextMgr::getVisibilityDataForAS(std::vector<CvWBData>&)
+CvGameTextMgr::parseCivInfos(CvWStringBuffer&, CivilizationTypes, bool, bool)
+CvGameTextMgr::parseLeaderShortTraits(CvWStringBuffer&, LeaderHeadTypes)
+CvGameTextMgr::parseLeaderTraits(CvWStringBuffer&, LeaderHeadTypes, CivilizationTypes, bool, bool)
+CvGameTextMgr::setMinimizePopupHelp(CvWString&, const%CvPopupInfo&)
+CvGameTextMgr::setTimeStr(CvWString&, int, bool)
+CvGlobals::getInstance()
+CvGraphicOptionInfo::getDefault() const
+CvImprovementInfo::getArtInfo() const
+CvImprovementInfo::isGoody() const
+CvImprovementInfo::isRequiresRiverSide() const
+CvInfoBase::getDescription(uint) const
+CvInfoBase::getHelp() const
+CvInfoBase::getText() const
+CvInfoBase::getTextKeyWide() const
+CvInfoBase::getType() const
+CvInfoBase::~CvInfoBase()
+CvInitCore::closeInactiveSlots()
+CvInitCore::getArtStyle(PlayerTypes) const
+CvInitCore::getAvailableSlot()
+CvInitCore::getCiv(PlayerTypes) const
+CvInitCore::getCivAdjective(PlayerTypes, uint) const
+CvInitCore::getCivAdjectiveKey(PlayerTypes) const
+CvInitCore::getCivDescription(PlayerTypes, uint) const
+CvInitCore::getCivDescriptionKey(PlayerTypes) const
+CvInitCore::getCivPassword(PlayerTypes) const
+CvInitCore::getCivShortDesc(PlayerTypes, uint) const
+CvInitCore::getCivShortDescKey(PlayerTypes) const
+CvInitCore::getClimateKey(CvWString&) const
+CvInitCore::getColor(PlayerTypes) const
+CvInitCore::getCustomMapOption(int) const
+CvInitCore::getEmail(PlayerTypes) const
+CvInitCore::getEraKey(CvWString&) const
+CvInitCore::getFlagDecal(PlayerTypes) const
+CvInitCore::getForceControl(ForceControlTypes) const
+CvInitCore::getGameSpeedKey(CvWString&) const
+CvInitCore::getHandicap(PlayerTypes) const
+CvInitCore::getHotseat() const
+CvInitCore::getHuman(PlayerTypes) const
+CvInitCore::getLeader(PlayerTypes) const
+CvInitCore::getLeaderName(PlayerTypes, uint) const
+CvInitCore::getLeaderNameKey(PlayerTypes) const
+CvInitCore::getMPOption(MultiplayerOptionTypes) const
+CvInitCore::getMapScriptName() const
+CvInitCore::getMinorNationCiv(PlayerTypes) const
+CvInitCore::getMultiplayer() const
+CvInitCore::getNetID(PlayerTypes) const
+CvInitCore::getNewGame() const
+CvInitCore::getNumDefinedPlayers() const
+CvInitCore::getOption(GameOptionTypes) const
+CvInitCore::getPbem() const
+CvInitCore::getPitboss() const
+CvInitCore::getPlayableCiv(PlayerTypes) const
+CvInitCore::getPythonCheck(PlayerTypes) const
+CvInitCore::getReady(PlayerTypes) const
+CvInitCore::getSavedGame() const
+CvInitCore::getSeaLevelKey(CvWString&) const
+CvInitCore::getSlotClaim(PlayerTypes) const
+CvInitCore::getSlotStatus(PlayerTypes) const
+CvInitCore::getSlotVacant(PlayerTypes) const
+CvInitCore::getSmtpHost(PlayerTypes) const
+CvInitCore::getTeam(PlayerTypes) const
+CvInitCore::getVictory(VictoryTypes) const
+CvInitCore::getWBMapScript() const
+CvInitCore::getWhiteFlag(PlayerTypes) const
+CvInitCore::getWorldSizeKey(CvWString&) const
+CvInitCore::getXMLCheck(PlayerTypes) const
+CvInitCore::init(GameMode)
+CvInitCore::reassignPlayer(PlayerTypes, PlayerTypes)
+CvInitCore::reopenInactiveSlots()
+CvInitCore::resetAdvancedStartPoints()
+CvInitCore::resetGame(CvInitCore*, bool, bool)
+CvInitCore::resetPlayer(PlayerTypes, CvInitCore*, bool, bool)
+CvInitCore::resetPlayers()
+CvInitCore::resetPlayers(CvInitCore*, bool, bool)
+CvInitCore::setActivePlayer(PlayerTypes)
+CvInitCore::setAdminPassword(const%CvWString&, bool)
+CvInitCore::setArtStyle(PlayerTypes, ArtStyleTypes)
+CvInitCore::setCiv(PlayerTypes, CivilizationTypes)
+CvInitCore::setCivAdjective(PlayerTypes, const%CvWString&)
+CvInitCore::setCivDescription(PlayerTypes, const%CvWString&)
+CvInitCore::setCivPassword(PlayerTypes, const%CvWString&, bool)
+CvInitCore::setCivShortDesc(PlayerTypes, const%CvWString&)
+CvInitCore::setClimate(const%CvWString&)
+CvInitCore::setColor(PlayerTypes, PlayerColorTypes)
+CvInitCore::setCustomMapOption(int, CustomMapOptionTypes)
+CvInitCore::setCustomMapOptions(int, const%CustomMapOptionTypes*)
+CvInitCore::setEmail(PlayerTypes, const%CvString&)
+CvInitCore::setEra(const%CvWString&)
+CvInitCore::setFlagDecal(PlayerTypes, const%CvWString&)
+CvInitCore::setForceControl(ForceControlTypes, bool)
+CvInitCore::setGameSpeed(const%CvWString&)
+CvInitCore::setHandicap(PlayerTypes, HandicapTypes)
+CvInitCore::setLeader(PlayerTypes, LeaderHeadTypes)
+CvInitCore::setLeaderName(PlayerTypes, const%CvWString&)
+CvInitCore::setMPOption(MultiplayerOptionTypes, bool)
+CvInitCore::setMapScriptName(const%CvWString&)
+CvInitCore::setMinorNationCiv(PlayerTypes, bool)
+CvInitCore::setMode(GameMode)
+CvInitCore::setNetID(PlayerTypes, int)
+CvInitCore::setOption(GameOptionTypes, bool)
+CvInitCore::setPlayableCiv(PlayerTypes, bool)
+CvInitCore::setPythonCheck(PlayerTypes, const%CvString&)
+CvInitCore::setReady(PlayerTypes, bool)
+CvInitCore::setSeaLevel(const%CvWString&)
+CvInitCore::setSlotClaim(PlayerTypes, SlotClaim)
+CvInitCore::setSlotStatus(PlayerTypes, SlotStatus)
+CvInitCore::setSmtpHost(PlayerTypes, const%CvString&)
+CvInitCore::setTeam(PlayerTypes, TeamTypes)
+CvInitCore::setType(GameType)
+CvInitCore::setType(const%CvWString&)
+CvInitCore::setVictories(int, const%bool*)
+CvInitCore::setVictory(VictoryTypes, bool)
+CvInitCore::setWhiteFlag(PlayerTypes, bool)
+CvInitCore::setWorldSize(const%CvWString&)
+CvInitCore::setXMLCheck(PlayerTypes, const%CvString&)
+CvInterfaceModeInfo::getCursorIndex() const
+CvInterfaceModeInfo::getGotoPlot() const
+CvInterfaceModeInfo::getMissionType() const
+CvLandscapeInfo::getHillScale() const
+CvLandscapeInfo::getHorizontalGameCell() const
+CvLandscapeInfo::getHorizontalVertCnt() const
+CvLandscapeInfo::getPeakScale() const
+CvLandscapeInfo::getPlotsPerCellX() const
+CvLandscapeInfo::getPlotsPerCellY() const
+CvLandscapeInfo::getVerticalGameCell() const
+CvLandscapeInfo::getVerticalVertCnt() const
+CvLandscapeInfo::getWaterHeight() const
+CvLandscapeInfo::getZScale() const
+CvLeaderHeadInfo::getArtInfo() const
+CvMainMenuInfo::getLoading() const
+CvMainMenuInfo::getLoadingSlideshow() const
+CvMainMenuInfo::getScene() const
+CvMainMenuInfo::getSceneNoShader() const
+CvMainMenuInfo::getSoundtrack() const
+CvMapExternal::erasePlots()
+CvMapExternal::findCity(int, int, PlayerTypes, TeamTypes, bool, bool, TeamTypes, DirectionTypes, CvCity*)
+CvMapExternal::getGridHeight() const
+CvMapExternal::getGridWidth() const
+CvMapExternal::getWorldSize()
+CvMapExternal::init(CvMapInitData*)
+CvMapExternal::isPlot(int, int) const
+CvMapExternal::isWrap()
+CvMapExternal::isWrapX()
+CvMapExternal::isWrapY()
+CvMapExternal::numPlots() const
+CvMapExternal::plot(int, int) const
+CvMapExternal::plotByIndex(int) const
+CvMapExternal::plotXToPointX(int)
+CvMapExternal::plotYToPointY(int)
+CvMapExternal::pointToPlot(float, float)
+CvMapExternal::reset(CvMapInitData*)
+CvMapExternal::setupGraphical()
+CvMapExternal::updateCenterUnit()
+CvMapExternal::updateFlagSymbols()
+CvMapExternal::updateFog()
+CvMapExternal::updateMinimapColor()
+CvMapExternal::updateSymbolVisibility()
+CvMapGenerator::GetInstance()
+CvMapGenerator::addBonuses()
+CvMapGenerator::addFeatures()
+CvMapGenerator::addGameElements()
+CvMapGenerator::addGoodies()
+CvMapGenerator::addRivers()
+CvMapGenerator::eraseBonuses()
+CvMapGenerator::eraseFeatures()
+CvMapGenerator::eraseGoodies()
+CvMapGenerator::eraseRivers()
+CvMapGenerator::generateRandomMap()
+CvMessageControl::getInstance()
+CvMessageControl::sendAdvancedStartAction(AdvancedStartActionTypes, PlayerTypes, int, int, int, bool)
+CvMessageControl::sendChangeWar(TeamTypes, bool)
+CvMessageControl::sendJoinGroup(int, int)
+CvMessageControl::sendLaunch(PlayerTypes, VictoryTypes)
+CvMessageControl::sendPing(int, int)
+CvMessageData::createMessage(GameMessageTypes)
+CvMessageData::getType() const
+CvMissionDefinition::getMissionTime() const
+CvMissionDefinition::getMissionType() const
+CvMissionDefinition::getPlot() const
+CvMissionDefinition::getUnit(BattleUnitTypes) const
+CvMissionInfo::getEntityEvent() const
+CvMissionInfo::getTime() const
+CvMissionInfo::isTarget() const
+CvPlayer::addDiplomacy(CvDiploParameters*)
+CvPlayer::addMessage(const%CvTalkingHeadMessage&)
+CvPlayer::addPopup(CvPopupInfo*, bool)
+CvPlayer::buildTradeTable(PlayerTypes, CLinkList<TradeData>&) const
+CvPlayer::canContact(PlayerTypes) const
+CvPlayer::canFound(int, int, bool) const
+CvPlayer::canTradeItem(PlayerTypes, TradeData, bool) const
+CvPlayer::cheat(bool, bool, bool)
+CvPlayer::clearSpaceShipPopups()
+CvPlayer::firstCityExternal(int*, bool) const
+CvPlayer::firstUnitExternal(int*, bool) const
+CvPlayer::getArtStyleType() const
+CvPlayer::getCapitalCity() const
+CvPlayer::getCity(int) const
+CvPlayer::getCivilizationDescription(uint) const
+CvPlayer::getCivilizationType() const
+CvPlayer::getCurrentEra() const
+CvPlayer::getDiplomacy() const
+CvPlayer::getFlagDecal() const
+CvPlayer::getGameMessages() const
+CvPlayer::getGlobeLayerColors(GlobeLayerTypes, int, std::vector<NiColorA>&, std::vector<CvPlotIndicatorData>&) const
+CvPlayer::getHandicapType() const
+CvPlayer::getHeadingTradeString(PlayerTypes, TradeableItems, CvWString&, CvString&) const
+CvPlayer::getID() const
+CvPlayer::getIntroMusicScriptId(PlayerTypes) const
+CvPlayer::getItemTradeString(PlayerTypes, bool, bool, const%TradeData&, CvWString&, CvString&) const
+CvPlayer::getLeaderType() const
+CvPlayer::getMusicScriptId(PlayerTypes) const
+CvPlayer::getName(uint) const
+CvPlayer::getNameKey() const
+CvPlayer::getNetID() const
+CvPlayer::getNumCities() const
+CvPlayer::getNumUnits() const
+CvPlayer::getPbemEmailAddress() const
+CvPlayer::getPlayerColor() const
+CvPlayer::getPlayerTextColorB() const
+CvPlayer::getPlayerTextColorG() const
+CvPlayer::getPlayerTextColorR() const
+CvPlayer::getPopups() const
+CvPlayer::getSmtpHost() const
+CvPlayer::getTeam() const
+CvPlayer::getTradeDenial(PlayerTypes, TradeData) const
+CvPlayer::getUnitArtInfo(UnitTypes, int) const
+CvPlayer::handleDiploEvent(DiploEventTypes, PlayerTypes, int, int)
+CvPlayer::hasBusyUnit() const
+CvPlayer::hasSpaceshipArrived() const
+CvPlayer::init(PlayerTypes)
+CvPlayer::isAlive() const
+CvPlayer::isBarbarian() const
+CvPlayer::isHuman() const
+CvPlayer::isOption(PlayerOptionTypes) const
+CvPlayer::isPbemNewTurn() const
+CvPlayer::isTurnActive() const
+CvPlayer::isTurnDone() const
+CvPlayer::isWhiteFlag() const
+CvPlayer::nextCityExternal(int*, bool) const
+CvPlayer::nextUnitExternal(int*, bool) const
+CvPlayer::popFrontDiplomacy()
+CvPlayer::popFrontPopup()
+CvPlayer::reset(PlayerTypes, bool)
+CvPlayer::setEndTurn(bool)
+CvPlayer::setNetID(int)
+CvPlayer::setOption(PlayerOptionTypes, bool)
+CvPlayer::setPbemEmailAddress(const%char*)
+CvPlayer::setPbemNewTurn(bool)
+CvPlayer::setStartTime(uint)
+CvPlayer::setTurnActive(bool, bool)
+CvPlayer::setTurnActiveForPbem(bool)
+CvPlayer::setupGraphical()
+CvPlayer::showSpaceShip()
+CvPlayer::updateHuman()
+CvPlayer::updateTradeList(PlayerTypes, CLinkList<TradeData>&, const%CLinkList<TradeData>&, const%CLinkList<TradeData>&) const
+CvPlayerAI::AI_getGreeting(PlayerTypes) const
+CvPlayerAI::areStaticsInitialized()
+CvPlayerAI::getPlayerNonInl(PlayerTypes)
+CvPlayerColorInfo::getColorTypePrimary() const
+CvPlayerColorInfo::getColorTypeSecondary() const
+CvPlayerOptionInfo::getDefault() const
+CvPlayerRecord::getMinutesPlayed() const
+CvPlayerRecord::getNumBuildingsBuilt(BuildingTypes) const
+CvPlayerRecord::getNumCitiesBuilt() const
+CvPlayerRecord::getNumCitiesRazed() const
+CvPlayerRecord::getNumGoldenAges() const
+CvPlayerRecord::getNumUnitsBuilt(int) const
+CvPlayerRecord::getNumUnitsKilled(int) const
+CvPlayerRecord::getNumUnitsWasKilled(int) const
+CvPlayerRecord::getReligionFounded(ReligionTypes) const
+CvPlot::checkLateEra() const
+CvPlot::get3DAudioScriptFootstepIndex(int) const
+CvPlot::getAqueductSourceWeight() const
+CvPlot::getAreaIdForGreatWall() const
+CvPlot::getBestDefenderExternal(PlayerTypes, PlayerTypes, const%CvUnit*, bool, bool, bool) const
+CvPlot::getBonusType(TeamTypes) const
+CvPlot::getCenterUnit() const
+CvPlot::getDebugCenterUnit() const
+CvPlot::getFeatureTypeExternal() const
+CvPlot::getFeatureVariety() const
+CvPlot::getFlagSymbol() const
+CvPlot::getImprovementType() const
+CvPlot::getNumVisibleUnits(PlayerTypes) const
+CvPlot::getPlotCity() const
+CvPlot::getPoint() const
+CvPlot::getPointX() const
+CvPlot::getPointY() const
+CvPlot::getRevealedOwner(TeamTypes, bool) const
+CvPlot::getRiverNSDirection() const
+CvPlot::getRiverSymbol() const
+CvPlot::getRiverWEDirection() const
+CvPlot::getRouteSymbol() const
+CvPlot::getSoundScriptId() const
+CvPlot::getSymbolOffsetX(int) const
+CvPlot::getSymbolOffsetY(int) const
+CvPlot::getTerrainTypeExternal() const
+CvPlot::getViewportX() const
+CvPlot::getViewportY() const
+CvPlot::getVisibleBonusState(BonusTypes&, bool&, bool&) const
+CvPlot::getVisibleImprovementState(ImprovementTypes&, bool&) const
+CvPlot::getYield(YieldTypes) const
+CvPlot::headUnitNode() const
+CvPlot::isActiveVisible(bool) const
+CvPlot::isCity(bool, TeamTypes) const
+CvPlot::isFighting() const
+CvPlot::isGoody(TeamTypes) const
+CvPlot::isHills() const
+CvPlot::isIrrigationAvailable(bool) const
+CvPlot::isLake() const
+CvPlot::isLayoutDirty() const
+CvPlot::isLayoutStateDifferent() const
+CvPlot::isNOfRiver() const
+CvPlot::isPeak() const
+CvPlot::isRevealed(TeamTypes, bool) const
+CvPlot::isRiverCrossing(DirectionTypes) const
+CvPlot::isRiverCrossingFlowClockwise(DirectionTypes) const
+CvPlot::isRoute() const
+CvPlot::isVisibleEnemyUnit(PlayerTypes) const
+CvPlot::isWOfRiver() const
+CvPlot::isWaterExternal() const
+CvPlot::nextUnitNode(CLLNode<IDInfo>*) const
+CvPlot::setLayoutDirty(bool)
+CvPlot::setLayoutStateToCurrent()
+CvPlot::shouldDisplayBridge(CvPlot*, PlayerTypes) const
+CvPlot::updateFlagSymbol()
+CvPopupInfo::CvPopupInfo(ButtonPopupTypes, int, int, int, int, bool, bool)
+CvPopupInfo::addPythonButton(const%wchar_t*, const%char*)
+CvPopupInfo::getButtonPopupType() const
+CvPopupInfo::getData1() const
+CvPopupInfo::getData2() const
+CvPopupInfo::getData3() const
+CvPopupInfo::getFlags() const
+CvPopupInfo::getNumPythonButtons() const
+CvPopupInfo::getOnClickedPythonCallback() const
+CvPopupInfo::getOnFocusPythonCallback() const
+CvPopupInfo::getOption1() const
+CvPopupInfo::getOption2() const
+CvPopupInfo::getPendingDelete() const
+CvPopupInfo::getPythonButtonArt(int) const
+CvPopupInfo::getPythonButtonText(int) const
+CvPopupInfo::getPythonModule() const
+CvPopupInfo::getText() const
+CvPopupInfo::read(FDataStreamBase&)
+CvPopupInfo::setButtonPopupType(ButtonPopupTypes)
+CvPopupInfo::setData1(int)
+CvPopupInfo::setData2(int)
+CvPopupInfo::setData3(int)
+CvPopupInfo::setFlags(int)
+CvPopupInfo::setOnClickedPythonCallback(const%char*)
+CvPopupInfo::setOnFocusPythonCallback(const%char*)
+CvPopupInfo::setOption1(bool)
+CvPopupInfo::setOption2(bool)
+CvPopupInfo::setPendingDelete(bool)
+CvPopupInfo::setPythonModule(const%char*)
+CvPopupInfo::setText(const%wchar_t*)
+CvPopupInfo::write(FDataStreamBase&) const
+CvPopupInfo::~CvPopupInfo()
+CvRandom::CvRandom()
+CvRandom::get(uint16_t, const%char*)
+CvRandom::getFloat()
+CvRandom::init(unsigned%long)
+CvRandom::~CvRandom()
+CvReplayInfo::CvReplayInfo()
+CvReplayInfo::getMapHeight() const
+CvReplayInfo::getMapWidth() const
+CvReplayInfo::getMinimapPixels() const
+CvReplayInfo::getModName() const
+CvReplayInfo::read(FDataStreamBase&)
+CvRiverModelInfo::getBorderFile() const
+CvRiverModelInfo::getConnectString() const
+CvRiverModelInfo::getDeltaString() const
+CvRiverModelInfo::getModelFile() const
+CvRiverModelInfo::getRotateString() const
+CvRiverModelInfo::getTextureIndex() const
+CvRouteModelInfo::getConnectString() const
+CvRouteModelInfo::getLateModelFile() const
+CvRouteModelInfo::getModelConnectString() const
+CvRouteModelInfo::getModelFile() const
+CvRouteModelInfo::getRotateString() const
+CvRouteModelInfo::getRouteType() const
+CvRouteModelInfo::isAnimated() const
+CvScalableInfo::getInterfaceScale() const
+CvScalableInfo::getScale() const
+CvSelectionGroup::NotifyEntity(MissionTypes)
+CvSelectionGroup::addUnit(CvUnit*, bool)
+CvSelectionGroup::canAllMove() const
+CvSelectionGroup::canDoInterfaceMode(InterfaceModeTypes)
+CvSelectionGroup::canDoInterfaceModeAt(InterfaceModeTypes, CvPlot*)
+CvSelectionGroup::canMoveInto(CvPlot*, bool)
+CvSelectionGroup::canMoveOrAttackInto(CvPlot*, bool)
+CvSelectionGroup::clearUnits()
+CvSelectionGroup::deleteUnitNode(CLLNode<IDInfo>*)
+CvSelectionGroup::getHeadUnit() const
+CvSelectionGroup::getNumUnits() const
+CvSelectionGroup::getUnitIndex(CvUnit*, int) const
+CvSelectionGroup::headMissionQueueNodeExternal() const
+CvSelectionGroup::headUnitNode() const
+CvSelectionGroup::init(int, PlayerTypes)
+CvSelectionGroup::isBusy() const
+CvSelectionGroup::lastMissionPlot() const
+CvSelectionGroup::nextMissionQueueNode(CLLNode<MissionData>*) const
+CvSelectionGroup::nextUnitNode(CLLNode<IDInfo>*) const
+CvSelectionGroup::plotExternal() const
+CvSelectionGroup::readyToSelect(bool)
+CvSelectionGroup::reset(int, PlayerTypes, bool)
+CvSelectionGroup::uninit()
+CvSelectionGroupAI::CvSelectionGroupAI()
+CvSelectionGroupAI::~CvSelectionGroupAI()
+CvSlideShowRandomInfo::getPath()
+CvSpaceShipInfo::getArtType()
+CvSpaceShipInfo::getCameraUpAxis()
+CvSpaceShipInfo::getEventCode()
+CvSpaceShipInfo::getNodeName()
+CvSpaceShipInfo::getPartNumber()
+CvSpaceShipInfo::getProjectName()
+CvSpaceShipInfo::getProjectType()
+CvSpaceShipInfo::getSpaceShipInfoType()
+CvStatistics::getPlayerRecord(int)
+CvTalkingHeadMessage::CvTalkingHeadMessage(int, int, LPCWSTR, const%char*, InterfaceMessageTypes, const%char*, ColorTypes, int, int, bool, bool)
+CvTalkingHeadMessage::getDescription() const
+CvTalkingHeadMessage::getFlashColor() const
+CvTalkingHeadMessage::getFromPlayer() const
+CvTalkingHeadMessage::getIcon() const
+CvTalkingHeadMessage::getLength() const
+CvTalkingHeadMessage::getMessageType() const
+CvTalkingHeadMessage::getOffScreenArrows() const
+CvTalkingHeadMessage::getOnScreenArrows() const
+CvTalkingHeadMessage::getSound() const
+CvTalkingHeadMessage::getTarget() const
+CvTalkingHeadMessage::getTurn() const
+CvTalkingHeadMessage::getX() const
+CvTalkingHeadMessage::getY() const
+CvTalkingHeadMessage::setFromPlayer(PlayerTypes)
+CvTalkingHeadMessage::setLength(int)
+CvTalkingHeadMessage::setShown(bool)
+CvTalkingHeadMessage::setTarget(ChatTargetTypes)
+CvTalkingHeadMessage::~CvTalkingHeadMessage()
+CvTeam::canDeclareWar(TeamTypes) const
+CvTeam::finalizeProjectArtTypes()
+CvTeam::getCompletedSpaceshipProjects(std::map<ProjectTypes`int>&) const
+CvTeam::getNumMembers() const
+CvTeam::getProjectArtType(ProjectTypes, int) const
+CvTeam::getProjectDefaultArtType(ProjectTypes) const
+CvTeam::getProjectPartNumber(ProjectTypes, bool) const
+CvTeam::hasLaunched() const
+CvTeam::init(TeamTypes)
+CvTeam::isAtWar(TeamTypes) const
+CvTeam::isProjectAndArtMaxedOut(ProjectTypes) const
+CvTeam::reset(TeamTypes, bool)
+CvTeam::setProjectArtType(ProjectTypes, int, int)
+CvTeam::setProjectDefaultArtType(ProjectTypes, int)
+CvTeamAI::getTeam(TeamTypes)
+CvTerrainInfo::getArtDefineTag() const
+CvTerrainPlaneInfo::getBaseTexture() const
+CvTerrainPlaneInfo::getCloseAlpha() const
+CvTerrainPlaneInfo::getFogType() const
+CvTerrainPlaneInfo::getMaterialAlpha() const
+CvTerrainPlaneInfo::getTextureScalingU() const
+CvTerrainPlaneInfo::getTextureScalingV() const
+CvTerrainPlaneInfo::getTextureScrollRateU() const
+CvTerrainPlaneInfo::getTextureScrollRateV() const
+CvTerrainPlaneInfo::getZHeight() const
+CvTerrainPlaneInfo::isGroundPlane() const
+CvTerrainPlaneInfo::isVisible() const
+CvThroneRoomCamera::getFileName()
+CvThroneRoomInfo::getAnimation()
+CvThroneRoomInfo::getEvent()
+CvThroneRoomInfo::getFromState()
+CvThroneRoomInfo::getNodeName()
+CvThroneRoomInfo::getToState()
+CvUnit::NotifyEntity(MissionTypes)
+CvUnit::airCurrCombatStrFloat(const%CvUnit*) const
+CvUnit::airMaxCombatStrFloat(const%CvUnit*) const
+CvUnit::atPlot(const%CvPlot*) const
+CvUnit::canAirAttack() const
+CvUnit::canFight() const
+CvUnit::canMove() const
+CvUnit::cheat(bool, bool, bool)
+CvUnit::currCombatStrFloat(const%CvPlot*, const%CvUnit*) const
+CvUnit::getAnimationMaxSpeed() const
+CvUnit::getAnimationPadTime() const
+CvUnit::getArtInfo(int, EraTypes) const
+CvUnit::getBuildType() const
+CvUnit::getButton() const
+CvUnit::getCombatTimer() const
+CvUnit::getCombatUnit() const
+CvUnit::getDamage() const
+CvUnit::getDomainType() const
+CvUnit::getFacingDirection(bool) const
+CvUnit::getFormationType() const
+CvUnit::getGroup() const
+CvUnit::getGroupDefinitions() const
+CvUnit::getGroupSize() const
+CvUnit::getHealthBarModifier() const
+CvUnit::getHotKeyNumber()
+CvUnit::getID() const
+CvUnit::getIDInfo() const
+CvUnit::getLayerAnimationPaths(std::vector<AnimationPathTypes>&) const
+CvUnit::getLeaderUnitType() const
+CvUnit::getName(uint) const
+CvUnit::getNationality() const
+CvUnit::getRenderPriority(UnitSubEntityTypes, int, int) const
+CvUnit::getSelectionSoundScript() const
+CvUnit::getSubUnitsAlive() const
+CvUnit::getTeam() const
+CvUnit::getUnitGroupRequired(int) const
+CvUnit::getUnitType() const
+CvUnit::getViewportX() const
+CvUnit::getViewportY() const
+CvUnit::getVisualOwner(TeamTypes) const
+CvUnit::hasMoved() const
+CvUnit::isAttacking() const
+CvUnit::isDead() const
+CvUnit::isDefending() const
+CvUnit::isFighting() const
+CvUnit::isInfoBarDirty() const
+CvUnit::isInvisible(TeamTypes, bool, bool) const
+CvUnit::isMechUnit() const
+CvUnit::isPromotionReady() const
+CvUnit::isRanged() const
+CvUnit::isRenderAlways() const
+CvUnit::isRenderBelowWater() const
+CvUnit::isSuicide() const
+CvUnit::isWaiting() const
+CvUnit::maxCombatStrFloat(const%CvPlot*, const%CvUnit*) const
+CvUnit::maxHitPoints() const
+CvUnit::plotExternal() const
+CvUnit::setInfoBarDirty(bool)
+CvUnit::shouldShowEnemyGlow(TeamTypes) const
+CvUnit::shouldShowFoundBorders() const
+CvUnitFormationInfo::CvUnitFormationInfo()
+CvUnitFormationInfo::addUnitEntry(const%CvUnitEntry&)
+CvUnitFormationInfo::getEventTypes() const
+CvUnitFormationInfo::getFormationType() const
+CvUnitFormationInfo::getGreatUnitEntry(int) const
+CvUnitFormationInfo::getNumUnitEntries() const
+CvUnitFormationInfo::getSiegeUnitEntry(int) const
+CvUnitFormationInfo::getUnitEntry(int) const
+CvVictoryInfo::isPermanent() const
+CvWaterPlaneInfo::getBaseTexture() const
+CvWaterPlaneInfo::getMaterialAlpha() const
+CvWaterPlaneInfo::getTextureScaling() const
+CvWaterPlaneInfo::getTextureScrollRateU() const
+CvWaterPlaneInfo::getTextureScrollRateV() const
+CvWaterPlaneInfo::getTransitionTexture() const
+CvWorldInfo::getDefaultPlayers() const
+CvWorldPickerInfo::getClimatePath(int)
+CvWorldPickerInfo::getMapName()
+CvWorldPickerInfo::getModelFile()
+CvWorldPickerInfo::getNumClimates()
+CvWorldPickerInfo::getNumSizes()
+CvWorldPickerInfo::getNumWaterLevelDecals()
+CvWorldPickerInfo::getNumWaterLevelGloss()
+CvWorldPickerInfo::getSize(int)
+CvWorldPickerInfo::getWaterLevelDecalPath(int)
+CvWorldPickerInfo::getWaterLevelGlossPath(int)
+CvXMLLoadUtility::CleanUpGlobalVariables()
+CvXMLLoadUtility::CvXMLLoadUtility()
+CvXMLLoadUtility::LoadBasicInfos()
+CvXMLLoadUtility::LoadGlobalText()
+CvXMLLoadUtility::LoadGraphicOptions()
+CvXMLLoadUtility::LoadPlayerOptions()
+CvXMLLoadUtility::LoadPostMenuGlobals()
+CvXMLLoadUtility::LoadPreMenuGlobals()
+CvXMLLoadUtility::ResetGlobalEffectInfo()
+CvXMLLoadUtility::ResetLandscapeInfo()
+CvXMLLoadUtility::SetGlobalArtDefines()
+CvXMLLoadUtility::SetGlobalDefines()
+CvXMLLoadUtility::SetGlobalTypes()
+CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
+CvXMLLoadUtility::SetupGlobalLandscapeInfo()
+CvXMLLoadUtility::~CvXMLLoadUtility()
+CyArgsList::add(const%char*)
+CyArgsList::add(const%char*, int)
+CyArgsList::add(const%wchar_t*)
+CyArgsList::add(float)
+CyArgsList::add(int)
+CyArgsList::add(void*)
+CyArgsList::makeFunctionArgs()
+CyCity::CyCity(CvCity*)
+CyPlot::CyPlot(CvPlot*)
+CyPlot::getPoint() const
+CyUnit::CyUnit(CvUnit*)
+PopupReturn::read(FDataStreamBase*)
+PopupReturn::write(FDataStreamBase*) const
+directionAngle(DirectionTypes)
+estimateDirection(const%CvPlot*, const%CvPlot*)
+getCity(IDInfo)
+getUnit(IDInfo)
+isCardinalDirection(DirectionTypes)
+setTradeItem(TradeData*, TradeableItems, int)
+shuffle(int, CvRandom&)

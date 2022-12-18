@@ -1,0 +1,24 @@
+#define DllExport   __declspec( dllexport )
+#define DllExport __declspec( dllexport )
+/*DllExport*/ bool CvGame::cyclePlotUnits(const CvPlot* pPlot, bool bForward, bool bAuto, int iCount) const
+/*DllExport*/ bool CvPlayer::isBarbarian() const
+/*DllExport*/ bool CvPlot::isFighting() const
+/*DllExport*/ bool CvSelectionGroup::canMoveInto(CvPlot* pPlot, bool bAttack)
+/*DllExport*/ bool CvSelectionGroup::canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar)
+/*DllExport*/ bool CvUnit::isFighting() const
+/*DllExport*/ void CvCity::updateSelectedCity(bool bTestProduction)
+/*DllExport*/ void CvGame::setFinalInitialized(bool bNewValue)
+/*DllExport*/ void CvGame::updateSelectionList()
+DllExport CvArtInfo##name * get##name##ArtInfo(const char *szArtDefineTag) const; \
+DllExport CvPlayerAI& CvPlayerAI::getPlayerNonInl(PlayerTypes ePlayer) ``` DUPLICATE DllExport in .cppCode
+DllExport PopupReturn &operator=(const PopupReturn &source);
+DllExport const CvPopupInfo& operator=(const CvPopupInfo& other);
+DllExport void DLLPublishToPython() ``` CPP ONLY
+enum DllExport FracVals
+struct DllExport CvFlyoutMenuData
+struct DllExport CvGlobeLayerData
+struct DllExport CvPlotIndicatorData
+struct DllExport CvWBData
+struct DllExport PBGameSetupData
+struct DllExport PBPlayerAdminData
+struct DllExport PBPlayerSetupData
