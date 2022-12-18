@@ -70,3 +70,4 @@ UserSettings/
 /.idea
 /cmake-build-debug
 /CMakeLists.txt
+DevExtras/.vs/
