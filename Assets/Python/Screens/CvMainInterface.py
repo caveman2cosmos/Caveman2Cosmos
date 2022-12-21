@@ -2899,7 +2899,7 @@ class CvMainInterface:
 				szRate = u"+%d.%02d" % (iRate/100, iRate%100)
 				szTxt = TRNSLTR.getText("INTERFACE_CITY_COMMERCE_RATE_FLOAT", (GC.getCommerceInfo(CommerceTypes.COMMERCE_CULTURE).getChar(), GC.getCultureLevelInfo(CyCity.getCultureLevel()).getTextKey(), szRate))
 
-			if iRate > 0:
+			if iRate > 0 and iCultureTreshold > 0:
 				# Culture Turns
 				iCultureTimes100 = CyCity.getCultureTimes100(iPlayer)
 				iCultureLeftTimes100 = 100 * iCultureTreshold - iCultureTimes100
@@ -2930,12 +2930,15 @@ class CvMainInterface:
 				screen.setBarPercentage("GreatPeopleBar", InfoBarTypes.INFOBAR_RATE, iGreatPeopleRate / (fGreatPeopleTreshold - iGreatPeopleProgress + 0.001))
 				screen.show("GreatPeopleBar")
 
-			iFirst = float(CyCity.getCultureTimes100(iPlayer)) / float(100 * iCultureTreshold)
-			screen.setBarPercentage("CultureBar", InfoBarTypes.INFOBAR_STORED, iFirst)
-			if iFirst == 1:
-				screen.setBarPercentage("CultureBar", InfoBarTypes.INFOBAR_RATE, float(CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE)) / float(iCultureTreshold))
+			if iCultureTreshold > 0:
+				iFirst = float(CyCity.getCultureTimes100(iPlayer)) / float(100 * iCultureTreshold)
+				screen.setBarPercentage("CultureBar", InfoBarTypes.INFOBAR_STORED, iFirst)
+				if iFirst == 1:
+					screen.setBarPercentage("CultureBar", InfoBarTypes.INFOBAR_RATE, float(CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE)) / float(iCultureTreshold))
+				else:
+					screen.setBarPercentage("CultureBar", InfoBarTypes.INFOBAR_RATE, (float(CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE)) / float(iCultureTreshold)) / (1 - iFirst))
 			else:
-				screen.setBarPercentage("CultureBar", InfoBarTypes.INFOBAR_RATE, (float(CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE)) / float(iCultureTreshold)) / (1 - iFirst))
+				screen.setBarPercentage("CultureBar", InfoBarTypes.INFOBAR_STORED, 100)
 			screen.show("CultureBar")
 
 

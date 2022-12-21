@@ -2109,10 +2109,11 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		}
 	}
 	missionNode = headMissionQueueNode();
-	OutputDebugString(CvString::format("%S part 3 continueMission %d...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
 
 	if (missionNode && getNumUnits() > 0)
 	{
+		OutputDebugString(CvString::format("%S part 3 continueMission %d...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
+
 		if (!bDone)
 		{
 			switch (missionNode->m_data.eMissionType)
@@ -2169,11 +2170,6 @@ bool CvSelectionGroup::continueMission(int iSteps)
 				}
 				case MISSION_BUILD:
 				{
-					// XXX what happens if two separate worker groups are both building the mine...
-					/*if (plot()->getBuildType() != ((BuildTypes)(missionNode->m_data.iData1)))
-					{
-						bDone = true;
-					}*/
 					break;
 				}
 				default:

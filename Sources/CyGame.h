@@ -274,8 +274,6 @@ public:
 	void log(const char* file, char* str);
 	void logw(std::wstring str);
 
-	int getCultureThreshold(CultureLevelTypes eLevel) const;
-
 	void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield);
 
 	bool isCivEverActive(CivilizationTypes eCivilization) const;

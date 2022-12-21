@@ -17045,12 +17045,13 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 						changeAdvancedStartPoints(-iCost);
 					}
 				}
-
-				// Remove Culture from the city
-				else
+				else // Remove Culture from the city
 				{
-					CultureLevelTypes eLevel = (CultureLevelTypes)std::max(0, pCity->getCultureLevel() - 1);
-					pCity->setCulture(getID(), pCity->getCultureThreshold(eLevel), true, true);
+					const CultureLevelTypes eNewLevel = static_cast<CultureLevelTypes>(pCity->getCultureLevel() - 1);
+					if (eNewLevel > NO_CULTURELEVEL)
+					{
+						pCity->setCulture(getID(), GC.getGame().getCultureThreshold(eNewLevel), true, true);
+					}
 					changeAdvancedStartPoints(iCost);
 				}
 			}
@@ -17537,16 +17538,16 @@ int CvPlayer::getAdvancedStartCultureCost(bool bAdd, const CvCity* pCity) const
 
 		if (bAdd)
 		{
-			iCost *= pCity->getCultureThreshold((CultureLevelTypes)(pCity->getCultureLevel() + 1)) - pCity->getCulture(getID());
+			iCost *= pCity->getCultureThreshold() - pCity->getCulture(getID());
 		}
 		else
 		{
 			// Need to have enough culture to remove it
-			if (pCity->getCultureLevel() <= 0)
+			if (pCity->getCultureLevel() < 1)
 			{
 				return -1;
 			}
-			iCost *= pCity->getCulture(getID()) - pCity->getCultureThreshold((CultureLevelTypes)(pCity->getCultureLevel() - 1));
+			iCost *= pCity->getCulture(getID()) - GC.getGame().getCultureThreshold(static_cast<CultureLevelTypes>(pCity->getCultureLevel() - 1));
 		}
 		iCost /= 100;
 	}
