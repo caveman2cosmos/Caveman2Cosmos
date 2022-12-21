@@ -2644,23 +2644,6 @@
 		<Russian>Êîììåðöèÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYBAR__CULTURETURNS_HOVER</Tag>
-		<English>When checked, shows the number of turns until the city's borders expand due to culture ([ICON_CULTURE]).</English>
-		<French>Lorsque activé, affiche le nombre de tours restants avant l'expansion des limites de la ville en raison de sa Culture ([ICON_CULTURE]).</French>
-		<German>Zeigt die Anzahl der Runden an, bis sich die Kulturgrenzen ([ICON_CULTURE]) einer Stadt erweitern</German>
-		<Italian>Quando è selezionato, mostra il numero di turni mancanti per la successiva espansione culturale ([ICON_CULTURE]).</Italian>
-		<Spanish>Cuando se activa, muestra el número de turnos restantes para la expansión cultural ([ICON_CULTURE]) de las fronteras de la ciudad.</Spanish>
-		<Russian>Êîãäà óñòàíîâëåí, îòîáðàæàåò ÷èñëî õîäîâ ïîêà ãðàíèöû ãîðîäà ðàñøèðÿòñÿ èç-çà êóëüòóðû ([ICON_CULTURE]).</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_CITYBAR__CULTURETURNS_TEXT</Tag>
-		<English>Culture Turns</English>
-		<French>Expansion Culturelle</French>
-		<German>Kultur</German>
-		<Italian>Turni culturali</Italian>
-		<Russian>Õîäîâ êóëüòóðû</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_CITYBAR__DRAFTANGER_HOVER</Tag>
 		<English>When checked, shows the number of angry population ([ICON_ANGRYPOP]) due to drafting and the number of turns left on the timer.</English>
 		<French>Lorsque activé, affiche le nombre de population mécontente ([ICON_ANGRYPOP]) en raison de la conscription et le nombre de tours restants dans cette situation.</French>

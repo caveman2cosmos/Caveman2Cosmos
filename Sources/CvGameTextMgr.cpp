@@ -8630,10 +8630,6 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				// if we over the city, then do an array of all the plots
 				if (pPlot->getPlotCity() != NULL)
 				{
-					szTempBuffer.Format(L"Max culture level = %d ", pCity->getMaxCultureLevelAmongPlayers());
-					szString.append(szTempBuffer);
-					szString.append(NEWLINE);
-
 					// check avoid growth
 					if (bAvoidGrowth || bIgnoreGrowth)
 					{
@@ -9964,41 +9960,40 @@ void CvGameTextMgr::setCityBarHelp(CvWStringBuffer &szString, CvCity* pCity)
 	}
 	// BUG - Building Icons - end
 
-	// BUG - Culture Turns - start
-	int iCultureRate = pCity->getCommerceRateTimes100(COMMERCE_CULTURE);
-	if (iCultureRate > 0 && getBugOptionBOOL("CityBar__CultureTurns", true, "BUG_CITYBAR_CULTURE_TURNS"))
 	{
-		if (pCity->getCultureLevel() != NO_CULTURELEVEL)
+		const int iThreshold = pCity->getCultureThreshold();
+		if (iThreshold > 0)
 		{
-			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_CULTURE",
-				pCity->getCulture(pCity->getOwner()), pCity->getCultureThreshold(),
-				GC.getCultureLevelInfo(pCity->getCultureLevel()).getTextKeyWide(), pCity->getCultureLevel()));
+			szString.append(
+				gDLL->getText(
+					"TXT_KEY_CITY_BAR_CULTURE",
+					pCity->getCulture(pCity->getOwner()), iThreshold,
+					GC.getCultureLevelInfo(pCity->getCultureLevel()).getTextKeyWide(),
+					GC.getCultureLevelInfo(pCity->getCultureLevel()).getLevel()
+				)
+			);
+			const int iCultureRate = pCity->getCommerceRateTimes100(COMMERCE_CULTURE);
+			if (iCultureRate > 0)
+			{
+				// all values are *100
+				const int iCultureLeft = 100 * iThreshold - pCity->getCultureTimes100(pCity->getOwner());
+				const int iCultureTurns = (iCultureLeft + iCultureRate - 1) / iCultureRate;
+				szString.append(L" ");
+				szString.append(gDLL->getText("INTERFACE_CITY_TURNS", iCultureTurns));
+			}
 		}
 		else
 		{
-			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_CULTURE_NO_LEVEL",
-			pCity->getCulture(pCity->getOwner()), pCity->getCultureThreshold(),
-			GC.getCultureLevelInfo(pCity->getCultureLevel()).getTextKeyWide(), pCity->getCultureLevel()));
-		}
-		// all values are *100
-		int iCulture = pCity->getCultureTimes100(pCity->getOwner());
-		int iCultureLeft = 100 * pCity->getCultureThreshold() - iCulture;
-		int iCultureTurns = (iCultureLeft + iCultureRate - 1) / iCultureRate;
-		szString.append(L" ");
-		szString.append(gDLL->getText("INTERFACE_CITY_TURNS", iCultureTurns));
-	}
-	else
-	{
-		// unchanged
-		if (pCity->getCultureLevel() != NO_CULTURELEVEL)
-		{
-			szString.append(gDLL->getText("TXT_KEY_CITY_BAR_CULTURE",
-				pCity->getCulture(pCity->getOwner()), pCity->getCultureThreshold(),
-				GC.getCultureLevelInfo(pCity->getCultureLevel()).getTextKeyWide(),
-				GC.getCultureLevelInfo(pCity->getCultureLevel()).getTextKeyWide(), pCity->getCultureLevel()));
+			szString.append(
+				gDLL->getText(
+					"TXT_KEY_CITY_BAR_CULTURE_MAX",
+					pCity->getCulture(pCity->getOwner()),
+					GC.getCultureLevelInfo(pCity->getCultureLevel()).getTextKeyWide(),
+					GC.getCultureLevelInfo(pCity->getCultureLevel()).getLevel()
+				)
+			);
 		}
 	}
-	// BUG - Culture Turns - end
 
 	// BUG - Great Person Turns - start
 	int iGppRate = pCity->getGreatPeopleRate();

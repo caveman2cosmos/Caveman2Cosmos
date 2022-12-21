@@ -2181,12 +2181,12 @@ class CvEventManager:
 		CyUnit, iPlayer, CyCity = argsList
 
 		aWonderTuple = self.aWonderTuple
-		if "LASCAUX" in aWonderTuple[0]:
-			if iPlayer == aWonderTuple[4][aWonderTuple[0].index("LASCAUX")]:
-				CyCity.changeCulture(iPlayer, CyCity.getCultureThreshold() /10, True)
-				iCount = CyCity.getAddedFreeSpecialistCount(GC.getInfoTypeForString("SPECIALIST_GREAT_ARTIST"))
-				for i in xrange(iCount):
-					CyCity.changeCulture(iPlayer, CyCity.getCultureThreshold() / 20, True)
+		if "LASCAUX" in aWonderTuple[0] and iPlayer == aWonderTuple[4][aWonderTuple[0].index("LASCAUX")] and CyCity.getCultureThreshold() > 0:
+
+			CyCity.changeCulture(iPlayer, CyCity.getCultureThreshold() / 10, True)
+			iCount = CyCity.getAddedFreeSpecialistCount(GC.getInfoTypeForString("SPECIALIST_GREAT_ARTIST"))
+			for i in xrange(iCount):
+				CyCity.changeCulture(iPlayer, CyCity.getCultureThreshold() / 20, True)
 
 
 	def onTechAcquired(self, argsList):

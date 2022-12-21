@@ -284,6 +284,7 @@ void CyInfoPythonInterface3()
 
 	python::class_<CvCultureLevelInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvCultureLevelInfo", python::no_init)
 		.def("getSpeedThreshold", &CvCultureLevelInfo::getSpeedThreshold, "int ()")
+		.def("getLevel", &CvCultureLevelInfo::getLevel, "int ()")
 	;
 
 	python::class_<CvEraInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvEraInfo", python::no_init)

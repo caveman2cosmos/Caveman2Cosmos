@@ -12644,109 +12644,90 @@ bool CvUnitAI::AI_guardSpy(int iRandomPercent)
 	int iBestValue = 0;
 	const CvPlot* pBestPlot = NULL;
 	const CvPlot* pBestGuardPlot = NULL;
+	const bool bCultureVictoryValid = GC.getGame().culturalVictoryValid();
 
 	foreach_(const CvCity * pLoopCity, GET_PLAYER(getOwner()).cities())
 	{
-		if (AI_plotValid(pLoopCity->plot()))
+		if (!AI_plotValid(pLoopCity->plot()) || pLoopCity->plot()->isVisibleEnemyUnit(this)
+		|| getDomainType() == DOMAIN_LAND && pLoopCity->area() != area() && !getGroup()->canMoveAllTerrain())
 		{
-			if (!(pLoopCity->plot()->isVisibleEnemyUnit(this)))
+			continue;
+		}
+		int iValue = 0;
+
+		if (GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE4))
+		{
+			if (pLoopCity->isCapital())
 			{
-				/************************************************************************************************/
-				/* BETTER_BTS_AI_MOD					  08/19/09								jdog5000	  */
-				/*																							  */
-				/* Unit AI, Efficiency																		  */
-				/************************************************************************************************/
-								// BBAI efficiency: check area for land units
-				if ((getDomainType() == DOMAIN_LAND) && (pLoopCity->area() != area()) && !(getGroup()->canMoveAllTerrain()))
-				{
-					continue;
-				}
+				iValue += 30;
+			}
+			else if (pLoopCity->isProductionProject())
+			{
+				iValue += 5;
+			}
+		}
 
-				int iValue = 0;
+		if (bCultureVictoryValid
+		&& GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3)
+		&& pLoopCity->getCultureLevel() >= GC.getGame().culturalVictoryCultureLevel())
+		{
+			iValue += 10;
+		}
 
-				if (GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_SPACE4))
-				{
-					if (pLoopCity->isCapital())
-					{
-						iValue += 30;
-					}
-					else if (pLoopCity->isProductionProject())
-					{
-						iValue += 5;
-					}
-				}
+		if (pLoopCity->isProductionUnit())
+		{
+			if (isLimitedUnit(pLoopCity->getProductionUnit()))
+			{
+				iValue += 4;
+			}
+		}
+		else if (pLoopCity->isProductionBuilding())
+		{
+			if (isLimitedWonder(pLoopCity->getProductionBuilding()))
+			{
+				iValue += 5;
+			}
+		}
+		else if (pLoopCity->isProductionProject())
+		{
+			if (isLimitedProject(pLoopCity->getProductionProject()))
+			{
+				iValue += 6;
+			}
+		}
 
-				if (GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3))
+		if (iValue > 0)
+		{
+			if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_GUARD_SPY, getGroup()) == 0)
+			{
+				int iPathTurns;
+				if (generatePath(pLoopCity->plot(), 0, true, &iPathTurns))
 				{
-					if (pLoopCity->getCultureLevel() >= (GC.getNumCultureLevelInfos() - 2))
-					{
-						iValue += 10;
-					}
-				}
+					iValue *= 100 + GC.getGame().getSorenRandNum(iRandomPercent, "AI Guard Spy");
+					//iValue /= 100;
+					iValue /= iPathTurns + 1;
 
-				if (pLoopCity->isProductionUnit())
-				{
-					if (isLimitedUnit(pLoopCity->getProductionUnit()))
+					if (iValue > iBestValue)
 					{
-						iValue += 4;
-					}
-				}
-				else if (pLoopCity->isProductionBuilding())
-				{
-					if (isLimitedWonder(pLoopCity->getProductionBuilding()))
-					{
-						iValue += 5;
-					}
-				}
-				else if (pLoopCity->isProductionProject())
-				{
-					if (isLimitedProject(pLoopCity->getProductionProject()))
-					{
-						iValue += 6;
-					}
-				}
-				/************************************************************************************************/
-				/* BETTER_BTS_AI_MOD					   END												  */
-				/************************************************************************************************/
-
-				if (iValue > 0)
-				{
-					if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopCity->plot(), MISSIONAI_GUARD_SPY, getGroup()) == 0)
-					{
-						int iPathTurns;
-						if (generatePath(pLoopCity->plot(), 0, true, &iPathTurns))
-						{
-							iValue *= 100 + GC.getGame().getSorenRandNum(iRandomPercent, "AI Guard Spy");
-							//iValue /= 100;
-							iValue /= iPathTurns + 1;
-
-							if (iValue > iBestValue)
-							{
-								iBestValue = iValue;
-								pBestPlot = getPathEndTurnPlot();
-								pBestGuardPlot = pLoopCity->plot();
-							}
-						}
+						iBestValue = iValue;
+						pBestPlot = getPathEndTurnPlot();
+						pBestGuardPlot = pLoopCity->plot();
 					}
 				}
 			}
 		}
 	}
 
-	if ((pBestPlot != NULL) && (pBestGuardPlot != NULL))
+	if (pBestPlot && pBestGuardPlot)
 	{
 		if (atPlot(pBestGuardPlot))
 		{
 			getGroup()->pushMission(MISSION_SKIP, -1, -1, 0, false, false, MISSIONAI_GUARD_SPY, pBestGuardPlot);
 			return true;
 		}
-		else
-		{
-			FAssert(!atPlot(pBestPlot));
-			return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0, false, false, MISSIONAI_GUARD_SPY, pBestGuardPlot);
-		}
+		FAssert(!atPlot(pBestPlot));
+		return getGroup()->pushMissionInternal(MISSION_MOVE_TO, pBestPlot->getX(), pBestPlot->getY(), 0, false, false, MISSIONAI_GUARD_SPY, pBestGuardPlot);
 	}
-
 	return false;
 }
 

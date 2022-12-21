@@ -131,7 +131,7 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 				for cityX in CyPlayerX.cities():
 					if cityX.getFoodTurnsLeft() == 1 and not cityX.isFoodProduction() and not cityX.AI_isEmphasize(5):
 						iGrowthCount += 1
-					if bCheck2 and cityX.getCultureLevel() != GC.getNumCultureLevelInfos() - 1:
+					if bCheck2 and cityX.getCultureThreshold() > 0:
 						if cityX.getCulture(iPlayerX) + cityX.getCommerceRate(CommerceTypes.COMMERCE_CULTURE) >= cityX.getCultureThreshold():
 							msg = TRNSLTR.getText("TXT_KEY_MORECIV4LERTS_CITY_TO_EXPAND",(cityX.getName(),))
 							CvUtil.sendMessage(msg, iPlayer, EVENT_MESSAGE_TIME_LONG, icon, -1, cityX.getX(), cityX.getY(), True, True)

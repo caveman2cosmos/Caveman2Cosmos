@@ -10311,7 +10311,6 @@ int CvCity::getNaturalDefense() const
 	{
 		return 0;
 	}
-
 	return GC.getCultureLevelInfo(getCultureLevel()).getCityDefenseModifier();
 }
 
@@ -10328,7 +10327,6 @@ int CvCity::getDefenseModifier(bool bIgnoreBuilding) const
 	{
 		return 0;
 	}
-
 	return (std::max(getExtraMinDefense(), ((getTotalDefense(bIgnoreBuilding) * (GC.getMAX_CITY_DEFENSE_DAMAGE() - getDefenseDamage())) / GC.getMAX_CITY_DEFENSE_DAMAGE())));
 }
 
@@ -10643,37 +10641,22 @@ CultureLevelTypes CvCity::getCultureLevel() const
 	return m_eCultureLevel;
 }
 
-
 int CvCity::getCultureThreshold() const
 {
-	return getCultureThreshold(getCultureLevel());
-}
-
-int CvCity::getCultureThreshold(CultureLevelTypes eLevel) const
-{
-	if (eLevel == NO_CULTURELEVEL)
-	{
-		return 1;
-	}
-	const CvGame& GAME = GC.getGame();
-	const GameSpeedTypes eSpeed = GAME.getGameSpeedType();
+	const GameSpeedTypes eSpeed = GC.getGame().getGameSpeedType();
 	const int iCulture = getCultureTimes100(getOwner()) / 100;
-	int iThreshold = 0;
+	const int iNumCultureLevels = GC.getNumCultureLevelInfos();
 
-	for (int iI = 0; iI < GC.getNumCultureLevelInfos(); iI++)
+	for (int i = 0; i < iNumCultureLevels; i++)
 	{
-		const CvCultureLevelInfo& info = GC.getCultureLevelInfo((CultureLevelTypes)iI);
+		const CvCultureLevelInfo& info = GC.getCultureLevelInfo(static_cast<CultureLevelTypes>(i));
 
-		if (info.getPrereqGameOption() == NO_GAMEOPTION || GAME.isOption((GameOptionTypes)info.getPrereqGameOption()))
+		if (info.getLevel() > -1 && iCulture < info.getSpeedThreshold(eSpeed))
 		{
-			iThreshold = info.getSpeedThreshold(eSpeed);
-			if (iCulture < iThreshold)
-			{
-				break;
-			}
+			return info.getSpeedThreshold(eSpeed);
 		}
 	}
-	return std::max(1, iThreshold);
+	return -1;
 }
 
 
@@ -10710,7 +10693,7 @@ void CvCity::setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups
 		updateImprovementHealth();
 
 		// Alert people if max culture level acquired in a known city
-		if (eNewValue == GC.getNumCultureLevelInfos() - 1)
+		if (getCultureThreshold() == -1)
 		{
 			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
@@ -10766,8 +10749,6 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 	{
 		return;
 	}
-	uint32_t iCultureLevel = 0;
-
 	CvGameAI& GAME = GC.getGame();
 
 	if (!isOccupation()
@@ -10780,14 +10761,13 @@ void CvCity::updateCultureLevel(bool bUpdatePlotGroups)
 		const int iCulture = getCultureTimes100(getOwner()) / 100;
 
 		// Will set culture level to that indexed by xml, but only if matches option of current game
-		for (int iI = (GC.getNumCultureLevelInfos() - 1); iI > 0; iI--)
+		for (int iI = GC.getNumCultureLevelInfos() - 1; iI > 0; iI--)
 		{
-			const CvCultureLevelInfo& info = GC.getCultureLevelInfo((CultureLevelTypes)iI);
+			const CvCultureLevelInfo& info = GC.getCultureLevelInfo(static_cast<CultureLevelTypes>(iI));
 
-			if ((info.getPrereqGameOption() == NO_GAMEOPTION || GAME.isOption((GameOptionTypes)info.getPrereqGameOption()))
-			&& iCulture >= info.getSpeedThreshold(eSpeed))
+			if (info.getLevel() > -1 && iCulture >= info.getSpeedThreshold(eSpeed))
 			{
-				setCultureLevel((CultureLevelTypes)iI, bUpdatePlotGroups);
+				setCultureLevel(static_cast<CultureLevelTypes>(iI), bUpdatePlotGroups);
 				return;
 			}
 		}
@@ -12911,11 +12891,7 @@ int CvCity::calculateTeamCulturePercent(TeamTypes eIndex) const
 
 void CvCity::setCulture(PlayerTypes eIndex, int iNewValue, bool bPlots, bool bUpdatePlotGroups, bool bNationalSet)
 {
-	if (iNewValue > MAX_INT / 100)
-	{
-		iNewValue = MAX_INT / 100;
-	}
-	setCultureTimes100(eIndex, 100 * iNewValue, bPlots, bUpdatePlotGroups, bNationalSet);
+	setCultureTimes100(eIndex, (iNewValue > MAX_INT / 100) ? MAX_INT : 100 * iNewValue, bPlots, bUpdatePlotGroups, bNationalSet);
 }
 
 void CvCity::setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, bool bUpdatePlotGroups, bool bNationalSet)
@@ -12926,11 +12902,20 @@ void CvCity::setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, 
 
 	if (iOldCulture != iNewValue)
 	{
-		m_aiCulture[eIndex] = iNewValue;
-		FASSERT_NOT_NEGATIVE(getCultureTimes100(eIndex));
+		FASSERT_NOT_NEGATIVE(iNewValue);
 
-		updateCultureLevel(bUpdatePlotGroups);
+		if (iNewValue < iOldCulture || getCultureThreshold() > -1)
+		{
+			m_aiCulture[eIndex] = iNewValue;
 
+			updateCultureLevel(bUpdatePlotGroups);
+
+			if (getCultureThreshold() == -1)
+			{
+				// Toffer - Cap value at max culture threshold
+				m_aiCulture[eIndex] = 100 * GC.getGame().getCultureThreshold(getCultureLevel());
+			}
+		}
 		if (bPlots) doPlotCulture(eIndex, 0);
 	}
 
@@ -12943,12 +12928,14 @@ void CvCity::setCultureTimes100(PlayerTypes eIndex, int iNewValue, bool bPlots, 
 
 void CvCity::changeCulture(PlayerTypes eIndex, int iChange, bool bPlots, bool bUpdatePlotGroups)
 {
-	const int iOld = getCultureTimes100(eIndex);
+	if (iChange == 0) return;
 
 	GET_PLAYER(getOwner()).changeCulture(iChange);
 
+	const int iOld = getCultureTimes100(eIndex);
+
 	int iNew;
-	if (iChange <= 0)
+	if (iChange < 0)
 	{
 		iNew = iOld + 100 * iChange;
 	}
@@ -12956,21 +12943,21 @@ void CvCity::changeCulture(PlayerTypes eIndex, int iChange, bool bPlots, bool bU
 	{
 		iNew = iOld + 100 * iChange;
 	}
-	else
-	{
-		iNew = MAX_INT;
-	}
+	else iNew = MAX_INT;
+
 	setCultureTimes100(eIndex, iNew, bPlots, bUpdatePlotGroups, true);
 }
 
 void CvCity::changeCultureTimes100(PlayerTypes eIndex, int iChange, bool bPlots, bool bUpdatePlotGroups)
 {
-	const int iOld = getCultureTimes100(eIndex);
+	if (iChange == 0) return;
 
 	GET_PLAYER(getOwner()).changeCulture(iChange / 100);
 
+	const int iOld = getCultureTimes100(eIndex);
+
 	int iNew;
-	if (iChange <= 0)
+	if (iChange < 0)
 	{
 		iNew = iOld + iChange;
 	}
@@ -12978,10 +12965,8 @@ void CvCity::changeCultureTimes100(PlayerTypes eIndex, int iChange, bool bPlots,
 	{
 		iNew = iOld + iChange;
 	}
-	else
-	{
-		iNew = MAX_INT;
-	}
+	else iNew = MAX_INT;
+
 	setCultureTimes100(eIndex, iNew, bPlots, bUpdatePlotGroups, true);
 }
 
@@ -20630,40 +20615,6 @@ BuildTypes CvCity::findChopBuild(FeatureTypes eFeature) const
 	return NO_BUILD;
 }
 
-CultureLevelTypes CvCity::getMaxCultureLevelAmongPlayers() const
-{
-	int iMaxCulture = getCultureTimes100((PlayerTypes)0);
-
-	for (int iI = 1; iI < MAX_PLAYERS; iI++)
-	{
-		if (getCultureTimes100((PlayerTypes)iI) > iMaxCulture)
-		{
-			iMaxCulture = getCultureTimes100((PlayerTypes)iI);
-		}
-	}
-	return getCultureLevelForCulture(iMaxCulture);
-}
-
-
-CultureLevelTypes CvCity::getCultureLevel(PlayerTypes eIndex) const
-{
-	return getCultureLevelForCulture(getCultureTimes100(eIndex));
-}
-
-
-CultureLevelTypes CvCity::getCultureLevelForCulture(int iCulture) const
-{
-	const int iGS = GC.getGame().getGameSpeedType();
-
-	for (int iI = GC.getNumCultureLevelInfos()-1; iI > 0; iI--)
-	{
-		if (iCulture >= 100 * GC.getCultureLevelInfo((CultureLevelTypes)iI).getSpeedThreshold(iGS))
-		{
-			return (CultureLevelTypes) iI;
-		}
-	}
-	return (CultureLevelTypes) 0;
-}
 
 int CvCity::calculateBonusCommerceRateModifier(CommerceTypes eIndex) const
 {
