@@ -28458,7 +28458,7 @@ CvUnit* CvUnit::getCommander() const
 
 	FAssertMsg(plot() != NULL, "TEST");
 	// This routine gets called a lot, so short-circuit when no commander is around.
-	if (plot() == NULL || !plot()->hasCommander(getOwner()))
+	if (plot() == NULL || !plot()->inCommandField(getOwner()))
 	{
 		return NULL;
 	}
@@ -28477,10 +28477,11 @@ CvUnit* CvUnit::getCommander() const
 	int iBestCommanderDistance = 9999999;
 
 	const CvPlayer& player = GET_PLAYER(getOwner());
+	const std::vector<CvUnit*> commanders = player.getCommanders();
 
-	for (int i = player.Commanders.size() - 1; i > -1; i--) //loop through player's commanders
+	for (int i = commanders.size() - 1; i > -1; i--) //loop through player's commanders
 	{
-		CvUnit* com = player.Commanders[i];
+		CvUnit* com = commanders[i];
 
 		if (com->getCommanderComp()->getControlPointsLeft() <= 0)
 		{
