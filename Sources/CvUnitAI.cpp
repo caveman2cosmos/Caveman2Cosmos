@@ -5786,11 +5786,7 @@ void CvUnitAI::AI_generalMove()
 		//	Make sure we stay in charge when our escort joins us
 		AI_setLeaderPriority(LEADER_PRIORITY_MAX);
 	}
-	/************************************************************************************************/
-	// Afforess 06/5/10		Coded By: KillMePlease
-	// Great Commanders
-	/************************************************************************************************/
-		//bool bDefensiveWar = (area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE);
+
 	if (isCommander())
 	{
 		//	Koshling - we cannot both advertise ourselves as available AND request help in the same turn, so alternate between
@@ -5961,9 +5957,7 @@ void CvUnitAI::AI_generalMove()
 			return;
 		}
 	}
-	/************************************************************************************************/
-	// ! Great Commanders
-	/************************************************************************************************/
+
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD & RevDCM					 09/03/10						jdog5000	  */
 	/*																				phungus420	*/
@@ -26747,15 +26741,16 @@ bool CvUnitAI::AI_command()
 	{
 		return false;
 	}
+	const int iNumCommanders = GET_PLAYER(getOwner()).getCommanders().size();
 
-	bool bCommand = static_cast<int>(GET_PLAYER(getOwner()).Commanders.size()) < 2 + GET_PLAYER(getOwner()).getNumCities() / 5;
+	bool bCommand = iNumCommanders < 2 + GET_PLAYER(getOwner()).getNumCities() / 5;
 
 	if (!bCommand)
 	{
 		for (int iPlayer = 0; iPlayer < MAX_PLAYERS; iPlayer++)
 		{
 			if (GET_TEAM(GET_PLAYER((PlayerTypes)iPlayer).getTeam()).isAtWar(getTeam())
-			&& GET_PLAYER(getOwner()).Commanders.size() < GET_PLAYER((PlayerTypes)iPlayer).Commanders.size())
+			&& iNumCommanders < static_cast<int>(GET_PLAYER((PlayerTypes)iPlayer).getCommanders().size()))
 			{
 				bCommand = true;
 				break;
@@ -26763,8 +26758,7 @@ bool CvUnitAI::AI_command()
 		}
 	}
 
-	if (!bCommand
-	&& GET_TEAM(getTeam()).getAnyWarPlanCount(true) > static_cast<int>(GET_PLAYER(getOwner()).Commanders.size()))
+	if (!bCommand && GET_TEAM(getTeam()).getAnyWarPlanCount(true) > iNumCommanders)
 	{
 		bCommand = true;
 	}

@@ -1429,7 +1429,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iFocusPlotX = -1;
 	m_iFocusPlotY = -1;
 
-	Commanders.clear();
+	m_commanders.clear();
 	m_idleCities.clear();
 }
 
@@ -19035,12 +19035,12 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			ReadStreamableFFreeListTrashArray(*m_selectionGroups[i], pStream);
 		}
 		//Must be loaded AFTER units.
-		Commanders.clear();
+		m_commanders.clear();
 		foreach_(CvUnit* unitX, units())
 		{
-			if (unitX->isCommander()) //search for GGs among loaded units and add them to Commanders array
+			if (unitX->isCommander()) //search for GGs among loaded units and add them to m_commanders array
 			{
-				Commanders.push_back(unitX);
+				m_commanders.push_back(unitX);
 			}
 
 			if (unitX->isZoneOfControl())
@@ -28546,9 +28546,9 @@ void CvPlayer::recalculateModifiers()
 	resetCivTypeEffects();
 
 	// Recalc plot commander counts
-	for (int i = Commanders.size() - 1; i > -1; i--)
+	for (int i = m_commanders.size() - 1; i > -1; i--)
 	{
-		CvUnit* com = Commanders[i];
+		CvUnit* com = m_commanders[i];
 
 		if (com->isCommanderReady())
 		{
@@ -30690,16 +30690,16 @@ void CvPlayer::listCommander(bool bAdd, CvUnit* unit)
 {
 	if (bAdd)
 	{
-		Commanders.push_back(unit);
+		m_commanders.push_back(unit);
 		return;
 	}
 	const int iID = unit->getID();
 
-	for (int i = 0; i < static_cast<int>(Commanders.size()); i++)
+	for (int i = 0; i < static_cast<int>(m_commanders.size()); i++)
 	{
-		if (Commanders[i]->getID() == iID)
+		if (m_commanders[i]->getID() == iID)
 		{
-			Commanders.erase(Commanders.begin() + i);
+			m_commanders.erase(m_commanders.begin() + i);
 
 			foreach_(CvUnit* unitX, units())
 			{
@@ -30711,4 +30711,26 @@ void CvPlayer::listCommander(bool bAdd, CvUnit* unit)
 			break;
 		}
 	}
+}
+
+
+void CvPlayer::setCommandFieldPlot(bool bNewValue, CvPlot* aPlot)
+{
+	FAssert(bNewValue || !m_commandFieldPlots.empty());
+
+	std::vector<CvPlot*>::iterator itr = find(m_commandFieldPlots.begin(), m_commandFieldPlots.end(), aPlot);
+
+	if (bNewValue)
+	{
+		if (itr == m_commandFieldPlots.end())
+		{
+			m_commandFieldPlots.push_back(aPlot);
+		}
+		else FErrorMsg("Tried to add a duplicate vector element!");
+	}
+	else if (itr != m_commandFieldPlots.end())
+	{
+		m_commandFieldPlots.erase(itr);
+	}
+	else FErrorMsg("Vector element to remove was missing!");
 }
