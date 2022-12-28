@@ -1073,7 +1073,6 @@ public:
 	CvPlot* plot() const;
 	int getArea() const;
 	CvArea* area() const;
-	bool onMap() const;
 
 	int getLastMoveTurn() const;
 	void setLastMoveTurn(int iNewValue);

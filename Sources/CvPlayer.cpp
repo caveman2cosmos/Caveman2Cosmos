@@ -3233,14 +3233,7 @@ bool CvPlayer::isNormalAI() const
 
 void CvPlayer::updateHuman()
 {
-	if (m_bDisableHuman || getID() == NO_PLAYER)
-	{
-		m_bHuman = false;
-	}
-	else
-	{
-		m_bHuman = GC.getInitCore().getHuman(getID());
-	}
+	m_bHuman = !m_bDisableHuman && getID() != NO_PLAYER && GC.getInitCore().getHuman(getID());
 }
 
 
@@ -3262,16 +3255,16 @@ bool CvPlayer::isHominid() const
 
 bool CvPlayer::isAnimal() const
 {
-	return (getID() == PREDATOR_PLAYER || getID() == PREY_PLAYER || getID() == BEAST_PLAYER);
-}
-
-bool CvPlayer::isInvasionCapablePlayer() const
-{
-	if (isAnimal())
+	switch (getID())
 	{
-		return false;
+		case PREDATOR_PLAYER:
+		case PREY_PLAYER:
+		case BEAST_PLAYER:
+		{
+			return true;
+		}
+		default: return false;
 	}
-	return true;
 }
 
 
@@ -14449,7 +14442,7 @@ void CvPlayer::updateGroupCycle(CvUnit* pUnit, bool bFarMove)
 {
 	PROFILE_FUNC();
 
-	if (!pUnit->onMap() || isTempUnit(pUnit))
+	if (!pUnit->plot() || isTempUnit(pUnit))
 	{
 		return;
 	}
