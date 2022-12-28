@@ -25729,11 +25729,7 @@ int CvCultureLevelInfo::getSpeedThreshold(int i) const
 	return m_paiSpeedThreshold ? m_paiSpeedThreshold[i] : 0;
 }
 
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 int CvCultureLevelInfo::getCityRadius() const
 {
 	return m_iCityRadius;
@@ -25763,9 +25759,7 @@ int CvCultureLevelInfo::getPrereqGameOption() const
 {
 	return m_iPrereqGameOption;
 }
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
+
 
 bool CvCultureLevelInfo::read(CvXMLLoadUtility* pXml)
 {
@@ -25775,11 +25769,7 @@ bool CvCultureLevelInfo::read(CvXMLLoadUtility* pXml)
 	}
 
 	pXml->GetOptionalChildXmlValByName(&m_iCityDefenseModifier, L"iCityDefenseModifier");
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	pXml->GetOptionalChildXmlValByName(&m_iCityRadius, L"iCityRadius", 1);
 	pXml->GetOptionalChildXmlValByName(&m_iMaxWorldWonders, L"iMaxWorldWonders", 1);
 	pXml->GetOptionalChildXmlValByName(&m_iMaxTeamWonders, L"iMaxTeamWonders", 1);
@@ -25788,9 +25778,7 @@ bool CvCultureLevelInfo::read(CvXMLLoadUtility* pXml)
 	CvString szTextVal;
 	pXml->GetOptionalChildXmlValByName(szTextVal, L"PrereqGameOption");
 	m_iPrereqGameOption = pXml->GetInfoClass(szTextVal);
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
+
 	pXml->SetVariableListTagPair(&m_paiSpeedThreshold, L"SpeedThresholds", GC.getNumGameSpeedInfos());
 
 	return true;

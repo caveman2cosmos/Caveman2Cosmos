@@ -859,7 +859,6 @@ public:
 
 	CultureLevelTypes getCultureLevel() const;
 	int getCultureThreshold() const;
-	int getCultureThreshold(CultureLevelTypes eLevel) const;
 	void setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups);
 	void updateCultureLevel(bool bUpdatePlotGroups);
 
@@ -1300,9 +1299,6 @@ public:
 	int calculateCorporationHappiness() const;
 
 	BuildTypes findChopBuild(FeatureTypes eFeature) const;
-	CultureLevelTypes getMaxCultureLevelAmongPlayers() const;
-	CultureLevelTypes getCultureLevel(PlayerTypes eIndex) const;
-	CultureLevelTypes getCultureLevelForCulture(int iCulture) const;
 	int getLineOfSight() const;
 	void changeLineOfSight(int iChange);
 	int calculateBonusCommerceRateModifier(CommerceTypes eIndex) const;

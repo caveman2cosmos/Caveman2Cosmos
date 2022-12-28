@@ -1662,21 +1662,25 @@ void CvPlayerAI::AI_conquerCity(PlayerTypes eOldOwner, CvCity* pCity, bool bConq
 		const int iCloseness = pCity->AI_playerCloseness(getID());
 
 		// Reasons to always raze
-		if (GC.getGame().culturalVictoryValid()
-		&& pCity->getCulture(eOldOwner) > pCity->getCultureThreshold(GC.getGame().culturalVictoryCultureLevel()) / 2
-		&& GET_TEAM(getTeam()).AI_getEnemyPowerPercent(false) > 75)
+		if (GC.getGame().culturalVictoryValid() && GET_TEAM(getTeam()).AI_getEnemyPowerPercent(false) > 75)
 		{
-			int iHighCultureCount = 1;
-			foreach_(const CvCity * cityX, GET_PLAYER(eOldOwner).cities())
+			const int iHighCultureThreshold = GC.getGame().getCultureThreshold(GC.getGame().culturalVictoryCultureLevel()) * 3/5;
+
+			if (pCity->getCulture(eOldOwner) > iHighCultureThreshold)
 			{
-				if (cityX->getCulture(eOldOwner) > cityX->getCultureThreshold(GC.getGame().culturalVictoryCultureLevel()) / 2)
+				int iHighCultureCount = 1;
+
+				foreach_(const CvCity * cityX, GET_PLAYER(eOldOwner).cities())
 				{
-					iHighCultureCount++;
-					if (iHighCultureCount >= GC.getGame().culturalVictoryNumCultureCities())
+					if (cityX->getCulture(eOldOwner) > iHighCultureThreshold)
 					{
-						//Raze city enemy needs for cultural victory unless we greatly over power them
-						OutputDebugString("  Razing enemy cultural victory city");
-						bRaze = true;
+						iHighCultureCount++;
+						if (iHighCultureCount >= GC.getGame().culturalVictoryNumCultureCities())
+						{
+							//Raze city enemy needs for cultural victory unless we greatly over power them
+							OutputDebugString("  Razing enemy cultural victory city");
+							bRaze = true;
+						}
 					}
 				}
 			}
@@ -2083,7 +2087,7 @@ int CvPlayerAI::AI_commerceWeight(CommerceTypes eCommerce, const CvCity* pCity) 
 		// so that governors do smart things
 		if (pCity != NULL)
 		{
-			if (pCity->getCultureTimes100(getID()) >= 100 * GC.getGame().getCultureThreshold((CultureLevelTypes)(GC.getNumCultureLevelInfos() - 1)))
+			if (GC.getGame().culturalVictoryValid() && pCity->getCultureTimes100(getID()) >= 100 * GC.getGame().getCultureThreshold(GC.getGame().culturalVictoryCultureLevel()))
 			{
 				iWeight /= 50;
 			}
@@ -2486,10 +2490,10 @@ int CvPlayerAI::AI_foundValue(int iX, int iY, int iMinRivalRange, bool bStarting
 
 	//iClaimThreshold is the culture required to pop the 2nd borders.
 	const int iClaimThreshold =
-		(
-			std::max(1, GC.getGame().getCultureThreshold((CultureLevelTypes)std::min(2, GC.getNumCultureLevelInfos() - 1)))
-			* (bEasyCulture ? 140 : 100)
-		);
+	(
+		std::max(1, GC.getGame().getCultureThreshold((CultureLevelTypes)std::min(2, GC.getNumCultureLevelInfos() - 1)))
+		* (bEasyCulture ? 140 : 100)
+	);
 
 	int iTakenTiles = 0;
 	int iTeammateTakenTiles = 0;
@@ -3197,20 +3201,19 @@ int CvPlayerAI::AI_targetCityValue(const CvCity* pCity, bool bRandomize, bool bI
 		}
 	}
 
-	if (GET_PLAYER(pCity->getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3))
+	if (GC.getGame().culturalVictoryValid()
+	&& GET_PLAYER(pCity->getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3)
+	&& pCity->getCultureLevel() >= GC.getGame().culturalVictoryCultureLevel() - 1)
 	{
-		if (pCity->getCultureLevel() >= (GC.getGame().culturalVictoryCultureLevel() - 1))
+		iValue += 15;
+
+		if (GET_PLAYER(pCity->getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE4))
 		{
-			iValue += 15;
+			iValue += 25;
 
-			if (GET_PLAYER(pCity->getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE4))
+			if (pCity->getCultureLevel() >= (GC.getGame().culturalVictoryCultureLevel()))
 			{
-				iValue += 25;
-
-				if (pCity->getCultureLevel() >= (GC.getGame().culturalVictoryCultureLevel()))
-				{
-					iValue += 10;
-				}
+				iValue += 10;
 			}
 		}
 	}
@@ -21807,14 +21810,8 @@ int CvPlayerAI::AI_cultureVictoryTechValue(TechTypes eTech) const
 /************************************************************************************************/
 int CvPlayerAI::AI_getCultureVictoryStage() const
 {
-	int iValue;
 
-	if (GC.getDefineINT("BBAI_VICTORY_STRATEGY_CULTURE") <= 0)
-	{
-		return 0;
-	}
-
-	if (!GC.getGame().culturalVictoryValid())
+	if (GC.getDefineINT("BBAI_VICTORY_STRATEGY_CULTURE") <= 0 || !GC.getGame().culturalVictoryValid())
 	{
 		return 0;
 	}
@@ -21829,25 +21826,25 @@ int CvPlayerAI::AI_getCultureVictoryStage() const
 	int iCloseToLegendaryCount = 0;
 	int iLegendaryCount = 0;
 
-	foreach_(const CvCity * pLoopCity, cities())
+	foreach_(const CvCity * cityX, cities())
 	{
-		if (pLoopCity->getCultureLevel() >= (GC.getGame().culturalVictoryCultureLevel() - 1))
+		if (cityX->getCultureLevel() >= GC.getGame().culturalVictoryCultureLevel() - 1)
 		{
-			if (pLoopCity->getBaseCommerceRate(COMMERCE_CULTURE) > 100)
+			if (cityX->getBaseCommerceRate(COMMERCE_CULTURE) > 100)
 			{
 				iHighCultureCount++;
 			}
-
-			// is over 1/2 of the way there?
-			if (2 * pLoopCity->getCulture(getID()) > pLoopCity->getCultureThreshold(GC.getGame().culturalVictoryCultureLevel()))
-			{
-				iCloseToLegendaryCount++;
-			}
+			const int iVictoryThreshold = GC.getGame().getCultureThreshold(GC.getGame().culturalVictoryCultureLevel());
 
 			// is already there?
-			if (pLoopCity->getCulture(getID()) > pLoopCity->getCultureThreshold(GC.getGame().culturalVictoryCultureLevel()))
+			if (cityX->getCulture(getID()) > iVictoryThreshold)
 			{
 				iLegendaryCount++;
+			}
+			// is over 1/2 of the way there?
+			else if (cityX->getCulture(getID()) > iVictoryThreshold / 2)
+			{
+				iCloseToLegendaryCount++;
 			}
 		}
 	}
@@ -21857,22 +21854,21 @@ int CvPlayerAI::AI_getCultureVictoryStage() const
 		// Already won, keep playing culture heavy but do some tech to keep pace if human wants to keep playing
 		return 3;
 	}
-
 	if (iCloseToLegendaryCount >= GC.getGame().culturalVictoryNumCultureCities())
 	{
 		return 4;
 	}
-	else if (isHuman())
+
+	if (isHuman())
 	{
 		if (getCommercePercent(COMMERCE_CULTURE) > 50)
 		{
 			return 3;
 		}
-	}
-
-	if (isHuman() && !(GC.getGame().isDebugMode()))
-	{
-		return 0;
+		if (!GC.getGame().isDebugMode())
+		{
+			return 0;
+		}
 	}
 
 	if (GC.getGame().getStartEra() > 1)
@@ -21889,7 +21885,7 @@ int CvPlayerAI::AI_getCultureVictoryStage() const
 		}
 	}
 
-	iValue = GC.getLeaderHeadInfo(getPersonalityType()).getCultureVictoryWeight();
+	int iValue = GC.getLeaderHeadInfo(getPersonalityType()).getCultureVictoryWeight();
 
 	iValue += (GC.getGame().isOption(GAMEOPTION_AGGRESSIVE_AI) ? -20 : 0);
 

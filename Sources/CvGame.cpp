@@ -1073,7 +1073,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	m_iNumSessions = 1;
 
 	m_iNumCultureVictoryCities = 0;
-	m_eCultureVictoryCultureLevel = NO_CULTURELEVEL;
+	m_eCultureVictoryCultureLevel = -1;
 
 	if (!bConstructorCall)
 	{
@@ -9074,7 +9074,7 @@ void CvGame::setVoteSourceReligion(VoteSourceTypes eVoteSource, ReligionTypes eR
 
 bool CvGame::culturalVictoryValid() const
 {
-	return (m_iNumCultureVictoryCities > 0);
+	return m_eCultureVictoryCultureLevel != NO_CULTURELEVEL && m_iNumCultureVictoryCities > 0;
 }
 
 int CvGame::culturalVictoryNumCultureCities() const
@@ -9084,11 +9084,12 @@ int CvGame::culturalVictoryNumCultureCities() const
 
 CultureLevelTypes CvGame::culturalVictoryCultureLevel() const
 {
-	return (m_iNumCultureVictoryCities > 0) ? (CultureLevelTypes) m_eCultureVictoryCultureLevel : NO_CULTURELEVEL;
+	return (CultureLevelTypes) m_eCultureVictoryCultureLevel;
 }
 
 int CvGame::getCultureThreshold(CultureLevelTypes eLevel) const
 {
+	FASSERT_BOUNDS(0, GC.getNumCultureLevelInfos(), eLevel);
 	return GC.getCultureLevelInfo(eLevel).getSpeedThreshold(getGameSpeedType());
 }
 

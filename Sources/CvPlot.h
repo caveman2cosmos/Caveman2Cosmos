@@ -1041,7 +1041,7 @@ public:
 	void doPreAttackTraps(CvUnit* pAttacker);
 
 	void countCommander(bool bNewVal, const CvUnit* pUnit);
-	bool hasCommander(const PlayerTypes ePlayer) const;
+	bool inCommandField(const PlayerTypes ePlayer) const;
 
 #ifdef CAN_BUILD_VALUE_CACHING
 public:
@@ -1061,7 +1061,7 @@ private:
 	bool m_bPlotGroupsDirty;
 
 	std::map<uint8_t, uint16_t> m_commanderCount; // PlayerType : CommanderCount
-	void changeCommanderCount(const uint8_t iPlayer, const bool bAdd);
+	void changeCommanderCount(const PlayerTypes ePlayer, const bool bAdd);
 
 	static bool bDeferPlotGroupRecalculation;
 

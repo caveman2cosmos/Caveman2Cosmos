@@ -1055,11 +1055,6 @@ void CyGame::log(const char* file, char* str)
 #endif
 }
 
-int CyGame::getCultureThreshold(CultureLevelTypes eLevel) const
-{
-	return m_pGame.getCultureThreshold(eLevel);
-}
-
 void CyGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield)
 {
 	m_pGame.setPlotExtraYield(iX, iY, eYield, iExtraYield);
