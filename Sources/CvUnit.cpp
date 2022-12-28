@@ -1475,10 +1475,12 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 	deselect(!bDelay);
 
+	/* Toffer - Evaluate if double messaging actually take place...
 	if (m_combatResult.bDeathMessaged)
 	{
 		bMessaged = true;
 	}
+	*/
 	const PlayerTypes eOwner = getOwner();
 	CvPlayerAI& owner = GET_PLAYER(eOwner);
 
@@ -1548,8 +1550,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 					GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
 					MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
 				);
-				bMessaged = true;
-				unitX->kill(bDelay, ePlayer, bMessaged);
+				unitX->kill(bDelay, ePlayer, true);
 			}
 		}
 
@@ -1559,17 +1560,16 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 			if (NO_UNIT != getLeaderUnitType() || GC.getUnitInfo(getUnitType()).getMaxGlobalInstances() == 1)
 			{
-				for (int iI = 0; !bMessaged && iI < MAX_PC_PLAYERS; iI++)
+				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
 					if (GET_PLAYER((PlayerTypes)iI).isAlive())
 					{
 						AddDLLMessage(
-							eOwner, true, GC.getEVENT_MESSAGE_TIME(),
+							(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
 							gDLL->getText("TXT_KEY_MISC_GENERAL_KILLED", getNameKey()),
 							GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
 							MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_RED(), getX(), getY()
 						);
-						bMessaged = true;
 					}
 				}
 			}
