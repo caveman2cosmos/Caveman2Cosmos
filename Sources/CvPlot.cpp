@@ -539,15 +539,10 @@ void CvPlot::erase()
 
 /*DllExport*/ float CvPlot::getPointX() const
 {
-	if (this == NULL)
-	{
-		FErrorMsg("this == NULL");
-		return 0;
-	}
+	FAssertMsg(this != NULL, "CTD incoming");
 	OutputDebugString(CvString::format("exe wants the X point for plot at (%d, %d)\n", getX(), getY()).c_str());
-	const CvViewport* pCurrentViewport = GC.getCurrentViewport();
 
-	FAssert(pCurrentViewport != NULL);
+	const CvViewport* pCurrentViewport = GC.getCurrentViewport();
 
 	return pCurrentViewport->plotXToPointX(pCurrentViewport->getViewportXFromMapX(getX()));
 }
@@ -555,15 +550,10 @@ void CvPlot::erase()
 
 /*DllExport*/ float CvPlot::getPointY() const
 {
-	if (this == NULL)
-	{
-		FErrorMsg("this == NULL");
-		return 0;
-	}
+	FAssertMsg(this != NULL, "CTD incoming");
 	OutputDebugString(CvString::format("exe wants the Y point for plot at (%d, %d)\n", getX(), getY()).c_str());
-	const CvViewport* pCurrentViewport = GC.getCurrentViewport();
 
-	FAssert(pCurrentViewport != NULL);
+	const CvViewport* pCurrentViewport = GC.getCurrentViewport();
 
 	return pCurrentViewport->plotYToPointY(pCurrentViewport->getViewportYFromMapY(getY()));
 }
@@ -571,9 +561,7 @@ void CvPlot::erase()
 
 NiPoint3 CvPlot::getPoint() const
 {
-	NiPoint3 pt3Point;
-
-	memset(&pt3Point, 0, sizeof(pt3Point));
+	NiPoint3 pt3Point; memset(&pt3Point, 0, sizeof(pt3Point));
 
 	if (this == NULL)
 	{
@@ -582,14 +570,12 @@ NiPoint3 CvPlot::getPoint() const
 	else
 	{
 		const CvViewport* pCurrentViewport = GC.getCurrentViewport();
-		FAssert(pCurrentViewport != NULL);
+
 		pt3Point.x = pCurrentViewport->plotXToPointX(pCurrentViewport->getViewportXFromMapX(getX()));
 		pt3Point.y = pCurrentViewport->plotYToPointY(pCurrentViewport->getViewportYFromMapY(getY()));
 		pt3Point.z = 0.0f;
-
 		pt3Point.z = gDLL->getEngineIFace()->GetHeightmapZ(pt3Point);
 	}
-
 	return pt3Point;
 }
 
