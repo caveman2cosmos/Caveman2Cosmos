@@ -537,8 +537,14 @@ void CvPlot::erase()
 	setRiverID(-1);
 }
 
-float CvPlot::getPointX() const
+/*DllExport*/ float CvPlot::getPointX() const
 {
+	if (this == NULL)
+	{
+		FErrorMsg("this == NULL");
+		return 0;
+	}
+	OutputDebugString(CvString::format("exe wants the X point for plot at (%d, %d)\n", getX(), getY()).c_str());
 	const CvViewport* pCurrentViewport = GC.getCurrentViewport();
 
 	FAssert(pCurrentViewport != NULL);
@@ -547,8 +553,14 @@ float CvPlot::getPointX() const
 }
 
 
-float CvPlot::getPointY() const
+/*DllExport*/ float CvPlot::getPointY() const
 {
+	if (this == NULL)
+	{
+		FErrorMsg("this == NULL");
+		return 0;
+	}
+	OutputDebugString(CvString::format("exe wants the Y point for plot at (%d, %d)\n", getX(), getY()).c_str());
 	const CvViewport* pCurrentViewport = GC.getCurrentViewport();
 
 	FAssert(pCurrentViewport != NULL);
@@ -565,12 +577,14 @@ NiPoint3 CvPlot::getPoint() const
 
 	if (this == NULL)
 	{
-		FErrorMsg("error");
+		FErrorMsg("this == NULL");
 	}
 	else
 	{
-		pt3Point.x = getPointX();
-		pt3Point.y = getPointY();
+		const CvViewport* pCurrentViewport = GC.getCurrentViewport();
+		FAssert(pCurrentViewport != NULL);
+		pt3Point.x = pCurrentViewport->plotXToPointX(pCurrentViewport->getViewportXFromMapX(getX()));
+		pt3Point.y = pCurrentViewport->plotYToPointY(pCurrentViewport->getViewportYFromMapY(getY()));
 		pt3Point.z = 0.0f;
 
 		pt3Point.z = gDLL->getEngineIFace()->GetHeightmapZ(pt3Point);
