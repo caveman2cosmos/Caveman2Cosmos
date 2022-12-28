@@ -15665,7 +15665,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 								unitX->setCapturingPlayer(eMyPlayer);
 								unitX->setCapturingUnit(this);
 							}
-							unitX->kill(false, eMyPlayer, true);
+							unitX->kill(true, eMyPlayer, true);
 						}
 					}
 				}
