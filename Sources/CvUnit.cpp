@@ -249,39 +249,37 @@ void CvUnit::reloadEntity(bool bForceLoad)
 	);
 
 	//OutputDebugString(CvString::format("reloadEntity for %08lx\n", this).c_str());
-	if ( !IsSelected() )
+	if (!IsSelected())
 	{
-		if ( !isUsingDummyEntities() ) //&& !bNeedsRealEntity )
+		if (!isUsingDummyEntities())
 		{
-			//destroy old entity
-			if (!gDLL->GetDone() && GC.IsGraphicsInitialized())						// don't need to remove entity when the app is shutting down, or crash can occur
+			// Destroy old entity, don't need to remove entity when the app is shutting down, or crash can occur
+			if (!gDLL->GetDone() && GC.IsGraphicsInitialized())
 			{
 				gDLL->getEntityIFace()->RemoveUnitFromBattle(this);
-				CvDLLEntity::removeEntity();		// remove entity from engine
+				CvDLLEntity::removeEntity(); // remove entity from engine
 			}
-
-			CvDLLEntity::destroyEntity();			// delete CvUnitEntity and detach from us
+			CvDLLEntity::destroyEntity(); // delete CvUnitEntity and detach from us
 			g_numEntities--;
 
 			setEntity(NULL);
 		}
-		else if ( isUsingDummyEntities() && bNeedsRealEntity )
+		else if (bNeedsRealEntity)
 		{
 			g_dummyUsage--;
 
 			setEntity(NULL);
 		}
 
-		if ( getEntity() == NULL )
+		if (getEntity() == NULL)
 		{
-			if ( g_bUseDummyEntities )
+			if (g_bUseDummyEntities)
 			{
-				if ( bNeedsRealEntity )
+				if (bNeedsRealEntity)
 				{
-					//create new one
-					CvDLLEntity::createUnitEntity(this);		// create and attach entity to unit
+					// Create and attach entity to unit
+					CvDLLEntity::createUnitEntity(this);
 					g_numEntities++;
-
 					bGraphicsSetup = false;
 				}
 				else
@@ -290,31 +288,27 @@ void CvUnit::reloadEntity(bool bForceLoad)
 					g_dummyUsage++;
 				}
 
-				//	Log every now and again in non final release builds
-				if ( g_numEntities%100 == 0 )
+				// Log every now and again in non final release builds
+				if (g_numEntities%100 == 0)
 				{
 					OutputDebugString(CvString::format("Dummy unit entity usage: %d, real %d\n", g_dummyUsage, g_numEntities).c_str());
 				}
 			}
-			else if ( plot() != NULL ) //create new one
+			else if (plot())
 			{
-				CvDLLEntity::createUnitEntity(this);		// create and attach entity to unit
+				// Create and attach entity to unit
+				CvDLLEntity::createUnitEntity(this);
 				bGraphicsSetup = false;
 			}
 		}
 
-		if ( !bGraphicsSetup && bNeedsRealEntity && plot() != NULL )
+		if (!bGraphicsSetup && bNeedsRealEntity && plot())
 		{
 			setupGraphical();
-
 			bGraphicsSetup = true;
 		}
-
 	}
-	else
-	{
-		OutputDebugString("Reload of selected unit\n");
-	}
+	else OutputDebugString("Reload of selected unit\n");
 }
 
 void CvUnit::changeIdentity(UnitTypes eUnit)
@@ -1481,10 +1475,12 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 	deselect(!bDelay);
 
+	/* Toffer - Evaluate if double messaging actually take place...
 	if (m_combatResult.bDeathMessaged)
 	{
 		bMessaged = true;
 	}
+	*/
 	const PlayerTypes eOwner = getOwner();
 	CvPlayerAI& owner = GET_PLAYER(eOwner);
 
@@ -1554,8 +1550,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 					GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
 					MESSAGE_TYPE_INFO, NULL, GC.getCOLOR_RED(), getX(), getY()
 				);
-				bMessaged = true;
-				unitX->kill(bDelay, ePlayer, bMessaged);
+				unitX->kill(bDelay, ePlayer, true);
 			}
 		}
 
@@ -1565,17 +1560,16 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 			if (NO_UNIT != getLeaderUnitType() || GC.getUnitInfo(getUnitType()).getMaxGlobalInstances() == 1)
 			{
-				for (int iI = 0; !bMessaged && iI < MAX_PC_PLAYERS; iI++)
+				for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 				{
 					if (GET_PLAYER((PlayerTypes)iI).isAlive())
 					{
 						AddDLLMessage(
-							eOwner, true, GC.getEVENT_MESSAGE_TIME(),
+							(PlayerTypes)iI, true, GC.getEVENT_MESSAGE_TIME(),
 							gDLL->getText("TXT_KEY_MISC_GENERAL_KILLED", getNameKey()),
 							GC.getEraInfo(GC.getGame().getCurrentEra()).getAudioUnitDefeatScript(),
 							MESSAGE_TYPE_MAJOR_EVENT, NULL, GC.getCOLOR_RED(), getX(), getY()
 						);
-						bMessaged = true;
 					}
 				}
 			}
@@ -15671,7 +15665,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 								unitX->setCapturingPlayer(eMyPlayer);
 								unitX->setCapturingUnit(this);
 							}
-							unitX->kill(false, eMyPlayer, true);
+							unitX->kill(true, eMyPlayer, true);
 						}
 					}
 				}
@@ -16125,7 +16119,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	FAssert(pOldPlot != pNewPlot);
 	myPlayer.updateGroupCycle(this, bFarMove);
 
-	if (pNewPlot != NULL)
+	if (pNewPlot)
 	{
 		setHasAnyInvisibility();
 
