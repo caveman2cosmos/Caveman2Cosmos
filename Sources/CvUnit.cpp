@@ -214,7 +214,10 @@ CvUnit::~CvUnit()
 		// Don't need to remove entity when the app is shutting down, or crash can occur
 		if (!gDLL->GetDone() && GC.IsGraphicsInitialized())
 		{
-			gDLL->getEntityIFace()->RemoveUnitFromBattle(this);
+			if (plot())
+			{
+				gDLL->getEntityIFace()->RemoveUnitFromBattle(this);
+			}
 			CvDLLEntity::removeEntity(); // remove entity from engine
 		}
 		CvDLLEntity::destroyEntity(); // delete CvUnitEntity and detach from us
@@ -3875,7 +3878,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 			if (pDefender->isPillageOnVictory())
 			{
-				CvPlot* pDefenderPlot = pDefender->plot();
+				const CvPlot* pDefenderPlot = pDefender->plot();
 				int iPillageGold = getLevel() * getExperience();
 				if (NO_UNIT != getLeaderUnitType())
 				{
@@ -3909,8 +3912,8 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 					for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 					{
-						TechTypes ePillageTech = GET_PLAYER(pDefender->getOwner()).getCurrentResearch();
-						CommerceTypes eCommerce = (CommerceTypes)iI;
+						const TechTypes ePillageTech = GET_PLAYER(pDefender->getOwner()).getCurrentResearch();
+						const CommerceTypes eCommerce = (CommerceTypes)iI;
 						switch (eCommerce)
 						{
 						case COMMERCE_GOLD:
@@ -4234,7 +4237,7 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 			if (isPillageOnVictory())
 			{
-				CvPlot* pDefenderPlot = (pDefender->plot());
+				const CvPlot* pDefenderPlot = (pDefender->plot());
 				int iPillageGold = (pDefender->getLevel() * pDefender->getExperience());
 				if (NO_UNIT != pDefender->getLeaderUnitType())
 				{
@@ -4267,8 +4270,8 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 
 					for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 					{
-						TechTypes ePillageTech = GET_PLAYER(getOwner()).getCurrentResearch();
-						CommerceTypes eCommerce = (CommerceTypes)iI;
+						const TechTypes ePillageTech = GET_PLAYER(getOwner()).getCurrentResearch();
+						const CommerceTypes eCommerce = (CommerceTypes)iI;
 						switch (eCommerce)
 						{
 						case COMMERCE_GOLD:
@@ -4369,8 +4372,8 @@ void CvUnit::updateCombat(bool bQuick, CvUnit* pSelectedDefender, bool bSamePlot
 			}
 
 			CvEventReporter::getInstance().combatResult(this, pDefender);
-			PlayerTypes eDefenderUnitPlayer = pDefender->getOwner();
-			UnitTypes eDefenderUnitType = pDefender->getUnitType();
+			const PlayerTypes eDefenderUnitPlayer = pDefender->getOwner();
+			const UnitTypes eDefenderUnitType = pDefender->getUnitType();
 
 			// generate the kill outcome list but don't execute it yet
 			//std::vector<UnitCombatTypes> aDefenderCombats;
