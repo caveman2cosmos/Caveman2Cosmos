@@ -159,6 +159,7 @@ public:
 	bool isSimultaneousTeamTurns() const;
 
 	bool isFinalInitialized() const;
+	void onFinalInitialized(const bool bNewGame);
 
 	PlayerTypes getActivePlayer() const;
 	void setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat);
@@ -273,8 +274,6 @@ public:
 	void log(const char* file, char* str);
 	void logw(std::wstring str);
 
-	int getCultureThreshold(CultureLevelTypes eLevel) const;
-
 	void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield);
 
 	bool isCivEverActive(CivilizationTypes eCivilization) const;
@@ -298,7 +297,6 @@ public:
 	int getModderGameOption(ModderGameOptionTypes eIndex) const;
 	void setModderGameOption(ModderGameOptionTypes eIndex, int iNewValue);
 
-	bool canEverResearch(TechTypes iTech) const;
 	bool canEverConstruct(BuildingTypes iBuilding) const;
 	bool canEverTrain(UnitTypes iUnit) const;
 	bool canEverSpread(CorporationTypes iCorporation) const;

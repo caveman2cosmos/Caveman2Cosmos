@@ -554,6 +554,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GIVEN_FREE_AREA</Tag>
 		<English>[ICON_BULLET]Building Given for Free in same continent By[SPACE]</English>
+		<German>[ICON_BULLET]kostenloses Gebäude auf dem gleichen Kontinent[SPACE]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GLOBAL</Tag>
@@ -709,7 +710,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_HEAL_MOD</Tag>
 		<English>[ICON_BULLET]Heals Units Extra %d1_Mod%% Damage/Turn</English>
 		<French>[ICON_BULLET]Soigne les unités de %d1_Mod%% de dégâts/tour</French>
-		<German>[ICON_BULLET]Heilt zusätzlich %d1_Mod%% Schaden/Runde bei Einheiten</German>
+		<German>[ICON_BULLET]heilt zusätzlich %d1_Mod%% Schaden pro Runde bei Einheiten</German>
 		<Italian>[ICON_BULLET]Cura le unità del %d1_Mod%% di danno extra per turno.</Italian>
 		<Spanish>[ICON_BULLET]Cura a las unidades un %d1_Mod%% de daño extra por turno</Spanish>
 	</TEXT>
@@ -717,6 +718,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_HEAL_UNITCOMBAT_MOD</Tag>
 		<English>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%%/Turn</English>
 		<French>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%%/Tour</French>
+		<German>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%% pro Runde</German>
 		<Polish>[ICON_BULLET]Wspomaga leczenie %s1_UNITCOMBAT Units %D2_Mod%% Obrażeń na turę.</Polish>
 		<Russian>[ICON_BULLET]%s1_UNITCOMBAT %D2_Mod%%/Ход</Russian>
 	</TEXT>
@@ -758,6 +760,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_INSIDIOUSNESS</Tag>
 		<English>[ICON_BULLET]Increases local Insidiousness by %s1_amount%% (Helps Criminals avoid discovery)</English>
 		<French>[ICON_BULLET]Donne à toutes les unités criminelles produites dans la ville %s1_amount%% d'Incidiosité.</French>
+		<German>[ICON_BULLET]erhöht die Gesetzlosigkeit der Bevölkerung um %s1_amount%% (hilft Kriminellen ihrer Entdeckung zu entgehen)</German>
 		<Russian>[ICON_BULLET]Увеличивает уровень беззакония в городе на %s1_amount%% (помогает преступникам избежать раскрытия)</Russian>
 	</TEXT>
 	<TEXT>
@@ -774,6 +777,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_INVESTIGATION</Tag>
 		<English>[ICON_BULLET]Increases local Investigation by %s1_amount%% (Helps Law Enforcement catch Criminals)</English>
 		<French>[ICON_BULLET]Donne à toutes les unités produites dans la ville %s1_amount%% d'Investigation.</French>
+		<German>[ICON_BULLET]verbessert die örtliche Ermittlungsrate um %s1_amount%%  (hilft Gesetzeshütern bei der Festnahme von Kriminellen)</German>
 		<Russian>[ICON_BULLET]Увеличивает эффективность местного розыска на %s1_amount%% (помогает правоохранителям поймать преступников)</Russian>
 	</TEXT>
 	<TEXT>
@@ -871,11 +875,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NATIONAL_WONDERS_PER_CITY</Tag>
-		<English>[COLOR_WARNING_TEXT]Can only Construct %d1_Num National Wonders per City[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Construction de merveilles nationales limitée à %d1_Num par ville[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Kann nur %d1_Num [NUM1:Nationales:Nationale] Wunder pro Stadt errichten[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Puoi costruire soltanto %d1_Num Meraviglie Nazionali per città[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla nacional:maravillas nacionales] por ciudad[COLOR_REVERT]</Spanish>
+		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num National Wonders.[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_NATIONAL_WONDER_ALLOWED</Tag>
@@ -1046,6 +1046,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_PROPERTY_SPAWN_BARB</Tag>
 		<English>[ICON_BULLET]Can spawn a barbarian %s1_Unit.</English>
 		<French>[ICON_BULLET]Peut faire appaître un %s1_Unit barbare.</French>
+		<German>[ICON_BULLET]kann [NUM1:einen barbarischen:eine barbarische:ein barbarisches:barbarische:barbarische:barbarische] %s1:4_Unit auftauchen lassen</German>
 		<Russian>[ICON_BULLET]Может породить варварский отряд %s1_Unit.</Russian>
 	</TEXT>
 	<TEXT>
@@ -1375,11 +1376,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_TEAM_WONDERS_PER_CITY</Tag>
-		<English>[COLOR_WARNING_TEXT]Can only Construct %d1_Num Team Wonders per City[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Construction de merveilles d'équipe limitée à %d1_Num par ville[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Kann nur %d1_Num Teamwunder pro Stadt errichten[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Puoi costruire soltanto %d1_Num Meraviglie di Squadra per città[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla de equipo:maravillas de equipo] por ciudad[COLOR_REVERT]</Spanish>
+		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num Team Wonders.[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_TEAM_WONDER_ALLOWED</Tag>
@@ -1567,17 +1564,13 @@
 		<Tag>TXT_KEY_BUILDINGHELP_WORKER_MOD</Tag>
 		<English>[ICON_BULLET]Workers Build Improvements %D1_Mod%% Faster</English>
 		<French>[ICON_BULLET]Vitesse de construction des aménagements : %D1_Mod%%</French>
-		<German>[ICON_BULLET]Bautrupps errichten Modernisierungen %D1_Mod%% schneller</German>
+		<German>[ICON_BULLET]Arbeitstrupps errichten Modernisierungen %D1_Mod%% schneller</German>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Mod%% più rapidamente</Italian>
 		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Mod%% más rápido</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDERS_PER_CITY</Tag>
-		<English>[COLOR_WARNING_TEXT]Can only Construct %d1_Num World Wonders per City[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Construction de merveilles mondiales limitée à %d1_Num par ville[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Kann nur %d1_Num Weltwunder pro Stadt errichten[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Puoi costruire soltanto %d1_Num Grandi Meraviglie per città[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Solo se [NUM1:puede:pueden] erigir %d1_Num [NUM1:maravilla del mundo:maravillas del mundo] por ciudad[COLOR_REVERT]</Spanish>
+		<English>[COLOR_WARNING_TEXT]This city's current culture level can only support %d1_Num World Wonders.[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_WORLD_WONDER_ALLOWED</Tag>

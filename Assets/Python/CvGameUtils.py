@@ -201,11 +201,11 @@ class CvGameUtils:
 
 	def getWidgetHelp(self, argsList):
 		eWidgetType, iData1, iData2, bOption = argsList
-## Religion Screen ##
+
 		if eWidgetType == WidgetTypes.WIDGET_HELP_RELIGION:
 			if iData1 == -1:
 				return CyTranslator().getText("TXT_KEY_CULTURELEVEL_NONE", ())
-## Platy WorldBuilder ##
+
 		elif eWidgetType == WidgetTypes.WIDGET_PYTHON:
 			if iData1 == 1027:
 				return CyTranslator().getText("TXT_KEY_WB_PLOT_DATA",())
@@ -301,10 +301,6 @@ class CvGameUtils:
 					return CyTranslator().getText("TXT_KEY_INFO_SCREEN", ())
 				elif iData2 == 34:
 					return CyTranslator().getText("TXT_KEY_CONCEPT_TRADE", ())
-			elif iData1 > 1029 and iData1 < 1040:
-				if iData1 %2:
-					return "-"
-				return "+"
 			elif iData1 == 1041:
 				return CyTranslator().getText("TXT_KEY_WB_KILL",())
 			elif iData1 == 1042:
@@ -380,7 +376,10 @@ class CvGameUtils:
 					if iGPRate > 0 or iProgress > 0:
 						sText += u"\n%s: %d/%d %+d" %(CyTranslator().getText("[ICON_GREATPEOPLE]", ()), iProgress, pPlayer.greatPeopleThresholdNonMilitary(), iGPRate)
 
-					sText += u"\n%s: %d/%d (%s)" %(CyTranslator().getText("[ICON_CULTURE]", ()), pCity.getCulture(iPlayer), pCity.getCultureThreshold(), GC.getCultureLevelInfo(pCity.getCultureLevel()).getDescription())
+					if pCity.getCultureThreshold() > 0:
+						sText += u"\n%s: %d/%d (%s)" %(CyTranslator().getText("[ICON_CULTURE]", ()), pCity.getCulture(iPlayer), pCity.getCultureThreshold(), GC.getCultureLevelInfo(pCity.getCultureLevel()).getDescription())
+					else: sText += u"\n%s: %d (%s)" %(CyTranslator().getText("[ICON_CULTURE]", ()), pCity.getCulture(iPlayer), GC.getCultureLevelInfo(pCity.getCultureLevel()).getDescription())
+
 
 					lTemp = []
 					for i in xrange(CommerceTypes.NUM_COMMERCE_TYPES):

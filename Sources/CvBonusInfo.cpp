@@ -60,7 +60,6 @@ CvBonusInfo::~CvBonusInfo()
 	SAFE_DELETE_ARRAY(m_pbTerrain);
 	SAFE_DELETE_ARRAY(m_pbFeature);
 	SAFE_DELETE_ARRAY(m_pbFeatureTerrain);	// free memory - MT
-
 }
 
 int CvBonusInfo::getBonusClassType() const
@@ -260,6 +259,21 @@ bool CvBonusInfo::isFeatureTerrain(int i) const
 	return m_pbFeatureTerrain ? m_pbFeatureTerrain[i] : false;
 }
 
+int CvBonusInfo::getCategory(int i) const
+{
+	return m_aiCategories[i];
+}
+
+int CvBonusInfo::getNumCategories() const
+{
+	return (int)m_aiCategories.size();
+}
+
+bool CvBonusInfo::isCategory(int i) const
+{
+	return algo::any_of_equal(m_aiCategories, i);
+}
+
 #ifdef OUTBREAKS_AND_AFFLICTIONS
 int CvBonusInfo::getNumAfflictionCommunicabilityTypes() const
 {
@@ -362,6 +376,8 @@ void CvBonusInfo::getCheckSum(uint32_t& iSum) const
 		CheckSum(iSum, m_aAfflictionCommunicabilityTypes[i].iModifier);
 	}
 
+	CheckSumC(iSum, m_aiCategories);
+
 	m_PropertyManipulators.getCheckSum(iSum);
 }
 
@@ -438,6 +454,7 @@ bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_pbFeature, L"FeatureBooleans", GC.getNumFeatureInfos());
 	pXML->SetVariableListTagPair(&m_pbFeatureTerrain, L"FeatureTerrainBooleans", GC.getNumTerrainInfos());
 	pXML->SetOptionalVector(&m_aeMapCategoryTypes, L"MapCategoryTypes");
+	pXML->SetOptionalVector(&m_aiCategories, L"Categories");
 
 	if (pXML->TryMoveToXmlFirstChild(L"AfflictionCommunicabilityTypes"))
 	{
@@ -555,6 +572,8 @@ void CvBonusInfo::copyNonDefaults(const CvBonusInfo* pClassInfo)
 	}
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aeMapCategoryTypes, pClassInfo->getMapCategories());
 	if (isPeaks() == bDefault) m_bPeaks = pClassInfo->isPeaks();
+
+	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aiCategories, pClassInfo->m_aiCategories);
 
 	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators);
 }

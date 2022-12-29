@@ -484,14 +484,10 @@ int CyPlayer::calculateBaseNetResearch() const
 	return m_pPlayer->calculateBaseNetResearch();
 }
 
-bool CyPlayer::canEverResearch(int /*TechTypes*/ eTech) const
-{
-	return m_pPlayer->canEverResearch((TechTypes)eTech);
-}
 
-bool CyPlayer::canResearch(int /*TechTypes*/ eTech) const
+bool CyPlayer::canResearch(const int iTech, const bool bRightNow) const
 {
-	return m_pPlayer->canResearch((TechTypes)eTech);
+	return m_pPlayer->canResearch((TechTypes)iTech, bRightNow);
 }
 
 int /*TechTypes*/ CyPlayer::getCurrentResearch() const
@@ -1551,14 +1547,9 @@ AttitudeTypes CyPlayer::AI_getAttitude(int /*PlayerTypes*/ ePlayer) const
 	//Fuyu catching AIAutoplay weirdness
 	if (m_pPlayer->getID() == (PlayerTypes)ePlayer)
 	{
-#ifdef _DEBUG
 		FErrorMsg("shouldn't call this function on ourselves (Python)");
-		throw new std::exception();
-#endif
 		return NO_ATTITUDE;
 	}
-	//Fuyu end
-
 	return m_pPlayer->AI_getAttitude((PlayerTypes)ePlayer);
 }
 

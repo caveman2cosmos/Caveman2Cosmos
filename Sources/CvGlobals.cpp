@@ -25,6 +25,7 @@
 #include "CvDLLUtilityIFaceBase.h"
 #include "CyGlobalContext.h"
 #include "FVariableSystem.h"
+#include "CityOutputHistory.h"
 #include <time.h>
 #include <sstream>
 
@@ -62,6 +63,7 @@ void deleteInfoArray(std::vector<CvInfoBase*>* array)
 CvGlobals gGlobalsProxy;	// for debugging
 cvInternalGlobals* gGlobals = NULL;
 CvDLLUtilityIFaceBase* gDLL = NULL;
+bool gMiscLogging = false;
 
 #ifdef _DEBUG
 int inDLL = 0;
@@ -132,8 +134,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_fPLOT_SIZE(0)
 	, m_iViewportCenterOnSelectionCenterBorder(5)
 	, m_szAlternateProfilSampleName("")
-	, m_bXMLLogging(true)
-
 	// BBAI Options
 	, m_bBBAI_AIR_COMBAT(false)
 	, m_bBBAI_HUMAN_VASSAL_WAR_BUILD(false)
@@ -390,6 +390,9 @@ void cvInternalGlobals::init()
 
 	m_VarSystem = new FVariableSystem;
 	m_asyncRand = new CvRandom;
+	// Toffer - Strange that there's three instances of CvInitCore...
+	//	Maybe when a save is loaded from within a game the new one has to be built before the old one is destroyed.
+	//	I guess the exe does some juggling magic with the three, we only ever use m_initCore internaly in the dll.
 	m_initCore = new CvInitCore;
 	m_loadedInitCore = new CvInitCore;
 	m_iniInitCore = new CvInitCore;
@@ -1013,6 +1016,16 @@ BonusTypes cvInternalGlobals::getMapBonus(const int i) const
 	return m_mapBonuses[i];
 }
 
+int cvInternalGlobals::getStatusPromotion(int i) const
+{
+	return m_aiStatusPromotions[i];
+}
+
+int cvInternalGlobals::getNumStatusPromotions() const
+{
+	return (int)m_aiStatusPromotions.size();
+}
+
 int cvInternalGlobals::getNumFeatureInfos() const
 {
 	return (int)m_paFeatureInfo.size();
@@ -1285,6 +1298,18 @@ CvInvisibleInfo& cvInternalGlobals::getInvisibleInfo(InvisibleTypes e) const
 {
 	FASSERT_BOUNDS(0, GC.getNumInvisibleInfos(), e);
 	return *(m_paInvisibleInfo[e]);
+}
+
+
+int cvInternalGlobals::getNumCategoryInfos() const
+{
+	return (int)m_paCategoryInfo.size();
+}
+
+CvCategoryInfo& cvInternalGlobals::getCategoryInfo(CategoryTypes e) const
+{
+	FASSERT_BOUNDS(0, GC.getNumCategoryInfos(), e);
+	return *(m_paCategoryInfo[e]);
 }
 
 
@@ -1698,7 +1723,6 @@ void cvInternalGlobals::registerMissions()
 	REGISTER_MISSION(MISSION_ESPIONAGE_SLEEP);
 	REGISTER_MISSION(MISSION_GREAT_COMMANDER);
 	REGISTER_MISSION(MISSION_SHADOW);
-	REGISTER_MISSION(MISSION_WAIT_FOR_TECH);
 	REGISTER_MISSION(MISSION_GOTO);
 	REGISTER_MISSION(MISSION_BUTCHER);
 	REGISTER_MISSION(MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE);
@@ -2442,8 +2466,6 @@ void cvInternalGlobals::cacheGlobals()
 
 	m_bTECH_DIFFUSION_ENABLE = !(getDefineINT("TECH_DIFFUSION_ENABLE") == 0);
 
-	m_bXMLLogging = getDefineINT("XML_LOGGING_ENABLED");
-
 	m_szAlternateProfilSampleName = getDefineSTRING("PROFILER_ALTERNATE_SAMPLE_SET_SOURCE");
 	if (m_szAlternateProfilSampleName == NULL)
 	{
@@ -2614,18 +2636,6 @@ int cvInternalGlobals::getInfoTypeForString(const char* szType, bool hideAssert)
 /*                                                                                              */
 /* Rearranging the infos map                                                                    */
 /************************************************************************************************/
-/*
-void cvInternalGlobals::setInfoTypeFromString(const char* szType, int idx)
-{
-	FAssertMsg(szType, "null info type string");
-#ifdef _DEBUG
-	InfosMap::const_iterator it = m_infosMap.find(szType);
-	int iExisting = (it!=m_infosMap.end()) ? it->second : -1;
-	FAssertMsg(iExisting==-1 || iExisting==idx || strcmp(szType, "ERROR")==0, CvString::format("xml info type entry %s already exists", szType).c_str());
-#endif
-	m_infosMap[szType] = idx;
-}
-*/
 void cvInternalGlobals::setInfoTypeFromString(const char* szType, int idx)
 {
 	FAssertMsg(szType, "null info type string");
@@ -2651,29 +2661,26 @@ int cvInternalGlobals::getOrCreateInfoTypeForString(const char* szType)
 
 void cvInternalGlobals::logInfoTypeMap(const char* tagMsg)
 {
-	if (GC.isXMLLogging())
+	logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " === Info Type Map Dump BEGIN: %s ===", tagMsg);
+
+	int iCnt = 0;
+	std::vector<std::string> vInfoMapKeys;
+	for (InfosMap::const_iterator it = m_infosMap.begin(); it != m_infosMap.end(); ++it)
 	{
-		logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " === Info Type Map Dump BEGIN: %s ===", tagMsg);
-
-		int iCnt = 0;
-		std::vector<std::string> vInfoMapKeys;
-		for (InfosMap::const_iterator it = m_infosMap.begin(); it != m_infosMap.end(); ++it)
-		{
-			std::string sKey = it->first;
-			vInfoMapKeys.push_back(sKey);
-		}
-
-		algo::sort(vInfoMapKeys);
-
-		foreach_(const std::string& sKey, vInfoMapKeys)
-		{
-			logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " * %i --  %s: %i", iCnt, sKey.c_str(), m_infosMap[sKey.c_str()]);
-			iCnt++;
-		}
-
-		logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", "Entries in total: %i", iCnt);
-		logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " === Info Type Map Dump END: %s ===", tagMsg);
+		std::string sKey = it->first;
+		vInfoMapKeys.push_back(sKey);
 	}
+
+	algo::sort(vInfoMapKeys);
+
+	foreach_(const std::string& sKey, vInfoMapKeys)
+	{
+		logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " * %i --  %s: %i", iCnt, sKey.c_str(), m_infosMap[sKey.c_str()]);
+		iCnt++;
+	}
+
+	logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", "Entries in total: %i", iCnt);
+	logging::logMsg("cvInternalGlobals_logInfoTypeMap.log", " === Info Type Map Dump END: %s ===", tagMsg);
 }
 /************************************************************************************************/
 /* SORT_ALPHABET                           END                                                  */
@@ -2930,17 +2937,15 @@ bool cvInternalGlobals::bugInitCalled() const
 	return bBugInitCalled;
 }
 
+// Toffer - Only ever called once, happens the first time one start a new game, or loads a save.
 void cvInternalGlobals::setIsBug()
 {
 	bBugInitCalled = true;
 
 	::setIsBug();
+	refreshOptionsBUG();
 
-#ifdef _DEBUG // Matt: temporary
-	Cy::call("CvInfoUtilInterface", "init");
-#endif
-
-	//	If viewports are truned on in BUG the settinsg there override those in the global defines
+	// If viewports are truned on in BUG the settinsg there override those in the global defines
 	if (getBugOptionBOOL("MainInterface__EnableViewports", false))
 	{
 		m_ENABLE_VIEWPORTS = true;
@@ -2963,6 +2968,21 @@ void cvInternalGlobals::setIsBug()
 	}
 }
 
+void cvInternalGlobals::refreshOptionsBUG()
+{
+	gPlayerLogLevel = getBugOptionINT("Autolog__LogLevelPlayerBBAI", 0);
+	gTeamLogLevel = getBugOptionINT("Autolog__LogLevelTeamBBAI", 0);
+	gCityLogLevel = getBugOptionINT("Autolog__LogLevelCityBBAI", 0);
+	gUnitLogLevel = getBugOptionINT("Autolog__LogLevelUnitBBAI", 0);
+	gMiscLogging = getBugOptionBOOL("Autolog__MiscLogging", false);
+
+	OutputRatios::setBaseOutputWeights(
+		getBugOptionINT("CityScreen__BaseWeightFood", 10),
+		getBugOptionINT("CityScreen__BaseWeightHammer", 8),
+		getBugOptionINT("CityScreen__BaseWeightCommerce", 6)
+	);
+}
+
 
 bool cvInternalGlobals::getBBAI_AIR_COMBAT() const
 {
@@ -2977,17 +2997,6 @@ bool cvInternalGlobals::getBBAI_HUMAN_VASSAL_WAR_BUILD() const
 bool cvInternalGlobals::getTECH_DIFFUSION_ENABLE() const
 {
 	return m_bTECH_DIFFUSION_ENABLE;
-}
-
-
-void cvInternalGlobals::setXMLLogging(bool bNewVal)
-{
-	m_bXMLLogging = bNewVal;
-}
-
-bool cvInternalGlobals::isXMLLogging() const
-{
-	return m_bXMLLogging;
 }
 
 
@@ -3048,6 +3057,15 @@ void cvInternalGlobals::doPostLoadCaching()
 			}
 		}
 	}
+	//TB: Set Statuses
+	m_aiStatusPromotions.clear();
+	for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
+	{
+		if (GC.getPromotionInfo((PromotionTypes)iI).isStatus())
+		{
+			m_aiStatusPromotions.push_back(iI);
+		}
+	}
 
 	foreach_(const std::vector<CvInfoBase*>* infoVector, m_aInfoVectors)
 	{
@@ -3056,8 +3074,9 @@ void cvInternalGlobals::doPostLoadCaching()
 			(*infoVector)[i]->doPostLoadCaching(i);
 		}
 	}
-}
 
+	CityOutputHistory::setCityOutputHistorySize((uint16_t)GC.getCITY_OUTPUT_HISTORY_SIZE());
+}
 
 void cvInternalGlobals::checkInitialCivics()
 {
@@ -3090,5 +3109,19 @@ void cvInternalGlobals::checkInitialCivics()
 				}
 			}
 		}
+	}
+}
+
+void cvInternalGlobals::cacheGameSpecificValues()
+{
+	int iLevel = 0;
+
+	foreach_(CvCultureLevelInfo* info, m_paCultureLevelInfo)
+	{
+		if (info->getPrereqGameOption() == NO_GAMEOPTION || getGame().isOption((GameOptionTypes)info->getPrereqGameOption()))
+		{
+			info->setLevel(iLevel++);
+		}
+		else info->setLevel(-1);
 	}
 }

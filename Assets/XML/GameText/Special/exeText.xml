@@ -967,7 +967,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_CREATE_ACCOUNT_HELP</Tag>
-		<English>Gamespy servers are down for good!</English>
+		<English>Enter your email address, desired user name, and password to create a new GameSpy account.</English>
+		<French>Saisissez votre adresse e-mail, votre nom d'utilisateur et votre mot de passe pour cr&#233;er un nouveau compte GameSpy.</French>
+		<German>Geben Sie zum Anlegen eines neuen GameSpy-Accounts Ihre E-Mail-Adresse, den gew&#252;nschten Benutzernamen und ein Kennwort ein.</German>
+		<Italian>Inserisci il tuo indirizzo e-mail, lo username desiderato e la password per creare un nuovo account di GameSpy.</Italian>
+		<Spanish>Introduce tu direcci&#243;n de e-mail, el nombre de usuario que desees y la contrase&#241;a para crear una nueva cuenta de GameSpy.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_CREATE_ACCOUNT_TITLE</Tag>
@@ -1003,7 +1007,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_LOGIN_DESC</Tag>
-		<English>Gamespy servers are down for good!</English>
+		<English>Enter your existing GameSpy ID and password to login.</English>
+		<French>Saisissez votre identifiant et votre mot de passe GameSpy pour vous connecter.</French>
+		<German>Geben Sie Ihren vorhandenen GameSpy-Benutzernamen und Ihr Kennwort ein, um sich einzuloggen.</German>
+		<Italian>Inserisci il tuo GameSpy ID esistente e la password per effettuare il login.</Italian>
+		<Spanish>Introduce tu ID de GameSpy y tu contrase&#241;a para iniciar sesi&#243;n.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMESPY_LOGIN_TITLE</Tag>
@@ -1215,8 +1223,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_CAPTURE_DESC</Tag>
-		<English>You have selected an unusable voice capture device. Voice capture disabled.</English>
-		<German>Es wurde ein ungeeignetes Gerät zur Sprachaufzeichnung ausgewählt. Sprachaufzeichnungen wurden deaktiviert.</German>
+		<English>You have selected an unusable voice capture device. Voice capture disabled.
+		This message usually appears when game is freshly installed, or when INI file was corrupted or deleted.
+		To disable this message: Go to C:\Users\"your username"\Documents\My Games\Beyond the Sword, open CivilizationIV.ini, and change "enablevoice = 1" to "enablevoice = 0"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INVALID_CAPTURE_TITLE</Tag>
@@ -2038,7 +2047,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MULTIPLAYER_INTERNET_GAMES</Tag>
-		<English>N/A</English>
+		<English>Internet Games</English>
+		<French>Parties Internet</French>
+		<German>Internet-Spiele</German>
+		<Italian>Partite Internet</Italian>
+		<Spanish>Partidas en Internet</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_MULTIPLAYER_LAN</Tag>
@@ -3656,11 +3669,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RECOMMENDED_SPECS_MESSAGE</Tag>
-		<English>Your machine is below recommended specifications. The graphic settings were altered to accomodate this, however, you may experience performance issues.</English>
-		<French>Votre machine ne correspond pas à la configuration recommandée. Les paramètres graphiques ont été modifiés pour pallier ce problème, mais les performances du programme risquent d'en souffrir.</French>
-		<German>Ihr Computer entspricht nicht den empfohlenen Systemspezifikationen. Die Grafikeinstellungen wurden entsprechend angepasst, es könnten jedoch Performance-Probleme auftreten.</German>
-		<Italian>Il tuo computer è al di sotto dei requisiti consigliati. Le impostazioni grafiche sono state alterate di conseguenza ma, tuttavia, potrai avere dei problemi di prestazioni.</Italian>
-		<Spanish>El ordenador no cumple los requisitos recomendados. Se ha modificado la configuración gráfica en consecuencia, pero aun así es posible que se experimenten problemas de rendimiento.</Spanish>
+		<English>Your machine is below recommended specifications. The graphic settings were altered to accomodate this, however, you may experience performance issues.
+		This message usually appears when game is freshly installed, or when INI file was corrupted or deleted.
+		To disable this message: Go to C:\Users\"your username"\Documents\My Games\Beyond the Sword, open CivilizationIV.ini, and change "HideMinSpecWarning = 0" to "HideMinSpecWarning = 1"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REJECT_FULL_DESC</Tag>
@@ -4240,7 +4251,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VISIT_GAMESPYID</Tag>
-		<English>"Cancel" is your only choice.</English>
+		<English>Visit www.gamespyid.com to manage your account!</English>
+		<French>Visitez le site www.gamespyid.com pour g&#233;rer votre compte !</French>
+		<German>Besuchen Sie www.gamespyid.com, um Ihren Account zu verwalten.</German>
+		<Italian>Mostra informazioni dettagliate sul mondo di gioco (www.gamespyid.com).</Italian>
+		<Spanish>Visita www.gamespyid.com para gestionar tu cuenta.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_VOTE_SCREEN_EXIT_NOW</Tag>

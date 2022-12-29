@@ -57,13 +57,9 @@ class PediaImprovement:
 
 		eWidGen			= WidgetTypes.WIDGET_GENERAL
 		eWidJuToBonus	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS
-		eWidJuToBuild	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING
 		eWidJuToCivic	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_CIVIC
-		eWidJuToFeature	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_FEATURE
 		eWidJuToRoute	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_ROUTE
 		eWidJuToTech	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH
-		eWidJuToTerrain	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_TERRAIN
-		eWidJuToUnit	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT
 		ePnlBlue50		= PanelStyles.PANEL_STYLE_BLUE50
 		ePnlEmpty		= PanelStyles.PANEL_STYLE_EMPTY
 		eTblEmpty		= TableStyles.TABLE_STYLE_EMPTY
@@ -253,7 +249,7 @@ class PediaImprovement:
 				for i, szYield in aList1:
 					childPanelName = aName()
 					screen.attachPanel(panelName, childPanelName, "", "", True, True, ePnlEmpty)
-					screen.attachImageButton(childPanelName, "", GC.getTechInfo(i).getButton(), enumGBS, eWidJuToTech, i, 1, False)
+					screen.attachImageButton(childPanelName, "", GC.getTechInfo(i).getButton(), enumGBS, eWidJuToTech, i, 2, False)
 					screen.attachLabel(childPanelName, "", szfont3b + " " + szYield)
 					screen.attachLabel(panelName, "", "   ")
 			if aList2:
@@ -264,7 +260,7 @@ class PediaImprovement:
 				for i, szYield in aList2:
 					childPanelName = aName()
 					screen.attachPanel(panelName, childPanelName, "", "", True, True, ePnlEmpty)
-					screen.attachImageButton(childPanelName, "", GC.getCivicInfo(i).getButton(), enumGBS, eWidJuToCivic, i, 1, False)
+					screen.attachImageButton(childPanelName, "", GC.getCivicInfo(i).getButton(), enumGBS, eWidJuToCivic, i, 2, False)
 					screen.attachLabel(childPanelName, "", szfont3b + " " + szYield)
 					screen.attachLabel(panelName, "", "   ")
 			if aList3:
@@ -275,7 +271,7 @@ class PediaImprovement:
 				for i, szYield in aList3:
 					childPanelName = aName()
 					screen.attachPanel(panelName, childPanelName, "", "", True, True, ePnlEmpty)
-					screen.attachImageButton(childPanelName, "", GC.getBonusInfo(i).getButton(), enumGBS, eWidJuToBonus, i, 1, False)
+					screen.attachImageButton(childPanelName, "", GC.getBonusInfo(i).getButton(), enumGBS, eWidJuToBonus, i, 2, False)
 					screen.attachLabel(childPanelName, "", szfont3b + " " + szYield)
 					screen.attachLabel(panelName, "", "   ")
 			if aList4:
@@ -286,7 +282,7 @@ class PediaImprovement:
 				for i, szYield in aList4:
 					childPanelName = aName()
 					screen.attachPanel(panelName, childPanelName, "", "", True, True, ePnlEmpty)
-					screen.attachImageButton(childPanelName, "", GC.getRouteInfo(i).getButton(), enumGBS, eWidJuToRoute, i, 1, False)
+					screen.attachImageButton(childPanelName, "", GC.getRouteInfo(i).getButton(), enumGBS, eWidJuToRoute, i, 2, False)
 					screen.attachLabel(childPanelName, "", szfont3b + " " + szYield)
 					screen.attachLabel(panelName, "", "   ")
 		else:

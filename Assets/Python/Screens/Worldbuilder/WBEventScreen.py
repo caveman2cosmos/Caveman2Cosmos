@@ -2,7 +2,6 @@ from CvPythonExtensions import *
 import CvScreenEnums
 import WBPlotScreen
 import WBCityEditScreen
-import WBUnitScreen
 import WBPlayerScreen
 import WBTeamScreen
 import WBInfoScreen
@@ -292,7 +291,7 @@ class WBEventScreen:
 				else:
 					pUnit = pPlot.getUnit(0)
 				if pUnit:
-					WBUnitScreen.WBUnitScreen(self.WB).interfaceScreen(pUnit)
+					self.WB.goToSubScreen("UnitScreen", [pUnit])
 			elif iIndex == 11:
 				iPlayer = pPlot.getOwner()
 				if iPlayer == -1:

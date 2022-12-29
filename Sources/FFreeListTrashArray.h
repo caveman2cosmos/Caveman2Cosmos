@@ -9,8 +9,7 @@
 
 #define USE_HASHMAP_FREELIST
 
-#define FLTA_ID_SHIFT				(13)
-#define FLTA_MAX_BUCKETS		(1 << FLTA_ID_SHIFT)
+#define FLTA_MAX_BUCKETS		(1 << 13)
 #define FLTA_INDEX_MASK			(FLTA_MAX_BUCKETS - 1)
 #define FLTA_ID_MASK				(~(FLTA_INDEX_MASK))
 #define FLTA_GROWTH_FACTOR	(2)
@@ -292,24 +291,21 @@ T* FFreeListTrashArray<T>::prevIter(int* pIterIdx) const
 template <class T>
 T* FFreeListTrashArray<T>::add()
 {
-	int iIndex;
-
 	if (m_pArray == NULL)
 	{
 		init();
 	}
 	FAssertMsg(m_pArray != NULL, "Array is null after initialization");
 
-	if ((m_iLastIndex == m_iNumSlots - 1) &&
-		(m_iFreeListCount == 0))
+	if (m_iLastIndex == m_iNumSlots - 1 && m_iFreeListCount == 0)
 	{
-		if ((m_iNumSlots * FLTA_GROWTH_FACTOR) > FLTA_MAX_BUCKETS)
+		if (m_iNumSlots * FLTA_GROWTH_FACTOR > FLTA_MAX_BUCKETS)
 		{
 			return NULL;
 		}
-
 		growArray();
 	}
+	int iIndex;
 
 	if (m_iFreeListCount > 0)
 	{
@@ -396,8 +392,7 @@ T* FFreeListTrashArray<T>::getAt(int iID) const
 
 	FASSERT_NOT_NEGATIVE(iIndex);
 
-	if ((iIndex <= m_iLastIndex) &&
-		(m_pArray[iIndex].pData != NULL))
+	if ((iIndex <= m_iLastIndex) && (m_pArray[iIndex].pData != NULL))
 	{
 		if (((iID & FLTA_ID_MASK) == 0) || (m_pArray[iIndex].pData->getID() == iID))
 		{

@@ -28,9 +28,7 @@
 #the imports required for SmartMap or the borrowed fractal generators
 import operator
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
-from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
+import CvMapGeneratorUtil as MGU
 import pickle
 from math import pi
 import os, _winreg
@@ -1372,7 +1370,7 @@ def generateTerrainTypes():
 	useMapData = False
 
 	if terrainMethod == "standard":
-		terraingen = TerrainGenerator()
+		terraingen = MGU.TerrainGenerator()
 		terrainTypes = terraingen.generateTerrain()
 		OutputMessage("Python: SmartMap: Step 3 Generate Terrain: complete standard")
 		return terrainTypes
@@ -1533,11 +1531,9 @@ def generateTerrainTypes():
 		grassFactor -= 10
 	if climate == climateCold:
 		extraDesert -= 10
-		extraCold += 20
+		extraCold += 15
 		grassFactor -= 5
 	if climate == climateTemperate:
-		extraDesert -= 0
-		extraCold -= 0
 		grassFactor += 5
 	if climate == climateTropical:
 		extraDesert -= 16
@@ -1563,19 +1559,27 @@ def generateTerrainTypes():
 	terrainDunes = GC.getInfoTypeForString("TERRAIN_DUNES")
 	terrainScrub = GC.getInfoTypeForString("TERRAIN_SCRUB")
 	terrainRocky = GC.getInfoTypeForString("TERRAIN_ROCKY")
+	terrainBadland = GC.getInfoTypeForString("TERRAIN_BADLAND")
+	terrainJagged = GC.getInfoTypeForString("TERRAIN_JAGGED")
 	terrainBarren = GC.getInfoTypeForString("TERRAIN_BARREN")
 	terrainPlains = GC.getInfoTypeForString("TERRAIN_PLAINS")
+	terrainTaiga = GC.getInfoTypeForString("TERRAIN_TAIGA")
+	terrainTundra = GC.getInfoTypeForString("TERRAIN_TUNDRA")
+	terrainPermafrost = GC.getInfoTypeForString("TERRAIN_PERMAFROST")
 	terrainIce = GC.getInfoTypeForString("TERRAIN_ICE")
-	terrainTundra = GC.getInfoTypeForString("TERRAIN_TAIGA")
-	terrainPermafrost = GC.getInfoTypeForString("TERRAIN_TUNDRA")
 	terrainGrass = GC.getInfoTypeForString("TERRAIN_GRASSLAND")
 	terrainLush = GC.getInfoTypeForString("TERRAIN_LUSH")
 	terrainMuddy = GC.getInfoTypeForString("TERRAIN_MUDDY")
 	terrainMarsh = GC.getInfoTypeForString("TERRAIN_MARSH")
-	terrainHill = GC.getInfoTypeForString("TERRAIN_HILL")
-	terrainCoast = GC.getInfoTypeForString("TERRAIN_COAST")
-	terrainOcean = GC.getInfoTypeForString("TERRAIN_OCEAN")
-	terrainPeak = GC.getInfoTypeForString("TERRAIN_PEAK")
+
+	terrains = (
+		terrainDesert, terrainDunes, terrainSaltFlats,
+		terrainTaiga, terrainTundra, terrainPermafrost,
+		terrainRocky, terrainJagged, terrainBadland,
+		terrainScrub, terrainPlains, terrainGrass,
+		terrainLush, terrainMuddy, terrainMarsh,
+		terrainBarren, terrainIce
+	)
 
 	preComputeWetness()
 	global preComputedWetness
@@ -1610,11 +1614,7 @@ def generateTerrainTypes():
 			#make sure every plot has a default set
 			terrainData[index] = pPlot.getTerrainType()
 			#water tiles, peaks, and hills should always take their default terrain type
-			if pPlot.isWater():
-				terrainData[index] = pPlot.getTerrainType()
-				continue
-			if pPlot.isPeak():
-				terrainData[index] = pPlot.getTerrainType()
+			if pPlot.isWater() or pPlot.isPeak():
 				continue
 
 			if useMapData and len(mapTerrainData) > 0:
@@ -1628,22 +1628,13 @@ def generateTerrainTypes():
 				continue
 
 			if crazyTerrain:
-				pickVal = dice.get(100, "Python: SmartMap: Dice: Random Terrain")
-				if pickVal < 10:
-					terrainData[index] = terrainSnow
-				elif pickVal < 30:
-					terrainData[index] = terrainTundra
-				elif pickVal < 50:
-					terrainData[index] = terrainDesert
-				elif pickVal < 75:
-					terrainData[index] = terrainPlains
-				else:
-					terrainData[index] = terrainGrass
+				terrainData[index] = terrains[dice.get(len(terrains), "SmartMap: Dice: Random Terrain")]
 				continue
 
 			if allPlains:
 				terrainData[index] = terrainPlains
 				continue
+
 			if allGrass:
 				terrainData[index] = terrainGrass
 				continue
@@ -1664,57 +1655,112 @@ def generateTerrainTypes():
 				if pPlot.isFreshWater() or pPlot.isRiver():
 					isWater = True
 
-				snowRand = dice.get(100, "Python: SmartMap: Dice: Random Terrain")
-				tundraRand = dice.get(100, "Python: SmartMap: Dice: Random Terrain")
-				if not noSnow and percentFromPoleXY<(35+extraCold+plotAltitudeFactor) and snowRand < 6*(35+extraCold-percentFromPoleXY+plotAltitudeFactor):
+				if not noSnow and percentFromPoleXY < 8 + extraCold * 2/3:
 					terrainData[index] = terrainIce
 					continue
-				if not noTundra and percentFromPoleXY<(35+extraCold+plotAltitudeFactor) and tundraRand < 70+plotAltitudeFactor:
-					terrainData[index] = terrainTundra
-					continue
-				if percentFromPoleXY<(35+extraCold+plotAltitudeFactor):
-					terrainData[index] = terrainPlains
+
+				if noSnow:
+					iceRand = 0
+				else: iceRand = dice.get(100, "Python: SmartMap: Dice: Random Terrain")
+
+				jaggedRand = dice.get(100, "Python: SmartMap: Dice: Random Terrain")
+
+				if not noSnow and percentFromPoleXY < (20+extraCold+plotAltitudeFactor):
+					if iceRand < 5*(35+extraCold-percentFromPoleXY+plotAltitudeFactor):
+						terrainData[index] = terrainIce
+					elif jaggedRand < 4:
+						terrainData[index] = terrainJagged
+					else: terrainData[index] = terrainPermafrost
 					continue
 
-				#near the poles, but further out, tundra or plains
-				if not noTundra and percentFromPoleXY<(55+extraCold+plotAltitudeFactor) and tundraRand < 5*(55+extraCold-percentFromPoleXY+plotAltitudeFactor):
-					terrainData[index] = terrainTundra
+				if noTundra:
+					permafrostRand = tundraRand = taigaRand = 0
+				else:
+					permafrostRand = dice.get(100, "Python: SmartMap: Dice: Random Terrain")
+					tundraRand = dice.get(100, "Python: SmartMap: Dice: Random Terrain")
+					taigaRand = dice.get(100, "Python: SmartMap: Dice: Random Terrain")
+
+				if not noTundra and percentFromPoleXY < (35+extraCold+plotAltitudeFactor):
+					if permafrostRand < 5*(35+extraCold-percentFromPoleXY+plotAltitudeFactor):
+						if jaggedRand < 4:
+							terrainData[index] = terrainJagged
+						elif permafrostRand < tundraRand:
+							terrainData[index] = terrainPermafrost
+						else: terrainData[index] = terrainTundra
+						continue
+
+					if tundraRand < 40+plotAltitudeFactor:
+						if jaggedRand < 6:
+							terrainData[index] = terrainJagged
+						elif taigaRand < tundraRand:
+							terrainData[index] = terrainTaiga
+						else: terrainData[index] = terrainTundra
+						continue
+					terrainData[index] = terrainTaiga
 					continue
-				if percentFromPoleXY<(55+extraCold+plotAltitudeFactor):
+
+				barrenRand = dice.get(100, "Python: SmartMap: Dice: Random Terrain")
+
+				#near the poles, but further out, tundra or plains
+				if not noTundra and percentFromPoleXY<(55+extraCold+plotAltitudeFactor):
+					if taigaRand < 4*(55+extraCold-percentFromPoleXY+plotAltitudeFactor):
+						if jaggedRand < 4:
+							terrainData[index] = terrainJagged
+						elif taigaRand < barrenRand:
+							terrainData[index] = terrainTaiga
+						else: terrainData[index] = terrainBarren
+						continue
+
 					terrainData[index] = terrainPlains
 					continue
 
 				#in central portion of map, get desert
-				desertRand = dice.get(100, "Python: SmartMap: Dice: Random Terrain")
-				plainsRand = dice.get(100, "Python: SmartMap: Dice: Random Terrain")
 				desertSign = 1
 				if extraDesert < 0:
 					desertSign = -1
-				desertWidthFactor = dice.get(abs(extraDesert)+1, "Python: SmartMap: Dice: Random Terrain")
-				desertWidthFactor *= desertSign
+				desertWidthFactor = dice.get(abs(extraDesert)+1, "Python: SmartMap: Dice: Random Terrain") * desertSign
 				desertWaterFactor = waterFactor/3
 				if climate == climateTropical:
 					desertWaterFactor = waterFactor
-				if not noDesert and (percentFromEquatorXY<(42+desertWidthFactor+plotAltitudeFactor) and
-					#desertRand < 60+plotAltitudeFactor-desertWaterFactor+extraDesert-percentFromEquatorXY+desertWidthFactor):
-					desertRand < 40+plotAltitudeFactor-desertWaterFactor+extraDesert-percentFromEquatorXY+desertWidthFactor):
-					terrainData[index] = terrainDesert
-					continue
-				if percentFromEquatorXY<(42+desertWidthFactor) and ((plainsRand<50+plainsAdjust) or ((plainsRand<80+plainsAdjust) and not isWater)):
-					terrainData[index] = terrainPlains
-					continue
-				if percentFromEquatorXY<(42+desertWidthFactor):
-					terrainData[index] = terrainGrass
+
+				heatRand = dice.get(100, "Python: SmartMap: Dice: Random Terrain")
+
+				if (not noDesert and percentFromEquatorXY < (42+desertWidthFactor+plotAltitudeFactor)
+				and dice.get(100, "Python: SmartMap: Dice: Random Terrain") < 40+plotAltitudeFactor-desertWaterFactor+extraDesert-percentFromEquatorXY+desertWidthFactor):
+					if heatRand < 6:
+						terrainData[index] = terrainBadland
+					elif heatRand < 12:
+						terrainData[index] = terrainSaltFlats
+					elif heatRand < 30:
+						terrainData[index] = terrainDunes
+					else: terrainData[index] = terrainDesert
 					continue
 
-				#grass, particularly near water
-				grassRand = dice.get(100, "Python: SmartMap: Dice: Random Terrain")
-				if grassRand < (50 + waterFactor + grassFactor -plainsAdjust):
-					terrainData[index] = terrainGrass
+				if dice.get(100, "Python: SmartMap: Dice: Random Terrain") < 5:
+					terrainData[index] = terrainRocky
 					continue
-				#everything else plains
-				terrainData[index] = terrainPlains
-				continue
+
+				if not isWater:
+					if dice.get(100, "Python: SmartMap: Dice: Random Terrain") < 40+plainsAdjust:
+						terrainData[index] = terrainPlains
+						continue
+					if dice.get(100, "Python: SmartMap: Dice: Random Terrain") < 10:
+						terrainData[index] = terrainScrub
+						continue
+
+				#grass, particularly near water
+				if dice.get(100, "Python: SmartMap: Dice: Random Terrain") < 50 + waterFactor + grassFactor - plainsAdjust:
+					wetRand = dice.get(100, "Python: SmartMap: Dice: Random Terrain")
+					if wetRand < 20:
+						terrainData[index] = terrainMarsh
+					elif wetRand < 40:
+						terrainData[index] = terrainMuddy
+					else:
+						terrainData[index] = terrainLush
+					continue
+
+				#everything else grass
+				terrainData[index] = terrainGrass
 
 	#second pass: clumpify terrain by giving each plot a chance to match its neighbors
 	allLandPlots = []
@@ -1945,7 +1991,7 @@ def addFeatures():
 
 	global featuregen
 	if featureMethod == "standard":
-		featuregen = FeatureGenerator()
+		featuregen = MGU.FeatureGenerator()
 		featuregen.addFeatures()
 		OutputMessage("Python: SmartMap: Step 4 Feature Generation: complete standard")
 		return 0
@@ -1998,7 +2044,7 @@ def addFeatures():
 
 	if climate == climateCold:
 		extraForest += 120
-		extraCold += 2
+		extraCold += 5
 		extraVolcano -= 2
 		extraSwamp += 60
 
@@ -3468,6 +3514,9 @@ selection_names_and_values = [
 #the script instead!
 def getDescription():
 	return unicode("SmartMap")
+
+def getNumHiddenCustomMapOptions():
+	return 0
 
 #return the total number of custom options for this map
 def getNumCustomMapOptions():
@@ -5106,7 +5155,7 @@ blueMarbleTerrainData = [
 #of other script behaviors on some of the options
 #some needed classes
 # subclass TerrainGenerator to redefine everything. This is a regional map.
-class GreatPlainsTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
+class GreatPlainsTerrainGenerator(MGU.TerrainGenerator):
 	def __init__(self, iRockyDesertPercent=50, iRockyPlainsPercent=30,
 				 iGrassPercent=17, iDesertPercent=8, iTexDesertPercent=20,
 				 iEastDesertPercent=2, iEastPlainsPercent=23,
@@ -5272,7 +5321,7 @@ class GreatPlainsTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
 # subclass TerrainGenerator to redefine everything. This is a regional map. Ice need not apply!
 # Latitudes, ratios, the works... It's all rewired. - Sirian June 20, 2005
 
-class OasisTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
+class OasisTerrainGenerator(MGU.TerrainGenerator):
 	def __init__(self, iGrassPercent=50, iPlainsPercent=35,
 				iNorthernPlainsPercent=40, iOasisGrassPercent=9,
 				iOasisPlainsPercent=16, iOasisTopLatitude=0.69,
@@ -5408,7 +5457,7 @@ class OasisTerrainGenerator(CvMapGeneratorUtil.TerrainGenerator):
 
 		return terrainVal
 
-class GreatPlainsFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
+class GreatPlainsFeatureGenerator(MGU.FeatureGenerator):
 	def __init__(self, iJunglePercent=40, iEastForestPercent=45,
 				iForestPercent=8, iRockyForestPercent=55,
 				forest_grain=6, fracXExp=-1, fracYExp=-1):
@@ -5490,7 +5539,7 @@ class GreatPlainsFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 				if self.forests.getHeight(iX, iY) <= self.iForestLevel:
 					pPlot.setFeatureType(self.featureForest, 0)
 
-class OasisFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
+class OasisFeatureGenerator(MGU.FeatureGenerator):
 	def __init__(self, iJunglePercent=40, iForestPercent=45, jungle_grain=5, forest_grain=6, fracXExp=-1, fracYExp=-1):
 		self.map = CyMap()
 		self.mapRand = GC.getGame().getMapRand()
@@ -5568,7 +5617,7 @@ class OasisFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
 
 def afterGeneration():
 	checkForBadPlots()
-	CvMapGeneratorUtil.placeC2CBonuses()
+	MGU.placeC2CBonuses()
 
 # 9.0
 #	 New land layout: earth.  Selecting this will generate the earth, with source data

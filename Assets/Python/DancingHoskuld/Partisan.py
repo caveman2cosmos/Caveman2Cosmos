@@ -56,7 +56,7 @@ GAME = GC.getGame()
 TRNSLTR = CyTranslator()
 
 def onCityAcquired(argsList):
-	iOwnerOld, iOwnerNew, CyCity, bConquest, bTrade = argsList
+	iOwnerOld, iOwnerNew, CyCity, bConquest, bTrade, bAutoRaze = argsList
 
 	# Partizans doesn't make sense if this is reconquest (liberation) or not conquest at all.
 	if not bConquest or not CyCity.isOccupation():

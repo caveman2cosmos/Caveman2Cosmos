@@ -709,6 +709,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT_COMBAT</Tag>
 		<English>Combat Types</English>
+		<German>Kategorien</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_UNIT_UPGRADES</Tag>
@@ -848,6 +849,11 @@
 		<Russian>Íå èçìåíÿòü</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_OWN</Tag>
+		<English>Own</English>
+		<German>im Besitz:</German>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_QUOTE</Tag>
 		<English>Quote</English>
 		<French>Citations</French>
@@ -958,6 +964,7 @@
 		<Tag>TXT_KEY_PEDIA_TECH_WORKER_SPEED</Tag>
 		<English>% Worker Speed</English>
 		<French>% Vitesse des Ouvriers</French>
+		<German>% schnellere Arbeitstrupps</German>
 		<Russian>% скорость рабочего</Russian>
 	</TEXT>
 	<TEXT>

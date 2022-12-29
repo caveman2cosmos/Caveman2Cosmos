@@ -114,7 +114,7 @@ int CvUnitList::getNumInGroup(int iGroup)
 	return m_aaiGroupedUnitList[iGroup]->size();
 }
 
-UnitTypes CvUnitList::getUnitType(int iGroup, int iPos)
+UnitTypes CvUnitList::getUnitListType(int iGroup, int iPos)
 {
 	if (!m_bSortingValid)
 	{

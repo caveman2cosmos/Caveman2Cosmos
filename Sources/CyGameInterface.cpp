@@ -148,7 +148,9 @@ void CyGamePythonInterface()
 		.def("isSimultaneousTeamTurns", &CyGame::isSimultaneousTeamTurns, "bool ()")
 
 		.def("isFinalInitialized", &CyGame::isFinalInitialized, "bool () - Returns whether or not the game initialization process has ended (game has started)")
-
+		.def("onFinalInitialized", &CyGame::onFinalInitialized,
+			"void (bool bNewGame) - dll is poor at homing in on the load save finished game event, so python will notify it about that and new game event as well."
+		)
 		.def("getActivePlayer", &CyGame::getActivePlayer, "returns index of the active player")
 		.def("setActivePlayer", &CyGame::setActivePlayer, "void (int /*PlayerTypes*/ eNewValue, bool bForceHotSeat)")
 		.def("getPausePlayer", &CyGame::getPausePlayer, "int () - will get who paused us")
@@ -258,8 +260,6 @@ void CyGamePythonInterface()
 		.def("log", &CyGame::log)
 		.def("logw", &CyGame::logw, "void log(wstring str)")
 
-		.def("getCultureThreshold", &CyGame::getCultureThreshold, "int getCultureThreshold(CultureLevelTypes eLevel)")
-
 		.def("setPlotExtraYield", &CyGame::setPlotExtraYield, "void (int iX, int iY, int /*YieldTypes*/ eYield, int iExtraYield)")
 
 		.def("isCivEverActive", &CyGame::isCivEverActive, "bool (int /*CivilizationTypes*/ eCivilization)")
@@ -285,7 +285,6 @@ void CyGamePythonInterface()
 		.def("getModderGameOption", &CyGame::getModderGameOption, "bool ()")
 		.def("setModderGameOption", &CyGame::setModderGameOption, "void (int iNewVal)")
 
-		.def("canEverResearch", &CyGame::canEverResearch, "bool (int iTech)")
 		.def("canEverConstruct", &CyGame::canEverConstruct, "bool (int iBuilding)")
 		.def("canEverTrain", &CyGame::canEverTrain, "bool (int iUnit)")
 		.def("canEverSpread", &CyGame::canEverSpread, "bool (int iCorporation)")

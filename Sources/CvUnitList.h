@@ -34,7 +34,7 @@ public:
 	void setSortingActive(UnitSortTypes eSorting);
 	int getGroupNum();
 	int getNumInGroup(int iGroup);
-	UnitTypes getUnitType(int iGroup, int iPos);
+	UnitTypes getUnitListType(int iGroup, int iPos);
 	int getSelectionRow();
 	void setSelectedUnit(UnitTypes eSelectedUnit);
 	UnitTypes getSelectedUnit() const;

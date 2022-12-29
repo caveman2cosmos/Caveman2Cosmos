@@ -92,6 +92,8 @@ void CyInfoPythonInterface1()
 		.def("getFlavorValue", &CvTechInfo::getFlavorValue, "int (int i)")
 		.def("getPrereqOrTechs", &CvTechInfo::getPrereqOrTechs, python::return_value_policy<python::reference_existing_object>())
 		.def("getPrereqAndTechs", &CvTechInfo::getPrereqAndTechs, python::return_value_policy<python::reference_existing_object>())
+		.def("getNumLeadsToTechs", &CvTechInfo::getNumLeadsToTechs, "int ()")
+		.def("getLeadsToTech", &CvTechInfo::getLeadsToTech, "int (int i)")
 
 		.def("isCommerceFlexible", &CvTechInfo::isCommerceFlexible, "bool (int i)")
 		.def("isTerrainTrade", &CvTechInfo::isTerrainTrade, "bool (int i)")
@@ -173,6 +175,7 @@ void CyInfoPythonInterface1()
 		;
 
 	python::class_<CvUnitInfo, python::bases<CvInfoBase, CvScalableInfo>, boost::noncopyable>("CvUnitInfo", python::no_init)
+		.def("getAdvisorType", &CvUnitInfo::getAdvisorType, "int ()")
 
 		.def("getMaxGlobalInstances", &CvUnitInfo::getMaxGlobalInstances, "int ()")
 		.def("getMaxPlayerInstances", &CvUnitInfo::getMaxPlayerInstances, "int ()")
@@ -253,6 +256,7 @@ void CyInfoPythonInterface1()
 		//.def("getTerrainImpassable", &CvUnitInfo::getTerrainImpassable, "bool (int i)")
 		//.def("getFeatureImpassable", &CvUnitInfo::getFeatureImpassable, "bool (int i)")
 		.def("getUnitNames", &CvUnitInfo::getUnitNames, "string (int i)")
+		.def("getArtInfo", &CvUnitInfo::getArtInfo,  python::return_value_policy<python::reference_existing_object>(), "CvArtInfoUnit* (int i, bool bLate)")
 		//TB SubCombat Mod begin  TB Combat Mods Begin
 		//boolean vectors
 		.def("isSubCombatType", &CvUnitInfo::isSubCombatType, "int (int i)")
@@ -330,6 +334,7 @@ void CyInfoPythonInterface1()
 
 		.def("isSpecialistValid", &CvCivicInfo::isSpecialistValid, "bool (int i)")
 		.def("getImprovementYieldChanges", &CvCivicInfo::getImprovementYieldChanges, "int (int i, int j)")
+		.def("getFlavorValue", &CvCivicInfo::getFlavorValue, "int (int i)")
 		;
 
 	python::class_<CvBuildingInfo, python::bases<CvInfoBase, CvScalableInfo>, boost::noncopyable>("CvBuildingInfo", python::no_init)
@@ -475,6 +480,7 @@ void CyInfoPythonInterface1()
 
 		.def("isAnyTechSpecialistChanges", &CvBuildingInfo::isAnyTechSpecialistChanges, "bool ()")
 
+		.def("getConstructSound", &CvBuildingInfo::getConstructSound, "string ()")
 		.def("getHotKey", &CvBuildingInfo::getHotKey, "string ()")
 		.def("getArtDefineTag", &CvBuildingInfo::getArtDefineTag, "string ()")
 		.def("getMovie", &CvBuildingInfo::getMovie, "string ()")

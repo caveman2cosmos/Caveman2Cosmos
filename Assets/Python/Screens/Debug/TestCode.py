@@ -69,6 +69,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.countUnlockedObsoletedBuildings, "Building - list unlocks/obsoletions", "List how many buildings got unlocked/obsoleted")
 		self.main.addTestCode(screen, self.countBonusProducers, "Building - list amount of bonus providers", "List how many buildings provide bonuses")
 		self.main.addTestCode(screen, self.checkTaxonomyBuildings, "Building - list potential Taxonomy requirements", "List taxonomy buildings, that doesn't have all potential base folklore requirements")
+		self.main.addTestCode(screen, self.listFlavors, "General - list and check flavors", "List flavors of traits, buildings, techs, civics, religions, units and report if conventionally unobtainable entry has flavor. Items with flavors can be viewed in CSV as table.")
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
@@ -3721,3 +3722,76 @@ class TestCode:
 							if CvUnitBuilding.getSpecialBuildingType() != GC.getInfoTypeForString("SPECIALBUILDING_FOLKLORE_TAXONOMY") and CvUnitBuilding.getSpecialBuildingType() != GC.getInfoTypeForString("SPECIALBUILDING_FOLKLORE_EXPLORATION") and CvUnitBuilding.getType().find("BUILDING_FOLKLORE") != -1:
 								if not CvBuildingInfo.isPrereqInCityBuilding(CvUnitInfo.getBuildings(k)) and not CvBuildingInfo.isPrereqOrBuilding(CvUnitInfo.getBuildings(k)):
 									self.log(CvBuildingInfo.getType()+" could have as req: "+CvUnitBuilding.getType())
+
+	#List entries using flavor types and alert if unobtainable conventionally stuff have flavors.
+	def listFlavors(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+
+			if CvBuildingInfo.getProductionCost() < 1:
+				for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+					if CvBuildingInfo.getFlavorValue(iFlavor) != 0:
+						self.log(CvBuildingInfo.getType()+" was assigned "+sFlavorType+" and can't be obtained by conventional means")
+						break
+
+			if CvBuildingInfo.getProductionCost() > 0:
+				sBuffer = CvBuildingInfo.getType()
+				for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+					if CvBuildingInfo.getFlavorValue(iFlavor) != 0:
+						sBuffer += ","+sFlavorType+","+str(CvBuildingInfo.getFlavorValue(iFlavor))
+				if sBuffer.find(",") != -1:
+					self.log(sBuffer)
+
+		for iCivic in xrange(GC.getNumCivicInfos()):
+			CvCivicInfo = GC.getCivicInfo(iCivic)
+
+			sBuffer = CvCivicInfo.getType()
+			for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+				if CvCivicInfo.getFlavorValue(iFlavor) != 0:
+					sBuffer += ","+sFlavorType+","+str(CvCivicInfo.getFlavorValue(iFlavor))
+			if sBuffer.find(",") != -1:
+				self.log(sBuffer)
+
+		for iTech in xrange(GC.getNumTechInfos()):
+			CvTechInfo = GC.getTechInfo(iTech)
+
+			if CvTechInfo.getResearchCost() < 1 or CvTechInfo.isRepeat() or CvTechInfo.isDisable():
+				for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+					if CvTechInfo.getFlavorValue(iFlavor) != 0:
+						self.log(CvTechInfo.getType()+" was assigned "+sFlavorType+" and can't be obtained by conventional means")
+						break
+
+			if CvTechInfo.getResearchCost() > 0 and not CvTechInfo.isRepeat() and not CvTechInfo.isDisable():
+				sBuffer = CvTechInfo.getType()
+				for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+					if CvTechInfo.getFlavorValue(iFlavor) != 0:
+						sBuffer += ","+sFlavorType+","+str(CvTechInfo.getFlavorValue(iFlavor))
+				if sBuffer.find(",") != -1:
+					self.log(sBuffer)
+
+		for iUnit in xrange(GC.getNumUnitInfos()):
+			CvUnitInfo = GC.getUnitInfo(iUnit)
+
+			if CvUnitInfo.getProductionCost() < 1:
+				for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+					if CvUnitInfo.getFlavorValue(iFlavor) != 0:
+						self.log(CvUnitInfo.getType()+" was assigned "+sFlavorType+" and can't be obtained by conventional means")
+						break
+
+			if CvUnitInfo.getProductionCost() > 0:
+				sBuffer = CvUnitInfo.getType()
+				for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+					if CvUnitInfo.getFlavorValue(iFlavor) != 0:
+						sBuffer += ","+sFlavorType+","+str(CvUnitInfo.getFlavorValue(iFlavor))
+				if sBuffer.find(",") != -1:
+					self.log(sBuffer)
+
+		for iReligion in xrange(GC.getNumReligionInfos()):
+			CvReligionInfo = GC.getReligionInfo(iReligion)
+
+			sBuffer = CvReligionInfo.getType()
+			for iFlavor, sFlavorType in enumerate(GC.getFlavorTypes()):
+				if CvReligionInfo.getFlavorValue(iFlavor) != 0:
+					sBuffer += ","+sFlavorType+","+str(CvReligionInfo.getFlavorValue(iFlavor))
+			if sBuffer.find(",") != -1:
+				self.log(sBuffer)

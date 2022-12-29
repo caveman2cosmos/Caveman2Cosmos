@@ -233,7 +233,7 @@ class BarbarianCiv:
 			CyCity.setOriginalOwner(iPlayer)
 		CyPlot.setOwner(iPlayer)
 
-		# Note: city acquisition may invalidate previous city pointer, so have to create new list of cities
+		# Note: city owner change (CyPlot.setOwner(iPlayer)) invalidate previous city pointer.
 		CyCity = CyPlayer.getCapitalCity()
 
 		iTemp = iFactorGS
@@ -247,7 +247,7 @@ class BarbarianCiv:
 			iMinEra = iEra - self.RevOpt.getNewWorldErasBehind()
 			if iMinEra > -1:
 				for iTech in xrange(iNumTechs):
-					if CyPlayer.canEverResearch(iTech) and GC.getTechInfo(iTech).getEra() <= iMinEra:
+					if CyPlayer.canResearch(iTech, False) and GC.getTechInfo(iTech).getEra() <= iMinEra:
 						CyTeam.setHasTech(iTech, True, iPlayer, False, False)
 		else:
 			iNumTeams = GAME.countCivTeamsAlive()
@@ -257,7 +257,7 @@ class BarbarianCiv:
 				if iTech in techsOwned:
 					CyTeam.setHasTech(iTech, True, iPlayer, False, False)
 					continue
-				if not CyPlayer.canEverResearch(iTech):
+				if not CyPlayer.canResearch(iTech, False):
 					continue
 				iKnownRatio = 100 * GAME.countKnownTechNumTeams(iTech) / iNumTeams
 				if iKnownRatio < 100 and closeTeams:
@@ -336,6 +336,7 @@ class BarbarianCiv:
 			iTeamX = CyPlayerX.getTeam()
 			if GAME.isDebugMode() or iTeamX in closeTeams or CyCity.plot().isRevealed(iTeamX, False):
 				CyInterface().addMessage(iPlayerX, False, MSG_TIME, szTxt, None, InterfaceMessageTypes.MESSAGE_TYPE_MAJOR_EVENT, None, GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), -1, -1, False, False)
+
 
 
 	def getScenario(self, CyArea):
@@ -527,29 +528,37 @@ class BarbarianCiv:
 				aList.append([iRadius, MAP.plot(iX, iY)])
 		# Convert nearby barbarian
 		iPlayerBarb = self.BARBARIAN_PLAYER
-		# City Culture
-		iCult = CyCity.getCultureTimes100(iPlayerBarb)
-		CyCity.setCultureTimes100(iPlayerBarb, 0, False)
-		CyCity.setCultureTimes100(iPlayer, iCult, False)
+
 		for iRadius, CyPlotX in aList:
 			# Plot Culture
 			iCult = CyPlotX.getCulture(iPlayerBarb)
 			if iCult > 0:
+
 				if iRadius:
-					iCult *= 2/(2+iRadius*iRadius)
+					iCult = iCult * 4/(4+iRadius*iRadius)
+
 				CyPlotX.changeCulture(iPlayerBarb, -iCult, False)
-				CyPlotX.setCulture(iPlayer, iCult, True)
+				CyPlotX.changeCulture(iPlayer, iCult, True)
+
 			# Units
 			for CyUnit in CyPlotX.units():
-				if CyUnit.getOwner() == iPlayerBarb:
-					if iRadius and GAME.getSorenRandNum(iRadius + 1, 'Convert Barbarian'): continue
+				if (
+					CyUnit.getOwner() == iPlayerBarb
+				and (CyPlotX.getOwner() == iPlayer or not GAME.getSorenRandNum(iRadius + 1, 'Convert Barbarian'))
+				):
 					iUnit = CyUnit.getUnitType()
 					CyUnit.kill(False, -1)
-					CyPlayer.initUnit(iUnit, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
+					CyPlayer.initUnit(iUnit, CyPlotX.getX(), CyPlotX.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
+
+		# City Culture
+		CyCity.setCultureTimes100(iPlayer, CyCity.getCultureTimes100(iPlayerBarb), True)
+		CyCity.setCultureTimes100(iPlayerBarb, 0, False)
+
 		# Free city defenders
 		if iDefender > -1:
 			for i in range(iDefenders):
 				CyPlayer.initUnit(iDefender, X, Y, UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.NO_DIRECTION)
+
 
 
 	def checkMinorCivs(self, iPlayer, CyPlayer, MAX_PC_PLAYERS):

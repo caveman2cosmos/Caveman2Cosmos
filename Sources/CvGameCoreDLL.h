@@ -153,14 +153,17 @@ namespace python = boost::python;
 //
 // Basic types
 //
-typedef unsigned int        uint;
-
-typedef long long           int64_t;
+typedef signed char         int8_t;
+typedef signed short        int16_t;
+typedef signed int          int32_t;
+typedef signed long long    int64_t;
 
 typedef unsigned char       uint8_t;
 typedef unsigned short      uint16_t;
 typedef unsigned int        uint32_t;
 typedef unsigned long long  uint64_t;
+
+typedef unsigned int        uint;
 
 //
 // Type traits
@@ -229,7 +232,6 @@ int DECLARE_FLAGS(ECacheAccess::flags);
 //
 #define PATHFINDING_CACHE
 #define PATHFINDING_VALIDITY_CACHE
-#define DISCOVERY_TECH_CACHE
 #define YIELD_VALUE_CACHING // KOSHLING - Cache yield values where possible
 #define CAN_TRAIN_CACHING  // Enable canTrain results to be cached within a (caller) defined scope
 

@@ -1081,16 +1081,6 @@
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
-			<Type>EVENT_VOLCANO_1</Type>
-			<Description>TXT_KEY_EVENT_VOLCANO_1</Description>
-			<bPickCity>1</bPickCity>
-			<PythonCallback>applyVolcano1</PythonCallback>
-			<PythonCanDo>canApplyVolcano1</PythonCanDo>
-			<PythonHelp>getHelpVolcano1</PythonHelp>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
-		</EventInfo>
-		<EventInfo>
 			<Type>EVENT_DUSTBOWL_1</Type>
 			<Description>TXT_KEY_EVENT_DUSTBOWL_1</Description>
 			<bPickCity>1</bPickCity>
@@ -3042,9 +3032,6 @@
 			<Type>EVENT_PARTISANS_1</Type>
 			<Description>TXT_KEY_EVENT_PARTISANS_1</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_PARTISANS_OTHER_1</OtherPlayerPopup>
-			<PythonCallback>applyPartisans1</PythonCallback>
-			<PythonCanDo>canApplyPartisans1</PythonCanDo>
-			<PythonHelp>getHelpPartisans1</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
@@ -3052,11 +3039,8 @@
 			<Type>EVENT_PARTISANS_2</Type>
 			<Description>TXT_KEY_EVENT_PARTISANS_2</Description>
 			<OtherPlayerPopup>TXT_KEY_EVENT_PARTISANS_OTHER_2</OtherPlayerPopup>
-			<PythonCallback>applyPartisans2</PythonCallback>
-			<PythonCanDo>canApplyPartisans2</PythonCanDo>
-			<PythonHelp>getHelpPartisans2</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
+			<iAIValue>600</iAIValue>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_NEW_DYNASTY_1</Type>
@@ -7019,8 +7003,8 @@
 			<iAIValue>1000</iAIValue>
 		</EventInfo>
 		<EventInfo>
-			<Type>EVENT_VOLCANO_ERUPTION_1</Type>
-			<Description>TXT_KEY_EVENT_VOLCANO_ERUPTION_1</Description>
+			<Type>EVENT_VOLCANO_ERUPTION</Type>
+			<Description>TXT_KEY_EVENT_VOLCANO_ERUPTION</Description>
 			<bPickCity>1</bPickCity>
 			<PythonHelp>getHelpVolcanoEruption1</PythonHelp>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
@@ -7439,12 +7423,6 @@
 			<iUnitImmobileTurns>1</iUnitImmobileTurns>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
-		</EventInfo>
-		<EventInfo>
-			<Type>EVENT_TORNADO</Type>
-			<Description>TXT_KEY_EVENT_TORNADO_1</Description>
-			<PythonCallback>doTornado</PythonCallback>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 		</EventInfo>
 		<EventInfo>
 			<Type>EVENT_BLARNEYVISIT_1</Type>

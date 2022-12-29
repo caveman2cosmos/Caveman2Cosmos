@@ -139,15 +139,6 @@
 // BUG - end
 #define TEXT_COLOR(szColor)								((int)(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(szColor)).getColor().r * 255)), ((int)(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(szColor)).getColor().g * 255)), ((int)(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(szColor)).getColor().b * 255)), ((int)(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString(szColor)).getColor().a * 255))
 
-// Version Verification files and folders
-//#ifdef _DEBUG
-//#define CIV4_EXE_FILE									".\\Civ4BeyondSword_DEBUG.exe"
-//#define CIV4_DLL_FILE									".\\Assets\\CvGameCoreDLL_DEBUG.dll"
-//#else
-//#define CIV4_EXE_FILE									".\\Civ4BeyondSword.exe"
-//#define CIV4_DLL_FILE									".\\Assets\\CvGameCoreDLL.dll"
-//#endif
-// End Version Verification files and folders
 //#define CIV4_SHADERS									".\\Shaders\\FXO"
 //#define CIV4_ASSETS_PYTHON								".\\Assets\\Python"
 //#define CIV4_ASSETS_XML									".\\Assets\\XML"

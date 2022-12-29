@@ -365,7 +365,7 @@
 			<iCost>120</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>240</iWorkRate>
+			<iWorkRate>225</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -525,10 +525,10 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
-			<iCost>150</iCost>
+			<iCost>135</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>250</iWorkRate>
+			<iWorkRate>240</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -550,10 +550,6 @@
 			<FreePromotions>
 				<FreePromotion>
 					<PromotionType>PROMOTION_FIELD_WORKER1</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-				<FreePromotion>
-					<PromotionType>PROMOTION_FOREST_WORKER1</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
@@ -727,7 +723,7 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<FreePromotions>
 				<FreePromotion>
-					<PromotionType>PROMOTION_HILL_WORKER1</PromotionType>
+					<PromotionType>PROMOTION_FIELD_WORKER1</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 				<FreePromotion>
@@ -876,11 +872,21 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
-			<iCost>150</iCost>
+			<iCost>165</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>250</iWorkRate>
+			<iWorkRate>260</iWorkRate>
 			<iAsset>1</iAsset>
+			<FreePromotions>
+				<FreePromotion>
+					<PromotionType>PROMOTION_FIELD_WORKER1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_FOREST_WORKER1</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
+			</FreePromotions>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -1212,10 +1218,10 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
-			<iCost>150</iCost>
+			<iCost>140</iCost>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iWorkRate>250</iWorkRate>
+			<iWorkRate>240</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
@@ -2024,7 +2030,6 @@
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_STORM</FeatureType>
 				<FeatureType>FEATURE_ICE</FeatureType>
 			</FeatureImpassableTypes>
 			<iAsset>1</iAsset>
@@ -2138,7 +2143,6 @@
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_STORM</FeatureType>
 				<FeatureType>FEATURE_ICE</FeatureType>
 			</FeatureImpassableTypes>
 			<TerrainPassableTechs>
@@ -2273,7 +2277,6 @@
 				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_STORM</FeatureType>
 				<FeatureType>FEATURE_ICE</FeatureType>
 			</FeatureImpassableTypes>
 			<TerrainPassableTechs>

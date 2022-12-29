@@ -1132,7 +1132,7 @@ class Revolution:
 				if eRouteType != -1:
 					for i in xrange(GC.getNumTechInfos()):
 						tech = GC.getTechInfo(i)
-						if(GC.getRouteInfo(eRouteType).getTechMovementChange(i) != 0 and pTeam.isHasTech(i)):
+						if GC.getRouteInfo(eRouteType).getTechMovementChange(i) != 0 and pTeam.isHasTech(i):
 							bTechRouteModifier = True
 							break
 				if bTechRouteModifier:
@@ -5221,7 +5221,6 @@ class Revolution:
 
 #***********************************
 						# Acquire city
-						#joinPlayer.acquireCity( pCity, False, True )
 
 						if self.LOG_DEBUG: print "[REV] Revolt: Population of %s before is %d"%(pCity.getName(),pCity.getPopulation())
 						if self.LOG_DEBUG: print "[REV] Revolt: Check city culture is %d, at %d, %d"%(pCity.getCulture(pPlayer.getID()), pCity.getX(),pCity.getY())
@@ -5404,7 +5403,6 @@ class Revolution:
 
 #***********************************
 							# Acquire city
-							#joinPlayer.acquireCity( pCity, False, True )
 
 							if self.LOG_DEBUG: print "[REV] Revolt: Population of %s before is %d"%(pCity.getName(),pCity.getPopulation())
 							if self.LOG_DEBUG: print "[REV] Revolt: Check city culture is %d, at %d, %d"%(pCity.getCulture(pPlayer.getID()), pCity.getX(),pCity.getY())

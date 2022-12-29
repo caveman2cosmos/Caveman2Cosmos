@@ -1,6 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4TerrainInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<TerrainInfos>
+		<!-- <iCultureDistance> slows down growth over tiles with Realistic Culture option on.
+				Note this value stacks with regular distance, i.e. an entry of 1 means that
+				such tile won't be acquired until a second border expansion. Realistic Culture
+				has ~double the expansions though, which means an entry of 1 means, in effect,
+				there is a "regular" growth rate on the tile. Also stacks with features and
+				hill status, but does not stack with mountain tiles. A bonus on the tile reduces
+				terrain cost by up to 2 (hardcoded in CvCity). -->
 		<TerrainInfo>
 			<Type>TERRAIN_GRASSLAND</Type>
 			<Description>TXT_KEY_TERRAIN_GRASSLAND</Description>
@@ -149,7 +156,6 @@
 			<Civilopedia>TXT_KEY_TERRAIN_LUSH_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_LUSH</ArtDefineTag>
 			<bFound>1</bFound>
-			<iCultureDistance>1</iCultureDistance>
 			<iMovement>1</iMovement>
 			<Yields>
 				<iYield>3</iYield>
@@ -577,7 +583,7 @@
 			<ArtDefineTag>ART_DEF_TERRAIN_ROCKY</ArtDefineTag>
 			<bFound>1</bFound>
 			<iBuildModifier>50</iBuildModifier>
-			<iCultureDistance>1</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<iDefense>20</iDefense>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -723,7 +729,7 @@
 			<ArtDefineTag>ART_DEF_TERRAIN_BADLAND</ArtDefineTag>
 			<bFound>1</bFound>
 			<iBuildModifier>75</iBuildModifier>
-			<iCultureDistance>3</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<iDefense>20</iDefense>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>2</iMovement>
@@ -870,7 +876,7 @@
 			<ArtDefineTag>ART_DEF_TERRAIN_JAGGED</ArtDefineTag>
 			<bFound>1</bFound>
 			<iBuildModifier>75</iBuildModifier>
-			<iCultureDistance>3</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<iDefense>20</iDefense>
 			<iHealthPercent>-15</iHealthPercent>
 			<iMovement>2</iMovement>
@@ -1306,7 +1312,7 @@
 			<bFoundCoast>1</bFoundCoast>
 			<bFoundFreshWater>1</bFoundFreshWater>
 			<iBuildModifier>125</iBuildModifier>
-			<iCultureDistance>4</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iDefense>15</iDefense>
 			<iHealthPercent>-20</iHealthPercent>
 			<iMovement>4</iMovement>
@@ -1450,7 +1456,7 @@
 			<bFoundCoast>1</bFoundCoast>
 			<bFoundFreshWater>1</bFoundFreshWater>
 			<iBuildModifier>25</iBuildModifier>
-			<iCultureDistance>3</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<iHealthPercent>-30</iHealthPercent>
 			<iMovement>1</iMovement>
 			<Button>Art/Interface/Buttons/baseterrain/DuneSalt.dds</Button>
@@ -2022,7 +2028,7 @@
 			<bFoundCoast>1</bFoundCoast>
 			<bFoundFreshWater>1</bFoundFreshWater>
 			<iBuildModifier>100</iBuildModifier>
-			<iCultureDistance>4</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iHealthPercent>-50</iHealthPercent>
 			<iMovement>4</iMovement>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Ice.dds</Button>
@@ -2457,7 +2463,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_COAST</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>3</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<iDefense>10</iDefense>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -2604,7 +2610,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_COAST_POLAR</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>3</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<iDefense>10</iDefense>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -2751,7 +2757,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_COAST_TROPICAL</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>3</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<iDefense>10</iDefense>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -2898,7 +2904,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_OCEAN</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>5</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -3044,7 +3050,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_OCEAN_POLAR</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>5</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -3190,7 +3196,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_OCEAN_TROPICAL</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>5</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -3336,7 +3342,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>4</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -3482,7 +3488,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA_POLAR</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>4</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -3628,7 +3634,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA_TROPICAL</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>4</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -3774,7 +3780,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_COAST_DEEP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_COAST_DEEP</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>3</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -4212,7 +4218,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_SEA_DEEP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SEA_DEEP</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>4</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -4650,7 +4656,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_TRENCH_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_TRENCH</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>5</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -4796,7 +4802,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_TRENCH_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_TRENCH</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>5</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -4942,7 +4948,7 @@
 			<Civilopedia>TXT_KEY_TERRAIN_TRENCH_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_TRENCH</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
-			<iCultureDistance>5</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>1</iYield>
@@ -5089,7 +5095,7 @@
 			<ArtDefineTag>ART_DEF_TERRAIN_LAKE_SHORE</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
 			<bFreshWaterTerrain>1</bFreshWaterTerrain>
-			<iCultureDistance>2</iCultureDistance>
+			<iCultureDistance>1</iCultureDistance>
 			<iDefense>10</iDefense>
 			<iMovement>2</iMovement>
 			<Yields>
@@ -5237,7 +5243,7 @@
 			<ArtDefineTag>ART_DEF_TERRAIN_LAKE</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
 			<bFreshWaterTerrain>1</bFreshWaterTerrain>
-			<iCultureDistance>3</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<iMovement>2</iMovement>
 			<Yields>
 				<iYield>2</iYield>
@@ -5666,7 +5672,7 @@
 			<ArtDefineTag>ART_DEF_TERRAIN_PEAK</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
 			<iBuildModifier>75</iBuildModifier>
-			<iCultureDistance>3</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance> <!-- dll increases penalty by 2 if not isCanFoundOnPeaks-->
 			<iMovement>2</iMovement>
 			<Button>Art/Interface\Buttons\WorldBuilder\feature_peak.dds</Button>
 			<FootstepSounds>

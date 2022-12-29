@@ -396,12 +396,13 @@ def onCityBuilt( argsList ):
 			city.setHasReligion(relID, True, False, False)
 
 def onCityAcquired(argsList):
-	iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
+	#iOwnerOld, iOwnerNew, city, bConquest, bTrade, bAutoRaze = argsList
 
 	checkRebelBonuses( argsList )
 	updateRevolutionIndices( argsList )
 
 	# Init city script data (unit spawn counter, rebel player)
+	city = argsList[2]
 	iRevCiv = RevData.getCityVal(city, 'RevolutionCiv')
 	RevData.initCity(city)
 	RevData.setCityVal(city, 'RevolutionCiv', iRevCiv)
@@ -412,7 +413,7 @@ def onCityAcquired(argsList):
 
 def checkRebelBonuses(argsList):
 	# Give bonuses to a rebel player who successfully captures one of their rebellious cities
-	iOwnerOld, iOwnerNew, pCity, bConquest, bTrade = argsList
+	iOwnerOld, iOwnerNew, pCity, bConquest, bTrade, bAutoRaze = argsList
 
 	newOwner = GC.getPlayer(iOwnerNew)
 	newOwnerCiv = newOwner.getCivilizationType()
@@ -421,14 +422,15 @@ def checkRebelBonuses(argsList):
 	# TODO: Handle case where city is acquired by disorganized rebels
 	if iOwnerNew == GC.getBARBARIAN_PLAYER() and pCity.getRevolutionCounter() > 0:
 		print "[REV] City %s captured by barb rebels!" % pCity.getName()
+		'''
 		oldOwner = GC.getPlayer(iOwnerOld)
 
-		if not iOwnerOld == orgOwnerID:
+		if iOwnerOld != orgOwnerID:
 			orgOwner = GC.getPlayer(orgOwnerID)
 
-		if pCity.countTotalCultureTimes100() > 100*100:
-			if not iOwnerOld == pCity.findHighestCulture():
-				cultOwner = GC.getPlayer(pCity.findHighestCulture())
+		if pCity.countTotalCultureTimes100() > 10000 and iOwnerOld != pCity.findHighestCulture():
+			cultOwner = GC.getPlayer(pCity.findHighestCulture())
+		'''
 
 	elif newOwnerCiv == RevData.getCityVal(pCity, 'RevolutionCiv'):
 
@@ -564,8 +566,9 @@ def checkRebelBonuses(argsList):
 			iTurns = iTurns/2 + 1
 			pCity.setOccupationTimer(iTurns)
 
+
 def updateRevolutionIndices(argsList):
-	iOwnerOld, iOwnerNew, pCity, bConquest, bTrade = argsList
+	iOwnerOld, iOwnerNew, pCity, bConquest, bTrade, bAutoRaze = argsList
 
 	newOwner = GC.getPlayer(iOwnerNew)
 
@@ -873,110 +876,115 @@ def checkForAssimilation():
 					print "	Revolt - Assimilation! The rebel %s are requesting again to join the %s now that they've captured %d cities"%(szCiv, CyPlayerDominant.getCivilizationDescription(0), iNumCities)
 
 
-		else:
-			if iTurn - iTurnAcquiredCity0 > 15 and iNumCities < iMinCities:
-				iTotalLand = CyPlayerX.getTotalLand()
-				if iTotalLand < minNumPlots:
+		elif iTurn - iTurnAcquiredCity0 > 15 and iNumCities < iMinCities:
+			iTotalLand = CyPlayerX.getTotalLand()
+			if iTotalLand < minNumPlots:
+				# Some patches for div0 errors on countTotalCulture in this section, Blaze 2022
 
-					if CyCity0.area().getNumCities() < iNumCities + 2:
-						continue # Isolated
+				if CyCity0.area().getNumCities() < iNumCities + 2:
+					continue # Isolated
 
-					if CyTeamX.getNumMembers() > 1:
-						continue # In alliance
+				if CyTeamX.getNumMembers() > 1:
+					continue # In alliance
 
-					iOdds = 2*(minNumPlots - iTotalLand) + (4 + 4*iMaxEra)/CyCity0.getPopulation()
+				iOdds = 2*(minNumPlots - iTotalLand) + (4 + 4*iMaxEra)/CyCity0.getPopulation()
 
-					if CyCity0.getOccupationTimer() > 0:
-						iOdds *= 3
+				if CyCity0.getOccupationTimer() > 0:
+					iOdds *= 3
 
-					iOdds += CyCity0.getRevolutionIndex()/100
+				iOdds += CyCity0.getRevolutionIndex()/100
 
-					CyPlot0 = CyCity0.plot()
-					### Special cases
-					if CyTeamX.isAVassal():
+				CyPlot0 = CyCity0.plot()
+				### Special cases
+				if CyTeamX.isAVassal():
 
-						if iOdds > 10 + GAME.getSorenRandNum(100, 'Revolution: Assimilate'):
+					if iOdds > 10 + GAME.getSorenRandNum(100, 'Revolution: Assimilate'):
 
-							# If player is a Vassal, should only be allowed to assimilate with master
-							CyPlayerMaster = None
-							for iTeamY in xrange(MAX_PC_TEAMS):
-								if not CyTeamX.isVassal(iTeamY): continue
+						# If player is a Vassal, should only be allowed to assimilate with master
+						CyPlayerMaster = None
+						for iTeamY in xrange(MAX_PC_TEAMS):
+							if not CyTeamX.isVassal(iTeamY): continue
 
-								iPlayerMaster = GC.getTeam(iTeamY).getLeaderID()
-								CyPlayerMaster = GC.getPlayer(iPlayerMaster)
+							iPlayerMaster = GC.getTeam(iTeamY).getLeaderID()
+							CyPlayerMaster = GC.getPlayer(iPlayerMaster)
 
-								print "	Revolt - Assimilation!  Vassal %s considering assimilation to master %s" %(szCiv, CyPlayerMaster.getCivilizationDescription(0))
+							print "	Revolt - Assimilation!  Vassal %s considering assimilation to master %s" %(szCiv, CyPlayerMaster.getCivilizationDescription(0))
 
-								relations = CyPlayerX.AI_getAttitude(iPlayerMaster)
+							relations = CyPlayerX.AI_getAttitude(iPlayerMaster)
 
-								if CyPlot0.getCulture(iPlayerMaster)/(1.0*CyPlot0.countTotalCulture()) > .25:
-									# Assimilate with master with large culture in city
-									if not relations == AttitudeTypes.ATTITUDE_FURIOUS:
+							if CyPlot0.getCulture(iPlayerMaster)/(max(1, 1.0*CyPlot0.countTotalCulture())) > .25:
+								# Assimilate with master with large culture in city
+								if not relations == AttitudeTypes.ATTITUDE_FURIOUS:
 
-										if not CyPlayerMaster.isHuman():
-											CyPlayerDominant = CyPlayerMaster
+									if not CyPlayerMaster.isHuman():
+										CyPlayerDominant = CyPlayerMaster
 
-										elif not iPlayerX in noAssimilateList:
-											CyPlayerDominant = CyPlayerMaster
-										if CyPlayerDominant:
-											print "	Revolt - Assimilation to master based on culture"
-
-								elif relations in (AttitudeTypes.ATTITUDE_PLEASED, AttitudeTypes.ATTITUDE_FRIENDLY):
-									# Assimilate with friendly, powerful master
-									masterPower = CyPlayerMaster.getPower()
-									vassalPower = CyPlayerX.getPower()
-
-									if masterPower > 3*vassalPower:
-										if not CyPlayerMaster.isHuman():
-											CyPlayerDominant = CyPlayerMaster
-										elif not iPlayerX in noAssimilateList:
-											CyPlayerDominant = CyPlayerMaster
-										if CyPlayerDominant:
-											print "	Revolt - Assimilation to friendly and powerful master"
-								break
-
-					elif CyPlot0.calculateCulturePercent(iPlayerX) < 60:
-						### Capital has foreign influence
-						iPlayerCult = CyPlot0.calculateCulturalOwner() # iPlayerCult guaranteed to be alive
-						if iPlayerCult != iPlayerX:
-							iOdds += 15
-
-						if iOdds > 10 + GAME.getSorenRandNum(100, 'Revolution: Assimilate'):
-							print "	Revolt - Assimilation!  %s considering assimilation by culture" % szCiv
-
-							if iPlayerCult > -1 and iPlayerCult != iPlayerX and not CyPlayerX.AI_getAttitude(iPlayerCult) == AttitudeTypes.ATTITUDE_FURIOUS:
-								## Assimilate with cultural owner
-								CyPlayerY = GC.getPlayer(iPlayerCult)
-								if CyPlayerY.isAlive():
-									if not CyPlayerY.isHuman():
-										CyPlayerDominant = CyPlayerY
 									elif not iPlayerX in noAssimilateList:
-										CyPlayerDominant = CyPlayerY
+										CyPlayerDominant = CyPlayerMaster
 									if CyPlayerDominant:
-										print "	Revolt - Assimilation culture owner: " + CyPlayerDominant.getCivilizationDescription(0)
+										print "	Revolt - Assimilation to master based on culture"
 
-							if not CyPlayerDominant:
-								## Check for good relations with second place culture
-								iMaxCult2 = 0
-								for iPlayerY in xrange(MAX_PC_PLAYERS):
-									if iPlayerY in (iPlayerX, iPlayerCult): continue
-									CyPlayerY = GC.getPlayer(iPlayerY)
-									if not CyPlayerY.isAlive(): continue
-									iCulture = CyPlot0.getCulture(iPlayerY)
-									if iCulture > iMaxCult2:
-										iPlayerCult2 = iPlayerY
-										CyPlayerCult2 = CyPlayerY
-										iMaxCult2 = iCulture
+							elif relations in (AttitudeTypes.ATTITUDE_PLEASED, AttitudeTypes.ATTITUDE_FRIENDLY):
+								# Assimilate with friendly, powerful master
+								masterPower = CyPlayerMaster.getPower()
+								vassalPower = CyPlayerX.getPower()
 
-								iTotalCulture = CyPlot0.countTotalCulture()
-								if iMaxCult2/(1.0*iTotalCulture) > .2:
+								if masterPower > 3*vassalPower:
+									if not CyPlayerMaster.isHuman():
+										CyPlayerDominant = CyPlayerMaster
+									elif not iPlayerX in noAssimilateList:
+										CyPlayerDominant = CyPlayerMaster
+									if CyPlayerDominant:
+										print "	Revolt - Assimilation to friendly and powerful master"
+							break
+
+				elif CyPlot0.calculateCulturePercent(iPlayerX) < 60:
+					### Capital has foreign influence
+					iPlayerCult = CyPlot0.calculateCulturalOwner() # iPlayerCult guaranteed to be alive
+					if iPlayerCult != iPlayerX:
+						iOdds += 15
+
+					if iOdds > 10 + GAME.getSorenRandNum(100, 'Revolution: Assimilate'):
+						print "	Revolt - Assimilation!  %s considering assimilation by culture" % szCiv
+
+						if iPlayerCult > -1 and iPlayerCult != iPlayerX and not CyPlayerX.AI_getAttitude(iPlayerCult) == AttitudeTypes.ATTITUDE_FURIOUS:
+							## Assimilate with cultural owner
+							CyPlayerY = GC.getPlayer(iPlayerCult)
+							if CyPlayerY.isAlive():
+								if not CyPlayerY.isHuman():
+									CyPlayerDominant = CyPlayerY
+								elif not iPlayerX in noAssimilateList:
+									CyPlayerDominant = CyPlayerY
+								if CyPlayerDominant:
+									print "	Revolt - Assimilation culture owner: " + CyPlayerDominant.getCivilizationDescription(0)
+
+						if not CyPlayerDominant:
+							## Check for good relations with second place culture
+							iMaxCult2 = 0
+							for iPlayerY in xrange(MAX_PC_PLAYERS):
+								if iPlayerY in (iPlayerX, iPlayerCult): continue
+								CyPlayerY = GC.getPlayer(iPlayerY)
+								if not CyPlayerY.isAlive(): continue
+								iCulture = CyPlot0.getCulture(iPlayerY)
+								if iCulture > iMaxCult2:
+									iPlayerCult2 = iPlayerY
+									CyPlayerCult2 = CyPlayerY
+									iMaxCult2 = iCulture
+
+							if iMaxCult2 < 1:
+								raise "city plot unexpectedly owned by no one, logical error in dll code dealing with culture on city plots"
+
+							else:
+								iTotalCulture = 1.0 * CyPlot0.countTotalCulture()
+								if iMaxCult2 / iTotalCulture > .2:
 									relations = CyPlayerX.AI_getAttitude(iPlayerCult2)
-									if relations in (AttitudeTypes.ATTITUDE_PLEASED, AttitudeTypes.ATTITUDE_FRIENDLY) \
-									or relations == AttitudeTypes.ATTITUDE_CAUTIOUS and iMaxCult2/(1.0*iTotalCulture) > .4:
-										if not CyPlayerCult2.isHuman():
+									if (
+										relations in (AttitudeTypes.ATTITUDE_PLEASED, AttitudeTypes.ATTITUDE_FRIENDLY)
+									or	relations == AttitudeTypes.ATTITUDE_CAUTIOUS and iMaxCult2 / iTotalCulture > .4
+									):
+										if not CyPlayerCult2.isHuman() or not iPlayerX in noAssimilateList:
 											CyPlayerDominant = CyPlayerCult2
-										elif not iPlayerX in noAssimilateList:
-											CyPlayerDominant = CyPlayerCult2
+
 										if CyPlayerDominant:
 											print "	Revolt - Assimilation to friendly, 2nd culture player"
 
@@ -1016,6 +1024,7 @@ def checkForAssimilation():
 						attackerTeam.declareWar(victimTeam.getID(), True, WarPlanTypes.NO_WARPLAN)
 
 				CyPlayerDominant.assimilatePlayer(iPlayerX)
+
 
 def assimilateHandler(iPlayerID, netUserData, popupReturn):
 

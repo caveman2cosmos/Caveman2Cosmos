@@ -2,6 +2,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvArea.h"
+#include "CvBonusInfo.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
@@ -252,6 +253,7 @@ void CvArea::read(FDataStreamBase* pStream)
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_TEAMS, m_aiNumRevealedTiles);
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_TEAMS, m_aiCleanPowerCount);
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_TEAMS, m_aiBorderObstacleCount);
+
 	WRAPPER_READ_ARRAY(wrapper, "CvArea", MAX_TEAMS, (int*)m_aeAreaAIType);
 
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
@@ -276,7 +278,8 @@ void CvArea::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvArea", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonuses);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvArea", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiNumImprovements);
 
-	WRAPPER_READ(wrapper, "CvArea", &m_iLastGameTurnRecorded);
+	WRAPPER_READ(wrapper, "CvArea", &m_iLastGameTurnRecorded); FASSERT_BOUNDS(-1, (GC.getGame().getGameTurn() + 1), m_iLastGameTurnRecorded);
+
 	for (int iI = 0; iI < COMBAT_RECORD_LENGTH; iI++)
 	{
 		TurnCombatResults& turnRecord = m_combatRecord[iI];
@@ -357,18 +360,20 @@ void CvArea::write(FDataStreamBase* pStream)
 	{
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvArea", REMAPPED_CLASS_TYPE_UNITAIS, NUM_UNITAI_TYPES, m_aaiNumAIUnits[iI]);
 	}
+
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvArea", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonuses);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvArea", REMAPPED_CLASS_TYPE_IMPROVEMENTS, GC.getNumImprovementInfos(), m_paiNumImprovements);
 
 	WRAPPER_WRITE(wrapper, "CvArea", m_iLastGameTurnRecorded);
-	for(int iI = 0; iI < COMBAT_RECORD_LENGTH; iI++)
+
+	for (int iI = 0; iI < COMBAT_RECORD_LENGTH; iI++)
 	{
 		TurnCombatResults& turnRecord = m_combatRecord[iI];
 		int numRecords = turnRecord.size();
 
 		WRAPPER_WRITE(wrapper, "CvArea", numRecords);
 
-		for(int iJ = 0; iJ < numRecords; iJ++)
+		for (int iJ = 0; iJ < numRecords; iJ++)
 		{
 			CombatResultRecord& record = turnRecord[iJ];
 
@@ -1152,15 +1157,16 @@ void CvArea::recordCombatDeath(PlayerTypes ePlayer, UnitTypes lostUnitType, Unit
 	record.eLoser = ePlayer;
 	record.eDefeatedUnitType = lostUnitType;
 	record.eVictoriousEnemyUnitType = lostToUnitType;
+	const int iGameTurn = GC.getGame().getGameTurn();
 
-	if (m_iLastGameTurnRecorded != -1)
+	if (m_iLastGameTurnRecorded > -1 && m_iLastGameTurnRecorded < iGameTurn)
 	{
-		while (m_iLastGameTurnRecorded != GC.getGame().getGameTurn())
+		while (m_iLastGameTurnRecorded != iGameTurn)
 		{
 			m_combatRecord[++m_iLastGameTurnRecorded % COMBAT_RECORD_LENGTH].clear();
 		}
 	}
-	else m_iLastGameTurnRecorded = GC.getGame().getGameTurn();
+	else m_iLastGameTurnRecorded = iGameTurn;
 
 	m_combatRecord[m_iLastGameTurnRecorded % COMBAT_RECORD_LENGTH].push_back(record);
 }

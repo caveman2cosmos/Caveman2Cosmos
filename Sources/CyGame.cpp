@@ -572,6 +572,11 @@ bool CyGame::isFinalInitialized() const
 	return m_pGame.isFinalInitialized();
 }
 
+void CyGame::onFinalInitialized(const bool bNewGame)
+{
+	m_pGame.onFinalInitialized(bNewGame);
+}
+
 PlayerTypes CyGame::getActivePlayer() const
 {
 	return m_pGame.getActivePlayer();
@@ -1050,11 +1055,6 @@ void CyGame::log(const char* file, char* str)
 #endif
 }
 
-int CyGame::getCultureThreshold(CultureLevelTypes eLevel) const
-{
-	return m_pGame.getCultureThreshold(eLevel);
-}
-
 void CyGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield)
 {
 	m_pGame.setPlotExtraYield(iX, iY, eYield, iExtraYield);
@@ -1097,7 +1097,11 @@ bool CyGame::regenerateMap()
 
 void CyGame::saveGame(std::string fileName) const
 {
-	gDLL->getEngineIFace()->SaveGame((CvString &)fileName, SAVEGAME_NORMAL);
+	if (fileName.empty())
+	{
+		gDLL->getEngineIFace()->AutoSave(true);
+	}
+	else gDLL->getEngineIFace()->SaveGame((CvString &)fileName, SAVEGAME_NORMAL);
 }
 
 std::string CyGame::getDLLPath() const
@@ -1133,11 +1137,6 @@ int CyGame::getModderGameOption(ModderGameOptionTypes eIndex) const
 void CyGame::setModderGameOption(ModderGameOptionTypes eIndex, int iNewValue)
 {
 	m_pGame.setModderGameOption(eIndex, iNewValue);
-}
-
-bool CyGame::canEverResearch(TechTypes iTech) const
-{
-	return m_pGame.canEverResearch(iTech);
 }
 
 bool CyGame::canEverConstruct(BuildingTypes iBuilding) const

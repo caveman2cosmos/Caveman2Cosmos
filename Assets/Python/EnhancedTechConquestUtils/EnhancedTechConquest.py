@@ -62,13 +62,15 @@ def loadConfigurationData():
 class EnhancedTechConquest:
 
 	def onCityAcquired(self, argsList):
-		iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
-		if not bConquest: return
+		#iOwnerOld, iOwnerNew, city, bConquest, bTrade, bAutoRaze = argsList
+		# if not bConquest
+		if not argsList[3]: return
 
 		iBasePercent = g_iBasePercent
 		iPopPercent = g_iPopPercent
 		if iBasePercent < 1 and iPopPercent < 1: return
 
+		iOwnerNew = argsList[1]
 		CyPlayerN = GC.getPlayer(iOwnerNew)
 		if CyPlayerN.isNPC(): return
 
@@ -77,7 +79,7 @@ class EnhancedTechConquest:
 		elif iPopPercent > 100:
 			iPopPercent = 100
 
-		CyPlayerO = GC.getPlayer(iOwnerOld)
+		CyPlayerO = GC.getPlayer(argsList[0]) # old owner
 		CyTeamO = GC.getTeam(CyPlayerO.getTeam())
 		CyTeamN = GC.getTeam(CyPlayerN.getTeam())
 
@@ -93,7 +95,7 @@ class EnhancedTechConquest:
 				continue
 			iTechsBehind += 1
 			# Continue if the conquerer cannot research the technology
-			if bCheckPrereq and not CyPlayerN.canResearch(iTech):
+			if bCheckPrereq and not CyPlayerN.canResearch(iTech, True):
 				continue
 			# Append the technology to the possible technology list
 			iCost = CyTeamN.getResearchCost(iTech)
@@ -106,6 +108,7 @@ class EnhancedTechConquest:
 
 		if aList:
 
+			city = argsList[2]
 			iBasePercent += iTechsBehind
 			charBeaker = GC.getCommerceInfo(CommerceTypes.COMMERCE_RESEARCH).getChar()
 			iPopulation = city.getPopulation()

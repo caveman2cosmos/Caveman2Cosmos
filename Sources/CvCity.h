@@ -11,6 +11,8 @@
 #include "CvProperties.h"
 #include "CvBuildingList.h"
 #include "CvUnitList.h"
+#include "CityOutputHistory.h"
+#include "CvGameObject.h"
 
 class CvArea;
 class CvArtInfoBuilding;
@@ -52,12 +54,19 @@ public:
 
 	CvGameObjectCity* getGameObject() { return &m_GameObject; }
 	const CvGameObjectCity* getGameObject() const { return &m_GameObject; }
+	int getNumWorkers() const { return m_workers.size(); }
+	std::vector<int> getWorkers() const { return m_workers; }
+	void setWorkerHave(const int iUnitID, const bool bNewValue);
 
 private:
 	bool canHurryInternal(const HurryTypes eHurry) const;
 
+	std::vector<int> m_workers;
+
 protected:
 	CvGameObjectCity m_GameObject;
+	CityOutputHistory m_outputHistory;
+
 
 public:
 	int getRevolutionIndex() const;
@@ -104,8 +113,6 @@ public:
 	void createGreatPeople(UnitTypes eGreatPersonUnit, bool bIncrementThreshold, bool bIncrementExperience);
 
 	void doTask(TaskTypes eTask, int iData1 = -1, int iData2 = -1, bool bOption = false, bool bAlt = false, bool bShift = false, bool bCtrl = false);
-
-	void chooseProduction(UnitTypes eTrainUnit = NO_UNIT, BuildingTypes eConstructBuilding = NO_BUILDING, ProjectTypes eCreateProject = NO_PROJECT, bool bFinish = false, bool bFront = false);
 
 	// Base iterator type for iterating over city plots, returning valid ones only
 	template < class Value_ >
@@ -358,9 +365,9 @@ public:
 	int hurryAngerLength(HurryTypes eHurry) const;
 	int maxHurryPopulation() const;
 
-//	int cultureDistance(int iDX, int iDY) const;
-	int cultureStrength(PlayerTypes ePlayer, int &iOriginal) const;
-	int cultureGarrison(PlayerTypes ePlayer) const;
+	int netRevoltRisk(PlayerTypes cultureAttacker) const;
+	int baseRevoltRisk(PlayerTypes eCultureAttacker) const;
+	int cultureGarrison(PlayerTypes eCultureAttacker) const;
 
 	//	Note arrival or leaving of a unit
 	void noteUnitMoved(const CvUnit* pUnit) const;
@@ -589,7 +596,6 @@ public:
 
 	int getHealUnitCombatTypeTotal(UnitCombatTypes eUnitCombat) const;
 	void changeHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombat, int iChange);
-	void setHealUnitCombatTypeVolume(UnitCombatTypes eUnitCombat, int iChange);
 
 	int getEspionageHealthCounter() const;
 	void changeEspionageHealthCounter(int iChange);
@@ -853,7 +859,6 @@ public:
 
 	CultureLevelTypes getCultureLevel() const;
 	int getCultureThreshold() const;
-	int getCultureThreshold(CultureLevelTypes eLevel) const;
 	void setCultureLevel(CultureLevelTypes eNewValue, bool bUpdatePlotGroups);
 	void updateCultureLevel(bool bUpdatePlotGroups);
 
@@ -960,7 +965,6 @@ public:
 
 	int getSpecialistCommerce(CommerceTypes eIndex) const;
 	void changeSpecialistCommerceTimes100(CommerceTypes eIndex, int iChange);
-	int getAdditionalCommerceBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;
 	int getAdditionalCommerceTimes100BySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;
 	int getAdditionalBaseCommerceRateBySpecialist(CommerceTypes eIndex, SpecialistTypes eSpecialist, int iChange) const;
 
@@ -1295,11 +1299,6 @@ public:
 	int calculateCorporationHappiness() const;
 
 	BuildTypes findChopBuild(FeatureTypes eFeature) const;
-	CultureLevelTypes getOccupationCultureLevel() const;
-	void setOccupationCultureLevel(CultureLevelTypes eNewValue);
-	CultureLevelTypes getMaxCultureLevelAmongPlayers() const;
-	CultureLevelTypes getCultureLevel(PlayerTypes eIndex) const;
-	CultureLevelTypes getCultureLevelForCulture(int iCulture) const;
 	int getLineOfSight() const;
 	void changeLineOfSight(int iChange);
 	int calculateBonusCommerceRateModifier(CommerceTypes eIndex) const;
@@ -1318,15 +1317,6 @@ public:
 
 	int getUnitCombatExtraStrength(UnitCombatTypes eIndex) const;
 	void changeUnitCombatExtraStrength(UnitCombatTypes eIndex, int iChange);
-
-	int getInvasionChance() const;
-	void changeInvasionChance(int iChange);
-
-	int getInvasionTimer() const;
-	void changeInvasionTimer(int iChange);
-	bool isInvaded() const;
-
-	void doInvasion();
 
 	void setDisabledBuilding(const BuildingTypes eIndex, const bool bNewValue, const bool bProcess = true);
 	bool isDisabledBuilding(const short iIndex) const;
@@ -1437,7 +1427,6 @@ public:
 	//	KOSHLING - initialisation called on every city prior to performing unit mission allocation logic
 	//	This allows caches that will remian valid for the procesign of teh current turn's units to be cleared
 	virtual void AI_preUnitTurn() = 0;
-	virtual void AI_noteUnitEscortNeeded() = 0;
 	virtual void AI_trained(UnitTypes eUnitType, UnitAITypes eUnitAIType) = 0;
 	virtual UnitTypes AI_bestUnit(int& iBestValue, int iNumSelectableTypes = -1, UnitAITypes* pSelectableTypes = NULL, bool bAsync = false, UnitAITypes* peBestUnitAI = NULL, bool bNoRand = false, bool bNoWeighting = false, const CvUnitSelectionCriteria* criteria = NULL) = 0;
 	virtual UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync = false, bool bNoRand = false, const CvUnitSelectionCriteria* criteria = NULL) = 0;
@@ -1516,12 +1505,7 @@ public:
 	virtual int AI_cityThreat(TeamTypes eTargetTeam = NO_TEAM, int* piThreatModifier = NULL) = 0;
 	virtual BuildingTypes AI_bestAdvancedStartBuilding(int iPass) = 0;
 
-	virtual int AI_getWorkersHave() const = 0;
 	virtual int AI_getWorkersNeeded() const = 0;
-	virtual void AI_changeWorkersHave(int iChange) = 0;
-
-	// Fuyu - Worker Counting - 03.08.2010
-	virtual int AI_workingCityPlotTargetMissionAIs(PlayerTypes ePlayer, MissionAITypes eMissionAI, UnitAITypes eUnitAI = NO_UNITAI, bool bSameAreaOnly = false) const = 0;
 
 	virtual int AI_getBuildPriority() const = 0;
 
@@ -1535,19 +1519,14 @@ public:
 
 	int getBestYieldAvailable(YieldTypes eYield) const;
 
-/************************************************************************************************/
-/* phunny_pharmer                Start		 05/03/10                                           */
-/*   note: recalculateCultureDistance must be const as it is called from cultureDistance, a     */
-/*     const function; this means that the actual cached structure must be mutable in order to  */
-/*     be modified in the const method                                                          */
-/************************************************************************************************/
+	/*   note: recalculateCultureDistance must be const as it is called from cultureDistance, a     */
+	/*     const function; this means that the actual cached structure must be mutable in order to  */
+	/*     be modified in the const method                                                          */
 	void recalculateCultureDistances(int iMaxDistance) const;
-	int calculateCultureDistance(int iDX, int iDY, int iMaxDistance) const;
+	int calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) const;
 	void clearCultureDistanceCache();
-	int cultureDistance(int iDX, int iDY, bool bForce = false) const;
-/************************************************************************************************/
-/* phunny_pharmer                End		 05/03/10                                           */
-/************************************************************************************************/
+	int cultureDistance(const CvPlot& plot) const;
+
 	void clearModifierTotals();
 	void recalculateModifiers();
 
@@ -1583,6 +1562,9 @@ public:
 	UnitTypes getUnitListSelected();
 
 	bool isDirectAttackable() const;
+
+	void markForDestruction() { m_bMarkedForDestruction = true; }
+	bool isMarkedForDestruction() const { return m_bMarkedForDestruction; }
 
 protected:
 
@@ -1666,8 +1648,6 @@ protected:
 	bool m_bResetTechs;
 	int m_iLineOfSight;
 	int m_iLandmarkAngerTimer;
-	int m_iInvasionChance;
-	int m_iInvasionTimer;
 	int m_iAdjacentDamagePercent;
 	int m_iWorkableRadiusOverride;
 	int m_iProtectedCultureCount;
@@ -1711,8 +1691,6 @@ protected:
 
 	std::map<short, YieldArray> m_terrainYieldChanges;
 	std::map<short, YieldArray> m_plotYieldChanges;
-
-	CultureLevelTypes m_eOccupationCultureLevel;
 
 	int m_iMilitaryProductionModifier;
 	int m_iSpaceProductionModifier;
@@ -1921,11 +1899,13 @@ protected:
 	int*	m_aiCommerceRank;
 	bool*	m_abCommerceRankValid;
 
-	mutable std::map<int,int> m_aCultureDistances;
+	mutable std::map<const CvPlot*,int> m_aCultureDistances;
 
 	void doGrowth();
 	void doCulture();
-	void doPlotCulture(bool bUpdate, PlayerTypes ePlayer, int iCultureRate);
+	void doPlotCulture(PlayerTypes ePlayer, int iCultureRate);
+	void decayCulture();
+	static int cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int distanceFromSource);
 	void doProduction(bool bAllowNoProduction);
 	void doDecay();
 	void doReligion();
@@ -1959,6 +1939,9 @@ protected:
 
 	short m_iZoCCount;
 	void changeZoCCount(short iChange);
+
+	bool m_bMarkedForDestruction;
+
 public:
 	int getTechSpecialistHappinessTypes(TechTypes eTech, SpecialistTypes eSpecialist) const;
 
@@ -2086,6 +2069,9 @@ public:
 
 	void AI_setPropertyControlBuildingQueued(bool bSet);
 	bool AI_isPropertyControlBuildingQueued() const;
+
+	const CityOutputHistory* getCityOutputHistory() const;
+
 private:
 	mutable stdext::hash_map<UnitTypes,bool> m_canTrainCacheUnits;
 	mutable stdext::hash_map<UnitTypes,UnitTypes> m_eCachedAllUpgradesResults;
@@ -2145,7 +2131,6 @@ public:
 		DECLARE_MAP_FUNCTOR(CvCity, void, AI_updateAssignWork);
 		DECLARE_MAP_FUNCTOR(CvCity, void, AI_markBestBuildValuesStale);
 		DECLARE_MAP_FUNCTOR(CvCity, void, setupGraphical);
-		DECLARE_MAP_FUNCTOR(CvCity, void, chooseProduction);
 		DECLARE_MAP_FUNCTOR(CvCity, void, invalidatePopulationRankCache);
 		DECLARE_MAP_FUNCTOR(CvCity, void, invalidateYieldRankCache);
 		DECLARE_MAP_FUNCTOR(CvCity, void, invalidateCommerceRankCache);

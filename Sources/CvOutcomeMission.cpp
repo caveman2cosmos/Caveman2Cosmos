@@ -15,6 +15,7 @@
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 #include "IntExpr.h"
+#include "BoolExpr.h"
 
 CvOutcomeMission::CvOutcomeMission() :
 m_eMission(NO_MISSION),

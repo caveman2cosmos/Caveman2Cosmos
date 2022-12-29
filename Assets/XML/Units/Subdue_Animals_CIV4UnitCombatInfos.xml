@@ -4,6 +4,10 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_SUBDUED</Type>
 			<Description>TXT_KEY_UNITCOMBAT_SUBDUED</Description>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUP_PRIMARY_ROLE</Category>
+			</Categories>
+			<iExtraUpkeep100>20</iExtraUpkeep100>
 			<bCannotMergeSplit>1</bCannotMergeSplit>
 			<Button>Art/Interface/Buttons/units/sparth/categories/subdued.dds</Button>
 			<Actions>
@@ -177,6 +181,10 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_SEA_ANIMAL_TALE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_SEA_ANIMAL_TALES</Description>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUP_COMBAT</Category>
+			</Categories>
+			<iExtraUpkeep100>50</iExtraUpkeep100>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_RECORD_TALE</MissionType>
@@ -349,6 +357,9 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_MAMMAL_URSINE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_MAMMAL_URSINE</Description>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
+			</Categories>
 			<iPursuitChange>10</iPursuitChange>
 			<FeatureAttacks>
 				<FeatureAttack>
@@ -433,7 +444,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>4</Constant>
+										<Constant>3</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -454,7 +465,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>5</Constant>
+										<Constant>4</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -497,6 +508,9 @@
 			<Type>UNITCOMBAT_MAMMAL_RHINO</Type>
 			<Description>TXT_KEY_UNITCOMBAT_MAMMAL_RHINO</Description>
 			<Button>Art/Interface/Buttons/units/sparth/categories/mammal.dds</Button>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
+			</Categories>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_ANIMAL_COMBAT</MissionType>
@@ -550,7 +564,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>4</Constant>
+										<Constant>3</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -571,7 +585,7 @@
 								<iCommerce>
 									<Adapt>
 										<ID>ADAPT_UNIT_YIELD</ID>
-										<Constant>5</Constant>
+										<Constant>4</Constant>
 									</Adapt>
 								</iCommerce>
 								<iCommerce>0</iCommerce>
@@ -613,16 +627,25 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_SEA_SMALL</Type>
 			<Description>TXT_KEY_UNITCOMBAT_SEA_SMALL</Description>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUP_SPECIES</Category>
+			</Categories>
 			<Button>Art/Interface/Buttons/units/sparth/categories/fish.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_SEA_LARGE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_SEA_LARGE</Description>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUP_SPECIES</Category>
+			</Categories>
 			<Button>Art/Interface/Buttons/units/sparth/categories/fish.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_WHALE</Type>
 			<Description>TXT_KEY_UNITCOMBAT_WHALE</Description>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUP_MAMMAL</Category>
+			</Categories>
 			<Button>Art/Interface/Buttons/units/sparth/categories/whales.dds</Button>
 		</UnitCombatInfo>
 	</UnitCombatInfos>

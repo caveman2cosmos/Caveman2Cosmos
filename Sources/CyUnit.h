@@ -47,7 +47,7 @@ public:
 	int /*HandicapTypes*/ getHandicapType() const;
 	int /*CivilizationTypes*/ getCivilizationType() const;
 	int /*SpecialUnitTypes*/ getSpecialUnitType() const;
-	int /*UnitTypes*/ getCaptureUnitType() const;
+	UnitTypes getCaptureUnitType() const;
 	int /*UnitCombatTypes*/ getUnitCombatType() const;
 	DomainTypes getDomainType() const;
 
@@ -68,7 +68,7 @@ public:
 	bool isFound() const;
 	bool isGoldenAge() const;
 
-	bool isFighting() const;
+	bool isInBattle() const;
 	int getMaxHP() const;
 	int getHP() const;
 	bool isHurt() const;
@@ -132,8 +132,6 @@ public:
 
 	bool isRiver() const;
 
-	int getExtraMoves() const;
-
 	int getRevoltProtection() const;
 	int getPillageChange() const;
 	int getUpgradeDiscount() const;
@@ -189,8 +187,8 @@ public:
 
 	void setCommander(bool bNewValue);
 	bool isCommander() const;
-	int controlPointsLeft() const;
-	int controlPoints() const;
+	int getControlPointsLeft() const;
+	int getControlPoints() const;
 	float getRealExperience() const;
 
 protected:

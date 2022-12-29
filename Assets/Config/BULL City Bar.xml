@@ -55,8 +55,6 @@
 			<option id="BuildingIcons" key="BuildingIcons"
 					type="boolean" default="True"/>
 
-			<option id="CultureTurns" key="Culture Turns"
-					type="boolean" default="True"/>
 			<option id="GreatPersonTurns" key="Great Person Turns"
 					type="boolean" default="True"/>
 
@@ -70,27 +68,17 @@
 		</section>
 
 		<section id="Plot Status">
-			<option id="CityControlledPlots" key="City Controlled Plots"
-					type="boolean" default="True" dirtyBit="ColoredPlots" dll="6"/>
+			<option id="CityPlotStatus" key="City Plot Status" type="boolean" default="True" dirtyBit="ColoredPlots"/>
 
-			<option id="CityPlotStatus" key="City Plot Status"
-					type="boolean" default="True" dirtyBit="ColoredPlots" dll="6"/>
-			<option id="WorkingImprovedPlot" key="Working Improved Plot"
-					type="boolean" default="False" dirtyBit="ColoredPlots" dll="6"/>
-			<option id="WorkingImprovablePlot" key="Working Improvable Plot"
-					type="boolean" default="True" dirtyBit="ColoredPlots" dll="6"/>
-			<option id="WorkingImprovableBonusPlot" key="Working Improvable Bonus Plot"
-					type="boolean" default="True" dirtyBit="ColoredPlots" dll="6"/>
-			<option id="WorkingUnimprovablePlot" key="Working Unimprovable Plot"
-					type="boolean" default="True" dirtyBit="ColoredPlots" dll="6"/>
-			<option id="NotWorkingImprovedPlot" key="Not Working Improved Plot"
-					type="boolean" default="True" dirtyBit="ColoredPlots" dll="6"/>
-			<option id="NotWorkingImprovablePlot" key="Not Working Improvable Plot"
-					type="boolean" default="True" dirtyBit="ColoredPlots" dll="6"/>
-			<option id="NotWorkingImprovableBonusPlot" key="Not Working Improvable Bonus Plot"
-					type="boolean" default="True" dirtyBit="ColoredPlots" dll="6"/>
-			<option id="NotWorkingUnimprovablePlot" key="Not Working Unimprovable Plot"
-					type="boolean" default="False" dirtyBit="ColoredPlots" dll="6"/>
+			<option id="WorkingImprovedPlot" key="Working Improved Plot" type="boolean" default="False" dirtyBit="ColoredPlots"/>
+			<option id="WorkingImprovablePlot" key="Working Improvable Plot" type="boolean" default="True" dirtyBit="ColoredPlots"/>
+			<option id="WorkingImprovableBonusPlot" key="Working Improvable Bonus Plot" type="boolean" default="True" dirtyBit="ColoredPlots"/>
+			<option id="WorkingUnimprovablePlot" key="Working Unimprovable Plot" type="boolean" default="True" dirtyBit="ColoredPlots"/>
+
+			<option id="NotWorkingImprovedPlot" key="Not Working Improved Plot" type="boolean" default="True" dirtyBit="ColoredPlots"/>
+			<option id="NotWorkingImprovablePlot" key="Not Working Improvable Plot" type="boolean" default="True" dirtyBit="ColoredPlots"/>
+			<option id="NotWorkingImprovableBonusPlot" key="Not Working Improvable Bonus Plot" type="boolean" default="True" dirtyBit="ColoredPlots"/>
+			<option id="NotWorkingUnimprovablePlot" key="Not Working Unimprovable Plot" type="boolean" default="False" dirtyBit="ColoredPlots"/>
 		</section>
 	</options>
 </mod>

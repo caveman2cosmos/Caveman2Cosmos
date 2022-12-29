@@ -71,13 +71,6 @@
 		<Spanish>¡Anarquía! (%d1)</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>INTERFACE_BUILDING_TAB</Tag>
-		<English>Building Tab</English>
-		<French>Bâtiments</French>
-		<German>Gebäude bauen</German>
-		<Russian>Панель зданий</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>INTERFACE_CITY_COMMERCE_RATE</Tag>
 		<English>%F1: %s2 (%D3/Turn)</English>
 		<French>%F1 : %s2 (%D3/tour)</French>
@@ -316,14 +309,25 @@
 		<Spanish>[COLOR_UNIT_TEXT]#%d1 - %s2[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>INTERFACE_UNIT_TAB</Tag>
+		<Tag>INTERFACE_TAB_ADMIN</Tag>
+		<English>Admin Tab</English>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_TAB_BUILDING</Tag>
+		<English>Building Tab</English>
+		<French>Bâtiments</French>
+		<German>Gebäude bauen</German>
+		<Russian>Панель зданий</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>INTERFACE_TAB_UNIT</Tag>
 		<English>Unit Tab</English>
 		<French>Unités</French>
 		<German>Einheiten bauen</German>
 		<Russian>Панель юнитов</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>INTERFACE_WONDER_TAB</Tag>
+		<Tag>INTERFACE_TAB_WONDER</Tag>
 		<English>Wonder Tab</English>
 		<French>Merveilles</French>
 		<German>Wunder bauen</German>
@@ -2593,7 +2597,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BULLET</Tag>
 		<English>[ICON_BULLET]</English>
-		<Russian>[ICON_BULLET]</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BULLET_STARTS_WITH</Tag>
@@ -3022,16 +3025,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_CULTURE</Tag>
-		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</English>
-		<French>[NEWLINE][ICON_CULTURE] : %d1/%d2 (%s3)</French>
-		<German>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</German>
-		<Italian>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</Italian>
-		<Spanish>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3)</Spanish>
+		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3: Lvl %d4)</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_BAR_CULTURE_NO_LEVEL</Tag>
-		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2</English>
-		<Russian>[NEWLINE][ICON_CULTURE]: %d1/%d2</Russian>
+		<Tag>TXT_KEY_CITY_BAR_CULTURE_MAX</Tag>
+		<English>[NEWLINE][ICON_CULTURE]: %d1 (%s2: Lvl %d3)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_FOOD_GROW</Tag>
@@ -3102,10 +3100,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_GREAT_PEOPLE</Tag>
 		<English>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</English>
-		<French>[NEWLINE][ICON_GREATPEOPLE] : %d1/%d2</French>
-		<German>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</German>
-		<Italian>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</Italian>
-		<Spanish>[NEWLINE][ICON_GREATPEOPLE]: %d1/%d2</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_GROWTH</Tag>
@@ -3136,10 +3130,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_PRODUCTION</Tag>
 		<English>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</English>
-		<French>[NEWLINE]%s1 : %d2/%d3 [ICON_PRODUCTION]</French>
-		<German>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</German>
-		<Italian>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</Italian>
-		<Spanish>[NEWLINE]%s1: %d2/%d3 [ICON_PRODUCTION]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_SELECT</Tag>
@@ -3778,7 +3768,7 @@
 		<Tag>TXT_KEY_CIVICHELP_IMPROVEMENT_YIELD_CHANGE</Tag>
 		<English>[ICON_BULLET]%D1_Change%F2_Icon from[SPACE]</English>
 		<French>[ICON_BULLET]%D1_Change%F2_Icon :[SPACE]</French>
-		<German>[ICON_BULLET]%D1_Change%F2_Icon durch die Modernisierung[SPACE]</German>
+		<German>[ICON_BULLET]%D1_Change%F2_Icon durch[SPACE]</German>
 		<Italian>[ICON_BULLET]%D1_Change%F2_Icon da[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change %F2_Icon por[SPACE]</Spanish>
 	</TEXT>
@@ -4010,7 +4000,7 @@
 		<Tag>TXT_KEY_CIVICHELP_WORKER_SPEED</Tag>
 		<English>[ICON_BULLET]Workers Build Improvements %D1_Mod%% Faster</English>
 		<French>[ICON_BULLET]Vitesse de construction des aménagements : %D1_Mod%%</French>
-		<German>[ICON_BULLET]Bautrupps errichten Modernisierungen %D1_Mod%% schneller</German>
+		<German>[ICON_BULLET]Arbeitstrupps errichten Modernisierungen %D1_Mod%% schneller</German>
 		<Italian>[ICON_BULLET]I lavoratori costruiscono i miglioramenti il %D1_Mod%% più rapidamente</Italian>
 		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Mod%% más rápido</Spanish>
 	</TEXT>
@@ -4970,6 +4960,26 @@
 		<German>Fortgeschritten</German>
 		<Italian>Raffinato</Italian>
 		<Spanish>Refinada</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_MINISCULE</Tag>
+		<English>Miniscule</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_MINOR</Tag>
+		<English>Minor</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_TREMENDOUS</Tag>
+		<English>Tremendous</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_STUPENDOUS</Tag>
+		<English>Stupendous</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CULTURELEVEL_MAJESTIC</Tag>
+		<English>Majestic</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CURE_AFFLICTION</Tag>
@@ -7042,12 +7052,14 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Polarlicht</German>
 		<Polish>Zorza Polarna</Polish>
 		<Russian>Ïîëÿðíîå ñèÿíèå</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_AURORA_PEDIA</Tag>
 		<English>An aurora is a natural light display in the sky particularly in the high latitude (Arctic and Antarctic) regions, caused by the collision of energetic charged particles with atoms in the high altitude atmosphere. The charged particles originate in the magnetosphere and solar wind and are directed by the Earth's magnetic field into the atmosphere. In northern latitudes, the effect is known as the aurora borealis. Its southern counterpart, the aurora australis, changes simultaneously with changes in the northern auroral zone and is visible from high southern latitudes in Antarctica, South America, New Zealand, and Australia.</English>
+		<German>[COLOR_HIGHLIGHT_TEXT]Polarlichter[COLOR_REVERT] sind Leuchterscheinungen, die in der Nähe der Magnetpole auftreten. Sie entstehen durch elektrisch geladene Teilchen des Sonnenwinds, die auf Sauerstoff- oder Stickstoffatome der Erdatmosphäre treffen und diese ionisieren. Das passiert häufig auf der Nord- und gelegentlich auch auf der Südhalbkugel. Auch in Mitteleuropa kann dieses Phänomen auftreten, jedoch nur bei starken Sonneneruptionen. Die Farben der Polarlichter variieren von Grün bis Rot. Es gibt verschiedene Arten, die von den Sonnenwinden abhängig sind: Corona, Vorhänge, ruhige Bögen und Bänder. Durch die magnetische Störung während eines Polarlichts treten mitunter Geräusche auf, die dem Radiorauschen ähneln.</German>
 		<Polish>Zorza polarna (Aurora borealis, aurora australis) - zjawisko świetlne obserwowane w górnej atmosferze w pobliżu biegunów magnetycznych planety, która posiada silne pole magnetyczne o charakterze dipolowym (dwubiegunowym). Na Ziemi zorze występują na wysokich szerokościach geograficznych, głównie za kołami podbiegunowymi, chociaż w sprzyjających warunkach bywają widoczne nawet w okolicach 50. równoleżnika. Zdarza się, że zorze polarne na półkuli północnej obserwowane są nawet w krajach śródziemnomorskich. Na półkuli północnej zorza jest określana łacińską nazwą Aurora borealis, a południowa zorza polarna nosi nazwę Aurora australis.</Polish>
 		<Russian>Ïîëÿðíîå ñèÿíèå - ïîðàçèòåëüíîå ÿâëåíèå ñâå÷åíèÿ, íàáëþäàåìîå íà íåáå, ÷àùå âñåãî â ïîëÿðíûõ îáëàñòÿõ. Â Ñåâåðíîì ïîëóøàðèè åãî íàçûâàþò òàêæå ñåâåðíûì ñèÿíèåì, à â âûñîêèõ øèðîòàõ Þæíîãî ïîëóøàðèÿ - þæíûì.[PARAGRAPH:2]Ïðèðîäà è ïðîèñõîæäåíèå ïîëÿðíûõ ñèÿíèé - ïðåäìåò èíòåíñèâíûõ èññëåäîâàíèé, è â ýòîé ñâÿçè áûëè ðàçðàáîòàíû ìíîãî÷èñëåííûå òåîðèè. ßâëåíèå ñâå÷åíèÿ, äî íåêîòîðîé ñòåïåíè áëèçêîå ïîëÿðíûì ñèÿíèÿì, íàçûâàåìîå «ñâå÷åíèåì íî÷íîãî íåáà», ìîæíî íàáëþäàòü ïðè ïîìîùè ñïåöèàëüíûõ ïðèáîðîâ íà ëþáîé øèðîòå.[PARAGRAPH:1]Ïðåäïîëàãàåòñÿ, ÷òî ýòîò ôåíîìåí ñóùåñòâóåò òàêæå è â àòìîñôåðàõ äðóãèõ ïëàíåò, íàïðèìåð Âåíåðû.</Russian>
 	</TEXT>
@@ -7061,6 +7073,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_AUYANTEPUI_PEDIA</Tag>
 		<English>Auyán-tepui is a tepui (a table-top mountain or mesa) in Venezuela. It is the most visited and one of the largest tepuis in the Guiana Highlands. The uneven, heart-shaped summit plateau of Auyán-tepui is heavily inclined, rising from around 1,600 metres in the northwest to a maximum of 2,450 metres in the southeast. It is incised from the north by a vast valley, the Devil's Canyon. The larger western portion of the plateau is partially forested, whereas the eastern part comprises mostly bare rock with only patchy vegetation cover. The mountain hosts a number of extensive cave systems.</English>
+		<German>Der [COLOR_HIGHLIGHT_TEXT]Auyan-Tepui[COLOR_REVERT] ist ein bis zu 2450 Meter hoher Tafelberg in Venezuela. Er befindet sich in der südvenezolanischen Graslandschaft Gran Sabana und ist der meistbesuchte der 97 Tepuis (Tafelberge) in diesem Gebiet, die Überreste des vor etwa 1,7 Milliarden Jahren entstandenen Guayana-Schildes sind. Das karge Hochtableau des Auyan-Tepui besteht aus zahlreichen Canyons, Platten, Trümmern und Spalten. Besonders beeindruckend sind die Sima, das sind mehrere hundert Meter tiefe Löcher, die wahrscheinlich durch ausgewaschene und eingestürzte Höhlen entstanden sind. Auf der Ostseite befindet sich der Salto Ángel, der höchste Wasserfall der Erde, der 979 Meter in die Tiefe stürzt.</German>
 		<French>L'Auyan Tepuy ou Auyantepui, toponyme arekuna signifiant littéralement en français « Montagne du diable », est un des principaux tepuys du Venezuela. Situé dans le Sud-Est du pays, dans la municipalité de Gran Sabana (État de Bolivar), il est formé d'un plateau peu accidenté de près de 700 km2 culminant à 2 410 mètres d'altitude et dominant de manière abrupte la forêt tropicale de la Gran Sabana située près de 1 000 mètres en contrebas.</French>
 		<Polish>Auyantepui (Auyantepuy, Auyan-Tepui or Aiyan-tepui) - jest najczęściej zwiedzanym i słynnym tepui w Wenezueli, oraz jednym z największym (lecz nie najwyższych) tepui, o obszarze 700 km˛ na wyżynie La Gran Sabana w stanie Bolivar. Nazwa płaskowyżu, oznacza w miejscowym języku Pemon "Domem Diabła" Salto Angel, najwyższy wodospad Ziemi, wypływa ze szczytu płaskowyżu.Znajduje się na północnym stoku Auyantepui. Ma wysokość 979 metrów, i opada nieprzerwanie przez 807 metrów. Salto Angel jest 19 razy wyższy od Wodospadu Niagara.</Polish>
 		<Russian>Àóÿíòåïóè - èçâåñòíàÿ ñòîëîâàÿ ãîðà â Âåíåñóýëå.[PARAGRAPH:2]Ýòî ãèãàíòñêîå ïëàòî èìååò ïëîùàäü 650 êâ. êì è âûñîòó íàä óðîâíåì ìîðÿ ïî÷òè 3 000 ì. Ñ ãîðû ïàäàåò âîäîïàä Àíõåëü, ñàìûé âûñîêèé âîäîïàä â ìèðå, âûñîòîé 979 ì.[PARAGRAPH:1]Ãîðà ïîëó÷èëà èçâåñòíîñòü â 1933 ã., êîãäà ïèëîò Äæèììè Àíõåëü ñëó÷àéíî îòêðûë ðàñïîëîæåííûé íà íåé âîäîïàä, âî âðåìÿ ïóòåøåñòâèÿ â ïîèñêàõ çîëîòîé ðóäû.</Russian>
@@ -7077,6 +7090,7 @@
 		<Tag>TXT_KEY_FEATURE_BAIKAL_PEDIA</Tag>
 		<English>Lake Baikal is a rift lake in the south of the Russian region of Siberia, between the Irkutsk Oblast to the northwest and the Buryat Republic to the southeast. Lake Baikal is the most voluminous freshwater lake in the world, containing roughly 20% of the world's unfrozen surface fresh water, and at 1,642 m, the deepest. It is also among the clearest of all lakes, and thought to be the world's oldest lake at 25 million years.</English>
 		<French>Situé au sud-est de la Sibérie, le lac Baïkal, d'une superficie de 3,15 millions d'hectares, est le plus ancien (25 millions d'années) et le plus profond (1 700 m) lac du monde. Il contient 20 % des eaux douces non gelées de la planète. Son ancienneté et son isolement ont produit une des faunes d'eau douce les plus riches et originales de la planète, qui présente une valeur exceptionnelle pour la science de l'évolution, ce qui lui vaut le surnom de « Galápagos de la Russie »</French>
+		<German>Der [COLOR_HIGHLIGHT_TEXT]Baikalsee[COLOR_REVERT] ist ein See in Sibirien. Mit 1642 Metern ist er der tiefste, mit über 25 Millionen Jahren der älteste und gleichzeitig der wasserreichste Süßwassersee der Welt. Über die Angara gelagt das Wasser durch den Jenissei in die Karasee des Polarmeeres. Im Baikalsee befinden sich 22 größere und in unmittelbarer Ufernähe zahlreiche kleine Inseln. Wegen der großen Wassermenge liegt die Wassertemperatur selbst im Sommer kaum über 10 °C. Die Winter in der Region sind sehr kalt, deshalb ist der See etwa von Mitte November bis Anfang Mai meist vollständig zugefroren. Die Baikal-Region ist seit 1996 Weltnaturerbe der UNESCO.</German>
 		<Polish>Bajkał - jezioro tektoniczne w Azji, zwane "syberyjskim morzem" i "błękitnym okiem Syberii", położone na terytorium Rosji w Republice Buriacji i obwodzie irkuckim. Jest najstarszym i najgłębszym jeziorem na świecie, a ponadto - pod względem powierzchni - drugim jeziorem w Azji i siódmym na świecie.</Polish>
 		<Russian>Áàéêàë íàõîäèòñÿ â öåíòðå Àçèè íà ãðàíèöå Èðêóòñêîé îáëàñòè è Ðåñïóáëèêè Áóðÿòèÿ â Ðîññèè.[PARAGRAPH:2]Îçåðî ïðîòÿíóëîñü ñ ñåâåðî-âîñòîêà íà þãî-çàïàä íà 620 êì â âèäå ãèãàíòñêîãî ïîëóìåñÿöà. Øèðèíà Áàéêàëà êîëåáëåòñÿ â ïðåäåëàõ îò 24 äî 79 êì. Äíî Áàéêàëà íà 1167 ìåòðîâ íèæå óðîâíÿ Ìèðîâîãî îêåàíà, à çåðêàëî åãî âîä - íà 455,5 ìåòðà âûøå. Äëèíà áåðåãîâîé ëèíèè - 2100 êì. Ïëîùàäü âîäíîé ïîâåðõíîñòè Áàéêàëà (áåç ó÷åòà îñòðîâîâ) - 31 722 êâ. êì, ÷òî ïðèìåðíî ðàâíî ïëîùàäè òàêèõ ñòðàí, êàê Áåëüãèÿ èëè Íèäåðëàíäû. Ïî ïëîùàäè âîäíîãî çåðêàëà Áàéêàë çàíèìàåò ñåäüìîå ìåñòî ñðåäè êðóïíåéøèõ îçåð ìèðà.</Russian>
 	</TEXT>
@@ -7112,6 +7126,7 @@
 		<Tag>TXT_KEY_FEATURE_BASALT_ORGAN_PEDIA</Tag>
 		<English>Jackson Creek, which meets with Deep Creek to become the Maribyrnong River, has slowly worn a deep valley in the basaltic plain formation of hard, dark rock revealing the old volcanic geological formations such as the hexagonal basalt columns known as the "Organ Pipes"; the lava deposit in the bed of the creek is of the order of 70 metres. As the lava cooled over several years the interior molten lava got insulated and developed into undisturbed columns of basalt (with uniform composition) as the lava heat dissipated.</English>
 		<French>Les orgues (par analogie avec l'instrument) ou les colonnes basaltiques sont une formation géologique composée de colonnes régulières. Elle résulte de la solidification et de la contraction thermique d'une coulée basaltique peu de temps après son émission. La partie inférieure, qui se refroidit ou s'assèche plus lentement, se fracture de la surface vers la profondeur sous formes de prismes sub-verticaux à section hexagonale d'ordre décimétrique. Ces colonnes sont surmontées d'une zone de petits prismes moins réguliers (ou « faux prisme ») pouvant s'associer en gerbes.</French>
+		<German>Als [COLOR_HIGHLIGHT_TEXT]Basaltorgel[COLOR_REVERT] bezeichnet man eine Gesteinsformation, die aus erkalteter basaltischer Lava entstanden ist. Findet die Abkühlung verzögert statt, entstehen durch das Zusammenziehen oft lange Säulen senkrecht zur Abkühlungsfläche, die eine sechseckige Form haben.[NEWLINE]Eine bekannte deutsche Basaltorgel befindet sich im Rakotzsee im Rhododendronpark Kromlau.</German>
 		<Polish>Formacja skalna w Stanach Zjednoczonych. Powstała z zastygłej lawy.</Polish>
 		<Russian>Áàçàëüòîâûé îðãàí - ïðè÷óäëèâàÿ ôîðìà âóëêàíè÷åñêîãî ðåëüåôà.[PARAGRAPH:2]Êîíå÷íî, íà òàêîì èíñòðóìåíòå íå ñûãðàåøü ìóçûêè! È âñå æå îí ñïðàâåäëèâî çàñëóæèâàåò ñâîå íàçâàíèå, ïîòîìó ÷òî ýòà ñêóëüïòóðà ïî âèäó íàïîìèíàåò òðóáû. Îíè ñîñòîÿò èç áàçàëüòà è äîñòèãàþò íåñêîëüêèõ ìåòðîâ â âûñîòó. Òðóáû ýòè îáðàçîâàëèñü âíóòðè ïîòîêà ãóñòîé ëàâû, ïîêà îíà ìåäëåííî îñòûâàëà. Ïîòîì ýðîçèÿ ðàçðóøèëà çàñòûâøèé ïîòîê, îáíàæèâ òî, ÷òî áûëî ñêðûòî âíóòðè.</Russian>
 	</TEXT>
@@ -7131,6 +7146,7 @@
 		<Tag>TXT_KEY_FEATURE_DEAD_SEA_PEDIA</Tag>
 		<English>The Dead Sea, also called the Salt Sea, is a salt lake bordering Jordan to the east and Israel and Palestine to the west. The Dead Sea is 377 m deep, the deepest hypersaline lake in the world. With 33.7% salinity, it is also one of the world's saltiest bodies of water. This salinity makes for a harsh environment in which animals cannot flourish, hence its name. It lies in the Jordan Rift Valley, and its main tributary is the Jordan River.</English>
 		<French>La mer morte, également appelé mer de sel, est un lac d'eau salé entre la Jordanie et Israel et la Palestine. d'une profondeur de 377m, c'est le lac salin le plus profond du monde. Sa concentration de sel avoisine les 33%, le rendant inutilisable pour la flore et la faune.</French>
+		<German>Das [COLOR_HIGHLIGHT_TEXT]Tote Meer[COLOR_REVERT] ist ein abflussloser See an der Grenze zu Jordanien, Israel und zum Westjordanland. Sein Zufluss ist der Jordan. Das Gewässer liegt mehr als 430 Meter unter dem Meeresspiegel und ist somit der am tiefsten gelegene See der Erde. Am Ufer befindet sich die tiefste zugängliche Landstelle auf der Erdoberfläche. Das Tote Meer misst ca. 900 km² und besteht aus einem nördlichen und einem südlichen Teil, die voneinander getrennt sind. Der Salzgehalt liegt bei durchschnittlich 28 %, weshalb das Wasser eine hohe Dichte aufweist, sodass man darauf leicht schwimmen kann. Durch das Wüstenklima verdunstet viel Wasser; Salze, Mineralien usw. reichern sich deshalb im Toten Meer an. Durch den Jordan wird der Pegel relativ konstant gehalten.[NEWLINE]Aufgrund des hohen Salzgehalts hat der See eine besondere Bedeutung als Heilbad, weil dadurch Symptome von Hautkrankheiten gelindert werden können. Auch der relativ hohe Luftdruck und die dadurch saubere Luft, welche die UVB-Strahlung stark absorbiert, haben therapeutischen Nutzen.</German>
 		<Polish>Morze Martwe - słone jezioro bezodpływowe położone w tektonicznym Rowie Jordanu, na pograniczu Izraela i Jordanii. Lustro wody znajduje się w najniższym punkcie Ziemi, 418 m p.p.m. (i ciągle się obniża). Powierzchnia jeziora wynosi 1027 km2, a maksymalna głębokość - 377 m. Kryptodepresja sięga 817 m p.p.m. Długość jeziora rozciągającego się południkowo wynosi 76 km, a szerokość 4,5-16 km. Linia brzegowa jest dość wyrównana, z wyjątkiem półwyspu Lisan (język) dzielącego Morze Martwe na część głębszą północną i płytszą południową (ok. 6 m głębokości).</Polish>
 		<Russian>Ìåðòâîå ìîðå - áåññòî÷íîå ñîë¸íîå îçåðî ìåæäó Èçðàèëåì, Ïàëåñòèíñêîé Àâòîíîìèåé è Èîðäàíèåé.[PARAGRAPH:2]Óðîâåíü âîäû â Ìåðòâîì ìîðå íà 430 ì íèæå óðîâíÿ ìîðÿ è ïàäàåò ñî ñêîðîñòüþ ïðèìåðíî 1 ì â ãîä. Ïîáåðåæüå îçåðà ÿâëÿåòñÿ ñàìûì íèçêèì ó÷àñòêîì ñóøè íà Çåìëå. [PARAGRAPH:1]Ìåðòâîå ìîðå - ýòî îäèí èç ñàìûõ ñîëåíûõ âîäî¸ìîâ íà Çåìëå, ñîëåíîñòü ñîñòàâëÿåò 300-310 %, â íåêîòîðûå ãîäû äî 350 %. Äëèíà ìîðÿ 67 êì, øèðèíà 18 êì â ñàìîì øèðîêîì ìåñòå, ìàêñèìàëüíàÿ ãëóáèíà 306 ì.</Russian>
 	</TEXT>
@@ -7152,6 +7168,7 @@
 		<Tag>TXT_KEY_FEATURE_DEVILS_TABLE_PEDIA</Tag>
 		<English>The southern portion of the state of Rheinland Pfalz in South Western Germany has lot of rocky mountainous areas having rock towers/spires something akin to rocky areas of Arizona. Unlike dry desert landscape in Arizona, this area in Germany is lush green with vegetation. Most of the sandstones towers/spires in this area are connected to some hill or mountain in their back by a long ridge, however few pillars in Kaltenbach-Hinterweidenthal region are topped by flat balanced stones which seem to defy gravity. Local people call these as Devil's Table (Teufelstisch).</English>
 		<French>La partie sud du Lander de 'Rheinland Pfalz' (Allemagne du sud-ouest) a des zones montagneuses, avec des empilements rocheux qui ressemblent à ceux de l'Arizona. Ce zone est pourtant très verte. Certains de ces empilements sont constitué d'un plateau plat en haut, supporté par une ou plusieurs colonnes, et ont été nommés par la population locale 'Teufelstisch', ce qui signifie Table du Diable.</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]Teufelstisch[COLOR_REVERT] ist der Name mehrerer Felsformationen in Deutschland. Das imposanteste Gebilde befindet sich in Hinterweidenthal in Rheinland-Pfalz und wurde 2009 auf Platz 7 der deutschen Naturwunder gewählt. Es handelt sich um einen freistehenden Turm aus Buntsandstein, der schätzungsweise 284 Tonnen schwer ist. Durch Erosion wurden die weicheren Bestandteile abgetragen, sodass nur noch der harte Felskern übrig ist. Der schmale Tischfuß ist 10 bis 11 m hoch. Obenauf liegt quer eine 3 bis 4 m dicke und 50 m² große Tischplatte. Die Sage von der Entstehung des Teufelstischs wird in einem Gedicht von Johann Martin Jäger (alias Fritz Claus) erzählt.</German>
 		<Polish>Skalna wieża w górach południowo-zachodniej części Niemiec.</Polish>
 		<Russian>×åðòîâ ñòîë - ãðèáîîáðàçíîå ñêàëîîáðàçîâàíèå èç êðàñíîãî ïåñ÷àíèêà â Õèíòåðâàéäåíòàëü, Ãåðìàíèÿ.[PARAGRAPH:2]Ñòîëåøíèöà ×åðòîâà ñòîëà îáðàçîâàíà ìîùíîé êàìåííîé ïëèòîé, èç ïëîòíîãî ïåñ÷àíèêà, âåñîì â 284 òîííû. Îñíîâíîé ñîñòàâ ñòîëåøíèöû, êàê è íåñóùåé åãî «íîãè», ïðåäñòàâëÿåò öâåòíîé ïåñ÷àíèê. Ïîä âëèÿíèåì ýðîçèè ïîâåðõíîñòíûõ ïîðîä, íîãà ×åðòîâà ñòîëà ïðèîáðåëà ïðè÷óäëèâûå ôîðìó è îêðàñ. Âûñîòà íåñóùåé êîëîííû ñîñòàâëÿåò ïðèáëèçèòåëüíî 11 ìåòðîâ, à òîëùèíà ïëèòû(ñòîëåøíèöû) 3 ìåòðà.</Russian>
 	</TEXT>
@@ -7165,6 +7182,7 @@
 		<Tag>TXT_KEY_FEATURE_EVEREST_PEDIA</Tag>
 		<English>Mount Everest is the Earth's highest mountain, with a peak at 8,848 metres above sea level and the 5th tallest mountain measured from the centre of the Earth. It is located in the Mahalangur section of the Himalayas.</English>
 		<French>L'Everest, en tibétain Chomolungma, en népalais Sagarmatha, aussi appelé mont Everest, est une montagne située dans la chaîne de l'Himalaya, à la frontière entre le Népal (Sagarmatha) et la Chine (Tibet). Il est aperçu par des Européens pour la première fois en 1847 puis, après quelques années d'observations et de calculs, son altitude est établie à 8 848 mètres et il est identifié comme le plus haut sommet du monde au-dessus du niveau de la mer. Cette caractéristique lui vaut d'être baptisé de son nom actuel par les Occidentaux en 1865 et, dès les années 1920, de lui attirer l'intérêt des alpinistes qui se lancent à l'assaut de ses pentes. Plusieurs expéditions, en particulier britanniques, se succèdent depuis le nord.</French>
+		<German>Der [COLOR_HIGHLIGHT_TEXT]Mount Everest[COLOR_REVERT] ist mit 8848 m der höchste Berg der Erde und gehört somit zu den 14 Achttausendern. Benannt ist er nach dem britischen Landvermesser George Everest. Der Berg befindet sich in der Region Khumbu in Nepal an der Grenze zu Tibet. Er gehört zum UNESCO-Welterbe.[NEWLINE]Die ersten Bergsteiger, die den "dritten Pol" erreichten, waren Edmund Hillary und Tenzing Norgay im Jahr 1953. Reinhold Messner und Peter Habeler gelang es 1978 erstmals, den Gipfel ohne Sauerstoff zu erreichen. Es folgten inzwischen mehr als 8400 Bergsteiger (Stand: 2018), allerdings kamen auch über 300 Menschen ums Leben. Eines der schwersten Unglücke ereignete sich 1996, als eine Gruppe bestehend aus erfahrenen Bergsteigern und Touristen durch einen Höhensturm überrascht wurden. Unter den zwölf Opfern war auch der Expeditionsleiter. Einer der Toten wurde einige Tage später zusammengekauert unter einem Felsvorsprung gefunden. Da er auffällig grüne Schuhe trug, erhielt diese Stelle den Namen "Green Boots".[NEWLINE]Der Mount Everest spielt wie alle markenten Gipfel der Khumbu-Region vor allem im Buddhismus eine Rolle und ist für die Sherpas heilig. Nach ihrer Auffassung werden die Berge von Geistern und Dämonen bewohnt. Wenn eine Lawine ins Tal donnert, sagt man, dass die Geister die Trommel schlagen.</German>
 		<Polish>Mount Everest, Czomolungma - najwyższy szczyt Ziemi (8848 m n.p.m., podaje się też wysokość 8844 (pomiary chińskie) lub 8850 (pomiary amerykańskie)), ośmiotysięcznik położony w Himalajach Wysokich (Centralnych), na granicy Nepalu i Chińskiej Republiki Ludowej (Tybetu). Jest zbudowany z granitów, gnejsów oraz z wapieni i łupków. Tworzy potężny masyw podcięty z trzech stron lodowcami (najdłuższe Khumbu i Rongbuk - ok. 17 km). Przez miejscową ludność uważany za siedzibę bogów. Odkryty i po raz pierwszy zmierzony przez geodetów brytyjskich w połowie XIX wieku, po raz pierwszy zdobyty 29 maja 1953 roku.</Polish>
 		<Russian>Ýâåðåñò - âûñî÷àéøàÿ âåðøèíà Çåìëè.[PARAGRAPH:2]Ðàñïîëîæåíà â Ãèìàëàÿõ, â õðåáòå Ìàõàëàíãóð-Õèìàë. Þæíàÿ âåðøèíà (8760 ì) ëåæèò íà ãðàíèöå Íåïàëà è Òèáåòñêîãî àâòîíîìíîãî ðàéîíà (Êèòàé), Ñåâåðíàÿ (ãëàâíàÿ) âåðøèíà (8848 ì) ðàñïîëîæåíà íà òåððèòîðèè Êèòàÿ.[PARAGRAPH:1]Ýâåðåñò èìååò ôîðìó òðåõãðàííîé ïèðàìèäû, þæíûé ñêëîí áîëåå êðóòîé. Íà þæíîì ñêëîíå è ðåáðàõ ñíåã è ôèðí íå óäåðæèâàþòñÿ, âñëåäñòâèå ÷åãî îíè îáíàæåíû. Âûñîòà ñåâåðî-âîñòî÷íîãî ïëå÷à 8393 ì. Âûñîòà îò ïîäíîæèÿ äî âåðøèíû îêîëî 3550 ì. Âåðøèíà ñîñòîèò â îñíîâíîì èç îñàäî÷íûõ îòëîæåíèé.</Russian>
 	</TEXT>
@@ -7180,6 +7198,7 @@
 		<Tag>TXT_KEY_FEATURE_FUJI_PEDIA</Tag>
 		<English>An active volcano, Mount Fuji is the highest mountain in Japan. Standing some 12,000 feet high and often wreathed in clouds, its famous snow-capped silhouette can be seen from Tokyo. The stately mountain is the subject of uncounted works of art - poems, songs, photographs, sculptures and paintings. Mount Fuji is a symbol of pride and beauty for all of Japan.</English>
 		<French>Le mont Fuji (Fujisan) est une montagne du centre du Japon qui se trouve sur la côte sud de l'île de Honshu, au sud-ouest de l'agglomération de Tokyo. Avec 3 776 mètres d'altitude, il est le point culminant du Japon. Situé dans une région où se rejoignent les plaques tectoniques pacifique, eurasienne et philippine, la montagne est un stratovolcan toujours considéré comme actif, sa dernière éruption s'étant produite fin 1707, bien que le risque éruptif soit actuellement considéré comme faible.</French>
+		<German>Der [COLOR_HIGHLIGHT_TEXT]Fuji[COLOR_REVERT] ist ein aktiver Vulkan in Japan und mit 3776,24 m gleichzeitig der höchste Berg des Landes. Er befindet sich auf der Hauptinsel Honshū und ist seit 2013 Teil des Weltkulturerbes. Der Fuji gehört zu den Schichtvulkanen des pazifischen Feuerrings. Er ist seit Beginn der Aufzeichnungen 18-mal ausgebrochen, zuletzt im Dezember 1707. Das Ausbruchsrisiko gilt derzeit als gering. Der Gipfelkrater ist ca. 200 m tief bei einem Umfang von ca. 2,5 km. Am nördlichen Fuß des Berges befinden sich die fünf Fuji-Seen. Im Shintō gilt der Berg schon seit Jahrhunderten als heilig.</German>
 		<Polish>Fudżi - czynny stratowulkan i zarazem najwyższy szczyt Japonii (3776 m n.p.m.). Leży na wyspie Honsiu, na południowy zachód od stolicy, Tokio. W 2013 roku góra Fudżi została wpisana na listę światowego dziedzictwa UNESCO jako obiekt dziedzictwa kulturowego - święte miejsce i źródło artystycznej inspiracji.</Polish>
 		<Russian>Ôóäçè - äåéñòâóþùèé ñòðàòîâóëêàí íà ÿïîíñêîì îñòðîâå Õîíñþ â 90 êèëîìåòðàõ ê þãî-çàïàäó îò Òîêèî.[PARAGRAPH:2]Â íàñòîÿùåå âðåìÿ âóëêàí ñ÷èòàåòñÿ ñëàáî àêòèâíûì, ïîñëåäíåå èçâåðæåíèå áûëî â 1707-1708 ãîäó. Âûñîòà ãîðû - 3776 ì (ñàìàÿ âûñîêàÿ â ßïîíèè).[PARAGRAPH:1]Ãîðà èìååò ïî÷òè èäåàëüíûå êîíè÷åñêèå î÷åðòàíèÿ è ñ÷èòàåòñÿ ñâÿùåííîé, ñëóæèò îáúåêòîì òóðèçìà, à òàêæå ðåëèãèîçíîãî ïàëîìíè÷åñòâà áóääèñòñêîãî è ñèíòîèñòñêîãî êóëüòîâ. Ôóäçè íà ïðîòÿæåíèè âåêîâ ÿâëÿëàñü ïîïóëÿðíîé òåìîé â ÿïîíñêîì èñêóññòâå.</Russian>
 	</TEXT>
@@ -7191,7 +7210,6 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>Great-Barrier-Riff</German>
 		<Polish>Wielka Rafa Koralowa</Polish>
 		<Russian>Áîë. Áàðüåðíûé ðèô</Russian>
 	</TEXT>
@@ -7199,6 +7217,7 @@
 		<Tag>TXT_KEY_FEATURE_GREAT_BARRIER_PEDIA</Tag>
 		<English>The Great Barrier Reef is the world's largest reef. A chain of almost 3000 reefs and 1000 islands, it stretches almost 1600 miles along the coast of north-east Australia. Constructed over 500,000 years by billions of coral polyps, the Great Barrier Reef is the largest single structure made by living creatures. The Great Barrier Reef is home to a hugely diverse population of whales, dolphins, porpoises, dugongs, turtles, fish, octopi, and snakes, not to mention over 200 species of birds.</English>
 		<French>La Grande Barrière de corail (en anglais: Great Barrier Reef) est le plus grand récif corallien du monde, comptant plus de 2 900 récifs et 900 îles s'étirant de Bundaberg à la pointe du Cap York soit plus de 2 600 kilomètres sur une superficie de 344 400 km². Le récif se situe en Mer de Corail au large du Queensland, en Australie.</French>
+		<German>Das [COLOR_HIGHLIGHT_TEXT]Great Barrier Reef[COLOR_REVERT] ist die größte zusammenhängende Ansammlung von Korallenriffen der Erde. Es befindet sich vor der Nordostküste Australiens und ist seit 1981 Weltnaturerbe der UNESCO. Es wird auch als eines der sieben Weltwunder der Natur bezeichnet. James Cook und seine Besatzung entdeckten das Great Barrier Reef als erste Europäer im Jahr 1770. Das Riff ist im Laufe der Jahre auf über 2300 Kilometer Länge angewachsen und reicht vom 10. bis zum 24. südlichen Breitengrad. Die riesige Fläche von ca. 347800 km² kann mit bloßem Auge aus dem All gesehen werden.[NEWLINE]Seit 1998 sind mehrfach großflächige Korallenbleiche-Ereignisse beobachtet worden. Hierbei verlangsamen sich durch gestiegene Meerestemperaturen infolge der Erderwärmung Wachstum und Vermehrung. Dies wiederum begünstigt Krankheiten. Weitere Gefahren für das Riff sind die Kohleindustrie und das damit verbundene Abkippen von Baggergut im Meer sowie der giftige Dornenkronenseestern als Fressfeind.</German>
 		<Polish>Wielka Rafa Koralowa albo Wielka Rafa Barierowa (ang. Great Barrier Reef) - największa na świecie rafa koralowa, położona u wybrzeży Australii, w Morzu Koralowym. Jest to największa na Ziemi pojedyncza struktura wytworzona przez organizmy żywe, widoczna nawet z kosmosu (jako biała smuga na tle błękitnego oceanu).</Polish>
 		<Russian>Áîëüøîé Áàðüåðíûé ðèô - êðóïíåéøèé â ìèðå êîðàëëîâûé ðèô.[PARAGRAPH:2]Ãðÿäà íàñ÷èòûâàåò áîëåå 2900 îòäåëüíûõ êîðàëëîâûõ ðèôîâ è 900 îñòðîâîâ â Êîðàëëîâîì ìîðå.[PARAGRAPH:1]Áîëüøîé Áàðüåðíûé ðèô ïðîòÿíóëñÿ âäîëü ñåâåðî-âîñòî÷íîãî ïîáåðåæüÿ Àâñòðàëèè íà 2500 êì è çàíèìàåò ïëîùàäü îêîëî 344 400 êâàäðàòíûõ êèëîìåòðîâ. Îí ÿâëÿåòñÿ ñàìûì áîëüøèì íà Çåìëå ïðèðîäíûì îáúåêòîì, îáðàçîâàííûì æèâûìè îðãàíèçìàìè. Ñòðóêòóðà ýòîãî ðèôà îáðàçîâàíà èç ìèëëèàðäîâ êðîøå÷íûõ îðãàíèçìîâ, èçâåñòíûõ íàóêå êàê êîðàëëîâûå ïîëèïû.</Russian>
 	</TEXT>
@@ -7206,7 +7225,7 @@
 		<Tag>TXT_KEY_FEATURE_GREAT_BARRIER_REEF_BEACON</Tag>
 		<English>Great Barrier Reef (Beacon)</English>
 		<French>La Grande Barrière de Corail (Balise)</French>
-		<German>Great-Barrier-Riff (Leuchtfeuer)</German>
+		<German>Great Barrier Reef (Leuchtfeuer)</German>
 		<Polish>Wielka Rafa Koralowa (Boja)</Polish>
 		<Russian>Áàðüåðíûé ðèô (áóé)</Russian>
 	</TEXT>
@@ -7214,7 +7233,7 @@
 		<Tag>TXT_KEY_FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</Tag>
 		<English>Great Barrier Reef (Lighthouse)</English>
 		<French>La Grande Barrière de Corail (Phare)</French>
-		<German>Great-Barrier-Riff (Leuchtturm)</German>
+		<German>Great Barrier Reef (Leuchtturm)</German>
 		<Polish>Wielka Rafa Koralowa (Latarnia Morska)</Polish>
 		<Russian>Áàðüåðíûé ðèô (ìàÿê)</Russian>
 	</TEXT>
@@ -7230,6 +7249,7 @@
 		<Tag>TXT_KEY_FEATURE_KILIMANJARO_PEDIA</Tag>
 		<English>Kilimanjaro, with its three volcanic cones, Kibo, Mawenzi, and Shira, is a dormant volcanic mountain in Kilimanjaro National Park, Kilimanjaro Region, Tanzania. It is the highest mountain in Tanzania, the highest mountain in Africa, and the highest free-standing mountain in the world at 5,895 metres or 19,341 feet above sea level (the Uhuru Peak/Kibo Peak).</English>
 		<French>Le Kilimanjaro, Le Kilimandjaro ou Kilimanjaro est une montagne située dans le Nord-Est de la Tanzanie et composée de trois volcans éteints: le Shira à l'ouest, culminant à 3 962 mètres d'altitude, le Mawenzi à l'est, s'élevant à 5 149 mètres d'altitude, et le Kibo, le plus récent géologiquement, situé entre les deux autres et dont le pic Uhuru, à 5 891,8 mètres d'altitude, constitue le point culminant de l'Afrique.</French>
+		<German>Der [COLOR_HIGHLIGHT_TEXT]Kilimandscharo[COLOR_REVERT] liegt im Nordosten Tansanias und ist eigentlich kein einzelner Berg, sondern ein ganzes Bergmassiv. Der mit 5895 m höchste Berg Afrikas, der Kibo, ist ein Teil des Kilimandscharos. Er ist gleichzeitig auch der höchste freistehende Berg der Welt. Seit 1973 ist das Gebiet ein Nationalpark, 1987 wurde es von der UNESCO zum Weltnaturerbe erklärt. Markant für den Kilimandscharo sind seine trotz des tropisch-heißen Klimas stets schneebedeckten Gipfel. Leider sind diese aber akut von der globalen Erwärmung betroffen und werden, wenn der Gletscherschwund im gleichen Maße weiter voranschreitet wie bisher, bis 2030 völlig verschwunden sein.</German>
 		<Polish>Kilimandżaro - góra w Tanzanii leżąca przy granicy z Kenią. Jest najwyższą górą Afryki i jednym z najwyższych samotnych masywów. Przeważa klimat równikowy, górski. Na wyższych poziomach jest zimniej.</Polish>
 		<Russian>Êèëèìàíäæàðî - âûñî÷àéøèé è ïîòåíöèàëüíî àêòèâíûé ñòðàòîâóëêàí Àôðèêè, íàõîäÿùèéñÿ íà ñåâåðî-âîñòîêå Òàíçàíèè, âûñî÷àéøàÿ òî÷êà êîíòèíåíòà (5895 ì. íàä óðîâíåì ìîðÿ).[PARAGRAPH:2]Ýòî ñàìûé âûñîêèé ãîðíûé ìàññèâ âíå Öåíòðàëüíîàçèàòñêîãî ïîÿñà. C 1902 ïî 1918 ãîäû íàçûâàëñÿ Âåðøèíà Êàéçåðà Âèëüãåëüìà. Êèëèìàíäæàðî âîçâûøàåòñÿ íàä ïëîñêîãîðüåì Ìàñàè, êîòîðîå ðàñïîëîæåíî íà âûñîòå 900 ìåòðîâ íàä óðîâíåì ìîðÿ.</Russian>
 	</TEXT>
@@ -7245,6 +7265,7 @@
 		<Tag>TXT_KEY_FEATURE_KRAKATOA_PEDIA</Tag>
 		<English>Krakatoa is a volcanic island situated in the Sunda Strait between the islands of Java and Sumatra in Indonesia. The name is also used for the surrounding island group and the volcanoes as a whole. The Krakatoa volcanoes erupted and exploded in 1883, causing massive tsunamis and killing at least 36,417 people, while simultaneously destroying over two-thirds of Krakatoa island. The explosion is considered to be the loudest sound ever heard in modern history, with reports of it being heard up to 4,800 km from its point of origin. The shock waves from the explosion were recorded on barographs around the globe.</English>
 		<French>Le Krakatoa, Krakatau ou Gunung Krakatau en indonésien et en javanais, est un volcan gris - volcan de type explosif - de la ceinture de feu du Pacifique1. Il forme un archipel de quatre îles principales2 dans le détroit de la Sonde en Indonésie, entre Sumatra et Java. Sa géographie a été bouleversée au moins à deux reprises, au cours des deux grandes éruptions des années 416 ou 5353 et 18834. Malgré ces événements, l'archipel accueille une vie animale et végétale riche, notamment grâce au climat tropical dont il bénéficie.</French>
+		<German>Der [COLOR_HIGHLIGHT_TEXT]Krakatau[COLOR_REVERT] (auch Krakatoa) ist ein aktiver Vulkan in Indonesien zwischen den Inseln Sumatra und Java. Er gilt als einer der gefährlichsten Vulkane weltweit.[NEWLINE]Der heftigste Ausbruch ereignete sich 1883, bei dem die gleichnamige Insel nahezu vernichtet wurde. Durch die Katastrophe, die auch einen Tsunami auslöste, starben mehr als 36000 Menschen. Die Explosion hatte eine Sprengkraft von 10000 bis 100000 Atombomben und die Druckwelle umrundete die Erde siebenmal, woraufhin der finale Knall noch in über 4800 km Entfernung zu hören war. Der heutige aktive Schlot heißt Anak Krakatau (Kind des Krakatau).[NEWLINE]Zum Krakatau-Archipel gehören neben der Hauptinsel die ebenfalls vulkanischen Inseln Sertung und Panjang. Alle Inseln der Gruppe sind unbewohnt.</German>
 		<Polish>Krakatau, nazywana też Krakatoa lub Krakatao (dawna nazwa nieużywana od ok. 2 stuleci to "Pralape") - wyspa znajdująca się w Cieśninie Sundajskiej, pomiędzy wyspami Sumatra i Jawa w Indonezji. Wyspa jest aktywnym wulkanem klasyfikowanym jako stratowulkan.</Polish>
 		<Russian>Êðàêàòàó - äåéñòâóþùèé âóëêàí â Èíäîíåçèè, ðàñïîëîæåííûé íà Ìàëàéñêîì àðõèïåëàãå â Çîíäñêîì ïðîëèâå, ìåæäó îñòðîâàìè ßâà è Ñóìàòðà.[PARAGRAPH:2]Âûñîòà íûíåøíåãî âóëêàíà 813 ì. Äî èçâåðæåíèÿ 1883 ãîäà âóëêàí áûë çíà÷èòåëüíî âûøå è ïðåäñòàâëÿë ñîáîé îäèí áîëüøîé îñòðîâ. Îäíàêî ìîùíåéøåå èçâåðæåíèå 1883 ãîäà ðàçðóøèëî îñòðîâ è âóëêàí.</Russian>
 	</TEXT>
@@ -7260,6 +7281,7 @@
 		<Tag>TXT_KEY_FEATURE_NGORONGORO_CRATER_PEDIA</Tag>
 		<English>Ngorongoro Crater is the world's largest unbroken caldera. Often referred to as "Africa's Garden of Eden," the crater is home to over 30,000 animals including elephants, lions, cheetahs, wildebeests, buffaloes, and the rare black rhinos</English>
 		<French>Le cratère du Ngorongoro est une vaste caldeira circulaire de plus de vingt kilomètres de diamètre située au cour du massif du Ngorongoro, dans le nord de la Tanzanie, dans la branche orientale de la vallée du grand rift. Ce cratère, aujourd'hui éteint, s'est formé à la suite de l'effondrement d'un volcan sur lui-même lorsque sa chambre magmatique s'est vidée au cours d'une éruption volcanique. Le Ngorongoro est la plus grande caldeira intacte et non submergée au monde avec 326 km2 de superficie.</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]Ngorongoro[COLOR_REVERT] ist der Name eines Einbruchkraters in Tansania. Er befindet sich am Rande der Serengeti. Der Krater entstand beim Zusammenbruch eines Vulkanberges und hat eine Fläche von 26400 Hektar. Der Kraterboden liegt auf ca. 1700 m Höhe, die Kanten befinden sich auf etwa 2300 m.[NEWLINE]Der Krater entstand im Zusammenhang mit der Herausbildung des Ostafrikanischen Grabenbruchs. Der Vulkan an dieser Stelle, der vermutlich dem Kilimandscharo sehr ähnlich war, hatte im Pliozän und Pleistozän seine aktivste Phase. Er war wahrscheinlich ca. 3000 m höher als der heutige Kraterrand.[NEWLINE]Ursprünglich besiedelten die Massai den Krater. Heute leben sie in einem Schutzgebiet außerhalb, in dem sie auch Weidewirtschaft betreiben können. Im Krater selbst ist Landwirtschaft mittlerweile verboten. Er ist Teil des Serengeti-Nationalparks und beherbergt etwa 25000 Großsäuger. Ngorongoro ist UNESCO-Weltnaturerbe, -Weltkulturerbe und Biosphärenreservat. Am Rande des Kraters wurden Michael und Bernhard Grzimek bestattet.</German>
 		<Polish>Ngorongoro - kaldera wygasłego wulkanu położona w północnej Tanzanii, we wschodniej odnodze Wielkiego Rowu Wschodniego (patrz: Wielkie Rowy Afrykańskie). Krater otoczony jest od południa jeziorami Eyasi i Manyara, od północy jeziorem Natron. Teren krateru zasilany jest przez wody rzek Munge i Lonyokie, które nawadniają mokradła i alkaliczne jezioro Magadi.</Polish>
 		<Russian>Íãîðîíãîðî - îãðîìíûé êðàòåð â Òàíçàíèè íà êðàþ ñàâàííû Ñåðåíãåòè, âîçíèêøèé êàê êàëüäåðà â ðåçóëüòàòå êîëëàïñà êðóïíîãî âóëêàíà îêîëî 2,5 ìèëëèîíîâ ëåò íàçàä.[PARAGRAPH:2]Ðàñïîëîæåí ñåâåðî-âîñòî÷íåå îçåðà Ýÿñè è ñåâåðî-çàïàäíåå îçåðà Ìàíüÿðà. Ãëóáèíà êðàòåðà ñîñòàâëÿåò 610 ì. Åãî êðàÿ âîçâûøàþòñÿ íà 2286 ì íàä óðîâíåì ìîðÿ. Äèàìåòð êðàòåðà Íãîðîíãîðî ñîñòàâëÿåò îò 17 äî 21 êì, åãî îáùàÿ ïëîùàäü íàñ÷èòûâàåò ïðèìåðíî 265 êì.[PARAGRAPH:1]Íà äíå êðàòåðà ðàñïîëîæåíî îçåðî Ìàãàäè, çíàìåíèòîå ïîïóëÿöèåé ôëàìèíãî. Êðàòåð Íãîðîíãîðî óíèêàëåí òåì, ÷òî çà ìíîãèå ãîäû â í¸ì îáðàçîâàëàñü ñâîÿ ñîáñòâåííàÿ ñðåäà îáèòàíèÿ äëÿ ìíîãèõ âèäîâ æèâîòíûõ, êîòîðûå íå èìåþò âîçìîæíîñòè âûáðàòüñÿ íàðóæó.</Russian>
 	</TEXT>
@@ -7272,7 +7294,7 @@
 		<Tag>TXT_KEY_FEATURE_NUKUORO_PEDIA</Tag>
 		<English>Nukuoro is an atoll in the Federated States of Micronesia. It is a municipality of the state of Pohnpei, Federated States of Micronesia. Except for Kapingamarangi, it is the southermost atoll of the country. Nukuoro has a population of 372 (as of 2007), though several hundred Nukuorans live on Pohnpei. The total area, including the lagoon, is 40 square km with a land area of only square 1.7 km which is divided among more than 40 islets that lie on the northern, eastern and southern sides of the lagoon. By far the largest islet is Nukuoro islet, which is the center of population and the capital of the municipality.</English>
 		<French>Nukuoro est un atoll de Micronésie situé dans le sud du pays, dans l'État de Pohnpei.</French>
-		<German>Nukuoro ist ein Atoll in den Föderierten Staaten von Mikronesien. Es ist Teil des Bundesstaates Pohnpei.</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Nukuoro[COLOR_REVERT] (früher auch Monteverde) ist ein Atoll in den Föderierten Staaten von Mikronesien. Es es besteht aus 46 Inseln und gehört zum Bundesstaat Pohnpei. Obwohl die Gesamtfläche des Atolls 40 km² beträgt, entfallen auf die Landfläche nur 1,67 km², wobei die Hauptinsel Nukuoro mit 0,466 km² am größten ist. Insgesamt wohnen auf den Inseln weniger als 400 Menschen. Sie leben sehr abgeschieden. Es gibt keine Landebahn und nur wenig Schiffsverkehr. Einmal im Monat hält ein Passagierschiff und manchmal auch ein Kreuzfahrtschiff.</German>
 		<Italian>Nukuoro un atollo delle Isole Caroline. Amministrativamente una municipalitdel Distretto di Pohnpei Altre Isole, nello stato di Pohnpei, uno degli Stati micronesiani.</Italian>
 		<Spanish>Nukuoro es un atolón perteneciente a los Estados Federados de Micronesia. Se trata de un municipio del estado de Pohnpei integrado en los Estados Federados de Micronesia. A excepción de Kapingamarangi, es el atolón más al sur del país. Nukuoro tenía en 2007 una población de 372 habitantes, aunque varios centenares de sus habitantes viven en Pohnpei. La superficie total, incluyendo la laguna, es de 40 km con una superficie emergida de sólo 1,7 km que se divide entre más de 40 islotes que se encuentran en los lados norte, este y sur de la laguna. Con mucho, el mayor islote es Nukuoro, que es el núcleo de población más importante y la capital del municipio.</Spanish>
 		<Polish>Nukuoro - atol położony w Mikronezjii. Wyspa wchodzi w skład stanu Pohnpei. Nukuoro zamieszkuje 372 mieszkańców (2007), jednak kilkaset Nukuorańczyków zamieszkuje Pohnpei. Całkowita powierzchnia, wliczając lagunę to 40 km2, w tym 1,7 km2 powierzchni lądowej, która jest podzielona na ponad 40 wysepek położonych na północnej, wschodniej i południowej stronie laguny. Największą wyspą atolu jest wyspa Nukuoro, na której mieszka najwięcej osób i gdzie znajduje się stolica regionu.</Polish>
@@ -7287,7 +7309,7 @@
 		<Tag>TXT_KEY_FEATURE_PAMUKKALE_PEDIA</Tag>
 		<English>Literally meaning 'cotton castle', this springs are the result of earthquakes. The waters are rich in minerals, particularly chalk, which has been deposited on the cliff over centuries, and now it looks like a white frozen waterfall, 2 700 m long and 160 m high. The hot springs are believed to have curative powers, healing arthritis and asthma. These properties were first noted by the Greeks and Romans who built the City of Hierapolis (Holy City) around the warm water springs below Pamukkale. The water is captured in a pool known since the days of the Romans as the "Sacred Pool."</English>
 		<French>Littéralement "château de coton" sens, ces sources sont apparu à la suite de tremblements de terre. Les eaux sont riches en minéraux, en particulier la craie, qui a été déposée sur la falaise au fil des siècles. Cela forme à présent comme une grande cascade blanche congelée, de 2 700 mètres de long et 160 mètres de haut. Les sources chaudes sont censé avoir des pouvoirs curatifs, la guérison d'arthrite et l'asthme. Ces propriétés ont été tout d'abord remarquées par les Grecs et les Romains qui ont construit la ville de Hiérapolis (ville sainte) autour des sources d'eau chaude. L'eau est captée dans une piscine connue depuis l'époque des Romains en tant que "bassin sacré"</French>
-		<German>Wörtlich als 'Cotton Castle', sind diese Federn das Ergebnis von Erdbeben. Die Gewässer sind reich an Mineralien, vor allem Kreide, die auf der Klippe über Jahrhunderte hinterlegt wurde, und jetzt sieht es aus wie ein weißer gefrorenen Wasserfall, 2 700 Meter lang und 160 Meter hoch. Die heißen Quellen wird geglaubt, um heilende Kräfte haben, die Heilung Arthritis und Asthma. Diese Eigenschaften wurden zuerst von den Griechen und Römern, die die Stadt von Hierapolis (Heilige Stadt) um die Thermalquellen unterhalb Pamukkale gebaut vermerkt. Das Wasser wird in einem Pool seit den Tagen der Römer bekannt als die eingefangen "Sacred Pool."</German>
+		<German>[COLOR_HIGHLIGHT_TEXT]Pamukkale[COLOR_REVERT] (dt.: Baumwollburg oder Watteburg) ist eine Stätte in der türkischen Provinz Denizli. Der Name stammt von den Kalksinterterrassen, die über Jahrtausende durch kalkhaltige Thermalquellen entstanden sind. Zusammen mit der oberhalb gelegenen achäologischen Stätte der antiken griechischen Stadt Hierapolis bilden sie ein UNESCO-Weltkulturerbe.[NEWLINE]Das Quellwasser enthält sehr viel Calciumhydrogencarbonat. Durch eine chemische Reaktion mit Kohlendioxid entsteht beim Austritt Travertin, ein poröser Kalkstein.</German>
 		<Italian>Letteralmente 'castello di cotone' significato, questo molle sono il risultato di terremoti. Le acque sono ricche di minerali, in particolare gesso, chestata depositata sulla scogliera nel corso dei secoli, e ora sembra una cascata bianca congelata, 2 700 metri di lunghezza e 160 metri di altezza. La Hot Springs creduto di avere poteri curativi, guarire l'artrite e l'asma. Queste proprietsono stati indicati dai Greci e dai Romani che costruirono la cittdi Hierapolis (Holy City) intorno alle sorgenti di acqua calda sotto Pamukkale. L'acqua viene catturato in una piscina nota fin dai tempi dei romani come il "Sacred Pool".</Italian>
 		<Spanish>Literalmente, "castillo de algodón" que significa, esto resortes son el resultado de los terremotos. Las aguas son ricas en minerales, especialmente tiza, que ha sido depositado en el acantilado durante siglos, y ahora parece como una cascada blanca congelada, 2 700 metros de longitud y 160 metros. Las aguas termales se cree que tiene poderes curativos, sanando la artritis y el asma. Estas propiedades fueron observados primero por los griegos y los romanos que construyeron la ciudad de Hierápolis (ciudad santa) en torno a los manantiales de agua caliente por debajo de Pamukkale. El agua es captada en una piscina conocida desde los tiempos de los romanos como la "fuente sagrada."</Spanish>
 		<Polish>Pamukkale (tur. Bawełniany zamek lub Bawełniana twierdza) - turecka miejscowość położona w dolinie Curuksu (w starożytności zwanej Doliną Lycos), około 18 km od Denizli. Słynie z wapiennych osadów powstałych na zboczu góry Cokelez. Wypływająca z gorących źródeł woda, bogata w związki wapnia i dwutlenek węgla, ochładzając się na powierzchni, wytrąca węglan wapnia, którego osady układają się w nacieki i stalaktyty. Na zboczu góry, wykorzystując nierówności terenu, powstają progi, półkoliste i eliptyczne baseny wody termalnej, ukształtowane w formie tarasów, oddzielone od siebie obłymi zaporami, po których spływa woda. Proces ten trwa nieprzerwanie od około 14 tysięcy lat. Twory te w czasach rzymskich nazywane zostały trawertynami.</Polish>
@@ -7323,6 +7345,7 @@
 		<Tag>TXT_KEY_FEATURE_SHARK_BAY_PEDIA</Tag>
 		<English>Shark Bay is a World Heritage Site in the Gascoyne region of Western Australia. It is an area centred approximately 800 km north of Perth, on the westernmost point of Australia. An expedition led by Dirk Hartog happened upon the area in 1616, becoming the second group of Europeans known to have visited Australia. Shark Bay was named by William Dampier, in 1699. The area has a population of fewer than 1,000 people and a coastline of over 1,500 km. The half-dozen small communities making up this population occupy less than 1% of the total area.</English>
 		<French>Autrefois appelée baie des Chiens-Marins en français, la baie Shark (en anglais Shark Bay, littéralement la baie du requin) est un golfe de l'océan Indien formé par le centre de la côte ouest de l'Australie-Occidentale. Elle est située à environ 800 kilomètres au nord de Perth, dans la région de Gascoyne, en un point qui est le plus à l'ouest de l'Australie.</French>
+		<German>Die [COLOR_HIGHLIGHT_TEXT]Shark Bay[COLOR_REVERT] (dt.: Haifischbucht) ist eine Meeresbucht an der Westküste Australiens. Den Namen erhielt sie 1699 wegen der hier heimischen 28 Haiarten. Hier befindet sich auch der westlichste Punkt des australischen Festlandes. Die Bucht ist seit 1991 UNESCO-Welterbe, weil sie in dreifacher Hinsicht bedeutend ist: Hier befinden sich das weltgrößte Seegras-Vorkommen, eine große Population der seltenen Dugongs (Gabelschwanzseekühe) sowie eine Stromatolithenkolonie (Ansammlung von Sedimentgestein). Des Weiteren leben hier fünf bedeutende und bedrohte Säugetierarten.[NEWLINE]Die Shark Bay ist ein beliebtes Touristenziel beispielsweise zum Schnorcheln und für die Walbeobachtung, jedoch nur punktuell, da die meisten Gebiete nur schwer zugänglich sind. Die Insel Faure Island wird landwirtschaftlich genutzt und die Hell Land Peninsula eignet sich gut zur Salzgewinnung.</German>
 		<Polish>Zatoka Rekina (ang. Shark Bay) - to duża, stosunkowo płytka zatoka, wcinająca się w wybrzeże Australii w miejscu najbardziej wysuniętym na zachód. Położona jest około 650 kilometrów na północ od miasta Perth. Na północnym krańcu zatoki leży miejscowość Carnarvon.</Polish>
 		<Russian>Çàëèâ Øàðê - çàëèâ â ñåâåðî-çàïàäíîé ÷àñòè àâñòðàëèéñêîãî øòàòà Çàïàäíàÿ Àâñòðàëèÿ, ðàñïîëîæåííûé ïðèìåðíî â 650 êì ê ñåâåðó îò ãîðîäà Ïåðò.[PARAGRAPH:2]Íà ñòàðûõ àíãëèéñêèõ è ãîëëàíäñêèõ êàðòàõ íîñèë íàçâàíèå «Àêóëüÿ áóõòà». Çàëèâ ïðåäñòàâëÿåò ñîáîé áóõòó ñî ñðåäíåé ãëóáèíîé 10 ìåòðîâ, êîòîðóþ ðàçðåçàþò äâà ïîëóîñòðîâà, âûñòóïàþùèõ â Èíäèéñêèé îêåàí. Ñåãîäíÿ çàëèâ Øàðê åæåãîäíî ïðèâëåêàåò ê ñåáå îêîëî 120 000 òóðèñòîâ.</Russian>
 	</TEXT>
@@ -7338,6 +7361,7 @@
 		<Tag>TXT_KEY_FEATURE_SINAI_PEDIA</Tag>
 		<English>Found on the Sinai Peninsula of Egypt, Mount Sinai is among the most revered holy sites recognized by the followers of Judaism, Christianity, and Islam. Mount Sinai is believed to be the location where Moses first received the Ten Commandments from God during the Israelites' exodus from Egypt, making the peak an important site for religious pilgrims from around the world.</English>
 		<French>Le mont Sinaï ou Djebel Moussa (« montagne de Moïse ») est une montagne d'Égypte située dans le désert du Sinaï et culminant à 2 285 mètres d'altitude. Le mont est surtout célèbre dans la tradition biblique pour avoir été le lieu où Moïse reçut les Dix Commandements.</French>
+		<German>Der [COLOR_HIGHLIGHT_TEXT]Berg Sinai[COLOR_REVERT] liegt auf der Halbinsel Sinai in Ägypten. Er wird auch Mosesberg genannt und ist 2285 m hoch. In der Bibel ist der Sinaiberg von großer Bedeutung, da hier Moses die Zehn Gebote erhielt. Obwohl die Lage jenes dort beschriebenen Berges nicht eindeutig belegt ist, wird er häufig mit dem gleichnamigen Berg auf der Sinai-Halbinsel gleichgesetzt.[NEWLINE]Der Berg ist ein beliebtes Ausflugsziel für Pilger und Touristen, die oben den Sonnenaufgang beobachten. Der Aufstieg ist zu Fuß oder mit dem Kamel möglich. Insgesamt sind fast 4000 Treppenstufen zu bewältigen, von denen sich 750 auf dem letzten steilen Abschnitt befinden, der ausschließlich zu Fuß bewältigt werden kann. Auf dem Gipfel stehen eine Moschee und eine Moses und der heiligen Dreifaltigkeit gewidmete Kapelle. Im Winter gibt es in dieser Höhe mitunter Schnee.</German>
 		<Polish>Synaj, Góra Mojżesza - góra w Egipcie, w południowej części Półwyspu Synaj, w muhafazie Południowy Synaj (Protektorat Swięta Katarzyna). Wysokość 2285 m n.p.m. Jest to poszarpany nagi masyw górski z szaroczerwonego granitu. W 2002 obszar ten został wpisany na listę światowego dziedzictwa UNESCO. Tradycyjnie utożsamiana z biblijną górą Synaj (Horeb), gdzie według Starego Testamentu, Bóg Jahwe przekazał Mojżeszowi kamienne tablice z dziesięciorgiem przykazań i zawarł przymierze z narodem izraelskim. U podnóża góry znajduje się zabytkowy chrześcijański klasztor Swiętej Katarzyny.</Polish>
 		<Russian>Ñèíàé - ãîðà íà Ñèíàéñêîì ïîëóîñòðîâå â Åãèïòå.[PARAGRAPH:2]Ñîãëàñíî Áèáëèè íà ýòîé ãîðå Áîã ÿâëÿëñÿ Ìîèñåþ è äàë Äåñÿòü çàïîâåäåé. Åâðåéñêàÿ òðàäèöèÿ íå ñîõðàíèëà òî÷íîãî ìåñòîíàõîæäåíèÿ ãîðû Ñèíàé. Ïî÷èòàíèå íûíåøíåé ãîðû Ìîèñåÿ êàê ãîðû Ñèíàé ÿâëÿåòñÿ äðåâíåé õðèñòèàíñêîé òðàäèöèåé, âîñõîäÿùåé ê íà÷àëó IV âåêà.</Russian>
 	</TEXT>
@@ -7355,7 +7379,7 @@
 		<Tag>TXT_KEY_FEATURE_SOPKA_PEDIA</Tag>
 		<English>Klyuchevskaya Sopka is a stratovolcano which is the highest mountain on the Kamchatka Peninsula of Russia and the highest active volcano of Eurasia. Its steep, symmetrical cone towers about 100 kilometres from the Bering Sea. The volcano is part of the natural UNESCO World Heritage Site Volcanoes of Kamchatka.</English>
 		<French>Le Klioutchevsko, aussi appelé Klioutchevskaïa Sopka est le plus haut sommet mais aussi le volcan le plus actif de la péninsule du Kamtchatka, en Russie. C'est un stratovolcan de 4 835 mètres d'altitude né il y a environ 6 000 ans. Il fait partie de la Ceinture de feu du Pacifique. Au large du Kamtchatka, une fosse océanique de 10 500 mètres de profondeur et des séismes témoignent de la subduction, à la vitesse de 10 cm/an, de la plaque pacifique sous la plaque eurasienne ; comme tous les volcans de la Péninsule du Kamtchatka, le Klioutchevsko est donc un volcan de subduction. Il a été classé avec les autres volcans du Kamtchatka, au patrimoine mondial par l'UNESCO depuis 1996 (révisé en 2001).</French>
-		<German>Die Kljutschewskaja Sopka, auch Kljutschewskoi Vulkan auf der Halbinsel Kamtschatka in Russland gilt als der größte Vulkan Eurasiens. Der etwa 8000 Jahre alte Vulkan ist der größte aktive Vulkan Asiens und zählt zum Pazifischen Feuerring. Er ist der höchste Vulkan der dicht beieinander stehenden zwölf Stratovulkane, welche die Klutschewskaja-Gruppe bilden. Zu ihr gehören z.B. auch der Kamen und der Ploski Tolbatschik.</German>
+		<German>Die [COLOR_HIGHLIGHT_TEXT]Kljutschewskaja Sopka[COLOR_REVERT] (auch Kljutschewskoi-Vulkan) befindet sich auf der russischen Halbinsel Kamtschatka. Der höchste aktive Vulkan Eurasiens ist etwa 8000 Jahre alt und zählt zum Pazifischen Feuerring. Er ist einer von zwölf dicht beieinander stehenden Stratovulkanen, die zusammen die Kljutschewskaja-Gruppe bilden. Die Kljutschewskaja Sopka liegt in einem Naturpark unweit der Stadt Kljutschi, die namensgebend ist.[NEWLINE]Der Vulkan selbst ist aus dem Hang eines älteren Vulkans gewachsen, weshalb die Höhe insgesamt stolze 4750 m beträgt. Im oberen Bereich des Kegels befinden sich zwei Gletscher. Am Fuße des Vulkans gibt es drei vulkanologische Stationen, die auch als Berghütten dienen.[NEWLINE]Der erste registrierte Ausbruch ereignete sich 1697. Und auch aktuell gibt es vulkanische Aktivitäten. Im Jahr 2020 wurde die Alarmstufe mit "orange" angegeben.</German>
 		<Italian>La Kljucevskaja Sopka uno stratovulcano della Russia estremo orientale, compreso nella Catena Orientale nella penisola della Kamcatka.</Italian>
 		<Spanish>El volcán Kliuchevskói es un estratovolcán basáltico situado cerca de la costa este de la península de Kamchatka, en Siberia Oriental, Rusia. El Kliuchevskoy, simétrico y cubierto de nieve, es el más elevado y activo de una cadena de volcanes a lo largo de Kamchatka. Se formhace unos 6000 años, y desde entonces ha producido frecuentes erupciones explosivas y efusivas, sin largos intervalos de inactividad. Más de 100 erupciones han producido, en los últimos 3000 años, numerosos conos y cráteres. Pero la mayoría de las erupciones se han originado en el cráter de la cima, de 700 metros de ancho, formado una y otra vez por las capas de materiales piroclásticos y las coladas de lava que expulsa.</Spanish>
 		<Polish>Kluczewska Sopka - wulkan na Kamczatce, wznosi się na wysokość 4750 m n.p.m. Jest to największy i najbardziej aktywny wulkan w Eurazji i jednocześnie najwyższy szczyt Kamczatki. Stożek wulkanu, którego objętość szacowana jest na 290 km3, zbudowany jest głównie z andezytów. Z krateru na wierzchołku, zwykle spowitym chmurami, o średnicy ok. 500 m, nieustannie unosi się dym. Poza większymi wybuchami charakterystyczne są boczne wylewy z pasożytniczych kraterów na obwodzie, których liczba stale się zmienia (ok. 2000 r. było ich ok. 80). Wyciekają z nich strumienie lawy o kilkukilometrowej długości i znacznej miąższości. Po stężeniu erozja tworzy z nich grzbiety o kilkudziesięciometrowej wysokości.</Polish>
@@ -7375,7 +7399,7 @@
 		<Tag>TXT_KEY_FEATURE_SUGARLOAF_PEDIA</Tag>
 		<English>Sugarloaf Mountain, is a peak situated in Rio de Janeiro, Brazil, at the mouth of Guanabara Bay on a peninsula that sticks out into the Atlantic Ocean. Rising 396 m above the harbor, its name is said to refer to its resemblance to the traditional shape of concentrated refined loaf sugar.</English>
 		<French>Le mont du Pain de Sucre ou simplement le Pain de Sucre (Pao de Acucar en portugais), est un pic situe dans la ville de Rio de Janeiro au Bresil, sur une peninsule a l'entree de la baie de Guanabara.</French>
-		<German>Der Zuckerhut ist ein 395 m hoher, steil aufragender Granitfelsen auf der Halbinsel Urca im Suden der Botafogo-Bucht, wo die Guanabara-Bucht auf den Atlantik trifft. Er gilt neben dem Corcovado mit seiner Christusstatue Cristo Redentor als das Wahrzeichen von Rio de Janeiro. Seinen Namen tragt er, da seine Form an einen Zuckerhut erinnert.</German>
+		<German>Der [COLOR_HIGHLIGHT_TEXT]Zuckerhut[COLOR_REVERT] ist ein 396 Meter hoher, steiler Felsen am Eingang zur Guanabara-Bucht in Rio de Janeiro, Brasilien. Er besteht aus grobem gneisartigen Granit und ist der Überrest einer Intrusion. Der Berg ist eines der Wahrzeichen der Stadt und verdankt seinen deutschen Namen der kegelförmigen Darreichungsform von Zucker im 19. und frühen 20. Jahrhundert.[NEWLINE]Der Zuckerhut galt lange als unbesteigbar. Der erste Aufstieg gelang der englischen Bergsteigerin Henrietta Carstairs im Jahre 1817. Heute führt eine Seilbahn auf den Gipfel. Oben befindet sich neben mehreren Aussichtsplattformen ein kleiner Bambuswald mit Spazierwegen.</German>
 		<Italian>Il Pan di Zucchero (in portoghese Pão de Açúcar) è un colle situato presso Rio de Janeiro, in Brasile, su una penisola che si estende da un estremo della Baia Guanabara all'interno dell'Oceano Atlantico. Con la sua altezza di 396 m sul livello del mare, deve il suo nome secondo alcuni alla sua somiglianza con un dolce tradizionale. Secondo altre fonti il nome deriverebbe dal termine Pau-nh-acuqua che, nel linguaggio Tupi-Guarani parlato dagli indigeni Tamoios, significa "alta collina".</Italian>
 		<Spanish>El Pan de Azucar es un morro situado en Río de Janeiro, Brasil, en la boca de la bahia de Guanabara sobre una península que sobresale en el oceano Atlantico. Tiene 396 metros de altura (1.299 pies)1 sobre el nivel del mar. Lo mas probable es que su nombre haga referencia a los "panes de azucar", forma tradicional en que se producia el azucar hasta finales del siglo XIX y que consisitía en largos conos de punta redondeada similares al morro, aunque algunos consideran que el nombre en realidad deriva de "Pau-nh-acuqua" que significa la alta colina en la lengua de Tupi-guarani, usada por los indígenas Tamoios.</Spanish>
 		<Polish>Głowa Cukru - góra usytuowana w Rio de Janeiro w Brazylii nad Zatoką Guanabara nad Oceanem Atlantyckim. Wznosi się na wysokość 396 m n.p.m. Nazwę nadali przybyli tu koloniści z Portugalii. Na górę można wjechać kolejką linową, która może pomieścić 65 pasażerów. Kursuje co 20 minut. Została wybudowana w 1912 roku, a odbudowana i wyremontowana na przełomie lat 1972 i 1973. Znanych jest ponad 270 dróg wspinaczkowych.</Polish>
@@ -7390,7 +7414,7 @@
 		<Tag>TXT_KEY_FEATURE_ULURU_PEDIA</Tag>
 		<English>Uluru, also known as Ayers Rock, is a large sandstone rock formation in the southern part of the Northern Territory, central Australia. It lies 335 km (208 mi) south west of the nearest large town, Alice Springs; 450 km (280 mi) by road. Kata Tjuta and Uluru are the two major features of the Uluru-Kata Tjuta National Park. Uluru is sacred to the Anangu, the Aboriginal people of the area. The area around the formation is home to a plethora of springs, waterholes, rock caves and ancient paintings.</English>
 		<French>Uluru, aussi connu sous le nom d'Ayers Rock, est un inselberg en grès située dans le Territoire du Nord, au centre de l'île principale de l'Australie. Il s'élève à 348 mètres au-dessus de la plaine. C'est un lieu sacré pour les peuples aborigènes Pitjantjatjara et Yankunytjatjara, à la base duquel ils pratiquent parfois des rituels et réalisent des peintures rupestres d'une grande importance culturelle.</French>
-		<German>Der Uluru, auch Ayers Rock, ist ein an der Oberfläche befindlicher Teil einer großen unterirdischen Gesteinsschicht in der zentralaustralischen Wüste im Northern Territory. Er befindet sich in einem 170.000 km großen Sedimentbecken, dem Amadeus-Becken. Der Uluru wird von zahlreichen Touristen aufgesucht und um ihn ranken mythische Legenden der Aborigines, dass alle Traumzeitreisen dort enden bzw. dorthinführen.</German>
+		<German>Der [COLOR_HIGHLIGHT_TEXT]Uluru[COLOR_REVERT], auch Ayers Rock, ist ein Inselberg in der zentralaustralischen Wüste, der sich ca. 350 m über sein Umland erhebt. Er ist eines der bekanntesten Wahrzeichen Australiens.[NEWLINE]Der Uluru ist rund 2 km breit und 3 km lang und hat an der Basis einen Umfang von etwa 9 km. Er befindet sich im 170000 km² großen Amadeus-Becken im Südwesten des Bundesterritoriums Northern Territory. Der dortige Nationalpark, zu dem neben dem Uluru auch der Kata Tjuṯa zählt, ist UNESCO-Weltnatur- und -kulturerbe. Der Berg selbst besteht aus Arkose (einem dem Sandstein ähnlichen Sedimentgestein) und grobkörnigeren Konglomeraten. Das Gestein ist eigentlich grünlich-grau, durch Verwitterung oxidiert jedoch das in einigen Mineralien gebundene Eisen, wodurch die rotbraune Farbe entsteht. Bei unterschiedlichen Licht- und Wetterverhältnissen können die Farbtöne variieren.[NEWLINE]Für die Aborigines hat der Uluru eine besondere religiöse Bedeutung. Um ihn ranken sich Legenden der Traumzeit. Davon erzählen auch Felszeichnungen in der näheren Umgebung. Seit 2019 ist das Besteigen des Berges verboten. Bis zur Schließung gab es auf der ausgewiesenen Wanderroute 37 Todesopfer.</German>
 		<Italian>Uluru (chiamato in inglese Ayers Rock) è il più imponente massiccio roccioso dell'outback australiano. Circondato dalla superficie completamente piana del bush, Uluru è visibile da decine di chilometri di distanza ed è celebre per la sua intensa colorazione rossa, che muta in maniera spettacolare (dall'ocra, all'oro, al bronzo, al viola) in funzione dell'ora del giorno e della stagione; caratteristiche che ne fanno una delle icone dell'Australia. La superficie, che da lontano appare quasi completamente liscia, rivela avvicinandosi molte sorgenti, pozze, caverne, peculiari fenomeni erosivi e antichi dipinti.</Italian>
 		<Spanish>Uluru es una formación rocosa compuesta por arenisca que se encuentra en el centro de Australia, en el Territorio del Norte.</Spanish>
 		<Polish>Uluru, Oolora (znana także pod nazwą ang. Ayers Rock oraz The Rock) - formacja skalna w centralnej części Australii, na Terytorium Północnym. Znajduje się w parku narodowym Uluru-Kata Tjuta, niedaleko miasteczka Yulara, 400 km na południowy zachód od Alice Springs. Liczy ponad 300 m wysokości i 8 km obwodu. Przez wiele lat Uluru było uznawane za największy monolit świata. Nie jest to jednak prawdą, gdyż monolit Mount Augustus jest ponad dwukrotnie większy. Ponadto wedle nowszych badań Uluru wcale nie jest monolitem, lecz częścią większej formacji skalnej, do której należą również Kata Tjuta (Mount Olga) i Mount Connor. Jest przykładem twardzielca.</Polish>
@@ -7414,7 +7438,7 @@
 		<Tag>TXT_KEY_FEATURE_VICTORIA_FALLS_PEDIA</Tag>
 		<English>The Victoria Falls or Mosi-oa-Tunya is a waterfall located in southern Africa on the Zambezi River between the countries of Zambia and Zimbabwe. While it is neither the highest nor the widest waterfall in the world, it is claimed to be the largest. This claim is based on a width of 1,708 m and height of 108 m, forming the largest sheet of falling water in the world. The falls' maximum flow rate compares well with that of other major waterfalls.</English>
 		<French>Les chutes Victoria sont l'une des plus spectaculaires chutes d'eau du monde. Elles sont situées sur le fleuve Zambèze, qui constitue à cet endroit la frontière entre la Zambie, à proximité de la ville de Livingstone, et le Zimbabwe. Le fleuve se jette dans la cataracte sur environ 1 700 mètres de largeur, et une hauteur qui peut atteindre un maximum de 108 mètres. Elles donnent un spectacle particulièrement remarquable, par leur disposition particulière - elles se jettent dans une longue faille du plateau, pour s'échapper par un étroit canyon. Elles peuvent ainsi être vues de face à une distance d'une centaine de mètres seulement.</French>
-		<German>Die Victoriafälle sind ein Wasserfall des Sambesi an der Grenze zwischen Simbabwe und Sambia, zwischen den Grenzstädten Victoria Falls und Livingstone.</German>
+		<German>Die [COLOR_HIGHLIGHT_TEXT]Victoriafälle[COLOR_REVERT] sind ein Wasserfall des Sambesi an der Grenze von Simbabwe und Sambia.[NEWLINE]Auf einer Breite von 1708 m stürzen sich die Wassermassen des Sambesi in eine quer zum Flusslauf liegende, 110 m tiefe Schlucht aus steilen Basaltwänden. Während der Regenzeit können das bis zu 10000 m³ Wasser in der Sekunde sein. Dabei entsteht ein feiner Sprühnebel, der dem Wasserfall den Titel "größter Wasservorhang der Erde" gibt. Nur durch diesen Sprühnebel gedeiht der Regenwald in der unmittelbaren Umgebung.[NEWLINE]Seit 1989 gehörten die Victoriafälle zum UNESCO-Weltnaturerbe. Dies steht allerdings im Konflikt mit den Plänen zur Nutzung als Energiequelle. Ein Anstauen des Flusses nahe des Wasserfalls würde zu einer Beeinträchtigung der Landschaft führen.</German>
 		<Italian>Le Cascate Vittoria sono tra le cascate più spettacolari del mondo. Si trovano lungo il corso del fiume Zambesi (o Zambezi), che in questo punto demarca il confine geografico e politico tra lo Zambia e lo Zimbabwe. Il fronte delle cascate è lungo più di un chilometro e mezzo, mentre la loro altezza media è di 128 metri. La loro spettacolarità è dovuta alla geografia particolare del luogo nel quale sorgono, una gola profonda e stretta, che permette quindi di ammirare tutto il fronte della cascata dall'altra sponda, esattamente davanti al salto.</Italian>
 		<Spanish>Las cataratas Victoria, constituyen un salto de agua del río Zambeze situado en la frontera de Zambia y Zimbabue. Están ubicadas en el distrito de Livingstone, en la Provincia del Sur, de Zambia y en el distrito de Hwange, en la región de Mashonalandia Occidental, de Zimbabue. Sobre ellas se encuentra el puente de las Cataratas Victoria, un antiguo arco de acero terminado en 1905.</Spanish>
 		<Polish>Wodospady Wiktorii - wodospady na rzece Zambezi, na granicy Zimbabwe i Zambii. Przed przybyciem Europejczyków na te tereny zwane były Mosi-oa-Tunya, co w języku lokalnego plemienia Kololo oznacza Mgła, która grzmi.</Polish>
@@ -8655,55 +8679,6 @@
 		<Italian>Durante le età dell'oro in tutte le città</Italian>
 		<Polish>Podczas Złotej Ery we wszystkich Miastach</Polish>
 		<Russian>Для всех городов в течение Золотого века</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_GATHERER</Tag>
-		<English>The villagers have provided you with a Gatherer!</English>
-		<French>Les villageois vous fournissent un ouvrier!</French>
-		<German>Die Bewohner haben Euch einen Sammler zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un raccoglitore!</Italian>
-		<Spanish>Los aldeanos os han dado un Recolector.</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Zbieracze!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì ñîáèðàòåëÿ!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
-		<English>The villagers have provided you with their most skilled huntsman!</English>
-		<French>Les villageois vous ont fourni leur chasseur le plus talentueux!</French>
-		<German>Die Dorfbewohner haben Ihnen ihren geschicktesten Jäger zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno fornito il loro cacciatore più abile!</Italian>
-		<Spanish>¡Los aldeanos te han proporcionado su cazador más hábil!</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Łowcy!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì îõîòíèêà!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_STONE_SPEARMAN</Tag>
-		<English>The villagers have provided you with a Stone Spearman!</English>
-		<French>Les villageois vous fournissent un guerrier!</French>
-		<German>Die Bewohner haben Euch einen Steinspeerkämpfer zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un Guerriero con lancia in pietra!</Italian>
-		<Spanish>Los aldeanos os han dado un Guerrero con lanza de piedra.</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Kamienni Włócznicy!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì äðåâíåãî êîïüåíîñöà!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_STONE_THROWER</Tag>
-		<English>The villagers have provided you with a Stone Thrower!</English>
-		<French>Les Villageois vous ont procuré un Lanceur de Pierres!</French>
-		<German>Die Bewohner haben Euch einen Steinewerfer zur Verfügung gestellt!</German>
-		<Spanish>¡Los aldeanos os han proporcionado un Lanzador de piedras!</Spanish>
-		<Polish>Tubylcy wytrenowali i przekazali Ci Miotacza Kamieni!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì äðåâíåãî ìåòàòåëÿ!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_TRIBE</Tag>
-		<English>The villagers have provided you with a Tribe!</English>
-		<French>Les villageois vous fournissent un colon!</French>
-		<German>Eine ortsansässige Sippe hat sich Euch angeschlossen!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato una tribù!</Italian>
-		<Spanish>Los aldeanos os han dado una Tribu.</Spanish>
-		<Polish>Mieszkańcy dołączają do Ciebie jako Szczep!</Polish>
-		<Russian>Ñåëüñêèå æèòåëè ïðåäîñòàâèëè âàì ïëåìÿ!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOOD_HEALTH_FROM_SPECIALISTS</Tag>
@@ -12465,38 +12440,6 @@
 		<Spanish>Ya podéis adoptar el [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT] como religión oficial...</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION</Tag>
-		<English>Choose production in %s1_City...</English>
-		<French>Choix de la production de %s1_City...</French>
-		<German>Wählt die Produktion in %s1_City ...</German>
-		<Italian>Scegli la produzione a %s1_City...</Italian>
-		<Spanish>Elegid la producción de %s1_City...</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_BUILDING</Tag>
-		<English>You have constructed a building ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) in %s2_City...</English>
-		<French>Vous avez construit un bâtiment ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) à %s2_City...</French>
-		<German>Ihr habt ein Gebäude ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) in %s2_City errichtet ...</German>
-		<Italian>Hai costruito l'edificio ([COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT]) a %s2_City...</Italian>
-		<Spanish>Habéis construido [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_Building[COLOR_REVERT] en %s2_City...</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_PROJECT</Tag>
-		<English>You have created a project ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) in %s2_City...</English>
-		<French>Vous avez créé un projet ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) à %s2_City...</French>
-		<German>Ihr habt ein Projekt ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) in %s2_City erschaffen ...</German>
-		<Italian>Hai creato il progetto ([COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT]) a %s2_City...</Italian>
-		<Spanish>Habéis creado [COLOR_HIGHLIGHT_TEXT]%s1_Project[COLOR_REVERT] en %s2_City...</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MINIMIZED_CHOOSE_PRODUCTION_UNIT</Tag>
-		<English>You have trained a unit ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) in %s2_City...</English>
-		<French>Vous avez entraîné une nouvelle unité ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) à %s2_City...</French>
-		<German>Ihr habt eine Einheit ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) in %s2_City ausgebildet ...</German>
-		<Italian>Hai addestrato l'unità ([COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT]) a %s2_City...</Italian>
-		<Spanish>Habéis entrenado a [NUM1:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s1_Unit[COLOR_REVERT] en %s2_City...</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MINIMIZED_CHOOSE_TECH</Tag>
 		<English>Choose a new technology to research...</English>
 		<French>Choisissez une nouvelle technologie à rechercher...</French>
@@ -13134,21 +13077,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BATTLEFIELD_EVAC</Tag>
-		<English>Our %s1 has been evacuated to our Capital and has thankfully made a full recovery</English>
-		<French>Notre %s1 a été évacuée à notre Capitale et il est complètement rétabli</French>
-		<German>Unsere Einheit %s1 wurde in unsere Hauptstadt evakuiert und hat sich vollständig erholt</German>
+		<English>Our %s1 has been evacuated to our Capital and has thankfully made a full recovery.</English>
+		<French>Notre %s1 a été évacuée à notre Capitale et il est complètement rétabli.</French>
+		<German>Unsere Einheit %s1 wurde in unsere Hauptstadt evakuiert und hat sich vollständig erholt.</German>
 		<Spanish>[NUM1:Nuestro:Nuestra:Nuestros:Nuestras] %s1 [NUM1:ha sido evacuado:ha sido evacuada:han sido evacuados:han sido evacuadas] hacia nuestra capital, donde [NUM1:se ha:se ha:se han:se han] recuperado completamente.</Spanish>
-		<Polish>Nasza jednostka: %s1 ewakuowała się do Stolicy i odzyskała pełnie sił</Polish>
+		<Polish>Nasza jednostka: %s1 ewakuowała się do Stolicy i odzyskała pełnie sił.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BORDERS_EXPANDED</Tag>
-		<English>[COLOR_MAGENTA]The borders of %s1_CityName have expanded![COLOR_REVERT]</English>
-		<French>[COLOR_MAGENTA]Les frontières de %s1_CityName se sont étendues![COLOR_REVERT]</French>
-		<German>[COLOR_MAGENTA]Die Stadtgrenzen von %s1_CityName haben sich erweitert![COLOR_REVERT]</German>
-		<Italian>[COLOR_MAGENTA]I confini di %s1_CityName si sono espansi![COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_MAGENTA]Las fronteras de %s1_CityName se han ampliado.[COLOR_REVERT]</Spanish>
-		<Polish>[COLOR_MAGENTA]Granice kulturowe miasta: %s1_CityName rozszerzyły się![COLOR_REVERT]</Polish>
-		<Russian>[COLOR_MAGENTA]Ãîðîä %s1_CityName ðàñøèðÿåò ãðàíèöû![COLOR_REVERT]</Russian>
+		<English>[COLOR_MAGENTA]The culture of %s1_CityName has grown, and is now considered %s2_LevelName![COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_BUILDING_BOMBARD_DEFENSE_HOVER</Tag>
@@ -13376,9 +13313,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_MILITIA_EMERGED</Tag>
-		<English>City militia has emerged! Resistance:</English>
-		<French>Des habitants ont pris les armes et se sont constitués en Milice ! Résistance :</French>
-		<Russian>Поднято по тревоге городское ополчение! Сопротивление:</Russian>
+		<English>%s1_CivAdj influence in the city (%d2.%d3%% of %d4%% needed) is insufficient to stop organization of local militia!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_NATIONALITY</Tag>
@@ -13720,6 +13655,14 @@
 		<Spanish>Una ciudad desconocida ya tiene cultura %s1_LevelName.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_CULTURE_MAX</Tag>
+		<English>Culture: %d1 [ICON_CULTURE]</English>
+		<French>Culture : %d1 [ICON_CULTURE]</French>
+		<German>Kultur: %d1 [ICON_CULTURE]</German>
+		<Italian>Cultura: %d1 [ICON_CULTURE]</Italian>
+		<Spanish>Cultura: %d1 [ICON_CULTURE]</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_CURRENT_DEFENSE_HOVER</Tag>
 		<English>Current Defense: %d1%[ICON_DEFENSE]</English>
 		<French>Défense actuelle: %d1%[ICON_DEFENSE]</French>
@@ -14041,18 +13984,16 @@
 		<Russian>Âû îáíàðóæèëè íîâûé îðèåíòèð!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE</Tag>
-		<English>You have discovered a source of [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] near %s2_CityName!</English>
-		<French>Vous avez découvert une source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] près de %s2_CityName !</French>
-		<German>Ihr habt in der Nähe der Stadt %s2_CityName ein Vorkommen des Bonusguts [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] entdeckt!</German>
-		<Italian>Hai scoperto una risorsa di [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] vicino a %s2_CityName!</Italian>
-		<Spanish>Habéis descubierto una fuente de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] cerca de %s2_CityName.</Spanish>
+		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_IMPROVEMENT</Tag>
+		<English>Industrious workers outside of %s1_CityName have discovered a source of [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT]!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_CITY</Tag>
+		<English>Citizens of %s1_CityName have stumbled upon a nearby source of [COLOR_HIGHLIGHT_TEXT]%s2_BonusName[COLOR_REVERT]!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_VOLCANO</Tag>
-		<English>Beneath the remnants of the old volcano near %s2_CityName a source of [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] has been discovered!</English>
-		<French>Parmi les restes d'un ancien volcan près de %s2_CityName, une source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT] a été découverte!</French>
-		<Polish>Pod pozostałościami starego wulkanu nieopodal %s2_CityName odkryto nowe źródło [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT]!</Polish>
+		<English>Beneath the remnants of the old volcano a source of [COLOR_HIGHLIGHT_TEXT]obsidian[COLOR_REVERT] has been discovered!</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DISTANCE_FROM_PALACE</Tag>
@@ -14084,7 +14025,7 @@
 		<Tag>TXT_KEY_MISC_ENABLES</Tag>
 		<English>[ICON_BULLET]Enables[SPACE]</English>
 		<French>[ICON_BULLET]Permet[SPACE]:[SPACE]</French>
-		<German>[ICON_BULLET]neue Beförderungen:[SPACE]</German>
+		<German>[ICON_BULLET]ermöglicht:[SPACE]</German>
 		<Italian>[ICON_BULLET]Permette[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Permite[SPACE]</Spanish>
 	</TEXT>
@@ -16181,6 +16122,14 @@
 		<Spanish>Ha tenido lugar una rebelión %s1:2_CivAdj en %s2_CityName.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_DISCONTENT_IN_CITY</Tag>
+		<English>%s1_CivAdj influence is causing cultural discontent in %s2_CityName...</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_FAILED_REVOLT_IN_CITY</Tag>
+		<English>Local authorities struggled to put down a large %s1_CivAdj demonstration in %s2_CityName.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_REVOLUTION_HAS_BEGUN</Tag>
 		<English>The revolution has begun!!!</English>
 		<French>La révolution a éclaté !</French>
@@ -16774,14 +16723,6 @@
 		<French>Un %s1_Name ne peut pas terminer %s2_Build parce qu'il requiert de sacrifier une unité de taille standard de ce type.</French>
 		<Polish>%s1_Name nie może ukończyć %s2_Build ponieważ wymaga to poświęcenia standardowej wielkości jednostki danego typu.</Polish>
 		<Russian>%s1_Name не может завершить %s2_Build, потому что для этого требуется принести в жертву отряд стандартного размера группы этого типа.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_UNIT_DEATH</Tag>
-		<English>Your %s1_unit has Perished</English>
-		<French>Votre %s1_unit a péri</French>
-		<Italian>La tua unità %s1_unit è morta</Italian>
-		<Polish>Twoja jednostka: %s1_unit zginęła</Polish>
-		<Russian>Ваш %s1_unit ïîãèáëî</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_UNIT_DISBANDED_NO_MONEY</Tag>
@@ -18126,7 +18067,7 @@
 		<Tag>TXT_KEY_MOD_DCN_THE_BLANK_OF</Tag>
 		<English>%s of %s</English>
 		<French>%s des %s</French>
-		<German>%s von %s</German>
+		<German>%s %s</German>
 		<Italian>%s di %s</Italian>
 		<Spanish>%s de %s</Spanish>
 		<Polish>%s %s</Polish>
@@ -19763,6 +19704,7 @@
 		<Tag>TXT_KEY_PASSAGE</Tag>
 		<English>[ICON_BULLET]This unit can enter territories you have a Right of Passage or Open Borders agreement with.</English>
 		<French>[ICON_BULLET]Cette unité peut entrer à l'intérieur des frontières lorsqu'il existe un droit de passage ou un Accord de frontières ouvertes</French>
+		<German>[ICON_BULLET]kann Gebiete von Nationen betreten, mit denen eine Durchreiseerlaubnis oder offene Grenzen vereinbart wurden</German>
 		<Russian>[ICON_BULLET]Этот отряд может входить на территории, с владельцами которых у вас есть право на проход или соглашение об открытых границах.</Russian>
 	</TEXT>
 	<TEXT>
@@ -20659,38 +20601,6 @@
 		<Spanish>Por supuesto, cancelémoslo.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_POPUP_CANNOT_CONSTRUCT_WORK_NEXT_LIMITED</Tag>
-		<English>You cannot continue constructing [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
-		<French>Vous ne pouvez plus assurer la construction de : [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à la place ?</French>
-		<German>Die Errichtung des Gebäudes [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
-		<Italian>Non puoi continuare a costruire l'edificio [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
-		<Spanish>No podéis seguir construyendo [NUM1:el:la:los:las] [COLOR_BUILDING_TEXT]%s1_BldgName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
-	</TEXT>
-		<TEXT>
-		<Tag>TXT_KEY_POPUP_CANNOT_CREATE_WORK_NEXT</Tag>
-		<English>You cannot continue creating a [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
-		<French>Vous ne pouvez plus assurer la création de : [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à la place ?</French>
-		<German>Das Projekt [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
-		<Italian>Non puoi continuare la realizzazione del progetto [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
-		<Spanish>No podéis seguir creando [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CANNOT_CREATE_WORK_NEXT_LIMITED</Tag>
-		<English>You cannot continue creating [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
-		<French>Vous ne pouvez plus créer : [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à la place ?</French>
-		<German>Das Projekt [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
-		<Italian>Non puoi continuare a creare il progetto [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
-		<Spanish>No podéis seguir creando [COLOR_BUILDING_TEXT]%s1_PrjtName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CANNOT_TRAIN_WORK_NEXT_LIMITED</Tag>
-		<English>You cannot continue training [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName. What would you like to work on instead?</English>
-		<French>Vous ne pouvez plus entraîner : [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire à la place ?</French>
-		<German>Die Ausbildung der Einheit [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] in %s2_CityName kann nicht fortgesetzt werden. Wie lautet Euer Befehl?</German>
-		<Italian>Non puoi continuare a realizzare l'unità [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare al suo posto?</Italian>
-		<Spanish>No podéis seguir entrenando [NUM1:al:a la:a los:a las] [COLOR_UNIT_TEXT]%s1_UnitName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer en su lugar?</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_POPUP_CHOOSE_TECH</Tag>
 		<English>Choose a technology...</English>
 		<French>Choisissez une technologie...</French>
@@ -20729,22 +20639,6 @@
 		<German>Ja, stimmt die Gebete an!</German>
 		<Italian>Sì, iniziamo subito i riti!</Italian>
 		<Spanish>¡Sí, que empiecen los cánticos!</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CREATED_WORK_ON_NEXT_LIMITED</Tag>
-		<English>You have created [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName. What would you like to work on next?</English>
-		<French>Vous avez créé : [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] à %s2_CityName. Que souhaitez-vous faire ensuite ?</French>
-		<German>Das Projekt [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] in %s2_CityName wurde fertig gestellt. Wie lautet Euer nächster Befehl?</German>
-		<Italian>Hai creato il progetto [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] a %s2_CityName. Cosa vuoi realizzare adesso?</Italian>
-		<Spanish>Habéis creado [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] en %s2_CityName. ¿Qué queréis hacer a continuación?</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_CREATED_WORK_ON_NEXT_SPACESHIP</Tag>
-		<English>%s2_CityName has added [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] to the spaceship. What would you like to work on next?</English>
-		<French>Ajout de : [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] au vaisseau par %s2_CityName. Que souhaitez-vous construire ensuite ?</French>
-		<German>%s2_CityName hat das Projekt [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] zum Raumschiff hinzugefügt. Woran möchtet Ihr als Nächstes arbeiten?</German>
-		<Italian>%s2_CityName ha aggiunto [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] all'astronave. Qual è il prossimo compito?</Italian>
-		<Spanish>%s2_CityName ha añadido [COLOR_HIGHLIGHT_TEXT]%s1_PrjtName[COLOR_REVERT] a la nave espacial. ¿Qué queréis hacer a continuación?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_CULTURE_DEMAND</Tag>
@@ -21100,27 +20994,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_RECOMMENDED</Tag>
-		<English>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Recommended (%s3_AdvsrName)[COLOR_REVERT]</English>
+		<English>%s1_ProdName (%d2 Turns) - [COLOR_HIGHLIGHT_TEXT]%s3_Advisor[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Conseil (%s3_AdvsrName) :[COLOR_REVERT] %s1_ProdName (%d2_NumTurns) </French>
 		<German>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]empfohlen (%s3_AdvsrName)[COLOR_REVERT]</German>
 		<Italian>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Consigliato (%s3_AdvsrName)[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT](%s3_AdvsrName) Se recomienda crear:[COLOR_REVERT] %s1_ProdName (%d2_NumTurns [NUM2:turno:turnos])</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_RECOMMENDED_NO_ADV</Tag>
-		<English>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Recommended[COLOR_REVERT]</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Conseil :[COLOR_REVERT] %s1_ProdName (%d2_NumTurns) </French>
-		<German>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]empfohlen[COLOR_REVERT]</German>
-		<Italian>%s1_ProdName (%d2_NumTurns) [COLOR_HIGHLIGHT_TEXT]Consigliato[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_HIGHLIGHT_TEXT]Se recomienda crear:[COLOR_REVERT] %s1_ProdName (%d2_NumTurns [NUM2:turno:turnos])</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_POPUP_RECOMMENDED_NO_ADV_OR_TURNS</Tag>
-		<English>%s1_WorkName [COLOR_HIGHLIGHT_TEXT]Recommended[COLOR_REVERT]</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Conseil :[COLOR_REVERT] %s1_WorkName</French>
-		<German>%s1_WorkName [COLOR_HIGHLIGHT_TEXT]empfohlen[COLOR_REVERT]</German>
-		<Italian>%s1_WorkName [COLOR_HIGHLIGHT_TEXT]Consigliato[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_HIGHLIGHT_TEXT]Se recomienda:[COLOR_REVERT] %s1_WorkName</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_POPUP_RECOMMENDED_ONLY_ADV</Tag>
@@ -21307,14 +21185,6 @@
 		<Spanish>Excelencia, %s1_CityName es una ciudad costera y debería aprovechar lo que le ofrece la mar. La construcción de [NUM2:un:una:unos:unas] [COLOR_BUILDING_TEXT]%s2_BldgName[COLOR_REVERT] aumentaría de manera significativa su crecimiento.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_POPUP_WHAT_TO_BUILD</Tag>
-		<English>What would you like to build in this city?</English>
-		<French>Que souhaitez-vous construire dans cette ville ?</French>
-		<German>Was wollt Ihr in dieser Stadt errichten?</German>
-		<Italian>Cosa vuoi creare in questa città?</Italian>
-		<Spanish>¿Qué os gustaría construir en esta ciudad?</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_POPUP_YES_START_REVOLUTION</Tag>
 		<English>Yes, let's get this revolution started!</English>
 		<French>Oui, que la révolution commence !</French>
@@ -21336,6 +21206,11 @@
 		<Spanish>Poder</Spanish>
 		<Polish>Siła</Polish>
 		<Russian>Ìîãóùåñòâî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PREVIOUS_OUTPUT</Tag>
+		<English>Previous Output</English>
+		<German>Vorherige Aufträge</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_CONVERTS</Tag>
@@ -22451,7 +22326,7 @@
 		<Tag>TXT_KEY_REQUIRES</Tag>
 		<English>[NEWLINE][COLOR_WARNING_TEXT]Requires[SPACE]</English>
 		<French>[NEWLINE][COLOR_WARNING_TEXT]Requiert:[SPACE]</French>
-		<German>[NEWLINE][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
+		<German>[NEWLINE][ICON_BULLET][COLOR_WARNING_TEXT]erforderlich:[SPACE]</German>
 		<Italian>[NEWLINE][COLOR_WARNING_TEXT]Richiede[SPACE]</Italian>
 		<Spanish>[NEWLINE][COLOR_WARNING_TEXT]Requiere[SPACE]</Spanish>
 		<Polish>[NEWLINE][COLOR_WARNING_TEXT]Wymaga[SPACE]</Polish>
@@ -28483,7 +28358,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_DEFENDS_UNIT_FIRST</Tag>
 		<English>[ICON_BULLET]Defends first against %s1_unit_list</English>
 		<French>[ICON_BULLET]Défend d'abord contre %s1_unit_list</French>
-		<German>[ICON_BULLET]Nimmt als Erstes die Verteidigung gegen folgende Einheiten auf: %s1_unit_list</German>
+		<German>[ICON_BULLET]verteidigt im Kampf vorrangig gegen: %s1_unit_list</German>
 		<Italian>[ICON_BULLET]Difende primariamente contro %s1_unit_list</Italian>
 		<Spanish>[ICON_BULLET]Defiende primero contra %s1_unit_list</Spanish>
 	</TEXT>
@@ -28555,7 +28430,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_HIDDEN_NATIONALITY</Tag>
 		<English>[ICON_BULLET]Hidden Nationality</English>
 		<French>[ICON_BULLET]Nationalité cachée</French>
-		<German>[ICON_BULLET]Versteckte Nationalität</German>
+		<German>[ICON_BULLET]versteckte Nationalität</German>
 		<Italian>[ICON_BULLET]Nazionalità nascosta</Italian>
 		<Spanish>[ICON_BULLET]Nacionalidad oculta</Spanish>
 	</TEXT>
@@ -28595,7 +28470,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_IGNORE_TERRAIN</Tag>
 		<English>[ICON_BULLET]Ignores Terrain Movement Costs</English>
 		<French>[ICON_BULLET]Ignore les pénalités de mouvement du terrain</French>
-		<German>[ICON_BULLET]Ignoriert Fortbewegungskosten auf Gelände</German>
+		<German>[ICON_BULLET]ignoriert Fortbewegungskosten auf Gelände</German>
 		<Italian>[ICON_BULLET]Ignora i costi di movimento sul terreno</Italian>
 		<Spanish>[ICON_BULLET]No le afectan los costes de movimiento por terreno</Spanish>
 	</TEXT>
@@ -28627,7 +28502,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_INVISIBLE_MOST</Tag>
 		<English>[ICON_BULLET]Invisible to Most Units</English>
 		<French>[ICON_BULLET]Invisible pour la plupart des unités</French>
-		<German>[ICON_BULLET]Für die meisten Einheiten unsichtbar</German>
+		<German>[ICON_BULLET]für die meisten Einheiten unsichtbar</German>
 		<Italian>[ICON_BULLET]Invisibile alla maggior parte delle unità</Italian>
 		<Spanish>[ICON_BULLET]Invisible para la mayoría de las unidades</Spanish>
 	</TEXT>
@@ -28701,7 +28576,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_ONLY_DEFENSIVE</Tag>
 		<English>[ICON_BULLET]Can Only Defend</English>
 		<French>[ICON_BULLET]Ne peut que se défendre</French>
-		<German>[ICON_BULLET]Kann nur verteidigen</German>
+		<German>[ICON_BULLET]kann nur verteidigen</German>
 		<Italian>[ICON_BULLET]Può solo difendere</Italian>
 		<Spanish>[ICON_BULLET]Sólo puede defender</Spanish>
 	</TEXT>
@@ -28717,7 +28592,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_REQUIRED_TO_BUILD</Tag>
 		<English>[ICON_BULLET]Can be built by[SPACE]</English>
 		<French>[ICON_BULLET]Peut être construit par[SPACE]</French>
-		<German>[ICON_BULLET]Kann errichtet werden von[SPACE]</German>
+		<German>[ICON_BULLET]kann errichtet werden von[SPACE]</German>
 		<Italian>[ICON_BULLET]L'unità può essere costruita da[SPACE]</Italian>
 		<Spanish>[ICON_BULLET]Construible por[SPACE]</Spanish>
 	</TEXT>
@@ -28734,7 +28609,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<!-- %s1_Text = can be any building, bonus, civic etc -->
 		<English>[COLOR_WARNING_TEXT]Requires %s1_Text[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert : %s1_Text[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Erfordert: %s1_Text[COLOR_REVERT]</German>
+		<German>[COLOR_WARNING_TEXT]erfordert: %s1_Text[COLOR_REVERT]</German>
 		<Italian>[COLOR_WARNING_TEXT]Richiede %s1_Text[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_WARNING_TEXT]Requiere %s1_Text[COLOR_REVERT]</Spanish>
 		<Russian>[COLOR_WARNING_TEXT]Требует %s1_Text[COLOR_REVERT]</Russian>
@@ -28801,7 +28676,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNITHELP_WORKERS_FASTER</Tag>
 		<English>[ICON_BULLET]Workers Build Improvements %D1_Change%% Faster</English>
 		<French>[ICON_BULLET]Vitesse de construction des aménagements : %D1_Change%%</French>
-		<German>[ICON_BULLET]Bautrupps errichten Modernisierungen %D1_Change%% schneller</German>
+		<German>[ICON_BULLET]Arbeitstrupps errichten Modernisierungen %D1_Change%% schneller</German>
 		<Italian>[ICON_BULLET]I lavoratori realizzano i miglioramenti il %D1_Change%% più rapidamente</Italian>
 		<Spanish>[ICON_BULLET]Los trabajadores construyen mejoras un %D1_Change%% más rápido</Spanish>
 	</TEXT>
@@ -28914,7 +28789,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Tag>TXT_KEY_UNIT_GORILLA_PEDIA</Tag>
 		<English>Gorillas, the largest of the living primates, are ground-dwelling omnivores that inhabit the forests of Africa. Gorillas are divided into two species and (still under debate as of 2007) either four or five subspecies. Its DNA is 97%-98% identical to that of a human, and are the next closest living relatives to humans after the two chimpanzee species.</English>
 		<French>Les gorilles, le plus grand des primats vivants, sont des omnivores de terre-logement qui habitent les forêts de l'Afrique. Des gorilles sont encore divisés en deux espèces et (sous la discussion en date de 2007) quatre ou cinq sous-espèces. Son ADN est 97%-98% identique à celui d'un humain, et est les prochains parents vivants les plus étroits aux humains après les deux espèces de chimpanzé.</French>
-		<German>Gorillas, das größte der lebenden Primas, sind Boden-Wohnung Allesfresser, die die Wälder von Afrika bewohnen. Gorillas werden in zwei Sorten und (noch unter Debatte ab 2007) geteilt, entweder vier oder fünf Unterarten. Seine DNA ist 97%-98% identisch zu dem eines Menschen und ist die folgenden nähsten lebenden Verwandten zu den Menschen nach den zwei Schimpansesorten.</German>
+		<German>[COLOR_UNIT_TEXT]Gorillas[COLOR_REVERT] sind die größten lebenden Primaten und bewohnen die mittleren Teile Afrikas. Die Gattung umfasst zwei Arten mit jeweils zwei Unterarten.[NEWLINE]Die schwanzlosen Menschenaffen sind robust gebaut, wobei Östliche Gorillas noch etwas schwerer und stämmiger sind. Die Arme sind deutlich länger als die Beine, womit sie sich am Boden im Knöchelgang bewegen. Hände und Füße sind sehr breit. Die großen Zehen sind wie die Daumen opponierbar. Die Fingerabdrücke sind wie beim Menschen einzigartig. Das Fell der Östlichen Gorillas ist schwarz, bei den Westlichen Gorillas eher braun. Bei älteren Männchen färbt es sich auf dem Rücken grau, weshalb sie auch Silberrücken genannt werden. Die Schnauze ist auffallend kurz und über den Augen bilden sich deutliche Wülste. Die Tiere besitzen 32 Zähne und sind reine Pflanzenfresser. Je nach Art sind Gorillas mehr oder weniger gute Kletterer. Obwohl sie nicht schwimmen können, sind sie nicht wasserscheu. Sie leben in Gruppen, die sich allerdings gelegentlich auflösen und neu formieren. Sie kommunizieren mit Rufen und Rülps- oder Grunzlauten sowie mit Gesten. Typisch ist das Trommeln auf die Brust als Begrüßung untereinander. Natürliche Feinde haben die Gorillas kaum, lediglich Jungtiere fallen gelegentlich Leoparden zum Opfer.[NEWLINE]Die Hauptbedrohung für den Gorilla ist der Mensch durch Bejagung und Lebensraumzerstörung. Forscher untersuchen schon seit längerer Zeit die Kommunikationsfähigkeit der Gorillas. So gab es beispielsweise Versuche, einem Weibchen die Gebärdensprache zu lehren.</German>
 		<Italian>I gorillas, i più grandi dei primati viventi, sono onnivori della terra-dimora che abitano le foreste dell'Africa. I gorillas sono divisi ancora in due specie e (sotto il dibattito a partire da 2007) quattro o cinque sottospeci. Il relativo DNA è 97%-98% identico a quello di un essere umano ed è i parenti viventi più vicini seguenti agli esseri umani dopo le due specie dello scimpanzè.</Italian>
 		<Spanish>Los gorilas, los más grandes de los primates vivos, son los omnívoros de la tierra-vivienda que habitan los bosques de África. Los gorilas todavía se dividen en dos especies y (bajo discusión en fecha 2007) cuatro o cinco subespecies. Su DNA es 97%-98% idéntico a el de un ser humano, y es los parientes vivos más cercanos siguientes a los seres humanos después de las dos especies del chimpancé.</Spanish>
 	</TEXT>

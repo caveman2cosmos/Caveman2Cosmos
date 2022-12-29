@@ -1436,7 +1436,6 @@ void CvMap::afterSwitch()
 #endif // THE_GREAT_WALL
 
 	gDLL->getEngineIFace()->setResourceLayer(GC.getResourceLayer());
-	gDLL->getInterfaceIFace()->setCycleSelectionCounter(1);
 
 	m_bSwitchInProgress = false;
 }

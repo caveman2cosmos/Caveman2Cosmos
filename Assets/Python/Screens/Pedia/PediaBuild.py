@@ -40,16 +40,8 @@ class PediaBuild:
 		CyPlayer = self.main.CyPlayer
 
 		iWidGen				= WidgetTypes.WIDGET_GENERAL
-		iWidJuToBuilding	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING
-		iWidJuToFeature		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_FEATURE
-		iWidJuToImp			= WidgetTypes.WIDGET_PEDIA_JUMP_TO_IMPROVEMENT
-		iWidJuToRoute		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_ROUTE
-		iWidJuToTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH
-		iWidJuToUnit		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT
-		iPanelHudHelp		= PanelStyles.PANEL_STYLE_HUD_HELP
 		iPanelBlue50		= PanelStyles.PANEL_STYLE_BLUE50
 		iPanelIn			= PanelStyles.PANEL_STYLE_IN
-		iPanelOut			= PanelStyles.PANEL_STYLE_OUT
 		iPanelStd			= PanelStyles.PANEL_STYLE_STANDARD
 		iPanelEmpty			= PanelStyles.PANEL_STYLE_EMPTY
 		iFontGame			= FontTypes.GAME_FONT

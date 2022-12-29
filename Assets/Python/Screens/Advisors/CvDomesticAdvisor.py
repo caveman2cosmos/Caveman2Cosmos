@@ -576,8 +576,8 @@ class CvDomesticAdvisor:
 		nTotalTradeProfit //= 100
 		if nTotalTradeProfit < 0:
 			return "-%d" % nTotalTradeProfit
-		else:
-			return "%d" % nTotalTradeProfit
+
+		return "%d" % nTotalTradeProfit
 
 
 	def countTradeRoutes(self, city, szKey, arg):
@@ -603,8 +603,7 @@ class CvDomesticAdvisor:
 		nCount = city.getFreeSpecialistCount(GC.getInfoTypeForString(szSpecialistType))
 		if nCount > 0:
 			return unicode(nCount)
-		else:
-			return "-"
+		return "-"
 
 	def calculateProducing(self, city, szKey, arg):
 
@@ -694,8 +693,8 @@ class CvDomesticAdvisor:
 	def calculateWhipPopulation(self, city, szKey, arg):
 		if city.canHurry(self.HURRY_TYPE_POP, False):
 			return unicode(city.hurryPopulation(self.HURRY_TYPE_POP))
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def calculateWhipOverflowProduction(self, city, szKey, arg):
 		return self.calculateWhipOverflow(city, szKey, arg)[0]
@@ -720,21 +719,21 @@ class CvDomesticAdvisor:
 		iAnger = city.getHurryAngerTimer()
 		if iAnger > 0 or city.canHurry(self.HURRY_TYPE_POP, False):
 			return iAnger
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def calculateHurryGoldCost(self, city, szKey, arg):
 		if city.canHurry(self.HURRY_TYPE_GOLD, False):
 			return unicode(city.getHurryGold(self.HURRY_TYPE_GOLD))
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def calculateConscriptAnger(self, city, szKey, arg):
 		iAnger = city.getConscriptAngerTimer()
 		if iAnger > 0 or city.canConscript():
 			return iAnger
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def calculatePotentialConscriptUnit(self, city, szKey, arg):
 		szReturn = unicode(GC.getUnitInfo(city.getConscriptUnit()).getDescription() )
@@ -742,10 +741,8 @@ class CvDomesticAdvisor:
 
 	def calculateConscriptUnit(self, city, szKey, arg):
 		if city.canConscript():
-			szReturn = unicode(GC.getUnitInfo(city.getConscriptUnit()).getDescription())
-		else:
-			szReturn = u""
-		return szReturn
+			return unicode(GC.getUnitInfo(city.getConscriptUnit()).getDescription())
+		return u""
 
 	def calculateReligions(self, city, szKey, arg):
 
@@ -828,13 +825,13 @@ class CvDomesticAdvisor:
 
 	def calculateCultureTurns(self, city, szKey, arg):
 
-		iCultureTimes100 = city.getCultureTimes100(self.iPlayer)
 		iCultureRateTimes100 = city.getCommerceRateTimes100(CommerceTypes.COMMERCE_CULTURE)
-		if iCultureRateTimes100 > 0:
-			iCultureLeftTimes100 = 100 * city.getCultureThreshold() - iCultureTimes100
-			return (iCultureLeftTimes100 + iCultureRateTimes100 - 1) / iCultureRateTimes100
-		else:
-			return u"-"
+
+		if iCultureRateTimes100 > 0 and city.getCultureThreshold() > 0:
+
+			return (100*city.getCultureThreshold() - city.getCultureTimes100(self.iPlayer) + iCultureRateTimes100 - 1) / iCultureRateTimes100
+
+		return u"-"
 
 	def calculateGreatPeopleTurns(self, city, szKey, arg):
 
@@ -858,11 +855,11 @@ class CvDomesticAdvisor:
 
 		if CyCity.getNumRealBuilding(arg) > 0:
 			return self.objectHave
-		elif CyCity.getFirstBuildingOrder(arg) != -1:
+		if CyCity.getFirstBuildingOrder(arg) != -1:
 			return self.objectUnderConstruction
-		elif CyCity.canConstruct(arg, False, False, False):
+		if CyCity.canConstruct(arg, False, False, False):
 			return self.objectPossible
-		elif CyCity.canConstruct(arg, True, False, False):
+		if CyCity.canConstruct(arg, True, False, False):
 			return self.objectPossibleConcurrent
 		return self.objectNotPossible
 
@@ -877,8 +874,8 @@ class CvDomesticAdvisor:
 		# Determine whether or not city has the given bonus
 		if city.hasBonus(arg):
 			return self.objectHave
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def calculateBonus(self, city, szKey, arg):
 
@@ -1573,6 +1570,7 @@ class CvDomesticAdvisor:
 		screen = self.getScreen()
 		if not screen.isActive():
 			return
+
 		HandleInputUtil.debugInput(inputClass)
 		bAlt, bCtrl, bShift = self.InputData.getModifierKeys()
 		iCode	= inputClass.eNotifyCode
@@ -1613,46 +1611,12 @@ class CvDomesticAdvisor:
 				self.drawScreen()
 
 			elif NAME == "CDA_PAGE_":
-				if not iCol:
-					CyCity = self.CyPlayer.getCity(iData2)
-					screen.hideScreen()
-					CyMap().bringIntoView(CyCity.getX(), CyCity.getY(), True, False, True, False, False)
-				elif iCol == 1:
-					name = screen.getTableText("CDA_PAGE_%d" % ID, 1, iRow)
-					for CyCity in self.cityList:
-						if CyCity.getName() == name:
-							xRes = self.xRes
-							if xRes > 2500:
-								header = "<font=4b>"
-								body = "\n<font=3>"
-								w = 560
-								h = 184
-							elif xRes > 1700:
-								header = "<font=3b>"
-								body = "\n<font=2>"
-								w = 500
-								h = 172
-							elif xRes > 1400:
-								header = "<font=2b>"
-								body = "\n<font=1>"
-								w = 440
-								h = 160
-							else:
-								header = "<font=1b>"
-								body = "\n<font=0>"
-								w = 380
-								h = 136
-							szTxt = header + TRNSLTR.getText("TXT_KEY_NAME_CITY", ()) + body + name
-							iCityID = CyCity.getID()
-							popup = CyPopup(5000, EventContextTypes.EVENTCONTEXT_ALL, True)
-							popup.setUserData(("CITY", name, iCityID, iRow))
-							popup.setSize(w, h)
-							popup.setPosition(xRes/2 - w/2, self.yRes/2 - h/2)
-							popup.setBodyString(szTxt, 1<<0)
-							popup.createEditBox(name, 0)
-							popup.setEditBoxMaxCharCount(24, 0, 0)
-							popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
-							break
+				name = screen.getTableText("CDA_PAGE_%d" % ID, 1, iRow)
+				for cyCity in self.cityList:
+					if cyCity.getName() == name:
+						screen.hideScreen()
+						CyMap().bringIntoView(cyCity.getX(), cyCity.getY(), True, False, True, False, False)
+						break
 
 		elif iCode == NotifyCode.NOTIFY_CLICKED:
 			bCustomizing = self.bCustomizing

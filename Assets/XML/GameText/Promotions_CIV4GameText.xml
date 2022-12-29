@@ -415,6 +415,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_DEF_WARN</Tag>
 		<English>[COLOR_WARNING_TEXT]If the unit with this promotion cannot gain Defensive Bonuses, they will not gain inapplicable promotion benefits.[COLOR_REVERT]</English>
+		<German>[COLOR_WARNING_TEXT]Diese Einheit mit dieser Beförderung profitiert nur dann von den genannten Vorteilen, wenn sie über Verteidigungsboni verfügt.[COLOR_REVERT]</German>
 		<Russian>[COLOR_WARNING_TEXT]Если отряд с этой квалификацией не имеет защитных бонусов, он не получает от них несовместимые преимущества.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
@@ -2256,12 +2257,14 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SECURITY</Tag>
 		<English>Build Up (Counter Espionage)</English>
 		<French>Retranchement (Contre-espionnage)</French>
+		<German>(Training) Spionageabwehr</German>
 		<Russian>Фокус на Контрразведке (I)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SECURITY_HELP</Tag>
 		<English>Each round spent building up Counter Espionage, the unit gains +5% [COLOR_HIGHLIGHT_TEXT]Interception Chance[COLOR_REVERT] (to catch enemy spies) up to a maximum of +25%, provided each promotion level is qualified for by the unit.</English>
 		<French>Pour chaque tour dépensé en retranchement Contre-Espionnage, L'unité gagne +5% [COLOR_HIGHLIGHT_TEXT]Prob. d'Interception[COLOR_REVERT] (pour attraper les espions ennemis) jusqu'à un maximum de +25%, à condition que chaque niveau de promotion soit qualifié par l'unité.</French>
+		<German>Das Spionageabwehr-Training erhöht die Effektivität der Einheit bei der [COLOR_HIGHLIGHT_TEXT]Enttarnung[COLOR_REVERT] von Spionen pro Runde um 5% bis zu einem Maximum von 25%.</German>
 		<Russian>За каждый ход, потраченный на подготовку к этой операции, отряд получает +5% к [COLOR_HIGHLIGHT_TEXT]шансу перехвата[COLOR_REVERT] вражеских шпионов (максимум +25%), при условии, что каждый следующий уровень квалификации выполняется отрядом.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3928,7 +3931,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ACE</Tag>
-		<English>Veteran Pilot II</English>		
+		<English>Veteran Pilot II</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADHERENT</Tag>
@@ -5886,30 +5889,35 @@
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY1</Tag>
 		<English>Build Up (Counter Espionage) I</English>
 		<French>Retranchement (Contre-espionnage) I</French>
+		<German>(Training) Spionageabwehr I</German>
 		<Russian>Фокус на Контрразведке (I)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY2</Tag>
 		<English>Build Up (Counter Espionage) II</English>
 		<French>Retranchement (Contre-espionnage) II</French>
+		<German>(Training) Spionageabwehr II</German>
 		<Russian>Фокус на Контрразведке (II)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY3</Tag>
 		<English>Build Up (Counter Espionage) III</English>
 		<French>Retranchement (Contre-espionnage) III</French>
+		<German>(Training) Spionageabwehr III</German>
 		<Russian>Фокус на Контрразведке (III)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY4</Tag>
 		<English>Build Up (Counter Espionage) IV</English>
 		<French>Retranchement (Contre-espionnage) IV</French>
+		<German>(Training) Spionageabwehr IV</German>
 		<Russian>Фокус на Контрразведке (IV)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY5</Tag>
 		<English>Build Up (Counter Espionage) V</English>
 		<French>Retranchement (Contre-espionnage) V</French>
+		<German>(Training) Spionageabwehr V</German>
 		<Russian>Фокус на Контрразведке (V)</Russian>
 	</TEXT>
 	<TEXT>

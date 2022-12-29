@@ -59,8 +59,20 @@ public:
 	CvGameObjectPlayer* getGameObject() { return &m_GameObject; };
 	const CvGameObjectPlayer* getGameObject() const { return &m_GameObject; };
 
+	void setIdleCity(const int iCityID, const bool bNewValue);
+	bool hasIdleCity() const;
+	CvCity* getIdleCity() const;
+	bool isIdleCity(const int iCityID) const;
+	void resetIdleCities();
+
 protected:
 	CvGameObjectPlayer m_GameObject;
+	void baseInit(PlayerTypes eID);
+	void initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSetAlive = true);
+
+	std::vector<int> m_idleCities;
+	std::vector<CvUnit*> m_commanders;
+	std::vector<CvPlot*> m_commandFieldPlots;
 
 public:
 
@@ -321,7 +333,7 @@ public:
 	int calculateTotalCommerce() const;
 
 	bool canEverResearch(TechTypes eTech) const;
-	bool canResearch(TechTypes eTech) const;
+	bool canResearch(const TechTypes eTech, const bool bRightNow = true, const bool bSpecialRequirements = true) const;
 	TechTypes getCurrentResearch() const;
 	bool isCurrentResearchRepeat() const;
 	bool isNoResearchAvailable() const;
@@ -829,7 +841,6 @@ public:
 	void setTeam(TeamTypes eTeam);
 	void updateTeamType();
 
-	void setDoNotBotherStatus(PlayerTypes playerID);
 	bool isDoNotBotherStatus(PlayerTypes playerID) const;
 
 	DllExport PlayerColorTypes getPlayerColor() const;
@@ -1058,6 +1069,11 @@ public:
 	city_iterator endCities() const { return city_iterator(); }
 	typedef bst::iterator_range<city_iterator> city_range;
 	city_range cities() const { return city_range(beginCities(), endCities()); }
+
+	safe_city_iterator beginCitiesSafe() const { return safe_city_iterator(beginCities(), endCities()); }
+	safe_city_iterator endCitiesSafe() const { return safe_city_iterator(); }
+	typedef bst::iterator_range<safe_city_iterator> safe_city_range;
+	safe_city_range cities_safe() const { return safe_city_range(beginCitiesSafe(), endCitiesSafe()); }
 
 	// deprecated, use city_iterator
 	CvCity* firstCity(int* pIterIdx, bool bRev = false) const;
@@ -1295,7 +1311,7 @@ public:
 	int getHurryInflationModifier() const;
 	void changeHurryInflationModifier(int iChange);
 
-	int getCityLimit() const;
+	int getCityLimit() const { return m_iCityLimit; }
 	void changeCityLimit(int iChange);
 
 	int getCityOverLimitUnhappy() const;
@@ -1363,7 +1379,11 @@ public:
 	void recalculateResourceConsumption(BonusTypes eBonus);
 	void recalculateAllResourceConsumption();
 
-	std::vector<CvUnit*> Commanders;
+	void listCommander(bool bAdd, CvUnit* unit);
+	std::vector<CvUnit*> getCommanders() const { return m_commanders; }
+
+	void setCommandFieldPlot(bool bNewValue, CvPlot* aPlot);
+	std::vector<CvPlot*> getCommandFieldPlots() const { return m_commandFieldPlots; }
 
 	int getFreeSpecialistCount(SpecialistTypes eIndex) const;
 	void setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue);
@@ -1440,8 +1460,6 @@ public:
 	int getFractionalCombatExperience() const;
 	void changeFractionalCombatExperience(int iChange, UnitTypes eGGType = NO_UNIT);
 
-	void updateCache();
-
 	void clearTileCulture();
 	void clearCityCulture();
 
@@ -1484,7 +1502,7 @@ public:
 	void setUnitListSelected(UnitTypes eUnit);
 	UnitTypes getUnitListSelected();
 	void processNewRoutes();
-	inline int	getZobristValue() const { return m_zobristValue; }
+	inline int getZobristValue() const { return m_zobristValue; }
 
 	inline bool getTurnHadUIInteraction() const { return m_turnHadUIInteraction; }
 	inline void setTurnHadUIInteraction(bool newVal) { m_turnHadUIInteraction = newVal; }
@@ -1649,7 +1667,7 @@ public:
 	virtual bool AI_isCommercePlot(const CvPlot* pPlot) const = 0;
 	virtual int AI_getPlotDanger(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const = 0;
 	virtual bool AI_isFinancialTrouble() const = 0;
-	virtual TechTypes AI_bestTech(int iMaxPathLength = 1, bool bIgnoreCost = false, bool bAsync = false, TechTypes eIgnoreTech = NO_TECH, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR) const = 0;
+	virtual TechTypes AI_bestTech(int iMaxPathLength = 1, bool bIgnoreCost = false, bool bAsync = false, TechTypes eIgnoreTech = NO_TECH, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR) = 0;
 	virtual void AI_chooseFreeTech() = 0;
 	virtual void AI_chooseResearch() = 0;
 	virtual bool AI_isWillingToTalk(PlayerTypes ePlayer) const = 0;
@@ -2211,8 +2229,6 @@ public:
 
 	void updateTechHappinessandHealth();
 	void checkReligiousDisablingAllBuildings();
-
-	void doGoldenAgebyPercentage(int iPercent);
 	//TB Traits end
 
 	void startDeferredPlotGroupBonusCalculation();

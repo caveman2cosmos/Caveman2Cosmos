@@ -60,7 +60,7 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("isFound", &CyUnit::isFound, "bool ()")
 
 		.def("isGoldenAge", &CyUnit::isGoldenAge, "bool ()")
-		.def("isFighting", &CyUnit::isFighting, "bool ()")
+		.def("isInBattle", &CyUnit::isInBattle, "bool ()")
 		.def("getMaxHP", &CyUnit::getMaxHP, "int ()")
 		.def("getHP", &CyUnit::getHP, "int ()")
 		.def("isHurt", &CyUnit::isHurt, "bool ()")
@@ -79,17 +79,11 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 
 		.def("isWaiting", &CyUnit::isWaiting, "bool ()")
 		.def("isFortifyable", &CyUnit::isFortifyable, "bool ()")
-		//TB Combat Mods begin
-		//TB Combat Mods end
+
 		.def("experienceNeeded", &CyUnit::experienceNeeded, "int ()")
 
 		.def("isInvisible", &CyUnit::isInvisible, "bool (int (TeamTypes) eTeam, bool bDebug)")
 		.def("isNukeImmune", &CyUnit::isNukeImmune, "bool ()")
-
-		//TB Combat Mods Begin
-		//.def("aidTotal()", &CyUnit::aidTotal, "int ()")
-		//TB Combat Mods End
-
 
 		.def("bombardRate", &CyUnit::bombardRate, "int ()")
 
@@ -132,11 +126,6 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 
 		.def("isRiver", &CyUnit::isRiver, "bool ()")
 
-		.def("getExtraMoves", &CyUnit::getExtraMoves, "int ()")
-		//TB Combat Mods begin
-		//TB Combat Mods end
-
-
 		.def("getRevoltProtection", &CyUnit::getRevoltProtection, "int ()")
 		.def("getPillageChange", &CyUnit::getPillageChange, "int ()")
 		.def("getUpgradeDiscount", &CyUnit::getUpgradeDiscount, "int ()")
@@ -145,8 +134,7 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 
 		.def("isMadeAttack", &CyUnit::isMadeAttack, "bool ()")
 		.def("setMadeAttack", &CyUnit::setMadeAttack, "void (int iNewValue)")
-		//TB Combat Mod begin
-		//TB Combat Mod end
+
 		.def("isMadeInterception", &CyUnit::isMadeInterception, "bool ()")
 		.def("setMadeInterception", &CyUnit::setMadeInterception, "void (int iNewValue)")
 
@@ -164,7 +152,6 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("isCargo", &CyUnit::isCargo, "bool ()")
 		.def("setTransportUnit", &CyUnit::setTransportUnit, "void (CyUnit* pTransportUnit)")
 
-
 		.def("getName", &CyUnit::getName, "str () - Returns the name of a unit along with its type description in parens if using a custom name")
 		.def("getNameForm", &CyUnit::getNameForm, "str (int iForm)")
 		.def("getNameKey", &CyUnit::getNameKey, "str ()")
@@ -172,8 +159,6 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 		.def("setName", &CyUnit::setName, "void (str)")
 		.def("getScriptData", &CyUnit::getScriptData, "str ()")
 		.def("setScriptData", &CyUnit::setScriptData, "void (str)")
-
-
 
 		.def("canAcquirePromotion", &CyUnit::canAcquirePromotion, "bool (int /*PromotionTypes*/ ePromotion)")
 		.def("isPromotionValid", &CyUnit::isPromotionValid, "bool (int /*PromotionTypes*/ ePromotion)")
@@ -190,8 +175,8 @@ void CyUnitPythonInterface1(python::class_<CyUnit>& x)
 
 		.def("setCommander", &CyUnit::setCommander, "void (bool bNewVal)")
 		.def("isCommander", &CyUnit::isCommander, "bool ()")
-		.def("controlPointsLeft", &CyUnit::controlPointsLeft, "int ()")
-		.def("controlPoints", &CyUnit::controlPoints, "int ()")
+		.def("getControlPointsLeft", &CyUnit::getControlPointsLeft, "int ()")
+		.def("getControlPoints", &CyUnit::getControlPoints, "int ()")
 		.def("getRealExperience", &CyUnit::getRealExperience, "float ()")
 
 		.def("captureProbabilityTotal", &CyUnit::captureProbabilityTotal, "int ()")

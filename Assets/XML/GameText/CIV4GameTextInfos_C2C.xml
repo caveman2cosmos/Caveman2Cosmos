@@ -76,12 +76,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_GIVEN_FREE</Tag>
 		<English>[ICON_BULLET]Building Given for Free By[SPACE]</English>
+		<German>[ICON_BULLET]kostenloses Gebäude[SPACE]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDINGHELP_LIKELY_TO_GENERATE</Tag>
 		<English>[ICON_BULLET]City more likely to generate [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]La ville a plus de chance de générer : [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</French>
-		<German>[ICON_BULLET]Erhöhte Wahrscheinlichkeit der Erzeugung von [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT] in der Stadt</German>
+		<German>[ICON_BULLET]erhöhte Wahrscheinlichkeit für einen [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2:4_GPName[\LINK][COLOR_REVERT] in der Stadt</German>
 		<Italian>[ICON_BULLET]La città ha maggiori probabilità di generare un [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]Es más probable que la ciudad genere a [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</Spanish>
 		<Russian>[ICON_BULLET]Город с большей вероятностью генерирует [COLOR_HIGHLIGHT_TEXT][LINK=%s1_GPType]%s2_GPName[\LINK][COLOR_REVERT]</Russian>
@@ -148,7 +149,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_TURN_CITIZENS_INTO</Tag>
 		<English>[ICON_BULLET]Can turn %d1_Num Citizens into [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Peut transformer %d1_Num citoyens en [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</French>
-		<German>[ICON_BULLET]Kann %d1_Num Bürger in einen Spezialisten des Typs [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] verwandeln</German>
+		<German>[ICON_BULLET]ermöglicht die Spezialisierung von %d1_Num Bürgern zu [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3:7_SpclstName[\LINK][COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Può trasformare %d1_Num cittadini in [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3:2_SpclstName[\LINK][COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]Puede convertir a %d1_Num ciudadanos en [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3:2_SpclstName[\LINK][COLOR_REVERT]</Spanish>
 		<Russian>[ICON_BULLET]Может сделать %d1_Num горожан [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</Russian>
@@ -157,7 +158,7 @@
 		<Tag>TXT_KEY_BUILDINGHELP_TURN_CITIZEN_INTO</Tag>
 		<English>[ICON_BULLET]Can turn 1 Citizen into [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Peut transformer un citoyen en [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</French>
-		<German>[ICON_BULLET]Kann 1 Bürger in einen Spezialisten des Typs [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT] verwandeln</German>
+		<German>[ICON_BULLET]ermöglicht die Spezialisierung eines Bürgers zum [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2:3_SpecName[\LINK][COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Può trasformare un cittadino in [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Italian>
 		<Spanish>[ICON_BULLET]Puede convertir a ciudadano en [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Spanish>
 		<Russian>[ICON_BULLET]Может сделать 1 горожанина [COLOR_HIGHLIGHT_TEXT][LINK=%s1_SpecType]%s2_SpecName[\LINK][COLOR_REVERT]</Russian>
@@ -208,36 +209,12 @@
 		<Russian>[ICON_BULLET]Внедрение в [LINK=%s1_corporationType]%s2_corporation[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_ARCHER</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its archers along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs archers pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих лучников!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_ARQUEBUSIER</Tag>
-		<English>[SPACE]The village has agreed to send one of its arquebusiers along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs arquebusiers pour partager vos aventures!</French>
-		<Russian>[SPACE]Жители деревни согласились отпустить вместе с вами одного из своих аркебузиров!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_AXEMAN</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its axemen along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec hache pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих секироносцев!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOODY_BARBARIANS</Tag>
 		<English>The villagers are hostile!</English>
 		<French>Les villageois sont hostiles !</French>
 		<German>Die Bewohner sind Euch feindlich gesonnen!</German>
 		<Italian>Gli abitanti del villaggio sono ostili!</Italian>
 		<Spanish>Los aldeanos son hostiles.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_COMPOSITE_BOWMAN</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its bowmen along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs archers long pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих лучников!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_CRIMINAL</Tag>
@@ -250,7 +227,7 @@
 		<Tag>TXT_KEY_GOODY_EXPERIENCE</Tag>
 		<English>The villagers have provided your unit with experience!</English>
 		<French>Les villageois ont amélioré l'expérience de votre unité !</French>
-		<German>Die Bewohner haben Eure Einheit mit Erfahrung ausgestattet!</German>
+		<German>Die Bewohner haben Eurer Einheit zusätzliche Erfahrung verschafft!</German>
 		<Italian>Gli abitanti del villaggio hanno donato esperienza alla tua unità!</Italian>
 		<Spanish>Los aldeanos le han dado experiencia a la unidad.</Spanish>
 	</TEXT>
@@ -263,30 +240,12 @@
 		<Spanish>Los aldeanos os han dado oro.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_HEALER</Tag>
-		<English>[SPACE]A local Healer has decided to join your cause!</English>
-		<French>[SPACE]Un guérisseur local a décidé de rejoindre votre cause!</French>
-		<Russian>[SPACE]Местный целитель решил присоединиться к вашему делу!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOODY_HEALING</Tag>
 		<English>The villagers have healed your unit!</English>
 		<French>Les villageois ont soigné votre unité !</French>
 		<German>Die Bewohner haben Eure Einheit geheilt!</German>
 		<Italian>Gli abitanti del villaggio hanno curato la tua unità!</Italian>
 		<Spanish>Los aldeanos han curado a la unidad.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_INFANTRY</Tag>
-		<English>[SPACE]The community has agreed to send one of its infantry along with you!</English>
-		<French>[SPACE]La communauté a accepté de vous confier un de leurs infanteries pour partager vos aventures!</French>
-		<Russian>[SPACE]Здешняя община согласилась отпустить с вами одного из добровольцев, желающего вступить в ряды вашей армии!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_MACEMAN</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its flailmen along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec fléau pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих булавоносцев!</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_MAP</Tag>
@@ -297,12 +256,6 @@
 		<Spanish>Los aldeanos os han dado un mapa.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_PIKEMAN</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its pikemen along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs piquiers pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих копейщиков!</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOODY_RESEARCH</Tag>
 		<English>[SPACE]The villagers share information that leads your researchers to a major breakthrough!</English>
 		<French>[SPACE]Les villageois vous communiquent des informations qui conduisent vos chercheurs vers une découverte majeure!</French>
@@ -311,37 +264,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_SCOUT</Tag>
-		<English>The villagers have provided you with a Scout!</English>
-		<French>Les villageois vous fournissent un éclaireur !</French>
-		<German>Die Bewohner haben Euch einen Späher zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato uno scout!</Italian>
-		<Spanish>Los aldeanos os han dado un batidor.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_SETTLER</Tag>
-		<English>The villagers have provided you with a Settler!</English>
-		<French>Les villageois vous fournissent un colon !</French>
-		<German>Die Bewohner haben Euch einen Siedler zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un colono!</Italian>
-		<Spanish>Los aldeanos os han dado un colono.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_SPEARMAN</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its spearmen along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec lance pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих копьеносцев!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_STONE_AXEMAN</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its strong axeman along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec hache pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих воинов с топорами!</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GOODY_SWORDSMAN</Tag>
-		<English>[SPACE]The tribe has agreed to send one of its swordsmen along with you!</English>
-		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs épéistes pour partager vos aventures!</French>
-		<Russian>[SPACE]Племя согласилось отправить с вами одного из своих мечников!</Russian>
+		<English>A scout type unit joins your civilization.</English>
+		<German>Im Dorf konntet Ihr ein paar Späher rekrutieren.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_TECH</Tag>
@@ -353,26 +277,23 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_WARRIOR</Tag>
-		<English>The villagers have provided you with a Warrior!</English>
-		<French>Les villageois vous fournissent un guerrier !</French>
-		<German>Die Bewohner haben Euch einen Krieger zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un guerriero!</Italian>
-		<Spanish>Los aldeanos os han dado un guerrero.</Spanish>
+		<English>A military type unit joins your civilization.</English>
+		<German>Im Dorf konntet Ihr ein paar Krieger rekrutieren.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GOODY_WISE_WOMAN</Tag>
-		<English>[SPACE]One of the tribe's women has taken a liking to your explorers!</English>
-		<French>[SPACE]Une femme de la tribu est tombée amoureuse d'un de vos éclaireurs!</French>
-		<German>Ein paar Frauen des Stammes haben an Euren Entdeckern Gefallen gefunden!</German>
-		<Russian>[SPACE]Одна из женщин племени понравилась вашим разведчикам!</Russian>
+		<English>A healer type unit joins your civilization.</English>
+		<German>Im Dorf konntet Ihr ein paar Heiler rekrutieren.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_WORKER</Tag>
-		<English>The villagers have provided you with a Worker!</English>
-		<French>Les villageois vous fournissent un ouvrier !</French>
-		<German>Die Bewohner haben Euch einen Bautrupp zur Verfügung gestellt!</German>
-		<Italian>Gli abitanti del villaggio ti hanno donato un lavoratore!</Italian>
-		<Spanish>Los aldeanos os han dado un trabajador.</Spanish>
+		<Tag>TXT_KEY_GOODY_GATHERER</Tag>
+		<English>A worker type unit joins your civilization.</English>
+		<German>Im Dorf konntet Ihr ein paar Arbeiter rekrutieren.</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GOODY_HUNTER</Tag>
+		<English>A hunter type unit joins your civilization.</English>
+		<German>Im Dorf konntet Ihr ein paar Jäger rekrutieren.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_CATEGORY_PREREQUISITE</Tag>
@@ -399,9 +320,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CHANCE_OF_REVOLT</Tag>
-		<English>Chance of Revolt: %s1_Chance%% (%s2_CityStrength%% Cultural Revolt Sentiment. %s3_Garrison%% total Revolt Protection from Units)</English>
-		<French>Chances de Révolte: %s1_Chance%% (%s2_CityStrength%% de Sentiment de Récolte Culturelle. %s3_Garrison%% de total de Protection contre la révolte, des Unités)</French>
-		<Russian>Угроза восстания: %s1_Chance%% (%s2_CityStrength%% из-за культурных различий. %s3_Garrison%% к общей защите от восстаний для отрядов).</Russian>
+		<English>Revolt %%/Turn: %s1_Chance [NEWLINE](%s2_CityStrength base: x%s3_SpeedAdjustment gamespeed, x%s4_Garrison units)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CRIMINAL_CAUGHT</Tag>
@@ -773,6 +692,7 @@
 		<Tag>TXT_KEY_REQUIRES_TECH</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]erforderlich: [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</German>
 		<Russian>[COLOR_WARNING_TEXT]Требует [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>

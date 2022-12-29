@@ -779,31 +779,6 @@
 		<Russian>Морские травы - это цветущие растения из одного из четырех семейств растений (Posidoniaceae, Zosteraceae, Hydrocharitaceae или Cymodoceaceae), все в порядке Alismatales (в классе однодольных растений), которые растут в морской, полностью засоленной среде. Эти необычные морские цветущие растения называют морскими травами, потому что у многих видов листья длинные и узкие, и эти растения часто растут на больших «лугах», которые похожи на луга: другими словами, многие виды морских водорослей внешне напоминают земные травы семейства Poaceae.[PARAGRAPH: 2]Как и все автотрофные растения, фотосинтез морских водорослей ограничивается ростом в затопленной фотической зоне, и большинство встречается в неглубоких и защищенных прибрежных водах, закрепленных на дне песка или грязи. Большинство видов подвергаются подводному опылению и завершают весь свой жизненный цикл под водой. В мире насчитывается около шестидесяти видов.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_STORM</Tag>
-		<English>Storm</English>
-		<French>
-			<Text>Tempête</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Sturm</German>
-		<Italian>Temporale</Italian>
-		<Spanish>
-			<Text>Tormenta:Tormentas</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Sztorm</Polish>
-		<Russian>Øòîðì</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FEATURE_STORM_PEDIA</Tag>
-		<English>A storm is any disturbed state of an environment or astronomical body's atmosphere especially affecting its surface, and strongly implying severe weather. It may be marked by significant disruptions to normal conditions such as strong wind, hail, thunder and lightning (a thunderstorm), heavy precipitation (snowstorm, rainstorm), heavy freezing rain (ice storm), strong winds (tropical cyclone, windstorm), or wind transporting some substance through the atmosphere as in a dust storm, blizzard, sandstorm, etc.</English>
-		<French>Une tempête est tout état perturbé d'un environnement ou de l'atmosphère d'un corps astronomique affectant en particulier sa surface et impliquant fortement des conditions météorologiques extrêmes. Il peut être marqué par des perturbations importantes des conditions normales telles que vent fort, grêle, tonnerre et foudre (orage), fortes précipitations (tempête de neige, tempête de pluie), fortes pluies verglaçantes (tempête de verglas), vents forts (cyclone tropical, tempête de vent), ou le vent transportant une substance dans l'atmosphère comme dans une tempête de poussière, un blizzard, une tempête de sable, etc.</French>
-		<Polish>Sztorm (z ang. Storm i z niem. Sturm) - zjawisko meteorologiczne, występujące nad obszarami mórz i oceanów w postaci silnego, porywistego, długotrwałego wiatru o sile nie mniejszej niż 8o w skali Beauforta. Pogodziesztormowej zwykle towarzyszy odpowiednio silne falowanie powierzchni wody. Często występują również rzęsiste deszcze, znacznie ograniczające widzialność. W razie prognozowanego sztormu, jednostki o mniejszejdzielności morskiej zwykle nie opuszczają portu, a te będące w morzu starają się znaleźć schronienie w porcie lub na osłoniętym kotwicowisku. Jednak przebywanie w czasie silnego sztormu (czy huraganu) w porcie bez dostatecznej osłony czy na nie dostatecznie osłoniętym kotwicowisku może być bardziej niebezpieczne, niż sztormowanie na wodach otwartych.</Polish>
-		<Russian>Шторм - это любое возмущенное состояние окружающей среды или атмосферы астрономического тела, особенно затрагивающее его поверхность и порождающее суровые погодные условия. Это может сопровождаться значительными нарушениями нормальных условий, такими как сильный ветер, град, гром и молния (гроза), сильные осадки (метель, ливень), сильный морозный дождь (ледяная буря), сильный ветер (тропический циклон, буря), или ветер, переносящий какое-либо вещество через атмосферу, например, во время пыльной бури, метели, песчаной бури и т. д.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FEATURE_SWAMP</Tag>
 		<English>Swamp</English>
 		<French>
@@ -852,25 +827,6 @@
 		<French>Une fosse de goudron, ou plus précisément connue comme une fosse d'asphalte ou un lac d'asphalte, est un type de suintement de pétrole où le bitume souterrain fuit à la surface, créant une grande surface d'asphalte naturel. Cela se produit car, une fois que le matériau a atteint la surface, ses composants plus légers se vaporisent, ne laissant que l'asphalte épais.</French>
 		<Polish>Smoła, smoła surowa - produkty odgazowania węgla, łupków bitumicznych lub drewna, rzadko torfu. Składa się głównie z mieszaniny wielu rodzajów węglowodorów oraz innych związków organicznych, zawierających tlen,azot i siarkę, ponadto niektóre rodzaje smoły mogą zawierać pewną ilość grafitu i fulerenów.</Polish>
 		<Russian>Смоляная яма, или, точнее, известная как асфальтовая яма или асфальтовое озеро, является типом нефтяного фильтра, когда подземный битум просачивается на поверхность, создавая большую площадь природного асфальта. Это происходит потому, что после того, как материал достигает поверхности, его более легкие компоненты испаряются, оставляя только толстый слой асфальта.</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FEATURE_TORNADO</Tag>
-		<English>Tornado</English>
-		<French>Tornade</French>
-		<Spanish>
-			<Text>Tornado:Tornados</Text>
-			<Gender>Male</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Russian>Òîðíàäî</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FEATURE_TORNADO_PEDIA</Tag>
-		<English>A tornado will destroy improvements on a plot. It will also make the plot impassable for one or two turns.</English>
-		<French>Une tornade détruira les améliorations sur un terrain. Cela rendra également l'intrigue impraticable pendant un ou deux tours.</French>
-		<Spanish>Un tornado destruirá todas las mejoras de una casilla. También hará la casilla impasable durante uno o dos turnos.</Spanish>
-		<Polish>Tornado (z hiszp. tronada - burza), trąba powietrzna - gwałtownie wirująca kolumna powietrza, będąca jednocześnie w kontakcie z powierzchnią ziemi i podstawą cumulonimbusa lub rzadziej wypiętrzonego cumulusa. Tornada osiągają różne rozmiary. Zwykle przyjmują postać widzialnego leja kondensacyjnego, węższym końcem dotykającego ziemi. Dolna część leja jest często otoczona chmurą odłamków i pyłu.</Polish>
-		<Russian>Торнадо уничтожает улучшения на пострадавшем участке. Оно также сделает пораженную клетку непроходимой на один или два хода.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_VERY_TALL_GRASS</Tag>

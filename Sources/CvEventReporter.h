@@ -71,7 +71,7 @@ public:
 
 	void cityBuilt(CvCity *pCity, CvUnit *pUnit = NULL);
 	void cityRazed(CvCity *pCity, PlayerTypes ePlayer);
-	void cityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade);
+	void cityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade, bool bAutoRaze);
 	void cityAcquiredAndKept(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pCity, bool bConquest, bool bTrade);
 	void cityLost(CvCity *pCity);
 	void cultureExpansion( CvCity *pCity, PlayerTypes ePlayer);
@@ -88,12 +88,10 @@ public:
 
 	void selectionGroupPushMission(CvSelectionGroup* pSelectionGroup, MissionTypes eMission);
 
-	void unitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot);
 	void unitCreated(CvUnit *pUnit);
 	void unitBuilt(CvCity *pCity, CvUnit *pUnit);
 	void unitKilled(CvUnit *pUnit, PlayerTypes eAttacker);
 	void unitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType, CvUnit* pNewUnit);
-	void unitLost(CvUnit *pUnit);
 	void unitPromoted(CvUnit *pUnit, PromotionTypes ePromotion);
 	void unitUpgraded(CvUnit *pOldUnit, CvUnit *pNewUnit, int iPrice);
 

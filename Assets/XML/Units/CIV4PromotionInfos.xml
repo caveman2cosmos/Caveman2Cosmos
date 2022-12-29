@@ -1182,12 +1182,6 @@
 				<DomainType>DOMAIN_LAND</DomainType>
 			</NotOnDomainTypes>
 			<iMovesChange>1</iMovesChange>
-			<FeatureDoubleMoves>
-				<FeatureDoubleMove>
-					<FeatureType>FEATURE_STORM</FeatureType>
-					<bFeatureDoubleMove>1</bFeatureDoubleMove>
-				</FeatureDoubleMove>
-			</FeatureDoubleMoves>
 			<Button>Art/Interface/Buttons/Promotions/Navigation3.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -8367,6 +8361,7 @@
 			</TerrainDefenses>
 			<Button>Art/Interface/Buttons/Promotions/seacreature2.dds</Button>
 		</PromotionInfo>
+		<!--
 		<PromotionInfo>
 			<Type>PROMOTION_LEVIATHAN1</Type>
 			<Description>TXT_KEY_PROMOTION_LEVIATHAN1</Description>
@@ -8415,6 +8410,7 @@
 			</UnitCombatMods>
 			<Button>Art/Interface/Buttons/Promotions/leviathan3.dds</Button>
 		</PromotionInfo>
+		-->
 		<PromotionInfo>
 			<Type>PROMOTION_LORDSHIP</Type>
 			<Description>TXT_KEY_PROMOTION_LORDSHIP</Description>

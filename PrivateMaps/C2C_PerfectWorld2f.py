@@ -5095,6 +5095,9 @@ def getWrapY():
 		print "mc.WrapY == %d at getWrapY" % mc.WrapY
 		return mc.WrapY
 
+def getNumHiddenCustomMapOptions():
+	return 0
+
 def getNumCustomMapOptions():
 		"""
 		Number of different user-defined options for this map

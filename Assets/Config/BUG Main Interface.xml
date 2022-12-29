@@ -32,7 +32,7 @@
 			<option id="EnableGraphicalPaging" key="EnableGraphicalPaging" type="boolean" default="True" get="isEnableGraphicalPaging" dirtyBit="MiscButtons"/>
 
 			<!-- Enable viewports -->
-			<option id="EnableViewports" key="EnableViewports" type="boolean" default="False" get="isEnableViewports" dirtyBit="MiscButtons"/>
+			<option id="EnableViewports" key="EnableViewports" type="boolean" default="False" dirtyBit="MiscButtons"/>
 
 			<option id="ViewportX" key="ViewportX" type="int" default="40" get="getViewportX" dirtyBit="MiscButtons"/>
 			<option id="ViewportY" key="ViewportY" type="int" default="40" get="getViewportY" dirtyBit="MiscButtons"/>
@@ -48,6 +48,9 @@
 			<!-- Build/Action Icon Size by EmperorFool -->
 			<list id="UnitIconSize" key="Unit Icon Size" type="int" default="56" listType="int" values="64, 60, 56, 52, 48, 44, 40, 36, 33"
 				get="getUnitIconSize" set="setUnitIconSize" dirtyBit="SelectionButtons"/>
+
+			<list id="CycleDelayMin" key="CycleDelayMin" type="int" default="0" listType="int" values="0, 1, 2, 3, 4"/>
+			<list id="CycleDelayMove" key="CycleDelayMove" type="int" default="2" listType="int" values="0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10"/>
 		</section>
 	</options>
 </mod>

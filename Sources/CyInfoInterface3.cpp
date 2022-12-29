@@ -106,6 +106,7 @@ void CyInfoPythonInterface3()
 		.def("isAllowsNukes", &CvProjectInfo::isAllowsNukes, "bool ()")
 
 		.def("getMovieArtDef", &CvProjectInfo::getMovieArtDef, "string ()")
+		.def("getCreateSound", &CvProjectInfo::getCreateSound, "string ()")
 
 		// Arrays
 		.def("getBonusProductionModifier", &CvProjectInfo::getBonusProductionModifier, "int (int i)")
@@ -132,6 +133,7 @@ void CyInfoPythonInterface3()
 		.def("getAdjectiveKey", &CvReligionInfo::pyGetAdjectiveKey, "wstring ()")
 		// Arrays
 		.def("getGlobalReligionCommerce", &CvReligionInfo::getGlobalReligionCommerce, "int (int i)")
+		.def("getFlavorValue", &CvReligionInfo::getFlavorValue, "int (int i)")
 	;
 
 
@@ -247,6 +249,7 @@ void CyInfoPythonInterface3()
 
 
 	python::class_<CvArtInfoUnit, python::bases<CvArtInfoScalableAsset>, boost::noncopyable>("CvArtInfoUnit", python::no_init)
+		.def("getTrainSound", &CvArtInfoUnit::getTrainSound, "string ()")
 	;
 
 	python::class_<CvArtInfoBuilding, python::bases<CvArtInfoScalableAsset>, boost::noncopyable>("CvArtInfoBuilding", python::no_init)
@@ -281,6 +284,7 @@ void CyInfoPythonInterface3()
 
 	python::class_<CvCultureLevelInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvCultureLevelInfo", python::no_init)
 		.def("getSpeedThreshold", &CvCultureLevelInfo::getSpeedThreshold, "int ()")
+		.def("getLevel", &CvCultureLevelInfo::getLevel, "int ()")
 	;
 
 	python::class_<CvEraInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvEraInfo", python::no_init)
@@ -315,6 +319,8 @@ void CyInfoPythonInterface3()
 
 		.def("getColor", &CvColorInfo::getColor, python::return_value_policy<python::reference_existing_object>())
 	;
+
+	python::class_<CvAdvisorInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvAdvisorInfo", python::no_init);
 
 
 	python::class_<CvPlayerColorInfo, python::bases<CvInfoBase>, boost::noncopyable>("CvPlayerColorInfo", python::no_init)
