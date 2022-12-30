@@ -1129,7 +1129,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTables()
 
 //	How many members of a given class type were present at save time?
 int
-CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType)
+CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType) const
 {
 	PROFILE_FUNC();
 
@@ -2291,8 +2291,7 @@ CvTaggedSaveFormatWrapper::getId(const char* name, int& idHint, int& idSeq, Save
 	return id;
 }
 
-void
-CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq, char **szName)
+void CvTaggedSaveFormatWrapper::ReadString(const char* name, char** szName)
 {
 	PROFILE_FUNC();
 
@@ -2313,8 +2312,7 @@ CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq,
 	}
 }
 
-void
-CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq, wchar_t **szName)
+void CvTaggedSaveFormatWrapper::ReadString(const char* name, wchar_t** szName)
 {
 	PROFILE_FUNC();
 
@@ -2336,8 +2334,7 @@ CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq,
 }
 
 
-void
-CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq, std::string& szName)
+void CvTaggedSaveFormatWrapper::ReadString(const char* name, std::string& szName)
 {
 	PROFILE_FUNC();
 
@@ -2359,8 +2356,7 @@ CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq,
 }
 
 
-void
-CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq, std::wstring& szName)
+void CvTaggedSaveFormatWrapper::ReadString(const char* name, std::wstring& szName)
 {
 	PROFILE_FUNC();
 
@@ -2392,8 +2388,7 @@ CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq,
 }
 
 
-void
-CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq, int count, std::string values[])
+void CvTaggedSaveFormatWrapper::ReadString(const char* name, int count, std::string values[])
 {
 	PROFILE_FUNC();
 
@@ -2424,8 +2419,7 @@ CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq,
 }
 
 
-void
-CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq, int count, std::wstring values[])
+void CvTaggedSaveFormatWrapper::ReadString(const char* name, int count, std::wstring values[])
 {
 	PROFILE_FUNC();
 
@@ -2456,8 +2450,7 @@ CvTaggedSaveFormatWrapper::ReadString(const char* name, int& idHint, int& idSeq,
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, char *pChar)
+void CvTaggedSaveFormatWrapper::Read(const char* name, int8_t* pChar)
 {
 	PROFILE_FUNC();
 
@@ -2479,8 +2472,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, char 
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint8_t* pByte)
+void CvTaggedSaveFormatWrapper::Read(const char* name, uint8_t* pByte)
 {
 	PROFILE_FUNC();
 
@@ -2502,8 +2494,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint8
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, char values[])
+void CvTaggedSaveFormatWrapper::Read(const char* name, int count, int8_t values[])
 {
 	PROFILE_FUNC();
 
@@ -2534,8 +2525,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, uint8_t values[])
+void CvTaggedSaveFormatWrapper::Read(const char* name, int count, uint8_t values[])
 {
 	PROFILE_FUNC();
 
@@ -2566,8 +2556,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, bool *pBool)
+void CvTaggedSaveFormatWrapper::Read(const char* name, bool* pBool)
 {
 	PROFILE_FUNC();
 
@@ -2589,8 +2578,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, bool 
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, bool values[], bool bAllowTruncation)
+void CvTaggedSaveFormatWrapper::Read(const char* name, int count, bool values[], bool bAllowTruncation)
 {
 	PROFILE_FUNC();
 
@@ -2632,8 +2620,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, short	*s)
+void CvTaggedSaveFormatWrapper::Read(const char* name, int16_t* s)
 {
 	PROFILE_FUNC();
 
@@ -2655,8 +2642,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, short
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint16_t* s)
+void CvTaggedSaveFormatWrapper::Read(const char* name, uint16_t* s)
 {
 	PROFILE_FUNC();
 
@@ -2678,8 +2664,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint1
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, short values[])
+void CvTaggedSaveFormatWrapper::Read(const char* name, int count, int16_t values[])
 {
 	PROFILE_FUNC();
 
@@ -2710,8 +2695,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, uint16_t values[])
+void CvTaggedSaveFormatWrapper::Read(const char* name, int count, uint16_t values[])
 {
 	PROFILE_FUNC();
 
@@ -2742,8 +2726,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int* i)
+void CvTaggedSaveFormatWrapper::Read(const char* name, int32_t* i)
 {
 	PROFILE_FUNC();
 
@@ -2765,8 +2748,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int* 
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint32_t* i)
+void CvTaggedSaveFormatWrapper::Read(const char* name, uint32_t* i)
 {
 	PROFILE_FUNC();
 
@@ -2788,8 +2770,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, uint3
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, int values[])
+void CvTaggedSaveFormatWrapper::Read(const char* name, int count, int32_t values[])
 {
 	PROFILE_FUNC();
 
@@ -2822,8 +2803,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, uint32_t values[])
+void CvTaggedSaveFormatWrapper::Read(const char* name, int count, uint32_t values[])
 {
 	PROFILE_FUNC();
 
@@ -2853,8 +2833,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 	}
 }
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, long* l)
+void CvTaggedSaveFormatWrapper::Read(const char* name, long* l)
 {
 	PROFILE_FUNC();
 
@@ -2876,8 +2855,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, long*
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, unsigned long* l)
+void CvTaggedSaveFormatWrapper::Read(const char* name, unsigned long* l)
 {
 	PROFILE_FUNC();
 
@@ -2899,8 +2877,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, unsig
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, long values[])
+void CvTaggedSaveFormatWrapper::Read(const char* name, int count, long values[])
 {
 	PROFILE_FUNC();
 
@@ -2931,8 +2908,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, unsigned long values[])
+void CvTaggedSaveFormatWrapper::Read(const char* name, int count, unsigned long values[])
 {
 	PROFILE_FUNC();
 
@@ -2964,8 +2940,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, float* value)
+void CvTaggedSaveFormatWrapper::Read(const char* name, float* value)
 {
 	PROFILE_FUNC();
 
@@ -2987,8 +2962,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, float
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, float values[])
+void CvTaggedSaveFormatWrapper::Read(const char* name, int count, float values[])
 {
 	PROFILE_FUNC();
 
@@ -3020,8 +2994,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, double* value)
+void CvTaggedSaveFormatWrapper::Read(const char* name, double* value)
 {
 	PROFILE_FUNC();
 
@@ -3043,8 +3016,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, doubl
 }
 
 
-void
-CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int count, double values[])
+void CvTaggedSaveFormatWrapper::Read(const char* name, int count, double values[])
 {
 	PROFILE_FUNC();
 
@@ -3076,8 +3048,7 @@ CvTaggedSaveFormatWrapper::Read(const char* name, int& idHint, int& idSeq, int c
 
 
 //	The following methods must be used for entities that correspond to class enums
-void
-CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int* value, bool allowMissing)
+void CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, RemappedClassType classType, int* value, bool allowMissing)
 {
 	PROFILE_FUNC();
 
@@ -3111,8 +3082,7 @@ CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, int& idHint, int& idS
 }
 
 //	The following methods must be used for entities that correspond to class enums
-void
-CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, int& idHint, int& idSeq, RemappedClassType classType, short* value, bool allowMissing)
+void CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, RemappedClassType classType, int16_t* value, bool allowMissing)
 {
 	PROFILE_FUNC();
 
@@ -3135,7 +3105,7 @@ CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, int& idHint, int& idS
 			}
 			else
 			{
-				*value = (short)getNewClassEnumValue(classType, entry.value, allowMissing);
+				*value = (int16_t)getNewClassEnumValue(classType, entry.value, allowMissing);
 			}
 		}
 	}
@@ -3150,8 +3120,7 @@ CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, int& idHint, int& idS
 //	array used to be saved as an uninterpretted array but is now handled
 //	as a class array (if the save has a raw array ids are ASSUMED to be
 //	unchanged and the actual saved element count must be <= class enum array size)
-void
-CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, int values[], bool allowMissing, bool allowRawArray)
+void CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, RemappedClassType classType, int count, int values[], bool allowMissing, bool allowRawArray)
 {
 	PROFILE_FUNC();
 
@@ -3190,7 +3159,7 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 					//	actually instantiated they will be present (but are ignorable if we are right about the 0/-1/MIN_INT
 					//	defaulting which is the 'risky' part - should perhaps take an extra argument to specify the
 					//	not-referenced default)
-					int currentValue = arrayBuffer[i];
+					const int currentValue = arrayBuffer[i];
 					if (info.m_id == -1 && currentValue != 0 && currentValue != -1 && currentValue != MIN_INT)
 					{
 						//	Instantiated object uses class no longer defined - game is not save compatible
@@ -3228,8 +3197,7 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 	}
 }
 
-void
-CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, bool values[], bool allowMissing, bool allowRawArray)
+void CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, RemappedClassType classType, int count, bool values[], bool allowMissing, bool allowRawArray)
 {
 	PROFILE_FUNC();
 
@@ -3306,8 +3274,7 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 }
 
 //	The following are for arrays whose index is a class enum value and value is another class enum value
-void
-CvTaggedSaveFormatWrapper::ReadClassArrayOfClassEnum(const char* name, int& idHint, int& idSeq, RemappedClassType indexClassType, RemappedClassType valueClassType, int count, int values[])
+void CvTaggedSaveFormatWrapper::ReadClassArrayOfClassEnum(const char* name, RemappedClassType indexClassType, RemappedClassType valueClassType, int count, int values[])
 {
 	PROFILE_FUNC();
 
@@ -3361,8 +3328,7 @@ CvTaggedSaveFormatWrapper::ReadClassArrayOfClassEnum(const char* name, int& idHi
 }
 
 //	The following methods must be used for entities that correspond to class enums
-void
-CvTaggedSaveFormatWrapper::ReadClassEnumArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, short values[], bool allowMissing)
+void CvTaggedSaveFormatWrapper::ReadClassEnumArray(const char* name, RemappedClassType classType, int count, int16_t values[], bool allowMissing)
 {
 	PROFILE_FUNC();
 
@@ -3393,7 +3359,7 @@ CvTaggedSaveFormatWrapper::ReadClassEnumArray(const char* name, int& idHint, int
 			{
 				if ( values[i] != -1 )
 				{
-					values[i] = (short)getNewClassEnumValue(classType, values[i], allowMissing);
+					values[i] = (int16_t)getNewClassEnumValue(classType, values[i], allowMissing);
 				}
 			}
 		}
@@ -3405,8 +3371,7 @@ CvTaggedSaveFormatWrapper::ReadClassEnumArray(const char* name, int& idHint, int
 }
 
 //	The following methods must be used for entities that correspond to class enums
-void
-CvTaggedSaveFormatWrapper::ReadClassEnumArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, int values[], bool allowMissing)
+void CvTaggedSaveFormatWrapper::ReadClassEnumArray(const char* name, RemappedClassType classType, int count, int values[], bool allowMissing)
 {
 	PROFILE_FUNC();
 
@@ -3448,8 +3413,7 @@ CvTaggedSaveFormatWrapper::ReadClassEnumArray(const char* name, int& idHint, int
 	}
 }
 
-void
-CvTaggedSaveFormatWrapper::ReadStartObject(const char* name, int& idHint, int& idSeq)
+void CvTaggedSaveFormatWrapper::ReadStartObject(const char* name)
 {
 	PROFILE_FUNC();
 
@@ -3466,8 +3430,7 @@ CvTaggedSaveFormatWrapper::ReadStartObject(const char* name, int& idHint, int& i
 	}
 }
 
-void
-CvTaggedSaveFormatWrapper::ReadEndObject()
+void CvTaggedSaveFormatWrapper::ReadEndObject()
 {
 	PROFILE_FUNC();
 
@@ -3591,17 +3554,15 @@ CvTaggedSaveFormatWrapper::Expect(const char* name, SaveValueType type)
 	}
 }
 
-void
-CvTaggedSaveFormatWrapper::ConsumeBytes(int numBytes)
+void CvTaggedSaveFormatWrapper::ConsumeBytes(int numBytes) const
 {
 	PROFILE_FUNC();
 
 	uint8_t	buffer[512];
-	int		readSize;
 
 	while(numBytes > 0)
 	{
-		readSize = std::min(numBytes, (int)sizeof(buffer));
+		const int readSize = std::min(numBytes, (int)sizeof(buffer));
 
 		m_stream->Read(readSize, buffer);
 		numBytes -= readSize;
@@ -3609,7 +3570,7 @@ CvTaggedSaveFormatWrapper::ConsumeBytes(int numBytes)
 }
 
 void
-CvTaggedSaveFormatWrapper::SkipElement(const char* name, int& idHint, int& idSeq, SaveValueType saveType)
+CvTaggedSaveFormatWrapper::SkipElement(const char* name, SaveValueType saveType)
 {
 	PROFILE_FUNC();
 
