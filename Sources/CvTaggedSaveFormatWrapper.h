@@ -11,10 +11,9 @@
 //	Forward declarations
 class DictionaryEntry;
 
-//	Class types we know how to remap on load (so that
-//	if new classes of this type are added the load still ties up the old
-//	instances correctly
-//	Note - if new types need to eb added only add to the END of this enum
+//	Class types we know how to remap on load (so that if new types of this
+//	class are added the load still ties up the old instances correctly)
+//	Note - only add to the END of this enum
 typedef enum
 {
 	REMAPPED_CLASS_TYPE_NONE = -1,
@@ -134,12 +133,11 @@ public:
 		return m_useTaggedFormat;
 	}
 
-	//	Call this to release memory and push any warnings to the UI after a load/save
-	//	completes
+	//	Call this to release memory and push any warnings to the UI after a load/save completes
 	void		close();
 
 	//	How many members of a given class type were present at save time?
-	int			getNumClassEnumValues(RemappedClassType classType);
+	int			getNumClassEnumValues(RemappedClassType classType) const;
 	//	Translate explicitly from an old enum value to the current
 	int			getNewClassEnumValue(RemappedClassType classType, int oldValue, bool allowMissing = false);
 
@@ -161,8 +159,7 @@ public:
 	//	The following are for arrays whose index is a class enum value and value is another class enum value
 	void		WriteClassArrayOfClassEnum(const char* name, int& idHint, int& idSeq, RemappedClassType indexClassType, RemappedClassType valueClassType, int count, const int values[]);
 
-	//	The following methods are direct replacements for the write calls
-	//	in the underlying FDataStreamBase
+	//	The following methods are direct replacements for the write calls in the underlying FDataStreamBase
 	void		Write(const char* name, int& idHint, int& idSeq, char value);
 	void		Write(const char* name, int& idHint, int& idSeq, uint8_t value);
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const char values[]);
@@ -199,61 +196,63 @@ public:
 	void		WriteString(const char* name, int& idHint, int& idSeq, int count, std::string values[]);
 	void		WriteString(const char* name, int& idHint, int& idSeq, int count, std::wstring values[]);
 
-	void		ReadStartObject(const char* name, int& idHint, int& idSeq);
-	void		ReadEndObject();
+	void ReadStartObject(const char* name);
+	void ReadEndObject();
 
 	//	The following methods must be used for entities that correspond to class enums
-	void		ReadClassEnum(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int* value, bool allowMissing = false);
-	void		ReadClassEnum(const char* name, int& idHint, int& idSeq, RemappedClassType classType, short* value, bool allowMissing = false);
+	void ReadClassEnum(const char* name, RemappedClassType classType, int* value, bool allowMissing = false);
+	void ReadClassEnum(const char* name, RemappedClassType classType, int16_t* value, bool allowMissing = false);
 	//	The following are for arrays whose index is a class enum value
-	void		ReadClassArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, int values[], bool allowMissing = false, bool allowRawArray = false);
-	void		ReadClassArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, bool values[], bool allowMissing = false, bool allowRawArray = false);
+	void ReadClassArray(const char* name, RemappedClassType classType, int count, int values[], bool allowMissing = false, bool allowRawArray = false);
+	void ReadClassArray(const char* name, RemappedClassType classType, int count, bool values[], bool allowMissing = false, bool allowRawArray = false);
 	//	Array whose values are class enum entities
-	void		ReadClassEnumArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, short values[], bool allowMissing = false);
-	void		ReadClassEnumArray(const char* name, int& idHint, int& idSeq, RemappedClassType classType, int count, int values[], bool allowMissing = false);
+	void ReadClassEnumArray(const char* name, RemappedClassType classType, int count, int16_t values[], bool allowMissing = false);
+	void ReadClassEnumArray(const char* name, RemappedClassType classType, int count, int values[], bool allowMissing = false);
 	//	The following are for arrays whose index is a class enum value and value is another class enum value
-	void		ReadClassArrayOfClassEnum(const char* name, int& idHint, int& idSeq, RemappedClassType indexClassType, RemappedClassType valueClassType, int count, int values[]);
+	void ReadClassArrayOfClassEnum(const char* name, RemappedClassType indexClassType, RemappedClassType valueClassType, int count, int values[]);
 
-	//	The following methods are direct replacements for the read calls
-	//	in the underlying FDataStreamBase
-	void		ReadString(const char* name, int& idHint, int& idSeq, char **szName);
-	void		ReadString(const char* name, int& idHint, int& idSeq, wchar_t **szName);
-	void		ReadString(const char* name, int& idHint, int& idSeq, std::string& szName);
-	void		ReadString(const char* name, int& idHint, int& idSeq, std::wstring& szName);
-	void		ReadString(const char* name, int& idHint, int& idSeq, int count, std::string values[]);
-	void		ReadString(const char* name, int& idHint, int& idSeq, int count, std::wstring values[]);
+	//	The following methods are direct replacements for the read calls in the underlying FDataStreamBase
+	void ReadString(const char* name, char** szName);
+	void ReadString(const char* name, wchar_t** szName);
+	void ReadString(const char* name, std::string& szName);
+	void ReadString(const char* name, std::wstring& szName);
+	void ReadString(const char* name, int count, std::string values[]);
+	void ReadString(const char* name, int count, std::wstring values[]);
 
-	void		Read(const char* name, int& idHint, int& idSeq, char *);
-	void		Read(const char* name, int& idHint, int& idSeq, uint8_t *);
-	void		Read(const char* name, int& idHint, int& idSeq, int count, char values[]);
-	void		Read(const char* name, int& idHint, int& idSeq, int count, uint8_t values[]);
-	void		Read(const char* name, int& idHint, int& idSeq, bool *);
-	void		Read(const char* name, int& idHint, int& idSeq, int count, bool values[], bool bAllowTruncation = false);
-	void		Read(const char* name, int& idHint, int& idSeq, short* s);
-	void		Read(const char* name, int& idHint, int& idSeq, uint16_t* s) ;
-	void		Read(const char* name, int& idHint, int& idSeq, int count, short values[]);
-	void		Read(const char* name, int& idHint, int& idSeq, int count, uint16_t values[]);
-	void		Read(const char* name, int& idHint, int& idSeq, int* i);
-	void		Read(const char* name, int& idHint, int& idSeq, uint32_t* i);
-	void 		Read(const char* name, int& idHint, int& idSeq, int count, int values[]);
-	void 		Read(const char* name, int& idHint, int& idSeq, int count, uint32_t values[]);
+	void Read(const char* name, int8_t*);
+	void Read(const char* name, uint8_t*);
+	void Read(const char* name, int count, int8_t values[]);
+	void Read(const char* name, int count, uint8_t values[]);
 
-	void		Read(const char* name, int& idHint, int& idSeq, long* l);
-	void		Read(const char* name, int& idHint, int& idSeq, unsigned long* l) ;
-	void 		Read(const char* name, int& idHint, int& idSeq, int count, long values[]);
-	void 		Read(const char* name, int& idHint, int& idSeq, int count, unsigned long values[]) ;
+	void Read(const char* name, bool*);
+	void Read(const char* name, int count, bool values[], bool bAllowTruncation = false);
 
-	void		Read(const char* name, int& idHint, int& idSeq, float* value);
-	void		Read(const char* name, int& idHint, int& idSeq, int count, float values[]);
+	void Read(const char* name, int16_t* s);
+	void Read(const char* name, uint16_t* s);
+	void Read(const char* name, int count, int16_t values[]);
+	void Read(const char* name, int count, uint16_t values[]);
 
-	void		Read(const char* name, int& idHint, int& idSeq, double* value);
-	void		Read(const char* name, int& idHint, int& idSeq, int count, double values[]);
+	void Read(const char* name, int32_t* i);
+	void Read(const char* name, uint32_t* i);
+	void Read(const char* name, int count, int32_t values[]);
+	void Read(const char* name, int count, uint32_t values[]);
 
-	void		SkipElement(const char* name, int& idHint, int& idSeq, SaveValueType saveType);
+	void Read(const char* name, long* l);
+	void Read(const char* name, unsigned long* l);
+	void Read(const char* name, int count, long values[]);
+	void Read(const char* name, int count, unsigned long values[]);
+
+	void Read(const char* name, float* value);
+	void Read(const char* name, int count, float values[]);
+
+	void Read(const char* name, double* value);
+	void Read(const char* name, int count, double values[]);
+
+	void SkipElement(const char* name, SaveValueType saveType);
 
 	//	Methods to allow warnings and errors associated with the load/save to be reported
-	void		warning(const char* msg);
-	void		error(const char* msg);	//	Will terminate the app with a thrown exceptionm after displaying the message
+	void warning(const char* msg);
+	void error(const char* msg);	//	Will terminate the app with a thrown exceptionm after displaying the message
 
 private:
 	CvTaggedSaveFormatWrapper();
@@ -265,7 +264,7 @@ private:
 	void		WriteClassMappingTables();
 	bool		Expect(const char* name, SaveValueType type);
 	void		SkipElement();
-	void		ConsumeBytes(int numBytes);
+	void		ConsumeBytes(int numBytes) const;
 	void		ReadDictionaryElement();
 	void		ReadClassMap();
 	void		ReadObjectDelimiter();
@@ -311,32 +310,32 @@ private:
 #define WRAPPER_WRITE_OBJECT_START(wrapper)	{ static int _idHint; static int _saveSeq = -1; (wrapper).WriteStartObject(__FUNCTION__, _idHint, _saveSeq); }
 #define WRAPPER_WRITE_OBJECT_END(wrapper)	(wrapper).WriteEndObject()
 
-#define WRAPPER_READ(wrapper,className,name)	{ static int _idHint; static int _saveSeq = -1; (wrapper).Read(className "::" #name, _idHint, _saveSeq,name); }
-#define WRAPPER_READ_DECORATED(wrapper,className,name,saveName)	{ static int _idHint; static int _saveSeq = -1; (wrapper).Read(className "::" saveName, _idHint, _saveSeq,name); }
-#define WRAPPER_READ_ARRAY(wrapper,className,count,name)	{ static int _idHint; static int _saveSeq = -1; (wrapper).Read(className "::" #name, _idHint, _saveSeq,count,name); }
-#define WRAPPER_READ_ARRAY_ALLOW_TRUNCATE(wrapper,className,count,name)	{ static int _idHint; static int _saveSeq = -1; (wrapper).Read(className "::" #name, _idHint, _saveSeq,count,name,true); }
-#define WRAPPER_READ_ARRAY_DECORATED(wrapper,className,count,name,saveName)	{ static int _idHint; static int _saveSeq = -1; (wrapper).Read(className "::" saveName, _idHint, _saveSeq,count,name); }
-#define WRAPPER_READ_STRING(wrapper,className,name)	{ static int _idHint; static int _saveSeq = -1; (wrapper).ReadString(className "::" #name, _idHint, _saveSeq,name); }
-#define WRAPPER_READ_STRING_DECORATED(wrapper,className,name,saveName)	{ static int _idHint; static int _saveSeq = -1; (wrapper).ReadString(className "::" saveName, _idHint, _saveSeq,name); }
-#define WRAPPER_READ_STRING_ARRAY(wrapper,className,count,name)	{ static int _idHint; static int _saveSeq = -1; (wrapper).ReadString(className "::" #name, _idHint, _saveSeq,count,name); }
-#define WRAPPER_READ_CLASS_ENUM(wrapper,className,classType,name)	{ static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassEnum(className "::" #name, _idHint, _saveSeq,classType,name); }
-#define WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper,className,classType,name)	{ static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassEnum(className "::" #name, _idHint, _saveSeq,classType,name,true); }
-#define WRAPPER_READ_CLASS_ENUM_DECORATED(wrapper,className,classType,name,saveName)	{ static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassEnum(className "::" saveName, _idHint, _saveSeq,classType,name); }
-#define WRAPPER_READ_CLASS_ENUM_DECORATED_ALLOW_MISSING(wrapper,className,classType,name,saveName)	{ static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassEnum(className "::" saveName, _idHint, _saveSeq,classType,name,true); }
-#define WRAPPER_READ_CLASS_ARRAY(wrapper,className,classType,count,name)	{ static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassArray(className "::" #name, _idHint, _saveSeq,classType,count,name); }
-#define WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper,className,classType,count,name,saveName)	{ static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassArray(className "::" saveName, _idHint, _saveSeq,classType,count,name); }
-#define WRAPPER_READ_CLASS_ARRAY_ALLOW_MISSING(wrapper,className,classType,count,name)	{ static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassArray(className "::" #name, _idHint, _saveSeq,classType,count,name,true); }
-#define WRAPPER_READ_CLASS_ARRAY_OF_CLASS_ENUM(wrapper,className,classType,valueClassType,count,name)	{ static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassArrayOfClassEnum(className "::" #name, _idHint, _saveSeq,classType,valueClassType,count,name); }
-#define WRAPPER_READ_CLASS_ENUM_ARRAY(wrapper,className,classType,count,name) { static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassEnumArray(className "::" #name, _idHint, _saveSeq, classType,count,name); }
-#define WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper,className,classType,count,name) { static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassEnumArray(className "::" #name, _idHint, _saveSeq, classType,count,name,true); }
+#define WRAPPER_READ(wrapper,className,name)															wrapper.Read(className "::" #name, name);
+#define WRAPPER_READ_DECORATED(wrapper,className,name,saveName)											wrapper.Read(className "::" saveName, name);
+#define WRAPPER_READ_ARRAY(wrapper,className,count,name)												wrapper.Read(className "::" #name, count, name);
+#define WRAPPER_READ_ARRAY_ALLOW_TRUNCATE(wrapper,className,count,name)									wrapper.Read(className "::" #name, count, name, true);
+#define WRAPPER_READ_ARRAY_DECORATED(wrapper,className,count,name,saveName)								wrapper.Read(className "::" saveName, count, name);
+#define WRAPPER_READ_STRING(wrapper,className,name)														wrapper.ReadString(className "::" #name, name);
+#define WRAPPER_READ_STRING_DECORATED(wrapper,className,name,saveName)									wrapper.ReadString(className "::" saveName, name);
+#define WRAPPER_READ_STRING_ARRAY(wrapper,className,count,name)											wrapper.ReadString(className "::" #name, count, name);
+#define WRAPPER_READ_CLASS_ENUM(wrapper,className,classType,name)										wrapper.ReadClassEnum(className "::" #name, classType, name);
+#define WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper,className,classType,name)							wrapper.ReadClassEnum(className "::" #name, classType, name, true);
+#define WRAPPER_READ_CLASS_ENUM_DECORATED(wrapper,className,classType,name,saveName)					wrapper.ReadClassEnum(className "::" saveName, classType, name);
+#define WRAPPER_READ_CLASS_ENUM_DECORATED_ALLOW_MISSING(wrapper,className,classType,name,saveName)		wrapper.ReadClassEnum(className "::" saveName, classType, name, true);
+#define WRAPPER_READ_CLASS_ARRAY(wrapper,className,classType,count,name)								wrapper.ReadClassArray(className "::" #name, classType, count, name);
+#define WRAPPER_READ_CLASS_ARRAY_DECORATED(wrapper,className,classType,count,name,saveName)				wrapper.ReadClassArray(className "::" saveName, classType, count, name);
+#define WRAPPER_READ_CLASS_ARRAY_ALLOW_MISSING(wrapper,className,classType,count,name)					wrapper.ReadClassArray(className "::" #name, classType, count, name, true);
+#define WRAPPER_READ_CLASS_ARRAY_OF_CLASS_ENUM(wrapper,className,classType,valueClassType,count,name)	wrapper.ReadClassArrayOfClassEnum(className "::" #name, classType, valueClassType, count, name);
+#define WRAPPER_READ_CLASS_ENUM_ARRAY(wrapper,className,classType,count,name)							wrapper.ReadClassEnumArray(className "::" #name, classType, count, name);
+#define WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper,className,classType,count,name)				wrapper.ReadClassEnumArray(className "::" #name, classType, count, name, true);
 
-#define	WRAPPER_SKIP_ELEMENT(wrapper,className,name,type)	{ static int _idHint; static int _saveSeq = -1; (wrapper).SkipElement(className "::" #name, _idHint, _saveSeq, type); }
+#define	WRAPPER_SKIP_ELEMENT(wrapper,className,name,type)												wrapper.SkipElement(className "::" #name, type);
 
-#define WRAPPER_READ_OBJECT_START(wrapper)	{ static int _idHint; static int _saveSeq = -1; (wrapper).ReadStartObject(__FUNCTION__, _idHint, _saveSeq ); }
-#define WRAPPER_READ_OBJECT_END(wrapper)	(wrapper).ReadEndObject()
+#define WRAPPER_READ_OBJECT_START(wrapper)																wrapper.ReadStartObject(__FUNCTION__);
+#define WRAPPER_READ_OBJECT_END(wrapper)																wrapper.ReadEndObject();
 
 //	Extra macros used only in order to support older saves wheer things that used to be simple values are now enums
-#define WRAPPER_READ_OPTIONAL_CLASS_ARRAY(wrapper,className,classType,count,name)	{ static int _idHint; static int _saveSeq = -1; (wrapper).ReadClassArray(className "::" #name, _idHint, _saveSeq,classType,count,name,true,true); }
+#define WRAPPER_READ_OPTIONAL_CLASS_ARRAY(wrapper,className,classType,count,name)						wrapper.ReadClassArray(className "::" #name, classType, count, name, true, true);
 
 #endif
 
