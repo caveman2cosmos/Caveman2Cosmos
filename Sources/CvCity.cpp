@@ -6846,8 +6846,12 @@ CvPlot* CvCity::plot() const
 	return GC.getMap().plotSorenINLINE(getX(), getY());
 }
 
-CvPlot* CvCity::plotExternal() const
+
+/*DllExport*/ CvPlot* CvCity::plotExternal() const
 {
+#ifdef _DEBUG
+	OutputDebugString("exe is asking for the plot of this city\n");
+#endif
 	FAssert(isInViewport());
 	return GC.getMap().plotSorenINLINE(getX(), getY());
 }

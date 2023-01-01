@@ -3322,11 +3322,15 @@ CvPlot* CvSelectionGroup::plot() const
 	return pHeadUnit ? pHeadUnit->plot() : NULL;
 }
 
-CvPlot* CvSelectionGroup::plotExternal() const
+
+/*DllExport*/ CvPlot* CvSelectionGroup::plotExternal() const
 {
+#ifdef _DEBUG
+	OutputDebugString("exe is asking for the plot of this group\n");
+#endif
 	CvPlot* pResult = plot();
 
-	FAssert(pResult == NULL || pResult->isInViewport());
+	FAssert(!pResult || pResult->isInViewport());
 
 	return pResult;
 }

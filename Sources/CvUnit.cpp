@@ -16175,8 +16175,12 @@ CvPlot* CvUnit::plot() const
 	return GC.getMap().plotSorenINLINE(getX(), getY());
 }
 
-CvPlot* CvUnit::plotExternal() const
+
+/*DllExport*/ CvPlot* CvUnit::plotExternal() const
 {
+#ifdef _DEBUG
+	OutputDebugString("exe is asking for the plot of this unit\n");
+#endif
 	FAssertMsg(isInViewport(), "Can't get plot of unit that is not in the viewport");
 	FAssertMsg(!isUsingDummyEntities(), "Can't get plot of unit that is using dummy entities");
 	return GC.getMap().plotSorenINLINE(getX(), getY());
