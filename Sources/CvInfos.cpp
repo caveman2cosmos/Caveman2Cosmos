@@ -4813,8 +4813,6 @@ void CvPromotionInfo::getDataMembers(CvInfoUtil& util)
 
 bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 {
-	OutputDebugString("Reading PromotionInfo");
-
 	CvInfoUtil(this).readXml(pXML);
 
 	CvString szTextVal;
@@ -12552,7 +12550,9 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 		m_iNumTurnIncrements = pXML->GetXmlChildrenNumber(L"GameTurnInfo");
 		char szLog[1000];
 		sprintf(szLog, ":: %i", m_iNumTurnIncrements);
+#ifdef _DEBUG
 		OutputDebugString(szLog);
+#endif
 		if (pXML->TryMoveToXmlFirstChild(L"GameTurnInfo"))
 		{
 			allocateGameTurnInfos(getNumTurnIncrements());
@@ -13436,6 +13436,7 @@ bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 	if (m_szType.empty())
 	{
 		OutputDebugStringW(pXML->GetXmlTagName());
+		OutputDebugString("\n");
 		FErrorMsg("error");
 	}
 	//shouldHaveType = false;
@@ -24613,22 +24614,15 @@ void CvArtInfoMovie::copyNonDefaults(const CvArtInfoMovie* pClassInfo)
 
 bool CvArtInfoBonus::read(CvXMLLoadUtility* pXML)
 {
-	OutputDebugString("ArtInfoBonus Start Reading");
-
 	if (!CvArtInfoScalableAsset::read(pXML))
 	{
 		return false;
 	}
-
-	OutputDebugString("ArtInfoBonus Proceed Reading");
-
 	CvString szTextVal;
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"SHADERNIF");
 	setShaderNIF(szTextVal);
 
 	pXML->GetChildXmlValByName(&m_iFontButtonIndex, L"FontButtonIndex");
-
-	OutputDebugString("ArtInfoBonus Finish Reading");
 
 	return true;
 }

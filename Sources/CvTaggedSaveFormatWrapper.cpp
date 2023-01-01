@@ -3448,43 +3448,41 @@ CvTaggedSaveFormatWrapper::ReadClassEnumArray(const char* name, int& idHint, int
 	}
 }
 
-void
-CvTaggedSaveFormatWrapper::ReadStartObject(const char* name, int& idHint, int& idSeq)
+void CvTaggedSaveFormatWrapper::ReadStartObject(const char* name, int& idHint, int& idSeq)
 {
 	PROFILE_FUNC();
-
-	FAssert(m_stream != NULL);
+	FAssert(m_stream);
 
 	m_inUse = true;
-	if ( m_useTaggedFormat )
+	if (m_useTaggedFormat)
 	{
 		m_nestingDepth++;
-
+#ifdef _DEBUG
 		OutputDebugString(CvString::format("ReadStartObject for %s, depth now %d\n", name, m_nestingDepth).c_str());
-
+#endif
 		Expect(name, idHint, idSeq, (SaveValueType)SAVE_ELEMENT_ID_OBJECT_DELIMITER);
 	}
 }
 
-void
-CvTaggedSaveFormatWrapper::ReadEndObject()
+void CvTaggedSaveFormatWrapper::ReadEndObject()
 {
-	int dummy;
 
 	PROFILE_FUNC();
+	FAssert(m_stream);
 
-	FAssert(m_stream != NULL);
-
-	if ( m_useTaggedFormat )
+	if (m_useTaggedFormat)
 	{
 		FAssert(m_nestingDepth > 0);
 
 		m_nestingDepth--;
-
-		//OutputDebugString(CvString::format("ReadStartEnd, depth now %d\n", m_nestingDepth).c_str());
-
-		//	Consume until the stream also exits this object
-		while( !Expect(NULL, dummy, dummy, (SaveValueType)SAVE_ELEMENT_ID_OBJECT_DELIMITER) )
+/*
+#ifdef _DEBUG
+		OutputDebugString(CvString::format("ReadStartEnd, depth now %d\n", m_nestingDepth).c_str());
+#endif
+*/
+		// Consume until the stream also exits this object
+		int dummy;
+		while (!Expect(NULL, dummy, dummy, (SaveValueType)SAVE_ELEMENT_ID_OBJECT_DELIMITER))
 		{
 			SkipElement();
 		}

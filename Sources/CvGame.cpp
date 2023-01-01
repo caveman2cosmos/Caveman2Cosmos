@@ -2628,11 +2628,11 @@ void CvGame::selectGroup(CvUnit* pUnit, bool bShift, bool bCtrl, bool bAlt) cons
 
 void CvGame::selectAll(CvPlot* pPlot) const
 {
-	if (pPlot != NULL)
+	if (pPlot)
 	{
-		CvUnit* pCenterUnit = pPlot->getDebugCenterUnit();
+		CvUnit* pCenterUnit = pPlot->getCenterUnit(GC.getGame().isDebugMode());
 
-		if (pCenterUnit != NULL && pCenterUnit->getOwner() == getActivePlayer())
+		if (pCenterUnit && pCenterUnit->getOwner() == getActivePlayer())
 		{
 			gDLL->getInterfaceIFace()->selectGroup(pCenterUnit, false, false, true);
 		}

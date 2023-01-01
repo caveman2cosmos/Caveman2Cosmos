@@ -1683,7 +1683,6 @@ bool CvCity::canBeSelected() const
 /*DllExport*/ void CvCity::updateSelectedCity(bool bTestProduction)
 {
 	OutputDebugString(CvString::format("Exe updating selected city (bTestProduction=%d)\n", (int)bTestProduction).c_str());
-
 	algo::for_each(plots(), bind(CvPlot::updateShowCitySymbols, _1));
 }
 

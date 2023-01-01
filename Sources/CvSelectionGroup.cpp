@@ -1757,7 +1757,7 @@ bool CvSelectionGroup::startMission()
 									{
 										if (iValidShadowUnits == 1)
 										{
-											pLoopUnit->setShadowUnit(pShadowPlot->getCenterUnit());
+											pLoopUnit->setShadowUnit(pShadowPlot->getCenterUnit(false));
 										}
 										else
 										{
@@ -2830,7 +2830,9 @@ bool CvSelectionGroup::canEnterPlot(const CvPlot* pPlot, bool bAttack) const
 }
 /*DllExport*/ bool CvSelectionGroup::canMoveInto(CvPlot* pPlot, bool bAttack)
 {
+#ifdef _DEBUG
 	OutputDebugString("exe is asking if group can move into a plot\n");
+#endif
 	return canEnterPlot(pPlot, bAttack);
 }
 
@@ -2847,7 +2849,9 @@ bool CvSelectionGroup::canEnterOrAttackPlot(const CvPlot* pPlot, bool bDeclareWa
 }
 /*DllExport*/ bool CvSelectionGroup::canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar)
 {
+#ifdef _DEBUG
 	OutputDebugString("exe is asking if group can move into or attack a plot\n");
+#endif
 	return canEnterOrAttackPlot(pPlot, bDeclareWar);
 }
 
@@ -5283,6 +5287,9 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 //------------------------------------------------------------------------------------------------
 /*DllExport*/ int CvSelectionGroup::getUnitIndex(CvUnit* pUnit, int maxIndex /* = -1 */) const
 {
+#ifdef _DEBUG
+	OutputDebugString("exe is asking for a units' index within this group\n");
+#endif
 	FAssertMsg(this != NULL, "CTD incoming");
 	int iIndex = 0;
 

@@ -398,7 +398,6 @@ public:
 	bool isOwned() const;
 	bool isNPC() const;
 	bool isHominid() const;
-	bool isRevealedBarbarian() const;
 
 	DllExport bool isActiveVisible(bool bDebug) const;
 
@@ -819,7 +818,8 @@ public:
 
 	DllExport CvUnit* getCenterUnit() const;
 	DllExport CvUnit* getDebugCenterUnit() const;
-	void setCenterUnit(CvUnit* pNewValue);
+
+	CvUnit* getCenterUnit(const bool bForced) const;
 
 	int getInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible) const;
 	bool isSpotterInSight(TeamTypes eTeam, InvisibleTypes eInvisible) const;

@@ -3239,7 +3239,9 @@ void CvPlayer::updateHuman()
 
 /*DllExport*/ bool CvPlayer::isBarbarian() const
 {
+#ifdef _DEBUG
 	OutputDebugString(CvString::format("exe is asking if player (%d) is barbarian\n", m_eID).c_str());
+#endif
 	return getID() == BARBARIAN_PLAYER;
 }
 
@@ -19047,22 +19049,25 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 		std::vector<CvUnit*> plotlessUnits;
 
-		foreach_(CvSelectionGroup* pLoopGroup, groups())
+		foreach_(CvSelectionGroup* groupX, groups())
 		{
-			OutputDebugString(CvString::format("Check group %d:\n", pLoopGroup->getID()).c_str());
+#ifdef _DEBUG
+			OutputDebugString(CvString::format("Check group %d:\n", groupX->getID()).c_str());
+#endif
 			unitsPresent.clear();
-			foreach_(CvUnit* pUnit, pLoopGroup->units())
+			foreach_(CvUnit* pUnit, groupX->units())
 			{
 				CvSelectionGroup* putativeGroup = pUnit->getGroup();
-
+#ifdef _DEBUG
 				OutputDebugString(CvString::format("\tUnit %d\n", pUnit->getID()).c_str());
-				if (putativeGroup != pLoopGroup)
+#endif
+				if (putativeGroup != groupX)
 				{
 					FErrorMsg("Corrupt group detected on load");
 					OutputDebugString(CvString::format("\t\tunit claims to be in group %d\n", putativeGroup->getID()).c_str());
 
 					// Try to fix it
-					pLoopGroup->removeUnit(pUnit);
+					groupX->removeUnit(pUnit);
 
 					if (!putativeGroup->containsUnit(pUnit) && !putativeGroup->addUnit(pUnit,true))
 					{
@@ -19071,32 +19076,29 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				}
 				else if (unitsPresent.find(pUnit) != unitsPresent.end())
 				{
-					pLoopGroup->removeUnit(pUnit); // Duplicate
+					FErrorMsg("Duplicate unit in group detected on load");
+					groupX->removeUnit(pUnit); // Duplicate
 				}
 				else unitsPresent.insert(std::make_pair(pUnit,true));
 
-
-				if (pUnit->plot() == NULL)
-				{
-					plotlessUnits.push_back(pUnit);
-				}
+				if (!pUnit->plot()) plotlessUnits.push_back(pUnit);
 			}
 
 			if (!isNPC())
 			{
-				pLoopGroup->validateLocations(true);
+				groupX->validateLocations(true);
 				//	Koshling - added death processing on load to clean up units that should have been
 				//	removed, but due to bugs are 'ghosting' in the save
-				pLoopGroup->doDelayedDeath();
+				groupX->doDelayedDeath();
 			}
 		}
 
 #ifdef _DEBUG
 		if (!isNPC())
 		{
-			foreach_(CvSelectionGroup* pLoopGroup, groups())
+			foreach_(CvSelectionGroup* groupX, groups())
 			{
-				pLoopGroup->validateLocations(false);
+				groupX->validateLocations(false);
 			}
 		}
 #endif

@@ -3352,36 +3352,25 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 {
 	PROFILE_FUNC();
 
-	const int numPromotionInfos = GC.getNumPromotionInfos();
+	const bool bDebugMode = GC.getGame().isDebugMode();
 
 	// if cheatmode and ctrl, display grouping info instead
 	if ((gDLL->getChtLvl() > 0) && gDLL->ctrlKey())
 	{
-		if (pPlot->isVisible(GC.getGame().getActiveTeam(), GC.getGame().isDebugMode()))
+		if (pPlot->isVisible(GC.getGame().getActiveTeam(), bDebugMode))
 		{
 			CvWString szTempString;
 
 			foreach_(const CvUnit* pHeadUnit, pPlot->units())
 			{
 				// is this unit the head of a group, not cargo, and visible?
-				if (pHeadUnit->isGroupHead() && !pHeadUnit->isCargo() && !pHeadUnit->isInvisible(GC.getGame().getActiveTeam(), GC.getGame().isDebugMode()))
+				if (pHeadUnit->isGroupHead() && !pHeadUnit->isCargo() && !pHeadUnit->isInvisible(GC.getGame().getActiveTeam(), bDebugMode))
 				{
 					// head unit name and unitai
 					szString.append(CvWString::format(SETCOLR L"%s" ENDCOLR, 255,190,0,255, pHeadUnit->getName().GetCString()));
 					szString.append(CvWString::format(L" (%d)", shortenID(pHeadUnit->getID())));
 					getUnitAIString(szTempString, pHeadUnit->AI_getUnitAIType());
 					szString.append(CvWString::format(SETCOLR L" %s " ENDCOLR, GET_PLAYER(pHeadUnit->getOwner()).getPlayerTextColorR(), GET_PLAYER(pHeadUnit->getOwner()).getPlayerTextColorG(), GET_PLAYER(pHeadUnit->getOwner()).getPlayerTextColorB(), GET_PLAYER(pHeadUnit->getOwner()).getPlayerTextColorA(), szTempString.GetCString()));
-
-					//TB Removing promotions from plot list display - they are overwhelming and it's cooler to have to send in an invisible unit to get to see the promos on another stack
-					// promotion icons
-					//for (int iPromotionIndex = 0; iPromotionIndex < numPromotionInfos; iPromotionIndex++)
-					//{
-					//	PromotionTypes ePromotion = (PromotionTypes)iPromotionIndex;
-					//	if (pHeadUnit->isHasPromotion(ePromotion))
-					//	{
-					//		szString.append(CvWString::format(L"<img=%S size=16 />", GC.getPromotionInfo(ePromotion).getButton()));
-					//	}
-					//}
 
 					// group
 					CvSelectionGroup* pHeadGroup = pHeadUnit->getGroup();
@@ -3522,23 +3511,13 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 						pHeadUnit->getCargoUnits(aCargoUnits);
 						foreach_(const CvUnit* pCargoUnit, aCargoUnits)
 						{
-							if (!pCargoUnit->isInvisible(GC.getGame().getActiveTeam(), GC.getGame().isDebugMode()))
+							if (!pCargoUnit->isInvisible(GC.getGame().getActiveTeam(), bDebugMode))
 							{
 								// name and unitai
 								szString.append(CvWString::format(SETCOLR L"\n %s" ENDCOLR, TEXT_COLOR("COLOR_ALT_HIGHLIGHT_TEXT"), pCargoUnit->getName().GetCString()));
 								szString.append(CvWString::format(L"(%d)", shortenID(pCargoUnit->getID())));
 								getUnitAIString(szTempString, pCargoUnit->AI_getUnitAIType());
 								szString.append(CvWString::format(SETCOLR L" %s " ENDCOLR, GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorR(), GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorG(), GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorB(), GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorA(), szTempString.GetCString()));
-
-								// promotion icons
-		/*						for (int iPromotionIndex = 0; iPromotionIndex < numPromotionInfos; iPromotionIndex++)
-								{
-									PromotionTypes ePromotion = (PromotionTypes)iPromotionIndex;
-									if (pCargoUnit->isHasPromotion(ePromotion))
-									{
-										szString.append(CvWString::format(L"<img=%S size=16 />", GC.getPromotionInfo(ePromotion).getButton()));
-									}
-								}*/
 							}
 						}
 
@@ -3546,7 +3525,7 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 						foreach_(const CvUnit* pUnit, pPlot->units())
 						{
 							// is this unit not head, in head's group and visible?
-							if (pUnit != pHeadUnit && pUnit->getGroupID() == pHeadUnit->getGroupID() && !pUnit->isInvisible(GC.getGame().getActiveTeam(), GC.getGame().isDebugMode()))
+							if (pUnit != pHeadUnit && pUnit->getGroupID() == pHeadUnit->getGroupID() && !pUnit->isInvisible(GC.getGame().getActiveTeam(), bDebugMode))
 							{
 								FAssertMsg(!pUnit->isCargo(), "unit is cargo but head unit is not cargo");
 								// name and unitai
@@ -3555,38 +3534,18 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 								getUnitAIString(szTempString, pUnit->AI_getUnitAIType());
 								szString.append(CvWString::format(SETCOLR L" %s " ENDCOLR, GET_PLAYER(pUnit->getOwner()).getPlayerTextColorR(), GET_PLAYER(pUnit->getOwner()).getPlayerTextColorG(), GET_PLAYER(pUnit->getOwner()).getPlayerTextColorB(), GET_PLAYER(pUnit->getOwner()).getPlayerTextColorA(), szTempString.GetCString()));
 
-								// promotion icons
-		/*						for (int iPromotionIndex = 0; iPromotionIndex < numPromotionInfos; iPromotionIndex++)
-								{
-									PromotionTypes ePromotion = (PromotionTypes)iPromotionIndex;
-									if (pUnit->isHasPromotion(ePromotion))
-									{
-										szString.append(CvWString::format(L"<img=%S size=16 />", GC.getPromotionInfo(ePromotion).getButton()));
-									}
-								}*/
-
 								// display cargo for loop unit
 								std::vector<CvUnit*> aLoopCargoUnits;
 								pUnit->getCargoUnits(aLoopCargoUnits);
 								foreach_(const CvUnit* pCargoUnit, aLoopCargoUnits)
 								{
-									if (!pCargoUnit->isInvisible(GC.getGame().getActiveTeam(), GC.getGame().isDebugMode()))
+									if (!pCargoUnit->isInvisible(GC.getGame().getActiveTeam(), bDebugMode))
 									{
 										// name and unitai
 										szString.append(CvWString::format(SETCOLR L"\n %s" ENDCOLR, TEXT_COLOR("COLOR_ALT_HIGHLIGHT_TEXT"), pCargoUnit->getName().GetCString()));
 										szString.append(CvWString::format(L"(%d)", shortenID(pCargoUnit->getID())));
 										getUnitAIString(szTempString, pCargoUnit->AI_getUnitAIType());
 										szString.append(CvWString::format(SETCOLR L" %s " ENDCOLR, GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorR(), GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorG(), GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorB(), GET_PLAYER(pCargoUnit->getOwner()).getPlayerTextColorA(), szTempString.GetCString()));
-
-										// promotion icons
-		/*								for (int iPromotionIndex = 0; iPromotionIndex < numPromotionInfos; iPromotionIndex++)
-										{
-											PromotionTypes ePromotion = (PromotionTypes)iPromotionIndex;
-											if (pCargoUnit->isHasPromotion(ePromotion))
-											{
-												szString.append(CvWString::format(L"<img=%S size=16 />", GC.getPromotionInfo(ePromotion).getButton()));
-											}
-										}*/
 									}
 								}
 							}
@@ -3765,14 +3724,14 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 	GC.getGame().getPlotUnits(pPlot, plotUnits);
 
 	int iNumVisibleUnits = 0;
-	if (pPlot->isVisible(GC.getGame().getActiveTeam(), GC.getGame().isDebugMode()))
+	if (pPlot->isVisible(GC.getGame().getActiveTeam(), bDebugMode))
 	{
-		iNumVisibleUnits = algo::count_if(pPlot->units(), !bind(&CvUnit::isInvisible, _1, GC.getGame().getActiveTeam(), GC.getGame().isDebugMode(), true));
+		iNumVisibleUnits = algo::count_if(pPlot->units(), !bind(&CvUnit::isInvisible, _1, GC.getGame().getActiveTeam(), bDebugMode, true));
 	}
 
 	if (iNumVisibleUnits > 0)
 	{
-		const CvUnit* centerUnit = pPlot->getCenterUnit();
+		const CvUnit* centerUnit = pPlot->getCenterUnit(bDebugMode);
 
 		if (centerUnit)
 		{
@@ -3785,35 +3744,35 @@ void CvGameTextMgr::setPlotListHelp(CvWStringBuffer &szString, CvPlot* pPlot, bo
 			int iCount = 0;
 			for (int iI = 0; iI < iNumVisibleUnits && iI < (int) plotUnits.size(); iI++)
 			{
-				CvUnit* pLoopUnit = plotUnits[iI];
+				CvUnit* unitX = plotUnits[iI];
 
-				if (pLoopUnit != NULL && pLoopUnit != centerUnit)
+				if (unitX && unitX != centerUnit)
 				{
-					std::map<int,PlayerUnitInfo>::iterator itr = a_units.find(PLAYER_UNIT_KEY(pLoopUnit->getOwner(), pLoopUnit->getUnitType()));
+					std::map<int,PlayerUnitInfo>::iterator itr = a_units.find(PLAYER_UNIT_KEY(unitX->getOwner(), unitX->getUnitType()));
 
 					if ( itr == a_units.end() )
 					{
 						PlayerUnitInfo newInfo;
 
-						itr = a_units.insert(std::make_pair(PLAYER_UNIT_KEY(pLoopUnit->getOwner(), pLoopUnit->getUnitType()), newInfo)).first;
-						itr->second.m_eOwner = pLoopUnit->getOwner();
-						itr->second.m_eUnitType = pLoopUnit->getUnitType();
+						itr = a_units.insert(std::make_pair(PLAYER_UNIT_KEY(unitX->getOwner(), unitX->getUnitType()), newInfo)).first;
+						itr->second.m_eOwner = unitX->getOwner();
+						itr->second.m_eUnitType = unitX->getUnitType();
 					}
 
 					if ( (itr->second.m_iCount)++ == 0 )
 					{
 						iCount++;
 					}
-					int iBase = (DOMAIN_AIR == pLoopUnit->getDomainType() ? pLoopUnit->airBaseCombatStr() : pLoopUnit->baseCombatStr());
-					if (iBase > 0 && pLoopUnit->getMaxHP() > 0)
+					int iBase = (DOMAIN_AIR == unitX->getDomainType() ? unitX->airBaseCombatStr() : unitX->baseCombatStr());
+					if (iBase > 0 && unitX->getMaxHP() > 0)
 					{
 						itr->second.m_iTotalMaxStrength += 100 * iBase;
-						itr->second.m_iTotalStrength += (100 * iBase * pLoopUnit->getHP()) / pLoopUnit->getMaxHP();
+						itr->second.m_iTotalStrength += (100 * iBase * unitX->getHP()) / unitX->getMaxHP();
 					}
 
-					for (int iJ = 0; iJ < numPromotionInfos; iJ++)
+					for (int iJ = GC.getNumPromotionInfos() - 1; iJ > -1; iJ--)
 					{
-						if (pLoopUnit->isHasPromotion((PromotionTypes)iJ))
+						if (unitX->isHasPromotion((PromotionTypes)iJ))
 						{
 							std::map<PromotionTypes,int>::iterator promoItr = itr->second.m_promotions.find((PromotionTypes)iJ);
 
@@ -34472,11 +34431,11 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 {
 	if (gDLL->getInterfaceIFace()->isCityScreenUp())
 	{
-		if (pMouseOverPlot != NULL)
+		if (pMouseOverPlot)
 		{
 			const CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
-			if (pHeadSelectedCity != NULL && pMouseOverPlot->getWorkingCity() == pHeadSelectedCity
+			if (pHeadSelectedCity && pMouseOverPlot->getWorkingCity() == pHeadSelectedCity
 			&& pMouseOverPlot->isRevealed(GC.getGame().getActiveTeam(), true))
 			{
 				setPlotHelp(strHelp, pMouseOverPlot);
@@ -34485,108 +34444,114 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 		return;
 	}
 
-	if (pCity != NULL)
+	if (pCity)
 	{
 		setCityBarHelp(strHelp, pCity);
 	}
-	else if (pFlagPlot != NULL)
+	else if (pFlagPlot)
 	{
 		setPlotListHelp(strHelp, pFlagPlot, false, true);
 	}
 
-	if (strHelp.isEmpty() && pMouseOverPlot != NULL
-	&& (bAlt || pMouseOverPlot == gDLL->getInterfaceIFace()->getGotoPlot())
-	&& pMouseOverPlot->isVisiblePotentialEnemyDefender(gDLL->getInterfaceIFace()->getSelectionList()->getHeadUnit()))
+	if (pMouseOverPlot)
 	{
-		setCombatPlotHelp(strHelp, pMouseOverPlot);
-	}
-
-	if (strHelp.isEmpty() && pMouseOverPlot != NULL && pMouseOverPlot->isRevealed(GC.getGame().getActiveTeam(), true))
-	{
-		if (pMouseOverPlot->isActiveVisible(true))
+		if (strHelp.isEmpty()
+		&& (bAlt || pMouseOverPlot == gDLL->getInterfaceIFace()->getGotoPlot())
+		&& pMouseOverPlot->isVisiblePotentialEnemyDefender(gDLL->getInterfaceIFace()->getSelectionList()->getHeadUnit()))
 		{
-			setPlotListHelp(strHelp, pMouseOverPlot, true, false);
-
-			if (!strHelp.isEmpty())
-			{
-				strHelp.append(L"\n");
-			}
+			setCombatPlotHelp(strHelp, pMouseOverPlot);
 		}
-		setPlotHelp(strHelp, pMouseOverPlot);
-	}
 
-	if (pMouseOverPlot != NULL && pMouseOverPlot->isRevealed(GC.getGame().getActiveTeam(), true)
-	&& pMouseOverPlot->isActiveVisible(true) && pMouseOverPlot->getTeam() != NO_TEAM
-	&& gDLL->getInterfaceIFace()->getHeadSelectedUnit() != NULL
-	&& GET_TEAM(pMouseOverPlot->getTeam()).isAtWar(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getTeam())
-	&& !gDLL->getInterfaceIFace()->getHeadSelectedUnit()->canEnterPlot(pMouseOverPlot))
-	{
-		CvWString szTempBuffer;
-		szTempBuffer.clear();
-		if (pMouseOverPlot->isCity())
+		if (strHelp.isEmpty() && pMouseOverPlot->isRevealed(GC.getGame().getActiveTeam(), true))
 		{
-			int iMinimumDefenseLevel = MAX_INT;
-			BuildingTypes eBestBuilding = NO_BUILDING;
-
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			if (pMouseOverPlot->isActiveVisible(true))
 			{
-				const BuildingTypes eType = static_cast<BuildingTypes>(iI);
+				setPlotListHelp(strHelp, pMouseOverPlot, true, false);
 
-				if (pMouseOverPlot->getPlotCity()->getNumActiveBuilding(eType) > 0)
+				if (!strHelp.isEmpty())
 				{
-					const int iNoEntryDefense = GC.getBuildingInfo(eType).getNoEntryDefenseLevel();
+					strHelp.append(L"\n");
+				}
+			}
+			setPlotHelp(strHelp, pMouseOverPlot);
+		}
 
-					if(iNoEntryDefense > 0 && iNoEntryDefense < iMinimumDefenseLevel)
+		if (pMouseOverPlot->isRevealed(GC.getGame().getActiveTeam(), true)
+		&& pMouseOverPlot->isActiveVisible(true) && pMouseOverPlot->getTeam() != NO_TEAM)
+		{
+			const CvUnit* selectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+			if (selectedUnit
+			&& GET_TEAM(pMouseOverPlot->getTeam()).isAtWar(selectedUnit->getTeam())
+			&& !selectedUnit->canEnterPlot(pMouseOverPlot))
+			{
+				CvWString szTempBuffer;
+				szTempBuffer.clear();
+				if (pMouseOverPlot->isCity())
+				{
+					int iMinimumDefenseLevel = MAX_INT;
+					BuildingTypes eBestBuilding = NO_BUILDING;
+
+					for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 					{
-						iMinimumDefenseLevel = iNoEntryDefense;
-						eBestBuilding = eType;
+						const BuildingTypes eType = static_cast<BuildingTypes>(iI);
+
+						if (pMouseOverPlot->getPlotCity()->getNumActiveBuilding(eType) > 0)
+						{
+							const int iNoEntryDefense = GC.getBuildingInfo(eType).getNoEntryDefenseLevel();
+
+							if(iNoEntryDefense > 0 && iNoEntryDefense < iMinimumDefenseLevel)
+							{
+								iMinimumDefenseLevel = iNoEntryDefense;
+								eBestBuilding = eType;
+							}
+						}
+					}
+					if (pMouseOverPlot->getPlotCity()->getExtraMinDefense() > iMinimumDefenseLevel)
+					{
+						iMinimumDefenseLevel = pMouseOverPlot->getPlotCity()->getExtraMinDefense();
+					}
+					if (eBestBuilding != NO_BUILDING
+					&& pMouseOverPlot->getPlotCity()->getDefenseModifier(false) > iMinimumDefenseLevel
+					&& !selectedUnit->canIgnoreNoEntryLevel())
+					{
+						szTempBuffer.clear();
+						szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_MAX_CITY_DEFENSES", pMouseOverPlot->getPlotCity()->getNameKey(), GC.getBuildingInfo(eBestBuilding).getDescription(), GC.getBuildingInfo(eBestBuilding).getDescription(), iMinimumDefenseLevel));
 					}
 				}
-			}
-			if (pMouseOverPlot->getPlotCity()->getExtraMinDefense() > iMinimumDefenseLevel)
-			{
-				iMinimumDefenseLevel = pMouseOverPlot->getPlotCity()->getExtraMinDefense();
-			}
-			if (eBestBuilding != NO_BUILDING
-			&& pMouseOverPlot->getPlotCity()->getDefenseModifier(false) > iMinimumDefenseLevel
-			&& !gDLL->getInterfaceIFace()->getHeadSelectedUnit()->canIgnoreNoEntryLevel())
-			{
-				szTempBuffer.clear();
-				szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_MAX_CITY_DEFENSES", pMouseOverPlot->getPlotCity()->getNameKey(), GC.getBuildingInfo(eBestBuilding).getDescription(), GC.getBuildingInfo(eBestBuilding).getDescription(), iMinimumDefenseLevel));
-			}
-		}
-		else if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
-		{
-			// Fort ZoC
-			const PlayerTypes eDefender = gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->controlsAdjacentZOCSource(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getTeam());
-			if (eDefender != NO_PLAYER)
-			{
-				const CvPlot* pZoneOfControl = gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->isInFortControl(true, eDefender, gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner());
-				const CvPlot* pForwardZoneOfControl = pMouseOverPlot->isInFortControl(true, eDefender, gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner());
-				if (pZoneOfControl != NULL && pForwardZoneOfControl != NULL
-				&& pZoneOfControl == pMouseOverPlot->isInFortControl(true, eDefender, gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner(), pZoneOfControl))
+				else if (GC.getGame().isOption(GAMEOPTION_ZONE_OF_CONTROL))
 				{
-					szTempBuffer.clear();
-					szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_FORT_ZOC"));
+					// Fort ZoC
+					const PlayerTypes eDefender = selectedUnit->plot()->controlsAdjacentZOCSource(selectedUnit->getTeam());
+					if (eDefender != NO_PLAYER)
+					{
+						const CvPlot* pZoneOfControl = selectedUnit->plot()->isInFortControl(true, eDefender, selectedUnit->getOwner());
+						const CvPlot* pForwardZoneOfControl = pMouseOverPlot->isInFortControl(true, eDefender, selectedUnit->getOwner());
+						if (pZoneOfControl != NULL && pForwardZoneOfControl != NULL
+						&& pZoneOfControl == pMouseOverPlot->isInFortControl(true, eDefender, selectedUnit->getOwner(), pZoneOfControl))
+						{
+							szTempBuffer.clear();
+							szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_FORT_ZOC"));
+						}
+					}
+					// City ZoC
+					if (selectedUnit->plot()->isInCityZoneOfControl(selectedUnit->getOwner()) && pMouseOverPlot->isInCityZoneOfControl(selectedUnit->getOwner()))
+					{
+						szTempBuffer.clear();
+						szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_CITY_ZOC"));
+					}
+					// Promotion ZoC
+					if (selectedUnit->plot()->isInUnitZoneOfControl(selectedUnit->getOwner()) && pMouseOverPlot->isInUnitZoneOfControl(selectedUnit->getOwner()))
+					{
+						szTempBuffer.clear();
+						szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_UNIT_ZOC"));
+					}
+				}
+
+				if (szTempBuffer != L"")
+				{
+					strHelp.assign(szTempBuffer);
 				}
 			}
-			// City ZoC
-			if (gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->isInCityZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()) && pMouseOverPlot->isInCityZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()))
-			{
-				szTempBuffer.clear();
-				szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_CITY_ZOC"));
-			}
-			// Promotion ZoC
-			if (gDLL->getInterfaceIFace()->getHeadSelectedUnit()->plot()->isInUnitZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()) && pMouseOverPlot->isInUnitZoneOfControl(gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getOwner()))
-			{
-				szTempBuffer.clear();
-				szTempBuffer.append(gDLL->getText("TXT_KEY_PLOT_HOVER_UNIT_ZOC"));
-			}
-		}
-
-		if (szTempBuffer != L"")
-		{
-			strHelp.assign(szTempBuffer);
 		}
 	}
 
@@ -34598,24 +34563,27 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 
 		switch (eInterfaceMode)
 		{
-		case INTERFACEMODE_REBASE:
-			getRebasePlotHelp(pMouseOverPlot, szTempBuffer);
-			break;
-
-		case INTERFACEMODE_NUKE:
-			getNukePlotHelp(pMouseOverPlot, szTempBuffer);
-			break;
-
-		case INTERFACEMODE_SHADOW_UNIT:
+			case INTERFACEMODE_REBASE:
 			{
-				const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
-				if (NULL != pHeadSelectedUnit && pMouseOverPlot != NULL)
+				getRebasePlotHelp(pMouseOverPlot, szTempBuffer);
+				break;
+			}
+			case INTERFACEMODE_NUKE:
+			{
+				getNukePlotHelp(pMouseOverPlot, szTempBuffer);
+				break;
+			}
+			case INTERFACEMODE_SHADOW_UNIT:
+			{
+				if (pMouseOverPlot)
 				{
-					const CvUnit* pShadowUnit = pMouseOverPlot->getCenterUnit();
-					if (!pHeadSelectedUnit->getGroup()->canDoInterfaceModeAt(eInterfaceMode, pMouseOverPlot))
+					const CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
+					if (pHeadSelectedUnit
+					&& !pHeadSelectedUnit->getGroup()->canDoInterfaceModeAt(eInterfaceMode, pMouseOverPlot))
 					{
 						strHelp.clear();
-						if (pShadowUnit != NULL)
+						const CvUnit* pShadowUnit = pMouseOverPlot->getCenterUnit(false);
+						if (pShadowUnit)
 						{
 							const int iValidShadowUnits = algo::count_if(pMouseOverPlot->units(), bind(CvUnit::canShadowAt, pHeadSelectedUnit, pMouseOverPlot, _1));
 							if (iValidShadowUnits == 0)
@@ -34644,16 +34612,17 @@ void CvGameTextMgr::getPlotHelp(CvPlot* pMouseOverPlot, CvCity* pCity, CvPlot* p
 						}
 					}
 				}
+				break;
 			}
-			break;
-
-		default:
-			if (!CvWString(GC.getInterfaceModeInfo(eInterfaceMode).getHelp()).empty())
+			default:
 			{
-				szTempBuffer.append(GC.getInterfaceModeInfo(eInterfaceMode).getHelp());
-				szTempBuffer.append(NEWLINE);
+				if (!CvWString(GC.getInterfaceModeInfo(eInterfaceMode).getHelp()).empty())
+				{
+					szTempBuffer.append(GC.getInterfaceModeInfo(eInterfaceMode).getHelp());
+					szTempBuffer.append(NEWLINE);
+				}
+				break;
 			}
-			break;
 		}
 		szTempBuffer.append(NEWLINE);
 		szTempBuffer += strHelp.getCString();
