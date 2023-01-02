@@ -725,8 +725,8 @@ public:
 	void setFoodKept(int iNewValue);
 	void changeFoodKept(int iChange);
 
-	int getMaxFoodKeptPercent() const;
-	void changeMaxFoodKeptPercent(int iChange, bool bAdd);
+	int getFoodKeptPercent() const;
+	void changeFoodKeptPercent(int iChange);
 
 	int getMaxProductionOverflow() const;
 
@@ -1171,7 +1171,6 @@ public:
 	int getTradeRoutes() const;
 	void clearTradeRoutes();
 	void updateTradeRoutes();
-	void resizeTradeRouteVector();
 
 	void clearOrderQueue();
 	void pushOrder(OrderTypes eOrder, int iData1, int iData2, bool bSave, bool bPop, bool bAppend, bool bForce = false, CvPlot* deliveryDestination = NULL, UnitAITypes contractedAIType = NO_UNITAI, uint8_t contractFlags = 0);
@@ -1628,8 +1627,8 @@ protected:
 	int m_iBuildingOnlyHealthyCount;
 	int m_iFood;
 	int m_iFoodKept;
-	float m_fMaxFoodKeptMultiplierLog;
-#define INVALID_STORED_FOOD_PERCENT_LOG (-1000000)	//	Used as a reserved value to trigger calculation on upgrade of save format
+	int m_iFoodKeptPercent;
+
 	int m_iOverflowProduction;
 	int m_iFeatureProduction;
 
