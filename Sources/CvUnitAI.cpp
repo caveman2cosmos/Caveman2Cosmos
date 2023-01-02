@@ -12810,14 +12810,15 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 		if (pLoopUnit->getDamage() > 0)
 		{
 			iHurtUnitCount++;
+
+			if (pLoopUnit->getDamage() > iDamageThreshold
+			&& !pLoopUnit->hasMoved() && !pLoopUnit->isAlwaysHeal()
+			&& pLoopUnit->healTurns(pLoopUnit->plot()) <= iMaxPath)
+			{
+				aeDamagedUnits.push_back(pLoopUnit);
+			}
 		}
 
-		if (pLoopUnit->getDamage() > iDamageThreshold
-		&& !pLoopUnit->hasMoved() && !pLoopUnit->isAlwaysHeal()
-		&& pLoopUnit->healTurns(pLoopUnit->plot()) <= iMaxPath)
-		{
-			aeDamagedUnits.push_back(pLoopUnit);
-		}
 	}
 	if (iHurtUnitCount == 0)
 	{
@@ -12829,33 +12830,32 @@ bool CvUnitAI::AI_heal(int iDamagePercent, int iMaxPath)
 
 	if (bCanClaimTerritory || plot()->isCity() && plot()->getOwner() == getOwner())
 	{
-		FAssertMsg(((int)aeDamagedUnits.size()) <= iHurtUnitCount, "damaged units array is larger than our hurt unit count");
-
 		for (unsigned int iI = 0; iI < aeDamagedUnits.size(); iI++)
 		{
 			CvUnit* pUnitToHeal = aeDamagedUnits[iI];
 			pUnitToHeal->joinGroup(NULL);
-			pUnitToHeal->getGroup()->pushMission(MISSION_HEAL);
 
 			// note, removing the head unit from a group will force the group to be completely split if non-human
 			if (pUnitToHeal == this)
 			{
+				pGroup = getGroup();
 				bPushedMission = true;
 
 				if (bCanClaimTerritory)
 				{
 					pGroup->pushMission(MISSION_CLAIM_TERRITORY, -1, -1, 0, false, false, MISSIONAI_CLAIM_TERRITORY, plot());
-					pGroup->pushMission(MISSION_HEAL, -1, -1, 0, true, false);
+					pGroup->pushMission(MISSION_HEAL, -1, -1, 0, true);
 				}
+				else pGroup->pushMission(MISSION_HEAL);
 			}
+			else pUnitToHeal->getGroup()->pushMission(MISSION_HEAL);
+
 			iHurtUnitCount--;
 		}
 	}
 
 	if (iHurtUnitCount * 2 > pGroup->getNumUnits())
 	{
-		FAssertMsg(pGroup->getNumUnits() > 0, "group now has zero units");
-
 		if (AI_moveIntoCity(2))
 		{
 			return true;
