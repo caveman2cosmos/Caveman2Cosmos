@@ -1935,8 +1935,6 @@ void CvUnit::updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish)
 	setCombatUnit(NULL);
 	setAttackPlot(NULL, false);
 
-	getGroup()->clearMissionQueue();
-
 	if (isSuicide() && !isDead())
 	{
 		kill(true);
