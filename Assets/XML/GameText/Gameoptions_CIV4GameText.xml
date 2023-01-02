@@ -35,6 +35,21 @@
 		<Russian>Óëó÷øåííàÿ äèïëîìàòèÿ äîáàâëÿåò íîâûå äèïëîìàòè÷åñêèå âîçìîæíîñòè, îò ïîñîëüñòâ äî òîðãîâëè âîåííûìè è ðàáî÷èìè þíèòàìè.</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ECONOMY</Tag>
+		<English>Advanced Economy</English>
+		<French>Economie Avancée</French>
+		<German>Verbesserte Wirtschaft</German>
+		<Italian>Economia avanzata</Italian>
+		<Spanish>Economía avanzada</Spanish>
+		<Polish>Zaawansowana Ekonomia</Polish>
+		<Russian>Óëó÷øåííàÿ ýêîíîìèêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ECONOMY_HELP</Tag>
+		<English>Allows free trade deals, requires, and thus activates, advanced diplomacy option.</English>
+		<Russian>Äîáàâëÿåò áîëåå ãëóáîêèé è äåòàëüíûé êîíòðîëü ýêîíîìè÷åñêèõ ôàêòîðîâ, â îñîáåííîñòè òîðãîâëè è èíôëÿöèè.</Russian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ADVANCED_ESPIONAGE</Tag>
 		<English>Advanced Espionage</English>
 		<French>Espionnage Avancé</French>

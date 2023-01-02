@@ -8235,6 +8235,9 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper,"CvGame",&m_iLastNukeStrikeX);
 	WRAPPER_READ(wrapper,"CvGame",&m_iLastNukeStrikeY);
 	WRAPPER_READ(wrapper,"CvGame",&m_iCurrentVoteID);
+	// @SAVEBREAK DELETE
+	WRAPPER_SKIP_ELEMENT(wrapper,"CvGame", m_iWaterAnimalSpawnChance, SAVE_VALUE_ANY);
+	// SAVEBREAK@
 	WRAPPER_READ(wrapper,"CvGame",&m_iCutLosersCounter);
 	WRAPPER_READ(wrapper,"CvGame",&m_iHighToLowCounter);
 	WRAPPER_READ(wrapper,"CvGame",&m_iIncreasingDifficultyCounter);
@@ -8255,6 +8258,10 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper,"CvGame",&m_bScoreDirty);
 	WRAPPER_READ(wrapper,"CvGame",(int*)&m_circumnavigatingTeam);
 	// m_bDebugMode not saved
+
+	// @SAVEBREAK DELETE
+	WRAPPER_SKIP_ELEMENT(wrapper,"CvGame", m_bFinalInitialized, SAVE_VALUE_ANY);
+	// SAVEBREAK@
 
 	// m_bPbemTurnSent not saved
 	WRAPPER_READ(wrapper,"CvGame",&m_bHotPbemBetweenTurns);
