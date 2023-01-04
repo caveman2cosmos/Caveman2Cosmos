@@ -234,7 +234,7 @@ bool CvUnit::isUsingDummyEntities() const
 {
 	const CvEntity* entity = getEntity();
 
-	return entity != NULL && g_dummyEntity == entity;
+	return entity && g_dummyEntity == entity;
 }
 
 void CvUnit::reloadEntity(bool bForceLoad)
@@ -243,7 +243,7 @@ void CvUnit::reloadEntity(bool bForceLoad)
 	(
 		!g_bUseDummyEntities || bForceLoad
 		||
-		plot() != NULL && plot()->isActiveVisible(false)
+		plot() && plot()->isActiveVisible(false)
 		&&
 		(plot()->getCenterUnit() == this || getOwner() == GC.getGame().getActivePlayer())
 	);
@@ -271,7 +271,7 @@ void CvUnit::reloadEntity(bool bForceLoad)
 			setEntity(NULL);
 		}
 
-		if (getEntity() == NULL)
+		if (!getEntity())
 		{
 			if (g_bUseDummyEntities)
 			{
@@ -1675,7 +1675,7 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 	owner.changeAssets(-assetValueTotal());
 	owner.changeUnitPower(-getPowerValueTotal());
 
-	if (pPlot != NULL)
+	if (pPlot)
 	{
 		OutputDebugString(CvString::format("Unit %S of player %S killed\n", getName().GetCString(), owner.getCivilizationDescription(0)).c_str());
 
@@ -15523,6 +15523,21 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	PROFILE_FUNC();
 	/*GC.getGame().logOOSSpecial(1, getID(), iX, iY);*/
 
+	{ // Toffer - Problems arise when units have illegal coordinates that are not specifically INVALID_PLOT_COORD.
+		//	No Idea why it is set up so that plot() only returns NULL for INVALID_PLOT_COORD but not for other illegal coordinates.
+		const int iMaxX = GC.getMap().getGridWidth();
+		const int iMaxY = GC.getMap().getGridHeight();
+		if (iX < 0 || iX >= iMaxX || iY < 0 || iY >= iMaxY)
+		{
+			if (iX != INVALID_PLOT_COORD || iY != INVALID_PLOT_COORD)
+			{
+				FErrorMsg("Illegal coordinates given to unit");
+				iX = INVALID_PLOT_COORD;
+				iY = INVALID_PLOT_COORD;
+			}
+		}
+	}
+
 	// Temp units do not really exist, and are just used to provide a data anchor for virtual pathing calculations.
 	// As such they do not need to process their position into the wider game state and indeed should not without additional concurrency protection.
 	if (isTempUnit())
@@ -15530,7 +15545,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		m_iX = iX;
 		m_iY = iY;
 
-		if (getGroup() == NULL)
+		if (!getGroup())
 		{
 			joinGroup(NULL);
 		}
@@ -15771,7 +15786,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		}
 	}
 
-	if (pNewPlot != NULL)
+	if (pNewPlot)
 	{
 		m_iX = pNewPlot->getX();
 		m_iY = pNewPlot->getY();
@@ -38629,4 +38644,10 @@ void CvUnit::deselect(const bool bQuick)
 			GC.getGame().updateSelectionListInternal();
 		}
 	}
+}
+
+void CvUnit::forceInvalidCoordinates()
+{
+	m_iX = INVALID_PLOT_COORD;
+	m_iY = INVALID_PLOT_COORD;
 }
