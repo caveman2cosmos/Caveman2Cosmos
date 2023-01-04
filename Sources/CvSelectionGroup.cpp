@@ -4975,16 +4975,15 @@ bool CvSelectionGroup::addUnit(CvUnit* pUnit, bool bMinimalChange)
 
 	if (pOldHeadUnit != getHeadUnit() && GC.getENABLE_DYNAMIC_UNIT_ENTITIES())
 	{
-		if (pOldHeadUnit != NULL)
+		if (pOldHeadUnit)
 		{
 			pOldHeadUnit->reloadEntity();
 		}
-
 		getHeadUnit()->reloadEntity();
 	}
 
 #ifdef _DEBUG
-	if (pPlot != NULL)
+	if (pPlot)
 	{
 		validateLocations();
 	}
@@ -5003,25 +5002,24 @@ void CvSelectionGroup::removeUnit(CvUnit* pUnit)
 
 	CLLNode<IDInfo>* pUnitNode = headUnitNode();
 
-	while (pUnitNode != NULL)
+	while (pUnitNode)
 	{
 		if (::getUnit(pUnitNode->m_data) == pUnit)
 		{
 			deleteUnitNode(pUnitNode);
 			break;
 		}
-
 		pUnitNode = nextUnitNode(pUnitNode);
 	}
 
-	if ( pOldHeadUnit != getHeadUnit() && GC.getENABLE_DYNAMIC_UNIT_ENTITIES() )
+	if (pOldHeadUnit != getHeadUnit() && GC.getENABLE_DYNAMIC_UNIT_ENTITIES())
 	{
-		if ( pOldHeadUnit != NULL )
+		if (pOldHeadUnit)
 		{
 			pOldHeadUnit->reloadEntity();
 		}
 
-		if ( getHeadUnit() != NULL )
+		if (getHeadUnit())
 		{
 			getHeadUnit()->reloadEntity();
 		}
