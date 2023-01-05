@@ -1705,7 +1705,6 @@ protected:
 
 	DomainTypes m_eNewDomainCargo;
 	SpecialUnitTypes m_eNewSpecialCargo;
-	SpecialUnitTypes m_eNewSMSpecialCargo;
 	SpecialUnitTypes m_eNewSMNotSpecialCargo;
 	SpecialUnitTypes m_eSpecialUnit;
 	MissionTypes m_eSleepType;

@@ -13573,35 +13573,11 @@ void CvPlayer::recalculateUnitCounts()
 {
 	PROFILE_FUNC();
 
-	// @SAVEBREAK REPLACE - Toffer
-	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
-	{
-		foreach_(CvUnit* unit, units())
-		{
-			if (unit->groupRank() > 0)
-			{
-				m_unitCountSM[(short)unit->getUnitType()] += intPow(3, unit->groupRank() - 1);
-			}
-			unit->recalculateUnitUpkeep();
-			unit->area()->changePower(getID(), unit->getPowerValueTotal());
-		}
-	}
-	// If SM is on, we count how many trained-unit equivalents are present, not purely units themselves, after resetting the count.
-	else
-	{
-		foreach_(CvUnit* unit, units())
-		{
-			unit->recalculateUnitUpkeep();
-			unit->area()->changePower(getID(), unit->getPowerValueTotal());
-		}
-	}
-	/* REPLACE WITH
 	foreach_(CvUnit* unit, units())
 	{
 		unit->recalculateUnitUpkeep();
 		unit->area()->changePower(getID(), unit->getPowerValueTotal());
 	}
-	// SAVEBREAK@ */
 }
 
 void CvPlayer::changeUnitCount(const UnitTypes eUnit, const int iChange)
@@ -17005,7 +16981,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 					else if (pCity->getPopulation() > 1)
 					{
 						pCity->setFood(pCity->growthThreshold() / 2);
-						pCity->setFoodKept((pCity->getFood() * pCity->getMaxFoodKeptPercent()) / 100);
+						pCity->setFoodKept(pCity->getFood() * pCity->getFoodKeptPercent() / 100);
 					}
 				}
 			}
@@ -17074,7 +17050,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 						changeAdvancedStartPoints(-iCost);
 						if (GC.getBuildingInfo(eBuilding).getFoodKept() != 0)
 						{
-							pCity->setFoodKept((pCity->getFood() * pCity->getMaxFoodKeptPercent()) / 100);
+							pCity->setFoodKept(pCity->getFood() * pCity->getFoodKeptPercent() / 100);
 						}
 					}
 				}
@@ -17086,7 +17062,7 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 					changeAdvancedStartPoints(iCost);
 					if (GC.getBuildingInfo(eBuilding).getFoodKept() != 0)
 					{
-						pCity->setFoodKept((pCity->getFood() * pCity->getMaxFoodKeptPercent()) / 100);
+						pCity->setFoodKept(pCity->getFood() * pCity->getFoodKeptPercent() / 100);
 					}
 				}
 			}
@@ -18315,13 +18291,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		// Init data before load
 		reset();
 
-		// @SAVEBREAK DELETE - Toffer
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iMADDeterrent, SAVE_VALUE_ANY);
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iMADIncoming, SAVE_VALUE_ANY);
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iMADOutgoing, SAVE_VALUE_ANY);
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iMADNukesCount, SAVE_VALUE_ANY);
-		// SAVEBREAK@
-
 		int m_iStartingX, m_iStartingY;
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iStartingX);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iStartingY);
@@ -18759,17 +18728,11 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iProjectHealth);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iProjectHappiness);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iForceAllTradeRoutes);
-		// @SAVEBREAK DELETE - Toffer
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_iWorldTradeRoutes, SAVE_VALUE_ANY);
-		// SAVEBREAK@
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivilizationHealth);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iBuildingInflation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iProjectInflation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iTechInflation);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCivicInflation);
-		// @SAVEBREAK DELETE - Toffer
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_accruedCostRatioTimes10000, SAVE_VALUE_ANY);
-		// SAVEBREAK@
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHurryCostModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHurryInflationModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iHurryCount);
@@ -19013,6 +18976,8 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				m_cityNames.insertAtEnd(szBuffer);
 			}
 		}
+		WRAPPER_READ(wrapper, "CvPlayer", &m_iMaxTradeRoutesAdjustment);
+
 #ifdef BREAK_SAVES
 		for (int i = 0; i < NUM_MAPS; i++)
 #else
@@ -19501,14 +19466,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iInquisitionCount);
 		WRAPPER_READ_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_aiLessYieldThreshold);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iCompatCheckCount);
-		// SAVEBREAK - Toffer - Move this to before cities are read in at ReadStreamableFFreeListTrashArray(*m_cities[i], pStream);
-		WRAPPER_READ(wrapper, "CvPlayer", &m_iMaxTradeRoutesAdjustment);
-		// And get rid of this stuff, do the resize when reading in m_paTradeCities for cities.
-		foreach_(CvCity* cityX, cities())
-		{
-			cityX->resizeTradeRouteVector();
-		}
-		// ! SAVEBREAK
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalHurryAngerModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalEnemyWarWearinessModifier);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iNationalBombardDefenseModifier);
@@ -19564,9 +19521,6 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIAL_BUILDINGS, GC.getNumSpecialBuildingInfos(), m_paiBuildingGroupMaking);
 
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iArrestingUnit);
-		// @SAVEBREAK DELETE
-		WRAPPER_SKIP_ELEMENT(wrapper, "CvPlayer", m_bPopBad, SAVE_VALUE_ANY);
-		// SAVEBREAK@
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iUpgradeRoundCount);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iSelectionRegroup);
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iFreedomFighterCount);
@@ -20088,6 +20042,8 @@ void CvPlayer::write(FDataStreamBase* pStream)
 			}
 		}
 
+		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMaxTradeRoutesAdjustment);
+
 #ifdef BREAK_SAVES
 		for (int i = 0; i < NUM_MAPS; i++)
 #else
@@ -20347,7 +20303,6 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iInquisitionCount);
 		WRAPPER_WRITE_ARRAY(wrapper, "CvPlayer", NUM_YIELD_TYPES, m_aiLessYieldThreshold);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iCompatCheckCount);
-		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMaxTradeRoutesAdjustment);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalHurryAngerModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalEnemyWarWearinessModifier);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iNationalBombardDefenseModifier);
@@ -27915,7 +27870,6 @@ void CvPlayer::clearModifierTotals()
 	m_iArrestedUnit = FFreeList::INVALID_INDEX;
 	m_iAmbushingUnit = FFreeList::INVALID_INDEX;
 	m_bAssassinate = false;
-	//m_Properties.clear();
 
 	setPopulationgrowthratepercentage(0);
 	m_iReligionSpreadRate = 0;
@@ -27923,9 +27877,6 @@ void CvPlayer::clearModifierTotals()
 	setExtraCityDefense(0);
 	setTraitExtraCityDefense(0);
 
-	// @SAVEBREAK DELETE - Toffer
-	m_unitCountSM.clear();
-	// SAVEBREAK@ */
 	m_bonusMintedPercent.clear();
 	m_freeBuildingCount.clear();
 	m_extraBuildingHappiness.clear();

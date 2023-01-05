@@ -21861,14 +21861,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDCMBombRange);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDCMBombAccuracy);
-
-	// @SAVEBREAK DELETE - Toffer
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_bMADEnabled, SAVE_VALUE_ANY);
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iMADTargetPlotX, SAVE_VALUE_ANY);
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iMADTargetPlotY, SAVE_VALUE_ANY);
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_pMADTargetPlotOwner, SAVE_VALUE_ANY);
-	// SAVEBREAK@
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iID);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iGroupID);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iHotKeyNumber);
@@ -21901,7 +21893,7 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSleepTimer);
 
-	// SAVEBRERAK - Toffer - Cleanup commander mess.
+	// SAVEBREAK - Toffer - Cleanup commander mess.
 	int iExtraControlPoints = 0;
 	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraControlPoints, "m_iExtraControlPoints");
 	int iExtraCommandRange = 0;
@@ -21921,10 +21913,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_shadowUnit.eOwner);
 	WRAPPER_READ(wrapper, "CvUnit", &m_shadowUnit.iID);
-
-	// @SAVEBREAK DELETE - Toffer
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)m_eDesiredDiscoveryTech, SAVE_VALUE_ANY);
-	// SAVEBREAK@
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iImmuneToFirstStrikesCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraVisibilityRange);
@@ -22076,9 +22064,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iTerrainDoubleMoveCount, "TerrainDoubleMove");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainAttackPercent, "extraAttackPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainDefensePercent, "extraDefensePercent");
-				// SAVEBREAK - Toffer - Remove
-				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", terrainWorkPercent, SAVE_VALUE_TYPE_INT);
-				// ! SAVEBREAK
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraTerrainWorkPercent, "terrainExtraWorkPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraWithdrawOnTerrainType, "extraWithdrawOnTerrainType");
 			}
@@ -22100,9 +22085,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iFeatureDoubleMoveCount, "FeatureDoubleMove");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureAttackPercent, "extraAttackPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureDefensePercent, "extraDefensePercent");
-				// SAVEBREAK - Toffer - Remove
-				WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", featureWorkPercent, SAVE_VALUE_TYPE_INT);
-				// ! SAVEBREAK
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraFeatureWorkPercent, "featureExtraWorkPercent");
 				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &info->m_iExtraWithdrawOnFeatureType, "extraWithdrawOnFeatureType");
 			}
@@ -22905,17 +22887,10 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSMCargoVolume);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSMCargoVolumeModifier);
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eNewDomainCargo);
+
 	WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_SPECIAL_UNITS, (int*)&m_eNewSpecialCargo);
-	// SAVEBREAK - Toffer - Remove
-	{
-		SpecialUnitTypes m_eNewSMSpecialCargo;
-		WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_SPECIAL_UNITS, (int*)&m_eNewSMSpecialCargo);
-	}
-	// ! SAVEBREAK
 	WRAPPER_READ_CLASS_ENUM_ALLOW_MISSING(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_SPECIAL_UNITS, (int*)&m_eNewSMNotSpecialCargo);
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iExtraPowerValue, SAVE_VALUE_TYPE_INT);
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iExtraAssetValue, SAVE_VALUE_TYPE_INT);
-	// ! SAVEBREAK
+
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraQuality);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraGroup);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraSize);
@@ -23203,9 +23178,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 			m_aExtraVisibleImprovementRanges[iI].iIntensity = iType3;
 		}
 	}
-	// SAVEBREAK - Toffer - Remove
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_bHasAnyInvisibilityAbility, SAVE_VALUE_TYPE_INT);
-	// ! SAVEBREAK
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraInsidiousness);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraInvestigation);
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_pPlayerInvestigated);

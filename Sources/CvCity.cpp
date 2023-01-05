@@ -557,7 +557,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iBuildingOnlyHealthyCount = 0;
 	m_iFood = 0;
 	m_iFoodKept = 0;
-	m_fMaxFoodKeptMultiplierLog = 0.0;
+	m_iFoodKeptPercent = 0;
 	m_iOverflowProduction = 0;
 	m_iFeatureProduction = 0;
 	m_iMilitaryProductionModifier = 0;
@@ -1401,8 +1401,7 @@ void CvCity::doTurn()
 	doCorporation();
 	//Counts down the disable power timer
 	doDisabledPower();
-	//Recalculate growth thresholds/food storage
-	recalculateMaxFoodKeptPercent();
+
 	recalculatePopulationgrowthratepercentage();
 
 	doWarWeariness();
@@ -4813,7 +4812,7 @@ void CvCity::processBuilding(const BuildingTypes eBuilding, const int iChange, c
 			changeGreatPeopleRateModifier(kBuilding.getGreatPeopleRateModifier() * iChange);
 		}
 		changeFreeExperience(kBuilding.getFreeExperience() * iChange);
-		changeMaxFoodKeptPercent(kBuilding.getFoodKept(), iChange == 1);
+		changeFoodKeptPercent(kBuilding.getFoodKept() * iChange);
 		changeMaxAirlift(kBuilding.getAirlift() * iChange);
 		changeAirModifier(kBuilding.getAirModifier() * iChange);
 		changeAirUnitCapacity(kBuilding.getAirUnitCapacity() * iChange);
@@ -6175,7 +6174,7 @@ int CvCity::getPopulationPlusProgress100(const int iExtra) const
 	{
 		return 100 * getPopulation() + 100 * getFood() / growthThreshold();
 	}
-	return 100 * (getPopulation() + iExtra) + getMaxFoodKeptPercent();
+	return 100 * (getPopulation() + iExtra) + getFoodKeptPercent();
 }
 
 int CvCity::getFoodConsumedPerPopulation100(const int iExtra) const
@@ -9884,51 +9883,16 @@ void CvCity::changeFoodKept(int iChange)
 	setFoodKept(getFoodKept() + iChange);
 }
 
-void CvCity::recalculateMaxFoodKeptPercent()
+
+int CvCity::getFoodKeptPercent() const
 {
-	PROFILE_FUNC();
-
-	m_fMaxFoodKeptMultiplierLog = 0;
-
-	//	Game has been restored from an old save format so we have to calculate from first principles
-	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-	{
-		if (getNumActiveBuilding((BuildingTypes)iI) > 0)
-		{
-			const int foodKept = GC.getBuildingInfo((BuildingTypes)iI).getFoodKept();
-			if (foodKept != 0)
-			{
-				changeMaxFoodKeptPercent(foodKept, true);
-			}
-		}
-	}
-}
-
-int CvCity::getMaxFoodKeptPercent() const
-{
-	if (m_fMaxFoodKeptMultiplierLog == INVALID_STORED_FOOD_PERCENT_LOG)
-	{
-		(const_cast<CvCity*>(this))->recalculateMaxFoodKeptPercent();
-	}
-
-	float fMultiplier = exp(m_fMaxFoodKeptMultiplierLog);
-
-	return (int)(100 - fMultiplier * 100);
+	return range(m_iFoodKeptPercent, 0, 95);
 }
 
 
-void CvCity::changeMaxFoodKeptPercent(int iChange, bool bAdd)
+void CvCity::changeFoodKeptPercent(int iChange)
 {
-	FASSERT_NOT_NEGATIVE(iChange);
-
-	if (m_fMaxFoodKeptMultiplierLog == INVALID_STORED_FOOD_PERCENT_LOG)
-	{
-		recalculateMaxFoodKeptPercent();
-	}
-
-	float logdiff = (bAdd ? 1 : -1) * log((100 - (float)iChange) / 100);
-
-	m_fMaxFoodKeptMultiplierLog += logdiff;
+	m_iFoodKeptPercent += iChange;
 }
 
 int CvCity::getMaxProductionOverflow() const
@@ -9946,7 +9910,7 @@ int CvCity::getOverflowProduction() const
 void CvCity::setOverflowProduction(int iNewValue)
 {
 	m_iOverflowProduction = iNewValue;
-	FASSERT_NOT_NEGATIVE(getOverflowProduction());
+	FASSERT_NOT_NEGATIVE(m_iOverflowProduction);
 }
 
 
@@ -15122,12 +15086,6 @@ void CvCity::setHasCorporation(CorporationTypes eIndex, bool bNewValue, bool bAn
 	}
 }
 
-// SAVBEBREAK - Toffer - remove
-void CvCity::resizeTradeRouteVector()
-{
-	m_paTradeCities.resize(getMaxTradeRoutes());
-}
-// ! SAVBEBREAK
 
 CvCity* CvCity::getTradeCity(int iIndex) const
 {
@@ -16032,7 +15990,7 @@ void CvCity::doGrowth()
 	changeFood(iDiff);
 	changeFoodKept(iDiff);
 
-	setFoodKept(range(getFoodKept(), 0, growthThreshold() * getMaxFoodKeptPercent() / 100));
+	setFoodKept(range(getFoodKept(), 0, growthThreshold() * getFoodKeptPercent() / 100));
 
 	if (getFood() >= growthThreshold())
 	{
@@ -16054,7 +16012,7 @@ void CvCity::doGrowth()
 		if (getPopulation() > 1)
 		{
 			changePopulation(-1);
-			changeFood(std::max(0, growthThreshold() * getMaxFoodKeptPercent() / 100));
+			changeFood(std::max(0, growthThreshold() * getFoodKeptPercent() / 100));
 		}
 	}
 }
@@ -16675,17 +16633,12 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iEspionageHealthCounter);
 	WRAPPER_READ(wrapper, "CvCity", &m_iEspionageHappinessCounter);
 	WRAPPER_READ(wrapper, "CvCity", &m_iFreshWaterGoodHealth);
-	// @SAVEBREAK DELETE
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iFreshWaterBadHealth, SAVE_VALUE_ANY);
-	// SAVEBREAK@
+
 	WRAPPER_READ(wrapper, "CvCity", &m_iFeatureGoodHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iFeatureBadHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iBuildingGoodHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iBuildingBadHealth);
-	// @SAVEBREAK DELETE - Toffer - 11.07.2021
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iPowerGoodHealth, SAVE_VALUE_ANY);
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iPowerBadHealth, SAVE_VALUE_ANY);
-	// SAVEBREAK@
+
 	WRAPPER_READ(wrapper, "CvCity", &m_iBonusGoodHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iBonusBadHealth);
 	WRAPPER_READ(wrapper, "CvCity", &m_iHurryAngerTimer);
@@ -16714,13 +16667,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iBuildingOnlyHealthyCount);
 	WRAPPER_READ(wrapper, "CvCity", &m_iFood);
 	WRAPPER_READ(wrapper, "CvCity", &m_iFoodKept);
-
-	//	Old format save before saved food chnages became multiplicative and the stored value
-	//	became a logarithm
-	m_fMaxFoodKeptMultiplierLog = INVALID_STORED_FOOD_PERCENT_LOG;
-
-	WRAPPER_READ(wrapper, "CvCity", &m_fMaxFoodKeptMultiplierLog);
-
+	WRAPPER_READ(wrapper, "CvCity", &m_iFoodKeptPercent);
 	WRAPPER_READ(wrapper, "CvCity", &m_iOverflowProduction);
 	WRAPPER_READ(wrapper, "CvCity", &m_iFeatureProduction);
 	WRAPPER_READ(wrapper, "CvCity", &m_iMilitaryProductionModifier);
@@ -16738,9 +16685,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iNukeModifier);
 	WRAPPER_READ(wrapper, "CvCity", &m_iFreeSpecialist);
 	WRAPPER_READ(wrapper, "CvCity", &m_iPowerCount);
-	// @SAVEBREAK DELETE - Toffer - 11.07.2021
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iDirtyPowerCount, SAVE_VALUE_ANY);
-	// SAVEBREAK@
+
 	WRAPPER_READ(wrapper, "CvCity", &m_iDefenseDamage);
 	WRAPPER_READ(wrapper, "CvCity", &m_iLastDefenseDamage);
 	WRAPPER_READ(wrapper, "CvCity", &m_iOccupationTimer);
@@ -16748,10 +16693,6 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iCitySizeBoost);
 	WRAPPER_READ(wrapper, "CvCity", &m_iSpecialistFreeExperience);
 	WRAPPER_READ(wrapper, "CvCity", &m_iEspionageDefenseModifier);
-
-	// @SAVEBREAK DELETE - Toffer - 04.07.2021
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iMADIncoming, SAVE_VALUE_ANY);
-	// SAVEBREAK@
 
 	WRAPPER_READ(wrapper, "CvCity", &m_bNeverLost);
 	WRAPPER_READ(wrapper, "CvCity", &m_bBombarded);
@@ -16780,9 +16721,6 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iRevolutionCounter);
 	WRAPPER_READ(wrapper, "CvCity", &m_iReinforcementCounter);
 
-	// @SAVEBREAK DELETE - Toffer - 11.07.2021
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_aiSeaPlotYield, SAVE_VALUE_ANY);
-	// SAVEBREAK@
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_aiRiverPlotYield);
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_aiBaseYieldRate);
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_aiYieldRateModifier);
@@ -16837,10 +16775,6 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONS, GC.getNumPromotionInfos(), m_paiFreePromotionCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiNumRealBuilding);
 
-	// @SAVEBREAK DELETE - Toffer - 03.02.2021
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_bHasCalculatedBuildingReplacement, SAVE_VALUE_ANY);
-	// SAVEBREAK@
-
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_CITY_PLOTS, m_pabWorkingPlot);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_RELIGIONS, GC.getNumReligionInfos(), m_pabHasReligion);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CORPORATIONS, GC.getNumCorporationInfos(), m_pabHasCorporation);
@@ -16857,17 +16791,10 @@ void CvCity::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiBonusCommerceRateModifier);
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_COMMERCE_TYPES, m_aiBonusCommercePercentChanges);
-	// @SAVEBREAK DELETE - Toffer - 13.09.2021
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_aiCommerceAttacks, SAVE_VALUE_ANY);
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_aiMaxCommerceAttacks, SAVE_VALUE_ANY);
-	// SAVEBREAK@
+
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_pabHadVicinityBonus);
 	WRAPPER_READ_CLASS_ENUM(wrapper, "CvCity", REMAPPED_CLASS_TYPE_CIVILIZATIONS, &m_iCiv);
 
-	// @SAVEBREAK DELETE - Toffer
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iExtraYieldTurns, SAVE_VALUE_ANY);
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_eOccupationCultureLevel, SAVE_VALUE_ANY);
-	// SAVEBREAK@
 	WRAPPER_READ(wrapper, "CvCity", &m_iLineOfSight);
 	WRAPPER_READ(wrapper, "CvCity", &m_iLandmarkAngerTimer);
 
@@ -16892,40 +16819,6 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCity", &m_iHappinessPercentPerPopulation);
 	WRAPPER_READ(wrapper, "CvCity", &m_iHealthPercentPerPopulation);
 
-	unsigned int iNumElts = 0;
-	// @SAVEBREAK DELETE - Toffer - 23.09.2021
-	WRAPPER_READ(wrapper, "CvCity", &iNumElts);
-	for (unsigned int i = 0; i < iNumElts; ++i)
-	{
-		CvTaggedSaveFormatWrapper& wrapper2 = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-		wrapper2.AttachToStream(pStream);
-
-		WRAPPER_READ_OBJECT_START(wrapper2);
-
-		WRAPPER_SKIP_ELEMENT(wrapper2, "BuildingCommerceModifier", eBuilding, SAVE_VALUE_ANY);
-		WRAPPER_SKIP_ELEMENT(wrapper2, "BuildingCommerceModifier", eCommerce, SAVE_VALUE_ANY);
-		WRAPPER_SKIP_ELEMENT(wrapper2, "BuildingCommerceModifier", iChange, SAVE_VALUE_ANY);
-
-		WRAPPER_READ_OBJECT_END(wrapper2);
-	}
-	WRAPPER_READ(wrapper, "CvCity", &iNumElts);
-	for (unsigned int i = 0; i < iNumElts; ++i)
-	{
-		CvTaggedSaveFormatWrapper& wrapper2 = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
-
-		wrapper2.AttachToStream(pStream);
-
-		WRAPPER_READ_OBJECT_START(wrapper2);
-
-		WRAPPER_SKIP_ELEMENT(wrapper2, "BuildingYieldModifier", eBuilding, SAVE_VALUE_ANY);
-		WRAPPER_SKIP_ELEMENT(wrapper2, "BuildingYieldModifier", eYield, SAVE_VALUE_ANY);
-		WRAPPER_SKIP_ELEMENT(wrapper2, "BuildingYieldModifier", iChange, SAVE_VALUE_ANY);
-
-		WRAPPER_READ_OBJECT_END(wrapper2);
-	}
-	// SAVEBREAK@
-
 	// Read all saved trade routes
 	int iNumTradeRoutes = 0;
 	WRAPPER_READ(wrapper, "CvCity", &iNumTradeRoutes);
@@ -16936,10 +16829,7 @@ void CvCity::read(FDataStreamBase* pStream)
 		WRAPPER_READ(wrapper, "CvCity", &m_paTradeCities[iI].iID);
 	}
 	// Discard saved trade routes above the max count we allow
-	// SAVEBREAK - Toffer - This is too early in read stream, the player adjustment to max has not yet been read in from the save...
-	// Add it back at next savebreak when the m_iMaxTradeRoutesAdjustment read is moved earlier in the stream.
-	//m_paTradeCities.resize(getMaxTradeRoutes());
-	// ! SAVEBREAK
+	m_paTradeCities.resize(getMaxTradeRoutes());
 
 	int orderQueueSize = 0;
 	WRAPPER_READ(wrapper, "CvCity", &orderQueueSize);
@@ -16992,6 +16882,7 @@ void CvCity::read(FDataStreamBase* pStream)
 
 	m_Properties.readWrapper(pStream);
 
+	unsigned int iNumElts = 0;
 	WRAPPER_READ(wrapper, "CvCity", &iNumElts);
 	m_aEventsOccured.clear();
 	for (unsigned int i = 0; i < iNumElts; ++i)
@@ -17267,9 +17158,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	WRAPPER_READ_ARRAY(wrapper, "CvCity", NUM_YIELD_TYPES, m_aiBaseYieldPerPopRate);
 	WRAPPER_READ(wrapper, "CvCity", &m_bVisibilitySetup);
 	m_bVisibilitySetup = false;
-	// @SAVEBREAK DELETE - Toffer - 17.05.2021
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvCity", m_iLostProductionBase, SAVE_VALUE_ANY);
-	// SAVEBREAK@
+
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), m_paiNewAfflictionTypeCount);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), m_paiNewExtraAfflictionOutbreakLevelChange);
 	WRAPPER_READ_CLASS_ARRAY(wrapper, "CvCity", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), m_paiNewAfflictionToleranceChange);
@@ -17448,7 +17337,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_iBuildingOnlyHealthyCount);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iFood);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iFoodKept);
-	WRAPPER_WRITE(wrapper, "CvCity", m_fMaxFoodKeptMultiplierLog);
+	WRAPPER_WRITE(wrapper, "CvCity", m_iFoodKeptPercent);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iOverflowProduction);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iFeatureProduction);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iMilitaryProductionModifier);
@@ -17585,15 +17474,6 @@ void CvCity::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvCity", m_iNumPopulationEmployed);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iHappinessPercentPerPopulation);
 	WRAPPER_WRITE(wrapper, "CvCity", m_iHealthPercentPerPopulation);
-
-	// @SAVEBREAK DELETE - Toffer - 23.09.2021
-	{
-		std::vector<int> m_aBuildingCommerceModifier;
-		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_aBuildingCommerceModifier.size(), "iNumElts");
-		std::vector<int> m_aBuildingYieldModifier;
-		WRAPPER_WRITE_DECORATED(wrapper, "CvCity", m_aBuildingYieldModifier.size(), "iNumElts");
-	}
-	// SAVEBREAK@
 
 	const int iNumTradeRoutes = m_paTradeCities.size();
 	WRAPPER_WRITE(wrapper, "CvCity", iNumTradeRoutes);
@@ -21794,7 +21674,7 @@ void CvCity::clearModifierTotals()
 	m_iNoUnhappinessCount = 0;
 	m_iNoUnhealthyPopulationCount = 0;
 	m_iBuildingOnlyHealthyCount = 0;
-	m_fMaxFoodKeptMultiplierLog = 0.0;
+	m_iFoodKeptPercent = 0;
 	m_iMilitaryProductionModifier = 0;
 	m_iSpaceProductionModifier = 0;
 	m_iExtraTradeRoutes = 0;

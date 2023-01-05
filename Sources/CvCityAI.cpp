@@ -9820,7 +9820,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 				if (bCanPopRush && (iHappinessLevel > 0))
 				{
 					iSlaveryValue = 30 * 14 * std::max(0, aiYields[YIELD_FOOD] - ((iHealthLevel < 0) ? 1 : 0));
-					iSlaveryValue /= std::max(10, (growthThreshold() * (100 - getMaxFoodKeptPercent())));
+					iSlaveryValue /= std::max(10, growthThreshold() * (100 - getFoodKeptPercent()));
 
 					iSlaveryValue *= 100;
 					iSlaveryValue /= getHurryCostModifier();
@@ -11598,9 +11598,7 @@ void CvCityAI::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iNeededFloatingDefenders);
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iNeededFloatingDefendersCacheTurn);
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iWorkersNeeded);
-	// @SAVEBREAK DELETE
-	WRAPPER_SKIP_ELEMENT(wrapper, "CvCityAI", m_iWorkersHave, SAVE_VALUE_ANY);
-	// SAVEBREAK@
+
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iTempBuildPriority);
 	WRAPPER_READ(wrapper, "CvCityAI", &m_iBuildPriority);
 	WRAPPER_READ(wrapper, "CvCityAI", &m_bNavalMilitaryProductionCity);

@@ -1723,17 +1723,12 @@ void CvInitCore::read(FDataStreamBase* pStream)
 		WRAPPER_READ_ARRAY(wrapper, "CvInitCore", m_iNumVictories, m_abVictories);
 	}
 
-// BUG - Save Format - start
 	if (bugSaveFlag)
 	{
 		// read and ignore number of game options as it's only for external tools
 		int iNumGameOptions = 0;
-		// @SAVEBREAK DELETE
-		WRAPPER_READ_DECORATED(wrapper, "CvInitCore", &iNumGameOptions, "NUM_GAMEOPTION_TYPES");
-		// SAVEBREAK@
 		WRAPPER_READ_DECORATED(wrapper, "CvInitCore", &iNumGameOptions, "GC.getNumGameOptionInfos()");
 	}
-// BUG - Save Format - end
 
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 11/30/07                                MRGENIE      */
