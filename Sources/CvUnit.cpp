@@ -5149,64 +5149,25 @@ bool CvUnit::isActionRecommended(int iAction) const
 
 int CvUnit::defenderValue(const CvUnit* pAttacker) const
 {
-	if (!canDefend())
+	if (pAttacker)
 	{
-		return 0;
-	}
-
-	int iValue = 0;
-	bool bTargetOverride = false;
-
-	TeamTypes eAttackerTeam = NO_TEAM;
-	if (NULL != pAttacker)
-	{
-		eAttackerTeam = pAttacker->getTeam();
-
-		CvPlot* pPlot = plot();
-		if (pPlot != NULL)
-		{
-			if (canCoexistWithAttacker(*pAttacker))
-			{
-				return 0;
-			}
-		}
-		else if (canCoexistWithTeam(eAttackerTeam))
+		// If the attacker is an air unit then does my current damage exceed the attackers damage limit?
+		if (pAttacker->getDomainType() == DOMAIN_AIR && getDamage() >= pAttacker->airCombatLimit(this)
+		// Some basic disqualifiers
+		|| canCoexistWithAttacker(*pAttacker)
+		|| !pAttacker->canAttack(*this))
 		{
 			return 0;
 		}
-
-		if (!pAttacker->canAttack(*this))
-		{
-			return 2;
-		}
-
-		if (isTargetOf(*pAttacker))
-		{
-			bTargetOverride = true;
-		}
 	}
+	int iValue = currCombatStr(plot(), pAttacker);
 
-	iValue += currCombatStr(plot(), pAttacker);
 	if (::isWorldUnit(getUnitType()))
 	{
 		iValue /= 2;
 	}
 
-	if (NULL == pAttacker)
-	{
-		if (collateralDamage() > 0)
-		{
-			iValue *= 100;
-			iValue /= 100 + collateralDamage();
-		}
-
-		if (currInterceptionProbability() > 0)
-		{
-			iValue *= 100;
-			iValue /= 100 + currInterceptionProbability();
-		}
-	}
-	else
+	if (pAttacker)
 	{
 		if (!pAttacker->immuneToFirstStrikes())
 		{
@@ -5219,32 +5180,44 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 			iValue /= 100;
 		}
 	}
-
-	const int iAssetValue = std::max(1, assetValueTotal()/100);
-	int iCargoAssetValue = 0;
-	std::vector<CvUnit*> aCargoUnits;
-	getCargoUnits(aCargoUnits);
-	foreach_(const CvUnit* pCargo, aCargoUnits)
+	else
 	{
-		iCargoAssetValue += std::max(1, pCargo->assetValueTotal()/100);
+		if (collateralDamage() > 0)
+		{
+			iValue *= 100;
+			iValue /= 100 + collateralDamage();
+		}
+		if (currInterceptionProbability() > 0)
+		{
+			iValue *= 100;
+			iValue /= 100 + currInterceptionProbability();
+		}
 	}
-	iValue = iValue * iAssetValue / std::max(1, iAssetValue + iCargoAssetValue);
+
+	{
+		const int iAssetValue = std::max(1, assetValueTotal()/100);
+		int iCargoAssetValue = 0;
+		std::vector<CvUnit*> aCargoUnits;
+		getCargoUnits(aCargoUnits);
+		foreach_(const CvUnit* pCargo, aCargoUnits)
+		{
+			iCargoAssetValue += std::max(1, pCargo->assetValueTotal()/100);
+		}
+		iValue = iValue * iAssetValue / std::max(1, iAssetValue + iCargoAssetValue);
+	}
 
 	if (NO_UNIT == getLeaderUnitType())
 	{
 		++iValue;
 	}
-
 	iValue += tauntTotal() * iValue / 100;
+
 	// It should be greater than 0 as this target is at least valid as per the checks above
-	iValue = std::max(1, iValue);
-
-	if (bTargetOverride)
+	if (pAttacker && isTargetOf(*pAttacker))
 	{
-		iValue += 1000000;
+		return std::max(1000000, std::min(MAX_INT, iValue + 1000000));
 	}
-
-	return iValue + 3;
+	return std::max(1, iValue);
 }
 
 bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker) const
@@ -13750,25 +13723,14 @@ float CvUnit::currCombatStrFloat(const CvPlot* pPlot, const CvUnit* pAttacker) c
 
 bool CvUnit::canFight() const
 {
-	//	Don't bother calculating modifiers for this call
-	return (m_iBaseCombat > 0);
+	return m_iBaseCombat > 0; // Don't bother calculating modifiers for this call
 }
-
 
 bool CvUnit::canAttack() const
 {
-	if (!canFight())
-	{
-		return false;
-	}
-
-	if (isOnlyDefensive())
-	{
-		return false;
-	}
-
-	return true;
+	return canFight() && !isOnlyDefensive();
 }
+
 bool CvUnit::canAttack(const CvUnit& defender) const
 {
 	if (!canAttack() || getOwner() == defender.getOwner())

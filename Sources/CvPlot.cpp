@@ -3241,33 +3241,42 @@ CvUnit* CvPlot::getBestDefenderExternal(PlayerTypes eOwner, PlayerTypes eAttacki
 }
 
 namespace {
-	int getDefenderScore(const CvPlot* plot, const CvUnit* pLoopUnit, PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove, bool bAssassinate, ECacheAccess::flags cacheAccess)
+	int getDefenderScore(
+		const CvUnit* unitX,
+		PlayerTypes eOwner,
+		PlayerTypes eAttackingPlayer,
+		const CvUnit* pAttacker,
+		bool bTestAtWar,
+		bool bTestPotentialEnemy,
+		bool bTestCanMove,
+		bool bAssassinate,
+		ECacheAccess::flags cacheAccess
+	)
 	{
+		FAssert(unitX->plot());
+
 		// Check the unit is valid
-		if (
-			// In delayed death cycle
-			pLoopUnit->plot() == NULL
-			// Going to be dead
-			|| pLoopUnit->AI_getPredictedHitPoints() == 0
-			// Already dead
-			|| pLoopUnit->isDead()
-			// Doesn't belong to the player we are interested in
-			|| (eOwner != NO_PLAYER && pLoopUnit->getOwner() != eOwner)
-			)
+		if (unitX->AI_getPredictedHitPoints() == 0 // Going to be dead
+		||  unitX->isDead() // Already dead
+		// Doesn't belong to the player we are interested in
+		||  eOwner != NO_PLAYER && unitX->getOwner() != eOwner
+		// Can't defend
+		||  !unitX->canDefend())
 		{
 			return 0;
 		}
+		const CvPlot* plotX = unitX->plot();
 
 		CvChecksum checksum;
 		if (cacheAccess != ECacheAccess::None)
 		{
 			// Work out our cache key (todo: change this to just be a proper hash key)
-			if (pAttacker != NULL)
+			if (pAttacker)
 			{
 				checksum.add(pAttacker->getID());
 			}
-			checksum.add((int)pLoopUnit->getOwner());
-			checksum.add(pLoopUnit->getID());
+			checksum.add((int)unitX->getOwner());
+			checksum.add(unitX->getID());
 			checksum.add((int)bTestAtWar);
 			checksum.add((int)bTestPotentialEnemy * 10);
 			checksum.add((int)bTestCanMove * 100);
@@ -3280,7 +3289,7 @@ namespace {
 				// look in the cache
 				DefenderScoreCache::const_iterator itr = g_bestDefenderCache->find(checksum.get());
 				if (itr != g_bestDefenderCache->end()
-					&& itr->second.iHealth == pLoopUnit->getHP())
+					&& itr->second.iHealth == unitX->getHP())
 				{
 					return itr->second.iValue;
 				}
@@ -3291,43 +3300,37 @@ namespace {
 
 		if (
 			// Assassination target, if we have one
-				(!bAssassinate || (pAttacker && pLoopUnit->isTargetOf(*pAttacker)))
+			(!bAssassinate || pAttacker && unitX->isTargetOf(*pAttacker))
 			// Not invisible to the player, if any
-			&& (eAttackingPlayer == NO_PLAYER || !pLoopUnit->isInvisible(GET_PLAYER(eAttackingPlayer).getTeam(), false))
+			&& (eAttackingPlayer == NO_PLAYER || !unitX->isInvisible(GET_PLAYER(eAttackingPlayer).getTeam(), false))
 			// War enemy (todo: we should just assert that attacking player is valid if we are testing for enemy)
-			&& (!bTestAtWar
-				|| eAttackingPlayer == NO_PLAYER
-				|| pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), plot)
-				|| (pAttacker != NULL && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwner()).getTeam(), plot, pLoopUnit)))
-			// Units cannot coexist together
-			&& (pAttacker == NULL || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
-			// Potential enemy (todo: we should just assert that attacking player is valid if we are testing for potential enemy)
-			&& (!bTestPotentialEnemy
-				|| eAttackingPlayer == NO_PLAYER
-				|| pLoopUnit->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), plot)
-				|| (pAttacker != NULL && pAttacker->isPotentialEnemy(GET_PLAYER(pLoopUnit->getOwner()).getTeam(), plot, pLoopUnit))
-				)
-			// If we are testing movement, can the unit move?
-			&& (!bTestCanMove || (pLoopUnit->canMove() && !pLoopUnit->isCargo()))
-			// If the attacker is an air unit then is the units current damage less than the attackers damage limit?
-			&& (pAttacker == NULL
-				|| pAttacker->getDomainType() != DOMAIN_AIR
-				|| pLoopUnit->getDamage() < pAttacker->airCombatLimit(pLoopUnit)
-				)
+			&& (
+					!bTestAtWar
+				||	eAttackingPlayer == NO_PLAYER
+				||	unitX->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), plotX)
+				||	(pAttacker && pAttacker->isEnemy(GET_PLAYER(unitX->getOwner()).getTeam(), plotX, unitX))
 			)
+			// Potential enemy (todo: we should just assert that attacking player is valid if we are testing for potential enemy)
+			&& (
+					!bTestPotentialEnemy
+				||	eAttackingPlayer == NO_PLAYER
+				||	unitX->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), plotX)
+				||	pAttacker && pAttacker->isPotentialEnemy(GET_PLAYER(unitX->getOwner()).getTeam(), plotX, unitX)
+			)
+			// If we are testing movement, can the unit move?
+			&& (!bTestCanMove || unitX->canMove() && !unitX->isCargo())
+		)
 		{
-			iValue = pLoopUnit->defenderValue(pAttacker);
+			iValue = unitX->defenderValue(pAttacker);
 		}
 
 		if (cacheAccess & ECacheAccess::Write)
 		{
-
 			unitDefenderInfo info;
-			info.iHealth = pLoopUnit->getHP();
+			info.iHealth = unitX->getHP();
 			info.iValue = iValue;
 			(*g_bestDefenderCache)[checksum.get()] = info;
 		}
-
 		return iValue;
 	}
 }
@@ -3367,20 +3370,22 @@ CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer
 
 	// Can't use this as it requires more than 9 args, and bind only supports 9
 	//CvUnit* pBestUnit = scoring::max_score(units(),
-	//	bind(&CvSelectionGroup::getDefenderScore, this, _1, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite)
+	//	bind(&CvSelectionGroup::getDefenderScore, _1, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite)
 	//).get_value_or(nullptr);
 
-	foreach_ (CvUnit* unit, units())
+	// Toffer - The above comment is now false as I removed a redundant arg so that it is now exactly 9 arguments.
+	//	I believe @MattCA wrote the above comment, but I might be wrong.
+
+	foreach_ (CvUnit* unitX, units())
 	{
-		int iValue = getDefenderScore(this, unit, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite);
+		int iValue = getDefenderScore(unitX, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite);
 
 		if (iValue > iBestValue)
 		{
-			pBestUnit = unit;
+			pBestUnit = unitX;
 			iBestValue = iValue;
 		}
 	}
-
 	return pBestUnit;
 }
 
@@ -3396,20 +3401,14 @@ CvUnit* CvPlot::getFirstDefender(EDefenderScore::flags flags, PlayerTypes eOwner
 
 CvUnit* CvPlot::getFirstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove) const
 {
-	CvUnit* pFirstUnit = NULL;
-
-	foreach_(CvUnit* pLoopUnit, units())
+	foreach_(CvUnit* unitX, units())
 	{
-		const int iValue = getDefenderScore(this, pLoopUnit, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, false, ECacheAccess::Write);
-
-		if (iValue > 0)
+		if (getDefenderScore(unitX, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, false, ECacheAccess::Write) > 0)
 		{
-			pFirstUnit = pLoopUnit;
-			break;
+			return unitX;
 		}
 	}
-
-	return pFirstUnit;
+	return NULL;
 }
 
 // returns a sum of the strength (adjusted by firepower) of all the units on a plot
