@@ -2887,26 +2887,24 @@ bool CvPlayer::isCityNameValid(CvWString& szName, bool bTestDestroyed) const
 
 CvUnit* CvPlayer::getTempUnit(UnitTypes eUnit, int iX, int iY)
 {
-	if ( m_pTempUnit == NULL )
+	if (m_pTempUnit)
 	{
-		m_pTempUnit = initUnit(eUnit, iX, iY, NO_UNITAI, NO_DIRECTION, UNIT_BIRTHMARK_TEMP_UNIT);
-		((CvPlayerAI*)this)->AI_changeNumAIUnits(m_pTempUnit->AI_getUnitAIType(),-1);	//	This one doesn't count
-		removeGroupCycle(m_pTempUnit->getGroup()->getID());
-	}
-	else
-	{
-		if ( m_pTempUnit->plot() != NULL )
+		if (m_pTempUnit->plot())
 		{
 			//GC.getGame().logOOSSpecial(8, m_pTempUnit->getID(), INVALID_PLOT_COORD, INVALID_PLOT_COORD);
-			m_pTempUnit->setXY(INVALID_PLOT_COORD,INVALID_PLOT_COORD,true,false);
+			m_pTempUnit->setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true, false);
 		}
-
 		m_pTempUnit->changeIdentity(eUnit);
 		//GC.getGame().logOOSSpecial(9, m_pTempUnit->getID(), iX, iY);
 		m_pTempUnit->setXY(iX, iY, true, false);
 	}
-
-	//	Set an arbitrary automation type - just need it to be flagged as automated
+	else
+	{
+		m_pTempUnit = initUnit(eUnit, iX, iY, NO_UNITAI, NO_DIRECTION, UNIT_BIRTHMARK_TEMP_UNIT);
+		((CvPlayerAI*)this)->AI_changeNumAIUnits(m_pTempUnit->AI_getUnitAIType(), -1); // This one doesn't count
+		removeGroupCycle(m_pTempUnit->getGroup()->getID());
+	}
+	// Set an arbitrary automation type - just need it to be flagged as automated
 	m_pTempUnit->getGroup()->setAutomateType(AUTOMATE_BUILD);
 
 	return m_pTempUnit;
@@ -2915,7 +2913,7 @@ CvUnit* CvPlayer::getTempUnit(UnitTypes eUnit, int iX, int iY)
 void CvPlayer::releaseTempUnit()
 {
 	//GC.getGame().logOOSSpecial(10, m_pTempUnit->getID(), INVALID_PLOT_COORD, INVALID_PLOT_COORD);
-	m_pTempUnit->setXY(INVALID_PLOT_COORD,INVALID_PLOT_COORD,true,false);
+	m_pTempUnit->setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true, false);
 }
 
 CvUnit* CvPlayer::initUnit(UnitTypes eUnit, int iX, int iY, UnitAITypes eUnitAI, DirectionTypes eFacingDirection, int iBirthmark)
@@ -15032,11 +15030,10 @@ void CvPlayer::deleteCity(int iID)
 CvUnit* CvPlayer::firstUnit(int *pIterIdx, bool bRev) const
 {
 	CvUnit* pResult = !bRev ? m_units[CURRENT_MAP]->beginIter(pIterIdx) : m_units[CURRENT_MAP]->endIter(pIterIdx);
-	if (pResult != NULL && pResult == m_pTempUnit)
+	if (pResult && pResult == m_pTempUnit)
 	{
 		pResult = nextUnit(pIterIdx, bRev);
 	}
-
 	return pResult;
 }
 
@@ -15044,11 +15041,10 @@ CvUnit* CvPlayer::firstUnit(int *pIterIdx, bool bRev) const
 CvUnit* CvPlayer::nextUnit(int *pIterIdx, bool bRev) const
 {
 	CvUnit* pResult = !bRev ? m_units[CURRENT_MAP]->nextIter(pIterIdx) : m_units[CURRENT_MAP]->prevIter(pIterIdx);
-	if (pResult != NULL && pResult == m_pTempUnit)
+	if (pResult && pResult == m_pTempUnit)
 	{
 		pResult = nextUnit(pIterIdx, bRev);
 	}
-
 	return pResult;
 }
 
@@ -15080,7 +15076,7 @@ CvUnit* CvPlayer::nextUnitExternal(int *pIterIdx, bool bRev) const
 
 int CvPlayer::getNumUnits() const
 {
-	return m_units[CURRENT_MAP]->getCount() - (m_pTempUnit != NULL ? 1 : 0);
+	return m_units[CURRENT_MAP]->getCount() - (m_pTempUnit ? 1 : 0);
 }
 
 
@@ -15144,7 +15140,7 @@ CvSelectionGroup* CvPlayer::nextSelectionGroupNonEmpty(int* pIterIdx, bool bRev)
 
 int CvPlayer::getNumSelectionGroups() const
 {
-	return m_selectionGroups[CURRENT_MAP]->getCount() - (m_pTempUnit != NULL ? 1 : 0);
+	return m_selectionGroups[CURRENT_MAP]->getCount() - (m_pTempUnit ? 1 : 0);
 }
 
 
@@ -19413,7 +19409,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		{
 			m_pTempUnit = getUnit(iTempUnitId);
 
-			FAssert(m_pTempUnit != NULL);
+			FAssert(m_pTempUnit);
 		}
 		{
 			int iCount = 0;
@@ -19438,9 +19434,13 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				{
 					continue;
 				}
-				if (unitX->plot() == NULL || unitX->getX() < 0 || unitX->getX() >= iMaxX || unitX->getY() < 0 || unitX->getY() >= iMaxY)
+				if (!unitX->plot() || unitX->getX() < 0 || unitX->getX() >= iMaxX || unitX->getY() < 0 || unitX->getY() >= iMaxY)
 				{
 					CvSelectionGroup* pGroup = unitX->getGroup();
+
+					// Toffer - X and Y can for some reason be stored as -1,
+					//	and plot() will not return NULL unless they are INVALID_PLOT_COORD which cause problems.
+					unitX->forceInvalidCoordinates();
 					unitX->joinGroup(NULL, false, false);
 
 					deleteUnit(unitX->getID());
@@ -20326,7 +20326,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iPopRushHurryCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iInflationModifier);
 
-		int	iTempUnitId = (m_pTempUnit == NULL ? -1 : m_pTempUnit->getID());
+		int	iTempUnitId = (m_pTempUnit ? m_pTempUnit->getID() : -1);
 		WRAPPER_WRITE(wrapper, "CvPlayer", iTempUnitId);
 		//TB Combat mod begin
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), m_paiPlayerWideAfflictionCount);
