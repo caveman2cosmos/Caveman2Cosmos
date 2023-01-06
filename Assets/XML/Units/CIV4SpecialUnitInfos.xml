@@ -70,11 +70,6 @@
 			</CarrierUnitAIs>
 		</SpecialUnitInfo>
 		<SpecialUnitInfo>
-			<!-- @SAVEBREAK Remove this on savebreak -->
-			<Type>SPECIALUNIT_UNITED_NATIONS</Type>
-			<bValid>0</bValid>
-		</SpecialUnitInfo>
-		<SpecialUnitInfo>
 			<Type>SPECIALUNIT_VTOL</Type>
 			<Description>TXT_KEY_SPECIALUNIT_VTOL</Description>
 			<bValid>1</bValid>

@@ -643,24 +643,6 @@
 		<English>Sets a random admin password so that debug tools cannot be used, and the game assets cannot be modified. Only for single-player games.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_LS612_TRAITS</Tag>
-		<English>Focused Traits</English>
-		<French>Traits de caract. Avancés</French>
-		<German>Fokussierte Charakterzüge</German>
-		<Spanish>Rasgos enfocables</Spanish>
-		<Polish>Inne Cechy</Polish>
-		<Russian>Òî÷íûå õàðàêòåðèñòèêè</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GAMEOPTION_LS612_TRAITS_HELP</Tag>
-		<English>This option enables an alternate set of traits that is more balanced and diverse than the base traits. They use many new features that the base traits do not and are more diverse.</English>
-		<French>Cette option active un ensemble de Traits de caractères pour les Leaders, plus équilibrés et diversifiés que ceux de base. Ils bénéficient de nouvelles fonctionnalités et effets.</French>
-		<German>Diese Einstellung aktiviert ein alternatives Set von Charakterzügen, das viele neue Features verwendet und insgesamt besser ausbalanciert ist als die originalen Charakterzüge.</German>
-		<Spanish>Esta opcion activa un conjunto alternativo de rasgos más diverso y mejor balanceado que los originales. Utilizan muchas características nuevas que no aprovechan los originales.</Spanish>
-		<Polish>Opcja włącza alternatywny zestaw cech które są bardziej zbilansowane i zróżnicowane od bazowych cech. Wykorzystują one wiele nowych funkcji, które cechy bazowe nie mają i są bardziej zróżnicowane</Polish>
-		<Russian>Ýòà îïöèÿ âêëþ÷àåò àëüòåðíàòèâíûé íàáîð õàðàêòåðèñòèê, êîòîðûé ÿâëÿåòñÿ áîëåå ñáàëàíñèðîâàííûì è ðàçíîîáðàçíûì, ÷åì áàçîâûé. Îíè èñïîëüçóþò ìíîæåñòâî íîâûõ ôóíêöèé, êîòîðûõ íåò â áàçîâûõ õàðàêòåðèñòèêàõ è áîëåå ðàçíîîáðàçíû.</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MAXIMUM_POPULATION</Tag>
 		<English>Maximum Population</English>
 		<French>Maximum de Population</French>

@@ -468,14 +468,6 @@
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
-		<!-- Delete all references to LS traits on @SAVEBREAK -->
-		<GameOptionInfo>
-			<Type>GAMEOPTION_LS612_TRAITS</Type>
-			<Description>TXT_KEY_GAMEOPTION_LS612_TRAITS</Description>
-			<Help>TXT_KEY_GAMEOPTION_LS612_TRAITS_HELP</Help>
-			<bDefault>0</bDefault>
-			<bVisible>0</bVisible>
-		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_VANILLA_COMBAT_ENGINE</Type>
 			<Description>TXT_KEY_GAMEOPTION_VANILLA_COMBAT_ENGINE</Description>
