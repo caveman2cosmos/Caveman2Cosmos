@@ -5151,7 +5151,7 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 {
 	if (!canDefend())
 	{
-		return 1;
+		return 0;
 	}
 
 	int iValue = 0;
