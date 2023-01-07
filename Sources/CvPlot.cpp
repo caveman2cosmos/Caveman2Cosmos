@@ -3374,7 +3374,6 @@ CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer
 	//).get_value_or(nullptr);
 
 	// Toffer - The above comment is now false as I removed a redundant arg so that it is now exactly 9 arguments.
-	//	I believe @MattCA wrote the above comment, but I might be wrong.
 
 	foreach_ (CvUnit* unitX, units())
 	{
