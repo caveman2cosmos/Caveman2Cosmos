@@ -5160,11 +5160,16 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 			return 0;
 		}
 	}
-	int iValue = currCombatStr(plot(), pAttacker);
-
-	if (::isWorldUnit(getUnitType()))
+	if (!canDefend())
 	{
-		iValue /= 2;
+		return 1;
+	}
+	int iValue = 2 + currCombatStr(plot(), pAttacker);
+
+	if (isHurt() && ::isWorldUnit(getUnitType()))
+	{
+		iValue *= 3;
+		iValue /= 4;
 	}
 
 	if (pAttacker)

@@ -1323,6 +1323,7 @@ bool CvPlot::unitHere(const CvUnit* pUnit) const
 	return algo::any_of_equal(units(), pUnit);
 }
 
+// Toffer - ToDo: Improving this hot mess
 CvUnit* CvPlot::getPreferredCenterUnit() const
 {
 	CvUnit* pNewCenterUnit = getSelectedUnit();
@@ -3259,9 +3260,7 @@ namespace {
 		if (unitX->AI_getPredictedHitPoints() == 0 // Going to be dead
 		||  unitX->isDead() // Already dead
 		// Doesn't belong to the player we are interested in
-		||  eOwner != NO_PLAYER && unitX->getOwner() != eOwner
-		// Can't defend
-		||  !unitX->canDefend())
+		||  eOwner != NO_PLAYER && unitX->getOwner() != eOwner)
 		{
 			return 0;
 		}
