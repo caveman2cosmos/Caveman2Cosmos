@@ -1321,6 +1321,7 @@ bool CvPlot::unitHere(const CvUnit* pUnit) const
 	return algo::any_of_equal(units(), pUnit);
 }
 
+// Toffer - ToDo: Improving this hot mess
 CvUnit* CvPlot::getPreferredCenterUnit() const
 {
 	CvUnit*  pNewCenterUnit = getSelectedUnit();
@@ -1351,6 +1352,7 @@ CvUnit* CvPlot::getPreferredCenterUnit() const
 		return pNewCenterUnit;
 	}
 	pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGame().getActivePlayer());
+
 	return pNewCenterUnit;
 }
 
@@ -3311,6 +3313,8 @@ namespace {
 		{
 			return 0;
 		}
+		const int iX = plot->getX();
+		const int iY = plot->getY();
 
 		CvChecksum checksum;
 		if (cacheAccess != ECacheAccess::None)

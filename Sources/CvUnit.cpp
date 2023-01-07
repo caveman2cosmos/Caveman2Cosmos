@@ -5149,12 +5149,6 @@ bool CvUnit::isActionRecommended(int iAction) const
 
 int CvUnit::defenderValue(const CvUnit* pAttacker) const
 {
-	if (!canDefend())
-	{
-		return 0;
-	}
-
-	int iValue = 0;
 	bool bTargetOverride = false;
 
 	TeamTypes eAttackerTeam = NO_TEAM;
@@ -5177,7 +5171,7 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 
 		if (!pAttacker->canAttack(*this))
 		{
-			return 2;
+			return 0;
 		}
 
 		if (isTargetOf(*pAttacker))
@@ -5185,11 +5179,16 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 			bTargetOverride = true;
 		}
 	}
-
-	iValue += currCombatStr(plot(), pAttacker);
-	if (::isWorldUnit(getUnitType()))
+	if (!canDefend())
 	{
-		iValue /= 2;
+		return 1;
+	}
+	int iValue = 2 + currCombatStr(plot(), pAttacker);
+
+	if (isHurt() && ::isWorldUnit(getUnitType()))
+	{
+		iValue *= 3;
+		iValue /= 4;
 	}
 
 	if (NULL == pAttacker)
