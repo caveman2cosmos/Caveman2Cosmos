@@ -1427,13 +1427,11 @@ class RevolutionWatchAdvisor:
 
 	def calculateCultureTurns (self, city, szKey, arg):
 
-		iCultureTimes100 = city.getCultureTimes100(gc.getGame().getActivePlayer())
 		iCultureRateTimes100 = city.getCommerceRateTimes100(CommerceTypes.COMMERCE_CULTURE)
-		if iCultureRateTimes100 > 0:
-			iCultureLeftTimes100 = 100 * city.getCultureThreshold() - iCultureTimes100
-			return (iCultureLeftTimes100 + iCultureRateTimes100 - 1) / iCultureRateTimes100
-		else:
-			return u"-"
+
+		if iCultureRateTimes100 > 0 and city.getCultureThreshold() > 0:
+			return (100*city.getCultureThreshold() - city.getCultureTimes100(gc.getGame().getActivePlayer()) + iCultureRateTimes100 - 1) / iCultureRateTimes100
+		return u"-"
 
 	def calculateGreatPeopleTurns (self, city, szKey, arg):
 
@@ -1441,22 +1439,22 @@ class RevolutionWatchAdvisor:
 		if iGreatPersonRate > 0:
 			iGPPLeft = gc.getPlayer(gc.getGame().getActivePlayer()).greatPeopleThresholdNonMilitary() - city.getGreatPeopleProgress()
 			return (iGPPLeft + iGreatPersonRate - 1) / iGreatPersonRate
-		else:
-			return u"-"
+
+		return u"-"
 
 	def canHurry (self, city, szKey, arg):
 
 		if city.canHurry(arg, False):
 			return self.objectHave
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def canLiberate (self, city, szKey, arg):
 
 		if city.getLiberationPlayer(False) != -1:
 			return self.objectHave
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def calculateValue (self, city, szKey, arg):
 
@@ -1531,10 +1529,9 @@ class RevolutionWatchAdvisor:
 	def calculateHasBonus (self, city, szKey, arg):
 
 		# Determine whether or not city has the given bonus
-		if (city.hasBonus(arg)):
+		if city.hasBonus(arg):
 			return self.objectHave
-		else:
-			return self.objectNotPossible
+		return self.objectNotPossible
 
 	def calculateBonus (self, city, szKey, arg):
 

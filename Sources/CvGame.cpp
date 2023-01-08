@@ -1073,7 +1073,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	m_iNumSessions = 1;
 
 	m_iNumCultureVictoryCities = 0;
-	m_eCultureVictoryCultureLevel = NO_CULTURELEVEL;
+	m_eCultureVictoryCultureLevel = -1;
 
 	if (!bConstructorCall)
 	{
@@ -2544,10 +2544,11 @@ void CvGame::cityPushOrder(const CvCity* pCity, OrderTypes eOrder, int iData, bo
 void CvGame::selectUnit(CvUnit* pUnit, bool bClear, bool bToggle, bool bSound) const
 {
 	PROFILE_FUNC();
+	FAssert(!pUnit->isUsingDummyEntities());
 
 	const bool bSelectGroup =
 	(
-		gDLL->getInterfaceIFace()->getHeadSelectedUnit() == NULL
+		!gDLL->getInterfaceIFace()->getHeadSelectedUnit()
 		||
 		gDLL->getInterfaceIFace()->getHeadSelectedUnit()->getGroup() != pUnit->getGroup()
 		||
@@ -2568,11 +2569,11 @@ void CvGame::selectUnit(CvUnit* pUnit, bool bClear, bool bToggle, bool bSound) c
 
 		gDLL->getInterfaceIFace()->selectionListPreChange();
 
-		foreach_(CvUnit* pLoopUnit, pSelectionGroup->units())
+		foreach_(CvUnit* unitX, pSelectionGroup->units())
 		{
-			gDLL->getInterfaceIFace()->insertIntoSelectionList(pLoopUnit, false, bToggle, bGroup, bSound, true);
+			FAssert(!unitX->isUsingDummyEntities());
+			gDLL->getInterfaceIFace()->insertIntoSelectionList(unitX, false, bToggle, bGroup, bSound, true);
 		}
-
 		gDLL->getInterfaceIFace()->selectionListPostChange();
 	}
 	else
@@ -4588,6 +4589,11 @@ void CvGame::setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat)
 			if (isHotSeat() || bForceHotSeat)
 			{
 				sendPlayerOptions(true);
+			}
+
+			foreach_(CvUnit* unitX, GET_PLAYER(eNewValue).units())
+			{
+				unitX->reloadEntity();
 			}
 		}
 
@@ -9074,7 +9080,7 @@ void CvGame::setVoteSourceReligion(VoteSourceTypes eVoteSource, ReligionTypes eR
 
 bool CvGame::culturalVictoryValid() const
 {
-	return (m_iNumCultureVictoryCities > 0);
+	return m_eCultureVictoryCultureLevel != NO_CULTURELEVEL && m_iNumCultureVictoryCities > 0;
 }
 
 int CvGame::culturalVictoryNumCultureCities() const
@@ -9084,11 +9090,12 @@ int CvGame::culturalVictoryNumCultureCities() const
 
 CultureLevelTypes CvGame::culturalVictoryCultureLevel() const
 {
-	return (m_iNumCultureVictoryCities > 0) ? (CultureLevelTypes) m_eCultureVictoryCultureLevel : NO_CULTURELEVEL;
+	return (CultureLevelTypes) m_eCultureVictoryCultureLevel;
 }
 
 int CvGame::getCultureThreshold(CultureLevelTypes eLevel) const
 {
+	FASSERT_BOUNDS(0, GC.getNumCultureLevelInfos(), eLevel);
 	return GC.getCultureLevelInfo(eLevel).getSpeedThreshold(getGameSpeedType());
 }
 

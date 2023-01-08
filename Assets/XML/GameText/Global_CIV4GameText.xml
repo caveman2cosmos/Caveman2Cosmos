@@ -3028,8 +3028,8 @@
 		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3: Lvl %d4)</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_BAR_CULTURE_NO_LEVEL</Tag>
-		<English>[NEWLINE][ICON_CULTURE]: %d1/%d2 (%s3: Lvl %d4)</English>
+		<Tag>TXT_KEY_CITY_BAR_CULTURE_MAX</Tag>
+		<English>[NEWLINE][ICON_CULTURE]: %d1 (%s2: Lvl %d3)</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_BAR_FOOD_GROW</Tag>
@@ -13653,6 +13653,14 @@
 		<German>Eine unbekannte Stadt hat die Kulturstufe %s1_LevelName erreicht!</German>
 		<Italian>Una città sconosciuta ha raggiunto il livello culturale %s1_LevelName!</Italian>
 		<Spanish>Una ciudad desconocida ya tiene cultura %s1_LevelName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CULTURE_MAX</Tag>
+		<English>Culture: %d1 [ICON_CULTURE]</English>
+		<French>Culture : %d1 [ICON_CULTURE]</French>
+		<German>Kultur: %d1 [ICON_CULTURE]</German>
+		<Italian>Cultura: %d1 [ICON_CULTURE]</Italian>
+		<Spanish>Cultura: %d1 [ICON_CULTURE]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CURRENT_DEFENSE_HOVER</Tag>

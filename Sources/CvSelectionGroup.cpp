@@ -1821,11 +1821,11 @@ bool CvSelectionGroup::startMission()
 		{
 			setMissionTimer(GC.getMissionInfo(MISSION_NUKE).getTime());
 		}
-		//OutputDebugString(CvString::format("%S startMission endish mission=%d...\n", getHeadUnit()->getDescription().c_str(), headMissionQueueNode()->m_data.eMissionType).c_str());
+		OutputDebugString(CvString::format("%S startMission endish mission=%d...\n", getHeadUnit()->getDescription().c_str(), headMissionQueueNode()->m_data.eMissionType).c_str());
 
 		if (!isBusy())
 		{
-			//OutputDebugString(CvString::format("%S Not Busy...\n", getHeadUnit()->getDescription().c_str()).c_str());
+			OutputDebugString(CvString::format("%S Not Busy...\n", getHeadUnit()->getDescription().c_str()).c_str());
 			if (bDelete)
 			{
 				deleteMissionQueueNode(headMissionQueueNode());
@@ -1834,18 +1834,12 @@ bool CvSelectionGroup::startMission()
 			{
 				return continueMission();
 			}
-			//OutputDebugString(CvString::format("%S Not continueMission...\n", getHeadUnit()->getDescription().c_str()).c_str());
+			OutputDebugString(CvString::format("%S Not continueMission...\n", getHeadUnit()->getDescription().c_str()).c_str());
 
 			if (IsSelected() && (bCycle || !canAnyMove()))
 			{
 				GC.getGame().updateSelectionListInternal();
 			}
-		}
-		// Toffer - note to self, check if this is needed
-		else if (bAction && IsSelected() && !canAnyMove() && GET_PLAYER(GC.getGame().getActivePlayer()).isOption(PLAYEROPTION_QUICK_MOVES))
-		{
-			//OutputDebugString(CvString::format("%S WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW...\n", getHeadUnit()->getDescription().c_str()).c_str());
-			GC.getGame().updateSelectionListInternal();
 		}
 	}
 	return bResult;
@@ -1858,10 +1852,10 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 	CLLNode<MissionData>* missionNode = headMissionQueueNode();
 
-	//OutputDebugString(CvString::format("%S part 1 continueMission %d...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
+	OutputDebugString(CvString::format("%S part 1 continueMission %d...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
 
 	FAssert(!isBusy());
-	FAssert(missionNode != NULL);
+	FAssert(missionNode);
 	FAssert(getOwner() != NO_PLAYER);
 
 	if (getActivityType() == ACTIVITY_AWAKE)
@@ -1871,7 +1865,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 	FAssert(getActivityType() == ACTIVITY_MISSION);
 
 	// just in case...
-	if (missionNode == NULL || isMoveMission(missionNode) && (missionNode->m_data.iData1 == -1 || missionNode->m_data.iData2 == -1))
+	if (!missionNode || isMoveMission(missionNode) && (missionNode->m_data.iData1 == -1 || missionNode->m_data.iData2 == -1))
 	{
 		FErrorMsg("Should not occur");
 		setActivityType(ACTIVITY_AWAKE);
@@ -1881,6 +1875,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 	bool bDone = false;
 	bool bAction = false;
 	bool bFailed = false;
+	bool bCombat = false;
 
 	if ((missionNode->m_data.iPushTurn == GC.getGame().getGameTurn() || (missionNode->m_data.iFlags & MOVE_THROUGH_ENEMY))
 	&& missionNode->m_data.eMissionType == MISSION_MOVE_TO
@@ -1890,13 +1885,15 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		if (groupAttack(missionNode->m_data.iData1, missionNode->m_data.iData2, missionNode->m_data.iFlags, bFailedAlreadyFighting))
 		{
 			bDone = true;
+			bCombat = true;
 		}
 		missionNode = headMissionQueueNode();
-		//OutputDebugString(CvString::format("%S continueMission %d after attack...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
+		FAssert(getHeadUnit());
+		OutputDebugString(CvString::format("%S continueMission %d after attack...\n", getHeadUnit() ? getHeadUnit()->getDescription().c_str() : L"Empty group", missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
 
 		// extra crash protection, should never happen (but a previous bug in groupAttack was causing a NULL here)
 		// while that bug is fixed, no reason to not be a little more careful
-		if (missionNode == NULL)
+		if (!missionNode)
 		{
 			FErrorMsg("missionNode == NULL after groupAttack");
 			if (IsSelected() && !canAnyMove())
@@ -1912,7 +1909,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 	&& canAllMove()
 	&& !checkMoveSafety(missionNode->m_data.iData1, missionNode->m_data.iData2, missionNode->m_data.iFlags))
 	{
-		OutputDebugString(CvString::format("%S (%d) interrupted cautious move while moving to (%d,%d)...\n",getHeadUnit()->getDescription().c_str(), getHeadUnit()->getID(), missionNode->m_data.iData1, missionNode->m_data.iData2).c_str());
+		OutputDebugString(CvString::format("%S (%d) interrupted cautious move while moving to (%d,%d)...\n", getHeadUnit()->getDescription().c_str(), getHeadUnit()->getID(), missionNode->m_data.iData1, missionNode->m_data.iData2).c_str());
 		bDone = true;
 		bAction = false;
 		bFailed = true;
@@ -2101,8 +2098,10 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			}
 			case MISSION_BUILD:
 			{
+				OutputDebugString(CvString::format("%S MISSION_BUILD...\n", getHeadUnit()->getDescription().c_str()).c_str());
 				if (!groupBuild((BuildTypes)(missionNode->m_data.iData1)))
 				{
+					OutputDebugString(CvString::format("%S Failed...\n", getHeadUnit()->getDescription().c_str()).c_str());
 					bFailed = true;
 					bDone = true;
 				}
@@ -2111,10 +2110,11 @@ bool CvSelectionGroup::continueMission(int iSteps)
 		}
 	}
 	missionNode = headMissionQueueNode();
-	//OutputDebugString(CvString::format("%S part 3 continueMission %d...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
 
 	if (missionNode && getNumUnits() > 0)
 	{
+		OutputDebugString(CvString::format("%S part 3 continueMission %d...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
+
 		if (!bDone)
 		{
 			switch (missionNode->m_data.eMissionType)
@@ -2171,11 +2171,6 @@ bool CvSelectionGroup::continueMission(int iSteps)
 				}
 				case MISSION_BUILD:
 				{
-					// XXX what happens if two separate worker groups are both building the mine...
-					/*if (plot()->getBuildType() != ((BuildTypes)(missionNode->m_data.iData1)))
-					{
-						bDone = true;
-					}*/
 					break;
 				}
 				default:
@@ -2206,16 +2201,16 @@ bool CvSelectionGroup::continueMission(int iSteps)
 
 		if (bDone)
 		{
-			//OutputDebugString(CvString::format("%S Done...\n", getHeadUnit()->getDescription().c_str()).c_str());
+			OutputDebugString(CvString::format("%S Done...\n", getHeadUnit()->getDescription().c_str()).c_str());
 
-			if (IsSelected() && !canAnyMove())
+			if (IsSelected() && (bCombat ? !canAnyMove() : !canAllSelectedMove()))
 			{
 				GC.getGame().updateSelectionListInternal();
 			}
 
 			if (!isBusy())
 			{
-				//OutputDebugString(CvString::format("%S Not Busy...\n", getHeadUnit()->getDescription().c_str()).c_str());
+				OutputDebugString(CvString::format("%S Not Busy...\n", getHeadUnit()->getDescription().c_str()).c_str());
 
 				if (!isHuman() || missionNode->m_data.eMissionType != MISSION_MOVE_TO)
 				{
@@ -2779,6 +2774,20 @@ bool CvSelectionGroup::canAllMove() const
 	return getNumUnits() > 0 && algo::all_of(units(), CvUnit::fn::canMove());
 }
 
+bool CvSelectionGroup::canAllSelectedMove() const
+{
+	FAssert(isHuman());
+	if (!IsSelected()) return false;
+
+	foreach_(const CvUnit* unitX, units())
+	{
+		if (unitX->IsSelected() && !unitX->canMove())
+		{
+			return false;
+		}
+	}
+	return true;
+}
 
 bool CvSelectionGroup::canAnyMove(bool bValidate)
 {
@@ -3889,15 +3898,15 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 		}
 	}
 
-	foreach_(CvUnit* pLoopUnit, units())
+	foreach_(CvUnit* unitX, units())
 	{
-		FAssertMsg(pLoopUnit->atPlot(pPlot), "pLoopUnit is expected to be at pPlot");
+		FAssertMsg(unitX->atPlot(pPlot), "unitX is expected to be at pPlot");
 
-		if (pLoopUnit->canBuild(pPlot, eBuild))
+		if (unitX->canBuild(pPlot, eBuild))
 		{
 			bContinue = true;
 
-			if (pLoopUnit->build(eBuild))
+			if (unitX->build(eBuild))
 			{
 				bContinue = false;
 				break;
@@ -3930,19 +3939,19 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 
 	if (bStopOtherWorkers)
 	{
-		foreach_(const CvUnit* pLoopUnit, pPlot->units())
+		foreach_(const CvUnit* unitX, pPlot->units())
 		{
-			CvSelectionGroup* pSelectionGroup = pLoopUnit->getGroup();
+			CvSelectionGroup* groupX = unitX->getGroup();
 
-			if (pSelectionGroup != NULL
-			&&  pSelectionGroup != this
-			&&  pSelectionGroup->getOwner() == getOwner()
-			&&  pSelectionGroup->getActivityType() == ACTIVITY_MISSION
-			&&  pSelectionGroup->getLengthMissionQueue() > 0
-			&&  pSelectionGroup->getMissionType(0) == kBuildInfo.getMissionType()
-			&&  pSelectionGroup->getMissionData1(0) == eBuild)
+			if (groupX != NULL
+			&&  groupX != this
+			&&  groupX->getOwner() == getOwner()
+			&&  groupX->getActivityType() == ACTIVITY_MISSION
+			&&  groupX->getLengthMissionQueue() > 0
+			&&  groupX->getMissionType(0) == kBuildInfo.getMissionType()
+			&&  groupX->getMissionData1(0) == eBuild)
 			{
-				pSelectionGroup->deleteMissionQueueNode(pSelectionGroup->headMissionQueueNode());
+				groupX->deleteMissionQueueNode(groupX->headMissionQueueNode());
 			}
 		}
 	}
@@ -5273,13 +5282,14 @@ CvSelectionGroup* CvSelectionGroup::splitGroup(int iSplitSize, CvUnit* pNewHeadU
 //! \param      pUnit The unit to find the index of within the group
 //! \retval     The zero-based index of the unit within the group, or -1 if it is not in the group.
 //------------------------------------------------------------------------------------------------
-int CvSelectionGroup::getUnitIndex(CvUnit* pUnit, int maxIndex /* = -1 */) const
+/*DllExport*/ int CvSelectionGroup::getUnitIndex(CvUnit* pUnit, int maxIndex /* = -1 */) const
 {
+	FAssertMsg(this != NULL, "CTD incoming");
 	int iIndex = 0;
 
-	foreach_(const CvUnit* pLoopUnit, units())
+	foreach_(const CvUnit* unitX, units())
 	{
-		if (pLoopUnit == pUnit)
+		if (unitX == pUnit)
 		{
 			return iIndex;
 		}
@@ -5371,8 +5381,9 @@ TeamTypes CvSelectionGroup::getHeadTeam() const
 void CvSelectionGroup::clearMissionQueue()
 {
 	FAssert(getOwner() != NO_PLAYER);
+	FAssert(getHeadUnit());
 
-	OutputDebugString(CvString::format("%S clearMissionQueue...\n", getHeadUnit()->getDescription().c_str()).c_str());
+	OutputDebugString(CvString::format("%S clearMissionQueue...\n", getHeadUnit() ? getHeadUnit()->getDescription().c_str() : L"Empty group").c_str());
 	deactivateHeadMission();
 
 	m_missionQueue.clear();

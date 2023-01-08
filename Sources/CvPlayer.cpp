@@ -1429,7 +1429,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iFocusPlotX = -1;
 	m_iFocusPlotY = -1;
 
-	Commanders.clear();
+	m_commanders.clear();
 	m_idleCities.clear();
 }
 
@@ -2887,26 +2887,24 @@ bool CvPlayer::isCityNameValid(CvWString& szName, bool bTestDestroyed) const
 
 CvUnit* CvPlayer::getTempUnit(UnitTypes eUnit, int iX, int iY)
 {
-	if ( m_pTempUnit == NULL )
+	if (m_pTempUnit)
 	{
-		m_pTempUnit = initUnit(eUnit, iX, iY, NO_UNITAI, NO_DIRECTION, UNIT_BIRTHMARK_TEMP_UNIT);
-		((CvPlayerAI*)this)->AI_changeNumAIUnits(m_pTempUnit->AI_getUnitAIType(),-1);	//	This one doesn't count
-		removeGroupCycle(m_pTempUnit->getGroup()->getID());
-	}
-	else
-	{
-		if ( m_pTempUnit->plot() != NULL )
+		if (m_pTempUnit->plot())
 		{
 			//GC.getGame().logOOSSpecial(8, m_pTempUnit->getID(), INVALID_PLOT_COORD, INVALID_PLOT_COORD);
-			m_pTempUnit->setXY(INVALID_PLOT_COORD,INVALID_PLOT_COORD,true,false);
+			m_pTempUnit->setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true, false);
 		}
-
 		m_pTempUnit->changeIdentity(eUnit);
 		//GC.getGame().logOOSSpecial(9, m_pTempUnit->getID(), iX, iY);
 		m_pTempUnit->setXY(iX, iY, true, false);
 	}
-
-	//	Set an arbitrary automation type - just need it to be flagged as automated
+	else
+	{
+		m_pTempUnit = initUnit(eUnit, iX, iY, NO_UNITAI, NO_DIRECTION, UNIT_BIRTHMARK_TEMP_UNIT);
+		((CvPlayerAI*)this)->AI_changeNumAIUnits(m_pTempUnit->AI_getUnitAIType(), -1); // This one doesn't count
+		removeGroupCycle(m_pTempUnit->getGroup()->getID());
+	}
+	// Set an arbitrary automation type - just need it to be flagged as automated
 	m_pTempUnit->getGroup()->setAutomateType(AUTOMATE_BUILD);
 
 	return m_pTempUnit;
@@ -2915,7 +2913,7 @@ CvUnit* CvPlayer::getTempUnit(UnitTypes eUnit, int iX, int iY)
 void CvPlayer::releaseTempUnit()
 {
 	//GC.getGame().logOOSSpecial(10, m_pTempUnit->getID(), INVALID_PLOT_COORD, INVALID_PLOT_COORD);
-	m_pTempUnit->setXY(INVALID_PLOT_COORD,INVALID_PLOT_COORD,true,false);
+	m_pTempUnit->setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true, false);
 }
 
 CvUnit* CvPlayer::initUnit(UnitTypes eUnit, int iX, int iY, UnitAITypes eUnitAI, DirectionTypes eFacingDirection, int iBirthmark)
@@ -3689,8 +3687,6 @@ void CvPlayer::doTurn()
 	{
 		changeConversionTimer(-1);
 	}
-
-	algo::for_each(units(), CvUnit::fn::clearCommanderCache());
 
 	setConscriptCount(0);
 
@@ -15034,11 +15030,10 @@ void CvPlayer::deleteCity(int iID)
 CvUnit* CvPlayer::firstUnit(int *pIterIdx, bool bRev) const
 {
 	CvUnit* pResult = !bRev ? m_units[CURRENT_MAP]->beginIter(pIterIdx) : m_units[CURRENT_MAP]->endIter(pIterIdx);
-	if (pResult != NULL && pResult == m_pTempUnit)
+	if (pResult && pResult == m_pTempUnit)
 	{
 		pResult = nextUnit(pIterIdx, bRev);
 	}
-
 	return pResult;
 }
 
@@ -15046,11 +15041,10 @@ CvUnit* CvPlayer::firstUnit(int *pIterIdx, bool bRev) const
 CvUnit* CvPlayer::nextUnit(int *pIterIdx, bool bRev) const
 {
 	CvUnit* pResult = !bRev ? m_units[CURRENT_MAP]->nextIter(pIterIdx) : m_units[CURRENT_MAP]->prevIter(pIterIdx);
-	if (pResult != NULL && pResult == m_pTempUnit)
+	if (pResult && pResult == m_pTempUnit)
 	{
 		pResult = nextUnit(pIterIdx, bRev);
 	}
-
 	return pResult;
 }
 
@@ -15082,7 +15076,7 @@ CvUnit* CvPlayer::nextUnitExternal(int *pIterIdx, bool bRev) const
 
 int CvPlayer::getNumUnits() const
 {
-	return m_units[CURRENT_MAP]->getCount() - (m_pTempUnit != NULL ? 1 : 0);
+	return m_units[CURRENT_MAP]->getCount() - (m_pTempUnit ? 1 : 0);
 }
 
 
@@ -15146,7 +15140,7 @@ CvSelectionGroup* CvPlayer::nextSelectionGroupNonEmpty(int* pIterIdx, bool bRev)
 
 int CvPlayer::getNumSelectionGroups() const
 {
-	return m_selectionGroups[CURRENT_MAP]->getCount() - (m_pTempUnit != NULL ? 1 : 0);
+	return m_selectionGroups[CURRENT_MAP]->getCount() - (m_pTempUnit ? 1 : 0);
 }
 
 
@@ -17047,12 +17041,13 @@ void CvPlayer::doAdvancedStartAction(AdvancedStartActionTypes eAction, int iX, i
 						changeAdvancedStartPoints(-iCost);
 					}
 				}
-
-				// Remove Culture from the city
-				else
+				else // Remove Culture from the city
 				{
-					CultureLevelTypes eLevel = (CultureLevelTypes)std::max(0, pCity->getCultureLevel() - 1);
-					pCity->setCulture(getID(), pCity->getCultureThreshold(eLevel), true, true);
+					const CultureLevelTypes eNewLevel = static_cast<CultureLevelTypes>(pCity->getCultureLevel() - 1);
+					if (eNewLevel > NO_CULTURELEVEL)
+					{
+						pCity->setCulture(getID(), GC.getGame().getCultureThreshold(eNewLevel), true, true);
+					}
 					changeAdvancedStartPoints(iCost);
 				}
 			}
@@ -17539,16 +17534,16 @@ int CvPlayer::getAdvancedStartCultureCost(bool bAdd, const CvCity* pCity) const
 
 		if (bAdd)
 		{
-			iCost *= pCity->getCultureThreshold((CultureLevelTypes)(pCity->getCultureLevel() + 1)) - pCity->getCulture(getID());
+			iCost *= pCity->getCultureThreshold() - pCity->getCulture(getID());
 		}
 		else
 		{
 			// Need to have enough culture to remove it
-			if (pCity->getCultureLevel() <= 0)
+			if (pCity->getCultureLevel() < 1)
 			{
 				return -1;
 			}
-			iCost *= pCity->getCulture(getID()) - pCity->getCultureThreshold((CultureLevelTypes)(pCity->getCultureLevel() - 1));
+			iCost *= pCity->getCulture(getID()) - GC.getGame().getCultureThreshold(static_cast<CultureLevelTypes>(pCity->getCultureLevel() - 1));
 		}
 		iCost /= 100;
 	}
@@ -19036,12 +19031,12 @@ void CvPlayer::read(FDataStreamBase* pStream)
 			ReadStreamableFFreeListTrashArray(*m_selectionGroups[i], pStream);
 		}
 		//Must be loaded AFTER units.
-		Commanders.clear();
+		m_commanders.clear();
 		foreach_(CvUnit* unitX, units())
 		{
-			if (unitX->isCommander()) //search for GGs among loaded units and add them to Commanders array
+			if (unitX->isCommander()) //search for GGs among loaded units and add them to m_commanders array
 			{
-				Commanders.push_back(unitX);
+				m_commanders.push_back(unitX);
 			}
 
 			if (unitX->isZoneOfControl())
@@ -19414,7 +19409,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		{
 			m_pTempUnit = getUnit(iTempUnitId);
 
-			FAssert(m_pTempUnit != NULL);
+			FAssert(m_pTempUnit);
 		}
 		{
 			int iCount = 0;
@@ -19439,9 +19434,13 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				{
 					continue;
 				}
-				if (unitX->plot() == NULL || unitX->getX() < 0 || unitX->getX() >= iMaxX || unitX->getY() < 0 || unitX->getY() >= iMaxY)
+				if (!unitX->plot() || unitX->getX() < 0 || unitX->getX() >= iMaxX || unitX->getY() < 0 || unitX->getY() >= iMaxY)
 				{
 					CvSelectionGroup* pGroup = unitX->getGroup();
+
+					// Toffer - X and Y can for some reason be stored as -1,
+					//	and plot() will not return NULL unless they are INVALID_PLOT_COORD which cause problems.
+					unitX->forceInvalidCoordinates();
 					unitX->joinGroup(NULL, false, false);
 
 					deleteUnit(unitX->getID());
@@ -20327,7 +20326,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iPopRushHurryCount);
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iInflationModifier);
 
-		int	iTempUnitId = (m_pTempUnit == NULL ? -1 : m_pTempUnit->getID());
+		int	iTempUnitId = (m_pTempUnit ? m_pTempUnit->getID() : -1);
 		WRAPPER_WRITE(wrapper, "CvPlayer", iTempUnitId);
 		//TB Combat mod begin
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_PROMOTIONLINES, GC.getNumPromotionLineInfos(), m_paiPlayerWideAfflictionCount);
@@ -28545,6 +28544,17 @@ void CvPlayer::recalculateModifiers()
 	//	Re-establish blockades
 	updatePlunder(1, false);
 	resetCivTypeEffects();
+
+	// Recalc plot commander counts
+	for (int i = m_commanders.size() - 1; i > -1; i--)
+	{
+		CvUnit* com = m_commanders[i];
+
+		if (com->isCommanderReady())
+		{
+			com->plot()->countCommander(true, com);
+		}
+	}
 }
 
 bool CvPlayer::upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit) const
@@ -30680,25 +30690,47 @@ void CvPlayer::listCommander(bool bAdd, CvUnit* unit)
 {
 	if (bAdd)
 	{
-		Commanders.push_back(unit);
+		m_commanders.push_back(unit);
 		return;
 	}
 	const int iID = unit->getID();
 
-	for (int i = 0; i < static_cast<int>(Commanders.size()); i++)
+	for (int i = 0; i < static_cast<int>(m_commanders.size()); i++)
 	{
-		if (Commanders[i]->getID() == iID)
+		if (m_commanders[i]->getID() == iID)
 		{
-			Commanders.erase(Commanders.begin() + i);
+			m_commanders.erase(m_commanders.begin() + i);
 
 			foreach_(CvUnit* unitX, units())
 			{
-				if (unitX->getUsedCommander() && unitX->getUsedCommander()->getID() == iID)
+				if (unitX->getLastCommander() && unitX->getLastCommander()->getID() == iID)
 				{
-					unitX->nullUsedCommander();
+					unitX->nullLastCommander();
 				}
 			}
 			break;
 		}
 	}
+}
+
+
+void CvPlayer::setCommandFieldPlot(bool bNewValue, CvPlot* aPlot)
+{
+	FAssert(bNewValue || !m_commandFieldPlots.empty());
+
+	std::vector<CvPlot*>::iterator itr = find(m_commandFieldPlots.begin(), m_commandFieldPlots.end(), aPlot);
+
+	if (bNewValue)
+	{
+		if (itr == m_commandFieldPlots.end())
+		{
+			m_commandFieldPlots.push_back(aPlot);
+		}
+		else FErrorMsg("Tried to add a duplicate vector element!");
+	}
+	else if (itr != m_commandFieldPlots.end())
+	{
+		m_commandFieldPlots.erase(itr);
+	}
+	else FErrorMsg("Vector element to remove was missing!");
 }

@@ -80,7 +80,6 @@ class BugCityScreenOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, aLeft, "CityBar__BaseProduction")
 		self.addCheckbox(screen, aLeft, "CityBar__TradeDetail")
 		self.addCheckbox(screen, aLeft, "CityBar__Commerce")
-		self.addCheckbox(screen, aLeft, "CityBar__CultureTurns")
 		self.addCheckbox(screen, aLeft, "CityBar__GreatPersonTurns")
 
 		self.addLabel(screen, aRight, "Cityanger", "City Anger:")

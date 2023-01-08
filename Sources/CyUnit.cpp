@@ -467,11 +467,6 @@ bool CyUnit::isRiver() const
 	return m_pUnit->isRiver();
 }
 
-int CyUnit::getExtraMoves() const
-{
-	return m_pUnit->getExtraMoves();
-}
-
 int CyUnit::getRevoltProtection() const
 {
 	return m_pUnit->revoltProtectionTotal();
@@ -683,14 +678,14 @@ bool CyUnit::isCommander() const
 	return m_pUnit->isCommander();
 }
 
-int CyUnit::controlPointsLeft() const
+int CyUnit::getControlPointsLeft() const
 {
-	return m_pUnit->controlPointsLeft();
+	return m_pUnit->getCommanderComp()->getControlPointsLeft();
 }
 
-int CyUnit::controlPoints() const
+int CyUnit::getControlPoints() const
 {
-	return m_pUnit->controlPoints();
+	return m_pUnit->getCommanderComp()->getControlPoints();
 }
 
 float CyUnit::getRealExperience() const

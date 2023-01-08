@@ -7491,7 +7491,6 @@ int64_t CvTeam::getTotalVictoryScore() const
 	// Get the Religion Info First
 	// By definition, global religion percent is 100, so we don't need a variable for it.
 	// Note: This detects whether the TEAM has the holy city.
-
 	for (int iK = 0; iK < GC.getNumReligionInfos(); iK++)
 	{
 		if (hasHolyCity((ReligionTypes)iK))
@@ -7507,7 +7506,6 @@ int64_t CvTeam::getTotalVictoryScore() const
 
 	// Get land, population, culture totals for player and globally.
 	// Also get the starship launches and diplovictories achieved.
-
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
@@ -7525,14 +7523,13 @@ int64_t CvTeam::getTotalVictoryScore() const
 	}
 
 	// Get the power history sums
-
 	for (int iI = 0; iI < MAX_PLAYERS; iI++)
 	{
 		if (GET_PLAYER((PlayerTypes)iI).isAlive())
 		{
 			//Calculate global totals while looping through
 			int64_t tempPower = 0;
-			for (int iL = 0; iL <= GC.getGame().getGameTurn(); iL++)
+			for (int iL = GC.getGame().getGameTurn(); iL > -1; iL--)
 			{
 				tempPower += GET_PLAYER((PlayerTypes)iI).getPowerHistory(iL);
 			}
@@ -7541,23 +7538,25 @@ int64_t CvTeam::getTotalVictoryScore() const
 			{
 				teamPowerHistory += tempPower;
 			}
-
 			globalPowerHistory += tempPower;
 		}
 	}
 
 	// Get the number of monumental cities owned by this team
-
-	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	if (GC.getGame().culturalVictoryValid())
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
+		const CultureLevelTypes eVictoryLevel = GC.getGame().culturalVictoryCultureLevel();
+
+		for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 		{
-			foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
+			if (GET_PLAYER((PlayerTypes)iI).isAliveAndTeam(getID()))
 			{
-				// -2 is correct.  We need -1 to change from 'total num' to 'last index', and -1 to get the top level.
-				if (pLoopCity->getCultureLevel() > GC.getNumCultureLevelInfos() - 2)
+				foreach_(const CvCity* pLoopCity, GET_PLAYER((PlayerTypes)iI).cities())
 				{
-					totalTeamMonumentalCities++;
+					if (pLoopCity->getCultureLevel() >= eVictoryLevel)
+					{
+						totalTeamMonumentalCities++;
+					}
 				}
 			}
 		}
@@ -7601,7 +7600,7 @@ int64_t CvTeam::getTotalVictoryScore() const
 	// Add the monumental cities component
 	if (totalTeamMonumentalCities > 0)
 	{
-		iTotalVictoryScore += (30 * totalTeamMonumentalCities);
+		iTotalVictoryScore += 30 * totalTeamMonumentalCities;
 	}
 
 	// Add the Power component

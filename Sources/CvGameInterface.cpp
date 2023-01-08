@@ -31,6 +31,7 @@ void CvGame::updateColoredPlots()
 	gDLL->getEngineIFace()->clearAreaBorderPlots(AREA_BORDER_LAYER_CITY_RADIUS);
 	gDLL->getEngineIFace()->clearAreaBorderPlots(AREA_BORDER_LAYER_RANGED);
 	gDLL->getEngineIFace()->clearAreaBorderPlots(AREA_BORDER_LAYER_BLOCKADING);
+	gDLL->getEngineIFace()->clearAreaBorderPlots(AREA_BORDER_LAYER_COMMAND_FIELD);
 
 	const NiColorA cHighlightText(GC.getColorInfo(GC.getCOLOR_HIGHLIGHT_TEXT()).getColor());
 
@@ -127,7 +128,7 @@ void CvGame::updateColoredPlots()
 	const CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 	CvUnit* pHeadSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 
-	if (pHeadSelectedCity != NULL)
+	if (pHeadSelectedCity)
 	{
 		if (gDLL->getInterfaceIFace()->isCityScreenUp())
 		{
@@ -438,18 +439,34 @@ void CvGame::updateColoredPlots()
 			}
 		}
 	}
-	else if (pHeadSelectedUnit != NULL)
+	else if (pHeadSelectedUnit)
 	{
+		const PlayerTypes eOwner = pHeadSelectedUnit->getOwner();
+		const CvPlot* pPlot = pHeadSelectedUnit->plot();
+
 		if (gDLL->getGraphicOption(GRAPHICOPTION_CITY_RADIUS) && gDLL->getInterfaceIFace()->canSelectionListFound())
 		{
-			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
+			for (int iI = GC.getMap().numPlots() - 1; iI > -1; iI--)
 			{
 				const CvPlot* plotX = GC.getMap().plotByIndex(iI);
 
-				if (plotX->getOwner() == pHeadSelectedUnit->getOwner() && plotX->getWorkingCity() != NULL)
+				if (plotX->getOwner() == eOwner && plotX->getWorkingCity())
 				{
 					gDLL->getEngineIFace()->fillAreaBorderPlot(plotX->getX(), plotX->getY(), cHighlightText, AREA_BORDER_LAYER_CITY_RADIUS);
 				}
+			}
+		}
+		if (pHeadSelectedUnit->getGroup()->hasCommander() || pHeadSelectedUnit->getGroup()->canFight() && pPlot->inCommandField(eOwner))
+		{
+			const std::vector<CvPlot*> plots = GET_PLAYER(eOwner).getCommandFieldPlots();
+
+			NiColorA cField(GC.getColorInfo(GC.getCOLOR_RED()).getColor());
+			cField.a = 0.75f;
+
+			// Toffer - Don't replace with foreach_ macro, this is more performance friendly and is as readable if not more so.
+			for (int i = plots.size() - 1; i > -1; i--)
+			{
+				gDLL->getEngineIFace()->fillAreaBorderPlot(plots[i]->getX(), plots[i]->getY(), cField, AREA_BORDER_LAYER_COMMAND_FIELD);
 			}
 		}
 
@@ -467,18 +484,17 @@ void CvGame::updateColoredPlots()
 
 			if (iMaxAirRange > 0)
 			{
-				const CvPlot* pFromPlot = pHeadSelectedUnit->plot();
 				const CvSelectionGroup* pGroup = pHeadSelectedUnit->getGroup();
 
-				foreach_(const CvPlot* plotX, pFromPlot->rect(iMaxAirRange, iMaxAirRange))
+				foreach_(const CvPlot* plotX, pPlot->rect(iMaxAirRange, iMaxAirRange))
 				{
-					if (plotX->isVisible(pHeadSelectedUnit->getTeam(), false) && plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), plotX->getX(), plotX->getY()) <= iMaxAirRange)
+					if (plotX->isVisible(pHeadSelectedUnit->getTeam(), false) && plotDistance(pPlot->getX(), pPlot->getY(), plotX->getX(), plotX->getY()) <= iMaxAirRange)
 					{
 						NiColorA color(GC.getColorInfo(GC.getCOLOR_WHITE()).getColor());
 
-						if (pGroup->canBombardAtRanged(pFromPlot, plotX->getX(), plotX->getY()))
+						if (pGroup->canBombardAtRanged(pPlot, plotX->getX(), plotX->getY()))
 						{
-							if (plotX->getNumVisibleEnemyCombatUnits(pHeadSelectedUnit->getOwner()))
+							if (plotX->getNumVisibleEnemyCombatUnits(eOwner))
 							{
 								color.r = 0.0f;
 								color.b = 0.0f;
@@ -507,7 +523,7 @@ void CvGame::updateColoredPlots()
 
 			if (iMaxAirRange > 0)
 			{
-				foreach_(const CvPlot* plotX, pHeadSelectedUnit->plot()->rect(iMaxAirRange, iMaxAirRange))
+				foreach_(const CvPlot* plotX, pPlot->rect(iMaxAirRange, iMaxAirRange))
 				{
 					if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), plotX->getX(), plotX->getY()) <= iMaxAirRange)
 					{
@@ -521,11 +537,11 @@ void CvGame::updateColoredPlots()
 		else if(pHeadSelectedUnit->airRange() > 0) //other ranged units
 		{
 			const int iRange = pHeadSelectedUnit->airRange();
-			foreach_(CvPlot* pTargetPlot, pHeadSelectedUnit->plot()->rect(iRange, iRange))
+			foreach_(CvPlot* pTargetPlot, pPlot->rect(iRange, iRange))
 			{
 				if (pTargetPlot->isVisible(pHeadSelectedUnit->getTeam(), false)
 				&& plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pTargetPlot->getX(), pTargetPlot->getY()) <= iRange
-				&& pHeadSelectedUnit->plot()->canSeePlot(pTargetPlot, pHeadSelectedUnit->getTeam()))
+				&& pPlot->canSeePlot(pTargetPlot, pHeadSelectedUnit->getTeam()))
 				{
 					NiColorA color(GC.getColorInfo(GC.getCOLOR_YELLOW()).getColor()); color.a = 0.5f;
 
@@ -536,10 +552,10 @@ void CvGame::updateColoredPlots()
 
 		if (!GET_PLAYER(getActivePlayer()).isOption(PLAYEROPTION_NO_UNIT_RECOMMENDATIONS))
 		{
-			if ((pHeadSelectedUnit->AI_getUnitAIType() == UNITAI_WORKER || pHeadSelectedUnit->AI_getUnitAIType() == UNITAI_WORKER_SEA)
-			&& pHeadSelectedUnit->plot()->getOwner() == pHeadSelectedUnit->getOwner())
+			if (pPlot->getOwner() == eOwner
+			&& (pHeadSelectedUnit->AI_getUnitAIType() == UNITAI_WORKER || pHeadSelectedUnit->AI_getUnitAIType() == UNITAI_WORKER_SEA))
 			{
-				const CvCity* pCity = pHeadSelectedUnit->plot()->getWorkingCity();
+				const CvCity* pCity = pPlot->getWorkingCity();
 				CvPlot* pBestPlot;
 
 				if (pCity != NULL && pHeadSelectedUnit->AI_bestCityBuild(pCity, &pBestPlot))
@@ -566,11 +582,11 @@ void CvGame::updateColoredPlots()
 
 			const int iRange = 5;
 
-			foreach_(const CvPlot* plotX, pHeadSelectedUnit->plot()->rect(iRange, iRange))
+			foreach_(const CvPlot* plotX, pPlot->rect(iRange, iRange))
 			{
 				if (plotX->area() == pHeadSelectedUnit->area() || plotX->isAdjacentToArea(pHeadSelectedUnit->area()))
 				{
-					if (pHeadSelectedUnit->canFound(plotX) && GET_PLAYER(pHeadSelectedUnit->getOwner()).AI_isPlotCitySite(plotX))
+					if (pHeadSelectedUnit->canFound(plotX) && GET_PLAYER(eOwner).AI_isPlotCitySite(plotX))
 					{
 						gDLL->getEngineIFace()->addColoredPlot(
 							plotX->getX(), plotX->getY(), cHighlightText,

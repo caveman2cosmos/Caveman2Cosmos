@@ -132,8 +132,6 @@ public:
 
 	bool isRiver() const;
 
-	int getExtraMoves() const;
-
 	int getRevoltProtection() const;
 	int getPillageChange() const;
 	int getUpgradeDiscount() const;
@@ -189,8 +187,8 @@ public:
 
 	void setCommander(bool bNewValue);
 	bool isCommander() const;
-	int controlPointsLeft() const;
-	int controlPoints() const;
+	int getControlPointsLeft() const;
+	int getControlPoints() const;
 	float getRealExperience() const;
 
 protected:

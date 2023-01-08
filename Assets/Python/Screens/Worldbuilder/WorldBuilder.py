@@ -1347,7 +1347,7 @@ class WorldBuilder:
 	def addComma(self, iValue):
 		sTemp = str(iValue)
 		sStart = ""
-		while len(sTemp) > 0:
+		while sTemp:
 			if sTemp[0].isdigit(): break
 			sStart += sTemp[0]
 			sTemp = sTemp[1:]
