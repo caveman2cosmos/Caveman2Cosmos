@@ -20430,7 +20430,7 @@
 		</CivicInfo>
 		<!-- Starter Civic -->
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_HUNTER_GATHERING</Type>
 			<Description>TXT_KEY_CIVIC_HUNTER_GATHERING</Description>
 			<Civilopedia>TXT_KEY_CIVIC_HUNTER_GATHERING_PEDIA</Civilopedia>
@@ -20535,7 +20535,7 @@
 			</Flavors>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_SMALLHOLDING</Type>
 			<Description>TXT_KEY_CIVIC_SMALLHOLDING</Description>
 			<Civilopedia>TXT_KEY_CIVIC_SMALLHOLDING_PEDIA</Civilopedia>
@@ -20640,7 +20640,7 @@
 			<Flavors/>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_AGRICULTURAL_GUILDS</Type>
 			<Description>TXT_KEY_CIVIC_AGRICULTURAL_GUILDS</Description>
 			<Civilopedia>TXT_KEY_CIVIC_AGRICULTURAL_GUILDS_PEDIA</Civilopedia>
@@ -20734,7 +20734,7 @@
 			<Flavors/>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_PRIVATE_OWNED</Type>
 			<Description>TXT_KEY_CIVIC_PRIVATE_OWNED</Description>
 			<Civilopedia>TXT_KEY_CIVIC_PRIVATE_OWNED_PEDIA</Civilopedia>
@@ -20829,7 +20829,7 @@
 			<Flavors/>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_INCENTIVIZED</Type>
 			<Description>TXT_KEY_CIVIC_INCENTIVIZED</Description>
 			<Civilopedia>TXT_KEY_CIVIC_INCENTIVIZED_PEDIA</Civilopedia>
@@ -20924,7 +20924,7 @@
 			<Flavors/>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_CORPORATE_OWNED</Type>
 			<Description>TXT_KEY_CIVIC_CORPORATE_OWNED</Description>
 			<Civilopedia>TXT_KEY_CIVIC_CORPORATE_OWNED_PEDIA</Civilopedia>
@@ -21052,7 +21052,7 @@
 			<Flavors/>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_STATE_OWNED</Type>
 			<Description>TXT_KEY_CIVIC_STATE_OWNED</Description>
 			<Civilopedia>TXT_KEY_CIVIC_STATE_OWNED_PEDIA</Civilopedia>
@@ -21164,7 +21164,7 @@
 			<Flavors/>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_ORGANIC_FARMING</Type>
 			<Description>TXT_KEY_CIVIC_ORGANIC_FARMING</Description>
 			<Civilopedia>TXT_KEY_CIVIC_ORGANIC_FARMING_PEDIA</Civilopedia>
@@ -21275,7 +21275,7 @@
 			<Flavors/>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_LAB_GROWN_FOOD</Type>
 			<Description>TXT_KEY_CIVIC_LAB_GROWN_FOOD</Description>
 			<Civilopedia>TXT_KEY_CIVIC_LAB_GROWN_FOOD_PEDIA</Civilopedia>
@@ -21396,7 +21396,7 @@
 			</BuildingProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
 			<Type>CIVIC_NUTRIENT_REPLICATION</Type>
 			<Description>TXT_KEY_CIVIC_NUTRIENT_REPLICATION</Description>
 			<Civilopedia>TXT_KEY_CIVIC_NUTRIENT_REPLICATION_PEDIA</Civilopedia>
