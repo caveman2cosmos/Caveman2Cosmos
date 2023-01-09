@@ -3313,8 +3313,6 @@ namespace {
 		{
 			return 0;
 		}
-		const int iX = plot->getX();
-		const int iY = plot->getY();
 
 		CvChecksum checksum;
 		if (cacheAccess != ECacheAccess::None)
