@@ -1855,7 +1855,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 	OutputDebugString(CvString::format("%S part 1 continueMission %d...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
 
 	FAssert(!isBusy());
-	FAssert(missionNode != NULL);
+	FAssert(missionNode);
 	FAssert(getOwner() != NO_PLAYER);
 
 	if (getActivityType() == ACTIVITY_AWAKE)
@@ -1865,7 +1865,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 	FAssert(getActivityType() == ACTIVITY_MISSION);
 
 	// just in case...
-	if (missionNode == NULL || isMoveMission(missionNode) && (missionNode->m_data.iData1 == -1 || missionNode->m_data.iData2 == -1))
+	if (!missionNode || isMoveMission(missionNode) && (missionNode->m_data.iData1 == -1 || missionNode->m_data.iData2 == -1))
 	{
 		FErrorMsg("Should not occur");
 		setActivityType(ACTIVITY_AWAKE);
@@ -1888,11 +1888,12 @@ bool CvSelectionGroup::continueMission(int iSteps)
 			bCombat = true;
 		}
 		missionNode = headMissionQueueNode();
-		OutputDebugString(CvString::format("%S continueMission %d after attack...\n", getHeadUnit()->getDescription().c_str(), missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
+		FAssert(getHeadUnit());
+		OutputDebugString(CvString::format("%S continueMission %d after attack...\n", getHeadUnit() ? getHeadUnit()->getDescription().c_str() : L"Empty group", missionNode == NULL ? -1 : missionNode->m_data.eMissionType).c_str());
 
 		// extra crash protection, should never happen (but a previous bug in groupAttack was causing a NULL here)
 		// while that bug is fixed, no reason to not be a little more careful
-		if (missionNode == NULL)
+		if (!missionNode)
 		{
 			FErrorMsg("missionNode == NULL after groupAttack");
 			if (IsSelected() && !canAnyMove())
@@ -1908,7 +1909,7 @@ bool CvSelectionGroup::continueMission(int iSteps)
 	&& canAllMove()
 	&& !checkMoveSafety(missionNode->m_data.iData1, missionNode->m_data.iData2, missionNode->m_data.iFlags))
 	{
-		OutputDebugString(CvString::format("%S (%d) interrupted cautious move while moving to (%d,%d)...\n",getHeadUnit()->getDescription().c_str(), getHeadUnit()->getID(), missionNode->m_data.iData1, missionNode->m_data.iData2).c_str());
+		OutputDebugString(CvString::format("%S (%d) interrupted cautious move while moving to (%d,%d)...\n", getHeadUnit()->getDescription().c_str(), getHeadUnit()->getID(), missionNode->m_data.iData1, missionNode->m_data.iData2).c_str());
 		bDone = true;
 		bAction = false;
 		bFailed = true;
@@ -5380,8 +5381,9 @@ TeamTypes CvSelectionGroup::getHeadTeam() const
 void CvSelectionGroup::clearMissionQueue()
 {
 	FAssert(getOwner() != NO_PLAYER);
+	FAssert(getHeadUnit());
 
-	OutputDebugString(CvString::format("%S clearMissionQueue...\n", getHeadUnit()->getDescription().c_str()).c_str());
+	OutputDebugString(CvString::format("%S clearMissionQueue...\n", getHeadUnit() ? getHeadUnit()->getDescription().c_str() : L"Empty group").c_str());
 	deactivateHeadMission();
 
 	m_missionQueue.clear();

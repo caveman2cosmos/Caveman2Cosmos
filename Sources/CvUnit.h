@@ -1697,6 +1697,7 @@ public:
 	bool isWorker() const;
 	UnitCompWorker* CvUnit::getWorkerComponent() const;
 	void deselect(const bool bQuick = false);
+	void forceInvalidCoordinates();
 
 protected:
 	int m_iDCMBombRange;
