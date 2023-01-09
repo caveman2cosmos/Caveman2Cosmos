@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 
-<mod id="TechWindow" name="TechWindow" author="SirRethcir, Roamty, Caesium, Guarav" 
-	 version="1.g" date="11/18/2007" url="http://forums.civfanatics.com/showthread.php?t=158636">
+<mod id="TechWindow" name="TechWindow" author="SirRethcir, Roamty, Caesium, Guarav"
+	version="1.g" date="11/18/2007" url="http://forums.civfanatics.com/showthread.php?t=158636">
 
 	<options id="TechWindow" file="TechWindow.ini">
 		<section id="TechWindow">

@@ -5,19 +5,21 @@
 #ifndef CIV4_GAME_H
 #define CIV4_GAME_H
 
-//#include "CvDeal.h"
+#include "CvDeal.h"
 #include "CvRandom.h"
 #include "CvGameObject.h"
+#include "CvProperties.h"
 #include "CvPropertySolver.h"
 #include "CvDate.h"
 #include "CvAllocator.h"
 
-class CvDeal;
+class CvArtInfoBuilding;
 class CvCity;
 class CvPlot;
 class CvReplayMessage;
 class CvReplayInfo;
 class CvUnit;
+class CvUnitCombatInfo;
 
 //	Max number of barbarian units in existence for a spawn of a new one to be allowed
 //	This allows a 'space' for 'real' barbarians to be built before we use up the entire
@@ -27,9 +29,9 @@ class CvUnit;
 typedef std::vector<const CvReplayMessage*> ReplayMessageList;
 
 class CvGame
+	: private bst::noncopyable
 {
 public:
-
 	CvGame();
 	virtual ~CvGame();
 
@@ -39,9 +41,7 @@ public:
 	CvGameObjectGame* getGameObject() {return &m_GameObject;};
 
 protected:
-
 	CvGameObjectGame m_GameObject;
-
 	void uninit();
 
 public:
@@ -55,8 +55,7 @@ public:
 	void initFreeState();
 	DllExport void initFreeUnits();
 
-	void assignScenarioStartingPlots();
-	void assignStartingPlots();
+	void assignStartingPlots(const bool bScenario = false, const bool bMapScript = false);
 	void normalizeStartingPlots();
 
 	DllExport void update();
@@ -81,8 +80,7 @@ public:
 	MapTypes getCurrentMap() const;
 	void setCurrentMap(MapTypes eNewMap);
 
-	void updateSelectionListInternal(bool bSetCamera, bool bAllowViewportSwitch, bool bForceAcceptCurrent = false);
-	void cycleSelectionGroupsInternal(bool bClear, bool bForward, bool bWorkers, bool bSetCamera, bool bAllowViewportSwitch) const;
+	void updateSelectionListInternal(int iCycleDelay = 0, bool bSetCamera = true, bool bAllowViewportSwitch = true, bool bForceAcceptCurrent = false);
 
 	void processGreatWall(bool bIn, bool bForce = false, bool bSeeded = true) const;
 	void noteGraphicRebuildNeeded();
@@ -94,8 +92,9 @@ public:
 	DllExport void getPlotUnits(const CvPlot *pPlot, std::vector<CvUnit*>& plotUnits) const;
 
 	DllExport void cycleCities(bool bForward = true, bool bAdd = false) const;
-	void cycleSelectionGroups(bool bClear, bool bForward = true, bool bWorkers = false) const;
-	DllExport bool cyclePlotUnits(CvPlot* pPlot, bool bForward = true, bool bAuto = false, int iCount = -1) const;
+	void cycleSelectionGroups(bool bClear = true, bool bForward = true, bool bWorkers = false, bool bSetCamera = true, bool bAllowViewportSwitch = true) const;
+	bool nextPlotUnit(const CvPlot* pPlot, bool bForward = true, bool bAuto = false, int iCount = -1) const;
+	DllExport bool cyclePlotUnits(const CvPlot* pPlot, bool bForward = true, bool bAuto = false, int iCount = -1) const;
 	DllExport bool selectCity(CvCity* pSelectCity, bool bCtrl, bool bAlt, bool bShift) const;
 
 	DllExport void selectionListMove(CvPlot* pPlot, bool bAlt, bool bShift, bool bCtrl) const;
@@ -150,7 +149,6 @@ public:
 	int countTotalCivPower() const;
 	int countTotalNukeUnits() const;
 	int countKnownTechNumTeams(TechTypes eTech) const;
-	int getNumFreeBonuses(BuildingTypes eBuilding) const;
 
 	int countReligionLevels(ReligionTypes eReligion) const;
 	int calculateReligionPercent(ReligionTypes eReligion) const;
@@ -177,8 +175,6 @@ public:
 	void setModem(bool bModem);
 
 	DllExport void reviveActivePlayer();
-	void reviveActivePlayer(PlayerTypes iPlayer);
-
 	DllExport int getNumHumanPlayers();
 
 	DllExport int getGameTurn();
@@ -215,7 +211,6 @@ public:
 
 	DllExport int getTurnSlice() const;
 	int getMinutesPlayed() const;
-	void changeTurnSlice(int iChange);
 
 	int getCutoffSlice() const;
 	void setCutoffSlice(int iNewValue);
@@ -236,10 +231,6 @@ public:
 	int getNumCities() const;
 	int getNumCivCities() const;
 	void changeNumCities(int iChange);
-
-	int getStatusPromotion(int i) const;
-	int getNumStatusPromotions() const;
-	void setStatusPromotions();
 
 	int getTotalPopulation() const;
 	void changeTotalPopulation(int iChange);
@@ -327,7 +318,6 @@ public:
 
 	int getModderGameOption(ModderGameOptionTypes eIndex) const;
 	bool isModderGameOption(ModderGameOptionTypes eIndex) const;
-	void setModderGameOption(ModderGameOptionTypes eIndex, bool bNewValue);
 	void setModderGameOption(ModderGameOptionTypes eIndex, int iNewValue);
 
 	void findMountainRanges();
@@ -362,8 +352,6 @@ public:
 
 	void loadPirateShip(CvUnit* pUnit);
 
-	bool isEarlyGame() const;
-
 	bool isAnyoneHasUnitZoneOfControl() const;
 	void toggleAnyoneHasUnitZoneOfControl();
 	//TB OOSSPECIAL
@@ -372,6 +360,7 @@ public:
 	int getTopPopCount() const;
 	int getImprovementCount(ImprovementTypes eIndex) const;
 	void changeImprovementCount(ImprovementTypes eIndex, int iChange);
+
 protected:
 	void doFlexibleDifficulty();
 	void doHightoLow();
@@ -386,8 +375,188 @@ protected:
 	int m_iNumWonders;
 	bool m_bDiploVictoryEnabled;
 	bool m_bAnyoneHasUnitZoneOfControl;
-public:
 
+	MapTypes m_eCurrentMap;
+
+	CvString m_gameId;
+	int m_iElapsedGameTurns;
+	int m_iStartTurn;
+	int m_iStartYear;
+	int m_iEstimateEndTurn;
+	CvDate m_currentDate;
+	int m_iDateTurn;
+
+	int m_iTurnSlice;
+	int m_iMinGameSliceToCycleUnit;
+	uint8_t m_iCycleUnitSliceDelay;
+	int m_iCutoffSlice;
+	int m_iNumGameTurnActive;
+	int m_iNumCities;
+	int m_iTotalPopulation;
+	int m_iTradeRoutes;
+	int m_iFreeTradeCount;
+	int m_iNoNukesCount;
+	int m_iNukesExploded;
+	int m_iMaxPopulation;
+	int m_iMaxLand;
+	int m_iMaxTech;
+	int m_iMaxWonders;
+	int m_iInitPopulation;
+	int m_iInitLand;
+	int m_iInitTech;
+	int m_iInitWonders;
+
+	int m_iAIAutoPlay[MAX_PLAYERS];
+	int m_iForcedAIAutoPlay[MAX_PLAYERS];
+
+	int m_iCurrentVoteID;
+	int m_iCutLosersCounter;
+	int m_iHighToLowCounter;
+	int m_iIncreasingDifficultyCounter;
+	int m_iMercyRuleCounter;
+
+	bool starshipLaunched[MAX_TEAMS]; 				//Ordered by team ID (both)
+	bool diplomaticVictoryAchieved[MAX_TEAMS];
+
+	unsigned int m_uiInitialTime;
+	// < M.A.D. Nukes Start >
+	int m_iLastNukeStrikeX;
+	int m_iLastNukeStrikeY;
+	// < M.A.D. Nukes End   >
+	bool m_bScoreDirty;
+	bool m_bDebugMode;
+	bool m_bDebugModeCache;
+	bool m_bFinalInitialized;
+	bool m_bPbemTurnSent;
+	bool m_bHotPbemBetweenTurns;
+	bool m_bPlayerOptionsSent;
+	//TB Nukefix (reversal) Next line should be commented out
+	//bool m_bNukesValid;
+	TeamTypes m_circumnavigatingTeam;
+
+	HandicapTypes m_eHandicap;
+	PlayerTypes m_ePausePlayer;
+	mutable UnitTypes m_eBestLandUnit;
+	TeamTypes m_eWinner;
+	VictoryTypes m_eVictory;
+	GameStateTypes m_eGameState;
+	PlayerTypes m_eEventPlayer;
+
+	CvString m_szScriptData;
+
+	int* m_aiRankPlayer;        // Ordered by rank...
+	int* m_aiPlayerRank;        // Ordered by player ID...
+	int* m_aiPlayerScore;       // Ordered by player ID...
+	int* m_aiRankTeam;						// Ordered by rank...
+	int* m_aiTeamRank;						// Ordered by team ID...
+	int* m_aiTeamScore;						// Ordered by team ID...
+
+	int* m_paiImprovementCount;
+	int* m_paiUnitCreatedCount;
+	int* m_paiBuildingCreatedCount;
+	int* m_paiProjectCreatedCount;
+	int* m_paiForceCivicCount;
+	PlayerVoteTypes* m_paiVoteOutcome;
+	int* m_paiReligionGameTurnFounded;
+	int* m_paiTechGameTurnDiscovered;
+	int* m_paiCorporationGameTurnFounded;
+	int* m_aiSecretaryGeneralTimer;
+	int* m_aiVoteTimer;
+	int* m_aiDiploVote;
+
+	bool* m_pabSpecialUnitValid;
+	bool* m_pabSpecialBuildingValid;
+	bool* m_abReligionSlotTaken;
+
+	bool m_bGameStart;
+	bool* m_abTechCanFoundReligion;
+
+	IDInfo* m_paHolyCity;
+	IDInfo* m_paHeadquarters;
+
+	int** m_apaiPlayerVote;
+
+	std::vector<CvWString> m_aszDestroyedCities;
+	std::vector<CvWString> m_aszGreatPeopleBorn;
+
+	FFreeListTrashArray<CvDeal> m_deals;
+	FFreeListTrashArray<VoteSelectionData> m_voteSelections;
+	FFreeListTrashArray<VoteTriggeredData> m_votesTriggered;
+
+	CvRandom m_mapRand;
+	CvRandom m_sorenRand;
+
+	ReplayMessageList m_listReplayMessages;
+	CvReplayInfo* m_pReplayInfo;
+
+	DWORD m_lastGraphicUpdateRequestTickCount;
+
+	int m_iNumSessions;
+
+	std::vector<PlotExtraYield> m_aPlotExtraYields;
+	stdext::hash_map<VoteSourceTypes, ReligionTypes> m_mapVoteSourceReligions;
+	std::vector<EventTriggerTypes> m_aeInactiveTriggers;
+
+	int m_iNumCultureVictoryCities;
+	int m_eCultureVictoryCultureLevel;
+
+	bool m_bRecalculatingModifiers;
+
+	void doTurn();
+	void doDeals();
+	void doSpawns(PlayerTypes ePlayer);
+#ifdef GLOBAL_WARMING
+	void doGlobalWarming();
+#endif
+
+	void checkGameStart();
+
+	void doHeadquarters();
+	void doDiploVote();
+	void doVoteResults();
+	void doVoteSelection();
+
+	void createBarbarianCities(bool bNeanderthal);
+	void createBarbarianUnits();
+	//void createAnimals();
+
+	void verifyCivics();
+
+	void updateMoves();
+	void updateTimers();
+	void updateTurnTimer();
+
+	void testAlive();
+	void testVictory();
+
+	void processVote(const VoteTriggeredData& kData, int iChange);
+
+	int getTeamClosenessScore(int** aaiDistances, int* aiStartingLocs);
+	void normalizeStartingPlotLocations();
+	void normalizeAddRiver();
+	void normalizeRemovePeaks();
+	void normalizeAddLakes();
+	void normalizeRemoveBadFeatures();
+	void normalizeRemoveBadTerrain();
+	void normalizeAddFoodBonuses();
+	void normalizeAddGoodTerrain();
+	void normalizeAddExtras();
+
+	void showEndGameSequence();
+
+	CvPlot* normalizeFindLakePlot(PlayerTypes ePlayer);
+
+	void doUpdateCacheOnTurn();
+
+	// AIAndy: Properties
+	CvProperties m_Properties;
+	CvPropertySolver m_PropertySolver;
+
+	int m_iChokePointCalculationVersion;
+	int m_iMinCultureOutput;
+
+
+public:
 	unsigned int getInitialTime() const;
 	DllExport void setInitialTime(unsigned int uiNewValue);
 
@@ -418,6 +587,8 @@ public:
 
 	DllExport bool isFinalInitialized() const;
 	DllExport void setFinalInitialized(bool bNewValue);
+	void onFinalInitialized(const bool bNewGame = false);
+	void doPreTurn0();
 
 	bool getPbemTurnSent() const;
 	DllExport void setPbemTurnSent(bool bNewValue);
@@ -489,7 +660,7 @@ public:
 
 	int getBuildingCreatedCount(BuildingTypes eIndex) const;
 	bool isBuildingMaxedOut(BuildingTypes eIndex, int iExtra = 0) const;
-	void incrementBuildingCreatedCount(BuildingTypes eIndex);
+	void changeNumBuildings(const BuildingTypes eIndex, const short iChange);
 
 	int getProjectCreatedCount(ProjectTypes eIndex) const;
 	bool isProjectMaxedOut(ProjectTypes eIndex, int iExtra = 0) const;
@@ -551,7 +722,7 @@ public:
 	void castVote(PlayerTypes eOwnerIndex, int iVoteId, PlayerVoteTypes ePlayerVote);
 
 	DllExport const CvWString & getName();
-	void setName(const TCHAR* szName);
+	void setName(const char* szName);
 
 	// Script data needs to be a narrow string for pickling in Python
 	std::string getScriptData() const;
@@ -568,9 +739,7 @@ public:
 	DllExport CvDeal* getDeal(int iID);
 	CvDeal* addDeal();
 	void deleteDeal(int iID);
-	// iteration
-	CvDeal* firstDeal(int *pIterIdx, bool bRev=false) const;
-	CvDeal* nextDeal(int *pIterIdx, bool bRev=false) const;
+	FFreeListTrashArray<CvDeal>::Range_t deals() const { return m_deals.range(); }
 
 	VoteSelectionData* getVoteSelection(int iID) const;
 	VoteSelectionData* addVoteSelection(VoteSourceTypes eVoteSource);
@@ -624,9 +793,7 @@ public:
 	DllExport void setReplayInfo(CvReplayInfo* pReplay);
 	void saveReplay(PlayerTypes ePlayer);
 
-	bool hasSkippedSaveChecksum() const;
-
-	void logDebugMsg(char* format, ...);
+	void logNetMsgData(char* format, ...);
 
 	void addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive = true);
 	void changeHumanPlayer( PlayerTypes eOldHuman, PlayerTypes eNewHuman );
@@ -635,10 +802,6 @@ public:
 
 	bool isCompetingCorporation(CorporationTypes eCorporation1, CorporationTypes eCorporation2) const;
 
-	int getShrineBuildingCount(ReligionTypes eReligion = NO_RELIGION);
-	BuildingTypes getShrineBuilding(int eIndex, ReligionTypes eReligion = NO_RELIGION);
-	void changeShrineBuilding(BuildingTypes eBuilding, ReligionTypes eReligion, bool bRemove = false);
-
 	bool culturalVictoryValid() const;
 	int culturalVictoryNumCultureCities() const;
 	CultureLevelTypes culturalVictoryCultureLevel() const;
@@ -646,11 +809,7 @@ public:
 
 	int getPlotExtraYield(int iX, int iY, YieldTypes eYield) const;
 	void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iCost);
-	void removePlotExtraYield(int iX, int iY);
-
-	int getPlotExtraCost(int iX, int iY) const;
-	void changePlotExtraCost(int iX, int iY, int iCost);
-	void removePlotExtraCost(int iX, int iY);
+	//void removePlotExtraYield(int iX, int iY); // Toffer - Unused, but might be needed for recalc...
 
 	ReligionTypes getVoteSourceReligion(VoteSourceTypes eVoteSource) const;
 	void setVoteSourceReligion(VoteSourceTypes eVoteSource, ReligionTypes eReligion, bool bAnnounce = false);
@@ -667,7 +826,7 @@ public:
 
 	bool pythonIsBonusIgnoreLatitudes() const;
 
-	inline bool isRecalculatingModifiers() { return m_bRecalculatingModifiers; }
+	inline bool isRecalculatingModifiers() const { return m_bRecalculatingModifiers; }
 
 	DllExport void getGlobeLayers(std::vector<CvGlobeLayerData>& aLayers) const;
 	DllExport void startFlyoutMenu(const CvPlot* pPlot, std::vector<CvFlyoutMenuData>& aFlyoutItems) const;
@@ -713,201 +872,6 @@ public:
 
 	void recalculateModifiers();
 
-protected:
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-	MapTypes m_eCurrentMap;
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
-	CvString m_gameId;
-	int m_iElapsedGameTurns;
-	int m_iStartTurn;
-	int m_iStartYear;
-	int m_iEstimateEndTurn;
-	CvDate m_currentDate;
-	int m_iDateTurn;
-
-	int m_iTurnSlice;
-	int m_iCutoffSlice;
-	int m_iNumGameTurnActive;
-	int m_iNumCities;
-	int m_iTotalPopulation;
-	int m_iTradeRoutes;
-	int m_iFreeTradeCount;
-	int m_iNoNukesCount;
-	int m_iNukesExploded;
-	int m_iMaxPopulation;
-	int m_iMaxLand;
-	int m_iMaxTech;
-	int m_iMaxWonders;
-	int m_iInitPopulation;
-	int m_iInitLand;
-	int m_iInitTech;
-	int m_iInitWonders;
-
-	int m_iAIAutoPlay[MAX_PLAYERS];
-	int m_iForcedAIAutoPlay[MAX_PLAYERS];
-
-	int m_iCurrentVoteID;
-	int m_iCutLosersCounter;
-	int m_iHighToLowCounter;
-	int m_iIncreasingDifficultyCounter;
-	int m_iMercyRuleCounter;
-
-	bool starshipLaunched[MAX_TEAMS]; 				//Ordered by team ID (both)
-	bool diplomaticVictoryAchieved[MAX_TEAMS];
-
-	unsigned int m_uiInitialTime;
-	// < M.A.D. Nukes Start >
-	int m_iLastNukeStrikeX;
-	int m_iLastNukeStrikeY;
-	// < M.A.D. Nukes End   >
-	bool m_bScoreDirty;
-	bool m_bDebugMode;
-	bool m_bDebugModeCache;
-	bool m_bFinalInitialized;
-	bool m_bPbemTurnSent;
-	bool m_bHotPbemBetweenTurns;
-	bool m_bPlayerOptionsSent;
-	//TB Nukefix (reversal) Next line should be commented out
-	//bool m_bNukesValid;
-	TeamTypes m_circumnavigatingTeam;
-
-	std::vector<int> m_aiStatusPromotions;
-
-	HandicapTypes m_eHandicap;
-	PlayerTypes m_ePausePlayer;
-	mutable UnitTypes m_eBestLandUnit;
-	TeamTypes m_eWinner;
-	VictoryTypes m_eVictory;
-	GameStateTypes m_eGameState;
-	PlayerTypes m_eEventPlayer;
-
-	CvString m_szScriptData;
-
-	int* m_aiRankPlayer;        // Ordered by rank...
-	int* m_aiPlayerRank;        // Ordered by player ID...
-	int* m_aiPlayerScore;       // Ordered by player ID...
-	int* m_aiRankTeam;						// Ordered by rank...
-	int* m_aiTeamRank;						// Ordered by team ID...
-	int* m_aiTeamScore;						// Ordered by team ID...
-
-	int* m_paiImprovementCount;
-	int* m_paiUnitCreatedCount;
-	int* m_paiBuildingCreatedCount;
-	int* m_paiProjectCreatedCount;
-	int* m_paiForceCivicCount;
-	PlayerVoteTypes* m_paiVoteOutcome;
-	int* m_paiReligionGameTurnFounded;
-	int* m_paiTechGameTurnDiscovered;
-	int* m_paiCorporationGameTurnFounded;
-	int* m_aiSecretaryGeneralTimer;
-	int* m_aiVoteTimer;
-	int* m_aiDiploVote;
-
-	bool* m_pabSpecialUnitValid;
-	bool* m_pabSpecialBuildingValid;
-	bool* m_abReligionSlotTaken;
-
-	bool m_bGameStart;
-	bool* m_abTechCanFoundReligion;
-
-	IDInfo* m_paHolyCity;
-	IDInfo* m_paHeadquarters;
-
-	int** m_apaiPlayerVote;
-
-	std::vector<CvWString> m_aszDestroyedCities;
-	std::vector<CvWString> m_aszGreatPeopleBorn;
-
-	FFreeListTrashArray<CvDeal> m_deals;
-	FFreeListTrashArray<VoteSelectionData> m_voteSelections;
-	FFreeListTrashArray<VoteTriggeredData> m_votesTriggered;
-
-	CvRandom m_mapRand;
-	CvRandom m_sorenRand;
-
-	ReplayMessageList m_listReplayMessages;
-	CvReplayInfo* m_pReplayInfo;
-
-	DWORD	m_lastGraphicUpdateRequestTickCount;
-
-	int m_iNumSessions;
-
-	std::vector<PlotExtraYield> m_aPlotExtraYields;
-	std::vector<PlotExtraCost> m_aPlotExtraCosts;
-	stdext::hash_map<VoteSourceTypes, ReligionTypes> m_mapVoteSourceReligions;
-	std::vector<EventTriggerTypes> m_aeInactiveTriggers;
-
-	// CACHE: cache frequently used values
-	int		m_iShrineBuildingCount;
-	int*	m_aiShrineBuilding;
-	int*	m_aiShrineReligion;
-
-	int		m_iNumCultureVictoryCities;
-	int		m_eCultureVictoryCultureLevel;
-
-	bool	m_plotGroupHashesInitialized;
-	bool	m_bRecalculatingModifiers;
-
-	void doTurn();
-	void doDeals();
-	void doSpawns(PlayerTypes ePlayer);
-#ifdef GLOBAL_WARMING
-	void doGlobalWarming();
-#endif
-
-	void checkGameStart();
-
-	void doHeadquarters();
-	void doDiploVote();
-	void doVoteResults();
-	void doVoteSelection();
-
-	void createBarbarianCities(bool bNeanderthal);
-	void createBarbarianUnits();
-	//void createAnimals();
-
-	void verifyCivics();
-
-	void updateMoves();
-	void updateTimers();
-	void updateTurnTimer();
-
-	void testAlive();
-	void testVictory();
-
-	void processVote(const VoteTriggeredData& kData, int iChange);
-
-	int getTeamClosenessScore(int** aaiDistances, int* aiStartingLocs);
-	void normalizeStartingPlotLocations();
-	void normalizeAddRiver();
-	void normalizeRemovePeaks();
-	void normalizeAddLakes();
-	void normalizeRemoveBadFeatures();
-	void normalizeRemoveBadTerrain();
-	void normalizeAddFoodBonuses();
-	void normalizeAddGoodTerrain();
-	void normalizeAddExtras();
-
-	void showEndGameSequence();
-
-	CvPlot* normalizeFindLakePlot(PlayerTypes ePlayer);
-
-	void doUpdateCacheOnTurn();
-
-	// AIAndy: Properties
-	CvProperties m_Properties;
-	CvMainPropertySolver m_PropertySolver;
-
-	//	Super forts adaptation to C2C - record whether this game has had its choke
-	//	points evaluated
-	int m_iChokePointCalculationVersion;
-
-public:
-	//	Super forts adaptation to C2C - calc choke points if not already done
 	void ensureChokePointsEvaluated();
 	int getBaseAirUnitIncrementsbyCargoVolume() const;
 	int getBaseMissileUnitIncrementsbyCargoVolume() const;
@@ -918,6 +882,10 @@ public:
 	bool isValidByGameOption(const CvUnitCombatInfo& info) const;
 
 	void enforceOptionCompatibility(GameOptionTypes eOption);
+
+	bool isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner, bool bConquest, bool bTrade, bool bRecapture) const;
+
+	int getMinCultureOutput() const { return m_iMinCultureOutput; }
 };
 
 #define CURRENT_MAP GC.getGame().getCurrentMap()

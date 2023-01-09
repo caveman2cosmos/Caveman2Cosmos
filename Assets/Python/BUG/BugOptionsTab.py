@@ -54,7 +54,6 @@ class BugOptionsTab:
 	def createTab(self, screen):
 		"Creates and returns the options tab"
 		screen.attachTabItem(self.tab, self.getTitle())
-		return self.tab
 
 	# Creates and returns the options tab panel with Exit and Help buttons
 	def createMainPanel(self, screen):
@@ -90,7 +89,7 @@ class BugOptionsTab:
 		self.addSpacer(screen, exitPanel, exitPanel)
 
 		# Exit button
-		title = BugUtil.getPlainText("TXT_KEY_PEDIA_SCREEN_EXIT", "Exit")
+		title = BugUtil.getPlainText("TXT_WORD_EXIT", "Exit")
 		hover = BugUtil.getPlainText("TXT_KEY_BUG_OPTBUTTON_EXIT_HOVER", "Exits the BUG Options screen.")
 		exitButton = self.name + "Exit"
 		self.addButton(screen, exitPanel, exitButton, "handleBugExitButtonInput", title, hover)

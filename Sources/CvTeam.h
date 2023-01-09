@@ -6,11 +6,12 @@
 #define CIV4_TEAM_H
 
 #include "CvGameObject.h"
+#include "CvProperties.h"
 
 class CvArea;
-class CvProperties;
 
 class CvTeam
+	: private bst::noncopyable
 {
 public:
 	CvTeam();
@@ -19,7 +20,7 @@ public:
 	DllExport void init(TeamTypes eID);
 	DllExport void reset(TeamTypes eID = NO_TEAM, bool bConstructorCall = false);
 
-	CvGameObjectTeam* getGameObject() {return &m_GameObject;};
+	CvGameObjectTeam* getGameObject() { return &m_GameObject; }
 protected:
 	CvGameObjectTeam m_GameObject;
 	void uninit();
@@ -29,20 +30,19 @@ public:
 	void addTeam(TeamTypes eTeam);
 	void shareItems(TeamTypes eTeam);
 	void shareCounters(TeamTypes eTeam);
-	//Team Project (5)
+
 	void processBuilding(BuildingTypes eBuilding, int iChange, bool bReligiouslyDisabling = false);
 
 	void doTurn();
 
 	void updateYield();
-	void updatePowerHealth();
 	void updateCommerce();
 
 	bool canChangeWarPeace(TeamTypes eTeam, bool bAllowVassal = false) const;
 	DllExport bool canDeclareWar(TeamTypes eTeam) const;
 
 	bool canEventuallyDeclareWar(TeamTypes eTeam) const;
-	void declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, bool bCancelPacts = true);
+	void declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan);
 
 	void makePeace(TeamTypes eTeam, bool bBumpUnits = true);
 	bool canContact(TeamTypes eTeam) const;
@@ -72,9 +72,10 @@ public:
 
 	int getWarPlanCount(WarPlanTypes eWarPlan, bool bIgnoreMinors) const;
 	int getAnyWarPlanCount(bool bIgnoreMinors) const;
+	bool hasWarPlan(bool bIgnoreMinors) const;
 	int getChosenWarCount(bool bIgnoreMinors) const;
 	int getHasMetCivCount(bool bIgnoreMinors) const;
-	bool hasMetAnyCiv(bool bIgnoreMinors) const;
+	bool hasMetAnyCiv(bool bIgnoreMinors = true) const;
 	int getDefensivePactCount(TeamTypes eTeam = NO_TEAM) const;
 	int getVassalCount(TeamTypes eTeam = NO_TEAM) const;
 	bool isAVassal() const;
@@ -109,8 +110,7 @@ public:
 	bool hasBonus(BonusTypes eBonus) const;
 	bool isBonusObsolete(BonusTypes eBonus) const;
 
-	bool isHuman() const;
-	bool isBarbarian() const;
+	bool isHuman(const bool bCountDisabledHuman = false) const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isMinorCiv() const;
@@ -133,10 +133,9 @@ public:
 	void changeNumMembers(int iChange);
 
 	int getAliveCount() const;
-	int isAlive() const;
+	bool isAlive() const;
 	void changeAliveCount(int iChange);
 
-	int getEverAliveCount() const;
 	int isEverAlive() const;
 	void changeEverAliveCount(int iChange);
 
@@ -213,19 +212,9 @@ public:
 	bool isHasEmbassy(TeamTypes eIndex) const;
 	void setHasEmbassy(TeamTypes eIndex, bool bNewValue);
 	int getBuildingCommerceChange(BuildingTypes eIndex1, CommerceTypes eIndex2) const;
-	void changeBuildingCommerceChange(BuildingTypes eIndex1, CommerceTypes eIndex2, int iChange);
-
-	int getBuildingYieldChange(BuildingTypes eIndex1, YieldTypes eIndex2) const;
-	void changeBuildingYieldChange(BuildingTypes eIndex1, YieldTypes eIndex2, int iChange);
 
 	int getBuildingSpecialistChange(BuildingTypes eIndex1, SpecialistTypes eIndex2) const;
 	void changeBuildingSpecialistChange(BuildingTypes eIndex1, SpecialistTypes eIndex2, int iChange);
-
-	int getBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2) const;
-	void changeBuildingCommerceModifier(BuildingTypes eIndex1, CommerceTypes eIndex2, int iChange);
-
-	int getBuildingYieldModifier(BuildingTypes eIndex1, YieldTypes eIndex2) const;
-	void changeBuildingYieldModifier(BuildingTypes eIndex1, YieldTypes eIndex2, int iChange);
 
 	int getLimitedBordersTradingCount() const;
 	bool isLimitedBordersTrading() const;
@@ -324,7 +313,6 @@ public:
 	void changeWarWeariness(TeamTypes eIndex, int iChange);
 	void changeWarWearinessTimes100(TeamTypes eIndex, int iChange);
 
-	int getTechShareCount(int iIndex) const;
 	bool isTechShare(int iIndex) const;
 	void changeTechShareCount(int iIndex, int iChange);
 
@@ -418,6 +406,11 @@ public:
 
 	int getImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2) const;
 	void changeImprovementYieldChange(ImprovementTypes eIndex1, YieldTypes eIndex2, int iChange);
+
+	int getBuildingYieldTechChange(const YieldTypes eYield, const BuildingTypes eBuilding) const;
+	int getBuildingYieldTechModifier(const YieldTypes eYield, const BuildingTypes eBuilding) const;
+	int getBuildingCommerceTechChange(const CommerceTypes eIndex, const BuildingTypes eBuilding) const;
+	int getBuildingCommerceTechModifier(const CommerceTypes eIndex, const BuildingTypes eBuilding) const;
 
 	void addPropertiesAllCities(const CvProperties* pProp);
 	void subtractPropertiesAllCities(const CvProperties* pProp);
@@ -565,8 +558,6 @@ protected:
 	bool* m_abIsRebelAgainst;
 	bool* m_pabHasTech;
 
-	int** m_ppiBuildingCommerceChange;
-	int** m_ppiBuildingYieldChange;
 	int** m_ppiBuildingSpecialistChange;
 	int** m_ppiBuildingCommerceModifier;
 	int** m_ppiBuildingYieldModifier;
@@ -609,14 +600,24 @@ protected:
 	void cancelDefensivePacts();
 	void announceTechToPlayers(TechTypes eIndex, bool bPartial = false);
 
+
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);
 
-	// AIAndy: Properties
+// AIAndy: Properties
+protected:
 	CvProperties m_Properties;
 public:
 	CvProperties* getProperties();
 	const CvProperties* getPropertiesConst() const;
+
+// Toffer - Cache current research choices.
+private:
+	std::vector<TechTypes> m_adjacentResearch;
+public:
+	void cacheAdjacentResearch();
+	void setAdjacentResearch(const TechTypes eTech, const bool bNewValue);
+	const std::vector<TechTypes>& getAdjacentResearch() const { return m_adjacentResearch; }
 };
 
 #endif

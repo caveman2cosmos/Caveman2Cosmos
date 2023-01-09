@@ -10,6 +10,7 @@
 #include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvPlayer.h"
+#include "CvInfos.h"
 
 int UnitGroupingBase::getGroup(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
@@ -114,7 +115,7 @@ void UnitGroupingList::setPlayer(const CvPlayer *pPlayer)
 
 bool UnitGroupingList::setActiveGrouping(UnitGroupingTypes eActiveGrouping)
 {
-	FASSERT_BOUNDS(0, NUM_UNIT_GROUPING, eActiveGrouping)
+	FASSERT_BOUNDS(0, NUM_UNIT_GROUPING, eActiveGrouping);
 	const bool bChanged = m_eActiveGrouping != eActiveGrouping;
 	m_eActiveGrouping = eActiveGrouping;
 	return bChanged;

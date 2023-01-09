@@ -4,7 +4,6 @@
 		<PropertyInfo>
 			<Type>PROPERTY_CRIME</Type>
 			<Description>TXT_KEY_PROPERTY_CRIME</Description>
-			<Strategy>TXT_KEY_PROPERTY_CRIME_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_CRIME_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_CRIME_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_CRIME_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
@@ -87,7 +86,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					 <BuildingType>BUILDING_CRIME_POACHING</BuildingType>
+					<BuildingType>BUILDING_CRIME_POACHING</BuildingType>
 					<iMinValue>750</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -496,7 +495,6 @@
 		<PropertyInfo>
 			<Type>PROPERTY_FLAMMABILITY</Type>
 			<Description>TXT_KEY_PROPERTY_FLAMMABILITY</Description>
-			<Strategy>TXT_KEY_PROPERTY_FLAMMABILITY_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_FLAMMABILITY_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_FLAMMABILITY_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_FLAMMABILITY_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
@@ -518,7 +516,6 @@
 		<PropertyInfo>
 			<Type>PROPERTY_WATER_POLLUTION</Type>
 			<Description>TXT_KEY_PROPERTY_WATER_POLLUTION</Description>
-			<Strategy>TXT_KEY_PROPERTY_WATER_POLLUTION_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_WATER_POLLUTION_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_WATER_POLLUTION_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_WATER_POLLUTION_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
@@ -673,7 +670,6 @@
 		<PropertyInfo>
 			<Type>PROPERTY_AIR_POLLUTION</Type>
 			<Description>TXT_KEY_PROPERTY_AIR_POLLUTION</Description>
-			<Strategy>TXT_KEY_PROPERTY_AIR_POLLUTION_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_AIR_POLLUTION_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_AIR_POLLUTION_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_AIR_POLLUTION_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
@@ -828,7 +824,6 @@
 		<PropertyInfo>
 			<Type>PROPERTY_DISEASE</Type>
 			<Description>TXT_KEY_PROPERTY_DISEASE</Description>
-			<Strategy>TXT_KEY_PROPERTY_DISEASE_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_DISEASE_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_DISEASE_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_DISEASE_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
@@ -981,7 +976,6 @@
 		<PropertyInfo>
 			<Type>PROPERTY_EDUCATION</Type>
 			<Description>TXT_KEY_PROPERTY_EDUCATION</Description>
-			<Strategy>TXT_KEY_PROPERTY_EDUCATION_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_EDUCATION_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_EDUCATION_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_EDUCATION_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>
@@ -1025,27 +1019,27 @@
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_NANOTECH</EraType>
-					<iTargetLevel>20100</iTargetLevel>
+					<iTargetLevel>15100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_TRANSHUMAN</EraType>
-					<iTargetLevel>30100</iTargetLevel>
+					<iTargetLevel>20100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_GALACTIC</EraType>
-					<iTargetLevel>40100</iTargetLevel>
+					<iTargetLevel>25100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_COSMIC</EraType>
-					<iTargetLevel>50100</iTargetLevel>
+					<iTargetLevel>30100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_TRANSCENDENT</EraType>
-					<iTargetLevel>60100</iTargetLevel>
+					<iTargetLevel>35100</iTargetLevel>
 				</TargetLevelbyEraType>
 				<TargetLevelbyEraType>
 					<EraType>C2C_ERA_FUTURE</EraType>
-					<iTargetLevel>60100</iTargetLevel>
+					<iTargetLevel>35100</iTargetLevel>
 				</TargetLevelbyEraType>
 			</TargetLevelbyEraTypes>
 			<AIScaleType>AISCALE_CITY</AIScaleType>
@@ -1103,27 +1097,27 @@
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
-					<iMinValue>20000</iMinValue>
+					<iMinValue>15000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
-					<iMinValue>30000</iMinValue>
+					<iMinValue>20000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
-					<iMinValue>40000</iMinValue>
+					<iMinValue>25000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
-					<iMinValue>50000</iMinValue>
+					<iMinValue>30000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
-					<iMinValue>60000</iMinValue>
+					<iMinValue>35000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
@@ -1169,27 +1163,27 @@
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-20000</iMaxValue>
+					<iMaxValue>-15000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-30000</iMaxValue>
+					<iMaxValue>-20000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-40000</iMaxValue>
+					<iMaxValue>-25000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-50000</iMaxValue>
+					<iMaxValue>-30000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-60000</iMaxValue>
+					<iMaxValue>-35000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_PLUS1</BuildingType>
@@ -1233,27 +1227,27 @@
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
-					<iMinValue>20000</iMinValue>
+					<iMinValue>15000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
-					<iMinValue>30000</iMinValue>
+					<iMinValue>20000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
-					<iMinValue>40000</iMinValue>
+					<iMinValue>25000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
-					<iMinValue>50000</iMinValue>
+					<iMinValue>30000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
-					<iMinValue>60000</iMinValue>
+					<iMinValue>35000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
@@ -1299,34 +1293,33 @@
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-20000</iMaxValue>
+					<iMaxValue>-15000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-30000</iMaxValue>
+					<iMaxValue>-20000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-40000</iMaxValue>
+					<iMaxValue>-25000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-50000</iMaxValue>
+					<iMaxValue>-30000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
 					<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
 					<iMinValue>-2000000</iMinValue>
-					<iMaxValue>-60000</iMaxValue>
+					<iMaxValue>-35000</iMaxValue>
 				</PropertyBuilding>
 			</PropertyBuildings>
 		</PropertyInfo>
 		<PropertyInfo>
 			<Type>PROPERTY_TOURISM</Type>
 			<Description>TXT_KEY_PROPERTY_TOURISM</Description>
-			<Strategy>TXT_KEY_PROPERTY_TOURISM_STRATEGY</Strategy>
 			<ValueDisplayText>TXT_KEY_PROPERTY_TOURISM_DISPLAY</ValueDisplayText>
 			<ChangeDisplayText>TXT_KEY_PROPERTY_TOURISM_CHANGE</ChangeDisplayText>
 			<ChangeAllCitiesDisplayText>TXT_KEY_PROPERTY_TOURISM_CHANGE_ALL_CITIES</ChangeAllCitiesDisplayText>

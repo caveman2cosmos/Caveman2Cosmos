@@ -1,5 +1,8 @@
 #include "CvGameCoreDLL.h"
 #include "CvBuildingInfo.h"
+#include "CvImprovementInfo.h"
+#include "CvBonusInfo.h"
+#include "CvInfos.h"
 #include "CvRandom.h"
 #include "CyGame.h"
 #include "CyGlobalContext.h"
@@ -35,6 +38,9 @@ void CyGlobalContextPythonInterface1(python::class_<CyGlobalContext>& x)
 
 		.def("getNumBonusInfos", &CyGlobalContext::getNumBonusInfos, "() - Total Bonus Infos XML\\Terrain\\CIV4BonusInfos.xml")
 		.def("getBonusInfo", &CyGlobalContext::getBonusInfo, python::return_value_policy<python::reference_existing_object>(), "(BonusID) - CvInfo for BonusID")
+
+		.def("getNumMapBonuses", &CyGlobalContext::getNumMapBonuses, "() - Total map Bonuses")
+		.def("getMapBonus", &CyGlobalContext::getMapBonus, "(mapBonusIndex) - BonusType for mapBonusIndex")
 
 		.def("getNumFeatureInfos", &CyGlobalContext::getNumFeatureInfos, "() - Total Feature Infos XML\\Terrain\\CIV4FeatureInfos.xml")
 		.def("getFeatureInfo", &CyGlobalContext::getFeatureInfo, python::return_value_policy<python::reference_existing_object>(), "(FeatureID) - CvInfo for FeatureID")
@@ -106,13 +112,8 @@ void CyGlobalContextPythonInterface1(python::class_<CyGlobalContext>& x)
 		.def("getNumActionInfos", &CyGlobalContext::getNumActionInfos, "() - Total Action Infos XML\\Units\\CIV4ActionInfos.xml")
 		.def("getActionInfo", &CyGlobalContext::getActionInfo, python::return_value_policy<python::reference_existing_object>(), "(ActionID) - CvInfo for ActionID")
 
-		//TB Promotion Line Mod begin
 		.def("getNumPromotionLineInfos", &CyGlobalContext::getNumPromotionLineInfos, "() - Total Promotion Line Infos XML\\Units\\CIV4PromotionLineInfos.xml")
 		.def("getPromotionLineInfo", &CyGlobalContext::getPromotionLineInfo, python::return_value_policy<python::reference_existing_object>(), "(PromotionLineID) - CvInfo for PromotionLineID")
-		//TB Promotion Line Mod end
-
-		//.def("getNumMapCategoryInfos", &CyGlobalContext::getNumMapCategoryInfos, "() - Total Map Category Infos XML\\Terrains\\CIV4MapCategoryInfos.xml")
-		//.def("getMapCategoryInfo", &CyGlobalContext::getMapCategoryInfo, python::return_value_policy<python::reference_existing_object>(), "(MapCategoryID) - CvInfo for MapCategoryID")
 
 		//.def("getNumIdeaClassInfos", &CyGlobalContext::getNumIdeaClassInfos, "() - Total Idea Class Infos XML\\GameInfo\\CIV4IdeaClassInfos.xml")
 		//.def("getIdeaClassInfo", &CyGlobalContext::getIdeaClassInfo, python::return_value_policy<python::reference_existing_object>(), "(IdeaClassID) - CvInfo for IdeaClassID")
@@ -127,5 +128,6 @@ void CyGlobalContextPythonInterface1(python::class_<CyGlobalContext>& x)
 		//.def("getTraitOptionEditsInfo", &CyGlobalContext::getTraitOptionEditsInfo, python::return_value_policy<python::reference_existing_object>(), "(TraitOptionEditsID) - CvInfo for TraitOptionEditsID")
 
 		.def("setIsBug", &CyGlobalContext::setIsBug, "void () - init BUG on dll side")
+		.def("refreshOptionsBUG", &CyGlobalContext::refreshOptionsBUG, "void () - refresh some key BUG options")
 	;
 }

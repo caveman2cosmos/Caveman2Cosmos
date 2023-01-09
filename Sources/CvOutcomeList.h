@@ -21,28 +21,28 @@ class CvOutcomeList
 public:
 	CvOutcomeList() : m_bIsReference(false) {}
 	virtual ~CvOutcomeList();
-	CvOutcome* getOutcome(int index) const;
+	const CvOutcome* getOutcome(int index) const;
 	int getNumOutcomes() const;
 
 	bool isPossible(const CvUnit& kUnit) const;
 	bool isPossibleSomewhere(const CvUnit& kUnit) const;
 	bool isPossibleInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade = false) const;
-	bool execute(CvUnit& kUnit, PlayerTypes eDefeatedUnitPlayer = NO_PLAYER, UnitTypes eDefeatedUnitType = NO_UNIT);
+	bool execute(CvUnit& kUnit, PlayerTypes eDefeatedUnitPlayer = NO_PLAYER, UnitTypes eDefeatedUnitType = NO_UNIT) const;
 
 	int AI_getValueInPlot(const CvUnit& kUnit, const CvPlot& kPlot, bool bForTrade = false) const;
-	
+
 	bool isEmpty() const;
 	void clear();
 
 	void buildDisplayString(CvWStringBuffer& szBuffer, const CvUnit& kUnit) const;
-	
-	bool read(CvXMLLoadUtility* pXML, const wchar_t* szTagName = L"Outcomes");
-	void copyNonDefaults(CvOutcomeList* pOutcomeList, CvXMLLoadUtility* pXML);
 
-	void getCheckSum(unsigned int& iSum) const;
+	bool read(CvXMLLoadUtility* pXML, const wchar_t* szTagName = L"Outcomes");
+	void copyNonDefaults(CvOutcomeList* pOutcomeList);
+	void getCheckSum(uint32_t& iSum) const;
+
 protected:
 	bool m_bIsReference;
-	std::vector<CvOutcome*> m_aOutcome;
+	std::vector<const CvOutcome*> m_aOutcome;
 };
 
 // This outcome list version is supposed to contain a temporary merge of different outcome lists

@@ -25,11 +25,6 @@ def init():
 		print "BugInit.init - already complete"
 		return True
 
-	BugOptions.initUserSettings()
-
-	import BugPath
-	BugPath.init()
-
 	loadMod("init")
 	import BugCore
 	BugCore.initDone()

@@ -9,7 +9,7 @@
 #define __PROFILE_H__
 
 
-#include "CvDLLEntityIFaceBase.h"
+//#include "CvDLLEntityIFaceBase.h"
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvGlobals.h"	// for gDLL
 
@@ -24,12 +24,12 @@ struct ProfileSample
 	explicit ProfileSample(char *name) :
 #ifdef USE_INTERNAL_PROFILER
 		Id(-1),
-#else  
-	
+#else
+
 #endif
 		Added(false),
 		Parent(-1)
-	{	
+	{
 		strcpy(Name, name);
 	}
 
@@ -98,7 +98,7 @@ public:
 			gDLL->EndSample(m_pSample);
 #endif
 			bValid = false;
-		}	
+		}
 	};
 
 private:
@@ -113,7 +113,7 @@ private:
 //---------------------------------------------------------------------------------------------------------------------
 
 // Main Interface for Profile
-#ifdef FP_PROFILE_ENABLE				// Turn Profiling On or Off .. 
+#ifdef FP_PROFILE_ENABLE				// Turn Profiling On or Off ..
 #ifdef USE_INTERNAL_PROFILER
 #define PROFILE_THREAD(name)	\
 	static ProfileSample __rootSample(name);\
@@ -122,9 +122,9 @@ private:
 
 #define PROFILE(name)\
 	static ProfileSample sample(name);\
-	CProfileScope ProfileScope(&sample);		
+	CProfileScope ProfileScope(&sample);
 
-//BEGIN & END macros:		Only needed if you don't want to use the scope macro above. 
+//BEGIN & END macros:		Only needed if you don't want to use the scope macro above.
 // Macros must be in the same scope
 #define PROFILE_BEGIN(name)\
 	static ProfileSample sample__(name);\
@@ -160,7 +160,7 @@ private:
 
 #define PROFILE_FUNC()\
 	static ProfileSample sample(__FUNCTION__);\
-	CProfileScope ProfileScope(&sample);	
+	CProfileScope ProfileScope(&sample);
 
 #define PROFILE_STACK_DUMP	dumpProfileStack();
 #define PROFILE_SET_COUNT(name,value)\
@@ -171,9 +171,9 @@ private:
 #define PROFILE_SET_COUNT(name,value)	;
 #define PROFILE(name)\
 	static ProfileSample sample(name);\
-	CProfileScope ProfileScope(&sample);		
+	CProfileScope ProfileScope(&sample);
 
-//BEGIN & END macros:		Only needed if you don't want to use the scope macro above. 
+//BEGIN & END macros:		Only needed if you don't want to use the scope macro above.
 // Macros must be in the same scope
 #define PROFILE_BEGIN(name)\
 	static ProfileSample sample__(name);\
@@ -186,14 +186,14 @@ private:
 
 #define PROFILE_FUNC()\
 	static ProfileSample sample(__FUNCTION__);\
-	CProfileScope ProfileScope(&sample);	
+	CProfileScope ProfileScope(&sample);
 
 #define PROFILE_STACK_DUMP ;
 #endif
 #else
 // Remove profiling code
 #define PROFILE_THREAD(name)
-#define PROFILE(name)				
+#define PROFILE(name)
 #define PROFILE_BEGIN(name)
 #define PROFILE_BEGIN_CONDITIONAL(name1,name2)
 #define PROFILE_END_CONDITIONAL(result)

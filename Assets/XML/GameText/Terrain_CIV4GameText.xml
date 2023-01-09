@@ -1,0 +1,1104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_FEATUREHELP_POP_ALWAYS_DESTROYED</Tag>
+		<English>[NEWLINE][ICON_BULLET]This feature is immediately destroyed when a city is founded on the same plot.</English>
+		<French>[NEWLINE][ICON_BULLET]Cette caractéristique est immédiatement détruite lorsqu'une ville est fondée sur le même terrain.</French>
+		<German>[NEWLINE][ICON_BULLET]Dieses Geländemerkmal wird sofort zerstört, wenn eine Stadt auf demselben Feld errichtet wird.</German>
+		<Russian>[NEWLINE][ICON_BULLET]Эта особенность немедленно разрушается, если будет заложен город на данном участке.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATUREHELP_POP_DESTROYS</Tag>
+		<English>[NEWLINE][ICON_BULLET]This feature is destroyed by a city founded on the same plot as soon as the city achieves %d1_pop Population.</English>
+		<French>[NEWLINE][ICON_BULLET]Cette caractéristique est détruite par une ville fondée sur le même terrain dès que la ville atteint %d1_pop Population.</French>
+		<German>[NEWLINE][ICON_BULLET]Dieses Geländemerkmal wird zerstört, wenn eine Stadt auf demselben Feld auf Stufe %d1_pop anwächst.</German>
+		<Russian>[NEWLINE][ICON_BULLET]Эта особенность уничтожается городом, основанном на том же участке, как только население города достигнет %d1_pop.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FEATUREHELP_POP_NEVER_DESTROYED</Tag>
+		<English>[NEWLINE][ICON_BULLET]This feature is never destroyed by a city.</English>
+		<French>[NEWLINE][ICON_BULLET]Cette caractéristique n'est jamais détruite par une ville.</French>
+		<German>[NEWLINE][ICON_BULLET]Dieses Geländemerkmal wird niemals durch eine Stadt zerstört.</German>
+		<Russian>[NEWLINE][ICON_BULLET]Эта особенность никогда не разрушается городом.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOT_FRESH_WATER</Tag>
+		<English>Fresh Water</English>
+		<French>Eau douce</French>
+		<German>Süßwasser</German>
+		<Italian>Acqua dolce</Italian>
+		<Spanish>Agua dulce</Spanish>
+		<Russian>Ïðåñíàÿ âîäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOT_MOVEMENT_COST</Tag>
+		<English>[NEWLINE]Movement Cost: %d1[ICON_MOVES]</English>
+		<German>[NEWLINE]Fortbewegungskosten: %d1[ICON_MOVES]</German>
+		<French>[NEWLINE]Coût de dépl.: %d1[ICON_MOVES]</French>
+		<Russian>[NEWLINE]Цена движения: %d1[ICON_MOVES]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOT_ROUTE_MOVEMENT_COST</Tag>
+		<English>[NEWLINE]Route Movement: %s1(%s2)</English>
+		<French>[NEWLINE]Dépl. sur route : %s1(%s2)</French>
+		<German>[NEWLINE]Weg-Fortbewegung: %s1(%s2)</German>
+		<Russian>[NEWLINE]Очков движения: %s1(%s2)</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAINHELP_BUILD_MODIFIER</Tag>
+		<English>[NEWLINE][ICON_BULLET]Improvements take %D1%% time to build</English>
+		<French>[NEWLINE][ICON_BULLET]La construction d'aménagements prend %D1%% tours</French>
+		<German>[NEWLINE][ICON_BULLET]erforderliche Zeit für Ausbau: %D1%%</German>
+		<Italian>[NEWLINE][ICON_BULLET]I miglioramenti impiegheranno %D1%% per essere realizzati</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]Construir mejoras cuesta un %D1%% del tiempo</Spanish>
+		<Russian>[NEWLINE][ICON_BULLET]Улучшение будет строиться %D1%% ходов до завершения</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAINHELP_NO_CITIES</Tag>
+		<English>[NEWLINE][ICON_BULLET]Cannot build cities here[SPACE]</English>
+		<French>[NEWLINE][ICON_BULLET]Impossible de construire une ville ici[SPACE]</French>
+		<German>[NEWLINE][ICON_BULLET]keine Stadtgründung möglich[SPACE]</German>
+		<Italian>[NEWLINE][ICON_BULLET]Qui è impossibile costruire una città[SPACE]</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]Aquí no se pueden construir ciudades[SPACE]</Spanish>
+		<Russian>[NEWLINE][ICON_BULLET]Невозможно строить города на этой клетке[SPACE]</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAINHELP_TURN_DAMAGE</Tag>
+		<English>[NEWLINE][ICON_BULLET]Damage per Turn: %d1_Amt%%</English>
+		<French>[NEWLINE][ICON_BULLET]Dégâts par Tour: %d1_Amt%%</French>
+		<German>[NEWLINE][ICON_BULLET]Schaden pro Runde: %d1_Amt%%</German>
+		<Russian>[NEWLINE][ICON_BULLET]Урона за ход: %d1_Amt%%</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_BADLAND</Tag>
+		<English>Badland</English>
+		<French>Désert Calcaire</French>
+		<German>Steinwüste</German>
+		<Russian>Морена</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_BARREN</Tag>
+		<English>Barren</English>
+		<French>Sol Stérile</French>
+		<German>Karge Vegetation</German>
+		<Italian>Suolo sterile</Italian>
+		<Spanish>
+			<Text>Yermo:Yermos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Pustkowia</Polish>
+		<Russian>Ïóñòîøü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_BARREN_PEDIA</Tag>
+		<English>The term Barren vegetation, or just barren, describes an area where plant growth is sparse, stunted, or possesses little biodiversity. Poor growth may occur due to high winds, climate, salt spray, infertile or toxic soil, or heavy exploitation by man.</English>
+		<French>Le terme végétation stérile, ou simplement stérile, décrit une zone où la croissance des plantes est clairsemée, rabougrie ou possède peu de biodiversité. Une croissance médiocre peut se produire en raison de vents violents, du climat, des embruns salés, d'un sol stérile ou toxique ou d'une exploitation intensive par l'homme.</French>
+		<German>[COLOR_HIGHLIGHT_TEXT]Karge Vegetation[COLOR_REVERT] bedeutet nur spärlichen Pflanzenwuchs oder eine sehr geringe Pflanzenvielfalt in einem bestimmten Gebiet, meist aufgrund von unfruchtbarem Boden. Diese Unfruchtbarkeit kann durch starke Winde, extremes Klima, natürliche Versalzung oder vulkanische Aktivitäten entstehen. Sie wird aber häufig auch vom Menschen durch Überdüngung, Verseuchung, übermäßige Nutzung der natürlichen Ressourcen und Überwirtschaftung verursacht oder zumindest beschleunigt.</German>
+		<Italian>Il termine sterile descrive un'area dove la crescita delle piante è scarsa, stentata, oppure possiede poca biodiversità. Una scarsa crescita può derivare da forti venti, clima, ammassi salini, suolo tossico o non fertile, oppure un intenso sfruttamento da parte dell'uomo.</Italian>
+		<Russian>Термин «пустошь» или просто бесплодные земли описывает территорию, где рост растений сильно угнетен неблагоприятными условиями, а существуюие виды как правило низкорослые или отличаются малым биоразнообразием. Сильные ветра, климат, засоление почв, неплодородная или токсичной почва или чрезмерная эксплуатация земли человеком - вот ключевые факторы, приводящие к замедленной вегетации растений.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_COAST</Tag>
+		<English>Coast</English>
+		<French>
+			<Text>Côte</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Küste</German>
+		<Italian>
+			<Text>Costa:Coste</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Costa:Costas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Wybrzeże</Polish>
+		<Russian>Ïîáåðåæüå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_COAST_DEEP</Tag>
+		<English>Deep Coast</English>
+		<French>Falaise</French>
+		<German>Schelf</German>
+		<Russian>Ãëóáîêîå ïîáåðåæüå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_COAST_DEEP_PEDIA</Tag>
+		<English>One tile off shore and deep.</English>
+		<French>Une Case au large et en profondeur.</French>
+		<German>Den randlichen Bereich eines Kontinents, der ständig von Meer bedeckt ist, nennt man Schelf, Kontinentalschelf oder Festlandssockel. Die Schelfplattform, also der Meeresgrund, kann bis zu 200 m unter dem Meeresspiegel liegen. Das Schelfmeer ist sehr reich an Tier- und Pflanzenarten, hier befindet sich auch die Kinderstube vieler Fischarten.</German>
+		<Russian>Более глубокая прибрежная клетка.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_COAST_DEEP_POLAR</Tag>
+		<English>Polar Deep Coast</English>
+		<French>Plateau polaire</French>
+		<German>Polarschelf</German>
+		<Russian>Ãëóá. ïîë. ïîáåðåæüå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_COAST_DEEP_TROPICAL</Tag>
+		<English>Tropical Deep Coast</English>
+		<French>Plateau Tropical</French>
+		<German>Tropenschelf</German>
+		<Russian>Ãëóá. òðîï. ïîáåðåæüå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_COAST_PEDIA</Tag>
+		<English>The coastline is where the land meets the sea or ocean. A precise line that can be called a coastline cannot be determined due to the dynamic nature of tides. The term "coastal zone" can be used instead, which is a spatial zone where interaction of the sea and land processes occurs. Both the terms coast and coastal are often used to describe a geographic location or region; for example, New Zealand's West Coast, or the East and West Coasts of the United States.</English>
+		<French>Le littoral est l'endroit où la terre rencontre la mer ou l'océan. Une ligne précise qui peut être appelée un littoral ne peut pas être déterminée en raison de la nature dynamique des marées. Le terme "zone côtière" peut être utilisé à la place, qui est une zone spatiale où se produisent des interactions entre les processus maritimes et terrestres. Les termes côte et côte sont souvent utilisés pour décrire un emplacement géographique ou une région; par exemple, la côte ouest de la Nouvelle-Zélande ou les côtes est et ouest des États-Unis.</French>
+		<German>Mit [COLOR_HIGHLIGHT_TEXT]Küste[COLOR_REVERT] bezeichnet man das Gebiet, in dem sich Landmasse und Ozean treffen. Eine genaue Küstenlinie ist meist durch den dynamischen Gezeitenwechsel schlecht festzulegen, man richtet sich hier nach dem Stand des mittleren Hochwassers. Küsten sind durch Gezeiten-, Brandungs- und Windeinwirkungen einem ständigen Wandel unterworfen.</German>
+		<Russian>Береговая линия - это место, где земля встречается с морем или океаном. Точная линия, которую можно назвать береговой линией, не может быть определена из-за динамического характера приливов. Вместо этого можно использовать термин «прибрежная зона», который является пространственной зоной, в которой происходит взаимодействие морских и сухопутных процессов. Термины «берег» и «побережье» часто используются для описания географического положения или региона; например, восточное побережье Балтики или Карамандельский берег Индостана.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_COAST_POLAR</Tag>
+		<English>Polar Coast</English>
+		<French>
+			<Text>Côte Polaire</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Polarküste</German>
+		<Italian>Costa polare</Italian>
+		<Spanish>
+			<Text>Costa polar:Costas polares</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Wybrzeże Polarne</Polish>
+		<Russian>Ïîëÿðíîå ïîáåðåæüå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_COAST_TROPICAL</Tag>
+		<English>Tropical Coast</English>
+		<French>
+			<Text>Côte Tropicale</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Tropenküste</German>
+		<Italian>Costa tropicale</Italian>
+		<Spanish>
+			<Text>Costa tropical:Costas tropicales</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Wybrzeże Tropikalne</Polish>
+		<Russian>Òðîïè÷åñêîå ïîáåðåæüå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_DESERT</Tag>
+		<English>Desert</English>
+		<French>
+			<Text>Désert</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Wüste</German>
+		<Italian>
+			<Text>Deserto:Deserti</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Desierto:Desiertos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Pustynia</Polish>
+		<Russian>Ïóñòûíÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_DESERT_PEDIA</Tag>
+		<English>A desert is a landscape or region that receives an extremely low amount of precipitation, less than enough to support growth of most plants. Deserts are defined as areas with an average annual precipitation of less than 250 millimetres (10 in) per year, or as areas where more water is lost by evapotranspiration than falls as precipitation. In the Köppen climate classification system, deserts are classed as BWh (hot desert) or BWk (temperate desert). In the Thornthwaite climate classification system, deserts would be classified as arid megathermal climates.</English>
+		<French>Un désert est un paysage ou une région qui reçoit une quantité extrêmement faible de précipitations, moins que suffisante pour soutenir la croissance de la plupart des plantes. Les déserts sont définis comme des zones avec des précipitations annuelles moyennes de moins de 250 millimètres (10 pouces) par an, ou comme des zones où plus d'eau est perdue par évapotranspiration que ne tombe sous forme de précipitations. Dans le système de classification climatique K0ppen, les déserts sont classés en BWh (désert chaud) ou BWk (désert tempéré). Dans le système de classification climatique de Thornthwaite, les déserts seraient classés comme des climats mégathermiques arides.</French>
+		<German>Unter [COLOR_HIGHLIGHT_TEXT]Wüsten[COLOR_REVERT] versteht man vegetationslose oder -arme Landschaften, die größtenteils durch Wassermangel entstehen. Trotz ihrer vermeintlichen Lebensfeindlichkeit sind in vielen Wüsten zahlreiche angepasste Tierarten anzutreffen. Typisch für Hitzewüsten sind starke Temperaturschwankungen zwischen Tag und Nacht. Insbesondere durch Überweidung, Übernutzung, Abholzung und falsche Bewässerungsmethoden wird die natürliche Wüstenbildung (Desertifikation) durch den Menschen zusätzlich verstärkt und beschleunigt.</German>
+		<Russian>Пустыня - это ландшафт или регион, в котором выпадает крайне мало осадков, которых недостаточно для поддержания роста большинства растений. Пустыни определяются как районы со среднегодовым количеством осадков менее 250 миллиметров (10 дюймов) в год, или как районы, где больше воды теряется в результате суммарного испарения, чем выпадает в виде осадков. В системе классификации климата K0ppen пустыни классифицируются как BWh (жаркая тропическая пустыня) или BWk (пустыня умеренного пояса). В системе классификации климата Торнтуэйта пустыни будут классифицироваться как засушливый мегатермальный климат.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_DUNES</Tag>
+		<English>Dunes</English>
+		<French>
+			<Text>Dunes</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Dünen</German>
+		<Italian>Dune</Italian>
+		<Spanish>
+			<Text>Dunas</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Wydmy</Polish>
+		<Russian>Äþíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_DUNES_PEDIA</Tag>
+		<English>In physical geography, a dune is a hill of sand built by aeolian processes. Dunes occur in different forms and sizes, formed by interaction with the wind. Most kinds of dunes are longer on the windward side where the sand is pushed up the dune and have a shorter "slip face" in the lee of the wind. The valley or trough between dunes is called a slack. A "dune field" is an area covered by extensive sand dunes. Large dune fields are known as ergs.</English>
+		<French>En géographie physique, une dune est une colline de sable construite par des processus éoliens. Les dunes se présentent sous différentes formes et tailles, formées par interaction avec le vent. La plupart des types de dunes sont plus longues sur le côté au vent où le sable est poussé vers le haut de la dune et ont une "face antidérapante" plus courte sous le vent. La vallée ou creux entre les dunes s'appelle un mou. Un "champ de dunes" est une zone couverte de vastes dunes de sable. Les grands champs de dunes sont appelés ergs.</French>
+		<Italian>In geografia fisica, una duna è una collina di sabbia costruita con un processo eolico. Le dune hanno diverse forme e dimensioni, formate dall'interazione con il vento. La maggior parte delle dune sono più lunghe dalla parte controvento, dove la sabbia viene spinta sulla duna, e hanno una faccia più corta nella direzione sottovento. L'avvallamento tra le dune è chiamato periodo morto. Un campo di dune è un'area coperta da estese dune di sabbia. I grandi campi di dune sono chiamati erg.</Italian>
+		<German>[COLOR_HIGHLIGHT_TEXT]Dünen[COLOR_REVERT] sind Sandhügel und -berge, die in vegetationslosen Gebieten mit Vorhandensein von Sand unter dem Einfluss des Windes entstehen. Der Wind erodiert den Sand, transportiert ihn und lagert ihn wieder ab, wodurch die Sanddünen einem beständigen Wandel unterworfen sind. Besonders gut sichtbar ist dies bei freien, sogenannten Wanderdünen.</German>
+		<Russian>В физической географии дюна или бархан - холм песка, построенный эоловыми процессами. Дюны встречаются в разных формах и размерах, образующихся при взаимодействии с ветром. Большинство видов дюн длиннее на наветренной стороне, где песок выталкивается вверх по дюне, и имеют более короткую «скользящую поверхность» на подветренной стороне ветра. Долина или впадина между барханами называется слабиной. «Поле дюн» - это область, покрытая обширными песчаными дюнами. Большие поля дюн известны как эрги.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_FRESHWATER_COAST</Tag>
+		<English>Freshwater Coast</English>
+		<German>Süßwasserküste</German>
+		<Russian>Ïðåñíîâîä. áåðåã</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_FRESHWATER_SEA</Tag>
+		<English>Freshwater Sea</English>
+		<German>Süßwassermeer</German>
+		<Russian>Ïðåñíîâîä. ìîðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_GRASSLAND</Tag>
+		<English>Grassland</English>
+		<French>
+			<Text>Prairie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Grasland</German>
+		<Italian>
+			<Text>Prateria:Praterie</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pradera:Praderas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Łąka</Polish>
+		<Russian>Ëóã</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_GRASSLAND_PEDIA</Tag>
+		<English>Grasslands are areas where the vegetation is dominated by grasses (Poaceae) and other herbaceous (non-woody) plants (forbs). However, sedge (Cyperaceae) and rush (Juncaceae) families can also be found. Grasslands occur naturally on all continents except Antarctica. In temperate latitudes, such as northwest Europe and the Great Plains and California in North America, native grasslands are dominated by perennial bunch grass species, whereas in warmer climates annual species form a greater component of the vegetation.</English>
+		<French>Les prairies sont des zones où la végétation est dominée par les graminées (Poaceae) et d'autres plantes herbacées (non ligneuses) (forbs). Cependant, des familles de carex (Cyperaceae) et de jonc (Juncaceae) peuvent également être trouvées. Les prairies se trouvent naturellement sur tous les continents, sauf en Antarctique. Dans les latitudes tempérées, comme le nord-ouest de l'Europe et les grandes plaines et la Californie en Amérique du Nord, les prairies indigènes sont dominées par des espèces de graminées vivaces, tandis que dans les climats plus chauds, les espèces annuelles forment une plus grande composante de la végétation.</French>
+		<German>Unter dem Überbegriff [COLOR_HIGHLIGHT_TEXT]Grasland[COLOR_REVERT] werden alle Landschaften zusammengefasst, in denen Gräser vorherrschen und in denen es nur wenig bis gar keinen Baumbestand gibt, wie z.B. die verschiedenen Steppen, Savannen und Prärien, aber auch vom Menschen geprägtes Kulturgrasland mit Weiden und Wiesen. Grasländer gibt es auf allen Kontinenten mit Ausnahme der Arktis.</German>
+		<Russian>Луга - это районы, где в растительности преобладают травы (Poaceae) и другие травянистые (недревесные) растения (травы). Однако семейства осоковых (Cyperaceae) и камышовых (Juncaceae) также можно найти. Луга встречаются в природе на всех континентах, кроме Антарктиды. В умеренных широтах, таких как северо-западная Европа и Великие равнины и Калифорния в Северной Америке, на местных лугах преобладают многолетние сгустки трав, тогда как в более теплом климате однолетние виды образуют большую составляющую растительности.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_HILL</Tag>
+		<English>Hill</English>
+		<French>
+			<Text>Colline</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Hügel</German>
+		<Italian>
+			<Text>Collina:Colline</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Colina:Colinas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Wzgórza</Polish>
+		<Russian>Õîëìû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_HILL_PEDIA</Tag>
+		<English>A hill is a landform that extends above the surrounding terrain. Hills often have a distinct summit, although in areas with scarp/dip topography a hill may refer to a particular section of flat terrain without a massive summit (e.g. Box Hill).</English>
+		<French>Une colline est un relief qui s'étend au-dessus du terrain environnant. Les collines ont souvent un sommet distinct, bien que dans les zones à topographie escarpée / pendante, une colline puisse se référer à une section particulière de terrain plat sans sommet massif (e.g. Box Hill).</French>
+		<German>Als [COLOR_HIGHLIGHT_TEXT]Hügel[COLOR_REVERT] bezeichnet man mittelgroße Erhebungen in der Landschaft, die kleiner als Berge aber größer als einzelne Felsen oder leichte Bodenwellen sind. Hügel sind meist abgerundet und mit Pflanzen bewachsen. Natürliche Hügelformationen entstehen hauptsächlich durch Erosion von Gebirgen, Ablagerungen oder geologische Aktivitäten.</German>
+		<Russian>Холм - это рельеф местности, простирающийся над окружающей местностью. Холмы часто имеют отчетливую вершину, хотя в районах с крутым рельефом холм может относиться к определенному участку равнинной местности без массивной вершины.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_ICE</Tag>
+		<English>Ice</English>
+		<French>
+			<Text>Glace</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Eis</German>
+		<Italian>
+			<Text>Ghiaccio:Ghiacci</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hielo:Hielos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Lód</Polish>
+		<Russian>Ëåä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_ICE_PEDIA</Tag>
+		<English>Ice is water frozen into the solid state. Usually ice is the phase known as ice Ih, which is the most abundant of the varying solid phases on the Earth's surface. It can appear transparent or opaque bluish-white color, depending on the presence of impurities or air inclusions. The addition of other materials such as soil may further alter the appearance.</English>
+		<French>La glace est de l'eau gelée à l'état solide. Habituellement, la glace est la phase connue sous le nom de glace Ih, qui est la plus abondante des différentes phases solides à la surface de la Terre. Il peut apparaître de couleur blanc bleuâtre transparent ou opaque, selon la présence d'impuretés ou d'inclusions d'air. L'ajout d'autres matériaux tels que le sol peut altérer davantage.</French>
+		<German>Bei Eis handelt es sich um Wasser, dass bei Temperaturen unter 0 °C vom flüssigen in den festen Aggregatzustand übergeht. Unter der Landschaftsform Eis verstehen wir die sogenannten Eisschilde (Inlandeis), ausgedehnte Gletscher in Polnähe, die das Relief der betreffenden Gegend vollständig unter sich verbergen, (Grönland, Antarktis) aber auch kleinere Eiskappen (Plateaugletscher) wie in Kanada, Island oder Patagonien.</German>
+		<Russian>Лед - это вода, застывшая в твердом состоянии. Обычно лед - это фаза, известная как лед Ih, которая является наиболее распространенной из различных твердых фаз на поверхности Земли. Он может выглядеть прозрачным или непрозрачным голубовато-белым цветом, в зависимости от наличия примесей или воздушных включений. Добавление других материалов, таких как почва, может дополнительно изменить внешний вид.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_INFECTED_WATER</Tag>
+		<English>Infected Water</English>
+		<French>Eau Infectée</French>
+		<German>Verkeimtes Wasser</German>
+		<Italian>Acqua infetta</Italian>
+		<Spanish>Agua infectada</Spanish>
+		<Polish>Zanieczyszczona Woda</Polish>
+		<Russian>Çàðàæåííàÿ âîäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_INFECTED_WATER_PEDIA</Tag>
+		<English>This water plot has been infected by a biological 'nuke'.</English>
+		<French>Cette eau a été infectée par une bombe biologique.</French>
+		<German>Dieses Wasserfeld wurde durch einen biologischen Kampfstoff vergiftet.</German>
+		<Italian>Questa casella acquatica è stata infettata da una bomba biologica.</Italian>
+		<Spanish>Esta casilla acuática ha sido infectada por un arma biológica.</Spanish>
+		<Polish>To pole wody zostało zanieczyszczone przez biologiczną wersje rakiety</Polish>
+		<Russian>Этот участок воды был заражен «биооружием Судного дня».</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_JAGGED</Tag>
+		<English>Jagged</English>
+		<French>Terrain escarpé</French>
+		<German>Gletscher</German>
+		<Russian>Гольцы</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_DOME</Tag>
+		<English>Lunar Dome</English>
+		<French>
+			<Text>Basalte Lunaire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Monddom</German>
+		<Italian>Basalto lunare</Italian>
+		<Spanish>
+			<Text>Basalto lunar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Bazalt Księżycowy</Polish>
+		<Russian>Ëóííûé áàçàëüò</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_DOME_PEDIA</Tag>
+		<English>Lunar basalts differ from their terrestrial counterparts principally in their high iron contents, which typically range from about 17 to 22 wt% FeO. They also possess a stunning range of titanium concentrations (present in the mineral ilmenite), ranging from less than 1 wt% TiO2, to about 13 wt.%. Traditionally, lunar basalts have been classified according to their titanium content, with classes being named high-Ti, low-Ti, and very-low-Ti. Nevertheless, global geochemical maps of titanium obtained from the Clementine mission demonstrate that the lunar maria possesses a continuum of titanium concentrations, and that the highest concentrations are the least abundant.[PARAGRAPH:2]Lunar basalts show exotic textures and mineralogy, particularly shock metamorphism, lack of the oxidation typical of terrestrial basalts, and a complete lack of hydration. While most of the Moon's basalts erupted between about 3 and 3.5 billion years ago, the oldest samples are 4.2 billion years old, and the youngest flows, based on the age dating method of "crater counting," are estimated to have erupted only 1.2 billion years ago.</English>
+		<Italian>I basalti lunari differiscono dalle loro controparti terrestri principalmente per il loro contenuto di ferro, che varia tipicamente da 17 a 22 % di ossido di ferro. Possiedono anche un'elevatissima concentrazione di titanio (presente nel minerale ilmenite), variando da meno dell'1% di ossido di titanio, a più del 13%. Tradizionalmente, i basalti lunari vengono classificati in base al loro contenuto di titanio, con classi chiamate high-Ti, low-Ti, e very-low-Ti. Ciononostante, le mappe geochimiche globali ottenute dalla missione Clementine dimostra che i maria lunari possiedono una grande concentrazione di titanio, e che le più alte concentrazioni sono come minimo abbondanti.[PARAGRAPH:2]I basalti lunari presentano mineralogia e forme esotiche, in particolare metamorfismo da shock, mancanza dell'ossidazione tipica dei basalti terrestri e una mancanza completa di idratazione. Mentre la maggior parte del basato lunare è stato eruttato tra 3 e 3,5 miliardi di anni fa, i campioni più vecchi hanno 4,2 miliardi di anni, e le colate più recenti, basate sul metodo di datazione della "conta dei crateri", sono stimate intorno a 1,2 miliardi di anni fa.</Italian>
+		<Russian>Лунные базальты отличаются от своих наземных аналогов главным образом высоким содержанием железа, которое обычно составляет от 17 до 22 мас.% FeO. Они также обладают ошеломляющим диапазоном концентраций титана (присутствующих в минеральном ильмените) в диапазоне от менее 1 мас.% TiO2 до около 13 мас.%. Традиционно лунные базальты классифицировались по содержанию титана, а классы назывались с высоким содержанием Ti, низким содержанием Ti и очень низким содержанием Ti. Тем не менее, глобальные геохимические карты титана, полученные из миссии Клементина, демонстрируют, что лунная Мария обладает континуумом концентраций титана, и что самые высокие концентрации наименее распространены.[PARAGRAPH:2]Лунные базальты демонстрируют экзотические текстуры и минералогию, в частности шоковый метаморфизм, отсутствие окисления, характерного для наземных базальтов, и полное отсутствие гидратации. В то время как большинство базальтов на Луне вспыхнуло примерно от 3 до 3,5 миллиардов лет назад, самым старым образцам 4,2 миллиарда лет, а самым молодым потокам, основанным на методе датирования возраста «подсчета кратеров», по оценкам, было извержено всего 1,2 миллиарда. много лет назад.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_HIGHLAND</Tag>
+		<English>Lunar Highland</English>
+		<French>
+			<Text>Roches Lunaires</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>Terreno roccioso lunare</Italian>
+		<Spanish>
+			<Text>Talud lunar:Taludes lunares</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Skały Księżycowe</Polish>
+		<Russian>Ëóííûå ñêàëû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_HIGHLAND_PEDIA</Tag>
+		<English>The most distinctive aspect of the Moon is the contrast between its bright and dark zones. Lighter surfaces are the lunar highlands, which receive the name of terrae (singular terra, from the Latin for Earth), and the darker plains are called maria (singular mare, from the Latin for sea), after Johannes Kepler who introduced the name in the 17th century. The highlands are anorthositic in composition, whereas the maria are basaltic. The maria often coincide with the "lowlands," but it is important to note that the lowlands (such as within the South Pole-Aitken basin) are not always covered by maria. The highlands are older than the visible maria, and hence are more heavily cratered.</English>
+		<French>The most distinctive aspect of the Moon is the contrast between its bright and dark zones. Lighter surfaces are the lunar highlands, which receive the name of terrae (singular terra, from the Latin for Earth), and the darker plains are called maria (singular mare, from the Latin for sea), after Johannes Kepler who introduced the name in the 17th century. The highlands are anorthositic in composition, whereas the maria are basaltic. The maria often coincide with the "lowlands," but it is important to note that the lowlands (such as within the South Pole-Aitken basin) are not always covered by maria. The highlands are older than the visible maria, and hence are more heavily cratered.</French>
+		<Italian>Il tratto più distintivo della Luna è il contrasto tra le sue zone più chiare e quelle più scure. Le superfici più chiare sono gli altopiani lunari, chiamati terrae (singolare terra, dal Latino), e le pianure più scure sono dette maria (singolare mare, dal latino), secondo Giovanni Keplero che introdusse questi nomi nel 17° secolo. Gli altopiani hanno una composizione anortositica, mentre i maria sono basaltici. I maria coincidono spesso con le "depressioni", ma è importante notare che le depressioni (come nel bacino Polo Sud-Aitken) non sono sempre coperte da maria. Gli altopiani sono più vecchi dei maria, e perciò hanno molti più crateri.</Italian>
+		<Russian>Самым отличительным аспектом Луны является контраст между ее яркими и темными зонами. Более светлые поверхности - это лунная горная местность, получившая название terrae (единственное число terra, с латыни для Земли), а более темные равнины называются морями (единственное число mare, с латыни для моря) после Иоганна Кеплера, который ввел имя в 17 век. Горная местность анортоситна по составу, тогда как моря состоят из остывших базальтовых расплавов. Моря часто совпадают с «низменностями», но важно отметить, что низменности (например, в пределах бассейна Южного полюса-Эйткена) не всегда покрыты базальтовыми отложениями. Горная местность старше, чем видимая моря, и, следовательно, более интенсивно сформирована.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_MARE</Tag>
+		<English>Lunar Mare</English>
+		<French>
+			<Text>Plaines Lunaires</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>Pianure lunari</Italian>
+		<Spanish>
+			<Text>Llanura lunar:Llanuras lunares</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Równiny Księżycowe</Polish>
+		<Russian>Ëóííàÿ ðàâíèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_MARE_PEDIA</Tag>
+		<English>The lunar maria (singular: mare) are large, dark, basaltic plains on Earth's Moon, formed by ancient volcanic eruptions. They were dubbed maria, Latin for "seas", by early astronomers who mistook them for actual seas. They are less reflective than the "highlands" as a result of their iron-rich compositions, and hence appear dark to the naked eye. The maria cover about 16 percent of the lunar surface, mostly on the near-side visible from Earth. The few maria on the far-side are much smaller, residing mostly in very large craters. The traditional nomenclature for the Moon also includes one oceanus (ocean), as well as features with the names lacus (lake), palus (marsh) and sinus (bay). The latter three are smaller than maria, but have the same nature and characteristics.[PARAGRAPH:2]Lunar anorthosites constitute the light-coloured areas of the Moon's surface and have been the subject of much research.</English>
+		<Italian>I maria lunari (singolare: mare) sono grandi e scure pianure basaltiche sulla luna della Terra, formate da antiche eruzioni vulcaniche. Furono chiamati maria, Latino per "mari", dai primi astronomi che li scambiarono per veri e propri mari. Riflettono meno delle "highlands" come risultato della loro composizione ricca di ferro, e perciò appaiono scuri all'occhio nudo. I maria ricoprono circa il 16% della superficie lunare. I pochi maria sulla faccia nascosta sono molto più piccoli, situati per la maggior parte in enormi crateri. La nomenclatura tradizionale per la Luna include anche un oceanus (oceano), oltre a caratteristiche con il nome di lacus (lago), palus (palude) and sinus (baia). Gli ultimi tre sono più piccoli dei maria, ma hanno la stessa natura e caratteristiche.[PARAGRAPH:2]Le anortositi lunari costituiscono le aree più chiare della superficie lunare, e sono state studiate più a fondo.</Italian>
+		<Russian>Лунные моря - это большие темные базальтовые равнины на Луне Земли, образованные древними вулканическими извержениями. Ранние астрономы назвали их морями, поскольку сочли их за настоящие моря. Они менее отражающие, чем "высокогорье" из-за их богатых железом композиций, и, следовательно, кажутся невооруженным глазом темными. Моря покрывает около 16 процентов поверхности Луны, в основном на ближней стороне, видимой с Земли. Некоторые из морей на дальней стороне намного меньше, и в основном они расположены в очень больших кратерах. Традиционная номенклатура Луны также включает в себя один океан (океан), а также особенности с названиями lacus (озеро), palus (болото) и sinus (залив). Последние три меньше, чем моря, но имеют ту же природу и характеристики.[PARAGRAPH:2]Лунные анортозиты представляют собой светлые участки поверхности Луны и были предметом многих исследований.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_REGOLITH</Tag>
+		<English>Lunar Regolith</English>
+		<French>
+			<Text>Sol Lunaire Stérile</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Mondregolith</German>
+		<Italian>Terreno sterile lunare</Italian>
+		<Spanish>
+			<Text>Yermo lunar:Yermos lunares</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Księżycowy Jałowy Teren</Polish>
+		<Russian>Ëóííàÿ ïóñòîøü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_REGOLITH_PEDIA</Tag>
+		<English>The surface of the Moon has been subject to billions of years of collisions with both small and large asteroidal and cometary materials. Over time, these impact processes have pulverised and "gardened" the surface materials, forming a fine grained layer termed "regolith". The thickness of the regolith varies between 2 meters beneath the younger maria, to up to 20 meters beneath the oldest surfaces of the lunar highlands. The regolith is predominantly composed of materials found in the region, but also contains traces of materials ejected by distant impact craters. The term "mega-regolith" is often used to describe the heavily fractured bedrock directly beneath the near-surface regolith layer.[PARAGRAPH:2]The regolith contains rocks, fragments of minerals from the original bedrock, and glassy particles formed during the impacts. In most of the lunar regolith, half of the particles are made of mineral fragments fused by the glassy particles; these objects are called agglutinates. The chemical composition of the regolith varies according to its location; the regolith in the highlands is rich in aluminium and silica, just as the rocks in those regions. The regolith in the maria is rich in iron and magnesium and is silica-poor, as the basaltic rocks from which it is formed.[PARAGRAPH:2]The lunar regolith is very important because it also stores information about the history of the Sun. The atoms that compose the solar wind mostly helium, neon, carbon and nitrogen hit the lunar surface and insert themselves into the mineral grains. Upon analyzing the composition of the regolith, particularly its isotopic composition, it is possible to determine if the activity of the Sun has changed with time. The gases of the solar wind could be useful for future lunar bases, since oxygen, hydrogen (water), carbon and nitrogen are not only essential to sustain life, but are also potentially very useful in the production of fuel. The composition of the lunar regolith can also be used to infer its source origin.</English>
+		<Italian>La superficie lunare è stata soggetta a miliardi di anni di collisioni con asteroidi piccoli e grandi, oltre a materiale cometario. Nel tempo, questi impatti hanno polverizzato i materiali in superficie, formando uno strato a grana fine denominato "regolite". Lo spessore della regolite varia da 2 metri (nei maria) fino a più di 20 metri sotto alla superficie più antica degli altopiani lunari. La regolite è composta principalmente da materiale presente nella regione, ma contiene anche tracce di materiali eiettati da crateri da impatto molto distanti. Il termine "mega-regolite" è spesso usato per descrivere lo strato roccioso altamente fratturato sotto lo strato superficiale di regolite.[PARAGRAPH:2]La regolite contiene rocce, frammenti di minerale derivate dallo strato roccioso originale, e particelle vetrose formate durante gli impatti. Nella maggior parte della regolite lunare, metà delle particelle sono fatte di frammenti di minerale fusi assieme da particelle vetrose; questi oggetti sono detti agglutinati. La composizione chimica della regolite varia in base alla sua posizione; la regolite degli altopiani è ricca di alluminio e silicio, come le rocce in questa regione. La regolite nei maria è ricca di ferro e magnesio e povera di silicio, come le rocce basaltiche di cui è formata.[PARAGRAPH:2]La regolite lunare è molto importante anche perché contiene informazioni sulla storia del Sole. Gli atomi che compongono il vento solare, per la maggior parte elio, neon, carbonio e azoto, colpiscono la superficie lunare e si mischiano alla regolite. Analizzando la composizione della regolite, in particolare la sua composizione isotopica, è possibile stabilire se l'attività solare è cambiata nel tempo. I gas del vento solare potrebbero essere utili per le future basi lunari, dato che ossigeno, idrogeno, carbonio e azoto sono non solo essenziali alla vita, ma sono anche potenzialmente utilissimi nella produzione di carburante. La composizione della regolite lunare può essere usata anche per stabilire la sua origine.</Italian>
+		<German>Weite Teile der Mondoberfläche sind unter einer meterdicken Schicht aus Mondregolith (auch als Mondstaub bekannt) verborgen. Es handelt sich dabei um Teile des Oberflächengesteins, die durch die ständigen ungebremsten Meteoroideneinschläge regelrecht zu Sand oder gar feinem Staub pulverisiert wurden.</German>
+		<Russian>Поверхность Луны подверглась миллиарды лет столкновениям как с маленькими, так и с большими астероидными и кометными материалами. Со временем эти ударные процессы измельчали ??и «огородили» поверхностные материалы, образуя мелкозернистый слой, называемый «реголит». Толщина реголита варьируется от 2 метров под младшей Марией до 20 метров под самыми старыми поверхностями лунного нагорья. Реголит состоит в основном из материалов, найденных в регионе, но также содержит следы материалов, выброшенных кратерами для отдаленного воздействия. Термин «мега-реголит» часто используется для описания сильно трещиноватой коренной породы непосредственно под приповерхностным слоем реголита.[PARAGRAPH:2]Реголит содержит камни, фрагменты минералов из исходной породы и стеклообразные частицы, образовавшиеся во время столкновений. В большинстве лунных реголитов половина частиц состоит из минеральных фрагментов, слитых со стеклянными частицами; эти объекты называются агглютинатами. Химический состав реголита варьируется в зависимости от его местоположения; Реголит в высокогорье богат алюминием и кремнеземом, так же как и породы в этих регионах. Реголит в лунных морях богат железом и магнием и беден кремнеземом, так как базальтовые породы, из которых он сформирован.[PARAGRAPH:2]Лунный реголит очень важен, потому что он также хранит информацию об истории Солнца. Атомы, из которых состоит солнечный ветер, в основном гелий, неон, углерод и азот, попадают на лунную поверхность и внедряются в минеральные зерна. Анализируя состав реголита, в частности его изотопный состав, можно определить, изменилась ли активность Солнца со временем. Газы солнечного ветра могут быть полезны для будущих лунных баз, поскольку кислород, водород (вода), углерод и азот не только необходимы для поддержания жизни, но и потенциально очень полезны при производстве топлива. Состав лунного реголита также может быть использован для определения его источника происхождения.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_RILLE</Tag>
+		<English>Lunar Rille</English>
+		<French>
+			<Text>Desert Lunaire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Deserto lunare</Italian>
+		<Spanish>
+			<Text>Desierto lunar:Desiertos lunares</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Pustynia Księżycowa</Polish>
+		<Russian>Ëóííàÿ ïóñòûíÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LUNAR_RILLE_PEDIA</Tag>
+		<English>Rille (German for 'groove') is typically used to describe any of the long, narrow depressions in the lunar surface that resemble channels. Typically a rille can be up to several kilometres wide and hundreds of kilometres in length. However, the term has also been used loosely to describe similar structures on a number of planets in the Solar System, including Mars, Venus, and on a number of moons. All bear a structural resemblance to each other.[PARAGRAPH:2]Rilles on the Moon sometimes resulted from the formation of localized lava channels. These generally fall into three categories, consisting of sinuous, arcuate, or linear shapes. By following these meandering rilles back to their source, they often lead to an old volcanic vent. One of the most notable sinuous rilles is the Vallis Schröteri feature, located in the Aristarchus plateau along the eastern edge of Oceanus Procellarum. An example of a sinuous rille exists at the Apollo 15 landing site, Rima Hadley, located on the rim of the Imbrium Basin. Based on observations from the mission, it is generally believed that this rille was formed by volcanic processes, a topic long debated before the mission took place.</English>
+		<Italian>Rille (Tedesco per 'bosco') è tipicamente usato per descrivere una delle lunghe depressioni nella superficie lunare che sembrano canali. Tipicamente, un rille può essere largo fino ad un paio di chilometri, e lungo un centinaio di chilometri. Comunque, questo termine è stato per descrivere strutture simili su un numero di pianeti nel sistema Solare, includendo Marte, Venere e un certo numero di lune. Tutte hanno una somiglianza strutturale con le altre.[PARAGRAPH:2]I Rille sulla Luna sono a volte il risultato di canali li lava locali. Questi ricadono generalmente in 3 categorie, ovvero sinuoso, arcuato o lineare. Seguendo questi rille fino alla loro fonte, spesso conducono a una vecchia fonte vulcanica. Uno dei rille sinuosi più rilevanti è Vallis Schröteri, situato nell'Aristarchus plateau lungo il lato orientale dell'Oceanus Procellarum. Un esempio di rille sinuoso si trova nel sito di atterraggio dell'Apollo 15, Rima Hadley, situato sul margine di Imbrium Basin. Basandosi su osservazioni dalla missione, si ritiene generalmente che questo rille fu formato da processi vulcanici, un argomento a lungo dibattuto prima dell'effettuazione della missione.</Italian>
+		<Russian>Rille (в переводе с немецкого означает «канавка») обычно используется для описания любых длинных узких углублений на лунной поверхности, которые напоминают каналы. Обычно рилл может иметь ширину до нескольких километров и длину до сотен километров. Тем не менее, этот термин также использовался свободно для описания аналогичных структур на ряде планет Солнечной системы, включая Марс, Венеру и ряд лун. Все они имеют структурное сходство друг с другом.[PARAGRAPH:2]Порывы на Луне иногда возникали в результате образования локализованных лавовых каналов. Они обычно делятся на три категории, состоящие из извилистых, дугообразных или линейных форм. Следуя этим извилистым рукам обратно к их источнику, они часто приводят к старому вулканическому сбросу. Одна из наиболее заметных извилистых рилл - это особенность Валлиса Шрётери, расположенная на плато Аристарх вдоль восточного края Oceanus Procellarum. Пример извилистого рила существует на посадочной площадке Аполлона 15, Рима Хэдли, расположенной на краю бассейна Имбриум. Основываясь на наблюдениях миссии, обычно считается, что эта рилла была сформирована вулканическими процессами, тема, которая долго обсуждалась до того, как миссия состоялась.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LUSH</Tag>
+		<English>Lush</English>
+		<French>
+			<Text>Sol Luxuriant</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Üppige Vegetation</German>
+		<Italian>Suolo lussureggiante</Italian>
+		<Spanish>
+			<Text>Pradera fértil:Praderas fértiles</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Bujna Roślinność</Polish>
+		<Russian>×åðíîçåì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_LUSH_PEDIA</Tag>
+		<English>Luxuriant vegetation and rich soil.</English>
+		<French>Luxuriant vegetation and rich soil.</French>
+		<Italian>Vegetazione lussureggiante e suolo fertile.</Italian>
+		<Spanish>Vegetación exuberante y suelo fértil.</Spanish>
+		<German>Gebiete mit fruchtbarem Boden und üppiger Vegetation sind wahre Naturparadiese.</German>
+		<Russian>Пышная растительность и богатая почва.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARSH</Tag>
+		<English>Marsh</English>
+		<French>
+			<Text>Marais</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Feuchtgebiet</German>
+		<Italian>
+			<Text>Palude</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Marisma:Marismas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Bagna</Polish>
+		<Russian>Áîëîòî</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARSH_PEDIA</Tag>
+		<English>In geography, a marsh, or morass, is a type of wetland that is subject to frequent or continuous flood. Typically the water is shallow and features grasses, rushes, reeds, typhas, sedges, other herbaceous plants, and moss.</English>
+		<German>Ein [COLOR_HIGHLIGHT_TEXT]Feuchtgebiet[COLOR_REVERT] oder Feuchtbiotop ist ein Geländetypus, der im Übergangsbereich von Gewässern zu Landlebensräumen liegt. Zu Feuchtgebieten zählen Lebensräume, die an einen Überschuss von Wasser angepasst sind, wie z.B. Auen, Bruchwald, Feuchtwiesen, Ried, Moore, Sümpfe und Marschland.[NEWLINE]Feuchtgebiete sind von großer ökologischer Bedeutung, da sie als Grundwasserfilter, Wasserspeicher und Überschwemmungsschutz dienen.</German>
+		<Italian>In geografia, una palude è un tipo di zona umida soggetta a frequenti o continue inondazioni. Tipicamente l'acqua è bassa e presenta erbe, giunchi, canne, typha, carici, altre piante erbacee e muschio.</Italian>
+		<Russian>В географии болото, или топи, представляет собой тип водно-болотных угодий, которые подвержены частым или постоянным паводкам. Как правило, вода мелкая и содержит травы, камыш, тростник, тиф, осоки, другие травянистые растения и мох.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARTIAN_BARREN</Tag>
+		<English>Martian Barren</English>
+		<French>
+			<Text>Sol Aride Martien</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Suolo arido marziano</Italian>
+		<Spanish>
+			<Text>Yermo marciano:Yermos marcianos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Marsjański Jałowy Teren</Polish>
+		<Russian>Ìàðñèàíñêàÿ ïóñòîøü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARTIAN_BARREN_PEDIA</Tag>
+		<English>Generally barren landscape of Mars, was the final nail in the coffin of the idea that Mars could be inhabited by higher forms of life.</English>
+		<Russian>Вообще бесплодный ландшафт Марса был последним гвоздем в гробу идеи о том, что Марс может быть заселен высшими формами жизни.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARTIAN_DESERT</Tag>
+		<English>Martian Desert</English>
+		<French>
+			<Text>Désert Martien</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Deserto marziano</Italian>
+		<Spanish>
+			<Text>Desierto marciano:Desiertos marcianos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Marsjańska Pustynia</Polish>
+		<Russian>Ìàðñèàíñêàÿ ïóñòûíÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARTIAN_DESERT_PEDIA</Tag>
+		<English>We saw so far that Mars is less hospitable than the coldest driest deserts on Earth.</English>
+		<Russian>До сих пор мы видели, что Марс менее гостеприимен, чем самые холодные и сухие пустыни на Земле.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARTIAN_DUNES</Tag>
+		<English>Martian Dunes</English>
+		<French>
+			<Text>Dunes Martiennes</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>Dune marziane</Italian>
+		<Spanish>
+			<Text>Dunas marcianas</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Marsjańskie Wydmy</Polish>
+		<Russian>Ìàðñèàíñêèå äþíû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARTIAN_DUNES_PEDIA</Tag>
+		<English>Sand dunes are among the most widespread aeolian features present on Mars, serving as unique indicators of the interaction between the atmosphere and surface.</English>
+		<Russian>Песчаные дюны - одни из самых распространенных эоловых объектов на Марсе, служащие уникальными индикаторами взаимодействия между атмосферой и поверхностью.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARTIAN_ICE</Tag>
+		<English>Martian Ice</English>
+		<French>
+			<Text>Glace Martienne</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Ghiacciaio marziano</Italian>
+		<Spanish>
+			<Text>Hielo marciano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Marsjański Lód</Polish>
+		<Russian>Ìàðñèàíñêèé ëåä</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARTIAN_ICE_PEDIA</Tag>
+		<English>The planet Mars has two permanent polar ice caps. During a pole's winter, it lies in continuous darkness, chilling the surface and causing the deposition of 25-30% of the atmosphere into slabs of CO2 ice (dry ice). When the poles are again exposed to sunlight, the frozen CO2 sublimes, creating enormous winds that sweep off the poles as fast as 400 km/h. These seasonal actions transport large amounts of dust and water vapor, giving rise to Earth-like frost and large cirrus clouds. Clouds of water-ice were photographed by the Opportunity rover in 2004.</English>
+		<Russian>На планете Марс есть две постоянные полярные лиз сухого льда. Зимой полюса попеременно находятся в длительной темноте, охлаждая поверхность и вызывая отложение 25–30% атмосферы в виде пластин льда CO2 (сухой лед). Когда полюса снова подвергаются воздействию солнечного света, замороженный CO2 сублимируется, создавая сильные ветры, которые сносятся с полюсов со скоростью 400 км/ч. Эти сезонные явления переносят большое количество пыли и водяного пара, вызывая земной иней и большие перистые облака. Облака водяного льда были сфотографированы марсоходом Opportunity в 2004 году.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARTIAN_PERMAFROST</Tag>
+		<English>Martian Permafrost</English>
+		<French>
+			<Text>Pergélisol Martien</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Permafrost marziano</Italian>
+		<Spanish>
+			<Text>Permagel marciano:Permageles marcianos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Marsjańska Wieczna Zmarzlina</Polish>
+		<Russian>Ìàðñèàíñêàÿ ìåðçëîòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARTIAN_PERMAFROST_PEDIA</Tag>
+		<English>When NASA's Phoenix spacecraft landed on the Arctic plains of northern Mars on May 25, 2008, among its first looks at the planet's surface revealed a landscape familiar to polar scientists on Earth: a pattern of interlocking polygon shapes that form in permafrost that freezes and thaws seasonally.</English>
+		<Russian>Когда 25 мая 2008 года космический корабль НАСА Phoenix приземлился на арктических равнинах северного Марса, в ходе его первых взглядов на поверхность планеты был обнаружен ландшафт, знакомый полярникам на Земле: узор из взаимосвязанных многоугольников, образующихся в вечной мерзлоте, которая замерзает и тает посезонно.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARTIAN_PLAINS</Tag>
+		<English>Martian Plains</English>
+		<French>
+			<Text>Plaines Martiennes</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<Italian>Pianure marziane</Italian>
+		<Spanish>
+			<Text>Llanura marciana:Llanuras marcianas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Marsjańskie Równiny</Polish>
+		<Russian>Ìàðñèàíñêàÿ ðàâíèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARTIAN_PLAINS_PEDIA</Tag>
+		<English>Planitia, the Latin word for plain, is used in the naming of plains on extraterrestrial objects (planets and moons), such as Hellas Planitia on Mars.</English>
+		<Russian>Planitia, латинское слово, обозначающее равнину, используется для обозначения равнин на внеземных объектах (планетах и лунах), таких как Hellas Planitia на Марсе.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARTIAN_ROCKY</Tag>
+		<English>Martian Rocky</English>
+		<French>
+			<Text>Sol Rocheux Martien</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Suolo roccioso marziano</Italian>
+		<Spanish>
+			<Text>Talud marciano:Taludes marcianos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Marsjańskie Skały</Polish>
+		<Russian>Ìàðñèàíñêèå ñêàëû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MARTIAN_ROCKY_PEDIA</Tag>
+		<English>Mars has the greatest diversity of impact crater types of any planet in the Solar System. This is partly because the presence of both rocky and volatile-rich layers in the subsurface produces a range of morphologies even among craters within the same size classes.</English>
+		<Russian>Марс имеет наибольшее разнообразие типов ударных кратеров среди всех планет Солнечной системы. Отчасти это связано с тем, что наличие в недрах как скалистых, так и богатых летучими веществами слоев приводит к различной морфологии даже среди кратеров одного и того же класса размеров.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MUDDY</Tag>
+		<English>Muddy</English>
+		<French>Sol boueux</French>
+		<German>Schlamm</German>
+		<Italian>Suolo fangoso</Italian>
+		<Spanish>
+			<Text>Fangal:Fangales</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Błotnisty Teren</Polish>
+		<Russian>Ãðÿçü</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_MUDDY_PEDIA</Tag>
+		<English>Mud is a liquid or semi-liquid mixture of water and some combination of soil, silt, and clay. Ancient mud deposits harden over geological time to form sedimentary rock such as shale or mudstone (generally called lutites). When geological deposits of mud are formed in estuaries the resultant layers are termed bay muds. Mud is closely related to slurry and sediment.</English>
+		<Italian>Il fango è una mistura liquida o semi-liquida di acqua e una combinazione di suolo, silt e sabbia. I depositi antichi di fango si induriscono nel tempo per formare roccia sedimentaria, come scisti e fango indurito (generalmente detto lutite). Quando i depositi geologici di fango si formano negli estuari, gli strati risultanti vengono chiamati fanghi marini. Il fango è strettamente legato all'erosione e ai sedimenti.</Italian>
+		<German>Unter [COLOR_HIGHLIGHT_TEXT]Schlamm[COLOR_REVERT] versteht man eine Mischung aus Erde und Wasser, wobei Letzteres nur in einem geringen Anteil enthalten ist. Schlamm entsteht meist durch Ablagerung von Sedimenten.</German>
+		<Russian>Грязь - это жидкая или полужидкая смесь воды и некоторой комбинации почвы, ила и глины. Древние отложения грязи с течением геологического времени затвердевают, образуя осадочные породы, такие как сланцы или аргиллиты (обычно называемые лютитами). Когда геологические отложения ила образуются в устьях рек, образующиеся слои называют заливными илами. Грязь тесно связана с жидким навозом и осадочными породами.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_NONE</Tag>
+		<English>No terrain</English>
+		<French>Pas de terrain</French>
+		<Spanish>
+			<Text>Vacío</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Pustka</Polish>
+		<Russian>Âàêóóì</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_NONE_PEDIA</Tag>
+		<English>This terrain has all map categories. Useful for testing.</English>
+		<French>Vide</French>
+		<Spanish>Vacío</Spanish>
+		<Polish>Pustka</Polish>
+		<Russian>У этого ландшафта есть все категории карт. Полезен для тестирования.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_OCEAN</Tag>
+		<English>Ocean</English>
+		<French>
+			<Text>Océan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Ozean</German>
+		<Italian>
+			<Text>Oceano:Oceani</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Océano:Océanos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Russian>Îêåàí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_OCEAN_PEDIA</Tag>
+		<English>An ocean is a major body of saline water, and a principal component of the hydrosphere. Approximately 71% of the Earth's surface (~3.6 x 10 8 km 2) is covered by ocean, a continuous body of water that is customarily divided into several principal oceans and smaller seas.</English>
+		<German>Die [COLOR_HIGHLIGHT_TEXT]Ozeane[COLOR_REVERT] sind große zusammenhängende Wasserflächen, die zwischen den Kontinenten liegen und einen Großteil (ca. 71%) der Erdoberfläche bedecken. Sie unterscheiden sich untereinander u.a. in Volumen, Salzgehalt, Seegang und Meeresströmungen.</German>
+		<Russian>Океан - это основная масса соленой воды и главный компонент гидросферы. Приблизительно 71% поверхности Земли (~ 3,6x10 8 км^2) покрыто океаном - сплошным водным пространством, которое обычно делится на несколько основных океанов и более мелких морей.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_OCEAN_POLAR</Tag>
+		<English>Polar Ocean</English>
+		<French>
+			<Text>Océan Polaire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Polarozean</German>
+		<Italian>Oceano polare</Italian>
+		<Spanish>
+			<Text>Océano polar:Océanos polares</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Ocean Polarny</Polish>
+		<Russian>Ïîëÿðíûé îêåàí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_OCEAN_TROPICAL</Tag>
+		<English>Tropical Ocean</English>
+		<French>Océan Tropical</French>
+		<German>Tropenozean</German>
+		<Italian>Oceano tropicale</Italian>
+		<Spanish>
+			<Text>Océano tropical:Océanos tropicales</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Ocean Tropikalny</Polish>
+		<Russian>Òðîïè÷åñêèé îêåàí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_ORBIT</Tag>
+		<English>Orbit</English>
+		<French>
+			<Text>Orbite</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Spanish>
+			<Text>Órbita:Órbitas</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Orbita</Polish>
+		<Russian>Îðáèòà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_ORBIT_PEDIA</Tag>
+		<English>A low Earth orbit (LEO) is an orbit around Earth with an altitude between 160 kilometers (99 mi) (orbital period of about 88 minutes), and 2,000 kilometers (1,200 mi) (about 127 minutes). Objects below approximately 160 kilometers (99 mi) will experience very rapid orbital decay and altitude loss. With the exception of the manned lunar flights of the Apollo program, all human spaceflights have taken place in LEO (or were suborbital). The altitude record for a human spaceflight in LEO was Gemini 11 with an apogee of 1,374.1 kilometers (853.8 mi). All manned space stations to date, as well as the majority of satellites, have been in LEO.</English>
+		<French>Une orbite terrestre basse (LEO) est une orbite autour de la Terre dont l'altitude est comprise entre 160 kilomètres (période orbitale d'environ 88 minutes) et 2000 kilomètres (environ 127 minutes). Les objets en dessous d'environ 160 kilomètres subiront une décroissance orbitale très rapide et une perte d'altitude. À l'exception des vols lunaires habités du programme Apollo, tous les vols spatiaux humains ont eu lieu en LEO (ou étaient suborbitaux). Le record d'altitude pour un vol spatial humain à LEO était Gemini 11 avec une apogée de 1 374,1 kilomètres. À ce jour, toutes les stations spatiales habitées, ainsi que la majorité des satellites, se trouvent à LEO.</French>
+		<Russian>Низкая околоземная орбита (НОО) - это орбита вокруг Земли с высотой от 160 километров (99 миль) (период обращения около 88 минут) до 2000 километров (1200 миль) (около 127 минут). Объекты ниже 160 километров (99 миль) испытают очень быстрое затухание орбиты и потерю высоты. За исключением пилотируемых полетов к Луне в рамках программы «Аполлон», все полеты человека в космос проводились на НОО (или были суборбитальными). Рекордом высоты для космического полета человека на НОО стал Gemini 11 с апогеем 1374,1 км (853,8 миль). На сегодняшний день все пилотируемые космические станции, а также большинство спутников находятся на НОО.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_PEAK</Tag>
+		<English>Peak</English>
+		<French>
+			<Text>Pic</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Gebirge</German>
+		<Italian>
+			<Text>Montagna:Montagne</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pico:Picos</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Szczyt</Polish>
+		<Russian>Ãîðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_PEAK_PEDIA</Tag>
+		<English>Peak may refer to:A mountain peak, In topography, a summit is a point on a surface that is higher in elevation than all points immediately adjacent to it. Mathematically, a summit is a local maximum in elevation. The topographic terms "acme", "apex", "peak", and "zenith" are synonyms.</English>
+		<French>Le pic peut se référer à: Un sommet de montagne, En topographie, un sommet est un point sur une surface qui est plus élevé en élévation que tous les points immédiatement adjacents. Mathématiquement, un sommet est un maximum local en élévation. Les termes topographiques "acme", "apex", "peak" et "zenith" sont synonymes.</French>
+		<German>Berge sind Erhebungen in der Landschaft, die höher und steiler als Hügel sind und in der Regel über einen oder mehrere Gipfel verfügen. Sie entstehen größtenteils durch Plattentektonik und Vulkanismus. Viele zusammengehörige Berge bilden ein [COLOR_HIGHLIGHT_TEXT]Gebirge[COLOR_REVERT] oder einen Gebirgszug. Hierbei unterscheidet man zwischen Mittelgebirgen und Hochgebirgen.</German>
+		<Russian>Пик может относиться к: горной вершине. В топографии вершина - это точка на поверхности, высота которой выше, чем все точки, непосредственно прилегающие к ней. Математически вершина - это локальный максимум высоты. Топографические термины «высшая точка», «вершина», «пик» и «зенит» являются синонимами.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_PERMAFROST</Tag>
+		<English>Permafrost</English>
+		<French>Pergélisol</French>
+		<Spanish>
+			<Text>Permagel:Permageles</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Wieczna Zmarzlina</Polish>
+		<Russian>Вечная мерзлота</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_PERMAFROST_PEDIA</Tag>
+		<English>In geology, permafrost, cryotic soil or permafrost soil is soil at or below the freezing point of water for two or more years. Ice is not always present, as may be in the case of nonporous bedrock, but it frequently occurs and it may be in amounts exceeding the potential hydraulic saturation of the ground material. Most permafrost is located in high latitudes (i.e. land close to the North and South poles), but alpine permafrost may exist at high altitudes in much lower latitudes. Permafrost accounts for 0.022% of total water and exists in 24% of exposed land in the Northern Hemisphere.</English>
+		<French>En géologie, le pergélisol désigne un sous-sol gelé en permanence, au moins pendant deux ans.</French>
+		<German>Als [COLOR_HIGHLIGHT_TEXT]Permafrost[COLOR_REVERT] wird Dauerfrostboden bezeichnet, der mindestens zwei Jahre ununterbrochen gefroren ist. Die größten Permafrostgebiete der Erde befinden sich in den Polargebieten, im Hochgebirge und in großen Teilen der borealen Nadelwälder. Geografisch gesehen handelt es sich um große Teile Nordkanadas, Alaskas, Grönlands und Ostsibiriens sowie der Antarktis. Aktuell liegen etwa 20 bis 25 % der Landflächen der Erde innerhalb der Permafrostzone. Durch die globale Erwärmung verschiebt sich die Permafrostgrenze immer weiter in Richtung der Pole. Kritisch an diesem Rückgang der Permafrostböden ist besonders, dass in ihnen Unmengen an Kohlenstoff gespeichert sind, die beim Auftauen freigesetzt werden und die globale Erwärmung weiter beschleunigen.</German>
+		<Italian>In geologia, il permafrost è suolo alla temperature di congelamento dell'acqua (o inferiore) per due o più anni. Non sempre è presente del ghiaccio, ad esempio nella roccia non porosa, ma è spesso presente e potrebbe essere in ammassi che eccedono il potenziale di saturazione idraulica del suolo. La maggior parte del permafrost è situato ad alte latitudini (terreni vicini al polo nord e al polo sud), ma può esistere un permafrost alpino ad alte altitudini a latitudini più basse. Il permafrost costituisce lo 0.022% di tutta l'acqua e esiste nel 24% delle terre emerse nell'emisfero nord.</Italian>
+		<Polish>En gźologie, le pergźlisol dźsigne un sous-sol gelź en permanence, au moins pendant deux ans.</Polish>
+		<Russian>В геологии вечная мерзлота, криотическая почва или вечная мерзлота - это почва с температурой замерзания воды или ниже нее в течение двух или более лет. Лед не всегда присутствует, как это может быть в случае непористой коренной породы, но он часто встречается и может быть в количествах, превышающих потенциальное гидравлическое насыщение грунтового материала. Большая часть вечной мерзлоты находится в высоких широтах (то есть на суше вблизи северного и южного полюсов), но вечная мерзлота в Альпах может существовать на больших высотах в гораздо более низких широтах. Вечная мерзлота составляет 0,022% от общего объема воды и существует на 24% открытых земель в северном полушарии.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_PLAGUED_WATER</Tag>
+		<English>Plagued Water</English>
+		<French>Eau contaminée</French>
+		<German>Verseuchtes Wasser</German>
+		<Italian>Acqua contaminata</Italian>
+		<Spanish>Agua contaminada</Spanish>
+		<Polish>Zarażona Woda</Polish>
+		<Russian>×óìíàÿ âîäà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_PLAGUED_WATER_PEDIA</Tag>
+		<English>This water plot has been infected by a top-of-the-line biological 'nuke'.</English>
+		<French>Cette eau a été contaminée par une bombe biologique de pointe.</French>
+		<German>Dieses Wasserfeld wurde durch einen starken biologischen Kampfstoff verseucht.</German>
+		<Italian>Questa casella acquatica è stata contaminata da una potentissima bomba biologica.</Italian>
+		<Spanish>Esta casilla acuática ha sido infectada por una potente arma biológica.</Spanish>
+		<Polish>To pole wody zostało zanieczyszczone przez biologiczną wersje rakiety</Polish>
+		<Russian>Этот участок воды был заражен первоклассным «биооружием Судного дня».</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_PLAINS</Tag>
+		<English>Plains</English>
+		<French>
+			<Text>Plaines</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Ebene</German>
+		<Italian>
+			<Text>Pianura:Pianure</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Llanura:Llanuras</Text>
+			<Gender>Female</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Równina</Polish>
+		<Russian>Ðàâíèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_PLAINS_PEDIA</Tag>
+		<English>Plains is the plural of plain, a geographical feature. It is a big flat area of a land.</English>
+		<French>Plaines est le pluriel de plaine, une caractéristique géographique. C'est un grand terrain plat.</French>
+		<German>Eine [COLOR_HIGHLIGHT_TEXT]Ebene[COLOR_REVERT] ist eine weitgehend flache Landschaft ohne größere Erhebungen (Hügel, Berge). Sie kann aber durchaus sichtbare Höhenunterschiede aufweisen.</German>
+		<Russian>Равнины - это множественное число равнин, географическая особенность. Это большой ровный участок земли.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_ROCKY</Tag>
+		<English>Rocky</English>
+		<French>Sol Rocheux</French>
+		<German>Gestein</German>
+		<Italian>Suolo roccioso</Italian>
+		<Spanish>
+			<Text>Talud:Taludes</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Skalisty Teren</Polish>
+		<Russian>Ñêàëû</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_ROCKY_PEDIA</Tag>
+		<English>Scree, also called talus, is a term given to an accumulation of broken rock fragments at the base of crags, mountain cliffs, or valley shoulders. Landforms associated with these materials are sometimes called scree slopes or talus piles. These deposits typically have a concave upwards form, while the maximum inclination of such deposits corresponds to the angle of repose of the mean debris size.</English>
+		<German>Als [COLOR_HIGHLIGHT_TEXT]Gestein[COLOR_REVERT] bezeichnet man die feste Verbindung einer Vielzahl verschiedener Mineralien. Je nach Zusammensetzung entstehen dabei unterschiedliche Gesteinsarten wie Granit, Sandstein oder Quarz. Gesteine sind das Baumaterial, aus dem Erdmantel und -kruste bestehen. In Gebieten, in denen das nackte Felsgestein nicht von einer Schicht Humus bedeckt ist, wachsen meist nur wenige robuste Pflanzen. Besonders karg sind [COLOR_HIGHLIGHT_TEXT]Steinwüsten[COLOR_REVERT] in trockenen Klimaten oder gar sogenannte Badlands, die vollkommen vegetationslos sind. In kalten Regionen existieren analog vegetationsarme, vereiste [COLOR_HIGHLIGHT_TEXT]Gletscher[COLOR_REVERT].</German>
+		<Italian>Ghiaione è il termine dato ad un accumulo di frammenti di rocce alla base di falesie, pendici delle montagne o argini delle valli. Le formazioni naturali con questi materiali sono spesso definiti ammassi sedimentari. Questi depositi hanno solitamente una forma concava verso l'alto, mentre l'inclinazione massima di questi depositi dipende dalla dimensione dei sedimenti.</Italian>
+		<Russian>Осыпь - это термин, обозначающий скопление обломков породы в основании скал, горных скал или плеч долины. Ландшафты, связанные с этими материалами, иногда называют осыпями или осыпями. Эти отложения обычно имеют вогнутую вверх форму, в то время как максимальный наклон таких отложений соответствует углу естественного откоса среднего размера мусора.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SALT_FLATS</Tag>
+		<English>Salt Flats</English>
+		<French>
+			<Text>Étendues de Sel</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Salzwüste</German>
+		<Italian>Distese salate</Italian>
+		<Spanish>
+			<Text>Salar:Salares</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Solnisko</Polish>
+		<Russian>Ñîëÿíàÿ ïóñòûíÿ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SALT_FLATS_PEDIA</Tag>
+		<English>Dry lakes are ephemeral lakebeds, or a remnant of an endorheic lake. Such flats consist of fine-grained sediments infused with alkali salts. Dry lakes are also referred to as alkali flats, sabkhas, playas or mud flats. If the surface is primarily salt then they are called salt pans, pans, hardpan or salt flats (remnants of salt lakes).</English>
+		<German>Salztonebenen oder auch [COLOR_HIGHLIGHT_TEXT]Salzwüsten[COLOR_REVERT] nennt man die Ablagerungsgebiete ausgetrockneter Salzseen, also Salzwasser führender Binnengewässer. Salzseen befinden sich meistens in Trockengebieten oder Wüsten, wo die andauernde Verdunstung den Salzgehalt ständig erhöht. Wenn mehr Wasser verdunstet als zufließt, bleibt nur eine Salzwüste zurück.</German>
+		<Italian>I laghi asciutti sono antichi letti di laghi, o il resto di un lago endorico. Tali distese consistono di sedimenti a grana fine, mischiati con sali alcalini. I laghi di sale sono spesso chiamati distese alcaline e playas. Se le distese sono composte principalmente da sale essi vengono detti distese saline (resti di laghi salati).</Italian>
+		<Russian>Сухие озера - это эфемерные ложа озер или остатки бессточного озера. Такие участки состоят из мелкозернистых отложений, насыщенных солями щелочных металлов. Сухие озера также называют щелочными отмелями, сабхами, плайями или грязевыми отмелями. Если поверхность в основном состоит из соли, то их называют солончаками, старицами, такырами или солоняными пустынями (остатками соленых озер).</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SCRUB</Tag>
+		<English>Scrub</English>
+		<French>
+			<Text>Brousse</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>Strauchsavanne</German>
+		<Italian>Macchia</Italian>
+		<Spanish>
+			<Text>Matorral:Matorrales</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+		<Polish>Zarośla</Polish>
+		<Russian>Êóñòàðíèê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SCRUB_PEDIA</Tag>
+		<English>Shrubland, scrubland, scrub or brush is a plant community characterized by vegetation dominated by shrubs, often also including grasses, herbs, and geophytes. Shrubland may either occur naturally or be the result of human activity. It may be the mature vegetation type in a particular region and remain stable over time, or a transitional community that occurs temporarily as the result of a disturbance, such as fire. A stable state may be maintained by regular natural disturbance such as fire or browsing. Shrubland may be unsuitable for human habitation because of the danger of fire.</English>
+		<German>In tropischen [COLOR_HIGHLIGHT_TEXT]Strauchsavannen[COLOR_REVERT] wachsen hauptsächlich die namensgebenden Sträucher, aber auch hohe Gräser und kleine Bäume von maximal 10 bis 15 m Höhe. Aufgrund ihres engen, trockenen Bewuchses stellen Buschfeuer ein großes Problem für diese Vegetationszone dar.</German>
+		<Italian>La macchia è una comunità vegetale caratterizzata da vegetazione dominata da cespugli, che spesso includono anche erba, arbusti e geofite. La macchia può crescere naturalmente, oppure come risultato delle attività umane. Può essere una vegetazione matura di una regione particolare che rimane stabile nel tempo, oppure una comunità transitoria che si crea temporaneamente come risultato di un disturbo, come il fuoco. Uno stato stabile può essere mantenuto da disturbi regolari, come fuoco e passaggio di animali. La macchia potrebbe risultare inutile per l'insediamento umano a causa del pericolo di fuoco.</Italian>
+		<Russian>Кустарник или буш - это сообщество растений, характеризующееся растительностью, в которой преобладают кустарники, часто также включающие травы, травы и геофиты. Кустарник может произрастать как в природе, так и в результате деятельности человека. Это может быть зрелый тип растительности в конкретном регионе, который остается стабильным с течением времени, или переходное сообщество, которое временно возникает в результате нарушения, такого как пожар. Стабильное состояние может поддерживаться регулярными естественными нарушениями, такими как огонь или просмотр. Кустарник может оказаться непригодным для проживания человека из-за опасности возгорания.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SEA</Tag>
+		<English>Sea</English>
+		<French>Mer</French>
+		<German>Meer</German>
+		<Russian>Ìîðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SEA_DEEP</Tag>
+		<English>Deep Sea</English>
+		<French>Mer profonde</French>
+		<German>Tiefsee</German>
+		<Russian>Ãëóáîêîå ìîðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SEA_DEEP_PEDIA</Tag>
+		<English>Two tiles off shore and deep.</English>
+		<French>Deux cases au large et en profondeur.</French>
+		<German>Mit Tiefsee werden die Meeresanteile bezeichnet, die unterhalb einer Tiefe von 200 m liegen. Naturgemäß sind sie nahezu völlig lichtlos, aber keinesfalls ohne Leben. Zwar schließt die Abwesenheit von Licht Pflanzen aus, aber es existiert in der Tiefe trotzdem eine reichhaltige Tierwelt.</German>
+		<Russian>Находится обычно в двух клетках от береговой линии.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SEA_DEEP_POLAR</Tag>
+		<English>Polar Deep Sea</English>
+		<French>Mer polaire profonde</French>
+		<German>Polartiefsee</German>
+		<Russian>Ãëóá. ïîë. ìîðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SEA_DEEP_TROPICAL</Tag>
+		<English>Tropical Deep Sea</English>
+		<French>Mer Tropicale profonde</French>
+		<German>Tropentiefsee</German>
+		<Russian>Ãëóá. òðîï. ìîðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SEA_PEDIA</Tag>
+		<English>Two tiles off shore.</English>
+		<French>Deux cases au large.</French>
+		<German>Das [COLOR_HIGHLIGHT_TEXT]Meer[COLOR_REVERT] oder die See ist eine große zusammenhängende Wassermasse. Man unterscheidet grob zwischen Randmeeren, die den 5 Ozeanen zugeordnet sind, und Binnenmeeren, die von Land umschlossen und nur durch Meerengen miteinander verbunden sind.</German>
+		<Russian>Находится обычно в двух клетках от береговой линии.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SEA_POLAR</Tag>
+		<English>Polar Sea</English>
+		<French>Mer polaire</French>
+		<German>Polarmeer</German>
+		<Russian>Ïîëÿðíîå ìîðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_SEA_TROPICAL</Tag>
+		<English>Tropical Sea</English>
+		<French>Mer tropicale</French>
+		<German>Tropenmeer</German>
+		<Russian>Òðîïè÷åñêîå ìîðå</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TAIGA</Tag>
+		<English>Taiga</English>
+		<French>Taïga</French>
+		<Russian>Òàéãà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TAIGA_PEDIA</Tag>
+		<English>Taiga is a subarctic biome adjacent to the treeless tundra biome, it is characterized by coniferous forests consisting mostly of pines, spruces and larches. The taiga is the world's largest terrestrial biome. This terrain represent the typical soil types found in the taiga biome, those that are fertile and not too wet.</English>
+		<German>Boreale (nördliche Nadelwälder) werden auch verallgemeinernd als [COLOR_HIGHLIGHT_TEXT]Taiga[COLOR_REVERT] bezeichnet. Die Taiga ist charakterisiert durch relativ gleichförmige Nadelwaldgebiete, die nur von baumlosen Moorgebieten und Flussauen unterbrochen werden. Sie existiert nur auf der Nordhalbkugel, da auf der Südhalbkugel die entsprechenden zusammenhängenden großen Landmassen fehlen.</German>
+		<Russian>Тайга - это субарктический биом, прилегающий к биому безлесной тундры, для нее характерны хвойные леса, состоящие в основном из сосен, елей и лиственниц. Тайга - крупнейший в мире биом суши.[NEWLINE][TAB]Эта местность представляет собой характерные типы почв, встречающихся в таежном биоме, являющихся плодородными и не слишком влажными.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TRENCH</Tag>
+		<English>Oceanic Trench</English>
+		<French>Faille océanique</French>
+		<German>Tiefseegraben</German>
+		<Russian>Îêåàíñêàÿ âïàäèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TRENCH_PEDIA</Tag>
+		<English>The oceanic trenches are hemispheric-scale long but narrow topographic depressions of the sea floor. They are also the deepest parts of the ocean floor. Oceanic trenches are a distinctive morphological feature of convergent plate boundaries, along which lithospheric plates move towards each other at rates that vary from a few mm to over ten cm per year. A trench marks the position at which the flexed, subducting slab begins to descend beneath another lithospheric slab. Trenches are generally parallel to a volcanic island arc, and about 200 km (120 mi) from a volcanic arc. Oceanic trenches typically extend 3 to 4 km (1.9 to 2.5 mi) below the level of the surrounding oceanic floor. The greatest ocean depth to be sounded is in the Challenger Deep of the Mariana Trench, at a depth of 11,034 m (36,201 ft) below sea level. Oceanic lithosphere moves into trenches at a global rate of about 3 km2/yr.</English>
+		<German>Bei [COLOR_HIGHLIGHT_TEXT]Tiefseegräben[COLOR_REVERT] handelt es sich um Rinnen im Meeresboden, die durch Plattentektonik entstehen. In diesen Rinnen befinden sich die am tiefsten gelegenen Punkte der Erdoberfläche, die noch bis zu 3000 bis 4000 m unter dem Niveau des Ozeanbodens liegen können.</German>
+		<Russian>Океанические желоба представляют собой длинные, но узкие топографические впадины морского дна размером с полушарие. Они также являются самыми глубокими частями дна океана. Океанические желоба являются отличительной морфологической особенностью сходящихся границ плит, вдоль которых литосферные плиты движутся навстречу друг другу со скоростью от нескольких миллиметров до более десяти см в год. Разлом отмечает положение, в котором изогнутая, погружающаяся плита начинает опускаться под другую литосферную плиту. Желоба обычно параллельны вулканической островной дуге и примерно в 200 км (120 миль) от вулканической дуги. Океанические желоба обычно простираются на 3–4 км (от 1,9 до 2,5 миль) ниже уровня окружающего океанического дна. Наибольшая глубина океана, которая была когда-либо измерена, находится в впадине Челленджера вннутри Марианской впадины, на глубине 11 034 м (36 201 фут) ниже уровня моря. Океаническая литосфера перемещается в траншеи со скоростью около 3 км/год.</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TRENCH_POLAR</Tag>
+		<English>Polar Trench</English>
+		<French>Fosse Polaire</French>
+		<German>Polargraben</German>
+		<Russian>Ïîëÿðíàÿ âïàäèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TRENCH_TROPICAL</Tag>
+		<English>Tropical Trench</English>
+		<French>Fosse Tropicale</French>
+		<German>Tropengraben</German>
+		<Russian>Òðîïè÷åñêàÿ âïàäèíà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TUNDRA</Tag>
+		<English>Tundra</English>
+		<French>Toundra</French>
+		<Russian>Òóíäðà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TERRAIN_TUNDRA_PEDIA</Tag>
+		<English>In physical geography, tundra is a type of biome where the tree growth is hindered by low temperatures and short growing seasons. The term tundra comes through Russian (tûndra) from the Kildin Sami word tundâr "uplands", "treeless mountain tract". There are three types of tundra: arctic tundra, alpine tundra, and Antarctic tundra. In tundra, the vegetation is composed of dwarf shrubs, sedges and grasses, mosses, and lichens. Scattered trees grow in some tundra regions. The word "tundra" usually refers only to the areas where the subsoil is permafrost, or permanently frozen soil. Permafrost tundra includes vast areas of northern Russia and Canada. The polar tundra is home to several peoples who are mostly nomadic reindeer herders, such as the Nganasan and Nenets in the permafrost area (and the Sami in Sápmi).</English>
+		<French>En géographie physique, la toundra est un type de biome où la croissance des arbres est entravée par les basses températures et les courtes saisons de croissance. Le terme toundra vient du russe (tûndra) du mot Kildin Sami tundâr "uplands", "montagne sans arbres". Il existe trois types de toundra: la toundra arctique, la toundra alpine et la toundra antarctique. Dans la toundra, la végétation est composée d'arbustes nains, de carex et de graminées, de mousses et de lichens. Des arbres épars poussent dans certaines régions de la toundra. Le mot «toundra» se réfère généralement uniquement aux zones où le sous-sol est du pergélisol ou du sol gelé en permanence. La toundra du pergélisol comprend de vastes régions du nord de la Russie et du Canada. La toundra polaire abrite plusieurs peuples qui sont principalement des éleveurs de rennes nomades, tels que les Nganasan et les Nenets dans la zone de pergélisol (et les Samis à Sápmi).</French>
+		<German>Als [COLOR_HIGHLIGHT_TEXT]Tundra[COLOR_REVERT] wird eine Kältesteppe zumeist auf Permafrostböden bezeichnet. Es handelt sich um offene, baumfreie Landschaften, in denen hauptsächlich Flechten, Moose, Gräser und sommergrünen Zwergsträucher gedeihen. Tundren entstehen nicht nur in den Polregionen, auch im Hochgebirge ist dieser Vegetationstyp zu finden.</German>
+		<Russian>В физической географии тундра - это тип биома, где росту деревьев препятствуют низкие температуры и короткие вегетационные периоды. Термин тундра происходит от русского языка (тундра) от кильдинского саамского слова tundar «нагорье», «безлесный горный тракт». Существует три типа тундры: арктическая тундра, альпийская тундра и антарктическая тундра. В тундре растительность состоит из карликовых кустарников, осок и трав, мхов и лишайников. Отдельные деревья растут в некоторых районах тундры. Слово «тундра» обычно относится только к тем участкам, где недра вечной мерзлоты или постоянно мерзлая почва. Тундра вечной мерзлоты охватывает обширные территории севера России и Канады. Полярная тундра является домом для нескольких народов, в основном кочевых оленеводов, таких как нганасан и ненцы в зоне вечной мерзлоты.</Russian>
+	</TEXT>
+</Civ4GameText>

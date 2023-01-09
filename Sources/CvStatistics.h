@@ -28,14 +28,14 @@ public:
 	// for serialization
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);
-		
+
 private:
 	CvGameRecord();								// no one can create one of these except CvStatistics
 	~CvGameRecord();					// no one can destroy one of these except CvStatistics
-				
+
 	EraTypes m_eEra;
 
-	CvString m_szMapName;							
+	CvString m_szMapName;
 };
 
 
@@ -101,7 +101,7 @@ public:
 	// for serialization
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);
-		
+
 private:
 	CvPlayerRecord();								// no one can create one of these except CvStatistics
 	virtual ~CvPlayerRecord();						// no one can destroy one of these except CvStatistics
@@ -149,7 +149,7 @@ public:
 	void unitBuilt( CvUnit *pUnit );
 	void unitKilled( CvUnit *pUnit, PlayerTypes eAttacker );
 	void cityBuilt( CvCity * pCity );
-	void cityRazed( CvCity * pCity, PlayerTypes ePlayer );
+	void cityRazed(PlayerTypes ePlayer);
 	void buildingBuilt( CvCity *pCity, BuildingTypes eBuilding );
 	void religionFounded( ReligionTypes eReligion, PlayerTypes eFounder );
 	void goldenAge( PlayerTypes ePlayer );

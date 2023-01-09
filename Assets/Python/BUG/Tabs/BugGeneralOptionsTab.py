@@ -14,7 +14,7 @@ class BugGeneralOptionsTab(BugOptionsTab.BugOptionsTab):
 		BugOptionsTab.BugOptionsTab.__init__(self, "General", "General")
 
 	def create(self, screen):
-		tab = self.createTab(screen)
+		self.createTab(screen)
 		panel = self.createMainPanel(screen)
 		column = self.addOneColumnLayout(screen, panel)
 
@@ -28,6 +28,11 @@ class BugGeneralOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, left, "MiscHover__LeaderheadHiddenAttitude")
 		self.addCheckbox(screen, left, "MiscHover__LeaderheadWorstEnemy")
 		self.addCheckbox(screen, left, "MiscHover__LeaderheadDefensivePacts")
+		self.addSpacer(screen, left, "General2")
+
+		self.addLabel(screen, left, "TechWindow", "Tech Splash Screen:")
+		self.addCheckbox(screen, left, "TechWindow__ViewType")
+		self.addCheckbox(screen, left, "TechWindow__CivilopediaText")
 
 		self.addLabel(screen, center, "AutoSave", "AutoSave:")
 		self.addCheckbox(screen, center, "AutoSave__UsePlayerName")
@@ -36,22 +41,23 @@ class BugGeneralOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, center, "AutoSave__CreateExitSave")
 		self.addCheckbox(screen, center, "AutoSave__CreateLateSave")
 		self.addTextEdit(screen, center, center, "AutoSave__Interval", True)
-		self.addSpacer(screen, center, "General2")
+		self.addSpacer(screen, center, "General3")
 
 		self.addLabel(screen, center, "Actions", "Actions:")
 		self.addCheckbox(screen, center, "Actions__AskDeclareWarUnits")
 		self.addCheckbox(screen, center, "Actions__PreChopForests")
 		self.addCheckbox(screen, center, "Actions__PreChopImprovements")
 
-		self.addLabel(screen, right, "TechWindow", "Tech Splash Screen:")
-		self.addCheckbox(screen, right, "TechWindow__ViewType")
-		self.addCheckbox(screen, right, "TechWindow__CivilopediaText")
-		self.addSpacer(screen, right, "General3")
-
-		self.addLabel(screen, right, "Misc", "Misc:")
+		self.addLabel(screen, right, "Units", "Units:")
 		self.addTextDropdown(screen, right, right, "MainInterface__UnitIconSize", True)
 		self.addCheckbox(screen, right, "MainInterface__UseAIPathing")
+		self.addTextDropdown(screen, right, right, "MainInterface__CycleDelayMin", True)
+		self.addTextDropdown(screen, right, right, "MainInterface__CycleDelayMove", True)
+		self.addSpacer(screen, right, "General4")
+
+		self.addLabel(screen, right, "Misc", "Misc:")
 		self.addCheckbox(screen, right, "MainInterface__AutoEndDecisionlessTurns")
+		self.addIntDropdown(screen, right, right, "MainInterface__AutoEndTurnDelay", True)
 		self.addCheckbox(screen, right, "MainInterface__MinimizeAITurnSlices")
 		self.addCheckbox(screen, right, "MainInterface__InverseShiftForQueueing")
 

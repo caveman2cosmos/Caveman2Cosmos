@@ -26,7 +26,6 @@ class BarbarianCiv:
 		self.customEM = customEM
 		self.BARBARIAN_PLAYER = GC.getBARBARIAN_PLAYER()
 		self.MAX_PC_PLAYERS = GC.getMAX_PC_PLAYERS()
-		self.NUM_UNIT_AND_TECH_PREREQS = GC.getDefineINT("NUM_UNIT_AND_TECH_PREREQS")
 
 		self.customEM.addEventHandler("BeginGameTurn", self.onBeginGameTurn)
 
@@ -64,7 +63,7 @@ class BarbarianCiv:
 		# Increase odds per barb city within reason.
 		fMod *= iNumCities ** .5
 		# Gamespeed factor
-		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
+		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
 		iRange = 16*iFactorGS
 		iEra = GAME.getCurrentEra()
 
@@ -144,6 +143,7 @@ class BarbarianCiv:
 			iPlayer, CyPlayer = aList
 			iCivType = CyPlayer.getCivilizationType()
 			if not bNewWorld:
+				CyTeam = GC.getTeam(CyPlayer.getTeam())
 				for iTech in xrange(iNumTechs):
 					if CyTeam.isHasTech(iTech):
 						techsOwned.append(iTech)
@@ -197,11 +197,8 @@ class BarbarianCiv:
 		bLeadAnyCiv = GAME.isOption(GameOptionTypes.GAMEOPTION_LEAD_ANY_CIV)
 		leaders = []
 		for iLeader in xrange(GC.getNumLeaderHeadInfos()):
-			if iLeader in aList: continue
-			if bLeadAnyCiv:
-				if not GC.getLeaderHeadInfo(iLeader).isNPC(): continue
-			elif not GC.getCivilizationInfo(iCivType).isLeaders(iLeader): continue
-			leaders.append(iLeader)
+			if iLeader not in aList and not GC.getLeaderHeadInfo(iLeader).isNPC() and (bLeadAnyCiv or GC.getCivilizationInfo(iCivType).isLeaders(iLeader)):
+				leaders.append(iLeader)
 
 		if not leaders:
 			print "[ERROR] Unexpected lack of possible leaders." + POST_FIX
@@ -236,7 +233,7 @@ class BarbarianCiv:
 			CyCity.setOriginalOwner(iPlayer)
 		CyPlot.setOwner(iPlayer)
 
-		# Note: city acquisition may invalidate previous city pointer, so have to create new list of cities
+		# Note: city owner change (CyPlot.setOwner(iPlayer)) invalidate previous city pointer.
 		CyCity = CyPlayer.getCapitalCity()
 
 		iTemp = iFactorGS
@@ -250,16 +247,17 @@ class BarbarianCiv:
 			iMinEra = iEra - self.RevOpt.getNewWorldErasBehind()
 			if iMinEra > -1:
 				for iTech in xrange(iNumTechs):
-					if CyPlayer.canEverResearch(iTech) and GC.getTechInfo(iTech).getEra() <= iMinEra:
+					if CyPlayer.canResearch(iTech, False) and GC.getTechInfo(iTech).getEra() <= iMinEra:
 						CyTeam.setHasTech(iTech, True, iPlayer, False, False)
 		else:
 			iNumTeams = GAME.countCivTeamsAlive()
 			iTechFrac = self.RevOpt.getBarbTechPercent()
+			if iTechFrac < 1: iTechFrac = 1
 			for iTech in xrange(iNumTechs):
 				if iTech in techsOwned:
 					CyTeam.setHasTech(iTech, True, iPlayer, False, False)
 					continue
-				if not CyPlayer.canEverResearch(iTech):
+				if not CyPlayer.canResearch(iTech, False):
 					continue
 				iKnownRatio = 100 * GAME.countKnownTechNumTeams(iTech) / iNumTeams
 				if iKnownRatio < 100 and closeTeams:
@@ -338,6 +336,7 @@ class BarbarianCiv:
 			iTeamX = CyPlayerX.getTeam()
 			if GAME.isDebugMode() or iTeamX in closeTeams or CyCity.plot().isRevealed(iTeamX, False):
 				CyInterface().addMessage(iPlayerX, False, MSG_TIME, szTxt, None, InterfaceMessageTypes.MESSAGE_TYPE_MAJOR_EVENT, None, GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), -1, -1, False, False)
+
 
 
 	def getScenario(self, CyArea):
@@ -467,9 +466,8 @@ class BarbarianCiv:
 			iTech = CvUnitInfo.getPrereqAndTech()
 			if iTech > -1 and not CyTeam.isHasTech(iTech):
 				continue
-			for i in range(self.NUM_UNIT_AND_TECH_PREREQS):
-				iTech = CvUnitInfo.getPrereqAndTechs(i)
-				if iTech > -1 and not CyTeam.isHasTech(iTech):
+			for iTech in CvUnitInfo.getPrereqAndTechs():
+				if not CyTeam.isHasTech(iTech):
 					break
 			else:
 				aList.append(iUnit); break
@@ -530,29 +528,37 @@ class BarbarianCiv:
 				aList.append([iRadius, MAP.plot(iX, iY)])
 		# Convert nearby barbarian
 		iPlayerBarb = self.BARBARIAN_PLAYER
-		# City Culture
-		iCult = CyCity.getCultureTimes100(iPlayerBarb)
-		CyCity.setCultureTimes100(iPlayerBarb, 0, False)
-		CyCity.setCultureTimes100(iPlayer, iCult, False)
+
 		for iRadius, CyPlotX in aList:
 			# Plot Culture
 			iCult = CyPlotX.getCulture(iPlayerBarb)
 			if iCult > 0:
+
 				if iRadius:
-					iCult *= 2/(2+iRadius*iRadius)
+					iCult = iCult * 4/(4+iRadius*iRadius)
+
 				CyPlotX.changeCulture(iPlayerBarb, -iCult, False)
-				CyPlotX.setCulture(iPlayer, iCult, True)
+				CyPlotX.changeCulture(iPlayer, iCult, True)
+
 			# Units
 			for CyUnit in CyPlotX.units():
-				if CyUnit.getOwner() == iPlayerBarb:
-					if iRadius and GAME.getSorenRandNum(iRadius + 1, 'Convert Barbarian'): continue
+				if (
+					CyUnit.getOwner() == iPlayerBarb
+				and (CyPlotX.getOwner() == iPlayer or not GAME.getSorenRandNum(iRadius + 1, 'Convert Barbarian'))
+				):
 					iUnit = CyUnit.getUnitType()
 					CyUnit.kill(False, -1)
-					CyPlayer.initUnit(iUnit, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
+					CyPlayer.initUnit(iUnit, CyPlotX.getX(), CyPlotX.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
+
+		# City Culture
+		CyCity.setCultureTimes100(iPlayer, CyCity.getCultureTimes100(iPlayerBarb), True)
+		CyCity.setCultureTimes100(iPlayerBarb, 0, False)
+
 		# Free city defenders
 		if iDefender > -1:
 			for i in range(iDefenders):
 				CyPlayer.initUnit(iDefender, X, Y, UnitAITypes.UNITAI_CITY_DEFENSE, DirectionTypes.NO_DIRECTION)
+
 
 
 	def checkMinorCivs(self, iPlayer, CyPlayer, MAX_PC_PLAYERS):
@@ -603,7 +609,7 @@ class BarbarianCiv:
 		odds += 4*CyPlayer.getWondersScore() # 20 points per wonder, see getWonderScore in CvGameCoreUtils.cpp.
 		if odds < 512: return
 
-		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
+		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getSpeedPercent()
 		if not GAME.getSorenRandNum(40*iFactorGS + odds, 'minor2major') < odds: return
 
 		iX = CyCity1.getX(); iY = CyCity1.getY()
@@ -638,8 +644,8 @@ class BarbarianCiv:
 			iNumBarbDefenders = GC.getHandicapInfo(GAME.getHandicapType()).getBarbarianInitialDefenders()
 			fMilitaryMod = self.RevOpt.getMilitaryStrength()
 
-			# Pickup nearby barb cities
-			iMaxDistance = (5 + 3*bNewWorld) * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers()
+			# Pickup nearby barb cities, search a 4x area if in new world.
+			iMaxDistance = (iHighestEra + 10) * (1 + 3*bNewWorld) * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers() / 8
 			CyPlayerBarb = GC.getPlayer(iPlayerBarb)
 			aList = ()
 			for cityX in CyPlayerBarb.cities():

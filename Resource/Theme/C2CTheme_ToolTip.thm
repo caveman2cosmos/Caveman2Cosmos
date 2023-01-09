@@ -1,4 +1,4 @@
-/********************************************************************** 
+/**********************************************************************
 
 Filename	:	Civ4Theme_ToolTip.thm
 Content		:	Civ4 - GToolTip control theme
@@ -58,7 +58,7 @@ with GFC_Control_ToolTip
 			.ExtraMargin		= GRectMargin(8,8,8,8);
 			.BorderMargin		= GRectMargin(0,0,0,0);
 			.ExtentMargin		= GRectMargin(-8,-8,-8,-8);
-			.MaxWidth			= 800; 
+			.MaxWidth			= 800;
 			.MaxHeight			= 1600;
 		}
 		map GFC_Control			= GFC_Control_DefaultControl_Style;
@@ -74,7 +74,7 @@ with GFC_Control_ToolTip
 				layer
 				{
 					LayerFlags		= GFlags(GCtrlBitmapSkin, GFC_BITMAPSKIN_CENTER_FILL, GFC_BITMAPSKIN_BACKCAPS_REGION);
-					CenterColor		= SF_CtrlTheme_Civ4_Control_Color_BG; 
+					CenterColor		= SF_CtrlTheme_Civ4_Control_Color_BG;
 				}
 				layer
 				{

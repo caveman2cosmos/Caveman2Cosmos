@@ -15,12 +15,18 @@ class BugCityScreenOptionsTab(BugOptionsTab.BugOptionsTab):
 		BugOptionsTab.BugOptionsTab.__init__(self, "CityScreen", "City Screen")
 
 	def create(self, screen):
-		tab = self.createTab(screen)
+		self.createTab(screen)
 		panel = self.createMainPanel(screen)
 		column = self.addOneColumnLayout(screen, panel)
 
 		LEFT, RIGHT = self.addTwoColumnLayout(screen, column, "Page", True)
 
+		self.addLabel(screen, LEFT, "YieldWeight", "AI Yield Weights:")
+		aLeft, aRight = self.addTwoColumnLayout(screen, LEFT, "YieldWeightGrid", False)
+		self.addTextEdit(screen, aLeft, aRight, "CityScreen__BaseWeightFood")
+		self.addTextEdit(screen, aLeft, aRight, "CityScreen__BaseWeightHammer")
+		self.addTextEdit(screen, aLeft, aRight, "CityScreen__BaseWeightCommerce")
+		self.addSpacer(screen, LEFT, "CityScreen0")
 		# Raw Yields
 		self.addCheckbox(screen, LEFT, "CityScreen__RawYields")
 		self.addTextDropdown(screen, LEFT, LEFT, "CityScreen__RawYieldsView", True)
@@ -53,12 +59,6 @@ class BugCityScreenOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, aRight, "MiscHover__BuildingAdditionalDefense")
 		self.addSpacer(screen, LEFT, "CityScreen3")
 
-		# Great Person Bar
-		self.addLabel(screen, LEFT, "GreatPersonBar", "Great Person Bar:")
-		self.addCheckbox(screen, LEFT, "CityScreen__GreatPersonInfo")
-		self.addCheckbox(screen, LEFT, "MiscHover__GreatPeopleRateBreakdown")
-		self.addSpacer(screen, LEFT, "CityScreen4")
-
 		# Production Queue
 		aLeft, aCenter, aRight = self.addThreeColumnLayout(screen, LEFT, "ProductionDecay")
 		self.addLabel(screen, aLeft, "ProductionDecay", "Decay:")
@@ -80,7 +80,6 @@ class BugCityScreenOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, aLeft, "CityBar__BaseProduction")
 		self.addCheckbox(screen, aLeft, "CityBar__TradeDetail")
 		self.addCheckbox(screen, aLeft, "CityBar__Commerce")
-		self.addCheckbox(screen, aLeft, "CityBar__CultureTurns")
 		self.addCheckbox(screen, aLeft, "CityBar__GreatPersonTurns")
 
 		self.addLabel(screen, aRight, "Cityanger", "City Anger:")
@@ -108,3 +107,9 @@ class BugCityScreenOptionsTab(BugOptionsTab.BugOptionsTab):
 		self.addCheckbox(screen, RIGHT, "MiscHover__ConscriptLimit")
 		self.addCheckbox(screen, RIGHT, "CityScreen__ProductionPopupTrainCivilianUnitsForever")
 		self.addCheckbox(screen, RIGHT, "CityScreen__ProductionPopupTrainMilitaryUnitsForever")
+
+		# Great Person Bar
+		self.addLabel(screen, RIGHT, "GreatPersonBar", "Great Person Bar:")
+		self.addCheckbox(screen, RIGHT, "CityScreen__GreatPersonInfo")
+		self.addCheckbox(screen, RIGHT, "MiscHover__GreatPeopleRateBreakdown")
+		self.addSpacer(screen, RIGHT, "CityScreen4")

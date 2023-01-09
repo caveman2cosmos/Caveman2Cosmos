@@ -150,57 +150,7 @@ class Dispatcher:
 				self._createCallback(name, BugUtil.bindFunction(self._baseUtils, name), None, self._log)
 
 		# setup defaults
-		self._setDefault("isPlayerResearch", True)
-		self._setDefault("createBarbarianUnits", False)
-		self._setDefault("skipResearchPopup", False)
-		self._setDefault("showTechChooserButton", True)
-		self._setDefault("getFirstRecommendedTech", TechTypes.NO_TECH)
-		self._setDefault("getSecondRecommendedTech", TechTypes.NO_TECH)
-		self._setDefault("canRazeCity", True)
-		self._setDefault("canDeclareWar", True)
-		self._setDefault("skipProductionPopup", False)
-		self._setDefault("showExamineCityButton", True)
-		self._setDefault("getRecommendedUnit", UnitTypes.NO_UNIT)
-		self._setDefault("getRecommendedBuilding", BuildingTypes.NO_BUILDING)
-		self._setDefault("updateColoredPlots", False)
-		self._setDefault("unitCannotMoveInto", False)
-		self._setDefault("cannotHandleAction", False)
-		self._setDefault("cannotFoundCity", False)
-		self._setDefault("cannotSelectionListMove", False)
-		self._setDefault("cannotSelectionListGameNetMessage", False)
-		self._setDefault("cannotDoControl", False)
-		self._setDefault("canDoCivic", False)
-		self._setDefault("cannotDoCivic", False)
-		self._setDefault("canTrain", False)
-		self._setDefault("cannotTrain", False)
-		self._setDefault("canConstruct", False)
-		self._setDefault("cannotConstruct", False)
-		self._setDefault("AI_chooseTech", TechTypes.NO_TECH)
-		self._setDefault("AI_chooseProduction", False)
-		self._setDefault("AI_unitUpdate", False)
-		self._setDefault("AI_doWar", False)
-		self._setDefault("AI_doDiplo", False)
-		self._setDefault("doHolyCity", False)
-		self._setDefault("doResearch", False)
-		self._setDefault("doGoody", False)
-		self._setDefault("doGrowth", False)
-		self._setDefault("doProduction", False)
-		self._setDefault("doCulture", False)
-		self._setDefault("doPlotCulture", False)
-		self._setDefault("doReligion", False)
-		self._setDefault("cannotSpreadReligion", False)
-		self._setDefault("doGreatPeople", False)
-		self._setDefault("doMeltdown", False)
-		self._setDefault("doReviveActivePlayer", False)
-		self._setDefault("citiesDestroyFeatures", True)
-		self._setDefault("canFoundCitiesOnWater", False)
-		self._setDefault("doCombat", False)
-		self._setDefault("getConscriptUnitType", UnitTypes.NO_UNIT)
-		self._setDefault("canPickPlot", True)
-		self._setDefault("getUnitCostMod", -1)
-		self._setDefault("getBuildingCostMod", -1)
-		self._setDefault("canUpgradeAnywhere", False)
-		self._setDefault("getWidgetHelp", u"")
+		#self._setDefault("updateColoredPlots", False) # Toffer - Left one example.
 
 	def _createCallback(self, name, func, default=None, log=None):
 		if log is None:
@@ -266,9 +216,6 @@ class Dispatcher:
 		bound = lambda *args: func(utils, *args)
 		bound.__module__ = func.__module__
 		return bound
-
-	def getBaseUtils(self):
-		return self._baseUtils
 
 
 ## Callback

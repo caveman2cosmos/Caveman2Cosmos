@@ -19,9 +19,8 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		panel = self.createMainPanel(screen)
 		left, center, right = self.addThreeColumnLayout(screen, panel, panel, True)
 
-		GC = CyGlobalContext()
-		GAME = GC.getGame()
-		bCanAdjustSettings = not GAME.isGameMultiPlayer() or GAME.getActivePlayer() == 0
+		GAME = CyGlobalContext().getGame()
+		bCanAdjustSettings = not GAME.isNetworkMultiPlayer() or GAME.getActivePlayer() == 0
 
 		#Flexible Difficulty
 		self.addLabel(screen, left, "RoMSettings__FlexibleDifficulty")
@@ -44,11 +43,7 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 
 		screen.setEnabled(self.addIntDropdown(screen, center, center, "RoMSettings__MaxBombardDefense", False, "LAYOUT_LEFT"), bCanAdjustSettings)
 
-		self.addCheckbox(screen, center, "RoMSettings__ShowCoastalBuildings")
-		self.addCheckbox(screen, center, "RoMSettings__HideObsoleteBuildings")
 		self.addCheckbox(screen, center, "RoMSettings__HideReplacedBuildings")
-		self.addCheckbox(screen, center, "RoMSettings__HideUnconstructableBuildings")
-		self.addCheckbox(screen, center, "RoMSettings__HideUntrainableUnits")
 
 		#Empire Management
 		self.addLabel(screen, center, "RoMSettings__EmpireManagement")
@@ -68,7 +63,6 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__StrategicEvents"), bCanAdjustSettings)
 
 		self.addCheckbox(screen, center, "RoMSettings__IgnoreDisabledBuildingAlerts")
-		self.addCheckbox(screen, center, "RoMSettings__NoProductionPopup")
 
 		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__InfrastructureIgnoresImprovements"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, center, "RoMSettings__CanNotClaimOcean"), bCanAdjustSettings)
@@ -85,11 +79,11 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__ImprovedXP"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__WarPrizes"), bCanAdjustSettings)
 
-		if GC.getInfoTypeForStringWithHiddenAssert("VICTORY_TOTAL") > 0 and GAME.isVictoryValid(GC.getInfoTypeForString("VICTORY_TOTAL")):
-			screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__MercyRule"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__MercyRule"), bCanAdjustSettings)
 
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__RealisiticDiplomacy"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__NoStorms"), bCanAdjustSettings)
+		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__ReligionDecay"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__MultipleReligionSpread"), bCanAdjustSettings)
 		screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__TelepathicReligion"), bCanAdjustSettings)
 
@@ -104,6 +98,6 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		if GAME.isOption(GameOptionTypes.GAMEOPTION_REALISTIC_CORPORATIONS):
 			screen.setEnabled(self.addCheckbox(screen, right, "RoMSettings__NoAutoCorporationFounding"), bCanAdjustSettings)
 
-		if GAME.isGameMultiPlayer():
+		if GAME.isNetworkMultiPlayer():
 			self.addCheckbox(screen, right, "RoMSettings__PlayWaitingAlertSound")
 			self.addIntDropdown(screen, right, right, "RoMSettings__PlayWaitingAlertSoundTimer")

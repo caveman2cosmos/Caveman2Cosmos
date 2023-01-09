@@ -6,14 +6,11 @@
 // CvPlot.h
 
 #include "LinkedList.h"
-//#include <bitset>
+#include "copy_iterator.h"
 #include "CvGameObject.h"
-#include "CvUnit.h"
-#include "idinfo_iterator_base.h"
-
+#include "CvProperties.h"
 #include "CvPlotPaging.h"
-
-class CvSelectionGroup;
+#include "idinfo_iterator_base.h"
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 
@@ -25,11 +22,13 @@ class CvRiver;
 class CvCity;
 class CvPlotGroup;
 class CvFeature;
+class CvSelectionGroup;
 class CvUnit;
 class CvSymbol;
 class CvFlagEntity;
 class CvPathGeneratorPlotInfo;
 class CvPathPlotInfoStore;
+enum UnitValueFlags;
 
 typedef bool (*ConstPlotUnitFunc)( const CvUnit* pUnit, int iData1, int iData2, const CvUnit* eUnit);
 typedef bool (*PlotUnitFunc)(CvUnit* pUnit, int iData1, int iData2, const CvUnit* eUnit);
@@ -132,7 +131,8 @@ struct ECvPlotGraphics
 };
 DECLARE_FLAGS(ECvPlotGraphics::type);
 
-class CvPlot : bst::noncopyable
+class CvPlot
+	: private bst::noncopyable
 {
 friend CvPathPlotInfoStore;
 public:
@@ -154,6 +154,9 @@ public:
 	void updateGraphicEra();
 
 	void erase();
+
+	void clearModifierTotals();
+	void recalculateBaseYield();
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
@@ -177,9 +180,12 @@ public:
 
 	void doTurn();
 
-	void doImprovement();
+	bool doBonusDiscovery();
+	void doBonusDepletion();
 
 	void updateCulture(bool bBumpUnits, bool bUpdatePlotGroups);
+	void checkCityRevolt();
+	void checkFortRevolt();
 
 	void updateFog();
 	void updateVisibility();
@@ -205,6 +211,7 @@ public:
 	bool isPlotGroupConnectedBonus(PlayerTypes ePlayer, BonusTypes eBonus) const;
 	bool isAdjacentPlotGroupConnectedBonus(PlayerTypes ePlayer, BonusTypes eBonus) const;
 	void updatePlotGroupBonus(bool bAdd);
+	bool isBonusExtracted(const TeamTypes eTeamPerspective = NO_TEAM) const;
 
 	bool isAdjacentToArea(int iAreaID) const;
 	bool isAdjacentToArea(const CvArea* pArea) const;
@@ -235,12 +242,13 @@ public:
 	int getNearestLandArea() const;
 	CvPlot* getNearestLandPlot() const;
 
+	int getElevationLevel(const bool bExtra = false) const;
+	int getTerrainElevation() const;
 	int seeFromLevel(TeamTypes eTeam) const;
 	int seeThroughLevel() const;
 	void changeAdjacentSight(TeamTypes eTeam, int iRange, bool bIncrement, CvUnit* pUnit, bool bUpdatePlotGroups);
-	bool canSeePlot(const CvPlot* plot, TeamTypes eTeam, int iRange, DirectionTypes eFacingDirection) const;
-	bool canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int originalDX, int originalDY, bool firstPlot, bool outerRing) const;
-	bool shouldProcessDisplacementPlot(int dx, int dy, int range, DirectionTypes eFacingDirection) const;
+	bool canSeePlot(const CvPlot* plot, TeamTypes eTeam) const;
+	bool canSeeDisplacementPlot(TeamTypes eTeam, int dx, int dy, int dx0, int dy0, int& iTopElevation, int& iTopElevationDistance, bool bEndPoint = false) const;
 	void updateSight(bool bIncrement, bool bUpdatePlotGroups);
 	void updateSeeFromSight(bool bIncrement, bool bUpdatePlotGroups);
 
@@ -280,7 +288,7 @@ public:
 	void changeDefenseDamage(int iChange);
 
 	// Super Forts *culture*
-	void changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate);
+	void pushCultureFromFort(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate);
 	void doImprovementCulture();
 
 	// Super Forts *canal* *choke*
@@ -299,8 +307,6 @@ public:
 	int movementCost(const CvUnit* pUnit, const CvPlot* pFromPlot) const;
 	static void flushMovementCostCache();
 
-	int getExtraMovePathCost() const;
-	void changeExtraMovePathCost(int iChange);
 	//	Koshling - count of mountain leaders present per team maintained for efficiency of movement calculations
 	// TB: This was not working properly so has been changed to a plotcount method.
 	int getHasMountainLeader(TeamTypes eTeam) const;
@@ -308,8 +314,6 @@ public:
 	bool isAdjacentOwned() const;
 	bool isAdjacentPlayer(PlayerTypes ePlayer, bool bLandOnly = false) const;
 	bool isAdjacentTeam(TeamTypes eTeam, bool bLandOnly = false) const;
-	bool isWithinCultureRange(PlayerTypes ePlayer, int* iFoundRange = NULL) const;
-	int getNumCultureRangeCities(PlayerTypes ePlayer) const;
 
 	bool isHasPathToEnemyCity( TeamTypes eAttackerTeam, bool bIgnoreBarb = true ) const;
 	bool isHasPathToPlayerCity( TeamTypes eMoveTeam, PlayerTypes eOtherPlayer = NO_PLAYER ) const;
@@ -326,20 +330,12 @@ public:
 
 	CvCity* getAdjacentCity(PlayerTypes ePlayer = NO_PLAYER) const;
 	bool changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePlayer = NO_PLAYER);
-	void changeCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex, int iChange, bool bUpdatePlotGroups, bool bUpdateCulture = true);
 	bool isHasValidBonus() const;
-	int getOccupationCultureRangeCities(PlayerTypes eOwnerIndex) const;
-	bool isWithinOccupationRange(PlayerTypes eOwnerIndex) const;
-	void changeOccupationCultureRangeCities(PlayerTypes eOwnerIndex,int iChange);
 	PlayerTypes getClaimingOwner() const;
 	void setClaimingOwner(PlayerTypes eNewValue);
 
 	bool isActsAsCity() const;
-	bool isCanMoveLandUnits() const;
 	bool isCanMoveSeaUnits() const;
-	bool isCanMoveAllUnits() const;
-	bool isCanUseRouteLandUnits() const;
-	bool isCanUseRouteSeaUnits() const;
 	bool isSeaTunnel() const;
 	int getRevoltProtection() const;
 	int getAverageEnemyStrength(TeamTypes eTeam) const;
@@ -382,7 +378,6 @@ protected:
 	CvGameObjectPlot m_GameObject;
 
 	char /*PlayerTypes*/ m_eClaimingOwner;
-	char* m_aiOccupationCultureRangeCities;
 	void doTerritoryClaiming();
 	CvWString m_szLandmarkMessage;
 	CvWString m_szLandmarkName;
@@ -392,6 +387,7 @@ protected:
 
 public:
 	PlayerTypes calculateCulturalOwner() const;
+	PlayerTypes getPlayerWithTerritorySurroundingThisPlotCardinally() const;
 
 	void plotAction(PlotUnitFunc func, int iData1 = -1, int iData2 = -1, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM);
 	int plotCount(ConstPlotUnitFunc funcA, int iData1A = -1, int iData2A = -1, const CvUnit* pUnit = NULL, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, ConstPlotUnitFunc funcB = NULL, int iData1B = -1, int iData2B = -1, int iRange = 0) const;
@@ -400,7 +396,6 @@ public:
 	int plotStrengthTimes100(UnitValueFlags eFlags, ConstPlotUnitFunc funcA, int iData1A = -1, int iData2A = -1, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, ConstPlotUnitFunc funcB = NULL, int iData1B = -1, int iData2B = -1, int iRange = 0) const;
 
 	bool isOwned() const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isRevealedBarbarian() const;
@@ -445,6 +440,8 @@ public:
 	DllExport bool isVisibleEnemyUnit(PlayerTypes ePlayer) const;
 	DllExport int getNumVisibleUnits(PlayerTypes ePlayer) const;
 
+	bool isBattle() const;
+
 	bool isVisibleEnemyUnit(const CvUnit* pUnit) const;
 	bool isVisibleOtherUnit(PlayerTypes ePlayer) const;
 
@@ -472,49 +469,35 @@ public:
 	bool isInViewport(int comfortBorderSize = 0) const;
 
 	// Base iterator type for iterating over adjacent valid plots
-	template < class Value_ >
-	struct adjacent_iterator_base :
-		public bst::iterator_facade<adjacent_iterator_base<Value_>, Value_*, bst::forward_traversal_tag, Value_*>
+	struct adjacent_iterator :
+		public bst::iterator_facade<adjacent_iterator, CvPlot*, bst::forward_traversal_tag, CvPlot*>
 	{
-		adjacent_iterator_base() : m_centerX(-1), m_centerY(-1), m_curr(nullptr), m_idx(0) {}
-		explicit adjacent_iterator_base(int centerX, int centerY) : m_centerX(centerX), m_centerY(centerY), m_curr(nullptr), m_idx(0)
-		{
-			increment();
-		}
+		adjacent_iterator();
+		adjacent_iterator(int centerX, int centerY, int numPlots, const int* plotDirectionX, const int* plotDirectionY);
 
 	private:
 		friend class bst::iterator_core_access;
-		void increment()
-		{
-			m_curr = nullptr;
-			while (m_curr == nullptr && m_idx < NUM_DIRECTION_TYPES)
-			{
-				m_curr = plotDirection(m_centerX, m_centerY, ((DirectionTypes)m_idx));
-				++m_idx;
-			}
-		}
-		bool equal(adjacent_iterator_base const& other) const
-		{
-			return (this->m_centerX == other.m_centerX
-				&& this->m_centerY == other.m_centerY
-				&& this->m_idx == other.m_idx)
-				|| (this->m_curr == NULL && other.m_curr == NULL);
-		}
+		void increment();
+		bool equal(adjacent_iterator const& other) const;
+		CvPlot* dereference() const { return m_curr; }
 
-		Value_* dereference() const { return m_curr; }
-
-		int m_centerX;
-		int m_centerY;
-		Value_* m_curr;
+		const int m_centerX;
+		const int m_centerY;
+		const int m_numPlots;
+		const int* m_plotDirectionX;
+		const int* m_plotDirectionY;
+		const CvMap* m_map;
+		CvPlot* m_curr;
 		int m_idx;
 	};
-	typedef adjacent_iterator_base<CvPlot> adjacent_iterator;
 
-	adjacent_iterator beginAdjacent() const { return adjacent_iterator(getX(), getY()); }
-	adjacent_iterator endAdjacent() const { return adjacent_iterator(); }
+	adjacent_iterator beginAdjacent(int numPlots, const int* plotDirectionX, const int* plotDirectionY) const;
+	adjacent_iterator endAdjacent() const;
 
 	typedef bst::iterator_range<adjacent_iterator> adjacent_range;
-	adjacent_range adjacent() const { return adjacent_range(beginAdjacent(), endAdjacent()); }
+
+	adjacent_range adjacent() const;
+	adjacent_range cardinalDirectionAdjacent() const;
 
 	// Base iterator type for iterating over a rectangle of plots
 	template < class Value_ >
@@ -522,7 +505,7 @@ public:
 		public bst::iterator_facade<rect_iterator_base<Value_>, Value_*, bst::forward_traversal_tag, Value_*>
 	{
 		rect_iterator_base() : m_centerX(-1), m_centerY(-1), m_wid(-1), m_hgt(-1), m_curr(nullptr), m_x(0), m_y(0){}
-		explicit rect_iterator_base(int centerX, int centerY, int halfwid, int halfhgt) : m_centerX(centerX), m_centerY(centerY), m_wid(halfwid), m_hgt(halfhgt), m_curr(nullptr), m_x(-halfwid), m_y(-halfhgt)
+		rect_iterator_base(int centerX, int centerY, int halfwid, int halfhgt) : m_centerX(centerX), m_centerY(centerY), m_wid(halfwid), m_hgt(halfhgt), m_curr(nullptr), m_x(-halfwid), m_y(-halfhgt)
 		{
 			increment();
 		}
@@ -556,10 +539,10 @@ public:
 
 		Value_* dereference() const { return m_curr; }
 
-		int m_centerX;
-		int m_centerY;
-		int m_wid;
-		int m_hgt;
+		const int m_centerX;
+		const int m_centerY;
+		const int m_wid;
+		const int m_hgt;
 		Value_* m_curr;
 		int m_x;
 		int m_y;
@@ -570,7 +553,8 @@ public:
 	static rect_iterator endRect() { return rect_iterator(); }
 
 	typedef bst::iterator_range<rect_iterator> rect_range;
-	static rect_range rect(int centerX, int centerY, int halfWid, int halfHgt) { return rect_range(beginRect(centerX, centerY, halfWid, halfHgt), endRect()); }
+	//static rect_range rect(int centerX, int centerY, int halfWid, int halfHgt) { return rect_range(beginRect(centerX, centerY, halfWid, halfHgt), endRect()); }
+	rect_range rect(int halfWid, int halfHgt) const { return rect_range(beginRect(m_iX, m_iY, halfWid, halfHgt), endRect()); }
 
 	// ==========================================================================================
 	// PAGING SYSTEM
@@ -619,20 +603,11 @@ public:
 	int getOwnershipDuration() const;
 	bool isOwnershipScore() const;
 	void setOwnershipDuration(int iNewValue);
-	void changeOwnershipDuration(int iChange);
-
-	int getImprovementDuration() const;
-	void setImprovementDuration(int iNewValue);
-	void changeImprovementDuration(int iChange);
 
 	int getImprovementUpgradeProgress() const;
 	int getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlayer) const;
 	void setImprovementUpgradeProgress(int iNewValue);
 	void changeImprovementUpgradeProgress(int iChange);
-
-	bool isForceUnowned() const;
-	void setForceUnownedTimer(int iNewValue);
-	void changeForceUnownedTimer(int iChange);
 
 	int getCityRadiusCount() const;
 	int isCityRadius() const;
@@ -658,7 +633,7 @@ public:
 	void updateIrrigated();
 
 	bool isPotentialCityWork() const;
-	bool isPotentialCityWorkForArea(CvArea* pArea) const;
+	bool isPotentialCityWorkForArea(const CvArea* pArea) const;
 	void updatePotentialCityWork();
 
 	bool isShowCitySymbols() const;
@@ -703,6 +678,8 @@ public:
 	DllExport ImprovementTypes getImprovementType() const;
 	void setImprovementType(ImprovementTypes eNewValue);
 
+	bool isImprovementDestructible() const;
+
 	RouteTypes getRouteType() const;
 	void setRouteType(RouteTypes eNewValue, bool bUpdatePlotGroup);
 	void updateCityRoute(bool bUpdatePlotGroup);
@@ -728,27 +705,28 @@ public:
 	int getRiverCrossingCount() const;
 	void changeRiverCrossingCount(int iChange);
 
+	int getBaseYield(const YieldTypes eIndex) const;
+	void changeBaseYield(const short* pYieldChange);
+
 	short* getYield() const;
+	void updateYield();
+	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const;
 	DllExport int getYield(YieldTypes eIndex) const;
 	int calculateNatureYield(YieldTypes eIndex, TeamTypes eTeam, bool bIgnoreFeature = false) const;
 	int calculateBestNatureYield(YieldTypes eIndex, TeamTypes eTeam) const;
 	int calculateTotalBestNatureYield(TeamTypes eTeam) const;
 	int calculateImprovementYieldChange(ImprovementTypes eImprovement, YieldTypes eYield, PlayerTypes ePlayer, bool bOptimal = false, bool bBestRoute = false) const;
-	int calculateYield(YieldTypes eIndex, bool bDisplay = false) const;
 	bool hasYield() const;
-	void updateYield();
-	int calculateMaxYield(YieldTypes eYield) const;
 	int getYieldWithBuild(BuildTypes eBuild, YieldTypes eYield, bool bWithUpgrade) const;
 
 	int getCulture(PlayerTypes eIndex) const;
 	int countTotalCulture() const;
 	int countFriendlyCulture(TeamTypes eTeam) const;
-	TeamTypes findHighestCultureTeam() const;
 	PlayerTypes findHighestCulturePlayer() const;
-	int calculateCulturePercent(PlayerTypes eIndex) const;
+	int calculateCulturePercent(PlayerTypes eIndex, int iExtraDigits = 0) const;
 	int calculateTeamCulturePercent(TeamTypes eIndex) const;
 	void setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bUpdatePlotGroups);
-	void changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate);
+	void changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate, bool bDoMinAdjust = true);
 	int countNumAirUnits(TeamTypes eTeam) const;
 	int countNumAirUnitCargoVolume(TeamTypes eTeam) const;
 	int airUnitSpaceAvailable(TeamTypes eTeam) const;
@@ -820,9 +798,10 @@ public:
 	DllExport void setLayoutStateToCurrent();
 	bool updatePlotBuilder();
 
-	DllExport void getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked); // determines how the improvement state is shown in the engine
-	DllExport void getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWorked); // determines how the bonus state is shown in the engine
-	bool shouldUsePlotBuilder();
+	DllExport void getVisibleImprovementState(ImprovementTypes& eType, bool& bWorked) const; // determines how the improvement state is shown in the engine
+	DllExport void getVisibleBonusState(BonusTypes& eType, bool& bImproved, bool& bWorked) const; // determines how the bonus state is shown in the engine
+
+	bool shouldUsePlotBuilder() const;
 	//CvPlotBuilder* getPlotBuilder() const { return m_pPlotBuilder; }
 
 	DllExport CvRoute* getRouteSymbol() const;
@@ -842,20 +821,14 @@ public:
 	DllExport CvUnit* getDebugCenterUnit() const;
 	void setCenterUnit(CvUnit* pNewValue);
 
-	int getCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex) const;
-	bool isCultureRangeCity(PlayerTypes eOwnerIndex, int iRangeIndex) const;
-	//void changeCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex, int iChange, bool bUpdatePlotGroups);
-
 	int getInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible) const;
-	bool isInvisibleVisible(TeamTypes eTeam, InvisibleTypes eInvisible) const;
-	void changeInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible, int iChange, int iIntensity, int iUnitID = 0);
+	bool isSpotterInSight(TeamTypes eTeam, InvisibleTypes eInvisible) const;
+	void changeInvisibleVisibilityCount(TeamTypes eTeam, InvisibleTypes eInvisible, int iChange);
+	void setSpotIntensity(TeamTypes eTeam, InvisibleTypes eInvisible, int iUnitID, int iIntensity);
 
 	int getNumPlotTeamVisibilityIntensity() const;
 	PlotTeamVisibilityIntensity& getPlotTeamVisibilityIntensity(int iIndex);
-	int getNumPlotTeamVisibilityIntensityCount(InvisibleTypes eInvisibility, TeamTypes eTeam, int iIntensity) const;
-	bool hasPlotTeamVisibilityIntensity(InvisibleTypes eInvisibility, TeamTypes eTeam, int iIntensity) const;
 	int getHighestPlotTeamVisibilityIntensity(InvisibleTypes eInvisibility, TeamTypes eTeam) const;
-	//void setHighestPlotTeamVisibilityIntensity(InvisibleTypes eInvisibility, TeamTypes eTeam);
 
 	static void	NextCachePathEpoch();
 	bool HaveCachedPathValidityResult(void* entity, bool bIsAlternateResult, bool& cachedResult) const;
@@ -871,31 +844,21 @@ public:
 	CLLNode<IDInfo>* tailUnitNode() const;
 
 	// For iterating over units on a plot
-	class unit_iterator : public idinfo_iterator_base<unit_iterator, CvUnit>
-	{
-	public:
-		unit_iterator() {}
-		explicit unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
-	private:
-		friend class core_access;
-		reference resolve(const IDInfo& info) const;
-	};
+	DECLARE_IDINFO_ITERATOR(CvUnit, unit_iterator)
+
 	unit_iterator beginUnits() const { return unit_iterator(&m_units); }
 	unit_iterator endUnits() const { return unit_iterator(); }
 	typedef bst::iterator_range<unit_iterator> unit_range;
 	unit_range units() const { return unit_range(beginUnits(), endUnits()); }
 
-	// As the plot doesn't own the units they aren't const even if the plot it, so not
-	// point in a const unit iterator
-	//class const_unit_iterator : public idinfo_iterator_base<const_unit_iterator, const CvUnit>
-	//{
-	//public:
-	//	const_unit_iterator() {}
-	//	explicit const_unit_iterator(const CLinkList<IDInfo>* list) : base_type(list) {}
-	//private:
-	//	friend class core_access;
-	//	reference resolve(const IDInfo& info) const;
-	//};
+	safe_unit_iterator beginUnitsSafe() const { return safe_unit_iterator(beginUnits(), endUnits()); }
+	safe_unit_iterator endUnitsSafe() const { return safe_unit_iterator(); }
+	typedef bst::iterator_range<safe_unit_iterator> safe_unit_range;
+	safe_unit_range units_safe() const { return safe_unit_range(beginUnitsSafe(), endUnitsSafe()); }
+
+	// As the plot doesn't own the units they aren't const even if the plot is, so no point in a const unit iterator
+	//DECLARE_IDINFO_ITERATOR(const CvUnit, const_unit_iterator)
+
 	//const_unit_iterator beginUnits() const { return const_unit_iterator(&m_units); }
 	//const_unit_iterator endUnits() const { return const_unit_iterator(); }
 	//typedef bst::iterator_range<const_unit_iterator> const_unit_range;
@@ -916,7 +879,7 @@ public:
 	bool canApplyEvent(EventTypes eEvent) const;
 	void applyEvent(EventTypes eEvent);
 
-	bool canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const;
+	bool canTrain(UnitTypes eUnit, bool bTestVisible) const;
 
 	bool isEspionageCounterSpy(TeamTypes eTeam) const;
 
@@ -944,9 +907,8 @@ protected:
 	mutable CvArea *m_pPlotArea;
 	short m_iFeatureVariety;
 	short m_iOwnershipDuration;
-	short m_iImprovementDuration;
 	short m_iUpgradeProgress;
-	short m_iForceUnownedTimer;
+	short m_iForceUnownedTimer; // SAVEBREAK remove
 	short m_iCityRadiusCount;
 	int m_iRiverID;
 	short m_iMinOriginalStartDist;
@@ -1007,6 +969,7 @@ protected:
 	//short* m_aiCultureRangeForts;
 	// Super Forts end
 
+	short* m_baseYields;
 	short* m_aiYield;
 	std::vector<std::pair<PlayerTypes,int> > m_aiCulture;
 	std::vector<PlotTeamVisibilityIntensity> m_aPlotTeamVisibilityIntensity;
@@ -1044,11 +1007,10 @@ protected:
 
 	CvPlotBuilder* m_pPlotBuilder; // builds bonuses and improvements
 
-	char** m_apaiCultureRangeCities;
+	char** m_apaiCultureRangeCities; // SAVEBREAK remove
 	short** m_apaiInvisibleVisibilityCount;
-	//short** m_apaiCachedHighestTeamInvisibilityIntensity;
 
-/* Koshling - need to cache presence of mountain leaders in mountain plots so that CanMoveThrough calculations don't get bogged down searching unit stacks.
+	/* Koshling - need to cache presence of mountain leaders in mountain plots so that CanMoveThrough calculations don't get bogged down searching unit stacks.
 	This is a count of mountain leader units in the plot for each team.
 	The array is only created if the plot is a mountain plot and at least one team has a mountain leader present.
 	The array is cleared when the last leader leaves, so the memory overhead is low */
@@ -1061,6 +1023,7 @@ protected:
 
 	void doFeature();
 	void doCulture();
+	void decayCulture();
 
 	void processArea(CvArea* pArea, int iChange);
 	void doImprovementUpgrade(const ImprovementTypes eType);
@@ -1077,6 +1040,8 @@ public:
 	void revealBestStealthDefender(const CvUnit* pAttacker);
 	void doPreAttackTraps(CvUnit* pAttacker);
 
+	void countCommander(bool bNewVal, const CvUnit* pUnit);
+	bool inCommandField(const PlayerTypes ePlayer) const;
 
 #ifdef CAN_BUILD_VALUE_CACHING
 public:
@@ -1095,6 +1060,9 @@ private:
 	int m_movementCharacteristicsHash;
 	bool m_bPlotGroupsDirty;
 
+	std::map<uint8_t, uint16_t> m_commanderCount; // PlayerType : CommanderCount
+	void changeCommanderCount(const PlayerTypes ePlayer, const bool bAdd);
+
 	static bool bDeferPlotGroupRecalculation;
 
 	bool updateSymbolsInternal();
@@ -1109,16 +1077,11 @@ public:
 	//	Toggle plot in/out of contribution
 	void ToggleInPlotGroupsZobristContributors();
 
-	inline int getZobristContribution() const
-	{
-		return m_zobristContribution;
-	}
+	inline int getZobristContribution() const { return m_zobristContribution; }
 
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
 
 	//TB Combat Mod AI
-	int getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const;
-
 	bool isImprovementUpgradable() const;
 	void setImprovementUpgradeCache(const int iNewValue);
 
@@ -1128,11 +1091,15 @@ public:
 
 	void unitGameStateCorrections();
 
-	bool isMapCategoryType(MapCategoryTypes eIndex) const;
+	bool isMapCategoryType(MapCategoryTypes eMapCategory) const;
+	const std::vector<MapCategoryTypes>& getMapCategories() const;
 
 	int countSeeInvisibleActive(PlayerTypes ePlayer, InvisibleTypes eVisible) const;
 
+#ifdef OUTBREAKS_AND_AFFLICTIONS
+	int getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const;
 	int getCommunicability(PromotionLineTypes ePromotionLine, bool bWorkedTile, bool bVicinity, bool bAccessVolume) const;
+#endif // OUTBREAKS_AND_AFFLICTIONS
 
 protected:
 	// AIAndy: Properties

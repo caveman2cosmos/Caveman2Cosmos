@@ -46,4 +46,12 @@ private:
 	std::vector<Value*> m_copy;
 	int m_idx;
 };
+
+class CvUnit;
+
+// Safe city and unit iterators (they copy the whole range before iterating, but this is just copying pointers so not a big deal in most cases
+// However it shouldn't be used in inner loops
+typedef copy_iterator<CvCity> safe_city_iterator;
+typedef copy_iterator<CvUnit> safe_unit_iterator;
+
 #endif // copy_iterator_h__

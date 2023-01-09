@@ -21,9 +21,9 @@
 
 from CvPythonExtensions import *
 from array  import array
-from random import random, uniform, randint, seed, shuffle
-from math import fmod, pi, cos, sin, sqrt
-import sys, os, inspect, _winreg
+from random import random, uniform, randint, seed
+from math import pi, cos, sin, sqrt
+import os, _winreg
 import cPickle as pickle
 import BugUtil, NaturalWonders
 
@@ -60,7 +60,7 @@ class MapConstants:
 
 		#This variable adjusts the amount of bonuses on the map. Values above 1.0 will add bonus bonuses.
 		#People often want lots of bonuses, and for those people, this variable is definately a bonus.
-		self.fBonusMult = 1.0
+		self.fBonusMult = 0.8
 
 		# fRiverThreshold is used to decide if enough water has accumulated to form a river.
 		# A lower value creates more rivers over the entire map. It controls lenght, complexity and density of rivers.
@@ -205,7 +205,7 @@ class MapConstants:
 		self.northAttenuationRange	= .06
 		self.southAttenuationFactor = .80
 		self.southAttenuationRange	= .16
-		# East/west attenuation is set to zero, but modded maps may have need for them.east west attenuation may be desired for flat maps. 
+		# East/west attenuation is set to zero, but modded maps may have need for them.east west attenuation may be desired for flat maps.
 		self.eastAttenuationFactor	= .0
 		self.eastAttenuationRange	= .0
 		self.westAttenuationFactor	= .0
@@ -272,7 +272,7 @@ class MapConstants:
 		self.bEarthlike = False
 		self.bArchipelago = False
 		self.bWaterworld = False
-		self.bAttenuate = True 
+		self.bAttenuate = True
 		if not selectionID:
 			self.bDryland = True
 			self.bAttenuate = False
@@ -318,6 +318,8 @@ class MapConstants:
 		elif selectionID == 2:
 			wrapString = "Flat"
 			self.bWrapX = False
+		else:
+			wrapString = "None - we are just switching maps"
 
 		# New World Rules
 		selectionID = MAP.getCustomMapOption(4)
@@ -820,16 +822,16 @@ class SimplexNoise4D:
 	_G4 = (5.0 - sqrt(5.0)) / 20.0
 	_F4 = (sqrt(5.0) - 1.0) / 4.0
 
-	def __init__(self, iPeriod = 512):
+	def __init__(self, iPeriod = 1024):
 		# Create permutation tables.
 		self.randomize(iPeriod)
 
-	def randomize(self, iPeriod = 512):
+	def randomize(self, iPeriod = 1024):
 		"""Randomize the permutation table used by the noise functions.
 		The same value is always returned for a given coordinate unless the	permutation table changes."""
 		self.period = iPeriod
-		permTable = range(self.period)
-		shuffle(permTable)
+		permTable = [0]*iPeriod
+		shuffleList(iPeriod, CyGame().getMapRand(), permTable)
 		# Double permutation array so we don't need to wrap
 		self.perm = permTable * 2
 
@@ -932,7 +934,7 @@ class SimplexNoise4D:
 		else:
 			k1 = 0
 		if Simplex[c][3] >= 3:
-			l1 = 1  
+			l1 = 1
 		else:
 			l1 = 0
 		# The number 2 in the "simplex" array is at the second largest coordinate.
@@ -1296,7 +1298,8 @@ class ElevationMap(FloatMap):
 					if bPit:
 						landList.append((x, y, i))
 						indexList[i] = 1
-		shuffle(landList)
+
+		shufflePyList(landList, CyGame().getMapRand())
 		self.iNumLakes = int(self.iArea * mc.fLakesPerPlot * fLandPercent)
 		n = 0
 		while len(landList) > 0:
@@ -1541,7 +1544,7 @@ class ClimateMap:
 				upLiftDest = value1
 			else:
 				upLiftDest = value2
-			value = cost + upLiftDest - upLiftSource 
+			value = cost + upLiftDest - upLiftSource
 			if cost < value:
 				cost = value
 			if boolGeostrophic:
@@ -1617,6 +1620,7 @@ class TerrainMap:
 				else:
 					plotData[i] = PEAK
 		# Break up large clusters of hills and peaks
+		mapRand = CyGame().getMapRand()
 		i = -1
 		for y in xrange(iHeight):
 			for x in xrange(iWidth):
@@ -1631,7 +1635,7 @@ class TerrainMap:
 							if ii >= 0 and plotData[ii] == HILL:
 								hillList.append(ii)
 					if len(hillList) > 6:
-						shuffle(hillList)
+						shufflePyList(hillList, mapRand)
 						plotData[hillList.pop()] = PEAK
 						plotData[hillList.pop()] = LAND
 				elif plotData[i] == PEAK:
@@ -1642,7 +1646,7 @@ class TerrainMap:
 							if ii >= 0 and plotData[ii] == PEAK:
 								peakList.append(ii)
 					if len(peakList) > 5:
-						shuffle(peakList)
+						shufflePyList(peakList, mapRand)
 						plotData[peakList.pop()] = HILL
 						plotData[peakList.pop()] = HILL
 
@@ -2168,7 +2172,7 @@ class LakeMap:
 								total += rainData[ii]
 								count += 1.0
 					avrRainMap[i] = total / count
-		shuffle(lakePitList)
+		shufflePyList(lakePitList, CyGame().getMapRand())
 		lakeAreaMap	= AreaMap()
 		self.lakeData = array('b', [0] * iArea)
 		iMaxLakeSize = mc.iMaxLakeSize
@@ -2385,7 +2389,7 @@ class LakeMap:
 				ii = GetIndex(x - 1, y)
 			candidateList.append(ii)
 
-		shuffle(candidateList)
+		shufflePyList(candidateList, CyGame().getMapRand())
 		i = candidateList[0]
 		plotData[i] = WATER
 		print "	Made an harbour"
@@ -2557,7 +2561,8 @@ class LakeMap:
 				if em.data[i] < fTrenchEle:
 					if bDefined[i] == OCEAN:
 						trenchList.append((x, y, i))
-		shuffle(trenchList)
+		mapRand = CyGame().getMapRand()
+		shufflePyList(trenchList, mapRand)
 		iNumTrenches = em.iNumTrenches
 		print "	Desired number of trenches: %d" % em.iNumTrenches
 		print "	Available trench spots: %d" % len(trenchList)
@@ -2605,7 +2610,7 @@ class LakeMap:
 						if SurTr > 2:
 							break
 						if len(trenchExpPlots) > 2:
-							shuffle(trenchExpPlots)
+							shufflePyList(trenchExpPlots, mapRand)
 							x, y, i = trenchExpPlots.pop()
 							continue
 					break
@@ -2702,6 +2707,7 @@ class RiverMap:
 		W = mc.W
 		E = mc.E
 		# Draw imaginary rivers inland from the valid shore plots
+		mapRand = CyGame().getMapRand()
 		avrRain = lm.avrRainfallMap2x2
 		aRiverList = []
 		aSourceList = []
@@ -2728,7 +2734,7 @@ class RiverMap:
 					if random() > 0.7:
 						flowMap[i] = drainList[0], drainList[1]
 					else:
-						shuffle(drainList)
+						shufflePyList(drainList, mapRand)
 						flowMap[i] = drainList[0], -1
 				elif count == 1:
 					flowMap[i] = drainList[0], -1
@@ -2783,7 +2789,7 @@ class RiverMap:
 					del drainList[iLowest]
 					if drainList and iRestrict <= loop:
 						iRestrict = loop + 2
-						shuffle(drainList)
+						shufflePyList(drainList, mapRand)
 
 						xx, yy, ii, dir2 = drainList[0]
 						aList.append(ii)
@@ -2984,16 +2990,13 @@ class BonusPlacer:
 		# Create and shuffle the bonus list.
 		n = 0
 		pOrderDict = {}
-		iNumBonusInfos = GC.getNumBonusInfos()
-		self.bonusDict = array('H', [0] * iNumBonusInfos)
-		plotIndexList = range(mc.iArea)
-		for iBonus in xrange(iNumBonusInfos):
+		self.iNumBonuses = iNumBonuses = GC.getNumMapBonuses()
+		plotIndexList = [0]*mc.iArea
+		mapRand = GC.getGame().getMapRand()
+		shuffleList(mc.iArea, mapRand, plotIndexList)
+		for i in xrange(iNumBonuses):
+			iBonus = GC.getMapBonus(i)
 			CvBonusInfo = GC.getBonusInfo(iBonus)
-			iPlaceOrder = CvBonusInfo.getPlacementOrder()
-			# Filter out bonuses with iPlacementOrder at -1 or below.
-			if iPlaceOrder < 1:
-				n += 1
-				continue
 			bonus = BonusArea()
 			bonus.indeXML = iBonus
 			# Calculate desired amount
@@ -3010,9 +3013,8 @@ class BonusPlacer:
 			fDensityCount = 0
 			if iTilesPer > 0:
 				iNumPossible = 0
-				for i in plotIndexList:
-					plot = MAP.plotByIndex(i)
-					if self.PlotCanHaveBonus(plot, iBonus, True, False):
+				for j in plotIndexList:
+					if self.PlotCanHaveBonus(MAP.plotByIndex(j), iBonus, True, False):
 						iNumPossible += 1
 				fDensityCount = 10.0 * iNumPossible / (iTilesPer * (iWorldSize + 7))
 			iBonusCount = int(fBonusMult * (fBaseCount + fDensityCount))
@@ -3023,27 +3025,49 @@ class BonusPlacer:
 
 			bonusList.append(bonus)
 			# Check which placement orders are used.
+			iPlaceOrder = CvBonusInfo.getPlacementOrder()
 			if iPlaceOrder in pOrderDict:
 				pOrderDict[iPlaceOrder].append(iBonus)
 			else:
 				pOrderDict[iPlaceOrder] = [iBonus]
 
-		shuffle(bonusList)
-		self.iNumBonuses = iNumBonuses = iNumBonusInfos - n
-		self.AssignBonusAreas(iNumBonuses, bonusList)
-		bonusDictLoc = self.bonusDict
-		# Shuffle the list of map indices.
-		shuffle(plotIndexList)
-		startAtIndex = 0
+		shufflePyList(bonusList, mapRand)
+		self.bonusDict = bonusDictLoc = {}
 
+		# Assign Bonus Areas
+		self.areas = areas = MAP.areas()
+
+		for i in xrange(iNumBonuses):
+			indeXML = bonusList[i].indeXML
+			bonusDictLoc[indeXML] = i
+			bonusInfo = GC.getBonusInfo(indeXML)
+			if not bonusInfo.isOneArea():
+				continue # Only assign areas to area bonuses.
+			areaSuitabilityList = []
+			minAreaSize = bonusInfo.getMinAreaSize()
+			for area in self.areas:
+				if area.getNumTiles() >= minAreaSize:
+					aS = AreaSuitability(area.getID())
+					aS.suitability, aS.numPossible = self.CalculateAreaSuitability(area, indeXML)
+					areaSuitabilityList.append(aS)
+			# Calculate how many areas to assign.
+			#Sort areaSuitabilityList best first
+			areaSuitabilityList.sort(lambda a, b:cmp(b.numPossible, a.numPossible))
+
+			# Assign the best area to this bonus, and also areas that have high suitability
+			for n in xrange(len(areaSuitabilityList)):
+				if n == 0 or areaSuitabilityList[n].suitability > 0.3:
+					self.aBonusList[i].areaList.append(areaSuitabilityList[n].areaID)
+
+		startAtIndex = 0
 		pOrderList = sorted(pOrderDict.items())
 		for iOrder, aList in pOrderList:
 			placementList = []
 			for indeXML in aList:
 				for n in xrange(bonusList[bonusDictLoc[indeXML]].desiredBonusCount):
 					placementList.append(indeXML)
-			if len(placementList) > 0:
-				shuffle(placementList)
+			if placementList:
+				shufflePyList(placementList, mapRand)
 				for indeXML in placementList:
 					startAtIndex = self.AddBonusType(indeXML, plotIndexList, startAtIndex, iWorldSize)
 		# Now check to see that all resources have been placed at least once while ignoring area rules.
@@ -3172,42 +3196,6 @@ class BonusPlacer:
 		return CyMap().plot(x, y)
 
 
-	def AssignBonusAreas(self, numBonuses, bonusListLoc):
-		GC = CyGlobalContext()
-		MAP = GC.getMap()
-		# Build area list
-		self.areas = areas = []
-		for i in xrange(MAP.getIndexAfterLastArea()):
-			area = MAP.getArea(i)
-			if not area.isNone():
-				areas.append(area)
-
-		bonusDictLoc = self.bonusDict
-		for i in xrange(numBonuses):
-			indeXML = bonusListLoc[i].indeXML
-			bonusDictLoc[indeXML] = i
-			bonusInfo = GC.getBonusInfo(indeXML)
-			if not bonusInfo.isOneArea():
-				continue # Only assign areas to area bonuses.
-			areaSuitabilityList = []
-			minAreaSize = bonusInfo.getMinAreaSize()
-			for area in self.areas:
-				if area.getNumTiles() >= minAreaSize:
-					aS = AreaSuitability(area.getID())
-					aS.suitability, aS.numPossible = self.CalculateAreaSuitability(area, indeXML)
-					areaSuitabilityList.append(aS)
-			# Calculate how many areas to assign.
-			areasPerBonus = 1
-			#Sort areaSuitabilityList best first
-			areaSuitabilityList.sort(lambda a, b:cmp(b.numPossible, a.numPossible))
-			#assign the best areas to this bonus
-			for n in xrange(areasPerBonus):
-				self.aBonusList[i].areaList.append(areaSuitabilityList[n].areaID)
-			#assign areas that have a high suitability also
-			for n in xrange(areasPerBonus,len(areaSuitabilityList)):
-				if areaSuitabilityList[n].suitability > 0.3:
-					self.aBonusList[i].areaList.append(areaSuitabilityList[n].areaID)
-		self.bonusDict = bonusDictLoc
 
 
 	def CanPlaceBonus(self, CyPlot, indeXML, bIgnoreArea):
@@ -3300,12 +3288,10 @@ class BonusPlacer:
 			if iTemp > 1 and plot.area().getNumTiles() < iTemp:
 				return False
 
-		if not bIgnoreArea and bonusInfo.isOneArea():
-			if plot.getArea() not in self.aBonusList[self.bonusDict[indeXML]].areaList:
-				return False
-
-		if not plot.isPotentialCityWork():
-			return False
+		if (not bIgnoreArea and bonusInfo.isOneArea()
+		and plot.getArea() not in self.aBonusList[self.bonusDict[indeXML]].areaList
+		or not plot.isPotentialCityWork()
+		): return False
 
 		return True
 
@@ -3393,6 +3379,7 @@ class StartingPlotFinder:
 	def SetStartingPlots(self):
 		GC = CyGlobalContext()
 		MAP = GC.getMap()
+		GAME = GC.getGame()
 		MAP.recalculateAreas()
 		# Cache Plot Value
 		self.plotvalueList = []
@@ -3410,7 +3397,7 @@ class StartingPlotFinder:
 				if bonusEnum != BonusTypes.NO_BONUS:
 					value += 3
 					bonusInfo = GC.getBonusInfo(bonusEnum)
-					if bonusInfo.getTechReveal() == TechTypes.NO_TECH or GC.getTechInfo(bonusInfo.getTechReveal()).getEra() < GC.getGame().getStartEra() + 2:
+					if bonusInfo.getTechReveal() == TechTypes.NO_TECH or GC.getTechInfo(bonusInfo.getTechReveal()).getEra() < GAME.getStartEra() + 2:
 						commerce	+= bonusInfo.getYieldChange(YieldTypes.YIELD_COMMERCE)
 						food		+= bonusInfo.getYieldChange(YieldTypes.YIELD_FOOD)
 						production	+= bonusInfo.getYieldChange(YieldTypes.YIELD_PRODUCTION)
@@ -3424,14 +3411,10 @@ class StartingPlotFinder:
 			if GC.getPlayer(i).isEverAlive():
 				player_list.append(i)
 				iNumPlayers += 1
-		shuffle(player_list)
+		shufflePyList(player_list, GAME.getMapRand())
 		print "Number of players: %d" % iNumPlayers
 		# Build area list
-		areas = []
-		for i in xrange(MAP.getIndexAfterLastArea()):
-			area = MAP.getArea(i)
-			if not area.isNone():
-				areas.append(area)
+		areas = MAP.areas()
 		# old/new world status
 		# Get official areas and make corresponding lists that determines
 		# old world vs. new world and also the pre-settled value.
@@ -3465,26 +3448,27 @@ class StartingPlotFinder:
 		fMinRegionSize = fMinIslandSize * 12
 		print "Min. Region Size: %f" % fMinRegionSize
 		iStartingAreas = 0
-		for i in xrange(len(areas)):
-			if areaOldWorld[i] and areas[i].getNumTiles() >= fMinIslandSize:
+		for i, area in enumerate(areas):
+			if areaOldWorld[i] and area.getNumTiles() >= fMinIslandSize:
 				iRegionSize = 0
 				for pI in xrange(iArea):
 					plot = MAP.plotByIndex(pI)
-					if plot.getArea() == areas[i].getID():
+					if plot.getArea() == area.getID():
 						iRegionSize = regionMap.getAreaByID(regionMap.areaID[pI]).size
 						print "Region Size for area %d: %d" % (regionMap.areaID[pI], iRegionSize)
 						break
 				if iRegionSize >= fMinRegionSize:
-					startArea = StartingArea(areas[i].getID())
+					startArea = StartingArea(area.getID())
 					startingAreaList.append(startArea)
 					iStartingAreas += 1
+
 		# We are assuming there is now at least 1 starting area, else something has gone terribly wrong.
 		# Get the value of the whole old world
 		fOldWorldValue = 0.0
 		for i in xrange(iStartingAreas):
 			fOldWorldValue += startingAreaList[i].fRawValue
 		# Calulate value per player of old world
-		fOldWorldValuePerPlayer = fOldWorldValue / (iNumPlayers + 1)
+		fOldWorldValuePerPlayer = fOldWorldValue / iNumPlayers
 		# Sort startingAreaList by rawValue
 		startingAreaList.sort(lambda x, y: cmp(x.fRawValue, y.fRawValue))
 		# Get rid of areas that have less value than fOldWorldValuePerPlayer as they are too small to put a player on.
@@ -3494,7 +3478,7 @@ class StartingPlotFinder:
 			iDiv += 2
 			iAreas = iStartingAreas - iNumPlayers / iDiv
 		for i in xrange(iAreas):
-			if startingAreaList[0].fRawValue < fOldWorldValuePerPlayer:
+			if iStartingAreas > 1 and startingAreaList[0].fRawValue < fOldWorldValuePerPlayer:
 				del startingAreaList[0]
 				iStartingAreas -= 1
 			else: break #All remaining should be big enough
@@ -3540,7 +3524,7 @@ class StartingPlotFinder:
 							if searchArea.idealNumberOfPlayers < len(searchArea.plotList):
 								searchArea.idealNumberOfPlayers *= fRatio
 					else:
-						raise ValueError, "Not enough room on the map to place all players!"
+						print "[INFO] Not enough room on the map to place all players!"
 						iStartingAreas = 0
 						break
 			else: iStartingAreas -= 1
@@ -3552,6 +3536,8 @@ class StartingPlotFinder:
 		idealTotal = 0
 		for startingArea in startingAreaList:
 			idealTotal += startingArea.idealNumberOfPlayers
+
+		bRaise1 = False
 		if idealTotal < iNumPlayers:
 			iNum = iNumPlayers - idealTotal
 			while iNum > 0:
@@ -3563,7 +3549,8 @@ class StartingPlotFinder:
 						if iNum == 0:
 							break
 				if iNum == iEntry:
-					raise ValueError, "Not enough room on the map to place all players!"
+					print "[ERROR] 1 - Not enough room on the map to place all players!"
+					bRaise1 = True
 					break
 		elif idealTotal > iNumPlayers:
 			iNum = idealTotal - iNumPlayers
@@ -3576,17 +3563,19 @@ class StartingPlotFinder:
 						if iNum == 0:
 							break
 				if iNum == iEntry:
-					raise ValueError, "Not enough room on the map to place all players!"
+					print "[ERROR] 2 - Not enough room on the map to place all players!"
+					bRaise1 = True
 					break
-		#Assign players.
+		# Assign starting plots.
 		iCount = 0
 		for startingArea in startingAreaList:
 			for i in xrange(startingArea.idealNumberOfPlayers):
 				startingArea.playerList.append(player_list[iCount])
 				iCount += 1
 			startingArea.FindStartingPlots()
-		if iNumPlayers > iCount:
-			raise ValueError, "Some players not placed in starting plot finder!"
+
+		bRaise2 = iNumPlayers > iCount
+
 		#Now set up for normalization
 		self.plotList = []
 		for startingArea in startingAreaList:
@@ -3605,6 +3594,12 @@ class StartingPlotFinder:
 					else:
 						bonuses = 5
 					self.boostCityPlotValue(self.plotList[i].x, self.plotList[i].y, bonuses, self.plotList[i].isCoast())
+
+		if bRaise1 and bRaise2:
+			raise ValueError, "Not enough room on the map to place all players; some players were not placed in starting plot finder!"
+
+		if bRaise1: raise ValueError, "Not enough room on the map to place all players!"
+		if bRaise2: raise ValueError, "Some players not placed in starting plot finder!"
 
 
 	def getCityPotentialValue(self, x, y):
@@ -3654,13 +3649,15 @@ class StartingPlotFinder:
 
 	def boostCityPlotValue(self, x, y, bonuses, bCoastalCity):
 		GC = CyGlobalContext()
+		GAME = GC.getGame()
 		iFoodPerPop = GC.getFOOD_CONSUMPTION_PER_POPULATION()
 		iAreaID = GC.getMap().plot(x, y).getArea()
-		startEra = GC.getGame().getStartEra() + 1
+		startEra = GAME.getStartEra() + 1
 		#Shuffle the bonus order so that different cities have different preferences for bonuses
 		iNumBonuses = bp.iNumBonuses
-		bonusList = range(iNumBonuses)
-		shuffle(bonusList)
+		bonusList = [0]*iNumBonuses
+		mapRand = GAME.getMapRand()
+		shuffleList(iNumBonuses, mapRand, bonusList)
 		#Do this process in 3 passes for each yield type
 		yields = []
 		yields.append(YieldTypes.YIELD_PRODUCTION)
@@ -3669,7 +3666,7 @@ class StartingPlotFinder:
 		plotList = []
 		for i in xrange(1, 21):
 			plotList.append(plotCity(x, y, i))
-		shuffle(plotList)
+		shufflePyList(plotList, mapRand)
 		bonusCount = 0
 		for n in xrange(3 * bonuses + 1):
 			for CyPlot in plotList:
@@ -3786,7 +3783,6 @@ class StartingArea:
 
 
 	def FindStartingPlots(self):
-		GC = CyGlobalContext()
 		numPlayers = len(self.playerList)
 		if numPlayers <= 0:
 			return
@@ -3812,11 +3808,12 @@ class StartingArea:
 					self.plotList[n].nearestStart = minDistance
 					distanceList.append(self.plotList[n])
 			#Find biggest nearestStart and place a start there
-			distanceList.sort(lambda a, b:cmp(b.nearestStart, a.nearestStart))
-			distanceList[0].vacant = False
+			if distanceList:
+				distanceList.sort(lambda a, b:cmp(b.nearestStart, a.nearestStart))
+				distanceList[0].vacant = False
 		self.CalculateStartingPlotValues()
 		#Now place all starting positions
-		MAP = GC.getMap()
+		MAP = CyGlobalContext().getMap()
 		n = 0
 		for m in xrange(len(self.plotList)):
 			if not self.plotList[m].vacant:
@@ -3824,10 +3821,7 @@ class StartingArea:
 				if sPlot.isWater():
 					raise ValueError, "Start plot is water!"
 				sPlot.setImprovementType(-1)
-				playerID = self.playerList[n]
-				player = GC.getPlayer(playerID)
 				sPlot.setStartingPlot(True)
-				player.setStartingPlot(sPlot, True)
 				n += 1
 
 
@@ -3877,7 +3871,7 @@ class StartPlot:
 
 	def isCoast(self):
 		waterArea = CyMap().plot(self.x, self.y).waterArea()
-		return not waterArea.isNone() and not waterArea.isLake()
+		return waterArea is not None and not waterArea.isLake()
 
 	def isRiverSide(self):
 		return CyMap().plot(self.x, self.y).isRiverSide()
@@ -3966,30 +3960,29 @@ mo = MapOptions()
 ## Begin Map-Script
 ##############################################################################
 
-def getNumCustomMapOptions():
+def isAdvancedMap():
 	if mo.bfirstRun:
 		print "Preparing World Map Script"
 		mo.loadMapOptionDefaults()
+	return False
+
+def getNumHiddenCustomMapOptions():
+	return 0 # Value seems to only be used for "play now" when using debug dll
+
+def getNumCustomMapOptions():
 	return 8
 
 def getCustomMapOptionDefault(argsList):
-	iOption = argsList[0]
-	return mo.optionList[iOption][1]
-
-def isAdvancedMap():
-	return False
+	return mo.optionList[argsList[0]][1]
 
 def getCustomMapOptionName(argsList):
-	iOption = argsList[0]
-	return unicode(mo.optionList[iOption][0])
+	return mo.optionList[argsList[0]][0]
 
 def getNumCustomMapOptionValues(argsList):
-	iOption  = argsList[0]
-	return mo.optionList[iOption][3]
+	return mo.optionList[argsList[0]][3]
 
 def isRandomCustomMapOption(argsList):
-	iOption = argsList[0]
-	return mo.optionList[iOption][2]
+	return mo.optionList[argsList[0]][2]
 
 def getCustomMapOptionDescAt(argsList):
 	# Register selected options
@@ -4033,7 +4026,7 @@ def getCustomMapOptionDescAt(argsList):
 		if selectionID == 1:
 			return "Pangea"
 		if selectionID == 2:
-			return "Earthlike"
+			return "Continents"
 		if selectionID == 3:
 			return "Archipelago"
 		if selectionID == 4:
@@ -4571,9 +4564,10 @@ def addFeatures():
 			# Other features
 			if plot.getFeatureType() == FeatureTypes.NO_FEATURE:
 				for iI in xrange(GC.getNumFeatureInfos()):
-					if plot.canHaveFeature(iI):
-						if random() * 10000 < GC.getFeatureInfo(iI).getAppearanceProbability():
-							plot.setFeatureType(iI, -1)
+					if (GC.getFeatureInfo(iI).getAppearanceProbability() > -1
+					and random() * 10000 < GC.getFeatureInfo(iI).getAppearanceProbability()
+					and plot.canHaveFeature(iI)):
+						plot.setFeatureType(iI, -1)
 			# Forest and Jungle
 			if plot.getFeatureType() == FeatureTypes.NO_FEATURE and not plot.isPeak():
 				if pData[i] != WATER and tData[i] not in (DESERT, DUNES, SALT_FLATS, SCRUB, ICE):
@@ -4620,8 +4614,11 @@ def afterGeneration():
 def assignStartingPlots():
 	print "\n", "Starting plot finding"
 	timer = BugUtil.Timer('Starting plot finding')
-	spf.SetStartingPlots()
+	spf.SetStartingPlots() # Only assigns starting-plot flags to plots.
 	timer.log()
+	# Let dll delegate the starting plots to players
+	CyGlobalContext().getGame().assignStartingPlots(False, True)
+	# Release memory
 	global mc, em, cm, tm, lm, rm, pb
 	mc = em = cm = tm = lm = rm = pb = None
 	print "|---------------------------|\n|\t\t^^ All done ^^\t\t|\n|---------------------------|"
@@ -4677,28 +4674,6 @@ def GetIndex(x, y):
 		yy = y
 	return yy * iWidth + xx
 
-
-'''
-def GetOppositeDirection(direction):
-	opposite = 0
-	if direction == mc.N:
-		opposite = mc.S
-	elif direction == mc.S:
-		opposite = mc.N
-	elif direction == mc.E:
-		opposite = mc.W
-	elif direction == mc.W:
-		opposite = mc.E
-	elif direction == mc.NW:
-		opposite = mc.SE
-	elif direction == mc.SE:
-		opposite = mc.NW
-	elif direction == mc.SW:
-		opposite = mc.NE
-	elif direction == mc.NE:
-		opposite = mc.SW
-	return opposite
-'''
 
 def GetNeighbor(x, y, direction):
 	if direction == 0:

@@ -8,19 +8,19 @@
 // Copyright (C) 2016 by Giovanni Dicanio <giovanni.dicanio@gmail.com>
 //
 // The MIT License (MIT)
-// 
+//
 // Copyright (c) 2016 Giovanni Dicanio
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this softwareand associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and /or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions :
-// 
+//
 // The above copyright noticeand this permission notice shall be included in all
 // copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL THE
@@ -70,7 +70,7 @@ namespace win32
 		void Stop();
 
 		// Return elapsed time interval duration, in milliseconds.
-		// Can be called both after Stop() and before it. 
+		// Can be called both after Stop() and before it.
 		// (Start() must have been called to initiate time interval measurements).
 		double ElapsedMilliseconds() const;
 
@@ -96,9 +96,9 @@ namespace win32
 		// According to MSDN documentation:
 		// https://msdn.microsoft.com/en-us/library/windows/desktop/ms644905(v=vs.85).aspx
 		//
-		// The frequency of the performance counter is fixed at system boot and 
-		// is consistent across all processors. 
-		// Therefore, the frequency need only be queried upon application 
+		// The frequency of the performance counter is fixed at system boot and
+		// is consistent across all processors.
+		// Therefore, the frequency need only be queried upon application
 		// initialization, and the result can be cached.
 		//
 

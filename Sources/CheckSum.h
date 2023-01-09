@@ -9,60 +9,67 @@
 #ifndef CHECKSUM_H
 #define CHECKSUM_H
 
-inline void CheckSum(unsigned int& iSum, unsigned int iData)
+inline void CheckSum(uint32_t& iSum, uint32_t iData)
 {
 	iSum += iData;
 	iSum = (iSum >> 1) | (iSum << (sizeof(iSum)*8 - 1));  // rotate
 }
 
-inline void CheckSum(unsigned int& iSum, int iData)
+inline void CheckSum(uint32_t& iSum, int iData)
 {
-	CheckSum(iSum, (unsigned int) iData);
+	CheckSum(iSum, (uint32_t) iData);
 }
 
-inline void CheckSum(unsigned int& iSum, bool bData)
+inline void CheckSum(uint32_t& iSum, bool bData)
 {
-	CheckSum(iSum, (unsigned int) bData);
+	CheckSum(iSum, (uint32_t) bData);
 }
 
-inline void CheckSum(unsigned int& iSum, float fData)
+inline void CheckSum(uint32_t& iSum, float fData)
 {
 	// cppcheck-suppress invalidPointerCast
-	CheckSum(iSum, *(unsigned int *)&fData);
+	CheckSum(iSum, *(uint32_t*)&fData);
 }
 
-inline void CheckSum(unsigned int& iSum, const int* aiData, int iNum)
+inline void CheckSum(uint32_t& iSum, const int* aiData, int iNum)
 {
 	if (aiData)
 	{
 		for (int i = 0; i < iNum; i++)
-			CheckSum(iSum, (unsigned int)aiData[i]);
+			CheckSum(iSum, (uint32_t)aiData[i]);
 	}
 }
 
-inline void CheckSum(unsigned int& iSum, const bool* abData, int iNum)
+inline void CheckSum(uint32_t& iSum, const bool* abData, int iNum)
 {
 	if (abData)
 	{
 		for (int i = 0; i < iNum; i++)
-			CheckSum(iSum, (unsigned int)abData[i]);
+			CheckSum(iSum, (uint32_t)abData[i]);
 	}
 }
 
-inline void CheckSum(unsigned int& iSum, char cData)
+inline void CheckSum(uint32_t& iSum, char cData)
 {
-	CheckSum(iSum, (unsigned int) cData);
+	CheckSum(iSum, (uint32_t) cData);
 }
 
 template<typename T1, typename T2>
-inline void CheckSum(unsigned int& iSum, const std::pair<T1, T2>& p)
+inline void CheckSum(uint32_t& iSum, const std::pair<T1, T2>& p)
 {
 	CheckSum(iSum, p.first);
 	CheckSum(iSum, p.second);
 }
 
+template <typename T, size_t N>
+inline void CheckSum(uint32_t& iSum, const bst::array<T, N>& kArray)
+{
+	foreach_(const T& element, kArray)
+		CheckSum(iSum, element);
+}
+
 template<typename Cont>
-inline void CheckSumC(unsigned int& iSum, const Cont& kCont)
+inline void CheckSumC(uint32_t& iSum, const Cont& kCont)
 {
 	for (Cont::const_iterator it = kCont.begin(); it != kCont.end(); ++it)
 	{

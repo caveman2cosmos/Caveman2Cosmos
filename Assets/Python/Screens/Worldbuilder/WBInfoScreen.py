@@ -1,7 +1,6 @@
 from CvPythonExtensions import *
 import CvScreenEnums
 import WBPlotScreen
-import WBUnitScreen
 import WBCityEditScreen
 import WBPromotionScreen
 import WBPlayerScreen
@@ -49,7 +48,7 @@ class WBInfoScreen:
 		screen.addPanel("MainBG", u"", u"", True, False, -10, -10, screen.getXResolution() + 20, screen.getYResolution() + 20, PanelStyles.PANEL_STYLE_MAIN )
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
-		screen.setText("WBInfoExit", "Background", "<font=4>" + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
+		screen.setText("WBInfoExit", "Background", "<font=4>" + CyTranslator().getText("TXT_WORD_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
 
 		iX = 20
 		iY = 20
@@ -58,7 +57,7 @@ class WBInfoScreen:
 		screen.addDropDownBoxGFC("ItemType", iX, iY, iWidth/2, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		screen.addPullDownString("ItemType", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_UNIT", ()), 0, 0, 0 == iMode)
 		screen.addPullDownString("ItemType", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_PROMOTION", ()), 1, 1, 1 == iMode)
-		screen.addPullDownString("ItemType", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ()), 2, 2, 2 == iMode)
+		screen.addPullDownString("ItemType", CyTranslator().getText("TXT_KEY_WB_BUILDINGS", ()), 2, 2, 2 == iMode)
 		screen.addPullDownString("ItemType", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_SPECIALIST", ()), 3, 3, 3 == iMode)
 		screen.addPullDownString("ItemType", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_RELIGION", ()), 4, 4, 4 == iMode)
 		screen.addPullDownString("ItemType", CyTranslator().getText("TXT_KEY_CONCEPT_CORPORATIONS", ()), 5, 5, 5 == iMode)
@@ -188,7 +187,7 @@ class WBInfoScreen:
 				iUnit = lPlots[1]
 				pPlayer = GC.getPlayer(iPlayer)
 				pUnit = pPlayer.getUnit(iUnit)
-				if pUnit.isNone(): continue
+				if pUnit is None: continue
 				pPlot = pUnit.plot()
 				iX = pPlot.getX()
 				iY = pPlot.getY()
@@ -328,7 +327,7 @@ class WBInfoScreen:
 				if pPlayerX.isAlive():
 					for loopCity in pPlayerX.cities():
 						for iItemX in xrange(GC.getNumBuildingInfos()):
-							if loopCity.getNumBuilding(iItemX) > 0:
+							if loopCity.getNumRealBuilding(iItemX) > 0:
 								if iPlayerX == iSelectedPlayer:
 									lItems[iItemX][1] += 1
 								lItems[iItemX][2] += 1
@@ -524,7 +523,7 @@ class WBInfoScreen:
 			if iMode == 0:
 				pUnit = GC.getPlayer(lSelectedItem[0]).getUnit(lSelectedItem[1])
 				if pUnit:
-					WBUnitScreen.WBUnitScreen(self.WB).interfaceScreen(pUnit)
+					self.WB.goToSubScreen("UnitScreen", [pUnit])
 			elif iMode == 1:
 				pUnit = GC.getPlayer(lSelectedItem[0]).getUnit(lSelectedItem[1])
 				if pUnit:

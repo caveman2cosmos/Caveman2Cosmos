@@ -24,20 +24,13 @@
 		<DefineName>SAVE_VERSION</DefineName>
 		<iDefineIntVal>302</iDefineIntVal>
 	</Define>
-	<Define>
-		<DefineName>MAX_NUM_LANGUAGES</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
-	</Define>
-
 	<!-- GRAPHICS PAGING OPTIONS -->
-
 	<!-- Start paging out if memory exceeds this amount (in KB) -->
 	<Define>
 		<DefineName>MAX_DESIRED_MEMORY_USED</DefineName>
 		<iDefineIntVal>2000000</iDefineIntVal>
 	</Define>
-
-	<!-- If specified, instead of MAX_DESIRED_MEMORY_USED, a set of test 
+	<!-- If specified, instead of MAX_DESIRED_MEMORY_USED, a set of test
 		allocations will be performed to test for low memory conditions -->
 	<!-- Size of each test allocation -->
 	<!-- <Define>
@@ -49,16 +42,16 @@
 		<DefineName>PAGING_TEST_ALLOC_NUM</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define> -->
-
 	<!-- Maximum amount of time in a frame that can be spent on paging operations.
 		Higher values mean faster paging in at the expense of more stuttering.
-	 -->
+		Currently this define is unused
+	-->
 	<Define>
 		<DefineName>MAX_PAGING_FRAME_TIME_MS</DefineName>
 		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
 	<!-- Distance in tiles at which to page in different components -->
-	 <Define>
+	<Define>
 		<DefineName>PAGE_IN_DIST_SYMBOLS</DefineName>
 		<iDefineIntVal>999</iDefineIntVal>
 	</Define>
@@ -82,12 +75,10 @@
 		<DefineName>PAGE_IN_DIST_CITY</DefineName>
 		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
-	
 	<!-- GRAPHICS PAGING OPTIONS END -->
-
 	<!--
  Default uses the normal tag for the language set in Civ4's option dialog.
-	     All tags used in the text files are possible with English used as fallback when the chosen language is not available for some text.
+		All tags used in the text files are possible with English used as fallback when the chosen language is not available for some text.
 	-->
 	<Define>
 		<DefineName>LANGUAGE</DefineName>
@@ -118,7 +109,7 @@
 		<DefineTextVal>FEATURE_FALLOUT</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>CAPITAL_BUILDING</DefineName><!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
+		<DefineName>CAPITAL_BUILDING</DefineName> <!-- Currently unused, consider replacing buildingtag bCaptial with this global define; we only have one capital building anyhow.-->
 		<DefineTextVal>BUILDING_PALACE</DefineTextVal>
 	</Define>
 	<Define>
@@ -282,32 +273,8 @@
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>PLOT_VISIBILITY_RANGE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>UNIT_VISIBILITY_RANGE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>MAX_UNIT_VISIBILITY_RANGE</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>PEAK_SEE_FROM_CHANGE</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>PEAK_SEE_THROUGH_CHANGE</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>HILLS_SEE_FROM_CHANGE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>HILLS_SEE_THROUGH_CHANGE</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
+		<iDefineIntVal>8</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MAX_YIELD_STACK</DefineName>
@@ -346,16 +313,46 @@
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Starting/minimum culture on city tile -->
 		<DefineName>FREE_CITY_CULTURE</DefineName>
 		<iDefineIntVal>2</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Does not apply on 1-tile start gameoption; places this much culture
+			on adjacent tiles when a city is founded. -->
 		<DefineName>FREE_CITY_ADJACENT_CULTURE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>CITY_FREE_CULTURE_GROWTH_FACTOR</DefineName>
-		<iDefineIntVal>22</iDefineIntVal>
+		<!-- Goes from 0 to 100. At 0, a city will put equal culture on all tiles in its range.
+			At 100, it will put 1 culture (minimum) at max range tiles and 100% on city center. -->
+		<DefineName>CITY_CULTURE_DENSITY_FACTOR</DefineName>
+		<iDefineIntVal>50</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Each turn, culture on each plot will decay by this percent.
+			E.g. value of 10 means 50 culture loses 5, becomes 45.
+			Don't use 0 or 100, but between is alright. -->
+		<DefineName>TILE_CULTURE_DECAY_PERCENT</DefineName>
+		<iDefineIntVal>2</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- Each turn, culture on each plot will decay by this flat value,
+			after the percent decay. E.g. value of 1 means 45 becomes 44. -->
+		<DefineName>TILE_CULTURE_DECAY_CONSTANT</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
+	<Define>
+		<!-- The relative percent of culture by which another player must surpass
+			a player with fixed borders before a tile is flipped from culture only.
+			EX: A tile owned by player with fixed borders civic has 40 culture.
+			200 (default) = Needs twice the owner's culture in order to flip (81).
+			100 = No effect from fixed borders on tile flipping; 41 culture will flip.
+			100000 = Effectively infinitely powerful fixed borders; 100x culture to flip (40001).
+			NOTE: Cultural flipping of tiles is the same mechanism by which cities revolt from culture,
+			so high values here will make cultural revolts in fixed border civilizations much harder to obtain. -->
+		<DefineName>FIXED_BORDERS_CULTURE_RATIO_PERCENT</DefineName>
+		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>GREAT_WORKS_CULTURE_TURNS</DefineName>
@@ -378,72 +375,20 @@
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>NUM_OR_TECH_PREREQS</DefineName>
-		<iDefineIntVal>6</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_AND_TECH_PREREQS</DefineName>
-		<iDefineIntVal>6</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_UNIT_AND_TECH_PREREQS</DefineName>
-		<iDefineIntVal>4</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_BUILDING_AND_TECH_PREREQS</DefineName>
-		<iDefineIntVal>4</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>BASE_RESEARCH_RATE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_UNIT_PREREQ_OR_BONUSES</DefineName>
-		<iDefineIntVal>25</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_BUILDING_PREREQ_OR_BONUSES</DefineName>
-		<iDefineIntVal>25</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_CORPORATION_PREREQ_BONUSES</DefineName>
-		<iDefineIntVal>25</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>NUM_ROUTE_PREREQ_OR_BONUSES</DefineName>
-		<iDefineIntVal>25</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_WORLD_WONDERS_PER_CITY</DefineName>
-		<iDefineIntVal>14</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_TEAM_WONDERS_PER_CITY</DefineName>
-		<iDefineIntVal>16</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_NATIONAL_WONDERS_PER_CITY</DefineName>
-		<iDefineIntVal>31</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_NATIONAL_WONDERS_PER_CITY_FOR_OCC</DefineName>
-		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INITIAL_CITY_POPULATION</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>INITIAL_AI_CITY_PRODUCTION</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>BASE_CITY_GROWTH_THRESHOLD</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
+		<iDefineIntVal>124</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CITY_GROWTH_MULTIPLIER</DefineName>
-		<iDefineIntVal>24</iDefineIntVal>
+		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FOOD_CONSUMPTION_PER_POPULATION</DefineName>
@@ -454,12 +399,8 @@
 		<iDefineIntVal>20</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>NEW_HURRY_MODIFIER</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>CONSCRIPT_MIN_CITY_POPULATION</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
+		<iDefineIntVal>8</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CONSCRIPT_POPULATION_PER_COST</DefineName>
@@ -472,14 +413,6 @@
 	<Define>
 		<DefineName>FRESH_WATER_HEALTH_CHANGE</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>POWER_HEALTH_CHANGE</DefineName>
-		<iDefineIntVal>-2</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>DIRTY_POWER_HEALTH_CHANGE</DefineName>
-		<iDefineIntVal>-4</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_DISTANCE_MAINTENANCE_PER_100_PLOTS</DefineName>
@@ -587,7 +520,7 @@
 	</Define>
 	<Define>
 		<DefineName>GREAT_GENERALS_THRESHOLD</DefineName>
-		<iDefineIntVal>30</iDefineIntVal>
+		<iDefineIntVal>11</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BASE_SPY_SABOTAGE_COST</DefineName>
@@ -734,14 +667,6 @@
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>ESCAPE_MODIFIER_PER_TURN</DefineName>
-		<iDefineIntVal>4</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>ESTABLISH_MODIFIER_PER_TURN</DefineName>
-		<iDefineIntVal>2</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>MAX_FORTIFY_TURNS</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
@@ -842,10 +767,6 @@
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>GLOBAL_WARMING_POWER_WEIGHT</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>GLOBAL_WARMING_NUKE_WEIGHT</DefineName>
 		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
@@ -890,22 +811,28 @@
 		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- 0 no effect, 100 doubles effect of culture ratio on liklihood of culture revolt. -->
 		<DefineName>REVOLT_TOTAL_CULTURE_MODIFIER</DefineName>
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- 0 no effect, 100 = double liklihood of revolt if cultural attacker has state religion -->
 		<DefineName>REVOLT_OFFENSE_STATE_RELIGION_MODIFIER</DefineName>
 		<iDefineIntVal>100</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- 0 no effect, -50 = halves liklihood of revolt if cultural defender has state religion -->
 		<DefineName>REVOLT_DEFENSE_STATE_RELIGION_MODIFIER</DefineName>
 		<iDefineIntVal>-50</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- This is the chance to *test* whether or not a city revolts, not
+			the liklihood of it revolting at all. Also scaled by gamespeed in dll -->
 		<DefineName>REVOLT_TEST_PROB</DefineName>
 		<iDefineIntVal>10</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- How many revolts required before city flips on i+1 revolt -->
 		<DefineName>NUM_WARNING_REVOLTS</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
@@ -966,10 +893,6 @@
 		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>FORCED_WAR_WAR_WEARINESS_MODIFIER</DefineName>
-		<iDefineIntVal>-50</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>MULTIPLAYER_WAR_WEARINESS_MODIFIER</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
@@ -999,7 +922,7 @@
 	</Define>
 	<Define>
 		<DefineName>UNIT_PRODUCTION_PERCENT_SM</DefineName>
-		<iDefineIntVal>75</iDefineIntVal>
+		<iDefineIntVal>60</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>PROJECT_PRODUCTION_PERCENT</DefineName>
@@ -1007,7 +930,7 @@
 	</Define>
 	<Define>
 		<DefineName>TECH_COST_MODIFIER</DefineName>
-		<iDefineIntVal>600</iDefineIntVal>
+		<iDefineIntVal>500</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>MAXED_UNIT_GOLD_PERCENT</DefineName>
@@ -1042,6 +965,11 @@
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
+		<!-- Toffer - Perhaps make this a handicap tag,
+			AI has strong combat mod against barbs on high difficulty,
+			so why not allow NPC to be more on par with tech leader on high difficulty.
+			This can never give barbs techs that no other player has, it just determines how fast they catch up.
+		-->
 		<DefineName>BARBARIAN_FREE_TECH_PERCENT</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
@@ -1084,10 +1012,6 @@
 	<Define>
 		<DefineName>EXPERIENCE_FROM_WITHDRAWL</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>MAX_EXPERIENCE_AFTER_UPGRADE</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>BUILDING_PRODUCTION_DECAY_TIME</DefineName>
@@ -1139,11 +1063,11 @@
 	</Define>
 	<!--
  How is visual city size computed from the real city size?
-	     Two approaches are possible:
-	         METHOD_EXPONENTIAL
-	         METHOD_LINMAP
-	     Set the following GAME_CITY_SIZE_METHOD to one of the above tags
-	     to control how big your cities look in the game world.
+		Two approaches are possible:
+			METHOD_EXPONENTIAL
+			METHOD_LINMAP
+		Set the following GAME_CITY_SIZE_METHOD to one of the above tags
+		to control how big your cities look in the game world.
 	-->
 	<Define>
 		<DefineName>GAME_CITY_SIZE_METHOD</DefineName>
@@ -1259,9 +1183,9 @@
 	</Define>
 	<!--
  Controlling the camera's maximum distance is a bit tricky since differently-sized maps need the camera to move back different amounts
-	     There is a lower-bound on the maximum distance, specified below. Thus, the camera will never get any closer than 7000 units.
-	     To actually tweak the apparent-size of the globe when fully-back, you need to go into CIV4DetailManager.XML  and adjust the
-	     CAMERA_MAX_DISTANCE_FADER value. Because this variable is in the DetailManager XML, your changes will go into effect without restarting the game.
+		There is a lower-bound on the maximum distance, specified below. Thus, the camera will never get any closer than 7000 units.
+		To actually tweak the apparent-size of the globe when fully-back, you need to go into CIV4DetailManager.XML and adjust the
+		CAMERA_MAX_DISTANCE_FADER value. Because this variable is in the DetailManager XML, your changes will go into effect without restarting the game.
 	-->
 	<Define>
 		<DefineName>CAMERA_SMALLEST_MAX_DISTANCE</DefineName>
@@ -1602,10 +1526,6 @@
 		<fDefineFloatVal>0.43</fDefineFloatVal>
 	</Define>
 	<Define>
-		<DefineName>CITY_SCREEN_FOG_ENABLED</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>AI_CAN_DISBAND_UNITS</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
@@ -1632,10 +1552,6 @@
 	<Define>
 		<DefineName>LAND_UNITS_CAN_ATTACK_WATER_CITIES</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>CITY_MAX_NUM_BUILDINGS</DefineName>
-		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>RANGED_ATTACKS_USE_MOVES</DefineName>
@@ -1686,10 +1602,6 @@
 		<iDefineIntVal>75</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>ADVANCED_START_CULTURE_COST_INCREASE</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>ADVANCED_START_VISIBILITY_COST</DefineName>
 		<iDefineIntVal>1</iDefineIntVal>
 	</Define>
@@ -1716,10 +1628,6 @@
 	<Define>
 		<DefineName>FIRST_EVENT_DELAY_TURNS</DefineName>
 		<iDefineIntVal>20</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>CIVILOPEDIA_SHOW_ACTIVE_CIVS_ONLY</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>USE_MODDERS_PLAYEROPTION_1</DefineName>
@@ -1752,10 +1660,6 @@
 	<Define>
 		<DefineName>USE_SPIES_NO_ENTER_BORDERS</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>BONUS_OBSOLETE_VALUE_MODIFIER</DefineName>
-		<iDefineIntVal>150</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>FORCE_UNOWNED_CITY_TIMER</DefineName>
@@ -1826,15 +1730,11 @@
 	</Define>
 	<Define>
 		<DefineName>TRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT</DefineName>
-		<iDefineIntVal>-70</iDefineIntVal>
+		<iDefineIntVal>-200</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>CIVIC_ANARCHY_QTY_DISCOUNT</DefineName>
 		<iDefineIntVal>5</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>UPSCALED_RESEARCH_COST_MODIFIER</DefineName>
-		<iDefineIntVal>40</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>INFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT</DefineName>
@@ -1843,5 +1743,15 @@
 	<Define>
 		<DefineName>ESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT</DefineName>
 		<iDefineIntVal>25</iDefineIntVal>
+	</Define>
+	<!-- A way to directly change scaling of national culture requirement to achieve next level -->
+	<!-- 100 is default, 50 would be requirement for next level growing 2x slower, meaning more traits gained in same time frame. -->
+	<Define>
+		<DefineName>NEXT_TRAIT_CULTURE_REQ_PERCENT</DefineName>
+		<iDefineIntVal>100</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>CITY_OUTPUT_HISTORY_SIZE</DefineName>
+		<iDefineIntVal>5</iDefineIntVal>
 	</Define>
 </Civ4Defines>

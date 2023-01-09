@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
-        <UnitInfo>
+		<UnitInfo>
 			<Type>UNIT_RAFT</Type>
 			<Combat>UNITCOMBAT_WOODEN_SHIPS</Combat>
 			<SubCombatTypes>
@@ -29,7 +29,6 @@
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_RAFT</Description>
 			<Civilopedia>TXT_KEY_UNIT_RAFT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_RAFT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -60,7 +59,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_RAFT</UnitType>
 			</SupersedingUnits>
@@ -145,7 +144,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CANOE</Description>
 			<Civilopedia>TXT_KEY_UNIT_CANOE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CANOE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -158,6 +156,10 @@
 				<UnitType>UNIT_NEANDERTHAL_CANOE</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
 				<UnitAI>
 					<UnitAIType>UNITAI_ASSAULT_SEA</UnitAIType>
 					<bUnitAI>1</bUnitAI>
@@ -175,7 +177,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_CANOE</UnitType>
 			</SupersedingUnits>
@@ -257,7 +259,6 @@
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GALLEY</Description>
 			<Civilopedia>TXT_KEY_UNIT_GALLEY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GALLEY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -393,7 +394,6 @@
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_COG</Description>
 			<Civilopedia>TXT_KEY_UNIT_COG_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_COG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -520,7 +520,6 @@
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FLUYT</Description>
 			<Civilopedia>TXT_KEY_UNIT_FLUYT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FLUYT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -557,11 +556,8 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_ASTROLABE</PrereqTech>
-			<TechTypes>
-				<PrereqTech>TECH_GUNPOWDER</PrereqTech>
-			</TechTypes>
-			<iCost>370</iCost>
+			<PrereqTech>TECH_COMPASS</PrereqTech>
+			<iCost>340</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
@@ -626,7 +622,6 @@
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GALLEON</Description>
 			<Civilopedia>TXT_KEY_UNIT_GALLEON_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GALLEON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -729,7 +724,6 @@
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PADDLE_STEAMER</Description>
 			<Civilopedia>TXT_KEY_UNIT_PADDLE_STEAMER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PADDLE_STEAMER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -809,7 +803,6 @@
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TRANSPORT</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRANSPORT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TRANSPORT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -897,7 +890,6 @@
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LANDING_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_LANDING_SHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LANDING_SHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -989,7 +981,6 @@
 			<SeeInvisible>INVISIBLE_STEALTH</SeeInvisible>
 			<Description>TXT_KEY_UNIT_STILETTO_BOAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_STILETTO_BOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STILETTO_BOAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1087,7 +1078,6 @@
 			<SeeInvisible>INVISIBLE_STEALTH</SeeInvisible>
 			<Description>TXT_KEY_UNIT_FUSION_TRANSPORT</Description>
 			<Civilopedia>TXT_KEY_UNIT_FUSION_TRANSPORT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FUSION_TRANSPORT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1190,7 +1180,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WAR_CANOE</Description>
 			<Civilopedia>TXT_KEY_UNIT_WAR_CANOE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WAR_CANOE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1216,7 +1205,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_WAR_CANOE</UnitType>
 			</SupersedingUnits>
@@ -1297,7 +1286,6 @@
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WARGALLEY</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARGALLEY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WARGALLEY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1440,7 +1428,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TRIREME</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRIREME_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TRIREME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1551,7 +1538,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_QUINQUEREME2</Description>
 			<Civilopedia>TXT_KEY_UNIT_QUINQUEREME2_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_QUINQUEREME2_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1655,7 +1641,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_QUINQUEREME</Description>
 			<Civilopedia>TXT_KEY_UNIT_QUINQUEREME_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_QUINQUEREME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1759,7 +1744,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DROMON_FIRE_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_DROMON_FIRE_SHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DROMON_FIRE_SHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1870,7 +1854,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DECAREME</Description>
 			<Civilopedia>TXT_KEY_UNIT_DECAREME_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DECAREME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -1977,7 +1960,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GALLEASS</Description>
 			<Civilopedia>TXT_KEY_UNIT_GALLEASS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GALLEASS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -2138,7 +2120,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BRIGANTINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARAVEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BRIGANTINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2207,7 +2188,6 @@
 			</BonusProductionModifiers>
 			<iBombardRate>7</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>1</iAsset>
@@ -2256,7 +2236,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MANOWAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_MANOWAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MANOWAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -2385,7 +2364,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SHIP_OF_THE_LINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_SHIP_OF_THE_LINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SHIP_OF_THE_LINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -2511,7 +2489,6 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_IRONCLAD</Description>
 			<Civilopedia>TXT_KEY_UNIT_IRONCLAD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_IRONCLAD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -2622,7 +2599,6 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PRE_DREADNOUGHT</Description>
 			<Civilopedia>TXT_KEY_UNIT_PRE_DREADNOUGHT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PRE_DREADNOUGHT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -2726,7 +2702,6 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DREADNOUGHT_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_DREADNOUGHT_SHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DREADNOUGHT_SHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -2828,7 +2803,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BATTLECRUISER</Description>
 			<Civilopedia>TXT_KEY_UNIT_BATTLECRUISER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BATTLECRUISER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -2930,7 +2904,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WW2_BATTLESHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_WW2_BATTLESHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WW2_BATTLESHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -3031,7 +3004,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BATTLESHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_BATTLESHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BATTLESHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -3131,7 +3103,6 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CRUISER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CRUISER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CRUISER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -3192,7 +3163,6 @@
 			</UnitCombatMods>
 			<iBombardRate>18</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_SEAPLANE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_SEAPLANE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -3239,7 +3209,6 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HEAVY_CRUISER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CRUISER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CRUISER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -3300,7 +3269,6 @@
 			</UnitCombatMods>
 			<iBombardRate>20</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_SEAPLANE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_SEAPLANE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -3350,7 +3318,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_AEGIS_CRUISER</Description>
 			<Civilopedia>TXT_KEY_UNIT_AEGIS_CRUISER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_AEGIS_CRUISER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -3478,7 +3445,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_LITTORAL_COMBAT_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_LITTORAL_COMBAT_SHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LITTORAL_COMBAT_SHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -3558,7 +3524,6 @@
 			</UnitCombatMods>
 			<iBombardRate>30</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>3</iCargo>
 			<iAsset>6</iAsset>
@@ -3608,7 +3573,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MISSILE_CRUISER</Description>
 			<Civilopedia>TXT_KEY_UNIT_MISSILE_CRUISER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MISSILE_CRUISER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -3668,7 +3632,6 @@
 			</UnitCombatMods>
 			<iBombardRate>22</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>4</iCargo>
 			<iAsset>4</iAsset>
@@ -3721,7 +3684,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_FUSION_CRUISER</Description>
 			<Civilopedia>TXT_KEY_UNIT_FUSION_CRUISER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FUSION_CRUISER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -3804,7 +3766,6 @@
 			</UnitCombatMods>
 			<iBombardRate>30</iBombardRate>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>6</iCargo>
 			<iAsset>4</iAsset>
@@ -3857,7 +3818,6 @@
 			<SeeInvisible>INVISIBLE_STEALTH</SeeInvisible>
 			<Description>TXT_KEY_UNIT_FUSION_BATTLESHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_FUSION_BATTLESHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FUSION_BATTLESHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -3950,7 +3910,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KAYAK</Description>
 			<Civilopedia>TXT_KEY_UNIT_KAYAK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KAYAK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -3978,7 +3937,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_OPTICS</ObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_KAYAK</UnitType>
 			</SupersedingUnits>
@@ -4065,7 +4024,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_OUTRIGGER</Description>
 			<Civilopedia>TXT_KEY_UNIT_OUTRIGGER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OUTRIGGER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bNoBadGoodies>1</bNoBadGoodies>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -4092,7 +4050,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_COMPASS</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANOEBUILDERS_HUT</BuildingType>
 			</PrereqAndBuildings>
@@ -4196,7 +4154,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CARAVEL</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARAVEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CARAVEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -4251,7 +4208,6 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>1</iAsset>
@@ -4301,7 +4257,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SLOOP</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARAVEL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SLOOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -4425,7 +4380,6 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FRIGATE</Description>
 			<Civilopedia>TXT_KEY_UNIT_FRIGATE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FRIGATE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4474,9 +4428,9 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_NAVAL_CANNON</PrereqTech>
+			<PrereqTech>TECH_NAVIGATION</PrereqTech>
 			<TechTypes>
-				<PrereqTech>TECH_NAVIGATION</PrereqTech>
+				<PrereqTech>TECH_NAVAL_CANNON</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -4545,7 +4499,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_IRON_FRIGATE</Description>
 			<Civilopedia>TXT_KEY_UNIT_IRON_FRIGATE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_IRON_FRIGATE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4664,7 +4617,6 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_STEAM_DESTROYER</Description>
 			<Civilopedia>TXT_KEY_UNIT_DESTROYER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STEAM_DESTROYER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4765,7 +4717,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_WW1_DESTROYER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WW1_DESTROYER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WW1_DESTROYER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4871,7 +4822,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_DESTROYER</Description>
 			<Civilopedia>TXT_KEY_UNIT_DESTROYER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DESTROYER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -4988,7 +4938,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_MODERN_FRIGATE</Description>
 			<Civilopedia>TXT_KEY_UNIT_MODERN_FRIGATE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MODERN_FRIGATE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -5091,7 +5040,6 @@
 			<SeeInvisible>INVISIBLE_STEALTH</SeeInvisible>
 			<Description>TXT_KEY_UNIT_STEALTH_DESTROYER</Description>
 			<Civilopedia>TXT_KEY_UNIT_STEALTH_DESTROYER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STEALTH_DESTROYER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -5201,7 +5149,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_UNMANNED_DESTROYER</Description>
 			<Civilopedia>TXT_KEY_UNIT_UNMANNED_DESTROYER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_UNMANNED_DESTROYER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
@@ -5243,18 +5190,10 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_URANIUM</BonusType>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_STEEL_WARES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ALUMINUM_WARES</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqBonuses>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
+			</PrereqBonuses>
 			<iCost>3285</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>6</iBaseUpkeep>
@@ -5348,7 +5287,6 @@
 			<SeeInvisible>INVISIBLE_STEALTH</SeeInvisible>
 			<Description>TXT_KEY_UNIT_FF_DESTROYER_I</Description>
 			<Civilopedia>TXT_KEY_UNIT_FF_DESTROYER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FF_DESTROYER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -5472,7 +5410,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_SUBMARINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_SUBMARINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SUBMARINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -5535,7 +5472,7 @@
 				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
-			<iCost>1290</iCost>
+			<iCost>1287</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>6</iMoves>
@@ -5561,7 +5498,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -5609,7 +5545,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_ATTACK_SUBMARINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_ATTACK_SUBMARINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ATTACK_SUBMARINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -5710,7 +5645,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -5758,7 +5692,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_NUCLEAR_SUBMARINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_NUCLEAR_SUBMARINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NUCLEAR_SUBMARINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -5812,7 +5745,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_GUIDED_WEAPONS</PrereqTech>
 			<BonusType>BONUS_STEEL_WARES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_URANIUM</BonusType>
@@ -5859,7 +5792,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>5</iCargo>
 			<iAsset>4</iAsset>
@@ -5907,7 +5839,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_STEALTH_SUBMARINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_STEALTH_SUBMARINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STEALTH_SUBMARINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -6011,7 +5942,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>3</iCargo>
 			<iAsset>4</iAsset>
@@ -6060,7 +5990,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_UNMANNED_SUBMARINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_UNMANNED_SUBMARINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_UNMANNED_SUBMARINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -6174,7 +6103,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>
@@ -6223,7 +6151,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_FUSION_SUBMARINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_FUSION_SUBMARINE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FUSION_SUBMARINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -6327,7 +6254,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_MISSILE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_MISSILE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_AIR</DomainCargo>
 			<iCargo>5</iCargo>
 			<iAsset>4</iAsset>
@@ -6374,7 +6300,6 @@
 			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EARLY_CARRIER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARRIER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CARRIER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -6398,7 +6323,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			</PrereqBonuses>
-			<iCost>1300</iCost>
+			<iCost>1237</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -6491,7 +6416,6 @@
 			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CARRIER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARRIER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CARRIER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -6516,7 +6440,7 @@
 				<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 				<BonusType>BONUS_URANIUM</BonusType>
 			</PrereqBonuses>
-			<iCost>1660</iCost>
+			<iCost>1600</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -6609,7 +6533,6 @@
 			<DefaultUnitAI>UNITAI_CARRIER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NUCLEAR_CARRIER</Description>
 			<Civilopedia>TXT_KEY_UNIT_NUCLEAR_CARRIER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CARRIER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -6634,7 +6557,7 @@
 				<BonusType>BONUS_STEEL_WARES</BonusType>
 				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
 			</PrereqBonuses>
-			<iCost>1920</iCost>
+			<iCost>1843</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>6</iMoves>
@@ -6738,7 +6661,6 @@
 			<SeeInvisible>INVISIBLE_STEALTH</SeeInvisible>
 			<Description>TXT_KEY_UNIT_FUSION_CARRIER</Description>
 			<Civilopedia>TXT_KEY_UNIT_FUSION_CARRIER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_FUSION_CARRIER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -6755,7 +6677,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
-			<iCost>7100</iCost>
+			<iCost>6818</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>3</iBaseUpkeep>
 			<iMoves>8</iMoves>
@@ -6857,7 +6779,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SLOOP_OF_WAR</Description>
 			<Civilopedia>TXT_KEY_UNIT_SLOOP_OF_WAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SLOOP_OF_WAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -6946,7 +6867,6 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_QSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_QSHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_QSHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -6954,9 +6874,6 @@
 			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
-			<UnitUpgrades>
-				<UnitType>UNIT_CG_CUTTER</UnitType>
-			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
@@ -7043,7 +6960,6 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CG_CUTTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CG_CUTTER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CG_CUTTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -7141,7 +7057,6 @@
 			<DefaultUnitAI>UNITAI_PIRATE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DRAGON_SHIP_PIRATE</Description>
 			<Civilopedia>TXT_KEY_UNIT_DRAGON_SHIP_PIRATE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DRAGON_SHIP_PIRATE_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_PIRATE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -7353,7 +7268,6 @@
 			<DefaultUnitAI>UNITAI_PIRATE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BARBARY_CORSAIR</Description>
 			<Civilopedia>TXT_KEY_UNIT_BARBARY_CORSAIR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BARBARY_CORSAIR_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_PIRATE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -7500,7 +7414,6 @@
 			<DefaultUnitAI>UNITAI_PIRATE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PRIVATEER</Description>
 			<Civilopedia>TXT_KEY_UNIT_PRIVATEER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PRIVATEER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
@@ -7647,7 +7560,6 @@
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TORPEDO_BOAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_TORPEDO_BOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TORPEDO_BOAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -7659,6 +7571,10 @@
 				<UnitType>UNIT_STEALTH_DESTROYER</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_RESERVE_SEA</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
 				<UnitAI>
 					<UnitAIType>UNITAI_PIRATE_SEA</UnitAIType>
 					<bUnitAI>1</bUnitAI>
@@ -7799,7 +7715,6 @@
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_UBOAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_UBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_UBOAT_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_PIRATE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -7940,7 +7855,6 @@
 			<DefaultUnitAI>UNITAI_PIRATE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ASSAULT_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASSAULT_SHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ASSAULT_SHIP_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_PIRATE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
@@ -8074,7 +7988,6 @@
 			<DefaultUnitAI>UNITAI_PIRATE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_UNMANNED_PIRATE_SKIFF</Description>
 			<Civilopedia>TXT_KEY_UNIT_UNMANNED_PIRATE_SKIFF_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_UNMANNED_PIRATE_SKIFF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
@@ -8115,18 +8028,10 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_DISASTER_ROBOTS</PrereqTech>
 			<BonusType>BONUS_URANIUM</BonusType>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_STEEL_WARES</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_ALUMINUM_WARES</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqBonuses>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_ALUMINUM_WARES</BonusType>
+			</PrereqBonuses>
 			<iCost>2308</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>4</iBaseUpkeep>
@@ -8199,6 +8104,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WOODEN_SHIPS</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_PLUS_SHIELD</SubCombatType>
@@ -8223,7 +8129,6 @@
 			<DefaultUnitAI>UNITAI_MERCHANT</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MERCHANT_FLEET</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MERCHANT_FLEET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bRivalTerritory>1</bRivalTerritory>
 			<UnitAIs>
@@ -8232,12 +8137,6 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>1</iFlavor>
-				</Flavor>
-			</Flavors>
 			<iCost>-1</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -8322,6 +8221,7 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
+			<NotGameOption>GAMEOPTION_NO_EVENTS</NotGameOption>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_COG_MERCHANT</Type>
@@ -8353,7 +8253,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_COG_MERCHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_COG_MERCHANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_COG_MERCHANT_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_MERCHANT_SHIP_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -8368,6 +8267,10 @@
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK_SEA</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_MERCHANT</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -8376,7 +8279,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_OPTICS</ForceObsoleteTech>
+			<ObsoleteTech>TECH_ASTROLABE</ObsoleteTech>
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_PIRACY</PrereqTech>
@@ -8391,7 +8294,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>95</iCost>
+			<iCost>133</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
@@ -8482,7 +8385,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CARRACK_MERCHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARRACK_MERCHANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CARRACK_MERCHANT_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_MERCHANT_SHIP_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -8505,7 +8407,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_CHEMISTRY</ForceObsoleteTech>
+			<ObsoleteTech>TECH_CHEMISTRY</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
@@ -8520,7 +8422,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>250</iCost>
+			<iCost>308</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -8573,7 +8475,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CLIPPER_MERCHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_CLIPPER_MERCHANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CLIPPER_MERCHANT_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_MERCHANT_SHIP_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -8596,7 +8497,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_SUBMARINE_WARFARE</ForceObsoleteTech>
+			<ObsoleteTech>TECH_SUBMARINE_WARFARE</ObsoleteTech>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_SHIPWRIGHT</BuildingType>
 			</PrereqAndBuildings>
@@ -8611,7 +8512,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>300</iCost>
+			<iCost>372</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>4</iMoves>
@@ -8660,7 +8561,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LIBERTY_MERCHANT</Description>
 			<Civilopedia>TXT_KEY_UNIT_LIBERTY_MERCHANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LIBERTY_MERCHANT_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_MERCHANT_SHIP_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -8683,7 +8583,7 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<ForceObsoleteTech>TECH_CONGLOMERATES</ForceObsoleteTech>
+			<ObsoleteTech>TECH_CONGLOMERATES</ObsoleteTech>
 			<PrereqTech>TECH_SUBMARINE_WARFARE</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
 			<PrereqBonuses>
@@ -8699,7 +8599,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>620</iCost>
+			<iCost>773</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -8750,7 +8650,6 @@
 			<DefaultUnitAI>UNITAI_EXPLORE_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CARGO_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_CARGO_SHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CARGO_SHIP_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_MERCHANT_SHIP_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -8788,7 +8687,7 @@
 					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iCost>740</iCost>
+			<iCost>923</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -8838,7 +8737,6 @@
 			<DefaultUnitAI>UNITAI_HEALER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HOSPITAL_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_HOSPITAL_SHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HOSPITAL_SHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -8865,6 +8763,10 @@
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
+					<UnitAIType>UNITAI_HEALER</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
 					<UnitAIType>UNITAI_HEALER_SEA</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
@@ -8873,10 +8775,22 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+			<TrainCondition>
+				<Or>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_HOSPITAL</ID>
+					</Has>
+					<Has>
+						<GOMType>GOM_BUILDING</GOMType>
+						<ID>BUILDING_HEALTHCARE_MEGACOMPLEX</ID>
+					</Has>
+				</Or>
+			</TrainCondition>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DRYDOCK</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
@@ -8964,7 +8878,6 @@
 			<DefaultUnitAI>UNITAI_HEALER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HOSPITAL_SHIP_2</Description>
 			<Civilopedia>TXT_KEY_UNIT_HOSPITAL_SHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HOSPITAL_SHIP_2_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -8999,9 +8912,12 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HOSPITAL</BuildingType>
 				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
 			</PrereqAndBuildings>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_HOSPITAL</BuildingType>
+				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
 			<BonusType>BONUS_PETROLEUM_PRODUCTS</BonusType>
 			<PrereqBonuses>

@@ -35,9 +35,8 @@ class GoogleSp:
         user_agent = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36'
         headers = {'User-Agent':user_agent,}
         req = urllib.request.Request(url, None, headers)
-        page = urllib.request.urlopen(req)
-        html = str(page.read().decode())
-        page.close()
+        with urllib.request.urlopen(req) as page:
+            html = str(page.read().decode())
         return html
 
 # p.s. Yes, I'm using hard tabs for indentation.  bite me

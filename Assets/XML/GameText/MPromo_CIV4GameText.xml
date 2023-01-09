@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CARAVAN_CIRCLE_THE_WAGONS</Tag>
+		<English>Circle the Wagons</English>
+		<French>Serrer les coudes</French>
+		<Russian>Êðóã ïîâîçîê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CARAVAN_GUARD_I</Tag>
+		<English>Caravan Guards I</English>
+		<French>Gardes de caravane I</French>
+		<Russian>Ñòðàæ êàðàâàíà I</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CARAVAN_GUARD_II</Tag>
+		<English>Caravan Guards II</English>
+		<French>Gardes de caravane II</French>
+		<Russian>Ñòðàæ êàðàâàíà II</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CARAVAN_GUARD_III</Tag>
+		<English>Caravan Guards III</English>
+		<French>Gardes de caravane III</French>
+		<Russian>Ñòðàæ êàðàâàíà III</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CARAVAN_MARINES_I</Tag>
+		<English>Caravan Marines I</English>
+		<French>Garde-côtes de caravane I</French>
+		<Russian>Ìîðñêîé êàðàâàí I</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CARAVAN_MARINES_II</Tag>
+		<English>Caravan Marines II</English>
+		<French>Garde-côtes de caravane II</French>
+		<Russian>Ìîðñêîé êàðàâàí II</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CARAVAN_MARINES_III</Tag>
+		<English>Caravan Marines III</English>
+		<French>Garde-côtes de caravane III</French>
+		<Russian>Ìîðñêîé êàðàâàí III</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CARAVAN_MOVEMENT_I</Tag>
+		<English>Caravan Land Movement I</English>
+		<French>Dépl. terrestre des caravanes I</French>
+		<Russian>Ïðîâîäíèê êàðàâàíîâ I</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CARAVAN_MOVEMENT_II</Tag>
+		<English>Caravan Land Movement II</English>
+		<French>Dépl. terrestre des caravanes II</French>
+		<Russian>Ïðîâîäíèê êàðàâàíîâ II</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CARAVAN_MOVEMENT_III</Tag>
+		<English>Caravan Land Movement III</English>
+		<French>Dépl. terrestre des caravanes III</French>
+		<Russian>Ïðîâîäíèê êàðàâàíîâ III</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CARAVAN_SEA_MOVEMENT_I</Tag>
+		<English>Caravan Sea Movement I</English>
+		<French>Dépl. en mer des caravanes I</French>
+		<Russian>Ïðîâîäíèê ìîðñêèõ êàðàâàíîâ I</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CARAVAN_SEA_MOVEMENT_II</Tag>
+		<English>Caravan Sea Movement II</English>
+		<French>Dépl. en mer des caravanes II</French>
+		<Russian>Ïðîâîäíèê ìîðñêèõ êàðàâàíîâ II</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CARAVAN_SEA_MOVEMENT_III</Tag>
+		<English>Caravan Sea Movement III</English>
+		<French>Dépl. en mer des caravanes III</French>
+		<Russian>Ïðîâîäíèê ìîðñêèõ êàðàâàíîâ III</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CARAVAN_SHALLOW_DRAFT</Tag>
+		<English>Shallow Draft</English>
+		<French>Remorqueur</French>
+		<Russian>Ìàëàÿ îñàäêà</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_AFFLICTION_DISEASE_COMMON_COLD</Tag>
+		<English>Disease - Common Cold</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_CARAVAN_GUARD</Tag>
+		<English>Caravan Guards (Land) Promotion Line</English>
+		<French>Spécialisation Garde de caravane (Terrestre)</French>
+		<Russian>Îõðàíà êàðàâàíîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_CARAVAN_MARINES</Tag>
+		<English>Caravan Marines (Sea) Promotion Line</English>
+		<French>Spécialisation Garde-côtes de caravane (Sea)</French>
+		<Russian>Ìîðñêîé êàðàâàí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_CARAVAN_MOVEMENT</Tag>
+		<English>Caravan Movement (Land) Promotion Line</English>
+		<French>Spécialisation Dépl. de caravane (Terrestre)</French>
+		<Russian>Ïðîâîäíèê êàðàâàíîâ</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_CARAVAN_SEA_MOVEMENT</Tag>
+		<English>Caravan Movement (Sea) Promotion Line</English>
+		<French>Spécialisation Dépl. de caravane (Mer)</French>
+		<Russian>Ñóäîïðîõîä÷èê</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_EQUIPMENT_EARLY_MELEE_ARMOR</Tag>
+		<English>Early melee armor</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_EQUIPMENT_EARLY_RANGED_ARMOR</Tag>
+		<English>Early ranged armor</English>
+	</TEXT>
+</Civ4GameText>

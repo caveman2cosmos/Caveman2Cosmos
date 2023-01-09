@@ -73,10 +73,10 @@ class CvVictoryScreen:
 		screen.addPanel("VS_TopPanel", "", "", True, False, 0, 0, xRes, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_TOPBAR)
 		screen.addPanel("VS_BotPanel", "", "", True, False, 0, yRes - H_EDGE_PANEL, xRes, H_EDGE_PANEL, PanelStyles.PANEL_STYLE_BOTTOMBAR)
 		screen.setLabel("VS_Header", "", szfontEdge + TRNSLTR.getText("TXT_WORD_GAME",()), 1<<2, xRes / 2, 2, 0, eFontTitle, eWidGen, 1, 2)
-		screen.setText("VS_Btn_Exit", "", szfontEdge + TRNSLTR.getText("TXT_KEY_PEDIA_SCREEN_EXIT",()), 1<<1, xRes - 16, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
+		screen.setText("VS_Btn_Exit", "", szfontEdge + TRNSLTR.getText("TXT_WORD_EXIT",()), 1<<1, xRes - 16, 0, 0, eFontTitle, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1)
 
-		self.COLOR_GREEN = GC.getInfoTypeForString("COLOR_GREEN")
-		self.COLOR_YELLOW = iCol = GC.getInfoTypeForString("COLOR_YELLOW")
+		self.COLOR_GREEN = GC.getCOLOR_GREEN()
+		self.COLOR_YELLOW = iCol = GC.getCOLOR_YELLOW()
 		szTxt = szfontEdge + TRNSLTR.getText("TXT_KEY_MAIN_MENU_VICTORIES", ())
 		szTxtCol = TRNSLTR.changeTextColor(szTxt, iCol)
 		dX = xRes / 4
@@ -165,6 +165,7 @@ class CvVictoryScreen:
 			fPopPercent = 0.0
 			iTotalPop = 1
 
+		bDebugModeDLL = GAME.isDebugMode()
 		iBestPopTeam = -1
 		iBestPop = 0
 		for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
@@ -172,7 +173,7 @@ class CvVictoryScreen:
 				continue
 			CyTeamX = GC.getTeam(iTeamX)
 			if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-				if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+				if CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 					iPop = CyTeamX.getTotalPopulation()
 					if iPop > iBestPop:
 						iBestPop = iPop
@@ -188,7 +189,7 @@ class CvVictoryScreen:
 				continue
 			CyTeamX = GC.getTeam(iTeamX)
 			if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-				if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+				if CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 					iScore = GAME.getTeamScore(iTeamX)
 					if iScore > iBestScore:
 						iBestScore = iScore
@@ -206,7 +207,7 @@ class CvVictoryScreen:
 			if iTeamX == iTeamAct:
 				continue
 			if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-				if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+				if CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 					teamLand = CyTeamX.getTotalLand()
 					if teamLand > iBestLand:
 						iBestLand = teamLand
@@ -242,7 +243,7 @@ class CvVictoryScreen:
 			if iTeamX == iTeamAct:
 				continue
 			if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-				if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+				if CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 					teamCulture = CyTeamX.countTotalCulture()
 					if teamCulture > iBestCulture:
 						iBestCulture = teamCulture
@@ -263,9 +264,9 @@ class CvVictoryScreen:
 
 					for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 						CyPlayerX = GC.getPlayer(iPlayerX)
-						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.countNumBuildings(i):
+						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.hasBuilding(i):
 							iUNTeam = CyPlayerX.getTeam()
-							if iUNTeam == iTeamAct or GAME.isDebugMode() or CyTeam.isHasMet(iUNTeam):
+							if iUNTeam == iTeamAct or bDebugModeDLL or CyTeam.isHasMet(iUNTeam):
 								bUnknown = False
 							break
 
@@ -296,7 +297,8 @@ class CvVictoryScreen:
 		screen.addPanel(self.getNextWidgetName(), "", "", False, False, 0, self.Y_TOP_PAGE - 6, xRes, self.H_PAGE + 6, PanelStyles.PANEL_STYLE_BLUE50)
 
 		# civ picker dropdown
-		if GAME.isDebugMode():
+		import DebugUtils
+		if DebugUtils.isAnyDebugMode():
 			screen.addDropDownBoxGFC("VictoryScreenDropdownWidget", 22, 0, 300, eWidGen, 1, 2, FontTypes.GAME_FONT)
 			for j in xrange(GC.getMAX_PLAYERS()):
 				if GC.getPlayer(j).isAlive():
@@ -448,12 +450,12 @@ class CvVictoryScreen:
 							screen.setTableText(szTable, 3, iRefRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NO_HOLY", ()), "", eWidGen, 1, 2, 1<<0)
 
 
-					# Legendary Cultural Cities
-					iPlayerLegendaryCities, iWorldLegendaryCities = self.getLegendaryCities(iTeamAct)
-					iBestTeamLegendaryCities, iWorldLegendaryCities = self.getLegendaryCities(iBestTeam)
+					# Monumental Cultural Cities
+					iPlayerMonumentalCities, iWorldMonumentalCities = self.getMonumentalCities(iTeamAct)
+					iBestTeamMonumentalCities, iWorldMonumentalCities = self.getMonumentalCities(iBestTeam)
 
-					ourBestCities = self.getListCultureCitiesTeam(iTeamAct)[0:(iPlayerLegendaryCities + 3)]
-					theirBestCities = self.getListCultureCitiesTeam(iBestTeam)[0:(iBestTeamLegendaryCities+3)]
+					ourBestCities = self.getListCultureCitiesTeam(iTeamAct)[0:(iPlayerMonumentalCities + 3)]
+					theirBestCities = self.getListCultureCitiesTeam(iBestTeam)[0:(iBestTeamMonumentalCities+3)]
 
 					iRow = screen.appendTableRow(szTable)
 					iRefRow = iRow
@@ -463,7 +465,7 @@ class CvVictoryScreen:
 						iRow = screen.appendTableRow(szTable)
 						screen.setTableText(szTable, 0, iRow, ufont2 + ourBestCities[i][1].getName() + ":", "", eWidGen, 1, 2, 1<<1)
 						screen.setTableText(szTable, 1, iRow, ufont2 + str(ourBestCities[i][0]), "", eWidGen, 1, 2, 1<<0)
-						if iPlayerLegendaryCities >= i + 1:
+						if iPlayerMonumentalCities >= i + 1:
 							screen.setTableText(szTable, 2, iRow, ufont2 + u"%s" %(30), "", eWidGen, 1, 2, 1<<0)
 
 					if szUnknown:
@@ -537,7 +539,7 @@ class CvVictoryScreen:
 						if iTeamX == iTeamAct: continue
 						CyTeamX = GC.getTeam(iTeamX)
 						if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-							if iTeamX != iTeamAct and iTeamX != iBestTeam and CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+							if iTeamX != iTeamAct and iTeamX != iBestTeam and CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 								iRow = screen.appendTableRow(szTable)
 								screen.setTableText(szTable, 0, iRow, ufont2b + CyTeamX.getName() + ":", "", eWidGen, 1, 2, 1<<0)
 								screen.setTableText(szTable, 1, iRow, ufont2b + str(CyTeamX.getTotalVictoryScore()), "", eWidGen, 1, 2, 1<<0)
@@ -675,7 +677,7 @@ class CvVictoryScreen:
 					if iTeamX == iTeamAct: continue
 					CyTeamX = GC.getTeam(iTeamX)
 					if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-						if CyTeam.isHasMet(iTeamX) or GAME.isDebugMode():
+						if CyTeam.isHasMet(iTeamX) or bDebugModeDLL:
 							teamBuilding = 0
 							for i in xrange(GC.getNumBuildingInfos()):
 								if GC.getBuildingInfo(i).getVictoryThreshold(iLoopVC) > 0:
@@ -701,7 +703,7 @@ class CvVictoryScreen:
 					if iTeamX == iTeamAct: continue
 					CyTeamX = GC.getTeam(iTeamX)
 					if CyTeamX.isAlive() and not CyTeamX.isMinorCiv():
-						if (CyTeam.isHasMet(iTeamX) or GAME.isDebugMode()) and self.isApolloBuiltbyTeam(CyTeamX):
+						if (CyTeam.isHasMet(iTeamX) or bDebugModeDLL) and self.isApolloBuiltbyTeam(CyTeamX):
 							teamProject = 0
 							for i in xrange(GC.getNumProjectInfos()):
 								if GC.getProjectInfo(i).getVictoryThreshold(iLoopVC) > 0:
@@ -797,7 +799,7 @@ class CvVictoryScreen:
 									iSSColor = self.COLOR_GREEN
 								elif bOwnProject >= CvProjectInfo.getVictoryMinThreshold(iLoopVC):
 									iSSColor = self.COLOR_YELLOW
-								elif CyTeamBest.isHasTech(iReqTech) and (CyTeam.isHasTech(iReqTech) or CyPlayer.canResearch(iReqTech)):
+								elif CyTeamBest.isHasTech(iReqTech) and (CyTeam.isHasTech(iReqTech) or CyPlayer.canResearch(iReqTech, True)):
 									iSSColor = GC.getInfoTypeForString("COLOR_PLAYER_ORANGE")
 
 								if iSSColor > 0:
@@ -821,66 +823,69 @@ class CvVictoryScreen:
 						else:
 							screen.setTableText(szTable, 1, iRow, ufont2 + TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_NOT_BUILT", ()), "", eWidGen, 1, 2, 1<<2)
 
-				iNumCultureCities = CvVictoryInfo.getNumCultureCities()
-				if CvVictoryInfo.getCityCulture() != CultureLevelTypes.NO_CULTURELEVEL and iNumCultureCities > 0:
-					ourBestCities = self.getListCultureCities(iActivePlayer, CvVictoryInfo)[0:iNumCultureCities]
+				eVictoryCulture = CvVictoryInfo.getCityCulture()
+				if eVictoryCulture != CultureLevelTypes.NO_CULTURELEVEL:
 
-					iBestCulturePlayer = -1
-					bestCityCulture = 0
-					maxCityCulture = GAME.getCultureThreshold(CvVictoryInfo.getCityCulture())
+					iNumCultureCities = CvVictoryInfo.getNumCultureCities()
+					if iNumCultureCities > 0:
+						ourBestCities = self.getListCultureCities(iActivePlayer, CvVictoryInfo)[0:iNumCultureCities]
 
-					for iPlayerX in xrange(GC.getMAX_PLAYERS()):
-						CyPlayerX = GC.getPlayer(iPlayerX)
-						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and not CyPlayerX.isNPC():
-							if iPlayerX != iActivePlayer and (CyTeam.isHasMet(CyPlayerX.getTeam()) or GAME.isDebugMode()):
-								theirBestCities = self.getListCultureCities(iPlayerX, CvVictoryInfo)[0:iNumCultureCities]
+						iBestCulturePlayer = -1
+						bestCityCulture = 0
+						maxCityCulture = GC.getCultureLevelInfo(eVictoryCulture).getSpeedThreshold(GAME.getGameSpeedType())
 
-								iTotalCulture = 0
-								for loopCity in theirBestCities:
-									if loopCity[0] >= maxCityCulture:
-										iTotalCulture += maxCityCulture
-									else:
-										iTotalCulture += loopCity[0]
+						for iPlayerX in xrange(GC.getMAX_PLAYERS()):
+							CyPlayerX = GC.getPlayer(iPlayerX)
+							if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and not CyPlayerX.isNPC():
+								if iPlayerX != iActivePlayer and (CyTeam.isHasMet(CyPlayerX.getTeam()) or bDebugModeDLL):
+									theirBestCities = self.getListCultureCities(iPlayerX, CvVictoryInfo)[0:iNumCultureCities]
 
-								if iTotalCulture >= bestCityCulture:
-									bestCityCulture = iTotalCulture
-									iBestCulturePlayer = iPlayerX
+									iTotalCulture = 0
+									for loopCity in theirBestCities:
+										if loopCity[0] >= maxCityCulture:
+											iTotalCulture += maxCityCulture
+										else:
+											iTotalCulture += loopCity[0]
 
-					if iBestCulturePlayer != -1:
-						theirBestCities = self.getListCultureCities(iBestCulturePlayer, CvVictoryInfo)[0:iNumCultureCities]
-					else:
-						theirBestCities = []
+									if iTotalCulture >= bestCityCulture:
+										bestCityCulture = iTotalCulture
+										iBestCulturePlayer = iPlayerX
 
-					iRow = screen.appendTableRow(szTable)
-					szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_CITY_CULTURE", (iNumCultureCities, GC.getCultureLevelInfo(CvVictoryInfo.getCityCulture()).getTextKey()))
-					screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<1)
-
-					for i in xrange(iNumCultureCities):
-						if len(ourBestCities) > i or len(theirBestCities) > i:
-							if i:
-								iRow = screen.appendTableRow(szTable)
-
-							if len(ourBestCities) > i:
-								szText = ourBestCities[i][1].getName() + ": "
-								if ourBestCities[i][2] < 1:
-									szText += TRNSLTR.getText("TXT_KEY_VICTORY_SCORE", ())
-								elif ourBestCities[i][2] < 1000:
-									szText += TRNSLTR.getText("TXT_KEY_MISC_TURNS_LEFT", (ourBestCities[i][2],))
-								else:
-									szText += GC.getCultureLevelInfo(ourBestCities[i][1].getCultureLevel()).getDescription()
-								screen.setTableText(szTable, 1, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<2)
-
-							if len(theirBestCities) > i:
-								szText = theirBestCities[i][1].getName() + ": "
-								if theirBestCities[i][2] < 1:
-									szText += TRNSLTR.getText("TXT_KEY_VICTORY_SCORE", ())
-								elif theirBestCities[i][2] < 1000:
-									szText += TRNSLTR.getText("TXT_KEY_MISC_TURNS_LEFT", (theirBestCities[i][2],))
-								else:
-									szText += GC.getCultureLevelInfo(theirBestCities[i][1].getCultureLevel()).getDescription()
-								screen.setTableText(szTable, 2, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<0)
+						if iBestCulturePlayer != -1:
+							theirBestCities = self.getListCultureCities(iBestCulturePlayer, CvVictoryInfo)[0:iNumCultureCities]
 						else:
-							break
+							theirBestCities = []
+
+						iRow = screen.appendTableRow(szTable)
+						szText = TRNSLTR.getText("TXT_KEY_VICTORY_SCREEN_CITY_CULTURE", (iNumCultureCities, GC.getCultureLevelInfo(eVictoryCulture).getTextKey()))
+						screen.setTableText(szTable, 0, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<1)
+
+						for i in xrange(iNumCultureCities):
+							if len(ourBestCities) > i or len(theirBestCities) > i:
+								if i:
+									iRow = screen.appendTableRow(szTable)
+
+								if len(ourBestCities) > i:
+									szText = ourBestCities[i][1].getName() + ": "
+									if ourBestCities[i][2] < 1:
+										szText += TRNSLTR.getText("TXT_KEY_VICTORY_SCORE", ())
+									elif ourBestCities[i][2] < 1000:
+										szText += TRNSLTR.getText("TXT_KEY_MISC_TURNS_LEFT", (ourBestCities[i][2],))
+									else:
+										szText += GC.getCultureLevelInfo(ourBestCities[i][1].getCultureLevel()).getDescription()
+									screen.setTableText(szTable, 1, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<2)
+
+								if len(theirBestCities) > i:
+									szText = theirBestCities[i][1].getName() + ": "
+									if theirBestCities[i][2] < 1:
+										szText += TRNSLTR.getText("TXT_KEY_VICTORY_SCORE", ())
+									elif theirBestCities[i][2] < 1000:
+										szText += TRNSLTR.getText("TXT_KEY_MISC_TURNS_LEFT", (theirBestCities[i][2],))
+									else:
+										szText += GC.getCultureLevelInfo(theirBestCities[i][1].getCultureLevel()).getDescription()
+									screen.setTableText(szTable, 2, iRow, ufont2 + szText, "", eWidGen, 1, 2, 1<<0)
+							else:
+								break
 
 
 	def showGameSettingsScreen(self, screen):
@@ -1032,7 +1037,7 @@ class CvVictoryScreen:
 
 					for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 						CyPlayerX = GC.getPlayer(iPlayerX)
-						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.countNumBuildings(i):
+						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.hasBuilding(i):
 							iUNTeam = CyPlayerX.getTeam()
 							if iUNTeam == iTeamAct or GAME.isDebugMode() or CyTeam.isHasMet(iUNTeam):
 								bUnknown = False
@@ -1422,7 +1427,7 @@ class CvVictoryScreen:
 		if not bWinner:
 			return -1
 		if iVoteCand > iVoteReq and bVictoryVote:
-			return GC.getInfoTypeForString("COLOR_RED")
+			return GC.getCOLOR_RED()
 		if iVoteTotal > iVoteReq:
 			return self.COLOR_GREEN
 		return -1
@@ -1433,7 +1438,7 @@ class CvVictoryScreen:
 		if iPlayer != -1:
 			CyPlayer = GC.getPlayer(iPlayer)
 			if CyPlayer.isAlive():
-				iThreshold = GAME.getCultureThreshold(CvVictoryInfo.getCityCulture())
+				iThreshold = GC.getCultureLevelInfo(CvVictoryInfo.getCityCulture()).getSpeedThreshold(GAME.getGameSpeedType())
 				aList = []
 
 				for CyCity in CyPlayer.cities():
@@ -1467,8 +1472,8 @@ class CvVictoryScreen:
 		return []
 
 
-	def getLegendaryCities(self, iTeam):
-		iLegendaryCities = 0
+	def getMonumentalCities(self, iTeam):
+		iMonumentalCities = 0
 		iTeamCities = 0
 		iThreshold = GC.getCultureLevelInfo(GC.getNumCultureLevelInfos()-1).getSpeedThreshold(GAME.getGameSpeedType())
 
@@ -1482,11 +1487,11 @@ class CvVictoryScreen:
 					bTeam = False
 				for CyCity in CyPlayerX.cities():
 					if CyCity.getCulture(iPlayerX) > iThreshold:
-						iLegendaryCities += 1
+						iMonumentalCities += 1
 						if bTeam:
 							iTeamCities += 1
 
-		return [iTeamCities, iLegendaryCities]
+		return [iTeamCities, iMonumentalCities]
 
 
 	def getTeamWonderScore(self, iTeam):
@@ -1597,7 +1602,7 @@ class CvVictoryScreen:
 				if CvBuildingInfo.getVoteSourceType() == j:
 					for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 						CyPlayerX = GC.getPlayer(iPlayerX)
-						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.countNumBuildings(i):
+						if CyPlayerX.isAlive() and not CyPlayerX.isMinorCiv() and CyPlayerX.hasBuilding(i):
 							return CyPlayerX.getTeam()
 		return -1
 

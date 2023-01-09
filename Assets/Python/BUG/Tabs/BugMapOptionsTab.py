@@ -15,7 +15,7 @@ class BugMapOptionsTab(BugOptionsTab.BugOptionsTab):
 		BugOptionsTab.BugOptionsTab.__init__(self, "Map", "Map")
 
 	def create(self, screen):
-		tab = self.createTab(screen)
+		self.createTab(screen)
 		panel = self.createMainPanel(screen)
 		column = self.addOneColumnLayout(screen, panel)
 
@@ -48,7 +48,6 @@ class BugMapOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.attachHSeparator(column, column + "Sep1")
 		left, center, right = self.addThreeColumnLayout(screen, column, "CityPlotsEnabled", True)
 		self.addLabel(screen, left, "CityPlots", "City Tiles:")
-		self.addCheckbox(screen, center, "CityBar__CityControlledPlots")
 		self.addCheckbox(screen, right, "CityBar__CityPlotStatus")
 
 		one, two, three, four, five = self.addMultiColumnLayout(screen, column, 5, "CityPlotsOptions")

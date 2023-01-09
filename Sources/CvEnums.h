@@ -88,6 +88,7 @@ enum DirectionTypes
 	DIRECTION_WEST_MASK = 1 << DIRECTION_WEST,
 	DIRECTION_NORTHWEST_MASK = 1 << DIRECTION_NORTHWEST,
 };
+typedef fixed_enum_range<DirectionTypes, int, DIRECTION_NORTH, NUM_DIRECTION_TYPES> DirectionTypesRange;
 
 enum CardinalDirectionTypes
 {
@@ -100,6 +101,8 @@ enum CardinalDirectionTypes
 
 	NUM_CARDINALDIRECTION_TYPES
 };
+typedef fixed_enum_range<CardinalDirectionTypes, int, CARDINALDIRECTION_NORTH, NUM_CARDINALDIRECTION_TYPES> CardinalDirectionTypesRange;
+
 
 enum RotationTypes
 {
@@ -114,6 +117,8 @@ enum RotationTypes
 	ROTATE_180CW_MASK	= 1 << ROTATE_180CW,
 	ROTATE_270CW_MASK	= 1 << ROTATE_270CW,
 };
+typedef fixed_enum_range<RotationTypes, int, ROTATE_NONE, NUM_ROTATION_TYPES> RotationTypesRange;
+
 
 // camera wrap helper
 enum WrapDirection
@@ -206,6 +211,7 @@ enum AreaBorderLayers
 	AREA_BORDER_LAYER_HIGHLIGHT_PLOT,
 	AREA_BORDER_LAYER_BLOCKADING,
 	AREA_BORDER_LAYER_BLOCKADED,
+	AREA_BORDER_LAYER_COMMAND_FIELD,
 	NUM_AREA_BORDER_LAYERS
 };
 
@@ -243,7 +249,7 @@ enum InterfaceModeTypes
 	INTERFACEMODE_RANGE_ATTACK,
 	INTERFACEMODE_AIRSTRIKE,
 	INTERFACEMODE_REBASE,
-	INTERFACEMODE_PYTHON_PICK_PLOT,
+	INTERFACEMODE_DOTMAP,
 	INTERFACEMODE_SAVE_PLOT_NIFS,
 
 	INTERFACEMODE_AIRBOMB1,
@@ -254,15 +260,9 @@ enum InterfaceModeTypes
 	INTERFACEMODE_BOMBARD,
 	INTERFACEMODE_FENGAGE,
 
-// BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 	INTERFACEMODE_GO_TO_SENTRY,
 #endif
-// BUG - Sentry Actions - end
-	// < M.A.D. Nukes Start >
-	INTERFACEMODE_PRETARGET_NUKE,
-	// < M.A.D. Nukes End   >
-
 	INTERFACEMODE_SHADOW_UNIT,
 
 	NUM_INTERFACEMODE_TYPES
@@ -409,7 +409,7 @@ enum WidgetTypes
 	WIDGET_LAUNCH_VICTORY,
 	WIDGET_CONVERT,
 	WIDGET_AUTOMATE_CITIZENS,
-	WIDGET_AUTOMATE_PRODUCTION,
+	WIDGET_UNUSED_32,
 	WIDGET_EMPHASIZE,
 	WIDGET_DIPLOMACY_RESPONSE,
 	WIDGET_GENERAL,
@@ -434,7 +434,7 @@ enum WidgetTypes
 	WIDGET_WB_REGENERATE_MAP,
 	WIDGET_TRADE_ITEM,
 	WIDGET_UNIT_MODEL,
-	WIDGET_FLAG,
+	WIDGET_UNUSED_57, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
 	WIDGET_POPUP_QUEUE,
 
 	//	This is meant for python buttons, it will call python functions for display and execution
@@ -446,7 +446,7 @@ enum WidgetTypes
 	WIDGET_HELP_RELIGION_CITY,
 	WIDGET_HELP_CORPORATION_CITY,
 	WIDGET_HELP_NATIONALITY,
-	WIDGET_UNUSED_40, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
+	WIDGET_UNUSED_65, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
 	WIDGET_HELP_HEALTH,
 	WIDGET_HELP_HAPPINESS,
 	WIDGET_HELP_POPULATION,
@@ -519,7 +519,7 @@ enum WidgetTypes
 	WIDGET_PEDIA_JUMP_TO_BONUS,
 	WIDGET_PEDIA_MAIN,
 	WIDGET_PEDIA_JUMP_TO_PROMOTION,
-	WIDGET_PEDIA_JUMP_TO_UNIT_COMBAT,
+	WIDGET_UNUSED_111, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
 	WIDGET_PEDIA_JUMP_TO_IMPROVEMENT,
 	WIDGET_PEDIA_JUMP_TO_CIVIC,
 	WIDGET_PEDIA_JUMP_TO_CIV,
@@ -625,23 +625,11 @@ enum ButtonPopupTypes
 	BUTTONPOPUP_FREE_COLONY,
 	BUTTONPOPUP_LAUNCH,
 	BUTTONPOPUP_FOUND_RELIGION,
-/************************************************************************************************/
-/* Afforess	                  Start		 09/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	//Castle Mod
 	BUTTONPOPUP_INVASION,
-	//AUA
 	BUTTONPOPUP_SELECT_UNIT,
 	BUTTONPOPUP_SELECT_DISCOVERY_TECH,
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	BUTTONPOPUP_GET_SAVE_FORMAT,	//	Koshling - user choose save format dialog
-	BUTTONPOPUP_SAVE_INFO_LOST,		//	Non-fatal warning that some entities could not be instantiated
-
-	BUTTONPOPUP_MODIFIER_RECALCULATION,  // Ask user if he wants to recalculated modifiers when DLL or assets have changed
+	BUTTONPOPUP_GET_SAVE_FORMAT, // Koshling - user choose save format dialog
+	BUTTONPOPUP_MODIFIER_RECALCULATION, // Ask user if he wants to recalculated modifiers when DLL or assets have changed
 	BUTTONPOPUP_NAME_LIST,
 	BUTTONPOPUP_CHOOSE_TRAIT,
 	BUTTONPOPUP_CHOOSE_TRAIT_NEGATIVE,
@@ -685,25 +673,35 @@ enum WorldSizeTypes
 	NUM_WORLDSIZE_TYPES
 };
 
-/*********************************/
-/***** Parallel Maps - Begin *****/
-/*********************************/
-
 enum MapTypes
 {
 	NO_MAP = -1,
-	MAP_INITIAL,
-	MAX_MAPS = 10,
+
+	MAP_EARTH,
+	MAP_SUBTERRAIN,
+	MAP_CISLUNAR,
+	MAP_MOON,
+	MAP_MARS,
+	MAP_VENUS,
+	MAP_INNER_SOLAR_SYSTEM,
+	MAP_OUTER_SOLAR_SYSTEM,
+	MAP_TITAN,
+	MAP_TRANSNEPTUNIAN,
+	MAP_NEARBY_STARS,
+	MAP_ORION_ARM,
+	MAP_MILKY_WAY,
+	MAP_LOCAL_GROUP,
+	MAP_VIRGO_SUPERCLUSTER,
+	MAP_UNIVERSE,
+	MAP_DISTANT_COSMOS,
+
+	NUM_MAPS
 };
 
-enum MapSwitchTypes
+enum MapCategoryTypes
 {
-	NO_MAPSWITCH = -1,
+	NO_MAPCATEGORY = -1,
 };
-
-/*******************************/
-/***** Parallel Maps - End *****/
-/*******************************/
 
 // This is our current relationship with each
 // one of our connected network peers
@@ -792,7 +790,7 @@ enum GameOptionTypes
 	GAMEOPTION_LEAD_ANY_CIV, // This must always be the eight option as the exe has hardcoded it as such.
 	GAMEOPTION_UNITED_NATIONS,
 	GAMEOPTION_ADVANCED_DIPLOMACY,
-	GAMEOPTION_ADVANCED_ECONOMY,
+	GAMEOPTION_ADVANCED_ECONOMY, // @SAVEBREAK DELETE
 	GAMEOPTION_REALISTIC_CORPORATIONS,
 	GAMEOPTION_ADVANCED_ESPIONAGE,
 	GAMEOPTION_NO_CITY_RAZING,
@@ -823,7 +821,7 @@ enum GameOptionTypes
 	GAMEOPTION_PICK_RELIGION,
 	GAMEOPTION_LIMITED_RELIGIONS,
 	GAMEOPTION_INQUISITIONS,
-	GAMEOPTION_RELIGION_DECAY,
+	GAMEOPTION_RELIGION_DECAY, // @SAVEBREAK DELETE - Deprecated
 	GAMEOPTION_DIVINE_PROPHETS,
 	GAMEOPTION_RELIGIOUS_DISABLING,
 	GAMEOPTION_RANDOM_PERSONALITIES,
@@ -875,10 +873,10 @@ enum GameOptionTypes
 	GAMEOPTION_ONE_CITY_CHALLENGE,
 	GAMEOPTION_CHALLENGE_CUT_LOSERS,
 	GAMEOPTION_CHALLENGE_HIGH_TO_LOW,
-	GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY
+	GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY,
+	GAMEOPTION_ADVANCED_ROUTES,
+	GAMEOPTION_ALWAYS_RAZE_CITIES
 };
-
-#define NUM_GAMEOPTION_TYPES GC.getNumGameOptionInfos()
 
 enum MultiplayerOptionTypes
 {
@@ -1172,11 +1170,17 @@ enum TeamTypes
 {
 	NO_TEAM = -1,
 };
+typedef fixed_enum_range<TeamTypes, int, 0, MAX_TEAMS> TeamTypesRange;
+typedef fixed_enum_range<TeamTypes, int, 0, MAX_PC_TEAMS> TeamTypesPCRange;
+typedef fixed_enum_range<TeamTypes, int, NPC1_TEAM, MAX_TEAMS> TeamTypesNPCRange;
 
 enum PlayerTypes
 {
 	NO_PLAYER = -1,
 };
+typedef fixed_enum_range<PlayerTypes, int, 0, MAX_PLAYERS> PlayerTypesRange;
+typedef fixed_enum_range<PlayerTypes, int, 0, MAX_PC_PLAYERS> PlayerTypesPCRange;
+typedef fixed_enum_range<PlayerTypes, int, NPC1_PLAYER, MAX_PLAYERS> PlayerTypesNPCRange;
 
 enum TraitTypes
 {
@@ -1407,15 +1411,10 @@ enum UnitCombatTypes
 {
 	NO_UNITCOMBAT = -1,
 };
-//TB Promotion Line Mod begin
+
 enum PromotionLineTypes
 {
 	NO_PROMOTIONLINE = -1,
-};
-
-enum MapCategoryTypes
-{
-	NO_MAPCATEGORY = -1,
 };
 
 enum IdeaClassTypes
@@ -1535,6 +1534,11 @@ enum AIScaleTypes
 enum InvisibleTypes
 {
 	NO_INVISIBLE = -1,
+};
+
+enum CategoryTypes
+{
+	NO_CATEGORY = -1,
 };
 
 enum VoteSourceTypes
@@ -1693,13 +1697,10 @@ enum MissionTypes
 	MISSION_ESPIONAGE_SLEEP,
 	MISSION_GREAT_COMMANDER,
 	MISSION_SHADOW,
-	MISSION_WAIT_FOR_TECH,
 
 	//ls612: City Goto in Viewports
 	MISSION_GOTO,
-	// < M.A.D. Nukes Start >
-	MISSION_PRETARGET_NUKE,
-	// < M.A.D. Nukes End   >
+
 	//TB Combat Mod and Mission fix begin
 	MISSION_BUTCHER,
 	MISSION_DIPLOMAT_ASSIMULATE_IND_PEOPLE,
@@ -1709,8 +1710,6 @@ enum MissionTypes
 	MISSION_LAWYER_REMOVE_CORPORATIONS,
 	MISSION_JOIN_CITY_POPULATION,
 	MISSION_CURE,
-	MISSION_ESTABLISH,
-	MISSION_ESCAPE,
 	MISSION_BUILDUP,
 	MISSION_AUTO_BUILDUP,
 	MISSION_HEAL_BUILDUP,
@@ -1850,12 +1849,10 @@ enum ControlTypes
 	CONTROL_PING,
 	CONTROL_SIGN,
 	CONTROL_GRID,
-	CONTROL_BARE_MAP,
 	CONTROL_YIELDS,
 	CONTROL_RESOURCE_ALL,
 	CONTROL_UNIT_ICONS,
 	CONTROL_GLOBELAYER,
-	CONTROL_SCORES,
 	CONTROL_LOAD_GAME,
 	CONTROL_OPTIONS_SCREEN,
 	CONTROL_RETIRE,
@@ -3102,7 +3099,6 @@ enum GlobeLayerTypes
 	GLOBE_LAYER_RESOURCE,
 	GLOBE_LAYER_RELIGION,
 	GLOBE_LAYER_CULTURE,
-	GLOBE_LAYER_DEBUG,
 
 	NUM_GLOBE_LAYER_TYPES
 };
@@ -3126,6 +3122,8 @@ enum GlobeLayerResourceOptionTypes
 	SHOW_RESOURCES_GROWTH,
 	SHOW_RESOURCES_PRODUCTION,
 	SHOW_RESOURCES_MISC,
+	SHOW_RESOURCES_UNCLAIMED,
+	SHOW_RESOURCES_CANCLAIM,
 
 	NUM_RESOURCE_OPTION_TYPES
 };
@@ -3154,35 +3152,15 @@ enum CivilopediaWidgetShowTypes
 	CIVILOPEDIA_WIDGET_SHOW_WATER,
 };
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-enum RankingTypes
-{
-	RANKING_POWER,
-	RANKING_POPULATION,
-	RANKING_LAND,
-	RANKING_CULTURE,
-	RANKING_ESPIONAGE,
-	RANKING_WONDERS,
-	RANKING_TECH,
-	NUM_RANKINGS
-};
-
 enum LandmarkTypes
 {
 	NO_LANDMARK = -1,
 	LANDMARK_BAY,
-	LANDMARK_ISLAND,
 	LANDMARK_FOREST,
 	LANDMARK_JUNGLE,
 	LANDMARK_PEAK,
 	LANDMARK_MOUNTAIN_RANGE,
-	LANDMARK_PLAINS,
 	LANDMARK_DESERT,
-	LANDMARK_OCEAN,
 	LANDMARK_LAKE,
 	NUM_LANDMARK_TYPES
 };
@@ -3193,12 +3171,9 @@ enum ModderOptionTypes
 	NO_MODDEROPTION = -1,
 
 	MODDEROPTION_FLEXIBLE_DIFFICULTY,
-	MODDEROPTION_SHOW_COASTAL_BUILDINGS,
-	MODDEROPTION_HIDE_OBSOLETE_BUILDINGS,
 	MODDEROPTION_HIDE_REPLACED_BUILDINGS,
 	MODDEROPTION_NO_FRIENDLY_PILLAGING,
 	MODDEROPTION_HIDE_UNAVAILBLE_BUILDS,
-	MODDEROPTION_HIDE_OBSOLETE_BUILDS,
 	MODDEROPTION_SHOW_REV_EFFECTS,
 	MODDEROPTION_USE_LANDMARK_NAMES,
 	MODDEROPTION_FLEXIBLE_DIFFICULTY_TURN_INCREMENTS,
@@ -3262,6 +3237,7 @@ enum ModderGameOptionTypes
 	MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS,
 	MODDERGAMEOPTION_NO_STORMS,
 	MODDERGAMEOPTION_IMPROVED_XP,
+	MODDERGAMEOPTION_RELIGION_DECAY,
 	MODDERGAMEOPTION_MULTIPLE_RELIGION_SPREAD,
 	MODDERGAMEOPTION_TERRAIN_DAMAGE,
 	MODDERGAMEOPTION_STRATEGIC_EVENTS,
@@ -3270,9 +3246,6 @@ enum ModderGameOptionTypes
 
 	NUM_MODDERGAMEOPTION_TYPES
 };
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 // AIAndy: Game object types
 enum GameObjectTypes
@@ -3398,5 +3371,35 @@ enum PropertyPropagatorTypes
 
 	NUM_PROPERTYPROPAGATORS
 };
+
+enum RiverModelTypes { };
+enum WaterPlaneTypes { };
+enum TerrainPlaneTypes { };
+enum UnitFormationTypes { };
+enum LandscapeTypes { };
+enum ThroneRoomTypes { };
+enum ThroneRoomStyleTypes { };
+enum SlideShowTypes { };
+enum SlideShowRandomTypes { };
+enum WorldPickerTypes { };
+enum SpaceShipTypes { };
+enum RouteModelTypes { };
+enum ActionTypes { };
+enum DiplomacyTypes { };
+enum MainMenuTypes { };
+enum ModLoadControlTypes { };
+enum HintTypes { };
+enum AssetArtTypes { };
+enum MiscArtTypes { };
+enum UnitArtTypes { };
+enum BuildingArtTypes { };
+enum CivilizationArtTypes { };
+enum LeaderHeadArtTypes { };
+enum BonusArtTypes { };
+enum ImprovementArtTypes { };
+enum TerrainArtTypes { };
+enum FeatureArtTypes { };
+enum MovieArtTypes { };
+enum InterfaceArtTypes { };
 
 #endif	// CVENUMS_h

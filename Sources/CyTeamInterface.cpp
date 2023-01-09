@@ -9,7 +9,7 @@ void CyTeamPythonInterface()
 {
 	OutputDebugString("Python Extension Module - CyTeamPythonInterface\n");
 
-	python::class_<CyTeam>("CyTeam")
+	python::class_<CyTeam>("CyTeam", python::no_init)
 		.def("isRebelAgainst", &CyTeam::isRebelAgainst, "bool ( int iTeam )" )
 		.def("setRebelAgainst", &CyTeam::setRebelAgainst, "void ( int iTeam, bool bNewValue )" )
 		.def("countRebelAgainst", &CyTeam::countRebelAgainst, "int ( )" )
@@ -30,6 +30,7 @@ void CyTeamPythonInterface()
 
 		.def("getTotalVictoryScore", &CyTeam::getTotalVictoryScore, "int ()")
 
+		.def("isAtWar", &CyTeam::isAtWar, "bool (bool bCountMinors)")
 		.def("getAtWarCount", &CyTeam::getAtWarCount, "int (bool bIgnoreMinors)")
 		.def("getHasMetCivCount", &CyTeam::getHasMetCivCount, "int (bool bIgnoreMinors)")
 		.def("isAVassal", &CyTeam::isAVassal, "bool ()")
@@ -50,7 +51,6 @@ void CyTeamPythonInterface()
 		.def("hasHeadquarters", &CyTeam::hasHeadquarters, "bool (int (CorporationTypes) eCorporation) - does this team have eCorporation's headquarters?")
 
 		.def("isHuman", &CyTeam::isHuman, "bool () - is human team?")
-		.def("isBarbarian", &CyTeam::isBarbarian, "bool () - is barbarian team?")
 		.def("isNPC", &CyTeam::isNPC, "bool () - is NPC team?")
 		.def("isHominid", &CyTeam::isNPC, "bool () - is Hominid team?")
 		.def("isMinorCiv", &CyTeam::isMinorCiv)
@@ -132,7 +132,7 @@ void CyTeamPythonInterface()
 		.def("changeExtraMoves", &CyTeam::changeExtraMoves, "void (int /*DomainTypes*/ eIndex, int iChange)")
 
 		.def("isHasMet", &CyTeam::isHasMet, "bool (int /*TeamTypes*/ eIndex)")
-		.def("isAtWar", &CyTeam::isAtWar, "bool (int /*TeamTypes*/ eIndex)")
+		.def("isAtWarWith", &CyTeam::isAtWarWith, "bool (int /*TeamTypes*/ eIndex)")
 		.def("isPermanentWarPeace", &CyTeam::isPermanentWarPeace, "bool (int /*TeamTypes*/ eIndex)")
 		.def("setPermanentWarPeace", &CyTeam::setPermanentWarPeace, "void (int /*TeamTypes*/ eIndex, bool bNewValue)")
 		.def("isOpenBorders", &CyTeam::isOpenBorders, "bool (TeamTypes)")
@@ -164,11 +164,14 @@ void CyTeamPythonInterface()
 		.def("isHasTech", &CyTeam::isHasTech, "bool (TechID) - has the team researched techID")
 		.def("setHasTech", &CyTeam::setHasTech, "void (TechID, bNewValue, iPlayer, bFirst, bAnnounce)")
 		.def("isNoTradeTech", &CyTeam::isNoTradeTech, "bool (TechID)")
+		.def("getNumAdjacentResearch", &CyTeam::getNumAdjacentResearch, "int () - Amount of tech choices")
+		.def("getAdjacentResearch", &CyTeam::getAdjacentResearch, "int /*TechTypes*/ (int i)")
 
 		.def("getImprovementYieldChange", &CyTeam::getImprovementYieldChange,	"int (int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)")
 		.def("changeImprovementYieldChange", &CyTeam::changeImprovementYieldChange, "void (int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, iChange)")
 
-		.def("getBuildingYieldChange", &CyTeam::getBuildingYieldChange,	"int (int /*BuildingTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)")
+		.def("getBuildingCommerceTechChange", &CyTeam::getBuildingCommerceTechChange, "int (eCommerce, eBuilding)")
+
 		.def("isHasEmbassy", &CyTeam::isHasEmbassy, "bool (TeamTypes)")
 
 		.def("getVictoryCountdown", &CyTeam::getVictoryCountdown, "int (int /*VictoryTypes*/)")

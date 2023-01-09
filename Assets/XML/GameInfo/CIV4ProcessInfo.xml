@@ -4,7 +4,6 @@
 		<ProcessInfo>
 			<Type>PROCESS_WEALTH_MEAGER</Type>
 			<Description>TXT_KEY_PROCESS_MEAGER_WEALTH</Description>
-			<Strategy>TXT_KEY_PROCESS_WEALTH_STRATEGY</Strategy>
 			<TechPrereq>TECH_COOPERATION</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>30</iProductionToCommerceModifier>
@@ -14,7 +13,6 @@
 		<ProcessInfo>
 			<Type>PROCESS_WEALTH_LESSER</Type>
 			<Description>TXT_KEY_PROCESS_LESSER_WEALTH</Description>
-			<Strategy>TXT_KEY_PROCESS_WEALTH_STRATEGY</Strategy>
 			<TechPrereq>TECH_TRADE</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>40</iProductionToCommerceModifier>
@@ -24,7 +22,6 @@
 		<ProcessInfo>
 			<Type>PROCESS_WEALTH</Type>
 			<Description>TXT_KEY_PROCESS_WEALTH</Description>
-			<Strategy>TXT_KEY_PROCESS_WEALTH_STRATEGY</Strategy>
 			<TechPrereq>TECH_CURRENCY</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>50</iProductionToCommerceModifier>
@@ -34,7 +31,6 @@
 		<ProcessInfo>
 			<Type>PROCESS_RESEARCH_MEAGER</Type>
 			<Description>TXT_KEY_PROCESS_MEAGER_RESEARCH</Description>
-			<Strategy>TXT_KEY_PROCESS_RESEARCH_STRATEGY</Strategy>
 			<TechPrereq>TECH_ORAL_TRADITION</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
@@ -45,7 +41,6 @@
 		<ProcessInfo>
 			<Type>PROCESS_RESEARCH_LESSER</Type>
 			<Description>TXT_KEY_PROCESS_LESSER_RESEARCH</Description>
-			<Strategy>TXT_KEY_PROCESS_RESEARCH_STRATEGY</Strategy>
 			<TechPrereq>TECH_WRITING</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
@@ -56,7 +51,6 @@
 		<ProcessInfo>
 			<Type>PROCESS_RESEARCH</Type>
 			<Description>TXT_KEY_PROCESS_RESEARCH</Description>
-			<Strategy>TXT_KEY_PROCESS_RESEARCH_STRATEGY</Strategy>
 			<TechPrereq>TECH_ALPHABET</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
@@ -67,7 +61,6 @@
 		<ProcessInfo>
 			<Type>PROCESS_CULTURE_MEAGER</Type>
 			<Description>TXT_KEY_PROCESS_MEAGER_CULTURE</Description>
-			<Strategy>TXT_KEY_PROCESS_CULTURE_STRATEGY</Strategy>
 			<TechPrereq>TECH_CULTURAL_IDENTITY</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
@@ -79,7 +72,6 @@
 		<ProcessInfo>
 			<Type>PROCESS_CULTURE_LESSER</Type>
 			<Description>TXT_KEY_PROCESS_LESSER_CULTURE</Description>
-			<Strategy>TXT_KEY_PROCESS_CULTURE_STRATEGY</Strategy>
 			<TechPrereq>TECH_HERITAGE</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
@@ -91,7 +83,6 @@
 		<ProcessInfo>
 			<Type>PROCESS_CULTURE</Type>
 			<Description>TXT_KEY_PROCESS_CULTURE</Description>
-			<Strategy>TXT_KEY_PROCESS_CULTURE_STRATEGY</Strategy>
 			<TechPrereq>TECH_LITERATURE</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
@@ -103,7 +94,6 @@
 		<ProcessInfo>
 			<Type>PROCESS_SPY_MEAGER</Type>
 			<Description>TXT_KEY_PROCESS_SPY_MEAGER</Description>
-			<Strategy>TXT_KEY_PROCESS_SPY</Strategy>
 			<TechPrereq>TECH_DECEPTION</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
@@ -116,7 +106,6 @@
 		<ProcessInfo>
 			<Type>PROCESS_SPY_LESSER</Type>
 			<Description>TXT_KEY_PROCESS_SPY_LESSER</Description>
-			<Strategy>TXT_KEY_PROCESS_SPY</Strategy>
 			<TechPrereq>TECH_ORATORY</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
@@ -129,7 +118,6 @@
 		<ProcessInfo>
 			<Type>PROCESS_SPY</Type>
 			<Description>TXT_KEY_PROCESS_SPY</Description>
-			<Strategy>TXT_KEY_PROCESS_SPY</Strategy>
 			<TechPrereq>TECH_DIPLOMACY</TechPrereq>
 			<ProductionToCommerceModifiers>
 				<iProductionToCommerceModifier>0</iProductionToCommerceModifier>
@@ -142,7 +130,6 @@
 		<ProcessInfo>
 			<Type>PROCESS_IDLE</Type>
 			<Description>TXT_KEY_PROCESS_IDLE</Description>
-			<Strategy>TXT_KEY_PROCESS_IDLE_STRATEGY</Strategy>
 			<Button>Art/Interface/Buttons/Process/ProcessIdle.dds</Button>
 		</ProcessInfo>
 	</ProcessInfos>

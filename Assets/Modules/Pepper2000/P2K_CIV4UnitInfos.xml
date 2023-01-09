@@ -1,9 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
@@ -13,6 +8,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
@@ -43,8 +39,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CONSTRUCTION_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CONSTRUCTION_SHIP_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<UnitAIs>
 				<UnitAI>
@@ -53,57 +47,24 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_LUNAR_HABITATION_COMPLEX</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUNAR_OUTPOST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_MANUFACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MARTIAN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_LUNAR_HABITATION_COMPLEX</BuildType>
+				<BuildType>BUILD_LUNAR_BASE</BuildType>
+				<BuildType>BUILD_LUNAR_OUTPOST</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
+				<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
+				<BuildType>BUILD_COLONY_MANUFACTORY</BuildType>
+				<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_MARTIAN_MINE</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>5000</iCost>
+			<iCost>2435</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -122,111 +83,6 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_SUPPLY_SHIP</Type>
-			<Capture>UNIT_GATHERER</Capture>
-			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_GARGANTUAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_SPACECRAFT</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
-				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SUPPLY_SHIP</Description>
-			<Civilopedia>TXT_KEY_UNIT_SUPPLY_SHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SUPPLY_SHIP_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_WORKER</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<Buildings>
-				<BuildingType>BUILDING_LUNAR_CHEMICAL_STORAGE</BuildingType>
-				<BuildingType>BUILDING_LUNAR_ORGANIC_MATERIAL_STORAGE</BuildingType>
-				<BuildingType>BUILDING_LUNAR_FERTILIZER_STORAGE</BuildingType>
-				<BuildingType>BUILDING_LUNAR_SOLAR_PANELS</BuildingType>
-			</Buildings>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>5000</iCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
-			<iMoves>24</iMoves>
-			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
-			<bCanMoveImpassable>1</bCanMoveImpassable>
-			<iWorkRate>500</iWorkRate>
-			<iAsset>1</iAsset>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>0</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_SPACECRAFT_SETTLER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<Actions>
-				<Action>
-					<MissionType>MISSION_SUPPLY_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>15</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER</OutcomeType>
-							<iChance>100</iChance>
-							<UnitType>UNIT_LUNAR_BULLDOZER</UnitType>
-							<bUnitToCity>
-								<Constant>0</Constant>
-							</bUnitToCity>
-							<PlotCondition>
-								<Not>
-									<Is>TAG_ANARCHY</Is>
-								</Not>
-							</PlotCondition>
-							<PythonCallback/>
-							<Python>
-								from CvPythonExtensions import CyGlobalContext
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
-									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
-									return plot.getTerrainType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									return 0
-								def getDisplay(unit,plot):
-									return u""
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-			</Actions>
 		</UnitInfo>
 		<!-- Lunar Rover-->
 		<UnitInfo>
@@ -253,8 +109,7 @@
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LUNAR_ROVER</Description>
 			<Civilopedia>TXT_KEY_UNIT_LUNAR_ROVER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LUNAR_ROVER_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bPillage>1</bPillage>
@@ -271,14 +126,14 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_NASA</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
 			<BonusType>BONUS_AUTOMOBILES</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			</PrereqBonuses>
-			<iCost>5000</iCost>
+			<iCost>2006</iCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>30</iCombat>
@@ -301,6 +156,8 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<Actions>
 				<Action>
+					<!-- Delete this action after finishing multimaps if we doesn't want single map space scenario support -->
+					<!-- It teleports unit to Lunar surface -->
 					<MissionType>MISSION_EXPLORE_MOON</MissionType>
 					<iCost>
 						<Adapt>
@@ -318,7 +175,7 @@
 								import random
 								def isPossible(unit,plot):
 									gc = CyGlobalContext()
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
+									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() not in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -327,7 +184,7 @@
 									destX = -1
 									destY = -1
 									numValid = 0
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
+									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									for x in range(map.getGridWidth()):
 										for y in range(map.getGridHeight()):
@@ -364,7 +221,7 @@
 								import random
 								def isPossible(unit,plot):
 									gc = CyGlobalContext()
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
+									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -389,6 +246,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -399,13 +257,13 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNARSETTLER</Description>
-			<Help>TXT_KEY_UNIT_CISLUNARSETTLER_HOVER</Help>
+			<Help>TXT_KEY_UNIT_CISLUNARSETTLER_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -416,16 +274,16 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_SPACE_STATION</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<iCost>1000</iCost>
+			<iCost>2435</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -482,6 +340,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -492,14 +351,14 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LUNARSETTLER</Description>
-			<Help>TXT_KEY_UNIT_LUNARSETTLER_HOVER</Help>
+			<Help>TXT_KEY_UNIT_LUNARSETTLER_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -510,17 +369,17 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_SPACE_STATION</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>1000</iCost>
+			<iCost>2540</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -554,11 +413,7 @@
 									gc = CyGlobalContext()
 									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
 										return False
-									valid_improvement_strings = ['LUNAR_OUTPOST','LUNAR_HABITATION_COMPLEX']
-									valid_improvements = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_improvement_strings]
-									if plot.getImprovementType() not in valid_improvements:
-										return False
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE']
+									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -581,6 +436,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -591,6 +447,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
@@ -602,9 +459,8 @@
 			</TerrainImpassableTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PLANETARYSETTLER</Description>
-			<Help>TXT_KEY_UNIT_PLANETARYSETTLER_HOVER</Help>
+			<Help>TXT_KEY_UNIT_PLANETARYSETTLER_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -615,17 +471,17 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_SPACE_STATION</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>1000</iCost>
+			<iCost>2645</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -659,7 +515,7 @@
 									gc = CyGlobalContext()
 									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
 										return False
-									valid_terrain_strings = ['VENUS','VENUS_HIGHLANDS','VENUS_LOWLANDS','MARTIAN_ICE','MARTIAN_PERMAFROST','MARTIAN_DUNES','MARTIAN_BARREN','MARTIAN_PLAINS','MARTIAN_ROCKY','MARTIAN_DESERT']
+									valid_terrain_strings = ['VENUS','VENUS_HIGHLANDS','VENUS_LOWLANDS','MARTIAN_ICE','MARTIAN_PERMAFROST','MARTIAN_DUNES','MARTIAN_BARREN','MARTIAN_PLAINS','MARTIAN_ROCKY','MARTIAN_DESERT','GREEN_MARS']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -682,6 +538,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -711,16 +568,15 @@
 					<TerrainType>TERRAIN_TITAN</TerrainType>
 					<PassableTech>TECH_ABYSS_COLONIZATION</PassableTech>
 				</TerrainPassableTech>
-			  <TerrainPassableTech>
-				<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
-				<PassableTech>TECH_SOLAR_ORDNANCE</PassableTech>
-			  </TerrainPassableTech>
+				<TerrainPassableTech>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
+					<PassableTech>TECH_SOLAR_ORDNANCE</PassableTech>
+				</TerrainPassableTech>
 			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ONEILLSETTLER</Description>
-			<Help>TXT_KEY_UNIT_ONEILLSETTLER_HOVER</Help>
+			<Help>TXT_KEY_UNIT_ONEILLSETTLER_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -731,25 +587,16 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_CISLUNAR_SPACEPORT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_DEEP_SPACE_DOCKING_BAY</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_CISLUNAR_SPACEPORT</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_DEEP_SPACE_COLONIES</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -802,6 +649,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NUCLEAR_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -819,9 +667,8 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORLDSHIP</Description>
-			<Help>TXT_KEY_UNIT_WORLDSHIP_HOVER</Help>
+			<Help>TXT_KEY_UNIT_WORLDSHIP_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -841,7 +688,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -875,7 +721,7 @@
 									gc = CyGlobalContext()
 									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
 										return False
-									valid_terrain_strings = ['OORT_CLOUD','TRANSTELLAR_SPACE','RED_DWARF','SUN_LIKE_STAR','RED_GIANT']
+									valid_terrain_strings = ['TRANSTELLAR_SPACE','RED_DWARF','SUN_LIKE_STAR','RED_GIANT']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -898,6 +744,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ANTIMATTER_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -926,9 +773,8 @@
 			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORLDSHIP2</Description>
-			<Help>TXT_KEY_UNIT_WORLDSHIP2_HOVER</Help>
+			<Help>TXT_KEY_UNIT_WORLDSHIP2_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -948,7 +794,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -1005,6 +850,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -1040,9 +886,8 @@
 			</TerrainPassableTechs>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORLDSHIP3</Description>
-			<Help>TXT_KEY_UNIT_WORLDSHIP3_HOVER</Help>
+			<Help>TXT_KEY_UNIT_WORLDSHIP3_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1053,25 +898,16 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_WORMHOLE_TRADE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INTERGALACTIC_WORMHOLE</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_WORMHOLE_TRADE</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPACE_CREASING</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -1128,6 +964,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -1144,9 +981,8 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORLDSHIP4</Description>
-			<Help>TXT_KEY_UNIT_WORLDSHIP4_HOVER</Help>
+			<Help>TXT_KEY_UNIT_WORLDSHIP4_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1157,25 +993,16 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INTERGALACTIC_WORMHOLE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HORIZON_PORT</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
+				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_HORIZON_BREAKING</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -1233,6 +1060,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -1249,9 +1077,8 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HYPERSHIP</Description>
-			<Help>TXT_KEY_UNIT_HYPERSHIP_HOVER</Help>
+			<Help>TXT_KEY_UNIT_HYPERSHIP_HELP</Help>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1262,29 +1089,17 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_TEMPORAL_RIFT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INTERGALACTIC_HYPERPORT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HYPERSPACE_EXPORTER</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_TEMPORAL_RIFT</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_HYPERPORT</BuildingType>
+				<BuildingType>BUILDING_HYPERSPACE_EXPORTER</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_DUALFLUX_QUANTUM_TEMPORAL_RIFT</PrereqTech>
 			<iCost>4850</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -1354,7 +1169,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ATTACKSHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_ATTACKSHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ATTACKSHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1373,9 +1187,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>10</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>180</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1410,7 +1222,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNAR_INVADER</Description>
 			<Civilopedia>TXT_KEY_UNIT_CISLUNAR_INVADER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CISLUNAR_INVADER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1429,9 +1240,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>6</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>120</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1466,7 +1275,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INT_INVADER</Description>
 			<Civilopedia>TXT_KEY_UNIT_INT_INVADER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_INT_INVADER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1485,9 +1293,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>6</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>240</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1522,7 +1328,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INT_BATTLECRUISER</Description>
 			<Civilopedia>TXT_KEY_UNIT_INT_BATTLECRUISER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_INT_BATTLECRUISER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1541,9 +1346,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>360</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1592,7 +1395,6 @@
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HYPER_BATTLECRUISER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HYPER_BATTLECRUISER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HYPER_BATTLECRUISER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -1612,9 +1414,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>480</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1671,7 +1471,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNAR_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_CISLUNAR_INFANTRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CISLUNAR_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1694,7 +1493,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>80</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1754,7 +1552,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DEEPSPACE_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_DEEPSPACE_INFANTRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DEEPSPACE_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1777,7 +1574,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>150</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1843,7 +1639,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORLDSHIP_DEFENDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORLDSHIP_DEFENDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORLDSHIP_DEFENDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1866,7 +1661,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>130</iCombat>
 			<iCombatLimit>170</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1931,7 +1725,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LUNAR_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_LUNAR_INFANTRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LUNAR_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -1954,7 +1747,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>90</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -2019,7 +1811,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MARTIAN_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_MARTIAN_INFANTRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MARTIAN_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2042,7 +1833,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>110</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -2107,7 +1897,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VENUS_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_VENUS_INFANTRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_VENUS_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2130,7 +1919,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>110</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -2195,7 +1983,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PLANETARY_INFANTRY</Description>
 			<Civilopedia>TXT_KEY_UNIT_PLANETARY_INFANTRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PLANETARY_INFANTRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2215,7 +2002,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>130</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -2281,7 +2067,6 @@
 			<DefaultUnitAI>UNITAI_CITY_DEFENSE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HYPERSPACE_DEFENDER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HYPERSPACE_DEFENDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HYPERSPACE_DEFENDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>
@@ -2301,7 +2086,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>170</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -2341,6 +2125,7 @@
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2356,7 +2141,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MARTIAN_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -2366,50 +2150,17 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_MAGLEV</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MARTIAN_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_MANUFACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MARTIAN_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_MARS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
+				<BuildType>BUILD_MARTIAN_MINE</BuildType>
+				<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
+				<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
+				<BuildType>BUILD_COLONY_MANUFACTORY</BuildType>
+				<BuildType>BUILD_MARTIAN_FARM</BuildType>
+				<BuildType>BUILD_TERRAFORM_MARS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
@@ -2420,7 +2171,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -2443,6 +2193,7 @@
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2458,7 +2209,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VENUS_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -2468,22 +2218,10 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_MAGLEV</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VENUS_SURFACE_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_VENUS_AERIAL_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
+				<BuildType>BUILD_VENUS_SURFACE_MINE</BuildType>
+				<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_VENUS_AERIAL_FARM</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_VENUS_CARBONWORKS</BuildingType>
@@ -2494,7 +2232,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -2518,6 +2255,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2533,7 +2271,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNAR_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -2543,21 +2280,17 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_ORBITAL_TRAJECTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_ORBITAL_TRAJECTORY</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_COILGUN</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>1000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -2581,6 +2314,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2598,7 +2332,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SOLAR_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SOLAR_WORKER_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
@@ -2610,10 +2343,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_SOLAR_TRAJECTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_SOLAR_TRAJECTORY</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_HOUSING_WORKING_CLASS</BuildingType>
@@ -2624,7 +2354,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -2647,6 +2376,7 @@
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -2662,7 +2392,6 @@
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MARSSETTLER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bFood>1</bFood>
 			<bFound>1</bFound>
@@ -2681,7 +2410,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
@@ -2702,6 +2430,7 @@
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -2717,7 +2446,6 @@
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VENUS_SETTLER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SETTLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SETTLER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<bFood>1</bFood>
 			<bFound>1</bFound>
@@ -2736,7 +2464,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
@@ -2761,6 +2488,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2785,8 +2513,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SOLARSAIL_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_SOLARSAIL_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SOLARSAIL_WORKER_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -2796,26 +2523,11 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ASTEROID_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_CONCENTRATOR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_ASTEROID_MINE</BuildType>
+				<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
+				<BuildType>BUILD_CISLUNAR_BASE</BuildType>
+				<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
 			</Builds>
 			<Actions>
 				<Action>
@@ -2857,11 +2569,10 @@
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>2506</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -2886,6 +2597,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2911,8 +2623,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MAGSAIL_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_MAGSAIL_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MAGSAIL_WORKER_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -2922,74 +2633,23 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MERCURY_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MERCURY_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ASTEROID_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_CONCENTRATOR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SATELLITE_STATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ARCOLOGY_MOON</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_TRADING_POST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_FLOATING_CITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_LUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_LUNAR_ARCOLOGY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PARATERRAFORMED_ASTEROID</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUN_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_MERCURY_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_MERCURY_COLONY</BuildType>
+				<BuildType>BUILD_ASTEROID_MINE</BuildType>
+				<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
+				<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
+				<BuildType>BUILD_SATELLITE_STATION</BuildType>
+				<BuildType>BUILD_ARCOLOGY_MOON</BuildType>
+				<BuildType>BUILD_CISLUNAR_BASE</BuildType>
+				<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
+				<BuildType>BUILD_SOLAR_TRADING_POST</BuildType>
+				<BuildType>BUILD_JOVIAN_SCOOP</BuildType>
+				<BuildType>BUILD_JOVIAN_FLOATING_CITY</BuildType>
+				<BuildType>BUILD_JOVIAN_LUNAR_BASE</BuildType>
+				<BuildType>BUILD_JOVIAN_LUNAR_ARCOLOGY</BuildType>
+				<BuildType>BUILD_PARATERRAFORMED_ASTEROID</BuildType>
+				<BuildType>BUILD_SUN_SCOOP</BuildType>
 			</Builds>
 			<Actions>
 				<Action>
@@ -3033,11 +2693,10 @@
 				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MAGNETIC_SAILS</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>4756</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -3062,6 +2721,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3086,7 +2746,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NANOWORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_NANOWORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NANOWORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -3096,78 +2755,24 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_COMPACT_WORMHOLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ASTEROID_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_CONCENTRATOR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MERCURY_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MERCURY_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_TRADING_POST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_FLOATING_CITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_LUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_LUNAR_ARCOLOGY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PARATERRAFORMED_ASTEROID</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUN_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SATELLITE_STATION</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ARCOLOGY_MOON</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_COMPACT_WORMHOLE</BuildType>
+				<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_ASTEROID_MINE</BuildType>
+				<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
+				<BuildType>BUILD_MERCURY_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_MERCURY_COLONY</BuildType>
+				<BuildType>BUILD_SOLAR_TRADING_POST</BuildType>
+				<BuildType>BUILD_JOVIAN_SCOOP</BuildType>
+				<BuildType>BUILD_JOVIAN_FLOATING_CITY</BuildType>
+				<BuildType>BUILD_JOVIAN_LUNAR_BASE</BuildType>
+				<BuildType>BUILD_JOVIAN_LUNAR_ARCOLOGY</BuildType>
+				<BuildType>BUILD_PARATERRAFORMED_ASTEROID</BuildType>
+				<BuildType>BUILD_SUN_SCOOP</BuildType>
+				<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
+				<BuildType>BUILD_SATELLITE_STATION</BuildType>
+				<BuildType>BUILD_ARCOLOGY_MOON</BuildType>
+				<BuildType>BUILD_CISLUNAR_BASE</BuildType>
+				<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
 			</Builds>
 			<Actions>
 				<Action>
@@ -3214,7 +2819,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -3239,6 +2843,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3265,7 +2870,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_COSMIC_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_COSMIC_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_COSMIC_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -3275,178 +2879,50 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_MEGAWORMHOLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ASPATIAL_ROUTE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ASTEROID_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SPACE_SOLAR_CONCENTRATOR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MERCURY_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MERCURY_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_TRADING_POST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_FLOATING_CITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_LUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_JOVIAN_LUNAR_ARCOLOGY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PARATERRAFORMED_ASTEROID</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUN_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ARCOLOGY_MOON</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_CISLUNAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_WORMHOLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_TRADING_POST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUPERNOVA_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORMED_PLANET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ARTIFICIAL_PLANET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STAR_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BLUE_SUPERGIANT_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BIOTIC_NEUTRON_STAR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NEUTRON_STAR_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HELIOFORMED_BROWN_DWARF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_NEUTRON_STAR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERGALACTIC_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUPERCLUSTER_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_OBSERVABLE_UNIVERSE_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PARALLEL_UNIVERSE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DYSON_SPHERE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERGALACTIC_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BIOTIC_GALAXY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TRUE_VACUUM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COSMIC_EXPANSION_NODE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_RESEARCH_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERGALACTIC_RESEARCH_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DISTANT_RESEARCH_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_MEGAWORMHOLE</BuildType>
+				<BuildType>BUILD_ASPATIAL_ROUTE</BuildType>
+				<BuildType>BUILD_SPACE_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_ASTEROID_MINE</BuildType>
+				<BuildType>BUILD_SOLAR_CONCENTRATOR</BuildType>
+				<BuildType>BUILD_MERCURY_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_MERCURY_COLONY</BuildType>
+				<BuildType>BUILD_SOLAR_TRADING_POST</BuildType>
+				<BuildType>BUILD_JOVIAN_SCOOP</BuildType>
+				<BuildType>BUILD_JOVIAN_FLOATING_CITY</BuildType>
+				<BuildType>BUILD_JOVIAN_LUNAR_BASE</BuildType>
+				<BuildType>BUILD_JOVIAN_LUNAR_ARCOLOGY</BuildType>
+				<BuildType>BUILD_PARATERRAFORMED_ASTEROID</BuildType>
+				<BuildType>BUILD_SUN_SCOOP</BuildType>
+				<BuildType>BUILD_CISLUNAR_EXPANSION_MODULE</BuildType>
+				<BuildType>BUILD_ARCOLOGY_MOON</BuildType>
+				<BuildType>BUILD_CISLUNAR_BASE</BuildType>
+				<BuildType>BUILD_SOLAR_SYSTEM_BASE</BuildType>
+				<BuildType>BUILD_WORMHOLE</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_TRADING_POST</BuildType>
+				<BuildType>BUILD_SUPERNOVA_MINE</BuildType>
+				<BuildType>BUILD_TERRAFORMED_PLANET</BuildType>
+				<BuildType>BUILD_ARTIFICIAL_PLANET</BuildType>
+				<BuildType>BUILD_STAR_SCOOP</BuildType>
+				<BuildType>BUILD_BLUE_SUPERGIANT_COLONY</BuildType>
+				<BuildType>BUILD_BIOTIC_NEUTRON_STAR</BuildType>
+				<BuildType>BUILD_NEUTRON_STAR_COLONY</BuildType>
+				<BuildType>BUILD_HELIOFORMED_BROWN_DWARF</BuildType>
+				<BuildType>BUILD_TERRAFORM_NEUTRON_STAR</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_COLONY</BuildType>
+				<BuildType>BUILD_INTERGALACTIC_COLONY</BuildType>
+				<BuildType>BUILD_SUPERCLUSTER_COLONY</BuildType>
+				<BuildType>BUILD_OBSERVABLE_UNIVERSE_COLONY</BuildType>
+				<BuildType>BUILD_PARALLEL_UNIVERSE</BuildType>
+				<BuildType>BUILD_DYSON_SPHERE</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_BASE</BuildType>
+				<BuildType>BUILD_INTERGALACTIC_BASE</BuildType>
+				<BuildType>BUILD_BIOTIC_GALAXY</BuildType>
+				<BuildType>BUILD_TRUE_VACUUM</BuildType>
+				<BuildType>BUILD_COSMIC_EXPANSION_NODE</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_RESEARCH_BASE</BuildType>
+				<BuildType>BUILD_INTERGALACTIC_RESEARCH_BASE</BuildType>
+				<BuildType>BUILD_DISTANT_RESEARCH_BASE</BuildType>
+				<BuildType>BUILD_PLACE_GALAXY</BuildType>
 			</Builds>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_MILKY_WAY</TerrainType>
@@ -3487,29 +2963,17 @@
 					<PassableTech>TECH_HORIZON_BREAKING</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
-			<TrainCondition>
-				<Or>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INTERSTELLAR_STARPORT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_INTERGALACTIC_STARPORT</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_HORIZON_PORT</ID>
-					</Has>
-				</Or>
-			</TrainCondition>
+			<PrereqOrBuildings>
+				<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
+				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_PHASING</PrereqTech>
 			<iCost>5000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -3534,6 +2998,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3553,7 +3018,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CHRONOFORM_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_CHRONOFORM_SHIP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CHRONOFORM_SHIP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -3563,62 +3027,20 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_HYPERLANE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ASPATIAL_ROUTE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_HYPERSPACE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_PAST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_FUTURE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_BRANESPACE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TIME_MANIFOLD</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DISTANT_PAST_CITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DISTANT_FUTURE_CITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_PARALLEL_UNIVERSE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BRANE_FACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BRANE_FARM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SPIRITUAL_REALM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HYPERSPACE_BUNKER</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_HYPERLANE</BuildType>
+				<BuildType>BUILD_ASPATIAL_ROUTE</BuildType>
+				<BuildType>BUILD_TERRAFORM_HYPERSPACE</BuildType>
+				<BuildType>BUILD_TERRAFORM_PAST</BuildType>
+				<BuildType>BUILD_TERRAFORM_FUTURE</BuildType>
+				<BuildType>BUILD_TERRAFORM_BRANESPACE</BuildType>
+				<BuildType>BUILD_TIME_MANIFOLD</BuildType>
+				<BuildType>BUILD_DISTANT_PAST_CITY</BuildType>
+				<BuildType>BUILD_DISTANT_FUTURE_CITY</BuildType>
+				<BuildType>BUILD_PARALLEL_UNIVERSE</BuildType>
+				<BuildType>BUILD_BRANE_FACTORY</BuildType>
+				<BuildType>BUILD_BRANE_FARM</BuildType>
+				<BuildType>BUILD_SPIRITUAL_REALM</BuildType>
+				<BuildType>BUILD_HYPERSPACE_BUNKER</BuildType>
 			</Builds>
 			<TerrainImpassableTypes>
 				<TerrainType>TERRAIN_VIRGO_SUPERCLUSTER</TerrainType>
@@ -3653,7 +3075,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -3678,6 +3099,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3696,7 +3118,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SPACE_WORK_CREW</Description>
 			<Civilopedia>TXT_KEY_UNIT_SPACE_WORK_CREW_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SPACE_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -3709,12 +3130,11 @@
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MASS_DRIVER</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>4231</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>100</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3740,6 +3160,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3762,7 +3183,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CYBERNETIC_WORK_CREW</Description>
 			<Civilopedia>TXT_KEY_UNIT_CYBERNETIC_WORK_CREW_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CYBERNETIC_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -3780,7 +3200,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>150</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3806,6 +3225,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3830,7 +3250,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TRANSHUMAN_WORK_CREW</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRANSHUMAN_WORK_CREW_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TRANSHUMAN_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -3848,7 +3267,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>200</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3874,6 +3292,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NUCLEAR_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3900,7 +3319,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_POSTHUMAN_WORK_CREW</Description>
 			<Civilopedia>TXT_KEY_UNIT_POSTHUMAN_WORK_CREW_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_POSTHUMAN_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -3913,12 +3331,11 @@
 				<BuildingType>BUILDING_STARPORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
-			<iCost>6500</iCost>
+			<iCost>8817</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>250</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3944,6 +3361,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ANTIMATTER_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3965,13 +3383,13 @@
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
 			</MapCategoryTypes>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_COSMIC_WORK_CREW</Description>
 			<Civilopedia>TXT_KEY_UNIT_COSMIC_WORK_CREW_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_COSMIC_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -3984,12 +3402,11 @@
 				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_GALACTIFORMING</PrereqTech>
-			<iCost>7000</iCost>
+			<iCost>12342</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>300</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -4015,6 +3432,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -4043,7 +3461,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW</Description>
 			<Civilopedia>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4056,12 +3473,11 @@
 				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SHAPESHIFTING</PrereqTech>
-			<iCost>7500</iCost>
+			<iCost>14817</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>350</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -4087,6 +3503,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -4118,7 +3535,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW</Description>
 			<Civilopedia>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HYPERINTELLIGENT_WORK_CREW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4131,12 +3547,11 @@
 				<BuildingType>BUILDING_MICROWORMHOLE_BUILDING</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_HYPERINTELLIGENCE</PrereqTech>
-			<iCost>8000</iCost>
+			<iCost>18267</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>400</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -4162,6 +3577,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -4204,7 +3620,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BACTERIA_SWARM</Description>
 			<Civilopedia>TXT_KEY_UNIT_BACTERIA_SWARM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BACTERIA_SWARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4222,7 +3637,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>350</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -4248,6 +3662,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -4297,7 +3712,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LIFE_SWARM</Description>
 			<Civilopedia>TXT_KEY_UNIT_LIFE_SWARM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LIFE_SWARM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4315,7 +3729,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>350</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -4341,6 +3754,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -4355,7 +3769,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ENERGY_ENTITY</Description>
 			<Civilopedia>TXT_KEY_UNIT_ENERGY_ENTITY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ENERGY_ENTITY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4373,7 +3786,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>350</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -4400,6 +3812,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -4428,8 +3841,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SATELLITE</Description>
 			<Civilopedia>TXT_KEY_UNIT_SATELLITE_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
-			<Strategy>TXT_KEY_UNIT_SATELLITE_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4510,11 +3922,10 @@
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>1762</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -4539,6 +3950,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -4554,7 +3966,7 @@
 			</MapCategoryTypes>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<TerrainImpassableTypes>
-			<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>
+				<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>
 			</TerrainImpassableTypes>
 			<UnitUpgrades>
 				<UnitType>UNIT_HEAVY_ROCKET</UnitType>
@@ -4564,8 +3976,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SPACE_SHUTTLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_SPACE_SHUTTLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SPACE_SHUTTLE_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -4578,18 +3989,16 @@
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>2106</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
+				<BuildType>BUILD_SPACE_STATION_LV2</BuildType>
+				<BuildType>BUILD_SPACE_STATION_LV3</BuildType>
 			</Builds>
 			<Actions>
 				<Action>
@@ -4691,68 +4100,6 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_SS2</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_SS2</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeSS2</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV1']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV2'))
-								def getDisplay(unit,plot):
-									return u"Upgrade Space Station"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_SS3</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_SS3</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeSS3</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV2']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV3'))
-								def getDisplay(unit,plot):
-									return u"Upgrade Space Station"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
 			</Actions>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
@@ -4776,6 +4123,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -4810,8 +4158,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_PLANET_PROBE</Description>
 			<Civilopedia>TXT_KEY_UNIT_PLANET_PROBE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_PLANET_PROBE_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -5010,7 +4357,7 @@
 									gc = CyGlobalContext()
 									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
 										return False
-									valid_terrain_strings = ['MARTIAN_ICE','MARTIAN_PERMAFROST','MARTIAN_DUNES','MARTIAN_BARREN','MARTIAN_PLAINS','MARTIAN_ROCKY','MARTIAN_DESERT']
+									valid_terrain_strings = ['MARTIAN_ICE','MARTIAN_PERMAFROST','MARTIAN_DUNES','MARTIAN_BARREN','MARTIAN_PLAINS','MARTIAN_ROCKY','MARTIAN_DESERT','GREEN_MARS']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -5376,11 +4723,10 @@
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>2306</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -5405,6 +4751,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -5430,7 +4777,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INTERSTELLAR_PROBE</Description>
 			<Civilopedia>TXT_KEY_UNIT_INTERSTELLAR_PROBE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_INTERSTELLAR_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -5585,7 +4931,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -5610,6 +4955,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -5627,7 +4973,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_BRACEWELL_PROBE</Description>
 			<Civilopedia>TXT_KEY_UNIT_BRACEWELL_PROBE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_BRACEWELL_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -5745,7 +5090,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -5770,6 +5114,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -5788,7 +5133,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VON_NEUMANN_PROBE</Description>
 			<Civilopedia>TXT_KEY_UNIT_VON_NEUMANN_PROBE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_VON_NEUMANN_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -5873,7 +5217,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -5898,6 +5241,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -5916,7 +5260,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_QUANTUM_PROBE</Description>
 			<Civilopedia>TXT_KEY_UNIT_QUANTUM_PROBE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_QUANTUM_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -5968,7 +5311,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -5993,6 +5335,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6011,7 +5354,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE</Description>
 			<Civilopedia>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6096,7 +5438,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6121,6 +5462,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6140,8 +5482,7 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HEAVY_ROCKET</Description>
 			<Civilopedia>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HEAVY_ROCKET_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_HEAVY_ROCKET_HOVER</Help>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6154,18 +5495,16 @@
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_COMMERCIAL_SPACEFLIGHT</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>3006</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>1000</iWorkRate>
 			<iAsset>1</iAsset>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
+				<BuildType>BUILD_SPACE_STATION_LV2</BuildType>
+				<BuildType>BUILD_SPACE_STATION_LV3</BuildType>
 			</Builds>
 			<Actions>
 				<Action>
@@ -6267,164 +5606,6 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_SS2</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_SS2</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeSS2</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV1']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV2'))
-								def getDisplay(unit,plot):
-									return u"Upgrade Space Station"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_SS3</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_SS3</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeSS3</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV2']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV3'))
-								def getDisplay(unit,plot):
-									return u"Upgrade Space Station"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_CISLUNAR_SETTLER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_CISLUNAR_SETTLER</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeCislunarSettler</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								import random
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV3']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_CISLUNARSETTLER'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-								def getDisplay(unit,plot):
-									return u"Upgrade to Cislunar Settler"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_LUNAR_SETTLER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_LUNAR_SETTLER</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeLunarSettler</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								import random
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV3']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_LUNARSETTLER'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-								def getDisplay(unit,plot):
-									return u"Upgrade to Lunar Settler"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_PLANET_SETTLER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_PLANET_SETTLER</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradePlanetSettler</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								import random
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV3']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_PLANETARYSETTLER'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-								def getDisplay(unit,plot):
-									return u"Upgrade to Planetary Settler"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
 			</Actions>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
@@ -6447,6 +5628,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6470,7 +5652,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CAPTURED_ASTEROID</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAPTURED_ASTEROID_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CAPTURED_ASTEROID_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6480,10 +5661,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_PLACE_ASTEROID</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLACE_ASTEROID</BuildType>
 			</Builds>
 			<Buildings>
 				<BuildingType>BUILDING_CAPTURED_ASTEROID</BuildingType>
@@ -6493,7 +5671,7 @@
 				<BuildingType>BUILDING_MARTIAN_ASTEROID_MINE</BuildingType>
 			</Buildings>
 			<iBaseHurry>1000</iBaseHurry>
-			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_TRADE</PrereqTech>
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<PrereqAndBuildings>
@@ -6502,7 +5680,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6526,6 +5703,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6549,7 +5727,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CAPTURED_COMET</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAPTURED_COMET_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CAPTURED_COMET_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6559,10 +5736,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_PLACE_ASTEROID</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_PLACE_ASTEROID</BuildType>
 			</Builds>
 			<Buildings>
 				<BuildingType>BUILDING_CAPTURED_ASTEROID</BuildingType>
@@ -6581,7 +5755,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>1000</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6605,6 +5778,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NUCLEAR_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6639,7 +5813,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INTERSTELLAR_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_INTERSTELLAR_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_INTERSTELLAR_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6649,66 +5822,21 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_WORMHOLE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_TRADING_POST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SUPERNOVA_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORMED_PLANET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_ARTIFICIAL_PLANET</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_STAR_SCOOP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BLUE_SUPERGIANT_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_BIOTIC_NEUTRON_STAR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_NEUTRON_STAR_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_HELIOFORMED_BROWN_DWARF</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_NEUTRON_STAR</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_COLONY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_DYSON_SPHERE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_INTERSTELLAR_RESEARCH_BASE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_WORMHOLE</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_TRADING_POST</BuildType>
+				<BuildType>BUILD_SUPERNOVA_MINE</BuildType>
+				<BuildType>BUILD_TERRAFORMED_PLANET</BuildType>
+				<BuildType>BUILD_ARTIFICIAL_PLANET</BuildType>
+				<BuildType>BUILD_STAR_SCOOP</BuildType>
+				<BuildType>BUILD_BLUE_SUPERGIANT_COLONY</BuildType>
+				<BuildType>BUILD_BIOTIC_NEUTRON_STAR</BuildType>
+				<BuildType>BUILD_NEUTRON_STAR_COLONY</BuildType>
+				<BuildType>BUILD_HELIOFORMED_BROWN_DWARF</BuildType>
+				<BuildType>BUILD_TERRAFORM_NEUTRON_STAR</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_COLONY</BuildType>
+				<BuildType>BUILD_DYSON_SPHERE</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_BASE</BuildType>
+				<BuildType>BUILD_INTERSTELLAR_RESEARCH_BASE</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
@@ -6718,7 +5846,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6743,6 +5870,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6760,7 +5888,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LOE_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_LOE_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LOE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6797,7 +5924,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6821,6 +5947,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6838,7 +5965,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SS1_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SS1_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SS1_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6872,7 +5998,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6896,6 +6021,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6913,7 +6039,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SS2_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SS2_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SS2_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -6949,7 +6074,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6973,6 +6097,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6990,7 +6115,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SS3_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SS3_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SS3_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7028,7 +6152,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7052,6 +6175,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7069,7 +6193,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CISLUNAR_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_CISLUNAR_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CISLUNAR_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7107,7 +6230,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7131,6 +6253,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7148,7 +6271,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LUNAR_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_LUNAR_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LUNAR_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7185,7 +6307,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7209,6 +6330,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7226,7 +6348,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INNER_SOLAR_SYSTEM_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_INNER_SOLAR_SYSTEM_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_INNER_SOLAR_SYSTEM_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7265,7 +6386,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7289,6 +6409,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7306,7 +6427,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7340,7 +6460,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7364,6 +6483,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7381,7 +6501,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7411,7 +6530,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7436,6 +6554,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7459,7 +6578,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INTERSTELLAR_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_INTERSTELLAR_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_INTERSTELLAR_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7492,7 +6610,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7517,6 +6634,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7541,7 +6659,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GALACTIC_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_GALACTIC_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GALACTIC_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7574,7 +6691,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7599,6 +6715,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7623,7 +6740,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INTERGALACTIC_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_INTERGALACTIC_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_INTERGALACTIC_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7656,7 +6772,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7681,6 +6796,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7698,7 +6814,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MERCURY_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_MERCURY_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MERCURY_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7731,7 +6846,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7755,6 +6869,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7772,7 +6887,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_VENUS_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_VENUS_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_VENUS_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7805,7 +6919,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7829,6 +6942,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7846,7 +6960,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MARS_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_MARS_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MARS_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7880,7 +6993,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7904,6 +7016,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7921,7 +7034,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ASTEROID_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_ASTEROID_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ASTEROID_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -7954,7 +7066,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7978,6 +7089,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7995,7 +7107,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_JUPITER_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_JUPITER_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_JUPITER_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8028,7 +7139,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8052,6 +7162,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8069,7 +7180,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EUROPA_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_EUROPA_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_EUROPA_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8103,7 +7213,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8127,6 +7236,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8144,7 +7254,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SATURN_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SATURN_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SATURN_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8177,7 +7286,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8201,6 +7309,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8218,7 +7327,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_TITAN_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_TITAN_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_TITAN_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8251,7 +7359,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8275,6 +7382,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8292,7 +7400,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_URANUS_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_URANUS_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_URANUS_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8326,7 +7433,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8350,6 +7456,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8367,7 +7474,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_NEPTUNE_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_NEPTUNE_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_NEPTUNE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8401,7 +7507,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8425,6 +7530,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8442,7 +7548,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_KBO_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_KBO_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_KBO_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8476,7 +7581,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8501,6 +7605,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8518,7 +7623,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SEDNOID_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEDNOID_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SEDNOID_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8552,7 +7656,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8577,6 +7680,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8594,7 +7698,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_EXOPLANET_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_EXOPLANET_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_EXOPLANET_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8624,7 +7727,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8649,6 +7751,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8666,7 +7769,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_OORT_CLOUD_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_OORT_CLOUD_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_OORT_CLOUD_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8696,7 +7798,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8721,6 +7822,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8738,7 +7840,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_DISTANT_COSMOS_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_DISTANT_COSMOS_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_DISTANT_COSMOS_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8768,7 +7869,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8793,6 +7893,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8810,7 +7911,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HYPERSPACE_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_HYPERSPACE_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_HYPERSPACE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8840,7 +7940,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8865,6 +7964,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8882,7 +7982,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_MULTIVERSE_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_MULTIVERSE_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MULTIVERSE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8912,7 +8011,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8937,6 +8035,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8954,7 +8053,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_ANCIENT_CIVILIZATION_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_ANCIENT_CIVILIZATION_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_ANCIENT_CIVILIZATION_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -8984,7 +8082,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -9009,6 +8106,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9026,7 +8124,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SOLAR_SYSTEM_LIFE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -9056,7 +8153,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -9081,6 +8177,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9098,7 +8195,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -9128,7 +8224,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -9153,6 +8248,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9177,7 +8273,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_GALACTIC_CORE_REWARD</Description>
 			<Civilopedia>TXT_KEY_UNIT_GALACTIC_CORE_REWARD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GALACTIC_CORE_REWARD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -9210,7 +8305,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -9228,628 +8322,13 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_WARLORDVS</Type>
-			<UnitUpgrades>
-				<UnitType>UNIT_WARLORDVIS</UnitType>
-			</UnitUpgrades>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_WARLORDV</Type>
-			<UnitUpgrades>
-				<UnitType>UNIT_WARLORDVI</UnitType>
-			</UnitUpgrades>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_WARLORDVIS</Type>
-			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_WARLORDVIS</Capture>
-			<Combat>UNITCOMBAT_CAPTAIN</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_WARLORDVIS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GREAT_GENERAL_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<UnitUpgrades>
-				<UnitType>UNIT_WARLORDVIIS</UnitType>
-			</UnitUpgrades>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_GENERAL</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<GreatPeoples>
-				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
-					<bGreatPeople>1</bGreatPeople>
-				</GreatPeople>
-			</GreatPeoples>
-			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
-			<BonusType>BONUS_NANOTUBES</BonusType>
-			<iCost>-1</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
-			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
-			<iAsset>1</iAsset>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_MSVWARLORD_ANCIENT</EarlyArtDefineTag>
-					<LateArtDefineTag>ART_DEF_UNIT_SVWARLORD_MODERN</LateArtDefineTag>
-					<MiddleArtDefineTag>ART_DEF_UNIT_SVWARLORD_MEDIEVAL</MiddleArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
-			<iLeaderExperience>25</iLeaderExperience>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_WARLORDVIIS</Type>
-			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_WARLORDVIIS</Capture>
-			<Combat>UNITCOMBAT_CAPTAIN</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_WARLORDVIIS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GREAT_GENERAL_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<UnitUpgrades>
-				<UnitType>UNIT_WARLORDVIIIS</UnitType>
-			</UnitUpgrades>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_GENERAL</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<GreatPeoples>
-				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
-					<bGreatPeople>1</bGreatPeople>
-				</GreatPeople>
-			</GreatPeoples>
-			<PrereqTech>TECH_ADVANCED_WARMACHINES</PrereqTech>
-			<BonusType>BONUS_SUPERSTRONG_ALLOYS</BonusType>
-			<iCost>-1</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
-			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
-			<iAsset>1</iAsset>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_MSVWARLORD_ANCIENT</EarlyArtDefineTag>
-					<LateArtDefineTag>ART_DEF_UNIT_SVWARLORD_MODERN</LateArtDefineTag>
-					<MiddleArtDefineTag>ART_DEF_UNIT_SVWARLORD_MEDIEVAL</MiddleArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
-			<iLeaderExperience>25</iLeaderExperience>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_WARLORDVIIIS</Type>
-			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNIT_WARLORDVIIIS</Capture>
-			<Combat>UNITCOMBAT_CAPTAIN</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ATTACHE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_ELITE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_PARTY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_WARLORDVIIIS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GREAT_GENERAL_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_GENERAL</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<GreatPeoples>
-				<GreatPeople>
-					<GreatPeopleType>SPECIALIST_GREAT_MILITARY_INSTRUCTOR</GreatPeopleType>
-					<bGreatPeople>1</bGreatPeople>
-				</GreatPeople>
-			</GreatPeoples>
-			<PrereqTech>TECH_GALACTIC_WARFARE</PrereqTech>
-			<iCost>-1</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iBaseUpkeep>1</iBaseUpkeep>
-			<iMoves>4</iMoves>
-			<iNukeRange>-1</iNukeRange>
-			<iAsset>1</iAsset>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_MSVWARLORD_ANCIENT</EarlyArtDefineTag>
-					<LateArtDefineTag>ART_DEF_UNIT_SVWARLORD_MODERN</LateArtDefineTag>
-					<MiddleArtDefineTag>ART_DEF_UNIT_SVWARLORD_MEDIEVAL</MiddleArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<LeaderPromotion>PROMOTION_LEADER</LeaderPromotion>
-			<iLeaderExperience>25</iLeaderExperience>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_WARLORDVI</Type>
-			<iMaxPlayerInstances>6</iMaxPlayerInstances>
-			<bUnlimitedException>1</bUnlimitedException>
-			<iInstanceCostModifier>25</iInstanceCostModifier>
-			<Capture>UNIT_WARLORDVIS</Capture>
-			<Combat>UNITCOMBAT_GUN</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_H2H_HANDGUN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_HANDGUN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_WARLORDVI</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GREAT_GENERAL_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bNoCapture>1</bNoCapture>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
-			<bHiddenNationality>1</bHiddenNationality>
-			<bAlwaysHostile>1</bAlwaysHostile>
-			<UnitUpgrades>
-				<UnitType>UNIT_WARLORDVII</UnitType>
-			</UnitUpgrades>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_GENERAL</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
-			<BonusType>BONUS_NANOTUBES</BonusType>
-			<iCost>3000</iCost>
-			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iBaseUpkeep>16</iBaseUpkeep>
-			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
-			<iCombat>90</iCombat>
-			<iCombatLimit>100</iCombatLimit>
-			<iXPValueAttack>4</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
-			<iWithdrawalProb>25</iWithdrawalProb>
-			<iCollateralDamage>50</iCollateralDamage>
-			<iCollateralDamageLimit>50</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
-			<iCityAttack>25</iCityAttack>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_GOLD_WARES</BonusType>
-					<iProductonModifier>10</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_SILVER_WARES</BonusType>
-					<iProductonModifier>10</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_GEMSTONE</BonusType>
-					<iProductonModifier>10</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_PEARLS</BonusType>
-					<iProductonModifier>10</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
-			<iBombardRate>20</iBombardRate>
-			<iAsset>15</iAsset>
-			<iPower>60</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>4</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>0</iMeleeWaveSize>
-				<iRangedWaveSize>5</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_VWARLORD_MODERN</EarlyArtDefineTag>
-				</UnitMeshGroup>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_LIGHT_ARTILLERY</EarlyArtDefineTag>
-				</UnitMeshGroup>
-				<UnitMeshGroup>
-					<iRequired>0</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_FLAMETHROWER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_MODERN_GRENADIER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_MARINE</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LEADER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-			</FreePromotions>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_WARLORDVII</Type>
-			<iMaxPlayerInstances>7</iMaxPlayerInstances>
-			<bUnlimitedException>1</bUnlimitedException>
-			<iInstanceCostModifier>25</iInstanceCostModifier>
-			<Capture>UNIT_WARLORDVIIS</Capture>
-			<Combat>UNITCOMBAT_GUN</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_H2H_HANDGUN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_HANDGUN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_WARLORDVII</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GREAT_GENERAL_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bNoCapture>1</bNoCapture>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
-			<bHiddenNationality>1</bHiddenNationality>
-			<bAlwaysHostile>1</bAlwaysHostile>
-			<UnitUpgrades>
-				<UnitType>UNIT_WARLORDVIII</UnitType>
-			</UnitUpgrades>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_GENERAL</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqTech>TECH_ADVANCED_WARMACHINES</PrereqTech>
-			<BonusType>BONUS_SUPERSTRONG_ALLOYS</BonusType>
-			<iCost>5000</iCost>
-			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iBaseUpkeep>16</iBaseUpkeep>
-			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
-			<iCombat>120</iCombat>
-			<iCombatLimit>100</iCombatLimit>
-			<iXPValueAttack>4</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
-			<iWithdrawalProb>25</iWithdrawalProb>
-			<iCollateralDamage>50</iCollateralDamage>
-			<iCollateralDamageLimit>50</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
-			<iCityAttack>25</iCityAttack>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_GOLD_WARES</BonusType>
-					<iProductonModifier>10</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_SILVER_WARES</BonusType>
-					<iProductonModifier>10</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_GEMSTONE</BonusType>
-					<iProductonModifier>10</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_PEARLS</BonusType>
-					<iProductonModifier>10</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
-			<iBombardRate>20</iBombardRate>
-			<iAsset>15</iAsset>
-			<iPower>60</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>4</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>0</iMeleeWaveSize>
-				<iRangedWaveSize>5</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_VWARLORD_MODERN</EarlyArtDefineTag>
-				</UnitMeshGroup>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_LIGHT_ARTILLERY</EarlyArtDefineTag>
-				</UnitMeshGroup>
-				<UnitMeshGroup>
-					<iRequired>0</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_FLAMETHROWER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_MODERN_GRENADIER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_MARINE</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LEADER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-			</FreePromotions>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_WARLORDVIII</Type>
-			<iMaxPlayerInstances>8</iMaxPlayerInstances>
-			<bUnlimitedException>1</bUnlimitedException>
-			<iInstanceCostModifier>25</iInstanceCostModifier>
-			<Capture>UNIT_WARLORDVIIIS</Capture>
-			<Combat>UNITCOMBAT_GUN</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_SIDEARM_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_DIST_SINGLE_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_H2H_HANDGUN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_SIDEARM_KNIFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_DIST_HANDGUN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_EXCEPTIONAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SQUAD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_WARLORDVIII</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_GREAT_GENERAL_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bNoCapture>1</bNoCapture>
-			<bMilitaryHappiness>1</bMilitaryHappiness>
-			<bMilitarySupport>1</bMilitarySupport>
-			<bMilitaryProduction>1</bMilitaryProduction>
-			<bPillage>1</bPillage>
-			<bHiddenNationality>1</bHiddenNationality>
-			<bAlwaysHostile>1</bAlwaysHostile>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_GENERAL</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqTech>TECH_GALACTIC_WARFARE</PrereqTech>
-			<iCost>9800</iCost>
-			<iAdvancedStartCost>100</iAdvancedStartCost>
-			<iBaseUpkeep>16</iBaseUpkeep>
-			<iMoves>4</iMoves>
-			<iNukeRange>-1</iNukeRange>
-			<iCombat>160</iCombat>
-			<iCombatLimit>100</iCombatLimit>
-			<iXPValueAttack>4</iXPValueAttack>
-			<iXPValueDefense>2</iXPValueDefense>
-			<iWithdrawalProb>25</iWithdrawalProb>
-			<iCollateralDamage>50</iCollateralDamage>
-			<iCollateralDamageLimit>50</iCollateralDamageLimit>
-			<iCollateralDamageMaxUnits>5</iCollateralDamageMaxUnits>
-			<iCityAttack>25</iCityAttack>
-			<BonusProductionModifiers>
-				<BonusProductionModifier>
-					<BonusType>BONUS_GOLD_WARES</BonusType>
-					<iProductonModifier>10</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_SILVER_WARES</BonusType>
-					<iProductonModifier>10</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_GEMSTONE</BonusType>
-					<iProductonModifier>10</iProductonModifier>
-				</BonusProductionModifier>
-				<BonusProductionModifier>
-					<BonusType>BONUS_PEARLS</BonusType>
-					<iProductonModifier>10</iProductonModifier>
-				</BonusProductionModifier>
-			</BonusProductionModifiers>
-			<iBombardRate>20</iBombardRate>
-			<iAsset>15</iAsset>
-			<iPower>60</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>4</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>0</iMeleeWaveSize>
-				<iRangedWaveSize>5</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_VWARLORD_MODERN</EarlyArtDefineTag>
-				</UnitMeshGroup>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_LIGHT_ARTILLERY</EarlyArtDefineTag>
-				</UnitMeshGroup>
-				<UnitMeshGroup>
-					<iRequired>0</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_FLAMETHROWER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_MODERN_GRENADIER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_MARINE</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<FreePromotions>
-				<FreePromotion>
-					<PromotionType>PROMOTION_LEADER</PromotionType>
-					<bFreePromotion>1</bFreePromotion>
-				</FreePromotion>
-			</FreePromotions>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_ACVSAM</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
-			</PrereqOrBuildings>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_HALFTRACK</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
-			</PrereqOrBuildings>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_LIGHT_AA</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
-			</PrereqOrBuildings>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_NLOS_CANNON</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
-			</PrereqOrBuildings>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_ROCKET_ARTILLERY</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
-			</PrereqOrBuildings>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_MOBILE_ARTILLERY</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
-			</PrereqOrBuildings>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_ARTILLERY</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
-			</PrereqOrBuildings>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_LIGHT_ARTILLERY</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
-			</PrereqOrBuildings>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_SAM_INFANTRY</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
-				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
-			</PrereqOrBuildings>
-		</UnitInfo>
-		<UnitInfo>
 			<Type>UNIT_LUNAR_BULLDOZER</Type>
 			<Capture>UNIT_LUNAR_BULLDOZER</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRACKED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_VEHICULAR</SubCombatType>
@@ -9872,7 +8351,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LUNAR_BULLDOZER</Description>
 			<Civilopedia>TXT_KEY_UNIT_LUNAR_BULLDOZER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LUNAR_BULLDOZER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<UnitAIs>
@@ -9882,27 +8360,13 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUNAR_MINING_OUTPOST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUNAR_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_LUNAR_PATH</BuildType>
+				<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
+				<BuildType>BUILD_LUNAR_MINING_OUTPOST</BuildType>
+				<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
+				<BuildType>BUILD_LUNAR_MINE</BuildType>
 			</Builds>
-			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
-			</PrereqAndBuildings>
+			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<iCost>1700</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -9928,6 +8392,7 @@
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -9943,7 +8408,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LUNAR_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<UnitAIs>
@@ -9953,58 +8417,19 @@
 				</UnitAI>
 			</UnitAIs>
 			<Builds>
-				<Build>
-					<BuildType>BUILD_TRAIL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_MAGLEV</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUNAR_MINE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_MANUFACTORY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUNAR_ARCOLOGY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TERRAFORM_MOON</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
+				<BuildType>BUILD_LUNAR_PATH</BuildType>
+				<BuildType>BUILD_PLANETARY_MAGLEV</BuildType>
+				<BuildType>BUILD_LUNAR_MINE</BuildType>
+				<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
+				<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
+				<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
+				<BuildType>BUILD_COLONY_MANUFACTORY</BuildType>
+				<BuildType>BUILD_LUNAR_ARCOLOGY</BuildType>
+				<BuildType>BUILD_TERRAFORM_MOON</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_MEDIUM</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_LARGE</BuildType>
+				<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_LUNAR_DROID_FACTORY</BuildingType>
@@ -10028,24 +8453,6 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_REPLICATION_MECHANIC</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_3DPRINTING_MILL</BuildingType>
-				<BuildingType>BUILDING_NANOPRINTING_MILL</BuildingType>
-				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
-				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
-				<BuildingType>BUILDING_QUANTUM_ASSEMBLER</BuildingType>
-				<BuildingType>BUILDING_MATERIALIZER</BuildingType>
-			</PrereqOrBuildings>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_ASTRONAUTIC_TECHNICIAN</Type>
-			<PrereqOrBuildings>
-				<BuildingType>BUILDING_JET_AIRCRAFT_FACTORY</BuildingType>
-				<BuildingType>BUILDING_MILITARY_INDUSTRIAL_COMPLEX</BuildingType>
-			</PrereqOrBuildings>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

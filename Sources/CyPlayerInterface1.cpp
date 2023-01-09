@@ -12,7 +12,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 {
 	OutputDebugString("Python Extension Module - CyPlayerPythonInterface1\n");
 
-	// set the docstring of the current module scope 
+	// set the docstring of the current module scope
 	python::scope().attr("__doc__") = "Civilization IV Player Class";
 	x
 		.def("changeLeader", &CyPlayer::changeLeader, "void (int /*LeaderHeadTypes*/ eNewLeader) - change leader of player")
@@ -40,7 +40,6 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("hasTrait", &CyPlayer::hasTrait, "bool hasTrait(int /*TraitTypes*/ iIndex) - returns True if player is the Trait Type.")
 		.def("isHuman", &CyPlayer::isHuman, "bool ()")
 		.def("isHumanDisabled", &CyPlayer::isHumanDisabled, "bool ()")
-		.def("isBarbarian", &CyPlayer::isBarbarian, "bool () - returns True if player is a Barbarian")
 		.def("isNPC", &CyPlayer::isNPC, "bool () - returns True if player is an NPC")
 		.def("isHominid", &CyPlayer::isHominid, "bool () - returns True if player is a Hominid")
 		.def("getName", &CyPlayer::getName, "str ()")
@@ -68,6 +67,9 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 
 		.def("countOwnedBonuses", &CyPlayer::countOwnedBonuses, "int (int (BonusTypes) eBonus) ")
 		.def("countNumBuildings", &CyPlayer::countNumBuildings, "int (int /*BuildingTypes*/ eBuilding) - Returns the number of buildings")
+		.def("hasBuilding", &CyPlayer::hasBuilding, "bool (int /*BuildingTypes*/ eBuilding)")
+
+		.def("getBuildingPrereqBuilding", &CyPlayer::getBuildingPrereqBuilding, "int (int /*BuildingTypes*/ eBuilding, int /*BuildingTypes*/ ePrereqBuilding, int iExtra)")
 
 		.def("canContact", &CyPlayer::canContact, "bool (int ePlayer)")
 		.def("contact", &CyPlayer::contact, "void (int ePlayer)")
@@ -86,12 +88,9 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("canTrain", &CyPlayer::canTrain, "bool (int eUnit, bool bContinue, bool bTestVisible)")
 		.def("canConstruct", &CyPlayer::canConstruct, "bool (int /*BuildingTypes*/eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost)")
 		.def("canCreate", &CyPlayer::canCreate, "bool (int /*ProjectTypes*/ eProject, bool bContinue, bool bTestVisible)")
-		.def("canMaintain", &CyPlayer::canMaintain, "bool (int /*ProcessTypes*/ eProcess, bool bContinue)")
 		.def("getUnitProductionNeeded", &CyPlayer::getUnitProductionNeeded, "int (int /*UnitTypes*/ iIndex)")
 		.def("getBuildingProductionNeeded", &CyPlayer::getBuildingProductionNeeded, "int (int /*BuildingTypes*/ iIndex)")
 		.def("getProjectProductionNeeded", &CyPlayer::getProjectProductionNeeded, "bool (int /*ProjectTypes*/ eProject, bool bContinue, bool bTestVisible)")
-
-		.def("canBuild", &CyPlayer::canBuild, "bool (CyPlot* pPlot, int (BuildTypes) eBuild, bool bTestEra, bool bTestVisible)")
 
 		.def("calculateTotalYield", &CyPlayer::calculateTotalYield, "int (int /*YieldTypes*/ eYield) - Returns the total sum of all city yield")
 		.def("calculateTotalExports", &CyPlayer::calculateTotalExports, "int (int /*YieldTypes*/ eYield) - Returns the total sum of all city gold generated for other civs via trade routes")
@@ -113,15 +112,14 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("calculateResearchRate", &CyPlayer::calculateResearchRate, "int (int /*TechTypes*/ eTech)")
 		.def("calculateBaseNetResearch", &CyPlayer::calculateBaseNetResearch, "int ()")
 		.def("calculateResearchModifier", &CyPlayer::calculateResearchModifier, "int (int /*TechTypes*/ eTech)")
-		.def("canEverResearch", &CyPlayer::canEverResearch, "bool (int /*TechTypes*/ iIndex)")
-		.def("canResearch", &CyPlayer::canResearch, "bool (int /*TechTypes*/ iIndex)")
+		.def("canResearch", &CyPlayer::canResearch, "bool (int iTech, bool bRightNow)")
 		.def("getCurrentResearch", &CyPlayer::getCurrentResearch, "int ()")
 		.def("isCurrentResearchRepeat", &CyPlayer::isCurrentResearchRepeat, "bool ()")
 		.def("getResearchTurnsLeft", &CyPlayer::getResearchTurnsLeft, "int (int /*TechTypes*/ eTech, bool bOverflow)")
 
 		.def("isCivic", &CyPlayer::isCivic, "bool (int (CivicTypes) eCivic)")
 		.def("canDoCivics", &CyPlayer::canDoCivics, "bool (int (CivicTypes) eCivic)")
-		.def("canRevolution", &CyPlayer::canRevolution, "bool (int (CivicTypes*) paeNewCivics)")
+		.def("canRevolution", &CyPlayer::canRevolution, "bool ()")
 
 		.def("canChangeReligion", &CyPlayer::canChangeReligion, "bool ()")
 		.def("canConvert", &CyPlayer::canConvert, "bool (int /*ReligionTypes*/ iIndex)")

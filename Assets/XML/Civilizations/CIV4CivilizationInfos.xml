@@ -208,6 +208,14 @@
 					<LeaderName>LEADER_SALADIN</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_ABUBAKR</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_HARUN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<CivilizationSelectionSound>AS3D_ARABIA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_ARABIA_ORDER</CivilizationActionSound>
@@ -302,6 +310,10 @@
 					<LeaderName>LEADER_ASHUR</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_SENNACHERIB</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_PERSIA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_BABYLON_SELECT</CivilizationSelectionSound>
@@ -391,6 +403,14 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_MONTEZUMA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_ATOTOZTLI</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_ITZCOATL</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -486,6 +506,10 @@
 					<LeaderName>LEADER_HAMMURABI</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_NEBUCHADREZZAR</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_PERSIA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_BABYLON_SELECT</CivilizationSelectionSound>
@@ -577,6 +601,14 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_JUSTINIAN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_BASIL</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_THEODORA</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -675,6 +707,10 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_HANNIBAL</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_DIDO</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -881,6 +917,14 @@
 					<LeaderName>LEADER_CHINESE_LEADER</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_TAIZONG</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_WU</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<CivilizationSelectionSound>AS3D_CHINA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_CHINA_ORDER</CivilizationActionSound>
@@ -984,6 +1028,14 @@
 					<LeaderName>LEADER_RAMESSES</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_CLEOPATRA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_NEFERTITI</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<CivilizationSelectionSound>AS3D_EGYPT_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_EGYPT_ORDER</CivilizationActionSound>
@@ -1085,6 +1137,10 @@
 				</Leader>
 				<Leader>
 					<LeaderName>LEADER_CHURCHILL</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_HENRY_VIII</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -1285,6 +1341,14 @@
 					<LeaderName>LEADER_DE_GAULLE</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_JOANOFARC</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_RICHELIEU</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_FRANCE_SELECT</CivilizationSelectionSound>
@@ -1386,6 +1450,10 @@
 				</Leader>
 				<Leader>
 					<LeaderName>LEADER_BISMARCK</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_HITLER</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -1494,6 +1562,10 @@
 				</Leader>
 				<Leader>
 					<LeaderName>LEADER_PERICLES</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_LEONIDAS</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -1712,6 +1784,10 @@
 					<LeaderName>LEADER_CHARLEMAGNE</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_CHARLES_V</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_GERMANY</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_HOLY_ROMAN_SELECT</CivilizationSelectionSound>
@@ -1811,6 +1887,10 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_HUAYNA_CAPAC</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_PACHACUTI</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -2050,6 +2130,14 @@
 					<LeaderName>LEADER_TOKUGAWA</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_HIROHITO</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_MEIJI</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_KOREA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_JAPAN_SELECT</CivilizationSelectionSound>
@@ -2141,6 +2229,10 @@
 					<LeaderName>LEADER_SURYAVARMAN</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_JAYAVARMAN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<CivilizationSelectionSound>AS3D_KHMER_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_KHMER_ORDER</CivilizationActionSound>
@@ -2229,6 +2321,14 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_WANGKON</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_KIM</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_SEJONG</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -2415,6 +2515,10 @@
 			<Leaders>
 				<Leader>
 					<LeaderName>LEADER_PACAL</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_SMOKE_JAGUAR</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -2720,6 +2824,14 @@
 					<LeaderName>LEADER_WILLEM_VAN_ORANJE</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_DE_WITT</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_WILHELMINA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_NETHERLANDS_SELECT</CivilizationSelectionSound>
@@ -2730,7 +2842,7 @@
 			<Description>TXT_KEY_CIV_OTTOMAN_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_OTTOMAN_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_OTTOMAN_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CHANGED_CIV_OTTOMAN_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV_OTTOMAN_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_GREEN</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_OTTOMANS</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_CRESCENT</ArtStyleType>
@@ -3021,6 +3133,14 @@
 					<LeaderName>LEADER_JOAO</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_AFONSO</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+					<Leader>
+					<LeaderName>LEADER_HTN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_PORTUGAL_SELECT</CivilizationSelectionSound>
@@ -3134,6 +3254,14 @@
 					<LeaderName>LEADER_AUGUSTUS</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_CALIGULA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_HADRIAN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_BYZANTIUM</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_ROME_SELECT</CivilizationSelectionSound>
@@ -3231,6 +3359,14 @@
 				</Leader>
 				<Leader>
 					<LeaderName>LEADER_STALIN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_IVAN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_LENIN</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
@@ -3422,6 +3558,14 @@
 					<LeaderName>LEADER_ISABELLA</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_FRANCO</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_PHILIP_II</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_SPAIN_SELECT</CivilizationSelectionSound>
@@ -3525,7 +3669,7 @@
 			<Description>TXT_KEY_CIV_VIKING_DESC</Description>
 			<ShortDescription>TXT_KEY_CIV_VIKING_SHORT_DESC</ShortDescription>
 			<Adjective>TXT_KEY_CIV_VIKING_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CHANGED_CIV_VIKING_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_CIV_VIKING_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_PURPLE</DefaultPlayerColor>
 			<ArtDefineTag>ART_DEF_CIVILIZATION_VIKINGS</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_NORSE</ArtStyleType>
@@ -3707,6 +3851,10 @@
 					<LeaderName>LEADER_SHAKA</LeaderName>
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
+				<Leader>
+					<LeaderName>LEADER_CETSHWAYO</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
 			</Leaders>
 			<CivilizationSelectionSound>AS3D_ZULU_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_ZULU_ORDER</CivilizationActionSound>
@@ -3835,7 +3983,7 @@
 				<City>TXT_KEY_CITY_NAME_VEJLE</City>
 				<City>TXT_KEY_CITY_NAME_HERNING</City>
 				<City>TXT_KEY_CITY_NAME_NAESTVED</City>
- 				<City>TXT_KEY_CITY_NAME_SILKEBORG</City>
+				<City>TXT_KEY_CITY_NAME_SILKEBORG</City>
 				<City>TXT_KEY_CITY_NAME_FREDERICIA</City>
 				<City>TXT_KEY_CITY_NAME_VIBORG</City>
 				<City>TXT_KEY_CITY_NAME_HOLSTEBRO</City>
@@ -4510,6 +4658,664 @@
 			</Leaders>
 			<CivilizationSelectionSound>AS3D_INDIA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_INDIA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_ABORIGINES</Type>
+			<Description>TXT_KEY_CIV_ABORIGINES_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_ABORIGINES_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_ABORIGINES_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_ABORIGINES_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_ABORIGINES</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_ABORIGINES</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_AFRICA</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_AFRICAN</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>TXT_KEY_CITY_NAME_PITJANTJATJARA</City>
+				<City>TXT_KEY_CITY_NAME_ARRERNTE</City>
+				<City>TXT_KEY_CITY_NAME_LURITJA</City>
+				<City>TXT_KEY_CITY_NAME_WARLPIRI</City>
+				<City>TXT_KEY_CITY_NAME_ANMATYERRE</City>
+				<City>TXT_KEY_CITY_NAME_ALYAWARRE</City>
+				<City>TXT_KEY_CITY_NAME_YOLNGU</City>
+				<City>TXT_KEY_CITY_NAME_NOONGAR</City>
+				<City>TXT_KEY_CITY_NAME_EORA</City>
+				<City>TXT_KEY_CITY_NAME_GURINDJI</City>
+				<City>TXT_KEY_CITY_NAME_DIERE</City>
+				<City>TXT_KEY_CITY_NAME_TURUWAL</City>
+				<City>TXT_KEY_CITY_NAME_WIRADJURI</City>
+				<City>TXT_KEY_CITY_NAME_GUNAI</City>
+				<City>TXT_KEY_CITY_NAME_TAUNGURONG</City>
+				<City>TXT_KEY_CITY_NAME_WURUNDJERI</City>
+				<City>TXT_KEY_CITY_NAME_GUNIVUGI</City>
+				<City>TXT_KEY_CITY_NAME_BURARRA</City>
+				<City>TXT_KEY_CITY_NAME_AWABAKAL</City>
+				<City>TXT_KEY_CITY_NAME_DHARUG</City>
+				<City>TXT_KEY_CITY_NAME_GUUGU_YIMITHIRR</City>
+				<City>TXT_KEY_CITY_NAME_NGUNAWAL</City>
+				<City>TXT_KEY_CITY_NAME_YUGGERA</City>
+				<City>TXT_KEY_CITY_NAME_LARRAKIA</City>
+				<City>TXT_KEY_CITY_NAME_WOOLNA</City>
+				<City>TXT_KEY_CITY_NAME_WADIYGINI</City>
+				<City>TXT_KEY_CITY_NAME_IWAIDJA</City>
+				<City>TXT_KEY_CITY_NAME_GUBBI_GUBBI</City>
+				<City>TXT_KEY_CITY_NAME_WATHAURONG</City>
+				<City>TXT_KEY_CITY_NAME_PERAMANGK</City>
+				<City>TXT_KEY_CITY_NAME_BUNURONG</City>
+				<City>TXT_KEY_CITY_NAME_WAJUK</City>
+				<City>TXT_KEY_CITY_NAME_NYANGANYATYARA</City>
+				<City>TXT_KEY_CITY_NAME_WATJARRI</City>
+				<City>TXT_KEY_CITY_NAME_KUKU_YALANII</City>
+				<City>TXT_KEY_CITY_NAME_WAKAYA</City>
+				<City>TXT_KEY_CITY_NAME_ANTAKARINJA</City>
+				<City>TXT_KEY_CITY_NAME_YANKUNTJATJARA</City>
+				<City>TXT_KEY_CITY_NAME_KOKATHA</City>
+				<City>TXT_KEY_CITY_NAME_NGALEA</City>
+				<City>TXT_KEY_CITY_NAME_NAKAKO</City>
+				<City>TXT_KEY_CITY_NAME_MANDJI</City>
+				<City>TXT_KEY_CITY_NAME_NGATATJARA</City>
+				<City>TXT_KEY_CITY_NAME_PINTUPI</City>
+				<City>TXT_KEY_CITY_NAME_NGARTI</City>
+				<City>TXT_KEY_CITY_NAME_JARU</City>
+				<City>TXT_KEY_CITY_NAME_WARUMUNGU</City>
+				<City>TXT_KEY_CITY_NAME_WARIMANPA</City>
+				<City>TXT_KEY_CITY_NAME_KAYTEJ</City>
+			</Cities>
+			<FreeBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_YAGAN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_YUNUPINGU</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<CivilizationSelectionSound>AS3D_INCA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_INCA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_BRAZIL</Type>
+			<Description>TXT_KEY_CIV_BRAZIL_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_BRAZIL_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_BRAZIL_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_BRAZIL_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_BRAZIL</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_BRAZIL</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_IBERIA</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_SOUTH_AMERICA</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>TXT_KEY_CITY_NAME_BRASILIA</City>
+				<City>TXT_KEY_CITY_NAME_SAO_PAULO</City>
+				<City>TXT_KEY_CITY_NAME_RIO_DE_JANEIRO</City>
+				<City>TXT_KEY_CITY_NAME_BELO_HORIZONTE</City>
+				<City>TXT_KEY_CITY_NAME_PORTO_ALEGRE</City>
+				<City>TXT_KEY_CITY_NAME_RECIFE</City>
+				<City>TXT_KEY_CITY_NAME_SALVADOR</City>
+				<City>TXT_KEY_CITY_NAME_FORTALEZA</City>
+				<City>TXT_KEY_CITY_NAME_CURITIBA</City>
+				<City>TXT_KEY_CITY_NAME_CAMPINAS</City>
+				<City>TXT_KEY_CITY_NAME_BELEM</City>
+				<City>TXT_KEY_CITY_NAME_GOIANIA</City>
+				<City>TXT_KEY_CITY_NAME_MANAUS</City>
+				<City>TXT_KEY_CITY_NAME_SANTOS</City>
+				<City>TXT_KEY_CITY_NAME_VICTORIA</City>
+				<City>TXT_KEY_CITY_NAME_SAO_LUIS</City>
+				<City>TXT_KEY_CITY_NAME_NATAL</City>
+				<City>TXT_KEY_CITY_NAME_MACEIO</City>
+				<City>TXT_KEY_CITY_NAME_JOINVILLE</City>
+				<City>TXT_KEY_CITY_NAME_JOAO_PESSOA</City>
+				<City>TXT_KEY_CITY_NAME_FLORIANOPOLIS</City>
+				<City>TXT_KEY_CITY_NAME_TERESINA</City>
+				<City>TXT_KEY_CITY_NAME_CAMPO_GRANDE</City>
+				<City>TXT_KEY_CITY_NAME_LONDRINA</City>
+				<City>TXT_KEY_CITY_NAME_BLUMENAU</City>
+				<City>TXT_KEY_CITY_NAME_IPATINGA</City>
+				<City>TXT_KEY_CITY_NAME_SAN_JOSE_DOS_CAMPOS</City>
+				<City>TXT_KEY_CITY_NAME_UBERLANDIA</City>
+				<City>TXT_KEY_CITY_NAME_SOROCABA</City>
+				<City>TXT_KEY_CITY_NAME_RIBEIRAO_PRETO</City>
+				<City>TXT_KEY_CITY_NAME_CUIABA</City>
+				<City>TXT_KEY_CITY_NAME_MARINGA</City>
+				<City>TXT_KEY_CITY_NAME_FEIRA_DE_SANTANA</City>
+				<City>TXT_KEY_CITY_NAME_JUIZ_DE_FORA</City>
+				<City>TXT_KEY_CITY_NAME_AMANINDEUA</City>
+				<City>TXT_KEY_CITY_NAME_ARACAJU</City>
+				<City>TXT_KEY_CITY_NAME_BELFORD_ROXO</City>
+				<City>TXT_KEY_CITY_NAME_SERRA</City>
+				<City>TXT_KEY_CITY_NAME_VILA_VELHA</City>
+				<City>TXT_KEY_CITY_NAME_SAO_VINCENTE</City>
+				<City>TXT_KEY_CITY_NAME_PIRACICABA</City>
+				<City>TXT_KEY_CITY_NAME_CAXIAS_DO_SUL</City>
+				<City>TXT_KEY_CITY_NAME_ANAPOLIS</City>
+				<City>TXT_KEY_CITY_NAME_CARAPICUIBA</City>
+				<City>TXT_KEY_CITY_NAME_DIADEMA</City>
+				<City>TXT_KEY_CITY_NAME_OLINDA</City>
+				<City>TXT_KEY_CITY_NAME_PELOTAS</City>
+				<City>TXT_KEY_CITY_NAME_CAMPINA_GRANDE</City>
+				<City>TXT_KEY_CITY_NAME_SANTAREM</City>
+				<City>TXT_KEY_CITY_NAME_BETIM</City>
+				<City>TXT_KEY_CITY_NAME_BAURU</City>
+				<City>TXT_KEY_CITY_NAME_PRESIDENTE_PRUDENTE</City>
+				<City>TXT_KEY_CITY_NAME_SAO_CAETANO</City>
+				<City>TXT_KEY_CITY_NAME_JUNDIAI</City>
+			</Cities>
+			<FreeBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_PEDRO_II</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<CivilizationSelectionSound>AS3D_PORTUGAL_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_PORTUGAL_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_ISRAEL</Type>
+			<Description>TXT_KEY_CIV_ISRAEL_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_ISRAEL_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_ISRAEL_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_ISRAEL_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_ISRAEL</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_ISRAEL</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EGYPT</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EAST</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>TXT_KEY_CITY_NAME_JERUSALEM</City>
+				<City>TXT_KEY_CITY_NAME_TEL_AVIV</City>
+				<City>TXT_KEY_CITY_NAME_HEBRON</City>
+				<City>TXT_KEY_CITY_NAME_RISHON_LEZION</City>
+				<City>TXT_KEY_CITY_NAME_METZADA</City>
+				<City>TXT_KEY_CITY_NAME_BET_LEHEM</City>
+				<City>TXT_KEY_CITY_NAME_ELAT</City>
+				<City>TXT_KEY_CITY_NAME_HAIFA</City>
+				<City>TXT_KEY_CITY_NAME_ASHDOD</City>
+				<City>TXT_KEY_CITY_NAME_AAKO</City>
+				<City>TXT_KEY_CITY_NAME_CAESERIA</City>
+				<City>TXT_KEY_CITY_NAME_AHSKELON</City>
+				<City>TXT_KEY_CITY_NAME_NETANYA</City>
+				<City>TXT_KEY_CITY_NAME_HADERA</City>
+				<City>TXT_KEY_CITY_NAME_KEFAR_SABA</City>
+				<City>TXT_KEY_CITY_NAME_PETAH_TIQWA</City>
+				<City>TXT_KEY_CITY_NAME_RAANANA</City>
+				<City>TXT_KEY_CITY_NAME_HOD_HASHRON</City>
+				<City>TXT_KEY_CITY_NAME_HERZELIA</City>
+				<City>TXT_KEY_CITY_NAME_KRYAT_SHNONE</City>
+				<City>TXT_KEY_CITY_NAME_DIMONA</City>
+				<City>TXT_KEY_CITY_NAME_YAVNE</City>
+				<City>TXT_KEY_CITY_NAME_REHOVOT</City>
+				<City>TXT_KEY_CITY_NAME_LOD</City>
+				<City>TXT_KEY_CITY_NAME_RAMLE</City>
+				<City>TXT_KEY_CITY_NAME_GIVATAAIM</City>
+				<City>TXT_KEY_CITY_NAME_RAMAT_GAN</City>
+				<City>TXT_KEY_CITY_NAME_BENEI_BRAK</City>
+				<City>TXT_KEY_CITY_NAME_HOLON</City>
+				<City>TXT_KEY_CITY_NAME_BAT_YAM</City>
+				<City>TXT_KEY_CITY_NAME_NAHARIA</City>
+				<City>TXT_KEY_CITY_NAME_MIZPE_RAMON</City>
+				<City>TXT_KEY_CITY_NAME_ARAD</City>
+				<City>TXT_KEY_CITY_NAME_YOKNEAM</City>
+				<City>TXT_KEY_CITY_NAME_TIBERIUS</City>
+				<City>TXT_KEY_CITY_NAME_KARMIEL</City>
+				<City>TXT_KEY_CITY_NAME_NAZZERATH</City>
+				<City>TXT_KEY_CITY_NAME_AFOLA</City>
+				<City>TXT_KEY_CITY_NAME_NESS_ZIONA</City>
+				<City>TXT_KEY_CITY_NAME_BET_SHEMESH</City>
+				<City>TXT_KEY_CITY_NAME_ROSH_HAAYN</City>
+				<City>TXT_KEY_CITY_NAME_SHEFAYM</City>
+				<City>TXT_KEY_CITY_NAME_ROSH_HANIKRA</City>
+				<City>TXT_KEY_CITY_NAME_ZOFIM</City>
+				<City>TXT_KEY_CITY_NAME_BET_LID</City>
+				<City>TXT_KEY_CITY_NAME_MODIEIN</City>
+				<City>TXT_KEY_CITY_NAME_DGANIA</City>
+				<City>TXT_KEY_CITY_NAME_METOLA</City>
+				<City>TXT_KEY_CITY_NAME_ALFE_MENASHE</City>
+				<City>TXT_KEY_CITY_NAME_ZORAN</City>
+			</Cities>
+			<FreeBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_DAVID</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_SOLOMON</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_BEN_GURION</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_ARABIA</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_ARABIA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_ARABIA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_JIVARO</Type>
+			<Description>TXT_KEY_CIV_JIVARO_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_JIVARO_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_JIVARO_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_JIVARO_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_JIVARO</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_JIVARO</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_SOUTH_AMERICA</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_MESO_AMERICA</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<!-- Tribes -->
+				<City>TXT_KEY_CITY_NAME_SHUAR</City>
+				<City>TXT_KEY_CITY_NAME_AWAJUN</City>
+				<City>TXT_KEY_CITY_NAME_HUAMBISA</City>
+				<City>TXT_KEY_CITY_NAME_ACHUAR</City>
+				<City>TXT_KEY_CITY_NAME_SHIWIAR</City>
+				<!-- Actual Jivaro cities -->
+				<City>TXT_KEY_CITY_NAME_YUTUPIZA</City>
+				<City>TXT_KEY_CITY_NAME_JAPAIME</City>
+				<!-- Appropriate names -->
+				<City>TXT_KEY_CITY_NAME_YAAKAT</City>
+				<City>TXT_KEY_CITY_NAME_IPAAMAMU</City>
+				<City>TXT_KEY_CITY_NAME_MURAIYA</City>
+				<City>TXT_KEY_CITY_NAME_ACHU</City>
+				<City>TXT_KEY_CITY_NAME_MARANON</City>
+				<!-- Random words from jivaro/peruvian language -->
+				<City>TXT_KEY_CITY_NAME_NUGKUI</City>
+				<City>TXT_KEY_CITY_NAME_TSUGKI</City>
+				<City>TXT_KEY_CITY_NAME_BIKUT</City>
+				<City>TXT_KEY_CITY_NAME_MUISAK</City>
+				<City>TXT_KEY_CITY_NAME_ARUTAM</City>
+				<City>TXT_KEY_CITY_NAME_TSANTSA</City>
+				<City>TXT_KEY_CITY_NAME_WAKANI</City>
+				<City>TXT_KEY_CITY_NAME_KAKARAM</City>
+				<City>TXT_KEY_CITY_NAME_WAI</City>
+				<City>TXT_KEY_CITY_NAME_TSENTSAK</City>
+				<City>TXT_KEY_CITY_NAME_MAIKUA</City>
+				<City>TXT_KEY_CITY_NAME_NATEM</City>
+				<City>TXT_KEY_CITY_NAME_SAJINO</City>
+				<City>TXT_KEY_CITY_NAME_HUANGANA</City>
+				<City>TXT_KEY_CITY_NAME_PANGI</City>
+				<City>TXT_KEY_CITY_NAME_SACHAVACA</City>
+				<City>TXT_KEY_CITY_NAME_OTORONGO</City>
+				<City>TXT_KEY_CITY_NAME_MAJAZ</City>
+				<City>TXT_KEY_CITY_NAME_RONSOCO</City>
+				<City>TXT_KEY_CITY_NAME_ACHUNI</City>
+				<City>TXT_KEY_CITY_NAME_PIRIPIRI</City>
+				<City>TXT_KEY_CITY_NAME_CARACHUPA</City>
+				<City>TXT_KEY_CITY_NAME_WAMPANG</City>
+				<City>TXT_KEY_CITY_NAME_PIJUAYO</City>
+				<City>TXT_KEY_CITY_NAME_ANUJE</City>
+			</Cities>
+			<FreeBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_CHIEF_HEAD_HUNTER</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<CivilizationSelectionSound>AS3D_SPAIN_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_SPAIN_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_MAORI</Type>
+			<Description>TXT_KEY_CIV_MAORI_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_MAORI_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_MAORI_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_MAORI_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_MAORI</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_MAORI</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_SOUTH_EAST_ASIA</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_POLYNESIA</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>TXT_KEY_CITY_NAME_NGAPUHI</City>
+				<City>TXT_KEY_CITY_NAME_NGATI_PROU</City>
+				<City>TXT_KEY_CITY_NAME_NGATI_KAHUNGUNU</City>
+				<City>TXT_KEY_CITY_NAME_WAIKATO</City>
+				<City>TXT_KEY_CITY_NAME_NGAI_TAHU</City>
+				<City>TXT_KEY_CITY_NAME_TE_ARAWA</City>
+				<City>TXT_KEY_CITY_NAME_NGATI_TUWHARETOA</City>
+				<City>TXT_KEY_CITY_NAME_NGATI_MANIAPOTO</City>
+				<City>TXT_KEY_CITY_NAME_TUHOE</City>
+				<City>TXT_KEY_CITY_NAME_TE_ATIAWA</City>
+				<City>TXT_KEY_CITY_NAME_HAURAKI</City>
+				<City>TXT_KEY_CITY_NAME_NGATI_AWA</City>
+				<City>TXT_KEY_CITY_NAME_NGATI_WHATUA</City>
+				<City>TXT_KEY_CITY_NAME_TE_RARAWA</City>
+				<City>TXT_KEY_CITY_NAME_NGAITERANGI</City>
+				<City>TXT_KEY_CITY_NAME_TE_WHANAU_A_APANUI</City>
+				<City>TXT_KEY_CITY_NAME_WHAKATOHEA</City>
+				<City>TXT_KEY_CITY_NAME_TE_ATIHAUNUI_A_PAPARANG</City>
+				<City>TXT_KEY_CITY_NAME_NGATI_RAUKAWA</City>
+				<City>TXT_KEY_CITY_NAME_TE_AUPOURI</City>
+				<City>TXT_KEY_CITY_NAME_NGATI_KAHU</City>
+				<City>TXT_KEY_CITY_NAME_NGATI_RANGINUI</City>
+				<City>TXT_KEY_CITY_NAME_TARANAKI</City>
+				<City>TXT_KEY_CITY_NAME_NGATI_RUANUI</City>
+				<City>TXT_KEY_CITY_NAME_NGATI_TOA_RANGATIRA</City>
+				<City>TXT_KEY_CITY_NAME_NGATI_KURI</City>
+				<City>TXT_KEY_CITY_NAME_TE_AITANGA_A_MAHAKI</City>
+				<City>TXT_KEY_CITY_NAME_NGATI_WAI</City>
+				<City>TXT_KEY_CITY_NAME_RONGOWHAKAATA</City>
+				<City>TXT_KEY_CITY_NAME_RANGITANE</City>
+				<City>TXT_KEY_CITY_NAME_NGA_RAURU</City>
+				<City>TXT_KEY_CITY_NAME_NGA_RUAHINE</City>
+				<City>TXT_KEY_CITY_NAME_PUKAKI</City>
+				<City>TXT_KEY_CITY_NAME_OHAU</City>
+				<City>TXT_KEY_CITY_NAME_TEKAPO</City>
+				<City>TXT_KEY_CITY_NAME_RANGITATA</City>
+				<City>TXT_KEY_CITY_NAME_ORARI</City>
+				<City>TXT_KEY_CITY_NAME_KAKAHU</City>
+				<City>TXT_KEY_CITY_NAME_AORAKI</City>
+				<City>TXT_KEY_CITY_NAME_KURA_TAWHITI</City>
+				<City>TXT_KEY_CITY_NAME_RAPUWAI</City>
+				<City>TXT_KEY_CITY_NAME_KOROWAI</City>
+				<City>TXT_KEY_CITY_NAME_WAIMAKAIRI</City>
+				<City>TXT_KEY_CITY_NAME_OPUHA</City>
+				<City>TXT_KEY_CITY_NAME_RAKAIA</City>
+			</Cities>
+			<FreeBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_HEKE</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<CivilizationSelectionSound>AS3D_INCA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_INCA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_NEANDERTHAL</Type>
+			<Description>TXT_KEY_CIV_NEANDERTHAL_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_NEANDERTHAL_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_NEANDERTHAL_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_NEANDERTHAL_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_NEANDERTHAL_EMPIRE</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_NEANDERTHAL_EMPIRE</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_NEANDERTHAL</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_VIKING</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>TXT_KEY_CITY_NAME_ATAPUERCA</City>
+				<City>TXT_KEY_CITY_NAME_NERJA</City>
+				<City>TXT_KEY_CITY_NAME_BANOLAS</City>
+				<City>TXT_KEY_CITY_NAME_CARIHUELA</City>
+				<City>TXT_KEY_CITY_NAME_CASARES</City>
+				<City>TXT_KEY_CITY_NAME_CHATELPERRON</City>
+				<City>TXT_KEY_CITY_NAME_SIDRON</City>
+				<City>TXT_KEY_CITY_NAME_ZAFARRAYA</City>
+				<City>TXT_KEY_CITY_NAME_ARBREDA</City>
+				<City>TXT_KEY_CITY_NAME_LEZETXIKI</City>
+				<City>TXT_KEY_CITY_NAME_HORTUS</City>
+				<City>TXT_KEY_CITY_NAME_CHAISE</City>
+				<City>TXT_KEY_CITY_NAME_MOUSTIER</City>
+				<City>TXT_KEY_CITY_NAME_MOULA</City>
+				<City>TXT_KEY_CITY_NAME_CIRCEO</City>
+				<City>TXT_KEY_CITY_NAME_GUATTARI</City>
+				<City>TXT_KEY_CITY_NAME_TABUN</City>
+				<City>TXT_KEY_CITY_NAME_ENGIS</City>
+				<City>TXT_KEY_CITY_NAME_NAULETTE</City>
+				<City>TXT_KEY_CITY_NAME_SCLADINA</City>
+				<City>TXT_KEY_CITY_NAME_KULNA</City>
+				<City>TXT_KEY_CITY_NAME_SIPKA</City>
+				<City>TXT_KEY_CITY_NAME_KRAPINA</City>
+				<City>TXT_KEY_CITY_NAME_RORK</City>
+				<City>TXT_KEY_CITY_NAME_NUG</City>
+				<City>TXT_KEY_CITY_NAME_LIK</City>
+				<City>TXT_KEY_CITY_NAME_ARG</City>
+				<City>TXT_KEY_CITY_NAME_MUG</City>
+				<City>TXT_KEY_CITY_NAME_ROG</City>
+				<City>TXT_KEY_CITY_NAME_KRO</City>
+				<City>TXT_KEY_CITY_NAME_GOZ</City>
+				<City>TXT_KEY_CITY_NAME_NGA</City>
+				<City>TXT_KEY_CITY_NAME_EHH</City>
+				<City>TXT_KEY_CITY_NAME_MANG</City>
+				<City>TXT_KEY_CITY_NAME_NUS</City>
+				<City>TXT_KEY_CITY_NAME_DOD</City>
+				<City>TXT_KEY_CITY_NAME_OLG</City>
+				<City>TXT_KEY_CITY_NAME_NUK</City>
+				<City>TXT_KEY_CITY_NAME_WRA</City>
+				<City>TXT_KEY_CITY_NAME_OPO</City>
+				<City>TXT_KEY_CITY_NAME_JARD</City>
+				<City>TXT_KEY_CITY_NAME_TAR</City>
+				<City>TXT_KEY_CITY_NAME_LKA</City>
+				<City>TXT_KEY_CITY_NAME_ORD</City>
+				<City>TXT_KEY_CITY_NAME_ZGA</City>
+			</Cities>
+			<FreeBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_NATIVE_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_WRUB</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<CivilizationSelectionSound>AS3D_NEAN_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_NEAN_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_TUPI</Type>
+			<Description>TXT_KEY_CIV_TUPI_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_TUPI_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_TUPI_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_TUPI_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_TUPI</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_TUPI</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_MESO_AMERICA</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_MESO_AMERICA</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>TXT_KEY_CITY_NAME_SY_ARA</City>
+				<City>TXT_KEY_CITY_NAME_PARA</City>
+				<City>TXT_KEY_CITY_NAME_TAUBATE</City>
+				<City>TXT_KEY_CITY_NAME_PARANA</City>
+				<City>TXT_KEY_CITY_NAME_TOCANTINS</City>
+				<City>TXT_KEY_CITY_NAME_PARAIBA</City>
+				<City>TXT_KEY_CITY_NAME_PERNAMBUCO</City>
+				<City>TXT_KEY_CITY_NAME_GUAPORE</City>
+				<City>TXT_KEY_CITY_NAME_PIAUY</City>
+				<City>TXT_KEY_CITY_NAME_SIRI_JIBE</City>
+				<City>TXT_KEY_CITY_NAME_PIABUYU</City>
+				<City>TXT_KEY_CITY_NAME_TUPINAMBA</City>
+				<City>TXT_KEY_CITY_NAME_TAMOYO</City>
+				<City>TXT_KEY_CITY_NAME_PEABIRU</City>
+				<City>TXT_KEY_CITY_NAME_TUPINIQUIM</City>
+				<City>TXT_KEY_CITY_NAME_TAPE_AVIRU</City>
+				<City>TXT_KEY_CITY_NAME_OMAGUA</City>
+				<City>TXT_KEY_CITY_NAME_COCAMA</City>
+				<City>TXT_KEY_CITY_NAME_NHEHGATU</City>
+				<City>TXT_KEY_CITY_NAME_POTIGUARA</City>
+				<City>TXT_KEY_CITY_NAME_ARAGUAIA</City>
+				<City>TXT_KEY_CITY_NAME_ONCA</City>
+				<City>TXT_KEY_CITY_NAME_JENIPAPO</City>
+				<City>TXT_KEY_CITY_NAME_COCO</City>
+				<City>TXT_KEY_CITY_NAME_BALSAS</City>
+				<City>TXT_KEY_CITY_NAME_JENIPAPO</City>
+				<City>TXT_KEY_CITY_NAME_MURICIZAL</City>
+				<City>TXT_KEY_CITY_NAME_TABOA</City>
+				<City>TXT_KEY_CITY_NAME_ITAPICURU</City>
+				<City>TXT_KEY_CITY_NAME_URUCUI</City>
+				<City>TXT_KEY_CITY_NAME_POCO</City>
+				<City>TXT_KEY_CITY_NAME_MUKUNGO</City>
+				<City>TXT_KEY_CITY_NAME_OITERIO</City>
+				<City>TXT_KEY_CITY_NAME_RAPOSA</City>
+				<City>TXT_KEY_CITY_NAME_ITAUIRERIA</City>
+				<City>TXT_KEY_CITY_NAME_JURAMENTO</City>
+				<City>TXT_KEY_CITY_NAME_TAMBORIL</City>
+				<City>TXT_KEY_CITY_NAME_CROATA</City>
+				<City>TXT_KEY_CITY_NAME_TOCANTIS</City>
+				<City>TXT_KEY_CITY_NAME_IMBIRUCU</City>
+				<City>TXT_KEY_CITY_NAME_MACAPA</City>
+				<City>TXT_KEY_CITY_NAME_PAUI</City>
+				<City>TXT_KEY_CITY_NAME_ARRAIA</City>
+				<City>TXT_KEY_CITY_NAME_ANDORINHAS</City>
+			</Cities>
+			<FreeBuildings>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_CUNHAMBEBE</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<CivilizationSelectionSound>AS3D_INCA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_INCA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 	</CivilizationInfos>
 </Civ4CivilizationInfos>

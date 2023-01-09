@@ -21,8 +21,9 @@ public:
 	~CvPropertyManipulators();
 
 	int getNumSources() const;
-	//CvPropertySource* getSource(int index) const;
+	CvPropertySource* getSource(int index) const;
 	const std::vector<CvPropertySource*>& getSources() const { return m_apSources; }
+	const python::list cyGetSources() const;
 	int addSource(PropertySourceTypes eType);
 
 	int getNumInteractions() const;
@@ -38,9 +39,9 @@ public:
 	void buildDisplayString(CvWStringBuffer& szBuffer) const;
 
 	bool read(CvXMLLoadUtility* pXML, const wchar_t* szTagName = L"PropertyManipulators");
-	void copyNonDefaults(CvPropertyManipulators* pProp, CvXMLLoadUtility* pXML );
+	void copyNonDefaults(const CvPropertyManipulators* pProp);
 
-	void getCheckSum(unsigned int& iSum) const;
+	void getCheckSum(uint32_t& iSum) const;
 
 protected:
 	std::vector<CvPropertySource*> m_apSources;

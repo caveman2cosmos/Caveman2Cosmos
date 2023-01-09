@@ -22,6 +22,7 @@ typedef std::vector<CombatResultRecord> TurnCombatResults;
 #define COMBAT_RECORD_LENGTH 20
 
 class CvArea
+	: private bst::noncopyable // disable copy: we have owned pointers so we can't use the default copy implementation
 {
 //
 // Functions
@@ -126,7 +127,6 @@ public:
 	int getNumRevealedFeatureTiles(TeamTypes eTeam, FeatureTypes eFeature) const;
 	int getNumRevealedTerrainTiles(TeamTypes eTeam, TerrainTypes eTerrain) const;
 
-	int getCleanPowerCount(TeamTypes eIndex) const;
 	bool isCleanPower(TeamTypes eIndex) const;
 	void changeCleanPowerCount(TeamTypes eIndex, int iChange);
 
@@ -167,11 +167,6 @@ public:
 	//	Return the number of units of the specified AI type recently lost per 100 turns (normalised figure)
 	//	If eUnit is NO_UNITAI all types will be tallied
 	int	getRecentCombatDeathRate(PlayerTypes ePlayer, UnitAITypes eUnitAIType) const;
-
-private:
-	// disable copy: we have owned pointers so we can't use the default copy implementation
-	CvArea(const CvArea&);
-	CvArea& operator=(const CvArea&);
 
 //
 // Variables
