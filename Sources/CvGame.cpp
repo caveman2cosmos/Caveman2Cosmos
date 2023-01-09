@@ -489,6 +489,7 @@ void CvGame::init(HandicapTypes eHandicap)
 void CvGame::onFinalInitialized(const bool bNewGame)
 {
 	PROFILE("CvGame::onFinalInitialized");
+	FAssert(!m_bFinalInitialized);
 	OutputDebugString("onFinalInitialized: Start\n");
 
 	// Game has been initialized fully when reaching this point.
@@ -502,8 +503,6 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		gDLL->getInterfaceIFace()->clearSelectionList();
 		gDLL->getInterfaceIFace()->clearSelectedCities();
 	}
-
-	GC.cacheGameSpecificValues();
 
 	// Lowest culture which, after a culture decay, will still be > 0. Inverse of CvPlot::decayCulture(), basically.
 	m_iMinCultureOutput = (
@@ -845,11 +844,16 @@ CvString create_game_id()
 }
 
 
+// Toffer - ToDo - Certain content does does not belong in this function, move to more appropriate locations.
 // FUNCTION: reset()
 // Initializes data members that are serialized.
 void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 {
 	CvPlotPaging::ResetPaging();
+
+	// Toffer - bStartingGameSession is true when starting any new game or when loading any save,
+	//	but it is false when reset is called before main menu is shown.
+	const bool bStartingGameSession = !bConstructorCall && GC.getInitCore().getType() != GAME_NONE;
 
 	//--------------------------------
 	// Uninit class
@@ -1133,8 +1137,16 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 
 	// Alberts2: Recalculate which info class replacements are currently active
 	if (!bConstructorCall)
+	{
 		GC.updateReplacements();
+	}
 
+	// Only spot identified where game-options have been set before scenarios starts initiating cities on the map
+	//	So here we can cache option specific things like valid cultureLevels.
+	if (bStartingGameSession)
+	{
+		GC.cacheGameSpecificValues();
+	}
 	m_lastGraphicUpdateRequestTickCount = 0;
 	m_iCycleUnitSliceDelay = 0;
 
