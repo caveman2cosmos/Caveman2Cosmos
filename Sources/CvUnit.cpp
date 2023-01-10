@@ -1692,8 +1692,8 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		AI_killed(); // Update AI counts for this unit
 
 		setCommander(false);
-		joinGroup(NULL, false, false);
 		setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true);
+		joinGroup(NULL, false, false);
 
 		const PlayerTypes eCapturingPlayer = getCapturingPlayer();
 		const UnitTypes eCaptureUnitType = getCaptureUnitType();
