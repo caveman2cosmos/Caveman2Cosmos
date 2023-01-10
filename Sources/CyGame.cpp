@@ -1163,3 +1163,8 @@ void CyGame::assignStartingPlots(bool bScenario, bool bMapScript)
 {
 	m_pGame.assignStartingPlots(bScenario, bMapScript);
 }
+
+void CyGame::exitWorldBuilder()
+{
+	m_pGame.setWorldBuilder(false);
+}

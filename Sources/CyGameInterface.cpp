@@ -292,6 +292,8 @@ void CyGamePythonInterface()
 		.def("getC2CVersion", &CyGame::getC2CVersion, "const char* ()")
 
 		.def("assignStartingPlots", &CyGame::assignStartingPlots, "void (bool bScenario, bool bMapScript)")
+
+		.def("exitWorldBuilder", &CyGame::exitWorldBuilder, "void ()")
 	;
 
 

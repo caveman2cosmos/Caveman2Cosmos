@@ -106,7 +106,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		if (pPopupReturn->getButtonClicked() == 0)
 		{	// exit to desktop
 			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CONFIRM_MENU);
-			if (NULL != pInfo)
+			if (pInfo)
 			{
 				pInfo->setData1(0);
 				gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGame().getActivePlayer(), true);
@@ -115,7 +115,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		else if (pPopupReturn->getButtonClicked() == 1)
 		{	// exit to main menu
 			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CONFIRM_MENU);
-			if (NULL != pInfo)
+			if (pInfo)
 			{
 				pInfo->setData1(1);
 				gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGame().getActivePlayer(), true);
@@ -124,7 +124,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		else if (pPopupReturn->getButtonClicked() == 2)
 		{
 			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CONFIRM_MENU);
-			if (NULL != pInfo)
+			if (pInfo)
 			{
 				pInfo->setData1(2);
 				gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGame().getActivePlayer(), true);
@@ -133,7 +133,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		else if (pPopupReturn->getButtonClicked() == 3)
 		{
 			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CONFIRM_MENU);
-			if (NULL != pInfo)
+			if (pInfo)
 			{
 				pInfo->setData1(3);
 				gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGame().getActivePlayer(), true);
@@ -154,7 +154,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 		else if (pPopupReturn->getButtonClicked() == 7)
 		{
 			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CONFIRM_MENU);
-			if (NULL != pInfo)
+			if (pInfo)
 			{
 				pInfo->setData1(4);
 				gDLL->getInterfaceIFace()->addPopup(pInfo, GC.getGame().getActivePlayer(), true);
@@ -491,9 +491,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 					gDLL->setChtLvl(0);
 				}
 			}
-
 			gDLL->sendGameInfo(szGameName, szAdminPassword);
-
 		}
 		break;
 
@@ -508,20 +506,22 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 			{
 				switch ((ControlTypes)info.getData1())
 				{
-				case CONTROL_WORLD_BUILDER:
-					gDLL->getInterfaceIFace()->setWorldBuilder(!gDLL->GetWorldBuilderMode());
-					break;
-				case CONTROL_ADMIN_DETAILS:
-					gDLL->getInterfaceIFace()->showAdminDetails();
-					break;
-				default:
-					break;
+					case CONTROL_WORLD_BUILDER:
+					{
+						GC.getGame().setWorldBuilder(!gDLL->GetWorldBuilderMode());
+						break;
+					}
+					case CONTROL_ADMIN_DETAILS:
+					{
+						gDLL->getInterfaceIFace()->showAdminDetails();
+						break;
+					}
 				}
 			}
 			else
 			{
 				CvPopupInfo* pInfo = new CvPopupInfo();
-				if (NULL != pInfo)
+				if (pInfo)
 				{
 					pInfo->setText(gDLL->getText("TXT_KEY_BAD_PASSWORD_DESC"));
 					gDLL->getInterfaceIFace()->addPopup(pInfo, NO_PLAYER, true);
@@ -592,7 +592,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 			if (GET_PLAYER(eVassal).isHuman())
 			{
 				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_VASSAL_GRANT_TRIBUTE, GC.getGame().getActivePlayer(), pPopupReturn->getButtonClicked());
-				if (NULL != pInfo)
+				if (pInfo)
 				{
 					gDLL->sendPopup(eVassal, pInfo);
 				}
