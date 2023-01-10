@@ -1692,8 +1692,8 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		AI_killed(); // Update AI counts for this unit
 
 		setCommander(false);
-		joinGroup(NULL, false, false);
 		setXY(INVALID_PLOT_COORD, INVALID_PLOT_COORD, true);
+		joinGroup(NULL, false, false);
 
 		const PlayerTypes eCapturingPlayer = getCapturingPlayer();
 		const UnitTypes eCaptureUnitType = getCaptureUnitType();
@@ -5835,7 +5835,7 @@ bool CvUnit::willRevealByMove(const CvPlot* pPlot) const
 bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCheck::None*/, CvUnit** ppDefender /*= NULL*/) const
 {
 	FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
-	if (pPlot == NULL)
+	if (!pPlot)
 	{
 		return false;
 	}
@@ -5884,8 +5884,15 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 		return false;
 	}
 
-	if (GC.getUSE_SPIES_NO_ENTER_BORDERS() && isSpy() && NO_PLAYER != pPlot->getOwner()
-	&& !GET_PLAYER(getOwner()).canSpiesEnterBorders(pPlot->getOwner()))
+	if (isSpy())
+	{
+		if (GC.getUSE_SPIES_NO_ENTER_BORDERS() && NO_PLAYER != pPlot->getOwner()
+		&& !GET_PLAYER(getOwner()).canSpiesEnterBorders(pPlot->getOwner()))
+		{
+			return false;
+		}
+	}
+	else if (isNoCapture() && !isBlendIntoCity() && pPlot->isEnemyCity(*this))
 	{
 		return false;
 	}
@@ -6095,17 +6102,7 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 		}
 	}
 
-	if (!bAttack && !bFailWithoutAttack)
-	{
-		if (isNoCapture() && !isBlendIntoCity() && !isSpy() && pPlot->isEnemyCity(*this))
-		{
-			if (!bIgnoreAttack)
-			{
-				return false;
-			}
-			bFailWithoutAttack = true;
-		}
-	}
+
 	// The following change makes it possible to capture defenseless units after having made a previous attack or paradrop
 	if (bAttack && isMadeAttack() && !isBlitz() && !bSuprise && bIsVisibleEnemyDefender)
 	{
@@ -6161,6 +6158,7 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 				&& (!bDeclareWar || bIsVisibleEnemyDefender != bAttack && (!bAttack || !pPlot->getPlotCity() || isNoCapture())))
 				{
 					return false;//Searchforthis
+					// Toffer - I can't make heads from tails on this one...
 				}
 			}
 

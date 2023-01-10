@@ -326,7 +326,6 @@ public:
 	virtual bool AI_isFull() const = 0;
 	virtual int AI_getGenericValueTimes100(UnitValueFlags eFlags) const = 0;
 
-	bool groupStackAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting, bool bStealth = false);
 	int defensiveModifierAtPlot(const CvPlot* pPlot) const;
 	bool meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const;
 	int getStrength() const;
