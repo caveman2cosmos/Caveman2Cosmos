@@ -5911,7 +5911,7 @@ void CvUnitInfo::doPostLoadCaching(uint32_t iThis)
 		//m_iBaseSMRankTotal = 0;
 		//m_iBaseSMVolumetricRankTotal = 0;
 
-		for (int iI = 0; iI < getNumSubCombatTypes(); iI++)
+		for (int iI = -1; iI < getNumSubCombatTypes(); iI++)
 		{
 			const UnitCombatTypes eUnitCombat = (
 				(UnitCombatTypes)
