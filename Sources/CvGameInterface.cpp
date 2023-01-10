@@ -1121,7 +1121,7 @@ void CvGame::selectionListMove(CvPlot* pPlot, bool bAlt, bool bShift, bool bCtrl
 		if (eRivalTeam != NO_TEAM && (pPlot->getTeam() == eRivalTeam || bAskToDeclareWar))
 		{
 			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_DECLAREWARMOVE);
-			if (NULL != pInfo)
+			if (pInfo)
 			{
 				pInfo->setData1(eRivalTeam);
 				pInfo->setData2(pPlot->getX());
@@ -1409,7 +1409,7 @@ void CvGame::handleAction(int iAction)
 			if (eMission == MISSION_GOTO)
 			{
 				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_GOTO_CITY);
-				if (NULL != pInfo)
+				if (pInfo)
 				{
 					bSkip = true;
 					gDLL->getInterfaceIFace()->addPopup(pInfo);
@@ -1439,7 +1439,7 @@ void CvGame::handleAction(int iAction)
 		if (action.getCommandType() == COMMAND_LOAD)
 		{
 			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_LOADUNIT);
-			if (NULL != pInfo)
+			if (pInfo)
 			{
 				gDLL->getInterfaceIFace()->addPopup(pInfo);
 				bSkip = true;
@@ -1450,7 +1450,7 @@ void CvGame::handleAction(int iAction)
 			if (action.isConfirmCommand())
 			{
 				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_CONFIRMCOMMAND);
-				if (NULL != pInfo)
+				if (pInfo)
 				{
 					pInfo->setData1(iAction);
 					pInfo->setOption1(bAlt);
@@ -1929,7 +1929,7 @@ void CvGame::doControl(ControlTypes eControl)
 			else
 			{
 				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_GET_SAVE_FORMAT);
-				if (NULL != pInfo)
+				if (pInfo)
 				{
 					gDLL->getInterfaceIFace()->addPopup(pInfo, NO_PLAYER, true, true);
 				}
@@ -2092,7 +2092,7 @@ void CvGame::doControl(ControlTypes eControl)
 			else
 			{
 				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_ADMIN_PASSWORD);
-				if (NULL != pInfo)
+				if (pInfo)
 				{
 					pInfo->setData1((int)CONTROL_ADMIN_DETAILS);
 					gDLL->getInterfaceIFace()->addPopup(pInfo, NO_PLAYER, true);
@@ -2109,12 +2109,12 @@ void CvGame::doControl(ControlTypes eControl)
 		{
 			if (GC.getInitCore().getAdminPassword().empty())
 			{
-				gDLL->getInterfaceIFace()->setWorldBuilder(!gDLL->GetWorldBuilderMode());
+				setWorldBuilder(!gDLL->GetWorldBuilderMode());
 			}
 			else
 			{
 				CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_ADMIN_PASSWORD);
-				if (NULL != pInfo)
+				if (pInfo)
 				{
 					pInfo->setData1((int)CONTROL_WORLD_BUILDER);
 					gDLL->getInterfaceIFace()->addPopup(pInfo, NO_PLAYER, true);
@@ -2141,7 +2141,7 @@ void CvGame::doControl(ControlTypes eControl)
 		case CONTROL_DIPLOMACY:
 		{
 			CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_DIPLOMACY);
-			if (NULL != pInfo)
+			if (pInfo)
 			{
 				gDLL->getInterfaceIFace()->addPopup(pInfo);
 			}

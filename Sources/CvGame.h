@@ -430,6 +430,7 @@ protected:
 	bool m_bPbemTurnSent;
 	bool m_bHotPbemBetweenTurns;
 	bool m_bPlayerOptionsSent;
+	bool m_bWorldBuilder;
 	//TB Nukefix (reversal) Next line should be commented out
 	//bool m_bNukesValid;
 	TeamTypes m_circumnavigatingTeam;
@@ -886,6 +887,8 @@ public:
 	bool isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner, bool bConquest, bool bTrade, bool bRecapture) const;
 
 	int getMinCultureOutput() const { return m_iMinCultureOutput; }
+
+	void setWorldBuilder(const bool bNewValue);
 };
 
 #define CURRENT_MAP GC.getGame().getCurrentMap()

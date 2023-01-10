@@ -13073,7 +13073,7 @@ void CvBuildInfo::getCheckSum(uint32_t &iSum) const
 	}
 }
 
-void CvBuildInfo::doPostLoadCaching(uint32_t eThis)
+void CvBuildInfo::doPostLoadCaching(uint32_t iThis)
 {
 }
 
@@ -31575,6 +31575,29 @@ void CvPromotionLineInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aTechOvercomeChanges);
 }
 
+void CvPromotionLineInfo::doPostLoadCaching(uint32_t iThis)
+{
+	//Establish speedy promotion & Building reference by line
+	m_aiPromotions.clear();
+	m_aiBuildings.clear();
+
+	for ( int i = 0; i < GC.getNumPromotionInfos(); i++)
+	{
+		if (GC.getPromotionInfo((PromotionTypes)i).getPromotionLine() == iThis)
+		{
+			m_aiPromotions.push_back(i);
+		}
+	}
+	for ( int i = 0; i < GC.getNumBuildingInfos(); i++)
+	{
+		if (GC.getBuildingInfo((BuildingTypes)i).getPromotionLineType() == iThis)
+		{
+			m_aiBuildings.push_back(i);
+		}
+	}
+
+}
+
 TechTypes CvPromotionLineInfo::getObsoleteTech() const
 {
 	return m_eObsoleteTech;
@@ -31914,18 +31937,6 @@ bool CvPromotionLineInfo::isPromotion(int i) const
 	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), i);
 	return algo::any_of_equal(m_aiPromotions, i);
 }
-void CvPromotionLineInfo::setPromotions()
-{
-	m_aiPromotions.clear();
-	const int iIndex = GC.getInfoTypeForString(getType());
-	for ( int i = 0; i < GC.getNumPromotionInfos(); i++)
-	{
-		if (GC.getPromotionInfo((PromotionTypes)i).getPromotionLine() == iIndex)
-		{
-			m_aiPromotions.push_back(i);
-		}
-	}
-}
 
 int CvPromotionLineInfo::getBuilding(int i) const
 {
@@ -31942,18 +31953,7 @@ bool CvPromotionLineInfo::isBuilding(int i) const
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i);
 	return algo::any_of_equal(m_aiBuildings, i);
 }
-void CvPromotionLineInfo::setBuildings()
-{
-	m_aiBuildings.clear();
-	const int iIndex = GC.getInfoTypeForString(getType());
-	for ( int i = 0; i < GC.getNumBuildingInfos(); i++)
-	{
-		if (GC.getBuildingInfo((BuildingTypes)i).getPromotionLineType() == iIndex)
-		{
-			m_aiBuildings.push_back(i);
-		}
-	}
-}
+
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
