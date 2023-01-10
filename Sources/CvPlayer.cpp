@@ -1430,6 +1430,7 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 	m_iFocusPlotY = -1;
 
 	m_commanders.clear();
+	m_commandFieldPlots.clear();
 	m_idleCities.clear();
 }
 
@@ -27942,6 +27943,7 @@ void CvPlayer::clearModifierTotals()
 	m_unitCombatFreeXP.clear();
 	m_goldenAgeOnBirthOfGreatPersonCount.clear();
 	m_greatPeopleRateforUnit.clear();
+	m_commandFieldPlots.clear();
 
 	for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 	{
