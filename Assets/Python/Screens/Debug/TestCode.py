@@ -70,6 +70,7 @@ class TestCode:
 		self.main.addTestCode(screen, self.countBonusProducers, "Building - list amount of bonus providers", "List how many buildings provide bonuses")
 		self.main.addTestCode(screen, self.checkTaxonomyBuildings, "Building - list potential Taxonomy requirements", "List taxonomy buildings, that doesn't have all potential base folklore requirements")
 		self.main.addTestCode(screen, self.listFlavors, "General - list and check flavors", "List flavors of traits, buildings, techs, civics, religions, units and report if conventionally unobtainable entry has flavor. Items with flavors can be viewed in CSV as table.")
+		self.main.addTestCode(screen, self.listTagsAndNames, "General - list and check ingame names and infotypes", "List names and infotypes of objects, useful to find out confusing names")
 
 	#Building requirements of buildings
 	def checkBuildingRequirements(self):
@@ -3795,3 +3796,8 @@ class TestCode:
 					sBuffer += ","+sFlavorType+","+str(CvReligionInfo.getFlavorValue(iFlavor))
 			if sBuffer.find(",") != -1:
 				self.log(sBuffer)
+				
+	def listTagsAndNames(self):
+		for iBuilding in xrange(GC.getNumBuildingInfos()):
+			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
+			self.log(CvBuildingInfo.getType()+" "+CvBuildingInfo.getDescription())
