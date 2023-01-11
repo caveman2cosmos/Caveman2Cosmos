@@ -4144,14 +4144,15 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 					int iDefenderArmor = (100 - iModifiedDefenderArmor);
 					int iAttackerArmor = (100 - iModifiedAttackerArmor);
 
-					int iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
-					int iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
-					int iDefenderStrength = std::max(1, pDefender->currCombatStr(pPlot, pAttacker));
-					int iDefenderFirepower = std::max(1, pDefender->currFirepower(pPlot, pAttacker));
+					const int iAttackerStrength = pAttacker->currCombatStr(NULL, NULL);
+					const int iAttackerFirepower = pAttacker->currFirepower(NULL, NULL);
+					const int iDefenderStrength = std::max(1, pDefender->currCombatStr(pPlot, pAttacker));
+					const int iDefenderFirepower = std::max(1, pDefender->currFirepower(pPlot, pAttacker));
 
-					FAssert((iAttackerStrength + iDefenderStrength) * (iAttackerFirepower + iDefenderFirepower) > 0);
+					FAssert(iAttackerStrength + iDefenderStrength > 0);
+					FAssert(iAttackerFirepower + iDefenderFirepower > 0);
 
-					int iStrengthFactor = ((iAttackerFirepower + iDefenderFirepower + 1) / 2);
+					int iStrengthFactor = (iAttackerFirepower + iDefenderFirepower + 1) / 2;
 
 					int iDefendDamageModifierTotal = pDefender->damageModifierTotal();
 					int iAttackDamageModifierTotal = pAttacker->damageModifierTotal();
@@ -4291,27 +4292,8 @@ bool CvGameTextMgr::setCombatPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot, 
 						{
 							szTempBuffer.Format(L"%.1f", iWithdrawal / 1000.0f);
 						}
-
-						/*************************************************************************************************/
-						/** ADVANCED COMBAT ODDS					  3/11/09						   PieceOfMind	  */
-						/** BEGIN																	   v2.0			 */
-						/*************************************************************************************************/
-						/* Old Code */
-						/*
-											szString.append(NEWLINE);
-											szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS_RETREAT", szTempBuffer.GetCString()));
-						*/
-						/* New Code */
 						szString.append(NEWLINE);
 						szString.append(gDLL->getText("TXT_KEY_COMBAT_PLOT_ODDS_RETREAT", szTempBuffer.GetCString()));
-						//if (ACO_enabled)
-						//{
-						//szString.append(NEWLINE);
-						//}
-/*************************************************************************************************/
-/** ADVANCED COMBAT ODDS					  3/11/09						   PieceOfMind	  */
-/** END																		 v2.0			 */
-/*************************************************************************************************/
 					}
 
 					int iDefWithdrawal = 0;
