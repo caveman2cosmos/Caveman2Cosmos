@@ -3446,167 +3446,162 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 
 	bool bStack = isHuman() && (getDomainType() == DOMAIN_AIR || GET_PLAYER(getOwner()).isOption(PLAYEROPTION_STACK_ATTACK));
 
-	bool bAttack = false;
 	bFailedAlreadyFighting = false;
 	bool bStealthDefense = false;
 	bool bAffixFirstAttacker = false;
 	bool bAffixFirstDefender = false;
 
-	if (getNumUnits() > 0 && (getDomainType() == DOMAIN_AIR || stepDistance(getX(), getY(), pDestPlot->getX(), pDestPlot->getY()) <= 1)
-	&& ((iFlags & MOVE_DIRECT_ATTACK) || getDomainType() == DOMAIN_AIR || (iFlags & MOVE_THROUGH_ENEMY) || generatePath(plot(), pDestPlot, iFlags) && getPathFirstPlot() == pDestPlot))
+	if (getNumUnits() < 1
+	|| getDomainType() != DOMAIN_AIR && stepDistance(getX(), getY(), pDestPlot->getX(), pDestPlot->getY()) > 1
+	|| !(iFlags & MOVE_DIRECT_ATTACK) && getDomainType() != DOMAIN_AIR && !(iFlags & MOVE_THROUGH_ENEMY) && (!generatePath(plot(), pDestPlot, iFlags) || getPathFirstPlot() != pDestPlot))
 	{
-		int iAttackOdds = 0;
-		CvUnit* pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, true, iAttackOdds, bStealthDefense, false, 0, false, bStealthDefense);
-		if (pBestAttackUnit)
+		return false;
+	}
+	bool bAttack = false;
+	int iAttackOdds = 0;
+	CvUnit* pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, true, iAttackOdds, bStealthDefense, false, 0, false, bStealthDefense);
+	if (!pBestAttackUnit)
+	{
+		return false;
+	}
+	if (!pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
+	{
+		if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
 		{
-			// if there are no defenders, do not attack
-			//TB Surprise Defense
-			// The battle must be set differently so that stealth combat factors apply. But only in battle with THIS defender...
-			if (!pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
+			//reveal!
+			pDestPlot->revealBestStealthDefender(pBestAttackUnit);
+			bStealthDefense = true;
+			bAffixFirstAttacker = true;
+		}
+	}
+
+	if (isHuman() && !isLastPathPlotVisible() && getDomainType() != DOMAIN_AIR)
+	{
+		return false;
+	}
+
+	CvUnit* pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, bStealthDefense);
+	if (pBestDefender != NULL)
+	{
+		bAffixFirstDefender = true;
+	}
+
+	bool bNoBlitz = (!pBestAttackUnit->isBlitz() && pBestAttackUnit->isMadeAttack());
+
+	if (groupDeclareWar(pDestPlot))
+	{
+		return true;
+	}
+
+	if (!pBestDefender)
+	{
+		return false;
+	}
+
+	bool bStealth = false;
+	bool bBombardExhausted = false;
+	bool bLoopStealthDefense = false;
+	while (true)
+	{
+		PROFILE("CvSelectionGroup::groupAttack.StackLoop");
+		if (bLoopStealthDefense)
+		{
+			bStealthDefense = false;
+		}
+		if (bStealthDefense)
+		{
+			bLoopStealthDefense = true;
+		}
+		if (!bAffixFirstAttacker)
+		{
+			pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, bLoopStealthDefense, bNoBlitz, 0, false, bStealth);
+			if (!pBestAttackUnit)
 			{
-				if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
+				break;
+			}
+		}
+		// if there are no defenders, do not attack
+		if (!bAffixFirstAttacker && !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
+		{
+			if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
+			{
+				pDestPlot->revealBestStealthDefender(pBestAttackUnit);
+				bStealth = true;
+			}
+		}
+		if (!bAffixFirstDefender)
+		{
+			pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, true);
+		}
+		bAffixFirstAttacker = false;
+		bAffixFirstDefender = false;
+
+		if (iAttackOdds < 68 && !isHuman() && !bStealth)
+		{
+			if (bBombardExhausted)
+			{
+				CvUnit* pBestSacrifice = AI_getBestGroupSacrifice(pDestPlot, false, bNoBlitz);
+				if (pBestSacrifice
+				&& pBestSacrifice->canEnterPlot(pDestPlot, MoveCheck::Attack | (bStealthDefense? MoveCheck::Suprise : MoveCheck::None)))
 				{
-					//reveal!
-					pDestPlot->revealBestStealthDefender(pBestAttackUnit);
-					bStealthDefense = true;
-					bAffixFirstAttacker = true;
+					pBestAttackUnit = pBestSacrifice;
 				}
 			}
-
-			if (isHuman() && !isLastPathPlotVisible() && getDomainType() != DOMAIN_AIR)
+			else
 			{
-				return false;
-			}
+				bool bFoundBombard = false;
 
-			CvUnit* pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, bStealthDefense);
-			if (pBestDefender != NULL)
+				OutputDebugString("Attempting to bombard tough plot\n");
+				foreach_(CvUnit* pLoopUnit, units())
+				{
+					if (pLoopUnit->canBombardAtRanged(plot(), pDestPlot->getX(), pDestPlot->getY()))
+					{
+						bFoundBombard = true;
+						pLoopUnit->bombardRanged(pDestPlot->getX(), pDestPlot->getY(), false);
+					}
+				}
+				bBombardExhausted = !bFoundBombard;
+				continue;
+			}
+		}
+
+		bAttack = true;
+
+		if (getNumUnits() < 2)
+		{
+			if (pBestDefender)
 			{
-				bAffixFirstDefender = true;
+				pBestAttackUnit->attack(pDestPlot, false, bLoopStealthDefense);
 			}
-// BUG - Safe Move - end
+			break;
+		}
 
-			bool bNoBlitz = (!pBestAttackUnit->isBlitz() && pBestAttackUnit->isMadeAttack());
-
-			if (groupDeclareWar(pDestPlot))
-			{
-				return true;
-			}
-
+		if (!bLoopStealthDefense && (pBestAttackUnit->plot()->isBattle() || pDestPlot->isBattle()))
+		{
+			bFailedAlreadyFighting = true;
+		}
+		else
+		{
 			if (!pBestDefender)
 			{
-				return false;
+				break;
 			}
+			const int iPlus = pDestPlot->hasStealthDefender(pBestAttackUnit);
+			const bool bMore = pDestPlot->getNumVisiblePotentialEnemyDefenders(pBestAttackUnit) + iPlus > 1;
+			const bool bQuick = (bStack || bMore || bLoopStealthDefense);
 
-			bool bStealth = false;
-			bool bBombardExhausted = false;
-			bool bLoopStealthDefense = false;
-			while (true)
+			pBestAttackUnit->attack(pDestPlot, bQuick, bLoopStealthDefense);
+		}
+
+		if (bFailedAlreadyFighting || !bStack)
+		{
+			// If this is AI stack, follow through with the attack to the end.
+			// Allow Automated Units to Stack Attack
+			if ((!isHuman() || isAutomated()) && getNumUnits() > 1)
 			{
-				PROFILE("CvSelectionGroup::groupAttack.StackLoop");
-				if (bLoopStealthDefense)
-				{
-					bStealthDefense = false;
-				}
-				if (bStealthDefense)
-				{
-					bLoopStealthDefense = true;
-				}
-				if (!bAffixFirstAttacker)
-				{
-					pBestAttackUnit = AI_getBestGroupAttacker(pDestPlot, false, iAttackOdds, bLoopStealthDefense, bNoBlitz, 0, false, bStealth);
-				}
-				if (pBestAttackUnit == NULL)
-				{
-					break;
-				}
-
-				// if there are no defenders, do not attack
-				if (!bAffixFirstAttacker && !pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
-				{
-					if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
-					{
-						pDestPlot->revealBestStealthDefender(pBestAttackUnit);
-						bStealth = true;
-					}
-				}
-				if (!bAffixFirstDefender)
-				{
-					pBestDefender = pDestPlot->getBestDefender(NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, false, true);
-				}
-				bAffixFirstAttacker = false;
-				bAffixFirstDefender = false;
-
-				if (iAttackOdds < 68 && !isHuman() && !bStealth)
-				{
-					if (bBombardExhausted)
-					{
-						CvUnit* pBestSacrifice = AI_getBestGroupSacrifice(pDestPlot, false, bNoBlitz);
-						if (pBestSacrifice != NULL
-							&& pBestSacrifice->canEnterPlot(pDestPlot, MoveCheck::Attack | (bStealthDefense? MoveCheck::Suprise : MoveCheck::None)))
-						{
-							pBestAttackUnit = pBestSacrifice;
-						}
-					}
-					else
-					{
-						bool bFoundBombard = false;
-
-						OutputDebugString("Attempting to bombard tough plot\n");
-						foreach_(CvUnit* pLoopUnit, units())
-						{
-							if (pLoopUnit->canBombardAtRanged(plot(), pDestPlot->getX(), pDestPlot->getY()))
-							{
-								bFoundBombard = true;
-								pLoopUnit->bombardRanged(pDestPlot->getX(), pDestPlot->getY(), false);
-							}
-						}
-						bBombardExhausted = !bFoundBombard;
-						continue;
-					}
-				}
-
-				bAttack = true;
-
-				if (getNumUnits() < 2)
-				{
-					if (pBestDefender)
-					{
-						pBestAttackUnit->attack(pDestPlot, false, bLoopStealthDefense);
-					}
-					break;
-				}
-
-				if (!bLoopStealthDefense && (pBestAttackUnit->plot()->isBattle() || pDestPlot->isBattle()))
-				{
-					bFailedAlreadyFighting = true;
-				}
-				else if (!pBestDefender)
-				{
-					break;
-				}
-				else
-				{
-					int iPlus = 0;
-					if (pDestPlot->hasStealthDefender(pBestAttackUnit))
-					{
-						iPlus++;
-					}
-					const bool bMore = pDestPlot->getNumVisiblePotentialEnemyDefenders(pBestAttackUnit) + iPlus > 1;
-					const bool bQuick = (bStack || bMore || bLoopStealthDefense);
-					pBestAttackUnit->attack(pDestPlot, bQuick, bLoopStealthDefense);
-				}
-
-				if (bFailedAlreadyFighting || !bStack)
-				{
-					// If this is AI stack, follow through with the attack to the end.
-					// Allow Automated Units to Stack Attack
-					if ((!isHuman() || isAutomated()) && getNumUnits() > 1)
-					{
-						AI_queueGroupAttack(iX, iY);
-					}
-					break;
-				}
+				AI_queueGroupAttack(iX, iY);
 			}
+			break;
 		}
 	}
 	return bAttack;
