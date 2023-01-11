@@ -3464,8 +3464,6 @@ bool CvSelectionGroup::groupAttack(int iX, int iY, int iFlags, bool& bFailedAlre
 			// The battle must be set differently so that stealth combat factors apply. But only in battle with THIS defender...
 			if (!pDestPlot->hasDefender(false, NO_PLAYER, getOwner(), pBestAttackUnit, true, false, false, true))
 			{
-				if (!canEnterPlot(pDestPlot, MoveCheck::Attack)) return false;
-
 				if (pDestPlot->hasStealthDefender(pBestAttackUnit) && !pDestPlot->isCity(false))
 				{
 					//reveal!

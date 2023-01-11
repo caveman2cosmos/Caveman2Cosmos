@@ -5813,68 +5813,55 @@ bool CvUnit::willRevealByMove(const CvPlot* pPlot) const
 
 bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCheck::None*/, CvUnit** ppDefender /*= NULL*/) const
 {
-	FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
+	PROFILE_FUNC();
+
 	if (!pPlot)
+	{
+		FErrorMsg("Plot is not assigned a valid value");
+		return false;
+	}
+	// Wrong map category?
+	if (m_pUnitInfo && !isMapCategory(*pPlot, *m_pUnitInfo)
+	// Can Explore?
+	|| m_pUnitInfo->isNoRevealMap() && willRevealByMove(pPlot)
+	// Exiled?
+	|| isExcile() && (pPlot->getOwner() == getOwner() || pPlot->getOwner() == getOriginalOwner())
+	// Spies barred territorial entry by some condition
+	|| isSpy()
+	&& GC.getUSE_SPIES_NO_ENTER_BORDERS()
+	&& NO_PLAYER != pPlot->getOwner()
+	&& !GET_PLAYER(getOwner()).canSpiesEnterBorders(pPlot->getOwner()))
 	{
 		return false;
 	}
-	const bool bAttack = flags & MoveCheck::Attack;
-	const bool bDeclareWar = flags & MoveCheck::DeclareWar;
-	const bool bIgnoreLoad = flags & MoveCheck::IgnoreLoad;
-	const bool bIgnoreTileLimit = flags & MoveCheck::IgnoreTileLimit;
 	const bool bIgnoreLocation = flags & MoveCheck::IgnoreLocation;
-	const bool bIgnoreAttack = flags & MoveCheck::IgnoreAttack;
-	const bool bCheckForBest = flags & MoveCheck::CheckForBest;
-	FAssertMsg((!bCheckForBest && ppDefender == nullptr) || (bCheckForBest && ppDefender), "MoveCheck::CheckForBest implies ppDefender is valid and vice-versa");
-
-	const bool bAssassinate = flags & MoveCheck::Assassinate;
-	const bool bSuprise = flags & MoveCheck::Suprise;
-
-	bool bFailWithAttack = false;
-	bool bFailWithoutAttack = false;
-
-	PROFILE_FUNC();
-
-	bool bIsVisibleEnemyDefender = (pPlot->isVisiblePotentialEnemyDefender(this) || pPlot->isVisiblePotentialEnemyDefenderless(this));
-
-	const bool bCanCoexist = canCoexistAlwaysOnPlot(*pPlot);
-	if (bCanCoexist && bIsVisibleEnemyDefender)
-	{
-		bIsVisibleEnemyDefender = false;
-	}
 
 	if (!bIgnoreLocation && atPlot(pPlot))
 	{
 		return false;
 	}
-	// Can Explore?
-	if (m_pUnitInfo->isNoRevealMap() && willRevealByMove(pPlot))
-	{
-		return false;
-	}
-	// Exiled?
-	if (isExcile() && (pPlot->getOwner() == getOwner() || pPlot->getOwner() == getOriginalOwner()))
-	{
-		return false;
-	}
+	const bool bCanCoexist = canCoexistAlwaysOnPlot(*pPlot);
+	const bool bVisibleEnemyDefender = !bCanCoexist && pPlot->isVisiblePotentialEnemyDefender(this);
 
-	if (m_pUnitInfo != NULL && !isMapCategory(*pPlot, *m_pUnitInfo))
+	if (!bVisibleEnemyDefender && isNoCapture() && !isBlendIntoCity() && pPlot->isEnemyCity(*this))
 	{
 		return false;
 	}
+	const bool bVisibleEnemyUnit = !bCanCoexist && (bVisibleEnemyDefender || pPlot->isVisiblePotentialEnemyDefenderless(this));
 
-	if (isSpy())
-	{
-		if (GC.getUSE_SPIES_NO_ENTER_BORDERS() && NO_PLAYER != pPlot->getOwner()
-		&& !GET_PLAYER(getOwner()).canSpiesEnterBorders(pPlot->getOwner()))
-		{
-			return false;
-		}
-	}
-	else if (isNoCapture() && !isBlendIntoCity() && pPlot->isEnemyCity(*this))
-	{
-		return false;
-	}
+	const bool bAttack = flags & MoveCheck::Attack;
+	const bool bDeclareWar = flags & MoveCheck::DeclareWar;
+	const bool bIgnoreLoad = flags & MoveCheck::IgnoreLoad;
+	const bool bIgnoreTileLimit = flags & MoveCheck::IgnoreTileLimit;
+	const bool bIgnoreAttack = flags & MoveCheck::IgnoreAttack;
+	const bool bAssassinate = flags & MoveCheck::Assassinate;
+	const bool bSuprise = flags & MoveCheck::Suprise;
+	const bool bCheckForBest = flags & MoveCheck::CheckForBest;
+
+	FAssertMsg(!bCheckForBest && !ppDefender || bCheckForBest && ppDefender, "MoveCheck::CheckForBest implies ppDefender is valid and vice-versa");
+
+	bool bFailWithAttack = false;
+	bool bFailWithoutAttack = false;
 
 	const CvArea* pPlotArea = pPlot->area();
 	TeamTypes ePlotTeam = pPlot->getTeam();
@@ -5929,99 +5916,86 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 
 	switch (getDomainType())
 	{
-	case DOMAIN_SEA:
-		if (!pPlot->isWater() && !canMoveAllTerrain() && !pPlot->isCanMoveSeaUnits())
+		case DOMAIN_SEA:
 		{
-			if (!pPlot->isFriendlyCity(*this, true) || !pPlot->isCoastalLand())
+			if (!pPlot->isWater() && !canMoveAllTerrain() && !pPlot->isCanMoveSeaUnits()
+			&& (!pPlot->isFriendlyCity(*this, true) || !pPlot->isCoastalLand()))
 			{
 				return false;
 			}
+			break;
 		}
-		break;
-
-	case DOMAIN_AIR:
-		if (!bAttack)
+		case DOMAIN_AIR:
 		{
-			bool bValid = false;
-
-			if (pPlot->isFriendlyCity(*this, true))
+			if (!bAttack)
 			{
-				bValid = true;
+				bool bValid = false;
 
-				if (m_pUnitInfo->getAirUnitCap() > 0)
+				if (pPlot->isFriendlyCity(*this, true))
 				{
-					if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+					bValid = true;
+
+					if (m_pUnitInfo->getAirUnitCap() > 0)
 					{
-						if (pPlot->airUnitSpaceAvailable(getTeam()) < GC.getGame().getBaseAirUnitIncrementsbyCargoVolume())
+						if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
+						{
+							if (pPlot->airUnitSpaceAvailable(getTeam()) < GC.getGame().getBaseAirUnitIncrementsbyCargoVolume())
+							{
+								bValid = false;
+							}
+						}
+						else if (pPlot->airUnitSpaceAvailable(getTeam()) <= 0)
 						{
 							bValid = false;
 						}
 					}
-					else if (pPlot->airUnitSpaceAvailable(getTeam()) <= 0)
+				}
+
+				if (!bValid && (bIgnoreLoad || !canLoad(pPlot)))
+				{
+					if (!bIgnoreAttack)
 					{
-						bValid = false;
+						return false;
 					}
+					bFailWithoutAttack = true;
 				}
-			}
 
-			if (!bValid && (bIgnoreLoad || !canLoad(pPlot)))
-			{
-				if (!bIgnoreAttack)
+				// Afforess - 03/7/10 - Rebase Limit
+				if (!bFailWithoutAttack && !GET_TEAM(getTeam()).isRebaseAnywhere() && GC.getGame().isModderGameOption(MODDERGAMEOPTION_AIRLIFT_RANGE)
+				&& plotDistance(pPlot->getX(), pPlot->getY(), getX(), getY()) > GC.getGame().getModderGameOption(MODDERGAMEOPTION_AIRLIFT_RANGE))
 				{
-					return false;
+					if (!bIgnoreAttack)
+					{
+						return false;
+					}
+					bFailWithoutAttack = true;
 				}
-				bFailWithoutAttack = true;
 			}
-
-			// Afforess - 03/7/10 - Rebase Limit
-			if (!bFailWithoutAttack && !GET_TEAM(getTeam()).isRebaseAnywhere() && GC.getGame().isModderGameOption(MODDERGAMEOPTION_AIRLIFT_RANGE)
-			&& plotDistance(pPlot->getX(), pPlot->getY(), getX(), getY()) > GC.getGame().getModderGameOption(MODDERGAMEOPTION_AIRLIFT_RANGE))
-			{
-				if (!bIgnoreAttack)
-				{
-					return false;
-				}
-				bFailWithoutAttack = true;
-			}
+			break;
 		}
-		break;
-
-	case DOMAIN_LAND:
-
-		if (pPlot->isWater() && !canMoveAllTerrain() && !pPlot->isSeaTunnel())
+		case DOMAIN_LAND:
 		{
-			if (!pPlot->isCity() || (pPlot->isCity() && 0 == GC.getLAND_UNITS_CAN_ATTACK_WATER_CITIES()))
+			if (pPlot->isWater() && !canMoveAllTerrain() && !pPlot->isSeaTunnel()
+			&& (!pPlot->isCity() || pPlot->isCity() && 0 == GC.getLAND_UNITS_CAN_ATTACK_WATER_CITIES())
+			&& (bIgnoreLoad || !isHuman() || plot()->isWater() || !canLoad(pPlot)))
 			{
-				if (bIgnoreLoad || !isHuman() || plot()->isWater() || !canLoad(pPlot))
-				{
-					return false;
-				}
+				return false;
 			}
-		}
-		if (isHominid())
-		{
-			if (pPlotArea->isBorderObstacle(pPlot->getTeam()))
+			if (isHominid()
+			&& pPlotArea->isBorderObstacle(pPlot->getTeam()) && plot()->getTeam() != pPlot->getTeam())
 			{
-				if (plot()->getTeam() != pPlot->getTeam())
-				{
-					return false;
-				}
+				return false;
 			}
+			break;
 		}
-		break;
+		case DOMAIN_IMMOBILE: return false;
 
-	case DOMAIN_IMMOBILE:
-		return false;
-		break;
-
-	default:
-		FErrorMsg("error");
-		break;
+		default: FErrorMsg("error");
 	}
 
 	if (m_pUnitInfo->getPassableRouteNeeded(0) || m_pUnitInfo->getPassableRouteNeeded(1))
 	{
-		if (!(m_pUnitInfo->getPassableRouteNeeded(pPlot->getRouteType()) && pPlot->isRoute()))
+		if (!m_pUnitInfo->getPassableRouteNeeded(pPlot->getRouteType()) || !pPlot->isRoute())
 		{
 			return false;
 		}
@@ -6083,7 +6057,7 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 
 
 	// The following change makes it possible to capture defenseless units after having made a previous attack or paradrop
-	if (bAttack && isMadeAttack() && !isBlitz() && !bSuprise && bIsVisibleEnemyDefender)
+	if (bAttack && isMadeAttack() && !isBlitz() && !bSuprise && bVisibleEnemyUnit)
 	{
 		if (!bIgnoreAttack || bFailWithoutAttack)
 		{
@@ -6112,7 +6086,7 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 			{
 				if (bIgnoreAttack)
 				{
-					if (!bFailWithoutAttack && !bCanCoexist && bIsVisibleEnemyDefender
+					if (!bFailWithoutAttack && !bCanCoexist && bVisibleEnemyUnit
 					&& (!bDeclareWar || (pPlot->isVisibleOtherUnit(getOwner()))))
 					{
 						if (bFailWithAttack)
@@ -6121,7 +6095,7 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 						}
 						bFailWithoutAttack = true;
 					}
-					if (!bFailWithAttack && !bIsVisibleEnemyDefender
+					if (!bFailWithAttack && !bVisibleEnemyUnit
 					&& (!bDeclareWar || !pPlot->isVisibleOtherUnit(getOwner()) && !(pPlot->getPlotCity() && !isNoCapture() && !isBlendIntoCity())))
 					{
 						if (bFailWithoutAttack)
@@ -6132,9 +6106,9 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 					}
 				}
 				//This part is to keep units that cannot capture a city from doing so. - one objective at least.
-				else if ((bAttack || bIsVisibleEnemyDefender)
-				&& bIsVisibleEnemyDefender != bAttack
-				&& (!bDeclareWar || bIsVisibleEnemyDefender != bAttack && (!bAttack || !pPlot->getPlotCity() || isNoCapture())))
+				else if ((bAttack || bVisibleEnemyUnit)
+				&& bVisibleEnemyUnit != bAttack
+				&& (!bDeclareWar || bVisibleEnemyUnit != bAttack && (!bAttack || !pPlot->getPlotCity() || isNoCapture())))
 				{
 					return false;//Searchforthis
 					// Toffer - I can't make heads from tails on this one...
@@ -6183,7 +6157,7 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 				bFailWithAttack = true;
 			}
 
-			if (!bCanCoexist && bIsVisibleEnemyDefender && (!isHuman() || pPlot->isVisible(getTeam(), false)))
+			if (!bCanCoexist && bVisibleEnemyUnit && (!isHuman() || pPlot->isVisible(getTeam(), false)))
 			{
 				return false;
 			}
