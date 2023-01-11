@@ -5843,7 +5843,7 @@ bool CvUnit::canEnterPlot(const CvPlot* pPlot, MoveCheck::flags flags /*= MoveCh
 	const bool bCanCoexist = canCoexistAlwaysOnPlot(*pPlot);
 	const bool bVisibleEnemyDefender = !bCanCoexist && pPlot->isVisiblePotentialEnemyDefender(this);
 
-	if (!bVisibleEnemyDefender && isNoCapture() && !isBlendIntoCity() && pPlot->isEnemyCity(*this))
+	if (!bVisibleEnemyDefender && !isSpy() && isNoCapture() && !isBlendIntoCity() && pPlot->isEnemyCity(*this))
 	{
 		return false;
 	}
