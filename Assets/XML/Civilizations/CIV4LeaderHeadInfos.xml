@@ -443,7 +443,7 @@
 		</LeaderHeadInfo>
 		<LeaderHeadInfo>
 			<Type>LEADER_NEANDERTHAL</Type>
-			<Description>TXT_KEY_CIV_NPC_NEANDERTHAL_SHORT_DESC</Description>
+			<Description>TXT_KEY_CIV_NPC_NEANDERTHAL_SHORT</Description>
 			<Civilopedia>TXT_KEY_CIV_NPC_NEANDERTHAL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_LEADER_NEANDERTHAL</ArtDefineTag>
 			<bNPC>1</bNPC>

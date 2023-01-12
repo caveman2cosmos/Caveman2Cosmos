@@ -118,7 +118,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOVENORS_MENAGERIE</Type>
+			<Type>BUILDING_GOVERNOR_MENAGERIE</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ZOOLOGY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>

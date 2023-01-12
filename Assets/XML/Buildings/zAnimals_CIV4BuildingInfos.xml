@@ -262,7 +262,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>306</iCost>
 			<iHappiness>1</iHappiness>
@@ -308,7 +308,7 @@
 					<Or>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_GOVENORS_MENAGERIE</ID>
+							<ID>BUILDING_GOVERNOR_MENAGERIE</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
@@ -383,7 +383,7 @@
 					<Or>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_GOVENORS_MENAGERIE</ID>
+							<ID>BUILDING_GOVERNOR_MENAGERIE</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
@@ -1213,7 +1213,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ELEPHANT_HERD</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EXOTIC_HERBAVOURS</Type>
+			<Type>BUILDING_EXOTIC_HERBIVORE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1279,7 +1279,7 @@
 			</TechCommerceModifiers>
 			<iAsset>2</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_EXOTIC_HERBAVOURS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EXOTIC_HERBIVORE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FEATHER_WORKER</Type>
@@ -1516,7 +1516,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GOAT_HERD</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOVENORS_MENAGERIE</Type>
+			<Type>BUILDING_GOVERNOR_MENAGERIE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1528,7 +1528,7 @@
 			<iCost>300</iCost>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1542,10 +1542,10 @@
 			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_GOVENORS_MENAGERIE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GOVERNOR_MENAGERIE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOVENORS_PETS</Type>
+			<Type>BUILDING_GOVERNOR_PETS</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -1569,7 +1569,7 @@
 			<iRevIdxLocal>-2</iRevIdxLocal>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_GOVENORS_PETS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GOVERNOR_PETS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HAAST_EAGLE_REMAINS</Type>
@@ -3137,7 +3137,7 @@
 				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>

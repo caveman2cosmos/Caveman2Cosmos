@@ -565,7 +565,7 @@
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
 			<ObsoleteTech>TECH_IMPERIALISM</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ALHAMBRA_2</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_ALHAMBRA_OBSOLETE</ObsoletesToBuilding>
 			<iCost>2640</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<CommerceChanges>
@@ -627,7 +627,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ALHAMBRA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ALHAMBRA_2</Type>
+			<Type>BUILDING_ALHAMBRA_OBSOLETE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_ALHAMBRA_OBSOLETE</Description>
@@ -779,7 +779,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ANGKOR_WAT_2</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_ANGKOR_WAT_OBSOLETE</ObsoletesToBuilding>
 			<iCost>1512</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -834,7 +834,7 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANGKOR_WAT_2</Type>
+			<Type>BUILDING_ANGKOR_WAT_OBSOLETE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_ANGKOR_WAT_OBSOLETE</Description>
@@ -2672,15 +2672,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BNS</Type>
+			<Type>BUILDING_BIRDS_NEST_STADIUM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BNS_DESC</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BNS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_BIRDS_NEST_STADIUM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BIRDS_NEST_STADIUM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BNS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BIRDS_NEST_STADIUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BNS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
@@ -3916,7 +3916,7 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_SATELLITES</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_CHEOMSEONGDAE_2</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_CHEOMSEONGDAE_OBSOLETE</ObsoletesToBuilding>
 			<iCost>876</iCost>
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<CommerceChanges>
@@ -3964,7 +3964,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CHEOMSEONGDAE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CHEOMSEONGDAE_2</Type>
+			<Type>BUILDING_CHEOMSEONGDAE_OBSOLETE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CHEOMSEONGDAE_OBSOLETE</Description>
@@ -4012,7 +4012,7 @@
 				<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_DIVINE_RIGHT</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_CHICHEN_ITZA_2</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_CHICHEN_ITZA_OBSOLETE</ObsoletesToBuilding>
 			<iCost>876</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -4059,7 +4059,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CHICHEN_ITZA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CHICHEN_ITZA_2</Type>
+			<Type>BUILDING_CHICHEN_ITZA_OBSOLETE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CHICHEN_ITZA_OBSOLETE</Description>
@@ -4312,7 +4312,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CN_TOWER_DESC</Description>
+			<Description>TXT_KEY_BUILDING_CN_TOWER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CN_TOWER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CN_TOWER</ArtDefineTag>
@@ -6306,7 +6306,7 @@
 				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_EDINBURGH_CASTLE_2</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_EDINBURGH_CASTLE_OBSOLETE</ObsoletesToBuilding>
 			<iCost>1800</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<CommerceChanges>
@@ -6351,7 +6351,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_EDINBURGH</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EDINBURGH_CASTLE_2</Type>
+			<Type>BUILDING_EDINBURGH_CASTLE_OBSOLETE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<MapCategoryTypes>
@@ -8513,7 +8513,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_SHAMANHUT</BuildingType>
+				<BuildingType>BUILDING_SAGE</BuildingType>
 				<BuildingType>BUILDING_ALTERNATIVE_MEDICINE</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
@@ -8526,7 +8526,7 @@
 			</CommerceChanges>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<FreeBuilding>BUILDING_SHAMANHUT</FreeBuilding>
+			<FreeBuilding>BUILDING_SAGE</FreeBuilding>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -18026,16 +18026,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SIAM_HO_TRAI</Type>
+			<Type>BUILDING_HO_TRAI_LIBRARY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SIAM_HO_TRAI_LIBRARY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SIAM_HO_TRAI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HO_TRAI_LIBRARY_LIBRARY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HO_TRAI_LIBRARY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SIAM_HO_TRAI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HO_TRAI_LIBRARY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SIAM_HO_TRAI_LIBRARY</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -19606,7 +19606,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SYDNEY_OPERA_HOUSE_DESC</Description>
+			<Description>TXT_KEY_BUILDING_SYDNEY_OPERA_HOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SYDNEY_OPERA_HOUSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SYDNEY_OPERA_HOUSE</ArtDefineTag>

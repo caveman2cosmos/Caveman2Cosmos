@@ -3,8 +3,8 @@
 	<CivilizationInfos>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_UNITED_STATES</Type>
-			<Description>TXT_KEY_CIV_UNITED_STATES_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_UNITED_STATES_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_UNITED_STATES</Description>
+			<ShortDescription>TXT_KEY_CIV_UNITED_STATES_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_UNITED_STATES_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_AMERICA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_BLUE</DefaultPlayerColor>
@@ -117,8 +117,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ARABIA</Type>
-			<Description>TXT_KEY_CIV_ARABIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ARABIA_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_ARABIA</Description>
+			<ShortDescription>TXT_KEY_CIV_ARABIA_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_ARABIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ARABIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_GREEN</DefaultPlayerColor>
@@ -222,8 +222,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ASSYRIA</Type>
-			<Description>TXT_KEY_CIV_ASSYRIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ASSYRIA_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_ASSYRIA</Description>
+			<ShortDescription>TXT_KEY_CIV_ASSYRIA_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_ASSYRIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ASSYRIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ASSYRIA</DefaultPlayerColor>
@@ -321,8 +321,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_AZTEC</Type>
-			<Description>TXT_KEY_CIV_AZTEC_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_AZTEC_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_AZTEC</Description>
+			<ShortDescription>TXT_KEY_CIV_AZTEC_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_AZTEC_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_AZTEC_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_GREEN</DefaultPlayerColor>
@@ -420,8 +420,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_BABYLON</Type>
-			<Description>TXT_KEY_CIV_BABYLON_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_BABYLON_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_BABYLON</Description>
+			<ShortDescription>TXT_KEY_CIV_BABYLON_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_BABYLON_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_BABYLON_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_MIDDLE_PURPLE</DefaultPlayerColor>
@@ -517,8 +517,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_BYZANTIUM</Type>
-			<Description>TXT_KEY_CIV_BYZANTIUM_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_BYZANTIUM_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_BYZANTIUM</Description>
+			<ShortDescription>TXT_KEY_CIV_BYZANTIUM_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_BYZANTIUM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_BYZANTIUM_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_GRAY</DefaultPlayerColor>
@@ -618,8 +618,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_CARTHAGE</Type>
-			<Description>TXT_KEY_CIV_CARTHAGE_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_CARTHAGE_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_CARTHAGE</Description>
+			<ShortDescription>TXT_KEY_CIV_CARTHAGE_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_CARTHAGE_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_CARTHAGE_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ORANGE</DefaultPlayerColor>
@@ -720,8 +720,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_CELT</Type>
-			<Description>TXT_KEY_CIV_CELT_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_CELT_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_CELT</Description>
+			<ShortDescription>TXT_KEY_CIV_CELT_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_CELT_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_CELT_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_ORANGE</DefaultPlayerColor>
@@ -829,8 +829,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_CHINA</Type>
-			<Description>TXT_KEY_CIV_CHINA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_CHINA_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_CHINA</Description>
+			<ShortDescription>TXT_KEY_CIV_CHINA_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_CHINA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_CHINA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_PINK</DefaultPlayerColor>
@@ -931,8 +931,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_EGYPT</Type>
-			<Description>TXT_KEY_CIV_EGYPT_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_EGYPT_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_EGYPT</Description>
+			<ShortDescription>TXT_KEY_CIV_EGYPT_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_EGYPT_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_EGYPT_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_YELLOW</DefaultPlayerColor>
@@ -1042,8 +1042,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ENGLAND</Type>
-			<Description>TXT_KEY_CIV_ENGLAND_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ENGLAND_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_ENGLAND</Description>
+			<ShortDescription>TXT_KEY_CIV_ENGLAND_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_ENGLAND_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ENGLAND_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_WHITE</DefaultPlayerColor>
@@ -1150,8 +1150,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ETHIOPIA</Type>
-			<Description>TXT_KEY_CIV_ETHIOPIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ETHIOPIA_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_ETHIOPIA</Description>
+			<ShortDescription>TXT_KEY_CIV_ETHIOPIA_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_ETHIOPIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ETHIOPIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_MIDDLE_GREEN</DefaultPlayerColor>
@@ -1248,8 +1248,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_FRANCE</Type>
-			<Description>TXT_KEY_CIV_FRANCE_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_FRANCE_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_FRANCE</Description>
+			<ShortDescription>TXT_KEY_CIV_FRANCE_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_FRANCE_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_FRANCE_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_BLUE</DefaultPlayerColor>
@@ -1356,8 +1356,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_GERMANY</Type>
-			<Description>TXT_KEY_CIV_GERMANY_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_GERMANY_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_GERMANY</Description>
+			<ShortDescription>TXT_KEY_CIV_GERMANY_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_GERMANY_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_GERMANY_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_GRAY</DefaultPlayerColor>
@@ -1462,8 +1462,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_GREECE</Type>
-			<Description>TXT_KEY_CIV_GREECE_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_GREECE_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_GREECE</Description>
+			<ShortDescription>TXT_KEY_CIV_GREECE_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_GREECE_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_GREECE_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_BLUE</DefaultPlayerColor>
@@ -1575,8 +1575,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_HITTITES</Type>
-			<Description>TXT_KEY_CIV_HITTITES_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_HITTITES_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_HITTITES</Description>
+			<ShortDescription>TXT_KEY_CIV_HITTITES_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_HITTITES_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_HITTITES_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_HITTITES</DefaultPlayerColor>
@@ -1699,8 +1699,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_HOLY_ROMAN</Type>
-			<Description>TXT_KEY_CIV_HOLY_ROMAN_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_HOLY_ROMAN_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_HOLY_ROMAN</Description>
+			<ShortDescription>TXT_KEY_CIV_HOLY_ROMAN_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_HOLY_ROMAN_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_HOLY_ROMAN_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_LEMON</DefaultPlayerColor>
@@ -1795,8 +1795,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_INCA</Type>
-			<Description>TXT_KEY_CIV_INCA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_INCA_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_INCA</Description>
+			<ShortDescription>TXT_KEY_CIV_INCA_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_INCA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_INCA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_YELLOW</DefaultPlayerColor>
@@ -1900,8 +1900,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_INDIA</Type>
-			<Description>TXT_KEY_CIV_INDIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_INDIA_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_INDIA</Description>
+			<ShortDescription>TXT_KEY_CIV_INDIA_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_INDIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_INDIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_PURPLE</DefaultPlayerColor>
@@ -2042,8 +2042,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_JAPAN</Type>
-			<Description>TXT_KEY_CIV_JAPAN_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_JAPAN_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_JAPAN</Description>
+			<ShortDescription>TXT_KEY_CIV_JAPAN_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_JAPAN_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_JAPAN_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_RED</DefaultPlayerColor>
@@ -2145,8 +2145,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_KHMER</Type>
-			<Description>TXT_KEY_CIV_KHMER_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_KHMER_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_KHMER</Description>
+			<ShortDescription>TXT_KEY_CIV_KHMER_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_KHMER_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_KHMER_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_MIDDLE_BLUE</DefaultPlayerColor>
@@ -2239,8 +2239,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_KOREA</Type>
-			<Description>TXT_KEY_CIV_KOREA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_KOREA_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_KOREA</Description>
+			<ShortDescription>TXT_KEY_CIV_KOREA_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_KOREA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_KOREA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_CYAN</DefaultPlayerColor>
@@ -2338,8 +2338,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_MALI</Type>
-			<Description>TXT_KEY_CIV_MALI_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_MALI_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_MALI</Description>
+			<ShortDescription>TXT_KEY_CIV_MALI_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_MALI_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_MALI_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_PEACH</DefaultPlayerColor>
@@ -2433,8 +2433,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_MAYA</Type>
-			<Description>TXT_KEY_CIV_MAYA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_MAYA_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_MAYA</Description>
+			<ShortDescription>TXT_KEY_CIV_MAYA_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_MAYA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_MAYA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_MIDDLE_CYAN</DefaultPlayerColor>
@@ -2528,8 +2528,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_MONGOL</Type>
-			<Description>TXT_KEY_CIV_MONGOL_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_MONGOL_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_MONGOL</Description>
+			<ShortDescription>TXT_KEY_CIV_MONGOL_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_MONGOL_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_MONGOL_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_BROWN</DefaultPlayerColor>
@@ -2627,8 +2627,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_NATIVE_AMERICA</Type>
-			<Description>TXT_KEY_CIV_NATIVE_AMERICA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_NATIVE_AMERICA_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_NATIVE_AMERICA</Description>
+			<ShortDescription>TXT_KEY_CIV_NATIVE_AMERICA_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_NATIVE_AMERICA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_NATIVE_AMERICA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_BROWN</DefaultPlayerColor>
@@ -2740,8 +2740,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_NETHERLANDS</Type>
-			<Description>TXT_KEY_CIV_NETHERLANDS_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_NETHERLANDS_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_NETHERLANDS</Description>
+			<ShortDescription>TXT_KEY_CIV_NETHERLANDS_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_NETHERLANDS_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_NETHERLANDS_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_ORANGE</DefaultPlayerColor>
@@ -2839,8 +2839,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_OTTOMAN</Type>
-			<Description>TXT_KEY_CIV_OTTOMAN_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_OTTOMAN_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_OTTOMAN</Description>
+			<ShortDescription>TXT_KEY_CIV_OTTOMAN_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_OTTOMAN_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_OTTOMAN_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_GREEN</DefaultPlayerColor>
@@ -2935,8 +2935,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_PERSIA</Type>
-			<Description>TXT_KEY_CIV_PERSIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_PERSIA_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_PERSIA</Description>
+			<ShortDescription>TXT_KEY_CIV_PERSIA_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_PERSIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_PERSIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_CYAN</DefaultPlayerColor>
@@ -3045,8 +3045,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_PORTUGAL</Type>
-			<Description>TXT_KEY_CIV_PORTUGAL_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_PORTUGAL_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_PORTUGAL</Description>
+			<ShortDescription>TXT_KEY_CIV_PORTUGAL_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_PORTUGAL_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_PORTUGAL_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_DARK_GREEN</DefaultPlayerColor>
@@ -3148,8 +3148,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ROME</Type>
-			<Description>TXT_KEY_CIV_ROME_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ROME_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_ROME</Description>
+			<ShortDescription>TXT_KEY_CIV_ROME_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_ROME_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ROME_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_PURPLE</DefaultPlayerColor>
@@ -3269,8 +3269,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_RUSSIA</Type>
-			<Description>TXT_KEY_CIV_RUSSIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_RUSSIA_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_RUSSIA</Description>
+			<ShortDescription>TXT_KEY_CIV_RUSSIA_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_RUSSIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_RUSSIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_RED</DefaultPlayerColor>
@@ -3375,8 +3375,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_SIAM</Type>
-			<Description>TXT_KEY_CIV_SIAM_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_SIAM_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_SIAM</Description>
+			<ShortDescription>TXT_KEY_CIV_SIAM_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_SIAM_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_SIAM_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_RED_BLUE</DefaultPlayerColor>
@@ -3475,8 +3475,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_SPAIN</Type>
-			<Description>TXT_KEY_CIV_SPAIN_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_SPAIN_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_SPAIN</Description>
+			<ShortDescription>TXT_KEY_CIV_SPAIN_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_SPAIN_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_SPAIN_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_PINK</DefaultPlayerColor>
@@ -3573,8 +3573,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_SUMERIA</Type>
-			<Description>TXT_KEY_CIV_SUMERIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_SUMERIA_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_SUMERIA</Description>
+			<ShortDescription>TXT_KEY_CIV_SUMERIA_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_SUMERIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_SUMERIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DARK_INDIGO</DefaultPlayerColor>
@@ -3666,8 +3666,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_VIKING</Type>
-			<Description>TXT_KEY_CIV_VIKING_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_VIKING_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_VIKING</Description>
+			<ShortDescription>TXT_KEY_CIV_VIKING_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_VIKING_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_VIKING_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_PURPLE</DefaultPlayerColor>
@@ -3764,8 +3764,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ZULU</Type>
-			<Description>TXT_KEY_CIV_ZULU_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ZULU_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_ZULU</Description>
+			<ShortDescription>TXT_KEY_CIV_ZULU_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_ZULU_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ZULU_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_YELLOW</DefaultPlayerColor>
@@ -3861,8 +3861,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_AUSTRALIA</Type>
-			<Description>TXT_KEY_CIV_AUSTRALIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_AUSTRALIA_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_AUSTRALIA</Description>
+			<ShortDescription>TXT_KEY_CIV_AUSTRALIA_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_AUSTRALIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_AUSTRALIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_AUSTRALIA</DefaultPlayerColor>
@@ -3956,8 +3956,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_DENMARK</Type>
-			<Description>TXT_KEY_CIV_DENMARK_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_DENMARK_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_DENMARK</Description>
+			<ShortDescription>TXT_KEY_CIV_DENMARK_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_DENMARK_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_DENMARK_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_DENMARK</DefaultPlayerColor>
@@ -4055,8 +4055,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_IROQUOIS</Type>
-			<Description>TXT_KEY_CIV_IROQUOIS_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_IROQUOIS_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_IROQUOIS</Description>
+			<ShortDescription>TXT_KEY_CIV_IROQUOIS_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_IROQUOIS_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_IROQUOIS_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_IROQUOIS</DefaultPlayerColor>
@@ -4166,8 +4166,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ANIMAL_PREDATOR</Type>
-			<Description>TXT_KEY_CIV_ANIMAL_PREDATOR_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ANIMAL_PREDATOR_DESC_SHORT</ShortDescription>
+			<Description>TXT_KEY_CIV_ANIMAL_PREDATOR</Description>
+			<ShortDescription>TXT_KEY_CIV_ANIMAL_PREDATOR_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_ANIMAL_PREDATOR_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ANIMAL_PREDATOR_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ANIMAL</DefaultPlayerColor>
@@ -4203,8 +4203,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ANIMAL_PREY</Type>
-			<Description>TXT_KEY_CIV_ANIMAL_PREY_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ANIMAL_PREY_DESC_SHORT</ShortDescription>
+			<Description>TXT_KEY_CIV_ANIMAL_PREY</Description>
+			<ShortDescription>TXT_KEY_CIV_ANIMAL_PREY_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_ANIMAL_PREY_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ANIMAL_PREY_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ANIMAL</DefaultPlayerColor>
@@ -4240,8 +4240,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ANIMAL_BEAST</Type>
-			<Description>TXT_KEY_CIV_ANIMAL_BEAST_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ANIMAL_BEAST_DESC_SHORT</ShortDescription>
+			<Description>TXT_KEY_CIV_ANIMAL_BEAST</Description>
+			<ShortDescription>TXT_KEY_CIV_ANIMAL_BEAST_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_ANIMAL_BEAST_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ANIMAL_BEAST_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ANIMAL</DefaultPlayerColor>
@@ -4278,8 +4278,8 @@
 		<CivilizationInfo>
 			<Type>CIVILIZATION_NPC_NEANDERTHAL</Type>
 			<bStronglyRestricted>1</bStronglyRestricted>
-			<Description>TXT_KEY_CIV_NPC_NEANDERTHAL_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_NPC_NEANDERTHAL_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_NPC_NEANDERTHAL</Description>
+			<ShortDescription>TXT_KEY_CIV_NPC_NEANDERTHAL_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_NPC_NEANDERTHAL_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_NPC_NEANDERTHAL_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_NEANDERTHAL</DefaultPlayerColor>
@@ -4393,8 +4393,8 @@
 		<CivilizationInfo>
 			<Type>CIVILIZATION_INSECTOID</Type>
 			<bStronglyRestricted>1</bStronglyRestricted>
-			<Description>TXT_KEY_CIV_INSECTOID_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_INSECTOID_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_INSECTOID</Description>
+			<ShortDescription>TXT_KEY_CIV_INSECTOID_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_INSECTOID_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_INSECTOID_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_BLACK</DefaultPlayerColor>
@@ -4428,8 +4428,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_BARBARIAN</Type>
-			<Description>TXT_KEY_CIV_BARBARIAN_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_BARBARIAN_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_BARBARIAN</Description>
+			<ShortDescription>TXT_KEY_CIV_BARBARIAN_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_BARBARIAN_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_BARBARIAN_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_BLACK</DefaultPlayerColor>
@@ -4555,8 +4555,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_POLYNESIA</Type>
-			<Description>TXT_KEY_CIV_POLYNESIA_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_POLYNESIA_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_POLYNESIA</Description>
+			<ShortDescription>TXT_KEY_CIV_POLYNESIA_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_POLYNESIA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_POLYNESIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_POLYNESIA</DefaultPlayerColor>
@@ -4661,8 +4661,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ABORIGINES</Type>
-			<Description>TXT_KEY_CIV_ABORIGINES_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ABORIGINES_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_ABORIGINES</Description>
+			<ShortDescription>TXT_KEY_CIV_ABORIGINES_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_ABORIGINES_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ABORIGINES_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ABORIGINES</DefaultPlayerColor>
@@ -4759,8 +4759,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_BRAZIL</Type>
-			<Description>TXT_KEY_CIV_BRAZIL_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_BRAZIL_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_BRAZIL</Description>
+			<ShortDescription>TXT_KEY_CIV_BRAZIL_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_BRAZIL_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_BRAZIL_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_BRAZIL</DefaultPlayerColor>
@@ -4858,8 +4858,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ISRAEL</Type>
-			<Description>TXT_KEY_CIV_ISRAEL_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_ISRAEL_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_ISRAEL</Description>
+			<ShortDescription>TXT_KEY_CIV_ISRAEL_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_ISRAEL_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_ISRAEL_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ISRAEL</DefaultPlayerColor>
@@ -4962,8 +4962,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_JIVARO</Type>
-			<Description>TXT_KEY_CIV_JIVARO_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_JIVARO_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_JIVARO</Description>
+			<ShortDescription>TXT_KEY_CIV_JIVARO_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_JIVARO_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_JIVARO_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_JIVARO</DefaultPlayerColor>
@@ -5048,8 +5048,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_MAORI</Type>
-			<Description>TXT_KEY_CIV_MAORI_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_MAORI_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_MAORI</Description>
+			<ShortDescription>TXT_KEY_CIV_MAORI_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_MAORI_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_MAORI_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_MAORI</DefaultPlayerColor>
@@ -5138,8 +5138,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_NEANDERTHAL</Type>
-			<Description>TXT_KEY_CIV_NEANDERTHAL_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_NEANDERTHAL_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_NEANDERTHAL</Description>
+			<ShortDescription>TXT_KEY_CIV_NEANDERTHAL_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_NEANDERTHAL_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_NEANDERTHAL_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_NEANDERTHAL_EMPIRE</DefaultPlayerColor>
@@ -5230,8 +5230,8 @@
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_TUPI</Type>
-			<Description>TXT_KEY_CIV_TUPI_DESC</Description>
-			<ShortDescription>TXT_KEY_CIV_TUPI_SHORT_DESC</ShortDescription>
+			<Description>TXT_KEY_CIV_TUPI</Description>
+			<ShortDescription>TXT_KEY_CIV_TUPI_SHORT</ShortDescription>
 			<Adjective>TXT_KEY_CIV_TUPI_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIV_TUPI_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_TUPI</DefaultPlayerColor>

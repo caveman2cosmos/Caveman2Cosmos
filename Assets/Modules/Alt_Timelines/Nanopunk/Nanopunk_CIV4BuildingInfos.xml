@@ -50,10 +50,10 @@
 			<iTradeRoutes>1</iTradeRoutes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTULAR_AWAKENING</Type>
+			<Type>BUILDING_CULTURAL_AWAKENING</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_NANO</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURAL_AWAKENING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CULTULAR_AWAKENING_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURAL_AWAKENING_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_CULTURAL_AWAKENING</ArtDefineTag>
 			<MapCategoryTypes>

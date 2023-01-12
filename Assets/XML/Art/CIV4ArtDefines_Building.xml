@@ -5013,7 +5013,7 @@
 			<Button>Art/Interface/Buttons/Group_Wonders/bluefish_caves.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BNS</Type>
+			<Type>ART_DEF_BUILDING_BIRDS_NEST_STADIUM</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -14534,7 +14534,7 @@
 			<Button>Art/Interface/Buttons/Buildings/entomologylab.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ENVIRONMENTAL_A</Type>
+			<Type>ART_DEF_BUILDING_ENVIRONMENTAL_ACHIEVEMENT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -14864,7 +14864,7 @@
 			<Button>Art/interface/buttons/buildings/exodus.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EXOTIC_HERBAVOURS</Type>
+			<Type>ART_DEF_BUILDING_EXOTIC_HERBIVORE</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1</fScale>
@@ -18034,7 +18034,7 @@
 			<Button>art/Embassy/art/gothembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOVENORS_MENAGERIE</Type>
+			<Type>ART_DEF_BUILDING_GOVERNOR_MENAGERIE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18044,7 +18044,7 @@
 			<Button>Art/Interface/Buttons/Buildings/GovenorsMenagerie.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOVENORS_PETS</Type>
+			<Type>ART_DEF_BUILDING_GOVERNOR_PETS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31934,7 +31934,7 @@
 			<Button>Art/Embassy/palestinianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PALISADE_WALL</Type>
+			<Type>ART_DEF_BUILDING_PALISADE</Type>
 			<LSystem>LSYSTEM_WOOD_WALLS</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1</fScale>
@@ -37545,7 +37545,7 @@
 			<Button>art/Crops/Art/shaggyparasolmushroom.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SHAMANHUT</Type>
+			<Type>ART_DEF_BUILDING_SAGE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -38145,7 +38145,7 @@
 			<Button>Art/Interface/Buttons/Civilizations/Siam.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SIAM_HO_TRAI</Type>
+			<Type>ART_DEF_BUILDING_HO_TRAI_LIBRARY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45035,7 +45035,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Lighthouse.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VILLA</Type>
+			<Type>ART_DEF_BUILDING_GRAND_VILLA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1</fScale>

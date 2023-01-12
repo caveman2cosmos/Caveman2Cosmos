@@ -516,7 +516,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_AQUARIUS</Type>
+			<Type>BUILDING_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
@@ -565,7 +565,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_AQUARIUS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_ARIES</Type>
+			<Type>BUILDING_ASTROLOGICAL_INFLUENCE_OF_ARIES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
@@ -614,7 +614,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_ARIES</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_CANCER</Type>
+			<Type>BUILDING_ASTROLOGICAL_INFLUENCE_OF_CANCER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
@@ -667,7 +667,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_CANCER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_CAPRICORN</Type>
+			<Type>BUILDING_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
@@ -719,7 +719,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_CAPRICORN</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_GEMINI</Type>
+			<Type>BUILDING_ASTROLOGICAL_INFLUENCE_OF_GEMINI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
@@ -771,7 +771,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_GEMINI</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_LEO</Type>
+			<Type>BUILDING_ASTROLOGICAL_INFLUENCE_OF_LEO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
@@ -820,7 +820,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_LEO</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_LIBRA</Type>
+			<Type>BUILDING_ASTROLOGICAL_INFLUENCE_OF_LIBRA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
@@ -873,7 +873,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_LIBRA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_PISCES</Type>
+			<Type>BUILDING_ASTROLOGICAL_INFLUENCE_OF_PISCES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
@@ -926,7 +926,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_PISCES</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_SAGITTARIUS</Type>
+			<Type>BUILDING_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
@@ -977,7 +977,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_SAGITTARIUS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_SCORPIO</Type>
+			<Type>BUILDING_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
@@ -1031,7 +1031,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_SCORPIO</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_TAURUS</Type>
+			<Type>BUILDING_ASTROLOGICAL_INFLUENCE_OF_TAURUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
@@ -1086,7 +1086,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_TAURUS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASROLOGICAL_INFLUENCE_OF_VIRGO</Type>
+			<Type>BUILDING_ASTROLOGICAL_INFLUENCE_OF_VIRGO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>

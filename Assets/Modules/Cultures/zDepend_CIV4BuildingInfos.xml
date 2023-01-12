@@ -48,7 +48,7 @@
 			</PrereqBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SIAM_HO_TRAI</Type>
+			<Type>BUILDING_HO_TRAI_LIBRARY</Type>
 			<Bonus>BONUS_SIAMESE</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
