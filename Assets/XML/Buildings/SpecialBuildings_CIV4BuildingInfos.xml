@@ -81,12 +81,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_AGRICULTURAL_ACHIEVEMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ALCOCHOL_PROHIBITION</Type>
+			<Type>BUILDING_ALCOHOL_PROHIBITION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ALCOCHOL_PROHIBITION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ALCOCHOL_PROHIBITION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ALCOHOL_PROHIBITION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ALCOHOL_PROHIBITION_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
@@ -94,7 +94,7 @@
 			</CommerceChanges>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_ALCOCHOL_PROHIBITION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ALCOHOL_PROHIBITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANDEAN_SHRINE</Type>
@@ -1440,13 +1440,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_2</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CORPORATION_3_HQ</Type>
+			<Type>BUILDING_STANDARD_ETHANOL_HQ</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CORPORATION_3_HQ</Description>
+			<Description>TXT_KEY_BUILDING_STANDARD_ETHANOL_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_3_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -10854,12 +10854,12 @@
 		</BuildingInfo>
 		-->
 		<BuildingInfo>
-			<Type>BUILDING_LASCAUX_EFFECT</Type>
+			<Type>BUILDING_LASCAUX_PAINTS_EFFECT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_LASCAUX_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LASCAUX_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LASCAUX_PAINTS_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LASCAUX_PAINTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PETROGLYPHS</PrereqTech>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<CommerceChanges>
@@ -10897,7 +10897,7 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_LASCAUX</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LASCAUX_PAINTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LAUNCH_SITE_EFFECT</Type>
@@ -11029,12 +11029,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ACHIEVEMENT_MEDICAL_EFFECT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MEDICAL_DATABASE_GOOD</Type>
+			<Type>BUILDING_NATIONAL_MEDICAL_DATABASE_GOOD</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MEDICAL_DATABASE_GOOD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MEDICAL_DATABASE_GOOD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NATIONAL_MEDICAL_DATABASE_GOOD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_MEDICAL_DATABASE_GOOD_PEDIA</Civilopedia>
 			<iHealth>5</iHealth>
 			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
@@ -11048,7 +11048,7 @@
 			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_MEDICAL_DATABASE_GOOD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_MEDICAL_DATABASE_GOOD</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MERCANTILISMGOLD</Type>
@@ -11371,7 +11371,7 @@
 				<BuildingType>BUILDING_SUPREME_COURT</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<FreeBuilding>BUILDING_ALCOCHOL_PROHIBITION</FreeBuilding>
+			<FreeBuilding>BUILDING_ALCOHOL_PROHIBITION</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_ALCOHOL_PROHIBITION</ArtDefineTag>
@@ -14112,7 +14112,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_MILITARY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SLAVE_COMPOUND_PRODUCTION</Type>
+			<Type>BUILDING_SLAVE_COMPOUND_INDUSTRY</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -14121,7 +14121,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_PRODUCTION</Description>
+			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_INDUSTRY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -14145,7 +14145,7 @@
 			</SpecialistCounts>
 			<iAsset>2</iAsset>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_PRODUCTION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_INDUSTRY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND_SANITATION</Type>

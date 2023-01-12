@@ -1065,12 +1065,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_APPIAN_WAY</Type>
+			<Type>BUILDING_VIA_APPIA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_APPIAN_WAY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_APPIAN_WAY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_VIA_APPIA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VIA_APPIA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_APPIAN_WAY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VIA_APPIA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_APPIAN_WAY</MovieDefineTag>
 			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
 			<PrereqTech>TECH_PAVED_ROADS</PrereqTech>
@@ -1104,7 +1104,7 @@
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<Help>TXT_KEY_BUILDING_APPIAN_WAY_HELP</Help>
+			<Help>TXT_KEY_BUILDING_VIA_APPIA_HELP</Help>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ARC</Type>
@@ -4850,15 +4850,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRUSADE</Type>
+			<Type>BUILDING_KINGS_CRUSADE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRUSADE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRUSADE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_KINGS_CRUSADE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KINGS_CRUSADE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<Help>TXT_KEY_BUILDING_CRUSADE_HELP</Help>
+			<Help>TXT_KEY_BUILDING_KINGS_CRUSADE_HELP</Help>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
@@ -4911,7 +4911,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 			<iConquestProb>100</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_CRUSADE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_KINGS_CRUSADE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CRUSADE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -5058,13 +5058,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CYRUS_TOMB</Type>
+			<Type>BUILDING_TOMB_OF_CYRUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_CYRUS_TOMB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CYRUS_TOMB_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_CYRUS_TOMB_HELP</Help>
+			<Description>TXT_KEY_BUILDING_TOMB_OF_CYRUS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TOMB_OF_CYRUS_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_TOMB_OF_CYRUS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CYRUS_TOMB</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TOMB_OF_CYRUS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CYRUS_TOMB</MovieDefineTag>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<MapCategoryTypes>
@@ -7199,13 +7199,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FA_MEN_SI</Type>
+			<Type>BUILDING_FAMEN_TEMPLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_FA_MEN_SI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FA_MEN_SI_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_FA_MEN_SI_HELP</Help>
+			<Description>TXT_KEY_BUILDING_FAMEN_TEMPLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FAMEN_TEMPLE_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_FAMEN_TEMPLE_HELP</Help>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FA_MEN_SI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FAMEN_TEMPLE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FA_MEN_SI</MovieDefineTag>
 			<PrereqTech>TECH_MEDITATION</PrereqTech>
 			<MapCategoryTypes>
@@ -7367,12 +7367,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FIELD_GOLD</Type>
+			<Type>BUILDING_FIELD_CLOTH_OF_GOLD</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_FIELD_GOLD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FIELD_GOLD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FIELD_CLOTH_OF_GOLD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FIELD_CLOTH_OF_GOLD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FIELD_GOLD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FIELD_CLOTH_OF_GOLD</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FIELD_GOLD</MovieDefineTag>
 			<PrereqTech>TECH_TOURNAMENTS</PrereqTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
@@ -7403,7 +7403,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<Help>TXT_KEY_BUILDING_FIELD_GOLD_HELP</Help>
+			<Help>TXT_KEY_BUILDING_FIELD_CLOTH_OF_GOLD_HELP</Help>
 			<PrereqOrCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_VASSAL_LEVIES</CivicOption>
@@ -8746,16 +8746,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GREAT_BATH</Type>
+			<Type>BUILDING_GREAT_BATH_OF_MOHENJO_DARO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GREAT_BATH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GREAT_BATH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GREAT_BATH_OF_MOHENJO_DARO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GREAT_BATH_OF_MOHENJO_DARO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<Help>TXT_KEY_BUILDING_GREAT_BATH_HELP</Help>
-			<ArtDefineTag>ART_DEF_BUILDING_GREAT_BATH</ArtDefineTag>
+			<Help>TXT_KEY_BUILDING_GREAT_BATH_OF_MOHENJO_DARO_HELP</Help>
+			<ArtDefineTag>ART_DEF_BUILDING_GREAT_BATH_OF_MOHENJO_DARO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GREAT_BATH</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
@@ -8799,15 +8799,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GREAT_DAM</Type>
+			<Type>BUILDING_THREE_GORGES_DAM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GREAT_DAM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GREAT_DAM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THREE_GORGES_DAM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THREE_GORGES_DAM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GREAT_DAM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THREE_GORGES_DAM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_THREE_GORGES_DAM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
@@ -8909,16 +8909,16 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GREAT_JAGUAR_TEMPLE</Type>
+			<Type>BUILDING_TEMPLE_OF_AH_CACAO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GREAT_JAGUAR_TEMPLE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GREAT_JAGUAR_TEMPLE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TEMPLE_OF_AH_CACAO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_AH_CACAO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<Help>TXT_KEY_BUILDING_GREAT_JAGUAR_TEMPLE_HELP</Help>
-			<ArtDefineTag>ART_DEF_BUILDING_GREAT_JAGUAR_TEMPLE</ArtDefineTag>
+			<Help>TXT_KEY_BUILDING_TEMPLE_OF_AH_CACAO_HELP</Help>
+			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_AH_CACAO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GREAT_JAGUAR_TEMPLE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
@@ -9371,15 +9371,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GREAT_WALL</Type>
+			<Type>BUILDING_GREAT_WALL_OF_CHINA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GREAT_WALL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GREAT_WALL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GREAT_WALL_OF_CHINA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GREAT_WALL_OF_CHINA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GREAT_WALL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GREAT_WALL_OF_CHINA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GREAT_WALL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MATHEMATICS</PrereqTech>
@@ -9964,13 +9964,13 @@
 			</PrereqOrTerrain>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HELSINKI</Type>
+			<Type>BUILDING_HELSINKI_CATHEDRAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_HELSINKI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HELSINKI_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_HELSINKI_HELP</Help>
+			<Description>TXT_KEY_BUILDING_HELSINKI_CATHEDRAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HELSINKI_CATHEDRAL_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_HELSINKI_CATHEDRAL_HELP</Help>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HELSINKI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HELSINKI_CATHEDRAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HELSINKI</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -10165,16 +10165,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HIMEJI_CASTLE</Type>
+			<Type>BUILDING_HIMEJI_SAMURAI_CASTLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HIMEJI_CASTLE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HIMEJI_CASTLE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HIMEJI_SAMURAI_CASTLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HIMEJI_SAMURAI_CASTLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<Help>TXT_KEY_BUILDING_HIMEJI_CASTLE_HELP</Help>
-			<ArtDefineTag>ART_DEF_BUILDING_HIMEJI_CASTLE</ArtDefineTag>
+			<Help>TXT_KEY_BUILDING_HIMEJI_SAMURAI_CASTLE_HELP</Help>
+			<ArtDefineTag>ART_DEF_BUILDING_HIMEJI_SAMURAI_CASTLE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HIMEJI_CASTLE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_VASSALAGE</PrereqTech>
@@ -10938,16 +10938,16 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ISHTAR</Type>
+			<Type>BUILDING_ISHTAR_GATE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ISHTAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ISHTAR_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ISHTAR_GATE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ISHTAR_GATE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<Help>TXT_KEY_BUILDING_ISHTAR_HELP</Help>
-			<ArtDefineTag>ART_DEF_BUILDING_ISHTAR</ArtDefineTag>
+			<Help>TXT_KEY_BUILDING_ISHTAR_GATE_HELP</Help>
+			<ArtDefineTag>ART_DEF_BUILDING_ISHTAR_GATE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ISHTAR</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
@@ -11862,13 +11862,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LASCAUX</Type>
+			<Type>BUILDING_LASCAUX_PAINTS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_LASCAUX</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LASCAUX_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LASCAUX_PAINTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LASCAUX_PAINTS_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_LASCAUX_CAVES_HELP</Help>
 			<PrereqTech>TECH_PETROGLYPHS</PrereqTech>
 			<PrereqOrFeature>
@@ -11904,7 +11904,7 @@
 			</CommerceChangeDoubleTimes>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<FreeBuilding>BUILDING_LASCAUX_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_LASCAUX_PAINTS_EFFECT</FreeBuilding>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -11923,7 +11923,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_LASCAUX</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LASCAUX_PAINTS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LASCAUX</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -12880,12 +12880,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MAGINOTLINE</Type>
+			<Type>BUILDING_MAGINOT_LINE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_MAGINOTLINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MAGINOTLINE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MAGINOT_LINE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MAGINOT_LINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MAGINOTLINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MAGINOT_LINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MAGINOTLINE</MovieDefineTag>
 			<ObsoleteTech>TECH_METAMATERIALS</ObsoleteTech>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
@@ -12900,20 +12900,20 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Help>TXT_KEY_BUILDING_MAGINOTLINE_HELP</Help>
+			<Help>TXT_KEY_BUILDING_MAGINOT_LINE_HELP</Help>
 			<FreeAreaBuilding>BUILDING_BARRICADES</FreeAreaBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARCO_POLO</Type>
+			<Type>BUILDING_MARCO_POLOS_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MARCO_POLO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MARCO_POLO_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MARCO_POLOS_EMBASSY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MARCO_POLOS_EMBASSY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<Help>TXT_KEY_BUILDING_MARCO_POLO_HELP</Help>
-			<ArtDefineTag>ART_DEF_BUILDING_MARCO_POLO</ArtDefineTag>
+			<Help>TXT_KEY_BUILDING_MARCO_POLOS_EMBASSY_HELP</Help>
+			<ArtDefineTag>ART_DEF_BUILDING_MARCO_POLOS_EMBASSY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MARCO_POLO</MovieDefineTag>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_COMPASS</PrereqTech>
@@ -15946,13 +15946,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PERGAMON</Type>
+			<Type>BUILDING_PERGAMON_ALTAR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_PERGAMON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PERGAMON_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_PERGAMON_HELP</Help>
+			<Description>TXT_KEY_BUILDING_PERGAMON_ALTAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PERGAMON_ALTAR_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_PERGAMON_ALTAR_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PERGAMON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PERGAMON_ALTAR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PERGAMON</MovieDefineTag>
 			<PrereqTech>TECH_MONOTHEISM</PrereqTech>
 			<MapCategoryTypes>
@@ -20798,13 +20798,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TSUKIJI</Type>
+			<Type>BUILDING_TSUKIJI_FISH_MARKET</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_TSUKIJI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TSUKIJI_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_TSUKIJI_HELP</Help>
+			<Description>TXT_KEY_BUILDING_TSUKIJI_FISH_MARKET</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TSUKIJI_FISH_MARKET_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_TSUKIJI_FISH_MARKET_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TSUKIJI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TSUKIJI_FISH_MARKET</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TSUKIJI</MovieDefineTag>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<MapCategoryTypes>
@@ -22205,13 +22205,13 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZIZKOV</Type>
+			<Type>BUILDING_ZIZKOV_TELEVISION_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_ZIZKOV</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZIZKOV_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_ZIZKOV_HELP</Help>
+			<Description>TXT_KEY_BUILDING_ZIZKOV_TELEVISION_TOWER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ZIZKOV_TELEVISION_TOWER_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_ZIZKOV_TELEVISION_TOWER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZIZKOV</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ZIZKOV_TELEVISION_TOWER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ZIZKOV</MovieDefineTag>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<MapCategoryTypes>

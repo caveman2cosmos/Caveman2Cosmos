@@ -343,14 +343,14 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BFM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BIODOME</Type>
+			<Type>BUILDING_MONTREAL_BIODOME</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_BIODOME</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BIODOME_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_BIODOME_HELP</Help>
+			<Description>TXT_KEY_BUILDING_MONTREAL_BIODOME</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MONTREAL_BIODOME_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_MONTREAL_BIODOME_HELP</Help>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BIODOME</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MONTREAL_BIODOME</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BIODOME</MovieDefineTag>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<MapCategoryTypes>
@@ -3344,7 +3344,7 @@
 				<BuildingType>BUILDING_GALACTIC_CANTINA</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
+				<BuildingType>BUILDING_ALCOHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
@@ -4129,13 +4129,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_LOGROLLERS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MANHATTAN</Type>
+			<Type>BUILDING_MANHATTAN_PROJECT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MANHATTAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MANHATTAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MANHATTAN_PROJECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MANHATTAN_PROJECT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_FISSION</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqBonuses>
@@ -4176,7 +4176,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_MANHATTAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MANHATTAN_PROJECT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MANHATTAN_PROJECT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4207,13 +4207,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MEDICAL_DATABASE</Type>
+			<Type>BUILDING_NATIONAL_MEDICAL_DATABASE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MEDICAL_DATABASE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MEDICAL_DATABASE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NATIONAL_MEDICAL_DATABASE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_MEDICAL_DATABASE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -4240,9 +4240,9 @@
 			</PropertyManipulators>
 			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<FreeBuilding>BUILDING_MEDICAL_DATABASE_GOOD</FreeBuilding>
+			<FreeBuilding>BUILDING_NATIONAL_MEDICAL_DATABASE_GOOD</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_MEDICAL_DATABASE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_MEDICAL_DATABASE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MEDICAL_DATABASE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7709,14 +7709,14 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WEMBLEY</Type>
+			<Type>BUILDING_WEMBLEY_STADIUM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_WEMBLEY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WEMBLEY_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_WEMBLEY_HELP</Help>
+			<Description>TXT_KEY_BUILDING_WEMBLEY_STADIUM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WEMBLEY_STADIUM_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_WEMBLEY_STADIUM_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WEMBLEY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WEMBLEY_STADIUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WEMBLEY</MovieDefineTag>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
 			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>

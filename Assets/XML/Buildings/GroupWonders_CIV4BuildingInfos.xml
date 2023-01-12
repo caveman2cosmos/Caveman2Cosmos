@@ -1310,7 +1310,7 @@
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
+				<BuildingType>BUILDING_ALCOHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
 			<ExtraFreeBonuses>
@@ -3343,7 +3343,7 @@
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
+				<BuildingType>BUILDING_ALCOHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
 			<ExtraFreeBonuses>
@@ -3385,7 +3385,7 @@
 				<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
+				<BuildingType>BUILDING_ALCOHOL_PROHIBITION</BuildingType>
 			</ReplacementBuildings>
 			<iCost>1280</iCost>
 			<ExtraFreeBonuses>

@@ -2144,7 +2144,7 @@ def applyBestDefenseDone2(argsList):
 
 
 def canApplyBestDefenseDone3(argsList):
-	iGreatWall = GC.getInfoTypeForString("BUILDING_GREAT_WALL")
+	iGreatWall = GC.getInfoTypeForString("BUILDING_GREAT_WALL_OF_CHINA")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
 		if city.getNumRealBuilding(iGreatWall):
@@ -2723,7 +2723,7 @@ def getHelpOverwhelm1(argsList):
   iNumCarriers = 3
   iFighter = GC.getInfoTypeForString("SPECIALUNIT_FIGHTER")
   iNumFighters = 9
-  iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN")
+  iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN_PROJECT")
 
 # szHelp = TRNSLTR.getText("TXT_KEY_EVENT_OVERWHELM_HELP_1", (iNumDestroyers, GC.getUnitInfo(iDestroyer).getTextKey(), iNumBattleships, GC.getUnitInfo(iBattleship).getTextKey(), iNumCarriers, GC.getUnitInfo(iCarrier).getTextKey(), iNumFighters, GC.getSpecialUnitInfo(iFighter).getTextKey(), GC.getProjectInfo(iProject).getTextKey()))
   szHelp = TRNSLTR.getText("TXT_KEY_EVENT_OVERWHELM_HELP_1", (iNumDestroyers, GC.getUnitInfo(iDestroyer).getTextKey(), iNumBattleships, GC.getUnitInfo(iBattleship).getTextKey(), iNumCarriers, GC.getUnitInfo(iCarrier).getTextKey(), iNumFighters, GC.getSpecialUnitInfo(iFighter).getTextKey(), GC.getBuildingInfo(iBuilding).getTextKey()))
@@ -2764,7 +2764,7 @@ def getHelpOverwhelmDone3(argsList):
 def canApplyOverwhelmDone3(argsList):
   data = argsList[1]
   player = GC.getPlayer(data.ePlayer)
-  iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN")
+  iBuilding = GC.getInfoTypeForString("BUILDING_MANHATTAN_PROJECT")
 
 # if GC.getTeam(player.getTeam()).getProjectCount(iProject) == 0:
   if player.getBuildingCountWithUpgrades(iBuilding) == 0:
@@ -3303,7 +3303,7 @@ def canTriggerCureforCancer(argsList):
 
 	if pPlayer.isCivic(GC.getInfoTypeForString("CIVIC_DIVINE_CULT")):
 		return False
-	if pPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_MEDICAL_DATABASE")) == 0:
+	if pPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_NATIONAL_MEDICAL_DATABASE")) == 0:
 		return False
 
 	return True
@@ -3435,7 +3435,7 @@ def canTriggerSyntheticFuels(argsList):
 
 	if (
 		not pPlayer.hasBonus(GC.getInfoTypeForString("BONUS_COAL"))
-	or pPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_CORPORATION_3_HQ")) > 0
+	or pPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_STANDARD_ETHANOL_HQ")) > 0
 	):
 		return False
 
@@ -3481,7 +3481,7 @@ def doSyntheticFuels4(argsList):
 
 def canTriggerAlternativeEnergy(argsList):
 	CyPlayer = GC.getPlayer(argsList[0].ePlayer)
-	if CyPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_GREAT_DAM")):
+	if CyPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_THREE_GORGES_DAM")):
 		return False
 	if not CyPlayer.getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_COAL_PLANT")):
 		return False
@@ -3492,14 +3492,14 @@ def getHelpAlternativeEnergy1(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_ALTERNATIVE_ENERGY_HELP_1", (GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers(), ))
 
 def expireAlternativeEnergy1(argsList):
-	return GC.getPlayer(argsList[1].ePlayer).getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_GREAT_DAM"))
+	return GC.getPlayer(argsList[1].ePlayer).getBuildingCountWithUpgrades(GC.getInfoTypeForString("BUILDING_THREE_GORGES_DAM"))
 
 
 def canTriggerAlternativeEnergyDone(argsList):
 	data = argsList[0]
 	trigger = GC.getEventTriggerInfo(data.eTrigger)
 	pPlayer = GC.getPlayer(data.ePlayer)
-	i3Gorges = GC.getInfoTypeForString("BUILDING_GREAT_DAM")
+	i3Gorges = GC.getInfoTypeForString("BUILDING_THREE_GORGES_DAM")
 
 	iNuke = GC.getInfoTypeForString("BUILDING_NUCLEAR_PLANT")
 	iHydro = GC.getInfoTypeForString("BUILDING_HYDRO_PLANT")

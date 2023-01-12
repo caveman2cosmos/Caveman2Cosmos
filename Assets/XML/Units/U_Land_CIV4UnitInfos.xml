@@ -2423,7 +2423,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_3</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_3_HQ</BuildingType>
+				<BuildingType>BUILDING_STANDARD_ETHANOL_HQ</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -33771,7 +33771,7 @@
 				<BuildingType>BUILDING_SHUTTLE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
 				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
-				<BuildingType>BUILDING_ALCOCHOL_PROHIBITION</BuildingType>
+				<BuildingType>BUILDING_ALCOHOL_PROHIBITION</BuildingType>
 				<BuildingType>BUILDING_DRUG_PROHIBITION</BuildingType>
 				<BuildingType>BUILDING_SMOKING_PROHIBITION</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_ALCOHOL_PROHIBITION</BuildingType>
@@ -36897,7 +36897,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<Buildings>
-				<BuildingType>BUILDING_CORPORATION_3_HQ</BuildingType>
+				<BuildingType>BUILDING_STANDARD_ETHANOL_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_6_HQ</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</BuildingType>
 				<BuildingType>BUILDING_ACADEMY</BuildingType>
@@ -45466,7 +45466,7 @@
 				<BuildingType>BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_FOOD</BuildingType>
-				<BuildingType>BUILDING_SLAVE_COMPOUND_PRODUCTION</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_INDUSTRY</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_COMMERCE</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>

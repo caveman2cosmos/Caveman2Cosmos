@@ -1493,7 +1493,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ISHTAR</BuildingType>
+					<BuildingType>BUILDING_ISHTAR_GATE</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -3255,7 +3255,7 @@
 			</ExtraFreeBonuses>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_GREAT_WALL</BuildingType>
+					<BuildingType>BUILDING_GREAT_WALL_OF_CHINA</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -3263,7 +3263,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_GREAT_DAM</BuildingType>
+					<BuildingType>BUILDING_THREE_GORGES_DAM</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -3299,7 +3299,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_FA_MEN_SI</BuildingType>
+					<BuildingType>BUILDING_FAMEN_TEMPLE</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -3307,7 +3307,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MARCO_POLO</BuildingType>
+					<BuildingType>BUILDING_MARCO_POLOS_EMBASSY</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -4236,7 +4236,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CRUSADE</BuildingType>
+					<BuildingType>BUILDING_KINGS_CRUSADE</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -4244,7 +4244,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_FIELD_GOLD</BuildingType>
+					<BuildingType>BUILDING_FIELD_CLOTH_OF_GOLD</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -4665,15 +4665,15 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_LASCAUX</BuildingType>
+					<BuildingType>BUILDING_LASCAUX_PAINTS</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MAGINOTLINE</BuildingType>
+					<BuildingType>BUILDING_MAGINOT_LINE</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_FIELD_GOLD</BuildingType>
+					<BuildingType>BUILDING_FIELD_CLOTH_OF_GOLD</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -5255,7 +5255,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_PERGAMON</BuildingType>
+					<BuildingType>BUILDING_PERGAMON_ALTAR</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -6419,7 +6419,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_GREAT_BATH</BuildingType>
+					<BuildingType>BUILDING_GREAT_BATH_OF_MOHENJO_DARO</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -6889,7 +6889,7 @@
 			</ExtraFreeBonuses>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HIMEJI_CASTLE</BuildingType>
+					<BuildingType>BUILDING_HIMEJI_SAMURAI_CASTLE</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -6901,7 +6901,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_TSUKIJI</BuildingType>
+					<BuildingType>BUILDING_TSUKIJI_FISH_MARKET</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -8677,7 +8677,7 @@
 			</ExtraFreeBonuses>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_GREAT_JAGUAR_TEMPLE</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_AH_CACAO</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -10552,7 +10552,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CYRUS_TOMB</BuildingType>
+					<BuildingType>BUILDING_TOMB_OF_CYRUS</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -11517,7 +11517,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MARCO_POLO</BuildingType>
+					<BuildingType>BUILDING_MARCO_POLOS_EMBASSY</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -11533,7 +11533,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_APPIAN_WAY</BuildingType>
+					<BuildingType>BUILDING_VIA_APPIA</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -11655,7 +11655,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HELSINKI</BuildingType>
+					<BuildingType>BUILDING_HELSINKI_CATHEDRAL</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>

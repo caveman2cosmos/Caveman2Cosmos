@@ -892,7 +892,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/alcatraz.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ALCOCHOL_PROHIBITION</Type>
+			<Type>ART_DEF_BUILDING_ALCOHOL_PROHIBITION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1982,7 +1982,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Apothecary_Shop_Button.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_APPIAN_WAY</Type>
+			<Type>ART_DEF_BUILDING_VIA_APPIA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -4413,7 +4413,7 @@
 			<Button>Art/Interface/Buttons/Buildings/binaryconsciousnessalgorithms.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BIODOME</Type>
+			<Type>ART_DEF_BUILDING_MONTREAL_BIODOME</Type>
 			<LSystem>LSYSTEM_4x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>12</fScale>
@@ -10903,7 +10903,7 @@
 			<Button>art/Vacation/Art/cruiseshipport.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CRUSADE</Type>
+			<Type>ART_DEF_BUILDING_KINGS_CRUSADE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11323,7 +11323,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/cyrus_cylinder.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CYRUS_TOMB</Type>
+			<Type>ART_DEF_BUILDING_TOMB_OF_CYRUS</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>5.0</fScale>
@@ -15204,7 +15204,7 @@
 			<Button>Art/Interface/Buttons/Buildings/fattyacidfactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FA_MEN_SI</Type>
+			<Type>ART_DEF_BUILDING_FAMEN_TEMPLE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>2</fScale>
@@ -15394,7 +15394,7 @@
 			<Button>Art/interface/buttons/buildings/field_generator.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FIELD_GOLD</Type>
+			<Type>ART_DEF_BUILDING_FIELD_CLOTH_OF_GOLD</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18274,7 +18274,7 @@
 			<Button>Art/interface/buttons/buildings/grazer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GREAT_BATH</Type>
+			<Type>ART_DEF_BUILDING_GREAT_BATH_OF_MOHENJO_DARO</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1</fScale>
@@ -18304,7 +18304,7 @@
 			<Button>art/Crops/art/greatchinampa.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GREAT_DAM</Type>
+			<Type>ART_DEF_BUILDING_THREE_GORGES_DAM</Type>
 			<LSystem>LSYSTEM_4x4</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>0.98</fScale>
@@ -18334,7 +18334,7 @@
 			<Button>Art/Interface/Buttons/Buildings/safety.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GREAT_JAGUAR_TEMPLE</Type>
+			<Type>ART_DEF_BUILDING_TEMPLE_OF_AH_CACAO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18414,7 +18414,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/sphinx.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GREAT_WALL</Type>
+			<Type>ART_DEF_BUILDING_GREAT_WALL_OF_CHINA</Type>
 			<LSystem>LSYSTEM_GREAT_WALL</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>1</fScale>
@@ -19354,7 +19354,7 @@
 			<Button>Art/Interface/Buttons/buildings/religions/voodoo/hellsmouth_sanctuary.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HELSINKI</Type>
+			<Type>ART_DEF_BUILDING_HELSINKI_CATHEDRAL</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.06</fScale>
@@ -19694,7 +19694,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/hilltara.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HIMEJI_CASTLE</Type>
+			<Type>ART_DEF_BUILDING_HIMEJI_SAMURAI_CASTLE</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.8</fScale>
@@ -22514,7 +22514,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Irrigation.dds,Art/Interface/Buttons/RoM_Building_Atlas.dds,3,9</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ISHTAR</Type>
+			<Type>ART_DEF_BUILDING_ISHTAR_GATE</Type>
 			<LSystem>LSYSTEM_2x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.66</fScale>
@@ -23894,7 +23894,7 @@
 			<Button>art/Transportation/Art/largesuspensionbridge.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LASCAUX</Type>
+			<Type>ART_DEF_BUILDING_LASCAUX_PAINTS</Type>
 			<LSystem>LSYSTEM_4x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>60.0</fScale>
@@ -25444,7 +25444,7 @@
 			<Button>Art/interface/buttons/buildings/magic_world.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MAGINOTLINE</Type>
+			<Type>ART_DEF_BUILDING_MAGINOT_LINE</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.4</fScale>
@@ -25654,7 +25654,7 @@
 			<Button>art/Crops/art/mangoorchard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MANHATTAN</Type>
+			<Type>ART_DEF_BUILDING_MANHATTAN_PROJECT</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.2</fScale>
@@ -25774,7 +25774,7 @@
 			<Button>Art/Interface/Buttons/buildings/religions/Christian/saint_marks_basillica.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MARCO_POLO</Type>
+			<Type>ART_DEF_BUILDING_MARCO_POLOS_EMBASSY</Type>
 			<LSystem>LSYSTEM_4x4</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.05</fScale>
@@ -26954,7 +26954,7 @@
 			<Button>art/Health/Art/medical_clinic.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MEDICAL_DATABASE</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_MEDICAL_DATABASE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -26964,7 +26964,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/national_medical_database.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MEDICAL_DATABASE_GOOD</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_MEDICAL_DATABASE_GOOD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32524,7 +32524,7 @@
 			<Button>art/Craft/Art/perfumemaker.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PERGAMON</Type>
+			<Type>ART_DEF_BUILDING_PERGAMON_ALTAR</Type>
 			<LSystem>LSYSTEM_4x4</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.5</fScale>
@@ -38645,7 +38645,7 @@
 			<Button>Art/Interface/Buttons/Buildings/SlaveMilitary.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_PRODUCTION</Type>
+			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_INDUSTRY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43675,7 +43675,7 @@
 			<Button>art/Transportation/Art/trussbridge.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TSUKIJI</Type>
+			<Type>ART_DEF_BUILDING_TSUKIJI_FISH_MARKET</Type>
 			<LSystem>LSYSTEM_3x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.0</fScale>
@@ -45795,7 +45795,7 @@
 			<Button>art/Embassy/art/welshembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WEMBLEY</Type>
+			<Type>ART_DEF_BUILDING_WEMBLEY_STADIUM</Type>
 			<LSystem>LSYSTEM_4x4</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.8</fScale>
@@ -46735,7 +46735,7 @@
 			<Button>art/Minerals/Art/zincmine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ZIZKOV</Type>
+			<Type>ART_DEF_BUILDING_ZIZKOV_TELEVISION_TOWER</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>1.8</fScale>

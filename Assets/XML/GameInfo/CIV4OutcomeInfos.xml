@@ -832,7 +832,7 @@
 			<Description>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_CAVE</Description>
 			<Message>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_MESSAGE</Message>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_LASCAUX_EFFECT</BuildingType>
+				<BuildingType>BUILDING_LASCAUX_PAINTS_EFFECT</BuildingType>
 			</PrereqBuildings>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
@@ -1042,7 +1042,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_SLAVE_COMPOUND_PRODUCTION</BuildingType>
+				<BuildingType>BUILDING_SLAVE_COMPOUND_INDUSTRY</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>

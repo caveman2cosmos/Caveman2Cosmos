@@ -37,12 +37,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_AMPHIBIAN_POND</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_REQUIRE</Type>
+			<Type>BUILDING_FOLKLORE_REQUIREMENT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REQUIRE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_REQUIREMENT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -662,7 +662,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -717,7 +717,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1143,7 +1143,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1451,7 +1451,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1586,7 +1586,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1970,7 +1970,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2150,7 +2150,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2205,7 +2205,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2260,7 +2260,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2452,7 +2452,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2633,7 +2633,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2865,7 +2865,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3203,7 +3203,7 @@
 			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_CORAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -3243,7 +3243,7 @@
 			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FALL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -3272,7 +3272,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqRawVicinityBonuses>
 				<VicinityBonus>BONUS_COPPER_ORE</VicinityBonus>
@@ -3295,7 +3295,7 @@
 			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OASIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -3315,7 +3315,7 @@
 			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OUTCROP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -3407,7 +3407,7 @@
 			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REEF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -3435,7 +3435,7 @@
 			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_VOLCANO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -3475,7 +3475,7 @@
 			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_SEA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<bWater>1</bWater>
 			<bAutoBuild>1</bAutoBuild>
@@ -3490,7 +3490,7 @@
 			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_EARTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -3514,7 +3514,7 @@
 			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FIRE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_FOLKLORE_REQUIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
 			<ConstructCondition>
 				<Or>

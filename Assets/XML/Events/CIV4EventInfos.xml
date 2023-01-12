@@ -2599,7 +2599,7 @@
 			<bGlobal>1</bGlobal>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_GREAT_WALL</Building>
+					<Building>BUILDING_GREAT_WALL_OF_CHINA</Building>
 					<CommerceType>COMMERCE_ESPIONAGE</CommerceType>
 					<iExtraCommerce>25</iExtraCommerce>
 				</BuildingExtraCommerce>
