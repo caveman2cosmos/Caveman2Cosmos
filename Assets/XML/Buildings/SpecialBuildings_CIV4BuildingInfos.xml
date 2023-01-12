@@ -11015,8 +11015,8 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANCIENT_MEDICINE</PrereqTech>
-			<Description>TXT_KEY_BUILDING_MEDICAL_ACHIEVEMENTCHIEVEMENT_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MEDICAL_ACHIEVEMENTCHIEVEMENT_EFFECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MEDICAL_ACHIEVEMENT_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MEDICAL_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -13235,8 +13235,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SAFETY_ACHIEVEMENTCHIEVEMENT_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SAFETY_ACHIEVEMENTCHIEVEMENT_EFFECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SAFETY_ACHIEVEMENT_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SAFETY_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<Properties>
 				<Property>
@@ -14670,8 +14670,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENTCHIEVEMENT_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENTCHIEVEMENT_EFFECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENT_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENT_EFFECT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
