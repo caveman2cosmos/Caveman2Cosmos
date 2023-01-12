@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_X_ATOMPUNK</Tag>
 		<English>Culture (Atompunk)</English>
 		<Italian>Cultura (Atompunk)</Italian>
 		<Polish>Kultura (Atompunk)</Polish>
 		<Russian>Àòîìïàíê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CULTURE_X_ATOMPUNK_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Atompunk[COLOR_REVERT] is a subgenre of speculative fiction that relates to the 1945-1965 or pre-digital period, including mid-20th century Modernism, the Atomic Age and Space Age. Its aesthetic describes a retro-futuristic vision of the world, with its tendency toward Populuxe and Raygun Gothic, exaggerated concern towards Communism bordering on paranoia, Neo-Soviet styling, underground cinema, Googie architecture, the Sputnik programme, superhero fiction, the rise of the US military/industrial powers and the fall-out of Chernobyl.</English>
 		<Italian>L'[COLOR_BUILDING_TEXT]Atompunk[COLOR_REVERT] è un sottogenere della narrativa fantascientifica che si riferisce al periodo 1945-1965 o pre-digitale, compreso il Modernismo di metà XX secolo, l'Era atomica e l'Era spaziale. La sua estetica descrive una visione retro-futuristica del mondo, con la sua tendenza verso il Populuxe e il Raygun Gothic, la sua esagerata preoccupazione per il comunismo al limite della paranoia, lo stile neo-sovietico, il cinema underground, l'architettura Googie, il programma Sputnik, la narrativa sui supereroi, l'ascesa del complesso militare-industriale USA e l'incidente di Chernobyl.</Italian>
 		<Russian>Àòîìïàíê îòíîñèòñÿ ê äîöèôðîâîìó ïåðèîäó 1945-1965 ãîäîâ, âêëþ÷àåò â ñåáÿ âòîðóþ ïëîëîâèíó ñîâðåìåííîé ýðû, àòîìíóþ è êîñìè÷åñêóþ ýðû, êîììóíèçì è èíòåðåñ ê íåìó ïðåóâåëè÷åíû, ðàâíî êàê è ïàðàíîéÿ â ÑØÀ íàðÿäó ñ íåîñîâåòñêèì ñòèëåì, ïîäïîëüíûé êèíåìàòîãðàô, ãóãè-àðõèòåêòóðà, çàïóñê ñïóòíèêà, ñóïåðãåðîéñêàÿ ôàíòàñòèêà, ðàçâèòèå àìåðèêàíñêîãî âîåííîãî è ïðîìûøëåííîãî ãîñïîäñòâà è êàòàñòðîôà â ×åðíîáûëå. Åãî ýñòåòèêà äâèæåòñÿ ê ïîïóëþêñó è áëàñòåðíîé ãîòèêå, êîòîðûå îòðàæàþò ðåòðî-ôóòóðèñòè÷åñêèé âçãëÿä íà ìèð.</Russian>

@@ -4915,15 +4915,15 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CRUSADE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRYSTALPUNK_EMBASSY</Type>
+			<Type>BUILDING_CULTURE_X_CRYSTALPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_CRYSTAL</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CRYSTALPUNK_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRYSTALPUNK_EMBASSY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_X_CRYSTALPUNK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CRYSTALPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CRYSTALPUNK_EMBASSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_CRYSTALPUNK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CRYSTALPUNK_EMBASSY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -5766,12 +5766,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DOLPHIN_EMBASSY</Type>
+			<Type>BUILDING_CULTURE_X_DOLPHIN</Type>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DOLPHIN_EMBASSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_DOLPHIN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14366,14 +14366,14 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NEANDERTHAL_EMBASSY</Type>
+			<Type>BUILDING_CULTURE_X_NEANDERTHAL</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_CULTURE_X_NEANDERTHAL_HELP</Help>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_NEANDERTHAL</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -18730,15 +18730,15 @@
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SPACEPUNK_EMBASSY</Type>
+			<Type>BUILDING_CULTURE_X_SPACEPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_SPACE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_SPACEPUNK_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SPACEPUNK_EMBASSY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_X_SPACEPUNK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SPACEPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SPACEPUNK_EMBASSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_SPACEPUNK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SPACEPUNK_EMBASSY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -19074,15 +19074,15 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STARPUNK_EMBASSY</Type>
+			<Type>BUILDING_CULTURE_X_STARPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_STAR</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_STARPUNK_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STARPUNK_EMBASSY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_X_STARPUNK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_STARPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STARPUNK_EMBASSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_STARPUNK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_STARPUNK_EMBASSY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>

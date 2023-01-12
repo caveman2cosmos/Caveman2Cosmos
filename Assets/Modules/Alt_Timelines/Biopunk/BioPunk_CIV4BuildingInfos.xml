@@ -45,14 +45,14 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BIOPUNK_EMBASSY</Type>
+			<Type>BUILDING_CULTURE_X_BIOPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_BIO</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_BIOPUNK_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BIOPUNK_EMBASSY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_X_BIOPUNK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BIOPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BIOPUNK_EMBASSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_BIOPUNK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

@@ -58,7 +58,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INDIAN_EMBASSY</Type>
+			<Type>BUILDING_CULTURE_X_INDIAN</Type>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_NEMO_ACADEMY</BuildingType>
@@ -333,14 +333,14 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STEAMPUNK_EMBASSY</Type>
+			<Type>BUILDING_CULTURE_X_STEAMPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STEAMPUNK_EMBASSY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_X_STEAMPUNK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_STEAMPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STEAMPUNK_EMBASSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_STEAMPUNK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

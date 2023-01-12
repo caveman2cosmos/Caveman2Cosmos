@@ -2,14 +2,14 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<Type>BUILDING_ATOMPUNK_EMBASSY</Type>
+			<Type>BUILDING_CULTURE_X_ATOMPUNK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ATOMPUNK_EMBASSY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CULTURE_X_ATOMPUNK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ATOMPUNK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ATOMPUNK_EMBASSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_ATOMPUNK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

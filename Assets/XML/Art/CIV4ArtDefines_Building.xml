@@ -102,7 +102,7 @@
 			<Button>art/Tower/Art/abatis.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ABBASID_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ABBASID</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -112,7 +112,7 @@
 			<Button>Art/Embassy/abbasidembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ABORIGINE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ABORIGINE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -332,7 +332,7 @@
 			<Button>Art/interface/buttons/buildings/adapted_human.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ADENA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ADENA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -562,7 +562,7 @@
 			<Button>Art/interface/buttons/buildings/aestivation_center.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AFGHAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_AFGHAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -632,7 +632,7 @@
 			<Button>art/Farming/Art/agroforest.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AINU_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_AINU</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -802,7 +802,7 @@
 			<Button>Art/Interface/Buttons/Buildings/ai_surveillance.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AKA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_AKA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -812,7 +812,7 @@
 			<Button>art/Embassy/art/akaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AKKAD_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_AKKAD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -832,7 +832,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Hindu/akshardham.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AKSUMITE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_AKSUMITE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -842,7 +842,7 @@
 			<Button>Art/Embassy/aksumiteembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ALACALUFE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ALACALUFE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -872,7 +872,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/alamut.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ALBANIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ALBANIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -942,7 +942,7 @@
 			<Button>Art/interface/buttons/buildings/alderson_disk_teracity.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ALEMANNI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ALEMANNI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -972,7 +972,7 @@
 			<Button>art/Farming/Art/alagefarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ALGIER_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ALGIER</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1172,7 +1172,7 @@
 			<Button>Art/Interface/Buttons/Buildings/ambulancedrone.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AMERICAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_AMERICAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1202,7 +1202,7 @@
 			<Button>art/Minerals/Art/amethystmine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AMIS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_AMIS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1282,7 +1282,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/Temple_An.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ANASAZI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ANASAZI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1442,7 +1442,7 @@
 			<Button>Art/Interface/buttons/Group_Wonders/WayOfTheWolfBuilding.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ANDAMANESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ANDAMANESE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1562,7 +1562,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/angkor_wat.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ANGOLAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ANGOLAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1932,7 +1932,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/aon_center.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_APACHE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_APACHE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2093,7 +2093,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Aqueduct.dds,Art/Interface/Buttons/Buildings_Atlas.dds,4,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ARABIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ARABIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2113,7 +2113,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Islam/Madrassa.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ARAGON_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ARAGON</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2123,7 +2123,7 @@
 			<Button>Art/Embassy/aragonembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ARAWAK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ARAWAK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2273,7 +2273,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Arena.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ARGENTINIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ARGENTINIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2303,7 +2303,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Judaism/ArkButton.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ARMENIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ARMENIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2643,7 +2643,7 @@
 			<Button>Art/interface/buttons/buildings/ascension_studio.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ASHANTI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ASHANTI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2693,7 +2693,7 @@
 			<Button>art/Crime/art/assassinsden.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ASSYRIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ASSYRIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2993,7 +2993,7 @@
 			<Button>Art/interface/buttons/buildings/atemporal_beings.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ATHENIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ATHENIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3153,7 +3153,7 @@
 			<Button>art/Hunting/Art/aurochscamp.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AUSTRALIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_AUSTRALIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3163,7 +3163,7 @@
 			<Button>art/Embassy/art/australianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AUSTRIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_AUSTRIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3333,7 +3333,7 @@
 			<Button>art/Transportation/Art/autorepairshop.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AVARS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_AVARS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3343,7 +3343,7 @@
 			<Button>Art/Embassy/avarsembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AVERNI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_AVERNI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3363,7 +3363,7 @@
 			<Button>art/Crops/art/avocadoplantation.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AYMARA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_AYMARA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3383,7 +3383,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/azadi.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AZANDE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_AZANDE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3393,7 +3393,7 @@
 			<Button>Art/Embassy/azandeembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AZTEC_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_AZTEC</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3423,7 +3423,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/Tower_of_Babel.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BABYLONIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BABYLONIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3483,7 +3483,7 @@
 			<Button>Art/Interface/Buttons/Buildings/bacteriumlandfill.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BACTRIC_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BACTRIC</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3543,7 +3543,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Bahai/bahai_temple.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BAHRAIN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BAHRAIN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3673,7 +3673,7 @@
 			<Button>art/Crops/art/bananaplantation.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BANDANESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BANDANESE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3693,7 +3693,7 @@
 			<Button>art/Crime/art/banditshideout.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BANGLADESH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BANGLADESH</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3813,7 +3813,7 @@
 			<Button>Art/Interface/Buttons/Buildings/basejumpingsite.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BASHKIR_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BASHKIR</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3883,7 +3883,7 @@
 			<Button>art/Craft/Art/basketworkshop.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BASQUE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BASQUE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3893,7 +3893,7 @@
 			<Button>art/Embassy/art/basqueembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BATAVI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BATAVI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3903,7 +3903,7 @@
 			<Button>Art/Embassy/bataviembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BATEK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BATEK</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3973,7 +3973,7 @@
 			<Button>art/Minerals/art/bauxitemine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BAVARIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BAVARIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -4103,7 +4103,7 @@
 			<Button>art/Craft/Art/bednbreakfast.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BEDOUIN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BEDOUIN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -4153,7 +4153,7 @@
 			<Button>Art/Interface/Buttons/buildings/Religions/Zoroastrian/behistun_inscription.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BELGIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BELGIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -4193,7 +4193,7 @@
 			<Button>Art\Interface\Buttons\Buildings\beliefresurrection.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BELIZE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BELIZE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -4263,7 +4263,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_beleuga.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BENGALI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BENGALI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -4273,7 +4273,7 @@
 			<Button>art/Embassy/art/bengaliembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BENIN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BENIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -4283,7 +4283,7 @@
 			<Button>art/Embassy/art/beninembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BERBER_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BERBER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -4753,7 +4753,7 @@
 			<Button>art/Crops/art/blackberryfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BLACKFOOT_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BLACKFOOT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5083,7 +5083,7 @@
 			<Button>art/Crops/Art/bolete.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BOLIVIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BOLIVIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5403,7 +5403,7 @@
 			<Button>Art/Buttons/Buildings/BrazenBullBuilding.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BRAZILIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BRAZILIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5753,7 +5753,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederzebra.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BRETON_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BRETON</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5813,7 +5813,7 @@
 			<Button>art/Craft/Art/bridalshop.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BRITON_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BRITON</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5973,7 +5973,7 @@
 			<Button>Art/interface/buttons/buildings/building_membrane.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BULGARIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BULGARIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6043,7 +6043,7 @@
 			<Button>art/Craft/Art/burgerjoint.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BURGUNDI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BURGUNDI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6143,7 +6143,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/burjkhalifa.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BURMESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BURMESE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6243,7 +6243,7 @@
 			<Button>art/Crops/Art/buttonmushroom.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BYZANTINE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_BYZANTINE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6383,7 +6383,7 @@
 			<Button>Art/Interface/Buttons/Buildings/calculatorfactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CALIFORNIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CALIFORNIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6453,7 +6453,7 @@
 			<Button>Art/interface/buttons/buildings/call_center.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CAMBEBA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CAMBEBA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6563,7 +6563,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Canaanism/Temple.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CANADIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CANADIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6573,7 +6573,7 @@
 			<Button>art/Embassy/art/canadianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CANARI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CANARI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6693,7 +6693,7 @@
 			<Button>art/Crops/Art/cantaloupefarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CANTONESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CANTONESE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6743,7 +6743,7 @@
 			<Button>Art/Interface/Buttons/buildings/religions/Caodai/Temple_CaoDai.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CAPAYAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CAPAYAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6853,7 +6853,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/capuchin.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CARAL_SUPE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CARAL_SUPE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6943,7 +6943,7 @@
 			<Button>art/Hunting/Art/cariboucamp.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CARIB_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CARIB</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7043,7 +7043,7 @@
 			<Button>art/Crops/art/carrotfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CARTHAGINIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CARTHAGINIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7153,7 +7153,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Catacombs.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CATALONIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CATALONIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7323,7 +7323,7 @@
 			<Button>Art/Interface/Buttons/Buildings/cellulasecapsulefactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CELTIBERIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CELTIBERIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7333,7 +7333,7 @@
 			<Button>Art/Embassy/celtiberianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CELTIC_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CELTIC</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7543,7 +7543,7 @@
 			<Button>Art/Interface/Buttons/Buildings/centre_for_whale_studies.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CEYLONESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CEYLONESE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7573,7 +7573,7 @@
 			<Button>Art/Interface/Buttons/Buildings/CGIanimationstudio.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CHACHAPOYA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CHACHAPOYA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7623,7 +7623,7 @@
 			<Button>Art/Interface/Buttons/group_wonders/winery_champagne.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CHAM_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CHAM</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7703,7 +7703,7 @@
 			<Button>Art/Interface/Buttons/Group_Wonders/charlie_lake_cave.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CHAVIN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CHAVIN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7713,7 +7713,7 @@
 			<Button>Art/Embassy/chavinembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CHECHENIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CHECHENIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7813,7 +7813,7 @@
 			<Button>art/Crops/Art/cherimoyaorchard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CHEROKEE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CHEROKEE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7843,7 +7843,7 @@
 			<Button>art/Crops/art/chestnutgrove.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CHEYENNE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CHEYENNE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7913,7 +7913,7 @@
 			<Button>Art/Interface/Buttons/Buildings/childcarehut.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CHILEAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CHILEAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7943,7 +7943,7 @@
 			<Button>art/Crops/art/chilifarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CHIMU_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CHIMU</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7973,7 +7973,7 @@
 			<Button>art/Trapping/art/chinchillatraps.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CHINESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CHINESE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7993,7 +7993,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Theatre.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CHIPPEWA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CHIPPEWA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -8023,7 +8023,7 @@
 			<Button>art/Crops/Art/chivesfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CHOLA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CHOLA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -8043,7 +8043,7 @@
 			<Button>art/Crime/art/chopshop.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CHORESM_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CHORESM</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -8133,7 +8133,7 @@
 			<Button>Art/interface/buttons/buildings/chthonian_planet_base.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CHUMASH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CHUMASH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -9363,7 +9363,7 @@
 			<Button>art/Farming/Art/collectivefarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_COLOMBIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_COLOMBIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -9423,7 +9423,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/colossus.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_COMANCHE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_COMANCHE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -9743,7 +9743,7 @@
 			<Button>Art/Interface/Buttons/Buildings/confectionsfactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CONFEDERATE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CONFEDERATE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -10793,7 +10793,7 @@
 			<Button>art/Craft/Art/creditunion.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CREE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CREE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -10853,7 +10853,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/cristo_redentor.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CROATIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CROATIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -10943,7 +10943,7 @@
 			<Button>art/cryptologycenter.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CRYSTALPUNK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CRYSTALPUNK</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -10983,7 +10983,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/crystalpalace.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CUBAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CUBAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11333,7 +11333,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/cyrustomb.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CZECH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_CZECH</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11343,7 +11343,7 @@
 			<Button>Art/Embassy/czechembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DACIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_DACIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11353,7 +11353,7 @@
 			<Button>Art/Embassy/dacianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DAHOMEY_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_DAHOMEY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11423,7 +11423,7 @@
 			<Button>Art/Interface/Buttons/Buildings/dancingbear.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DANISH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_DANISH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11603,7 +11603,7 @@
 			<Button>Art/interface/buttons/buildings/dawn.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DAYAK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_DAYAK</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11973,7 +11973,7 @@
 			<Button>Art/interface/buttons/buildings/demat_gun.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DENE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_DENE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12553,7 +12553,7 @@
 			<Button>Art/interface/buttons/buildings/dolphin_communication_center.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DOLPHIN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_DOLPHIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12694,7 +12694,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_dragon.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRAVIDIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_DRAVIDIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13494,7 +13494,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/dike.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DUTCH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_DUTCH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13594,7 +13594,7 @@
 			<Button>Art/interface/buttons/buildings/dyson_swarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DZUNGAR_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_DZUNGAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13734,7 +13734,7 @@
 			<Button>Art/Interface/Buttons/Buildings/ecstasylab.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ECUADORIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ECUADORIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13834,7 +13834,7 @@
 			<Button>art/Crops/art/eggplantfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EGYPTIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_EGYPTIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -14444,7 +14444,7 @@
 			<Button>art/Science/art/engineeringschool.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ENGLISH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ENGLISH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -14554,7 +14554,7 @@
 			<Button>Art/interface/buttons/buildings/environmental_art_studio.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EPIRUS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_EPIRUS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -14634,7 +14634,7 @@
 			<Button>Art/Interface/Buttons/buildings/religions/Islam/blue_mosque.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ESTONIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ESTONIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -14664,7 +14664,7 @@
 			<Button>art/Transportation/art/ethanolstation.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ETHIOPIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ETHIOPIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -14674,7 +14674,7 @@
 			<Button>,Art/Interface/Buttons/Civilizations/Mali.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,3,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ETRUSCAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ETRUSCAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -15184,7 +15184,7 @@
 			<Button>art/fastbreederreactor.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FATIMID_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_FATIMID</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -15434,7 +15434,7 @@
 			<Button>art/Crops/Art/figplantation.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FIJIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_FIJIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -15454,7 +15454,7 @@
 			<Button>Art/interface/buttons/buildings/financial_risk_monitor.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FINNISH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_FINNISH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -15734,7 +15734,7 @@
 			<Button>art/Crops/art/flaxfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FLEMISH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_FLEMISH</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16254,7 +16254,7 @@
 			<Button>Art/interface/buttons/buildings/fractal_city.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FRANKS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_FRANKS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16304,7 +16304,7 @@
 			<Button>Art/Interface/Buttons/Buildings/free_port.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FRENCH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_FRENCH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16374,7 +16374,7 @@
 			<Button>Art/interface/buttons/buildings/frost_fire_suppression.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FUEGIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_FUEGIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16384,7 +16384,7 @@
 			<Button>Art/Embassy/fuegianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FULANI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_FULANI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16434,7 +16434,7 @@
 			<Button>Art/Interface/Buttons/Buildings/FuneraryServices.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FURAWI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_FURAWI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16734,7 +16734,7 @@
 			<Button>Art/interface/buttons/buildings/galactic_void_colony.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GALATIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GALATIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17254,7 +17254,7 @@
 			<Button>art/Crops/Art/wheatgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GAUCHO_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GAUCHO</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17434,7 +17434,7 @@
 			<Button>art/Science/art/geologylab.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GEORGIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GEORGIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17474,7 +17474,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Factory.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GERMAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GERMAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17534,7 +17534,7 @@
 			<Button>art/Crops/Art/gevuinagrove.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GHANA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GHANA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17564,7 +17564,7 @@
 			<Button>art/Craft/Art/gheemaker.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GHURID_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GHURID</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17824,7 +17824,7 @@
 			<Button>Art/interface/buttons/buildings/godwheel.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOKTURK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GOKTURK</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17844,7 +17844,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/goldengate_bridge.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOLDEN_HORDE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GOLDEN_HORDE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18024,7 +18024,7 @@
 			<Button>art/Pets/Art/goosefarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOTH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GOTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18434,7 +18434,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/great_zimbabwe.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GREEK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GREEK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18534,7 +18534,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Grove.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GUAM_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GUAM</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18544,7 +18544,7 @@
 			<Button>Art/Embassy/guamembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GUANCHES_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GUANCHES</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18554,7 +18554,7 @@
 			<Button>Art/Embassy/guanchesembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GUARANI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GUARANI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18604,7 +18604,7 @@
 			<Button>art/Tower/Art/guardtower.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GUATEMALA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GUATEMALA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18884,7 +18884,7 @@
 			<Button>art/Craft/Art/gunsmith.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GUYANA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GUYANA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18904,7 +18904,7 @@
 			<Button>Art/Interface/Buttons/Buildings/gym.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GYPSY_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_GYPSY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18934,7 +18934,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/hagia_sophia.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HAIDA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HAIDA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18944,7 +18944,7 @@
 			<Button>art/Embassy/art/haidaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HAITIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HAITIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19094,7 +19094,7 @@
 			<Button>Art/interface/buttons/buildings/haumea_colony.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HAUSA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HAUSA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19104,7 +19104,7 @@
 			<Button>art/Embassy/art/hausaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HAWAIIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HAWAIIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19364,7 +19364,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/b_helsinki.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HELVETII_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HELVETII</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19404,7 +19404,7 @@
 			<Button>art/Crops/art/hempplantation.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HEMUDU_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HEMUDU</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19474,7 +19474,7 @@
 			<Button>art/Pets/Art/herdingdogs.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HERERO_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HERERO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19704,7 +19704,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/himejicastle.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HIMYARITE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HIMYARITE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19814,7 +19814,7 @@
 			<Button>Art/interface/buttons/buildings/history_repair.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HITTITE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HITTITE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19984,7 +19984,7 @@
 			<Button>Art/Interface/Buttons/Buildings/HoloFlightSim.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HOLYROMAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HOLYROMAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -20024,7 +20024,7 @@
 			<Button>art/Crops/Art/honeydewfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HONGKONG_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HONGKONG</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -20034,7 +20034,7 @@
 			<Button>Art/Embassy/hongkongembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HOPEWELL_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HOPEWELL</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -20044,7 +20044,7 @@
 			<Button>Art/Embassy/hopewellembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HOPI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HOPI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -20564,7 +20564,7 @@
 			<Button>Art/Interface/Buttons/Buildings/hovercraftfactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HUASTEC_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HUASTEC</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -20634,7 +20634,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/humphrey_metrodome.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HUNGARIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HUNGARIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -20684,7 +20684,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Button_HuntingInstruction.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HUN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HUN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -20694,7 +20694,7 @@
 			<Button>art/Embassy/art/hunembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HURON_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HURON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -20704,7 +20704,7 @@
 			<Button>art/Embassy/art/huronembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HURRIANS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HURRIANS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -20844,7 +20844,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/HydroPlant.dds,Art/Interface/Buttons/Buildings_Atlas.dds,4,10</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HYKSOSI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_HYKSOSI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -21124,7 +21124,7 @@
 			<Button>art/Craft/art/icehouse.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ICELANDIC_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ICELANDIC</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -21184,7 +21184,7 @@
 			<Button>Art/interface/buttons/buildings/ikaros.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ILLYRIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ILLYRIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -21194,7 +21194,7 @@
 			<Button>Art/Embassy/illyrianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ILOCANO_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ILOCANO</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -21264,7 +21264,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/Temple_Inanna.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INCAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_INCAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -21344,7 +21344,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/east_india_company.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INDIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_INDIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -21374,7 +21374,7 @@
 			<Button>art/Crops/Art/indigofarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INDONESIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_INDONESIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -21464,7 +21464,7 @@
 			<Button>Art/interface/buttons/buildings/industrial_thingamajig.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INDUS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_INDUS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22324,7 +22324,7 @@
 			<Button>Art/Interface/Buttons/Buildings/intuitivealgorithms.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INUIT_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_INUIT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22394,7 +22394,7 @@
 			<Button>Art/interface/buttons/buildings/iq_testing_center.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_IRANIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_IRANIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22404,7 +22404,7 @@
 			<Button>Art/Embassy/iranianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_IRAQUI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_IRAQUI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22414,7 +22414,7 @@
 			<Button>Art/Embassy/iraquiembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_IRISH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_IRISH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22484,7 +22484,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/iron_works.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_IROQUOIS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_IROQUOIS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22564,7 +22564,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Islam/Temple_Islamic.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ISRAELI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ISRAELI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22584,7 +22584,7 @@
 			<Button>Art/interface/buttons/buildings/iss_tourism.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ITALIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ITALIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22724,7 +22724,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Jainism/Temple_Jain.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JAMAICAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_JAMAICAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22744,7 +22744,7 @@
 			<Button>Art/interface/buttons/buildings/jameswebb_telescope.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JAPANESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_JAPANESE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22764,7 +22764,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/CoalPlant.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,8,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JAVANESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_JAVANESE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22874,7 +22874,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Judaism/Temple_Jewish.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JIVARO_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_JIVARO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22884,7 +22884,7 @@
 			<Button>art/Embassy/art/jivaroembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JOMON_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_JOMON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22894,7 +22894,7 @@
 			<Button>art/Embassy/art/jomonembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JORDANIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_JORDANIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22904,7 +22904,7 @@
 			<Button>art/Embassy/art/jordanianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JOSEON_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_JOSEON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23074,7 +23074,7 @@
 			<Button>Art/interface/buttons/buildings/jupiter_core.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JUTES_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_JUTES</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23094,7 +23094,7 @@
 			<Button>art/Crops/Art/kalefarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KANEMBORNU_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KANEMBORNU</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23174,7 +23174,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/kderby.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KENYAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KENYAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23244,7 +23244,7 @@
 			<Button>Art/Interface/Buttons/Buildings/kevlarfactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KHAZAK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KHAZAK</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23254,7 +23254,7 @@
 			<Button>Art/Embassy/khazakembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KHAZARS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KHAZARS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23274,7 +23274,7 @@
 			<Button>Art/interface/buttons/buildings/khazar_islands.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KHITAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KHITAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23294,7 +23294,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/baray.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KHMER_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KHMER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23324,7 +23324,7 @@
 			<Button>Art/Interface/Buttons/Group_Wonders/kilgii_gwaay.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KILLKE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KILLKE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23394,7 +23394,7 @@
 			<Button>Art/Interface/buttons/buildings/religions/Tengri/King_Gesar_Song.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KITARA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KITARA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23464,7 +23464,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/temple_of_ki_wheat.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KLAMATH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KLAMATH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23524,7 +23524,7 @@
 			<Button>Art/interface/buttons/buildings/knowledge_navigator.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KOGI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KOGI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23554,7 +23554,7 @@
 			<Button>Art/interface/buttons/buildings/kolmogorov_transporter.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KONGOLESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KONGOLESE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23564,7 +23564,7 @@
 			<Button>art/Embassy/art/kongoleseembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KONJO_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KONJO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23574,7 +23574,7 @@
 			<Button>art/Embassy/art/konjoembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KOREAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KOREAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23694,7 +23694,7 @@
 			<Button>art/Crops/Art/kumquatorchard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KURDISH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KURDISH</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23704,7 +23704,7 @@
 			<Button>Art/Embassy/kurdishembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KUSHAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KUSHAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23714,7 +23714,7 @@
 			<Button>Art/Embassy/kushanembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KUSH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KUSH</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23724,7 +23724,7 @@
 			<Button>Art/Embassy/kushembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KUWAIT_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_KUWAIT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23984,7 +23984,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/lasevegas.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LATVIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_LATVIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -24084,7 +24084,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/la_brea.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LA_PLATA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_LA_PLATA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -24164,7 +24164,7 @@
 			<Button>art/Craft/Art/leatherfactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LEBANON_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_LEBANON</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -24264,7 +24264,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_whale.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LIANGZHU_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_LIANGZHU</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -24304,7 +24304,7 @@
 			<Button>Art/interface/buttons/buildings/library_of_babel.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LIBYAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_LIBYAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -24434,7 +24434,7 @@
 			<Button>art/Minerals/Art/lithiummine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LITHUANIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_LITHUANIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -24624,7 +24624,7 @@
 			<Button>,Art/Structures/Buildings/Unique/Iroquois/Longhouse/Longhouse.dds,Art/Interface/Buttons/RoM_Building_Atlas.dds,7,14</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LONGOBARDI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_LONGOBARDI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -24694,7 +24694,7 @@
 			<Button>Art/Interface/Buttons/Buildings/lsdlab.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LUBA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_LUBA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -24704,7 +24704,7 @@
 			<Button>art/Embassy/art/lubaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LULE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_LULE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25224,7 +25224,7 @@
 			<Button>Art/interface/buttons/buildings/luna_ring_effect.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LUNDA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_LUNDA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25234,7 +25234,7 @@
 			<Button>Art/Embassy/lundaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LUSITANI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_LUSITANI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25284,7 +25284,7 @@
 			<Button>art/Crops/Art/lycheorchard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LYDIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_LYDIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25344,7 +25344,7 @@
 			<Button>Art/Interface/Buttons/Buildings/macaw.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MACEDONIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MACEDONIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25554,7 +25554,7 @@
 			<Button>Art/interface/buttons/buildings/makerspace.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MALAGASY_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MALAGASY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25564,7 +25564,7 @@
 			<Button>Art/Embassy/malagasyembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MALAYSIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MALAYSIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25574,7 +25574,7 @@
 			<Button>art/Embassy/art/malaysianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MALINESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MALINESE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25584,7 +25584,7 @@
 			<Button>,Art/Interface/Buttons/Civilizations/Mali.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,4,6</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MAMELUKS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MAMELUKS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25614,7 +25614,7 @@
 			<Button>art/Hunting/Art/mammothcamp.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MANCHURIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MANCHURIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25624,7 +25624,7 @@
 			<Button>art/Embassy/art/manchurianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MANDAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MANDAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25664,7 +25664,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/manhattan_project.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MANI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MANI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25714,7 +25714,7 @@
 			<Button>Art/Interface/Buttons/Buildings/manufacturing_plant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MAORI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MAORI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25734,7 +25734,7 @@
 			<Button>art/Crops/art/maplegrove.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MAPUCHE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MAPUCHE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -26594,7 +26594,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Judaism/masada.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MASAI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MASAI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -26634,7 +26634,7 @@
 			<Button>art/Craft/Art/maskcarver.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MASSAGETAE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MASSAGETAE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -26794,7 +26794,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/mausoleum_of_maussollos.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MAYAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MAYAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -26924,7 +26924,7 @@
 			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,3,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MEDES_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MEDES</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27284,7 +27284,7 @@
 			<Button>Art/interface/buttons/buildings/megaverse.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MELANESIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MELANESIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27434,7 +27434,7 @@
 			<Button>Art/interface/buttons/buildings/merged_megagalaxy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MERINA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MERINA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27704,7 +27704,7 @@
 			<Button>art/Tweaks/art/admin_metro.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MEXICAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MEXICAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27754,7 +27754,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/microlith_weapons_factory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MICRONESIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MICRONESIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27964,7 +27964,7 @@
 			<Button>Art/interface/buttons/buildings/mind_storage_server.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MING_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MING</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28074,7 +28074,7 @@
 			<Button>art/Trapping/art/minktraps.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MINOAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MINOAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28154,7 +28154,7 @@
 			<Button>Art/interface/buttons/buildings/mission_to_callisto.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MISSISSIPPI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MISSISSIPPI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28184,7 +28184,7 @@
 			<Button>Art/interface/buttons/buildings/mithril_importer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MITTANNI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MITTANNI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28204,7 +28204,7 @@
 			<Button>Art/interface/buttons/buildings/mixed_use_development.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MIXTEC_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MIXTEC</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28264,7 +28264,7 @@
 			<Button>art/Crime/art/mobstorefront.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MOCHE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MOCHE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28274,7 +28274,7 @@
 			<Button>art/Embassy/art/mocheembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MOCOVI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MOCOVI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28374,7 +28374,7 @@
 			<Button>Art/interface/buttons/buildings/modular_construction_firm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MOHAWK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MOHAWK</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28424,7 +28424,7 @@
 			<Button>Art/interface/buttons/buildings/molecular_feed.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MOLLO_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MOLLO</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28444,7 +28444,7 @@
 			<Button>Art/Interface/Buttons/Buildings/money_press.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MONGOLIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MONGOLIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28664,7 +28664,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Mormon/mormon_temple.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MOROCCAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MOROCCAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28824,7 +28824,7 @@
 			<Button>art/Housing/Art/mudhut.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MUGHAL_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MUGHAL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28844,7 +28844,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/muiderslot.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MUISCA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MUISCA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28934,7 +28934,7 @@
 			<Button>art/Seafood/Art/murexdiver.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MURRI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MURRI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -29024,7 +29024,7 @@
 			<Button>Art\Interface\Buttons\Buildings\musselrafts.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MUTAPA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_MUTAPA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -29054,7 +29054,7 @@
 			<Button>art/Spiritual/Art/mystichut.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NABATEANS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NABATEANS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -29064,7 +29064,7 @@
 			<Button>Art/Embassy/nabateansembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NAHUA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NAHUA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -29084,7 +29084,7 @@
 			<Button>Art/Interface/Buttons/Buildings/religions/Ngai/Naiterukob.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NAMA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NAMA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -29874,7 +29874,7 @@
 			<Button>Art/interface/buttons/buildings/nature_goddess.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NAVAJO_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NAVAJO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -29924,7 +29924,7 @@
 			<Button>Art/Interface/Buttons/Buildings/navalyard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NAZCA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NAZCA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -29954,7 +29954,7 @@
 			<Button>art/Embassy/art/neanderthalcaves.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NEANDERTHAL_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NEANDERTHAL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -30034,7 +30034,7 @@
 			<Button>Art/interface/buttons/buildings/neo_pyramid.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NEPAL_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NEPAL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -30284,7 +30284,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/isaac_newton_college.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NEWZEALAND_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NEWZEALAND</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -30394,7 +30394,7 @@
 			<Button>art/Minerals/Art/nickelmine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NIGERIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NIGERIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -30464,7 +30464,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/nok.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NOK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NOK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -30544,7 +30544,7 @@
 			<Button>Art/interface/buttons/buildings/noocracy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NOONGAR_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NOONGAR</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -30554,7 +30554,7 @@
 			<Button>Art/Embassy/noongarembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NOOTKA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NOOTKA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -30584,7 +30584,7 @@
 			<Button>Art/Interface/Buttons/Buildings/noria.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NORMAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NORMAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -30604,7 +30604,7 @@
 			<Button>Art/interface/buttons/buildings/norma_and_outer_arm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NORWEGIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NORWEGIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -30644,7 +30644,7 @@
 			<Button>Art/Interface/Buttons/Buildings/novusrefinery.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NUBIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NUBIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -30694,7 +30694,7 @@
 			<Button>Art/interface/buttons/buildings/nuding_space_arcology.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NUMIDIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_NUMIDIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -30894,7 +30894,7 @@
 			<Button>Art/Interface/Buttons/Buildings/oceanthermalpowerplant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ODAWA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ODAWA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31014,7 +31014,7 @@
 			<Button>art/Craft/art/olivepress.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_OLMEC_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_OLMEC</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31074,7 +31074,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/olympic_games.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_OMAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_OMAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31254,7 +31254,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/OldOpera_Button.dds,Art/Interface/Buttons/RoM_Building_Atlas.dds,4,9</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_OPHIR_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_OPHIR</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31314,7 +31314,7 @@
 			<Button>art/Crops/art/orangeplantation.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ORANG_ASLI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ORANG_ASLI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31664,7 +31664,7 @@
 			<Button>art/Trapping/art/ottercamp.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_OTTOMAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_OTTOMAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31814,7 +31814,7 @@
 			<Button>Art/interface/buttons/buildings/pair_production_plant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PAIUTE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PAIUTE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31824,7 +31824,7 @@
 			<Button>Art/Embassy/paiuteembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PAKISTANI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PAKISTANI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31924,7 +31924,7 @@
 			<Button>Art/interface/buttons/buildings/paleo_park.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PALESTINIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PALESTINIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31964,7 +31964,7 @@
 			<Button>Art/interface/buttons/buildings/palm_islands.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PANAMAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PANAMAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32044,7 +32044,7 @@
 			<Button>Art/Interface/Buttons/Buildings/paperreclamationplant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PAPUAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PAPUAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32084,7 +32084,7 @@
 			<Button>Art/interface/buttons/buildings/paradise_planet.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PARAGUAYAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PARAGUAYAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32204,7 +32204,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/hellenism/parthenon.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PARTHIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PARTHIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32254,7 +32254,7 @@
 			<Button>art/Craft/Art/partsplant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PASHTUN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PASHTUN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32564,7 +32564,7 @@
 			<Button>Art/interface/buttons/buildings/perseus_pisces_supercluster.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PERSIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PERSIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32664,7 +32664,7 @@
 			<Button>Art/interface/buttons/buildings/personal_web_channel.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PERUVIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PERUVIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32974,7 +32974,7 @@
 			<Button>art/Craft/Art/philanthropicorganization.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PHILIPINO_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PHILIPINO</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32984,7 +32984,7 @@
 			<Button>Art/Embassy/philipinoembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PHILISTINE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PHILISTINE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33024,7 +33024,7 @@
 			<Button>Art/interface/buttons/buildings/phobos_industrial_complex.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PHOENICAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PHOENICAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33114,7 +33114,7 @@
 			<Button>Art/interface/buttons/buildings/picotech_complex.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PICTISH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PICTISH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33174,7 +33174,7 @@
 			<Button>Art/Interface/Buttons/Buildings/pigherd.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PILAGA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PILAGA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33194,7 +33194,7 @@
 			<Button>Art/Interface/Buttons/Buildings/pillbug.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PIMA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PIMA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33734,7 +33734,7 @@
 			<Button>art/Law/Art/policeprecinct.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_POLISH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_POLISH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33794,7 +33794,7 @@
 			<Button>art/Sports/Buttons/polofield.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_POLYNESIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_POLYNESIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33935,7 +33935,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/feitoria.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PORTUGUESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PORTUGUESE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -34025,7 +34025,7 @@
 			<Button>Art/Interface/Buttons/Buildings/herd_poultry.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_POVERTY_POINT_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_POVERTY_POINT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -34055,7 +34055,7 @@
 			<Button>Art/Interface/Buttons/Buildings/powertoolfactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_POYA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_POYA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -34435,7 +34435,7 @@
 			<Button>Art/interface/buttons/buildings/proxima_centauri.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PRUSSIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PRUSSIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -34585,7 +34585,7 @@
 			<Button>art/Housing/Art/pueblo.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PUELCHE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PUELCHE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -34625,7 +34625,7 @@
 			<Button>art/Crops/art/pumpkinfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PUNTIC_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_PUNTIC</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -34675,7 +34675,7 @@
 			<Button>Art/Interface/Buttons/Buildings/QilinBreeder.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_QING_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_QING</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -34685,7 +34685,7 @@
 			<Button>Art/Embassy/qingembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_QIN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_QIN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -34695,7 +34695,7 @@
 			<Button>Art/Embassy/qinembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_QUANG_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_QUANG</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -34875,7 +34875,7 @@
 			<Button>Art/interface/buttons/buildings/quaternionic_projective_space_colony.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_QUEBEC_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_QUEBEC</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -34885,7 +34885,7 @@
 			<Button>Art/Embassy/quebecembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_QUECHUA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_QUECHUA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -34895,7 +34895,7 @@
 			<Button>art/Embassy/art/quechuaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_QUERANDI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_QUERANDI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -34955,7 +34955,7 @@
 			<Button>art/Crops/art/quinoafarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_QULLA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_QULLA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -35145,7 +35145,7 @@
 			<Button>art/Vacation/Art/rangerstation.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_RAPANUI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_RAPANUI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -35405,7 +35405,7 @@
 			<Button>Art/interface/buttons/buildings/red_globular_galaxy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_RED_OCHER_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_RED_OCHER</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -35755,7 +35755,7 @@
 			<Button>art/Hunting/Art/rhinocamp.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_RHODESIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_RHODESIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36165,7 +36165,7 @@
 			<Button>art/Sports/Buttons/rollerderby.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ROMAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ROMAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36265,7 +36265,7 @@
 			<Button>Art/Interface/Buttons/Buildings/route66terminus.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ROXOLANI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ROXOLANI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36355,7 +36355,7 @@
 			<Button>art/Sports/Buttons/rugbyfield.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_RUSSIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_RUSSIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36395,7 +36395,7 @@
 			<Button>art/Crops/Art/ryefarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SABBATEAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SABBATEAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36425,7 +36425,7 @@
 			<Button>Art/Interface/Buttons/Buildings/safarihotel.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SAFAVIDS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SAFAVIDS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36475,7 +36475,7 @@
 			<Button>Art/Interface/Buttons/Buildings/spy_safe_house.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SAFFARID_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SAFFARID</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36525,7 +36525,7 @@
 			<Button>art/Craft/Art/sailweaver.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SAKA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SAKA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36605,7 +36605,7 @@
 			<Button>art/Garbage/Art/salvageyard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SAMI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SAMI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36615,7 +36615,7 @@
 			<Button>art/Embassy/art/samiembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SAMOAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SAMOAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36725,7 +36725,7 @@
 			<Button>art/Seafood/Art/sardinenets.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SARMATIANS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SARMATIANS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36745,7 +36745,7 @@
 			<Button>art/Crops/Art/sassafrasgrove.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SASSANIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SASSANIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36775,7 +36775,7 @@
 			<Button>Art/interface/buttons/buildings/saturn_ring_ice_mine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SAUDI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SAUDI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36805,7 +36805,7 @@
 			<Button>art/Craft/Art/sausageshop.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SAXON_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SAXON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -37015,7 +37015,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/scotland_yard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SCOTTISH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SCOTTISH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -37095,7 +37095,7 @@
 			<Button>Art/interface/buttons/buildings/scutum_crux_arm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SCYTHIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SCYTHIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -37345,7 +37345,7 @@
 			<Button>Art/interface/buttons/buildings/self_replicating_factory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SELJUKS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SELJUKS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -37355,7 +37355,7 @@
 			<Button>Art/Embassy/seljuksembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SEMANG_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SEMANG</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -37395,7 +37395,7 @@
 			<Button>Art/Interface/Buttons/Buildings/seminary.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SEMINOLE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SEMINOLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -37405,7 +37405,7 @@
 			<Button>art/Embassy/art/seminoleembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SENEGALI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SENEGALI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -37415,7 +37415,7 @@
 			<Button>Art/Embassy/senegaliembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SENNAR_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SENNAR</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -37455,7 +37455,7 @@
 			<Button>Art/interface/buttons/buildings/sep_field.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SERBIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SERBIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -37775,7 +37775,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/shaman_temple_walrus.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SHANG_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SHANG</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -38135,7 +38135,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/shwedagon_paya.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SIAMESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SIAMESE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -38155,7 +38155,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/ho_trai_library.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SIBERIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SIBERIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -38165,7 +38165,7 @@
 			<Button>art/Embassy/art/siberianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SICAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SICAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -38175,7 +38175,7 @@
 			<Button>Art/Embassy/sicanembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SICILIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SICILIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -38415,7 +38415,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/flyer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SINTASHTA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SINTASHTA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -38425,7 +38425,7 @@
 			<Button>Art/Embassy/sintashtaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SIOUX_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SIOUX</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -38705,7 +38705,7 @@
 			<Button>Art/interface/buttons/buildings/sloan_great_wall.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SLOVAK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SLOVAK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -38715,7 +38715,7 @@
 			<Button>art/Embassy/art/slovakiaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SLOVENIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SLOVENIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -39385,7 +39385,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Judaism/solomons_temple.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SOMALI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SOMALI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -39425,7 +39425,7 @@
 			<Button>Art/interface/buttons/buildings/songdo_international_business_district.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SONGHAI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SONGHAI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -39475,7 +39475,7 @@
 			<Button>Art/interface/buttons/buildings/soul_replicator.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SOUTHAFRICAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SOUTHAFRICAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -39485,7 +39485,7 @@
 			<Button>art/Embassy/art/southafricanembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SOVIET_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SOVIET</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -39515,7 +39515,7 @@
 			<Button>art/Crops/art/soyfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SPACEPUNK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SPACEPUNK</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -39685,7 +39685,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Christian/Citadel.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SPANISH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SPANISH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -39695,7 +39695,7 @@
 			<Button>,Art/Interface/Buttons/Civilizations/Spain.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,1,6</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SPARTAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SPARTAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -40095,7 +40095,7 @@
 			<Button>Art/interface/buttons/buildings/starport.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_STARPUNK_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_STARPUNK</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -40665,7 +40665,7 @@
 			<Button>art/Transportation/Art/subwaystation.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SUDANESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SUDANESE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -40735,7 +40735,7 @@
 			<Button>Art/Interface/Buttons/buildings/religions/Islam/sultan_qaboos_grand_mosque.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SUMERIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SUMERIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -40755,7 +40755,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Mesopotamia/Ziggurat.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SUNDANESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SUNDANESE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41005,7 +41005,7 @@
 			<Button>art/buttons/buildings/SurgicalOfficeBuilding.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SURINAM_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SURINAM</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41045,7 +41045,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/svalbard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SWAHILI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SWAHILI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41055,7 +41055,7 @@
 			<Button>art/Embassy/art/swahiliembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SWAZI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SWAZI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41075,7 +41075,7 @@
 			<Button>art/Health/Art/sweatlodge.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SWEDISH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SWEDISH</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41095,7 +41095,7 @@
 			<Button>art/Crops/art/sweetpotatofarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SWISS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SWISS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41135,7 +41135,7 @@
 			<Button>Art/interface/buttons/buildings/synthetic_meat_bioreactor.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SYRIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_SYRIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41225,7 +41225,7 @@
 			<Button>art/Craft/Art/tacohut.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TAGALOG_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TAGALOG</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41235,7 +41235,7 @@
 			<Button>Art/Embassy/tagalogembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TAHITIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TAHITIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41265,7 +41265,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/taipei101.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TAIRONA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TAIRONA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41275,7 +41275,7 @@
 			<Button>Art/Embassy/taironaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TAIWANESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TAIWANESE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41285,7 +41285,7 @@
 			<Button>art/Embassy/art/taiwaneseembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TAJIKS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TAJIKS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41325,7 +41325,7 @@
 			<Button>Art/interface/buttons/buildings/tall_tower.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TAMIL_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TAMIL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41345,7 +41345,7 @@
 			<Button>art/Crops/art/tangerineorchard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TANG_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TANG</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41395,7 +41395,7 @@
 			<Button>art/Craft/Art/tanninmaker.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TANZANIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TANZANIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41465,7 +41465,7 @@
 			<Button>Art/Interface/Buttons/Buildings/tarantula.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TARASCAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TARASCAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41505,7 +41505,7 @@
 			<Button>art/Craft/Art/tarprocessing.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TASMANIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TASMANIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41515,7 +41515,7 @@
 			<Button>Art/Embassy/tasmanianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TATARS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TATARS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42085,7 +42085,7 @@
 			<Button>art/Transportation/Art/testpilot.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TEXAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TEXAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42125,7 +42125,7 @@
 			<Button>art/Craft/Art/textilemill.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_THAI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_THAI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42225,7 +42225,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Asatru/Thor_Altar.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_THRACIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_THRACIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42235,7 +42235,7 @@
 			<Button>Art/Embassy/thracianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_THREE_KINGDOMS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_THREE_KINGDOMS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42265,7 +42265,7 @@
 			<Button>Art/Buttons/Buildings/ThumbScrewsBuilding.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TIBETAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TIBETAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42425,7 +42425,7 @@
 			<Button>Art/interface/buttons/buildings/time_zones.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TIMURID_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TIMURID</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42665,7 +42665,7 @@
 			<Button>Art/interface/buttons/buildings/titan_supercomputer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TIWI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TIWI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42675,7 +42675,7 @@
 			<Button>Art/Embassy/tiwiembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TLATILCO_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TLATILCO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42685,7 +42685,7 @@
 			<Button>art/Embassy/art/tlatilcoembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TLAXCALTEC_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TLAXCALTEC</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42705,7 +42705,7 @@
 			<Button>art/Crops/art/tobaccoplantation.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TOBA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TOBA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42745,7 +42745,7 @@
 			<Button>Art/Interface/Buttons/Buildings/toll_house.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TOLTEC_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TOLTEC</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42785,7 +42785,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/royal_tomb.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TONGAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TONGAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42885,7 +42885,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Kemetism/temple_of_toth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TOTONAC_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TOTONAC</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43295,7 +43295,7 @@
 			<Button>Art/Interface/Buttons/Buildings/transistorfactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TRANSOXANIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TRANSOXANIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43615,7 +43615,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/triumph_column.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TROJAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TROJAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43695,7 +43695,7 @@
 			<Button>art/Tower/Art/watchtower.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TUAREG_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TUAREG</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43705,7 +43705,7 @@
 			<Button>art/Embassy/art/tuaregembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TUCANO_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TUCANO</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43775,7 +43775,7 @@
 			<Button>art/Minerals/Art/tungstenmine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TUNGUS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TUNGUS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43785,7 +43785,7 @@
 			<Button>Art/Embassy/tungusembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TUNISIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TUNISIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43795,7 +43795,7 @@
 			<Button>Art/Embassy/tunisianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TUPI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TUPI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43825,7 +43825,7 @@
 			<Button>art/Pets/Art/turkeyfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TURKISH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TURKISH</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43835,7 +43835,7 @@
 			<Button>Art/Embassy/turkishembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TURKMEN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_TURKMEN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43905,7 +43905,7 @@
 			<Button>Art/interface/buttons/buildings/ubiquitous_sensors.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_UIGHUR_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_UIGHUR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43915,7 +43915,7 @@
 			<Button>art/Embassy/art/uighurembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_UKRAINIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_UKRAINIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -44405,7 +44405,7 @@
 			<Button>Art/interface/buttons/buildings/urban_village.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_URUGUAYAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_URUGUAYAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -44455,7 +44455,7 @@
 			<Button>Art/interface/buttons/buildings/utopian_space_colony.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_UZBEKS_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_UZBEKS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -44505,7 +44505,7 @@
 			<Button>Art/Interface/Buttons/Buildings/vacuumfactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VALDIVIA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_VALDIVIA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -44525,7 +44525,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/valleykings.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VANATU_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_VANATU</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -44535,7 +44535,7 @@
 			<Button>Art/Embassy/vanatuembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VANDAL_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_VANDAL</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -44585,7 +44585,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/venetian_arsenal.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VENETIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_VENETIAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -44595,7 +44595,7 @@
 			<Button>art/Embassy/art/venetianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VENEZUELAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_VENEZUELAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45005,7 +45005,7 @@
 			<Button>art/Entertainment/Art/videogamearcade.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VIETNAMESE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_VIETNAMESE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45015,7 +45015,7 @@
 			<Button>art/Embassy/art/vietnameseembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VIKING_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_VIKING</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45355,7 +45355,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/walkfame.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WALLACHIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_WALLACHIAN</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45425,7 +45425,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/wang_zhen.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WARAY_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_WARAY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45465,7 +45465,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/warhol.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WARI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_WARI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45675,7 +45675,7 @@
 			<Button>art/Sports/Buttons/Wave_Race.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WAYANA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_WAYANA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45685,7 +45685,7 @@
 			<Button>art/Embassy/art/wayanaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WAYUU_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_WAYUU</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45785,7 +45785,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Artesian_Well.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WELSH_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_WELSH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46355,7 +46355,7 @@
 			<Button>Art/interface/buttons/buildings/xenoarcheologist.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_XIANBEI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_XIANBEI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46365,7 +46365,7 @@
 			<Button>Art/Embassy/xianbeiembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_XIA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_XIA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46375,7 +46375,7 @@
 			<Button>Art/Embassy/xiaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_XIONGNU_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_XIONGNU</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46415,7 +46415,7 @@
 			<Button>art/Transportation/Art/yachtclub.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_YAGHAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_YAGHAN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46425,7 +46425,7 @@
 			<Button>art/Embassy/art/yaghanembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_YAGUA_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_YAGUA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46445,7 +46445,7 @@
 			<Button>art/Pets/Art/yakfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_YAMATO_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_YAMATO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46455,7 +46455,7 @@
 			<Button>art/Embassy/art/yamatoembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_YANOMAMI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_YANOMAMI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46475,7 +46475,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/yasnaya.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_YEMEN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_YEMEN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46495,7 +46495,7 @@
 			<Button>Art/Interface/Buttons/Buildings/yogaschool.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_YOLNGU_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_YOLNGU</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46565,7 +46565,7 @@
 			<Button>Art/interface/buttons/buildings/yutu.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ZANZIBAR_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ZANZIBAR</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46575,7 +46575,7 @@
 			<Button>Art/Embassy/zanzibarembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ZAPOTEC_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ZAPOTEC</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46595,7 +46595,7 @@
 			<Button>art/Hunting/Art/zebracamp.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ZENU_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ZENU</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46715,7 +46715,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/zheng_he_voayge.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ZIMBABWE_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ZIMBABWE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46805,7 +46805,7 @@
 			<Button>art/Crops/Art/zucchinifarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ZULU_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ZULU</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46825,7 +46825,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/ikhanda.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ZUNI_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_CULTURE_X_ZUNI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
