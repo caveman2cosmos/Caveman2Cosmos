@@ -77,13 +77,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_ADENA</Type>
+			<Type>BUILDING_CULTURE_X_ADENAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ADENAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ADENAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_ADENA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_ADENAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -220,13 +220,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_AKKAD</Type>
+			<Type>BUILDING_CULTURE_X_AKKADIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_AKKADIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_AKKADIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_AKKAD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_AKKADIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -359,13 +359,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_ALEMANNI</Type>
+			<Type>BUILDING_CULTURE_X_ALEMANNIC</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ALEMANNIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ALEMANNIC_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_ALEMANNI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_ALEMANNIC</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -394,13 +394,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_ALGIER</Type>
+			<Type>BUILDING_CULTURE_X_ALGERIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ALGERIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ALGERIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_ALGIER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_ALGERIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -920,13 +920,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_ARAGON</Type>
+			<Type>BUILDING_CULTURE_X_ARAGONESE</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ARAGONESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ARAGONESE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_ARAGON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_ARAGONESE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1254,13 +1254,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_AVARS</Type>
+			<Type>BUILDING_CULTURE_X_AVARIC</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_AVARIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_AVARIC_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_AVARS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_AVARIC</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1289,13 +1289,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_AVERNI</Type>
+			<Type>BUILDING_CULTURE_X_ARVERNIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ARVERNIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ARVERNIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_AVERNI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_ARVERNIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1542,13 +1542,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_BAHRAIN</Type>
+			<Type>BUILDING_CULTURE_X_BAHRAINI</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BAHRAINI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BAHRAINI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_BAHRAIN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_BAHRAINI</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1612,13 +1612,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_BANGLADESH</Type>
+			<Type>BUILDING_CULTURE_X_BANGLADESHI</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BANGLADESHI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BANGLADESHI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_BANGLADESH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_BANGLADESHI</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1716,13 +1716,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_BATAVI</Type>
+			<Type>BUILDING_CULTURE_X_BATAVIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BATAVIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BATAVIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_BATAVI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_BATAVIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1890,13 +1890,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_BELIZE</Type>
+			<Type>BUILDING_CULTURE_X_BELIZEAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BELIZEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BELIZEAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_BELIZE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_BELIZEAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -2265,13 +2265,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_BURGUNDI</Type>
+			<Type>BUILDING_CULTURE_X_BURGUNDIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_BURGUNDIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_BURGUNDIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_BURGUNDI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_BURGUNDIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3024,13 +3024,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_CHECHENIAN</Type>
+			<Type>BUILDING_CULTURE_X_CHECHEN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CHECHEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CHECHEN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_CHECHENIAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_CHECHEN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3393,13 +3393,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_CHORESM</Type>
+			<Type>BUILDING_CULTURE_X_KHWARAZMIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KHWARAZMIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KHWARAZMIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_CHORESM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_KHWARAZMIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3542,13 +3542,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_CONFEDERATE</Type>
+			<Type>BUILDING_CULTURE_X_CONFEDERATES</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CONFEDERATES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CONFEDERATES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_CONFEDERATE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_CONFEDERATES</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5116,13 +5116,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_GOLDEN_HORDE</Type>
+			<Type>BUILDING_CULTURE_X_KIPCHAK</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KIPCHAK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KIPCHAK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_GOLDEN_HORDE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_KIPCHAK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5269,13 +5269,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_GUAM</Type>
+			<Type>BUILDING_CULTURE_X_CHAMORRAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CHAMORRAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CHAMORRAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_GUAM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_CHAMORRAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5409,13 +5409,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_GUYANA</Type>
+			<Type>BUILDING_CULTURE_X_GUYANESE</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_GUYANESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_GUYANESE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_GUYANA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_GUYANESE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5444,13 +5444,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_GYPSY</Type>
+			<Type>BUILDING_CULTURE_X_ROMANI</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ROMANI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ROMANI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_GYPSY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_ROMANI</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5637,13 +5637,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_HELVETII</Type>
+			<Type>BUILDING_CULTURE_X_HELVETIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HELVETIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HELVETIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_HELVETII</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_HELVETIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5816,13 +5816,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_HOLYROMAN</Type>
+			<Type>BUILDING_CULTURE_X_HOLY_ROMAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HOLY_ROMAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HOLY_ROMAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_HOLYROMAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_HOLY_ROMAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5868,13 +5868,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_HONGKONG</Type>
+			<Type>BUILDING_CULTURE_X_HONGKONGER</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_HONGKONGER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_HONGKONGER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_HONGKONG</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_HONGKONGER</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6591,13 +6591,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_IRAQUI</Type>
+			<Type>BUILDING_CULTURE_X_IRAQI</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_IRAQI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_IRAQI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_IRAQUI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_IRAQI</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7107,13 +7107,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_JUTES</Type>
+			<Type>BUILDING_CULTURE_X_JUTE</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_JUTE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_JUTE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_JUTES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_JUTE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7142,13 +7142,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_KANEMBORNU</Type>
+			<Type>BUILDING_CULTURE_X_KANEM_BORNU</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KANEM_BORNU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KANEM_BORNU_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_KANEMBORNU</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_KANEM_BORNU</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7211,13 +7211,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_KHAZAK</Type>
+			<Type>BUILDING_CULTURE_X_KHAZAKH</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KHAZAKH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KHAZAKH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_KHAZAK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_KHAZAKH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7246,13 +7246,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_KHAZARS</Type>
+			<Type>BUILDING_CULTURE_X_KHAZAR</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KHAZAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KHAZAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_KHAZARS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_KHAZAR</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7401,13 +7401,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_KITARA</Type>
+			<Type>BUILDING_CULTURE_X_KITARAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KITARAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KITARAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_KITARA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_KITARAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7715,13 +7715,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_KUSH</Type>
+			<Type>BUILDING_CULTURE_X_KUSHAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KUSHITE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KUSHITE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_KUSH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_KUSHAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7750,13 +7750,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_KUWAIT</Type>
+			<Type>BUILDING_CULTURE_X_KUWAITI</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_KUWAITI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_KUWAITI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_KUWAIT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_KUWAITI</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7820,13 +7820,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_LA_PLATA</Type>
+			<Type>BUILDING_CULTURE_X_LA_PLATAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LA_PLATAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LA_PLATAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_LA_PLATA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_LA_PLATAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7856,13 +7856,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_LEBANON</Type>
+			<Type>BUILDING_CULTURE_X_LEBANESE</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LEBANESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LEBANESE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_LEBANON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_LEBANESE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7995,13 +7995,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_LONGOBARDI</Type>
+			<Type>BUILDING_CULTURE_X_LONGOBARDIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LONGOBARDIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LONGOBARDIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_LONGOBARDI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_LONGOBARDIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8140,13 +8140,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_LUSITANI</Type>
+			<Type>BUILDING_CULTURE_X_LUSITANIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_LUSITANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_LUSITANIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_LUSITANI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_LUSITANIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8360,13 +8360,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_MAMELUKS</Type>
+			<Type>BUILDING_CULTURE_X_MAMELUK</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MAMELUK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MAMELUK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_MAMELUKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_MAMELUK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8695,13 +8695,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_MEDES</Type>
+			<Type>BUILDING_CULTURE_X_MEDIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MEDIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MEDIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_MEDES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_MEDIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8958,13 +8958,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_MISSISSIPPI</Type>
+			<Type>BUILDING_CULTURE_X_MISSISSIPPIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MISSISSIPPIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MISSISSIPPIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_MISSISSIPPI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_MISSISSIPPIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9366,13 +9366,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_MURRI</Type>
+			<Type>BUILDING_CULTURE_X_MARIC</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_MARIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_MARIC_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_MURRI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_MARIC</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9625,13 +9625,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_NEPAL</Type>
+			<Type>BUILDING_CULTURE_X_NEPALESE</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NEPALESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NEPALESE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_NEPAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_NEPALESE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9665,13 +9665,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_NEWZEALAND</Type>
+			<Type>BUILDING_CULTURE_X_NEW_ZEALANDER</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_NEW_ZEALANDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_NEW_ZEALANDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_NEWZEALAND</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_NEW_ZEALANDER</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10070,13 +10070,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_OMAN</Type>
+			<Type>BUILDING_CULTURE_X_OMANI</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_OMANI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_OMANI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_OMAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_OMANI</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10613,13 +10613,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_PHILIPINO</Type>
+			<Type>BUILDING_CULTURE_X_FILIPINO</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_FILIPINO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_FILIPINO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_PHILIPINO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_FILIPINO</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10683,13 +10683,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_PHOENICAN</Type>
+			<Type>BUILDING_CULTURE_X_PHOENICIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_PHOENICIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_PHOENICIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_PHOENICAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_PHOENICIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11173,13 +11173,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_QUANG</Type>
+			<Type>BUILDING_CULTURE_X_QIANG</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_QIANG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_QIANG_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_QUANG</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_QIANG</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11207,13 +11207,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_QUEBEC</Type>
+			<Type>BUILDING_CULTURE_X_QUEBECKER</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_QUEBECKER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_QUEBECKER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_QUEBEC</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_QUEBECKER</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11352,13 +11352,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_RAPANUI</Type>
+			<Type>BUILDING_CULTURE_X_RAPA_NUI</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_RAPA_NUI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_RAPA_NUI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_RAPANUI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_RAPA_NUI</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11700,13 +11700,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_SAFAVIDS</Type>
+			<Type>BUILDING_CULTURE_X_SAFAVID</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SAFAVID</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SAFAVID_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_SAFAVIDS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_SAFAVID</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11902,13 +11902,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_SARMATIANS</Type>
+			<Type>BUILDING_CULTURE_X_SARMATIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SARMATIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SARMATIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_SARMATIANS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_SARMATIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12127,13 +12127,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_SELJUKS</Type>
+			<Type>BUILDING_CULTURE_X_SELJUK</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SELJUK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SELJUK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_SELJUKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_SELJUK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12617,13 +12617,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_SLOVAK</Type>
+			<Type>BUILDING_CULTURE_X_SLOVAKIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SLOVAKIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SLOVAKIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_SLOVAK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_SLOVAKIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -12755,13 +12755,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_SOUTHAFRICAN</Type>
+			<Type>BUILDING_CULTURE_X_SOUTH_AFRICAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SOUTH_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SOUTH_AFRICAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_SOUTHAFRICAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_SOUTH_AFRICAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13044,13 +13044,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_SURINAM</Type>
+			<Type>BUILDING_CULTURE_X_SURINAMESE</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_SURINAMESE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_SURINAMESE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_SURINAM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_SURINAMESE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13410,13 +13410,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_TAJIKS</Type>
+			<Type>BUILDING_CULTURE_X_TAJIK</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TAJIK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TAJIK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_TAJIKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_TAJIK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13625,13 +13625,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_TATARS</Type>
+			<Type>BUILDING_CULTURE_X_TATAR</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_TATAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_TATAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_TATARS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_TATAR</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14553,13 +14553,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_UZBEKS</Type>
+			<Type>BUILDING_CULTURE_X_UZBEK</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_UZBEK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_UZBEK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_UZBEKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_UZBEK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14588,13 +14588,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_VALDIVIA</Type>
+			<Type>BUILDING_CULTURE_X_VALDIVIAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_VALDIVIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_VALDIVIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_VALDIVIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_VALDIVIAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14623,13 +14623,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_VANATU</Type>
+			<Type>BUILDING_CULTURE_X_VANATUAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_VANATUAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_VANATUAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_VANATU</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_VANATUAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15331,13 +15331,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_YEMEN</Type>
+			<Type>BUILDING_CULTURE_X_YEMENI</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_YEMENI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_YEMENI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_YEMEN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_YEMENI</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15400,13 +15400,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_ZANZIBAR</Type>
+			<Type>BUILDING_CULTURE_X_ZANZIBARI</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ZANZIBARI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ZANZIBARI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_ZANZIBAR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_ZANZIBARI</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15528,13 +15528,13 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_ZIMBABWE</Type>
+			<Type>BUILDING_CULTURE_X_ZIMBABWEAN</Type>
 			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_ZIMBABWEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_ZIMBABWEAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_ZIMBABWE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_ZIMBABWEAN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

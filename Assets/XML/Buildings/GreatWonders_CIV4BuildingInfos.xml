@@ -5766,12 +5766,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CULTURE_X_DOLPHIN</Type>
+			<Type>BUILDING_CULTURE_X_CETACEA_SAPIEN</Type>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_X_CETACEA_SAPIEN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_DOLPHIN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CULTURE_X_CETACEA_SAPIEN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
