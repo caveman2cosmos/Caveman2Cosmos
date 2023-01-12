@@ -18032,7 +18032,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HO_TRAI_LIBRARY_LIBRARY</Description>
+			<Description>TXT_KEY_BUILDING_HO_TRAI_LIBRARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HO_TRAI_LIBRARY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HO_TRAI_LIBRARY</ArtDefineTag>
