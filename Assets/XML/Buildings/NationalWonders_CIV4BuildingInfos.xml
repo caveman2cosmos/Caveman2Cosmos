@@ -324,7 +324,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iGlobalHealth>1</iGlobalHealth>
-			<FreeBuilding>BUILDING_WAREHOUSE</FreeBuilding>
+			<FreeBuilding>BUILDING_MODERN_WAREHOUSE</FreeBuilding>
 			<iAsset>20</iAsset>
 			<iPower>10</iPower>
 			<Flavors>

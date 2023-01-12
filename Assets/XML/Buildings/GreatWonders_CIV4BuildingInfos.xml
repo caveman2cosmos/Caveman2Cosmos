@@ -5649,11 +5649,11 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SHAMAN_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_SPIRITS_ALLIANCE</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SHAMAN_CATHEDRAL2</BuildingType>
+					<BuildingType>BUILDING_SPIRITS_LEGACY</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -5665,11 +5665,11 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_DRUID_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_NATURE_ALLIANCE</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_DRUID_CATHEDRAL2</BuildingType>
+					<BuildingType>BUILDING_NATURE_LEGACY</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -6276,7 +6276,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
+					<BuildingType>BUILDING_SPACESCRAPER</BuildingType>
 					<CommerceChanges>
 						<iCommerce>3</iCommerce>
 					</CommerceChanges>
@@ -15327,7 +15327,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
+				<BuildingType>BUILDING_SPACESCRAPER</BuildingType>
 				<BuildingType>BUILDING_LOFSTROM_LOOP</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
@@ -22257,8 +22257,8 @@
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
 				<BuildingType>BUILDING_GRANARY</BuildingType>
 				<BuildingType>BUILDING_MODERN_GRANARY</BuildingType>
-				<BuildingType>BUILDING_WAREHOUSE2</BuildingType>
 				<BuildingType>BUILDING_WAREHOUSE</BuildingType>
+				<BuildingType>BUILDING_MODERN_WAREHOUSE</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<iCost>516</iCost>

@@ -936,7 +936,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
+					<BuildingType>BUILDING_SPACESCRAPER</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
@@ -2651,13 +2651,13 @@
 			</PropertiesAllCities>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SPACESCRAPER</Type>
+			<Type>BUILDING_GRAND_SPACESCRAPER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_SPACESCRAPER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SPACESCRAPER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GRAND_SPACESCRAPER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GRAND_SPACESCRAPER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SPACESCRAPER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GRAND_SPACESCRAPER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SPACESCRAPER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -2672,7 +2672,7 @@
 			<YieldChanges>
 				<iYield>20</iYield>
 			</YieldChanges>
-			<FreeBuilding>BUILDING_SPACESCRAPER2</FreeBuilding>
+			<FreeBuilding>BUILDING_SPACESCRAPER</FreeBuilding>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_ECUMENOPOLIS_EARTH</BuildingType>
@@ -2680,7 +2680,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SPACESCRAPER2</BuildingType>
+				<BuildingType>BUILDING_SPACESCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>

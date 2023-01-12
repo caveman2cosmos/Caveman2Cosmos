@@ -446,17 +446,17 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_BANDITS_HIDEOUT1</BuildingType>
+					<BuildingType>BUILDING_UNSANCTIONED_THIEVES_HIDEOUT</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_BANDITS_HIDEOUT2</BuildingType>
+					<BuildingType>BUILDING_UNSANCTIONED_ROGUES_HIDEOUT</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_BANDITS_HIDEOUT3</BuildingType>
+					<BuildingType>BUILDING_UNSANCTIONED_BURGLARS_HIDEOUT</BuildingType>
 					<iMinValue>1600</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>

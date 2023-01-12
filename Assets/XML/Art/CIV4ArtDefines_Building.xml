@@ -9313,7 +9313,7 @@
 			<Button>art/Crops/art/colagrove.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_COLD_FUSION2</Type>
+			<Type>ART_DEF_BUILDING_COLD_FUSION</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -9323,7 +9323,7 @@
 			<Button>Art/interface/buttons/buildings/cold_fusion2.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_COLD_FUSION_POWER_PLANT</Type>
+			<Type>ART_DEF_BUILDING_HE3_FUSION_POWER_PLANT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12814,7 +12814,7 @@
 			<Button>art/Ordinance/Art/drugprohibition.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRUID_CATHEDRAL</Type>
+			<Type>ART_DEF_BUILDING_NATURE_ALLIANCE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.00</fScale>
@@ -12824,7 +12824,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Druid/DruidCathedral_Button.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRUID_CATHEDRAL2</Type>
+			<Type>ART_DEF_BUILDING_NATURE_LEGACY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.00</fScale>
@@ -32164,7 +32164,7 @@
 			<Button>Art/Interface/Buttons/Buildings/park_arcology.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PARROT</Type>
+			<Type>ART_DEF_BUILDING_PARROT_AVIARY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32174,7 +32174,7 @@
 			<Button>art/Pets/Art/parrotaviary.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PARROT2</Type>
+			<Type>ART_DEF_BUILDING_PARROT_CATCHER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32334,7 +32334,7 @@
 			<Button>art/Crops/art/peachorchard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PEACOCK2</Type>
+			<Type>ART_DEF_BUILDING_PEACOCK_CATCHER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -37565,7 +37565,7 @@
 			<Button>Art/Interface/buttons/buildings/religions/Tengri/tengritemplenew.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SHAMAN_CATHEDRAL</Type>
+			<Type>ART_DEF_BUILDING_SPIRITS_ALLIANCE</Type>
 			<LSystem>LSYSTEM_4x4</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.5</fScale>
@@ -37575,7 +37575,7 @@
 			<Button>Art/Interface/buttons/Buildings/Religions/Shaman/ShamanCathedral_Button.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SHAMAN_CATHEDRAL2</Type>
+			<Type>ART_DEF_BUILDING_SPIRITS_LEGACY</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.0</fScale>
@@ -39525,7 +39525,7 @@
 			<Button>Art/interface/buttons/buildings/spacepunk_embassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SPACESCRAPER</Type>
+			<Type>ART_DEF_BUILDING_GRAND_SPACESCRAPER</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -39535,7 +39535,7 @@
 			<Button>Art/interface/buttons/buildings/spacescraper.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SPACESCRAPER2</Type>
+			<Type>ART_DEF_BUILDING_SPACESCRAPER</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45435,7 +45435,7 @@
 			<Button>Art/Embassy/warayembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WAREHOUSE</Type>
+			<Type>ART_DEF_BUILDING_MODERN_WAREHOUSE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45445,7 +45445,7 @@
 			<Button>art/Farming/Art/warehouse.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WAREHOUSE2</Type>
+			<Type>ART_DEF_BUILDING_WAREHOUSE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

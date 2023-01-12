@@ -15439,11 +15439,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASSASSINS_DEN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNSANCTIONED_BANDITS_HIDEOUT1</Type>
+			<Type>BUILDING_UNSANCTIONED_THIEVES_HIDEOUT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT1</Description>
+			<Description>TXT_KEY_BUILDING_UNSANCTIONED_THIEVES_HIDEOUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_THEFT</PrereqTech>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
@@ -15462,11 +15462,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BANDITS_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNSANCTIONED_BANDITS_HIDEOUT2</Type>
+			<Type>BUILDING_UNSANCTIONED_ROGUES_HIDEOUT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT2</Description>
+			<Description>TXT_KEY_BUILDING_UNSANCTIONED_ROGUES_HIDEOUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
@@ -15485,11 +15485,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BANDITS_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNSANCTIONED_BANDITS_HIDEOUT3</Type>
+			<Type>BUILDING_UNSANCTIONED_BURGLARS_HIDEOUT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT3</Description>
+			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BURGLARS_HIDEOUT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LOCKS</PrereqTech>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>

@@ -14,7 +14,7 @@
 				<BuildingType>BUILDING_HIGHTECHCOAL_PLANT</BuildingType>
 				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
-				<BuildingType>BUILDING_COLD_FUSION_POWER_PLANT</BuildingType>
+				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_VACUUM</BuildingType>
 			</ReplacementBuildings>

@@ -160,7 +160,7 @@
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
-				<BuildingType>BUILDING_PARROT</BuildingType>
+				<BuildingType>BUILDING_PARROT_AVIARY</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
@@ -12348,7 +12348,7 @@
 				<BuildingType>BUILDING_FOLKLORE_MACAW</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
-				<BuildingType>BUILDING_PARROT</BuildingType>
+				<BuildingType>BUILDING_PARROT_AVIARY</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
@@ -15562,7 +15562,7 @@
 				<BuildingType>BUILDING_FOLKLORE_PARROT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
-				<BuildingType>BUILDING_PARROT</BuildingType>
+				<BuildingType>BUILDING_PARROT_AVIARY</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
@@ -21522,7 +21522,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
-				<BuildingType>BUILDING_PARROT</BuildingType>
+				<BuildingType>BUILDING_PARROT_AVIARY</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>

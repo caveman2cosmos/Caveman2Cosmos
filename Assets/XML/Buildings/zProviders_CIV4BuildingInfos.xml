@@ -465,9 +465,9 @@
 				<BuildingType>BUILDING_LYREBIRD</BuildingType>
 				<BuildingType>BUILDING_MACAW</BuildingType>
 				<BuildingType>BUILDING_PARAKEET</BuildingType>
-				<BuildingType>BUILDING_PARROT</BuildingType>
-				<BuildingType>BUILDING_PARROT2</BuildingType>
-				<BuildingType>BUILDING_PEACOCK2</BuildingType>
+				<BuildingType>BUILDING_PARROT_AVIARY</BuildingType>
+				<BuildingType>BUILDING_PARROT_CATCHER</BuildingType>
+				<BuildingType>BUILDING_PEACOCK_CATCHER</BuildingType>
 				<BuildingType>BUILDING_PIGEON_COOP</BuildingType>
 				<BuildingType>BUILDING_QUETZAL</BuildingType>
 				<BuildingType>BUILDING_RATITE_HERD</BuildingType>
