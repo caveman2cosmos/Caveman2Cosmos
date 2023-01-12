@@ -1260,15 +1260,6 @@
 		<Russian>Ôàéë</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FILEPATH_HOVER</Tag>
-		<English>Directory where log file resides (fully qualified path, i.e. C:\folder\subfolder or blank).</English>
-		<French>Le Répertoire ou le fichier de log sera sauvegardé (chemin complet, p.ex. C:\folder\subfolder ou vide).</French>
-		<German>Verzeichnis, in dem sich die Protokolldatei befindet (komplette Pfadangabe, d.h. C:\Ordner\Unterordner oder leer lassen)</German>
-		<Italian>Cartella dove è localizzato il file di registro (percorso completo (ad esempio C:\cartella\sottocartella) o vuoto).</Italian>
-		<Spanish>Directorio donde reside el archivo de registro (ruta completa, p. ej. C:\carpeta\subcarpeta o vacío).</Spanish>
-		<Russian>Êàòàëîã, â êîòîðîì ôàéë æóðíàëà ðàñïîëîæåí (ïîëíûé ïóòü, ò.å. C:\folder\subfolder èëè ïóñòî).</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_AUTOLOG__FILEPATH_TEXT</Tag>
 		<English>Path</English>
 		<French>Chemin</French>
