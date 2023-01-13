@@ -12798,7 +12798,7 @@
 		<Tag>TXT_KEY_EVENT_TRIGGER_UFO_1</Tag>
 		<English>News report about UFOs near the %s2_city has attracted lots of unwanted attention to our Secret Army Base. Tourists, foreign agents and news reporters are rushing to the site with their cameras as they're trying to get see what we are hiding in our base. What should we do now?</English>
 		<French>Des Informations concernant des Ovnis près de %s2_city ont attiré une attention non souhaité sur notre base secrète militaire. Touristes, agents étranger et journalistes se ruent vers le site avec leurs appareils photos, essayant de voir ce qu'il se passe dans notre base. Que devons-nous faire maintenant?</French>
-		<German>Die Nachrichtenberichte über UFOs in der Nähe von %s2_city haben eine Menge unerwünschte Aufmerksamkeit auf unsere geheime Armeebasis gezogen. Toristen, ausländische Agenten und Nachrichtenreporter eilen mit ihren Kameras dorthin und versuchen herauszufinden, was wir in unserer Basis verbergen. Was sollen wir tun?</German>
+		<German>Die Nachrichtenberichte über UFOs in der Nähe von %s2_city haben eine Menge unerwünschte Aufmerksamkeit auf unsere geheime Armeebasis gezogen. Touristen, ausländische Agenten und Nachrichtenreporter eilen mit ihren Kameras dorthin und versuchen herauszufinden, was wir in unserer Basis verbergen. Was sollen wir tun?</German>
 		<Italian>Le notizie sugli UFO vicino alla città di %s2_city hanno attirato molte attenzioni alla nostra Base militare segreta. Turisti, agenti stranieri e giornalisti si stanno avvicinando al nostro sito armati di macchine fotografiche cercando di vedere cosa stiamo nascondendo nella nostra base. Cosa dobbiamo fare?</Italian>
 		<Spanish>Las informaciones sobre OVNIs cerca de %s2_city han atraido una atención no deseada hacia nuestra Base militar secreta. Turistas, agentes extranjeros y reporteros están llegando en masa a la zona con sus cámaras, con las que tratan de ver lo que tenemos escondido en nuestra base. ¿Qué debemos hacer?</Spanish>
 		<Polish>Najnowsze wiadomości donoszą, że Niezidentyfikowane Obiekty Latający w pobliżu miasta %s2_city wzbudziły dużą uwagę na naszą Tajną Bazę Wojskową. Turyści, zagraniczni agenci i reporterzy zmierzają do tego miejsca z aparatami, przez co mogą odkryć tajemnice naszej bazy. Co powinniśmy teraz zrobić?</Polish>
@@ -12815,10 +12815,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT</Tag>
 		<English>The earth has spewed forth lava and ash from a previously dormant volcano!</English>
+		<Italian>La terra ha emesso lava e cenere da un vulcano precedentemente inattivo!</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Tag>
 		<English>A sudden eruption has rocked the countryside and caused widespread destruction upon a new volcano's formation, though examination reveals that this site does bear some evidence of long-forgotten ancient volcanic activity. In the aftermath of this newer catastrophe the soil seems to have become tremendously fertile.</English>
+		<Italian>Un'improvvisa eruzione ha scosso la campagna e ha causato vaste distruzioni in seguito alla formazione di un nuovo vulcano, anche se a quanto pare pare che ci siano prove di un'antica attività vulcanica a lungo dimenticata. All'indomani di questa nuova catastrofe, il terreno sembra essere diventato estremamente fertile.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_TRIGGER_VOLCANO_DORMANT_ERUPTION</Tag>
