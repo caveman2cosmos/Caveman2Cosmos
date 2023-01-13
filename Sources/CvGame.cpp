@@ -8350,13 +8350,6 @@ void CvGame::read(FDataStreamBase* pStream)
 		}
 	}
 
-#ifndef BREAK_SAVES
-	{
-		uint32_t iSize;
-		WRAPPER_READ_DECORATED(wrapper,"CvGame",&iSize,"PlotExtraCostsCount");
-	}
-#endif
-
 	{
 		unsigned int iSize;
 		m_mapVoteSourceReligions.clear();
@@ -8377,16 +8370,10 @@ void CvGame::read(FDataStreamBase* pStream)
 		WRAPPER_READ_DECORATED(wrapper,"CvGame",&iSize,"InactiveTriggersCount");
 		for (unsigned int i = 0; i < iSize; ++i)
 		{
-			int iTrigger = -2;
-			WRAPPER_READ_CLASS_ENUM_DECORATED_ALLOW_MISSING(wrapper,"CvGame",REMAPPED_CLASS_TYPE_EVENT_TRIGGERS,&iTrigger,"InactiveTrigger");
+			int iTrigger = -1;
+			WRAPPER_READ_CLASS_ENUM_DECORATED(wrapper, "CvGame", REMAPPED_CLASS_TYPE_EVENT_TRIGGERS, &iTrigger, "InactiveTrigger");
 
-			if ( iTrigger == -2 && wrapper.isUsingTaggedFormat() )
-			{
-				//	Consume the value for older formats since the information cannot be
-				//	believed anyway
-				WRAPPER_READ_DECORATED(wrapper, "CvGame", &iTrigger, "InactiveTrigger");
-			}
-			else if (iTrigger != -1)
+			if (iTrigger > -1)
 			{
 				m_aeInactiveTriggers.push_back((EventTriggerTypes)iTrigger);
 			}
@@ -8507,8 +8494,6 @@ void CvGame::write(FDataStreamBase* pStream)
 	// m_bPbemTurnSent not saved
 	WRAPPER_WRITE(wrapper, "CvGame", m_bHotPbemBetweenTurns);
 	// m_bPlayerOptionsSent not saved
-	// TB Nukefix
-	// WRAPPER_WRITE(wrapper, "CvGame", m_bNukesValid);
 
 	WRAPPER_WRITE(wrapper, "CvGame", m_eHandicap);
 	WRAPPER_WRITE(wrapper, "CvGame", m_ePausePlayer);
@@ -8602,12 +8587,7 @@ void CvGame::write(FDataStreamBase* pStream)
 	{
 		pExtraYield.write(pStream);
 	}
-#ifndef BREAK_SAVES
-	{
-		uint32_t iSize = 0;
-		WRAPPER_WRITE_DECORATED(wrapper, "CvGame", iSize, "PlotExtraCostsCount");
-	}
-#endif
+
 	WRAPPER_WRITE_DECORATED(wrapper, "CvGame", m_mapVoteSourceReligions.size(), "VoteSourceReligionsCount");
 	for (stdext::hash_map<VoteSourceTypes, ReligionTypes>::iterator it = m_mapVoteSourceReligions.begin(); it != m_mapVoteSourceReligions.end(); ++it)
 	{

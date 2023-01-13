@@ -65,10 +65,6 @@ int*	CvUnit::g_paiTempAfflictOnAttackTypeDistanceCount = NULL;
 int*	CvUnit::g_paiTempAfflictOnAttackTypeAttemptedCount = NULL;
 int*	CvUnit::g_paiTempDistanceAttackCommunicability = NULL;
 bool*	CvUnit::g_pabTempValidBuildUp = NULL;
-//Team Project (4)
-//WorkRateMod
-//ls612: Terrain Work Modifiers
-int*	CvUnit::g_paiTempExtraBuildWorkPercent = NULL;
 int*	CvUnit::g_paiTempExtraUnitCombatModifier = NULL;
 bool*	CvUnit::g_pabTempHasPromotion = NULL;
 bool*	CvUnit::g_pabTempHasUnitCombat = NULL;
@@ -182,7 +178,6 @@ m_Properties(this)
 		g_paiTempAfflictOnAttackTypeAttemptedCount = new int[GC.getNumPromotionLineInfos()];
 		g_paiTempDistanceAttackCommunicability = new int[GC.getNumPromotionLineInfos()];
 		g_pabTempValidBuildUp = new bool[GC.getNumPromotionLineInfos()];
-		g_paiTempExtraBuildWorkPercent = new int [GC.getNumBuildInfos()];
 		g_paiTempExtraUnitCombatModifier = new int[GC.getNumUnitCombatInfos()];
 		g_pabTempHasPromotion = new bool[GC.getNumPromotionInfos()];
 		g_pabTempHasUnitCombat = new bool[GC.getNumUnitCombatInfos()];
@@ -21818,20 +21813,9 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iSleepTimer);
 
-	// SAVEBREAK - Toffer - Cleanup commander mess.
-	int iExtraControlPoints = 0;
-	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraControlPoints, "m_iExtraControlPoints");
-	int iExtraCommandRange = 0;
-	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraCommandRange, "m_iExtraCommandRange");
-	int iControlPointsLeft = 0;
-	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iControlPointsLeft, "m_iControlPointsLeft");
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCommanderID);
 
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&m_eOriginalOwner);
-
-	bool bCommander = false;
-	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &bCommander, "m_bCommander");
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_bAutoPromoting);
 	WRAPPER_READ(wrapper, "CvUnit", &m_bAutoUpgrading);
@@ -21861,12 +21845,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCityDefensePercent);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraHillsAttackPercent);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraHillsDefensePercent);
-
-	int iExtraHillsWorkPercent = 0;
-	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraHillsWorkPercent, "m_iExtraHillsWorkPercent");
-	int iExtraWorkPercent = 0;
-	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraWorkPercent, "m_iExtraWorkPercent");
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iRevoltProtection);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iCollateralDamageProtection);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iPillageChange);
@@ -22705,30 +22683,6 @@ void CvUnit::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCaptureProbabilityModifier);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraCaptureResistanceModifier);
-
-	// Read compressed data format
-	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
-	{
-		g_paiTempExtraBuildWorkPercent[iI] = 0;
-	}
-	do
-	{
-		iI= -1;
-		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iI, "hasBuildInfo");
-		if ( iI != -1 )
-		{
-			int iNewIndex = wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_BUILDS, iI, true);
-
-			if ( iNewIndex != NO_BUILD )
-			{
-				WRAPPER_READ_DECORATED(wrapper, "CvUnit", &g_paiTempExtraBuildWorkPercent[iNewIndex], "extraBuildWorkPercent");
-			}
-		}
-	} while(iI != -1);
-
-	int iExtraPeaksWorkPercent = 0;
-	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraPeaksWorkPercent, "m_iExtraPeaksWorkPercent");
-
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraBreakdownChance);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraBreakdownDamage);
 
@@ -23191,50 +23145,83 @@ void CvUnit::read(FDataStreamBase* pStream)
 			info->m_iExtraTrapTriggerUnitCombatType = g_paiTempExtraTrapTriggerUnitCombatType[iI];
 		}
 	}
-	int iAssignedCity = -1;
-	WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iAssignedCity, "m_iAssignedCity");
-
-	//bool bWorker = false;
-	//WRAPPER_READ_DECORATED(wrapper, "CvUnit", &bWorker, "bWorker");
-
-	WRAPPER_READ_OBJECT_END(wrapper);
-
-	// Toffer - Initialize Components
-	if (bCommander)
 	{
-		m_commander = (
-			new UnitCompCommander(
-				this,
-				m_pUnitInfo->getControlPoints() + iExtraControlPoints,
-				iControlPointsLeft,
-				m_pUnitInfo->getCommandRange() + iExtraCommandRange
-			)
-		);
-	}
-	// Toffer - Maybe a unit without builds were given builds in xml since this game was saved?
-	//	If all builds are removed from a unit in xml since save, and the unit doesn't have extra builds from promotions,
-	//	then an uneeded worker component will be initialized for this unit, won't cause any real harm though.
-	if (/*bWorker ||*/ m_pUnitInfo->getNumBuilds() > 0)
-	{
-		m_worker = new UnitCompWorker();
+		bool bCommander = false;
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &bCommander, "m_bCommander");
 
-		m_worker->changeHillsWorkModifier(iExtraHillsWorkPercent + m_pUnitInfo->getHillsWorkModifier());
-		m_worker->changePeaksWorkModifier(iExtraPeaksWorkPercent + m_pUnitInfo->getPeaksWorkModifier());
-		m_worker->changeWorkModifier(iExtraWorkPercent);
-
-		// SAVEBREAK - Toffer - see storage method of m_unitProductionMod in CvCity.
-		for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
+		if (bCommander)
 		{
-			if (g_paiTempExtraBuildWorkPercent[iI] != 0)
+			int iExtraControlPoints = 0;
+			int iExtraCommandRange = 0;
+			int iControlPointsLeft = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraControlPoints, "m_iExtraControlPoints");
+			WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraCommandRange, "m_iExtraCommandRange");
+			WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iControlPointsLeft, "m_iControlPointsLeft");
+
+			m_commander = (
+				new UnitCompCommander(
+					this,
+					m_pUnitInfo->getControlPoints() + iExtraControlPoints,
+					iControlPointsLeft,
+					m_pUnitInfo->getCommandRange() + iExtraCommandRange
+				)
+			);
+		}
+	}
+	{
+		bool bWorker = false;
+		WRAPPER_READ_DECORATED(wrapper, "CvUnit", &bWorker, "m_worker");
+
+		if (bWorker)
+		{
+			m_worker = new UnitCompWorker();
+			int iExtraWorkPercent = 0;
+			int iExtraHillsWorkPercent = 0;
+			int iExtraPeaksWorkPercent = 0;
+			int iAssignedCity = -1;
+			WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraWorkPercent, "m_iExtraWorkPercent");
+			WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraHillsWorkPercent, "m_iExtraHillsWorkPercent");
+			WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iExtraPeaksWorkPercent, "m_iExtraPeaksWorkPercent");
+			WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iAssignedCity, "m_iAssignedCity");
+
+			m_worker->changeWorkModifier(iExtraWorkPercent);
+			m_worker->changeHillsWorkModifier(iExtraHillsWorkPercent + m_pUnitInfo->getHillsWorkModifier());
+			m_worker->changePeaksWorkModifier(iExtraPeaksWorkPercent + m_pUnitInfo->getPeaksWorkModifier());
+			m_worker->setCityAssignment(iAssignedCity);
+
+			short iSize = 0;
+			int iBuild = NO_BUILD;
+
+			WRAPPER_READ_DECORATED(wrapper, "CvUnit", &iSize, "ExtraBuildsSize");
+			for (short i = 0; i < iSize; ++i)
 			{
-				m_worker->changeExtraWorkModForBuild(static_cast<BuildTypes>(iI), (short)g_paiTempExtraBuildWorkPercent[iI]);
+				WRAPPER_READ_CLASS_ENUM_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_BUILDS, &iBuild, "ExtraBuildType");
+
+				if (iBuild != -1)
+				{
+					m_worker->setExtraBuild((BuildTypes)iBuild);
+				}
+			}
+
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "ExtraWorkModForBuildsSize");
+			while (iSize-- > 0)
+			{
+				short iMod = 0;
+				WRAPPER_READ_CLASS_ENUM_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_BUILDS, &iBuild, "ExtraWorkModForBuildType");
+				WRAPPER_READ_DECORATED(wrapper, "CvCity", &iMod, "ExtraWorkModForBuild");
+
+				if (iBuild != NO_BUILD)
+				{
+					m_worker->changeExtraWorkModForBuild((BuildTypes)iBuild, iMod);
+				}
 			}
 		}
-		m_worker->setCityAssignment(iAssignedCity);
 	}
 
 	//Example of how to skip an outdated and unnecessary save element (at least for ints and bools)
 	/*WRAPPER_SKIP_ELEMENT(wrapper,"CvUnit",&m_bHiddenNationality, SAVE_VALUE_ANY);*/
+	WRAPPER_READ_OBJECT_END(wrapper);
+
 
 	// Post Process
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
@@ -23317,23 +23304,12 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iEnemyRouteCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAlwaysHealCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iHillsDoubleMoveCount);
-
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCanMovePeaksCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCanLeadThroughPeaksCount);
-
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iSleepTimer);
-
-	// SAVEBRERAK - Toffer - Cleanup unit-component mess.
-	const bool bCommander = isCommander();
-	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bCommander ? m_commander->getControlPoints() - m_pUnitInfo->getControlPoints() : 0), "m_iExtraControlPoints");
-	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bCommander ? m_commander->getCommandRange() - m_pUnitInfo->getCommandRange() : 0), "m_iExtraCommandRange");
-	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bCommander ? m_commander->getControlPointsLeft() : 0), "m_iControlPointsLeft");
-
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCommanderID);
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_eOriginalOwner);
-
-	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", bCommander, "m_bCommander");
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bAutoPromoting);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_bAutoUpgrading);
@@ -23363,11 +23339,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCityDefensePercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraHillsAttackPercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraHillsDefensePercent);
-
-	const bool bWorker = isWorker();
-	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bWorker ? m_worker->getHillsWorkModifier() - m_pUnitInfo->getHillsWorkModifier() : 0), "m_iExtraHillsWorkPercent");
-	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bWorker ? m_worker->getWorkModifier() : 0), "m_iExtraWorkPercent");
-
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iRevoltProtection);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iCollateralDamageProtection);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iPillageChange);
@@ -23737,19 +23708,6 @@ void CvUnit::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCaptureProbabilityModifier);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraCaptureResistanceModifier);
-
-	//WorkRateMod
-	//	Use condensed format now - only save non-default array elements
-	for (iI = 0; iI < GC.getNumBuildInfos(); iI++)
-	{
-		if (getExtraWorkModForBuild((BuildTypes)iI) != 0)
-		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iI, "hasBuildInfo");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", getExtraWorkModForBuild((BuildTypes)iI), "extraBuildWorkPercent");
-		}
-	}
-	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bWorker ? m_worker->getPeaksWorkModifier() - m_pUnitInfo->getPeaksWorkModifier() : 0), "m_iExtraPeaksWorkPercent");
-
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraBreakdownChance);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraBreakdownDamage);
 
@@ -24037,7 +23995,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	{
 		for (iI = 0; iI < iSize10; iI++)
 		{
-			iType1 = (int)m_aExtraAidChanges[iI].eProperty;
+			iType1 = m_aExtraAidChanges[iI].eProperty;
 			iType2 = m_aExtraAidChanges[iI].iChange;
 			WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_PROPERTIES, iType1, "AidChange.eProperty");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", iType2, "AidChange.iChange");
@@ -24070,9 +24028,40 @@ void CvUnit::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info ? info->m_iExtraTrapAvoidanceUnitCombatType : 0, "extraTrapAvoidanceUnitCombatType");
 		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", info ? info->m_iExtraTrapTriggerUnitCombatType : 0, "extraTrapTriggerUnitCombatType");
 	}
-	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (bWorker ? m_worker->getAssignedCity() : -1), "m_iAssignedCity");
 
-	//WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isWorker(), "bWorker");
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isCommander(), "m_bCommander");
+	if (m_commander)
+	{
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commander->getControlPoints() - m_pUnitInfo->getControlPoints(), "m_iExtraControlPoints");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commander->getCommandRange() - m_pUnitInfo->getCommandRange(), "m_iExtraCommandRange");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_commander->getControlPointsLeft(), "m_iControlPointsLeft");
+	}
+
+	WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", isWorker(), "m_worker");
+	if (m_worker)
+	{
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_worker->getWorkModifier(), "m_iExtraWorkPercent");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_worker->getHillsWorkModifier() - m_pUnitInfo->getHillsWorkModifier(), "m_iExtraHillsWorkPercent");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_worker->getPeaksWorkModifier() - m_pUnitInfo->getPeaksWorkModifier(), "m_iExtraPeaksWorkPercent");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", m_worker->getAssignedCity(), "m_iAssignedCity");
+
+		const std::vector<BuildTypes>& extraBuilds = m_worker->getExtraBuilds();
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (short)extraBuilds.size(), "ExtraBuildsSize");
+
+		for (int i = extraBuilds.size() - 1; i > -1; i--)
+		{
+			WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_BUILDS, extraBuilds[i], "ExtraBuildType");
+		}
+
+		std::map<BuildTypes, short> extraWorkModForBuilds = m_worker->getExtraWorkModForBuilds();
+		WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", (short)extraWorkModForBuilds.size(), "ExtraWorkModForBuildsSize");
+
+		for (std::map<BuildTypes, short>::const_iterator it = extraWorkModForBuilds.begin(), itEnd = extraWorkModForBuilds.end(); it != itEnd; ++it)
+		{
+			WRAPPER_WRITE_CLASS_ENUM_DECORATED(wrapper, "CvUnit", REMAPPED_CLASS_TYPE_BUILDS, it->first, "ExtraWorkModForBuildType");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvUnit", it->second, "ExtraWorkModForBuild");
+		}
+	}
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
@@ -36358,7 +36347,7 @@ void CvUnit::changeExtraBuildType(bool bChange, BuildTypes eBuild)
 			{
 				m_worker = new UnitCompWorker();
 			}
-			m_worker->setExtraBuild(eBuild, true);
+			m_worker->setExtraBuild(eBuild);
 		}
 		else if (isWorker())
 		{
