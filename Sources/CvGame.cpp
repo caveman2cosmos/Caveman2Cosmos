@@ -908,7 +908,6 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	m_bScoreDirty = false;
 	m_circumnavigatingTeam = NO_TEAM;
 	m_bDebugMode = false;
-	m_bDebugModeCache = false;
 	m_bFinalInitialized = false;
 	m_bPbemTurnSent = false;
 	m_bHotPbemBetweenTurns = false;
@@ -4327,16 +4326,15 @@ bool CvGame::isValidVoteSelection(VoteSourceTypes eVoteSource, const VoteSelecti
 }
 
 
-bool CvGame::isDebugMode() const
+/*DllExport*/ bool CvGame::isDebugMode() const
 {
-	return m_bDebugModeCache;
+	return m_bDebugMode;
 }
 
 
-void CvGame::toggleDebugMode()
+/*DllExport*/ void CvGame::toggleDebugMode()
 {
-	m_bDebugMode = ((m_bDebugMode) ? false : true);
-	updateDebugModeCache();
+	m_bDebugMode = !m_bDebugMode;
 
 	gDLL->getEngineIFace()->RebuildAllPlots();
 
@@ -4373,16 +4371,9 @@ void CvGame::noteGraphicRebuildNeeded()
 	m_lastGraphicUpdateRequestTickCount = GetTickCount();
 }
 
-void CvGame::updateDebugModeCache()
+/*DllExport*/ void CvGame::updateDebugModeCache()
 {
-	//if ((gDLL->getChtLvl() > 0) || (gDLL->GetWorldBuilderMode()))
-	//{
-		m_bDebugModeCache = m_bDebugMode;
-	//}
-	//else
-	//{
-	//	m_bDebugModeCache = false;
-	//}
+	OutputDebugString("exe is asking if this unit is in battle\n");
 }
 
 int CvGame::getPitbossTurnTime() const
@@ -8188,7 +8179,6 @@ void CvGame::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ(wrapper,"CvGame",&m_bScoreDirty);
 	WRAPPER_READ(wrapper,"CvGame",(int*)&m_circumnavigatingTeam);
-	// m_bDebugMode not saved
 
 	// m_bPbemTurnSent not saved
 	WRAPPER_READ(wrapper,"CvGame",&m_bHotPbemBetweenTurns);
@@ -8513,7 +8503,6 @@ void CvGame::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvGame", m_bScoreDirty);
 	WRAPPER_WRITE(wrapper, "CvGame", (int)m_circumnavigatingTeam);
-	// m_bDebugMode not saved
 
 	// m_bPbemTurnSent not saved
 	WRAPPER_WRITE(wrapper, "CvGame", m_bHotPbemBetweenTurns);

@@ -138,7 +138,6 @@ void CyGamePythonInterface()
 		.def("changeDiploVote", &CyGame::changeDiploVote, "void (VoteSourceTypes, int)")
 		.def("isDebugMode", &CyGame::isDebugMode, "bool () - is the game in Debug Mode?")
 		.def("toggleDebugMode", &CyGame::toggleDebugMode)
-		.def("getChtLvl", &CyGame::getChtLvl, "int getChtLvl()")
 
 		.def("getPitbossTurnTime", &CyGame::getPitbossTurnTime, "int ()")
 		.def("setPitbossTurnTime", &CyGame::setPitbossTurnTime, "void (int)")

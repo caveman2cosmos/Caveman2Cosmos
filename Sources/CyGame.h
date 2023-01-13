@@ -149,8 +149,6 @@ public:
 	bool isDebugMode() const;
 	void toggleDebugMode();
 
-	int getChtLvl() const;
-
 	int getPitbossTurnTime() const;
 	void setPitbossTurnTime(int iHours);
 	bool isHotSeat() const;

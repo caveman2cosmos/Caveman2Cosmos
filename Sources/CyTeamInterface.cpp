@@ -151,7 +151,6 @@ void CyTeamPythonInterface()
 		.def("getBuildingCount", &CyTeam::getBuildingCount, "bool (int /*BuildingTypes*/ eIndex)")
 		.def("isBuildingMaxedOut", &CyTeam::isBuildingMaxedOut, "bool (BuildingTypes, iExtra)")
 		.def("getUnitCount", &CyTeam::getUnitCount, "int (int (UnitTypes) eIndex)")
-		.def("isUnitMaxedOut", &CyTeam::isUnitMaxedOut, "bool (int (UnitTypes) eIndex, int iExtra)")
 		.def("isObsoleteBuilding", &CyTeam::isObsoleteBuilding, "bool (BuildingID - is BuildingID obsolete?")
 
 		.def("getResearchProgress", &CyTeam::getResearchProgress, "int (TechID) - progress towards finishing research on TechID")

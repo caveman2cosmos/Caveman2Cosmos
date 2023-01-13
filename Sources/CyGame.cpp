@@ -532,11 +532,6 @@ void CyGame::toggleDebugMode()
 	m_pGame.toggleDebugMode();
 }
 
-int CyGame::getChtLvl() const
-{
-	return gDLL->getChtLvl();
-}
-
 int CyGame::getPitbossTurnTime() const
 {
 	return m_pGame.getPitbossTurnTime();
