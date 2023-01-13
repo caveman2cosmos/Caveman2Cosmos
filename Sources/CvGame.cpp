@@ -8399,20 +8399,6 @@ void CvGame::read(FDataStreamBase* pStream)
 		m_sorenRand.reseed(timeGetTime());
 	}
 
-#ifndef BREAK_SAVES
-	int m_iShrineBuildingCount = 0;
-	WRAPPER_READ(wrapper, "CvGame", &m_iShrineBuildingCount);
-	if (m_iShrineBuildingCount > 0)
-	{
-		int* m_aiShrineBuilding = new int[GC.getNumBuildingInfos()];
-		int* m_aiShrineReligion = new int[GC.getNumBuildingInfos()];
-		WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper, "CvGame", REMAPPED_CLASS_TYPE_BUILDINGS, m_iShrineBuildingCount, m_aiShrineBuilding);
-		WRAPPER_READ_CLASS_ENUM_ARRAY_ALLOW_MISSING(wrapper, "CvGame", REMAPPED_CLASS_TYPE_RELIGIONS, m_iShrineBuildingCount, m_aiShrineReligion);
-		delete[] m_aiShrineBuilding;
-		delete[] m_aiShrineReligion;
-	}
-#endif
-
 	WRAPPER_READ(wrapper,"CvGame",&m_iNumCultureVictoryCities);
 	WRAPPER_READ(wrapper,"CvGame",&m_eCultureVictoryCultureLevel);
 

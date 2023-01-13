@@ -179,12 +179,6 @@ void CvMapExternal::read(FDataStreamBase* pStream)
 
 	wrapper.AttachToStream(pStream);
 
-#ifndef BREAK_SAVES
-	bool bMultiMapFormat = false;
-
-	WRAPPER_READ(wrapper, "CvMapExternal", &bMultiMapFormat);
-#endif
-
 	foreach_(CvMap* map, GC.getMaps())
 	{
 		bool bInitialized = false;
@@ -206,12 +200,6 @@ void CvMapExternal::write(FDataStreamBase* pStream)
 	CvTaggedSaveFormatWrapper& wrapper = CvTaggedSaveFormatWrapper::getSaveFormatWrapper();
 
 	wrapper.AttachToStream(pStream);
-
-#ifndef BREAK_SAVES
-	bool bMultiMapFormat = true;	//	Always save in multimap format
-
-	WRAPPER_WRITE(wrapper, "CvMapExternal", bMultiMapFormat);
-#endif
 
 	foreach_(CvMap* map, GC.getMaps())
 	{
