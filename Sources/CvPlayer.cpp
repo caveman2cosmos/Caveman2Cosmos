@@ -18721,11 +18721,10 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		}
 		WRAPPER_READ(wrapper, "CvPlayer", &m_iMaxTradeRoutesAdjustment);
 
-#ifdef BREAK_SAVES
-		for (int i = 0; i < NUM_MAPS; i++)
-#else
-		for (int i = 0; i < 1; i++)
-#endif
+		int iSize;
+		WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iSize, "NUM_MAPS");
+
+		for (int i = 0; i < iSize; i++)
 		{
 			m_groupCycles[i]->Read(pStream);
 			ReadStreamableFFreeListTrashArray(*m_plotGroups[i], pStream);
@@ -19899,11 +19898,9 @@ void CvPlayer::write(FDataStreamBase* pStream)
 
 		WRAPPER_WRITE(wrapper, "CvPlayer", m_iMaxTradeRoutesAdjustment);
 
-#ifdef BREAK_SAVES
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", NUM_MAPS, "NUM_MAPS");
+
 		for (int i = 0; i < NUM_MAPS; i++)
-#else
-		for (int i = 0; i < 1; i++)
-#endif
 		{
 			m_groupCycles[i]->Write(pStream);
 			WriteStreamableFFreeListTrashArray(*m_plotGroups[i], pStream);
