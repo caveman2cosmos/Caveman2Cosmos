@@ -3,7 +3,7 @@ import numpy
 import regex
 
 c2cSourceDir = r"..\Sources"
-crawler = CppCrawler(c2cSourceDir)
+crawler = CppCrawler(c2cSourceDir, backupDir=c2cSourceDir+"/backup")
 
 # ommits lines starting with @`
 def loadLines(filename):
