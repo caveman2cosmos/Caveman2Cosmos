@@ -425,7 +425,6 @@ protected:
 	// < M.A.D. Nukes End   >
 	bool m_bScoreDirty;
 	bool m_bDebugMode;
-	bool m_bDebugModeCache;
 	bool m_bFinalInitialized;
 	bool m_bPbemTurnSent;
 	bool m_bHotPbemBetweenTurns;

@@ -3962,7 +3962,6 @@ class CvMainInterface:
 	def isUnitMaxedOut(self, iType, InCity, iExtra=0):
 		return (
 			GAME.isUnitMaxedOut(iType, InCity.CyTeam.getUnitMaking(iType) + iExtra)
-			or InCity.CyTeam.isUnitMaxedOut(iType, InCity.CyTeam.getUnitMaking(iType) + iExtra)
 			or InCity.CyPlayer.isUnitMaxedOut(iType, InCity.CyPlayer.getUnitMaking(iType) + iExtra)
 		)
 

@@ -28649,14 +28649,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD]Anzeige der Siegchance
 		<Spanish>[ICON_BULLET]Unidad de equipo (%d1_Num [NUM1:permitida:permitidas])</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_TEAM_UNIT_LEFT</Tag>
-		<English>[SPACE]Team Unit: %d1_Num Left</English>
-		<French>[SPACE]Unité d'équipe : reste %d1_Num</French>
-		<German>[SPACE]Teameinheit: %d1_Num übrig</German>
-		<Italian>[SPACE]Unità di squadra: %d1_Num [NUM1:rimanente:rimanenti]</Italian>
-		<Spanish>[SPACE]Unidad de equipo: %d1_Num [NUM1:restante:restantes]</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_TURNS</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]%d1_Num Turns[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]%d1_Num tours[COLOR_REVERT]</French>

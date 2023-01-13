@@ -237,12 +237,9 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	// Log this event
 	if (GC.getLogging())
 	{
-		if (gDLL->getChtLvl() > 0)
-		{
-			char szOut[1024];
-			sprintf(szOut, "Player %d City %d built at %d:%d\n", eOwner, iID, iX, iY);
-			gDLL->messageControlLog(szOut);
-		}
+		char szOut[1024];
+		sprintf(szOut, "Player %d City %d built at %d:%d\n", eOwner, iID, iX, iY);
+		gDLL->messageControlLog(szOut);
 	}
 
 	CvPlot* pPlot = GC.getMap().plot(iX, iY);
@@ -19254,11 +19251,11 @@ int CvCity::getSoundscapeScriptId() const
 
 void CvCity::cheat(bool bCtrl, bool bAlt, bool bShift)
 {
-	if (gDLL->getChtLvl() > 0)
+	if (gDLL->getChtLvl() > 0 || GC.getGame().isDebugMode())
 	{
 		if (bCtrl)
 		{
-			changeCulture(getOwner(), 10, true, true);
+			changeCulture(getOwner(), GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent(), true, true);
 		}
 		else if (bShift)
 		{
@@ -20196,10 +20193,8 @@ bool CvCity::canUpgradeUnit(UnitTypes eUnit) const
 	{
 		const UnitTypes eUpgradeUnit = (UnitTypes)GC.getUnitInfo(eUnit).getUnitUpgrade(iI);
 
-		if (GC.getGame().isUnitMaxedOut(eUpgradeUnit)
-		|| GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isUnitMaxedOut(eUpgradeUnit)
-		|| GET_PLAYER(getOwner()).isUnitMaxedOut(eUpgradeUnit))
-		{//if the upgrade unit is maxed out, I assume you can construct them, and already have constructed the max
+		if (GC.getGame().isUnitMaxedOut(eUpgradeUnit) || GET_PLAYER(getOwner()).isUnitMaxedOut(eUpgradeUnit))
+		{ // if the upgrade unit is maxed out, I assume you can construct them, and already have constructed the max
 			return true;
 		}
 	}

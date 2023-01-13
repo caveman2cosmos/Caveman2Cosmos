@@ -630,11 +630,6 @@ int CyTeam::getUnitCount(int /*UnitTypes*/ eIndex) const
 	return m_pTeam->getUnitCount((UnitTypes)eIndex);
 }
 
-bool CyTeam::isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra) const
-{
-	return m_pTeam->isUnitMaxedOut((UnitTypes)eIndex, iExtra);
-}
-
 int CyTeam::getBuildingCount(int /*BuildingTypes*/ eIndex) const
 {
 	return m_pTeam->getBuildingCount((BuildingTypes)eIndex);
