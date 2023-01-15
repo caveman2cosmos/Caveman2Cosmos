@@ -149,8 +149,6 @@ public:
 	bool isDebugMode() const;
 	void toggleDebugMode();
 
-	int getChtLvl() const;
-
 	int getPitbossTurnTime() const;
 	void setPitbossTurnTime(int iHours);
 	bool isHotSeat() const;
@@ -304,6 +302,7 @@ public:
 	const char* getC2CVersion() const;
 
 	void assignStartingPlots(bool bScenario, bool bMapScript);
+	void exitWorldBuilder();
 
 protected:
 	CvGame& m_pGame;

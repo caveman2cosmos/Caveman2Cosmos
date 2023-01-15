@@ -91,7 +91,6 @@ class CvEventManager:
 			'unitKilled'				: self.onUnitKilled,
 			'unitPromoted'				: self.onUnitPromoted,
 			'unitUpgraded'				: self.onUnitUpgraded,
-#			'unitSelected'				: self.onUnitSelected,
 			'UnitRename'				: self.onUnitRename,
 #			'unitPillage'				: self.onUnitPillage,
 			'unitSpreadReligionAttempt'	: self.onUnitSpreadReligionAttempt,
@@ -2133,11 +2132,6 @@ class CvEventManager:
 		if DebugUtils.bDebugMode:
 			CyUnitOld, CyUnitNew, iPrice = argsList
 			print "%s Upgraded %s to %s" %(GC.getPlayer(CyUnitOld.getOwner()).getCivilizationDescription(0), CyUnitOld.getName(), CyUnitNew.getName())
-
-	''' Might be useful
-	def onUnitSelected(self, argsList):
-		CyUnit = argsList[0]
-	'''
 
 
 	def onUnitRename(self, argsList):

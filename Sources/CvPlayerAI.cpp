@@ -1396,13 +1396,15 @@ void CvPlayerAI::AI_unitUpdate()
 	//	counts go through and fix it!
 	//	Note - this is fixing a symptom rather than a cause which is distasteful, but as
 	//	yet the cause remains elusive
-	if (m_groupCycles[CURRENT_MAP]->getLength() != m_selectionGroups[CURRENT_MAP]->getCount() - (m_pTempUnit == NULL ? 0 : 1))
+	if (m_groupCycles[CURRENT_MAP]->getLength() != m_selectionGroups[CURRENT_MAP]->getCount() - (m_pTempUnit ? 1 : 0))
 	{
-		if (m_pTempUnit != NULL)
+		/*
+		if (m_pTempUnit)
 		{
-			//FAssert(m_pTempUnit->getGroup() != NULL);
-			//OutputDebugString(CvString::format("temp group id is %d\n", m_pTempUnit->getGroup()->getID()).c_str());
+			FAssert(m_pTempUnit->getGroup() != NULL);
+			OutputDebugString(CvString::format("temp group id is %d\n", m_pTempUnit->getGroup()->getID()).c_str());
 		}
+		*/
 		OutputDebugString("Group cycle:\n");
 		for (CLLNode<int>* pCurrUnitNode = headGroupCycleNode(); pCurrUnitNode != NULL; pCurrUnitNode = nextGroupCycleNode(pCurrUnitNode))
 		{
@@ -4364,14 +4366,19 @@ int CvPlayerAI::techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool b
 	int	iValue = 0;
 	int iScaleFactor = 1;
 
-	logBBAI("  Evaluate tech path value:");
+	if (gPlayerLogLevel > 1)
+	{
+		logBBAI("  Evaluate tech path value:");
+	}
 	foreach_(const TechTypes & loopTech, *path)
 	{
 		int iTempCost = std::max(1, GET_TEAM(getTeam()).getResearchCost(eTech) - GET_TEAM(getTeam()).getResearchProgress(eTech));
 		int iTempValue = AI_TechValueCached(loopTech, bAsync);
 
-		logBBAI("	tech %S: cost %d, value %d", GC.getTechInfo(loopTech).getDescription(), iTempCost, iTempValue);
-
+		if (gPlayerLogLevel > 2)
+		{
+			logBBAI("	tech %S: cost %d, value %d", GC.getTechInfo(loopTech).getDescription(), iTempCost, iTempValue);
+		}
 		iCost += iTempCost;
 		iValue += iTempValue / iScaleFactor;
 
@@ -4419,7 +4426,10 @@ techPath* CvPlayerAI::findBestPath(TechTypes eTech, int& valuePerUnitCost, bool 
 	foreach_(techPath * path, possiblePaths)
 	{
 		const int iValue = techPathValuePerUnitCost(path, eTech, bIgnoreCost, bAsync);
-		logBBAI("  Evaluated tech path value leading to %S as %d", GC.getTechInfo(eTech).getDescription(), iValue);
+		if (gPlayerLogLevel > 2)
+		{
+			logBBAI("  Evaluated tech path value leading to %S as %d", GC.getTechInfo(eTech).getDescription(), iValue);
+		}
 		if (iValue >= iBestValue)
 		{
 			iBestValue = iValue;
@@ -21727,7 +21737,7 @@ bool CvPlayerAI::AI_disbandUnit(int iExpThreshold)
 		}
 	}
 
-	if (pBestUnit != NULL)
+	if (pBestUnit)
 	{
 		if (gPlayerLogLevel >= 2)
 		{
@@ -25044,8 +25054,10 @@ int CvPlayerAI::AI_getCitySitePriorityFactor(const CvPlot* pPlot) const
 
 void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) const
 {
-	logBBAI("Player %d (%S) begin Update City Sites (min. value: %d)...", getID(), getCivilizationDescription(0), iMinFoundValueThreshold);
-
+	if (gPlayerLogLevel > 1)
+	{
+		logBBAI("Player %d (%S) begin Update City Sites (min. value: %d)...", getID(), getCivilizationDescription(0), iMinFoundValueThreshold);
+	}
 	for (int iI = 0; iI < iMaxSites; iI++)
 	{
 		//Add a city to the list.
@@ -25068,7 +25080,10 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 					{
 						iBestFoundValue = iValue;
 						pBestFoundPlot = plotX;
-						logBBAI("  Potential best city site (%d, %d) found value is %d (player modified value to %d)", plotX->getX(), plotX->getY(), iFoundValue, iValue);
+						if (gPlayerLogLevel > 1)
+						{
+							logBBAI("  Potential best city site (%d, %d) found value is %d (player modified value to %d)", plotX->getX(), plotX->getY(), iFoundValue, iValue);
+						}
 					}
 				}
 			}
@@ -25077,11 +25092,17 @@ void CvPlayerAI::AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) 
 		{
 			break;
 		}
-		logBBAI("	Found City Site at (%d, %d)", pBestFoundPlot->getX(), pBestFoundPlot->getY());
+		if (gPlayerLogLevel > 1)
+		{
+			logBBAI("	Found City Site at (%d, %d)", pBestFoundPlot->getX(), pBestFoundPlot->getY());
+		}
 		m_aiAICitySites.push_back(GC.getMap().plotNum(pBestFoundPlot->getX(), pBestFoundPlot->getY()));
 		AI_recalculateFoundValues(pBestFoundPlot->getX(), pBestFoundPlot->getY(), CITY_PLOTS_RADIUS, 2 * CITY_PLOTS_RADIUS);
 	}
-	logBBAI("Player %d (%S) end Update City Sites", getID(), getCivilizationDescription(0));
+	if (gPlayerLogLevel > 1)
+	{
+		logBBAI("Player %d (%S) end Update City Sites", getID(), getCivilizationDescription(0));
+	}
 }
 
 void CvPlayerAI::calculateCitySites() const

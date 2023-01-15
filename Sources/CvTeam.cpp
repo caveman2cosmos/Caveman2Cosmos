@@ -4617,28 +4617,6 @@ void CvTeam::changeProjectMaking(ProjectTypes eIndex, int iChange)
 	FASSERT_NOT_NEGATIVE(getProjectMaking(eIndex));
 }
 
-bool CvTeam::isUnitMaxedOut(const UnitTypes eIndex, const int iExtra) const
-{
-	return false;
-
-/* Toffer:
-iMaxTeamInstances was unused in CvUnit(Class)Info and then removed as part of us shedding the unit-class object, maybe we want to add it back in for CvUnitInfo?
-
-	FASSERT_BOUNDS(0, GC.getNumUnitInfos(), eIndex);
-
-	if (!isTeamUnit(eIndex))
-	{
-		return false;
-	}
-
-	if (GC.getGame().isOption(GAMEOPTION_UNLIMITED_NATIONAL_UNITS) && !GC.getUnitInfo(eIndex).isUnlimitedException())
-	{
-		return false;
-	}
-	return ((getUnitCount(eIndex) + iExtra) >= GC.getUnitInfo(eIndex).getMaxTeamInstances());
-*/
-}
-
 
 void CvTeam::changeUnitCount(const UnitTypes eUnit, const int iChange)
 {
