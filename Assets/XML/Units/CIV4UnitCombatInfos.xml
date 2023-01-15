@@ -120,9 +120,25 @@
 			<Type>UNITCOMBAT_HELICOPTER</Type>
 			<Description>TXT_KEY_UNITCOMBAT_HELICOPTER</Description>
 			<Categories>
-				<Category>CATEGORY_UNITCOMBAT_GROUP_COMBAT</Category>
+				<Category>CATEGORY_UNITCOMBAT_GROUP_PRIMARY_ROLE</Category>
 			</Categories>
 			<bFliesToMoveAdd>1</bFliesToMoveAdd>
+			<Button>Art/Interface/Buttons/units/sparth/categories/helicopters.dds</Button>
+		</UnitCombatInfo>
+		<UnitCombatInfo>
+			<Type>UNITCOMBAT_GUNSHIP</Type>
+			<Description>TXT_KEY_UNITCOMBAT_GUNSHIP</Description>
+			<Categories>
+				<Category>CATEGORY_UNITCOMBAT_GROUP_COMBAT</Category>
+			</Categories>
+			<iCityAttack>-50</iCityAttack>
+			<iCityDefense>50</iCityDefense>
+			<UnitCombatChangeModifiers>
+				<UnitCombatChangeModifier>
+					<UnitCombatType>UNITCOMBAT_TRACKED</UnitCombatType>
+					<iModifier>50</iModifier>
+				</UnitCombatChangeModifier>
+			</UnitCombatChangeModifiers>
 			<iCaptureProbabilityModifierChange>-30</iCaptureProbabilityModifierChange>
 			<iCaptureResistanceModifierChange>-20</iCaptureResistanceModifierChange>
 			<bForMilitary>1</bForMilitary>
