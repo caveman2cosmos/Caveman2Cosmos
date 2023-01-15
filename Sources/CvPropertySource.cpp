@@ -63,16 +63,13 @@ int CvPropertySource::getRelationData() const
 
 bool CvPropertySource::isActive(const CvGameObject* pObject) const
 {
-	if ((m_eObjectType == NO_GAMEOBJECT) || (m_eObjectType == pObject->getGameObjectType()))
+	if (m_eObjectType == NO_GAMEOBJECT || m_eObjectType == pObject->getGameObjectType())
 	{
 		if (m_pExprActive)
 		{
 			return m_pExprActive->evaluate(pObject);
 		}
-		else
-		{
-			return true;
-		}
+		return true;
 	}
 	return false;
 }
@@ -176,12 +173,7 @@ int CvPropertySourceConstant::getSourcePredict(const CvGameObject* pObject, int 
 
 int CvPropertySourceConstant::getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext) const
 {
-	int iAmountPerTurn;
-	if (pContext)
-		iAmountPerTurn = pContext->getData1();
-	else
-		iAmountPerTurn = getAmountPerTurn(pObject);
-	return iAmountPerTurn;
+	return pContext ? pContext->getData1() : getAmountPerTurn(pObject);
 }
 
 void CvPropertySourceConstant::buildDisplayString(CvWStringBuffer &szBuffer) const
@@ -196,7 +188,6 @@ void CvPropertySourceConstant::buildDisplayString(CvWStringBuffer &szBuffer) con
 
 bool CvPropertySourceConstant::read(CvXMLLoadUtility *pXML)
 {
-	OutputDebugString("Reading PropertySourceConstant");
 	CvPropertySource::read(pXML);
 	if (pXML->TryMoveToXmlFirstChild(L"iAmountPerTurn"))
 	{
@@ -209,7 +200,7 @@ bool CvPropertySourceConstant::read(CvXMLLoadUtility *pXML)
 void CvPropertySourceConstant::copyNonDefaults(CvPropertySource* pProp)
 {
 	CvPropertySource::copyNonDefaults(pProp);
-	if (m_pAmountPerTurn == NULL)
+	if (!m_pAmountPerTurn)
 	{
 		CvPropertySourceConstant* pOther = static_cast<CvPropertySourceConstant*>(pProp);
 		m_pAmountPerTurn = pOther->m_pAmountPerTurn;
@@ -262,11 +253,8 @@ int CvPropertySourceConstantLimited::getSourceCorrect(const CvGameObject* pObjec
 	{
 		return iPredict;
 	}
-	else
-	{
-		const int iTotalPredicted = iPredictedAmount - iCurrentAmount;
-		return (iPredict * (m_iLimit - iCurrentAmount)) / iTotalPredicted;
-	}
+	const int iTotalPredicted = iPredictedAmount - iCurrentAmount;
+	return (iPredict * (m_iLimit - iCurrentAmount)) / iTotalPredicted;
 }
 
 void CvPropertySourceConstantLimited::buildDisplayString(CvWStringBuffer &szBuffer) const
@@ -279,7 +267,7 @@ void CvPropertySourceConstantLimited::buildDisplayString(CvWStringBuffer &szBuff
 
 bool CvPropertySourceConstantLimited::read(CvXMLLoadUtility *pXML)
 {
-	OutputDebugString("Reading PropertySourceConstantLimit");
+	OutputDebugString("Reading PropertySourceConstantLimit\n");
 	CvPropertySource::read(pXML);
 	pXML->GetOptionalChildXmlValByName(&m_iAmountPerTurn, L"iAmountPerTurn");
 	pXML->GetOptionalChildXmlValByName(&m_iLimit, L"iLimit");
@@ -334,18 +322,15 @@ bool CvPropertySourceDecay::isActive(const CvGameObject* pObject) const
 	{
 		return CvPropertySource::isActive(pObject);
 	}
-	else
-	{
-		return false;
-	}
+	return false;
 }
 
 int CvPropertySourceDecay::getSourcePredict(const CvGameObject* pObject, int iCurrentAmount, PropertySourceContext* pContext) const
 {
 	if (iCurrentAmount >= 0)
 		return - (m_iPercent * std::max(iCurrentAmount - m_iNoDecayAmount, 0)) / 100;
-	else
-		return (m_iPercent * std::max(-iCurrentAmount - m_iNoDecayAmount, 0)) / 100;
+
+	return (m_iPercent * std::max(-iCurrentAmount - m_iNoDecayAmount, 0)) / 100;
 }
 
 int CvPropertySourceDecay::getSourceCorrect(const CvGameObject* pObject, int iCurrentAmount, int iPredictedAmount, const PropertySourceContext* pContext) const
@@ -357,27 +342,22 @@ int CvPropertySourceDecay::getSourceCorrect(const CvGameObject* pObject, int iCu
 		{
 			return 0;
 		}
-
-		int iPredicted = iCurrentAmount - (iDiff * m_iPercent) / 100;
-		int iExtra = iPredictedAmount - iPredicted;
+		const int iPredicted = iCurrentAmount - (iDiff * m_iPercent) / 100;
+		const int iExtra = iPredictedAmount - iPredicted;
 		//use half of extra to base decay on
 		iDiff += iExtra / 2;
 		return - std::max(0, (iDiff * m_iPercent) / 100);
 	}
-	else
+	int iDiff = -iCurrentAmount - m_iNoDecayAmount;
+	if (iDiff <= 0)
 	{
-		int iDiff = -iCurrentAmount - m_iNoDecayAmount;
-		if (iDiff <= 0)
-		{
-			return 0;
-		}
-
-		int iPredicted = iCurrentAmount + (iDiff * m_iPercent) / 100;
-		int iExtra = iPredictedAmount - iPredicted;
-		//use half of extra to base decay on
-		iDiff += iExtra / 2;
-		return std::max(0, (iDiff * m_iPercent) / 100);
+		return 0;
 	}
+	const int iPredicted = iCurrentAmount + (iDiff * m_iPercent) / 100;
+	const int iExtra = iPredictedAmount - iPredicted;
+	//use half of extra to base decay on
+	iDiff += iExtra / 2;
+	return std::max(0, (iDiff * m_iPercent) / 100);
 }
 
 void CvPropertySourceDecay::buildDisplayString(CvWStringBuffer &szBuffer) const
@@ -390,7 +370,7 @@ void CvPropertySourceDecay::buildDisplayString(CvWStringBuffer &szBuffer) const
 
 bool CvPropertySourceDecay::read(CvXMLLoadUtility *pXML)
 {
-	OutputDebugString("Reading PropertySourceDecay");
+	OutputDebugString("Reading PropertySourceDecay\n");
 	CvPropertySource::read(pXML);
 	pXML->GetOptionalChildXmlValByName(&m_iPercent, L"iPercent");
 	pXML->GetOptionalChildXmlValByName(&m_iNoDecayAmount, L"iNoDecayAmount");
@@ -456,7 +436,7 @@ void CvPropertySourceAttributeConstant::buildDisplayString(CvWStringBuffer &szBu
 
 bool CvPropertySourceAttributeConstant::read(CvXMLLoadUtility *pXML)
 {
-	OutputDebugString("Reading PropertySourceAtributeConstant");
+	OutputDebugString("Reading PropertySourceAtributeConstant\n");
 	CvPropertySource::read(pXML);
 	CvString szTextVal;
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"AttributeType", "NO_ATTRIBUTE");

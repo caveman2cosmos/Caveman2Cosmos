@@ -1151,11 +1151,11 @@ void CvImprovementInfo::copyNonDefaults(const CvImprovementInfo* pClassInfo)
 	CvXMLLoadUtility::CopyNonDefaultsFromVector(m_aeMapCategoryTypes, pClassInfo->getMapCategories());
 }
 
-void CvImprovementInfo::doPostLoadCaching(uint32_t eThis)
+void CvImprovementInfo::doPostLoadCaching(uint32_t iThis)
 {
 	for (int i = 0, num = GC.getNumBuildInfos(); i < num; i++)
 	{
-		if (GC.getBuildInfo((BuildTypes)i).getImprovement() == eThis)
+		if (GC.getBuildInfo((BuildTypes)i).getImprovement() == iThis)
 		{
 			m_improvementBuildTypes.push_back((BuildTypes)i);
 		}

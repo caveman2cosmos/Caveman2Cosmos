@@ -2446,8 +2446,9 @@ void cvInternalGlobals::cacheEnumGlobals()
 
 void cvInternalGlobals::cacheGlobals()
 {
+#ifdef _DEBUG
 	OutputDebugString("Caching Globals: Start\n");
-
+#endif
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 
 #define CACHE_INT_GLOBAL_DEFINE(dataType, VAR) \
@@ -2471,8 +2472,9 @@ void cvInternalGlobals::cacheGlobals()
 	{
 		m_szAlternateProfilSampleName = "";
 	}
-
+#ifdef _DEBUG
 	OutputDebugString("Caching Globals: End\n");
+#endif
 }
 
 
@@ -2639,8 +2641,9 @@ int cvInternalGlobals::getInfoTypeForString(const char* szType, bool hideAssert)
 void cvInternalGlobals::setInfoTypeFromString(const char* szType, int idx)
 {
 	FAssertMsg(szType, "null info type string");
+#ifdef _DEBUG
 	OutputDebugString(CvString::format("%s -> %d\n", szType, idx).c_str());
-
+#endif
 	char* strCpy = new char[strlen(szType)+1];
 
 	m_infosMap[strcpy(strCpy, szType)] = idx;
