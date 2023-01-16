@@ -3232,20 +3232,15 @@ bool CvPlayer::isNormalAI() const
 
 void CvPlayer::updateHuman()
 {
-	if (m_bDisableHuman || getID() == NO_PLAYER)
-	{
-		m_bHuman = false;
-	}
-	else
-	{
-		m_bHuman = GC.getInitCore().getHuman(getID());
-	}
+	m_bHuman = !m_bDisableHuman && getID() != NO_PLAYER && GC.getInitCore().getHuman(getID());
 }
 
 
 /*DllExport*/ bool CvPlayer::isBarbarian() const
 {
+#ifdef _DEBUG
 	OutputDebugString(CvString::format("exe is asking if player (%d) is barbarian\n", m_eID).c_str());
+#endif
 	return getID() == BARBARIAN_PLAYER;
 }
 
@@ -3261,16 +3256,16 @@ bool CvPlayer::isHominid() const
 
 bool CvPlayer::isAnimal() const
 {
-	return (getID() == PREDATOR_PLAYER || getID() == PREY_PLAYER || getID() == BEAST_PLAYER);
-}
-
-bool CvPlayer::isInvasionCapablePlayer() const
-{
-	if (isAnimal())
+	switch (getID())
 	{
-		return false;
+		case PREDATOR_PLAYER:
+		case PREY_PLAYER:
+		case BEAST_PLAYER:
+		{
+			return true;
+		}
+		default: return false;
 	}
-	return true;
 }
 
 
@@ -5242,7 +5237,6 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 			&& GET_TEAM(getTeam()).isHasEmbassy(GET_PLAYER(eWhoTo).getTeam())
 			&& GC.getUnitInfo(pUnitTraded->getUnitType()).isWorkerTrade()
 			&& pUnitTraded->canMove()
-			&& !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isUnitMaxedOut(pUnitTraded->getUnitType(), GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).getUnitMaking(pUnitTraded->getUnitType()))
 			&& !GET_PLAYER(eWhoTo).isUnitMaxedOut(pUnitTraded->getUnitType(), GET_PLAYER(eWhoTo).getUnitMaking(pUnitTraded->getUnitType())))
 			{
 				bResult = true;
@@ -5265,7 +5259,6 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 				if (pTradingCity != NULL && pTradingCity->getOwner() == getID()
 				&& pTradingCity->isConnectedTo(pTheirCapitalCity)
 				&& pTradingCity->isRevealed(GET_PLAYER(eWhoTo).getTeam(), true)
-				&& !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isUnitMaxedOut(pUnitTraded->getUnitType(), GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).getUnitMaking(pUnitTraded->getUnitType()))
 				&& !GET_PLAYER(eWhoTo).isUnitMaxedOut(pUnitTraded->getUnitType(), GET_PLAYER(eWhoTo).getUnitMaking(pUnitTraded->getUnitType())))
 				{
 					bResult = true;
@@ -6482,7 +6475,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 			}
 		}
 
-		if (GC.getGame().isUnitMaxedOut(eUnit) || GET_TEAM(getTeam()).isUnitMaxedOut(eUnit) || isUnitMaxedOut(eUnit))
+		if (GC.getGame().isUnitMaxedOut(eUnit) || isUnitMaxedOut(eUnit))
 		{
 			return false;
 		}
@@ -6492,9 +6485,8 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 	{
 		if (!bPropertySpawn)
 		{
-			if (GC.getGame().isUnitMaxedOut(eUnit, GET_TEAM(getTeam()).getUnitMaking(eUnit) + (bContinue ? -1 : 0))
-			|| GET_TEAM(getTeam()).isUnitMaxedOut(eUnit, GET_TEAM(getTeam()).getUnitMaking(eUnit) + (bContinue ? -1 : 0))
-			|| isUnitMaxedOut(eUnit, getUnitMaking(eUnit) + (bContinue ? -1 : 0)))
+			if (GC.getGame().isUnitMaxedOut(eUnit, GET_TEAM(getTeam()).getUnitMaking(eUnit) - bContinue)
+			|| isUnitMaxedOut(eUnit, getUnitMaking(eUnit) - bContinue))
 			{
 				return false;
 			}
@@ -6887,27 +6879,7 @@ bool CvPlayer::canMaintain(ProcessTypes eProcess) const
 
 bool CvPlayer::isProductionMaxedUnit(UnitTypes eUnit) const
 {
-	if (eUnit == NO_UNIT)
-	{
-		return false;
-	}
-
-	if (GC.getGame().isUnitMaxedOut(eUnit))
-	{
-		return true;
-	}
-
-	if (GET_TEAM(getTeam()).isUnitMaxedOut(eUnit))
-	{
-		return true;
-	}
-
-	if (isUnitMaxedOut(eUnit))
-	{
-		return true;
-	}
-
-	return false;
+	return eUnit != NO_UNIT && (GC.getGame().isUnitMaxedOut(eUnit) || isUnitMaxedOut(eUnit));
 }
 
 
@@ -12151,7 +12123,7 @@ void CvPlayer::setTurnActive(bool bNewValue, bool bDoTurn)
 				startProfilingDLL(true);
 			}
 
-			if (GC.getLogging() && gDLL->getChtLvl() > 0)
+			if (GC.getLogging() && GC.getGame().isDebugMode())
 			{
 				char szOut[1024];
 				sprintf(szOut, "Player %d Turn OFF\n", getID());
@@ -14448,7 +14420,7 @@ void CvPlayer::updateGroupCycle(CvUnit* pUnit, bool bFarMove)
 {
 	PROFILE_FUNC();
 
-	if (!pUnit->onMap() || isTempUnit(pUnit))
+	if (!pUnit->plot() || isTempUnit(pUnit))
 	{
 		return;
 	}
@@ -19051,22 +19023,25 @@ void CvPlayer::read(FDataStreamBase* pStream)
 
 		std::vector<CvUnit*> plotlessUnits;
 
-		foreach_(CvSelectionGroup* pLoopGroup, groups())
+		foreach_(CvSelectionGroup* groupX, groups())
 		{
-			OutputDebugString(CvString::format("Check group %d:\n", pLoopGroup->getID()).c_str());
+#ifdef _DEBUG
+			OutputDebugString(CvString::format("Check group %d:\n", groupX->getID()).c_str());
+#endif
 			unitsPresent.clear();
-			foreach_(CvUnit* pUnit, pLoopGroup->units())
+			foreach_(CvUnit* pUnit, groupX->units())
 			{
 				CvSelectionGroup* putativeGroup = pUnit->getGroup();
-
+#ifdef _DEBUG
 				OutputDebugString(CvString::format("\tUnit %d\n", pUnit->getID()).c_str());
-				if (putativeGroup != pLoopGroup)
+#endif
+				if (putativeGroup != groupX)
 				{
 					FErrorMsg("Corrupt group detected on load");
 					OutputDebugString(CvString::format("\t\tunit claims to be in group %d\n", putativeGroup->getID()).c_str());
 
 					// Try to fix it
-					pLoopGroup->removeUnit(pUnit);
+					groupX->removeUnit(pUnit);
 
 					if (!putativeGroup->containsUnit(pUnit) && !putativeGroup->addUnit(pUnit,true))
 					{
@@ -19075,32 +19050,29 @@ void CvPlayer::read(FDataStreamBase* pStream)
 				}
 				else if (unitsPresent.find(pUnit) != unitsPresent.end())
 				{
-					pLoopGroup->removeUnit(pUnit); // Duplicate
+					FErrorMsg("Duplicate unit in group detected on load");
+					groupX->removeUnit(pUnit); // Duplicate
 				}
 				else unitsPresent.insert(std::make_pair(pUnit,true));
 
-
-				if (pUnit->plot() == NULL)
-				{
-					plotlessUnits.push_back(pUnit);
-				}
+				if (!pUnit->plot()) plotlessUnits.push_back(pUnit);
 			}
 
 			if (!isNPC())
 			{
-				pLoopGroup->validateLocations(true);
+				groupX->validateLocations(true);
 				//	Koshling - added death processing on load to clean up units that should have been
 				//	removed, but due to bugs are 'ghosting' in the save
-				pLoopGroup->doDelayedDeath();
+				groupX->doDelayedDeath();
 			}
 		}
 
 #ifdef _DEBUG
 		if (!isNPC())
 		{
-			foreach_(CvSelectionGroup* pLoopGroup, groups())
+			foreach_(CvSelectionGroup* groupX, groups())
 			{
-				pLoopGroup->validateLocations(false);
+				groupX->validateLocations(false);
 			}
 		}
 #endif
@@ -25744,7 +25716,7 @@ void CvPlayer::getCultureLayerColors(std::vector<NiColorA>& aColors, std::vector
 
 void CvPlayer::cheat(bool bCtrl, bool bAlt, bool bShift)
 {
-	if (gDLL->getChtLvl() > 0)
+	if (gDLL->getChtLvl() > 0 || GC.getGame().isDebugMode())
 	{
 		GET_TEAM(getTeam()).setHasTech(getCurrentResearch(), true, getID(), true, false);
 	}

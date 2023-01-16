@@ -532,11 +532,6 @@ void CyGame::toggleDebugMode()
 	m_pGame.toggleDebugMode();
 }
 
-int CyGame::getChtLvl() const
-{
-	return gDLL->getChtLvl();
-}
-
 int CyGame::getPitbossTurnTime() const
 {
 	return m_pGame.getPitbossTurnTime();
@@ -1162,4 +1157,9 @@ const char* CyGame::getC2CVersion() const
 void CyGame::assignStartingPlots(bool bScenario, bool bMapScript)
 {
 	m_pGame.assignStartingPlots(bScenario, bMapScript);
+}
+
+void CyGame::exitWorldBuilder()
+{
+	m_pGame.setWorldBuilder(false);
 }

@@ -540,8 +540,9 @@ void CvPlot::erase()
 /*DllExport*/ float CvPlot::getPointX() const
 {
 	FAssertMsg(this != NULL, "CTD incoming");
+#ifdef _DEBUG
 	OutputDebugString(CvString::format("exe wants the X point for plot at (%d, %d)\n", getX(), getY()).c_str());
-
+#endif
 	const CvViewport* pCurrentViewport = GC.getCurrentViewport();
 
 	return pCurrentViewport->plotXToPointX(pCurrentViewport->getViewportXFromMapX(getX()));
@@ -551,8 +552,9 @@ void CvPlot::erase()
 /*DllExport*/ float CvPlot::getPointY() const
 {
 	FAssertMsg(this != NULL, "CTD incoming");
+#ifdef _DEBUG
 	OutputDebugString(CvString::format("exe wants the Y point for plot at (%d, %d)\n", getX(), getY()).c_str());
-
+#endif
 	const CvViewport* pCurrentViewport = GC.getCurrentViewport();
 
 	return pCurrentViewport->plotYToPointY(pCurrentViewport->getViewportYFromMapY(getY()));
@@ -1324,95 +1326,38 @@ bool CvPlot::unitHere(const CvUnit* pUnit) const
 // Toffer - ToDo: Improving this hot mess
 CvUnit* CvPlot::getPreferredCenterUnit() const
 {
-	CvUnit*  pNewCenterUnit = getSelectedUnit();
+	CvUnit* pNewCenterUnit = getSelectedUnit();
 
-	if (pNewCenterUnit != NULL)
+	if (pNewCenterUnit)
 	{
 		FAssertMsg(pNewCenterUnit->atPlot(this), "Selected unit isn't in the plot that owns it");
 		return pNewCenterUnit;
 	}
 	pNewCenterUnit = getBestDefender(GC.getGame().getActivePlayer(), NO_PLAYER, NULL, false, false, true);
-	if (pNewCenterUnit != NULL)
+
+	if (pNewCenterUnit)
 	{
 		return pNewCenterUnit;
 	}
 	pNewCenterUnit = getBestDefender(GC.getGame().getActivePlayer());
-	if (pNewCenterUnit != NULL)
+
+	if (pNewCenterUnit)
 	{
 		return pNewCenterUnit;
 	}
 	pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGame().getActivePlayer(), gDLL->getInterfaceIFace()->getHeadSelectedUnit(), true);
-	if (pNewCenterUnit != NULL)
+
+	if (pNewCenterUnit)
 	{
 		return pNewCenterUnit;
 	}
 	pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGame().getActivePlayer(), gDLL->getInterfaceIFace()->getHeadSelectedUnit());
-	if (pNewCenterUnit != NULL)
+
+	if (pNewCenterUnit)
 	{
 		return pNewCenterUnit;
 	}
-	pNewCenterUnit = getBestDefender(NO_PLAYER, GC.getGame().getActivePlayer());
-
-	return pNewCenterUnit;
-}
-
-void CvPlot::updateCenterUnit()
-{
-	PROFILE_FUNC();
-
-	if (m_bInhibitCenterUnitCalculation || !isGraphicsVisible(ECvPlotGraphics::UNIT))
-	{
-		//	Because we are inhibitting recalculation until all the adjusting code has run
-		//	(rather than have it update multiple times) the currently cached center unit
-		//	might become an invalid pointer in the interim.  To protect against this we unconditionally
-		//	set the recorded center unit to NULL (without marking the plot dirty which would force a repaint).
-		//	This makes the interim a safe state, and the correct value will be calculated once the
-		//	inhibitted section is exited
-		m_pCenterUnit = NULL;
-		return;
-	}
-
-	CvUnit* pOldCenterUnit = getCenterUnit();
-	CvUnit* pNewCenterUnit = NULL;
-
-	if (isActiveVisible(true) /*&& isGraphicsVisible(ECvPlotGraphics::UNIT)*/)
-	{
-		pNewCenterUnit = getPreferredCenterUnit();
-	}
-
-	if (pNewCenterUnit != pOldCenterUnit)
-	{
-#if 0
-		OutputDebugString(CvString::format("Center unit change for plot (%d,%d) from %08lx to %08lx\n", m_iX, m_iY, pOldCenterUnit, pNewCenterUnit).c_str());
-		if ( pOldCenterUnit != NULL )
-		{
-			//	Does the old center unit still exist?
-			if ( unitHere(pOldCenterUnit) )
-			{
-				pOldCenterUnit->reloadEntity();
-			}
-			else
-			{
-				OutputDebugString("Old center unit no longer here\n");
-			}
-		}
-#endif
-
-		//if (pOldCenterUnit != NULL)
-		//{
-		//	pOldCenterUnit->reloadEntity(true);
-		//}
-
-		if (pNewCenterUnit != NULL)
-		{
-			pNewCenterUnit->reloadEntity(true);
-		}
-		setCenterUnit(pNewCenterUnit);
-	}
-	else
-	{
-		setCenterUnit(pOldCenterUnit);
-	}
+	return getBestDefender(NO_PLAYER, GC.getGame().getActivePlayer());
 }
 
 
@@ -3297,33 +3242,40 @@ CvUnit* CvPlot::getBestDefenderExternal(PlayerTypes eOwner, PlayerTypes eAttacki
 }
 
 namespace {
-	int getDefenderScore(const CvPlot* plot, const CvUnit* pLoopUnit, PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove, bool bAssassinate, ECacheAccess::flags cacheAccess)
+	int getDefenderScore(
+		const CvUnit* unitX,
+		PlayerTypes eOwner,
+		PlayerTypes eAttackingPlayer,
+		const CvUnit* pAttacker,
+		bool bTestAtWar,
+		bool bTestPotentialEnemy,
+		bool bTestCanMove,
+		bool bAssassinate,
+		ECacheAccess::flags cacheAccess
+	)
 	{
+		FAssert(unitX->plot());
+
 		// Check the unit is valid
-		if (
-			// In delayed death cycle
-			pLoopUnit->plot() == NULL
-			// Going to be dead
-			|| pLoopUnit->AI_getPredictedHitPoints() == 0
-			// Already dead
-			|| pLoopUnit->isDead()
-			// Doesn't belong to the player we are interested in
-			|| (eOwner != NO_PLAYER && pLoopUnit->getOwner() != eOwner)
-			)
+		if (unitX->AI_getPredictedHitPoints() == 0 // Going to be dead
+		||  unitX->isDead() // Already dead
+		// Doesn't belong to the player we are interested in
+		||  eOwner != NO_PLAYER && unitX->getOwner() != eOwner)
 		{
 			return 0;
 		}
+		const CvPlot* plotX = unitX->plot();
 
 		CvChecksum checksum;
 		if (cacheAccess != ECacheAccess::None)
 		{
 			// Work out our cache key (todo: change this to just be a proper hash key)
-			if (pAttacker != NULL)
+			if (pAttacker)
 			{
 				checksum.add(pAttacker->getID());
 			}
-			checksum.add((int)pLoopUnit->getOwner());
-			checksum.add(pLoopUnit->getID());
+			checksum.add((int)unitX->getOwner());
+			checksum.add(unitX->getID());
 			checksum.add((int)bTestAtWar);
 			checksum.add((int)bTestPotentialEnemy * 10);
 			checksum.add((int)bTestCanMove * 100);
@@ -3336,7 +3288,7 @@ namespace {
 				// look in the cache
 				DefenderScoreCache::const_iterator itr = g_bestDefenderCache->find(checksum.get());
 				if (itr != g_bestDefenderCache->end()
-					&& itr->second.iHealth == pLoopUnit->getHP())
+					&& itr->second.iHealth == unitX->getHP())
 				{
 					return itr->second.iValue;
 				}
@@ -3347,43 +3299,37 @@ namespace {
 
 		if (
 			// Assassination target, if we have one
-				(!bAssassinate || (pAttacker && pLoopUnit->isTargetOf(*pAttacker)))
+			(!bAssassinate || pAttacker && unitX->isTargetOf(*pAttacker))
 			// Not invisible to the player, if any
-			&& (eAttackingPlayer == NO_PLAYER || !pLoopUnit->isInvisible(GET_PLAYER(eAttackingPlayer).getTeam(), false))
+			&& (eAttackingPlayer == NO_PLAYER || !unitX->isInvisible(GET_PLAYER(eAttackingPlayer).getTeam(), false))
 			// War enemy (todo: we should just assert that attacking player is valid if we are testing for enemy)
-			&& (!bTestAtWar
-				|| eAttackingPlayer == NO_PLAYER
-				|| pLoopUnit->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), plot)
-				|| (pAttacker != NULL && pAttacker->isEnemy(GET_PLAYER(pLoopUnit->getOwner()).getTeam(), plot, pLoopUnit)))
-			// Units cannot coexist together
-			&& (pAttacker == NULL || !pLoopUnit->canUnitCoexistWithArrivingUnit(*pAttacker))
-			// Potential enemy (todo: we should just assert that attacking player is valid if we are testing for potential enemy)
-			&& (!bTestPotentialEnemy
-				|| eAttackingPlayer == NO_PLAYER
-				|| pLoopUnit->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), plot)
-				|| (pAttacker != NULL && pAttacker->isPotentialEnemy(GET_PLAYER(pLoopUnit->getOwner()).getTeam(), plot, pLoopUnit))
-				)
-			// If we are testing movement, can the unit move?
-			&& (!bTestCanMove || (pLoopUnit->canMove() && !pLoopUnit->isCargo()))
-			// If the attacker is an air unit then is the units current damage less than the attackers damage limit?
-			&& (pAttacker == NULL
-				|| pAttacker->getDomainType() != DOMAIN_AIR
-				|| pLoopUnit->getDamage() < pAttacker->airCombatLimit(pLoopUnit)
-				)
+			&& (
+					!bTestAtWar
+				||	eAttackingPlayer == NO_PLAYER
+				||	unitX->isEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), plotX)
+				||	(pAttacker && pAttacker->isEnemy(GET_PLAYER(unitX->getOwner()).getTeam(), plotX, unitX))
 			)
+			// Potential enemy (todo: we should just assert that attacking player is valid if we are testing for potential enemy)
+			&& (
+					!bTestPotentialEnemy
+				||	eAttackingPlayer == NO_PLAYER
+				||	unitX->isPotentialEnemy(GET_PLAYER(eAttackingPlayer).getTeam(), plotX)
+				||	pAttacker && pAttacker->isPotentialEnemy(GET_PLAYER(unitX->getOwner()).getTeam(), plotX, unitX)
+			)
+			// If we are testing movement, can the unit move?
+			&& (!bTestCanMove || unitX->canMove() && !unitX->isCargo())
+		)
 		{
-			iValue = pLoopUnit->defenderValue(pAttacker);
+			iValue = unitX->defenderValue(pAttacker);
 		}
 
 		if (cacheAccess & ECacheAccess::Write)
 		{
-
 			unitDefenderInfo info;
-			info.iHealth = pLoopUnit->getHP();
+			info.iHealth = unitX->getHP();
 			info.iValue = iValue;
 			(*g_bestDefenderCache)[checksum.get()] = info;
 		}
-
 		return iValue;
 	}
 }
@@ -3423,20 +3369,21 @@ CvUnit* CvPlot::getBestDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer
 
 	// Can't use this as it requires more than 9 args, and bind only supports 9
 	//CvUnit* pBestUnit = scoring::max_score(units(),
-	//	bind(&CvSelectionGroup::getDefenderScore, this, _1, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite)
+	//	bind(&CvSelectionGroup::getDefenderScore, _1, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite)
 	//).get_value_or(nullptr);
 
-	foreach_ (CvUnit* unit, units())
+	// Toffer - The above comment is now false as I removed a redundant arg so that it is now exactly 9 arguments.
+
+	foreach_ (CvUnit* unitX, units())
 	{
-		int iValue = getDefenderScore(this, unit, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite);
+		int iValue = getDefenderScore(unitX, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, bAssassinate, bClearCache ? ECacheAccess::Write : ECacheAccess::ReadWrite);
 
 		if (iValue > iBestValue)
 		{
-			pBestUnit = unit;
+			pBestUnit = unitX;
 			iBestValue = iValue;
 		}
 	}
-
 	return pBestUnit;
 }
 
@@ -3452,20 +3399,14 @@ CvUnit* CvPlot::getFirstDefender(EDefenderScore::flags flags, PlayerTypes eOwner
 
 CvUnit* CvPlot::getFirstDefender(PlayerTypes eOwner, PlayerTypes eAttackingPlayer, const CvUnit* pAttacker, bool bTestAtWar, bool bTestPotentialEnemy, bool bTestCanMove) const
 {
-	CvUnit* pFirstUnit = NULL;
-
-	foreach_(CvUnit* pLoopUnit, units())
+	foreach_(CvUnit* unitX, units())
 	{
-		const int iValue = getDefenderScore(this, pLoopUnit, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, false, ECacheAccess::Write);
-
-		if (iValue > 0)
+		if (getDefenderScore(unitX, eOwner, eAttackingPlayer, pAttacker, bTestAtWar, bTestPotentialEnemy, bTestCanMove, false, ECacheAccess::Write) > 0)
 		{
-			pFirstUnit = pLoopUnit;
-			break;
+			return unitX;
 		}
 	}
-
-	return pFirstUnit;
+	return NULL;
 }
 
 // returns a sum of the strength (adjusted by firepower) of all the units on a plot
@@ -4686,12 +4627,6 @@ bool CvPlot::isHominid() const
 }
 
 
-bool CvPlot::isRevealedBarbarian() const
-{
-	return getRevealedOwner(GC.getGame().getActiveTeam(), true) == BARBARIAN_PLAYER;
-}
-
-
 bool CvPlot::isVisible(TeamTypes eTeam, bool bDebug) const
 {
 	if (bDebug && GC.getGame().isDebugMode())
@@ -5076,9 +5011,9 @@ bool CvPlot::isVisibleOtherUnit(PlayerTypes ePlayer) const
 
 /*DllExport*/ bool CvPlot::isFighting() const
 {
-	/* Toffer - exe asks this all the time a unit is selected so this spams up the debug output something terrible.
+#ifdef _DEBUG
 	OutputDebugString("exe is asking if there's a unit in battle on this plot\n");
-	*/
+#endif
 	return plotCheck(PUF_isInBattle) != NULL;
 }
 
@@ -9757,19 +9692,18 @@ void CvPlot::updateFlagSymbol()
 {
 	PROFILE_FUNC();
 
-	if ( !isGraphicsVisible(ECvPlotGraphics::UNIT) )
+	if (!isGraphicsVisible(ECvPlotGraphics::UNIT))
 	{
 		return;
 	}
-
 	PlayerTypes ePlayer = NO_PLAYER;
 	PlayerTypes ePlayerOffset = NO_PLAYER;
 
-	CvUnit* pCenterUnit = getCenterUnit();
+	CvUnit* pCenterUnit = getCenterUnit(false);
 
 	//get the plot's unit's flag
 	//The plot check is to account for units in the delayed-death cycle
-	if (pCenterUnit != NULL && pCenterUnit->plot() == this)
+	if (pCenterUnit && pCenterUnit->plot() == this)
 	{
 		//OutputDebugString(CvString::format("Updating flag symbol for (%d,%d).  Center unit is %08lx\n", m_iX, m_iY, pCenterUnit).c_str());
 		ePlayer = pCenterUnit->getVisualOwner();
@@ -9778,7 +9712,7 @@ void CvPlot::updateFlagSymbol()
 	//get moving unit's flag
 	if (gDLL->getInterfaceIFace()->getSingleMoveGotoPlot() == this)
 	{
-		if(ePlayer == NO_PLAYER)
+		if (ePlayer == NO_PLAYER)
 		{
 			ePlayer = GC.getGame().getActivePlayer();
 		}
@@ -9789,7 +9723,7 @@ void CvPlot::updateFlagSymbol()
 	}
 
 	//don't put two of the same flags
-	if(ePlayerOffset == ePlayer)
+	if (ePlayerOffset == ePlayer)
 	{
 		ePlayerOffset = NO_PLAYER;
 	}
@@ -9807,49 +9741,37 @@ void CvPlot::updateFlagSymbol()
 	//create and/or update unit's flag
 	if (ePlayer != NO_PLAYER)
 	{
-		//if ((m_pFlagSymbol == NULL) || (gDLL->getFlagEntityIFace()->getPlayer(m_pFlagSymbol) != ePlayer))
+		CvFlagEntity* newFlagEntity = gDLL->getFlagEntityIFace()->create(ePlayer);
+		if (m_pFlagSymbol)
 		{
-			CvFlagEntity* newFlagEntity = gDLL->getFlagEntityIFace()->create(ePlayer);
-			if (m_pFlagSymbol != NULL)
-			{
-				gDLL->getFlagEntityIFace()->destroy(m_pFlagSymbol);
-			}
-			else
-			{
-				CvFlagEntity* extraFlagEntity = gDLL->getFlagEntityIFace()->create(ePlayer);
-				gDLL->getFlagEntityIFace()->destroy(newFlagEntity);
-				newFlagEntity = extraFlagEntity;
-			}
-			m_pFlagSymbol = newFlagEntity;
-			if (m_pFlagSymbol != NULL)
-			{
-				gDLL->getFlagEntityIFace()->setPlot(m_pFlagSymbol, this, false);
-			}
+			gDLL->getFlagEntityIFace()->destroy(m_pFlagSymbol);
 		}
+		m_pFlagSymbol = newFlagEntity;
 
-		if (m_pFlagSymbol != NULL)
+		if (newFlagEntity)
 		{
-			gDLL->getFlagEntityIFace()->updateUnitInfo(m_pFlagSymbol, this, false);
+			gDLL->getFlagEntityIFace()->setPlot(newFlagEntity, this, false);
+			gDLL->getFlagEntityIFace()->updateUnitInfo(newFlagEntity, this, false);
 		}
 	}
 
 	//create and/or update offset flag
 	if (ePlayerOffset != NO_PLAYER)
 	{
-		if ((m_pFlagSymbolOffset == NULL) || (gDLL->getFlagEntityIFace()->getPlayer(m_pFlagSymbolOffset) != ePlayerOffset))
+		if (!m_pFlagSymbolOffset || gDLL->getFlagEntityIFace()->getPlayer(m_pFlagSymbolOffset) != ePlayerOffset)
 		{
-			if (m_pFlagSymbolOffset != NULL)
+			if (m_pFlagSymbolOffset)
 			{
 				gDLL->getFlagEntityIFace()->destroy(m_pFlagSymbolOffset);
 			}
 			m_pFlagSymbolOffset = gDLL->getFlagEntityIFace()->create(ePlayerOffset);
-			if (m_pFlagSymbolOffset != NULL)
+			if (m_pFlagSymbolOffset)
 			{
 				gDLL->getFlagEntityIFace()->setPlot(m_pFlagSymbolOffset, this, true);
 			}
 		}
 
-		if (m_pFlagSymbolOffset != NULL)
+		if (m_pFlagSymbolOffset)
 		{
 			gDLL->getFlagEntityIFace()->updateUnitInfo(m_pFlagSymbolOffset, this, true);
 		}
@@ -9857,41 +9779,64 @@ void CvPlot::updateFlagSymbol()
 }
 
 
-CvUnit* CvPlot::getCenterUnit() const
+/*DllExport*/ CvUnit* CvPlot::getCenterUnit() const
 {
+#ifdef _DEBUG
+	OutputDebugString(CvString::format("exe calls getCenterUnit() for plot at (%d, %d)\n", getX(), getY()).c_str());
+#endif
 	return m_pCenterUnit;
 }
 
-
-CvUnit* CvPlot::getDebugCenterUnit() const
+/*DllExport*/ CvUnit* CvPlot::getDebugCenterUnit() const
 {
-	CvUnit* pCenterUnit = getCenterUnit();
+#ifdef _DEBUG
+	OutputDebugString(CvString::format("exe calls getDebugCenterUnit() for plot at (%d, %d)\n", getX(), getY()).c_str());
+#endif
+	if (m_pCenterUnit || !GC.getGame().isDebugMode()) return m_pCenterUnit;
 
-	if (pCenterUnit == NULL && GC.getGame().isDebugMode())
-	{
-		const CLLNode<IDInfo>* pUnitNode = headUnitNode();
-		return pUnitNode ? ::getUnit(pUnitNode->m_data) : NULL;
-	}
-
-	return pCenterUnit;
+	const CLLNode<IDInfo>* pUnitNode = headUnitNode();
+	return pUnitNode ? ::getUnit(pUnitNode->m_data) : NULL;
 }
 
-
-void CvPlot::setCenterUnit(CvUnit* pNewValue)
+CvUnit* CvPlot::getCenterUnit(const bool bForced) const
 {
-	const CvUnit* pOldValue = getCenterUnit();
+	if (m_pCenterUnit || !bForced) return m_pCenterUnit;
 
-	if (pOldValue != pNewValue)
+	const CLLNode<IDInfo>* pUnitNode = headUnitNode();
+	return pUnitNode ? ::getUnit(pUnitNode->m_data) : NULL;
+}
+
+void CvPlot::updateCenterUnit()
+{
+	PROFILE_FUNC();
+
+	if (m_bInhibitCenterUnitCalculation || !isGraphicsVisible(ECvPlotGraphics::UNIT))
 	{
-		m_pCenterUnit = pNewValue;
+		//	Because we are inhibitting recalculation until all the adjusting code has run
+		//	(rather than have it update multiple times) the currently cached center unit
+		//	might become an invalid pointer in the interim.  To protect against this we unconditionally
+		//	set the recorded center unit to NULL (without marking the plot dirty which would force a repaint).
+		//	This makes the interim a safe state, and the correct value will be calculated once the
+		//	inhibitted section is exited
+		m_pCenterUnit = NULL;
+		return;
+	}
+	CvUnit* newCenterUnit = isActiveVisible(true) ? getPreferredCenterUnit() : NULL;
+
+	if (newCenterUnit != m_pCenterUnit)
+	{
+		if (newCenterUnit)
+		{
+			newCenterUnit->reloadEntity(true);
+		}
+		m_pCenterUnit = newCenterUnit;
 
 		updateMinimapColor();
-
 		setFlagDirty(true);
 
-		if (getCenterUnit() != NULL)
+		if (newCenterUnit)
 		{
-			getCenterUnit()->setInfoBarDirty(true);
+			newCenterUnit->setInfoBarDirty(true);
 		}
 	}
 }
@@ -10430,30 +10375,31 @@ ColorTypes CvPlot::plotMinimapColor() const
 {
 	if (GC.getGame().getActivePlayer() != NO_PLAYER)
 	{
-		const CvCity* pCity = getPlotCity();
-
-		if ((pCity != NULL) && pCity->isRevealed(GC.getGame().getActiveTeam(), true))
 		{
-			return (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE");
-		}
+			const CvCity* pCity = getPlotCity();
 
-		if (isActiveVisible(true))
-		{
-			const CvUnit* pCenterUnit = getDebugCenterUnit();
-
-			if (pCenterUnit != NULL)
+			if (pCity && pCity->isRevealed(GC.getGame().getActiveTeam(), true))
 			{
-				return ((ColorTypes)(GC.getPlayerColorInfo(GET_PLAYER(pCenterUnit->getVisualOwner()).getPlayerColor()).getColorTypePrimary()));
+				return (ColorTypes) GC.getInfoTypeForString("COLOR_WHITE");
 			}
 		}
-
-		if ((getRevealedOwner(GC.getGame().getActiveTeam(), true) != NO_PLAYER) && !isRevealedBarbarian())
+		if (isActiveVisible(true))
 		{
-			return ((ColorTypes)(GC.getPlayerColorInfo(GET_PLAYER(getRevealedOwner(GC.getGame().getActiveTeam(), true)).getPlayerColor()).getColorTypePrimary()));
+			const CvUnit* pCenterUnit = getCenterUnit(true);
+
+			if (pCenterUnit)
+			{
+				return (ColorTypes)GC.getPlayerColorInfo(GET_PLAYER(pCenterUnit->getVisualOwner()).getPlayerColor()).getColorTypePrimary();
+			}
+		}
+		const PlayerTypes eRevealedOwner = getRevealedOwner(GC.getGame().getActiveTeam(), true);
+
+		if (eRevealedOwner != NO_PLAYER && !isWater())
+		{
+			return (ColorTypes)GC.getPlayerColorInfo(GET_PLAYER(eRevealedOwner).getPlayerColor()).getColorTypePrimary();
 		}
 	}
-
-	return (ColorTypes)GC.getInfoTypeForString("COLOR_CLEAR");
+	return (ColorTypes) GC.getInfoTypeForString("COLOR_CLEAR");
 }
 
 //

@@ -1548,7 +1548,7 @@ namespace CvBuildingInternal
 }
 
 
-void CvBuildingInfo::doPostLoadCaching(uint32_t eThis)
+void CvBuildingInfo::doPostLoadCaching(uint32_t iThis)
 {
 	int iCount = getNumReplacementBuilding();
 	if (iCount > 0)
@@ -1572,12 +1572,12 @@ void CvBuildingInfo::doPostLoadCaching(uint32_t eThis)
 			GC.getBuildingInfo((BuildingTypes)getReplacementBuilding(i)).setReplacedBuilding(iId);
 		}
 	}
-	m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*this, (BuildingTypes)eThis);
-	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, (BuildingTypes)eThis);
+	m_bEnablesOtherBuildings = CvBuildingInternal::calculateEnablesOtherBuildings(*this, (BuildingTypes)iThis);
+	m_bEnablesUnits = CvBuildingInternal::calculateEnablesUnits(*this, (BuildingTypes)iThis);
 
 	if (getHolyCity() != NO_RELIGION)
 	{
-		GC.getReligionInfo((ReligionTypes)getReligionType()).addShrineBuilding((BuildingTypes)eThis);
+		GC.getReligionInfo((ReligionTypes)getReligionType()).addShrineBuilding((BuildingTypes)iThis);
 	}
 }
 

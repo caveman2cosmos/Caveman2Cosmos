@@ -138,7 +138,6 @@ void CyGamePythonInterface()
 		.def("changeDiploVote", &CyGame::changeDiploVote, "void (VoteSourceTypes, int)")
 		.def("isDebugMode", &CyGame::isDebugMode, "bool () - is the game in Debug Mode?")
 		.def("toggleDebugMode", &CyGame::toggleDebugMode)
-		.def("getChtLvl", &CyGame::getChtLvl, "int getChtLvl()")
 
 		.def("getPitbossTurnTime", &CyGame::getPitbossTurnTime, "int ()")
 		.def("setPitbossTurnTime", &CyGame::setPitbossTurnTime, "void (int)")
@@ -292,6 +291,8 @@ void CyGamePythonInterface()
 		.def("getC2CVersion", &CyGame::getC2CVersion, "const char* ()")
 
 		.def("assignStartingPlots", &CyGame::assignStartingPlots, "void (bool bScenario, bool bMapScript)")
+
+		.def("exitWorldBuilder", &CyGame::exitWorldBuilder, "void ()")
 	;
 
 

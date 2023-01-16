@@ -163,7 +163,6 @@ public:
 	int getBuildingCount(int /*BuildingTypes*/ eIndex) const;
 	bool isBuildingMaxedOut(int /*BuildingTypes*/ eIndex, int iExtra) const;
 	int getUnitCount(int /*UnitTypes*/ eIndex) const;
-	bool isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra) const;
 	bool isObsoleteBuilding(int /*BuildingTypes*/ eIndex) const;
 
 	int getResearchProgress(int /*TechTypes*/ eIndex) const;
