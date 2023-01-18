@@ -2301,7 +2301,8 @@ void CvGame::update()
 	&& !gDLL->getInterfaceIFace()->isDiploOrPopupWaiting()
 	&& !gDLL->getInterfaceIFace()->isFocused()
 	&&  gDLL->getInterfaceIFace()->getLengthSelectionList() == 0
-	&&  gDLL->getInterfaceIFace()->getHeadSelectedCity() == NULL)
+	&& !gDLL->getInterfaceIFace()->getHeadSelectedCity()
+	&& !gDLL->GetWorldBuilderMode())
 	{
 		if (playerAct.hasIdleCity())
 		{
