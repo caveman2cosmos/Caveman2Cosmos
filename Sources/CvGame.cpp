@@ -509,7 +509,7 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		// Toffer - Round up (multiply by 1000 add 999 and then divide by 1000) to get actual min value.
 		(
 			999 +
-			(1 + GC.getTILE_CULTURE_DECAY_CONSTANT()) * 1000000
+			1000000
 			/
 			(
 				1000 - (

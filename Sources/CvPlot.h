@@ -288,8 +288,7 @@ public:
 	void changeDefenseDamage(int iChange);
 
 	// Super Forts *culture*
-	void pushCultureFromFort(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate);
-	void doImprovementCulture();
+	void doImprovementCulture(PlayerTypes ePlayer, const CvImprovementInfo& imp);
 
 	// Super Forts *canal* *choke*
 	int countRegionPlots(const CvPlot* pInvalidPlot = NULL) const;
@@ -384,6 +383,11 @@ protected:
 	LandmarkTypes m_eLandmarkType;
 	bool m_bCounted;
 	static stdext::hash_map<int,int>* m_resultHashMap;
+
+	bool m_bSomeoneAddCultureThisTurn;
+	bool m_bOwnerAddCultureThisTurn;
+	PlayerTypes m_ePlayerWhoAddMostCultureThisTurn;
+	int m_iMostAddedCultureThisTurn;
 
 public:
 	PlayerTypes calculateCulturalOwner() const;

@@ -296,6 +296,10 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	{
 		m_aiVisibilityCount[iI] = 0;
 	}
+	m_bOwnerAddCultureThisTurn = false;
+	m_bSomeoneAddCultureThisTurn = false;
+	m_iMostAddedCultureThisTurn = 0;
+	m_ePlayerWhoAddMostCultureThisTurn = NO_PLAYER;
 }
 
 void CvPlot::clearModifierTotals()
@@ -976,15 +980,15 @@ void CvPlot::updateCulture(bool bBumpUnits, bool bUpdatePlotGroups)
 {
 	// Forts and cities will call calculateCulturalOwner in updating,
 	// but have require additional criteria before flipping/revolting
-	if (getPlotCity() != NULL)
-		checkCityRevolt();
-	else if (isActsAsCity())
-		checkFortRevolt();
-	else
+	if (getPlotCity())
 	{
-		const PlayerTypes eNewOwner = calculateCulturalOwner();
-		setOwner(eNewOwner, bBumpUnits, bUpdatePlotGroups);
+		checkCityRevolt();
 	}
+	else if (isActsAsCity())
+	{
+		checkFortRevolt();
+	}
+	else setOwner(calculateCulturalOwner(), bBumpUnits, bUpdatePlotGroups);
 }
 
 
@@ -992,7 +996,7 @@ void CvPlot::checkCityRevolt()
 {
 	// Check if city flips (revolts)
 	CvCity* pCity = getPlotCity();
-	if (pCity == NULL) return;
+	if (!pCity) return;
 
 	const PlayerTypes eCulturalOwner = calculateCulturalOwner();
 	if (eCulturalOwner != NO_PLAYER && GET_PLAYER(eCulturalOwner).getTeam() != getTeam() && !pCity->isOccupation())
@@ -3594,78 +3598,27 @@ void CvPlot::changeDefenseDamage(int iChange)
 }
 
 
-void CvPlot::pushCultureFromFort(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate)
+void CvPlot::doImprovementCulture(PlayerTypes ePlayer, const CvImprovementInfo& imp)
 {
-	// Pushes a little culture from fort; used when fort is newly placed or acquired
-	// to get potential nearby neutral plots. doImprovementCulture() gets regular culture.
-	// Removing culture on fort loss happens by natural decay or IDW
-	if (0 == iChange || iRange < 0)
+	if (imp.getCulture() < 1)
 	{
 		return;
 	}
+	const int iRange = std::max(0, imp.getCultureRange());
+	const int iCulture = imp.getCulture() + GC.getGame().getMinCultureOutput();
+
 	for (int iDX = -iRange; iDX <= iRange; iDX++)
 	{
 		for (int iDY = -iRange; iDY <= iRange; iDY++)
 		{
-			const int iCultureDistance = plotDistance(0, 0, iDX, iDY);
-
-			if (iCultureDistance <= iRange)
+			if (plotDistance(0, 0, iDX, iDY) <= iRange)
 			{
-				CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
+				CvPlot* plotX = plotXY(getX(), getY(), iDX, iDY);
 
-				if (pLoopPlot != NULL)
+				if (plotX)
 				{
-					// Make sure that if a plot is newly in range it gets at least 1 culture
-					if (iChange > 0 && pLoopPlot->getCulture(ePlayer) == 0)
-					{
-						pLoopPlot->changeCulture(ePlayer, 1, false);
-					}
-					if (bUpdate)
-					{
-						pLoopPlot->updateCulture(true, true);
-					}
+					plotX->changeCulture(ePlayer, iCulture, true, false);
 				}
-			}
-		}
-	}
-}
-
-
-void CvPlot::doImprovementCulture()
-{
-	if (getImprovementType() == NO_IMPROVEMENT)
-		return;
-
-	const CvImprovementInfo& improvement = GC.getImprovementInfo(getImprovementType());
-	const PlayerTypes eOwner = getOwner();
-	if (eOwner != NO_PLAYER)
-	{
-		const int iCulture = improvement.getCulture();
-		if (iCulture > 0)
-		{
-			const int iCultureRange = improvement.getCultureRange();
-
-			if (iCultureRange > 0)
-			{
-				for (int iDX = -iCultureRange; iDX <= iCultureRange; iDX++)
-				{
-					for (int iDY = -iCultureRange; iDY <= iCultureRange; iDY++)
-					{
-						if (plotDistance(0, 0, iDX, iDY) <= iCultureRange)
-						{
-							CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-							if (pLoopPlot != NULL)
-							{
-								pLoopPlot->changeCulture(eOwner, iCulture, false);
-							}
-						}
-					}
-				}
-			}
-			else
-			{
-				changeCulture(eOwner, iCulture, false);
 			}
 		}
 	}
@@ -4459,40 +4412,52 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 	// Actually setting owner happens in CvPlot::setOwner
 	PROFILE("CvPlot::calculateCulturalOwner()");
 
-	// this will be who should own the plot by default
-	PlayerTypes eBestPlayer = findHighestCulturePlayer();
-
-	int iBestCulture = eBestPlayer != NO_PLAYER ? getCulture(eBestPlayer) : 0;
 	const PlayerTypes eOwner = getOwner();
-	const PlayerTypes ePlayerSurrounds = getPlayerWithTerritorySurroundingThisPlotCardinally();
+	const PlayerTypes eBestPlayer = findHighestCulturePlayer();
 
 	// non-city, non fort plots that are *adjacent* to cities may always belong to those cities' owners
+	if (eOwner == NO_PLAYER)
+	{
+		if (eBestPlayer != NO_PLAYER)
+		{
+			return eBestPlayer;
+		}
+		// If all plots around this neutral plot (no culture or no owner) are owned by a player, grant that player this plot.
+		return getPlayerWithTerritorySurroundingThisPlotCardinally();
+	}
+
 	if (GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER) && !isCity(true))
 	{
 		const CvCity* adjacentCity = getAdjacentCity();
-		if (adjacentCity != NULL)
-			return adjacentCity->getOwner();
+		if (adjacentCity) return adjacentCity->getOwner();
+	}
+
+	if (!GET_PLAYER(eOwner).isAlive())
+	{
+		return eBestPlayer;
+	}
+
+	// Toffer - Don't flip to a player if it no longer adds the most culture per turn.
+	if (eBestPlayer != m_ePlayerWhoAddMostCultureThisTurn)
+	{
+		return eOwner;
 	}
 
 	// Fixed borders adjustments for culture threshold, unit passive claiming
 	// Have to check for the current owner being alive for this to work correctly in the cultural
 	//	re-assignment that takes place as he dies during processing of the capture of his last city.
-	if (eOwner != NO_PLAYER && GET_PLAYER(eOwner).isAlive() && GET_PLAYER(eOwner).hasFixedBorders())
+	if (GET_PLAYER(eOwner).hasFixedBorders())
 	{
 		// If *current* owner has fixed borders, keeps control if
 		// they have over xml specified ratio culture of best player.
 		if (eBestPlayer != NO_PLAYER && eBestPlayer != eOwner
-		&& getCulture(eOwner) * GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") / 100 >= iBestCulture)
-			return eOwner;
-
+		&& getCulture(eOwner) * GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") / 100 >= getCulture(eBestPlayer)
 		// Unit passively maintaining claims.
-		if (algo::any_of(units(), CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::canClaimTerritory(NULL)))
+		|| algo::any_of(units(), CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::canClaimTerritory(NULL)))
+		{
 			return eOwner;
+		}
 	}
-
-	// If all plots around this neutral plot (no culture or no owner) are owned by a player, grant that player this plot.
-	if ((eBestPlayer == NO_PLAYER || eOwner == NO_PLAYER) && ePlayerSurrounds != NO_PLAYER)
-		return ePlayerSurrounds;
 
 	// TODO reimplement
 	// I think this would do a tiebreaker between people on same team so that
@@ -4539,7 +4504,6 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 			}
 		}
 	}*/
-
 	return eBestPlayer;
 }
 
@@ -6147,6 +6111,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 			}
 
 			m_eOwner = eNewValue;
+			m_bOwnerAddCultureThisTurn = true;
 
 			setWorkingCityOverride(NULL);
 			updateWorkingCity();
@@ -6176,10 +6141,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 				if (getImprovementType() != NO_IMPROVEMENT)
 				{
 					GET_PLAYER(getOwner()).changeImprovementCount(getImprovementType(), 1);
-					if (GC.getImprovementInfo(getImprovementType()).getCulture() > 0)
-					{
-						pushCultureFromFort(getOwner(), 1, GC.getImprovementInfo(getImprovementType()).getCultureRange(), true);
-					}
+					doImprovementCulture(getOwner(), GC.getImprovementInfo(getImprovementType()));
 				}
 
 				updatePlotGroupBonus(true);
@@ -7066,10 +7028,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 			if (isOwned())
 			{
 				GET_PLAYER(getOwner()).changeImprovementCount(eNewImprovement, 1);
-				if (GC.getImprovementInfo(eNewImprovement).getCulture() > 0)
-				{
-					pushCultureFromFort(getOwner(), 1, GC.getImprovementInfo(eNewImprovement).getCultureRange(), true);
-				}
+				doImprovementCulture(getOwner(), GC.getImprovementInfo(getImprovementType()));
 			}
 		}
 		updateSight(true, true);
@@ -8043,6 +8002,21 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 
 	if (getCulture(eIndex) != iNewValue)
 	{
+		if (getCulture(eIndex) < iNewValue)
+		{
+			if (eIndex == getOwner())
+			{
+				m_bOwnerAddCultureThisTurn = true;
+			}
+			m_bSomeoneAddCultureThisTurn = true;
+
+			const int iAdded = iNewValue - getCulture(eIndex);
+			if (m_iMostAddedCultureThisTurn < iAdded)
+			{
+				m_iMostAddedCultureThisTurn = iAdded;
+				m_ePlayerWhoAddMostCultureThisTurn = eIndex;
+			}
+		}
 		std::vector<std::pair<PlayerTypes, int> >::iterator itr;
 
 		// Blaze - 24.8.22 - This overflow protection shouldn't be needed with change to make culture
@@ -10274,25 +10248,63 @@ void CvPlot::doCulture()
 {
 	PROFILE("CvPlot::doCulture()");
 
-	doImprovementCulture();
-
-	if (getOwner() != NO_PLAYER) decayCulture();
+	// Toffer - ToDo: doImprovementCulture should ideally be done in owner->doTurn(),
+	//	as it adds culture to plots that in one direction has already done culture decay,
+	//	and plots in the other direction that has yet to do culture deccay.
+	// Rewrite so player has a cached vector of all owned forts (Maybe fort should be a new object type),
+	//	and have forts do a doTurn() during the players doTurn(),
+	//	might be necsessary rewrite for being able to produce units in forts anyway.
+	if (getOwner() != NO_PLAYER)
+	{
+		if (getImprovementType() != NO_IMPROVEMENT)
+		{
+			doImprovementCulture(getOwner(), GC.getImprovementInfo(getImprovementType()));
+		}
+		decayCulture();
+	}
 
 	// updateCulture checks forts, cities for flipping.
 	// Setting forcibly claimed territory comes after, in doTurn
 	updateCulture(true, true);
+
+	m_bOwnerAddCultureThisTurn = false;
+	m_bSomeoneAddCultureThisTurn = false;
+	m_iMostAddedCultureThisTurn = 0;
+	m_ePlayerWhoAddMostCultureThisTurn = NO_PLAYER;
 }
 
 
 void CvPlot::decayCulture()
 {
+	// Toffer - Deal with total culture collapse
+	if (!m_bSomeoneAddCultureThisTurn)
+	{
+		for (int i = 0; i < MAX_PLAYERS; i++)
+		{
+			const PlayerTypes ePlayerX = static_cast<PlayerTypes>(i);
+
+			if (getCulture(ePlayerX) > 0)
+			{
+				setCulture(ePlayerX, 0, false, false);
+			}
+		}
+		return;
+	}
+	const int decayPermille = GC.getTILE_CULTURE_DECAY_PERCENT() * 1000 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+	const PlayerTypes eOwner = getOwner();
+
+	// Toffer - Deal with culture collapse
+	if (!m_bOwnerAddCultureThisTurn)
+	{
+		// Don't need to update borders, update culture is called next in doCulture
+		setCulture(eOwner, getCulture(eOwner) * (1000 - 10*decayPermille) / 1000, false, false);
+	}
 	// May need to make decay stronger on higher strength tiles, without kneecapping earlygame.
 	// Perhaps 10% plus 5% per every 100 culture or something capping out at 50%, need to examine.
 	// Gotta avoid 'welfare cliffs' though.
 	// NOTE: If decay function is altered, gotta make corresponding change to the GC.getGame().getMinCultureOutput() return.
 
-	const int decayPermille = GC.getTILE_CULTURE_DECAY_PERCENT() * 1000 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-	const int decayFlat = GC.getTILE_CULTURE_DECAY_CONSTANT();
+	const bool bCity = getPlotCity();
 
 	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
@@ -10303,9 +10315,9 @@ void CvPlot::decayCulture()
 			setCulture(
 				ePlayerX,
 				std::max(
-					getPlotCity() && getOwner() == ePlayerX ? 1 : 0,
+					int(bCity && eOwner == ePlayerX),
 					// default: current culture * 90% then - 1
-					getCulture(ePlayerX) * (1000 - decayPermille) / 1000 - decayFlat
+					getCulture(ePlayerX) * (1000 - decayPermille) / 1000
 				),
 				// Don't need to update borders, update culture is called next in doCulture
 				false, false
@@ -10911,6 +10923,11 @@ void CvPlot::read(FDataStreamBase* pStream)
 			GET_PLAYER(static_cast<PlayerTypes>(uType8)).setCommandFieldPlot(true, this);
 		}
 	}
+	WRAPPER_READ(wrapper, "CvPlot", &m_bOwnerAddCultureThisTurn);
+	WRAPPER_READ(wrapper, "CvPlot", &m_bSomeoneAddCultureThisTurn);
+	WRAPPER_READ(wrapper, "CvPlot", &m_iMostAddedCultureThisTurn);
+	WRAPPER_READ(wrapper, "CvPlot", (int*)&m_ePlayerWhoAddMostCultureThisTurn);
+
 	//Example of how to Skip Element
 	//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_bPeaks, SAVE_VALUE_ANY);
 	WRAPPER_READ_OBJECT_END(wrapper);
@@ -11279,6 +11296,10 @@ void CvPlot::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", it->second, "iCommanderCountCount");
 		}
 	}
+	WRAPPER_WRITE(wrapper, "CvPlot", m_bOwnerAddCultureThisTurn);
+	WRAPPER_WRITE(wrapper, "CvPlot", m_bSomeoneAddCultureThisTurn);
+	WRAPPER_WRITE(wrapper, "CvPlot", m_iMostAddedCultureThisTurn);
+	WRAPPER_WRITE(wrapper, "CvPlot", m_ePlayerWhoAddMostCultureThisTurn);
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
