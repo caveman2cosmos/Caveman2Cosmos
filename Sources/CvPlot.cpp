@@ -4413,14 +4413,14 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 	PROFILE("CvPlot::calculateCulturalOwner()");
 
 	const PlayerTypes eOwner = getOwner();
-	const PlayerTypes eBestPlayer = findHighestCulturePlayer();
+	const PlayerTypes eHighestCulturePlayer = findHighestCulturePlayer();
 
 	// non-city, non fort plots that are *adjacent* to cities may always belong to those cities' owners
 	if (eOwner == NO_PLAYER)
 	{
-		if (eBestPlayer != NO_PLAYER)
+		if (eHighestCulturePlayer != NO_PLAYER)
 		{
-			return eBestPlayer;
+			return eHighestCulturePlayer;
 		}
 		// If all plots around this neutral plot (no culture or no owner) are owned by a player, grant that player this plot.
 		return getPlayerWithTerritorySurroundingThisPlotCardinally();
@@ -4434,15 +4434,25 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 
 	if (!GET_PLAYER(eOwner).isAlive())
 	{
-		return eBestPlayer;
+		return eHighestCulturePlayer;
 	}
 
-	// Toffer - Don't flip to a player if it no longer adds the most culture per turn.
-	if (eBestPlayer != m_ePlayerWhoAddMostCultureThisTurn)
+	// Toffer - Random chance plot will not flip this turn,
+		// Ultrafast: 20.00%
+		// Blitz    : 62.50%
+		// Normal   : 75.00%
+		// Eternity : 91.66%
+	if (GC.getGame().getSorenRandNum(100*(GC.getGame().getGameSpeedType() + 1), "Don't flip") >= 80)
 	{
 		return eOwner;
 	}
 
+
+	// Toffer - Don't flip to a player if it no longer adds the most culture per turn.
+	if (eHighestCulturePlayer != m_ePlayerWhoAddMostCultureThisTurn)
+	{
+		return eOwner;
+	}
 	// Fixed borders adjustments for culture threshold, unit passive claiming
 	// Have to check for the current owner being alive for this to work correctly in the cultural
 	//	re-assignment that takes place as he dies during processing of the capture of his last city.
@@ -4450,8 +4460,8 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 	{
 		// If *current* owner has fixed borders, keeps control if
 		// they have over xml specified ratio culture of best player.
-		if (eBestPlayer != NO_PLAYER && eBestPlayer != eOwner
-		&& getCulture(eOwner) * GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") / 100 >= getCulture(eBestPlayer)
+		if (eHighestCulturePlayer != NO_PLAYER && eHighestCulturePlayer != eOwner
+		&& getCulture(eOwner) * GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") / 100 >= getCulture(eHighestCulturePlayer)
 		// Unit passively maintaining claims.
 		|| algo::any_of(units(), CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::canClaimTerritory(NULL)))
 		{
@@ -4459,14 +4469,14 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 		}
 	}
 
+	/*
 	// TODO reimplement
 	// I think this would do a tiebreaker between people on same team so that
 	// players on the same team would fight less over plots that they could work.
 	// So, even if player A had up to 5x the culture of player B, A would not take
 	// from B if they were on the same team, were a vassal of B, and B could work/prioritize that plot.
 	// Can mostly reimplement by saying instead of 'in range', just compare the distances.
-	/*
-	if (!isCity() && eBestPlayer != NO_PLAYER)
+	if (!isCity() && eHighestCulturePlayer != NO_PLAYER)
 	{
 		int iBestPriority = MAX_INT;
 
@@ -4482,29 +4492,29 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 				{
 					continue;
 				}
-				const TeamTypes eBestTeam = GET_PLAYER(eBestPlayer).getTeam();
+				const TeamTypes eBestTeam = GET_PLAYER(eHighestCulturePlayer).getTeam();
 
 				if (cityX->getTeam() == eBestTeam || GET_TEAM(eBestTeam).isVassal(cityX->getTeam()))
 				{
 					const PlayerTypes ePlayerX = cityX->getOwner();
 
 					// isWithinCultureRange(ePlayerX) would check if the tile is receiving culture from a city of that player
-					// if (eBestPlayer != ePlayerX && getCulture(ePlayerX) > 0 && isWithinCultureRange(ePlayerX))
-					if (eBestPlayer != ePlayerX && getCulture(ePlayerX) > 0)
+					// if (eHighestCulturePlayer != ePlayerX && getCulture(ePlayerX) > 0 && isWithinCultureRange(ePlayerX))
+					if (eHighestCulturePlayer != ePlayerX && getCulture(ePlayerX) > 0)
 					{
 						const int iPriority = GC.getCityPlotPriority()[iI] + 5 * (cityX->getTeam() == eBestTeam);
 
 						if (iPriority < iBestPriority)
 						{
 							iBestPriority = iPriority;
-							eBestPlayer = ePlayerX;
+							eHighestCulturePlayer = ePlayerX;
 						}
 					}
 				}
 			}
 		}
 	}*/
-	return eBestPlayer;
+	return eHighestCulturePlayer;
 }
 
 
