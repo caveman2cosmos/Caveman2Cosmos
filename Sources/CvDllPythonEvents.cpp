@@ -882,15 +882,6 @@ void CvDllPythonEvents::reportUnitUpgraded(CvUnit* pOldUnit, CvUnit* pNewUnit, i
 	postEvent(eventData, "unitUpgraded");
 }
 
-void CvDllPythonEvents::reportUnitSelected(CvUnit* pUnit)
-{
-	EventArgs eventData;
-	eventData
-		.arg("event", "unitSelected")
-		.arg("pUnit", pUnit);
-	postEvent(eventData, "unitSelected");
-}
-
 void CvDllPythonEvents::reportUnitRename(CvUnit *pUnit)
 {
 	EventArgs eventData;

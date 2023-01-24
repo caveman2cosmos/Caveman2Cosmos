@@ -21,9 +21,11 @@
 
 bool CvXMLLoadUtility::ReadGlobalDefines(const char* szXMLFileName, CvCacheObject* cache)
 {
-	OutputDebugString("Reading Global Defines: Star\n");
+#ifdef _DEBUG
+	OutputDebugString("Reading Global Defines: Start\n");
+#endif
 
-	if (!gDLL->cacheRead(cache, szXMLFileName))			// src data file name
+	if (!gDLL->cacheRead(cache, szXMLFileName)) // src data file name
 	{
 		// load normally
 		if (!CreateFXml())
@@ -48,36 +50,47 @@ bool CvXMLLoadUtility::ReadGlobalDefines(const char* szXMLFileName, CvCacheObjec
 					if (TryMoveToXmlFirstChild())
 					{
 						GetXmlVal(szName);
+#ifdef _DEBUG
 						OutputDebugString(szName);
+#endif
 						// set the FXml pointer to the next sibling of the current tag``
 						if (TryMoveToXmlNextSibling())
 						{
-						// if we successfuly get the node type for the current tag
-
+							// if we successfuly get the node type for the current tag
+#ifdef _DEBUG
+							OutputDebugString(" : ");
 							OutputDebugStringW(GetXmlTagName());
-
-							switch(GetXmlTagName()[0])
+#endif
+							switch (GetXmlTagName()[0])
 							{
-							case L'f':  // get the float value for the define
-										float fVal;
-										GetXmlVal(&fVal);
-										GC.getDefinesVarSystem()->SetValue(szName, fVal);
-										break;
-							case L'i':  // get the int value for the define
-										int iVal;
-										GetXmlVal(&iVal);
-										GC.getDefinesVarSystem()->SetValue(szName, iVal);
-										break;
-							case L'b':  // get the boolean value for the define
-										bool bVal;
-										GetXmlVal(&bVal);
-										GC.getDefinesVarSystem()->SetValue(szName, bVal);
-										break;
-							default:
-										char szVal[2048];
-										// get the string/text value for the define
-										GetXmlVal(szVal);
-										GC.getDefinesVarSystem()->SetValue(szName, szVal);
+								case L'f':  // get the float value for the define
+								{
+									float fVal;
+									GetXmlVal(&fVal);
+									GC.getDefinesVarSystem()->SetValue(szName, fVal);
+									break;
+								}
+								case L'i':  // get the int value for the define
+								{
+									int iVal;
+									GetXmlVal(&iVal);
+									GC.getDefinesVarSystem()->SetValue(szName, iVal);
+									break;
+								}
+								case L'b':  // get the boolean value for the define
+								{
+									bool bVal;
+									GetXmlVal(&bVal);
+									GC.getDefinesVarSystem()->SetValue(szName, bVal);
+									break;
+								}
+								default:
+								{
+									char szVal[2048];
+									// get the string/text value for the define
+									GetXmlVal(szVal);
+									GC.getDefinesVarSystem()->SetValue(szName, szVal);
+								}
 							}
 
 							// since we are looking at the children of a Define tag we will need to go up
@@ -85,6 +98,9 @@ bool CvXMLLoadUtility::ReadGlobalDefines(const char* szXMLFileName, CvCacheObjec
 							// Set the FXml pointer to the parent of the current tag
 							MoveToXmlParent();
 						}
+#ifdef _DEBUG
+						OutputDebugString("\n");
+#endif
 					}
 				}
 				while(TryMoveToXmlNextSibling());
@@ -109,12 +125,11 @@ bool CvXMLLoadUtility::ReadGlobalDefines(const char* szXMLFileName, CvCacheObjec
 		//GETXML->DestroyFXml(NULL);
 		DestroyFXml();
 	}
-	else
-	{
-		logging::logMsg("xml.log", "Read GobalDefines from cache\n");
-	}
+	else logging::logMsg("xml.log", "Read GobalDefines from cache\n");
 
+#ifdef _DEBUG
 	OutputDebugString("Reading Global Defines: End\n");
+#endif
 
 	return true;
 }
@@ -895,7 +910,7 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 {
 	PROFILE_FUNC();
 
-	OutputDebugString("Loading PostMenu Infos: Start");
+	OutputDebugString("Loading PostMenu Infos: Start\n");
 
 	if (!CreateFXml())
 	{
@@ -1453,9 +1468,11 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 				bHasType = false;
 				if (shouldHaveType)
 				{
-					OutputDebugString("Missing Element");
+					OutputDebugString("Missing Element\n");
 					OutputDebugStringW(GetCurrentXMLElement()->getNodeName());
+					OutputDebugString(" : ");
 					OutputDebugStringW(GetCurrentXMLElement()->getTextContent());
+					OutputDebugString("\n");
 					continue; // skip the current object altogether
 				}
 			}

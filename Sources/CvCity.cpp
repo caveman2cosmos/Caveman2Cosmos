@@ -237,12 +237,9 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	// Log this event
 	if (GC.getLogging())
 	{
-		if (gDLL->getChtLvl() > 0)
-		{
-			char szOut[1024];
-			sprintf(szOut, "Player %d City %d built at %d:%d\n", eOwner, iID, iX, iY);
-			gDLL->messageControlLog(szOut);
-		}
+		char szOut[1024];
+		sprintf(szOut, "Player %d City %d built at %d:%d\n", eOwner, iID, iX, iY);
+		gDLL->messageControlLog(szOut);
 	}
 
 	CvPlot* pPlot = GC.getMap().plot(iX, iY);
@@ -1683,7 +1680,6 @@ bool CvCity::canBeSelected() const
 /*DllExport*/ void CvCity::updateSelectedCity(bool bTestProduction)
 {
 	OutputDebugString(CvString::format("Exe updating selected city (bTestProduction=%d)\n", (int)bTestProduction).c_str());
-
 	algo::for_each(plots(), bind(CvPlot::updateShowCitySymbols, _1));
 }
 
@@ -6650,8 +6646,7 @@ int CvCity::netRevoltRisk(PlayerTypes cultureAttacker) const
 {
 	// Returns 100x % chance of revolt to eCultureAttacker when modified by defending units
 	// 100 = 1%, 10,000 = 100%
-	return std::max(0,
-		baseRevoltRisk(cultureAttacker) * (100 - cultureGarrison(cultureAttacker)));
+	return std::max(0, baseRevoltRisk(cultureAttacker) * (100 - cultureGarrison(cultureAttacker)));
 }
 
 
@@ -6662,12 +6657,12 @@ int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
 	int iRisk = (getHighestPopulation() * 2);
 
 	// Presence of 3rd party culture lowers max bonus
-	int	iAttackerPercent = plot()->calculateCulturePercent(eCultureAttacker, 2);
-	int iDefenderPercent = std::max(1, plot()->calculateCulturePercent(getOwner(), 2));
+	const int iAttackerPercent = 100 * plot()->calculateCulturePercent(eCultureAttacker, 2);
+	int iDefenderPercent = 100 * plot()->calculateCulturePercent(getOwner(), 2);
 	// Adjust defender percent by possible fixed border modifier
 	// (otherwise inflated risk when FB city is threatened)
-	iDefenderPercent = iDefenderPercent * (100 +
-		GET_PLAYER(getOwner()).hasFixedBorders() * (GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") - 100)) / 100;
+	iDefenderPercent *= GET_PLAYER(getOwner()).hasFixedBorders() * (GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") - 100);
+	iDefenderPercent /= 100;
 
 	// If adjacent tiles can be acquired, factor in, else there's an additional min risk
 	if (!GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER))
@@ -6678,15 +6673,14 @@ int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
 			iRisk += (GC.getGame().getCurrentEra() + 1);
 		}
 	}
-	else
-		iRisk += (GC.getGame().getCurrentEra() + 1);
+	else iRisk += (GC.getGame().getCurrentEra() + 1);
 
 	// Ranges from 100 to 1,000,000 as attacker:defender culture % ratio goes from 1:1 to 1:0.01
 	// Nonlinear!
-	int iCultureRatioModifier = 100 * iAttackerPercent / std::max(1, iDefenderPercent);
+	const int iCultureRatioModifier = iAttackerPercent / std::max(1, iDefenderPercent);
 	// XML to make this even stronker (default 100 doubles above modifier)
-	iCultureRatioModifier = (GC.getREVOLT_TOTAL_CULTURE_MODIFIER() + 100) * iCultureRatioModifier / 100;
-	iRisk *= iCultureRatioModifier / 100;
+	iRisk *= (GC.getREVOLT_TOTAL_CULTURE_MODIFIER() + 100) * iCultureRatioModifier;
+	iRisk /= 10000;
 
 	// By default, attacker having a state religion doubles attacking power
 	if (GET_PLAYER(eCultureAttacker).getStateReligion() != NO_RELIGION)
@@ -6847,8 +6841,12 @@ CvPlot* CvCity::plot() const
 	return GC.getMap().plotSorenINLINE(getX(), getY());
 }
 
-CvPlot* CvCity::plotExternal() const
+
+/*DllExport*/ CvPlot* CvCity::plotExternal() const
 {
+#ifdef _DEBUG
+	OutputDebugString("exe is asking for the plot of this city\n");
+#endif
 	FAssert(isInViewport());
 	return GC.getMap().plotSorenINLINE(getX(), getY());
 }
@@ -19251,11 +19249,11 @@ int CvCity::getSoundscapeScriptId() const
 
 void CvCity::cheat(bool bCtrl, bool bAlt, bool bShift)
 {
-	if (gDLL->getChtLvl() > 0)
+	if (gDLL->getChtLvl() > 0 || GC.getGame().isDebugMode())
 	{
 		if (bCtrl)
 		{
-			changeCulture(getOwner(), 10, true, true);
+			changeCulture(getOwner(), GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent(), true, true);
 		}
 		else if (bShift)
 		{
@@ -20193,10 +20191,8 @@ bool CvCity::canUpgradeUnit(UnitTypes eUnit) const
 	{
 		const UnitTypes eUpgradeUnit = (UnitTypes)GC.getUnitInfo(eUnit).getUnitUpgrade(iI);
 
-		if (GC.getGame().isUnitMaxedOut(eUpgradeUnit)
-		|| GET_TEAM(GET_PLAYER(getOwner()).getTeam()).isUnitMaxedOut(eUpgradeUnit)
-		|| GET_PLAYER(getOwner()).isUnitMaxedOut(eUpgradeUnit))
-		{//if the upgrade unit is maxed out, I assume you can construct them, and already have constructed the max
+		if (GC.getGame().isUnitMaxedOut(eUpgradeUnit) || GET_PLAYER(getOwner()).isUnitMaxedOut(eUpgradeUnit))
+		{ // if the upgrade unit is maxed out, I assume you can construct them, and already have constructed the max
 			return true;
 		}
 	}

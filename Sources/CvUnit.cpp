@@ -245,7 +245,7 @@ void CvUnit::reloadEntity(bool bForceLoad)
 		||
 		plot() && plot()->isActiveVisible(false)
 		&&
-		(plot()->getCenterUnit() == this || getOwner() == GC.getGame().getActivePlayer())
+		(plot()->getCenterUnit(false) == this || getOwner() == GC.getGame().getActivePlayer())
 	);
 
 	//OutputDebugString(CvString::format("reloadEntity for %08lx\n", this).c_str());
@@ -5149,34 +5149,15 @@ bool CvUnit::isActionRecommended(int iAction) const
 
 int CvUnit::defenderValue(const CvUnit* pAttacker) const
 {
-	bool bTargetOverride = false;
-
-	TeamTypes eAttackerTeam = NO_TEAM;
-	if (NULL != pAttacker)
+	if (pAttacker)
 	{
-		eAttackerTeam = pAttacker->getTeam();
-
-		CvPlot* pPlot = plot();
-		if (pPlot != NULL)
-		{
-			if (canCoexistWithAttacker(*pAttacker))
-			{
-				return 0;
-			}
-		}
-		else if (canCoexistWithTeam(eAttackerTeam))
+		// If the attacker is an air unit then does my current damage exceed the attackers damage limit?
+		if (pAttacker->getDomainType() == DOMAIN_AIR && getDamage() >= pAttacker->airCombatLimit(this)
+		// Some basic disqualifiers
+		|| canCoexistWithAttacker(*pAttacker)
+		|| !pAttacker->canAttack(*this))
 		{
 			return 0;
-		}
-
-		if (!pAttacker->canAttack(*this))
-		{
-			return 0;
-		}
-
-		if (isTargetOf(*pAttacker))
-		{
-			bTargetOverride = true;
 		}
 	}
 	if (!canDefend())
@@ -5191,21 +5172,7 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 		iValue /= 4;
 	}
 
-	if (NULL == pAttacker)
-	{
-		if (collateralDamage() > 0)
-		{
-			iValue *= 100;
-			iValue /= 100 + collateralDamage();
-		}
-
-		if (currInterceptionProbability() > 0)
-		{
-			iValue *= 100;
-			iValue /= 100 + currInterceptionProbability();
-		}
-	}
-	else
+	if (pAttacker)
 	{
 		if (!pAttacker->immuneToFirstStrikes())
 		{
@@ -5218,32 +5185,44 @@ int CvUnit::defenderValue(const CvUnit* pAttacker) const
 			iValue /= 100;
 		}
 	}
-
-	const int iAssetValue = std::max(1, assetValueTotal()/100);
-	int iCargoAssetValue = 0;
-	std::vector<CvUnit*> aCargoUnits;
-	getCargoUnits(aCargoUnits);
-	foreach_(const CvUnit* pCargo, aCargoUnits)
+	else
 	{
-		iCargoAssetValue += std::max(1, pCargo->assetValueTotal()/100);
+		if (collateralDamage() > 0)
+		{
+			iValue *= 100;
+			iValue /= 100 + collateralDamage();
+		}
+		if (currInterceptionProbability() > 0)
+		{
+			iValue *= 100;
+			iValue /= 100 + currInterceptionProbability();
+		}
 	}
-	iValue = iValue * iAssetValue / std::max(1, iAssetValue + iCargoAssetValue);
+
+	{
+		const int iAssetValue = std::max(1, assetValueTotal()/100);
+		int iCargoAssetValue = 0;
+		std::vector<CvUnit*> aCargoUnits;
+		getCargoUnits(aCargoUnits);
+		foreach_(const CvUnit* pCargo, aCargoUnits)
+		{
+			iCargoAssetValue += std::max(1, pCargo->assetValueTotal()/100);
+		}
+		iValue = iValue * iAssetValue / std::max(1, iAssetValue + iCargoAssetValue);
+	}
 
 	if (NO_UNIT == getLeaderUnitType())
 	{
 		++iValue;
 	}
-
 	iValue += tauntTotal() * iValue / 100;
+
 	// It should be greater than 0 as this target is at least valid as per the checks above
-	iValue = std::max(1, iValue);
-
-	if (bTargetOverride)
+	if (pAttacker && isTargetOf(*pAttacker))
 	{
-		iValue += 1000000;
+		return std::max(1000000, std::min(MAX_INT, iValue + 1000000));
 	}
-
-	return iValue + 3;
+	return std::max(1, iValue);
 }
 
 bool CvUnit::isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker) const
@@ -7048,30 +7027,28 @@ bool CvUnit::canGift(bool bTestVisible, bool bTestTransport) const
 {
 	const CvPlot* pPlot = plot();
 
-	if (!(pPlot->isOwned()))
+	if (!pPlot->isOwned() 
+	||  pPlot->getOwner() == getOwner()
+	||  pPlot->isVisibleEnemyUnit(this)
+	||  pPlot->isVisibleEnemyUnit(pPlot->getOwner()))
 	{
 		return false;
 	}
 
-	if (pPlot->getOwner() == getOwner())
 	{
-		return false;
-	}
+		const CvUnit* pTransport = getTransportUnit();
 
-	if (pPlot->isVisibleEnemyUnit(this))
-	{
-		return false;
-	}
-
-	if (pPlot->isVisibleEnemyUnit(pPlot->getOwner()))
-	{
-		return false;
-	}
-	const CvUnit* pTransport = getTransportUnit();
-
-	if (!pPlot->isValidDomainForLocation(*this) && NULL == pTransport)
-	{
-		return false;
+		if (pTransport)
+		{
+			if (bTestTransport && pTransport->getTeam() != pPlot->getTeam())
+			{
+				return false;
+			}
+		}
+		else if (!pPlot->isValidDomainForLocation(*this))
+		{
+			return false;
+		}
 	}
 
 	for (int iCorp = 0; iCorp < GC.getNumCorporationInfos(); ++iCorp)
@@ -7082,22 +7059,10 @@ bool CvUnit::canGift(bool bTestVisible, bool bTestTransport) const
 		}
 	}
 
-	if (bTestTransport)
-	{
-		if (pTransport && pTransport->getTeam() != pPlot->getTeam())
-		{
-			return false;
-		}
-	}
-
 	if (!bTestVisible)
 	{
-		if (GET_TEAM(pPlot->getTeam()).isUnitMaxedOut(getUnitType(), GET_TEAM(pPlot->getTeam()).getUnitMaking(getUnitType()))
-		|| GET_PLAYER(pPlot->getOwner()).isUnitMaxedOut(getUnitType(), GET_PLAYER(pPlot->getOwner()).getUnitMaking(getUnitType())))
-		{
-			return false;
-		}
-		if (!(GET_PLAYER(pPlot->getOwner()).AI_acceptUnit(this)))
+		if (GET_PLAYER(pPlot->getOwner()).isUnitMaxedOut(getUnitType(), GET_PLAYER(pPlot->getOwner()).getUnitMaking(getUnitType()))
+		|| !GET_PLAYER(pPlot->getOwner()).AI_acceptUnit(this))
 		{
 			return false;
 		}
@@ -12722,9 +12687,9 @@ bool CvUnit::canUnitCoexistWithArrivingUnit(const CvUnit& enemyUnit) const
 
 /*DllExport*/ bool CvUnit::isFighting() const
 {
-	/* Toffer - exe asks this on every tick while a unit is selected so this spams up the debug output something terrible.
+#ifdef _DEBUG
 	OutputDebugString("exe is asking if this unit is in battle\n");
-	*/
+#endif
 	return getUnit(m_combatUnit) != NULL;
 }
 
@@ -12757,13 +12722,14 @@ int CvUnit::withdrawalHP(int iMaxHitPoints, int iAttackerEarly) const
 	return iMaxHitPoints * (100-iAttackerEarly) / 100;
 }
 
-// Toffer - Only called by exe
-int CvUnit::maxHitPoints() const
+
+/*DllExport*/ int CvUnit::maxHitPoints() const
 {
+#ifdef _DEBUG
 	OutputDebugString("exe enquiring about unit max HP\n");
+#endif
 	return getMaxHP();
 }
-// ! Toffer
 
 
 int CvUnit::getHP()	const
@@ -13720,25 +13686,14 @@ float CvUnit::currCombatStrFloat(const CvPlot* pPlot, const CvUnit* pAttacker) c
 
 bool CvUnit::canFight() const
 {
-	//	Don't bother calculating modifiers for this call
-	return (m_iBaseCombat > 0);
+	return m_iBaseCombat > 0; // Don't bother calculating modifiers for this call
 }
-
 
 bool CvUnit::canAttack() const
 {
-	if (!canFight())
-	{
-		return false;
-	}
-
-	if (isOnlyDefensive())
-	{
-		return false;
-	}
-
-	return true;
+	return canFight() && !isOnlyDefensive();
 }
+
 bool CvUnit::canAttack(const CvUnit& defender) const
 {
 	if (!canAttack() || getOwner() == defender.getOwner())
@@ -15553,7 +15508,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	FAssert(iY == INVALID_PLOT_COORD || GC.getMap().plot(iX, iY)->getY() == iY);
 
 	// Activity before moving to the new plot
-	const ActivityTypes eOldActivityType = getGroup() != NULL ? getGroup()->getActivityType() : NO_ACTIVITY;
+	const ActivityTypes eOldActivityType = getGroup() ? getGroup()->getActivityType() : NO_ACTIVITY;
 
 	setBlockading(false);
 
@@ -15570,7 +15525,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	//	Note - it used o do this unconditionally for cargo and changing that behavior
 	//	might be dangerous, but it solves some scaling problems and I cannot think of a reason why
 	//	it should be problematics, nor is it causing any issues in test cases I have tried
-	if (!bGroup && (getGroup() == NULL || getGroup()->getNumUnits() > 1))
+	if (!bGroup && (!getGroup() || getGroup()->getNumUnits() > 1))
 	{
 		// Need valid plot() for joinGroup() so set our position now
 		if (bInit || pOldPlot == nullptr)
@@ -15581,20 +15536,20 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		joinGroup(NULL, true);
 	}
 
-	if (pNewPlot != NULL)
+	if (pNewPlot)
 	{
 		PROFILE("CvUnit::setXY.NewPlot");
 
 		CvUnit* pTransportUnit = getTransportUnit();
 
-		if (pTransportUnit != NULL && !pTransportUnit->atPlot(pNewPlot))
+		if (pTransportUnit && !pTransportUnit->atPlot(pNewPlot))
 		{
 			setTransportUnit(NULL); // Departed from transport
 		}
 
 		if (canFight() && !isCargo())
 		{
-			if (!bInit && pOldPlot != NULL && !pNewPlot->isCity(false) && canAttack() && getDomainType() != DOMAIN_AIR)
+			if (!bInit && pOldPlot && !pNewPlot->isCity(false) && canAttack() && getDomainType() != DOMAIN_AIR)
 			{
 				if (!pNewPlot->hasDefender(false, NO_PLAYER, eMyPlayer, this, true, false, false, true))
 				{
@@ -15609,7 +15564,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 						}
 					}
 				}
-				else if (pNewPlot->getBestDefender(NO_PLAYER, eMyPlayer, this, true, true, false, false, true) != NULL)
+				else if (pNewPlot->getBestDefender(NO_PLAYER, eMyPlayer, this, true, true, false, false, true))
 				{
 					attack(pNewPlot, true, false, true);
 
@@ -15621,7 +15576,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 			}
 			///TB: This next portion is to reset the plot list of the new plot before moving on after units may (probably were) have been destroyed in combat there.
 			//This might be necessary for the trap segment below, to rerun this.
-			if (!bInit && pOldPlot != NULL)
+			if (!bInit && pOldPlot)
 			{
 				OutputDebugString(CvString::format("%S (%d) CvUnit::setXY (%d,%d)\n", getDescription().c_str(), m_iID, m_iX, m_iY).c_str());
 				foreach_(CvUnit* unitX, pNewPlot->units_safe())
@@ -15680,7 +15635,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		}
 	}
 
-	if (pOldPlot != NULL)
+	if (pOldPlot)
 	{
 		PROFILE("CvUnit::setXY.OldPlot");
 
@@ -15713,7 +15668,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 		CvCity* pOldCity = pOldPlot->getPlotCity();
 
-		if (pOldCity != NULL)
+		if (pOldCity)
 		{
 			if (isMilitaryHappiness())
 			{
@@ -15725,7 +15680,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		{
 			CvCity* pWorkingCity = pOldPlot->getWorkingCity();
 
-			if (pWorkingCity != NULL && canSiege(pWorkingCity->getTeam()))
+			if (pWorkingCity && canSiege(pWorkingCity->getTeam()))
 			{
 				pWorkingCity->AI_setAssignWorkDirty(true);
 			}
@@ -15736,7 +15691,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 				{
 					pWorkingCity = pLoopPlot->getWorkingCity();
 
-					if (pWorkingCity != NULL && canSiege(pWorkingCity->getTeam()))
+					if (pWorkingCity && canSiege(pWorkingCity->getTeam()))
 					{
 						pWorkingCity->AI_setAssignWorkDirty(true);
 					}
@@ -15770,17 +15725,17 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 	FAssertMsg(plot() == pNewPlot, "plot is expected to equal pNewPlot");
 
-	if (pNewPlot != NULL)
+	if (pNewPlot)
 	{
 		PROFILE("CvUnit::setXY.NewPlot2");
 
 		CvCity* pNewCity = pNewPlot->getPlotCity();
 
-		if (pNewCity != NULL)//Again... is bUpdate only for when the unit is not cargo?
+		if (pNewCity) //Again... is bUpdate only for when the unit is not cargo?
 		{
 			PROFILE("CvUnit::setXY.NewPlot2.NewCity");
 
-			if (myPlayer.isInvasionCapablePlayer()
+			if (!myPlayer.isAnimal()
 			&& !isBlendIntoCity()
 			&& isEnemy(pNewCity->getTeam())
 			&& (
@@ -15822,7 +15777,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		const ImprovementTypes eImprovement = pNewPlot->getImprovementType();
 
 		if (eImprovement != NO_IMPROVEMENT && GC.getImprovementInfo(eImprovement).isActsAsCity() && !isNoCapture()
-		&& !isBlendIntoCity() && !isHiddenNationality() && myPlayer.isInvasionCapablePlayer() && !isCargo())
+		&& !isBlendIntoCity() && !isHiddenNationality() && !myPlayer.isAnimal() && !isCargo())
 		{
 			PROFILE("CvUnit::setXY.NewPlot2.ActAsCity");
 
@@ -15845,7 +15800,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		}
 
 		//update facing direction
-		if (pOldPlot != NULL)
+		if (pOldPlot)
 		{
 			const DirectionTypes newDirection = estimateDirection(pOldPlot, pNewPlot);
 			if (newDirection != NO_DIRECTION)
@@ -15888,7 +15843,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		{
 			CvCity* pNewCity = pNewPlot->getPlotCity();
 
-			if (pNewCity != NULL && isMilitaryHappiness())
+			if (pNewCity && isMilitaryHappiness())
 			{
 				pNewCity->changeMilitaryHappinessUnits(1);
 			}
@@ -15896,7 +15851,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		{
 			CvCity* pWorkingCity = pNewPlot->getWorkingCity();
 
-			if (pWorkingCity != NULL)
+			if (pWorkingCity)
 			{
 				PROFILE("CvUnit::setXY.NewPlot2.WorkingCity");
 
@@ -15914,7 +15869,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 				{
 					pWorkingCity = pLoopPlot->getWorkingCity();
 
-					if (pWorkingCity != NULL && canSiege(pWorkingCity->getTeam()))
+					if (pWorkingCity && canSiege(pWorkingCity->getTeam()))
 					{
 						pWorkingCity->verifyWorkingPlot(pWorkingCity->getCityPlotIndex(pLoopPlot));
 					}
@@ -16047,7 +16002,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 		}
 	}
 
-	if (pOldPlot != NULL && hasCargo())
+	if (pOldPlot && hasCargo())
 	{
 		PROFILE("CvUnit::setXY.OldPlot2");
 
@@ -16080,13 +16035,12 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	{
 		PROFILE("CvUnit::setXY.updateCenter");
 
-		if (pOldPlot != NULL)
+		if (pOldPlot)
 		{
 			pOldPlot->updateCenterUnit();
 			pOldPlot->setFlagDirty(true);
 		}
-
-		if (pNewPlot != NULL)
+		if (pNewPlot)
 		{
 			pNewPlot->updateCenterUnit();
 			pNewPlot->setFlagDirty(true);
@@ -16095,7 +16049,7 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 
 	const bool bFarMove =
 	(
-		pOldPlot == NULL || pNewPlot == NULL
+		!pOldPlot || !pNewPlot
 		||
 		3 < stepDistance(pOldPlot->getX(), pOldPlot->getY(), pNewPlot->getX(), pNewPlot->getY())
 	);
@@ -16107,9 +16061,9 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	{
 		setHasAnyInvisibility();
 
-		if ((pOldPlot != NULL && pOldPlot->isInViewport()) != pNewPlot->isInViewport()
+		if ((pOldPlot && pOldPlot->isInViewport()) != pNewPlot->isInViewport()
 		|| g_bUseDummyEntities
-		&& (pOldPlot != NULL && pOldPlot->isActiveVisible(false)) != pNewPlot->isActiveVisible(false))
+		&& (pOldPlot && pOldPlot->isActiveVisible(false)) != pNewPlot->isActiveVisible(false))
 		{
 			reloadEntity();
 		}
@@ -16132,11 +16086,10 @@ void CvUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow, bool b
 	}
 
 	//update glow
-	if (pNewPlot != NULL && !isUsingDummyEntities() && isInViewport())
+	if (pNewPlot && !isUsingDummyEntities() && isInViewport())
 	{
 		gDLL->getEntityIFace()->updateEnemyGlow(getUnitEntity());
 	}
-
 	/*GC.getGame().logOOSSpecial(5, getID(), iX, iY);*/
 }
 
@@ -16160,8 +16113,12 @@ CvPlot* CvUnit::plot() const
 	return GC.getMap().plotSorenINLINE(getX(), getY());
 }
 
-CvPlot* CvUnit::plotExternal() const
+
+/*DllExport*/ CvPlot* CvUnit::plotExternal() const
 {
+#ifdef _DEBUG
+	OutputDebugString("exe is asking for the plot of this unit\n");
+#endif
 	FAssertMsg(isInViewport(), "Can't get plot of unit that is not in the viewport");
 	FAssertMsg(!isUsingDummyEntities(), "Can't get plot of unit that is using dummy entities");
 	return GC.getMap().plotSorenINLINE(getX(), getY());
@@ -16180,17 +16137,10 @@ CvArea* CvUnit::area() const
 }
 
 
-bool CvUnit::onMap() const
-{
-	return plot() != NULL;
-}
-
-
 int CvUnit::getLastMoveTurn() const
 {
 	return m_iLastMoveTurn;
 }
-
 
 void CvUnit::setLastMoveTurn(int iNewValue)
 {
@@ -16205,32 +16155,32 @@ CvPlot* CvUnit::getReconPlot() const
 }
 
 
-void CvUnit::setReconPlot(CvPlot* pNewValue)
+void CvUnit::setReconPlot(CvPlot* pNewPlot)
 {
 	CvPlot* pOldPlot = getReconPlot();
 
-	if (pOldPlot != pNewValue)
+	if (pOldPlot != pNewPlot)
 	{
-		if (pOldPlot != NULL)
+		if (pOldPlot)
 		{
 			pOldPlot->changeAdjacentSight(getTeam(), GC.getRECON_VISIBILITY_RANGE(), false, this, true);
 			pOldPlot->changeReconCount(-1); // changeAdjacentSight() tests for getReconCount()
 			changeDebugCount(-1);
 		}
 
-		if (pNewValue == NULL)
+		if (pNewPlot)
 		{
-			m_iReconX = INVALID_PLOT_COORD;
-			m_iReconY = INVALID_PLOT_COORD;
+			m_iReconX = pNewPlot->getX();
+			m_iReconY = pNewPlot->getY();
+
+			pNewPlot->changeReconCount(1); // changeAdjacentSight() tests for getReconCount()
+			pNewPlot->changeAdjacentSight(getTeam(), GC.getRECON_VISIBILITY_RANGE(), true, this, true);
+			changeDebugCount(1);
 		}
 		else
 		{
-			m_iReconX = pNewValue->getX();
-			m_iReconY = pNewValue->getY();
-
-			pNewValue->changeReconCount(1); // changeAdjacentSight() tests for getReconCount()
-			pNewValue->changeAdjacentSight(getTeam(), GC.getRECON_VISIBILITY_RANGE(), true, this, true);
-			changeDebugCount(1);
+			m_iReconX = INVALID_PLOT_COORD;
+			m_iReconY = INVALID_PLOT_COORD;
 		}
 	}
 }
@@ -16244,8 +16194,9 @@ int CvUnit::getGameTurnCreated() const
 
 void CvUnit::setGameTurnCreated(int iNewValue)
 {
+	FASSERT_NOT_NEGATIVE(iNewValue);
+
 	m_iGameTurnCreated = iNewValue;
-	FASSERT_NOT_NEGATIVE(getGameTurnCreated());
 }
 
 
@@ -16260,7 +16211,7 @@ int CvUnit::getHealAsDamage(UnitCombatTypes eHealAsType) const
 
 	const UnitCombatKeyedInfo* info = findUnitCombatKeyedInfo(eHealAsType);
 
-	return info == NULL ? 0 : info->m_iHealAsDamage;
+	return info ? info->m_iHealAsDamage : 0;
 }
 
 void CvUnit::changeHealAsDamage(UnitCombatTypes eHealAsType, int iChange, PlayerTypes ePlayer)
@@ -16404,7 +16355,7 @@ void CvUnit::setMoves(int iNewValue)
 
 		FASSERT_NOT_NEGATIVE(m_iMoves);
 
-		if (pPlot != NULL && getTeam() == GC.getGame().getActiveTeam())
+		if (pPlot && getTeam() == GC.getGame().getActiveTeam())
 		{
 			pPlot->setFlagDirty(true);
 		}
@@ -16552,14 +16503,15 @@ int CvUnit::getLevel() const
 
 void CvUnit::setLevel(int iNewValue)
 {
-	if (getLevel() != iNewValue)
+	FAssert(iNewValue > 0);
+
+	if (m_iLevel != iNewValue)
 	{
 		m_iLevel = iNewValue;
-		FAssert(getLevel() > 0);
 
-		if (getLevel() > GET_PLAYER(getOwner()).getHighestUnitLevel())
+		if (iNewValue > GET_PLAYER(getOwner()).getHighestUnitLevel())
 		{
-			GET_PLAYER(getOwner()).setHighestUnitLevel(getLevel());
+			GET_PLAYER(getOwner()).setHighestUnitLevel(iNewValue);
 		}
 
 		if (IsSelected())
@@ -25754,7 +25706,7 @@ bool CvUnit::shouldShowFoundBorders() const
 
 void CvUnit::cheat(bool bCtrl, bool bAlt, bool bShift)
 {
-	if (gDLL->getChtLvl() > 0 && bCtrl)
+	if (bCtrl && (gDLL->getChtLvl() > 0 || GC.getGame().isDebugMode()))
 	{
 		setPromotionReady(true);
 	}
@@ -29136,37 +29088,19 @@ bool CvUnit::canShadow() const
 
 bool CvUnit::canShadowAt(const CvPlot* pShadowPlot, CvUnit* pShadowUnit) const
 {
-	if (!canShadow())
+	if (!canShadow() || !pShadowPlot)
 	{
 		return false;
 	}
 
-	if (pShadowPlot == NULL)
+	if (!pShadowUnit)
 	{
-		return false;
+		pShadowUnit = pShadowPlot->getCenterUnit(false);
 	}
-
-	if (pShadowUnit == NULL)
-	{
-		pShadowUnit = pShadowPlot->getCenterUnit();
-	}
-
-	if (pShadowUnit == NULL)
-	{
-		return false;
-	}
-
-	if (pShadowUnit->getTeam() != getTeam())
-	{
-		return false;
-	}
-
-	if (pShadowUnit->baseMoves() > baseMoves())
-	{
-		return false;
-	}
-
-	if (pShadowUnit == this)
+	if (!pShadowUnit
+	|| pShadowUnit == this
+	|| pShadowUnit->getTeam() != getTeam()
+	|| pShadowUnit->baseMoves() > baseMoves())
 	{
 		return false;
 	}
@@ -29176,7 +29110,6 @@ bool CvUnit::canShadowAt(const CvPlot* pShadowPlot, CvUnit* pShadowUnit) const
 	{
 		return false;
 	}
-
 	return true;
 }
 
@@ -35576,11 +35509,12 @@ void CvUnit::changeRevoltProtection(int iChange)
 	if (iChange != 0)
 	{
 		m_iRevoltProtection += iChange;
-
+		/*
 		if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 		{
 			setSMRevoltProtection();
 		}
+		*/
 		setInfoBarDirty(true);
 	}
 }
@@ -35588,29 +35522,21 @@ void CvUnit::changeRevoltProtection(int iChange)
 //need to change references to getRevoltProtection to the following:
 int CvUnit::revoltProtectionTotal() const
 {
-
-	return std::max(0, revoltProtectionTotalPreCheck());
-
+	return getRevoltProtection();
+}
+/* flabbert - disabling size matters revolt protection, it seems to give some weird results
 	// The call that plugs into the rest of the code (final value).
 	// This can be plugged into the existing final, or even be renamed to the existing final (though experience has shown me this causes me tremendous confusion!).
 
-	// disabling size matters revolt protection, it seems to give some weird results -- flabbert
-	//if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
-	//// if the current final result of the SMM multiplicative mechanism is nothing but an empty shell
-	//// then this is the first time it's being run so we take from the base value to start.
-	//// Either that or the base is 0 anyhow.
-	//|| getSMRevoltProtection() == 0)
-	//{
-	//		return std::max(0, revoltProtectionTotalPreCheck());
-	//}
-	// return std::max(0, getSMRevoltProtection());
-}
-
-int CvUnit::revoltProtectionTotalPreCheck() const//The total before the Size Matters multiplicative method adjusts for the final value.
-{
-	// Unless we WANT some units to have a negative revolt protection (more likely to revolt when unit is present)
-	// which could be useful for criminal mentality afflictions, then this really should be a min of 0.
-	return std::max(0, getRevoltProtection());
+	if (!GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS)
+	// if the current final result of the SMM multiplicative mechanism is nothing but an empty shell
+	// then this is the first time it's being run so we take from the base value to start.
+	// Either that or the base is 0 anyhow.
+	|| getSMRevoltProtection() == 0)
+	{
+		return getRevoltProtection();
+	}
+	 return std::max(0, getSMRevoltProtection());
 }
 
 int CvUnit::getSMRevoltProtection() const//The final result of the Multiplicative adjustment
@@ -35626,7 +35552,7 @@ void CvUnit::setSMRevoltProtection()
 	(
 		applySMRank
 		(
-			revoltProtectionTotalPreCheck(),
+			getRevoltProtection(),
 			getSizeMattersOffsetValue(),
 			GC.getSIZE_MATTERS_MOST_MULTIPLIER()
 		)
@@ -35635,6 +35561,7 @@ void CvUnit::setSMRevoltProtection()
 	FASSERT_NOT_NEGATIVE(m_iSMRevoltProtection);
 	m_iSMRevoltProtection = std::max(0, m_iSMRevoltProtection);
 }
+*/
 
 bool CvUnit::canPerformActionSM() const
 {
@@ -35659,7 +35586,7 @@ void CvUnit::setSMValues(bool bForLoad)
 	setSMBombardRate();
 	setSMAirBombBaseRate();
 	setSMBaseWorkRate();
-	setSMRevoltProtection();
+	//setSMRevoltProtection();
 	//many missions may require the unit be at base unit defined group size.
 		//construct or force a building - code adjusted.
 		//
