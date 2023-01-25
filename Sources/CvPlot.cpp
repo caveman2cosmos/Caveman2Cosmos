@@ -3607,19 +3607,11 @@ void CvPlot::doImprovementCulture(PlayerTypes ePlayer, const CvImprovementInfo& 
 	const int iRange = std::max(0, imp.getCultureRange());
 	const int iCulture = imp.getCulture() + GC.getGame().getMinCultureOutput();
 
-	for (int iDX = -iRange; iDX <= iRange; iDX++)
+	foreach_(CvPlot* plotX, rect(iRange, iRange))
 	{
-		for (int iDY = -iRange; iDY <= iRange; iDY++)
+		if (plotDistance(getX(), getY(), plotX->getX(), plotX->getY()) <= iRange)
 		{
-			if (plotDistance(0, 0, iDX, iDY) <= iRange)
-			{
-				CvPlot* plotX = plotXY(getX(), getY(), iDX, iDY);
-
-				if (plotX)
-				{
-					plotX->changeCulture(ePlayer, iCulture, true, false);
-				}
-			}
+			plotX->changeCulture(ePlayer, iCulture, true, false);
 		}
 	}
 }
