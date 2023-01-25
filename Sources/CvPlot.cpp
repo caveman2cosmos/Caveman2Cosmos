@@ -4429,17 +4429,6 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 		return eHighestCulturePlayer;
 	}
 
-	// Toffer - Random chance plot will not flip this turn,
-		// Ultrafast: 15.00%
-		// Blitz    : 38.18%
-		// Normal   : 51.43%
-		// ...
-		// Eternity : 78.75%
-	if (GC.getGame().getSorenRandNum(100*(4+GC.getGame().getGameSpeedType()*3/2), "Don't flip") >= 340)
-	{
-		return eOwner;
-	}
-
 	// Toffer - Don't flip ownership to a player who is not currently adding the most culture to the plot per turn.
 	if (eHighestCulturePlayer != m_ePlayerWhoAddMostCultureThisTurn)
 	{
