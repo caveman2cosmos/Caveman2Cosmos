@@ -6581,6 +6581,11 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 		{
 			terrainDistance = 0;
 		}
+		// otherwise, increase distance by 1 on unimproved tiles. Slows down earlygame expansion.
+		else if (mainPlot->getImprovementType() == NO_IMPROVEMENT)
+		{
+			terrainDistance += 1;
+		}
 		terrainDistance += GC.getFeatureInfo(mainPlot->getFeatureType()).getCultureDistance();
 	}
 
@@ -6597,38 +6602,14 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	const int extraRiverPenalty = !GET_TEAM(getTeam()).isBridgeBuilding() + !GET_TEAM(getTeam()).isRiverTrade();
 	const bool hasBonus = mainPlot->getBonusType(getTeam()) != NO_BONUS;
 
-	// Condensed version I couldn't quite get working?
-	/*
-	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
-	{
-		// Needs a better way to get the adjustments for idX and iDY, this fails on world wrap.
-		// directionXY maybe, but this starts to get ridiculous. There's a simple way I'm missing.
-		neighborPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX + adjacentPlot->getX() - mainPlot->getX(),
-											 iDY + adjacentPlot->getY() - mainPlot->getY());
-		neighborDist = m_aCultureDistances[neighborPlotIndex];
-
-		if (neighborDist != 0 && neighborDist != MAX_INT)
-		{
-			netDistanceModifier = terrainDistance;
-			if (mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)))
-				netDistanceModifier += 1 + extraRiverPenalty;
-			// A revealed bonus on plot makes net cost modifier halved, rounding down, then also 1 less.
-			netDistanceModifier = netDistanceModifier / (1 + hasBonus) - hasBonus;
-			// Final modifier can't be negative, though.
-			neighborDist += 1 + std::max(0, netDistanceModifier);
-			if (neighborDist < distance)
-				distance = neighborDist;
-		}
-	}
-	*/
-
 	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
 	{
 		int neighborDist = m_aCultureDistances[adjacentPlot];
 		if (neighborDist != 0 && neighborDist != MAX_INT)
 		{
 			int netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (1 + extraRiverPenalty);
-			netDistanceModifier = netDistanceModifier / (1 + hasBonus) - hasBonus;
+			// Halve distance penalty if plot has a bonus
+			netDistanceModifier = netDistanceModifier / (1 + hasBonus);
 			neighborDist += 1 + std::max(0, netDistanceModifier);
 			if (neighborDist < distance) distance = neighborDist;
 		}
@@ -16105,7 +16086,10 @@ int CvCity::cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int d
 
 	if (baseCultureGain < 1) return 1;
 
-	const int iDensityFactor = GC.getCITY_CULTURE_DENSITY_FACTOR(); // Some fraction 0-100 should be distance-modified.
+	// Some fraction 0-100 should be distance-modified.
+	// At default 75, city flipping may begin at max radius overlap if
+	// larger city produces 4x culture of lesser city (25% of larger output equal to 100% of lesser).
+	const int iDensityFactor = GC.getCITY_CULTURE_DENSITY_FACTOR();
 
 	// 1->0 multiplier on base rate as distance from source goes 0->max
 	const int modifiedCultureGain = (
