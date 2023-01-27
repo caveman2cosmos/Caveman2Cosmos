@@ -2401,7 +2401,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENTTRIGGER_STUCK_IN_SWAMP_1</Tag>
-		<English>A foolish unit of the %s1_civ_adjective empire got lost in vast swamplands. Its gonna take some time for them to recover.</English>
+		<English>A foolish unit of the %s1_civ_adjective empire got lost in vast swamplands. It's going to take some time for them to recover.</English>
 		<French>Une unité stupide de l'empire %s1_civ_adjective s'est perdue dans les marais. Il leur faudra un peu de temps pour récupérer.</French>
 		<Italian>Una sconsiderata unità dell'Impero %s1_civ_adjective si è persa nelle paludi. Ci vorrà del tempo per recuperarli.</Italian>
 		<Polish>Głupia jednostka %s1_civ_adjective zgubiła się na bagnach. Zajmie jej trochę czasu za nim się wydostanie.</Polish>

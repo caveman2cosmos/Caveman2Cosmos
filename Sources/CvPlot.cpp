@@ -3616,7 +3616,7 @@ void CvPlot::doImprovementCulture(PlayerTypes ePlayer, const CvImprovementInfo& 
 		return;
 	}
 	const int iRange = std::max(0, imp.getCultureRange());
-	const int iCulture = imp.getCulture() + GC.getGame().getMinCultureOutput();
+	const int iCulture = std::max(GC.getGame().getMinCultureOutput(), imp.getCulture());
 
 	foreach_(CvPlot* plotX, rect(iRange, iRange))
 	{
@@ -10273,6 +10273,8 @@ void CvPlot::doCulture()
 
 void CvPlot::decayCulture()
 {
+	const int decayPermille = GC.getTILE_CULTURE_DECAY_PERCENT() * 1000 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+
 	// Toffer - Deal with total culture collapse
 	if (!m_bSomeoneAddCultureThisTurn)
 	{
@@ -10282,23 +10284,22 @@ void CvPlot::decayCulture()
 
 			if (getCulture(ePlayerX) > 0)
 			{
-				setCulture(ePlayerX, 0, false, false);
+				setCulture(ePlayerX, getCulture(ePlayerX) * (std::max(0,1000 - 10*decayPermille)) / 1000, false, false);
 			}
 		}
 		return;
 	}
-	const int decayPermille = GC.getTILE_CULTURE_DECAY_PERCENT() * 1000 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+
 	const PlayerTypes eOwner = getOwner();
 
-	// Toffer - Deal with culture collapse
+	// Toffer - Deal with owner's culture collapse
+	// Blaze - has odd behavior when owner and 2nd place haven't added, but far away 3rd place does add culture.
+	// Maybe check each player if they've added this turn, or implement differently?
 	if (!m_bOwnerAddCultureThisTurn)
 	{
 		// Don't need to update borders, update culture is called next in doCulture
-		setCulture(eOwner, getCulture(eOwner) * (1000 - 10*decayPermille) / 1000, false, false);
+		setCulture(eOwner, getCulture(eOwner) * (std::max(0,1000 - 10*decayPermille)) / 1000, false, false);
 	}
-	// May need to make decay stronger on higher strength tiles, without kneecapping earlygame.
-	// Perhaps 10% plus 5% per every 100 culture or something capping out at 50%, need to examine.
-	// Gotta avoid 'welfare cliffs' though.
 	// NOTE: If decay function is altered, gotta make corresponding change to the GC.getGame().getMinCultureOutput() return.
 
 	const bool bCity = getPlotCity();
@@ -10313,7 +10314,6 @@ void CvPlot::decayCulture()
 				ePlayerX,
 				std::max(
 					int(bCity && eOwner == ePlayerX),
-					// default: current culture * 90% then - 1
 					getCulture(ePlayerX) * (1000 - decayPermille) / 1000
 				),
 				// Don't need to update borders, update culture is called next in doCulture
