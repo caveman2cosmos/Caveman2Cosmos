@@ -372,8 +372,6 @@ public:
 	int getUnitCount(const UnitTypes eIndex) const;
 	void changeUnitCount(const UnitTypes eIndex, const int iChange);
 
-	bool isUnitMaxedOut(const UnitTypes eIndex, const int iExtra = 0) const;
-
 	int getBuildingCount(BuildingTypes eIndex) const;
 	bool isBuildingMaxedOut(BuildingTypes eIndex, int iExtra = 0) const;
 	void changeBuildingCount(BuildingTypes eIndex, int iChange);

@@ -1073,7 +1073,6 @@ public:
 	CvPlot* plot() const;
 	int getArea() const;
 	CvArea* area() const;
-	bool onMap() const;
 
 	int getLastMoveTurn() const;
 	void setLastMoveTurn(int iNewValue);
@@ -2608,9 +2607,8 @@ public:
 	int getRevoltProtection() const;
 	void changeRevoltProtection(int iChange);
 	int revoltProtectionTotal() const;
-	int revoltProtectionTotalPreCheck() const;
-	int getSMRevoltProtection() const;
-	void setSMRevoltProtection();
+	//int getSMRevoltProtection() const;
+	//void setSMRevoltProtection();
 
 	bool canPerformActionSM() const;
 	void setSMValues(bool bForLoad = false);

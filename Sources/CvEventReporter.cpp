@@ -410,9 +410,11 @@ void CvEventReporter::unitUpgraded(CvUnit *pOldUnit, CvUnit *pNewUnit, int iPric
 	m_kPythonEventMgr.reportUnitUpgraded(pOldUnit, pNewUnit, iPrice);
 }
 
-void CvEventReporter::unitSelected( CvUnit *pUnit)
+/*DllExport*/ void CvEventReporter::unitSelected( CvUnit *pUnit)
 {
-	m_kPythonEventMgr.reportUnitSelected(pUnit);
+#ifdef _DEBUG
+	OutputDebugString(CvString::format("exe says that unit %S (%d) at (%d,%d) has been selected\n", pUnit->getDescription().c_str(), pUnit->getID(), pUnit->getX(), pUnit->getY()).c_str());
+#endif
 }
 
 void CvEventReporter::unitRename(CvUnit* pUnit)

@@ -50,6 +50,9 @@ CvGame::CvGame()
 	m_aiRankTeam = new int[MAX_TEAMS];						// Ordered by rank...
 	m_aiTeamRank = new int[MAX_TEAMS];						// Ordered by team ID...
 	m_aiTeamScore = new int[MAX_TEAMS];						// Ordered by team ID...
+	m_abPreviousRequest = new bool[MAX_PLAYERS];
+	m_aiModderGameOption = new int[NUM_MODDERGAMEOPTION_TYPES];
+	m_aiFlexibleDifficultyTimer = new int[MAX_PLAYERS];
 
 	m_paiImprovementCount = NULL;
 	m_paiUnitCreatedCount = NULL;
@@ -63,29 +66,21 @@ CvGame::CvGame()
 	m_aiSecretaryGeneralTimer = NULL;
 	m_aiVoteTimer = NULL;
 	m_aiDiploVote = NULL;
-
 	m_pabSpecialUnitValid = NULL;
 	m_pabSpecialBuildingValid = NULL;
 	m_abReligionSlotTaken = NULL;
-
 	m_abTechCanFoundReligion = NULL;
-
 	m_paHolyCity = NULL;
 	m_paHeadquarters = NULL;
+	m_pReplayInfo = NULL;
 
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		starshipLaunched[iI] = false;
 		diplomaticVictoryAchieved[iI] = false;
 	}
-
-	m_abPreviousRequest = new bool[MAX_PLAYERS];
-	m_aiModderGameOption = new int[NUM_MODDERGAMEOPTION_TYPES];
-	m_aiFlexibleDifficultyTimer = new int[MAX_PLAYERS];
-
-	m_pReplayInfo = NULL;
-
 	m_bRecalculatingModifiers = false;
+	m_bWorldBuilder = false;
 
 	reset(NO_HANDICAP, true);
 }
@@ -489,6 +484,7 @@ void CvGame::init(HandicapTypes eHandicap)
 void CvGame::onFinalInitialized(const bool bNewGame)
 {
 	PROFILE("CvGame::onFinalInitialized");
+	FAssert(!m_bFinalInitialized);
 	OutputDebugString("onFinalInitialized: Start\n");
 
 	// Game has been initialized fully when reaching this point.
@@ -502,8 +498,6 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		gDLL->getInterfaceIFace()->clearSelectionList();
 		gDLL->getInterfaceIFace()->clearSelectedCities();
 	}
-
-	GC.cacheGameSpecificValues();
 
 	// Lowest culture which, after a culture decay, will still be > 0. Inverse of CvPlot::decayCulture(), basically.
 	m_iMinCultureOutput = (
@@ -845,11 +839,20 @@ CvString create_game_id()
 }
 
 
-// FUNCTION: reset()
 // Initializes data members that are serialized.
 void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 {
 	CvPlotPaging::ResetPaging();
+
+	// Toffer - bStartingGameSession is true when starting any new game or when loading any save,
+	//	but it is false when reset is called before main menu is shown.
+	//	m_bWorldBuilder is true when loading a scenario file from inside WorldBuilder,
+	//	and it is necessary as the game type is GAME_NONE in that specific instance as it kinda takes you to the main menu,
+	//	but reset won't be called again unless one aborts loading the scenario when it asks what options you want for it.
+	const bool bStartingGameSession = !bConstructorCall && (GC.getInitCore().getType() != GAME_NONE || m_bWorldBuilder);
+	m_bWorldBuilder = false;
+
+	GC.getInitCore().getDLLName();
 
 	//--------------------------------
 	// Uninit class
@@ -905,13 +908,10 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	m_bScoreDirty = false;
 	m_circumnavigatingTeam = NO_TEAM;
 	m_bDebugMode = false;
-	m_bDebugModeCache = false;
 	m_bFinalInitialized = false;
 	m_bPbemTurnSent = false;
 	m_bHotPbemBetweenTurns = false;
 	m_bPlayerOptionsSent = false;
-	//TB Nukefix
-	//m_bNukesValid = false;
 
 	m_eHandicap = eHandicap;
 	m_ePausePlayer = NO_PLAYER;
@@ -949,117 +949,90 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 		m_aiFlexibleDifficultyTimer[iI] = 0;
 	}
 
-	const int iNumUnits = GC.getNumUnitInfos();
-
-	if (!bConstructorCall)
+	if (bStartingGameSession)
 	{
-		FAssertMsg(m_paiImprovementCount==NULL, "about to leak memory, CvGame::m_paiImprovementCount");
-		m_paiImprovementCount = new int[GC.getNumImprovementInfos()];
-		for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-		{
-			m_paiImprovementCount[iI] = 0;
-		}
-		FAssertMsg(m_paiUnitCreatedCount==NULL, "about to leak memory, CvGame::m_paiUnitCreatedCount");
-		m_paiUnitCreatedCount = new int[iNumUnits];
-		for (int iI = 0; iI < iNumUnits; iI++)
-		{
-			m_paiUnitCreatedCount[iI] = 0;
-		}
-		FAssertMsg(m_paiBuildingCreatedCount==NULL, "about to leak memory, CvGame::m_paiBuildingCreatedCount");
-		m_paiBuildingCreatedCount = new int[GC.getNumBuildingInfos()];
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
-		{
-			m_paiBuildingCreatedCount[iI] = 0;
-		}
+		FAssertMsg(!m_paiImprovementCount, "about to leak memory, CvGame::m_paiImprovementCount");
+		FAssertMsg(!m_paiUnitCreatedCount, "about to leak memory, CvGame::m_paiUnitCreatedCount");
+		FAssertMsg(!m_paiBuildingCreatedCount, "about to leak memory, CvGame::m_paiBuildingCreatedCount");
+		FAssertMsg(!m_paiProjectCreatedCount, "about to leak memory, CvGame::m_paiProjectCreatedCount");
+		FAssertMsg(!m_paiForceCivicCount, "about to leak memory, CvGame::m_paiForceCivicCount");
+		FAssertMsg(!m_aiDiploVote, "about to leak memory, CvGame::m_aiDiploVote");
+		FAssertMsg(!m_pabSpecialUnitValid, "about to leak memory, CvGame::m_pabSpecialUnitValid");
+		FAssertMsg(!m_pabSpecialBuildingValid, "about to leak memory, CvGame::m_pabSpecialBuildingValid");
 
-		FAssertMsg(m_paiProjectCreatedCount==NULL, "about to leak memory, CvGame::m_paiProjectCreatedCount");
-		m_paiProjectCreatedCount = new int[GC.getNumProjectInfos()];
-		for (int iI = 0; iI < GC.getNumProjectInfos(); iI++)
-		{
-			m_paiProjectCreatedCount[iI] = 0;
-		}
-
-		FAssertMsg(m_paiForceCivicCount==NULL, "about to leak memory, CvGame::m_paiForceCivicCount");
-		m_paiForceCivicCount = new int[GC.getNumCivicInfos()];
-		for (int iI = 0; iI < GC.getNumCivicInfos(); iI++)
-		{
-			m_paiForceCivicCount[iI] = 0;
-		}
+		m_paiImprovementCount = new int[GC.getNumImprovementInfos()]();
+		m_paiUnitCreatedCount = new int[GC.getNumUnitInfos()]();
+		m_paiBuildingCreatedCount = new int[GC.getNumBuildingInfos()]();
+		m_paiProjectCreatedCount = new int[GC.getNumProjectInfos()]();
+		m_paiForceCivicCount = new int[GC.getNumCivicInfos()]();
+		m_pabSpecialUnitValid = new bool[GC.getNumSpecialUnitInfos()]();
+		m_pabSpecialBuildingValid = new bool[GC.getNumSpecialBuildingInfos()]();
 
 		FAssertMsg(0 < GC.getNumVoteInfos(), "GC.getNumVoteInfos() is not greater than zero in CvGame::reset");
-		FAssertMsg(m_paiVoteOutcome==NULL, "about to leak memory, CvGame::m_paiVoteOutcome");
+		FAssertMsg(!m_paiVoteOutcome, "about to leak memory, CvGame::m_paiVoteOutcome");
 		m_paiVoteOutcome = new PlayerVoteTypes[GC.getNumVoteInfos()];
 		for (int iI = 0; iI < GC.getNumVoteInfos(); iI++)
 		{
 			m_paiVoteOutcome[iI] = NO_PLAYER_VOTE;
 		}
+		{
+			FAssertMsg(!m_abTechCanFoundReligion, "about to leak memory, CvGame::m_abTechCanFoundReligion");
+			FAssertMsg(!m_paiTechGameTurnDiscovered, "about to leak memory, CvGame::m_abTechGameTurnDiscovered");
 
-		FAssertMsg(0 < GC.getNumVoteSourceInfos(), "GC.getNumVoteSourceInfos() is not greater than zero in CvGame::reset");
-		FAssertMsg(m_aiDiploVote==NULL, "about to leak memory, CvGame::m_aiDiploVote");
-		m_aiDiploVote = new int[GC.getNumVoteSourceInfos()];
-		for (int iI = 0; iI < GC.getNumVoteSourceInfos(); iI++)
-		{
-			m_aiDiploVote[iI] = 0;
-		}
+			const int iNumTechInfos = GC.getNumTechInfos();
 
-		FAssertMsg(m_pabSpecialUnitValid==NULL, "about to leak memory, CvGame::m_pabSpecialUnitValid");
-		m_pabSpecialUnitValid = new bool[GC.getNumSpecialUnitInfos()];
-		for (int iI = 0; iI < GC.getNumSpecialUnitInfos(); iI++)
-		{
-			m_pabSpecialUnitValid[iI] = false;
-		}
+			m_abTechCanFoundReligion = new bool[iNumTechInfos];
+			m_paiTechGameTurnDiscovered = new int[iNumTechInfos];
 
-		FAssertMsg(m_pabSpecialBuildingValid==NULL, "about to leak memory, CvGame::m_pabSpecialBuildingValid");
-		m_pabSpecialBuildingValid = new bool[GC.getNumSpecialBuildingInfos()];
-		for (int iI = 0; iI < GC.getNumSpecialBuildingInfos(); iI++)
-		{
-			m_pabSpecialBuildingValid[iI] = false;
+			for (int iI = 0; iI < iNumTechInfos; iI++)
+			{
+				m_abTechCanFoundReligion[TechTypes(iI)] = false;
+				m_paiTechGameTurnDiscovered[iI] = -1;
+			}
 		}
+		{
+			FAssertMsg(!m_paiReligionGameTurnFounded, "about to leak memory, CvGame::m_paiReligionGameTurnFounded");
+			FAssertMsg(!m_abReligionSlotTaken, "about to leak memory, CvGame::m_abReligionSlotTaken");
+			FAssertMsg(!m_paHolyCity, "about to leak memory, CvGame::m_paHolyCity");
 
-		FAssertMsg(m_paiReligionGameTurnFounded==NULL, "about to leak memory, CvGame::m_paiReligionGameTurnFounded");
-		m_paiReligionGameTurnFounded = new int[GC.getNumReligionInfos()];
-		FAssertMsg(m_abReligionSlotTaken==NULL, "about to leak memory, CvGame::m_abReligionSlotTaken");
-		m_abReligionSlotTaken = new bool[GC.getNumReligionInfos()];
-		FAssertMsg(m_paHolyCity==NULL, "about to leak memory, CvGame::m_paHolyCity");
-		m_paHolyCity = new IDInfo[GC.getNumReligionInfos()];
-		for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
-		{
-			m_paiReligionGameTurnFounded[iI] = -1;
-			m_paHolyCity[iI].reset();
-			m_abReligionSlotTaken[iI] = false;
-		}
+			const int iNumReligionInfos = GC.getNumReligionInfos();
 
-		FAssertMsg(m_abTechCanFoundReligion==NULL, "about to leak memory, CvGame::m_abTechCanFoundReligion");
-		m_abTechCanFoundReligion = new bool[GC.getNumTechInfos()];
-		FAssertMsg(m_paiTechGameTurnDiscovered==NULL, "about to leak memory, CvGame::m_abTechGameTurnDiscovered");
-		m_paiTechGameTurnDiscovered = new int[GC.getNumTechInfos()];
-		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
-		{
-			m_abTechCanFoundReligion[TechTypes(iI)] = false;
-			m_paiTechGameTurnDiscovered[iI] = -1;
-		}
-		for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
-		{
-			m_abTechCanFoundReligion[GC.getReligionInfo((ReligionTypes)iI).getTechPrereq()] = true;
-		}
+			m_paiReligionGameTurnFounded = new int[iNumReligionInfos];
+			m_abReligionSlotTaken = new bool[iNumReligionInfos];
+			m_paHolyCity = new IDInfo[iNumReligionInfos];
 
-		FAssertMsg(m_paiCorporationGameTurnFounded==NULL, "about to leak memory, CvGame::m_paiCorporationGameTurnFounded");
-		m_paiCorporationGameTurnFounded = new int[GC.getNumCorporationInfos()];
-		m_paHeadquarters = new IDInfo[GC.getNumCorporationInfos()];
-		for (int iI = 0; iI < GC.getNumCorporationInfos(); iI++)
-		{
-			m_paiCorporationGameTurnFounded[iI] = -1;
-			m_paHeadquarters[iI].reset();
+			for (int iI = 0; iI < iNumReligionInfos; iI++)
+			{
+				m_paiReligionGameTurnFounded[iI] = -1;
+				m_paHolyCity[iI].reset();
+				m_abReligionSlotTaken[iI] = false;
+				m_abTechCanFoundReligion[GC.getReligionInfo((ReligionTypes)iI).getTechPrereq()] = true;
+			}
 		}
-
-		FAssertMsg(m_aiSecretaryGeneralTimer==NULL, "about to leak memory, CvGame::m_aiSecretaryGeneralTimer");
-		FAssertMsg(m_aiVoteTimer==NULL, "about to leak memory, CvGame::m_aiVoteTimer");
-		m_aiSecretaryGeneralTimer = new int[GC.getNumVoteSourceInfos()];
-		m_aiVoteTimer = new int[GC.getNumVoteSourceInfos()];
-		for (int iI = 0; iI < GC.getNumVoteSourceInfos(); iI++)
 		{
-			m_aiSecretaryGeneralTimer[iI] = 0;
-			m_aiVoteTimer[iI] = 0;
+			FAssertMsg(!m_paiCorporationGameTurnFounded, "about to leak memory, CvGame::m_paiCorporationGameTurnFounded");
+			FAssertMsg(!m_paHeadquarters, "about to leak memory, CvGame::m_paHeadquarters");
+
+			const int iNumCorporationInfos = GC.getNumCorporationInfos();
+
+			m_paiCorporationGameTurnFounded = new int[iNumCorporationInfos];
+			m_paHeadquarters = new IDInfo[iNumCorporationInfos];
+
+			for (int iI = 0; iI < iNumCorporationInfos; iI++)
+			{
+				m_paiCorporationGameTurnFounded[iI] = -1;
+				m_paHeadquarters[iI].reset();
+			}
+		}
+		{
+			FAssertMsg(!m_aiSecretaryGeneralTimer, "about to leak memory, CvGame::m_aiSecretaryGeneralTimer");
+			FAssertMsg(!m_aiVoteTimer, "about to leak memory, CvGame::m_aiVoteTimer");
+
+			const int iNumVoteSourceInfos = GC.getNumVoteSourceInfos();
+
+			m_aiDiploVote = new int[iNumVoteSourceInfos]();
+			m_aiSecretaryGeneralTimer = new int[iNumVoteSourceInfos]();
+			m_aiVoteTimer = new int[iNumVoteSourceInfos]();
 		}
 	}
 
@@ -1080,61 +1053,20 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 		AI_reset();
 	}
 
-	// Sanguo Mod Performance start, added by poyuzhe 07.27.09
-	UnitTypes eUnit;
-	std::vector<UnitTypes> aUpgradeUnits;
-
-	//Establish speedy promotion & Building reference by line
-	for (int iI = 0; iI < GC.getNumPromotionLineInfos(); iI++)
-	{
-		PromotionLineTypes ePromotionLine = (PromotionLineTypes)iI;
-		GC.getPromotionLineInfo(ePromotionLine).setPromotions();
-		GC.getPromotionLineInfo(ePromotionLine).setBuildings();
-	}
-
-	//Establish Unit post load factors
-	for (int iI = 0; iI < iNumUnits; iI++)
-	{
-		eUnit = (UnitTypes)iI;
-		CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
-		aUpgradeUnits.clear();
-		//set post mod-load unitinfo details
-		kUnit.setReligionSubCombat();
-		kUnit.setCultureSubCombat();
-		kUnit.setEraSubCombat();
-		kUnit.setSM();
-		kUnit.setHealAsTypes();
-
-		do
-		{
-			if (eUnit != NO_UNIT)
-			{
-				for (int iJ = 0; iJ < GC.getUnitInfo(eUnit).getNumUnitUpgrades(); iJ++)
-				{
-					kUnit.addUnitToUpgradeChain(GC.getUnitInfo(eUnit).getUnitUpgrade(iJ));
-					aUpgradeUnits.push_back((UnitTypes) GC.getUnitInfo(eUnit).getUnitUpgrade(iJ));
-				}
-			}
-			if (aUpgradeUnits.empty())
-			{
-				break;
-			}
-			else
-			{
-				eUnit = aUpgradeUnits.front();
-				aUpgradeUnits.erase(aUpgradeUnits.begin());
-			}
-		}
-		while (true);
-	}
-	// Sanguo Mod Performance, end
-
 	m_Properties.clear();
 
 	// Alberts2: Recalculate which info class replacements are currently active
 	if (!bConstructorCall)
+	{
 		GC.updateReplacements();
+	}
 
+	// Only spot identified where game-options have been set before scenarios starts initiating cities on the map
+	//	So here we can cache option specific things like valid cultureLevels.
+	if (bStartingGameSession)
+	{
+		GC.cacheGameSpecificValues();
+	}
 	m_lastGraphicUpdateRequestTickCount = 0;
 	m_iCycleUnitSliceDelay = 0;
 
@@ -2289,7 +2221,8 @@ void CvGame::update()
 	&& !gDLL->getInterfaceIFace()->isDiploOrPopupWaiting()
 	&& !gDLL->getInterfaceIFace()->isFocused()
 	&&  gDLL->getInterfaceIFace()->getLengthSelectionList() == 0
-	&&  gDLL->getInterfaceIFace()->getHeadSelectedCity() == NULL)
+	&& !gDLL->getInterfaceIFace()->getHeadSelectedCity()
+	&& !gDLL->GetWorldBuilderMode())
 	{
 		if (playerAct.hasIdleCity())
 		{
@@ -2629,11 +2562,11 @@ void CvGame::selectGroup(CvUnit* pUnit, bool bShift, bool bCtrl, bool bAlt) cons
 
 void CvGame::selectAll(CvPlot* pPlot) const
 {
-	if (pPlot != NULL)
+	if (pPlot)
 	{
-		CvUnit* pCenterUnit = pPlot->getDebugCenterUnit();
+		CvUnit* pCenterUnit = pPlot->getCenterUnit(GC.getGame().isDebugMode());
 
-		if (pCenterUnit != NULL && pCenterUnit->getOwner() == getActivePlayer())
+		if (pCenterUnit && pCenterUnit->getOwner() == getActivePlayer())
 		{
 			gDLL->getInterfaceIFace()->selectGroup(pCenterUnit, false, false, true);
 		}
@@ -4393,16 +4326,15 @@ bool CvGame::isValidVoteSelection(VoteSourceTypes eVoteSource, const VoteSelecti
 }
 
 
-bool CvGame::isDebugMode() const
+/*DllExport*/ bool CvGame::isDebugMode() const
 {
-	return m_bDebugModeCache;
+	return m_bDebugMode;
 }
 
 
-void CvGame::toggleDebugMode()
+/*DllExport*/ void CvGame::toggleDebugMode()
 {
-	m_bDebugMode = ((m_bDebugMode) ? false : true);
-	updateDebugModeCache();
+	m_bDebugMode = !m_bDebugMode;
 
 	gDLL->getEngineIFace()->RebuildAllPlots();
 
@@ -4439,16 +4371,9 @@ void CvGame::noteGraphicRebuildNeeded()
 	m_lastGraphicUpdateRequestTickCount = GetTickCount();
 }
 
-void CvGame::updateDebugModeCache()
+/*DllExport*/ void CvGame::updateDebugModeCache()
 {
-	//if ((gDLL->getChtLvl() > 0) || (gDLL->GetWorldBuilderMode()))
-	//{
-		m_bDebugModeCache = m_bDebugMode;
-	//}
-	//else
-	//{
-	//	m_bDebugModeCache = false;
-	//}
+	OutputDebugString("exe is asking if this unit is in battle\n");
 }
 
 int CvGame::getPitbossTurnTime() const
@@ -8257,7 +8182,6 @@ void CvGame::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ(wrapper,"CvGame",&m_bScoreDirty);
 	WRAPPER_READ(wrapper,"CvGame",(int*)&m_circumnavigatingTeam);
-	// m_bDebugMode not saved
 
 	// @SAVEBREAK DELETE
 	WRAPPER_SKIP_ELEMENT(wrapper,"CvGame", m_bFinalInitialized, SAVE_VALUE_ANY);
@@ -8586,7 +8510,6 @@ void CvGame::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvGame", m_bScoreDirty);
 	WRAPPER_WRITE(wrapper, "CvGame", (int)m_circumnavigatingTeam);
-	// m_bDebugMode not saved
 
 	// m_bPbemTurnSent not saved
 	WRAPPER_WRITE(wrapper, "CvGame", m_bHotPbemBetweenTurns);
@@ -11599,4 +11522,13 @@ bool CvGame::isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner, bool bC
 		return true;
 	}
 	return false;
+}
+
+void CvGame::setWorldBuilder(const bool bNewValue)
+{
+	if (bNewValue != m_bWorldBuilder)
+	{
+		m_bWorldBuilder = bNewValue;
+		gDLL->getInterfaceIFace()->setWorldBuilder(bNewValue);
+	}
 }

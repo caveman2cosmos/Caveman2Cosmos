@@ -148,7 +148,6 @@ public:
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isAnimal() const;
-	bool isInvasionCapablePlayer() const;
 
 	DllExport const wchar_t* getName(uint uiForm = 0) const;
 
