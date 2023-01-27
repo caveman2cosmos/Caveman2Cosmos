@@ -529,30 +529,23 @@ static bool isClearlySuperior(CvUnit* pUnit, CvUnit* pOtherUnit, const CvPlot* p
 {
 	PROFILE_FUNC();
 
-	int	iValue = pUnit->currEffectiveStr(pPlot,pUnit);
-	int	iOtherValue = pOtherUnit->currEffectiveStr(pPlot,pOtherUnit);
+	if (pUnit->currEffectiveStr(pPlot, pUnit) < pOtherUnit->currEffectiveStr(pPlot, pOtherUnit)
+	// First strikes
+	|| pUnit->getCombatFirstStrikes() < pOtherUnit->getCombatFirstStrikes())
+	{
+		return false;
+	}
 	int	iTotalCombatMods = 0;
 	int	iOtherTotalCombatMods = 0;
-
-	if ( iValue < iOtherValue )
-	{
-		return false;
-	}
-
-	//	First strikes
-	if ( pUnit->getCombatFirstStrikes() < pOtherUnit->getCombatFirstStrikes() )
-	{
-		return false;
-	}
 
 	//	Unit combat modifiers
 	const CvUnitInfo& kUnit = pUnit->getUnitInfo();
 	const CvUnitInfo& kOtherUnit = pOtherUnit->getUnitInfo();
-	const int numUnitCombatInfos = GC.getNumUnitCombatInfos();
-	for(int iJ = 0; iJ < numUnitCombatInfos; iJ++)
+
+	for (int i = GC.getNumUnitCombatInfos() - 1; i > -1; i--)
 	{
-		iTotalCombatMods += kUnit.getUnitCombatModifier(iJ);
-		iOtherTotalCombatMods += kOtherUnit.getUnitCombatModifier(iJ);
+		iTotalCombatMods += kUnit.getUnitCombatModifier(i);
+		iOtherTotalCombatMods += kOtherUnit.getUnitCombatModifier(i);
 	}
 
 	for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pUnit->getUnitCombatKeyedInfo().begin(), end = pUnit->getUnitCombatKeyedInfo().end(); it != end; ++it)
@@ -563,7 +556,7 @@ static bool isClearlySuperior(CvUnit* pUnit, CvUnit* pOtherUnit, const CvPlot* p
 	if (!pUnit->isCommander())
 	{
 		const CvUnit* pCommander = pUnit->getCommander();
-		if (pCommander != NULL)
+		if (pCommander)
 		{
 			for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pCommander->getUnitCombatKeyedInfo().begin(), end = pCommander->getUnitCombatKeyedInfo().end(); it != end; ++it)
 			{
@@ -580,7 +573,7 @@ static bool isClearlySuperior(CvUnit* pUnit, CvUnit* pOtherUnit, const CvPlot* p
 	if (!pOtherUnit->isCommander())
 	{
 		const CvUnit* pOtherCommander = pOtherUnit->getCommander();
-		if (pOtherCommander != NULL)
+		if (pOtherCommander)
 		{
 			for (std::map<UnitCombatTypes, UnitCombatKeyedInfo>::const_iterator it = pOtherCommander->getUnitCombatKeyedInfo().begin(), end = pOtherCommander->getUnitCombatKeyedInfo().end(); it != end; ++it)
 			{
@@ -589,7 +582,7 @@ static bool isClearlySuperior(CvUnit* pUnit, CvUnit* pOtherUnit, const CvPlot* p
 		}
 	}
 
-	return (iTotalCombatMods >= iOtherTotalCombatMods);
+	return iTotalCombatMods >= iOtherTotalCombatMods;
 }
 
 CvUnit* CvSelectionGroupAI::AI_getBestGroupAttacker(const CvPlot* pPlot, bool bPotentialEnemy, int& iUnitOdds, bool bForce, bool bNoBlitz, CvUnit** ppDefender, bool bAssassinate, bool bSuprise) const

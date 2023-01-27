@@ -532,11 +532,6 @@ void CyGame::toggleDebugMode()
 	m_pGame.toggleDebugMode();
 }
 
-int CyGame::getChtLvl() const
-{
-	return gDLL->getChtLvl();
-}
-
 int CyGame::getPitbossTurnTime() const
 {
 	return m_pGame.getPitbossTurnTime();
@@ -1055,11 +1050,6 @@ void CyGame::log(const char* file, char* str)
 #endif
 }
 
-int CyGame::getCultureThreshold(CultureLevelTypes eLevel) const
-{
-	return m_pGame.getCultureThreshold(eLevel);
-}
-
 void CyGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield)
 {
 	m_pGame.setPlotExtraYield(iX, iY, eYield, iExtraYield);
@@ -1167,4 +1157,9 @@ const char* CyGame::getC2CVersion() const
 void CyGame::assignStartingPlots(bool bScenario, bool bMapScript)
 {
 	m_pGame.assignStartingPlots(bScenario, bMapScript);
+}
+
+void CyGame::exitWorldBuilder()
+{
+	m_pGame.setWorldBuilder(false);
 }

@@ -201,11 +201,6 @@ bool CyPlot::isVisibleEnemyUnit(int /*PlayerTypes*/ ePlayer) const
 	return m_pPlot ? m_pPlot->isVisibleEnemyUnit((PlayerTypes) ePlayer) : false;
 }
 
-bool CyPlot::isFighting() const
-{
-	return m_pPlot ? m_pPlot->isFighting() : false;
-}
-
 bool CyPlot::canHaveFeature(int /*FeatureTypes*/ eFeature) const
 {
 	return m_pPlot ? m_pPlot->canHaveFeature((FeatureTypes)eFeature) : false;

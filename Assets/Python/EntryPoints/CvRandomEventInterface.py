@@ -2099,9 +2099,9 @@ def applyMasterBlacksmithDone1(argsList):
 	CyInterface().addMessage(
 		data.ePlayer, False, GC.getEVENT_MESSAGE_TIME(),
 		TRNSLTR.getText(
-			"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE",
+			"TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE_IMPROVEMENT",
 			(
-				GC.getBonusInfo(iBonus).getTextKey(), GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey()
+				GC.getPlayer(data.ePlayer).getCity(data.iCityId).getNameKey(), GC.getBonusInfo(iBonus).getTextKey()
 			)
 		),
 		"AS2D_DISCOVERBONUS", InterfaceMessageTypes.MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(iBonus).getButton(),
@@ -6692,43 +6692,37 @@ def getHelpGlobalWarming(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_GLOBAL_WARMING_1_HELP",())
 
 ######## TORNADO ###########
-def canDoTornado(argsList):
-	EventTriggeredData = argsList[0]
+# def canDoTornado(argsList):
+# 	EventTriggeredData = argsList[0]
 
-	CyPlot = GC.getMap().plot(EventTriggeredData.iPlotX, EventTriggeredData.iPlotY)
-	if CyPlot.isCity():
-		return 0
+# 	CyPlot = GC.getMap().plot(EventTriggeredData.iPlotX, EventTriggeredData.iPlotY)
+# 	if CyPlot.isCity():
+# 		return 0
 
-	if not CyPlot.canHaveFeature(GC.getInfoTypeForString('FEATURE_TORNADO')):
-		return 0
+# 	iLatitude = CyPlot.getLatitude()
+# 	if iLatitude < 50 and 30 < iLatitude:
+# 		return 1
 
-	iLatitude = CyPlot.getLatitude()
-	if iLatitude < 50 and 30 < iLatitude:
-		return 1
+# 	iRandom = GAME.getSorenRandNum(101, "Random Plot") # 0 <-> 100
+# 	if iLatitude < 60 and 20 < iLatitude:
+# 		if iRandom < 20:
+# 			return 1
+# 	elif iRandom < 5:
+# 		return 1
+# 	return 0
 
-	iRandom = GAME.getSorenRandNum(101, "Random Plot") # 0 <-> 100
-	if iLatitude < 60 and 20 < iLatitude:
-		if iRandom < 20:
-			return 1
-	elif iRandom < 5:
-		return 1
-	return 0
+# def doTornado(argsList):
+# 	EventTriggeredData = argsList[1]
+# 	x, y = EventTriggeredData.iPlotX, EventTriggeredData.iPlotY
+# 	CyPlot = GC.getMap().plot(x, y)
+# 	if 50 > GAME.getSorenRandNum(101, "Random Plot"):
+# 		CyPlot.setImprovementType(-1)
 
-def doTornado(argsList):
-	EventTriggeredData = argsList[1]
-	x, y = EventTriggeredData.iPlotX, EventTriggeredData.iPlotY
-	CyPlot = GC.getMap().plot(x, y)
-	if 50 > GAME.getSorenRandNum(101, "Random Plot"):
-		CyPlot.setImprovementType(-1)
+# 	if 25 > GAME.getSorenRandNum(101, "Random Plot"):
+# 		CyPlot.setRouteType(-1)
 
-	if 25 > GAME.getSorenRandNum(101, "Random Plot"):
-		CyPlot.setRouteType(-1)
-
-	if CyPlot.getFeatureType() == -1:
-		CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_TORNADO'), 0)
-
-	for pUnit in CyPlot.units():
-		pUnit.setImmobileTimer(1)
+# 	for pUnit in CyPlot.units():
+# 		pUnit.setImmobileTimer(1)
 
 ######## Native Good 1 -- lost resources ###########
 def canApplyNativegood1(argsList):

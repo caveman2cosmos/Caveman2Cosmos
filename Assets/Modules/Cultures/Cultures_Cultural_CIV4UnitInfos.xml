@@ -45269,7 +45269,6 @@
 				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 			</TerrainImpassableTypes>
 			<FeatureImpassableTypes>
-				<FeatureType>FEATURE_STORM</FeatureType>
 				<FeatureType>FEATURE_ICE</FeatureType>
 			</FeatureImpassableTypes>
 			<TerrainPassableTechs>

@@ -2699,7 +2699,6 @@ def addFeatures():
 	featFlood = cgc.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
 	featForest = cgc.getInfoTypeForString("FEATURE_FOREST")
 # Rise of Mankind 2.82 start
-	featStorm = cgc.getInfoTypeForString("FEATURE_STORM")
 	featSwamp = cgc.getInfoTypeForString("FEATURE_SWAMP")
 # Rise of Mankind 2.82 end
 
@@ -2742,12 +2741,6 @@ def addFeatures():
 			randomTerrain[7 * (climateHumidity / 2 + 0.75)] = terrainPermafrost
 
 		for x in range(iW):
-# Rise of Mankind 2.82 start
-			if ( y >= 5 and y <= (iH - 5)):
-				plot = map.plot(x,y)
-				if plot != 0 and plot.isWater() == True and getRand(dice) < stormChance:
-					plot.setFeatureType(featStorm,0)
-# Rise of Mankind 2.82 end
 
 			plot = map.sPlot(x,y)
 			if plot.isWater():

@@ -576,8 +576,8 @@ class CvDomesticAdvisor:
 		nTotalTradeProfit //= 100
 		if nTotalTradeProfit < 0:
 			return "-%d" % nTotalTradeProfit
-		else:
-			return "%d" % nTotalTradeProfit
+
+		return "%d" % nTotalTradeProfit
 
 
 	def countTradeRoutes(self, city, szKey, arg):
@@ -603,8 +603,7 @@ class CvDomesticAdvisor:
 		nCount = city.getFreeSpecialistCount(GC.getInfoTypeForString(szSpecialistType))
 		if nCount > 0:
 			return unicode(nCount)
-		else:
-			return "-"
+		return "-"
 
 	def calculateProducing(self, city, szKey, arg):
 
@@ -694,8 +693,8 @@ class CvDomesticAdvisor:
 	def calculateWhipPopulation(self, city, szKey, arg):
 		if city.canHurry(self.HURRY_TYPE_POP, False):
 			return unicode(city.hurryPopulation(self.HURRY_TYPE_POP))
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def calculateWhipOverflowProduction(self, city, szKey, arg):
 		return self.calculateWhipOverflow(city, szKey, arg)[0]
@@ -720,21 +719,21 @@ class CvDomesticAdvisor:
 		iAnger = city.getHurryAngerTimer()
 		if iAnger > 0 or city.canHurry(self.HURRY_TYPE_POP, False):
 			return iAnger
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def calculateHurryGoldCost(self, city, szKey, arg):
 		if city.canHurry(self.HURRY_TYPE_GOLD, False):
 			return unicode(city.getHurryGold(self.HURRY_TYPE_GOLD))
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def calculateConscriptAnger(self, city, szKey, arg):
 		iAnger = city.getConscriptAngerTimer()
 		if iAnger > 0 or city.canConscript():
 			return iAnger
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def calculatePotentialConscriptUnit(self, city, szKey, arg):
 		szReturn = unicode(GC.getUnitInfo(city.getConscriptUnit()).getDescription() )
@@ -742,10 +741,8 @@ class CvDomesticAdvisor:
 
 	def calculateConscriptUnit(self, city, szKey, arg):
 		if city.canConscript():
-			szReturn = unicode(GC.getUnitInfo(city.getConscriptUnit()).getDescription())
-		else:
-			szReturn = u""
-		return szReturn
+			return unicode(GC.getUnitInfo(city.getConscriptUnit()).getDescription())
+		return u""
 
 	def calculateReligions(self, city, szKey, arg):
 
@@ -828,13 +825,13 @@ class CvDomesticAdvisor:
 
 	def calculateCultureTurns(self, city, szKey, arg):
 
-		iCultureTimes100 = city.getCultureTimes100(self.iPlayer)
 		iCultureRateTimes100 = city.getCommerceRateTimes100(CommerceTypes.COMMERCE_CULTURE)
-		if iCultureRateTimes100 > 0:
-			iCultureLeftTimes100 = 100 * city.getCultureThreshold() - iCultureTimes100
-			return (iCultureLeftTimes100 + iCultureRateTimes100 - 1) / iCultureRateTimes100
-		else:
-			return u"-"
+
+		if iCultureRateTimes100 > 0 and city.getCultureThreshold() > 0:
+
+			return (100*city.getCultureThreshold() - city.getCultureTimes100(self.iPlayer) + iCultureRateTimes100 - 1) / iCultureRateTimes100
+
+		return u"-"
 
 	def calculateGreatPeopleTurns(self, city, szKey, arg):
 
@@ -858,11 +855,11 @@ class CvDomesticAdvisor:
 
 		if CyCity.getNumRealBuilding(arg) > 0:
 			return self.objectHave
-		elif CyCity.getFirstBuildingOrder(arg) != -1:
+		if CyCity.getFirstBuildingOrder(arg) != -1:
 			return self.objectUnderConstruction
-		elif CyCity.canConstruct(arg, False, False, False):
+		if CyCity.canConstruct(arg, False, False, False):
 			return self.objectPossible
-		elif CyCity.canConstruct(arg, True, False, False):
+		if CyCity.canConstruct(arg, True, False, False):
 			return self.objectPossibleConcurrent
 		return self.objectNotPossible
 
@@ -877,8 +874,8 @@ class CvDomesticAdvisor:
 		# Determine whether or not city has the given bonus
 		if city.hasBonus(arg):
 			return self.objectHave
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def calculateBonus(self, city, szKey, arg):
 

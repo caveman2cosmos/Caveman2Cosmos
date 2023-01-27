@@ -376,7 +376,10 @@ class CvGameUtils:
 					if iGPRate > 0 or iProgress > 0:
 						sText += u"\n%s: %d/%d %+d" %(CyTranslator().getText("[ICON_GREATPEOPLE]", ()), iProgress, pPlayer.greatPeopleThresholdNonMilitary(), iGPRate)
 
-					sText += u"\n%s: %d/%d (%s)" %(CyTranslator().getText("[ICON_CULTURE]", ()), pCity.getCulture(iPlayer), pCity.getCultureThreshold(), GC.getCultureLevelInfo(pCity.getCultureLevel()).getDescription())
+					if pCity.getCultureThreshold() > 0:
+						sText += u"\n%s: %d/%d (%s)" %(CyTranslator().getText("[ICON_CULTURE]", ()), pCity.getCulture(iPlayer), pCity.getCultureThreshold(), GC.getCultureLevelInfo(pCity.getCultureLevel()).getDescription())
+					else: sText += u"\n%s: %d (%s)" %(CyTranslator().getText("[ICON_CULTURE]", ()), pCity.getCulture(iPlayer), GC.getCultureLevelInfo(pCity.getCultureLevel()).getDescription())
+
 
 					lTemp = []
 					for i in xrange(CommerceTypes.NUM_COMMERCE_TYPES):

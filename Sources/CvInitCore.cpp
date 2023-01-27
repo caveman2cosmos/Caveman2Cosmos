@@ -692,12 +692,12 @@ void CvInitCore::resetGame(CvInitCore * pSource, bool bClear, bool bSaveGameType
 
 void CvInitCore::resetPlayers()
 {
-	OutputDebugString("Reseting Players: Start/n");
+	OutputDebugString("Reseting Players: Start\n");
 	for (int i = 0; i < MAX_PLAYERS; i++)
 	{
 		resetPlayer((PlayerTypes)i);
 	}
-	OutputDebugString("Reseting Players: End/n");
+	OutputDebugString("Reseting Players: End\n");
 }
 
 void CvInitCore::resetPlayers(CvInitCore * pSource, bool bClear, bool bSaveSlotInfo)

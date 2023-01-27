@@ -108,6 +108,7 @@ public:
 	bool hasCargo() const;
 	int getCargo(bool bVolume = false) const;
 
+	bool canAllSelectedMove() const;
 	DllExport bool canAllMove() const;
 	DllExport bool canMoveInto(CvPlot* pPlot, bool bAttack = false);
 	DllExport bool canMoveOrAttackInto(CvPlot* pPlot, bool bDeclareWar = false);
@@ -280,6 +281,7 @@ public:
 	int getMissionType(int iNode) const;
 	int getMissionData1(int iNode) const;
 	int getMissionData2(int iNode) const;
+	bool isMoveMission(CLLNode<MissionData>* node) const;
 
 // BUG - All Units Actions - start
 	bool allMatch(UnitTypes eUnit) const;
@@ -324,7 +326,6 @@ public:
 	virtual bool AI_isFull() const = 0;
 	virtual int AI_getGenericValueTimes100(UnitValueFlags eFlags) const = 0;
 
-	bool groupStackAttack(int iX, int iY, int iFlags, bool& bFailedAlreadyFighting, bool bStealth = false);
 	int defensiveModifierAtPlot(const CvPlot* pPlot) const;
 	bool meetsUnitSelectionCriteria(const CvUnitSelectionCriteria* criteria) const;
 	int getStrength() const;

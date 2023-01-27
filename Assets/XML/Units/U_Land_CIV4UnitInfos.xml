@@ -37706,7 +37706,6 @@
 			<Description>TXT_KEY_UNIT_GREAT_GENERAL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bGoldenAge>1</bGoldenAge>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_GENERAL</UnitAIType>
@@ -37896,7 +37895,6 @@
 			<Description>TXT_KEY_UNIT_GREAT_ADMIRAL</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bGoldenAge>1</bGoldenAge>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_GREAT_ADMIRAL</UnitAIType>
@@ -38090,7 +38088,6 @@
 			<Description>TXT_KEY_UNIT_GREAT_HUNTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_GREAT_HUNTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<bGoldenAge>1</bGoldenAge>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_GREAT_HUNTER</UnitAIType>

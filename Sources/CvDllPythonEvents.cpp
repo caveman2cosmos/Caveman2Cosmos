@@ -850,7 +850,6 @@ void CvDllPythonEvents::reportUnitKilled(CvUnit* pUnit, PlayerTypes eAttacker)
 	postEvent(eventData, "unitKilled");
 }
 
-// BUG - Unit Captured Event - start
 void CvDllPythonEvents::reportUnitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType, CvUnit* pNewUnit)
 {
 	EventArgs eventData;
@@ -860,16 +859,6 @@ void CvDllPythonEvents::reportUnitCaptured(PlayerTypes eFromPlayer, UnitTypes eU
 		.arg("eUnitType", eUnitType)
 		.arg("pNewUnit", pNewUnit);
 	postEvent(eventData, "unitCaptured");
-}
-// BUG - Unit Captured Event - end
-
-void CvDllPythonEvents::reportUnitLost(CvUnit* pUnit)
-{
-	EventArgs eventData;
-	eventData
-		.arg("event", "unitLost")
-		.arg("pUnit", pUnit);
-	postEvent(eventData, "unitLost");
 }
 
 void CvDllPythonEvents::reportUnitPromoted(CvUnit* pUnit, PromotionTypes ePromotion)
@@ -882,7 +871,6 @@ void CvDllPythonEvents::reportUnitPromoted(CvUnit* pUnit, PromotionTypes ePromot
 	postEvent(eventData, "unitPromoted");
 }
 
-// BUG - Upgrade Unit Event - start
 void CvDllPythonEvents::reportUnitUpgraded(CvUnit* pOldUnit, CvUnit* pNewUnit, int iPrice)
 {
 	EventArgs eventData;
@@ -892,16 +880,6 @@ void CvDllPythonEvents::reportUnitUpgraded(CvUnit* pOldUnit, CvUnit* pNewUnit, i
 		.arg("pNewUnit", pNewUnit)
 		.arg("iPrice", iPrice);
 	postEvent(eventData, "unitUpgraded");
-}
-// BUG - Upgrade Unit Event - end
-
-void CvDllPythonEvents::reportUnitSelected(CvUnit* pUnit)
-{
-	EventArgs eventData;
-	eventData
-		.arg("event", "unitSelected")
-		.arg("pUnit", pUnit);
-	postEvent(eventData, "unitSelected");
 }
 
 void CvDllPythonEvents::reportUnitRename(CvUnit *pUnit)

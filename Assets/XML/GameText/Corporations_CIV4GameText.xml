@@ -3,31 +3,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_1</Tag>
 		<English>Cereal Mills</English>
-		<French>
-			<Text>Les grands moulins céréaliers</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Cerealien AG:Cerealien AG:Cerealien AG:Cerealien AG</Text>
-			<Gender>female:female:female:female</Gender>
-			<Plural>0:0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Mulini Cereali</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Cereal Mills</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Les grands moulins céréaliers</French>
+		<German>Cerealien AG</German>
+		<Italian>Cereali del Mulino</Italian>
 		<Russian>Ïðîäóêòû èç çëàêîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_1_HQ</Tag>
 		<English>HQ - Cereal Mills</English>
+		<Italian>QG di Cereali del Mulino</Italian>
 		<Russian>Продукты из злаков</Russian>
 	</TEXT>
 	<TEXT>
@@ -41,32 +25,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_2</Tag>
-		<English>Sid's Sushi Co</English>
-		<French>
-			<Text>Sid's Sushi Co</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Sid's Sushi Co.</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Sid Sushi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Sid's Sushi</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<English>Sid's Sushi Co.</English>
 		<Russian>Суши от Сида</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_2_HQ</Tag>
-		<English>HQ - Sid's Sushi Co</English>
+		<English>HQ - Sid's Sushi Co.</English>
+		<Italian>QG di Sid's Sushi Co.</Italian>
 		<Russian>Суши от Сида</Russian>
 	</TEXT>
 	<TEXT>
@@ -81,31 +46,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_3</Tag>
 		<English>Standard Ethanol</English>
-		<French>
-			<Text>Ethanol Inc.</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Ecokraftstoff AG:Ecokraftstoff AG:Ecokraftstoff AG:Ecokraftstoff AG</Text>
-			<Gender>female:female:female:female</Gender>
-			<Plural>0:0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Etanolo Standard</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Standard Ethanol</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Ethanol Inc.</French>
+		<German>Ecokraftstoff AG</German>
+		<Italian>Ente Etanolo</Italian>
 		<Russian>Ýòàíîë-ñòàíäàðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_3_HQ</Tag>
-		<English>HQ - Ethanol Inc.</English>
+		<English>HQ - Standard Ethanol</English>
+		<Italian>QG dell'Ente Etanolo</Italian>
 		<Russian>Этанол-стандарт</Russian>
 	</TEXT>
 	<TEXT>
@@ -120,31 +69,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_4</Tag>
 		<English>Creative Constructions</English>
-		<French>
-			<Text>Constructions créatives</Text>
-			<Gender>Female</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Kreativbau AG:Kreativbau AG:Kreativbau AG:Kreativbau AG</Text>
-			<Gender>female:female:female:female</Gender>
-			<Plural>0:0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Costruzioni Creative</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Creative Constructions</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<French>Constructions créatives</French>
+		<German>Kreativbau AG</German>
+		<Italian>Costruzioni Creative</Italian>
 		<Russian>Êðåàòèâñòðîé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_4_HQ</Tag>
 		<English>HQ - Creative Constructions</English>
+		<Italian>QG di Costruzioni Creative</Italian>
 		<Russian>Креативстрой</Russian>
 	</TEXT>
 	<TEXT>
@@ -158,32 +91,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_5</Tag>
-		<English>Mining Inc</English>
-		<French>
-			<Text>Mining Inc.</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Montan AG:Montan AG:Montan AG:Montan AG</Text>
-			<Gender>female:female:female:female</Gender>
-			<Plural>0:0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Estrazioni Minerarie Inc.</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Mining Inc.</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<English>Mining Inc.</English>
+		<German>Montan AG</German>
+		<Italian>Ente Estrazioni Minerarie</Italian>
 		<Russian>Ãîðíûå ðåñóðñû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_5_HQ</Tag>
-		<English>HQ - Mining Inc</English>
+		<English>HQ - Mining Inc.</English>
+		<Italian>QG dell'Ente Estrazioni Minerarie</Italian>
 		<Russian>Горные ресурсы</Russian>
 	</TEXT>
 	<TEXT>
@@ -197,32 +113,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_6</Tag>
-		<English>Aluminum Co</English>
-		<French>
-			<Text>Aluminium S.A.</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Aluminiumwerke AG:Aluminiumwerke AG:Aluminiumwerke AG:Aluminiumwerke AG</Text>
-			<Gender>female:female:female:female</Gender>
-			<Plural>0:0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Alluminio Co.</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Aluminum Co.</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<English>Aluminum Co.</English>
+		<French>Aluminium S.A.</French>
+		<German>Aluminiumwerke AG</German>
+		<Italian>Ente Alluminio</Italian>
 		<Russian>Ïðîìàëþìèíèé</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_6_HQ</Tag>
-		<English>HQ - Aluminum Co</English>
+		<English>HQ - Aluminum Co.</English>
+		<Italian>QG dell'Ente Alluminio</Italian>
 		<Russian>Промалюминий</Russian>
 	</TEXT>
 	<TEXT>
@@ -236,32 +136,16 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_7</Tag>
-		<English>Civilized Jewelers Inc</English>
-		<French>
-			<Text>Bijoutiers associés</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Kulturjuwelen AG:Kulturjuwelen AG:Kulturjuwelen AG:Kulturjuwelen AG</Text>
-			<Gender>female:female:female:female</Gender>
-			<Plural>0:0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Gioiellieri Civilizzati</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Civilized Jewelers Inc.</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<English>Civilized Jewelers Inc.</English>
+		<French>Bijoutiers associés</French>
+		<German>Kulturjuwelen AG</German>
+		<Italian>Gioiellieri Uniti</Italian>
 		<Russian>Ìèðîâûå þâåëèðû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_7_HQ</Tag>
-		<English>HQ - Civilized Jewelers Inc</English>
+		<English>HQ - Civilized Jewelers Inc.</English>
+		<Italian>QG di Gioiellieri Uniti</Italian>
 		<Russian>Мировые ювелиры</Russian>
 	</TEXT>
 	<TEXT>
@@ -276,30 +160,23 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE</Tag>
 		<English>Adventure Tours</English>
+		<Italian>ViaggiAvventura</Italian>
 		<Russian>Àäâåí÷åð-òóð</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_FRANCHISE</Tag>
 		<English>Adventure Tours Franchise</English>
 		<French>Filiale de Aventure Tours</French>
-		<German>
-			<Text>Adventure-Tours-Filiale:Adventure-Tours-Filiale:Adventure-Tours-Filiale:Adventure-Tours-Filiale</Text>
-			<Gender>Female:Female:Female:Female</Gender>
-			<Plural>0:0:0:0</Plural>
-		</German>
-		<Italian>Filiale di Adventure Tours Franchise</Italian>
-		<Spanish>
-			<Text>Franquicia de Adventure Tours</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Adventure-Tours-Filiale</German>
+		<Italian>Filiale di ViaggiAvventura</Italian>
+		<Spanish>Franquicia de Adventure Tours</Spanish>
 		<Russian>Ôèëèàë "ÀÒ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_FRANCHISE_PEDIA</Tag>
 		<English>Your local adventure franchise to get your adrenaline pumping!</English>
 		<German>Dein örtlicher Reiseanbieter für Abenteuerreisen, die dein Adrenalin in die Höhe schnellen lassen!</German>
-		<Italian>La tua agenzia locale di avventura, per darti una scarica di adrenalina!</Italian>
+		<Italian>La tua agenzia locale di ViaggiAvventura, per darti una scarica di adrenalina!</Italian>
 		<Spanish>¡Tu franquicia local de aventuras, para darte tu dosis de adrenalina!</Spanish>
 		<Russian>Откройте свою особую местную приключенческую франшизу, чтобы подарить вашим клиентам заряд адреналина!</Russian>
 	</TEXT>
@@ -307,17 +184,8 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_HQ</Tag>
 		<English>HQ - Adventure Tours</English>
 		<French>Le Siège de Aventure Tours</French>
-		<German>
-			<Text>Adventure-Tours-Zentrale:Adventure-Tours-Zentrale:Adventure-Tours-Zentrale:Adventure-Tours-Zentrale</Text>
-			<Gender>Female:Female:Female:Female</Gender>
-			<Plural>0:0:0:0</Plural>
-		</German>
-		<Italian>QG di Adventure Tours</Italian>
-		<Spanish>
-			<Text>Adventure Tours</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<German>Adventure-Tours-Zentrale</German>
+		<Italian>QG di ViaggiAvventura</Italian>
 		<Russian>Àäâåí÷åð-òóð</Russian>
 	</TEXT>
 	<TEXT>
@@ -339,11 +207,6 @@
 		<French>Le Siège de Gran'Frais</French>
 		<German>Bullseye Zentrale</German>
 		<Italian>QG di Bullseye</Italian>
-		<Spanish>
-			<Text>Bullseye</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Russian>ßáëî÷êî</Russian>
 	</TEXT>
 	<TEXT>
@@ -358,11 +221,7 @@
 		<French>Epicerie Gran'Frais</French>
 		<German>Bullseye-Laden</German>
 		<Italian>Negozio di Bullseye</Italian>
-		<Spanish>
-			<Text>Tienda Bullseye</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Tienda de Bullseye</Spanish>
 		<Russian>Ìàãàçèí "ßáëî÷êî"</Russian>
 	</TEXT>
 	<TEXT>
@@ -375,6 +234,7 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD</Tag>
 		<English>Burgerworld</English>
 		<French>MondoBurger</French>
+		<Italian>MondoBurger</Italian>
 		<Russian>Ìèð áóðãåðîâ</Russian>
 	</TEXT>
 	<TEXT>
@@ -382,18 +242,14 @@
 		<English>HQ - Burgerworld</English>
 		<French>Le Siège de MondoBurger</French>
 		<German>Burgerworld-Zentrale</German>
-		<Italian>QG di Burgerworld</Italian>
-		<Spanish>
-			<Text>Burgerworld</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Italian>QG di MondoBurger</Italian>
+		<Spanish>Burgerworld</Spanish>
 		<Russian>Ìèð áóðãåðîâ</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_PEDIA</Tag>
 		<English>Fast Food Restaurants are the lifeblood of these companies. Serving Burgers and Fries for lunch and Dinner and a Muffin Sandwich for breakfast for hungry customer, in foreign branches the same company not only makes Fast Food but also Pub/Diner Food available to the consumers there since smaller investments in foreign cities is risky and given the turnover rate of unsuccessful restaurants it will be a heavy risk to go in without major corporation backing. Hong Kongs Fast Food branches for example have implemented several Hong Kong Cuisine Classics to their menu and some places like Germany allow beer to be served in their restaurants.[PARAGRAPH:1]Built under a Bureaucratic factory System, food produced here is cheap, fast and filling which has been so effective that it has a social effect termed as "McDonaldization" where Efficiency, Calculability, Predictability and Control is what society needs.</English>
-		<Italian>I fast food sono il sangue vitale di queste compagnie. Servire hamburger e patatine per pranzo per cena e muffin per colazione a clienti affamati, in altri campi la stessa compagnia rende disponibili ai consumatori non solo i fast food, ma anche Pub e Diner Food dato che gli investimenti più piccoli in città straniere sono rischiosi, e dato il ritmo di chiusra dei ristoranti senza successo sarebbe un grande rischio aprire senza avere alle spalle una grande corporazione. Le catene di Fast Food di Hong Kongs hanno inserito molti classici della cucina di Hong Kong nei loro menù e alcuni paesi, come la Germania, permettono che la birra venga servita nei loro ristoranti.[PARAGRAPH:1]Cucinato in un sistema burocratico di fabbriche, il cibo prodotto qui è economico, veloce e saziante ed è diventato così efficiente che è diventato un effetto sociale chiamato McDonaldizzazione dove efficienza, calcolabilità, prevedibilità e controllo è ciò di cui la società ha bisogno.</Italian>
+		<Italian>I fast food sono il sangue vitale di queste compagnie. Servire hamburger e patatine per pranzo per cena e muffin per colazione a clienti affamati, in altri campi la stessa compagnia rende disponibili ai consumatori non solo i fast food, ma anche Pub e Diner Food dato che gli investimenti più piccoli in città straniere sono rischiosi, e dato il ritmo di chiusra dei ristoranti senza successo sarebbe un grande rischio aprire senza avere alle spalle una grande corporazione. Le catene di Fast Food di Hong Kongs hanno inserito molti classici della cucina di Hong Kong nei loro menù e alcuni paesi, come la Germania, permettono che la birra venga servita nei loro ristoranti.[PARAGRAPH:1]Cucinato in un sistema burocratico di fabbriche, il cibo prodotto qui è economico, veloce e saziante ed è diventato così efficiente che è diventato un effetto sociale chiamato "McDonaldizzazione" dove efficienza, calcolabilità, prevedibilità e controllo è ciò di cui la società ha bisogno.</Italian>
 		<Russian>Рестораны быстрого питания являются источником жизненной силы этих компаний. Подавая гамбургеры и картофель фри на обед и ужин, а также бутерброд с маффином на завтрак для голодных клиентов, в зарубежных филиалах одна и та же компания предоставляет потребителям не только фаст-фуд, но и паб/закусочную, поскольку меньшие инвестиции в зарубежных городах рискованы и оправданы из-за текучести кадров в убыточных ресторанах, в связи с чем создается большой риск войти в рынок без поддержки крупных корпораций. Например, отделения быстрого питания в Гонконге внедрили в свое меню несколько классических блюд гонконгской кухни, а в некоторых местах, таких как Германия, пиво можно подавать в своих ресторанах.[PARAGRAPH:1]Изготовленные в рамках бюрократической фабричной системы продукты питания дешевы и быстро в приготовлении, которое было настолько эффективным, что имело социальный эффект, называемый «макдональдизацией», где эффективность, вычислимость, предсказуемость и контроль - это то, что нужно обществу.</Russian>
 	</TEXT>
 	<TEXT>
@@ -401,18 +257,14 @@
 		<English>Burgerworld Restaurant</English>
 		<French>Restaurant MondoBurger</French>
 		<German>Burgerworld-Restaurant</German>
-		<Italian>Ristorante di Burgerworld</Italian>
-		<Spanish>
-			<Text>Restaurante Burgerworld</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Italian>Ristorante Burgerworld</Italian>
+		<Spanish>Restaurante Burgerworld</Spanish>
 		<Russian>Ðåñòîðàí "ÌÁ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_RESTAURANT_PEDIA</Tag>
 		<English>Your local fast food place to get your hunger on!</English>
-		<Italian>Il tuo fast food locale, per farti crescere la fame!</Italian>
+		<Italian>Il tuo fast food locale per soddisfare la tua fame!</Italian>
 		<Spanish>¡Tu local de comida rápida para saciar tu apetito!</Spanish>
 		<Russian>Посетите наш местный ресторан быстрого питания, дабы насытиться!</Russian>
 	</TEXT>
@@ -420,6 +272,7 @@
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH</Tag>
 		<English>Emperors Clothing</English>
 		<French>Habits Impériaux</French>
+		<Italian>I Vestiti dell'Imperatore</Italian>
 		<Russian>Îäåæäà èìïåðàòîðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -427,12 +280,7 @@
 		<English>HQ - Emperors Clothing</English>
 		<French>Siège des Habits Impériaux</French>
 		<German>Emperors-Clothing-Zentrale</German>
-		<Italian>QG di Emperors Clothing</Italian>
-		<Spanish>
-			<Text>Emperors Clothing</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Italian>QG de I Vestiti dell'Imperatore</Italian>
 		<Russian>Îäåæäà èìïåðàòîðà</Russian>
 	</TEXT>
 	<TEXT>
@@ -443,7 +291,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_PEDIA</Tag>
 		<English>See Fashion House for details. Emperors Clothing is a rival of Fashion House, and thus requires many of the same resources.</English>
-		<Italian>Per i dettagli, vedi Fashion House. Emperors Clothing è un rivale di Fashion House, e perciò le due corporazioni hanno molte risorse in comune.</Italian>
+		<Italian>Per i dettagli, vedi Fashion House. I Vestiti dell'Imperatore è un rivale di Fashion House e perciò le due corporazioni hanno molte risorse in comune.</Italian>
 		<Spanish>Véase Fashion House para más detalles. Emperors Clothing es un rival directo de Fashion House, por ello ambas corporaciones consumen los mismos recursos.</Spanish>
 		<Russian>См. подробности в статье про «Дом Мод». «Одежда императора» - конкурент «Дома Мод», и поэтому требует тот же перечень ресурсов.</Russian>
 	</TEXT>
@@ -452,18 +300,14 @@
 		<English>Emperors Clothing Store</English>
 		<French>Magasin d'Habits Impériaux</French>
 		<German>Emperors-Clothing-Laden</German>
-		<Italian>Negozio di Emperors Clothing</Italian>
-		<Spanish>
-			<Text>Tienda Emperors Clothing</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Italian>Negozio de I Vestiti dell'Imperatore</Italian>
+		<Spanish>Tienda de Emperors Clothing</Spanish>
 		<Russian>Àòåëüå "ÎÈ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_STORE_PEDIA</Tag>
 		<English>Your local store to get your clothes.</English>
-		<Italian>Il tuo negozio locale, dove comprare gli abiti.</Italian>
+		<Italian>Il tuo negozio locale dove comprare gli abiti.</Italian>
 		<Spanish>Tu tienda local donde renovar tu vestimenta.</Spanish>
 		<Russian>Посетите один из наших местный магазин, где можно приобрести модную одежду.</Russian>
 	</TEXT>
@@ -478,17 +322,12 @@
 		<French>Le Siège de 'East West Traders'</French>
 		<German>East-West-Traders-Zentrale</German>
 		<Italian>QG di East West Traders</Italian>
-		<Spanish>
-			<Text>East West Traders</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Russian>Âîñòîê-Çàïàä</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_EWTRADE_PEDIA</Tag>
 		<English>The East West Traders evolved from corporations such as Transatlantic Triangular Trade, that operated during the 17th, 18th, and early 19th centuries, carrying slaves, cash crops, and manufactured goods between West Africa, the Caribbean or American colonies and the European colonial powers, with the northern colonies of British North America, especially New England, sometimes taking over the role of Europe. They are now more benign.</English>
-		<Italian>La East West Traders si è evoluta dalle corporazioni del commercio triangolare transatlantico che operarono durante il 17°, 18° e all'inizio del 19° secolo; queste compagnie trasportavano schiavi, prodotti agricoli e beni manifatturieri tra l'Africa Occidentale, i Caraibi, le colonie Americane e le potenze coloniali Europee. Col tempo le colonie inglesi del Nord America, specialmente il New England, arrivarono aprendere il ruolo dell'Europa.</Italian>
+		<Italian>La East West Traders si è evoluta dalle corporazioni del commercio triangolare transatlantico che operarono durante il XVII, XVIII e all'inizio del XIX secolo; queste compagnie trasportavano schiavi, prodotti agricoli e beni manifatturieri tra l'Africa occidentale, i Caraibi, le colonie americane e le potenze coloniali europee. Col tempo le colonie inglesi del Nord America, specialmente il New England, arrivarono a eguagliare il ruolo dell'Europa.</Italian>
 		<Russian>Коммерсанты из «Восток-Запад» произошли от таких корпораций, как «Transatlantic Triangular Trade», которые действовали в XVII, XVIII и начале XIX веков, перевозя рабов, изделия роскоши и промышленные товары между Западной Африкой, Карибскими или американскими колониями и европейскими метрополиями с северными колониями британской Северной Америки, особенно Новой Англии, иногда берущей на себя роль Европы. В настоящее время этот бизнес переориентировался в менее жесткие формы.</Russian>
 	</TEXT>
 	<TEXT>
@@ -497,11 +336,7 @@
 		<French>Magasin 'East West Traders'</French>
 		<German>East-West-Traders-Laden</German>
 		<Italian>Negozio di East West Traders</Italian>
-		<Spanish>
-			<Text>Tienda East West Traders</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Tienda de East West Traders</Spanish>
 		<Russian>Ìàãàçèí "ÂÇ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -522,11 +357,6 @@
 		<French>Le Siège de Maison de la Mode</French>
 		<German>Fashion-House-Zentrale</German>
 		<Italian>GQ di Fashion House</Italian>
-		<Spanish>
-			<Text>Fashion House</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Russian>Äîì Ìîä</Russian>
 	</TEXT>
 	<TEXT>
@@ -536,8 +366,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_FASHION_PEDIA</Tag>
-		<English>The first fashion designer who was not merely a dressmaker was Charles Frederick Worth (1826 -1895). Before the former draper set up his maison couture (fashion house) in Paris, clothing design and creation was handled by largely anonymous seamstresses, and high fashion descended from styles worn at royal courts. Worth's success was such that he was able to dictate to his customers what they should wear, instead of following their lead as earlier dressmakers had done. It was during this period that many design houses began to hire artists to sketch or paint designs for garments. The images alone could be presented to clients much more cheaply than by producing an actual sample garment in the workroom. If the client liked the design, they ordered it and the resulting garment made money for the house. Thus, the tradition of designers sketching out garment designs instead of presenting completed garments on models to customers began as an economy.</English>
-		<Italian>Il primostilista di moda che non fosse semplicemente un sarto fu Charles Frederick Worth (1826 -1895). Prima che costui fondasse il suo atelier di moda a Parigi, il disegno e la creazione degli abiti erano l'occupazione di sarti quasi sempre anonimi, e la moda derivava dagli stili usati nella corte reale. L'importanza del suo successo fu tale che Worth riuscì a imporre ai propri clienti cosa indossare, invece di seguire la massa come i sarti precedenti avevano fatto. Fu durante questo periodo che molte case di moda iniziarono a offrire lavoro agli artisti per schizzare disegni per gli abiti; queste immagini potevano essere presentate ai clienti più economicamente che producendo un vero prototipo. Se al cliente piaceva il disegno, ordinava il vestito. Così, la tradizione dei disegnatori che schizzavano i disegni degli abiti invece di presentare un abito indossato da un modello diventò una nuova forma di economia.</Italian>
+		<English>The first fashion designer who was not merely a dressmaker was Charles Frederick Worth (1826-1895). Before the former draper set up his maison couture (fashion house) in Paris, clothing design and creation was handled by largely anonymous seamstresses, and high fashion descended from styles worn at royal courts. Worth's success was such that he was able to dictate to his customers what they should wear, instead of following their lead as earlier dressmakers had done. It was during this period that many design houses began to hire artists to sketch or paint designs for garments. The images alone could be presented to clients much more cheaply than by producing an actual sample garment in the workroom. If the client liked the design, they ordered it and the resulting garment made money for the house. Thus, the tradition of designers sketching out garment designs instead of presenting completed garments on models to customers began as an economy.</English>
+		<Italian>Il primo stilista di moda che non fosse semplicemente un sarto fu Charles Frederick Worth (1826-1895). Prima che costui fondasse il suo atelier di moda a Parigi, il disegno e la creazione degli abiti erano l'occupazione di sarti quasi sempre anonimi, e la moda derivava dagli stili usati nella corte reale. L'importanza del suo successo fu tale che Worth riuscì a imporre ai propri clienti cosa indossare, invece di seguire la massa come i sarti precedenti avevano fatto. Fu durante questo periodo che molte case di moda iniziarono a offrire lavoro agli artisti per realizzare disegni per gli abiti, evitando così i costi della realizzazione di un vero prototipo. Se al cliente piaceva il disegno, ordinava il vestito. Così, la tradizione dei disegnatori di moda, anziché della presentazione di un abito indossato da un modello, diventò una nuova forma di economia.</Italian>
 		<Russian>Первым модельером, который был не просто портным, являлся Чарльз Фредерик Уорт (1826-1895). До того, как бывший торговец тканями основал свой первый дом моды в Париже, дизайном и созданием одежды занимались в основном неизвестные швеи, а высокая мода произошла от стилей, которые носили при королевских дворах. Успех Ворта был таким, что он мог диктовать своим клиентам, что им следует носить, вместо того, чтобы следовать их примеру, как это делали прежние портные или белошвейки. Именно в этот период многие дизайнерские дома начали нанимать художников для создания эскизов или раскрашивания дизайнов одежды. Одни только изображения можно было бы представить клиентам гораздо дешевле, чем изготовление реальных образцов одежды в мастерской. Если клиента устраивал предложенный дизайн или фасон, он заказывал его, и полученная одежда приносила деньги для бизнеса. Таким образом, традиция дизайнеров рисовать эскизы предметов одежды вместо того, чтобы представлять готовые модели покупателям, преобразовалась в очередную прибыльную область предпринимательства.</Russian>
 	</TEXT>
 	<TEXT>
@@ -546,17 +376,13 @@
 		<French>Magasin 'Maison de la Mode'</French>
 		<German>Fashion-House-Laden</German>
 		<Italian>Negozio di Fashion House</Italian>
-		<Spanish>
-			<Text>Tienda Fashion House</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Tienda de Fashion House</Spanish>
 		<Russian>Àòåëüå "ÄÌ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_FASHION_STORE_PEDIA</Tag>
 		<English>Your local store to get your clothes.</English>
-		<Italian>Negozio locale in cui poter comprare i vestiti.</Italian>
+		<Italian>Il negozio locale in cui poter comprare i tuoi vestiti.</Italian>
 		<Spanish>Tu tienda local donde renovar tu vestimenta.</Spanish>
 		<Russian>Посетите один из наших местный магазин, где можно приобрести модную одежду.</Russian>
 	</TEXT>
@@ -572,18 +398,13 @@
 		<French>Le Siège de Carouf'</French>
 		<German>MallWart-Zentrale</German>
 		<Italian>QG di MallWart</Italian>
-		<Spanish>
-			<Text>MallWart</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Russian>Ìàëëâàðò</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MALLWART_PEDIA</Tag>
 		<English>Fresh groceries and fruits delivered from all over the world directly to your home cities.</English>
 		<French>Provisions fraîches et Fruits et légumes provenant du monde entier, directement dans vos villes.</French>
-		<Italian>Verdure e frutti freschi consegnati da tutto il mondo direttamente nella tua città.</Italian>
+		<Italian>Verdure e frutta fresca consegnati da tutto il mondo direttamente nella tua città.</Italian>
 		<Spanish>Frutas y verduras frescas enviadas directamente desde todo el mundo a tus ciudades.</Spanish>
 		<Russian>Свежие продукты и фрукты доставляются со всего мира прямо в ваши города.</Russian>
 	</TEXT>
@@ -593,17 +414,13 @@
 		<French>Magasin Carouf'</French>
 		<German>MallWart-Laden</German>
 		<Italian>Negozio di MallWart</Italian>
-		<Spanish>
-			<Text>Tienda MallWart</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Tienda de MallWart</Spanish>
 		<Russian>Ìàãàçèí "Ìàëëâàðò"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MALLWART_STORE_PEDIA</Tag>
 		<English>Fresh groceries and fruits delivered from all over the world directly to your local store.</English>
-		<Italian>Verdure e frutti freschi consegnati da tutto il mondo direttamente nella tua città.</Italian>
+		<Italian>Verdure e frutta fresca consegnati da tutto il mondo direttamente nella tua città.</Italian>
 		<Spanish>Frutas y verduras frescas enviadas directamente desde todo el mundo a tus ciudades.</Spanish>
 		<Russian>Свежие продукты и фрукты доставляются со всего мира прямо в ваши города.</Russian>
 	</TEXT>
@@ -618,11 +435,6 @@
 		<French>Le Siège de Mapster</French>
 		<German>Mapster-Zentrale</German>
 		<Italian>QG di Mapster</Italian>
-		<Spanish>
-			<Text>Mapster</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Russian>Ìàïñòåð</Russian>
 	</TEXT>
 	<TEXT>
@@ -639,7 +451,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS</Tag>
 		<English>Big McDowells</English>
-		<Spanish>McDowells</Spanish>
 		<Russian>Áèã-Ìàêäàóýëë</Russian>
 	</TEXT>
 	<TEXT>
@@ -648,11 +459,6 @@
 		<French>Le Siège de Big McDowells</French>
 		<German>Big-McDowells-Zentrale</German>
 		<Italian>QG di Big McDowells</Italian>
-		<Spanish>
-			<Text>McDowells</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Russian>Áèã-Ìàêäàóýëë</Russian>
 	</TEXT>
 	<TEXT>
@@ -666,12 +472,8 @@
 		<English>Big McDowells Restaurant</English>
 		<French>Restaurant Big McDowells</French>
 		<German>Big-McDowells-Restaurant</German>
-		<Italian>Ristorante di Big McDowells</Italian>
-		<Spanish>
-			<Text>Restaurante McDowells</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Italian>Ristorante Big McDowells</Italian>
+		<Spanish>Restaurante McDowells</Spanish>
 		<Russian>Ðåñòîðàí "ÁÌ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -692,11 +494,7 @@
 		<French>Franchise 'MileHigh Voyages International'</French>
 		<German>MileHigh-Travels-International-Filiale</German>
 		<Italian>Filiale di MileHigh Travels International</Italian>
-		<Spanish>
-			<Text>Franquicia de MileHigh Travels International</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Franquicia de MileHigh Travels International</Spanish>
 		<Russian>Ôèëèàë "ÌÒ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -711,11 +509,6 @@
 		<French>Le Siège de 'MileHigh Voyages International'</French>
 		<German>MileHigh-Travels-International-Zentrale</German>
 		<Italian>QG di MileHigh Travels International</Italian>
-		<Spanish>
-			<Text>MileHigh Travels International</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Russian>Ìèëõàé Òðåâåë</Russian>
 	</TEXT>
 	<TEXT>
@@ -734,11 +527,6 @@
 		<French>Le Siège de 'Mobby Meats International'</French>
 		<German>Mobby-Meats-International-Zentrale</German>
 		<Italian>QG di Mobby Meats International</Italian>
-		<Spanish>
-			<Text>Mobby Meats International</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Russian>Ìÿñî Ìîááè</Russian>
 	</TEXT>
 	<TEXT>
@@ -753,17 +541,13 @@
 		<French>Magasin de 'Mobby Meats'</French>
 		<German>Mobby-Meats-Laden</German>
 		<Italian>Negozio di Mobby Meats</Italian>
-		<Spanish>
-			<Text>Tienda Mobby Meats</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Tienda de Mobby Meats</Spanish>
 		<Russian>Ìàãàçèí "ÌÌ"</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_MOBBY_STORE_PEDIA</Tag>
 		<English>Your local meat market of the world's meats, from common to exotic.</English>
-		<Italian>Il tu supermaercato locale, dove trovi carni comuni ed esoticche.</Italian>
+		<Italian>La tua bottega locale delle carni, dalla più comune alla più esotica.</Italian>
 		<Spanish>Tu mercado cárnico local con carnes de todo tipo, tanto comunes como exóticas.</Spanish>
 		<Russian>Посетите наш местный рынок мясных продуктов со всего мира, от обычных до экзотических.</Russian>
 	</TEXT>
@@ -779,11 +563,6 @@
 		<French>Siège des Cafés MoonBean</French>
 		<German>MoonBean-Coffee-Zentrale</German>
 		<Italian>QG di MoonBean Coffee</Italian>
-		<Spanish>
-			<Text>MoonBean Coffee</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Russian>Ìóíáèí êàôå</Russian>
 	</TEXT>
 	<TEXT>
@@ -797,11 +576,7 @@
 		<English>MoonBean Coffeeshop</English>
 		<French>Café-Restau MoonBean</French>
 		<Italian>Cafè di MoonBean-Coffee</Italian>
-		<Spanish>
-			<Text>Cafetería MoonBean</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Cafetería MoonBean</Spanish>
 		<Russian>Ðåñòîðàí "ÌÊ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -821,11 +596,6 @@
 		<French>Le Siège de Red Curtains</French>
 		<German>Red-Curtains-Zentrale</German>
 		<Italian>QG di Red Curtains</Italian>
-		<Spanish>
-			<Text>Red Curtains</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Russian>Êðàñíûå êóëèñû</Russian>
 	</TEXT>
 	<TEXT>
@@ -840,11 +610,7 @@
 		<French>Théatre de Red Curtains</French>
 		<German>Red-Curtains-Theater</German>
 		<Italian>Teatro di Red Curtains</Italian>
-		<Spanish>
-			<Text>Teatro de Red Curtains</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Teatro de Red Curtains</Spanish>
 		<Russian>Òåàòð "ÊÊ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -865,11 +631,7 @@
 		<French>Guide des Chasseurs Safari</French>
 		<German>Safari-Hunters-Führer</German>
 		<Italian>Guida di Safari Hunters</Italian>
-		<Spanish>
-			<Text>Ruta de Safari Hunters</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Ruta de Safari Hunters</Spanish>
 		<Russian>Ôèëèàë "ÎÑ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -884,11 +646,6 @@
 		<French>Siège des Chasseurs Safari</French>
 		<German>Safari-Hunters-Zentrale</German>
 		<Italian>QG di Safari Hunters</Italian>
-		<Spanish>
-			<Text>Safari Hunters</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
 		<Russian>Îõîòíèêè ñàôàðè</Russian>
 	</TEXT>
 	<TEXT>
@@ -924,11 +681,7 @@
 		<French>Entraîneur Soldats Ultimes</French>
 		<German>Ultimate Soldiers Ausbilder</German>
 		<Italian>Filiale di Ultimate Soldiersr</Italian>
-		<Spanish>
-			<Text>Instrucción de Ultimate Soldiers</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Instrucción de Ultimate Soldiers</Spanish>
 		<Russian>Áàçà "ÓÑ"</Russian>
 	</TEXT>
 	<TEXT>
@@ -951,11 +704,7 @@
 		<French>Siège des Confiseries Wonka</French>
 		<German>Wonka Confiserie Zentrale</German>
 		<Italian>QG di Wonka Confectioneries</Italian>
-		<Spanish>
-			<Text>Wonka Confectioneries</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Wonka Confectioneries</Spanish>
 		<Russian>Êîíäèòåðñêàÿ Âîíêà</Russian>
 	</TEXT>
 	<TEXT>
@@ -972,11 +721,7 @@
 		<French>Magasin des Confiseries Wonka</French>
 		<German>Wonka Confiserie Geschäftsstelle</German>
 		<Italian>Negozio di Wonka Confectioneries</Italian>
-		<Spanish>
-			<Text>Tienda Wonka Confectioneries</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Tienda de Wonka Confectioneries</Spanish>
 		<Russian>Ðåñòîðàí "ÊÂ"</Russian>
 	</TEXT>
 	<TEXT>

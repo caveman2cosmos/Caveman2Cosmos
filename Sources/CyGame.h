@@ -149,8 +149,6 @@ public:
 	bool isDebugMode() const;
 	void toggleDebugMode();
 
-	int getChtLvl() const;
-
 	int getPitbossTurnTime() const;
 	void setPitbossTurnTime(int iHours);
 	bool isHotSeat() const;
@@ -274,8 +272,6 @@ public:
 	void log(const char* file, char* str);
 	void logw(std::wstring str);
 
-	int getCultureThreshold(CultureLevelTypes eLevel) const;
-
 	void setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield);
 
 	bool isCivEverActive(CivilizationTypes eCivilization) const;
@@ -306,6 +302,7 @@ public:
 	const char* getC2CVersion() const;
 
 	void assignStartingPlots(bool bScenario, bool bMapScript);
+	void exitWorldBuilder();
 
 protected:
 	CvGame& m_pGame;

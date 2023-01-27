@@ -4813,8 +4813,6 @@ void CvPromotionInfo::getDataMembers(CvInfoUtil& util)
 
 bool CvPromotionInfo::read(CvXMLLoadUtility* pXML)
 {
-	OutputDebugString("Reading PromotionInfo");
-
 	CvInfoUtil(this).readXml(pXML);
 
 	CvString szTextVal;
@@ -12552,7 +12550,9 @@ bool CvGameSpeedInfo::read(CvXMLLoadUtility* pXML)
 		m_iNumTurnIncrements = pXML->GetXmlChildrenNumber(L"GameTurnInfo");
 		char szLog[1000];
 		sprintf(szLog, ":: %i", m_iNumTurnIncrements);
+#ifdef _DEBUG
 		OutputDebugString(szLog);
+#endif
 		if (pXML->TryMoveToXmlFirstChild(L"GameTurnInfo"))
 		{
 			allocateGameTurnInfos(getNumTurnIncrements());
@@ -13073,7 +13073,7 @@ void CvBuildInfo::getCheckSum(uint32_t &iSum) const
 	}
 }
 
-void CvBuildInfo::doPostLoadCaching(uint32_t eThis)
+void CvBuildInfo::doPostLoadCaching(uint32_t iThis)
 {
 }
 
@@ -13436,6 +13436,7 @@ bool CvRouteInfo::read(CvXMLLoadUtility* pXML)
 	if (m_szType.empty())
 	{
 		OutputDebugStringW(pXML->GetXmlTagName());
+		OutputDebugString("\n");
 		FErrorMsg("error");
 	}
 	//shouldHaveType = false;
@@ -24613,22 +24614,15 @@ void CvArtInfoMovie::copyNonDefaults(const CvArtInfoMovie* pClassInfo)
 
 bool CvArtInfoBonus::read(CvXMLLoadUtility* pXML)
 {
-	OutputDebugString("ArtInfoBonus Start Reading");
-
 	if (!CvArtInfoScalableAsset::read(pXML))
 	{
 		return false;
 	}
-
-	OutputDebugString("ArtInfoBonus Proceed Reading");
-
 	CvString szTextVal;
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"SHADERNIF");
 	setShaderNIF(szTextVal);
 
 	pXML->GetChildXmlValByName(&m_iFontButtonIndex, L"FontButtonIndex");
-
-	OutputDebugString("ArtInfoBonus Finish Reading");
 
 	return true;
 }
@@ -25699,21 +25693,16 @@ void CvUpkeepInfo::getCheckSum(uint32_t& iSum) const
 //
 
 CvCultureLevelInfo::CvCultureLevelInfo() :
+m_iLevel(-1),
 m_iCityDefenseModifier(0),
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 m_iCityRadius(1),
 m_iMaxWorldWonders(1),
 m_iMaxTeamWonders(1),
 m_iMaxNationalWonders(1),
 m_iMaxNationalWondersOCC(1),
 m_iPrereqGameOption(NO_GAMEOPTION),
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
+
 m_paiSpeedThreshold(NULL)
 {
 }
@@ -25734,11 +25723,7 @@ int CvCultureLevelInfo::getSpeedThreshold(int i) const
 	return m_paiSpeedThreshold ? m_paiSpeedThreshold[i] : 0;
 }
 
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 int CvCultureLevelInfo::getCityRadius() const
 {
 	return m_iCityRadius;
@@ -25768,9 +25753,7 @@ int CvCultureLevelInfo::getPrereqGameOption() const
 {
 	return m_iPrereqGameOption;
 }
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
+
 
 bool CvCultureLevelInfo::read(CvXMLLoadUtility* pXml)
 {
@@ -25780,11 +25763,7 @@ bool CvCultureLevelInfo::read(CvXMLLoadUtility* pXml)
 	}
 
 	pXml->GetOptionalChildXmlValByName(&m_iCityDefenseModifier, L"iCityDefenseModifier");
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09														*/
-/*																							  */
-/*																							  */
-/************************************************************************************************/
+
 	pXml->GetOptionalChildXmlValByName(&m_iCityRadius, L"iCityRadius", 1);
 	pXml->GetOptionalChildXmlValByName(&m_iMaxWorldWonders, L"iMaxWorldWonders", 1);
 	pXml->GetOptionalChildXmlValByName(&m_iMaxTeamWonders, L"iMaxTeamWonders", 1);
@@ -25793,9 +25772,7 @@ bool CvCultureLevelInfo::read(CvXMLLoadUtility* pXml)
 	CvString szTextVal;
 	pXml->GetOptionalChildXmlValByName(szTextVal, L"PrereqGameOption");
 	m_iPrereqGameOption = pXml->GetInfoClass(szTextVal);
-/************************************************************************************************/
-/* JOOYO_ADDON						  END													 */
-/************************************************************************************************/
+
 	pXml->SetVariableListTagPair(&m_paiSpeedThreshold, L"SpeedThresholds", GC.getNumGameSpeedInfos());
 
 	return true;
@@ -31598,6 +31575,29 @@ void CvPromotionLineInfo::getCheckSum(uint32_t& iSum) const
 	CheckSumC(iSum, m_aTechOvercomeChanges);
 }
 
+void CvPromotionLineInfo::doPostLoadCaching(uint32_t iThis)
+{
+	//Establish speedy promotion & Building reference by line
+	m_aiPromotions.clear();
+	m_aiBuildings.clear();
+
+	for ( int i = 0; i < GC.getNumPromotionInfos(); i++)
+	{
+		if (GC.getPromotionInfo((PromotionTypes)i).getPromotionLine() == iThis)
+		{
+			m_aiPromotions.push_back(i);
+		}
+	}
+	for ( int i = 0; i < GC.getNumBuildingInfos(); i++)
+	{
+		if (GC.getBuildingInfo((BuildingTypes)i).getPromotionLineType() == iThis)
+		{
+			m_aiBuildings.push_back(i);
+		}
+	}
+
+}
+
 TechTypes CvPromotionLineInfo::getObsoleteTech() const
 {
 	return m_eObsoleteTech;
@@ -31937,18 +31937,6 @@ bool CvPromotionLineInfo::isPromotion(int i) const
 	FASSERT_BOUNDS(0, GC.getNumPromotionInfos(), i);
 	return algo::any_of_equal(m_aiPromotions, i);
 }
-void CvPromotionLineInfo::setPromotions()
-{
-	m_aiPromotions.clear();
-	const int iIndex = GC.getInfoTypeForString(getType());
-	for ( int i = 0; i < GC.getNumPromotionInfos(); i++)
-	{
-		if (GC.getPromotionInfo((PromotionTypes)i).getPromotionLine() == iIndex)
-		{
-			m_aiPromotions.push_back(i);
-		}
-	}
-}
 
 int CvPromotionLineInfo::getBuilding(int i) const
 {
@@ -31965,18 +31953,7 @@ bool CvPromotionLineInfo::isBuilding(int i) const
 	FASSERT_BOUNDS(0, GC.getNumBuildingInfos(), i);
 	return algo::any_of_equal(m_aiBuildings, i);
 }
-void CvPromotionLineInfo::setBuildings()
-{
-	m_aiBuildings.clear();
-	const int iIndex = GC.getInfoTypeForString(getType());
-	for ( int i = 0; i < GC.getNumBuildingInfos(); i++)
-	{
-		if (GC.getBuildingInfo((BuildingTypes)i).getPromotionLineType() == iIndex)
-		{
-			m_aiBuildings.push_back(i);
-		}
-	}
-}
+
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //

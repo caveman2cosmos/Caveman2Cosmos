@@ -3980,15 +3980,16 @@ UnitTypes CvCityAI::AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAs
 
 		m_bestUnits.insert(std::make_pair(cacheKey, unitValueInfo));
 	}
-
-	if (UNITAI_CITY_DEFENSE == eUnitAI && eBestUnit == NO_UNIT && (criteria == NULL || criteria->m_eProperty == NO_PROPERTY))
-	{
-		OutputDebugString("No buildable defender!!\n");
-	}
+#ifdef _DEBUG
 	if (eBestUnit == NO_UNIT)
 	{
+		if (UNITAI_CITY_DEFENSE == eUnitAI && (!criteria || criteria->m_eProperty == NO_PROPERTY))
+		{
+			OutputDebugString("No buildable defender!!\n");
+		}
 		OutputDebugString("No Buildable Unit for selected AI!!\n");
 	}
+#endif
 	return eBestUnit;
 }
 
@@ -12335,8 +12336,9 @@ void CvCityAI::AI_FlushBuildingValueCache(bool bRetainValues)
 
 	if (!bRetainValues)
 	{
+#ifdef _DEBUG
 		OutputDebugString("Flush building cache\n");
-
+#endif
 		SAFE_DELETE(cachedBuildingValues);
 	}
 	else if (cachedBuildingValues != NULL)
@@ -12449,10 +12451,13 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 	const bool bLandWar = bDefense || pArea->getAreaAIType(eTeam) == AREAAI_OFFENSIVE || pArea->getAreaAIType(eTeam) == AREAAI_MASSING;
 	const bool bDanger = AI_isDanger();
 
-	logBBAI(
-		"      City %S CalculateAllBuildingValues for flags %08lx (already has %08lx)",
-		getName().GetCString(), iFocusFlags, cachedBuildingValues->m_iCachedFlags
-	);
+	if (gCityLogLevel > 1)
+	{
+		logBBAI(
+			"      City %S CalculateAllBuildingValues for flags %08lx (already has %08lx)",
+			getName().GetCString(), iFocusFlags, cachedBuildingValues->m_iCachedFlags
+		);
+	}
 	// Either wonder flag forces all wonders to be calculated, so we can mark them both off as done.
 	if ((iFocusFlags & (BUILDINGFOCUS_WORLDWONDER | BUILDINGFOCUS_WONDEROK)) != 0)
 	{
@@ -12529,8 +12534,10 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 			const CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 
-			logBBAI("          Calc value for %S", kBuilding.getDescription());
-
+			if (gCityLogLevel > 2)
+			{
+				logBBAI("          Calc value for %S", kBuilding.getDescription());
+			}
 			if (kBuilding.isCapital()) continue; // Perhaps the palace should have value...
 
 			// Don't consider a building if it causes the city to immediately start shrinking from unhealthiness
@@ -14517,7 +14524,7 @@ bool CvCityAI::AI_choosePropertyControlUnit(int iTriggerPercentOfPropertyOpRange
 						int iMaxTurns = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHammerCostPercent() / 20;
 						if (AI_chooseBuilding(BUILDINGFOCUS_PROPERTY, iMaxTurns, 0, -1, true, eProperty))
 						{
-							if (gCityLogLevel >= 2) logBBAI("      City %S selects a property control building", getName().GetCString());
+							if (gCityLogLevel > 1) logBBAI("      City %S selects a property control building", getName().GetCString());
 							AI_setPropertyControlBuildingQueued(true);
 							return true;
 						}

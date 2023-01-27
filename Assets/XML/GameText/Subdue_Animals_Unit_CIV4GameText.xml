@@ -1183,6 +1183,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NILE_MONITOR_PEDIA</Tag>
 		<English>The Nile monitor (Varanus niloticus) is a large member of the monitor family (Varanidae) found throughout most of Sub-Saharan Africa and along the Nile. The population in West African forests and savannahs is sometimes recognized as a separate species, the West African Nile monitor (V. stellatus). Other common names include the African small-grain lizard, as well as iguana and various forms derived from it, such as guana, water leguaan or river leguaan (leguan, leguaan, and likkewaan mean monitor lizard in South African English, and can be used interchangeably)</English>
+		<German>Der [COLOR_UNIT_TEXT]Nilwaran[COLOR_REVERT] (Varanus niloticus) ist ein in Afrika vorkommendes Schuppenkriechtier.[NEWLINE]Die durchschnittliche Größe eines männlichen Exemplars liegt bei etwa 2 Metern, Weibchen sind etwas kleiner. Der lange Schwanz ist abgeflacht und dient als Ruder. Erwachsene Nilwarane sind graubraun bis olivbraun mit helleren Augenflecken und Bändern sowie dunklen Querstrichen an Rücken und Kehle. Die Anzahl der Augenflecken und Bänder unterscheidet diese Art vom Regenwald-Nilwaran, der weniger dieser Bänder besitzt. Nilwarane sind in allen Vegetationszonen Afrikas mit Ausnahme der Wüsten anzutreffen. Teilweise dringen sie auch in besiedelte Gebiete vor, wo sie auf Müllhalden nach Nahrung suchen. Tagsüber sonnen sie sich gern, nachts verstecken sie sich in unterirdischen Bauen. Sie sind gute Kletterer und sehr gute Schwimmer. Nilwarane sind Fleischfresser, wobei sie in der Trockenzeit auch häufig auf Aas zurückgreifen. Sie jagen je nach Alter und Lebensraum u.a. Vögel, Krebstiere, Amphibien und kleine Säuger, teilweise sogar Giftschlangen. Unter Jungtieren gibt es gelegentlich Kannibalismus. Teilweise arbeiten zwei Exemplare beim Beutefang zusammen, obwohl Nilwarane an sich Einzelgänger sind. Ein Weibchen legt je nach Körpergröße 5-60 Eier in Termitenhügel oder selbst gegrabene Höhlen. Die Jungen schlüpfen zur nächsten Regenzeit, wenn ausreichend Nahrung vorhanden ist.[NEWLINE]Bereits die alten Ägypter stellten den Nilwaran auf Denkmälern dar. Bis heute ist er als Nahrungsmittel und für den Lederhandel von Bedeutung. In Florida sind junge Nilwarane beliebte Heimtiere, die aber schnell zu groß werden. Ausgewilderte Exemplare haben inzwischen eine stabile Population entwickelt und werden zur Gefahr für heimische Arten.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUMBAT</Tag>
@@ -3426,6 +3427,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_NARWHAL</Tag>
 		<English>Subdued Narwhal</English>
 		<French>Narval (App.)</French>
+			<German>
+			<Text>Gefangener Narwal:Gefangenen Narwals:Gefangenen Narwal:Gefangenen Narwal:Gefangene Narwale:Gefangenen Narwale:Gefangenen Narwalen:Gefangenen Narwale</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Narvalo addomesticato</Text>
 			<Gender>Male</Gender>
@@ -3466,6 +3472,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_OKAPI</Tag>
 		<English>Subdued Okapi</English>
 		<French>Okapi (App.)</French>
+		<German>
+			<Text>Gefangenes Okapi:Gefangenen Okapis:Gefangenen Okapi:Gefangene Okapi:Gefangene Okapis:Gefangenen Okapis:Gefangenen Okapis:Gefangenen Okapis</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Okapi addomesticato</Text>
 			<Gender>Male</Gender>
@@ -3489,6 +3500,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_ORANGUTAN</Tag>
 		<English>Subdued Orangutan</English>
 		<French>Orang-outan (App.)</French>
+		<German>
+			<Text>Gefangener Orang-Utan:Gefangenen Orang-Utans:Gefangenen Orang-Utan:Gefangenen Orang-Utan:Gefangene Orang-Utans:Gefangenen Orang-Utans:Gefangenen Orang-Utans:Gefangenen Orang-Utans</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Orangotango addomesticato</Text>
 			<Gender>Male</Gender>
@@ -3501,6 +3517,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_ORCA</Tag>
 		<English>Subdued Orca</English>
 		<French>Orque (App.)</French>
+		<German>
+			<Text>Gefangener Schwertwal:Gefangenen Schwertwals:Gefangenen Schwertwal:Gefangenen Schwertwal:Gefangene Schwertwale:Gefangenen Schwertwale:Gefangenen Schwertwalen:Gefangenen Schwertwale</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Orca addomesticata</Text>
 			<Gender>Female</Gender>
@@ -3518,8 +3539,8 @@
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Gefangener Strauß:Gefangenen Straußes:Gefangenem Strauß:Gefangenen Strauß:Gefangene Strauße:Gefangenen Strauße:Gefangenen Straußen:Gefangenen Strauße</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Text>Gefangener Strauß:Gefangenen Straußes:Gefangenen Strauß:Gefangenen Strauß:Gefangene Strauße:Gefangenen Strauße:Gefangenen Straußen:Gefangenen Strauße</Text>
+			<Gender>Male</Gender>
 			<Plural>0:0:0:0:1:1:1:1</Plural>
 		</German>
 		<Italian>
@@ -3534,6 +3555,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_OXPECKER</Tag>
 		<English>Subdued Oxpecker</English>
 		<French>Pique-bœuf (App.)</French>
+		<German>
+			<Text>Gefangener Madenhacker:Gefangenen Madenhackers:Gefangenen Madenhacker:Gefangenen Madenhacker:Gefangene Madenhacker:Gefangenen Madenhacker:Gefangenen Madenhackern:Gefangenen Madenhacker</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Bufaga addomesticata</Text>
 			<Gender>Female</Gender>
@@ -3562,6 +3588,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangener Panther:Gefangenen Panthers:Gefangenen Panther:Gefangenen Panther:Gefangene Panther:Gefangenen Panther:Gefangenen Panthern:Gefangenen Panther</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Pantera addomesticata</Text>
 			<Gender>Female</Gender>
@@ -3581,6 +3612,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_PEACOCK</Tag>
 		<English>Subdued Peacock</English>
 		<French>Paon (App.)</French>
+		<German>
+			<Text>Gefangener Pfau:Gefangenen Pfaus:Gefangenen Pfau:Gefangenen Pfau:Gefangene Pfauen:Gefangenen Pfauen:Gefangenen Pfauen:Gefangenen Pfauen</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Pavone addomesticato</Text>
 			<Gender>Male</Gender>
@@ -3683,6 +3719,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_PROCOPTODON</Tag>
 		<English>Subdued Procoptodon</English>
 		<French>Procoptodon (App.)</French>
+		<German>
+			<Text>Gefangenes Procoptodon:Gefangenen Procoptodons:Gefangenen Procoptodon:Gefangene Procoptodon:Gefangene Procoptodonten:Gefangenen Procoptodonten:Gefangenen Procoptodonten:Gefangenen Procoptodonten</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Procoptodonte addomesticato</Text>
 			<Gender>Male</Gender>
@@ -3699,6 +3740,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangene Puffotter:Gefangenen Puffotter:Gefangenen Puffotter:Gefangene Puffotter:Gefangene Puffottern:Gefangenen Puffottern:Gefangenen Puffottern:Gefangenen Puffottern</Text>
+			<Gender>Female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Vipera soffiatrice addomesticata</Text>
 			<Gender>Female</Gender>
@@ -3722,7 +3768,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_QUOLL</Tag>
 		<English>Subdued Quoll</English>
 		<French>Chat marsupial (App.)</French>
-		<German>SubduedQuoll</German>
+		<German>
+			<Text>Gefangener Beutelmarder:Gefangenen Beutelmarders:Gefangenen Beutelmarder:Gefangenen Beutelmarder:Gefangene Beutelmarder:Gefangenen Beutelmarder:Gefangenen Beutelmardern:Gefangenen Beutelmarder</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Quoll addomesticato</Text>
 			<Gender>Male</Gender>
@@ -3748,6 +3798,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_RATEL</Tag>
 		<English>Subdued Ratel</English>
 		<French>Ratel (App.)</French>
+		<German>
+			<Text>Gefangener Honigdachs:Gefangenen Honigdachses:Gefangenen Honigdachs:Gefangenen Honigdachs:Gefangene Honigdachse:Gefangenen Honigdachse:Gefangenen Honigdachsen:Gefangenen Honigdachse</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Ratele addomesticato</Text>
 			<Gender>Male</Gender>
@@ -3767,6 +3822,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAY_EAGLE</Tag>
 		<English>Subdued Eagle Ray</English>
 		<French>Aigle de mer (App.)</French>
+		<German>
+			<Text>Gefangener Adlerrochen:Gefangenen Adlerrochens:Gefangenen Adlerrochen:Gefangenen Adlerrochen:Gefangene Adlerrochen:Gefangenen Adlerrochen:Gefangenen Adlerrochen:Gefangenen Adlerrochen</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Aquila di mare addomesticata</Text>
 			<Gender>Female</Gender>
@@ -3783,6 +3843,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangener Mantarochen:Gefangenen Mantarochens:Gefangenen Mantarochen:Gefangenen Mantarochen:Gefangene Mantarochen:Gefangenen Mantarochen:Gefangenen Mantarochen:Gefangenen Mantarochen</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Manta addomesticata</Text>
 			<Gender>Female</Gender>
@@ -4030,6 +4095,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangene Meeresschildkröte:Gefangenen Meeresschildkröte:Gefangenen Meeresschildkröte:Gefangene Meeresschildkröte:Gefangene Meeresschildkröten:Gefangenen Meeresschildkröten:Gefangenen Meeresschildkröten:Gefangenen Meeresschildkröten</Text>
+			<Gender>Female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Tartaruga marina addomesticata</Text>
 			<Gender>Female</Gender>
@@ -4159,6 +4229,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_TASMANIANDEVIL</Tag>
 		<English>Subdued Tasmanian Devil</English>
 		<French>Diable de Tasmanie (App.)</French>
+		<German>
+			<Text>Gefangener Tasmanischer Teufel:Gefangenen Tasmanischen Teufels:Gefangenen Tasmanischen Teufel:Gefangenen Tasmanischen Teufel:Gefangene Tasmanische Teufel:Gefangenen Tasmanischen Teufel:Gefangenen Tasmanischen Teufeln:Gefangenen Tasmanischen Teufel</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Diavolo della Tasmania addomesticato</Text>
 			<Gender>Male</Gender>
@@ -4221,6 +4296,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_TUNA</Tag>
 		<English>Subdued Tuna</English>
 		<French>Thon (App.)</French>
+		<German>
+			<Text>Gefangener Thunfisch:Gefangenen Thunfischs:Gefangenen Thunfisch:Gefangenen Thunfisch:Gefangene Thunfische:Gefangenen Thunfische:Gefangenen Thunfischen:Gefangenen Thunfische</Text>
+			<Gender>Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Tonno addomesticato</Text>
 			<Gender>Male</Gender>
@@ -4347,6 +4427,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_WARTHOG</Tag>
 		<English>Subdued Warthog</English>
 		<French>Phacochère (App.)</French>
+		<German>
+			<Text>Gefangenes Warzenschwein:Gefangenen Warzenschweins:Gefangenen Warzenschwein:Gefangene Warzenschwein:Gefangene Warzenschweine:Gefangenen Warzenschweine:Gefangenen Warzenschweinen:Gefangenen Warzenschweine</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Facocero addomesticato</Text>
 			<Gender>Male</Gender>
@@ -4393,6 +4478,11 @@
 		<Tag>TXT_KEY_UNIT_SUBDUED_WILDEBEEST</Tag>
 		<English>Subdued Wildebeest</English>
 		<French>Gnou (App.)</French>
+		<German>
+			<Text>Gefangenes Gnu:Gefangenen Gnus:Gefangenen Gnu:Gefangene Gnu:Gefangene Gnus:Gefangenen Gnus:Gefangenen Gnus:Gefangenen Gnus</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Gnu addomesticato</Text>
 			<Gender>Male</Gender>
@@ -5182,6 +5272,11 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gezähmtes Mammut:Gezähmten Mammuts:Gezähmten Mammut:Gezähmte Mammut:Gezähmte Mammuts:Gezähmten Mammuts:Gezähmten Mammuts:Gezähmten Mammuts</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Polish>Oswojony Mamut</Polish>
 		<Russian>Ìàìîíò (äîì.)</Russian>
 	</TEXT>
@@ -5421,6 +5516,7 @@
 		<Tag>TXT_KEY_UNIT_TUNA_PEDIA</Tag>
 		<English>See [LINK=UNIT_MACKEREL]Mackerel[/LINK] since tuna are mackerel.</English>
 		<French>Voir [LINK=UNIT_MACKEREL]Maquereau[/LINK] car les thons sont une espèce de Maquereaux.</French>
+		<German>Siehe [LINK=UNIT_MACKEREL]Makrele[/LINK], denn Thunfische gehören zu den Makrelen.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIPER</Tag>
@@ -5553,7 +5649,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALRUS_PEDIA</Tag>
 		<English>The walrus (Odobenus rosmarus) is a large flippered marine mammal with a discontinuous circumpolar distribution in the Arctic Ocean and sub-Arctic seas of the Northern Hemisphere. The walrus is the only living species in the Odobenidae family and Odobenus genus. It is subdivided into three subspecies: the Atlantic walrus (O. rosmarus rosmarus) which lives in the Atlantic Ocean, the Pacific walrus (O. rosmarus divergens) which lives in the Pacific Ocean, and O. rosmarus laptevi, which lives in the Laptev Sea.[PARAGRAPH:2]The walrus is easily recognized by its prominent tusks, whiskers and great bulk. Adult Pacific males can weigh more than 1,700 kilograms (3,700 lb) and, among pinnipeds, are exceeded in size only by the two species of elephant seals. It resides primarily in shallow oceanic shelf habitat, spending a significant proportion of its life on sea ice in pursuit of its preferred diet of benthic bivalve mollusks. It is a relatively long-lived, social animal and is considered a keystone species in Arctic marine ecosystems.[PARAGRAPH:2]The walrus has played a prominent role in the cultures of many indigenous Arctic peoples, who have hunted the walrus for its meat, fat, skin, tusks and bone. In the 19th and early 20th centuries, the walrus was the object of heavy commercial exploitation for blubber and ivory and its numbers declined rapidly. Its global population has since rebounded, though the Atlantic and Laptev populations remain fragmented and at historically depressed levels.</English>
-		<German>Beim Walross (Odobenus rosmarus) handelt es sich um eine große Robbenart, die in den kalten Meeren der nördlichen Hemisphäre heimisch ist. Walrossbullen können bis zu 3,5 m lang werden und ein Gewicht von über 1200 kg erreichen. Weibchen sind dagegen deutlich kleiner und leichter.[NEWLINE]Walrosse verfügen über markante Stoßzähne, die auch Hauer genannt werden. Sie sind bei beiden Geschlechtern vorhanden, bei Männchen aber in der Regel länger und voluminöser. Es wurden schon Stoßzähne von 1-m-Rekordlänge dokumentiert. Walrosshauer sind wahre Multifunktionswerkzeuge. Die Tiere verteidigen sich damit gegen Fressfeinde, brechen damit Atemlöcher ins Eis, nutzen sie zur Fortbewegung, zur Abstützung des Kopfes oder ziehen sich damit an Land. Außerdem sind die Stoßzähne auch Statussymbole, mit denen dominante Tiere beiderlei Geschlechts die Rangordnung untermauern. Walrosse leben in großen Herden an den Küsten von Inseln oder am Packeisrand, die meist nach Geschlechtern getrennt sind. Außergewöhnlich ist der zweijährige Fortpflanzungsrhythmus, der dadurch bedingt ist, dass nach der Paarung im Januar/Februar das Ei zunächst 5 Monate ruht, bis die eigentliche elfmonatige Tragezeit beginnt.</German>
+		<German>Beim [COLOR_UNIT_TEXT]Walross[COLOR_REVERT] (Odobenus rosmarus) handelt es sich um eine große Robbenart, die in den kalten Meeren der nördlichen Hemisphäre heimisch ist. Walrossbullen können bis zu 3,5 m lang werden und ein Gewicht von über 1200 kg erreichen. Weibchen sind dagegen deutlich kleiner und leichter.[NEWLINE]Walrosse verfügen über markante Stoßzähne, die auch Hauer genannt werden. Sie sind bei beiden Geschlechtern vorhanden, bei Männchen aber in der Regel länger und voluminöser. Es wurden schon Stoßzähne von 1-m-Rekordlänge dokumentiert. Walrosshauer sind wahre Multifunktionswerkzeuge. Die Tiere verteidigen sich damit gegen Fressfeinde, brechen damit Atemlöcher ins Eis, nutzen sie zur Fortbewegung, zur Abstützung des Kopfes oder ziehen sich damit an Land. Außerdem sind die Stoßzähne auch Statussymbole, mit denen dominante Tiere beiderlei Geschlechts die Rangordnung untermauern. Walrosse leben in großen Herden an den Küsten von Inseln oder am Packeisrand, die meist nach Geschlechtern getrennt sind. Außergewöhnlich ist der zweijährige Fortpflanzungsrhythmus, der dadurch bedingt ist, dass nach der Paarung im Januar/Februar das Ei zunächst 5 Monate ruht, bis die eigentliche elfmonatige Tragezeit beginnt.</German>
 		<Polish>Mors (koń morski, łac. Odobenus rosmarus) gatunek dużego drapieżnego ssaka morskiego, jedyny współcześnie żyjący przedstawiciel dawniej licznej w gatunki rodziny morsowatych (Odobenidae) i jedyny gatunek z rodzaju Odobenus. Mors pełnił ważną rolę w życiu mieszkańców Arktyki, którzy polowali na niego dla mięsa, skór, tłuszczu, ciosów i kości.[PARAGRAPH:2]Morsy występują na wodach przybrzeżnych Arktyki, wzdłuż wybrzeży Ameryki Północnej i Rosji. Mors najbardziej lubi płytkie wody w pobliżu pływających pól lodowych, więc można go również zobaczyć jak pływa na krach lodowych.[PARAGRAPH:2]TMors ma ciężkie ciało osiągające długość od 2,5 do 4,2 m, osłonięte grubą na 3,5 cm niemal nagą (słabo owłosioną), pofałdowaną skórą. Masa ciała mieści się w przedziale od 400 do 1700 kg; samce są większe od samic. Morsy z Oceanu Spokojnego są większe od występujących w Atlantyku. Barwa skóry od jasnobrązowej do cynamonowobrązowej, podczas wygrzewania się na słońcu kolor zmienia się na różowy wskutek rozszerzania się naczyń krwionośnych. Na brzuchu i piersiach skóra jest ciemniejsza. Morsy żyjące w Oceanie Spokojnym mają więcej wąsów czuciowych od tych z Atlantyku. Wszystkie kończyny morsa są przekształcone w płetwy. Przednie kończyny są większe od tylnych i stanowią główny narząd ruchu. U młodych morsów dostrzega się rzadkie owłosienie skóry, dorosłe mają skórę bardzo słabo owłosioną. Na górnej wardze występują liczne włosy czuciowe. W uzębieniu wyróżniają się górne kły obecne u samców i u samic, szczególnie silnie rozwinięte u samców, mogą dorastać do metra długości, ale przeciętna ich długość wynosi ok. 50 cm. Masa największych kłów przekracza 5 kg. Kły morsów mają budowę podobną do ciosów słoni.[PARAGRAPH:2]Mors nie jest gatunkiem zagrożonym wyginięciem, ale liczebność jest poważnie obniżona w wyniku dawnych polowań. Nadal prowadzone jest kłusownictwo dla ich ciosów, odkąd zdobywanie kości słoniowej jest nielegalne. Głównym naturalnym wrogiem morsów jest orka i rzadko niedźwiedź polarny, który tylko w wyjątkowych sytuacjach jest zdolny upolować młodego bądź schorowanego morsa.</Polish>
 	</TEXT>
 	<TEXT>

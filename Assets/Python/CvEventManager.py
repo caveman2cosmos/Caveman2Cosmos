@@ -89,10 +89,8 @@ class CvEventManager:
 			'unitCreated'				: self.onUnitCreated,
 			'unitBuilt'					: self.onUnitBuilt,
 			'unitKilled'				: self.onUnitKilled,
-#			'unitLost'					: self.onUnitLost,
 			'unitPromoted'				: self.onUnitPromoted,
 			'unitUpgraded'				: self.onUnitUpgraded,
-#			'unitSelected'				: self.onUnitSelected,
 			'UnitRename'				: self.onUnitRename,
 #			'unitPillage'				: self.onUnitPillage,
 			'unitSpreadReligionAttempt'	: self.onUnitSpreadReligionAttempt,
@@ -1075,16 +1073,15 @@ class CvEventManager:
 		if iUnitW == mapUnitType["SPARTACUS"]:
 			# Capture 25%
 			if not GAME.getSorenRandNum(4, "Gods"):
-				CyPlotW = CyUnitW.plot()
-				iX = CyPlotW.getX()
-				iY = CyPlotW.getY()
-				CyUnitL.setXY(iX, iY, False, True, True)
-				CyUnitL.setDamage(100000, -1)
 
 				CyPlotL = CyUnitL.plot()
 				if not CyPlotL.isVisibleEnemyUnit(iPlayerW):
 					iX = CyPlotL.getX()
 					iY = CyPlotL.getY()
+				else:
+					CyPlotW = CyUnitW.plot()
+					iX = CyPlotW.getX()
+					iY = CyPlotW.getY()
 
 				GC.getPlayer(iPlayerW).initUnit(mapUnitType["GLADIATOR"], iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH).finishMoves()
 				# Message
@@ -2086,12 +2083,6 @@ class CvEventManager:
 			CyUnit.setLeaderUnitType(-1)
 
 
-	'''
-	def onUnitLost(self, argsList):
-		CyUnit, = argsList
-	'''
-
-
 	def onUnitPromoted(self, argsList):
 		CyUnit, iPromotion = argsList
 		CyPlayer = GC.getPlayer(CyUnit.getOwner())
@@ -2142,11 +2133,6 @@ class CvEventManager:
 			CyUnitOld, CyUnitNew, iPrice = argsList
 			print "%s Upgraded %s to %s" %(GC.getPlayer(CyUnitOld.getOwner()).getCivilizationDescription(0), CyUnitOld.getName(), CyUnitNew.getName())
 
-	''' Might be useful
-	def onUnitSelected(self, argsList):
-		CyUnit = argsList[0]
-	'''
-
 
 	def onUnitRename(self, argsList):
 		CyUnit, = argsList
@@ -2189,12 +2175,12 @@ class CvEventManager:
 		CyUnit, iPlayer, CyCity = argsList
 
 		aWonderTuple = self.aWonderTuple
-		if "LASCAUX" in aWonderTuple[0]:
-			if iPlayer == aWonderTuple[4][aWonderTuple[0].index("LASCAUX")]:
-				CyCity.changeCulture(iPlayer, CyCity.getCultureThreshold() /10, True)
-				iCount = CyCity.getAddedFreeSpecialistCount(GC.getInfoTypeForString("SPECIALIST_GREAT_ARTIST"))
-				for i in xrange(iCount):
-					CyCity.changeCulture(iPlayer, CyCity.getCultureThreshold() / 20, True)
+		if "LASCAUX" in aWonderTuple[0] and iPlayer == aWonderTuple[4][aWonderTuple[0].index("LASCAUX")] and CyCity.getCultureThreshold() > 0:
+
+			CyCity.changeCulture(iPlayer, CyCity.getCultureThreshold() / 10, True)
+			iCount = CyCity.getAddedFreeSpecialistCount(GC.getInfoTypeForString("SPECIALIST_GREAT_ARTIST"))
+			for i in xrange(iCount):
+				CyCity.changeCulture(iPlayer, CyCity.getCultureThreshold() / 20, True)
 
 
 	def onTechAcquired(self, argsList):

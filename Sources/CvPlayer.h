@@ -69,7 +69,10 @@ protected:
 	CvGameObjectPlayer m_GameObject;
 	void baseInit(PlayerTypes eID);
 	void initMore(PlayerTypes eID, LeaderHeadTypes ePersonality, bool bSetAlive = true);
+
 	std::vector<int> m_idleCities;
+	std::vector<CvUnit*> m_commanders;
+	std::vector<CvPlot*> m_commandFieldPlots;
 
 public:
 
@@ -145,7 +148,6 @@ public:
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isAnimal() const;
-	bool isInvasionCapablePlayer() const;
 
 	DllExport const wchar_t* getName(uint uiForm = 0) const;
 
@@ -1067,6 +1069,11 @@ public:
 	typedef bst::iterator_range<city_iterator> city_range;
 	city_range cities() const { return city_range(beginCities(), endCities()); }
 
+	safe_city_iterator beginCitiesSafe() const { return safe_city_iterator(beginCities(), endCities()); }
+	safe_city_iterator endCitiesSafe() const { return safe_city_iterator(); }
+	typedef bst::iterator_range<safe_city_iterator> safe_city_range;
+	safe_city_range cities_safe() const { return safe_city_range(beginCitiesSafe(), endCitiesSafe()); }
+
 	// deprecated, use city_iterator
 	CvCity* firstCity(int* pIterIdx, bool bRev = false) const;
 	// deprecated, use city_iterator
@@ -1371,7 +1378,11 @@ public:
 	void recalculateResourceConsumption(BonusTypes eBonus);
 	void recalculateAllResourceConsumption();
 
-	std::vector<CvUnit*> Commanders;
+	void listCommander(bool bAdd, CvUnit* unit);
+	std::vector<CvUnit*> getCommanders() const { return m_commanders; }
+
+	void setCommandFieldPlot(bool bNewValue, CvPlot* aPlot);
+	std::vector<CvPlot*> getCommandFieldPlots() const { return m_commandFieldPlots; }
 
 	int getFreeSpecialistCount(SpecialistTypes eIndex) const;
 	void setFreeSpecialistCount(SpecialistTypes eIndex, int iNewValue);

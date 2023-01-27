@@ -2049,7 +2049,11 @@
 		<Tag>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP</Tag>
 		<English>Stone Tools Workshop</English>
 		<French>Atelier d'Outils de pierre</French>
-		<German>Steinwerkstatt</German>
+		<German>
+			<Text>Steinsammler</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Italian>Raccoglitore di pietre</Italian>
 		<Spanish>
 			<Text>Taller de herramientas de piedra</Text>
@@ -2062,6 +2066,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Stone Workshops[COLOR_REVERT] first appeared in the Stone Ages. Prehistoric humans used stone to fashion tools.</English>
+		<German>Das Sammeln von Steinen war für die frühen Menschen sehr wichtig, denn diese wurden nicht nur als Waffen und Hilfsmittel z.B. zum Öffnen von Nüssen verwendet. Aus den richtigen Steinen ließen sich auch mit wenigen Handgriffen bessere Werkzeuge wie z.B. scharfkantige Messer herstellen.</German>
 		<Spanish>Los primeros [COLOR_BUILDING_TEXT]Talleres de herramientas de piedra[COLOR_REVERT] aparecieron en la Edad de Piedra. Los hombres de la Prehistoria los usaron para amoldar herramientas a partir de las piedras.</Spanish>
 		<Polish>[COLOR_BUILDING_TEXT]Warsztat Kamiennych Narzędzi[COLOR_REVERT] pojawił się w epoce kamienia. Prehistoryczni ludzie wytwarzali w nim narzędzia z kamienia.</Polish>
 		<Russian>[COLOR_BUILDING_TEXT]Каменоломни[COLOR_REVERT] впервые появились в Каменном веке. Первобытные люди использовали камень для изготовления орудий труда.</Russian>

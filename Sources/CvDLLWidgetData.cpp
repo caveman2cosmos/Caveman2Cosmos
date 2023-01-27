@@ -5065,12 +5065,12 @@ void CvDLLWidgetData::parseMaintenanceHelp(CvWidgetDataStruct &widgetDataStruct,
 				szBuffer.append(szTempBuffer);
 			}
 
-// BUG - Building Saved Maintenance - start
+			// BUG - Building Saved Maintenance - start
 			if (pHeadSelectedCity->getOwner() == GC.getGame().getActivePlayer() && getBugOptionBOOL("MiscHover__BuildingSavedMaintenance", true, "BUG_BUILDING_SAVED_MAINTENANCE_HOVER"))
 			{
 				GAMETEXT.setBuildingSavedMaintenanceHelp(szBuffer, *pHeadSelectedCity, DOUBLE_SEPARATOR);
 			}
-// BUG - Building Saved Maintenance - end
+			// BUG - Building Saved Maintenance - end
 		}
 	}
 }
@@ -5085,12 +5085,12 @@ void CvDLLWidgetData::parseHealthHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 		szBuffer.append(L"\n=======================\n");
 		GAMETEXT.setGoodHealthHelp(szBuffer, *pHeadSelectedCity);
 
-// BUG - Building Additional Health - start
+		// BUG - Building Additional Health - start
 		if (pHeadSelectedCity->getOwner() == GC.getGame().getActivePlayer() && getBugOptionBOOL("MiscHover__BuildingAdditionalHealth", true, "BUG_BUILDING_ADDITIONAL_HEALTH_HOVER"))
 		{
 			GAMETEXT.setBuildingAdditionalHealthHelp(szBuffer, *pHeadSelectedCity, DOUBLE_SEPARATOR);
 		}
-// BUG - Building Additional Health - end
+		// BUG - Building Additional Health - end
 	}
 }
 
@@ -5107,12 +5107,17 @@ void CvDLLWidgetData::parseNationalityHelp(CvWidgetDataStruct &widgetDataStruct,
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
-				int iCulturePercent = pHeadSelectedCity->plot()->calculateCulturePercent((PlayerTypes)iI);
+				int iCulturePercent = pHeadSelectedCity->plot()->calculateCulturePercent((PlayerTypes)iI, 1);
 
 				if (iCulturePercent > 0)
 				{
 					wchar_t szTempBuffer[1024];
-					swprintf(szTempBuffer, L"\n%d%% " SETCOLR L"%s" ENDCOLR, iCulturePercent, GET_PLAYER((PlayerTypes)iI).getPlayerTextColorR(), GET_PLAYER((PlayerTypes)iI).getPlayerTextColorG(), GET_PLAYER((PlayerTypes)iI).getPlayerTextColorB(), GET_PLAYER((PlayerTypes)iI).getPlayerTextColorA(), GET_PLAYER((PlayerTypes)iI).getCivilizationAdjective());
+					swprintf(szTempBuffer, L"\n%.1f%% " SETCOLR L"%s" ENDCOLR, ((float)iCulturePercent)/10,
+						GET_PLAYER((PlayerTypes)iI).getPlayerTextColorR(),
+						GET_PLAYER((PlayerTypes)iI).getPlayerTextColorG(),
+						GET_PLAYER((PlayerTypes)iI).getPlayerTextColorB(),
+						GET_PLAYER((PlayerTypes)iI).getPlayerTextColorA(),
+						GET_PLAYER((PlayerTypes)iI).getCivilizationAdjective());
 					szBuffer.append(szTempBuffer);
 				}
 			}
@@ -5124,17 +5129,20 @@ void CvDLLWidgetData::parseNationalityHelp(CvWidgetDataStruct &widgetDataStruct,
 		{
 			if (GET_PLAYER(eCulturalOwner).getTeam() != pHeadSelectedCity->getTeam())
 			{
-				int iOriginal = 0;
-				int iCityStrength = pHeadSelectedCity->cultureStrength(eCulturalOwner, iOriginal);
+				int iCityStrength = pHeadSelectedCity->netRevoltRisk(eCulturalOwner);
+				int iOriginal = pHeadSelectedCity->baseRevoltRisk(eCulturalOwner);
+				int iSpeedAdjustment = GC.getREVOLT_TEST_PROB() * 100 /
+					GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 				int iGarrison = pHeadSelectedCity->cultureGarrison(eCulturalOwner);
 
 				if (iCityStrength > 0)
 				{
 					szBuffer.append(NEWLINE);
 					szBuffer.append(gDLL->getText("TXT_KEY_MISC_CHANCE_OF_REVOLT",
-						CvWString::format(L"" SETCOLR L"%.2f" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), (float)iCityStrength).GetCString(),
-						CvWString::format(L"" SETCOLR L"%.2f" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), (float)iOriginal).GetCString(),
-						CvWString::format(L"" SETCOLR L"%.2f" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), (float)iGarrison).GetCString()
+						CvWString::format(L"" SETCOLR L"%.2f%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), ((float)iCityStrength*iSpeedAdjustment)/10000).GetCString(),
+						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iOriginal).GetCString(),
+						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iSpeedAdjustment).GetCString(),
+						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), (100-iGarrison)).GetCString()
 					));
 				}
 			}
@@ -5174,23 +5182,28 @@ void CvDLLWidgetData::parseCultureHelp(CvWidgetDataStruct &widgetDataStruct, CvW
 {
 	CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 
-	if (pHeadSelectedCity != NULL)
+	if (pHeadSelectedCity == NULL)
 	{
-		int iCultureTimes100 = pHeadSelectedCity->getCultureTimes100(pHeadSelectedCity->getOwner());
+		return;
+	}
+	const int iThreshold = pHeadSelectedCity->getCultureThreshold();
+	const int iCultureTimes100 = pHeadSelectedCity->getCultureTimes100(pHeadSelectedCity->getOwner());
+
+	if (iThreshold > 0)
+	{
 		if (iCultureTimes100%100 == 0)
 		{
-			szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CULTURE", iCultureTimes100/100, pHeadSelectedCity->getCultureThreshold()));
+			szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CULTURE", iCultureTimes100/100, iThreshold));
 		}
 		else
 		{
 			CvWString szCulture = CvWString::format(L"%d.%02d", iCultureTimes100/100, iCultureTimes100%100);
-			szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CULTURE_FLOAT", szCulture.GetCString(), pHeadSelectedCity->getCultureThreshold()));
+			szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CULTURE_FLOAT", szCulture.GetCString(), iThreshold));
 		}
-
 		int iCultureRateTimes100 = pHeadSelectedCity->getCommerceRateTimes100(COMMERCE_CULTURE);
 		if (iCultureRateTimes100 > 0)
 		{
-			int iCultureLeftTimes100 = 100 * pHeadSelectedCity->getCultureThreshold() - iCultureTimes100;
+			int iCultureLeftTimes100 = 100 * iThreshold - iCultureTimes100;
 
 			if (iCultureLeftTimes100 > 0)
 			{
@@ -5200,11 +5213,12 @@ void CvDLLWidgetData::parseCultureHelp(CvWidgetDataStruct &widgetDataStruct, CvW
 				szBuffer.append(gDLL->getText("INTERFACE_CITY_TURNS", std::max(1, iTurnsLeft)));
 			}
 		}
-
-
-		szBuffer.append(L"\n=======================\n");
-		GAMETEXT.setCommerceHelp(szBuffer, *pHeadSelectedCity, COMMERCE_CULTURE);
 	}
+	else szBuffer.assign(gDLL->getText("TXT_KEY_MISC_CULTURE_MAX", iCultureTimes100/100));
+
+	szBuffer.append(L"\n=======================\n");
+	GAMETEXT.setCommerceHelp(szBuffer, *pHeadSelectedCity, COMMERCE_CULTURE);
+
 }
 
 

@@ -1831,7 +1831,7 @@ class CvMainInterface:
 			bEnable = CyUnit.getOwner() == iPlayerAct
 			bSelected = CyUnit.IsSelected()
 
-			if CyUnit.isFighting():
+			if CyUnit.isInBattle():
 				bShowHealth = False
 			elif CyUnit.getDomainType() == DomainTypes.DOMAIN_AIR:
 				bShowHealth = CyUnit.canAirAttack()
@@ -2899,7 +2899,7 @@ class CvMainInterface:
 				szRate = u"+%d.%02d" % (iRate/100, iRate%100)
 				szTxt = TRNSLTR.getText("INTERFACE_CITY_COMMERCE_RATE_FLOAT", (GC.getCommerceInfo(CommerceTypes.COMMERCE_CULTURE).getChar(), GC.getCultureLevelInfo(CyCity.getCultureLevel()).getTextKey(), szRate))
 
-			if iRate > 0:
+			if iRate > 0 and iCultureTreshold > 0:
 				# Culture Turns
 				iCultureTimes100 = CyCity.getCultureTimes100(iPlayer)
 				iCultureLeftTimes100 = 100 * iCultureTreshold - iCultureTimes100
@@ -2930,12 +2930,15 @@ class CvMainInterface:
 				screen.setBarPercentage("GreatPeopleBar", InfoBarTypes.INFOBAR_RATE, iGreatPeopleRate / (fGreatPeopleTreshold - iGreatPeopleProgress + 0.001))
 				screen.show("GreatPeopleBar")
 
-			iFirst = float(CyCity.getCultureTimes100(iPlayer)) / float(100 * iCultureTreshold)
-			screen.setBarPercentage("CultureBar", InfoBarTypes.INFOBAR_STORED, iFirst)
-			if iFirst == 1:
-				screen.setBarPercentage("CultureBar", InfoBarTypes.INFOBAR_RATE, float(CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE)) / float(iCultureTreshold))
+			if iCultureTreshold > 0:
+				iFirst = float(CyCity.getCultureTimes100(iPlayer)) / float(100 * iCultureTreshold)
+				screen.setBarPercentage("CultureBar", InfoBarTypes.INFOBAR_STORED, iFirst)
+				if iFirst == 1:
+					screen.setBarPercentage("CultureBar", InfoBarTypes.INFOBAR_RATE, float(CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE)) / float(iCultureTreshold))
+				else:
+					screen.setBarPercentage("CultureBar", InfoBarTypes.INFOBAR_RATE, (float(CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE)) / float(iCultureTreshold)) / (1 - iFirst))
 			else:
-				screen.setBarPercentage("CultureBar", InfoBarTypes.INFOBAR_RATE, (float(CyCity.getCommerceRate(CommerceTypes.COMMERCE_CULTURE)) / float(iCultureTreshold)) / (1 - iFirst))
+				screen.setBarPercentage("CultureBar", InfoBarTypes.INFOBAR_STORED, 100)
 			screen.show("CultureBar")
 
 
@@ -3959,7 +3962,6 @@ class CvMainInterface:
 	def isUnitMaxedOut(self, iType, InCity, iExtra=0):
 		return (
 			GAME.isUnitMaxedOut(iType, InCity.CyTeam.getUnitMaking(iType) + iExtra)
-			or InCity.CyTeam.isUnitMaxedOut(iType, InCity.CyTeam.getUnitMaking(iType) + iExtra)
 			or InCity.CyPlayer.isUnitMaxedOut(iType, InCity.CyPlayer.getUnitMaking(iType) + iExtra)
 		)
 
@@ -4190,7 +4192,7 @@ class CvMainInterface:
 						iRow += 1
 					# Fractional XP
 					fXP = CyUnit.getRealExperience()
-					if fXP and not CyUnit.isFighting():
+					if fXP and not CyUnit.isInBattle():
 						szXP = self.szInterfacePaneExperience
 						screen.appendTableRow(unitTable)
 						screen.setTableText(unitTable, 0, iRow, "<font=1>" + szXP, "", eWidGen, 0, 0, 1<<0)
@@ -4202,7 +4204,7 @@ class CvMainInterface:
 						iRow += 1
 					# Great Commanders
 					if CyUnit.isCommander():
-						szTxt2 = u"%d/%d " %(CyUnit.controlPointsLeft(), CyUnit.controlPoints())
+						szTxt2 = u"%d/%d " %(CyUnit.getControlPointsLeft(), CyUnit.getControlPoints())
 						screen.appendTableRow(unitTable)
 						screen.setTableText(unitTable, 0, iRow, "<font=1>Control:", "", eWidGen, 0, 0, 1<<0)
 						iRow += 1
@@ -5280,6 +5282,20 @@ class CvMainInterface:
 
 		if iCode == 16: # Key Down
 
+			# N47 - Unselect on ESC (Toffer - Implemented code suggested by N47 with tweaks)
+
+			if iData == 1 and not CyIF.isFocused(): # InputTypes.KB_ESCAPE
+
+				if self.InCity:
+					CyIF.clearSelectedCities()
+					return 1
+				elif self.AtUnit and (self.AtUnit.CyUnit.isWaiting() or not self.AtUnit.CyUnit.canMove()):
+					CyIF.clearSelectionList()
+					return 1
+
+				return 0
+
+
 			if iData in (2, 3, 4, 5, 6, 7, 8, 9, 10, 11): # 0-9
 				if self.InCity and not bCtrl:
 					self.bBuildWorkQueue = True
@@ -5298,6 +5314,7 @@ class CvMainInterface:
 						else:
 							self.openCityTab(screen, iTab)
 						return 1
+
 			elif iData == 14:
 				if bCtrl:
 					CyIF.toggleBareMapMode()
