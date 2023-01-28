@@ -95,8 +95,8 @@ public:
 
 	virtual void		Write( char value) { m_wrapped->Write(value); }
 	virtual void		Write(byte value) { m_wrapped->Write(value); }
-	virtual void		Write(int count,  const char values[]) { m_wrapped->Write(count, values); }
-	virtual void		Write(int count,  const byte values[]) { m_wrapped->Write(count, values); }
+	virtual void		Write(int count, const  char values[]) { m_wrapped->Write(count, values); }
+	virtual void		Write(int count, const  byte values[]) { m_wrapped->Write(count, values); }
 
 	virtual void		Write(bool value) { m_wrapped->Write(value); }
 	virtual void		Write(int count, const bool values[]) { m_wrapped->Write(count, values); }
