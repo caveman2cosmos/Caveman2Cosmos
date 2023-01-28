@@ -4081,7 +4081,7 @@ int CvCity::getProductionPerTurn(ProductionCalc::flags flags = ProductionCalc::Y
 	const int iOverflow = (flags & ProductionCalc::Overflow) ? getOverflowProduction() + getFeatureProduction() : 0;
 	const int iYield = (flags & ProductionCalc::Yield) ? getBaseYieldRate(YIELD_PRODUCTION) : 0;
 
-	return getExtraYield(YIELD_PRODUCTION) + iOverflow + iFoodProduction + iYield * getBaseYieldRateModifier(YIELD_PRODUCTION) / 100;
+	return std::max(1, getExtraYield(YIELD_PRODUCTION) + iOverflow + iFoodProduction + iYield * getBaseYieldRateModifier(YIELD_PRODUCTION) / 100);
 }
 
 int CvCity::getProductionDifference(const OrderData& orderData, ProductionCalc::flags flags) const
@@ -11165,7 +11165,7 @@ int CvCity::getYieldRate(const YieldTypes eYield) const
 int CvCity::getYieldRate100(const YieldTypes eYield) const
 {
 	PROFILE_FUNC();
-	return getBaseYieldRate(eYield) * getBaseYieldRateModifier(eYield) + 100 * getExtraYield(eYield);
+	return std::max(100, getBaseYieldRate(eYield) * getBaseYieldRateModifier(eYield) + 100 * getExtraYield(eYield));
 }
 
 int CvCity::getPlotYield(YieldTypes eIndex)	const
