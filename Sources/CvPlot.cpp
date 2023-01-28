@@ -7909,7 +7909,7 @@ PlayerTypes CvPlot::findHighestCulturePlayer(const bool bCountLegacyCulture) con
 	{
 		const PlayerTypes ePlayerX = static_cast<PlayerTypes>(iI);
 
-		if (GET_PLAYER(ePlayerX).isAlive() && (bCountLegacyCulture || getCultureRateThisTurn(ePlayerX) > 0))
+		if (GET_PLAYER(ePlayerX).isAlive() && (bCountLegacyCulture || getCultureRateLastTurn(ePlayerX) > 0 || getCultureRateThisTurn(ePlayerX) > 0))
 		{
 			const int iValue = getCulture(ePlayerX);
 			if (iValue > 0)
@@ -7974,6 +7974,27 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 
 	if (getCulture(eIndex) != iNewValue)
 	{
+		{
+			bool bFirst = true;
+			const int iChange = iNewValue - getCulture(eIndex);
+			for (std::vector< std::pair<PlayerTypes, int> >::iterator it = m_cultureRatesThisTurn.begin(); it != m_cultureRatesThisTurn.end(); ++it)
+			{
+				if ((*it).first == eIndex)
+				{
+					if ((*it).second == -iChange)
+					{
+						m_cultureRatesThisTurn.erase(it);
+					}
+					else
+					{
+						(*it).second += iChange;
+					}
+					bFirst = false;
+					break;
+				}
+			}
+			if (bFirst) m_cultureRatesThisTurn.push_back(std::make_pair(eIndex, iChange));
+		}
 		std::vector<std::pair<PlayerTypes, int> >::iterator itr;
 
 		// Blaze - 24.8.22 - This overflow protection shouldn't be needed with change to make culture
