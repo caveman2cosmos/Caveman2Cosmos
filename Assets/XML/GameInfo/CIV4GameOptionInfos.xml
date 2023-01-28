@@ -147,9 +147,6 @@
 			<Help>TXT_KEY_GAMEOPTION_1_CITY_TILE_FOUNDING_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
-			<EnforcesGameOptionOffTypes>
-				<GameOptionType>GAMEOPTION_MIN_CITY_BORDER</GameOptionType>
-			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_MIN_CITY_BORDER</Type>
