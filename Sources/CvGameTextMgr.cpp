@@ -32073,7 +32073,7 @@ void CvGameTextMgr::setYieldHelp(CvWStringBuffer &szBuffer, CvCity& city, YieldT
 	// Total
 	szBuffer.append(SEPARATOR);
 	szBuffer.append(NEWLINE);
-	const int iTotal = iExtraYield + iBaseYield * iBaseModifier / 100;
+	const int iTotal = std::max(1, iExtraYield + iBaseYield * iBaseModifier / 100);
 	szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_FINAL_YIELD", iTotal, info.getChar()));
 }
 
