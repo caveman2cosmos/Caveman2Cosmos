@@ -7909,7 +7909,7 @@ PlayerTypes CvPlot::findHighestCulturePlayer(const bool bCountLegacyCulture) con
 	{
 		const PlayerTypes ePlayerX = static_cast<PlayerTypes>(iI);
 
-		if (GET_PLAYER(ePlayerX).isAlive() && (bCountLegacyCulture || getCultureRateLastTurn(ePlayerX) > 0 || getCultureRateThisTurn(ePlayerX) > 0))
+		if (GET_PLAYER(ePlayerX).isAlive() && (bCountLegacyCulture || getCultureRateThisTurn(ePlayerX) > 0))
 		{
 			const int iValue = getCulture(ePlayerX);
 			if (iValue > 0)
