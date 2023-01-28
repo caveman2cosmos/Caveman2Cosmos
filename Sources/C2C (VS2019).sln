@@ -55,18 +55,6 @@ Global
 		{17044446-585F-4E8C-AFA6-0B4B7101BBFB}.Release|x86.ActiveCfg = Release|Any CPU
 		{17044446-585F-4E8C-AFA6-0B4B7101BBFB}.Testing|Any CPU.ActiveCfg = Debug|Any CPU
 		{17044446-585F-4E8C-AFA6-0B4B7101BBFB}.Testing|x86.ActiveCfg = Debug|Any CPU
-		{92261573-A7AC-437C-8216-EAF1245B7DAC}.Assert|Any CPU.ActiveCfg = Debug|Any CPU
-		{92261573-A7AC-437C-8216-EAF1245B7DAC}.Assert|x86.ActiveCfg = Debug|Any CPU
-		{92261573-A7AC-437C-8216-EAF1245B7DAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92261573-A7AC-437C-8216-EAF1245B7DAC}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{92261573-A7AC-437C-8216-EAF1245B7DAC}.FinalRelease|Any CPU.ActiveCfg = Release|Any CPU
-		{92261573-A7AC-437C-8216-EAF1245B7DAC}.FinalRelease|x86.ActiveCfg = Release|Any CPU
-		{92261573-A7AC-437C-8216-EAF1245B7DAC}.Profile|Any CPU.ActiveCfg = Debug|Any CPU
-		{92261573-A7AC-437C-8216-EAF1245B7DAC}.Profile|x86.ActiveCfg = Debug|Any CPU
-		{92261573-A7AC-437C-8216-EAF1245B7DAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92261573-A7AC-437C-8216-EAF1245B7DAC}.Release|x86.ActiveCfg = Release|Any CPU
-		{92261573-A7AC-437C-8216-EAF1245B7DAC}.Testing|Any CPU.ActiveCfg = Debug|Any CPU
-		{92261573-A7AC-437C-8216-EAF1245B7DAC}.Testing|x86.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
