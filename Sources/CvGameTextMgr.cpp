@@ -511,7 +511,6 @@ void CvGameTextMgr::setUnitHelp(CvWStringBuffer &szString, const CvUnit* pUnit, 
 		if (bSizeMatters)
 		{
 			float fBase = pUnit->baseCombatStr() / 100.0f;
-			fBase /= 100;
 
 			if (pUnit->isInBattle())
 			{
