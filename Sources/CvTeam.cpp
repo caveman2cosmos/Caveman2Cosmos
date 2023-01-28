@@ -424,10 +424,11 @@ void CvTeam::reset(TeamTypes eID, bool bConstructorCall)
 				m_ppiBuildingCommerceModifier[iI][iJ] = 0;
 			}
 		}
+		m_adjacentResearch.clear();
+		m_Properties.clear();
 
 		AI_reset(false);
 	}
-	m_Properties.clear();
 }
 
 //
