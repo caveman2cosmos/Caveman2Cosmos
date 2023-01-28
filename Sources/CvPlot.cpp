@@ -10871,24 +10871,24 @@ void CvPlot::read(FDataStreamBase* pStream)
 		short iSize = 0;
 		short iType = -1;
 		// Building
-		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "CultureRatesThisTurnSize");
+		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "CultureRatesThisTurnSize");
 		for (short i = 0; i < iSize; ++i)
 		{
 			int iValue = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "CultureRatesThisTurnPlayer");
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iValue, "CultureRatesThisTurnRate");
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iType, "CultureRatesThisTurnPlayer");
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iValue, "CultureRatesThisTurnRate");
 
 			if (iType > -1 && iType < MAX_PLAYERS)
 			{
 				m_cultureRatesThisTurn.push_back(std::make_pair(static_cast<PlayerTypes>(iType), iValue));
 			}
 		}
-		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "CultureRatesLastTurnSize");
+		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "CultureRatesLastTurnSize");
 		for (short i = 0; i < iSize; ++i)
 		{
 			int iValue = 0;
-			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "CultureRatesLastTurnPlayer");
-			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iValue, "CultureRatesLastTurnRate");
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iType, "CultureRatesLastTurnPlayer");
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iValue, "CultureRatesLastTurnRate");
 
 			if (iType > -1 && iType < MAX_PLAYERS)
 			{
@@ -11270,14 +11270,14 @@ void CvPlot::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_cultureRatesThisTurn.size(), "CultureRatesThisTurnSize");
 		for (std::vector< std::pair<PlayerTypes, int> >::iterator it = m_cultureRatesThisTurn.begin(); it != m_cultureRatesThisTurn.end(); ++it)
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", static_cast<short>((*it).first), "CultureRatesThisTurnPlayer");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (*it).second, "CultureRatesThisTurnRate");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>((*it).first), "CultureRatesThisTurnPlayer");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (*it).second, "CultureRatesThisTurnRate");
 		}
 		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_cultureRatesLastTurn.size(), "CultureRatesLastTurnSize");
 		for (std::vector< std::pair<PlayerTypes, int> >::iterator it = m_cultureRatesLastTurn.begin(); it != m_cultureRatesLastTurn.end(); ++it)
 		{
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", static_cast<short>((*it).first), "CultureRatesLastTurnPlayer");
-			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (*it).second, "CultureRatesLastTurnRate");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>((*it).first), "CultureRatesLastTurnPlayer");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (*it).second, "CultureRatesLastTurnRate");
 		}
 	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
