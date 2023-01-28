@@ -553,7 +553,6 @@ protected:
 	CvPropertySolver m_PropertySolver;
 
 	int m_iChokePointCalculationVersion;
-	int m_iMinCultureOutput;
 
 
 public:
@@ -884,8 +883,6 @@ public:
 	void enforceOptionCompatibility(GameOptionTypes eOption);
 
 	bool isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner, bool bConquest, bool bTrade, bool bRecapture) const;
-
-	int getMinCultureOutput() const { return m_iMinCultureOutput; }
 };
 
 #define CURRENT_MAP GC.getGame().getCurrentMap()

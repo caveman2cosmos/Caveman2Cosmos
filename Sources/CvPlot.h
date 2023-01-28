@@ -373,6 +373,9 @@ public:
 	int getVisibleEnemyStrength(PlayerTypes ePlayer, int iRange = 0) const;
 	int getVisibleNonAllyStrength(PlayerTypes ePlayer) const;
 
+	int getCultureRateThisTurn(const PlayerTypes ePlayer) const;
+	int getCultureRateLastTurn(const PlayerTypes ePlayer) const;
+
 protected:
 	CvGameObjectPlot m_GameObject;
 
@@ -384,10 +387,8 @@ protected:
 	bool m_bCounted;
 	static stdext::hash_map<int,int>* m_resultHashMap;
 
-	bool m_bSomeoneAddCultureThisTurn;
-	bool m_bOwnerAddCultureThisTurn;
-	PlayerTypes m_ePlayerWhoAddMostCultureThisTurn;
-	int m_iMostAddedCultureThisTurn;
+	std::vector<std::pair<PlayerTypes, int> > m_cultureRatesThisTurn;
+	std::vector<std::pair<PlayerTypes, int> > m_cultureRatesLastTurn;
 
 public:
 	PlayerTypes calculateCulturalOwner() const;
@@ -726,11 +727,11 @@ public:
 	int getCulture(PlayerTypes eIndex) const;
 	int countTotalCulture() const;
 	int countFriendlyCulture(TeamTypes eTeam) const;
-	PlayerTypes findHighestCulturePlayer() const;
+	PlayerTypes findHighestCulturePlayer(const bool bCountLegacyCulture = true) const;
 	int calculateCulturePercent(PlayerTypes eIndex, int iExtraDigits = 0) const;
 	int calculateTeamCulturePercent(TeamTypes eIndex) const;
 	void setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bUpdatePlotGroups);
-	void changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate, bool bDoMinAdjust = true);
+	void changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate);
 	int countNumAirUnits(TeamTypes eTeam) const;
 	int countNumAirUnitCargoVolume(TeamTypes eTeam) const;
 	int airUnitSpaceAvailable(TeamTypes eTeam) const;
@@ -1027,7 +1028,6 @@ protected:
 
 	void doFeature();
 	void doCulture();
-	void decayCulture();
 
 	void processArea(CvArea* pArea, int iChange);
 	void doImprovementUpgrade(const ImprovementTypes eType);

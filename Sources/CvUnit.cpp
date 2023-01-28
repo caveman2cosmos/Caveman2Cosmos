@@ -27623,10 +27623,10 @@ void CvUnit::influencePlots(CvPlot* pCentralPlot, const PlayerTypes eTargetPlaye
 					if (iCultureTransfer > 0)
 					{
 						// target player's culture in plot is lowered
-						pLoopPlot->changeCulture(eTargetPlayer, -iCultureTransfer, false, false);
+						pLoopPlot->changeCulture(eTargetPlayer, -iCultureTransfer, false);
 						// owners's culture in plot is raised
+						pLoopPlot->changeCulture(getOwner(), iCultureTransfer, true);
 					}
-						pLoopPlot->changeCulture(getOwner(), iCultureTransfer, true, false);
 				}
 			}
 		}
@@ -27682,8 +27682,8 @@ int CvUnit::doPillageInfluence()
 	{
 		const int iOurCultureBefore = pPlot->getCulture(getOwner()); //used later for influence %
 
-		pPlot->changeCulture(eTargetPlayer, -iCultureTransfer, false, false);
-		pPlot->changeCulture(getOwner(), iCultureTransfer, true, false);
+		pPlot->changeCulture(eTargetPlayer, -iCultureTransfer, false);
+		pPlot->changeCulture(getOwner(), iCultureTransfer, true);
 
 		// calculate 10x influence % in pillaged plot (to be displayed in game log)
 		return (pPlot->getCulture(getOwner()) - iOurCultureBefore) * 1000 / pPlot->countTotalCulture();

@@ -289,6 +289,8 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 
 	m_Properties.clear();
 	m_commanderCount.clear();
+	m_cultureRatesThisTurn.clear();
+	m_cultureRatesLastTurn.clear();
 
 	m_bPlotGroupsDirty = false;
 	m_aiVisibilityCount = new short[MAX_TEAMS];
@@ -296,10 +298,6 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	{
 		m_aiVisibilityCount[iI] = 0;
 	}
-	m_bOwnerAddCultureThisTurn = false;
-	m_bSomeoneAddCultureThisTurn = false;
-	m_iMostAddedCultureThisTurn = 0;
-	m_ePlayerWhoAddMostCultureThisTurn = NO_PLAYER;
 }
 
 void CvPlot::clearModifierTotals()
@@ -1003,8 +1001,9 @@ void CvPlot::checkCityRevolt()
 	const PlayerTypes eCulturalOwner = calculateCulturalOwner();
 	FAssert(eCulturalOwner != NO_PLAYER);
 
+	if (eCulturalOwner == NO_PLAYER
 	// Toffer - Don't flip ownership of city to a player who is not currently adding the most culture to the plot per turn.
-	if (eCulturalOwner != m_ePlayerWhoAddMostCultureThisTurn
+	|| getCultureRateThisTurn(eCulturalOwner) <= getCultureRateThisTurn(getOwner())
 	// Don't flip cities between team members
 	|| GET_PLAYER(eCulturalOwner).getTeam() == getTeam())
 	{
@@ -3616,13 +3615,13 @@ void CvPlot::doImprovementCulture(PlayerTypes ePlayer, const CvImprovementInfo& 
 		return;
 	}
 	const int iRange = std::max(0, imp.getCultureRange());
-	const int iCulture = std::max(GC.getGame().getMinCultureOutput(), imp.getCulture());
+	const int iCulture = imp.getCulture();
 
 	foreach_(CvPlot* plotX, rect(iRange, iRange))
 	{
 		if (plotDistance(getX(), getY(), plotX->getX(), plotX->getY()) <= iRange)
 		{
-			plotX->changeCulture(ePlayer, iCulture, true, false);
+			plotX->changeCulture(ePlayer, iCulture, true);
 		}
 	}
 }
@@ -4416,7 +4415,7 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 	PROFILE("CvPlot::calculateCulturalOwner()");
 
 	const PlayerTypes eOwner = getOwner();
-	const PlayerTypes eHighestCulturePlayer = findHighestCulturePlayer();
+	const PlayerTypes eHighestCulturePlayer = findHighestCulturePlayer(false);
 
 	// non-city, non fort plots that are *adjacent* to cities may always belong to those cities' owners
 	if (eOwner == NO_PLAYER)
@@ -6106,9 +6105,7 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 					pLoopUnit->getGroup()->setActivityType(ACTIVITY_AWAKE);
 				}
 			}
-
 			m_eOwner = eNewValue;
-			m_bOwnerAddCultureThisTurn = true;
 
 			setWorkingCityOverride(NULL);
 			updateWorkingCity();
@@ -7930,26 +7927,31 @@ int CvPlot::countTotalCulture() const
 }
 
 
-PlayerTypes CvPlot::findHighestCulturePlayer() const
+PlayerTypes CvPlot::findHighestCulturePlayer(const bool bCountLegacyCulture) const
 {
 	PlayerTypes eBestPlayer = NO_PLAYER;
 	int iBestValue = 0;
 
 	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
-		{
-			const int iValue = getCulture((PlayerTypes)iI);
+		const PlayerTypes ePlayerX = static_cast<PlayerTypes>(iI);
 
-			if (iValue > iBestValue)
+		if (GET_PLAYER(ePlayerX).isAlive() && (bCountLegacyCulture || getCultureRateThisTurn(ePlayerX) > 0))
+		{
+			const int iValue = getCulture(ePlayerX);
+			if (iValue > 0)
 			{
-				iBestValue = iValue;
-				eBestPlayer = (PlayerTypes)iI;
+				if (iValue > iBestValue)
+				{
+					iBestValue = iValue;
+					eBestPlayer = ePlayerX;
+				}
+				// Tiebreaker: goes to current owner rather than lowest index
+				else if (iValue == iBestValue && getOwner() == ePlayerX)
+				{
+					eBestPlayer = ePlayerX;
+				}
 			}
-			// Tiebreaker: goes to current owner rather than lowest index
-			else if (iValue == iBestValue && iValue > 0)
-				if (getOwner() == (PlayerTypes)iI)
-					eBestPlayer = (PlayerTypes)iI;
 		}
 	}
 	return eBestPlayer;
@@ -7999,20 +8001,26 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 
 	if (getCulture(eIndex) != iNewValue)
 	{
-		if (getCulture(eIndex) < iNewValue)
 		{
-			if (eIndex == getOwner())
+			bool bFirst = true;
+			const int iChange = iNewValue - getCulture(eIndex);
+			for (std::vector< std::pair<PlayerTypes, int> >::iterator it = m_cultureRatesThisTurn.begin(); it != m_cultureRatesThisTurn.end(); ++it)
 			{
-				m_bOwnerAddCultureThisTurn = true;
+				if ((*it).first == eIndex)
+				{
+					if ((*it).second == -iChange)
+					{
+						m_cultureRatesThisTurn.erase(it);
+					}
+					else
+					{
+						(*it).second += iChange;
+					}
+					bFirst = false;
+					break;
+				}
 			}
-			m_bSomeoneAddCultureThisTurn = true;
-
-			const int iAdded = iNewValue - getCulture(eIndex);
-			if (m_iMostAddedCultureThisTurn < iAdded)
-			{
-				m_iMostAddedCultureThisTurn = iAdded;
-				m_ePlayerWhoAddMostCultureThisTurn = eIndex;
-			}
+			if (bFirst) m_cultureRatesThisTurn.push_back(std::make_pair(eIndex, iChange));
 		}
 		std::vector<std::pair<PlayerTypes, int> >::iterator itr;
 
@@ -8070,16 +8078,10 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 }
 
 
-void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate, bool bDoMinAdjust)
-// bDoMinAdjust defaults true; use false for things that may want small culture change such as IDW
+void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate)
 {
 	if (0 != iChange)
 	{
-		// Lots of things put 1 culture on a tile to mark as claimed; adjust above threshold if so.
-		if (bDoMinAdjust && iChange > 0)
-		{
-			iChange = std::max(iChange, GC.getGame().getMinCultureOutput());
-		}
 		setCulture(eIndex, std::max(0, getCulture(eIndex) + iChange), bUpdate, true);
 	}
 }
@@ -10251,76 +10253,35 @@ void CvPlot::doCulture()
 	// Rewrite so player has a cached vector of all owned forts (Maybe fort should be a new object type),
 	//	and have forts do a doTurn() during the players doTurn(),
 	//	might be necsessary rewrite for being able to produce units in forts anyway.
-	if (getOwner() != NO_PLAYER)
+	if (getOwner() != NO_PLAYER && getImprovementType() != NO_IMPROVEMENT)
 	{
-		if (getImprovementType() != NO_IMPROVEMENT)
-		{
-			doImprovementCulture(getOwner(), GC.getImprovementInfo(getImprovementType()));
-		}
-		decayCulture();
+		doImprovementCulture(getOwner(), GC.getImprovementInfo(getImprovementType()));
 	}
 
-	// updateCulture checks forts, cities for flipping.
-	// Setting forcibly claimed territory comes after, in doTurn
-	updateCulture(true, true);
-
-	m_bOwnerAddCultureThisTurn = false;
-	m_bSomeoneAddCultureThisTurn = false;
-	m_iMostAddedCultureThisTurn = 0;
-	m_ePlayerWhoAddMostCultureThisTurn = NO_PLAYER;
-}
-
-
-void CvPlot::decayCulture()
-{
-	const int decayPermille = GC.getTILE_CULTURE_DECAY_PERCENT() * 1000 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-
-	// Toffer - Deal with total culture collapse
-	if (!m_bSomeoneAddCultureThisTurn)
+	// Toffer - Decay culture for players that no longer adds culture to this plot
 	{
+		const int decayPermille = GC.getTILE_CULTURE_DECAY_PERCENT() * 1000 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+
 		for (int i = 0; i < MAX_PLAYERS; i++)
 		{
 			const PlayerTypes ePlayerX = static_cast<PlayerTypes>(i);
 
-			if (getCulture(ePlayerX) > 0)
+			if (getCulture(ePlayerX) > 0 && getCultureRateThisTurn(ePlayerX) < 1 && (!getPlotCity() || getOwner() != ePlayerX))
 			{
-				setCulture(ePlayerX, getCulture(ePlayerX) * (std::max(0,1000 - 10*decayPermille)) / 1000, false, false);
+				setCulture(ePlayerX, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false);
 			}
 		}
-		return;
 	}
+	// updateCulture checks forts, cities for flipping.
+	// Setting forcibly claimed territory comes after, in doTurn
+	updateCulture(true, true);
 
-	const PlayerTypes eOwner = getOwner();
-
-	// Toffer - Deal with owner's culture collapse
-	// Blaze - has odd behavior when owner and 2nd place haven't added, but far away 3rd place does add culture.
-	// Maybe check each player if they've added this turn, or implement differently?
-	if (!m_bOwnerAddCultureThisTurn)
+	m_cultureRatesLastTurn.clear();
+	for (std::vector< std::pair<PlayerTypes, int> >::const_iterator it = m_cultureRatesThisTurn.begin(); it != m_cultureRatesThisTurn.end(); ++it)
 	{
-		// Don't need to update borders, update culture is called next in doCulture
-		setCulture(eOwner, getCulture(eOwner) * (std::max(0,1000 - 10*decayPermille)) / 1000, false, false);
+		m_cultureRatesLastTurn.push_back(std::make_pair((*it).first, (*it).second));
 	}
-	// NOTE: If decay function is altered, gotta make corresponding change to the GC.getGame().getMinCultureOutput() return.
-
-	const bool bCity = getPlotCity();
-
-	for (int i = 0; i < MAX_PLAYERS; i++)
-	{
-		const PlayerTypes ePlayerX = static_cast<PlayerTypes>(i);
-		// Check if alive? Barb?
-		if (getCulture(ePlayerX) > 0)
-		{
-			setCulture(
-				ePlayerX,
-				std::max(
-					int(bCity && eOwner == ePlayerX),
-					getCulture(ePlayerX) * (1000 - decayPermille) / 1000
-				),
-				// Don't need to update borders, update culture is called next in doCulture
-				false, false
-			);
-		}
-	}
+	m_cultureRatesThisTurn.clear();
 }
 
 
@@ -10920,11 +10881,37 @@ void CvPlot::read(FDataStreamBase* pStream)
 			GET_PLAYER(static_cast<PlayerTypes>(uType8)).setCommandFieldPlot(true, this);
 		}
 	}
-	WRAPPER_READ(wrapper, "CvPlot", &m_bOwnerAddCultureThisTurn);
-	WRAPPER_READ(wrapper, "CvPlot", &m_bSomeoneAddCultureThisTurn);
-	WRAPPER_READ(wrapper, "CvPlot", &m_iMostAddedCultureThisTurn);
-	WRAPPER_READ(wrapper, "CvPlot", (int*)&m_ePlayerWhoAddMostCultureThisTurn);
 
+	// Toffer - Read vectors
+	{
+		short iSize = 0;
+		short iType = -1;
+		// Building
+		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "CultureRatesThisTurnSize");
+		for (short i = 0; i < iSize; ++i)
+		{
+			int iValue = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "CultureRatesThisTurnPlayer");
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iValue, "CultureRatesThisTurnRate");
+
+			if (iType > -1 && iType < MAX_PLAYERS)
+			{
+				m_cultureRatesThisTurn.push_back(std::make_pair(static_cast<PlayerTypes>(iType), iValue));
+			}
+		}
+		WRAPPER_READ_DECORATED(wrapper, "CvCity", &iSize, "CultureRatesLastTurnSize");
+		for (short i = 0; i < iSize; ++i)
+		{
+			int iValue = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvCity", &iType, "CultureRatesLastTurnPlayer");
+			WRAPPER_READ_DECORATED(wrapper, "CvPlayer", &iValue, "CultureRatesLastTurnRate");
+
+			if (iType > -1 && iType < MAX_PLAYERS)
+			{
+				m_cultureRatesLastTurn.push_back(std::make_pair(static_cast<PlayerTypes>(iType), iValue));
+			}
+		}
+	}
 	//Example of how to Skip Element
 	//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_bPeaks, SAVE_VALUE_ANY);
 	WRAPPER_READ_OBJECT_END(wrapper);
@@ -11293,11 +11280,22 @@ void CvPlot::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", it->second, "iCommanderCountCount");
 		}
 	}
-	WRAPPER_WRITE(wrapper, "CvPlot", m_bOwnerAddCultureThisTurn);
-	WRAPPER_WRITE(wrapper, "CvPlot", m_bSomeoneAddCultureThisTurn);
-	WRAPPER_WRITE(wrapper, "CvPlot", m_iMostAddedCultureThisTurn);
-	WRAPPER_WRITE(wrapper, "CvPlot", m_ePlayerWhoAddMostCultureThisTurn);
 
+	// Toffer - Write vectors
+	{
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_cultureRatesThisTurn.size(), "CultureRatesThisTurnSize");
+		for (std::vector< std::pair<PlayerTypes, int> >::iterator it = m_cultureRatesThisTurn.begin(); it != m_cultureRatesThisTurn.end(); ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", static_cast<short>((*it).first), "CultureRatesThisTurnPlayer");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (*it).second, "CultureRatesThisTurnRate");
+		}
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_cultureRatesLastTurn.size(), "CultureRatesLastTurnSize");
+		for (std::vector< std::pair<PlayerTypes, int> >::iterator it = m_cultureRatesLastTurn.begin(); it != m_cultureRatesLastTurn.end(); ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", static_cast<short>((*it).first), "CultureRatesLastTurnPlayer");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlayer", (*it).second, "CultureRatesLastTurnRate");
+		}
+	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
@@ -13244,4 +13242,29 @@ void CvPlot::changeCommanderCount(const PlayerTypes ePlayer, const bool bAdd)
 bool CvPlot::inCommandField(const PlayerTypes ePlayer) const
 {
 	return m_commanderCount.find(static_cast<uint8_t>(ePlayer)) != m_commanderCount.end();
+}
+
+
+int CvPlot::getCultureRateThisTurn(const PlayerTypes ePlayer) const
+{
+	for (std::vector< std::pair<PlayerTypes, int> >::const_iterator it = m_cultureRatesThisTurn.begin(); it != m_cultureRatesThisTurn.end(); ++it)
+	{
+		if ((*it).first == ePlayer)
+		{
+			return ((*it).second);
+		}
+	}
+	return 0;
+}
+
+int CvPlot::getCultureRateLastTurn(const PlayerTypes ePlayer) const
+{
+	for (std::vector< std::pair<PlayerTypes, int> >::const_iterator it = m_cultureRatesLastTurn.begin(); it != m_cultureRatesLastTurn.end(); ++it)
+	{
+		if ((*it).first == ePlayer)
+		{
+			return ((*it).second);
+		}
+	}
+	return 0;
 }
