@@ -4364,16 +4364,16 @@ void CvPlot::invalidateIsTeamBorderCache() const
 
 /* returns the city adjacent to this plot or NULL if none exists. more than one can't exist, because of the 2-tile spacing btwn cities limit. */
 //Alberts2: added eplayer parameter to only return the city if the owner == eplayer
-CvCity* CvPlot::getAdjacentCity(PlayerTypes eplayer) const
+CvCity* CvPlot::getAdjacentCity(PlayerTypes ePlayer) const
 {
 	foreach_(const CvPlot* pLoopPlot, rect(1, 1))
 	{
 		CvCity* cityX = pLoopPlot->getPlotCity();
 		if (cityX)
 		{
-			if (eplayer != NO_PLAYER)
+			if (ePlayer != NO_PLAYER && cityX->getOwner() != ePlayer)
 			{
-				return (cityX->getOwner() == eplayer ? cityX : NULL);
+				return NULL;
 			}
 			return cityX;
 		}
