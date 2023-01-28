@@ -6577,6 +6577,11 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 		{
 			terrainDistance = 0;
 		}
+		// otherwise, increase distance by 1 on unimproved tiles. Slows down earlygame expansion.
+		else if (mainPlot->getImprovementType() == NO_IMPROVEMENT)
+		{
+			terrainDistance += 1;
+		}
 		terrainDistance += GC.getFeatureInfo(mainPlot->getFeatureType()).getCultureDistance();
 	}
 
@@ -6593,38 +6598,14 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	const int extraRiverPenalty = !GET_TEAM(getTeam()).isBridgeBuilding() + !GET_TEAM(getTeam()).isRiverTrade();
 	const bool hasBonus = mainPlot->getBonusType(getTeam()) != NO_BONUS;
 
-	// Condensed version I couldn't quite get working?
-	/*
-	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
-	{
-		// Needs a better way to get the adjustments for idX and iDY, this fails on world wrap.
-		// directionXY maybe, but this starts to get ridiculous. There's a simple way I'm missing.
-		neighborPlotIndex = HASH_RELATIVE_CLOSE_DIST(iDX + adjacentPlot->getX() - mainPlot->getX(),
-											 iDY + adjacentPlot->getY() - mainPlot->getY());
-		neighborDist = m_aCultureDistances[neighborPlotIndex];
-
-		if (neighborDist != 0 && neighborDist != MAX_INT)
-		{
-			netDistanceModifier = terrainDistance;
-			if (mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)))
-				netDistanceModifier += 1 + extraRiverPenalty;
-			// A revealed bonus on plot makes net cost modifier halved, rounding down, then also 1 less.
-			netDistanceModifier = netDistanceModifier / (1 + hasBonus) - hasBonus;
-			// Final modifier can't be negative, though.
-			neighborDist += 1 + std::max(0, netDistanceModifier);
-			if (neighborDist < distance)
-				distance = neighborDist;
-		}
-	}
-	*/
-
 	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
 	{
 		int neighborDist = m_aCultureDistances[adjacentPlot];
 		if (neighborDist != 0 && neighborDist != MAX_INT)
 		{
 			int netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (1 + extraRiverPenalty);
-			netDistanceModifier = netDistanceModifier / (1 + hasBonus) - hasBonus;
+			// Halve distance penalty if plot has a bonus
+			netDistanceModifier = netDistanceModifier / (1 + hasBonus);
 			neighborDist += 1 + std::max(0, netDistanceModifier);
 			if (neighborDist < distance) distance = neighborDist;
 		}
@@ -6646,8 +6627,7 @@ int CvCity::netRevoltRisk(PlayerTypes cultureAttacker) const
 {
 	// Returns 100x % chance of revolt to eCultureAttacker when modified by defending units
 	// 100 = 1%, 10,000 = 100%
-	return std::max(0,
-		baseRevoltRisk(cultureAttacker) * (100 - cultureGarrison(cultureAttacker)));
+	return std::max(0, baseRevoltRisk(cultureAttacker) * (100 - cultureGarrison(cultureAttacker)));
 }
 
 
@@ -6658,12 +6638,12 @@ int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
 	int iRisk = (getHighestPopulation() * 2);
 
 	// Presence of 3rd party culture lowers max bonus
-	int	iAttackerPercent = plot()->calculateCulturePercent(eCultureAttacker, 2);
-	int iDefenderPercent = std::max(1, plot()->calculateCulturePercent(getOwner(), 2));
+	const int iAttackerPercent = 100 * plot()->calculateCulturePercent(eCultureAttacker, 2);
+	int iDefenderPercent = 100 * plot()->calculateCulturePercent(getOwner(), 2);
 	// Adjust defender percent by possible fixed border modifier
 	// (otherwise inflated risk when FB city is threatened)
-	iDefenderPercent = iDefenderPercent * (100 +
-		GET_PLAYER(getOwner()).hasFixedBorders() * (GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") - 100)) / 100;
+	iDefenderPercent *= GET_PLAYER(getOwner()).hasFixedBorders() * (GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") - 100);
+	iDefenderPercent /= 100;
 
 	// If adjacent tiles can be acquired, factor in, else there's an additional min risk
 	if (!GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER))
@@ -6674,15 +6654,14 @@ int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
 			iRisk += (GC.getGame().getCurrentEra() + 1);
 		}
 	}
-	else
-		iRisk += (GC.getGame().getCurrentEra() + 1);
+	else iRisk += (GC.getGame().getCurrentEra() + 1);
 
 	// Ranges from 100 to 1,000,000 as attacker:defender culture % ratio goes from 1:1 to 1:0.01
 	// Nonlinear!
-	int iCultureRatioModifier = 100 * iAttackerPercent / std::max(1, iDefenderPercent);
+	const int iCultureRatioModifier = iAttackerPercent / std::max(1, iDefenderPercent);
 	// XML to make this even stronker (default 100 doubles above modifier)
-	iCultureRatioModifier = (GC.getREVOLT_TOTAL_CULTURE_MODIFIER() + 100) * iCultureRatioModifier / 100;
-	iRisk *= iCultureRatioModifier / 100;
+	iRisk *= (GC.getREVOLT_TOTAL_CULTURE_MODIFIER() + 100) * iCultureRatioModifier;
+	iRisk /= 10000;
 
 	// By default, attacker having a state religion doubles attacking power
 	if (GET_PLAYER(eCultureAttacker).getStateReligion() != NO_RELIGION)
@@ -16105,7 +16084,10 @@ int CvCity::cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int d
 
 	if (baseCultureGain < 1) return 1;
 
-	const int iDensityFactor = GC.getCITY_CULTURE_DENSITY_FACTOR(); // Some fraction 0-100 should be distance-modified.
+	// Some fraction 0-100 should be distance-modified.
+	// At default 75, city flipping may begin at max radius overlap if
+	// larger city produces 4x culture of lesser city (25% of larger output equal to 100% of lesser).
+	const int iDensityFactor = GC.getCITY_CULTURE_DENSITY_FACTOR();
 
 	// 1->0 multiplier on base rate as distance from source goes 0->max
 	const int modifiedCultureGain = (
