@@ -175,7 +175,7 @@ public:
 	void		Write(const char* name, int& idHint, int& idSeq, short value);
 	void		Write(const char* name, int& idHint, int& idSeq, uint16_t value);
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const short values[]);
-	void		Write(const char* name, int& idHint, int& idSeq, int count, const uint16_t values[]);
+	void		Write(const char* name, int& idHint, int& idSeq, int count, const uint16_t values[]) ;
 
 	void		Write(const char* name, int& idHint, int& idSeq, int value);
 	void		Write(const char* name, int& idHint, int& idSeq, uint32_t value) ;
@@ -183,9 +183,9 @@ public:
 	void		Write(const char* name, int& idHint, int& idSeq, int count, const uint32_t values[]) ;
 
 	void		Write(const char* name, int& idHint, int& idSeq, long value);
-	void		Write(const char* name, int& idHint, int& idSeq, unsigned long value);
+	void		Write(const char* name, int& idHint, int& idSeq, unsigned long  value) ;
 	void 		Write(const char* name, int& idHint, int& idSeq, int count, const long values[]);
-	void		Write(const char* name, int& idHint, int& idSeq, int count, const unsigned long values[]);
+	void		Write(const char* name, int& idHint, int& idSeq, int count, const unsigned long values[]) ;
 
 	void		Write(const char* name, int& idHint, int& idSeq, int64_t value);
 	void		Write(const char* name, int& idHint, int& idSeq, uint64_t value);
