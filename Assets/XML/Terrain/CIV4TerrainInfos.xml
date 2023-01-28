@@ -5672,7 +5672,7 @@
 			<ArtDefineTag>ART_DEF_TERRAIN_PEAK</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
 			<iBuildModifier>75</iBuildModifier>
-			<iCultureDistance>4</iCultureDistance> <!-- dll increases penalty by 2 if not isCanFoundOnPeaks-->
+			<iCultureDistance>3</iCultureDistance> <!-- dll increases penalty by 2 if not isCanFoundOnPeaks-->
 			<iMovement>2</iMovement>
 			<Button>Art/Interface\Buttons\WorldBuilder\feature_peak.dds</Button>
 			<FootstepSounds>
@@ -5809,7 +5809,7 @@
 			<ArtDefineTag>ART_DEF_TERRAIN_HILL</ArtDefineTag>
 			<bWaterTerrain>1</bWaterTerrain>
 			<iBuildModifier>25</iBuildModifier>
-			<iCultureDistance>3</iCultureDistance>
+			<iCultureDistance>1</iCultureDistance>
 			<iMovement>1</iMovement>
 			<Button>Art/Interface\Buttons\WorldBuilder\Terrain_Hill.dds</Button>
 			<FootstepSounds>

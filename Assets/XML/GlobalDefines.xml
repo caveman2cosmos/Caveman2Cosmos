@@ -325,10 +325,9 @@
 	</Define>
 	<Define>
 		<!-- Goes from 0 to 100. At 0, a city will put equal culture on all tiles in its range.
-			At 100, it will put 1 culture (minimum) at max range tiles and 100% on city center.
-			Value of 75 means a city will flip other cities at max radius if its culture is 4x the lesser. -->
+			At 100, it will put 1 culture (minimum) at max range tiles and 100% on city center. -->
 		<DefineName>CITY_CULTURE_DENSITY_FACTOR</DefineName>
-		<iDefineIntVal>75</iDefineIntVal>
+		<iDefineIntVal>50</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- Each turn, culture on each plot will decay by this percent.
