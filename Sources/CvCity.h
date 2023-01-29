@@ -1904,7 +1904,6 @@ protected:
 	void doGrowth();
 	void doCulture();
 	void doPlotCulture(PlayerTypes ePlayer, int iCultureRate);
-	void decayCulture();
 	static int cultureDistanceDropoff(int baseCultureGain, int rangeOfSource, int distanceFromSource);
 	void doProduction(bool bAllowNoProduction);
 	void doDecay();
