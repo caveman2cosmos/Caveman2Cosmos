@@ -658,8 +658,7 @@ void CvPlot::doTurn()
 	// ! Super Forts
 
 	doFeature();
-	// doCulture checks city tiles if calculateCulturalOwner
-	// says it should be other player, for revolt
+
 	doCulture();
 
 	verifyUnitValidPlot();
@@ -978,17 +977,11 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 
 void CvPlot::updateCulture(bool bBumpUnits, bool bUpdatePlotGroups)
 {
-	// Forts and cities will call calculateCulturalOwner in updating,
-	// but have require additional criteria before flipping/revolting
-	if (getPlotCity())
+	// Toffer - Cities and forts only flip ownership from culture at the end of the game turn, not every time culture change.
+	if (!getPlotCity() && !isActsAsCity())
 	{
-		checkCityRevolt();
+		setOwner(calculateCulturalOwner(), bBumpUnits, bUpdatePlotGroups);
 	}
-	else if (isActsAsCity())
-	{
-		checkFortRevolt();
-	}
-	else setOwner(calculateCulturalOwner(), bBumpUnits, bUpdatePlotGroups);
 }
 
 void CvPlot::checkCityRevolt()
@@ -999,7 +992,7 @@ void CvPlot::checkCityRevolt()
 	{
 		return;
 	}
-	const PlayerTypes eCulturalOwner = calculateCulturalOwner();
+	const PlayerTypes eCulturalOwner = calculateCulturalOwner(false);
 	FAssert(eCulturalOwner != NO_PLAYER);
 
 	if (eCulturalOwner == NO_PLAYER
@@ -1106,7 +1099,7 @@ void CvPlot::checkFortRevolt()
 	if (improvement.isActsAsCity() && getOwnershipDuration() > GC.getDefineINT("SUPER_FORTS_DURATION_BEFORE_REVOLT"))
 	{
 		// Check for a fort culture flip. Fixed borders altered threshold checked there
-		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
+		const PlayerTypes eCulturalOwner = calculateCulturalOwner(false);
 		if (eCulturalOwner != NO_PLAYER && eCulturalOwner != eOwner && GET_PLAYER(eCulturalOwner).getTeam() != getTeam())
 		{
 			// Defenders prevent flipping regardless of fixed borders.
@@ -4382,14 +4375,14 @@ CvCity* CvPlot::getAdjacentCity(PlayerTypes ePlayer) const
 }
 
 
-PlayerTypes CvPlot::calculateCulturalOwner() const
+PlayerTypes CvPlot::calculateCulturalOwner(bool bCountLastTurn) const
 {
 	// Function calculates who *should* own this plot via cultural means
 	// Actually setting owner happens in CvPlot::setOwner
 	PROFILE("CvPlot::calculateCulturalOwner()");
 
 	const PlayerTypes eOwner = getOwner();
-	const PlayerTypes eHighestCulturePlayer = findHighestCulturePlayer(false);
+	const PlayerTypes eHighestCulturePlayer = findHighestCulturePlayer(false, bCountLastTurn);
 
 	// non-city, non fort plots that are *adjacent* to cities may always belong to those cities' owners
 	if (eOwner == NO_PLAYER)
@@ -7900,7 +7893,7 @@ int CvPlot::countTotalCulture() const
 	return iTotalCulture;
 }
 
-PlayerTypes CvPlot::findHighestCulturePlayer(const bool bCountLegacyCulture) const
+PlayerTypes CvPlot::findHighestCulturePlayer(const bool bCountLegacyCulture, const bool bCountLastTurn) const
 {
 	PlayerTypes eBestPlayer = NO_PLAYER;
 	int iBestValue = 0;
@@ -7909,20 +7902,25 @@ PlayerTypes CvPlot::findHighestCulturePlayer(const bool bCountLegacyCulture) con
 	{
 		const PlayerTypes ePlayerX = static_cast<PlayerTypes>(iI);
 
-		if (GET_PLAYER(ePlayerX).isAlive() && (bCountLegacyCulture || getCultureRateThisTurn(ePlayerX) > 0))
+		if (GET_PLAYER(ePlayerX).isAlive())
 		{
-			const int iValue = getCulture(ePlayerX);
-			if (iValue > 0)
+			if (bCountLegacyCulture
+			|| getCultureRateThisTurn(ePlayerX) > 0
+			|| bCountLastTurn && getCultureRateLastTurn(ePlayerX) > 0)
 			{
-				if (iValue > iBestValue)
+				const int iValue = getCulture(ePlayerX);
+				if (iValue > 0)
 				{
-					iBestValue = iValue;
-					eBestPlayer = ePlayerX;
-				}
-				// Tiebreaker: goes to current owner rather than lowest index
-				else if (iValue == iBestValue && getOwner() == ePlayerX)
-				{
-					eBestPlayer = ePlayerX;
+					if (iValue > iBestValue)
+					{
+						iBestValue = iValue;
+						eBestPlayer = ePlayerX;
+					}
+					// Tiebreaker: goes to current owner rather than lowest index
+					else if (iValue == iBestValue && getOwner() == ePlayerX)
+					{
+						eBestPlayer = ePlayerX;
+					}
 				}
 			}
 		}
@@ -7960,7 +7958,7 @@ int CvPlot::calculateTeamCulturePercent(TeamTypes eIndex) const
 }
 
 
-void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bUpdatePlotGroups)
+void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bUpdatePlotGroups, const bool bDecay)
 {
 	PROFILE_FUNC();
 
@@ -7974,9 +7972,11 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 
 	if (getCulture(eIndex) != iNewValue)
 	{
+		const int iChange = iNewValue - getCulture(eIndex);
+
+		if (bDecay || iChange > 0) // ignore influence driven war reductions
 		{
 			bool bFirst = true;
-			const int iChange = iNewValue - getCulture(eIndex);
 			for (std::vector< std::pair<PlayerTypes, int> >::iterator it = m_cultureRatesThisTurn.begin(); it != m_cultureRatesThisTurn.end(); ++it)
 			{
 				if ((*it).first == eIndex)
@@ -10255,9 +10255,16 @@ void CvPlot::doCulture()
 			}
 		}
 	}
-	// updateCulture checks forts, cities for flipping.
-	// Setting forcibly claimed territory comes after, in doTurn
-	updateCulture(true, true);
+	// Check if plot ownership should flip from culture
+	if (getPlotCity())
+	{
+		checkCityRevolt();
+	}
+	else if (isActsAsCity())
+	{
+		checkFortRevolt();
+	}
+	else setOwner(calculateCulturalOwner(false), true, true);
 
 	m_cultureRatesLastTurn.clear();
 	for (std::vector< std::pair<PlayerTypes, int> >::const_iterator it = m_cultureRatesThisTurn.begin(); it != m_cultureRatesThisTurn.end(); ++it)
