@@ -57,6 +57,8 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getSpaceProductionModifier", &CyPlayer::getSpaceProductionModifier, "int ()")
 
 		.def("getRevIdxNational", &CyPlayer::getRevIdxNational, "int ()")
+		.def("getRevIdxDistanceModifier", &CyPlayer::getRevIdxDistanceModifier, "int ()")
+
 		.def("canFoundReligion", &CyPlayer::canFoundReligion, "bool ()")
 
 		.def("getNumMilitaryUnits", &CyPlayer::getNumMilitaryUnits, "int ()")
@@ -130,7 +132,6 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getPlayerTextColorB", &CyPlayer::getPlayerTextColorB, "int ()")
 		.def("getPlayerTextColorA", &CyPlayer::getPlayerTextColorA, "int ()")
 
-		.def("getSeaPlotYield", &CyPlayer::getSeaPlotYield, "int (YieldTypes eIndex)")
 		.def("getYieldRateModifier", &CyPlayer::getYieldRateModifier, "int (YieldTypes eIndex)")
 		.def("getCommercePercent", &CyPlayer::getCommercePercent, "int (CommerceTypes eIndex)")
 		.def("changeCommercePercent", &CyPlayer::changeCommercePercent, "int (CommerceTypes eIndex, int iChange)")

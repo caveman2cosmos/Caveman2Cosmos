@@ -51,7 +51,7 @@ public:
 
 private:
 	// Utility functions for roughenHeights()
-	int getRiverValueAtPlot(CvPlot* pPlot);
+	int getRiverValueAtPlot(CvPlot* pPlot) const;
 	int calculateNumBonusesToAdd(BonusTypes eBonusType);
 
 	static CvMapGenerator* m_pInst;

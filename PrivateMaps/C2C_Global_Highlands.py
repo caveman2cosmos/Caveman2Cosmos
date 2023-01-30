@@ -8,13 +8,9 @@
 #
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
-#from CvMapGeneratorUtil import FractalWorld
-from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
-#from CvMapGeneratorUtil import BonusBalancer
+import CvMapGeneratorUtil as MGU
 
-#balancer = BonusBalancer()
+balancer = MGU.BonusBalancer()
 
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_GLOBAL_HIGHLANDS_DESCR"
@@ -121,12 +117,10 @@ def normalizeAddExtras():
 
 def addBonusType(argsList):
 	[iBonusType] = argsList
-	gc = CyGlobalContext()
-	type_string = gc.getBonusInfo(iBonusType).getType()
+	type_string = CyGlobalContext().getBonusInfo(iBonusType).getType()
 
-	if (CyMap().getCustomMapOption(4) == 1):
-		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
-			return None # don't place any of this bonus randomly
+	if CyMap().getCustomMapOption(4) == 1 and type_string in balancer.resourcesToBalance:
+		return None # don't place any of this bonus randomly
 
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
@@ -152,7 +146,7 @@ def minStartingDistanceModifier():
 	return -25
 
 # subclass FractalWorld to borrow default process for land/sea formation only.
-class GHFractalWorld(CvMapGeneratorUtil.FractalWorld):
+class GHFractalWorld(MGU.FractalWorld):
 	def generatePlotTypes(self, water_percent=78, shift_plot_types=True, grain_amount=3):
 		# Check for changes to User Input variances.
 		self.checkForOverrideDefaultUserInputVariances()
@@ -272,7 +266,7 @@ def generatePlotTypes():
 
 def generateTerrainTypes():
 	NiTextOut("Generating Terrain (Python Global Highlands) ...")
-	terraingen = TerrainGenerator()
+	terraingen = MGU.TerrainGenerator()
 	terrainTypes = terraingen.generateTerrain()
 	return terrainTypes
 
@@ -289,7 +283,7 @@ def addFeatures():
 
 	# Now add Features.
 	NiTextOut("Adding Features (Python Global Highlands) ...")
-	featuregen = FeatureGenerator()
+	featuregen = MGU.FeatureGenerator()
 	featuregen.addFeatures()
 	return 0
 

@@ -3,6 +3,9 @@
 #ifndef CvDLLSymbolIFaceBase_h
 #define CvDLLSymbolIFaceBase_h
 
+#include "CvDLLUtilityIFaceBase.h"
+#include "CvGlobals.h"
+
 //
 // abstract interface for CvSymbol functions used by DLL
 //

@@ -4,8 +4,8 @@
 //
 
 #include "CvGameCoreDLL.h"
-#include "CvArtFileMgr.h"
 #include "CvBuildingInfo.h"
+#include "CvBonusInfo.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInfos.h"
@@ -95,19 +95,31 @@ CyTeam* CyGlobalContext::getCyTeam(TeamTypes eTeam) const
 	return eTeam < MAX_TEAMS ? &g_cyTeams[eTeam] : NULL;
 }
 
-int CyGlobalContext::getInfoTypeForString(const char* szInfoType) const
+int CyGlobalContext::getInfoTypeForString(const char* szInfoType, bool bHideAssert) const
 {
-	return GC.getInfoTypeForString(szInfoType);
+	return GC.getInfoTypeForString(szInfoType, bHideAssert);
 }
 
-int CyGlobalContext::getInfoTypeForStringWithHiddenAssert(const char* szInfoType) const
+int CyGlobalContext::getNumFlavorTypes() const
 {
-	return GC.getInfoTypeForString(szInfoType, true);
+	return GC.getNumFlavorTypes();
 }
 
-int CyGlobalContext::getTypesEnum(const char* szType) const
+const char* CyGlobalContext::getFlavorType(FlavorTypes e) const
 {
-	return GC.getTypesEnum(szType);
+	return GC.getFlavorTypes(e).c_str();
+}
+
+const python::list CyGlobalContext::getFlavorTypes() const
+{
+	python::list l = python::list();
+	const CvString*& flavorTypes = GC.getFlavorTypes();
+
+	for (int i = 0, num = GC.getNumFlavorTypes(); i < num; i++)
+	{
+		l.append(flavorTypes[i].c_str());
+	}
+	return l;
 }
 
 const CvMapInfo& CyGlobalContext::getMapInfo(MapTypes eMap) const
@@ -388,6 +400,13 @@ const CvColorInfo* CyGlobalContext::getColorInfo(int i) const
 	return (i>=0 && i<GC.getNumColorInfos()) ? &GC.getColorInfo((ColorTypes)i) : NULL;
 }
 
+
+const CvAdvisorInfo* CyGlobalContext::getAdvisorInfo(int i) const
+{
+	return (i>=0 && i<GC.getNumAdvisorInfos()) ? &GC.getAdvisorInfo((AdvisorTypes)i) : NULL;
+}
+
+
 const CvPropertyInfo* CyGlobalContext::getPropertyInfo(int i) const
 {
 	return (i>=0 && i<GC.getNumPropertyInfos()) ? &GC.getPropertyInfo((PropertyTypes)i) : NULL;
@@ -503,54 +522,6 @@ const CvEspionageMissionInfo* CyGlobalContext::getEspionageMissionInfo(int i) co
 const CvUnitArtStyleTypeInfo* CyGlobalContext::getUnitArtStyleTypeInfo(int i) const
 {
 	return (i>=0 && i<GC.getNumUnitArtStyleTypeInfos()) ? &GC.getUnitArtStyleTypeInfo((UnitArtStyleTypes)i) : NULL;
-}
-
-
-const CvArtInfoInterface* CyGlobalContext::getInterfaceArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumInterfaceArtInfos()) ? &ARTFILEMGR.getInterfaceArtInfo(i) : NULL;
-}
-
-
-const CvArtInfoMovie* CyGlobalContext::getMovieArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumMovieArtInfos()) ? &ARTFILEMGR.getMovieArtInfo(i) : NULL;
-}
-
-
-const CvArtInfoMisc* CyGlobalContext::getMiscArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumMiscArtInfos()) ? &ARTFILEMGR.getMiscArtInfo(i) : NULL;
-}
-
-
-const CvArtInfoUnit* CyGlobalContext::getUnitArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumUnitArtInfos()) ? &ARTFILEMGR.getUnitArtInfo(i) : NULL;
-}
-
-
-const CvArtInfoBuilding* CyGlobalContext::getBuildingArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumBuildingArtInfos()) ? &ARTFILEMGR.getBuildingArtInfo(i) : NULL;
-}
-
-
-const CvArtInfoCivilization* CyGlobalContext::getCivilizationArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumCivilizationArtInfos()) ? &ARTFILEMGR.getCivilizationArtInfo(i) : NULL;
-}
-
-
-const CvArtInfoBonus* CyGlobalContext::getBonusArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumBonusArtInfos()) ? &ARTFILEMGR.getBonusArtInfo(i) : NULL;
-}
-
-
-const CvArtInfoImprovement* CyGlobalContext::getImprovementArtInfo(int i) const
-{
-	return (i>=0 && i<ARTFILEMGR.getNumImprovementArtInfos()) ? &ARTFILEMGR.getImprovementArtInfo(i) : NULL;
 }
 
 

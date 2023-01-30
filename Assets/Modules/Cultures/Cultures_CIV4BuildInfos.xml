@@ -6,8 +6,8 @@
 			<Description>TXT_KEY_BUILD_MOAI</Description>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<iTime>200</iTime>
-			<iCost>10</iCost>
-			<bKill>1</bKill>
+			<iCost>5</iCost>
+			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_MOAI</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<PrereqBonusTypes>
@@ -20,7 +20,6 @@
 					<iTime>400</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_MANGROVE</FeatureType>
@@ -28,7 +27,6 @@
 					<iTime>400</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST</FeatureType>
@@ -36,7 +34,6 @@
 					<iTime>300</iTime>
 					<iProduction>40</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
@@ -44,7 +41,6 @@
 					<iTime>300</iTime>
 					<iProduction>40</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_BAMBOO</FeatureType>
@@ -52,7 +48,6 @@
 					<iTime>300</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
@@ -60,7 +55,6 @@
 					<iTime>200</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_FOREST_BURNT</FeatureType>
@@ -68,7 +62,6 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
-					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CITY_RUINS</FeatureType>
@@ -86,17 +79,17 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_TAR_PIT</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CRATER</FeatureType>
-					<PrereqTech>TECH_INDUSTRIAL_ECOLOGY</PrereqTech>
-					<iTime>1200</iTime>
+					<PrereqTech/>
+					<iTime>200</iTime>
 					<iProduction>0</iProduction>
-					<bRemove>1</bRemove>
+					<bRemove>0</bRemove>
 				</FeatureStruct>
 			</FeatureStructs>
 			<HotKey>KB_S</HotKey>

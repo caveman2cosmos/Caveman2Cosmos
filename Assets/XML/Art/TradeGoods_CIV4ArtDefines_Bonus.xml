@@ -92,15 +92,6 @@
 			<FontButtonIndex>134</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_OSTRICH_LEATHER</Type>
-			<fScale>1.0</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Empty.nif</NIF>
-			<KFM />
-			<Button>art/Goods/goodfineleather.dds</Button>
-			<FontButtonIndex>129</FontButtonIndex>
-		</BonusArtInfo>
-		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_RED_AND_BLACK_CERAMICS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>

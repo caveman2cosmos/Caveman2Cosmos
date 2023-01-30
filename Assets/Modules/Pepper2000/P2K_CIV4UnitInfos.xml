@@ -8,6 +8,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
@@ -38,7 +39,6 @@
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CONSTRUCTION_SHIP</Description>
 			<Civilopedia>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Civilopedia>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HELP</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<UnitAIs>
 				<UnitAI>
@@ -60,11 +60,11 @@
 				<BuildType>BUILD_MARTIAN_MINE</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_STATION</BuildingType>
 			</PrereqAndBuildings>
-			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>5000</iCost>
+			<iCost>2435</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
@@ -83,47 +83,6 @@
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
-			<Actions>
-				<Action>
-					<MissionType>MISSION_CONSTRUCTION_SHIP_UPGRADE_TO_LUNAR_BULLDOZER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>15</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER</OutcomeType>
-							<iChance>100</iChance>
-							<UnitType>UNIT_LUNAR_BULLDOZER</UnitType>
-							<bUnitToCity>
-								<Constant>0</Constant>
-							</bUnitToCity>
-							<PlotCondition>
-								<Not>
-									<Is>TAG_ANARCHY</Is>
-								</Not>
-							</PlotCondition>
-							<PythonCallback/>
-							<Python>
-								from CvPythonExtensions import CyGlobalContext
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
-									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
-									return plot.getTerrainType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									return 0
-								def getDisplay(unit,plot):
-									return u""
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-			</Actions>
 		</UnitInfo>
 		<!-- Lunar Rover-->
 		<UnitInfo>
@@ -174,7 +133,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			</PrereqBonuses>
-			<iCost>5000</iCost>
+			<iCost>2006</iCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iCombat>30</iCombat>
@@ -287,6 +246,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -297,6 +257,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SETTLE</DefaultUnitAI>
@@ -313,16 +274,16 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_SPACE_STATION</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<iCost>1000</iCost>
+			<iCost>2435</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -379,6 +340,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -389,6 +351,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
@@ -406,17 +369,17 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_SPACE_STATION</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>1000</iCost>
+			<iCost>2540</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -450,10 +413,6 @@
 									gc = CyGlobalContext()
 									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
 										return False
-									valid_improvement_strings = ['LUNAR_OUTPOST','LUNAR_HABITATION_COMPLEX']
-									valid_improvements = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_improvement_strings]
-									if plot.getImprovementType() not in valid_improvements:
-										return False
 									valid_terrain_strings = ['LUNAR_DOME','LUNAR_MARE','LUNAR_HIGHLAND','LUNAR_REGOLITH','LUNAR_RILLE','GREEN_MOON']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
@@ -477,6 +436,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -487,6 +447,7 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
@@ -510,17 +471,17 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqAndBuildings>
+			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
-			</PrereqAndBuildings>
+				<BuildingType>BUILDING_SPACE_STATION</BuildingType>
+			</PrereqOrBuildings>
 			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>1000</iCost>
+			<iCost>2645</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -577,6 +538,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -635,7 +597,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -688,6 +649,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NUCLEAR_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -726,7 +688,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -783,6 +744,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ANTIMATTER_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -832,7 +794,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -889,6 +850,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -946,7 +908,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -1003,6 +964,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -1041,7 +1003,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -1099,6 +1060,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -1138,7 +1100,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
@@ -1226,9 +1187,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>10</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>180</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1281,9 +1240,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>6</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>120</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1336,9 +1293,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>6</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>240</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1391,9 +1346,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>360</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1461,9 +1414,7 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>4</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>480</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1542,7 +1493,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>80</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1624,7 +1574,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>150</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1712,7 +1661,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>130</iCombat>
 			<iCombatLimit>170</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1799,7 +1747,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>90</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1886,7 +1833,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>110</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -1973,7 +1919,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>110</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -2057,7 +2002,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>130</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -2142,7 +2086,6 @@
 			<iAdvancedStartCost>550</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iCombat>170</iCombat>
 			<iCombatLimit>100</iCombatLimit>
 			<iXPValueAttack>6</iXPValueAttack>
@@ -2182,6 +2125,7 @@
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2227,7 +2171,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -2250,6 +2193,7 @@
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2288,7 +2232,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -2312,6 +2255,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2347,7 +2291,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -2371,6 +2314,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2410,7 +2354,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -2433,6 +2376,7 @@
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -2466,7 +2410,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
@@ -2487,6 +2430,7 @@
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_PILOTING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INFERIOR</SubCombatType>
@@ -2520,7 +2464,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>11</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
@@ -2545,6 +2488,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2625,11 +2569,10 @@
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>2506</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -2654,6 +2597,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2749,11 +2693,10 @@
 				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MAGNETIC_SAILS</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>4756</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -2778,6 +2721,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -2875,7 +2819,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -2900,6 +2843,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3030,7 +2974,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -3055,6 +2998,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3131,7 +3075,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -3156,6 +3099,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3186,12 +3130,11 @@
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MASS_DRIVER</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>4231</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>100</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3217,6 +3160,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3256,7 +3200,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>150</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3282,6 +3225,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3323,7 +3267,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>200</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3349,6 +3292,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NUCLEAR_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3387,12 +3331,11 @@
 				<BuildingType>BUILDING_STARPORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
-			<iCost>6500</iCost>
+			<iCost>8817</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>250</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3418,6 +3361,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ANTIMATTER_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3458,12 +3402,11 @@
 				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_GALACTIFORMING</PrereqTech>
-			<iCost>7000</iCost>
+			<iCost>12342</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>300</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3489,6 +3432,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3529,12 +3473,11 @@
 				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SHAPESHIFTING</PrereqTech>
-			<iCost>7500</iCost>
+			<iCost>14817</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>350</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3560,6 +3503,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3603,12 +3547,11 @@
 				<BuildingType>BUILDING_MICROWORMHOLE_BUILDING</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_HYPERINTELLIGENCE</PrereqTech>
-			<iCost>8000</iCost>
+			<iCost>18267</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>400</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3634,6 +3577,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3693,7 +3637,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>1</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>350</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3719,6 +3662,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3785,7 +3729,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>2</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>350</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3811,6 +3754,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3842,7 +3786,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>3</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iBaseHurry>350</iBaseHurry>
 			<iWorkRate>700</iWorkRate>
 			<iAsset>1</iAsset>
@@ -3869,6 +3812,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -3978,11 +3922,10 @@
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>1762</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -4007,6 +3950,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -4045,15 +3989,16 @@
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>2106</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<Builds>
 				<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
+				<BuildType>BUILD_SPACE_STATION_LV2</BuildType>
+				<BuildType>BUILD_SPACE_STATION_LV3</BuildType>
 			</Builds>
 			<Actions>
 				<Action>
@@ -4155,68 +4100,6 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_SS2</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_SS2</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeSS2</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV1']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV2'))
-								def getDisplay(unit,plot):
-									return u"Upgrade Space Station"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_SS3</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_SS3</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeSS3</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV2']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV3'))
-								def getDisplay(unit,plot):
-									return u"Upgrade Space Station"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
 			</Actions>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
@@ -4240,6 +4123,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -4839,11 +4723,10 @@
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>2306</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -4868,6 +4751,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -5047,7 +4931,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -5072,6 +4955,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -5206,7 +5090,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -5231,6 +5114,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -5333,7 +5217,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -5358,6 +5241,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -5427,7 +5311,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -5452,6 +5335,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -5554,7 +5438,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>12</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -5579,6 +5462,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -5611,15 +5495,16 @@
 				<BuildingType>BUILDING_COMMERCIAL_SPACEPORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_COMMERCIAL_SPACEFLIGHT</PrereqTech>
-			<iCost>5000</iCost>
+			<iCost>3006</iCost>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>1000</iWorkRate>
 			<iAsset>1</iAsset>
 			<Builds>
 				<BuildType>BUILD_SPACE_STATION_LV1</BuildType>
+				<BuildType>BUILD_SPACE_STATION_LV2</BuildType>
+				<BuildType>BUILD_SPACE_STATION_LV3</BuildType>
 			</Builds>
 			<Actions>
 				<Action>
@@ -5721,164 +5606,6 @@
 						</Outcome>
 					</ActionOutcomes>
 				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_SS2</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_SS2</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeSS2</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV1']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV2'))
-								def getDisplay(unit,plot):
-									return u"Upgrade Space Station"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_SS3</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_SS3</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeSS3</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV2']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									plot.setImprovementType(gc.getInfoTypeForString('IMPROVEMENT_SPACE_STATION_LV3'))
-								def getDisplay(unit,plot):
-									return u"Upgrade Space Station"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_CISLUNAR_SETTLER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_CISLUNAR_SETTLER</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeCislunarSettler</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								import random
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV3']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_CISLUNARSETTLER'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-								def getDisplay(unit,plot):
-									return u"Upgrade to Cislunar Settler"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_LUNAR_SETTLER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_LUNAR_SETTLER</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradeLunarSettler</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								import random
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV3']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_LUNARSETTLER'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-								def getDisplay(unit,plot):
-									return u"Upgrade to Lunar Settler"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
-				<Action>
-					<MissionType>MISSION_UPGRADE_PLANET_SETTLER</MissionType>
-					<iCost>
-						<Adapt>
-							<ID>ADAPT_DEFAULT</ID>
-							<Constant>0</Constant>
-						</Adapt>
-					</iCost>
-					<ActionOutcomes>
-						<Outcome>
-							<OutcomeType>OUTCOME_UPGRADE_PLANET_SETTLER</OutcomeType>
-							<iChance>100</iChance>
-							<PythonName>UpgradePlanetSettler</PythonName>
-							<Python>
-								from CvPythonExtensions import *
-								import random
-								def isPossible(unit,plot):
-									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE_STATION_LV3']
-									valid_terrains = [gc.getInfoTypeForString('IMPROVEMENT_'+t) for t in valid_terrain_strings]
-									return plot.getImprovementType() in valid_terrains
-								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
-									gc = CyGlobalContext()
-									gc.getPlayer(unit.getOwner()).initUnit(gc.getInfoTypeForString('UNIT_PLANETARYSETTLER'),plot.getX(),plot.getY(),UnitAITypes.NO_UNITAI,DirectionTypes.DIRECTION_SOUTH)
-								def getDisplay(unit,plot):
-									return u"Upgrade to Planetary Settler"
-								def getAIValue(unit, plot):
-									return 1
-							</Python>
-						</Outcome>
-					</ActionOutcomes>
-				</Action>
 			</Actions>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
@@ -5901,6 +5628,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -5952,7 +5680,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -5976,6 +5703,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6027,7 +5755,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>1000</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6051,6 +5778,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NUCLEAR_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6118,7 +5846,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6143,6 +5870,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6196,7 +5924,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6220,6 +5947,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6270,7 +5998,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6294,6 +6021,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6346,7 +6074,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6370,6 +6097,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6424,7 +6152,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6448,6 +6175,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6502,7 +6230,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6526,6 +6253,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6579,7 +6307,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6603,6 +6330,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6658,7 +6386,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6682,6 +6409,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6732,7 +6460,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6756,6 +6483,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6802,7 +6530,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6827,6 +6554,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6882,7 +6610,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6907,6 +6634,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -6963,7 +6691,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -6988,6 +6715,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7044,7 +6772,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7069,6 +6796,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7118,7 +6846,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7142,6 +6869,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7191,7 +6919,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7215,6 +6942,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7265,7 +6993,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7289,6 +7016,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7338,7 +7066,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7362,6 +7089,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7411,7 +7139,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7435,6 +7162,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7485,7 +7213,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7509,6 +7236,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7558,7 +7286,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7582,6 +7309,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7631,7 +7359,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7655,6 +7382,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7705,7 +7433,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7729,6 +7456,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7779,7 +7507,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7803,6 +7530,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7853,7 +7581,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7878,6 +7605,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7928,7 +7656,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -7953,6 +7680,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -7999,7 +7727,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8024,6 +7751,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8070,7 +7798,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8095,6 +7822,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8141,7 +7869,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8166,6 +7893,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8212,7 +7940,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8237,6 +7964,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8283,7 +8011,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8308,6 +8035,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8354,7 +8082,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8379,6 +8106,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8425,7 +8153,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8450,6 +8177,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8496,7 +8224,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8521,6 +8248,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EARLY_SPACESHIP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>
@@ -8577,7 +8305,6 @@
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
 			<iMoves>24</iMoves>
-			<iNukeRange>-1</iNukeRange>
 			<iWorkRate>500</iWorkRate>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
@@ -8601,6 +8328,7 @@
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TRACKED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_DISTANCE_PRIMARY</SubCombatType>
 				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_VEHICULAR</SubCombatType>
@@ -8638,10 +8366,7 @@
 				<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
 				<BuildType>BUILD_LUNAR_MINE</BuildType>
 			</Builds>
-			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LUNAR_ASSEMBLY_PLANT</BuildingType>
-			</PrereqAndBuildings>
+			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<iCost>1700</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
 			<iMoves>1</iMoves>
@@ -8667,6 +8392,7 @@
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_PACIFIST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SPECIES_AI</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_SUPERIOR</SubCombatType>

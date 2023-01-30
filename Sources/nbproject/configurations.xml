@@ -182,7 +182,6 @@
             </incDir>
             <preprocessorList>
               <Elem>FASSERT_ENABLE</Elem>
-              <Elem>LOG_AI</Elem>
               <Elem>QC_MASTERY_VICTORY</Elem>
               <Elem>WIN32</Elem>
               <Elem>WINDOWS</Elem>
@@ -507,7 +506,6 @@
             </incDir>
             <preprocessorList>
               <Elem>FINAL_RELEASE</Elem>
-              <Elem>LOG_AI</Elem>
               <Elem>NDEBUG</Elem>
               <Elem>QC_MASTERY_VICTORY</Elem>
               <Elem>WIN32</Elem>
@@ -833,7 +831,6 @@
             <preprocessorList>
               <Elem>FASSERT_ENABLE</Elem>
               <Elem>FINAL_RELEASE</Elem>
-              <Elem>LOG_AI</Elem>
               <Elem>NDEBUG</Elem>
               <Elem>QC_MASTERY_VICTORY</Elem>
               <Elem>WIN32</Elem>
@@ -1159,7 +1156,6 @@
             <preprocessorList>
               <Elem>FINAL_RELEASE</Elem>
               <Elem>FP_PROFILE_ENABLE</Elem>
-              <Elem>LOG_AI</Elem>
               <Elem>NDEBUG</Elem>
               <Elem>QC_MASTERY_VICTORY</Elem>
               <Elem>USE_INTERNAL_PROFILER</Elem>

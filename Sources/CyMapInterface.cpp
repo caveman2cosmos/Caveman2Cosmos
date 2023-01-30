@@ -99,9 +99,6 @@ void CyMapPythonInterface()
 		.def("getLastPathStepNum", &CyMap::getLastPathStepNum, "int ()")
 		.def("getLastPathPlotByIndex", &CyMap::getLastPathPlotByIndex, python::return_value_policy<python::manage_new_object>(), "CyPlot (index) - get a plot on the path by its Index")
 
-		// Super Forts *canal* *choke*
-		.def("calculateCanalAndChokePoints", &CyMap::calculateCanalAndChokePoints, "void ()")
-
 		.def("moveUnitToMap", &CyMap::moveUnitToMap)
 	;
 }

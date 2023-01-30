@@ -1,18 +1,20 @@
-//
-// Python wrapper class for CvGame
-//
-
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
 #include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvInitCore.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 #include "CyCity.h"
 #include "CyDeal.h"
 #include "CyGame.h"
 #include "CyPlot.h"
 #include "CyReplayInfo.h"
 #include "CvReplayInfo.h"
+
+//
+// Python wrapper class for CvGame
+//
 
 CyGame::CyGame() : m_pGame(GC.getGame()) {}
 
@@ -33,21 +35,6 @@ bool CyGame::isMultiplayer() const
 void CyGame::updateScore(bool bForce)
 {
 	m_pGame.updateScore(bForce);
-}
-
-void CyGame::cycleCities(bool bForward, bool bAdd)
-{
-	m_pGame.cycleCities(bForward, bAdd);
-}
-
-void CyGame::cycleSelectionGroups(bool bClear, bool bForward, bool bWorkers)
-{
-	m_pGame.cycleSelectionGroups(bClear, bForward, bWorkers);
-}
-
-bool CyGame::cyclePlotUnits(const CyPlot* pPlot, bool bForward, bool bAuto, int iCount)
-{
-	return m_pGame.cyclePlotUnits(pPlot->getPlot(), bForward, bAuto, iCount);
 }
 
 void CyGame::selectionListMove(const CyPlot* pPlot, bool bAlt, bool bShift, bool bCtrl)
@@ -163,11 +150,6 @@ int CyGame::countTotalNukeUnits() const
 int CyGame::countKnownTechNumTeams(TechTypes eTech) const
 {
 	return m_pGame.countKnownTechNumTeams(eTech);
-}
-
-int CyGame::getNumFreeBonuses(BuildingTypes eBuilding) const
-{
-	return m_pGame.getNumFreeBonuses(eBuilding);
 }
 
 int CyGame::countReligionLevels(ReligionTypes eReligion) const
@@ -550,11 +532,6 @@ void CyGame::toggleDebugMode()
 	m_pGame.toggleDebugMode();
 }
 
-int CyGame::getChtLvl() const
-{
-	return gDLL->getChtLvl();
-}
-
 int CyGame::getPitbossTurnTime() const
 {
 	return m_pGame.getPitbossTurnTime();
@@ -588,6 +565,11 @@ bool CyGame::isSimultaneousTeamTurns() const
 bool CyGame::isFinalInitialized() const
 {
 	return m_pGame.isFinalInitialized();
+}
+
+void CyGame::onFinalInitialized(const bool bNewGame)
+{
+	m_pGame.onFinalInitialized(bNewGame);
 }
 
 PlayerTypes CyGame::getActivePlayer() const
@@ -899,7 +881,7 @@ void CyGame::setScriptData(std::string szNewValue)
 	m_pGame.setScriptData(szNewValue);
 }
 
-void CyGame::setName(TCHAR* szNewValue)
+void CyGame::setName(const char* szNewValue)
 {
 	m_pGame.setName(szNewValue);
 }
@@ -939,7 +921,7 @@ CvRandom& CyGame::getMapRand() const
 	return (m_pGame.getMapRand());
 }
 
-int CyGame::getMapRandNum(int iNum, TCHAR* pszLog) const
+int CyGame::getMapRandNum(int iNum, const char* pszLog) const
 {
 	return m_pGame.getMapRandNum(iNum, pszLog);
 }
@@ -949,7 +931,7 @@ CvRandom& CyGame::getSorenRand() const
 	return (m_pGame.getSorenRand());
 }
 
-int CyGame::getSorenRandNum(int iNum, TCHAR* pszLog) const
+int CyGame::getSorenRandNum(int iNum, const char* pszLog) const
 {
 	return m_pGame.getSorenRandNum(iNum, pszLog);
 }
@@ -1041,7 +1023,7 @@ void CyGame::addReplayMessage(ReplayMessageTypes eType, PlayerTypes ePlayer, std
 
 bool CyGame::hasSkippedSaveChecksum() const
 {
-	return m_pGame.hasSkippedSaveChecksum();
+	return gDLL->hasSkippedSaveChecksum();
 }
 
 void CyGame::addPlayer(PlayerTypes eNewPlayer, LeaderHeadTypes eLeader, CivilizationTypes eCiv, bool bSetAlive)
@@ -1068,19 +1050,9 @@ void CyGame::log(const char* file, char* str)
 #endif
 }
 
-int CyGame::getCultureThreshold(CultureLevelTypes eLevel) const
-{
-	return m_pGame.getCultureThreshold(eLevel);
-}
-
 void CyGame::setPlotExtraYield(int iX, int iY, YieldTypes eYield, int iExtraYield)
 {
 	m_pGame.setPlotExtraYield(iX, iY, eYield, iExtraYield);
-}
-
-void CyGame::changePlotExtraCost(int iX, int iY, int iCost)
-{
-	m_pGame.changePlotExtraCost(iX, iY, iCost);
 }
 
 bool CyGame::isCivEverActive(CivilizationTypes eCivilization) const
@@ -1120,7 +1092,11 @@ bool CyGame::regenerateMap()
 
 void CyGame::saveGame(std::string fileName) const
 {
-	gDLL->getEngineIFace()->SaveGame((CvString &)fileName, SAVEGAME_NORMAL);
+	if (fileName.empty())
+	{
+		gDLL->getEngineIFace()->AutoSave(true);
+	}
+	else gDLL->getEngineIFace()->SaveGame((CvString &)fileName, SAVEGAME_NORMAL);
 }
 
 std::string CyGame::getDLLPath() const
@@ -1143,11 +1119,6 @@ int CyGame::getHighToLowCounter() const
 	return m_pGame.getHighToLowCounter();
 }
 
-void CyGame::setVictoryValid(int iVictory, bool bNewVal)
-{
-	m_pGame.setVictoryValid((VictoryTypes)iVictory, bNewVal);
-}
-
 bool CyGame::isModderGameOption(ModderGameOptionTypes eIndex) const
 {
 	return m_pGame.isModderGameOption(eIndex);
@@ -1161,11 +1132,6 @@ int CyGame::getModderGameOption(ModderGameOptionTypes eIndex) const
 void CyGame::setModderGameOption(ModderGameOptionTypes eIndex, int iNewValue)
 {
 	m_pGame.setModderGameOption(eIndex, iNewValue);
-}
-
-bool CyGame::canEverResearch(TechTypes iTech) const
-{
-	return m_pGame.canEverResearch(iTech);
 }
 
 bool CyGame::canEverConstruct(BuildingTypes iBuilding) const
@@ -1191,4 +1157,9 @@ const char* CyGame::getC2CVersion() const
 void CyGame::assignStartingPlots(bool bScenario, bool bMapScript)
 {
 	m_pGame.assignStartingPlots(bScenario, bMapScript);
+}
+
+void CyGame::exitWorldBuilder()
+{
+	m_pGame.setWorldBuilder(false);
 }

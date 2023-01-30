@@ -92,28 +92,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<bUpgradeAnywhere>0</bUpgradeAnywhere>
-			<bAllowInquisitions>0</bAllowInquisitions>
-			<bDisallowInquisitions>0</bDisallowInquisitions>
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>5</iRevIdxNational>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>100</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -226,28 +204,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<bUpgradeAnywhere>0</bUpgradeAnywhere>
-			<bAllowInquisitions>0</bAllowInquisitions>
-			<bDisallowInquisitions>0</bDisallowInquisitions>
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>4</iRevIdxNational>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>50</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -596,7 +552,7 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALACE_WALLS</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
@@ -604,19 +560,19 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_THRONE_ROOM</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BALLROOM</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PALACE</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SPANISH_CITADEL</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MOAT</BuildingType>
@@ -636,11 +592,11 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_KEEP</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_HEAVY_GATES</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_DUNGEON</BuildingType>
@@ -648,33 +604,45 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GUARD_STATION</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_POLICE_STATION</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_JAIL</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_NOBLE</UnitType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_LORD</UnitType>
-					<iProductionModifier>10</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 			<CivicAttitudeChanges>
@@ -1336,6 +1304,14 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
 					<BuildingType>BUILDING_TELESCREEN</BuildingType>
 					<iHappinessChange>-4</iHappinessChange>
 				</BuildingHappinessChange>
@@ -1784,7 +1760,7 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<!-- Revolution Mod Start -->
@@ -2265,9 +2241,6 @@
 				<iCommerce>-2</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CapitalCommerceModifiers>
-			<!-- Revolution Mod Start -->
-			<iRevIdxNational>1</iRevIdxNational>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>10</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>-10</iNationalCaptureResistanceModifier>
 			<Button>art/Interface/buttons/civics/sparth/rule_obedience.dds</Button>
@@ -2454,8 +2427,8 @@
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
-			<iDistanceMaintenanceModifier>5</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>5</iNumCitiesMaintenanceModifier>
+			<iDistanceMaintenanceModifier>2</iDistanceMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>3</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>1</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>2</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
@@ -2492,7 +2465,11 @@
 				<iYield>2</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
-			<TradeYieldModifiers/>
+			<TradeYieldModifiers>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
+				<iYield>2</iYield>
+			</TradeYieldModifiers>
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
 				<iCommerce>2</iCommerce>
@@ -2500,10 +2477,10 @@
 				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<CapitalCommerceModifiers>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>2</iCommerce>
+				<iCommerce>2</iCommerce>
 			</CapitalCommerceModifiers>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
@@ -2556,7 +2533,7 @@
 			<iDomesticGreatGeneralRateModifier>5</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>5</iStateReligionGreatPeopleRateModifier>
 			<iDistanceMaintenanceModifier>0</iDistanceMaintenanceModifier>
-			<iNumCitiesMaintenanceModifier>5</iNumCitiesMaintenanceModifier>
+			<iNumCitiesMaintenanceModifier>4</iNumCitiesMaintenanceModifier>
 			<iHomeAreaMaintenanceModifier>3</iHomeAreaMaintenanceModifier>
 			<iOtherAreaMaintenanceModifier>3</iOtherAreaMaintenanceModifier>
 			<iCorporationMaintenanceModifier>0</iCorporationMaintenanceModifier>
@@ -2618,6 +2595,14 @@
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_LYCEUM</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -2767,27 +2752,27 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_VILLAGE_HALL</BuildingType>
-					<iProductionModifier>10</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TOWN_HALL</BuildingType>
-					<iProductionModifier>10</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
-					<iProductionModifier>10</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GREAT_PALACE</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<!-- Revolution Mod Start -->
@@ -3210,27 +3195,27 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PORT</BuildingType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_COMMERCIAL_PORT</BuildingType>
-					<iProductionModifier>35</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_INTERNATIONAL_PORT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TOLL_HOUSE</BuildingType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
-					<iProductionModifier>35</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_OCEAN_ADMINISTRATION</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
@@ -3559,7 +3544,7 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_NOMAD_SKYSCRAPER</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</CivicInfo>
@@ -3667,19 +3652,19 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_AI_INVESTMENT</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_AI_LAWYER</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_AI_POLICE_FORCE</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_AI_SURVEILLANCE</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</CivicInfo>
@@ -3761,7 +3746,7 @@
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+					<BuildingType>BUILDING_MATERIALIZATION_COMPLEX</BuildingType>
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -3771,7 +3756,7 @@
 					<iHealthChange>-4</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_MATERIALIZER</BuildingType>
+					<BuildingType>BUILDING_MATERIALIZATION_COMPLEX</BuildingType>
 					<iHealthChange>-4</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -4114,25 +4099,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>1</iRevIdxLocal>
-			<iRevIdxNational>1</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0.4</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
@@ -5393,25 +5359,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>1</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>25</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -5521,6 +5468,7 @@
 				<iCommerce>-3</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CapitalCommerceModifiers>
+			<BonusCommerceModifiers/>
 			<SpecialistExtraCommerces/>
 			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
@@ -5529,25 +5477,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>2</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>-1</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>-20</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -5570,19 +5499,19 @@
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_THIEF</UnitType>
-					<iProductionModifier>10</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_ROGUE</UnitType>
-					<iProductionModifier>10</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_AMBUSHER</UnitType>
-					<iProductionModifier>10</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_ASSASSIN</UnitType>
-					<iProductionModifier>10</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 			<iAttitudeShareMod>1</iAttitudeShareMod>
@@ -5679,36 +5608,17 @@
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_THROWING</UnitCombatType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>1</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>20</iRevIdxDistanceModifier>
-			<fRevViolentMod>-1</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>30</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -5803,15 +5713,15 @@
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_MOUNTED</UnitCombatType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<iProductionModifier>10</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 			<BuildingHappinessChanges/>
@@ -6166,6 +6076,10 @@
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_CANNON_TURRET</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
@@ -6612,7 +6526,7 @@
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_UAV</UnitType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 		</CivicInfo>
@@ -6741,21 +6655,21 @@
 			<UnitCombatProductionModifiers>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_GUN</UnitCombatType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_CYBORG</UnitType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_AUTOMATONS</UnitType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 		</CivicInfo>
@@ -7042,7 +6956,7 @@
 			<UnitCombatProductionModifiers>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_HERO</UnitCombatType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 		</CivicInfo>
@@ -7175,7 +7089,7 @@
 			<UnitCombatProductionModifiers>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_HERO</UnitCombatType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 		</CivicInfo>
@@ -7249,25 +7163,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -7377,28 +7272,17 @@
 					<BuildingType>BUILDING_SHAMANHUT</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_ALTERNATIVE_MEDICINE</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>5</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -7413,31 +7297,35 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MONUMENT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_OBELISK</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_NATIVE_AMERICA_TOTEM</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_STELE</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ROYAL_MONUMENT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<BuildingCommerceModifiers>
@@ -7635,29 +7523,13 @@
 					<BuildingType>BUILDING_MESOAMERICAN_MAGICIAN_PYRAMID</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iHappinessChange>2</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<bAllowInquisitions>0</bAllowInquisitions>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>3</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>1</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>25</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>.5</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>.7</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>-3</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -7770,7 +7642,7 @@
 			<UnitCombatProductionModifiers>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_MISSIONARY</UnitCombatType>
-					<iProductionModifier>200</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 		</CivicInfo>
@@ -8909,9 +8781,6 @@
 				<iCommerce>-5</iCommerce>
 				<iCommerce>-3</iCommerce>
 			</CapitalCommerceModifiers>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>4</iRevIdxLocal>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>10</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>-10</iNationalCaptureResistanceModifier>
 			<iPopulationgrowthratepercentage>33</iPopulationgrowthratepercentage>
@@ -9103,25 +8972,6 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 			</ImprovementYieldChanges>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>3</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>-10</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -9131,11 +8981,11 @@
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_TRIBE</UnitType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_SETTLER</UnitType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_COLONIST</UnitType>
@@ -9147,7 +8997,7 @@
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_AIRSETTLER</UnitType>
-					<iProductionModifier>0</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 		</CivicInfo>
@@ -9502,6 +9352,10 @@
 					<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
@@ -9631,23 +9485,23 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BUTCHERY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_FISHERMAN_HUT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_AQUAFARM</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</CivicInfo>
@@ -9876,43 +9730,47 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GRANARY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MODERN_GRANARY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BUTCHERY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BAKERY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_FISHERMAN_HUT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_AQUAFARM</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ARTESIAN_WELL</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</CivicInfo>
@@ -10050,11 +9908,11 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_WALLS</BuildingType>
-					<iProductionModifier>30</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BARRICADES</BuildingType>
@@ -10062,19 +9920,19 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
-					<iProductionModifier>10</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
-					<iProductionModifier>5</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CASTLE</BuildingType>
@@ -10082,6 +9940,10 @@
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_STAR_FORT</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -11146,25 +11008,6 @@
 					</ImprovementYields>
 				</ImprovementYieldChange>
 			</ImprovementYieldChanges>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>1</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>-1</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -11282,25 +11125,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>-1</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -11385,25 +11209,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>-1</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<bFixedBorders>0</bFixedBorders>
@@ -11850,6 +11655,10 @@
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_EMPORIUM</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -12396,6 +12205,10 @@
 					<BuildingType>BUILDING_PUBLIC_TRANSPORTATION</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
 			</BuildingHealthChanges>
 			<FeatureHappinessChanges>
 				<FeatureHappinessChange>
@@ -12835,28 +12648,13 @@
 					<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
 			</BuildingHealthChanges>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>2</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0.5</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors>
@@ -12987,6 +12785,10 @@
 					<BuildingType>BUILDING_ORPHANAGE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
@@ -13027,6 +12829,14 @@
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_ORPHANAGE</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -13390,6 +13200,10 @@
 					<BuildingType>BUILDING_RESERVOIR</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_MODERN_WATERWORKS</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
 			</BuildingHealthChanges>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
@@ -13418,31 +13232,31 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PUBLIC_TRANSPORTATION</BuildingType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_PERSONAL_RAPID_TRAIN</BuildingType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</CivicInfo>
@@ -13613,6 +13427,10 @@
 					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
 			</BuildingHealthChanges>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
@@ -13724,6 +13542,14 @@
 					<BuildingType>BUILDING_CENTERS_FOR_DISEASE_CONTROL</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
@@ -13764,6 +13590,14 @@
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_DENTIST</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -13912,37 +13746,6 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-			<!-- Wrong Civic for these Modifiers
-			<BuildingProductionModifiers>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MINING_INC_SURVEY_OFFICE</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ALUMINUM_CO_R_AND_D</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CREATIVE_CONSTRUCTIONS_OFFICE</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_STANDARD_ETHANOL_DISTILLERY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_FOOD_PROCESSING_PLANT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CEREAL_MILLS_FACTORY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SID_SUSHI_RESTAURANT</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
-				</BuildingProductionModifier>
-			</BuildingProductionModifiers> -->
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
@@ -14013,6 +13816,10 @@
 					<BuildingType>BUILDING_RETIREMENT_HOME</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
+					<BuildingHappinessChange>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
@@ -14077,6 +13884,14 @@
 				</BuildingHealthChange>
 				<BuildingHealthChange>
 					<BuildingType>BUILDING_REHABILITATION_CENTER</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+				<BuildingHealthChange>
+					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<iHealthChange>1</iHealthChange>
+				</BuildingHealthChange>
+					<BuildingHealthChange>
+					<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -14338,7 +14153,7 @@
 			<UnitCombatProductionModifiers>
 				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_CLONES</UnitCombatType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 		</CivicInfo>
@@ -14642,25 +14457,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<WeLoveTheKing/>
 			<iInflation>0</iInflation>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -14948,27 +14744,27 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_BAZAAR</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_MARKET</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GROCER</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SUPERMARKET</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</CivicInfo>
@@ -16077,25 +15873,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<iRevIdxDistanceModifier>0</iRevIdxDistanceModifier>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>1</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<UnitProductionModifiers>
@@ -16113,7 +15890,7 @@
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_WORKER_INDUSTRIAL</UnitType>
-					<iProductionModifier>10</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_WORKMULE</UnitType>
@@ -16125,7 +15902,7 @@
 				</UnitProductionModifier>
 				<UnitProductionModifier>
 					<UnitType>UNIT_WORKER_MODERN</UnitType>
-					<iProductionModifier>5</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 			<Flavors/>
@@ -17275,25 +17052,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
@@ -17312,19 +17070,31 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_LYCEUM</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</CivicInfo>
@@ -17433,15 +17203,15 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</CivicInfo>
@@ -18055,15 +17825,15 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_VIRTUAL_SCHOOL</BuildingType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-					<iProductionModifier>25</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</CivicInfo>
@@ -18297,19 +18067,19 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_INFO_NET</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_DESIGN_STUDIO</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ELECTRONICS_MANUFACTURING_DISTRICT</BuildingType>
-					<iProductionModifier>15</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</CivicInfo>
@@ -18627,11 +18397,11 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_UNIVERSAL_LIBRARY</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_ENCYCLOPEDIA_GALACTICA</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</CivicInfo>
@@ -18694,25 +18464,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<Flavors>
@@ -18855,25 +18606,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<Flavors/>
@@ -19756,7 +19488,7 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GALACTIC_CANTINA</BuildingType>
-					<iProductionModifier>100</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<CivicAttitudeChanges>
@@ -19856,25 +19588,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>1</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>30</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
@@ -19999,6 +19712,10 @@
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_EMPORIUM</BuildingType>
+					<iHappinessChange>1</iHappinessChange>
+				</BuildingHappinessChange>
+				<BuildingHappinessChange>
+					<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -20779,25 +20496,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<iPopulationgrowthratepercentage>50</iPopulationgrowthratepercentage>
@@ -21689,11 +21387,11 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
-					<iProductionModifier>40</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_FOOD_MANUFACTURING_DISTRICT</BuildingType>
-					<iProductionModifier>40</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</CivicInfo>
@@ -21867,25 +21565,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<iPopulationgrowthratepercentage>25</iPopulationgrowthratepercentage>
@@ -22003,25 +21682,6 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-			<!-- Revolution Mod Start -->
-			<iRevIdxLocal>0</iRevIdxLocal>
-			<iRevIdxNational>0</iRevIdxNational>
-			<iRevIdxHolyCityGood>0</iRevIdxHolyCityGood>
-			<iRevIdxHolyCityBad>0</iRevIdxHolyCityBad>
-			<iRevIdxSwitchTo>0</iRevIdxSwitchTo>
-			<fRevIdxNationalityMod>0</fRevIdxNationalityMod>
-			<fRevIdxBadReligionMod>0</fRevIdxBadReligionMod>
-			<fRevIdxGoodReligionMod>0</fRevIdxGoodReligionMod>
-			<fRevIdxDistanceMod>0</fRevIdxDistanceMod>
-			<fRevViolentMod>0</fRevViolentMod>
-			<iRevReligiousFreedom>0</iRevReligiousFreedom>
-			<iRevLaborFreedom>0</iRevLaborFreedom>
-			<iRevEnvironmentalProtection>0</iRevEnvironmentalProtection>
-			<iRevDemocracyLevel>0</iRevDemocracyLevel>
-			<bCommunism>0</bCommunism>
-			<bFreeSpeech>0</bFreeSpeech>
-			<bCanDoElection>0</bCanDoElection>
-			<!-- Revolution Mod End -->
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<TerrainYieldChanges>
@@ -22251,7 +21911,7 @@
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GARBAGE_DUMP</BuildingType>
-					<iProductionModifier>50</iProductionModifier>
+					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 			<CivicAttitudeChanges>

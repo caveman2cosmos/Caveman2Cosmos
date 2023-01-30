@@ -1388,7 +1388,7 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<iCost>3200</iCost>
+			<iCost>2406</iCost>
 			<iBaseUpkeep>6</iBaseUpkeep>
 			<iMoves>1</iMoves>
 			<iAirRange>28</iAirRange>
@@ -1576,6 +1576,10 @@
 				<UnitType>UNIT_A10_BOMBER</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_ATTACK_AIR</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
 				<UnitAI>
 					<UnitAIType>UNITAI_DEFENSE_AIR</UnitAIType>
 					<bUnitAI>1</bUnitAI>

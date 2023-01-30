@@ -415,6 +415,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_DEF_WARN</Tag>
 		<English>[COLOR_WARNING_TEXT]If the unit with this promotion cannot gain Defensive Bonuses, they will not gain inapplicable promotion benefits.[COLOR_REVERT]</English>
+		<German>[COLOR_WARNING_TEXT]Diese Einheit mit dieser Beförderung profitiert nur dann von den genannten Vorteilen, wenn sie über Verteidigungsboni verfügt.[COLOR_REVERT]</German>
 		<Russian>[COLOR_WARNING_TEXT]Если отряд с этой квалификацией не имеет защитных бонусов, он не получает от них несовместимые преимущества.[COLOR_REVERT]</Russian>
 	</TEXT>
 	<TEXT>
@@ -543,12 +544,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_EXCILE_ADD</Tag>
-		<English>[ICON_BULLET]Adds a reason for the unit to be considered an Excile.</English>
+		<English>[ICON_BULLET]Adds a reason for the unit to be considered an Exile.</English>
 		<French>[ICON_BULLET]Ajoute la possibilité pour l'unité d'être considérée en exil.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONHELP_EXCILE_REMOVE</Tag>
-		<English>[ICON_BULLET]Removes a reason for the unit to be considered an Excile.</English>
+		<English>[ICON_BULLET]Removes a reason for the unit to be considered an Exile.</English>
 		<French>[ICON_BULLET]Enlève la possibilité pour l'unité d'être considérée en exil.</French>
 	</TEXT>
 	<TEXT>
@@ -2127,20 +2128,6 @@
 		<German>Die Ausbildung als Feldveterinär steigert die Fähigkeit der Einheit, [COLOR_HIGHLIGHT_TEXT]Tiere zu heilen[COLOR_REVERT].</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FORTIFY</Tag>
-		<English>Build Up (Fortifications) Promotion Line</English>
-		<French>Spécialisation Fortifications</French>
-		<German>(Training) Befestigung</German>
-		<Polish>Linia Promocji: Koncentracja (Fortyfikacje)</Polish>
-		<Russian>Ôîðòèôèêàöèÿ</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_FORTIFY_HELP</Tag>
-		<English>Each Round spent building up Fortifications improves the unit's [COLOR_HIGHLIGHT_TEXT]Combat Modifier[COLOR_REVERT] up to a limit of 5 rounds for maximum bonus, provided each promotion level is qualified for by the unit.</English>
-		<French>A chaque tour la Spécialisation Fortifications augmente [COLOR_HIGHLIGHT_TEXT]la valeur de défense[COLOR_REVERT] de l'unité, avec un bonus maximum au bout de 5 tours.</French>
-		<German>Das Befestigungstraining erhöht jede Runde die [COLOR_HIGHLIGHT_TEXT]Verteidigung[COLOR_REVERT] der Einheit um 5% (maximal 25%).</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_HEALTH_CARE</Tag>
 		<English>Build Up (Health Care) Promotion Line</English>
 		<French>Spécialisation en soins</French>
@@ -2270,12 +2257,14 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SECURITY</Tag>
 		<English>Build Up (Counter Espionage)</English>
 		<French>Retranchement (Contre-espionnage)</French>
+		<German>(Training) Spionageabwehr</German>
 		<Russian>Фокус на Контрразведке (I)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_SECURITY_HELP</Tag>
 		<English>Each round spent building up Counter Espionage, the unit gains +5% [COLOR_HIGHLIGHT_TEXT]Interception Chance[COLOR_REVERT] (to catch enemy spies) up to a maximum of +25%, provided each promotion level is qualified for by the unit.</English>
 		<French>Pour chaque tour dépensé en retranchement Contre-Espionnage, L'unité gagne +5% [COLOR_HIGHLIGHT_TEXT]Prob. d'Interception[COLOR_REVERT] (pour attraper les espions ennemis) jusqu'à un maximum de +25%, à condition que chaque niveau de promotion soit qualifié par l'unité.</French>
+		<German>Das Spionageabwehr-Training erhöht die Effektivität der Einheit bei der [COLOR_HIGHLIGHT_TEXT]Enttarnung[COLOR_REVERT] von Spionen pro Runde um 5% bis zu einem Maximum von 25%.</German>
 		<Russian>За каждый ход, потраченный на подготовку к этой операции, отряд получает +5% к [COLOR_HIGHLIGHT_TEXT]шансу перехвата[COLOR_REVERT] вражеских шпионов (максимум +25%), при условии, что каждый следующий уровень квалификации выполняется отрядом.</Russian>
 	</TEXT>
 	<TEXT>
@@ -3942,25 +3931,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ACE</Tag>
-		<English>Ace</English>
-		<French>
-			<Text>As</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Fliegerass</German>
-		<Italian>
-			<Text>Asso</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>As</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>As Przestworzy</Polish>
-		<Russian>Àñ</Russian>
+		<English>Veteran Pilot II</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADHERENT</Tag>
@@ -5610,46 +5581,6 @@
 		<Russian>Ïîëåâîé âåòåðèíàð V</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY1</Tag>
-		<English>Build Up (Fortifications) I</English>
-		<French>Retranchement (Fortifications) I</French>
-		<German>(Training) Befestigung I</German>
-		<Polish>Koncentracja (Fortyfikacje) I</Polish>
-		<Russian>Ôîðòèôèêàöèÿ I</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY2</Tag>
-		<English>Build Up (Fortifications) II</English>
-		<French>Retranchement (Fortifications) II</French>
-		<German>(Training) Befestigung II</German>
-		<Polish>Koncentracja (Fortyfikacje) II</Polish>
-		<Russian>Ôîðòèôèêàöèÿ II</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY3</Tag>
-		<English>Build Up (Fortifications) III</English>
-		<French>Retranchement (Fortifications) III</French>
-		<German>(Training) Befestigung III</German>
-		<Polish>Koncentracja (Fortyfikacje) III</Polish>
-		<Russian>Ôîðòèôèêàöèÿ III</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY4</Tag>
-		<English>Build Up (Fortifications) IV</English>
-		<French>Retranchement (Fortifications) IV</French>
-		<German>(Training) Befestigung IV</German>
-		<Polish>Koncentracja (Fortyfikacje) IV</Polish>
-		<Russian>Ôîðòèôèêàöèÿ IV</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_BUILD_UP_FORTIFY5</Tag>
-		<English>Build Up (Fortifications) V</English>
-		<French>Retranchement (Fortifications) V</French>
-		<German>(Training) Befestigung V</German>
-		<Polish>Koncentracja (Fortyfikacje) V</Polish>
-		<Russian>Ôîðòèôèêàöèÿ V</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_HEALTH_CARE1</Tag>
 		<English>Build Up (Health Care) I</English>
 		<French>Retranchement (Service sanitaire) I</French>
@@ -5958,30 +5889,35 @@
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY1</Tag>
 		<English>Build Up (Counter Espionage) I</English>
 		<French>Retranchement (Contre-espionnage) I</French>
+		<German>(Training) Spionageabwehr I</German>
 		<Russian>Фокус на Контрразведке (I)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY2</Tag>
 		<English>Build Up (Counter Espionage) II</English>
 		<French>Retranchement (Contre-espionnage) II</French>
+		<German>(Training) Spionageabwehr II</German>
 		<Russian>Фокус на Контрразведке (II)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY3</Tag>
 		<English>Build Up (Counter Espionage) III</English>
 		<French>Retranchement (Contre-espionnage) III</French>
+		<German>(Training) Spionageabwehr III</German>
 		<Russian>Фокус на Контрразведке (III)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY4</Tag>
 		<English>Build Up (Counter Espionage) IV</English>
 		<French>Retranchement (Contre-espionnage) IV</French>
+		<German>(Training) Spionageabwehr IV</German>
 		<Russian>Фокус на Контрразведке (IV)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BUILD_UP_SECURITY5</Tag>
 		<English>Build Up (Counter Espionage) V</English>
 		<French>Retranchement (Contre-espionnage) V</French>
+		<German>(Training) Spionageabwehr V</German>
 		<Russian>Фокус на Контрразведке (V)</Russian>
 	</TEXT>
 	<TEXT>
@@ -6995,7 +6931,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COMBAT_AI1</Tag>
-		<English>Combat AI 1.0</English>
+		<English>Combat AI I</English>
 		<French>Combat IA 1.0</French>
 		<German>Schlacht-KI 1.0</German>
 		<Italian>IA da combattimento 1.0</Italian>
@@ -7005,7 +6941,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COMBAT_AI2</Tag>
-		<English>Combat AI 2.0</English>
+		<English>Combat AI II</English>
 		<French>Combat IA 2.0</French>
 		<German>Schlacht-KI 2.0</German>
 		<Italian>IA da combattimento 2.0</Italian>
@@ -7015,7 +6951,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COMBAT_AI3</Tag>
-		<English>Combat AI 3.0</English>
+		<English>Combat AI III</English>
 		<French>Combat IA 3.0</French>
 		<German>Schlacht-KI 3.0</German>
 		<Italian>IA da combattimento 3.0</Italian>
@@ -7025,7 +6961,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_COMBAT_AI4</Tag>
-		<English>Combat AI 4.0</English>
+		<English>Combat AI IV</English>
 		<French>Combat IA 4.0</French>
 		<German>Schlacht-KI 4.0</German>
 		<Italian>IA da combattimento 4.0</Italian>
@@ -7684,7 +7620,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEFENSIVE_PROTOCOLS1</Tag>
-		<English>Defensive Protocols 1.0</English>
+		<English>Defensive Protocols I</English>
 		<French>Protocoles Défensifs 1.0</French>
 		<German>Verteidigungsprotokoll 1.0</German>
 		<Italian>Protocolli difensivi 1.0</Italian>
@@ -7694,7 +7630,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEFENSIVE_PROTOCOLS2</Tag>
-		<English>Defensive Protocols 2.0</English>
+		<English>Defensive Protocols II</English>
 		<French>Protocoles Défensifs 2.0</French>
 		<German>Verteidigungsprotokoll 2.0</German>
 		<Italian>Protocolli difensivi 2.0</Italian>
@@ -7704,7 +7640,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DEFENSIVE_PROTOCOLS3</Tag>
-		<English>Defensive Protocols 3.0</English>
+		<English>Defensive Protocols III</English>
 		<French>Protocoles Défensifs 3.0</French>
 		<German>Verteidigungsprotokoll 3.0</German>
 		<Italian>Protocolli difensivi 3.0</Italian>
@@ -9272,7 +9208,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GUARDIAN1</Tag>
-		<English>Guardian 1.0</English>
+		<English>Guardian I</English>
 		<French>Gardien 1.0</French>
 		<German>Beschützer 1.0</German>
 		<Italian>Guardiano 1.0</Italian>
@@ -9282,7 +9218,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GUARDIAN2</Tag>
-		<English>Guardian 2.0</English>
+		<English>Guardian II</English>
 		<French>Gardien 2.0</French>
 		<German>Beschützer 2.0</German>
 		<Italian>Guardiano 2.0</Italian>
@@ -9292,7 +9228,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GUARDIAN3</Tag>
-		<English>Guardian 3.0</English>
+		<English>Guardian III</English>
 		<French>Gardien 3.0</French>
 		<German>Beschützer 3.0</German>
 		<Italian>Guardiano 3.0</Italian>
@@ -10855,12 +10791,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MARAUDER_HELP</Tag>
-		<English>[ICON_BULLET]Plunders 4% of Enemy [ICON_GOLD] Reserves on Combat Victory</English>
-		<French>[ICON_BULLET]Pille 4% de la réserve d'[ICON_GOLD] en cas de Victoire au Combat</French>
-		<German>[ICON_BULLET]erbeutet 4% des gegnerischen [ICON_GOLD] bei einem Sieg im Kampf</German>
-		<Italian>[ICON_BULLET]Ruba 4% delle riserve nemiche di [ICON_GOLD] quando vince una battaglia</Italian>
-		<Polish>[ICON_BULLET]Po zwycięstwie w walce grabi 4% rezerw wrogiego [ICON_GOLD]</Polish>
-		<Russian>[ICON_BULLET]Êðàäåò 4% [ICON_GOLD] èç çàïàñîâ ïðîòèâíèêà</Russian>
+		<English>[ICON_BULLET]Plunders Enemy [ICON_GOLD] Reserves on Combat Victory. Amount plundered is based on how much [ICON_GOLD] per unit the victim have. The difficulty level of both you and the victim affects the result.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MARCH</Tag>
@@ -11462,7 +11393,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_OFFENSIVE_PROTOCOLS1</Tag>
-		<English>Offensive Protocols 1.0</English>
+		<English>Offensive Protocols I</English>
 		<French>Protocoles Offensifs 1.0</French>
 		<German>Offensives Protokoll 1.0</German>
 		<Italian>Protocolli offensivi 1.0</Italian>
@@ -11472,7 +11403,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_OFFENSIVE_PROTOCOLS2</Tag>
-		<English>Offensive Protocols 2.0</English>
+		<English>Offensive Protocols II</English>
 		<French>Protocoles Offensifs 2.0</French>
 		<German>Offensives Protokoll 2.0</German>
 		<Italian>Protocolli offensivi 2.0</Italian>
@@ -11482,7 +11413,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_OFFENSIVE_PROTOCOLS3</Tag>
-		<English>Offensive Protocols 3.0</English>
+		<English>Offensive Protocols III</English>
 		<French>Protocoles Offensifs 3.0</French>
 		<German>Offensives Protokoll 3.0</German>
 		<Italian>Protocolli offensivi 3.0</Italian>
@@ -12987,7 +12918,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_ADVENTURER_DESC</Tag>
-		<English>Adventurer (Hero)</English>
+		<English>Adventurer</English>
 		<French>Aventurier (Héros)</French>
 		<German>Adventurer</German>
 		<Italian>Avventuriero</Italian>
@@ -12997,7 +12928,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_BANDIT_DESC</Tag>
-		<English>Bandit (Hero)</English>
+		<English>Bandit</English>
 		<French>Bandit (Héros)</French>
 		<German>Bandit</German>
 		<Italian>Bandit</Italian>
@@ -13007,7 +12938,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_BARD_DESC</Tag>
-		<English>Bard (Hero)</English>
+		<English>Bard</English>
 		<French>Barde (Héros)</French>
 		<German>Bard</German>
 		<Italian>Bardo</Italian>
@@ -13017,7 +12948,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_BODYGUARD_DESC</Tag>
-		<English>Bodyguard (Hero)</English>
+		<English>Bodyguard</English>
 		<French>Garde du corps (Héros)</French>
 		<German>Bodyguard</German>
 		<Italian>Guardia del corpo</Italian>
@@ -13027,7 +12958,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_BUILDER_DESC</Tag>
-		<English>Builder (Hero)</English>
+		<English>Builder</English>
 		<French>Constructeur (Héros)</French>
 		<German>Builder</German>
 		<Italian>Costruttore</Italian>
@@ -13037,7 +12968,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_LIEUTENANT_DESC</Tag>
-		<English>Lieutenant (Hero)</English>
+		<English>Lieutenant</English>
 		<French>Lieutenant (Héros)</French>
 		<German>Lieutenant</German>
 		<Italian>Tenente</Italian>
@@ -13047,7 +12978,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_LOYAL_SERVANT_DESC</Tag>
-		<English>Loyal Servant (Hero)</English>
+		<English>Loyal Servant</English>
 		<French>Serviteur Loyal (Héros)</French>
 		<German>Loyal Servant</German>
 		<Italian>Servitore leale</Italian>
@@ -13057,7 +12988,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_MESSENGER_DESC</Tag>
-		<English>Messenger (Hero)</English>
+		<English>Messenger</English>
 		<French>Messager (Héros)</French>
 		<German>Messenger</German>
 		<Italian>Messaggero</Italian>
@@ -13085,7 +13016,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_SCHOLAR_DESC</Tag>
-		<English>Scholar (Hero)</English>
+		<English>Scholar</English>
 		<French>Erudit (Héros)</French>
 		<German>Scholar</German>
 		<Italian>Erudito</Italian>
@@ -13095,7 +13026,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_SPOUSE_DESC</Tag>
-		<English>Spouse (Hero)</English>
+		<English>Spouse</English>
 		<French>Epouse (Héros)</French>
 		<German>Spouse</German>
 		<Italian>Sposo</Italian>
@@ -13105,7 +13036,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_STRATEGIST_DESC</Tag>
-		<English>Strategist (Hero)</English>
+		<English>Strategist</English>
 		<French>Stratège (Héros)</French>
 		<German>Strategist</German>
 		<Italian>Stratega</Italian>
@@ -13115,7 +13046,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_WAR_VETERAN_DESC</Tag>
-		<English>War Veteran (Hero)</English>
+		<English>War Veteran</English>
 		<French>Vétéran de Guerre (Héros)</French>
 		<German>War Veteran</German>
 		<Italian>Veterano di guerra</Italian>
@@ -15022,7 +14953,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TERRAIN_ANALYSIS1</Tag>
-		<English>Terrain Analysis 1.0</English>
+		<English>Terrain Analysis I</English>
 		<French>Analyse du Terrain 1.0</French>
 		<German>Gelände-Analyse 1.0</German>
 		<Italian>Analisi del terreno 1.0</Italian>
@@ -15032,7 +14963,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TERRAIN_ANALYSIS2</Tag>
-		<English>Terrain Analysis 2.0</English>
+		<English>Terrain Analysis II</English>
 		<French>Analyse du Terrain 2.0</French>
 		<German>Gelände-Analyse 2.0</German>
 		<Italian>Analisi del terreno 2.0</Italian>
@@ -15042,7 +14973,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TERRAIN_ANALYSIS3</Tag>
-		<English>Terrain Analysis 3.0</English>
+		<English>Terrain Analysis III</English>
 		<French>Analyse du Terrain 3.0</French>
 		<German>Gelände-Analyse 3.0</German>
 		<Italian>Analisi del terreno 3.0</Italian>
@@ -15052,13 +14983,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TOPGUN</Tag>
-		<English>Top Gun Pilot</English>
-		<French>Pilote Top Gun</French>
-		<German>Top Gun-Pilot</German>
-		<Italian>Pilota Top Gun</Italian>
-		<Spanish>Piloto superior</Spanish>
-		<Polish>Pilot Top Gun</Polish>
-		<Russian>Ëó÷øèé ïèëîò</Russian>
+		<English>Veteran Pilot III</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_TORPEDOES</Tag>
@@ -15561,13 +15486,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_VETERAN</Tag>
-		<English>Veteran Pilot</English>
-		<French>Pilote Vétéran</French>
-		<German>Veteranen-Pilot</German>
-		<Italian>Pilota Veterano</Italian>
-		<Spanish>Piloto veterano</Spanish>
-		<Polish>Pilot Weteran</Polish>
-		<Russian>Îïûòíûé ïèëîò</Russian>
+		<English>Veteran Pilot I</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_VIRGO</Tag>
@@ -16017,5 +15936,17 @@
 		<Tag>TXT_KEY_PROMOTION_ZEN</Tag>
 		<English>Zen</English>
 		<Russian>Äçýí</Russian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_TRESPASS</Tag>
+		<English>Trespass Status</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_TRESPASS_OFF</Tag>
+		<English>Remove Trespass</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_STATUS_TRESPASS_ON</Tag>
+		<English>Trespass</English>
 	</TEXT>
 </Civ4GameText>

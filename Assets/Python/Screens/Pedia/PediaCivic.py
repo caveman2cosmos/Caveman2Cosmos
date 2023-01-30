@@ -75,7 +75,7 @@ class Page:
 			szRequires = TRNSLTR.getText("TXT_KEY_PEDIA_REQUIRES", ()) + ":"
 			screen.addPanel(panelName, szRequires, "", False, True, X_COL_1 + W_3RD_PP - 108, Y_STATS - 8, 100, H_BOT_ROW, PanelStyles.PANEL_STYLE_EMPTY)
 			screen.attachLabel(panelName, "", "<font=4b>| ")
-			screen.attachImageButton(panelName, "", GC.getTechInfo(iTech).getButton(), enumGBS, WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH, iTech, 1, False)
+			screen.attachImageButton(panelName, "", GC.getTechInfo(iTech).getButton(), enumGBS, WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH, iTech, 2, False)
 			screen.attachLabel(panelName, "", "<font=4b> |")
 		# Strategy
 		szStrategy = TRNSLTR.getText("TXT_KEY_PEDIA_STRATEGY", ())

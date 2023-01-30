@@ -90,7 +90,7 @@ void CyMap::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, 
 
 void CyMap::bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity)
 {
-	GC.getCurrentViewport()->bringIntoView(iX, iY, NULL, bLookAt, bForceCenter, bDisplayCityScreen, bSelectCity, bAddSelectedCity);
+	GC.getCurrentViewport()->bringIntoView(iX, iY, NULL, bForceCenter, bDisplayCityScreen, bSelectCity, bAddSelectedCity);
 }
 
 void CyMap::erasePlots()
@@ -333,7 +333,7 @@ python::list CyMap::areas() const
 
 	foreach_(CvArea* area, m_pMap->areas())
 	{
-		list.append(new CyArea(area));
+		list.append(CyArea(area));
 	}
 	return list;
 }
@@ -426,15 +426,6 @@ CyPlot* CyMap::getLastPathPlotByIndex(int index) const
 	return new CyPlot(it.plot());
 }
 
-
-// Super Forts *canal* *choke*
-void CyMap::calculateCanalAndChokePoints()
-{
-	if (m_pMap)
-	{
-		m_pMap->calculateCanalAndChokePoints();
-	}
-}
 
 void CyMap::moveUnitToMap(const CyUnit* unit, int numTravelTurns)
 {

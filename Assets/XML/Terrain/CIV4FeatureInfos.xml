@@ -1,6 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4FeatureInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<FeatureInfos>
+		<!-- <iCultureDistance> slows down growth over tiles with Realistic Culture option on.
+				Note this value stacks with regular distance AND terrain (see CIV4TerrainInfos.xml)
+				Alternatively, <bIgnoreTerrainCulture> will make the feature's tile
+				ignore underlaying terrain cost.
+				Presence of a feature without an improvement on it increases cultural distance by 1
+				unless bIgnoreTerrainCulture is true.
+				Both can be used together; this in effect replaces the terrain distance with only
+				whatever the feature provides. -->
 		<FeatureInfo>
 			<Type>FEATURE_ICE</Type>
 			<Description>TXT_KEY_FEATURE_ICE</Description>
@@ -99,7 +107,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<GrowthSound>NONE</GrowthSound>
-			<iCultureDistance>2</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -227,7 +235,7 @@
 			<EffectType>EFFECT_BIRDSCATTER</EffectType>
 			<iEffectProbability>15</iEffectProbability>
 			<iAdvancedStartRemoveCost>40</iAdvancedStartRemoveCost>
-			<iCultureDistance>2</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1081,6 +1089,7 @@
 			<iSpread>500</iSpread>
 			<iTurnDamage>25</iTurnDamage>
 			<iPopDestroys>-1</iPopDestroys>
+			<iCultureDistance>5</iCultureDistance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_BADLAND</TerrainType>
@@ -1269,6 +1278,7 @@
 			<iPopDestroys>-1</iPopDestroys>
 			<!-- GWMod new XML field M.A. -->
 			<bNoImprovement>1</bNoImprovement>
+			<iCultureDistance>4</iCultureDistance>
 			<FootstepSounds>
 				<FootstepSound>
 					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
@@ -1357,6 +1367,7 @@
 			<iSpread>1000</iSpread>
 			<iTurnDamage>50</iTurnDamage>
 			<iPopDestroys>-1</iPopDestroys>
+			<iCultureDistance>6</iCultureDistance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_BADLAND</TerrainType>
@@ -1970,6 +1981,7 @@
 			<Description>TXT_KEY_FEATURE_VERY_TALL_GRASS</Description>
 			<Civilopedia>TXT_KEY_FEATURE_VERY_TALL_GRASS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_VERY_TALL_GRASS</ArtDefineTag>
+			<iSeeThrough>1</iSeeThrough>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
@@ -2104,6 +2116,7 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
@@ -2187,7 +2200,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
-			<iCultureDistance>1</iCultureDistance>
+			<iCultureDistance>1</iCultureDistance> <!-- Is added to TerrainInfo value of 'Peak'-->
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2210,6 +2223,7 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
 			<TerrainBooleans>
@@ -2293,7 +2307,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
-			<iCultureDistance>1</iCultureDistance>
+			<iCultureDistance>1</iCultureDistance> <!-- Is added to TerrainInfo value of 'Peak'-->
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4278,6 +4292,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
+			<iCultureDistance>2</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4302,6 +4317,7 @@
 			</YieldChanges>
 			<iMovement>2</iMovement>
 			<iTurnDamage>5</iTurnDamage>
+			<iAppearance>-1</iAppearance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -4324,6 +4340,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
+			<iCultureDistance>1</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4347,6 +4364,7 @@
 				<iYieldChange>4</iYieldChange>
 			</YieldChanges>
 			<iMovement>1</iMovement>
+			<iAppearance>-1</iAppearance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -4514,6 +4532,8 @@
 			<iMovement>1</iMovement>
 			<iAppearance>400</iAppearance>
 			<iGrowth>15</iGrowth>
+			<iCultureDistance>1</iCultureDistance>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -4627,6 +4647,8 @@
 			<iMovement>1</iMovement>
 			<iAppearance>400</iAppearance>
 			<iGrowth>15</iGrowth>
+			<iCultureDistance>1</iCultureDistance>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -4760,6 +4782,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
+			<iCultureDistance>2</iCultureDistance>
 			<FootstepSounds>
 				<FootstepSound>
 					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
@@ -4901,6 +4924,7 @@
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iTurnDamage>10</iTurnDamage>
+			<iAppearance>-1</iAppearance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -4923,6 +4947,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
+			<iCultureDistance>1</iCultureDistance>
 			<FootstepSounds>
 				<FootstepSound>
 					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
@@ -5063,6 +5088,7 @@
 			</YieldChanges>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
+			<iAppearance>-1</iAppearance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -5211,430 +5237,6 @@
 					<FootstepAudioScript>AS3D_UN_TREBUCHET_STOP</FootstepAudioScript>
 				</FootstepSound>
 			</FootstepSounds>
-		</FeatureInfo>
-		<!-- Storm -->
-		<FeatureInfo>
-			<Type>FEATURE_STORM</Type>
-			<Description>TXT_KEY_FEATURE_STORM</Description>
-			<Civilopedia>TXT_KEY_FEATURE_STORM_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_STORM</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>-1</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>-1</iYieldChange>
-			</YieldChanges>
-			<iMovement>2</iMovement>
-			<iHealthPercent>-50</iHealthPercent>
-			<iDefense>-25</iDefense>
-			<iDisappearance>3000</iDisappearance>
-			<iGrowth>30</iGrowth>
-			<iSpread>30</iSpread>
-			<iTurnDamage>20</iTurnDamage>
-			<iPopDestroys>-1</iPopDestroys>
-			<bCanGrowAnywhere>1</bCanGrowAnywhere>
-			<TerrainBooleans>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_BARREN</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_COAST</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LAKE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_JAGGED</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TAIGA</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TRENCH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TUNDRA</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-			</TerrainBooleans>
-			<FootstepSounds>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_FOOT_UNIT_SAND</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN_LOW</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_FOOT_UNIT_LOW_SAND</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ANIMAL_FOOT_LARGE_SAND</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL_LOW</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ANIMAL_FOOT_LARGE_LOW_SAND</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HORSE</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_HORSE_RUN</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_CHARIOT_LOOP</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_CHARIOT_END</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_WAR_CHARIOT_LOOP</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_WAR_CHARIOT_END</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_TANK_LOOP</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_TANK_END</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_MOD_ARMOUR_LOOP</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_MOD_ARMOUR_END</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_OCEAN1</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_OCEAN_LOOP1</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_OCEAN1</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_OCEAN_END1</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_OCEAN2</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_OCEAN_LOOP1</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_OCEAN2</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_OCEAN_END2</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_DESTOYER</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_DESTROYER_RUN_LOOP</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_DESTROYER</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_DESTROYER_RUN_END</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_IRONCLAD</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_IRONCLAD_RUN_LOOP</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_IRONCLAD</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_IRONCLAD_RUN_END</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_TRANSPORT</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_TRANSPORT_RUN_LOOP</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_TRANSPORT</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_TRANSPORT_RUN_END</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_SUBMARINE</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_SUBMARINE_RUN_LOOP</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_SUBMARINE</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_SUBMARINE_RUN_END</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_GUNSHIP</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_GUNSHIP_RUN_LOOP</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_GUNSHIP</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_GUNSHIP_RUN_END</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ARTILLERY_RUN_LOOP</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ARTILLERY_RUN_END</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_TREBUCHET_RUN</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_TREBUCHET_STOP</FootstepAudioScript>
-				</FootstepSound>
-			</FootstepSounds>
-			<GrowthSound>AS2D_STORM_GROWTH</GrowthSound>
-			<WorldSoundscapeAudioScript>ASSS_COAST_SELECT_AMB</WorldSoundscapeAudioScript>
-		</FeatureInfo>
-		<!-- Tornado -->
-		<FeatureInfo>
-			<Type>FEATURE_TORNADO</Type>
-			<Description>TXT_KEY_FEATURE_TORNADO</Description>
-			<Civilopedia>TXT_KEY_FEATURE_TORNADO_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_TORNADO</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>-3</iYieldChange>
-				<iYieldChange>-3</iYieldChange>
-				<iYieldChange>-3</iYieldChange>
-			</YieldChanges>
-			<iMovement>2</iMovement>
-			<iSeeThrough>1</iSeeThrough>
-			<iDisappearance>16000</iDisappearance> <!-- 10000-80000 means that there's a 100% chance for the feature to disappear every turn on Normal-Eternity GS.-->
-			<iTurnDamage>50</iTurnDamage>
-			<bNoCity>1</bNoCity>
-			<bNoImprovement>1</bNoImprovement>
-			<TerrainBooleans>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_BARREN</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_DUNES</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_BADLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_JAGGED</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TAIGA</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TUNDRA</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_COAST</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TRENCH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LAKE_SHORE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LAKE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-			</TerrainBooleans>
-			<WorldSoundscapeAudioScript>ASSS_AFTERWORLD_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
 		<!-- Cave -->
 		<FeatureInfo>
@@ -6146,8 +5748,10 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -6171,6 +5775,8 @@
 			<iTurnDamage>15</iTurnDamage>
 			<bNoCity>1</bNoCity>
 			<bNukeImmune>1</bNukeImmune>
+			<iCultureDistance>2</iCultureDistance>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
@@ -6202,8 +5808,11 @@
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iTurnDamage>5</iTurnDamage>
+			<iAppearance>-1</iAppearance>
 			<bNoCity>1</bNoCity>
 			<bNukeImmune>1</bNukeImmune>
+			<iCultureDistance>1</iCultureDistance>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
@@ -6234,6 +5843,7 @@
 			</YieldChanges>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
+			<iAppearance>-1</iAppearance>
 			<bNoCity>1</bNoCity>
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
@@ -6263,8 +5873,10 @@
 			<iSeeThrough>1</iSeeThrough>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -6294,8 +5906,10 @@
 			<iSeeThrough>1</iSeeThrough>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -6333,7 +5947,9 @@
 			<ArtDefineTag>ART_DEF_FEATURE_AURORA</ArtDefineTag>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -6363,7 +5979,9 @@
 			<bAddsFreshWater>1</bAddsFreshWater>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -6389,7 +6007,9 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_SCRUB</TerrainType>
@@ -6417,7 +6037,9 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
@@ -6444,7 +6066,9 @@
 			<iDefense>25</iDefense>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_PLAINS</TerrainType>
@@ -6471,8 +6095,10 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -6512,15 +6138,17 @@
 			<iSeeThrough>1</iSeeThrough>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<TerrainType>TERRAIN_COAST</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -6554,7 +6182,9 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_PLAINS</TerrainType>
@@ -6580,7 +6210,9 @@
 			<iSeeThrough>1</iSeeThrough>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
@@ -6600,7 +6232,9 @@
 			<bAddsFreshWater>1</bAddsFreshWater>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -6628,7 +6262,9 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_PLAINS</TerrainType>
@@ -6655,7 +6291,9 @@
 			<iDefense>25</iDefense>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -6677,8 +6315,10 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -6700,8 +6340,10 @@
 			<bNoCoast>1</bNoCoast>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -6729,7 +6371,9 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -6754,7 +6398,9 @@
 			<bAddsFreshWater>1</bAddsFreshWater>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_LUSH</TerrainType>
@@ -6780,8 +6426,10 @@
 			<iSeeThrough>1</iSeeThrough>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
 			<bCountsAsPeak>1</bCountsAsPeak>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_SCRUB</TerrainType>
@@ -6801,7 +6449,9 @@
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
+			<bNoBonus>1</bNoBonus>
 			<bNukeImmune>1</bNukeImmune>
+			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>

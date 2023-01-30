@@ -9,8 +9,7 @@
 
 #define USE_HASHMAP_FREELIST
 
-#define FLTA_ID_SHIFT				(13)
-#define FLTA_MAX_BUCKETS		(1 << FLTA_ID_SHIFT)
+#define FLTA_MAX_BUCKETS		(1 << 13)
 #define FLTA_INDEX_MASK			(FLTA_MAX_BUCKETS - 1)
 #define FLTA_ID_MASK				(~(FLTA_INDEX_MASK))
 #define FLTA_GROWTH_FACTOR	(2)
@@ -52,8 +51,8 @@ public:
 		int m_idx;
 		T* m_value;
 	};
-public:
 
+public:
 	FFreeListTrashArray();
 	~FFreeListTrashArray();
 
@@ -77,6 +76,9 @@ public:
 
 	iterator begin() const { return iterator(this); }
 	iterator end() const { return iterator(); }
+
+	typedef bst::iterator_range<iterator> Range_t;
+	Range_t range() const { return Range_t(begin(), end()); }
 
 	// Returns the iIndex after the last iIndex in the array containing an element
 	int getIndexAfterLast() const { return m_iLastIndex + 1; }
@@ -289,24 +291,21 @@ T* FFreeListTrashArray<T>::prevIter(int* pIterIdx) const
 template <class T>
 T* FFreeListTrashArray<T>::add()
 {
-	int iIndex;
-
 	if (m_pArray == NULL)
 	{
 		init();
 	}
 	FAssertMsg(m_pArray != NULL, "Array is null after initialization");
 
-	if ((m_iLastIndex == m_iNumSlots - 1) &&
-		(m_iFreeListCount == 0))
+	if (m_iLastIndex == m_iNumSlots - 1 && m_iFreeListCount == 0)
 	{
-		if ((m_iNumSlots * FLTA_GROWTH_FACTOR) > FLTA_MAX_BUCKETS)
+		if (m_iNumSlots * FLTA_GROWTH_FACTOR > FLTA_MAX_BUCKETS)
 		{
 			return NULL;
 		}
-
 		growArray();
 	}
+	int iIndex;
 
 	if (m_iFreeListCount > 0)
 	{
@@ -389,12 +388,11 @@ T* FFreeListTrashArray<T>::getAt(int iID) const
 		return NULL;
 	}
 
-	int iIndex = (iID & FLTA_INDEX_MASK);
+	const int iIndex = (iID & FLTA_INDEX_MASK);
 
-	FASSERT_NOT_NEGATIVE(iIndex)
+	FASSERT_NOT_NEGATIVE(iIndex);
 
-	if ((iIndex <= m_iLastIndex) &&
-		(m_pArray[iIndex].pData != NULL))
+	if ((iIndex <= m_iLastIndex) && (m_pArray[iIndex].pData != NULL))
 	{
 		if (((iID & FLTA_ID_MASK) == 0) || (m_pArray[iIndex].pData->getID() == iID))
 		{
@@ -509,7 +507,6 @@ void FFreeListTrashArray<T>::load(T* pData)
 template <class T>
 void FFreeListTrashArray<T>::growArray()
 {
-
 	FAssertMsg(m_pArray != NULL, "FFreeListTrashArray::growArray - not initialized");
 
 	FFreeListTrashArrayNode* pOldArray = m_pArray;

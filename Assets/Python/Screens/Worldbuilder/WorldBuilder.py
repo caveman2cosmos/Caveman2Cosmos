@@ -5,7 +5,6 @@ import WBEventScreen
 import WBCityEditScreen
 import WBCityDataScreen
 import WBBuildingScreen
-import WBUnitScreen
 import WBPromotionScreen
 import WBReligionScreen
 import WBCorporationScreen
@@ -50,8 +49,6 @@ class WorldBuilder:
 		self.bSensibility = True
 		self.lMoveUnit = []
 		self.iMoveCity = -1
-		self.iTargetPlotX = -1
-		self.iTargetPlotY = -1
 
 		# Initialize WB
 		if self.bNotWB:
@@ -65,9 +62,11 @@ class WorldBuilder:
 			self.inSubScreen = None
 			import WBTechScreen
 			import WBGameDataScreen
+			import WBUnitScreen
 			self.subScreens = {
 				"TechScreen" : WBTechScreen.WBTechScreen(self),
-				"GameScreen" : WBGameDataScreen.WBGameDataScreen(self)
+				"GameScreen" : WBGameDataScreen.WBGameDataScreen(self),
+				"UnitScreen" : WBUnitScreen.WBUnitScreen(self)
 			}
 			self.iPlayerAddMode = "Units"
 			self.iSelection = -1
@@ -908,7 +907,7 @@ class WorldBuilder:
 			sWonder = CyTranslator().getText("TXT_KEY_CONCEPT_WONDERS", ())
 			screen.addDropDownBoxGFC("WBSelectClass", 0, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_WB_CITY_ALL",()), 0, 0, 0 == self.iSelectClass)
-			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING",()), 1, 1, 1 == self.iSelectClass)
+			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_WB_BUILDINGS",()), 1, 1, 1 == self.iSelectClass)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_PEDIA_NATIONAL_WONDER", ()), 2, 2, 2 == self.iSelectClass)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_PEDIA_TEAM_WONDER", ()), 3, 3, 3 == self.iSelectClass)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_PEDIA_WORLD_WONDER", ()), 4, 4, 4 == self.iSelectClass)
@@ -989,10 +988,8 @@ class WorldBuilder:
 		elif self.iPlayerAddMode == "Bonus":
 			iY = 25
 			lItems = []
-			for i in xrange(GC.getNumBonusInfos()):
-				CvBonusInfo = GC.getBonusInfo(i)
-				if CvBonusInfo.getPlacementOrder() > -1:
-					lItems.append([CvBonusInfo.getDescription(), i])
+			for i in xrange(GC.getNumMapBonuses()):
+				lItems.append([GC.getBonusInfo(GC.getMapBonus(i)).getDescription(), i])
 			lItems.sort()
 
 			iHeight = min(len(lItems) * 24 + 2, self.yRes - iY)
@@ -1125,10 +1122,10 @@ class WorldBuilder:
 			if bReveal or (not pPlot.isVisible(self.m_iCurrentTeam, False)):
 				pPlot.setRevealed(self.m_iCurrentTeam, bReveal, False, -1)
 		elif bReveal:
-			if pPlot.isInvisibleVisible(self.m_iCurrentTeam, iType): return
+			if pPlot.isSpotterInSight(self.m_iCurrentTeam, iType): return
 			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, 1)
 		else:
-			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, - pPlot.getInvisibleVisibilityCount(self.m_iCurrentTeam, iType))
+			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, -pPlot.getInvisibleVisibilityCount(self.m_iCurrentTeam, iType))
 
 	def showRevealed(self, pPlot):
 		if self.iPlayerAddMode == "RevealPlot":
@@ -1142,7 +1139,7 @@ class WorldBuilder:
 				CyEngine().fillAreaBorderPlotAlt(pPlot.getX(), pPlot.getY(), AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS, "COLOR_BLUE", 1.0)
 		elif self.iPlayerAddMode == "Blockade":
 			if pPlot.isTradeNetwork(self.m_iCurrentTeam): return
-			if GC.getTeam(self.m_iCurrentTeam).isAtWar(pPlot.getTeam()): return
+			if GC.getTeam(self.m_iCurrentTeam).isAtWarWith(pPlot.getTeam()): return
 			if pPlot.isTradeNetworkImpassable(self.m_iCurrentTeam): return
 			if not pPlot.isOwned() and not pPlot.isRevealed(self.m_iCurrentTeam, False): return
 			if not pPlot.isBonusNetwork(self.m_iCurrentTeam): return
@@ -1165,7 +1162,7 @@ class WorldBuilder:
 
 		if bAlt or self.iPlayerAddMode == "EditUnit":
 			if self.m_pCurrentPlot.getNumUnits():
-				WBUnitScreen.WBUnitScreen(self).interfaceScreen(self.m_pCurrentPlot.getUnit(0))
+				self.goToSubScreen("UnitScreen", [self.m_pCurrentPlot.getUnit(0)])
 		elif self.iPlayerAddMode == "Promotions":
 			if self.m_pCurrentPlot.getNumUnits():
 				WBPromotionScreen.WBPromotionScreen(self).interfaceScreen(self.m_pCurrentPlot.getUnit(0))
@@ -1189,17 +1186,15 @@ class WorldBuilder:
 			pPlayer.setStartingPlot(self.m_pCurrentPlot, True)
 			self.refreshStartingPlots()
 		elif self.iPlayerAddMode == "TargetPlot":
-			self.iTargetPlotX = self.m_pCurrentPlot.getX()
-			self.iTargetPlotY = self.m_pCurrentPlot.getY()
 			self.iPlayerAddMode = "EditUnit"
 			if len(self.TempInfo) >= 2:
 				pPlayerX = GC.getPlayer(self.TempInfo[0])
 				if pPlayerX:
 					pUnitX = pPlayerX.getUnit(self.TempInfo[1])
 					if pUnitX:
-						WBUnitScreen.WBUnitScreen(self).interfaceScreen(pUnitX)
+						self.goToSubScreen("UnitScreen", [pUnitX])
 		elif self.iPlayerAddMode == "MoveUnits":
-			if len(self.lMoveUnit) > 0:
+			if self.lMoveUnit:
 				for item in self.lMoveUnit:
 					loopUnit = GC.getPlayer(item[0]).getUnit(item[1])
 					if loopUnit is None: continue
@@ -1207,7 +1202,7 @@ class WorldBuilder:
 				pUnitX = GC.getPlayer(self.lMoveUnit[0][0]).getUnit(self.lMoveUnit[0][1])
 				self.lMoveUnit = []
 				self.iPlayerAddMode = "EditUnit"
-				WBUnitScreen.WBUnitScreen(self).interfaceScreen(pUnitX)
+				self.goToSubScreen("UnitScreen", [pUnitX])
 		elif self.iPlayerAddMode == "MoveCity" or self.iPlayerAddMode == "MoveCityPlus":
 			if self.m_pCurrentPlot.isCity(): return
 			pOldCity = pPlayer.getCity(self.iMoveCity)
@@ -1241,7 +1236,7 @@ class WorldBuilder:
 						pNewUnit = pPlayer.initUnit(loopUnit.getUnitType(), self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 						pNewUnit.setName(loopUnit.getNameNoDesc())
 						pNewUnit.setLevel(loopUnit.getLevel())
-						pNewUnit.setExperience(loopUnit.getExperience(), -1)
+						pNewUnit.setExperience(loopUnit.getExperience())
 						pNewUnit.setBaseCombatStr(loopUnit.baseCombatStr())
 						for iPromotion in xrange(GC.getNumPromotionInfos()):
 							pNewUnit.setHasPromotion(iPromotion, loopUnit.isHasPromotion(iPromotion))
@@ -1329,11 +1324,15 @@ class WorldBuilder:
 		pNewCity.setOverflowProduction(pOldCity.getOverflowProduction())
 		pNewCity.setPlundered(pOldCity.isPlundered())
 		pNewCity.setProduction(pOldCity.getProduction())
-		pNewCity.setProductionAutomated(pOldCity.isProductionAutomated())
 		pNewCity.setScriptData(pOldCity.getScriptData())
 		pNewCity.setWallOverride(pOldCity.isWallOverride())
 
-	def rightMouseDown (self):
+		if pOldCity.isProductionAutomated():
+			# Can only be true for human player, it is false by default and false for all AI.
+			pNewCity.setProductionAutomated(True)
+
+
+	def rightMouseDown(self):
 
 		if self.iPlayerAddMode in self.RevealMode:
 			if not self.m_pCurrentPlot.isNone():
@@ -1348,7 +1347,7 @@ class WorldBuilder:
 	def addComma(self, iValue):
 		sTemp = str(iValue)
 		sStart = ""
-		while len(sTemp) > 0:
+		while sTemp:
 			if sTemp[0].isdigit(): break
 			sStart += sTemp[0]
 			sTemp = sTemp[1:]
@@ -1358,16 +1357,19 @@ class WorldBuilder:
 			sEnd = sTemp[-3:] + "," + sEnd
 		return (sStart + sEnd)
 
-	def goToSubScreen(self, goTo):
+	def goToSubScreen(self, goTo, args = []):
 
 		if not self.inSubScreen is None:
 			self.inSubScreen.exit(self.getScreen())
 
 		if goTo in self.subScreens:
 			self.inSubScreen = self.subScreens[goTo]
-			self.inSubScreen.interfaceScreen()
-		else:
-			raise "WorldBuilder.goToScreen - invalid argument: goTo = '%s'" % goTo
+
+			if args: self.inSubScreen.interfaceScreen(args)
+			else: self.inSubScreen.interfaceScreen()
+
+		else: raise "WorldBuilder.goToScreen - invalid argument: goTo = '%s'" % goTo
+
 
 	def getScreen(self):
 		return CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
@@ -1378,6 +1380,9 @@ class WorldBuilder:
 	def update(self, fDelta):
 		if self.tooltip.bLockedTT:
 			self.tooltip.handle(self.getScreen())
+
+		if self.inSubScreen:
+			self.inSubScreen.update(fDelta)
 
 	def handleInput(self, inputClass):
 		screen = self.getScreen()

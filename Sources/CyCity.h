@@ -7,6 +7,7 @@
 // Python wrapper class for CvCity
 //
 
+#include "CityOutputHistory.h"
 class CvCity;
 //class CvProperties;
 class CyPlot;
@@ -33,6 +34,8 @@ public:
 	int getRevIndexAverage() const;
 	void setRevIndexAverage(int iNewValue);
 	void updateRevIndexAverage();
+
+	int getRevIndexDistanceMod() const;
 
 	int getRevolutionCounter() const;
 	void setRevolutionCounter(int iNewValue);
@@ -103,7 +106,6 @@ public:
 	int /*ArtStyleTypes*/ getArtStyleType() const;
 
 	bool hasTrait(int /*TraitTypes*/ iTrait) const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isHuman() const;
@@ -246,14 +248,14 @@ public:
 	void setOccupationTimer(int iNewValue);
 	void changeOccupationTimer(int iChange);
 	bool isNeverLost() const;
-	void setNeverLost(int iNewValue);
+	void setNeverLost(bool bNewValue);
 
 	bool isBombarded() const;
-	void setBombarded(int iNewValue);
+	void setBombarded(bool bNewValue);
 	bool isDrafted() const;
-	void setDrafted(int iNewValue);
+	void setDrafted(bool bNewValue);
 	bool isAirliftTargeted() const;
-	void setAirliftTargeted(int iNewValue);
+	void setAirliftTargeted(bool bNewValue);
 	bool isCitizensAutomated() const;
 	void setCitizensAutomated(bool bNewValue);
 	bool isProductionAutomated() const;
@@ -269,7 +271,6 @@ public:
 	void setOriginalOwner(int /*PlayerTypes*/ iPlayer);
 	int /*CultureLevelTypes*/ getCultureLevel() const;
 	int getCultureThreshold() const;
-	int getSeaPlotYield(int /*YieldTypes*/ eIndex) const;
 
 	int getPlotYield(int /*YieldTypes*/ eIndex) const;
 
@@ -318,7 +319,7 @@ public:
 	int getNumPopulationEmployed() const;
 
 	int getBonusCommercePercentChanges(int eIndex, int eBuilding) const;
-	int getBuildingCommerceTechChange(int eIndex, int eBuilding) const;
+	int getBaseYieldRateFromBuilding100(int iYield, int iBuilding) const;
 
 	bool isAutomatedCanBuild(int /*BuildTypes*/ eIndex) const;
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);
@@ -423,6 +424,7 @@ public:
 	int AI_cityValue() const;
 
 	CvProperties* getProperties() const;
+	const CityOutputHistory* getCityOutputHistory() const;
 
 	bool getBuildingListFilterActive(int /*BuildingFilterTypes*/ eFilter);
 	void setBuildingListFilterActive(int /*BuildingFilterTypes*/ eFilter, bool bActive);
@@ -449,6 +451,9 @@ public:
 
 	std::string getScriptData() const;
 	void setScriptData(std::string szNewValue);
+
+	int AI_bestUnit() const;
+	int AI_bestUnitAI(UnitAITypes eUnitAITypes) const;
 
 private:
 	CvCity* m_pCity;

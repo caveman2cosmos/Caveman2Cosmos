@@ -95,7 +95,7 @@ class PediaBonus:
 				aGOMBonusReqList.append([])
 			self.HF.getGOMReqs(CvBuildingInfo.getConstructCondition(), GOMTypes.GOM_BONUS, aGOMBonusReqList)
 			bValid = True
-			if CvBuildingInfo.getBonusHealthChanges(iTheBonus) or CvBuildingInfo.getBonusHappinessChanges(iTheBonus) or CvBuildingInfo.getBonusProductionModifier(iTheBonus):
+			if iTheBonus in CvBuildingInfo.getBonusHealthChanges() or iTheBonus in CvBuildingInfo.getBonusHappinessChanges() or CvBuildingInfo.getBonusProductionModifier(iTheBonus):
 				aAffectedBuildings.append(iBuilding)
 				bValid = False
 			if CvBuildingInfo.isAnyBonusYieldChanges() or CvBuildingInfo.isAnyVicinityBonusYieldChanges() or CvBuildingInfo.isAnyBonusYieldModifiers():
@@ -110,13 +110,8 @@ class PediaBonus:
 						if iBuilding not in aAffectedBuildings:
 							aAffectedBuildings.append(iBuilding)
 							bValid = False
-			if CvBuildingInfo.getFreeBonus() == iTheBonus:
+			if iTheBonus in CvBuildingInfo.getFreeBonuses():
 				aSourceOfBonus.append(iBuilding)
-			else:
-				for i in xrange(CvBuildingInfo.getNumExtraFreeBonuses()):
-					if (CvBuildingInfo.getExtraFreeBonus(i) == iTheBonus):
-						aSourceOfBonus.append(iBuilding)
-						break
 			if CvBuildingInfo.getPrereqVicinityBonus() == iTheBonus or CvBuildingInfo.getPrereqRawVicinityBonus() == iTheBonus:
 				aVicinityBuildings.append(iBuilding)
 			if iTheBonus in CvBuildingInfo.getPrereqOrVicinityBonuses():
@@ -209,23 +204,23 @@ class PediaBonus:
 				childPanelName = aName()
 				screen.attachPanel(panelName, childPanelName, "", "", True, True, ePanelEmpty)
 				screen.attachLabel(childPanelName, "", szfont4b + TRNSLTR.getText("TXT_KEY_PEDIA_BONUS_APPEARANCE_AND_TRADE", ()))
-				screen.attachImageButton(childPanelName, "", GC.getTechInfo(iRevealTech).getButton(), enumBS, eWidJuToTech, iRevealTech, 1, False)
+				screen.attachImageButton(childPanelName, "", GC.getTechInfo(iRevealTech).getButton(), enumBS, eWidJuToTech, iRevealTech, 2, False)
 			else:
 				if iRevealTech != -1:
 					childPanelName = aName()
 					screen.attachPanel(panelName, childPanelName, "", "", True, True, ePanelEmpty)
 					screen.attachLabel(childPanelName, "", szfont4b + TRNSLTR.getText("TXT_KEY_PEDIA_BONUS_APPEARANCE", ()))
-					screen.attachImageButton(childPanelName, "", GC.getTechInfo(iRevealTech).getButton(), enumBS, eWidJuToTech, iRevealTech, 1, False)
+					screen.attachImageButton(childPanelName, "", GC.getTechInfo(iRevealTech).getButton(), enumBS, eWidJuToTech, iRevealTech, 2, False)
 				if iEnableTech != -1:
 					childPanelName = aName()
 					screen.attachPanel(panelName, childPanelName, "", "", True, True, ePanelEmpty)
 					screen.attachLabel(childPanelName, "", szfont4b + TRNSLTR.getText("TXT_KEY_PEDIA_BONUS_TRADE", ()))
-					screen.attachImageButton(childPanelName, "", GC.getTechInfo(iEnableTech).getButton(), enumBS, eWidJuToTech, iEnableTech, 1, False)
+					screen.attachImageButton(childPanelName, "", GC.getTechInfo(iEnableTech).getButton(), enumBS, eWidJuToTech, iEnableTech, 2, False)
 			if iObsoleteTech != -1:
 				childPanelName = aName()
 				screen.attachPanel(panelName, childPanelName, "", "", True, True, ePanelEmpty)
 				screen.attachLabel(childPanelName, "", szfont4b + TRNSLTR.getText("TXT_KEY_PEDIA_BONUS_OBSOLETE", ()))
-				screen.attachImageButton(childPanelName, "", GC.getTechInfo(iObsoleteTech).getButton(), enumBS, eWidJuToTech, iObsoleteTech, 1, False)
+				screen.attachImageButton(childPanelName, "", GC.getTechInfo(iObsoleteTech).getButton(), enumBS, eWidJuToTech, iObsoleteTech, 2, False)
 		# Improvement
 		aImpList = []
 		if bMapBonus:

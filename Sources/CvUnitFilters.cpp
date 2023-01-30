@@ -10,6 +10,7 @@
 #include "CvCity.h"
 #include "CvGlobals.h"
 #include "CvPlayerAI.h"
+#include "CvInfos.h"
 
 void UnitFilterBase::Activate()
 {
@@ -64,7 +65,7 @@ bool UnitFilterIsCombat::isFilteredUnit(const CvPlayer *pPlayer, const CvCity *p
 
 bool UnitFilterIsCombats::isFilteredUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const
 {
-	return algo::contains(m_eCombats, (UnitCombatTypes)GC.getUnitInfo(eUnit).getUnitCombatType());
+	return algo::any_of_equal(m_eCombats, (UnitCombatTypes)GC.getUnitInfo(eUnit).getUnitCombatType());
 }
 
 void UnitFilterIsCombats::addCombat(UnitCombatTypes eCombat)
@@ -156,7 +157,7 @@ void UnitFilterList::init()
 
 bool UnitFilterList::isFilterActive(UnitFilterTypes i) const
 {
-	FASSERT_BOUNDS(0, NUM_UNIT_FILTERS, i)
+	FASSERT_BOUNDS(0, NUM_UNIT_FILTERS, i);
 	return m_apUnitFilters[i]->isActive();
 }
 
@@ -172,7 +173,7 @@ void UnitFilterList::setPlayer(const CvPlayer *pPlayer)
 
 bool UnitFilterList::setFilterActive(UnitFilterTypes i, bool bActive)
 {
-	FASSERT_BOUNDS(0, NUM_UNIT_FILTERS, i)
+	FASSERT_BOUNDS(0, NUM_UNIT_FILTERS, i);
 	return m_apUnitFilters[i]->setActive(bActive);
 }
 

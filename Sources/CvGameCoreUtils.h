@@ -8,15 +8,11 @@
 #include "CvMap.h"
 #include "CvGlobals.h"
 
-class CvInfoBase;
-class CvInternalGlobals;
 class CvCity;
-//class CvMap;
 class CvPathGeneratorBase;
-class CvPlot;
+class CvRandom;
 class CvSelectionGroup;
 class CvUnit;
-class CvRandom;
 class FAStarNode;
 class FAStar;
 
@@ -200,7 +196,6 @@ CvPlot* plotCity(int iX, int iY, int iIndex);
 int plotCityXY(int iDX, int iDY);
 int plotCityXY(const CvCity* pCity, const CvPlot* pPlot);
 
-CardinalDirectionTypes getOppositeCardinalDirection(CardinalDirectionTypes eDir);
 DirectionTypes cardinalDirectionToDirection(CardinalDirectionTypes eCard);
 DllExport bool isCardinalDirection(DirectionTypes eDirection);
 DirectionTypes estimateDirection(int iDX, int iDY);
@@ -214,7 +209,6 @@ DllExport CvCity* getCity(IDInfo city);
 DllExport CvUnit* getUnit(IDInfo unit);
 
 bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit);
-bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader);
 
 int getTechScore(TechTypes eTech);
 int getWonderScore(BuildingTypes eWonder);
@@ -257,7 +251,7 @@ void setTradeItem(TradeData* pItem, TradeableItems eItemType, int64_t iData);
 
 bool isPlotEventTrigger(EventTriggerTypes eTrigger);
 
-TechTypes getDiscoveryTech(UnitTypes eUnit, PlayerTypes ePlayer);
+TechTypes getDiscoveryTech(const UnitTypes eUnit, const PlayerTypes ePlayer);
 
 void setListHelp(wchar_t* szBuffer, const wchar_t* szStart, const wchar_t* szItem, const wchar_t* szSeparator, bool bFirst);
 void setListHelp(CvWString& szBuffer, const wchar_t* szStart, const wchar_t* szItem, const wchar_t* szSeparator, bool bFirst);
@@ -293,7 +287,7 @@ bool PUF_canDefendPotentialEnemyAgainst(const CvUnit* pUnit, int iData1, int iDa
 bool PUF_canDefenselessPotentialEnemyAgainst(const CvUnit* pUnit, int iData1, int iData2, const CvUnit* pThis);
 bool PUF_canAirAttack( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_canAirDefend( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
-bool PUF_isFighting( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
+bool PUF_isInBattle( const CvUnit* pUnit, int iData1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isAnimal( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isMilitaryHappiness( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
 bool PUF_isInvestigate( const CvUnit* pUnit, int iData1 = -1, int iData2 = -1, const CvUnit* pThis = NULL);
@@ -365,10 +359,11 @@ bool NewPathTurnEndValidityCheckRequired(const CvSelectionGroup* pGroup, int iFl
 
 int baseYieldToSymbol(int iNumYieldTypes, int iYieldStack);
 
-bool isPickableName(const TCHAR* szName);
+bool isPickableName(const char* szName);
 
 DllExport int* shuffle(int iNum, CvRandom& rand);
 void shuffleArray(int* piShuffle, int iNum, CvRandom& rand);
+void shuffle(int* piShuffle, int iNum, CvRandom& rand);
 
 int getTurnMonthForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);
 int getTurnYearForGame(int iGameTurn, int iStartYear, CalendarTypes eCalendar, GameSpeedTypes eSpeed);
@@ -389,7 +384,7 @@ bool isAdjacentDirection(DirectionTypes eFacingDirection, DirectionTypes eOtherD
 //	Koshling - abstract treaty length from the define int to allow scaling
 int getTreatyLength();
 
-void AddDLLMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, LPCTSTR pszSound = NULL,
+void AddDLLMessage(PlayerTypes ePlayer, bool bForce, int iLength, CvWString szString, const char* pszSound = NULL,
 		InterfaceMessageTypes eType = MESSAGE_TYPE_INFO, LPCSTR pszIcon = NULL, ColorTypes eFlashColor = NO_COLOR,
 		int iFlashX = -1, int iFlashY = -1, bool bShowOffScreenArrows = false, bool bShowOnScreenArrows = false);
 
@@ -408,7 +403,7 @@ bool isMapCategory(const T1& source1, const T2& source2)
 	}
 	foreach_(const MapCategoryTypes eMapCategory, mapCategories1)
 	{
-		if (algo::contains(mapCategories2, eMapCategory))
+		if (algo::any_of_equal(mapCategories2, eMapCategory))
 			return true;
 	}
 	return false;

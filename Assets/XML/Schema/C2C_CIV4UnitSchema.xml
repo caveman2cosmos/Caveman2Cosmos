@@ -126,14 +126,12 @@
 	<ElementType name="EntityEvent" content="textOnly"/>
 	<ElementType name="iProduction" content="textOnly" dt:type="int"/>
 	<ElementType name="bRemove" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bCanRemoveWithNoProductionGain" content="textOnly" dt:type="boolean"/>
 	<ElementType name="FeatureStruct" content="eltOnly">
 		<element type="FeatureType"/>
 		<element type="PrereqTech"/>
 		<element type="iTime"/>
 		<element type="iProduction"/>
 		<element type="bRemove" minOccurs="0"/>
-		<element type="bCanRemoveWithNoProductionGain" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="FeatureStructs" content="eltOnly">
 		<element type="FeatureStruct" minOccurs="0" maxOccurs="*"/>
@@ -166,6 +164,7 @@
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
 		<element type="Help" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="PrereqTech" minOccurs="0"/>
 		<element type="iTime" minOccurs="0"/>
 		<element type="iCost" minOccurs="0"/>
@@ -199,7 +198,6 @@
 	<!--TB's Tags begin-->
 	<!--Textual References -->
 	<ElementType name="PromotionLine" content="textOnly"/>
-	<ElementType name="GenericCategory" content="textOnly"/>
 	<ElementType name="ReplacesUnitCombat" content="textOnly"/>
 	<ElementType name="DefaultStatusType" content="textOnly"/>
 	<!--Integers-->
@@ -362,6 +360,7 @@
 	<ElementType name="iDefenseOnlyChange" content="textOnly" dt:type="int"/>
 	<ElementType name="iNoInvisibilityChange" content="textOnly" dt:type="int"/>
 	<ElementType name="FontButtonIndex" content="textOnly" dt:type="int"/>
+	<ElementType name="bIntrinsic" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iTrapDamageMax" content="textOnly" dt:type="int"/>
 	<ElementType name="iTrapDamageMin" content="textOnly" dt:type="int"/>
 	<ElementType name="iTrapComplexity" content="textOnly" dt:type="int"/>
@@ -1633,12 +1632,9 @@
 	<ElementType name="DomainCargoChange" content="textOnly"/>
 	<ElementType name="SpecialCargoChange" content="textOnly"/>
 	<ElementType name="SpecialCargoPrereq" content="textOnly"/>
-	<ElementType name="SMSpecialCargoChange" content="textOnly"/>
-	<ElementType name="SMSpecialCargoPrereq" content="textOnly"/>
 	<ElementType name="SMNotSpecialCargoChange" content="textOnly"/>
 	<ElementType name="SMNotSpecialCargoPrereq" content="textOnly"/>
 	<ElementType name="bCargoPrereq" content="textOnly" dt:type="boolean"/>
-	<ElementType name="SMSpecialCargo" content="textOnly"/>
 	<ElementType name="SMNotSpecialCargo" content="textOnly"/>
 	<ElementType name="DomainCargo" content="textOnly"/>
 	<ElementType name="iCargo" content="textOnly" dt:type="int"/>
@@ -1804,6 +1800,7 @@
 		<element type="GroupSpawnUnitCombatTypes" minOccurs="0"/>
 		<!--TB SubCombat Mod end-->
 		<element type="Domain" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="DefaultUnitAI" minOccurs="0"/>
 		<element type="Invisible" minOccurs="0"/>
 		<element type="SeeInvisible" minOccurs="0"/>
@@ -2075,7 +2072,6 @@
 		<element type="iBombRate" minOccurs="0"/>
 		<element type="iBombardRate" minOccurs="0"/>
 		<element type="SpecialCargo" minOccurs="0"/>
-		<element type="SMSpecialCargo" minOccurs="0"/>
 		<element type="SMNotSpecialCargo" minOccurs="0"/>
 		<element type="DomainCargo" minOccurs="0"/>
 		<element type="iCargo" minOccurs="0"/>
@@ -2311,6 +2307,7 @@
 		<element type="MinEraType" minOccurs="0"/>
 		<element type="MaxEraType" minOccurs="0"/>
 		<element type="StateReligionPrereq" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="MapCategoryTypes" minOccurs="0"/>
 		<element type="bLeader" minOccurs="0"/>
 		<element type="bNoSelfHeal" minOccurs="0"/>
@@ -2533,8 +2530,6 @@
 		<element type="DomainCargoChange" minOccurs="0"/>
 		<element type="SpecialCargoChange" minOccurs="0"/>
 		<element type="SpecialCargoPrereq" minOccurs="0"/>
-		<element type="SMSpecialCargoChange" minOccurs="0"/>
-		<element type="SMSpecialCargoPrereq" minOccurs="0"/>
 		<element type="SMNotSpecialCargoPrereq" minOccurs="0"/>
 		<element type="bCargoPrereq" minOccurs="0"/>
 		<element type="iCargoChange" minOccurs="0"/>
@@ -2679,7 +2674,6 @@
 		<element type="EntityEventInfo" maxOccurs="*" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="Path" content="textOnly"/>
-	<ElementType name="Category" content="textOnly"/>
 	<ElementType name="Operator" content="textOnly"/>
 	<ElementType name="BaseID" content="textOnly" dt:type="int"/>
 	<ElementType name="SetIncrement" content="textOnly" dt:type="int"/>
@@ -2834,6 +2828,7 @@
 		<element type="PropertyType" minOccurs="0"/>
 		<element type="PrereqTech" minOccurs="0"/>
 		<element type="ObsoleteTech" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="iCommunicability" minOccurs="0"/>
 		<element type="iOutbreakModifier" minOccurs="0"/>
 		<element type="iOvercomeModifier" minOccurs="0"/>
@@ -2878,7 +2873,7 @@
 		<element type="AndDependencyTypes" minOccurs="0"/>
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
-		<element type="GenericCategory" minOccurs="0"/>
+		<element type="Categories" minOccurs="0"/>
 		<element type="KillOutcomes" minOccurs="0"/>
 		<element type="Actions" minOccurs="0"/>
 		<element type="ReligionType" minOccurs="0"/>
@@ -3113,8 +3108,13 @@
 		<element type="OrDependencyTypes" minOccurs="0"/>
 		<element type="Description" minOccurs="0"/>
 		<element type="FontButtonIndex" minOccurs="0"/>
+		<element type="bIntrinsic" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="Civ4InvisibleInfos" content="eltOnly">
 		<element type="InvisibleInfos" minOccurs="0"/>
 	</ElementType>
+	<ElementType name="Categories" content="eltOnly">
+		<element type="Category" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Category" content="textOnly"/>
 </Schema>

@@ -50,10 +50,6 @@ class PediaBuilding:
 		bNotCulture = self.main.SECTION[1] != TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_C2C_CULTURES", ())
 
 		eWidGen				= WidgetTypes.WIDGET_GENERAL
-		eWidJuToBonus		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BONUS
-		eWidJuToBuilding	= WidgetTypes.WIDGET_PEDIA_JUMP_TO_BUILDING
-		eWidJuToTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH
-		eWidJuToTerrain		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_TERRAIN
 		ePanelBlue50		= PanelStyles.PANEL_STYLE_BLUE50
 
 		enumGBS	= self.main.enumGBS
@@ -415,9 +411,7 @@ class PediaBuilding:
 			aList1.append(CvTheBuildingInfo.getPrereqInCityBuilding(j))
 
 		# Empire building requirements
-		for pair in CvTheBuildingInfo.getPrereqNumOfBuildings():
-			eBuildingX = pair.id
-			iPrereqNumOfBuilding = pair.value
+		for eBuildingX, iPrereqNumOfBuilding in CvTheBuildingInfo.getPrereqNumOfBuildings():
 			if iPrereqNumOfBuilding > 0:
 				if CyPlayer:
 					aList3.append((eBuildingX, CyPlayer.getBuildingPrereqBuilding(iTheBuilding, eBuildingX, 0)))
@@ -449,7 +443,7 @@ class PediaBuilding:
 			else:
 				bPlus = True
 			if aList3:
-				screen.attachLabel(panelName, "", szBracketL + szfont2b + "Own")
+				screen.attachLabel(panelName, "", szBracketL + szfont2b + TRNSLTR.getText("TXT_KEY_PEDIA_OWN", ()))
 				for i in range(len(aList3)):
 					iType, iAmount = aList3[i]
 					screen.attachLabel(panelName, "", szfont4b + " " + str(iAmount))
@@ -555,9 +549,8 @@ class PediaBuilding:
 			aList2 = []
 		# Improvement Req
 		szChild = PF + "IMP"
-		for i in range(GC.getNumImprovementInfos()):
-			if CvTheBuildingInfo.isPrereqOrImprovement(i):
-				aList2.append(i)
+		for iPrereqOrImprovement in CvTheBuildingInfo.getPrereqOrImprovements():
+			aList2.append(iPrereqOrImprovement)
 		if aList2:
 			if bPlus:
 				screen.attachLabel(panelName, "", szAnd)

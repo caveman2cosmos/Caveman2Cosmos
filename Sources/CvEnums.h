@@ -88,6 +88,7 @@ enum DirectionTypes
 	DIRECTION_WEST_MASK = 1 << DIRECTION_WEST,
 	DIRECTION_NORTHWEST_MASK = 1 << DIRECTION_NORTHWEST,
 };
+typedef fixed_enum_range<DirectionTypes, int, DIRECTION_NORTH, NUM_DIRECTION_TYPES> DirectionTypesRange;
 
 enum CardinalDirectionTypes
 {
@@ -100,6 +101,8 @@ enum CardinalDirectionTypes
 
 	NUM_CARDINALDIRECTION_TYPES
 };
+typedef fixed_enum_range<CardinalDirectionTypes, int, CARDINALDIRECTION_NORTH, NUM_CARDINALDIRECTION_TYPES> CardinalDirectionTypesRange;
+
 
 enum RotationTypes
 {
@@ -114,6 +117,8 @@ enum RotationTypes
 	ROTATE_180CW_MASK	= 1 << ROTATE_180CW,
 	ROTATE_270CW_MASK	= 1 << ROTATE_270CW,
 };
+typedef fixed_enum_range<RotationTypes, int, ROTATE_NONE, NUM_ROTATION_TYPES> RotationTypesRange;
+
 
 // camera wrap helper
 enum WrapDirection
@@ -206,6 +211,7 @@ enum AreaBorderLayers
 	AREA_BORDER_LAYER_HIGHLIGHT_PLOT,
 	AREA_BORDER_LAYER_BLOCKADING,
 	AREA_BORDER_LAYER_BLOCKADED,
+	AREA_BORDER_LAYER_COMMAND_FIELD,
 	NUM_AREA_BORDER_LAYERS
 };
 
@@ -403,7 +409,7 @@ enum WidgetTypes
 	WIDGET_LAUNCH_VICTORY,
 	WIDGET_CONVERT,
 	WIDGET_AUTOMATE_CITIZENS,
-	WIDGET_AUTOMATE_PRODUCTION,
+	WIDGET_UNUSED_32,
 	WIDGET_EMPHASIZE,
 	WIDGET_DIPLOMACY_RESPONSE,
 	WIDGET_GENERAL,
@@ -428,7 +434,7 @@ enum WidgetTypes
 	WIDGET_WB_REGENERATE_MAP,
 	WIDGET_TRADE_ITEM,
 	WIDGET_UNIT_MODEL,
-	WIDGET_FLAG,
+	WIDGET_UNUSED_57, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
 	WIDGET_POPUP_QUEUE,
 
 	//	This is meant for python buttons, it will call python functions for display and execution
@@ -440,7 +446,7 @@ enum WidgetTypes
 	WIDGET_HELP_RELIGION_CITY,
 	WIDGET_HELP_CORPORATION_CITY,
 	WIDGET_HELP_NATIONALITY,
-	WIDGET_UNUSED_40, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
+	WIDGET_UNUSED_65, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
 	WIDGET_HELP_HEALTH,
 	WIDGET_HELP_HAPPINESS,
 	WIDGET_HELP_POPULATION,
@@ -513,7 +519,7 @@ enum WidgetTypes
 	WIDGET_PEDIA_JUMP_TO_BONUS,
 	WIDGET_PEDIA_MAIN,
 	WIDGET_PEDIA_JUMP_TO_PROMOTION,
-	WIDGET_PEDIA_JUMP_TO_UNIT_COMBAT,
+	WIDGET_UNUSED_111, // Toffer - Rename/reuse as needed, cannot be deleted as the exe has hardcoded enum values for important widgets with higher values.
 	WIDGET_PEDIA_JUMP_TO_IMPROVEMENT,
 	WIDGET_PEDIA_JUMP_TO_CIVIC,
 	WIDGET_PEDIA_JUMP_TO_CIV,
@@ -619,22 +625,11 @@ enum ButtonPopupTypes
 	BUTTONPOPUP_FREE_COLONY,
 	BUTTONPOPUP_LAUNCH,
 	BUTTONPOPUP_FOUND_RELIGION,
-/************************************************************************************************/
-/* Afforess	                  Start		 09/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	//Castle Mod
 	BUTTONPOPUP_INVASION,
-	//AUA
 	BUTTONPOPUP_SELECT_UNIT,
 	BUTTONPOPUP_SELECT_DISCOVERY_TECH,
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	BUTTONPOPUP_GET_SAVE_FORMAT,	//	Koshling - user choose save format dialog
-
-	BUTTONPOPUP_MODIFIER_RECALCULATION,  // Ask user if he wants to recalculated modifiers when DLL or assets have changed
+	BUTTONPOPUP_GET_SAVE_FORMAT, // Koshling - user choose save format dialog
+	BUTTONPOPUP_MODIFIER_RECALCULATION, // Ask user if he wants to recalculated modifiers when DLL or assets have changed
 	BUTTONPOPUP_NAME_LIST,
 	BUTTONPOPUP_CHOOSE_TRAIT,
 	BUTTONPOPUP_CHOOSE_TRAIT_NEGATIVE,
@@ -795,7 +790,7 @@ enum GameOptionTypes
 	GAMEOPTION_LEAD_ANY_CIV, // This must always be the eight option as the exe has hardcoded it as such.
 	GAMEOPTION_UNITED_NATIONS,
 	GAMEOPTION_ADVANCED_DIPLOMACY,
-	GAMEOPTION_ADVANCED_ECONOMY,
+	GAMEOPTION_ADVANCED_ECONOMY, // @SAVEBREAK DELETE
 	GAMEOPTION_REALISTIC_CORPORATIONS,
 	GAMEOPTION_ADVANCED_ESPIONAGE,
 	GAMEOPTION_NO_CITY_RAZING,
@@ -826,7 +821,7 @@ enum GameOptionTypes
 	GAMEOPTION_PICK_RELIGION,
 	GAMEOPTION_LIMITED_RELIGIONS,
 	GAMEOPTION_INQUISITIONS,
-	GAMEOPTION_RELIGION_DECAY,
+	GAMEOPTION_RELIGION_DECAY, // @SAVEBREAK DELETE - Deprecated
 	GAMEOPTION_DIVINE_PROPHETS,
 	GAMEOPTION_RELIGIOUS_DISABLING,
 	GAMEOPTION_RANDOM_PERSONALITIES,
@@ -879,10 +874,9 @@ enum GameOptionTypes
 	GAMEOPTION_CHALLENGE_CUT_LOSERS,
 	GAMEOPTION_CHALLENGE_HIGH_TO_LOW,
 	GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY,
-	GAMEOPTION_ADVANCED_ROUTES
+	GAMEOPTION_ADVANCED_ROUTES,
+	GAMEOPTION_ALWAYS_RAZE_CITIES
 };
-
-#define NUM_GAMEOPTION_TYPES GC.getNumGameOptionInfos()
 
 enum MultiplayerOptionTypes
 {
@@ -1176,11 +1170,17 @@ enum TeamTypes
 {
 	NO_TEAM = -1,
 };
+typedef fixed_enum_range<TeamTypes, int, 0, MAX_TEAMS> TeamTypesRange;
+typedef fixed_enum_range<TeamTypes, int, 0, MAX_PC_TEAMS> TeamTypesPCRange;
+typedef fixed_enum_range<TeamTypes, int, NPC1_TEAM, MAX_TEAMS> TeamTypesNPCRange;
 
 enum PlayerTypes
 {
 	NO_PLAYER = -1,
 };
+typedef fixed_enum_range<PlayerTypes, int, 0, MAX_PLAYERS> PlayerTypesRange;
+typedef fixed_enum_range<PlayerTypes, int, 0, MAX_PC_PLAYERS> PlayerTypesPCRange;
+typedef fixed_enum_range<PlayerTypes, int, NPC1_PLAYER, MAX_PLAYERS> PlayerTypesNPCRange;
 
 enum TraitTypes
 {
@@ -1536,6 +1536,11 @@ enum InvisibleTypes
 	NO_INVISIBLE = -1,
 };
 
+enum CategoryTypes
+{
+	NO_CATEGORY = -1,
+};
+
 enum VoteSourceTypes
 {
 	NO_VOTESOURCE = -1,
@@ -1692,7 +1697,6 @@ enum MissionTypes
 	MISSION_ESPIONAGE_SLEEP,
 	MISSION_GREAT_COMMANDER,
 	MISSION_SHADOW,
-	MISSION_WAIT_FOR_TECH,
 
 	//ls612: City Goto in Viewports
 	MISSION_GOTO,
@@ -1706,8 +1710,6 @@ enum MissionTypes
 	MISSION_LAWYER_REMOVE_CORPORATIONS,
 	MISSION_JOIN_CITY_POPULATION,
 	MISSION_CURE,
-	MISSION_ESTABLISH,
-	MISSION_ESCAPE,
 	MISSION_BUILDUP,
 	MISSION_AUTO_BUILDUP,
 	MISSION_HEAL_BUILDUP,
@@ -3120,6 +3122,8 @@ enum GlobeLayerResourceOptionTypes
 	SHOW_RESOURCES_GROWTH,
 	SHOW_RESOURCES_PRODUCTION,
 	SHOW_RESOURCES_MISC,
+	SHOW_RESOURCES_UNCLAIMED,
+	SHOW_RESOURCES_CANCLAIM,
 
 	NUM_RESOURCE_OPTION_TYPES
 };
@@ -3233,6 +3237,7 @@ enum ModderGameOptionTypes
 	MODDERGAMEOPTION_BATTLEFIELD_PROMOTIONS,
 	MODDERGAMEOPTION_NO_STORMS,
 	MODDERGAMEOPTION_IMPROVED_XP,
+	MODDERGAMEOPTION_RELIGION_DECAY,
 	MODDERGAMEOPTION_MULTIPLE_RELIGION_SPREAD,
 	MODDERGAMEOPTION_TERRAIN_DAMAGE,
 	MODDERGAMEOPTION_STRATEGIC_EVENTS,
@@ -3367,117 +3372,34 @@ enum PropertyPropagatorTypes
 	NUM_PROPERTYPROPAGATORS
 };
 
-enum InfoClassTypes
-{
-	NO_INFO_CLASS = -1,
-
-	BUILDING_INFO,
-	UNIT_INFO,
-	BONUS_INFO,
-	PROJECT_INFO,
-	SPECIALIST_INFO,
-	IMPROVEMENT_INFO,
-	RELIGION_INFO,
-	PROMOTION_INFO,
-	CORPORATION_INFO,
-	TECH_INFO,
-	CIVIC_INFO,
-	VOTE_INFO,
-	VOTE_SOURCE_INFO,
-	SPECIAL_UNIT_INFO,
-	SPECIAL_BUILDING_INFO,
-	UPKEEP_INFO,
-	HURRY_INFO,
-	FEATURE_INFO,
-	CIVIC_OPTION_INFO,
-	BUILD_INFO,
-	TERRAIN_INFO,
-	ROUTE_INFO,
-	VICTORY_INFO,
-	LEADERHEAD_INFO,
-	CIVILIZATION_INFO,
-	GAME_OPTION_INFO,
-	MP_OPTION_INFO,
-	UNIT_AI_INFO,
-	EVENT_INFO,
-	EVENT_TRIGGER_INFO,
-	GAME_SPEED_INFO,
-	PROPERTy_INFO,
-	PROMOTION_LINE_INFO,
-	TRAIT_INFO,
-	INVISIBLE_INFO,
-	MAPCATEGORy_INFO,
-	IDEACLASS_INFO,
-	IDEA_INFO,
-	MISSION_INFO,
-	YIELD_INFO,
-	COMMERCE_INFO,
-	DOMAIN_INFO,
-	MAP_INFO,
-	CONCEPT_INFO,
-	NEW_CONCEPT_INFO,
-	CITY_TAB_INFO,
-	CALENDAR_INFO,
-	SEASON_INFO,
-	MONTH_INFO,
-	DENIAL_INFO,
-	ATTITUDE_INFO,
-	MEMORY_INFO,
-	INTERFACE_MODE_INFO,
-	WORLD_INFO,
-	CLIMATE_INFO,
-	SEA_LEVEL_INFO,
-	COLOR_INFO,
-	PLAYER_COLOR_INFO,
-	ADVISOR_INFO,
-	RIVER_INFO,
-	RIVER_MODEL_INFO,
-	WATER_PLANE_INFO,
-	TERRAIN_PLANE_INFO,
-	CAMERA_OVERLAY_INFO,
-	ANIMATION_PATH_INFO,
-	ANIMATION_CATEGORY_INFO,
-	ENTITY_EVENT_INFO,
-	EFFECT_INFO,
-	ATTACHABLE_INFO,
-	CAMERA_INFO,
-	UNIT_FORMATION_INFO,
-	LANDSCAPE_INFO,
-	BONUS_CLASS_INFO,
-	CURSOR_INFO,
-	THRONE_ROOM_INFO,
-	THRONE_ROOM_STYLE_INFO,
-	THRONE_ROOM_CAMERA_INFO,
-	SLIDE_SHOW_INFO,
-	SLIDE_SHOW_RANDOM_INFO,
-	WORLD_PICKER_INFO,
-	SPACE_SHIP_INFO,
-	SPAWN_INFO,
-	ROUTE_MODEL_INFO,
-	GOODY_INFO,
-	HANDICAP_INFO,
-	TURN_TIMER_INFO,
-	PROCESS_INFO,
-	ACTION_INFO,
-	CONTROL_INFOS,
-	COMMAND_INFO,
-	AUTOMATE_INFO,
-	DIPLOMACY_INFO,
-	ERA_INFO,
-	EMPHASIZE_INFO,
-	CULTURE_LEVEL_INFO,
-	FORCE_CONTROL_INFO,
-	PLAYER_OPTION_INFO,
-	GRAPHIC_OPTION_INFO,
-	ESPIONAGE_MISSION_INFO,
-	UNIT_ART_STYLE_TYPE_INFO,
-	MAIN_MENU_INFO,
-	OUTCOME_INFO,
-	UNIT_COMBAT_INFO,
-	MOD_LOAD_CONTROL_INFO,
-	HINT_INFO,
-
-	NUM_INFO_CLASSES
-};
+enum RiverModelTypes { };
+enum WaterPlaneTypes { };
+enum TerrainPlaneTypes { };
+enum UnitFormationTypes { };
+enum LandscapeTypes { };
+enum ThroneRoomTypes { };
+enum ThroneRoomStyleTypes { };
+enum SlideShowTypes { };
+enum SlideShowRandomTypes { };
+enum WorldPickerTypes { };
+enum SpaceShipTypes { };
+enum RouteModelTypes { };
+enum ActionTypes { };
+enum DiplomacyTypes { };
+enum MainMenuTypes { };
+enum ModLoadControlTypes { };
+enum HintTypes { };
+enum AssetArtTypes { };
+enum MiscArtTypes { };
+enum UnitArtTypes { };
+enum BuildingArtTypes { };
+enum CivilizationArtTypes { };
+enum LeaderHeadArtTypes { };
+enum BonusArtTypes { };
+enum ImprovementArtTypes { };
+enum TerrainArtTypes { };
+enum FeatureArtTypes { };
+enum MovieArtTypes { };
+enum InterfaceArtTypes { };
 
 #endif	// CVENUMS_h

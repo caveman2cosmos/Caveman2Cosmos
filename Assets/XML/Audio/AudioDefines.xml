@@ -4481,13 +4481,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_GOODY_SETTLER</SoundID>
-			<Filename>Sounds/Ambient/GoodySettler</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_GOODY_WARRIOR</SoundID>
 			<Filename>Sounds/Ambient/GoodyWarrior</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -12246,55 +12239,6 @@
 		<SoundData>
 			<SoundID>SND_BUILD_WTC</SoundID>
 			<Filename>Sounds/RoMModularWonders/Soundpack/wtc</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_FEMALE_SELECTION</SoundID>
-			<Filename>Sounds/Units/Female_Unit_SoundPack/Female_Selection</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_FEMALE_ACTION</SoundID>
-			<Filename>Sounds/Units/Female_Unit_SoundPack/Female_Action</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_AMAZON_SELECTION</SoundID>
-			<Filename>Sounds/Units/Female_Unit_SoundPack/Amazon_Selection</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_AMAZON_ACTION</SoundID>
-			<Filename>Sounds/Units/Female_Unit_SoundPack/Amazon_Action</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_FEMWARLORD_COMMAND</SoundID>
-			<Filename>Sounds/Units/Female_Unit_SoundPack/FemWarlord_Command</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_FEMALE_MISSIONARY_SELECTION</SoundID>
-			<Filename>Sounds/Units/Female_Unit_SoundPack/Female_Missionary_Selection</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
-			<SoundID>SND_FEMALE_MISSIONARY_ACTION</SoundID>
-			<Filename>Sounds/Units/Female_Unit_SoundPack/Female_Missionary_Action</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>

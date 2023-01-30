@@ -32,6 +32,7 @@ public:
 	std::wstring getBuildingHelp(int iBuilding, bool bActual, CyCity* pCity, bool bCivilopediaText, bool bStrategyText, bool bTechChooserText);
 	std::wstring getProjectHelp(int iProject, bool bCivilopediaText, CyCity* pCity);
 	std::wstring getPromotionHelp(int iPromotion, bool bCivilopediaText);
+	std::wstring getUnitCombatHelp(int iUnitCombat, bool bCivilopediaText);
 	std::wstring getTraitHelp(int iTrait);
 	std::wstring getBonusHelp(int iBonus, bool bCivilopediaText);
 	std::wstring getProductionHelpCity(CyCity* pCity);
@@ -59,6 +60,7 @@ public:
 	std::wstring getDealString(CyDeal* pDeal, int iPlayerPerspective);
 	std::wstring getFinanceUnitUpkeepString(int iPlayer);
 	std::wstring getDefenseHelp(CyCity* pCity);
+	std::wstring getFlagHelp();
 
 protected:
 	CvGameTextMgr* m_pGameTextMgr;

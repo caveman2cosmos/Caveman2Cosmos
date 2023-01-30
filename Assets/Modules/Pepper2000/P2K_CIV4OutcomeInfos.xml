@@ -70,24 +70,6 @@
 			<bCity>0</bCity>
 		</OutcomeInfo>
 		<OutcomeInfo>
-			<Type>OUTCOME_UPGRADE_SS2</Type>
-			<Description>TXT_KEY_OUTCOME_UPGRADE_SS2</Description>
-			<Message>TXT_KEY_OUTCOME_UPGRADE_SS2_MESSAGE</Message>
-			<PrereqTech>TECH_SPACE_TOURISM</PrereqTech>
-			<bNeutralTerritory>1</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>0</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_UPGRADE_SS3</Type>
-			<Description>TXT_KEY_OUTCOME_UPGRADE_SS3</Description>
-			<Message>TXT_KEY_OUTCOME_UPGRADE_SS3_MESSAGE</Message>
-			<PrereqTech>TECH_ASTEROID_MINING</PrereqTech>
-			<bNeutralTerritory>1</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>0</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_INNER_SOLAR_SYSTEM</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_INNER_SOLAR_SYSTEM</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_INNER_SOLAR_SYSTEM_MESSAGE</Message>
@@ -232,33 +214,6 @@
 			<bCity>0</bCity>
 		</OutcomeInfo>
 		<OutcomeInfo>
-			<Type>OUTCOME_UPGRADE_CISLUNAR_SETTLER</Type>
-			<Description>TXT_KEY_OUTCOME_UPGRADE_CISLUNAR_SETTLER</Description>
-			<Message>TXT_KEY_OUTCOME_UPGRADE_CISLUNAR_SETTLER_MESSAGE</Message>
-			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<bNeutralTerritory>1</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>0</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_UPGRADE_LUNAR_SETTLER</Type>
-			<Description>TXT_KEY_OUTCOME_UPGRADE_LUNAR_SETTLER</Description>
-			<Message>TXT_KEY_OUTCOME_UPGRADE_LUNAR_SETTLER_MESSAGE</Message>
-			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<bNeutralTerritory>1</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>0</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_UPGRADE_PLANET_SETTLER</Type>
-			<Description>TXT_KEY_OUTCOME_UPGRADE_PLANET_SETTLER</Description>
-			<Message>TXT_KEY_OUTCOME_UPGRADE_PLANET_SETTLER_MESSAGE</Message>
-			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
-			<bNeutralTerritory>1</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>0</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
 			<Type>OUTCOME_EXPLORE_PLANET</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_PLANET</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_PLANET_MESSAGE</Message>
@@ -309,15 +264,6 @@
 			<Message>TXT_KEY_OUTCOME_CAPTURE_ASTEROID_MESSAGE</Message>
 			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
 			<bNeutralTerritory>1</bNeutralTerritory>
-			<bHostileTerritory>0</bHostileTerritory>
-			<bCity>0</bCity>
-		</OutcomeInfo>
-		<OutcomeInfo>
-			<Type>OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER</Type>
-			<Description>TXT_KEY_OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER</Description>
-			<Message>TXT_KEY_OUTCOME_UPGRADE_TO_LUNAR_BULLDOZER_MESSAGE</Message>
-			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
-			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>

@@ -1,5 +1,12 @@
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
+#include "CvGameAI.h"
+#include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvMap.h"
 #include "CvPlot.h"
 #include "CvPython.h"
 #include "CvUnit.h"
@@ -18,9 +25,9 @@ CvViewport::CvViewport(CvMap* pMap)
 	, m_bSelectCity(false)
 	, m_bAddSelectedCity(false)
 	, m_state(VIEWPORT_ACTION_STATE_NONE)
-	, m_countdown(0)
+//	, m_countdown(0)
 	, m_eSpoofHiddenGraphics(VIEWPORT_SPOOF_NONE)
-	, m_spoofTransitionStartTickCount(-1)
+	, m_spoofTransitionStartTickCount(0)
 {
 	resizeForMap();
 
@@ -86,10 +93,12 @@ void CvViewport::resizeForMap()
 	}
 }
 
-void CvViewport::bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity)
+void CvViewport::bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity)
 {
 	m_pLookatPlot = m_pMap->plot(iX, iY);
-	if ( pSelectionUnit != NULL && !pSelectionUnit->isDead() && !pSelectionUnit->isDelayedDeath() )
+	//OutputDebugString(CvString::format("bringIntoView: x=%d, y=%d\n", iX, iY).c_str());
+
+	if (pSelectionUnit != NULL && !pSelectionUnit->isDead())
 	{
 		m_preservedHeadSelectedUnitId = pSelectionUnit->getIDInfo();
 	}
@@ -117,7 +126,7 @@ void CvViewport::centerOnSelection()
 
 	if ( pUnit != NULL )
 	{
-		bringIntoView( pUnit->getX(), pUnit->getY(), pUnit, true, true);
+		bringIntoView( pUnit->getX(), pUnit->getY(), pUnit, true);
 	}
 }
 
@@ -137,7 +146,7 @@ void CvViewport::panLeft()
 		}
 	}
 
-	bringIntoView(iNewCenterX, m_iYOffset + m_iYSize/2, NULL, true, true);
+	bringIntoView(iNewCenterX, m_iYOffset + m_iYSize/2, NULL, true);
 }
 
 void CvViewport::panRight()
@@ -156,7 +165,7 @@ void CvViewport::panRight()
 		}
 	}
 
-	bringIntoView(iNewCenterX, m_iYOffset + m_iYSize/2, NULL, true, true);
+	bringIntoView(iNewCenterX, m_iYOffset + m_iYSize/2, NULL, true);
 }
 
 void CvViewport::panDown()
@@ -175,7 +184,7 @@ void CvViewport::panDown()
 		}
 	}
 
-	bringIntoView(m_iXOffset + m_iXSize/2, iNewCenterY, NULL, true, true);
+	bringIntoView(m_iXOffset + m_iXSize/2, iNewCenterY, NULL, true);
 }
 
 void CvViewport::panUp()
@@ -194,7 +203,7 @@ void CvViewport::panUp()
 		}
 	}
 
-	bringIntoView(m_iXOffset + m_iXSize/2, iNewCenterY, NULL, true, true);
+	bringIntoView(m_iXOffset + m_iXSize/2, iNewCenterY, NULL, true);
 }
 
 
@@ -212,9 +221,9 @@ void CvViewport::setupGraphical()
 
 void CvViewport::reset(CvMapInitData* pInitData)
 {
-	OutputDebugString("Reseting Viewport: Start/n");
+	OutputDebugString("Reseting Viewport: Start\n");
 	m_pMap->reset(pInitData);
-	OutputDebugString("Reseting Viewport: End/n");
+	OutputDebugString("Reseting Viewport: End\n");
 }
 
 void CvViewport::beforeSwitch()
@@ -273,31 +282,26 @@ void CvViewport::closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRi
 //	Process the current action state (which may include transitioning to another state)
 void CvViewport::processActionState()
 {
-	if ( m_countdown > 0 )
+	/*
+	if (m_countdown > 0)
 	{
 		m_countdown--;
 		return;
 	}
-
-	if ( m_spoofTransitionStartTickCount != -1 )
+	*/
+	if (m_spoofTransitionStartTickCount > 0 && GetTickCount() - m_spoofTransitionStartTickCount > 5000)
 	{
-		if ( GetTickCount() - m_spoofTransitionStartTickCount > 5000 )
+		setSpoofHiddenGraphics(VIEWPORT_SPOOF_NOT_ADJACENT_TO_REVEALED);
+
+		for (int iI = numPlots() - 1; iI > -1; iI--)
 		{
-			setSpoofHiddenGraphics(VIEWPORT_SPOOF_NOT_ADJACENT_TO_REVEALED);
+			CvPlot*	pPlot = plotByIndex(iI);
 
-			for(int iI = 0; iI < numPlots(); iI++)
+			if (pPlot != NULL && pPlot->isRiverMask()
+			&& !pPlot->isRevealed(GC.getGame().getActiveTeam(), true)
+			&&  pPlot->isAdjacentRevealed(GC.getGame().getActiveTeam(), true))
 			{
-				CvPlot*	pPlot = plotByIndex(iI);
-
-				if ( pPlot != NULL )
-				{
-					if ( pPlot->isRiverMask() &&
-						 !pPlot->isRevealed(GC.getGame().getActiveTeam(), true) &&
-						 pPlot->isAdjacentRevealed(GC.getGame().getActiveTeam(), true) )
-					{
-						pPlot->updateRiverSymbol(true, false);
-					}
-				}
+				pPlot->updateRiverSymbol(true, false);
 			}
 		}
 	}
@@ -359,7 +363,7 @@ void CvViewport::processActionState()
 	case VIEWPORT_ACTION_STATE_BRING_INTO_VIEW_COMPLETE:
 		{
 			CvUnit* pUnit = ::getUnit(m_preservedHeadSelectedUnitId);
-			if ( pUnit != NULL && !pUnit->isDead() && !pUnit->isDelayedDeath() && pUnit->plot()->isInViewport())
+			if (pUnit != NULL && !pUnit->isDead() && pUnit->plot()->isInViewport())
 			{
 				gDLL->getInterfaceIFace()->selectUnit(pUnit, true, true);
 			}
@@ -373,7 +377,7 @@ void CvViewport::processActionState()
 	case VIEWPORT_ACTION_STATE_SET_LOOKAT:
 		if ( ::getUnit(m_preservedHeadSelectedUnitId) == NULL && !m_bDisplayCityScreen && !m_bSelectCity )
 		{
-			GC.getGame().cycleSelectionGroupsInternal(true, true, false, false, false);
+			GC.getGame().cycleSelectionGroups(true, true, false, false, false);
 		}
 		m_preservedHeadSelectedUnitId.reset();
 		if ( m_pLookatPlot != NULL && m_pLookatPlot->isInViewport() )
@@ -405,7 +409,7 @@ void CvViewport::processActionState()
 	case VIEWPORT_ACTION_STATE_SET_SELECTION:
 		m_inhibitSelection = false;
 
-		GC.getGame().updateSelectionListInternal(false, false, true);
+		GC.getGame().updateSelectionListInternal(0, false, false, true);
 
 		//m_countdown = 20;
 		setActionState(VIEWPORT_ACTION_STATE_SET_LOOKAT);
@@ -420,13 +424,13 @@ void CvViewport::processActionState()
 			//	none get one selected
 			if ( pSelectedUnit == NULL )
 			{
-				GC.getGame().updateSelectionListInternal(true, true);
+				GC.getGame().updateSelectionListInternal();
 				pSelectedUnit = gDLL->getInterfaceIFace()->getHeadSelectedUnit();
 			}
 
 			if ( pSelectedUnit != NULL )
 			{
-				bringIntoView(pSelectedUnit->getX(), pSelectedUnit->getY(), pSelectedUnit, true, true);
+				bringIntoView(pSelectedUnit->getX(), pSelectedUnit->getY(), pSelectedUnit, true);
 			}
 
 #if 0
@@ -435,7 +439,7 @@ void CvViewport::processActionState()
 			//	viewport
 			if ( m_state == VIEWPORT_ACTION_STATE_NONE && m_state == VIEWPORT_MODE_UNINITIALIZED)
 			{
-				bringIntoView(m_pMap->getGridWidth()/2, m_pMap->getGridHeight()/2, NULL, true, true);
+				bringIntoView(m_pMap->getGridWidth()/2, m_pMap->getGridHeight()/2, NULL, true);
 			}
 #endif
 		}
@@ -608,12 +612,9 @@ void CvViewport::setSpoofHiddenGraphics(ViewportGraphicalSpoofingState eValue)
 {
 	m_eSpoofHiddenGraphics = eValue;
 
-	if ( eValue == VIEWPORT_SPOOF_ALL_UNREVEALED )
+	if (eValue == VIEWPORT_SPOOF_ALL_UNREVEALED)
 	{
 		m_spoofTransitionStartTickCount = GetTickCount();
 	}
-	else
-	{
-		m_spoofTransitionStartTickCount = -1;
-	}
+	else m_spoofTransitionStartTickCount = 0;
 }

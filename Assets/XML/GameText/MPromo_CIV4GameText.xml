@@ -86,7 +86,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_AFFLICTION_DISEASE_COMMON_COLD</Tag>
-		<English>TBD</English>
+		<English>Disease - Common Cold</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_CARAVAN_GUARD</Tag>
@@ -114,10 +114,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EQUIPMENT_EARLY_MELEE_ARMOR</Tag>
-		<English>TBD</English>
+		<English>Early melee armor</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EQUIPMENT_EARLY_RANGED_ARMOR</Tag>
-		<English>TBD</English>
+		<English>Early ranged armor</English>
 	</TEXT>
 </Civ4GameText>

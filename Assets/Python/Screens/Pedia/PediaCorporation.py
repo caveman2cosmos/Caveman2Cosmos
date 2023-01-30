@@ -100,7 +100,7 @@ class PediaCorporation:
 				screen.attachLabel(childMainCont, "", uFont4b + "Requires")
 				screen.attachPanel(childMainCont, childMainContList, "", "", False, True, iPanelEmpty)
 				if iTech != -1:
-					screen.attachImageButton(childMainContList, "", GC.getTechInfo(iTech).getButton(), enumBS, WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH, iTech, 1, False)
+					screen.attachImageButton(childMainContList, "", GC.getTechInfo(iTech).getButton(), enumBS, WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH, iTech, 2, False)
 					if aReqBuildList:
 						screen.attachLabel(childMainContList, "", "<font=3> &#38 ")
 				for i, entry in enumerate(aReqBuildList):

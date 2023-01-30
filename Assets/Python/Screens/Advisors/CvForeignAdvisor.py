@@ -227,7 +227,7 @@ class CvForeignAdvisor:
 				if CyTeam.isHasTech(iTech):
 					if not CyTeam.isNoTradeTech(iTech):
 						techsToGive.append(iTech)
-				elif CyPlayer.canResearch(iTech):
+				elif CyPlayer.canResearch(iTech, True):
 					techsToTake.append(iTech)
 
 
@@ -421,7 +421,7 @@ class CvForeignAdvisor:
 					szName = self.getNextWidget()
 					screen.addLineGFC(DrawCtrl, szName, int(fX0), int(fY0), int(fX1), int(fY1), aColMap["CYAN"])
 				elif CyTeamY.isHasMet(iTeamX):
-					if CyTeamY.isAtWar(iTeamX):
+					if CyTeamY.isAtWarWith(iTeamX):
 						szName = self.getNextWidget()
 						screen.addLineGFC(DrawCtrl, szName, int(fX0), int(fY0), int(fX1), int(fY1), aColMap["RED"])
 					else:
@@ -502,7 +502,7 @@ class CvForeignAdvisor:
 
 				iOff = 14
 				szTxt = aSmileyList[CyPlayerY.AI_getAttitude(iPlayerX)]
-				if CyTeamX.isAtWar(iTeamY):
+				if CyTeamX.isAtWarWith(iTeamY):
 					szTxt += self.charWar
 					iOff -= 10
 					if not (CyPlayerY.isHuman() or CyPlayerY.AI_isWillingToTalk(iPlayerX)):
@@ -1060,8 +1060,6 @@ class CvForeignAdvisor:
 		techsToGive = self.techsToGive
 		techsToTake = self.techsToTake
 
-		eWidJuToTech = WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH
-
 		H_EDGE = self.H_EDGE_PANEL
 
 		eFontGame = FontTypes.GAME_FONT
@@ -1128,7 +1126,7 @@ class CvForeignAdvisor:
 			if not szNoTechTrade:
 
 				for iTech in techsToGive:
-					if not CyPlayerX.canResearch(iTech):
+					if not CyPlayerX.canResearch(iTech, True):
 						continue
 					if bHuman:
 						aList0.append(iTech)

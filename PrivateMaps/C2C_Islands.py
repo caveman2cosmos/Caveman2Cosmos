@@ -8,13 +8,9 @@
 #
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
-from CvMapGeneratorUtil import FractalWorld
-from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
-#from CvMapGeneratorUtil import BonusBalancer
+import CvMapGeneratorUtil as MGU
 
-#balancer = BonusBalancer()
+balancer = MGU.BonusBalancer()
 
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_ISLANDS_DESCR"
@@ -106,18 +102,15 @@ def getWrapY():
 	return (map.getCustomMapOption(2) == 2)
 
 def normalizeAddExtras():
-	if (CyMap().getCustomMapOption(3) == 1):
+	if CyMap().getCustomMapOption(3) == 1:
 		balancer.normalizeAddExtras()
 	CyPythonMgr().allowDefaultImpl()	# do the rest of the usual normalizeStartingPlots stuff, don't overrride
 
 def addBonusType(argsList):
 	[iBonusType] = argsList
-	gc = CyGlobalContext()
-	type_string = gc.getBonusInfo(iBonusType).getType()
 
-	if (CyMap().getCustomMapOption(3) == 1):
-		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
-			return None # don't place any of this bonus randomly
+	if CyMap().getCustomMapOption(3) == 1 and CyGlobalContext().getBonusInfo(iBonusType).getType() in balancer.resourcesToBalance:
+		return None # don't place any of this bonus randomly
 
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
@@ -270,7 +263,7 @@ def beforeGeneration():
 	global region_coords
 	region_coords = templates[iNumRegions]
 
-class IslandsMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
+class IslandsMultilayeredFractal(MGU.MultilayeredFractal):
 	def generatePlotsByRegion(self):
 		# Sirian's MultilayeredFractal class, controlling function.
 		# You -MUST- customize this function for each use of the class.
@@ -410,7 +403,7 @@ def generatePlotTypes():
 	# Check for valid number of players.
 	if iPlayers > 0 and iPlayers < 19: pass
 	else: # Error catching.
-		fractal_world = FractalWorld()
+		fractal_world = MGU.FractalWorld()
 		fractal_world.initFractal(polar = True)
 		plotTypes = fractal_world.generatePlotTypes()
 		return plotTypes
@@ -422,14 +415,14 @@ def generatePlotTypes():
 def generateTerrainTypes():
 	print "terrain"
 	NiTextOut("Generating Terrain (Python Islands) ...")
-	terraingen = TerrainGenerator()
+	terraingen = MGU.TerrainGenerator()
 	terrainTypes = terraingen.generateTerrain()
 	return terrainTypes
 
 def addFeatures():
 	print "features"
 	NiTextOut("Adding Features (Python Islands) ...")
-	featuregen = FeatureGenerator()
+	featuregen = MGU.FeatureGenerator()
 	featuregen.addFeatures()
 	return 0
 
@@ -667,4 +660,4 @@ def normalizeRemovePeaks():
 	return None
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses()
+	MGU.placeC2CBonuses()

@@ -5,6 +5,7 @@
 		<Tag>TXT_KEY_MSG_BIODOME</Tag>
 		<English>[COLOR_SELECTED_TEXT]A baby [COLOR_UNIT_TEXT]%s1[COLOR_SELECTED_TEXT] has been born in the [COLOR_HIGHLIGHT_TEXT]Biodome[COLOR_SELECTED_TEXT]! Ooh it looks cute![COLOR_REVERT]</English>
 		<French>[COLOR_SELECTED_TEXT]Un bébé [COLOR_UNIT_TEXT]%s1[COLOR_SELECTED_TEXT] est né dans le [COLOR_HIGHLIGHT_TEXT]Biodome[COLOR_SELECTED_TEXT]! Oh, comme il est mignon![COLOR_REVERT]</French>
+		<Italian>[COLOR_SELECTED_TEXT]Un mini [COLOR_UNIT_TEXT]%s1[COLOR_SELECTED_TEXT] è nato nel [COLOR_HIGHLIGHT_TEXT]Biodome[COLOR_SELECTED_TEXT]! Com'è piccolo![COLOR_REVERT]</Italian>
 		<Polish>[COLOR_SELECTED_TEXT]Maly [COLOR_UNIT_TEXT]%s1[COLOR_SELECTED_TEXT] urodzil sie w [COLOR_HIGHLIGHT_TEXT]Biodomie[COLOR_SELECTED_TEXT]! O, jaki slodziak![COLOR_REVERT]</Polish>
 		<Russian>[COLOR_SELECTED_TEXT]Детеныш [COLOR_UNIT_TEXT]%s1[COLOR_SELECTED_TEXT] только что родился в питомнике в [COLOR_HIGHLIGHT_TEXT]Биодоме[COLOR_SELECTED_TEXT]! Ой, какой же он милашка![COLOR_REVERT]</Russian>
 	</TEXT>
@@ -48,7 +49,7 @@
 		<English>An inquisition in %s1_city has successfully purged all non-state religions and gold was confiscated from the victims.</English>
 		<French>Une inquisition à %s1_city a permis de purger toutes les religions non officielles et l'or des infidèles à été confisqué.</French>
 		<German>Eine Inquisition in %s1_city hat alle nicht-staatlichen Religionen erfolgreich eliminiert. Es wurde Gold von den Opfern konfisziert.</German>
-		<Italian>Una Inquisizione nella città di %s1_city ha eliminato con successo tutte le religioni diverse da quella di Stato.</Italian>
+		<Italian>L'Inquisizione nella città di %s1_city ha eliminato con successo tutte le religioni diverse da quella di Stato.</Italian>
 		<Spanish>Un Tribunal de la Fé convocado en %s1_city ha eliminado todas las religiones no oficiales. Se ha confiscado algo de oro de las víctimas.</Spanish>
 		<Polish>Inkwizytorowi w mieście %s1_city udało się odeprzeć wszystkie niepaństwowe religie i dodatkowo udało się skonfiskować złoto od ofiar.</Polish>
 		<Russian>Инквизиция успешно очистила город %s1_city от всех негосударственных религий, а у неверных было конфисковано золото.</Russian>
@@ -58,7 +59,7 @@
 		<English>An inquisition in %s1_city has failed to purge all non-state religions.</English>
 		<French>L'inquisition menée à %s1_city n'a pas permis de purger toutes les religions non officielles.</French>
 		<German>Einer Inquisition in %s1_city gelang es nicht, nicht-staatliche Religionen zu eliminieren.</German>
-		<Italian>Una Inquisizione nella città di %s1_city ha fallito l'eliminazione delle religioni non di Stato.</Italian>
+		<Italian>L'Inquisizione nella città di %s1_city ha fallito l'eliminazione delle religioni non di Stato.</Italian>
 		<Spanish>Un Tribunal de la Fé convocado en %s1_city ha fallado al intentar eliminar a los herejes.</Spanish>
 		<Polish>Inkwizytorowi w mieście %s1_city nie udało się odeprzeć wszystkich niepaństwowych religii.</Polish>
 		<Russian>Инквизиция не сумела уничтожить в городе %s1_city все негосударственные религии.</Russian>

@@ -23,7 +23,6 @@ class CvInitCore;
 class CvMessageCodeTranslator;
 class CvPortal;
 class CvStatsReporter;
-class CvDLLInterfaceIFaceBase;
 class CvDiplomacyScreen;
 class CMPDiplomacyScreen;
 class FMPIManager;
@@ -123,28 +122,29 @@ class CvMapCategoryInfo;
 class CvIdeaClassInfo;
 class CvIdeaInfo;
 class CvInvisibleInfo;
+class CvCategoryInfo;
 //class CvTraitOptionEditsInfo;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 10/24/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// MLF loading
 class CvModLoadControlInfo;
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 class CvMapInfo;
 
+#include "CvInfoClassTraits.h"
 #include "CvInfoReplacements.h"
 #include "GlobalDefines.h"
 #include <stack>
+#include <vector>
+
+enum DelayedResolutionTypes
+{
+	NO_DELAYED_RESOLUTION,
+	USE_DELAYED_RESOLUTION
+};
 
 extern CvDLLUtilityIFaceBase* gDLL;
+extern bool gMiscLogging;
 
-class cvInternalGlobals : bst::noncopyable
+class cvInternalGlobals
+	: private bst::noncopyable
 {
-//	friend class CvDLLUtilityIFace;
 	friend class CvXMLLoadUtility;
 public:
 
@@ -248,18 +248,19 @@ public:
 	void setInfoTypeFromString(const char* szType, int idx);
 	void logInfoTypeMap(const char* tagMsg = "");
 	void infoTypeFromStringReset();
-	void addToInfosVectors(void *infoVector);
+	void addToInfosVectors(void* infoVector, InfoClassTypes eInfoClass);
 	void infosReset();
 	void cacheInfoTypes();
 	int getOrCreateInfoTypeForString(const char* szType);
 
+	bool isDelayedResolutionRequired(InfoClassTypes eLoadingClass, InfoClassTypes eRefClass) const;
 	void addDelayedResolution(int* pType, CvString szString);
 	CvString* getDelayedResolution(int* pType);
 	void removeDelayedResolution(int* pType);
 	template<class T>
 	void removeDelayedResolutionVector(const std::vector<T>& vector)
 	{
-		foreach_(T type, vector)
+		foreach_(const T& type, vector)
 			removeDelayedResolution((int*)&type);
 	}
 	void copyNonDefaultDelayedResolution(int* pTypeSelf, int* pTypeOther);
@@ -378,6 +379,12 @@ public:
 	const std::vector<CvBonusInfo*>& getBonusInfos() const;
 	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const;
 
+	int getNumMapBonuses() const;
+	BonusTypes getMapBonus(const int i) const;
+
+	int getStatusPromotion(int i) const;
+	int getNumStatusPromotions() const;
+
 	int getNumFeatureInfos() const;
 	CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum) const;
 
@@ -419,6 +426,7 @@ public:
 
 	int getNumUnitInfos() const;
 	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) const;
+	const std::vector<CvUnitInfo*>& getUnitInfos() const { return m_paUnitInfo; }
 
 	int getNumSpawnInfos() const;
 	CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum) const;
@@ -441,9 +449,6 @@ public:
 	int iStuckUnitID;
 	int iStuckUnitCount;
 
-	bool isXMLLogging() const;
-	void setXMLLogging(bool bNewVal);
-
 	void updateReplacements();
 
 	int getNumCityTabInfos() const;
@@ -463,6 +468,9 @@ public:
 
 	int getNumInvisibleInfos() const;
 	CvInvisibleInfo& getInvisibleInfo(InvisibleTypes e) const;
+
+	int getNumCategoryInfos() const;
+	CvCategoryInfo& getCategoryInfo(CategoryTypes e) const;
 
 	int getNumVoteSourceInfos() const;
 	CvVoteSourceInfo& getVoteSourceInfo(VoteSourceTypes e) const;
@@ -491,7 +499,9 @@ public:
 private:
 	void registerUnitAI(const char* szType, int enumVal);
 	void registerMission(const char* szType, int enumVal);
+
 public:
+	void registerPlotTypes();
 	void registerUnitAIs();
 	void registerAIScales();
 	void registerGameObjects();
@@ -503,6 +513,7 @@ public:
 	void registerPropertyInteractions();
 	void registerPropertyPropagators();
 	void registerMissions();
+	void registerNPCPlayers();
 
 	CvInfoBase& getAttitudeInfo(AttitudeTypes eAttitudeNum) const;
 
@@ -558,6 +569,7 @@ public:
 
 	int getNumBuildingInfos() const;
 	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum) const;
+	const std::vector<CvBuildingInfo*>& getBuildingInfos() const { return m_paBuildingInfo; }
 
 	int getNumSpecialBuildingInfos() const;
 	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const;
@@ -616,6 +628,7 @@ public:
 
 	int getNumCultureLevelInfos() const;
 	CvCultureLevelInfo& getCultureLevelInfo(CultureLevelTypes eCultureLevelNum) const;
+	const std::vector<CvCultureLevelInfo*>& getCultureLevelInfos() const { return m_paCultureLevelInfo; }
 
 	int getNumVictoryInfos() const;
 	CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum) const;
@@ -631,14 +644,6 @@ public:
 
 	int getNumUnitArtStyleTypeInfos() const;
 	CvUnitArtStyleTypeInfo& getUnitArtStyleTypeInfo(UnitArtStyleTypes eUnitArtStyleTypeNum) const;
-
-	//
-	// Global Types
-	// All type strings are upper case and are kept in this hash map for fast lookup
-	// The other functions are kept for convenience when enumerating, but most are not used
-	//
-	int getTypesEnum(const char* szType) const;				// use this when searching for a type
-	void setTypesEnum(const char* szType, int iEnum);
 
 	int& getNumAnimationOperatorTypes();
 	CvString*& getAnimationOperatorTypes();
@@ -680,7 +685,7 @@ public:
 	CvString& getFootstepAudioTags(int i) const;
 
 	const CvString& getCurrentXMLFile() const;
-	void setCurrentXMLFile(const TCHAR* szFileName);
+	void setCurrentXMLFile(const char* szFileName);
 
 	//
 	///////////////// BEGIN global defines
@@ -725,33 +730,6 @@ public:
 
 	float getPLOT_SIZE() const;
 
-	int getMAX_PC_PLAYERS() const		{ return MAX_PC_PLAYERS; }
-	int getMAX_PLAYERS() const			{ return MAX_PLAYERS; }
-	int getMAX_PC_TEAMS() const			{ return MAX_PC_TEAMS; }
-	int getMAX_TEAMS() const			{ return MAX_TEAMS; }
-	int getBARBARIAN_PLAYER() const		{ return BARBARIAN_PLAYER; }
-	int getBARBARIAN_TEAM() const		{ return BARBARIAN_TEAM; }
-	int getNEANDERTHAL_PLAYER() const	{ return NEANDERTHAL_PLAYER; }
-	int getNEANDERTHAL_TEAM() const		{ return NEANDERTHAL_TEAM; }
-	int getBEAST_PLAYER() const			{ return BEAST_PLAYER; }
-	int getBEAST_TEAM() const			{ return BEAST_TEAM; }
-	int getPREDATOR_PLAYER() const		{ return PREDATOR_PLAYER; }
-	int getPREDATOR_TEAM() const		{ return PREDATOR_TEAM; }
-	int getPREY_PLAYER() const			{ return PREY_PLAYER; }
-	int getPREY_TEAM() const			{ return PREY_TEAM; }
-	int getINSECT_PLAYER() const		{ return INSECT_PLAYER; }
-	int getINSECT_TEAM() const			{ return INSECT_TEAM; }
-	int getNPC4_PLAYER() const			{ return NPC4_PLAYER; }
-	int getNPC4_TEAM() const			{ return NPC4_TEAM; }
-	int getNPC3_PLAYER() const			{ return NPC3_PLAYER; }
-	int getNPC3_TEAM() const			{ return NPC3_TEAM; }
-	int getNPC2_PLAYER() const			{ return NPC2_PLAYER; }
-	int getNPC2_TEAM() const			{ return NPC2_TEAM; }
-	int getNPC1_PLAYER() const			{ return NPC1_PLAYER; }
-	int getNPC1_TEAM() const			{ return NPC1_TEAM; }
-	int getNPC0_PLAYER() const			{ return NPC0_PLAYER; }
-	int getNPC0_TEAM() const			{ return NPC0_TEAM; }
-
 	// ***** END EXPOSED TO PYTHON *****
 
 	////////////// END DEFINES //////////////////
@@ -787,10 +765,15 @@ public:
 	void setAreaFinder(FAStar* pVal);
 	void setPlotGroupFinder(FAStar* pVal);
 	void setIsBug();
+	void refreshOptionsBUG();
 
 	uint32_t getAssetCheckSum() const;
 
 	void deleteInfoArrays();
+
+	void checkInitialCivics();
+
+	void cacheGameSpecificValues();
 
 protected:
 	void doPostLoadCaching();
@@ -902,6 +885,7 @@ protected:
 	typedef stdext::hash_map<const char* /* type */, int /* info index */, SZStringHash> InfosMap;
 	InfosMap m_infosMap;
 	std::vector<std::vector<CvInfoBase *> *> m_aInfoVectors;
+	bst::array<uint16_t, NUM_INFO_CLASSES> m_infoClassXmlLoadOrder;
 
 	int m_iLastTypeID; // last generic type ID assigned (for type strings that do not have an assigned info class)
 
@@ -993,6 +977,7 @@ protected:
 	std::vector<CvInfoBase*> m_paMonthInfo;
 	std::vector<CvInfoBase*> m_paDenialInfo;
 	std::vector<CvInvisibleInfo*> m_paInvisibleInfo;
+	std::vector<CvCategoryInfo*> m_paCategoryInfo;
 	std::vector<CvVoteSourceInfo*> m_paVoteSourceInfo;
 	std::vector<CvUnitCombatInfo*> m_paUnitCombatInfo;
 	std::vector<CvPromotionLineInfo*> m_paPromotionLineInfo;
@@ -1061,10 +1046,6 @@ protected:
 	// GLOBAL TYPES
 	//////////////////////////////////////////////////////////////////////////
 
-	// all type strings are upper case and are kept in this hash map for fast lookup, Moose
-	typedef stdext::hash_map<std::string /* type string */, int /*enum value */> TypesMap;
-	TypesMap m_typesMap;
-
 	// XXX These are duplicates and are kept for enumeration convenience - most could be removed, Moose
 	CvString *m_paszAnimationOperatorTypes;
 	int m_iNumAnimationOperatorTypes;
@@ -1107,8 +1088,6 @@ protected:
 	DO_FOR_EACH_GLOBAL_DEFINE(DECLARE_MEMBER_VAR)
 	DO_FOR_EACH_INFO_TYPE(DECLARE_MEMBER_VAR)
 
-	bool m_bXMLLogging;
-
 	float m_fPLOT_SIZE;
 
 	int m_iViewportCenterOnSelectionCenterBorder;
@@ -1116,6 +1095,9 @@ protected:
 	const char* m_szAlternateProfilSampleName;
 	FProfiler* m_Profiler;
 	CvString m_szDllProfileText;
+
+	std::vector<BonusTypes> m_mapBonuses;
+	std::vector<int> m_aiStatusPromotions;
 
 // BBAI Options
 public:
@@ -1148,11 +1130,11 @@ extern const char* fnName;
 class ProxyTracker
 {
 public:
-	ProxyTracker(const CvGlobals* proxy, const char* name);
+	ProxyTracker(const char* name);
 	~ProxyTracker();
 };
 
-#define PROXY_TRACK(x)	ProxyTracker tracker(this,x);
+#define PROXY_TRACK(x)	ProxyTracker tracker(x);
 
 #else
 #define	PROXY_TRACK(x)	;
@@ -1802,7 +1784,7 @@ public:
 	DllExport int getTypesEnum(const char* szType) const				// use this when searching for a type
 	{
 		PROXY_TRACK("getTypesEnum");
-		return gGlobals->getTypesEnum(szType);
+		return gGlobals->getInfoTypeForString(szType);
 	}
 	DllExport int getNUM_ENGINE_DIRTY_BITS() const
 	{
@@ -2237,35 +2219,5 @@ inline CvGlobals& CvGlobals::getInstance()
 {
 	return gGlobalsProxy;
 }
-
-#endif
-
-/**********************************************************************
-
-File:		BugMod.h
-Author:		EmperorFool
-Created:	2009-01-22
-
-Defines common constants and functions for use throughout the BUG Mod.
-
-		Copyright (c) 2009 The BUG Mod. All rights reserved.
-
-**********************************************************************/
-
-#pragma once
-
-#ifndef BUG_MOD_H
-#define BUG_MOD_H
-
-// Increment this by 1 each time you commit new/changed functions/constants in the Python API.
-#define BUG_DLL_API_VERSION		6
-
-// Used to signal the BULL saved game format is used
-#define BUG_DLL_SAVE_FORMAT		64
-
-// These are display-only values, and the version should be changed for each release.
-#define BUG_DLL_NAME			L"BULL"
-#define BUG_DLL_VERSION			L"1.3"
-#define BUG_DLL_BUILD			L"219"
 
 #endif

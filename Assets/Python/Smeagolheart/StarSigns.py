@@ -11,7 +11,6 @@
 # 2. Currently it is possible that the given promotion is of no use to the unit, eg attack boost to a unit that can't attack. No promotion given would be better.
 
 from CvPythonExtensions import *
-import CvUtil
 
 def give(GC, TRNSLTR, GAME, CyUnit, iPlayer, bLand):
 
@@ -45,4 +44,5 @@ def give(GC, TRNSLTR, GAME, CyUnit, iPlayer, bLand):
 			szTxt = TRNSLTR.getText("TXT_KEY_MSG_STARSIGN_CREATE", ())
 
 		szIcon = GC.getPromotionInfo(iPromotion).getButton()
+		import CvUtil
 		CvUtil.sendMessage(szTxt, iPlayer, 16, szIcon, ColorTypes(44), CyUnit.getX(), CyUnit.getY(), True, True)

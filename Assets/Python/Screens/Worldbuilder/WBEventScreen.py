@@ -2,7 +2,6 @@ from CvPythonExtensions import *
 import CvScreenEnums
 import WBPlotScreen
 import WBCityEditScreen
-import WBUnitScreen
 import WBPlayerScreen
 import WBTeamScreen
 import WBInfoScreen
@@ -187,7 +186,7 @@ class WBEventScreen:
 		screen = CyGInterfaceScreen("WBEventScreen", CvScreenEnums.WB_EVENT)
 		iHeight = (screen.getYResolution()/2 - 72) / 24 * 24 + 2
 
-		sHeader = CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ())
+		sHeader = CyTranslator().getText("TXT_KEY_WB_BUILDINGS", ())
 		screen.addTableControlGFC("WBEventBuilding", 1, screen.getXResolution()/5 + 10, screen.getYResolution()/2 + 30, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
 		screen.setTableColumnHeader("WBEventBuilding", 0, "", iWidth)
 
@@ -292,7 +291,7 @@ class WBEventScreen:
 				else:
 					pUnit = pPlot.getUnit(0)
 				if pUnit:
-					WBUnitScreen.WBUnitScreen(self.WB).interfaceScreen(pUnit)
+					self.WB.goToSubScreen("UnitScreen", [pUnit])
 			elif iIndex == 11:
 				iPlayer = pPlot.getOwner()
 				if iPlayer == -1:

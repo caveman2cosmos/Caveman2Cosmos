@@ -6,6 +6,7 @@
 #include "CyPlot.h"
 #include "CyUnit.h"
 #include "SCyDebug.h"
+#include "IDValueMap.h"
 #include "Win32.h"
 
 
@@ -41,6 +42,7 @@ void CyMessageControlInterface();
 void CyPropertiesPythonInterface();
 void CyBoolExprPythonInterface();
 void CyIntExprPythonInterface();
+void CyCityOutputHistoryInterface();
 
 
 DllExport void DLLPublishToPython()
@@ -51,6 +53,7 @@ DllExport void DLLPublishToPython()
 
 	registerAllowPyIntAsType<TechTypes>();
 	registerAllowPyIntAsType<BuildingTypes>();
+	registerAllowPyIntAsType<DirectionTypes>();
 	registerAllowPyIntAsType<MultiplayerOptionTypes>();
 	registerAllowPyIntAsType<CorporationTypes>();
 	registerAllowPyIntAsType<GameOptionTypes>();
@@ -90,6 +93,23 @@ DllExport void DLLPublishToPython()
 	registerAllowPyIntAsType<VictoryTypes>();
 	registerAllowPyIntAsType<VoteTypes>();
 	registerAllowPyIntAsType<VoteSourceTypes>();
+	registerAllowPyIntAsType<FeatureTypes>();
+	registerAllowPyIntAsType<TerrainTypes>();
+	registerAllowPyIntAsType<PromotionTypes>();
+	registerAllowPyIntAsType<FlavorTypes>();
+
+	publishPythonVectorInterface<std::vector<BonusTypes>, CovertToInteger>();
+	publishPythonVectorInterface<std::vector<ImprovementTypes>, CovertToInteger>();
+	publishPythonVectorInterface<std::vector<MapCategoryTypes>, CovertToInteger>();
+	publishPythonVectorInterface<std::vector<TechTypes>, CovertToInteger>();
+
+	publishIDValueMapPythonInterface<IDValueMap<BonusTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<BuildingTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<ImprovementTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<TechTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<TerrainTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<UnitCombatTypes, int> >();
+	publishIDValueMapPythonInterface<IDValueMap<UnitTypes, int> >();
 
 	CyEnumsPythonInterface();
 	CyGamePythonInterface();
@@ -112,7 +132,7 @@ DllExport void DLLPublishToPython()
 	CyPropertiesPythonInterface();
 	CyBoolExprPythonInterface();
 	CyIntExprPythonInterface();
-
+	CyCityOutputHistoryInterface();
 	SCyDebug::installInPython();
 
 	//

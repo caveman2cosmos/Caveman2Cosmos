@@ -107,9 +107,6 @@ public:
 
 	void moveUnitToMap(const CyUnit* unit, int numTravelTurns);
 
-	// Super Forts *canal* *choke*
-	void calculateCanalAndChokePoints();
-
 protected:
 	CvMap* m_pMap;
 };

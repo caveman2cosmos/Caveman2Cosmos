@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvDate.h"
 
 //
 // Python interface for structs
@@ -202,5 +203,27 @@ void CyStructsPythonInterface1()
 		.def_readonly("eTech", &TechCommerceChange::eTech)
 		.def_readonly("eCommerce", &TechCommerceChange::eCommerce)
 		.def_readonly("value", &TechCommerceChange::iChange)
+	;
+
+	python::class_<TechYieldChange>("TechYieldChange", python::no_init)
+		.def_readonly("eTech", &TechYieldChange::eTech)
+		.def_readonly("eYield", &TechYieldChange::eYield)
+		.def_readonly("value", &TechYieldChange::iChange)
+	;
+
+	python::class_<TerrainYieldChange>("TerrainYieldChange", python::no_init)
+		.def_readonly("eTerrain", &TerrainYieldChange::eTerrain)
+		.def_readonly("eYield", &TerrainYieldChange::eYield)
+		.def_readonly("value", &TerrainYieldChange::iChange)
+	;
+
+	python::class_<GenericTrippleInt>("GenericTrippleInt", python::no_init)
+		.def_readonly("iType", &GenericTrippleInt::iType)
+		.def_readonly("iIndex", &GenericTrippleInt::iIndex)
+		.def_readonly("iValue", &GenericTrippleInt::iValue)
+	;
+
+	python::class_<FreePromoTypes>("FreePromoTypes", python::no_init)
+		.def_readonly("ePromotion", &FreePromoTypes::ePromotion)
 	;
 }

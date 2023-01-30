@@ -84,12 +84,12 @@
 #  - print stats of mod and map
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
+import CvMapGeneratorUtil as MGU
 
 ##################################################################################
 ## MapScriptTools Interface by Temudjin
 ##################################################################################
-import MapScriptTools as mst
+import MapScriptToolsOld as mst
 
 # The following two functions are not exactly neccessary, but they should be
 # in all map-scripts. Just comment them out if they are already in the script.
@@ -131,7 +131,7 @@ def beforeGeneration():
 
 	# Initialize MapScriptTools.BonusBalancer
 	# balance boni: True, place missing boni: True, move minerals: True
-	mst.bonusBalancer.initialize( True, True, True )
+	mst.bonusBalancer.initialize(True)
 
 # This function will be called by the system, after generatePlotTypes() and before addRivers()
 # - print the plot-map and hold result to check differences to the next call
@@ -141,9 +141,6 @@ def beforeGeneration():
 # --------------------------------------------------------------------------------------------
 def generateTerrainTypes():
 	print "-- generateTerrainTypes()"
-
-	# print a plotMap; allow for differenceMap with next call
-	mst.mapPrint.buildPlotMap(True, "generateTerrainTypes()")
 
 	# Prettify the map - change coastal peaks to hills with 80% chance; default: 66%
 	mst.mapPrettifier.hillifyCoast(80)
@@ -162,9 +159,6 @@ def generateTerrainTypes():
 # ----------------------------------------------------------------------------------------------
 def addRivers():
 	print "-- addRivers()"
-
-	# Generate DeepOcean-terrain if mod allows for it
-	mst.deepOcean.buildDeepOcean()
 
 	# Generate Marsh-terrain within latitude zones (default: 5, 10, (0,18), (45,63) ).
 	# The frequency of transformation as well as the zones may be changed by first
@@ -216,9 +210,6 @@ def addFeatures():
 
 	# Rename the scripts addFeatures() function and call it here.
 	addFeatures2()							# call renamed script function
-
-	# Prettify the map - transform coastal volcanos; default: 66% chance
-	mst.mapPrettifier.beautifyVolcanos( 60 )
 
 # This function will be called by the system, after the map was generated, after the
 # starting-plots have been choosen, at the start of the normalizing process.
@@ -277,8 +268,6 @@ def normalizeAddExtras():
 	# Balance boni, place missing boni and move minerals depending on initialization.
 	mst.bonusBalancer.normalizeAddExtras()
 
-	# If the script already has a normalizeAddExtras() function, you want to rename it and call it here.
-#	normalizeAddExtras2()					# call renamed script function
 	# If the script already uses a bonusBalancer, you need to comment it out in
 	# the original normalizeAddExtras(). You also want to look into addBonusType()
 	# and comment the balancer out there too.
@@ -290,29 +279,9 @@ def normalizeAddExtras():
 	# FFH does a lot housekeeping, but some special regions may want to overrule that.
 	mst.mapRegions.addRegionExtras()
 
-	# Place special features on map
-	#mst.featurePlacer.placeKelp()
-	#mst.featurePlacer.placeHauntedLands()
-	#mst.featurePlacer.placeCrystalPlains()
-
 	# Kill ice-feature on warm edges.
 	# Regardless of latitude, if Y-axis isn't wrapped Civ4 puts ice on the north- and southpoles.
 	mst.mapPrettifier.deIcifyEdges()
-
-	# Print plotMap and differencePlotMap
-	mst.mapPrint.buildPlotMap( True, "normalizeAddExtras()" )
-	# Print areaMap
-	mst.mapPrint.buildAreaMap( False, "normalizeAddExtras()" )
-	# Print terrainMap
-	mst.mapPrint.buildTerrainMap( False, "normalizeAddExtras()" )
-	# Print featureMap
-	mst.mapPrint.buildFeatureMap( False, "normalizeAddExtras()" )
-	# Print bonusMap
-	mst.mapPrint.buildBonusMap( False, "normalizeAddExtras()" )
-	# Print riverMap
-	mst.mapPrint.buildRiverMap( False, "normalizeAddExtras()" )
-	# Print mod and map statistics
-	mst.mapStats.mapStatistics()
 
 # This function will be called at odd times by the system.
 # If the script already has this function, return that result instead of zero or rename it.
@@ -2124,7 +2093,7 @@ def findStartingPlot(argsList):
 				return okLandPlots(x,y,10) and okMapEdge(x,y,3)
 			#-----
 
-		findstart = CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
+		findstart = MGU.findStartingPlot(playerID, isValid)
 		if playerID == iCurrentPlayer:
 			iResult = findstart
 
@@ -2137,14 +2106,14 @@ def findStartingPlot(argsList):
 	return iResult
 
 
-class MediterraneanFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
+class MediterraneanFeatureGenerator(MGU.FeatureGenerator):
 	def getLatitudeAtPlot(self, iX, iY):
 		"returns 0.0 for tropical, up to 1.0 for polar"
 		# 25/90 to 65/90:
 		lat = 5/float(18) + 4*(self.iGridH - iY)/float(9*self.iGridH)
 		return lat
 
-class NoIceFeatureGenerator(CvMapGeneratorUtil.FeatureGenerator):
+class NoIceFeatureGenerator(MGU.FeatureGenerator):
 	def addIceAtPlot(self, pPlot, iX, iY, lat):
 		return
 
@@ -2158,7 +2127,7 @@ def addFeatures2():
 		featuregen.addFeatures()
 		return 0
 	else:
-		featuregen = CvMapGeneratorUtil.FeatureGenerator()
+		featuregen = MGU.FeatureGenerator()
 		featuregen.addFeatures()
 		return 0
 
@@ -2186,5 +2155,5 @@ def normalizeRemovePeaks():
 	CyPythonMgr().allowDefaultImpl()
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses()
+	MGU.placeC2CBonuses()
 

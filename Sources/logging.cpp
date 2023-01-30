@@ -20,9 +20,6 @@ namespace logging
 
 	void logMsg(const char* file, const char* msg, ...)
 	{
-		//if (!GC.isXMLLogging())
-		//	return;
-
 		static char buf[2048];
 		_vsnprintf(buf, 2048 -4, msg, (char*)(&msg +1));
 		gDLL->logMsg(file, buf, false, false);

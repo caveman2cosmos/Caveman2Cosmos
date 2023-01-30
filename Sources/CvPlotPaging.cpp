@@ -1,8 +1,10 @@
 
 #include "CvGameCoreDLL.h"
+#include "CvDLLInterfaceIFaceBase.h"
 #include "CvGlobals.h"
 #include "CvMap.h"
 #include "CvPlotPaging.h"
+#include "CvDLLInterfaceIFaceBase.h"
 
 #include <psapi.h>
 
@@ -42,7 +44,6 @@ namespace {
 				return iIndex;
 			}
 		}
-
 		return -1;
 	}
 
@@ -53,10 +54,7 @@ namespace {
 			g_pagingTable.push_back(GraphicsPagingInfo());
 			return g_pagingTable.size() - 1;
 		}
-		else
-		{
-			return findFreePagingTableSlot();
-		}
+		return findFreePagingTableSlot();
 	}
 
 	int findOldestEvictablePagingEntry()
@@ -75,7 +73,6 @@ namespace {
 				}
 			}
 		}
-
 		return iResult;
 	}
 
@@ -92,57 +89,43 @@ namespace {
 		if (PAGING_TEST_ALLOC != 0 && PAGING_TEST_ALLOC_NUM != 0)
 		{
 			std::vector<void*> test_allocs;
-			bool success = true;
 			for (unsigned int i = 0; i < PAGING_TEST_ALLOC_NUM; ++i)
 			{
 				void* test_alloc = malloc(PAGING_TEST_ALLOC);
-				if (test_alloc == NULL)
-				{
-					success = false;
-					break;
-				}
-				else
-				{
-					test_allocs.push_back(test_alloc);
-				}
+
+				if (!test_alloc) break; 
+
+				test_allocs.push_back(test_alloc);
 			}
 			for (size_t i = 0; i < test_allocs.size(); ++i)
 			{
 				free(test_allocs[i]);
 			}
-
 			return false;
 		}
-		else
+		if (uiMaxMem == 0xFFFFFFFF)
 		{
-			if (uiMaxMem == 0xFFFFFFFF)
+			MEMORYSTATUSEX memoryStatus;
+
+			memoryStatus.dwLength = sizeof(memoryStatus);
+			GlobalMemoryStatusEx(&memoryStatus);
+
+			uiMaxMem = 1024 * GC.getDefineINT("MAX_DESIRED_MEMORY_USED", DEFAULT_MAX_WORKING_SET_THRESHOLD_BEFORE_EVICTION / 1024);
+
+			DWORDLONG usableMemory = memoryStatus.ullTotalPhys - 1024 * (DWORDLONG)GC.getDefineINT("OS_MEMORY_ALLOWANCE", DEFAULT_OS_MEMORY_ALLOWANCE / 1024);
+			if (usableMemory < uiMaxMem)
 			{
-				MEMORYSTATUSEX memoryStatus;
-
-				memoryStatus.dwLength = sizeof(memoryStatus);
-				GlobalMemoryStatusEx(&memoryStatus);
-
-				uiMaxMem = 1024 * GC.getDefineINT("MAX_DESIRED_MEMORY_USED", DEFAULT_MAX_WORKING_SET_THRESHOLD_BEFORE_EVICTION / 1024);
-
-				DWORDLONG usableMemory = memoryStatus.ullTotalPhys - 1024 * (DWORDLONG)GC.getDefineINT("OS_MEMORY_ALLOWANCE", DEFAULT_OS_MEMORY_ALLOWANCE / 1024);
-				if (usableMemory < uiMaxMem)
-				{
-					uiMaxMem = (unsigned int)usableMemory;
-				}
-			}
-
-			GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
-
-			if (pmc.WorkingSetSize > uiMaxMem)
-			{
-				OutputDebugString(CvString::format("Found need to free memory: %u used vs %u target\n", pmc.WorkingSetSize, uiMaxMem).c_str());
-				return true;
-			}
-			else
-			{
-				return false;
+				uiMaxMem = (unsigned int)usableMemory;
 			}
 		}
+		GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
+
+		if (pmc.WorkingSetSize > uiMaxMem)
+		{
+			OutputDebugString(CvString::format("Found need to free memory: %u used vs %u target\n", pmc.WorkingSetSize, uiMaxMem).c_str());
+			return true;
+		}
+		return false;
 	}
 }
 

@@ -8,7 +8,7 @@
 
 from CvPythonExtensions import *
 from CvEventInterface import getEventManager
-import CvUtil
+import TextUtil
 # --------- Revolution mod -------------
 import SdToolKit as SDTK
 import RevUtils
@@ -27,7 +27,7 @@ def init():
 	EM = getEventManager()
 	EM.addEventHandler("BeginPlayerTurn", onBeginPlayerTurn)
 	EM.addEventHandler("setPlayerAlive", onSetPlayerAlive)
-	EM.addEventHandler("cityAcquired", onCityAcquired)
+	EM.addEventHandler("cityAcquiredAndKept", onCityAcquiredAndKept)
 	EM.addEventHandler("cityBuilt", onCityBuilt)
 	EM.addEventHandler("vassalState", onVassalState)
 	EM.addEventHandler("addTeam", onAddTeam)
@@ -131,11 +131,12 @@ def onBeginPlayerTurn(argsList):
 			return
 
 
-def onCityAcquired(argsList):
-	city = argsList[2]
-	owner = GC.getPlayer(city.getOwner())
+def onCityAcquiredAndKept(argsList):
+	#iOwnerOld, iOwnerNew, city, bConquest, bTrade = argsList
+	iPlayer = argsList[1]
+	owner = GC.getPlayer(iPlayer)
 	if owner.isAlive() and not owner.isNPC() and owner.getNumCities() < 5 and owner.getNumMilitaryUnits() > 0:
-		setNewNameByCivics(owner.getID())
+		setNewNameByCivics(iPlayer)
 
 
 def onCityBuilt(argsList):
@@ -221,9 +222,9 @@ def nameForNewPlayer(iPlayer):
 			if cityString is not None and len(cityString) < 10:
 				try:
 					if cityString in curAdj or cityString in curShort:
-						newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_THE_REBELS_OF", ())%(CvUtil.convertToStr(cityString))
+						newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_THE_REBELS_OF", ())%(TextUtil.convertToStr(cityString))
 					else:
-						newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_REBELS_OF", ())%(curAdj,CvUtil.convertToStr(cityString))
+						newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_REBELS_OF", ())%(curAdj,TextUtil.convertToStr(cityString))
 				except:
 					newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_REBELS", ())%(curAdj)
 			else:
@@ -299,7 +300,7 @@ def newNameByCivics(iPlayer):
 		try :
 			# Silly game to force ascii encoding now
 			cityString =	pPlayer.getCivilizationDescription(0)
-			cityString += "&" + CvUtil.convertToStr(capital.getName())
+			cityString += "&" + TextUtil.convertToStr(capital.getName())
 			cityString =	cityString.split('&',1)[-1]
 		except :
 			pass
@@ -340,16 +341,20 @@ def newNameByCivics(iPlayer):
 
 	if pPlayer.isRebel():
 		return [curDesc, curShort, curAdj]	# Maintain name of rebels from Revolution Mod
-	elif pPlayer.isMinorCiv() and barbTurn is not None:
+
+	if pPlayer.isMinorCiv() and barbTurn is not None:
 		return [curDesc, curShort, curAdj]	# Maintain minor civ name
-	elif barbTurn is not None and GAME.getGameTurn() - barbTurn < 20 and pPlayer.getNumCities() < 4:
+
+	if barbTurn is not None and GAME.getGameTurn() - barbTurn < 20 and pPlayer.getNumCities() < 4:
 		return [curDesc, curShort, curAdj]	# Maintain name of BarbarianCiv created player
 
 	# Special options for teams and permanent alliances
 	#if bTeamNaming and pTeam.getNumMembers() > 1: # and pTeam.getPermanentAllianceTradingCount() > 0:
 	if pTeam.getNumMembers() > 1: # and pTeam.getPermanentAllianceTradingCount() > 0:
+
+		iLeader = pTeam.getLeaderID()
+
 		if pTeam.getNumMembers() == 2:
-			iLeader = pTeam.getLeaderID()
 			newName = GC.getPlayer(iLeader).getCivilizationAdjective(0) + "-"
 			for idx in xrange(GC.getMAX_PC_PLAYERS()):
 				if idx != iLeader and GC.getPlayer(idx).getTeam() == pTeam.getID():
@@ -358,7 +363,6 @@ def newNameByCivics(iPlayer):
 			newName += TRNSLTR.getText("TXT_KEY_MOD_DCN_ALLIANCE", ())
 			return [newName,curShort,curAdj]
 		else:
-			iLeader = pTeam.getLeaderID()
 			newName = GC.getPlayer(iLeader).getCivilizationAdjective(0)[0:4]
 			for idx in xrange(GC.getMAX_PC_PLAYERS()):
 				if not idx == iLeader and GC.getPlayer(idx).getTeam() == pTeam.getID():
@@ -387,22 +391,22 @@ def newNameByCivics(iPlayer):
 		return [newName, curShort, curAdj]
 
 	# Main naming conditions
-	if RevUtils.isCommunism(iPlayer):
-		if RevUtils.isCanDoElections(iPlayer) and not bNoRealElections:
+	if isCommunism(pPlayer):
+		if RevUtils.isCanDoElections(pPlayer) and not bNoRealElections:
 			if sSocRep in curDesc or sPeoplesRep in curDesc:
 				newName = curDesc
 			elif 50 > GAME.getSorenRandNum(100, 'Rev: Naming'):
 				newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_SOC_REP", ())%(curShort)
 			else:
 				newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_PEOPLES_REP", ())%(curShort)
-		elif RevUtils.getDemocracyLevel(iPlayer)[0] == -8:
+		elif RevUtils.getDemocracyLevel(pPlayer)[0] == -8:
 			if TRNSLTR.getText("TXT_KEY_MOD_DCN_RUSSIAN_MATCH", ()) in curAdj:
 				curAdj = TRNSLTR.getText("TXT_KEY_MOD_DCN_SOVIET", ())
 			newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_UNION", ())%(curAdj)
 		else:
 			newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_PEOPLES_REP", ())%(curShort)
 
-	elif RevUtils.isCanDoElections(iPlayer) and not bNoRealElections:
+	elif RevUtils.isCanDoElections(pPlayer) and not bNoRealElections:
 		sRepOf = TRNSLTR.getText("TXT_KEY_MOD_DCN_REPUBLIC_OF", ()).replace('%s','').strip()
 		sRepublic = TRNSLTR.getText("TXT_KEY_MOD_DCN_REPUBLIC", ())
 
@@ -448,14 +452,14 @@ def newNameByCivics(iPlayer):
 			else:
 				newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_THE_REPUBLIC_OF", ())%(curShort)
 
-		if (RevUtils.isFreeSpeech(iPlayer) and RevUtils.getLaborFreedom(iPlayer)[0] > 9
+		if (RevUtils.isFreeSpeech(pPlayer) and RevUtils.getLaborFreedom(pPlayer)[0] > 9
 		and len(newName) < 16
 		and TRNSLTR.getText("TXT_KEY_MOD_DCN_FREE", ()) not in newName
 		and TRNSLTR.getText("TXT_KEY_MOD_DCN_NEW", ()) not in newName
 		):
 			newName = TRNSLTR.getText("TXT_KEY_MOD_DCN_FREE", ()) + ' ' + newName
 
-	elif RevUtils.getDemocracyLevel(iPlayer)[0] == -8:
+	elif RevUtils.getDemocracyLevel(pPlayer)[0] == -8:
 
 		if TRNSLTR.getText("TXT_KEY_MOD_DCN_GERMAN_MATCH", ()) in curAdj:
 			empString = TRNSLTR.getText("TXT_KEY_MOD_DCN_REICH", ())
@@ -483,7 +487,7 @@ def newNameByCivics(iPlayer):
 
 		playerEra = pPlayer.getCurrentEra()
 
-		if RevUtils.getDemocracyLevel(iPlayer)[0] == -6:
+		if RevUtils.getDemocracyLevel(pPlayer)[0] == -6:
 
 			if pTeam.isAVassal():
 				sKingdom = TRNSLTR.getText("TXT_KEY_MOD_DCN_DUCHY", ())
@@ -521,7 +525,7 @@ def newNameByCivics(iPlayer):
 				else:
 					newName = curAdj + ' ' + sKingdom
 
-		elif RevUtils.getDemocracyLevel(iPlayer)[0] == -10 or playerEra == 0:
+		elif RevUtils.getDemocracyLevel(pPlayer)[0] == -10 or playerEra == 0:
 
 			empString = TRNSLTR.getText("TXT_KEY_MOD_DCN_PLAIN_EMPIRE", ())
 			if playerEra < 2 and pPlayer.getNumCities() < 3:
@@ -545,7 +549,7 @@ def newNameByCivics(iPlayer):
 				newName = curAdj + ' ' + empString
 
 		sHoly = TRNSLTR.getText("TXT_KEY_MOD_DCN_HOLY", ()) + ' '
-		if RevUtils.getReligiousFreedom(iPlayer)[0] < -9:
+		if RevUtils.getReligiousFreedom(pPlayer)[0] < -9:
 			if len(newName) < 16 and not sHoly in newName and not sGreat in newName and not newName.startswith(TRNSLTR.getText("TXT_KEY_MOD_DCN_HOLY_HRE_MATCH", ())):
 				newName = sHoly + newName
 		elif newName.startswith(sHoly) and not origDesc.startswith(sHoly):
@@ -574,3 +578,16 @@ def resetName(iPlayer):
 	origShort = civInfo.getShortDescription(0)
 
 	pPlayer.setCivName(origDesc, origShort, origAdj)
+
+
+def isCommunism(pPlayer):
+
+	if pPlayer is None or not pPlayer.isAlive():
+		return False
+
+	for i in xrange(GC.getNumCivicInfos()):
+
+		if GC.getCivicInfo(i).isCommunism() and pPlayer.isCivic(i):
+			return True
+
+	return False

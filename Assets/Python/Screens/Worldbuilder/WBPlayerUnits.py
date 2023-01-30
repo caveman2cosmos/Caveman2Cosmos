@@ -4,7 +4,6 @@ import WBPlayerScreen
 import WBTeamScreen
 import WBProjectScreen
 import WBCityEditScreen
-import WBUnitScreen
 import WBInfoScreen
 import WBCityDataScreen
 import WBBuildingScreen
@@ -412,7 +411,7 @@ class WBPlayerUnits:
 			if pCity:
 				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY_DATA", ()), 9, 9, False)
 				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_CITY_DATA2", ()), 10, 10, False)
-				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ()), 14, 14, False)
+				screen.addPullDownString("CurrentPage", CyTranslator().getText("TXT_KEY_WB_BUILDINGS", ()), 14, 14, False)
 				szCity = CyTranslator().getText("TXT_WORD_CITY", ()) + " "
 				screen.addPullDownString("CurrentPage", szCity + CyTranslator().getText("TXT_KEY_WB_PLOT_DATA", ()), 12, 12, False)
 				screen.addPullDownString("CurrentPage", szCity + CyTranslator().getText("TXT_KEY_CONCEPT_EVENTS", ()), 13, 13, False)
@@ -455,7 +454,7 @@ class WBPlayerUnits:
 			elif iIndex == 11:
 				WBInfoScreen.WBInfoScreen(self.WB).interfaceScreen(iPlayer)
 			elif iIndex == 5:
-				WBUnitScreen.WBUnitScreen(self.WB).interfaceScreen(pUnitOwner.getUnit(iUnitID))
+				self.WB.goToSubScreen("UnitScreen", [pUnitOwner.getUnit(iUnitID)])
 			elif iIndex == 6:
 				WBPromotionScreen.WBPromotionScreen(self.WB).interfaceScreen(pUnitOwner.getUnit(iUnitID))
 			elif iIndex == 7:
@@ -512,7 +511,7 @@ class WBPlayerUnits:
 			WBCityEditScreen.WBCityEditScreen(self.WB).interfaceScreen(pCityOwner.getCity(iCityID))
 
 		elif sName == "GoToUnit":
-			WBUnitScreen.WBUnitScreen(self.WB).interfaceScreen(pUnitOwner.getUnit(iUnitID))
+			self.WB.goToSubScreen("UnitScreen", [pUnitOwner.getUnit(iUnitID)])
 
 		elif sName == "WBCityList":
 			if inputClass.getData1() == 7872:

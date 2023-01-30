@@ -75,7 +75,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getName", &CyCity::getName, "string () - city name")
 		.def("getNameForm", &CyCity::getNameForm, "string () - city name")
 		.def("getNameKey", &CyCity::getNameKey, "string () - city name")
-		.def("setName", &CyCity::setName, "void (TCHAR szNewValue, bool bFound) - sets the name to szNewValue")
+		.def("setName", &CyCity::setName, "void (const char* szNewValue, bool bFound) - sets the name to szNewValue")
 		.def("isNoBonus", &CyCity::isNoBonus, "bool (int eIndex)")
 		.def("changeNoBonusCount", &CyCity::changeNoBonusCount, "void (int eIndex, int iChange)")
 		.def("getFreeBonus", &CyCity::getFreeBonus, "int (int eIndex)")
@@ -137,6 +137,8 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("setRevIndexAverage", &CyCity::setRevIndexAverage, "void (int iNewValue)" )
 		.def("updateRevIndexAverage", &CyCity::updateRevIndexAverage, "void ( )" )
 
+		.def("getRevIndexDistanceMod", &CyCity::getRevIndexDistanceMod, "int ()" )
+
 		.def("getRevolutionCounter", &CyCity::getRevolutionCounter, "int ()")
 		.def("setRevolutionCounter", &CyCity::setRevolutionCounter, "void ( int iNewValue )")
 		.def("changeRevolutionCounter", &CyCity::changeRevolutionCounter, "void ( int iChange )" )
@@ -196,12 +198,13 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getNumPopulationEmployed", &CyCity::getNumPopulationEmployed, "int ()")
 
 		.def("getBonusCommercePercentChanges", &CyCity::getBonusCommercePercentChanges, "int (eCommerce, eBuilding)")
-		.def("getBuildingCommerceTechChange", &CyCity::getBuildingCommerceTechChange, "int (eCommerce, eBuilding)")
+		.def("getBaseYieldRateFromBuilding100", &CyCity::getBaseYieldRateFromBuilding100, "int (iYield, iBuilding)")
 
 		.def("isAutomatedCanBuild", &CyCity::isAutomatedCanBuild, "bool ()")
 		.def("setAutomatedCanBuild", &CyCity::setAutomatedCanBuild, "void ()")
 
 		.def("getProperties", &CyCity::getProperties, python::return_value_policy<python::reference_existing_object>(), "CvProperties ()")
+		.def("getCityOutputHistory", &CyCity::getCityOutputHistory, python::return_value_policy<python::reference_existing_object>(), "CityOutputHistory ()")
 
 		.def("getBuildingListFilterActive", &CyCity::getBuildingListFilterActive, "bool (int)")
 		.def("setBuildingListFilterActive", &CyCity::setBuildingListFilterActive, "void (int,bool)")
@@ -224,5 +227,7 @@ void CyCityPythonInterface2(python::class_<CyCity>& x)
 		.def("getUnitListNumInGroup", &CyCity::getUnitListNumInGroup, "int (int)")
 		.def("getUnitListType", &CyCity::getUnitListType, "int (int,int)")
 
+		.def("AI_bestUnit", &CyCity::AI_bestUnit, "int ()")
+		.def("AI_bestUnitAI", &CyCity::AI_bestUnitAI, "int (UnitAITypes eUnitAITypes)")
 		;
 }

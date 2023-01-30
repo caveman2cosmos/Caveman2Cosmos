@@ -7,6 +7,8 @@
 #include "CvPopupInfo.h"
 #include "CvSelectionGroup.h"
 #include "CvUnit.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDLLUtilityIFaceBase.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyPlayer.h"
@@ -155,11 +157,6 @@ bool CyPlayer::isHuman() const
 bool CyPlayer::isHumanDisabled() const
 {
 	return m_pPlayer->isHumanDisabled();
-}
-
-bool CyPlayer::isBarbarian() const
-{
-	return m_pPlayer->isBarbarian();
 }
 
 bool CyPlayer::isNPC() const
@@ -402,11 +399,6 @@ int CyPlayer::getProjectProductionNeeded(int /*ProjectTypes*/ iIndex) const
 	return m_pPlayer->getProductionNeeded((ProjectTypes)iIndex);
 }
 
-bool CyPlayer::canBuild(const CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra, bool bTestVisible) const
-{
-	return m_pPlayer->canBuild(pPlot->getPlot(), (BuildTypes)eBuild, bTestEra, bTestVisible);
-}
-
 int /*RouteTypes*/ CyPlayer::getBestRoute(const CyPlot* pPlot) const
 {
 	return (int) m_pPlayer->getBestRoute(NULL != pPlot ? pPlot->getPlot() : NULL);
@@ -492,14 +484,10 @@ int CyPlayer::calculateBaseNetResearch() const
 	return m_pPlayer->calculateBaseNetResearch();
 }
 
-bool CyPlayer::canEverResearch(int /*TechTypes*/ eTech) const
-{
-	return m_pPlayer->canEverResearch((TechTypes)eTech);
-}
 
-bool CyPlayer::canResearch(int /*TechTypes*/ eTech) const
+bool CyPlayer::canResearch(const int iTech, const bool bRightNow) const
 {
-	return m_pPlayer->canResearch((TechTypes)eTech);
+	return m_pPlayer->canResearch((TechTypes)iTech, bRightNow);
 }
 
 int /*TechTypes*/ CyPlayer::getCurrentResearch() const
@@ -829,6 +817,11 @@ int CyPlayer::getRevIdxNational() const
 	return m_pPlayer->getRevIdxNational();
 }
 
+int CyPlayer::getRevIdxDistanceModifier() const
+{
+	return m_pPlayer->getRevIdxDistanceModifier();
+}
+
 bool CyPlayer::canFoundReligion() const
 {
 	return m_pPlayer->canFoundReligion();
@@ -1127,11 +1120,6 @@ int CyPlayer::getPlayerTextColorB() const
 int CyPlayer::getPlayerTextColorA() const
 {
 	return m_pPlayer->getPlayerTextColorA();
-}
-
-int CyPlayer::getSeaPlotYield(YieldTypes eIndex) const
-{
-	return m_pPlayer->getSeaPlotYield(eIndex);
 }
 
 int CyPlayer::getYieldRateModifier(YieldTypes eIndex) const
@@ -1559,14 +1547,9 @@ AttitudeTypes CyPlayer::AI_getAttitude(int /*PlayerTypes*/ ePlayer) const
 	//Fuyu catching AIAutoplay weirdness
 	if (m_pPlayer->getID() == (PlayerTypes)ePlayer)
 	{
-#ifdef _DEBUG
 		FErrorMsg("shouldn't call this function on ourselves (Python)");
-		throw new std::exception();
-#endif
 		return NO_ATTITUDE;
 	}
-	//Fuyu end
-
 	return m_pPlayer->AI_getAttitude((PlayerTypes)ePlayer);
 }
 
@@ -1750,16 +1733,6 @@ void CyPlayer::setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue)
 int64_t CyPlayer::getCulture() const
 {
 	return m_pPlayer->getCulture();
-}
-
-void CyPlayer::setCulture(int64_t iNewValue)
-{
-	m_pPlayer->setCulture(iNewValue);
-}
-
-void CyPlayer::changeCulture(int64_t iAddValue)
-{
-	m_pPlayer->changeCulture(iAddValue);
 }
 
 CvProperties* CyPlayer::getProperties() const

@@ -21,7 +21,8 @@ typedef std::vector<CombatResultRecord> TurnCombatResults;
 // Rolling record of this number of turns combat are kept for AI analysis
 #define COMBAT_RECORD_LENGTH 20
 
-class CvArea : bst::noncopyable
+class CvArea
+	: private bst::noncopyable // disable copy: we have owned pointers so we can't use the default copy implementation
 {
 //
 // Functions
@@ -166,11 +167,6 @@ public:
 	//	Return the number of units of the specified AI type recently lost per 100 turns (normalised figure)
 	//	If eUnit is NO_UNITAI all types will be tallied
 	int	getRecentCombatDeathRate(PlayerTypes ePlayer, UnitAITypes eUnitAIType) const;
-
-private:
-	// disable copy: we have owned pointers so we can't use the default copy implementation
-	CvArea(const CvArea&);
-	CvArea& operator=(const CvArea&);
 
 //
 // Variables

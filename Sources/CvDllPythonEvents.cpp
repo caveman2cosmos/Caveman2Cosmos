@@ -1,11 +1,20 @@
 #include "CvGameCoreDLL.h"
 #include "CvCity.h"
-#include "CvDllPythonEvents.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
+#include "CvInfos.h"
+#include "CvInitCore.h"
+#include "CvPlayerAI.h"
 #include "CvPlot.h"
 #include "CvPython.h"
 #include "CvSelectionGroup.h"
+#include "CvTeamAI.h"
 #include "CvUnit.h"
+#include "CvDLLEngineIFaceBase.h"
+#include "CvDLLInterfaceIFaceBase.h"
+#include "CvDllPythonEvents.h"
+#include "CvDLLUtilityIFaceBase.h"
+#include "NiPoint.h"
 
 
 namespace logging {
@@ -214,18 +223,18 @@ struct EventArgs
 		return *this;
 	}
 
-	template < class Ty_ >
-	EventArgs& arg(const std::string& name, const Cy::Array<Ty_>& value)
-	{
-		pyArgs.add(value);
-		std::vector<Ty_> arr;
-		for (int idx = 0; idx < value.len; ++idx)
-		{
-			arr.push_back(value.vals[idx]);
-		}
-		jsonArgs << logging::JsonValue(name, arr);
-		return *this;
-	}
+	//template < class Ty_ >
+	//EventArgs& arg(const std::string& name, const Cy::Array<Ty_>& value)
+	//{
+	//	pyArgs.add(value);
+	//	std::vector<Ty_> arr;
+	//	for (int idx = 0; idx < value.len; ++idx)
+	//	{
+	//		arr.push_back(value.vals[idx]);
+	//	}
+	//	jsonArgs << logging::JsonValue(name, arr);
+	//	return *this;
+	//}
 
 	template < class Ty_, class Ty2_ >
 	EventArgs& arg(const std::string& name, const Ty_& value, const Ty2_& valueJson)
@@ -657,26 +666,30 @@ void CvDllPythonEvents::reportCityRazed( CvCity *pCity, PlayerTypes ePlayer )
 	postEvent(eventData, "cityRazed");
 }
 
-void CvDllPythonEvents::reportCityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* pOldCity, bool bConquest, bool bTrade)
+void CvDllPythonEvents::reportCityAcquired(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* city, bool bConquest, bool bTrade, bool bAutoRaze)
 {
 	EventArgs eventData;
 	eventData
 		.arg("event", "cityAcquired")
 		.arg("eOldOwner", eOldOwner)
 		.arg("ePlayer", ePlayer)
-		.arg("pOldCity", pOldCity)
+		.arg("city", city)
 		.arg("bConquest", bConquest)
-		.arg("bTrade", bTrade);
+		.arg("bTrade", bTrade)
+		.arg("bAutoRaze", bAutoRaze);
 	postEvent(eventData, "cityAcquired");
 }
 
-void CvDllPythonEvents::reportCityAcquiredAndKept(PlayerTypes ePlayer, CvCity* pOldCity)
+void CvDllPythonEvents::reportCityAcquiredAndKept(PlayerTypes eOldOwner, PlayerTypes ePlayer, CvCity* city, bool bConquest, bool bTrade)
 {
 	EventArgs eventData;
 	eventData
 		.arg("event", "cityAcquiredAndKept")
+		.arg("eOldOwner", eOldOwner)
 		.arg("ePlayer", ePlayer)
-		.arg("pOldCity", pOldCity);
+		.arg("city", city)
+		.arg("bConquest", bConquest)
+		.arg("bTrade", bTrade);
 	postEvent(eventData, "cityAcquiredAndKept");
 }
 
@@ -808,18 +821,6 @@ void CvDllPythonEvents::reportSelectionGroupPushMission(const CvSelectionGroup* 
 	postEvent(eventData, "selectionGroupPushMission");
 }
 
-void CvDllPythonEvents::reportUnitMove(CvPlot* pPlot, CvUnit* pUnit, CvPlot* pOldPlot)
-{
-	EventArgs eventData;
-	eventData
-		.no_json()
-		.arg("event", "unitMove")
-		.arg("pPlot", pPlot)
-		.arg("pUnit", pUnit)
-		.arg("pOldPlot", pOldPlot);
-	postEvent(eventData, "unitMove");
-}
-
 void CvDllPythonEvents::reportUnitCreated(CvUnit* pUnit)
 {
 	EventArgs eventData;
@@ -849,7 +850,6 @@ void CvDllPythonEvents::reportUnitKilled(CvUnit* pUnit, PlayerTypes eAttacker)
 	postEvent(eventData, "unitKilled");
 }
 
-// BUG - Unit Captured Event - start
 void CvDllPythonEvents::reportUnitCaptured(PlayerTypes eFromPlayer, UnitTypes eUnitType, CvUnit* pNewUnit)
 {
 	EventArgs eventData;
@@ -859,16 +859,6 @@ void CvDllPythonEvents::reportUnitCaptured(PlayerTypes eFromPlayer, UnitTypes eU
 		.arg("eUnitType", eUnitType)
 		.arg("pNewUnit", pNewUnit);
 	postEvent(eventData, "unitCaptured");
-}
-// BUG - Unit Captured Event - end
-
-void CvDllPythonEvents::reportUnitLost(CvUnit* pUnit)
-{
-	EventArgs eventData;
-	eventData
-		.arg("event", "unitLost")
-		.arg("pUnit", pUnit);
-	postEvent(eventData, "unitLost");
 }
 
 void CvDllPythonEvents::reportUnitPromoted(CvUnit* pUnit, PromotionTypes ePromotion)
@@ -881,7 +871,6 @@ void CvDllPythonEvents::reportUnitPromoted(CvUnit* pUnit, PromotionTypes ePromot
 	postEvent(eventData, "unitPromoted");
 }
 
-// BUG - Upgrade Unit Event - start
 void CvDllPythonEvents::reportUnitUpgraded(CvUnit* pOldUnit, CvUnit* pNewUnit, int iPrice)
 {
 	EventArgs eventData;
@@ -891,16 +880,6 @@ void CvDllPythonEvents::reportUnitUpgraded(CvUnit* pOldUnit, CvUnit* pNewUnit, i
 		.arg("pNewUnit", pNewUnit)
 		.arg("iPrice", iPrice);
 	postEvent(eventData, "unitUpgraded");
-}
-// BUG - Upgrade Unit Event - end
-
-void CvDllPythonEvents::reportUnitSelected(CvUnit* pUnit)
-{
-	EventArgs eventData;
-	eventData
-		.arg("event", "unitSelected")
-		.arg("pUnit", pUnit);
-	postEvent(eventData, "unitSelected");
 }
 
 void CvDllPythonEvents::reportUnitRename(CvUnit *pUnit)
@@ -1174,7 +1153,6 @@ void CvDllPythonEvents::reportPlayerChangeStateReligion(PlayerTypes ePlayerID, R
 	postEvent(eventData, "playerChangeStateReligion");
 }
 
-
 void CvDllPythonEvents::reportPlayerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount)
 {
 	EventArgs eventData;
@@ -1185,20 +1163,6 @@ void CvDllPythonEvents::reportPlayerGoldTrade(PlayerTypes eFromPlayer, PlayerTyp
 		.arg("iAmount", iAmount);
 	postEvent(eventData, "playerGoldTrade");
 }
-
-// BUG - Revolution Event - start
-void CvDllPythonEvents::reportPlayerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics)
-{
-	EventArgs eventData;
-	eventData
-		.arg("event", "playerRevolution")
-		.arg("ePlayerID", ePlayerID)
-		.arg("iAnarchyLength", iAnarchyLength)
-		.arg("paeOldCivics", Cy::Array<int>((const int*)paeOldCivics, GC.getNumCivicOptionInfos()))
-		.arg("paeNewCivics", Cy::Array<int>((const int*)paeNewCivics, GC.getNumCivicOptionInfos()));
-	postEvent(eventData, "playerRevolution");
-}
-// BUG - Revolution Event - end
 
 void CvDllPythonEvents::reportGenericEvent(const char* szEventName, void *pyArgs)
 {
@@ -1217,7 +1181,6 @@ void CvDllPythonEvents::preSave()
 		.arg("event", "OnPreSave");
 	postEvent(eventData, "OnPreSave");
 }
-
 
 void CvDllPythonEvents::reportChangeTeam(TeamTypes eOld, TeamTypes eNew)
 {

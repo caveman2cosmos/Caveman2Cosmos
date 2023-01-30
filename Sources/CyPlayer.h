@@ -53,7 +53,6 @@ public:
 	bool hasTrait(int /*TraitTypes*/ iIndex) const;
 	bool isHuman() const;
 	bool isHumanDisabled() const;
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	std::wstring getName() const;
@@ -113,7 +112,6 @@ public:
 	int getBuildingProductionNeeded(int /*BuildingTypes*/ iIndex) const;
 	int getProjectProductionNeeded(int /*ProjectTypes*/ iIndex) const;
 
-	bool canBuild(const CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra, bool bTestVisible) const;
 	int /*RouteTypes*/ getBestRoute(const CyPlot* pPlot) const;
 
 	int calculateTotalYield(int /*YieldTypes*/ eYield) const;
@@ -137,8 +135,7 @@ public:
 	int calculateResearchRate(int /*TechTypes*/ eTech) const;
 	int calculateResearchModifier(int /*TechTypes*/ eTech) const;
 	int calculateBaseNetResearch() const;
-	bool canEverResearch(int /*TechTypes*/ eTech) const;
-	bool canResearch(int /*TechTypes*/ eTech) const;
+	bool canResearch(const int iTech, const bool bRightNow) const;
 	int /* TechTypes */ getCurrentResearch() const;
 	bool isCurrentResearchRepeat() const;
 	int getResearchTurnsLeft(int /*TechTypes*/ eTech, bool bOverflow) const;
@@ -220,6 +217,8 @@ public:
 	bool isNonStateReligionCommerce() const;
 
 	int getRevIdxNational() const;
+	int getRevIdxDistanceModifier() const;
+
 	bool canFoundReligion() const;
 
 	int getNumMilitaryUnits() const;
@@ -297,7 +296,6 @@ public:
 	int getPlayerTextColorB() const;
 	int getPlayerTextColorA() const;
 
-	int getSeaPlotYield(YieldTypes eIndex) const;
 	int getYieldRateModifier(YieldTypes eIndex) const;
 	int getCommercePercent(int /*CommerceTypes*/ eIndex) const;
 	void changeCommercePercent(CommerceTypes eIndex, int iChange);
@@ -436,8 +434,6 @@ public:
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);
 
 	int64_t getCulture() const;
-	void setCulture(int64_t iNewValue);
-	void changeCulture(int64_t iAddValue);
 
 	CvProperties* getProperties() const;
 

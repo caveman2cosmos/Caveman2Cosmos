@@ -9,6 +9,7 @@ Created:	2009-01-21
 **********************************************************************/
 
 #include "CvGameCoreDLL.h"
+#include "CvBugOptions.h"
 #include "CvGlobals.h"
 #include "CvPython.h"
 
@@ -18,10 +19,6 @@ void setIsBug()
 {
 	logging::logMsg("bull.log", "isBug: true");
 	g_bIsBug = true;
-
-	// set the unit and building filters to default state once Bug is available
-	UnitFilterList::setFilterActiveAll(UNIT_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUntrainableUnits", false));
-	BuildingFilterList::setFilterActiveAll(BUILDING_FILTER_HIDE_UNBUILDABLE, getBugOptionBOOL("CityScreen__HideUnconstructableBuildings", false));
 }
 
 

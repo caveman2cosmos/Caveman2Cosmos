@@ -9,6 +9,7 @@
 			<TriggerTexts>
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TOXCATL</Text>
+					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
 			<EventArt>Art/Event_Images/Toxcatl.dds</EventArt>

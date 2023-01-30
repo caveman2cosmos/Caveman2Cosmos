@@ -145,8 +145,8 @@ public:
 	virtual bool Uncompress(uint8_t** bufIn, unsigned long* bufLenIn, unsigned long maxBufLenOut, int offset=0) = 0;
 	virtual bool Compress(uint8_t** bufIn, unsigned long* bufLenIn, int offset=0) = 0;
 
-	virtual void NiTextOut(const TCHAR* szText) = 0;
-	virtual void MessageBox(const TCHAR* szText, const TCHAR* szCaption) = 0;
+	virtual void NiTextOut(const char* szText) = 0;
+	virtual void MessageBox(const char* szText, const char* szCaption) = 0;
 	virtual void SetDone(bool bDone) = 0;
 	virtual bool GetDone() = 0;
 	virtual bool GetAutorun() = 0;
@@ -163,7 +163,7 @@ public:
 	virtual void endMPDiplomacy() = 0;
 
 	virtual bool getAudioDisabled() = 0;
-	virtual int getAudioTagIndex(const TCHAR* szTag, int iScriptType = -1) = 0;
+	virtual int getAudioTagIndex(const char* szTag, int iScriptType = -1) = 0;
 
 	virtual void DoSound( int iScriptId ) = 0;
 	virtual void Do3DSound( int iScriptId, NiPoint3 vPosition ) = 0;
@@ -171,38 +171,38 @@ public:
 	virtual FDataStreamBase* createFileStream() = 0;
 	virtual void destroyDataStream(FDataStreamBase*& stream) = 0;
 
-	virtual CvCacheObject* createGlobalTextCacheObject(const TCHAR* szCacheFileName) = 0;
-	virtual CvCacheObject* createGlobalDefinesCacheObject(const TCHAR* szCacheFileName) = 0;
-	virtual CvCacheObject* createTechInfoCacheObject(const TCHAR* szCacheFileName) = 0;
-	virtual CvCacheObject* createBuildingInfoCacheObject(const TCHAR* szCacheFileName) = 0;
-	virtual CvCacheObject* createUnitInfoCacheObject(const TCHAR* szCacheFileName) = 0;
-	virtual CvCacheObject* createLeaderHeadInfoCacheObject(const TCHAR* szCacheFileName) = 0;
-	virtual CvCacheObject* createCivilizationInfoCacheObject(const TCHAR* szCacheFileName) = 0;
-	virtual CvCacheObject* createPromotionInfoCacheObject(const TCHAR* szCacheFileName) = 0;
-	virtual CvCacheObject* createDiplomacyInfoCacheObject(const TCHAR* szCacheFileName) = 0;
-	virtual CvCacheObject* createEventInfoCacheObject(const TCHAR* szCacheFileName) = 0;
-	virtual CvCacheObject* createEventTriggerInfoCacheObject(const TCHAR* szCacheFileName) = 0;
+	virtual CvCacheObject* createGlobalTextCacheObject(const char* szCacheFileName) = 0;
+	virtual CvCacheObject* createGlobalDefinesCacheObject(const char* szCacheFileName) = 0;
+	virtual CvCacheObject* createTechInfoCacheObject(const char* szCacheFileName) = 0;
+	virtual CvCacheObject* createBuildingInfoCacheObject(const char* szCacheFileName) = 0;
+	virtual CvCacheObject* createUnitInfoCacheObject(const char* szCacheFileName) = 0;
+	virtual CvCacheObject* createLeaderHeadInfoCacheObject(const char* szCacheFileName) = 0;
+	virtual CvCacheObject* createCivilizationInfoCacheObject(const char* szCacheFileName) = 0;
+	virtual CvCacheObject* createPromotionInfoCacheObject(const char* szCacheFileName) = 0;
+	virtual CvCacheObject* createDiplomacyInfoCacheObject(const char* szCacheFileName) = 0;
+	virtual CvCacheObject* createEventInfoCacheObject(const char* szCacheFileName) = 0;
+	virtual CvCacheObject* createEventTriggerInfoCacheObject(const char* szCacheFileName) = 0;
 
-	virtual CvCacheObject* createCivicInfoCacheObject(const TCHAR* szCacheFileName) = 0;
-	virtual CvCacheObject* createHandicapInfoCacheObject(const TCHAR* szCacheFileName) = 0;
-	virtual CvCacheObject* createBonusInfoCacheObject(const TCHAR* szCacheFileName) = 0;
-	virtual CvCacheObject* createImprovementInfoCacheObject(const TCHAR* szCacheFileName) = 0;
+	virtual CvCacheObject* createCivicInfoCacheObject(const char* szCacheFileName) = 0;
+	virtual CvCacheObject* createHandicapInfoCacheObject(const char* szCacheFileName) = 0;
+	virtual CvCacheObject* createBonusInfoCacheObject(const char* szCacheFileName) = 0;
+	virtual CvCacheObject* createImprovementInfoCacheObject(const char* szCacheFileName) = 0;
 
-	virtual bool cacheRead(CvCacheObject* pCache, const TCHAR* szSourceFileName=NULL) = 0;
+	virtual bool cacheRead(CvCacheObject* pCache, const char* szSourceFileName=NULL) = 0;
 	virtual bool cacheWrite(CvCacheObject* pCache) = 0;
 	virtual void destroyCache(CvCacheObject*& pCache) = 0;
 
 	virtual bool fileManagerEnabled() = 0;
 
-	virtual void logMsg(const TCHAR* pLogFileName, const TCHAR* pBuf, bool bWriteToConsole=false, bool bTimeStamp=true) = 0;
+	virtual void logMsg(const char* pLogFileName, const char* pBuf, bool bWriteToConsole=false, bool bTimeStamp=true) = 0;
 	virtual void logMemState(const char* msg) = 0;
 
 	virtual int getSymbolID(int iID) = 0;
 	virtual void setSymbolID(int iID, int iValue) = 0;
 
 	virtual CvWString getText(CvWString szIDTag, ...) = 0;
-	virtual CvWString getObjectText(CvWString szIDTag, uint uiForm, bool bNoSubs = false) = 0;
-	virtual void addText(const TCHAR* szIDTag, const wchar_t* szString, const wchar_t* szGender = L"N", const wchar_t* szPlural = L"false") = 0;
+	virtual CvWString getObjectText(CvWString szIDTag, uint32_t uiForm, bool bNoSubs = false) = 0;
+	virtual void addText(const char* szIDTag, const wchar_t* szString, const wchar_t* szGender = L"N", const wchar_t* szPlural = L"false") = 0;
 	virtual uint getNumForms(CvWString szIDTag) = 0;
 
 	virtual WorldSizeTypes getWorldSize() = 0;
@@ -222,7 +222,7 @@ public:
 	virtual bool isGameInitializing() = 0;
 
 	virtual void enumerateFiles(std::vector<CvString>& files, const char* szPattern) = 0;
-	virtual void enumerateModuleFiles(std::vector<CvString>& aszFiles, const CvString& refcstrRootDirectory,	const CvString&	refcstrModularDirectory, const CvString& refcstrExtension, bool bSearchSubdirectories) = 0;
+	virtual void enumerateModuleFiles(std::vector<CvString>& aszFiles, const CvString& refcstrRootDirectory, const CvString& refcstrModularDirectory, const CvString& refcstrExtension, bool bSearchSubdirectories) = 0;
 
 	virtual void SaveGame(SaveGameTypes eSaveGame) = 0;
 	virtual void LoadGame() = 0;

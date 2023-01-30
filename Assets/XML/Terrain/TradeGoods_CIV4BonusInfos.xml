@@ -10,7 +10,6 @@
 			<TechReveal>TECH_PICTOGRAPHS</TechReveal>
 			<TechCityTrade>TECH_PICTOGRAPHS</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_CRYSTAL_GLASSWARE</Type>
@@ -21,7 +20,6 @@
 			<TechReveal>TECH_LEAD_GLASS</TechReveal>
 			<TechCityTrade>TECH_LEAD_GLASS</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FAKE_GEMS</Type>
@@ -32,7 +30,6 @@
 			<TechReveal>TECH_ORNAMENTATION</TechReveal>
 			<TechCityTrade>TECH_ORNAMENTATION</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_FINE_STONEWARE</Type>
@@ -43,7 +40,6 @@
 			<TechReveal>TECH_BARTER</TechReveal>
 			<TechCityTrade>TECH_BARTER</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HAWAIIAN_SURFBOARDS</Type>
@@ -54,7 +50,6 @@
 			<TechReveal>TECH_MARTIAL_ARTS</TechReveal>
 			<TechCityTrade>TECH_MARTIAL_ARTS</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HIT_MOVIES</Type>
@@ -65,7 +60,6 @@
 			<TechReveal>TECH_MOTION_PICTURES</TechReveal>
 			<TechCityTrade>TECH_MOTION_PICTURES</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HIT_MUSICALS</Type>
@@ -76,7 +70,6 @@
 			<TechReveal>TECH_INCANDESCENT_LIGHTING</TechReveal>
 			<TechCityTrade>TECH_INCANDESCENT_LIGHTING</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HIT_SINGLES</Type>
@@ -87,7 +80,6 @@
 			<TechReveal>TECH_ELECTRONICS</TechReveal>
 			<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_JADE_DEATH_MASKS</Type>
@@ -98,7 +90,6 @@
 			<TechReveal>TECH_PERSONAL_ADORNMENTS</TechReveal>
 			<TechCityTrade>TECH_PERSONAL_ADORNMENTS</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LIANGZHU_JADES</Type>
@@ -109,7 +100,6 @@
 			<TechReveal>TECH_BARTER</TechReveal>
 			<TechCityTrade>TECH_BARTER</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MING_VASE</Type>
@@ -120,7 +110,6 @@
 			<TechReveal>TECH_FREE_ARTISTRY</TechReveal>
 			<TechCityTrade>TECH_FREE_ARTISTRY</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_OLMEC_JADE_FIGURINES</Type>
@@ -131,7 +120,6 @@
 			<TechReveal>TECH_BARTER</TechReveal>
 			<TechCityTrade>TECH_BARTER</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_OSTRICH_FEATHERS</Type>
@@ -142,18 +130,6 @@
 			<TechReveal>TECH_POULTRY_DOMESTICATION</TechReveal>
 			<TechCityTrade>TECH_POULTRY_DOMESTICATION</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
-		</BonusInfo>
-		<BonusInfo>
-			<Type>BONUS_OSTRICH_LEATHER</Type>
-			<Description>TXT_KEY_BONUS_OSTRICH_LEATHER</Description>
-			<Civilopedia>TXT_KEY_BONUS_OSTRICH_LEATHER_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_OSTRICH_LEATHER</ArtDefineTag>
-			<TechReveal>TECH_POULTRY_DOMESTICATION</TechReveal>
-			<TechCityTrade>TECH_POULTRY_DOMESTICATION</TechCityTrade>
-			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_RED_AND_BLACK_CERAMICS</Type>
@@ -164,7 +140,6 @@
 			<TechReveal>TECH_GLASS_BLOWING</TechReveal>
 			<TechCityTrade>TECH_GLASS_BLOWING</TechCityTrade>
 			<iHealth>1</iHealth>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SHANG_JADE_RITUAL_ITEMS</Type>
@@ -175,7 +150,6 @@
 			<TechReveal>TECH_SACRIFICE_CULT</TechReveal>
 			<TechCityTrade>TECH_SACRIFICE_CULT</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TERRA_SIGILLATA</Type>
@@ -186,7 +160,6 @@
 			<TechReveal>TECH_IRON_WORKING</TechReveal>
 			<TechCityTrade>TECH_IRON_WORKING</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WINE_CHAMPAGNE</Type>
@@ -197,7 +170,6 @@
 			<TechReveal>TECH_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WINE_VINTAGE_RED</Type>
@@ -209,7 +181,6 @@
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_WINE_VINTAGE_WHITE</Type>
@@ -220,7 +191,6 @@
 			<TechReveal>TECH_ALCHEMY</TechReveal>
 			<TechCityTrade>TECH_ALCHEMY</TechCityTrade>
 			<iHappiness>1</iHappiness>
-			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	</BonusInfos>
 </Civ4BonusInfos>

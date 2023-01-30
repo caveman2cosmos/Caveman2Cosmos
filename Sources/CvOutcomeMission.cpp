@@ -9,14 +9,13 @@
 #include "CvGameCoreDLL.h"
 #include "CvGameObject.h"
 #include "CvGlobals.h"
-#include "CvOutcomeList.h"
 #include "CvOutcomeMission.h"
-#include "CvProperties.h"
 #include "CvPlayerAI.h"
 #include "CvUnit.h"
 #include "CvXMLLoadUtility.h"
 #include "CheckSum.h"
 #include "IntExpr.h"
+#include "BoolExpr.h"
 
 CvOutcomeMission::CvOutcomeMission() :
 m_eMission(NO_MISSION),
@@ -174,7 +173,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer& szBuffer, const CvUni
 	m_OutcomeList.buildDisplayString(szBuffer, *pUnit);
 }
 
-void CvOutcomeMission::execute(CvUnit* pUnit)
+void CvOutcomeMission::execute(CvUnit* pUnit) const
 {
 	if (m_iCost)
 	{

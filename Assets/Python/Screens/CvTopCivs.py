@@ -105,8 +105,6 @@ class CvTopCivs:
 					aTopCivList.append([CyPlayer.getPower(), iPlayer, CyPlayer])
 
 				if szType == TRNSLTR.getText("TXT_KEY_TOPCIVS_TECH", ()):
-					iNumTotalTechs = GC.getNumTechInfos()
-
 					iPlayerNumTechs = 0
 					CyTeam = GC.getTeam(CyPlayer.getTeam())
 

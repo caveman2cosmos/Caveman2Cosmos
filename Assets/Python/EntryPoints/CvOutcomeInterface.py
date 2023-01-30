@@ -456,72 +456,6 @@ def doAddSettledSlaveMilitary(argsList):
 
 	pCity.changeFreeSpecialistCount(GC.getInfoTypeForString("SPECIALIST_SETTLED_SLAVE_MILITARY"),1)
 
-def doSacrificeCaptive(argsList):
-	pUnit = argsList[0]
-
-	if pUnit == None:
-		return # False call
-
-	pPlayer = GC.getPlayer(pUnit.getOwner())
-	pCity = pUnit.plot().getPlotCity()
-
-	if pCity == None:
-		return # False call
-
-	iGoldenAgeLength = 0
-	iGoldenAgeLengthModifier = 1
-
-	iUnitType = pUnit.getUnitType()
-	if iUnitType == GC.getInfoTypeForString("UNIT_CAPTIVE_NEANDERTHAL"):
-		iGoldenAgeLengthModifier = 0
-	elif iUnitType == GC.getInfoTypeForString("UNIT_CAPTIVE_MILITARY"):
-		iGoldenAgeLengthModifier = 1
-	elif iUnitType == GC.getInfoTypeForString("UNIT_CAPTIVE_CIVILIAN"):
-		iGoldenAgeLengthModifier = 2
-	else:
-		return # bad call
-
-	if  pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_SACRIFICIAL_ALTAR")) > 0:
-		iGoldenAgeLength += 1
-	elif pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE_ALTAR")) > 0:
-		iGoldenAgeLength += 2
-
-	iDruid = GC.getInfoTypeForString("RELIGION_DRUIDIC_TRADITIONS")
-	iMeasoamerican = GC.getInfoTypeForString("RELIGION_NAGHUALISM")
-	iStateReligion = pUnit.getStateReligion()
-
-	if iStateReligion == iDruid :
-		if pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_DRUID_SHRINE")) > 0:
-			iGoldenAgeLengthModifier = iGoldenAgeLengthModifier + 1
-		if pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_DRUID_CATHEDRAL2")) > 0:
-			iGoldenAgeLength = iGoldenAgeLength + 3
-		if pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_DRUID_CATHEDRAL")) > 0:
-			iGoldenAgeLength = iGoldenAgeLength + 2
-		if pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_DRUID_MONASTERY")) > 0:
-			iGoldenAgeLength = iGoldenAgeLength + 1
-	else:
-		if pCity.isHasReligion(iDruid):
-			if pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_DRUID_SHRINE")) > 0 or pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_DRUID_CATHEDRAL2")) > 0 or pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_DRUID_CATHEDRAL")) > 0 or pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_DRUID_MONASTERY")) > 0:
-				iGoldenAgeLength = iGoldenAgeLength + 1
-
-	if iStateReligion == iMeasoamerican :
-		if pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_MESOAMERICAN_SHRINE")) > 0:
-			iGoldenAgeLengthModifier = iGoldenAgeLengthModifier + 1
-		if pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_MESOAMERICAN_CATHEDRAL")) > 0:
-			iGoldenAgeLength = iGoldenAgeLength + 3
-		if pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_MESOAMERICAN_MONASTERY")) > 0:
-			iGoldenAgeLength = iGoldenAgeLength + 2
-		if pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_MESOAMERICAN_TEMPLE")) > 0:
-			iGoldenAgeLength = iGoldenAgeLength + 1
-	else:
-		if pCity.isHasReligion(iMeasoamerican):
-			if pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_MESOAMERICAN_SHRINE")) > 0 or pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_MESOAMERICAN_CATHEDRAL")) > 0 or pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_MESOAMERICAN_MONASTERY")) > 0 or pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_MESOAMERICAN_TEMPLE")) > 0:
-				iGoldenAgeLength = iGoldenAgeLength + 1
-
-	iTotalGoldenAgeLength = iGoldenAgeLength * iGoldenAgeLengthModifier
-	pPlayer.changeGoldenAgeTurns(iTotalGoldenAgeLength)
-
-
 ################ SPREAD RESOURCES ###################
 
 def canBuildCowBonus(argsList):
@@ -870,116 +804,116 @@ def canGoToEarth(argsList):
 
 def goToEarth(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_EARTH).moveUnitToMap(pUnit, 1)
 
 def canGoToSubterrain(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_SUBTERRAIN
 
 def goToSubterrain(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_SUBTERRAIN).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_SUBTERRAIN).moveUnitToMap(pUnit, 1)
 
 def canGoToCislunarSpace(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_CISLUNAR
 
 def goToCislunarSpace(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_CISLUNAR).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_CISLUNAR).moveUnitToMap(pUnit, 1)
 
 def canGoToMoon(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_MOON
 
 def goToMoon(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_MOON).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_MOON).moveUnitToMap(pUnit, 1)
 
 def canGoToMars(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_MARS
 
 def goToMars(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_MARS).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_MARS).moveUnitToMap(pUnit, 1)
 
 def canGoToVenus(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_VENUS
 
 def goToVenus(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_VENUS).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_VENUS).moveUnitToMap(pUnit, 1)
 
 def canGoToInnerSolarSystem(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_INNER_SOLAR_SYSTEM
 
 def goToInnerSolarSystem(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_INNER_SOLAR_SYSTEM).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_INNER_SOLAR_SYSTEM).moveUnitToMap(pUnit, 1)
 
 def canGoToOuterSolarSystem(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_OUTER_SOLAR_SYSTEM
 
 def goToOuterSolarSystem(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_OUTER_SOLAR_SYSTEM).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_OUTER_SOLAR_SYSTEM).moveUnitToMap(pUnit, 1)
 
 def canGoToTitan(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_TITAN
 
 def goToTitan(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_TITAN).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_TITAN).moveUnitToMap(pUnit, 1)
 
 def canGoToTransneptunianSpace(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_TRANSNEPTUNIAN
 
 def goToTransneptunianSpace(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_TRANSNEPTUNIAN).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_TRANSNEPTUNIAN).moveUnitToMap(pUnit, 1)
 
 def canGoToNearbyStars(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_NEARBY_STARS
 
 def goToNearbyStars(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_NEARBY_STARS).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_NEARBY_STARS).moveUnitToMap(pUnit, 1)
 
 def canGoToOrionArm(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_ORION_ARM
 
 def goToOrionArm(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_ORION_ARM).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_ORION_ARM).moveUnitToMap(pUnit, 1)
 
 def canGoToMilkyWay(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_MILKY_WAY
 
 def goToMilkyWay(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_MILKY_WAY).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_MILKY_WAY).moveUnitToMap(pUnit, 1)
 
 def canGoToLocalGroup(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_LOCAL_GROUP
 
 def goToLocalGroup(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_LOCAL_GROUP).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_LOCAL_GROUP).moveUnitToMap(pUnit, 1)
 
 def canGoToVirgoSupercluster(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_VIRGO_SUPERCLUSTER
 
 def goToVirgoSupercluster(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_VIRGO_SUPERCLUSTER).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_VIRGO_SUPERCLUSTER).moveUnitToMap(pUnit, 1)
 
 def canGoToUniverse(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_UNIVERSE
 
 def goToUniverse(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_UNIVERSE).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_UNIVERSE).moveUnitToMap(pUnit, 1)
 
 def canGoToDistantCosmos(argsList):
 	return GAME.getCurrentMap() != MapTypes.MAP_DISTANT_COSMOS
 
 def goToDistantCosmos(argsList):
 	pUnit = argsList[0]
-	GC.getMapByIndex(MapTypes.MAP_DISTANT_COSMOS).moveUnitToMap(pUnit)
+	GC.getMapByIndex(MapTypes.MAP_DISTANT_COSMOS).moveUnitToMap(pUnit, 1)

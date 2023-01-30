@@ -26,7 +26,7 @@ public:
 	void doCommand(CommandTypes eCommand, int iData1, int iData2);
 	bool isActionRecommended(int i) const;
 
-	bool canMoveInto(const CyPlot& kPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad) const;
+	bool canEnterPlot(const CyPlot& kPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad) const;
 	bool isAutoUpgrading() const;
 	bool isAutoPromoting() const;
 	bool canHeal(const CyPlot& kPlot) const;
@@ -42,17 +42,15 @@ public:
 	int getGreatWorkCulture(const CyPlot& kPlot) const;
 	int getEspionagePoints(const CyPlot& kPlot) const;
 
-	bool canBuild(const CyPlot& kPlot, int /*BuildTypes*/ eBuild, bool bTestVisible) const;
 	bool canUpgrade(int /*UnitTypes*/ eUnit, bool bTestVisible) const;
 
 	int /*HandicapTypes*/ getHandicapType() const;
 	int /*CivilizationTypes*/ getCivilizationType() const;
 	int /*SpecialUnitTypes*/ getSpecialUnitType() const;
-	int /*UnitTypes*/ getCaptureUnitType() const;
+	UnitTypes getCaptureUnitType() const;
 	int /*UnitCombatTypes*/ getUnitCombatType() const;
 	DomainTypes getDomainType() const;
 
-	bool isBarbarian() const;
 	bool isNPC() const;
 	bool isHominid() const;
 	bool isHuman() const;
@@ -70,7 +68,7 @@ public:
 	bool isFound() const;
 	bool isGoldenAge() const;
 
-	bool isFighting() const;
+	bool isInBattle() const;
 	int getMaxHP() const;
 	int getHP() const;
 	bool isHurt() const;
@@ -92,8 +90,8 @@ public:
 
 	int bombardRate() const;
 
-	int /*SpecialUnitTypes*/ specialCargo() const;
-	int /*DomainTypes*/ domainCargo() const;
+	int /*SpecialUnitTypes*/ getSpecialCargo() const;
+	int /*DomainTypes*/ getDomainCargo() const;
 	int cargoSpace() const;
 	void changeCargoSpace(int iChange);
 	bool isFull() const;
@@ -121,7 +119,7 @@ public:
 	void changeMoves(int iChange);
 	void finishMoves();
 	int getExperience() const;
-	void setExperience(int iNewValue, int iMax);
+	void setExperience(int iNewValue);
 	void changeExperience(int iChange, int iMax, bool bFromCombat, bool bInBorders, bool bUpdateGlobal);
 	int getLevel() const;
 	void setLevel(int iNewLevel);
@@ -133,8 +131,6 @@ public:
 	void setFortifyTurns(int iNewValue);
 
 	bool isRiver() const;
-
-	int getExtraMoves() const;
 
 	int getRevoltProtection() const;
 	int getPillageChange() const;
@@ -161,7 +157,7 @@ public:
 
 	CyUnit* getTransportUnit() const;
 	bool isCargo() const;
-	void setTransportUnit(const CyUnit& kTransportUnit);
+	void setTransportUnit(const CyUnit& kTransportUnit, const bool bLoad);
 
 	std::wstring getName() const;
 	std::wstring getNameForm(int iForm) const;
@@ -191,8 +187,8 @@ public:
 
 	void setCommander(bool bNewValue);
 	bool isCommander() const;
-	int controlPointsLeft() const;
-	int controlPoints() const;
+	int getControlPointsLeft() const;
+	int getControlPoints() const;
 	float getRealExperience() const;
 
 protected:

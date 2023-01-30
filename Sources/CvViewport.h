@@ -81,7 +81,7 @@ public:
 	void setMapOffset(int iX, int iY);
 	void setOffsetToShow(int iX, int iY);	//	Make this the centre or near as appropiate
 	void resizeForMap();
-	void bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit = NULL, bool bLookAt = true, bool bForceCenter = false, bool bDisplayCityScreen = false, bool bSelectCity = false, bool bAddSelectedCity = false);
+	void bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit = NULL, bool bForceCenter = false, bool bDisplayCityScreen = false, bool bSelectCity = false, bool bAddSelectedCity = false);
 	void centerOnSelection();
 	void panLeft();
 	void panRight();
@@ -154,7 +154,7 @@ public:
 					iResult -= m_pMap->getGridWidth();
 				}
 
-				FASSERT_BOUNDS(0, m_iXSize, iResult)
+				FASSERT_BOUNDS(0, m_iXSize, iResult);
 
 				return iResult;
 			}
@@ -190,7 +190,7 @@ public:
 					iResult -= m_pMap->getGridHeight();
 				}
 
-				FASSERT_BOUNDS(0, m_iYSize, iResult)
+				FASSERT_BOUNDS(0, m_iYSize, iResult);
 
 				return iResult;
 			}
@@ -387,7 +387,7 @@ private:
 	bool							m_bDisplayCityScreen;
 	bool							m_bSelectCity;
 	bool							m_bAddSelectedCity;
-	int								m_countdown;
+	//int							m_countdown;
 	ViewportGraphicalSpoofingState	m_eSpoofHiddenGraphics;
 	DWORD							m_spoofTransitionStartTickCount;
 };

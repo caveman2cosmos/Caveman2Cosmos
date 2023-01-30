@@ -225,7 +225,7 @@
 				<BonusType>BONUS_IRON_WARES</BonusType>
 				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
-			<iCost>885</iCost>
+			<iCost>818</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
 			<iBaseUpkeep>2</iBaseUpkeep>
 			<iMoves>5</iMoves>
@@ -251,7 +251,6 @@
 				</UnitCombatMod>
 			</UnitCombatMods>
 			<SpecialCargo>SPECIALUNIT_PEOPLE</SpecialCargo>
-			<SMSpecialCargo>SPECIALUNIT_PEOPLE</SMSpecialCargo>
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>4</iAsset>

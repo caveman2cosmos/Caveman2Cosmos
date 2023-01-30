@@ -697,11 +697,11 @@ class probabilityArray:
 # multi dimensional array wrapper
 # usage:
 # - creating array:
-# a = mdArray([5,9],0) #creates 5�9 array with data:0 in every cell
-# b = mdArray([4,2,6],"nodata") #creates 4�2�6 array with data:"nodata" in every cell
+# a = mdArray([5,9],0) #creates 59 array with data:0 in every cell
+# b = mdArray([4,2,6],"nodata") #creates 426 array with data:"nodata" in every cell
 # - changing data:
-# a[0,1] = 5 #change 0�1 cell to 5
-# b[3,1,5] = "some data" #change 3�1�5 cell to "some data"
+# a[0,1] = 5 #change 01 cell to 5
+# b[3,1,5] = "some data" #change 315 cell to "some data"
 # - also:
 # print a[0,1]
 # print len(a)
@@ -2231,7 +2231,7 @@ def generatePlotTypes():
 			offset = world.getOffset([x,y])
 			if peakStartProbability > 0:
 				#collect peaks
-				#check if land area is 9�9 empty
+				#check if land area is 99 empty
 				if world[x,y] == PlotTypes.PLOT_LAND and world[x-1,y] == PlotTypes.PLOT_LAND and world[x+1,y] == PlotTypes.PLOT_LAND and world[x,y-1] == PlotTypes.PLOT_LAND and world[x,y+1] == PlotTypes.PLOT_LAND and (not world[x+1,y+1] == PlotTypes.PLOT_PEAK) and (not world[x-1,y+1] == PlotTypes.PLOT_PEAK) and (not world[x-1,y-1] == PlotTypes.PLOT_PEAK) and (not world[x+1,y-1] == PlotTypes.PLOT_PEAK):
 					if getRand(dice) < peakStartProbability:
 						world._data[offset] = PlotTypes.PLOT_PEAK
@@ -2239,7 +2239,7 @@ def generatePlotTypes():
 							peakArray[offset] = [x,y,1]
 			if hillStartProbability > 0:
 				#collect hills
-				#check if land area is 11�11 empty
+				#check if land area is 1111 empty
 				if world[x,y] == PlotTypes.PLOT_LAND and not hillIntersect(world,x,y,x,y,1):
 					if getRand(dice) < hillStartProbability:
 						world._data[offset] = PlotTypes.PLOT_HILLS
@@ -2699,7 +2699,6 @@ def addFeatures():
 	featFlood = cgc.getInfoTypeForString("FEATURE_FLOOD_PLAINS")
 	featForest = cgc.getInfoTypeForString("FEATURE_FOREST")
 # Rise of Mankind 2.82 start
-	featStorm = cgc.getInfoTypeForString("FEATURE_STORM")
 	featSwamp = cgc.getInfoTypeForString("FEATURE_SWAMP")
 # Rise of Mankind 2.82 end
 
@@ -2742,12 +2741,6 @@ def addFeatures():
 			randomTerrain[7 * (climateHumidity / 2 + 0.75)] = terrainPermafrost
 
 		for x in range(iW):
-# Rise of Mankind 2.82 start
-			if ( y >= 5 and y <= (iH - 5)):
-				plot = map.plot(x,y)
-				if plot != 0 and plot.isWater() == True and getRand(dice) < stormChance:
-					plot.setFeatureType(featStorm,0)
-# Rise of Mankind 2.82 end
 
 			plot = map.sPlot(x,y)
 			if plot.isWater():
@@ -3757,6 +3750,9 @@ def isClimateMap():
 
 def isSeaLevelMap():
 	"""Uses the Sea Level options"""
+	return 0
+
+def getNumHiddenCustomMapOptions():
 	return 0
 
 def getNumCustomMapOptions():

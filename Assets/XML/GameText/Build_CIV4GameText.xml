@@ -220,6 +220,10 @@
 		<Russian>Ïîñòðîéêà [LINK=IMPROVEMENT_COTTAGE]äîìà[\LINK]</Russian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_COTTAGE_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_COTTAGE]Cottage[\LINK] (Consumed)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_DESERT_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_DESERT_CAMP]Desert Camp[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_DESERT_CAMP]Camp de Desert[\LINK]</French>
@@ -303,16 +307,6 @@
 		<German>[LINK=IMPROVEMENT_FISHING_BOATS]Fischerboote[\LINK] bauen</German>
 		<Italian>Construire dei [LINK=IMPROVEMENT_FISHING_BOATS]pescherecci[\LINK]</Italian>
 		<Spanish>Crear [LINK=IMPROVEMENT_FISHING_BOATS]barcos pesqueros[\LINK]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_FISHING_CAMP</Tag>
-		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK]</English>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FISHING_CAMP]Ðûáàöêèé ëàãåðü[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_FISHING_CAMP_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_FISHING_CAMP]Fishing Camp[\LINK] (Consumed)</English>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_FISHING_CAMP]Ðûáàöêèé ëàãåðü[\LINK] (Ñîáèðàòåëü)</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FOREST_PRESERVE</Tag>
@@ -857,18 +851,6 @@
 		<Spanish>Descontaminar [LINK=FEATURE_FALLOUT]lluvia radiactiva[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP</Tag>
-		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK]</English>
-		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen[\LINK] </German>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEASONAL_CAMP]Ñåçîííûé ëàãåðü[\LINK]</Russian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP_KILL</Tag>
-		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK] (Consumed)</English>
-		<German>[LINK=IMPROVEMENT_SEASONAL_CAMP]Lager aufschlagen (Verschleiß)[\LINK]</German>
-		<Russian>Ñòðîèòü [LINK=IMPROVEMENT_SEASONAL_CAMP]Ñåçîííûé ëàãåðü[\LINK] (Ñîáèðàòåëü)</Russian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEA_MILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEA_MILL]Sea Mill[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_SEA_MILL]Moulin maritime[\LINK]</French>
@@ -931,7 +913,7 @@
 		<Tag>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP</Tag>
 		<English>Build [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Stone Tools Workshop[\LINK]</English>
 		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre.[\LINK]</French>
-		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Steinwerkstatt bauen[\LINK]</German>
+		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOPP]Steine sammeln[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Raccoglitore di pietre[\LINK]</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Warsztat Kamiennych Narzędzi[\LINK]</Polish>
@@ -941,7 +923,7 @@
 		<Tag>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP_KILL</Tag>
 		<English>Build [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Stone Tools Workshop[\LINK] (Consumed)</English>
 		<French>Construire un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Atelier d'Outils en pierre [\LINK] (Détruit)</French>
-		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Steinwerkstatt bauen[\LINK] (Consumed)</German>
+		<German>[LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Steine sammeln[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Raccoglitore di pietre[\LINK] (Consumed)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Taller de herramientas de piedra[\LINK] (Consumed)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_STONE_TOOLS_WORKSHOP]Warsztat Kamiennych Narzędzi[\LINK] (Consumed)</Polish>

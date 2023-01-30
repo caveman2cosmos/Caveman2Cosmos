@@ -588,11 +588,16 @@ class RevolutionWatchAdvisor:
 				else:
 					icon += u"%c" %(gc.getReligionInfo(info.getReligionType()).getChar())
 
-			if info.getFoodKept() > 0 or info.getSeaPlotYieldChange(YieldTypes.YIELD_FOOD) > 0:
+			if info.getFoodKept() > 0:
 				icon += self.foodIcon
+			else:
+				for entry in info.getPlotYieldChange():
+					if entry.iIndex == YieldTypes.YIELD_FOOD and entry.iValue > 0:
+						icon += self.foodIcon
+						break
 
 			if info.getFreeExperience() > 0 or \
-				info.getFreePromotion() != -1 or \
+				info.getFreePromoTypes() or \
 				info.getGlobalFreeExperience() > 0 or \
 				info.getDomainFreeExperience(DomainTypes.DOMAIN_LAND) > 0 or \
 				info.getDomainFreeExperience(DomainTypes.DOMAIN_SEA) > 0 or \
@@ -1169,7 +1174,7 @@ class RevolutionWatchAdvisor:
 		team = gc.getTeam(gc.getGame().getActiveTeam())
 
 		for iTeamX in range(gc.getMAX_TEAMS()):
-			if team.isAtWar(iTeamX):
+			if team.isAtWarWith(iTeamX):
 				if city.isVisible(iTeamX, False):
 					return self.angryIcon
 		return ""
@@ -1422,13 +1427,11 @@ class RevolutionWatchAdvisor:
 
 	def calculateCultureTurns (self, city, szKey, arg):
 
-		iCultureTimes100 = city.getCultureTimes100(gc.getGame().getActivePlayer())
 		iCultureRateTimes100 = city.getCommerceRateTimes100(CommerceTypes.COMMERCE_CULTURE)
-		if iCultureRateTimes100 > 0:
-			iCultureLeftTimes100 = 100 * city.getCultureThreshold() - iCultureTimes100
-			return (iCultureLeftTimes100 + iCultureRateTimes100 - 1) / iCultureRateTimes100
-		else:
-			return u"-"
+
+		if iCultureRateTimes100 > 0 and city.getCultureThreshold() > 0:
+			return (100*city.getCultureThreshold() - city.getCultureTimes100(gc.getGame().getActivePlayer()) + iCultureRateTimes100 - 1) / iCultureRateTimes100
+		return u"-"
 
 	def calculateGreatPeopleTurns (self, city, szKey, arg):
 
@@ -1436,22 +1439,22 @@ class RevolutionWatchAdvisor:
 		if iGreatPersonRate > 0:
 			iGPPLeft = gc.getPlayer(gc.getGame().getActivePlayer()).greatPeopleThresholdNonMilitary() - city.getGreatPeopleProgress()
 			return (iGPPLeft + iGreatPersonRate - 1) / iGreatPersonRate
-		else:
-			return u"-"
+
+		return u"-"
 
 	def canHurry (self, city, szKey, arg):
 
 		if city.canHurry(arg, False):
 			return self.objectHave
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def canLiberate (self, city, szKey, arg):
 
 		if city.getLiberationPlayer(False) != -1:
 			return self.objectHave
-		else:
-			return self.objectNotPossible
+
+		return self.objectNotPossible
 
 	def calculateValue (self, city, szKey, arg):
 
@@ -1476,8 +1479,8 @@ class RevolutionWatchAdvisor:
 
 				for i in range(gc.getNumBonusInfos()):
 					if city.hasBonus(i):
-						iHealth += info.getBonusHealthChanges(i)
-						iHappiness += info.getBonusHappinessChanges(i)
+						iHealth += info.getBonusHealthChanges().getValue(i)
+						iHappiness += info.getBonusHappinessChanges().getValue(i)
 
 				if iHealth > 0:
 					szReturn = self.stripStr(szReturn, self.healthIcon)
@@ -1526,10 +1529,9 @@ class RevolutionWatchAdvisor:
 	def calculateHasBonus (self, city, szKey, arg):
 
 		# Determine whether or not city has the given bonus
-		if (city.hasBonus(arg)):
+		if city.hasBonus(arg):
 			return self.objectHave
-		else:
-			return self.objectNotPossible
+		return self.objectNotPossible
 
 	def calculateBonus (self, city, szKey, arg):
 
@@ -1692,20 +1694,20 @@ class RevolutionWatchAdvisor:
 					info = gc.getBuildingInfo(i)
 					if self.calculateNetHappiness(city) < 3 and self.calculateNetHappiness(city) - self.calculateNetHealth(city) > 2:
 						iHealth = info.getHealth()
-						for j in range(gc.getNumBonusInfos()):
-							if city.hasBonus(j):
-								iHealth += info.getBonusHealthChanges(j)
+						for eBonus, iNumHappiness in info.getBonusHappinessChanges():
+							if city.hasBonus(eBonus):
+								iHealth += iNumHappiness
 						value = iHealth / float(info.getProductionCost())
-						if(value > bestData):
+						if value > bestData:
 							bestOrder = i
 							bestData = value
 					elif self.calculateNetHealth(city) < 3 and self.calculateNetHealth(city) - self.calculateNetHappiness(city) > 2:
 						iHappiness = info.getHappiness()
-						for j in range(gc.getNumBonusInfos()):
-							if city.hasBonus(j):
-								iHappiness += info.getBonusHappinessChanges(j)
+						for eBonus, iNumHappiness in info.getBonusHappinessChanges():
+							if city.hasBonus(eBonus):
+								iHappiness += iNumHappiness
 						value = iHappiness  / float(info.getProductionCost())
-						if(value > bestData):
+						if value > bestData:
 							bestOrder = i
 							bestData = value
 

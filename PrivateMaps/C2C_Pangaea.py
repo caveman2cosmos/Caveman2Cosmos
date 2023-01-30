@@ -9,15 +9,9 @@
 #
 
 from CvPythonExtensions import *
-import CvMapGeneratorUtil
-#from CvMapGeneratorUtil import MultilayeredFractal
-from CvMapGeneratorUtil import HintedWorld
-from CvMapGeneratorUtil import TerrainGenerator
-from CvMapGeneratorUtil import FeatureGenerator
-# Rise of Mankind start 2.5
-from CvMapGeneratorUtil import BonusBalancer
+import CvMapGeneratorUtil as MGU
 
-balancer = BonusBalancer()
+balancer = MGU.BonusBalancer()
 
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_PANGAEA_DESCR"
@@ -96,17 +90,15 @@ def getWrapY():
 	return (map.getCustomMapOption(1) == 2)
 
 def normalizeAddExtras():
-	if (CyMap().getCustomMapOption(2) == 1):
+	if CyMap().getCustomMapOption(2) == 1:
 		balancer.normalizeAddExtras()
 	CyPythonMgr().allowDefaultImpl()	# do the rest of the usual normalizeStartingPlots stuff, don't overrride
 
 def addBonusType(argsList):
 	[iBonusType] = argsList
-	type_string = CyGlobalContext().getBonusInfo(iBonusType).getType()
 
-	if (CyMap().getCustomMapOption(2) == 1):
-		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
-			return None # don't place any of this bonus randomly
+	if CyMap().getCustomMapOption(2) == 1 and CyGlobalContext().getBonusInfo(iBonusType).getType() in balancer.resourcesToBalance:
+		return None # don't place any of this bonus randomly
 
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
@@ -148,7 +140,7 @@ class PangaeaHintedWorld:
 	def generateSorensHintedPangaea(self):
 		NiTextOut("Setting Plot Types (Python Pangaea) ...")
 		global hinted_world
-		hinted_world = HintedWorld(8,4)
+		hinted_world = MGU.HintedWorld(8,4)
 
 		mapRand = CyGame().getMapRand()
 
@@ -174,7 +166,7 @@ class PangaeaHintedWorld:
 	def generateAndysHintedPangaea(self):
 		NiTextOut("Setting Plot Types (Python Pangaea Hinted) ...")
 		global hinted_world
-		hinted_world = HintedWorld(16,8)
+		hinted_world = MGU.HintedWorld(16,8)
 
 		mapRand = CyGame().getMapRand()
 
@@ -191,7 +183,7 @@ class PangaeaHintedWorld:
 			hinted_world.buildAllContinents()
 			return hinted_world.generatePlotTypes(shift_plot_types=True)
 
-class PangaeaMultilayeredFractal(CvMapGeneratorUtil.MultilayeredFractal):
+class PangaeaMultilayeredFractal(MGU.MultilayeredFractal):
 	# Subclass. Only the controlling function overridden in this case.
 	def generatePlotsByRegion(self, pangaea_type):
 		# Sirian's MultilayeredFractal class, controlling function.
@@ -581,13 +573,13 @@ def generateTerrainTypes():
 
 	# Now generate Terrain.
 	NiTextOut("Generating Terrain (Python Pangaea) ...")
-	terraingen = TerrainGenerator()
+	terraingen = MGU.TerrainGenerator()
 	terrainTypes = terraingen.generateTerrain()
 	return terrainTypes
 
 def addFeatures():
 	NiTextOut("Adding Features (Python Pangaea) ...")
-	featuregen = FeatureGenerator()
+	featuregen = MGU.FeatureGenerator()
 	featuregen.addFeatures()
 	return 0
 
@@ -608,8 +600,8 @@ def findStartingPlot(argsList):
 		else:
 			return True
 
-	return CvMapGeneratorUtil.findStartingPlot(playerID, isValid)
+	return MGU.findStartingPlot(playerID, isValid)
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses()
+	MGU.placeC2CBonuses()
 

@@ -5,6 +5,7 @@
 #include "CyCity.h"
 #include "CyPlot.h"
 #include "CyUnit.h"
+#include "CvUnitSelectionCriteria.h"
 
 //
 // Python wrapper class for CvCity
@@ -58,6 +59,11 @@ void CyCity::setRevIndexAverage(int iNewValue)
 void CyCity::updateRevIndexAverage()
 {
 	m_pCity->updateRevIndexAverage();
+}
+
+int CyCity::getRevIndexDistanceMod() const
+{
+	return m_pCity->getRevIndexDistanceMod();
 }
 
 int CyCity::getReinforcementCounter() const
@@ -267,7 +273,7 @@ int CyCity::getBuildingProductionTurnsLeft(int /*BuildingTypes*/ iBuilding, int 
 
 int CyCity::getProjectProductionTurnsLeft(int /*ProjectTypes*/ eProject, int iNum) const
 {
-	return m_pCity->getProductionTurnsLeft((ProjectTypes)eProject, iNum);
+	return m_pCity->getProductionTurnsLeft((ProjectTypes) eProject, iNum);
 }
 
 void CyCity::setProduction(int iNewValue)
@@ -351,11 +357,6 @@ int /*ArtStyleTypes*/ CyCity::getArtStyleType() const
 bool CyCity::hasTrait(int /*TraitTypes*/ iTrait) const
 {
 	return m_pCity->hasTrait((TraitTypes) iTrait);
-}
-
-bool CyCity::isBarbarian() const
-{
-	return m_pCity->isBarbarian();
 }
 
 bool CyCity::isNPC() const
@@ -1004,9 +1005,9 @@ bool CyCity::isNeverLost() const
 	return m_pCity->isNeverLost();
 }
 
-void CyCity::setNeverLost(int iNewValue)
+void CyCity::setNeverLost(bool bNewValue)
 {
-	m_pCity->setNeverLost(iNewValue);
+	m_pCity->setNeverLost(bNewValue);
 }
 
 bool CyCity::isBombarded() const
@@ -1014,9 +1015,9 @@ bool CyCity::isBombarded() const
 	return m_pCity->isBombarded();
 }
 
-void CyCity::setBombarded(int iNewValue)
+void CyCity::setBombarded(bool bNewValue)
 {
-	m_pCity->setBombarded(iNewValue);
+	m_pCity->setBombarded(bNewValue);
 }
 
 bool CyCity::isDrafted() const
@@ -1024,9 +1025,9 @@ bool CyCity::isDrafted() const
 	return m_pCity->isDrafted();
 }
 
-void CyCity::setDrafted(int iNewValue)
+void CyCity::setDrafted(bool bNewValue)
 {
-	m_pCity->setDrafted(iNewValue);
+	m_pCity->setDrafted(bNewValue);
 }
 
 bool CyCity::isAirliftTargeted() const
@@ -1034,9 +1035,9 @@ bool CyCity::isAirliftTargeted() const
 	return m_pCity->isAirliftTargeted();
 }
 
-void CyCity::setAirliftTargeted(int iNewValue)
+void CyCity::setAirliftTargeted(bool bNewValue)
 {
-	m_pCity->setAirliftTargeted(iNewValue);
+	m_pCity->setAirliftTargeted(bNewValue);
 }
 
 bool CyCity::isCitizensAutomated() const
@@ -1056,7 +1057,7 @@ bool CyCity::isProductionAutomated() const
 
 void CyCity::setProductionAutomated(bool bNewValue)
 {
-	m_pCity->setProductionAutomated(bNewValue, false);
+	m_pCity->setProductionAutomated(bNewValue);
 }
 
 bool CyCity::isWallOverride() const
@@ -1112,11 +1113,6 @@ int /*CultureLevelTypes*/ CyCity::getCultureLevel() const
 int CyCity::getCultureThreshold() const
 {
 	return m_pCity->getCultureThreshold();
-}
-
-int CyCity::getSeaPlotYield(int /*YieldTypes*/ eIndex) const
-{
-	return m_pCity->getSeaPlotYield((YieldTypes) eIndex);
 }
 
 int CyCity::getPlotYield(int /*YieldTypes*/ eIndex) const
@@ -1709,9 +1705,9 @@ int CyCity::getBonusCommercePercentChanges(int eIndex, int eBuilding) const
 	return m_pCity->getBonusCommercePercentChanges((CommerceTypes)eIndex, (BuildingTypes)eBuilding);
 }
 
-int CyCity::getBuildingCommerceTechChange(int eIndex, int eBuilding) const
+int CyCity::getBaseYieldRateFromBuilding100(int iYield, int iBuilding) const
 {
-	return m_pCity->getBuildingCommerceTechChange((CommerceTypes)eIndex, (BuildingTypes)eBuilding);
+	return m_pCity->getBaseYieldRateFromBuilding100((YieldTypes)iYield, (BuildingTypes)iBuilding);
 }
 
 bool CyCity::isAutomatedCanBuild(int /*BuildTypes*/ eIndex) const
@@ -1727,6 +1723,11 @@ void CyCity::setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue)
 CvProperties* CyCity::getProperties() const
 {
 	return m_pCity->getProperties();
+}
+
+const CityOutputHistory* CyCity::getCityOutputHistory() const
+{
+	return m_pCity->getCityOutputHistory();
 }
 
 bool CyCity::getBuildingListFilterActive(int eFilter)
@@ -1827,4 +1828,16 @@ int CyCity::getUnitListType(int iGroup, int iPos)
 bool CyCity::isEventOccured(int eEvent) const
 {
 	return m_pCity->isEventOccured((EventTypes)eEvent);
+}
+
+int CyCity::AI_bestUnit() const
+{
+	int iDummyValue;
+	return m_pCity->AI_bestUnit(iDummyValue, -1, NULL, true, NULL, true, false, NULL);
+}
+
+int CyCity::AI_bestUnitAI(UnitAITypes eUnitAITypes) const
+{
+	int iDummyValue;
+	return m_pCity->AI_bestUnitAI(eUnitAITypes, iDummyValue, true, true, &CvUnitSelectionCriteria().IgnoreGrowth(true));
 }

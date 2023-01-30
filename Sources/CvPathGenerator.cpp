@@ -1,11 +1,12 @@
 //	Internal path generation engine
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvGlobals.h"
 #include "CvMap.h"
 #include "CvPathGenerator.h"
-#include "CvSelectionGroup.h"
 #include "CvRandom.h"
+#include "CvPlayerAI.h"
 #include "CheckSum.h"
 
 #ifdef DYNAMIC_PATH_STRUCTURE_VALIDATION
@@ -904,7 +905,8 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 		// Optimize the case where we'e just stepping along the previously calculated path (as continueMission() does)
 		// If it is a MPOPTION_SIMULTANEOUS_TURNS game, don't apply that optimization to avoid sync issues
 		// TBOOSDEBUGNOTE : Changed !isHuman() to MPOPTION_SIMULTANEOUS_TURNS because it wasn't protecting against AI opponents withdrawing then re-evaluating Safety checks.
-		if (bSameGroup && m_generatedPath.lastPlot() == pTo && m_generatedPath.containsNode(pFrom))
+		if (bSameGroup && m_generatedPath.lastPlot() == pTo && m_generatedPath.containsNode(pFrom)
+		&& m_pBestTerminalNode != NULL && m_pBestTerminalNode->m_iPathTurns <= iMaxTurns)
 		{
 			bool bValid = true;
 
@@ -1393,7 +1395,7 @@ bool CvPathGenerator::generatePath(const CvPlot* pFrom, const CvPlot* pTo, CvSel
 												}
 												else
 												{
-													FAssert(false);
+													FErrorMsg("error");
 												}
 											}
 											continue;
