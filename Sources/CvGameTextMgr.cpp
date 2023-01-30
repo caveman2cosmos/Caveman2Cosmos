@@ -8793,33 +8793,32 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					}
 					else szString.append(L")\n");
 				}
-
-				for (int iI = 0; iI < MAX_PLAYERS; iI++)
+			}
+			for (int iI = 0; iI < MAX_PLAYERS; iI++)
+			{
+				const PlayerTypes ePlayerX = static_cast<PlayerTypes>(iI);
+				if ((ePlotOwner == NO_PLAYER || ePlayerX != ePlotOwner) && pPlot->getCulture(ePlayerX) > 0)
 				{
-					const PlayerTypes ePlayerX = static_cast<PlayerTypes>(iI);
-					if (ePlayerX != ePlotOwner && pPlot->getCulture(ePlayerX) > 0)
-					{
-						const CvPlayer& playerX = GET_PLAYER(ePlayerX);
-						szString.append(
-							CvWString::format(
-								L"%d%% " SETCOLR L"%s" ENDCOLR L" (%d",
-								pPlot->calculateCulturePercent(ePlayerX),
-								playerX.getPlayerTextColorR(), playerX.getPlayerTextColorG(), playerX.getPlayerTextColorB(), playerX.getPlayerTextColorA(),
-								playerX.getCivilizationAdjective(), pPlot->getCulture(ePlayerX)
-							)
-						);
-						const int iRate = pPlot->getCultureRateLastTurn(ePlayerX);
+					const CvPlayer& playerX = GET_PLAYER(ePlayerX);
+					szString.append(
+						CvWString::format(
+							L"%d%% " SETCOLR L"%s" ENDCOLR L" (%d",
+							pPlot->calculateCulturePercent(ePlayerX),
+							playerX.getPlayerTextColorR(), playerX.getPlayerTextColorG(), playerX.getPlayerTextColorB(), playerX.getPlayerTextColorA(),
+							playerX.getCivilizationAdjective(), pPlot->getCulture(ePlayerX)
+						)
+					);
+					const int iRate = pPlot->getCultureRateLastTurn(ePlayerX);
 
-						if (iRate > 0)
-						{
-							szString.append(CvWString::format(L" + %d)\n", iRate));
-						}
-						else if (iRate < 0)
-						{
-							szString.append(CvWString::format(L" - %d)\n", -iRate));
-						}
-						else szString.append(L")\n");
+					if (iRate > 0)
+					{
+						szString.append(CvWString::format(L" + %d)\n", iRate));
 					}
+					else if (iRate < 0)
+					{
+						szString.append(CvWString::format(L" - %d)\n", -iRate));
+					}
+					else szString.append(L")\n");
 				}
 			}
 		}
@@ -8828,11 +8827,12 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 	{
 		const PlayerTypes eRevealOwner = pPlot->getRevealedOwner(eActiveTeam, true);
 
-		if (eRevealOwner != NO_PLAYER)
+		if (pPlot->isActiveVisible(true))
 		{
-			const CvPlayer& pOwner = GET_PLAYER(eRevealOwner);
-			if (pPlot->isActiveVisible(true))
+			if (eRevealOwner != NO_PLAYER)
 			{
+				const CvPlayer& pOwner = GET_PLAYER(eRevealOwner);
+
 				szTempBuffer.Format(SETCOLR L"%s: %s" ENDCOLR,
 					pOwner.getPlayerTextColorR(), pOwner.getPlayerTextColorG(), pOwner.getPlayerTextColorB(), pOwner.getPlayerTextColorA(),
 					gDLL->getText("TXT_KEY_MISC_OWNER").GetCString(), pOwner.getCivilizationShortDescription());
@@ -8841,7 +8841,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				{
 					const CvCity* pWorkingCity = pPlot->getWorkingCity();
 
-					if (pWorkingCity && pWorkingCity->getOwner() == eActivePlayer)
+					if (pWorkingCity != NULL && pWorkingCity->getOwner() == eActivePlayer)
 					{
 						szTempBuffer.append(L", ");
 
@@ -8863,8 +8863,31 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 						pOwner.getCivilizationAdjective(), pPlot->getCulture(eRevealOwner)
 					)
 				);
+				const int iRate = pPlot->getCultureRateLastTurn(ePlotOwner);
+
+				if (iRate > 0)
 				{
-					const int iRate = pPlot->getCultureRateLastTurn(ePlotOwner);
+					szString.append(CvWString::format(L" + %d)\n", iRate));
+				}
+				else if (iRate < 0)
+				{
+					szString.append(CvWString::format(L" - %d)\n", -iRate));
+				}
+				else szString.append(L")\n");
+			}
+			for (int iI = 0; iI < MAX_PLAYERS; iI++)
+			{
+				const PlayerTypes ePlayerX = static_cast<PlayerTypes>(iI);
+				if ((eRevealOwner == NO_PLAYER || ePlayerX != eRevealOwner) && pPlot->getCulture(ePlayerX) > 0)
+				{
+					const CvPlayer& playerX = GET_PLAYER(ePlayerX);
+					if (playerX.isAlive())
+					{
+						szString.append(CvWString::format(L"%d%% " SETCOLR L"%s" ENDCOLR L" (%d", pPlot->calculateCulturePercent(ePlayerX),
+							playerX.getPlayerTextColorR(), playerX.getPlayerTextColorG(), playerX.getPlayerTextColorB(), playerX.getPlayerTextColorA(),
+							playerX.getCivilizationAdjective(), pPlot->getCulture(ePlayerX)));
+					}
+					const int iRate = pPlot->getCultureRateLastTurn(ePlayerX);
 
 					if (iRate > 0)
 					{
@@ -8876,41 +8899,14 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					}
 					else szString.append(L")\n");
 				}
-
-				for (int iI = 0; iI < MAX_PLAYERS; iI++)
-				{
-					const PlayerTypes ePlayerX = static_cast<PlayerTypes>(iI);
-					if (ePlayerX != eRevealOwner && pPlot->getCulture(ePlayerX) > 0)
-					{
-						const CvPlayer& playerX = GET_PLAYER(ePlayerX);
-						if (playerX.isAlive())
-						{
-							szString.append(CvWString::format(L"%d%% " SETCOLR L"%s" ENDCOLR L" (%d", pPlot->calculateCulturePercent(ePlayerX),
-								playerX.getPlayerTextColorR(), playerX.getPlayerTextColorG(), playerX.getPlayerTextColorB(), playerX.getPlayerTextColorA(),
-								playerX.getCivilizationAdjective(), pPlot->getCulture(ePlayerX)));
-						}
-						const int iRate = pPlot->getCultureRateLastTurn(ePlayerX);
-
-						if (iRate > 0)
-						{
-							szString.append(CvWString::format(L" + %d)\n", iRate));
-						}
-						else if (iRate < 0)
-						{
-							szString.append(CvWString::format(L" - %d)\n", -iRate));
-						}
-						else szString.append(L")\n");
-					}
-				}
-			}
-			else
-			{
-				szTempBuffer.Format(SETCOLR L"%s" ENDCOLR, GET_PLAYER(eRevealOwner).getPlayerTextColorR(), GET_PLAYER(eRevealOwner).getPlayerTextColorG(), GET_PLAYER(eRevealOwner).getPlayerTextColorB(), GET_PLAYER(eRevealOwner).getPlayerTextColorA(), GET_PLAYER(eRevealOwner).getCivilizationDescription());
-				szString.append(szTempBuffer);
-				szString.append(NEWLINE);
 			}
 		}
-
+		else if (eRevealOwner != NO_PLAYER)
+		{
+			szTempBuffer.Format(SETCOLR L"%s" ENDCOLR, GET_PLAYER(eRevealOwner).getPlayerTextColorR(), GET_PLAYER(eRevealOwner).getPlayerTextColorG(), GET_PLAYER(eRevealOwner).getPlayerTextColorB(), GET_PLAYER(eRevealOwner).getPlayerTextColorA(), GET_PLAYER(eRevealOwner).getCivilizationDescription());
+			szString.append(szTempBuffer);
+			szString.append(NEWLINE);
+		}
 		szString.append(CvWString::format(L"X %d, Y %d", pPlot->getX(), pPlot->getY()));
 		szString.append(NEWLINE);
 
