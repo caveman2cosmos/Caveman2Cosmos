@@ -7997,8 +7997,6 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 		}
 		std::vector<std::pair<PlayerTypes, int> >::iterator itr;
 
-		// Blaze - 24.8.22 - This overflow protection shouldn't be needed with change to make culture
-		// in equilibrium states, rather than rising infinitely.
 		// Toffer - 08.08.20
 		// 4 byte integer overflow protection
 		if (iNewValue > 1000000000) // trigger reduction at a billion
@@ -8055,6 +8053,8 @@ void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate)
 {
 	if (0 != iChange)
 	{
+		// May need to bump change up if below decay-in-one-turn value under equilibrium option.
+		if (GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE) && iChange > 0) iChange = std::max(iChange, GC.getGame().getMinCultureOutput());
 		setCulture(eIndex, std::max(0, getCulture(eIndex) + iChange), bUpdate, true);
 	}
 }
@@ -10242,6 +10242,7 @@ void CvPlot::doCulture()
 	}
 
 	// Toffer - Decay culture for players that no longer adds culture to this plot
+	// Blaze - or uses equilibrium culture gameoption
 	{
 		const int decayPermille = GC.getTILE_CULTURE_DECAY_PERCENT() * 1000 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 
@@ -10249,7 +10250,9 @@ void CvPlot::doCulture()
 		{
 			const PlayerTypes ePlayerX = static_cast<PlayerTypes>(i);
 
-			if (getCulture(ePlayerX) > 0 && getCultureRateThisTurn(ePlayerX) < 1 && (!getPlotCity() || getOwner() != ePlayerX))
+			if (getCulture(ePlayerX) > 0 &&
+				(getCultureRateThisTurn(ePlayerX) < 1 && (!getPlotCity() || getOwner() != ePlayerX)) ||
+				GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE))
 			{
 				setCulture(ePlayerX, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false, true);
 			}

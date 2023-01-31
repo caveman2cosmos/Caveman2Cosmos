@@ -1631,4 +1631,12 @@ Only affects SmartMap if terrain options is:
 		<Tag>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES_HELP</Tag>
 		<English>Cities will be auto-razed when they would normally change owner.[NEWLINE]Exceptions are made for the Barbarian civ option and revolution option, city ownership change can occur from these options. Cities won't be auto-razed when barbs conquer a city because of this option since there's an option called "Barbarian Always Raze".</English>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE</Tag>
+		<English>Equilibrium Culture</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE_HELP</Tag>
+		<English>Culture decays on all tiles, not just unowned. This means culture wars are dependent on the last ~100 turns of culture output (adjusted for gamespeed) rather than all culture ever produced by a city.</English>
+	</TEXT>
 </Civ4GameText>
