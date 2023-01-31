@@ -2211,8 +2211,12 @@ void CvGame::update()
 			CvCity* city = playerAct.getIdleCity();
 			if (city)
 			{
-				gDLL->getInterfaceIFace()->addSelectedCity(city, false);
-				GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+				if (!getBugOptionBOOL("CityScreen__FullCityScreenOnEmptyBuildQueue", false))
+				{
+					gDLL->getInterfaceIFace()->addSelectedCity(city, false);
+					GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+				}
+				else gDLL->getInterfaceIFace()->selectCity(city, true);
 			}
 			else
 			{
