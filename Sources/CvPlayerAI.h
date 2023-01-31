@@ -658,8 +658,8 @@ private:
 	static int plotDangerCacheReads;
 #endif
 
-	const techPath* findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync) const;
-	int	 techPathValuePerUnitCost(const techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync) const;
+	const techPath* findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync);
+	int techPathValuePerUnitCost(const techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync);
 	TechTypes findStartTech(const techPath* path) const;
 
 	typedef stdext::hash_map<TechTypes, int> TechTypesValueMap;

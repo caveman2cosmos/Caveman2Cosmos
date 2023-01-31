@@ -5551,7 +5551,7 @@ DenialTypes CvPlayer::getTradeDenial(PlayerTypes eWhoTo, TradeData item) const
 
 		case TRADE_CITIES:
 		{
-			CvCity* pCity = getCity(item.m_iData);
+			CvCity* pCity = getCity((int)item.m_iData);
 			if (pCity != NULL)
 			{
 				return AI_cityTrade(pCity, eWhoTo);

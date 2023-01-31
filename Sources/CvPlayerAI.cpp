@@ -4222,7 +4222,7 @@ int CvPlayerAI::AI_averageCurrentTechValue(TechTypes eRelativeTo, bool bAsync)
 		FAssertMsg(canResearch(eTechX, true, false), CvString::format("team %d - tech: %S (%d)", getTeam(), GC.getTechInfo(eTechX).getDescription(), (int)eTechX).c_str());
 		if (eTechX != eRelativeTo && canResearch(eTechX))
 		{
-			researchCosts.push_back(TechResearchDist(eTechX, (int64_t)std::abs(team.getResearchCost(eTechX) - iCost)));
+			researchCosts.push_back(TechResearchDist(eTechX, (int64_t)std::abs((double)team.getResearchCost(eTechX) - iCost)));
 		}
 	}
 
@@ -4349,7 +4349,7 @@ int CvPlayerAI::AI_TechValueCached(TechTypes eTech, bool bAsync, bool considerFo
 	return iValue;
 }
 
-int CvPlayerAI::techPathValuePerUnitCost(const techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync) const
+int CvPlayerAI::techPathValuePerUnitCost(const techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync)
 {
 	int64_t iCost = 0;
 	int64_t iValue = 0;
@@ -4387,7 +4387,7 @@ int CvPlayerAI::techPathValuePerUnitCost(const techPath* path, TechTypes eTech, 
 	return (int)std::min<int64_t>(iValue * iScaleFactor, MAX_INT);
 }
 
-const techPath* CvPlayerAI::findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync) const
+const techPath* CvPlayerAI::findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync)
 {
 	PROFILE_FUNC();
 

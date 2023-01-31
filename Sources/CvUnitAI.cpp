@@ -13701,7 +13701,7 @@ bool CvUnitAI::AI_discover(const bool bFirstResearchOnly)
 	{
 		return false;
 	}
-	const int iPercentWasted = 100 * GET_TEAM(getTeam()).getResearchProgress(eTech) / GET_TEAM(getTeam()).getResearchCost(eTech);
+	const uint64_t iPercentWasted = 100 * GET_TEAM(getTeam()).getResearchProgress(eTech) / GET_TEAM(getTeam()).getResearchCost(eTech);
 
 	FAssert(iPercentWasted >= 0 && iPercentWasted <= 100);
 

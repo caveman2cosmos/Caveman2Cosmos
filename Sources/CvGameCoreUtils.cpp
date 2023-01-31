@@ -1185,7 +1185,7 @@ void setTradeItem(TradeData* pItem, TradeableItems eItemType, int iData)
 void setTradeItem(TradeData* pItem, TradeableItems eItemType, int64_t iData)
 {
 	pItem->m_eItemType = eItemType;
-	pItem->m_iData = iData;
+	pItem->m_iData = (int)std::min<int64_t>(iData, MAX_INT); 
 	pItem->m_bOffering = false;
 	pItem->m_bHidden = false;
 }
