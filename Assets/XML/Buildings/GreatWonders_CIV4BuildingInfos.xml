@@ -124,6 +124,7 @@
 			</CommerceChangeDoubleTimes>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
+			<iOccupationTimeModifier>50</iOccupationTimeModifier>
 			<iAsset>16</iAsset>
 			<Flavors>
 				<Flavor>
@@ -601,6 +602,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iOccupationTimeModifier>50</iOccupationTimeModifier>
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -995,6 +997,7 @@
 				</FreePromoType>
 			</FreePromoTypes>
 			<bGovernmentCenter>1</bGovernmentCenter>
+			<iOccupationTimeModifier>50</iOccupationTimeModifier>
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6332,6 +6335,7 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iOccupationTimeModifier>50</iOccupationTimeModifier>
 			<iAsset>12</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6924,6 +6928,7 @@
 			<iCost>2640</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
+			<iOccupationTimeModifier>50</iOccupationTimeModifier>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -21224,6 +21229,7 @@
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bGovernmentCenter>1</bGovernmentCenter>
+			<iOccupationTimeModifier>50</iOccupationTimeModifier>
 			<iAsset>16</iAsset>
 			<Flavors>
 				<Flavor>
