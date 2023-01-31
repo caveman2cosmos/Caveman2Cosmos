@@ -10251,7 +10251,7 @@ void CvPlot::doCulture()
 
 			if (getCulture(ePlayerX) > 0 && getCultureRateThisTurn(ePlayerX) < 1 && (!getPlotCity() || getOwner() != ePlayerX))
 			{
-				setCulture(ePlayerX, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false);
+				setCulture(ePlayerX, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false, true);
 			}
 		}
 	}
