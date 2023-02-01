@@ -1485,6 +1485,8 @@ void CvCity::doTurn()
 
 	if (getOccupationTimer() > 0)
 	{
+		// Blaze: v43 temp fix for games with over-long occupation timers from recent bug
+		if (getOccupationTimer() > 300) setOccupationTimer(2);
 		changeOccupationTimer(-1);
 	}
 
@@ -6542,34 +6544,46 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	PROFILE_FUNC();
 
 	// if the plot distance is greater than the maximum desired plot distance
-	//  or if the plot does not exist, then the plot distance is maximal
+	// or if the plot does not exist, then the plot distance is maximal
 	if (plotDistance(getX(), getY(), mainPlot->getX(), mainPlot->getY()) > iMaxDistance) return MAX_INT;
 
-	// Calculate terrain distance necessary before neighbors, because bonus presence can
+	// Calculate terrain distance necessary before neighbors, because city presence can
 	// remove any combination of terrain and river crossing penalties; chosing which neighbor
 	// therefore requires the current terrain known to avoid an endlessly-updating loop.
 	int terrainDistance = 0;
 
-	// Terrain distance increased by 2 if can't found on peaks; peak-type also ignore regular terrain
+	// Distance from ground tile type (peak or specific terrain)
 	if (mainPlot->isAsPeak())
 	{
 		terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_PEAK()).getCultureDistance();
-		terrainDistance += 2 * !GET_TEAM(getTeam()).isCanFoundOnPeaks();
+		terrainDistance += !GET_TEAM(getTeam()).isMoveFastPeaks()
+			+ !GET_TEAM(getTeam()).isCanPassPeaks()
+			+ !GET_TEAM(getTeam()).isCanFoundOnPeaks();
 	}
 	else
 	{
 		terrainDistance += GC.getTerrainInfo(mainPlot->getTerrainType()).getCultureDistance();
-		if (mainPlot->isHills())
-		{
-			terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_HILL()).getCultureDistance();
-		}
-		// Terrain distance increased by 2 if can't trade on water terrain
+		// Terrain distance increased if can't trade on water terrain, can't see far (optics)
 		if (mainPlot->isWater())
 		{
 			if (!GET_TEAM(getTeam()).isTerrainTrade(mainPlot->getTerrainType())) terrainDistance += 2;
+			if (!mainPlot->isAdjacentToLand() && !GET_TEAM(getTeam()).isExtraWaterSeeFrom()) terrainDistance += 1;
+		}
+		else
+		{
+			// Freshwater penalty acts as an inhibitor; effectively reduced as farms spread irrigation,
+			// removed at bAllowsDesertFarming (refrigeration)
+			if (!mainPlot->isFreshWater() && !GET_TEAM(getTeam()).isCanFarmDesert()) terrainDistance += 1;
+
+			if (mainPlot->isHills())
+			{
+				terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_HILL()).getCultureDistance()
+					+ !GET_TEAM(getTeam()).isCanFoundOnPeaks();
+			}
 		}
 	}
 
+	// Distance from features
 	if (mainPlot->getFeatureType() != NO_FEATURE)
 	{
 		// some features cause underlaying terrain cost to be ignored; oasis, floodplain, nat'l wonders
@@ -6585,27 +6599,43 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 		terrainDistance += GC.getFeatureInfo(mainPlot->getFeatureType()).getCultureDistance();
 	}
 
+	// Using route value/tier as softer inhibitor by era
+	if (!mainPlot->isWater())
+	{
+		if (mainPlot->getRouteType() == NO_ROUTE)
+		{
+			terrainDistance = std::max(0, (terrainDistance - 1) * 2 + 1);
+		}
+		else
+		{
+			const int routeTier = GC.getRouteInfo(mainPlot->getRouteType()).getValue();
+			if (routeTier < 4) terrainDistance = terrainDistance * (routeTier + 2) / (routeTier + 1);
+		}
+	}
+
+	// Halve terrain distance if bonus is present
+	if (mainPlot->getBonusType(getTeam()) != NO_BONUS) terrainDistance /= 2;
+
 	/* Determine the final cultural distance of given plot:
 		1: All directions from given plot are checked (could come from weird direction)
 		2: Neighbors with distance of MAX_INT are ignored because they
 			don't exist or haven't been calculated yet
-		3: Presence of a bonus can reduce terrain and river penalties; need
-			calculate full cost from each tile to prevent endless recalc
 		3: Smallest total possible distance is used from all neighbors
-		4: Greater river penalty (+1 each) for lacking river trade, bridge building */
+		4: Greater river penalty for lacking river trade, bridge building
+		5: City tiles are easier to influence, even across river */
 
 	int distance = MAX_INT;
 	const int extraRiverPenalty = !GET_TEAM(getTeam()).isBridgeBuilding() + !GET_TEAM(getTeam()).isRiverTrade();
-	const bool hasBonus = mainPlot->getBonusType(getTeam()) != NO_BONUS;
+	const bool isCity = mainPlot->isCity();
 
 	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
 	{
 		int neighborDist = m_aCultureDistances[adjacentPlot];
 		if (neighborDist != 0 && neighborDist != MAX_INT)
 		{
-			int netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (1 + extraRiverPenalty);
-			// Halve distance penalty if plot has a bonus
-			netDistanceModifier = netDistanceModifier / (1 + hasBonus);
+			int netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (1 + extraRiverPenalty) * 2;
+			// City tiles are easier to influence even if across river (city itself crosses river)
+			netDistanceModifier /= (1 + isCity);
 			neighborDist += 1 + std::max(0, netDistanceModifier);
 			if (neighborDist < distance) distance = neighborDist;
 		}
@@ -6623,27 +6653,30 @@ void CvCity::clearCultureDistanceCache()
 // End realistic culture
 
 
-int CvCity::netRevoltRisk(PlayerTypes cultureAttacker) const
+int CvCity::netRevoltRisk100(PlayerTypes cultureAttacker) const
 {
 	// Returns 100x % chance of revolt to eCultureAttacker when modified by defending units
-	// 100 = 1%, 10,000 = 100%
-	return std::max(0, baseRevoltRisk(cultureAttacker) * (100 - cultureGarrison(cultureAttacker)));
+	// 108 = 1.08%, 9,876 = 98.76%
+	return std::max(0, baseRevoltRisk100(cultureAttacker) * (unitRevoltRiskModifier(cultureAttacker))) / 100;
 }
 
 
-int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
+int CvCity::baseRevoltRisk100(PlayerTypes eCultureAttacker) const
 {
-	// Returns % chance of revolt to eCultureAttacker unmodified by defending units
+	// Returns 100x% chance of revolt to eCultureAttacker unmodified by defending units
 	// Should probably be less dependent on era or pop.
 	int iRisk = (getHighestPopulation() * 2);
 
 	// Presence of 3rd party culture lowers max bonus
-	const int iAttackerPercent = 100 * plot()->calculateCulturePercent(eCultureAttacker, 2);
-	int iDefenderPercent = 100 * plot()->calculateCulturePercent(getOwner(), 2);
+	const int iAttackerPercent100 = plot()->calculateCulturePercent(eCultureAttacker, 2);
+	int iDefenderPercent100 = plot()->calculateCulturePercent(getOwner(), 2);
 	// Adjust defender percent by possible fixed border modifier
 	// (otherwise inflated risk when FB city is threatened)
-	iDefenderPercent *= GET_PLAYER(getOwner()).hasFixedBorders() * (GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") - 100);
-	iDefenderPercent /= 100;
+	if (GET_PLAYER(getOwner()).hasFixedBorders())
+	{
+		iDefenderPercent100 *= (GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT"));
+		iDefenderPercent100 /= 100;
+	}
 
 	// If adjacent tiles can be acquired, factor in, else there's an additional min risk
 	if (!GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER))
@@ -6655,15 +6688,17 @@ int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
 		}
 	}
 	else iRisk += (GC.getGame().getCurrentEra() + 1);
+	// iRisk is currently something like 10 aka 10%
 
-	// Ranges from 100 to 1,000,000 as attacker:defender culture % ratio goes from 1:1 to 1:0.01
+	// Ranges from 10000 to 1,000,000 as attacker:defender culture % ratio goes from 1:1 to 1:0.01
 	// Nonlinear!
-	const int iCultureRatioModifier = iAttackerPercent / std::max(1, iDefenderPercent);
-	// XML to make this even stronker (default 100 doubles above modifier)
-	iRisk *= (GC.getREVOLT_TOTAL_CULTURE_MODIFIER() + 100) * iCultureRatioModifier;
-	iRisk /= 10000;
+	const int iCultureRatioModifier = 10000 * iAttackerPercent100 / std::max(1, iDefenderPercent100);
+	// XML to make this even stronker (default 200 doubles *only mod part* of above modifier)
+	iRisk *= ((iCultureRatioModifier - 10000) * (GC.getREVOLT_TOTAL_CULTURE_MODIFIER()) / 100 + 10000);
+	iRisk /= 100;
+	// iRisk is now measured in x100 here aka 505 or 2345 meaning 5.05% or 23.45%.
 
-	// By default, attacker having a state religion doubles attacking power
+	// By default (100), attacker having a state religion doubles attacking power
 	if (GET_PLAYER(eCultureAttacker).getStateReligion() != NO_RELIGION)
 	{
 		if (isHasReligion(GET_PLAYER(eCultureAttacker).getStateReligion()))
@@ -6673,7 +6708,7 @@ int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
 		}
 	}
 
-	// By default, defender having state religion halves attacker's power
+	// By default (-50), defender having state religion halves attacker's power
 	if (GET_PLAYER(getOwner()).getStateReligion() != NO_RELIGION)
 	{
 		if (isHasReligion(GET_PLAYER(getOwner()).getStateReligion()))
@@ -6686,18 +6721,24 @@ int CvCity::baseRevoltRisk(PlayerTypes eCultureAttacker) const
 }
 
 
-int CvCity::cultureGarrison(PlayerTypes eCultureAttacker) const
+int CvCity::unitRevoltRiskModifier(PlayerTypes eCultureAttacker) const
 {
-	// Sums all culture revolt defense of units on tile. No limit... should probably have one, somehow
+	// constructed from icultureGarrison of stationed units
+	// returns percent modifier on revolt risk due to units
 	int iGarrison = 0;
 
 	foreach_ (const CvUnit * unit, plot()->units())
 		iGarrison += unit->revoltProtectionTotal();
 
+	// Blaze: This also doubles negative impact of criminal units while at war. Intended? Fix?
 	if (atWar(GET_PLAYER(eCultureAttacker).getTeam(), getTeam()))
 		iGarrison *= 2;
 
-	return iGarrison;
+	// Negative revolt protection increases multiplier (-5% revolt protection -> 105% multiplier)
+	if (iGarrison < 0) return 100 - iGarrison;
+	// Positive revolt protection has diminishing returns
+	// 100% protection -> 50% multiplier, 200% protection -> 33% multiplier
+	return (10000 / (100 + iGarrison));
 }
 
 

@@ -1013,12 +1013,12 @@ void CvPlot::checkCityRevolt()
 	// If adjusted, also update `int iSpeedAdjustment` in CvGameTextMgr, CvDLLWidgetData
 	if (GC.getGame().getSorenRandNum(100, "Revolt #1") < iRevoltTestProb)
 	{
-		// iCityStrength is 100x % chance of revolt
-		const int iCityStrength = pCity->netRevoltRisk(eCulturalOwner);
+		// iCityStrength100 is 100x % chance of revolt
+		const int iCityStrength100 = pCity->netRevoltRisk100(eCulturalOwner);
 		const int iRevoltRoll = GC.getGame().getSorenRandNum(10000, "Revolt #2");
 
 		// Successful revolt
-		if (pCity->isNPC() || iRevoltRoll < iCityStrength)
+		if (pCity->isNPC() || iRevoltRoll < iCityStrength100)
 		{
 			foreach_(CvUnit* pLoopUnit, units())
 			{
@@ -1049,7 +1049,7 @@ void CvPlot::checkCityRevolt()
 			else
 			{
 				pCity->changeNumRevolts(eCulturalOwner, 1);
-				pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT") / 10000);
+				pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + iCityStrength100 * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT") / 10000);
 
 				// XXX announce for all seen cities?
 
@@ -1065,7 +1065,7 @@ void CvPlot::checkCityRevolt()
 			}
 		}
 		// Revolt is possible, but got lucky this time
-		else if (((iRevoltRoll - iCityStrength) < iCityStrength) && isInViewport())
+		else if (((iRevoltRoll - iCityStrength100) < iCityStrength100) && isInViewport())
 		{
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_FAILED_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
 			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT_END", MESSAGE_TYPE_MINOR_EVENT,
@@ -4392,7 +4392,8 @@ PlayerTypes CvPlot::calculateCulturalOwner(bool bCountLastTurn) const
 			return eHighestCulturePlayer;
 		}
 		// If all plots around this neutral plot (no culture or no owner) are owned by a player, grant that player this plot.
-		return getPlayerWithTerritorySurroundingThisPlotCardinally();
+		// Toffer - I don't see why this should be a rule, neutral land is neutral for a reason.
+		return NO_PLAYER; //getPlayerWithTerritorySurroundingThisPlotCardinally();
 	}
 
 	if (GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER) && !isCity(true))
@@ -4470,6 +4471,7 @@ PlayerTypes CvPlot::calculateCulturalOwner(bool bCountLastTurn) const
 	return eHighestCulturePlayer;
 }
 
+/*
 PlayerTypes CvPlot::getPlayerWithTerritorySurroundingThisPlotCardinally() const
 {
 	PlayerTypes ePlayer = NO_PLAYER;
@@ -4487,6 +4489,7 @@ PlayerTypes CvPlot::getPlayerWithTerritorySurroundingThisPlotCardinally() const
 	}
 	return ePlayer;
 }
+*/
 
 void CvPlot::plotAction(PlotUnitFunc func, int iData1, int iData2, PlayerTypes eOwner, TeamTypes eTeam)
 {
@@ -7997,8 +8000,6 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 		}
 		std::vector<std::pair<PlayerTypes, int> >::iterator itr;
 
-		// Blaze - 24.8.22 - This overflow protection shouldn't be needed with change to make culture
-		// in equilibrium states, rather than rising infinitely.
 		// Toffer - 08.08.20
 		// 4 byte integer overflow protection
 		if (iNewValue > 1000000000) // trigger reduction at a billion
@@ -8055,6 +8056,8 @@ void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate)
 {
 	if (0 != iChange)
 	{
+		// May need to bump change up if below decay-in-one-turn value under equilibrium option.
+		if (GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE) && iChange == 1) iChange = 2;
 		setCulture(eIndex, std::max(0, getCulture(eIndex) + iChange), bUpdate, true);
 	}
 }
@@ -10242,6 +10245,7 @@ void CvPlot::doCulture()
 	}
 
 	// Toffer - Decay culture for players that no longer adds culture to this plot
+	// Blaze - or uses equilibrium culture gameoption
 	{
 		const int decayPermille = GC.getTILE_CULTURE_DECAY_PERCENT() * 1000 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
 
@@ -10249,9 +10253,11 @@ void CvPlot::doCulture()
 		{
 			const PlayerTypes ePlayerX = static_cast<PlayerTypes>(i);
 
-			if (getCulture(ePlayerX) > 0 && getCultureRateThisTurn(ePlayerX) < 1 && (!getPlotCity() || getOwner() != ePlayerX))
+			if (getCulture(ePlayerX) > 0 &&
+				(getCultureRateThisTurn(ePlayerX) < 1 && (!getPlotCity() || getOwner() != ePlayerX)) ||
+				GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE))
 			{
-				setCulture(ePlayerX, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false);
+				setCulture(ePlayerX, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false, true);
 			}
 		}
 	}

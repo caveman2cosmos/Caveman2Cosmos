@@ -331,23 +331,24 @@
 		<iDefineIntVal>75</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- Each turn, culture on each plot will decay by this percent.
-			E.g. value of 10 means 50 culture loses 5, becomes 45.
-			Don't use 0 or 100, but between is alright. -->
+		<!-- Each turn, culture on each plot will decay by this percent in equilibrium game option,
+			or on tiles that a player is no longer putting culture of their own onto.
+			E.g. value of 5 means 100 culture loses 5, becomes 95. Sweet spot between 2 and 8.
+			Don't use 0 or 12+ (higher causes control issues at high speed), but between is alright. -->
 		<DefineName>TILE_CULTURE_DECAY_PERCENT</DefineName>
-		<iDefineIntVal>5</iDefineIntVal>
+		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- The relative percent of culture by which another player must surpass
 			a player with fixed borders before a tile is flipped from culture only.
-			EX: A tile owned by player with fixed borders civic has 40 culture.
-			200 (default) = Needs twice the owner's culture in order to flip (81).
+			EX: A tile owned by player with fixed borders civic has 20 culture.
+			400 (default) = Needs over 4x the owner's culture in order to flip (81).
 			100 = No effect from fixed borders on tile flipping; 41 culture will flip.
 			100000 = Effectively infinitely powerful fixed borders; 100x culture to flip (40001).
 			NOTE: Cultural flipping of tiles is the same mechanism by which cities revolt from culture,
 			so high values here will make cultural revolts in fixed border civilizations much harder to obtain. -->
 		<DefineName>FIXED_BORDERS_CULTURE_RATIO_PERCENT</DefineName>
-		<iDefineIntVal>200</iDefineIntVal>
+		<iDefineIntVal>400</iDefineIntVal>
 	</Define>
 	<Define>
 		<DefineName>GREAT_WORKS_CULTURE_TURNS</DefineName>
@@ -806,9 +807,9 @@
 		<iDefineIntVal>3</iDefineIntVal>
 	</Define>
 	<Define>
-		<!-- 0 no effect, 100 doubles effect of culture ratio on liklihood of culture revolt. -->
+		<!-- 50 halves effect of culture ratio on liklihood of culture revolt, 100 is baseline, 200 doubles. -->
 		<DefineName>REVOLT_TOTAL_CULTURE_MODIFIER</DefineName>
-		<iDefineIntVal>100</iDefineIntVal>
+		<iDefineIntVal>200</iDefineIntVal>
 	</Define>
 	<Define>
 		<!-- 0 no effect, 100 = double liklihood of revolt if cultural attacker has state religion -->
