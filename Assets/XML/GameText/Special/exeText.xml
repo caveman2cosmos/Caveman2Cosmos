@@ -2314,7 +2314,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_PLAY_NOW</Tag>
-		<English>Play Now!</English>
+		<English>Play Now! (Not Recommended)</English>
 		<French>Jouer</French>
 		<German>Jetzt spielen!</German>
 		<Italian>Gioca ora!</Italian>
@@ -2386,7 +2386,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAIN_MENU_SCENARIO</Tag>
-		<English>Play a Scenario</English>
+		<English>Play a Scenario (Not Recommended)</English>
 		<French>Jouer un scénario</French>
 		<German>Szenario spielen</German>
 		<Italian>Gioca uno scenario</Italian>
