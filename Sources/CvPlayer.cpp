@@ -2530,7 +2530,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 
 		if (bTrade)
 		{
-			algo::for_each(pCityPlot->rect(1, 1), bind(&CvPlot::setCulture, _1, eOldOwner, 0, false, false));
+			algo::for_each(pCityPlot->rect(1, 1), bind(&CvPlot::setCulture, _1, eOldOwner, 0, false, false, false));
 		}
 		pNewCity = initCity(pCityPlot->getX(), pCityPlot->getY(), !bConquest, false);
 

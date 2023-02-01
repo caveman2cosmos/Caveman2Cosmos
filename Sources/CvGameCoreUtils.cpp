@@ -4390,9 +4390,14 @@ void AddDLLMessage(
 #ifdef _DEBUG
 	OutputDebugString(CvString::format("DLLMessage: %S\n", szString.c_str()).c_str());
 #else
-	if (bForce) OutputDebugString(CvString::format("DLLMessage: %S\n", szString.c_str()).c_str());
+	if (bForce)
+	{
+		OutputDebugString(CvString::format("DLLMessage: %S\n", szString.c_str()).c_str());
+	}
 #endif
-	Cy::call(PYScreensModule, "sendMessage", Cy::Args()
+	Cy::call(
+		PYScreensModule, "sendMessage",
+		Cy::Args()
 		<< szString
 		<< ePlayer
 		<< iLength

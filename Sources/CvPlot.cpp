@@ -289,6 +289,8 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 
 	m_Properties.clear();
 	m_commanderCount.clear();
+	m_cultureRatesThisTurn.clear();
+	m_cultureRatesLastTurn.clear();
 
 	m_bPlotGroupsDirty = false;
 	m_aiVisibilityCount = new short[MAX_TEAMS];
@@ -656,8 +658,7 @@ void CvPlot::doTurn()
 	// ! Super Forts
 
 	doFeature();
-	// doCulture checks city tiles if calculateCulturalOwner
-	// says it should be other player, for revolt
+
 	doCulture();
 
 	verifyUnitValidPlot();
@@ -976,112 +977,116 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 
 void CvPlot::updateCulture(bool bBumpUnits, bool bUpdatePlotGroups)
 {
-	// Forts and cities will call calculateCulturalOwner in updating,
-	// but have require additional criteria before flipping/revolting
-	if (getPlotCity() != NULL)
-		checkCityRevolt();
-	else if (isActsAsCity())
-		checkFortRevolt();
-	else
+	// Toffer - Cities and forts only flip ownership from culture at the end of the game turn, not every time culture change.
+	if (!getPlotCity() && !isActsAsCity())
 	{
-		const PlayerTypes eNewOwner = calculateCulturalOwner();
-		setOwner(eNewOwner, bBumpUnits, bUpdatePlotGroups);
+		setOwner(calculateCulturalOwner(), bBumpUnits, bUpdatePlotGroups);
 	}
 }
-
 
 void CvPlot::checkCityRevolt()
 {
 	// Check if city flips (revolts)
 	CvCity* pCity = getPlotCity();
-	if (pCity == NULL) return;
-
-	const PlayerTypes eCulturalOwner = calculateCulturalOwner();
-	if (eCulturalOwner != NO_PLAYER && GET_PLAYER(eCulturalOwner).getTeam() != getTeam() && !pCity->isOccupation())
+	if (!pCity || pCity->isOccupation())
 	{
-		const int iRevoltTestProb = GC.getREVOLT_TEST_PROB() * 100 /
-			GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+		return;
+	}
+	const PlayerTypes eCulturalOwner = calculateCulturalOwner(false);
+	FAssert(eCulturalOwner != NO_PLAYER);
 
-		// Check to check for revolt, rate adjusted by gamespeed, at least 1% minimum.
-		// If adjusted, also update `int iSpeedAdjustment` in CvGameTextMgr, CvDLLWidgetData
-		if (GC.getGame().getSorenRandNum(100, "Revolt #1") < std::max(1, iRevoltTestProb))
+	if (eCulturalOwner == NO_PLAYER
+	// Toffer - Don't flip ownership of city to a player who is not currently adding the most culture to the plot per turn.
+	|| getCultureRateThisTurn(eCulturalOwner) <= getCultureRateThisTurn(getOwner())
+	// Don't flip cities between team members
+	|| GET_PLAYER(eCulturalOwner).getTeam() == getTeam())
+	{
+		return;
+	}
+	const int iRevoltTestProb = (
+		std::max(
+			1,
+			GC.getREVOLT_TEST_PROB()* 100/GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent()
+		)
+	);
+	// Check to check for revolt, rate adjusted by gamespeed, at least 1% minimum.
+	// If adjusted, also update `int iSpeedAdjustment` in CvGameTextMgr, CvDLLWidgetData
+	if (GC.getGame().getSorenRandNum(100, "Revolt #1") < iRevoltTestProb)
+	{
+		// iCityStrength100 is 100x % chance of revolt
+		const int iCityStrength100 = pCity->netRevoltRisk100(eCulturalOwner);
+		const int iRevoltRoll = GC.getGame().getSorenRandNum(10000, "Revolt #2");
+
+		// Successful revolt
+		if (pCity->isNPC() || iRevoltRoll < iCityStrength100)
 		{
-			// iCityStrength is 100x % chance of revolt
-			const int iCityStrength = pCity->netRevoltRisk(eCulturalOwner);
-			int iRevoltRoll = GC.getGame().getSorenRandNum(10000, "Revolt #2");
-
-			// Successful revolt
-			if (pCity->isNPC() || iRevoltRoll < iCityStrength)
+			foreach_(CvUnit* pLoopUnit, units())
 			{
-				foreach_(CvUnit* pLoopUnit, units())
+				if (pLoopUnit->isNPC())
 				{
-					if (pLoopUnit->isNPC())
-					{
-						pLoopUnit->kill(false, eCulturalOwner);
-					}
-					else if (pLoopUnit->canDefend())
-					{
-						pLoopUnit->changeDamage(pLoopUnit->getHP() / 2, eCulturalOwner);
-					}
+					pLoopUnit->kill(false, eCulturalOwner);
 				}
-
-				if (pCity->isNPC()
-				|| (!GC.getGame().isOption(GAMEOPTION_NO_CITY_FLIPPING)
-					&& (GC.getGame().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
-					&& pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS")))
+				else if (pLoopUnit->canDefend())
 				{
-					if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
-					{
-						pCity->kill(true);
-					}
-					else
-					{
-						setOwner(eCulturalOwner, true, true); // Will invalidate pCity pointer.
-					}
+					pLoopUnit->changeDamage(pLoopUnit->getHP() / 2, eCulturalOwner);
+				}
+			}
+
+			if (pCity->isNPC()
+			|| !GC.getGame().isOption(GAMEOPTION_NO_CITY_FLIPPING)
+			&& (GC.getGame().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
+			&&	pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS"))
+			{
+				if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+				{
+					pCity->kill(true);
 				}
 				else
 				{
-					pCity->changeNumRevolts(eCulturalOwner, 1);
-					pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT") / 10000);
-
-					// XXX announce for all seen cities?
-
-					if (isInViewport())
-					{
-						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
-						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
-							ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
-
-						AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
-							ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
-					}
+					setOwner(eCulturalOwner, true, true); // Will invalidate pCity pointer.
 				}
 			}
-			// Revolt is possible, but got lucky this time
-			else if (((iRevoltRoll - iCityStrength) < iCityStrength) && isInViewport())
+			else
 			{
-				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_FAILED_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
-				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT_END", MESSAGE_TYPE_MINOR_EVENT,
-					ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
+				pCity->changeNumRevolts(eCulturalOwner, 1);
+				pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + iCityStrength100 * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT") / 10000);
 
-				AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT_END", MESSAGE_TYPE_MINOR_EVENT,
-					ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
+				// XXX announce for all seen cities?
+
+				if (isInViewport())
+				{
+					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
+					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
+						ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
+
+					AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
+						ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
+				}
 			}
 		}
-		// ~2x more likely to be alerted of high discontent than revolt or quelled one (don't want every turn)
-		else if (GC.getGame().getSorenRandNum(100, "Revolt #1 Alert") < std::max(1, 2 * iRevoltTestProb)
-			&& isInViewport())
+		// Revolt is possible, but got lucky this time
+		else if (((iRevoltRoll - iCityStrength100) < iCityStrength100) && isInViewport())
 		{
-			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCONTENT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
-			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_ADVISOR_SUGGEST", MESSAGE_TYPE_MINOR_EVENT,
-				ARTFILEMGR.getInterfaceArtInfo("INTERFACE_ANGRYCITIZEN_TEXTURE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
+			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_FAILED_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
+			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT_END", MESSAGE_TYPE_MINOR_EVENT,
+				ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
 
-			AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_ADVISOR_SUGGEST", MESSAGE_TYPE_MINOR_EVENT,
-				ARTFILEMGR.getInterfaceArtInfo("INTERFACE_ANGRYCITIZEN_TEXTURE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
+			AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT_END", MESSAGE_TYPE_MINOR_EVENT,
+				ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
 		}
 	}
-}
+	// ~2x more likely to be alerted of high discontent than revolt or quelled one (don't want every turn)
+	else if (GC.getGame().getSorenRandNum(100, "Revolt #1 Alert") < 2 * iRevoltTestProb
+		&& isInViewport())
+	{
+		CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCONTENT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
+		AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_ADVISOR_SUGGEST", MESSAGE_TYPE_MINOR_EVENT,
+			ARTFILEMGR.getInterfaceArtInfo("INTERFACE_ANGRYCITIZEN_TEXTURE")->getPath(), GC.getCOLOR_RED(), getViewportX(),getViewportY(), true, true);
 
+		AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_ADVISOR_SUGGEST", MESSAGE_TYPE_MINOR_EVENT,
+			ARTFILEMGR.getInterfaceArtInfo("INTERFACE_ANGRYCITIZEN_TEXTURE")->getPath(), GC.getCOLOR_GREEN(), getViewportX(),getViewportY(), true, true);
+	}
+}
 
 void CvPlot::checkFortRevolt()
 {
@@ -1094,7 +1099,7 @@ void CvPlot::checkFortRevolt()
 	if (improvement.isActsAsCity() && getOwnershipDuration() > GC.getDefineINT("SUPER_FORTS_DURATION_BEFORE_REVOLT"))
 	{
 		// Check for a fort culture flip. Fixed borders altered threshold checked there
-		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
+		const PlayerTypes eCulturalOwner = calculateCulturalOwner(false);
 		if (eCulturalOwner != NO_PLAYER && eCulturalOwner != eOwner && GET_PLAYER(eCulturalOwner).getTeam() != getTeam())
 		{
 			// Defenders prevent flipping regardless of fixed borders.
@@ -3572,42 +3577,20 @@ void CvPlot::pushCultureFromFort(PlayerTypes ePlayer, int iChange, int iRange, b
 }
 
 
-void CvPlot::doImprovementCulture()
+void CvPlot::doImprovementCulture(PlayerTypes ePlayer, const CvImprovementInfo& imp)
 {
-	if (getImprovementType() == NO_IMPROVEMENT)
-		return;
-
-	const CvImprovementInfo& improvement = GC.getImprovementInfo(getImprovementType());
-	const PlayerTypes eOwner = getOwner();
-	if (eOwner != NO_PLAYER)
+	if (imp.getCulture() < 1)
 	{
-		const int iCulture = improvement.getCulture();
-		if (iCulture > 0)
+		return;
+	}
+	const int iRange = std::max(0, imp.getCultureRange());
+	const int iCulture = imp.getCulture();
+
+	foreach_(CvPlot* plotX, rect(iRange, iRange))
+	{
+		if (plotDistance(getX(), getY(), plotX->getX(), plotX->getY()) <= iRange)
 		{
-			const int iCultureRange = improvement.getCultureRange();
-
-			if (iCultureRange > 0)
-			{
-				for (int iDX = -iCultureRange; iDX <= iCultureRange; iDX++)
-				{
-					for (int iDY = -iCultureRange; iDY <= iCultureRange; iDY++)
-					{
-						if (plotDistance(0, 0, iDX, iDY) <= iCultureRange)
-						{
-							CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-							if (pLoopPlot != NULL)
-							{
-								pLoopPlot->changeCulture(eOwner, iCulture, false);
-							}
-						}
-					}
-				}
-			}
-			else
-			{
-				changeCulture(eOwner, iCulture, false);
-			}
+			plotX->changeCulture(ePlayer, iCulture, true);
 		}
 	}
 }
@@ -4374,75 +4357,80 @@ void CvPlot::invalidateIsTeamBorderCache() const
 
 /* returns the city adjacent to this plot or NULL if none exists. more than one can't exist, because of the 2-tile spacing btwn cities limit. */
 //Alberts2: added eplayer parameter to only return the city if the owner == eplayer
-CvCity* CvPlot::getAdjacentCity(PlayerTypes eplayer) const
+CvCity* CvPlot::getAdjacentCity(PlayerTypes ePlayer) const
 {
 	foreach_(const CvPlot* pLoopPlot, rect(1, 1))
 	{
-		CvCity* pLoopCity = pLoopPlot->getPlotCity();
-		if (pLoopCity != NULL)
+		CvCity* cityX = pLoopPlot->getPlotCity();
+		if (cityX)
 		{
-			if(eplayer != NO_PLAYER)
+			if (ePlayer != NO_PLAYER && cityX->getOwner() != ePlayer)
 			{
-				return (pLoopCity->getOwner() == eplayer ? pLoopCity : NULL);
+				return NULL;
 			}
-
-			return pLoopCity;
+			return cityX;
 		}
 	}
-
 	return NULL;
 }
 
 
-PlayerTypes CvPlot::calculateCulturalOwner() const
+PlayerTypes CvPlot::calculateCulturalOwner(bool bCountLastTurn) const
 {
 	// Function calculates who *should* own this plot via cultural means
 	// Actually setting owner happens in CvPlot::setOwner
 	PROFILE("CvPlot::calculateCulturalOwner()");
 
-	// this will be who should own the plot by default
-	PlayerTypes eBestPlayer = findHighestCulturePlayer();
-
-	int iBestCulture = eBestPlayer != NO_PLAYER ? getCulture(eBestPlayer) : 0;
 	const PlayerTypes eOwner = getOwner();
-	const PlayerTypes ePlayerSurrounds = getPlayerWithTerritorySurroundingThisPlotCardinally();
+	const PlayerTypes eHighestCulturePlayer = findHighestCulturePlayer(false, bCountLastTurn);
 
 	// non-city, non fort plots that are *adjacent* to cities may always belong to those cities' owners
+	if (eOwner == NO_PLAYER)
+	{
+		if (eHighestCulturePlayer != NO_PLAYER)
+		{
+			return eHighestCulturePlayer;
+		}
+		// If all plots around this neutral plot (no culture or no owner) are owned by a player, grant that player this plot.
+		// Toffer - I don't see why this should be a rule, neutral land is neutral for a reason.
+		return NO_PLAYER; //getPlayerWithTerritorySurroundingThisPlotCardinally();
+	}
+
 	if (GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER) && !isCity(true))
 	{
 		const CvCity* adjacentCity = getAdjacentCity();
-		if (adjacentCity != NULL)
-			return adjacentCity->getOwner();
+		if (adjacentCity) return adjacentCity->getOwner();
+	}
+
+	if (!GET_PLAYER(eOwner).isAlive())
+	{
+		return eHighestCulturePlayer;
 	}
 
 	// Fixed borders adjustments for culture threshold, unit passive claiming
 	// Have to check for the current owner being alive for this to work correctly in the cultural
 	//	re-assignment that takes place as he dies during processing of the capture of his last city.
-	if (eOwner != NO_PLAYER && GET_PLAYER(eOwner).isAlive() && GET_PLAYER(eOwner).hasFixedBorders())
+	if (GET_PLAYER(eOwner).hasFixedBorders())
 	{
 		// If *current* owner has fixed borders, keeps control if
 		// they have over xml specified ratio culture of best player.
-		if (eBestPlayer != NO_PLAYER && eBestPlayer != eOwner
-		&& getCulture(eOwner) * GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") / 100 >= iBestCulture)
-			return eOwner;
-
+		if (eHighestCulturePlayer != NO_PLAYER && eHighestCulturePlayer != eOwner
+		&& getCulture(eOwner) * GC.getDefineINT("FIXED_BORDERS_CULTURE_RATIO_PERCENT") / 100 >= getCulture(eHighestCulturePlayer)
 		// Unit passively maintaining claims.
-		if (algo::any_of(units(), CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::canClaimTerritory(NULL)))
+		|| algo::any_of(units(), CvUnit::fn::getTeam() == getTeam() && CvUnit::fn::canClaimTerritory(NULL)))
+		{
 			return eOwner;
+		}
 	}
 
-	// If all plots around this neutral plot (no culture or no owner) are owned by a player, grant that player this plot.
-	if ((eBestPlayer == NO_PLAYER || eOwner == NO_PLAYER) && ePlayerSurrounds != NO_PLAYER)
-		return ePlayerSurrounds;
-
+	/*
 	// TODO reimplement
 	// I think this would do a tiebreaker between people on same team so that
 	// players on the same team would fight less over plots that they could work.
 	// So, even if player A had up to 5x the culture of player B, A would not take
 	// from B if they were on the same team, were a vassal of B, and B could work/prioritize that plot.
 	// Can mostly reimplement by saying instead of 'in range', just compare the distances.
-	/*
-	if (!isCity() && eBestPlayer != NO_PLAYER)
+	if (!isCity() && eHighestCulturePlayer != NO_PLAYER)
 	{
 		int iBestPriority = MAX_INT;
 
@@ -4458,33 +4446,32 @@ PlayerTypes CvPlot::calculateCulturalOwner() const
 				{
 					continue;
 				}
-				const TeamTypes eBestTeam = GET_PLAYER(eBestPlayer).getTeam();
+				const TeamTypes eBestTeam = GET_PLAYER(eHighestCulturePlayer).getTeam();
 
 				if (cityX->getTeam() == eBestTeam || GET_TEAM(eBestTeam).isVassal(cityX->getTeam()))
 				{
 					const PlayerTypes ePlayerX = cityX->getOwner();
 
 					// isWithinCultureRange(ePlayerX) would check if the tile is receiving culture from a city of that player
-					// if (eBestPlayer != ePlayerX && getCulture(ePlayerX) > 0 && isWithinCultureRange(ePlayerX))
-					if (eBestPlayer != ePlayerX && getCulture(ePlayerX) > 0)
+					// if (eHighestCulturePlayer != ePlayerX && getCulture(ePlayerX) > 0 && isWithinCultureRange(ePlayerX))
+					if (eHighestCulturePlayer != ePlayerX && getCulture(ePlayerX) > 0)
 					{
 						const int iPriority = GC.getCityPlotPriority()[iI] + 5 * (cityX->getTeam() == eBestTeam);
 
 						if (iPriority < iBestPriority)
 						{
 							iBestPriority = iPriority;
-							eBestPlayer = ePlayerX;
+							eHighestCulturePlayer = ePlayerX;
 						}
 					}
 				}
 			}
 		}
 	}*/
-
-	return eBestPlayer;
+	return eHighestCulturePlayer;
 }
 
-
+/*
 PlayerTypes CvPlot::getPlayerWithTerritorySurroundingThisPlotCardinally() const
 {
 	PlayerTypes ePlayer = NO_PLAYER;
@@ -4502,6 +4489,7 @@ PlayerTypes CvPlot::getPlayerWithTerritorySurroundingThisPlotCardinally() const
 	}
 	return ePlayer;
 }
+*/
 
 void CvPlot::plotAction(PlotUnitFunc func, int iData1, int iData2, PlayerTypes eOwner, TeamTypes eTeam)
 {
@@ -7908,27 +7896,36 @@ int CvPlot::countTotalCulture() const
 	return iTotalCulture;
 }
 
-
-PlayerTypes CvPlot::findHighestCulturePlayer() const
+PlayerTypes CvPlot::findHighestCulturePlayer(const bool bCountLegacyCulture, const bool bCountLastTurn) const
 {
 	PlayerTypes eBestPlayer = NO_PLAYER;
 	int iBestValue = 0;
 
 	for (int iI = 0; iI < MAX_PLAYERS; ++iI)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
-		{
-			const int iValue = getCulture((PlayerTypes)iI);
+		const PlayerTypes ePlayerX = static_cast<PlayerTypes>(iI);
 
-			if (iValue > iBestValue)
+		if (GET_PLAYER(ePlayerX).isAlive())
+		{
+			if (bCountLegacyCulture
+			|| getCultureRateThisTurn(ePlayerX) > 0
+			|| bCountLastTurn && getCultureRateLastTurn(ePlayerX) > 0)
 			{
-				iBestValue = iValue;
-				eBestPlayer = (PlayerTypes)iI;
+				const int iValue = getCulture(ePlayerX);
+				if (iValue > 0)
+				{
+					if (iValue > iBestValue)
+					{
+						iBestValue = iValue;
+						eBestPlayer = ePlayerX;
+					}
+					// Tiebreaker: goes to current owner rather than lowest index
+					else if (iValue == iBestValue && getOwner() == ePlayerX)
+					{
+						eBestPlayer = ePlayerX;
+					}
+				}
 			}
-			// Tiebreaker: goes to current owner rather than lowest index
-			else if (iValue == iBestValue && iValue > 0)
-				if (getOwner() == (PlayerTypes)iI)
-					eBestPlayer = (PlayerTypes)iI;
 		}
 	}
 	return eBestPlayer;
@@ -7964,7 +7961,7 @@ int CvPlot::calculateTeamCulturePercent(TeamTypes eIndex) const
 }
 
 
-void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bUpdatePlotGroups)
+void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bUpdatePlotGroups, const bool bDecay)
 {
 	PROFILE_FUNC();
 
@@ -7978,10 +7975,31 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 
 	if (getCulture(eIndex) != iNewValue)
 	{
+		const int iChange = iNewValue - getCulture(eIndex);
+
+		if (bDecay || iChange > 0) // ignore influence driven war reductions
+		{
+			bool bFirst = true;
+			for (std::vector< std::pair<PlayerTypes, int> >::iterator it = m_cultureRatesThisTurn.begin(); it != m_cultureRatesThisTurn.end(); ++it)
+			{
+				if ((*it).first == eIndex)
+				{
+					if ((*it).second == -iChange)
+					{
+						m_cultureRatesThisTurn.erase(it);
+					}
+					else
+					{
+						(*it).second += iChange;
+					}
+					bFirst = false;
+					break;
+				}
+			}
+			if (bFirst) m_cultureRatesThisTurn.push_back(std::make_pair(eIndex, iChange));
+		}
 		std::vector<std::pair<PlayerTypes, int> >::iterator itr;
 
-		// Blaze - 24.8.22 - This overflow protection shouldn't be needed with change to make culture
-		// in equilibrium states, rather than rising infinitely.
 		// Toffer - 08.08.20
 		// 4 byte integer overflow protection
 		if (iNewValue > 1000000000) // trigger reduction at a billion
@@ -8034,16 +8052,12 @@ void CvPlot::setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bU
 }
 
 
-void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate, bool bDoMinAdjust)
-// bDoMinAdjust defaults true; use false for things that may want small culture change such as IDW
+void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate)
 {
 	if (0 != iChange)
 	{
-		// Lots of things put 1 culture on a tile to mark as claimed; adjust above threshold if so.
-		if (bDoMinAdjust && iChange > 0)
-		{
-			iChange = std::max(iChange, GC.getGame().getMinCultureOutput());
-		}
+		// May need to bump change up if below decay-in-one-turn value under equilibrium option.
+		if (GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE) && iChange == 1) iChange = 2;
 		setCulture(eIndex, std::max(0, getCulture(eIndex) + iChange), bUpdate, true);
 	}
 }
@@ -10219,44 +10233,51 @@ void CvPlot::doCulture()
 {
 	PROFILE("CvPlot::doCulture()");
 
-	doImprovementCulture();
-
-	if (getOwner() != NO_PLAYER) decayCulture();
-
-	// updateCulture checks forts, cities for flipping.
-	// Setting forcibly claimed territory comes after, in doTurn
-	updateCulture(true, true);
-}
-
-
-void CvPlot::decayCulture()
-{
-	// May need to make decay stronger on higher strength tiles, without kneecapping earlygame.
-	// Perhaps 10% plus 5% per every 100 culture or something capping out at 50%, need to examine.
-	// Gotta avoid 'welfare cliffs' though.
-	// NOTE: If decay function is altered, gotta make corresponding change to the GC.getGame().getMinCultureOutput() return.
-
-	const int decayPermille = GC.getTILE_CULTURE_DECAY_PERCENT() * 1000 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-	const int decayFlat = GC.getTILE_CULTURE_DECAY_CONSTANT();
-
-	for (int i = 0; i < MAX_PLAYERS; i++)
+	// Toffer - ToDo: doImprovementCulture should ideally be done in owner->doTurn(),
+	//	as it adds culture to plots that in one direction has already done culture decay,
+	//	and plots in the other direction that has yet to do culture deccay.
+	// Rewrite so player has a cached vector of all owned forts (Maybe fort should be a new object type),
+	//	and have forts do a doTurn() during the players doTurn(),
+	//	might be necsessary rewrite for being able to produce units in forts anyway.
+	if (getOwner() != NO_PLAYER && getImprovementType() != NO_IMPROVEMENT)
 	{
-		const PlayerTypes ePlayerX = static_cast<PlayerTypes>(i);
-		// Check if alive? Barb?
-		if (getCulture(ePlayerX) > 0)
+		doImprovementCulture(getOwner(), GC.getImprovementInfo(getImprovementType()));
+	}
+
+	// Toffer - Decay culture for players that no longer adds culture to this plot
+	// Blaze - or uses equilibrium culture gameoption
+	{
+		const int decayPermille = GC.getTILE_CULTURE_DECAY_PERCENT() * 1000 / GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
+
+		for (int i = 0; i < MAX_PLAYERS; i++)
 		{
-			setCulture(
-				ePlayerX,
-				std::max(
-					getPlotCity() && getOwner() == ePlayerX ? 1 : 0,
-					// default: current culture * 90% then - 1
-					getCulture(ePlayerX) * (1000 - decayPermille) / 1000 - decayFlat
-				),
-				// Don't need to update borders, update culture is called next in doCulture
-				false, false
-			);
+			const PlayerTypes ePlayerX = static_cast<PlayerTypes>(i);
+
+			if (getCulture(ePlayerX) > 0 &&
+				(getCultureRateThisTurn(ePlayerX) < 1 && (!getPlotCity() || getOwner() != ePlayerX)) ||
+				GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE))
+			{
+				setCulture(ePlayerX, getCulture(ePlayerX) * (1000 - decayPermille) / 1000, false, false, true);
+			}
 		}
 	}
+	// Check if plot ownership should flip from culture
+	if (getPlotCity())
+	{
+		checkCityRevolt();
+	}
+	else if (isActsAsCity())
+	{
+		checkFortRevolt();
+	}
+	else setOwner(calculateCulturalOwner(false), true, true);
+
+	m_cultureRatesLastTurn.clear();
+	for (std::vector< std::pair<PlayerTypes, int> >::const_iterator it = m_cultureRatesThisTurn.begin(); it != m_cultureRatesThisTurn.end(); ++it)
+	{
+		m_cultureRatesLastTurn.push_back(std::make_pair((*it).first, (*it).second));
+	}
+	m_cultureRatesThisTurn.clear();
 }
 
 
@@ -10857,6 +10878,37 @@ void CvPlot::read(FDataStreamBase* pStream)
 			GET_PLAYER(static_cast<PlayerTypes>(uType8)).setCommandFieldPlot(true, this);
 		}
 	}
+
+	// Toffer - Read vectors
+	{
+		short iSize = 0;
+		short iType = -1;
+		// Building
+		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "CultureRatesThisTurnSize");
+		for (short i = 0; i < iSize; ++i)
+		{
+			int iValue = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iType, "CultureRatesThisTurnPlayer");
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iValue, "CultureRatesThisTurnRate");
+
+			if (iType > -1 && iType < MAX_PLAYERS)
+			{
+				m_cultureRatesThisTurn.push_back(std::make_pair(static_cast<PlayerTypes>(iType), iValue));
+			}
+		}
+		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "CultureRatesLastTurnSize");
+		for (short i = 0; i < iSize; ++i)
+		{
+			int iValue = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iType, "CultureRatesLastTurnPlayer");
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iValue, "CultureRatesLastTurnRate");
+
+			if (iType > -1 && iType < MAX_PLAYERS)
+			{
+				m_cultureRatesLastTurn.push_back(std::make_pair(static_cast<PlayerTypes>(iType), iValue));
+			}
+		}
+	}
 	//Example of how to Skip Element
 	//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_bPeaks, SAVE_VALUE_ANY);
 	WRAPPER_READ_OBJECT_END(wrapper);
@@ -11226,6 +11278,21 @@ void CvPlot::write(FDataStreamBase* pStream)
 		}
 	}
 
+	// Toffer - Write vectors
+	{
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_cultureRatesThisTurn.size(), "CultureRatesThisTurnSize");
+		for (std::vector< std::pair<PlayerTypes, int> >::iterator it = m_cultureRatesThisTurn.begin(); it != m_cultureRatesThisTurn.end(); ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>((*it).first), "CultureRatesThisTurnPlayer");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (*it).second, "CultureRatesThisTurnRate");
+		}
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_cultureRatesLastTurn.size(), "CultureRatesLastTurnSize");
+		for (std::vector< std::pair<PlayerTypes, int> >::iterator it = m_cultureRatesLastTurn.begin(); it != m_cultureRatesLastTurn.end(); ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>((*it).first), "CultureRatesLastTurnPlayer");
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (*it).second, "CultureRatesLastTurnRate");
+		}
+	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
@@ -13172,4 +13239,29 @@ void CvPlot::changeCommanderCount(const PlayerTypes ePlayer, const bool bAdd)
 bool CvPlot::inCommandField(const PlayerTypes ePlayer) const
 {
 	return m_commanderCount.find(static_cast<uint8_t>(ePlayer)) != m_commanderCount.end();
+}
+
+
+int CvPlot::getCultureRateThisTurn(const PlayerTypes ePlayer) const
+{
+	for (std::vector< std::pair<PlayerTypes, int> >::const_iterator it = m_cultureRatesThisTurn.begin(); it != m_cultureRatesThisTurn.end(); ++it)
+	{
+		if ((*it).first == ePlayer)
+		{
+			return ((*it).second);
+		}
+	}
+	return 0;
+}
+
+int CvPlot::getCultureRateLastTurn(const PlayerTypes ePlayer) const
+{
+	for (std::vector< std::pair<PlayerTypes, int> >::const_iterator it = m_cultureRatesLastTurn.begin(); it != m_cultureRatesLastTurn.end(); ++it)
+	{
+		if ((*it).first == ePlayer)
+		{
+			return ((*it).second);
+		}
+	}
+	return 0;
 }

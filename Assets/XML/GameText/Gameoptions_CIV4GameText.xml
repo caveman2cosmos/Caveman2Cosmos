@@ -702,12 +702,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MIN_CITY_BORDER_HELP</Tag>
-		<English>8 tiles around any city can never be conquered via cultural influence.[NEWLINE]This option is disabled by "City starts with 1 tile" option.</English>
+		<English>8 tiles around any city can never be conquered via cultural influence.</English>
 		<French>Les 8 cases les plus proches d'une Ville ne peuvent jamais être conquises par l'influence culturelle</French>
 		<German>Die 8 Felder rings um eine Stadt können niemals durch kulturellen Einfluss übernommen werden.</German>
 		<Spanish>No se podrán conquistar las 8 casillas alrededor de una ciudad mediante la influencia cultural.</Spanish>
 		<Polish>8 pól wokół miasta jest nienaruszalne przez granice kulturalne wroga.</Polish>
-		<Russian>8 êëåòîê âîêðóã ëþáîãî ãîðîäà íèêîãäà íå ìîãóò áûòü çàõâà÷åíû ÷åðåç êóëüòóðíîå âëèÿíèå.[NEWLINE]Данная настройка не работает с опцией «Города стартуют с 1 клетки».</Russian>
+		<Russian>8 êëåòîê âîêðóã ëþáîãî ãîðîäà íèêîãäà íå ìîãóò áûòü çàõâà÷åíû ÷åðåç êóëüòóðíîå âëèÿíèå.</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_RESOURCES</Tag>
@@ -1630,5 +1630,13 @@ Only affects SmartMap if terrain options is:
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES_HELP</Tag>
 		<English>Cities will be auto-razed when they would normally change owner.[NEWLINE]Exceptions are made for the Barbarian civ option and revolution option, city ownership change can occur from these options. Cities won't be auto-razed when barbs conquer a city because of this option since there's an option called "Barbarian Always Raze".</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE</Tag>
+		<English>Equilibrium Culture</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE_HELP</Tag>
+		<English>Culture decays on all tiles, not just unowned. This means culture wars are dependent on the last ~100 turns of culture output (adjusted for gamespeed) rather than all culture ever produced by a city.</English>
 	</TEXT>
 </Civ4GameText>

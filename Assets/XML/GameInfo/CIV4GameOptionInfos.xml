@@ -147,9 +147,6 @@
 			<Help>TXT_KEY_GAMEOPTION_1_CITY_TILE_FOUNDING_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
-			<EnforcesGameOptionOffTypes>
-				<GameOptionType>GAMEOPTION_MIN_CITY_BORDER</GameOptionType>
-			</EnforcesGameOptionOffTypes>
 		</GameOptionInfo>
 		<GameOptionInfo>
 			<Type>GAMEOPTION_MIN_CITY_BORDER</Type>
@@ -708,6 +705,13 @@
 			<Type>GAMEOPTION_ALWAYS_RAZE_CITIES</Type>
 			<Description>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES</Description>
 			<Help>TXT_KEY_GAMEOPTION_ALWAYS_RAZE_CITIES_HELP</Help>
+			<bDefault>0</bDefault>
+			<bVisible>1</bVisible>
+		</GameOptionInfo>
+		<GameOptionInfo>
+			<Type>GAMEOPTION_EQUILIBRIUM_CULTURE</Type>
+			<Description>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE</Description>
+			<Help>TXT_KEY_GAMEOPTION_EQUILIBRIUM_CULTURE_HELP</Help>
 			<bDefault>0</bDefault>
 			<bVisible>1</bVisible>
 		</GameOptionInfo>
