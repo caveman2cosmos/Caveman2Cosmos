@@ -884,8 +884,6 @@ public:
 
 	bool isAutoRaze(const CvCity* city, const PlayerTypes eNewOwner, bool bConquest, bool bTrade, bool bRecapture) const;
 
-	int getMinCultureOutput() const { return m_iMinCultureOutput; }
-
 	void setWorldBuilder(const bool bNewValue);
 };
 
