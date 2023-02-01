@@ -5129,20 +5129,20 @@ void CvDLLWidgetData::parseNationalityHelp(CvWidgetDataStruct &widgetDataStruct,
 		{
 			if (GET_PLAYER(eCulturalOwner).getTeam() != pHeadSelectedCity->getTeam())
 			{
-				int iCityStrength = pHeadSelectedCity->netRevoltRisk(eCulturalOwner);
-				int iOriginal = pHeadSelectedCity->baseRevoltRisk(eCulturalOwner);
-				int iSpeedAdjustment = GC.getREVOLT_TEST_PROB() * 100 /
+				const int iNetRevoltRisk100 = pHeadSelectedCity->netRevoltRisk100(eCulturalOwner);
+				const int iOriginal100 = pHeadSelectedCity->baseRevoltRisk100(eCulturalOwner);
+				const int iSpeedAdjustment = GC.getREVOLT_TEST_PROB() * 100 /
 					GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getSpeedPercent();
-				int iGarrison = pHeadSelectedCity->cultureGarrison(eCulturalOwner);
+				const int iGarrison = pHeadSelectedCity->unitRevoltRiskModifier(eCulturalOwner);
 
-				if (iCityStrength > 0)
+				if (iNetRevoltRisk100 > 0)
 				{
 					szBuffer.append(NEWLINE);
 					szBuffer.append(gDLL->getText("TXT_KEY_MISC_CHANCE_OF_REVOLT",
-						CvWString::format(L"" SETCOLR L"%.2f%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), ((float)iCityStrength*iSpeedAdjustment)/10000).GetCString(),
-						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iOriginal).GetCString(),
+						CvWString::format(L"" SETCOLR L"%.2f%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), ((float)iNetRevoltRisk100*iSpeedAdjustment)/10000).GetCString(),
+						CvWString::format(L"" SETCOLR L"%.1f%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), (float)iOriginal100/100).GetCString(),
 						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iSpeedAdjustment).GetCString(),
-						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), (100-iGarrison)).GetCString()
+						CvWString::format(L"" SETCOLR L"%d%%" ENDCOLR, TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), iGarrison).GetCString()
 					));
 				}
 			}

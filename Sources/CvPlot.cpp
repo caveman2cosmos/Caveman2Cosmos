@@ -1013,12 +1013,12 @@ void CvPlot::checkCityRevolt()
 	// If adjusted, also update `int iSpeedAdjustment` in CvGameTextMgr, CvDLLWidgetData
 	if (GC.getGame().getSorenRandNum(100, "Revolt #1") < iRevoltTestProb)
 	{
-		// iCityStrength is 100x % chance of revolt
-		const int iCityStrength = pCity->netRevoltRisk(eCulturalOwner);
+		// iCityStrength100 is 100x % chance of revolt
+		const int iCityStrength100 = pCity->netRevoltRisk100(eCulturalOwner);
 		const int iRevoltRoll = GC.getGame().getSorenRandNum(10000, "Revolt #2");
 
 		// Successful revolt
-		if (pCity->isNPC() || iRevoltRoll < iCityStrength)
+		if (pCity->isNPC() || iRevoltRoll < iCityStrength100)
 		{
 			foreach_(CvUnit* pLoopUnit, units())
 			{
@@ -1049,7 +1049,7 @@ void CvPlot::checkCityRevolt()
 			else
 			{
 				pCity->changeNumRevolts(eCulturalOwner, 1);
-				pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT") / 10000);
+				pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + iCityStrength100 * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT") / 10000);
 
 				// XXX announce for all seen cities?
 
@@ -1065,7 +1065,7 @@ void CvPlot::checkCityRevolt()
 			}
 		}
 		// Revolt is possible, but got lucky this time
-		else if (((iRevoltRoll - iCityStrength) < iCityStrength) && isInViewport())
+		else if (((iRevoltRoll - iCityStrength100) < iCityStrength100) && isInViewport())
 		{
 			CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_FAILED_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
 			AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT_END", MESSAGE_TYPE_MINOR_EVENT,
