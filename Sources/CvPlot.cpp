@@ -4392,7 +4392,8 @@ PlayerTypes CvPlot::calculateCulturalOwner(bool bCountLastTurn) const
 			return eHighestCulturePlayer;
 		}
 		// If all plots around this neutral plot (no culture or no owner) are owned by a player, grant that player this plot.
-		return getPlayerWithTerritorySurroundingThisPlotCardinally();
+		// Toffer - I don't see why this should be a rule, neutral land is neutral for a reason.
+		return NO_PLAYER; //getPlayerWithTerritorySurroundingThisPlotCardinally();
 	}
 
 	if (GC.getGame().isOption(GAMEOPTION_MIN_CITY_BORDER) && !isCity(true))
@@ -4470,6 +4471,7 @@ PlayerTypes CvPlot::calculateCulturalOwner(bool bCountLastTurn) const
 	return eHighestCulturePlayer;
 }
 
+/*
 PlayerTypes CvPlot::getPlayerWithTerritorySurroundingThisPlotCardinally() const
 {
 	PlayerTypes ePlayer = NO_PLAYER;
@@ -4487,6 +4489,7 @@ PlayerTypes CvPlot::getPlayerWithTerritorySurroundingThisPlotCardinally() const
 	}
 	return ePlayer;
 }
+*/
 
 void CvPlot::plotAction(PlotUnitFunc func, int iData1, int iData2, PlayerTypes eOwner, TeamTypes eTeam)
 {
