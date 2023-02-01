@@ -553,7 +553,6 @@ protected:
 	CvPropertySolver m_PropertySolver;
 
 	int m_iChokePointCalculationVersion;
-	int m_iMinCultureOutput;
 
 
 public:

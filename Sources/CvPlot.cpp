@@ -8057,7 +8057,7 @@ void CvPlot::changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate)
 	if (0 != iChange)
 	{
 		// May need to bump change up if below decay-in-one-turn value under equilibrium option.
-		if (GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE) && iChange > 0) iChange = std::max(iChange, GC.getGame().getMinCultureOutput());
+		if (GC.getGame().isOption(GAMEOPTION_EQUILIBRIUM_CULTURE) && iChange == 1) iChange = 2;
 		setCulture(eIndex, std::max(0, getCulture(eIndex) + iChange), bUpdate, true);
 	}
 }
