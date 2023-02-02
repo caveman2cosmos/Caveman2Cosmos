@@ -6649,7 +6649,7 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 			if (neighborDist == 0)
 			{
 				netDistanceModifier += mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (extraRiverPenalty);
-				netDistanceModifier /= 3;
+				netDistanceModifier /= 2;
 			}
 			else
 			{
