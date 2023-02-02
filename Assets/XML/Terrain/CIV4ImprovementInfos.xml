@@ -11891,6 +11891,7 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<iCulture>5</iCulture>
 			<bBombardable>1</bBombardable>
 		</ImprovementInfo>
 		<!-- Sea Fort -->
@@ -11989,6 +11990,8 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
+			<iCulture>10</iCulture>
+			<iCultureRange>1</iCultureRange>
 			<iVisibilityChange>2</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
 			<iUniqueRange>2</iUniqueRange>
