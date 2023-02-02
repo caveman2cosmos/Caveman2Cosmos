@@ -6477,6 +6477,7 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 	// then (inefficiently, atm) calls calculateCultureDistance to compute specific tiles
 	PROFILE_FUNC();
 
+	// 1-tile start and realistic culture together has unique rules, otherwise:
 	// if the point is within one square of the city center
 	foreach_(const CvPlot* plotX, plots(NUM_CITY_PLOTS_1))
 	{
@@ -6484,8 +6485,6 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 		if (getX() == plotX->getX() && getY() == plotX->getY()) m_aCultureDistances[plotX] = 0;
 		// If 1 tile start is off, the rest in range 1 have distance 1, no modifiers
 		else if (!GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING)) m_aCultureDistances[plotX] = 1;
-		// If 1 tile start is on and are vertical or adjacent from core, then distance 1. Leftovers need calculating.
-		else if (getX() == plotX->getX() || getY() == plotX->getY()) m_aCultureDistances[plotX] = 1;
 	}
 
 	// Blaze: Spiraling outward from center (style of getCityIndexPlot) is more efficient if perf issues exist;
@@ -6507,12 +6506,9 @@ void CvCity::recalculateCultureDistances(int iMaxDistance) const
 
 		foreach_(const CvPlot* plotX, plot()->rect(iMaxDistance, iMaxDistance))
 		{
-			// Some tiles at center should not be calculated with formula (as they already are defined above):
-			if (plotDistance(getX(), getY(), plotX->getX(), plotX->getY()) < 2 &&
-				// Regular realistic culture, with any adjacency to city, and
-				(!GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING) ||
-				// 1-tile-start with cardinal adjacency to city
-				getX() == plotX->getX() || getY() == plotX->getY()))
+			// Either ignore only core, or 9 tiles around city center depending on whether 1 tile start:
+			if (plotDistance(getX(), getY(), plotX->getX(), plotX->getY()) < 
+				(1 + !GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING)))
 			{
 				// This is a slightly cursed function.
 				continue;
@@ -6591,10 +6587,22 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 		{
 			terrainDistance = 0;
 		}
-		// otherwise, increase distance by 1 on unimproved tiles. Slows down earlygame expansion.
+		// penalty for unimproved features
 		else if (mainPlot->getImprovementType() == NO_IMPROVEMENT)
 		{
 			terrainDistance += 1;
+		}
+		// penalty for improved features if not inside adjacent-surrounded territory
+		else
+		{
+			foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
+			{
+				if (adjacentPlot->getOwner() == NO_PLAYER)
+				{
+					terrainDistance += 1;
+					break;
+				}
+			}
 		}
 		terrainDistance += GC.getFeatureInfo(mainPlot->getFeatureType()).getCultureDistance();
 	}
@@ -6631,11 +6639,26 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
 	{
 		int neighborDist = m_aCultureDistances[adjacentPlot];
-		if (neighborDist != 0 && neighborDist != MAX_INT)
+		// neighborDist is 0 on first iteration after cleared cache. Don't calculate from such tiles,
+		// unless we are adjacent to capital (needed if 1tile founding is on); can use that as valid neighbor.
+		if (neighborDist != MAX_INT &&
+			(neighborDist != 0 || (adjacentPlot->getX() == getX() && adjacentPlot->getY() == getY())))
 		{
-			int netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (1 + extraRiverPenalty) * 2;
-			// City tiles are easier to influence even if across river (city itself crosses river)
+			int netDistanceModifier = terrainDistance;
+			// If we are adjacent to our own city center (1 tile founding rule), different rules. Cheaper, but not straight 0 cost.
+			if (neighborDist == 0)
+			{
+				netDistanceModifier += mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (extraRiverPenalty);
+				netDistanceModifier /= 3;
+			}
+			else
+			{
+				netDistanceModifier += mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (1 + extraRiverPenalty) * 2;
+			}
+
+			// Other city tiles are easier to influence even if across river (city itself crosses river)
 			netDistanceModifier /= (1 + isCity);
+
 			neighborDist += 1 + std::max(0, netDistanceModifier);
 			if (neighborDist < distance) distance = neighborDist;
 		}
