@@ -2181,6 +2181,7 @@
 			</CommerceChangeDoubleTimes>
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
+			<iOccupationTimeModifier>150</iOccupationTimeModifier>
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
@@ -3754,6 +3755,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
+			<iOccupationTimeModifier>75</iOccupationTimeModifier>
 			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
 			<iAsset>10</iAsset>
 			<iPower>5</iPower>
@@ -5921,6 +5923,7 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iOccupationTimeModifier>150</iOccupationTimeModifier>
 			<iNationalCaptureResistanceModifier>30</iNationalCaptureResistanceModifier>
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>

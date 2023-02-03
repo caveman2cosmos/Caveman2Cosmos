@@ -5,6 +5,8 @@
 				Note this value stacks with regular distance AND terrain (see CIV4TerrainInfos.xml)
 				Alternatively, <bIgnoreTerrainCulture> will make the feature's tile
 				ignore underlaying terrain cost.
+				Presence of a feature without an improvement on it increases cultural distance by 1
+				unless bIgnoreTerrainCulture is true.
 				Both can be used together; this in effect replaces the terrain distance with only
 				whatever the feature provides. -->
 		<FeatureInfo>
@@ -105,7 +107,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<GrowthSound>NONE</GrowthSound>
-			<iCultureDistance>2</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -233,7 +235,7 @@
 			<EffectType>EFFECT_BIRDSCATTER</EffectType>
 			<iEffectProbability>15</iEffectProbability>
 			<iAdvancedStartRemoveCost>40</iAdvancedStartRemoveCost>
-			<iCultureDistance>2</iCultureDistance>
+			<iCultureDistance>3</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -4530,8 +4532,7 @@
 			<iMovement>1</iMovement>
 			<iAppearance>400</iAppearance>
 			<iGrowth>15</iGrowth>
-			<iCultureDistance>1</iCultureDistance>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
+			<iCultureDistance>-2</iCultureDistance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
@@ -4645,8 +4646,7 @@
 			<iMovement>1</iMovement>
 			<iAppearance>400</iAppearance>
 			<iGrowth>15</iGrowth>
-			<iCultureDistance>1</iCultureDistance>
-			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
+			<iCultureDistance>-2</iCultureDistance>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>

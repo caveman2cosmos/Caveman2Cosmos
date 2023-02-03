@@ -499,24 +499,6 @@ void CvGame::onFinalInitialized(const bool bNewGame)
 		gDLL->getInterfaceIFace()->clearSelectedCities();
 	}
 
-	// Lowest culture which, after a culture decay, will still be > 0. Inverse of CvPlot::decayCulture(), basically.
-	m_iMinCultureOutput = (
-		// Toffer - Round up (multiply by 1000 add 999 and then divide by 1000) to get actual min value.
-		(
-			999 +
-			(1 + GC.getTILE_CULTURE_DECAY_CONSTANT()) * 1000000
-			/
-			(
-				1000 - (
-					GC.getTILE_CULTURE_DECAY_PERCENT() * 1000
-					/
-					GC.getGameSpeedInfo(getGameSpeedType()).getSpeedPercent()
-				)
-			)
-		)
-		/ 1000
-	);
-
 	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		if (GET_TEAM((TeamTypes)iI).isAlive())
@@ -2229,8 +2211,12 @@ void CvGame::update()
 			CvCity* city = playerAct.getIdleCity();
 			if (city)
 			{
-				gDLL->getInterfaceIFace()->addSelectedCity(city, false);
-				GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+				if (!getBugOptionBOOL("CityScreen__FullCityScreenOnEmptyBuildQueue", false))
+				{
+					gDLL->getInterfaceIFace()->addSelectedCity(city, false);
+					GC.getCurrentViewport()->bringIntoView(city->getX(), city->getY());
+				}
+				else gDLL->getInterfaceIFace()->selectCity(city, true);
 			}
 			else
 			{
