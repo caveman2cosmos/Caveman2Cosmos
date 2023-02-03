@@ -10338,7 +10338,7 @@ void CvCityAI::AI_findBestImprovementForPlot(const CvPlot* pPlot, plotInfo* plot
 		const CvImprovementInfo& potentialImprovementInfo = GC.getImprovementInfo(ePotentialImprovement);
 
 		// check if improvement is a fort or watchtower, then its a no.
-		if (potentialImprovementInfo.isActsAsCity() || potentialImprovementInfo.getVisibilityChange() > 0) continue;
+		if (potentialImprovementInfo.isMilitaryStructure()) continue;
 
 		// check if improvement can be built by team
 		if (!pPlot->canBuildImprovement(ePotentialImprovement, getTeam())) continue;

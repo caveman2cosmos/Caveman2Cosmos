@@ -25794,7 +25794,7 @@ int CvPlayerAI::AI_getPlotChokeValue(const CvPlot* pPlot) const
 					}
 					if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 					{
-						if (!GC.getImprovementInfo(pPlot->getImprovementType()).isActsAsCity())
+						if (!GC.getImprovementInfo(pPlot->getImprovementType()).isMilitaryStructure())
 						{
 							return 0;
 						}
