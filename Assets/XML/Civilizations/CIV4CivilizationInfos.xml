@@ -4165,13 +4165,13 @@
 			<CivilizationActionSound>AS3D_NATIVE_AMERICA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_ANIMAL_PREDATOR</Type>
-			<Description>TXT_KEY_CIVILIZATION_ANIMAL_PREDATOR</Description>
-			<ShortDescription>TXT_KEY_CIVILIZATION_ANIMAL_PREDATOR_SHORT</ShortDescription>
-			<Adjective>TXT_KEY_CIVILIZATION_ANIMAL_PREDATOR_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIVILIZATION_ANIMAL_PREDATOR_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_NPC_PREDATOR</Type>
+			<Description>TXT_KEY_CIVILIZATION_NPC_PREDATOR</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_NPC_PREDATOR_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_NPC_PREDATOR_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_NPC_PREDATOR_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ANIMAL</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_ANIMAL_PREDATOR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_NPC_PREDATOR</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_BARBARIAN</UnitArtStyleType>
 			<InitialCivics>
@@ -4202,13 +4202,13 @@
 			<iSpawnRateNPCPeaceModifier>30</iSpawnRateNPCPeaceModifier>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_ANIMAL_PREY</Type>
-			<Description>TXT_KEY_CIVILIZATION_ANIMAL_PREY</Description>
-			<ShortDescription>TXT_KEY_CIVILIZATION_ANIMAL_PREY_SHORT</ShortDescription>
-			<Adjective>TXT_KEY_CIVILIZATION_ANIMAL_PREY_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIVILIZATION_ANIMAL_PREY_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_NPC_PREY</Type>
+			<Description>TXT_KEY_CIVILIZATION_NPC_PREY</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_NPC_PREY_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_NPC_PREY_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_NPC_PREY_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ANIMAL</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_ANIMAL_PREY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_NPC_PREY</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_BARBARIAN</UnitArtStyleType>
 			<InitialCivics>
@@ -4239,13 +4239,13 @@
 			<iSpawnRateNPCPeaceModifier>60</iSpawnRateNPCPeaceModifier>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_ANIMAL_BEAST</Type>
-			<Description>TXT_KEY_CIVILIZATION_ANIMAL_BEAST</Description>
-			<ShortDescription>TXT_KEY_CIVILIZATION_ANIMAL_BEAST_SHORT</ShortDescription>
-			<Adjective>TXT_KEY_CIVILIZATION_ANIMAL_BEAST_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIVILIZATION_ANIMAL_BEAST_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_NPC_BEAST</Type>
+			<Description>TXT_KEY_CIVILIZATION_NPC_BEAST</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_NPC_BEAST_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_NPC_BEAST_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_NPC_BEAST_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_ANIMAL</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_ANIMAL_BEAST</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_NPC_BEAST</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_BARBARIAN</UnitArtStyleType>
 			<InitialCivics>
@@ -4391,14 +4391,14 @@
 			<iSpawnRateNPCPeaceModifier>30</iSpawnRateNPCPeaceModifier>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_INSECTOID</Type>
+			<Type>CIVILIZATION_NPC_INSECTOID</Type>
 			<bStronglyRestricted>1</bStronglyRestricted>
-			<Description>TXT_KEY_CIVILIZATION_INSECTOID</Description>
-			<ShortDescription>TXT_KEY_CIVILIZATION_INSECTOID_SHORT</ShortDescription>
-			<Adjective>TXT_KEY_CIVILIZATION_INSECTOID_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIVILIZATION_INSECTOID_PEDIA</Civilopedia>
+			<Description>TXT_KEY_CIVILIZATION_NPC_INSECTOID</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_NPC_INSECTOID_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_NPC_INSECTOID_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_NPC_INSECTOID_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_BLACK</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_BARBARIAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_NPC_BARBARIAN</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_BARBARIAN</UnitArtStyleType>
 			<InitialCivics>
@@ -4427,13 +4427,13 @@
 			<iSpawnRateNPCPeaceModifier>30</iSpawnRateNPCPeaceModifier>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_BARBARIAN</Type>
-			<Description>TXT_KEY_CIVILIZATION_BARBARIAN</Description>
-			<ShortDescription>TXT_KEY_CIVILIZATION_BARBARIAN_SHORT</ShortDescription>
-			<Adjective>TXT_KEY_CIVILIZATION_BARBARIAN_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIVILIZATION_BARBARIAN_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_NPC_BARBARIAN</Type>
+			<Description>TXT_KEY_CIVILIZATION_NPC_BARBARIAN</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_NPC_BARBARIAN_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_NPC_BARBARIAN_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_NPC_BARBARIAN_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_BLACK</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_BARBARIAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_NPC_BARBARIAN</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_BARBARIAN</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_BARBARIAN</UnitArtStyleType>
 			<Cities>

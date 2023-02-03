@@ -9,75 +9,75 @@
 		<Spanish>Estados Unidos es un país joven para la media de Civilization, ya que apenas tiene 200 años. Este país no alcanzó sus fronteras actuales hasta mediados del siglo XIX, y no se convirtió en una auténtica potencia de orden mundial hasta mediados del siguiente. Fue la primera de las colonias europeas que consiguió separarse con éxito de la metrópolis, y fue la primera nación en fundarse sobre la premisa de que la soberanía se basa en los ciudadanos y no en el gobierno.[PARAGRAPH:2]Hasta la década de 1770, los colonos americanos eran leales súbditos del Imperio Británico, pero una combinación de presión fiscal y mala gestión de la situación por parte de la metrópolis provocó el estallido de la revolución de 1776.  George Washington, líder de las fuerzas coloniales durante la Guerra de Independencia y posteriormente primer presidente de los EE. UU., logró, junto a los demás padres fundadores, la victoria en la desesperada lucha por la independencia, poniendo los cimientos constitucionales para el futuro crecimiento del país. En su primer siglo y medio de historia, el país estuvo ocupado fundamentalmente con la exploración territorial, el desarrollo interno y el crecimiento económico. En las décadas de 1820 y 1830, la política norteamericana evolucionó desde unos inicios casi aristocráticos hasta una situación cada vez más democrática. Pero a pesar del rápido crecimiento territorial y demográfico, el espectro de la esclavitud seguía dividiendo el país entre el Norte y el Sur. El enfrentamiento entre los partidarios de la esclavitud y los abolicionistas acabó desencadenando la Guerra de Secesión, que duraría cuatro años y se cobraría miles de vidas. El desenlace de la guerra preservó la Unión y reforzó considerablemente el gobierno federal con respecto a la situación del inicio del conflicto.[PARAGRAPH:2]Tras la Guerra de Secesión, la nación entró en un periodo de prosperidad sin precedentes tras el largo conflicto y el proceso de reconstrucción. En las siguientes dos décadas se duplicó la producción industrial y la cantidad de obreros en las industrias, y el número de fábricas se multiplicó por más de dos. La inmigración europea, la expansión hacia el oeste, el crecimiento urbano, los avances tecnológicos y una multitud de inventos estadounidenses (como el teléfono, la máquina de escribir, la linotipia, el fonógrafo, la luz eléctrica, la máquina registradora, los frenos neumáticos, los camiones frigoríficos y el automóvil) contribuyeron al auge estadounidense, mientras que el uso generalizado de la organización en corporaciones ofrecía nuevas oportunidades para la financiación a gran escala de los negocios y atraía capital nuevo. No obstante, a pesar del crecimiento de EE.  UU. como una de las mayores potencias industriales del mundo, la nación continuaría con un comportamiento aislacionista, prestando poca o ninguna atención al mundo más allá de sus fronteras.[PARAGRAPH:2]La guerra hispano-norteamericana de 1898 señaló la aparición de los Estados Unidos como potencia de carácter mundial, pero hasta la Primera Guerra Mundial el país no se involucraría a fondo en la política internacional. Tras la Paz de Versalles (1919), la nación volvió a darle la espalda al resto del mundo, mientras disfrutaba de la próspera década conocida como "los felices 20". Por desgracia, este período de bonanza no duraría mucho. El desplome de Wall Street en 1929 provocó la Gran Depresión de los años 30. En medio de una oleada de bancarrotas y un crecimiento desbocado del desempleo, Franklin Roosevelt fue elegido y se aplicó en la tarea de reparar la situación mediante un plan de recuperación llamado "New Deal". El programa tuvo un éxito limitado desde el punto de vista económico, pero contribuyó a restaurar la esperanza y la confianza de un pueblo que estaba muy necesitado de ambas cosas. A continuación, Roosevelt tomó el timón para dirigir al país durante la Segunda Guerra Mundial, aunque murió pocos meses antes de que se alcanzara la victoria.[PARAGRAPH:2]La victoria aliada en la Segunda Guerra Mundial consolidó a los EE. UU. como una de las dos superpotencias mundiales, junto a la Unión Soviética. Al cabo de pocos años, los dos antiguos aliados se habían convertido en adversarios en la Guerra Fría, una situación de tenso enfrentamiento diplomática que se prolongaría 40 años. Desde el punto de vista interno, el país disfrutó de una considerable prosperidad en los 50, experimentó un período de cambio cultural y social en los 60 y sufrió un estancamiento económico en los 70, seguido en las décadas siguientes por una época de recuperación. Desde la desaparición de la Unión Soviética en 1989-91, los Estados Unidos se han quedado solos como única superpotencia mundial. En lugar de enfrentarse a ejércitos convencionales en el campo de batalla, los Estados Unidos se enfrentan actualmente a grupos terroristas que no hacen distinciones entre objetivos civiles y militares. Normalmente se combate a estos enemigos con unidades de operaciones especiales, como los SEAL de la marina, dotadas de armamento avanzado. Pero a pesar de su abrumadora potencia económica y militar, los EE. UU. tendrán que trabajar en colaboración con otras naciones para hacer frente a las amenazas del mundo moderno.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ANIMAL_BEAST_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_BEAST_ADJECTIVE</Tag>
 		<English>Beastly</English>
 		<French>Bêtes</French>
 		<German>animalisch</German>
 		<Russian>çâåðè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ANIMAL_BEAST</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_BEAST</Tag>
 		<English>NPC Beasts</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ANIMAL_BEAST_SHORT</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_BEAST_SHORT</Tag>
 		<English>Beasts</English>
 		<French>Bêtes</French>
 		<German>Bestien</German>
 		<Russian>Çâåðè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ANIMAL_BEAST_PEDIA</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_BEAST_PEDIA</Tag>
 		<English>Fauna Beasts, or 'Beasts', are atypical predators that either prey on all animals alike or are both predator and prey at the same time. While usually not the most aggressive animals of the wild they are often as deadly as your typical predator, if not more so.</English>
 		<French>Les bêtes de la faune, ou «bêtes», sont des prédateurs atypiques qui s'attaquent à tous les animaux ou sont à la fois prédateurs et proies en même temps. Bien qu'ils ne soient généralement pas les animaux sauvages les plus agressifs, ils sont souvent aussi mortels que votre prédateur typique, sinon plus.</French>
 		<German>Unter Bestien werden bei Caveman2Cosmos all jene Kreaturen zusammengefasst, die gleichzeitig Räuber und Beute sind. In den meisten Fällen handelt es sich nicht um besonders aggressive Tiere, die aber trotzdem genauso gefährlich wie ein typisches Raubtier sein können, wenn nicht gar noch gefährlicher.</German>
 		<Russian>[NEWLINE][TAB]Зверофауна, или «звери» - нетипичные хищники, которые либо охотятся на всех животных в одинаковой степени, либо одновременно являются хищниками и добычей. Хотя обычно это не самые агрессивные животные в дикой природе, они часто так же смертоносны, как и ваш типичный хищник, если не больше.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ANIMAL_PREDATOR_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_PREDATOR_ADJECTIVE</Tag>
 		<English>Predatory</English>
 		<French>Prédateur</French>
 		<German>räuberisch</German>
 		<Russian>õèùíèêè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ANIMAL_PREDATOR</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_PREDATOR</Tag>
 		<English>NPC Predators</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ANIMAL_PREDATOR_SHORT</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_PREDATOR_SHORT</Tag>
 		<English>Predators</English>
 		<French>Prédateurs</French>
 		<German>Raubtiere</German>
 		<Russian>Õèùíèêè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ANIMAL_PREDATOR_PEDIA</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_PREDATOR_PEDIA</Tag>
 		<English>Fauna Predators, or 'Predators', are the dangerous entities of the wild that would attack or prey on not only man but other species.</English>
 		<French>Les prédateurs de la faune, ou «prédateurs», sont les entités dangereuses de la nature qui attaqueraient ou s'attaqueraient non seulement à l'homme mais à d'autres espèces.</French>
 		<German>Raubtiere sind gefährliche, wilde Bestien, die nahezu alle anderen Spezies einschließlich Menschen als ihre Beute betrachten oder zumindest bei Sichtkontakt gnadenlos angreifen.</German>
 		<Russian>[NEWLINE][TAB]Хищная фауна или «Хищники» - опасные существа дикой природы, которые могут нападать или охотиться не только на человека, но и на другие виды животных.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ANIMAL_PREY_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_PREY_ADJECTIVE</Tag>
 		<English>Creaturely</English>
 		<French>Créatures</French>
 		<German>tierisch</German>
 		<Russian>æèâîòíûå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ANIMAL_PREY</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_PREY</Tag>
 		<English>NPC Creatures</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ANIMAL_PREY_SHORT</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_PREY_SHORT</Tag>
 		<English>Creatures</English>
 		<French>Créatures</French>
 		<German>Kreaturen</German>
 		<Russian>Æèâîòíûå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_ANIMAL_PREY_PEDIA</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_PREY_PEDIA</Tag>
 		<English>Fauna Creatures, or 'Creatures', are the peacefully observable denizens of nature that, while capable of sometimes becoming hostile, and certainly often up to the task of defending themselves, are more commonly likely to be indifferent or flighty at best. They are often the 'prey' for more aggressive predatory species but since many predators can also BE prey for something larger or stronger than them, nature is not so simple as to divide animals purely into predator and prey camps. Nevertheless, there ARE animals that are not hostile in general and these creatures are those.</English>
 		<French>Les créatures de la faune, ou "créatures", sont les habitants de la nature pacifiquement observables qui, bien que capables de devenir parfois hostiles, et certainement souvent à la hauteur de se défendre, sont le plus souvent susceptibles d'être au mieux indifférents ou volants. Ils sont souvent la "proie"d'espèces prédatrices plus agressives, mais comme de nombreux prédateurs peuvent également ÊTRE la proie de quelque chose de plus grand ou plus fort qu'eux, la nature n'est pas si simple qu'elle divise les animaux uniquement en camps de prédateurs et de proies. Néanmoins, il y a des animaux qui ne sont pas hostiles en général et ces créatures sont celles-là.</French>
 		<German>Unter Kreaturen werden bei Caveman2Cosmos friedliche und harmlose Tiere zusammengefasst, die in den meisten Fällen einem Kampf durch Flucht aus dem Weg gehen, die aber durchaus auch in der Lage sind, sich im Notfall zu verteidigen.</German>
@@ -390,7 +390,7 @@
 		<Russian>Âàâèëîíÿíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_BARBARIAN_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_BARBARIAN_ADJECTIVE</Tag>
 		<English>Barbarian</English>
 		<French>
 			<Text>barbare:barbare:barbares:barbares</Text>
@@ -412,11 +412,11 @@
 		<Russian>âàðâàðû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_BARBARIAN</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_BARBARIAN</Tag>
 		<English>NPC Barbarian</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_BARBARIAN_PEDIA</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_BARBARIAN_PEDIA</Tag>
 		<English>The term "barbarian" was created by the Greeks; it was originally used to denote any foreigner. Since then it has gained a more negative connotation, and it is commonly applied to civilizations deemed "inferior" to one's own. The Chinese, for instance, thought of all foreign cultures - everybody from the Manchus to the Turks to the Europeans - as barbarians. Rome applied it to the Huns and the Germanic tribes, as well as to the more advanced Gauls.[PARAGRAPH:2]In Civilization IV, the term denotes people that are not part of any organized civilization appearing in the game, but are instead old-style hunter-gatherers who prey on the "weak" civilized world. Though some barbarians may have acquired fairly advanced weaponry - swords and axes, for example - and though they may occasionally capture or even build their own cities, they remain at heart brigandic nomads, destroying everything that comes in their path. Barbarians cannot be bargained with or appeased: they must be destroyed - before they destroy you!</English>
 		<French>Le terme "Barbare" est à l'origine un critère linguistique utilisé par les Grecs pour désigner toute personne étrangère à la civilisation grecque. Depuis, ce terme a pris une connotation péjorative et s'applique aux civilisations jugées "inférieures". Les Chinois, par exemple, considéraient toutes les cultures étrangères, des Mandchous aux Turcs en passant par les Européens, comme des barbares. Rome utilisait ce terme pour désigner les Huns, les Gaulois et les tribus germaniques.[PARAGRAPH:2]Dans Civilization IV, le terme "Barbares" désigne des gens qui ne font partie d'aucune civilisation organisée du jeu. Il s'agit de chasseurs-cueilleurs qui n'ont pas peur de s'attaquer au monde civilisé. Bien que certains barbares aient pu acquérir un armement assez avancé, avec notamment des épées et des haches, et bien qu'ils puissent à l'occasion capturer ou même fonder leurs propres villes, ils restent avant tout des "bandits-nomades", détruisant tout sur leur passage. Il est impossible de négocier avec des barbares ni même de les apaiser: il faut les éliminer avant qu'ils ne vous éliminent!</French>
 		<German>Die Bezeichnung "barbarisch" stammt aus dem alten Griechischen und bedeutete "roh, unkultiviert, fremdsprachlich und ungebildet". Der Ausdruck wurde ursprünglich für Ausländer verwendet und hat seitdem an negativer Bedeutung gewonnen. Er wird auf Zivilisationen angewendet, die der eigenen Kultur als "unterlegen" betrachtet werden. Die Chinesen erachteten beispielsweise alle ausländischen Kulturen als barbarisch - von den tungisischen Bewohnern der Mandschurei über die Turkvölker bis hin zu den Europäern. Das Römische Reich wandte den Ausdruck sowohl auf die Hunnen und die germanischen Stämme als auch auf die fortschrittlicheren Gallier an.[PARAGRAPH:2]In Civilization IV erscheinen diejenigen als Barbaren, die nicht einer der organisierten Zivilisationen des Spiels angehören, sondern als Jäger und Sammler einer älteren Lebensweise folgen und die "schwache" zivilisierte Welt als Beute betrachten. Obwohl einige Barbaren recht fortschrittliche Waffen erwerben können, wie Schwerter und Äxte, und obwohl sie gelegentlich in eroberten Städten leben oder gar eigene erbauen, bleiben sie im Herzen unstete Nomaden, die alles plündern, was ihnen in den Weg kommt. In Civilization IV lassen Barbaren nicht mit sich verhandeln - sie bilden eine ständige Gefahr, die für die eigene Sicherheit neutralisiert werden muss.</German>
@@ -425,7 +425,7 @@
 		<Russian>[NEWLINE][TAB]Термин «варвар» был придуман греками; Первоначально он использовался для обозначения любого иностранца. С тех пор он приобрел более негативный оттенок и обычно применяется к цивилизациям, которые считаются «низшими» по сравнению с собственной. Китайцы, например, думали обо всех иностранных культурах - от маньчжур до турок и европейцев - как о варварах. Рим применил его к гуннам и германским племенам, а также к более продвинутым галлам.[PARAGRAPH:2]В Civilization IV этим понятием обозначают народы, которые не являются частью какой-либо организованной цивилизации, появляющейся в игре, а вместо этого являются охотниками-собирателями старого стиля, которые охотятся на «слабый» цивилизованный мир. Хотя некоторые варвары, возможно, приобрели довольно продвинутое вооружение - например, мечи и топоры - и хотя они могут иногда захватывать или даже строить свои собственные города, они остаются в душе бандитскими кочевниками, уничтожающими все, что встречается на их пути. С варварами нельзя торговаться или как-то их умиротворить: их нужно истребить - прежде, чем они уничтожат вас!</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_BARBARIAN_SHORT</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_BARBARIAN_SHORT</Tag>
 		<English>Barbarians</English>
 		<French>
 			<Text>Barbares</Text>
@@ -1498,28 +1498,28 @@
 		<Russian>Èíäèéöû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_INSECTOID_ADJECTIVE</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_INSECTOID_ADJECTIVE</Tag>
 		<English>Insectoids</English>
 		<French>Insectoïdes</French>
 		<German>insektoid</German>
 		<Russian>èíñåêòîèäû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_INSECTOID</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_INSECTOID</Tag>
 		<English>NPC Insectoids</English>
 		<French>Insectoïdes</French>
 		<German>Insektoiden</German>
 		<Russian>Èíñåêòîèäû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_INSECTOID_PEDIA</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_INSECTOID_PEDIA</Tag>
 		<English>Insects, both Terran and Extra-Terrestrial. In space, they are a terrifyingly evolved horrific foe.</English>
 		<French>Insectes terriens et extraterrestres. Dans l'espace, ils sont un ennemi horrible terriblement évolué.</French>
 		<German>Ein Insektenvolk, das sowohl terrestrische als auch extraterrestrische Spezies beinhaltet. Im Weltall stellen sie durch ihre fortschrittlichen Einheiten eine ernste Bedrohung dar.</German>
 		<Russian>[NEWLINE][TAB]Насекомые, как земные, так и внеземные. В космосе они развитые и внушающие страх противники.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVILIZATION_INSECTOID_SHORT</Tag>
+		<Tag>TXT_KEY_CIVILIZATION_NPC_INSECTOID_SHORT</Tag>
 		<English>Insectoids</English>
 		<French>Insectoïdes</French>
 		<German>Insektoiden</German>
