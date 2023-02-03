@@ -26474,12 +26474,8 @@ BuildTypes CvUnitAI::AI_findBestFort(const CvPlot* pPlot) const
 		if (GC.getBuildInfo(eBuild).getImprovement() != NO_IMPROVEMENT)
 		{
 			const CvImprovementInfo& kImprovement = GC.getImprovementInfo(GC.getBuildInfo(eBuild).getImprovement());
-			// Is fort or tower
-			if ((kImprovement.isActsAsCity() || kImprovement.getVisibilityChange() > 0)
-			&& canBuild(pPlot, eBuild)
-			// If not (plot in workable radius of any city and is tower line improvement); 'plot in workable radius of owned city' might be better?
-			// Toffer - The next condition seems iffy considering the above comment about it...
-			&& (!pPlot->isCityRadius() || kImprovement.isActsAsCity()))
+			// Watchtower can claim land if fort can't
+			if (kImprovement.isMilitaryStructure() && canBuild(pPlot, eBuild))
 			{
 				int iValue =
 					(
