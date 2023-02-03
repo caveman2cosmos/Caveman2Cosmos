@@ -10267,6 +10267,7 @@
 			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
+			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
 		</ImprovementInfo>
 		<!-- Fortified Cave -> Fortified Cave w/Cache -->
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
@@ -10294,6 +10295,8 @@
 			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
+			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
+			<!-- Trade provider technically necessary otherwise players would need to build palisades on caves tiles w/resources -->
 		</ImprovementInfo>
 		<!-- Palisade -> Fort -->
 		<!-- Kill Switchpoint: Sedentary Lifestyle -->
@@ -10386,6 +10389,7 @@
 			<iUniqueRange>2</iUniqueRange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
+			<bIsUniversalTradeBonusProvider>1</bIsUniversalTradeBonusProvider>
 		</ImprovementInfo>
 		<!-- Abatis -> Palisade -->
 		<ImprovementInfo>
