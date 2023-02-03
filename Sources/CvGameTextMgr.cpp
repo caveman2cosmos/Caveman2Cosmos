@@ -1,4 +1,4 @@
-﻿//---------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------
 //
 //  *****************   Civilization IV   ********************
 //
@@ -8780,19 +8780,19 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 						pOwner.getCivilizationAdjective(), pPlot->getCulture(ePlotOwner)
 					)
 				);
-				{
-					const int iRate = pPlot->getCultureRateLastTurn(ePlotOwner);
+				if (pPlot->isInCultureRangeOfCityByPlayer(ePlotOwner)) szString.append(L"(C)");
 
-					if (iRate > 0)
-					{
-						szString.append(CvWString::format(L" + %d)\n", iRate));
-					}
-					else if (iRate < 0)
-					{
-						szString.append(CvWString::format(L" - %d)\n", -iRate));
-					}
-					else szString.append(L")\n");
+				const int iRate = pPlot->getCultureRateLastTurn(ePlotOwner);
+
+				if (iRate > 0)
+				{
+					szString.append(CvWString::format(L" + %d)\n", iRate));
 				}
+				else if (iRate < 0)
+				{
+					szString.append(CvWString::format(L" - %d)\n", -iRate));
+				}
+				else szString.append(L")\n");
 			}
 			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
@@ -8808,6 +8808,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 							playerX.getCivilizationAdjective(), pPlot->getCulture(ePlayerX)
 						)
 					);
+					if (pPlot->isInCultureRangeOfCityByPlayer(ePlayerX)) szString.append(L"(C)");
+
 					const int iRate = pPlot->getCultureRateLastTurn(ePlayerX);
 
 					if (iRate > 0)
@@ -8863,6 +8865,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 						pOwner.getCivilizationAdjective(), pPlot->getCulture(eRevealOwner)
 					)
 				);
+				if (pPlot->isInCultureRangeOfCityByPlayer(ePlotOwner)) szString.append(L"(C)");
+
 				const int iRate = pPlot->getCultureRateLastTurn(ePlotOwner);
 
 				if (iRate > 0)
@@ -8887,6 +8891,8 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 							playerX.getPlayerTextColorR(), playerX.getPlayerTextColorG(), playerX.getPlayerTextColorB(), playerX.getPlayerTextColorA(),
 							playerX.getCivilizationAdjective(), pPlot->getCulture(ePlayerX)));
 					}
+					if (pPlot->isInCultureRangeOfCityByPlayer(ePlayerX)) szString.append(L"(C)");
+
 					const int iRate = pPlot->getCultureRateLastTurn(ePlayerX);
 
 					if (iRate > 0)
