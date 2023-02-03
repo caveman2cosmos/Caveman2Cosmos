@@ -4524,6 +4524,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 	int iConnectedForeignCities = countPotentialForeignTradeCitiesConnected();
 
 	const int iCityCount = getNumCities();
+	const int iRCSMultiplier = 1 + GC.getGame().isOption(GAMEOPTION_REALISTIC_CULTURE_SPREAD);
 
 	int iValue = 0;
 
@@ -4532,7 +4533,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 	// Map stuff
 	if (iCoastalCities > 0 && kTech.isExtraWaterSeeFrom())
 	{
-		iValue += 100;
+		iValue += 100 * iRCSMultiplier;
 
 		if (bCapitalAlone)
 		{
@@ -4616,7 +4617,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 	// Tile improvement abilities
 	if (kTech.isBridgeBuilding())
 	{
-		iValue += 400;
+		iValue += 400 * iRCSMultiplier;
 	}
 
 	if (kTech.isIrrigation())
@@ -4642,19 +4643,19 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 			if (pPlot->isAsPeak() && pPlot->getOwner() != NO_PLAYER
 			&& GET_PLAYER(pPlot->getOwner()).getID() == getID())
 			{
-				iValue += 35;
+				iValue += 35 * iRCSMultiplier;
 			}
 		}
 	}
 
 	if (kTech.isMoveFastPeaks())
 	{
-		iValue += 150;
+		iValue += 150 * iRCSMultiplier;
 	}
 
 	if (kTech.isCanFoundOnPeaks())
 	{
-		iValue += 100;
+		iValue += 100 * iRCSMultiplier;
 	}
 
 	if (gPlayerLogLevel > 2)
@@ -4766,7 +4767,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 				if (iCoastalCities > 0)
 				{
-					iValue += ((bCapitalAlone) ? 950 : 350);
+					iValue += ((bCapitalAlone) ? 950 : 350) * iRCSMultiplier;
 				}
 
 				iValue += 50;
@@ -4777,7 +4778,7 @@ int CvPlayerAI::AI_techValue(TechTypes eTech, int iPathLength, bool bIgnoreCost,
 
 	if (kTech.isRiverTrade())
 	{
-		iValue += 1000;
+		iValue += 1000 * iRCSMultiplier;
 	}
 
 	/* ------------------ Tile Improvement Value  ------------------ */
