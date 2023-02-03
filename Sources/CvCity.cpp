@@ -16124,7 +16124,7 @@ void CvCity::doPlotCulture(PlayerTypes ePlayer, int iCultureRate)
 
 		if (iCultureDistance <= iCultureLevel && plotX->isPotentialCityWorkForArea(area()))
 		{
-			// changeCulture includes a check to culture value upward
+			// changeCulture includes a check to bump culture value upward
 			// to ensure plot cannot be lost thru decay even if culture gain is too small
 			plotX->changeCulture(
 				ePlayer,
@@ -16132,6 +16132,7 @@ void CvCity::doPlotCulture(PlayerTypes ePlayer, int iCultureRate)
 				// Toffer - Only update plot ownership when the culture of non-owners increase.
 				plotX->getOwner() != ePlayer
 			);
+			plotX->setInCultureRangeOfCityByPlayer(ePlayer);
 		}
 	}
 }

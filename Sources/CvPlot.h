@@ -377,6 +377,9 @@ public:
 	int getCultureRateThisTurn(const PlayerTypes ePlayer) const;
 	int getCultureRateLastTurn(const PlayerTypes ePlayer) const;
 
+	void setInCultureRangeOfCityByPlayer(const PlayerTypes ePlayer);
+	bool isInCultureRangeOfCityByPlayer(const PlayerTypes ePlayer) const;
+
 protected:
 	CvGameObjectPlot m_GameObject;
 
@@ -390,6 +393,7 @@ protected:
 
 	std::vector<std::pair<PlayerTypes, int> > m_cultureRatesThisTurn;
 	std::vector<std::pair<PlayerTypes, int> > m_cultureRatesLastTurn;
+	std::vector<PlayerTypes> m_influencedByCityByPlayer;
 
 public:
 	PlayerTypes calculateCulturalOwner(bool bCountLastTurn = true) const;

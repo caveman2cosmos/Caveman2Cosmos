@@ -291,6 +291,7 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 	m_commanderCount.clear();
 	m_cultureRatesThisTurn.clear();
 	m_cultureRatesLastTurn.clear();
+	m_influencedByCityByPlayer.clear();
 
 	m_bPlotGroupsDirty = false;
 	m_aiVisibilityCount = new short[MAX_TEAMS];
@@ -10278,6 +10279,7 @@ void CvPlot::doCulture()
 		m_cultureRatesLastTurn.push_back(std::make_pair((*it).first, (*it).second));
 	}
 	m_cultureRatesThisTurn.clear();
+	m_influencedByCityByPlayer.clear();
 }
 
 
@@ -10908,6 +10910,18 @@ void CvPlot::read(FDataStreamBase* pStream)
 				m_cultureRatesLastTurn.push_back(std::make_pair(static_cast<PlayerTypes>(iType), iValue));
 			}
 		}
+		// Blaze TODO confirm working as intended
+		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "InfluencedByCityByPlayer");
+		for (short i = 0; i < iSize; ++i)
+		{
+			int iValue = 0;
+			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iType, "InfluencedByCityByPlayer");
+
+			if (iType > -1 && iType < MAX_PLAYERS)
+			{
+				m_influencedByCityByPlayer.push_back(static_cast<PlayerTypes>(iType));
+			}
+		}
 	}
 	//Example of how to Skip Element
 	//WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", m_bPeaks, SAVE_VALUE_ANY);
@@ -11291,6 +11305,12 @@ void CvPlot::write(FDataStreamBase* pStream)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>((*it).first), "CultureRatesLastTurnPlayer");
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (*it).second, "CultureRatesLastTurnRate");
+		}
+		// Blaze TODO confirm working as intended
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_influencedByCityByPlayer.size(), "InfluencedByCityByPlayer");
+		for (std::vector<PlayerTypes>::iterator it = m_influencedByCityByPlayer.begin(); it != m_influencedByCityByPlayer.end(); ++it)
+		{
+			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>(*it), "InfluencedByCityByPlayer");
 		}
 	}
 	WRAPPER_WRITE_OBJECT_END(wrapper);
@@ -13264,4 +13284,27 @@ int CvPlot::getCultureRateLastTurn(const PlayerTypes ePlayer) const
 		}
 	}
 	return 0;
+}
+
+void CvPlot::setInCultureRangeOfCityByPlayer(const PlayerTypes ePlayer)
+{
+	bool bAlreadyInfluenced = false;
+	for (std::vector<PlayerTypes>::iterator it = m_influencedByCityByPlayer.begin(); it != m_influencedByCityByPlayer.end(); ++it)
+	{
+		if (*it == ePlayer)
+		{
+			bAlreadyInfluenced = true;
+			break;
+		}
+	}
+	if (!bAlreadyInfluenced) m_influencedByCityByPlayer.push_back(ePlayer);
+}
+
+bool CvPlot::isInCultureRangeOfCityByPlayer(const PlayerTypes ePlayer) const
+{
+	for (std::vector<PlayerTypes>::const_iterator it = m_influencedByCityByPlayer.begin(); it != m_influencedByCityByPlayer.end(); ++it)
+	{
+		if (*it == ePlayer) return true;
+	}
+	return false;
 }
