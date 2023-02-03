@@ -2,13 +2,13 @@
 <Civ4CivilizationInfos xmlns="x-schema:../Schema/C2C_CIV4CivilizationsSchema.xml">
 	<CivilizationInfos>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_UNITED_STATES</Type>
-			<Description>TXT_KEY_CIVILIZATION_UNITED_STATES</Description>
-			<ShortDescription>TXT_KEY_CIVILIZATION_UNITED_STATES_SHORT</ShortDescription>
-			<Adjective>TXT_KEY_CIVILIZATION_UNITED_STATES_ADJECTIVE</Adjective>
+			<Type>CIVILIZATION_AMERICA</Type>
+			<Description>TXT_KEY_CIVILIZATION_AMERICA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_AMERICA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_AMERICA_ADJECTIVE</Adjective>
 			<Civilopedia>TXT_KEY_CIVILIZATION_AMERICA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_BLUE</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_UNITED_STATES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_AMERICA</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_ANGLO_AMERICA</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_AMERICAN</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
@@ -414,7 +414,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_AZTEC_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_AZTEC_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -1144,7 +1144,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_ENGLAND_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_ENGLAND_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -1350,7 +1350,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_FRANCE_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_FRANCE_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -1894,7 +1894,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_INCA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_INCA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -2522,7 +2522,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_MAYA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_MAYA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -2626,13 +2626,13 @@
 			<CivilizationActionSound>AS3D_MONGOL_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_NATIVE_AMERICA</Type>
-			<Description>TXT_KEY_CIVILIZATION_NATIVE_AMERICA</Description>
-			<ShortDescription>TXT_KEY_CIVILIZATION_NATIVE_AMERICA_SHORT</ShortDescription>
-			<Adjective>TXT_KEY_CIVILIZATION_NATIVE_AMERICA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIVILIZATION_NATIVE_AMERICA_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_SIOUX</Type>
+			<Description>TXT_KEY_CIVILIZATION_SIOUX</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_SIOUX_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_SIOUX_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_SIOUX_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_BROWN</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_NATIVE_AMERICA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_SIOUX</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_NATIVE_AMERICA</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_NATIVE_AMERICA</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
@@ -2734,7 +2734,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_NATIVE_AMERICA_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_NATIVE_AMERICA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -2833,7 +2833,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_NETHERLANDS_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_NETHERLANDS_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -3142,7 +3142,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_PORTUGAL_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_PORTUGAL_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -3567,7 +3567,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_SPAIN_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_SPAIN_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -3665,13 +3665,13 @@
 			<CivilizationActionSound>AS3D_SUMERIA_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
 		<CivilizationInfo>
-			<Type>CIVILIZATION_VIKING</Type>
-			<Description>TXT_KEY_CIVILIZATION_VIKING</Description>
-			<ShortDescription>TXT_KEY_CIVILIZATION_VIKING_SHORT</ShortDescription>
-			<Adjective>TXT_KEY_CIVILIZATION_VIKING_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_CIVILIZATION_VIKING_PEDIA</Civilopedia>
+			<Type>CIVILIZATION_SCANDINAVIA</Type>
+			<Description>TXT_KEY_CIVILIZATION_SCANDINAVIA</Description>
+			<ShortDescription>TXT_KEY_CIVILIZATION_SCANDINAVIA_SHORT</ShortDescription>
+			<Adjective>TXT_KEY_CIVILIZATION_SCANDINAVIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIVILIZATION_SCANDINAVIA_PEDIA</Civilopedia>
 			<DefaultPlayerColor>PLAYERCOLOR_LIGHT_PURPLE</DefaultPlayerColor>
-			<ArtDefineTag>ART_DEF_CIVILIZATION_VIKINGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_SCANDINAVIAS</ArtDefineTag>
 			<ArtStyleType>ARTSTYLE_NORSE</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_VIKING</UnitArtStyleType>
 			<bPlayable>1</bPlayable>
@@ -3758,7 +3758,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_VIKING_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_VIKING_ORDER</CivilizationActionSound>
 		</CivilizationInfo>
@@ -4049,7 +4049,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<DerivativeCiv>CIVILIZATION_AMERICA</DerivativeCiv>
 			<CivilizationSelectionSound>AS3D_VIKING_SELECT</CivilizationSelectionSound>
 			<CivilizationActionSound>AS3D_VIKING_ORDER</CivilizationActionSound>
 		</CivilizationInfo>

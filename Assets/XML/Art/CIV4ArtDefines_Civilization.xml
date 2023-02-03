@@ -188,7 +188,7 @@
 			<bWhiteFlag>1</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_NATIVE_AMERICA</Type>
+			<Type>ART_DEF_CIVILIZATION_SIOUX</Type>
 			<Button>Art/Interface/TeamColor/Siouxbutton.dds</Button>
 			<Path>Art/Interface/TeamColor/SiouxFlag.dds</Path>
 			<bWhiteFlag>1</bWhiteFlag>
@@ -254,13 +254,13 @@
 			<bWhiteFlag>1</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_UNITED_STATES</Type>
+			<Type>ART_DEF_CIVILIZATION_AMERICA</Type>
 			<Button>Art/Interface/TeamColor/america.dds</Button>
 			<Path>Art/Interface/TeamColor/flagdecal_america.dds</Path>
 			<bWhiteFlag>1</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_VIKINGS</Type>
+			<Type>ART_DEF_CIVILIZATION_SCANDINAVIAS</Type>
 			<Button>Art/Interface/TeamColor/norsebutton.dds</Button>
 			<Path>Art/Interface/TeamColor/flagdecal_norse.dds</Path>
 			<bWhiteFlag>1</bWhiteFlag>
