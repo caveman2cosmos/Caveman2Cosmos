@@ -6592,33 +6592,31 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 		{
 			terrainDistance += 1;
 		}
-		// penalty for improved features if not inside adjacent-surrounded territory
-		else
+		// penalty for improved features if outside player city affected territory
+		else if (!mainPlot->isInCultureRangeOfCityByPlayer(getOwner()))
 		{
-			foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
-			{
-				if (adjacentPlot->getOwner() == NO_PLAYER)
-				{
-					terrainDistance += 1;
-					break;
-				}
-			}
+			terrainDistance += 1;
 		}
+		// Always add base feature cost
 		terrainDistance += GC.getFeatureInfo(mainPlot->getFeatureType()).getCultureDistance();
 	}
 
 	// Using route value/tier as softer inhibitor by era
+	// Base distance:	 0, 1, 2, 3, 4 ... translates to:
+	// Tier 0 (noroute): 0, 2, 4, 6, 8 ...
+	// Tier 1 (trail):	 0, 1, 3, 4, 6 ...
+	// Tier 2 (path):	 0, 1, 2, 4, 5 ...
+	// Tier 3 (road):	 0, 1, 2, 3, 5 ...
 	if (!mainPlot->isWater())
 	{
-		if (mainPlot->getRouteType() == NO_ROUTE)
-		{
-			terrainDistance = std::max(0, (terrainDistance - 1) * 2 + 1);
-		}
-		else
-		{
-			const int routeTier = GC.getRouteInfo(mainPlot->getRouteType()).getValue();
-			if (routeTier < 4) terrainDistance = terrainDistance * (routeTier + 2) / (routeTier + 1);
-		}
+		int routeTierMod = 0;
+
+		// If the plot has an existing route, and already inside the borders of the city, maybe bump tier up (less penalties)
+		if (mainPlot->getRouteType() != NO_ROUTE && mainPlot->isInCultureRangeOfCityByPlayer(getOwner()))
+			routeTierMod = std::max(routeTierMod, GC.getRouteInfo(mainPlot->getRouteType()).getValue());
+
+		// Penalties removed w/paved road
+		if (routeTierMod < 4) terrainDistance = terrainDistance * (routeTierMod + 2) / (routeTierMod + 1);
 	}
 
 	// Halve terrain distance if bonus is present
