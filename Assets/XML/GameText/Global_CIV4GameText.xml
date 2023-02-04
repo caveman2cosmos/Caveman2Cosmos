@@ -1477,11 +1477,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_NEEDS_CULTURE_BORDER</Tag>
-		<English>[COLOR_WARNING_TEXT]Must be within our Cultural Borders.[COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Uniquement à l'intérieur de nos frontières culturelles.[COLOR_REVERT]</French>
-		<German>[COLOR_WARNING_TEXT]Muss sich innerhalb unserer kulturellen Grenzen befinden.[COLOR_REVERT]</German>
-		<Italian>[COLOR_WARNING_TEXT]Bisogna essere all'interno dei propri confini culturali.[COLOR_REVERT]</Italian>
-		<Spanish>[COLOR_WARNING_TEXT]Ha de estar dentro de las fronteras de nuestra cultura.[COLOR_REVERT]</Spanish>
+		<English>[COLOR_WARNING_TEXT]Must be within Cultural Borders owned by of one of our cities.[COLOR_REVERT]</English>
+		<!-- <French>[COLOR_WARNING_TEXT]Uniquement à l'intérieur de nos frontières culturelles.[COLOR_REVERT]</French> -->
+		<!-- <German>[COLOR_WARNING_TEXT]Muss sich innerhalb unserer kulturellen Grenzen befinden.[COLOR_REVERT]</German> -->
+		<!-- <Italian>[COLOR_WARNING_TEXT]Bisogna essere all'interno dei propri confini culturali.[COLOR_REVERT]</Italian> -->
+		<!-- <Spanish>[COLOR_WARNING_TEXT]Ha de estar dentro de las fronteras de nuestra cultura.[COLOR_REVERT]</Spanish> -->
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ACTION_NEEDS_OUT_RIVAL_CULTURE_BORDER</Tag>

@@ -2888,6 +2888,12 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 		}
 	}
 
+	const ImprovementTypes eImprovement = info.getImprovement();
+
+	// Can't build if both outside of city range and not-military improvement
+	if (!isInCultureRangeOfCityByPlayer(ePlayer) && !GC.getImprovementInfo(eImprovement).isMilitaryStructure())
+		return false;
+
 	if (!info.getPlaceBonusTypes().empty())
 	{
 		if (getBonusType() != NO_BONUS)
@@ -2938,7 +2944,6 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 	}
 
 	bool bValid = false;
-	const ImprovementTypes eImprovement = info.getImprovement();
 
 	if (eImprovement != NO_IMPROVEMENT)
 	{
@@ -2967,16 +2972,6 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 			{
 				return false;
 			}
-
-			/* TB Commented out to allow for units to build over current improvements with their upgrades (if the build to do so is defined.)
-			ImprovementTypes eFinalImprovementType = finalImprovementUpgrade(getImprovementType());
-
-			if (eFinalImprovementType != NO_IMPROVEMENT
-			&& eFinalImprovementType == finalImprovementUpgrade(eImprovement))
-			{
-				return false;
-			}
-			*/
 		}
 
 		if (!bTestVisible)

@@ -2731,21 +2731,20 @@ void CvDLLWidgetData::parseActionHelp(CvWidgetDataStruct &widgetDataStruct, CvWS
 				{
 					if (eImprovement != NO_IMPROVEMENT)
 					{
-						if (pMissionPlot->getTeam() != pHeadSelectedUnit->getTeam())
+						if (improvement->isOutsideBorders())
 						{
-							if (improvement->isOutsideBorders())
-							{
-								if (pMissionPlot->getTeam() != NO_TEAM)
-								{
-									szBuffer.append(NEWLINE);
-									szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NEEDS_OUT_RIVAL_CULTURE_BORDER"));
-								}
-							}
-							else
+							if (pMissionPlot->getTeam() != pHeadSelectedUnit->getTeam() &&
+								pMissionPlot->getTeam() != NO_TEAM)
 							{
 								szBuffer.append(NEWLINE);
-								szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NEEDS_CULTURE_BORDER"));
+								szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NEEDS_OUT_RIVAL_CULTURE_BORDER"));
 							}
+						}
+						else if (!pMissionPlot->isInCultureRangeOfCityByPlayer(pHeadSelectedUnit->getOwner()) ||
+								  pMissionPlot->getTeam() != pHeadSelectedUnit->getTeam())
+						{
+							szBuffer.append(NEWLINE);
+							szBuffer.append(gDLL->getText("TXT_KEY_ACTION_NEEDS_CULTURE_BORDER"));
 						}
 
 						if ((ePlotBonus == NO_BONUS || !improvement->isImprovementBonusTrade(ePlotBonus))
