@@ -10911,10 +10911,9 @@ void CvPlot::read(FDataStreamBase* pStream)
 			}
 		}
 		// Blaze TODO confirm working as intended
-		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "InfluencedByCityByPlayer");
+		WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iSize, "InfluencedByCityByPlayerSize");
 		for (short i = 0; i < iSize; ++i)
 		{
-			int iValue = 0;
 			WRAPPER_READ_DECORATED(wrapper, "CvPlot", &iType, "InfluencedByCityByPlayer");
 
 			if (iType > -1 && iType < MAX_PLAYERS)
@@ -11307,7 +11306,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (*it).second, "CultureRatesLastTurnRate");
 		}
 		// Blaze TODO confirm working as intended
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_influencedByCityByPlayer.size(), "InfluencedByCityByPlayer");
+		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (short)m_influencedByCityByPlayer.size(), "InfluencedByCityByPlayerSize");
 		for (std::vector<PlayerTypes>::iterator it = m_influencedByCityByPlayer.begin(); it != m_influencedByCityByPlayer.end(); ++it)
 		{
 			WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", static_cast<short>(*it), "InfluencedByCityByPlayer");
@@ -13288,23 +13287,13 @@ int CvPlot::getCultureRateLastTurn(const PlayerTypes ePlayer) const
 
 void CvPlot::setInCultureRangeOfCityByPlayer(const PlayerTypes ePlayer)
 {
-	bool bAlreadyInfluenced = false;
-	for (std::vector<PlayerTypes>::iterator it = m_influencedByCityByPlayer.begin(); it != m_influencedByCityByPlayer.end(); ++it)
-	{
-		if (*it == ePlayer)
-		{
-			bAlreadyInfluenced = true;
-			break;
-		}
-	}
-	if (!bAlreadyInfluenced) m_influencedByCityByPlayer.push_back(ePlayer);
+    if (!isInCultureRangeOfCityByPlayer(ePlayer))
+    {
+        m_influencedByCityByPlayer.push_back(ePlayer);
+    }
 }
 
 bool CvPlot::isInCultureRangeOfCityByPlayer(const PlayerTypes ePlayer) const
 {
-	for (std::vector<PlayerTypes>::const_iterator it = m_influencedByCityByPlayer.begin(); it != m_influencedByCityByPlayer.end(); ++it)
-	{
-		if (*it == ePlayer) return true;
-	}
-	return false;
+	return find(m_influencedByCityByPlayer.begin(), m_influencedByCityByPlayer.end(), ePlayer) != m_influencedByCityByPlayer.end();
 }
