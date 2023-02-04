@@ -2,16 +2,16 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_TOTEM_BEARS</Type>
+			<Type>BUILDING_MILITARY_STANDARD_BEARS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_BEARS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_BEAR_HELP</Help>
+			<Description>TXT_KEY_BUILDING_MILITARY_STANDARD_BEARS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_MILITARY_STANDARD_BEAR_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</ArtDefineTag>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
@@ -19,7 +19,7 @@
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BEAR_TRAINER</BuildingType>
@@ -37,13 +37,13 @@
 			</UnitProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_TOTEM_BISON</Type>
+			<Type>BUILDING_MILITARY_STANDARD_BISON</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_BISON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_BISON_HELP</Help>
+			<Description>TXT_KEY_BUILDING_MILITARY_STANDARD_BISON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_MILITARY_STANDARD_BISON_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -53,7 +53,7 @@
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BISON_TRAINER</BuildingType>
@@ -67,13 +67,13 @@
 			</UnitProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_TOTEM_CATS</Type>
+			<Type>BUILDING_MILITARY_STANDARD_BIG_CATS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_CATS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_CATS_HELP</Help>
+			<Description>TXT_KEY_BUILDING_MILITARY_STANDARD_BIG_CATS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_MILITARY_STANDARD_BIG_CATS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</ArtDefineTag>
 			<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -84,7 +84,7 @@
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
 			<UnitProductionModifiers>
@@ -111,13 +111,13 @@
 			</UnitProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_TOTEM_DEER</Type>
+			<Type>BUILDING_MILITARY_STANDARD_DEER</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_DEER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_DEER_HELP</Help>
+			<Description>TXT_KEY_BUILDING_MILITARY_STANDARD_DEER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_MILITARY_STANDARD_DEER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -127,7 +127,7 @@
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DEER_TRAINER</BuildingType>
@@ -149,13 +149,13 @@
 			</UnitProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_TOTEM_GIRAFFE</Type>
+			<Type>BUILDING_MILITARY_STANDARD_GIRAFFE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE_HELP</Help>
+			<Description>TXT_KEY_BUILDING_MILITARY_STANDARD_GIRAFFE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_MILITARY_STANDARD_GIRAFFE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</ArtDefineTag>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -166,7 +166,7 @@
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
@@ -180,13 +180,13 @@
 			</UnitProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_TOTEM_RHINO</Type>
+			<Type>BUILDING_MILITARY_STANDARD_RHINOCEROS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_RHINO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_RHINO_HELP</Help>
+			<Description>TXT_KEY_BUILDING_MILITARY_STANDARD_RHINOCEROS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_MILITARY_STANDARD_RHINOCEROS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</ArtDefineTag>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -197,7 +197,7 @@
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_RHINO_TRAINER</BuildingType>
@@ -215,13 +215,13 @@
 			</UnitProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_TOTEM_ZEBRA</Type>
+			<Type>BUILDING_MILITARY_STANDARD_ZEBRA</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_ZEBRA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_ZEBRA_HELP</Help>
+			<Description>TXT_KEY_BUILDING_MILITARY_STANDARD_ZEBRA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_MILITARY_STANDARD_ZEBRA_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -231,7 +231,7 @@
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>

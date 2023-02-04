@@ -32,8 +32,8 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM_WORKERS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_WORKERS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_AARDVARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
@@ -94,8 +94,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM_WORKERS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_WORKERS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -154,7 +154,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_AFRICANGREY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
@@ -217,7 +217,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_AFRICAN_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PENGUIN</BuildingType>
@@ -284,8 +284,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ARCTICFOX</BuildingType>
@@ -348,7 +348,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM_WORKERS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_WORKERS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ARMADILLO</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -405,7 +405,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ASIANBEAR</BuildingType>
@@ -583,7 +583,7 @@
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_PIG_HERD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BOAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BABIRUSA</BuildingType>
@@ -755,7 +755,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WEASEL</BuildingType>
@@ -929,7 +929,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
@@ -992,7 +992,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_OLD_MAN</BuildingType>
 				<BuildingType>BUILDING_PRIMATE_CAGE</BuildingType>
 				<BuildingType>BUILDING_MONKEY_BREEDER</BuildingType>
@@ -1053,7 +1053,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BARNOWL</BuildingType>
@@ -1117,7 +1117,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BARREDOWL</BuildingType>
@@ -1179,7 +1179,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
@@ -1355,8 +1355,8 @@
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_RODENT_CAGE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM_WORKERS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_WORKERS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RODENT</BuildingType>
 				<BuildingType>BUILDING_BEAVER_TRAPS</BuildingType>
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
@@ -1545,7 +1545,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TIGER</BuildingType>
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1715,7 +1715,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
@@ -1891,7 +1891,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
@@ -2064,7 +2064,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BOAR_CAMP</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BOAR</BuildingType>
@@ -2241,7 +2241,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ANTELOPE</BuildingType>
 				<BuildingType>BUILDING_ANTELOPE_CAMP</BuildingType>
@@ -2415,7 +2415,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BOOBY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
@@ -2476,7 +2476,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BOAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BRAZILIAN_TAPIR</BuildingType>
@@ -2537,7 +2537,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BUFFALO_HERD</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
@@ -2714,7 +2714,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CROCODILE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
@@ -2887,7 +2887,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_CAMEL_HERD</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
@@ -3062,7 +3062,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_OLD_MAN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CAPUCHIN</BuildingType>
 				<BuildingType>BUILDING_PRIMATE_CAGE</BuildingType>
@@ -3125,7 +3125,7 @@
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_RODENT_CAGE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CAPYBARA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RODENT</BuildingType>
 				<BuildingType>BUILDING_BEAVER_TRAPS</BuildingType>
@@ -3188,7 +3188,7 @@
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CARIBOU</BuildingType>
 				<BuildingType>BUILDING_DEER_CAMP</BuildingType>
 				<BuildingType>BUILDING_CARIBOU_CAMP</BuildingType>
@@ -3361,7 +3361,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CASSOWARY</BuildingType>
@@ -3537,7 +3537,7 @@
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_CAT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CAVE_LION</BuildingType>
@@ -3708,7 +3708,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_CAVE_BEAR_REMAINS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
@@ -3885,7 +3885,7 @@
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CHEETAH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SPOTTED_CAT</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -4056,7 +4056,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_OLD_MAN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CHIMPANZEE</BuildingType>
 				<BuildingType>BUILDING_PRIMATE_CAGE</BuildingType>
@@ -4227,7 +4227,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_COBRA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
@@ -4417,7 +4417,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_COW_HERD</BuildingType>
@@ -4744,7 +4744,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
@@ -4806,7 +4806,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CUSCUS</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
@@ -4865,7 +4865,7 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
 				<BuildingType>BUILDING_AMPHIBIAN_POND</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_AMPHIBIAN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DART_FROG</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
@@ -4928,7 +4928,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DESERT_TORTOISE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
@@ -4989,8 +4989,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DHOLE</BuildingType>
@@ -5057,8 +5057,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
@@ -5128,8 +5128,8 @@
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_DOG</BuildingType>
@@ -5427,7 +5427,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_DONKEY_BREEDER</BuildingType>
 				<BuildingType>BUILDING_DONKEY_HERD</BuildingType>
@@ -5603,7 +5603,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DUCK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
@@ -5791,7 +5791,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EAGLE</BuildingType>
@@ -5858,7 +5858,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EAGLE_BALD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
@@ -5929,7 +5929,7 @@
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_AFRICANELEPHANT</BuildingType>
 				<BuildingType>BUILDING_ELEPHANT_CAMP</BuildingType>
@@ -6099,7 +6099,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ELEPHANT_CAMP</BuildingType>
 				<BuildingType>BUILDING_ELEPHANT_HERD</BuildingType>
@@ -6277,7 +6277,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
@@ -6462,8 +6462,8 @@
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EWOLF</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -6634,8 +6634,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FENNECFOX</BuildingType>
 				<BuildingType>BUILDING_FOX_TRAPS</BuildingType>
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
@@ -6696,7 +6696,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
@@ -6872,7 +6872,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GALAPAGOS_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PENGUIN</BuildingType>
@@ -6939,7 +6939,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 				<BuildingType>BUILDING_TORTOISE_SHELL_WORKER</BuildingType>
@@ -7001,7 +7001,7 @@
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CROCODILE</BuildingType>
@@ -7177,7 +7177,7 @@
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GATOR_ASIAN</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
@@ -7353,7 +7353,7 @@
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ANTELOPE</BuildingType>
 				<BuildingType>BUILDING_ANTELOPE_CAMP</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -7413,7 +7413,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ANTELOPE</BuildingType>
 				<BuildingType>BUILDING_ANTELOPE_CAMP</BuildingType>
@@ -7587,7 +7587,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ANTELOPE</BuildingType>
 				<BuildingType>BUILDING_ANTELOPE_CAMP</BuildingType>
@@ -7761,7 +7761,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_OLD_MAN</BuildingType>
 				<BuildingType>BUILDING_PRIMATE_CAGE</BuildingType>
 				<BuildingType>BUILDING_MONKEY_BREEDER</BuildingType>
@@ -7824,7 +7824,7 @@
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DRAGON</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
@@ -8124,7 +8124,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GIRAFFE</BuildingType>
@@ -8300,8 +8300,8 @@
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM_WORKERS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_WORKERS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GLYPTO</BuildingType>
 				<BuildingType>BUILDING_GLYPTO_REMAINS</BuildingType>
@@ -8361,7 +8361,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_OLD_MAN</BuildingType>
 				<BuildingType>BUILDING_PRIMATE_CAGE</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -8661,7 +8661,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
@@ -8838,7 +8838,7 @@
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM_WORKERS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_WORKERS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</BuildingType>
@@ -8898,7 +8898,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
@@ -8960,7 +8960,7 @@
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RAPTOR</BuildingType>
@@ -9157,7 +9157,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HARPYEAGLE</BuildingType>
@@ -9222,7 +9222,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAWK</BuildingType>
@@ -9286,7 +9286,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HIPPOPOTAMUS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HIPPOS</BuildingType>
@@ -9460,7 +9460,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
@@ -9637,7 +9637,7 @@
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_PIG_HERD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BOAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SWINE</BuildingType>
@@ -9696,7 +9696,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
@@ -9873,7 +9873,7 @@
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_HIPPO_CAMP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PYGMYHIPPO</BuildingType>
@@ -10046,7 +10046,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HORNED_OWL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
@@ -10108,7 +10108,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HORSE</BuildingType>
@@ -10442,7 +10442,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SCAVENGER</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BAD_BOY_CAGE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -10613,7 +10613,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_GOAT_HERD</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -10813,7 +10813,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
@@ -10874,7 +10874,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ANTELOPE</BuildingType>
 				<BuildingType>BUILDING_ANTELOPE_CAMP</BuildingType>
@@ -11049,7 +11049,7 @@
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SPOTTED_CAT</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -11220,7 +11220,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_BOXING_KANGAROO</BuildingType>
@@ -11396,7 +11396,7 @@
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_CAMP</BuildingType>
@@ -11571,7 +11571,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
@@ -11633,7 +11633,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DRAGON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
@@ -11694,7 +11694,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
@@ -11756,7 +11756,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_PRIMATE_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_OLD_MAN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LEMUR</BuildingType>
@@ -11814,7 +11814,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LIZARD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
@@ -11874,7 +11874,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LLAMA</BuildingType>
@@ -11935,7 +11935,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LION</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
@@ -12108,7 +12108,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LOON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
@@ -12171,7 +12171,7 @@
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SPOTTED_CAT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LYNX</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -12342,7 +12342,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MACAW</BuildingType>
@@ -12529,7 +12529,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BOAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ELEPHANT</BuildingType>
@@ -12595,7 +12595,7 @@
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ELEPHANT</BuildingType>
@@ -12777,8 +12777,8 @@
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MANEDWOLF</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -12949,7 +12949,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_OLD_MAN</BuildingType>
 				<BuildingType>BUILDING_PRIMATE_CAGE</BuildingType>
 				<BuildingType>BUILDING_MONKEY_BREEDER</BuildingType>
@@ -13501,7 +13501,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
@@ -13683,7 +13683,7 @@
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MOOSE</BuildingType>
 				<BuildingType>BUILDING_DEER_CAMP</BuildingType>
 				<BuildingType>BUILDING_MOOSE_CAMP</BuildingType>
@@ -13856,7 +13856,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DRAGON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
@@ -13919,7 +13919,7 @@
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_GOAT_HERD</BuildingType>
 				<BuildingType>BUILDING_SHEEP_HERD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GOAT</BuildingType>
@@ -14007,7 +14007,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BOAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MOUNTAIN_TAPIR</BuildingType>
@@ -14068,7 +14068,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BULL</BuildingType>
@@ -14377,7 +14377,7 @@
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CROCODILE</BuildingType>
@@ -14552,7 +14552,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_NUMBAT</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
@@ -14613,7 +14613,7 @@
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -14785,7 +14785,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_OPOSSUM</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
@@ -14973,7 +14973,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_OLD_MAN</BuildingType>
 				<BuildingType>BUILDING_PRIMATE_CAGE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -15145,7 +15145,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
@@ -15322,7 +15322,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
@@ -15382,7 +15382,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PANTHER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SPOTTED_CAT</BuildingType>
@@ -15556,7 +15556,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PARROT</BuildingType>
@@ -15619,7 +15619,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
@@ -15684,7 +15684,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EMPEROR_PENGUIN</BuildingType>
@@ -15750,7 +15750,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PHEASANT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
@@ -15925,7 +15925,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MONOTREMES</BuildingType>
@@ -15988,7 +15988,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
@@ -16051,7 +16051,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_POSSUM</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
@@ -16111,7 +16111,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MARSUPIAL</BuildingType>
@@ -16288,7 +16288,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
@@ -16352,7 +16352,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -16412,7 +16412,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WEASEL</BuildingType>
@@ -16475,7 +16475,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WEASEL</BuildingType>
@@ -16649,7 +16649,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
@@ -16837,7 +16837,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RAZORBILL</BuildingType>
@@ -16900,8 +16900,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
@@ -16962,7 +16962,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
@@ -17140,7 +17140,7 @@
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_PIG_HERD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BOAR</BuildingType>
 				<BuildingType>BUILDING_BOAR_CAMP</BuildingType>
@@ -17311,8 +17311,8 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GREY_WOLF</BuildingType>
@@ -17622,7 +17622,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
@@ -17800,7 +17800,7 @@
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RHINO_TAXONOMY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ELASMOTHERIUM</BuildingType>
@@ -17861,7 +17861,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BLACK_RHINO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RHINO_TAXONOMY</BuildingType>
@@ -17924,7 +17924,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_INDIAN_RHINO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RHINO_TAXONOMY</BuildingType>
@@ -17987,7 +17987,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_JAVA_RHINO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RHINO_TAXONOMY</BuildingType>
@@ -18050,7 +18050,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RHINO_TAXONOMY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_UNICORN</BuildingType>
@@ -18116,7 +18116,7 @@
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DRAGON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
@@ -18292,7 +18292,7 @@
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CROCODILE</BuildingType>
@@ -18466,7 +18466,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PENGUIN</BuildingType>
@@ -18533,7 +18533,7 @@
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SABRETOOTH</BuildingType>
 				<BuildingType>BUILDING_SABRETOOTH_REMAINS</BuildingType>
@@ -18706,7 +18706,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ANTELOPE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SAIGA</BuildingType>
@@ -19363,7 +19363,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEAEAGLE</BuildingType>
@@ -19429,7 +19429,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEALION</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_SEALHUNTERS_CAMP</BuildingType>
@@ -19683,7 +19683,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEA_OTTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WEASEL</BuildingType>
@@ -19873,7 +19873,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SECRETARYBIRD</BuildingType>
@@ -19937,7 +19937,7 @@
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TIGER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SIBERIAN_TIGER</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -20108,7 +20108,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_NOCTURNAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WEASEL</BuildingType>
@@ -20168,7 +20168,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
@@ -20345,7 +20345,7 @@
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SPOTTED_CAT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SNOW_LEOPARD</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -20514,7 +20514,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
@@ -20692,7 +20692,7 @@
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DEER</BuildingType>
 				<BuildingType>BUILDING_DEER_CAMP</BuildingType>
 				<BuildingType>BUILDING_REINDEER_FARM</BuildingType>
@@ -20862,7 +20862,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
@@ -21035,7 +21035,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BAIRDS_TAPIR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BOAR</BuildingType>
@@ -21218,7 +21218,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TASMANIANDEVIL</BuildingType>
@@ -21391,7 +21391,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TERN</BuildingType>
@@ -21454,7 +21454,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MARSUPIAL</BuildingType>
@@ -21516,7 +21516,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TOUCAN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
@@ -21579,7 +21579,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TREESLOTH</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -21764,7 +21764,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TURKEY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BIRD</BuildingType>
@@ -21940,7 +21940,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
@@ -22004,7 +22004,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
@@ -22068,7 +22068,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SCAVENGER</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_VULTURE</BuildingType>
@@ -22131,7 +22131,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WALLABY</BuildingType>
@@ -22194,7 +22194,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MARSUPIAL_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_KANGAROO_CAMP</BuildingType>
@@ -22257,7 +22257,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WALRUS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_SEALHUNTERS_CAMP</BuildingType>
@@ -22450,7 +22450,7 @@
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ANTELOPE</BuildingType>
 				<BuildingType>BUILDING_ANTELOPE_CAMP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BULL</BuildingType>
@@ -22625,7 +22625,7 @@
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_RODENT_CAGE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WEASEL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOLVERINE</BuildingType>
 				<BuildingType>BUILDING_BAD_BOY_CAGE</BuildingType>
@@ -22797,7 +22797,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOMBAT</BuildingType>
@@ -25328,7 +25328,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ZEBRA</BuildingType>

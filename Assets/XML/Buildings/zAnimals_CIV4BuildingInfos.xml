@@ -79,12 +79,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TAMER_COMPLEX</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_TOTEM</Type>
+			<Type>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
@@ -105,22 +105,22 @@
 			</UnitCombatFreeExperiences>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_TOTEM_DOGS</Type>
+			<Type>BUILDING_MILITARY_STANDARD_CANINES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS_HELP</Help>
+			<Description>TXT_KEY_BUILDING_MILITARY_STANDARD_CANINES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_MILITARY_STANDARD_CANINES_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<Bonus>BONUS_DOG</Bonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_ARCTICFOX</BuildingType>
@@ -158,21 +158,21 @@
 			</UnitProductionModifiers>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_TOTEM_WORKERS</Type>
+			<Type>BUILDING_MILITARY_STANDARD_WORKERS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS_HELP</Help>
+			<Description>TXT_KEY_BUILDING_MILITARY_STANDARD_WORKERS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_MILITARY_STANDARD_WORKERS_HELP</Help>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_AARDVARK</BuildingType>
@@ -192,7 +192,7 @@
 			</UnitCombatProdModifiers>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BAD_BOY_CAGE</Type>
@@ -3009,14 +3009,14 @@
 			</MapCategoryTypes>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_TRADITION_TOTEM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
-			<FreeBuilding>BUILDING_ANIMAL_TOTEM</FreeBuilding>
+			<FreeBuilding>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>

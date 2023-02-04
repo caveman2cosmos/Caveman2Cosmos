@@ -1,33 +1,33 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_BEARS</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BEARS</Tag>
 		<English>Military Standard (Bears)</English>
 		<French>Standards Militaires (Ours)</French>
 		<Polish>Sztandar Wojskowy (Niedźwiedź)</Polish>
 		<Russian>Òîòåì «Ìåäâåäü»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_BEAR_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BEAR_HELP</Tag>
 		<English>[ICON_BULLET]Build Bear buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Ours plus vite dans cette ville.</French>
 		<Russian>Óñîðÿåò òðåíèðîâêó ìåäâåäåé è ïîñòðîéêó â ãîðîäå çäàíèé äëÿ íèõ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_BISON</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BISON</Tag>
 		<English>Military Standard (Bison)</English>
 		<French>Standards Militaires (Bisons)</French>
 		<Polish>Sztandar Wojskowy (Bizon)</Polish>
 		<Russian>Òîòåì «Áèçîí»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_BISON_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BISON_HELP</Tag>
 		<English>[ICON_BULLET]Build Bison buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités bisons plus vite dans cette Ville.</French>
 		<Polish>Konstuuj budynki i werbuj jednostki bizonów szybciej w tym mieście.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_CATS</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BIG_CATS</Tag>
 		<English>Military Standard (Big Cats)</English>
 		<French>Standards Militaires (Félins)</French>
 		<Italian>
@@ -39,7 +39,7 @@
 		<Russian>Òîòåì «Êîøêà»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_CATS_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_BIG_CATS_HELP</Tag>
 		<English>[ICON_BULLET]Build Feline buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités félines plus vite dans cette Ville.</French>
 		<Italian>Questo edificio ti permette di addestrare le unità feline più velocemente.</Italian>
@@ -47,50 +47,50 @@
 		<Russian>[ICON_BULLET][COLOR_YELLOW]Подсказка: [COLOR_REVERT]стройте кошачьи питомники в городе, чтобы дрессировать ручных и сторожевых кошек.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DEER</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_DEER</Tag>
 		<English>Military Standard (Deer)</English>
 		<French>Standards Militaires (Cervidés)</French>
 		<Polish>Sztandar Wojskowy (Deer)</Polish>
 		<Russian>Òîòåì «Îëåíü»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DEER_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_DEER_HELP</Tag>
 		<English>[ICON_BULLET]Build Deer buildings and units faster in this city.</English>
 		<French>[ICON_BULLET]Construit les bâtiments et unités cervidés plus vite dans cette Ville.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_GIRAFFE</Tag>
 		<English>Military Standard (Giraffe)</English>
 		<French>Standards Militaires (Girafe)</French>
 		<Polish>Sztandar Wojskowy (Żyrafa)</Polish>
 		<Russian>Òîòåì «Æèðàô»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_GIRAFFE_HELP</Tag>
 		<English>[ICON_BULLET]Build Giraffe buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Girafes plus vite dans cette ville.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_RHINO</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_RHINOCEROS</Tag>
 		<English>Military Standard (Rhinoceros)</English>
 		<French>Standards Militaires (Rhinocéros)</French>
 		<Polish>Sztandar Wojskowy (Nosorożec)</Polish>
 		<Russian>Òîòåì «Íîñîðîã»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_RHINO_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_RHINOCEROS_HELP</Tag>
 		<English>[ICON_BULLET]Build Rhinoceros buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Rhinos plus vite dans cette Ville.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_ZEBRA</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_ZEBRA</Tag>
 		<English>Military Standard (Zebra)</English>
 		<French>Standards Militaires (Zèbres)</French>
 		<Polish>Sztandar Wojskowy (Zebra)</Polish>
 		<Russian>Òîòåì «Çåáðà»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_ZEBRA_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_ZEBRA_HELP</Tag>
 		<English>[ICON_BULLET]Build Zebra buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Zèbres plus vite dans cette ville.</French>
 	</TEXT>

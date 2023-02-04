@@ -148,7 +148,7 @@
 		<Polish>Oswajanie zwierząt to nie udamawianie. Oswojone zwierzęta mogą być później tresowane.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</Tag>
 		<English>Military Standard (Animal mascot)</English>
 		<French>Mascotte de L'Armée de Terre</French>
 		<Italian>Mascotte dell'esercito (animale)</Italian>
@@ -156,7 +156,7 @@
 		<Russian>Çâåðèíûé òîòåì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_CANINES</Tag>
 		<English>Military Standard (Canines)</English>
 		<French>Standards Militaires (Canins)</French>
 		<Italian>Mascotte dell'esercito (canide)</Italian>
@@ -164,7 +164,7 @@
 		<Russian>Òîòåì «Ñîáàêà»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_CANINES_HELP</Tag>
 		<English>[ICON_BULLET]Build Canine buildings and units faster in this city.</English>
 		<French>[ICON_BULLET]Construit les bâtiments et unités canines plus vite dans cette Ville.</French>
 		<Italian>Questo edificio ti permette di addestrare le unità canine più velocemente.</Italian>
@@ -172,13 +172,13 @@
 		<Russian>Àâòîìàòè÷åñêè ñòðîèò âñå çäàíèÿ ñâÿçàííûå ñ ñîáàêàìè, óñêîðÿÿ èõ îáó÷åíèå â äàííîì ãîðîäå.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Tag>
 		<English>The tradition of having a mascot or flag/standard that identifies the people in a military unit.</English>
 		<Italian>La tradizione di avere una mascotte o una bandiera che identifica le persone che fanno parte di un'unità militare.</Italian>
 		<Polish>Tradycja posiadania maskotki lub sztandaru, który identyfikuje ludzi w jednostce wojskowej.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_WORKERS</Tag>
 		<English>Military Standard (Workers)</English>
 		<French>Standards Militaires (Ouvriers)</French>
 		<Italian>Mascotte dei lavoratori</Italian>
@@ -186,7 +186,7 @@
 		<Russian>Òîòåì «Ðàáîòíèê»</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_MILITARY_STANDARD_WORKERS_HELP</Tag>
 		<English>[ICON_BULLET]Build Worker units faster in this city.</English>
 		<French>[ICON_BULLET]Les unités ouvriers sont entraînées plus vite dans cette ville</French>
 		<Italian>Costruisce le unità di lavoratori più velocemente in questa città.</Italian>
