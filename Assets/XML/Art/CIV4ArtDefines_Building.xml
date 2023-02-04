@@ -5453,7 +5453,7 @@
 			<Button>Art/interface/buttons/buildings/breakthrough_starshot.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_ANTELOPE</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_ANTELOPE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5463,7 +5463,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederantelope.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_BEAVER</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_BEAVER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5473,7 +5473,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederbeaver.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_BELUGA</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_BELUGA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5483,7 +5483,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederbeluga.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_BISON</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_BISON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5493,7 +5493,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederbison.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_BOAR</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_BOAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5503,7 +5503,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederboar.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_CARIBOU</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_CARIBOU</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5513,7 +5513,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breedercaribou.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_CHINCHILLA</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_CHINCHILLA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5523,7 +5523,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederchinchilla.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_DEER</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_DEER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5533,7 +5533,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederdeer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_ELEPHANT</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_ELEPHANT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5543,7 +5543,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederelephant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_ELEPHANT_SEAL</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_ELEPHANT_SEAL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5553,7 +5553,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederseaelephant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_EMU</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_EMU</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5563,7 +5563,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederemu.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_FOX</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_FOX</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5573,7 +5573,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederfox.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_GIRAFFE</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_GIRAFFE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5583,7 +5583,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breedergiraffe.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_HIPPO</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_HIPPO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5593,7 +5593,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederhippo.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_KANGAROO</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_KANGAROO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5603,7 +5603,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederkangaroo.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_MAMMOTH</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_MAMMOTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5613,7 +5613,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breedermammoth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_MINK</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_MINK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5623,7 +5623,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breedermink.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_MOOSE</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_MOOSE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5633,7 +5633,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breedermoose.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_MOUFLON</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_MOUFLON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5643,7 +5643,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breedermufflon.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_MUSKOX</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_MUSKOX</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5653,7 +5653,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breedermuskox.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_NARWHAL</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_NARWHAL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5663,7 +5663,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breedernarwal.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_OSTRICH</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_OSTRICH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5673,7 +5673,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederostrich.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_RABBIT</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_RABBIT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5683,7 +5683,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederrabbit.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_RACCOON</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_RACCOON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5693,7 +5693,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederraccoon.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_RHEA</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_RHEA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5703,7 +5703,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederrhea.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_RHINO</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_RHINO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5713,7 +5713,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederrhino.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_SEAL</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_SEAL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5723,7 +5723,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederseal.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_SEA_OTTER</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_SEA_OTTER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5733,7 +5733,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederseaotter.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_WALRUS</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_WALRUS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5743,7 +5743,7 @@
 			<Button>Art\Interface\Buttons\Buildings\breederwalrus.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BREEDING_ZEBRA</Type>
+			<Type>ART_DEF_BUILDING_BREEDING_PROGRAM_ZEBRA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

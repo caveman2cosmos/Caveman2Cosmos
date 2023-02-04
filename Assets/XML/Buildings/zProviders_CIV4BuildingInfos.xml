@@ -211,26 +211,26 @@
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 				<BuildingType>BUILDING_BOAR_CAMP</BuildingType>
-				<BuildingType>BUILDING_BREEDING_ANTELOPE</BuildingType>
-				<BuildingType>BUILDING_BREEDING_BISON</BuildingType>
-				<BuildingType>BUILDING_BREEDING_BOAR</BuildingType>
-				<BuildingType>BUILDING_BREEDING_CARIBOU</BuildingType>
-				<BuildingType>BUILDING_BREEDING_DEER</BuildingType>
-				<BuildingType>BUILDING_BREEDING_ELEPHANT</BuildingType>
-				<BuildingType>BUILDING_BREEDING_EMU</BuildingType>
-				<BuildingType>BUILDING_BREEDING_GIRAFFE</BuildingType>
-				<BuildingType>BUILDING_BREEDING_HIPPO</BuildingType>
-				<BuildingType>BUILDING_BREEDING_KANGAROO</BuildingType>
-				<BuildingType>BUILDING_BREEDING_MAMMOTH</BuildingType>
-				<BuildingType>BUILDING_BREEDING_MOOSE</BuildingType>
-				<BuildingType>BUILDING_BREEDING_MOUFLON</BuildingType>
-				<BuildingType>BUILDING_BREEDING_MUSKOX</BuildingType>
-				<BuildingType>BUILDING_BREEDING_NARWHAL</BuildingType>
-				<BuildingType>BUILDING_BREEDING_OSTRICH</BuildingType>
-				<BuildingType>BUILDING_BREEDING_RHEA</BuildingType>
-				<BuildingType>BUILDING_BREEDING_RHINO</BuildingType>
-				<BuildingType>BUILDING_BREEDING_WALRUS</BuildingType>
-				<BuildingType>BUILDING_BREEDING_ZEBRA</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_ANTELOPE</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_BOAR</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_CARIBOU</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_DEER</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_ELEPHANT</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_EMU</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_GIRAFFE</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_HIPPO</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_KANGAROO</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_MOOSE</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_MOUFLON</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_MUSKOX</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_NARWHAL</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_OSTRICH</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_RHEA</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_RHINO</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_WALRUS</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_BUFFALO_HERD</BuildingType>
 				<BuildingType>BUILDING_CAMEL_HERD</BuildingType>
 				<BuildingType>BUILDING_CARIBOU_CAMP</BuildingType>
@@ -961,11 +961,11 @@
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_BREEDING_ELEPHANT</BuildingType>
-				<BuildingType>BUILDING_BREEDING_MAMMOTH</BuildingType>
-				<BuildingType>BUILDING_BREEDING_NARWHAL</BuildingType>
-				<BuildingType>BUILDING_BREEDING_RHINO</BuildingType>
-				<BuildingType>BUILDING_BREEDING_WALRUS</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_ELEPHANT</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_NARWHAL</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_RHINO</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_WALRUS</BuildingType>
 				<BuildingType>BUILDING_ELEPHANT_CAMP</BuildingType>
 				<BuildingType>BUILDING_ELEPHANT_FARM</BuildingType>
 				<BuildingType>BUILDING_ELEPHANT_HERD</BuildingType>
@@ -1150,16 +1150,16 @@
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_BEAVER_TRAPS</BuildingType>
 				<BuildingType>BUILDING_BELUGA_CAMP</BuildingType>
-				<BuildingType>BUILDING_BREEDING_BEAVER</BuildingType>
-				<BuildingType>BUILDING_BREEDING_BELUGA</BuildingType>
-				<BuildingType>BUILDING_BREEDING_CHINCHILLA</BuildingType>
-				<BuildingType>BUILDING_BREEDING_ELEPHANT_SEAL</BuildingType>
-				<BuildingType>BUILDING_BREEDING_FOX</BuildingType>
-				<BuildingType>BUILDING_BREEDING_MINK</BuildingType>
-				<BuildingType>BUILDING_BREEDING_RABBIT</BuildingType>
-				<BuildingType>BUILDING_BREEDING_RACCOON</BuildingType>
-				<BuildingType>BUILDING_BREEDING_SEAL</BuildingType>
-				<BuildingType>BUILDING_BREEDING_SEA_OTTER</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_BEAVER</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_BELUGA</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_CHINCHILLA</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_ELEPHANT_SEAL</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_FOX</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_MINK</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_RABBIT</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_RACCOON</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_SEAL</BuildingType>
+				<BuildingType>BUILDING_BREEDING_PROGRAM_SEA_OTTER</BuildingType>
 				<BuildingType>BUILDING_CHINCHILLA_TRAPS</BuildingType>
 				<BuildingType>BUILDING_ELEPHANTSEAL_CAMP</BuildingType>
 				<BuildingType>BUILDING_FOX_TRAPS</BuildingType>
