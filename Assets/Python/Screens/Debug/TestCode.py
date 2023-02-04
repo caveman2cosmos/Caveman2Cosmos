@@ -3800,4 +3800,4 @@ class TestCode:
 	def listTagsAndNames(self):
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-			self.log(CvBuildingInfo.getType()+" "+CvBuildingInfo.getDescription())
+			self.log(CvBuildingInfo.getType()+" = "+CvBuildingInfo.getDescription()+" +")

@@ -3196,12 +3196,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WONDERS_OF_THE_DEEP</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_CORAL</Type>
+			<Type>BUILDING_FOLKLORE_PRESENCE_OF_CORAL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_CORAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_CORAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -3236,12 +3236,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_FALL</Type>
+			<Type>BUILDING_FOLKLORE_PRESENCE_OF_CRATER</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FALL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_CRATER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -3264,12 +3264,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_METAL</Type>
+			<Type>BUILDING_FOLKLORE_PRESENCE_OF_METAL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_METAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_METAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
@@ -3288,12 +3288,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_OASIS</Type>
+			<Type>BUILDING_FOLKLORE_PRESENCE_OF_OASIS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OASIS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_OASIS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -3308,12 +3308,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_OUTCROP</Type>
+			<Type>BUILDING_FOLKLORE_PRESENCE_OF_LANDFORM</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OUTCROP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_LANDFORM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -3400,12 +3400,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_REEF</Type>
+			<Type>BUILDING_FOLKLORE_PRESENCE_OF_REEF</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REEF</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_REEF</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -3428,12 +3428,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_VOLCANO</Type>
+			<Type>BUILDING_FOLKLORE_PRESENCE_OF_VOLCANO</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_VOLCANO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_VOLCANO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -3468,12 +3468,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_SEA</Type>
+			<Type>BUILDING_FOLKLORE_PRESENCE_OF_SEA</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_SEA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_SEA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -3483,12 +3483,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_EARTH</Type>
+			<Type>BUILDING_FOLKLORE_PRESENCE_OF_EARTH</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_EARTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_EARTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>
@@ -3507,12 +3507,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CREATION_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANIMAL_FOLKLORE_FIRE</Type>
+			<Type>BUILDING_FOLKLORE_PRESENCE_OF_FIRE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FIRE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_FIRE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FOLKLORE_REQUIREMENT</BuildingType>
 			</PrereqInCityBuildings>

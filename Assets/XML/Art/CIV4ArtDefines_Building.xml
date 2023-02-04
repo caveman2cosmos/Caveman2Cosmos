@@ -15024,7 +15024,7 @@
 			<Button>Art/Interface/Buttons/Buildings/falconryschool.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_FALL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CRATER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31694,7 +31694,7 @@
 			<Button>Art/Interface/Buttons/Buildings/outbackhotel.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_OUTCROP</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_LANDFORM</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

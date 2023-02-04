@@ -18,7 +18,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ANIMAL_FOLKLORE_CORAL</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_CORAL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -100,12 +100,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_FALL</Type>
+			<Type>BUILDING_FOLKLORE_CRATER</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_FALL</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_CRATER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
@@ -115,14 +115,14 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ANIMAL_FOLKLORE_FALL</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_CRATER</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<FreeBuilding>BUILDING_FOLKLORE_FALL</FreeBuilding>
+			<FreeBuilding>BUILDING_FOLKLORE_CRATER</FreeBuilding>
 			<iCost>20</iCost>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_FALL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_CRATER</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -209,7 +209,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ANIMAL_FOLKLORE_FIRE</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_FIRE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -310,7 +310,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ANIMAL_FOLKLORE_METAL</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_METAL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -405,7 +405,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ANIMAL_FOLKLORE_OASIS</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_OASIS</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -487,12 +487,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOLKLORE_OUTCROP</Type>
+			<Type>BUILDING_FOLKLORE_LANDFORM</Type>
 			<SpecialBuildingType>SPECIALBUILDING_FOLKLORE_EXPLORATION</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FOLKLORE_OUTCROP</Description>
+			<Description>TXT_KEY_BUILDING_FOLKLORE_LANDFORM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_LANDFORM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqInCityBuildings>
@@ -502,14 +502,14 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ANIMAL_FOLKLORE_OUTCROP</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_LANDFORM</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
-			<FreeBuilding>BUILDING_FOLKLORE_OUTCROP</FreeBuilding>
+			<FreeBuilding>BUILDING_FOLKLORE_LANDFORM</FreeBuilding>
 			<iCost>20</iCost>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_OUTCROP</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_LANDFORM</ArtDefineTag>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<CommerceChanges>
@@ -599,7 +599,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ANIMAL_FOLKLORE_REEF</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_REEF</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -784,7 +784,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ANIMAL_FOLKLORE_VOLCANO</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_VOLCANO</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -969,7 +969,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ANIMAL_FOLKLORE_EARTH</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_EARTH</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -1243,7 +1243,7 @@
 			</PrereqInCityBuildings>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ANIMAL_FOLKLORE_SEA</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_PRESENCE_OF_SEA</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>

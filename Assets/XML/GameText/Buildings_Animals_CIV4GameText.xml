@@ -14,7 +14,7 @@
 		<French>Le centre de gestion des troupeaux permet la migration de troupeau pour s'établir dans d'autres villes. Certaines unités peuvent être améliorés en unités combattantes.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_CORAL</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_CORAL</Tag>
 		<English>Autobuild - Presence of Coral</English>
 		<German>
 			<Text>Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen:Präsenz von Korallen</Text>
@@ -24,7 +24,7 @@
 		<Italian>Presenza di corallo</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_EARTH</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_EARTH</Tag>
 		<English>Autobuild - Presence of Earth</English>
 		<German>
 			<Text>Präsenz der Erde:Präsenz der Erde:Präsenz der Erde:Präsenz der Erde</Text>
@@ -34,7 +34,7 @@
 		<Italian>Presenza della Terra</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FALL</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_CRATER</Tag>
 		<English>Autobuild - Presence of Crater</English>
 		<German>
 			<Text>Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern:Präsenz von Kratern</Text>
@@ -44,7 +44,7 @@
 		<Italian>Presenza di un cratere</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_FIRE</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_FIRE</Tag>
 		<English>Autobuild - Presence of Fire</English>
 		<German>
 			<Text>Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers:Präsenz des Feuers</Text>
@@ -54,7 +54,7 @@
 		<Italian>Presenza del Fuoco</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_METAL</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_METAL</Tag>
 		<English>Autobuild - Presence of Metal</English>
 		<German>
 			<Text>Präsenz von Metall:Präsenz von Metall:Präsenz von Metall:Präsenz von Metall</Text>
@@ -64,7 +64,7 @@
 		<Italian>Presenza di metallo</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OASIS</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_OASIS</Tag>
 		<English>Autobuild - Presence of Oasis</English>
 		<German>
 			<Text>Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen:Präsenz von Oasen</Text>
@@ -74,13 +74,13 @@
 		<Italian>Presenza di un'oasi</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_ORIGIN_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_ORIGIN_PEDIA</Tag>
 		<English>[COLOR_BUILDING_TEXT]Folklore Presence autobuildings[COLOR_REVERT] require some points of interest on map. Its purpose is having folklore related to features to be able to spread to all cities.</English>
 		<German>Es gibt verschiedene Präsenz-Effekte, die durch spezielle Geländemerkmale in der Umgebung deiner Städte automatisch aktiviert werden. Sie sind der Ursprung einer Reihe von Mythen, Sagen und Legenden, die im Spiel durch Folkloreeffekte repräsentiert werden.</German>
 		<Italian>Gli [COLOR_BUILDING_TEXT]pseudoedifici folklore[COLOR_REVERT] si attivano automaticamente in base alle caratteristiche del terreno intorno alle tue città. Sono l'origine di una serie di miti, saghe e leggende, che poi si diffondono in tutte le città.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_OUTCROP</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_LANDFORM</Tag>
 		<English>Autobuild - Presence of Landform</English>
 		<German>
 			<Text>Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen:Präsenz von Felsformationen</Text>
@@ -90,7 +90,7 @@
 		<Italian>Presenza di un rilievo</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_REEF</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_REEF</Tag>
 		<English>Autobuild - Presence of Reef</English>
 		<German>
 			<Text>Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen:Präsenz von Riffen</Text>
@@ -116,7 +116,7 @@
 		<Italian>Gli [COLOR_BUILDING_TEXT]pseudoedifici folklore[COLOR_REVERT] richiedono la lingua parlata come prerequisito per il Folklore.[NEWLINE]Ci sono oltre 200 pseudoedifici che possono essere costruiti, scoprendo animali o luoghi. Prova a costruirli tutti!</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_SEA</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_SEA</Tag>
 		<English>Autobuild - Presence of Sea</English>
 		<German>
 			<Text>Präsenz der See:Präsenz der See:Präsenz der See:Präsenz der See</Text>
@@ -126,7 +126,7 @@
 		<Italian>Presenza di un mare</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_FOLKLORE_VOLCANO</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PRESENCE_OF_VOLCANO</Tag>
 		<English>Autobuild - Presence of Volcano</English>
 		<German>
 			<Text>Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen:Präsenz von Vulkanen</Text>
