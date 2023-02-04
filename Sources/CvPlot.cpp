@@ -2890,9 +2890,12 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 
 	const ImprovementTypes eImprovement = info.getImprovement();
 
-	// Can't build if both outside of city range and not-military improvement
-	if (!isInCultureRangeOfCityByPlayer(ePlayer) && !GC.getImprovementInfo(eImprovement).isMilitaryStructure())
+	// Build impossible if: A) outside of city culture range AND B) not a (military structure OR a route)
+	if (!isInCultureRangeOfCityByPlayer(ePlayer) &&
+		!(GC.getImprovementInfo(eImprovement).isMilitaryStructure() || ((RouteTypes)(info.getRoute()) != NO_ROUTE)))
+	{
 		return false;
+	}
 
 	if (!info.getPlaceBonusTypes().empty())
 	{
@@ -12384,7 +12387,7 @@ bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePl
 
 		if (eImprovement != NO_IMPROVEMENT && GC.getImprovementInfo(eImprovement).isMilitaryStructure())
 		{
-			setOwner(ePlayer, true, false);
+			setOwner(ePlayer, true, true);
 		}
 	}
 	return bResult;
