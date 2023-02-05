@@ -147,13 +147,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ADAM_SMITH</Type>
+			<Type>BUILDING_ADAM_SMITHS_TRADING_COMPANY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ADAM_SMITH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ADAM_SMITH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ADAM_SMITHS_TRADING_COMPANY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ADAM_SMITHS_TRADING_COMPANY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ECONOMICS</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
@@ -195,7 +195,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>100</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_ADAM_SMITH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ADAM_SMITHS_TRADING_COMPANY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ADAM_SMITH</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1424,15 +1424,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ART_OF_WAR</Type>
+			<Type>BUILDING_SUN_TZUS_ART_OF_WAR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ART_OF_WAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ART_OF_WAR_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SUN_TZUS_ART_OF_WAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SUN_TZUS_ART_OF_WAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ART_OF_WAR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SUN_TZUS_ART_OF_WAR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ART_OF_WAR</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
@@ -3074,13 +3074,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BURJ_DUBAI</Type>
+			<Type>BUILDING_BURJ_AL_ARAB</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BURJ_DUBAI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BURJ_DUBAI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_BURJ_AL_ARAB</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BURJ_AL_ARAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DUBAI</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BURJ</MovieDefineTag>
@@ -3430,7 +3430,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_VR_THEATER</BuildingType>
+					<BuildingType>BUILDING_VIRTUAL_REALITY_THEATER</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7060,13 +7060,13 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EYE_IN_SKY</Type>
+			<Type>BUILDING_EYE_IN_THE_SKY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_EYE_IN_SKY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EYE_IN_SKY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EYE_IN_THE_SKY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EYE_IN_THE_SKY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EYE_IN_SKY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EYE_IN_THE_SKY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EYE_IN_SKY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -8248,7 +8248,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_ANIMAL_LAB</BuildingType>
+					<BuildingType>BUILDING_ANIMAL_TESTING_LAB</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -8834,7 +8834,7 @@
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bPower>1</bPower>
-			<FreeAreaBuilding>BUILDING_GOOD_GORGE</FreeAreaBuilding>
+			<FreeAreaBuilding>BUILDING_POWER_GORGE</FreeAreaBuilding>
 			<iAsset>20</iAsset>
 			<Flavors>
 				<Flavor>
@@ -11816,8 +11816,8 @@
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_BULL</BuildingType>
-				<BuildingType>BUILDING_BISON_HERD</BuildingType>
-				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
+				<BuildingType>BUILDING_HERD_BISON</BuildingType>
+				<BuildingType>BUILDING_CAMP_BISON</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_HERD_COW</BuildingType>
@@ -15319,7 +15319,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_SPACE_CITY</BuildingType>
+					<BuildingType>BUILDING_STRATOSPHERIC_SPACEPORT</BuildingType>
 					<CommerceChanges>
 						<iCommerce>3</iCommerce>
 					</CommerceChanges>
@@ -15505,12 +15505,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PALACE_SOV</Type>
+			<Type>BUILDING_PALACE_OF_THE_SOVIETS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_PALACE_SOV</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PALACE_SOV_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PALACE_OF_THE_SOVIETS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PALACE_OF_THE_SOVIETS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PALACE_SOV</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PALACE_OF_THE_SOVIETS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PALACE_SOV</MovieDefineTag>
 			<PrereqTech>TECH_COMMUNISM</PrereqTech>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
@@ -18213,15 +18213,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SING_FLYER</Type>
+			<Type>BUILDING_SINGAPORE_FLYER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SING_FLYER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SING_FLYER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SINGAPORE_FLYER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SINGAPORE_FLYER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SING_FLYER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SINGAPORE_FLYER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SING_FLYER</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -22055,13 +22055,13 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_XSEED_4000</Type>
+			<Type>BUILDING_X_SEED_4000</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_XSEED_4000</Description>
-			<Civilopedia>TXT_KEY_BUILDING_XSEED_4000_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_X_SEED_4000</Description>
+			<Civilopedia>TXT_KEY_BUILDING_X_SEED_4000_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_XSEED_4000</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_X_SEED_4000</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_XSEED_4000</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>

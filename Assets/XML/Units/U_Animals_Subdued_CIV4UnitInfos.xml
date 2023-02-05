@@ -1716,8 +1716,8 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
-				<BuildingType>BUILDING_BISON_HERD</BuildingType>
+				<BuildingType>BUILDING_CAMP_BISON</BuildingType>
+				<BuildingType>BUILDING_HERD_BISON</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BISON</BuildingType>
@@ -2888,7 +2888,7 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_CAMEL_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_CAMEL</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CAMEL</BuildingType>
@@ -5000,7 +5000,7 @@
 				<BuildingType>BUILDING_SLED_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_WAR_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_GUARD_DOG_TRAINER</BuildingType>
-				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
+				<BuildingType>BUILDING_DOG_KENNELS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
@@ -5063,7 +5063,7 @@
 				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
-				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
+				<BuildingType>BUILDING_DOG_KENNELS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
@@ -5124,7 +5124,7 @@
 				<BuildingType>BUILDING_SLED_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_WAR_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_GUARD_DOG_TRAINER</BuildingType>
-				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
+				<BuildingType>BUILDING_DOG_KENNELS</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_WOLF</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
@@ -6458,7 +6458,7 @@
 				<BuildingType>BUILDING_SLED_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_WAR_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_GUARD_DOG_TRAINER</BuildingType>
-				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
+				<BuildingType>BUILDING_DOG_KENNELS</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_WOLF</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
@@ -9292,7 +9292,7 @@
 				<BuildingType>BUILDING_FOLKLORE_HIPPOS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
-				<BuildingType>BUILDING_HIPPO_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_HIPPO</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -9875,7 +9875,7 @@
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_HIPPO_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_HIPPO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PYGMYHIPPO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HIPPOS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -10115,7 +10115,7 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_HORSE_BREEDER</BuildingType>
-				<BuildingType>BUILDING_HORSE_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_HORSE</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -11880,7 +11880,7 @@
 				<BuildingType>BUILDING_FOLKLORE_LLAMA</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
-				<BuildingType>BUILDING_LLAMA_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_LLAMA</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -12773,7 +12773,7 @@
 				<BuildingType>BUILDING_SLED_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_WAR_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_GUARD_DOG_TRAINER</BuildingType>
-				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
+				<BuildingType>BUILDING_DOG_KENNELS</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_WOLF</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
@@ -13686,7 +13686,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MOOSE</BuildingType>
 				<BuildingType>BUILDING_CAMP_DEER</BuildingType>
-				<BuildingType>BUILDING_MOOSE_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_MOOSE</BuildingType>
 				<BuildingType>BUILDING_REINDEER_FARM</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -13921,7 +13921,7 @@
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_HERD_GOAT</BuildingType>
-				<BuildingType>BUILDING_SHEEP_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_SHEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GOAT</BuildingType>
 				<BuildingType>BUILDING_MOUFLON_CAMP</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -17314,7 +17314,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
-				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
+				<BuildingType>BUILDING_DOG_KENNELS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
@@ -17322,7 +17322,7 @@
 				<BuildingType>BUILDING_GUARD_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_HERDING_DOGS</BuildingType>
 				<BuildingType>BUILDING_HUNTING_DOGS</BuildingType>
-				<BuildingType>BUILDING_POLICE_DOG</BuildingType>
+				<BuildingType>BUILDING_POLICE_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_SLED_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_WAR_DOG_TRAINER</BuildingType>
@@ -17806,7 +17806,7 @@
 				<BuildingType>BUILDING_FOLKLORE_ELASMOTHERIUM</BuildingType>
 				<BuildingType>BUILDING_ELASMOTHERIUM_REMAINS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_UNICORN</BuildingType>
-				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_RHINO</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
@@ -17869,7 +17869,7 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_RHINO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -17932,7 +17932,7 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_RHINO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -17995,7 +17995,7 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_RHINO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -18058,7 +18058,7 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_RHINO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -19688,7 +19688,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SEA_OTTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WEASEL</BuildingType>
 				<BuildingType>BUILDING_BAD_BOY_CAGE</BuildingType>
-				<BuildingType>BUILDING_OTTER_CAMP</BuildingType>
+				<BuildingType>BUILDING_TRAP_SEA_OTTER</BuildingType>
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -25332,7 +25332,7 @@
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ZEBRA</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>

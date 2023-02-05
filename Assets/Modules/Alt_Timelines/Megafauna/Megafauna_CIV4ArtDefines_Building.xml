@@ -46,7 +46,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/Big_Cat_Trainer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_POLICE_CAT</Type>
+			<Type>ART_DEF_BUILDING_POLICE_CAT_TRAINER</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -188,7 +188,7 @@
 			<Button>Art/Interface/Buttons/Buildings/RhinoTrainer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ZEBRA_HERD</Type>
+			<Type>ART_DEF_BUILDING_HERD_ZEBRA</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.70</fScale>

@@ -2964,7 +2964,7 @@
 			</TechTypes>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_POLICE_CAT</BuildingType>
+				<BuildingType>BUILDING_POLICE_CAT_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>

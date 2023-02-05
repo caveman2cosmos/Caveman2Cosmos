@@ -25574,7 +25574,7 @@
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<BonusType>BONUS_DOG</BonusType>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_POLICE_DOG</BuildingType>
+				<BuildingType>BUILDING_POLICE_DOG_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_CANIS_SUPERIOR</UnitType>
@@ -37350,7 +37350,7 @@
 			</GreatPeoples>
 			<Buildings>
 				<BuildingType>BUILDING_TRADITION_WORK_ETHIC</BuildingType>
-				<BuildingType>BUILDING_IRON_WORKS</BuildingType>
+				<BuildingType>BUILDING_IRONWORKS</BuildingType>
 				<BuildingType>BUILDING_PONT_DU_GARD_AQUEDUCT</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_4_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_5_HQ</BuildingType>
@@ -40717,7 +40717,7 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_HERBALISM</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_WILD_HERBS</BuildingType>
+				<BuildingType>BUILDING_WILD_HERBS_GATHERER</BuildingType>
 				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
@@ -45460,7 +45460,7 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_WV_SLAVERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_SLAVERY</BuildingType>
 				<BuildingType>BUILDING_SLAVE_MARKET</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</BuildingType>
@@ -46286,7 +46286,7 @@
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<Buildings>
-				<BuildingType>BUILDING_WV_SLAVERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_SLAVERY</BuildingType>
 				<BuildingType>BUILDING_SLAVE_MARKET</BuildingType>
 				<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
 				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>

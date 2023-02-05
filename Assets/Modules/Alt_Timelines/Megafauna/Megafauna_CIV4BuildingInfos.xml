@@ -474,9 +474,9 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_BULL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BISON</BuildingType>
-				<BuildingType>BUILDING_BISON_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_BISON</BuildingType>
 				<BuildingType>BUILDING_MUSKOX_CAMP</BuildingType>
-				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_BISON</BuildingType>
 				<BuildingType>BUILDING_ICEAGEBISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_MUSKOX</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
@@ -926,12 +926,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLICE_CAT</Type>
+			<Type>BUILDING_POLICE_CAT_TRAINER</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_POLICE_CAT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_POLICE_CAT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_POLICE_CAT_TRAINER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_POLICE_CAT_TRAINER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_POLICE_CAT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_POLICE_CAT_TRAINER</ArtDefineTag>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -994,7 +994,7 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_RHINO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RHINO_TAXONOMY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BLACK_RHINO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_INDIAN_RHINO</BuildingType>
@@ -1060,17 +1060,17 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZEBRA_HERD</Type>
+			<Type>BUILDING_HERD_ZEBRA</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_ZEBRA_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_ZEBRA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_ZEBRA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_ZEBRA</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1117,8 +1117,8 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ZEBRA_HERD</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_CAMP</BuildingType>
+				<BuildingType>BUILDING_HERD_ZEBRA</BuildingType>
+				<BuildingType>BUILDING_CAMP_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_ZEBRA</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>

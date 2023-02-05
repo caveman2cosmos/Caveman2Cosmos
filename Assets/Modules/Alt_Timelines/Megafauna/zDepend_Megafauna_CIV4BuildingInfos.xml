@@ -47,7 +47,7 @@
 			<Type>BUILDING_CARCASS_PROVIDER</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_ZEBRA</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>

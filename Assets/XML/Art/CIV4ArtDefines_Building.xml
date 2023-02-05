@@ -132,7 +132,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/AbuSimbel.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AB_FOUNDRY</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_AB_FOUNDRY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -312,7 +312,7 @@
 			<Button>art/Health/art/acupuncturistsshop.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ADAM_SMITH</Type>
+			<Type>ART_DEF_BUILDING_ADAM_SMITHS_TRADING_COMPANY</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1</fScale>
@@ -962,7 +962,7 @@
 			<Button>Art/interface/buttons/buildings/aleph_assembler.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ALGAE_FARM</Type>
+			<Type>ART_DEF_BUILDING_FARM_CROP_ALGAE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1612,7 +1612,7 @@
 			<Button>art/Housing/Art/animalburrow.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ANIMAL_LAB</Type>
+			<Type>ART_DEF_BUILDING_ANIMAL_TESTING_LAB</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2503,7 +2503,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Art_Gallery.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ART_OF_WAR</Type>
+			<Type>ART_DEF_BUILDING_SUN_TZUS_ART_OF_WAR</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1</fScale>
@@ -4573,7 +4573,7 @@
 			<Button>Art/Interface/Buttons/Buildings/bionicsfactory.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BIONIC_EYE</Type>
+			<Type>ART_DEF_BUILDING_BIONIC_EYE_IMPLANT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -4703,7 +4703,7 @@
 			<Button>Art/interface/buttons/buildings/bishop_ring_regular.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BISON_CAMP</Type>
+			<Type>ART_DEF_BUILDING_CAMP_BISON</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -4713,7 +4713,7 @@
 			<Button>art/Hunting/art/bisoncamp.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BISON_HERD</Type>
+			<Type>ART_DEF_BUILDING_HERD_BISON</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.70</fScale>
@@ -5223,7 +5223,7 @@
 			<Button>art/Craft/Art/bookstore.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BORAX_MINE</Type>
+			<Type>ART_DEF_BUILDING_MINE_BORAX</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6463,7 +6463,7 @@
 			<Button>Art/Embassy/cambebaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CAMEL_FARM</Type>
+			<Type>ART_DEF_BUILDING_FARM_ANIMAL_CAMEL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6473,7 +6473,7 @@
 			<Button>art/Pets/Art/camelfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CAMEL_HERD</Type>
+			<Type>ART_DEF_BUILDING_HERD_CAMEL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7063,7 +7063,7 @@
 			<Button>art/Science/art/cartographersshop.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CAR_RENTAL</Type>
+			<Type>ART_DEF_BUILDING_CAR_RENTAL_STORE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7933,7 +7933,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Chilehaus_button.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CHILI_FARM</Type>
+			<Type>ART_DEF_BUILDING_FARM_CROP_CHILI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -8643,7 +8643,7 @@
 			<Button>art/Water/art/Cistern.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CITIZEN_EM</Type>
+			<Type>ART_DEF_BUILDING_EM_CITIZENS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -9303,7 +9303,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/coittower.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_COLA_GROVE</Type>
+			<Type>ART_DEF_BUILDING_GROVE_COLA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -10733,7 +10733,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Fish_pens.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CRAB_TRAPS</Type>
+			<Type>ART_DEF_BUILDING_NET_CRAB</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11373,7 +11373,7 @@
 			<Button>art/Craft/art/dairybarn.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DAISY_FARM</Type>
+			<Type>ART_DEF_BUILDING_FARM_FLOWER_DAISY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11553,7 +11553,7 @@
 			<Button>Art/interface/buttons/buildings/dark_matter_scoop.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DARK_WORLD</Type>
+			<Type>ART_DEF_BUILDING_DISTANT_DARK_WORLD</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12734,7 +12734,7 @@
 			<Button>Art/Interface/Buttons/Buildings/dreamvisualizer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRIED_FISH</Type>
+			<Type>ART_DEF_BUILDING_DRIED_FISH_MAKER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12754,7 +12754,7 @@
 			<Button>art/Craft/Art/driedfruit.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRIED_MEAT</Type>
+			<Type>ART_DEF_BUILDING_DRIED_MEAT_MAKER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -14234,7 +14234,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/ellis.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ELLIS_MOON</Type>
+			<Type>ART_DEF_BUILDING_PLANETARY_IMMIGRATION_OFFICE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -14924,7 +14924,7 @@
 			<Button>Art/interface/buttons/buildings/extreme_force_concentrator.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EYE_IN_SKY</Type>
+			<Type>ART_DEF_BUILDING_EYE_IN_THE_SKY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -15884,7 +15884,7 @@
 			<Button>Art/interface/buttons/buildings/flying_car_port.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FLY_AGARIC</Type>
+			<Type>ART_DEF_BUILDING_FLY_AGARIC_GATHERER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16264,7 +16264,7 @@
 			<Button>art/Embassy/art/franksembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FRAT_HOUSE</Type>
+			<Type>ART_DEF_BUILDING_HOUSING_FRATERNITY_HOUSE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17414,7 +17414,7 @@
 			<Button>Art/interface/buttons/buildings/geodesic_dome.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GEODE_MINE</Type>
+			<Type>ART_DEF_BUILDING_MINE_GEODE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17754,7 +17754,7 @@
 			<Button>Art/interface/buttons/buildings/gn_drive.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOARD_FARM</Type>
+			<Type>ART_DEF_BUILDING_FARM_CROP_CALABASH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17964,7 +17964,7 @@
 			<Button>Art/Interface/Buttons/Buildings/safety.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOOD_GORGE</Type>
+			<Type>ART_DEF_BUILDING_POWER_GORGE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17974,7 +17974,7 @@
 			<Button>Art/Interface/Buttons/Buildings/power.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOOD_NEIGHBORHOOD_WATCH</Type>
+			<Type>ART_DEF_BUILDING_SAFETY_NEIGHBORHOOD_WATCH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18014,7 +18014,7 @@
 			<Button>art/Crops/Art/gooseberryfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOOSE_FARM</Type>
+			<Type>ART_DEF_BUILDING_FARM_ANIMAL_GOOSE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18254,7 +18254,7 @@
 			<Button>Art/interface/buttons/buildings/gravity_wave_detector.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GRAV_TRAPS</Type>
+			<Type>ART_DEF_BUILDING_GRAVITY_TRAPS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19784,7 +19784,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Colosseum.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,5,7</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HIPPO_CAMP</Type>
+			<Type>ART_DEF_BUILDING_CAMP_HIPPO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -20084,7 +20084,7 @@
 			<Button>Art/Interface/Buttons/Units/sparth/beastmaster.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HORSE_FARM</Type>
+			<Type>ART_DEF_BUILDING_FARM_ANIMAL_HORSE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -20094,7 +20094,7 @@
 			<Button>art/Pets/Art/horsefarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HORSE_HERD</Type>
+			<Type>ART_DEF_BUILDING_HERD_HORSE</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.70</fScale>
@@ -22474,7 +22474,7 @@
 			<Button>Art/Interface/Buttons/Buildings/ironreclamationplant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_IRON_WORKS</Type>
+			<Type>ART_DEF_BUILDING_IRONWORKS</Type>
 			<LSystem>LSYSTEM_4x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.93</fScale>
@@ -23204,7 +23204,7 @@
 			<Button>Art/interface/buttons/buildings/kepler_186f.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KEPLER_22B</Type>
+			<Type>ART_DEF_BUILDING_KEPLER_22B_COLONY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -24464,7 +24464,7 @@
 			<Button>Art/Interface/Buttons/Buildings/reptilecatcher.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LLAMA_FARM</Type>
+			<Type>ART_DEF_BUILDING_FARM_ANIMAL_LLAMA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -24474,7 +24474,7 @@
 			<Button>art/Pets/Art/llamafarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LLAMA_HERD</Type>
+			<Type>ART_DEF_BUILDING_HERD_LLAMA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -24804,7 +24804,7 @@
 			<Button>art\placeholder.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LUNAR_BASE</Type>
+			<Type>ART_DEF_BUILDING_SPACE_COLONY_LUNAR_BASE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -26054,7 +26054,7 @@
 			<Button>Art/interface/buttons/buildings/mars_megacity.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MARS_METRO</Type>
+			<Type>ART_DEF_BUILDING_MARTIAN_METROPOLIS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -26114,7 +26114,7 @@
 			<Button>Art/interface/buttons/buildings/mars_sea.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MARS_TERRA</Type>
+			<Type>ART_DEF_BUILDING_TERRAFORMED_MARS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -26134,7 +26134,7 @@
 			<Button>Art/interface/buttons/buildings/mars_terra_effect.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MARS_TRADE</Type>
+			<Type>ART_DEF_BUILDING_MARTIAN_TRADING_POST</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27514,7 +27514,7 @@
 			<Button>Art/interface/buttons/buildings/metallic_hydrogen.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_METAL_FOAM</Type>
+			<Type>ART_DEF_BUILDING_METAL_FOAM_FOUNDRY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28064,7 +28064,7 @@
 			<Button>Art/interface/buttons/buildings/mini_neptune.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MINK_TRAPS</Type>
+			<Type>ART_DEF_BUILDING_TRAP_MINK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28454,7 +28454,7 @@
 			<Button>,Art/Interface/Buttons/Civilizations/Mongolia.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,5,6</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MONGOL_GER</Type>
+			<Type>ART_DEF_BUILDING_GER</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.88</fScale>
@@ -28564,7 +28564,7 @@
 			<Button>Art/interface/buttons/buildings/moon_rock_lab.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MOON_TERRA</Type>
+			<Type>ART_DEF_BUILDING_TERRAFORMED_LUNA</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28584,7 +28584,7 @@
 			<Button>Art/interface/buttons/buildings/moon_terra_effect.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MOOSE_CAMP</Type>
+			<Type>ART_DEF_BUILDING_CAMP_MOOSE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -29044,7 +29044,7 @@
 			<Button>art/Crops/art/myrhplantation.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MYSTIC_HUT</Type>
+			<Type>ART_DEF_BUILDING_MYSTICS_HUT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -29234,7 +29234,7 @@
 			<Button>Art/Interface/Buttons/Buildings/nanoresearchdepartment.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NANO_TRAPS</Type>
+			<Type>ART_DEF_BUILDING_NANOBOT_TRAPS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31124,7 +31124,7 @@
 			<Button>Art/interface/buttons/buildings/one_belt_one_road.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ONION_FARM</Type>
+			<Type>ART_DEF_BUILDING_FARM_CROP_ONION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31454,7 +31454,7 @@
 			<Button>art/buttons/buildings/OrbitalTargetsBuilding.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ORBITAL_VR</Type>
+			<Type>ART_DEF_BUILDING_DEEP_SPACE_SIMULATED_WORLD</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31654,7 +31654,7 @@
 			<Button>Art/interface/buttons/buildings/ostrich.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_OTTER_CAMP</Type>
+			<Type>ART_DEF_BUILDING_TRAP_SEA_OTTER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31854,7 +31854,7 @@
 			<Button>art/Palace/art/palacegarden.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PALACE_SOV</Type>
+			<Type>ART_DEF_BUILDING_PALACE_OF_THE_SOVIETS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31984,7 +31984,7 @@
 			<Button>art/Craft/Art/pancakehouse.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PANSY_FARM</Type>
+			<Type>ART_DEF_BUILDING_FARM_FLOWER_PANSY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32724,7 +32724,7 @@
 			<Button>art/Pests/art/pestcockroaches.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PEST_CROWS</Type>
+			<Type>ART_DEF_BUILDING_PESTS_CROWS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32734,7 +32734,7 @@
 			<Button>art/Pests/art/pestcrows.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PEST_FLEAS</Type>
+			<Type>ART_DEF_BUILDING_PESTS_FLEAS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32744,7 +32744,7 @@
 			<Button>art/Pests/art/pestfleas.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PEST_FLIES</Type>
+			<Type>ART_DEF_BUILDING_PESTS_FLIES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32794,7 +32794,7 @@
 			<Button>art/Pests/art/pestmosquitoes.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PEST_MOTHS</Type>
+			<Type>ART_DEF_BUILDING_PESTS_MOTHS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32844,7 +32844,7 @@
 			<Button>art/Pests/art/pestseagulls.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PEST_SLUGS</Type>
+			<Type>ART_DEF_BUILDING_PESTS_SLUGS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32864,7 +32864,7 @@
 			<Button>art/Pests/art/pesttermites.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PEST_TICKS</Type>
+			<Type>ART_DEF_BUILDING_PESTS_TICKS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -32874,7 +32874,7 @@
 			<Button>art/Pests/art/pestticks.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PEST_WASPS</Type>
+			<Type>ART_DEF_BUILDING_PESTS_WASPS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33584,7 +33584,7 @@
 			<Button>art/Crops/art/plumorchard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PLUTO_BASE</Type>
+			<Type>ART_DEF_BUILDING_PLUTO_RESEARCH_BASE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33704,7 +33704,7 @@
 			<Button>art/Law/Art/policebox.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_POLICE_DOG</Type>
+			<Type>ART_DEF_BUILDING_POLICE_DOG_TRAINER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -34065,7 +34065,7 @@
 			<Button>Art/Embassy/poyaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PRAWN_NETS</Type>
+			<Type>ART_DEF_BUILDING_NET_PRAWN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -35745,7 +35745,7 @@
 			<Button>Art/interface/buttons/buildings/rhea_military_base.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_RHINO_CAMP</Type>
+			<Type>ART_DEF_BUILDING_CAMP_RHINO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -37835,7 +37835,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_shark.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SHARK_NETS</Type>
+			<Type>ART_DEF_BUILDING_NET_SHARK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -37855,7 +37855,7 @@
 			<Button>art/Craft/art/shearingbarn.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SHEEP_FARM</Type>
+			<Type>ART_DEF_BUILDING_FARM_ANIMAL_SHEEP</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -37865,7 +37865,7 @@
 			<Button>art/Pets/Art/sheepfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SHEEP_HERD</Type>
+			<Type>ART_DEF_BUILDING_HERD_SHEEP</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -38405,7 +38405,7 @@
 			<Button>Art/Interface/Buttons/Buildings/singularitybrainlab.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SING_FLYER</Type>
+			<Type>ART_DEF_BUILDING_SINGAPORE_FLYER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -39595,7 +39595,7 @@
 			<Button>art/Sports/Buttons/Interstellar_Race.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SPACE_CITY</Type>
+			<Type>ART_DEF_BUILDING_STRATOSPHERIC_SPACEPORT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -39615,7 +39615,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/space_elevator.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SPACE_JUNK</Type>
+			<Type>ART_DEF_BUILDING_CISLUNAR_SPACE_JUNK_REMOVAL</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -39955,7 +39955,7 @@
 			<Button>art/Crops/art/squashfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SQUID_NETS</Type>
+			<Type>ART_DEF_BUILDING_NET_SQUID</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -41525,7 +41525,7 @@
 			<Button>Art/Embassy/tatarsembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TATTOO_HUT</Type>
+			<Type>ART_DEF_BUILDING_TATTOOER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42075,7 +42075,7 @@
 			<Button>Art/interface/buttons/buildings/tesseract_pathways.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TEST_PILOT</Type>
+			<Type>ART_DEF_BUILDING_TEST_PILOT_INSTITUTE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42365,7 +42365,7 @@
 			<Button>Art/interface/buttons/buildings/timeline_switching_station.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TIME_ABYSS</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_TIME_ABYSS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42565,7 +42565,7 @@
 			<Button>Art/interface/buttons/buildings/titan_arcology.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TITAN_BASE</Type>
+			<Type>ART_DEF_BUILDING_SPACE_COLONY_TITAN_BASE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42795,7 +42795,7 @@
 			<Button>art/Embassy/art/tonganembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TOPAZ_MINE</Type>
+			<Type>ART_DEF_BUILDING_MINE_TOPAZ</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43715,7 +43715,7 @@
 			<Button>Art/Embassy/tucanoembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TULIP_FARM</Type>
+			<Type>ART_DEF_BUILDING_FARM_FLOWER_TULIP</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43865,7 +43865,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/national_tv_station.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TV_FACTORY</Type>
+			<Type>ART_DEF_BUILDING_FACTORY_TELEVISIONS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -44365,7 +44365,7 @@
 			<Button>Art/interface/buttons/buildings/urban_high_speed_rail.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_URBAN_MARS</Type>
+			<Type>ART_DEF_BUILDING_MARTIAN_ECUMENOPOLIS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -44375,7 +44375,7 @@
 			<Button>Art/interface/buttons/buildings/urban_mars.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_URBAN_MOON</Type>
+			<Type>ART_DEF_BUILDING_LUNAR_ECUMENOPOLIS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -44985,7 +44985,7 @@
 			<Button>Art/interface/buttons/buildings/vibranium.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VIBRO_WIND</Type>
+			<Type>ART_DEF_BUILDING_VIBRO_WIND_GENERATORS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45325,7 +45325,7 @@
 			<Button>Art/interface/buttons/buildings/voyager_program.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VR_THEATER</Type>
+			<Type>ART_DEF_BUILDING_VIRTUAL_REALITY_THEATER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45815,7 +45815,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/westminster.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WEST_POINT</Type>
+			<Type>ART_DEF_BUILDING_MA_WEST_POINT</Type>
 			<LSystem>LSYSTEM_2x4</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.75</fScale>
@@ -45855,7 +45855,7 @@
 			<Button>art/Pets/Art/whaleshrine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WHEAT_FARM</Type>
+			<Type>ART_DEF_BUILDING_FARM_CROP_WHEAT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45885,7 +45885,7 @@
 			<Button>Art/interface/buttons/buildings/white_dwarf_colony.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WHITE_HOLE</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_WHITE_HOLE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -45945,7 +45945,7 @@
 			<Button>Art/Interface/Buttons/Buildings/wildwesthotel.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WILD_HERBS</Type>
+			<Type>ART_DEF_BUILDING_WILD_HERBS_GATHERER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46115,7 +46115,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/wnn.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WOLF_1061C</Type>
+			<Type>ART_DEF_BUILDING_WOLF_1061C_COLONY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46325,7 +46325,7 @@
 			<Button>Art/Interface/Buttons/Buildings/WorldViewHumanSacrifice.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WV_SLAVERY</Type>
+			<Type>ART_DEF_BUILDING_WORLDVIEW_SLAVERY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46385,7 +46385,7 @@
 			<Button>art/Embassy/art/xiongnuembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_XSEED_4000</Type>
+			<Type>ART_DEF_BUILDING_X_SEED_4000</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46585,7 +46585,7 @@
 			<Button>art/Embassy/art/zapotecembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ZEBRA_CAMP</Type>
+			<Type>ART_DEF_BUILDING_CAMP_ZEBRA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

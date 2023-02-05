@@ -46,7 +46,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_SLAVERY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TATTOO_HUT</Type>
+			<Type>BUILDING_TATTOOER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_MILITARY_TRADITION</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>

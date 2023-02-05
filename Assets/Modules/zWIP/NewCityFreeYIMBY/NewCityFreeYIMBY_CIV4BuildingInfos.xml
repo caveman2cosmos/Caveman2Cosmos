@@ -154,7 +154,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_CONSUMERISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MONGOL_GER</Type>
+			<Type>BUILDING_GER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_STIRRUP</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>

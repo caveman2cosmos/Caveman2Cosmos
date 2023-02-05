@@ -339,14 +339,14 @@
 		<English>A fictional military ceremony.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_POLICE_CAT</Tag>
+		<Tag>TXT_KEY_BUILDING_POLICE_CAT_TRAINER</Tag>
 		<English>Police Cat Trainer</English>
 		<French>Entraineur de Félins Limiers</French>
 		<Polish>Treser Kotów Policyjnych</Polish>
 		<Russian>Ïîëèãîí äëÿ êîøåê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_POLICE_CAT_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_POLICE_CAT_TRAINER_PEDIA</Tag>
 		<English>A F9 unit - cat version of police dog</English>
 	</TEXT>
 	<TEXT>
@@ -389,7 +389,7 @@
 		<Italian>Non ci sono prove che i rinoceronti siano mai stati addestrati per la guerra. L'[COLOR_BUILDING_TEXT]Allevatore di rinoceronti[COLOR_REVERT] fa parte delle [COLOR_HIGHLIGHT_TEXT]alternate timeline technologies[COLOR_REVERT]. Tecnologie che potrebbero essere esistite.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ZEBRA_HERD</Tag>
+		<Tag>TXT_KEY_BUILDING_HERD_ZEBRA</Tag>
 		<English>Herd (Zebra)</English>
 		<French>
 			<Text>Troupeau - Zèbres</Text>

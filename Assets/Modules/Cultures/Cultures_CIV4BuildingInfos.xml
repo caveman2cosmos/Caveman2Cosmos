@@ -519,7 +519,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_WEST_POINT</BuildingType>
+					<BuildingType>BUILDING_MA_WEST_POINT</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -890,7 +890,7 @@
 			</ExtraFreeBonuses>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_BURJ_DUBAI</BuildingType>
+					<BuildingType>BUILDING_BURJ_AL_ARAB</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -2853,7 +2853,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ADAM_SMITH</BuildingType>
+					<BuildingType>BUILDING_ADAM_SMITHS_TRADING_COMPANY</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -3283,7 +3283,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ART_OF_WAR</BuildingType>
+					<BuildingType>BUILDING_SUN_TZUS_ART_OF_WAR</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -11643,7 +11643,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_PALACE_SOV</BuildingType>
+					<BuildingType>BUILDING_PALACE_OF_THE_SOVIETS</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

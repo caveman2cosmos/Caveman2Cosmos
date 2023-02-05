@@ -3410,16 +3410,16 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WEST_POINT</Type>
+			<Type>BUILDING_MA_WEST_POINT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_WEST_POINT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WEST_POINT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MA_WEST_POINT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MA_WEST_POINT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_MILITARY_ACADEMIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_WEST_POINT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MA_WEST_POINT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WEST_POINT</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_WESTPOINT</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>

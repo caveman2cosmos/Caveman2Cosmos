@@ -19,7 +19,7 @@ def doRemoveWVSlavery(argsList):
 	if not player.isAlive():
 		return
 
-	iWVSlavery = GC.getInfoTypeForString("BUILDING_WV_SLAVERY")
+	iWVSlavery = GC.getInfoTypeForString("BUILDING_WORLDVIEW_SLAVERY")
 
 	if iWVSlavery > -1:
 

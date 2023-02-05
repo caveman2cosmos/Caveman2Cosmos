@@ -449,7 +449,7 @@
 			<iMinPopulation>4</iMinPopulation>
 			<iAngry>5</iAngry>
 			<BuildingsRequired>
-				<Building>BUILDING_WV_SLAVERY</Building>
+				<Building>BUILDING_WORLDVIEW_SLAVERY</Building>
 			<BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>

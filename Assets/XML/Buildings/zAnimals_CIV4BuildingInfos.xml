@@ -431,12 +431,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_BIRD</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BISON_HERD</Type>
+			<Type>BUILDING_HERD_BISON</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BISON_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BISON_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_BISON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_BISON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
@@ -457,7 +457,7 @@
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_BISON_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_BISON</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARNIVAL_BOXING_KANGAROO</Type>
@@ -551,12 +551,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BUFFALO_TRAINER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CAMEL_HERD</Type>
+			<Type>BUILDING_HERD_CAMEL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CAMEL_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CAMEL_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_CAMEL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_CAMEL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_CAMEL_COBBLESTONES</ConstructSound>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
@@ -578,7 +578,7 @@
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_CAMEL_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_CAMEL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARNIVAL</Type>
@@ -1017,7 +1017,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HERD_DEER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DOG_KENNEL</Type>
+			<Type>BUILDING_DOG_KENNELS</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -1026,8 +1026,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DOG_KENNEL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DOG_KENNEL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DOG_KENNELS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DOG_KENNELS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
@@ -1658,11 +1658,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HAWKING_HUT_HUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HORSE_HERD</Type>
-			<Description>TXT_KEY_BUILDING_HORSE_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HORSE_HERD_PEDIA</Civilopedia>
+			<Type>BUILDING_HERD_HORSE</Type>
+			<Description>TXT_KEY_BUILDING_HERD_HORSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_HORSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HORSE_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_HORSE</ArtDefineTag>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -1688,12 +1688,12 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LLAMA_HERD</Type>
+			<Type>BUILDING_HERD_LLAMA</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_LLAMA_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LLAMA_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_LLAMA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_LLAMA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
@@ -1714,7 +1714,7 @@
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_LLAMA_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_LLAMA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MARINE_INSTITUTE</Type>
@@ -2749,12 +2749,12 @@
 			</UnitCombatFreeExperiences>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SHEEP_HERD</Type>
+			<Type>BUILDING_HERD_SHEEP</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SHEEP_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SHEEP_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_SHEEP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_SHEEP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
@@ -2776,7 +2776,7 @@
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_SHEEP_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_SHEEP</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SNAKE_CHARMER</Type>

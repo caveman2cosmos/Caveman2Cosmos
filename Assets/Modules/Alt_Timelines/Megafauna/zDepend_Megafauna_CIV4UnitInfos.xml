@@ -203,7 +203,7 @@
 			<Type>UNIT_SUBDUED_ZEBRA</Type>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ZEBRA</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_ZEBRA</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>

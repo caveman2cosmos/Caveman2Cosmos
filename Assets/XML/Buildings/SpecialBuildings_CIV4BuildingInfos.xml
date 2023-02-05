@@ -5188,7 +5188,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PEST_FLEAS</BuildingType>
+				<BuildingType>BUILDING_PESTS_FLEAS</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>2</iPrereqPopulation>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
@@ -8490,12 +8490,12 @@
 			</BuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FRAT_HOUSE</Type>
+			<Type>BUILDING_HOUSING_FRATERNITY_HOUSE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FRAT_HOUSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FRAT_HOUSE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_FRATERNITY_HOUSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_FRATERNITY_HOUSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
@@ -8517,7 +8517,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_FRAT_HOUSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_FRATERNITY_HOUSE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GAMBLING_BAN</Type>
@@ -8577,12 +8577,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GOOD_FEDERAL_PRISON</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOOD_GORGE</Type>
+			<Type>BUILDING_POWER_GORGE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOOD_GORGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOOD_GORGE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_POWER_GORGE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_POWER_GORGE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_HYDROELECTRICITY</PrereqTech>
 			<iHealth>10</iHealth>
 			<iHappiness>10</iHappiness>
@@ -8593,15 +8593,15 @@
 			<bPower>1</bPower>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GOOD_GORGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_POWER_GORGE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOOD_NEIGHBORHOOD_WATCH</Type>
+			<Type>BUILDING_SAFETY_NEIGHBORHOOD_WATCH</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOOD_NEIGHBORHOOD_WATCH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOOD_NEIGHBORHOOD_WATCH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SAFETY_NEIGHBORHOOD_WATCH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SAFETY_NEIGHBORHOOD_WATCH_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<CommercePerPopChanges>
 				<iCommerce>-50</iCommerce>
@@ -8618,7 +8618,7 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GOOD_NEIGHBORHOOD_WATCH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_NEIGHBORHOOD_WATCH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOOD_POLICE_ACADEMY</Type>
@@ -11611,7 +11611,7 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>800</iCost>
-			<FreeBuilding>BUILDING_GOOD_NEIGHBORHOOD_WATCH</FreeBuilding>
+			<FreeBuilding>BUILDING_SAFETY_NEIGHBORHOOD_WATCH</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -11793,11 +11793,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PEST_COCKROACHES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_CROWS</Type>
+			<Type>BUILDING_PESTS_CROWS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_CROWS</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_CROWS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iMaxLatitude>70</iMaxLatitude>
 			<iPrereqPopulation>6</iPrereqPopulation>
@@ -11826,14 +11826,14 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_CROWS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_CROWS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_FLEAS</Type>
+			<Type>BUILDING_PESTS_FLEAS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_FLEAS</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_FLEAS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>2</iPrereqPopulation>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
@@ -11854,14 +11854,14 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_FLEAS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_FLEAS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_FLIES</Type>
+			<Type>BUILDING_PESTS_FLIES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_FLIES</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_FLIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>2</iPrereqPopulation>
 			<PrereqTech>TECH_COOKING</PrereqTech>
@@ -11887,7 +11887,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_FLIES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_FLIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEST_GOPHERS</Type>
@@ -12004,11 +12004,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PEST_MOSQUITOES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_MOTHS</Type>
+			<Type>BUILDING_PESTS_MOTHS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_MOTHS</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_MOTHS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqTech>TECH_TEXTILE_LOOM</PrereqTech>
@@ -12029,7 +12029,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_MOTHS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_MOTHS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEST_PIGEONS</Type>
@@ -12156,11 +12156,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PEST_SEAGULLS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_SLUGS</Type>
+			<Type>BUILDING_PESTS_SLUGS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_SLUGS</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_SLUGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>5</iPrereqPopulation>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
@@ -12180,7 +12180,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_SLUGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_SLUGS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEST_TERMITES</Type>
@@ -12208,11 +12208,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PEST_TERMITES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_TICKS</Type>
+			<Type>BUILDING_PESTS_TICKS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_TICKS</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_TICKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
@@ -12233,14 +12233,14 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_TICKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_TICKS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_WASPS</Type>
+			<Type>BUILDING_PESTS_WASPS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_WASPS</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_WASPS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqTech>TECH_APICULTURE</PrereqTech>
@@ -12250,7 +12250,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_WASPS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_WASPS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLITICAL_ACHIEVEMENT</Type>
@@ -13650,7 +13650,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_ACTIVE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WV_SLAVERY_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SLAVERY</PrereqTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
@@ -13828,7 +13828,7 @@
 			</TechCommerceModifiers>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_WV_SLAVERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WORLDVIEW_SLAVERY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVERY_BAD_ZORO_I</Type>
@@ -15874,7 +15874,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WV_HUMAN_SACRIFICE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WV_SLAVERY</Type>
+			<Type>BUILDING_WORLDVIEW_SLAVERY</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -15883,9 +15883,9 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_WV_SLAVERY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WV_SLAVERY_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_WV_SLAVERY_HELP</Help>
+			<Description>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
 			<PrereqTech>TECH_SLAVERY</PrereqTech>
@@ -15975,7 +15975,7 @@
 			<iAsset>3</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_WV_SLAVERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WORLDVIEW_SLAVERY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_YORUBA_SHRINE</Type>

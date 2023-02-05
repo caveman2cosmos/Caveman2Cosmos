@@ -117,7 +117,7 @@
 		<Russian>Íåâîëüíè÷èé ðûíîê óâåëè÷èâàåò ïðîèçâîäñòâî, èñïîëüçóÿ ïëåííèêîâ â êà÷åñòâå ðàáîâ, à èìåííî, óâåëè÷èâàåò êîëè÷åñòâî çîëîòà ïîëó÷àåìîãî îò ïðîäàæè ïëåííûõ â ðàáñòâî.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WV_SLAVERY</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY</Tag>
 		<English>Worldview - Slavery</English>
 		<French>Vision du monde - Esclavage</French>
 		<Italian>Concezione del mondo - Schiavismo</Italian>
@@ -125,7 +125,7 @@
 		<Russian>Ðàáîâëàäåíèå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WV_SLAVERY_HELP</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_HELP</Tag>
 		<English>[ICON_BULLET]Allows you to sell captives into slavery.</English>
 		<French>[ICON_BULLET]vous permet de vendre les prisonniers en tant qu'esclaves.</French>
 		<Italian>[ICON_BULLET]Ti permette di vendere come schiavi i tuoi prigionieri.</Italian>
@@ -133,7 +133,7 @@
 		<Russian>Ïîçâîëÿåò âàì ïðîäàâàòü ïëåííèêîâ â ðàáñòâî.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WV_SLAVERY_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_PEDIA</Tag>
 		<English>Slavery...</English>
 		<French>Esclavage...</French>
 		<Italian>Schiavismo...</Italian>
