@@ -329,13 +329,13 @@
 		<English>Mapinguari Compound is a place where subdued Ground Sloths and their handlers are trained as combat units.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MAPINGUARI_GUARD</Tag>
+		<Tag>TXT_KEY_BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY</Tag>
 		<English>Autobuild - Mapinguari Changing of the Guard Ceremony</English>
 		<Polish>Strażnik Mapinguari</Polish>
 		<Russian>Êàðàóë ìàïèíãóàðè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MAPINGUARI_GUARD_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY_PEDIA</Tag>
 		<English>A fictional military ceremony.</English>
 	</TEXT>
 	<TEXT>

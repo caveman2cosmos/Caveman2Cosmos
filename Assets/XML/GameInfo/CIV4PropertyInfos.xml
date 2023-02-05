@@ -446,47 +446,47 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_THIEVES_HIDEOUT</BuildingType>
+					<BuildingType>BUILDING_THIEVES_HIDEOUT_UNSANCTIONED</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_ROGUES_HIDEOUT</BuildingType>
+					<BuildingType>BUILDING_ROGUES_HIDEOUT_UNSANCTIONED</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_BURGLARS_HIDEOUT</BuildingType>
+					<BuildingType>BUILDING_BURGLARS_HIDEOUT_UNSANCTIONED</BuildingType>
 					<iMinValue>1600</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_ASSASSINS_DEN</BuildingType>
+					<BuildingType>BUILDING_ASSASSINS_DEN_UNSANCTIONED</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_LOANSHARK</BuildingType>
+					<BuildingType>BUILDING_LOAN_SHARK_UNSANCTIONED</BuildingType>
 					<iMinValue>800</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_CONSPIRATORS_HIDEOUT</BuildingType>
+					<BuildingType>BUILDING_CONSPIRATORS_HIDEOUT_UNSANCTIONED</BuildingType>
 					<iMinValue>1200</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_MOB_STOREFRONT</BuildingType>
+					<BuildingType>BUILDING_MOB_STOREFRONT_UNSANCTIONED</BuildingType>
 					<iMinValue>2200</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_MOTORCYCLE_CLUB</BuildingType>
+					<BuildingType>BUILDING_MOTORCYCLE_CLUB_UNSANCTIONED</BuildingType>
 					<iMinValue>2000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_UNSANCTIONED_BLACK_HAT_HIDEOUT</BuildingType>
+					<BuildingType>BUILDING_BLACK_HAT_HIDEOUT_UNSANCTIONED</BuildingType>
 					<iMinValue>2500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>

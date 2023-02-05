@@ -891,7 +891,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MAPINGUARI_COMPOUND_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MAPINGUARI_GUARD</BuildingType>
+				<BuildingType>BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY</BuildingType>
 			</ReplacementBuildings>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
@@ -901,12 +901,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MAPINGUARI_COMPOUND</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MAPINGUARI_GUARD</Type>
+			<Type>BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MAPINGUARI_GUARD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MAPINGUARI_GUARD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_GUNPOWDER</PrereqTech>
 			<bAutoBuild>1</bAutoBuild>
 			<CommerceChanges>
@@ -923,7 +923,7 @@
 			</PropertyManipulators>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<ArtDefineTag>ART_DEF_BUILDING_MAPINGUARI_GUARD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MAPINGUARI_CHANGING_OF_THE_GUARD_CEREMONY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLICE_CAT</Type>

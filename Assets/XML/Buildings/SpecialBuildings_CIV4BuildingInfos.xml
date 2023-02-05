@@ -11051,12 +11051,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_MEDICAL_DATABASE_GOOD</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MERCANTILISMGOLD</Type>
+			<Type>BUILDING_MERCANTILISM_BONUS_GOLD</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MERCANTILISMGOLD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MERCANTILISMGOLD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MERCANTILISM_BONUS_GOLD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MERCANTILISM_BONUS_GOLD_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_GOLD_ORE</Bonus>
@@ -11075,15 +11075,15 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_MERCANTILISMGOLD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MERCANTILISM_BONUS_GOLD</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MERCANTILISMSILVER</Type>
+			<Type>BUILDING_MERCANTILISM_BONUS_SILVER</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MERCANTILISMSILVER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MERCANTILISMSILVER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MERCANTILISM_BONUS_SILVER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MERCANTILISM_BONUS_SILVER_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_SILVER_ORE</Bonus>
@@ -11102,7 +11102,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_MERCANTILISMSILVER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MERCANTILISM_BONUS_SILVER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MESOAMERICAN_SHRINE</Type>
@@ -15408,11 +15408,11 @@
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSAL_HEALTH_CARE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNSANCTIONED_ASSASSINS_DEN</Type>
+			<Type>BUILDING_ASSASSINS_DEN_UNSANCTIONED</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_ASSASSINS_DEN</Description>
+			<Description>TXT_KEY_BUILDING_ASSASSINS_DEN_UNSANCTIONED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASSASSINS_DEN_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
@@ -15439,11 +15439,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASSASSINS_DEN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNSANCTIONED_THIEVES_HIDEOUT</Type>
+			<Type>BUILDING_THIEVES_HIDEOUT_UNSANCTIONED</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_THIEVES_HIDEOUT</Description>
+			<Description>TXT_KEY_BUILDING_THIEVES_HIDEOUT_UNSANCTIONED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_THEFT</PrereqTech>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
@@ -15462,11 +15462,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BANDITS_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNSANCTIONED_ROGUES_HIDEOUT</Type>
+			<Type>BUILDING_ROGUES_HIDEOUT_UNSANCTIONED</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_ROGUES_HIDEOUT</Description>
+			<Description>TXT_KEY_BUILDING_ROGUES_HIDEOUT_UNSANCTIONED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
@@ -15485,11 +15485,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BANDITS_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNSANCTIONED_BURGLARS_HIDEOUT</Type>
+			<Type>BUILDING_BURGLARS_HIDEOUT_UNSANCTIONED</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BURGLARS_HIDEOUT</Description>
+			<Description>TXT_KEY_BUILDING_BURGLARS_HIDEOUT_UNSANCTIONED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LOCKS</PrereqTech>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
@@ -15508,11 +15508,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BANDITS_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNSANCTIONED_BLACK_HAT_HIDEOUT</Type>
+			<Type>BUILDING_BLACK_HAT_HIDEOUT_UNSANCTIONED</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BLACK_HAT_HIDEOUT</Description>
+			<Description>TXT_KEY_BUILDING_BLACK_HAT_HIDEOUT_UNSANCTIONED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BLACK_HAT_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
 			<PrereqInCityBuildings>
@@ -15539,11 +15539,11 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNSANCTIONED_CONSPIRATORS_HIDEOUT</Type>
+			<Type>BUILDING_CONSPIRATORS_HIDEOUT_UNSANCTIONED</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_CONSPIRATORS_HIDEOUT</Description>
+			<Description>TXT_KEY_BUILDING_CONSPIRATORS_HIDEOUT_UNSANCTIONED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONSPIRATORS_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
 			<ObsoleteTech>TECH_FASCISM</ObsoleteTech>
@@ -15570,11 +15570,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CONSPIRATORS_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNSANCTIONED_LOANSHARK</Type>
+			<Type>BUILDING_LOAN_SHARK_UNSANCTIONED</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_LOANSHARK</Description>
+			<Description>TXT_KEY_BUILDING_LOAN_SHARK_UNSANCTIONED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LOANSHARK_PEDIA</Civilopedia>
 			<PrereqTech>TECH_USURY</PrereqTech>
 			<ObsoleteTech>TECH_CYBERSOCIAL_INTEGRATION</ObsoleteTech>
@@ -15591,11 +15591,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_LOANSHARK</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNSANCTIONED_MOB_STOREFRONT</Type>
+			<Type>BUILDING_MOB_STOREFRONT_UNSANCTIONED</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_MOB_STOREFRONT</Description>
+			<Description>TXT_KEY_BUILDING_MOB_STOREFRONT_UNSANCTIONED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOB_STOREFRONT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<ObsoleteTech>TECH_THOUGHT_SCANNING</ObsoleteTech>
@@ -15636,11 +15636,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MOB_STOREFRONT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNSANCTIONED_MOTORCYCLE_CLUB</Type>
+			<Type>BUILDING_MOTORCYCLE_CLUB_UNSANCTIONED</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_MOTORCYCLE_CLUB</Description>
+			<Description>TXT_KEY_BUILDING_MOTORCYCLE_CLUB_UNSANCTIONED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOTORCYCLE_CLUB_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<ObsoleteTech>TECH_COMPREHENSIVE_CYBERNETICS</ObsoleteTech>

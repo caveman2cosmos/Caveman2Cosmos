@@ -27324,7 +27324,7 @@
 			<Button>Art/interface/buttons/buildings/memory_transfer_station.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MERCANTILISMGOLD</Type>
+			<Type>ART_DEF_BUILDING_MERCANTILISM_BONUS_GOLD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27334,7 +27334,7 @@
 			<Button>art/Craft/Art/goldsmith.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MERCANTILISMSILVER</Type>
+			<Type>ART_DEF_BUILDING_MERCANTILISM_BONUS_SILVER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
