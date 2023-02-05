@@ -13016,7 +13016,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_AN</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_AN</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>

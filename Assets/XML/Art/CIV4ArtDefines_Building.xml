@@ -1272,7 +1272,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/AmusementPark.dds,Art/Interface/Buttons/RoM_Building_Atlas.dds,2,1</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AN</Type>
+			<Type>ART_DEF_BUILDING_TEMPLE_OF_AN</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>1.25</fScale>
@@ -23304,7 +23304,7 @@
 			<Button>,Art/Interface/Buttons/Civilizations/Japan.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,5,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KI</Type>
+			<Type>ART_DEF_BUILDING_TEMPLE_OF_KI</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>1.25</fScale>

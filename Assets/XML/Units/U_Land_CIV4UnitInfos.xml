@@ -4923,7 +4923,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_AN</BuildingType>
+				<BuildingType>BUILDING_TEMPLE_OF_AN</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
