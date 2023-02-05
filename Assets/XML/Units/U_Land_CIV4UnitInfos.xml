@@ -38497,7 +38497,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WHEELWRIGHT</BuildingType>
-				<BuildingType>BUILDING_CARRIAGE</BuildingType>
+				<BuildingType>BUILDING_CARRIAGE_BUILDER</BuildingType>
 				<BuildingType>BUILDING_AUTOMOBILE_FACTORY</BuildingType>
 				<BuildingType>BUILDING_SELF_ASSEMBLY_FACTORY</BuildingType>
 			</PrereqOrBuildings>

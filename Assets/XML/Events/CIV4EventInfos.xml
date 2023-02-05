@@ -2175,7 +2175,7 @@
 			<iRandomGold>-20</iRandomGold>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_SCULPTOR</Building>
+					<Building>BUILDING_SCULPTORS_WORKSHOP</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>

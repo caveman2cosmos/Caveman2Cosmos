@@ -55,7 +55,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_UNIVERSE</BuildingType>
+					<BuildingType>BUILDING_OMNIVERSE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -3209,14 +3209,14 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_IMMORTAL</Type>
+			<Type>BUILDING_HUMAN_MOD_IMMORTAL</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_IMMORTAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_IMMORTAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_IMMORTAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_IMMORTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_IMMORTAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_IMMORTAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -10303,11 +10303,11 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_AGRODOME</Type>
-			<Description>TXT_KEY_BUILDING_AGRODOME</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AGRODOME_PEDIA</Civilopedia>
+			<Type>BUILDING_VENUS_AGRODOME</Type>
+			<Description>TXT_KEY_BUILDING_VENUS_AGRODOME</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VENUS_AGRODOME_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_AGRODOME</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VENUS_AGRODOME</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EXTRATERRESTRIAL_AGRICULTURE</PrereqTech>
 			<iCost>5294</iCost>
@@ -14257,11 +14257,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MICROVAC</Type>
-			<Description>TXT_KEY_BUILDING_MICROVAC</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MICROVAC_PEDIA</Civilopedia>
+			<Type>BUILDING_DEEP_SPACE_MICROVAC</Type>
+			<Description>TXT_KEY_BUILDING_DEEP_SPACE_MICROVAC</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_MICROVAC_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MICROVAC</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_MICROVAC</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ULTRACOMPUTING</PrereqTech>
 			<iCost>16067</iCost>
@@ -18845,11 +18845,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EXAVERSE</Type>
-			<Description>TXT_KEY_BUILDING_EXAVERSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EXAVERSE_PEDIA</Civilopedia>
+			<Type>BUILDING_EXAVERSE_PORTAL</Type>
+			<Description>TXT_KEY_BUILDING_EXAVERSE_PORTAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EXAVERSE_PORTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EXAVERSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EXAVERSE_PORTAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MACROVERSE_TRAVERSAL</PrereqTech>
 			<iCost>11410</iCost>
@@ -18878,7 +18878,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_TIMEHOLE</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_TIMEHOLE</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -19016,7 +19016,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MICROVAC</BuildingType>
+					<BuildingType>BUILDING_DEEP_SPACE_MICROVAC</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -19626,7 +19626,7 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_NOOCRACY</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_GOVERNMENT_NOOCRACY</BuildingType>
 				<BuildingType>BUILDING_MACHINE_RULE</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
@@ -20666,7 +20666,7 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_NOOCRACY</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_GOVERNMENT_NOOCRACY</BuildingType>
 				<BuildingType>BUILDING_HOLACRACY</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iRevIdxLocal>-10</iRevIdxLocal>
@@ -21175,11 +21175,11 @@
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NOOCRACY</Type>
-			<Description>TXT_KEY_BUILDING_NOOCRACY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NOOCRACY_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_GOVERNMENT_NOOCRACY</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_GOVERNMENT_NOOCRACY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_GOVERNMENT_NOOCRACY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NOOCRACY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_GOVERNMENT_NOOCRACY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COLONY_GOVERNANCE</PrereqTech>
 			<iCost>1757</iCost>
@@ -23032,11 +23032,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TIMEHOLE</Type>
-			<Description>TXT_KEY_BUILDING_TIMEHOLE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TIMEHOLE_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_TIMEHOLE</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_TIMEHOLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_TIMEHOLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TIMEHOLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_TIMEHOLE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TIME_TRAVEL</PrereqTech>
 			<iCost>9410</iCost>
@@ -26992,7 +26992,7 @@
 			</CommerceChanges>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MICROVAC</BuildingType>
+					<BuildingType>BUILDING_DEEP_SPACE_MICROVAC</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -27199,7 +27199,7 @@
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_EXAVERSE</BuildingType>
+					<BuildingType>BUILDING_EXAVERSE_PORTAL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -27258,13 +27258,13 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BASILISK</Type>
+			<Type>BUILDING_ROKOS_BASILISK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_BASILISK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BASILISK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ROKOS_BASILISK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ROKOS_BASILISK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BASILISK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ROKOS_BASILISK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BASILISK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COSMIC_GOVERNANCE</PrereqTech>
@@ -30075,13 +30075,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_UNIVERSE</Type>
+			<Type>BUILDING_OMNIVERSE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_UNIVERSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_UNIVERSE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_OMNIVERSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_OMNIVERSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_OMNIVERSE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ALPHA_POINT</PrereqTech>
@@ -30129,7 +30129,7 @@
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_EXAVERSE</BuildingType>
+					<BuildingType>BUILDING_EXAVERSE_PORTAL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>

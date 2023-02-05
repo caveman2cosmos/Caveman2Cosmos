@@ -184,13 +184,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ANIMA_GAMING_LEAGUE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ARCHIVES</Type>
+			<Type>BUILDING_NATIONAL_ARCHIVES</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ARCHIVES</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ARCHIVES_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NATIONAL_ARCHIVES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_ARCHIVES_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
@@ -240,7 +240,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>10</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_ARCHIVES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_ARCHIVES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ARCHIVES</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -266,7 +266,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TRAVOIS_MAKER</BuildingType>
 				<BuildingType>BUILDING_WHEELWRIGHT</BuildingType>
-				<BuildingType>BUILDING_CARRIAGE</BuildingType>
+				<BuildingType>BUILDING_CARRIAGE_BUILDER</BuildingType>
 				<BuildingType>BUILDING_AUTOMOBILE_FACTORY</BuildingType>
 				<BuildingType>BUILDING_SELF_ASSEMBLY_FACTORY</BuildingType>
 			</PrereqOrBuildings>
@@ -3500,7 +3500,7 @@
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FLETCHER</BuildingType>
+				<BuildingType>BUILDING_FLETCHERS_HUT</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ARCHERY_EFFECT</BuildingType>
 				<BuildingType>BUILDING_HUNTING_INSTRUCTION</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER_TRADITION</BuildingType>

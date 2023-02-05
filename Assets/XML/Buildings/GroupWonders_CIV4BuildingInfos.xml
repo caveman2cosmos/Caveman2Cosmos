@@ -475,16 +475,16 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ANCIENT_WAY_OF_THE_WOLF</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ALTAMIRA</Type>
+			<Type>BUILDING_PC_CAVE_OF_ALTAMIRA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ALTAMIRA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ALTAMIRA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PC_CAVE_OF_ALTAMIRA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PC_CAVE_OF_ALTAMIRA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_PREHISTORIC_CAVES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_ALTAMIRA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PC_CAVE_OF_ALTAMIRA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ALTAMIRA</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1840,16 +1840,16 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MCCALLUM</Type>
+			<Type>BUILDING_LL_MCCALLUM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MCCALLUM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MCCALLUM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LL_MCCALLUM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LL_MCCALLUM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_LEGENDARY_LANDSCAPES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_MCCALLUM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LL_MCCALLUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MCCALLUM</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>

@@ -8922,12 +8922,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_HOGANS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOMELESS</Type>
+			<Type>BUILDING_HOUSING_HOMELESS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOMELESS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOMELESS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_HOMELESS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_HOMELESS_PEDIA</Civilopedia>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TREE_HALLOW</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_BURROW</BuildingType>
@@ -8977,7 +8977,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOMELESS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_HOMELESS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSE_ERA1_LDHW</Type>
@@ -11721,12 +11721,12 @@
 				<VicinityBonus>BONUS_FLOWERS</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_LADYBUGX</BuildingType>
+				<BuildingType>BUILDING_LADYBUG_SANCTUARY</BuildingType>
 				<BuildingType>BUILDING_ARBORETUM</BuildingType>
 				<BuildingType>BUILDING_AGROFOREST</BuildingType>
 			</ReplacementBuildings>
 			<ObsoleteTech>TECH_BOTANY</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_LADYBUGX</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_LADYBUG_SANCTUARY</ObsoletesToBuilding>
 			<iHappiness>-1</iHappiness>
 			<YieldModifiers>
 				<iYield>-1</iYield>
@@ -15097,7 +15097,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FLETCHER</BuildingType>
+				<BuildingType>BUILDING_FLETCHERS_HUT</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ARCHERY_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MILITARY_TRADITION</ObsoleteTech>

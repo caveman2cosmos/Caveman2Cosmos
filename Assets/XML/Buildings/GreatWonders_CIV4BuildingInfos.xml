@@ -1938,13 +1938,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BAYREUTH</Type>
+			<Type>BUILDING_BAYREUTH_FESTSPIELHAUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_BAYREUTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BAYREUTH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_BAYREUTH_FESTSPIELHAUS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BAYREUTH_FESTSPIELHAUS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BAYREUTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BAYREUTH_FESTSPIELHAUS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BAYREUTH</MovieDefineTag>
 			<ObsoleteTech>TECH_VIRTUAL_REALITY</ObsoleteTech>
 			<PrereqTech>TECH_REALISM</PrereqTech>
@@ -2083,15 +2083,15 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BEAULIEU</Type>
+			<Type>BUILDING_PALACE_OF_BEAULIEU</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BEAULIEU</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BEAULIEU_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PALACE_OF_BEAULIEU</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PALACE_OF_BEAULIEU_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BEAULIEU</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PALACE_OF_BEAULIEU</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BEAULIEU</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3525,15 +3525,15 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CAPUCHIN</Type>
+			<Type>BUILDING_CAPUCHIN_CRYPT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CAPUCHIN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CAPUCHIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CAPUCHIN_CRYPT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CAPUCHIN_CRYPT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CAPUCHIN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CAPUCHIN_CRYPT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CAPUCHIN</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3846,15 +3846,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CHANGDEO</Type>
+			<Type>BUILDING_CHANGDEOKGUNG</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CHANGDEO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CHANGDEO_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CHANGDEOKGUNG</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CHANGDEOKGUNG_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CHANGDEO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CHANGDEOKGUNG</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CHANGDEO</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -4471,15 +4471,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COLOSSUS</Type>
+			<Type>BUILDING_THE_COLOSSUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_COLOSSUS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COLOSSUS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_COLOSSUS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_COLOSSUS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COLOSSUS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_COLOSSUS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_COLOSSUS</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_COLOSSUS</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -6819,12 +6819,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ERECTION</Type>
+			<Type>BUILDING_THE_ERECHTHEUM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_ERECTION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ERECTION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_ERECHTHEUM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_ERECHTHEUM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ERECTION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_ERECHTHEUM</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -6911,12 +6911,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ESCORIAL</Type>
+			<Type>BUILDING_EL_ESCORIAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_ESCORIAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ESCORIAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EL_ESCORIAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EL_ESCORIAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ESCORIAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EL_ESCORIAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ESCORIAL</MovieDefineTag>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqTech>TECH_DIVINE_RIGHT</PrereqTech>
@@ -7349,7 +7349,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_SCULPTOR</BuildingType>
+				<BuildingType>BUILDING_SCULPTORS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_SCULPTURE_FACTORY</BuildingType>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
@@ -10106,13 +10106,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HIERAPOLIS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HILLTARA</Type>
+			<Type>BUILDING_HILL_OF_TARA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_HILLTARA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HILLTARA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HILL_OF_TARA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HILL_OF_TARA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HILLTARA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HILL_OF_TARA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HILLTARA</MovieDefineTag>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<PrereqOrTerrain>
@@ -12230,15 +12230,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LEONARDO</Type>
+			<Type>BUILDING_LEONARDOS_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_LEONARDO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LEONARDO_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LEONARDOS_WORKSHOP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LEONARDOS_WORKSHOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LEONARDO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LEONARDOS_WORKSHOP</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LEONARDO_WORKSHOP</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_UNIVERSITY</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
@@ -12816,15 +12816,15 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MAGELLAN</Type>
+			<Type>BUILDING_MAGELLANS_VOYAGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MAGELLAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MAGELLAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MAGELLANS_VOYAGE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MAGELLANS_VOYAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MAGELLAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MAGELLANS_VOYAGE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MAGELLAN</MovieDefineTag>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_NAVIGATION</PrereqTech>
@@ -15867,15 +15867,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PENTAGON</Type>
+			<Type>BUILDING_THE_PENTAGON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PENTAGON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PENTAGON_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_PENTAGON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_PENTAGON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PENTAGON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_PENTAGON</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PENTAGON</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LOGISTICS</PrereqTech>
@@ -16779,12 +16779,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_QUANZHEN</Type>
+			<Type>BUILDING_QUANZHEN_SCHOOL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_QUANZHEN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_QUANZHEN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_QUANZHEN_SCHOOL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_QUANZHEN_SCHOOL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_QUANZHEN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_QUANZHEN_SCHOOL</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -19353,15 +19353,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SUFFRAGE</Type>
+			<Type>BUILDING_WOMENS_SUFFRAGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SUFFRAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SUFFRAGE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_WOMENS_SUFFRAGE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WOMENS_SUFFRAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SUFFRAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WOMENS_SUFFRAGE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WOMAN</MovieDefineTag>
 			<fVisibilityPriority>100</fVisibilityPriority>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
@@ -19559,12 +19559,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SVALBARD</Type>
+			<Type>BUILDING_SVALBARD_GLOBAL_SEED_VAULT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_SVALBARD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SVALBARD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SVALBARD_GLOBAL_SEED_VAULT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SVALBARD_GLOBAL_SEED_VAULT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SVALBARD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SVALBARD_GLOBAL_SEED_VAULT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SVALBARD</MovieDefineTag>
 			<ObsoleteTech>TECH_EXTRATERRESTRIAL_AGRICULTURE</ObsoleteTech>
 			<PrereqTech>TECH_GENETICS</PrereqTech>

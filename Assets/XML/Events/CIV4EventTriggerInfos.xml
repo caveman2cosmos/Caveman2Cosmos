@@ -3909,7 +3909,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
 			<BuildingsRequired>
-				<Building>BUILDING_SCULPTOR</Building>
+				<Building>BUILDING_SCULPTORS_WORKSHOP</Building>
 			</BuildingsRequired>
 			<iNumBuildingsGlobal>3</iNumBuildingsGlobal>
 			<iNumPlotsRequired>1</iNumPlotsRequired>

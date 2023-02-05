@@ -677,7 +677,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_FLETCHER</BuildingType>
+				<BuildingType>BUILDING_FLETCHERS_HUT</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>

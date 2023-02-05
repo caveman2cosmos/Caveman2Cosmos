@@ -146,25 +146,25 @@
 				<BuildingType>BUILDING_CICADA_SANCTUARY</BuildingType>
 				<BuildingType>BUILDING_COCKROACH</BuildingType>
 				<BuildingType>BUILDING_CRICKET_GATHERER</BuildingType>
-				<BuildingType>BUILDING_CRICKETX</BuildingType>
+				<BuildingType>BUILDING_CRICKET_SANCTUARY</BuildingType>
 				<BuildingType>BUILDING_DRAGONFLY</BuildingType>
 				<BuildingType>BUILDING_DRAGONFLYX</BuildingType>
 				<BuildingType>BUILDING_DUNGBEETLE</BuildingType>
 				<BuildingType>BUILDING_FIREFLY_GATHERER</BuildingType>
-				<BuildingType>BUILDING_FIREFLYX</BuildingType>
+				<BuildingType>BUILDING_FIREFLY_SANCTUARY</BuildingType>
 				<BuildingType>BUILDING_GATHERER_EARTHWORM</BuildingType>
 				<BuildingType>BUILDING_GATHERER_SNAIL</BuildingType>
 				<BuildingType>BUILDING_GOLIATH_BEETLE_GATHERER</BuildingType>
-				<BuildingType>BUILDING_GOLIATHX</BuildingType>
+				<BuildingType>BUILDING_GOLIATH_BEETLE_SANCTUARY</BuildingType>
 				<BuildingType>BUILDING_GRASSHOPPER</BuildingType>
-				<BuildingType>BUILDING_HERCULES</BuildingType>
+				<BuildingType>BUILDING_HERCULES_BEETLE_GATHERER</BuildingType>
 				<BuildingType>BUILDING_HERCULESX</BuildingType>
 				<BuildingType>BUILDING_JUMILES_GATHERER</BuildingType>
 				<BuildingType>BUILDING_JUNEBUG_GATHERER</BuildingType>
-				<BuildingType>BUILDING_JUNEBUGX</BuildingType>
+				<BuildingType>BUILDING_JUNEBUG_SANCTUARY</BuildingType>
 				<BuildingType>BUILDING_LADYBUG_GATHERER</BuildingType>
-				<BuildingType>BUILDING_LADYBUGX</BuildingType>
-				<BuildingType>BUILDING_MEALWORM</BuildingType>
+				<BuildingType>BUILDING_LADYBUG_SANCTUARY</BuildingType>
+				<BuildingType>BUILDING_MEALWORM_GATHERER</BuildingType>
 				<BuildingType>BUILDING_MEZCALWORM</BuildingType>
 				<BuildingType>BUILDING_MOPANE_MOTH_GATHERER</BuildingType>
 				<BuildingType>BUILDING_PALMWEEVIL</BuildingType>
@@ -174,7 +174,7 @@
 				<BuildingType>BUILDING_RICEBEETLE</BuildingType>
 				<BuildingType>BUILDING_SCARAB_BEETLE</BuildingType>
 				<BuildingType>BUILDING_SCARAB_BEETLEX</BuildingType>
-				<BuildingType>BUILDING_SCORPION</BuildingType>
+				<BuildingType>BUILDING_SCORPION_GATHERER</BuildingType>
 				<BuildingType>BUILDING_SCORPIONX</BuildingType>
 				<BuildingType>BUILDING_TARANTULA</BuildingType>
 				<BuildingType>BUILDING_TERMITE_MOUND</BuildingType>
@@ -454,7 +454,7 @@
 				<BuildingType>BUILDING_BIRDOFPARADISE</BuildingType>
 				<BuildingType>BUILDING_CATCHER_CANARY</BuildingType>
 				<BuildingType>BUILDING_CHICKEN_COOP</BuildingType>
-				<BuildingType>BUILDING_COOKATOO</BuildingType>
+				<BuildingType>BUILDING_CATCHER_COCKATOO</BuildingType>
 				<BuildingType>BUILDING_CORMORANT_TRAINER</BuildingType>
 				<BuildingType>BUILDING_FARM_ANIMAL_DUCK</BuildingType>
 				<BuildingType>BUILDING_FALCONER</BuildingType>
@@ -462,9 +462,9 @@
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
 				<BuildingType>BUILDING_HUMMINGBIRD</BuildingType>
 				<BuildingType>BUILDING_JUNGLEFOWL</BuildingType>
-				<BuildingType>BUILDING_LYREBIRD</BuildingType>
+				<BuildingType>BUILDING_CATCHER_LYREBIRD</BuildingType>
 				<BuildingType>BUILDING_CATCHER_MACAW</BuildingType>
-				<BuildingType>BUILDING_PARAKEET</BuildingType>
+				<BuildingType>BUILDING_CATCHER_PARAKEET</BuildingType>
 				<BuildingType>BUILDING_PARROT_AVIARY</BuildingType>
 				<BuildingType>BUILDING_PARROT_CATCHER</BuildingType>
 				<BuildingType>BUILDING_PEACOCK_CATCHER</BuildingType>
@@ -905,7 +905,7 @@
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_KILGII_GWAAY</BuildingType>
-				<BuildingType>BUILDING_MCCALLUM</BuildingType>
+				<BuildingType>BUILDING_LL_MCCALLUM</BuildingType>
 				<BuildingType>BUILDING_SKINNER</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
