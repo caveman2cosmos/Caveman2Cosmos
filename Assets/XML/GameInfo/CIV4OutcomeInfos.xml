@@ -817,7 +817,7 @@
 			<Description>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_CAVE</Description>
 			<Message>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_MESSAGE</Message>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
+				<BuildingType>BUILDING_CAVE_PAINTINGS</BuildingType>
 			</PrereqBuildings>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>

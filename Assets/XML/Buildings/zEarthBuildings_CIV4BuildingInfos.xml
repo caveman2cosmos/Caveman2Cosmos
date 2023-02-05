@@ -248,11 +248,11 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASTEROID_RARE</Type>
-			<Description>TXT_KEY_BUILDING_ASTEROID_RARE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_RARE_PEDIA</Civilopedia>
+			<Type>BUILDING_ASTEROID_MINE_RARE_MINERALS</Type>
+			<Description>TXT_KEY_BUILDING_ASTEROID_MINE_RARE_MINERALS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_MINE_RARE_MINERALS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_RARE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_MINE_RARE_MINERALS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -442,7 +442,7 @@
 					<iNumBuildingNeeded>5</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
+					<BuildingType>BUILDING_MAGLEV_LAUNCHER</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
@@ -1917,7 +1917,7 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
+					<BuildingType>BUILDING_THE_GREAT_PYRAMID</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>

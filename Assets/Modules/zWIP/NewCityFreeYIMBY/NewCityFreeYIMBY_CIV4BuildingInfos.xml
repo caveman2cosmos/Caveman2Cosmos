@@ -82,7 +82,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_CORN</Type>
+			<Type>BUILDING_CORN_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -102,11 +102,11 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_FLORISTRY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_JADE</Type>
+			<Type>BUILDING_JADE_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_RICE</Type>
+			<Type>BUILDING_RICE_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -174,7 +174,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ADVANCED_METALLURGY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PLAYINGFIELDS</Type>
+			<Type>BUILDING_PLAYING_FIELDS</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ATHLETICS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -246,7 +246,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ROAD_BUILDING</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TTWATCH_TOWER</Type>
+			<Type>BUILDING_WATCH_TOWER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_SIEGE_WARFARE</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>

@@ -289,9 +289,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PEAT_FIRED_DYNAMO</ArtDefineTag>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_BIOFUEL_PLANT</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_BIOFUEL_POWER_PLANT</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_BIOFUEL_PLANT</BuildingType>
+				<BuildingType>BUILDING_BIOFUEL_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 			<MapCategoryTypes>
@@ -423,9 +423,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WOOD_FIRED_DYNAMO</ArtDefineTag>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_BIOFUEL_PLANT</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_BIOFUEL_POWER_PLANT</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_BIOFUEL_PLANT</BuildingType>
+				<BuildingType>BUILDING_BIOFUEL_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_RENEWABLE_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
 			<MapCategoryTypes>

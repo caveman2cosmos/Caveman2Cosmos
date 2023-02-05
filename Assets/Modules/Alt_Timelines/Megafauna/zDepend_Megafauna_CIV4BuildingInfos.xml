@@ -35,9 +35,9 @@
 			<Type>BUILDING_STABLE</Type>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
-				<BuildingType>BUILDING_RHINO_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_RHINOCEROS</BuildingType>
 				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
-				<BuildingType>BUILDING_BISON_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BISON</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TRAINER_DEER</BuildingType>
 				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TRAINER_BEAR</BuildingType>

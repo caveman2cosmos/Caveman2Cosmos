@@ -1090,7 +1090,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TEMPORAL_RIFT</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_TEMPORAL_RIFT</BuildingType>
 				<BuildingType>BUILDING_INTERGALACTIC_HYPERPORT</BuildingType>
 				<BuildingType>BUILDING_HYPERSPACE_EXPORTER</BuildingType>
 			</PrereqOrBuildings>
@@ -3192,7 +3192,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
+				<BuildingType>BUILDING_MAGLEV_LAUNCHER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_NEURON_ENGINEERING</PrereqTech>
 			<iCost>5500</iCost>
@@ -6130,7 +6130,7 @@
 				<BuildingType>BUILDING_SPACE_STATION_TOURS</BuildingType>
 				<BuildingType>BUILDING_ORBITAL_HOTEL</BuildingType>
 				<BuildingType>BUILDING_ASTEROID_MINE</BuildingType>
-				<BuildingType>BUILDING_ASTEROID_RARE</BuildingType>
+				<BuildingType>BUILDING_ASTEROID_MINE_RARE_MINERALS</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>
@@ -8283,7 +8283,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_ANTIMATTER_ROCKETS</PrereqTech>
 			<Buildings>
-				<BuildingType>BUILDING_GALACTIC_CORE</BuildingType>
+				<BuildingType>BUILDING_MISSION_TO_THE_GALACTIC_CORE</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>

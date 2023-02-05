@@ -500,7 +500,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ALCATRAZ</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ALCATRAZ</MovieDefineTag>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
-			<FreeBuilding>BUILDING_GOOD_ALCATRAZ</FreeBuilding>
+			<FreeBuilding>BUILDING_SAFETY_ALCATRAZ</FreeBuilding>
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bWater>1</bWater>
@@ -1103,7 +1103,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
-				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
+				<BuildingType>BUILDING_SKYROAD_CONTROL_TOWER</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -1809,13 +1809,13 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BANK_OF_CHINA</Type>
+			<Type>BUILDING_BANK_OF_CHINA_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_BANK_OF_CHINA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BANK_OF_CHINA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_BANK_OF_CHINA_TOWER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BANK_OF_CHINA_TOWER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BANK_OF_CHINA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BANK_OF_CHINA_TOWER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BANK_OF_CHINA</MovieDefineTag>
 			<PrereqTech>TECH_CONGLOMERATES</PrereqTech>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
@@ -6088,7 +6088,7 @@
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GRAND_SKY_FESTIVAL</BuildingType>
-				<BuildingType>BUILDING_FIRE_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_GRAND_FIRE_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>516</iCost>
@@ -6619,7 +6619,7 @@
 				<BuildingType>BUILDING_ROADS</BuildingType>
 				<BuildingType>BUILDING_PAVED_ROADS</BuildingType>
 				<BuildingType>BUILDING_ASPHALT_ROADS</BuildingType>
-				<BuildingType>BUILDING_SKYROAD_TOWER</BuildingType>
+				<BuildingType>BUILDING_SKYROAD_CONTROL_TOWER</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
 			</PrereqOrBuildings>
 			<bNoHolyCity>1</bNoHolyCity>
@@ -7422,16 +7422,16 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FIRE_FESTIVAL</Type>
+			<Type>BUILDING_GRAND_FIRE_FESTIVAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FIRE_FESTIVAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FIRE_FESTIVAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GRAND_FIRE_FESTIVAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GRAND_FIRE_FESTIVAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FIRE_FESTIVAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GRAND_FIRE_FESTIVAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FIRE_FESTIVAL</MovieDefineTag>
 			<PrereqTech>TECH_CELEBRATION</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -7471,7 +7471,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_FIRE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_E_FIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
@@ -8968,15 +8968,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GREAT_LIBRARY</Type>
+			<Type>BUILDING_THE_GREAT_LIBRARY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GREAT_LIBRARY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GREAT_LIBRARY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_GREAT_LIBRARY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_GREAT_LIBRARY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GREAT_LIBRARY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_GREAT_LIBRARY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GREAT_LIBRARY</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_GREATLIBRARY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -9102,16 +9102,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GREAT_PYRAMID</Type>
+			<Type>BUILDING_THE_GREAT_PYRAMID</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GREAT_PYRAMID</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GREAT_PYRAMID_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_GREAT_PYRAMID</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_GREAT_PYRAMID_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_VALLEY_OF_THE_KINGS_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PYRAMID</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_GREAT_PYRAMID</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PYRAMIDS</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_PYRAMID</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
@@ -9157,13 +9157,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GREAT_PYRAMID_OF_THE_MOON</Type>
+			<Type>BUILDING_THE_GREAT_PYRAMID_OF_THE_MOON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_GREAT_PYRAMID_OF_THE_MOON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_GREAT_PYRAMID_OF_THE_MOON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PYRAMID_OF_THE_MOON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_GREAT_PYRAMID_OF_THE_MOON</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9237,12 +9237,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GREAT_PYRAMID_OF_THE_SUN</Type>
+			<Type>BUILDING_THE_GREAT_PYRAMID_OF_THE_SUN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_SUN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_SUN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_GREAT_PYRAMID_OF_THE_SUN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_GREAT_PYRAMID_OF_THE_SUN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PYRAMID_OF_THE_SUN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_GREAT_PYRAMID_OF_THE_SUN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11165,13 +11165,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_JEWISH_MASADA</Type>
+			<Type>BUILDING_MASADA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_JEWISH_MASADA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_JEWISH_MASADA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MASADA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MASADA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MASADA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MASADA</MovieDefineTag>
@@ -11350,22 +11350,22 @@
 			</CommerceChangeDoubleTimes>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_ANIMAL_RACETRACK</BuildingType>
+					<BuildingType>BUILDING_ANIMAL_RACE_TRACK</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ANIMAL_RACETRACK</BuildingType>
+					<BuildingType>BUILDING_ANIMAL_RACE_TRACK</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqInCityBuildings>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_ANIMAL_RACETRACK</BuildingType>
+					<BuildingType>BUILDING_ANIMAL_RACE_TRACK</BuildingType>
 					<CommerceChanges>
 						<iCommerce>2</iCommerce>
 					</CommerceChanges>
@@ -11815,7 +11815,7 @@
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BULL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_BULL</BuildingType>
 				<BuildingType>BUILDING_HERD_BISON</BuildingType>
 				<BuildingType>BUILDING_CAMP_BISON</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
@@ -11883,7 +11883,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
+				<BuildingType>BUILDING_CAVE_PAINTINGS</BuildingType>
 				<BuildingType>BUILDING_FRESCO_MURAL</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
@@ -12794,7 +12794,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
+					<BuildingType>BUILDING_MALL</BuildingType>
 					<CommerceChanges>
 						<iCommerce>2</iCommerce>
 					</CommerceChanges>
@@ -13041,7 +13041,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
-				<BuildingType>BUILDING_FISHERMAN_HUT</BuildingType>
+				<BuildingType>BUILDING_FISHERMANS_HUT</BuildingType>
 				<BuildingType>BUILDING_SHIPYARD</BuildingType>
 				<BuildingType>BUILDING_DRYDOCK</BuildingType>
 				<BuildingType>BUILDING_NAVAL_YARD</BuildingType>
@@ -13050,7 +13050,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GRAND_SKY_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
-				<BuildingType>BUILDING_FIRE_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_GRAND_FIRE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
@@ -14480,12 +14480,12 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NECROMANTEION</Type>
+			<Type>BUILDING_THE_NECROMANTEION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_NECROMANTEION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NECROMANTEION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_NECROMANTEION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_NECROMANTEION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NECROMANTEION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_NECROMANTEION</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15907,13 +15907,13 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PERE_LACHAISE</Type>
+			<Type>BUILDING_PERE_LACHAISE_CEMETERY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_PERE_LACHAISE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PERE_LACHAISE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PERE_LACHAISE_CEMETERY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PERE_LACHAISE_CEMETERY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PERE_LACHAISE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PERE_LACHAISE_CEMETERY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PERE_LACHAISE</MovieDefineTag>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
@@ -16577,13 +16577,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POTALA_PALACE</Type>
+			<Type>BUILDING_PALACE_OF_POTALA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POTALA_PALACE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_POTALA_PALACE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PALACE_OF_POTALA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PALACE_OF_POTALA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_POTALA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_POTALA</MovieDefineTag>
@@ -16872,15 +16872,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RED_AND_BLACK</Type>
+			<Type>BUILDING_RED_AND_BLACK_WARE_PAINTER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_RED_AND_BLACK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RED_AND_BLACK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_RED_AND_BLACK_WARE_PAINTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RED_AND_BLACK_WARE_PAINTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RED_AND_BLACK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RED_AND_BLACK_WARE_PAINTER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RED_AND_BLACK</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -17592,7 +17592,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
+					<BuildingType>BUILDING_MALL</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -18150,7 +18150,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BAZAAR</BuildingType>
-				<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
+				<BuildingType>BUILDING_MALL</BuildingType>
 				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MERCANTILISM</ObsoleteTech>
@@ -18368,7 +18368,7 @@
 				<BuildingType>BUILDING_POLLUTION_BLACKENEDSKIES</BuildingType>
 			</ReplacementBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_FIRE_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_GRAND_FIRE_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
@@ -19122,9 +19122,9 @@
 			<PrereqTech>TECH_MASS_DRIVER</PrereqTech>
 			<iCost>20310</iCost>
 			<iTradeRouteModifier>25</iTradeRouteModifier>
-			<FreeBuilding>BUILDING_MAGLEV_LAUNCH</FreeBuilding>
+			<FreeBuilding>BUILDING_MAGLEV_LAUNCHER</FreeBuilding>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MAGLEV_LAUNCH</BuildingType>
+				<BuildingType>BUILDING_MAGLEV_LAUNCHER</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -20713,7 +20713,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
+					<BuildingType>BUILDING_MALL</BuildingType>
 					<CommerceChanges>
 						<iCommerce>2</iCommerce>
 					</CommerceChanges>
@@ -22003,7 +22003,7 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NATIONAL_ZOO</BuildingType>
-				<BuildingType>BUILDING_NATIONAL_AQUA</BuildingType>
+				<BuildingType>BUILDING_NATIONAL_AQUARIUM</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>8070</iCost>
 			<iHappiness>1</iHappiness>

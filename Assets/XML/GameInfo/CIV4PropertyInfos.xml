@@ -161,7 +161,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_EPIRACY</BuildingType>
+					<BuildingType>BUILDING_CRIME_ONLINE_PIRACY</BuildingType>
 					<iMinValue>125</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -1349,52 +1349,52 @@
 			</PropertyManipulators>
 			<PropertyBuildings>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS1</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_1</BuildingType>
 					<iMinValue>10</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS2</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_2</BuildingType>
 					<iMinValue>25</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS3</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_3</BuildingType>
 					<iMinValue>50</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS4</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_4</BuildingType>
 					<iMinValue>100</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS5</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_5</BuildingType>
 					<iMinValue>250</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS6</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_6</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS7</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_7</BuildingType>
 					<iMinValue>750</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS8</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_8</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS9</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_9</BuildingType>
 					<iMinValue>1500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_TOURISM_PLUS10</BuildingType>
+					<BuildingType>BUILDING_TOURISM_LEVEL_10</BuildingType>
 					<iMinValue>3000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>

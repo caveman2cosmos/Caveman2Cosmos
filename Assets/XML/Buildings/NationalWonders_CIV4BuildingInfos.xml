@@ -484,7 +484,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_BULL_LEAPING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BULL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_BULL</BuildingType>
 				<BuildingType>BUILDING_HERD_BISON</BuildingType>
 				<BuildingType>BUILDING_CAMP_BISON</BuildingType>
 				<BuildingType>BUILDING_HERD_COW</BuildingType>
@@ -688,7 +688,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
+					<BuildingType>BUILDING_CHARCOAL_BURNER</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
@@ -2126,7 +2126,7 @@
 			<PrereqTech>TECH_FIRE_MAKING</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BONFIRE</BuildingType>
-				<BuildingType>BUILDING_CHARCOAL_FIRE</BuildingType>
+				<BuildingType>BUILDING_CHARCOAL_BURNER</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_FIREFIGHTING</ObsoleteTech>
 			<iCost>112</iCost>
@@ -2428,13 +2428,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_BLACKSMITH</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GUILD_BUTCHER</Type>
+			<Type>BUILDING_GUILD_BUTCHERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GUILD_BUTCHER</Description>
+			<Description>TXT_KEY_BUILDING_GUILD_BUTCHERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
@@ -2482,7 +2482,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GUILD_BUTCHER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GUILD_BUTCHERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_BUTCHER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2549,7 +2549,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PAPER_MAKER</BuildingType>
-				<BuildingType>BUILDING_PAPER_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_PAPER</BuildingType>
 				<BuildingType>BUILDING_ELECTRONIC_PAPER_MAKER</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
@@ -2577,7 +2577,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_PAPER_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_PAPER</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -2608,7 +2608,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CRAFTS_HUT</BuildingType>
-				<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
+				<BuildingType>BUILDING_MALL</BuildingType>
 				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_APPLIED_ECONOMICS</ObsoleteTech>
@@ -2636,7 +2636,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
+					<BuildingType>BUILDING_MALL</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -2732,7 +2732,7 @@
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
+				<BuildingType>BUILDING_KNIGHTS_STABLE</BuildingType>
 				<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
@@ -2754,7 +2754,7 @@
 			</PropertyManipulators>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
+					<BuildingType>BUILDING_KNIGHTS_STABLE</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -2838,7 +2838,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GLASSBLOWERS_WORKSHOP</BuildingType>
-				<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_GLASSWARE</BuildingType>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
@@ -2866,7 +2866,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_GLASSWARE</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -3060,7 +3060,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BRICK_MASON</BuildingType>
-				<BuildingType>BUILDING_BRICK_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_BRICKS</BuildingType>
 				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
@@ -3088,7 +3088,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_BRICK_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_BRICKS</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -3107,19 +3107,19 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_MASON</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GUILD_MERCERS</Type>
+			<Type>BUILDING_GUILD_MERCHANTS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GUILD_MERCERS</Description>
+			<Description>TXT_KEY_BUILDING_GUILD_MERCHANTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_USURY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BAZAAR</BuildingType>
-				<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
+				<BuildingType>BUILDING_MALL</BuildingType>
 				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_APPLIED_ECONOMICS</ObsoleteTech>
@@ -3147,7 +3147,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
+					<BuildingType>BUILDING_MALL</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -3162,7 +3162,7 @@
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GUILD_MERCERS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GUILD_MERCHANTS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_MERCERS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3982,7 +3982,7 @@
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
+				<BuildingType>BUILDING_KNIGHTS_STABLE</BuildingType>
 				<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
 			</PrereqOrBuildings>
 			<Flavors>
@@ -4474,7 +4474,7 @@
 			</ReligionChanges>
 			<ConstructSound>AS2D_BUILD_MORMON</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MORMON_TEMPLE</BuildingType>
+				<BuildingType>BUILDING_LDS_MEETINGHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
@@ -4621,13 +4621,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_ACADEMIC_DATABASE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NATIONAL_AQUA</Type>
+			<Type>BUILDING_NATIONAL_AQUARIUM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NATIONAL_AQUA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_AQUA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NATIONAL_AQUARIUM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_AQUARIUM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MARINE_BIOLOGY</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
@@ -4665,7 +4665,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_AQUA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_AQUARIUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_AQUA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7067,7 +7067,7 @@
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_TEMPLE_OF_SET</BuildingType>
+				<BuildingType>BUILDING_TEMPLE_OF_SETH</BuildingType>
 				<BuildingType>BUILDING_TEMPLE_OF_OSIRIS</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>320</iCost>
@@ -7137,7 +7137,7 @@
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_TEMPLE_OF_SET</BuildingType>
+				<BuildingType>BUILDING_TEMPLE_OF_SETH</BuildingType>
 				<BuildingType>BUILDING_TEMPLE_OF_ISIS</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>352</iCost>
@@ -7199,13 +7199,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_EGYPTIAN_MYTH_OSIRIS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TEMPLE_OF_SET</Type>
+			<Type>BUILDING_TEMPLE_OF_SETH</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TEMPLE_OF_SET</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_SET_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TEMPLE_OF_SETH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_SETH_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>

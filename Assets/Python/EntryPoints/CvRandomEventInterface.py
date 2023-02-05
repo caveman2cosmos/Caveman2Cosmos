@@ -1993,7 +1993,7 @@ def applyClassicLiteratureDone2(argsList):
 		team.setHasTech(listTechs[GAME.getSorenRandNum(len(listTechs), "Classic Literature Event Tech selection")], True, data.ePlayer, True, True)
 
 def getHelpClassicLiteratureDone3(argsList):
-	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
+	iGreatLibrary = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIBRARY")
 
 	szCityName = ""
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
@@ -2004,7 +2004,7 @@ def getHelpClassicLiteratureDone3(argsList):
 	return TRNSLTR.getText("TXT_KEY_EVENT_FREE_SPECIALIST", (1, GC.getSpecialistInfo(GC.getInfoTypeForString("SPECIALIST_SCIENTIST")).getTextKey(), szCityName))
 
 def canApplyClassicLiteratureDone3(argsList):
-	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
+	iGreatLibrary = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIBRARY")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
 		if city.getNumRealBuilding(iGreatLibrary):
@@ -2012,7 +2012,7 @@ def canApplyClassicLiteratureDone3(argsList):
 	return False
 
 def applyClassicLiteratureDone3(argsList):
-	iGreatLibrary = GC.getInfoTypeForString("BUILDING_GREAT_LIBRARY")
+	iGreatLibrary = GC.getInfoTypeForString("BUILDING_THE_GREAT_LIBRARY")
 
 	for city in GC.getPlayer(argsList[1].ePlayer).cities():
 		if city.getNumRealBuilding(iGreatLibrary):
@@ -5957,7 +5957,7 @@ def triggerNewWorldCities(argsList):
 			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_MARKET"), 1)
 			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_HARBOR"), 1)
 			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_LIGHTHOUSE"), 1)
-			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FISHERMAN_HUT"), 1)
+			CyCity.setNumRealBuilding(GC.getInfoTypeForString("BUILDING_FISHERMANS_HUT"), 1)
 		iNeededCities -= 1
 
 

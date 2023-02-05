@@ -56,8 +56,8 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_BISON_TRAINER</BuildingType>
-				<BuildingType>BUILDING_BISON_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BISON</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_BISON</BuildingType>
 			</PrereqOrBuildings>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -200,8 +200,8 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_RHINO_TRAINER</BuildingType>
-				<BuildingType>BUILDING_RHINO_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_RHINOCEROS</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_RHINOS</BuildingType>
 			</PrereqOrBuildings>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -235,7 +235,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
-				<BuildingType>BUILDING_ZEBRA_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_ZEBRAS</BuildingType>
 			</PrereqOrBuildings>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -438,14 +438,14 @@
 			</MapCategoryTypes>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BISON_TRAINER</Type>
+			<Type>BUILDING_ANIMAL_TRAINER_BISON</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_BISON_TRAINER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BISON_TRAINER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ANIMAL_TRAINER_BISON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_BISON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BISON_TRAINER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_BISON</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BISON_TRAINER</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -472,7 +472,7 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BULL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_BULL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BISON</BuildingType>
 				<BuildingType>BUILDING_HERD_BISON</BuildingType>
 				<BuildingType>BUILDING_CAMP_MUSKOX</BuildingType>
@@ -486,12 +486,12 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BISON_TRAINER_EFFECT</Type>
+			<Type>BUILDING_EFFECT_HERITAGE_BISON</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_BISON_TRAINER_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BISON_TRAINER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EFFECT_HERITAGE_BISON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_BISON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BISON_TRAINER_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_HERITAGE_BISON</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -501,17 +501,17 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BISON_TRAINER_HERITAGE</Type>
+			<Type>BUILDING_HERITAGE_BISON</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_BISON_TRAINER_HERITAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BISON_TRAINER_HERITAGE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERITAGE_BISON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERITAGE_BISON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BISON_TRAINER_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_HERITAGE_BISON</ArtDefineTag>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeBuilding>BUILDING_BISON_TRAINER_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_HERITAGE_BISON</FreeBuilding>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
@@ -528,7 +528,7 @@
 				</Flavor>
 			</Flavors>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_BISON_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BISON</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -573,7 +573,7 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_REINDEER_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_ANIMAL_REINDEER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DEER</BuildingType>
 				<BuildingType>BUILDING_CAMP_DEER</BuildingType>
 				<BuildingType>BUILDING_HERD_DEER</BuildingType>
@@ -962,13 +962,13 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RHINO_TRAINER</Type>
+			<Type>BUILDING_ANIMAL_TRAINER_RHINOCEROS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_RHINO_TRAINER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RHINO_TRAINER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ANIMAL_TRAINER_RHINOCEROS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_RHINOCEROS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RHINO_TRAINER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_RHINOCEROS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RHINO_TRAINER</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1006,13 +1006,13 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RHINO_TRAINER_EFFECT</Type>
+			<Type>BUILDING_EFFECT_HERITAGE_RHINOS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_RHINO_TRAINER_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RHINO_TRAINER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_RHINO_TRAINER_EFFECT_HELP</Help>
+			<Description>TXT_KEY_BUILDING_EFFECT_HERITAGE_RHINOS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_RHINOCEROS_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_EFFECT_HERITAGE_RHINOS_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RHINO_TRAINER_HERITAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERITAGE_RHINOCEROS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1022,17 +1022,17 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RHINO_TRAINER_HERITAGE</Type>
+			<Type>BUILDING_HERITAGE_RHINOCEROS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_RHINO_TRAINER_HERITAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RHINO_TRAINER_HERITAGE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERITAGE_RHINOCEROS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERITAGE_RHINOCEROS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RHINO_TRAINER_HERITAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERITAGE_RHINOCEROS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
-			<FreeBuilding>BUILDING_RHINO_TRAINER_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_HERITAGE_RHINOS</FreeBuilding>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
@@ -1049,7 +1049,7 @@
 				</Flavor>
 			</Flavors>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_RHINO_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_RHINOCEROS</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -1127,13 +1127,13 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZEBRA_TRAINER_EFFECT</Type>
+			<Type>BUILDING_EFFECT_HERITAGE_ZEBRAS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ZEBRA_TRAINER_EFFECT</Description>
+			<Description>TXT_KEY_BUILDING_EFFECT_HERITAGE_ZEBRAS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_TRAINER_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_ZEBRA_TRAINER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_TRAINER_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_HERITAGE_ZEBRAS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1143,18 +1143,18 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZEBRA_TRAINER_HERITAGE</Type>
+			<Type>BUILDING_HERITAGE_ZEBRA</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_ZEBRA_TRAINER_HERITAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_TRAINER_HERITAGE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERITAGE_ZEBRA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERITAGE_ZEBRA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZEBRA_TRAINER_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_HERITAGE_ZEBRAS</ArtDefineTag>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iMaxLatitude>45</iMaxLatitude>
-			<FreeBuilding>BUILDING_ZEBRA_TRAINER_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_HERITAGE_ZEBRAS</FreeBuilding>
 			<iCost>139</iCost>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>

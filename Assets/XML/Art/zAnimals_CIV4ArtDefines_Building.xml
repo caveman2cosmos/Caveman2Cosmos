@@ -182,7 +182,7 @@
 			<Button>Art/Interface/Buttons/Units/Barredowl.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_BEAR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_BEAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -212,7 +212,7 @@
 			<Button>Art/Interface/Buttons/Units/BengalTiger.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_BIRD</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_BIRDS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -592,7 +592,7 @@
 			<Button>Art/Interface/Buttons/Units/Fennecfox.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_FISH</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_FISH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -772,7 +772,7 @@
 			<Button>Art/Interface/Buttons/Units/Grizzly.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_GULL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SEAGULL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -882,7 +882,7 @@
 			<Button>Art/Interface/Buttons/Units/Hyena.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_IBEX</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_WALIA_IBEX</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1582,7 +1582,7 @@
 			<Button>Art/Interface/Buttons/Units/Redpanda.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_REEF_SHARK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_E_REEF_SHARK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1872,7 +1872,7 @@
 			<Button>Art/Interface/Buttons/Units/Tarantula_Jungle.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_TERN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_ARCTIC_TERN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

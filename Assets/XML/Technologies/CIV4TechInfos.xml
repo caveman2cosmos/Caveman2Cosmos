@@ -12782,7 +12782,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_GLASSWARE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>

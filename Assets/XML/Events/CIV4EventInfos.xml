@@ -2320,7 +2320,7 @@
 					<iExtraYield>1</iExtraYield>
 				</BuildingExtraYield>
 				<BuildingExtraYield>
-					<Building>BUILDING_KNIGHT_STABLE</Building>
+					<Building>BUILDING_KNIGHTS_STABLE</Building>
 					<YieldType>YIELD_FOOD</YieldType>
 					<iExtraYield>1</iExtraYield>
 				</BuildingExtraYield>

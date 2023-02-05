@@ -826,7 +826,7 @@
 			</UnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_LLAMA_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_LLAMA</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			<BonusType>BONUS_LLAMA</BonusType>
@@ -1007,7 +1007,7 @@
 			</NotUnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_COMPASS</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
@@ -12076,7 +12076,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
@@ -12219,7 +12219,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
@@ -12361,7 +12361,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
 			<TechTypes>
@@ -12523,7 +12523,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_HORSE_BREEDING</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
@@ -12675,7 +12675,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STIRRUP</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
@@ -12838,7 +12838,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<TechTypes>
@@ -12975,7 +12975,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
@@ -13104,7 +13104,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
@@ -13244,7 +13244,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
@@ -13426,7 +13426,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
@@ -13618,7 +13618,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
@@ -13771,7 +13771,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
@@ -13955,7 +13955,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<PrereqBonuses>
@@ -14151,7 +14151,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<BonusType>BONUS_AMMUNITION</BonusType>
@@ -14956,7 +14956,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_CAMEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
@@ -15088,7 +15088,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_CAMEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<BonusType>BONUS_CAMEL</BonusType>
@@ -15212,7 +15212,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_CAMEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<BonusType>BONUS_CAMEL</BonusType>
@@ -15344,7 +15344,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_CAMEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<PrereqBonuses>
@@ -36279,35 +36279,35 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<Buildings>
-				<BuildingType>BUILDING_JEWISH_SHRINE</BuildingType>
+				<BuildingType>BUILDING_THE_TEMPLE_OF_SOLOMON</BuildingType>
 				<BuildingType>BUILDING_CHRISTIAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_ISLAMIC_SHRINE</BuildingType>
 				<BuildingType>BUILDING_THE_KASHI_VISHWANATH</BuildingType>
 				<BuildingType>BUILDING_BUDDHIST_SHRINE</BuildingType>
 				<BuildingType>BUILDING_CONFUCIAN_SHRINE</BuildingType>
-				<BuildingType>BUILDING_TAOIST_SHRINE</BuildingType>
+				<BuildingType>BUILDING_THE_DAI_MIAO</BuildingType>
 				<BuildingType>BUILDING_STATUE_OF_ZEUS</BuildingType>
 				<BuildingType>BUILDING_PIR_E_SABZ</BuildingType>
 				<BuildingType>BUILDING_EGYPT_MYTH_SHRINE</BuildingType>
 				<BuildingType>BUILDING_MESOAMERICAN_SHRINE</BuildingType>
-				<BuildingType>BUILDING_ANDEAN_SHRINE</BuildingType>
-				<BuildingType>BUILDING_ASATRU_SHRINE</BuildingType>
+				<BuildingType>BUILDING_CORICANCHA</BuildingType>
+				<BuildingType>BUILDING_THE_ODINS_SANCTUARY</BuildingType>
 				<BuildingType>BUILDING_SHRINE_OF_BAB</BuildingType>
 				<BuildingType>BUILDING_CANAANISM_SHRINE</BuildingType>
-				<BuildingType>BUILDING_CAODAI_SHRINE</BuildingType>
+				<BuildingType>BUILDING_GREAT_TEMPLE_TAY_NINH</BuildingType>
 				<BuildingType>BUILDING_NATURE_ANSWER</BuildingType>
 				<BuildingType>BUILDING_JAINISM_SHRINE</BuildingType>
 				<BuildingType>BUILDING_BABEL_TOWER</BuildingType>
-				<BuildingType>BUILDING_MORMON_SHRINE</BuildingType>
+				<BuildingType>BUILDING_MORMAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_OLDOINYO_NGAI</BuildingType>
 				<BuildingType>BUILDING_RODNOVERY_SHRINE</BuildingType>
 				<BuildingType>BUILDING_SCIENTOLOGY_SHRINE</BuildingType>
-				<BuildingType>BUILDING_SHAMAN_SHRINE</BuildingType>
-				<BuildingType>BUILDING_SHINTO_SHRINE</BuildingType>
+				<BuildingType>BUILDING_SPIRITS_ANSWER</BuildingType>
+				<BuildingType>BUILDING_THE_ISE_JINGU</BuildingType>
 				<BuildingType>BUILDING_THE_GOLDEN_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_TENGRI_SHRINE</BuildingType>
-				<BuildingType>BUILDING_VOODOO_SHRINE</BuildingType>
-				<BuildingType>BUILDING_YORUBA_SHRINE</BuildingType>
+				<BuildingType>BUILDING_KHAN_TENGRI</BuildingType>
+				<BuildingType>BUILDING_THE_TOMB_OF_ANSYEN_BON</BuildingType>
+				<BuildingType>BUILDING_PATTAKY_OF_OLODUMARE</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_BELIEF_KARMA</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_BELIEF_RESURRECTION</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_BELIEF_REINCARNATION</BuildingType>
@@ -38778,7 +38778,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FIELD_HOSPITAL</BuildingType>
@@ -38975,7 +38975,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VETERINARIAN</BuildingType>
@@ -42863,7 +42863,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_CAMEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
@@ -43011,7 +43011,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_CAMEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_FIREARMS</BonusType>
@@ -43155,7 +43155,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_CAMEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<BonusType>BONUS_FIREARMS</BonusType>

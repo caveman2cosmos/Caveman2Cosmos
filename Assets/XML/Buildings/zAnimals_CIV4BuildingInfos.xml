@@ -257,7 +257,7 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_BEAR</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
@@ -397,7 +397,7 @@
 					<Or>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_BIRD</ID>
+							<ID>BUILDING_FOLKLORE_T_BIRDS</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
@@ -853,7 +853,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_FISH</ID>
+						<ID>BUILDING_FOLKLORE_T_FISH</ID>
 					</Has>
 					<Or>
 						<Has>
@@ -973,7 +973,7 @@
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BEAR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_BEAR</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
 			<ObsoleteTech>TECH_ADVANCED_AVIATION</ObsoleteTech>
@@ -1184,12 +1184,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ELASMOTHERIUM_REMAINS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ELEPHANT_HERD</Type>
+			<Type>BUILDING_HERD_ELEPHANT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ELEPHANT_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEPHANT_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_ELEPHANT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_ELEPHANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
@@ -1210,7 +1210,7 @@
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_ELEPHANT_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_ELEPHANT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EXOTIC_HERBIVORE</Type>
@@ -1252,7 +1252,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_BOAR</ID>
+						<ID>BUILDING_FOLKLORE_T_BOAR</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
@@ -1304,7 +1304,7 @@
 				<BuildingType>BUILDING_FOLKLORE_EAGLE_BALD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EMU</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FLAMINGO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GULL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SEAGULL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAAST_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HARPYEAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAWK</BuildingType>
@@ -1324,7 +1324,7 @@
 				<BuildingType>BUILDING_FOLKLORE_RHEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEAEAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SECRETARYBIRD</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_TERN</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_ARCTIC_TERN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TOUCAN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TURKEY</BuildingType>
 			</PrereqOrBuildings>
@@ -1359,7 +1359,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_FISH</ID>
+						<ID>BUILDING_FOLKLORE_T_FISH</ID>
 					</Has>
 					<Or>
 						<Has>
@@ -1731,7 +1731,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_FISH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_FISH</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>1260</iCost>
 			<CommerceChanges>
@@ -3052,9 +3052,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CARNIVAL_TRAINED_SEAL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TURKEY_FLOCKS</Type>
-			<Description>TXT_KEY_BUILDING_TURKEY_FLOCKS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TURKEY_FLOCKS_PEDIA</Civilopedia>
+			<Type>BUILDING_FLOCKS_OF_TURKEY</Type>
+			<Description>TXT_KEY_BUILDING_FLOCKS_OF_TURKEY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FLOCKS_OF_TURKEY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_TURKEY</ArtDefineTag>
 			<MapCategoryTypes>
@@ -3072,7 +3072,7 @@
 				<BuildingType>BUILDING_FOLKLORE_TURKEY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>184</iCost>
-			<FreeBuilding>BUILDING_TURKEY_FLOCKS</FreeBuilding>
+			<FreeBuilding>BUILDING_FLOCKS_OF_TURKEY</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<YieldChanges>
 				<iYield>1</iYield>

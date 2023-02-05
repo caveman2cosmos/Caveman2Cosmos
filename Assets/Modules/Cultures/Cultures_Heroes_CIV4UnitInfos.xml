@@ -15737,7 +15737,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_HOT_AIR_BALLOON</PrereqTech>
 			<BonusType>BONUS_MEXICAN</BonusType>
@@ -15931,7 +15931,7 @@
 				<BuildingType>BUILDING_TOURISM_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_HORSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_COMANCHE</BonusType>
