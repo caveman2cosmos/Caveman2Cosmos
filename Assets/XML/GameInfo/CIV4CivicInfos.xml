@@ -10084,7 +10084,7 @@
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_BURNINGMAN</BuildingType>
+					<BuildingType>BUILDING_BURNING_MAN</BuildingType>
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -12196,7 +12196,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_BURNINGMAN</BuildingType>
+					<BuildingType>BUILDING_BURNING_MAN</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>

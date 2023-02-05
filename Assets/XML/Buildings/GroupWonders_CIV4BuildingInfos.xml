@@ -2259,16 +2259,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RICHARDSON</Type>
+			<Type>BUILDING_LL_RICHARDSON_ISLAND</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_RICHARDSON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RICHARDSON_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LL_RICHARDSON_ISLAND</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LL_RICHARDSON_ISLAND_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_LEGENDARY_LANDSCAPES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_RICHARDSON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LL_RICHARDSON_ISLAND</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RICHARDSON</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>

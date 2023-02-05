@@ -2837,7 +2837,7 @@
 			<PrereqTech>TECH_STAINED_GLASS</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GLASSSMITH</BuildingType>
+				<BuildingType>BUILDING_GLASSBLOWERS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
@@ -2860,7 +2860,7 @@
 			</PropertyManipulators>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
+					<BuildingType>BUILDING_GLASSBLOWERS_WORKSHOP</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -4070,13 +4070,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_LLAMA_NATIONAL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LOGROLLERS</Type>
+			<Type>BUILDING_LOG_ROLLER_SYSTEM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_LOGROLLERS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LOGROLLERS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LOG_ROLLER_SYSTEM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LOG_ROLLER_SYSTEM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<Bonus>BONUS_ROPE</Bonus>
 			<PrereqBonuses>
@@ -4127,7 +4127,7 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_LOGROLLERS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LOG_ROLLER_SYSTEM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LOGROLLERS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>

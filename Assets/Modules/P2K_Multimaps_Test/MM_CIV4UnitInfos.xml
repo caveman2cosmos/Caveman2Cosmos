@@ -6054,7 +6054,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_WORLDHOUSE</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_WORLDHOUSE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_DIRECTED_PANSPERMIA</PrereqTech>
 			<iCost>7500</iCost>

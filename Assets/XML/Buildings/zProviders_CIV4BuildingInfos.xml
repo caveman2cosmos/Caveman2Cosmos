@@ -17,7 +17,7 @@
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BREWERY</BuildingType>
-				<BuildingType>BUILDING_CIDERHOUSE</BuildingType>
+				<BuildingType>BUILDING_CIDER_HOUSE</BuildingType>
 				<BuildingType>BUILDING_DISTILLERY</BuildingType>
 				<BuildingType>BUILDING_WINERY</BuildingType>
 			</PrereqOrBuildings>
@@ -136,11 +136,11 @@
 				<BuildingType>BUILDING_ANT_CATCHER</BuildingType>
 				<BuildingType>BUILDING_ASSASSINBUG</BuildingType>
 				<BuildingType>BUILDING_ASSASSINBUGX</BuildingType>
-				<BuildingType>BUILDING_BAMBOOWORM</BuildingType>
+				<BuildingType>BUILDING_BAMBOO_WORM_GATHERER</BuildingType>
 				<BuildingType>BUILDING_BOGONG_MOTH_GATHERER</BuildingType>
 				<BuildingType>BUILDING_BUG_CATCHER</BuildingType>
 				<BuildingType>BUILDING_BUTTERFLY_GATHERER</BuildingType>
-				<BuildingType>BUILDING_BUTTERFLYX</BuildingType>
+				<BuildingType>BUILDING_BUTTERFLY_SANCTUARY</BuildingType>
 				<BuildingType>BUILDING_CENTIPEDE_GATHERER</BuildingType>
 				<BuildingType>BUILDING_CICADA_GATHERER</BuildingType>
 				<BuildingType>BUILDING_CICADA_SANCTUARY</BuildingType>
@@ -148,8 +148,8 @@
 				<BuildingType>BUILDING_CRICKET_GATHERER</BuildingType>
 				<BuildingType>BUILDING_CRICKET_SANCTUARY</BuildingType>
 				<BuildingType>BUILDING_DRAGONFLY_GATHERER</BuildingType>
-				<BuildingType>BUILDING_DRAGONFLYX</BuildingType>
-				<BuildingType>BUILDING_DUNGBEETLE</BuildingType>
+				<BuildingType>BUILDING_DRAGONFLY_SANCTUARY</BuildingType>
+				<BuildingType>BUILDING_DUNG_BEETLE_GATHERER</BuildingType>
 				<BuildingType>BUILDING_FIREFLY_GATHERER</BuildingType>
 				<BuildingType>BUILDING_FIREFLY_SANCTUARY</BuildingType>
 				<BuildingType>BUILDING_GATHERER_EARTHWORM</BuildingType>
@@ -165,13 +165,13 @@
 				<BuildingType>BUILDING_LADYBUG_GATHERER</BuildingType>
 				<BuildingType>BUILDING_LADYBUG_SANCTUARY</BuildingType>
 				<BuildingType>BUILDING_MEALWORM_GATHERER</BuildingType>
-				<BuildingType>BUILDING_MEZCALWORM</BuildingType>
+				<BuildingType>BUILDING_MEZCAL_WORM_GATHERER</BuildingType>
 				<BuildingType>BUILDING_MOPANE_MOTH_GATHERER</BuildingType>
-				<BuildingType>BUILDING_PALMWEEVIL</BuildingType>
+				<BuildingType>BUILDING_PALM_WEEVIL_GATHERER</BuildingType>
 				<BuildingType>BUILDING_PILLBUG_GATHERER</BuildingType>
 				<BuildingType>BUILDING_PRAYINGMANTIS</BuildingType>
 				<BuildingType>BUILDING_PRAYINGMANTISX</BuildingType>
-				<BuildingType>BUILDING_RICEBEETLE</BuildingType>
+				<BuildingType>BUILDING_RICE_BEETLE_GATHERER</BuildingType>
 				<BuildingType>BUILDING_SCARAB_BEETLE</BuildingType>
 				<BuildingType>BUILDING_SCARAB_BEETLEX</BuildingType>
 				<BuildingType>BUILDING_SCORPION_GATHERER</BuildingType>
@@ -461,7 +461,7 @@
 				<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
 				<BuildingType>BUILDING_HUMMINGBIRD</BuildingType>
-				<BuildingType>BUILDING_JUNGLEFOWL</BuildingType>
+				<BuildingType>BUILDING_CATCHER_JUNGLEFOWL</BuildingType>
 				<BuildingType>BUILDING_CATCHER_LYREBIRD</BuildingType>
 				<BuildingType>BUILDING_CATCHER_MACAW</BuildingType>
 				<BuildingType>BUILDING_CATCHER_PARAKEET</BuildingType>
@@ -785,7 +785,7 @@
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_MANUFACTURING_DISTRICT</ObsoletesToBuilding>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GLASSSMITH</BuildingType>
+				<BuildingType>BUILDING_GLASSBLOWERS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_GLASS_RECLAMATION_PLANT</BuildingType>
 			</PrereqOrBuildings>

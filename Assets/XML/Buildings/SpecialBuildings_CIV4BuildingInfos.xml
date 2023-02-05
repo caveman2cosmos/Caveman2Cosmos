@@ -831,12 +831,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICBURNTRASH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CIVICCASTE</Type>
+			<Type>BUILDING_CIVIC_CASTE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CIVICCASTE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CIVICCASTE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CIVIC_CASTE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CIVIC_CASTE_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -860,7 +860,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CIVICCASTE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_CASTE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CIVICDEMOCRACY</Type>
@@ -15936,7 +15936,7 @@
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_LUMBERMILL</BuildingType>
+					<BuildingType>BUILDING_LUMBER_MILL</BuildingType>
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

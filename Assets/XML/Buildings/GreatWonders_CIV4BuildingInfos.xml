@@ -3215,13 +3215,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BURNINGMAN</Type>
+			<Type>BUILDING_BURNING_MAN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_BURNINGMAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BURNINGMAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_BURNING_MAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BURNING_MAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BURNINGMAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BURNING_MAN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BURNINGMAN</MovieDefineTag>
 			<PrereqTech>TECH_COUNTERCULTURE</PrereqTech>
 			<PrereqOrTerrain>
@@ -4210,7 +4210,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HIPPODROME</BuildingType>
-				<BuildingType>BUILDING_TOURNAMENT</BuildingType>
+				<BuildingType>BUILDING_ROYAL_TOURNAMENT</BuildingType>
 				<BuildingType>BUILDING_SPEEDWAY</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_TOURNAMENTS</ObsoleteTech>
@@ -4634,12 +4634,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CONGVIENNA</Type>
+			<Type>BUILDING_CONGRESS_OF_VIENNA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_CONGVIENNA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CONGVIENNA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CONGRESS_OF_VIENNA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CONGRESS_OF_VIENNA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CONGVIENNA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CONGRESS_OF_VIENNA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CONGVIENNA</MovieDefineTag>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<PrereqTech>TECH_GRAND_WAR</PrereqTech>
@@ -10065,13 +10065,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HIERAPOLIS</Type>
+			<Type>BUILDING_HIERAPOLIS_SAWMILL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HIERAPOLIS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HIERAPOLIS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HIERAPOLIS_SAWMILL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HIERAPOLIS_SAWMILL_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WATERWHEELS</PrereqTech>
 			<bRiver>1</bRiver>
 			<PrereqBonuses>
@@ -10102,7 +10102,7 @@
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_HIERAPOLIS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HIERAPOLIS_SAWMILL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HIERAPOLIS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14054,15 +14054,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MUIDERSLOT</Type>
+			<Type>BUILDING_MUIDERSLOT_CASTLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MUIDERSLOT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MUIDERSLOT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MUIDERSLOT_CASTLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MUIDERSLOT_CASTLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MUIDERSLOT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MUIDERSLOT_CASTLE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MUIDERSLOT</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -16984,12 +16984,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RIVERROUGE</Type>
+			<Type>BUILDING_RIVER_ROUGE_COMPLEX</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_RIVERROUGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RIVERROUGE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_RIVER_ROUGE_COMPLEX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RIVER_ROUGE_COMPLEX_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RIVERROUGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RIVER_ROUGE_COMPLEX</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RIVERROUGE</MovieDefineTag>
 			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
@@ -19943,13 +19943,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TERRACOTTA</Type>
+			<Type>BUILDING_TERRACOTTA_ARMY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TERRACOTTA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TERRACOTTA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TERRACOTTA_ARMY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TERRACOTTA_ARMY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1200</iCost>
@@ -19985,7 +19985,7 @@
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_TERRACOTTA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TERRACOTTA_ARMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TERRACOTTA</MovieDefineTag>
 			<PropertyManipulators>
 				<PropertySource>

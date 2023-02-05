@@ -2270,7 +2270,7 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_NEUTRONIUM</BuildingType>
+					<BuildingType>BUILDING_INTERGALACTIC_NEUTRONIUM_FOUNDRY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2666,14 +2666,14 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ARCHAILECT</Type>
+			<Type>BUILDING_HUMAN_MOD_ARCHAILECT</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_ARCHAILECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ARCHAILECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_ARCHAILECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_ARCHAILECT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ARCHAILECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_ARCHAILECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -3626,14 +3626,14 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NONSPATIAL</Type>
+			<Type>BUILDING_HUMAN_MOD_NON_SPATIAL</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_NONSPATIAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NONSPATIAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_NON_SPATIAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_NON_SPATIAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NONSPATIAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_NON_SPATIAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -15054,11 +15054,11 @@
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SHELLWORLD</Type>
-			<Description>TXT_KEY_BUILDING_SHELLWORLD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SHELLWORLD_PEDIA</Civilopedia>
+			<Type>BUILDING_ASTEROID_SHELL_WORLD</Type>
+			<Description>TXT_KEY_BUILDING_ASTEROID_SHELL_WORLD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_SHELL_WORLD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SHELLWORLD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_SHELL_WORLD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PARATERRAFORMING</PrereqTech>
 			<iCost>4123</iCost>
@@ -15117,7 +15117,7 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SHELLWORLD</BuildingType>
+				<BuildingType>BUILDING_ASTEROID_SHELL_WORLD</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15153,7 +15153,7 @@
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SHELLWORLD</BuildingType>
+				<BuildingType>BUILDING_ASTEROID_SHELL_WORLD</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15187,7 +15187,7 @@
 				<iYield>3</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SHELLWORLD</BuildingType>
+				<BuildingType>BUILDING_ASTEROID_SHELL_WORLD</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15218,7 +15218,7 @@
 			</YieldChanges>
 			<iHealth>1</iHealth>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SHELLWORLD</BuildingType>
+				<BuildingType>BUILDING_ASTEROID_SHELL_WORLD</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15253,7 +15253,7 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SHELLWORLD</BuildingType>
+				<BuildingType>BUILDING_ASTEROID_SHELL_WORLD</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23720,11 +23720,11 @@
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WORLDHOUSE</Type>
-			<Description>TXT_KEY_BUILDING_WORLDHOUSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WORLDHOUSE_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_WORLDHOUSE</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_WORLDHOUSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_WORLDHOUSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WORLDHOUSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_WORLDHOUSE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ECOSYNTHESIS</PrereqTech>
 			<iCost>3212</iCost>
@@ -24008,7 +24008,7 @@
 				<BuildingType>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingType>
 				<BuildingType>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingType>
 				<BuildingType>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</BuildingType>
-				<BuildingType>BUILDING_TRIANGULUM</BuildingType>
+				<BuildingType>BUILDING_TRIANGULUM_COLONY</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -24047,11 +24047,11 @@
 			<iRevIdxLocal>-25</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASTROPOLIS</Type>
-			<Description>TXT_KEY_BUILDING_ASTROPOLIS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ASTROPOLIS_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERGALACTIC_ASTROPOLIS</Type>
+			<Description>TXT_KEY_BUILDING_INTERGALACTIC_ASTROPOLIS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERGALACTIC_ASTROPOLIS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ASTROPOLIS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_ASTROPOLIS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
 			<iCost>2853</iCost>
@@ -24707,7 +24707,7 @@
 				<iYield>30</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ASTROPOLIS</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_ASTROPOLIS</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_CHRONOTON</Bonus>
 		</BuildingInfo>
@@ -26063,7 +26063,7 @@
 				<BuildingType>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingType>
 				<BuildingType>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</BuildingType>
 				<BuildingType>BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</BuildingType>
-				<BuildingType>BUILDING_TRIANGULUM</BuildingType>
+				<BuildingType>BUILDING_TRIANGULUM_COLONY</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -26196,7 +26196,7 @@
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MERGED_MEGAGALAXY</BuildingType>
-				<BuildingType>BUILDING_ASTROPOLIS</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_ASTROPOLIS</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>-20</iRevIdxLocal>
 		</BuildingInfo>
@@ -26233,11 +26233,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NEUTRONIUM</Type>
-			<Description>TXT_KEY_BUILDING_NEUTRONIUM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NEUTRONIUM_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERGALACTIC_NEUTRONIUM_FOUNDRY</Type>
+			<Description>TXT_KEY_BUILDING_INTERGALACTIC_NEUTRONIUM_FOUNDRY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERGALACTIC_NEUTRONIUM_FOUNDRY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NEUTRONIUM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_NEUTRONIUM_FOUNDRY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_NEUTRONIUM</PrereqTech>
 			<iCost>4492</iCost>
@@ -26550,7 +26550,7 @@
 				<BuildingType>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingType>
 				<BuildingType>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingType>
 				<BuildingType>BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</BuildingType>
-				<BuildingType>BUILDING_TRIANGULUM</BuildingType>
+				<BuildingType>BUILDING_TRIANGULUM_COLONY</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -26680,7 +26680,7 @@
 				<BuildingType>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingType>
 				<BuildingType>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</BuildingType>
 				<BuildingType>BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</BuildingType>
-				<BuildingType>BUILDING_TRIANGULUM</BuildingType>
+				<BuildingType>BUILDING_TRIANGULUM_COLONY</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -26899,13 +26899,13 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRIANGULUM</Type>
+			<Type>BUILDING_TRIANGULUM_COLONY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_TRIANGULUM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRIANGULUM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TRIANGULUM_COLONY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TRIANGULUM_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TRIANGULUM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TRIANGULUM_COLONY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TRIANGULUM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
@@ -27179,11 +27179,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZETTAVERSE</Type>
-			<Description>TXT_KEY_BUILDING_ZETTAVERSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZETTAVERSE_PEDIA</Civilopedia>
+			<Type>BUILDING_ZETTAVERSE_PORTAL</Type>
+			<Description>TXT_KEY_BUILDING_ZETTAVERSE_PORTAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ZETTAVERSE_PORTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZETTAVERSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ZETTAVERSE_PORTAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MACROVERSE_TRAVERSAL</PrereqTech>
 			<iCost>11410</iCost>
@@ -27282,7 +27282,7 @@
 			<FreeBuilding>BUILDING_HYPERSPACE_GOVERNING_COUNCIL</FreeBuilding>
 			<iGlobalHappiness>-3</iGlobalHappiness>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_COSMOPOLIS</BuildingType>
+				<BuildingType>BUILDING_DISTANT_COSMOPOLIS</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>-20</iRevIdxLocal>
 		</BuildingInfo>
@@ -27586,11 +27586,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COSMOPOLIS</Type>
-			<Description>TXT_KEY_BUILDING_COSMOPOLIS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COSMOPOLIS_PEDIA</Civilopedia>
+			<Type>BUILDING_DISTANT_COSMOPOLIS</Type>
+			<Description>TXT_KEY_BUILDING_DISTANT_COSMOPOLIS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DISTANT_COSMOPOLIS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COSMOPOLIS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DISTANT_COSMOPOLIS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_HORIZON_BREAKING</PrereqTech>
 			<iCost>1261</iCost>
@@ -27750,7 +27750,7 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_COSMOPOLIS</BuildingType>
+				<BuildingType>BUILDING_DISTANT_COSMOPOLIS</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -27782,7 +27782,7 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_COSMOPOLIS</BuildingType>
+				<BuildingType>BUILDING_DISTANT_COSMOPOLIS</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -28010,7 +28010,7 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_COSMOPOLIS</BuildingType>
+				<BuildingType>BUILDING_DISTANT_COSMOPOLIS</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -28275,7 +28275,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_COSMOPOLIS</BuildingType>
+				<BuildingType>BUILDING_DISTANT_COSMOPOLIS</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -30109,11 +30109,11 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_YOTTAVERSE</Type>
-			<Description>TXT_KEY_BUILDING_YOTTAVERSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_YOTTAVERSE_PEDIA</Civilopedia>
+			<Type>BUILDING_YOTTAVERSE_PORTAL</Type>
+			<Description>TXT_KEY_BUILDING_YOTTAVERSE_PORTAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_YOTTAVERSE_PORTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_YOTTAVERSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_YOTTAVERSE_PORTAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MACROVERSE_TRAVERSAL</PrereqTech>
 			<iCost>3423</iCost>
