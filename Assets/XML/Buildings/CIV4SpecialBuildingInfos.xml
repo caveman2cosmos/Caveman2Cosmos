@@ -3,7 +3,7 @@
 	<SpecialBuildingInfos>
 		<SpecialBuildingInfo>
 			<!-- @SAVEBREAK Remove this on savebreak -->
-			<Type>SPECIALBUILDING_BOMB_SHELTER</Type>
+			<Type>SPECIALBUILDING_BOMB_SHELTERS</Type>
 			<bValid>0</bValid>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
@@ -71,8 +71,8 @@
 			<bValid>0</bValid>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>
-			<Type>SPECIALBUILDING_FUSION_PLANT</Type>
-			<Description>TXT_KEY_SPECIALBUILDING_FUSION_PLANT</Description>
+			<Type>SPECIALBUILDING_D_T_FUSION_POWER_PLANT</Type>
+			<Description>TXT_KEY_SPECIALBUILDING_D_T_FUSION_POWER_PLANT</Description>
 			<bValid>0</bValid>
 		</SpecialBuildingInfo>
 		<SpecialBuildingInfo>

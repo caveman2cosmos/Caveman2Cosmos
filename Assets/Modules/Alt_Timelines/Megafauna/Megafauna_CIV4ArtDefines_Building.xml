@@ -6,7 +6,7 @@
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<BuildingArtInfos>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BEAR_TRAINER</Type>
+			<Type>ART_DEF_BUILDING_ANIMAL_TRAINER_BEAR</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16,7 +16,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/bear_trainer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BEAR_TRAINER_EFFECT</Type>
+			<Type>ART_DEF_BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -76,7 +76,7 @@
 			<Button>Art/Interface/Buttons/Buildings/BisonTrainer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DEER_TRAINER</Type>
+			<Type>ART_DEF_BUILDING_ANIMAL_TRAINER_DEER</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -86,7 +86,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/deer_trainer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DEER_TRAINER_HERITAGE</Type>
+			<Type>ART_DEF_BUILDING_HERITAGE_DEER</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -136,7 +136,7 @@
 			<Button>art/Pets/art/mammothtrainer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MAMMOTH_HERD</Type>
+			<Type>ART_DEF_BUILDING_HERD_MAMMOTH</Type>
 			<LSystem />
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

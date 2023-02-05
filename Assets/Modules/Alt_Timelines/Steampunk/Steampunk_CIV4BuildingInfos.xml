@@ -12,7 +12,7 @@
 			<ObsoletesToBuilding>BUILDING_HIGHTECHCOAL_PLANT</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HIGHTECHCOAL_PLANT</BuildingType>
-				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
@@ -61,7 +61,7 @@
 			<Type>BUILDING_CULTURE_X_INDIAN</Type>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_NEMO_ACADEMY</BuildingType>
+					<BuildingType>BUILDING_NEMOS_NAVAL_ACADEMY</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -144,10 +144,10 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MUNICIP_COMP</Type>
+			<Type>BUILDING_MUNICIPAL_COMPUTING_ENGINE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_MUNICIP_COMP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MUNICIP_COMP_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MUNICIPAL_COMPUTING_ENGINE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MUNICIPAL_COMPUTING_ENGINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COMPUTING_ENGINE</ArtDefineTag>
 			<ObsoleteTech>TECH_COMPUTER_NETWORKS</ObsoleteTech>
@@ -180,13 +180,13 @@
 			<iAsset>5</iAsset>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NEMO_ACADEMY</Type>
+			<Type>BUILDING_NEMOS_NAVAL_ACADEMY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_STEAM</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_NEMO_ACADEMY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NEMO_ACADEMY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NEMOS_NAVAL_ACADEMY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NEMOS_NAVAL_ACADEMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NEMO_ACADEMY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NEMOS_NAVAL_ACADEMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NEMO_ACADEMY</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

@@ -10149,7 +10149,7 @@
 				<Building>BUILDING_HARBOR</Building>
 				<Building>BUILDING_PORT</Building>
 				<Building>BUILDING_DRYDOCK</Building>
-				<Building>BUILDING_CUSTOM_HOUSE</Building>
+				<Building>BUILDING_CUSTOMS_OFFICE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -10178,7 +10178,7 @@
 				<Building>BUILDING_HARBOR</Building>
 				<Building>BUILDING_PORT</Building>
 				<Building>BUILDING_DRYDOCK</Building>
-				<Building>BUILDING_CUSTOM_HOUSE</Building>
+				<Building>BUILDING_CUSTOMS_OFFICE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -11426,7 +11426,7 @@
 			<iUnitExperienceWeight>0</iUnitExperienceWeight>
 			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
-				<Building>BUILDING_PLEISTO_PARK</Building>
+				<Building>BUILDING_PLEISTOCENE_PARK</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>

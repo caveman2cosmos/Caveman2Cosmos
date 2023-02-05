@@ -922,7 +922,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_REMOTE_NAVAL</BuildingType>
+					<BuildingType>BUILDING_REMOTE_NAVAL_TRAINING_CENTER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1737,7 +1737,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_REMOTE_NAVAL</BuildingType>
+					<BuildingType>BUILDING_REMOTE_NAVAL_TRAINING_CENTER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2026,7 +2026,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_REMOTE_NAVAL</BuildingType>
+					<BuildingType>BUILDING_REMOTE_NAVAL_TRAINING_CENTER</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2835,7 +2835,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_REMOTE_NAVAL</BuildingType>
+					<BuildingType>BUILDING_REMOTE_NAVAL_TRAINING_CENTER</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5591,7 +5591,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5647,7 +5647,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<BuildingType>BUILDING_BOMB_SHELTERS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5691,7 +5691,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_NANOBOT_WALL</BuildingType>
+					<BuildingType>BUILDING_NANOBOT_WALLS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5845,7 +5845,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<BuildingType>BUILDING_BOMB_SHELTERS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -5861,7 +5861,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_NANOBOT_WALL</BuildingType>
+					<BuildingType>BUILDING_NANOBOT_WALLS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -6286,7 +6286,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6733,7 +6733,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<BuildingType>BUILDING_BOMB_SHELTERS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6823,7 +6823,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<BuildingType>BUILDING_BOMB_SHELTERS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -7048,7 +7048,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_NANOBOT_WALL</BuildingType>
+					<BuildingType>BUILDING_NANOBOT_WALLS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -7106,7 +7106,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_NANOBOT_WALL</BuildingType>
+					<BuildingType>BUILDING_NANOBOT_WALLS</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -7358,7 +7358,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -7414,7 +7414,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<BuildingType>BUILDING_BOMB_SHELTERS</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -7458,7 +7458,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_NANOBOT_WALL</BuildingType>
+					<BuildingType>BUILDING_NANOBOT_WALLS</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -7825,7 +7825,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -8092,7 +8092,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<BuildingType>BUILDING_BOMB_SHELTERS</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -8319,7 +8319,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_NANOBOT_WALL</BuildingType>
+					<BuildingType>BUILDING_NANOBOT_WALLS</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -8531,7 +8531,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -8903,7 +8903,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -9495,7 +9495,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -9827,7 +9827,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -11993,11 +11993,11 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
+					<BuildingType>BUILDING_ANIMAL_SNARE_TRAPS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BEAVER_TRAPS</BuildingType>
+					<BuildingType>BUILDING_TRAP_BEAVER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -12013,7 +12013,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_RABBIT_TRAPS</BuildingType>
+					<BuildingType>BUILDING_TRAP_RABBIT</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -12029,7 +12029,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_AUROCHS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -12041,7 +12041,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CARIBOU_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_CARIBOU</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -12065,7 +12065,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_GIRAFFE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -12085,7 +12085,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MAMMOTH_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_MAMMOTH</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -12101,7 +12101,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MOUFLON_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_MOUFLON</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -12109,7 +12109,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OSTRICH_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_OSTRICH</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -12137,7 +12137,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HUNTING_DOGS</BuildingType>
+					<BuildingType>BUILDING_HUNTING_DOG_TRAINER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -12177,7 +12177,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HERDING_DOGS</BuildingType>
+					<BuildingType>BUILDING_HERDING_DOG_TRAINER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -12217,7 +12217,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OSTRICH_FARM</BuildingType>
+					<BuildingType>BUILDING_FARM_ANIMAL_OSTRICH</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -12253,7 +12253,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
+					<BuildingType>BUILDING_ANIMAL_TRAINER_DONKEY</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -13597,11 +13597,11 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
+					<BuildingType>BUILDING_ANIMAL_SNARE_TRAPS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BEAVER_TRAPS</BuildingType>
+					<BuildingType>BUILDING_TRAP_BEAVER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -13617,7 +13617,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_RABBIT_TRAPS</BuildingType>
+					<BuildingType>BUILDING_TRAP_RABBIT</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -13633,7 +13633,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_AUROCHS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -13645,7 +13645,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CARIBOU_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_CARIBOU</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -13669,7 +13669,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_GIRAFFE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -13689,7 +13689,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MAMMOTH_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_MAMMOTH</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -13705,7 +13705,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MOUFLON_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_MOUFLON</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -13713,7 +13713,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OSTRICH_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_OSTRICH</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -13741,7 +13741,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HUNTING_DOGS</BuildingType>
+					<BuildingType>BUILDING_HUNTING_DOG_TRAINER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -13781,7 +13781,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HERDING_DOGS</BuildingType>
+					<BuildingType>BUILDING_HERDING_DOG_TRAINER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -13821,7 +13821,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OSTRICH_FARM</BuildingType>
+					<BuildingType>BUILDING_FARM_ANIMAL_OSTRICH</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -13857,7 +13857,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
+					<BuildingType>BUILDING_ANIMAL_TRAINER_DONKEY</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -14897,11 +14897,11 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
+					<BuildingType>BUILDING_ANIMAL_SNARE_TRAPS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BEAVER_TRAPS</BuildingType>
+					<BuildingType>BUILDING_TRAP_BEAVER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -14917,7 +14917,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_RABBIT_TRAPS</BuildingType>
+					<BuildingType>BUILDING_TRAP_RABBIT</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -14933,7 +14933,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_AUROCHS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -14945,7 +14945,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CARIBOU_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_CARIBOU</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -14969,7 +14969,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_GIRAFFE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -14989,7 +14989,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MAMMOTH_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_MAMMOTH</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -15005,7 +15005,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MOUFLON_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_MOUFLON</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -15013,7 +15013,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OSTRICH_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_OSTRICH</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -15041,7 +15041,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HUNTING_DOGS</BuildingType>
+					<BuildingType>BUILDING_HUNTING_DOG_TRAINER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -15081,7 +15081,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HERDING_DOGS</BuildingType>
+					<BuildingType>BUILDING_HERDING_DOG_TRAINER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -15121,7 +15121,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OSTRICH_FARM</BuildingType>
+					<BuildingType>BUILDING_FARM_ANIMAL_OSTRICH</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -15157,7 +15157,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
+					<BuildingType>BUILDING_ANIMAL_TRAINER_DONKEY</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -15943,11 +15943,11 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ANIMAL_TRAPS</BuildingType>
+					<BuildingType>BUILDING_ANIMAL_SNARE_TRAPS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BEAVER_TRAPS</BuildingType>
+					<BuildingType>BUILDING_TRAP_BEAVER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -15963,7 +15963,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_RABBIT_TRAPS</BuildingType>
+					<BuildingType>BUILDING_TRAP_RABBIT</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -15979,7 +15979,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_AUROCHS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -15991,7 +15991,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CARIBOU_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_CARIBOU</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -16015,7 +16015,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_GIRAFFE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -16035,7 +16035,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MAMMOTH_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_MAMMOTH</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -16051,7 +16051,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MOUFLON_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_MOUFLON</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -16059,7 +16059,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OSTRICH_CAMP</BuildingType>
+					<BuildingType>BUILDING_CAMP_OSTRICH</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -16087,7 +16087,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HUNTING_DOGS</BuildingType>
+					<BuildingType>BUILDING_HUNTING_DOG_TRAINER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -16127,7 +16127,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_HERDING_DOGS</BuildingType>
+					<BuildingType>BUILDING_HERDING_DOG_TRAINER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -16167,7 +16167,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OSTRICH_FARM</BuildingType>
+					<BuildingType>BUILDING_FARM_ANIMAL_OSTRICH</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -16203,7 +16203,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
+					<BuildingType>BUILDING_ANIMAL_TRAINER_DONKEY</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -17284,7 +17284,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_WIND_HIGHWAY</BuildingType>
+					<BuildingType>BUILDING_WIND_TURBINE_HIGHWAY</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -17304,7 +17304,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ORBITAL_LABS</BuildingType>
+					<BuildingType>BUILDING_CISLUNAR_LABS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -17484,7 +17484,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_STATION_PUMP</BuildingType>
+					<BuildingType>BUILDING_WATER_PUMPING_STATION</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -18635,7 +18635,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_STATION_PUMP</BuildingType>
+					<BuildingType>BUILDING_WATER_PUMPING_STATION</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -19076,7 +19076,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_WIND_HIGHWAY</BuildingType>
+					<BuildingType>BUILDING_WIND_TURBINE_HIGHWAY</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -19096,7 +19096,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ORBITAL_LABS</BuildingType>
+					<BuildingType>BUILDING_CISLUNAR_LABS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -24207,7 +24207,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_KINGSCOUNCIL</BuildingType>
+					<BuildingType>BUILDING_KINGS_COUNCIL</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -24333,7 +24333,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_KINGSCOUNCIL</BuildingType>
+					<BuildingType>BUILDING_KINGS_COUNCIL</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -24540,7 +24540,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_KINGSCOUNCIL</BuildingType>
+					<BuildingType>BUILDING_KINGS_COUNCIL</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -24666,7 +24666,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_KINGSCOUNCIL</BuildingType>
+					<BuildingType>BUILDING_KINGS_COUNCIL</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -24873,7 +24873,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_KINGSCOUNCIL</BuildingType>
+					<BuildingType>BUILDING_KINGS_COUNCIL</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -24999,7 +24999,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_KINGSCOUNCIL</BuildingType>
+					<BuildingType>BUILDING_KINGS_COUNCIL</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -25206,7 +25206,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_KINGSCOUNCIL</BuildingType>
+					<BuildingType>BUILDING_KINGS_COUNCIL</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -25413,7 +25413,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_KINGSCOUNCIL</BuildingType>
+					<BuildingType>BUILDING_KINGS_COUNCIL</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -25539,7 +25539,7 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_KINGSCOUNCIL</BuildingType>
+					<BuildingType>BUILDING_KINGS_COUNCIL</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -25746,7 +25746,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_KINGSCOUNCIL</BuildingType>
+					<BuildingType>BUILDING_KINGS_COUNCIL</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -25872,7 +25872,7 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_KINGSCOUNCIL</BuildingType>
+					<BuildingType>BUILDING_KINGS_COUNCIL</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -26079,7 +26079,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_KINGSCOUNCIL</BuildingType>
+					<BuildingType>BUILDING_KINGS_COUNCIL</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -26205,7 +26205,7 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_KINGSCOUNCIL</BuildingType>
+					<BuildingType>BUILDING_KINGS_COUNCIL</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -26412,7 +26412,7 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_KINGSCOUNCIL</BuildingType>
+					<BuildingType>BUILDING_KINGS_COUNCIL</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -38382,7 +38382,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
+					<BuildingType>BUILDING_MOVIE_THEATRE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -38470,7 +38470,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_NEON_BOTIQUE</BuildingType>
+					<BuildingType>BUILDING_NEON_BOUTIQUE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -38748,7 +38748,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
+					<BuildingType>BUILDING_MOVIE_THEATRE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -38820,7 +38820,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_NEON_BOTIQUE</BuildingType>
+					<BuildingType>BUILDING_NEON_BOUTIQUE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -40168,7 +40168,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
+					<BuildingType>BUILDING_MOVIE_THEATRE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -40334,7 +40334,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
+					<BuildingType>BUILDING_MOVIE_THEATRE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -40662,7 +40662,7 @@
 			</CommerceModifiers>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_NEON_BOTIQUE</BuildingType>
+					<BuildingType>BUILDING_NEON_BOUTIQUE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -40732,7 +40732,7 @@
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_NEON_BOTIQUE</BuildingType>
+					<BuildingType>BUILDING_NEON_BOUTIQUE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -41176,7 +41176,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
+					<BuildingType>BUILDING_MOVIE_THEATRE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -41264,7 +41264,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_NEON_BOTIQUE</BuildingType>
+					<BuildingType>BUILDING_NEON_BOUTIQUE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -42502,7 +42502,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
+					<BuildingType>BUILDING_MOVIE_THEATRE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -42863,7 +42863,7 @@
 			</CommerceModifiers>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_NEON_BOTIQUE</BuildingType>
+					<BuildingType>BUILDING_NEON_BOUTIQUE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -43149,11 +43149,11 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_COUNTERS_HUT</BuildingType>
+					<BuildingType>BUILDING_TAXPERSON</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_PEARL_DIVERS</BuildingType>
+					<BuildingType>BUILDING_PEARL_DIVER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -43161,11 +43161,11 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_DIAMOND_MINE</BuildingType>
+					<BuildingType>BUILDING_MINE_DIAMOND</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EMERALD_MINE</BuildingType>
+					<BuildingType>BUILDING_MINE_EMERALD</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -43173,7 +43173,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SAPPIRE_MINE</BuildingType>
+					<BuildingType>BUILDING_MINE_SAPPHIRE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -43321,7 +43321,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+					<BuildingType>BUILDING_CUSTOMS_OFFICE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -43449,7 +43449,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FOSSIL_AMBER</BuildingType>
+					<BuildingType>BUILDING_MINE_AMBER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -43954,11 +43954,11 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_COUNTERS_HUT</BuildingType>
+					<BuildingType>BUILDING_TAXPERSON</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_PEARL_DIVERS</BuildingType>
+					<BuildingType>BUILDING_PEARL_DIVER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -43966,11 +43966,11 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_DIAMOND_MINE</BuildingType>
+					<BuildingType>BUILDING_MINE_DIAMOND</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EMERALD_MINE</BuildingType>
+					<BuildingType>BUILDING_MINE_EMERALD</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -43978,7 +43978,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SAPPIRE_MINE</BuildingType>
+					<BuildingType>BUILDING_MINE_SAPPHIRE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -44110,7 +44110,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FOSSIL_AMBER</BuildingType>
+					<BuildingType>BUILDING_MINE_AMBER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -44162,7 +44162,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+					<BuildingType>BUILDING_CUSTOMS_OFFICE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -44457,7 +44457,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+					<BuildingType>BUILDING_CUSTOMS_OFFICE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -45065,11 +45065,11 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_COUNTERS_HUT</BuildingType>
+					<BuildingType>BUILDING_TAXPERSON</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_PEARL_DIVERS</BuildingType>
+					<BuildingType>BUILDING_PEARL_DIVER</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -45077,11 +45077,11 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_DIAMOND_MINE</BuildingType>
+					<BuildingType>BUILDING_MINE_DIAMOND</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EMERALD_MINE</BuildingType>
+					<BuildingType>BUILDING_MINE_EMERALD</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -45089,7 +45089,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SAPPIRE_MINE</BuildingType>
+					<BuildingType>BUILDING_MINE_SAPPHIRE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -45237,7 +45237,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+					<BuildingType>BUILDING_CUSTOMS_OFFICE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -45365,7 +45365,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FOSSIL_AMBER</BuildingType>
+					<BuildingType>BUILDING_MINE_AMBER</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -45865,11 +45865,11 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_COUNTERS_HUT</BuildingType>
+					<BuildingType>BUILDING_TAXPERSON</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_PEARL_DIVERS</BuildingType>
+					<BuildingType>BUILDING_PEARL_DIVER</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -45877,11 +45877,11 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_DIAMOND_MINE</BuildingType>
+					<BuildingType>BUILDING_MINE_DIAMOND</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EMERALD_MINE</BuildingType>
+					<BuildingType>BUILDING_MINE_EMERALD</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -45889,7 +45889,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SAPPIRE_MINE</BuildingType>
+					<BuildingType>BUILDING_MINE_SAPPHIRE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -46021,7 +46021,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FOSSIL_AMBER</BuildingType>
+					<BuildingType>BUILDING_MINE_AMBER</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -46073,7 +46073,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+					<BuildingType>BUILDING_CUSTOMS_OFFICE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -46361,7 +46361,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+					<BuildingType>BUILDING_CUSTOMS_OFFICE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -50546,7 +50546,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ORBITAL_LABS</BuildingType>
+					<BuildingType>BUILDING_CISLUNAR_LABS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -51965,7 +51965,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ORBITAL_LABS</BuildingType>
+					<BuildingType>BUILDING_CISLUNAR_LABS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -52594,7 +52594,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ORBITAL_LABS</BuildingType>
+					<BuildingType>BUILDING_CISLUNAR_LABS</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -53953,7 +53953,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ORBITAL_LABS</BuildingType>
+					<BuildingType>BUILDING_CISLUNAR_LABS</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -65412,7 +65412,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_TANK_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_TANKS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -65432,7 +65432,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MISSILE_SILO</BuildingType>
+					<BuildingType>BUILDING_MISSILE_LAB</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -66142,7 +66142,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_TANK_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_TANKS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -66162,7 +66162,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MISSILE_SILO</BuildingType>
+					<BuildingType>BUILDING_MISSILE_LAB</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -66672,7 +66672,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_TANK_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_TANKS</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -66692,7 +66692,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MISSILE_SILO</BuildingType>
+					<BuildingType>BUILDING_MISSILE_LAB</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -67401,7 +67401,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_TANK_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_TANKS</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -67421,7 +67421,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MISSILE_SILO</BuildingType>
+					<BuildingType>BUILDING_MISSILE_LAB</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -70374,7 +70374,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_COUNTERS_HUT</BuildingType>
+					<BuildingType>BUILDING_TAXPERSON</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -70666,7 +70666,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_NANOBOT_WALL</BuildingType>
+					<BuildingType>BUILDING_NANOBOT_WALLS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -71300,7 +71300,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_COUNTERS_HUT</BuildingType>
+					<BuildingType>BUILDING_TAXPERSON</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -72278,7 +72278,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_NANOBOT_WALL</BuildingType>
+					<BuildingType>BUILDING_NANOBOT_WALLS</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -72614,7 +72614,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CIGAR_ROLLER</BuildingType>
+					<BuildingType>BUILDING_CIGAR_ROLLERS_SHOP</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -72678,7 +72678,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_POACHER_CAMP</BuildingType>
+					<BuildingType>BUILDING_POACHERS_CAMP</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -73251,7 +73251,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CIGAR_ROLLER</BuildingType>
+					<BuildingType>BUILDING_CIGAR_ROLLERS_SHOP</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -73572,7 +73572,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_POACHER_CAMP</BuildingType>
+					<BuildingType>BUILDING_POACHERS_CAMP</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -74133,11 +74133,11 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ALPHAFEMALES</BuildingType>
+					<BuildingType>BUILDING_ALPHA_FEMALE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CHILDCAREHUT</BuildingType>
+					<BuildingType>BUILDING_CHILDCARE_HUT</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -74277,7 +74277,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SOAP_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SOAP</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -74293,7 +74293,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+					<BuildingType>BUILDING_VETERINARIAN</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -74862,11 +74862,11 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ALPHAFEMALES</BuildingType>
+					<BuildingType>BUILDING_ALPHA_FEMALE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CHILDCAREHUT</BuildingType>
+					<BuildingType>BUILDING_CHILDCARE_HUT</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -75022,7 +75022,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SOAP_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SOAP</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -75030,7 +75030,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+					<BuildingType>BUILDING_VETERINARIAN</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -75319,7 +75319,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SOAP_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SOAP</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -75335,7 +75335,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+					<BuildingType>BUILDING_VETERINARIAN</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -75956,11 +75956,11 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ALPHAFEMALES</BuildingType>
+					<BuildingType>BUILDING_ALPHA_FEMALE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CHILDCAREHUT</BuildingType>
+					<BuildingType>BUILDING_CHILDCARE_HUT</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -76100,7 +76100,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SOAP_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SOAP</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -76116,7 +76116,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+					<BuildingType>BUILDING_VETERINARIAN</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -76720,11 +76720,11 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ALPHAFEMALES</BuildingType>
+					<BuildingType>BUILDING_ALPHA_FEMALE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CHILDCAREHUT</BuildingType>
+					<BuildingType>BUILDING_CHILDCARE_HUT</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -76880,7 +76880,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SOAP_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SOAP</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -76888,7 +76888,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+					<BuildingType>BUILDING_VETERINARIAN</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -77180,7 +77180,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SOAP_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SOAP</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -77196,7 +77196,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+					<BuildingType>BUILDING_VETERINARIAN</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>

@@ -583,7 +583,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -984,7 +984,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_HINDU_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_KASHI_VISHWANATH</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>20</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1112,7 +1112,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_DRUID_SHRINE</BuildingType>
+					<BuildingType>BUILDING_NATURE_ANSWER</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1136,7 +1136,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_BAHAI_SHRINE</BuildingType>
+					<BuildingType>BUILDING_SHRINE_OF_BAB</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -2771,7 +2771,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_GREAT_PALACE</BuildingType>
+					<BuildingType>BUILDING_FORBIDDEN_PALACE</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -3210,7 +3210,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+					<BuildingType>BUILDING_CUSTOMS_OFFICE</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -6062,7 +6062,7 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -7504,7 +7504,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_GREAT_PALACE</BuildingType>
+					<BuildingType>BUILDING_FORBIDDEN_PALACE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -7818,7 +7818,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_HINDU_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_KASHI_VISHWANATH</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7946,7 +7946,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_DRUID_SHRINE</BuildingType>
+					<BuildingType>BUILDING_NATURE_ANSWER</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7970,7 +7970,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_BAHAI_SHRINE</BuildingType>
+					<BuildingType>BUILDING_SHRINE_OF_BAB</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -8415,7 +8415,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EINSTEIN_LAB</BuildingType>
+					<BuildingType>BUILDING_EINSTEINS_LABORATORY</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -10253,7 +10253,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<BuildingType>BUILDING_BOMB_SHELTERS</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -13338,7 +13338,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
+					<BuildingType>BUILDING_MOVIE_THEATRE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -21910,7 +21910,7 @@
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_GARBAGE_DUMP</BuildingType>
+					<BuildingType>BUILDING_LANDFILL</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>

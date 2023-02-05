@@ -466,7 +466,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_FUSION_PLANT</MovieDefineTag>
 			<iMaxTeamInstances>1</iMaxTeamInstances>
 			<iCost>18440</iCost>
-			<EveryoneSpecialBuilding>SPECIALBUILDING_FUSION_PLANT</EveryoneSpecialBuilding>
+			<EveryoneSpecialBuilding>SPECIALBUILDING_D_T_FUSION_POWER_PLANT</EveryoneSpecialBuilding>
 			<Button>Art/Interface/Buttons/buildings/ITER.dds</Button>
 		</ProjectInfo>
 		<ProjectInfo>

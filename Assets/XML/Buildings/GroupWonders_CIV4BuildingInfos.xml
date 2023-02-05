@@ -1769,16 +1769,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KILGII_GWAAY</Type>
+			<Type>BUILDING_LL_KILGII_GWAAY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KILGII_GWAAY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KILGII_GWAAY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LL_KILGII_GWAAY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LL_KILGII_GWAAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_LEGENDARY_LANDSCAPES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_KILGII_GWAAY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LL_KILGII_GWAAY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KILGII_GWAAY</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2148,16 +2148,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEDRA_FURADA</Type>
+			<Type>BUILDING_PC_PEDRA_FURADA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEDRA_FURADA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PEDRA_FURADA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PC_PEDRA_FURADA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PC_PEDRA_FURADA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_PREHISTORIC_CAVES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_PEDRA_FURADA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PC_PEDRA_FURADA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PEDRA_FURADA</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>

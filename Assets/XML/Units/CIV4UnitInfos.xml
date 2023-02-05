@@ -605,7 +605,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
@@ -670,7 +670,7 @@ Base XP gained when defending
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>

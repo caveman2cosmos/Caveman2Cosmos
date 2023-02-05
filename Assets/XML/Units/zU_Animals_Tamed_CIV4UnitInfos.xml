@@ -54,7 +54,7 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BIG_CAT</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -62,7 +62,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BIG_CAT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
@@ -143,7 +143,7 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BIG_CAT</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -151,7 +151,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BIG_CAT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
@@ -420,7 +420,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_DONKEY</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
@@ -755,7 +755,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BUFFALO_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_BUFFALO</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
@@ -849,7 +849,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_AUROCHS</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_HERD_COW</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
@@ -2342,7 +2342,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -2522,8 +2522,8 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GUARD_DOG_TRAINER</BuildingType>
-				<BuildingType>BUILDING_HERDING_DOGS</BuildingType>
-				<BuildingType>BUILDING_HUNTING_DOGS</BuildingType>
+				<BuildingType>BUILDING_HERDING_DOG_TRAINER</BuildingType>
+				<BuildingType>BUILDING_HUNTING_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_POLICE_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_SLED_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -3308,13 +3308,13 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
-				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_KOMODO_DRAGON</BuildingType>
@@ -3398,7 +3398,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
-				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_SNAKE_CHARMER</BuildingType>
 				<BuildingType>BUILDING_SNAKE_PIT</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -3407,7 +3407,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_SNAKE_CHARMER</BuildingType>
-				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
@@ -3725,8 +3725,8 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GUARD_DOG_TRAINER</BuildingType>
-				<BuildingType>BUILDING_HERDING_DOGS</BuildingType>
-				<BuildingType>BUILDING_HUNTING_DOGS</BuildingType>
+				<BuildingType>BUILDING_HERDING_DOG_TRAINER</BuildingType>
+				<BuildingType>BUILDING_HUNTING_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_POLICE_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_SLED_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -3826,7 +3826,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
-				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_POULTRY</BuildingType>
 				<BuildingType>BUILDING_FARM_ANIMAL_DUCK</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -3914,7 +3914,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
-				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_POULTRY</BuildingType>
 				<BuildingType>BUILDING_FARM_ANIMAL_TURKEY</BuildingType>
 				<BuildingType>BUILDING_TURKEY_FLOCKS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>

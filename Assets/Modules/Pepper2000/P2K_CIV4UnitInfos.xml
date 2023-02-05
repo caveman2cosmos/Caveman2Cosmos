@@ -995,7 +995,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INTERGALACTIC_WORMHOLE</BuildingType>
-				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
+				<BuildingType>BUILDING_DISTANT_HORIZON_PORT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_HORIZON_BREAKING</PrereqTech>
 			<iCost>4850</iCost>
@@ -1911,7 +1911,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_VENUS_COLONY</BuildingType>
+				<BuildingType>BUILDING_SPACE_COLONY_VENUS</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<iCost>4850</iCost>
@@ -2163,7 +2163,7 @@
 				<BuildType>BUILD_TERRAFORM_MARS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_FACTORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iCost>1500</iCost>
@@ -2402,7 +2402,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MARS_FACTORY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_FACTORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
 			<iCost>4850</iCost>
@@ -2966,7 +2966,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_INTERSTELLAR_STARPORT</BuildingType>
 				<BuildingType>BUILDING_INTERGALACTIC_STARPORT</BuildingType>
-				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
+				<BuildingType>BUILDING_DISTANT_HORIZON_PORT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_PHASING</PrereqTech>
 			<iCost>5000</iCost>
@@ -5431,7 +5431,7 @@
 				</Action>
 			</Actions>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HORIZON_PORT</BuildingType>
+				<BuildingType>BUILDING_DISTANT_HORIZON_PORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ENDLESS_EXPLORATION</PrereqTech>
 			<iCost>5000</iCost>
@@ -6971,7 +6971,7 @@
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
 			<Buildings>
 				<BuildingType>BUILDING_MARS_SCIENCE_LAB</BuildingType>
-				<BuildingType>BUILDING_MISSION_MARS</BuildingType>
+				<BuildingType>BUILDING_MISSION_TO_MARS</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>

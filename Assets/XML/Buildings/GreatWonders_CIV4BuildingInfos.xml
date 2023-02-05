@@ -1485,16 +1485,16 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASSYRIA_EKAL</Type>
+			<Type>BUILDING_EKAL_MASHARTI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ASSYRIA_EKAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ASSYRIA_EKAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EKAL_MASHARTI</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EKAL_MASHARTI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ASSYRIA_EKAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EKAL_MASHARTI</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ASSYRIA_EKAL</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1747,12 +1747,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BAKER_STREET</Type>
+			<Type>BUILDING_221B_BAKER_STREET</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_BAKER_STREET</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BAKER_STREET_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_221B_BAKER_STREET</Description>
+			<Civilopedia>TXT_KEY_BUILDING_221B_BAKER_STREET_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BAKER_STREET</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_221B_BAKER_STREET</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BAKER_STREET</MovieDefineTag>
 			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
@@ -3422,7 +3422,7 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
+					<BuildingType>BUILDING_MOVIE_THEATRE</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -5108,15 +5108,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DALI_THEATRE</Type>
+			<Type>BUILDING_DALI_THEATRE_AND_MUSEUM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DALI_THEATRE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DALI_THEATRE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DALI_THEATRE_AND_MUSEUM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DALI_THEATRE_AND_MUSEUM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DALI_THEATRE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DALI_THEATRE_AND_MUSEUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DALI_THEATRE</MovieDefineTag>
 			<PrereqTech>TECH_SURREALISM</PrereqTech>
 			<iCost>7080</iCost>
@@ -6087,7 +6087,7 @@
 				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SKY_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_GRAND_SKY_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_FIRE_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
@@ -6239,13 +6239,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ECUMENOPOLIS_EARTH</Type>
+			<Type>BUILDING_INTERSTELLAR_ECUMENOPOLIS_EARTH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_ECUMENOPOLIS_EARTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ECUMENOPOLIS_EARTH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_ECUMENOPOLIS_EARTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_ECUMENOPOLIS_EARTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ECUMENOPOLIS_EARTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_ECUMENOPOLIS_EARTH</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ECUMENOPOLIS_EARTH</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -6511,15 +6511,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EINSTEIN_LAB</Type>
+			<Type>BUILDING_EINSTEINS_LABORATORY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EINSTEIN_LAB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EINSTEIN_LAB_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EINSTEINS_LABORATORY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EINSTEINS_LABORATORY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EINSTEIN_LAB</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EINSTEINS_LABORATORY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EINSTEIN</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_UNIVERSITY</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
@@ -7480,7 +7480,7 @@
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SKY_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_GRAND_SKY_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
@@ -7887,15 +7887,15 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FRENCH_SALON</Type>
+			<Type>BUILDING_SALON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FRENCH_SALON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FRENCH_SALON_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SALON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SALON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FRENCH_SALON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SALON</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FRENCH_SALON</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_OBSERVATORY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -8717,7 +8717,7 @@
 			<PrereqTech>TECH_MOTION_PICTURES</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
+				<BuildingType>BUILDING_MOVIE_THEATRE</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>4980</iCost>
 			<iHappiness>3</iHappiness>
@@ -8738,7 +8738,7 @@
 			</SpecialistCounts>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
-			<FreeBuilding>BUILDING_MOVIETHEATRE</FreeBuilding>
+			<FreeBuilding>BUILDING_MOVIE_THEATRE</FreeBuilding>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -9109,7 +9109,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GREAT_PYRAMID</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GREAT_PYRAMID_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_VALLEY_KINGS_HELP</Help>
+			<Help>TXT_KEY_BUILDING_VALLEY_OF_THE_KINGS_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PYRAMID</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PYRAMIDS</MovieDefineTag>
@@ -9317,16 +9317,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GREAT_SPHINX</Type>
+			<Type>BUILDING_THE_GREAT_SPHINX</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GREAT_SPHINX</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GREAT_SPHINX_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_VALLEY_KINGS_HELP</Help>
+			<Description>TXT_KEY_BUILDING_THE_GREAT_SPHINX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_GREAT_SPHINX_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_VALLEY_OF_THE_KINGS_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GREAT_SPHINX</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_GREAT_SPHINX</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SPHINX</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_PYRAMID</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
@@ -9544,13 +9544,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HADRIAN_WALL</Type>
+			<Type>BUILDING_HADRIANS_WALL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HADRIAN_WALL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HADRIAN_WALL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HADRIANS_WALL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HADRIANS_WALL_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CONSTRUCTION</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<iCost>1404</iCost>
@@ -9811,7 +9811,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BEADWORKER</BuildingType>
 				<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
-				<BuildingType>BUILDING_BEAD_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_BEADS</BuildingType>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1008</iCost>
@@ -11821,7 +11821,7 @@
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_HERD_COW</BuildingType>
-				<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_AUROCHS</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
@@ -13037,7 +13037,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_SEA</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
@@ -13048,7 +13048,7 @@
 				<BuildingType>BUILDING_AQUAFARM</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SKY_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_GRAND_SKY_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_EARTH_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_FIRE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
@@ -14353,7 +14353,7 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_E_SKY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EARTH</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrTerrain>
@@ -15149,7 +15149,7 @@
 			</CommerceChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OCEAN_COLONY</BuildingType>
+					<BuildingType>BUILDING_OCEAN_CITY</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -15158,7 +15158,7 @@
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_OCEAN_COLONY</BuildingType>
+				<BuildingType>BUILDING_OCEAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
@@ -15594,7 +15594,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_TRILOBITE_BREEDER</BuildingType>
 				<BuildingType>BUILDING_RAPTOR_BREEDER</BuildingType>
-				<BuildingType>BUILDING_TREX_BREEDER</BuildingType>
+				<BuildingType>BUILDING_TYRANNOSAURUS_REX_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PTERADACTYL_BREEDER</BuildingType>
 			</PrereqOrBuildings>
 			<GlobalBuildingExtraCommerces>
@@ -15611,7 +15611,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_TREX_BREEDER</BuildingType>
+					<BuildingType>BUILDING_TYRANNOSAURUS_REX_BREEDER</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -16280,12 +16280,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PLEISTO_PARK</Type>
+			<Type>BUILDING_PLEISTOCENE_PARK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_PLEISTO_PARK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PLEISTO_PARK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PLEISTOCENE_PARK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PLEISTOCENE_PARK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PLEISTO_PARK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PLEISTOCENE_PARK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PLEISTO_PARK</MovieDefineTag>
 			<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>
 			<PrereqOrTerrain>
@@ -16532,7 +16532,7 @@
 			<bWater>1</bWater>
 			<iMinAreaSize>10</iMinAreaSize>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+				<BuildingType>BUILDING_CUSTOMS_OFFICE</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>3210</iCost>
 			<CommerceChanges>
@@ -18324,16 +18324,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SKY_FESTIVAL</Type>
+			<Type>BUILDING_GRAND_SKY_FESTIVAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SKY_FESTIVAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SKY_FESTIVAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GRAND_SKY_FESTIVAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GRAND_SKY_FESTIVAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SKY_FESTIVAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GRAND_SKY_FESTIVAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SKY_FESTIVAL</MovieDefineTag>
 			<PrereqTech>TECH_CELEBRATION</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -18357,7 +18357,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_SKY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_E_SKY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MOON_DANCE</BuildingType>
@@ -19287,15 +19287,15 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STRATOSPHERE</Type>
+			<Type>BUILDING_STRATOSPHERE_CASINO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_STRATOSPHERE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STRATOSPHERE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_STRATOSPHERE_CASINO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_STRATOSPHERE_CASINO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STRATOSPHERE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_STRATOSPHERE_CASINO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_STRATOSPHERE</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -20130,15 +20130,15 @@
 			<MovieDefineTag>ART_DEF_MOVIE_THEATRE_OF_DIONYSUS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_THE_ALMAGEST</Type>
+			<Type>BUILDING_ALMAGEST</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_THE_ALMAGEST</Description>
-			<Civilopedia>TXT_KEY_BUILDING_THE_ALMAGEST_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ALMAGEST</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ALMAGEST_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_THE_ALMAGEST</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ALMAGEST</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ALMAGEST</MovieDefineTag>
 			<PrereqTech>TECH_GEOCENTRISM</PrereqTech>
 			<ObsoleteTech>TECH_HELIOCENTRISM</ObsoleteTech>
@@ -22250,14 +22250,14 @@
 			</GlobalCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZULU_IKHANDA</Type>
+			<Type>BUILDING_IKHANDA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ZULU_IKHANDA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZULU_IKHANDA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_IKHANDA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_IKHANDA_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WARFARE</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STORAGE_PIT</BuildingType>
@@ -22309,7 +22309,7 @@
 				</Flavor>
 			</Flavors>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_ZULU_IKHANDA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_IKHANDA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ZULU_IKHANDA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>

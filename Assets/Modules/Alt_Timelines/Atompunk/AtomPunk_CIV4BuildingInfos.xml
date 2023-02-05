@@ -45,7 +45,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
-				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
@@ -178,7 +178,7 @@
 				<BuildingType>BUILDING_CLEAN_NUCLEAR_REACTOR</BuildingType>
 				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
-				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
@@ -199,7 +199,7 @@
 			<ObsoletesToBuilding>BUILDING_GENERATION_IV_REACTOR</ObsoletesToBuilding>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
-				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
@@ -315,7 +315,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HI_TECH_NUCLEAR_REACTOR</BuildingType>
 				<BuildingType>BUILDING_GENERATION_IV_REACTOR</BuildingType>
-				<BuildingType>BUILDING_FUSION_PLANT</BuildingType>
+				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>

@@ -910,7 +910,7 @@
 			</UnitAIs>
 			<SeeInvisible>INVISIBLE_CAMOUFLAGE</SeeInvisible>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_DONKEY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<BonusType>BONUS_DONKEY</BonusType>
@@ -33763,11 +33763,11 @@
 				<BuildingType>BUILDING_SMOKE_DETECTOR</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_FIRE_CODE</BuildingType>
 				<BuildingType>BUILDING_NEIGHBORHOOD_WATCH</BuildingType>
-				<BuildingType>BUILDING_YOUTH_CURFEW</BuildingType>
-				<BuildingType>BUILDING_EMISSION_ACT</BuildingType>
-				<BuildingType>BUILDING_CLEANAIR_ACT</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_YOUTH_CURFEW</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_AUTOMOBILE_EMISSION_REDUCTION_ACT</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_CLEAN_AIR_ACT</BuildingType>
 				<BuildingType>BUILDING_CLEANWATER_ACT</BuildingType>
-				<BuildingType>BUILDING_TIRE_RECYCLE</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_TIRE_RECYCLING_PROGRAM</BuildingType>
 				<BuildingType>BUILDING_SHUTTLE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_GAMBLING_BAN</BuildingType>
@@ -36282,7 +36282,7 @@
 				<BuildingType>BUILDING_JEWISH_SHRINE</BuildingType>
 				<BuildingType>BUILDING_CHRISTIAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_ISLAMIC_SHRINE</BuildingType>
-				<BuildingType>BUILDING_HINDU_SHRINE</BuildingType>
+				<BuildingType>BUILDING_THE_KASHI_VISHWANATH</BuildingType>
 				<BuildingType>BUILDING_BUDDHIST_SHRINE</BuildingType>
 				<BuildingType>BUILDING_CONFUCIAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_TAOIST_SHRINE</BuildingType>
@@ -36292,10 +36292,10 @@
 				<BuildingType>BUILDING_MESOAMERICAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_ANDEAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_ASATRU_SHRINE</BuildingType>
-				<BuildingType>BUILDING_BAHAI_SHRINE</BuildingType>
+				<BuildingType>BUILDING_SHRINE_OF_BAB</BuildingType>
 				<BuildingType>BUILDING_CANAANISM_SHRINE</BuildingType>
 				<BuildingType>BUILDING_CAODAI_SHRINE</BuildingType>
-				<BuildingType>BUILDING_DRUID_SHRINE</BuildingType>
+				<BuildingType>BUILDING_NATURE_ANSWER</BuildingType>
 				<BuildingType>BUILDING_JAINISM_SHRINE</BuildingType>
 				<BuildingType>BUILDING_BABEL_TOWER</BuildingType>
 				<BuildingType>BUILDING_MORMON_SHRINE</BuildingType>
@@ -38595,7 +38595,7 @@
 			</UnitAIs>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANCIENT_VETERINARIAN</BuildingType>
-				<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+				<BuildingType>BUILDING_VETERINARIAN</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_VETERINARY_MEDICINE</PrereqTech>
@@ -38978,7 +38978,7 @@
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_VETRTINARIAN</BuildingType>
+				<BuildingType>BUILDING_VETERINARIAN</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEDICINE</PrereqTech>

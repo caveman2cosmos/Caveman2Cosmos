@@ -193,7 +193,7 @@
 		<Russian>Óñêîðÿåò îáó÷åíèå ðàáîòíèêîâ â ýòîì ãîðîäå.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BAD_BOY_CAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_ENCLOSURE_BAD_BOYS</Tag>
 		<English>Enclosure - Bad Boys</English>
 		<French>Enclos - Animaux nuisibles</French>
 		<Italian>Gabbia dei parassiti</Italian>
@@ -209,7 +209,7 @@
 		<Russian>Êëåòêè ñ ìåäâåäÿìè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIG_CAT_CAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_ENCLOSURE_BIG_CAT</Tag>
 		<English>Enclosure - Big Cat</English>
 		<French>Enclos - Félins</French>
 		<Italian>Gabbia dei grossi felini</Italian>
@@ -264,7 +264,7 @@
 		<English>The idea of a boxing kangaroo originates from the animal's defensive behavior, in which it will use its smaller forelegs (its arms) to hold an attacker in place while using the claws on its larger hind legs to try to kick, slash or disembowel them. This stance gives the impression that the kangaroo appears to be boxing with its attacker. The image of the boxing kangaroo has been known since at least 1891, when a cartoon titled "Jack, the fighting Kangaroo with Professor Lendermann" appeared in the magazine Melbourne Punch. In the late 19th century, outback travelling shows featured kangaroos wearing boxing gloves fighting against men.[4] Das Boxende Känguruh, an 1895 German silent film directed by Max Skladanowsky, and an English silent film produced by Birt Acres in 1896 also both featured kangaroos boxing against men, while the American animated shorts The Boxing Kangaroo (1920), Mickey's Kangaroo (1935) and Pop 'Im Pop! (1949) helped establish the concept of a boxing kangaroo as a popular culture cliché. The 1978 Hollywood movie Matilda, which starred Elliott Gould and Robert Mitchum, featured a boxing kangaroo that was exploited for prize fighting.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUFFALO_HERD</Tag>
+		<Tag>TXT_KEY_BUILDING_HERD_BUFFALO</Tag>
 		<English>Herd (Buffalo)</English>
 		<French>Troupeau de Buffles</French>
 		<Italian>Mandria di bufali</Italian>
@@ -272,7 +272,7 @@
 		<Russian>Ñòàäî áóéâîëîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUFFALO_HERD_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HERD_BUFFALO_PEDIA</Tag>
 		<English>Only domesticated buffalos can build the Herd - Buffalo; provides a resource of buffalos.</English>
 		<Italian>Solo i bufali addomesticati possono costruire una Mandria di bufali; fornisce una risorsa di bufali.</Italian>
 	</TEXT>
@@ -853,7 +853,7 @@
 		<Russian>Ìèô î áóéâîëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BUG</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_BUG</Tag>
 		<English>Folklore (T) - Bug</English>
 		<French>Mythe des insectes (T)</French>
 		<German>
@@ -2139,7 +2139,7 @@
 		<Russian>Ìèô î êàñàòêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_OWL</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_OWLS</Tag>
 		<English>Folklore (T) - Owls</English>
 		<French>Mythe des Chouettes (T)</French>
 		<German>
@@ -2422,7 +2422,7 @@
 		<Russian>Ìèô î ìåäîåäå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAY</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RAY</Tag>
 		<English>Folklore (T) - Ray</English>
 		<French>Mythe - la Raie (T)</French>
 		<German>
@@ -2435,7 +2435,7 @@
 		<Russian>Ìèô î ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAY_EAGLE</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RAY_EAGLE</Tag>
 		<English>Folklore - Eagle Ray</English>
 		<French>Mythe de l'Aigle de mer</French>
 		<German>
@@ -2447,7 +2447,7 @@
 		<Russian>Ìèô îá îðë. ñêàòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAY_MANTA</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RAY_MANTA</Tag>
 		<English>Folklore - Manta Ray</English>
 		<French>Mythe de la Raie manta</French>
 		<German>
@@ -2617,7 +2617,7 @@
 		<Russian>Ìèô î ñòåðâÿòíèêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_SEA</Tag>
 		<English>Folklore (E) - Sea</English>
 		<French>Mythe de la Mer (E)</French>
 		<German>
@@ -2630,7 +2630,7 @@
 		<Russian>Ìèô î ìîðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEALION</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_SEALION</Tag>
 		<English>Folklore - Sea Lion</English>
 		<French>Mythe du Lion des mers</French>
 		<German>
@@ -2642,7 +2642,7 @@
 		<Russian>Ìèô î ìîðñêîì ëüâå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEATURTLE</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_SEATURTLE</Tag>
 		<English>Folklore - Sea Turtle</English>
 		<French>Mythe de la Tortue de mer</French>
 		<German>
@@ -2655,7 +2655,7 @@
 		<Russian>Ìèô î ìîð. ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA_BIRD</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_SEA_BIRD</Tag>
 		<English>Folklore (T) - Sea Birds</English>
 		<French>Mythe des Oiseaux marins (T)</French>
 		<German>
@@ -2668,7 +2668,7 @@
 		<Russian>Ìèô î ìîðñêîé ïòèöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SEA_OTTER</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_SEA_OTTER</Tag>
 		<English>Folklore - Sea Otter</English>
 		<French>Mythe de la Loutre de mer</French>
 		<German>
@@ -2717,7 +2717,7 @@
 		<Russian>Ìèô î ñêóíñå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SKY</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_SKY</Tag>
 		<English>Folklore (E) - Sky</English>
 		<French>Mythe du Ciel (E)</French>
 		<German>
@@ -3319,7 +3319,7 @@
 		<Polish>Rybak osoba trudniąca się rybołówstwem, utrzymująca się z połowu ryb i innych owoców morza (frutti di mare) krewetek, małży itp. Słowem tym współcześnie określa się zarówno osoby wykonujące ten zawód w pojedynkę (na morzu rzadko) lub w niewielkich, kilkuosobowych zespołach, pływających na kilkutonowych kutrach (rybactwo), jak również marynarzy wielkich jednostek oceanicznych (rybołówstwo przemysłowe). Na potrzeby rybactwa śródlądowego, na rzekach i jeziorach rybacy na ogół posługują się niewielkimi łodziami, kutry morskie są zazwyczaj większe i dysponują mocniejszymi silnikami.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MULE_TRAINER</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_DONKEY</Tag>
 		<English>Animal Trainer (Donkey)</English>
 		<French>Elevage de Mules</French>
 		<Italian>Addestratore di muli</Italian>
@@ -3327,7 +3327,7 @@
 		<Russian>Äðåññ. ìóëîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MULE_TRAINER_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_DONKEY_PEDIA</Tag>
 		<English>The Mule Trainer is required to build Mule units.</English>
 		<Italian>L'addestratore di muli è necessario per addestrare le unità di muli.</Italian>
 		<Polish>Muł mieszaniec międzygatunkowy klaczy konia domowego z ogierem osła, najbardziej znana hybryda. Najczęściej bezpłodny, tylko ok. 5% mulic jest płodnych. Zewnętrznie jest bardziej podobny do konia. Charakteryzuje się dużą głową, długimi uszami oraz krótką szyją ze stojącą grzywą i typowo końskim ogonem z długimi włosami. W kłębie osiąga wysokość do 180 cm.</Polish>
@@ -3422,7 +3422,7 @@
 		<Italian>I maiali erano originariamente cinghiali selvatici in Europa e in Asia, addomesticati circa 10000 anni fa. Ci sono molti tipi diversi di maiali: alcuni maiali hanno una pelle di colore rosa, ma ci sono anche maiali con pelle marrone, bianca e nera. Alcuni maiali hanno strisce o macchie. Qualcosa nella pelle chiamato pigmento è responsabile del colore, ed è diverso nelle diverse razze suine. Ci sono circa 73 diverse razze di maiali.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_POULTRY_HERD</Tag>
+		<Tag>TXT_KEY_BUILDING_HERD_POULTRY</Tag>
 		<English>Herd (Poultry)</English>
 		<French>Troupeau de Volailles</French>
 		<Italian>Branco di pollame</Italian>
@@ -3430,11 +3430,11 @@
 		<Russian>Ñòàÿ ïòèö</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_POULTRY_HERD_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HERD_POULTRY_PEDIA</Tag>
 		<English>A poultry herd.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PRIMATE_CAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_ENCLOSURE_PRIMATE</Tag>
 		<English>Enclosure - Primate</English>
 		<French>Enclos - Primates</French>
 		<Italian>Gabbia dei primati</Italian>
@@ -3463,7 +3463,7 @@
 		<Polish>Struś syryjski od dawna zajmuje znaczące miejsce w kulturze regionu. Dorosły struś z jedenastoma młodymi został przedstawiony na słynnym prehistorycznym "Graffiti Rock I" (rysunki wyryte na skale datowane na 20001000 p.n.e. odkryte w pobliżu Rijad). W Mezopotamii, był wykorzystywany jako zwierzę ofiarne i przedstawiany na dziełach sztuki, malowany na kubkach i innych przedmiotach wykonanych ze strusich jaj, sprzedawanych aż po Etrurię w okresie nowoasyryjskim. W epoce ekspansji islamu struś syryjski reprezentował bogactwo i elegancję. Polowanie na strusie stało się popularną rozrywką dla bogaczy i szlachty (jeśli zabito strusia w odpowiedni sposób, jego mięso uznawane było przez muzułmanów za halaal). Jaja, pióra i skóry były szeroko wykorzystywane w rękodziele. Zarówno produkty otrzymane ze strusi jak i żywe ptaki były eksportowane aż do Chin.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REPTILE_CAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_ENCLOSURE_REPTILE</Tag>
 		<English>Enclosure - Reptile</English>
 		<French>Enclos - Reptiles</French>
 		<Italian>Gabbia dei rettili</Italian>

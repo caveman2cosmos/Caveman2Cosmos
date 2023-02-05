@@ -18,7 +18,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_BARBED_WIRE</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BASKETWEAVER</Type>
+			<Type>BUILDING_BASKETMAKER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_GUILDS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>

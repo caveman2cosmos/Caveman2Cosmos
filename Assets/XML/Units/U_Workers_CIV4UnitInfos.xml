@@ -690,7 +690,7 @@
 				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MULE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_DONKEY</BuildingType>
 				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>

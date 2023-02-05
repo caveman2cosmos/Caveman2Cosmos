@@ -4,7 +4,7 @@
 		<UnitInfo>
 			<Type>UNIT_GREAT_HUNTER</Type>
 			<Buildings>
-				<BuildingType>BUILDING_BEAR_TRAINER_HERITAGE</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BEAR_HERITAGE</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>
@@ -124,7 +124,7 @@
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_MAMMOTH</Type>
 			<Buildings>
-				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_MAMMOTH</BuildingType>
 			</Buildings>
 		</UnitInfo>
 		<UnitInfo>

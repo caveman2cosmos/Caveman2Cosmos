@@ -68,8 +68,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_BEAR_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_BEAR_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BEAR</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<iCost>94</iCost>
@@ -168,8 +168,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_BEAR_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_BEAR_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BEAR</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<TechTypes>
@@ -366,7 +366,7 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
-				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
@@ -3427,8 +3427,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_DEER_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_DEER_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_DEER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_DEER</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<iCost>94</iCost>
@@ -3559,8 +3559,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_DEER_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_DEER_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_DEER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_DEER</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<TechTypes>
@@ -3695,8 +3695,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_DEER_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_DEER_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_DEER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_DEER</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<TechTypes>

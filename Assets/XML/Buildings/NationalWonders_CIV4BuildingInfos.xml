@@ -490,7 +490,7 @@
 				<BuildingType>BUILDING_HERD_COW</BuildingType>
 				<BuildingType>BUILDING_FARM_ANIMAL_COW</BuildingType>
 				<BuildingType>BUILDING_ICEAGEBISON_CAMP</BuildingType>
-				<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_AUROCHS</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
@@ -2147,13 +2147,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GREAT_BONFIRE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GREAT_PALACE</Type>
+			<Type>BUILDING_FORBIDDEN_PALACE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GREAT_PALACE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GREAT_PALACE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FORBIDDEN_PALACE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FORBIDDEN_PALACE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<iCitiesPrereq>8</iCitiesPrereq>
 			<PrereqAmountBuildings>
@@ -2203,7 +2203,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PALACE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FORBIDDEN_PALACE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FORBIDDEN_PALACE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2266,13 +2266,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_APOTHECARY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GUILD_ARTIST</Type>
+			<Type>BUILDING_GUILD_ARTISTS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GUILD_ARTIST</Description>
+			<Description>TXT_KEY_BUILDING_GUILD_ARTISTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -2313,7 +2313,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GUILD_ARTIST</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GUILD_ARTISTS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_ARTIST</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2537,13 +2537,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_CARPENTER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GUILD_CLERKS</Type>
+			<Type>BUILDING_GUILD_PRINTERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GUILD_CLERKS</Description>
+			<Description>TXT_KEY_BUILDING_GUILD_PRINTERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PAPER</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -2592,17 +2592,17 @@
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GUILD_CLERKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GUILD_PRINTERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_CLERKS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GUILD_CRAFTS</Type>
+			<Type>BUILDING_GUILD_ARTISANS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GUILD_CRAFTS</Description>
+			<Description>TXT_KEY_BUILDING_GUILD_ARTISANS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -2651,7 +2651,7 @@
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GUILD_CRAFTS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GUILD_ARTISANS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_CRAFTS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2996,13 +2996,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_GROCERS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GUILD_LUMBER</Type>
+			<Type>BUILDING_GUILD_WOODCUTTERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GUILD_LUMBER</Description>
+			<Description>TXT_KEY_BUILDING_GUILD_WOODCUTTERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -3044,7 +3044,7 @@
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GUILD_LUMBER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GUILD_WOODCUTTERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_LUMBER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3277,13 +3277,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_SERVANTS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GUILD_TAILOR</Type>
+			<Type>BUILDING_GUILD_TAILORS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GUILD_TAILOR</Description>
+			<Description>TXT_KEY_BUILDING_GUILD_TAILORS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -3325,7 +3325,7 @@
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GUILD_TAILOR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GUILD_TAILORS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_TAILOR</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7381,7 +7381,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_GREAT_PALACE</BuildingType>
+					<BuildingType>BUILDING_FORBIDDEN_PALACE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -7549,7 +7549,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_JUNGLE_HOTEL</BuildingType>
+					<BuildingType>BUILDING_JUNGLE_TREEHOUSE_HOTEL</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

@@ -988,7 +988,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
+					<BuildingType>BUILDING_MOVIE_THEATRE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1585,7 +1585,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MISSILE_SILO</BuildingType>
+					<BuildingType>BUILDING_MISSILE_LAB</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1621,7 +1621,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1693,7 +1693,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<BuildingType>BUILDING_BOMB_SHELTERS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1891,7 +1891,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SAIL_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SAILS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2126,7 +2126,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BEAD_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_BEADS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2136,7 +2136,7 @@
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_BASKETWEAVER</BuildingType>
+					<BuildingType>BUILDING_BASKETMAKER</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -2543,7 +2543,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_POACHER_CAMP</BuildingType>
+					<BuildingType>BUILDING_POACHERS_CAMP</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2649,7 +2649,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FRENCH_SALON</BuildingType>
+					<BuildingType>BUILDING_SALON</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -3063,7 +3063,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+					<BuildingType>BUILDING_CUSTOMS_OFFICE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4927,7 +4927,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MOVIETHEATRE</BuildingType>
+					<BuildingType>BUILDING_MOVIE_THEATRE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5509,7 +5509,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MISSILE_SILO</BuildingType>
+					<BuildingType>BUILDING_MISSILE_LAB</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5545,7 +5545,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SIEGE_TOWERS</BuildingType>
+					<BuildingType>BUILDING_BALLISTA_TURRET</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5617,7 +5617,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BOMB_SHELTER</BuildingType>
+					<BuildingType>BUILDING_BOMB_SHELTERS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5821,7 +5821,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SAIL_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SAILS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6047,7 +6047,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BEAD_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_BEADS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6057,7 +6057,7 @@
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_BASKETWEAVER</BuildingType>
+					<BuildingType>BUILDING_BASKETMAKER</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -6467,7 +6467,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_POACHER_CAMP</BuildingType>
+					<BuildingType>BUILDING_POACHERS_CAMP</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6575,7 +6575,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_FRENCH_SALON</BuildingType>
+					<BuildingType>BUILDING_SALON</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6990,7 +6990,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CUSTOM_HOUSE</BuildingType>
+					<BuildingType>BUILDING_CUSTOMS_OFFICE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>

@@ -208,11 +208,11 @@
 			</UnitCombatFreeExperiences>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BAHAI_SHRINE</Type>
-			<Description>TXT_KEY_BUILDING_BAHAI_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BAHAI_SHRINE_PEDIA</Civilopedia>
+			<Type>BUILDING_SHRINE_OF_BAB</Type>
+			<Description>TXT_KEY_BUILDING_SHRINE_OF_BAB</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SHRINE_OF_BAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BAHAI_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SHRINE_OF_BAB</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_BAHAI</MovieDefineTag>
 			<HolyCity>RELIGION_BAHAI</HolyCity>
 			<ReligionType>RELIGION_BAHAI</ReligionType>
@@ -1043,12 +1043,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICMERCENARIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CIVICMILITIA</Type>
+			<Type>BUILDING_CIVIC_MILITIA</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CIVICMILITIA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CIVICMILITIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CIVIC_MILITIA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CIVIC_MILITIA_PEDIA</Civilopedia>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_MILITIA</CivicOption>
@@ -1065,7 +1065,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CIVICMILITIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_MILITIA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CIVICMINDCONTROL</Type>
@@ -1162,12 +1162,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICREPUBLIC</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CLEANAIR_ACT</Type>
+			<Type>BUILDING_ORDINANCE_CLEAN_AIR_ACT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CLEANAIR_ACT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CLEANAIR_ACT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_CLEAN_AIR_ACT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_CLEAN_AIR_ACT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<PrereqInCityBuildings>
@@ -1176,18 +1176,18 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>1345</iCost>
-			<FreeBuilding>BUILDING_CLEANAIR_ACT_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_CLEAN_AIR_ACT</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CLEANAIR_ACT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_CLEAN_AIR_ACT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CLEANAIR_ACT_EFFECT</Type>
+			<Type>BUILDING_ORDINANCE_EFFECT_CLEAN_AIR_ACT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CLEANAIR_ACT_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CLEANAIR_ACT_EFFECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_EFFECT_CLEAN_AIR_ACT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_EFFECT_CLEAN_AIR_ACT_PEDIA</Civilopedia>
 			<iHealth>2</iHealth>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -1202,7 +1202,7 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CLEANAIR_ACT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_CLEAN_AIR_ACT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CLEANWATER_ACT</Type>
@@ -2318,12 +2318,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_ASIMOV</Type>
+			<Type>BUILDING_CRIME_ASIMOV_TAMPERING</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_ASIMOV</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_ASIMOV_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_ASIMOV_TAMPERING</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_ASIMOV_TAMPERING_PEDIA</Civilopedia>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqTech>TECH_PERSONAL_ROBOTS</PrereqTech>
 			<Bonus>BONUS_COMPUTERS</Bonus>
@@ -5382,11 +5382,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DRUG_PROHIBITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DRUID_SHRINE</Type>
-			<Description>TXT_KEY_BUILDING_DRUID_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DRUID_SHRINE_PEDIA</Civilopedia>
+			<Type>BUILDING_NATURE_ANSWER</Type>
+			<Description>TXT_KEY_BUILDING_NATURE_ANSWER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATURE_ANSWER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURE_ANSWER</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5596,12 +5596,12 @@
 			<iHappiness>1</iHappiness>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EMISSION_ACT</Type>
+			<Type>BUILDING_ORDINANCE_AUTOMOBILE_EMISSION_REDUCTION_ACT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EMISSION_ACT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EMISSION_ACT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_AUTOMOBILE_EMISSION_REDUCTION_ACT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_AUTOMOBILE_EMISSION_REDUCTION_ACT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<PrereqInCityBuildings>
@@ -5615,19 +5615,19 @@
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>1345</iCost>
-			<FreeBuilding>BUILDING_EMISSION_ACT_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_AUTOMOBILE_EMISSION_REDUCTION_ACT</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EMISSION_ACT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_AUTOMOBILE_EMISSION_REDUCTION_ACT</ArtDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EMISSION_ACT_EFFECT</Type>
+			<Type>BUILDING_ORDINANCE_EFFECT_AUTOMOBILE_EMISSION_REDUCTION_ACT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EMISSION_ACT_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EMISSION_ACT_EFFECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_EFFECT_AUTOMOBILE_EMISSION_REDUCTION_ACT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_EFFECT_AUTOMOBILE_EMISSION_REDUCTION_ACT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
 			<ReplacementBuildings>
@@ -5643,7 +5643,7 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_EMISSION_ACT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_AUTOMOBILE_EMISSION_REDUCTION_ACT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ENHANCED_SPECIES</Type>
@@ -8835,12 +8835,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_ANIMAL_HIDE_TENTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HINDU_SHRINE</Type>
+			<Type>BUILDING_THE_KASHI_VISHWANATH</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HINDU_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HINDU_SHRINE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_KASHI_VISHWANATH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_KASHI_VISHWANATH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_BUILD_HINDU</ConstructSound>
 			<ReligionType>RELIGION_HINDUISM</ReligionType>
@@ -8874,7 +8874,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_HINDU_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_KASHI_VISHWANATH</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_HINDU</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -11444,7 +11444,7 @@
 				<BuildingType>BUILDING_JEWISH_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_HELLENIC_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_EGYPT_MYTH_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_DRUID_TEMPLE</BuildingType>
+				<BuildingType>BUILDING_NATURE_ALTAR</BuildingType>
 				<BuildingType>BUILDING_CANAANISM_TEMPLE</BuildingType>
 			</PrereqOrBuildings>
 			<FreeBuilding>BUILDING_BELIEF_RESURRECTION</FreeBuilding>
@@ -11665,8 +11665,8 @@
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_OLD_CITY_WALLS</Type>
-			<Description>TXT_KEY_BUILDING_OLD_CITY_WALLS</Description>
+			<Type>BUILDING_RELIC_OLD_CITY_WALLS</Type>
+			<Description>TXT_KEY_BUILDING_RELIC_OLD_CITY_WALLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WALLS_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -11685,7 +11685,7 @@
 			</PropertyManipulators>
 			<iAsset>1</iAsset>
 			<iConquestProb>80</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_OLD_CITY_WALLS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RELIC_OLD_CITY_WALLS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PESTS_ANTS</Type>
@@ -11740,11 +11740,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PESTS_APHIDS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_BEDBUGS</Type>
+			<Type>BUILDING_PESTS_BED_BUGS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_BEDBUGS</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_BED_BUGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>5</iPrereqPopulation>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -11761,7 +11761,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_BEDBUGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_BED_BUGS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEST_COCKROACHES</Type>
@@ -11890,11 +11890,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PESTS_FLIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_GOPHERS</Type>
+			<Type>BUILDING_PESTS_GOPHERS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_GOPHERS</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_GOPHERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
@@ -11912,7 +11912,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_GOPHERS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_GOPHERS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PESTS_LICE</Type>
@@ -12032,11 +12032,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PESTS_MOTHS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_PIGEONS</Type>
+			<Type>BUILDING_PESTS_PIGEONS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_PIGEONS</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_PIGEONS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iMaxLatitude>70</iMaxLatitude>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -12054,7 +12054,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_PIGEONS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_PIGEONS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEST_RACCOONS</Type>
@@ -14598,12 +14598,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_TIPIS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TIRE_RECYCLE</Type>
+			<Type>BUILDING_ORDINANCE_TIRE_RECYCLING_PROGRAM</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TIRE_RECYCLE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TIRE_RECYCLE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_TIRE_RECYCLING_PROGRAM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_TIRE_RECYCLING_PROGRAM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_RECYCLING</PrereqTech>
 			<Bonus>BONUS_TIRES</Bonus>
@@ -14613,18 +14613,18 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<iCost>1475</iCost>
-			<FreeBuilding>BUILDING_TIRE_RECYCLE_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_TIRE_RECYCLING_PROGRAM</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TIRE_RECYCLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_TIRE_RECYCLING_PROGRAM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TIRE_RECYCLE_EFFECT</Type>
+			<Type>BUILDING_ORDINANCE_EFFECT_TIRE_RECYCLING_PROGRAM</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TIRE_RECYCLE_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TIRE_RECYCLE_EFFECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_EFFECT_TIRE_RECYCLING_PROGRAM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_EFFECT_TIRE_RECYCLING_PROGRAM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RECYCLING</PrereqTech>
 			<iHealth>1</iHealth>
 			<CommerceChanges>
@@ -14639,7 +14639,7 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TIRE_RECYCLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_TIRE_RECYCLING_PROGRAM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_ACHIEVEMENT</Type>
@@ -15246,12 +15246,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRAILER_PARK</Type>
+			<Type>BUILDING_HOUSING_TRAILER_PARK</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TRAILER_PARK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRAILER_PARK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_TRAILER_PARK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_TRAILER_PARK_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
@@ -15273,7 +15273,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TRAILER_PARK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_TRAILER_PARK</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSING_TREEHOUSES</Type>
@@ -15665,14 +15665,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MOTORCYCLE_CLUB</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VALLEY_KINGS</Type>
+			<Type>BUILDING_VALLEY_OF_THE_KINGS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_VALLEY_KINGS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VALLEY_KINGS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_VALLEY_OF_THE_KINGS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VALLEY_OF_THE_KINGS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_SCULPTURE</PrereqTech>
 			<PrereqInCityBuildings>
@@ -15684,7 +15684,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_GREAT_SPHINX</BuildingType>
+					<BuildingType>BUILDING_THE_GREAT_SPHINX</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -15710,7 +15710,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_VALLEY_KINGS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VALLEY_OF_THE_KINGS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_VALLEY_KINGS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -16015,12 +16015,12 @@
 			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_YOUTH_CURFEW</Type>
+			<Type>BUILDING_ORDINANCE_YOUTH_CURFEW</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_YOUTH_CURFEW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_YOUTH_CURFEW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_YOUTH_CURFEW</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_YOUTH_CURFEW_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_POLICE_STATION</ConstructSound>
 			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
@@ -16044,7 +16044,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_YOUTH_CURFEW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_YOUTH_CURFEW</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSING_YURTS</Type>

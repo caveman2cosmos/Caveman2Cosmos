@@ -475,7 +475,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_EINSTEIN_LAB</BuildingType>
+					<BuildingType>BUILDING_EINSTEINS_LABORATORY</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -659,7 +659,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_STRATOSPHERE</BuildingType>
+					<BuildingType>BUILDING_STRATOSPHERE_CASINO</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -4145,7 +4145,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_GREAT_SPHINX</BuildingType>
+					<BuildingType>BUILDING_THE_GREAT_SPHINX</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -4216,7 +4216,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HADRIAN_WALL</BuildingType>
+					<BuildingType>BUILDING_HADRIANS_WALL</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -4252,7 +4252,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_BAKER_STREET</BuildingType>
+					<BuildingType>BUILDING_221B_BAKER_STREET</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -4986,7 +4986,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_EINSTEIN_LAB</BuildingType>
+					<BuildingType>BUILDING_EINSTEINS_LABORATORY</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -11501,7 +11501,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HADRIAN_WALL</BuildingType>
+					<BuildingType>BUILDING_HADRIANS_WALL</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

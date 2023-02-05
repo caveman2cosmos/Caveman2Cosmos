@@ -22,8 +22,8 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_BEAR_TRAINER</BuildingType>
-				<BuildingType>BUILDING_BEAR_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BEAR</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</BuildingType>
 			</PrereqOrBuildings>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -130,8 +130,8 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_DEER_TRAINER</BuildingType>
-				<BuildingType>BUILDING_DEER_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_DEER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_DEER</BuildingType>
 			</PrereqOrBuildings>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -261,16 +261,16 @@
 			</UnitProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BEAR_TRAINER</Type>
+			<Type>BUILDING_ANIMAL_TRAINER_BEAR</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BEAR_TRAINER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BEAR_TRAINER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BEAR_TRAINER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_BEAR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BEAR_RIDER</MovieDefineTag>
 			<iCost>624</iCost>
 			<iConquestProb>100</iConquestProb>
@@ -312,12 +312,12 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BEAR_TRAINER_EFFECT</Type>
+			<Type>BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_BEAR_TRAINER_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BEAR_TRAINER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BEAR_TRAINER_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -327,17 +327,17 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BEAR_TRAINER_HERITAGE</Type>
+			<Type>BUILDING_ANIMAL_TRAINER_BEAR_HERITAGE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BEAR_TRAINER_HERITAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BEAR_TRAINER_HERITAGE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_HERITAGE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_BEAR_HERITAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BEAR_TRAINER_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</ArtDefineTag>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
-			<FreeBuilding>BUILDING_BEAR_TRAINER_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_ANIMAL_TRAINER_BEAR_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
@@ -354,7 +354,7 @@
 				</Flavor>
 			</Flavors>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_BEAR_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BEAR</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -404,7 +404,7 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BIG_CAT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LION</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SPOTTED_CAT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BENGALTIGER</BuildingType>
@@ -539,13 +539,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEER_TRAINER</Type>
+			<Type>BUILDING_ANIMAL_TRAINER_DEER</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_DEER_TRAINER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEER_TRAINER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ANIMAL_TRAINER_DEER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_DEER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DEER_TRAINER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_DEER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEER_RIDER</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -585,13 +585,13 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEER_TRAINER_EFFECT</Type>
+			<Type>BUILDING_EFFECT_HERITAGE_DEER</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_DEER_TRAINER_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEER_TRAINER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_DEER_TRAINER_EFFECT_HELP</Help>
+			<Description>TXT_KEY_BUILDING_EFFECT_HERITAGE_DEER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_DEER_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_EFFECT_HERITAGE_DEER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DEER_TRAINER_HERITAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERITAGE_DEER</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -601,18 +601,18 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEER_TRAINER_HERITAGE</Type>
+			<Type>BUILDING_HERITAGE_DEER</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEER_TRAINER_HERITAGE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERITAGE_DEER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERITAGE_DEER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DEER_TRAINER_HERITAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERITAGE_DEER</ArtDefineTag>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iMinLatitude>45</iMinLatitude>
-			<FreeBuilding>BUILDING_DEER_TRAINER_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_HERITAGE_DEER</FreeBuilding>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
@@ -629,7 +629,7 @@
 				</Flavor>
 			</Flavors>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DEER_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_DEER</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -674,7 +674,7 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_GIRAFFE</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_GIRAFFE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</PrereqOrBuildings>
@@ -735,17 +735,17 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MAMMOTH_HERD</Type>
+			<Type>BUILDING_HERD_MAMMOTH</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_MAMMOTH_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_MAMMOTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_MAMMOTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_MAMMOTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -815,8 +815,8 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MAMMOTH_CAMP</BuildingType>
-				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
+				<BuildingType>BUILDING_CAMP_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_HERD_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>

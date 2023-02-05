@@ -302,7 +302,7 @@
 			<Button>Art/Interface/Buttons/Units/Buffalo.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_BUG</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_BUG</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1262,7 +1262,7 @@
 			<Button>Art/Interface/Buttons/Units/Ostrich.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_OWL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_OWLS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1532,7 +1532,7 @@
 			<Button>Art/Interface/Buttons/Units/Raven.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_RAY_EAGLE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_RAY_EAGLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1542,7 +1542,7 @@
 			<Button>Art/Interface/Buttons/Units/RAY.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_RAY_MANTA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_RAY_MANTA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1702,7 +1702,7 @@
 			<Button>Art/Interface/Buttons/Units/Saltcroc.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_SEAEAGLE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_E_SEAEAGLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1712,7 +1712,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_eagle.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_SEALION</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_E_SEALION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1722,7 +1722,7 @@
 			<Button>Art/Interface/Buttons/Units/sealion.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_SEA_BIRD</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_E_SEA_BIRD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1732,7 +1732,7 @@
 			<Button>Art/Interface/Buttons/buildings/totem_cassowary.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_SEA_OTTER</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_E_SEA_OTTER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
