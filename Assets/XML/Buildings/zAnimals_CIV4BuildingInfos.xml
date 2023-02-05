@@ -130,7 +130,7 @@
 				<BuildingType>BUILDING_FOLKLORE_EWOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MANEDWOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GREY_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>92</iCost>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
@@ -3134,7 +3134,7 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>

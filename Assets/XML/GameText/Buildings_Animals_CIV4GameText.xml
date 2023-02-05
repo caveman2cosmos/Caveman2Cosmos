@@ -1478,7 +1478,7 @@
 		<Russian>Ìèô î áåëîé àêóëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREY_WOLF</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLF</Tag>
 		<English>Folklore - Wolf</English>
 		<French>Mythe du Loup gris</French>
 		<German>
@@ -3074,7 +3074,7 @@
 		<Russian>Ìèô î ãíó</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WOLF</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_WOLF</Tag>
 		<English>Folklore (T) - Wolf</English>
 		<French>Mythe des Loups (T)</French>
 		<German>

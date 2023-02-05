@@ -1264,7 +1264,7 @@
 				<iCommerce>30</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
+				<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>

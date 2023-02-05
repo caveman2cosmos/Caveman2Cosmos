@@ -3610,12 +3610,12 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CATACOMBS</Type>
+			<Type>BUILDING_CATACOMBS_OF_KOMELSHOQAFA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_CATACOMBS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CATACOMBS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CATACOMBS_OF_KOMELSHOQAFA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CATACOMBS_OF_KOMELSHOQAFA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CATACOMBS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CATACOMBS_OF_KOMELSHOQAFA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CATACOMBS_OF_KOM</MovieDefineTag>
 			<ObsoleteTech>TECH_ARTILLERY</ObsoleteTech>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
@@ -15233,15 +15233,15 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ORACLE</Type>
+			<Type>BUILDING_THE_ORACLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ORACLE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ORACLE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_ORACLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_ORACLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ORACLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_ORACLE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ORACLE</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_ORACLE</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>

@@ -757,7 +757,7 @@
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_INTERGALACTIC_ADMINISTRATION</FreeBuilding>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
+				<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
@@ -2576,7 +2576,7 @@
 			<iCost>26310</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
+					<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -3112,7 +3112,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_ESCHER_CITY</BuildingType>
+					<BuildingType>BUILDING_HYPERCITY</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -17547,7 +17547,7 @@
 			<iMilitaryProductionModifier>40</iMilitaryProductionModifier>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TRACTOR_BEAM</BuildingType>
-				<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_GALACTIC_PORT</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -19233,11 +19233,11 @@
 			<iGlobalWarWearinessModifier>-10</iGlobalWarWearinessModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GALACTIC_PORT</Type>
-			<Description>TXT_KEY_BUILDING_GALACTIC_PORT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_PORT_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_GALACTIC_PORT</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_GALACTIC_PORT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_GALACTIC_PORT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GALACTIC_PORT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_GALACTIC_PORT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SPACE_CREASING</PrereqTech>
 			<iCost>5269</iCost>
@@ -20213,7 +20213,7 @@
 				<iYield>15</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_GALACTIC_PORT</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -20471,7 +20471,7 @@
 				<iCommerce>100</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_GALACTIC_PORT</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_PERSONAL_STARCRAFT</Bonus>
 		</BuildingInfo>
@@ -25710,7 +25710,7 @@
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_INTERGALACTIC_CITY</BuildingType>
-				<BuildingType>BUILDING_INTERGALACTIC_TRADING_CENTER</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_TRADING_POST</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -25790,11 +25790,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INTERGALACTIC_TRADING_CENTER</Type>
-			<Description>TXT_KEY_BUILDING_INTERGALACTIC_TRADING_CENTER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_INTERGALACTIC_TRADING_CENTER_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERGALACTIC_TRADING_POST</Type>
+			<Description>TXT_KEY_BUILDING_INTERGALACTIC_TRADING_POST</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERGALACTIC_TRADING_POST_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_TRADING_CENTER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_TRADING_POST</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SPACE_CREASING</PrereqTech>
 			<iCost>2634</iCost>
@@ -25812,11 +25812,11 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INTERGALACTIC_TRADING_POST</Type>
-			<Description>TXT_KEY_BUILDING_INTERGALACTIC_TRADING_POST</Description>
-			<Civilopedia>TXT_KEY_BUILDING_INTERGALACTIC_TRADING_POST_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERGALACTIC_COMMERCIAL_DISTRICT</Type>
+			<Description>TXT_KEY_BUILDING_INTERGALACTIC_COMMERCIAL_DISTRICT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERGALACTIC_COMMERCIAL_DISTRICT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_TRADING_POST</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_COMMERCIAL_DISTRICT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SPACETIME_ECONOMICS</PrereqTech>
 			<iCost>4492</iCost>
@@ -28586,7 +28586,7 @@
 				<iYield>15</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HYPERCITY</BuildingType>
+				<BuildingType>BUILDING_HYPERSPACE_PAN_DIMENSIONAL_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -28843,11 +28843,11 @@
 			<iLocalDynamicDefense>10</iLocalDynamicDefense>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ESCHER_CITY</Type>
-			<Description>TXT_KEY_BUILDING_ESCHER_CITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ESCHER_CITY_PEDIA</Civilopedia>
+			<Type>BUILDING_HYPERCITY</Type>
+			<Description>TXT_KEY_BUILDING_HYPERCITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HYPERCITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ESCHER_CITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HYPERCITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSVERSE_EUCLIDEAN_GEOMETRY</PrereqTech>
 			<iCost>1485</iCost>
@@ -28979,11 +28979,11 @@
 			</PrereqAmountBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HYPERCITY</Type>
-			<Description>TXT_KEY_BUILDING_HYPERCITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HYPERCITY_PEDIA</Civilopedia>
+			<Type>BUILDING_HYPERSPACE_PAN_DIMENSIONAL_CITY</Type>
+			<Description>TXT_KEY_BUILDING_HYPERSPACE_PAN_DIMENSIONAL_CITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_PAN_DIMENSIONAL_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HYPERCITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HYPERSPACE_PAN_DIMENSIONAL_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EUCLIDEAN_5D_SPACE_GEOMETRY</PrereqTech>
 			<iCost>1713</iCost>
@@ -29000,7 +29000,7 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ESCHER_CITY</BuildingType>
+				<BuildingType>BUILDING_HYPERCITY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -29095,7 +29095,7 @@
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
-				<BuildingType>BUILDING_HYPERCITY</BuildingType>
+				<BuildingType>BUILDING_HYPERSPACE_PAN_DIMENSIONAL_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -29200,7 +29200,7 @@
 			</CommerceChanges>
 			<iMaintenanceModifier>-2</iMaintenanceModifier>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HYPERCITY</BuildingType>
+				<BuildingType>BUILDING_HYPERSPACE_PAN_DIMENSIONAL_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
 			<bPrereqPower>1</bPrereqPower>
@@ -29580,7 +29580,7 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HYPERFACTORY</BuildingType>
-				<BuildingType>BUILDING_HYPERCITY</BuildingType>
+				<BuildingType>BUILDING_HYPERSPACE_PAN_DIMENSIONAL_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -29976,7 +29976,7 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RESIDENTIAL_PORTAL</BuildingType>
-				<BuildingType>BUILDING_HYPERCITY</BuildingType>
+				<BuildingType>BUILDING_HYPERSPACE_PAN_DIMENSIONAL_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>

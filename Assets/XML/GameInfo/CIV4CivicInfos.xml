@@ -952,7 +952,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
+					<BuildingType>BUILDING_PIR_E_SABZ</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>20</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7598,7 +7598,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_ORACLE</BuildingType>
+					<BuildingType>BUILDING_THE_ORACLE</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -7786,7 +7786,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
+					<BuildingType>BUILDING_PIR_E_SABZ</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -12623,7 +12623,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_ORACLE</BuildingType>
+					<BuildingType>BUILDING_THE_ORACLE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -12960,7 +12960,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_ZOROASTRIAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -17462,7 +17462,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ZOROASTRIAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

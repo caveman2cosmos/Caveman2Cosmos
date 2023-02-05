@@ -287,7 +287,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ARCTICFOX</BuildingType>
 				<BuildingType>BUILDING_FOX_TRAPS</BuildingType>
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
@@ -4992,7 +4992,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DHOLE</BuildingType>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
 				<BuildingType>BUILDING_HERDING_DOGS</BuildingType>
@@ -5060,7 +5060,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
@@ -5131,7 +5131,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_DOG</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_DOG_REMAINS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -6464,7 +6464,7 @@
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EWOLF</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -12779,7 +12779,7 @@
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MANEDWOLF</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -16903,7 +16903,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
 				<BuildingType>BUILDING_FOX_TRAPS</BuildingType>
 				<BuildingType>BUILDING_FUR_FARM</BuildingType>
@@ -17315,8 +17315,8 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GREY_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
 				<BuildingType>BUILDING_GUARD_DOG</BuildingType>

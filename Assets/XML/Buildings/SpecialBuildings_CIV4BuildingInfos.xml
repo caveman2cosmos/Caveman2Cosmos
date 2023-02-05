@@ -16093,12 +16093,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_YURT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZOROASTRIAN_SHRINE</Type>
+			<Type>BUILDING_PIR_E_SABZ</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ZOROASTRIAN_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZOROASTRIAN_SHRINE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PIR_E_SABZ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PIR_E_SABZ_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
 			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
@@ -16136,7 +16136,7 @@
 			<iAsset>8</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_ZOROASTRIAN_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PIR_E_SABZ</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ZOROASTRIAN_SHRINE</MovieDefineTag>
 		</BuildingInfo>
 	</BuildingInfos>

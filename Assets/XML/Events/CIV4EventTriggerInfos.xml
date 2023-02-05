@@ -2852,7 +2852,7 @@
 				<Building>BUILDING_JEWISH_MONASTERY</Building>
 				<Building>BUILDING_TAOIST_MONASTERY</Building>
 				<Building>BUILDING_HELLENIC_MONASTERY</Building>
-				<Building>BUILDING_ZOROASTRIAN_MONASTERY</Building>
+				<Building>BUILDING_ZOROASTRIAN_SHRINE</Building>
 				<Building>BUILDING_VOODOO_MONASTERY</Building>
 				<Building>BUILDING_SHINTO_MONASTERY</Building>
 				<Building>BUILDING_SCIENTOLOGY_MONASTERY</Building>
@@ -4828,7 +4828,7 @@
 				<Building>BUILDING_JEWISH_MONASTERY</Building>
 				<Building>BUILDING_TAOIST_MONASTERY</Building>
 				<Building>BUILDING_HELLENIC_MONASTERY</Building>
-				<Building>BUILDING_ZOROASTRIAN_MONASTERY</Building>
+				<Building>BUILDING_ZOROASTRIAN_SHRINE</Building>
 				<Building>BUILDING_EGYPT_MYTH_MONASTERY</Building>
 				<Building>BUILDING_VOODOO_MONASTERY</Building>
 				<Building>BUILDING_SHINTO_MONASTERY</Building>

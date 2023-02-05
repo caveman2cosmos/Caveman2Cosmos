@@ -4068,7 +4068,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ZOROASTRIAN_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
@@ -36287,7 +36287,7 @@
 				<BuildingType>BUILDING_CONFUCIAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_TAOIST_SHRINE</BuildingType>
 				<BuildingType>BUILDING_STATUE_OF_ZEUS</BuildingType>
-				<BuildingType>BUILDING_ZOROASTRIAN_SHRINE</BuildingType>
+				<BuildingType>BUILDING_PIR_E_SABZ</BuildingType>
 				<BuildingType>BUILDING_EGYPT_MYTH_SHRINE</BuildingType>
 				<BuildingType>BUILDING_MESOAMERICAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_ANDEAN_SHRINE</BuildingType>

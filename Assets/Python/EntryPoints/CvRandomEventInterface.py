@@ -2665,7 +2665,7 @@ def canTriggerNobleKnights(argsList):
 
 def getHelpNobleKnights1(argsList):
 	iNumUnits = GC.getWorldInfo(GC.getMap().getWorldSize()).getDefaultPlayers() + 1
-	iBuilding = GC.getInfoTypeForString("BUILDING_ORACLE")
+	iBuilding = GC.getInfoTypeForString("BUILDING_THE_ORACLE")
 	return TRNSLTR.getText("TXT_KEY_EVENT_NOBLE_KNIGHTS_HELP_1", (iNumUnits, GC.getBuildingInfo(iBuilding).getTextKey()))
 
 def canTriggerNobleKnightsDone(argsList):
@@ -2682,7 +2682,7 @@ def canTriggerNobleKnightsDone(argsList):
   kActualTriggeredDataObject = player.getEventTriggered(data.iId)
   kActualTriggeredDataObject.eReligion = kOrigTriggeredData.eReligion
 
-  iBuilding = GC.getInfoTypeForString("BUILDING_ORACLE")
+  iBuilding = GC.getInfoTypeForString("BUILDING_THE_ORACLE")
 
   for loopCity in player.cities():
     if loopCity.getNumRealBuilding(iBuilding):

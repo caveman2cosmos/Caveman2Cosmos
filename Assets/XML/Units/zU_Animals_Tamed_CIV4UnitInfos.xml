@@ -2536,9 +2536,9 @@
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ARCTICFOX</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GREY_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_DOG</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DHOLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
@@ -3738,9 +3738,9 @@
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ARCTICFOX</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GREY_WOLF</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_DOG</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DHOLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>

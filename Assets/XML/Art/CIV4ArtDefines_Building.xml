@@ -7143,7 +7143,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Castle_Garden.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CATACOMBS</Type>
+			<Type>ART_DEF_BUILDING_CATACOMBS_OF_KOMELSHOQAFA</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.0</fScale>
@@ -14604,7 +14604,7 @@
 			<Button>Art/interface/buttons/buildings/eris_colony.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ESCHER_CITY</Type>
+			<Type>ART_DEF_BUILDING_HYPERCITY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16684,7 +16684,7 @@
 			<Button>Art/interface/buttons/buildings/galactic_news.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GALACTIC_PORT</Type>
+			<Type>ART_DEF_BUILDING_INTERSTELLAR_GALACTIC_PORT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -20854,7 +20854,7 @@
 			<Button>Art/Embassy/hyksosiembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HYPERCITY</Type>
+			<Type>ART_DEF_BUILDING_HYPERSPACE_PAN_DIMENSIONAL_CITY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -21804,7 +21804,7 @@
 			<Button>Art/interface/buttons/buildings/intergalactic_mine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INTERGALACTIC_PORT</Type>
+			<Type>ART_DEF_BUILDING_GALACTIC_PORT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -21874,7 +21874,7 @@
 			<Button>Art/interface/buttons/buildings/intergalactic_tourist_agency.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INTERGALACTIC_TRADING_CENTER</Type>
+			<Type>ART_DEF_BUILDING_INTERGALACTIC_TRADING_POST</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -21884,7 +21884,7 @@
 			<Button>Art/interface/buttons/buildings/intergalactic_trading_center.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INTERGALACTIC_TRADING_POST</Type>
+			<Type>ART_DEF_BUILDING_INTERGALACTIC_COMMERCIAL_DISTRICT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -31284,7 +31284,7 @@
 			<Button>Art/interface/buttons/buildings/optronic_supercomputer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ORACLE</Type>
+			<Type>ART_DEF_BUILDING_THE_ORACLE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>2.43</fScale>
@@ -31294,7 +31294,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/oracle.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ORACLE_HYPERINTELLIGENCE</Type>
+			<Type>ART_DEF_BUILDING_HYPERINTELLIGENT_ORACLE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43965,7 +43965,7 @@
 			<Button>Art/interface/buttons/buildings/umbriel_base.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_UNDERGROUND_TUNNELS</Type>
+			<Type>ART_DEF_BUILDING_CATACOMBS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46765,7 +46765,7 @@
 			<Button>Art/Interface/Buttons/Buildings/religions/zoroastrian/Zoroastrian_cathedral.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ZOROASTRIAN_MONASTERY</Type>
+			<Type>ART_DEF_BUILDING_ZOROASTRIAN_SHRINE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46775,7 +46775,7 @@
 			<Button>Art/Interface/Buttons/Buildings/religions/zoroastrian/Zoroastrian_Monastery.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ZOROASTRIAN_SHRINE</Type>
+			<Type>ART_DEF_BUILDING_PIR_E_SABZ</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

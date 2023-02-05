@@ -359,7 +359,7 @@
 			</TechCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZOROASTRIAN_MONASTERY</Type>
+			<Type>BUILDING_ZOROASTRIAN_SHRINE</Type>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>

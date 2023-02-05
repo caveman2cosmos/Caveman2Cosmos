@@ -752,7 +752,7 @@
 			<Button>Art/Interface/Buttons/Units/Greatwhite.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_GREY_WOLF</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_WOLF</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2032,7 +2032,7 @@
 			<Button>Art/Interface/Buttons/Units/button_boar.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_WOLF</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_WOLF</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

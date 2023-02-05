@@ -5133,7 +5133,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
+				<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_GALACTIFORMING</PrereqTech>
 			<iCost>12342</iCost>
@@ -5433,7 +5433,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_INTERGALACTIC_PORT</BuildingType>
+				<BuildingType>BUILDING_GALACTIC_PORT</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SHAPESHIFTING</PrereqTech>
 			<iCost>14817</iCost>
