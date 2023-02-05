@@ -1122,7 +1122,7 @@
 			<Button>Art/Interface/Buttons/Units/Moa.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MOA_REMAINS</Type>
+			<Type>ART_DEF_BUILDING_REMAINS_MOA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

@@ -143,7 +143,7 @@ def doRemoveWVCannibalism(argsList):
 		if CyCity is None:
 			print "[INFO] doRemoveWVCannibalism(args) happened for a player with no cities"
 		else:
-			iType0 = GC.getInfoTypeForString("BUILDING_CANNIBALISM")
+			iType0 = GC.getInfoTypeForString("BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE")
 			for CyCity in CyPlayer.cities():
 				CyCity.setNumRealBuilding(iType, 0)
 				if iType0 > -1:

@@ -149,8 +149,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-2</iHealth>
 			<bAutoBuild>1</bAutoBuild>
@@ -478,8 +478,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
@@ -577,11 +577,11 @@
 			<ConstructSound>AS2D_BUILD_CANAANITE</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CANNIBALISM</Type>
+			<Type>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CANNIBALISM</Description>
+			<Description>TXT_KEY_BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_CANNIBALISM_PEDIA</Civilopedia>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqAmountBuildings>
@@ -610,7 +610,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAODAI_SHRINE</Type>
@@ -714,8 +714,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -926,12 +926,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICEGALITARIAN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CIVICFEUDAL</Type>
+			<Type>BUILDING_CIVIC_FEUDAL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CIVICFEUDAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CIVICFEUDAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CIVIC_FEUDAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CIVIC_FEUDAL_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -953,7 +953,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CIVICFEUDAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_FEUDAL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CIVICFREEMARKET</Type>
@@ -1269,8 +1269,8 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA3_HDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_HDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -3519,7 +3519,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_INSIDERTRADING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_STOCK_BROKERING</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STOCKMARKET</BuildingType>
+				<BuildingType>BUILDING_STOCK_MARKET</BuildingType>
 			</PrereqInCityBuildings>
 			<iInsidiousness>5</iInsidiousness>
 			<UnitCombatFreeExperiences>
@@ -5043,11 +5043,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DISEASE_HIV</Type>
+			<Type>BUILDING_DISEASE_SYPHILIS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DISEASE_HIV</Description>
+			<Description>TXT_KEY_BUILDING_DISEASE_SYPHILIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
 			<ObsoleteTech>TECH_HOMO_SUPERIOR</ObsoleteTech>
@@ -8500,8 +8500,8 @@
 			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<Bonus>BONUS_ALCOHOL</Bonus>
 			<PrereqInCityBuildings>
@@ -8520,19 +8520,19 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_FRATERNITY_HOUSE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GAMBLING_BAN</Type>
+			<Type>BUILDING_ORDINANCE_GAMBLING_BAN</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GAMBLING_BAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GAMBLING_BAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_GAMBLING_BAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_GAMBLING_BAN_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LEGALIZED_GAMBLING</PrereqTech>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GAMBLING_BAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_GAMBLING_BAN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOOD_ALCATRAZ</Type>
@@ -8687,8 +8687,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -8818,8 +8818,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -8905,8 +8905,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -8929,7 +8929,7 @@
 			<Description>TXT_KEY_BUILDING_HOUSING_HOMELESS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSING_HOMELESS_PEDIA</Civilopedia>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_TREE_HALLOW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_TREE_HOLLOW</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_BURROW</BuildingType>
 				<BuildingType>BUILDING_HOUSING_LEAN_TOS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_GRASS_HUTS</BuildingType>
@@ -8969,8 +8969,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDHW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-2</iHealth>
 			<iHappiness>-1</iHappiness>
@@ -9000,8 +9000,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -9033,8 +9033,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -9069,8 +9069,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -9108,8 +9108,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_MDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDHW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>3</iHealth>
 			<YieldChanges>
@@ -9145,8 +9145,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -9182,8 +9182,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -9220,8 +9220,8 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -9252,8 +9252,8 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -9287,8 +9287,8 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -9325,8 +9325,8 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDHW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>5</iHealth>
 			<YieldChanges>
@@ -9361,8 +9361,8 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -9397,8 +9397,8 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -9438,8 +9438,8 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA4_HDHW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>2</iHealth>
 			<YieldChanges>
@@ -9478,8 +9478,8 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA4_HDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-2</iHealth>
 			<YieldChanges>
@@ -9526,8 +9526,8 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA4_HDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -9563,8 +9563,8 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>2</iHealth>
 			<YieldChanges>
@@ -9598,8 +9598,8 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -9633,8 +9633,8 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -9670,8 +9670,8 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDHW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>6</iHealth>
 			<YieldChanges>
@@ -9706,8 +9706,8 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -9743,8 +9743,8 @@
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -9771,7 +9771,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -9783,8 +9783,8 @@
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>2</iHealth>
 			<YieldChanges>
@@ -9811,7 +9811,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -9821,8 +9821,8 @@
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -9849,7 +9849,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -9860,8 +9860,8 @@
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>3</iHealth>
 			<YieldChanges>
@@ -9888,7 +9888,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
 			<PrereqInCityBuildings>
@@ -9898,8 +9898,8 @@
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>2</iHealth>
 			<YieldChanges>
@@ -9926,7 +9926,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
@@ -9934,8 +9934,8 @@
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -9962,7 +9962,7 @@
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WATER_PIPES</BuildingType>
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
@@ -9970,8 +9970,8 @@
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -9998,7 +9998,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -10009,8 +10009,8 @@
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>8</iHealth>
 			<YieldChanges>
@@ -10037,7 +10037,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10046,8 +10046,8 @@
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -10073,7 +10073,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10083,8 +10083,8 @@
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -10111,7 +10111,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_MARBLE</Bonus>
@@ -10125,8 +10125,8 @@
 				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -10153,7 +10153,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDLW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10165,8 +10165,8 @@
 				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-3</iHealth>
 			<YieldChanges>
@@ -10193,7 +10193,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDMW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_COLONY_ARCO</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
@@ -10206,8 +10206,8 @@
 				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>1</iHealth>
 			<YieldChanges>
@@ -10252,8 +10252,8 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iMinLatitude>50</iMinLatitude>
 			<PrereqOrTerrain>
@@ -10927,8 +10927,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<bAutoBuild>1</bAutoBuild>
@@ -10971,8 +10971,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -11157,8 +11157,8 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MESOAMERICAN_SHRINE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MESO_SHRINE</Type>
-			<Description>TXT_KEY_BUILDING_MESO_SHRINE</Description>
+			<Type>BUILDING_BABEL_TOWER</Type>
+			<Description>TXT_KEY_BUILDING_BABEL_TOWER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TMESO_SHRINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BABEL</ArtDefineTag>
@@ -11342,8 +11342,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -11391,7 +11391,7 @@
 				<BuildingType>BUILDING_BUDDHIST_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_TAOIST_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_SHINTO_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_SIKH_TEMPLE</BuildingType>
+				<BuildingType>BUILDING_SIKH_GURDWARA</BuildingType>
 				<BuildingType>BUILDING_JAIN_TEMPLE</BuildingType>
 			</PrereqOrBuildings>
 			<FreeBuilding>BUILDING_BELIEF_KARMA</FreeBuilding>
@@ -11484,7 +11484,7 @@
 				<BuildingType>BUILDING_SUPREME_COURT</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
-			<FreeBuilding>BUILDING_GAMBLING_BAN</FreeBuilding>
+			<FreeBuilding>BUILDING_ORDINANCE_GAMBLING_BAN</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_GAMBLING_BAN</ArtDefineTag>
@@ -11628,9 +11628,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NEIGHBORHOOD_WATCH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NGAI_SHRINE</Type>
-			<Description>TXT_KEY_BUILDING_NGAI_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NGAI_SHRINE_PEDIA</Civilopedia>
+			<Type>BUILDING_OLDOINYO_NGAI</Type>
+			<Description>TXT_KEY_BUILDING_OLDOINYO_NGAI</Description>
+			<Civilopedia>TXT_KEY_BUILDING_OLDOINYO_NGAI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLDOINYO</ArtDefineTag>
 			<MapCategoryTypes>
@@ -11707,11 +11707,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PESTS_ANTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_APHIDS</Type>
+			<Type>BUILDING_PESTS_APHIDS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_APHIDS</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_APHIDS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
@@ -11737,7 +11737,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_APHIDS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_APHIDS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEST_BEDBUGS</Type>
@@ -11939,11 +11939,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PESTS_LICE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_LOCUST</Type>
+			<Type>BUILDING_PESTS_LOCUST</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_LOCUST</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_LOCUST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>4</iPrereqPopulation>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
@@ -11959,7 +11959,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_LOCUST</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_LOCUST</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEST_MOSQUITOES</Type>
@@ -13103,8 +13103,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -13592,11 +13592,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SHUTTLE_SERVICE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SIKH_SHRINE</Type>
-			<Description>TXT_KEY_BUILDING_SIKH_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SIKH_SHRINE_PEDIA</Civilopedia>
+			<Type>BUILDING_THE_GOLDEN_TEMPLE</Type>
+			<Description>TXT_KEY_BUILDING_THE_GOLDEN_TEMPLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_GOLDEN_TEMPLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SIKH_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_GOLDEN_TEMPLE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14259,8 +14259,8 @@
 			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<Bonus>BONUS_ALCOHOL</Bonus>
 			<PrereqInCityBuildings>
@@ -14429,8 +14429,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -14461,8 +14461,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -14581,8 +14581,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -15256,8 +15256,8 @@
 			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<iHealth>-1</iHealth>
@@ -15317,8 +15317,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -15334,12 +15334,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_TREEHOUSES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TREE_HALLOW</Type>
+			<Type>BUILDING_HOUSING_TREE_HOLLOW</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TREE_HALLOW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TREE_HALLOW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_TREE_HOLLOW</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_TREE_HOLLOW_PEDIA</Civilopedia>
 			<iHealth>-1</iHealth>
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<ObsoleteTech>TECH_CARPENTRY</ObsoleteTech>
@@ -15373,13 +15373,13 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TREE_HALLOW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_TREE_HOLLOW</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSAL_HEALTH_CARE</Type>
@@ -15814,8 +15814,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>
@@ -16076,8 +16076,8 @@
 				<BuildingType>BUILDING_HOUSE_ERA2_MDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_MDHW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
 			<iHealth>-1</iHealth>
 			<YieldChanges>

@@ -574,7 +574,7 @@ class BuildingsGraph(UnitUpgradesGraph):
 	def getGraphEdges(self, graph):
 		import copy
 
-		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENEDSKIES", "BUILDING_GAMBLING_BAN", "BUILDING_ALCOHOL_PROHIBITION", "BUILDING_DRUG_PROHIBITION", "BUILDING_PROSTITUTION_BAN"]
+		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENEDSKIES", "BUILDING_ORDINANCE_GAMBLING_BAN", "BUILDING_ALCOHOL_PROHIBITION", "BUILDING_DRUG_PROHIBITION", "BUILDING_PROSTITUTION_BAN"]
 		for buildingA in graph.iterkeys():
 			info = GC.getBuildingInfo(buildingA)
 			if not info:

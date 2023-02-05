@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CANNIBALISM</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</Tag>
 		<English>Worldview - Cannibalism active</English>
 		<French>
 			<Text>Vision du Monde - Cannibalisme actif</Text>

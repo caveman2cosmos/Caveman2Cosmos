@@ -251,7 +251,7 @@ class CvEventManager:
 					"BIODOME"				: GC.getInfoTypeForString("BUILDING_MONTREAL_BIODOME"),
 					"NAZCA_LINES"			: GC.getInfoTypeForString("BUILDING_NAZCA_LINES"),
 					"THE_MOTHERLAND_CALLS"	: GC.getInfoTypeForString("BUILDING_THE_MOTHERLAND_CALLS"),
-					"ISHTAR"				: GC.getInfoTypeForString('BUILDING_ISHTAR_GATE'),
+					"ISHTAR"				: GC.getInfoTypeForString('BUILDING_THE_ISHTAR_GATE'),
 					"GREAT_JAGUAR_TEMPLE"	: GC.getInfoTypeForString('BUILDING_TEMPLE_OF_AH_CACAO'),
 					"GREAT_BATH"			: GC.getInfoTypeForString('BUILDING_GREAT_BATH_OF_MOHENJO_DARO'),
 					"TOPKAPI_PALACE"		: GC.getInfoTypeForString("BUILDING_TOPKAPI_PALACE"),

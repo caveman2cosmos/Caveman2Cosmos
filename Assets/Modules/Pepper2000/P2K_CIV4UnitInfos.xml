@@ -1825,7 +1825,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_MARS_HITECH</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_ELECTRONICS_FACTORY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ION_BEAMS</PrereqTech>
 			<iCost>4850</iCost>
@@ -2283,7 +2283,7 @@
 				<BuildType>BUILD_ORBITAL_TRAJECTORY</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_DOCKING_BAY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iCost>1000</iCost>
@@ -2689,7 +2689,7 @@
 			</Actions>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LAUNCH_SITE_EFFECT</BuildingType>
-				<BuildingType>BUILDING_DOCKING_BAY</BuildingType>
+				<BuildingType>BUILDING_CISLUNAR_DOCKING_BAY</BuildingType>
 				<BuildingType>BUILDING_DEEP_SPACE_DOCKING_BAY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MAGNETIC_SAILS</PrereqTech>
@@ -5750,7 +5750,7 @@
 			<iCost>2000</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_KBO_OUTPOST</BuildingType>
+				<BuildingType>BUILDING_KUIPER_BELT_OUTPOST</BuildingType>
 			</PrereqAndBuildings>
 			<iAdvancedStartCost>100</iAdvancedStartCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -6051,7 +6051,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_MIR</BuildingType>
 				<BuildingType>BUILDING_SKYLAB</BuildingType>
-				<BuildingType>BUILDING_ISS_TOURISM</BuildingType>
+				<BuildingType>BUILDING_SPACE_STATION_TOURS</BuildingType>
 				<BuildingType>BUILDING_ORBITAL_HOTEL</BuildingType>
 			</Buildings>
 			<Actions>
@@ -6127,7 +6127,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_MIR</BuildingType>
 				<BuildingType>BUILDING_SKYLAB</BuildingType>
-				<BuildingType>BUILDING_ISS_TOURISM</BuildingType>
+				<BuildingType>BUILDING_SPACE_STATION_TOURS</BuildingType>
 				<BuildingType>BUILDING_ORBITAL_HOTEL</BuildingType>
 				<BuildingType>BUILDING_ASTEROID_MINE</BuildingType>
 				<BuildingType>BUILDING_ASTEROID_RARE</BuildingType>

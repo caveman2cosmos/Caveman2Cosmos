@@ -3143,7 +3143,7 @@
 			</TechTypes>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+				<BuildingType>BUILDING_REPET</BuildingType>
 			</PrereqAndBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>

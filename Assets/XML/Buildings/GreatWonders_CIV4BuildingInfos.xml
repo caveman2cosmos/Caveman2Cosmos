@@ -1296,11 +1296,11 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+					<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+					<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
@@ -2025,15 +2025,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BAY_GARDENS</Type>
+			<Type>BUILDING_GARDENS_BY_THE_BAY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BAY_GARDENS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BAY_GARDENS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GARDENS_BY_THE_BAY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GARDENS_BY_THE_BAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BAY_GARDENS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GARDENS_BY_THE_BAY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BAY_GARDENS</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2873,8 +2873,8 @@
 			</GlobalBuildingProductionModifiers>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3761,7 +3761,7 @@
 				<BuildingType>BUILDING_CASINO</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_GAMBLING_BAN</BuildingType>
 			</ReplacementBuildings>
 			<iCost>8070</iCost>
 			<iHappiness>3</iHappiness>
@@ -4413,7 +4413,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_FIRE_HANGER</BuildingType>
+					<BuildingType>BUILDING_FIRE_HANGAR</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -4454,7 +4454,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_FIRE_HANGER</BuildingType>
+					<BuildingType>BUILDING_FIRE_HANGAR</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -5263,7 +5263,7 @@
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DEEPSEA_LAB</BuildingType>
+				<BuildingType>BUILDING_DEEP_SEA_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>8070</iCost>
 			<CommerceChanges>
@@ -5736,7 +5736,7 @@
 			<Bonus>BONUS_DOG</Bonus>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
-				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+				<BuildingType>BUILDING_REPET</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>3210</iCost>
 			<iHappiness>1</iHappiness>
@@ -6261,13 +6261,13 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
+					<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 					<CommerceChanges>
 						<iCommerce>3</iCommerce>
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+					<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 					<CommerceChanges>
 						<iCommerce>3</iCommerce>
 					</CommerceChanges>
@@ -8206,7 +8206,7 @@
 			</PrereqBonuses>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
+					<BuildingType>BUILDING_BIOINFORMATICS_LAB</BuildingType>
 					<iNumBuildingNeeded>10</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
@@ -8220,7 +8220,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
+					<BuildingType>BUILDING_BIOINFORMATICS_LAB</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -8404,7 +8404,7 @@
 			<PrereqTech>TECH_MEGACORPORATIONS</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STOCKMARKET</BuildingType>
+				<BuildingType>BUILDING_STOCK_MARKET</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>21150</iCost>
 			<iGlobalTradeRoutes>3</iGlobalTradeRoutes>
@@ -10943,16 +10943,16 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ISHTAR_GATE</Type>
+			<Type>BUILDING_THE_ISHTAR_GATE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ISHTAR_GATE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ISHTAR_GATE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_ISHTAR_GATE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_ISHTAR_GATE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<Help>TXT_KEY_BUILDING_ISHTAR_GATE_HELP</Help>
-			<ArtDefineTag>ART_DEF_BUILDING_ISHTAR_GATE</ArtDefineTag>
+			<Help>TXT_KEY_BUILDING_THE_ISHTAR_GATE_HELP</Help>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_ISHTAR_GATE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ISHTAR</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
@@ -11487,15 +11487,15 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KHMER_BARAY</Type>
+			<Type>BUILDING_BARAY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KHMER_BARAY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KHMER_BARAY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_BARAY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BARAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KHMER_BARAY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BARAY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KHMER_BARAY</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_AQUEDUCT</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
@@ -12042,7 +12042,7 @@
 			</PrereqNotInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_GAMBLING_BAN</BuildingType>
 			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -12213,8 +12213,8 @@
 			</GlobalBuildingExtraCommerces>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -12564,7 +12564,7 @@
 				<BuildingType>BUILDING_CASINO</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_GAMBLING_BAN</BuildingType>
 			</ReplacementBuildings>
 			<iCost>8070</iCost>
 			<iHappiness>3</iHappiness>
@@ -13538,8 +13538,8 @@
 				<BuildingType>BUILDING_CLIFF_DWELLING</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_HDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA4_HDMW</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
 			<iCost>876</iCost>
@@ -13910,7 +13910,7 @@
 				<BuildingType>BUILDING_LAS_VEGAS_STRIP</BuildingType>
 			</PrereqNotInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_GAMBLING_BAN</BuildingType>
 			</ReplacementBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -15120,8 +15120,8 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -16648,15 +16648,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PROTEOMIC_E</Type>
+			<Type>BUILDING_PROETOMIC_ENCYCLOPEDIA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PROTEOMIC_E</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PROTEOMIC_E_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PROETOMIC_ENCYCLOPEDIA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PROETOMIC_ENCYCLOPEDIA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PROTEOMIC_E</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PROETOMIC_ENCYCLOPEDIA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PROTEOMIC_E</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GENOMIC_ENCYCLOPEDIA</PrereqTech>
@@ -16667,7 +16667,7 @@
 			</PrereqBonuses>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
+					<BuildingType>BUILDING_BIOINFORMATICS_LAB</BuildingType>
 					<iNumBuildingNeeded>10</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
@@ -16681,7 +16681,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
+					<BuildingType>BUILDING_BIOINFORMATICS_LAB</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -17633,7 +17633,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_TROYES_FAIR</BuildingType>
+				<BuildingType>BUILDING_TROYES_TRADE_FAIR</BuildingType>
 			</PrereqNotInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -17967,8 +17967,8 @@
 			</GlobalBuildingProductionModifiers>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -18519,16 +18519,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SMITHSONIAN</Type>
+			<Type>BUILDING_SMITHSONIAN_INSTITUTION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SMITHSONIAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SMITHSONIAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SMITHSONIAN_INSTITUTION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SMITHSONIAN_INSTITUTION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SMITHSONIAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SMITHSONIAN_INSTITUTION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SMITHSONIAN</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_MUSEUM</ConstructSound>
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
@@ -18587,16 +18587,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SOLAR_TOWER</Type>
+			<Type>BUILDING_SOLAR_UPDRAFT_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SOLAR_TOWER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SOLAR_TOWER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SOLAR_UPDRAFT_TOWER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SOLAR_UPDRAFT_TOWER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_TOWER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SOLAR_UPDRAFT_TOWER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SOLAR_TOWER</MovieDefineTag>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -18958,7 +18958,7 @@
 			</PrereqBonuses>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
+					<BuildingType>BUILDING_BIOINFORMATICS_LAB</BuildingType>
 					<iNumBuildingNeeded>10</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -19316,7 +19316,7 @@
 				<BuildingType>BUILDING_CASINO</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_GAMBLING_BAN</BuildingType>
 			</ReplacementBuildings>
 			<iCost>8070</iCost>
 			<iHappiness>3</iHappiness>
@@ -19799,8 +19799,8 @@
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -20168,15 +20168,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_THE_ATOMIUM</Type>
+			<Type>BUILDING_ATOMIUM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_THE_ATOMIUM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_THE_ATOMIUM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ATOMIUM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ATOMIUM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_THE_ATOMIUM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ATOMIUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_THE_ATOMIUM</MovieDefineTag>
 			<PrereqTech>TECH_FISSION</PrereqTech>
 			<iCost>6480</iCost>
@@ -20650,12 +20650,12 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TROYES_FAIR</Type>
+			<Type>BUILDING_TROYES_TRADE_FAIR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_TROYES_FAIR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TROYES_FAIR_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TROYES_TRADE_FAIR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TROYES_TRADE_FAIR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TROYES_FAIR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TROYES_TRADE_FAIR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TROYES_FAIR</MovieDefineTag>
 			<ObsoleteTech>TECH_RAILROAD</ObsoleteTech>
 			<PrereqTech>TECH_CHARTERS</PrereqTech>
@@ -20743,15 +20743,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRUMP_TOWER</Type>
+			<Type>BUILDING_WORLD_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TRUMP_TOWER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRUMP_TOWER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_WORLD_TOWER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WORLD_TOWER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TRUMP_TOWER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WORLD_TOWER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TRUMP_TOWER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
@@ -20937,8 +20937,8 @@
 			</GlobalBuildingProductionModifiers>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21337,12 +21337,12 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_STOCKMARKET</BuildingType>
+					<BuildingType>BUILDING_STOCK_MARKET</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STOCKMARKET</BuildingType>
+				<BuildingType>BUILDING_STOCK_MARKET</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>2850</iCost>
 			<CommerceModifiers>
@@ -21522,13 +21522,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WESTMINSTER</Type>
+			<Type>BUILDING_WESTMINSTER_ABBEY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_WESTMINSTER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WESTMINSTER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_WESTMINSTER_ABBEY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WESTMINSTER_ABBEY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WESTMINSTER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WESTMINSTER_ABBEY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WESTMINSTER</MovieDefineTag>
 			<ObsoleteTech>TECH_VIRTUAL_REALITY</ObsoleteTech>
 			<PrereqTech>TECH_NATIONALISM</PrereqTech>
@@ -22085,8 +22085,8 @@
 			</GlobalBuildingProductionModifiers>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ARCOLOGY</BuildingType>
-				<BuildingType>BUILDING_COLONY_ARCO</BuildingType>
-				<BuildingType>BUILDING_LAUNCH_ARCO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
+				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>

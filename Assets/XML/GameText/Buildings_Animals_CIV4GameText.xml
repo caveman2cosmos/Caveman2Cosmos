@@ -452,7 +452,7 @@
 		<Russian>Îñëèíûé ïèòîìíèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DONKEY_HERD</Tag>
+		<Tag>TXT_KEY_BUILDING_HERD_DONKEY</Tag>
 		<English>Herd (Donkey)</English>
 		<French>Troupeau d'Ânes</French>
 		<Italian>Branco di asini</Italian>
@@ -460,19 +460,19 @@
 		<Russian>Ñòàäî îñëîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DONKEY_HERD_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HERD_DONKEY_PEDIA</Tag>
 		<English>Asses were first domesticated around 3000 BC, or 4000 BC, probably in Egypt or Mesopotamia, and have spread around the world. They continue to fill important roles in many places today. While domesticated species are increasing in numbers, the African wild ass and another relative, the Onager, are endangered. As "beasts of burden" and companions, asses and donkeys have worked together with humans for millennia.</English>
 		<Italian>Gli asini vennero addomesticati intorno al 3000 a.C. o al 4000 a.C., probabilmente in Egitto o Mesopotamia, e vennero diffusi in tutto il mondo; al giorno d'oggi, continuano a ricoprire importanti ruoli in molti posti. Mentre le specie addomesticate sono in aumento in termini numerici, l'asino selvatico africano e un altro parente, l'onagro, sono in pericolo di estinzione. Come "bestie da soma" e compagni, gli asini hanno lavorato insieme con gli esseri umani per millenni.</Italian>
 		<Polish>Osioł został udomowiony przez człowieka wcześniej niż koń. Pierwsze informacje dotyczące udomowienia pochodzą z Doliny Nilu z ok. 4000 p.n.e. czyli 6 tys. lat temu. Na tych terenach występowały obydwa żyjące do dzisiaj podgatunki osła afrykańskiego. Przypuszcza się, że z ich krzyżówek powstał osioł domowy (Equus africanus f.asinus).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DUCK_FLOCKS</Tag>
+		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_DUCK</Tag>
 		<English>Flocks of Duck</English>
 		<Italian>Stormo di anatre</Italian>
 		<Russian>Ñòàÿ óòîê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DUCK_FLOCKS_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_FLOCKS_OF_DUCK_PEDIA</Tag>
 		<English>Your nation has flocks of Duck.</English>
 		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ óòîê.</Russian>
 	</TEXT>
@@ -3333,7 +3333,7 @@
 		<Polish>Muł mieszaniec międzygatunkowy klaczy konia domowego z ogierem osła, najbardziej znana hybryda. Najczęściej bezpłodny, tylko ok. 5% mulic jest płodnych. Zewnętrznie jest bardziej podobny do konia. Charakteryzuje się dużą głową, długimi uszami oraz krótką szyją ze stojącą grzywą i typowo końskim ogonem z długimi włosami. W kłębie osiąga wysokość do 180 cm.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MUSKOX_HERD</Tag>
+		<Tag>TXT_KEY_BUILDING_HERD_MUSKOX</Tag>
 		<English>Herd (Muskox)</English>
 		<French>Troupeau de Bœufs musqués</French>
 		<Italian>Branco di buoi muschiati</Italian>
@@ -3341,7 +3341,7 @@
 		<Russian>Ñòàäî îâöåáûêîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MUSKOX_HERD_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HERD_MUSKOX_PEDIA</Tag>
 		<English>A herd of Muskoxes.</English>
 	</TEXT>
 	<TEXT>
@@ -3449,7 +3449,7 @@
 		<Russian>Ïàìÿòü î ïðîêîïòîäîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RATITE_HERD</Tag>
+		<Tag>TXT_KEY_BUILDING_HERD_RATITE</Tag>
 		<English>Herd (Ratite)</English>
 		<French>Troupeau d'Autruches</French>
 		<Italian>Branco di ratiti</Italian>
@@ -3457,7 +3457,7 @@
 		<Russian>Ñòàÿ ñòðàóñîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RATITE_HERD_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HERD_RATITE_PEDIA</Tag>
 		<English>A ratite is any of a diverse group of large, flightless birds of Gondwanan origin, most of them now extinct. There is still some controversy regarding the systematics involved. Some sources state that Ratites are synonymous with Struthioiniformes, while other sources state that Ratites are the same group, only that the order Struthioniformes contains only the Ostrich and possibly the Elephant Bird. Unlike other flightless birds, the ratites have no keel on their sternum hence the name from the Latin ratis (for raft). Without this to anchor their wing muscles, they could not fly even if they were to develop suitable wings.[PARAGRAPH:2]Most parts of the former Gondwana have ratites, or did have until the fairly recent past. Their closest living relatives are the tinamous of South America.[PARAGRAPH:2]Some taxonomical systems consider the various families of ratites to be orders, but the system used here uses the order "Struthioniformes" to refer to all ratites. The African Ostrich is the largest living ratite. A large member of this species can be nearly 2.8 metres (9.2 ft) tall, weigh as much as 156 kilograms (340 lb), and can outrun a horse.[PARAGRAPH:2]Of the living species, the Australian emu is next in height, reaching up to 1.9 metres (6.2 ft) tall and about 50 kilograms (110 lb). Like the ostrich, it is a fast-running, powerful bird of the open plains and woodlands.[PARAGRAPH:2]Also native to Australia and the islands to the north are the three species of cassowary. Shorter than an emu, but heavier and solidly built, cassowaries prefer thickly vegetated tropical forest. They can be very dangerous when surprised or cornered because of their razor sharp talons. In New Guinea, cassowary eggs are brought back to villages and the chicks raised for eating as a much-prized delicacy, despite (or perhaps because of) the risk they pose to life and limb. They reach up to 1.7 metres (5.6 ft) tall and weigh as much as 59 kilograms (130 lb)[PARAGRAPH:2]South America has two species of rhea, large fast-running birds of the Pampas. The larger American rhea grows to about 1.4 metres (4.6 ft) tall and usually weighs 15 to 40 kilograms (3388 lb).[PARAGRAPH:2]The smallest ratites are the five species of kiwi from New Zealand. Kiwi are chicken-sized, shy, and nocturnal. They nest in deep burrows and use a highly developed sense of smell to find small insects and grubs in the soil. Kiwi are notable for laying eggs that are very large in relation to their body size. A kiwi egg may equal 15 to 20 percent of the body mass of a female kiwi. The smallest species of kiwi is the Little Spotted Kiwi, at 0.9 to 1.9 kilograms (2.04.2 lb) and 35 to 45 centimetres (1418 in).</English>
 		<Italian>I ratiti sono una famiglia di uccelli, che comprende i Paleognati, che non volano. Il termine "Ratiti" viene dal latino "ratis" ("zattera"), poiché questi uccelli hanno lo sterno piatto invece che carenato. La loro distribuzione è australe di origine gondwaniana. Tranne il kiwi sono tutti di taglia grande e sono onnivori. Hanno prole precoce e le femmine covano nella stessa buca a turno; la cova è effettuata anche dal maschio. I ratiti più importanti sono gli struzzi africani, i nandù, i casuari, i kiwi e i moa (attualmente estinti).</Italian>
 		<Polish>Struś syryjski od dawna zajmuje znaczące miejsce w kulturze regionu. Dorosły struś z jedenastoma młodymi został przedstawiony na słynnym prehistorycznym "Graffiti Rock I" (rysunki wyryte na skale datowane na 20001000 p.n.e. odkryte w pobliżu Rijad). W Mezopotamii, był wykorzystywany jako zwierzę ofiarne i przedstawiany na dziełach sztuki, malowany na kubkach i innych przedmiotach wykonanych ze strusich jaj, sprzedawanych aż po Etrurię w okresie nowoasyryjskim. W epoce ekspansji islamu struś syryjski reprezentował bogactwo i elegancję. Polowanie na strusie stało się popularną rozrywką dla bogaczy i szlachty (jeśli zabito strusia w odpowiedni sposób, jego mięso uznawane było przez muzułmanów za halaal). Jaja, pióra i skóry były szeroko wykorzystywane w rękodziele. Zarówno produkty otrzymane ze strusi jak i żywe ptaki były eksportowane aż do Chin.</Polish>
@@ -3471,7 +3471,7 @@
 		<Russian>Òåððàðèóì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RODENT_CAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_ENCLOSURE_RODENT</Tag>
 		<English>Enclosure - Rodent</English>
 		<French>Enclos - Rongeurs</French>
 		<Italian>Gabbia dei roditori</Italian>
@@ -3646,7 +3646,7 @@
 		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ èíäååê.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WALRUS_CAGE</Tag>
+		<Tag>TXT_KEY_BUILDING_ENCLOSURE_WALRUS</Tag>
 		<English>Enclosure - Walrus</English>
 		<French>Enclos - Morses</French>
 		<Italian>Gabbia dei trichechi</Italian>

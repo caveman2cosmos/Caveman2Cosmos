@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_COAL_DYNAMO</Tag>
+		<Tag>TXT_KEY_BUILDING_COAL_FIRED_DYNAMO</Tag>
 		<English>Coal Fired Dynamo</English>
 		<French>
 			<Text>Dynamo à Charbon</Text>
@@ -13,7 +13,7 @@
 		<Russian>Óãîëüíûé ãåíåðàòîð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_COAL_DYNAMO_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_COAL_FIRED_DYNAMO_PEDIA</Tag>
 		<English>A primitive Steampunk power plant.</English>
 		<Italian>Un primitivo impianto di generazione elettrica.</Italian>
 		<Polish>Prymitywna elektownia steampunkowa.</Polish>
@@ -92,7 +92,7 @@
 		<Russian>Èäåÿ ïàíîïòèêóìà áûëà ïðåäëîæåíà â êîíöå 18 âåêà, êàê íàèáîëåå ýôôåêòèâíûé ñïîñîá äåðæàòü ïîä íàáëþäåíèåì çàêëþ÷åííûõ. Öåíòðàëèçîâàííîå íàáëþäåíèå äëÿ îõðàííèêîâ, íåäîñòóïíîå çàêëþ÷åííûì, íàõîäÿùèìñÿ â êàìåðàõ, êîòîðûå âûñòðîåíû ïî ïåðèìåòðó è âñåãäà õîðîøî ïðîñìàòðèâàþòñÿ èç öåíòðà òþðüìû.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PEAT_DYNAMO</Tag>
+		<Tag>TXT_KEY_BUILDING_PEAT_FIRED_DYNAMO</Tag>
 		<English>Peat Fired Dynamo</English>
 		<French>Dynamo à tourbe</French>
 		<Italian>Generatore a torba</Italian>
@@ -100,7 +100,7 @@
 		<Russian>Òîðôÿíîé ãåíåðàòîð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PEAT_DYNAMO_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_PEAT_FIRED_DYNAMO_PEDIA</Tag>
 		<English>A primitive Steampunk power plant.</English>
 		<Italian>Un primitivo impianto di generazione elettrica.</Italian>
 		<Polish>Prymitywna elektownia steampunkowa.</Polish>
@@ -121,7 +121,7 @@
 		<Russian>Ñòèìïàíê - íàïðàâëåíèå íàó÷íîé ôàíòàñòèêè, ìîäåëèðóþùåå öèâèëèçàöèþ, â ñîâåðøåíñòâå îñâîèâøóþ ìåõàíèêó è òåõíîëîãèè ïàðîâûõ ìàøèí. Ñàì òåðìèí ÿâëÿåòñÿ ñìåñüþ ñëîâ "steam"(ïàð) è "punk"(ìóñîð). Êàê ïðàâèëî, ñòèìïàíê ïîäðàçóìåâàåò àëüòåðíàòèâíûé âàðèàíò ðàçâèòèÿ ÷åëîâå÷åñòâà ñ âûðàæåííîé îáùåé ñòèëèçàöèåé ïîä ýïîõó âèêòîðèàíñêîé Àíãëèè (âòîðàÿ ïîëîâèíà XIX âåêà) è ýïîõó ðàííåãî êàïèòàëèçìà ñ õàðàêòåðíûì ãîðîäñêèì ïåéçàæåì è êîíòðàñòíûì ñîöèàëüíûì ðàññëîåíèåì. Âîçìîæíî, îäíàêî, è íàëè÷èå â ïðîèçâåäåíèÿõ ñòèìïàíêà áîëüøåé èëè ìåíüøåé äîëè ýëåìåíòîâ ôýíòåçè.[PARAGRAPH:2]Ê "ïàíêîâñêîìó" êîìïîíåíòó ñòèìïàíêà îòíîñèòñÿ îñîáûé àêöåíò íà èñòèííîé ÷åëîâå÷åñêîé ïðèðîäå, äâèæèìîé íèçêèìè ñòðàñòÿìè - ïîõîòüþ, ãíåâîì, òùåñëàâèåì, àë÷íîñòüþ è çàâèñòüþ. Îáùèé ñòèëü ñòèìïàíêà çà÷àñòóþ âûãëÿäèò öèíè÷íûì (ãðóáî-îòêðîâåííûì) è ïåññèìèñòè÷íûì (àíòèóòîïè÷åñêèì), îäíàêî, áëàãîäàðÿ êîìè÷åñêèì âîçìîæíîñòÿì ðåòðîñòèëèñòèêè è àëüòåðíàòèâíîé èñòîðèè, øèðîêî ðàñïðîñòðàíåíû è þìîðèñòè÷åñêèå, ïàðîäèéíûå ìîòèâû. Òåì íå ìåíåå ñóùåñòâóåò íåìàëî ïðîèçâåäåíèé ñ ïðîòèâîïîëîæíîé íàïðàâëåííîñòüþ - ðîìàíòèêà, äðàìàòèçì âûñîêèõ ÷óâñòâ, äàæå ýëåìåíòû óòîïèè.[PARAGRAPH:1]Ðåàëèè ñòèìïàíêîâîé ñòèëèñòèêè - "ñòàðèííûå" àâòîìîáèëè, ëîêîìîòèâû, òåëåôîíû è ò.ï., àíàõðîíè÷åñêè âïèñàííûå â áîëåå èëè ìåíåå "ñòàðèííûé" àíòóðàæ, ëåòàþùèå êîðàáëè-äèðèæàáëè, ìåõàíè÷åñêèå ðîáîòû.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TR_WORKSHOP</Tag>
+		<Tag>TXT_KEY_BUILDING_TRACTION_ENGINE_WORKSHOP</Tag>
 		<English>Traction Engine Workshop</English>
 		<French>
 			<Text>Atelier de Moteurs à vapeur</Text>
@@ -133,14 +133,14 @@
 		<Russian>Ìàøèííàÿ ìàñòåðñêàÿ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TR_WORKSHOP_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_TRACTION_ENGINE_WORKSHOP_PEDIA</Tag>
 		<English>A traction engine is a self-propelled steam engine used to move heavy loads on roads, plough ground or to provide power at a chosen location. The name derives from the Latin tractus, meaning drawn, since the prime function of any traction engine is to draw a load behind it. They are sometimes called road locomotives to distinguish them from (railway) steam locomotives that is, steam engines that run on rails.</English>
 		<Italian>Un Trattore a vapore viene usato per spostare carichi pesanti sulle strade, arare campi o fornire elettricità in un certo posto. Il nome deriva dal latino tractus, dato che la funzione primaria di ogni trattore è trainare dietro di sè qualcosa. Spesso vengono chiamati locomotive da strada, per distinguerli da quelle su rotaia.</Italian>
 		<Polish>Lokomobila (z łac. locus mobilis) - początkowo był to przewoźny zespół napędowy, zawierający: kocioł parowy, maszynę parową i urządzenie transmisyjne (np. koło pasowe), konstrukcyjnie zbliżony do małego parowozu, ale bez własnego napędu. W miarę rozwoju konstrukcji dodawano przymiotniki uściślające, ale zawsze był to zespół napędowy stanowiący zwartą całość w przeciwieństwie do siłowni z wydzielonym kotłem i silnikiem. Przeważnie silnik parowy był mocowany na kotle, rzadziej do jego boku.</Polish>
 		<Russian>Òÿãîâûé äâèãàòåëü - ñàìîõîäíàÿ ïàðîâàÿ ìàøèíà, êîòîðàÿ èñïîëüçóåòñÿ äëÿ ïåðåìåùåíèÿ òÿæåëûõ ãðóçîâ ïî äîðîãàì, îáðàáîòêè çåìëè èëè ñíàáæåíèÿ ýíåðãèåé. Íàçâàíèå ïðîèñõîäèò îò ëàòèíñêîãî "tractus", ÷òî îçíà÷àåò äâèæåíèå.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WOOD_DYNAMO</Tag>
+		<Tag>TXT_KEY_BUILDING_WOOD_FIRED_DYNAMO</Tag>
 		<English>Wood Fired Dynamo</English>
 		<French>
 			<Text>Dynamo à Bois</Text>
@@ -152,7 +152,7 @@
 		<Russian>Äðîâÿíîé ãåíåðàòîð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WOOD_DYNAMO_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_WOOD_FIRED_DYNAMO_PEDIA</Tag>
 		<English>A primitive Steampunk power plant.</English>
 		<Italian>Un primitivo impianto di generazione elettrica.</Italian>
 		<Polish>Prymitywna elektownia steampunkowa.</Polish>

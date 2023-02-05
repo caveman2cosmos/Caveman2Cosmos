@@ -4812,7 +4812,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_SIKHISM</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SIKH_TEMPLE</BuildingType>
+				<BuildingType>BUILDING_SIKH_GURDWARA</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iMoves>2</iMoves>
@@ -25247,7 +25247,7 @@
 			<BonusType>BONUS_DOG</BonusType>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
-				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+				<BuildingType>BUILDING_REPET</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARDOG</UnitType>
@@ -25711,7 +25711,7 @@
 			<PrereqTech>TECH_HOMO_SUPERIOR</PrereqTech>
 			<BonusType>BONUS_DOG</BonusType>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+				<BuildingType>BUILDING_REPET</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>3942</iCost>
 			<iBaseUpkeep>5</iBaseUpkeep>
@@ -33770,7 +33770,7 @@
 				<BuildingType>BUILDING_TIRE_RECYCLE</BuildingType>
 				<BuildingType>BUILDING_SHUTTLE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
-				<BuildingType>BUILDING_GAMBLING_BAN</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_GAMBLING_BAN</BuildingType>
 				<BuildingType>BUILDING_ALCOHOL_PROHIBITION</BuildingType>
 				<BuildingType>BUILDING_DRUG_PROHIBITION</BuildingType>
 				<BuildingType>BUILDING_SMOKING_PROHIBITION</BuildingType>
@@ -36297,14 +36297,14 @@
 				<BuildingType>BUILDING_CAODAI_SHRINE</BuildingType>
 				<BuildingType>BUILDING_DRUID_SHRINE</BuildingType>
 				<BuildingType>BUILDING_JAINISM_SHRINE</BuildingType>
-				<BuildingType>BUILDING_MESO_SHRINE</BuildingType>
+				<BuildingType>BUILDING_BABEL_TOWER</BuildingType>
 				<BuildingType>BUILDING_MORMON_SHRINE</BuildingType>
-				<BuildingType>BUILDING_NGAI_SHRINE</BuildingType>
+				<BuildingType>BUILDING_OLDOINYO_NGAI</BuildingType>
 				<BuildingType>BUILDING_RODNOVERY_SHRINE</BuildingType>
 				<BuildingType>BUILDING_SCIENTOLOGY_SHRINE</BuildingType>
 				<BuildingType>BUILDING_SHAMAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_SHINTO_SHRINE</BuildingType>
-				<BuildingType>BUILDING_SIKH_SHRINE</BuildingType>
+				<BuildingType>BUILDING_THE_GOLDEN_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_TENGRI_SHRINE</BuildingType>
 				<BuildingType>BUILDING_VOODOO_SHRINE</BuildingType>
 				<BuildingType>BUILDING_YORUBA_SHRINE</BuildingType>
@@ -38125,7 +38125,7 @@
 				<BuildingType>BUILDING_TRADITION_TOTEM</BuildingType>
 				<BuildingType>BUILDING_TRADITION_NAVAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ARCHERY</BuildingType>
-				<BuildingType>BUILDING_HHUNTINGBOW</BuildingType>
+				<BuildingType>BUILDING_GREAT_HOLMEGAARD_HUNT</BuildingType>
 			</Buildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_MASTER_CHASER</UnitType>

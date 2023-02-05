@@ -1264,16 +1264,16 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CACTUS_HILL</Type>
+			<Type>BUILDING_LL_CACTUS_HILL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CACTUS_HILL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CACTUS_HILL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LL_CACTUS_HILL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LL_CACTUS_HILL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_LEGENDARY_LANDSCAPES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_CACTUS_HILL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LL_CACTUS_HILL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CACTUS_HILL</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1869,16 +1869,16 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MEADOWCRAFT</Type>
+			<Type>BUILDING_LL_MEADOWCROFT_ROCKSHELTER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MEADOWCRAFT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MEADOWCRAFT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LL_MEADOWCROFT_ROCKSHELTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LL_MEADOWCROFT_ROCKSHELTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_LEGENDARY_LANDSCAPES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_MEADOWCRAFT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LL_MEADOWCROFT_ROCKSHELTER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MEADOWCRAFT</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1906,16 +1906,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MONTE_VERDE</Type>
+			<Type>BUILDING_LL_MONTE_VERDE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MONTE_VERDE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MONTE_VERDE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LL_MONTE_VERDE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LL_MONTE_VERDE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_LEGENDARY_LANDSCAPES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_MONTE_VERDE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LL_MONTE_VERDE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MONTE_VERDE</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>

@@ -548,7 +548,7 @@
 			<iCost>5730</iCost>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_GENFARM_LAB</BuildingType>
+					<BuildingType>BUILDING_GENE_FARMING_LAB</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>2</iCommerce>
@@ -820,7 +820,7 @@
 			</YieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_BIOINFO_LAB</BuildingType>
+					<BuildingType>BUILDING_BIOINFORMATICS_LAB</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -962,13 +962,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CENTRAL_BANK</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CHIEFS_PYRE</Type>
+			<Type>BUILDING_CHIEFS_FUNERAL_PYRE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CHIEFS_PYRE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CHIEFS_PYRE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CHIEFS_FUNERAL_PYRE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CHIEFS_FUNERAL_PYRE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CHIEFS_HUT</BuildingType>
@@ -1015,7 +1015,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_CHIEFS_PYRE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CHIEFS_FUNERAL_PYRE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CHIEFS_PYRE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2317,13 +2317,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_ARTIST</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GUILD_BAKER</Type>
+			<Type>BUILDING_GUILD_BAKERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GUILD_BAKER</Description>
+			<Description>TXT_KEY_BUILDING_GUILD_BAKERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -2365,7 +2365,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GUILD_BAKER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GUILD_BAKERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_BAKER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3048,13 +3048,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_LUMBER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GUILD_MASON</Type>
+			<Type>BUILDING_GUILD_MASONS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GUILD_MASON</Description>
+			<Description>TXT_KEY_BUILDING_GUILD_MASONS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -3103,7 +3103,7 @@
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GUILD_MASON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GUILD_MASONS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_MASON</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3486,13 +3486,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HEROIC_EPIC</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HHUNTINGBOW</Type>
+			<Type>BUILDING_GREAT_HOLMEGAARD_HUNT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HHUNTINGBOW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HHUNTINGBOW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GREAT_HOLMEGAARD_HUNT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GREAT_HOLMEGAARD_HUNT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<Bonus>BONUS_BONE</Bonus>
 			<PrereqBonuses>
@@ -3534,7 +3534,7 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HHUNTINGBOW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GREAT_HOLMEGAARD_HUNT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HHUNTINGBOW</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7497,11 +7497,11 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CRUISE_PORT</BuildingType>
+					<BuildingType>BUILDING_CRUISE_SHIP_PORT</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_UNESCO_SITE</BuildingType>
+					<BuildingType>BUILDING_UNESCO_HERITAGE_SITE</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

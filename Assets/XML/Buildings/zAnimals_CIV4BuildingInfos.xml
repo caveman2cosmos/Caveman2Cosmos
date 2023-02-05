@@ -1033,7 +1033,7 @@
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOG_BREEDER</BuildingType>
-				<BuildingType>BUILDING_RE_PET_SHOP</BuildingType>
+				<BuildingType>BUILDING_REPET</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>92</iCost>
 			<UnitCombatFreeExperiences>
@@ -1068,12 +1068,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DOG</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DONKEY_HERD</Type>
+			<Type>BUILDING_HERD_DONKEY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DONKEY_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DONKEY_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_DONKEY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_DONKEY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
@@ -1096,12 +1096,12 @@
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_DONKEY_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_DONKEY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DUCK_FLOCKS</Type>
-			<Description>TXT_KEY_BUILDING_DUCK_FLOCKS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DUCK_FLOCKS_PEDIA</Civilopedia>
+			<Type>BUILDING_FLOCKS_OF_DUCK</Type>
+			<Description>TXT_KEY_BUILDING_FLOCKS_OF_DUCK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FLOCKS_OF_DUCK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_DUCK</ArtDefineTag>
 			<MapCategoryTypes>
@@ -1110,7 +1110,7 @@
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
-			<FreeBuilding>BUILDING_DUCK_FLOCKS</FreeBuilding>
+			<FreeBuilding>BUILDING_FLOCKS_OF_DUCK</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -1956,11 +1956,11 @@
 			</UnitCombatFreeExperiences>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MOA_REMAINS</Type>
+			<Type>BUILDING_REMAINS_MOA</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MOA_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_MOA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
@@ -2008,7 +2008,7 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_MOA_REMAINS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_MOA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MULE_TRAINER</Type>
@@ -2031,8 +2031,8 @@
 			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_DONKEY_FARM</BuildingType>
-				<BuildingType>BUILDING_DONKEY_HERD</BuildingType>
+				<BuildingType>BUILDING_FARM_ANIMAL_DONKEY</BuildingType>
+				<BuildingType>BUILDING_HERD_DONKEY</BuildingType>
 				<BuildingType>BUILDING_DONKEY_NATIONAL</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -2046,11 +2046,11 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MUSKOX_HERD</Type>
-			<Description>TXT_KEY_BUILDING_MUSKOX_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MUSKOX_HERD_PEDIA</Civilopedia>
+			<Type>BUILDING_HERD_MUSKOX</Type>
+			<Description>TXT_KEY_BUILDING_HERD_MUSKOX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_MUSKOX_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MUSKOX_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_MUSKOX</ArtDefineTag>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
@@ -2493,12 +2493,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROCOPTODON_REMAINS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RATITE_HERD</Type>
+			<Type>BUILDING_HERD_RATITE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_RATITE_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RATITE_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_RATITE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_RATITE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RATITE_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_RATITE</ArtDefineTag>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
@@ -2554,11 +2554,11 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RODENT_CAGE</Type>
-			<Description>TXT_KEY_BUILDING_RODENT_CAGE</Description>
+			<Type>BUILDING_ENCLOSURE_RODENT</Type>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_RODENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EXOTIC_HERBIVORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RODENT_CAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_RODENT</ArtDefineTag>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
@@ -3091,11 +3091,11 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WALRUS_CAGE</Type>
-			<Description>TXT_KEY_BUILDING_WALRUS_CAGE</Description>
+			<Type>BUILDING_ENCLOSURE_WALRUS</Type>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_WALRUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WALRUS_CAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_WALRUS</ArtDefineTag>
 			<PrereqTech>TECH_ZOOLOGY</PrereqTech>
 			<bWater>1</bWater>
 			<PrereqInCityBuildings>

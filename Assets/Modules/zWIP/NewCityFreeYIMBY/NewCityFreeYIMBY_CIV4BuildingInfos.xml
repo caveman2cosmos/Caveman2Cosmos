@@ -194,7 +194,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_PAVED_ROADS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ROPE_WEAVER</Type>
+			<Type>BUILDING_ROPER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ASSEMBLY_LINE</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
