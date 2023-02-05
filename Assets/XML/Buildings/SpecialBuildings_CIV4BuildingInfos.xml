@@ -646,12 +646,12 @@
 			</SpecialistCounts>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CARPOOL</Type>
+			<Type>BUILDING_ORDINANCE_CARPOOL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CARPOOL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CARPOOL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_CARPOOL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_CARPOOL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<PrereqInCityBuildings>
@@ -665,19 +665,19 @@
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
-			<FreeBuilding>BUILDING_CARPOOL_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_CARPOOL</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CARPOOL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_CARPOOL</ArtDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CARPOOL_EFFECT</Type>
+			<Type>BUILDING_ORDINANCE_EFFECT_CARPOOL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CARPOOL_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CARPOOL_EFFECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_EFFECT_CARPOOL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_EFFECT_CARPOOL_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
 			<ReplacementBuildings>
@@ -697,7 +697,7 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CARPOOL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_CARPOOL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAVE_DWELLING</Type>
@@ -1374,7 +1374,7 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1415,7 +1415,7 @@
 			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1453,7 +1453,7 @@
 			<PrereqTech>TECH_ORGANIC_CHEMISTRY</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1491,7 +1491,7 @@
 			<PrereqTech>TECH_COMBUSTION</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1529,7 +1529,7 @@
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1567,7 +1567,7 @@
 			<PrereqTech>TECH_ROCKETRY</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1605,7 +1605,7 @@
 			<PrereqTech>TECH_MOTION_PICTURES</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1643,7 +1643,7 @@
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1681,7 +1681,7 @@
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1719,7 +1719,7 @@
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1757,7 +1757,7 @@
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1795,7 +1795,7 @@
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1833,7 +1833,7 @@
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1871,7 +1871,7 @@
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1909,7 +1909,7 @@
 			<PrereqTech>TECH_EARLY_COMPUTING</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1943,7 +1943,7 @@
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -1981,7 +1981,7 @@
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -2019,7 +2019,7 @@
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -2057,7 +2057,7 @@
 			<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -2095,7 +2095,7 @@
 			<PrereqTech>TECH_MOTION_PICTURES</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -2134,7 +2134,7 @@
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -2165,7 +2165,7 @@
 			<PrereqTech>TECH_LOGISTICS</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -2193,7 +2193,7 @@
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_OFFICIUM</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
@@ -3408,7 +3408,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CRIME_HUMANTRAFFICKING_PEDIA</Civilopedia>
 			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_SLAVERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iInsidiousness>20</iInsidiousness>
 			<UnitCombatFreeExperiences>
@@ -13640,7 +13640,7 @@
 			</BonusProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SLAVERY</Type>
+			<Type>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -13649,7 +13649,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SLAVERY</Description>
+			<Description>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_ACTIVE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_SLAVERY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SLAVERY</PrereqTech>
 			<ReplacementBuildings>
@@ -13838,7 +13838,7 @@
 			<Description>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_I</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVERY_ZORO_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SLAVERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
@@ -13859,7 +13859,7 @@
 			<Description>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_II</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVERY_ZORO_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SLAVERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
@@ -13889,7 +13889,7 @@
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
 			<PrereqTech>TECH_SLAVERY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SLAVERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
@@ -15895,7 +15895,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
 			</ReplacementBuildings>
-			<FreeBuilding>BUILDING_SLAVERY</FreeBuilding>
+			<FreeBuilding>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</FreeBuilding>
 			<Hurrys>
 				<Hurry>
 					<HurryType>HURRY_POPULATION</HurryType>

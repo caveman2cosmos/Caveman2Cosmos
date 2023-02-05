@@ -7375,7 +7375,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+					<BuildingType>BUILDING_CATCHER_QUETZALCOATL_BREEDER</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7724,7 +7724,7 @@
 			</SpecialistValids>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SANKORE</BuildingType>
+					<BuildingType>BUILDING_UNIVERSITY_OF_SANKORE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -8419,7 +8419,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SANKORE</BuildingType>
+					<BuildingType>BUILDING_UNIVERSITY_OF_SANKORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -8786,7 +8786,7 @@
 			<iPopulationgrowthratepercentage>33</iPopulationgrowthratepercentage>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -8908,7 +8908,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -10070,7 +10070,7 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_KREMLIN</BuildingType>
+					<BuildingType>BUILDING_THE_KREMLIN</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -10415,7 +10415,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -12972,7 +12972,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_SHAOLIN</BuildingType>
+					<BuildingType>BUILDING_SHAOLIN_TEMPLE</BuildingType>
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -16328,7 +16328,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -16442,7 +16442,7 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 					<iHappinessChange>-3</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -16551,7 +16551,7 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 					<iHappinessChange>-3</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -16665,7 +16665,7 @@
 			</FreeSpecialistCounts>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_SLAVERY</BuildingType>
+					<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>

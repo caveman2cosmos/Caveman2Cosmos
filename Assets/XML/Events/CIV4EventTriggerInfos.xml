@@ -11097,7 +11097,7 @@
 			<iUnitExperienceWeight>0</iUnitExperienceWeight>
 			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
-				<Building>BUILDING_BLARNEY</Building>
+				<Building>BUILDING_BLARNEY_CASTLE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>0</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>

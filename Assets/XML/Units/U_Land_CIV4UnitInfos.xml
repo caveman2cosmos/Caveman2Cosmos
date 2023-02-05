@@ -33759,7 +33759,7 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<Buildings>
-				<BuildingType>BUILDING_CARPOOL</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_CARPOOL</BuildingType>
 				<BuildingType>BUILDING_SMOKE_DETECTOR</BuildingType>
 				<BuildingType>BUILDING_FIRE_CODE</BuildingType>
 				<BuildingType>BUILDING_NEIGHBORHOOD_WATCH</BuildingType>
@@ -46909,7 +46909,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_SHAOLIN</BuildingType>
+				<BuildingType>BUILDING_SHAOLIN_TEMPLE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MARTIAL_ARTS</PrereqTech>
 			<BonusType>BONUS_SOAP</BonusType>

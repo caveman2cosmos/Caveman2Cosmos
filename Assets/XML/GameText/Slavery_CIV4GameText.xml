@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SLAVERY</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_SLAVERY_ACTIVE</Tag>
 		<English>Worldview - Slavery active</English>
 		<French>Vision du monde - Activité d'Esclavage</French>
 		<Italian>Concezione del mondo - Schiavismo attivo</Italian>

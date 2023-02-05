@@ -1163,16 +1163,16 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BLACKWATER_DRAW</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BLOMBOS</Type>
+			<Type>BUILDING_PC_BLOMBOS_CAVE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BLOMBOS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BLOMBOS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PC_BLOMBOS_CAVE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PC_BLOMBOS_CAVE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_PREHISTORIC_CAVES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_BLOMBOS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PC_BLOMBOS_CAVE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BLOMBOS</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -1798,16 +1798,16 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KLASIES</Type>
+			<Type>BUILDING_PC_KLASIES_RIVER_CAVES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KLASIES</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KLASIES_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PC_KLASIES_RIVER_CAVES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PC_KLASIES_RIVER_CAVES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_PREHISTORIC_CAVES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_KLASIES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PC_KLASIES_RIVER_CAVES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KLASIES</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>

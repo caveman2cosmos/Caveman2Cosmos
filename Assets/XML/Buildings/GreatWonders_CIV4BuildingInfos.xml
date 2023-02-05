@@ -717,7 +717,7 @@
 			<iCost>8850</iCost>
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>1</iRevIdxLocal>
 			<bPrereqPower>1</bPrereqPower>
@@ -1365,15 +1365,15 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ARK</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ARTEMIS</Type>
+			<Type>BUILDING_TEMPLE_OF_ARTEMIS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ARTEMIS</Description>
+			<Description>TXT_KEY_BUILDING_TEMPLE_OF_ARTEMIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_ARTEMIS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ARTEMIS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_ARTEMIS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ARTEMIS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_DIPLOMACY</PrereqTech>
@@ -1862,13 +1862,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BAUHAUS</Type>
+			<Type>BUILDING_BAUHAUS_SCHOOL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_BAUHAUS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BAUHAUS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_BAUHAUS_SCHOOL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BAUHAUS_SCHOOL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BAUHAUS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BAUHAUS_SCHOOL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BAUHAUS</MovieDefineTag>
 			<ObsoleteTech>TECH_METAMATERIALS</ObsoleteTech>
 			<PrereqTech>TECH_MODERN_ART</PrereqTech>
@@ -2540,12 +2540,12 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BLARNEY</Type>
+			<Type>BUILDING_BLARNEY_CASTLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_BLARNEY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BLARNEY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_BLARNEY_CASTLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BLARNEY_CASTLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BLARNEY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BLARNEY_CASTLE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BLARNEY</MovieDefineTag>
 			<ObsoleteTech>TECH_TELEGRAPH</ObsoleteTech>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
@@ -2593,7 +2593,7 @@
 				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
-			<Help>TXT_KEY_BUILDING_BLARNEY_HELP</Help>
+			<Help>TXT_KEY_BUILDING_BLARNEY_CASTLE_HELP</Help>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3311,12 +3311,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CAHOKIA</Type>
+			<Type>BUILDING_CAHOKIA_MOUNDS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_CAHOKIA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CAHOKIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CAHOKIA_MOUNDS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CAHOKIA_MOUNDS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CAHOKIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CAHOKIA_MOUNDS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CAHOKIA</MovieDefineTag>
 			<ObsoleteTech>TECH_THEOLOGY</ObsoleteTech>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
@@ -4119,7 +4119,7 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OFFICES</BuildingType>
+					<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
@@ -7637,15 +7637,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FLAVIAN</Type>
+			<Type>BUILDING_FLAVIAN_AMPHITHEATRE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FLAVIAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FLAVIAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FLAVIAN_AMPHITHEATRE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FLAVIAN_AMPHITHEATRE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FLAVIAN_AMPHITHEATRE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FLAVIAN_AMPHITHEATRE_AMPHITHEATRE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FLAVIAN_AMPHITHEATRE</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_COLOSSEUM</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
@@ -8495,15 +8495,15 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GLOBE_THEATRE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOBEKLI</Type>
+			<Type>BUILDING_GOBEKLI_TEPE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOBEKLI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOBEKLI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GOBEKLI_TEPE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOBEKLI_TEPE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GOBEKLI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GOBEKLI_TEPE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GOBEKLI</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -8702,15 +8702,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GRAUMAN</Type>
+			<Type>BUILDING_GRAUMANS_CHINESE_THEATRE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GRAUMAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GRAUMAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GRAUMANS_CHINESE_THEATRE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GRAUMANS_CHINESE_THEATRE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GRAUMAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GRAUMANS_CHINESE_THEATRE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GRAUMAN</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -11758,15 +11758,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KREMLIN</Type>
+			<Type>BUILDING_THE_KREMLIN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KREMLIN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KREMLIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_KREMLIN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_KREMLIN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KREMLIN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_KREMLIN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KREMLIN</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COMMUNISM</PrereqTech>
@@ -13921,13 +13921,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MORLOCK</Type>
+			<Type>BUILDING_TIME_SHIP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_MORLOCK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MORLOCK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TIME_SHIP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TIME_SHIP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MORLOCK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TIME_SHIP</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MORLOCK</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -14832,15 +14832,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NINEVEH</Type>
+			<Type>BUILDING_LIBRARY_OF_NINEVEH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NINEVEH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NINEVEH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LIBRARY_OF_NINEVEH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LIBRARY_OF_NINEVEH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NINEVEH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LIBRARY_OF_NINEVEH</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NINEVEH</MovieDefineTag>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<PrereqTech>TECH_IDEOGRAMS</PrereqTech>
@@ -14921,7 +14921,7 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OBATALA</BuildingType>
+					<BuildingType>BUILDING_PATTAKY_OF_OBATALA</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -14956,15 +14956,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NONSUCH</Type>
+			<Type>BUILDING_NONSUCH_PALACE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NONSUCH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NONSUCH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NONSUCH_PALACE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NONSUCH_PALACE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NONSUCH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NONSUCH_PALACE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NONSUCH</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -17268,15 +17268,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SANKORE</Type>
+			<Type>BUILDING_UNIVERSITY_OF_SANKORE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SANKORE</Description>
+			<Description>TXT_KEY_BUILDING_UNIVERSITY_OF_SANKORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UNIVERSITY_OF_SANKORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SANKORE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_UNIVERSITY_OF_SANKORE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSITY_SANKORE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PAPER</PrereqTech>
@@ -17882,12 +17882,12 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SHAOLIN</Type>
+			<Type>BUILDING_SHAOLIN_TEMPLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_SHAOLIN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SHAOLIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SHAOLIN_TEMPLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SHAOLIN_TEMPLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SHAOLIN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SHAOLIN_TEMPLE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHAOLIN</MovieDefineTag>
 			<PrereqTech>TECH_MARTIAL_ARTS</PrereqTech>
 			<FreePromoTypes>
@@ -18628,12 +18628,12 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SOLOMON</Type>
+			<Type>BUILDING_SOLOMONS_TEMPLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_SOLOMON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SOLOMON_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SOLOMONS_TEMPLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SOLOMONS_TEMPLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SOLOMON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SOLOMONS_TEMPLE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

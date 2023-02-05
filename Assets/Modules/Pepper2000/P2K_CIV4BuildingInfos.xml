@@ -3367,14 +3367,14 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LUNARIS</Type>
+			<Type>BUILDING_HUMAN_MOD_LUNARIS</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_LUNARIS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LUNARIS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_LUNARIS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_LUNARIS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LUNARIS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_LUNARIS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -3410,14 +3410,14 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARTIAN</Type>
+			<Type>BUILDING_HUMAN_MOD_MARTIAN</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_MARTIAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_MARTIAN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_MARTIAN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_MARTIAN</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -15257,11 +15257,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SICKBAY</Type>
-			<Description>TXT_KEY_BUILDING_SICKBAY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SICKBAY_PEDIA</Civilopedia>
+			<Type>BUILDING_DEEP_SPACE_SICK_BAY</Type>
+			<Description>TXT_KEY_BUILDING_DEEP_SPACE_SICK_BAY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_SICK_BAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SICKBAY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_SICK_BAY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MOLECULAR_SCANNING</PrereqTech>
 			<iCost>2645</iCost>

@@ -25,7 +25,7 @@ def doRemoveWVSlavery(argsList):
 
 		iSlaveMarket = GC.getInfoTypeForString("BUILDING_SLAVE_MARKET")
 		aiSlaveBuildings = [
-			GC.getInfoTypeForString("BUILDING_SLAVERY"),
+			GC.getInfoTypeForString("BUILDING_WORLDVIEW_SLAVERY_ACTIVE"),
 			GC.getInfoTypeForString("BUILDING_SLAVERY_BAD_ZORO_I"),
 			GC.getInfoTypeForString("BUILDING_SLAVERY_BAD_ZORO_II"),
 			GC.getInfoTypeForString("BUILDING_SLAVE_COMPOUND"),

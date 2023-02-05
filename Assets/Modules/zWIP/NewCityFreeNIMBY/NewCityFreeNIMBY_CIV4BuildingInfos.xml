@@ -10,7 +10,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_MILITARY_ROBOTICS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CROSSES</Type>
+			<Type>BUILDING_CRUCIFIXION_CROSSES</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_CODE_OF_LAWS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>

@@ -311,7 +311,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>990</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1237,7 +1237,7 @@
 			<PrereqTech>TECH_ASTRONAUTICS</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>2950</iCost>
@@ -1340,7 +1340,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1540</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1417,7 +1417,7 @@
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>1660</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1471,7 +1471,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>368</iCost>
 			<BonusProductionModifiers>
@@ -3557,7 +3557,7 @@
 				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
 				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
-				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_CATCHER_QUETZALCOATL_BREEDER</BuildingType>
 				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
@@ -3898,7 +3898,7 @@
 				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
 				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
-				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_CATCHER_QUETZALCOATL_BREEDER</BuildingType>
 				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
@@ -4852,7 +4852,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1030</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5531,7 +5531,7 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>2460</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -5571,7 +5571,7 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_TV_STUDIO</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
@@ -5635,7 +5635,7 @@
 			</TechTypes>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BROADCAST_TOWER</BuildingType>
@@ -5950,7 +5950,7 @@
 				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
 				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
-				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_CATCHER_QUETZALCOATL_BREEDER</BuildingType>
 				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
@@ -5991,7 +5991,7 @@
 				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
 				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
-				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_CATCHER_QUETZALCOATL_BREEDER</BuildingType>
 				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
@@ -6099,7 +6099,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_PROPAGANDA_NET_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PROPAGANDA</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
@@ -6164,7 +6164,7 @@
 				<BuildingType>BUILDING_JACKALOPE_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
-				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_CATCHER_QUETZALCOATL_BREEDER</BuildingType>
 				<BuildingType>BUILDING_RAINBOW_SERPENT_BREEDER</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
@@ -6187,12 +6187,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_QILIN_BREEDER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_QUETZALCOATL_BREEDER</Type>
+			<Type>BUILDING_CATCHER_QUETZALCOATL_BREEDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_QUETZALCOATL_BREEDER</Description>
+			<Description>TXT_KEY_BUILDING_CATCHER_QUETZALCOATL_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>12</iPrereqPopulation>
@@ -6225,7 +6225,7 @@
 			</ExtraFreeBonuses>
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_QUETZALCOATL_BREEDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CATCHER_QUETZALCOATL_BREEDER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RADIO_TELESCOPE</Type>
@@ -6364,7 +6364,7 @@
 				<BuildingType>BUILDING_PEGASUS_BREEDER</BuildingType>
 				<BuildingType>BUILDING_PHOENIX_BREEDER</BuildingType>
 				<BuildingType>BUILDING_QILIN_BREEDER</BuildingType>
-				<BuildingType>BUILDING_QUETZALCOATL_BREEDER</BuildingType>
+				<BuildingType>BUILDING_CATCHER_QUETZALCOATL_BREEDER</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -6505,7 +6505,7 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>3690</iCost>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
@@ -6811,7 +6811,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ARENA</BuildingType>
 				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
-				<BuildingType>BUILDING_FLAVIAN</BuildingType>
+				<BuildingType>BUILDING_FLAVIAN_AMPHITHEATRE</BuildingType>
 				<BuildingType>BUILDING_MINOR_LEAGUE_STADIUM</BuildingType>
 				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 			</PrereqOrBuildings>
@@ -7309,7 +7309,7 @@
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
@@ -7463,7 +7463,7 @@
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_SPACE_TOURISM</ObsoleteTech>
 			<iCost>2560</iCost>
@@ -7693,7 +7693,7 @@
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_OFFICES</BuildingType>
+				<BuildingType>BUILDING_MODERN_OFFICES</BuildingType>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>2360</iCost>

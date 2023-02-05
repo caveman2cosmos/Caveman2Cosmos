@@ -2333,7 +2333,7 @@ def applyCrusadeDone3(argsList):
 ######## ESTEEMEED_PLAYWRIGHT ###########
 
 def canTriggerEsteemedPlaywright(argsList):
-	return not GC.getPlayer(argsList[0].ePlayer).hasBuilding(GC.getInfoTypeForString("BUILDING_SLAVERY"))
+	return not GC.getPlayer(argsList[0].ePlayer).hasBuilding(GC.getInfoTypeForString("BUILDING_WORLDVIEW_SLAVERY_ACTIVE"))
 
 
 ######## SECRET_KNOWLEDGE ###########
@@ -3538,7 +3538,7 @@ def canTriggerMoreFiatMoney(argsList):
 ##### INDUSTRIAL_ACTION #####
 
 def canTriggerIndustrialAction(argsList):
-	return not GC.getPlayer(argsList[0].ePlayer).hasBuilding(GC.getInfoTypeForString("BUILDING_SLAVERY"))
+	return not GC.getPlayer(argsList[0].ePlayer).hasBuilding(GC.getInfoTypeForString("BUILDING_WORLDVIEW_SLAVERY_ACTIVE"))
 
 def canDoTriggerCityIndustrialAction(argsList):
 	iCity = argsList[2]

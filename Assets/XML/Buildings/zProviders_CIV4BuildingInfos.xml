@@ -133,7 +133,7 @@
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANCIENT_CUSTOMS</BuildingType>
-				<BuildingType>BUILDING_ANTHILL</BuildingType>
+				<BuildingType>BUILDING_ANT_CATCHER</BuildingType>
 				<BuildingType>BUILDING_ASSASSINBUG</BuildingType>
 				<BuildingType>BUILDING_ASSASSINBUGX</BuildingType>
 				<BuildingType>BUILDING_BAMBOOWORM</BuildingType>
@@ -143,32 +143,32 @@
 				<BuildingType>BUILDING_BUTTERFLYX</BuildingType>
 				<BuildingType>BUILDING_CENTIPEDE</BuildingType>
 				<BuildingType>BUILDING_CICADA_GATHERER</BuildingType>
-				<BuildingType>BUILDING_CICADAX</BuildingType>
+				<BuildingType>BUILDING_CICADA_SANCTUARY</BuildingType>
 				<BuildingType>BUILDING_COCKROACH</BuildingType>
-				<BuildingType>BUILDING_CRICKET</BuildingType>
+				<BuildingType>BUILDING_CRICKET_GATHERER</BuildingType>
 				<BuildingType>BUILDING_CRICKETX</BuildingType>
 				<BuildingType>BUILDING_DRAGONFLY</BuildingType>
 				<BuildingType>BUILDING_DRAGONFLYX</BuildingType>
 				<BuildingType>BUILDING_DUNGBEETLE</BuildingType>
-				<BuildingType>BUILDING_FIREFLY</BuildingType>
+				<BuildingType>BUILDING_FIREFLY_GATHERER</BuildingType>
 				<BuildingType>BUILDING_FIREFLYX</BuildingType>
 				<BuildingType>BUILDING_GATHERER_EARTHWORM</BuildingType>
 				<BuildingType>BUILDING_GATHERER_SNAIL</BuildingType>
-				<BuildingType>BUILDING_GOLIATH</BuildingType>
+				<BuildingType>BUILDING_GOLIATH_BEETLE_GATHERER</BuildingType>
 				<BuildingType>BUILDING_GOLIATHX</BuildingType>
 				<BuildingType>BUILDING_GRASSHOPPER</BuildingType>
 				<BuildingType>BUILDING_HERCULES</BuildingType>
 				<BuildingType>BUILDING_HERCULESX</BuildingType>
-				<BuildingType>BUILDING_JUMILES</BuildingType>
-				<BuildingType>BUILDING_JUNEBUG</BuildingType>
+				<BuildingType>BUILDING_JUMILES_GATHERER</BuildingType>
+				<BuildingType>BUILDING_JUNEBUG_GATHERER</BuildingType>
 				<BuildingType>BUILDING_JUNEBUGX</BuildingType>
-				<BuildingType>BUILDING_LADYBUG</BuildingType>
+				<BuildingType>BUILDING_LADYBUG_GATHERER</BuildingType>
 				<BuildingType>BUILDING_LADYBUGX</BuildingType>
 				<BuildingType>BUILDING_MEALWORM</BuildingType>
 				<BuildingType>BUILDING_MEZCALWORM</BuildingType>
 				<BuildingType>BUILDING_MOPANE_MOTH_GATHERER</BuildingType>
 				<BuildingType>BUILDING_PALMWEEVIL</BuildingType>
-				<BuildingType>BUILDING_PILLBUG</BuildingType>
+				<BuildingType>BUILDING_PILLBUG_GATHERER</BuildingType>
 				<BuildingType>BUILDING_PRAYINGMANTIS</BuildingType>
 				<BuildingType>BUILDING_PRAYINGMANTISX</BuildingType>
 				<BuildingType>BUILDING_RICEBEETLE</BuildingType>
@@ -272,7 +272,7 @@
 				<BuildingType>BUILDING_SHEEP_FARM</BuildingType>
 				<BuildingType>BUILDING_SHEEP_HERD</BuildingType>
 				<BuildingType>BUILDING_WALRUS_CAMP</BuildingType>
-				<BuildingType>BUILDING_WHALERS</BuildingType>
+				<BuildingType>BUILDING_WHALERS_DOCK</BuildingType>
 				<BuildingType>BUILDING_WOOLLYRHINO_CAMP</BuildingType>
 				<BuildingType>BUILDING_ZEBRA_CAMP</BuildingType>
 			</PrereqOrBuildings>
@@ -469,7 +469,7 @@
 				<BuildingType>BUILDING_PARROT_CATCHER</BuildingType>
 				<BuildingType>BUILDING_PEACOCK_CATCHER</BuildingType>
 				<BuildingType>BUILDING_PIGEON_COOP</BuildingType>
-				<BuildingType>BUILDING_QUETZAL</BuildingType>
+				<BuildingType>BUILDING_CATCHER_QUETZAL</BuildingType>
 				<BuildingType>BUILDING_RATITE_HERD</BuildingType>
 				<BuildingType>BUILDING_CATCHER_TOUCAN</BuildingType>
 				<BuildingType>BUILDING_TURKEY_FARM</BuildingType>

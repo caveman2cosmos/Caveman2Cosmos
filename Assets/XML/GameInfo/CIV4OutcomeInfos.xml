@@ -1018,7 +1018,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_SLAVERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -1149,7 +1149,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_SLAVERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SLAVE_SALE_NOT_SLAVERY</OutcomeType>
@@ -1179,7 +1179,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_SLAVERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_SLAVERY_ACTIVE</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
