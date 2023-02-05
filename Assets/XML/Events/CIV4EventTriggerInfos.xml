@@ -6079,7 +6079,7 @@
 			<iWeight>100</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_GOLDSMITH</Building>
+				<Building>BUILDING_SMITH_GOLD</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<ReligionsRequired>
@@ -7547,7 +7547,7 @@
 			</UnitsRequired>
 			<iNumUnits>2</iNumUnits>
 			<BuildingsRequired>
-				<Building>BUILDING_IRONSMITH</Building>
+				<Building>BUILDING_SMITH_IRON</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>

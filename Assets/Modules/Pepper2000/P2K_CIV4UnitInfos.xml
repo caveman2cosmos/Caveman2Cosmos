@@ -3067,7 +3067,7 @@
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CHRONOTON</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_CHRONOTON_GENERATOR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_STABLE_TIME_LOOPS</PrereqTech>
 			<iCost>5000</iCost>
@@ -6750,7 +6750,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 			<Buildings>
-				<BuildingType>BUILDING_ANDROMEDA</BuildingType>
+				<BuildingType>BUILDING_VOYAGE_TO_ANDROMEDA</BuildingType>
 			</Buildings>
 			<Actions>
 				<Action>

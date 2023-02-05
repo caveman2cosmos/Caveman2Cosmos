@@ -2787,15 +2787,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BONNEVILE</Type>
+			<Type>BUILDING_BONNEVILLE_SPEEDWAY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BONNEVILE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BONNEVILE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_BONNEVILLE_SPEEDWAY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BONNEVILLE_SPEEDWAY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BONNEVILE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BONNEVILLE_SPEEDWAY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BONNEVILE</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -9661,12 +9661,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HAMMURABI</Type>
+			<Type>BUILDING_HAMMURABI_STELE_OF_LAWS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_HAMMURABI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HAMMURABI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HAMMURABI_STELE_OF_LAWS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HAMMURABI_STELE_OF_LAWS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HAMMURABI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HAMMURABI_STELE_OF_LAWS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9809,7 +9809,7 @@
 				<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_BEADMAKER</BuildingType>
+				<BuildingType>BUILDING_BEADWORKER</BuildingType>
 				<BuildingType>BUILDING_BEADMAKER_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_BEAD_FACTORY</BuildingType>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
@@ -10349,7 +10349,7 @@
 			</SpecialistYieldChanges>
 			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
-			<FreeBuilding>BUILDING_HEALERHUT</FreeBuilding>
+			<FreeBuilding>BUILDING_HEALERS_HUT</FreeBuilding>
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
@@ -11805,13 +11805,13 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LABYRINTH</Type>
+			<Type>BUILDING_LABYRINTH_OF_KNOSSOS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_LABYRINTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LABYRINTH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LABYRINTH_OF_KNOSSOS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LABYRINTH_OF_KNOSSOS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqOrBuildings>
@@ -11856,7 +11856,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<iConquestProb>100</iConquestProb>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_LABYRINTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LABYRINTH_OF_KNOSSOS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LABYRINTH</MovieDefineTag>
 			<PropertyManipulators>
 				<PropertySource>
@@ -12354,12 +12354,12 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LONDONEYE</Type>
+			<Type>BUILDING_LONDON_EYE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_LONDONEYE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LONDONEYE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LONDON_EYE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LONDON_EYE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LONDONEYE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LONDON_EYE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LONDONEYE</MovieDefineTag>
 			<ObsoleteTech>TECH_MEGASTRUCTURE_ENGINEERING</ObsoleteTech>
 			<PrereqTech>TECH_TOURISM</PrereqTech>
@@ -13419,12 +13419,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MEENAKSHI</Type>
+			<Type>BUILDING_MEENAKSHI_TEMPLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_MEENAKSHI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MEENAKSHI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MEENAKSHI_TEMPLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MEENAKSHI_TEMPLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MEENAKSHI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MEENAKSHI_TEMPLE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15675,15 +15675,15 @@
 			</FreeSpecialistCounts>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PARTHENON</Type>
+			<Type>BUILDING_THE_PARTHENON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PARTHENON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PARTHENON_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_PARTHENON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_PARTHENON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PARTHENON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_PARTHENON</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PARTHENON</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_PARTHENON</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -17073,15 +17073,15 @@
 			</YieldModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ROCKNROLL</Type>
+			<Type>BUILDING_ROCK_N_ROLL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ROCKNROLL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ROCKNROLL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ROCK_N_ROLL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ROCK_N_ROLL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ROCKNROLL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ROCK_N_ROLL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ROCK_AND_ROLL</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
@@ -19245,15 +19245,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STONEWARE</Type>
+			<Type>BUILDING_FINE_STONEWARE_CARVERS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_STONEWARE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STONEWARE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FINE_STONEWARE_CARVERS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FINE_STONEWARE_CARVERS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STONEWARE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FINE_STONEWARE_CARVERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_STONEWARE</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -19462,13 +19462,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SURFBOARD</Type>
+			<Type>BUILDING_HAWAIIAN_SURFBOARD_CARVER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SURFBOARD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SURFBOARD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HAWAIIAN_SURFBOARD_CARVER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HAWAIIAN_SURFBOARD_CARVER_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MARTIAL_ARTS</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
@@ -19499,7 +19499,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_SURFBOARD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HAWAIIAN_SURFBOARD_CARVER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SURFBOARD</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -21309,7 +21309,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BROADWAY</BuildingType>
 				<BuildingType>BUILDING_HOLLYWOOD</BuildingType>
-				<BuildingType>BUILDING_ROCKNROLL</BuildingType>
+				<BuildingType>BUILDING_ROCK_N_ROLL</BuildingType>
 				<BuildingType>BUILDING_WORLD_NEWS_NETWORK</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_TV_STATION</BuildingType>
 			</PrereqOrBuildings>
@@ -21666,12 +21666,12 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WILLOWRUN</Type>
+			<Type>BUILDING_WILLOW_RUN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_WILLOWRUN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WILLOWRUN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_WILLOW_RUN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WILLOW_RUN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WILLOWRUN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WILLOW_RUN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WILLOWRUN</MovieDefineTag>
 			<ObsoleteTech>TECH_LUNAR_MANUFACTURING</ObsoleteTech>
 			<PrereqTech>TECH_AVIATION</PrereqTech>

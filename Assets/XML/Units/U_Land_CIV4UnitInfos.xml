@@ -26299,7 +26299,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LOOKOUT_POST</BuildingType>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
-				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
+				<BuildingType>BUILDING_TOWN_WATCH</BuildingType>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
 				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
@@ -26429,7 +26429,7 @@
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SENTRY_POST</BuildingType>
-				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
+				<BuildingType>BUILDING_TOWN_WATCH</BuildingType>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
 				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
@@ -26579,7 +26579,7 @@
 			</UnitCombatDefenders>
 			<PrereqTech>TECH_DUALISM</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
+				<BuildingType>BUILDING_TOWN_WATCH</BuildingType>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
 				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
@@ -40823,7 +40823,7 @@
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_HEALERHUT</BuildingType>
+				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
@@ -40934,7 +40934,7 @@
 				<BonusType>BONUS_SOAP</BonusType>
 			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_HEALERHUT</BuildingType>
+				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>

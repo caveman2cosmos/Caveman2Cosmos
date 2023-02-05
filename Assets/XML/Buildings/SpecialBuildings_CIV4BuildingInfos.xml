@@ -8681,7 +8681,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+				<BuildingType>BUILDING_HOUSING_LONGHOUSE</BuildingType>
 				<BuildingType>BUILDING_HOUSING_PUEBLOS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
@@ -8934,14 +8934,14 @@
 				<BuildingType>BUILDING_HOUSING_LEAN_TOS</BuildingType>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
-				<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+				<BuildingType>BUILDING_HOUSING_LONGHOUSE</BuildingType>
 				<BuildingType>BUILDING_BONE_HUT</BuildingType>
 				<BuildingType>BUILDING_HIDE_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSING_TIPIS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_YURTS</BuildingType>
 				<BuildingType>BUILDING_MUD_HUT</BuildingType>
 				<BuildingType>BUILDING_STONE_HUT</BuildingType>
-				<BuildingType>BUILDING_TREEHOUSE</BuildingType>
+				<BuildingType>BUILDING_HOUSING_TREEHOUSES</BuildingType>
 				<BuildingType>BUILDING_STILT_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSING_HOGANS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_PUEBLOS</BuildingType>
@@ -10937,12 +10937,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_LEAN_TOS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LONGHOUSE</Type>
+			<Type>BUILDING_HOUSING_LONGHOUSE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_LONGHOUSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LONGHOUSE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_LONGHOUSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_LONGHOUSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -10983,7 +10983,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>2.8</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_LONGHOUSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_LONGHOUSE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MEDICAL_ACHIEVEMENT</Type>
@@ -13964,7 +13964,7 @@
 				<BuildingType>BUILDING_RAILGUN_BATTERY</BuildingType>
 				<BuildingType>BUILDING_LASER_BATTERY</BuildingType>
 				<BuildingType>BUILDING_ANTIMATTER_BATTERY</BuildingType>
-				<BuildingType>BUILDING_TOWNWATCH</BuildingType>
+				<BuildingType>BUILDING_TOWN_WATCH</BuildingType>
 				<BuildingType>BUILDING_TOWN_PATROL</BuildingType>
 				<BuildingType>BUILDING_GUARDHOUSE</BuildingType>
 				<BuildingType>BUILDING_GUARD_STATION</BuildingType>
@@ -15276,12 +15276,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TRAILER_PARK</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TREEHOUSE</Type>
+			<Type>BUILDING_HOUSING_TREEHOUSES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TREEHOUSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TREEHOUSE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_TREEHOUSES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_TREEHOUSES_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WOODWORKING</PrereqTech>
 			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
 			<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -15331,7 +15331,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TREEHOUSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_TREEHOUSES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TREE_HALLOW</Type>
@@ -15367,7 +15367,7 @@
 			</PrereqOrFeature>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
-				<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+				<BuildingType>BUILDING_HOUSING_LONGHOUSE</BuildingType>
 				<BuildingType>BUILDING_HOUSING_PUEBLOS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
@@ -15575,7 +15575,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_LOAN_SHARK_UNSANCTIONED</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LOANSHARK_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_LOAN_SHARK_PEDIA</Civilopedia>
 			<PrereqTech>TECH_USURY</PrereqTech>
 			<ObsoleteTech>TECH_CYBERSOCIAL_INTEGRATION</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -15588,7 +15588,7 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_LOANSHARK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LOAN_SHARK</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOB_STOREFRONT_UNSANCTIONED</Type>

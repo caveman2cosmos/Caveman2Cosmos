@@ -142,7 +142,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_REPLACEABLE_PARTS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HEALERHUT</Type>
+			<Type>BUILDING_HEALERS_HUT</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ANATOMY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -230,7 +230,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_OIL_LAMPS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TOWNWATCH</Type>
+			<Type>BUILDING_TOWN_WATCH</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_MONARCHY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -238,7 +238,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_INVENTION</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TOYCARVER</Type>
+			<Type>BUILDING_TOY_CARVER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_GUILDS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>

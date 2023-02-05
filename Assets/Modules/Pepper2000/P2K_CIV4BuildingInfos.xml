@@ -2702,14 +2702,14 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ATEMPORAL</Type>
+			<Type>BUILDING_HUMAN_MOD_ATEMPORAL</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_ATEMPORAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ATEMPORAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_ATEMPORAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_ATEMPORAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ATEMPORAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_ATEMPORAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -5546,11 +5546,11 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GIGAVERSE</Type>
-			<Description>TXT_KEY_BUILDING_GIGAVERSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GIGAVERSE_PEDIA</Civilopedia>
+			<Type>BUILDING_GIGAVERSE_PORTAL</Type>
+			<Description>TXT_KEY_BUILDING_GIGAVERSE_PORTAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GIGAVERSE_PORTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GIGAVERSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GIGAVERSE_PORTAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MACROVERSE_TRAVERSAL</PrereqTech>
 			<iCost>11410</iCost>
@@ -5567,7 +5567,7 @@
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MEGAVERSE</BuildingType>
+					<BuildingType>BUILDING_MEGAVERSE_PORTAL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -6008,11 +6008,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TURBOLIFT</Type>
-			<Description>TXT_KEY_BUILDING_TURBOLIFT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TURBOLIFT_PEDIA</Civilopedia>
+			<Type>BUILDING_CISLUNAR_TURBOLIFTS</Type>
+			<Description>TXT_KEY_BUILDING_CISLUNAR_TURBOLIFTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_TURBOLIFTS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TURBOLIFT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_TURBOLIFTS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SUPERSONIC_RAILS</PrereqTech>
 			<iCost>1144</iCost>
@@ -10221,11 +10221,11 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TERAVERSE</Type>
-			<Description>TXT_KEY_BUILDING_TERAVERSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TERAVERSE_PEDIA</Civilopedia>
+			<Type>BUILDING_TERAVERSE_PORTAL</Type>
+			<Description>TXT_KEY_BUILDING_TERAVERSE_PORTAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TERAVERSE_PORTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TERAVERSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TERAVERSE_PORTAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MACROVERSE_TRAVERSAL</PrereqTech>
 			<iCost>11410</iCost>
@@ -10242,7 +10242,7 @@
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MEGAVERSE</BuildingType>
+					<BuildingType>BUILDING_MEGAVERSE_PORTAL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -14681,11 +14681,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PETAVERSE</Type>
-			<Description>TXT_KEY_BUILDING_PETAVERSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PETAVERSE_PEDIA</Civilopedia>
+			<Type>BUILDING_PETAVERSE_PORTAL</Type>
+			<Description>TXT_KEY_BUILDING_PETAVERSE_PORTAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PETAVERSE_PORTAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PETAVERSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PETAVERSE_PORTAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MACROVERSE_TRAVERSAL</PrereqTech>
 			<iCost>28114</iCost>
@@ -14701,7 +14701,7 @@
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MEGAVERSE</BuildingType>
+					<BuildingType>BUILDING_MEGAVERSE_PORTAL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -16726,13 +16726,13 @@
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANDROMEDA</Type>
+			<Type>BUILDING_VOYAGE_TO_ANDROMEDA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_ANDROMEDA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANDROMEDA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_VOYAGE_TO_ANDROMEDA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VOYAGE_TO_ANDROMEDA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANDROMEDA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VOYAGE_TO_ANDROMEDA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
 			<iCost>28734</iCost>
@@ -16745,7 +16745,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_ANDROMEDA_COLONY</BuildingType>
+					<BuildingType>BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>50</iCommerce>
@@ -18865,15 +18865,15 @@
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_TERAVERSE</BuildingType>
+					<BuildingType>BUILDING_TERAVERSE_PORTAL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_PETAVERSE</BuildingType>
+					<BuildingType>BUILDING_PETAVERSE_PORTAL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_GIGAVERSE</BuildingType>
+					<BuildingType>BUILDING_GIGAVERSE_PORTAL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -19605,11 +19605,11 @@
 			<Bonus>BONUS_KUGELBLITZ</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOLACRACY</Type>
-			<Description>TXT_KEY_BUILDING_HOLACRACY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOLACRACY_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_GOVERNMENT_HOLACRACY</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_GOVERNMENT_HOLACRACY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_GOVERNMENT_HOLACRACY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HOLACRACY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_GOVERNMENT_HOLACRACY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COLONY_GOVERNANCE</PrereqTech>
 			<iCost>1757</iCost>
@@ -20667,7 +20667,7 @@
 			</YieldChanges>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_INTERSTELLAR_GOVERNMENT_NOOCRACY</BuildingType>
-				<BuildingType>BUILDING_HOLACRACY</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_GOVERNMENT_HOLACRACY</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
@@ -21198,7 +21198,7 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_HOLACRACY</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_GOVERNMENT_HOLACRACY</BuildingType>
 				<BuildingType>BUILDING_MACHINE_RULE</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iRevIdxLocal>-5</iRevIdxLocal>
@@ -22148,11 +22148,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RINGWORLD</Type>
-			<Description>TXT_KEY_BUILDING_RINGWORLD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RINGWORLD_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_BANKS_ORBITAL</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_BANKS_ORBITAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_BANKS_ORBITAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RINGWORLD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_BANKS_ORBITAL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MEGASTRONG_ALLOYS</PrereqTech>
 			<iCost>4056</iCost>
@@ -22194,7 +22194,7 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_RINGWORLD</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_BANKS_ORBITAL</BuildingType>
 				<BuildingType>BUILDING_ECUMENOPOLIS</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
@@ -22843,11 +22843,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TERAEARTH</Type>
-			<Description>TXT_KEY_BUILDING_TERAEARTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TERAEARTH_PEDIA</Civilopedia>
+			<Type>BUILDING_MILKY_WAY_CORE_TERAEARTH</Type>
+			<Description>TXT_KEY_BUILDING_MILKY_WAY_CORE_TERAEARTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MILKY_WAY_CORE_TERAEARTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TERAEARTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MILKY_WAY_CORE_TERAEARTH</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EXOTIC_STARS</PrereqTech>
 			<iCost>9710</iCost>
@@ -23136,11 +23136,11 @@
 			<iRevIdxLocal>-5</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TOPOPOLIS</Type>
-			<Description>TXT_KEY_BUILDING_TOPOPOLIS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOPOPOLIS_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_TOPOPOLIS</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_TOPOPOLIS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_TOPOPOLIS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TOPOPOLIS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_TOPOPOLIS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ULTIMA_ARCHITECTURE</PrereqTech>
 			<iCost>5515</iCost>
@@ -23158,7 +23158,7 @@
 				<iYield>30</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_RINGWORLD</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_BANKS_ORBITAL</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -23961,13 +23961,13 @@
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ANDROMEDA_COLONY</Type>
+			<Type>BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_ANDROMEDA_COLONY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANDROMEDA_COLONY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_VOYAGE_TO_ANDROMEDA_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANDROMEDA_COLONY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ANDROMEDA_COLONY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERGALACTIC_COLONIZATION</PrereqTech>
@@ -24069,11 +24069,11 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BERSERKER</Type>
-			<Description>TXT_KEY_BUILDING_BERSERKER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BERSERKER_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERGALACTIC_BERSERKER</Type>
+			<Description>TXT_KEY_BUILDING_INTERGALACTIC_BERSERKER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERGALACTIC_BERSERKER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BERSERKER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_BERSERKER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GALACTIC_ECOLOGY</PrereqTech>
 			<iCost>3075</iCost>
@@ -24237,11 +24237,11 @@
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CHRONOTON</Type>
-			<Description>TXT_KEY_BUILDING_CHRONOTON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CHRONOTON_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERGALACTIC_CHRONOTON_GENERATOR</Type>
+			<Description>TXT_KEY_BUILDING_INTERGALACTIC_CHRONOTON_GENERATOR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERGALACTIC_CHRONOTON_GENERATOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CHRONOTON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_CHRONOTON_GENERATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_OMEGA_MINUS_ENGINEERING</PrereqTech>
 			<iCost>4492</iCost>
@@ -26062,7 +26062,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingType>
 				<BuildingType>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</BuildingType>
-				<BuildingType>BUILDING_ANDROMEDA_COLONY</BuildingType>
+				<BuildingType>BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</BuildingType>
 				<BuildingType>BUILDING_TRIANGULUM</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
@@ -26549,7 +26549,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingType>
 				<BuildingType>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingType>
-				<BuildingType>BUILDING_ANDROMEDA_COLONY</BuildingType>
+				<BuildingType>BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</BuildingType>
 				<BuildingType>BUILDING_TRIANGULUM</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
@@ -26679,7 +26679,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingType>
 				<BuildingType>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</BuildingType>
-				<BuildingType>BUILDING_ANDROMEDA_COLONY</BuildingType>
+				<BuildingType>BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</BuildingType>
 				<BuildingType>BUILDING_TRIANGULUM</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
@@ -26946,7 +26946,7 @@
 				<BuildingType>BUILDING_SMALL_MAGELLANIC_CLOUD</BuildingType>
 				<BuildingType>BUILDING_LARGE_MAGELLANIC_CLOUD</BuildingType>
 				<BuildingType>BUILDING_SAGITTARIUS_DWARF_ELLIPTICAL_GALAXY</BuildingType>
-				<BuildingType>BUILDING_ANDROMEDA_COLONY</BuildingType>
+				<BuildingType>BUILDING_VOYAGE_TO_ANDROMEDA_COLONY</BuildingType>
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>

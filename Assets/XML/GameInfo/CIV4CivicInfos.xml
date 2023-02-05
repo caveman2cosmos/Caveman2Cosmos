@@ -9379,7 +9379,7 @@
 					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_WILLOWRUN</BuildingType>
+					<BuildingType>BUILDING_WILLOW_RUN</BuildingType>
 					<iHealthChange>-2</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -9592,7 +9592,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_GUILDHALL</BuildingType>
+					<BuildingType>BUILDING_GUILD_HALL</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -10449,7 +10449,7 @@
 					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_WILLOWRUN</BuildingType>
+					<BuildingType>BUILDING_WILLOW_RUN</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -12633,7 +12633,7 @@
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HEALERHUT</BuildingType>
+					<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -12792,7 +12792,7 @@
 			</BuildingHappinessChanges>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HEALERHUT</BuildingType>
+					<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13384,7 +13384,7 @@
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_LONGHOUSE</BuildingType>
+					<BuildingType>BUILDING_HOUSING_LONGHOUSE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
