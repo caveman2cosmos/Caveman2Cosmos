@@ -6206,7 +6206,7 @@
 				<BuildingType>BUILDING_COMMERCIAL_SATELLITES</BuildingType>
 				<BuildingType>BUILDING_SOLAR_SATELLITE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_SATELLITES</BuildingType>
-				<BuildingType>BUILDING_GPS</BuildingType>
+				<BuildingType>BUILDING_GLOBAL_POSITIONING_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_PROPAGANDA_SATELLITES</BuildingType>
 				<BuildingType>BUILDING_DIGITAL_GLOBE</BuildingType>
 			</Buildings>

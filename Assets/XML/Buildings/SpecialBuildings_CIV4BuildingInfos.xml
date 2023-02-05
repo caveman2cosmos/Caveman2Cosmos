@@ -14608,7 +14608,7 @@
 			<PrereqTech>TECH_RECYCLING</PrereqTech>
 			<Bonus>BONUS_TIRES</Bonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_GCA</BuildingType>
+				<BuildingType>BUILDING_GARBAGE_COLLECTION_AGENCY</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>

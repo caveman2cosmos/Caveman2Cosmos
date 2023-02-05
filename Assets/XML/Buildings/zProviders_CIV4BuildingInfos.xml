@@ -1278,7 +1278,7 @@
 				<BuildingType>BUILDING_BELLADONNA</BuildingType>
 				<BuildingType>BUILDING_CURARE</BuildingType>
 				<BuildingType>BUILDING_DEATHCAP_MUSHROOM</BuildingType>
-				<BuildingType>BUILDING_LAB</BuildingType>
+				<BuildingType>BUILDING_ALCHEMISTS_LAB</BuildingType>
 				<BuildingType>BUILDING_SNAKE_PIT</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>

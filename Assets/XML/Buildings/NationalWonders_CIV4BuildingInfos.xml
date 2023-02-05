@@ -299,13 +299,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BASKETROPEWAYS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BFM</Type>
+			<Type>BUILDING_BUREAU_OF_FARM_MANAGEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BFM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BFM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_BUREAU_OF_FARM_MANAGEMENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BUREAU_OF_FARM_MANAGEMENT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
@@ -339,7 +339,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_BFM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BUREAU_OF_FARM_MANAGEMENT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BFM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2004,13 +2004,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GARDEN_CITY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GCA</Type>
+			<Type>BUILDING_GARBAGE_COLLECTION_AGENCY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GCA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GCA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GARBAGE_COLLECTION_AGENCY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GARBAGE_COLLECTION_AGENCY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
@@ -2045,17 +2045,17 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GCA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GARBAGE_COLLECTION_AGENCY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GCA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GPS</Type>
+			<Type>BUILDING_GLOBAL_POSITIONING_SYSTEM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_GPS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GPS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GLOBAL_POSITIONING_SYSTEM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GLOBAL_POSITIONING_SYSTEM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GPS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GLOBAL_POSITIONING_SYSTEM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GPS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>

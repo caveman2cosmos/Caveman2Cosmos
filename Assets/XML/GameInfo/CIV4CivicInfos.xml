@@ -1485,7 +1485,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_ARC</BuildingType>
+					<BuildingType>BUILDING_ARC_DE_TRIOMPHE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -6070,7 +6070,7 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_ARC</BuildingType>
+					<BuildingType>BUILDING_ARC_DE_TRIOMPHE</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>

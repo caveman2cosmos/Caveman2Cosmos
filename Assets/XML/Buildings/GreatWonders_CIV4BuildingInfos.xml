@@ -1110,15 +1110,15 @@
 			<Help>TXT_KEY_BUILDING_VIA_APPIA_HELP</Help>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ARC</Type>
+			<Type>BUILDING_ARC_DE_TRIOMPHE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ARC</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ARC_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ARC_DE_TRIOMPHE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ARC_DE_TRIOMPHE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ARC</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ARC_DE_TRIOMPHE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ARC_DE_TRIOMPHE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
@@ -1314,13 +1314,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ARK</Type>
+			<Type>BUILDING_ARK_OF_THE_COVENANT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ARK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ARK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ARK_OF_THE_COVENANT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ARK_OF_THE_COVENANT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			<Bonus>BONUS_GOLD_WARES</Bonus>
 			<PrereqBonuses>
@@ -1361,7 +1361,7 @@
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<fVisibilityPriority>100</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_ARK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ARK_OF_THE_COVENANT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ARK</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -3012,7 +3012,7 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_JPL</BuildingType>
+					<BuildingType>BUILDING_JET_PROPULSION_LABORATORY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -3731,16 +3731,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CCC</Type>
+			<Type>BUILDING_CIRCUS_CIRCUS_CASINO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CCC</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CCC_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CIRCUS_CIRCUS_CASINO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CIRCUS_CIRCUS_CASINO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<Help>TXT_KEY_BUILDING_LASVEGASSTRIP_HELP</Help>
-			<ArtDefineTag>ART_DEF_BUILDING_CCC</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CIRCUS_CIRCUS_CASINO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CCC</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -12018,7 +12018,7 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CCC</BuildingType>
+				<BuildingType>BUILDING_CIRCUS_CIRCUS_CASINO</BuildingType>
 				<BuildingType>BUILDING_LUXOR</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -14884,15 +14884,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NOK</Type>
+			<Type>BUILDING_NOK_SCULPTURE_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NOK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NOK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NOK_SCULPTURE_WORKSHOP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NOK_SCULPTURE_WORKSHOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NOK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NOK_SCULPTURE_WORKSHOP</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NOK</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -18938,15 +18938,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SRC</Type>
+			<Type>BUILDING_SPECIES_RECOVERY_CENTER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SRC</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SRC_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SPECIES_RECOVERY_CENTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SPECIES_RECOVERY_CENTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SRC</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SPECIES_RECOVERY_CENTER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SRC</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -21987,15 +21987,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WWF</Type>
+			<Type>BUILDING_WORLD_WIDE_FUND_FOR_NATURE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_WWF</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WWF_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_WORLD_WIDE_FUND_FOR_NATURE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WORLD_WIDE_FUND_FOR_NATURE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WWF</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WORLD_WIDE_FUND_FOR_NATURE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WWF</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>

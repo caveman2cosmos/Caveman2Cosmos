@@ -2143,7 +2143,7 @@
 			<Button>art/Farming/Art/arboretum.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ARC</Type>
+			<Type>ART_DEF_BUILDING_ARC_DE_TRIOMPHE</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.33</fScale>
@@ -2293,7 +2293,7 @@
 			<Button>Art/interface/buttons/buildings/argus_array.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ARK</Type>
+			<Type>ART_DEF_BUILDING_ARK_OF_THE_COVENANT</Type>
 			<LSystem>LSYSTEM_3x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>7</fScale>
@@ -4333,7 +4333,7 @@
 			<Button>Art/Interface/Buttons/Buildings/betaassembler.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BFM</Type>
+			<Type>ART_DEF_BUILDING_BUREAU_OF_FARM_MANAGEMENT</Type>
 			<LSystem>LSYSTEM_3x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.5</fScale>
@@ -7253,7 +7253,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Button_CavePainting.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CCC</Type>
+			<Type>ART_DEF_BUILDING_CIRCUS_CIRCUS_CASINO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17264,7 +17264,7 @@
 			<Button>Art/Embassy/gauchoembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GCA</Type>
+			<Type>ART_DEF_BUILDING_GARBAGE_COLLECTION_AGENCY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18064,7 +18064,7 @@
 			<Button>Art/Interface/Buttons/Buildings/gokarttrack.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GPS</Type>
+			<Type>ART_DEF_BUILDING_GLOBAL_POSITIONING_SYSTEM</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22954,7 +22954,7 @@
 			<Button>Art/interface/buttons/buildings/jovian_trojan_mining.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JPL</Type>
+			<Type>ART_DEF_BUILDING_JET_PROPULSION_LABORATORY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23744,7 +23744,7 @@
 			<Button>Art/interface/buttons/buildings/l5_colony.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LAB</Type>
+			<Type>ART_DEF_BUILDING_ALCHEMISTS_LAB</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -30454,7 +30454,7 @@
 			<Button>Art/Interface/Buttons/Buildings/cage_nocturnal.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NOK</Type>
+			<Type>ART_DEF_BUILDING_NOK_SCULPTURE_WORKSHOP</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -39965,7 +39965,7 @@
 			<Button>art/Seafood/Art/squidnets.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SRC</Type>
+			<Type>ART_DEF_BUILDING_SPECIES_RECOVERY_CENTER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46335,7 +46335,7 @@
 			<Button>Art/Interface/Buttons/Buildings/WorldViewSlavery.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WWF</Type>
+			<Type>ART_DEF_BUILDING_WORLD_WIDE_FUND_FOR_NATURE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
