@@ -297,7 +297,7 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL_DANCING_BEAR</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ASIANBEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BLACK_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BROWN_BEAR</BuildingType>
@@ -575,8 +575,8 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_REINDEER_FARM</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DEER</BuildingType>
-				<BuildingType>BUILDING_DEER_CAMP</BuildingType>
-				<BuildingType>BUILDING_DEER_HERD</BuildingType>
+				<BuildingType>BUILDING_CAMP_DEER</BuildingType>
+				<BuildingType>BUILDING_HERD_DEER</BuildingType>
 				<BuildingType>BUILDING_MEGALOCEROS_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_DEER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>

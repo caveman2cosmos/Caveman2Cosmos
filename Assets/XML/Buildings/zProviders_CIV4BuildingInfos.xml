@@ -210,7 +210,7 @@
 				<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
-				<BuildingType>BUILDING_BOAR_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_BOAR</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_ANTELOPE</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BOAR</BuildingType>
@@ -234,19 +234,19 @@
 				<BuildingType>BUILDING_BUFFALO_HERD</BuildingType>
 				<BuildingType>BUILDING_CAMEL_HERD</BuildingType>
 				<BuildingType>BUILDING_CARIBOU_CAMP</BuildingType>
-				<BuildingType>BUILDING_COW_FARM</BuildingType>
-				<BuildingType>BUILDING_COW_HERD</BuildingType>
-				<BuildingType>BUILDING_DEER_CAMP</BuildingType>
-				<BuildingType>BUILDING_DEER_HERD</BuildingType>
+				<BuildingType>BUILDING_FARM_ANIMAL_COW</BuildingType>
+				<BuildingType>BUILDING_HERD_COW</BuildingType>
+				<BuildingType>BUILDING_CAMP_DEER</BuildingType>
+				<BuildingType>BUILDING_HERD_DEER</BuildingType>
 				<BuildingType>BUILDING_DIPROTODON_CAMP</BuildingType>
 				<BuildingType>BUILDING_DONKEY_HERD</BuildingType>
 				<BuildingType>BUILDING_ELEPHANT_CAMP</BuildingType>
 				<BuildingType>BUILDING_ELEPHANT_HERD</BuildingType>
-				<BuildingType>BUILDING_EMU_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_EMU</BuildingType>
 				<BuildingType>BUILDING_GATHERER_CARRION</BuildingType>
 				<BuildingType>BUILDING_GIRAFFE_CAMP</BuildingType>
-				<BuildingType>BUILDING_GOAT_FARM</BuildingType>
-				<BuildingType>BUILDING_GOAT_HERD</BuildingType>
+				<BuildingType>BUILDING_FARM_ANIMAL_GOAT</BuildingType>
+				<BuildingType>BUILDING_HERD_GOAT</BuildingType>
 				<BuildingType>BUILDING_HIPPO_CAMP</BuildingType>
 				<BuildingType>BUILDING_HORSE_HERD</BuildingType>
 				<BuildingType>BUILDING_ICEAGEBISON_CAMP</BuildingType>
@@ -261,14 +261,14 @@
 				<BuildingType>BUILDING_MUSKOX_HERD</BuildingType>
 				<BuildingType>BUILDING_NARWAL_CAMP</BuildingType>
 				<BuildingType>BUILDING_OSTRICH_CAMP</BuildingType>
-				<BuildingType>BUILDING_OXEN_FARM</BuildingType>
-				<BuildingType>BUILDING_PIG_FARM</BuildingType>
-				<BuildingType>BUILDING_PIG_HERD</BuildingType>
+				<BuildingType>BUILDING_FARM_ANIMAL_OXEN</BuildingType>
+				<BuildingType>BUILDING_FARM_ANIMAL_PIG</BuildingType>
+				<BuildingType>BUILDING_HERD_PIG</BuildingType>
 				<BuildingType>BUILDING_RATITE_HERD</BuildingType>
 				<BuildingType>BUILDING_REINDEER_FARM</BuildingType>
-				<BuildingType>BUILDING_RHEA_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_RHEA</BuildingType>
 				<BuildingType>BUILDING_RHINO_CAMP</BuildingType>
-				<BuildingType>BUILDING_ROO_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_SHEEP_FARM</BuildingType>
 				<BuildingType>BUILDING_SHEEP_HERD</BuildingType>
 				<BuildingType>BUILDING_WALRUS_CAMP</BuildingType>
@@ -499,8 +499,8 @@
 			<ObsoletesToBuilding>BUILDING_AQUAFARM</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ANCHOVY_NETS</BuildingType>
-				<BuildingType>BUILDING_COD_NETS</BuildingType>
-				<BuildingType>BUILDING_EEL_TRAPS</BuildingType>
+				<BuildingType>BUILDING_NETS_COD</BuildingType>
+				<BuildingType>BUILDING_NET_EEL</BuildingType>
 				<BuildingType>BUILDING_FLOUNDER_NETS</BuildingType>
 				<BuildingType>BUILDING_MACKEREL_NETS</BuildingType>
 				<BuildingType>BUILDING_MARLIN_NETS</BuildingType>
@@ -511,7 +511,7 @@
 				<BuildingType>BUILDING_SHARK_NETS</BuildingType>
 				<BuildingType>BUILDING_SNAPPER_NETS</BuildingType>
 				<BuildingType>BUILDING_SWORDFISH_NETS</BuildingType>
-				<BuildingType>BUILDING_TUNA_NETS</BuildingType>
+				<BuildingType>BUILDING_NET_TUNA</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<ExtraFreeBonuses>
@@ -566,17 +566,17 @@
 				<BuildingType>BUILDING_BLUEBELL_FARM</BuildingType>
 				<BuildingType>BUILDING_CARNATION_FARM</BuildingType>
 				<BuildingType>BUILDING_DAISY_FARM</BuildingType>
-				<BuildingType>BUILDING_FLAX_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_FLOWER_FLAX</BuildingType>
 				<BuildingType>BUILDING_FOXGLOVE_FARM</BuildingType>
 				<BuildingType>BUILDING_HENNA_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_HIBISCUS_FARM</BuildingType>
 				<BuildingType>BUILDING_INDIGO_FARM</BuildingType>
-				<BuildingType>BUILDING_IRIS_FARM</BuildingType>
-				<BuildingType>BUILDING_LILY_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_FLOWER_IRIS</BuildingType>
+				<BuildingType>BUILDING_FARM_FLOWER_LILY</BuildingType>
 				<BuildingType>BUILDING_MADDER_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_ORCHID_FARM</BuildingType>
 				<BuildingType>BUILDING_PANSY_FARM</BuildingType>
-				<BuildingType>BUILDING_ROSE_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_FLOWER_ROSE</BuildingType>
 				<BuildingType>BUILDING_SNAPDRAGON_FARM</BuildingType>
 				<BuildingType>BUILDING_SUNFLOWER_FARM</BuildingType>
 				<BuildingType>BUILDING_TULIP_FARM</BuildingType>
@@ -753,11 +753,11 @@
 				<BuildingType>BUILDING_GATHERER_AMBER</BuildingType>
 				<BuildingType>BUILDING_GATHERER_JADE</BuildingType>
 				<BuildingType>BUILDING_GEODE_MINE</BuildingType>
-				<BuildingType>BUILDING_JADE_MINE</BuildingType>
-				<BuildingType>BUILDING_JET_MINE</BuildingType>
-				<BuildingType>BUILDING_ONYX_MINE</BuildingType>
+				<BuildingType>BUILDING_MINE_JADE</BuildingType>
+				<BuildingType>BUILDING_MINE_JET</BuildingType>
+				<BuildingType>BUILDING_MINE_ONYX</BuildingType>
 				<BuildingType>BUILDING_QUARTZ_MINE</BuildingType>
-				<BuildingType>BUILDING_RUBY_MINE</BuildingType>
+				<BuildingType>BUILDING_MINE_RUBY</BuildingType>
 				<BuildingType>BUILDING_SAPPIRE_MINE</BuildingType>
 				<BuildingType>BUILDING_TOPAZ_MINE</BuildingType>
 				<BuildingType>BUILDING_TURQOISE_MINE</BuildingType>
@@ -840,17 +840,17 @@
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BARLEY_FARM</BuildingType>
-				<BuildingType>BUILDING_CORN_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_CROP_CORN</BuildingType>
 				<BuildingType>BUILDING_GATHERER_BARLEY</BuildingType>
 				<BuildingType>BUILDING_GATHERER_CORN</BuildingType>
 				<BuildingType>BUILDING_GATHERER_RICE</BuildingType>
 				<BuildingType>BUILDING_GATHERER_WHEAT</BuildingType>
 				<BuildingType>BUILDING_MILLET_FARM</BuildingType>
-				<BuildingType>BUILDING_OAT_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_CROP_OAT</BuildingType>
 				<BuildingType>BUILDING_QUINOA_FARM</BuildingType>
 				<BuildingType>BUILDING_RICE_PADDY</BuildingType>
 				<BuildingType>BUILDING_RICE_TERRACE</BuildingType>
-				<BuildingType>BUILDING_RYE_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_CROP_RYE</BuildingType>
 				<BuildingType>BUILDING_SORGHUM_FARM</BuildingType>
 				<BuildingType>BUILDING_WHEAT_FARM</BuildingType>
 			</PrereqOrBuildings>
@@ -1162,7 +1162,7 @@
 				<BuildingType>BUILDING_BREEDING_PROGRAM_SEA_OTTER</BuildingType>
 				<BuildingType>BUILDING_CHINCHILLA_TRAPS</BuildingType>
 				<BuildingType>BUILDING_ELEPHANTSEAL_CAMP</BuildingType>
-				<BuildingType>BUILDING_FOX_TRAPS</BuildingType>
+				<BuildingType>BUILDING_TRAP_FOX</BuildingType>
 				<BuildingType>BUILDING_MINK_TRAPS</BuildingType>
 				<BuildingType>BUILDING_OTTER_CAMP</BuildingType>
 				<BuildingType>BUILDING_RABBIT_TRAPS</BuildingType>
@@ -1371,7 +1371,7 @@
 				<BuildingType>BUILDING_INCENSE_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_LIQUORICE_FARM</BuildingType>
 				<BuildingType>BUILDING_MAPLE_GROVE</BuildingType>
-				<BuildingType>BUILDING_MINT_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_CROP_PEPPERMINT</BuildingType>
 				<BuildingType>BUILDING_NUTMEG_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_PEPPER_FARM</BuildingType>
 				<BuildingType>BUILDING_RHUBARB_FARM</BuildingType>
@@ -1618,8 +1618,8 @@
 				<BuildingType>BUILDING_GARLIC_FARM</BuildingType>
 				<BuildingType>BUILDING_GOARD_FARM</BuildingType>
 				<BuildingType>BUILDING_HYDROPONIC_VEGETABLE_GARDEN</BuildingType>
-				<BuildingType>BUILDING_KALE_FARM</BuildingType>
-				<BuildingType>BUILDING_LEEK_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_CROP_KALE</BuildingType>
+				<BuildingType>BUILDING_FARM_CROP_LEEK</BuildingType>
 				<BuildingType>BUILDING_LETTUCE_FARM</BuildingType>
 				<BuildingType>BUILDING_ONION_FARM</BuildingType>
 				<BuildingType>BUILDING_POTATO_FARM</BuildingType>

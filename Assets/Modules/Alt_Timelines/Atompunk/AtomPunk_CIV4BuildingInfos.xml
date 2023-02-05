@@ -80,13 +80,13 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOOD_ATOM</Type>
+			<Type>BUILDING_POWER_NUCLEAR</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_ATOM</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOOD_ATOM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOOD_ATOM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_POWER_NUCLEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_POWER_NUCLEAR_PEDIA</Civilopedia>
 			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
@@ -99,7 +99,7 @@
 				<iYield>0</iYield>
 				<iYield>200</iYield>
 			</YieldChanges>
-			<ArtDefineTag>ART_DEF_BUILDING_GOOD_ATOM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_POWER_NUCLEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HIGH_ENERGY_LAB</Type>
@@ -299,7 +299,7 @@
 					</Has>
 				</And>
 			</ConstructCondition>
-			<FreeBuilding>BUILDING_GOOD_ATOM</FreeBuilding>
+			<FreeBuilding>BUILDING_POWER_NUCLEAR</FreeBuilding>
 			<bRiver>1</bRiver>
 			<bPower>1</bPower>
 			<iCost>4010</iCost>

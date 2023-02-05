@@ -651,7 +651,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_LA_BREA</BuildingType>
+					<BuildingType>BUILDING_LA_BREA_TAR_PITS</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -4677,7 +4677,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_CANNES_FF</BuildingType>
+					<BuildingType>BUILDING_CANNES_FILM_FESTIVAL</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -11521,7 +11521,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SAN_MARCO</BuildingType>
+					<BuildingType>BUILDING_PIAZZA_SAN_MARCO</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -12082,7 +12082,7 @@
 			</ExtraFreeBonuses>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_BELL_ROCK</BuildingType>
+					<BuildingType>BUILDING_BELL_ROCK_LIGHTHOUSE</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -14856,7 +14856,7 @@
 			</ExtraFreeBonuses>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ICE_HOTEL</BuildingType>
+					<BuildingType>BUILDING_SNOWCASTLE_OF_KEMI</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

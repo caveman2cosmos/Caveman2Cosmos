@@ -144,7 +144,7 @@
 			<ObsoleteTech>TECH_BARK_WORKING</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSING_LEAN_TOS</BuildingType>
-				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSING_BARK_HUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
@@ -459,12 +459,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BLOOD_DANCE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BONE_HUT</Type>
+			<Type>BUILDING_HOUSING_BONE_HUTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BONE_HUT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BONE_HUT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_BONE_HUTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_BONE_HUTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
@@ -472,8 +472,8 @@
 			<ObsoleteTech>TECH_POTTERY</ObsoleteTech>
 			<Bonus>BONUS_BONE</Bonus>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_STONE_HUT</BuildingType>
-				<BuildingType>BUILDING_MUD_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSING_STONE_HUTS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_MUD_HUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
@@ -488,7 +488,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_BONE_HUT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_BONE_HUTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUDDHIST_SHRINE</Type>
@@ -709,7 +709,7 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSING_BARK_HUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
@@ -3869,12 +3869,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_MOB</Type>
+			<Type>BUILDING_CRIME_ORGANIZED_CRIME</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_MOB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_MOB_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_ORGANIZED_CRIME</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_ORGANIZED_CRIME_PEDIA</Civilopedia>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<iHealth>-6</iHealth>
 			<iHappiness>-6</iHappiness>
@@ -8337,12 +8337,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FERTILTY_DANCE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FIRE_CODE</Type>
+			<Type>BUILDING_ORDINANCE_FIRE_CODE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FIRE_CODE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FIRE_CODE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_FIRE_CODE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_FIRE_CODE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_FIRE_BRIGADES</ConstructSound>
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
@@ -8367,7 +8367,7 @@
 			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_FIRE_CODE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_FIRE_CODE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FIRE_DANCE</Type>
@@ -8665,12 +8665,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GOOD_YOUTH_CURFEW</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GRASS_HUT</Type>
+			<Type>BUILDING_HOUSING_GRASS_HUTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GRASS_HUT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GRASS_HUT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_GRASS_HUTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_GRASS_HUTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<Bonus>BONUS_GRASS</Bonus>
@@ -8698,7 +8698,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GRASS_HUT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_GRASS_HUTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_FIREWALL_GOOD</Type>
@@ -8797,12 +8797,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HEALTH_SPA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HIDE_HUT</Type>
+			<Type>BUILDING_HOUSING_ANIMAL_HIDE_TENTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HIDE_HUT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HIDE_HUT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_ANIMAL_HIDE_TENTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_ANIMAL_HIDE_TENTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SKINNING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
@@ -8832,7 +8832,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HIDE_HUT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_ANIMAL_HIDE_TENTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HINDU_SHRINE</Type>
@@ -8932,17 +8932,17 @@
 				<BuildingType>BUILDING_TREE_HALLOW</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_BURROW</BuildingType>
 				<BuildingType>BUILDING_HOUSING_LEAN_TOS</BuildingType>
-				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
-				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSING_GRASS_HUTS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_BARK_HUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_LONGHOUSE</BuildingType>
-				<BuildingType>BUILDING_BONE_HUT</BuildingType>
-				<BuildingType>BUILDING_HIDE_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSING_BONE_HUTS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_ANIMAL_HIDE_TENTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_TIPIS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_YURTS</BuildingType>
-				<BuildingType>BUILDING_MUD_HUT</BuildingType>
-				<BuildingType>BUILDING_STONE_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSING_MUD_HUTS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_STONE_HUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_TREEHOUSES</BuildingType>
-				<BuildingType>BUILDING_STILT_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSING_STILT_HUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_HOGANS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_PUEBLOS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
@@ -10922,7 +10922,7 @@
 			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<Bonus>BONUS_WOOD</Bonus>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSING_BARK_HUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
@@ -11318,12 +11318,12 @@
 			<ConstructSound>AS2D_BUILD_MORMON</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MUD_HUT</Type>
+			<Type>BUILDING_HOUSING_MUD_HUTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MUD_HUT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MUD_HUT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_MUD_HUTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_MUD_HUTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_CLAY</Bonus>
@@ -11356,7 +11356,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_MUD_HUT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_MUD_HUTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_ALCOHOL_PROHIBITION</Type>
@@ -11688,11 +11688,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_OLD_CITY_WALLS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_ANTS</Type>
+			<Type>BUILDING_PESTS_ANTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_ANTS</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_ANTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>2</iPrereqPopulation>
 			<PrereqTech>TECH_COOKING</PrereqTech>
@@ -11704,7 +11704,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_ANTS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_ANTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEST_APHIDS</Type>
@@ -11915,11 +11915,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PEST_GOPHERS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_LICE</Type>
+			<Type>BUILDING_PESTS_LICE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_LICE</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_LICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>4</iPrereqPopulation>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
@@ -11936,7 +11936,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_LICE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_LICE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEST_LOCUST</Type>
@@ -12084,11 +12084,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PEST_RACCOONS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_RATS</Type>
+			<Type>BUILDING_PESTS_RATS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_RATS</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_RATS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iMaxLatitude>80</iMaxLatitude>
 			<iPrereqPopulation>4</iPrereqPopulation>
@@ -12121,7 +12121,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_RATS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_RATS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEST_SEAGULLS</Type>
@@ -14409,12 +14409,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_STATUE_OF_ZEUS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STILT_HUT</Type>
+			<Type>BUILDING_HOUSING_STILT_HUTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_STILT_HUT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STILT_HUT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_STILT_HUTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_STILT_HUTS_PEDIA</Civilopedia>
 			<bWater>1</bWater>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
@@ -14443,20 +14443,20 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_STILT_HUT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_STILT_HUTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STONE_HUT</Type>
+			<Type>BUILDING_HOUSING_STONE_HUTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_STONE_HUT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STONE_HUT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_STONE_HUTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_STONE_HUTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_STONE_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<Bonus>BONUS_STONE</Bonus>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_MUD_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSING_MUD_HUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
@@ -14475,7 +14475,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_STONE_HUT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_STONE_HUTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TAOIST_SHRINE</Type>
@@ -15311,7 +15311,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_STILT_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSING_STILT_HUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_HOGANS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_MDMW</BuildingType>
@@ -15366,7 +15366,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
+				<BuildingType>BUILDING_HOUSING_GRASS_HUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_LONGHOUSE</BuildingType>
 				<BuildingType>BUILDING_HOUSING_PUEBLOS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
@@ -15782,12 +15782,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WAR_DANCE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WOOD_HUT</Type>
+			<Type>BUILDING_HOUSING_BARK_HUTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_WOOD_HUT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WOOD_HUT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_BARK_HUTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_BARK_HUTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_BARK_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_BARK</Bonus>
@@ -15828,7 +15828,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_WOOD_HUT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_BARK_HUTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WV_CANNIBALISM</Type>

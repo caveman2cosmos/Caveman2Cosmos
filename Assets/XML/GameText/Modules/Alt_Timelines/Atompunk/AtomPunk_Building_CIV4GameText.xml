@@ -27,14 +27,14 @@
 		<Russian>Ïîñëå èññëåäîâàíèé â îáëàñòè ÷èñòîé è áåçîïàñíîé ÿäåðíîé ýíåðãåòèêè, áûëî ïîñòðîåíî ìíîæåñòâî ðåàêòîðîâ äëÿ âûðàáîòêè íåâåðîÿòíîãî êîëè÷åñòâà ýíåðãèè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOOD_ATOM</Tag>
+		<Tag>TXT_KEY_BUILDING_POWER_NUCLEAR</Tag>
 		<English>Building Reward - Power (Nuclear)</English>
 		<French>Energie (Nucléaire)</French>
 		<Polish>Energia (Nuklearna)</Polish>
 		<Russian>ßäåðíûé ðåàêòîð</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOOD_ATOM_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_POWER_NUCLEAR_PEDIA</Tag>
 		<English>With the discovery of clean and safe nuclear power and the development of large reactor complexes, energy becomes available in such a big amount, that energy-intensive facilities are no longer an issue.</English>
 		<Polish>Energetyka jądrowa - zespół zagadnień związanych z uzyskiwaniem na skalę przemysłową energii z rozszczepienia ciężkich jąder pierwiastków (głównie uranu 235).</Polish>
 		<Russian>Ñ îòêðûòèåì ÷èñòîé è áåçîïàñíîé ÿäåðíîé ýíåðãèè è ðàçâèòèÿ êðóïíûõ ðåàêòîðíûõ êîìïëåêñîâ, ýíåðãèÿ ñòàíîâèòñÿ äîñòóïíà â òàêîì êîëè÷åñòâå, ÷òî ýíåðãîåìêèå îáúåêòû áîëüøå íå ÿâëÿþòñÿ ïðîáëåìîé.</Russian>

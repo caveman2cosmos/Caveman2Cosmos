@@ -248,11 +248,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BAD_BOY_CAGE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BEAR_CAGE</Type>
+			<Type>BUILDING_ENCLOSURE_BEAR</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BEAR_CAGE</Description>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_BEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -370,11 +370,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_LION_CAGE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BIRD_CAGE</Type>
+			<Type>BUILDING_ENCLOSURE_BIRD</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BIRD_CAGE</Description>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_BIRD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -428,7 +428,7 @@
 			</TechCommerceChanges>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_BIRD_CAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_BIRD</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BISON_HERD</Type>
@@ -524,7 +524,7 @@
 			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BUFFALO_HERD</BuildingType>
-				<BuildingType>BUILDING_OXEN_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_ANIMAL_OXEN</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
@@ -898,12 +898,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_COASTAL_FISH_FARM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COW_HERD</Type>
+			<Type>BUILDING_HERD_COW</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_COW_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COW_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_COW</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_COW_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
@@ -925,7 +925,7 @@
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_COW_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_COW</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRAB_NETS</Type>
@@ -988,12 +988,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CARNIVAL_DANCING_BEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEER_HERD</Type>
+			<Type>BUILDING_HERD_DEER</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEER_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEER_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_DEER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_DEER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
@@ -1014,7 +1014,7 @@
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_DEER_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_DEER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DOG_KENNEL</Type>
@@ -1492,12 +1492,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_GLYPTO</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOAT_HERD</Type>
+			<Type>BUILDING_HERD_GOAT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOAT_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOAT_HERD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERD_GOAT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_GOAT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 			<YieldChanges>
@@ -1513,7 +1513,7 @@
 			</ReplacementBuildings>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_GOAT_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_GOAT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOVERNORS_MENAGERIE</Type>
@@ -2335,11 +2335,11 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PIG_HERD</Type>
-			<Description>TXT_KEY_BUILDING_PIG_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PIG_HERD_PEDIA</Civilopedia>
+			<Type>BUILDING_HERD_PIG</Type>
+			<Description>TXT_KEY_BUILDING_HERD_PIG</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_PIG_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PIG_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_PIG</ArtDefineTag>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -2590,11 +2590,11 @@
 			</TechCommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ROO_HERD</Type>
-			<Description>TXT_KEY_BUILDING_ROO_HERD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ROO_HERD_PEDIA</Civilopedia>
+			<Type>BUILDING_HERD_KANGAROO</Type>
+			<Description>TXT_KEY_BUILDING_HERD_KANGAROO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERD_KANGAROO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ROO_HERD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERD_KANGAROO</ArtDefineTag>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_KANGAROO</FreeBonus>
@@ -2715,11 +2715,11 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SEAL_CAGE</Type>
-			<Description>TXT_KEY_BUILDING_SEAL_CAGE</Description>
+			<Type>BUILDING_ENCLOSURE_SEAL</Type>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_SEAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEAL_CAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ENCLOSURE_SEAL</ArtDefineTag>
 			<PrereqTech>TECH_ZOOLOGY</PrereqTech>
 			<bWater>1</bWater>
 			<PrereqOrBuildings>
@@ -3125,11 +3125,11 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WOLF_CAGE</Type>
+			<Type>BUILDING_ENCLOSURE_WOLF</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_WOLF_CAGE</Description>
+			<Description>TXT_KEY_BUILDING_ENCLOSURE_WOLF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WILD_ANIMAL_CAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>

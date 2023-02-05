@@ -851,7 +851,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
-				<BuildingType>BUILDING_COW_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_COW</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -864,7 +864,7 @@
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_COW_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_ANIMAL_COW</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
@@ -1115,12 +1115,12 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BOAR_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_BOAR</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_PIG_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_PIG</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
@@ -1129,7 +1129,7 @@
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_PIG_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_ANIMAL_PIG</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
@@ -1292,7 +1292,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -1302,7 +1302,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ASIANBEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -1381,7 +1381,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -1390,7 +1390,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BROWN_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -1468,7 +1468,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -1477,7 +1477,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BLACK_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -1555,7 +1555,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_CAVE_BEAR_REMAINS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -1565,7 +1565,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CAVE_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -1643,7 +1643,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -1653,7 +1653,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GRIZZLY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -1727,7 +1727,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -1736,7 +1736,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PANDA_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -1814,7 +1814,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -1824,7 +1824,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_POLAR_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -1898,7 +1898,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_RACCOON_TRAPS</BuildingType>
@@ -1907,7 +1907,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_REDPANDA</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -1986,7 +1986,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -1996,7 +1996,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SLOTH_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -2074,7 +2074,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -2083,7 +2083,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SPECTACLED_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -2163,7 +2163,7 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -2172,7 +2172,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SUN_BEAR</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -2521,14 +2521,14 @@
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GUARD_DOG</BuildingType>
+				<BuildingType>BUILDING_GUARD_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_HERDING_DOGS</BuildingType>
 				<BuildingType>BUILDING_HUNTING_DOGS</BuildingType>
 				<BuildingType>BUILDING_POLICE_DOG</BuildingType>
-				<BuildingType>BUILDING_SLED_DOGS</BuildingType>
+				<BuildingType>BUILDING_SLED_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_WAR_DOGS</BuildingType>
-				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
+				<BuildingType>BUILDING_WAR_DOG_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_WOLF</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
@@ -3724,14 +3724,14 @@
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
-				<BuildingType>BUILDING_GUARD_DOG</BuildingType>
+				<BuildingType>BUILDING_GUARD_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_HERDING_DOGS</BuildingType>
 				<BuildingType>BUILDING_HUNTING_DOGS</BuildingType>
 				<BuildingType>BUILDING_POLICE_DOG</BuildingType>
-				<BuildingType>BUILDING_SLED_DOGS</BuildingType>
+				<BuildingType>BUILDING_SLED_DOG_TRAINER</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_WAR_DOGS</BuildingType>
-				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
+				<BuildingType>BUILDING_WAR_DOG_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_WOLF</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</Buildings>
 			<PrereqAndBuildings>
@@ -3824,7 +3824,7 @@
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
 				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
 				<BuildingType>BUILDING_FARM_ANIMAL_DUCK</BuildingType>
@@ -3834,7 +3834,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DUCK</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -3912,7 +3912,7 @@
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
 				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
 				<BuildingType>BUILDING_TURKEY_FARM</BuildingType>
@@ -3922,7 +3922,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
+				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TURKEY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>

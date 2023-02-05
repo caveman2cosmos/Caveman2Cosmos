@@ -2302,15 +2302,15 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BELL_ROCK</Type>
+			<Type>BUILDING_BELL_ROCK_LIGHTHOUSE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BELL_ROCK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BELL_ROCK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_BELL_ROCK_LIGHTHOUSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BELL_ROCK_LIGHTHOUSE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BELL_ROCK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BELL_ROCK_LIGHTHOUSE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BELL_ROCK</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3389,12 +3389,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CANNES_FF</Type>
+			<Type>BUILDING_CANNES_FILM_FESTIVAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_CANNES_FF</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CANNES_FF_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CANNES_FILM_FESTIVAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CANNES_FILM_FESTIVAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CANNES_FF</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CANNES_FILM_FESTIVAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CANNES_FF</MovieDefineTag>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
@@ -5395,12 +5395,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DINO_PARK</Type>
+			<Type>BUILDING_DINOSAUR_PARK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_DINO_PARK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DINO_PARK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DINOSAUR_PARK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DINOSAUR_PARK_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DINO_PARK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DINOSAUR_PARK</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DINO_PARK</MovieDefineTag>
 			<PrereqTech>TECH_TIME_TRAVEL</PrereqTech>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
@@ -5720,16 +5720,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DOG_SHOW</Type>
+			<Type>BUILDING_INTERNATIONAL_DOG_SHOW</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DOG_SHOW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DOG_SHOW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_INTERNATIONAL_DOG_SHOW</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERNATIONAL_DOG_SHOW_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DOG_SHOW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERNATIONAL_DOG_SHOW</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DOG_SHOW</MovieDefineTag>
 			<PrereqTech>TECH_ZOOLOGY</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
@@ -6082,7 +6082,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
 				<BuildingType>BUILDING_STONE_QUARRY</BuildingType>
-				<BuildingType>BUILDING_IRON_MINE</BuildingType>
+				<BuildingType>BUILDING_MINE_IRON</BuildingType>
 				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
 				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 			</PrereqOrBuildings>
@@ -6730,15 +6730,15 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EMU_EGG</Type>
+			<Type>BUILDING_EMU_EGG_CARVER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EMU_EGG</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EMU_EGG_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EMU_EGG_CARVER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EMU_EGG_CARVER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EMU_EGG</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EMU_EGG_CARVER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EMU_EGG</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -6747,7 +6747,7 @@
 				<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_EMU_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_EMU</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_EMU</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</PrereqOrBuildings>
@@ -7025,13 +7025,13 @@
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EURO_ELT</Type>
+			<Type>BUILDING_EUROPEAN_EXTREMELY_LARGE_TELESCOPE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_EURO_ELT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EURO_ELT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EUROPEAN_EXTREMELY_LARGE_TELESCOPE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EUROPEAN_EXTREMELY_LARGE_TELESCOPE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EURO_ELT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EUROPEAN_EXTREMELY_LARGE_TELESCOPE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EURO_ELT</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -8187,15 +8187,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GENOMIC_E</Type>
+			<Type>BUILDING_GENOMIC_ENCYCLOPEDIA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GENOMIC_E</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GENOMIC_E_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GENOMIC_ENCYCLOPEDIA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GENOMIC_ENCYCLOPEDIA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GENOMIC_E</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GENOMIC_ENCYCLOPEDIA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GENOMIC_E</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GENOMIC_ENCYCLOPEDIA</PrereqTech>
@@ -8234,7 +8234,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_DNA_LAB</BuildingType>
+					<BuildingType>BUILDING_NUCLEIC_ACID_LAB</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>5</iCommerce>
@@ -10730,15 +10730,15 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ICE_HOTEL</Type>
+			<Type>BUILDING_SNOWCASTLE_OF_KEMI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ICE_HOTEL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ICE_HOTEL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SNOWCASTLE_OF_KEMI</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SNOWCASTLE_OF_KEMI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ICE_HOTEL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SNOWCASTLE_OF_KEMI</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ICE_HOTEL</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_HOTEL</ConstructSound>
 			<fVisibilityPriority>2</fVisibilityPriority>
@@ -11081,15 +11081,15 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_JADE_MASK</Type>
+			<Type>BUILDING_JADE_DEATH_MASK_CARVER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_JADE_MASK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_JADE_MASK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_JADE_DEATH_MASK_CARVER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_JADE_DEATH_MASK_CARVER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_JADE_MASK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_JADE_DEATH_MASK_CARVER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_JADE_MASK</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -11820,7 +11820,7 @@
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
-				<BuildingType>BUILDING_COW_HERD</BuildingType>
+				<BuildingType>BUILDING_HERD_COW</BuildingType>
 				<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
@@ -12115,15 +12115,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LA_BREA</Type>
+			<Type>BUILDING_LA_BREA_TAR_PITS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_LA_BREA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LA_BREA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LA_BREA_TAR_PITS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LA_BREA_TAR_PITS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LA_BREA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LA_BREA_TAR_PITS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LA_BREA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PALEONTOLOGY</PrereqTech>
@@ -12737,7 +12737,7 @@
 			</SpecialistCounts>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_AD_AGENCY</BuildingType>
+					<BuildingType>BUILDING_ADVERTISING_AGENCY</BuildingType>
 					<iNumBuildingNeeded>6</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -12756,7 +12756,7 @@
 			</SpecialistYieldChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_AD_AGENCY</BuildingType>
+					<BuildingType>BUILDING_ADVERTISING_AGENCY</BuildingType>
 					<CommerceChanges>
 						<iCommerce>2</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -17330,15 +17330,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SAN_MARCO</Type>
+			<Type>BUILDING_PIAZZA_SAN_MARCO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SAN_MARCO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SAN_MARCO_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PIAZZA_SAN_MARCO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PIAZZA_SAN_MARCO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SAN_MARCO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PIAZZA_SAN_MARCO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SAN_MARCO</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_MARKETPLACE</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -19503,13 +19503,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SURFBOARD</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SU_SONG</Type>
+			<Type>BUILDING_SU_SONGS_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SU_SONG</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SU_SONG_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SU_SONGS_WORKSHOP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SU_SONGS_WORKSHOP_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WATERWHEELS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CALENDAR</PrereqTech>
@@ -19548,7 +19548,7 @@
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_SU_SONG</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SU_SONGS_WORKSHOP</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SU_SONG</MovieDefineTag>
 			<PropertyManipulators>
 				<PropertySource>
@@ -21375,13 +21375,13 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WANG_ZHEN</Type>
+			<Type>BUILDING_WANG_ZHENS_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_WANG_ZHEN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WANG_ZHEN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_WANG_ZHENS_WORKSHOP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WANG_ZHENS_WORKSHOP_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WATERWHEELS</PrereqTech>
 			<bRiver>1</bRiver>
 			<PrereqBonuses>
@@ -21424,7 +21424,7 @@
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_WANG_ZHEN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WANG_ZHENS_WORKSHOP</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WANG_ZHEN</MovieDefineTag>
 			<PropertyManipulators>
 				<PropertySource>
@@ -22173,15 +22173,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZHENG_HE</Type>
+			<Type>BUILDING_ZHENG_HES_VOYAGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ZHENG_HE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZHENG_HE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ZHENG_HES_VOYAGE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ZHENG_HES_VOYAGE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZHENG_HE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ZHENG_HES_VOYAGE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ZHENG_HE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROLABE</PrereqTech>

@@ -6836,19 +6836,19 @@
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_SLED_DOGS</Building>
+					<Building>BUILDING_SLED_DOG_TRAINER</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>-3</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_SLED_DOGS</Building>
+					<Building>BUILDING_SLED_DOG_TRAINER</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<Building>BUILDING_SLED_DOGS</Building>
+					<Building>BUILDING_SLED_DOG_TRAINER</Building>
 					<iHappy>2</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>

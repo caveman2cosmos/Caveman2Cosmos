@@ -6661,7 +6661,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<iMinTreasury>30000</iMinTreasury>
 			<BuildingsRequired>
-				<Building>BUILDING_COAL_MINE</Building>
+				<Building>BUILDING_MINE_COAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10463,7 +10463,7 @@
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>200</iWeight>
 			<BuildingsRequired>
-				<Building>BUILDING_SLED_DOGS</Building>
+				<Building>BUILDING_SLED_DOG_TRAINER</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -11166,7 +11166,7 @@
 			<iUnitExperienceWeight>0</iUnitExperienceWeight>
 			<bUnitsOnPlot>0</bUnitsOnPlot>
 			<BuildingsRequired>
-				<Building>BUILDING_DINO_PARK</Building>
+				<Building>BUILDING_DINOSAUR_PARK</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>

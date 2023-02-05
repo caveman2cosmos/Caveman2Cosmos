@@ -42,7 +42,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_HOLOGRAPHICS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRAFT_HUT</Type>
+			<Type>BUILDING_CRAFTS_HUT</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_CONSUMERISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -138,7 +138,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ENGINEERING</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HAND_PUMP</Type>
+			<Type>BUILDING_HAND_WATER_PUMP</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_REPLACEABLE_PARTS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -258,7 +258,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_SIEGE_WARFARE</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WIND_PUMP</Type>
+			<Type>BUILDING_WIND_WATER_PUMP</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_SCREW_PROPELLER</ID></Has></NewCityFree>
 		</BuildingInfo>
 	</BuildingInfos>

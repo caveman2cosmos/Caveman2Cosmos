@@ -25355,7 +25355,7 @@
 				<BonusType>BONUS_OBSIDIAN</BonusType>
 			</PrereqBonuses>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_WAR_DOGS</BuildingType>
+				<BuildingType>BUILDING_WAR_DOG_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_GUARDDOG</UnitType>
@@ -25461,7 +25461,7 @@
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_GUARD_DOG</BuildingType>
+				<BuildingType>BUILDING_GUARD_DOG_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_POLICE_DOG</UnitType>
@@ -33761,7 +33761,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_ORDINANCE_CARPOOL</BuildingType>
 				<BuildingType>BUILDING_SMOKE_DETECTOR</BuildingType>
-				<BuildingType>BUILDING_FIRE_CODE</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_FIRE_CODE</BuildingType>
 				<BuildingType>BUILDING_NEIGHBORHOOD_WATCH</BuildingType>
 				<BuildingType>BUILDING_YOUTH_CURFEW</BuildingType>
 				<BuildingType>BUILDING_EMISSION_ACT</BuildingType>

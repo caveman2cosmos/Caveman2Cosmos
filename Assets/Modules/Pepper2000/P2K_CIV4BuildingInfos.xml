@@ -2438,7 +2438,7 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOCUS_SUN</BuildingType>
+					<BuildingType>BUILDING_DEEP_SPACE_FOCUSED_SUNLIGHT_PLANT</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
@@ -3438,7 +3438,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MARS_CITY</BuildingType>
+					<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -3452,7 +3452,7 @@
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MARS_CITY</BuildingType>
+					<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -8333,11 +8333,11 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARS_CITY</Type>
-			<Description>TXT_KEY_BUILDING_MARS_CITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MARS_CITY_PEDIA</Civilopedia>
+			<Type>BUILDING_MARTIAN_CITY</Type>
+			<Description>TXT_KEY_BUILDING_MARTIAN_CITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_CITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARS_CITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_CITY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SUPERCHARGED_CRYSTALLOGRAPHY</PrereqTech>
 			<iCost>1577</iCost>
@@ -8427,11 +8427,11 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARS_ECO</Type>
-			<Description>TXT_KEY_BUILDING_MARS_ECO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MARS_ECO_PEDIA</Civilopedia>
+			<Type>BUILDING_MARTIAN_ECOSYSTEM</Type>
+			<Description>TXT_KEY_BUILDING_MARTIAN_ECOSYSTEM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_ECOSYSTEM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARS_ECO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_ECOSYSTEM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_QUADRUPLE_HELIX</PrereqTech>
 			<TechTypes>
@@ -8501,11 +8501,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARS_FARM</Type>
-			<Description>TXT_KEY_BUILDING_MARS_FARM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MARS_FARM_PEDIA</Civilopedia>
+			<Type>BUILDING_MARTIAN_FARM</Type>
+			<Description>TXT_KEY_BUILDING_MARTIAN_FARM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_FARM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARS_FARM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_FARM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_EXTRATERRESTRIAL_AGRICULTURE</PrereqTech>
 			<iCost>5294</iCost>
@@ -8520,7 +8520,7 @@
 				<iYield>15</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MARS_ECO</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_ECOSYSTEM</BuildingType>
 				<BuildingType>BUILDING_MARS_MEGACITY</BuildingType>
 			</PrereqInCityBuildings>
 			<ExtraFreeBonuses>
@@ -8696,7 +8696,7 @@
 			</YieldChanges>
 			<iHealth>10</iHealth>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MARS_CITY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_NOVUS_CHEMICALS</Bonus>
 			<PropertyManipulators>
@@ -8710,11 +8710,11 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARS_MINE</Type>
-			<Description>TXT_KEY_BUILDING_MARS_MINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MARS_MINE_PEDIA</Civilopedia>
+			<Type>BUILDING_MARTIAN_MINE</Type>
+			<Description>TXT_KEY_BUILDING_MARTIAN_MINE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_MINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARS_MINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_MINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANETARY_EXTRACTION</PrereqTech>
 			<iCost>800</iCost>
@@ -8759,7 +8759,7 @@
 			</CommerceChanges>
 			<iHappiness>1</iHappiness>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MARS_CITY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrCivics>
 				<PrereqCivic>
@@ -8814,11 +8814,11 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARS_SEA</Type>
-			<Description>TXT_KEY_BUILDING_MARS_SEA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MARS_SEA_PEDIA</Civilopedia>
+			<Type>BUILDING_MARTIAN_BIOTIC_SEA</Type>
+			<Description>TXT_KEY_BUILDING_MARTIAN_BIOTIC_SEA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MARTIAN_BIOTIC_SEA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARS_SEA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MARTIAN_BIOTIC_SEA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROECOLOGY</PrereqTech>
 			<iCost>6372</iCost>
@@ -8834,7 +8834,7 @@
 			</YieldChanges>
 			<iHappiness>1</iHappiness>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MARS_ECO</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_ECOSYSTEM</BuildingType>
 			</PrereqInCityBuildings>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -8896,7 +8896,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MARS_SEA</BuildingType>
+					<BuildingType>BUILDING_MARTIAN_BIOTIC_SEA</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
@@ -8916,7 +8916,7 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_MARS_FARM</BuildingType>
+					<BuildingType>BUILDING_MARTIAN_FARM</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
@@ -8980,7 +8980,7 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MARS_CITY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -9034,7 +9034,7 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MARS_CITY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 				<BuildingType>BUILDING_MARS_BIOFACTORY</BuildingType>
 			</PrereqInCityBuildings>
 			<ExtraFreeBonuses>
@@ -9088,7 +9088,7 @@
 				<iYield>40</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MARS_MINE</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_MINE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -9289,7 +9289,7 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_MARS_CITY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -9341,7 +9341,7 @@
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_MARS_CITY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -9363,7 +9363,7 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MARS_CITY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -9390,7 +9390,7 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_MARS_CITY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -9459,7 +9459,7 @@
 			</CommerceChanges>
 			<iHappiness>5</iHappiness>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MARS_CITY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -9635,7 +9635,7 @@
 			<PrereqCultureLevel>CULTURELEVEL_ELEGANT</PrereqCultureLevel>
 			<iMaintenanceModifier>-5</iMaintenanceModifier>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MARS_CITY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -9837,7 +9837,7 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_MARS_CITY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -9887,7 +9887,7 @@
 			</CommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_CYCLER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_MARS_CITY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -9912,7 +9912,7 @@
 			</CommerceChanges>
 			<iHappiness>3</iHappiness>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MARS_CITY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -9976,7 +9976,7 @@
 			<iHappiness>1</iHappiness>
 			<iHealth>1</iHealth>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MARS_CITY</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -10145,7 +10145,7 @@
 			</CommerceChanges>
 			<iHappiness>2</iHappiness>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MARS_ECO</BuildingType>
+				<BuildingType>BUILDING_MARTIAN_ECOSYSTEM</BuildingType>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
@@ -10170,7 +10170,7 @@
 				<iYield>0</iYield>
 				<iYield>120</iYield>
 			</YieldChanges>
-			<FreeBuilding>BUILDING_MARS_MINE</FreeBuilding>
+			<FreeBuilding>BUILDING_MARTIAN_MINE</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MARS_METRO</BuildingType>
 			</PrereqInCityBuildings>
@@ -11370,7 +11370,7 @@
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_TITAN_SF6</BuildingType>
+				<BuildingType>BUILDING_TITAN_SF6_GENERATOR</BuildingType>
 				<BuildingType>BUILDING_TITAN_ECOSYSTEM</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
@@ -11517,7 +11517,7 @@
 				<iYield>10</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_TITAN_SF6</BuildingType>
+				<BuildingType>BUILDING_TITAN_SF6_GENERATOR</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -11621,11 +11621,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TITAN_SF6</Type>
-			<Description>TXT_KEY_BUILDING_TITAN_SF6</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TITAN_SF6_PEDIA</Civilopedia>
+			<Type>BUILDING_TITAN_SF6_GENERATOR</Type>
+			<Description>TXT_KEY_BUILDING_TITAN_SF6_GENERATOR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TITAN_SF6_GENERATOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TITAN_SF6</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TITAN_SF6_GENERATOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ARTIFICIAL_NUCLEOSYNTHESIS</PrereqTech>
 			<iCost>1650</iCost>
@@ -13113,11 +13113,11 @@
 			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOCUS_SUN</Type>
-			<Description>TXT_KEY_BUILDING_FOCUS_SUN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOCUS_SUN_PEDIA</Civilopedia>
+			<Type>BUILDING_DEEP_SPACE_FOCUSED_SUNLIGHT_PLANT</Type>
+			<Description>TXT_KEY_BUILDING_DEEP_SPACE_FOCUSED_SUNLIGHT_PLANT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_FOCUSED_SUNLIGHT_PLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FOCUS_SUN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_FOCUSED_SUNLIGHT_PLANT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_SOLAR_ORDNANCE</PrereqTech>
 			<iCost>2959</iCost>
@@ -15504,7 +15504,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>900</iCommerce>
 			</CommerceChanges>
-			<FreeBuilding>BUILDING_STAR_SCOOP</FreeBuilding>
+			<FreeBuilding>BUILDING_INTERSTELLAR_STAR_SCOOP</FreeBuilding>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_AB_MATTER</BonusType>
@@ -15513,7 +15513,7 @@
 			</BonusProductionModifiers>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MCKENDREE_CYLINDER</BuildingType>
-				<BuildingType>BUILDING_SUN_SCOOP</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_SUN_SCOOP</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -15682,11 +15682,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SUN_SCOOP</Type>
-			<Description>TXT_KEY_BUILDING_SUN_SCOOP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SUN_SCOOP_PEDIA</Civilopedia>
+			<Type>BUILDING_DEEP_SPACE_SUN_SCOOP</Type>
+			<Description>TXT_KEY_BUILDING_DEEP_SPACE_SUN_SCOOP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_SUN_SCOOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SUN_SCOOP</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_SUN_SCOOP</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
 			<iCost>9636</iCost>
@@ -15709,16 +15709,16 @@
 			</YieldChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BISHOP_RING_REGULAR</BuildingType>
-				<BuildingType>BUILDING_FOCUS_SUN</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_FOCUSED_SUNLIGHT_PLANT</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SUN_SCOOP_POWER_PLANT</Type>
-			<Description>TXT_KEY_BUILDING_SUN_SCOOP_POWER_PLANT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SUN_SCOOP_POWER_PLANT_PEDIA</Civilopedia>
+			<Type>BUILDING_DEEP_SPACE_SUN_SCOOP_POWER_PLANT</Type>
+			<Description>TXT_KEY_BUILDING_DEEP_SPACE_SUN_SCOOP_POWER_PLANT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_SUN_SCOOP_POWER_PLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SUN_SCOOP_POWER_PLANT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_SUN_SCOOP_POWER_PLANT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_STAR_LIFTING</PrereqTech>
 			<iCost>9636</iCost>
@@ -15737,7 +15737,7 @@
 				<iYield>200</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SUN_SCOOP</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_SUN_SCOOP</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -17570,7 +17570,7 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STAR_SCOOP</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_STAR_SCOOP</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -18150,13 +18150,13 @@
 			<iRevIdxLocal>10</iRevIdxLocal>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CYGNUS_X1</Type>
+			<Type>BUILDING_CYGNUS_X_1_COLONY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_CYGNUS_X1</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CYGNUS_X1_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CYGNUS_X_1_COLONY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CYGNUS_X_1_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CYGNUS_X1</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CYGNUS_X_1_COLONY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CYGNUS_X1</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_TRANSTANGIBLE_NEUTRINO_ACCELERATORS</PrereqTech>
@@ -18622,13 +18622,13 @@
 			<bPower>1</bPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EARTH_20</Type>
+			<Type>BUILDING_EARTH_2</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_EARTH_20</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EARTH_20_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EARTH_2</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EARTH_2_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EARTH_20</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EARTH_2</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EARTH_20</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_HYPERSTRUCTURE_ENGINEERING</PrereqTech>
@@ -19536,13 +19536,13 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HD_85512B</Type>
+			<Type>BUILDING_HD_85512B_COLONY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_HD_85512B</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HD_85512B_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HD_85512B_COLONY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HD_85512B_COLONY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HD_85512B</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HD_85512B_COLONY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HD_85512B</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ACNP_PROPULSION</PrereqTech>
@@ -19758,7 +19758,7 @@
 				<iYield>20</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STAR_ROAD</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_STAR_ROAD</BuildingType>
 			</PrereqInCityBuildings>
 			<Bonus>BONUS_MAGNETIC_MONOPOLES</Bonus>
 		</BuildingInfo>
@@ -20744,7 +20744,7 @@
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DYSON_SPHERE</BuildingType>
-				<BuildingType>BUILDING_STAR_SCOOP</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_STAR_SCOOP</BuildingType>
 			</PrereqInCityBuildings>
 			<iRevIdxLocal>-10</iRevIdxLocal>
 		</BuildingInfo>
@@ -21427,7 +21427,7 @@
 			</YieldChanges>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOCUS_SUN</BuildingType>
+					<BuildingType>BUILDING_DEEP_SPACE_FOCUSED_SUNLIGHT_PLANT</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -22639,11 +22639,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STAR_ROAD</Type>
-			<Description>TXT_KEY_BUILDING_STAR_ROAD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STAR_ROAD_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_STAR_ROAD</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_STAR_ROAD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_STAR_ROAD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STAR_ROAD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_STAR_ROAD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_GALACTIC_ENGINEERING</PrereqTech>
 			<iCost>5766</iCost>
@@ -22666,11 +22666,11 @@
 			<Bonus>BONUS_AB_MATTER</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STAR_SCOOP</Type>
-			<Description>TXT_KEY_BUILDING_STAR_SCOOP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STAR_SCOOP_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERSTELLAR_STAR_SCOOP</Type>
+			<Description>TXT_KEY_BUILDING_INTERSTELLAR_STAR_SCOOP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_STAR_SCOOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STAR_SCOOP</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_STAR_SCOOP</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_PLANET_ENGINEERING</PrereqTech>
 			<TechTypes>
@@ -22716,7 +22716,7 @@
 				<iYield>100</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STAR_SCOOP</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_STAR_SCOOP</BuildingType>
 			</PrereqInCityBuildings>
 			<bPower>1</bPower>
 		</BuildingInfo>
@@ -24940,7 +24940,7 @@
 				<iYield>5</iYield>
 			</YieldChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_VOID_BASE</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_VOID_BASE</BuildingType>
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -27052,11 +27052,11 @@
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VOID_BASE</Type>
-			<Description>TXT_KEY_BUILDING_VOID_BASE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VOID_BASE_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERGALACTIC_VOID_BASE</Type>
+			<Description>TXT_KEY_BUILDING_INTERGALACTIC_VOID_BASE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERGALACTIC_VOID_BASE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VOID_BASE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_VOID_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MEGAWORMHOLES</PrereqTech>
 			<iCost>4004</iCost>
@@ -29810,11 +29810,11 @@
 			</YieldChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SEP_FIELD</Type>
-			<Description>TXT_KEY_BUILDING_SEP_FIELD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SEP_FIELD_PEDIA</Civilopedia>
+			<Type>BUILDING_HYPERSPACE_S_E_P_FIELD</Type>
+			<Description>TXT_KEY_BUILDING_HYPERSPACE_S_E_P_FIELD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_S_E_P_FIELD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEP_FIELD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HYPERSPACE_S_E_P_FIELD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 			<iCost>3423</iCost>
@@ -29981,11 +29981,11 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TIME_TRAP</Type>
-			<Description>TXT_KEY_BUILDING_TIME_TRAP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TIME_TRAP_PEDIA</Civilopedia>
+			<Type>BUILDING_HYPERSPACE_TIME_TRAP</Type>
+			<Description>TXT_KEY_BUILDING_HYPERSPACE_TIME_TRAP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HYPERSPACE_TIME_TRAP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TIME_TRAP</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HYPERSPACE_TIME_TRAP</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COSMIC_WARFARE</PrereqTech>
 			<iCost>2422</iCost>

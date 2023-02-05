@@ -603,7 +603,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AI_LAWYER</BuildingType>
+					<BuildingType>BUILDING_AI_LEGAL_SYSTEM</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2335,7 +2335,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OXEN_FARM</BuildingType>
+					<BuildingType>BUILDING_FARM_ANIMAL_OXEN</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4563,7 +4563,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AI_LAWYER</BuildingType>
+					<BuildingType>BUILDING_AI_LEGAL_SYSTEM</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6258,7 +6258,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OXEN_FARM</BuildingType>
+					<BuildingType>BUILDING_FARM_ANIMAL_OXEN</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>

@@ -3655,7 +3655,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_AI_LAWYER</BuildingType>
+					<BuildingType>BUILDING_AI_LEGAL_SYSTEM</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -17918,7 +17918,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_AD_AGENCY</BuildingType>
+					<BuildingType>BUILDING_ADVERTISING_AGENCY</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>

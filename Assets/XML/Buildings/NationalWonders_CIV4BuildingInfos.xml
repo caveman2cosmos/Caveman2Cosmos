@@ -487,8 +487,8 @@
 				<BuildingType>BUILDING_FOLKLORE_BULL</BuildingType>
 				<BuildingType>BUILDING_BISON_HERD</BuildingType>
 				<BuildingType>BUILDING_BISON_CAMP</BuildingType>
-				<BuildingType>BUILDING_COW_HERD</BuildingType>
-				<BuildingType>BUILDING_COW_FARM</BuildingType>
+				<BuildingType>BUILDING_HERD_COW</BuildingType>
+				<BuildingType>BUILDING_FARM_ANIMAL_COW</BuildingType>
 				<BuildingType>BUILDING_ICEAGEBISON_CAMP</BuildingType>
 				<BuildingType>BUILDING_AUROCHS_CAMP</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_BISON</BuildingType>
@@ -533,13 +533,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BULL_LEAPING</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_C4_CROPS</Type>
+			<Type>BUILDING_LIFE_C4_CROPS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_C4_CROPS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_C4_CROPS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LIFE_C4_CROPS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LIFE_C4_CROPS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_C4_CROPS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LIFE_C4_CROPS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2607,7 +2607,7 @@
 			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_CRAFT_HUT</BuildingType>
+				<BuildingType>BUILDING_CRAFTS_HUT</BuildingType>
 				<BuildingType>BUILDING_AMERICAN_MALL</BuildingType>
 				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</PrereqOrBuildings>
@@ -2630,7 +2630,7 @@
 			</PropertyManipulators>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_CRAFT_HUT</BuildingType>
+					<BuildingType>BUILDING_CRAFTS_HUT</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
