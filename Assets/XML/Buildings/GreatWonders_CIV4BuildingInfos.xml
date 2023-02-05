@@ -5316,12 +5316,12 @@
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DESERT</Type>
+			<Type>BUILDING_GREAT_MOSQUE_OF_DESERT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_DESERT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DESERT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GREAT_MOSQUE_OF_DESERT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GREAT_MOSQUE_OF_DESERT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DESERT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GREAT_MOSQUE_OF_DESERT</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5520,15 +5520,15 @@
 			<MovieDefineTag>ART_DEF_MOVIE_DISNEYLAND</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DJENNE</Type>
+			<Type>BUILDING_GREAT_MOSQUE_OF_DJENNE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DJENNE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DJENNE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GREAT_MOSQUE_OF_DJENNE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GREAT_MOSQUE_OF_DJENNE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DJENNE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GREAT_MOSQUE_OF_DJENNE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DJENNE</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -5798,12 +5798,12 @@
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DORADO</Type>
+			<Type>BUILDING_EL_DORADO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_DORADO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DORADO_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EL_DORADO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EL_DORADO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DORADO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EL_DORADO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DORADO</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -6387,15 +6387,15 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EDINBURGH_CASTLE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EDISON</Type>
+			<Type>BUILDING_EDISONS_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EDISON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EDISON_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EDISONS_WORKSHOP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EDISONS_WORKSHOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EDISON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EDISONS_WORKSHOP</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EDISON</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_UNIVERSITY</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
@@ -7012,7 +7012,7 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_KEPLER</BuildingType>
+					<BuildingType>BUILDING_KEPLER_SPACE_TELESCOPE</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
@@ -7280,12 +7280,12 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FIDIAS</Type>
+			<Type>BUILDING_PHIDIAS_STATUE_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_FIDIAS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FIDIAS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PHIDIAS_STATUE_WORKSHOP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PHIDIAS_STATUE_WORKSHOP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FIDIAS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PHIDIAS_STATUE_WORKSHOP</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10821,13 +10821,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INDIAN</Type>
+			<Type>BUILDING_EAST_INDIA_COMPANY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_INDIAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_INDIAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EAST_INDIA_COMPANY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EAST_INDIA_COMPANY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INDIA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_INDIAN</MovieDefineTag>
@@ -11390,15 +11390,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KERALA</Type>
+			<Type>BUILDING_KERALA_SCHOOL_OF_MATHEMATICS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KERALA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KERALA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_KERALA_SCHOOL_OF_MATHEMATICS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KERALA_SCHOOL_OF_MATHEMATICS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KERALA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_KERALA_SCHOOL_OF_MATHEMATICS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KERALA</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -11639,15 +11639,15 @@
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KOTOKU</Type>
+			<Type>BUILDING_KOTOKU_IN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_KOTOKU</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KOTOKU_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_KOTOKU_IN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KOTOKU_IN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KOTOKU</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_KOTOKU_IN</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KOTOKU</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -11884,7 +11884,7 @@
 			</PrereqOrFeature>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
-				<BuildingType>BUILDING_FRESCO</BuildingType>
+				<BuildingType>BUILDING_FRESCO_MURAL</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
 			<iCost>270</iCost>
@@ -12053,15 +12053,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LAXMIN</Type>
+			<Type>BUILDING_LAXMINARAYAN_TEMPLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_LAXMIN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LAXMIN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LAXMINARAYAN_TEMPLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LAXMINARAYAN_TEMPLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LAXMIN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LAXMINARAYAN_TEMPLE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LAXMIN</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -12462,15 +12462,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LOUVRE</Type>
+			<Type>BUILDING_LOUVRE_MUSEUM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_LOUVRE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LOUVRE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LOUVRE_MUSEUM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LOUVRE_MUSEUM_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LOUVRE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LOUVRE_MUSEUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LOUVRE</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_COLOSSUS</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -14929,15 +14929,15 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OLOFIN</BuildingType>
+					<BuildingType>BUILDING_PATTAKY_OF_OLOFIN</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OLOKUN</BuildingType>
+					<BuildingType>BUILDING_PATTAKY_OF_OLOKUN</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OSHOSI</BuildingType>
+					<BuildingType>BUILDING_PATTAKY_OF_OSHOSI</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
@@ -16891,7 +16891,7 @@
 				<BuildingType>BUILDING_GLAZE_MAKER</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_POTTER</BuildingType>
+				<BuildingType>BUILDING_POTTERS_HUT</BuildingType>
 				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
@@ -19390,12 +19390,12 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SULTAN</Type>
+			<Type>BUILDING_SULTAN_QABOOS_GRAND_MOSQUE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_SULTAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SULTAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SULTAN_QABOOS_GRAND_MOSQUE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SULTAN_QABOOS_GRAND_MOSQUE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SULTAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SULTAN_QABOOS_GRAND_MOSQUE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -20018,7 +20018,7 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_POTTER</BuildingType>
+				<BuildingType>BUILDING_POTTERS_HUT</BuildingType>
 				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
 				<BuildingType>BUILDING_CERAMICS_FACTORY</BuildingType>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
@@ -21903,12 +21903,12 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WUDANG</Type>
+			<Type>BUILDING_WUDANG_MOUNTAIN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_WUDANG</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WUDANG_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_WUDANG_MOUNTAIN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WUDANG_MOUNTAIN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WUDANG</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WUDANG_MOUNTAIN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

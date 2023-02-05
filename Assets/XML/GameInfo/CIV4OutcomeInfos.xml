@@ -848,7 +848,7 @@
 			<Description>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_FRESCO</Description>
 			<Message>TXT_KEY_OUTCOME_ANIMAL_RECORD_TALE_MESSAGE</Message>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_FRESCO</BuildingType>
+				<BuildingType>BUILDING_FRESCO_MURAL</BuildingType>
 			</PrereqBuildings>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>

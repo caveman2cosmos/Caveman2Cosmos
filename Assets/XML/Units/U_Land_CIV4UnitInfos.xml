@@ -4476,7 +4476,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_OLOFIN</BuildingType>
+				<BuildingType>BUILDING_PATTAKY_OF_OLOFIN</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -40824,7 +40824,7 @@
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HEALERHUT</BuildingType>
-				<BuildingType>BUILDING_DOCTOR</BuildingType>
+				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
@@ -40935,7 +40935,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HEALERHUT</BuildingType>
-				<BuildingType>BUILDING_DOCTOR</BuildingType>
+				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
@@ -41143,7 +41143,7 @@
 			<PrereqTech>TECH_PLAGUE_MEDICINE</PrereqTech>
 			<BonusType>BONUS_DRUGS</BonusType>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_DOCTOR</BuildingType>
+				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CENTER</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>

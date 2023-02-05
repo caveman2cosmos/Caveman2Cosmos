@@ -10438,7 +10438,7 @@
 			<iMinTreasury>100</iMinTreasury>
 			<iUnhealthy>1</iUnhealthy>
 			<BuildingsRequired>
-				<Building>BUILDING_DOCTOR</Building>
+				<Building>BUILDING_DOCTORS_OFFICE</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>

@@ -182,7 +182,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_PHOTOGRAPHY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POTTER</Type>
+			<Type>BUILDING_POTTERS_HUT</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_GUILDS</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>

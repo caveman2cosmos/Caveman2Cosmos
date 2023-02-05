@@ -6359,7 +6359,7 @@
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
 			<Buildings>
 				<BuildingType>BUILDING_IKAROS</BuildingType>
-				<BuildingType>BUILDING_KEPLER</BuildingType>
+				<BuildingType>BUILDING_KEPLER_SPACE_TELESCOPE</BuildingType>
 				<BuildingType>BUILDING_JAMESWEBB_TELESCOPE</BuildingType>
 				<BuildingType>BUILDING_ATLAST_SPACE_TELESCOPE</BuildingType>
 				<BuildingType>BUILDING_ASTEROID_DEFLECTION_SYSTEM</BuildingType>

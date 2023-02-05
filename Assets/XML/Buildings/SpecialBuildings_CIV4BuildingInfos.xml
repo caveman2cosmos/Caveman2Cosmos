@@ -143,7 +143,7 @@
 			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<ObsoleteTech>TECH_BARK_WORKING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_LEANTO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_LEAN_TOS</BuildingType>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
@@ -8682,7 +8682,7 @@
 			</PrereqOrFeature>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_LONGHOUSE</BuildingType>
-				<BuildingType>BUILDING_PUEBLO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_PUEBLOS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
@@ -8931,7 +8931,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_TREE_HALLOW</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_BURROW</BuildingType>
-				<BuildingType>BUILDING_LEANTO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_LEAN_TOS</BuildingType>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
 				<BuildingType>BUILDING_WOOD_HUT</BuildingType>
 				<BuildingType>BUILDING_LONGHOUSE</BuildingType>
@@ -8944,7 +8944,7 @@
 				<BuildingType>BUILDING_TREEHOUSE</BuildingType>
 				<BuildingType>BUILDING_STILT_HUT</BuildingType>
 				<BuildingType>BUILDING_HOUSING_HOGANS</BuildingType>
-				<BuildingType>BUILDING_PUEBLO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_PUEBLOS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
@@ -10912,12 +10912,12 @@
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LEANTO</Type>
+			<Type>BUILDING_HOUSING_LEAN_TOS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_LEANTO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LEANTO_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_LEAN_TOS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_LEAN_TOS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<Bonus>BONUS_WOOD</Bonus>
@@ -10934,7 +10934,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_LEANTO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_LEAN_TOS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LONGHOUSE</Type>
@@ -10966,7 +10966,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_PUEBLO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_PUEBLOS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
@@ -13076,12 +13076,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROSTITUTION_BAN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PUEBLO</Type>
+			<Type>BUILDING_HOUSING_PUEBLOS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PUEBLO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PUEBLO_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_PUEBLOS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_PUEBLOS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_BRICKS</Bonus>
@@ -13117,7 +13117,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_PUEBLO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_PUEBLOS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RAIN_DANCE</Type>
@@ -15368,7 +15368,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_GRASS_HUT</BuildingType>
 				<BuildingType>BUILDING_LONGHOUSE</BuildingType>
-				<BuildingType>BUILDING_PUEBLO</BuildingType>
+				<BuildingType>BUILDING_HOUSING_PUEBLOS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>

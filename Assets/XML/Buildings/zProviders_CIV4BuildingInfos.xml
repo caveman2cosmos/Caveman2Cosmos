@@ -137,12 +137,12 @@
 				<BuildingType>BUILDING_ASSASSINBUG</BuildingType>
 				<BuildingType>BUILDING_ASSASSINBUGX</BuildingType>
 				<BuildingType>BUILDING_BAMBOOWORM</BuildingType>
-				<BuildingType>BUILDING_BOGONG</BuildingType>
+				<BuildingType>BUILDING_BOGONG_MOTH_GATHERER</BuildingType>
 				<BuildingType>BUILDING_BUG_CATCHER</BuildingType>
 				<BuildingType>BUILDING_BUTTERFLY</BuildingType>
 				<BuildingType>BUILDING_BUTTERFLYX</BuildingType>
 				<BuildingType>BUILDING_CENTIPEDE</BuildingType>
-				<BuildingType>BUILDING_CICADA</BuildingType>
+				<BuildingType>BUILDING_CICADA_GATHERER</BuildingType>
 				<BuildingType>BUILDING_CICADAX</BuildingType>
 				<BuildingType>BUILDING_COCKROACH</BuildingType>
 				<BuildingType>BUILDING_CRICKET</BuildingType>
@@ -166,7 +166,7 @@
 				<BuildingType>BUILDING_LADYBUGX</BuildingType>
 				<BuildingType>BUILDING_MEALWORM</BuildingType>
 				<BuildingType>BUILDING_MEZCALWORM</BuildingType>
-				<BuildingType>BUILDING_MOPANE</BuildingType>
+				<BuildingType>BUILDING_MOPANE_MOTH_GATHERER</BuildingType>
 				<BuildingType>BUILDING_PALMWEEVIL</BuildingType>
 				<BuildingType>BUILDING_PILLBUG</BuildingType>
 				<BuildingType>BUILDING_PRAYINGMANTIS</BuildingType>
@@ -452,7 +452,7 @@
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BIRDOFPARADISE</BuildingType>
-				<BuildingType>BUILDING_CANARY</BuildingType>
+				<BuildingType>BUILDING_CATCHER_CANARY</BuildingType>
 				<BuildingType>BUILDING_CHICKEN_COOP</BuildingType>
 				<BuildingType>BUILDING_COOKATOO</BuildingType>
 				<BuildingType>BUILDING_CORMORANT_TRAINER</BuildingType>
@@ -471,7 +471,7 @@
 				<BuildingType>BUILDING_PIGEON_COOP</BuildingType>
 				<BuildingType>BUILDING_QUETZAL</BuildingType>
 				<BuildingType>BUILDING_RATITE_HERD</BuildingType>
-				<BuildingType>BUILDING_TOUCAN</BuildingType>
+				<BuildingType>BUILDING_CATCHER_TOUCAN</BuildingType>
 				<BuildingType>BUILDING_TURKEY_FARM</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>

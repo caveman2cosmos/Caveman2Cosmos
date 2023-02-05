@@ -896,14 +896,14 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KEPLER</Type>
+			<Type>BUILDING_KEPLER_SPACE_TELESCOPE</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_KEPLER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KEPLER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_KEPLER_SPACE_TELESCOPE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KEPLER_SPACE_TELESCOPE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KEPLER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_KEPLER_SPACE_TELESCOPE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KEPLER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -25066,11 +25066,11 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GRAZER</Type>
-			<Description>TXT_KEY_BUILDING_GRAZER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GRAZER_PEDIA</Civilopedia>
+			<Type>BUILDING_INTERGALACTIC_GRAZER</Type>
+			<Description>TXT_KEY_BUILDING_INTERGALACTIC_GRAZER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INTERGALACTIC_GRAZER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GRAZER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_INTERGALACTIC_GRAZER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MEGAWORMHOLES</PrereqTech>
 			<iCost>4004</iCost>

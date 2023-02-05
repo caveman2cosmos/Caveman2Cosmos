@@ -1378,13 +1378,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_KEPLER</Type>
+			<Type>BUILDING_KEPLER_SPACE_TELESCOPE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_KEPLER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_KEPLER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_KEPLER_SPACE_TELESCOPE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KEPLER_SPACE_TELESCOPE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KEPLER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_KEPLER_SPACE_TELESCOPE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_KEPLER</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>

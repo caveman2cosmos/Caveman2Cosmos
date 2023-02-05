@@ -6766,7 +6766,7 @@
 			<iRandomGold>-50</iRandomGold>
 			<BuildingExtraHealths>
 				<BuildingExtraHealth>
-					<Building>BUILDING_DOCTOR</Building>
+					<Building>BUILDING_DOCTORS_OFFICE</Building>
 					<iHealth>-1</iHealth>
 				</BuildingExtraHealth>
 			</BuildingExtraHealths>
@@ -6780,14 +6780,14 @@
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_DOCTOR</Building>
+					<Building>BUILDING_DOCTORS_OFFICE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</BuildingExtraCommerces>
 			<BuildingExtraHealths>
 				<BuildingExtraHealth>
-					<Building>BUILDING_DOCTOR</Building>
+					<Building>BUILDING_DOCTORS_OFFICE</Building>
 					<iHealth>-2</iHealth>
 				</BuildingExtraHealth>
 			</BuildingExtraHealths>
@@ -6802,7 +6802,7 @@
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<BuildingExtraHappies>
 				<BuildingExtraHappy>
-					<Building>BUILDING_DOCTOR</Building>
+					<Building>BUILDING_DOCTORS_OFFICE</Building>
 					<iHappy>1</iHappy>
 				</BuildingExtraHappy>
 			</BuildingExtraHappies>
