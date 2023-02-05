@@ -37,12 +37,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BUILDING_ACADEMY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_AESOP_CRIME</Type>
+			<Type>BUILDING_SAFETY_AESOPS_FABLES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AESOP_CRIME</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AESOP_CRIME_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SAFETY_AESOPS_FABLES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SAFETY_AESOPS_FABLES_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<PropertyManipulators>
 				<PropertySource>
@@ -53,7 +53,7 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_AESOP_CRIME</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_AESOPS_FABLES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AGRICULTURAL_ACHIEVEMENT</Type>
@@ -8878,12 +8878,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_HINDU</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOGAN</Type>
+			<Type>BUILDING_HOUSING_HOGANS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOGAN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOGAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_HOGANS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_HOGANS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -8919,7 +8919,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOGAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_HOGANS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOMELESS</Type>
@@ -8943,7 +8943,7 @@
 				<BuildingType>BUILDING_STONE_HUT</BuildingType>
 				<BuildingType>BUILDING_TREEHOUSE</BuildingType>
 				<BuildingType>BUILDING_STILT_HUT</BuildingType>
-				<BuildingType>BUILDING_HOGAN</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HOGANS</BuildingType>
 				<BuildingType>BUILDING_PUEBLO</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
@@ -10241,12 +10241,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_SACRIFICE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_IGLOO</Type>
+			<Type>BUILDING_HOUSING_IGLOOS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_IGLOO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_IGLOO_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_IGLOOS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_IGLOOS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
@@ -10282,7 +10282,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<bCenterInCity>1</bCenterInCity>
-			<ArtDefineTag>ART_DEF_BUILDING_IGLOO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_IGLOOS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_INDUSTRIAL_ACHIEVEMENT</Type>
@@ -14424,7 +14424,7 @@
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 			</PrereqBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOGAN</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HOGANS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDMW</BuildingType>
@@ -15312,7 +15312,7 @@
 			</PrereqOrFeature>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_STILT_HUT</BuildingType>
-				<BuildingType>BUILDING_HOGAN</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HOGANS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_MDMW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_MDMW</BuildingType>

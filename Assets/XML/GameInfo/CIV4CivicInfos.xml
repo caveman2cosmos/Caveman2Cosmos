@@ -13561,7 +13561,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_LASIK</BuildingType>
+					<BuildingType>BUILDING_LASER_EYE_SURGERY_CLINIC</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>

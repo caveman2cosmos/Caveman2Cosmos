@@ -532,7 +532,7 @@
 			<Button>Art/interface/buttons/buildings/aerotropolis.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AESOP</Type>
+			<Type>ART_DEF_BUILDING_AESOPS_FABLES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -542,7 +542,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/aesop.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AESOP_CRIME</Type>
+			<Type>ART_DEF_BUILDING_SAFETY_AESOPS_FABLES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3373,7 +3373,7 @@
 			<Button>art/Embassy/art/aymaraembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AZADI</Type>
+			<Type>ART_DEF_BUILDING_AZADI_TOWER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7223,7 +7223,7 @@
 			<Button>Art/Interface/Buttons/Buildings/cageCavebear.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CAVES</Type>
+			<Type>ART_DEF_BUILDING_BEZEKLIK_CAVES</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.9</fScale>
@@ -14504,7 +14504,7 @@
 			<Button>Art/interface/buttons/buildings/enlightenment.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ENLIL</Type>
+			<Type>ART_DEF_BUILDING_TEMPLE_OF_ENLIL</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>1.25</fScale>
@@ -17514,7 +17514,7 @@
 			<Button>Art/Interface/Buttons/Buildings/gesturerecognitionsoftware.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GETTY</Type>
+			<Type>ART_DEF_BUILDING_GETTY_CENTER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -17594,7 +17594,7 @@
 			<Button>Art/interface/buttons/buildings/gigaverse.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GILLS</Type>
+			<Type>ART_DEF_BUILDING_HUMAN_MOD_GILLS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19844,7 +19844,7 @@
 			<Button>art/Sports/Buttons/hockeyrink.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HOGAN</Type>
+			<Type>ART_DEF_BUILDING_HOUSING_HOGANS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -21164,7 +21164,7 @@
 			<Button>Art/Interface/Buttons/Buildings/IdolShrine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_IGLOO</Type>
+			<Type>ART_DEF_BUILDING_HOUSING_IGLOOS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23954,7 +23954,7 @@
 			<Button>Art/Interface/Buttons/Buildings/lasertagarena.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LASIK</Type>
+			<Type>ART_DEF_BUILDING_LASER_EYE_SURGERY_CLINIC</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25244,7 +25244,7 @@
 			<Button>Art/Embassy/lusitaniembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LUXOR</Type>
+			<Type>ART_DEF_BUILDING_LUXOR_CASINO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25334,7 +25334,7 @@
 			<Button>art/Crops/art/macadamiagrove.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MACAW</Type>
+			<Type>ART_DEF_BUILDING_CATCHER_MACAW</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25674,7 +25674,7 @@
 			<Button>Art/Embassy/maniembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MANOR</Type>
+			<Type>ART_DEF_BUILDING_GRAND_MANOR</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.3</fScale>
@@ -30924,7 +30924,7 @@
 			<Button>art/Craft/Art/officium.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_OGGUN</Type>
+			<Type>ART_DEF_BUILDING_PATTAKY_OF_OGGUN</Type>
 			<LSystem>LSYSTEM_1x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.0</fScale>
@@ -43725,7 +43725,7 @@
 			<Button>art/Crops/Art/tulipfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TUMEN</Type>
+			<Type>ART_DEF_BUILDING_TUMEN_AMUGULANG_PALACE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46025,7 +46025,7 @@
 			<Button>art/Craft/art/winery.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WINGS</Type>
+			<Type>ART_DEF_BUILDING_HUMAN_MOD_WINGS</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

@@ -232,15 +232,15 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_AESOP</Type>
+			<Type>BUILDING_AESOPS_FABLES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AESOP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AESOP_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_AESOPS_FABLES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AESOPS_FABLES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_AESOP</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_AESOPS_FABLES</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_AESOP</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -253,7 +253,7 @@
 			</CommerceChanges>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<FreeBuilding>BUILDING_AESOP_CRIME</FreeBuilding>
+			<FreeBuilding>BUILDING_SAFETY_AESOPS_FABLES</FreeBuilding>
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -1574,15 +1574,15 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_AZADI</Type>
+			<Type>BUILDING_AZADI_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AZADI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AZADI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_AZADI_TOWER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AZADI_TOWER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_AZADI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_AZADI_TOWER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_AZADI</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2099,7 +2099,7 @@
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_SILVER_WARES</Bonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MANOR</BuildingType>
+				<BuildingType>BUILDING_GRAND_MANOR</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -2117,7 +2117,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MANOR</BuildingType>
+					<BuildingType>BUILDING_GRAND_MANOR</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -3658,12 +3658,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CAVES</Type>
+			<Type>BUILDING_BEZEKLIK_CAVES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_CAVES</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CAVES_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_BEZEKLIK_CAVES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BEZEKLIK_CAVES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CAVES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BEZEKLIK_CAVES</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8275,15 +8275,15 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GETTY</Type>
+			<Type>BUILDING_GETTY_CENTER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GETTY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GETTY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GETTY_CENTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GETTY_CENTER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GETTY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GETTY_CENTER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GETTY</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -12019,7 +12019,7 @@
 			</FreeSpecialistCounts>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CIRCUS_CIRCUS_CASINO</BuildingType>
-				<BuildingType>BUILDING_LUXOR</BuildingType>
+				<BuildingType>BUILDING_LUXOR_CASINO</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PropertyManipulators>
@@ -12534,16 +12534,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LUXOR</Type>
+			<Type>BUILDING_LUXOR_CASINO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_LUXOR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LUXOR_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LUXOR_CASINO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LUXOR_CASINO_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_LASVEGASSTRIP_HELP</Help>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LUXOR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LUXOR_CASINO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_LUXOR</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -14925,7 +14925,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OGGUN</BuildingType>
+					<BuildingType>BUILDING_PATTAKY_OF_OGGUN</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -14975,7 +14975,7 @@
 				<Bonus>BONUS_TERRACOTTA</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MANOR</BuildingType>
+				<BuildingType>BUILDING_GRAND_MANOR</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -14992,7 +14992,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MANOR</BuildingType>
+					<BuildingType>BUILDING_GRAND_MANOR</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -20852,15 +20852,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TUMEN</Type>
+			<Type>BUILDING_TUMEN_AMUGULANG_PALACE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TUMEN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TUMEN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TUMEN_AMUGULANG_PALACE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TUMEN_AMUGULANG_PALACE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TUMEN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TUMEN_AMUGULANG_PALACE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TUMEN</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
