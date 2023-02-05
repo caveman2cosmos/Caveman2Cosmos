@@ -367,8 +367,8 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<Buildings>
 				<BuildingType>BUILDING_MAMMOTH_HERD</BuildingType>
-				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
-				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>

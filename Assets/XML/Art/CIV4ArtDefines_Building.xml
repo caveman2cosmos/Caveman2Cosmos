@@ -4683,7 +4683,7 @@
 			<Button>Art/Interface/Buttons/Buildings/birdcaller.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BIRD_DANCE</Type>
+			<Type>ART_DEF_BUILDING_DANCE_BIRD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -5273,7 +5273,7 @@
 			<Button>art/Sports/Buttons/bowlingalley.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BOXING_KANGAROO</Type>
+			<Type>ART_DEF_BUILDING_CARNIVAL_BOXING_KANGAROO</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1</fScale>
@@ -7453,7 +7453,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/central_bank.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CEPHALOPOD_INSTITUTE</Type>
+			<Type>ART_DEF_BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -7533,7 +7533,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/cern.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CETAEA_INSTITUTE</Type>
+			<Type>ART_DEF_BUILDING_CENTER_FOR_WHALE_STUDIES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11413,7 +11413,7 @@
 			<Button>art/Entertainment/Art/dancehut.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DANCING_BEAR</Type>
+			<Type>ART_DEF_BUILDING_CARNIVAL_DANCING_BEAR</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1</fScale>
@@ -16224,7 +16224,7 @@
 			<Button>art/Crops/Art/foxglovefarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOX_DANCE</Type>
+			<Type>ART_DEF_BUILDING_DANCE_FOX</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18034,7 +18034,7 @@
 			<Button>art/Embassy/art/gothembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOVERNOR_MENAGERIE</Type>
+			<Type>ART_DEF_BUILDING_GOVERNORS_MENAGERIE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18044,7 +18044,7 @@
 			<Button>Art/Interface/Buttons/Buildings/GovenorsMenagerie.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GOVERNOR_PETS</Type>
+			<Type>ART_DEF_BUILDING_GOVERNORS_PETS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19114,7 +19114,7 @@
 			<Button>art/Embassy/art/hawaiianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HAWKING_HUT</Type>
+			<Type>ART_DEF_BUILDING_HAWKING_HUT_HUT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -29574,7 +29574,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/national_sports_league.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</Type>
+			<Type>ART_DEF_BUILDING_THE_NATIONAL_STANDARD_OF_MEASUREMENT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -29894,7 +29894,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/NavalAcademy.dds,Art/Interface/Buttons/RoM_Building_Atlas.dds,7,10</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NAVAL_TOTEM</Type>
+			<Type>ART_DEF_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -36535,7 +36535,7 @@
 			<Button>Art/Embassy/sakaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SALACHIMORPHA_INSTITUTE</Type>
+			<Type>ART_DEF_BUILDING_CENTER_FOR_SHARK_STUDIES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42855,7 +42855,7 @@
 			<Button>Art/interface/buttons/buildings/toroidal_planet.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TORTOISE_SHELL_WORKER</Type>
+			<Type>ART_DEF_BUILDING_SHELL_WORKERS_HUT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -43175,7 +43175,7 @@
 			<Button>art/Transportation/Art/trails.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TRAINED_SEAL</Type>
+			<Type>ART_DEF_BUILDING_CARNIVAL_TRAINED_SEAL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

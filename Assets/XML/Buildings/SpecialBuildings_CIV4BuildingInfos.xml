@@ -331,11 +331,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BELIEF_RESURRECTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BIRD_DANCE</Type>
-			<Description>TXT_KEY_BUILDING_BIRD_DANCE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BIRD_DANCE_PEDIA</Civilopedia>
+			<Type>BUILDING_DANCE_BIRD</Type>
+			<Description>TXT_KEY_BUILDING_DANCE_BIRD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DANCE_BIRD_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BIRD_DANCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DANCE_BIRD</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8413,11 +8413,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FIRE_DANCE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOX_DANCE</Type>
-			<Description>TXT_KEY_BUILDING_FOX_DANCE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FOX_DANCE_PEDIA</Civilopedia>
+			<Type>BUILDING_DANCE_FOX</Type>
+			<Description>TXT_KEY_BUILDING_DANCE_FOX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DANCE_FOX_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FOX_DANCE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DANCE_FOX</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -11527,13 +11527,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMOKING_PROHIBITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</Type>
+			<Type>BUILDING_THE_NATIONAL_STANDARD_OF_MEASUREMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_NATIONAL_STANDARD_OF_MEASUREMENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_NATIONAL_STANDARD_OF_MEASUREMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_STANDARDIZATION</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -11555,7 +11555,7 @@
 			<iAsset>10</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_NATIONAL_STANDARD_OF_MEASUREMENT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_STANDARD_OF_MEASUREMENT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>

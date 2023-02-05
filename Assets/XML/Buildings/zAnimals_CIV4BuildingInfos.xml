@@ -262,7 +262,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
-				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>306</iCost>
 			<iHappiness>1</iHappiness>
@@ -308,7 +308,7 @@
 					<Or>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_GOVERNOR_MENAGERIE</ID>
+							<ID>BUILDING_GOVERNORS_MENAGERIE</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
@@ -383,7 +383,7 @@
 					<Or>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_GOVERNOR_MENAGERIE</ID>
+							<ID>BUILDING_GOVERNORS_MENAGERIE</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
@@ -460,12 +460,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BISON_HERD</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BOXING_KANGAROO</Type>
+			<Type>BUILDING_CARNIVAL_BOXING_KANGAROO</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BOXING_KANGAROO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BOXING_KANGAROO_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CARNIVAL_BOXING_KANGAROO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CARNIVAL_BOXING_KANGAROO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
@@ -482,7 +482,7 @@
 			</CommerceChanges>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_BOXING_KANGAROO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CARNIVAL_BOXING_KANGAROO</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUFFALO_HERD</Type>
@@ -758,12 +758,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_CAVE_LION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CEPHALOPOD_INSTITUTE</Type>
+			<Type>BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CEPHALOPOD_INSTITUTE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CEPHALOPOD_INSTITUTE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<iMaxLatitude>70</iMaxLatitude>
@@ -779,8 +779,8 @@
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CETAEA_INSTITUTE</BuildingType>
-				<BuildingType>BUILDING_SALACHIMORPHA_INSTITUTE</BuildingType>
+				<BuildingType>BUILDING_CENTER_FOR_WHALE_STUDIES</BuildingType>
+				<BuildingType>BUILDING_CENTER_FOR_SHARK_STUDIES</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>1260</iCost>
 			<CommerceChanges>
@@ -795,15 +795,15 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>3</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_CEPHALOPOD_INSTITUTE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CETAEA_INSTITUTE</Type>
+			<Type>BUILDING_CENTER_FOR_WHALE_STUDIES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CETAEA_INSTITUTE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CETAEA_INSTITUTE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CENTER_FOR_WHALE_STUDIES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CENTER_FOR_WHALE_STUDIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<iMaxLatitude>70</iMaxLatitude>
@@ -819,8 +819,8 @@
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CEPHALOPOD_INSTITUTE</BuildingType>
-				<BuildingType>BUILDING_SALACHIMORPHA_INSTITUTE</BuildingType>
+				<BuildingType>BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</BuildingType>
+				<BuildingType>BUILDING_CENTER_FOR_SHARK_STUDIES</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>1260</iCost>
 			<CommerceChanges>
@@ -835,7 +835,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<iAsset>3</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_CETAEA_INSTITUTE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CENTER_FOR_WHALE_STUDIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COASTAL_FISH_FARM</Type>
@@ -963,12 +963,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRAB_NETS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DANCING_BEAR</Type>
+			<Type>BUILDING_CARNIVAL_DANCING_BEAR</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DANCING_BEAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DANCING_BEAR_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CARNIVAL_DANCING_BEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CARNIVAL_DANCING_BEAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
@@ -985,7 +985,7 @@
 			</CommerceChanges>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_DANCING_BEAR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CARNIVAL_DANCING_BEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEER_HERD</Type>
@@ -1516,19 +1516,19 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GOAT_HERD</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOVERNOR_MENAGERIE</Type>
+			<Type>BUILDING_GOVERNORS_MENAGERIE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GOVERNORS_MENAGERIE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOVERNORS_MENAGERIE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<iCost>300</iCost>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_GOVERNOR_PETS</BuildingType>
+				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -1542,10 +1542,10 @@
 			<iRevIdxLocal>-5</iRevIdxLocal>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_GOVERNOR_MENAGERIE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GOVERNORS_MENAGERIE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOVERNOR_PETS</Type>
+			<Type>BUILDING_GOVERNORS_PETS</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -1554,8 +1554,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOVERNOR_PETS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOVERNOR_PETS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GOVERNORS_PETS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOVERNORS_PETS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
@@ -1569,7 +1569,7 @@
 			<iRevIdxLocal>-2</iRevIdxLocal>
 			<iAsset>1</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_GOVERNOR_PETS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GOVERNORS_PETS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HAAST_EAGLE_REMAINS</Type>
@@ -1627,12 +1627,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HAAST_EAGLE_REMAINS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HAWKING</Type>
+			<Type>BUILDING_HAWKING_HUT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HAWKING</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HAWKING_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HAWKING_HUT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HAWKING_HUT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
@@ -1655,7 +1655,7 @@
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
 			<iAsset>1</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_HAWKING_HUT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HAWKING_HUT_HUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HORSE_HERD</Type>
@@ -2072,11 +2072,11 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NAVAL_TOTEM</Type>
-			<Description>TXT_KEY_BUILDING_NAVAL_TOTEM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NAVAL_TOTEM_PEDIA</Civilopedia>
+			<Type>BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</Type>
+			<Description>TXT_KEY_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NAVAL_TOTEM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</ArtDefineTag>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2674,11 +2674,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_SABRETOOTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SALACHIMORPHA_INSTITUTE</Type>
-			<Description>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE_PEDIA</Civilopedia>
+			<Type>BUILDING_CENTER_FOR_SHARK_STUDIES</Type>
+			<Description>TXT_KEY_BUILDING_CENTER_FOR_SHARK_STUDIES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CENTER_FOR_SHARK_STUDIES_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SALACHIMORPHA_INSTITUTE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CENTER_FOR_SHARK_STUDIES</ArtDefineTag>
 			<PrereqTech>TECH_MARINE_BIOLOGY</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2702,8 +2702,8 @@
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotInCityBuildings>
-				<BuildingType>BUILDING_CEPHALOPOD_INSTITUTE</BuildingType>
-				<BuildingType>BUILDING_CETAEA_INSTITUTE</BuildingType>
+				<BuildingType>BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</BuildingType>
+				<BuildingType>BUILDING_CENTER_FOR_WHALE_STUDIES</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>1260</iCost>
 			<PropertyManipulators>
@@ -2906,12 +2906,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_THYLACINE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TORTOISE_SHELL_WORKER</Type>
+			<Type>BUILDING_SHELL_WORKERS_HUT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SHELL_WORKERS_HUT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SHELL_WORKERS_HUT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
@@ -2928,7 +2928,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iAsset>1</iAsset>
-			<ArtDefineTag>ART_DEF_BUILDING_TORTOISE_SHELL_WORKER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SHELL_WORKERS_HUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_HUNTER</Type>
@@ -2963,13 +2963,13 @@
 			</MapCategoryTypes>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_TRADITION_NAVAL_TOTEM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NAVAL_TOTEM_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_NAVAL_TOTEM</BuildingType>
+				<BuildingType>BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
-			<FreeBuilding>BUILDING_NAVAL_TOTEM</FreeBuilding>
+			<FreeBuilding>BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</FreeBuilding>
 			<iAsset>1</iAsset>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
@@ -3024,12 +3024,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_TOTEM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRAINED_SEAL</Type>
+			<Type>BUILDING_CARNIVAL_TRAINED_SEAL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TRAINED_SEAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TRAINED_SEAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CARNIVAL_TRAINED_SEAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CARNIVAL_TRAINED_SEAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_TRADE</PrereqTech>
 			<PrereqInCityBuildings>
@@ -3049,7 +3049,7 @@
 			</CommerceChanges>
 			<iAsset>2</iAsset>
 			<iConquestProb>25</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_TRAINED_SEAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CARNIVAL_TRAINED_SEAL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TURKEY_FLOCKS</Type>
@@ -3137,7 +3137,7 @@
 				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GOVERNOR_MENAGERIE</BuildingType>
+				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>

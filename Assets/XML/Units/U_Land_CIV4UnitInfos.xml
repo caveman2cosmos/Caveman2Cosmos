@@ -36899,7 +36899,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_STANDARD_ETHANOL_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_6_HQ</BuildingType>
-				<BuildingType>BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</BuildingType>
+				<BuildingType>BUILDING_THE_NATIONAL_STANDARD_OF_MEASUREMENT</BuildingType>
 				<BuildingType>BUILDING_ACADEMY</BuildingType>
 			</Buildings>
 			<Flavors>
@@ -37356,7 +37356,7 @@
 				<BuildingType>BUILDING_CORPORATION_5_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_BULLSEYE_HQ</BuildingType>
 				<BuildingType>BUILDING_CORPORATION_MILEHIGH_HQ</BuildingType>
-				<BuildingType>BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</BuildingType>
+				<BuildingType>BUILDING_THE_NATIONAL_STANDARD_OF_MEASUREMENT</BuildingType>
 			</Buildings>
 			<Flavors>
 				<Flavor>

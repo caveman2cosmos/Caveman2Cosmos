@@ -296,7 +296,7 @@
 				</Flavor>
 			</Flavors>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_DANCING_BEAR</BuildingType>
+				<BuildingType>BUILDING_CARNIVAL_DANCING_BEAR</BuildingType>
 				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ASIANBEAR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BLACK_BEAR</BuildingType>

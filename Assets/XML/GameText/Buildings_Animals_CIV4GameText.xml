@@ -225,14 +225,14 @@
 		<Russian>Êëåòêè ñ ïòèöàìè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIRD_DANCE</Tag>
+		<Tag>TXT_KEY_BUILDING_DANCE_BIRD</Tag>
 		<English>Unit Reward - Dance (Bird)</English>
 		<French>Danse des Oiseaux</French>
 		<Italian>Danza degli uccelli</Italian>
 		<Russian>Òàíåö ïòèöû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BIRD_DANCE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_DANCE_BIRD_PEDIA</Tag>
 		<English>Some birds are said to dance and these dances inspired early human dances. Recent studies indicate that humans, parrots and elephants are the only creatures that really dance!</English>
 		<French>Certains oiseaux danseraient et ces danses ont inspiré les premières danses humaines. Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
 		<Russian>Ãîâîðÿò, ÷òî íåêîòîðûå ïòèöû òàíöóþò, è ýòè òàíöû âäîõíîâèëè ðàííèå ÷åëîâå÷åñêèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
@@ -252,7 +252,7 @@
 		<Polish>Żubry zamieszkują środowiska leśne, te nie są jednak optymalne, ponieważ zimą nie dostarczają wystarczającej ilości pożywienia dla tak dużego roślinożercy, większość populacji jest w czasie cięższych zim dokarmianych przez człowieka, ponieważ brak lub niedostateczne dokarmianie powoduje, że zwierzęta te migrują na tereny otwarte, powodując szkody w uprawach rolniczych. W ramach polsko-niemieckich badań składu izotopowego kości (zawartości stabilnych izotopów węgla i azotu) najstarszych w Europie zachowanych kości żubra Bison bonasus potwierdzono, że w czasach prehistorycznych żubry preferowały tereny otwarte, a ich dieta miała mieszany charakter i zawierała porosty, trawy i pędy drzew oraz krzewów.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BOXING_KANGAROO</Tag>
+		<Tag>TXT_KEY_BUILDING_CARNIVAL_BOXING_KANGAROO</Tag>
 		<English>Unit Reward - Carnival (Boxing Kangaroo)</English>
 		<French>Kangourou Boxeur</French>
 		<Italian>Fiera del canguro combattente</Italian>
@@ -260,7 +260,7 @@
 		<Russian>Áîêñèðóþùèé êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BOXING_KANGAROO_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CARNIVAL_BOXING_KANGAROO_PEDIA</Tag>
 		<English>The idea of a boxing kangaroo originates from the animal's defensive behavior, in which it will use its smaller forelegs (its arms) to hold an attacker in place while using the claws on its larger hind legs to try to kick, slash or disembowel them. This stance gives the impression that the kangaroo appears to be boxing with its attacker. The image of the boxing kangaroo has been known since at least 1891, when a cartoon titled "Jack, the fighting Kangaroo with Professor Lendermann" appeared in the magazine Melbourne Punch. In the late 19th century, outback travelling shows featured kangaroos wearing boxing gloves fighting against men.[4] Das Boxende Känguruh, an 1895 German silent film directed by Max Skladanowsky, and an English silent film produced by Birt Acres in 1896 also both featured kangaroos boxing against men, while the American animated shorts The Boxing Kangaroo (1920), Mickey's Kangaroo (1935) and Pop 'Im Pop! (1949) helped establish the concept of a boxing kangaroo as a popular culture cliché. The 1978 Hollywood movie Matilda, which starred Elliott Gould and Robert Mitchum, featured a boxing kangaroo that was exploited for prize fighting.</English>
 	</TEXT>
 	<TEXT>
@@ -333,7 +333,7 @@
 		<Russian>Ïàìÿòü î ïåù. ëüâå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CEPHALOPOD_INSTITUTE</Tag>
+		<Tag>TXT_KEY_BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES</Tag>
 		<English>Unit Reward - Center for Cephalopod Studies</English>
 		<French>Centre d'étude des Céphalopodes</French>
 		<Italian>Centro per gli studi sui cefalopodi</Italian>
@@ -341,13 +341,13 @@
 		<Russian>Öåíòð èçó÷. êàëüìàðîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CEPHALOPOD_INSTITUTE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CENTER_FOR_CEPHALOPOD_STUDIES_PEDIA</Tag>
 		<English>A center specialized in the study of cephalopods. The cephalopods (Cephalopoda, from the Greek kephale, head and pous, podos, foot) are exclusively marine molluscs, among the most evolved, with a shell reduced internally or completely absent, purely nectonic (like cuttlefish and squid) or benthic (like the octopus and baby octopus). They developed in a great multitude of forms during the Mesozoic, colonizing practically all marine environments with the nautiloid, ammonoid and belemnoid groups, the last two totally extinct. Recent hypotheses consider cephalopods derived directly from monoplacophores with a more pronounced spiraling shell; it is supposed that the apical region of the viscera sac of these molluscs withdrew from time to time and the mantle that covered them formed a successive series of internal calcareous septa, delimiting cavities filled with gas. This produced an ever greater lightness, a characteristic that allowed them to acquire a neutral buoyancy in order to move in the liquid with less effort. During these early evolutionary stages, the cephalopods acquired speed and predation ability, developing a head with prehensile lobes, derived from simple tentacles of ancestral monoplacophores. The dimensions are very variable, from a few millimeters to several meters in the case of the giant squid, which is the second largest mollusk, as well as being the second largest animal among all current invertebrates. In size it is surpassed only by the colossal squid, Mesonychoteuthis hamiltoni, which can have a coat almost twice as long as its own. Some extinct cephalopods, such as the Cretaceous vampiromorph Tusoteuthis and the Ordovician nautiloid Cameroceras, could reach even larger sizes.</English>
 		<Italian>Un centro specializzato nello studio dei cefalopodi. I cefalopodi (Cephalopoda, dal greco kephale, testa e pous, podos, piede) sono molluschi esclusivamente marini, tra i più evoluti, con conchiglia ridotta internamente o del tutto assente, prettamente nectonici (come le seppie e i calamari) o bentonici (come il polpo e il moscardino). Si svilupparono in una grande moltitudine di forme durante il Mesozoico, colonizzando praticamente tutti gli ambienti marini con i gruppi dei nautiloidi, ammonoidea e belemnoidi, gli ultimi due totalmente estinti. Ipotesi recenti considerano i cefalopodi derivati direttamente da monoplacofori con conchiglia a spiralizzazione più accentuata; si suppone che la regione apicale del sacco dei visceri di questi molluschi si ritirasse di tanto in tanto e il mantello che li ricopriva formasse una serie successiva di setti calcarei interni, delimitando cavità ripiene di gas. Ciò produsse una sempre maggiore leggerezza, caratteristica questa che permise loro di acquisire un galleggiamento neutro per potersi spostare nel liquido con minor sforzo. Durante questi primi stadi evolutivi, i cefalopodi acquisirono velocità e capacità di predazione, sviluppando un capo dotato di lobi prensili, derivati da tentacoli semplici di monoplacofori ancestrali. Le dimensioni sono molto variabili, da pochi millimetri a vari metri nel caso del calamaro gigante, che è il secondo mollusco più grande, oltre ad essere anche il secondo animale più grande tra tutti gli invertebrati attuali. Nelle dimensioni è superato solamente dal calamaro colossale, Mesonychoteuthis hamiltoni, che può avere un mantello lungo quasi il doppio del suo. Alcuni cefalopodi estinti, come il vampiromorfo cretaceo Tusoteuthis ed il nautiloide ordoviciano Cameroceras potevano raggiungere dimensioni perfino più grandi.</Italian>
 		<Polish>Sieci na ryby były konstruowane przez bogatych by dostarczać im ciągle świeżych i egzotycznych gatunków ryb na ich wykwintne uczty.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CETAEA_INSTITUTE</Tag>
+		<Tag>TXT_KEY_BUILDING_CENTER_FOR_WHALE_STUDIES</Tag>
 		<English>Unit Reward - Center for Whale Studies</English>
 		<French>Centre d'étude des Baleines</French>
 		<Italian>Centro per gli studi sulle balene</Italian>
@@ -355,7 +355,7 @@
 		<Russian>Öåíòð èçó÷. êèòîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CETAEA_INSTITUTE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CENTER_FOR_WHALE_STUDIES_PEDIA</Tag>
 		<English>A center specialized in the study of cetaceans. Cetaceans are an order of euplacentate mammals, fully adapted to aquatic life. The cetacean name derives from the Greek and means whale or sea monster; it was introduced by Aristotle to designate aquatic animals with lung respiration. They have a fusiform body, similar to that of fish, which ensures them greater hydrodynamics. The forelimbs are modified into fins; the hind limbs as such are absent; only a few small vestigial bones remain, hidden inside the body, and not connected to the spine due to the absence of the pelvis. The caudal fin is arranged horizontally and divided into two lobes. They are generally hairless and are thermally insulated by a thick layer of fat. The order Cetacea includes about 85 species, almost all of which are marine except for 5 species of freshwater dolphins. The species are divided into two suborders: Mysticeti and Odontoceti. There is a third suborder, Archaeoceti, to which only extinct species belong. Among the mysticetes there are animals commonly called whales, the largest known in the world: in particular, the blue whale is the largest animal existing on Earth today. Among the odontoceti, however, there are dolphins and killer whales, often reared and trained in dolphinaria.</English>
 		<Italian>Un centro specializzato nello studio dei cetacei. I Cetacei sono un ordine di mammiferi euplacentati, completamente adattatisi alla vita acquatica. Il nome cetaceo deriva dal greco e significa balena o mostro marino; fu introdotto da Aristotele per designare gli animali acquatici dotati di respirazione polmonare. Presentano un corpo fusiforme, simile a quello dei pesci, che assicura loro una maggiore idrodinamicità. Gli arti anteriori sono modificati in pinne; gli arti posteriori come tali sono assenti; rimangono solo alcune piccole ossa vestigiali, nascoste dentro al corpo, e non collegate alla spina dorsale per l'assenza del bacino. La pinna caudale è disposta orizzontalmente e divisa in due lobi. Sono generalmente privi di peli e sono isolati termicamente da uno spesso strato di grasso. L'ordine Cetacea comprende circa 85 specie, quasi tutte marine tranne 5 specie di delfini di acqua dolce. Le specie sono suddivise in due sottordini: Mysticeti ed Odontoceti. Esiste un terzo sottordine, Archaeoceti, cui appartengono solo specie estinte. Tra i misticeti si trovano gli animali comunemente chiamati balene, i più grandi conosciuti al mondo: in particolare la balenottera azzurra è il più grande animale oggi esistente sulla Terra. Tra gli odontoceti, invece, si trovano delfini e orche, spesso allevati e addestrati nei delfinari.</Italian>
 		<Polish>Instytut Morski jednostka naukowo-badawcza. Placówka wykonuje prace naukowe, badawcze i wdrożeniowe: m.in. zajmuje się modernizacją i eksploatacją portów, oceanografią operacyjną, czy problematyką zagospodarowania regionu nadmorskiego. Misją Instytutu jest dbałość o zachowanie wartości morza i zrównoważony rozwój polskiej gospodarki morskiej. Instytut opracowuje studia wykonalności i eksperyzy oraz udziela konsultacji w zakresie: hydrotechniki morskiej, geotechniki, oceanografii operacyjnej, ochrony środowiska (badania chemiczne i biologiczne), transportu, logistyki, zagospodarowania przestrzennego regionu nadmorskiego, modernizacji i eksploatacji portów, żeglugi śródlądowej, turystyki, bezpieczeństwa przeciwpowodziowego, elektroniki morskiej, a także tworzenia baz danych i monitoringu zjawisk ciągłych.</Polish>
@@ -400,7 +400,7 @@
 		<Polish>Kraby (Brachyura, z języka greckiego krótki odwłok/ogon) grupa[a] krótkoodwłokowych skorupiaków z rzędu dziesięcionogów (Decapoda). Kraby są najliczniejszą (opisano 10 500 gatunków) grupą dziesięcionogów, u której pierwsza para odnóży krocznych przekształciła się w szczypce. Wielkość ciała bardzo zróżnicowana, o rozpiętości odnóży od kilku milimetrów (Pinnotheres pisum) do prawie 4 m (japoński krab pacyficzny).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DANCING_BEAR</Tag>
+		<Tag>TXT_KEY_BUILDING_CARNIVAL_DANCING_BEAR</Tag>
 		<English>Unit Reward - Carnival (Dancing Bear)</English>
 		<French>Carnaval - Ours Dansant</French>
 		<German>Jahrmarkt - Tanzbär</German>
@@ -410,7 +410,7 @@
 		<Russian>Òàíöóþùèé ìåäâåäü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DANCING_BEAR_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CARNIVAL_DANCING_BEAR_PEDIA</Tag>
 		<English>The Dancing Bear is a popular source of amusement for the people of Erebus, be they Veil Ritualists or Order Acolytes. Dancing Bears can't be built, a wild Bear must be captured, taken to a city, and turned into a Dancing Bear. A Carnival is not needed to build the dancing bear, and in fact they dislike the competition.</English>
 		<French>L'Ours Dansant est une source d'amusement populaire pour les gens d'Erebus, aussi bien les vils ritualistes du Voile que les austères acolytes de l'Ordre. Les Ours Dansants ne peuvent être construit, un Ours sauvage doit être capturé, amené dans une ville et transformé en Ours Dansant. Un Carnaval n'est pas nécessaire pour construire un Ours Dansant, et en réalité ils n'aiment pas la compétition.</French>
 		<German>Der Tanzende Bär ist eine beliebte Unterhaltungsquelle für die Menschen von Erebus, böse Ritualisten des Schleiers oder Akolyten der Weisung. Tanzende Bären können nicht gebaut werden. Ein wilder Bär muss eingefangen und in eine Stadt transportiert, und in einen Tanzenden Bären verwandelt werden. Ein Jahrmarkt wird für einen Tanzenden Bären nicht benütigt. Genau genommen mögen die Bären den Jahrmarkt nicht besonders.</German>
@@ -3123,14 +3123,14 @@
 		<Russian>Ìèô î çåáðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOX_DANCE</Tag>
+		<Tag>TXT_KEY_BUILDING_DANCE_FOX</Tag>
 		<English>Unit Reward - Dance (Fox)</English>
 		<French>Danse du Renard</French>
 		<Italian>Danza della volpe</Italian>
 		<Russian>Òàíåö ëèñû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOX_DANCE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_DANCE_FOX_PEDIA</Tag>
 		<English>Young foxes practicing their mouse hunting moves look like they are dancing for the sheer joy of it. This is said to have inspired early human dances. Recent studies indicate that humans, parrots and elephants are the only creatures that really dance!</English>
 		<French>Les jeunes renards qui pratiquent leurs mouvements de chasse à la souris ont l'air de danser pour la joie. On dit que cela a inspiré les premières danses humaines. Des études récentes indiquent que les humains, les perroquets et les éléphants sont les seules créatures qui dansent vraiment!</French>
 		<Russian>Þíûå ëèñÿòà, îáó÷àþùèåñÿ âî âðåìÿ îõîòû íà ìûøåé, âûãëÿäÿò òàê, áóäòî òàíöóþò îò ðàäîñòè. Ýòî, êàê ãîâîðÿò, âäîõíîâèëî ïåðâîáûòíûõ ëþäåé íà ñâîè äðåâíåéøèå òàíöû. Íåäàâíèå èññëåäîâàíèÿ ïîêàçûâàþò, ÷òî ëþäè, ïîïóãàè è ñëîíû - åäèíñòâåííûå ñóùåñòâà, êîòîðûå äåéñòâèòåëüíî òàíöóþò!</Russian>
@@ -3176,7 +3176,7 @@
 		<Polish>Badania genetyczne współczesnych kóz ujawniają, że chociaż zostały one oswojone równolegle w kilku częściach świata to geny tych pionierów zmieszały się w całej populacji. Pewnie wynika to z tego, że kozy są doskonałymi towarzyszami podróży nie przeszkadzają im ciężkie warunki środowiskowe i nie mają wygórowanych wymagań pokarmowych. Dużym plusem owych zwierząt były ich małe wymiary ułatwiające sprzedaż kóz pomiędzy sąsiadującymi nawet w dużych odległościach osadami. W starożytności podawano całkiem słuszny przykład popierający tę tezę "posiadanie czterech kóz daje ci większy zasięg w handlu i mniejsze ryzyko niż posiadanie jednej krowy". Bez tych zwierząt migracje plemion ludzkich mogłyby wyglądać zupełnie inaczej, gdyż przybycie koczowniczych pasterzy zapewne mobilizowało miejscową ludność do udomowiania także innych ras zwierząt.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE</Tag>
+		<Tag>TXT_KEY_BUILDING_GOVERNORS_MENAGERIE</Tag>
 		<English>Unit Reward - Governor's Menagerie</English>
 		<French>Ménagerie du Gouverneur</French>
 		<Italian>Serraglio del governatore</Italian>
@@ -3184,14 +3184,14 @@
 		<Russian>Ãîðîäñêîé çâåðèíåö</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOVERNOR_MENAGERIE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_GOVERNORS_MENAGERIE_PEDIA</Tag>
 		<English>If one wild animal is a status symbol, what's better than having many to boost your standing among your fellows and foreigners alike?</English>
 		<Italian>Se un animale selvatico è uno status symbol, cosa c'è di meglio di averne molti per aumentare il tuo stato sociale tra i tuoi sudditi e gli stranieri?</Italian>
 		<Polish>Jeśli jedno zwierzę to za mało to dlaczego nie stworzyć całej menażerii?</Polish>
 		<Russian>Åñëè îäíî äèêîå æèâîòíîå ÿâëÿåòñÿ ñèìâîëîì ñòàòóñà, ÷òî ëó÷øå, ÷åì ìíîãèå, ïîâûñèòü âàøó ðåïóòàöèþ ñðåäè âàøèõ ñîïëåìåííèêîâ è èíîñòðàíöåâ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOVERNOR_PETS</Tag>
+		<Tag>TXT_KEY_BUILDING_GOVERNORS_PETS</Tag>
 		<English>Unit Reward - Governor's Pets</English>
 		<French>Animaux du Gouverneurs</French>
 		<Italian>Animali del governatore</Italian>
@@ -3199,7 +3199,7 @@
 		<Russian>Ãîðîäñêîé ïèòîìíèê</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GOVERNOR_PETS_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_GOVERNORS_PETS_PEDIA</Tag>
 		<English>As a status symbol a live wild, dangerous, large or exotic animal is a boon for any leader.</English>
 		<Italian>Come status symbol, un animale selvatico pericoloso, grande o esotico è una manna per qualsiasi leader.</Italian>
 		<Polish>Jako symbol statusu, dziko żyjące zwierzęta, wielkie lub egzotyczne zwierzęta są ozdobą każdej kolekcji nowoczesnego przywódcy.</Polish>
@@ -3219,7 +3219,7 @@
 		<Russian>Õàêà - ýòî öåðåìîíèàëüíûé òàíåö èëè âûçîâ â ïîëèíåçèéñêîé êóëüòóðå. Ýòî òàíåö îñàíêè, èñïîëíÿåìûé ãðóïïîé, ñ ýíåðãè÷íûìè äâèæåíèÿìè è òîïîòîì íîã ñ ðèòìè÷íî-êðè÷àùèì ñîïðîâîæäåíèåì.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HAWKING</Tag>
+		<Tag>TXT_KEY_BUILDING_HAWKING_HUT</Tag>
 		<English>Unit Reward - Hawking Hut</English>
 		<French>Cabane du Fauconnier</French>
 		<Italian>Capanna del falconiere</Italian>
@@ -3227,7 +3227,7 @@
 		<Russian>Ñîêîëèíàÿ îõîòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HAWKING_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HAWKING_HUT_PEDIA</Tag>
 		<English>Hawking is the practice of hunting with a trained falconry bird. Falconry is "the taking of wild quarry in its natural state and habitat by means of a trained raptor". There are two traditional terms used to describe a person involved in falconry: a falconer flies a falcon; an austringer (German origin) flies a hawk (Accipiter and some buteos and similar) or an eagle (Aquila or similar). In modern falconry the Red-tailed Hawk (Buteo jamaicensis) and the Harris hawk are often used. The words "hawking" and "hawker" have become used so much to mean petty traveling traders, that the terms "falconer" and "falconry" now apply to all use of trained birds of prey to catch game. In early English falconry literature, the word "falcon" referred to a female falcon only, while the word "hawk" or "hawke" referred to a female hawk. A male hawk or falcon was referred to as a "tiercel" (sometimes spelled "tercel") as it was roughly one third less than the female in size. Many contemporary practitioners still use these words in their original meaning.</English>
 		<Italian>La falconeria è la pratica della caccia con un falco addestrato. La falconeria è "la cattura di prede selvatiche nel suo stato naturale e habitat per mezzo di un rapace addestrato". Ci sono due termini tradizionali usati per descrivere una persona coinvolta nella falconeria: un falconiere fa volare un falco, un austringer (di origine tedesca) fa volare un falco (Accipiter e alcune poiane e simili) o un'aquila. Nella falconeria moderna vengono spesso utilizzati il falco dalla coda rossa (Buteo jamaicensis) e il falco Harris. Le parole "Falconiere" e "Venditore ambulante" sono diventate usate così tanto da definire meschini i commercianti che viaggiano, tanto che i termini "falconiere" e "falconeria" ora si applicano a tutti gli usi di uccelli rapaci addestrati a catturare selvaggina. Nell'antica letteratura inglese riguardante la falconeria, la parola "falcon" si riferiva solo a un falcone femmina, mentre le parole "hawk" o "hawke" indicavano un falco femmina. Un falco o falcone maschio veniva chiamato "tiercel" (a volte scritto "tercel") dato che aveva una taglia circa un terzo in meno rispetto alla femmina. Molti praticanti contemporanei utilizzano ancora queste parole nel loro significato originale.</Italian>
 		<Polish>Początki sokolnictwa sięgają początków ludzkiej cywilizacji i zamierzchłych czasów, kiedy to nawet u prymitywnych ludów, a zwłaszcza nomadów wiodących koczowniczy tryb życia, stało ono na bardzo wysokim poziomie. Było podstawą ich egzystencji obok zbieractwa i myślistwa. Zwiadczą o tym m.in. motywy na starożytnych malowidłach. Myśliwego z ptakiem na pięści, przedstawiają też datowane na 1500 lat p.n.e rzeźby, znalezione w Turcji.Płaskorzeźba z czasów Sargona II (722-705 p.n.e) myśliwy z orłem, potwierdza, że ten sposób polowania znali Asyryjczycy</Polish>
@@ -3345,7 +3345,7 @@
 		<English>A herd of Muskoxes.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM</Tag>
+		<Tag>TXT_KEY_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT</Tag>
 		<English>Unit Reward - Naval Standard (Animal mascot)</English>
 		<French>Mascotte de la Marine</French>
 		<Italian>Mascotte della marina</Italian>
@@ -3353,7 +3353,7 @@
 		<Russian>Ìîðñêîé øòàíäàðò</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NAVAL_TOTEM_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_NAVAL_STANDARD_ANIMAL_MASCOT_PEDIA</Tag>
 		<English>The mascot of a ship.</English>
 		<Italian>La mascotte di una nave.</Italian>
 		<Polish>Maskotka statku.</Polish>
@@ -3504,7 +3504,7 @@
 		<Russian>Ïàìÿòü î ñàáë. òèãðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE</Tag>
+		<Tag>TXT_KEY_BUILDING_CENTER_FOR_SHARK_STUDIES</Tag>
 		<English>Unit Reward - Center for Shark Studies</English>
 		<French>Centre d'étude des Requins</French>
 		<Italian>Centro per gli studi sugli squali</Italian>
@@ -3512,7 +3512,7 @@
 		<Russian>Öåíòð èçó÷. àêóë</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SALACHIMORPHA_INSTITUTE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CENTER_FOR_SHARK_STUDIES_PEDIA</Tag>
 		<English>Until recently only a few benthic species of shark, such as hornsharks, leopard sharks, catsharks, and zebra sharks had survived in aquarium conditions for up to a year or more. This gave rise to the belief that sharks, as well as being difficult to capture and transport, were difficult to care for. A better knowledge of sharks has led to more species (including the large pelagic sharks) being able to be kept for far longer. At the same time, transportation techniques have improved and long distance movement of sharks is becoming easier. One shark that never had been successfully held in captivity for long was the great white. But in September 2004 the Monterey Bay Aquarium successfully kept a young female great white shark for 198 days before releasing her back into the wild.</English>
 		<Italian>Fino ad oggi poche specie di squali sono in grado di sopravvivere più di un anno in cattività. Questo ha portato a credere che gli squali, oltre a essere difficili da catturare e da trasportare, fossero anche difficili da mantenere. Recenti studi sugli squali hanno però permesso di mantenere in buone condizioni un maggior numero di specie di squali. Allo stesso tempo, le tecniche di trasporto sono migliorate e il movimento a lunga distanza di squali sta diventando più facile. Uno squalo che non era mai stato tenuto con successo in cattività per lungo tempo è stato il grande squalo bianco. Ma nel settembre 2004 il Monterey Bay Aquarium ha tenuto con successo una giovane femmina di squalo bianco per 198 giorni prima di rilasciarla di nuovo in libertà.</Italian>
 		<Polish>Instytut Morski jednostka naukowo-badawcza. Placówka wykonuje prace naukowe, badawcze i wdrożeniowe: m.in. zajmuje się modernizacją i eksploatacją portów, oceanografią operacyjną, czy problematyką zagospodarowania regionu nadmorskiego. Misją Instytutu jest dbałość o zachowanie wartości morza i zrównoważony rozwój polskiej gospodarki morskiej. Instytut opracowuje studia wykonalności i eksperyzy oraz udziela konsultacji w zakresie: hydrotechniki morskiej, geotechniki, oceanografii operacyjnej, ochrony środowiska (badania chemiczne i biologiczne), transportu, logistyki, zagospodarowania przestrzennego regionu nadmorskiego, modernizacji i eksploatacji portów, żeglugi śródlądowej, turystyki, bezpieczeństwa przeciwpowodziowego, elektroniki morskiej, a także tworzenia baz danych i monitoringu zjawisk ciągłych.</Polish>
@@ -3577,7 +3577,7 @@
 		<Russian>Ïàìÿòü î ñóì÷. âîëêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER</Tag>
+		<Tag>TXT_KEY_BUILDING_SHELL_WORKERS_HUT</Tag>
 		<English>Unit Reward - Shell Worker's Hut</English>
 		<French>Cabane du sculpteur de carapaces</French>
 		<Italian>Capanna dell'intagliatore di conchiglie</Italian>
@@ -3585,7 +3585,7 @@
 		<Russian>Ëîâåö óñòðèö</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TORTOISE_SHELL_WORKER_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_SHELL_WORKERS_HUT_PEDIA</Tag>
 		<English>Tortoiseshell or tortoise shell is a material produced mainly from the shell of the hawksbill turtle, an endangered species. It was widely used in the 1960s and 1970s in the manufacture of items such as combs, sunglasses, guitar picks and knitting needles. In 1973, the trade of tortoiseshell worldwide was banned under CITES (the Convention on International Trade in Endangered Species).[PARAGRAPH:2]Tortoiseshell was attractive to manufacturers and consumers because of its beautiful appearance and its durability, and its organic warmth against the skin. It was used in guitar picks because it can be easily shaped, has excellent bending properties, and is very durable. Tortoiseshell picks could sometimes be used for years. Piqué-work, jewelry made from tortoiseshell inlaid with precious metals in patterns or pictures, was made during the Victorian Era and was highly prized.[PARAGRAPH:2]There have been a number of faux tortoiseshell materials developed since the 1970s, most of which mimic the appearance of tortoiseshell. Tortex is a material that was created to replace tortoiseshell guitar picks and has been widely accepted as a suitable substitute.</English>
 		<Italian>Un guscio di testuggine è un materiale prodotto principalmente dal guscio della tartaruga embricata, una specie in via di estinzione. È stato ampiamente utilizzato negli anni 60 e 70 per la fabbricazione di articoli come pettini, occhiali da sole, plettri e aghi per lavoro a maglia. Nel 1973, il commercio di tartaruga in tutto il mondo è stato vietato dalla CITES (Convenzione sul commercio internazionale delle specie minacciate di estinzione).[PARAGRAPH:2]Il guscio di testuggine era attraente per i produttori ed i consumatori a causa della sua bella apparenza e la sua durata, e il suo calore organica contro la pelle. Veniva utilizzata nei plettri perché poteva essere facilmente modellata, ha eccellenti proprietà di curvatura, ed è molto resistente. I gusci di tartaruga potrebbero talvolta essere utilizzati per anni. Durante l'era vittoriana venivano realizzati gioielli di tartaruga intarsiati con metalli preziosi nei modelli, ed erano molto apprezzati.[PARAGRAPH:2]Ci sono stati un certo numero di materiali eco-tartaruga sviluppato dal 1970, la maggior parte dei quali imitavano l'aspetto della tartaruga. Il Tortex è un materiale creato per sostituire i plettri di tartaruga ed è stato ampiamente accettato come un sostituto adatto.</Italian>
 		<Polish>Skorupy żółwi od dawien dawna były wykorzystywane do produkcji ozdób i prostych narzędzi na całym świecie.</Polish>
@@ -3623,7 +3623,7 @@
 		<Russian>Òðàäèöèè òîòåìîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL</Tag>
+		<Tag>TXT_KEY_BUILDING_CARNIVAL_TRAINED_SEAL</Tag>
 		<English>Unit Reward - Carnival (Trained Seal)</English>
 		<French>Phoques dressés</French>
 		<Italian>Fiera delle foche ammaestrate</Italian>
@@ -3631,7 +3631,7 @@
 		<Russian>Äðåññ. òþëåíåé</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRAINED_SEAL_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CARNIVAL_TRAINED_SEAL_PEDIA</Tag>
 		<English>A carnival of seals trained for entertainment.</English>
 	</TEXT>
 	<TEXT>
