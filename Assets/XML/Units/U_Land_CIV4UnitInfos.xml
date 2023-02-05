@@ -4532,7 +4532,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_NGAI</BuildingType>
+				<BuildingType>BUILDING_NGAI_BLESS</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>

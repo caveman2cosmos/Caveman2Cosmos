@@ -4248,13 +4248,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MEDICAL_DATABASE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_METI</Type>
+			<Type>BUILDING_ADVANCED_METI</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_METI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_METI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ADVANCED_METI</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ADVANCED_METI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_METI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ADVANCED_METI</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_METI</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -4531,13 +4531,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MOVIE_STUDIO</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NASA</Type>
+			<Type>BUILDING_NATIONAL_AEROSPACE_AGENCY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_NASA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NASA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NATIONAL_AEROSPACE_AGENCY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_AEROSPACE_AGENCY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_ROCKET_FUEL</Bonus>
@@ -4589,7 +4589,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_NASA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_AEROSPACE_AGENCY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NASA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -7315,13 +7315,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TOMB</Type>
+			<Type>BUILDING_ROYAL_TOMB</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TOMB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOMB_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ROYAL_TOMB</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ROYAL_TOMB_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<PrereqOrCivics>
 				<PrereqCivic>
@@ -7404,7 +7404,7 @@
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_TOMB</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ROYAL_TOMB</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TOMB</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>

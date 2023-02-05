@@ -8813,7 +8813,7 @@
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_TIPI</BuildingType>
+				<BuildingType>BUILDING_HOUSING_TIPIS</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
 				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
@@ -8937,8 +8937,8 @@
 				<BuildingType>BUILDING_LONGHOUSE</BuildingType>
 				<BuildingType>BUILDING_BONE_HUT</BuildingType>
 				<BuildingType>BUILDING_HIDE_HUT</BuildingType>
-				<BuildingType>BUILDING_TIPI</BuildingType>
-				<BuildingType>BUILDING_YURT</BuildingType>
+				<BuildingType>BUILDING_HOUSING_TIPIS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_YURTS</BuildingType>
 				<BuildingType>BUILDING_MUD_HUT</BuildingType>
 				<BuildingType>BUILDING_STONE_HUT</BuildingType>
 				<BuildingType>BUILDING_TREEHOUSE</BuildingType>
@@ -14552,12 +14552,12 @@
 			<ConstructSound>AS2D_BUILD_SIBERIAN</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TIPI</Type>
+			<Type>BUILDING_HOUSING_TIPIS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TIPI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TIPI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_TIPIS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_TIPIS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
 			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_WOOD</Bonus>
@@ -14595,7 +14595,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_TIPI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_TIPIS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TIRE_RECYCLE</Type>
@@ -16047,12 +16047,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_YOUTH_CURFEW</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_YURT</Type>
+			<Type>BUILDING_HOUSING_YURTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_YURT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_YURT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_YURTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_YURTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_PORTABLE_SHELTERS</PrereqTech>
 			<ObsoleteTech>TECH_SURVEYING</ObsoleteTech>
 			<Bonus>BONUS_WOOD</Bonus>
@@ -16090,7 +16090,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_YURT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_YURTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PIR_E_SABZ</Type>

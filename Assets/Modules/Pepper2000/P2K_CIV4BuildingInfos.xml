@@ -2065,14 +2065,14 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_WMAP</Type>
+			<Type>BUILDING_WILKINSON_MICROWAVE_ANISOTROPY_PROBE</Type>
 			<bForceOverwrite>1</bForceOverwrite>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_WMAP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WMAP_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_WILKINSON_MICROWAVE_ANISOTROPY_PROBE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WILKINSON_MICROWAVE_ANISOTROPY_PROBE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WMAP</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WILKINSON_MICROWAVE_ANISOTROPY_PROBE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_WMAP</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>

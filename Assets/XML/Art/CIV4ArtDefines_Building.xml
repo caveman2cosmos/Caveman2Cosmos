@@ -7523,7 +7523,7 @@
 			<Button>Art/interface/buttons/buildings/cermet.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CERN</Type>
+			<Type>ART_DEF_BUILDING_CERN_ACCELERATOR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -13424,7 +13424,7 @@
 			<Button>Art/interface/buttons/buildings/dubai_world_central.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DUCK</Type>
+			<Type>ART_DEF_BUILDING_FARM_ANIMAL_DUCK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -14484,7 +14484,7 @@
 			<Button>Art/Interface/Buttons/Buildings/enhancedspecies.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ENKI</Type>
+			<Type>ART_DEF_BUILDING_TEMPLE_OF_ENKI</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>1.25</fScale>
@@ -15044,7 +15044,7 @@
 			<Button>Art/interface/buttons/buildings/false_vacuum_trap.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FAME</Type>
+			<Type>ART_DEF_BUILDING_SIX_HARMONIES_PAGODA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18954,7 +18954,7 @@
 			<Button>art/Embassy/art/haitianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HAKA</Type>
+			<Type>ART_DEF_BUILDING_DANCE_HAKA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19824,7 +19824,7 @@
 			<Button>Art/Interface/Buttons/Civilizations/Hittites2.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HNIC</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_NIGHT_OF_HOCKEY</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>1</fScale>
@@ -23144,7 +23144,7 @@
 			<Button>Art/interface/buttons/buildings/kbo_outpost.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_KEEP</Type>
+			<Type>ART_DEF_BUILDING_CASTLE_KEEP</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>1</bAnimated>
 			<fScale>15.44</fScale>
@@ -26774,7 +26774,7 @@
 			<Button>art/Craft/Art/mattressstore.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_MAUI</Type>
+			<Type>ART_DEF_BUILDING_HAAMONGA_A_MAUI</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27674,7 +27674,7 @@
 			<Button>Art/Interface/Buttons/Buildings/methlab.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_METI</Type>
+			<Type>ART_DEF_BUILDING_ADVANCED_METI</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -29244,7 +29244,7 @@
 			<Button>art/Tower/Art/nanotraps.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NARA</Type>
+			<Type>ART_DEF_BUILDING_NARAS_GIANT_BUDDHA</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.1</fScale>
@@ -29264,7 +29264,7 @@
 			<Button>art/Hunting/Art/narwalcamp.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NASA</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_AEROSPACE_AGENCY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -30314,7 +30314,7 @@
 			<Button>Art/interface/buttons/buildings/new_horizons.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NGAI</Type>
+			<Type>ART_DEF_BUILDING_NGAI_BLESS</Type>
 			<LSystem>LSYSTEM_1x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.0</fScale>
@@ -32434,7 +32434,7 @@
 			<Button>Art/Interface/Buttons/Buildings/PegasusBreeder.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PEIR</Type>
+			<Type>ART_DEF_BUILDING_PIER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -33274,7 +33274,7 @@
 			<Button>Art/Interface/Buttons/buildings/Religions/Zoroastrian/pir_e_naraki.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PISA</Type>
+			<Type>ART_DEF_BUILDING_LEANING_TOWER_OF_PISA</Type>
 			<LSystem>LSYSTEM_3x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1</fScale>
@@ -34485,7 +34485,7 @@
 			<Button>Art/Interface/Buttons/Buildings/pyschoscanner.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PTAH</Type>
+			<Type>ART_DEF_BUILDING_TEMPLE_OF_PTAH</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.5</fScale>
@@ -37105,7 +37105,7 @@
 			<Button>art/Embassy/art/scythianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SDSS</Type>
+			<Type>ART_DEF_BUILDING_SLOAN_DIGITAL_SKY_SURVEY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42465,7 +42465,7 @@
 			<Button>Art/Interface/Buttons/Buildings/tinreclamationplant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TIPI</Type>
+			<Type>ART_DEF_BUILDING_HOUSING_TIPIS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42775,7 +42775,7 @@
 			<Button>art/Crops/art/tomatofarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TOMB</Type>
+			<Type>ART_DEF_BUILDING_ROYAL_TOMB</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -42875,7 +42875,7 @@
 			<Button>Art/Buttons/Buildings/TortureChamberBuilding.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TOTH</Type>
+			<Type>ART_DEF_BUILDING_TEMPLE_OF_TOTH</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.5</fScale>
@@ -46095,7 +46095,7 @@
 			<Button>Art/interface/buttons/buildings/wireless_space_launch.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WMAP</Type>
+			<Type>ART_DEF_BUILDING_WILKINSON_MICROWAVE_ANISOTROPY_PROBE</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -46545,7 +46545,7 @@
 			<Button>art/Ordinance/Art/youthcurfew.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_YURT</Type>
+			<Type>ART_DEF_BUILDING_HOUSING_YURTS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

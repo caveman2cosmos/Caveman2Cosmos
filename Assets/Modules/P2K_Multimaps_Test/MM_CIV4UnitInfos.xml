@@ -9387,7 +9387,7 @@
 				<BuildingType>BUILDING_SPUTNIK</BuildingType>
 				<BuildingType>BUILDING_PROJECT_GEMINI</BuildingType>
 				<BuildingType>BUILDING_PROJECT_MERCURY</BuildingType>
-				<BuildingType>BUILDING_WMAP</BuildingType>
+				<BuildingType>BUILDING_WILKINSON_MICROWAVE_ANISOTROPY_PROBE</BuildingType>
 				<BuildingType>BUILDING_CLIMATE_SATELLITE</BuildingType>
 			</Buildings>
 			<Actions>

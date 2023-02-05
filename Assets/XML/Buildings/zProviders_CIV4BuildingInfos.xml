@@ -419,7 +419,7 @@
 			</ReplacementBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CHICKEN_COOP</BuildingType>
-				<BuildingType>BUILDING_DUCK</BuildingType>
+				<BuildingType>BUILDING_FARM_ANIMAL_DUCK</BuildingType>
 				<BuildingType>BUILDING_GOOSE_FARM</BuildingType>
 				<BuildingType>BUILDING_NEST_THIEF</BuildingType>
 				<BuildingType>BUILDING_POULTRY_HERD</BuildingType>
@@ -456,7 +456,7 @@
 				<BuildingType>BUILDING_CHICKEN_COOP</BuildingType>
 				<BuildingType>BUILDING_COOKATOO</BuildingType>
 				<BuildingType>BUILDING_CORMORANT_TRAINER</BuildingType>
-				<BuildingType>BUILDING_DUCK</BuildingType>
+				<BuildingType>BUILDING_FARM_ANIMAL_DUCK</BuildingType>
 				<BuildingType>BUILDING_FALCONER</BuildingType>
 				<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>

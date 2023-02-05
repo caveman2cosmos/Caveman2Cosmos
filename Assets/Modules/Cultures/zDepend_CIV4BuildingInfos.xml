@@ -6,7 +6,7 @@
 			<Bonus>BONUS_DUTCH</Bonus>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HAKA</Type>
+			<Type>BUILDING_DANCE_HAKA</Type>
 			<PrereqBonuses>
 				<BonusType>BONUS_ABORIGINE</BonusType>
 				<BonusType>BONUS_FIJIAN</BonusType>

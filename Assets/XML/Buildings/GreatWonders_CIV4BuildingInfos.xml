@@ -3798,15 +3798,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CERN</Type>
+			<Type>BUILDING_CERN_ACCELERATOR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CERN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CERN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CERN_ACCELERATOR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CERN_ACCELERATOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CERN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CERN_ACCELERATOR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CERN</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -7125,15 +7125,15 @@
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FAME</Type>
+			<Type>BUILDING_SIX_HARMONIES_PAGODA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FAME</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FAME_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SIX_HARMONIES_PAGODA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SIX_HARMONIES_PAGODA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FAME</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SIX_HARMONIES_PAGODA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FAME</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -10378,12 +10378,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HNIC</Type>
+			<Type>BUILDING_NATIONAL_NIGHT_OF_HOCKEY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_HNIC</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HNIC_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NATIONAL_NIGHT_OF_HOCKEY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_NIGHT_OF_HOCKEY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HNIC</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_NIGHT_OF_HOCKEY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HNIC</MovieDefineTag>
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
 			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
@@ -13292,13 +13292,13 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MAUI</Type>
+			<Type>BUILDING_HAAMONGA_A_MAUI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MAUI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MAUI_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HAAMONGA_A_MAUI</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HAAMONGA_A_MAUI_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_STONE</Bonus>
@@ -13351,7 +13351,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_MAUI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HAAMONGA_A_MAUI</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MAUI</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -14206,12 +14206,12 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_NARA</Type>
+			<Type>BUILDING_NARAS_GIANT_BUDDHA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_NARA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_NARA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NARAS_GIANT_BUDDHA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NARAS_GIANT_BUDDHA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NARA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NARAS_GIANT_BUDDHA</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16164,15 +16164,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PISA</Type>
+			<Type>BUILDING_LEANING_TOWER_OF_PISA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PISA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PISA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LEANING_TOWER_OF_PISA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LEANING_TOWER_OF_PISA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PISA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LEANING_TOWER_OF_PISA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PISA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
@@ -16710,12 +16710,12 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PTAH</Type>
+			<Type>BUILDING_TEMPLE_OF_PTAH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_PTAH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PTAH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TEMPLE_OF_PTAH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_PTAH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PTAH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_PTAH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17644,13 +17644,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SDSS</Type>
+			<Type>BUILDING_SLOAN_DIGITAL_SKY_SURVEY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_SDSS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SDSS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SLOAN_DIGITAL_SKY_SURVEY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SLOAN_DIGITAL_SKY_SURVEY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SDSS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SLOAN_DIGITAL_SKY_SURVEY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SDSS</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -20475,12 +20475,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TOTH</Type>
+			<Type>BUILDING_TEMPLE_OF_TOTH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_TOTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOTH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TEMPLE_OF_TOTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_TOTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TOTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_OF_TOTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
