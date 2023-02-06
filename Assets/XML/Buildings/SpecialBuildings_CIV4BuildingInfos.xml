@@ -6217,11 +6217,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ACHIEVEMENT_ENVIRONMENTAL_EFFECT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS1</Type>
+			<Type>BUILDING_EDUCATION_UNAWARE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS1</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_UNAWARE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -6262,26 +6262,26 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_MINUS2</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS3</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS4</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_FOOLISH</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_SENSELESS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ABSURD</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MORONIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_FARCICAL</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_DIMWITTED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_RIDICULOUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_PREPOSTEROUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IDIOCRACY</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IGNORANCE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BEWILDERED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MINDLESS</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS2</Type>
+			<Type>BUILDING_EDUCATION_FOOLISH</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS2</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_FOOLISH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -6325,25 +6325,25 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_MINUS3</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS4</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_SENSELESS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ABSURD</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MORONIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_FARCICAL</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_DIMWITTED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_RIDICULOUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_PREPOSTEROUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IDIOCRACY</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IGNORANCE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BEWILDERED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MINDLESS</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS3</Type>
+			<Type>BUILDING_EDUCATION_SENSELESS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS3</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_SENSELESS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -6387,24 +6387,24 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_MINUS4</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ABSURD</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MORONIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_FARCICAL</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_DIMWITTED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_RIDICULOUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_PREPOSTEROUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IDIOCRACY</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IGNORANCE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BEWILDERED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MINDLESS</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS4</Type>
+			<Type>BUILDING_EDUCATION_ABSURD</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS4</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ABSURD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -6448,23 +6448,23 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_MINUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MORONIC</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_FARCICAL</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_DIMWITTED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_RIDICULOUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_PREPOSTEROUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IDIOCRACY</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IGNORANCE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BEWILDERED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MINDLESS</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS5</Type>
+			<Type>BUILDING_EDUCATION_MORONIC</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS5</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_MORONIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -6508,22 +6508,22 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_MINUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_FARCICAL</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_DIMWITTED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_RIDICULOUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_PREPOSTEROUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IDIOCRACY</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IGNORANCE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BEWILDERED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MINDLESS</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS6</Type>
+			<Type>BUILDING_EDUCATION_FARCICAL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS6</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_FARCICAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -6567,21 +6567,21 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_MINUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_DIMWITTED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_RIDICULOUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_PREPOSTEROUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IDIOCRACY</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IGNORANCE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BEWILDERED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MINDLESS</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS7</Type>
+			<Type>BUILDING_EDUCATION_DIMWITTED</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS7</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_DIMWITTED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -6625,20 +6625,20 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_RIDICULOUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_PREPOSTEROUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IDIOCRACY</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IGNORANCE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BEWILDERED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MINDLESS</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS8</Type>
+			<Type>BUILDING_EDUCATION_RIDICULOUS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS8</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_RIDICULOUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -6682,19 +6682,19 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_PREPOSTEROUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IDIOCRACY</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IGNORANCE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BEWILDERED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MINDLESS</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS9</Type>
+			<Type>BUILDING_EDUCATION_PREPOSTEROUS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS9</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_PREPOSTEROUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -6738,18 +6738,18 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IDIOCRACY</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IGNORANCE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BEWILDERED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MINDLESS</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS10</Type>
+			<Type>BUILDING_EDUCATION_IDIOCRACY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS10</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_IDIOCRACY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -6793,17 +6793,17 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_IGNORANCE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BEWILDERED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MINDLESS</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS11</Type>
+			<Type>BUILDING_EDUCATION_IGNORANCE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS11</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_IGNORANCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -6847,16 +6847,16 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BEWILDERED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MINDLESS</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS12</Type>
+			<Type>BUILDING_EDUCATION_BEWILDERED</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS12</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_BEWILDERED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_COSMIC_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -6900,15 +6900,15 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MINDLESS</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_MINUS13</Type>
+			<Type>BUILDING_EDUCATION_MINDLESS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_MINUS13</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_MINDLESS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TRANSCENDENT_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -6953,11 +6953,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS1</Type>
+			<Type>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_1</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS1</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_BLISSFUL_IGNORANCE_1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -6967,26 +6967,26 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_MINUS2</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS3</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS4</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_2</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_3</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_4</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_5</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_6</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_7</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_8</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS2</Type>
+			<Type>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_2</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS2</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_BLISSFUL_IGNORANCE_2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -6996,25 +6996,25 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_MINUS3</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS4</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_3</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_4</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_5</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_6</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_7</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_8</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS3</Type>
+			<Type>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_3</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS3</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_BLISSFUL_IGNORANCE_3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7024,24 +7024,24 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_MINUS4</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_4</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_5</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_6</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_7</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_8</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS4</Type>
+			<Type>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_4</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS4</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_BLISSFUL_IGNORANCE_4</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7051,23 +7051,23 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_MINUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_5</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_6</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_7</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_8</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS5</Type>
+			<Type>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_5</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS5</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_BLISSFUL_IGNORANCE_5</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7077,22 +7077,22 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_MINUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_6</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_7</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_8</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS6</Type>
+			<Type>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_6</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS6</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_BLISSFUL_IGNORANCE_6</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7102,21 +7102,21 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_MINUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_7</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_8</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS7</Type>
+			<Type>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_7</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS7</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_BLISSFUL_IGNORANCE_7</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7126,20 +7126,20 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_8</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS8</Type>
+			<Type>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_8</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS8</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_BLISSFUL_IGNORANCE_8</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7149,19 +7149,19 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS9</Type>
+			<Type>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_9</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS9</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_BLISSFUL_IGNORANCE_9</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7171,18 +7171,18 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS10</Type>
+			<Type>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_10</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS10</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_BLISSFUL_IGNORANCE_10</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7192,17 +7192,17 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS11</Type>
+			<Type>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_11</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS11</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_BLISSFUL_IGNORANCE_11</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7212,16 +7212,16 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS12</Type>
+			<Type>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_12</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS12</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_BLISSFUL_IGNORANCE_12</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7231,15 +7231,15 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_MINUS13</Type>
+			<Type>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_MINUS13</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7250,11 +7250,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS1</Type>
+			<Type>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_1</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS1</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7264,26 +7264,26 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_PLUS2</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS3</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS4</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_2</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_3</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_4</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_5</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_6</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_7</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_8</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS2</Type>
+			<Type>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_2</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS2</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7293,25 +7293,25 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_PLUS3</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS4</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_3</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_4</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_5</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_6</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_7</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_8</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS3</Type>
+			<Type>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_3</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS3</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_3</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7321,24 +7321,24 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_PLUS4</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_4</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_5</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_6</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_7</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_8</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS4</Type>
+			<Type>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_4</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS4</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_4</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7348,23 +7348,23 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_PLUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_5</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_6</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_7</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_8</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS5</Type>
+			<Type>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_5</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS5</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_5</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7374,22 +7374,22 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_PLUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_6</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_7</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_8</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS6</Type>
+			<Type>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_6</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS6</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_6</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7399,21 +7399,21 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_7</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_8</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS7</Type>
+			<Type>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_7</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS7</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_7</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7423,20 +7423,20 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_8</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS8</Type>
+			<Type>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_8</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS8</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_8</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7446,19 +7446,19 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_9</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS9</Type>
+			<Type>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_9</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS9</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_9</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7468,18 +7468,18 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_10</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS10</Type>
+			<Type>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_10</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS10</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_10</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7489,17 +7489,17 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_11</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS11</Type>
+			<Type>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_11</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS11</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_11</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7509,16 +7509,16 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_12</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS12</Type>
+			<Type>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_12</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS12</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_12</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7528,15 +7528,15 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_NAT_PLUS13</Type>
+			<Type>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_NAT_PLUS13</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7547,11 +7547,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS1</Type>
+			<Type>BUILDING_EDUCATION_INTUITIVE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS1</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_INTUITIVE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<YieldModifiers>
 				<iYield>0</iYield>
@@ -7592,26 +7592,26 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_PLUS2</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS3</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS4</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_BRILLIANT</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_CULTIVATED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGEABLE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ACUMEN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_SCHOLARLY</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ENLIGHTENED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_COSMOPOLITAN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WUNDERKIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MASTERMIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_GENIUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WISE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_OMNISCIENCE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS2</Type>
+			<Type>BUILDING_EDUCATION_BRILLIANT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS2</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_BRILLIANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -7655,25 +7655,25 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_PLUS3</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS4</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_CULTIVATED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGEABLE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ACUMEN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_SCHOLARLY</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ENLIGHTENED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_COSMOPOLITAN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WUNDERKIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MASTERMIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_GENIUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WISE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_OMNISCIENCE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS3</Type>
+			<Type>BUILDING_EDUCATION_CULTIVATED</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS3</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_CULTIVATED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -7717,24 +7717,24 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_PLUS4</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_KNOWLEDGEABLE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ACUMEN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_SCHOLARLY</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ENLIGHTENED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_COSMOPOLITAN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WUNDERKIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MASTERMIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_GENIUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WISE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_OMNISCIENCE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS4</Type>
+			<Type>BUILDING_EDUCATION_KNOWLEDGEABLE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS4</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_KNOWLEDGEABLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -7778,23 +7778,23 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_PLUS5</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ACUMEN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_SCHOLARLY</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ENLIGHTENED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_COSMOPOLITAN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WUNDERKIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MASTERMIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_GENIUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WISE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_OMNISCIENCE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS5</Type>
+			<Type>BUILDING_EDUCATION_ACUMEN</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS5</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ACUMEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -7838,22 +7838,22 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_PLUS6</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_SCHOLARLY</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ENLIGHTENED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_COSMOPOLITAN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WUNDERKIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MASTERMIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_GENIUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WISE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_OMNISCIENCE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS6</Type>
+			<Type>BUILDING_EDUCATION_SCHOLARLY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS6</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_SCHOLARLY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -7897,21 +7897,21 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_ENLIGHTENED</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_COSMOPOLITAN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WUNDERKIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MASTERMIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_GENIUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WISE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_OMNISCIENCE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS7</Type>
+			<Type>BUILDING_EDUCATION_ENLIGHTENED</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS7</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_ENLIGHTENED</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -7955,20 +7955,20 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_COSMOPOLITAN</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WUNDERKIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MASTERMIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_GENIUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WISE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_OMNISCIENCE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS8</Type>
+			<Type>BUILDING_EDUCATION_COSMOPOLITAN</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS8</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_COSMOPOLITAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -8012,19 +8012,19 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WUNDERKIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MASTERMIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_GENIUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WISE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_OMNISCIENCE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS9</Type>
+			<Type>BUILDING_EDUCATION_WUNDERKIND</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS9</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_WUNDERKIND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -8068,18 +8068,18 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_MASTERMIND</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_GENIUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WISE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_OMNISCIENCE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS10</Type>
+			<Type>BUILDING_EDUCATION_MASTERMIND</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS10</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_MASTERMIND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -8123,17 +8123,17 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_GENIUS</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WISE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_OMNISCIENCE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS11</Type>
+			<Type>BUILDING_EDUCATION_GENIUS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS11</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_GENIUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -8177,16 +8177,16 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
-				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_WISE</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_OMNISCIENCE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS12</Type>
+			<Type>BUILDING_EDUCATION_WISE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS12</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_WISE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_COSMIC_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
@@ -8230,15 +8230,15 @@
 			<bNukeImmune>1</bNukeImmune>
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+				<BuildingType>BUILDING_EDUCATION_OMNISCIENCE</BuildingType>
 			</ReplacementBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EQ_PLUS13</Type>
+			<Type>BUILDING_EDUCATION_OMNISCIENCE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EQ_PLUS13</Description>
+			<Description>TXT_KEY_BUILDING_EDUCATION_OMNISCIENCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TRANSCENDENT_LIFESTYLE</PrereqTech>
 			<YieldModifiers>

@@ -1056,262 +1056,262 @@
 			</PropertyManipulators>
 			<PropertyBuildings>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS1</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_INTUITIVE</BuildingType>
 					<iMinValue>100</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS2</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BRILLIANT</BuildingType>
 					<iMinValue>250</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS3</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_CULTIVATED</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS4</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_KNOWLEDGEABLE</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS5</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ACUMEN</BuildingType>
 					<iMinValue>2500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS6</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_SCHOLARLY</BuildingType>
 					<iMinValue>5000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS7</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ENLIGHTENED</BuildingType>
 					<iMinValue>7500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS8</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_COSMOPOLITAN</BuildingType>
 					<iMinValue>10000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS9</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_WUNDERKIND</BuildingType>
 					<iMinValue>15000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS10</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_MASTERMIND</BuildingType>
 					<iMinValue>20000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS11</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_GENIUS</BuildingType>
 					<iMinValue>25000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS12</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_WISE</BuildingType>
 					<iMinValue>30000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_PLUS13</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_OMNISCIENCE</BuildingType>
 					<iMinValue>35000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS1</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_UNAWARE</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-100</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS2</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_FOOLISH</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-250</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS3</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_SENSELESS</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS4</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ABSURD</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-1000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS5</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_MORONIC</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-2500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS6</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_FARCICAL</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-5000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS7</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_DIMWITTED</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-7500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS8</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_RIDICULOUS</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-10000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS9</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_PREPOSTEROUS</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-15000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS10</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_IDIOCRACY</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-20000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS11</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_IGNORANCE</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-25000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS12</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BEWILDERED</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-30000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_MINUS13</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_MINDLESS</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-35000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS1</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_1</BuildingType>
 					<iMinValue>100</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS2</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_2</BuildingType>
 					<iMinValue>250</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS3</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_3</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS4</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_4</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS5</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_5</BuildingType>
 					<iMinValue>2500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS6</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_6</BuildingType>
 					<iMinValue>5000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS7</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_7</BuildingType>
 					<iMinValue>7500</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS8</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_8</BuildingType>
 					<iMinValue>10000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS9</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_9</BuildingType>
 					<iMinValue>15000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS10</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_10</BuildingType>
 					<iMinValue>20000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS11</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_11</BuildingType>
 					<iMinValue>25000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS12</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_12</BuildingType>
 					<iMinValue>30000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_PLUS13</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_ARGUMENTATIVE_AWARENESS_13</BuildingType>
 					<iMinValue>35000</iMinValue>
 					<iMaxValue>2000000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS1</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_1</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-100</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS2</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_2</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-250</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS3</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_3</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS4</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_4</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-1000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS5</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_5</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-2500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS6</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_6</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-5000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS7</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_7</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-7500</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS8</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_8</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-10000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS9</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_9</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-15000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS10</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_10</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-20000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS11</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_11</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-25000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS12</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_12</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-30000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_EQ_NAT_MINUS13</BuildingType>
+					<BuildingType>BUILDING_EDUCATION_BLISSFUL_IGNORANCE_13</BuildingType>
 					<iMinValue>-2000000</iMinValue>
 					<iMaxValue>-35000</iMaxValue>
 				</PropertyBuilding>
