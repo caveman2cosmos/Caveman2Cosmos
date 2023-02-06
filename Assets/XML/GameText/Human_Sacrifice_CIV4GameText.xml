@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HUMAN_SACRIFICE</Tag>
+		<Tag>TXT_KEY_BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</Tag>
 		<English>Worldview - Human Sacrifice active</English>
 		<French>
 			<Text>Vision du Monde - Sacrifice Humain actif</Text>
@@ -17,7 +17,7 @@
 		<Russian>Æåðòâû</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HUMAN_SACRIFICE_ALTAR</Tag>
+		<Tag>TXT_KEY_BUILDING_ALTAR_FOR_HUMAN_SACRIFICE</Tag>
 		<English>Altar for Human Sacrifice</English>
 		<French>
 			<Text>Autel pour sacrifice humain</Text>
@@ -33,7 +33,7 @@
 		<Russian>Æåðòâåííûé àëòàðü</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HUMAN_SACRIFICE_ALTAR_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ALTAR_FOR_HUMAN_SACRIFICE_PEDIA</Tag>
 		<English>Altar for Human Sacrifice</English>
 		<French>Autel pour Sacrifice Humain</French>
 		<Italian>Un altare utilizzato per i sacrifici umani</Italian>

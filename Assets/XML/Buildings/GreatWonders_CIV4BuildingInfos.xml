@@ -41,12 +41,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_10000_YEAR_CLOCK</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_AACHENCATHEDRAL</Type>
+			<Type>BUILDING_AACHEN_CATHEDRAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_AACHENCATHEDRAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AACHENCATHEDRAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_AACHEN_CATHEDRAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AACHEN_CATHEDRAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_AACHENCATHEDRAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_AACHEN_CATHEDRAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_AACHENCATHEDRAL</MovieDefineTag>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<ObsoleteTech>TECH_NATIONALISM</ObsoleteTech>
@@ -223,7 +223,7 @@
 			</YieldChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MEGATOWER_HOTEL</BuildingType>
+					<BuildingType>BUILDING_MEGATOWER_HOTEL_LEVEL</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
@@ -659,13 +659,13 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ALHAMBRA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ALZHEIMERS_CURE</Type>
+			<Type>BUILDING_CURE_FOR_ALZHEIMERS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_ALZHEIMERS_CURE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ALZHEIMERS_CURE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CURE_FOR_ALZHEIMERS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CURE_FOR_ALZHEIMERS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ALZHEIMERS_CURE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CURE_FOR_ALZHEIMERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ALZHEIMERS_CURE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -3475,15 +3475,15 @@
 			</PrereqNotInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CAPITAL_RECORDS</Type>
+			<Type>BUILDING_CAPITOL_RECORDS_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CAPITAL_RECORDS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CAPITAL_RECORDS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CAPITOL_RECORDS_TOWER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CAPITOL_RECORDS_TOWER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CAPITAL_RECORDS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CAPITOL_RECORDS_TOWER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CAPITAL_RECORDS</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -5242,16 +5242,16 @@
 			</PrereqInCityBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEEPSEA_MISSION</Type>
+			<Type>BUILDING_MISSION_TO_CHALLENGER_DEEP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEEPSEA_MISSION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEEPSEA_MISSION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MISSION_TO_CHALLENGER_DEEP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MISSION_TO_CHALLENGER_DEEP_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DEEPSEA_MISSION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MISSION_TO_CHALLENGER_DEEP</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEEPSEA_MISSION</MovieDefineTag>
 			<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -5592,7 +5592,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HINDU_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_HINDU_MANDIR</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -5684,7 +5684,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_BAHAI_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_BAHAI_DAR_BE_MEHR</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -6089,7 +6089,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GRAND_SKY_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_GRAND_FIRE_FESTIVAL</BuildingType>
-				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_GRAND_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
@@ -7087,7 +7087,7 @@
 				<iCommerce>2</iCommerce>
 			</GlobalCommerceModifiers>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_CISLUNAR_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_CISLUNAR_ECONOMY</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -7482,7 +7482,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GRAND_SKY_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_GRAND_EARTH_FESTIVAL</BuildingType>
-				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_GRAND_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
@@ -10243,7 +10243,7 @@
 			<ReligionType>RELIGION_HINDUISM</ReligionType>
 			<StateReligion>RELIGION_HINDUISM</StateReligion>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HINDU_CATHEDRAL</BuildingType>
+				<BuildingType>BUILDING_HINDU_MANDIR</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>2208</iCost>
 			<BonusProductionModifiers>
@@ -10313,15 +10313,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HIPOCRATIC_OATH</Type>
+			<Type>BUILDING_HIPPOCRATIC_OATH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HIPOCRATIC_OATH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HIPOCRATIC_OATH_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HIPPOCRATIC_OATH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HIPPOCRATIC_OATH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HIPOCRATIC_OATH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HIPPOCRATIC_OATH</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HIPOCRATIC_OATH</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_PYRAMID</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
@@ -12451,7 +12451,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_BAHAI_CATHEDRAL</BuildingType>
+				<BuildingType>BUILDING_BAHAI_DAR_BE_MEHR</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -12968,16 +12968,16 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MARINE_FESTIVAL</Type>
+			<Type>BUILDING_GRAND_MARINE_FESTIVAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_MARINE_FESTIVAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MARINE_FESTIVAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GRAND_MARINE_FESTIVAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GRAND_MARINE_FESTIVAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARINE_FESTIVAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GRAND_MARINE_FESTIVAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MARINE_FESTIVAL</MovieDefineTag>
 			<PrereqTech>TECH_CELEBRATION</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -13536,8 +13536,8 @@
 			</PrereqOrTerrain>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HOUSING_CLIFF_DWELLING</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_HDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_HDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGHRISES</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGH_TECH_HIGHRISES</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</PrereqOrBuildings>
@@ -15371,7 +15371,7 @@
 				<BuildingType>BUILDING_AERIAL_CITY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_SPACE_WAREHOUSE</BuildingType>
+				<BuildingType>BUILDING_SPACE_SHIPPING_WAREHOUSE</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_WAREHOUSE</BuildingType>
 			</PrereqOrBuildings>
 			<ExtraFreeBonuses>
@@ -15551,7 +15551,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CHURCH_OF_STATE</BuildingType>
+					<BuildingType>BUILDING_CHURCH_OF_THE_STATE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -18370,7 +18370,7 @@
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GRAND_FIRE_FESTIVAL</BuildingType>
 				<BuildingType>BUILDING_GRAND_EARTH_FESTIVAL</BuildingType>
-				<BuildingType>BUILDING_MARINE_FESTIVAL</BuildingType>
+				<BuildingType>BUILDING_GRAND_MARINE_FESTIVAL</BuildingType>
 			</PrereqNotInCityBuildings>
 			<iCost>516</iCost>
 			<iHappiness>3</iHappiness>
@@ -18789,7 +18789,7 @@
 			<iGlobalSpaceProductionModifier>25</iGlobalSpaceProductionModifier>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ORBITAL_FACTORY</BuildingType>
+					<BuildingType>BUILDING_CISLUNAR_FACTORY</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -18797,7 +18797,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SOLAR_SATELLITE</BuildingType>
+					<BuildingType>BUILDING_SOLAR_POWER_SATELLITE</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -20973,12 +20973,12 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_VATICAN_LIBRARY</Type>
+			<Type>BUILDING_HOLY_SEE_LIBRARY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_VATICAN_LIBRARY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VATICAN_LIBRARY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOLY_SEE_LIBRARY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOLY_SEE_LIBRARY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VATICAN_LIBRARY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOLY_SEE_LIBRARY</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

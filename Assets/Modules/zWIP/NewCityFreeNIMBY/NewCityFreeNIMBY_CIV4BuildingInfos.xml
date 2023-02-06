@@ -26,7 +26,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_USURY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LANDMINES_TRAPS</Type>
+			<Type>BUILDING_LANDMINES</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_GUERRILLA_WARFARE</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>

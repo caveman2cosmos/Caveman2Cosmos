@@ -521,7 +521,7 @@
 				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BUFFALO_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_BUFFALO</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<ObsoleteTech>TECH_LOGISTICS</ObsoleteTech>
@@ -1915,7 +1915,7 @@
 				<BuildType>BUILD_JUMPLANE</BuildType>
 			</Builds>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_ANDROID_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_ANDROIDS</BuildingType>
 				<BuildingType>BUILDING_NANOTECH_COMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_PERSONAL_ROBOTS</PrereqTech>

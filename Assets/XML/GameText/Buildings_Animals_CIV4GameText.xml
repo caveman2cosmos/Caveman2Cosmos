@@ -277,7 +277,7 @@
 		<Italian>Solo i bufali addomesticati possono costruire una Mandria di bufali; fornisce una risorsa di bufali.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUFFALO_TRAINER</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BUFFALO</Tag>
 		<English>Animal Trainer (Buffalo)</English>
 		<French>Dresseur de Buffles</French>
 		<Italian>Addestratore di bufali</Italian>
@@ -285,7 +285,7 @@
 		<Russian>Äðåññ. áóéâîëîâ</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUFFALO_TRAINER_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ANIMAL_TRAINER_BUFFALO_PEDIA</Tag>
 		<English>The Buffalo Trainer is required to build Buffalo Worker.</English>
 	</TEXT>
 	<TEXT>
@@ -874,7 +874,7 @@
 		<Russian>Ìèô î áûêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAIMAN</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BLACK_CAIMAN</Tag>
 		<English>Folklore - Black Caiman</English>
 		<French>Mythe du Caïman</French>
 		<German>
@@ -1034,7 +1034,7 @@
 		<Russian>Ìèô î âîðîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CUSCUS</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SPOTTED_CUSCUS</Tag>
 		<English>Folklore - Spotted Cuscus</English>
 		<French>Mythe du Couscous</French>
 		<German>
@@ -1132,7 +1132,7 @@
 		<Russian>Ìèô îá îñëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_DRAGON</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_DRAGON</Tag>
 		<English>Folklore (E) - Dragon</English>
 		<French>Mythe du Dragon (E)</French>
 		<German>
@@ -1367,7 +1367,7 @@
 		<Russian>Ìèô î ãàçåëè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_GELADA</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GELADA_MONKEY</Tag>
 		<English>Folklore - Gelada Monkey</English>
 		<French>Mythe du Babouin Gelada</French>
 		<German>
@@ -1428,7 +1428,7 @@
 		<Russian>Ìèô î æèðàôå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_GLYPTO</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GLYPTODON</Tag>
 		<English>Folklore - Glyptodon</English>
 		<French>Mythe du Glyptodon</French>
 		<German>
@@ -1527,7 +1527,7 @@
 		<Russian>Ìèô î áåãåìîòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_HIPPOS</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_HIPPOS</Tag>
 		<English>Folklore (T) - Hippos</English>
 		<French>Mythe de l'Hippopotame (T)</French>
 		<German>
@@ -1723,7 +1723,7 @@
 		<Russian>Ìèô î êóêàáàðå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_KRAKEN</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GIANT_SQUID</Tag>
 		<English>Folklore - Giant Squid</English>
 		<French>Mythe du Kraken</French>
 		<German>
@@ -2325,7 +2325,7 @@
 		<Russian>Ìèô îá óòêîíîñå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_POSSUM</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BRUSHTAIL_POSSUM</Tag>
 		<English>Folklore - Brushtail Possum</English>
 		<French>Mythe du Phalanger commun</French>
 		<German>
@@ -2397,7 +2397,7 @@
 		<Russian>Ìèô î åíîòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RAPTOR</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RAPTORS</Tag>
 		<English>Folklore (T) - Raptors</English>
 		<French>Mythe des Rapaces (T)</French>
 		<German>
@@ -2459,7 +2459,7 @@
 		<Russian>Ìèô î ìàíòå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_REDFOX</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RED_FOX</Tag>
 		<English>Folklore - Red Fox</English>
 		<French>Mythe du Renard Roux</French>
 		<German>
@@ -2544,7 +2544,7 @@
 		<Russian>Ìèô î ñêàë. ïèíãâèíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RODENT</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RODENT</Tag>
 		<English>Folklore (T) - Rodent</English>
 		<French>Mythe des Rongeurs (T)</French>
 		<German>
@@ -2730,7 +2730,7 @@
 		<Russian>Ìèô î íåáå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SNAKES</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_SNAKES</Tag>
 		<English>Folklore (T) - Snakes</English>
 		<French>Mythe des Serpents (T)</French>
 		<German>
@@ -2904,7 +2904,7 @@
 		<Russian>Ìèô î òóíöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_TURKEY</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILD_TURKEY</Tag>
 		<English>Folklore - Wild Turkey</English>
 		<French>Mythe de la Dinde</French>
 		<German>
@@ -3013,7 +3013,7 @@
 		<Russian>Ìèô î áîðîäàâî÷íèêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WEASEL</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_WEASEL</Tag>
 		<English>Folklore (T) - Weasel</English>
 		<French>Mythe de la belette (T)</French>
 		<German>
@@ -3565,7 +3565,7 @@
 		<Polish>[COLOR_BUILDING_TEXT]Dół z wężami[COLOR_REVERT] to miejsce do którego wrzuca się skazańców na tortury i śmierć przez pokąsanie przez węże i żmije.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_THYLACINE_REMAINS</Tag>
+		<Tag>TXT_KEY_BUILDING_REMAINS_THYLACINE</Tag>
 		<English>Remains - Thylacine</English>
 		<French>Restes de Thylacine</French>
 		<German>
@@ -3615,7 +3615,7 @@
 		<Russian>Òðàäèöèè ðûáàëêè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TRADITION_TOTEM</Tag>
+		<Tag>TXT_KEY_BUILDING_TRADITION_MILITARY_STANDARD_MASCOT</Tag>
 		<English>Tradition - Military Standard (Mascot)</English>
 		<French>Tradition - Standard militaire (Mascotte)</French>
 		<Italian>Tradizione - Stendardo militare (Mascotte)</Italian>

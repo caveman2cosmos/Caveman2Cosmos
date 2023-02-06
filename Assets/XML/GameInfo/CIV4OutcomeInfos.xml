@@ -1266,7 +1266,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>
@@ -1278,8 +1278,8 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE_ALTAR</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
+				<BuildingType>BUILDING_ALTAR_FOR_HUMAN_SACRIFICE</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE</OutcomeType>
@@ -1294,7 +1294,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
 				<BuildingType>BUILDING_SACRIFICIAL_ALTAR</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
@@ -1311,8 +1311,8 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
-				<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
+				<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE</OutcomeType>
@@ -1327,9 +1327,9 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE_ALTAR</BuildingType>
-				<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
+				<BuildingType>BUILDING_ALTAR_FOR_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_ALTER_I</OutcomeType>
@@ -1344,9 +1344,9 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
 				<BuildingType>BUILDING_SACRIFICIAL_ALTAR</BuildingType>
-				<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_SACRIFICE_CAPTIVE_ALTER_II</OutcomeType>
@@ -1361,7 +1361,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
 				<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
@@ -1377,8 +1377,8 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE_ALTAR</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
+				<BuildingType>BUILDING_ALTAR_FOR_HUMAN_SACRIFICE</BuildingType>
 				<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
@@ -1394,7 +1394,7 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
 				<BuildingType>BUILDING_SACRIFICIAL_ALTAR</BuildingType>
 				<BuildingType>BUILDING_MESOAMERICAN_MONASTERY</BuildingType>
 			</PrereqBuildings>
@@ -1412,7 +1412,7 @@
 			<bFriendlyTerritory>1</bFriendlyTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
+				<BuildingType>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</BuildingType>
 			</PrereqBuildings>
 		</OutcomeInfo>
 		<OutcomeInfo>

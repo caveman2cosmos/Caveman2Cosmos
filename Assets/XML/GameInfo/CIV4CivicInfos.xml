@@ -571,7 +571,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SPANISH_CITADEL</BuildingType>
+					<BuildingType>BUILDING_CITADEL</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -976,7 +976,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_BUDDHIST_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_MAHABODHI</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>20</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -7810,7 +7810,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_BUDDHIST_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_MAHABODHI</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>15</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -12641,7 +12641,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -12800,7 +12800,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13024,7 +13024,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13372,7 +13372,7 @@
 					<iHealthChange>3</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 					<iHealthChange>3</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13392,31 +13392,31 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_SLUMS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_SHANTY_TOWN</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_GHETTOS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_INNER_CITY</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA3_HDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_PROJECTS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA4_HDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_HABITATION_PODS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_ARCOLOGY_SLUMS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13569,7 +13569,7 @@
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13827,7 +13827,7 @@
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+					<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13843,31 +13843,31 @@
 					<iHealthChange>2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_SLUMS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_SHANTY_TOWN</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_GHETTOS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_INNER_CITY</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA3_HDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_PROJECTS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA4_HDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_HABITATION_PODS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
+					<BuildingType>BUILDING_HOUSING_ARCOLOGY_SLUMS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -17490,7 +17490,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

@@ -2438,7 +2438,7 @@
 			</Buildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_HIPPOS</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_HIPPOS</BuildingType>
 				<BuildingType>BUILDING_EXOTIC_HERBIVORE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
@@ -2545,7 +2545,7 @@
 				<BuildingType>BUILDING_FOLKLORE_ETHIOPIAN_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FENNECFOX</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MANEDWOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_RED_FOX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>
@@ -3492,7 +3492,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DONKEY_BREEDER</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
-				<BuildingType>BUILDING_DONKEY_NATIONAL</BuildingType>
+				<BuildingType>BUILDING_CENTRAL_BREEDER_DONKEY</BuildingType>
 			</PrereqOrBuildings>
 			<BonusType>BONUS_DONKEY</BonusType>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
@@ -3747,7 +3747,7 @@
 				<BuildingType>BUILDING_FOLKLORE_ETHIOPIAN_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FENNECFOX</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MANEDWOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_RED_FOX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_THE_WHEEL</PrereqTech>
 			<UnitUpgrades>
@@ -3923,7 +3923,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_TURKEY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WILD_TURKEY</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>

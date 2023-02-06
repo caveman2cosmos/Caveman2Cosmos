@@ -2,13 +2,13 @@
 <Civ4BuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<Type>BUILDING_AIRCRAFT_MUSEUM</Type>
+			<Type>BUILDING_NATIONAL_AIRCRAFT_MUSEUM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AIRCRAFT_MUSEUM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AIRCRAFT_MUSEUM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NATIONAL_AIRCRAFT_MUSEUM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_AIRCRAFT_MUSEUM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_FLIGHT</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_AIRCRAFT</Bonus>
@@ -152,7 +152,7 @@
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_AIRCRAFT_MUSEUM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_AIRCRAFT_MUSEUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_AIRCRAFT_MUSEUM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1586,13 +1586,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_DISTRICT_COURTHOUSE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DONKEY_NATIONAL</Type>
+			<Type>BUILDING_CENTRAL_BREEDER_DONKEY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DONKEY_NATIONAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DONKEY_NATIONAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CENTRAL_BREEDER_DONKEY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CENTRAL_BREEDER_DONKEY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_DONKEY</Bonus>
@@ -1620,7 +1620,7 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_DONKEY_NATIONAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CENTRAL_BREEDER_DONKEY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DUTCH_DIKE</Type>
@@ -2486,13 +2486,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_BUTCHER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GUILD_CARPENTER</Type>
+			<Type>BUILDING_GUILD_CARPENTERS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GUILD_CARPENTER</Description>
+			<Description>TXT_KEY_BUILDING_GUILD_CARPENTERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -2533,7 +2533,7 @@
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GUILD_CARPENTER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GUILD_CARPENTERS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_CARPENTER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2668,7 +2668,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SEAMSTRESS</BuildingType>
 				<BuildingType>BUILDING_TEXTILE_MILL</BuildingType>
-				<BuildingType>BUILDING_TEXTILE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_CLOTHING</BuildingType>
 				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
@@ -2702,7 +2702,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_TEXTILE_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_CLOTHING</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -2885,13 +2885,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_GLASSBLOWERS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GUILD_GOLDSMITH</Type>
+			<Type>BUILDING_GUILD_GOLDSMITHS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_GUILD</SpecialBuildingType>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GUILD_GOLDSMITH</Description>
+			<Description>TXT_KEY_BUILDING_GUILD_GOLDSMITHS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_BANKING</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -2933,7 +2933,7 @@
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GUILD_GOLDSMITH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GUILD_GOLDSMITHS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GUILD_GOLDSMITH</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -6288,13 +6288,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_RADIOTELESCOPE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RAILROAD_MUSEUM</Type>
+			<Type>BUILDING_NATIONAL_RAILROAD_MUSEUM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_RAILROAD_MUSEUM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RAILROAD_MUSEUM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NATIONAL_RAILROAD_MUSEUM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_RAILROAD_MUSEUM_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
@@ -6341,7 +6341,7 @@
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_RAILROAD_MUSEUM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_RAILROAD_MUSEUM</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RAILROAD_MUSEUM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>

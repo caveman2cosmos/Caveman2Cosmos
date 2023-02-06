@@ -4307,7 +4307,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_DRUID_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_NATURE_CIRCLE_OF_POWER</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -28589,7 +28589,7 @@
 			<PrereqTech>TECH_THEFT</PrereqTech>
 			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
+				<BuildingType>BUILDING_THIEVES_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_ROGUE</UnitType>
@@ -28771,7 +28771,7 @@
 			</UnitCombatTargets>
 			<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
+				<BuildingType>BUILDING_THIEVES_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_BURGLAR</UnitType>
@@ -28951,7 +28951,7 @@
 				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
+				<BuildingType>BUILDING_THIEVES_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_ASSASSIN</UnitType>
@@ -29129,7 +29129,7 @@
 				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
+				<BuildingType>BUILDING_THIEVES_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_SCOUNDREL</UnitType>
@@ -31693,7 +31693,7 @@
 				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HIGHWAY_HIDEOUT</BuildingType>
+				<BuildingType>BUILDING_HIGHWAYMANS_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_OUTLAW</UnitType>
@@ -33768,7 +33768,7 @@
 				<BuildingType>BUILDING_ORDINANCE_CLEAN_AIR_ACT</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_CLEAN_WATER_ACT</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_TIRE_RECYCLING_PROGRAM</BuildingType>
-				<BuildingType>BUILDING_SHUTTLE_SERVICE</BuildingType>
+				<BuildingType>BUILDING_ORDINANCE_COMMUTER_SHUTTLE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_PROSTITUTION_BAN</BuildingType>
 				<BuildingType>BUILDING_ORDINANCE_GAMBLING_BAN</BuildingType>
 				<BuildingType>BUILDING_ALCOHOL_PROHIBITION</BuildingType>
@@ -36283,7 +36283,7 @@
 				<BuildingType>BUILDING_CHRISTIAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_THE_MASJID_AL_HARAM</BuildingType>
 				<BuildingType>BUILDING_THE_KASHI_VISHWANATH</BuildingType>
-				<BuildingType>BUILDING_BUDDHIST_SHRINE</BuildingType>
+				<BuildingType>BUILDING_THE_MAHABODHI</BuildingType>
 				<BuildingType>BUILDING_CONFUCIAN_SHRINE</BuildingType>
 				<BuildingType>BUILDING_THE_DAI_MIAO</BuildingType>
 				<BuildingType>BUILDING_THE_STATUE_OF_ZEUS</BuildingType>
@@ -37723,7 +37723,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_TRADITION_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TRADITION_SEA_HUNTING</BuildingType>
-				<BuildingType>BUILDING_TRADITION_TOTEM</BuildingType>
+				<BuildingType>BUILDING_TRADITION_MILITARY_STANDARD_MASCOT</BuildingType>
 				<BuildingType>BUILDING_TRADITION_NAVAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ARCHERY</BuildingType>
 				<BuildingType>BUILDING_SECRET_ARMY_BASE</BuildingType>
@@ -38122,7 +38122,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_TRADITION_HUNTER</BuildingType>
 				<BuildingType>BUILDING_TRADITION_SEA_HUNTING</BuildingType>
-				<BuildingType>BUILDING_TRADITION_TOTEM</BuildingType>
+				<BuildingType>BUILDING_TRADITION_MILITARY_STANDARD_MASCOT</BuildingType>
 				<BuildingType>BUILDING_TRADITION_NAVAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ARCHERY</BuildingType>
 				<BuildingType>BUILDING_GREAT_HOLMEGAARD_HUNT</BuildingType>
@@ -39085,7 +39085,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PARTS_MAKER</BuildingType>
 				<BuildingType>BUILDING_PARTS_PLANT</BuildingType>
-				<BuildingType>BUILDING_3DPRINTING_MILL</BuildingType>
+				<BuildingType>BUILDING_3D_PRINTING_MILL</BuildingType>
 				<BuildingType>BUILDING_NANOPRINTING_MILL</BuildingType>
 				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
@@ -39183,7 +39183,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_AUTOREPAIR_SHOP</BuildingType>
+				<BuildingType>BUILDING_AUTO_REPAIR_SHOP</BuildingType>
 				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
@@ -39374,7 +39374,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_AUTOREPAIR_SHOP</BuildingType>
+				<BuildingType>BUILDING_AUTO_REPAIR_SHOP</BuildingType>
 				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
@@ -39585,7 +39585,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_AUTOREPAIR_SHOP</BuildingType>
+				<BuildingType>BUILDING_AUTO_REPAIR_SHOP</BuildingType>
 				<BuildingType>BUILDING_HYPERMARKET</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SEMICONDUCTORS</PrereqTech>
@@ -39886,7 +39886,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_3D_PRINTING</PrereqTech>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_3DPRINTING_MILL</BuildingType>
+				<BuildingType>BUILDING_3D_PRINTING_MILL</BuildingType>
 				<BuildingType>BUILDING_NANOPRINTING_MILL</BuildingType>
 				<BuildingType>BUILDING_MOLECULAR_ASSEMBLER</BuildingType>
 				<BuildingType>BUILDING_ATOMIC_ASSEMBLER</BuildingType>
@@ -40825,7 +40825,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
-				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+				<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
@@ -40936,7 +40936,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
-				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+				<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
@@ -41144,7 +41144,7 @@
 			<BonusType>BONUS_DRUGS</BonusType>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
-				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+				<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
@@ -41246,7 +41246,7 @@
 			<PrereqTech>TECH_ELIXIRS_AND_TONICS</PrereqTech>
 			<BonusType>BONUS_DRUGS</BonusType>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+				<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>

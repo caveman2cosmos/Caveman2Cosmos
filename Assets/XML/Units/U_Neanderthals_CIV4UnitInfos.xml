@@ -1079,7 +1079,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
-				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+				<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>

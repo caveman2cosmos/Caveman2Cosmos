@@ -72,13 +72,13 @@
 			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_II</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FARM_CROP_BEARBERRY</BuildingType>
-				<BuildingType>BUILDING_BLACKBERRY_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_CROP_BLACKBERRY</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_BLUEBERRY</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_CRANBERRY</BuildingType>
-				<BuildingType>BUILDING_ELDERBERRY_FARM</BuildingType>
-				<BuildingType>BUILDING_GOOSEBERRY_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_CROP_ELDERBERRY</BuildingType>
+				<BuildingType>BUILDING_FARM_CROP_GOOSEBERRY</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_RASPBERRY</BuildingType>
-				<BuildingType>BUILDING_STRAWBERRY_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_CROP_STRAWBERRY</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<ExtraFreeBonuses>
@@ -104,7 +104,7 @@
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_INDUSTRIAL_FARMING</ObsoletesToBuilding>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_BLACKWATER_DRAW</BuildingType>
+				<BuildingType>BUILDING_LL_BLACKWATER_DRAW</BuildingType>
 				<BuildingType>BUILDING_SLAUGHTERHOUSE</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
@@ -238,7 +238,7 @@
 				<BuildingType>BUILDING_HERD_COW</BuildingType>
 				<BuildingType>BUILDING_CAMP_DEER</BuildingType>
 				<BuildingType>BUILDING_HERD_DEER</BuildingType>
-				<BuildingType>BUILDING_DIPROTODON_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_DIPROTODON</BuildingType>
 				<BuildingType>BUILDING_HERD_DONKEY</BuildingType>
 				<BuildingType>BUILDING_CAMP_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_HERD_ELEPHANT</BuildingType>
@@ -381,15 +381,15 @@
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_COCA_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_COCA</BuildingType>
 				<BuildingType>BUILDING_GROVE_COLA</BuildingType>
 				<BuildingType>BUILDING_FLY_AGARIC_GATHERER</BuildingType>
 				<BuildingType>BUILDING_GROVE_GINKGO</BuildingType>
-				<BuildingType>BUILDING_HEMP_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_CANNABIS</BuildingType>
 				<BuildingType>BUILDING_HYDROPONIC_CANNABIS</BuildingType>
-				<BuildingType>BUILDING_KAVA_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_KAVA</BuildingType>
 				<BuildingType>BUILDING_MARSHMALLOW_PLANTATION</BuildingType>
-				<BuildingType>BUILDING_MYRH_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_MYRRH</BuildingType>
 				<BuildingType>BUILDING_PEYOTE_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_POPPY_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_TOBACCO_PLANTATION</BuildingType>
@@ -467,7 +467,7 @@
 				<BuildingType>BUILDING_CATCHER_PARAKEET</BuildingType>
 				<BuildingType>BUILDING_PARROT_AVIARY</BuildingType>
 				<BuildingType>BUILDING_CATCHER_PARROT</BuildingType>
-				<BuildingType>BUILDING_PEACOCK_CATCHER</BuildingType>
+				<BuildingType>BUILDING_CATCHER_PEACOCK</BuildingType>
 				<BuildingType>BUILDING_HOMING_PIGEON_COOP</BuildingType>
 				<BuildingType>BUILDING_CATCHER_QUETZAL</BuildingType>
 				<BuildingType>BUILDING_HERD_RATITE</BuildingType>
@@ -548,11 +548,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FLOWER_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_FLOWER_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_FLOWERS</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_FLOWERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FLOWER_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_FLOWERS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -577,7 +577,7 @@
 				<BuildingType>BUILDING_FARM_FLOWER_ORCHID</BuildingType>
 				<BuildingType>BUILDING_FARM_FLOWER_PANSY</BuildingType>
 				<BuildingType>BUILDING_FARM_FLOWER_ROSE</BuildingType>
-				<BuildingType>BUILDING_SNAPDRAGON_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_FLOWER_SNAPDRAGON</BuildingType>
 				<BuildingType>BUILDING_FARM_FLOWER_SUNFLOWER</BuildingType>
 				<BuildingType>BUILDING_FARM_FLOWER_TULIP</BuildingType>
 				<BuildingType>BUILDING_TEXTILE_DISTRICT</BuildingType>
@@ -622,11 +622,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FOSSIL_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_FOSSIL_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_FOSSILS</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_FOSSILS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FOSSIL_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_FOSSILS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -646,7 +646,7 @@
 				<BuildingType>BUILDING_FOSSIL_PLESIOSAUR</BuildingType>
 				<BuildingType>BUILDING_FOSSIL_PTERODACTYL</BuildingType>
 				<BuildingType>BUILDING_FOSSIL_SHARKTEETH</BuildingType>
-				<BuildingType>BUILDING_FOSSIL_SMILODON</BuildingType>
+				<BuildingType>BUILDING_DIG_SITE_SMILODON_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_FOSSIL_TRICERATOPS</BuildingType>
 				<BuildingType>BUILDING_FOSSIL_TRILOBITE</BuildingType>
 				<BuildingType>BUILDING_FOSSIL_VELOCIRAPTOR</BuildingType>
@@ -676,13 +676,13 @@
 			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_III</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ORCHARD_APPLE</BuildingType>
-				<BuildingType>BUILDING_APRICOT_ORCHARD</BuildingType>
-				<BuildingType>BUILDING_ATEMOYA_ORCHARD</BuildingType>
+				<BuildingType>BUILDING_ORCHARD_APRICOT</BuildingType>
+				<BuildingType>BUILDING_ORCHARD_ATEMOYA</BuildingType>
 				<BuildingType>BUILDING_AVOCADO_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_BANANA_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_BREADFRUIT_ORCHARD</BuildingType>
 				<BuildingType>BUILDING_CACTUS_PLANTATION</BuildingType>
-				<BuildingType>BUILDING_CANTALOUPE_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_CROP_CANTALOUPE</BuildingType>
 				<BuildingType>BUILDING_CARDONCACTUS_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_CHERIMOYA_ORCHARD</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_CHERRY</BuildingType>
@@ -694,9 +694,9 @@
 				<BuildingType>BUILDING_FARM_CROP_HONEYDEW</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_JUJUBE</BuildingType>
 				<BuildingType>BUILDING_KIWIFRUIT_ORCHARD</BuildingType>
-				<BuildingType>BUILDING_KUMQUAT_ORCHARD</BuildingType>
+				<BuildingType>BUILDING_ORCHARD_KUMQUAT</BuildingType>
 				<BuildingType>BUILDING_LEMON_PLANTATION</BuildingType>
-				<BuildingType>BUILDING_LIME_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_ORCHARD_LIME</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_LONGAN</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_LOQUAT</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_LYCHEE</BuildingType>
@@ -718,7 +718,7 @@
 				<BuildingType>BUILDING_PLANTATION_TOMATILLO</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_TOMATO</BuildingType>
 				<BuildingType>BUILDING_VINEYARD</BuildingType>
-				<BuildingType>BUILDING_WATERMELON_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_CROP_WATERMELON</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
 			<ExtraFreeBonuses>
@@ -841,7 +841,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FARM_CROP_BARLEY</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_CORN</BuildingType>
-				<BuildingType>BUILDING_GATHERER_BARLEY</BuildingType>
+				<BuildingType>BUILDING_BARLEY_GATHERER</BuildingType>
 				<BuildingType>BUILDING_CORN_GATHERER</BuildingType>
 				<BuildingType>BUILDING_RICE_GATHERER</BuildingType>
 				<BuildingType>BUILDING_WHEAT_GATHERER</BuildingType>
@@ -1082,18 +1082,18 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GROVE_OAK</BuildingType>
 				<BuildingType>BUILDING_GROVE_ALMOND</BuildingType>
-				<BuildingType>BUILDING_BRAZILNUT_GROVE</BuildingType>
+				<BuildingType>BUILDING_GROVE_BRAZIL_NUT</BuildingType>
 				<BuildingType>BUILDING_GROVE_CASHEW</BuildingType>
 				<BuildingType>BUILDING_GROVE_CHESTNUT</BuildingType>
 				<BuildingType>BUILDING_COCONUT_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_GROVE_GEVUINA</BuildingType>
 				<BuildingType>BUILDING_GROVE_HAZELNUT</BuildingType>
-				<BuildingType>BUILDING_MACADAMIA_GROVE</BuildingType>
+				<BuildingType>BUILDING_GROVE_MACADAMIA</BuildingType>
 				<BuildingType>BUILDING_GROVE_MONGONGO</BuildingType>
 				<BuildingType>BUILDING_PEANUT_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_GROVE_PECAN</BuildingType>
 				<BuildingType>BUILDING_GROVE_PINE_NUT</BuildingType>
-				<BuildingType>BUILDING_PISTACHIO_GROVE</BuildingType>
+				<BuildingType>BUILDING_GROVE_PISTACHIO</BuildingType>
 				<BuildingType>BUILDING_GROVE_WALNUT</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
@@ -1218,7 +1218,7 @@
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_PLASTIC_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_PLASTIC</BuildingType>
 				<BuildingType>BUILDING_PLASTIC_RECLAMATION_PLANT</BuildingType>
 			</PrereqOrBuildings>
 			<ExtraFreeBonuses>
@@ -1259,11 +1259,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POISON_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_POISON_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_POISON</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_POISON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_POISON_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_POISON</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1376,7 +1376,7 @@
 				<BuildingType>BUILDING_FARM_CROP_BLACK_PEPPER</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_RHUBARB</BuildingType>
 				<BuildingType>BUILDING_SAFFRON_PLANTATION</BuildingType>
-				<BuildingType>BUILDING_SASSAFRAS_GROVE</BuildingType>
+				<BuildingType>BUILDING_GROVE_SASSAFRAS</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_SESAME</BuildingType>
 				<BuildingType>BUILDING_SPICE_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_SPICE_VOYAGE</BuildingType>
@@ -1412,7 +1412,7 @@
 				<BuildingType>BUILDING_CLAM_DIGGERS</BuildingType>
 				<BuildingType>BUILDING_CONCH_DIVER</BuildingType>
 				<BuildingType>BUILDING_NET_CRAB</BuildingType>
-				<BuildingType>BUILDING_GIANTCLAM_DIVER</BuildingType>
+				<BuildingType>BUILDING_GIANT_CLAM_DIVERS</BuildingType>
 				<BuildingType>BUILDING_NET_LOBSTER</BuildingType>
 				<BuildingType>BUILDING_MUREX_DIVER</BuildingType>
 				<BuildingType>BUILDING_PEARL_DIVER</BuildingType>
@@ -1606,7 +1606,7 @@
 			<ObsoletesToBuilding>BUILDING_FARMSCRAPER_I</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FARM_CROP_ARTICHOKE</BuildingType>
-				<BuildingType>BUILDING_BELLPEPPER_FARM</BuildingType>
+				<BuildingType>BUILDING_FARM_CROP_BELL_PEPPER</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_BROCCOLI</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_CABBAGE</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_CARROT</BuildingType>
@@ -1629,7 +1629,7 @@
 				<BuildingType>BUILDING_FARM_CROP_SPINACH</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_SQUASH</BuildingType>
 				<BuildingType>BUILDING_SWEETPOTATO_FARM</BuildingType>
-				<BuildingType>BUILDING_TARO_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_TARO</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_ZUCCHINI</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
@@ -1657,7 +1657,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BRAZILWOOD_GROVE</BuildingType>
 				<BuildingType>BUILDING_GATHERER_DRIFTWOOD</BuildingType>
-				<BuildingType>BUILDING_GATHERER_LUMBER</BuildingType>
+				<BuildingType>BUILDING_LUMBER_GATHERER</BuildingType>
 				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
 				<BuildingType>BUILDING_GROVE_TIMBER</BuildingType>
 			</PrereqOrBuildings>

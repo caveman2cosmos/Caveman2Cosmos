@@ -25,12 +25,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_2</Tag>
-		<English>Sid's Sushi Co.</English>
+		<English>Sid's Sushi Co</English>
 		<Russian>Суши от Сида</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_2_HQ</Tag>
-		<English>HQ - Sid's Sushi Co.</English>
+		<English>HQ - Sid's Sushi Co</English>
 		<Italian>QG di Sid's Sushi Co.</Italian>
 		<Russian>Суши от Сида</Russian>
 	</TEXT>
@@ -91,14 +91,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_5</Tag>
-		<English>Mining Inc.</English>
+		<English>Mining Inc</English>
 		<German>Montan AG</German>
 		<Italian>Ente Estrazioni Minerarie</Italian>
 		<Russian>Ãîðíûå ðåñóðñû</Russian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_5_HQ</Tag>
-		<English>HQ - Mining Inc.</English>
+		<English>HQ - Mining Inc</English>
 		<Italian>QG dell'Ente Estrazioni Minerarie</Italian>
 		<Russian>Горные ресурсы</Russian>
 	</TEXT>
@@ -113,7 +113,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_6</Tag>
-		<English>Aluminum Co.</English>
+		<English>Aluminum Co</English>
 		<French>Aluminium S.A.</French>
 		<German>Aluminiumwerke AG</German>
 		<Italian>Ente Alluminio</Italian>
@@ -121,7 +121,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_6_HQ</Tag>
-		<English>HQ - Aluminum Co.</English>
+		<English>HQ - Aluminum Co</English>
 		<Italian>QG dell'Ente Alluminio</Italian>
 		<Russian>Промалюминий</Russian>
 	</TEXT>
@@ -136,7 +136,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_7</Tag>
-		<English>Civilized Jewelers Inc.</English>
+		<English>Civilized Jewelers Inc</English>
 		<French>Bijoutiers associés</French>
 		<German>Kulturjuwelen AG</German>
 		<Italian>Gioiellieri Uniti</Italian>
@@ -144,7 +144,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORPORATION_7_HQ</Tag>
-		<English>HQ - Civilized Jewelers Inc.</English>
+		<English>HQ - Civilized Jewelers Inc</English>
 		<Italian>QG di Gioiellieri Uniti</Italian>
 		<Russian>Мировые ювелиры</Russian>
 	</TEXT>

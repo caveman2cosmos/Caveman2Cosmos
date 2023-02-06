@@ -1135,14 +1135,14 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ASTROLOGICAL_INFLUENCE_OF_VIRGO</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BLACKWATER_DRAW</Type>
+			<Type>BUILDING_LL_BLACKWATER_DRAW</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_LEGENDARY_LANDSCAPES</SpecialBuildingType>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BLACKWATER_DRAW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BLACKWATER_DRAW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LL_BLACKWATER_DRAW</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LL_BLACKWATER_DRAW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iCost>180</iCost>
@@ -1159,7 +1159,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_BLACKWATER_DRAW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LL_BLACKWATER_DRAW</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BLACKWATER_DRAW</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>

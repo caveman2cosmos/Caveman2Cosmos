@@ -129,7 +129,7 @@
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_DOG</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ETHIOPIAN_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MANEDWOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_RED_FOX</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WOLF</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>92</iCost>
@@ -179,7 +179,7 @@
 				<BuildingType>BUILDING_FOLKLORE_ANTEATER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ARMADILLO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAVER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GLYPTO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GLYPTODON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>70</iCost>
@@ -222,7 +222,7 @@
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_WEASEL</ID>
+							<ID>BUILDING_FOLKLORE_T_WEASEL</ID>
 						</Has>
 					</Or>
 				</And>
@@ -405,7 +405,7 @@
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_RAPTOR</ID>
+							<ID>BUILDING_FOLKLORE_T_RAPTORS</ID>
 						</Has>
 					</Or>
 				</And>
@@ -508,7 +508,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HERD_BUFFALO</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BUFFALO_TRAINER</Type>
+			<Type>BUILDING_ANIMAL_TRAINER_BUFFALO</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -517,8 +517,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BUFFALO_TRAINER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BUFFALO_TRAINER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ANIMAL_TRAINER_BUFFALO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_BUFFALO_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
@@ -548,7 +548,7 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
-			<ArtDefineTag>ART_DEF_BUILDING_BUFFALO_TRAINER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_BUFFALO</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HERD_CAMEL</Type>
@@ -1326,7 +1326,7 @@
 				<BuildingType>BUILDING_FOLKLORE_SECRETARYBIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ARCTIC_TERN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TOUCAN</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_TURKEY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WILD_TURKEY</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>90</iCost>
 			<ObsoleteTech>TECH_REPLACEMENT_ORGANS</ObsoleteTech>
@@ -1417,7 +1417,7 @@
 				<BuildingType>BUILDING_FOLKLORE_FENNECFOX</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_KOALA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PLATYPUS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_REDFOX</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_RED_FOX</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA_OTTER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>850</iCost>
@@ -1446,7 +1446,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_GLYPTO</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_GLYPTODON</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -1489,7 +1489,7 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_GLYPTO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FOLKLORE_GLYPTODON</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HERD_GOAT</Type>
@@ -1638,7 +1638,7 @@
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_FALCONRY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_RAPTOR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_RAPTORS</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -2033,7 +2033,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FARM_ANIMAL_DONKEY</BuildingType>
 				<BuildingType>BUILDING_HERD_DONKEY</BuildingType>
-				<BuildingType>BUILDING_DONKEY_NATIONAL</BuildingType>
+				<BuildingType>BUILDING_CENTRAL_BREEDER_DONKEY</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
@@ -2087,7 +2087,7 @@
 				<BuildingType>BUILDING_FOLKLORE_LEVIATHAN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_SHARKS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_RAY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_KRAKEN</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GIANT_SQUID</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>264</iCost>
 			<iConquestProb>25</iConquestProb>
@@ -2375,7 +2375,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FOLKLORE_PEACOCK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PHEASANT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_TURKEY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WILD_TURKEY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DUCK</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>184</iCost>
@@ -2565,7 +2565,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_RODENT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_RODENT</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>306</iCost>
 			<MapCategoryTypes>
@@ -2851,11 +2851,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SNAKE_PIT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_THYLACINE_REMAINS</Type>
+			<Type>BUILDING_REMAINS_THYLACINE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_THYLACINE_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_THYLACINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqAmountBuildings>
@@ -3003,12 +3003,12 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_SEA_HUNTING</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_TRADITION_TOTEM</Type>
+			<Type>BUILDING_TRADITION_MILITARY_STANDARD_MASCOT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<Description>TXT_KEY_BUILDING_TRADITION_TOTEM</Description>
+			<Description>TXT_KEY_BUILDING_TRADITION_MILITARY_STANDARD_MASCOT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_CULTURAL_IDENTITY</PrereqTech>
@@ -3069,7 +3069,7 @@
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FOLKLORE_TURKEY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WILD_TURKEY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>184</iCost>
 			<FreeBuilding>BUILDING_FLOCKS_OF_TURKEY</FreeBuilding>

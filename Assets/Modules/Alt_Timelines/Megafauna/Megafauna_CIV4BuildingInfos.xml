@@ -85,7 +85,7 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_BIG_CATS</BuildingType>
 			</PrereqInCityBuildings>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -169,8 +169,8 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_GIRAFFES</BuildingType>
 			</PrereqOrBuildings>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -365,20 +365,20 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BIG_CAT_TRAINER</Type>
+			<Type>BUILDING_ANIMAL_TRAINER_BIG_CAT</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_BIG_CAT_TRAINER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BIG_CAT_TRAINER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ANIMAL_TRAINER_BIG_CAT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_BIG_CAT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BIG_CAT_TRAINER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_BIG_CAT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_BIG_CAT_TRAINER</MovieDefineTag>
 			<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeBuilding>BUILDING_BIG_CAT_TRAINER_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_HERITAGE_BIG_CATS</FreeBuilding>
 			<Bonus>BONUS_CAT</Bonus>
 			<iCost>624</iCost>
 			<iTradeRoutes>1</iTradeRoutes>
@@ -421,17 +421,17 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BIG_CAT_TRAINER_EFFECT</Type>
+			<Type>BUILDING_EFFECT_HERITAGE_BIG_CATS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_BIG_CAT_TRAINER_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BIG_CAT_TRAINER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EFFECT_HERITAGE_BIG_CATS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_BIG_CAT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BIG_CAT_TRAINER_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_HERITAGE_BIG_CATS</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -640,13 +640,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GIRAFFE_TRAINER</Type>
+			<Type>BUILDING_ANIMAL_TRAINER_GIRAFFE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ANIMAL_TRAINER_GIRAFFE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_GIRAFFE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_GIRAFFE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GIRAFFE_TRAINER</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -680,13 +680,13 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GIRAFFE_TRAINER_EFFECT</Type>
+			<Type>BUILDING_EFFECT_HERITAGE_GIRAFFES</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_PEDIA</Civilopedia>
-			<Help>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT_HELP</Help>
+			<Description>TXT_KEY_BUILDING_EFFECT_HERITAGE_GIRAFFES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_GIRAFFE_PEDIA</Civilopedia>
+			<Help>TXT_KEY_BUILDING_EFFECT_HERITAGE_GIRAFFES_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER_HERITAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERITAGE_GIRAFFE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -696,18 +696,18 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GIRAFFE_TRAINER_HERITAGE</Type>
+			<Type>BUILDING_HERITAGE_GIRAFFE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERITAGE_GIRAFFE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERITAGE_GIRAFFE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GIRAFFE_TRAINER_HERITAGE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HERITAGE_GIRAFFE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iMaxLatitude>45</iMaxLatitude>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
-			<FreeBuilding>BUILDING_GIRAFFE_TRAINER_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_HERITAGE_GIRAFFES</FreeBuilding>
 			<iCost>139</iCost>
 			<iConquestProb>0</iConquestProb>
 			<iAsset>4</iAsset>
@@ -724,7 +724,7 @@
 				</Flavor>
 			</Flavors>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -771,14 +771,14 @@
 			<ConstructSound>SND_AMB_HORSE_COBBLESTONES</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MAMMOTH_TRAINER</Type>
+			<Type>BUILDING_ANIMAL_TRAINER_MAMMOTH</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ANIMAL_TRAINER_MAMMOTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_MAMMOTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_TRAINER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TRAINER_MAMMOTH</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MAMMOTH_TRAINER</MovieDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -825,17 +825,17 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MAMMOTH_TRAINER_EFFECT</Type>
+			<Type>BUILDING_EFFECT_HERITAGE_MAMMOTHS</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EFFECT_HERITAGE_MAMMOTHS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TRAINER_MAMMOTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_TRAINER_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_HERITAGE_MAMMOTHS</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
 			<iAsset>2</iAsset>
 			<MapCategoryTypes>
@@ -845,17 +845,17 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MAMMOTH_TRAINER_HERITAGE</Type>
+			<Type>BUILDING_HERITAGE_MAMMOTH</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_MEGAFAUNA</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_HERITAGE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HERITAGE_MAMMOTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HERITAGE_MAMMOTH_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_TRAINER_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_HERITAGE_MAMMOTHS</ArtDefineTag>
 			<PrereqTech>TECH_HERITAGE</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeBuilding>BUILDING_MAMMOTH_TRAINER_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_HERITAGE_MAMMOTHS</FreeBuilding>
 			<iMinLatitude>40</iMinLatitude>
 			<iCost>139</iCost>
 			<iAsset>4</iAsset>
@@ -872,7 +872,7 @@
 				</Flavor>
 			</Flavors>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
 			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
@@ -946,7 +946,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_BIG_CATS</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>

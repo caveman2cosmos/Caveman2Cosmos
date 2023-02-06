@@ -19349,7 +19349,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
-				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+				<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
@@ -22911,7 +22911,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_HEALERS_HUT</BuildingType>
 				<BuildingType>BUILDING_DOCTORS_OFFICE</BuildingType>
-				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+				<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
@@ -24628,7 +24628,7 @@
 				<BonusType>BONUS_DRUGS</BonusType>
 			</PrereqBonuses>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_SURGICAL_OFFICE</BuildingType>
+				<BuildingType>BUILDING_SURGEONS_OFFICE</BuildingType>
 				<BuildingType>BUILDING_MEDICAL_CLINIC</BuildingType>
 				<BuildingType>BUILDING_HEALTHCARE_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
@@ -30156,7 +30156,7 @@
 				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
+				<BuildingType>BUILDING_THIEVES_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
 			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<UnitUpgrades>
@@ -32261,7 +32261,7 @@
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HIGHWAY_HIDEOUT</BuildingType>
+				<BuildingType>BUILDING_HIGHWAYMANS_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
 			<BonusType>BONUS_SLOVAKIAN</BonusType>
 			<PrereqBonuses>
@@ -47120,7 +47120,7 @@
 				<BuildingType>BUILDING_BIOMETRIC_SECURITY</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BANDITS_HIDEOUT</BuildingType>
+				<BuildingType>BUILDING_THIEVES_HIDEOUT</BuildingType>
 			</PrereqAndBuildings>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<UnitUpgrades>

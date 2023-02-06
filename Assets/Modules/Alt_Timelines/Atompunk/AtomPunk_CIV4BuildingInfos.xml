@@ -260,7 +260,7 @@
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqOrBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA4_SDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_ARCOLOGY_SUBURBS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>

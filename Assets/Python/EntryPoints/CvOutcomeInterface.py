@@ -161,8 +161,8 @@ def doRemoveWVHumanSacrifice(argsList):
 
 	iWVSacrifice = GC.getInfoTypeForString("BUILDING_WV_HUMAN_SACRIFICE")
 	if iWVSacrifice > -1:
-		iAltar = GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE_ALTAR")
-		iToken = GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE")
+		iAltar = GC.getInfoTypeForString("BUILDING_ALTAR_FOR_HUMAN_SACRIFICE")
+		iToken = GC.getInfoTypeForString("BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE")
 		CyPlayer = GC.getPlayer(CyUnit.getOwner())
 
 		for CyCity in CyPlayer.cities():

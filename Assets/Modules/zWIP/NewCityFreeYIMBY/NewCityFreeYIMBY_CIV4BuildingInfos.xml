@@ -78,7 +78,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_ADVANCED_METALLURGY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_BARLEY</Type>
+			<Type>BUILDING_BARLEY_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -98,7 +98,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_TRIBALISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GATHERER_INDIGO</Type>
+			<Type>BUILDING_INDIGO_GATHERER</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_FLORISTRY</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>

@@ -27,7 +27,7 @@
 			</PrereqBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_MAYA_BALL_COURT</Type>
+			<Type>BUILDING_BALL_COURT</Type>
 			<PrereqBonuses>
 				<Bonus>BONUS_MAYAN</Bonus>
 				<Bonus>BONUS_AZTEC</Bonus>

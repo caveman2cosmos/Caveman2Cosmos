@@ -145,10 +145,10 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSING_LEAN_TOS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_BARK_HUTS</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HOVELS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SHACKS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_BOONDOCKS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_DUGOUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -474,10 +474,10 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSING_STONE_HUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_MUD_HUTS</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_DOMUS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COTTAGES</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SUBURBS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SMART_HOMES</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -491,12 +491,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_BONE_HUTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BUDDHIST_SHRINE</Type>
+			<Type>BUILDING_THE_MAHABODHI</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_BUDDHIST_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BUDDHIST_SHRINE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_MAHABODHI</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_MAHABODHI_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
@@ -530,7 +530,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_BUDDHIST_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_MAHABODHI</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_BUDDHIST</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -710,10 +710,10 @@
 			<ObsoleteTech>TECH_SANITATION</ObsoleteTech>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSING_BARK_HUTS</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HOVELS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SHACKS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_BOONDOCKS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_DUGOUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -956,12 +956,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_FEUDAL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CIVICFREEMARKET</Type>
+			<Type>BUILDING_CIVIC_FREE_MARKET</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CIVICFREEMARKET</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CIVICFREEMARKET_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CIVIC_FREE_MARKET</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CIVIC_FREE_MARKET_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -985,15 +985,15 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CIVICFREEMARKET</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_FREE_MARKET</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CIVICMARTIALLAW</Type>
+			<Type>BUILDING_CIVIC_MARTIAL_LAW</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CIVICMARTIALLAW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CIVICMARTIALLAW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CIVIC_MARTIAL_LAW</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CIVIC_MARTIAL_LAW_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -1016,7 +1016,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CIVICMARTIALLAW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_MARTIAL_LAW</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CIVICMERCENARIES</Type>
@@ -1267,8 +1267,8 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA3_HDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_HDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGHRISES</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGH_TECH_HIGHRISES</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -2691,12 +2691,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_CARTHEIFT</Type>
+			<Type>BUILDING_CRIME_CAR_THEFT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_CARTHEIFT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_CARTHEIFT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_CAR_THEFT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_CAR_THEFT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_AUTOMOBILES</Bonus>
@@ -3366,12 +3366,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_HATECRIME</Type>
+			<Type>BUILDING_CRIME_HATE_CRIME</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_HATECRIME</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_HATECRIME_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_HATE_CRIME</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_HATE_CRIME_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MINORITY_RIGHTS</PrereqTech>
 			<iHealth>-2</iHealth>
 			<iHappiness>-2</iHappiness>
@@ -3610,12 +3610,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_JAILBREAK</Type>
+			<Type>BUILDING_CRIME_PRISON_BREAKOUTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_JAILBREAK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_JAILBREAK_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_PRISON_BREAKOUTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_PRISON_BREAKOUTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_JAIL</BuildingType>
@@ -4883,11 +4883,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DISEASE_BIRDFLU</Type>
+			<Type>BUILDING_DISEASE_BIRD_FLU</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DISEASE_BIRDFLU</Description>
+			<Description>TXT_KEY_BUILDING_DISEASE_BIRD_FLU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
 			<PrereqBonuses>
@@ -5130,7 +5130,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PEST_MOSQUITOES</BuildingType>
+				<BuildingType>BUILDING_PESTS_MOSQUITOES</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<ObsoleteTech>TECH_ENVIRONMENTAL_ECONOMICS</ObsoleteTech>
@@ -8452,7 +8452,7 @@
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_REDFOX</ID>
+							<ID>BUILDING_FOLKLORE_RED_FOX</ID>
 						</Has>
 					</Or>
 				</And>
@@ -8499,7 +8499,7 @@
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_ARCOLOGY_SLUMS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -8683,10 +8683,10 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSING_LONGHOUSE</BuildingType>
 				<BuildingType>BUILDING_HOUSING_PUEBLOS</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SLUMS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SHANTY_TOWN</BuildingType>
+				<BuildingType>BUILDING_HOUSING_GHETTOS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_INNER_CITY</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -8814,10 +8814,10 @@
 			</PrereqBonuses>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSING_TIPIS</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_VILLAS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_MANORS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_MANSIONS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_CHATEAU</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -8901,10 +8901,10 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA1_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_INSULAE</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COMMONS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_APARTMENTS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGH_TECH_APARTMENTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -8945,30 +8945,30 @@
 				<BuildingType>BUILDING_HOUSING_STILT_HUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_HOGANS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_PUEBLOS</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_MDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_MDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HOVELS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_DOMUS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SHACKS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_INSULAE</BuildingType>
+				<BuildingType>BUILDING_HOUSING_VILLAS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SLUMS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_PALACES</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COTTAGES</BuildingType>
+				<BuildingType>BUILDING_HOUSING_MANORS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COMMONS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SHANTY_TOWN</BuildingType>
+				<BuildingType>BUILDING_HOUSING_ESTATES</BuildingType>
+				<BuildingType>BUILDING_HOUSING_APARTMENTS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_BOONDOCKS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_MANSIONS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SUBURBS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_GHETTOS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_CONDOMINIUMS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_DUGOUTS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SMART_HOMES</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGH_TECH_APARTMENTS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_CHATEAU</BuildingType>
+				<BuildingType>BUILDING_HOUSING_INNER_CITY</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGH_TECH_CONDOMINIUMS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -8980,12 +8980,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_HOMELESS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA1_LDHW</Type>
+			<Type>BUILDING_HOUSING_VILLAS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_LDHW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_LDHW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_VILLAS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_VILLAS_PEDIA</Civilopedia>
 			<bFreshWater>1</bFreshWater>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<ObsoleteTech>TECH_TELEPHONE</ObsoleteTech>
@@ -8997,9 +8997,9 @@
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_MANORS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_MANSIONS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_CHATEAU</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9016,23 +9016,23 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA1_LDHW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_VILLAS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA1_LDLW</Type>
+			<Type>BUILDING_HOUSING_HOVELS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_LDLW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_LDLW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_HOVELS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_HOVELS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<ObsoleteTech>TECH_TELEPHONE</ObsoleteTech>
 			<bFreshWater>1</bFreshWater>
 			<Bonus>BONUS_WOOD</Bonus>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SHACKS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_BOONDOCKS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_DUGOUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9049,15 +9049,15 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA1_LDLW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_HOVELS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA1_LDMW</Type>
+			<Type>BUILDING_HOUSING_DOMUS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_LDMW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_LDMW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_DOMUS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_DOMUS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<ObsoleteTech>TECH_TELEPHONE</ObsoleteTech>
 			<bFreshWater>1</bFreshWater>
@@ -9066,9 +9066,9 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COTTAGES</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SUBURBS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SMART_HOMES</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9084,15 +9084,15 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA1_LDMW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_DOMUS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA1_MDHW</Type>
+			<Type>BUILDING_HOUSING_PALACES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_MDHW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_MDHW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_PALACES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_PALACES_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<ObsoleteTech>TECH_TELEPHONE</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -9105,9 +9105,9 @@
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA2_MDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_ESTATES</BuildingType>
+				<BuildingType>BUILDING_HOUSING_CONDOMINIUMS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGH_TECH_CONDOMINIUMS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9124,15 +9124,15 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA1_MDHW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_PALACES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA1_MDLW</Type>
+			<Type>BUILDING_HOUSING_SLUMS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_MDLW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_MDLW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_SLUMS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_SLUMS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<ObsoleteTech>TECH_TELEPHONE</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -9142,9 +9142,9 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SHANTY_TOWN</BuildingType>
+				<BuildingType>BUILDING_HOUSING_GHETTOS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_INNER_CITY</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9161,15 +9161,15 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA1_MDLW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_SLUMS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA1_MDMW</Type>
+			<Type>BUILDING_HOUSING_INSULAE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA1_MDMW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA1_MDMW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_INSULAE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_INSULAE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<ObsoleteTech>TECH_TELEPHONE</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -9179,9 +9179,9 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA2_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COMMONS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_APARTMENTS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGH_TECH_APARTMENTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9198,15 +9198,15 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA1_MDMW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_INSULAE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA2_LDHW</Type>
+			<Type>BUILDING_HOUSING_MANORS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_LDHW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_LDHW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_MANORS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_MANORS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<bFreshWater>1</bFreshWater>
@@ -9218,8 +9218,8 @@
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_MANSIONS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_CHATEAU</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9236,22 +9236,22 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA2_LDHW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_MANORS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA2_LDLW</Type>
+			<Type>BUILDING_HOUSING_SHACKS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_LDLW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_LDLW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_SHACKS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_SHACKS_PEDIA</Civilopedia>
 			<bFreshWater>1</bFreshWater>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<Bonus>BONUS_WOOD</Bonus>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_BOONDOCKS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_DUGOUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9268,15 +9268,15 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA2_LDLW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_SHACKS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA2_LDMW</Type>
+			<Type>BUILDING_HOUSING_COTTAGES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_LDMW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_LDMW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_COTTAGES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_COTTAGES_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<bFreshWater>1</bFreshWater>
@@ -9285,8 +9285,8 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SUBURBS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SMART_HOMES</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9302,15 +9302,15 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA2_LDMW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_COTTAGES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA2_MDHW</Type>
+			<Type>BUILDING_HOUSING_ESTATES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_MDHW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_MDHW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_ESTATES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_ESTATES_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -9323,8 +9323,8 @@
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_CONDOMINIUMS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGH_TECH_CONDOMINIUMS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9341,15 +9341,15 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA2_MDHW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_ESTATES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA2_MDLW</Type>
+			<Type>BUILDING_HOUSING_SHANTY_TOWN</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_MDLW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_MDLW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_SHANTY_TOWN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_SHANTY_TOWN_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -9359,8 +9359,8 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_GHETTOS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_INNER_CITY</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9377,15 +9377,15 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA2_MDLW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_SHANTY_TOWN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA2_MDMW</Type>
+			<Type>BUILDING_HOUSING_COMMONS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA2_MDMW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA2_MDMW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_COMMONS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_COMMONS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -9395,8 +9395,8 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_APARTMENTS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGH_TECH_APARTMENTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9413,15 +9413,15 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA2_MDMW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_COMMONS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA3_HDHW</Type>
+			<Type>BUILDING_HOUSING_PENTHOUSE_SUITES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDHW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_HDHW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_PENTHOUSE_SUITES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_PENTHOUSE_SUITES_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_TELEPHONE</PrereqTech>
@@ -9437,7 +9437,7 @@
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA4_HDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HOLO_SUITES</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9454,16 +9454,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_HDHW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_PENTHOUSE_SUITES</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA3_HDLW</Type>
+			<Type>BUILDING_HOUSING_PROJECTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDLW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_HDLW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_PROJECTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_PROJECTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_TELEPHONE</PrereqTech>
@@ -9477,7 +9477,7 @@
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA4_HDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HABITATION_PODS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9501,16 +9501,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_HDLW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_PROJECTS</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA3_HDMW</Type>
+			<Type>BUILDING_HOUSING_HIGHRISES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_HDMW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_HDMW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_HIGHRISES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_HIGHRISES_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_TELEPHONE</PrereqTech>
@@ -9525,7 +9525,7 @@
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA4_HDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGH_TECH_HIGHRISES</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9542,16 +9542,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_HDMW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_HIGHRISES</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA3_LDHW</Type>
+			<Type>BUILDING_HOUSING_MANSIONS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_LDHW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_LDHW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_MANSIONS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_MANSIONS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
@@ -9562,7 +9562,7 @@
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_CHATEAU</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9579,16 +9579,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_LDHW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_MANSIONS</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA3_LDLW</Type>
+			<Type>BUILDING_HOUSING_BOONDOCKS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_LDLW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_LDLW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_BOONDOCKS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_BOONDOCKS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<bPrereqPower>1</bPrereqPower>
@@ -9597,7 +9597,7 @@
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_DUGOUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9613,16 +9613,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_LDLW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_BOONDOCKS</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA3_LDMW</Type>
+			<Type>BUILDING_HOUSING_SUBURBS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_LDMW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_LDMW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_SUBURBS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_SUBURBS_PEDIA</Civilopedia>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
@@ -9632,7 +9632,7 @@
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SMART_HOMES</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9649,16 +9649,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_LDMW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_SUBURBS</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA3_MDHW</Type>
+			<Type>BUILDING_HOUSING_CONDOMINIUMS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_MDHW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_MDHW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_CONDOMINIUMS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_CONDOMINIUMS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -9669,7 +9669,7 @@
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGH_TECH_CONDOMINIUMS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9686,16 +9686,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_MDHW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_CONDOMINIUMS</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA3_MDLW</Type>
+			<Type>BUILDING_HOUSING_GHETTOS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_MDLW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_MDLW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_GHETTOS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_GHETTOS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -9705,7 +9705,7 @@
 				<BuildingType>BUILDING_SEWER_SYSTEM</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_INNER_CITY</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9722,16 +9722,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_MDLW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_GHETTOS</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA3_MDMW</Type>
+			<Type>BUILDING_HOUSING_APARTMENTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA3_MDMW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA3_MDMW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_APARTMENTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_APARTMENTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_TELEPHONE</PrereqTech>
 			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -9742,7 +9742,7 @@
 				<BuildingType>BUILDING_TELEPHONE_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGH_TECH_APARTMENTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -9759,16 +9759,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA3_MDMW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_APARTMENTS</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA4_HDHW</Type>
+			<Type>BUILDING_HOUSING_HOLO_SUITES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDHW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDHW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_HOLO_SUITES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_HOLO_SUITES_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
@@ -9799,16 +9799,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_HDHW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_HOLO_SUITES</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA4_HDLW</Type>
+			<Type>BUILDING_HOUSING_HABITATION_PODS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDLW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDLW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_HABITATION_PODS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_HABITATION_PODS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
@@ -9837,16 +9837,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_HDLW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_HABITATION_PODS</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA4_HDMW</Type>
+			<Type>BUILDING_HOUSING_HIGH_TECH_HIGHRISES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_HDMW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_HDMW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_HIGH_TECH_HIGHRISES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_HIGH_TECH_HIGHRISES_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
@@ -9876,16 +9876,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_HDMW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_HIGH_TECH_HIGHRISES</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA4_LDHW</Type>
+			<Type>BUILDING_HOUSING_CHATEAU</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_LDHW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDHW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_CHATEAU</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_CHATEAU_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
@@ -9914,16 +9914,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_LDHW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_CHATEAU</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA4_LDLW</Type>
+			<Type>BUILDING_HOUSING_DUGOUTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_LDLW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDLW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_DUGOUTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_DUGOUTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
@@ -9949,16 +9949,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_LDLW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_DUGOUTS</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA4_LDMW</Type>
+			<Type>BUILDING_HOUSING_SMART_HOMES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_LDMW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_LDMW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_SMART_HOMES</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_SMART_HOMES_PEDIA</Civilopedia>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
@@ -9986,16 +9986,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_LDMW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_SMART_HOMES</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA4_MDHW</Type>
+			<Type>BUILDING_HOUSING_HIGH_TECH_CONDOMINIUMS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDHW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDHW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_HIGH_TECH_CONDOMINIUMS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_HIGH_TECH_CONDOMINIUMS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
@@ -10025,16 +10025,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_MDHW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_HIGH_TECH_CONDOMINIUMS</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA4_MDLW</Type>
+			<Type>BUILDING_HOUSING_INNER_CITY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDLW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDLW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_INNER_CITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_INNER_CITY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
@@ -10061,16 +10061,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_MDLW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_INNER_CITY</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA4_MDMW</Type>
+			<Type>BUILDING_HOUSING_HIGH_TECH_APARTMENTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_MDMW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_HIGH_TECH_APARTMENTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_HIGH_TECH_APARTMENTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
@@ -10099,16 +10099,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_MDMW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_HIGH_TECH_APARTMENTS</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA4_SDHW</Type>
+			<Type>BUILDING_HOUSING_ARCOLOGY_UPPER_CLASS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDHW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_ARCOLOGY_UPPER_CLASS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_ARCOLOGY_UPPER_CLASS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
@@ -10141,16 +10141,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_SDHW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_ARCOLOGY_UPPER_CLASS</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA4_SDLW</Type>
+			<Type>BUILDING_HOUSING_ARCOLOGY_SLUMS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDLW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDLW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_ARCOLOGY_SLUMS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_ARCOLOGY_SLUMS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
@@ -10181,16 +10181,16 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_SDLW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_ARCOLOGY_SLUMS</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOUSE_ERA4_SDMW</Type>
+			<Type>BUILDING_HOUSING_ARCOLOGY_SUBURBS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOUSE_ERA4_SDMW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOUSE_ERA4_SDMW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOUSING_ARCOLOGY_SUBURBS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOUSING_ARCOLOGY_SUBURBS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<ObsoleteTech>TECH_INTERSTELLAR_COLONIZATION</ObsoleteTech>
 			<ObsoletesToBuilding>BUILDING_HOUSING_COLONY_ARCOLOGY</ObsoletesToBuilding>
@@ -10222,15 +10222,15 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_SDMW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOUSING_ARCOLOGY_SUBURBS</ArtDefineTag>
 			<bFreshWater>1</bFreshWater>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HUMAN_SACRIFICE</Type>
+			<Type>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HUMAN_SACRIFICE</Description>
+			<Description>TXT_KEY_BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<bNukeImmune>1</bNukeImmune>
@@ -10238,7 +10238,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
 			</ReplacementBuildings>
-			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_SACRIFICE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSING_IGLOOS</Type>
@@ -10250,8 +10250,8 @@
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<ObsoleteTech>TECH_RAPID_PROTOTYPING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_BOONDOCKS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_DUGOUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -10923,10 +10923,10 @@
 			<Bonus>BONUS_WOOD</Bonus>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSING_BARK_HUTS</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HOVELS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SHACKS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_BOONDOCKS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_DUGOUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -10967,10 +10967,10 @@
 			</PrereqOrFeature>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSING_PUEBLOS</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SLUMS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SHANTY_TOWN</BuildingType>
+				<BuildingType>BUILDING_HOUSING_GHETTOS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_INNER_CITY</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -11338,10 +11338,10 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_DOMUS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COTTAGES</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SUBURBS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SMART_HOMES</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -11962,11 +11962,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PESTS_LOCUST</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PEST_MOSQUITOES</Type>
+			<Type>BUILDING_PESTS_MOSQUITOES</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PEST_MOSQUITOES</Description>
+			<Description>TXT_KEY_BUILDING_PESTS_MOSQUITOES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PESTS_PEDIA</Civilopedia>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
@@ -12001,7 +12001,7 @@
 			<iConquestProb>100</iConquestProb>
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_PEST_MOSQUITOES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PESTS_MOSQUITOES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PESTS_MOTHS</Type>
@@ -12891,11 +12891,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYWATERPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_SMOG1</Type>
+			<Type>BUILDING_POLLUTION_LIGHT_SMOG</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_SMOG1</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_LIGHT_SMOG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
 			<iHappiness>-1</iHappiness>
 			<iHealth>-1</iHealth>
@@ -12921,11 +12921,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_SMOG2</Type>
+			<Type>BUILDING_POLLUTION_MODERATE_SMOG</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_SMOG2</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_MODERATE_SMOG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
 			<iHealth>-3</iHealth>
 			<iHappiness>-3</iHappiness>
@@ -12951,11 +12951,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_SMOG3</Type>
+			<Type>BUILDING_POLLUTION_HEAVY_SMOG</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_SMOG3</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_HEAVY_SMOG</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIR_POLLUTION_PEDIA</Civilopedia>
 			<iHealth>-3</iHealth>
 			<iHappiness>-2</iHappiness>
@@ -13099,10 +13099,10 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SLUMS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SHANTY_TOWN</BuildingType>
+				<BuildingType>BUILDING_HOUSING_GHETTOS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_INNER_CITY</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -13538,12 +13538,12 @@
 			<ConstructSound>SND_BUILD_SHINTO</ConstructSound>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SHUTTLE_SERVICE</Type>
+			<Type>BUILDING_ORDINANCE_COMMUTER_SHUTTLE_SERVICE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SHUTTLE_SERVICE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SHUTTLE_SERVICE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_COMMUTER_SHUTTLE_SERVICE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_COMMUTER_SHUTTLE_SERVICE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<PrereqInCityBuildings>
@@ -13557,19 +13557,19 @@
 			</ReplacementBuildings>
 			<ObsoletesToBuilding>BUILDING_TELEPORT_BOOTH</ObsoletesToBuilding>
 			<iCost>830</iCost>
-			<FreeBuilding>BUILDING_SHUTTLE_SERVICE_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_ORDINANCE_EFFECT_COMMUTER_SHUTTLE_SERVICE</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SHUTTLE_SERVICE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_COMMUTER_SHUTTLE_SERVICE</ArtDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SHUTTLE_SERVICE_EFFECT</Type>
+			<Type>BUILDING_ORDINANCE_EFFECT_COMMUTER_SHUTTLE_SERVICE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SHUTTLE_SERVICE_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SHUTTLE_SERVICE_EFFECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORDINANCE_EFFECT_COMMUTER_SHUTTLE_SERVICE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORDINANCE_EFFECT_COMMUTER_SHUTTLE_SERVICE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<ObsoleteTech>TECH_WORMHOLE_HIVEMIND</ObsoleteTech>
 			<ReplacementBuildings>
@@ -13589,7 +13589,7 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_SHUTTLE_SERVICE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORDINANCE_COMMUTER_SHUTTLE_SERVICE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_THE_GOLDEN_TEMPLE</Type>
@@ -14013,7 +14013,7 @@
 				<BuildingType>BUILDING_DANCE_HUT</BuildingType>
 				<BuildingType>BUILDING_DANCE_HALL</BuildingType>
 				<BuildingType>BUILDING_MUSIC_HUT</BuildingType>
-				<BuildingType>BUILDING_MUSICIAN_SCHOOL</BuildingType>
+				<BuildingType>BUILDING_MUSIC_SCHOOL</BuildingType>
 				<BuildingType>BUILDING_DRAMA_SCHOOL</BuildingType>
 				<BuildingType>BUILDING_ARENA</BuildingType>
 				<BuildingType>BUILDING_COLOSSEUM</BuildingType>
@@ -14258,7 +14258,7 @@
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
 			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_ARCOLOGY_SLUMS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -14425,10 +14425,10 @@
 			</PrereqBonuses>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSING_HOGANS</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_INSULAE</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COMMONS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_APARTMENTS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGH_TECH_APARTMENTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -14457,10 +14457,10 @@
 			<Bonus>BONUS_STONE</Bonus>
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSING_MUD_HUTS</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_DOMUS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COTTAGES</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SUBURBS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SMART_HOMES</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -14577,10 +14577,10 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_VILLAS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_MANORS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_MANSIONS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_CHATEAU</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -15255,7 +15255,7 @@
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<ObsoleteTech>TECH_COLONY_ARCOLOGY</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA4_SDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_ARCOLOGY_SLUMS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -15313,10 +15313,10 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_HOUSING_STILT_HUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_HOGANS</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDMW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDMW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_INSULAE</BuildingType>
+				<BuildingType>BUILDING_HOUSING_COMMONS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_APARTMENTS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGH_TECH_APARTMENTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -15369,10 +15369,10 @@
 				<BuildingType>BUILDING_HOUSING_GRASS_HUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_LONGHOUSE</BuildingType>
 				<BuildingType>BUILDING_HOUSING_PUEBLOS</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA1_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SLUMS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SHANTY_TOWN</BuildingType>
+				<BuildingType>BUILDING_HOUSING_GHETTOS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_INNER_CITY</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -15444,7 +15444,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_THIEVES_HIDEOUT_UNSANCTIONED</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_THIEVES_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_THEFT</PrereqTech>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<CommerceChanges>
@@ -15459,7 +15459,7 @@
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_BANDITS_HIDEOUT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THIEVES_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROGUES_HIDEOUT_UNSANCTIONED</Type>
@@ -15467,7 +15467,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ROGUES_HIDEOUT_UNSANCTIONED</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_THIEVES_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<CommerceChanges>
@@ -15482,7 +15482,7 @@
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_BANDITS_HIDEOUT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THIEVES_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BURGLARS_HIDEOUT_UNSANCTIONED</Type>
@@ -15490,7 +15490,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BURGLARS_HIDEOUT_UNSANCTIONED</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_THIEVES_HIDEOUT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LOCKS</PrereqTech>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<CommerceChanges>
@@ -15505,7 +15505,7 @@
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_BANDITS_HIDEOUT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THIEVES_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BLACK_HAT_HIDEOUT_UNSANCTIONED</Type>
@@ -15810,10 +15810,10 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA1_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_LDLW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_LDLW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HOVELS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_SHACKS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_BOONDOCKS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_DUGOUTS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>
@@ -15868,7 +15868,7 @@
 			<ReplacementBuildings>
 				<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
 			</ReplacementBuildings>
-			<FreeBuilding>BUILDING_HUMAN_SACRIFICE</FreeBuilding>
+			<FreeBuilding>BUILDING_WORLDVIEW_HUMAN_SACRIFICE_ACTIVE</FreeBuilding>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_WV_HUMAN_SACRIFICE</ArtDefineTag>
@@ -16072,10 +16072,10 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HOUSE_ERA1_MDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA2_MDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA3_MDHW</BuildingType>
-				<BuildingType>BUILDING_HOUSE_ERA4_MDHW</BuildingType>
+				<BuildingType>BUILDING_HOUSING_PALACES</BuildingType>
+				<BuildingType>BUILDING_HOUSING_ESTATES</BuildingType>
+				<BuildingType>BUILDING_HOUSING_CONDOMINIUMS</BuildingType>
+				<BuildingType>BUILDING_HOUSING_HIGH_TECH_CONDOMINIUMS</BuildingType>
 				<BuildingType>BUILDING_HOUSING_COLONY_ARCOLOGY</BuildingType>
 				<BuildingType>BUILDING_LAUNCH_ARCOLOGY</BuildingType>
 			</ReplacementBuildings>

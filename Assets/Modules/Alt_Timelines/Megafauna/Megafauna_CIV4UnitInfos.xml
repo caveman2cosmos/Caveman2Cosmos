@@ -260,8 +260,8 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_MAMMOTHS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<BonusType>BONUS_MAMMOTH</BonusType>
@@ -483,8 +483,8 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_MAMMOTHS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
@@ -600,8 +600,8 @@
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_MAMMOTHS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<TechTypes>
@@ -724,8 +724,8 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_MAMMOTHS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
 			<TechTypes>
@@ -850,8 +850,8 @@
 				</UnitAI>
 			</NotUnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_MAMMOTHS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CANNON_FORGE</BuildingType>
@@ -1052,8 +1052,8 @@
 				<BuildType>BUILD_SUBURBS</BuildType>
 			</Builds>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_MAMMOTH_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_MAMMOTHS</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_MAMMOTH</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_PLOUGH</PrereqTech>
 			<TechTypes>
@@ -2530,7 +2530,7 @@
 				<PrereqTech>TECH_FELINE_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_BIG_CATS</BuildingType>
 			</PrereqAndBuildings>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -2682,7 +2682,7 @@
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_BIG_CATS</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BARRACKS</BuildingType>
@@ -2809,7 +2809,7 @@
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_BIG_CATS</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_MILITARY_BASE</BuildingType>
@@ -2963,7 +2963,7 @@
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_BIG_CATS</BuildingType>
 				<BuildingType>BUILDING_POLICE_CAT_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<BonusProductionModifiers>
@@ -3142,7 +3142,7 @@
 				<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_BIG_CAT_TRAINER_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_BIG_CATS</BuildingType>
 				<BuildingType>BUILDING_REPET</BuildingType>
 			</PrereqAndBuildings>
 			<BonusProductionModifiers>
@@ -3831,8 +3831,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_GIRAFFES</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			<TechTypes>
@@ -3971,8 +3971,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_GIRAFFES</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_ANCIENT_BALLISTICS</PrereqTech>
 			<TechTypes>
@@ -4134,8 +4134,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_GIRAFFES</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<TechTypes>
@@ -4317,8 +4317,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_GIRAFFES</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_CAVALRY_TACTICS</PrereqTech>
 			<TechTypes>
@@ -4502,8 +4502,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_GIRAFFES</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
 			<TechTypes>
@@ -4654,8 +4654,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_GIRAFFES</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<TechTypes>
@@ -4846,8 +4846,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_GIRAFFES</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<TechTypes>
@@ -5029,8 +5029,8 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER_EFFECT</BuildingType>
-				<BuildingType>BUILDING_GIRAFFE_TRAINER</BuildingType>
+				<BuildingType>BUILDING_EFFECT_HERITAGE_GIRAFFES</BuildingType>
+				<BuildingType>BUILDING_ANIMAL_TRAINER_GIRAFFE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_GUERRILLA_WARFARE</PrereqTech>
 			<TechTypes>
