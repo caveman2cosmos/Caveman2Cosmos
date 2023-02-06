@@ -4081,7 +4081,7 @@ int CvCity::getProductionPerTurn(ProductionCalc::flags flags = ProductionCalc::Y
 	const int iOverflow = (flags & ProductionCalc::Overflow) ? getOverflowProduction() + getFeatureProduction() : 0;
 	const int iYield = (flags & ProductionCalc::Yield) ? getBaseYieldRate(YIELD_PRODUCTION) : 0;
 
-	return getExtraYield(YIELD_PRODUCTION) + iOverflow + iFoodProduction + iYield * getBaseYieldRateModifier(YIELD_PRODUCTION) / 100;
+	return std::max(1, getExtraYield(YIELD_PRODUCTION) + iOverflow + iFoodProduction + iYield * getBaseYieldRateModifier(YIELD_PRODUCTION) / 100);
 }
 
 int CvCity::getProductionDifference(const OrderData& orderData, ProductionCalc::flags flags) const
@@ -6542,34 +6542,46 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 	PROFILE_FUNC();
 
 	// if the plot distance is greater than the maximum desired plot distance
-	//  or if the plot does not exist, then the plot distance is maximal
+	// or if the plot does not exist, then the plot distance is maximal
 	if (plotDistance(getX(), getY(), mainPlot->getX(), mainPlot->getY()) > iMaxDistance) return MAX_INT;
 
-	// Calculate terrain distance necessary before neighbors, because bonus presence can
+	// Calculate terrain distance necessary before neighbors, because city presence can
 	// remove any combination of terrain and river crossing penalties; chosing which neighbor
 	// therefore requires the current terrain known to avoid an endlessly-updating loop.
 	int terrainDistance = 0;
 
-	// Terrain distance increased by 2 if can't found on peaks; peak-type also ignore regular terrain
+	// Distance from ground tile type (peak or specific terrain)
 	if (mainPlot->isAsPeak())
 	{
 		terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_PEAK()).getCultureDistance();
-		terrainDistance += 2 * !GET_TEAM(getTeam()).isCanFoundOnPeaks();
+		terrainDistance += !GET_TEAM(getTeam()).isMoveFastPeaks()
+			+ !GET_TEAM(getTeam()).isCanPassPeaks()
+			+ !GET_TEAM(getTeam()).isCanFoundOnPeaks();
 	}
 	else
 	{
 		terrainDistance += GC.getTerrainInfo(mainPlot->getTerrainType()).getCultureDistance();
-		if (mainPlot->isHills())
-		{
-			terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_HILL()).getCultureDistance();
-		}
-		// Terrain distance increased by 2 if can't trade on water terrain
+		// Terrain distance increased if can't trade on water terrain, can't see far (optics)
 		if (mainPlot->isWater())
 		{
 			if (!GET_TEAM(getTeam()).isTerrainTrade(mainPlot->getTerrainType())) terrainDistance += 2;
+			if (!mainPlot->isAdjacentToLand() && !GET_TEAM(getTeam()).isExtraWaterSeeFrom()) terrainDistance += 1;
+		}
+		else
+		{
+			// Freshwater penalty acts as an inhibitor; effectively reduced as farms spread irrigation,
+			// removed at bAllowsDesertFarming (refrigeration)
+			if (!mainPlot->isFreshWater() && !GET_TEAM(getTeam()).isCanFarmDesert()) terrainDistance += 1;
+
+			if (mainPlot->isHills())
+			{
+				terrainDistance += GC.getTerrainInfo(GC.getTERRAIN_HILL()).getCultureDistance()
+					+ !GET_TEAM(getTeam()).isCanFoundOnPeaks();
+			}
 		}
 	}
 
+	// Distance from features
 	if (mainPlot->getFeatureType() != NO_FEATURE)
 	{
 		// some features cause underlaying terrain cost to be ignored; oasis, floodplain, nat'l wonders
@@ -6585,27 +6597,43 @@ int CvCity::calculateCultureDistance(const CvPlot* mainPlot, int iMaxDistance) c
 		terrainDistance += GC.getFeatureInfo(mainPlot->getFeatureType()).getCultureDistance();
 	}
 
+	// Using route value/tier as softer inhibitor by era
+	if (!mainPlot->isWater())
+	{
+		if (mainPlot->getRouteType() == NO_ROUTE)
+		{
+			terrainDistance = std::max(0, (terrainDistance - 1) * 2 + 1);
+		}
+		else
+		{
+			const int routeTier = GC.getRouteInfo(mainPlot->getRouteType()).getValue();
+			if (routeTier < 4) terrainDistance = terrainDistance * (routeTier + 2) / (routeTier + 1);
+		}
+	}
+
+	// Halve terrain distance if bonus is present
+	if (mainPlot->getBonusType(getTeam()) != NO_BONUS) terrainDistance /= 2;
+
 	/* Determine the final cultural distance of given plot:
 		1: All directions from given plot are checked (could come from weird direction)
 		2: Neighbors with distance of MAX_INT are ignored because they
 			don't exist or haven't been calculated yet
-		3: Presence of a bonus can reduce terrain and river penalties; need
-			calculate full cost from each tile to prevent endless recalc
 		3: Smallest total possible distance is used from all neighbors
-		4: Greater river penalty (+1 each) for lacking river trade, bridge building */
+		4: Greater river penalty for lacking river trade, bridge building
+		5: City tiles are easier to influence, even across river */
 
 	int distance = MAX_INT;
 	const int extraRiverPenalty = !GET_TEAM(getTeam()).isBridgeBuilding() + !GET_TEAM(getTeam()).isRiverTrade();
-	const bool hasBonus = mainPlot->getBonusType(getTeam()) != NO_BONUS;
+	const bool isCity = mainPlot->isCity();
 
 	foreach_(const CvPlot* adjacentPlot, mainPlot->cardinalDirectionAdjacent())
 	{
 		int neighborDist = m_aCultureDistances[adjacentPlot];
 		if (neighborDist != 0 && neighborDist != MAX_INT)
 		{
-			int netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (1 + extraRiverPenalty);
-			// Halve distance penalty if plot has a bonus
-			netDistanceModifier = netDistanceModifier / (1 + hasBonus);
+			int netDistanceModifier = terrainDistance + mainPlot->isRiverCrossing(directionXY(mainPlot, adjacentPlot)) * (1 + extraRiverPenalty) * 2;
+			// City tiles are easier to influence even if across river (city itself crosses river)
+			netDistanceModifier /= (1 + isCity);
 			neighborDist += 1 + std::max(0, netDistanceModifier);
 			if (neighborDist < distance) distance = neighborDist;
 		}
@@ -11165,7 +11193,7 @@ int CvCity::getYieldRate(const YieldTypes eYield) const
 int CvCity::getYieldRate100(const YieldTypes eYield) const
 {
 	PROFILE_FUNC();
-	return getBaseYieldRate(eYield) * getBaseYieldRateModifier(eYield) + 100 * getExtraYield(eYield);
+	return std::max(100, getBaseYieldRate(eYield) * getBaseYieldRateModifier(eYield) + 100 * getExtraYield(eYield));
 }
 
 int CvCity::getPlotYield(YieldTypes eIndex)	const

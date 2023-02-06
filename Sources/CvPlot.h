@@ -392,8 +392,8 @@ protected:
 	std::vector<std::pair<PlayerTypes, int> > m_cultureRatesLastTurn;
 
 public:
-	PlayerTypes calculateCulturalOwner() const;
-	PlayerTypes getPlayerWithTerritorySurroundingThisPlotCardinally() const;
+	PlayerTypes calculateCulturalOwner(bool bCountLastTurn = true) const;
+	//PlayerTypes getPlayerWithTerritorySurroundingThisPlotCardinally() const;
 
 	void plotAction(PlotUnitFunc func, int iData1 = -1, int iData2 = -1, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM);
 	int plotCount(ConstPlotUnitFunc funcA, int iData1A = -1, int iData2A = -1, const CvUnit* pUnit = NULL, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, ConstPlotUnitFunc funcB = NULL, int iData1B = -1, int iData2B = -1, int iRange = 0) const;
@@ -727,10 +727,10 @@ public:
 	int getCulture(PlayerTypes eIndex) const;
 	int countTotalCulture() const;
 	int countFriendlyCulture(TeamTypes eTeam) const;
-	PlayerTypes findHighestCulturePlayer(const bool bCountLegacyCulture = true) const;
+	PlayerTypes findHighestCulturePlayer(const bool bCountLegacyCulture = true, const bool bCountLastTurn = true) const;
 	int calculateCulturePercent(PlayerTypes eIndex, int iExtraDigits = 0) const;
 	int calculateTeamCulturePercent(TeamTypes eIndex) const;
-	void setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bUpdatePlotGroups);
+	void setCulture(PlayerTypes eIndex, int iNewValue, bool bUpdate, bool bUpdatePlotGroups, const bool bDecay = false);
 	void changeCulture(PlayerTypes eIndex, int iChange, bool bUpdate);
 	int countNumAirUnits(TeamTypes eTeam) const;
 	int countNumAirUnitCargoVolume(TeamTypes eTeam) const;
