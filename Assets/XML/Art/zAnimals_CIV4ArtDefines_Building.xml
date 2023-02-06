@@ -322,7 +322,7 @@
 			<Button>Art/Interface/Buttons/Units/Caiman.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_CAPUCHIN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CAPUCHIN_MONKEY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -372,7 +372,7 @@
 			<Button>Art/Interface/Buttons/Buildings/PaleolithicBearMyth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CAVE_BEAR_REMAINS</Type>
+			<Type>ART_DEF_BUILDING_REMAINS_CAVE_BEAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -862,7 +862,7 @@
 			<Button>Art/Interface/Buttons/Units/Hornedowl.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_HUMPBACK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_HUMPBACK_WHALE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1182,7 +1182,7 @@
 			<Button>Art/Interface/Buttons/Units/Capuchin.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_NILECROC</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_NILE_CROCODILE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1572,7 +1572,7 @@
 			<Button>Art/Interface/Buttons/Buildings/totem_ethowolf.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_REDPANDA</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_RED_PANDA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1722,7 +1722,7 @@
 			<Button>Art/Interface/Buttons/Units/sealion.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_E_SEA_BIRD</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_SEA_BIRDS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2022,7 +2022,7 @@
 			<Button>Art/Interface/Buttons/Units/Wildebeest.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_WILDBOAR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_WILD_BOAR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

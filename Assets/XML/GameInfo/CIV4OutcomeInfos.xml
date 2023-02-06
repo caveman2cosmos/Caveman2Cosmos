@@ -1220,7 +1220,7 @@
 			<bCity>1</bCity>
 			<PrereqBuildings>
 				<BuildingType>BUILDING_WORLDVIEW_CANNIBALISM_ACTIVE</BuildingType>
-				<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+				<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
 			</PrereqBuildings>
 			<ReplaceOutcomes>
 				<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY</OutcomeType>

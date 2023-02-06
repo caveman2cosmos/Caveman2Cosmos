@@ -50,7 +50,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CONVENTION_CENTER</BuildingType>
+					<BuildingType>BUILDING_CONVENTION_CENTRE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -320,7 +320,7 @@
 			<!-- Revolution Trait Effects End -->
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SUMERIAN_ZIGGURAT</BuildingType>
+					<BuildingType>BUILDING_ZIGGURAT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -627,7 +627,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_NANOPRINTING_MILL</BuildingType>
+					<BuildingType>BUILDING_NANOBOTIC_PRINTING_MILL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -738,7 +738,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -928,7 +928,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CHINESE_PAVILLION</BuildingType>
+					<BuildingType>BUILDING_PAVILION</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1090,7 +1090,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SCULPTURE_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SCULPTURES</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -1441,7 +1441,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
+					<BuildingType>BUILDING_MONUMENT_OF_THE_DICTATOR</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -1665,7 +1665,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+					<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -2110,7 +2110,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+					<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -3294,7 +3294,7 @@
 			</CommerceModifiers>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
+					<BuildingType>BUILDING_MONUMENT_OF_THE_DICTATOR</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>
@@ -4035,7 +4035,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CONVENTION_CENTER</BuildingType>
+					<BuildingType>BUILDING_CONVENTION_CENTRE</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4274,7 +4274,7 @@
 			<!-- Revolution Trait Effects End -->
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_SUMERIAN_ZIGGURAT</BuildingType>
+					<BuildingType>BUILDING_ZIGGURAT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4587,7 +4587,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_NANOPRINTING_MILL</BuildingType>
+					<BuildingType>BUILDING_NANOBOTIC_PRINTING_MILL</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 			</BuildingProductionModifierTypes>
@@ -4687,7 +4687,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -4867,7 +4867,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CHINESE_PAVILLION</BuildingType>
+					<BuildingType>BUILDING_PAVILION</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -5029,7 +5029,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_SCULPTURE_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_SCULPTURES</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -5383,7 +5383,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
+					<BuildingType>BUILDING_MONUMENT_OF_THE_DICTATOR</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -5589,7 +5589,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+					<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -6031,7 +6031,7 @@
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+					<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
 					<iBuildingProductionModifier>20</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -7223,7 +7223,7 @@
 			</CommerceModifiers>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
+					<BuildingType>BUILDING_MONUMENT_OF_THE_DICTATOR</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 			</BuildingHappinessModifierTypes>

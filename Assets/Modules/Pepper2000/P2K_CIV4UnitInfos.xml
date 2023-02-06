@@ -5839,7 +5839,7 @@
 				<BuildType>BUILD_INTERSTELLAR_RESEARCH_BASE</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_PLANETARY_LANDING</BuildingType>
+				<BuildingType>BUILDING_INTERSTELLAR_PLANETARY_LANDING</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_INTERSTELLAR_TRADE</PrereqTech>
 			<iCost>5000</iCost>

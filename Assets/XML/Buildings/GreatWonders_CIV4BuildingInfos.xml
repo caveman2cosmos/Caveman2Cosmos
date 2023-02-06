@@ -566,7 +566,7 @@
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
 			<ObsoleteTech>TECH_IMPERIALISM</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_ALHAMBRA_OBSOLETE</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_RELIC_ALHAMBRA</ObsoletesToBuilding>
 			<iCost>2640</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<CommerceChanges>
@@ -629,10 +629,10 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ALHAMBRA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ALHAMBRA_OBSOLETE</Type>
+			<Type>BUILDING_RELIC_ALHAMBRA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_ALHAMBRA_OBSOLETE</Description>
+			<Description>TXT_KEY_BUILDING_RELIC_ALHAMBRA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALHAMBRA_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2492,7 +2492,7 @@
 			</YieldChanges>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MEGATOWER_BIODOME</BuildingType>
+					<BuildingType>BUILDING_MEGATOWER_BIODOME_PARK_CROWN_SECTION</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
@@ -2588,7 +2588,7 @@
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
 				<BuildingType>BUILDING_BARRICADES</BuildingType>
 				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+				<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
 				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
 				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</PrereqOrBuildings>
@@ -2654,7 +2654,7 @@
 			</FreeSpecialistCounts>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ISLAMIC_CATHEDRAL</BuildingType>
+				<BuildingType>BUILDING_ISLAMIC_MOSQUE</BuildingType>
 			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
@@ -4490,7 +4490,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<iCost>1104</iCost>
@@ -5374,7 +5374,7 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ISLAMIC_CATHEDRAL</BuildingType>
+				<BuildingType>BUILDING_ISLAMIC_MOSQUE</BuildingType>
 			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
@@ -5488,7 +5488,7 @@
 			</PrereqBonuses>
 			<iCost>5220</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<FreeBuilding>BUILDING_DISNEYLAND_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_DISNEYLAND</FreeBuilding>
 			<iHappinessPercentPerPopulation>20</iHappinessPercentPerPopulation>
 			<iAreaHappiness>2</iAreaHappiness>
 			<CommerceChanges>
@@ -5588,7 +5588,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_ISLAMIC_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_ISLAMIC_MOSQUE</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -6007,16 +6007,16 @@
 			<iPrereqPopulation>20</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EARTHCORE_MISSION</Type>
+			<Type>BUILDING_MISSION_TO_EARTHS_CORE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EARTHCORE_MISSION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EARTHCORE_MISSION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MISSION_TO_EARTHS_CORE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MISSION_TO_EARTHS_CORE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EARTHCORE_MISSION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MISSION_TO_EARTHS_CORE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EARTHCORE_MISSION</MovieDefineTag>
 			<PrereqTech>TECH_SUBTERRANEAN_EXPLORATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -6083,7 +6083,7 @@
 				<BuildingType>BUILDING_NATURE_DANCE</BuildingType>
 				<BuildingType>BUILDING_STONE_QUARRY</BuildingType>
 				<BuildingType>BUILDING_MINE_IRON</BuildingType>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 				<BuildingType>BUILDING_ADVANCED_EARTHWORKS</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
@@ -6467,7 +6467,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
 				<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>5220</iCost>
 			<CommerceChanges>
@@ -7350,7 +7350,7 @@
 			</BonusProductionModifiers>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SCULPTORS_WORKSHOP</BuildingType>
-				<BuildingType>BUILDING_SCULPTURE_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_SCULPTURES</BuildingType>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<Flavors>
@@ -7477,7 +7477,7 @@
 				<BuildingType>BUILDING_FIRE_DANCE</BuildingType>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqNotInCityBuildings>
 				<BuildingType>BUILDING_GRAND_SKY_FESTIVAL</BuildingType>
@@ -8592,7 +8592,7 @@
 			<bRiver>1</bRiver>
 			<Bonus>BONUS_STEEL_WARES</Bonus>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_LARGE_ARCH_BRIDGE</BuildingType>
+				<BuildingType>BUILDING_LARGE_STEEL_ARCH_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_SMALL_SUSPENSION_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_LARGE_SUSPENSION_BRIDGE</BuildingType>
 				<BuildingType>BUILDING_TELEPORT_BOOTH</BuildingType>
@@ -8611,7 +8611,7 @@
 			<iRiverDefensePenalty>45</iRiverDefensePenalty>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iTradeRouteModifier>50</iTradeRouteModifier>
-			<FreeBuilding>BUILDING_LARGE_ARCH_BRIDGE</FreeBuilding>
+			<FreeBuilding>BUILDING_LARGE_STEEL_ARCH_BRIDGE</FreeBuilding>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<PropertyManipulators>
 				<PropertySource>
@@ -10967,7 +10967,7 @@
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
 				<BuildingType>BUILDING_BARRICADES</BuildingType>
 				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+				<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
 				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
 				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</PrereqOrBuildings>
@@ -11744,7 +11744,7 @@
 				<BuildingType>BUILDING_HIGH_WALLS</BuildingType>
 				<BuildingType>BUILDING_BARRICADES</BuildingType>
 				<BuildingType>BUILDING_CEMENT_BARRIER</BuildingType>
-				<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+				<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
 				<BuildingType>BUILDING_SUPERSTRONG_ALLOY_WALL</BuildingType>
 				<BuildingType>BUILDING_MEGASTRONG_ALLOY_WALL</BuildingType>
 			</PrereqOrBuildings>
@@ -13749,7 +13749,7 @@
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_PORCELAIN_WORKSHOP</BuildingType>
-				<BuildingType>BUILDING_PORCELAIN_FACTORY</BuildingType>
+				<BuildingType>BUILDING_FACTORY_PORCELAIN_WARES</BuildingType>
 				<BuildingType>BUILDING_MANUFACTURING_DISTRICT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>2550</iCost>
@@ -15208,13 +15208,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ONE_BELT_ONE_ROAD</Type>
+			<Type>BUILDING_BELT_AND_ROAD_INITIATIVE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_ONE_BELT_ONE_ROAD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ONE_BELT_ONE_ROAD_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_BELT_AND_ROAD_INITIATIVE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BELT_AND_ROAD_INITIATIVE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ONE_BELT_ONE_ROAD</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BELT_AND_ROAD_INITIATIVE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ONE_BELT_ONE_ROAD</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -16515,15 +16515,15 @@
 			</FreeSpecialistCounts>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_PORTUGAL_FEITORIA</Type>
+			<Type>BUILDING_FEITORIA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PORTUGAL_FEITORIA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PORTUGAL_FEITORIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FEITORIA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FEITORIA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PORTUGAL_FEITORIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FEITORIA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PORTUGAL_FEITORIA</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -17217,15 +17217,15 @@
 			<Help>TXT_KEY_BUILDING_ROUTE_66_HELP</Help>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_RUDOLPHINE_TABLES</Type>
+			<Type>BUILDING_RUDOLPHINE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_RUDOLPHINE_TABLES</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RUDOLPHINE_TABLES_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_RUDOLPHINE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_RUDOLPHINE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RUDOLPHINE_TABLES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RUDOLPHINE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_RUDOLPHINE_TABLES</MovieDefineTag>
 			<PrereqTech>TECH_HELIOCENTRISM</PrereqTech>
 			<ObsoleteTech>TECH_RADAR</ObsoleteTech>
@@ -19147,7 +19147,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
 				<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -19441,7 +19441,7 @@
 			</FreeSpecialistCounts>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ISLAMIC_CATHEDRAL</BuildingType>
+				<BuildingType>BUILDING_ISLAMIC_MOSQUE</BuildingType>
 			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>

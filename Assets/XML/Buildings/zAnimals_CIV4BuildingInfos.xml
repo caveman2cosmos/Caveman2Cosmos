@@ -648,11 +648,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CARNIVAL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CAVE_BEAR_REMAINS</Type>
+			<Type>BUILDING_REMAINS_CAVE_BEAR</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CAVE_BEAR_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_CAVE_BEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
@@ -700,14 +700,14 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_CAVE_BEAR_REMAINS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_CAVE_BEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CAVE_LION_REMAINS</Type>
+			<Type>BUILDING_REMAINS_CAVE_LION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CAVE_LION_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_CAVE_LION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqAmountBuildings>
@@ -1236,7 +1236,7 @@
 				<Or>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_ELEPHANT</ID>
+						<ID>BUILDING_FOLKLORE_T_ELEPHANT</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
@@ -1244,11 +1244,11 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_ELEPHANT</ID>
+						<ID>BUILDING_FOLKLORE_T_ELEPHANT</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_ANTELOPE</ID>
+						<ID>BUILDING_FOLKLORE_T_ANTELOPE</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>

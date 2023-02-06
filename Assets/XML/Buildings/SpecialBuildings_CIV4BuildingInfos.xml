@@ -1099,12 +1099,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_MIND_CONTROL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CIVICPOSTSCARCITY</Type>
+			<Type>BUILDING_CIVIC_POST_SCARCITY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CIVICPOSTSCARCITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CIVICPOSTSCARCITY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CIVIC_POST_SCARCITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CIVIC_POST_SCARCITY_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -1127,7 +1127,7 @@
 			<bAutoBuild>1</bAutoBuild>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CIVICPOSTSCARCITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CIVIC_POST_SCARCITY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CIVIC_REPUBLIC</Type>
@@ -1171,7 +1171,7 @@
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DEPARTMENT_ENERGY</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_OF_ENERGY</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -2218,12 +2218,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_WONKA_HQ</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_ANIMALABUSE</Type>
+			<Type>BUILDING_CRIME_ANIMAL_ABUSE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_ANIMALABUSE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_ANIMALABUSE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_ANIMAL_ABUSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_ANIMAL_ABUSE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_DOG</Bonus>
@@ -2344,12 +2344,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_BANKROBBERY</Type>
+			<Type>BUILDING_CRIME_BANK_ROBBERY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_BANKROBBERY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_BANKROBBERY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_BANK_ROBBERY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_BANK_ROBBERY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_BANKING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BANK</BuildingType>
@@ -2885,12 +2885,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_DRUGCARTELS</Type>
+			<Type>BUILDING_CRIME_DRUG_CARTELS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_DRUGCARTELS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_DRUGCARTELS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_DRUG_CARTELS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_DRUG_CARTELS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
 			<iHealth>-6</iHealth>
 			<iHappiness>-6</iHappiness>
@@ -3201,12 +3201,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_GANGWARFARE</Type>
+			<Type>BUILDING_CRIME_GANG_WARFARE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_GANGWARFARE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_GANGWARFARE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_GANG_WARFARE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_GANG_WARFARE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
 			<iHealth>-6</iHealth>
 			<iHappiness>-4</iHappiness>
@@ -3240,12 +3240,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_GENEFORGERY</Type>
+			<Type>BUILDING_CRIME_GENE_FORGERY</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_GENEFORGERY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_GENEFORGERY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_GENE_FORGERY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_GENE_FORGERY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_GENETICS</PrereqTech>
 			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
@@ -4491,12 +4491,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYCRIME</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRIME_SPORTSRIOTS</Type>
+			<Type>BUILDING_CRIME_SPORTS_RIOTS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CRIME_SPORTSRIOTS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRIME_SPORTSRIOTS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CRIME_SPORTS_RIOTS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CRIME_SPORTS_RIOTS_PEDIA</Civilopedia>
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
 			<iHealth>-1</iHealth>
 			<iHappiness>-4</iHappiness>
@@ -5354,12 +5354,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYDISEASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DISNEYLAND_EFFECT</Type>
+			<Type>BUILDING_EFFECT_DISNEYLAND</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DISNEYLAND_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DISNEYLAND_EFFECT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EFFECT_DISNEYLAND</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_DISNEYLAND_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ANIMATION</PrereqTech>
 			<iHappiness>1</iHappiness>
 			<bNukeImmune>1</bNukeImmune>
@@ -5498,12 +5498,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_NATIONAL_ACADEMY_DATABASE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EGYPT_MYTH_SHRINE</Type>
+			<Type>BUILDING_THE_KARNAK_TEMPLE_COMPLEX</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EGYPT_MYTH_SHRINE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EGYPT_MYTH_SHRINE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_KARNAK_TEMPLE_COMPLEX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_KARNAK_TEMPLE_COMPLEX_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
 			<ReligionType>RELIGION_KEMETISM</ReligionType>
@@ -5541,7 +5541,7 @@
 			<iAsset>8</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_EGYPT_MYTH_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_KARNAK_TEMPLE_COMPLEX</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EGYPT_MYTH_SHRINE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -8283,12 +8283,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYEDUCATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FERTILITYFESTIVAL_EFFECT</Type>
+			<Type>BUILDING_EFFECT_FERTILITY_FESTIVAL</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FERTILITYFESTIVAL_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FERTILITYFESTIVAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EFFECT_FERTILITY_FESTIVAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FERTILITY_FESTIVAL_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CELEBRATION</PrereqTech>
 			<ObsoleteTech>TECH_WOMENS_SUFFRAGE</ObsoleteTech>
 			<iHappiness>1</iHappiness>
@@ -8303,7 +8303,7 @@
 			<iFoodKept>5</iFoodKept>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_FERTILITYFESTIVAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FERTILITY_FESTIVAL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FERTILTY_DANCE</Type>
@@ -8321,7 +8321,7 @@
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_WOMENS_SUFFRAGE</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_FERTILITYFESTIVAL_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_FERTILITY_FESTIVAL</BuildingType>
 			</ReplacementBuildings>
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
@@ -8640,12 +8640,12 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GOOD_POLICE_ACADEMY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOOD_YOUTH_CURFEW</Type>
+			<Type>BUILDING_SAFETY_YOUTH_CURFEW</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GOOD_YOUTH_CURFEW</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOOD_YOUTH_CURFEW_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_SAFETY_YOUTH_CURFEW</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SAFETY_YOUTH_CURFEW_PEDIA</Civilopedia>
 			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<CommercePerPopChanges>
 				<iCommerce>-50</iCommerce>
@@ -8662,7 +8662,7 @@
 			</PropertyManipulators>
 			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GOOD_YOUTH_CURFEW</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_YOUTH_CURFEW</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HOUSING_GRASS_HUTS</Type>
@@ -11443,7 +11443,7 @@
 				<BuildingType>BUILDING_ISLAMIC_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_JEWISH_TEMPLE</BuildingType>
 				<BuildingType>BUILDING_HELLENIC_TEMPLE</BuildingType>
-				<BuildingType>BUILDING_EGYPT_MYTH_TEMPLE</BuildingType>
+				<BuildingType>BUILDING_TEMPLE_OF_RA</BuildingType>
 				<BuildingType>BUILDING_NATURE_ALTAR</BuildingType>
 				<BuildingType>BUILDING_CANAANITE_TEMPLE</BuildingType>
 			</PrereqOrBuildings>
@@ -12734,11 +12734,11 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PROPERTYPOLLUTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_POLLUTION_REDTIDE</Type>
+			<Type>BUILDING_POLLUTION_RED_TIDE</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_POLLUTION_REDTIDE</Description>
+			<Description>TXT_KEY_BUILDING_POLLUTION_RED_TIDE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WATER_POLLUTION_PEDIA</Civilopedia>
 			<bWater>1</bWater>
 			<iHappiness>-3</iHappiness>
@@ -15960,7 +15960,7 @@
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -16030,7 +16030,7 @@
 			</PrereqInCityBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<iCost>870</iCost>
-			<FreeBuilding>BUILDING_GOOD_YOUTH_CURFEW</FreeBuilding>
+			<FreeBuilding>BUILDING_SAFETY_YOUTH_CURFEW</FreeBuilding>
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>

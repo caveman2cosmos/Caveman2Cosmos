@@ -1325,13 +1325,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_EDUCATION</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEPARTMENT_ENERGY</Type>
+			<Type>BUILDING_DEPARTMENT_OF_ENERGY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEPARTMENT_ENERGY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_ENERGY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_OF_ENERGY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_OF_ENERGY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqInCityBuildings>
@@ -1353,7 +1353,7 @@
 			</SpecialistCounts>
 			<FreeBuilding>BUILDING_POWER_LINES</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_ENERGY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_OF_ENERGY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_ENERGY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1701,13 +1701,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ELECTRONIC_GAMING_LEAGUE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ELEPHANT_NATIONAL</Type>
+			<Type>BUILDING_CENTRAL_BREEDER_ELEPHANT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ELEPHANT_NATIONAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEPHANT_NATIONAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_CENTRAL_BREEDER_ELEPHANT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CENTRAL_BREEDER_ELEPHANT_PEDIA</Civilopedia>
 			<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_ELEPHANTS</Bonus>
@@ -1736,7 +1736,7 @@
 				</Flavor>
 			</Flavors>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_ELEPHANT_NATIONAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CENTRAL_BREEDER_ELEPHANT</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ELEPHANT_NATIONAL</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1820,13 +1820,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_FEDERAL_PRISON</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FERTILITYFESTIVAL</Type>
+			<Type>BUILDING_FERTILITY_FESTIVAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_FERTILITYFESTIVAL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FERTILITYFESTIVAL_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_FERTILITY_FESTIVAL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FERTILITY_FESTIVAL_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CELEBRATION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_FUR</Bonus>
@@ -1834,7 +1834,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
-				<BuildingType>BUILDING_FERTILITYFESTIVAL_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EFFECT_FERTILITY_FESTIVAL</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_WOMENS_SUFFRAGE</ObsoleteTech>
 			<iCost>172</iCost>
@@ -1842,9 +1842,9 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iHappiness>1</iHappiness>
 			<iAreaHappiness>1</iAreaHappiness>
-			<FreeBuilding>BUILDING_FERTILITYFESTIVAL_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_FERTILITY_FESTIVAL</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_FERTILITYFESTIVAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FERTILITY_FESTIVAL</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FERTILITYFESTIVAL</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -2382,7 +2382,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FORGE</BuildingType>
 				<BuildingType>BUILDING_FOUNDRY</BuildingType>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
 			<iCost>664</iCost>
@@ -2417,7 +2417,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -2439,7 +2439,7 @@
 			<iPrereqPopulation>3</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BUTCHERY</BuildingType>
-				<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+				<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
 				<BuildingType>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
@@ -2469,7 +2469,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+					<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
 					<CommerceChanges>
 						<iCommerce>5</iCommerce>
 					</CommerceChanges>
@@ -3612,17 +3612,17 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HOLOGRAPHIC_GAMING_LEAGUE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HOMELAND_SECURITY</Type>
+			<Type>BUILDING_HOMELAND_SECURITY_AGENCY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HOMELAND_SECURITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HOMELAND_SECURITY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HOMELAND_SECURITY_AGENCY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HOMELAND_SECURITY_AGENCY_PEDIA</Civilopedia>
 			<PrereqTech>TECH_FASCISM</PrereqTech>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_NATIONAL_SECURITY</BuildingType>
+					<BuildingType>BUILDING_SECURITY_BUREAU</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -3669,7 +3669,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_HOMELAND_SECURITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HOMELAND_SECURITY_AGENCY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HOMELAND_SECURITY</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -5839,7 +5839,7 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_TRANSGENETICS_LAB</BuildingType>
+				<BuildingType>BUILDING_TRANSGENICS_LAB</BuildingType>
 			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>

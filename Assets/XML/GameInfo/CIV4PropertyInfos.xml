@@ -116,7 +116,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_BANKROBBERY</BuildingType>
+					<BuildingType>BUILDING_CRIME_BANK_ROBBERY</BuildingType>
 					<iMinValue>450</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -181,7 +181,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_GENEFORGERY</BuildingType>
+					<BuildingType>BUILDING_CRIME_GENE_FORGERY</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -256,7 +256,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_SPORTSRIOTS</BuildingType>
+					<BuildingType>BUILDING_CRIME_SPORTS_RIOTS</BuildingType>
 					<iMinValue>350</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -311,7 +311,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_ANIMALABUSE</BuildingType>
+					<BuildingType>BUILDING_CRIME_ANIMAL_ABUSE</BuildingType>
 					<iMinValue>250</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -326,12 +326,12 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_DRUGCARTELS</BuildingType>
+					<BuildingType>BUILDING_CRIME_DRUG_CARTELS</BuildingType>
 					<iMinValue>1450</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_GANGWARFARE</BuildingType>
+					<BuildingType>BUILDING_CRIME_GANG_WARFARE</BuildingType>
 					<iMinValue>1100</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -651,7 +651,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_POLLUTION_REDTIDE</BuildingType>
+					<BuildingType>BUILDING_POLLUTION_RED_TIDE</BuildingType>
 					<iMinValue>750</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>

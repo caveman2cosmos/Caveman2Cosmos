@@ -531,7 +531,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+					<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -944,7 +944,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_EGYPT_MYTH_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_KARNAK_TEMPLE_COMPLEX</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -1461,7 +1461,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_NATIONAL_SECURITY</BuildingType>
+					<BuildingType>BUILDING_SECURITY_BUREAU</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -1469,7 +1469,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_AMMUNITION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -2371,7 +2371,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+					<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -4447,7 +4447,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+					<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -5994,7 +5994,7 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_MUNITIONS_FACTORY</BuildingType>
+					<BuildingType>BUILDING_FACTORY_AMMUNITION</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -7312,7 +7312,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
+					<BuildingType>BUILDING_MONUMENT_OF_THE_DICTATOR</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -7488,7 +7488,7 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_DICTATOR_MONUMENT</BuildingType>
+					<BuildingType>BUILDING_MONUMENT_OF_THE_DICTATOR</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -7778,7 +7778,7 @@
 					</CommerceModifiers>
 				</BuildingCommerceModifier>
 				<BuildingCommerceModifier>
-					<BuildingType>BUILDING_EGYPT_MYTH_SHRINE</BuildingType>
+					<BuildingType>BUILDING_THE_KARNAK_TEMPLE_COMPLEX</BuildingType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -9363,7 +9363,7 @@
 					<iHealthChange>-2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 					<iHealthChange>-2</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -9488,7 +9488,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+					<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -9741,7 +9741,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+					<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -9923,7 +9923,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_METAMATERIAL_WALL</BuildingType>
+					<BuildingType>BUILDING_METAMATERIAL_WALLS</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -10433,7 +10433,7 @@
 					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+					<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 					<iHealthChange>-1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>

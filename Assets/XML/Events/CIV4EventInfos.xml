@@ -2115,7 +2115,7 @@
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ISLAMIC_CATHEDRAL</Building>
+					<Building>BUILDING_ISLAMIC_MOSQUE</Building>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>4</iExtraCommerce>
 				</BuildingExtraCommerce>
@@ -4180,7 +4180,7 @@
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<Building>BUILDING_ISLAMIC_CATHEDRAL</Building>
+					<Building>BUILDING_ISLAMIC_MOSQUE</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>

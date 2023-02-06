@@ -27,7 +27,7 @@
 		<Russian>Àâòîìàòè÷åñêèå ÷àñû - ýòî òèï ÷àñîâ ñ àâòîìàòèçèðîâàííûì áîåì. Ýòè ÷àñû ñîçäàâàëèñü â Åâðîïå íà÷èíàÿ ñî ñðåäíåâåêîâüÿ è äî âèêòîðèàíñêîé ýïîõè. Òðàäèöèè èçîáðåòàòåëüñòâà äåëàþò èõ áîëåå ðàñïðîñòðàíåíûìè â íàøåé ñòðàíå, ÷åì â äðóãèõ. Àâòîìàò, êàê ïðàâèëî, óñòàíàâëèâàëè íà ÷àñ, ïîë÷àñà èëè ÷åòâåðòü ÷àñà, îáû÷íî ñ óäàðàìè êîëîêîëà.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT</Tag>
+		<Tag>TXT_KEY_BUILDING_ORNITHOPTER_AERIE</Tag>
 		<English>Ornithopter Aerie</English>
 		<French>
 			<Text>Aire d'ornithoptères</Text>
@@ -47,7 +47,7 @@
 		<Russian>Îðíèòîïò. ïëîùàäêà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ORNITHOPTER_AERIE_PEDIA</Tag>
 		<English>An [COLOR_BUILDING_TEXT]Ornithopter Aerie[COLOR_REVERT] is an early airport for [COLOR_UNIT_TEXT]ornithopters[COLOR_REVERT].</English>
 		<French>Un [COLOR_BUILDING_TEXT]aire d'ornithoptères[COLOR_REVERT] est un petit aérodrome, d'où peuvent décoller les [COLOR_UNIT_TEXT]ornithoptères[COLOR_REVERT].</French>
 		<Italian>Un [COLOR_BUILDING_TEXT]nido per ornitotteri[COLOR_REVERT] è un primitivo aeroporto, ideato per gli [COLOR_UNIT_TEXT]ornitotteri[COLOR_REVERT].</Italian>

@@ -1556,7 +1556,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
-				<BuildingType>BUILDING_CAVE_BEAR_REMAINS</BuildingType>
+				<BuildingType>BUILDING_REMAINS_CAVE_BEAR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -1908,7 +1908,7 @@
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BEAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_REDPANDA</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_RED_PANDA</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>133</iCost>

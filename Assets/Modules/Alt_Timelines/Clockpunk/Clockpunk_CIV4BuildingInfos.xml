@@ -40,12 +40,12 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CLOCKPUNK_AIRPORT</Type>
+			<Type>BUILDING_ORNITHOPTER_AERIE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PUNK_CLOCK</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CLOCKPUNK_AIRPORT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_ORNITHOPTER_AERIE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ORNITHOPTER_AERIE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CLOCKPUNK_AIRPORT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ORNITHOPTER_AERIE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_EARLY_AIRPORT</ConstructSound>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

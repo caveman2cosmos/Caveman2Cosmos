@@ -4224,7 +4224,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_OXFORD_UNIVERSITY</BuildingType>
+					<BuildingType>BUILDING_EU_OXFORD_UNIVERSITY</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

@@ -321,7 +321,7 @@
 		<Russian>Êàðíàâàë ÿâëÿåòñÿ äîñòîéíûì èñòî÷íèêîì êóëüòóðû è ñ÷àñòüÿ äëÿ ãîðîäà, â êîòîðîì îí ïîñòðîåí. Åñëè âû ïðèâåçåòå â ãîðîä çàõâà÷åííûõ âîëêîâ, ëüâîâ èëè òèãðîâ è äîáàâèòå èõ â êàðíàâàë, ýòî ìîæåò ïðèíåñòè áîëüøå êóëüòóðû è ñ÷àñòüÿ, ÷åì áîëüøèíñòâî ÷óäåñ. Äåéñòâèå «Ïðèðó÷èòü æèâîòíîå», äîñòóïíîå òîëüêî ðàçâåäûâàòåëüíûì ïîäðàçäåëåíèÿì ïîñëå èññëåäîâàíèÿ æèâîòíîâîäñòâà, ïîçâîëèò âàì ïîéìàòü ýòèõ çâåðåé, åñëè âû ïîáåäèòå èõ â áîþ.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_CAVE_LION_REMAINS</Tag>
+		<Tag>TXT_KEY_BUILDING_REMAINS_CAVE_LION</Tag>
 		<English>Remains - Cave Lion</English>
 		<French>Restes de Lion des cavernes</French>
 		<German>
@@ -602,7 +602,7 @@
 		<Russian>Ìèô î ìóðàâüåäå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ANTELOPE</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_ANTELOPE</Tag>
 		<English>Folklore (T) - Antelope</English>
 		<French>Mythe de l'Antilope (T)</French>
 		<German>
@@ -900,7 +900,7 @@
 		<Russian>Ìèô î âåðáëþäå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAPUCHIN</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CAPUCHIN_MONKEY</Tag>
 		<English>Folklore - Capuchin Monkey</English>
 		<French>Mythe du Capucin</French>
 		<German>
@@ -1217,7 +1217,7 @@
 		<Russian>Øåñòü ýëåìåíòîâ ñîñòàâëÿþò âñå. Ê íèì îòíîñÿòñÿ çåìëÿ, âîçäóõ(íåáî), âîäà(ìîðå), êàìåíü, ìåòàëë è îãîíü. Îíè òåðÿþò âñå ïðåèìóùåñòâî ñ èçó÷åíèåì Õèìèè.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELEPHANT</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_ELEPHANT</Tag>
 		<English>Folklore (T) - Elephant</English>
 		<French>Mythe de l'Eléphant (T)</French>
 		<German>
@@ -1564,7 +1564,7 @@
 		<Russian>Ìèô î ëîøàäè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_HUMPBACK</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_HUMPBACK_WHALE</Tag>
 		<English>Folklore - Humpback Whale</English>
 		<French>Mythe de la Baleine à Bosses</French>
 		<German>
@@ -2029,7 +2029,7 @@
 		<Russian>Ìèô îá îáåçüÿíàõ Íîâîãî Ñâåòà</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_NILECROC</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_NILE_CROCODILE</Tag>
 		<English>Folklore - Nile Crocodile</English>
 		<French>Mythe du Crocodile du Nil</French>
 		<German>
@@ -2655,7 +2655,7 @@
 		<Russian>Ìèô î ìîð. ÷åðåïàõå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_E_SEA_BIRD</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_SEA_BIRDS</Tag>
 		<English>Folklore (T) - Sea Birds</English>
 		<French>Mythe des Oiseaux marins (T)</French>
 		<German>
@@ -3052,7 +3052,7 @@
 		<Russian>Ìèô î áåë. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILDBOAR</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WILD_BOAR</Tag>
 		<English>Folklore - Wild Boar</English>
 		<German>
 			<Text>Mythos des Wildschweins:Mythos des Wildschweins:Mythos des Wildschweins:Mythos des Wildschweins</Text>

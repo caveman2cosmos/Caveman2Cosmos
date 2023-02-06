@@ -781,13 +781,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DIGITAL_LIFESTYLE</Type>
+			<Type>BUILDING_HUMAN_MOD_DIGITAL_LIFESTYLE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DIGITAL_LIFESTYLE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_DIGITAL_LIFESTYLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_DIGITAL_LIFESTYLE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DIGITAL_LIFESTYLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_DIGITAL_LIFESTYLE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1213,13 +1213,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_INFORMATION_BASED</Type>
+			<Type>BUILDING_HUMAN_MOD_INFORMATION_BASED</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_INFORMATION_BASED</Description>
-			<Civilopedia>TXT_KEY_BUILDING_INFORMATION_BASED_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_INFORMATION_BASED</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_INFORMATION_BASED_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_INFORMATION_BASED</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_INFORMATION_BASED</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -2991,11 +2991,11 @@
 			</FreeSpecialistCounts>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZEROG_MEDICAL_LAB</Type>
-			<Description>TXT_KEY_BUILDING_ZEROG_MEDICAL_LAB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZEROG_MEDICAL_LAB_PEDIA</Civilopedia>
+			<Type>BUILDING_CISLUNAR_MEDICAL_LAB</Type>
+			<Description>TXT_KEY_BUILDING_CISLUNAR_MEDICAL_LAB</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_MEDICAL_LAB_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZEROG_MEDICAL_LAB</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CISLUNAR_MEDICAL_LAB</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_SPACEWAY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -3022,13 +3022,13 @@
 			<iAsset>6</iAsset>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ZERO_G_ADAPTATION</Type>
+			<Type>BUILDING_HUMAN_MOD_ZERO_G_ADAPTATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_ZERO_G_ADAPTATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ZERO_G_ADAPTATION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_ZERO_G_ADAPTATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_ZERO_G_ADAPTATION_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZERO_G_ADAPTATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_ZERO_G_ADAPTATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

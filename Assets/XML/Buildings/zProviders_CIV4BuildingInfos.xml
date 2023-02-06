@@ -40,9 +40,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_METALS_MEGACOMPLEX</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SMELTER_ALUMINUM</BuildingType>
 				<BuildingType>BUILDING_ALUMINIUM_RECLAMATION_PLANT</BuildingType>
@@ -285,11 +285,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CHARCOAL_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_CHARCOAL_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_CHARCOAL</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_CHARCOAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CHARCOAL_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_CHARCOAL</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -349,9 +349,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_METALS_MEGACOMPLEX</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ADVANCED_COPPERWORKS</BuildingType>
 				<BuildingType>BUILDING_COPPER_RECLAMATION_PLANT</BuildingType>
@@ -390,7 +390,7 @@
 				<BuildingType>BUILDING_PLANTATION_KAVA</BuildingType>
 				<BuildingType>BUILDING_MARSHMALLOW_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_MYRRH</BuildingType>
-				<BuildingType>BUILDING_PEYOTE_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_PEYOTE</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_POPPY</BuildingType>
 				<BuildingType>BUILDING_TOBACCO_PLANTATION</BuildingType>
 			</PrereqOrBuildings>
@@ -573,7 +573,7 @@
 				<BuildingType>BUILDING_FARM_FLOWER_INDIGO</BuildingType>
 				<BuildingType>BUILDING_FARM_FLOWER_IRIS</BuildingType>
 				<BuildingType>BUILDING_FARM_FLOWER_LILY</BuildingType>
-				<BuildingType>BUILDING_MADDER_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_MADDER</BuildingType>
 				<BuildingType>BUILDING_FARM_FLOWER_ORCHID</BuildingType>
 				<BuildingType>BUILDING_FARM_FLOWER_PANSY</BuildingType>
 				<BuildingType>BUILDING_FARM_FLOWER_ROSE</BuildingType>
@@ -638,14 +638,14 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DIG_SITE_AMMONITE_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_FOSSIL_ARCHAEOPTERYX</BuildingType>
-				<BuildingType>BUILDING_FOSSIL_DIMETRODON</BuildingType>
+				<BuildingType>BUILDING_DIG_SITE_DIMETRODON_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_FOSSIL_ICTHYOSTEGA</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_MAMMOTH_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_FOSSIL_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_FOSSIL_PETRIFIEDFOREST</BuildingType>
-				<BuildingType>BUILDING_FOSSIL_PLESIOSAUR</BuildingType>
+				<BuildingType>BUILDING_DIG_SITE_PLESIOSAUR_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_FOSSIL_PTERODACTYL</BuildingType>
-				<BuildingType>BUILDING_FOSSIL_SHARKTEETH</BuildingType>
+				<BuildingType>BUILDING_DIG_SITE_SHARK_TEETH</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_SMILODON_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_FOSSIL_TRICERATOPS</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_TRILOBITE_FOSSILS</BuildingType>
@@ -679,12 +679,12 @@
 				<BuildingType>BUILDING_ORCHARD_APRICOT</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_ATEMOYA</BuildingType>
 				<BuildingType>BUILDING_AVOCADO_PLANTATION</BuildingType>
-				<BuildingType>BUILDING_BANANA_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_BANANA</BuildingType>
 				<BuildingType>BUILDING_BREADFRUIT_ORCHARD</BuildingType>
-				<BuildingType>BUILDING_CACTUS_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_CACTUS</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_CANTALOUPE</BuildingType>
 				<BuildingType>BUILDING_CARDONCACTUS_PLANTATION</BuildingType>
-				<BuildingType>BUILDING_CHERIMOYA_ORCHARD</BuildingType>
+				<BuildingType>BUILDING_ORCHARD_CHERIMOYA</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_CHERRY</BuildingType>
 				<BuildingType>BUILDING_DATEPALM_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_DURIAN</BuildingType>
@@ -693,7 +693,7 @@
 				<BuildingType>BUILDING_ORCHARD_GUAVA</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_HONEYDEW</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_JUJUBE</BuildingType>
-				<BuildingType>BUILDING_KIWIFRUIT_ORCHARD</BuildingType>
+				<BuildingType>BUILDING_ORCHARD_KIWIFRUIT</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_KUMQUAT</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_LEMON</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_LIME</BuildingType>
@@ -701,20 +701,20 @@
 				<BuildingType>BUILDING_ORCHARD_LOQUAT</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_LYCHEE</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_MANGO</BuildingType>
-				<BuildingType>BUILDING_ORANGE_PLANTATION</BuildingType>
-				<BuildingType>BUILDING_PAPAYA_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_ORCHARD_ORANGE</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_PAPAYAS</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_PAPAYA</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_PEACH</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_PEAR</BuildingType>
-				<BuildingType>BUILDING_PERSIMMON_ORCHARD</BuildingType>
+				<BuildingType>BUILDING_ORCHARD_PERSIMMON</BuildingType>
 				<BuildingType>BUILDING_PINEAPPLE_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_PITAYA</BuildingType>
 				<BuildingType>BUILDING_PLANTAIN_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_PLUM</BuildingType>
 				<BuildingType>BUILDING_POMEGRANATE_ORCHARD</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_SAPOTE</BuildingType>
-				<BuildingType>BUILDING_STARFRUIT_ORCHARD</BuildingType>
-				<BuildingType>BUILDING_TANGERINE_ORCHARD</BuildingType>
+				<BuildingType>BUILDING_ORCHARD_STARFRUIT</BuildingType>
+				<BuildingType>BUILDING_ORCHARD_TANGERINE</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_TOMATILLO</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_TOMATO</BuildingType>
 				<BuildingType>BUILDING_VINEYARD</BuildingType>
@@ -729,11 +729,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GEMSTONE_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_GEMSTONE_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_GEMSTONE</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_GEMSTONE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GEMSTONE_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_GEMSTONE</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -808,9 +808,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_METALS_MEGACOMPLEX</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_GOLD_RECLAMATION_PLANT</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_SMELTER_GOLD</BuildingType>
@@ -927,9 +927,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_METALS_MEGACOMPLEX</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
 				<BuildingType>BUILDING_IRON_RECLAMATION_PLANT</BuildingType>
@@ -1000,7 +1000,7 @@
 			<ObsoletesToBuilding>BUILDING_SYNTHETIC_MEAT_BIOREACTOR</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_BUTCHERY</BuildingType>
-				<BuildingType>BUILDING_MEATPACKING_PLANT</BuildingType>
+				<BuildingType>BUILDING_MEAT_PACKING_PLANT</BuildingType>
 				<BuildingType>BUILDING_RENDERING_PLANT</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMING</BuildingType>
 			</PrereqOrBuildings>
@@ -1023,9 +1023,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_METALS_MEGACOMPLEX</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_LEAD_RECLAMATION_PLANT</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_SMELTER_LEAD</BuildingType>
@@ -1090,7 +1090,7 @@
 				<BuildingType>BUILDING_GROVE_HAZELNUT</BuildingType>
 				<BuildingType>BUILDING_GROVE_MACADAMIA</BuildingType>
 				<BuildingType>BUILDING_GROVE_MONGONGO</BuildingType>
-				<BuildingType>BUILDING_PEANUT_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_PEANUT</BuildingType>
 				<BuildingType>BUILDING_GROVE_PECAN</BuildingType>
 				<BuildingType>BUILDING_GROVE_PINE_NUT</BuildingType>
 				<BuildingType>BUILDING_GROVE_PISTACHIO</BuildingType>
@@ -1161,7 +1161,7 @@
 				<BuildingType>BUILDING_BREEDING_PROGRAM_SEAL</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_SEA_OTTER</BuildingType>
 				<BuildingType>BUILDING_TRAP_CHINCHILLA</BuildingType>
-				<BuildingType>BUILDING_ELEPHANTSEAL_CAMP</BuildingType>
+				<BuildingType>BUILDING_CAMP_ELEPHANT_SEAL</BuildingType>
 				<BuildingType>BUILDING_TRAP_FOX</BuildingType>
 				<BuildingType>BUILDING_TRAP_MINK</BuildingType>
 				<BuildingType>BUILDING_TRAP_SEA_OTTER</BuildingType>
@@ -1242,9 +1242,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_METALS_MEGACOMPLEX</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NATIONAL_SMELTER_PLATINUM</BuildingType>
 				<BuildingType>BUILDING_PLATINUM_RECLAMATION_PLANT</BuildingType>
@@ -1277,7 +1277,7 @@
 				<BuildingType>BUILDING_ENCLOSURE_AMPHIBIAN_POND</BuildingType>
 				<BuildingType>BUILDING_BELLADONNA</BuildingType>
 				<BuildingType>BUILDING_CURARE</BuildingType>
-				<BuildingType>BUILDING_DEATHCAP_MUSHROOM</BuildingType>
+				<BuildingType>BUILDING_DEATH_CAP_MUSHROOM</BuildingType>
 				<BuildingType>BUILDING_ALCHEMISTS_LAB</BuildingType>
 				<BuildingType>BUILDING_SNAKE_PIT</BuildingType>
 			</PrereqOrBuildings>
@@ -1366,13 +1366,13 @@
 				<BuildingType>BUILDING_FARM_CROP_CHIVES</BuildingType>
 				<BuildingType>BUILDING_GROVE_CINNAMOMUM</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_CLOVES</BuildingType>
-				<BuildingType>BUILDING_COFFEE_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_COFFEE</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_GINGER_ROOT</BuildingType>
 				<BuildingType>BUILDING_INCENSE_PLANTATION</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_LICORICE</BuildingType>
 				<BuildingType>BUILDING_GROVE_MAPLE</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_PEPPERMINT</BuildingType>
-				<BuildingType>BUILDING_NUTMEG_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_NUTMEG</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_BLACK_PEPPER</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_RHUBARB</BuildingType>
 				<BuildingType>BUILDING_SAFFRON_PLANTATION</BuildingType>
@@ -1439,9 +1439,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_METALS_MEGACOMPLEX</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NATIONAL_SMELTER_SILVER</BuildingType>
 				<BuildingType>BUILDING_SILVER_RECLAMATION_PLANT</BuildingType>
@@ -1493,9 +1493,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_METALS_MEGACOMPLEX</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ADVANCED_IRONWORKS</BuildingType>
 				<BuildingType>BUILDING_IRONWORKS</BuildingType>
@@ -1547,9 +1547,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_METALS_MEGACOMPLEX</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NATIONAL_SMELTER_TITANIUM</BuildingType>
 				<BuildingType>BUILDING_SMELTER_TITANIUM</BuildingType>
@@ -1574,9 +1574,9 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_ATOMIC_SCALE_ENGINEERING</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_METAL_MEGACOMPLEX</BuildingType>
+				<BuildingType>BUILDING_METALS_MEGACOMPLEX</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_METAL_MEGACOMPLEX</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_METALS_MEGACOMPLEX</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_NATIONAL_SMELTER_TIN</BuildingType>
 				<BuildingType>BUILDING_SMELTER_TIN</BuildingType>

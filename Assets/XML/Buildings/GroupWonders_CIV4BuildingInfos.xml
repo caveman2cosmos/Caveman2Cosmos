@@ -1335,16 +1335,16 @@
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CHARLIE_LAKE_CAVE</Type>
+			<Type>BUILDING_PC_CHARLIE_LAKE_CAVE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CHARLIE_LAKE_CAVE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CHARLIE_LAKE_CAVE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PC_CHARLIE_LAKE_CAVE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PC_CHARLIE_LAKE_CAVE_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_PREHISTORIC_CAVES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_CHARLIE_LAKE_CAVE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PC_CHARLIE_LAKE_CAVE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CHARLIE_LAKE_CAVE</MovieDefineTag>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -2041,17 +2041,17 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MONTPELLIER_UNIVERSITY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_OXFORD_UNIVERSITY</Type>
+			<Type>BUILDING_EU_OXFORD_UNIVERSITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_OXFORD_UNIVERSITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_OXFORD_UNIVERSITY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EU_OXFORD_UNIVERSITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EU_OXFORD_UNIVERSITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_OXFORD_UNIVERSITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EU_OXFORD_UNIVERSITY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_OXFORD_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_BANKING</PrereqTech>
