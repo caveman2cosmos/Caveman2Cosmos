@@ -1652,15 +1652,15 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_AZTEC_SACRIFICIAL_ALTAR</Type>
+			<Type>BUILDING_TLALOCS_ALTAR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AZTEC_SACRIFICIAL_ALTAR_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_TLALOCS_ALTAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TLALOCS_ALTAR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_AZTEC_SACRIFICIAL_ALTAR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TLALOCS_ALTAR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_AZTEC_SACRIFICIAL_ALTAR</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_CEREMONIAL_ALTAR</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -3438,7 +3438,7 @@
 					</CommerceChanges>
 				</BuildingExtraCommerce>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<CommerceChanges>
 						<iCommerce>0</iCommerce>
 						<iCommerce>0</iCommerce>
@@ -3543,7 +3543,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
 				<BuildingType>BUILDING_MAUSOLEUM</BuildingType>
-				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+				<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>2640</iCost>
 			<CommerceChanges>
@@ -3919,7 +3919,7 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 			</PrereqBonuses>
 			<ObsoleteTech>TECH_SATELLITES</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_CHEOMSEONGDAE_OBSOLETE</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_RELIC_CHEOMSEONGDAE</ObsoletesToBuilding>
 			<iCost>876</iCost>
 			<iHurryCostModifier>200</iHurryCostModifier>
 			<CommerceChanges>
@@ -3967,10 +3967,10 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CHEOMSEONGDAE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CHEOMSEONGDAE_OBSOLETE</Type>
+			<Type>BUILDING_RELIC_CHEOMSEONGDAE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_CHEOMSEONGDAE_OBSOLETE</Description>
+			<Description>TXT_KEY_BUILDING_RELIC_CHEOMSEONGDAE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHEOMSEONGDAE_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -4015,7 +4015,7 @@
 				<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			</TechTypes>
 			<ObsoleteTech>TECH_DIVINE_RIGHT</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_CHICHEN_ITZA_OBSOLETE</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_RELIC_CHICHEN_ITZA</ObsoletesToBuilding>
 			<iCost>876</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -4062,10 +4062,10 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CHICHEN_ITZA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CHICHEN_ITZA_OBSOLETE</Type>
+			<Type>BUILDING_RELIC_CHICHEN_ITZA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
-			<Description>TXT_KEY_BUILDING_CHICHEN_ITZA_OBSOLETE</Description>
+			<Description>TXT_KEY_BUILDING_RELIC_CHICHEN_ITZA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHICHEN_ITZA_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -5282,13 +5282,13 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR</Type>
+			<Type>BUILDING_DELHI_MUMBAI_INDUSTRIAL_CORRIDOR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DELHI_MUMBAI_INDUSTRIAL_CORRIDOR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DELHI_MUMBAI_INDUSTRIAL_CORRIDOR_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DELHI_MUMBAI_INDUSTRIAL_CORRIDOR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -5620,7 +5620,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_EGYPT_MYTH_CATHEDRAL</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_MUT</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
@@ -6309,7 +6309,7 @@
 				<BuildingType>BUILDING_IMPERIAL_FORTRESS</BuildingType>
 			</PrereqOrBuildings>
 			<ObsoleteTech>TECH_ECONOMICS</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_EDINBURGH_CASTLE_OBSOLETE</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_RELIC_EDINBURGH_CASTLE</ObsoletesToBuilding>
 			<iCost>1800</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<CommerceChanges>
@@ -6355,13 +6355,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_EDINBURGH</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EDINBURGH_CASTLE_OBSOLETE</Type>
+			<Type>BUILDING_RELIC_EDINBURGH_CASTLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EDINBURGH_CASTLE_OBSOLETE</Description>
+			<Description>TXT_KEY_BUILDING_RELIC_EDINBURGH_CASTLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EDINBURGH_CASTLE_PEDIA</Civilopedia>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8544,13 +8544,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GODEL_INCOMPLETENESS_THEOREM</Type>
+			<Type>BUILDING_GODELS_INCOMPLETENESS_THEOREMS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_GODEL_INCOMPLETENESS_THEOREM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GODEL_INCOMPLETENESS_THEOREM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GODELS_INCOMPLETENESS_THEOREMS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GODELS_INCOMPLETENESS_THEOREMS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GODEL_INCOMPLETENESS_THEOREM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GODELS_INCOMPLETENESS_THEOREMS</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GODEL_INCOMPLETENESS_THEOREM</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
@@ -9157,13 +9157,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_THE_GREAT_PYRAMID_OF_THE_MOON</Type>
+			<Type>BUILDING_PYRAMID_OF_THE_MOON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
-			<Description>TXT_KEY_BUILDING_THE_GREAT_PYRAMID_OF_THE_MOON</Description>
-			<Civilopedia>TXT_KEY_BUILDING_THE_GREAT_PYRAMID_OF_THE_MOON_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PYRAMID_OF_THE_MOON</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PYRAMID_OF_THE_MOON_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_THE_GREAT_PYRAMID_OF_THE_MOON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PYRAMID_OF_THE_MOON</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9237,12 +9237,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_THE_GREAT_PYRAMID_OF_THE_SUN</Type>
+			<Type>BUILDING_PYRAMID_OF_THE_SUN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-			<Description>TXT_KEY_BUILDING_THE_GREAT_PYRAMID_OF_THE_SUN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_THE_GREAT_PYRAMID_OF_THE_SUN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_PYRAMID_OF_THE_SUN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_PYRAMID_OF_THE_SUN_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_THE_GREAT_PYRAMID_OF_THE_SUN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_PYRAMID_OF_THE_SUN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10230,13 +10230,13 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HINDU_BRIHADEESWARAR</Type>
+			<Type>BUILDING_THE_BRIHADEESWARAR_TEMPLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HINDU_BRIHADEESWARAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HINDU_BRIHADEESWARAR_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_THE_BRIHADEESWARAR_TEMPLE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_THE_BRIHADEESWARAR_TEMPLE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_EDUCATION</PrereqTech>
 			<bNeedStateReligionInCity>1</bNeedStateReligionInCity>
 			<PrereqReligion>RELIGION_HINDUISM</PrereqReligion>
@@ -10302,7 +10302,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_BUILD_HINDU</ConstructSound>
-			<ArtDefineTag>ART_DEF_BUILDING_HINDU_BRIHADEESWARAR</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_THE_BRIHADEESWARAR_TEMPLE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HINDU_BRIHADEESWARAR</MovieDefineTag>
 			<PropertyManipulators>
 				<PropertySource>
@@ -18805,7 +18805,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_COMMERCIAL_SATELLITES</BuildingType>
+					<BuildingType>BUILDING_COMMUNICATIONS_SATELLITE</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

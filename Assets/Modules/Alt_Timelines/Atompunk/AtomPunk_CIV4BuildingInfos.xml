@@ -48,7 +48,7 @@
 				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 			</ReplacementBuildings>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
@@ -181,7 +181,7 @@
 				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 			</PrereqOrBuildings>
 			<iPrereqPopulation>3</iPrereqPopulation>
@@ -202,7 +202,7 @@
 				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 			</ReplacementBuildings>
 			<MapCategoryTypes>
@@ -318,7 +318,7 @@
 				<BuildingType>BUILDING_D_T_FUSION_POWER_PLANT</BuildingType>
 				<BuildingType>BUILDING_INTERTIAL_CONFINEMENT_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_HE3_FUSION_POWER_PLANT</BuildingType>
-				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION</BuildingType>
+				<BuildingType>BUILDING_ANTIMATTER_INITIATED_FUSION_PLANT</BuildingType>
 				<BuildingType>BUILDING_QUANTUM_VACUUM_POWER_PLANT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqInCityBuildings>

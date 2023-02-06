@@ -557,7 +557,7 @@
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_CRISPR_CAS9_BACTERIA</BuildingType>
+					<BuildingType>BUILDING_LIFE_CRISPR_CAS9_BACTERIA</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -976,7 +976,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FUNERAL_PYRE</BuildingType>
 				<BuildingType>BUILDING_FUNERARY_SERVICES</BuildingType>
-				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+				<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqAndCivics>
 				<PrereqCivic>
@@ -1167,13 +1167,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_COURIER_SYSTEM</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CRISPR_CAS9_BACTERIA</Type>
+			<Type>BUILDING_LIFE_CRISPR_CAS9_BACTERIA</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_CRISPR_CAS9_BACTERIA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRISPR_CAS9_BACTERIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LIFE_CRISPR_CAS9_BACTERIA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LIFE_CRISPR_CAS9_BACTERIA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CRISPR_CAS9_BACTERIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LIFE_CRISPR_CAS9_BACTERIA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1195,13 +1195,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_CYBERSECURITY_CENTER</Type>
+			<Type>BUILDING_NATIONAL_CYBERSECURITY_CENTER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_CYBERSECURITY_CENTER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CYBERSECURITY_CENTER_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_NATIONAL_CYBERSECURITY_CENTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_CYBERSECURITY_CENTER_PEDIA</Civilopedia>
 			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
@@ -1219,9 +1219,9 @@
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>10</iGreatPeopleRateChange>
 			<iEspionageDefense>15</iEspionageDefense>
-			<FreeBuilding>BUILDING_CYBERSECURITY_OFFICE</FreeBuilding>
+			<FreeBuilding>BUILDING_COMPUTER_SECURITY_OFFICE</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_CYBERSECURITY_CENTER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_CYBERSECURITY_CENTER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_CYBERSECURITY_CENTER</MovieDefineTag>
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
@@ -1277,13 +1277,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_DEPARTMENT_EDUCATION</Type>
+			<Type>BUILDING_DEPARTMENT_OF_EDUCATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEPARTMENT_EDUCATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_EDUCATION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_OF_EDUCATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_OF_EDUCATION_PEDIA</Civilopedia>
 			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<PrereqInCityBuildings>
@@ -1321,7 +1321,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_EDUCATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_OF_EDUCATION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DEPARTMENT_EDUCATION</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1385,7 +1385,7 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<FreeBuilding>BUILDING_DEPARTMENT_OF_FOREIGN_POLICY_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_DEPARTMENT_OF_FOREIGN_POLICY</FreeBuilding>
 			<iEspionageDefense>15</iEspionageDefense>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -1755,7 +1755,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
 			<iCost>1310</iCost>
-			<FreeBuilding>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MAXIMUM_SECURITY_PRISON</Type>
@@ -1885,13 +1885,13 @@
 			<MovieDefineTag>ART_DEF_MOVIE_FLAK_TOWER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FLUORESCENT_BACTERIA</Type>
+			<Type>BUILDING_LIFE_FLUORESCENT_BACTERIA</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_FLUORESCENT_BACTERIA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FLUORESCENT_BACTERIA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_LIFE_FLUORESCENT_BACTERIA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LIFE_FLUORESCENT_BACTERIA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FLUORESCENT_BACTERIA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LIFE_FLUORESCENT_BACTERIA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -1908,7 +1908,7 @@
 			</GlobalBuildingExtraCommerces>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_CRISPR_CAS9_BACTERIA</BuildingType>
+					<BuildingType>BUILDING_LIFE_CRISPR_CAS9_BACTERIA</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2079,13 +2079,13 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GRANDCENTRAL_STATION</Type>
+			<Type>BUILDING_GRAND_CENTRAL_STATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_GRANDCENTRAL_STATION</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GRANDCENTRAL_STATION_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_GRAND_CENTRAL_STATION</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GRAND_CENTRAL_STATION_PEDIA</Civilopedia>
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<iPrereqPopulation>7</iPrereqPopulation>
 			<Bonus>BONUS_COAL</Bonus>
@@ -2112,7 +2112,7 @@
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_GRANDCENTRAL_STATION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GRAND_CENTRAL_STATION</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_GRANDCENTRAL_STATION</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -4615,7 +4615,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</GlobalCommerceModifiers>
-			<FreeBuilding>BUILDING_EFFECT_NATIONAL_ACADEMY_DATABASE</FreeBuilding>
+			<FreeBuilding>BUILDING_EFFECT_NATIONAL_ACADEMIC_DATABASE</FreeBuilding>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_ACADEMIC_DATABASE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_ACADEMIC_DATABASE</MovieDefineTag>
@@ -6935,7 +6935,7 @@
 			<iCost>6490</iCost>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_CRISPR_CAS9_BACTERIA</BuildingType>
+					<BuildingType>BUILDING_LIFE_CRISPR_CAS9_BACTERIA</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -7569,7 +7569,7 @@
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

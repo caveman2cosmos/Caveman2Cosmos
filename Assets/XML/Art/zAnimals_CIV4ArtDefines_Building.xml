@@ -12,7 +12,7 @@
 			<Button>Art/Interface/Buttons/Units/Aardvark.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_AFRICANELEPHANT</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_AFRICAN_ELEPHANT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22,7 +22,7 @@
 			<Button>Art/Interface/Buttons/Units/Africanelephant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_AFRICANGREY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_AFRICAN_GREY_PARROT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -92,7 +92,7 @@
 			<Button>Art/Interface/Buttons/Units/Asianbear.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_ASIANELEPHANT</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_ASIAN_ELEPHANT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -202,7 +202,7 @@
 			<Button>Art/Interface/Buttons/Units/Beaver.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_BENGALTIGER</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BENGAL_TIGER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -242,7 +242,7 @@
 			<Button>Art/Interface/Buttons/Units/Blackbear.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_BLACK_RHINO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_BLACK_RHINOCEROS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -272,7 +272,7 @@
 			<Button>Art/Interface/Buttons/Units/booby.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_BRAZILIAN_TAPIR</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_LOWLAND_TAPIR</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -532,7 +532,7 @@
 			<Button>Art/Interface/Buttons/Units/Eagle.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_ELASMOTHERIUM</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GIANT_RHINOCEROS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -542,7 +542,7 @@
 			<Button>Art/Interface/Buttons/Units/Elasmotherium.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ELASMOTHERIUM_REMAINS</Type>
+			<Type>ART_DEF_BUILDING_REMAINS_GIANT_RHINOCEROS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -612,7 +612,7 @@
 			<Button>Art/Interface/Buttons/Units/Flamingo.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_FLIGHTLESS_BIRD</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -742,7 +742,7 @@
 			<Button>Art/Interface/Buttons/Units/Gorilla.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_GREATWHITE_SHARK</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GREAT_WHITE_SHARK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -782,7 +782,7 @@
 			<Button>Art/Interface/Buttons/Units/Gull.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_HAAST_EAGLE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_HAASTS_EAGLE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -912,7 +912,7 @@
 			<Button>Art/Interface/Buttons/Units/Impala.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_INDIAN_RHINO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_INDIAN_RHINOCEROS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -942,7 +942,7 @@
 			<Button>Art/Interface/Buttons/Units/javarhino.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_KANGAROO_GREY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GREY_KANGAROO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -952,7 +952,7 @@
 			<Button>Art/Interface/Buttons/Units/kangaroo_grey.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_KANGAROO_RED</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_RED_KANGAROO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1172,7 +1172,7 @@
 			<Button>Art/Interface/Buttons/Units/Muskox.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_NEW_W_MONKEY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_NEW_WORLD_MONKEYS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1222,7 +1222,7 @@
 			<Button>Art/Interface/Buttons/Units/Okapi.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_OLD_W_MONKEY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_OLD_WORLD_MONKEYS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1282,7 +1282,7 @@
 			<Button>Art/Interface/Buttons/Units/Oxpecker.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_PALEOLITHIC_DOG</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_DIRE_WOLF</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1302,7 +1302,7 @@
 			<Button>Art/Interface/Buttons/Buildings/PaleolithicDogMyth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_GROUND_SLOTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1322,7 +1322,7 @@
 			<Button>Art/Interface/Buttons/Units/Groundsloth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_MAMMOTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1612,7 +1612,7 @@
 			<Button>Art/Interface/Buttons/Units/Rhea.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_RHINO_TAXONOMY</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_T_RHINOCEROSES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1682,7 +1682,7 @@
 			<Button>Art/Interface/Buttons/Units/Saiga.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_SALTWATER_CROC</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1692,7 +1692,7 @@
 			<Button>Art/Interface/Buttons/Units/salt_crocodile_small.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_SALTWATER_CROC_LARGE</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALLODILE_LARGE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1742,7 +1742,7 @@
 			<Button>Art/Interface/Buttons/Units/Seaotter.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_SECRETARYBIRD</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_SECRETARY_BIRD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1832,7 +1832,7 @@
 			<Button>Art/Interface/Buttons/Units/pig.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_TASMANIANDEVIL</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_TASMANIAN_DEVIL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -1932,7 +1932,7 @@
 			<Button>Art/Interface/Buttons/Units/Viper.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_VIPER_CHAIN</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_CHAIN_VIPER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2002,7 +2002,7 @@
 			<Button>Art/Interface/Buttons/Units/Whaleshark.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FOLKLORE_WHITE_RHINO</Type>
+			<Type>ART_DEF_BUILDING_FOLKLORE_WHITE_RHINOCEROS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

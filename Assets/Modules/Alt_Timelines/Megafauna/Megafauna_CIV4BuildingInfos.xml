@@ -406,8 +406,8 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_ENCLOSURE_BIG_CAT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LION</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SPOTTED_CAT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BENGALTIGER</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_SPOTTED_CAT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BENGAL_TIGER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SIBERIAN_TIGER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_TIGER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_CAT</BuildingType>
@@ -817,7 +817,7 @@
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CAMP_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_HERD_MAMMOTH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 				<BuildingType>BUILDING_INDUSTRIAL_FARMS</BuildingType>
@@ -995,12 +995,12 @@
 			</Flavors>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_CAMP_RHINO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RHINO_TAXONOMY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BLACK_RHINO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_INDIAN_RHINO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_RHINOCEROSES</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BLACK_RHINOCEROS</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_INDIAN_RHINOCEROS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_JAVA_RHINOCEROS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WHITE_RHINO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ELASMOTHERIUM</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WHITE_RHINOCEROS</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GIANT_RHINOCEROS</BuildingType>
 				<BuildingType>BUILDING_BREEDING_PROGRAM_RHINO</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_PRESERVE</BuildingType>
 			</PrereqOrBuildings>

@@ -167,9 +167,9 @@
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORCHESTRION_THEATER</ArtDefineTag>
 			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+				<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<PrereqTech>TECH_REALISM</PrereqTech>
 			<MapCategoryTypes>

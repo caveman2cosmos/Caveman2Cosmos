@@ -4829,7 +4829,7 @@
 				<Building>BUILDING_TAOIST_MONASTERY</Building>
 				<Building>BUILDING_HELLENIC_GYMNASIA</Building>
 				<Building>BUILDING_ZOROASTRIAN_SHRINE</Building>
-				<Building>BUILDING_EGYPT_MYTH_MONASTERY</Building>
+				<Building>BUILDING_TEMPLE_OF_CHONS</Building>
 				<Building>BUILDING_HOUNFOR</Building>
 				<Building>BUILDING_SHINTO_MONASTERY</Building>
 				<Building>BUILDING_SCIENTOLOGY_MONASTERY</Building>
@@ -9982,7 +9982,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_AGRICULTURAL_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_AGRICULTURAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10002,7 +10002,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_COMMERCIAL_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_COMMERCIAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>
@@ -10042,7 +10042,7 @@
 			<iWeight>-1</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_CULTURAL_ACHIEVEMENT</Building>
+				<Building>BUILDING_ACHIEVEMENT_CULTURAL</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<Events>

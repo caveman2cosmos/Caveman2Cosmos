@@ -191,7 +191,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_MONEYLAUNDERING</BuildingType>
+					<BuildingType>BUILDING_CRIME_MONEY_LAUNDERING</BuildingType>
 					<iMinValue>375</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -216,7 +216,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_FALSEACCUSATIONS</BuildingType>
+					<BuildingType>BUILDING_CRIME_FALSE_ACCUSATIONS</BuildingType>
 					<iMinValue>75</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -231,12 +231,12 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_SEXUALHARASSMENT</BuildingType>
+					<BuildingType>BUILDING_CRIME_SEXUAL_HARASSMENT</BuildingType>
 					<iMinValue>200</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_MILITARYDESERTION</BuildingType>
+					<BuildingType>BUILDING_CRIME_MILITARY_DESERTION</BuildingType>
 					<iMinValue>585</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -261,7 +261,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_PLANEHIJACKING</BuildingType>
+					<BuildingType>BUILDING_CRIME_AIRCRAFT_HIJACKING</BuildingType>
 					<iMinValue>1300</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -271,7 +271,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_TIMELINETAMPERING</BuildingType>
+					<BuildingType>BUILDING_CRIME_TIMELINE_TAMPERING</BuildingType>
 					<iMinValue>1950</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -281,7 +281,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_SCHOOLSHOOTING</BuildingType>
+					<BuildingType>BUILDING_CRIME_SCHOOL_SHOOTINGS</BuildingType>
 					<iMinValue>980</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -291,7 +291,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_DOMESTICVIOLENCE</BuildingType>
+					<BuildingType>BUILDING_CRIME_DOMESTIC_VIOLENCE</BuildingType>
 					<iMinValue>315</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -321,7 +321,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_SECTARIANVIOLENCE</BuildingType>
+					<BuildingType>BUILDING_CRIME_SECTARIAN_VIOLENCE</BuildingType>
 					<iMinValue>1750</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -336,7 +336,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_HUMANTRAFFICKING</BuildingType>
+					<BuildingType>BUILDING_CRIME_HUMAN_TRAFFICKING</BuildingType>
 					<iMinValue>1000</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -351,7 +351,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_UNLICENSEDCLONING</BuildingType>
+					<BuildingType>BUILDING_CRIME_UNLICENSED_CLONING</BuildingType>
 					<iMinValue>1075</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -366,12 +366,12 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_WEAPONSTRAFFICKING</BuildingType>
+					<BuildingType>BUILDING_CRIME_WEAPONS_TRAFFICKING</BuildingType>
 					<iMinValue>800</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_ARMEDCOMMUNITIES</BuildingType>
+					<BuildingType>BUILDING_CRIME_ARMED_COMMUNITIES</BuildingType>
 					<iMinValue>650</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -401,7 +401,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_INSIDERTRADING</BuildingType>
+					<BuildingType>BUILDING_CRIME_INSIDER_TRADING</BuildingType>
 					<iMinValue>325</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -411,7 +411,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_ILLEGALIMMIGRATION</BuildingType>
+					<BuildingType>BUILDING_CRIME_ILLEGAL_IMMIGRATION</BuildingType>
 					<iMinValue>225</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -426,7 +426,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_INSURANCEFRAUD</BuildingType>
+					<BuildingType>BUILDING_CRIME_INSURANCE_FRAUD</BuildingType>
 					<iMinValue>400</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -441,7 +441,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_CRIME_PUBLICINTOXICATION</BuildingType>
+					<BuildingType>BUILDING_CRIME_PUBLIC_INTOXICATION</BuildingType>
 					<iMinValue>50</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -947,7 +947,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_DISEASE_SCARLETFEAVER</BuildingType>
+					<BuildingType>BUILDING_DISEASE_SCARLET_FEVER</BuildingType>
 					<iMinValue>125</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
@@ -967,7 +967,7 @@
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>
 				<PropertyBuilding>
-					<BuildingType>BUILDING_DISEASE_TYPHOIDFEAVER</BuildingType>
+					<BuildingType>BUILDING_DISEASE_TYPHOID_FEVER</BuildingType>
 					<iMinValue>500</iMinValue>
 					<iMaxValue>100000</iMaxValue>
 				</PropertyBuilding>

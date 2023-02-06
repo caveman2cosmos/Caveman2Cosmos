@@ -126,7 +126,7 @@
 				<BuildingType>BUILDING_FOLKLORE_ARCTIC_FOX</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_USSURI_DHOLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_DINGO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_DOG</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_DIRE_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ETHIOPIAN_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MANED_WOLF</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RED_FOX</BuildingType>
@@ -180,7 +180,7 @@
 				<BuildingType>BUILDING_FOLKLORE_NINE_BANDED_ARMADILLO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BEAVER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GLYPTODON</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GROUND_SLOTH</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>70</iCost>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
@@ -330,7 +330,7 @@
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_SPOTTED_CAT</ID>
+							<ID>BUILDING_FOLKLORE_T_SPOTTED_CAT</ID>
 						</Has>
 					</Or>
 				</And>
@@ -401,7 +401,7 @@
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
-							<ID>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</ID>
+							<ID>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</ID>
 						</Has>
 						<Has>
 							<GOMType>GOM_BUILDING</GOMType>
@@ -1129,16 +1129,16 @@
 			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ELASMOTHERIUM_REMAINS</Type>
+			<Type>BUILDING_REMAINS_GIANT_RHINOCEROS</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ELASMOTHERIUM_REMAINS</Description>
+			<Description>TXT_KEY_BUILDING_REMAINS_GIANT_RHINOCEROS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOLKLORE_ANIMAL_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_ELASMOTHERIUM</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_GIANT_RHINOCEROS</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -1181,7 +1181,7 @@
 			<iAsset>1</iAsset>
 			<iConquestProb>90</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<ArtDefineTag>ART_DEF_BUILDING_ELASMOTHERIUM_REMAINS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REMAINS_GIANT_RHINOCEROS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HERD_ELEPHANT</Type>
@@ -1240,7 +1240,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</ID>
+						<ID>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
@@ -1256,7 +1256,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BUILDING</GOMType>
-						<ID>BUILDING_FOLKLORE_RHINO_TAXONOMY</ID>
+						<ID>BUILDING_FOLKLORE_T_RHINOCEROSES</ID>
 					</Has>
 				</Or>
 			</And>
@@ -1293,7 +1293,7 @@
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
 			<PrereqTech>TECH_BONE_WORKING</PrereqTech>
 			<PrereqOrBuildings> <!-- Sadly, bone working is well before taxonomy, so individual myths required -->
-				<BuildingType>BUILDING_FOLKLORE_AFRICANGREY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_AFRICAN_GREY_PARROT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BARN_OWL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BARRED_OWL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_BLUE_FOOTED_BOOBY</BuildingType>
@@ -1305,7 +1305,7 @@
 				<BuildingType>BUILDING_FOLKLORE_EMU</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_FLAMINGO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SEAGULL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_HAAST_EAGLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_HAASTS_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HARPY_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_HAWK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GREAT_HORNED_OWL</BuildingType>
@@ -1323,7 +1323,7 @@
 				<BuildingType>BUILDING_FOLKLORE_RAZORBILL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RHEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEAEAGLE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SECRETARYBIRD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SECRETARY_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_ARCTIC_TERN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_TOUCAN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_WILD_TURKEY</BuildingType>
@@ -1581,7 +1581,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_HAAST_EAGLE</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_HAASTS_EAGLE</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2120,7 +2120,7 @@
 				<BuildingType>BUILDING_FOLKLORE_RACCOON</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RATEL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SKUNK</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_TASMANIANDEVIL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_TASMANIAN_DEVIL</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>1600</iCost>
 			<MapCategoryTypes>
@@ -2145,7 +2145,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_DOG</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_DIRE_WOLF</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2200,7 +2200,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_GROUND_SLOTH</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2255,7 +2255,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</BuildingType>
+					<BuildingType>BUILDING_FOLKLORE_MAMMOTH</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -2798,7 +2798,7 @@
 				<BuildingType>BUILDING_FOLKLORE_COBRA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PUFF_ADDER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_VIPER_CHAIN</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_CHAIN_VIPER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>100</iCost>
 			<CommerceChanges>
@@ -2838,7 +2838,7 @@
 				<BuildingType>BUILDING_FOLKLORE_COBRA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PUFF_ADDER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_VIPER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_VIPER_CHAIN</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_CHAIN_VIPER</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>80</iCost>
 			<iHappiness>1</iHappiness>

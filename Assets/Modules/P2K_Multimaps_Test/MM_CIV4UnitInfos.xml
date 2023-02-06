@@ -1892,7 +1892,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_ELECTROWEAK_STAR_BASE</BuildingType>
+				<BuildingType>BUILDING_INTERGALACTIC_ELECTROWEAK_STAR_BASE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_NEUTRONIUM</PrereqTech>
 			<BonusType>BONUS_NEUTRONIUM</BonusType>
@@ -3154,7 +3154,7 @@
 				<BuildType>BUILD_SOLAR_TRAJECTORY</BuildType>
 			</Builds>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_HOUSING_WORKING_CLASS</BuildingType>
+				<BuildingType>BUILDING_DEEP_SPACE_HOUSING_WORKERS</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
 			<iCost>2000</iCost>
@@ -6216,7 +6216,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CHIRAL_FLEXIBLE_LIFEFORMS</BuildingType>
+				<BuildingType>BUILDING_LIFE_CHIRAL_FLEXIBLE</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_GRAND_UNIFICATION_BIOLOGY</PrereqTech>
 			<iCost>7500</iCost>
@@ -9693,7 +9693,7 @@
 			</UnitAIs>
 			<PrereqTech>TECH_ION_PROPULSION</PrereqTech>
 			<Buildings>
-				<BuildingType>BUILDING_COMMERCIAL_SATELLITES</BuildingType>
+				<BuildingType>BUILDING_COMMUNICATIONS_SATELLITE</BuildingType>
 				<BuildingType>BUILDING_SOLAR_POWER_SATELLITE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_SATELLITES</BuildingType>
 				<BuildingType>BUILDING_GLOBAL_POSITIONING_SYSTEM</BuildingType>

@@ -30,11 +30,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ALUMINUM_INGOTS_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_ALUMINUM_INGOTS_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_ALUMINUM_INGOTS</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_ALUMINUM_INGOTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ALUMINUM_INGOTS_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_ALUMINUM_INGOTS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -45,7 +45,7 @@
 			<ObsoletesToBuilding>BUILDING_METALS_MEGACOMPLEX</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SMELTER_ALUMINUM</BuildingType>
-				<BuildingType>BUILDING_ALUMINIUM_RECLAMATION_PLANT</BuildingType>
+				<BuildingType>BUILDING_ALUMINUM_RECLAMATION_PLANT</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_SMELTER_ALUMINUM</BuildingType>
 			</PrereqOrBuildings>
 			<bAutoBuild>1</bAutoBuild>
@@ -339,11 +339,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COPPER_INGOTS_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_COPPER_INGOTS_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_COPPER_INGOTS</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_COPPER_INGOTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COPPER_INGOTS_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_COPPER_INGOTS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -637,12 +637,12 @@
 			<ObsoletesToBuilding>BUILDING_MODERN_EARTHWORKS</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DIG_SITE_AMMONITE_FOSSILS</BuildingType>
-				<BuildingType>BUILDING_FOSSIL_ARCHAEOPTERYX</BuildingType>
+				<BuildingType>BUILDING_DIG_SITE_ARCHAEOPTERYX_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_DIMETRODON_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_ICHTHYOSTEGA_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_MAMMOTH_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_NEANDERTHAL_FOSSILS</BuildingType>
-				<BuildingType>BUILDING_FOSSIL_PETRIFIEDFOREST</BuildingType>
+				<BuildingType>BUILDING_DIG_SITE_PETRIFIED_WOOD</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_PLESIOSAUR_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_PTERODACTYL_FOSSILS</BuildingType>
 				<BuildingType>BUILDING_DIG_SITE_SHARK_TEETH</BuildingType>
@@ -683,7 +683,7 @@
 				<BuildingType>BUILDING_ORCHARD_BREADFRUIT</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_CACTUS</BuildingType>
 				<BuildingType>BUILDING_FARM_CROP_CANTALOUPE</BuildingType>
-				<BuildingType>BUILDING_CARDONCACTUS_PLANTATION</BuildingType>
+				<BuildingType>BUILDING_PLANTATION_CARDON_CACTUS</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_CHERIMOYA</BuildingType>
 				<BuildingType>BUILDING_ORCHARD_CHERRY</BuildingType>
 				<BuildingType>BUILDING_PLANTATION_DATE_PALM</BuildingType>
@@ -798,11 +798,11 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GOLD_INGOTS_PROVIDER</Type>
-			<Description>TXT_KEY_BUILDING_GOLD_INGOTS_PROVIDER</Description>
+			<Type>BUILDING_RESOURCES_GOLD_INGOTS</Type>
+			<Description>TXT_KEY_BUILDING_RESOURCES_GOLD_INGOTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESOURCE_PROVIDER_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GOLD_INGOTS_PROVIDER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_RESOURCES_GOLD_INGOTS</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1214,9 +1214,9 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+				<BuildingType>BUILDING_MATERIALS_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_MATERIALS_CONGLOMERATE</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_FACTORY_PLASTIC</BuildingType>
 				<BuildingType>BUILDING_PLASTIC_RECLAMATION_PLANT</BuildingType>
@@ -1299,9 +1299,9 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+				<BuildingType>BUILDING_MATERIALS_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_MATERIALS_CONGLOMERATE</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_DESALINATION_PLANT</BuildingType>
 				<BuildingType>BUILDING_NATURAL_WONDER_DEAD_SEA</BuildingType>
@@ -1520,9 +1520,9 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ObsoleteTech>TECH_SMART_DUST</ObsoleteTech>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+				<BuildingType>BUILDING_MATERIALS_CONGLOMERATE</BuildingType>
 			</ReplacementBuildings>
-			<ObsoletesToBuilding>BUILDING_CHEMICAL_CONGLOMERATE</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_MATERIALS_CONGLOMERATE</ObsoletesToBuilding>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_RUBBER_PLANT</BuildingType>
 				<BuildingType>BUILDING_RUBBER_RECLAMATION_PLANT</BuildingType>

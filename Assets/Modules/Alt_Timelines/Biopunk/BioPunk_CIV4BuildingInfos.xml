@@ -117,9 +117,9 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_BIOPUNK</Bonus>
 			<ObsoleteTech>TECH_CULTURAL_EVOLUTION</ObsoleteTech>
-			<ObsoletesToBuilding>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
+			<ObsoletesToBuilding>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</ObsoletesToBuilding>
 			<ReplacementBuildings>
-				<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+				<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 			</ReplacementBuildings>
 			<iCost>3665</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>

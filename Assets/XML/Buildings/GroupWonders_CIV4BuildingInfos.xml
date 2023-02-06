@@ -2,16 +2,16 @@
 <Civ4BuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<Type>BUILDING_ACCADEMIA_AERONAUTICA</Type>
+			<Type>BUILDING_MA_ACCADEMIA_AERONAUTICA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_ACCADEMIA_AERONAUTICA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ACCADEMIA_AERONAUTICA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MA_ACCADEMIA_AERONAUTICA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MA_ACCADEMIA_AERONAUTICA_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_MILITARY_ACADEMIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_ACCADEMIA_AERONAUTICA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MA_ACCADEMIA_AERONAUTICA</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ACCADEMIA_AERONAUTICA</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_AVIATION</PrereqTech>
@@ -1382,16 +1382,16 @@
 			<iHurryCostModifier>100</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EVELPIDON_MILITARY_ACADEMY</Type>
+			<Type>BUILDING_MA_EVELPIDON_MILITARY_ACADEMY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_EVELPIDON_MILITARY_ACADEMY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EVELPIDON_MILITARY_ACADEMY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_MA_EVELPIDON_MILITARY_ACADEMY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MA_EVELPIDON_MILITARY_ACADEMY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_MILITARY_ACADEMIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_EVELPIDON_MILITARY_ACADEMY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MA_EVELPIDON_MILITARY_ACADEMY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EVELPIDON_MILITARY_ACADEMY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
@@ -1539,17 +1539,17 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HARVARD_UNIVERSITY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_HEIDELBERG_UNIVERSITY</Type>
+			<Type>BUILDING_EU_HEIDELBERG_UNIVERSITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_HEIDELBERG_UNIVERSITY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HEIDELBERG_UNIVERSITY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_EU_HEIDELBERG_UNIVERSITY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EU_HEIDELBERG_UNIVERSITY_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<SpecialBuildingType>SPECIALBUILDING_GROUP_ELITE_UNIVERSITIES</SpecialBuildingType>
-			<ArtDefineTag>ART_DEF_BUILDING_HEIDELBERG_UNIVERSITY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EU_HEIDELBERG_UNIVERSITY</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_HEIDELBERG_UNIVERSITY</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<iPrereqPopulation>7</iPrereqPopulation>

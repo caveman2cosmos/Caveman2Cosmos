@@ -156,7 +156,7 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_AFRICANGREY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_AFRICAN_GREY_PARROT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SKY</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
@@ -223,7 +223,7 @@
 				<BuildingType>BUILDING_FOLKLORE_T_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_SEA_BIRDS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FISH</BuildingType>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
@@ -1550,7 +1550,7 @@
 				<BuildingType>BUILDING_ENCLOSURE_BIG_CAT</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BENGALTIGER</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BENGAL_TIGER</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -2479,7 +2479,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BOAR</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BRAZILIAN_TAPIR</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_LOWLAND_TAPIR</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_TAPIR</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -3069,7 +3069,7 @@
 				<BuildingType>BUILDING_MONKEY_BREEDER</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_NEW_W_MONKEY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_NEW_WORLD_MONKEYS</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -3366,7 +3366,7 @@
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CASSOWARY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
 				<BuildingType>BUILDING_HERD_RATITE</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -3887,7 +3887,7 @@
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_CHEETAH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SPOTTED_CAT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_SPOTTED_CAT</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
@@ -5132,7 +5132,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_CANINES</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_WOLF</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_DOG</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_DIRE_WOLF</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_DOG_REMAINS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -5931,7 +5931,7 @@
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_ELEPHANT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_AFRICANELEPHANT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_AFRICAN_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_CAMP_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -6104,7 +6104,7 @@
 				<BuildingType>BUILDING_CAMP_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_HERD_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ASIANELEPHANT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_ASIAN_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -6286,7 +6286,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_EMU</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
@@ -6878,7 +6878,7 @@
 				<BuildingType>BUILDING_FOLKLORE_T_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_SEA_BIRDS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FISH</BuildingType>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
@@ -7768,7 +7768,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GELADA_MONKEY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_OLD_W_MONKEY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_OLD_WORLD_MONKEYS</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -8368,7 +8368,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_GORILLA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_OLD_W_MONKEY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_OLD_WORLD_MONKEYS</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -8602,7 +8602,7 @@
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GREATWHITE_SHARK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GREAT_WHITE_SHARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_SHARKS</BuildingType>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 				<BuildingType>BUILDING_MARINE_INSTITUTE</BuildingType>
@@ -8840,7 +8840,7 @@
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_WORKERS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_EARTH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GROUND_SLOTH</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_GROUNDSLOTH_REMAINS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -8964,14 +8964,14 @@
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_RAPTORS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_HAAST_EAGLE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_HAASTS_EAGLE</BuildingType>
 				<BuildingType>BUILDING_REMAINS_HAASTS_EAGLE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SKY</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_PHOENIX</BuildingType>
 				<BuildingType>BUILDING_FALCONER</BuildingType>
 				<BuildingType>BUILDING_HAWKING_HUT</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_BIRD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -11050,7 +11050,7 @@
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SPOTTED_CAT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_SPOTTED_CAT</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_JAGUAR</BuildingType>
@@ -11228,7 +11228,7 @@
 				<BuildingType>BUILDING_HERD_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_KANGAROO_GREY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GREY_KANGAROO</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -11404,7 +11404,7 @@
 				<BuildingType>BUILDING_HERD_KANGAROO</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_KANGAROO_RED</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_RED_KANGAROO</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
@@ -12172,7 +12172,7 @@
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SPOTTED_CAT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_SPOTTED_CAT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_LYNX</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -12596,7 +12596,7 @@
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_MAMMOTH</BuildingType>
 				<BuildingType>BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_ELEPHANT</BuildingType>
 				<BuildingType>BUILDING_CAMP_MAMMOTH</BuildingType>
@@ -12955,7 +12955,7 @@
 				<BuildingType>BUILDING_MONKEY_BREEDER</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_OLD_W_MONKEY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_OLD_WORLD_MONKEYS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MANDRILL</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
@@ -13508,10 +13508,10 @@
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_MOA</BuildingType>
 				<BuildingType>BUILDING_REMAINS_MOA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
 				<BuildingType>BUILDING_HERD_RATITE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_BIRD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_PALEOLITHIC_BIRDS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
@@ -15154,7 +15154,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_OSTRICH</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
@@ -15385,7 +15385,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIG_CAT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_PANTHER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SPOTTED_CAT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_SPOTTED_CAT</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -15691,7 +15691,7 @@
 				<BuildingType>BUILDING_FOLKLORE_T_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
 				<BuildingType>BUILDING_MARINE_INSTITUTE</BuildingType>
@@ -17631,7 +17631,7 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_RHEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
@@ -17802,9 +17802,9 @@
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RHINO_TAXONOMY</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_ELASMOTHERIUM</BuildingType>
-				<BuildingType>BUILDING_ELASMOTHERIUM_REMAINS</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_RHINOCEROSES</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GIANT_RHINOCEROS</BuildingType>
+				<BuildingType>BUILDING_REMAINS_GIANT_RHINOCEROS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_UNICORN</BuildingType>
 				<BuildingType>BUILDING_CAMP_RHINO</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -17863,8 +17863,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_BLACK_RHINO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RHINO_TAXONOMY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_BLACK_RHINOCEROS</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_RHINOCEROSES</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_UNICORN</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -17926,8 +17926,8 @@
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_INDIAN_RHINO</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RHINO_TAXONOMY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_INDIAN_RHINOCEROS</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_RHINOCEROSES</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_UNICORN</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -17990,7 +17990,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_JAVA_RHINOCEROS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RHINO_TAXONOMY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_RHINOCEROSES</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_UNICORN</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
@@ -18052,9 +18052,9 @@
 			<Buildings>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_EXOTIC_HERBIVORE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_RHINO_TAXONOMY</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_RHINOCEROSES</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_UNICORN</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_WHITE_RHINO</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_WHITE_RHINOCEROS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -18471,7 +18471,7 @@
 				<BuildingType>BUILDING_FOLKLORE_ROCKHOPPER_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_PENGUIN</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_FLIGHTLESS_BIRD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_FISH</BuildingType>
 				<BuildingType>BUILDING_AQUARIUM</BuildingType>
@@ -18948,7 +18948,7 @@
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROC_LARGE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALLODILE_LARGE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_DRAGON</BuildingType>
@@ -19190,7 +19190,7 @@
 				<BuildingType>BUILDING_MASTER_SEA_HUNTER</BuildingType>
 				<BuildingType>BUILDING_WONDERS_OF_THE_DEEP</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROC</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALL</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BAD_BOYS</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_REPTILE</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_REPTILE</BuildingType>
@@ -19876,7 +19876,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_BIRDS</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SECRETARYBIRD</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SECRETARY_BIRD</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SKY</BuildingType>
 				<BuildingType>BUILDING_FEATHER_WORKER</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
@@ -20346,7 +20346,7 @@
 				<BuildingType>BUILDING_GOVERNORS_PETS</BuildingType>
 				<BuildingType>BUILDING_GOVERNORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SPOTTED_CAT</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_T_SPOTTED_CAT</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_SNOW_LEOPARD</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -21221,7 +21221,7 @@
 				<BuildingType>BUILDING_MILITARY_STANDARD_ANIMAL_MASCOT</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_MARSUPIAL</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_MARSUPIAL</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_TASMANIANDEVIL</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_TASMANIAN_DEVIL</BuildingType>
 				<BuildingType>BUILDING_ENCLOSURE_NOCTURNAL</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
@@ -22012,7 +22012,7 @@
 				<BuildingType>BUILDING_SNAKE_PIT</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_VIPER_CHAIN</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_CHAIN_VIPER</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_SNAKES</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
@@ -23556,7 +23556,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_T_TALES_OF_FISH</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_GREATWHITE_SHARK</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_GREAT_WHITE_SHARK</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_T_SHARKS</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
@@ -24741,7 +24741,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROC_LARGE</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALLODILE_LARGE</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>
@@ -24848,7 +24848,7 @@
 			<Buildings>
 				<BuildingType>BUILDING_FOLKLORE_T_CROCODILE</BuildingType>
 				<BuildingType>BUILDING_FOLKLORE_E_SEA</BuildingType>
-				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROC</BuildingType>
+				<BuildingType>BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALL</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>2</iMoves>

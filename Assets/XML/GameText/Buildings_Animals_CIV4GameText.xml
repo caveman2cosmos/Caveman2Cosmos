@@ -477,7 +477,7 @@
 		<Russian>Ó âàøåé öèâèëèçàöèè åñòü ñòàÿ óòîê.</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ELASMOTHERIUM_REMAINS</Tag>
+		<Tag>TXT_KEY_BUILDING_REMAINS_GIANT_RHINOCEROS</Tag>
 		<English>Remains - Giant Rhinoceros</English>
 		<French>Restes d'Elasmotherium</French>
 		<German>
@@ -559,7 +559,7 @@
 		<Russian>Ìèô î òðóáêîçóáå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_AFRICANELEPHANT</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_AFRICAN_ELEPHANT</Tag>
 		<English>Folklore - African Elephant</English>
 		<French>Mythe de l'Eléphant d'Afrique</French>
 		<German>
@@ -639,7 +639,7 @@
 		<Russian>Ìèô î áðîíåíîñöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ASIANELEPHANT</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_ASIAN_ELEPHANT</Tag>
 		<English>Folklore - Asian Elephant</English>
 		<French>Mythe de l'Eléphant d'Asie</French>
 		<German>
@@ -751,7 +751,7 @@
 		<Russian>Ìèô î áåëóãå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BENGALTIGER</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BENGAL_TIGER</Tag>
 		<English>Folklore - Bengal Tiger</English>
 		<French>Mythe du Tigre du Bengale</French>
 		<German>
@@ -790,7 +790,7 @@
 		<Russian>Ìèô î áèçîíå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BLACK_RHINO</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_BLACK_RHINOCEROS</Tag>
 		<English>Folklore - Black Rhinoceros</English>
 		<French>Mythe du Rhinocéros noir</French>
 		<German>
@@ -828,7 +828,7 @@
 		<Russian>Ìèô î áîíãî</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_BRAZILIAN_TAPIR</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_LOWLAND_TAPIR</Tag>
 		<English>Folklore - Lowland Tapir</English>
 		<French>Mythe du Tapir du Brésil</French>
 		<German>
@@ -1195,7 +1195,7 @@
 		<Russian>Ìèô î Çåìëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_ELASMOTHERIUM</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GIANT_RHINOCEROS</Tag>
 		<English>Folklore - Giant Rhinoceros</English>
 		<French>Mythe de l'Elasmotherium</French>
 		<German>
@@ -1304,7 +1304,7 @@
 		<Russian>Ìèô î ôëàìèíãî</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_FLIGHTLESS_BIRD</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_FLIGHTLESS_BIRDS</Tag>
 		<English>Folklore (T) - Flightless Birds</English>
 		<French>Mythe des Oiseaux marcheurs (T)</French>
 		<German>
@@ -1465,7 +1465,7 @@
 		<Russian>Ìèô î ãîðèëëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREATWHITE_SHARK</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREAT_WHITE_SHARK</Tag>
 		<English>Folklore - Great White Shark</English>
 		<French>Mythe - Grand Requin Blanc</French>
 		<German>
@@ -1625,7 +1625,7 @@
 		<Russian>Ìèô îá èìïàëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_INDIAN_RHINO</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_INDIAN_RHINOCEROS</Tag>
 		<English>Folklore - Indian Rhinoceros</English>
 		<French>Mythe du Rhinocéros indien</French>
 		<German>
@@ -1663,7 +1663,7 @@
 		<Russian>Ìèô î ÿâàí. íîñîðîãå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_KANGAROO_GREY</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GREY_KANGAROO</Tag>
 		<English>Folklore - Grey Kangaroo</English>
 		<French>Mythe du Kangourou gris</French>
 		<German>
@@ -1675,7 +1675,7 @@
 		<Russian>Ìèô î ñåðîì êåíãóðó</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_KANGAROO_RED</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_RED_KANGAROO</Tag>
 		<English>Folklore - Red Kangaroo</English>
 		<French>Mythe du Kangourou roux</French>
 		<German>
@@ -2018,7 +2018,7 @@
 		<Russian>Ìèô î íàðâàëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_NEW_W_MONKEY</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_NEW_WORLD_MONKEYS</Tag>
 		<English>Folklore (T) - New World Monkeys</English>
 		<German>
 			<Text>Mythos der Neuweltaffen:Mythos der Neuweltaffen:Mythos der Neuweltaffen:Mythos der Neuweltaffen</Text>
@@ -2091,7 +2091,7 @@
 		<Russian>Ìèô î ëåøåì</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_OLD_W_MONKEY</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_OLD_WORLD_MONKEYS</Tag>
 		<English>Folklore (T) - Old World Monkeys</English>
 		<German>
 			<Text>Mythos der Altweltaffen:Mythos der Altweltaffen:Mythos der Altweltaffen:Mythos der Altweltaffen</Text>
@@ -2164,7 +2164,7 @@
 		<Russian>Ìèô î âîëîêëþå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_BIRD</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_BIRDS</Tag>
 		<English>Folklore - Paleolithic Birds</English>
 		<French>Mythe des oiseaux du paléolithique</French>
 		<German>
@@ -2190,7 +2190,7 @@
 		<Russian>Ìèô î äðåâíåé êîøêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_DOG</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_DIRE_WOLF</Tag>
 		<English>Folklore - Dire Wolf</English>
 		<French>Mythe du Loup sinistre</French>
 		<German>
@@ -2202,7 +2202,7 @@
 		<Russian>Ìèô î ëþòîâîëêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_GROUNDSLOTH</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_GROUND_SLOTH</Tag>
 		<English>Folklore - Ground Sloth</English>
 		<French>Mythe du Xénarthre</French>
 		<German>
@@ -2214,7 +2214,7 @@
 		<Russian>Ìèô î ãèã. ëåíèâöå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_PALEOLITHIC_MAMMOTH</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_MAMMOTH</Tag>
 		<English>Folklore - Mammoth</English>
 		<French>Mythe du Mammouth</French>
 		<German>
@@ -2497,7 +2497,7 @@
 		<Russian>Ìèô î ðåïòèëèè</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_RHINO_TAXONOMY</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_RHINOCEROSES</Tag>
 		<English>Folklore (T) - Rhinoceroses</English>
 		<French>Mythe du Rhinocéros (T)</French>
 		<German>
@@ -2582,7 +2582,7 @@
 		<Russian>Ìèô î ñàéãàêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROC</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALL</Tag>
 		<English>Folklore - Saltwater Crocodile (Small)</English>
 		<French>Mythe du Crocodile de mer (petit)</French>
 		<German>
@@ -2593,7 +2593,7 @@
 		<Italian>Mito del coccodrillo di mare (piccolo)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROC_LARGE</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_SALTWATER_CROCODILE_SMALLODILE_LARGE</Tag>
 		<English>Folklore - Saltwater Crocodile (Large)</English>
 		<French>Mythe du Crocodile de mer (grand)</French>
 		<German>
@@ -2754,7 +2754,7 @@
 		<Russian>Ìèô î ñíåæíîì áàðñå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_SPOTTED_CAT</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_T_SPOTTED_CAT</Tag>
 		<English>Folklore (T) - Spotted Cat</English>
 		<French>Mythe du Chat moucheté (T)</French>
 		<German>
@@ -2820,7 +2820,7 @@
 		<Italian>Mito della tarantola della giungla</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_TASMANIANDEVIL</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_TASMANIAN_DEVIL</Tag>
 		<English>Folklore - Tasmanian Devil</English>
 		<German>
 			<Text>Mythos des Tasmanischen Teufels:Mythos des Tasmanischen Teufels:Mythos des Tasmanischen Teufels:Mythos des Tasmanischen Teufels</Text>
@@ -2941,7 +2941,7 @@
 		<Russian>Ìèô î ãàäþêå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_VIPER_CHAIN</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_CHAIN_VIPER</Tag>
 		<English>Folklore - Chain Viper</English>
 		<French>Mythe de la Vipère de Russell</French>
 		<German>
@@ -3039,7 +3039,7 @@
 		<Russian>Ìèô î êèò. àêóëå</Russian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FOLKLORE_WHITE_RHINO</Tag>
+		<Tag>TXT_KEY_BUILDING_FOLKLORE_WHITE_RHINOCEROS</Tag>
 		<English>Folklore - White Rhinoceros</English>
 		<French>Mythe du Rhinocéros blanc</French>
 		<German>

@@ -2708,7 +2708,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_ADVENTURE</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_ADVENTURE_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_ADVENTURE_TOURS</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -2765,7 +2765,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_BULLSEYE</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_BULLSEYE_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_BULLSEYE</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -2822,7 +2822,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_BURGERWORLD</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_BURGERWORLD_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_BURGERWORLD</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -2879,7 +2879,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_EMPCLOTH</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_EMPCLOTH_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_EMPERORS_CLOTHING</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -2936,7 +2936,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_EWTRADE</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_EWTRADE_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_EAST_WEST_TRADERS</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -2993,7 +2993,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_FASHION</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_FASHION_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_FASHION_HOUSE</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -3050,7 +3050,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_MALLWART</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_MALLWART_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_MALLWART</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -3107,7 +3107,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_MAPSTER</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_MAPSTER_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_MAPSTER</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -3164,7 +3164,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_MCDOWELLS</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_MCDOWELLS_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_BIG_MCDOWELLS</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -3221,7 +3221,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_MILEHIGH</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_MILEHIGH_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_MILEHIGH_TRAVELS_INTERNATIONAL</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -3278,7 +3278,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_MOBBY</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_MOBBY_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_MOBBY_MEATS_INTERNATIONAL</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -3335,7 +3335,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_MOONBEAN</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_MOONBEAN_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_MOONBEAN_COFFEE</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -3449,7 +3449,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_SAFARI</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_SAFARI_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_SAFARI_HUNTERS</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -3506,7 +3506,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_ULTSOLDIER</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_ULTSOLDIER_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_ULTIMATE_SOLDIERS</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -3563,7 +3563,7 @@
 			</CorporationSpreads>
 			<PrereqCorporation>CORPORATION_WONKA</PrereqCorporation>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_CORPORATION_WONKA_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_WONKA_CONFECTIONERIES</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>275</iCost>
 			<iBaseUpkeep>1</iBaseUpkeep>
@@ -4139,7 +4139,7 @@
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_TEMPLE_OF_CHONS</BuildingType>
 			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iBaseUpkeep>2</iBaseUpkeep>
@@ -5300,7 +5300,7 @@
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_TEMPLE_OF_CHONS</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_IRON_WARES</BonusType>
@@ -5412,7 +5412,7 @@
 			<StateReligion>RELIGION_KEMETISM</StateReligion>
 			<PrereqReligion>RELIGION_KEMETISM</PrereqReligion>
 			<PrereqAndBuildings>
-				<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+				<BuildingType>BUILDING_TEMPLE_OF_CHONS</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_CHIVALRY</PrereqTech>
 			<BonusType>BONUS_HORSE</BonusType>
@@ -30609,7 +30609,7 @@
 			</TrainCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_METH_LAB</BuildingType>
-				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+				<BuildingType>BUILDING_MATERIALS_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_TECHNARCHIST</UnitType>
@@ -36633,7 +36633,7 @@
 				<BuildingType>BUILDING_HEROIC_EPIC</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_EPIC</BuildingType>
 				<BuildingType>BUILDING_HQ_CIVILIZED_JEWELERS_INC</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_EMPCLOTH_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_EMPERORS_CLOTHING</BuildingType>
 				<BuildingType>BUILDING_HQ_RED_CURTAINS</BuildingType>
 				<BuildingType>BUILDING_TRADITION_ASTHETIC_APPRECIATION</BuildingType>
 			</Buildings>
@@ -37121,16 +37121,16 @@
 				<BuildingType>BUILDING_WALL_STREET</BuildingType>
 				<BuildingType>BUILDING_HQ_CEREAL_MILLS</BuildingType>
 				<BuildingType>BUILDING_HQ_SIDS_SUSHI_CO</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_ADVENTURE_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_BURGERWORLD_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_EWTRADE_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_FASHION_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_MALLWART_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_MAPSTER_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_MCDOWELLS_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_MOBBY_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_MOONBEAN_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_WONKA_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_ADVENTURE_TOURS</BuildingType>
+				<BuildingType>BUILDING_HQ_BURGERWORLD</BuildingType>
+				<BuildingType>BUILDING_HQ_EAST_WEST_TRADERS</BuildingType>
+				<BuildingType>BUILDING_HQ_FASHION_HOUSE</BuildingType>
+				<BuildingType>BUILDING_HQ_MALLWART</BuildingType>
+				<BuildingType>BUILDING_HQ_MAPSTER</BuildingType>
+				<BuildingType>BUILDING_HQ_BIG_MCDOWELLS</BuildingType>
+				<BuildingType>BUILDING_HQ_MOBBY_MEATS_INTERNATIONAL</BuildingType>
+				<BuildingType>BUILDING_HQ_MOONBEAN_COFFEE</BuildingType>
+				<BuildingType>BUILDING_HQ_WONKA_CONFECTIONERIES</BuildingType>
 			</Buildings>
 			<Flavors>
 				<Flavor>
@@ -37354,8 +37354,8 @@
 				<BuildingType>BUILDING_PONT_DU_GARD_AQUEDUCT</BuildingType>
 				<BuildingType>BUILDING_HQ_CREATIVE_CONSTRUCTIONS</BuildingType>
 				<BuildingType>BUILDING_HQ_MINING_INC</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_BULLSEYE_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_MILEHIGH_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_BULLSEYE</BuildingType>
+				<BuildingType>BUILDING_HQ_MILEHIGH_TRAVELS_INTERNATIONAL</BuildingType>
 				<BuildingType>BUILDING_THE_NATIONAL_STANDARD_OF_MEASUREMENT</BuildingType>
 			</Buildings>
 			<Flavors>
@@ -37729,8 +37729,8 @@
 				<BuildingType>BUILDING_SECRET_ARMY_BASE</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_COURIER_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_SAFARI_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_ULTSOLDIER_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_SAFARI_HUNTERS</BuildingType>
+				<BuildingType>BUILDING_HQ_ULTIMATE_SOLDIERS</BuildingType>
 			</Buildings>
 			<Flavors>
 				<Flavor>
@@ -37919,8 +37919,8 @@
 				<BuildingType>BUILDING_SECRET_ARMY_BASE</BuildingType>
 				<BuildingType>BUILDING_NATIONAL_COURIER_SYSTEM</BuildingType>
 				<BuildingType>BUILDING_MILITARY_ACADEMY</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_SAFARI_HQ</BuildingType>
-				<BuildingType>BUILDING_CORPORATION_ULTSOLDIER_HQ</BuildingType>
+				<BuildingType>BUILDING_HQ_SAFARI_HUNTERS</BuildingType>
+				<BuildingType>BUILDING_HQ_ULTIMATE_SOLDIERS</BuildingType>
 			</Buildings>
 			<Flavors>
 				<Flavor>

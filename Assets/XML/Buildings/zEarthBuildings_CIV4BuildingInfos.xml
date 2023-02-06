@@ -228,11 +228,11 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT_PEDIA</Civilopedia>
+			<Type>BUILDING_EFFECT_ASTEROID_MINING_COMPLEX</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_ASTEROID_MINING_COMPLEX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_ASTEROID_MINING_COMPLEX_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ASTEROID_MINING_COMPLEX_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_ASTEROID_MINING_COMPLEX</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
 			<iCost>4655</iCost>
@@ -514,13 +514,13 @@
 			<bPrereqPower>1</bPrereqPower>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COGNITIVE_ENHANCEMENT</Type>
+			<Type>BUILDING_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COGNITIVE_ENHANCEMENT_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_COGNITIVE_ENHANCEMENT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COGNITIVE_ENHANCEMENT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_COGNITIVE_ENHANCEMENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -559,13 +559,13 @@
 			</ExtraFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COLLECTIVE_CONSCIOUSNESS</Type>
+			<Type>BUILDING_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
-			<Description>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COLLECTIVE_CONSCIOUSNESS_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COLLECTIVE_CONSCIOUSNESS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -622,11 +622,11 @@
 			<PrereqTech>TECH_REALITY_REPROGRAMMING</PrereqTech>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_COSMIC_EXPANSION_POWER_PLANT_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_COSMIC_EXPANSION_POWER_PLANT_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_COSMIC_EXPANSION_POWER_PLANT_EFFECT_PEDIA</Civilopedia>
+			<Type>BUILDING_EFFECT_COSMIC_EXPANSION_POWER_PLANT</Type>
+			<Description>TXT_KEY_BUILDING_EFFECT_COSMIC_EXPANSION_POWER_PLANT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_EFFECT_COSMIC_EXPANSION_POWER_PLANT_PEDIA</Civilopedia>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COSMIC_EXPANSION_POWER_PLANT_EFFECT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_COSMIC_EXPANSION_POWER_PLANT</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -1667,7 +1667,7 @@
 				<BuildingType>BUILDING_EPSILON_ASSEMBLER</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
-				<BuildingType>BUILDING_COMMERCIAL_SATELLITES</BuildingType>
+				<BuildingType>BUILDING_COMMUNICATIONS_SATELLITE</BuildingType>
 				<BuildingType>BUILDING_PROPAGANDA_SATELLITES</BuildingType>
 			</PrereqOrBuildings>
 			<iCost>3245</iCost>
@@ -2707,7 +2707,7 @@
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_COMMERCIAL_SATELLITES</BuildingType>
+					<BuildingType>BUILDING_COMMUNICATIONS_SATELLITE</BuildingType>
 					<CommerceChanges>
 						<iCommerce>3</iCommerce>
 					</CommerceChanges>

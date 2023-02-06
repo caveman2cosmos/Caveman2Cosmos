@@ -21155,7 +21155,7 @@
 			</TrainCondition>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_METH_LAB</BuildingType>
-				<BuildingType>BUILDING_CHEMICAL_CONGLOMERATE</BuildingType>
+				<BuildingType>BUILDING_MATERIALS_CONGLOMERATE</BuildingType>
 			</PrereqOrBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_TECHNARCHIST</UnitType>

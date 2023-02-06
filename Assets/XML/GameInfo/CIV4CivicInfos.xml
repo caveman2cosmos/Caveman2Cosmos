@@ -3159,7 +3159,7 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -7324,7 +7324,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
@@ -7524,7 +7524,7 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -8794,7 +8794,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -8916,7 +8916,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -9281,7 +9281,7 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -9857,7 +9857,7 @@
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -10034,7 +10034,7 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -10285,7 +10285,7 @@
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -10423,7 +10423,7 @@
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -10566,7 +10566,7 @@
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -12786,7 +12786,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -12832,7 +12832,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -12964,7 +12964,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_CHONS</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13543,7 +13543,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -13593,7 +13593,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13694,19 +13694,19 @@
 			<BuildingHappinessChanges/>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_CORPORATION_BULLSEYE_STORE</BuildingType>
+					<BuildingType>BUILDING_BULLSEYE_STORE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_CORPORATION_MOBBY_STORE</BuildingType>
+					<BuildingType>BUILDING_MOBBY_MEATS_STORE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_CORPORATION_MALLWART_STORE</BuildingType>
+					<BuildingType>BUILDING_MALLWART_STORE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_CORPORATION_EWTRADE_STORE</BuildingType>
+					<BuildingType>BUILDING_EAST_WEST_TRADERS_STORE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
@@ -13817,7 +13817,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 					<BuildingHappinessChange>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -13887,7 +13887,7 @@
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 				<BuildingHealthChange>
-					<BuildingType>BUILDING_HIGHTECH_CULTURAL_ENRICHMENT</BuildingType>
+					<BuildingType>BUILDING_HIGH_TECH_CULTURAL_ENRICHMENT</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 					<BuildingHealthChange>
@@ -15756,7 +15756,7 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -15983,11 +15983,11 @@
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_ADVENTURE_FRANCHISE</BuildingType>
+					<BuildingType>BUILDING_ADVENTURE_TOURS_FRANCHISE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_MILEHIGH_FRANCHISE</BuildingType>
+					<BuildingType>BUILDING_MILEHIGH_TRAVELS_INTERNATIONAL_FRANCHISE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -15995,19 +15995,19 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_MCDOWELLS_RESTAURANT</BuildingType>
+					<BuildingType>BUILDING_BIG_MCDOWELLS_RESTAURANT</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_MALLWART_STORE</BuildingType>
+					<BuildingType>BUILDING_MALLWART_STORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_BULLSEYE_STORE</BuildingType>
+					<BuildingType>BUILDING_BULLSEYE_STORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_BURGERWORLD_RESTAURANT</BuildingType>
+					<BuildingType>BUILDING_BURGERWORLD_RESTAURANT</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -16019,23 +16019,23 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CREATIVE_CONSTRUCTIONS_OFFICE</BuildingType>
+					<BuildingType>BUILDING_CREATIVE_CONSTRUCTIONS_CONTRACTORS</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_EWTRADE_STORE</BuildingType>
+					<BuildingType>BUILDING_EAST_WEST_TRADERS_STORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_FASHION_STORE</BuildingType>
+					<BuildingType>BUILDING_FASHION_HOUSE_STORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_MOBBY_STORE</BuildingType>
+					<BuildingType>BUILDING_MOBBY_MEATS_STORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_EMPCLOTH_STORE</BuildingType>
+					<BuildingType>BUILDING_EMPERORS_CLOTHING_STORE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -16043,15 +16043,15 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_MOONBEAN_SHOP</BuildingType>
+					<BuildingType>BUILDING_MOONBEAN_COFFEESHOP</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_RED_THEATER</BuildingType>
+					<BuildingType>BUILDING_RED_CURTAINS_THEATRE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_SAFARI_GUIDE</BuildingType>
+					<BuildingType>BUILDING_SAFARI_HUNTERS_GUIDE</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
@@ -16063,11 +16063,11 @@
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_ULTSOLDIER_TRAINER</BuildingType>
+					<BuildingType>BUILDING_ULTIMATE_SOLDIERS_TRAINER</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_CORPORATION_WONKA_SHOP</BuildingType>
+					<BuildingType>BUILDING_WONKA_CONFECTIONERIES_SHOP</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -16332,7 +16332,7 @@
 					<iHappinessChange>2</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -16446,7 +16446,7 @@
 					<iHappinessChange>-3</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -16555,7 +16555,7 @@
 					<iHappinessChange>-3</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -16669,7 +16669,7 @@
 					<iHappinessChange>-5</iHappinessChange>
 				</BuildingHappinessChange>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDING_EMANCIPATION_PROCLAMATION_EFFECT</BuildingType>
+					<BuildingType>BUILDING_EFFECT_EMANCIPATION_PROCLAMATION</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -17466,7 +17466,7 @@
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_EGYPT_MYTH_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_TEMPLE_OF_CHONS</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

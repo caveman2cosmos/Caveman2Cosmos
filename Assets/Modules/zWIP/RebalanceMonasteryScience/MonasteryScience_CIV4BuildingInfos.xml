@@ -148,7 +148,7 @@
 			</TechCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_EGYPT_MYTH_MONASTERY</Type>
+			<Type>BUILDING_TEMPLE_OF_CHONS</Type>
 			<TechCommerceModifiers>
 				<TechCommerceModifier>
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>

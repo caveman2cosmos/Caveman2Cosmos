@@ -199,7 +199,7 @@ class TestCode:
 
 	#Building replacements of requirements
 	def checkBuildingRequirementReplacements(self):
-		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENEDSKIES", "BUILDING_ORDINANCE_GAMBLING_BAN", "BUILDING_ORDINANCE_ALCOHOL_PROHIBITION", "BUILDING_ORDINANCE_DRUG_PROHIBITION", "BUILDING_ORDINANCE_PROSTITUTION_BAN", "BUILDING_EMANCIPATION_PROCLAMATION_EFFECT"]
+		aSpecialReplacementsList = ["BUILDING_POLLUTION_BLACKENEDSKIES", "BUILDING_ORDINANCE_GAMBLING_BAN", "BUILDING_ORDINANCE_ALCOHOL_PROHIBITION", "BUILDING_ORDINANCE_DRUG_PROHIBITION", "BUILDING_ORDINANCE_PROSTITUTION_BAN", "BUILDING_EFFECT_EMANCIPATION_PROCLAMATION"]
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			CvBuildingInfo = GC.getBuildingInfo(iBuilding)
 
@@ -1129,9 +1129,9 @@ class TestCode:
 				#Building shouldn't be worse than replaced one!
 				#Emancipation Proclamation removes worldview buildings, python is needed for it to actually erase all slave specialists
 				for iSpecialist in xrange(GC.getNumSpecialistInfos()):
-					if aSpecialistCounts[BASE][iSpecialist] < aSpecialistCounts[REPLACED][iSpecialist] and iBuilding != GC.getInfoTypeForString("BUILDING_EMANCIPATION_PROCLAMATION_EFFECT"):
+					if aSpecialistCounts[BASE][iSpecialist] < aSpecialistCounts[REPLACED][iSpecialist] and iBuilding != GC.getInfoTypeForString("BUILDING_EFFECT_EMANCIPATION_PROCLAMATION"):
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Specialists Count "+str(aSpecialistCounts[BASE][iSpecialist])+"/"+str(aSpecialistCounts[REPLACED][iSpecialist]))
-					if aFreeSpecialistCounts[BASE][iSpecialist] < aFreeSpecialistCounts[REPLACED][iSpecialist] and iBuilding != GC.getInfoTypeForString("BUILDING_EMANCIPATION_PROCLAMATION_EFFECT"):
+					if aFreeSpecialistCounts[BASE][iSpecialist] < aFreeSpecialistCounts[REPLACED][iSpecialist] and iBuilding != GC.getInfoTypeForString("BUILDING_EFFECT_EMANCIPATION_PROCLAMATION"):
 						self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Free specialists Count "+str(aFreeSpecialistCounts[BASE][iSpecialist])+"/"+str(aFreeSpecialistCounts[REPLACED][iSpecialist]))
 
 				#=================================================================================================
@@ -1547,7 +1547,7 @@ class TestCode:
 							if aCommerceModifiers[BASE][iCommerce] < aCommerceModifiers[REPLACED][iCommerce]:
 								self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getCommerceInfo(iCommerce).getType()+" Commerce Modifiers (Early techs boost) "+str(aCommerceModifiers[BASE])+"/"+str(aCommerceModifiers[REPLACED]))
 						for iSpecialist in xrange(GC.getNumSpecialistInfos()):
-							if aFreeSpecialistCounts[BASE][iSpecialist] < aFreeSpecialistCounts[REPLACED][iSpecialist] and CvBuildingInfo.getType().find("BUILDING_EMANCIPATION_PROCLAMATION_EFFECT") == -1:
+							if aFreeSpecialistCounts[BASE][iSpecialist] < aFreeSpecialistCounts[REPLACED][iSpecialist] and CvBuildingInfo.getType().find("BUILDING_EFFECT_EMANCIPATION_PROCLAMATION") == -1:
 								self.log(str(iTechID)+" "+CvBuildingInfo.getType()+" should have "+GC.getSpecialistInfo(iSpecialist).getType()+" Free specialists Count (Early techs boost) "+str(aFreeSpecialistCounts[BASE][iSpecialist])+"/"+str(aFreeSpecialistCounts[REPLACED][iSpecialist]))
 
 
